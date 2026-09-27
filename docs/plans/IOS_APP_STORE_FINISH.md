@@ -1,0 +1,74 @@
+# iOS App Store finish and 3D world map remaster
+
+**Status:** active, audited 2026-09-27 against `fa45298` plus the menu fixes in this round. This is the iPhone finish plan for [STORE_RELEASE.md](STORE_RELEASE.md). The game is playable and its native shell runs; it is not yet a finished App Store submission. The user has required a genuinely 3D, rotatable level map, a visible menu hero, and centered menu controls. The 3D map is required before the final iOS release.
+
+**Definition of done:** a stranger can install the signed TestFlight build on an iPhone, understand the first run, clear and restart real ROCKHOP courses, navigate all 12 levels and four free rides on the 3D map, and return to a polished menu. The same release archive has truthful listing and rights answers, working public support/privacy URLs, production screenshots from the player UI, and passes the release gates below. The user judges played clips and the actual phone build before submission; App Store approval closes the release.
+
+## Audit verdict and evidence
+
+The [audit record](../evidence/ios-app-store-audit/README.md) lists the source, runs, media, and limitations. This is the current priority order:
+
+| Severity | Finding | Evidence and release consequence |
+|---|---|---|
+| P0 | Current map is a painted image with 2D overlay markers; the user has rejected that rendering. | [Played headless map](../evidence/ios-app-store-audit/current-flat-map-844x390.png). Replace the renderer and hit testing; keep the four biome route and the 12-level order. |
+| P0 | The Apple content-rights draft says no third-party content, while the shipped credits and hero-art handoff name third-party sources and an unresolved beard licence. | `store/COMPLIANCE.md`, `src/ui/front.ts`, `docs/evidence/hero-art/delivery/provenance/authored-beard/README.md`. Reconcile source rights and the actual App Store Connect answer before submission. The earlier user choice to ship the hair/beard as-is is recorded in STORE_RELEASE D9; that choice does not make the current declaration accurate. |
+| P0 | The proposed privacy and support URLs return 404, and `rockhop.vercel.app/` currently serves a different site. | HTTP checks on 2026-09-27. Publish legal pages at a verified project URL and put that exact URL in the listing and app. The support address remains HR-19. |
+| P1 | A fresh web+iOS simulator native gate passes, but clears `flat-test`, a development course. It is not a shipped-curriculum sign-off. | [Gate JSON](../evidence/store-release/native/20260927-231137/gate.json) and [played silent clip](../evidence/store-release/native/20260927-231137/ios-clip.mp4). Add a release gate for ROCKHOP C1 and one later-zone course. |
+| P1 | Actual iPhone frame rate, touch comfort, interruptions, and sustained heat remain unmeasured on this build. | Simulator and headless WebKit evidence do not substitute for the user's iPhone report. |
+| P1 | The menu art now appears in the user's screenshot, and a failed art manifest previously left only a tint. | This round adds a bundled-image fallback; the user confirms the hero is visible. |
+| P1 | Menu cards had asymmetric outer margins and displaced icon/text groups. | This round centers cards and text and checks the store menu at 844×390 with the manifest blocked. |
+| P1 | A legacy iPhone launch image can flash the retired name before web code starts. The old generator could recreate it, and its original URLs were reused. | This round removes the legacy generator and gives all 28 ROCKHOP splash images new URLs. Existing Home Screen installs may retain an iOS launch snapshot until re-added; verify on the user's phone. |
+| P1 | The loader's changing status text changed its card height and recentered the whole group; the user's portrait photo shows exposed page color beneath the gradient. | Headless WebKit measured 4.1 px of repeated logo movement; fixed card height measures 0 px. Loader/page now share one teal background. Verify the photographed PWA transition on the actual iPhone. |
+| P1 | A warm cached start is still slow. | Two live headless phone-geometry warm boots took 14.50 and 14.52 s with 0 document transfer bytes. Current-scene/renderer GPU work dominates; nonselected hero warmup is ~1.2 s. Prototype faster first frame without adding a first garage-tap hitch, then measure on iPhone. |
+| P2 | Existing iPhone screenshots are correctly sized, but most ride frames come from `?harness=1` and omit the normal bottom touch controls. Both existing 15-second trailers show old Trials Gauntlet branding. | Re-shoot from the release UI. An App Store preview video is optional, but any preview submitted must show ROCKHOP gameplay and match the approved build. |
+| P2 | The previously staged/working ship-gate JSONs are historical failed runs at older source fingerprints. | Preserved in the [audit record](../evidence/ios-app-store-audit/README.md); the canonical gate remains the last committed green run. A fresh full ship gate is required after the map remaster. |
+
+## Work order
+
+### 1. Freeze a truthful release baseline
+
+- [x] Inventory and preserve the preexisting stranger recordings, pose evidence and gate variants. The 14 six-course session references resolve to recordings; all 24 new JSON files parse. These are historical fingerprints, not proof of the current HEAD.
+- [x] Repair the menu's horizontal alignment and symmetric margins. Keep a 44-point minimum target and inspect 844×390, 932×430 and desktop store-menu views.
+- [x] Render the bundled 960-pixel hero directly while the art manifest loads or fails; replace it with the versioned device tier when available. Headless proof with `art/manifest.json` blocked is in the audit record.
+- [x] Confirm the hero art in the user's actual menu view. Their later screenshot shows it; fresh live sessions also displayed it. Keep the bundled fallback for a failed manifest.
+- [x] Stop loader text from moving the logo/controls: reserve fixed gauge height. In 393×852 headless Chromium and WebKit, badge/gauge/row top positions stayed pixel-stable throughout load, versus 4.1 px oscillation before.
+- [x] Remove the portrait bottom color seam at the loader/page boundary by using one teal field and border-box sizing. Actual installed-PWA confirmation remains in the phone gate.
+- [x] Give the 28 ROCKHOP launch images brand-prefixed URLs and remove the generator that could recreate the retired splash. Reinstall the existing Home Screen icon after the fix deploys if iOS continues to display its cached old launch snapshot.
+- [ ] Reduce warm cached time-to-menu from the measured 14.5 s, targeting ≤ 5 s on the user's iPhone without regressing the first garage swap or mandatory full offline cache. Profile the selected hero, current scene and post-processing separately; try idle-frame warming of other variants only with a zero-hitch phone check.
+- [ ] Decide whether the existing credits/provenance and embedded beard source allow distribution as recorded. Obtain the correct rights, replace the material, or record a human legal decision. Make `store/COMPLIANCE.md` and App Store Connect agree with the build; do not leave “everything is our own” while the credits cite third-party assets.
+- [ ] Bring the support/privacy pages online at a URL actually controlled by this project. Add HR-19's address, update metadata and the hardcoded `index.html` social-share URLs, and verify pages/images over HTTPS from a fresh client.
+
+### 2. Build the world map as a playable 3D place
+
+**Keep:** coast → alpine → quarry → snow route, three curriculum levels per zone, four free rides, current unlock rules/progress, and the road's level sequence. **Change:** all map rendering and interaction. The existing painted map and DOM diamond/plate markers are not the target.
+
+- [ ] Write `assets/design/worldmap-3d/SPEC.md` with a measured one-zone prototype and played rotation clip. Show the rider's view, selected level, locked area, and a full spin on a phone-sized viewport. The user chooses the visual treatment under the design-round recipe; their decision to use a fully 3D map and circular places is already fixed.
+- [ ] Use real 3D terrain/zone meshes, water, road, landmarks and atmospheric separation. The road remains legible through all four biomes at overview and close zoom. Avoid a flat plane textured with the old painting.
+- [ ] Model each level stop as a circular place built into the terrain (pad, ring, clearing, or plaza); selection, progress, lock state and name attach to that place. Free rides are distinct circular places. 3D depth and camera movement must reveal their form, not merely move HTML over a background.
+- [ ] Orbit/rotate, pan and zoom with touch, mouse, and keyboard/gamepad; a tap selects without also rotating. Provide a clear “return to route” control and focus path. Use an explicit camera clamp so no level becomes hidden or unreachable behind terrain. 44-point touch targets and clear locked/unlocked feedback at 844×390 and smaller supported iPhones.
+- [ ] Keep one source of level positions/order/unlock data. Convert a 3D hit into the existing level ID, and keep persistence and accessibility labels. Test all 12 levels and four free rides, including saved progress migration from the old map.
+- [ ] Gate performance on the actual iPhone: no sustained frame-rate regression from the current map, no terrain/texture memory spike that causes a WKWebView reload, and stable gesture handling during a full route sweep. Record played clips, not posed renders.
+
+### 3. Prove the whole game on the shipped curriculum
+
+- [ ] Run a release-shell cold boot → select C1 from the 3D map → clear → crash → instant restart, then repeat on one later-zone course and both bike classes. No development `flat-test` in the release sign-off. Record exact replay finish bytes/hashes across Node, web, and iOS WKWebView; restart remains one logical tick.
+- [ ] Re-run the 12-course bot difficulty sweep on the final source and two independent stranger sessions on the first six. Record attempts-to-clear and visible restart latency per track; investigate outliers instead of relying on a global pass flag. The preserved September 22 sessions are useful history only.
+- [ ] On a real iPhone TestFlight build, play menu → map → C1 → garage → return, plus all four biome transitions. Check touch controls, orientation/safe areas, offline boot, background/resume, incoming interruption, local progress across restart, low-storage behavior, audio mute/focus and sustained 20-minute thermal/frame pacing. Record device, iOS version, graphics tier, FPS distribution and any crash.
+- [ ] Run typecheck, lint, unit suite, strict IP audit, release build, and the full ship gate on the exact commit to submit. Run the **release** store build before the IP scan; scan `store/build/web` explicitly because the audit's default directory walk skips `build`. Check that the signed archive contains that exact payload and no debug `gate/` files. Resolve reproducible failures; separate timing noise from build defects with a quiet rerun and recorded source fingerprint.
+
+### 4. Finish the visible product and store media
+
+- [ ] Review the actual first-time flow with a stranger on iPhone: landscape prompt, tutorial copy, four touch controls, first crash recovery, first medal, map unlock and garage return. Judge the played clip for readability, sound and pacing. Fix blockers and retest the loop.
+- [ ] Review all four zones and 12 levels in motion at phone size for missing art, clipped labels, occlusion, camera jumps, weak silhouettes and unfinished geometry. Include garage rider/bike close views and the results screen.
+- [ ] Capture 6.9-inch landscape screenshots from the final signed release UI, showing touch controls where a normal player sees them. Lead with the menu or first course, then map, riding, garage and results. Check every caption/level/brand against the build. Apple's current [screenshot specification](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/) accepts 2868×1320 for 6.9-inch landscape.
+- [ ] If submitting an app preview, replace the old-brand trailers with a 15–30-second ROCKHOP recording whose majority is actual gameplay, at the [Apple preview specification](https://developer.apple.com/help/app-store-connect/reference/app-information/app-preview-specifications/). A preview is optional; old trailers must not accompany this listing.
+
+### 5. Sign, TestFlight, and submit
+
+- [ ] Use Xcode 26 or newer and the current iOS SDK; Xcode 26.6 is installed here. Apple has required the iOS 26 SDK since 2026-04-28 ([Apple requirement](https://developer.apple.com/news/upcoming-requirements/?id=04282026a)). Bump build/version, archive from a clean commit, sign `com.jakeverbaten.rockhop`, and verify the archive's source SHA, entitlements, privacy manifest, offline assets, and release flag.
+- [ ] With HR-16's Apple Developer account, upload to TestFlight and do the real-phone pass above. Review current [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) and [age-rating questionnaire](https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating/) against the actual build; do not assume a rating or approval in advance.
+- [ ] Confirm listing text, screenshots, rights answer, privacy label, support URL and review notes against the signed build. The human reviews the final played evidence and submitted metadata; then submit and follow any reviewer feedback through approval.
+
+## Scope and dependencies
+
+The 3D map and the final iPhone release gate are product work, not account administration. HR-16 (Apple account) and HR-19 (public support address) are human inputs for signing and metadata. Android's tester clock and key backup remain in [STORE_RELEASE.md](STORE_RELEASE.md) but do not block this iOS-specific plan. No current simulator result proves actual iPhone comfort, and no automated audit can decide Apple review or the hair/beard rights question.

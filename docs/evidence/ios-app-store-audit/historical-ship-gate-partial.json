@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260922-195743-cc1e35",
+  "startedAt": "2026-09-23T00:57:43.561Z",
+  "wallMs": 404965,
+  "git": "0d46e860",
+  "srcFingerprint": "da1d4b3e",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "heap"
+  ],
+  "checks": [
+    {
+      "id": "heap.error",
+      "value": null,
+      "limit": null,
+      "pass": false,
+      "note": "section threw: page.evaluate: Target page, context or browser has been closed"
+    }
+  ],
+  "failed": 1
+}

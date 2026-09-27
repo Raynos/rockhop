@@ -2,6 +2,8 @@
 
 **Status: game side done, 2026-09-23 (asks 95/98/104/111); store submission waits on HR-16/HR-19.** Live on the web as ROCKHOP (CI deploys every green push). Done: P0 clean room (`6ede7b1d` `d26f3447` `68b70e3a`), name + identity (D17–D23), 12 tracks + 4 playgrounds with a strictly rising reflex curve and stranger passes on C1–A3, re-proven on the riding-poses physics (`a7ed0716`), four zones + gates + world map (`c94cd93a` `423bf473` `044464a8`), ROCKHOP UI/results/words + zone progression (`ab8c7af4` `90b641a2`), music 6 loops + procedural sting (`5258c89b` `52f65bfa`), iOS/Android shells + store kit + legal site (`2fdef7a9` `4ede56f5` `0d46e860`), iOS near-black fix (`baef4b0c`). Also done since: ip-audit strict 0 in CI (`46fa2d44`), UI polish, zone props, ship gate SHIP 31/31 (`867dd574`), final screenshots. Open: legal site deploy (HR-19), store accounts (HR-16), Android emulator gate (off by the user — phone is the check). Parent owns this plan and its row in [README.md](README.md).
 
+**2026-09-27 status correction:** the user's new finish criteria supersede the painted world-map rendering and the “final screenshots” claim above. The [iOS finish and 3D map plan](IOS_APP_STORE_FINISH.md) owns the required remaster, real-phone release check, truthful rights answer, verified legal URLs and new media. The completed work listed above remains historical; it is not a current App Store readiness verdict.
+
 ## Goal
 
 Ship the game to **Google Play (public production)** and the **App Store (iPhone, via TestFlight then public)** as an

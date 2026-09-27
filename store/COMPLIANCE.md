@@ -9,6 +9,8 @@ Answers for every compliance form in App Store Connect and the Play Console, fol
 
 The listing text lives in `metadata/` in fastlane layout, checked by `node scripts/store-metadata.mjs`. **Before each submission**, check every answer here against the build being submitted. It is the build that makes these answers true.
 
+**Submission hold (2026-09-27 audit):** the legal URLs below returned 404, and the content-rights answer below was inaccurate. Follow [the iOS finish plan](../docs/plans/IOS_APP_STORE_FINISH.md) and update this document plus App Store Connect from a verified release build before submission.
+
 ## Both stores
 
 | field | answer |
@@ -43,12 +45,13 @@ The listing text lives in `metadata/` in fastlane layout, checked by `node scrip
 - Advertising: **No**. In-app purchases: **No**.
 - Age assurance, parental controls: **No** (none needed; nothing is collected).
 
-**Content rights:** "Does your app contain, show, or access third-party content?" → **No**.
+**Content rights:** "Does your app contain, show, or access third-party content?" → **Answer pending source/rights reconciliation; do not submit the prior “No” answer.**
 
-- Everything is our own: the art is our AI generations, and the rider and bike are our Blender work.
+- The in-game credits name external hair, beard, face and human-model sources. The beard provenance handoff records an unresolved licence conflict (`docs/evidence/hero-art/delivery/provenance/authored-beard/README.md`). STORE_RELEASE D9 records the user's choice to ship that appearance, but it does not resolve the store declaration. Verify the distributed source, permissions and attribution, or replace the material, before choosing the App Store Connect answer.
+- The generated world/key art and the rider/bike assembly include original work, but that does not make every constituent source original.
 - The music comes from ACE-Step 1.5, whose MIT weights and model card clear its output for commercial use (`assets/audio/LEDGER.md`). The sound effects are synthesised in code.
 - The fonts are SIL OFL (licences ship with them).
-- If a royalty-free library track is ever added, the answer becomes **Yes, and I have the rights**, with the licence recorded in the ledger.
+- If a royalty-free library track is added, record its distribution licence in the ledger and include it in the final rights answer.
 
 **Export compliance:** `ITSAppUsesNonExemptEncryption = NO` is in `Info.plist`, so App Store Connect asks nothing per build. The app uses no encryption beyond what iOS itself provides (HTTPS is not even used).
 
