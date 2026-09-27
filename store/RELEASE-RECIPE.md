@@ -18,29 +18,22 @@ Each store refuses a build number it has already seen, so bump both platforms to
 | `ios/App/App.xcodeproj/project.pbxproj` (Debug and Release) | `MARKETING_VERSION` (1.0 → 1.0.1 …) and `CURRENT_PROJECT_VERSION` (1 → 2 …) |
 | `android/app/build.gradle` | `versionName` and `versionCode` (must strictly increase) |
 
-## 1. Website: privacy + support on rockhop.vercel.app (parent)
+## 1. Website: game and legal pages on playrockhop.vercel.app (parent)
 
-The project must be **named before its first deploy**; see the global CLAUDE.md Vercel notes. Scope: `raynos-projects`.
+The `playrockhop` project in `raynos-projects` is the production game target. Push to `main` to deploy through
+`.github/workflows/deploy.yml`; watch that run and confirm `/version.json` names the pushed SHA. Do not run a
+separate production deploy from this recipe.
+
+The privacy and support pages are still a submission hold until HR-19 supplies the public support address. Then
+render `store/site/` with `node scripts/store-site.mjs --email <support address>` and integrate its `legal/` pages,
+`site.css` and fonts into the game build's `public/` output. Push through the same CI route and verify:
 
 ```sh
-vercel project add rockhop --scope raynos-projects                  # once: creates the named project
-node scripts/store-site.mjs --email <support address>                # HR: the user picks the address; → store/build/site
-cd store/build/site
-vercel link --yes --project rockhop --scope raynos-projects          # once; .vercel/ survives rebuilds
-vercel deploy --prod --yes --scope raynos-projects
-cd -
-curl -fsS https://rockhop.vercel.app/legal/privacy.html | grep -c 'Privacy Policy'   # 1
-curl -fsS https://rockhop.vercel.app/legal/support.html | grep -c 'mailto:'          # ≥ 1
+curl -fsS https://playrockhop.vercel.app/legal/privacy.html | grep -c 'Privacy Policy'   # 1
+curl -fsS https://playrockhop.vercel.app/legal/support.html | grep -c 'mailto:'          # ≥ 1
 ```
 
-**If the project got a different domain** (`rockhop` was already taken): attach it with `POST /v10/projects/rockhop/domains` `{"name":"rockhop.vercel.app"}`, using the token in `~/Library/Application Support/com.vercel.cli/auth.json`. If Vercel refuses, put the domain it gave into both of these:
-
-- `store/metadata/ios/en-US/{support,privacy,marketing}_url.txt`
-- `COMPLIANCE.md`
-
-Deployment protection only covers previews, so the production domain is public.
-
-Phase 7 later moves the web game itself to this project (D10, the parent's call). When that happens, the game's deploy must keep serving `/legal/*`: copy `store/build/site/legal` and `site.css` into its output.
+The iOS metadata URLs and `COMPLIANCE.md` must match those verified pages before an upload.
 
 ## 2. Android: signed App Bundle → Play internal testing (user)
 
@@ -109,13 +102,25 @@ fastlane deliver --api_key_path ~/.config/rockhop/asc-api-key.json --app_identif
 
 ## 4. Checks before any upload
 
+Run the debug native gate first. It syncs debug recordings into both shells, so the release build must run **after**
+that gate and replace them before the IP scan or archive. The strict scan names the exact Capacitor web payload;
+it fails if that directory is missing. `store/build/SOURCE` must name the commit being uploaded.
+
 ```sh
-node scripts/store-metadata.mjs                    # listing lengths + denied terms
-pnpm build:store && node scripts/ip-audit.mjs --strict dist ios android store   # bar 1 (strict from Phase 6)
-node scripts/store-build.mjs debug --ios && npx tsx harness/native/gate.ts web,ios --evidence   # web leg on Metal: harness/native/README.md
+node scripts/store-metadata.mjs
+node scripts/store-build.mjs debug --ios
+npx tsx harness/native/gate.ts web,ios --evidence  # web leg on Metal: harness/native/README.md
+node scripts/store-build.mjs release --ios
+test "$(cat store/build/MODE)" = release
+test "$(cat store/build/SOURCE)" = "$(git rev-parse HEAD)"
+node scripts/ip-audit.mjs --strict store/build/web ios android store/metadata
 ```
 
 The native gate has two rules:
 
 - Run it only while `uptime` shows a load average under 12.
 - The Android emulator stays off unless the user asks for it (harness/native/README.md).
+
+The scanner checks text and GLB JSON, not words baked into pixels or video. Visually inspect the final screenshots,
+preview, icon and first-launch recording against the same release commit. The signed `.xcarchive` and uploaded build
+also need a source/payload check; this script scans the synced release tree, not an exported IPA.

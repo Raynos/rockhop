@@ -3,8 +3,8 @@
 //
 //   node scripts/ip-audit.mjs [--strict] [--json] [dir ...]
 //
-// Scans the BUILT store artefacts — `dist/` from `pnpm build:store`, plus `ios/`, `android/` and `store/` when
-// they exist (or the dirs given) — for the denylist: the franchise terms (the Trials / Ubisoft / RedLynx names,
+// Scans the BUILT store artefacts — `dist/` from `pnpm build:store`, the native shells, and the exact Capacitor
+// payload at `store/build/web/` when present (or the dirs given) — for the denylist: the franchise terms (the Trials / Ubisoft / RedLynx names,
 // "gauntlet", "no fear", "demo") and the name of every retired level, read from src/tracks `RETIRED_TRACKS` (the
 // curriculum, the `p<n>-*` playgrounds, the Labs; loaded through tsx, the tracks are TypeScript). Internal code and
 // docs are out of scope; what a reviewer or player can extract is in.
@@ -15,8 +15,9 @@
 //
 // Text files are read whole; a .glb's JSON chunk is read (node and material names ship in it). Other binaries
 // (images, audio, fonts) are skipped. Reports hits per term and per file. `--strict` exits 1 on any hit (or when
-// there is nothing to scan): CI runs it strict on the store build (.github/workflows/deploy.yml).
-import { existsSync, readdirSync, readFileSync } from 'node:fs';
+// a requested directory is missing, or there is nothing to scan): CI runs it strict on the store build
+// (.github/workflows/deploy.yml).
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { tsImport } from 'tsx/esm/api';
@@ -27,7 +28,9 @@ const args = process.argv.slice(2);
 const strict = args.includes('--strict');
 const asJson = args.includes('--json');
 const dirsArg = args.filter((a) => !a.startsWith('--'));
-const dirs = (dirsArg.length ? dirsArg : ['dist', 'ios', 'android', 'store']).map((d) => resolve(repo, d)).filter((d) => existsSync(d));
+const requested = (dirsArg.length ? dirsArg : ['dist', 'ios', 'android', 'store']).map((d) => resolve(repo, d));
+const missing = dirsArg.length ? requested.filter((d) => !existsSync(d) || !statSync(d).isDirectory()) : [];
+const dirs = requested.filter((d) => existsSync(d) && statSync(d).isDirectory());
 
 /** The retired level names: `RETIRED_TRACKS` (src/tracks), deduplicated. */
 async function levelNames() {
@@ -51,7 +54,14 @@ function files(dir) {
     for (const e of readdirSync(d, { withFileTypes: true })) {
       const p = join(d, e.name);
       if (e.isDirectory()) {
-        if (e.name === 'node_modules' || e.name === 'build' || e.name === 'Pods' || e.name === '.gradle') continue;
+        if (e.name === 'node_modules' || e.name === 'Pods' || e.name === '.gradle') continue;
+        // Generated native build products are enormous, but the Capacitor webDir is the actual release payload.
+        // Never let the broad `build` exclusion silently skip its JS, HTML, JSON and GLB names.
+        if (e.name === 'build') {
+          const web = join(p, 'web');
+          if (existsSync(web)) walk(web);
+          continue;
+        }
         walk(p);
       } else out.push(p);
     }
@@ -82,9 +92,10 @@ for (const dir of dirs) {
 
 const total = Object.values(byTerm).reduce((a, b) => a + b, 0);
 if (asJson) {
-  console.log(JSON.stringify({ dirs: dirs.map((d) => relative(repo, d)), scanned, total, levelNames: levels, genericLevelNames: levels.filter((n) => GENERIC_LEVEL_NAMES.has(n)), byTerm, byFile }, null, 1));
+  console.log(JSON.stringify({ dirs: dirs.map((d) => relative(repo, d)), missing: missing.map((d) => relative(repo, d)), scanned, total, levelNames: levels, genericLevelNames: levels.filter((n) => GENERIC_LEVEL_NAMES.has(n)), byTerm, byFile }, null, 1));
 } else {
-  if (!dirs.length) console.log('ip-audit: nothing to scan (run `pnpm build:store` first)');
+  if (missing.length) console.log(`ip-audit: missing requested directories: ${missing.map((d) => relative(repo, d)).join(', ')}`);
+  if (!dirs.length || !scanned) console.log('ip-audit: nothing to scan (build the payload first)');
   console.log(`ip-audit: ${total} hits in ${Object.keys(byFile).length} of ${scanned} files scanned (${dirs.map((d) => relative(repo, d)).join(', ')})`);
   console.log(`terms: ${FRANCHISE_TERMS.length} franchise + ${levels.length} retired level names (${levels.filter((n) => GENERIC_LEVEL_NAMES.has(n)).length} generic: title context only)`);
   console.log('\nby term');
@@ -98,5 +109,4 @@ if (asJson) {
 function sum(o) {
   return Object.values(o).reduce((a, b) => a + b, 0);
 }
-if (strict && total > 0) process.exit(1);
-if (!dirs.length && strict) process.exit(1);
+if (strict && (total > 0 || missing.length > 0 || scanned === 0)) process.exit(1);

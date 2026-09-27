@@ -1,6 +1,46 @@
 // The IP audit's matching rules (scripts/ip-audit-rules.mjs): the cases that decide whether bar 1 means anything.
 import { describe, expect, it } from 'vitest';
+import { spawnSync } from 'node:child_process';
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { GENERIC_LEVEL_NAMES, auditText, franchiseHits, levelHits } from './ip-audit-rules.mjs';
+
+const auditScript = join(dirname(fileURLToPath(import.meta.url)), 'ip-audit.mjs');
+
+describe('strict artifact scan', () => {
+  it('finds a retired brand name inside the Capacitor build/web payload when scanning its parent', () => {
+    const root = mkdtempSync(join(tmpdir(), 'rockhop-ip-audit-'));
+    try {
+      const web = join(root, 'store', 'build', 'web');
+      mkdirSync(web, { recursive: true });
+      writeFileSync(join(web, 'index.html'), '<title>Trials Gauntlet</title>');
+      const run = spawnSync(process.execPath, [auditScript, '--strict', '--json', join(root, 'store')], { encoding: 'utf8' });
+      expect(run.status).toBe(1);
+      expect(run.stderr).toBe('');
+      const report = JSON.parse(run.stdout);
+      expect(Object.entries(report.byFile).find(([f]) => f.endsWith('/store/build/web/index.html'))?.[1]).toEqual({ trials: 1, gauntlet: 1 });
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+
+  it('fails when an explicitly requested release payload is missing', () => {
+    const root = mkdtempSync(join(tmpdir(), 'rockhop-ip-audit-'));
+    try {
+      const web = join(root, 'store', 'build', 'web');
+      const run = spawnSync(process.execPath, [auditScript, '--strict', '--json', web], { encoding: 'utf8' });
+      expect(run.status).toBe(1);
+      const report = JSON.parse(run.stdout);
+      expect(report.missing).toHaveLength(1);
+      expect(report.missing[0]).toMatch(/\/store\/build\/web$/);
+      expect(report.scanned).toBe(0);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+});
 
 describe('franchise terms: case-insensitive, whole words, strict', () => {
   it.each([
