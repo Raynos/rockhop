@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Builds the Rockhop website — landing, privacy policy, support — into store/build/site, ready to deploy to the
-// `rockhop` Vercel project (https://rockhop.vercel.app; store/RELEASE-RECIPE.md). Both stores need the privacy and
+// `playrockhop` Vercel game project (https://playrockhop.vercel.app; store/RELEASE-RECIPE.md). Both stores need the privacy and
 // support URLs even though the app collects nothing (docs/plans/STORE_RELEASE.md Phase 6).
 //
 //   node scripts/store-site.mjs [--email support@example.com] [--preview]
@@ -41,7 +41,7 @@ try {
   /* no git: today */
 }
 
-// Keep `.vercel/` (the link to the `rockhop` project) across rebuilds; everything else is regenerated.
+// Keep `.vercel/` if an existing local preview is linked; everything else is regenerated.
 mkdirSync(out, { recursive: true });
 for (const f of readdirSync(out)) if (f !== '.vercel') rmSync(join(out, f), { recursive: true, force: true });
 cpSync(src, out, { recursive: true });

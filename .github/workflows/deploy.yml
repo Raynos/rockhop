@@ -1,5 +1,5 @@
 # Continuous deployment: every push to main that passes the gates ships to production on Vercel
-# (https://trials-gauntlet-demo.vercel.app). Pull requests run the same gates and deploy nothing.
+# (https://playrockhop.vercel.app). Pull requests run the same gates and deploy nothing.
 # Ported from project-wildshard-singleplayer (ask 84). Pins (v0.x aliases) stay manual: RELEASES.md.
 #
 # Secrets: VERCEL_TOKEN (project-scoped vcp_ token), VERCEL_ORG_ID (team id), VERCEL_PROJECT_ID.
@@ -21,7 +21,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   DEPLOY: ${{ github.event_name != 'pull_request' && secrets.VERCEL_TOKEN != '' }}
-  PROD_URL: https://trials-gauntlet-demo.vercel.app
+  PROD_URL: https://playrockhop.vercel.app
 
 jobs:
   build-and-deploy:

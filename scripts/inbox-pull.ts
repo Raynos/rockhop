@@ -12,7 +12,7 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const INBOX = path.join(ROOT, '.review', 'inbox');
 const HANDLED = path.join(ROOT, '.review', 'handled');
-const DEFAULT_URL = 'https://trials-gauntlet-demo.vercel.app';
+const DEFAULT_URL = 'https://playrockhop.vercel.app';
 
 interface Entry {
   id: string;

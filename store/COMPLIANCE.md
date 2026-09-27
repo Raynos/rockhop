@@ -19,8 +19,8 @@ The listing text lives in `metadata/` in fastlane layout, checked by `node scrip
 | Name | Rockhop: Dirt Bike Physics |
 | Category | Games › Racing (iOS secondary: Sports) |
 | Price | Free. No in-app purchases, no ads, no subscriptions |
-| Privacy policy URL | https://rockhop.vercel.app/legal/privacy.html |
-| Support / marketing URL | https://rockhop.vercel.app/legal/support.html · https://rockhop.vercel.app/ |
+| Privacy policy URL | https://playrockhop.vercel.app/legal/privacy.html (submission hold until live) |
+| Support / marketing URL | https://playrockhop.vercel.app/legal/support.html (submission hold until live) · https://playrockhop.vercel.app/ |
 | Support email | **HR: the user picks the address to publish** (it goes on the support page and the privacy policy; `scripts/store-site.mjs --email`) |
 | Copyright | 2026 Jake Verbaten |
 | Languages | English |
