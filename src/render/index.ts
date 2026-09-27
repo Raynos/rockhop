@@ -937,23 +937,19 @@ export class ThreeRenderer implements GameRenderer {
         mark('shaders');
       });
       await activeStep('firstFrame', async (p) => {
-        // Two rows: the plain scene (shadow-depth programs + the GPU's first draw of every pipeline) and then
-        // the composer (screen-quad shaders compileAsync cannot reach). On software GL these are the
-        // seconds-long tasks — the driver JITs each pipeline at its first draw; no JS split exists.
-        p.set(0, 2, 'world + shadows');
+        // The composer draws the world, its shadows and the screen passes in one call. A separate
+        // scene-only warm-up draws the same world twice before the menu appears.
+        p.set(0, 2, 'world + post chain');
         this.renderer.info.autoReset = false;
-        this.post.renderSceneOnly();
+        this.post.render();
         await yieldFrame();
         if (this.disposed) return;
         await this.restored;
         if (this.disposed) return;
-        mark('firstframe:world');
-        p.set(1, 3, 'post chain');
-        this.post.render();
-        await yieldFrame();
         mark('firstframe:post');
         // Ask 50: the other resident heroes' shadow-depth variants and first draws, one scene-only frame each.
-        await this.warmHeroFrames((d, n) => p.set(2, 3, `hero ${d}/${n}`));
+        p.set(1, 2, 'resident heroes');
+        await this.warmHeroFrames((d, n) => p.set(1 + d / n, 2, `hero ${d}/${n}`));
         mark('firstframe:heroes');
       });
     };
