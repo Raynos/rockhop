@@ -144,8 +144,8 @@ export const FRONT_CSS = /* css */ `
 .menu-wordmark { width: min(calc(40 * var(--vw)), calc(15.5 * var(--vh) * 7.14), 640px); }
 .menu-ver { padding-left: .15em; font: 800 clamp(.72rem, calc(2.4 * var(--vh)), 1.05rem)/1 var(--sans); letter-spacing: .02em; color: var(--cream); text-shadow: 0 1px 3px rgba(0,0,0,.6); font-variant-numeric: tabular-nums; }
 .menu-ver span { margin-left: .9em; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .7em; opacity: .7; }
-.menu-band { position: absolute; left: calc(var(--mx) + var(--sal)); right: calc(4 * var(--vw) + var(--sar)); bottom: calc(var(--foot-h) + var(--sab)); height: var(--play-h); }
-.menu-list.tiles { position: relative; display: flex; flex-direction: row; align-items: flex-end; gap: calc(1.6 * var(--vw)); width: 100%; height: 100%; }
+.menu-band { position: absolute; left: calc(var(--mx) + var(--sal)); right: calc(var(--mx) + var(--sar)); bottom: calc(var(--foot-h) + var(--sab)); height: var(--play-h); }
+.menu-list.tiles { position: relative; display: flex; flex-direction: row; align-items: center; gap: calc(1.6 * var(--vw)); width: 100%; height: 100%; }
 .menu-list.tiles .menu-bar { display: none; }
 #ui .menu-item { position: relative; flex: 24 1 0; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 0; height: var(--card-h); min-height: 44px; min-width: 88px; padding: 0 calc(1.2 * var(--vw)); border: 0; border-radius: 8px; cursor: pointer;
   background: var(--contour) 0 0 / 240px 160px, linear-gradient(180deg, #F6ECD6, var(--cream) 55%, var(--cream-2)); color: var(--teal);
@@ -155,6 +155,9 @@ export const FRONT_CSS = /* css */ `
 #ui .menu-item small { display: none; }
 #ui .menu-item .ico { display: flex; align-items: center; justify-content: center; flex: 0 0 auto; width: calc(var(--card-h) * .46); height: calc(var(--card-h) * .46); margin-right: calc(var(--card-h) * .26); padding-right: calc(var(--card-h) * .26); box-sizing: content-box; border-right: 2px solid rgba(15,92,99,.35); color: var(--teal); }
 #ui .menu-item .ico svg { display: block; width: 100%; height: 100%; }
+/* Equal side columns center each word in its whole card; the left column holds the icon and rule. */
+#ui .menu-screen .menu-item:not([data-id="play"]):not(.minor) { --icon-col: clamp(28px, calc(4 * var(--vw)), 42px); display: grid; grid-template-columns: var(--icon-col) minmax(0, 1fr) var(--icon-col); padding: 0 calc(.35 * var(--vw)); text-align: center; white-space: nowrap; }
+#ui .menu-screen .menu-item:not([data-id="play"]) .ico { width: 100%; height: calc(var(--card-h) * .46); margin: 0; padding: 0 6px 0 0; box-sizing: border-box; }
 #ui .menu-item[data-id="settings"] { flex-grow: 25; }
 #ui .menu-item.on { transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -3px 0 rgba(15,92,99,.12), 0 0 0 3px var(--cream), 0 0 0 5px rgba(15,92,99,.9), 0 12px 26px rgba(8,14,16,.45); }
 #ui .menu-screen.touchdev .menu-item.on:not(.minor) { transform: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -3px 0 rgba(15,92,99,.12), 0 8px 22px rgba(8,14,16,.38); }

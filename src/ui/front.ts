@@ -337,6 +337,11 @@ export function menuPlate(art: ArtManifest, which: HomeArt = 'harbour'): ArtEntr
   return pick(which === 'quarry' ? 'quarry' : 'coast') ?? pick('coast');
 }
 
+/** Keep the shipped hero visible if the optional art manifest cannot load. */
+function menuFallbackArt(which: HomeArt): string {
+  return `url("art/menu/keyart-${which}-960.webp"), ${HOME_TINT[which]}`;
+}
+
 /**
  * Home screen (store release D18, mockups `round2/M1` + `round1/A-menu`): the key art full bleed — the harbour or the
  * quarry, following the zone the player is up to — the ROCKHOP wordmark top-left in cream with the version under it,
@@ -356,7 +361,8 @@ export class MainMenuScreen extends Screen {
     super(parent, 'menu-screen');
     this.art = art;
     this.keyart = h('div', 'menu-keyart');
-    this.keyart.style.backgroundImage = HOME_TINT.harbour; // never the shorthand: it would reset background-size
+    this.keyart.style.backgroundImage = menuFallbackArt('harbour'); // never the shorthand: it would reset background-size
+    this.keyart.classList.add('loaded');
     const head = h('div', 'menu-head');
     head.innerHTML = `<h1 class="menu-title">${wordmarkSvg({ className: 'menu-wordmark' })}</h1><div class="menu-ver">v${APP_VERSION}${DEV_SURFACES ? `<span>${escapeHtml(BUILD_STAMP_SHORT)}</span>` : ''}</div>`;
     const band = h('div', 'menu-band');
@@ -393,8 +399,7 @@ export class MainMenuScreen extends Screen {
     const next = homeArtForZone(zone);
     if (next === this.homeArt) return;
     this.homeArt = next;
-    this.keyart.classList.remove('loaded');
-    this.keyart.style.backgroundImage = HOME_TINT[next];
+    this.keyart.style.backgroundImage = menuFallbackArt(next);
     this.art.whenReady(() => this.applyArt());
   }
 

@@ -178,7 +178,7 @@ function publicItems(root: string): LoadItem[] {
     const b = stat(`art/worldmap/${f}`);
     if (b) items.push({ path: `./art/worldmap/${f}`, bytes: b, gz: b, phase: 'worldmap', label: `worldmap ${f}` });
   }
-  // iOS launch images (assets/art/splash.mjs): iOS fetches these itself when the app is added to the
+  // iOS launch images (assets/brand/tools/build_assets.py): iOS fetches these itself when the app is added to the
   // home screen, so nothing in the page requests them -- they are listed so the worker can name them
   // and so the deploy's byte table is honest, not so the boot spends 1.2 MB on them.
   const splash = path.join(pub, 'art', 'splash');

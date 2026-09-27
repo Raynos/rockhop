@@ -169,14 +169,18 @@ def contour_field(w: int, h: int) -> Image.Image:
 def splash() -> None:
     out = os.path.join(PUB, 'splash')
     os.makedirs(out, exist_ok=True)
+    for name in os.listdir(out):
+        if name.endswith('.png'):
+            os.remove(os.path.join(out, name))
     for pw, ph in SPLASH:
         for w, h in ((pw, ph), (ph, pw)):
             im = contour_field(w, h)
             ww = round(min(w, h) * 0.62) if w < h else round(min(w * 0.5, h * 1.1))
             wm = wordmark(ww, 'cream')
             im.paste(wm, ((w - wm.width) // 2, (h - wm.height) // 2), wm)
-            im.save(os.path.join(out, f'{w}x{h}.png'), optimize=True)
-            shrink(os.path.join(out, f'{w}x{h}.png'))
+            file = os.path.join(out, f'rockhop-{w}x{h}.png')
+            im.save(file, optimize=True)
+            shrink(file)
     print('splash: 28 launch images')
 
 

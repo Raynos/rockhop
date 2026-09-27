@@ -698,7 +698,7 @@ Two numbers, DOWNLOAD and SETUP (the user's decision: "B Odometer" with both tra
   After **one** online load Cache Storage holds 180 entries / 41.96 MB, and a cold start with the origin
   unreachable reaches 100/100 and rides b1 to the same finish time and hash as online
   (`harness/e2e/offline.mts`, a ship-gate row; `docs/evidence/pwa-offline/`).
-- iOS: 28 `apple-touch-startup-image` links (`assets/art/splash.mjs`) so a home-screen launch paints the dark
+- iOS: 28 `apple-touch-startup-image` links (`assets/brand/tools/build_assets.py`) so a home-screen launch paints the ROCKHOP
   plate instead of white, and `apple-touch-icon` at 152 / 167 / 180. iOS ignores the manifest's
   `orientation: landscape`, so the game must keep working from a portrait cold start.
 - Storage keys added: `trials.bikeClass`, `trials.telemetry`, `trials.runlog`, `trials.onboarded`,

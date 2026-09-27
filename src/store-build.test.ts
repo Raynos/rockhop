@@ -117,4 +117,17 @@ describe('store build (VITE_STORE=1) compiles out every dev surface', () => {
       expect(art.assets.map((a) => a['id'])).not.toContain('graffiti-nofear');
     }
   });
+
+  it('links every iPhone launch image under its new brand-specific URL', () => {
+    for (const b of [web, store]) {
+      const html = fs.readFileSync(path.join(b.dir, 'index.html'), 'utf8');
+      const urls = [...html.matchAll(/apple-touch-startup-image[^>]+href="([^"]+)"/g)].map((m) => m[1]!);
+      expect(urls).toHaveLength(28);
+      for (const url of urls) {
+        expect(url).toMatch(/^(?:\.?\/)art\/splash\/rockhop-\d+x\d+\.png$/);
+        expect(b.files).toContain(url.replace(/^\.?\//, ''));
+      }
+      expect(b.files.filter((f) => f.startsWith('art/splash/'))).toHaveLength(28);
+    }
+  });
 });

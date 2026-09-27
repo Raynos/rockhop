@@ -92,7 +92,7 @@ describe('main menu (round 3 B2 "Strip", ask 42: the title menu leaks nothing)',
     expect(menu.root.querySelector('.menu-item[data-id="play"]')?.textContent?.trim()).toBe('Play');
   });
 
-  it('shows the harbour tint until the pack plate decodes, and asks the pack for harbour art only', () => {
+  it('shows bundled harbour art while the pack plate resolves, and asks the pack for harbour art only', () => {
     const applied: string[] = [];
     const art = {
       whenReady: (cb: () => void) => cb(),
@@ -105,8 +105,8 @@ describe('main menu (round 3 B2 "Strip", ask 42: the title menu leaks nothing)',
     } as unknown as ArtManifest;
     const menu = new MainMenuScreen(document.body, { tick: vi.fn(), confirm: vi.fn() } as unknown as UiSfx, art, { goto: vi.fn() } as unknown as FrontCallbacks);
     const strip = menu.root.querySelector<HTMLElement>('.menu-keyart')!;
-    expect(strip.style.backgroundImage).toMatch(/^linear-gradient/);
-    expect(strip.classList.contains('loaded')).toBe(false);
+    expect(strip.style.backgroundImage).toContain('art/menu/keyart-harbour-960.webp');
+    expect(strip.classList.contains('loaded')).toBe(true);
     expect(applied).toEqual(['keyart-harbour-960']); // jsdom: DPR 1, a 1024 px window
   });
 });
