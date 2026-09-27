@@ -44,9 +44,8 @@ const registry = new Map<string, TrackDef>();
 for (const t of ALL_TRACKS) registry.set(t.id, t);
 
 /**
- * ROCKHOP (store release Phase 3, `./rockhop`): the twelve tracks and four playgrounds resolve by id (`getTrack`,
- * `?track=<id>`, the harness) and are listed by `listRockhopTrackIds`; the world map reads `ROCKHOP_TRACKS` /
- * `ROCKHOP_PLAYGROUNDS`. `listTrackIds` stays the fixtures + retired set (dev and harness listings).
+ * ROCKHOP: exactly twelve campaign tracks resolve by id (`getTrack`, `?track=<id>`, the harness) and are listed by
+ * `listRockhopTrackIds`; the world map reads `ROCKHOP_TRACKS`. `listTrackIds` stays fixtures + retired dev courses.
  */
 const staged = new Map<string, TrackDef>();
 for (const t of ROCKHOP_ALL) {
@@ -84,7 +83,7 @@ export function getTrack(id: string): TrackDef | undefined {
   return registry.get(id) ?? staged.get(id);
 }
 
-/** Ids of the ROCKHOP set (tracks C1..S3 then the zone playgrounds). */
+/** Ids of the twelve ROCKHOP campaign tracks (C1..S3). */
 export function listRockhopTrackIds(): string[] {
   return [...staged.keys()];
 }
@@ -94,7 +93,7 @@ export function listTrackIds(): string[] {
   return [...registry.keys()];
 }
 
-export { ROCKHOP_TRACKS, ROCKHOP_PLAYGROUNDS, ROCKHOP_ALL, ROCKHOP_ZONE_BIOME, ROCKHOP_ZONES, ZONE_LABEL, ZONE_CODE, medalTargets, rockhopMeta, rockhopZone } from './rockhop';
+export { ROCKHOP_TRACKS, ROCKHOP_ALL, ROCKHOP_ZONE_BIOME, ROCKHOP_ZONES, ZONE_LABEL, ZONE_CODE, medalTargets, rockhopMeta, rockhopZone } from './rockhop';
 export type { RockhopEntry, RockhopMeta, MedalTargets, ZoneId } from './rockhop';
 
 export const DEFAULT_TRACK_ID = FLAT_TEST_TRACK.id;

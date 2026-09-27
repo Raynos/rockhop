@@ -7,7 +7,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { compileTrack, getTrack, isPlaygroundTrackId, listRockhopTrackIds, listTrackIds, RETIRED_TRACKS, ROCKHOP_ALL, ROCKHOP_PLAYGROUNDS, ROCKHOP_TRACKS, ROCKHOP_ZONE_BIOME, segmentsOf } from '../index';
+import { compileTrack, getTrack, listRockhopTrackIds, listTrackIds, RETIRED_TRACKS, ROCKHOP_ALL, ROCKHOP_TRACKS, ROCKHOP_ZONE_BIOME } from '../index';
 import { PROPS, isDecorKind, type ObstacleKind, type PropId } from '../kinds';
 import { rockhopMeta } from './builder';
 import { originality, ORIGINALITY_LIMIT } from './originality';
@@ -15,7 +15,7 @@ import { ZONE_ORDER } from './zones';
 
 const TRACK_IDS = ['c1-low-tide', 'c2-crane-hop', 'c3-hull-breach', 'a1-sawdust', 'a2-log-jam', 'a3-timberline', 'd1-dust-devil', 'd2-conveyor', 'd3-rope-walk', 's1-lift-line', 's2-cornice', 's3-whiteout'];
 const CODES = ['C1', 'C2', 'C3', 'A1', 'A2', 'A3', 'D1', 'D2', 'D3', 'S1', 'S2', 'S3'];
-const PLAYGROUND_IDS = ['p-coast', 'p-alpine', 'p-quarry', 'p-snowline'];
+const REMOVED_FREE_RIDES = ['p-coast', 'p-alpine', 'p-quarry', 'p-snowline'];
 const TIER_ORDER = ['beginner', 'easy', 'medium', 'hard', 'extreme'];
 
 /** The staged set grows zone by zone; every assertion below holds for whatever has landed, in order. */
@@ -25,7 +25,7 @@ describe('ROCKHOP registry', () => {
   it('tracks are the approved world-map codes and ids, in progression order', () => {
     expect(landed).toEqual(TRACK_IDS.slice(0, landed.length));
     expect(ROCKHOP_TRACKS.map((t) => t.code)).toEqual(CODES.slice(0, landed.length));
-    expect(ROCKHOP_PLAYGROUNDS.map((p) => p.id)).toEqual(PLAYGROUND_IDS.slice(0, ROCKHOP_PLAYGROUNDS.length));
+    expect(ROCKHOP_ALL).toHaveLength(12);
   });
 
   it('resolve by id (getTrack, ?track=) but stay out of the listed set until the world-map cut-over', () => {
@@ -35,13 +35,16 @@ describe('ROCKHOP registry', () => {
       expect(listed.has(t.id)).toBe(false);
     }
     expect(listRockhopTrackIds()).toEqual(ROCKHOP_ALL.map((t) => t.id));
+    for (const id of REMOVED_FREE_RIDES) {
+      expect(getTrack(id)).toBeUndefined();
+      expect(listRockhopTrackIds()).not.toContain(id);
+    }
   });
 
   it('zones run coast -> alpine -> quarry -> snowline, three tracks each, biome from the one mapping', () => {
     const zones = ROCKHOP_TRACKS.map((t) => t.zone);
     expect(zones).toEqual(zones.map((_z, i) => ZONE_ORDER[Math.floor(i / 3)]));
     for (const t of ROCKHOP_ALL) expect(t.meta?.biome).toBe(ROCKHOP_ZONE_BIOME[rockhopMeta(t).zone]);
-    ROCKHOP_PLAYGROUNDS.forEach((p, i) => expect(p.zone).toBe(ZONE_ORDER[i]));
   });
 
   it('tiers, attempts bands and medal targets never step down C1 -> S3', () => {
@@ -66,17 +69,6 @@ describe('ROCKHOP registry', () => {
     }
   });
 
-  it('playgrounds: free ride, one per zone, six review segments, classified as playgrounds', () => {
-    for (const p of ROCKHOP_PLAYGROUNDS) {
-      expect(isPlaygroundTrackId(p.id)).toBe(true);
-      expect(rockhopMeta(p.def).playground).toBe(true);
-      const segs = segmentsOf(p.def);
-      expect(segs).toHaveLength(6);
-      expect(segs[0]!.from).toBe(0);
-      expect(segs[5]!.to).toBe(p.def.finishX);
-    }
-    for (const t of ROCKHOP_TRACKS) expect(isPlaygroundTrackId(t.id)).toBe(false);
-  });
 });
 
 describe('ROCKHOP prop kit', () => {

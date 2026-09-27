@@ -254,8 +254,8 @@ export class App {
     this.hud = o.hud;
     this.audio = o.audio;
     this.bestTimes = o.bestTimes;
-    // The shipped set (store release Phase 3 cutover): the twelve ROCKHOP courses in zone order and the four zone
-    // playgrounds. The retired curriculum, its playgrounds and the Labs stay reachable by `?track=` and the level
+    // The shipped set: twelve ROCKHOP courses in zone order, three per biome. The retired curriculum, its playgrounds
+    // and the Labs stay reachable by `?track=` and the level
     // reviewer (dev builds) but are never on the map, never in progression.
     this.tracks = [...ROCKHOP_ALL];
     try {

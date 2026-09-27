@@ -2,7 +2,8 @@
  * Progression, as stages. A ROCKHOP course (`meta.zone`) progresses by ZONE (store release Phase 3): COAST, then
  * ALPINE, QUARRY, SNOWLINE; a zone opens when every track of every earlier zone holds a medal. A track list with no
  * zones (the retired curriculum, dev lists, old tests) progresses by tier exactly as before. Playgrounds are outside
- * medals; a zone's FREE RIDE opens with its zone. `?dev=1` unlocks everything. Pure functions, unit-tested.
+ * medals. Historical playground handling remains for dev-only retired courses; the shipped ROCKHOP catalog is twelve
+ * campaign tracks. `?dev=1` unlocks everything. Pure functions, unit-tested.
  */
 import type { Medal, TrackDef, TrackTier } from '../core/types';
 import { isPlaygroundTrackId } from '../tracks';
