@@ -318,8 +318,8 @@ for(let i=0;i<24;i++){
  seaStack(x,z,scale*.37,scale*1.22,x>14);
 }
 
-// Broken outcrops interrupt the long front cliff and carry its silhouette
-// down into the surf. They are instanced to keep the extra draw cost bounded.
+// Broad broken outcrops interrupt both cliff faces and carry their silhouette
+// down into the surf. Fewer, heavier ribs read as a cut rock mass in an orbit.
 const buttressPositions=[],buttressIndices=[];
 const buttressLevels=[-.8,-.33,.18,.55,1],buttressWidths=[.82,1,.83,.49,.07],buttressSides=9;
 for(let level=0;level<buttressLevels.length;level++)for(let side=0;side<buttressSides;side++){
@@ -332,33 +332,32 @@ const buttressGeo=new THREE.BufferGeometry();
 buttressGeo.setAttribute('position',new THREE.Float32BufferAttribute(buttressPositions,3));
 buttressGeo.setIndex(buttressIndices);buttressGeo.computeVertexNormals();
 const buttressMaterials=['#626d62','#78836f','#a46a4b','#a8babc'].map(hex=>mat(hex));
-const buttresses=buttressMaterials.map(material=>new THREE.InstancedMesh(buttressGeo,material,48));
+const buttresses=buttressMaterials.map(material=>new THREE.InstancedMesh(buttressGeo,material,40));
 const buttressCounts=[0,0,0,0],buttressDummy=new THREE.Object3D();
-for(let i=0;i<165;i++){
+for(let i=0;i<128;i++){
  const x=rr(-23.0,23.0),side=rand()<.50?1:-1;
  const edgeZ=(9.7+Math.sin(x*.23))*Math.sqrt(Math.max(.08,1-(x/25.4)**2));
  const z=side*edgeZ*rr(.92,1.045);
  const band=x>13?3:x>2?2:x<-11?0:1;
- if(buttressCounts[band]>=48)continue;
- const rear=side<0,top=groundHeight(x,z),height=rr(.65,1.80)*(rear?1.65:1)*(x>13?1.10:1);
- buttressDummy.position.set(x,top-(rear?.24:.53)*height,z);
+ if(buttressCounts[band]>=40)continue;
+ const rear=side<0,top=groundHeight(x,z),height=rr(.82,2.05)*(rear?1.55:1)*(x>13?1.08:1);
+ buttressDummy.position.set(x,top-(rear?.31:.57)*height,z);
  buttressDummy.rotation.set(rr(-.14,.14),rr(0,6.28),rr(-.20,.20));
- buttressDummy.scale.set(rr(rear?.42:.26,rear?.90:.62),height,rr(rear?.43:.27,rear?.82:.58));buttressDummy.updateMatrix();
+ buttressDummy.scale.set(rr(rear?.55:.38,rear?1.12:.83),height,rr(rear?.52:.37,rear?1.02:.78));buttressDummy.updateMatrix();
  buttresses[band].setMatrixAt(buttressCounts[band]++,buttressDummy.matrix);
 }
 buttresses.forEach((o,i)=>{o.count=buttressCounts[i];o.castShadow=true;o.receiveShadow=true;terrain.add(o);});
 
-// Sediment seams follow the real broken coastline, rather than a flat ring.
-// Their short gaps expose the underlying faceted cliff and keep each biome's
-// rock cut distinct as the island turns. All seams share one small mesh.
+// Two interrupted bedding ledges follow the broken coastline. Muted color and
+// longer gaps leave the larger rock facets readable from front and reverse.
 {
  const positions=[],colors=[],indices=[];
- const bands=[.878,.918,.955,.982];
+ const bands=[.911,.969];
  const palettes=[
-   ['#a2a894','#777f73','#9aa18d','#71796f'],
-   ['#8d9f82','#657d6d','#99a28b','#607367'],
-   ['#d19a68','#9e6446','#c68a5c','#87563f'],
-   ['#dce6df','#93adb0','#c7d6d1','#7899a3'],
+   ['#7c8376','#656f64'],
+   ['#748a78','#617468'],
+   ['#a4714e','#80543e'],
+   ['#bacbc7','#829fa5'],
  ];
  const coastAt=(x,side,target)=>{
    if(edgeDistance(x,0)>=target)return null;
@@ -371,8 +370,8 @@ buttresses.forEach((o,i)=>{o.count=buttressCounts[i];o.castShadow=true;o.receive
  };
  for(const side of [-1,1])for(let band=0;band<bands.length;band++)for(let i=0;i<188;i++){
    const x0=-22.55+i*.24,x1=x0+.24;
-   if(hash2(Math.floor(x0/2.1)+band*11,side*19)<.26)continue;
-   const outer=bands[band]+.007;
+   if(hash2(Math.floor(x0/1.8)+band*11,side*19)<.46)continue;
+   const outer=bands[band]+.008;
    const z00=coastAt(x0,side,bands[band]),z01=coastAt(x0,side,outer);
    const z10=coastAt(x1,side,bands[band]),z11=coastAt(x1,side,outer);
    if([z00,z01,z10,z11].some(z=>z===null))continue;
