@@ -575,11 +575,11 @@ Two numbers, DOWNLOAD and SETUP (the user's decision: "B Odometer" with both tra
   card tint carries the colour. `App.play` also signals `onBikeChange` on every launch). Focus previews
   (`previewBike`, the backdrop reloads with that class), confirm commits (`trials.bikeClass`), Esc previews
   back to the committed class.
-- **Copy = physics v2 R3** (physics.md "v2 status — R3"; `BIKE_SPECS`): Rookie — *Never loops at neutral.
+- **Copy = current physics v2 presets / R6 wheelie test** (`BIKE_SPECS`): Rookie — *Never loops at neutral.
   Forgiving landings, 0→16 in 4.0 s, tops 20 m/s.* / note *Loops only leaning back · standard medal targets*;
-  Pro — *Loops at neutral under full gas in ~1 s. 21 m/s, sharper throttle, higher hop.* / note *Raw · medal
-  targets 10 % tighter*. The old "wheelie assist" wording is gone: v2 has no assist, the Rookie's 0.15 s
-  throttle filter is what keeps the launch kick from lifting the front. **Balance hint** (`BALANCE_HINT`):
+  Pro — *Lifts into a neutral wheelie without looping. Sharper throttle, 21 m/s.* / note *Same tyre grip · medal targets 10 % tighter*.
+  Both classes use the same tyre friction table and suspension travel; Pro has stronger springs and a quicker throttle.
+  The Rookie's 0.15 s throttle filter keeps the launch kick from lifting the front. **Balance hint** (`BALANCE_HINT`):
   *Wheelie balance point: ~50° at neutral · lean back and it moves to 69°, forward to 24°* (the R3
   coasting-balance row, lean −1 / 0 / +1) is shown exactly twice — the garage header (`garage-tip`, hidden on
   `html.short`) and the first-run card (`ob-tip`) — never floated during play.

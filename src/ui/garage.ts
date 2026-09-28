@@ -11,7 +11,7 @@
  * the staged hero swaps livery with no track reload — ask 29; the sheet follows the click, not the pointer —
  * ask 40); an outfit commits on click
  * (`rockhop.riderOutfit`). The rider-model row is gone (asks 30 / 31): the Blender rider is the rider;
- * `?rider=` stays a harness / debug override. Copy states the physics v2 R3 numbers (physics.md "v2 status — R3").
+ * `?rider=` stays a harness / debug override. Copy follows the current v2 preset and R6 wheelie tests.
  */
 import type { BikeClass, RiderOutfit } from '../core/types';
 import { RIDER_PRESETS } from '../core/riderPresets';
@@ -56,14 +56,14 @@ export const BIKE_SPECS: Record<BikeClass, BikeSpec> = {
   pro: {
     id: 'pro',
     name: 'Pro',
-    // R3 Pro row: 54 kg rider, 1 000 N, 0.08 s throttle, loops at lean 0 in 0.96 s under full gas, 0→16 in 3.25 s,
-    // limiter 21 m/s, hop 5–10 % higher than the Rookie.
-    line: 'Loops at neutral under full gas in ~1 s. 21 m/s, sharper throttle, higher hop.',
+    // Current R6 Pro: 54 kg chassis, 1 000 N, 0.08 s throttle, neutral full gas holds a 25–40° wheelie
+    // without looping. Tyre grip and suspension travel are the same as Rookie; the springs are stiffer.
+    line: 'Lifts into a neutral wheelie without looping. Sharper throttle, 21 m/s.',
     power: 0.92,
-    grip: 0.58,
+    grip: 0.82,
     weight: 0.42,
     weightFeel: 'Flickable',
-    note: 'Raw · medal targets 10 % tighter',
+    note: 'Same tyre grip · medal targets 10 % tighter',
     tint: '#2a5da8',
   },
 };
