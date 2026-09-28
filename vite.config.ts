@@ -72,11 +72,12 @@ function retiredTracksLazy(): Plugin {
 }
 
 /**
- * Dev chunks, never fetched by a player: the retired tracks (`retiredTracksLazy`, a `?` dev URL only, absent from a
- * store build) and the main-thread audio renderer (`assets/audio-offline-*.js`: the harness hook
- * `__rockhop.audio.renderOffline`; a player's DSP is the worklet asset). Phase `dev`: not streamed, not warmed.
+ * Dev chunks, never fetched by a normal player: the retired tracks (`retiredTracksLazy`, a `?` dev URL only,
+ * absent from a store build), the v1 solver (`?physics=v1` only), and the main-thread audio renderer
+ * (`assets/audio-offline-*.js`: the harness hook `__rockhop.audio.renderOffline`; a player's DSP is the
+ * worklet asset). Phase `dev`: not streamed, not warmed.
  */
-const DEV_CHUNK = /^assets\/(retired|audio-offline)-[\w-]+\.js$/;
+const DEV_CHUNK = /^assets\/(retired|audio-offline|legacy-physics)-[\w-]+\.js$/;
 
 /** The inline loader script (`src/boot/inline.ts` bundled) must paint with the first HTML bytes: ≤ 8 KB minified. */
 const INLINE_BUDGET_BYTES = 8 * 1024;
@@ -106,7 +107,7 @@ function bundleBudget(): Plugin {
         // `bundle.jsGzipKB` sums, so the build and the gate report one number.
         if (item.type === 'chunk' ? false : !name.endsWith('.js')) continue;
         const gz = gzipSync(item.type === 'chunk' ? Buffer.from(item.code) : Buffer.from(item.source)).length;
-        // The retired tracks' dev chunk is fetched only by a `?` dev URL and absent from the store build: listed, not budgeted.
+        // Explicit review-only chunks are absent from normal player boot: listed, not budgeted.
         const dev = DEV_CHUNK.test(name);
         if (!dev) total += gz;
         rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${dev ? '  (dev-only, not budgeted)' : ''}`);
@@ -619,8 +620,9 @@ export default defineConfig({
         manualChunks: {
           three: ['three'],
         },
-        // `src/audio/offline.ts` is a lazy harness-only chunk: named so it cannot be mistaken for the PWA's offline pack.
-        chunkFileNames: (c) => (c.facadeModuleId?.endsWith('/src/audio/offline.ts') ? 'assets/audio-offline-[hash].js' : 'assets/[name]-[hash].js'),
+        // The audio renderer and v1 physics are explicit review-only paths, never normal player boots.
+        chunkFileNames: (c) => (c.facadeModuleId?.endsWith('/src/audio/offline.ts') ? 'assets/audio-offline-[hash].js'
+          : c.facadeModuleId?.endsWith('/src/physics/webLegacy.ts') ? 'assets/legacy-physics-[hash].js' : 'assets/[name]-[hash].js'),
       },
     },
   },

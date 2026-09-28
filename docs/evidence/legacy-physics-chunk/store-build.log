@@ -1,0 +1,57 @@
+
+> rockhop@0.3.2 build:store /Users/raynos/projects/game-demos/trials-gauntlet-demo
+> VITE_STORE=1 vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 221 modules transformed.
+rendering chunks...
+[plugin rockhop:bundle-budget] 
+  assets/three-KDG1PVKg.js                    187.5 KB gz
+  assets/index-BvJsY9mz.js                    406.4 KB gz
+  assets/index-DfjcVW-g.js                      0.7 KB gz
+  assets/audio-offline-DuPVrTzc.js             15.7 KB gz  (dev-only, not budgeted)
+  assets/worklet-_ehyroNV.js                    0.1 KB gz
+  assets/index-DpEh2v2y.js                      0.2 KB gz
+  assets/index-Z2Y8yCIB.js                      3.8 KB gz
+  assets/web-DfT3n9Dg.js                        0.6 KB gz
+  assets/web-4dHzvi1O.js                        0.4 KB gz
+  assets/worklet-CAUoCeGS.js                   14.5 KB gz
+bundle budget: 614.2 KB gz (628963 B) of 640 KB — OK
+[plugin rockhop:load-manifest] load manifest: core 2158 KB, title 1896 KB, menu 1461 KB, world 4182 KB, models 19019 KB
+[plugin rockhop:prune-flat-models] pruned 28 unrequested flat model copies from dist/models (26.88 MB)
+[plugin rockhop:sourcemaps-out] moved 10 source maps out of the deploy to dist-maps
+computing gzip size...
+dist/model-catalog.json                                                              3.57 kB │ gzip:   0.97 kB
+dist/load-manifest.json                                                             21.11 kB │ gzip:   3.76 kB
+dist/index.html                                                                     28.92 kB │ gzip:   9.22 kB
+dist/assets/worklet-CAUoCeGS.js                                                     44.50 kB
+dist/models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb                     864.84 kB
+dist/models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb                  870.44 kB
+dist/models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb    912.70 kB
+dist/models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb         946.82 kB
+dist/models/055a33c00bdb65ab/rider-street-openface-lod-d86ca40f97b7a06c.glb      1,480.20 kB
+dist/models/8e7b1bc154e23855/rider-street-charcoal-lod-2769317a38c360d6.glb      1,706.12 kB
+dist/models/72619c57c200c5c9/rider-street-mustard-lod-5d8cdbd9a2d3035f.glb       1,753.25 kB
+dist/models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb                       2,270.54 kB
+dist/models/98214c3b3099a465/bike-rookie-e55919d602678493.glb                    2,283.04 kB
+dist/models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb      2,355.38 kB
+dist/models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb           2,448.15 kB
+dist/models/055a33c00bdb65ab/rider-street-openface-438e972824940b55.glb          3,015.12 kB
+dist/models/8e7b1bc154e23855/rider-street-charcoal-0e7f2231e7f15dd5.glb          3,486.94 kB
+dist/models/72619c57c200c5c9/rider-street-mustard-c08dabf79dc45d2f.glb           3,616.25 kB
+dist/assets/worklet-_ehyroNV.js                                                      0.10 kB │ gzip:   0.10 kB │ map:     0.10 kB
+dist/assets/index-DpEh2v2y.js                                                        0.42 kB │ gzip:   0.28 kB │ map:     0.57 kB
+dist/assets/web-4dHzvi1O.js                                                          0.86 kB │ gzip:   0.41 kB │ map:     2.22 kB
+dist/assets/index-DfjcVW-g.js                                                        1.44 kB │ gzip:   0.71 kB │ map:     4.02 kB
+dist/assets/web-DfT3n9Dg.js                                                          1.46 kB │ gzip:   0.61 kB │ map:     3.95 kB
+dist/assets/index-Z2Y8yCIB.js                                                       12.39 kB │ gzip:   3.90 kB │ map:    34.87 kB
+dist/assets/audio-offline-DuPVrTzc.js                                               50.91 kB │ gzip:  16.06 kB │ map:   166.63 kB
+dist/assets/three-KDG1PVKg.js                                                      746.47 kB │ gzip: 192.04 kB │ map: 3,158.82 kB
+dist/assets/index-BvJsY9mz.js                                                    1,337.63 kB │ gzip: 416.25 kB │ map: 3,906.72 kB
+
+(!) Some chunks are larger than 700 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.49s

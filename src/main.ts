@@ -5,7 +5,7 @@
  *   ?harness=1      no real-time driver; the headless harness owns the clock via window.__rockhop
  *   ?countdown=1    keep the 3-2-1-GO in harness mode (captures of the countdown)
  *   ?physics=mock   force the scaffold MockPhysics even when the real bike physics exists
- *   ?physics=v1|v2  pick `createBikePhysicsV1` / `createBikePhysicsV2` from the physics barrel when exported (A/B during the v2 migration); default = `createBikePhysics`
+ *   ?physics=v1|v2  explicit solver review; v1 is fetched only for that URL, default is v2
  *   ?audio=0        NullAudio (the hook then has no renderOffline)
  *   ?ghost=1        run the PB ghost world in harness mode too (off by default there: one world per µs/tick)
  *   ?rider=gltf|proc, ?bike=gltf|proc   rider / bike model (default gltf; a stored settings choice otherwise)
@@ -26,7 +26,7 @@
 import './ui/errorModalInstall';
 import { DEFAULT_PHYSICS_HZ, type PhysicsVersion } from './core';
 import * as audioMod from './audio';
-import * as physicsMod from './physics';
+import { createBikePhysicsV2 } from './physics/v2/bike';
 import * as renderMod from './render';
 import type { AudioSystem } from './audio';
 import type { PhysicsWorld } from './physics';
@@ -54,31 +54,29 @@ import { AUTOMATION_HOOK, DEV_SURFACES, STORE } from './core/release';
 type AnyModule = Record<string, unknown>;
 
 type PhysicsFactoryFn = (hz: number) => PhysicsWorld;
+let legacyPhysicsFactory: PhysicsFactoryFn | null = null;
 
-/** Solver versions the physics barrel exports today (`createBikePhysicsV1` / `createBikePhysicsV2`). */
+/** The old solver is fetched only for a `?physics=v1` review URL. */
 function physicsVersions(): ('v1' | 'v2')[] {
-  const m = physicsMod as AnyModule;
-  const out: ('v1' | 'v2')[] = [];
-  if (typeof m['createBikePhysicsV1'] === 'function') out.push('v1');
-  if (typeof m['createBikePhysicsV2'] === 'function') out.push('v2');
-  return out;
+  return legacyPhysicsFactory ? ['v1', 'v2'] : ['v2'];
 }
 
 /**
- * Real bike physics when the physics owner has exported a factory; mock otherwise. `?physics=v1|v2` picks a
- * versioned factory when it exists. `version` is the solver stamp (`createBikePhysics` is v2 since the R3 flip,
- * `src/physics/index.ts`); undefined for the mock.
+ * The shipped solver is v2. The legacy solver and mock are review-only choices;
+ * keeping v1 out of the player entry removes the old 100 KB source from every normal boot.
  */
 function physicsFactory(choice: string | null): { make: PhysicsFactoryFn; kind: string; version: PhysicsVersion | undefined } {
-  const m = physicsMod as AnyModule;
-  if (choice !== 'mock') {
-    const names = choice === 'v1' ? ['createBikePhysicsV1'] : choice === 'v2' ? ['createBikePhysicsV2'] : [];
-    for (const name of [...names, 'createBikePhysics', 'bikePhysicsFactory', 'createPhysics']) {
-      const f = m[name];
-      if (typeof f === 'function') return { make: f as PhysicsFactoryFn, kind: name, version: name === 'createBikePhysicsV1' ? 'v1' : 'v2' };
-    }
+  if (DEV_SURFACES && choice === 'mock') return { make: (hz) => new MockPhysics(hz), kind: 'mock', version: undefined };
+  if (DEV_SURFACES && choice === 'v1') {
+    if (!legacyPhysicsFactory) throw new Error('legacy physics was not loaded before boot');
+    return { make: legacyPhysicsFactory, kind: 'createBikePhysicsV1', version: 'v1' };
   }
-  return { make: (hz) => new MockPhysics(hz), kind: 'mock', version: undefined };
+  return { make: createBikePhysicsV2, kind: choice === 'v2' ? 'createBikePhysicsV2' : 'createBikePhysics', version: 'v2' };
+}
+
+function loadLegacyPhysics(): Promise<void> {
+  if (!DEV_SURFACES || new URLSearchParams(location.search).get('physics') !== 'v1') return Promise.resolve();
+  return import('./physics/webLegacy').then((m) => { legacyPhysicsFactory = m.createBikePhysicsV1; });
 }
 
 export interface ModelChoices {
@@ -454,8 +452,8 @@ if (STORE) {
 } else if (DEV_SURFACES && location.search.length > 1) {
   // A `?` dev URL (`?track=`, `?bench=1`, `?harness=1`, `?review=`…) may name a retired track: register them first
   // (src/tracks `loadRetiredTracks`, the lazy dev chunk). A player's plain URL never fetches it.
-  void loadRetiredTracks()
-    .catch((e: unknown) => console.warn('[rockhop] retired tracks failed to load', e))
+  void Promise.all([loadRetiredTracks(), loadLegacyPhysics()])
+    .catch((e: unknown) => console.warn('[rockhop] dev modules failed to load', e))
     .finally(boot);
 } else {
   boot();
