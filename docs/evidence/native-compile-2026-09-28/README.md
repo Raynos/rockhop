@@ -1,0 +1,9 @@
+# Both store shells compile from the same committed source
+
+On 2026-09-28, `node scripts/store-build.mjs release --ios` and `node scripts/store-build.mjs release --android` each exported clean committed source `5102b6b14f74e5de8186f76b4fcd9a06063ee303` into the store web bundle. `store/build/SOURCE` named that SHA and `store/build/MODE` read `release`. The bundle build rejected automation hooks and copied the same web payload into both Capacitor shells.
+
+- iOS: the unsigned **Release iPhone Simulator** app compiled at `store/build/ios-derived/Build/Products/Release-iphonesimulator/App.app` (54 MiB). This checks Swift/Capacitor compilation; it is not an iPhone archive or a signed TestFlight build.
+- Android: `bundleRelease` produced the upload-key-signed `android/app/build/outputs/bundle/release/app-release.aab` (46 MiB). `jarsigner -verify` returned exit 0 and `jar verified`; its self-signed upload certificate warning does not establish Play acceptance. The AAB SHA-256 was `908c4038201d73d9bb6d32feb21d25d64da0600b6494434a17ca5aca344c1f19`.
+- `node scripts/ip-audit.mjs --strict store/build/web ios android store/metadata` returned exit 0 with zero retired-name/franchise matches across 168 inspected files. This text scan does not resolve the separate source-rights question in `store/COMPLIANCE.md`.
+
+The iOS `Info.plist` lists only landscape orientations, and Android requests `sensorLandscape`. No physical phone, install, signed iOS archive, continuous session, store upload or store review was exercised. This is a compile and payload check on a development candidate; Gate 4 and Gate 5 remain open.
