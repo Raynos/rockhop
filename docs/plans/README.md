@@ -2,9 +2,10 @@
 
 **Standing goal: build every plan in this folder to completion and archive it. The 3-hour close-out contract is `project/archive/CLOSEOUT.md` (2026-09-15 16:30).** Completion = each plan's own done lines, judged by evidence (gate, strangers, blind critic, device report), or the user's explicit acceptance with exceptions recorded in the archived plan.
 
-One page, kept current by the parent at every commit. The bars no plan can close (wowed vs the real game, PS4 picture, the hero as a person, desktop-high at 60 on a phone, sound as a recording, fun) live in `docs/mission.md`; plans carry their measurable proxies. Percentages are against each plan's own
-"done" lines, except closures explicitly accepted by the user with recorded exceptions. Production migration: `Raynos/rockhop` now targets `playrockhop.vercel.app`; the old https://trials-gauntlet-demo.vercel.app stays live until the replacement passes CI and `/version.json` verification. Pins v0.1.0 / v0.2.0 / v0.2.1 / **v0.2.2** (the garage build):
+One page, kept current by the parent at every commit. The bars no plan can close (wowed vs the real game, PS4 picture, the hero as a person, desktop-high at 60 on a phone, sound as a recording, fun) live in `docs/mission.md`; plans carry their measurable proxies. Percentages are against each plan's own "done" lines, except closures explicitly accepted by the user with recorded exceptions. Production migration: `Raynos/rockhop` now targets `playrockhop.vercel.app`; the old https://trials-gauntlet-demo.vercel.app stays live until the replacement passes CI and `/version.json` verification. Pins v0.1.0 / v0.2.0 / v0.2.1 / **v0.2.2** (the garage build):
 https://trials-gauntlet-v0-2-2.vercel.app · `RELEASES.md` has the ledger. **Every ask the user makes, with its status, is in [`docs/tasks/ASKS.md`](../tasks/ASKS.md).**
+
+Current C1 partial ship gate at `ece31ba7`: clear/hash, crash and all 20 one-tick restarts pass; software SwiftShader first frame is 5769 ms against its 4000 ms override. [Evidence](../evidence/ios-app-store-audit/c1-current-source-partial-gate.json). The harness path bypasses production shader prewarm; physical iPhone timing remains the release decision.
 
 ## Hero follow-up handoff — historical
 
