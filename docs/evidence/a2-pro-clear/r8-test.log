@@ -1,0 +1,46 @@
+
+ RUN  v3.2.7 /Users/raynos/projects/game-demos/trials-gauntlet-demo
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > envelope on every riding tick of every golden (both classes): hips >= seatY - 0.08 m, hips x <= tankX + 0.08 m, leg / arm <= reach + 0.08 m; COM <= 0.15 m and psi <= 0.35 rad on every riding tick >= 60 ticks after the last over-demand tick; no COM excursion > 0.35 m longer than 60 ticks; every golden finishes
+R8 residuals: none
+R8 envelope: 74 goldens, 294809 riding ticks, over-demand 25.6 %; COM outside 0.15: 13565 (4.60 %), p50 / p95 / p99 / max 0.015 / 0.146 / 0.255 / 0.689 m; 0-0.1 s: n 160768 p50 0.031 p95 0.170 p99 0.316 max 0.689; 0.1-0.25 s: n 57131 p50 0.012 p95 0.031 p99 0.057 max 0.493; 0.25-0.5 s: n 44035 p50 0.011 p95 0.022 p99 0.036 max 0.166; 0.5-1 s: n 22932 p50 0.011 p95 0.019 p99 0.030 max 0.082; >=1 s: n 9943 p50 0.011 p95 0.015 p99 0.024 max 0.062; recovered ticks 32875; longest excursions e1-uphill-weight/bot-3.json 0.24 s @3242, h3-fire-line/bot-3.json 0.24 s @4652, s2-cornice/bot-3.json 0.24 s @1770; envelope min hipY 0.423 max hipX 0.324 max leg 0.881 max arm 0.581; faults 10: b2-lean-back/bot-3-pro.json @342 sensor, b2-lean-back/bot-3-pro.json @1119 sensor, b2-lean-back/bot-3-pro.json @1661 sensor, b3-kicker-row/bot-3.json @661 sensor, c3-hull-breach/bot-3.json @2536 hazard, h3-fire-line/bot-3.json @4908 sensor, h3-fire-line/bot-3-pro.json @4520 thrown, m2-drum-roll/bot-3.json @1854 sensor, p4-night-circuit/bot-3.json @2282 sensor, x1-vertical-limit/bot-3-pro.json @5298 sensor
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > the landing punch: a 3 m flat drop at lean 0 / +0.5 on both classes sits the rider onto the seat and rides away, no fault (before R8 the body went 1.25 m through the chassis)
+FEEL r8.punch.rookie.3m@6.lean0 = hips min 0.456 (seat 0.2) seatJ 86 N s rear 100% pitch -8..13 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.rookie.3m@12.lean0 = hips min 0.455 (seat 0.2) seatJ 110 N s rear 100% pitch -8..9 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.rookie.3m@6.lean0.5 = hips min 0.441 (seat 0.2) seatJ 63 N s rear 100% pitch -23..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.rookie.3m@12.lean0.5 = hips min 0.432 (seat 0.2) seatJ 78 N s rear 100% pitch -26..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@6.lean0 = hips min 0.456 (seat 0.2) seatJ 80 N s rear 100% pitch -8..16 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@12.lean0 = hips min 0.457 (seat 0.2) seatJ 104 N s rear 100% pitch -7..11 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@6.lean0.5 = hips min 0.450 (seat 0.2) seatJ 60 N s rear 100% pitch -19..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@12.lean0.5 = hips min 0.439 (seat 0.2) seatJ 109 N s rear 100% pitch -23..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > severe rear-first impact faults within 0.3 s; a milder 40 deg impact is ridden; a reach overload explicitly throws the rider
+FEEL r8.thrown.rookie.50deg@3rad/s.-8m/s = fault thrown @0.20s max grip 3000 N [physical fault within 0.3 s]
+FEEL r8.thrown.rookie.40deg@2rad/s.-8m/s = ridden max grip 1133 N [ridden, grip < 2500 N]
+FEEL r8.thrown.pro.50deg@3rad/s.-8m/s = fault thrown @0.20s max grip 2849 N [physical fault within 0.3 s]
+FEEL r8.thrown.pro.40deg@2rad/s.-8m/s = ridden max grip 1125 N [ridden, grip < 2500 N]
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > brakes: a plain full brake from 6 / 10 / 15 m/s at lean 0 stops upright on both classes (<= 15 deg nose-down, rear off < 0.4 s); with the brace off the 15 m/s stop endos; brake + lean +1 from 10 m/s lifts the rear within 0.2 s and released after 0.3 s rides away
+FEEL r8.brake.rookie.v6.lean0 = v0 6.0 stop 0.79 s pitch min -7 rear-off 0.16 s upright [stops upright]
+FEEL r8.brake.rookie.v10.lean0 = v0 9.9 stop 1.28 s pitch min -8 rear-off 0.20 s upright [stops upright]
+FEEL r8.brake.rookie.v15.lean0 = v0 14.4 stop 1.83 s pitch min -9 rear-off 0.25 s upright [stops upright]
+FEEL r8.brake.rookie.v15.lean0.noBrace.noLift = stop 2.03 s pitch min -14 rear-off 0.98 s upright [info (R7 slider: endo; R9 hinge: rides the lift edge)]
+FEEL r8.stoppie.rookie.v10.lean+1.noLift = off 1.04 s rides away [info: Rookie 0.06-0.08 s longer without the lift control (Pro identical)]
+FEEL r8.stoppie.rookie.v10.lean+1.0.2s = rear lifts @0.11 s, off 0.87 s, pitch min -40 rides away | brace off: off 0.87 s rides away [rear off within 0.2 s for >= 0.5 s, no fault, same with the brace off]
+FEEL r8.stoppie.rookie.v10.lean+1.held = rear lifts @0.11 s crash@0.68s [info: a held +1 goes over (R7 identical)]
+FEEL r8.brake.pro.v6.lean0 = v0 6.0 stop 0.77 s pitch min -6 rear-off 0.18 s upright [stops upright]
+FEEL r8.brake.pro.v10.lean0 = v0 9.9 stop 1.24 s pitch min -7 rear-off 0.21 s upright [stops upright]
+FEEL r8.brake.pro.v15.lean0 = v0 14.5 stop 1.79 s pitch min -7 rear-off 0.26 s upright [stops upright]
+FEEL r8.brake.pro.v15.lean0.noBrace.noLift = stop 2.00 s pitch min -11 rear-off 0.92 s upright [info (R7 slider: endo; R9 hinge: rides the lift edge)]
+FEEL r8.stoppie.pro.v10.lean+1.noLift = off 1.28 s rides away [info: Rookie 0.06-0.08 s longer without the lift control (Pro identical)]
+FEEL r8.stoppie.pro.v10.lean+1.0.2s = rear lifts @0.10 s, off 1.28 s, pitch min -52 rides away | brace off: off 1.28 s rides away [rear off within 0.2 s for >= 0.5 s, no fault, same with the brace off]
+FEEL r8.stoppie.pro.v10.lean+1.held = rear lifts @0.10 s crash@0.69s [info: a held +1 goes over (R7 identical)]
+
+ ✓ src/physics/v2/r8.test.ts (5 tests) 6450ms
+   ✓ R8: the hold envelope, the thrown rider and the brake brace > envelope on every riding tick of every golden (both classes): hips >= seatY - 0.08 m, hips x <= tankX + 0.08 m, leg / arm <= reach + 0.08 m; COM <= 0.15 m and psi <= 0.35 rad on every riding tick >= 60 ticks after the last over-demand tick; no COM excursion > 0.35 m longer than 60 ticks; every golden finishes  6282ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  10:56:23
+   Duration  6.83s (transform 174ms, setup 0ms, collect 238ms, tests 6.45s, environment 0ms, prepare 37ms)
