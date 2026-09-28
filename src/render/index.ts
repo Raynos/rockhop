@@ -987,6 +987,7 @@ export class ThreeRenderer implements GameRenderer {
     const run = async (): Promise<number> => {
       let ms = 0;
       const chunk = 2;
+      let workSinceYield = 0;
       for (let i = 0; i < mats.length; i += chunk) {
         if (stale()) break;
         const t0 = performance.now();
@@ -1018,11 +1019,20 @@ export class ThreeRenderer implements GameRenderer {
         } finally {
           r.setRenderTarget(previous, face, mip);
         }
+        const waitAt = performance.now();
         await pending;
+        const waitedMs = performance.now() - waitAt;
         if (stale()) break;
         ms += performance.now() - t0;
         report?.(Math.min(mats.length, i + chunk), mats.length);
-        await yieldFrame();
+        // compileAsync may already yield while the driver links a program. Give the
+        // loader another frame only when batches have kept JS busy for 12 ms;
+        // an asynchronous driver wait itself gave the browser a paint opportunity.
+        workSinceYield = waitedMs >= 8 ? 0 : workSinceYield + performance.now() - t0;
+        if (workSinceYield >= 12) {
+          await yieldFrame();
+          workSinceYield = 0;
+        }
       }
       return ms;
     };
