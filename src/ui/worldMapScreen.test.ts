@@ -51,7 +51,7 @@ describe('world map screen — the painted continent as the level select', () =>
     expect(document.querySelectorAll('.wm-route path.dim')).toHaveLength(1);
     expect(document.querySelectorAll('.wm-fog ellipse').length).toBeGreaterThan(0);
     const markers = [...document.querySelectorAll<HTMLElement>('.wm-marker')];
-    expect(markers.length).toBe(16);
+    expect(markers.length).toBe(12);
     expect(markers.every((m) => !!m.dataset['track'] && m.querySelector('button.wm-hit') !== null)).toBe(true);
     expect(document.querySelectorAll('.wm-gate')).toHaveLength(1);
     expect(document.querySelectorAll('style#worldmap-css')).toHaveLength(1);
@@ -94,7 +94,7 @@ describe('world map screen — the painted continent as the level select', () =>
     expect(d.on()).toBe('c1-low-tide');
   });
 
-  it('markers carry their state: medal class, UP NEXT tag, the padlock on locked ones, PRO on the Pro best, FREE RIDE flags', () => {
+  it('markers carry their state: medal class, UP NEXT tag, the padlock on locked ones, PRO on the Pro best; no Free Ride', () => {
     fixture({ seeded: true });
     const m = (id: string): HTMLElement => document.querySelector<HTMLElement>(`.wm-marker[data-track="${id}"]`)!;
     expect(m('c1-low-tide').classList.contains('gold')).toBe(true);
@@ -107,8 +107,7 @@ describe('world map screen — the painted continent as the level select', () =>
     expect(m('d1-dust-devil').querySelector('.wm-rule')).toBeNull();
     expect(m('d1-dust-devil').querySelector('.wm-hit')?.getAttribute('aria-label')).toBe('D1 Dust Devil — locked: Medal every Alpine track');
     expect(m('c3-hull-breach').querySelector('.tag.pro')?.textContent).toBe('Pro');
-    expect(m('p-coast').classList.contains('proving')).toBe(true);
-    expect(m('p-coast').querySelector('.wm-plate b')?.textContent).toBe('Free ride');
+    expect(document.querySelector('.wm-marker[data-track^="p-"]')).toBeNull();
     expect(document.querySelector('.wm-marker[data-track^="lab-"]')).toBeNull();
   });
 
@@ -126,7 +125,7 @@ describe('world map screen — the painted continent as the level select', () =>
     screen.nav(-1, 0);
     expect(on()).toBe('c1-low-tide');
     screen.nav(-1, 0);
-    expect(on()).toBe('p-snowline'); // wraps to the last FREE RIDE flag
+    expect(on()).toBe('s3-whiteout'); // wraps to the last campaign course
     screen.nav(1, 0);
     expect(on()).toBe('c1-low-tide');
     screen.confirm();

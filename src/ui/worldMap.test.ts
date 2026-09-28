@@ -4,7 +4,7 @@ import { ROCKHOP_ALL } from '../tracks';
 import { isPlaygroundTrack, shipTracks } from './progress';
 import { allMarkers, ANCHOR, buildRegions, CONTINENT, fitZoom, fogPatches, frameFor, locate, MAP, markersInView, nextGate, REGIONS, regionDots, ROAD, routeMarkers, routePath, routeSplit, smoothPath, tierBlend, ZOOM } from './worldMap';
 
-/** The shipped set (store release Phase 3): twelve courses in four zones and the four FREE RIDE playgrounds. */
+/** The shipped set: twelve courses in four zones. */
 const ALL: TrackDef[] = [...ROCKHOP_ALL];
 const COAST_DONE: Record<string, Medal> = { 'c1-low-tide': 'gold', 'c2-crane-hop': 'silver', 'c3-hull-breach': 'bronze' };
 const none = (): Medal | null => null;
@@ -26,11 +26,11 @@ describe('world map — the ROCKHOP zones (data)', () => {
     expect(CONTINENT.y + CONTINENT.h).toBeLessThanOrEqual(MAP.h);
   });
 
-  it('every shipped course and playground has an authored anchor inside its zone crop; no Labs, no retired tracks', () => {
+  it('every shipped course has an authored anchor inside its zone crop; no Labs, Free Ride, or retired tracks', () => {
     const markers = allMarkers(buildRegions(ALL, none));
-    expect(markers).toHaveLength(16);
-    expect(markers.filter((m) => !m.proving)).toHaveLength(12);
-    expect(markers.filter((m) => isPlaygroundTrack(m.track))).toHaveLength(4);
+    expect(markers).toHaveLength(12);
+    expect(markers.every((m) => !m.proving)).toBe(true);
+    expect(markers.filter((m) => isPlaygroundTrack(m.track))).toHaveLength(0);
     expect(markers.some((m) => m.code === 'LAB')).toBe(false);
     for (const m of markers) {
       expect(ANCHOR[m.track.id], m.track.id).toBeDefined();
@@ -59,9 +59,7 @@ describe('world map — the ROCKHOP zones (data)', () => {
     expect(by['A1']!.rule).toBe('Medal every Coast track');
     expect(by['D1']!.rule).toBe('Medal every Alpine track');
     expect(regions.map((r) => `${r.id}:${r.done}/${r.total}${r.locked ? ' locked' : ''}`)).toEqual(['coast:0/3', 'alpine:0/3 locked', 'quarry:0/3 locked', 'snowline:0/3 locked']);
-    // The coast playground is open with its zone; the others wait with theirs.
-    const free = allMarkers(regions).filter((m) => m.proving);
-    expect(free.map((m) => `${m.region}:${m.locked ? 'locked' : 'open'}`)).toEqual(['coast:open', 'alpine:locked', 'quarry:locked', 'snowline:locked']);
+    expect(allMarkers(regions).some((m) => m.proving)).toBe(false);
     const gate = nextGate(regions)!;
     expect(gate.track.id).toBe('a1-sawdust');
     expect(gate.stage).toBe('alpine');
