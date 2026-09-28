@@ -1,0 +1,13 @@
+# C3 Rookie clean reference, 2026-09-28
+
+The previous Rookie skill-3 ride cleared C3 with one fault at tick 2,536 / x275.63 m. This pass found a [zero-fault Rookie recording](rookie-zero-fault.rec.json) on the same registered C3 track, seed `1478967505` and v2 physics. It finishes at **tick 4,212 / 35.100 s**. The recording's SHA-256 is `9358452cef0940b8172f33fd271bb32f6975822b283b09096744a8d5bbfcfa47`; its source stamp is `8fa49c3e`. After exact verification and motion review, these same bytes replaced `harness/inputs/c3-hull-breach/bot-3.json`; no course, physics or solver source changed.
+
+The [verification report](verification.json) replays the saved bytes through a fresh Node simulation and two separate silent headless browser loads. All three finish at tick 4,212 with zero fault events, zero final faults, finish time `35.1` and state hash `bcbe71b98fcd500a`. The saved input is a complete ride from GO, not a checkpoint-spawn snapshot or a posed finish state. Reproduce with `pnpm exec tsx docs/evidence/c3-clean-reference/verify.mts`.
+
+## Bounded search
+
+The existing oracle beam spent its 180-second cap on the full start and timed out at tick 2,220. Starting it from a separately verified clean 2,300-tick prefix reached the 100-rewind cap without a committed advance. Those limits and results are in [full start](search-result.json) and [breach splice](splice-search-result.json).
+
+A deterministic control grid then varied brake duration, throttle and lean around the pinned first-attempt fault, replaying each candidate from GO and stopping on the first fault. The first 945 cases produced a clean prefix to x329.5 m; another 945 cases reached x418.1 m; the first case in the final grid coasted and leaned back across the finish. The intermediate [x329 prefix](best-progress.rec.json), [x418 prefix](stage-2-best-progress.rec.json), and [three](control-grid-result.json) [search](stage-2-result.json) [reports](stage-3-result.json) are retained so the route can be inspected. The grid scripts are [first approach](control-grid.mts) and [continuations](stage-grid.mts).
+
+The [35.6-second played ride](played-ride.mp4) and its [contact sheet](sheet.jpg) show the bike crossing the breach, landing on the container deck, and finishing with zero fault HUD count. [Capture data](capture.json) reports a 35.100 s finish; its `finalHash` is after a 0.5 s finish tail, so the exact **finish-state** hash is the `bcbe71b98fcd500a` in the verification report. The capture used headless Chromium on ANGLE Metal at 852×394, 15 fps, high quality. It is a deterministic feasibility reference for Gate 2. A fresh player must still find the line with understandable feedback, and attempts-to-clear data remains open.

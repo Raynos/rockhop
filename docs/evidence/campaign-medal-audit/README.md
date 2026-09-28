@@ -2,7 +2,7 @@
 
 `pnpm exec tsx docs/evidence/campaign-medal-audit/audit.mts` replayed the pinned skill-3 Rookie and Pro inputs on the current Node physics, then applied the game's `medalFor()` and `CareerEconomy` rules. Source fingerprint `8fa49c3e`; all 24 recording headers have that stamp. [The 24-row CSV](audit.csv) is the compact machine table; [the JSON](audit.json) also contains hashes, route proof, clock margins and currency paths. This is a deterministic bot reference audit, not a human difficulty measurement or fastest-route search.
 
-All 24 recordings finished. **23 are clean**; C3 Rookie includes one crash and a retry, so it cannot calibrate a clean C3 Rookie time. C3 Pro is clean. The prior campaign report marked A2 Pro missing; its pinned input is present now and clears cleanly at 29.892 s for Gold.
+All 24 recordings finished **without faults**. The [new C3 Rookie line](../c3-clean-reference/README.md) replaced the one-crash pin after exact Node/two-browser replay and played-video review; it earns Gold at 35.100 s. The prior campaign report marked A2 Pro missing; its pinned input is present now and clears cleanly at 29.892 s for Gold.
 
 ## Concrete clock findings
 
@@ -15,7 +15,7 @@ All 24 recordings finished. **23 are clean**; C3 Rookie includes one crash and a
 
 D3, S1 and S3 Gold clocks are also generous to both bikes: the clean references finish at 53–67% of their Gold limits. The four Rookie lower-route references beat their Diamond **time** limits, but route proof caps them at Gold. All four Pro upper-route references earn Diamond. Those samples show the intended route distinction; they do not prove a skilled Rookie cannot reach an upper route. They also show that, for three of the final four, the route check currently does nearly all the Diamond work and the clock supplies little time pressure.
 
-Earlier Diamond boundaries bunch close to the pinned Rookie bot: C1 finishes 0.250 s inside; C2, A2, A3 and D1 finish 0.258, 0.233, 0.167 and 0.283 s outside, respectively. This makes S2's 0.250 s Pro margin plausible in isolation, but the large D3/S1/S3 margins break the late-game pacing pattern. C3 Rookie's one-fault Gold has only 1.183 s to spare under its Gold clock; obtain a clean Rookie reference before retargeting that course by the bot alone.
+Earlier Diamond boundaries bunch close to the pinned Rookie bot: C1 finishes 0.250 s inside; C2, A2, A3 and D1 finish 0.258, 0.233, 0.167 and 0.283 s outside, respectively. This makes S2's 0.250 s Pro margin plausible in isolation, but the large D3/S1/S3 margins break the late-game pacing pattern. The new clean C3 Rookie run is 3.900 s inside Gold and 1.950 s outside Diamond; human attempts still decide its final clock.
 
 ## Does 800 Scrap arrive before the final four?
 
@@ -23,4 +23,4 @@ Yes **on the displayed C1→D2 road sequence**. The minimum one-time Bronze rewa
 
 There is a progression caveat: the map opens all Quarry courses once Coast and Alpine have medals. D3 is therefore selectable after A3, the **sixth** clear. A Bronze-only player has 600 Scrap then and cannot buy Pro yet, although following D1 and D2 reaches 800 before D3. Under the pinned Rookie rewards, the wallet is already 1,400 when D3 opens. If the design requires Pro to be purchasable before *any* entry to the final four, the current zone unlock rule does not guarantee that for Bronze players. The economy is one-time per course medal tier, so repeating Bronze finishes cannot fill the 200 gap.
 
-No production files were edited, and no medal clocks were retargeted in this audit.
+The audit itself changed no course geometry, physics, scoring or medal clocks. The C3 Rookie pinned input and its focused golden assertion were updated after the separate clean-reference search.
