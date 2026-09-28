@@ -129,8 +129,10 @@ scene.add(terrain);
 const nx=220, nz=100, dx=52/nx, dz=23/nz;
 const verts=[], col=[], texcoord=[], indices=[];
 const c = new THREE.Color();
+const cliffRocks=['#626d62','#88907a','#8b553d','#bd7e55','#78939a','#b0c1bc'].map(hex=>new THREE.Color(hex));
+const cliffMix=[new THREE.Color(),new THREE.Color(),new THREE.Color()];
 const colorFor = (x,z,y) => {
-  if (edgeDistance(x,z)>.96) return c.set('#484b47');
+  const edge=edgeDistance(x,z);
   const borderNoise=noise(x*.47,z*.47)*1.6;
   c.set(y < .42 ? '#766f5b' : '#77795d');
   c.lerp(new THREE.Color(y > 1.25 ? '#75836c' : '#597657'),smooth(-13.8,-8.7,x+borderNoise));
@@ -141,7 +143,7 @@ const colorFor = (x,z,y) => {
   const exposed=smooth(.65,2.9,Math.hypot(sx,sz))*.68;
   const stone=new THREE.Color(x>13?'#5d7681':x>2?'#784b35':'#56605c');
   c.lerp(stone,exposed);
-  const rim=smooth(.71,.99,edgeDistance(x,z));
+  const rim=smooth(.71,.99,edge);
   const strata=.5+.5*Math.sin(y*4.65+x*.21+noise(x*.42,z*.42)*.85);
   const fineBed=.5+.5*Math.sin(y*10.8+x*.53);
   const mineral=new THREE.Color(x>13?'#a4b9ba':x>2?'#b78158':'#929384');
@@ -149,6 +151,19 @@ const colorFor = (x,z,y) => {
   const variation = noise(x*2.3,z*2.3)*.065 + noise(x*.75,z*.75)*.035;
   c.offsetHSL(0,0,variation);
   if (x > 11 && y > 2.2) c.lerp(new THREE.Color('#f5f5ed'), smooth(2.2,4.1,y)*.6);
+  // The exposed rim is the island's largest visible surface. Give its cut
+  // faces biome-specific rock and broad sediment seams instead of the former
+  // uniform charcoal band, including the coast seen from behind the island.
+  const cliff=smooth(.82,1.015,edge);
+  const bed=.5+.5*Math.sin(y*3.85+x*.19+noise(x*.48,z*.48)*1.35);
+  const fractured=.5+.5*noise(x*1.2+y*.7,z*1.2);
+  const slate=cliffMix[0].copy(cliffRocks[0]).lerp(cliffRocks[1],bed*.52);
+  const rust=cliffMix[1].copy(cliffRocks[2]).lerp(cliffRocks[3],bed*.63);
+  const ice=cliffMix[2].copy(cliffRocks[4]).lerp(cliffRocks[5],bed*.67);
+  const cliffColor=slate.lerp(rust,smooth(-.2,4.6,x+noise(x*.35,z*.35)*1.3))
+    .lerp(ice,smooth(11.1,16.3,x+noise(x*.35,z*.35)*1.3));
+  cliffColor.offsetHSL(0,0,(fractured-.5)*.11-.08*(1-smooth(-1.65,.05,y)));
+  c.lerp(cliffColor,cliff*.94);
   return c;
 };
 for(let iz=0;iz<=nz;iz++) for(let ix=0;ix<=nx;ix++){
@@ -311,7 +326,7 @@ for(let level=0;level<buttressLevels.length;level++)for(let side=0;side<buttress
 const buttressGeo=new THREE.BufferGeometry();
 buttressGeo.setAttribute('position',new THREE.Float32BufferAttribute(buttressPositions,3));
 buttressGeo.setIndex(buttressIndices);buttressGeo.computeVertexNormals();
-const buttressMaterials=['#535c57','#687269','#8a6751','#8f9da1'].map(hex=>mat(hex));
+const buttressMaterials=['#626d62','#78836f','#a46a4b','#a8babc'].map(hex=>mat(hex));
 const buttresses=buttressMaterials.map(material=>new THREE.InstancedMesh(buttressGeo,material,48));
 const buttressCounts=[0,0,0,0],buttressDummy=new THREE.Object3D();
 for(let i=0;i<165;i++){
@@ -623,16 +638,40 @@ stakes.count=stakeCount.value;stakes.castShadow=true;terrain.add(stakes);
 // Faceted glacial massifs protrude above the pine line on the snow end.
 const mountainMaterial=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,flatShading:true,side:THREE.DoubleSide});
 function mountain(x,z,radius,height){
- const ringCount=9,levels=[0,.20,.48,.74,1],sizes=[1,.83,.58,.34,0],v=[],cl=[],ids=[];
- for(let l=0;l<levels.length;l++)for(let k=0;k<ringCount;k++){
-   const a=k/ringCount*Math.PI*2,jag=.84+.18*Math.sin(k*2.23+x*1.7)+.12*Math.sin(k*4.7+z);
-   const r=radius*sizes[l]*jag,px=Math.cos(a)*r,pz=Math.sin(a)*r,py=levels[l]*height+.08*noise(px+x,pz+z);
-   v.push(px,py,pz);
-   const base=new THREE.Color(l>=3?'#eef1eb':l===2?'#c6d1ce':'#798c91');
-   base.offsetHSL(0,0,noise(k*2,l*4)*.09);cl.push(base.r,base.g,base.b);
-   if(l<levels.length-1){const i=l*ringCount+k,n=l*ringCount+(k+1)%ringCount;ids.push(i,n,i+ringCount,n,n+ringCount,i+ringCount);}
+ const ringCount=13,levels=[0,.15,.34,.55,.73,.89,1],sizes=[1,.82,.62,.43,.27,.11,0];
+ const rings=[],positions=[],colors=[];
+ for(let l=0;l<levels.length;l++){
+   const ring=[];
+   for(let k=0;k<ringCount;k++){
+     const a=k/ringCount*Math.PI*2;
+     const ridge=.82+.15*Math.sin(k*2.23+x*1.7)+.10*Math.sin(k*4.7+z)
+       +.055*Math.sin(k*7.1+l*2.8+x);
+     const spire=levels[l]*levels[l];
+     const r=radius*sizes[l]*ridge;
+     ring.push(new THREE.Vector3(Math.cos(a)*r+spire*.24,
+       levels[l]*height+.12*noise(k*.31+l*.2+x,k*.23+z),
+       Math.sin(a)*r-spire*.18));
+   }
+   rings.push(ring);
  }
- const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(v,3));g.setAttribute('color',new THREE.Float32BufferAttribute(cl,3));g.setIndex(ids);g.computeVertexNormals();
+ const addFace=(a,b,c,l,k)=>{
+   positions.push(a.x,a.y,a.z,b.x,b.y,b.z,c.x,c.y,c.z);
+   const snowline=.29+.07*Math.sin(k*2.1+x*.7)+.04*noise(k*.5,l*.6+z);
+   const isSnow=(a.y+b.y+c.y)/(3*height)>snowline;
+   const shade=.5+.5*Math.sin(k*2.83+l*1.39+x*.4);
+   const tint=new THREE.Color(isSnow?'#e9f1ee':'#718c92');
+   tint.lerp(new THREE.Color(isSnow?'#fffdf3':'#a7aaa3'),shade*(isSnow?.64:.54));
+   tint.offsetHSL(0,0,(noise(k*.9,l*.7+z)-.5)*.06);
+   for(let v=0;v<3;v++)colors.push(tint.r,tint.g,tint.b);
+ };
+ for(let l=0;l<levels.length-1;l++)for(let k=0;k<ringCount;k++){
+   const next=(k+1)%ringCount;
+   addFace(rings[l][k],rings[l][next],rings[l+1][k],l,k);
+   addFace(rings[l][next],rings[l+1][next],rings[l+1][k],l,k);
+ }
+ const g=new THREE.BufferGeometry();
+ g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+ g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.computeVertexNormals();
  const o=mesh(g,mountainMaterial,x,groundHeight(x,z)-.2,z);
  o.castShadow=true;o.receiveShadow=true;
 }
