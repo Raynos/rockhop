@@ -102,4 +102,32 @@ describe('BestTimes.board', () => {
     localStorage.setItem(boardKey('b1', 'rookie'), JSON.stringify([{ time: 'x' }, { time: 12, faults: 0, medal: 'nope' }]));
     expect(new BestTimes().board('b1', 'rookie')).toEqual([{ time: 12, faults: 0, medal: 'bronze', at: '' }]);
   });
+
+  it('keeps a slower clean run\'s higher medal without replacing the PB ghost or its board medal', () => {
+    const b = new BestTimes();
+    const fast = { ...run(25, 1), medal: 'gold' as const };
+    b.record('b1', fast);
+    b.put('b1', fast, { splits: [12], recording: 'fast-input' });
+    const clean = { ...run(27), medal: 'platinum' as const };
+    b.record('b1', clean);
+    b.recordMedal('b1', clean.medal, 'rookie');
+
+    expect(b.get('b1', 'rookie')).toMatchObject({ time: 25, medal: 'gold', bestMedal: 'platinum', splits: [12], recording: 'fast-input' });
+    expect(b.get('b1')).toMatchObject({ time: 25, medal: 'platinum' });
+    expect(b.board('b1', 'rookie').map((r) => [r.time, r.medal])).toEqual([[25, 'gold'], [27, 'platinum']]);
+
+    const faster = { ...run(24, 2), medal: 'bronze' as const };
+    b.put('b1', faster, { splits: [11], recording: 'faster-input' });
+    expect(new BestTimes().get('b1', 'rookie')).toMatchObject({ time: 24, medal: 'bronze', bestMedal: 'platinum', recording: 'faster-input' });
+    expect(new BestTimes().get('b1')?.medal).toBe('platinum');
+  });
+
+  it('migrates a legacy PB medal into the career maximum when a slower run improves it', () => {
+    localStorage.setItem(bestKey('b1', 'rookie'), JSON.stringify({ time: 28, faults: 1, medal: 'silver', recording: 'legacy' }));
+    const b = new BestTimes();
+    b.recordMedal('b1', 'gold', 'rookie');
+    expect(new BestTimes().get('b1', 'rookie')).toMatchObject({ time: 28, medal: 'silver', bestMedal: 'gold', recording: 'legacy' });
+    expect(new BestTimes().get('b1')?.medal).toBe('gold');
+    expect(new BestTimes().board('b1', 'rookie')[0]?.medal).toBe('silver');
+  });
 });

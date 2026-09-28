@@ -39,6 +39,8 @@ The Starter bike stays agile, easier to balance and cheaper to recover from mist
 
 The working currency is **Scrap**. Each course has a lifetime payout based on the best medal: Bronze 100, Silver 160, Gold 220, Diamond 300. A medal improvement pays only the difference; a repeat or worse result pays zero. Bike two costs 800, so eight Bronze results cover it before D3 even if the player never improves a medal. The economy needs save migration and an idempotent ledger keyed by course; existing Pro owners keep that entitlement. No consumables or repeat-farming loop are needed.
 
+**Save prerequisite fixed on the qualification branch:** previously `BestTimes` stored only the fastest run's medal. A slower clean run could earn a higher medal on the result screen and then lose it from career progress. The branch now stores a separate per-bike career maximum, projects the highest medal across classes for map/progress, and retains the PB run's own medal, splits and ghost. Legacy entries default their career maximum to their saved PB medal. This preserves earned medals but does **not** implement the Scrap ledger or second-bike purchase.
+
 Medals are Bronze, Silver, Gold and **Diamond** in the player-facing UI. Keep the stored top-tier key `platinum` until a migration is proven. Bronze means a clear; Silver and Gold require increasing cleanliness and time; Diamond requires a clean, mastered run with the course's signature move. Final-four Diamond additionally uses the alternate second-bike line. Exact target times and fault counts follow re-authored geometry and actual player samples; the current 0.85× target rule awards too much for passive riding.
 
 ## Finish and replay contract

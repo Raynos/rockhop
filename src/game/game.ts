@@ -30,6 +30,7 @@ import {
   type GamePhase,
   type InputFrame,
   type InputTraceRun,
+  type Medal,
   type PhysicsSnapshot,
   type PhysicsVersion,
   type PhysicsState,
@@ -91,6 +92,8 @@ export interface BestTimeStore {
   put(trackId: string, result: RunResult, run: { splits: number[]; recording: string | null }): void;
   /** Additive (P4 leaderboard): offer a finished run to the track's per-class top 5; its 1-based rank, or null. */
   record?(trackId: string, result: RunResult): number | null;
+  /** Keep a medal earned on a slower run without replacing the PB ghost or splits. */
+  recordMedal?(trackId: string, medal: Medal, bike: BikeClass): void;
 }
 
 export interface GameOptions {
@@ -901,6 +904,7 @@ export class Game {
     // Board before PB: a board with no rows seeds itself from the stored PB, which must still be the previous one.
     result.rank = this.bestTimes?.record?.(track.id, result) ?? null;
     if (result.personalBest) this.bestTimes?.put(track.id, result, { splits: [...this.splits], recording: this.pbJson });
+    this.bestTimes?.recordMedal?.(track.id, result.medal, this.bike);
     // The panel's staged reveal is clocked from the HUD's sim time: anchor it to THIS tick, not to the last render
     // (a stepped sim — harness, e2e — would otherwise render straight into the final stage).
     const info = this.runInfo;

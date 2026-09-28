@@ -9,7 +9,10 @@ import { persistentStorage } from '../platform/storage';
 export interface BestEntry {
   time: number;
   faults: number;
+  /** Medal on the fastest recorded run, used when seeding the run board. */
   medal: Medal;
+  /** Highest medal ever earned on this bike, even when that run was slower than the PB. */
+  bestMedal?: Medal;
   /** Bike class the PB was set on (absent in pre-garage entries = rookie). */
   bike?: BikeClass;
   /** Run clock at each checkpoint of the PB run. */
@@ -35,6 +38,14 @@ const QUALITY_KEY = 'rockhop.quality';
 const FPS_KEY = 'rockhop.fps';
 const HELD_KEY = 'rockhop.heldTier';
 const MEDAL_RANK: Record<Medal, number> = { bronze: 1, silver: 2, gold: 3, platinum: 4 };
+
+function medalOf(entry: BestEntry): Medal {
+  return entry.bestMedal ?? entry.medal;
+}
+
+function higherMedal(a: Medal, b: Medal): Medal {
+  return MEDAL_RANK[a] >= MEDAL_RANK[b] ? a : b;
+}
 
 /** Storage key per track and bike class: rookie keeps the legacy key so pre-garage PBs survive; pro gets a suffix. */
 export function bestKey(trackId: string, bike: BikeClass): string {
@@ -62,7 +73,7 @@ function store(): Storage | null {
 
 /**
  * PB per track **per bike class**. `get(id, bike)` is that class's entry; `get(id)` is the
- * track's best across classes (higher medal wins, then time) — what cards, tier locks and
+ * track's career best across classes (higher medal wins, then PB time) — what cards, tier locks and
  * the career line read. The ghost and splits always come from the class being ridden.
  */
 export class BestTimes {
@@ -72,11 +83,10 @@ export class BestTimes {
     if (bike) return this.read(trackId, bike);
     const a = this.read(trackId, 'rookie');
     const b = this.read(trackId, 'pro');
-    if (!a) return b;
-    if (!b) return a;
-    const ra = MEDAL_RANK[a.medal];
-    const rb = MEDAL_RANK[b.medal];
-    return rb > ra || (rb === ra && b.time < a.time) ? b : a;
+    if (!a && !b) return null;
+    const chosen = !a ? b! : !b ? a : MEDAL_RANK[medalOf(b)] > MEDAL_RANK[medalOf(a)] || (medalOf(b) === medalOf(a) && b.time < a.time) ? b : a;
+    // The no-bike view is a career summary. Keep each class's actual PB medal in storage and on its run board.
+    return { ...chosen, medal: medalOf(chosen) };
   }
 
   private read(trackId: string, bike: BikeClass): BestEntry | null {
@@ -92,7 +102,8 @@ export class BestTimes {
       }
       const o = JSON.parse(raw) as Partial<BestEntry>;
       if (typeof o.time !== 'number' || typeof o.faults !== 'number') return null;
-      const entry: BestEntry = { time: o.time, faults: o.faults, medal: (o.medal as Medal | undefined) ?? 'bronze', bike };
+      const entry: BestEntry = { time: o.time, faults: o.faults, medal: o.medal && o.medal in MEDAL_RANK ? o.medal : 'bronze', bike };
+      if (o.bestMedal && o.bestMedal in MEDAL_RANK) entry.bestMedal = higherMedal(entry.medal, o.bestMedal);
       if (Array.isArray(o.splits) && o.splits.every((x) => typeof x === 'number')) entry.splits = o.splits;
       if (typeof o.recording === 'string' && o.recording.length > 0) entry.recording = o.recording;
       this.cache.set(key, entry);
@@ -167,7 +178,8 @@ export class BestTimes {
 
   put(trackId: string, r: RunResult, run?: { splits: number[]; recording: string | null }): void {
     const bike: BikeClass = r.bike ?? 'rookie';
-    const entry: BestEntry = { time: r.time, faults: r.faults, medal: r.medal, bike };
+    const prior = this.read(trackId, bike);
+    const entry: BestEntry = { time: r.time, faults: r.faults, medal: r.medal, bestMedal: prior ? higherMedal(medalOf(prior), r.medal) : r.medal, bike };
     if (run) {
       entry.splits = run.splits;
       if (run.recording) entry.recording = run.recording;
@@ -178,6 +190,22 @@ export class BestTimes {
       store()?.setItem(key, JSON.stringify(entry));
     } catch {
       /* storage unavailable */
+    }
+  }
+
+  /** Record a slower run's medal improvement without replacing its bike class PB, ghost or board row. */
+  recordMedal(trackId: string, medal: Medal, bike: BikeClass): void {
+    const prior = this.read(trackId, bike);
+    if (!prior) return;
+    const bestMedal = higherMedal(medalOf(prior), medal);
+    if (bestMedal === medalOf(prior)) return;
+    const entry = { ...prior, bestMedal };
+    const key = bestKey(trackId, bike);
+    this.cache.set(key, entry);
+    try {
+      store()?.setItem(key, JSON.stringify(entry));
+    } catch {
+      /* storage unavailable: the in-memory career medal still serves this session */
     }
   }
 }
