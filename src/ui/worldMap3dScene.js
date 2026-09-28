@@ -898,36 +898,108 @@ for(let i=0;i<8;i++){
 const wheelAxle=cylinder(.12,.12,.55,mat('#4d443d'),0,0,0,waterwheel);wheelAxle.rotation.x=Math.PI/2;
 for(const side of [-1,1])spanBeam(new THREE.Vector3(side*.75,-.72,-.37),new THREE.Vector3(0,0,-.34),.08,.08,wheelWood,waterwheel);
 
-// Harbor: a tapered steel trawler, timber pier, cargo and a visible lattice crane.
-const dock=mat('#574536'),woodTop=mat('#9b7652'),rust=mat('#8e4a37'),roofMat=mat('#45443c');
-for(let i=0;i<18;i++){
- const z=6.1+i*.22,deck=box(1.5,.12,.19,i%4===0?dock:woodTop,-17.0,-.38,z);deck.castShadow=true;
- if(i%5===0)for(const off of [-.63,.63])box(.14,1.75,.14,dock,-17.0+off,-1.18,z).castShadow=true;
+// Harbor: the boat, timber landing and crane are built as real volumes. Rods
+// of one material are merged so the richer silhouette does not cost a draw
+// per strut at the island's normal phone-sized framing.
+const harborRoot=new THREE.Group();terrain.add(harborRoot);
+const dock=mat('#574536'),woodTop=mat('#9b7652'),rust=mat('#9b4937'),roofMat=mat('#45443c');
+function harborRods(segments,material,parent=harborRoot,sides=5){
+ const up=new THREE.Vector3(0,1,0),parts=[];
+ for(const [start,end,radius] of segments){
+   const direction=new THREE.Vector3().subVectors(end,start),length=direction.length();
+   const piece=new THREE.CylinderGeometry(radius,radius,length,sides);
+   piece.applyMatrix4(new THREE.Matrix4().compose(
+     new THREE.Vector3().addVectors(start,end).multiplyScalar(.5),
+     new THREE.Quaternion().setFromUnitVectors(up,direction.normalize()),
+     new THREE.Vector3(1,1,1)));
+   parts.push(piece);
+ }
+ const joined=mergeGeometries(parts,false);
+ for(const piece of parts)piece.dispose();
+ const result=mesh(joined,material,0,0,0,parent);result.castShadow=true;
+ return result;
+}
+function harborBoxes(parts,material,parent=harborRoot){
+ const shapes=parts.map(([width,height,depth,x,y,z])=>{
+   const shape=new THREE.BoxGeometry(width,height,depth);
+   shape.translate(x,y,z);return shape;
+ });
+ const joined=mergeGeometries(shapes,false);
+ for(const shape of shapes)shape.dispose();
+ const result=mesh(joined,material,0,0,0,parent);result.castShadow=true;
+ return result;
+}
+const lightPlanks=[],darkPlanks=[],dockPiles=[],dockRods=[];
+for(let i=0;i<19;i++){
+ const z=6.1+i*.215;
+ (i%5===0?darkPlanks:lightPlanks).push([1.62,.13,.184,-17.0,-.37,z]);
+ if(i%5===0)for(const offset of [-.69,.69]){
+   dockPiles.push([.17,1.85,.18,-17.0+offset,-1.19,z]);
+   dockRods.push([new THREE.Vector3(-17.0+offset,-.43,z),new THREE.Vector3(-17.0+offset,-.43,z+.70),.035]);
+ }
+}
+harborBoxes(lightPlanks,woodTop);harborBoxes(darkPlanks,dock);harborBoxes(dockPiles,dock);
+harborRods(dockRods,mat('#c1a47a'));
+for(const z of [6.65,9.35]){
+ const cleat=box(.29,.10,.10,mat('#3f4543',.52,.3),-16.22,-.19,z,harborRoot);cleat.castShadow=true;
 }
 for(let i=0;i<12;i++){
  const x=-18.0+(i%3)*.47,z=4.4+Math.floor(i/3)*.46,y=groundHeight(x,z);
- box(.39,.35,.33,mat(['#94563c','#5b6a64','#a48153'][i%3]),x,y+.18,z).castShadow=true;
+ box(.39,.35,.33,mat(['#94563c','#5b6a64','#a48153'][i%3]),x,y+.18,z,harborRoot).castShadow=true;
 }
-const ship=new THREE.Group();ship.position.set(-17.5,-.73,9.45);ship.rotation.y=-.14;terrain.add(ship);
-const hullFrames=[[-2.8,.12],[-2.2,.55],[-1.0,.77],[.9,.79],[2.1,.58],[2.7,.12]],hullP=[],hullC=[],hullI=[];
+const ship=new THREE.Group();ship.position.set(-17.5,-.73,9.45);ship.rotation.y=-.14;harborRoot.add(ship);
+// Frame third value is sheer height: the fine bow lifts clear of the water.
+const hullFrames=[[-2.75,.48,.38],[-2.35,.68,.31],[-1.25,.82,.28],[.2,.86,.29],[1.42,.77,.36],[2.33,.47,.53],[2.78,.06,.65]],hullP=[],hullC=[],hullI=[];
 for(let i=0;i<hullFrames.length;i++){
- const [x,w]=hullFrames[i];
- const ring=[[x,.31,-w],[x,-.28,-w*.75],[x,-.68,0],[x,-.28,w*.75],[x,.31,w]];
- for(const [px,py,pz] of ring){hullP.push(px,py,pz);const cc=new THREE.Color(py<-.3?'#394d56':i%2?'#805447':'#53616a');hullC.push(cc.r,cc.g,cc.b);}
- if(i<hullFrames.length-1)for(let j=0;j<4;j++){const a=i*5+j,b=a+5;hullI.push(a,b,a+1,a+1,b,b+1);}
+ const [x,w,sheer]=hullFrames[i];
+ const ring=[[x,sheer,-w],[x,-.10,-w*.90],[x,-.60,-w*.48],[x,-.68,0],[x,-.60,w*.48],[x,-.10,w*.90],[x,sheer,w]];
+ for(const [px,py,pz] of ring){
+   hullP.push(px,py,pz);
+   const cc=new THREE.Color(py<-.42?'#36525c':py<.07?'#6c514a':'#a96848');
+   cc.offsetHSL(0,0,i%2?.025:-.025);hullC.push(cc.r,cc.g,cc.b);
+ }
+ if(i<hullFrames.length-1)for(let j=0;j<6;j++){const a=i*7+j,b=a+7;hullI.push(a,b,a+1,a+1,b,b+1);}
 }
 const hullGeo=new THREE.BufferGeometry();hullGeo.setAttribute('position',new THREE.Float32BufferAttribute(hullP,3));
 hullGeo.setAttribute('color',new THREE.Float32BufferAttribute(hullC,3));hullGeo.setIndex(hullI);hullGeo.computeVertexNormals();
-const hull=mesh(hullGeo,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:.18,side:THREE.DoubleSide}),0,0,0,ship);hull.castShadow=true;
-box(4.3,.13,1.17,mat('#665748'),-.08,.29,0,ship).castShadow=true;
-box(1.12,.88,.91,mat('#a98d69'),-1.15,.79,0,ship).castShadow=true;
-box(1.32,.15,1.05,rust,-1.15,1.29,0,ship).castShadow=true;
-const glass=mat('#315d6b',.18);
-for(const side of [-1,1])for(let i=0;i<3;i++)box(.25,.26,.035,glass,-1.47+i*.32,.85,side*.47,ship);
+const hull=mesh(hullGeo,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.79,metalness:.22,side:THREE.DoubleSide}),0,0,0,ship);hull.castShadow=true;
+const gunwale=[],guardRail=[],railStanchions=[];
 for(const side of [-1,1]){
- const rail=[];for(const [x,w] of hullFrames)rail.push(new THREE.Vector3(x,.7,side*w));line(rail,mat('#3c4546',.5,.35),.025,ship);
- for(let i=1;i<hullFrames.length-1;i++)box(.025,.42,.025,mat('#3c4546'),hullFrames[i][0],.5,side*hullFrames[i][1],ship);
+ for(let i=0;i<hullFrames.length-1;i++){
+   const [ax,aw,ay]=hullFrames[i],[bx,bw,by]=hullFrames[i+1];
+   gunwale.push([new THREE.Vector3(ax,ay+.035,side*aw),new THREE.Vector3(bx,by+.035,side*bw),.052]);
+   if(i>0){
+     railStanchions.push([new THREE.Vector3(ax,ay,side*aw),new THREE.Vector3(ax,ay+.35,side*aw),.021]);
+     guardRail.push([new THREE.Vector3(ax,ay+.35,side*aw),new THREE.Vector3(bx,by+.35,side*bw),.021]);
+   }
+ }
 }
+harborRods(gunwale,mat('#d7b488',.64,.12),ship,7);
+harborRods([...guardRail,...railStanchions],mat('#434e50',.58,.32),ship);
+// The open deck follows the taper instead of covering the hull with a cuboid.
+const deckP=[0,.26,0],deckI=[];
+for(const [x,w,sheer] of hullFrames)deckP.push(x,sheer-.045,-w*.86);
+for(let i=hullFrames.length-1;i>=0;i--){const [x,w,sheer]=hullFrames[i];deckP.push(x,sheer-.045,w*.86);}
+for(let i=1;i<deckP.length/3;i++)deckI.push(0,i,i===deckP.length/3-1?1:i+1);
+const deckGeo=new THREE.BufferGeometry();deckGeo.setAttribute('position',new THREE.Float32BufferAttribute(deckP,3));deckGeo.setIndex(deckI);deckGeo.computeVertexNormals();
+mesh(deckGeo,new THREE.MeshStandardMaterial({color:'#7d624b',roughness:.93,side:THREE.DoubleSide}),0,0,0,ship).receiveShadow=true;
+box(1.16,.78,.97,mat('#d3bea0'),-1.24,.70,0,ship).castShadow=true;
+const pilotRoof=box(1.47,.13,1.16,mat('#a54c34',.77,.1),-1.25,1.17,0,ship);
+pilotRoof.rotation.z=-.11;pilotRoof.castShadow=true;
+const glass=mat('#315d6b',.20);
+for(const side of [-1,1]){
+ box(.68,.32,.03,glass,-1.26,.83,side*.50,ship);
+ box(.68,.038,.045,mat('#c7b494'),-1.26,.66,side*.52,ship);
+}
+box(.03,.32,.72,glass,-.64,.83,0,ship);
+for(const z of [-.37,.37])box(.035,.34,.035,mat('#aa9b83'),-.62,.83,z,ship);
+box(.65,.17,.92,mat('#9c724c'),1.61,.54,0,ship).castShadow=true;
+const rubRail=[];
+for(const side of [-1,1])for(let i=0;i<hullFrames.length-1;i++){
+ const [ax,aw,ay]=hullFrames[i],[bx,bw,by]=hullFrames[i+1];
+ rubRail.push([new THREE.Vector3(ax,ay-.23,side*aw*.96),new THREE.Vector3(bx,by-.23,side*bw*.96),.021]);
+}
+harborRods(rubRail,mat('#dec39c',.85),ship);
 // Glazed gondolas and their cable make the snow pass distinct from the quarry
 // trestle while staying below the level markers in silhouette.
 const cable=mat('#596266',.55,.35),gondolaBlue=mat('#446472'),gondolaRoof=mat('#9aa7a8');
@@ -942,38 +1014,113 @@ for(const t of [.30,.68]){
  for(const side of [-1,1])box(.44,.24,.025,mat('#a7d2d3',.14),0,.04,side*.252,cabin);
  box(.055,.35,.055,cable,0,.52,0,cabin);
 }
-for(let i=0;i<4;i++)box(.65,.38,.46,mat(i%2?'#6b5e4e':'#865c44'),.2+i*.62,.55,0,ship).castShadow=true;
+for(let i=0;i<3;i++)box(.51,.28,.48,mat(i%2?'#6b5e4e':'#865c44'),.12+i*.58,.48,0,ship).castShadow=true;
 for(let i=0;i<3;i++){
  const o=mesh(new THREE.TorusGeometry(.16,.045,7,12),mat('#ded6bd'),-.65+i*.68,.52,-.67,ship);
  o.rotation.y=Math.PI/2;
 }
-cylinder(.035,.05,2.3,mat('#4c4540'),-1.02,2.36,0,ship).castShadow=true;
-line([new THREE.Vector3(-1.02,3.5,0),new THREE.Vector3(-2.4,.55,-.34)],mat('#4c4540'),.018,ship);
-line([new THREE.Vector3(-1.02,3.5,0),new THREE.Vector3(1.9,.55,.38)],mat('#4c4540'),.018,ship);
+cylinder(.042,.06,2.15,mat('#4c4540'),-1.30,2.30,0,ship).castShadow=true;
+const mastTop=new THREE.Vector3(-1.30,3.37,0);
+harborRods([
+ [mastTop,new THREE.Vector3(-2.49,.50,-.39),.017],
+ [mastTop,new THREE.Vector3(2.10,.67,.44),.017],
+ [new THREE.Vector3(-1.30,2.55,0),new THREE.Vector3(.16,1.49,-.18),.028],
+ [new THREE.Vector3(-1.30,2.55,0),new THREE.Vector3(.16,1.49,.18),.028],
+ ],mat('#484844',.64,.25),ship);
+// A capped funnel and paired fenders remain legible at a distant orbit.
+cylinder(.13,.18,.40,mat('#3d4949'),-.46,1.54,0,ship,7).castShadow=true;
+cylinder(.17,.17,.06,mat('#b5774a'),-.46,1.76,0,ship,7);
+for(const x of [-.60,.45,1.46]){
+ const fender=mesh(new THREE.SphereGeometry(.135,6,5),mat('#d6c6a6'),x,.0,-.72,ship);
+ fender.scale.set(.8,1.5,.7);
+}
 const craneX=-17.4,craneZ=6.1,craneY=groundHeight(craneX,craneZ);
-box(.85,.35,.8,mat('#715942'),craneX,craneY+.18,craneZ).castShadow=true;
+const crane=new THREE.Group();crane.position.set(craneX,craneY,craneZ);harborRoot.add(crane);
+box(1.02,.29,.82,mat('#715942'),0,.14,0,crane).castShadow=true;
+const frame=[];
+const cranePoint=(x,y,z)=>new THREE.Vector3(x,y,z);
+for(const z of [-.30,.30]){
+ const leftFoot=cranePoint(-.43,.29,z),rightFoot=cranePoint(.43,.29,z);
+ const leftTop=cranePoint(-.28,4.18,z*.72),rightTop=cranePoint(.28,4.18,z*.72);
+ frame.push([leftFoot,leftTop,.075],[rightFoot,rightTop,.075]);
+ for(let i=0;i<5;i++){
+   const y=.43+i*.72,yNext=y+.72;
+   const width=.43-(y/4.18)*.15,nextWidth=.43-(yNext/4.18)*.15;
+   frame.push([cranePoint(-width,y,z),cranePoint(width,y,z),.035]);
+   frame.push([cranePoint(i%2?-width:width,y,z),cranePoint(i%2?nextWidth:-nextWidth,yNext,z),.032]);
+ }
+}
+for(const y of [.68,1.95,3.25,4.12])for(const x of [-.33,.33]){
+ frame.push([cranePoint(x,y,-.30),cranePoint(x,y,.30),.029]);
+}
+// Paired side chords give the cantilever a triangular section from any orbit.
+const boomRoot=cranePoint(-.23,4.25,0),boomEnd=cranePoint(-3.87,4.56,.16);
 for(const side of [-1,1]){
- const leg=box(.11,3.95,.11,rust,craneX+side*.27,craneY+2.25,craneZ);leg.rotation.z=side*.09;leg.castShadow=true;
+ const z=side*.22;
+ const topRoot=cranePoint(boomRoot.x,boomRoot.y,z),topEnd=cranePoint(boomEnd.x,boomEnd.y,boomEnd.z+z*.47);
+ const lowRoot=cranePoint(-.23,3.92,z),lowEnd=cranePoint(-3.86,4.29,boomEnd.z+z*.47);
+ frame.push([topRoot,topEnd,.060],[lowRoot,lowEnd,.045]);
+ for(let i=0;i<8;i++){
+   const a=i/8,b=(i+1)/8;
+   const high=topRoot.clone().lerp(topEnd,a),low=lowRoot.clone().lerp(lowEnd,b);
+   frame.push([high,low,.027]);
+ }
 }
-for(let i=0;i<5;i++){
- const y=craneY+.75+i*.73;
- box(.62,.08,.1,rust,craneX,y,craneZ).castShadow=true;
- line([new THREE.Vector3(craneX-.27,y,craneZ),new THREE.Vector3(craneX+.27,y+.73,craneZ)],rust,.027);
+for(const t of [.25,.50,.75,1]){
+ const x=THREE.MathUtils.lerp(boomRoot.x,boomEnd.x,t),y=THREE.MathUtils.lerp(boomRoot.y,boomEnd.y,t);
+ frame.push([cranePoint(x,y,-.22),cranePoint(x,y,.22),.026]);
 }
-const jibStart=new THREE.Vector3(craneX,craneY+4.32,craneZ),jibEnd=new THREE.Vector3(craneX-3.65,craneY+4.72,craneZ+.4);
-line([jibStart,jibEnd],rust,.083);line([new THREE.Vector3(craneX,craneY+4.04,craneZ),new THREE.Vector3(jibEnd.x,jibEnd.y-.25,jibEnd.z)],rust,.055);
-for(let i=1;i<8;i++){
- const t=i/8,x=THREE.MathUtils.lerp(jibStart.x,jibEnd.x,t),z=THREE.MathUtils.lerp(jibStart.z,jibEnd.z,t),y=THREE.MathUtils.lerp(jibStart.y,jibEnd.y,t);
- line([new THREE.Vector3(x,y,z),new THREE.Vector3(x+.42,y-.25,z)],rust,.025);
-}
-line([jibEnd,new THREE.Vector3(jibEnd.x,craneY+1.8,jibEnd.z)],mat('#383b39'),.016);
-mesh(new THREE.TorusGeometry(.18,.042,8,12,Math.PI*1.7),mat('#4c5050',.55,.4),jibEnd.x,craneY+1.67,jibEnd.z).rotation.z=Math.PI/2;
+frame.push([cranePoint(.12,4.2,0),cranePoint(1.45,4.25,0),.065]);
+frame.push([cranePoint(.36,4.08,-.19),cranePoint(1.45,4.25,0),.037]);
+frame.push([cranePoint(.36,4.08,.19),cranePoint(1.45,4.25,0),.037]);
+harborRods(frame,rust,crane);
+box(.85,.42,.65,mat('#564940'),.12,4.31,0,crane).castShadow=true;
+box(.61,.15,.62,mat('#bf6e46'),.12,4.59,0,crane).castShadow=true;
+box(.44,.18,.52,mat('#5d4b3e'),1.34,3.99,0,crane).castShadow=true;
+const craneCable=mat('#384044',.62,.39);
+harborRods([
+ [cranePoint(.10,5.15,0),boomEnd,.018],
+ [cranePoint(.10,5.15,0),cranePoint(1.43,4.25,0),.018],
+ [boomEnd,cranePoint(boomEnd.x,1.55,boomEnd.z),.018],
+ ],craneCable,crane);
+const hoist=mesh(new THREE.TorusGeometry(.20,.047,7,12),mat('#a16b4b',.64,.3),boomEnd.x,1.47,boomEnd.z,crane);
+hoist.rotation.z=Math.PI/2;hoist.castShadow=true;
+const hook=mesh(new THREE.TorusGeometry(.17,.052,7,12,Math.PI*1.55),mat('#353b3a',.6,.45),boomEnd.x,1.18,boomEnd.z,crane);
+hook.rotation.z=Math.PI/2;hook.castShadow=true;
 for(let i=0;i<6;i++){
  const x=-21.1+i*1.6,z=10.3+Math.sin(i*2.4)*.65;
- const buoy=mesh(new THREE.ConeGeometry(.18,.38,7),mat(i%2?'#dc8c43':'#e9d5a5'),x,-.72,z);
+ const buoy=mesh(new THREE.ConeGeometry(.18,.38,7),mat(i%2?'#dc8c43':'#e9d5a5'),x,-.72,z,harborRoot);
  buoy.castShadow=true;
- cylinder(.025,.035,.26,mat('#6e6a58'),x,-.47,z);
+ cylinder(.025,.035,.26,mat('#6e6a58'),x,-.47,z,harborRoot);
 }
+// Bake the static harbor into one vertex-painted mesh. The daylight map reads
+// by silhouette and albedo at phone scale; tiny roughness differences did not
+// survive the orbit capture, while the many separate materials cost 27 draws.
+harborRoot.updateMatrixWorld(true);
+const harborMeshes=[];harborRoot.traverse(object=>{if(object.isMesh)harborMeshes.push(object);});
+const harborPieces=[];
+const harborInverse=harborRoot.matrixWorld.clone().invert();
+for(const object of harborMeshes){
+ const source=object.geometry;
+ const piece=source.index?source.toNonIndexed():source.clone();
+ piece.applyMatrix4(harborInverse.clone().multiply(object.matrixWorld));
+ const count=piece.attributes.position.count,vertexColor=piece.getAttribute('color');
+ const tint=object.material.color||new THREE.Color('#ffffff');
+ const colors=new Float32Array(count*3);
+ for(let i=0;i<count;i++){
+   colors[i*3]=(vertexColor?vertexColor.getX(i):1)*tint.r;
+   colors[i*3+1]=(vertexColor?vertexColor.getY(i):1)*tint.g;
+   colors[i*3+2]=(vertexColor?vertexColor.getZ(i):1)*tint.b;
+ }
+ for(const name of Object.keys(piece.attributes))if(name!=='position'&&name!=='normal')piece.deleteAttribute(name);
+ piece.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
+ harborPieces.push(piece);
+ object.parent.remove(object);source.dispose();
+}
+const harborGeometry=mergeGeometries(harborPieces,false);
+for(const piece of harborPieces)piece.dispose();
+const harborPaint=new THREE.Mesh(harborGeometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.79,metalness:.12,side:THREE.DoubleSide}));
+harborPaint.castShadow=true;harborRoot.add(harborPaint);
 // A painted harbor light and stacked fishing traps anchor the bare rock head.
 const lightHouse=new THREE.Group();lightHouse.position.set(-21.2,groundHeight(-21.2,-3.2),-3.2);terrain.add(lightHouse);
 const lampWall=mat('#ded5bc'),lampRed=mat('#ad634b'),lampGlass=mat('#ebd5a3',.28);
