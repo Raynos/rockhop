@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>ROCKHOP — Adventure Atlas study</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <div id="map" aria-label="Rotatable three-dimensional island map with twelve rally flag level starts"></div>
+      <header class="masthead">
+        <div class="brand">ROCKHOP <span>WORLD ATLAS</span></div>
+        <div class="chapter">THE LONG WAY UP <small>COAST · FOREST · QUARRY · SNOW</small></div>
+      </header>
+      <div class="biome" id="biome">01 / THE BREAKWATER</div>
+      <div class="selection" id="selection">
+        <span class="selection-kicker">SELECTED STAGE</span>
+        <strong id="selection-title">01 · Breakwater Run</strong>
+        <span id="selection-detail">COAST / READY TO RIDE</span>
+        <button id="ride" type="button">RIDE STAGE <b>▶</b></button>
+      </div>
+      <div class="instructions">DRAG TO ROTATE <span>·</span> SCROLL TO ZOOM <span>·</span> TAP A FLAG TO SELECT</div>
+      <button id="overview" type="button">← FULL MAP</button>
+      <div class="minimap" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div id="toast" role="status"></div>
+      <div id="rotate" role="status"><span>↻</span><strong>ROTATE YOUR PHONE</strong><small>ROCKHOP plays in landscape</small></div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
