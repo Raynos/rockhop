@@ -189,7 +189,7 @@ export const D3 = (() => {
     idea: 'cross the broken rope bridge',
     hero: 'The Rope Walk',
     attemptsBand: [4, 8],
-    targetTimeS: 55, // Diamond also requires the optional upper-deck crossing below
+    targetTimeS: 43.75, // Pro upper reference 32.950 s; Diamond 33.469 s also requires the deck proof below
   })
     .camera({ mode: 'side' })
     .setPiece('start', 'The Pit Rim')

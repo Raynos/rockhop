@@ -28,7 +28,7 @@ export const S1 = (() => {
     idea: 'ride the ski-lift towers',
     hero: 'The Lift Line',
     attemptsBand: [5, 10],
-    targetTimeS: 55, // provisional medal clock: the retargeted clean skill-3 runs are 29.96 s Rookie / 29.80 s Pro
+    targetTimeS: 40.25, // Pro upper reference 30.333 s; Diamond 30.791 s also requires station-shelf proof
   })
   .hint('Carry speed across the ice shelves')
   .hint('Ease off at the station lip; land level')
@@ -232,7 +232,7 @@ export const S3 = (() => {
     idea: 'stormy summit tower climb',
     hero: 'The Summit Towers',
     attemptsBand: [8, 16],
-    targetTimeS: 60, // gold: skill-3 bot 29.41 s x 1.6 = 47.1, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+    targetTimeS: 39.5, // Pro upper reference 29.600 s; Diamond 30.218 s also requires summit-shelf proof
   })
     .hint('Ride high over the snow-cat to catch the wind shelf')
     .camera({ mode: 'side' })
