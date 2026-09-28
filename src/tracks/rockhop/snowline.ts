@@ -21,17 +21,19 @@ function slots(b: ReturnType<typeof rockhop>, count: number, pitch: number): Ret
  * the first sheave platform, hold the line cap to cap) and the ice-shelf gap chain. DEMANDS the lift line: three
  * tower caps climbing 1.3 -> 1.6 over the crevasse and the jump off the top station.
  */
-export const S1 = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard', {
-  technique: 'tower caps, ice-shelf gaps and a controlled station landing',
-  demands: 'settle at the station lip, then climb three tower caps over the crevasse',
-  idea: 'ride the ski-lift towers',
-  hero: 'The Lift Line',
-  attemptsBand: [5, 10],
-  targetTimeS: 55, // provisional medal clock: the retargeted clean skill-3 runs are 29.96 s Rookie / 29.80 s Pro
-})
+export const S1 = (() => {
+  const base = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard', {
+    technique: 'tower caps, ice-shelf gaps and a controlled station landing',
+    demands: 'settle at the station lip, then climb three tower caps over the crevasse',
+    idea: 'ride the ski-lift towers',
+    hero: 'The Lift Line',
+    attemptsBand: [5, 10],
+    targetTimeS: 55, // provisional medal clock: the retargeted clean skill-3 runs are 29.96 s Rookie / 29.80 s Pro
+  })
   .hint('Carry speed across the ice shelves')
   .hint('Ease off at the station lip; land level')
   .hint('Use rear-wheel grip on the tower caps')
+  .hint('Level the station jump to catch the high snow shelf')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Base Station')
   .flat(6)
@@ -98,6 +100,14 @@ export const S1 = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard',
   .flat(10)
   .arch({ style: 'finish' })
   .finish();
+  // The upper station shelf begins beyond the mandatory deck. Its one-way surface leaves the descending piste
+  // open below, while a level Pro station jump can put the rear wheel on the high line.
+  const deckIndex = base.obstacles.length;
+  base.obstacles.push({ kind: 'open-platform', pos: { x: 288, y: 0 },
+    params: { length: 10, height: 4.6, thickness: 0.18, surface: 'snow' } });
+  base.diamondGoal = { id: 's1-station-shelf', platformObstacleIndex: deckIndex, x: 293.5, minRearY: 4.8 };
+  return base;
+})();
 
 /**
  * S2 CORNICE — over the ridge and off the wind lip. TEACHES momentum faces on the ice (45 deg over the kicker foot),
@@ -224,6 +234,7 @@ export const S3 = (() => {
     attemptsBand: [8, 16],
     targetTimeS: 60, // gold: skill-3 bot 29.41 s x 1.6 = 47.1, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
   })
+    .hint('Ride high over the snow-cat to catch the wind shelf')
     .camera({ mode: 'side' })
     .setPiece('start', 'The Top Station')
     .flat(6)
@@ -295,7 +306,13 @@ export const S3 = (() => {
     .setPiece('finish')
     .flat(10)
     .arch({ style: 'finish' });
-  return b.finish();
+  const base = b.finish();
+  // The one-way wind shelf sits above the snow-cat exit. The ordinary landing keeps its full lower passage.
+  const deckIndex = base.obstacles.length;
+  base.obstacles.push({ kind: 'open-platform', pos: { x: 144, y: 0 },
+    params: { length: 8, height: 3.1, thickness: 0.18, surface: 'snow' } });
+  base.diamondGoal = { id: 's3-snowcat-shelf', platformObstacleIndex: deckIndex, x: 148.4, minRearY: 3.3 };
+  return base;
 })();
 
 export const SNOWLINE_TRACKS = [S1, S2, S3] as const;

@@ -1,0 +1,80 @@
+[
+  {
+    "bike": "rookie",
+    "file": "docs/evidence/snowline-retarget/s1-lift-line-rookie-skill3.rec.json",
+    "prefixX": 260.0865051236691,
+    "total": 256,
+    "proof": 1,
+    "proofAlive": 1,
+    "lowerAlive": 1,
+    "baseline": {
+      "pre": "source",
+      "flight": "source",
+      "proof": false,
+      "alive": true,
+      "x": 315.06444814216843,
+      "faults": 0
+    },
+    "upperSamples": [
+      {
+        "pre": "t1l0.5",
+        "flight": "source",
+        "proof": true,
+        "alive": true,
+        "x": 315.1043366569968,
+        "faults": 0
+      }
+    ]
+  },
+  {
+    "bike": "pro",
+    "file": "docs/evidence/snowline-retarget/s1-lift-line-pro-skill3.rec.json",
+    "prefixX": 260.1097124933683,
+    "total": 256,
+    "proof": 5,
+    "proofAlive": 4,
+    "lowerAlive": 1,
+    "baseline": {
+      "pre": "source",
+      "flight": "source",
+      "proof": true,
+      "alive": true,
+      "x": 315.0544490368721,
+      "faults": 0
+    },
+    "upperSamples": [
+      {
+        "pre": "source",
+        "flight": "source",
+        "proof": true,
+        "alive": true,
+        "x": 315.0544490368721,
+        "faults": 0
+      },
+      {
+        "pre": "t0l-0.5",
+        "flight": "source",
+        "proof": true,
+        "alive": true,
+        "x": 315.0086829472487,
+        "faults": 0
+      },
+      {
+        "pre": "t0l0",
+        "flight": "t1l-1",
+        "proof": true,
+        "alive": true,
+        "x": 315.038897325258,
+        "faults": 0
+      },
+      {
+        "pre": "t0.5l0.5",
+        "flight": "t0.5l0",
+        "proof": true,
+        "alive": true,
+        "x": 315.08797671869985,
+        "faults": 0
+      }
+    ]
+  }
+]

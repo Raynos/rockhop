@@ -189,7 +189,7 @@ export const D3 = (() => {
     idea: 'cross the broken rope bridge',
     hero: 'The Rope Walk',
     attemptsBand: [4, 8],
-    targetTimeS: 55, // main-line clock retained pending the final-four medal-route design round
+    targetTimeS: 55, // Diamond also requires the optional upper-deck crossing below
   })
     .camera({ mode: 'side' })
     .setPiece('start', 'The Pit Rim')
@@ -253,7 +253,16 @@ export const D3 = (() => {
     .setPiece('finish')
     .flat(10)
     .arch({ style: 'finish' });
-  return b.finish();
+  const track = b.finish();
+  // A rising launch plank offers a higher, one-way landing above the normal bridge exit.
+  // The continuous lower passage remains the main line; the deck is optional.
+  track.obstacles.push({ kind: 'plank', pos: { x: 385.7, y: 1.5 },
+    params: { length: 5, height: 0.2, angleDeg: 18, prop: 'rope-bridge' } });
+  const deckIndex = track.obstacles.length;
+  track.obstacles.push({ kind: 'open-platform', pos: { x: 396, y: 0 },
+    params: { length: 18, height: 3.5 } });
+  track.diamondGoal = { id: 'd3-high-bridge', platformObstacleIndex: deckIndex, x: 404, minRearY: 3.7 };
+  return track;
 })();
 
 export const QUARRY_TRACKS = [D1, D2, D3] as const;

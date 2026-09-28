@@ -1,0 +1,22 @@
+
+> rockhop@0.3.2 harness:capture /Users/raynos/projects/game-demos/trials-gauntlet-demo
+> tsx harness/capture.ts docs/evidence/d3-diamond-route/rookie-lower.json --dev --out docs/evidence/d3-diamond-route/rookie-lower-phone.mp4 --width 874 --height 330 --fps 30 --quality medium --from-tick 3400 --to-tick 4100 --mode canvas
+
+recording: d3-rope-walk seed=1 hz=120 frames=4240 (35.33s) runs=301
+== capture
+  mp4                       /Users/raynos/projects/game-demos/trials-gauntlet-demo/docs/evidence/d3-diamond-route/rookie-lower-phone.mp4
+  sheet                     /Users/raynos/projects/game-demos/trials-gauntlet-demo/docs/evidence/d3-diamond-route/sheet.jpg
+  frames captured           175
+  clip seconds              5.83
+  finish time (s)           null
+  ticks simulated           4100
+  final hash (end of clip)  948244d4b4d69a22
+  wall ms                   29373
+== ffprobe
+  codec       h264
+  size        874x330
+  fps         30
+  frames      175
+  duration s  5.833
+  bytes       3329571
+report: /Users/raynos/projects/game-demos/trials-gauntlet-demo/docs/evidence/d3-diamond-route/capture.json
