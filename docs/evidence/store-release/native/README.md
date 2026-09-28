@@ -7,6 +7,18 @@ The harness is `harness/native/README.md`. Each run is written to its own `<stam
 
 Since `20260923-005522`, `scripts/store-build.mjs` builds from a clean `git archive` of HEAD, never the shared working tree. The sha is `source` in `gate.json`.
 
+## 20260928-233600 — current C1 and S2 Pro exact in web/iOS
+
+The clean-export debug bundle names `ad4326922a5045aeae9cff531772bed5a565ff04`. The [gate report](20260928-233600/gate.json), [played silent iOS clip](20260928-233600/ios-clip.mp4) and [clip sheet](20260928-233600/ios-sheet.jpg) record cold boot, the paced C1 ride, crash and 20 restarts. Web and iOS passed every configured check with zero AudioContexts under automation.
+
+| Recording | Web = iOS finish time | Float64 bytes | Web = iOS state hash |
+| --- | ---: | --- | --- |
+| C1 Rookie `bot-3` | 30.349999999999998 s | `9999999999593e40` | `2bfe061963ffb058` |
+| S2 Pro `bot-3-pro` | 33.791666666666664 s | `5555555555e54040` | `e5aa2e592e9102d1` |
+| C1 Rookie with paced rendered frames | 30.349999999999998 s | `9999999999593e40` | `2bfe061963ffb058` |
+
+Both platforms faulted at 0.858 s, returned control in 25 ms and completed 20 one-tick restarts. Restart synced-frame p95 was 3.4 ms on web Metal and 6 ms in the iPhone 17 Pro Max simulator. Cold boot to menu was 3.491 s on web and 4.302 s in the simulator; this does not establish the warm cached physical-iPhone ≤5 s target. The debug boot arms `flat-test` before the recorded ROCKHOP runs, so this is exact native replay proof rather than a completed player flow through the 3D selector. The user's Android emulator prohibition remains in force; physical Android and iPhone sessions, touch/orientation, signed iOS and full release gates remain open.
+
 ## 20260928-211906 — C1 and S2 Pro pass web/iOS exact replay
 
 The clean-export debug bundle names `7a995cd5ebcc63dc4a6a8ce23bf7dc3f5b962aa4`. [The gate report](20260928-211906/gate.json), [played iOS clip](20260928-211906/ios-clip.mp4), and [clip sheet](20260928-211906/ios-sheet.jpg) cover cold boot, countdown, the paced C1 ride, crash and 20 restarts. Both platforms passed every configured check with zero AudioContexts under automation.
