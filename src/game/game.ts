@@ -36,6 +36,7 @@ import {
   type PhysicsState,
   type QualityTier,
   type RenderStats,
+  type RouteProof,
   type RunInfo,
   type TrackDef,
 } from '../core';
@@ -46,6 +47,7 @@ import { DEFAULT_TRACK_ID, compileTrack, getTrack, profileQuery } from '../track
 import type { Hud } from '../ui';
 import { GhostRunner } from './ghost';
 import { COUNTDOWN_BEATS, FINISH_BRAKE, medalFor, ruleTicks, targetForBike, targetTimeOf, type RunResult } from './rules';
+import { crossedDiamondRouteGoal, hashRouteRunState } from './routeGoal';
 
 /** `loadTrack(track, seed, { bike })` — physics picks the tuning preset (`BIKE_PRESETS`, physics round 11); `rookie` is the round-10 bike to the byte. */
 export type BikeLoadOptions = { bike: BikeClass };
@@ -93,7 +95,7 @@ export interface BestTimeStore {
   /** Additive (P4 leaderboard): offer a finished run to the track's per-class top 5; its 1-based rank, or null. */
   record?(trackId: string, result: RunResult): number | null;
   /** Keep a medal earned on a slower run without replacing the PB ghost or splits. */
-  recordMedal?(trackId: string, medal: Medal, bike: BikeClass): void;
+  recordMedal?(trackId: string, medal: Medal, bike: BikeClass, routeProof?: RouteProof, recording?: string | null): void;
 }
 
 export interface GameOptions {
@@ -134,6 +136,8 @@ export interface GameCounters {
   resultsShown: boolean;
   /** Post-finish: the bike crashed on the run-out and physics is frozen at the tick before the fault. Optional so older snapshots / the harness mirror (`harness/lib/rules.ts`) still type. */
   finishFrozen?: boolean;
+  /** Opt-in upper-route proof; absent on ordinary tracks and older snapshots. */
+  diamondRouteCrossed?: boolean;
 }
 
 const EVENT_QUEUE_MAX = 256;
@@ -252,6 +256,7 @@ export class Game {
   private resultsTicks = 0;
   private resultsShown = false;
   private finishFrozen = false;
+  private diamondRouteCrossed = false;
 
   /** Fired once per finished run, 0.4 s after the finish line. */
   onResults: ((result: RunResult) => void) | null = null;
@@ -463,6 +468,7 @@ export class Game {
     this.resultsTicks = 0;
     this.resultsShown = false;
     this.finishFrozen = false;
+    this.diamondRouteCrossed = false;
     this.holdFired = true; // the press that triggered a hold must be released before it can fire again
     this.lastState = null;
     if (this.autoSkipCountdown) {
@@ -509,6 +515,7 @@ export class Game {
     this.physics.drainEvents(); // swallow whatever reset produced: replays start here
     this.lastState = null;
     this.runTicks = 0;
+    this.diamondRouteCrossed = false;
     this.splits = [];
     this.pbJson = null;
     this.pbRecorder = this.autoRecord && this.track ? new InputRecorder({ version: 1, trackId: this.track.id, seed: this.seed, physicsHz: this.physicsHz, bike: this.bike, ...(this.physicsVersion ? { physics: this.physicsVersion } : {}) }) : null;
@@ -656,6 +663,7 @@ export class Game {
     this.physics.reset(checkpoint);
     this.physics.drainEvents();
     this.lastState = null;
+    this.diamondRouteCrossed = false;
     this.crashTicks = 0;
     this.setPhase('riding');
     this.emit({ type: 'restart', checkpoint, tick: 0 });
@@ -828,6 +836,7 @@ export class Game {
   }
 
   private stepPhysics(input: InputFrame): void {
+    const before = this.track?.diamondGoal && this.phaseValue === 'riding' && !this.diamondRouteCrossed ? this.physics.getState() : null;
     const f = this.fwd;
     f.throttle = input.throttle;
     f.brake = input.brake;
@@ -839,6 +848,7 @@ export class Game {
       this.physics.step(f);
       this.physicsUs.push((performance.now() - t0) * 1000);
     } else this.physics.step(f);
+    if (before && crossedDiamondRouteGoal(this.track, before, this.physics.getState())) this.diamondRouteCrossed = true;
     this.lastState = null;
     const events = this.physics.drainEvents();
     for (let i = 0; i < events.length; i++) this.processPhysicsEvent(events[i]!);
@@ -848,6 +858,7 @@ export class Game {
     switch (e.type) {
       case 'fault':
         if (this.phaseValue !== 'riding') return; // ragdoll re-contacts / post-finish tumbles are not faults
+        this.diamondRouteCrossed = false;
         this.crashTicks = 0;
         this.setPhase('crashed');
         this.emit(e);
@@ -866,6 +877,9 @@ export class Game {
       case 'finish':
         if (this.phaseValue !== 'riding') return;
         this.finishRunTicks = this.runTicks;
+        if (this.pbRecorder && this.track?.diamondGoal) {
+          this.pbRecorder.header.routeProof = { goalId: this.track.diamondGoal.id, crossed: this.diamondRouteCrossed };
+        }
         this.pbJson = this.pbRecorder ? encodeJSON(this.pbRecorder.toRecording()) : null;
         this.pbRecorder = null;
         this.resultsTicks = 0;
@@ -894,7 +908,8 @@ export class Game {
       trackId: track.id,
       time,
       faults: this.faultCount,
-      medal: medalFor(time, this.faultCount, targetTimeOf(track), this.bike),
+      medal: medalFor(time, this.faultCount, targetTimeOf(track), this.bike, track.diamondGoal ? this.diamondRouteCrossed : undefined),
+      ...(track.diamondGoal ? { routeProof: { goalId: track.diamondGoal.id, crossed: this.diamondRouteCrossed } } : {}),
       personalBest: prev === null || time < prev.time,
       previousBest: prev ? prev.time : null,
       targetTimeS: targetForBike(targetTimeOf(track), this.bike),
@@ -904,7 +919,7 @@ export class Game {
     // Board before PB: a board with no rows seeds itself from the stored PB, which must still be the previous one.
     result.rank = this.bestTimes?.record?.(track.id, result) ?? null;
     if (result.personalBest) this.bestTimes?.put(track.id, result, { splits: [...this.splits], recording: this.pbJson });
-    this.bestTimes?.recordMedal?.(track.id, result.medal, this.bike);
+    this.bestTimes?.recordMedal?.(track.id, result.medal, this.bike, result.routeProof, this.pbJson);
     // The panel's staged reveal is clocked from the HUD's sim time: anchor it to THIS tick, not to the last render
     // (a stepped sim — harness, e2e — would otherwise render straight into the final stage).
     const info = this.runInfo;
@@ -1147,7 +1162,7 @@ export class Game {
   }
 
   hashState(): string {
-    return hashPhysicsState(this.getState());
+    return hashRouteRunState(hashPhysicsState(this.getState()), this.track?.diamondGoal, this.diamondRouteCrossed);
   }
 
   // -- CONTRACT.md §2.9 -----------------------------------------------------
@@ -1176,6 +1191,7 @@ export class Game {
       resultsTicks: this.resultsTicks,
       resultsShown: this.resultsShown,
       finishFrozen: this.finishFrozen,
+      ...(this.track?.diamondGoal ? { diamondRouteCrossed: this.diamondRouteCrossed } : {}),
     };
   }
 
@@ -1192,6 +1208,7 @@ export class Game {
     this.resultsTicks = c.resultsTicks;
     this.resultsShown = c.resultsShown;
     this.finishFrozen = c.finishFrozen ?? false;
+    this.diamondRouteCrossed = this.track?.diamondGoal ? c.diamondRouteCrossed === true : false;
     if (this.ghost) {
       this.ghost.seek(this.runTicks);
       this.lastGhostState = null;

@@ -12,8 +12,8 @@ function polys(def: TrackDef): ColliderPolyline[] {
 }
 
 describe('kinds', () => {
-  it('has defaults for all 12 kinds and no loop', () => {
-    expect(OBSTACLE_KINDS).toHaveLength(12);
+  it('has defaults for all 13 kinds and no loop', () => {
+    expect(OBSTACLE_KINDS).toHaveLength(13);
     for (const k of OBSTACLE_KINDS) expect(KIND_DEFAULTS[k]).toBeDefined();
     expect((OBSTACLE_KINDS as readonly string[]).includes('loop')).toBe(false);
   });

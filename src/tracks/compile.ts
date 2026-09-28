@@ -120,6 +120,18 @@ export function compileTrack(def: TrackDef): CompiledTrack {
     const params = resolveParams(o.kind, o.params) as unknown as ParamRecord;
     resolved.push(params);
     geoms.push(compileKind(o.kind, o.pos, o.params, ground));
+    if (o.kind === 'open-platform') {
+      const p = resolveParams('open-platform', o.params);
+      const x0 = o.pos.x;
+      const x1 = x0 + p.length;
+      const top = o.pos.y + p.height;
+      if (!Number.isFinite(p.length) || p.length < 2 || !Number.isFinite(p.height) || !Number.isFinite(p.thickness) || p.thickness <= 0 || p.thickness > 0.5) {
+        throw new TrackCompileError(def.id, `open-platform ${i}: length must be >= 2 m, height finite, and thickness in (0, 0.5] m`);
+      }
+      if (x0 < def.profile[0]!.x || x1 > def.profile[def.profile.length - 1]!.x) throw new TrackCompileError(def.id, `open-platform ${i}: outside the ground profile`);
+      const highestGround = Math.max(...ground.chain(x0, x1).map((v) => v.y));
+      if (top - p.thickness - highestGround < 1.8) throw new TrackCompileError(def.id, `open-platform ${i}: lower passage needs 1.8 m clearance`);
+    }
     if (o.kind === 'gap') {
       const p = resolveParams('gap', o.params);
       const lipY = ground.y(o.pos.x);
@@ -139,6 +151,19 @@ export function compileTrack(def: TrackDef): CompiledTrack {
     const a = gaps[i - 1] as GapCut;
     const b = gaps[i] as GapCut;
     if (b.x0 < a.x1 - 1e-9) throw new TrackCompileError(def.id, `gaps overlap at x=${b.x0}`);
+  }
+  if (def.diamondGoal) {
+    const goal = def.diamondGoal;
+    const deck = def.obstacles[goal.platformObstacleIndex];
+    if (!goal.id.trim() || !deck || deck.kind !== 'open-platform') throw new TrackCompileError(def.id, 'diamondGoal must name an open-platform obstacle');
+    const p = resolveParams('open-platform', deck.params);
+    const top = deck.pos.y + p.height;
+    if (!Number.isFinite(goal.x) || goal.x <= deck.pos.x + 0.5 || goal.x >= deck.pos.x + p.length - 0.5 || goal.x >= def.finishX) {
+      throw new TrackCompileError(def.id, 'diamondGoal crossing must lie inside the platform and before finish');
+    }
+    if (!Number.isFinite(goal.minRearY) || goal.minRearY < top || goal.minRearY > top + 0.4) {
+      throw new TrackCompileError(def.id, 'diamondGoal minRearY must be at the rideable deck height');
+    }
   }
 
   // 2. Merge ground + solids
@@ -233,6 +258,37 @@ export function compileTrack(def: TrackDef): CompiledTrack {
           // kinds never emit loose polylines; chains cover that
           break;
       }
+    }
+  });
+
+  // An upper deck may connect at its ends, but its open interior cannot be filled by another solid.
+  def.obstacles.forEach((o, i) => {
+    if (o.kind !== 'open-platform') return;
+    const p = resolveParams('open-platform', o.params);
+    const x0 = o.pos.x + 0.01;
+    const x1 = o.pos.x + p.length - 0.01;
+    const y = o.pos.y + p.height;
+    for (const c of colliders) {
+      if (c.obstacleIndex === i || c.obstacleIndex < 0) continue;
+      let intersects = false;
+      if (c.kind === 'polyline') {
+        for (let j = 1; j < c.points.length; j++) {
+          const a = c.points[j - 1]!;
+          const b = c.points[j]!;
+          if (y < Math.min(a.y, b.y) || y > Math.max(a.y, b.y)) continue;
+          if (a.y === b.y) intersects = Math.max(a.x, b.x) > x0 && Math.min(a.x, b.x) < x1;
+          else {
+            const x = a.x + ((y - a.y) * (b.x - a.x)) / (b.y - a.y);
+            intersects = x > x0 && x < x1;
+          }
+          if (intersects) break;
+        }
+      } else if (c.kind === 'box' && c.center.x + c.halfW > x0 && c.center.x - c.halfW < x1 && Math.abs(c.center.y - y) <= c.halfH) {
+        intersects = true;
+      } else if (c.kind === 'circle' && c.center.x + c.radius > x0 && c.center.x - c.radius < x1 && Math.abs(c.center.y - y) <= c.radius) {
+        intersects = true;
+      }
+      if (intersects) throw new TrackCompileError(def.id, `open-platform ${i}: deck intersects obstacle ${c.obstacleIndex}`);
     }
   });
 

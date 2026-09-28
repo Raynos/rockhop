@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 /**
  * World map — the painted continent as the level select (project/archive/WORLD_MAP.md, ask 54; the A "Rebirth" mockup,
  * assets/design/worldmap/A-painted-{world,region}.png). One `translate / scale` scene root under a `touch-action:
@@ -22,6 +23,7 @@ import type { UiSfx } from './sfx';
 import { wantsHiRes } from '../boot/tier';
 import { allMarkers, buildRegions, fitZoom, FLY_MS, fogPatches, frameFor, locate, MAP, nextGate, PLATE_LEFT, regionPlateSrc, routePath, TAP_SLOP, tierBlend, worldPlateSrc, ZOOM, type FogPatch, type Gate, type Marker, type Region, type RegionId } from './worldMap';
 import { injectWorldMapStyles } from './worldMapStyles';
+import type { MountedWorldMap3DReview } from './worldMap3dScene';
 
 interface Cam {
   x: number;
@@ -47,6 +49,10 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 const BIKE_SVG = `<svg viewBox="0 0 30 20" width="30" height="20" aria-hidden="true"><circle cx="7" cy="14" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="23" cy="14" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 14 L12 7 L19 7 L23 14 M12 7 L10 3 L14 3 M15 7 L13 14" fill="none" stroke="#ffd25a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 export class WorldMapScreen extends Screen {
+  private map3dEnabled: boolean;
+  private map3dScene: MountedWorldMap3DReview | null = null;
+  private map3dLoading = false;
+  private map3dToken = 0;
   private readonly view: HTMLDivElement;
   private readonly scene: HTMLDivElement;
   private readonly world: HTMLDivElement;
@@ -102,6 +108,8 @@ export class WorldMapScreen extends Screen {
   ) {
     super(parent, 'tracks-screen worldmap-screen');
     injectWorldMapStyles();
+    this.map3dEnabled = import.meta.env.DEV && new URLSearchParams(window.location.search).get('map3d') === '1';
+    this.root.classList.toggle('wm3d-enabled', this.map3dEnabled);
     this.view = el('div', 'wm-view');
     this.scene = el('div', 'wm-scene');
     this.world = el('div', 'wm-world');
@@ -579,6 +587,7 @@ export class WorldMapScreen extends Screen {
 
   /** A marker (or the gate) whose diamond meets an overlay's box is shaded: drawn dim, no pointer — nothing tappable hides under another tappable. */
   private shade(): void {
+    if (this.map3dEnabled) return;
     if (!this.view.clientWidth) return;
     this.measureBlocks();
     this.placeCard();
@@ -608,6 +617,11 @@ export class WorldMapScreen extends Screen {
 
   /** The fit zoom from the view's box; the camera re-centres on its anchor. Called on build, show and resize (never per frame). */
   private layout(): void {
+    if (this.map3dEnabled) {
+      this.map3dScene?.resize();
+      if (this.visible && !this.map3dScene) void this.start3d();
+      return;
+    }
     const w = this.view.clientWidth;
     const hgt = this.view.clientHeight;
     if (!w || !hgt) {
@@ -718,7 +732,9 @@ export class WorldMapScreen extends Screen {
     }
     // Markers: the route first, then the Lab and the playgrounds (the order `nav()` steps).
     this.markerLayer.innerHTML = '';
-    this.refs = allMarkers(regions).map((marker, i) => {
+    const canonical = this.map3dEnabled ? new Set(shipTracks(tracks, false).map((track) => track.id)) : null;
+    const markers = allMarkers(regions).filter((marker) => !canonical || canonical.has(marker.track.id));
+    this.refs = markers.map((marker, i) => {
       const m = this.markerEl(marker, i);
       this.markerLayer.appendChild(m.el);
       return m;
@@ -752,6 +768,7 @@ export class WorldMapScreen extends Screen {
     this.userMoved = false;
     this.applyFocus(false);
     this.layout();
+    if (this.map3dEnabled) this.map3dScene?.setLocked(this.refs.map((ref) => ref.marker.locked));
   }
 
   private indexOf(at: { region: number; marker: number }): number {
@@ -780,6 +797,7 @@ export class WorldMapScreen extends Screen {
 
   /** The region plates: the focused marker's region first, the rest when the camera settles at a zoom that shows them. */
   private loadPlates(focusedOnly: boolean): void {
+    if (this.map3dEnabled) return;
     const want = focusedOnly ? [this.refs[this.focus]?.marker.region].filter((x): x is RegionId => !!x) : this.regions.map((r) => r.id);
     for (const id of want) {
       if (this.plates.has(id)) continue;
@@ -842,6 +860,7 @@ export class WorldMapScreen extends Screen {
     this.ride.innerHTML = marker.locked ? `Locked <small>${escapeHtml(marker.rule ?? '')}</small>` : `Ride <small>${escapeHtml(t.name)}</small><span class="arrow">›</span>`;
     this.ghost.hidden = !canGhost;
     this.ghost.innerHTML = `<span>▶</span> ${this.state().ghost ? 'Ghost' : 'Watch PB'}`;
+    this.map3dScene?.setDetail(this.card.innerHTML, t.id, marker.locked);
     this.applyAction();
   }
 
@@ -865,6 +884,7 @@ export class WorldMapScreen extends Screen {
 
   /** The camera follows the focused marker: a fly when it sits outside the middle 60 % of the view (or when far), else stay. */
   private follow(m: Marker, k?: number): void {
+    if (this.map3dEnabled) return;
     const w = this.view.clientWidth || 1;
     const hgt = this.view.clientHeight || 1;
     const s = this.screenOf(m);
@@ -880,6 +900,7 @@ export class WorldMapScreen extends Screen {
     this.refs.forEach((r, i) => r.el.classList.toggle('on', i === this.focus));
     const ref = this.refs[this.focus];
     if (!ref) return;
+    if (this.map3dEnabled) this.map3dScene?.selectStage(this.focus, animate);
     this.scene.dataset['track'] = ref.marker.track.id;
     this.scene.dataset['region'] = ref.marker.region;
     // The beam stands on its own layer under every marker, so no name plate is ever drawn behind it.
@@ -937,6 +958,42 @@ export class WorldMapScreen extends Screen {
     };
   }
 
+  /** The 3D scene is a review-only, late-loaded renderer. The painted map stays the default and fallback. */
+  private async start3d(): Promise<void> {
+    if (!import.meta.env.DEV) return; // Vite folds the import out of every production build.
+    if (!this.map3dEnabled || this.map3dScene || this.map3dLoading || !this.visible) return;
+    const token = ++this.map3dToken;
+    this.map3dLoading = true;
+    try {
+      const { mountWorldMap3DReview } = await import('./worldMap3dScene');
+      if (token !== this.map3dToken || !this.visible) return;
+      const locked = this.refs.map((ref) => ref.marker.locked);
+      const scene = mountWorldMap3DReview(this.root, (stage) => {
+        if (this.refs[stage]) this.focusMarker(stage, true, false);
+      }, this.focus, locked);
+      this.map3dScene = scene;
+      const current = this.current()?.marker;
+      if (current) scene.setDetail(this.card.innerHTML, current.track.id, current.locked);
+    } catch (error) {
+      if (token === this.map3dToken) {
+        console.error('3D map unavailable; using painted map', error);
+        this.map3dEnabled = false;
+        this.root.classList.remove('wm3d-enabled');
+        this.loadPlates(true);
+        this.layout();
+      }
+    } finally {
+      if (token === this.map3dToken) this.map3dLoading = false;
+    }
+  }
+
+  private stop3d(): void {
+    this.map3dToken++;
+    this.map3dLoading = false;
+    this.map3dScene?.dispose();
+    this.map3dScene = null;
+  }
+
   override show(): void {
     this.launching = false;
     super.show();
@@ -947,6 +1004,7 @@ export class WorldMapScreen extends Screen {
   override hide(): void {
     this.stopFly();
     this.stopInertia();
+    this.stop3d();
     super.hide();
   }
 

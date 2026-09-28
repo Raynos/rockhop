@@ -3,8 +3,10 @@
  * quality override (`rockhop.quality`). Every access is try/catch'd: private
  * mode, blocked storage and the headless harness must all just work.
  */
-import type { BikeClass, Medal, QualityTier, RunResult } from '../core/types';
+import type { BikeClass, Medal, QualityTier, RouteProof, RunResult } from '../core/types';
+import { parseRouteProof } from '../core/replay';
 import { persistentStorage } from '../platform/storage';
+import { getTrack } from '../tracks';
 
 export interface BestEntry {
   time: number;
@@ -13,6 +15,14 @@ export interface BestEntry {
   medal: Medal;
   /** Highest medal ever earned on this bike, even when that run was slower than the PB. */
   bestMedal?: Medal;
+  /** Proof for the PB medal; legacy top medals on a new route track have no proof. */
+  routeProof?: RouteProof;
+  /** Proof for a slower medal improvement, independent of the PB replay. */
+  bestMedalRouteProof?: RouteProof;
+  /** Input replay for a slower proved top-medal run; PB recording remains the faster ride. */
+  bestMedalRecording?: string;
+  /** A pre-route top medal is preserved but identified as earned under the old rules. */
+  legacyRouteMedal?: boolean;
   /** Bike class the PB was set on (absent in pre-garage entries = rookie). */
   bike?: BikeClass;
   /** Run clock at each checkpoint of the PB run. */
@@ -26,6 +36,8 @@ export interface BoardEntry {
   time: number;
   faults: number;
   medal: Medal;
+  routeProof?: RouteProof;
+  legacyRouteMedal?: boolean;
   /** ISO time the run finished ('' for a row seeded from a pre-board PB). */
   at: string;
 }
@@ -45,6 +57,16 @@ function medalOf(entry: BestEntry): Medal {
 
 function higherMedal(a: Medal, b: Medal): Medal {
   return MEDAL_RANK[a] >= MEDAL_RANK[b] ? a : b;
+}
+
+function legacyRouteMedal(trackId: string, medal: Medal, proof?: RouteProof): boolean {
+  const goal = getTrack(trackId)?.diamondGoal;
+  return medal === 'platinum' && !!goal && (proof?.goalId !== goal.id || proof.crossed !== true);
+}
+
+/** New top-medal writes require proof; old saved top medals remain grandfathered on read. */
+function provedMedal(trackId: string, medal: Medal, proof?: RouteProof): Medal {
+  return legacyRouteMedal(trackId, medal, proof) ? 'gold' : medal;
 }
 
 /** Storage key per track and bike class: rookie keeps the legacy key so pre-garage PBs survive; pro gets a suffix. */
@@ -102,14 +124,30 @@ export class BestTimes {
       }
       const o = JSON.parse(raw) as Partial<BestEntry>;
       if (typeof o.time !== 'number' || typeof o.faults !== 'number') return null;
-      const entry: BestEntry = { time: o.time, faults: o.faults, medal: o.medal && o.medal in MEDAL_RANK ? o.medal : 'bronze', bike };
+      const proof = parseRouteProof(o.routeProof);
+      const bestProof = parseRouteProof(o.bestMedalRouteProof);
+      const rawMedal = o.medal && o.medal in MEDAL_RANK ? o.medal : 'bronze';
+      const entry: BestEntry = { time: o.time, faults: o.faults, medal: rawMedal, bike };
+      if (proof) entry.routeProof = proof;
       if (o.bestMedal && o.bestMedal in MEDAL_RANK) entry.bestMedal = higherMedal(entry.medal, o.bestMedal);
+      if (bestProof) entry.bestMedalRouteProof = bestProof;
+      if (typeof o.bestMedalRecording === 'string' && o.bestMedalRecording.length > 0) entry.bestMedalRecording = o.bestMedalRecording;
+      if (legacyRouteMedal(trackId, entry.medal, proof) || legacyRouteMedal(trackId, entry.bestMedal ?? entry.medal, bestProof ?? proof)) entry.legacyRouteMedal = true;
       if (Array.isArray(o.splits) && o.splits.every((x) => typeof x === 'number')) entry.splits = o.splits;
       if (typeof o.recording === 'string' && o.recording.length > 0) entry.recording = o.recording;
       this.cache.set(key, entry);
       return entry;
     } catch {
       return null;
+    }
+  }
+
+  private save(key: string, entry: BestEntry): void {
+    this.cache.set(key, entry);
+    try {
+      store()?.setItem(key, JSON.stringify(entry));
+    } catch {
+      /* storage unavailable: the in-memory career entry still serves this session */
     }
   }
 
@@ -138,7 +176,12 @@ export class BestTimes {
       if (Array.isArray(o)) {
         rows = o
           .filter((e): e is BoardEntry => !!e && typeof e === 'object' && typeof (e as BoardEntry).time === 'number' && typeof (e as BoardEntry).faults === 'number')
-          .map((e) => ({ time: e.time, faults: e.faults, medal: e.medal in MEDAL_RANK ? e.medal : 'bronze', at: typeof e.at === 'string' ? e.at : '' }))
+          .map((e) => {
+            const proof = parseRouteProof(e.routeProof);
+            const medal = e.medal in MEDAL_RANK ? e.medal : 'bronze';
+            return { time: e.time, faults: e.faults, medal, at: typeof e.at === 'string' ? e.at : '',
+              ...(proof ? { routeProof: proof } : {}), ...(legacyRouteMedal(trackId, medal, proof) ? { legacyRouteMedal: true } : {}) };
+          })
           .sort(boardOrder)
           .slice(0, BOARD_SIZE);
       }
@@ -147,7 +190,8 @@ export class BestTimes {
     }
     if (rows.length === 0) {
       const pb = this.read(trackId, bike);
-      if (pb) rows = [{ time: pb.time, faults: pb.faults, medal: pb.medal, at: '' }];
+      if (pb) rows = [{ time: pb.time, faults: pb.faults, medal: pb.medal, at: '', ...(pb.routeProof ? { routeProof: pb.routeProof } : {}),
+        ...(pb.legacyRouteMedal ? { legacyRouteMedal: true } : {}) }];
     }
     this.boards.set(key, rows);
     return rows;
@@ -159,7 +203,8 @@ export class BestTimes {
    */
   record(trackId: string, r: RunResult, at: string = new Date().toISOString()): number | null {
     const bike: BikeClass = r.bike ?? 'rookie';
-    const row: BoardEntry = { time: r.time, faults: r.faults, medal: r.medal, at };
+    const row: BoardEntry = { time: r.time, faults: r.faults, medal: provedMedal(trackId, r.medal, r.routeProof), at,
+      ...(r.routeProof ? { routeProof: r.routeProof } : {}) };
     const rows = [...this.board(trackId, bike)];
     let i = rows.findIndex((e) => boardOrder(row, e) < 0);
     if (i < 0) i = rows.length;
@@ -179,34 +224,38 @@ export class BestTimes {
   put(trackId: string, r: RunResult, run?: { splits: number[]; recording: string | null }): void {
     const bike: BikeClass = r.bike ?? 'rookie';
     const prior = this.read(trackId, bike);
-    const entry: BestEntry = { time: r.time, faults: r.faults, medal: r.medal, bestMedal: prior ? higherMedal(medalOf(prior), r.medal) : r.medal, bike };
+    const medal = provedMedal(trackId, r.medal, r.routeProof);
+    const currentBest = prior ? medalOf(prior) : null;
+    const currentWins = !currentBest || MEDAL_RANK[medal] >= MEDAL_RANK[currentBest];
+    const entry: BestEntry = { time: r.time, faults: r.faults, medal, bestMedal: currentWins ? medal : currentBest!, bike };
+    if (r.routeProof) entry.routeProof = r.routeProof;
+    if (!currentWins && prior) {
+      if (prior.bestMedalRouteProof) entry.bestMedalRouteProof = prior.bestMedalRouteProof;
+      if (prior.bestMedalRecording) entry.bestMedalRecording = prior.bestMedalRecording;
+      if (prior.legacyRouteMedal) entry.legacyRouteMedal = true;
+    }
     if (run) {
       entry.splits = run.splits;
       if (run.recording) entry.recording = run.recording;
     }
-    const key = bestKey(trackId, bike);
-    this.cache.set(key, entry);
-    try {
-      store()?.setItem(key, JSON.stringify(entry));
-    } catch {
-      /* storage unavailable */
-    }
+    this.save(bestKey(trackId, bike), entry);
   }
 
   /** Record a slower run's medal improvement without replacing its bike class PB, ghost or board row. */
-  recordMedal(trackId: string, medal: Medal, bike: BikeClass): void {
+  recordMedal(trackId: string, medal: Medal, bike: BikeClass, routeProof?: RouteProof, recording?: string | null): void {
     const prior = this.read(trackId, bike);
     if (!prior) return;
+    medal = provedMedal(trackId, medal, routeProof);
     const bestMedal = higherMedal(medalOf(prior), medal);
-    if (bestMedal === medalOf(prior)) return;
-    const entry = { ...prior, bestMedal };
-    const key = bestKey(trackId, bike);
-    this.cache.set(key, entry);
-    try {
-      store()?.setItem(key, JSON.stringify(entry));
-    } catch {
-      /* storage unavailable: the in-memory career medal still serves this session */
-    }
+    const provesLegacy = prior.legacyRouteMedal && medal === 'platinum' && !legacyRouteMedal(trackId, medal, routeProof);
+    if (bestMedal === medalOf(prior) && !provesLegacy) return;
+    const keepRecording = medal === 'platinum' && !!getTrack(trackId)?.diamondGoal && routeProof?.crossed === true && !!recording;
+    const entry: BestEntry = { ...prior, bestMedal };
+    if (routeProof) entry.bestMedalRouteProof = routeProof;
+    if (keepRecording) entry.bestMedalRecording = recording!;
+    // A newly proved career medal does not rewrite an older PB ride's history.
+    if (provesLegacy && !legacyRouteMedal(trackId, prior.medal, prior.routeProof)) delete entry.legacyRouteMedal;
+    this.save(bestKey(trackId, bike), entry);
   }
 }
 

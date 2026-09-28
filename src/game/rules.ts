@@ -60,12 +60,12 @@ export function ruleTicks(physicsHz: number): RuleTicks {
  * Medal vs `meta.targetTimeS` (T). Without a target every clear is bronze
  * except a fault-free one, which is gold (there is nothing to beat on time).
  */
-export function medalFor(time: number, faults: number, targetTimeS: number | null | undefined, bike?: BikeClass): Medal {
+export function medalFor(time: number, faults: number, targetTimeS: number | null | undefined, bike?: BikeClass, diamondRouteCrossed?: boolean): Medal {
   targetTimeS = targetForBike(targetTimeS, bike);
   if (targetTimeS === null) {
     return faults === 0 ? 'gold' : 'bronze';
   }
-  if (faults === 0 && time <= targetTimeS * 0.85) return 'platinum';
+  if (faults === 0 && time <= targetTimeS * 0.85 && diamondRouteCrossed !== false) return 'platinum';
   if (faults <= 1 && time <= targetTimeS) return 'gold';
   if (faults <= 5 && time <= targetTimeS * 1.25) return 'silver';
   return 'bronze';

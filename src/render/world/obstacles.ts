@@ -1,5 +1,5 @@
 /**
- * Obstacle bodies for all 12 `placed` kinds plus every non-polyline collider.
+ * Obstacle bodies for every `placed` kind plus every non-polyline collider.
  * The ridden surface itself is a ribbon (track.ts); this file adds the solid
  * underneath so a ramp is a wedge, a drum a spool, a wall a wall. Static
  * bodies merge per material; seesaws and rolling drums stay separate so they
@@ -176,16 +176,18 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
         }
         break;
       }
-      case 'plank': {
+      case 'plank':
+      case 'open-platform': {
+        const open = po.kind === 'open-platform';
         const t = num(p, 'thickness', 0.08);
         for (const c of cols) {
           if (c.kind === 'polyline') {
             const g = board(c, t, num(p, 'width', DEPTH));
-            if (g) push(buckets, 'plywood', g);
-            // Support trestles every ~2.5 m when the plank is above the ground.
+            if (g) push(buckets, open && surface === 'metal' ? 'rustSteel' : 'plywood', g);
+            // Open decks have end trestles only, leaving the lower x-lane clear.
             const pts = c.points;
             const len = Math.hypot(pts[pts.length - 1]!.x - pts[0]!.x, pts[pts.length - 1]!.y - pts[0]!.y);
-            const n = Math.max(2, Math.round(len / 2.5) + 1);
+            const n = open ? 2 : Math.max(2, Math.round(len / 2.5) + 1);
             for (let k = 0; k < n; k++) {
               const tt = n === 1 ? 0.5 : k / (n - 1);
               const px = pts[0]!.x + (pts[pts.length - 1]!.x - pts[0]!.x) * tt;

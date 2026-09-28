@@ -1,0 +1,7 @@
+# C island in the real level selector — review pass, 2026-09-28
+
+The [silent played recording](integrated-play.mp4) starts at the main menu, enters the opt-in 3D island (`vite dev ?map3d=1`), drags to two other angles, selects all twelve physical towers, returns to Menu, reopens the map, then rides C1. [Front](front.png), [three-quarter](three-quarter.png), [reverse orbit](reverse-orbit.png), and [portrait](portrait.png) are frames of that app path; [machine results](report.json) record the clicked track IDs and teardown checks. This is the real C1–S3 selector state and Ride callback, not the standalone prototype's stage labels or stub button.
+
+All 12 towers selected their matching real courses. Portrait shows a rotate prompt and no canvas. Leaving for Menu or C1 removed the map canvas and hook. The default map requested zero 3D chunks and remained the painted map; there were no console errors. The front used 432 draw calls and 460,507 triangles, with 494 static meshes merged into 78 batches. The production web and store builds omit the review renderer, its CSS and sky asset.
+
+**Judgment: review only.** Headless SwiftShader ran at 1–7 fps, far below an acceptable moving selector; a physical landscape iPhone measurement is still required. The reverse angle obscures much of the road, and the procedural forest, cliffs and snow remain below the selected reference's material/detail quality. Do not replace the live map until the art and movement pass a new played review and device performance gate.

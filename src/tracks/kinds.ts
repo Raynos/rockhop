@@ -104,6 +104,7 @@ export const PROPS: { readonly [P in PropId]: { readonly zone: 'coast' | 'alpine
 export type ObstacleKind =
   | 'ramp'
   | 'plank'
+  | 'open-platform'
   | 'drum'
   | 'gap'
   | 'wall'
@@ -118,6 +119,7 @@ export type ObstacleKind =
 export const OBSTACLE_KINDS: readonly ObstacleKind[] = [
   'ramp',
   'plank',
+  'open-platform',
   'drum',
   'gap',
   'wall',
@@ -141,7 +143,7 @@ export const OBSTACLE_KINDS: readonly ObstacleKind[] = [
  */
 export type DecorKind = 'arch' | 'tunnel';
 export const DECOR_KINDS: readonly DecorKind[] = ['arch', 'tunnel'];
-/** Everything `TrackObstacle.kind` may hold: the 12 rideable kinds plus the decor kinds. */
+/** Everything `TrackObstacle.kind` may hold: the rideable kinds plus the decor kinds. */
 export type TrackKind = ObstacleKind | DecorKind;
 
 /** Solid wedge. `curve` 0 = straight, +1 = concave (quarter-pipe / kicker lip), -1 = convex roller. */
@@ -159,6 +161,13 @@ export interface PlankParams extends BaseParams {
   height: number;
   thickness: number;
   oneWay: boolean;
+  surface: SurfaceKind;
+}
+/** Elevated horizontal deck: one-way rideable top, no collision under its span. End supports are visual. */
+export interface OpenPlatformParams extends BaseParams {
+  length: number;
+  height: number;
+  thickness: number;
   surface: SurfaceKind;
 }
 /** Cylinder lying across the course. `depth` sinks it into the ground. `rolls` = spins under the tyre (never translates). `width` = visual depth along z (render only). */
@@ -279,6 +288,7 @@ export interface KindParams {
   tunnel: TunnelParams;
   ramp: RampParams;
   plank: PlankParams;
+  'open-platform': OpenPlatformParams;
   drum: DrumParams;
   gap: GapParams;
   wall: WallParams;
@@ -296,6 +306,7 @@ export const KIND_DEFAULTS: { readonly [K in TrackKind]: Readonly<KindParams[K]>
   tunnel: { length: 20, height: 5, depth: 6, style: 'scaffold', lit: true, surface: 'concrete', variant: 0 },
   ramp: { length: 4, height: 1, curve: 0, direction: 'up', surface: 'wood', variant: 0 },
   plank: { length: 4, angleDeg: 0, height: 0, thickness: 0.12, oneWay: true, surface: 'wood', variant: 0 },
+  'open-platform': { length: 8, height: 2.5, thickness: 0.18, surface: 'wood', variant: 0 },
   drum: { radius: 0.8, width: 1.2, depth: 0, rolls: false, surface: 'metal', variant: 0 },
   gap: { width: 3, depth: 3, hazard: 'water', rise: 0, floor: 'dirt', variant: 0 },
   wall: { height: 1, width: 0.4, lip: 0, surface: 'concrete', variant: 0 },
@@ -340,6 +351,8 @@ export function footprint(kind: TrackKind, params: ParamRecord | undefined): num
       const p = resolveParams('plank', params);
       return p.length * Math.cos((p.angleDeg * Math.PI) / 180);
     }
+    case 'open-platform':
+      return resolveParams('open-platform', params).length;
     case 'drum':
       return 2 * resolveParams('drum', params).radius;
     case 'gap':
@@ -505,6 +518,12 @@ const compilePlank: Compiler<'plank'> = (pos, p) => {
   return g;
 };
 
+const compileOpenPlatform: Compiler<'open-platform'> = (pos, p) => {
+  const g = empty();
+  g.chains.push({ points: [{ x: pos.x, y: pos.y + p.height }, { x: pos.x + p.length, y: pos.y + p.height }], oneWay: true, surface: p.surface });
+  return g;
+};
+
 const compileDrum: Compiler<'drum'> = (pos, p) => {
   const g = empty();
   const center = { x: pos.x + p.radius, y: pos.y + p.radius - p.depth };
@@ -659,6 +678,7 @@ const COMPILERS: { [K in TrackKind]: Compiler<K> } = {
   tunnel: compileDecor,
   ramp: compileRamp,
   plank: compilePlank,
+  'open-platform': compileOpenPlatform,
   drum: compileDrum,
   gap: compileGap,
   wall: compileWall,
@@ -682,6 +702,7 @@ export const SUMMARY_KEYS: { readonly [K in TrackKind]: readonly (keyof KindPara
   tunnel: ['length', 'height', 'style'],
   ramp: ['length', 'height', 'curve', 'direction'],
   plank: ['length', 'angleDeg', 'height'],
+  'open-platform': ['length', 'height', 'thickness'],
   drum: ['radius', 'depth', 'rolls'],
   gap: ['width', 'depth', 'hazard', 'rise', 'floor'],
   wall: ['height', 'width', 'lip'],

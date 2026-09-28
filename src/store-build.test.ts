@@ -23,7 +23,7 @@ interface Built {
 
 function build(name: string, env: Record<string, string>): Built {
   const dir = path.join(tmp, name);
-  execFileSync(vite, ['build', '--outDir', dir, '--emptyOutDir', '--logLevel', 'error'], { cwd: root, env: { ...process.env, ...env }, stdio: 'pipe' });
+  execFileSync(vite, ['build', '--outDir', dir, '--emptyOutDir', '--logLevel', 'error'], { cwd: root, env: { ...process.env, ...env, NODE_ENV: 'production' }, stdio: 'pipe' });
   const files: string[] = [];
   const walk = (d: string): void => {
     for (const e of fs.readdirSync(d, { withFileTypes: true })) {
@@ -77,13 +77,19 @@ describe('store build (VITE_STORE=1) compiles out every dev surface', () => {
     });
   }
 
-  it('ships no service worker, version probe, bench golden or inbox chunk file', () => {
+  it('ships no service worker, version probe, bench golden, inbox or 3D map chunk file', () => {
     for (const f of ['sw.js', 'version.json', 'bench/b1-bot-3.json']) {
       expect(web.files).toContain(f);
       expect(store.files).not.toContain(f);
     }
     expect(web.files.some((f) => f.startsWith('assets/inbox-'))).toBe(true);
     expect(store.files.some((f) => f.startsWith('assets/inbox-'))).toBe(false);
+    expect(web.files.some((f) => f.startsWith('assets/worldMap3dScene-'))).toBe(false);
+    expect(store.files.some((f) => f.startsWith('assets/worldMap3dScene-'))).toBe(false);
+    expect(web.files.some((f) => f.startsWith('assets/sky-alpine-a-'))).toBe(false);
+    expect(store.files.some((f) => f.startsWith('assets/sky-alpine-a-'))).toBe(false);
+    expect(web.text).not.toContain('3D map unavailable; using painted map');
+    expect(store.text).not.toContain('3D map unavailable; using painted map');
   });
 
   it('the native platform layer (Capacitor, src/platform) ships in the store build only — the web bundle has none of it', () => {

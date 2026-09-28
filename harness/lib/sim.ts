@@ -29,6 +29,7 @@ import { compileTrack, getTrack, listTrackIds } from '../../src/tracks';
 import * as physicsModule from '../../src/physics';
 import type { PhysicsFactory, PhysicsWorld } from '../../src/physics';
 import { RunRules, type RulesCounters } from './rules';
+import { hashRouteRunState } from '../../src/game/routeGoal';
 
 export interface SimSnapshot {
   physics: PhysicsSnapshot;
@@ -154,7 +155,7 @@ export async function createSim(trackId: string, seed?: number, hz: number = DEF
   const world = factory(hz);
   const theSeed = (seed ?? track.seed) >>> 0;
   const bike: BikeClass = opts.bike ?? DEFAULT_BIKE;
-  const rules = new RunRules(world, hz);
+  const rules = new RunRules(world, hz, track);
   const load = (): void => {
     world.loadTrack(compiled, theSeed, { bike });
     world.drainEvents();
@@ -190,7 +191,7 @@ export async function createSim(trackId: string, seed?: number, hz: number = DEF
         ticks++;
       }
       const state = world.getState();
-      return { state, events, hash: hashPhysicsState(state), ticks };
+      return { state, events, hash: hashRouteRunState(hashPhysicsState(state), track.diamondGoal, rules.counters().diamondRouteCrossed === true), ticks };
     },
     snap: () => ({ physics: world.snapshot(), counters: rules.counters() }),
     restore: (s) => {
@@ -198,7 +199,7 @@ export async function createSim(trackId: string, seed?: number, hz: number = DEF
       world.drainEvents();
       rules.restoreCounters(s.counters);
     },
-    hash: () => hashPhysicsState(world.getState()),
+    hash: () => hashRouteRunState(hashPhysicsState(world.getState()), track.diamondGoal, rules.counters().diamondRouteCrossed === true),
     state: () => world.getState(),
     phase: () => rules.phase(),
     faults: () => rules.faults(),

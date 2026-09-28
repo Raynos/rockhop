@@ -10,7 +10,7 @@
  *   - JSON  (human readable, `{ header, runs: [[count, t, b, l, flags], ...] }`)
  *   - binary (magic "TRIN", little-endian; see encodeBinary)
  */
-import type { BikeClass, InputFrame, PhysicsVersion } from './types';
+import type { BikeClass, InputFrame, PhysicsVersion, RouteProof } from './types';
 
 export const RECORDING_VERSION = 1;
 const MAGIC = 'TRIN';
@@ -26,6 +26,17 @@ export interface RecordingHeader {
   bike?: BikeClass;
   /** Solver the inputs were recorded on (absent = v1, recorded before the v2 flip). Gates the PB ghost / Watch. */
   physics?: PhysicsVersion;
+  /** Observed route proof saved with JSON PB replays; replay recomputes this instead of trusting it. */
+  routeProof?: RouteProof;
+}
+
+/** Validated optional route metadata shared by recordings and saved result entries. */
+export function parseRouteProof(value: unknown): RouteProof | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const proof = value as Partial<RouteProof>;
+  return typeof proof.goalId === 'string' && typeof proof.crossed === 'boolean'
+    ? { goalId: proof.goalId, crossed: proof.crossed }
+    : undefined;
 }
 
 /** [count, throttle u8, brake u8, lean i8, flags u8] */
@@ -164,6 +175,8 @@ function validateHeader(h: unknown): RecordingHeader {
   if (typeof o.note === 'string') header.note = o.note;
   if (o.bike === 'rookie' || o.bike === 'pro') header.bike = o.bike;
   if (o.physics === 'v1' || o.physics === 'v2') header.physics = o.physics;
+  const routeProof = parseRouteProof(o.routeProof);
+  if (routeProof) header.routeProof = routeProof;
   return header;
 }
 

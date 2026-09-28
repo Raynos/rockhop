@@ -4,7 +4,14 @@
  */
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import type { RunResult } from '../core/types';
+import { registerTrack } from '../tracks';
 import { BOARD_SIZE, BestTimes, bestKey, boardKey } from './best';
+
+const ROUTE_TRACK_ID = 'best-route-proof-test';
+registerTrack({ id: ROUTE_TRACK_ID, name: 'Route proof', tier: 'hard', seed: 1,
+  profile: [{ x: 0, y: 0 }, { x: 100, y: 0 }], obstacles: [{ kind: 'open-platform', pos: { x: 30, y: 0 }, params: { length: 20, height: 2.5 } }],
+  checkpoints: [], start: { pos: { x: 0, y: 0 }, angle: 0 }, finishX: 80,
+  diamondGoal: { id: 'bridge', platformObstacleIndex: 0, x: 40, minRearY: 2.7 } });
 
 class MemStorage implements Storage {
   private m = new Map<string, string>();
@@ -129,5 +136,38 @@ describe('BestTimes.board', () => {
     expect(new BestTimes().get('b1', 'rookie')).toMatchObject({ time: 28, medal: 'silver', bestMedal: 'gold', recording: 'legacy' });
     expect(new BestTimes().get('b1')?.medal).toBe('gold');
     expect(new BestTimes().board('b1', 'rookie')[0]?.medal).toBe('silver');
+  });
+
+  it('grandfathers old route medals and stores proof plus replay for a slower new top-medal run', () => {
+    localStorage.setItem(bestKey(ROUTE_TRACK_ID, 'rookie'), JSON.stringify({ time: 20, faults: 0, medal: 'platinum', recording: 'legacy' }));
+    localStorage.setItem(boardKey(ROUTE_TRACK_ID, 'rookie'), JSON.stringify([{ time: 20, faults: 0, medal: 'platinum', at: '' }]));
+    const b = new BestTimes();
+    expect(b.get(ROUTE_TRACK_ID, 'rookie')).toMatchObject({ medal: 'platinum', legacyRouteMedal: true });
+    expect(b.board(ROUTE_TRACK_ID, 'rookie')[0]).toMatchObject({ medal: 'platinum', legacyRouteMedal: true });
+    const proof = { goalId: 'bridge', crossed: true };
+    b.recordMedal(ROUTE_TRACK_ID, 'platinum', 'rookie', proof, 'proved-input');
+    expect(b.get(ROUTE_TRACK_ID, 'rookie')).toMatchObject({ time: 20, medal: 'platinum', legacyRouteMedal: true, bestMedal: 'platinum', bestMedalRouteProof: proof, bestMedalRecording: 'proved-input', recording: 'legacy' });
+    expect(new BestTimes().get(ROUTE_TRACK_ID, 'rookie')).toMatchObject({ time: 20, medal: 'platinum', legacyRouteMedal: true, bestMedal: 'platinum', bestMedalRouteProof: proof, bestMedalRecording: 'proved-input', recording: 'legacy' });
+    expect(new BestTimes().get(ROUTE_TRACK_ID)?.medal).toBe('platinum');
+    b.record(ROUTE_TRACK_ID, { ...run(23), trackId: ROUTE_TRACK_ID, medal: 'platinum' });
+    expect(b.board(ROUTE_TRACK_ID, 'rookie')[1]?.medal).toBe('gold'); // a new unproved claim is capped
+    const slower = { ...run(24), trackId: ROUTE_TRACK_ID, medal: 'platinum' as const, routeProof: proof };
+    b.record(ROUTE_TRACK_ID, slower);
+    expect(new BestTimes().board(ROUTE_TRACK_ID, 'rookie')[2]).toMatchObject({ medal: 'platinum', routeProof: proof });
+  });
+
+  it('requires proof for fresh PB and career writes, while retaining a slower proved medal replay', () => {
+    const b = new BestTimes();
+    const unproved = { ...run(20), trackId: ROUTE_TRACK_ID, medal: 'platinum' as const };
+    b.put(ROUTE_TRACK_ID, unproved, { splits: [], recording: 'fast-input' });
+    b.recordMedal(ROUTE_TRACK_ID, 'platinum', 'rookie');
+    expect(b.get(ROUTE_TRACK_ID, 'rookie')).toMatchObject({ medal: 'gold', bestMedal: 'gold', recording: 'fast-input' });
+
+    const proof = { goalId: 'bridge', crossed: true };
+    b.recordMedal(ROUTE_TRACK_ID, 'platinum', 'rookie', proof, 'slower-proved-input');
+    expect(new BestTimes().get(ROUTE_TRACK_ID, 'rookie')).toMatchObject({
+      time: 20, medal: 'gold', bestMedal: 'platinum', recording: 'fast-input',
+      bestMedalRouteProof: proof, bestMedalRecording: 'slower-proved-input',
+    });
   });
 });

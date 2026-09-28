@@ -76,6 +76,22 @@ export interface TrackCheckpoint {
   spawn: { pos: Vec2; angle: number };
 }
 
+/** Optional upper-route crossing needed for the top medal. The platform is an open, one-way deck. */
+export interface DiamondRouteGoal {
+  id: string;
+  /** Index of the `open-platform` obstacle whose upper deck must carry the rear wheel. */
+  platformObstacleIndex: number;
+  /** Crossing plane strictly inside that deck. */
+  x: number;
+  /** Minimum rear-wheel centre height at the crossing plane, in world metres. */
+  minRearY: number;
+}
+
+export interface RouteProof {
+  goalId: string;
+  crossed: boolean;
+}
+
 export interface TrackDef {
   id: string;
   name: string;
@@ -89,6 +105,8 @@ export interface TrackDef {
   start: { pos: Vec2; angle: number };
   /** x coordinate the front wheel must cross to finish. */
   finishX: number;
+  /** When authored, a clear must cross this upper deck to earn the top medal. */
+  diamondGoal?: DiamondRouteGoal;
   /** Author's target attempts-to-clear for a stranger, for the metric gate. */
   targetAttempts?: number;
   /** Biome, technique, camera keys, attempt band. See CONTRACT.md §2. */
@@ -399,6 +417,8 @@ export interface RunResult {
   time: number;
   faults: number;
   medal: Medal;
+  /** Deterministic crossing proof for a track with a Diamond route; absent on ordinary tracks. */
+  routeProof?: RouteProof;
   /** True when this run beat the stored best time. */
   personalBest: boolean;
   /** Previous best time, or null on the first clear. */

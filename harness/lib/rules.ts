@@ -15,10 +15,11 @@
  * mirroring. Until then, `docs/design/game.md` §2.8 and this file must agree;
  * `gate/determinism.ts` D3 is the test that they do.
  */
-import { NEUTRAL_INPUT, type GameEvent, type GamePhase, type InputFrame } from '../../src/core/types';
+import { NEUTRAL_INPUT, type GameEvent, type GamePhase, type InputFrame, type TrackDef } from '../../src/core/types';
 import type { PhysicsWorld } from '../../src/physics';
 import type { GameCounters } from '../../src/game/game';
 import { FINISH_BRAKE, ruleTicks, type RuleTicks } from '../../src/game/rules';
+import { crossedDiamondRouteGoal } from '../../src/game/routeGoal';
 
 /**
  * The same shape the page's `hook.snapshot()` carries (`Game.counters()`), so a
@@ -36,6 +37,7 @@ export class RunRules {
   constructor(
     private readonly physics: PhysicsWorld,
     readonly hz: number,
+    private readonly track?: TrackDef,
   ) {
     this.T = ruleTicks(hz);
   }
@@ -45,7 +47,7 @@ export class RunRules {
    * `holdFired` starts **true** — the press that triggered a hold (or that was down at
    * load) must be released before a hold can fire again.
    */
-  static atGo(): RulesCounters {
+  static atGo(hasDiamondRoute = false): RulesCounters {
     return {
       phase: 'riding',
       runTicks: 0,
@@ -59,6 +61,7 @@ export class RunRules {
       resultsTicks: 0,
       resultsShown: false,
       finishFrozen: false,
+      ...(hasDiamondRoute ? { diamondRouteCrossed: false } : {}),
     };
   }
 
@@ -66,7 +69,7 @@ export class RunRules {
   go(): void {
     this.physics.reset(-1);
     this.physics.drainEvents();
-    this.c = RunRules.atGo();
+    this.c = RunRules.atGo(!!this.track?.diamondGoal);
     this.pending = [];
   }
 
@@ -75,7 +78,8 @@ export class RunRules {
   }
 
   restoreCounters(c: RulesCounters): void {
-    this.c = { ...c, finishFrozen: c.finishFrozen ?? false };
+    this.c = { ...c, finishFrozen: c.finishFrozen ?? false,
+      ...(this.track?.diamondGoal ? { diamondRouteCrossed: c.diamondRouteCrossed === true } : {}) };
     this.pending = [];
   }
 
@@ -106,6 +110,7 @@ export class RunRules {
     this.physics.drainEvents();
     this.c.crashTicks = 0;
     this.c.phase = 'riding';
+    if (this.track?.diamondGoal) this.c.diamondRouteCrossed = false;
     this.emit({ type: 'restart', checkpoint, tick: 0 });
   }
 
@@ -120,7 +125,7 @@ export class RunRules {
     this.physics.drainEvents();
     this.emit({ type: 'restart', checkpoint: -1, tick: 0 });
     const { holdTicks, restartLatch } = this.c;
-    this.c = { ...RunRules.atGo(), faults: 0, holdTicks, restartLatch };
+    this.c = { ...RunRules.atGo(!!this.track?.diamondGoal), faults: 0, holdTicks, restartLatch };
     this.emit({ type: 'go' });
   }
 
@@ -166,6 +171,7 @@ export class RunRules {
   }
 
   private stepPhysics(input: InputFrame): void {
+    const before = this.track?.diamondGoal && this.c.phase === 'riding' && !this.c.diamondRouteCrossed ? this.physics.getState() : null;
     const f = this.fwd;
     f.throttle = input.throttle;
     f.brake = input.brake;
@@ -173,6 +179,7 @@ export class RunRules {
     f.hop = false;
     f.restart = false;
     this.physics.step(f);
+    if (before && crossedDiamondRouteGoal(this.track, before, this.physics.getState())) this.c.diamondRouteCrossed = true;
     for (const e of this.physics.drainEvents()) this.processPhysicsEvent(e);
   }
 
@@ -180,6 +187,7 @@ export class RunRules {
     switch (e.type) {
       case 'fault':
         if (this.c.phase !== 'riding') return;
+        if (this.track?.diamondGoal) this.c.diamondRouteCrossed = false;
         this.c.crashTicks = 0;
         this.c.phase = 'crashed';
         this.emit(e);

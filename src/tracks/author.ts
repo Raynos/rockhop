@@ -816,6 +816,10 @@ export class CourseBuilder {
   box(p: Partial2<KindParams['box']>, o?: ObstacleOpts): this {
     return this.place('box', p, o);
   }
+  /** Elevated one-way deck; the lower ground remains rideable through its span. */
+  openPlatform(p: Partial2<KindParams['open-platform']>, o?: ObstacleOpts): this {
+    return this.place('open-platform', p, o);
+  }
   pole(p: Partial2<KindParams['pole']>, o?: ObstacleOpts): this {
     return this.place('pole', p, o);
   }
