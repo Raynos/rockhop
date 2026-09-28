@@ -22,3 +22,9 @@ waiting on. IDs never reused. Ported from the FF15 demo's `HUMAN_REVIEW.md`.
 - **HR-20 — Recruit 12 Android closed testers (ask 104, D15).** Waiting on: you — Google opens Play production only after a closed test with ≥ 12 testers
   opted in for 14 continuous days. You said you need to recruit; gather 12 Google-account emails (friends, or a tester-exchange community) so the test
   can start the day the first build is on the internal track (after HR-16).
+
+- **HR-21 — Give the new Rockhop Vercel project its CI deploy token (ask 129).** Waiting on: you — create a token scoped to the
+  `playrockhop` project under `raynos-projects` in Vercel Settings → Tokens, and replace the `VERCEL_TOKEN` Actions secret in
+  `Raynos/rockhop`. The old token can access only `trials-gauntlet-demo`; the new workflow passed all build gates but Vercel
+  rejected the deploy with `Project not found`. Tell me when the secret is updated; I will run the workflow and verify
+  `playrockhop.vercel.app/version.json` before retiring the old site. Never paste the token into chat or the repository.
