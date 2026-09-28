@@ -7,6 +7,18 @@ The harness is `harness/native/README.md`. Each run is written to its own `<stam
 
 Since `20260923-005522`, `scripts/store-build.mjs` builds from a clean `git archive` of HEAD, never the shared working tree. The sha is `source` in `gate.json`.
 
+## 20260928-211906 — C1 and S2 Pro pass web/iOS exact replay
+
+The clean-export debug bundle names `7a995cd5ebcc63dc4a6a8ce23bf7dc3f5b962aa4`. [The gate report](20260928-211906/gate.json), [played iOS clip](20260928-211906/ios-clip.mp4), and [clip sheet](20260928-211906/ios-sheet.jpg) cover cold boot, countdown, the paced C1 ride, crash and 20 restarts. Both platforms passed every configured check with zero AudioContexts under automation.
+
+| Recording | Finish time, web = iOS | Float64 bytes | State hash, web = iOS |
+| --- | ---: | --- | --- |
+| C1 Rookie `bot-3` | 30.349999999999998 s | `9999999999593e40` | `2bfe061963ffb058` |
+| S2 Pro `bot-3-pro` | 33.791666666666664 s | `5555555555e54040` | `e5aa2e592e9102d1` |
+| C1 Rookie paced with rendered frames | 30.349999999999998 s | `9999999999593e40` | `2bfe061963ffb058` |
+
+The crash happened at 0.858 s, fault-to-control took 25 ms and every restart reached control in one simulation tick. Restart synced-frame p95 was 5.7 ms on Mac Metal and 6 ms in the iPhone 17 Pro Max simulator, both below the 33 ms gate. Cold boot to menu was 4.412 s on web and 6.961 s in the simulator; these are informational and do not establish the requested ≤5 s **warm cached physical-iPhone** target. The Android emulator remains off at the user's request; Android device replay, sustained play, touch/orientation and release signing still need separate proof.
+
 ## 20260923-005522 — HEAD `a736a26f`: web, iPhone and iPad (compatibility mode) byte-identical on 7 rows
 
 Bundle: store debug build of `a736a26fb89caff64218b8d662ab315b04ef20f5`, from a clean export.
