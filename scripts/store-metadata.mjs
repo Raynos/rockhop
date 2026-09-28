@@ -7,7 +7,8 @@
 // Limits: App Store Connect (name 30, subtitle 30, promotional text 170, description 4000, keywords 100 bytes,
 // release notes 4000) and Play Console (title 30, short description 80, full description 4000, release notes 500).
 // Denylist: the franchise and competitor names (Apple 2.3.7 bars them from metadata), the words the plan retires
-// ("trial" reads as a trial version, Apple 2.1/2.3; "demo"), and "Rockhopper" (Specialized's mark, D17).
+// ("trial" reads as a trial version, Apple 2.1/2.3; "demo"), "Rockhopper" (Specialized's mark, D17),
+// and retired game features (Obsidian medal and free-ride playgrounds).
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -31,7 +32,7 @@ const LIMITS = {
 };
 
 /** Whole-word, case-insensitive. "trail" is fine; "trial(s)" is not. */
-const DENY = ['trials?', 'gauntlet', 'demo', 'rockhopper', 'ubisoft', 'redlynx', 'evolution', 'rising', 'fusion', 'no fear', 'hill climb', 'bike race', 'moto x3m', 'bmx', 'specialized', 'red bull', 'monster energy', 'free trial', 'beta'];
+const DENY = ['trials?', 'gauntlet', 'demo', 'rockhopper', 'ubisoft', 'redlynx', 'evolution', 'rising', 'fusion', 'no fear', 'hill climb', 'bike race', 'moto x3m', 'bmx', 'specialized', 'red bull', 'monster energy', 'free trial', 'beta', 'obsidian', 'free.ride', 'playgrounds?'];
 
 const failures = [];
 const rows = [];
