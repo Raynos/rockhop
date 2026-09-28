@@ -1,0 +1,7 @@
+# Rejected 3D map interaction scaffold
+
+This 2026-09-27 prototype explored a rotatable Three.js terrain map with selectable course markers. The played [interaction clip](interaction-prototype.webm) shows menu → map → rotation → course selection → ride. It proved that the orbit and level-selection path could work on a phone-size landscape viewport. The user rejected its graphical direction: the procedural terrain and circular pads do not meet the requested finished-game art bar. **This is evidence only; it is not the shipping map.** The old map stays in the live source until a visual direction is chosen from the new image boards.
+
+The tracked source and offline-harness changes are preserved in [interaction-scaffold.patch](interaction-scaffold.patch). The two new source files are preserved byte-for-byte as [worldMap3d.ts](worldMap3d.ts) and [worldMap3d.test.ts](worldMap3d.test.ts). Apply the patch from the repository root and copy the two files back to `src/ui/` only when continuing the interaction implementation. The visual meshes and markers should be rebuilt to match the chosen art direction; the archived version should not be shipped as-is.
+
+The patch covers `harness/e2e/offline.mts`, `src/ui/worldMap.test.ts`, `src/ui/worldMap.ts`, `src/ui/worldMapScreen.test.ts`, `src/ui/worldMapScreen.ts`, and `src/ui/worldMapStyles.ts`. The scaffold was typechecked, linted, built, and played headlessly before archive. The latest user direction is **12 campaign levels only**, with no Free Ride levels and no physical circular arenas as level starts.

@@ -1,0 +1,1898 @@
+diff --git a/harness/e2e/offline.mts b/harness/e2e/offline.mts
+index 22482b93..caa578cd 100644
+--- a/harness/e2e/offline.mts
++++ b/harness/e2e/offline.mts
+@@ -332,7 +332,7 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
+         .catch(() => ({ canvas: false, drawn: false }));
+       check('offline.firstFrame', frame.canvas && frame.drawn, `${frame.canvas ? 'canvas' : 'no canvas'} / ${frame.drawn ? 'context' : 'no context'}`);
+ 
+-      // The world map, offline: PLAY → the plates the boot already pulled.
++      // The procedural world map must draw from bundled code with the origin unreachable.
+       const wm = await page
+         .evaluate(async () => {
+           const t = (window as unknown as { __rockhop?: { app?: { goto(s: string): void; screen(): string; frame(): void } } }).__rockhop;
+@@ -341,17 +341,16 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
+           await new Promise((r) => setTimeout(r, 1500));
+           return {
+             screen: t.app.screen(),
+-            world: !!document.querySelector('.wm-world.loaded'),
+-            regions: document.querySelectorAll('.wm-region.loaded').length,
+-            regionsDrawn: document.querySelectorAll('.wm-region').length,
++            world: !!document.querySelector('.wm3-view:not(.no-webgl) canvas.wm3-canvas[width][height]'),
+             markers: document.querySelectorAll('.wm-marker').length,
++            route: document.querySelectorAll('.wm-marker[data-track]:not(.proving)').length,
++            plates: document.querySelectorAll('.wm-world, .wm-region').length,
+           };
+         })
+         .catch(() => null);
+-      // Round 3 put both world-map tiers in the first boot, so offline the plates are not a "degrades
+-      // gracefully" case any more: they are there, or the offline set is incomplete.
+-      // ROCKHOP's map is four zones (90b641a2): every region plate the map draws must decode offline, and there are >= 4.
+-      check('offline.worldMapDraws', !!wm && wm.screen === 'tracks' && wm.markers > 0 && wm.world && wm.regions >= 4 && wm.regions === wm.regionsDrawn, wm ? `${wm.screen}: world ${wm.world ? 'loaded' : 'MISSING'}, ${wm.regions}/${wm.regionsDrawn} region plates, ${wm.markers} markers` : 'no world map', 'need the world plate + every drawn region plate (>= 4 zones) loaded, with the origin unreachable');
++      check('offline.worldMapDraws', !!wm && wm.screen === 'tracks' && wm.world && wm.route === 12 && wm.markers >= 12 && wm.plates === 0,
++        wm ? `${wm.screen}: 3D ${wm.world ? 'drawn' : 'MISSING'}, ${wm.route} route / ${wm.markers} places, ${wm.plates} image plates` : 'no world map',
++        'need the procedural 3D map and 12 selectable route places with no image plates, with the origin unreachable');
+ 
+       // The review inbox, offline: the note queues in localStorage and says so.
+       const inbox = await page
+diff --git a/src/ui/worldMap.test.ts b/src/ui/worldMap.test.ts
+index 0fa24c6f..680754a7 100644
+--- a/src/ui/worldMap.test.ts
++++ b/src/ui/worldMap.test.ts
+@@ -4,7 +4,7 @@ import { ROCKHOP_ALL } from '../tracks';
+ import { isPlaygroundTrack, shipTracks } from './progress';
+ import { allMarkers, ANCHOR, buildRegions, CONTINENT, fitZoom, fogPatches, frameFor, locate, MAP, markersInView, nextGate, REGIONS, regionDots, ROAD, routeMarkers, routePath, routeSplit, smoothPath, tierBlend, ZOOM } from './worldMap';
+ 
+-/** The shipped set (store release Phase 3): twelve courses in four zones and the four FREE RIDE playgrounds. */
++/** The shipped set: twelve courses, three in each of four zones. */
+ const ALL: TrackDef[] = [...ROCKHOP_ALL];
+ const COAST_DONE: Record<string, Medal> = { 'c1-low-tide': 'gold', 'c2-crane-hop': 'silver', 'c3-hull-breach': 'bronze' };
+ const none = (): Medal | null => null;
+@@ -26,11 +26,11 @@ describe('world map — the ROCKHOP zones (data)', () => {
+     expect(CONTINENT.y + CONTINENT.h).toBeLessThanOrEqual(MAP.h);
+   });
+ 
+-  it('every shipped course and playground has an authored anchor inside its zone crop; no Labs, no retired tracks', () => {
++  it('every shipped course has an authored anchor inside its zone crop; no Labs or Free Ride tracks', () => {
+     const markers = allMarkers(buildRegions(ALL, none));
+-    expect(markers).toHaveLength(16);
++    expect(markers).toHaveLength(12);
+     expect(markers.filter((m) => !m.proving)).toHaveLength(12);
+-    expect(markers.filter((m) => isPlaygroundTrack(m.track))).toHaveLength(4);
++    expect(markers.filter((m) => isPlaygroundTrack(m.track))).toHaveLength(0);
+     expect(markers.some((m) => m.code === 'LAB')).toBe(false);
+     for (const m of markers) {
+       expect(ANCHOR[m.track.id], m.track.id).toBeDefined();
+@@ -59,9 +59,7 @@ describe('world map — the ROCKHOP zones (data)', () => {
+     expect(by['A1']!.rule).toBe('Medal every Coast track');
+     expect(by['D1']!.rule).toBe('Medal every Alpine track');
+     expect(regions.map((r) => `${r.id}:${r.done}/${r.total}${r.locked ? ' locked' : ''}`)).toEqual(['coast:0/3', 'alpine:0/3 locked', 'quarry:0/3 locked', 'snowline:0/3 locked']);
+-    // The coast playground is open with its zone; the others wait with theirs.
+-    const free = allMarkers(regions).filter((m) => m.proving);
+-    expect(free.map((m) => `${m.region}:${m.locked ? 'locked' : 'open'}`)).toEqual(['coast:open', 'alpine:locked', 'quarry:locked', 'snowline:locked']);
++    expect(allMarkers(regions).filter((m) => m.proving)).toHaveLength(0);
+     const gate = nextGate(regions)!;
+     expect(gate.track.id).toBe('a1-sawdust');
+     expect(gate.stage).toBe('alpine');
+@@ -158,7 +156,7 @@ describe('world map — the ROCKHOP zones (data)', () => {
+     expect(locate(regions, 'nope')).toBeNull();
+   });
+ 
+-  it('shipTracks is the campaign in zone order: C1..S3, no playgrounds', () => {
++  it('shipTracks is the complete shipped catalog in zone order: C1..S3', () => {
+     expect(shipTracks(ALL).map((t) => (t.meta as { code?: string }).code)).toEqual(['C1', 'C2', 'C3', 'A1', 'A2', 'A3', 'D1', 'D2', 'D3', 'S1', 'S2', 'S3']);
+   });
+ });
+diff --git a/src/ui/worldMap.ts b/src/ui/worldMap.ts
+index 291829bb..73136d9d 100644
+--- a/src/ui/worldMap.ts
++++ b/src/ui/worldMap.ts
+@@ -1,9 +1,7 @@
+ /**
+- * World map — the painted continent as the level select (project/archive/WORLD_MAP.md, ask 54). Pure data and
+- * layout for `WorldMapScreen` (worldMapScreen.ts), unit-tested in worldMap.test.ts: the map's coordinate
+- * space (the world plate's pixel grid), one anchor per track on the terrain, the four ROCKHOP zones in campaign
+- * order with their plate crops and fog, the route through every campaign track, the zone gate on the road into
+- * the next locked zone, and the camera's zoom tiers. No DOM here.
++ * World-map route and progression data. The current `WorldMapScreen` renders these anchors, road legs and four
++ * ROCKHOP zones as a rotatable procedural 3D diorama (`worldMap3d.ts`). The older plate crops and 2D camera
++ * helpers remain for compatibility with archived evidence and the offline asset manifest until that pack is retired.
+  *
+  * Coordinates: "map units" are pixels of the world plate (`MAP.w × MAP.h`); the screen draws the scene at
+  * `k` screen px per map unit (`k` is the zoom). Every anchor was read off the W-worldmap mockup
+@@ -66,7 +64,7 @@ export const REGIONS: readonly RegionDef[] = [
+   {
+     id: 'alpine',
+     label: 'Alpine Forest Trail',
+-    name: { x: 790, y: 368 }, // over the forest ridge; the forest FREE RIDE flag hangs its plate left (PLATE_LEFT)
++    name: { x: 790, y: 368 },
+     crop: { x: 430, y: 300, w: 720, h: 480 },
+     frame: { x: 380, y: 300, w: 1000, h: 480 },
+     fog: [{ x: 800, y: 560, rx: 330, ry: 170 }, { x: 640, y: 440, rx: 200, ry: 120 }],
+@@ -94,7 +92,7 @@ export const REGIONS: readonly RegionDef[] = [
+ 
+ /**
+  * Where each course stands on the terrain (map units): C1–C3 along the harbour trail, A1–A3 through the forest, D1–D3
+- * up the quarry benches, S1–S3 under the lifts; the four FREE RIDE flags at each zone's edge (W-worldmap).
++ * up the quarry benches, S1–S3 under the lifts.
+  */
+ export const ANCHOR: Readonly<Record<string, { x: number; y: number }>> = {
+   'c1-low-tide': { x: 120, y: 668 },
+@@ -109,15 +107,8 @@ export const ANCHOR: Readonly<Record<string, { x: number; y: number }>> = {
+   's1-lift-line': { x: 1310, y: 262 },
+   's2-cornice': { x: 1380, y: 290 },
+   's3-whiteout': { x: 1452, y: 318 },
+-  'p-coast': { x: 68, y: 614 },
+-  'p-alpine': { x: 562, y: 406 },
+-  'p-quarry': { x: 1490, y: 378 },
+-  'p-snowline': { x: 1255, y: 205 },
+ };
+ 
+-/** Markers that hang their name plate to the LEFT (the forest flag's plate would otherwise run into the zone's name). */
+-export const PLATE_LEFT: ReadonlySet<string> = new Set(['p-alpine']);
+-
+ /**
+  * The trail between two markers (map units, in travel order) so the route follows the painted track rather than
+  * cutting across water or rock. Keyed `<from id>>` + `<to id>`; a leg with no entry is a straight run.
+@@ -234,16 +225,14 @@ export function routeOrder(campaign: readonly TrackDef[]): TrackDef[] {
+ }
+ 
+ /**
+- * The five regions with their markers. `tracks` is the full list (lab, playgrounds, campaign, `-test` strips in
+- * dev). Markers inside a region: the campaign in route order, then the Lab, then the playgrounds.
++ * The four regions with campaign markers only. `tracks` may contain dev fixtures, Labs or historical playgrounds;
++ * level selection intentionally displays only authored campaign tracks.
+  */
+ export function buildRegions(tracks: readonly TrackDef[], medalOf: MedalOf, dev = false): Region[] {
+   const ship = shipTracks(tracks, dev);
+   const campaign = shipTracks(tracks);
+   const next = nextTrack(campaign, medalOf, dev);
+   const route = routeOrder(ship);
+-  const proving = tracks.filter((t) => isLabTrack(t) || isPlaygroundTrack(t));
+-  proving.sort((a, b) => Number(isPlaygroundTrack(a)) - Number(isPlaygroundTrack(b)) || a.id.localeCompare(b.id));
+   let unknown = 0;
+   const mk = (t: TrackDef): Marker => {
+     const isProving = isLabTrack(t) || isPlaygroundTrack(t);
+@@ -264,7 +253,7 @@ export function buildRegions(tracks: readonly TrackDef[], medalOf: MedalOf, dev
+     };
+   };
+   return REGIONS.map((def, index) => {
+-    const markers = [...route.filter((t) => regionOf(t) === def.id), ...proving.filter((t) => regionOf(t) === def.id)].map(mk);
++    const markers = route.filter((t) => regionOf(t) === def.id).map(mk);
+     const camp = markers.filter((m) => !m.proving);
+     return {
+       ...def,
+diff --git a/src/ui/worldMapScreen.test.ts b/src/ui/worldMapScreen.test.ts
+index 27d62b5b..5949ecad 100644
+--- a/src/ui/worldMapScreen.test.ts
++++ b/src/ui/worldMapScreen.test.ts
+@@ -9,219 +9,63 @@ import type { UiSfx } from './sfx';
+ import { WorldMapScreen } from './worldMapScreen';
+ 
+ const ALL: TrackDef[] = [...ROCKHOP_ALL];
+-/** COAST medalled: ALPINE open, the quarry gate next. */
+-const SEEDED: Record<string, Medal> = { 'c1-low-tide': 'gold', 'c2-crane-hop': 'silver', 'c3-hull-breach': 'bronze' };
++const DONE: Record<string, Medal> = { 'c1-low-tide': 'gold', 'c2-crane-hop': 'silver', 'c3-hull-breach': 'bronze' };
++beforeEach(() => { vi.useFakeTimers(); vi.spyOn(HTMLCanvasElement.prototype, 'getContext').mockReturnValue(null); });
++afterEach(() => { vi.useRealTimers(); vi.restoreAllMocks(); document.body.innerHTML = ''; document.head.innerHTML = ''; });
+ 
+-beforeEach(() => {
+-  vi.useFakeTimers();
+-});
+-afterEach(() => {
+-  vi.useRealTimers();
+-  document.body.innerHTML = '';
+-  document.head.innerHTML = '';
+-});
+-
+-function fixture(o: { seeded?: boolean; lastPlayed?: string | null; recording?: boolean; dev?: boolean } = {}) {
++function fixture(o: { seeded?: boolean; lastPlayed?: string; recording?: boolean; dev?: boolean } = {}) {
+   const bestOf = (id: string): BestEntry | null => {
+-    const medal = o.seeded ? SEEDED[id] : undefined;
+-    if (!medal) return null;
+-    return { time: 41.2, faults: 0, medal, bike: id === 'c3-hull-breach' ? 'pro' : 'rookie', ...(o.recording ? { recording: '{}' } : {}) } as unknown as BestEntry;
++    const medal = o.seeded ? DONE[id] : undefined;
++    return medal ? { time: 41.2, faults: 0, medal, bike: 'rookie', ...(o.recording ? { recording: '{}' } : {}) } as BestEntry : null;
+   };
+   const state = { dev: !!o.dev, lastPlayed: o.lastPlayed ?? null, ghost: true, bikeClass: 'rookie' } as FrontState;
+   const cb = { play: vi.fn(), goto: vi.fn(), watchPb: vi.fn() } as unknown as FrontCallbacks;
+   const sfx = { tick: vi.fn(), confirm: vi.fn(), back: vi.fn(), launch: vi.fn() } as unknown as UiSfx;
+-  const probed: string[] = [];
+-  const art = { whenReady: (f: () => void) => f(), probe: (src: string) => { probed.push(src); return Promise.resolve(false); }, medal: () => null, applyBackground: () => undefined } as unknown as ArtManifest;
+-  const screen = new WorldMapScreen(document.body, sfx, art, cb, bestOf, () => state, () => []);
+-  screen.build(ALL);
+-  screen.show();
+-  const on = (): string | undefined => document.querySelector<HTMLElement>('.wm-marker.on')?.dataset['track'];
+-  const scene = document.querySelector<HTMLElement>('.wm-scene')!;
+-  return { screen, cb, sfx, on, scene, probed, state };
++  const screen = new WorldMapScreen(document.body, sfx, {} as ArtManifest, cb, bestOf, () => state, () => []);
++  screen.build(ALL); screen.show();
++  return { screen, cb, sfx, on: () => screen.current()?.marker.track.id };
+ }
+ 
+-describe('world map screen — the painted continent as the level select', () => {
+-  it('builds one scene (a transform root) with the world plate, four zone plates, four names, the road, the fog, a marker per shipped track, a gate and the chrome; CSS injected once', () => {
+-    const { scene, probed } = fixture();
+-    expect(document.querySelectorAll('.wm-scene')).toHaveLength(1);
+-    expect(scene.style.transform).toMatch(/translate\(.*\) scale\(/);
+-    expect(document.querySelectorAll('.wm-world')).toHaveLength(1);
+-    expect(document.querySelectorAll('.wm-region')).toHaveLength(4);
+-    expect([...document.querySelectorAll<HTMLElement>('.wm-name b')].map((n) => n.textContent)).toEqual(['Coastal Scrapyard', 'Alpine Forest Trail', 'Desert Quarry', 'Snowline']);
+-    expect(document.querySelectorAll('.wm-route path.dim')).toHaveLength(1);
+-    expect(document.querySelectorAll('.wm-fog ellipse').length).toBeGreaterThan(0);
+-    const markers = [...document.querySelectorAll<HTMLElement>('.wm-marker')];
+-    expect(markers.length).toBe(16);
+-    expect(markers.every((m) => !!m.dataset['track'] && m.querySelector('button.wm-hit') !== null)).toBe(true);
+-    expect(document.querySelectorAll('.wm-gate')).toHaveLength(1);
+-    expect(document.querySelectorAll('style#worldmap-css')).toHaveLength(1);
+-    expect(document.querySelector('.tracks-screen .backbtn')?.textContent).toContain('Menu');
+-    expect(document.querySelector('.wm-progress')?.textContent).toContain('0 / 12 cleared');
+-    expect(document.querySelector('.wm-brand svg')?.getAttribute('aria-label')).toBe('ROCKHOP');
+-    expect(document.querySelectorAll('.wm-ride')).toHaveLength(1);
+-    // The world plate is probed (lazy art, never the boot set); the focused region's plate too.
+-    expect(probed.some((p) => /art\/worldmap\/world-\d+\.webp/.test(p))).toBe(true);
+-    expect(probed.some((p) => /art\/worldmap\/region-coast-\d+\.webp/.test(p))).toBe(true);
+-    // Nothing scrolls: the viewport is touch-action none, the scene a transform.
+-    expect(document.querySelector<HTMLElement>('.wm-view')).not.toBeNull();
+-  });
+-
+-  it('fresh profile opens on C1 (up next), RIDE enabled, the gate into ALPINE; coast medalled opens on A1; last played wins when its zone is open', () => {
+-    const a = fixture();
+-    expect(a.on()).toBe('c1-low-tide');
+-    expect(a.scene.dataset['track']).toBe('c1-low-tide');
+-    expect(a.scene.dataset['region']).toBe('coast');
+-    expect(document.querySelector<HTMLButtonElement>('.wm-ride')!.disabled).toBe(false);
+-    expect(document.querySelector('.wm-ride')!.textContent).toContain('Low Tide');
+-    // The rule stands once per locked zone, on its sign under the name; the gate zone's sign names the next unlock.
+-    const sign = (z: string): string => document.querySelector(`.wm-name[data-region="${z}"] .wm-sign`)?.textContent ?? '';
+-    expect(document.querySelectorAll('.wm-sign')).toHaveLength(3);
+-    expect(sign('alpine')).toBe('Medal every Coast trackNext unlock · Sawdust');
+-    expect(sign('quarry')).toBe('Medal every Alpine track');
+-    expect(document.querySelector('.wm-gate .wm-hit')!.getAttribute('aria-label')).toBe('Alpine Forest Trail locked: Medal every Coast track. Next unlock: Sawdust');
+-    document.body.innerHTML = '';
+-    const b = fixture({ seeded: true });
+-    expect(b.on()).toBe('a1-sawdust');
+-    expect(document.querySelector('.wm-progress')!.textContent).toContain('3 / 12 cleared');
+-    expect(document.querySelectorAll('.wm-sign')).toHaveLength(2);
+-    expect(sign('alpine')).toBe('');
+-    expect(sign('quarry')).toBe('Medal every Alpine trackNext unlock · Dust Devil');
+-    document.body.innerHTML = '';
+-    const c = fixture({ seeded: true, lastPlayed: 'c2-crane-hop' });
+-    expect(c.on()).toBe('c2-crane-hop');
+-    document.body.innerHTML = '';
+-    const d = fixture({ lastPlayed: 's1-lift-line' }); // locked: ignored
+-    expect(d.on()).toBe('c1-low-tide');
+-  });
+-
+-  it('markers carry their state: medal class, UP NEXT tag, the padlock on locked ones, PRO on the Pro best, FREE RIDE flags', () => {
+-    fixture({ seeded: true });
+-    const m = (id: string): HTMLElement => document.querySelector<HTMLElement>(`.wm-marker[data-track="${id}"]`)!;
+-    expect(m('c1-low-tide').classList.contains('gold')).toBe(true);
+-    expect(m('c2-crane-hop').classList.contains('silver')).toBe(true);
+-    expect(m('a1-sawdust').classList.contains('next')).toBe(true);
+-    expect(m('a1-sawdust').querySelector('.tag.next')?.textContent).toBe('Up next');
+-    expect(m('d1-dust-devil').classList.contains('locked')).toBe(true);
+-    // A padlock on the marker, the rule in its label (and once on the zone's sign, never per marker).
+-    expect(m('d1-dust-devil').querySelector('.wm-lock')).not.toBeNull();
+-    expect(m('d1-dust-devil').querySelector('.wm-rule')).toBeNull();
+-    expect(m('d1-dust-devil').querySelector('.wm-hit')?.getAttribute('aria-label')).toBe('D1 Dust Devil — locked: Medal every Alpine track');
+-    expect(m('c3-hull-breach').querySelector('.tag.pro')?.textContent).toBe('Pro');
+-    expect(m('p-coast').classList.contains('proving')).toBe(true);
+-    expect(m('p-coast').querySelector('.wm-plate b')?.textContent).toBe('Free ride');
+-    expect(document.querySelector('.wm-marker[data-track^="lab-"]')).toBeNull();
+-  });
+-
+-  it('nav: ← → step the markers along the trail (C1 → C2 → C3 → A1 …), the card follows; confirm launches after 180 ms', () => {
+-    const { screen, cb, sfx, on } = fixture();
+-    screen.nav(1, 0);
+-    expect(on()).toBe('c2-crane-hop');
+-    screen.nav(1, 0);
+-    screen.nav(1, 0);
+-    expect(on()).toBe('a1-sawdust');
+-    expect(document.querySelector('.wm-card .name')?.textContent).toBe('Sawdust');
+-    expect(sfx.tick).toHaveBeenCalled();
+-    screen.nav(-1, 0);
+-    screen.nav(-1, 0);
+-    screen.nav(-1, 0);
++describe('3D world map screen', () => {
++  it('builds a canvas, four biomes and twelve circular campaign targets without painted plates', () => {
++    const { screen, on } = fixture();
++    expect(document.querySelectorAll('.wm3-canvas')).toHaveLength(1);
++    expect(document.querySelectorAll('.wm3-region')).toHaveLength(4);
++    expect(document.querySelectorAll('.wm-marker')).toHaveLength(12);
++    expect(document.querySelector('.wm-marker[data-track^="p-"]')).toBeNull();
++    expect(document.querySelectorAll('.wm-world, .wm-region, .wm-diamond')).toHaveLength(0);
++    expect(document.querySelector('.wm3-progress')?.textContent).toContain('0 / 12');
+     expect(on()).toBe('c1-low-tide');
+-    screen.nav(-1, 0);
+-    expect(on()).toBe('p-snowline'); // wraps to the last FREE RIDE flag
+-    screen.nav(1, 0);
+-    expect(on()).toBe('c1-low-tide');
+-    screen.confirm();
+-    expect(cb.play).not.toHaveBeenCalled();
+-    vi.advanceTimersByTime(200);
+-    expect(cb.play).toHaveBeenCalledWith('c1-low-tide');
+-    expect(sfx.launch).toHaveBeenCalled();
+-    vi.advanceTimersByTime(300);
+-    expect(screen.visible).toBe(false);
++    expect(screen.camera().track).toBe('c1-low-tide');
++    expect(screen.camera().region).toBe('coast');
++    expect(document.querySelector<HTMLButtonElement>('.wm3-ride')?.disabled).toBe(false);
++    expect(document.querySelector('.wm3-brand svg')?.getAttribute('aria-label')).toBe('ROCKHOP');
+   });
+ 
+-  it('a locked marker never launches: confirm shakes, the card, the plate and the pill state the rule', () => {
+-    const { screen, cb, sfx, on } = fixture({ seeded: true });
+-    for (let i = 0; i < 3; i++) screen.nav(1, 0); // A1 → A2 A3 D1
++  it('keeps route order, locks, selection, launch, ghost and back callbacks', () => {
++    const { screen, cb, on } = fixture({ seeded: true, recording: true });
++    expect(on()).toBe('a1-sawdust');
++    screen.nav(1, 0); screen.nav(1, 0); screen.nav(1, 0);
+     expect(on()).toBe('d1-dust-devil');
+-    expect(document.querySelector('.wm-card .rule')?.textContent).toBe('Locked · Medal every Alpine track');
+-    expect(document.querySelector<HTMLButtonElement>('.wm-ride')!.disabled).toBe(true);
+-    expect(document.querySelector('.wm-ride')!.textContent).toContain('Medal every Alpine track');
+-    screen.confirm();
+-    vi.advanceTimersByTime(500);
+-    expect(cb.play).not.toHaveBeenCalled();
+-    expect(sfx.back).toHaveBeenCalled();
+-    expect(screen.visible).toBe(true);
+-  });
+-
+-  it('back → menu; alt (GHOST) only with a recording, never on a locked track; the GHOST pill hides without one', () => {
+-    const a = fixture({ seeded: true });
+-    expect(document.querySelector<HTMLButtonElement>('.wm-ghost')!.hidden).toBe(true);
+-    a.screen.alt();
+-    expect(a.cb.watchPb).not.toHaveBeenCalled();
+-    a.screen.back();
+-    expect(a.cb.goto).toHaveBeenCalledWith('menu');
+-    document.body.innerHTML = '';
+-    const b = fixture({ seeded: true, lastPlayed: 'c1-low-tide', recording: true });
+-    expect(b.on()).toBe('c1-low-tide');
+-    expect(document.querySelector<HTMLButtonElement>('.wm-ghost')!.hidden).toBe(false);
+-    b.screen.alt();
+-    expect(b.cb.watchPb).toHaveBeenCalledWith('c1-low-tide');
+-    // ↓ reaches RIDE, → the GHOST pill, confirm there = ghost.
+-    b.screen.nav(0, 1);
+-    expect(document.querySelector('.wm-ride')!.classList.contains('on')).toBe(true);
+-    b.screen.nav(1, 0);
+-    expect(document.querySelector('.wm-ghost')!.classList.contains('on')).toBe(true);
+-    b.screen.confirm();
+-    expect(b.cb.watchPb).toHaveBeenCalledTimes(2);
+-    b.screen.nav(0, -1);
+-    expect(document.querySelector('.wm-ride')!.classList.contains('on')).toBe(false);
+-  });
+-
+-  it('fog lifts: a rebuild after ALPINE is medalled animates the quarry fog away instead of dropping it', () => {
+-    const { screen } = fixture({ seeded: true });
+-    const before = document.querySelectorAll('.wm-fog ellipse[data-key="quarry"]').length;
+-    expect(before).toBeGreaterThan(0);
+-    expect(document.querySelectorAll('.wm-fog ellipse.open')).toHaveLength(0);
+-    // Every Alpine track medalled now: the quarry opens.
+-    const medal = (id: string): Medal | null => (SEEDED[id] ?? (id.startsWith('a') ? 'silver' : null)) as Medal | null;
+-    (screen as unknown as { bestOf: (id: string) => BestEntry | null }).bestOf = (id) => (medal(id) ? ({ time: 50, faults: 0, medal: medal(id), bike: 'rookie' } as unknown as BestEntry) : null);
+-    screen.build(ALL);
+-    expect(document.querySelectorAll('.wm-fog ellipse.open[data-key="quarry"]')).toHaveLength(before);
+-    expect(document.querySelectorAll('.wm-fog ellipse:not(.open)[data-key="quarry"]')).toHaveLength(0);
+-    // A third build: the lifted fog is gone for good.
+-    screen.build(ALL);
+-    expect(document.querySelectorAll('.wm-fog ellipse[data-key="quarry"]')).toHaveLength(0);
++    expect(document.querySelector<HTMLButtonElement>('.wm3-ride')?.disabled).toBe(true);
++    expect(document.querySelector('.wm3-card .rule')?.textContent).toContain('Medal every Alpine track');
++    screen.confirm(); vi.advanceTimersByTime(500); expect(cb.play).not.toHaveBeenCalled();
++    screen.nav(-1, 0); screen.nav(-1, 0); screen.nav(-1, 0); screen.nav(-1, 0);
++    expect(on()).toBe('c3-hull-breach');
++    screen.alt(); expect(cb.watchPb).toHaveBeenCalledWith('c3-hull-breach');
++    screen.confirm(); vi.advanceTimersByTime(200); expect(cb.play).toHaveBeenCalledWith('c3-hull-breach');
++    vi.advanceTimersByTime(300); expect(screen.visible).toBe(false);
++    screen.back(); expect(cb.goto).toHaveBeenCalledWith('menu');
+   });
+ 
+-  it('the card stands above a marker in the lower part of the view (`.up`), beside one higher up', () => {
+-    const { screen } = fixture({ seeded: true });
+-    const view = document.querySelector<HTMLElement>('.wm-view')!;
+-    Object.defineProperty(view, 'clientWidth', { value: 932, configurable: true });
+-    Object.defineProperty(view, 'clientHeight', { value: 430, configurable: true });
+-    const cam = screen as unknown as { cam: { x: number; y: number; k: number }; placeCard(): void };
+-    const m1 = document.querySelector<HTMLElement>('.wm-marker.on')!; // A1
+-    const my = parseFloat(m1.style.top);
+-    cam.cam = { x: 0, y: 40 - my * 0.8, k: 0.8 }; // M1 at 40 px from the top
+-    cam.placeCard();
+-    expect(document.querySelector('.wm-card')!.classList.contains('up')).toBe(false);
+-    cam.cam = { x: 0, y: 400 - my * 0.8, k: 0.8 }; // M1 at 400 px: the lowest 20 %
+-    cam.placeCard();
+-    expect(document.querySelector('.wm-card')!.classList.contains('up')).toBe(true);
+-  });
+-
+-  it('camera(): opens at the region zoom on the focused track, reports its bounds and the focused region', () => {
+-    const { screen } = fixture({ seeded: true });
+-    const c = screen.camera();
+-    expect(c.zoom).toBeCloseTo(0.8, 3); // jsdom has no box: the frame fly never runs, the zoom stays at the region default
+-    expect(c.zoomMax).toBeGreaterThan(c.zoom);
+-    expect(c.track).toBe('a1-sawdust');
+-    expect(c.region).toBe('alpine');
+-    expect(c.far).toBe(false);
+-    expect(screen.currentRegion()).toBe('alpine');
+-  });
+-
+-  it('dev: every zone open, no gate', () => {
+-    fixture({ dev: true });
+-    expect(document.querySelectorAll('.wm-gate')).toHaveLength(0);
+-    expect(document.querySelectorAll('.wm-marker.locked')).toHaveLength(0);
++  it('focuses last played if open and exposes a bounded orbit camera', () => {
++    const { screen, on } = fixture({ seeded: true, lastPlayed: 'c2-crane-hop' });
++    expect(on()).toBe('c2-crane-hop');
++    expect(screen.camera().yaw).toBe(0);
++    expect(screen.camera().pitch).toBeGreaterThan(0);
++    expect(screen.camera().zoom).toBeGreaterThan(screen.camera().zoomMin);
++    expect(screen.camera().zoom).toBeLessThan(screen.camera().zoomMax);
++    expect(document.querySelector<HTMLButtonElement>('.wm-marker[data-track="d1-dust-devil"]')?.getAttribute('aria-label'))
++      .toContain('locked: Medal every Alpine track');
+   });
+ });
+diff --git a/src/ui/worldMapScreen.ts b/src/ui/worldMapScreen.ts
+index cbd9eedf..f8520e44 100644
+--- a/src/ui/worldMapScreen.ts
++++ b/src/ui/worldMapScreen.ts
+@@ -1,14 +1,5 @@
+-/**
+- * World map — the painted continent as the level select (project/archive/WORLD_MAP.md, ask 54; the A "Rebirth" mockup,
+- * assets/design/worldmap/A-painted-{world,region}.png). One `translate / scale` scene root under a `touch-action:
+- * none` viewport: the world plate, five region plates cross-fading in above the tier zoom, the road (SVG), fog of
+- * war over locked land, region names, the markers (a diamond on the terrain with a leader-line name plate, the
+- * bike + beacon + card on the current track) and the tier gate — all in map units (worldMap.ts), counter-scaled
+- * with `--inv` so a diamond is a true 44 px target at every zoom. Screen-space chrome: badge + build stamp, ‹ MENU,
+- * the progress chip, RIDE + GHOST. Camera: drag with inertia, pinch about the midpoint, wheel + Safari gesture
+- * about the pointer, tap vs drag by travel, a 380 ms eased fly-to. Same callbacks / state reads as the screen it
+- * replaces, so play, lock rules and best times are unchanged.
+- */
++/** Rotatable 3D level select. WebGL draws the terrain and circular destinations; HTML supplies 48 px accessible targets. */
++import * as THREE from 'three';
+ import type { BikeClass, Medal, TrackDef } from '../core/types';
+ import type { ArtManifest } from './art';
+ import type { BestEntry, BoardEntry } from './best';
+@@ -16,1021 +7,209 @@ import { formatTime } from './format';
+ import { BUILD_STAMP_SHORT, escapeHtml, Screen, type FrontCallbacks, type FrontState } from './front';
+ import { isLiveTarget } from './live';
+ import { DEV_SURFACES } from '../core/release';
+-import { MEDAL_NAME, medalSvg, wordmarkSvg, zoneTitle } from './brand';
++import { MEDAL_NAME, medalSvg, wordmarkSvg } from './brand';
+ import { isLabTrack, medalTotals, nextTrack, shipTracks, stageLabel, type MedalOf } from './progress';
+ import type { UiSfx } from './sfx';
+-import { wantsHiRes } from '../boot/tier';
+-import { allMarkers, buildRegions, fitZoom, FLY_MS, fogPatches, frameFor, locate, MAP, nextGate, PLATE_LEFT, regionPlateSrc, routePath, TAP_SLOP, tierBlend, worldPlateSrc, ZOOM, type FogPatch, type Gate, type Marker, type Region, type RegionId } from './worldMap';
++import { allMarkers, buildRegions, locate, REGIONS, type Marker, type Region, type RegionId } from './worldMap';
++import { mapPoint, WorldMapDiorama } from './worldMap3d';
+ import { injectWorldMapStyles } from './worldMapStyles';
+ 
+-interface Cam {
+-  x: number;
+-  y: number;
+-  k: number;
+-}
+-
+-interface MarkerRef {
+-  marker: Marker;
+-  el: HTMLDivElement;
+-  hit: HTMLButtonElement;
+-}
+-
+-function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, html?: string): HTMLElementTagNameMap[K] {
+-  const e = document.createElement(tag);
+-  if (cls) e.className = cls;
+-  if (html !== undefined) e.innerHTML = html;
+-  return e;
+-}
+-
+-const SVG_NS = 'http://www.w3.org/2000/svg';
+-/** The rider marker: a small motorbike glyph (trusted markup). */
+-const BIKE_SVG = `<svg viewBox="0 0 30 20" width="30" height="20" aria-hidden="true"><circle cx="7" cy="14" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="23" cy="14" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 14 L12 7 L19 7 L23 14 M12 7 L10 3 L14 3 M15 7 L13 14" fill="none" stroke="#ffd25a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
++interface MarkerRef { marker: Marker; el: HTMLButtonElement }
++const make = <K extends keyof HTMLElementTagNameMap>(tag: K, cls: string, html = ''): HTMLElementTagNameMap[K] => {
++  const node = document.createElement(tag); node.className = cls; node.innerHTML = html; return node;
++};
+ 
+ export class WorldMapScreen extends Screen {
+-  private readonly view: HTMLDivElement;
+-  private readonly scene: HTMLDivElement;
+-  private readonly world: HTMLDivElement;
+-  private readonly tier: HTMLDivElement;
+-  private readonly route: SVGSVGElement;
+-  private readonly fog: SVGSVGElement;
+-  private readonly names: HTMLDivElement;
+-  private readonly markerLayer: HTMLDivElement;
+-  private readonly card: HTMLDivElement;
+-  private readonly beam: HTMLDivElement;
+-  private readonly progress: HTMLDivElement;
+-  private readonly ride: HTMLButtonElement;
+-  private readonly ghost: HTMLButtonElement;
++  private readonly view = make('div', 'wm3-view');
++  private readonly canvas = make('canvas', 'wm3-canvas');
++  private readonly targets = make('div', 'wm3-targets');
++  private readonly names = make('div', 'wm3-names');
++  private readonly card = make('div', 'wm3-card');
++  private readonly progress = make('div', 'wm3-progress');
++  private readonly ride = make('button', 'wm3-ride');
++  private readonly ghost = make('button', 'wm3-ghost', '▶ WATCH PB');
+   private regions: Region[] = [];
+   private refs: MarkerRef[] = [];
+-  private gateEl: HTMLDivElement | null = null;
+-  private gate: Gate | null = null;
+-  /** Index into `refs` (the focused marker). */
++  private diorama: WorldMapDiorama | null = null;
+   private focus = 0;
+-  /** −1 = the marker; 0 = RIDE; 1 = GHOST (keyboard / pad focus on the pills). */
+   private action = -1;
+   private launching = false;
+-  private plates = new Set<RegionId>();
+-  /** The fog as last built: a patch that is gone on the next build (its tier opened) lifts instead of vanishing. */
+-  private fog0: FogPatch[] = [];
+-  // -- camera --
+-  private cam: Cam = { x: 0, y: 0, k: ZOOM.region };
+-  private kMin = 0.3;
+-  private fly = 0;
+-  private inertia = 0;
+-  private readonly pointers = new Map<number, { x: number; y: number }>();
++  private yaw = 0;
++  private polar = 0.68;
++  private distance = 15;
++  private target = new THREE.Vector3(-4.5, 0, 1.2);
++  private frame = 0;
++  private dragged = false;
++  private travel = 0;
++  private pointers = new Map<number, { x: number; y: number }>();
+   private pinch0 = 0;
+-  private pinchK0 = 1;
+-  private vel = { x: 0, y: 0 };
+-  private lastMoveAt = 0;
+-  private dragPx = 0;
+-  private dragging = false;
+-  private far = false;
+-  /** The map point under the viewport's focus (the last fly's target): a resize / re-show re-centres on it. */
+-  private anchor: { x: number; y: number } | null = null;
+-  private userMoved = false;
+-  private settleTimer = 0;
++  private pinchDistance = 15;
+ 
+-  constructor(
+-    parent: HTMLElement,
+-    private readonly sfx: UiSfx,
+-    private readonly art: ArtManifest,
+-    private readonly cb: FrontCallbacks,
+-    private readonly bestOf: (id: string) => BestEntry | null,
+-    private readonly state: () => FrontState,
+-    /** Local leaderboard: the class in effect's top 5 on the card. */
+-    private readonly boardOf?: (id: string, bike: BikeClass) => BoardEntry[],
+-  ) {
++  constructor(parent: HTMLElement, private readonly sfx: UiSfx, _art: ArtManifest, private readonly cb: FrontCallbacks,
++    private readonly bestOf: (id: string) => BestEntry | null, private readonly state: () => FrontState,
++    private readonly boardOf?: (id: string, bike: BikeClass) => BoardEntry[]) {
+     super(parent, 'tracks-screen worldmap-screen');
+     injectWorldMapStyles();
+-    this.view = el('div', 'wm-view');
+-    this.scene = el('div', 'wm-scene');
+-    this.world = el('div', 'wm-world');
+-    this.tier = el('div', 'wm-tier');
+-    this.route = document.createElementNS(SVG_NS, 'svg');
+-    this.route.setAttribute('class', 'wm-route');
+-    this.route.setAttribute('viewBox', `0 0 ${MAP.w} ${MAP.h}`);
+-    this.fog = document.createElementNS(SVG_NS, 'svg');
+-    this.fog.setAttribute('class', 'wm-fog');
+-    this.fog.setAttribute('viewBox', `0 0 ${MAP.w} ${MAP.h}`);
+-    this.names = el('div', 'wm-names');
+-    this.markerLayer = el('div', 'wm-markers');
+-    this.card = el('div', 'wm-card');
+-    this.beam = el('div', 'wm-beam', '<span class="wm-beacon"></span>');
+-    this.scene.append(this.world, this.tier, this.route, this.fog, this.names, this.beam, this.markerLayer);
+-    this.view.append(this.scene, el('div', 'wm-haze'), el('div', 'wm-clouds'));
+-    const brand = el('div', 'wm-brand', `<div class="plate"><b class="wordmark">${wordmarkSvg()}</b><span>World map</span></div>${DEV_SURFACES ? `<div class="stamp">${escapeHtml(BUILD_STAMP_SHORT)}</div>` : ''}`);
+-    this.progress = el('div', 'wm-progress');
+-    const actions = el('div', 'wm-actions');
+-    this.ride = el('button', 'wm-ride');
+-    this.ride.type = 'button';
+-    this.ghost = el('button', 'wm-ghost', '<span>▶</span> Ghost');
+-    this.ghost.type = 'button';
++    this.canvas.setAttribute('aria-hidden', 'true');
++    this.view.append(this.canvas, this.names, this.targets);
++    const brand = make('div', 'wm3-brand', `<b>${wordmarkSvg()}</b><span>WORLD MAP</span>${DEV_SURFACES ? `<small>${escapeHtml(BUILD_STAMP_SHORT)}</small>` : ''}`);
++    const actions = make('div', 'wm3-actions');
++    this.ride.type = this.ghost.type = 'button';
+     actions.append(this.ride, this.ghost);
+-    this.legend = el('div', 'legend');
+-    this.root.append(this.view, brand, this.progress, actions, this.legend, el('i', 'wm-safe'));
++    this.legend = make('div', 'legend');
++    this.root.append(this.view, brand, this.progress, this.card, actions, make('div', 'wm3-hint', 'Drag to rotate · Pinch to zoom'), this.legend);
+     this.addBackButton('Menu');
+-    this.bindCamera();
+-    this.view.addEventListener('pointermove', (e) => {
+-      if (e.pointerType === 'touch' || this.dragging || this.far) return;
+-      const b = (e.target as HTMLElement).closest<HTMLElement>('.wm-marker');
+-      if (b) this.focusMarker(Number(b.dataset['i']), true, false);
+-    });
+-    this.view.addEventListener('click', (e) => {
+-      if (this.dragPx > TAP_SLOP || this.launching) return; // a drag that ended on a button is not a tap
+-      const t = e.target as HTMLElement;
+-      const m = t.closest<HTMLElement>('.wm-marker');
+-      if (m && !this.far && !m.classList.contains('shaded')) {
+-        const i = Number(m.dataset['i']);
+-        const already = i === this.focus && this.action < 0;
+-        this.focusMarker(i, true, true);
+-        if (already || this.refs[i]?.marker.locked) this.confirm(); // the focused marker launches; a locked one shakes and states its rule
+-        return;
+-      }
+-      const g = t.closest<HTMLElement>('.wm-gate');
+-      if (g && !this.far && this.gate) {
+-        const at = locate(this.regions, this.gate.track.id);
+-        if (at) this.focusMarker(this.indexOf(at), true, true, ZOOM.region);
+-        return;
+-      }
+-      if (this.far) {
+-        // The whole continent: a tap on the land flies to the nearest marker at region zoom.
+-        const near = this.nearest(e.clientX, e.clientY);
+-        if (near >= 0) this.focusMarker(near, true, true, ZOOM.region);
+-      }
+-    });
+-    this.ride.addEventListener('click', () => {
+-      this.action = -1;
+-      this.confirm();
+-    });
++    this.bindControls();
++    this.ride.addEventListener('click', () => { this.action = 0; this.confirm(); });
+     this.ghost.addEventListener('click', () => this.alt());
+-    window.addEventListener('resize', () => {
+-      if (this.visible) this.layout();
+-    });
+-  }
+-
+-  // ------------------------------------------------------------------ camera
+-
+-  private bindCamera(): void {
+-    const v = this.view;
+-    const move = (e: PointerEvent): void => {
+-      const p = this.pointers.get(e.pointerId);
+-      if (!p) return;
+-      const dx = e.clientX - p.x;
+-      const dy = e.clientY - p.y;
+-      p.x = e.clientX;
+-      p.y = e.clientY;
+-      this.dragPx += Math.abs(dx) + Math.abs(dy);
+-      if (this.dragPx > TAP_SLOP && !this.dragging) {
+-        this.dragging = true;
+-        v.classList.add('grabbing');
+-      }
+-      if (this.pointers.size === 1) {
+-        const now = performance.now();
+-        const dt = Math.max(1, now - this.lastMoveAt);
+-        this.lastMoveAt = now;
+-        this.cam.x += dx;
+-        this.cam.y += dy;
+-        this.anchor = null;
+-        this.userMoved = true;
+-        this.vel = { x: 0.6 * this.vel.x + 0.4 * (dx / dt), y: 0.6 * this.vel.y + 0.4 * (dy / dt) };
+-      } else if (this.pointers.size === 2 && this.pinch0 > 0) {
+-        const [a, b] = [...this.pointers.values()];
+-        const span = Math.hypot(a!.x - b!.x, a!.y - b!.y);
+-        if (span > 0) {
+-          const r = v.getBoundingClientRect();
+-          // Pinch about the midpoint: the midpoint's drift pans, the span's ratio zooms.
+-          this.zoomAt(this.pinchK0 * (span / this.pinch0), (a!.x + b!.x) / 2 - r.left, (a!.y + b!.y) / 2 - r.top);
+-          if (this.pointers.size === 2) {
+-            this.cam.x += dx / 2;
+-            this.cam.y += dy / 2;
+-          }
+-        }
+-      }
+-      this.pushCam();
+-    };
+-    const release = (e: PointerEvent): void => {
+-      if (!this.pointers.delete(e.pointerId)) return;
+-      if (this.pointers.size === 1) {
+-        this.pinch0 = 0;
+-        this.vel = { x: 0, y: 0 };
+-      } else if (this.pointers.size === 0) {
+-        window.removeEventListener('pointermove', move);
+-        window.removeEventListener('pointerup', release);
+-        window.removeEventListener('pointercancel', release);
+-        v.classList.remove('grabbing');
+-        if (this.dragging && performance.now() - this.lastMoveAt < 80 && Math.hypot(this.vel.x, this.vel.y) > 0.05) this.startInertia();
+-        else this.settle();
+-        // The click that follows a drag is swallowed (`dragPx` is read there), then the slate is clean.
+-        setTimeout(() => {
+-          this.dragPx = 0;
+-          this.dragging = false;
+-        }, 0);
+-      }
+-    };
+-    v.addEventListener('pointerdown', (e) => {
+-      if (!this.visible || !isLiveTarget(this.root) || this.launching) return;
+-      if (e.pointerType === 'mouse' && e.button !== 0) return;
+-      this.stopFly();
+-      this.stopInertia();
+-      if (this.pointers.size === 0) {
+-        this.dragPx = 0;
+-        this.dragging = false;
+-        this.vel = { x: 0, y: 0 };
+-        window.addEventListener('pointermove', move);
+-        window.addEventListener('pointerup', release);
+-        window.addEventListener('pointercancel', release);
+-      }
+-      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+-      if (this.pointers.size === 2) {
+-        const [a, b] = [...this.pointers.values()];
+-        this.pinch0 = Math.hypot(a!.x - b!.x, a!.y - b!.y);
+-        this.pinchK0 = this.cam.k;
+-      }
+-      this.lastMoveAt = performance.now();
+-    });
+-    v.addEventListener(
+-      'wheel',
+-      (e) => {
+-        if (!this.visible || !isLiveTarget(this.root)) return;
+-        e.preventDefault();
+-        this.stopFly();
+-        this.stopInertia();
+-        const r = v.getBoundingClientRect();
+-        if (e.ctrlKey || Math.abs(e.deltaY) > Math.abs(e.deltaX) * 3) {
+-          // Trackpad pinch arrives as a ctrl-wheel in Chrome; a plain wheel zooms about the pointer.
+-          const f = Math.exp(-Math.max(-240, Math.min(240, e.deltaY)) * (e.ctrlKey ? 0.01 : 0.0016));
+-          this.zoomAt(this.cam.k * f, e.clientX - r.left, e.clientY - r.top);
+-        } else {
+-          this.cam.x -= e.deltaX;
+-          this.cam.y -= e.deltaY;
+-          this.anchor = null;
+-          this.userMoved = true;
+-        }
+-        this.pushCam();
+-        this.settleSoon();
+-      },
+-      { passive: false },
+-    );
+-    // Two-finger trackpad pinch on macOS Safari arrives as a gesture event, not a wheel: zoom about the pointer.
+-    let gk = 0;
+-    v.addEventListener('gesturestart', (e) => {
+-      e.preventDefault();
+-      gk = this.cam.k;
+-    });
+-    v.addEventListener('gesturechange', (e) => {
+-      e.preventDefault();
+-      const g = e as Event & { scale?: number; clientX?: number; clientY?: number };
+-      if (!this.visible || !gk || !g.scale) return;
+-      const r = v.getBoundingClientRect();
+-      this.zoomAt(gk * g.scale, (g.clientX ?? r.left + r.width / 2) - r.left, (g.clientY ?? r.top + r.height / 2) - r.top);
+-      this.pushCam();
+-    });
+-    v.addEventListener('gestureend', () => {
+-      gk = 0;
+-      this.settle();
+-    });
+-  }
+-
+-  /** Set the zoom keeping the map point under (`sx`, `sy`) (view px) where it is. */
+-  private zoomAt(k: number, sx: number, sy: number): void {
+-    this.anchor = null;
+-    this.userMoved = true;
+-    const nk = Math.max(this.kMin, Math.min(ZOOM.max, k));
+-    const f = nk / this.cam.k;
+-    this.cam.x = sx - (sx - this.cam.x) * f;
+-    this.cam.y = sy - (sy - this.cam.y) * f;
+-    this.cam.k = nk;
+-  }
+-
+-  /** Keep the map on screen: never pan past its edge (the sea and sky are the limit); centre it when it is smaller than the view. */
+-  private clampCam(c: Cam): Cam {
+-    const w = this.view.clientWidth || 1;
+-    const hgt = this.view.clientHeight || 1;
+-    const k = c.k;
+-    const mw = MAP.w * k;
+-    const mh = MAP.h * k;
+-    const x = mw <= w ? (w - mw) / 2 : Math.max(w - mw, Math.min(0, c.x));
+-    const y = mh <= hgt ? (hgt - mh) / 2 : Math.max(hgt - mh, Math.min(0, c.y));
+-    return { x, y, k };
+-  }
+-
+-  /** Write the camera to the scene root (one transform), the counter-scales, the tier blend, and the harness-readable state. */
+-  private pushCam(): void {
+-    this.cam = this.clampCam(this.cam);
+-    const k = this.cam.k;
+-    this.scene.style.transform = `translate(${this.cam.x.toFixed(2)}px, ${this.cam.y.toFixed(2)}px) scale(${k.toFixed(5)})`;
+-    this.scene.style.setProperty('--inv', (1 / k).toFixed(4));
+-    this.scene.style.setProperty('--invh', (1 / Math.sqrt(k)).toFixed(4));
+-    this.tier.style.opacity = tierBlend(k).toFixed(3);
+-    const far = k < ZOOM.plates;
+-    if (far !== this.far) {
+-      this.far = far;
+-      this.scene.classList.toggle('far', far);
+-    }
+-    if (!far && tierBlend(k) > 0) this.loadPlates(false);
+-    this.scene.dataset['zoom'] = k.toFixed(3);
+-    this.scene.dataset['x'] = Math.round(this.cam.x).toString();
+-    this.scene.dataset['y'] = Math.round(this.cam.y).toString();
+-    this.scene.dataset['far'] = far ? '1' : '0';
+-    // No finger down (a fly, inertia, a wheel step): the shading tracks the camera frame by frame, never a stale one.
+-    if (this.pointers.size === 0) this.shade();
+-  }
+-
+-  /** Screen position of a marker (view px) under the current camera. */
+-  private screenOf(m: Marker): { x: number; y: number } {
+-    return { x: this.cam.x + m.x * this.cam.k, y: this.cam.y + m.y * this.cam.k };
+-  }
+-
+-  private nearest(clientX: number, clientY: number): number {
+-    const r = this.view.getBoundingClientRect();
+-    const sx = clientX - r.left;
+-    const sy = clientY - r.top;
+-    let best = -1;
+-    let bd = Infinity;
+-    this.refs.forEach((ref, i) => {
+-      const s = this.screenOf(ref.marker);
+-      const d = Math.hypot(s.x - sx, s.y - sy);
+-      if (d < bd) {
+-        bd = d;
+-        best = i;
+-      }
+-    });
+-    return best;
+-  }
+-
+-  /** Where a focused marker is brought to: a little above the view's centre (the card hangs to its right, the pills sit below). */
+-  private focusPoint(): { x: number; y: number } {
+-    const w = this.view.clientWidth || 1;
+-    const hgt = this.view.clientHeight || 1;
+-    return { x: w * 0.42, y: hgt * 0.5 };
+-  }
+-
+-  /** Fly the camera so map point (`mx`, `my`) lands at the focus point, at zoom `k` (default: the current zoom, raised to the region zoom when far). */
+-  private flyTo(mx: number, my: number, k?: number, smooth = true): void {
+-    const fp = this.focusPoint();
+-    const nk = Math.max(this.kMin, Math.min(ZOOM.max, k ?? (this.far ? ZOOM.region : this.cam.k)));
+-    this.flyCam(this.clampCam({ x: fp.x - mx * nk, y: fp.y - my * nk, k: nk }), { x: mx, y: my }, smooth);
+-  }
+-
+-  /** The 380 ms eased tween to camera `to`; `anchor` is the map point the view is about (a resize re-centres on it). */
+-  private flyCam(to: Cam, anchor: { x: number; y: number }, smooth: boolean): void {
+-    this.anchor = anchor;
+-    this.userMoved = false;
+-    this.stopInertia();
+-    this.stopFly();
+-    if (!smooth || typeof requestAnimationFrame !== 'function') {
+-      this.cam = to;
+-      this.pushCam();
+-      this.settle();
+-      return;
+-    }
+-    const from = { ...this.cam };
+-    const t0 = performance.now();
+-    const step = (): void => {
+-      const t = Math.min(1, (performance.now() - t0) / FLY_MS);
+-      const e = 1 - Math.pow(1 - t, 3);
+-      // Zoom interpolates geometrically so a fly across zoom levels keeps a steady pace.
+-      const k = from.k * Math.pow(to.k / from.k, e);
+-      this.cam = { x: from.x + (to.x - from.x) * e, y: from.y + (to.y - from.y) * e, k };
+-      this.pushCam();
+-      if (t < 1) this.fly = requestAnimationFrame(step);
+-      else {
+-        this.fly = 0;
+-        this.settle();
+-      }
+-    };
+-    this.fly = requestAnimationFrame(step);
+-  }
+-
+-  private stopFly(): void {
+-    if (this.fly && typeof cancelAnimationFrame === 'function') cancelAnimationFrame(this.fly);
+-    this.fly = 0;
+-  }
+-
+-  private startInertia(): void {
+-    this.stopInertia();
+-    if (typeof requestAnimationFrame !== 'function') return;
+-    let last = performance.now();
+-    const step = (): void => {
+-      const now = performance.now();
+-      const dt = Math.min(50, now - last);
+-      last = now;
+-      const d = Math.pow(0.92, dt / 16.7);
+-      this.vel = { x: this.vel.x * d, y: this.vel.y * d };
+-      const before = { x: this.cam.x, y: this.cam.y };
+-      this.cam.x += this.vel.x * dt;
+-      this.cam.y += this.vel.y * dt;
+-      this.pushCam();
+-      const stuck = Math.abs(this.cam.x - before.x) < 0.01 && Math.abs(this.cam.y - before.y) < 0.01;
+-      if (stuck || Math.hypot(this.vel.x, this.vel.y) < 0.01 || !this.visible) {
+-        this.inertia = 0;
+-        this.settle();
+-        return;
+-      }
+-      this.inertia = requestAnimationFrame(step);
+-    };
+-    this.inertia = requestAnimationFrame(step);
+-  }
+-
+-  private stopInertia(): void {
+-    if (this.inertia && typeof cancelAnimationFrame === 'function') cancelAnimationFrame(this.inertia);
+-    this.inertia = 0;
+-  }
+-
+-  private settleSoon(): void {
+-    clearTimeout(this.settleTimer);
+-    this.settleTimer = window.setTimeout(() => this.settle(), 140);
+-  }
+-
+-  /** The camera has stopped: shade the markers under the card, load the region plates in view. */
+-  private settle(): void {
+-    this.shade();
+-    if (!this.far) this.loadPlates(false);
+-  }
+-
+-  /** Screen-space boxes (view px) the overlays cover — the card, the brand plate, MENU, the progress chip, the pills: a marker under one is shaded. */
+-  private blocks: { src: string; l: number; t: number; r: number; b: number }[] = [];
+-
+-  private measureBlocks(): void {
+-    const v = this.view.getBoundingClientRect();
+-    this.blocks = [];
+-    if (!v.width) return;
+-    for (const sel of ['.wm-card', '.wm-brand', '.backbtn', '.wm-progress', '.wm-actions']) {
+-      const e = this.root.querySelector<HTMLElement>(sel);
+-      if (!e) continue;
+-      const r = e.getBoundingClientRect();
+-      if (r.width < 2) continue;
+-      this.blocks.push({ src: sel, l: r.left - v.left - 4, t: r.top - v.top - 4, r: r.right - v.left + 4, b: r.bottom - v.top + 4 });
+-    }
+-    // The side safe areas (the notch, the rounded corners): nothing tappable stands in them.
+-    const safe = this.safeInsets();
+-    if (safe.l > 0) this.blocks.push({ src: 'safe', l: -1e4, t: -1e4, r: safe.l, b: 1e4 });
+-    if (safe.r > 0) this.blocks.push({ src: 'safe', l: v.width - safe.r, t: -1e4, r: 1e4, b: 1e4 });
+-  }
+-
+-  /**
+-   * The card hangs beside the marker: right and down by default, else right-up, left-down, left-up — the first that
+-   * stays inside the view (clear of the side safe areas) and off every chrome box (brand, MENU, the progress chip, the
+-   * pills); none clear, the one that covers the least. Its box is measured (it is drawn at 1 screen px per CSS px at
+-   * every zoom), or assumed 178 × 110 before layout.
+-   */
+-  private placeCard(): void {
+-    const ref = this.refs[this.focus];
+-    const w = this.view.clientWidth;
+-    const hgt = this.view.clientHeight;
+-    if (!ref || !hgt) return;
+-    const f = this.far ? 0.7 : 1;
+-    const cw = (this.card.offsetWidth || 178) * f;
+-    const ch = (this.card.offsetHeight || 110) * f;
+-    const gap = 26 * f;
+-    const s = this.screenOf(ref.marker);
+-    const safe = this.safeInsets();
+-    const chrome = this.blocks.filter((b) => b.src !== '.wm-card');
+-    // The other markers' 46 px targets weigh three times: the card would rather cover map than a marker.
+-    this.refs.forEach((r, i) => {
+-      if (i === this.focus) return;
+-      const m = this.screenOf(r.marker);
+-      for (let n = 0; n < 3; n++) chrome.push({ src: 'marker', l: m.x - 23, t: m.y - 23, r: m.x + 23, b: m.y + 23 });
+-    });
+-    const box = (left: boolean, up: boolean): { l: number; t: number; r: number; b: number } => {
+-      const l = left ? s.x - gap - cw : s.x + gap;
+-      const t = up ? s.y - ch * 0.9 : s.y - ch * 0.14;
+-      return { l, t, r: l + cw, b: t + ch };
+-    };
+-    const cost = (b: { l: number; t: number; r: number; b: number }): number => {
+-      let c = Math.max(0, safe.l + 4 - b.l) * ch + Math.max(0, b.r - (w - safe.r - 4)) * ch + Math.max(0, 4 - b.t) * cw + Math.max(0, b.b - (hgt - 4)) * cw;
+-      for (const o of chrome) c += Math.max(0, Math.min(b.r, o.r) - Math.max(b.l, o.l)) * Math.max(0, Math.min(b.b, o.b) - Math.max(b.t, o.t));
+-      return c;
+-    };
+-    let pick: [boolean, boolean] = [false, false];
+-    let best = Infinity;
+-    for (const [left, up] of [[false, false], [false, true], [true, false], [true, true]] as [boolean, boolean][]) {
+-      const c = cost(box(left, up));
+-      if (c < best - 0.5) {
+-        best = c;
+-        pick = [left, up];
+-      }
+-    }
+-    this.card.classList.toggle('left', pick[0]);
+-    this.card.classList.toggle('up', pick[1]);
+-  }
+-
+-  /**
+-   * Name plates avoid each other: each hangs on its preferred side (right, or left for `PLATE_LEFT`) unless that side
+-   * meets a diamond, the focused marker's beam, the card, the chrome, a zone name or a plate already placed — then it
+-   * takes the other side when that meets less. In route order, so the road reads the same way every settle.
+-   */
+-  private placePlates(): void {
+-    const v = this.view.getBoundingClientRect();
+-    if (!v.width) return;
+-    type R = { l: number; t: number; r: number; b: number };
+-    const rel = (r: DOMRect): R => ({ l: r.left - v.left, t: r.top - v.top, r: r.right - v.left, b: r.bottom - v.top });
+-    const area = (a: R, b: R): number => Math.max(0, Math.min(a.r, b.r) - Math.max(a.l, b.l)) * Math.max(0, Math.min(a.b, b.b) - Math.max(a.t, b.t));
+-    const obstacles: R[] = this.blocks.filter((b) => b.src !== 'safe');
+-    const beamH = this.far ? 110 : 320;
+-    this.refs.forEach((ref, i) => {
+-      const s = this.screenOf(ref.marker);
+-      obstacles.push({ l: s.x - 12, t: s.y - 12, r: s.x + 12, b: s.y + 12 });
+-      // The focused marker: its beam, and the ring + bike at its foot.
+-      if (i === this.focus) obstacles.push({ l: s.x - 10, t: s.y - beamH, r: s.x + 10, b: s.y }, { l: s.x - 28, t: s.y - 16, r: s.x + 28, b: s.y + 28 });
+-    });
+-    for (const n of this.names.children) obstacles.push(rel(n.getBoundingClientRect()));
+-    const placed: R[] = [];
+-    const view: R = { l: 0, t: 0, r: v.width, b: v.height };
+-    const cost = (r: R): number => {
+-      let c = (r.r - r.l) * (r.b - r.t) - area(r, view);
+-      for (const o of obstacles) c += area(r, o);
+-      for (const o of placed) c += 2 * area(r, o);
+-      return c;
+-    };
+-    this.refs.forEach((ref, i) => {
+-      const plate = ref.el.querySelector<HTMLElement>('.wm-plate');
+-      if (i === this.focus || !plate) return;
+-      const pref = PLATE_LEFT.has(ref.marker.track.id);
+-      const set = (left: boolean, down: boolean): R => {
+-        ref.el.classList.toggle('lead-left', left);
+-        ref.el.classList.toggle('lead-down', down);
+-        return rel(plate.getBoundingClientRect());
+-      };
+-      let pick = set(pref, false);
+-      if (pick.r - pick.l < 1) return;
+-      let best = cost(pick);
+-      let side: [boolean, boolean] = [pref, false];
+-      for (const [left, down] of [[!pref, false], [pref, true], [!pref, true]] as [boolean, boolean][]) {
+-        if (best <= 0) break;
+-        const r = set(left, down);
+-        const c = cost(r);
+-        if (c < best) {
+-          best = c;
+-          pick = r;
+-          side = [left, down];
+-        }
+-      }
+-      set(side[0], side[1]);
+-      placed.push(pick);
+-    });
+-  }
+-
+-  /** The side safe areas (px) as the page resolves them (`--sal` / `--sar` on a probe; 0 in jsdom). */
+-  private safeInsets(): { l: number; r: number } {
+-    const p = this.root.querySelector<HTMLElement>('.wm-safe');
+-    return { l: p?.offsetWidth ?? 0, r: p?.offsetHeight ?? 0 };
+-  }
+-
+-  /** A marker (or the gate) whose diamond meets an overlay's box is shaded: drawn dim, no pointer — nothing tappable hides under another tappable. */
+-  private shade(): void {
+-    if (!this.view.clientWidth) return;
+-    this.measureBlocks();
+-    this.placeCard();
+-    this.measureBlocks();
+-    const hit = (sx: number, sy: number): boolean => {
+-      // A tappable box (MENU, the pills) may not meet the 46 px target; the card (it takes no pointer) only the diamond itself.
+-      for (const b of this.blocks) {
+-        const m = b.src === '.wm-card' ? 12 : 23;
+-        if (sx + m > b.l && sx - m < b.r && sy + m > b.t && sy - m < b.b) return true;
+-      }
+-      return false;
+-    };
+-    this.refs.forEach((ref, i) => {
+-      const s = this.screenOf(ref.marker);
+-      ref.el.classList.toggle('shaded', i !== this.focus && hit(s.x, s.y));
+-    });
+-    if (this.gateEl && this.gate) this.gateEl.classList.toggle('shaded', hit(this.cam.x + this.gate.x * this.cam.k, this.cam.y + this.gate.y * this.cam.k));
+-    if (!this.fly && !this.inertia && this.pointers.size === 0) this.placePlates(); // at rest only: it measures
+-    // A zone name (and its sign) that runs under the chrome steps back, so the badge and ‹ MENU never sit on a word.
+-    const v = this.view.getBoundingClientRect();
+-    for (const n of this.names.children as HTMLCollectionOf<HTMLElement>) {
+-      const r = n.getBoundingClientRect();
+-      const under = this.blocks.some((b) => b.src !== 'safe' && b.src !== '.wm-card' && r.right - v.left > b.l && r.left - v.left < b.r && r.bottom - v.top > b.t && r.top - v.top < b.b);
+-      n.classList.toggle('under', under);
+-    }
++    window.addEventListener('resize', () => { if (this.visible) this.layout(); });
+   }
+ 
+-  /** The fit zoom from the view's box; the camera re-centres on its anchor. Called on build, show and resize (never per frame). */
+-  private layout(): void {
+-    const w = this.view.clientWidth;
+-    const hgt = this.view.clientHeight;
+-    if (!w || !hgt) {
+-      this.pushCam(); // no box yet (hidden, or jsdom): the camera is still written so the scene has a transform
+-      return;
+-    }
+-    this.kMin = fitZoom(w, hgt);
+-    const cur = this.refs[this.focus];
+-    if (this.anchor) this.flyTo(this.anchor.x, this.anchor.y, undefined, false);
+-    else if (cur && !this.userMoved) this.frameRegion(cur.marker, false);
+-    else this.pushCam();
+-  }
+-
+-  /**
+-   * Open on the focused marker's region frame (the mockup's composition: the region with its neighbour beyond), the
+-   * marker's card on it; when the marker would fall outside the view, centre on the marker at that zoom instead.
+-   */
+-  private frameRegion(m: Marker, smooth: boolean): void {
+-    const w = this.view.clientWidth || 1;
+-    const hgt = this.view.clientHeight || 1;
+-    const region = this.regions.find((r) => r.id === m.region) ?? this.regions[0];
+-    if (!region) return;
+-    const f = frameFor(region, w, hgt);
+-    const c = { x: w / 2 - f.x * f.k, y: hgt / 2 - f.y * f.k, k: f.k };
+-    // The frame first; then the camera slides just enough that the focused marker (and its card to the right) sits
+-    // inside the middle of the view — the frame's far edge gives way, never the marker.
+-    const sx = c.x + m.x * f.k;
+-    const sy = c.y + m.y * f.k;
+-    c.x -= Math.max(0, sx - w * 0.72) - Math.max(0, w * 0.15 - sx);
+-    c.y -= Math.max(0, sy - hgt * 0.68) - Math.max(0, hgt * 0.15 - sy);
+-    // Then the zone's painted name comes fully into view (clear of the side safe areas and the brand plate), as far as
+-    // the marker allows: it may slide to 10 % / 85 % of the width, 12 % / 72 % of the height, never off the view.
+-    const nameEl = this.names.querySelector<HTMLElement>(`.wm-name[data-region="${region.id}"]`);
+-    if (nameEl?.offsetWidth) {
+-      this.measureBlocks();
+-      const safe = this.safeInsets();
+-      const sc = Math.sqrt(f.k); // the name counter-scales by 1 / √k inside a scene drawn at k
+-      const hw = (nameEl.offsetWidth * sc) / 2 + 14;
+-      const hh = (nameEl.offsetHeight * sc) / 2 + 10;
+-      const nx = c.x + region.name.x * f.k;
+-      const ny = c.y + region.name.y * f.k;
+-      const mx = c.x + m.x * f.k;
+-      const my = c.y + m.y * f.k;
+-      let dx = Math.max(0, safe.l - (nx - hw)) - Math.max(0, nx + hw - (w - safe.r));
+-      const brand = this.blocks.find((b) => b.src === '.wm-brand');
+-      let dy = Math.max(0, 4 - (ny - hh)) - Math.max(0, ny + hh - (hgt - 4));
+-      if (brand && nx - hw + dx < brand.r && ny - hh + dy < brand.b) dy = Math.max(dy, brand.b - (ny - hh));
+-      dx = Math.max(w * 0.1 - mx, Math.min(w * 0.85 - mx, dx));
+-      dy = Math.max(hgt * 0.12 - my, Math.min(hgt * 0.72 - my, dy));
+-      c.x += dx;
+-      c.y += dy;
+-    }
+-    this.flyCam(this.clampCam(c), { x: (w / 2 - c.x) / f.k, y: (hgt / 2 - c.y) / f.k }, smooth);
+-  }
+-
+-  // ------------------------------------------------------------------ build
+-
+   build(tracks: TrackDef[]): void {
+     const s = this.state();
+-    const medalOf: MedalOf = (t) => this.bestOf(t)?.medal ?? null;
++    const medalOf: MedalOf = (id) => this.bestOf(id)?.medal ?? null;
+     const ship = shipTracks(tracks, s.dev);
+-    const regions = buildRegions(tracks, medalOf, s.dev);
+-    this.regions = regions;
+-    this.gate = nextGate(regions);
+-    this.action = -1;
+-    // Terrain plates: the world plate (tinted sea until it decodes), the region plates (each fades in when it decodes).
+-    void this.plate((hi) => worldPlateSrc(hi)).then((src) => {
+-      if (!src) return;
+-      this.world.style.backgroundImage = `url("${src}")`;
+-      this.world.classList.add('loaded');
+-    });
+-    this.tier.innerHTML = '';
+-    for (const r of regions) {
+-      const p = el('div', 'wm-region');
+-      p.dataset['region'] = r.id;
+-      p.style.left = `${r.crop.x}px`;
+-      p.style.top = `${r.crop.y}px`;
+-      p.style.width = `${r.crop.w}px`;
+-      p.style.height = `${r.crop.h}px`;
+-      this.tier.appendChild(p);
+-    }
+-    this.plates = new Set();
+-    // The road.
+-    const path = routePath(regions);
+-    const svgPath = (cls: string, d: string): string => (d ? `<path class="${cls}" d="${d}"/>` : '');
+-    this.route.innerHTML = `${svgPath('spur', path.spurs)}${svgPath('dim', path.dim)}${svgPath('glow', path.lit)}${svgPath('lit', path.lit)}`;
+-    // Fog of war: the locked regions' ellipses and a patch on every locked marker in open land; fog that was there at
+-    // the last build and is gone now (the tier opened while the player rode) lifts over 1.4 s instead of vanishing.
+-    const fog = fogPatches(regions);
+-    const now = new Set(fog.map((f) => f.key));
+-    const lifted = this.fog0.filter((f) => !now.has(f.key));
+-    this.fog0 = fog;
+-    const ell = (f: FogPatch, cls: string): string => `<ellipse class="${cls}" data-key="${escapeHtml(f.key)}" cx="${f.x}" cy="${f.y}" rx="${f.rx}" ry="${f.ry}"/>`;
+-    this.fog.innerHTML = `<defs><radialGradient id="wm-fog-g"><stop offset="0" stop-color="#a9b6c9" stop-opacity=".6"/><stop offset=".55" stop-color="#8b97ad" stop-opacity=".42"/><stop offset="1" stop-color="#6b7688" stop-opacity="0"/></radialGradient></defs>${fog.map((f) => ell(f, 'fog')).join('')}${lifted.map((f) => ell(f, 'fog open')).join('')}`;
+-    // Zone names, painted over the land on two lines (W-worldmap); under an open zone its count, under a locked one its
+-    // sign — the rule stated once per zone (the gate zone's sign also names the next unlock), a padlock on each marker.
+-    this.names.innerHTML = '';
+-    for (const r of regions) {
+-      const [first, ...rest] = r.label.split(' ');
+-      const rule = r.markers.find((m) => m.locked && !m.proving)?.rule;
+-      const next = this.gate && this.gate.region === r.id ? `<small>Next unlock · ${escapeHtml(this.gate.track.name)}</small>` : '';
+-      const foot = rule ? `<span class="wm-sign"><i class="wm-padlock"></i>${escapeHtml(rule)}${next}</span>` : `<small>${r.total ? `${r.done} / ${r.total}` : ''}</small>`;
+-      const n = el('div', `wm-name${r.locked ? ' locked' : ''}`, `<b><span>${escapeHtml(first ?? '')}</span>${rest.length ? ` <span>${escapeHtml(rest.join(' '))}</span>` : ''}</b>${foot}`);
+-      n.dataset['region'] = r.id;
+-      n.style.left = `${r.name.x}px`;
+-      n.style.top = `${r.name.y}px`;
+-      this.names.appendChild(n);
+-    }
+-    // Markers: the route first, then the Lab and the playgrounds (the order `nav()` steps).
+-    this.markerLayer.innerHTML = '';
+-    this.refs = allMarkers(regions).map((marker, i) => {
+-      const m = this.markerEl(marker, i);
+-      this.markerLayer.appendChild(m.el);
+-      return m;
+-    });
+-    // The tier gate.
+-    this.gateEl = null;
+-    if (this.gate) {
+-      const g = this.gate;
+-      const ge = el('div', 'wm-gate');
+-      ge.dataset['track'] = g.track.id;
+-      ge.style.left = `${g.x}px`;
+-      ge.style.top = `${g.y}px`;
+-      const deg = (Math.atan2(g.dy, g.dx) * 180) / Math.PI;
+-      // The chevrons across the road; the rule itself stands on the zone's sign (once per zone).
+-      ge.innerHTML = `<button type="button" class="wm-hit" aria-label="${escapeHtml(zoneTitle(g.stage))} locked: ${escapeHtml(g.rule)}. Next unlock: ${escapeHtml(g.track.name)}"></button><span class="chev" style="transform: rotate(${deg.toFixed(1)}deg)">›››</span>`;
+-      this.markerLayer.appendChild(ge);
+-      this.gateEl = ge;
+-    }
+-    this.markerLayer.appendChild(this.card);
+-    // Progress chip: cleared / total and the medal dots.
+-    const totals = medalTotals(ship, medalOf);
+-    // W-worldmap's chip: the count, a rule, then each medal as its badge and a number (the name is the badge's label).
+-    const dot = (m: Medal, n: number): string => `<span class="${m}" title="${MEDAL_NAME[m]}">${medalSvg(m, MEDAL_NAME[m])}${n}</span>`;
+-    this.progress.innerHTML = `<span class="n"><b>${totals.cleared}</b> / ${totals.total} cleared</span><span class="dots">${dot('platinum', totals.platinum)}${dot('gold', totals.gold)}${dot('silver', totals.silver)}${dot('bronze', totals.bronze)}</span>`;
+-    // Opening focus: last played if still open, else the first unridden track of the highest open tier (`nextTrack`).
+-    const target = nextTrack(ship, medalOf, s.dev, s.lastPlayed);
+-    const at = locate(regions, target?.id);
++    this.regions = buildRegions(tracks, medalOf, s.dev);
++    this.targets.replaceChildren();
++    this.refs = allMarkers(this.regions).map((m, i) => {
++      const title = m.locked ? `${m.code} ${m.track.name} — locked: ${m.rule ?? ''}` : `${m.code} ${m.track.name}`;
++      const button = make('button', `wm-marker wm3-place${m.locked ? ' locked' : ''}${m.proving ? ' proving' : ''}`);
++      button.type = 'button'; button.dataset['code'] = m.code; button.dataset['i'] = String(i); button.dataset['track'] = m.track.id; button.dataset['region'] = m.region;
++      button.setAttribute('aria-label', title);
++      button.addEventListener('click', (e) => { e.stopPropagation(); if (this.dragged || this.launching) return;
++        const already = this.focus === i && this.action < 0; this.focusMarker(i, true); if (already || m.locked) this.confirm(); });
++      this.targets.appendChild(button); return { marker: m, el: button };
++    });
++    this.names.replaceChildren();
++    for (const r of this.regions) {
++      const rule = r.markers.find((m) => m.rule)?.rule;
++      const n = make('div', `wm3-region${r.locked ? ' locked' : ''}`, `<b>${escapeHtml(r.label)}</b><small>${r.locked ? `LOCKED · ${escapeHtml(rule ?? '')}` : `${r.done} / ${r.total} CLEARED`}</small>`);
++      n.dataset['region'] = r.id; this.names.appendChild(n);
++    }
++    this.diorama?.dispose(); this.diorama = new WorldMapDiorama(this.canvas, this.regions);
++    const total = medalTotals(ship, medalOf);
++    const dot = (m: Medal, n: number): string => `<span class="${m}">${medalSvg(m, MEDAL_NAME[m])}${n}</span>`;
++    this.progress.innerHTML = `<b>${total.cleared} / ${total.total}</b> CLEARED <span>${dot('platinum', total.platinum)}${dot('gold', total.gold)}${dot('silver', total.silver)}${dot('bronze', total.bronze)}</span>`;
++    const first = nextTrack(ship, medalOf, s.dev, s.lastPlayed);
++    const at = locate(this.regions, first?.id);
+     this.focus = at ? this.indexOf(at) : 0;
+-    this.cam.k = ZOOM.region;
+-    this.anchor = null;
+-    this.userMoved = false;
+-    this.applyFocus(false);
+-    this.layout();
++    this.action = -1; this.yaw = 0; this.polar = 0.68; this.distance = 14.5;
++    this.focusTarget(true); this.applyFocus(); this.layout();
+   }
+ 
+   private indexOf(at: { region: number; marker: number }): number {
+-    const m = this.regions[at.region]?.markers[at.marker];
+-    const i = this.refs.findIndex((r) => r.marker === m);
+-    return i >= 0 ? i : 0;
+-  }
+-
+-  private markerEl(marker: Marker, i: number): MarkerRef {
+-    const t = marker.track;
+-    const best = this.bestOf(t.id);
+-    const kind = marker.locked ? 'locked' : marker.proving ? 'proving' : marker.medal ? marker.medal : 'open';
+-    const wrap = el('div', `wm-marker ${kind}${marker.upNext ? ' next' : ''}${PLATE_LEFT.has(t.id) ? ' lead-left' : ''}`);
+-    wrap.dataset['i'] = String(i);
+-    wrap.dataset['track'] = t.id;
+-    wrap.dataset['region'] = marker.region;
+-    wrap.style.left = `${marker.x}px`;
+-    wrap.style.top = `${marker.y}px`;
+-    const ghost = best?.recording && !marker.locked ? `<em class="tag ghost">▶ ${this.state().ghost ? 'Ghost' : 'PB'}</em>` : '';
+-    const pro = best?.bike === 'pro' ? '<em class="tag pro">Pro</em>' : '';
+-    const next = marker.upNext ? '<em class="tag next">Up next</em>' : '';
+-    const title = marker.locked ? `${marker.code} ${t.name} — locked: ${marker.rule ?? ''}` : `${marker.code} ${t.name}`;
+-    wrap.innerHTML = `<span class="wm-spire"></span><span class="wm-foot"></span><span class="wm-ring"></span><button type="button" class="wm-hit" aria-label="${escapeHtml(title)}"><i class="wm-diamond"></i><i class="wm-lock"></i></button><span class="wm-lead"></span><span class="wm-plate"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(t.name)}${next}${pro}${ghost}</span><span class="wm-bike">${BIKE_SVG}</span>`;
+-    return { marker, el: wrap, hit: wrap.querySelector<HTMLButtonElement>('.wm-hit')! };
+-  }
+-
+-  /** The region plates: the focused marker's region first, the rest when the camera settles at a zoom that shows them. */
+-  private loadPlates(focusedOnly: boolean): void {
+-    const want = focusedOnly ? [this.refs[this.focus]?.marker.region].filter((x): x is RegionId => !!x) : this.regions.map((r) => r.id);
+-    for (const id of want) {
+-      if (this.plates.has(id)) continue;
+-      this.plates.add(id);
+-      const p = this.tier.querySelector<HTMLElement>(`.wm-region[data-region="${id}"]`);
+-      void this.plate((hi) => regionPlateSrc(id, hi)).then((src) => {
+-        if (!src || !p?.isConnected) return;
+-        p.style.backgroundImage = `url("${src}")`;
+-        p.classList.add('loaded');
+-      });
+-    }
+-  }
+-
+-  /**
+-   * One plate at THIS device's tier, degrading to the other (ask 59). The offline pack downloads a single
+-   * tier — the one `wantsHiRes()` picked on the load that filled the cache — so a window later dragged to a
+-   * 1x monitor (or a phone mirrored to a desktop) asks for a file the cache does not have. Offline that
+-   * probe fails, and the map would be a blue sea with markers on it; the second probe draws the tier the
+-   * device actually has. Online the first one simply hits the network and this costs nothing.
+-   */
+-  private async plate(src: (hi: boolean) => string): Promise<string | null> {
+-    const hi = wantsHiRes();
+-    if (await this.art.probe(src(hi))) return src(hi);
+-    return (await this.art.probe(src(!hi))) ? src(!hi) : null;
+-  }
+-
+-  /** Top-5 chips for the class the next launch rides (`FrontState.bikeClass`), medal-coloured; nothing when the board is empty. */
+-  private boardHtml(trackId: string): string {
+-    const bike = this.state().bikeClass;
+-    const rows = this.boardOf?.(trackId, bike) ?? [];
+-    if (rows.length === 0) return '';
+-    const short = (t: number): string => {
+-      const m = Math.floor(t / 60);
+-      const sec = (t - m * 60).toFixed(1);
+-      return m > 0 ? `${m}:${sec.padStart(4, '0')}` : sec;
+-    };
+-    return `<div class="board" data-bike="${bike}" data-rows="${rows.length}">${rows.map((e, i) => `<span class="${e.medal}" title="#${i + 1} ${bike} · ${formatTime(e.time)} · ${e.faults} ${e.faults === 1 ? 'bail' : 'bails'}">${short(e.time)}</span>`).join('')}</div>`;
+-  }
+-
+-  /** The card on the focused marker and the RIDE / GHOST pills: re-rendered on every focus. */
+-  private renderCard(ref: MarkerRef): void {
+-    const { marker } = ref;
+-    const t = marker.track;
+-    const best = this.bestOf(t.id);
+-    const target = t.meta?.targetTimeS;
+-    const ahead = best && target ? best.time <= target : false;
+-    const kind = marker.proving ? (isLabTrack(t) ? 'Lab · proving ground' : `Free ride · ${stageLabel(marker.region)}`) : stageLabel(marker.region);
+-    const times = marker.proving
+-      ? `<div class="times"><b class="none">No medals</b></div>`
+-      : marker.locked
+-        ? `<div class="rule">Locked · ${escapeHtml(marker.rule ?? '')}</div>`
+-        : `<div class="times"><b class="${best ? (ahead ? '' : 'behind') : 'none'}">${best ? formatTime(best.time) : '—'}</b> / ${target ? formatTime(target) : '—'}</div>`;
+-    const canGhost = !!best?.recording && !marker.locked;
+-    this.card.dataset['track'] = t.id;
+-    this.card.dataset['region'] = marker.region;
+-    this.card.style.left = `${marker.x}px`;
+-    this.card.style.top = `${marker.y}px`;
+-    this.card.innerHTML = `<div class="head"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(kind)}</div><div class="name">${escapeHtml(t.name)}</div>${times}${marker.proving || marker.locked ? '' : this.boardHtml(t.id)}<span class="wm-card-ghost"${canGhost ? '' : ' hidden'}>▶ ${this.state().ghost ? 'Ghost' : 'Watch PB'}</span>`;
+-    this.ride.disabled = marker.locked;
+-    this.ride.innerHTML = marker.locked ? `Locked <small>${escapeHtml(marker.rule ?? '')}</small>` : `Ride <small>${escapeHtml(t.name)}</small><span class="arrow">›</span>`;
+-    this.ghost.hidden = !canGhost;
+-    this.ghost.innerHTML = `<span>▶</span> ${this.state().ghost ? 'Ghost' : 'Watch PB'}`;
+-    this.applyAction();
+-  }
+-
+-  private applyAction(): void {
+-    this.ride.classList.toggle('on', this.action === 0);
+-    this.ghost.classList.toggle('on', this.action === 1);
+-  }
+-
+-  /** Focus a marker; with `follow`, the camera brings it to the focus point (a fly when it is outside the middle of the view, or when `k` asks for a zoom). */
+-  private focusMarker(i: number, tick: boolean, follow: boolean, k?: number): void {
+-    if (this.launching) return;
+-    const ref = this.refs[i];
+-    if (!ref) return;
+-    const moved = i !== this.focus || this.action >= 0;
+-    this.focus = i;
+-    this.action = -1;
+-    if (tick && moved) this.sfx.tick();
+-    this.applyFocus(moved);
+-    if (follow) this.follow(ref.marker, k);
+-  }
+-
+-  /** The camera follows the focused marker: a fly when it sits outside the middle 60 % of the view (or when far), else stay. */
+-  private follow(m: Marker, k?: number): void {
+-    const w = this.view.clientWidth || 1;
+-    const hgt = this.view.clientHeight || 1;
+-    const s = this.screenOf(m);
+-    const inside = s.x >= w * 0.2 && s.x <= w * 0.7 && s.y >= hgt * 0.2 && s.y <= hgt * 0.8;
+-    if (inside && k === undefined && !this.far) {
+-      this.settle();
+-      return;
+-    }
+-    this.flyTo(m.x, m.y, k);
+-  }
+-
+-  private applyFocus(animate: boolean): void {
+-    this.refs.forEach((r, i) => r.el.classList.toggle('on', i === this.focus));
+-    const ref = this.refs[this.focus];
+-    if (!ref) return;
+-    this.scene.dataset['track'] = ref.marker.track.id;
+-    this.scene.dataset['region'] = ref.marker.region;
+-    // The beam stands on its own layer under every marker, so no name plate is ever drawn behind it.
+-    this.beam.style.left = `${ref.marker.x}px`;
+-    this.beam.style.top = `${ref.marker.y}px`;
+-    this.renderCard(ref);
+-    this.card.classList.remove('rise');
+-    if (animate) {
+-      void this.card.offsetWidth;
+-      this.card.classList.add('rise');
+-    }
+-    this.loadPlates(true);
+-    this.shade();
+-  }
+-
+-  current(): MarkerRef | null {
+-    return this.refs[this.focus] ?? null;
+-  }
+-
+-  override setDevice(d: 'keyboard' | 'gamepad' | 'touch' | null): void {
+-    if (!this.legend) return;
+-    this.legend.innerHTML =
+-      d === 'touch'
+-        ? '<span>Tap a track</span><span>Drag · pinch</span>'
+-        : d === 'gamepad'
+-          ? '<span><i class="pad">✚</i>Tracks</span><span><i class="pad a">A</i>Ride</span><span><i class="pad b">B</i>Back</span>'
+-          : '<span><kbd>←→</kbd>Along the road</span><span><kbd>↑↓</kbd>Across</span><span><kbd>Enter</kbd>Ride</span><span><kbd>V</kbd>Ghost</span><span>Drag · wheel</span><span><kbd>Esc</kbd>Back</span>';
+-  }
+-
+-  /** The region of the focused marker (the harness reads it). */
+-  currentRegion(): RegionId | null {
+-    return this.refs[this.focus]?.marker.region ?? null;
+-  }
+-
+-  /** The camera, for the harness: zoom, its bounds, the focused track and the markers whose anchors are on screen. */
+-  camera(): { zoom: number; zoomMin: number; zoomMax: number; x: number; y: number; far: boolean; track: string | null; region: RegionId | null; markersInView: string[]; plates: string[] } {
+-    const w = this.view.clientWidth;
+-    const hgt = this.view.clientHeight;
+-    return {
+-      zoom: this.cam.k,
+-      zoomMin: this.kMin,
+-      zoomMax: ZOOM.max,
+-      x: this.cam.x,
+-      y: this.cam.y,
+-      far: this.far,
+-      track: this.refs[this.focus]?.marker.track.id ?? null,
+-      region: this.currentRegion(),
+-      markersInView: this.refs
+-        .filter((r) => {
+-          const s = this.screenOf(r.marker);
+-          return s.x >= 0 && s.x <= w && s.y >= 0 && s.y <= hgt;
+-        })
+-        .map((r) => r.marker.track.id),
+-      plates: [...this.tier.querySelectorAll<HTMLElement>('.wm-region.loaded')].map((p) => p.dataset['region'] ?? ''),
+-    };
+-  }
+-
+-  override show(): void {
+-    this.launching = false;
+-    super.show();
+-    this.layout();
+-    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(() => this.layout());
+-  }
+-
+-  override hide(): void {
+-    this.stopFly();
+-    this.stopInertia();
+-    super.hide();
+-  }
+-
+-  /** ←→ step the markers along the road (then the Lab and the playgrounds); ↑↓ pick the nearest marker in that direction, or reach the pills. */
+-  nav(dx: number, dy: number): void {
+-    if (this.launching || this.refs.length === 0) return;
+-    if (this.action >= 0) {
+-      if (dy < 0) {
+-        this.action = -1;
+-        this.sfx.tick();
+-        this.applyAction();
++    const m = this.regions[at.region]?.markers[at.marker]; return Math.max(0, this.refs.findIndex((r) => r.marker === m));
++  }
++  private focusTarget(initial = false): void {
++    const m = this.refs[this.focus]?.marker; if (!m) return;
++    if (initial) { const r = this.regions.find((x) => x.id === m.region) ?? this.regions[0]!;
++      const n = this.regions[Math.min(this.regions.length - 1, r.index + 1)]!;
++      this.target.copy(mapPoint(r.name.x * 0.65 + n.name.x * 0.35, r.name.y * 0.65 + n.name.y * 0.35));
++    } else this.target.copy(mapPoint(m.x, m.y));
++  }
++  private layout(): void { const w = this.view.clientWidth; const h = this.view.clientHeight;
++    if (w && h && this.diorama) { this.diorama.resize(w, h); this.view.classList.toggle('no-webgl', !this.diorama.available); this.render(); } }
++
++  private render = (): void => {
++    this.frame = 0; const model = this.diorama; if (!model) return;
++    const w = this.view.clientWidth; const h = this.view.clientHeight; if (!w || !h) return;
++    const sin = Math.sin(this.polar);
++    model.camera.position.set(this.target.x + this.distance * sin * Math.sin(this.yaw), this.target.y + this.distance * Math.cos(this.polar), this.target.z + this.distance * sin * Math.cos(this.yaw));
++    model.camera.lookAt(this.target); model.camera.updateMatrixWorld(); model.draw();
++    const places: { x: number; y: number }[] = [];
++    for (const r of this.refs) { const p = model.project(r.marker.track.id, w, h); if (!p) continue;
++      r.el.style.left = `${p.x}px`; r.el.style.top = `${p.y}px`;
++      r.el.hidden = p.behind || p.x < -30 || p.x > w + 30 || p.y < -30 || p.y > h + 30;
++      if (!r.el.hidden) places.push({ x: p.x, y: p.y }); }
++    const regionIndex = this.regions.findIndex((r) => r.id === this.refs[this.focus]?.marker.region);
++    REGIONS.forEach((r, i) => { const n = this.names.children[i] as HTMLElement | undefined; if (!n) return;
++      if (i === regionIndex) {
++        n.style.left = `${w * 0.56}px`; n.style.top = '80px'; n.hidden = false;
+         return;
+       }
+-      if (dx) {
+-        const n = this.ghost.hidden ? 1 : 2;
+-        this.action = Math.max(0, Math.min(n - 1, this.action + dx));
+-        this.sfx.tick();
+-        this.applyAction();
+-      }
+-      return;
+-    }
+-    if (dx) {
+-      const i = (this.focus + dx + this.refs.length) % this.refs.length;
+-      this.focusMarker(i, true, true);
+-      return;
+-    }
+-    if (!dy) return;
+-    const cur = this.refs[this.focus]!.marker;
+-    // The nearest marker within ±60° of straight up / down in map space; none that way and ↓ reaches the pills.
+-    let best = -1;
+-    let bd = Infinity;
+-    this.refs.forEach((r, i) => {
+-      if (i === this.focus) return;
+-      const ddx = r.marker.x - cur.x;
+-      const ddy = (r.marker.y - cur.y) * dy;
+-      if (ddy <= 0 || Math.abs(ddx) > ddy * 1.8) return;
+-      const d = Math.hypot(ddx, ddy);
+-      if (d < bd) {
+-        bd = d;
+-        best = i;
+-      }
+-    });
+-    if (best >= 0) this.focusMarker(best, true, true);
+-    else if (dy > 0) {
+-      this.action = 0;
+-      this.sfx.tick();
+-      this.applyAction();
+-    }
+-  }
+-
+-  confirm(): void {
+-    const cur = this.current();
+-    if (!cur || this.launching) return;
+-    if (this.action === 1) return this.alt();
+-    if (cur.marker.locked) {
+-      this.sfx.back();
+-      cur.el.animate?.([{ translate: '0 0' }, { translate: '-6px 0' }, { translate: '6px 0' }, { translate: '0 0' }], { duration: 240, easing: 'ease-out' });
+-      this.ride.animate?.([{ translate: '0 0' }, { translate: '-6px 0' }, { translate: '6px 0' }, { translate: '0 0' }], { duration: 240, easing: 'ease-out' });
+-      return;
+-    }
+-    this.launching = true;
+-    this.sfx.launch();
+-    cur.el.classList.add('go');
+-    setTimeout(() => this.cb.play(cur.marker.track.id), 180);
+-    setTimeout(() => this.root.classList.add('leave'), 200);
+-    setTimeout(() => {
+-      cur.el.classList.remove('go');
+-      this.hide();
+-      this.launching = false;
+-    }, 420);
+-  }
+-
+-  back(): void {
+-    if (this.launching) return;
+-    this.sfx.back();
+-    this.cb.goto('menu');
+-  }
+-
+-  /** `V` / pad Y / the GHOST pill: replay viewer on the focused track's PB (no-op without a recording). */
+-  override alt(): void {
+-    const cur = this.current();
+-    if (!cur || this.launching || cur.marker.locked) return;
+-    if (!this.bestOf(cur.marker.track.id)?.recording) return;
+-    this.sfx.confirm();
+-    this.cb.watchPb(cur.marker.track.id);
+-  }
++      const pt = mapPoint(r.name.x, r.name.y); pt.y = 2.2; const p = pt.project(model.camera);
++      const sx = (p.x + 1) * w / 2; const sy = (1 - p.y) * h / 2;
++      n.style.left = `${sx}px`; n.style.top = `${sy}px`;
++      const halfWidth = Math.max(90, r.label.length * 8.5);
++      const crowdsPlace = places.some((place) => Math.abs(place.x - sx) < halfWidth + 22 && Math.abs(place.y - sy) < 44);
++      n.hidden = p.z < -1 || p.z > 1 || i < regionIndex || i > regionIndex + 1 || crowdsPlace || (sx < 445 && sy < 60); });
++    const active = this.refs[this.focus];
++    this.view.dataset['yaw'] = this.yaw.toFixed(3); this.view.dataset['pitch'] = this.polar.toFixed(3);
++    this.view.dataset['distance'] = this.distance.toFixed(2); this.view.dataset['track'] = active?.marker.track.id ?? '';
++    this.view.dataset['region'] = active?.marker.region ?? '';
++  };
++  private schedule(): void { if (!this.frame && typeof requestAnimationFrame === 'function') this.frame = requestAnimationFrame(this.render);
++    else if (!this.frame) this.render(); }
++
++  private bindControls(): void {
++    const v = this.view;
++    v.addEventListener('pointerdown', (e) => { if (!this.visible || !isLiveTarget(this.root) || this.launching || e.pointerType === 'mouse' && e.button !== 0) return;
++      this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
++      if (this.pointers.size === 1) { this.travel = 0; this.dragged = false; }
++      else if (this.pointers.size === 2) { const [a, b] = [...this.pointers.values()]; this.pinch0 = Math.hypot(a!.x - b!.x, a!.y - b!.y); this.pinchDistance = this.distance; }
++      if (!(e.target as Element).closest('.wm3-place')) {
++        try { v.setPointerCapture?.(e.pointerId); } catch { /* synthetic test pointers have no active capture */ }
++      } });
++    v.addEventListener('pointermove', (e) => { const old = this.pointers.get(e.pointerId); if (!old) return;
++      const dx = e.clientX - old.x; const dy = e.clientY - old.y; this.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
++      this.travel += Math.hypot(dx, dy); if (this.travel > 7) this.dragged = true;
++      if (this.pointers.size === 1) { this.yaw += dx / Math.max(240, v.clientWidth) * Math.PI * 1.5;
++        this.polar = Math.max(0.22, Math.min(1.15, this.polar + dy / Math.max(240, v.clientHeight) * 1.2)); }
++      else if (this.pointers.size === 2 && this.pinch0) { const [a, b] = [...this.pointers.values()]; const span = Math.hypot(a!.x - b!.x, a!.y - b!.y);
++        this.distance = Math.max(8, Math.min(31, this.pinchDistance * this.pinch0 / Math.max(1, span))); }
++      this.schedule(); });
++    const up = (e: PointerEvent): void => { this.pointers.delete(e.pointerId); if (this.pointers.size < 2) this.pinch0 = 0;
++      if (!this.pointers.size) window.setTimeout(() => { this.dragged = false; }, 0); };
++    v.addEventListener('pointerup', up); v.addEventListener('pointercancel', up);
++    v.addEventListener('wheel', (e) => { if (!this.visible || !isLiveTarget(this.root)) return; e.preventDefault();
++      if (e.shiftKey) this.yaw += e.deltaY * 0.005;
++      else this.distance = Math.max(8, Math.min(31, this.distance * Math.exp(e.deltaY * 0.0012))); this.schedule(); }, { passive: false });
++    let gesture = 0; v.addEventListener('gesturestart', (e) => { e.preventDefault(); gesture = this.distance; });
++    v.addEventListener('gesturechange', (e) => { e.preventDefault(); const scale = (e as Event & { scale?: number }).scale ?? 1;
++      if (gesture) this.distance = Math.max(8, Math.min(31, gesture / scale)); this.schedule(); });
++    v.addEventListener('gestureend', () => { gesture = 0; });
++  }
++
++  private applyFocus(): void {
++    this.refs.forEach((r, i) => r.el.classList.toggle('on', i === this.focus));
++    const m = this.refs[this.focus]?.marker; if (!m) return;
++    this.diorama?.select(m.track.id);
++    const best = this.bestOf(m.track.id); const ghost = !!best?.recording && !m.locked;
++    this.card.dataset['track'] = m.track.id;
++    const target = m.track.meta?.targetTimeS;
++    const rows = this.boardOf?.(m.track.id, this.state().bikeClass) ?? [];
++    this.card.innerHTML = `<small>${escapeHtml(m.code)} · ${escapeHtml(isLabTrack(m.track) ? 'LAB' : stageLabel(m.region))}</small><b>${escapeHtml(m.track.name)}</b>${m.locked ? `<span class="rule">LOCKED · ${escapeHtml(m.rule ?? '')}</span>` : m.proving ? '<span>Free ride · no medals</span>' : `<span>${best ? formatTime(best.time) : '—'} / ${target ? formatTime(target) : '—'}</span>${rows.length ? `<div class="board">${rows.map((r) => `<span class="${r.medal}">${formatTime(r.time)}</span>`).join('')}</div>` : ''}`}`;
++    this.ride.disabled = m.locked;
++    this.ride.innerHTML = m.locked ? `LOCKED <small>${escapeHtml(m.rule ?? '')}</small>` : `RIDE <small>${escapeHtml(m.track.name)}</small> ›`;
++    this.ghost.hidden = !ghost; this.ride.classList.toggle('on', this.action === 0); this.ghost.classList.toggle('on', this.action === 1);
++    this.schedule();
++  }
++  private focusMarker(i: number, tick: boolean): void { if (this.launching || !this.refs[i]) return;
++    if (tick && i !== this.focus) this.sfx.tick(); this.focus = i; this.action = -1; this.focusTarget(); this.applyFocus(); }
++  current(): MarkerRef | null { return this.refs[this.focus] ?? null; }
++  currentRegion(): RegionId | null { return this.current()?.marker.region ?? null; }
++  camera(): { zoom: number; zoomMin: number; zoomMax: number; x: number; y: number; yaw: number; pitch: number; far: boolean; track: string | null; region: RegionId | null; markersInView: string[]; plates: string[] } {
++    return { zoom: 15 / this.distance, zoomMin: 15 / 31, zoomMax: 15 / 8, x: this.target.x, y: this.target.z,
++      yaw: this.yaw, pitch: this.polar, far: this.distance > 23, track: this.current()?.marker.track.id ?? null, region: this.currentRegion(),
++      markersInView: this.refs.filter((r) => !r.el.hidden).map((r) => r.marker.track.id), plates: [] }; }
++  override show(): void { this.launching = false; super.show(); this.layout(); if (typeof requestAnimationFrame === 'function') requestAnimationFrame(() => this.layout()); }
++  override hide(): void { if (this.frame) cancelAnimationFrame(this.frame); this.frame = 0; super.hide(); }
++  override setDevice(d: 'keyboard' | 'gamepad' | 'touch' | null): void { if (!this.legend) return;
++    this.legend.innerHTML = d === 'touch' ? '<span>Tap a circle to select</span><span>Drag to spin · pinch to zoom</span>'
++      : d === 'gamepad' ? '<span><i class="pad">✚</i>Places</span><span><i class="pad a">A</i>Ride</span><span><i class="pad b">B</i>Back</span>'
++        : '<span><kbd>←→</kbd>Route</span><span><kbd>↓</kbd>Actions</span><span><kbd>Enter</kbd>Ride</span><span>Drag to spin · wheel to zoom</span>'; }
++  nav(dx: number, dy: number): void { if (this.launching || !this.refs.length) return;
++    if (this.action >= 0) { if (dy < 0) this.action = -1; else if (dx) this.action = Math.max(0, Math.min(this.ghost.hidden ? 0 : 1, this.action + dx));
++      this.sfx.tick(); this.applyFocus(); return; }
++    if (dx) this.focusMarker((this.focus + dx + this.refs.length) % this.refs.length, true);
++    else if (dy > 0) { this.action = 0; this.sfx.tick(); this.applyFocus(); }
++    else if (dy < 0) { this.polar = Math.max(0.22, this.polar - 0.1); this.schedule(); } }
++  confirm(): void { const ref = this.current(); if (!ref || this.launching) return; if (this.action === 1) return this.alt();
++    if (ref.marker.locked) { this.sfx.back(); this.card.animate?.([{ translate: '0 0' }, { translate: '0 -5px' }, { translate: '0 0' }], { duration: 250 }); return; }
++    this.launching = true; this.sfx.launch(); ref.el.classList.add('go');
++    setTimeout(() => this.cb.play(ref.marker.track.id), 180); setTimeout(() => this.root.classList.add('leave'), 200);
++    setTimeout(() => { ref.el.classList.remove('go'); this.hide(); this.launching = false; }, 420); }
++  back(): void { if (!this.launching) { this.sfx.back(); this.cb.goto('menu'); } }
++  override alt(): void { const ref = this.current(); if (ref && !this.launching && !ref.marker.locked && this.bestOf(ref.marker.track.id)?.recording) {
++    this.sfx.confirm(); this.cb.watchPb(ref.marker.track.id); } }
+ }
+diff --git a/src/ui/worldMapStyles.ts b/src/ui/worldMapStyles.ts
+index ec2a8779..029b801f 100644
+--- a/src/ui/worldMapStyles.ts
++++ b/src/ui/worldMapStyles.ts
+@@ -1,190 +1,58 @@
+-/**
+- * World map styles (project/archive/WORLD_MAP.md, ask 54) — owned by src/ui/worldMapScreen.ts, injected once as its own
+- * <style id="worldmap-css">. Tokens come from styles.ts (the brand palette, `--slab`, `--font` / `--sans` / `--display`, medal colours, safe-area
+- * insets). The scene is one transform root; markers, names and the card counter-scale with `--inv` (1 / zoom) so a
+- * diamond is a true 44 px hit target at every zoom (the box is 46 px: a 44 px box reads 43.99 after the scale's round trip).
+- */
+-
++/** Screen-space chrome and invisible accessibility targets for the procedural WebGL world map. */
+ export const WORLD_MAP_CSS = `
+-.worldmap-screen { background: #05070c; overflow: hidden; font-family: var(--font); }
+-.worldmap-screen.leave { transition: opacity var(--t3) var(--ease); opacity: 0; }
+-.worldmap-screen .wm-view { position: absolute; inset: 0; overflow: hidden; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; background: #06121f; }
+-.worldmap-screen .wm-view.grabbing { cursor: grabbing; }
+-.worldmap-screen .wm-scene { position: absolute; left: 0; top: 0; width: 1536px; height: 1024px; transform-origin: 0 0; will-change: transform; --inv: 1; --invh: 1; }
+-/* Terrain: the world plate under everything (a tinted sea while it decodes), the five region plates fading in above the tier zoom, feathered at their edges. */
+-.wm-world { position: absolute; left: 0; top: 0; width: 1536px; height: 1024px; background: radial-gradient(ellipse at 40% 45%, #2a3d55 0%, #0d1a2b 55%, #060c15 100%); background-size: cover; }
+-.wm-world.loaded { background-size: 100% 100%; }
+-.wm-tier { position: absolute; left: 0; top: 0; width: 1536px; height: 1024px; opacity: 0; pointer-events: none; }
+-.wm-region { position: absolute; background-size: 100% 100%; opacity: 0; transition: opacity .5s var(--ease);
+-  -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+-  mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent), linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+-  -webkit-mask-composite: source-in; mask-composite: intersect; }
+-.wm-region.loaded { opacity: 1; }
+-/* The road: a dashed dirt line for the whole route, an amber glow on the cleared legs; spurs dashed and faint. Stroke widths counter the zoom. */
+-.wm-route { position: absolute; left: 0; top: 0; width: 1536px; height: 1024px; overflow: visible; pointer-events: none; }
+-.wm-route path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+-.wm-route .dim { stroke: rgba(255,255,255,.7); stroke-width: calc(2.4px * var(--inv)); stroke-dasharray: calc(8px * var(--inv)) calc(7px * var(--inv)); filter: drop-shadow(0 0 calc(1px * var(--inv)) rgba(0,0,0,.8)); }
+-.wm-route .spur { stroke: rgba(255,255,255,.4); stroke-width: calc(1.8px * var(--inv)); stroke-dasharray: calc(4px * var(--inv)) calc(6px * var(--inv)); }
+-.wm-route .glow { stroke: rgba(247,207,85,.24); stroke-width: calc(9px * var(--inv)); filter: blur(calc(2px * var(--inv))); }
+-.wm-route .lit { stroke: rgba(255,236,170,.95); stroke-width: calc(2.6px * var(--inv)); filter: drop-shadow(0 0 calc(2px * var(--inv)) rgba(247,207,85,.8)); }
+-/* Fog of war: soft blue-grey ellipses over locked land; a cold horizon haze along the top of the viewport. */
+-.wm-fog { position: absolute; left: 0; top: 0; width: 1536px; height: 1024px; overflow: visible; pointer-events: none; }
+-.wm-fog ellipse { fill: url(#wm-fog-g); opacity: .62; }
+-.wm-fog ellipse.open { animation: wm-lift 1.4s var(--ease) both; }
+-@keyframes wm-lift { to { opacity: 0; } }
+-.wm-haze { position: absolute; left: 0; right: 0; top: 0; height: 34%; pointer-events: none; background: linear-gradient(to bottom, rgba(120,150,190,.34), rgba(120,150,190,.12) 45%, transparent); }
+-/* Cloud shadows: a tile of soft dark blobs drifting across the viewport (a pure transform loop, one layer; off under reduced motion). */
+-.wm-clouds { position: absolute; left: 0; top: 0; width: calc(100% + 640px); height: calc(100% + 640px); pointer-events: none; opacity: .55;
+-  background-image: radial-gradient(ellipse 260px 150px at 120px 200px, rgba(0,4,14,.5), transparent 70%), radial-gradient(ellipse 320px 170px at 480px 520px, rgba(0,4,14,.45), transparent 70%), radial-gradient(ellipse 190px 120px at 340px 60px, rgba(0,4,14,.4), transparent 70%);
+-  background-size: 640px 640px; animation: wm-drift 70s linear infinite; }
+-@keyframes wm-drift { from { transform: translate(-640px, -640px); } to { transform: translate(0, 0); } }
+-@media (prefers-reduced-motion: reduce) { .wm-clouds { animation: none; } }
+-/* Zone names: carved display capitals on two lines over the land (W-worldmap), the count beneath an open zone, the zone's sign
+-   beneath a locked one (the rule once per zone); they scale with the square root of the zoom. */
+-.wm-name { position: absolute; transform: translate(-50%, -50%) scale(var(--invh)) rotate(-6deg); transform-origin: 50% 50%; text-align: center; pointer-events: none; white-space: nowrap; color: var(--cream); text-shadow: 0 2px 0 rgba(29,35,38,.55), 0 3px 12px rgba(0,0,0,.6), 0 0 26px rgba(0,0,0,.45); }
+-.wm-name b { display: block; font: 400 29px/.94 var(--display); letter-spacing: .05em; text-transform: uppercase; margin-right: -.05em; }
+-.wm-name b span { display: block; }
+-.wm-name small { display: block; margin-top: 5px; font: 800 12px/1 var(--sans); letter-spacing: .24em; color: rgba(239,227,200,.82); margin-right: -.24em; }
+-.wm-name.locked b { color: rgba(239,227,200,.7); }
+-.wm-name.under { opacity: .22; transition: opacity var(--t2) var(--ease); }
+-.wm-sign { display: inline-flex; flex-direction: column; align-items: center; margin-top: 7px; padding: 4px 10px 4px 22px; position: relative; border-radius: 2px; background: linear-gradient(180deg, #B98A55, #8E6236); box-shadow: inset 0 1px 0 rgba(255,230,190,.45), 0 0 0 1px rgba(40,24,10,.7), 0 3px 8px rgba(0,0,0,.55); font: 800 10px/1.25 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: #FFF4E2; text-shadow: 0 1px 0 rgba(40,20,5,.6); }
+-.wm-sign small { display: block; margin-top: 1px; font: 800 8.5px/1.2 var(--sans); letter-spacing: .08em; color: rgba(255,244,226,.8); }
+-.wm-padlock { position: absolute; left: 8px; top: 7px; width: 9px; height: 7px; border-radius: 1.5px; background: #FFF4E2; }
+-.wm-padlock::before { content: ''; position: absolute; left: 1.5px; top: -4.5px; width: 3px; height: 4px; border: 1.5px solid #FFF4E2; border-bottom: 0; border-radius: 3px 3px 0 0; }
+-/* Markers: a diamond on the terrain in the medal colour (blue = playground / Lab, white = open, grey + padlock = locked — the rule is on the zone's sign), a light spire under it, a leader line up-right to a small name plate. */
+-.wm-markers { position: absolute; left: 0; top: 0; width: 1536px; height: 1024px; }
+-.wm-marker { position: absolute; width: 0; height: 0; transform: scale(var(--inv)); transform-origin: 0 0; --mk: #EEF1F2; --mk2: #9AA6AE; }
+-.wm-marker.gold { --mk: #F7CF55; --mk2: #B7801A; }
+-.wm-marker.silver { --mk: #e4e9f0; --mk2: #8892a0; }
+-.wm-marker.bronze { --mk: #E09A62; --mk2: #8A4B22; }
+-.wm-marker.platinum { --mk: #3EE0D2; --mk2: #0B1417; }
+-.wm-marker.proving { --mk: #2FB8B0; --mk2: var(--teal); }
+-.wm-marker.locked { --mk: #F4F1EA; --mk2: #B9B2A2; }
+-/* FREE RIDE: a round teal pin with a white flag (W-worldmap), not a diamond. */
+-.wm-marker.proving .wm-diamond { width: 22px; height: 22px; border-radius: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle at 35% 30%, #4FD3C9, var(--teal) 70%); box-shadow: 0 0 0 2px #fff, 0 3px 8px rgba(0,0,0,.55); }
+-.wm-marker.proving .wm-diamond::after { content: ''; position: absolute; left: 7px; top: 5px; width: 10px; height: 12px; background: #fff; clip-path: polygon(0 0, 100% 22%, 18% 45%, 18% 100%, 0 100%); }
+-.wm-marker.proving.locked .wm-diamond { filter: saturate(.3) brightness(.9); }
+-.wm-marker.proving .wm-plate b { color: #7EE7DF; text-transform: uppercase; letter-spacing: .08em; }
+-.wm-marker .wm-hit { position: absolute; left: -23px; top: -23px; width: 46px; height: 46px; margin: 0; padding: 0; border: 0; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+-.wm-marker .wm-diamond { position: absolute; left: 50%; top: 50%; width: 17px; height: 17px; transform: translate(-50%, -50%) rotate(45deg); background: linear-gradient(135deg, #fff 0%, var(--mk) 38%, var(--mk2) 100%); box-shadow: 0 0 0 1.5px rgba(0,0,0,.55), 0 0 10px 2px color-mix(in srgb, var(--mk) 70%, transparent), 0 3px 6px rgba(0,0,0,.6); }
+-.wm-marker .wm-spire { position: absolute; left: -3px; top: -46px; width: 6px; height: 46px; pointer-events: none; background: linear-gradient(to top, color-mix(in srgb, var(--mk) 85%, #fff) 0%, color-mix(in srgb, var(--mk) 55%, transparent) 40%, transparent 100%); border-radius: 3px; opacity: .85; filter: blur(.4px); }
+-.wm-marker .wm-foot { position: absolute; left: -16px; top: -6px; width: 32px; height: 12px; border-radius: 50%; pointer-events: none; background: radial-gradient(ellipse at center, color-mix(in srgb, var(--mk) 60%, transparent), transparent 70%); }
+-.wm-marker.locked .wm-spire, .wm-marker.locked .wm-foot { opacity: .35; }
+-.wm-marker .wm-lock { position: absolute; left: 50%; top: 50%; width: 9px; height: 8px; transform: translate(-50%, -30%); display: none; border-radius: 2px; background: var(--coal); }
+-.wm-marker .wm-lock::before { content: ''; position: absolute; left: 1.5px; top: -5px; width: 4px; height: 6px; border: 1.5px solid var(--coal); border-bottom: 0; border-radius: 4px 4px 0 0; }
+-.wm-marker.locked .wm-lock { display: block; }
+-.wm-marker .wm-lead { position: absolute; left: 8px; top: -8px; width: 17px; height: 1px; background: rgba(255,255,255,.75); transform-origin: 0 0; transform: rotate(-32deg); pointer-events: none; }
+-.wm-marker .wm-plate { position: absolute; left: 22px; top: -28px; display: inline-flex; align-items: center; gap: .35em; height: 17px; padding: 0 7px 0 6px; border-radius: 3px; background: rgba(20,31,34,.9); box-shadow: 0 0 0 1px rgba(239,227,200,.18), 0 2px 8px rgba(0,0,0,.5); font: 700 10px/1 var(--sans); letter-spacing: .02em; color: var(--ink); white-space: nowrap; pointer-events: none; }
+-.wm-marker .wm-plate b { color: #fff; }
+-.wm-marker.locked .wm-plate { color: var(--ink-dim); }
+-.wm-marker .wm-plate .tag { font-style: normal; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; margin-left: 2px; }
+-.wm-marker .wm-plate .tag.next { background: var(--teal); color: #fff; box-shadow: 0 0 0 1px #7EE7DF; }
+-.wm-marker .wm-plate .tag.pro { background: rgba(255,255,255,.18); color: var(--ink); }
+-.wm-marker .wm-plate .tag.ghost { background: rgba(90,169,255,.25); color: #cfe6ff; }
+-/* The focused marker: the bike at its foot, an amber beacon climbing into the sky, its plate hidden under the card. */
+-.wm-marker.on { z-index: 3; --mk: #6FA8FF; --mk2: #1D4FB8; }
+-.wm-marker.on .wm-diamond { box-shadow: 0 0 0 2px #fff, 0 0 12px 3px rgba(111,168,255,.8), 0 3px 6px rgba(0,0,0,.6); }
+-.wm-marker.on .wm-plate, .wm-marker.on .wm-lead { display: none; }
+-.wm-beam .wm-beacon { position: absolute; left: -9px; bottom: 0; width: 18px; height: 320px; display: block; pointer-events: none; background: linear-gradient(to top, rgba(200,245,242,1), rgba(126,231,223,.8) 18%, rgba(47,184,176,.42) 48%, rgba(47,184,176,.12) 78%, transparent); box-shadow: 0 0 18px 4px rgba(47,184,176,.35); filter: blur(1px); border-radius: 9px; animation: wm-beacon 2.4s ease-in-out infinite alternate; }
+-.wm-beam .wm-beacon::after { content: ''; position: absolute; left: -22px; bottom: -14px; width: 62px; height: 28px; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(160,240,235,.85), rgba(47,184,176,.3) 50%, transparent 72%); }
+-/* The beam: its own layer under the markers (a plate is never drawn behind it), at the focused marker. */
+-.wm-beam { position: absolute; width: 0; height: 0; transform: scale(var(--inv)); transform-origin: 0 0; pointer-events: none; }
+-@keyframes wm-beacon { from { opacity: .75; } to { opacity: 1; } }
+-.wm-marker .wm-ring { position: absolute; left: -24px; top: -12px; width: 48px; height: 24px; border-radius: 50%; border: 2px solid rgba(255,255,255,.9); box-shadow: 0 0 12px rgba(111,168,255,.8), inset 0 0 10px rgba(111,168,255,.35); display: none; pointer-events: none; }
+-.wm-marker.on .wm-ring { display: block; }
+-.wm-marker .wm-bike { position: absolute; left: -15px; top: 4px; width: 30px; height: 20px; display: none; pointer-events: none; color: #6fb6ff; filter: drop-shadow(0 1px 2px rgba(0,0,0,.8)); }
+-.wm-marker.on .wm-bike { display: block; }
+-.wm-marker.on .wm-diamond { width: 20px; height: 20px; animation: wm-pulse 1.6s ease-in-out infinite alternate; }
+-@keyframes wm-pulse { from { box-shadow: 0 0 0 2px #fff, 0 0 10px 2px rgba(111,168,255,.7); } to { box-shadow: 0 0 0 2px #fff, 0 0 18px 5px rgba(111,168,255,.95); } }
+-.wm-marker.go .wm-diamond { animation: wm-go .42s var(--ease) both; }
+-@keyframes wm-go { to { transform: translate(-50%, -50%) rotate(45deg) scale(2.6); opacity: 0; } }
+-.wm-marker.shaded { opacity: .35; }
+-.wm-marker.shaded .wm-hit { pointer-events: none; }
+-/* Far zoom (the whole continent): plates fold away, diamonds shrink and stop taking pointers — a tap on the land flies to the nearest marker. */
+-.wm-scene.far .wm-marker .wm-plate { transform: scale(.8); transform-origin: 0 100%; left: 18px; top: -24px; }
+-.wm-scene.far .wm-marker .wm-plate .tag { display: none; }
+-.wm-scene.far .wm-lead { width: 15px; }
+-/* A name plate hangs up-right; placePlates() moves it left and / or down when that side meets less (PLATE_LEFT prefers left). */
+-.wm-marker.lead-left .wm-lead { left: -25px; transform-origin: 100% 0; transform: rotate(32deg); }
+-.wm-marker.lead-left .wm-plate { left: auto; right: 22px; }
+-.wm-scene.far .wm-marker.lead-left .wm-plate { left: auto; right: 18px; transform-origin: 100% 100%; }
+-.wm-marker.lead-down .wm-lead { top: 8px; transform: rotate(32deg); }
+-.wm-marker.lead-down.lead-left .wm-lead { transform: rotate(-32deg); }
+-.wm-marker.lead-down .wm-plate { top: 11px; }
+-.wm-scene.far .wm-marker.lead-down .wm-plate { top: 8px; transform-origin: 0 0; }
+-.wm-scene.far .wm-marker.lead-down.lead-left .wm-plate { transform-origin: 100% 0; }
+-.wm-scene.far .wm-hit { pointer-events: none; }
+-.wm-scene.far .wm-diamond { width: 13px; height: 13px; }
+-.wm-scene.far .wm-marker.on .wm-diamond { width: 16px; height: 16px; }
+-.wm-scene.far .wm-spire { height: 34px; top: -34px; }
+-.wm-scene.far .wm-beam .wm-beacon { height: 110px; width: 10px; left: -5px; opacity: .8; }
+-/* The zone gate: three vermilion chevrons across the road where it enters the locked land (its rule is on the zone's sign). */
+-.wm-gate { position: absolute; width: 0; height: 0; transform: scale(var(--inv)); transform-origin: 0 0; z-index: 2; }
+-.wm-gate .wm-hit { position: absolute; left: -23px; top: -23px; width: 46px; height: 46px; margin: 0; padding: 0; border: 0; background: transparent; cursor: pointer; }
+-.wm-gate .chev { position: absolute; left: -24px; top: -13px; width: 48px; display: flex; justify-content: center; transform-origin: 24px 13px; font: 400 26px/26px var(--display); color: var(--vermilion); text-shadow: 0 0 8px rgba(228,87,46,.9), 0 0 2px #000, 0 1px 2px #000; letter-spacing: -.12em; pointer-events: none; animation: wm-chev 1.2s ease-in-out infinite alternate; }
+-@keyframes wm-chev { from { opacity: .7; } to { opacity: 1; } }
+-.wm-gate.shaded { opacity: .35; }
+-.wm-gate.shaded .wm-hit { pointer-events: none; }
+-.wm-scene.far .wm-gate .wm-hit { pointer-events: none; }
+-/* The card, attached to the focused marker: code · tier · region, the name, best / target, the local board, GHOST. */
+-.wm-card { position: absolute; z-index: 4; transform: translate(26px, -14%) scale(var(--inv)); transform-origin: -26px 14%; width: 178px; padding: 8px 10px 9px; border-radius: 7px; background: linear-gradient(180deg, rgba(22,41,45,.96), rgba(14,26,29,.96)); box-shadow: 0 0 0 1px rgba(126,231,223,.28), 0 8px 22px rgba(0,0,0,.55); color: var(--ink); pointer-events: none; }
+-.wm-card::before { content: ''; position: absolute; left: -7px; top: 14%; width: 7px; height: 1px; background: rgba(255,255,255,.85); }
+-.wm-card.up { transform: translate(26px, -90%) scale(var(--inv)); transform-origin: -26px 90%; }
+-.wm-card.up::before { top: 90%; }
+-.wm-card.left { transform: translate(calc(-100% - 26px), -14%) scale(var(--inv)); transform-origin: calc(100% + 26px) 14%; }
+-.wm-card.left.up { transform: translate(calc(-100% - 26px), -90%) scale(var(--inv)); transform-origin: calc(100% + 26px) 90%; }
+-.wm-card.left::before { left: auto; right: -7px; }
+-.wm-scene.far .wm-card.up { transform: translate(18px, -90%) scale(calc(var(--inv) * .7)); transform-origin: -18px 90%; }
+-.wm-card .head { font: 800 9px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--ochre); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+-.wm-card .head b { color: #F2C14E; }
+-.wm-card .name { margin-top: 4px; font: 400 18px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+-.wm-card .times { margin-top: 4px; font: 700 12px/1 var(--mono); color: var(--ink-dim); white-space: nowrap; }
+-.wm-card .times b { color: var(--green); font-size: 14px; }
+-.wm-card .times b.none { color: var(--ink-mute); }
+-.wm-card .times b.behind { color: var(--ink); }
+-.wm-card .rule { margin-top: 5px; font: 800 9.5px/1.3 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ochre); }
+-.wm-card .board { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 6px; }
+-.wm-card .board span { font: 700 9.5px/1 var(--mono); padding: 3px 4px; border-radius: 2px; background: rgba(255,255,255,.07); color: var(--ink-dim); }
+-.wm-card .board span.gold { color: var(--gold); } .wm-card .board span.silver { color: var(--silver); } .wm-card .board span.bronze { color: var(--bronze); } .wm-card .board span.platinum { color: var(--plat); }
+-.wm-card .wm-card-ghost { display: inline-flex; align-items: center; gap: .4em; margin-top: 6px; height: 18px; padding: 0 7px 0 6px; border-radius: 3px; background: rgba(90,169,255,.16); color: #cfe6ff; font: 700 10px/1 var(--font); letter-spacing: .12em; text-transform: uppercase; }
+-.wm-card .wm-card-ghost[hidden] { display: none; }
+-.wm-scene.far .wm-card { transform: translate(18px, -14%) scale(calc(var(--inv) * .7)); transform-origin: -18px 14%; }
+-.wm-scene.far .wm-card.left { transform: translate(calc(-100% - 18px), -14%) scale(calc(var(--inv) * .7)); transform-origin: calc(100% + 18px) 14%; }
+-.wm-scene.far .wm-card.left.up { transform: translate(calc(-100% - 18px), -90%) scale(calc(var(--inv) * .7)); transform-origin: calc(100% + 18px) 90%; }
+-/* Screen-space chrome: the badge + build stamp top-left, ‹ MENU top-right, progress bottom-left, RIDE + GHOST bottom-right. */
+-.wm-brand { position: absolute; left: calc(var(--s5) + var(--sal)); top: calc(var(--s4) + var(--sat)); z-index: 4; pointer-events: none; }
+-.wm-brand .plate { display: inline-flex; align-items: center; gap: .6em; min-height: 34px; padding: 0 1.3em 0 .9em; background: rgba(20,31,34,.9); box-shadow: inset 4px 0 0 var(--vermilion), 0 4px 14px rgba(0,0,0,.4); clip-path: polygon(0 0, 100% 0, calc(100% - .7em) 100%, 0 100%); }
+-.wm-brand .plate b.wordmark { width: 7.2rem; filter: none; }
+-.wm-brand .plate span { font: 800 .6rem/1 var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--cream); padding-left: .6em; border-left: 1px solid rgba(255,255,255,.2); }
+-.wm-brand .stamp { margin-top: 4px; padding-left: .9em; font: 500 .6rem/1 var(--font); letter-spacing: .06em; color: var(--ink-mute); text-shadow: 0 1px 2px #000; }
+-.wm-safe { position: absolute; left: 0; top: 0; width: var(--sal); height: var(--sar); visibility: hidden; pointer-events: none; }
+-.worldmap-screen .backbtn { top: calc(var(--s4) + var(--sat)); }
+-.wm-progress { position: absolute; left: calc(var(--s5) + var(--sal)); bottom: calc(var(--s4) + var(--sab)); z-index: 4; display: flex; align-items: center; gap: 1.1em; min-height: 42px; padding: 0 1.1em 0 1em; border-radius: 10px; background: rgba(16,28,31,.9); box-shadow: 0 0 0 1px rgba(239,227,200,.16), 0 4px 14px rgba(0,0,0,.4); pointer-events: none; white-space: nowrap; }
+-.wm-progress .n { font: 400 1.15rem/1 var(--display); text-transform: uppercase; color: var(--ink); }
+-.wm-progress .n b { color: #fff; font-size: 1.4rem; }
+-.wm-progress .dots { display: flex; gap: .95em; padding-left: 1.1em; border-left: 1px solid rgba(239,227,200,.22); font: 400 1rem/1 var(--display); color: var(--ink); }
+-.wm-progress .dots span { display: inline-flex; align-items: center; gap: .35em; }
+-.wm-progress .dots svg { width: 1.3em; height: 1.3em; filter: drop-shadow(0 1px 2px rgba(0,0,0,.5)); }
+-.wm-actions { position: absolute; right: calc(var(--s5) + var(--sar)); bottom: calc(var(--s4) + var(--sab)); z-index: 4; display: flex; gap: 10px; }
+-#ui .wm-actions button { display: inline-flex; align-items: center; gap: .55em; min-height: 46px; padding: 0 1.2em; border: 0; border-radius: 6px; cursor: pointer; font: 400 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: .02em; -webkit-tap-highlight-color: transparent; }
+-/* RIDE: the cream card of the home screen with the teal word (W-worldmap). */
+-#ui .wm-actions .wm-ride { min-height: 52px; background: var(--contour) 0 0 / 240px 160px, linear-gradient(180deg, #F8EEDA, var(--cream) 55%, var(--cream-2)); color: var(--teal); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -3px 0 rgba(15,92,99,.14), 0 8px 22px rgba(8,14,16,.45); border-radius: 12px; padding: 0 1.4em; font-size: 1.35rem; }
+-#ui .wm-actions .wm-ride small { font: 800 .62rem/1 var(--sans); letter-spacing: .1em; opacity: .75; }
+-#ui .wm-actions .wm-ride .arrow { font-size: 1.1em; }
+-#ui .wm-actions .wm-ride[disabled] { background: rgba(16,28,31,.9); color: var(--ink-dim); box-shadow: 0 0 0 1px rgba(201,154,75,.5); cursor: default; }
+-#ui .wm-actions .wm-ride[disabled] small { color: var(--ochre); opacity: 1; }
+-#ui .wm-actions .wm-ghost { border-radius: 12px; background: rgba(16,28,31,.9); color: var(--ink); box-shadow: 0 0 0 1px rgba(255,255,255,.28), 0 4px 14px rgba(0,0,0,.4); }
+-#ui .wm-actions .wm-ghost[hidden] { display: none; }
+-#ui .wm-actions button.on { box-shadow: 0 0 0 3px var(--cream), 0 0 0 5px rgba(15,92,99,.9), 0 8px 22px rgba(8,14,16,.45); }
+-#ui .wm-actions button:active { filter: brightness(1.12); }
+-.worldmap-screen .legend { position: absolute; left: 50%; bottom: calc(var(--s3) + var(--sab)); transform: translateX(-50%); z-index: 3; pointer-events: none; opacity: .75; }
+-@media (max-height: 460px) { .wm-progress { gap: .9em; } .wm-progress .dots { gap: .75em; padding-left: .9em; } .worldmap-screen .legend { display: none; } }
++.worldmap-screen { background:#0b4757; overflow:hidden; font-family:var(--font); }
++.worldmap-screen.leave { transition:opacity var(--t3) var(--ease); opacity:0; }
++.wm3-view,.wm3-canvas,.wm3-targets,.wm3-names { position:absolute; inset:0; width:100%; height:100%; }
++.wm3-view { overflow:hidden; touch-action:none; cursor:grab; user-select:none; -webkit-user-select:none; }
++.wm3-view:active { cursor:grabbing; }
++.wm3-canvas { display:block; }
++.wm3-targets,.wm3-names { pointer-events:none; }
++.wm3-place { position:absolute; transform:translate(-50%,-50%); width:48px; height:48px; padding:0; margin:0; border:0; border-radius:50%; background:transparent; color:transparent; font-size:0; pointer-events:auto; cursor:pointer; -webkit-tap-highlight-color:transparent; }
++.wm3-view.no-webgl { background:radial-gradient(ellipse at center,#386d68,#0b4757); }
++.wm3-view.no-webgl .wm3-place { background:#d16544; color:#fff8e6; border:3px solid #fff2d4; }
++.wm3-view.no-webgl .wm3-place::after { content:attr(data-code); font:800 11px/44px var(--sans); }
++.wm3-place[hidden] { display:none; }
++.wm3-place.on { box-shadow:0 0 18px 4px rgba(57,200,210,.45); }
++.wm3-place:focus-visible { outline:3px solid #fff; outline-offset:1px; }
++.wm3-place.go { animation:wm3-launch .4s ease-out both; }
++@keyframes wm3-launch { to { transform:translate(-50%,-50%) scale(2); opacity:0; } }
++.wm3-region { position:absolute; transform:translate(-50%,-50%); text-align:center; color:#fff5d6; text-shadow:0 2px 8px #102d33,0 1px 2px #091e24; white-space:nowrap; }
++.wm3-region b { display:block; font:400 clamp(15px,2.3vw,25px)/1 var(--display); text-transform:uppercase; letter-spacing:.05em; }
++.wm3-region small { display:block; margin-top:4px; font:800 9px/1 var(--sans); letter-spacing:.12em; }
++.wm3-region.locked { color:#d5d7d0; opacity:.7; }
++.wm3-region[hidden] { display:none; }
++.wm3-brand { position:absolute; top:calc(15px + var(--sat)); left:calc(18px + var(--sal)); z-index:4; display:flex; align-items:center; gap:10px; min-height:38px; padding:4px 14px; color:#fff6df; background:rgba(12,35,41,.84); border-left:4px solid var(--vermilion); border-radius:3px; box-shadow:0 5px 16px #071b2466; pointer-events:none; }
++.wm3-brand b { display:block; width:124px; }
++.wm3-brand span { font:800 10px/1 var(--sans); letter-spacing:.18em; border-left:1px solid #ffffff66; padding-left:10px; }
++.wm3-brand small { display:block; font:600 9px/1 var(--mono); color:#b9d1d1; }
++.worldmap-screen .backbtn { top:calc(15px + var(--sat)); }
++.wm3-card { position:absolute; z-index:4; left:calc(18px + var(--sal)); top:calc(69px + var(--sat)); width:210px; min-height:82px; padding:10px 12px; border-radius:9px; color:#fff8df; background:linear-gradient(155deg,rgba(15,55,60,.97),rgba(10,30,35,.97)); box-shadow:0 0 0 1px #7ce3dc88,0 8px 22px #071820aa; pointer-events:none; }
++.wm3-card small { display:block; color:#f9cd78; font:800 9px/1.2 var(--sans); letter-spacing:.16em; text-transform:uppercase; }
++.wm3-card b { display:block; margin:5px 0; font:400 20px/1 var(--display); text-transform:uppercase; }
++.wm3-card>span { display:block; font:700 12px/1.3 var(--mono); color:#e1e5d7; }
++.wm3-card .rule { color:#f2ba75; }
++.wm3-card .board { display:flex; gap:4px; margin-top:6px; }
++.wm3-card .board span { font:700 9px/1 var(--mono); padding:3px 4px; border-radius:2px; background:#ffffff22; }
++.wm3-progress { position:absolute; left:calc(18px + var(--sal)); bottom:calc(14px + var(--sab)); z-index:4; min-height:44px; display:flex; gap:8px; align-items:center; padding:0 12px; border-radius:9px; background:rgba(12,35,41,.91); color:#fff5dd; font:800 10px/1 var(--sans); letter-spacing:.08em; white-space:nowrap; }
++.wm3-progress>b { font:400 21px/1 var(--display); }
++.wm3-progress>span { display:flex; gap:5px; margin-left:5px; padding-left:8px; border-left:1px solid #ffffff44; }
++.wm3-progress>span>span { display:flex; align-items:center; gap:3px; }
++.wm3-progress svg { width:17px; height:17px; }
++.wm3-actions { position:absolute; right:calc(18px + var(--sar)); bottom:calc(14px + var(--sab)); z-index:4; display:flex; gap:8px; }
++#ui .wm3-actions button { min-height:48px; padding:0 16px; border:0; border-radius:9px; cursor:pointer; font:400 19px/1 var(--display); letter-spacing:.02em; }
++#ui .wm3-ride { background:#f8ecd3; color:#0d6870; box-shadow:0 4px 14px #061b24aa,inset 0 -3px 0 #136b7528; }
++#ui .wm3-ride small { margin-left:5px; font:800 10px/1 var(--sans); letter-spacing:.06em; }
++#ui .wm3-ride[disabled] { color:#d1d6d1; background:#233e41; cursor:default; }
++#ui .wm3-ghost { color:#f7e7c7; background:#193c44; box-shadow:0 0 0 1px #ffffff44; }
++#ui .wm3-ghost[hidden] { display:none; }
++#ui .wm3-actions button.on { outline:3px solid #fff7d7; outline-offset:2px; }
++.wm3-hint { position:absolute; z-index:3; top:calc(65px + var(--sat)); right:calc(18px + var(--sar)); color:#edf6e8; text-shadow:0 2px 4px #10272d; font:700 10px/1 var(--sans); letter-spacing:.06em; pointer-events:none; }
++.worldmap-screen .legend { position:absolute; left:50%; bottom:calc(17px + var(--sab)); transform:translateX(-50%); z-index:3; pointer-events:none; }
++@media(max-height:470px) { .worldmap-screen .legend,.wm3-hint { display:none; } .wm3-card { width:174px; min-height:70px; padding:8px 9px; } .wm3-card b { font-size:17px; } }
++@media(max-width:650px) { .wm3-brand { gap:6px; padding:3px 9px; } .wm3-brand b { width:100px; } .wm3-brand span { font-size:8px; } .wm3-progress>span { display:none; } .wm3-card { width:156px; } #ui .wm3-actions button { font-size:16px; padding:0 10px; } #ui .wm3-ride small { display:none; } }
+ `;
+ 
+ export function injectWorldMapStyles(): void {
+   if (document.getElementById('worldmap-css')) return;
+-  const el = document.createElement('style');
+-  el.id = 'worldmap-css';
+-  el.textContent = WORLD_MAP_CSS;
+-  document.head.appendChild(el);
++  const el = document.createElement('style'); el.id = 'worldmap-css'; el.textContent = WORLD_MAP_CSS; document.head.appendChild(el);
+ }
