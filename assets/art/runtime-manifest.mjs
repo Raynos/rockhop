@@ -26,6 +26,9 @@ export const RETIRED = new Set([
   // tracks are dev-only now (src/tracks `RETIRED_TRACKS`), so their cards never show; the ids and file names carried
   // retired level names ("x3-gauntlet", "see-saw", "stairway") into both manifests.
   ...['b1-first-ride', 'b2-lean-back', 'b3-kicker-row', 'e1-uphill-weight', 'e2-rear-wheel-first', 'e3-stairway', 'm1-hop-up', 'm2-drum-roll', 'm3-see-saw', 'h1-wheelie-wire', 'h2-gap-chain', 'h3-fire-line', 'x1-vertical-limit', 'x2-pipe-dream', 'x3-gauntlet'].map((id) => `thumb-${id}`),
+  // Ask 132: the four Free Ride tracks are no longer in the shipped catalog. Keep their source art and
+  // provenance in the full manifest, but exclude the thumbnails from the runtime/offline download plan.
+  ...['p-coast', 'p-alpine', 'p-quarry', 'p-snowline'].map((id) => `thumb-${id}`),
 ]);
 
 /** Per-asset fields the runtime reads. Anything else (prompt, src, note, shot, recording, …) stays in the full manifest. */
@@ -64,7 +67,7 @@ export function writeManifests(full) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const full = JSON.parse(readFileSync(FULL_MANIFEST, 'utf8'));
-  const kept = full.assets.filter((a) => !RETIRED.has(a.id));
-  writeManifests(kept.length === full.assets.length ? full : fullManifest(kept, full.rejected, full.generatedAt));
-  console.log(`art manifests: ${kept.length} assets (full ${FULL_MANIFEST}, runtime ${RUNTIME_MANIFEST})`);
+  const runtime = runtimeManifest(full);
+  writeFileSync(RUNTIME_MANIFEST, JSON.stringify(runtime, null, 1));
+  console.log(`art runtime manifest: ${runtime.assets.length} assets (${RUNTIME_MANIFEST}); full provenance preserved (${FULL_MANIFEST})`);
 }

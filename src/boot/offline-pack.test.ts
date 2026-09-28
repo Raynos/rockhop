@@ -35,6 +35,19 @@ describe('the offline pack (ask 59: one tier, no link-preview card)', () => {
     expect(summed).toBe(OFFLINE_PACK_BYTES['1x']);
   });
 
+  it('keeps retired Free Ride thumbnails in the source record but out of the shipped pack', () => {
+    const full = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'assets/art/manifest.json'), 'utf8')) as { assets: { id: string }[] };
+    const runtimeIds = new Set(raw.assets.map((entry) => entry.id));
+    const fullIds = new Set(full.assets.map((entry) => entry.id));
+    for (const id of ['p-coast', 'p-alpine', 'p-quarry', 'p-snowline']) {
+      expect(fullIds.has(`thumb-${id}`)).toBe(true);
+      expect(runtimeIds.has(`thumb-${id}`)).toBe(false);
+      expect(table[`art:thumb-${id}`]).toBeUndefined();
+      expect(urls.some(([url]) => url.includes(`/thumbs/${id}.webp`))).toBe(false);
+    }
+    expect(raw.assets.filter((entry) => entry.id.startsWith('thumb-'))).toHaveLength(12);
+  });
+
   it('takes one world-map tier, all five regions, and never the other tier', () => {
     const wm = worldMapUrls();
     expect(wm.filter((u) => u.includes('-1024.webp'))).toHaveLength(REGIONS.length + 1); // five regions + the world plate

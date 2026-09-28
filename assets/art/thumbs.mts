@@ -46,10 +46,6 @@ export const THUMB_X: Record<string, { x: number; what: string }> = {
   's1-lift-line': { x: 353.9, what: 'the lift tower platform' },
   's2-cornice': { x: 139.9, what: 'the wind cornice' },
   's3-whiteout': { x: 197, what: 'the avalanche fence ledge' },
-  'p-coast': { x: 278, what: 'the container yard' },
-  'p-alpine': { x: 141.6, what: 'the log see-saw' },
-  'p-quarry': { x: 58.4, what: 'the conveyor' },
-  'p-snowline': { x: 109.5, what: 'the snow-cat' },
 };
 
 const sh = (cmd: string, args: string[]): string => execFileSync(cmd, args, { stdio: ['ignore', 'pipe', 'inherit'] }).toString().trim();
