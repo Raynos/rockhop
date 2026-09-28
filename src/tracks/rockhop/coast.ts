@@ -1,6 +1,6 @@
 /**
  * COAST — the coastal scrapyard (C-ride, D20): containers, cranes, junk piles, rusted hulls, pallets, tyres,
- * buoys, a harbour at low tide. Beginner -> easy. The zone teaches the bike: throttle, the first lean back, the
+ * buoys, a harbour at low tide. The zone teaches the bike: braking, the first lean back, the
  * jump, the climb and the rear-wheel-first landing, each in the yard's own kit.
  *
  * Authoring numbers are the measured physics-v2 envelope (`FEEL`, docs/design/tracks.md §0): straight lips
@@ -10,28 +10,22 @@
 import { rockhop } from './builder';
 
 /**
- * C1 LOW TIDE — the tide is out and the causeway is dry. TEACHES throttle: hold it up the slipway, keep it
- * steady over the tyre line and the ripples, ease it down the gangway. DEMANDS the causeway: up a pallet ramp onto
- * a row of containers (stepping up 0.3 m a container, a pallet wedge up each step) and off the end down a 12.5 x h
- * gangway. No jump anywhere: every rise is a cosine grounded at 20 m/s.
- *
- * Stranger round rockhop-r1: the containers stepped up as bare 0.3 m faces. At full gas (~17 m/s) the pallet ramp's
- * top floats the bike onto the end of the first container, the front wheel hits the face, the rear bucks off it and
- * the bike endoes into the second step (crash x 327.7). Track 1 has to clear first time on held gas, so each step is
- * now a 4 m pallet wedge (4.3 deg): held gas, coasting, and a stop-start respawn at the checkpoint all roll them.
+ * C1 LOW TIDE — the tide is out and the causeway is dry. TEACHES controlled braking: after Marker 2,
+ * the rider must ease off to settle a steep pallet ramp and land level on the container deck. Holding GO
+ * through that ramp repeatedly fails on both bikes. The later causeway retains its pallet-wedge climb.
  */
 export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', {
-  technique: 'throttle control',
-  demands: 'the causeway: a pallet ramp onto three containers, stepping up 0.3 m a container on pallet wedges, and the gangway down',
+  technique: 'brake before the beached ramp',
+  demands: 'ease off after Marker 2 to settle the pallet ramp and land level on the deck',
   idea: 'the harbour at low tide: ride the dry causeway out to the containers',
-  hero: 'The Causeway',
-  attemptsBand: [1, 1],
+  hero: 'Ease Off for the Beached Ramp',
+  attemptsBand: [1, 2], // provisional until real-time touch strangers; paused-step blind play took four attempts
   targetTimeS: 50, // gold: skill-3 bot 29.72 s x 1.6 = 47.5, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
 })
   .hint('Hold the gas up the slipway')
   .hint('Steady gas over the tyres')
-  .hint('Stay on the gas up the containers')
-  .hint('Ease off down the gangway')
+  .hint('Ease off after Marker 2; roll up the pallet ramp')
+  .hint('Level the bike on the deck, then gas out')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Slipway')
   .flat(6)
@@ -56,13 +50,17 @@ export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', 
   .ramp({ length: 4, height: 0.3, direction: 'down', surface: 'wood', prop: 'pallet' })
   .flat(12)
   .checkpoint()
-  .flat(6)
-  .wave(32, 0.8, 20) // the sandbars: three, lower each time
-  .flat(3)
-  .wave(30, 0.6, 20)
-  .flat(3)
-  .wave(28, 0.4, 20)
-  .flat(10)
+  .flat(12) // checkpoint sightline before the braking marker
+  .arch({ style: 'girder', span: 10, height: 6 })
+  .camera({ mode: 'side-tight', zoomBias: -0.4 })
+  .setPiece('balance', 'Ease Off for the Beached Ramp')
+  .flat(18)
+  .kickerPlank({ angleDeg: 22, rise: 2.2 })
+  .box({ width: 12, height: 2.2, surface: 'metal', prop: 'container' })
+  .ramp({ length: 28, height: 2.2, direction: 'down', surface: 'wood', prop: 'gangway' })
+  .endSetPiece()
+  .camera({ mode: 'side' })
+  .flat(22)
   .checkpoint()
   .flat(8)
   .camera({ mode: 'side', zoomBias: 0.2 })

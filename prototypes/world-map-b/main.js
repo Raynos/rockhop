@@ -50,10 +50,7 @@ const fill = new THREE.DirectionalLight('#9ac8d9', .72); fill.position.set(5, 8,
 const mat = (color, roughness=1, metalness=0) => new THREE.MeshStandardMaterial({color, roughness, metalness});
 const wood = mat('#4f2c19', .86), darkWood = mat('#291c13', .92), plank = mat('#795037', .88);
 const steel = mat('#534e47', .63, .35), rust = mat('#9a4f2c', .8, .15), linen = new THREE.MeshStandardMaterial({color:'#e2b95f',side:THREE.DoubleSide,roughness:.88});
-const paleStone = mat('#c1b89b'), darkStone=mat('#645e4d'), snow=mat('#eef1eb'), snowShadow=mat('#bccdd0');
-const grassMats = ['#a69c5f','#626d45','#947d50','#bdad71'].map(c=>mat(c));
-const pineMats = ['#193d35','#315741','#42684b','#244b42','#456b51'].map(c=>mat(c));
-const snowPineMats = ['#526866','#728582','#aec0b7'].map(c=>mat(c));
+const paleStone = mat('#c1b89b'), darkStone=mat('#645e4d'), snowShadow=mat('#bccdd0');
 
 let seed=32817; function random(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;}
 const gauss=(x,z,cx,cz,sx,sz)=>Math.exp(-(((x-cx)/sx)**2+((z-cz)/sz)**2));
@@ -97,7 +94,7 @@ function beamBetween(a,b,thickness,material,parent=map){
 box(19.2,.16,10.05,darkWood,0,-.65,0);
 box(19.0,.58,9.85,wood,0,-.29,0);
 box(18.65,.1,9.52,plank,0,.04,0);
-for(let edge of [-1,1]){
+for(const edge of [-1,1]){
   box(19.0,.08,.1,darkWood,0,-.26,edge*4.87);
   box(.1,.08,9.75,darkWood,edge*9.43,-.26,0);
 }
@@ -228,7 +225,7 @@ function makeMountain(x,z,w,h,color){
  return addMesh(g,new THREE.MeshStandardMaterial({map:x>4.5?rockColdTex:rockWarmTex,vertexColors:true,flatShading:true,roughness:1,side:THREE.DoubleSide}),[0,0,0]);
 }
 for(let i=0;i<48;i++){
- let x=4.7+random()*4.2,z=-4.1+random()*8.2;
+ const x=4.7+random()*4.2,z=-4.1+random()*8.2;
  const h=.25+random()*1.17,w=.19+random()*.35;
  makeMountain(x,z,w,h,i%4? snowShadow:darkStone);
 }
@@ -280,7 +277,7 @@ function ribbon(width,yOffset,material,uvScale){
    const p=samples[i],before=samples[Math.max(0,i-1)],after=samples[Math.min(samples.length-1,i+1)];
    if(i)distance+=samples[i-1].distanceTo(p);
    const tx=after.x-before.x,tz=after.z-before.z,len=Math.hypot(tx,tz)||1,nx=-tz/len,nz=tx/len;
-   for(let side of [-1,1]){
+   for(const side of [-1,1]){
      const x=p.x+nx*width*.5*side,z=p.z+nz*width*.5*side;
      positions.push(x,Math.max(p.y,terrain(x,z)+.045)+yOffset,z);uvs.push(side<0?0:1,distance/uvScale);
    }
@@ -520,7 +517,7 @@ for(let i=1;i<5;i++){
 const stageNames=['The Dock Run','Salt Spray','Harbor Leap','Pine Trail','Ravine Pass','Timber Bridge','Dust Bowl','Quarry Climb','Iron Crossing','Frostline','Lift Ridge','The Summit'];
 const biomes=['Coast','Forest','Quarry','Snowline'];
 const towerTargets=[],towerGroups=[];
-function flagShape(color){const shape=new THREE.Shape();shape.moveTo(0,0);shape.lineTo(.37,.08);shape.lineTo(.33,.32);shape.lineTo(0,.3);shape.closePath();return new THREE.ShapeGeometry(shape);}
+function flagShape(){const shape=new THREE.Shape();shape.moveTo(0,0);shape.lineTo(.37,.08);shape.lineTo(.33,.32);shape.lineTo(0,.3);shape.closePath();return new THREE.ShapeGeometry(shape);}
 for(let i=0;i<12;i++){
  const t=.035+i*.079;const p=route.getPoint(t),ahead=route.getPoint(Math.min(1,t+.006));
  const dir=new THREE.Vector2(ahead.x-p.x,ahead.z-p.z).normalize(),normal=new THREE.Vector2(-dir.y,dir.x);
@@ -530,8 +527,8 @@ for(let i=0;i<12;i++){
  for(const dx of [-.075,.075]){beamBetween([dx,.07,-.07],[dx*.55,.82,-.07],.033,rust,tower);beamBetween([dx,.07,.07],[dx*.55,.82,.07],.033,rust,tower);}
  for(const yy of [.24,.42,.61,.79]){box(.18,.025,.16,steel,0,yy,0,tower);}
  box(.27,.09,.27,darkWood,0,.83,0,tower);
- const pole=cylinder(.018,.018,.47,darkWood,0,1.1,0,tower);
- const flag=addMesh(flagShape(i<3?'#d76037':i<6?'#d8953c':i<9?'#db7241':'#e75b43'),linen,[0,1.01,0],tower);
+ cylinder(.018,.018,.47,darkWood,0,1.1,0,tower);
+ const flag=addMesh(flagShape(),linen,[0,1.01,0],tower);
  flag.material=mat(i<3?'#e46535':i<6?'#e99e37':i<9?'#dc693e':'#e7533f');flag.material.side=THREE.DoubleSide;
  flag.rotation.y=Math.PI/2;
  const number=addMesh(new THREE.PlaneGeometry(.29,.22),new THREE.MeshBasicMaterial({map:textTexture(String(i+1).padStart(2,'0'),'#d7ba80','#30302a',256,192),side:THREE.DoubleSide}),[0,.55,.092],tower);number.castShadow=false;
@@ -548,8 +545,8 @@ for(const x of [-9.3,9.3])for(const z of [-4.78,4.78]){const nail=cylinder(.06,.
 // Table and distant studio darkness.
 const tabletop=addMesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:'#6b4931',map:texture('dark_wood',45,45),roughness:.9}),[0,-.75,0],scene);tabletop.rotation.x=-Math.PI/2;tabletop.castShadow=false;
 
-let pointerDown=false,downX=0,downY=0,lastX=0,lastY=0,dragDistance=0;
-renderer.domElement.addEventListener('pointerdown',e=>{pointerDown=true;downX=lastX=e.clientX;downY=lastY=e.clientY;dragDistance=0;renderer.domElement.setPointerCapture(e.pointerId);});
+let pointerDown=false,lastX=0,lastY=0,dragDistance=0;
+renderer.domElement.addEventListener('pointerdown',e=>{pointerDown=true;lastX=e.clientX;lastY=e.clientY;dragDistance=0;renderer.domElement.setPointerCapture(e.pointerId);});
 renderer.domElement.addEventListener('pointermove',e=>{if(!pointerDown)return;const dx=e.clientX-lastX,dy=e.clientY-lastY;dragDistance+=Math.abs(dx)+Math.abs(dy);goalAzimuth-=dx*.006;goalPolar=THREE.MathUtils.clamp(goalPolar+dy*.003,.62,1.28);lastX=e.clientX;lastY=e.clientY;});
 renderer.domElement.addEventListener('pointerup',e=>{pointerDown=false;if(dragDistance<7)selectAt(e.clientX,e.clientY);});
 renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();goalRadius=THREE.MathUtils.clamp(goalRadius+e.deltaY*.018,7.8,37);},{passive:false});

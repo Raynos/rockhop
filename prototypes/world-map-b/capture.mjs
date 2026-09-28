@@ -11,7 +11,7 @@ const errors=[];
 page.on('pageerror',e=>errors.push(String(e)));
 const start=performance.now();
 await page.goto('http://127.0.0.1:5187/',{waitUntil:'networkidle'});
-await page.waitForFunction(()=>window.__mapB?.getState().towers===12&&window.__mapB?.getState().terrainReady,{timeout:30000});
+await page.waitForFunction(()=>globalThis.__mapB?.getState().towers===12&&globalThis.__mapB?.getState().terrainReady,{timeout:30000});
 const readyMs=Math.round(performance.now()-start);
 await page.waitForTimeout(900);
 await page.screenshot({path:path.join(output,'front-landscape.png')});
@@ -19,25 +19,25 @@ await page.mouse.move(680,280);await page.mouse.down();
 for(let i=0;i<36;i++){await page.mouse.move(680+i*6,280+i*.75);await page.waitForTimeout(25);}
 await page.mouse.up();await page.waitForTimeout(850);
 await page.screenshot({path:path.join(output,'rotated-landscape.png')});
-const stage=await page.evaluate(()=>window.__mapB.stageScreenPosition(7));
+const stage=await page.evaluate(()=>globalThis.__mapB.stageScreenPosition(7));
 await page.mouse.click(stage.x,stage.y);
-await page.waitForFunction(()=>window.__mapB.getState().selected===8,{timeout:5000});
+await page.waitForFunction(()=>globalThis.__mapB.getState().selected===8,{timeout:5000});
 await page.waitForTimeout(400);
 await page.screenshot({path:path.join(output,'selected-stage.png')});
-for(let i=0;i<5;i++){await page.evaluate(()=>window.__mapB.rotateBy(Math.PI/7));await page.waitForTimeout(300);}
+for(let i=0;i<5;i++){await page.evaluate(()=>globalThis.__mapB.rotateBy(Math.PI/7));await page.waitForTimeout(300);}
 await page.waitForTimeout(450);
-const state=await page.evaluate(()=>window.__mapB.getState());
+const state=await page.evaluate(()=>globalThis.__mapB.getState());
 const videoPath=await page.video().path();
 await context.close();
 const mobile=await browser.newContext({viewport:{width:844,height:390},deviceScaleFactor:1});
 const mobilePage=await mobile.newPage();await mobilePage.goto('http://127.0.0.1:5187/',{waitUntil:'networkidle'});
-await mobilePage.waitForFunction(()=>window.__mapB?.getState().towers===12&&window.__mapB?.getState().terrainReady);await mobilePage.waitForTimeout(450);
+await mobilePage.waitForFunction(()=>globalThis.__mapB?.getState().towers===12&&globalThis.__mapB?.getState().terrainReady);await mobilePage.waitForTimeout(450);
 await mobilePage.screenshot({path:path.join(output,'mobile-landscape.png')});
 const mobileSelections=[];
 for(let i=0;i<12;i++){
-  const position=await mobilePage.evaluate(i=>window.__mapB.stageScreenPosition(i),i);
+  const position=await mobilePage.evaluate(i=>globalThis.__mapB.stageScreenPosition(i),i);
   await mobilePage.mouse.click(position.x,position.y);
-  const selected=await mobilePage.evaluate(()=>window.__mapB.getState().selected);
+  const selected=await mobilePage.evaluate(()=>globalThis.__mapB.getState().selected);
   mobileSelections.push(selected);
   if(selected!==i+1)throw new Error(`Mobile tower ${i+1} selected ${selected}`);
   if(i===7){await mobilePage.waitForTimeout(800);await mobilePage.screenshot({path:path.join(output,'mobile-selected.png')});}

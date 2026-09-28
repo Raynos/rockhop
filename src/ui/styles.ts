@@ -543,6 +543,15 @@ export const HUD_CSS = /* css */ `
 .hud-device.show { opacity: 1; }
 .hud-device i { width: .55em; height: .55em; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
 
+/* C1 teaching cue: fixed on the display while the world scrolls, visible only in the braking lane. */
+.skill-cue { position: absolute; left: calc(18px + var(--sal)); top: calc(56px + var(--sat)); width: 252px; height: 66px; box-sizing: border-box; display: none; align-items: center; gap: 11px; padding: 8px 12px; border: 2px solid #ffbe50; border-radius: 11px; background: rgba(9,39,45,.94); box-shadow: 0 3px 0 #642d1c, 0 8px 20px rgba(0,0,0,.25); color: #fff5d8; font-family: system-ui,-apple-system,sans-serif; text-align: left; pointer-events: none; }
+.skill-cue.show { display: flex; }
+.skill-cue-icon { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border-radius: 7px; background: #ffbd4e; color: #163b3e; font-size: 25px; font-weight: 950; line-height: 1; }
+.skill-cue-copy { display: flex; flex-direction: column; min-width: 0; }
+.skill-cue-copy strong { font-size: 20px; line-height: 22px; font-weight: 950; letter-spacing: .07em; white-space: nowrap; }
+.skill-cue-copy small { font-size: 13px; line-height: 17px; font-weight: 800; white-space: nowrap; color: #f6ddaa; }
+.hud.under-overlay .skill-cue, .hud.results-on .skill-cue, .hud.replay-on .skill-cue, .hud.review-on .skill-cue { display: none; }
+
 .hud-center { position: relative; display: flex; align-items: center; gap: .6rem; background: var(--slab); border: 1px solid var(--line); border-radius: .5rem; padding: .3rem .9rem .3rem 1rem; box-shadow: var(--plate); }
 .hud-timer { font-size: 2.35rem; line-height: 1; font-weight: 800; font-style: italic; letter-spacing: .01em; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; text-shadow: var(--outline); min-width: 7.2ch; text-align: center; }
 .hud-timer.frozen { color: var(--green); }

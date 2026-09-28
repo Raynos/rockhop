@@ -12,7 +12,7 @@ for(const [mode,suffix] of [['before','?proceduralTerrain=1'],['after','']]){
  const start=performance.now(),page=await context.newPage(),errors=[];
  page.on('pageerror',e=>errors.push(String(e)));
  await page.goto(`http://127.0.0.1:5187/${suffix}`,{waitUntil:'networkidle'});
- await page.waitForFunction(()=>window.__mapB?.getState().terrainReady&&window.__mapB?.getState().towers===12,{timeout:30000});
+ await page.waitForFunction(()=>globalThis.__mapB?.getState().terrainReady&&globalThis.__mapB?.getState().towers===12,{timeout:30000});
  await page.waitForTimeout(650);
  const inputStartMs=performance.now()-start;
  await page.screenshot({path:path.join(output,`terrain-${mode}-mobile.png`)});
@@ -21,12 +21,12 @@ for(const [mode,suffix] of [['before','?proceduralTerrain=1'],['after','']]){
  await page.waitForTimeout(450);
  for(let i=0;i<=52;i++){await page.mouse.move(283+i*7.3,199-i*.2);await page.waitForTimeout(34);}
  await page.mouse.up();await page.waitForTimeout(500);
- await page.evaluate(()=>window.__mapB.resetView());await page.waitForTimeout(800);
- const pos=await page.evaluate(()=>window.__mapB.stageScreenPosition(7));await page.mouse.click(pos.x,pos.y);
- await page.waitForFunction(()=>window.__mapB.getState().selected===8,{timeout:5000});
+ await page.evaluate(()=>globalThis.__mapB.resetView());await page.waitForTimeout(800);
+ const pos=await page.evaluate(()=>globalThis.__mapB.stageScreenPosition(7));await page.mouse.click(pos.x,pos.y);
+ await page.waitForFunction(()=>globalThis.__mapB.getState().selected===8,{timeout:5000});
  await page.waitForTimeout(1200);
  await page.screenshot({path:path.join(output,`terrain-${mode}-selected-mobile.png`)});
- const state=await page.evaluate(()=>window.__mapB.getState());
+ const state=await page.evaluate(()=>globalThis.__mapB.getState());
  const videoPath=await page.video().path();await context.close();
  await fs.rename(videoPath,path.join(output,`terrain-${mode}.webm`));
  results.push({mode,source:state.terrainSource,inputStartMs:Math.round(inputStartMs),elapsedMs:Math.round(performance.now()-start),errors,selected:state.selected});

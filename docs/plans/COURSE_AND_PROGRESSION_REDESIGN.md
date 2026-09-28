@@ -1,6 +1,6 @@
 # ROCKHOP campaign redesign brief
 
-**Status:** design candidate for the gameplay remaster; no course, bike, currency or medal changes below are in production. [Ranked priorities](GAME_REMASTER_TOP20.md) · [Current 12-course probe and clips](../evidence/gameplay-audit/README.md). The user played all 12 on a phone and found them too easy. A fixed-input replay clears 8/12 on Rookie and 6/12 on Pro, with some top medals. Both findings require a rebuilt challenge curve, not a label change.
+**Status:** design candidate for the gameplay remaster; the first C1 course change is integrated on [a qualification branch](../evidence/c1-production-integration/README.md), while no bike, currency or medal changes below are in production. [Ranked priorities](GAME_REMASTER_TOP20.md) · [Baseline 12-course probe and clips](../evidence/gameplay-audit/README.md). The user played all 12 on a phone and found them too easy. A fixed-input replay of the baseline clears 8/12 on Rookie and 6/12 on Pro, with some top medals. Both findings require a rebuilt challenge curve, not a label change.
 
 ## Player promise
 
@@ -14,7 +14,7 @@ These are intended obstacle tests, not final dimensions or medal times. The C1 p
 
 | Course | Existing set piece to preserve | Required decision and readable failure | Finish or replay hook |
 |---|---|---|---|
-| C1 Low Tide | Pallet causeway over rising containers | The [tested standalone candidate](../evidence/c1-challenge/README.md) puts a 22° pallet ramp after Marker 2: brake on the approach, then roll up and settle onto the deck. Full GO overturns on the landing, while a deliberate slowdown clears both bikes. A visible EASE OFF cue appears before the ramp; human touch play must still prove it teaches the move. | First controlled crossing is called out as a skill, not a lucky crash. |
+| C1 Low Tide | Pallet causeway over rising containers | The [registered qualification branch](../evidence/c1-production-integration/README.md) puts a 22° pallet ramp after Marker 2: brake on the approach, then roll up and settle onto the deck. Full GO overturns on the landing, while a deliberate slowdown clears both bikes. A visible EASE OFF cue appears before the ramp; human touch play must still prove it teaches the move. | First controlled crossing is called out as a skill, not a lucky crash. |
 | C2 Crane Hop | Dock-to-barge leap beneath the crane | Build speed, then release and correct pitch in flight to land on the barge ramp. Full gas carries too much rotation or overshoots a clearly marked landing shelf. | Replay shows takeoff speed and landing angle. |
 | C3 Hull Breach | Bow plating, deck and torn exit | Lean forward for the steep climb, then change weight to land rear wheel first after the breach. Neutral full gas either loops on the bow or drives the front wheel into the landing. | Silhouette at the breach becomes the first campaign hero shot. |
 | A1 Sawdust | Sawmill stairs and flume | Slow for a moving timber gate, accelerate up the flume, then correct the landing. Full gas collides with the visible gate; braking too long misses the gap. | Show the timing line from gate to flume in replay. |

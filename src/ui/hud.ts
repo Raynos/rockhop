@@ -68,6 +68,8 @@ export class DomHud implements Hud {
   private entryOn = false;
   private lastEntryText = '';
   private readonly hintsEl: HTMLDivElement;
+  private readonly skillCueEl: HTMLDivElement;
+  private skillCueVisible = false;
   private readonly results: HTMLDivElement;
   private readonly resKicker: HTMLDivElement;
   private readonly resName: HTMLDivElement;
@@ -167,6 +169,10 @@ export class DomHud implements Hud {
     }
 
     this.hintsEl = el('div', 'hints');
+    this.skillCueEl = el('div', 'skill-cue');
+    this.skillCueEl.setAttribute('role', 'status');
+    this.skillCueEl.setAttribute('aria-label', 'Ease off. Brake before the pallet ramp.');
+    this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';
 
     // Results (store release D19, mockup round1/A-results): the survey ticket on the left — zone · code, track name,
     // CLEAN LINE, TIME / BAILS boxes, the PB line, the four mountain medals — the finish scene live on the right,
@@ -217,7 +223,7 @@ export class DomHud implements Hud {
     this.results.appendChild(foot);
 
     this.flashEl = el('div', 'flash');
-    this.root.append(this.flashEl, top, this.bannersEl, this.hintsEl, this.results);
+    this.root.append(this.flashEl, top, this.bannersEl, this.hintsEl, this.skillCueEl, this.results);
     // `DEV_SURFACES &&`: a store build has no review inbox (a password-gated hidden feature, Apple 2.3.1) and never
     // emits its lazy chunk or calls `/api/inbox` (src/core/release.ts).
     if (DEV_SURFACES && reviewEnabled()) {
@@ -245,6 +251,7 @@ export class DomHud implements Hud {
 
   setTrack(track: TrackDef): void {
     this.track = track;
+    this.setSkillCueVisible(false);
     this.trackEl.innerHTML = `<b>${escapeHtml(track.tier)}</b>${escapeHtml(track.name)}`;
     for (const m of this.stripMarks) m.remove();
     this.stripMarks = [];
@@ -283,6 +290,7 @@ export class DomHud implements Hud {
     this.simTime = info.simTime;
     if (info.phase !== this.phase) {
       this.phase = info.phase;
+      if (info.phase !== 'riding') this.setSkillCueVisible(false);
       this.root.classList.toggle('hidden', info.phase === 'menu');
       if (this.noteBtn) (info.phase === 'menu' ? conceal : reveal)(this.noteBtn);
       // Finish: the timer freezes green, the progress strip fades, no split / delta floats under the
@@ -362,6 +370,9 @@ export class DomHud implements Hud {
       }
     }
     const x = state.bike.pos.x;
+    // C1's authored Marker 2 to ramp-foot braking lane. This prompt is fixed to screen pixels;
+    // moving world/camera geometry never shakes its text during a recorded run.
+    this.setSkillCueVisible(t.id === 'c1-low-tide' && this.phase === 'riding' && x >= 179.6 && x < 209.6);
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);
@@ -569,6 +580,7 @@ export class DomHud implements Hud {
    */
   hideNow(): void {
     this.phase = 'menu';
+    this.setSkillCueVisible(false);
     this.root.style.transition = 'none';
     this.root.classList.add('hidden');
     void this.root.offsetHeight;
@@ -629,6 +641,12 @@ export class DomHud implements Hud {
   }
 
   // -- internals ------------------------------------------------------------
+
+  private setSkillCueVisible(on: boolean): void {
+    if (on === this.skillCueVisible) return;
+    this.skillCueVisible = on;
+    this.skillCueEl.classList.toggle('show', on);
+  }
 
   /**
    * Countdown-only technique line (the track-select card carries the full technique). The first

@@ -24,7 +24,8 @@ for (const bike of ['rookie', 'pro'] as const) {
       const v = s.bike.vel.x;
       if (speedAtMarker === null && x >= 192) speedAtMarker = v;
       if (speedAtFoot === null && x >= 208) speedAtFoot = v;
-      let throttle = 1, brake = 0, lean = 0;
+      let throttle = 1, brake = 0;
+      const lean = 0;
       if (x >= 192 && x < 208) {
         if (v > 13) { throttle = 0; brake = 1; }
         else if (v > 12) throttle = 0;

@@ -9,8 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
-import { expandFrames } from '../../core/replay';
-import { createSimFor } from '../../../harness/lib/sim';
+import { expandFrames, quantizeInput } from '../../core/replay';
+import { createSim, createSimFor } from '../../../harness/lib/sim';
 import { loadRecording } from '../../../harness/lib/recording';
 import { ROCKHOP_ALL } from '../index';
 
@@ -26,5 +26,20 @@ describe('ROCKHOP goldens replay in node', () => {
     const sim = await createSimFor(rec);
     sim.run(expandFrames(rec));
     expect({ phase: sim.phase(), faults: sim.faults() }).toEqual({ phase: 'finished', faults: 0 });
+  });
+
+  it('C1 Pro brake line clears without a fault', async () => {
+    const rec = loadRecording(path.join(INPUTS, 'c1-low-tide', 'bot-3-pro.json'));
+    const sim = await createSimFor(rec);
+    sim.run(expandFrames(rec));
+    expect({ phase: sim.phase(), faults: sim.faults() }).toEqual({ phase: 'finished', faults: 0 });
+  });
+
+  it.each(['rookie', 'pro'] as const)('C1 %s cannot clear by holding GO for 90 seconds', async (bike) => {
+    const sim = await createSim('c1-low-tide', undefined, 120, { bike });
+    const go = quantizeInput({ throttle: 1 });
+    for (let tick = 0; tick < 90 * sim.hz && sim.phase() !== 'finished'; tick++) sim.step(go);
+    expect(sim.phase()).not.toBe('finished');
+    expect(sim.faults()).toBeGreaterThan(0);
   });
 });
