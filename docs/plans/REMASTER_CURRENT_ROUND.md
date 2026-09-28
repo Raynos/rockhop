@@ -1,6 +1,6 @@
 # Current remaster round — 2026-09-28
 
-**Scope:** one short index of every live thread from this session. The [ranked top 20](GAME_REMASTER_TOP20.md) is the whole-game audit; the [campaign brief](COURSE_AND_PROGRESSION_REDESIGN.md) specifies the 12-course and Diamond-route design. Feature work stays on the qualification branch until it passes its release gate.
+**Scope:** one short index of every live thread from this session. The [finish-to-publish draft](FINISH_TO_PUBLISH.md) orders the remaining release gates for joint review; the [ranked top 20](GAME_REMASTER_TOP20.md) is the whole-game audit; the [campaign brief](COURSE_AND_PROGRESSION_REDESIGN.md) specifies the 12-course and Diamond-route design. Feature work stays on the qualification branch until it passes its release gate.
 
 ## Session mini-plan
 
