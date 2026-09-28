@@ -1,7 +1,9 @@
 # Releases
 
 Pinned, permanent builds. Each entry is a git tag plus a Vercel alias that points at
-that exact deployment forever (production `trials-gauntlet-demo.vercel.app` moves on).
+that exact deployment forever. Current production is https://playrockhop.vercel.app.
+The old project is `rockhop-legacy-archive`; its rolling `trials-gauntlet-demo.vercel.app`
+alias was retired on 2026-09-28. Pinned release URLs remain available.
 
 | version | date (UTC) | commit | URL | notes |
 |---|---|---|---|---|

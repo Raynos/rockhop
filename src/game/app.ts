@@ -69,6 +69,7 @@ import {
 import { tickLive } from '../ui/live';
 import { applyOrientation } from '../ui/orientation';
 import { loadRiderOutfit, saveRiderOutfit } from '../ui/outfit';
+import { CareerEconomy, PRO_PRICE, type AwardResult } from '../ui/economy';
 import { copyText } from '../ui/clipboard';
 import { ExitConfirm } from '../ui/exitConfirm';
 import { Bench, type BenchOptions, type FrameSplit } from './bench';
@@ -82,7 +83,6 @@ import { GamepadInput, InputMux, KeyboardInput, TouchInput } from './input';
 import { NavLog, type NavContext } from './navlog';
 import { ReplaySession, type ReplaySource } from './replay';
 import { ReviewSession } from './review';
-import { defaultBikeForTier } from './rules';
 import { BenchLog, RunCollector, RunLog } from './telemetry';
 import { isPhone, startTier } from './startTier';
 
@@ -205,11 +205,9 @@ export class App {
   /** Set by the app right before it asks the game for a full restart, so the game's `restart` event names the trigger. */
   private restartVia: string | null = null;
   private telemetryOn: boolean;
-  /** Garage choice (null = never picked: the per-tier default applies). */
+  /** Saved Garage choice; an unowned Pro choice falls back to Starter. */
   private bikeChoice: BikeClass | null;
   private riderOutfit: RiderOutfit;
-  /** Bike class of the last launched track (medium's default, and what the Garage opens on). */
-  private lastRidden: BikeClass | null = null;
   /** The governor's last decision string; lives on the game so `hook.info().qualityWhy` and `?perf=1` read one value. */
   private get qualityWhy(): string {
     return this.game.qualityWhy;
@@ -218,6 +216,8 @@ export class App {
     this.game.qualityWhy = v;
   }
   private readonly bestTimes: BestTimes;
+  private readonly economy: CareerEconomy;
+  private lastAward: AwardResult | null = null;
   private readonly tracks: TrackDef[];
   private screen: AppScreen = 'menu';
   private qualityChoice: QualityChoice;
@@ -254,6 +254,7 @@ export class App {
     this.hud = o.hud;
     this.audio = o.audio;
     this.bestTimes = o.bestTimes;
+    this.economy = new CareerEconomy();
     // The shipped set: twelve ROCKHOP courses in zone order, three per biome. The retired curriculum, its playgrounds
     // and the Labs stay reachable by `?track=` and the level
     // reviewer (dev builds) but are never on the map, never in progression.
@@ -294,7 +295,7 @@ export class App {
     this.art = o.art ?? new ArtManifest();
     if (!this.art.ready) void this.art.load();
     this.art.whenReady(() => {
-      for (const m of ['bronze', 'silver', 'gold', 'platinum'] as const) {
+      for (const m of ['bronze', 'silver', 'gold'] as const) {
         // `resolve`, not `probe`: offline on a device whose DPR changed, the other tier is what is cached.
         void this.art.resolve(this.art.medal(m)).then((src) => src && this.hud.setMedalArt({ [m]: src }));
       }
@@ -385,6 +386,9 @@ export class App {
       },
       resetProgress: () => {
         this.bestTimes.clear();
+        this.economy.clear();
+        this.bikeChoice = null;
+        this.applyBike('rookie', false);
         this.lastTrackId = null;
         try {
           persistentStorage()?.removeItem(LAST_TRACK_KEY);
@@ -413,6 +417,12 @@ export class App {
     this.credits = new CreditsScreen(o.uiRoot, this.sfx, cb, this.art);
     this.garage = new GarageScreen(o.uiRoot, this.sfx, this.art, {
       setBike: (b) => this.applyBike(b, true),
+      purchasePro: () => {
+        if (this.economy.purchasePro() !== 'purchased') return false;
+        const state = this.economy.snapshot();
+        this.garage.setEconomy({ scrap: state.wallet, proOwned: state.proOwned, proPrice: PRO_PRICE });
+        return true;
+      },
       setOutfit: (outfit) => cb.outfits!.set(outfit),
       back: () => this.goto('menu'),
       stage: (on) => o.onGarageStage?.(on),
@@ -594,6 +604,8 @@ export class App {
     };
     // Results: NEXT TRACK is live only when the next track is unlocked (this clear may have unlocked it).
     this.game.onResults = (r) => {
+      this.lastAward = this.economy.award(r.trackId, r.medal);
+      this.showResultReward(r.trackId);
       this.setAudioScene('results');
       this.hud.setNextEnabled(this.nextTrackEnabled(), this.nextTrackName());
       this.touch.setOverlay(true);
@@ -670,6 +682,7 @@ export class App {
         this.hud.setNextEnabled(this.nextTrackEnabled(), this.nextTrackName());
         this.hud.setReplayEnabled(true);
         this.hud.showResults(ret.result);
+        this.showResultReward(ret.result.trackId);
         this.touch.setOverlay(true);
       }
       return;
@@ -901,6 +914,8 @@ export class App {
       this.menu.setDevice(dev);
       this.menu.show();
     } else if (screen === 'garage') {
+      const economy = this.economy.snapshot();
+      this.garage.setEconomy({ scrap: economy.wallet, proOwned: economy.proOwned, proPrice: PRO_PRICE });
       this.garage.setDevice(dev);
       this.garage.show(this.bikeInEffect(), this.riderOutfit);
     } else if (screen === 'tracks') {
@@ -920,8 +935,8 @@ export class App {
   private play(id: string): void {
     const def = getTrack(id);
     if (!def) return;
-    // Bike: the Garage choice when the player has made one, else the tier default (medium = last ridden).
-    const bike = this.bikeChoice ?? defaultBikeForTier(def.tier, this.lastRidden);
+    // Bike: the owned Garage choice, otherwise Starter.
+    const bike = this.bikeInEffect();
     this.collector.abandon();
     if (this.replay.active) this.replay.close();
     if (this.review.active) {
@@ -935,7 +950,6 @@ export class App {
     if (!this.game.loadTrack(id, undefined, bike)) return;
     // Always on launch (materials only, no rebuild): a garage browse may have left the hero in the other livery.
     this.o.onBikeChange?.(bike);
-    this.lastRidden = bike;
     this.screen = 'run';
     this.screenAt = performance.now();
     this.setAudioScene('run');
@@ -978,11 +992,9 @@ export class App {
 
   // -- garage / bike ------------------------------------------------------------
 
-  /** Class the next launch would ride: the Garage choice, else the tier default of the last-played (or first) track. */
+  /** Class the next launch would ride: the owned Garage choice, otherwise Starter. */
   private bikeInEffect(): BikeClass {
-    if (this.bikeChoice) return this.bikeChoice;
-    const t = this.tracks.find((x) => x.id === this.lastTrackId) ?? shipTracks(this.tracks, this.o.dev ?? false)[0];
-    return defaultBikeForTier(t?.tier ?? 'beginner', this.lastRidden);
+    return this.bikeChoice === 'pro' && this.economy.snapshot().proOwned ? 'pro' : 'rookie';
   }
 
   /**
@@ -991,6 +1003,7 @@ export class App {
    */
   private applyBike(b: BikeClass, commit: boolean): void {
     if (commit) {
+      if (!this.economy.equip(b)) return;
       this.bikeChoice = b;
       saveBikeChoice(b);
     }
@@ -1002,6 +1015,12 @@ export class App {
       setTimeout(() => this.audio?.setMasterVolume(vol), 60);
     }
     this.o.onBikeChange?.(b);
+  }
+
+  private showResultReward(trackId: string): void {
+    const campaign = this.tracks.some((track) => track.id === trackId);
+    const wallet = this.economy.snapshot();
+    this.hud.setScrapReward(campaign ? this.lastAward?.delta ?? 0 : null, wallet.wallet, wallet.proOwned, PRO_PRICE);
   }
 
   // -- telemetry ------------------------------------------------------------------

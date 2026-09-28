@@ -20,10 +20,11 @@ afterEach(() => {
 });
 
 function fixture() {
-  const cb = { setBike: vi.fn(), setOutfit: vi.fn<(outfit: RiderOutfit) => Promise<boolean>>().mockResolvedValue(true), back: vi.fn() };
+  const cb = { setBike: vi.fn(), purchasePro: vi.fn<() => boolean>().mockReturnValue(true), setOutfit: vi.fn<(outfit: RiderOutfit) => Promise<boolean>>().mockResolvedValue(true), back: vi.fn() };
   const sfx = { tick: vi.fn(), confirm: vi.fn(), back: vi.fn() };
   const art = { whenReady: () => undefined } as unknown as ArtManifest;
   const garage = new GarageScreen(document.body, sfx as unknown as UiSfx, art, cb);
+  garage.setEconomy({ scrap: 0, proOwned: true, proPrice: 800 });
   const outfit = (name: string) => garage.root.querySelector<HTMLButtonElement>(`button[data-outfit="${name}"]`)!;
   const bike = (name: string) => garage.root.querySelector<HTMLButtonElement>(`button[data-bike="${name}"]`)!;
   const hover = (el: HTMLElement, pointerType = 'mouse') => {
@@ -39,6 +40,77 @@ function fixture() {
   };
   return { garage, cb, outfit, bike, hover, makeLive };
 }
+
+describe('garage earned Pro purchase', () => {
+  it('shows a locked Pro and its price without equipping it or changing the staged bike', () => {
+    const { garage, cb, bike, makeLive } = fixture();
+    garage.setEconomy({ scrap: 380, proOwned: false, proPrice: 800 });
+    garage.show('rookie');
+    makeLive();
+    expect(bike('pro').disabled).toBe(false);
+    expect(bike('pro').getAttribute('aria-label')).toContain('locked, 800 Scrap');
+    bike('pro').click();
+    expect(garage.root.querySelector('.gp-name b')?.textContent).toBe('Pro');
+    expect(bike('rookie').getAttribute('aria-pressed')).toBe('true');
+    expect(bike('pro').getAttribute('aria-pressed')).toBe('false');
+    expect(cb.setBike).not.toHaveBeenCalled();
+    expect(cb.purchasePro).not.toHaveBeenCalled();
+    expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('380');
+    expect(garage.root.querySelector('.gp-scrap-remaining')?.textContent).toContain('420 more Scrap');
+    expect(garage.root.querySelector<HTMLButtonElement>('.gp-buy')?.disabled).toBe(true);
+    expect(garage.root.querySelector('[role="progressbar"]')?.getAttribute('aria-valuenow')).toBe('380');
+    bike('pro').dispatchEvent(new MouseEvent('pointerleave'));
+    expect(bike('pro').classList.contains('on')).toBe(true); // inspected locked bike stays highlighted
+  });
+
+  it('buys once, spends Scrap, and equips Pro only after the authoritative purchase succeeds', () => {
+    const { garage, cb, bike, makeLive } = fixture();
+    garage.setEconomy({ scrap: 900, proOwned: false, proPrice: 800 });
+    garage.show('rookie');
+    makeLive();
+    bike('pro').click();
+    expect(cb.setBike).not.toHaveBeenCalled();
+    garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
+    expect(cb.purchasePro).toHaveBeenCalledTimes(1);
+    expect(cb.setBike).toHaveBeenCalledExactlyOnceWith('pro');
+    expect(bike('pro').getAttribute('aria-pressed')).toBe('true');
+    expect(bike('pro').getAttribute('aria-label')).toContain('equipped');
+    expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('100');
+    expect(garage.root.querySelector('.gp-bike-state')?.textContent).toBe('Pro equipped');
+    expect(garage.root.querySelector('.gp-buy')).toBeNull();
+  });
+
+  it('keeps the bike locked if saving the purchase fails, then permits retry', () => {
+    const { garage, cb, bike, makeLive } = fixture();
+    garage.setEconomy({ scrap: 800, proOwned: false, proPrice: 800 });
+    cb.purchasePro.mockReturnValueOnce(false);
+    garage.show('rookie');
+    makeLive();
+    bike('pro').click();
+    garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
+    expect(cb.setBike).not.toHaveBeenCalled();
+    expect(garage.root.querySelector('.gp-purchase-error')?.textContent).toContain('could not be saved');
+    expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('800');
+    garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
+    expect(cb.purchasePro).toHaveBeenCalledTimes(2);
+    expect(cb.setBike).toHaveBeenCalledExactlyOnceWith('pro');
+  });
+
+  it('respects an authoritative balance refresh during the purchase callback', () => {
+    const { garage, cb, bike, makeLive } = fixture();
+    garage.setEconomy({ scrap: 850, proOwned: false, proPrice: 800 });
+    cb.purchasePro.mockImplementation(() => {
+      garage.setEconomy({ scrap: 50, proOwned: true, proPrice: 800 });
+      return true;
+    });
+    garage.show('rookie');
+    makeLive();
+    bike('pro').click();
+    garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
+    expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('50');
+    expect(cb.setBike).toHaveBeenCalledExactlyOnceWith('pro');
+  });
+});
 
 describe('garage rider outfits', () => {
   it('offers all five designs; the pointer highlights one without committing (ask 32: no key rows)', () => {
@@ -125,7 +197,7 @@ describe('garage rider outfits', () => {
     hover(bike('pro'));
     expect(bike('pro').classList.contains('on')).toBe(true);
     expect(bike('rookie').getAttribute('aria-pressed')).toBe('true'); // still the committed class
-    expect(garage.root.querySelector('.gp-name b')?.textContent).toBe('Rookie'); // the sheet did not move
+    expect(garage.root.querySelector('.gp-name b')?.textContent).toBe('Starter'); // the sheet did not move
     expect(cb.setBike).not.toHaveBeenCalled();
     bike('pro').dispatchEvent(new MouseEvent('pointerleave'));
     expect(bike('rookie').classList.contains('on')).toBe(true); // the highlight returns to the chosen chip
@@ -193,6 +265,7 @@ function explorer() {
   const stage = vi.fn<(on: boolean) => void>();
   const cb: GarageCallbacks = {
     setBike: vi.fn(),
+    purchasePro: vi.fn().mockReturnValue(true),
     setOutfit: vi.fn<(outfit: RiderOutfit) => Promise<boolean>>().mockResolvedValue(true),
     back: vi.fn(),
     stage,

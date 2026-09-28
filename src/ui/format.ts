@@ -13,5 +13,5 @@ export function formatDelta(seconds: number): string {
   return sign + formatTime(Math.abs(seconds));
 }
 
-/** Player-facing medal names; the top tier is OBSIDIAN (`platinum` stays the key). */
-export const MEDAL_LABEL = { platinum: 'Obsidian', gold: 'Gold', silver: 'Silver', bronze: 'Bronze' } as const;
+/** Player-facing medal names; Diamond keeps the historical `platinum` key. */
+export const MEDAL_LABEL = { platinum: 'Diamond', gold: 'Gold', silver: 'Silver', bronze: 'Bronze' } as const;

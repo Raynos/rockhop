@@ -7,9 +7,10 @@
  * bike lowest, under the thumb; every tag ≥ 44 px, two per row, no scrolling), the metadata sits in a panel
  * on the RIGHT (the chosen bike's class, POWER / GRIP / WEIGHT bars and note, the outfit line, the load
  * status), badge plate top-left, ‹ MENU top-right, the gesture hint under the hero.
- * Pointer + Esc only (ask 32): a bike chip highlights under the pointer and commits on click (`rockhop.bikeClass`;
- * the staged hero swaps livery with no track reload — ask 29; the sheet follows the click, not the pointer —
- * ask 40); an outfit commits on click
+ * Pointer + Esc only (ask 32): a bike chip highlights under the pointer. Clicking an owned bike equips it
+ * (`rockhop.bikeClass`; staged hero swaps livery without a track reload — ask 29). Clicking a locked bike
+ * inspects its sheet and price without changing the staged hero. The sheet follows the click, not the pointer
+ * (ask 40); an outfit commits on click
  * (`rockhop.riderOutfit`). The rider-model row is gone (asks 30 / 31): the Blender rider is the rider;
  * `?rider=` stays a harness / debug override. Copy follows the current v2 preset and R6 wheelie tests.
  */
@@ -42,33 +43,34 @@ export interface BikeSpec {
 export const BIKE_SPECS: Record<BikeClass, BikeSpec> = {
   rookie: {
     id: 'rookie',
-    name: 'Rookie',
+    name: 'Starter',
     // physics.md "v2 status — R3": never loops at neutral (6.7° max pitch at lean 0), loops only leaning back
     // (−0.5 in 0.82 s), 0→16 m/s in 3.98 s at the launch pose, limiter 20 m/s, landings absorb (3 m drops ride away).
-    line: 'Never loops at neutral. Forgiving landings, 0→16 in 4.0 s, tops 20 m/s.',
-    power: 0.55,
+    line: 'Calmer throttle, steadier raised-nose balance and front-lift brake assist.',
+    power: 0.76,
     grip: 0.82,
-    weight: 0.72,
-    weightFeel: 'Planted',
-    note: 'Loops only leaning back · standard medal targets',
+    weight: 0.58,
+    weightFeel: '58 kg',
+    note: 'Shared tyre grip and travel · precise control',
     tint: '#E4572E',
   },
   pro: {
     id: 'pro',
     name: 'Pro',
-    // Current R6 Pro: 54 kg chassis, 1 000 N, 0.08 s throttle, neutral full gas holds a 25–40° wheelie
-    // without looping. Tyre grip and suspension travel are the same as Rookie; the springs are stiffer.
-    line: 'Lifts into a neutral wheelie without looping. Sharper throttle, 21 m/s.',
-    power: 0.92,
+    // Current Pro: 54 kg chassis, 1 000 N, 0.08 s throttle versus Starter's 58 kg/880 N/0.15 s.
+    // A scripted 54-case shelf sweep favoured Pro 6 to 4, while Starter held the raised-nose
+    // balance sweep 27 to 24. Tyre grip and suspension travel remain identical.
+    line: 'Stronger engine and quicker throttle help climb shelves and recover rough drops.',
+    power: 0.86,
     grip: 0.82,
-    weight: 0.42,
-    weightFeel: 'Flickable',
-    note: 'Same tyre grip · medal targets 10 % tighter',
+    weight: 0.54,
+    weightFeel: '54 kg',
+    note: 'Shared tyre grip and travel · raw air attitude',
     tint: '#2a5da8',
   },
 };
 
-export const BIKE_LABEL: Record<BikeClass, string> = { rookie: 'Rookie', pro: 'Pro' };
+export const BIKE_LABEL: Record<BikeClass, string> = { rookie: 'Starter', pro: 'Pro' };
 
 /**
  * The one place a player reads the wheelie balance point (physics.md R3 coasting-balance row, Rookie:
@@ -114,6 +116,8 @@ export const OUTFIT_SWATCH: Record<RiderOutfit, string> = {
 export interface GarageCallbacks {
   /** Clicked: the staged hero swaps livery and the choice persists (ask 40: no hover preview). */
   setBike(b: BikeClass): void;
+  /** Authoritative purchase; returns true only after Scrap is spent and ownership is saved. */
+  purchasePro(): boolean;
   /** Load and commit clothing; false leaves the existing outfit selected. */
   setOutfit(outfit: RiderOutfit): Promise<boolean>;
   back(): void;
@@ -121,6 +125,13 @@ export interface GarageCallbacks {
   stage?(on: boolean): void;
   /** Model explorer: orbit camera (`setCameraOverride({ mode: 'orbit', … })`); null restores the menu framing. */
   orbit?(view: GarageView | null): void;
+}
+
+/** A read-only snapshot from the career economy. Garage never persists currency itself. */
+export interface GarageEconomyView {
+  scrap: number;
+  proOwned: boolean;
+  proPrice: number;
 }
 
 function h<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, html?: string): HTMLElementTagNameMap[K] {
@@ -145,12 +156,18 @@ export class GarageScreen {
   private readonly outfits = new Map<RiderOutfit, HTMLButtonElement>();
   private readonly outfitStatus: HTMLSpanElement;
   private readonly detail: HTMLDivElement;
+  private readonly economyPanel: HTMLDivElement;
   private readonly hint: HTMLDivElement;
   private readonly backButton: HTMLButtonElement;
   private readonly legend: HTMLDivElement;
   /** The bike chip under the pointer: highlighted only — the hero and the sheet follow the click (ask 40). */
   private focus: BikeClass = 'rookie';
   private current: BikeClass = 'rookie';
+  /** Bike whose spec is shown. A locked Pro can be inspected without equipping it. */
+  private inspected: BikeClass = 'rookie';
+  private economy: GarageEconomyView = { scrap: 0, proOwned: false, proPrice: 800 };
+  private economyVersion = 0;
+  private purchaseFailed = false;
   private outfitFocus: RiderOutfit = DEFAULT_RIDER_OUTFIT;
   private currentOutfit: RiderOutfit = DEFAULT_RIDER_OUTFIT;
   private pendingOutfit: RiderOutfit | null = null;
@@ -220,7 +237,7 @@ export class GarageScreen {
     {
       const grid = group('bike', 'Bike class', 'Bike');
       for (const spec of [BIKE_SPECS.rookie, BIKE_SPECS.pro]) {
-        const el = h('button', 'chip bike-chip', `<i class="chip-tint"></i><i class="chip-art"></i><b>${escapeHtml(spec.name)}</b><em>${spec.id === 'rookie' ? 'Class A' : 'Class P'}</em>`);
+        const el = h('button', 'chip bike-chip', `<i class="chip-tint"></i><i class="chip-art"></i><b>${escapeHtml(spec.name)}</b><em></em>`);
         el.type = 'button';
         el.dataset['bike'] = spec.id;
         el.style.setProperty('--tint', spec.tint);
@@ -235,7 +252,7 @@ export class GarageScreen {
           this.commitBike();
         });
         el.addEventListener('pointerleave', () => {
-          if (this.focus === spec.id) this.setFocus(this.current, false);
+          if (this.focus === spec.id && this.inspected !== spec.id) this.setFocus(this.current, false);
         });
         grid.appendChild(el);
         this.cards.set(spec.id, el);
@@ -244,9 +261,10 @@ export class GarageScreen {
     // --- The panel (right edge, under ‹ MENU): the chosen bike's sheet + the outfit / rider lines + the load status.
     const panel = h('div', 'garage-panel rh-card');
     this.detail = h('div', 'gp-sheet');
+    this.economyPanel = h('div', 'gp-economy');
     this.outfitStatus = h('span', 'outfit-current');
     this.outfitStatus.setAttribute('role', 'status');
-    panel.append(this.detail, this.outfitStatus);
+    panel.append(this.detail, this.economyPanel, this.outfitStatus);
     this.legend = h('div', 'legend');
     this.setDevice('keyboard');
     this.root.append(this.stage, h('div', 'grain'), badge, this.hint, rail, panel, this.legend);
@@ -262,9 +280,25 @@ export class GarageScreen {
     return this.root.classList.contains('show');
   }
 
+  /** Refresh after a medal payout, save load, or purchase. Caller owns the saved balance. */
+  setEconomy(view: GarageEconomyView): void {
+    this.economy = {
+      scrap: Math.max(0, Math.floor(Number.isFinite(view.scrap) ? view.scrap : 0)),
+      proOwned: view.proOwned,
+      proPrice: Math.max(1, Math.floor(Number.isFinite(view.proPrice) ? view.proPrice : 800)),
+    };
+    this.economyVersion++;
+    if (!this.economy.proOwned && this.current === 'pro') {
+      this.current = this.inspected = this.focus = 'rookie';
+      if (this.visible) this.cb.setBike('rookie');
+    }
+    this.purchaseFailed = false;
+    this.paint();
+  }
+
   show(current: BikeClass, outfit: RiderOutfit = DEFAULT_RIDER_OUTFIT): void {
-    this.current = current;
-    this.focus = current;
+    this.current = current === 'pro' && !this.economy.proOwned ? 'rookie' : current;
+    this.focus = this.inspected = this.current;
     this.currentOutfit = this.outfitFocus = outfit;
     this.resetView();
     this.paint();
@@ -478,6 +512,12 @@ export class GarageScreen {
       el.classList.toggle('on', id === this.focus);
       el.classList.toggle('selected', id === this.current);
       el.setAttribute('aria-pressed', String(id === this.current));
+      const locked = id === 'pro' && !this.economy.proOwned;
+      el.classList.toggle('locked', locked);
+      el.querySelector('em')!.textContent = locked
+        ? `${this.economy.proPrice} Scrap`
+        : id === this.current ? 'Equipped' : 'Owned';
+      el.setAttribute('aria-label', `${BIKE_LABEL[id]} bike, ${locked ? `locked, ${this.economy.proPrice} Scrap` : id === this.current ? 'equipped' : 'owned'}`);
     }
     for (const [outfit, button] of this.outfits) {
       button.classList.toggle('on', outfit === this.outfitFocus);
@@ -494,7 +534,7 @@ export class GarageScreen {
     if (this.outfitStatus.textContent !== status) this.outfitStatus.textContent = status;
     // The sheet: the chosen bike's class, bars, character and note (ask 40: it changes on click, never under
     // the pointer), then the outfit line. The balance hint rides as the sheet's title.
-    const spec = BIKE_SPECS[this.current];
+    const spec = BIKE_SPECS[this.inspected];
     const sheet = `<div class="gp-name" style="--tint:${spec.tint}"><b>${escapeHtml(spec.name)}</b><small>${spec.id === 'rookie' ? 'Class A' : 'Class P'}</small></div>
       <div class="gp-stats">${bar('Power', spec.power)}${bar('Grip', spec.grip)}${bar('Weight', spec.weight, spec.weightFeel)}</div>
       <div class="gp-line">${escapeHtml(spec.line)}</div>
@@ -502,6 +542,46 @@ export class GarageScreen {
       <div class="gp-kv"><span>Outfit</span><b>${escapeHtml(OUTFIT_LABEL[this.currentOutfit])}</b></div>`;
     if (this.detail.innerHTML !== sheet) this.detail.innerHTML = sheet;
     this.detail.title = BALANCE_HINT;
+    this.paintEconomy();
+  }
+
+  private paintEconomy(): void {
+    const { scrap, proOwned, proPrice } = this.economy;
+    const remaining = Math.max(0, proPrice - scrap);
+    const progress = Math.min(100, Math.round((scrap / proPrice) * 100));
+    const wallet = `<div class="gp-wallet"><span>Scrap</span><b>${scrap.toLocaleString('en-US')}</b></div>`;
+    const state = proOwned
+      ? `<div class="gp-bike-state">${this.current === 'pro' ? 'Pro equipped' : 'Pro owned · tap its chip to equip'}</div>`
+      : this.inspected === 'pro'
+        ? `<div class="gp-bike-state">Unlock Pro · ${proPrice.toLocaleString('en-US')} Scrap</div>
+          <div class="gp-scrap-progress" role="progressbar" aria-label="Scrap toward Pro" aria-valuemin="0" aria-valuemax="${proPrice}" aria-valuenow="${Math.min(scrap, proPrice)}"><i style="width:${progress}%"></i></div>
+          <div class="gp-scrap-remaining">${remaining ? `${remaining.toLocaleString('en-US')} more Scrap · earn medals` : 'Ready to purchase'}</div>
+          <button class="gp-buy" type="button" ${remaining ? 'disabled' : ''}>Buy Pro · ${proPrice.toLocaleString('en-US')}</button>
+          ${this.purchaseFailed ? '<div class="gp-purchase-error" role="status">Purchase could not be saved. Try again.</div>' : ''}`
+        : `<div class="gp-bike-state">Pro unlocks for ${proPrice.toLocaleString('en-US')} Scrap · tap to inspect</div>`;
+    const markup = wallet + state;
+    if (this.economyPanel.innerHTML === markup) return;
+    this.economyPanel.innerHTML = markup;
+    this.economyPanel.querySelector<HTMLButtonElement>('.gp-buy')?.addEventListener('click', () => this.buyPro());
+  }
+
+  private buyPro(): void {
+    if (!this.canAct() || this.economy.proOwned || this.economy.scrap < this.economy.proPrice) return;
+    const version = this.economyVersion;
+    let spent = false;
+    try { spent = this.cb.purchasePro(); } catch { /* caller could not save the purchase */ }
+    if (!spent) {
+      this.purchaseFailed = true;
+      this.paint();
+      return;
+    }
+    // A synchronous parent refresh takes precedence over this local fallback.
+    if (this.economyVersion === version) {
+      this.economy = { ...this.economy, scrap: this.economy.scrap - this.economy.proPrice, proOwned: true };
+      this.economyVersion++;
+    }
+    this.focus = this.inspected = 'pro';
+    this.commitBike();
   }
 
   private commitOutfit(outfit: RiderOutfit): void {
@@ -523,7 +603,15 @@ export class GarageScreen {
   }
 
   private commitBike(): void {
+    if (this.focus === 'pro' && !this.economy.proOwned) {
+      this.inspected = 'pro';
+      this.purchaseFailed = false;
+      this.sfx.tick();
+      this.paint();
+      return;
+    }
     this.current = this.focus;
+    this.inspected = this.current;
     this.cb.setBike(this.focus);
     this.sfx.confirm();
     this.paint();

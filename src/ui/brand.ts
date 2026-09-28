@@ -90,19 +90,19 @@ export function zoneTitle(zone: string): string {
 
 export type MedalId = 'bronze' | 'silver' | 'gold' | 'platinum';
 
-/** Player-facing medal names: the top tier is OBSIDIAN (`platinum` stays the storage / code key). */
-export const MEDAL_NAME: Record<MedalId, string> = { bronze: 'Bronze', silver: 'Silver', gold: 'Gold', platinum: 'Obsidian' };
+/** Player-facing medal names: Diamond keeps the historical `platinum` storage key. */
+export const MEDAL_NAME: Record<MedalId, string> = { bronze: 'Bronze', silver: 'Silver', gold: 'Gold', platinum: 'Diamond' };
 
 const MEDAL_TONES: Record<MedalId, { rim: [string, string]; face: [string, string]; peak: string; shade: string; snow: string }> = {
   bronze: { rim: ['#E7A77A', '#6E3818'], face: ['#B8693A', '#7A3F1C'], peak: '#D98C5C', shade: '#5C2C12', snow: '#F2C4A0' },
   silver: { rim: ['#F4F6F8', '#7D8590'], face: ['#C9CFD6', '#8A929C'], peak: '#E9EDF1', shade: '#5E656E', snow: '#FFFFFF' },
   gold: { rim: ['#FFE9A3', '#A8741C'], face: ['#EDBB47', '#B8801F'], peak: '#FFD76B', shade: '#8C5A10', snow: '#FFF3C4' },
-  platinum: { rim: ['#3A4A50', '#0B1012'], face: ['#1E2A2E', '#07090A'], peak: '#26363B', shade: '#050708', snow: '#2FD6C8' },
+  platinum: { rim: ['#E8FAFF', '#5B9DB9'], face: ['#DDF9FF', '#79C9E4'], peak: '#A8E9F6', shade: '#28617A', snow: '#FFFFFF' },
 };
 
 /**
  * A mountain medal badge (A-brand § 05) as inline SVG: bevelled rim, recessed face, two embossed peaks with a snow
- * cap. OBSIDIAN is black glass: faceted peaks, teal crack glints and a rim glint. Used where the painted medal art
+ * cap. Diamond has faceted ice-blue peaks and bright glints. Used where the painted medal art
  * is not loaded yet, and as the art itself on the results ticket.
  */
 export function medalSvg(m: MedalId, title = ''): string {
@@ -111,7 +111,7 @@ export function medalSvg(m: MedalId, title = ''): string {
   const a11y = title ? `role="img" aria-label="${title}"` : 'aria-hidden="true"';
   const glass =
     m === 'platinum'
-      ? `<path d="M30 70l9-13 6 7 9-15" fill="none" stroke="#2FD6C8" stroke-width="1.4" stroke-linecap="round" opacity=".9"/><path d="M66 38l-6 10 5 4" fill="none" stroke="#2FD6C8" stroke-width="1.1" stroke-linecap="round" opacity=".75"/><path d="M22 34a34 34 0 0 1 22-15" fill="none" stroke="#7FF3E8" stroke-width="2.4" stroke-linecap="round" opacity=".85"/>`
+      ? `<path d="M30 70l9-13 6 7 9-15" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" opacity=".9"/><path d="M66 38l-6 10 5 4" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity=".75"/><path d="M22 34a34 34 0 0 1 22-15" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" opacity=".85"/>`
       : `<path d="M24 36a30 30 0 0 1 20-16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".45"/>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" class="rh-medal ${m}" viewBox="0 0 100 100" ${a11y} focusable="false"><defs><linearGradient id="${id}r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${t.rim[0]}"/><stop offset="1" stop-color="${t.rim[1]}"/></linearGradient><linearGradient id="${id}f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t.face[0]}"/><stop offset="1" stop-color="${t.face[1]}"/></linearGradient></defs><circle cx="50" cy="50" r="48" fill="url(#${id}r)"/><circle cx="50" cy="50" r="40" fill="${t.shade}"/><circle cx="50" cy="51" r="38.5" fill="url(#${id}f)"/><path d="M18 70L38 38l9 13 11-19 24 38z" fill="${t.shade}" opacity=".55"/><path d="M20 68l18-28 9 12 11-18 22 34z" fill="${t.peak}"/><path d="M58 34l-6 10 6-3 5 4zM38 40l-5 8 5-2 4 3z" fill="${t.snow}" opacity=".95"/><path d="M58 34l22 34H58l-4-10z" fill="${t.shade}" opacity=".35"/>${glass}</svg>`;
 }

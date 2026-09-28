@@ -12,7 +12,7 @@ import { formatDelta, formatTime } from './format';
 import type { Hud, HudAction } from './index';
 import { conceal, isLive, reveal } from './live';
 import { TileRow } from './tiles';
-import { MEDAL_NAME, wordmarkSvg, zoneTitle, type MedalId } from './brand';
+import { MEDAL_NAME, medalSvg, wordmarkSvg, zoneTitle, type MedalId } from './brand';
 
 type BannerKind = 'count' | 'go' | 'crash' | 'cp' | 'finish';
 
@@ -74,6 +74,7 @@ export class DomHud implements Hud {
   private readonly resKicker: HTMLDivElement;
   private readonly resName: HTMLDivElement;
   private readonly resStats: HTMLDivElement;
+  private readonly resReward: HTMLDivElement;
   private readonly resTiles: TileRow;
   private readonly resLegend: HTMLDivElement;
   private nextEnabled = true;
@@ -190,10 +191,12 @@ export class DomHud implements Hud {
         </div>
         <div class="medals">${MEDAL_ORDER.map((m) => `<div class="medal ${m}"><i></i><b>${MEDAL_NAME[m]}</b><small></small></div>`).join('')}</div>
         <div class="ov-stats"></div>
+        <div class="tk-reward" role="status"></div>
       </div>`;
     this.resKicker = this.results.querySelector('.ov-kicker') as HTMLDivElement;
     this.resName = this.results.querySelector('.ov-name') as HTMLDivElement;
     this.resStats = this.results.querySelector('.ov-stats') as HTMLDivElement;
+    this.resReward = this.results.querySelector('.tk-reward') as HTMLDivElement;
     this.resTime = this.results.querySelector('.time') as HTMLDivElement;
     this.resFaults = this.results.querySelector('.faults b') as HTMLDivElement;
     this.resPb = this.results.querySelector('.pb') as HTMLDivElement;
@@ -204,6 +207,7 @@ export class DomHud implements Hud {
       gold: this.results.querySelector('.medal.gold') as HTMLDivElement,
       platinum: this.results.querySelector('.medal.platinum') as HTMLDivElement,
     };
+    this.resMedals.platinum.querySelector('i')!.innerHTML = medalSvg('platinum');
     this.resTiles = new TileRow(this.results, null);
     // DOM order is the pad / keyboard order: MAP · RETRY · REPLAY · NEXT TRACK (NEXT TRACK is the vermilion one).
     this.resTiles.setTiles([
@@ -501,6 +505,7 @@ export class DomHud implements Hud {
     const T = r.targetTimeS;
     const bike = r.bike === 'pro' ? 'Pro' : 'Rookie';
     this.resStats.innerHTML = `<span>Best <b>${r.previousBest !== null ? formatTime(Math.min(r.previousBest, r.time)) : '—'}</b></span>${T ? `<i>·</i><span>Target <b>${formatTime(T)}</b></span>` : ''}<i>·</i><span>Bike <b class="bike-${r.bike ?? 'rookie'}">${bike}</b></span>`;
+    this.resReward.textContent = '';
     const text = formatTime(r.time);
     const dot = text.indexOf('.');
     this.resTime.innerHTML = `${text.slice(0, dot)}<span class="ms">${text.slice(dot)}</span>`;
@@ -534,6 +539,17 @@ export class DomHud implements Hud {
     this.resTiles.setDisabled('next', !this.nextEnabled);
     this.resTiles.focusId(this.nextEnabled ? 'next' : 'retry');
     for (const b of this.banners) if (b.kind === 'finish') this.retire(b); // the ticket restates it
+  }
+
+  /** App-owned career rewards are applied after the deterministic result and only once per medal improvement. */
+  setScrapReward(delta: number | null, wallet: number, proOwned: boolean, price: number): void {
+    if (delta === null) {
+      this.resReward.textContent = '';
+      return;
+    }
+    const earned = delta > 0 ? `+${delta} Scrap earned` : 'No new Scrap';
+    const goal = proOwned ? 'Pro owned' : `${Math.max(0, price - wallet)} to Pro`;
+    this.resReward.textContent = `${earned} · ${wallet} wallet · ${goal}`;
   }
 
   /** The track's top 5 for the class ridden (`BestTimes.board`), medal dot per row, this run's row marked `you`. */

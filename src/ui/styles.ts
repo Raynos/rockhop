@@ -433,6 +433,8 @@ html.short .trace { top: calc(4.2rem + var(--sat)); width: 160px; }
 .bike-chip .chip-art { width: 2.1em; height: 1.4em; margin-left: 2px; background-size: cover; background-position: 50% 45%; opacity: 0; transition: opacity var(--t3); border-radius: 2px; }
 .bike-chip .chip-art.loaded { opacity: 1; }
 .bike-chip .chip-art:not(.loaded) { display: none; }
+.bike-chip.locked:not(.on) { opacity: .82; }
+.bike-chip.locked em { color: #9c4328; }
 /* The panel: the chosen bike's sheet — class, bars, character, note — then the outfit / rider lines and the load status. */
 .garage-panel { position: absolute; right: calc(var(--s4) + var(--sar)); top: calc(var(--s4) + var(--sat) + 52px); width: var(--panel-w); display: flex; flex-direction: column; gap: var(--s2); padding: var(--s3) var(--s3) var(--s2); pointer-events: none; }
 .gp-sheet { display: flex; flex-direction: column; gap: 6px; }
@@ -449,6 +451,16 @@ html.short .trace { top: calc(4.2rem + var(--sat)); width: 160px; }
 .gp-note { font: 700 .64rem/1.35 var(--font); letter-spacing: .1em; text-transform: uppercase; color: rgba(29,35,38,.6); padding-top: 5px; border-top: 1.5px dashed rgba(15,92,99,.3); }
 .gp-kv { display: flex; justify-content: space-between; gap: var(--s2); font: 700 .68rem/1.2 var(--font); letter-spacing: .1em; text-transform: uppercase; color: rgba(29,35,38,.6); }
 .gp-kv b { color: var(--coal); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gp-economy { display: flex; flex-direction: column; gap: 4px; padding-top: 6px; border-top: 1.5px solid rgba(15,92,99,.24); font: 700 .68rem/1.2 var(--font); color: var(--teal); }
+.gp-wallet { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; text-transform: uppercase; letter-spacing: .12em; }
+.gp-wallet b { font: 400 1.12rem/1 var(--display); color: var(--coal); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.gp-bike-state { color: var(--coal); line-height: 1.2; }
+.gp-scrap-progress { display: block; height: 5px; border-radius: 5px; background: rgba(15,92,99,.17); overflow: hidden; }
+.gp-scrap-progress i { display: block; height: 100%; background: var(--vermilion); }
+.gp-scrap-remaining { color: rgba(29,35,38,.72); line-height: 1.2; }
+.gp-buy { pointer-events: auto; width: 100%; min-height: 44px; border: 0; border-radius: 6px; background: var(--vermilion); color: var(--cream); font: 800 .76rem/1.1 var(--font); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; }
+.gp-buy:disabled { background: rgba(29,35,38,.18); color: rgba(29,35,38,.65); cursor: default; }
+.gp-purchase-error { color: #9c4328; line-height: 1.2; }
 .outfit-current { color: var(--teal); font: 700 .7rem/1.3 var(--font); letter-spacing: .02em; }
 .garage-screen .legend { top: calc(var(--s4) + var(--sat) + 56px); right: calc(var(--s4) + var(--sar) + var(--panel-w) + var(--s3)); bottom: auto; font-size: .66rem; gap: var(--s3); }
 .garage-screen .legend.hide { display: none; }
@@ -512,6 +524,8 @@ html.short #ui .chip.outfit-button { font-size: .78rem; }
 html.short .garage-panel { top: calc(var(--s4) + var(--sat) + 50px); gap: 6px; padding: var(--s2) var(--s2) 6px; }
 html.short .gp-name b { font-size: 1.3rem; }
 html.short .gp-line { display: none; }
+html.short .gp-economy { gap: 3px; padding-top: 4px; font-size: .64rem; }
+html.short .gp-wallet b { font-size: 1rem; }
 html.short .garage-hint { font-size: .6rem; padding: 5px 10px; }
 html.short .ob-card { padding: var(--s4); gap: var(--s2); }
 html.short .ob-card h2 { font-size: 1.6rem; }
@@ -667,7 +681,9 @@ export const HUD_CSS = /* css */ `
 .results .medal { position: relative; display: flex; flex-direction: column; align-items: center; gap: .3em; padding: 0 .4em; text-align: center; font: 800 .74em/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--coal); }
 .results .medal + .medal { border-left: 1.5px solid rgba(29,35,38,.2); }
 .results .medal i { position: relative; z-index: 1; display: block; width: 5.2em; height: 5.2em; border-radius: 50%; background-size: cover; background-position: center; filter: saturate(.55) brightness(1.02); opacity: .74; transition: transform var(--t3) var(--ease), filter var(--t3), opacity var(--t3); }
-.results .medal.bronze { --md: #B8693A; } .results .medal.silver { --md: #AEB6C0; } .results .medal.gold { --md: #E0AE36; } .results .medal.platinum { --md: #1E2A2E; }
+.results .medal.bronze { --md: #B8693A; } .results .medal.silver { --md: #AEB6C0; } .results .medal.gold { --md: #E0AE36; } .results .medal.platinum { --md: #9ADBED; }
+.results .medal.platinum i:not(.img) { background: none; box-shadow: none; }
+.results .medal.platinum i svg { display: block; width: 100%; height: 100%; }
 .results .medal i:not(.img) { background: radial-gradient(circle at 36% 30%, rgba(255,255,255,.55), transparent 42%), var(--md); box-shadow: inset 0 0 0 .3em rgba(0,0,0,.18); }
 .results .medal.got i { filter: none; opacity: 1; }
 .results .medal b { position: relative; z-index: 1; font-weight: 800; color: var(--coal); }
@@ -675,11 +691,14 @@ export const HUD_CSS = /* css */ `
 .results .medal.next small { color: var(--teal); }
 .results .medal.earned::before { content: ""; position: absolute; left: 50%; top: -.95em; width: 7.1em; height: 7.1em; margin-left: -3.55em; background: var(--laurel) center / contain no-repeat; pointer-events: none; opacity: 0; transform: scale(.8); transition: opacity var(--t3) var(--ease), transform var(--t3) var(--ease); }
 .results.stage-4 .medal.earned::before, .results.stage-5 .medal.earned::before { opacity: 1; transform: none; }
-.results .medal.earned.platinum i::after { content: ""; position: absolute; inset: -.2em; border-radius: 50%; box-shadow: 0 0 1.1em .15em rgba(47,214,200,.55); }
+.results .medal.earned.platinum i::after { content: ""; position: absolute; inset: -.2em; border-radius: 50%; box-shadow: 0 0 1.1em .15em rgba(121,201,228,.7); }
 .ticket .ov-stats { display: flex; justify-content: flex-end; gap: 0; margin-top: .55em; font: 700 .68em/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: rgba(29,35,38,.62); text-shadow: none; white-space: nowrap; }
 .ticket .ov-stats b { color: var(--coal); }
 .ticket .ov-stats b.bike-pro { color: #2a5da8; }
 .ticket .ov-stats i { font-style: normal; margin: 0 .55em; }
+.ticket .tk-reward { margin-top: .42em; padding-top: .36em; border-top: 1px solid rgba(15,92,99,.25); text-align: right; font: 800 clamp(11px, .86em, 15px)/1.1 var(--sans); letter-spacing: .02em; color: var(--teal); font-variant-numeric: tabular-nums; opacity: 0; transform: translateY(.4em); transition: opacity var(--t2) var(--ease), transform var(--t2) var(--ease); }
+.ticket .tk-reward:empty { display: none; }
+.results.stage-4 .tk-reward, .results.stage-5 .tk-reward { opacity: 1; transform: none; }
 /* The action row: the home screen's cards. NEXT TRACK is the vermilion one; REPLAY is a square icon card. */
 #ui .hud .results .tiles { position: absolute; left: calc(4.5 * var(--vw) + var(--sal)); right: calc(4 * var(--vw) + var(--sar)); bottom: calc(max(12px, calc(6.5 * var(--vh))) + var(--sab)); display: flex; gap: calc(1.6 * var(--vw)); justify-content: flex-start; width: auto; }
 #ui .hud .results .tile { flex: 23 1 0; width: auto; height: var(--card-h); min-height: 44px; flex-direction: row; gap: .55em; padding: 0 1em; border: 0; border-radius: 8px; color: var(--teal); background: var(--contour) 0 0 / 240px 160px, linear-gradient(180deg, #F6ECD6, var(--cream) 55%, var(--cream-2)); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -3px 0 rgba(15,92,99,.12), 0 8px 22px rgba(8,14,16,.38); font: 400 clamp(.95rem, calc(4.3 * var(--vh)), 1.8rem)/1 var(--display); letter-spacing: .015em; }
