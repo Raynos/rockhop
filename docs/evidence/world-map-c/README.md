@@ -13,3 +13,5 @@ The standalone scene is `prototypes/world-map-c/`. These captures come from a si
 | [`default.png`](default.png), [`pass8-slope-materials.png`](pass8-slope-materials.png) | First and middle passes for before/after comparison. |
 
 The scene is below concept C's texture and asset fidelity. The road and towers read more clearly in the final overview, but the trees, cliffs, snow, ship, and quarry still look procedural. There has been no physical iPhone test. Stage names are placeholders; production needs the real C1–S3 campaign data and progress state. See [`measurements.json`](measurements.json) for render counts and verification scope.
+
+The later [fidelity pass](fidelity-pass/README.md) adds a matched **moving** before/after orbit, three phone-landscape art views, preserved tower selection checks, and an explicit remaining-gap review. Its measurements supersede the original scene counts above.

@@ -73,7 +73,15 @@ const ridge = (x, z, cx, cz, sx, sz) => Math.exp(-(((x-cx)/sx)**2 + ((z-cz)/sz)*
 const smooth = (a,b,x) => { const t = THREE.MathUtils.clamp((x-a)/(b-a),0,1); return t*t*(3-2*t); };
 const edgeDistance = (x,z) => {
   const coastJitter = .105*Math.sin(x*.55+z*.29) + .052*Math.sin(x*1.8+z*.7) + .035*Math.sin(x*4.8-z*1.9);
-  return Math.sqrt((x/25.4)**2 + (z/(9.7 + 1.0*Math.sin(x*.23)))**2) + coastJitter;
+  // Three small coves and two rock headlands keep the shoreline from reading
+  // as a regular oval when the island turns. They begin beyond the road.
+  const front=smooth(5.6,8.5,z);
+  const coves=front*(.21*ridge(x,z,-9.2,8.6,2.2,2.4)
+    +.25*ridge(x,z,2.3,8.9,2.7,2.5)
+    +.19*ridge(x,z,12.0,8.0,2.0,2.4));
+  const headlands=front*(.11*ridge(x,z,-15.2,8.1,1.7,2.8)
+    +.09*ridge(x,z,8.1,8.4,1.5,2.5));
+  return Math.sqrt((x/25.4)**2 + (z/(9.7 + 1.0*Math.sin(x*.23)))**2) + coastJitter + coves - headlands;
 };
 const routeZ = x => -.40 + 2.55*Math.sin(x*.29+.7) + .8*Math.sin(x*.76-.3)
   + .55*Math.sin(x*.12) + 4.0*(smooth(-13,-10,x)-smooth(-2,1,x))
@@ -88,8 +96,11 @@ const groundHeight = (x,z) => {
     2.5*ridge(x,z,19,4,7,5) + 5.4*ridge(x,z,18,-5.6,5.7,2.8)
     + 4.4*ridge(x,z,24,2.6,4.2,4.5) + 3.1*ridge(x,z,14,-7,4.3,3.2));
   const h = base + woodland + quarry + snow;
-  // Abrupt rim creates readable sculpted cliffs, while the bottom stays below sea level.
-  return h * (1-smooth(.85,1.015,edge)) - 2.15*smooth(.91,1.035,edge);
+  // The rim is fractured by long rock ribs. It still drops into the sea, but
+  // it no longer forms one geometrically continuous curtain along the camera.
+  const rib=(.25*Math.sin(x*1.18+z*.28)+.13*Math.sin(x*3.75-z*.5))
+    * smooth(.67,.83,edge)*(1-smooth(1.0,1.06,edge));
+  return h * (1-smooth(.84,1.025,edge)) - 2.05*smooth(.92,1.05,edge) + rib;
 };
 
 // A tiny deterministic RNG makes the mockup stable for review and comparisons.
@@ -115,6 +126,10 @@ const colorFor = (x,z,y) => {
   const exposed=smooth(.65,2.9,Math.hypot(sx,sz))*.68;
   const stone=new THREE.Color(x>13?'#5d7681':x>2?'#784b35':'#56605c');
   c.lerp(stone,exposed);
+  const rim=smooth(.71,.99,edgeDistance(x,z));
+  const strata=.5+.5*Math.sin(y*5.8+x*.69+noise(x*.8,z*.8)*2.1);
+  const mineral=new THREE.Color(x>13?'#85999c':x>2?'#a5714e':'#72786c');
+  c.lerp(mineral,rim*exposed*(.10+.34*strata));
   const variation = noise(x*2.3,z*2.3)*.065 + noise(x*.75,z*.75)*.035;
   c.offsetHSL(0,0,variation);
   if (x > 11 && y > 2.2) c.lerp(new THREE.Color('#f5f5ed'), smooth(2.2,4.1,y)*.6);
@@ -174,6 +189,13 @@ const waterMaterial=new THREE.ShaderMaterial({uniforms:waterUniforms,transparent
    vec2 p=vWorld.xz;float n=valueNoise(p*1.3+time*.035),n2=valueNoise(p*3.7-time*.09);
    float unscaledX=p.x/.82;
    float r=length(vec2(unscaledX/25.4,p.y/(9.7+sin(unscaledX*.23)))) + .105*sin(unscaledX*.55+p.y*.29)+.052*sin(unscaledX*1.8+p.y*.7)+.035*sin(unscaledX*4.8-p.y*1.9);
+   float front=smoothstep(5.6,8.5,p.y);
+   float coveA=.21*exp(-pow((unscaledX+9.2)/2.2,2.)-pow((p.y-8.6)/2.4,2.));
+   float coveB=.25*exp(-pow((unscaledX-2.3)/2.7,2.)-pow((p.y-8.9)/2.5,2.));
+   float coveC=.19*exp(-pow((unscaledX-12.)/2.,2.)-pow((p.y-8.)/2.4,2.));
+   float headA=.11*exp(-pow((unscaledX+15.2)/1.7,2.)-pow((p.y-8.1)/2.8,2.));
+   float headB=.09*exp(-pow((unscaledX-8.1)/1.5,2.)-pow((p.y-8.4)/2.5,2.));
+   r+=front*(coveA+coveB+coveC-headA-headB);
    float shallow=1.-smoothstep(.93,1.18,r);
    vec3 deep=vec3(.009,.115,.162),cove=vec3(.036,.295,.345);
    vec3 color=mix(deep,cove,shallow*.67+.17*n);
@@ -241,6 +263,36 @@ for(let i=0;i<39;i++){
  if(i%5===0)seaStack(x+rr(-.4,.4),z+rr(.7,1.6),scale*.31,scale*.98,x>14);
 }
 
+// Broken outcrops interrupt the long front cliff and carry its silhouette
+// down into the surf. They are instanced to keep the extra draw cost bounded.
+const buttressPositions=[],buttressIndices=[];
+const buttressLevels=[-.8,-.33,.18,.55,1],buttressWidths=[.82,1,.83,.49,.07],buttressSides=9;
+for(let level=0;level<buttressLevels.length;level++)for(let side=0;side<buttressSides;side++){
+ const angle=side/buttressSides*Math.PI*2;
+ const jag=.78+.13*Math.sin(side*5.73+level*3.91)+.11*Math.cos(side*3.26-level*2.2);
+ buttressPositions.push(Math.cos(angle)*buttressWidths[level]*jag,buttressLevels[level],Math.sin(angle)*buttressWidths[level]*jag);
+ if(level<buttressLevels.length-1){const a=level*buttressSides+side,b=level*buttressSides+(side+1)%buttressSides;buttressIndices.push(a,b,a+buttressSides,b,b+buttressSides,a+buttressSides);}
+}
+const buttressGeo=new THREE.BufferGeometry();
+buttressGeo.setAttribute('position',new THREE.Float32BufferAttribute(buttressPositions,3));
+buttressGeo.setIndex(buttressIndices);buttressGeo.computeVertexNormals();
+const buttressMaterials=['#535c57','#687269','#8a6751','#8f9da1'].map(hex=>mat(hex));
+const buttresses=buttressMaterials.map(material=>new THREE.InstancedMesh(buttressGeo,material,48));
+const buttressCounts=[0,0,0,0],buttressDummy=new THREE.Object3D();
+for(let i=0;i<124;i++){
+ const x=rr(-23.0,23.0),side=rand()<.76?1:-1;
+ const edgeZ=(9.7+Math.sin(x*.23))*Math.sqrt(Math.max(.08,1-(x/25.4)**2));
+ const z=side*edgeZ*rr(.92,1.045);
+ const band=x>13?3:x>2?2:x<-11?0:1;
+ if(buttressCounts[band]>=48)continue;
+ const top=groundHeight(x,z),height=rr(.55,1.50)*(x>13?1.15:1);
+ buttressDummy.position.set(x,top-.68*height,z);
+ buttressDummy.rotation.set(rr(-.14,.14),rr(0,6.28),rr(-.20,.20));
+ buttressDummy.scale.set(rr(.24,.54),height,rr(.27,.58));buttressDummy.updateMatrix();
+ buttresses[band].setMatrixAt(buttressCounts[band]++,buttressDummy.matrix);
+}
+buttresses.forEach((o,i)=>{o.count=buttressCounts[i];o.castShadow=true;o.receiveShadow=true;terrain.add(o);});
+
 // Coast-to-summit ribbon, made from sampled vertices that lie on the relief.
 function routeMesh(width, color, lift){
  const positions=[],normals=[],uv=[],ind=[];const count=450;
@@ -257,7 +309,7 @@ function routeMesh(width, color, lift){
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(normals,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));g.setIndex(ind);g.computeVertexNormals();
  const m=new THREE.Mesh(g,mat(color));m.receiveShadow=true;terrain.add(m);return m;
 }
-routeMesh(1.20,'#554337',.19);routeMesh(.95,'#d6aa69',.22);
+routeMesh(1.28,'#504033',.23);routeMesh(.89,'#e2bb7a',.27);
 // A shallow retaining fascia makes the quarry traverse read as a built road
 // rather than a pale decal on the cut bank.
 {
@@ -275,26 +327,35 @@ routeMesh(1.20,'#554337',.19);routeMesh(.95,'#d6aa69',.22);
 // Off-road dust and wheel marks keep the route legible from the default camera.
 const tire=mat('#8b724e');
 for(const offset of [-.36,.36]){
- const pts=[];for(let i=0;i<310;i++){const x=-22+i/309*44,z=routeZ(x)+offset;pts.push(new THREE.Vector3(x,groundHeight(x,z)+.24,z));}
+ const pts=[];for(let i=0;i<310;i++){const x=-22+i/309*44,z=routeZ(x)+offset;pts.push(new THREE.Vector3(x,groundHeight(x,z)+.30,z));}
  line(pts,tire,.018);
 }
 
-// Individually scalloped needle boughs replace the repeated cone silhouette.
-function firGeometry(snowy){
+// Three authored crown profiles make the forests read as stands of trees, not
+// one repeated stamp. Snow remains a dark conifer with snow caught on the
+// upper boughs, so the snow biome has contrast against the pale mountains.
+function firGeometry(snowy,species){
  const p=[],colors=[];
  const tri=(a,b,c,color)=>{p.push(...a,...b,...c);const tint=new THREE.Color(color);for(let j=0;j<3;j++)colors.push(tint.r,tint.g,tint.b);};
- for(let level=0;level<5;level++){
-   const y=.43+level*.265,rad=.50*(1-level*.16);
-   for(let k=0;k<9;k++){
-     const angle=k/9*Math.PI*2+level*.29;
-     const jag=.88+.12*Math.sin(k*4.13+level*7.71);
-     const center=[Math.cos(angle)*.025,y+.38,Math.sin(angle)*.025];
-     const left=[Math.cos(angle-.36)*rad*.78,y+.07,Math.sin(angle-.36)*rad*.78];
-     const right=[Math.cos(angle+.36)*rad*.78,y+.07,Math.sin(angle+.36)*rad*.78];
-     const tip=[Math.cos(angle)*rad*jag,y-.12-.035*(k%3),Math.sin(angle)*rad*jag];
-     const underside=[Math.cos(angle)*rad*.37,y-.02,Math.sin(angle)*rad*.37];
-     const top=snowy?(level>1?'#d3e0db':'#accac5'):(k%3===0?'#57906b':'#397451');
-     const shade=snowy?'#426764':'#173b31';
+ const profiles=[
+   {levels:6,arms:9,base:.52,rise:.245,tip:1.7,top:'#3c7952',light:'#70a06a',shade:'#193d31'},
+   {levels:5,arms:8,base:.61,rise:.305,tip:1.66,top:'#245d48',light:'#4e8968',shade:'#15382f'},
+   {levels:7,arms:7,base:.39,rise:.225,tip:1.88,top:'#627e4d',light:'#a2a468',shade:'#344c38'},
+ ];
+ const s=profiles[species];
+ for(let level=0;level<s.levels;level++){
+   const y=.41+level*s.rise,rad=s.base*(1-level/s.levels*.78);
+   for(let k=0;k<s.arms;k++){
+     const angle=k/s.arms*Math.PI*2+level*.34;
+     const jag=.82+.14*Math.sin(k*4.13+level*7.71+species*2.1);
+     const center=[Math.cos(angle)*.02,y+.38,Math.sin(angle)*.02];
+     const left=[Math.cos(angle-.40)*rad*.8,y+.045,Math.sin(angle-.40)*rad*.8];
+     const right=[Math.cos(angle+.40)*rad*.8,y+.045,Math.sin(angle+.40)*rad*.8];
+     const tip=[Math.cos(angle)*rad*jag,y-.11-.04*(k%3),Math.sin(angle)*rad*jag];
+     const underside=[Math.cos(angle)*rad*.34,y-.045,Math.sin(angle)*rad*.34];
+     const snowCap=snowy && (level>1 || (k+level)%4!==0);
+     const top=snowCap?(level>s.levels-3?'#eef1e8':'#b6c8c2'):(k%3===0?s.light:s.top);
+     const shade=snowy?'#31584c':s.shade;
      tri(center,left,tip,top);tri(center,tip,right,top);
      tri(underside,tip,left,shade);tri(underside,right,tip,shade);
    }
@@ -303,32 +364,46 @@ function firGeometry(snowy){
  g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.computeVertexNormals();return g;
 }
 const trunkGeo=new THREE.CylinderGeometry(.044,.095,.65,6),trunkMat=mat('#514433');
-const forestTrunks=new THREE.InstancedMesh(trunkGeo,trunkMat,360);
-const snowTrunks=new THREE.InstancedMesh(trunkGeo,trunkMat,125);
 const foliageMat=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide});
-const forestCanopies=new THREE.InstancedMesh(firGeometry(false),foliageMat,360);
-const snowCanopies=new THREE.InstancedMesh(firGeometry(true),foliageMat,125);
-const forestCores=new THREE.InstancedMesh(new THREE.ConeGeometry(.29,1.2,8),mat('#2b5e44'),360);
-const snowCores=new THREE.InstancedMesh(new THREE.ConeGeometry(.29,1.2,8),mat('#628680'),125);
+const treeKinds=[
+ {snowy:false,species:0,capacity:130,core:'#28553e'},
+ {snowy:false,species:1,capacity:110,core:'#1a493a'},
+ {snowy:false,species:2,capacity:85,core:'#526b40'},
+ {snowy:true,species:0,capacity:48,core:'#315c50'},
+ {snowy:true,species:1,capacity:48,core:'#254b43'},
+ {snowy:true,species:2,capacity:35,core:'#566c55'},
+].map(kind=>({
+ ...kind,count:0,
+ trunk:new THREE.InstancedMesh(trunkGeo,trunkMat,kind.capacity),
+ canopy:new THREE.InstancedMesh(firGeometry(kind.snowy,kind.species),foliageMat,kind.capacity),
+ core:new THREE.InstancedMesh(new THREE.ConeGeometry(.25,kind.species===2?1.46:1.20,7),mat(kind.core),kind.capacity),
+}));
 const dum=new THREE.Object3D();
 let nForest=0,nSnow=0;
-for(let tries=0;tries<9500&&(nForest<360||nSnow<125);tries++){
- const x=rr(-23.6,24.1),z=rr(-8.7,8.7); if(edgeDistance(x,z)>.87 || Math.abs(routeZ(x)-z)<2.65)continue;
- const snowy=x>12.5; if(snowy ? nSnow>=125 : nForest>=360)continue;
+for(let tries=0;tries<12000&&(nForest<325||nSnow<131);tries++){
+ const x=rr(-23.6,24.1),z=rr(-8.7,8.7); if(edgeDistance(x,z)>.87 || Math.abs(routeZ(x)-z)<3.05)continue;
+ const snowy=x>12.5; if(snowy ? nSnow>=131 : nForest>=325)continue;
  if(!snowy&&(x>1.8&&x<13.0 || x<-11.2&&rand()<.71))continue;
  if(x>-8.0&&x<-2.9&&z>3.5&&z<8.0)continue;
- const h=groundHeight(x,z),scale=rr(.65,1.55),rot=rr(0,6.28);
- const tIdx=snowy?nSnow++:nForest++;
+ // A mottled density field leaves sunlit clearings and groups conifers into
+ // recognizable stands; no planted-looking rows along the road.
+ const density=.59+.36*noise(x*.26,z*.29)+.17*noise(x*.75,z*.75);
+ if(rand()>density)continue;
+ const species=rand()<.43?0:rand()<.62?1:2;
+ const kind=treeKinds[(snowy?3:0)+species];if(kind.count>=kind.capacity)continue;
+ const h=groundHeight(x,z),scale=(species===2?rr(.56,1.28):rr(.67,1.48))*(snowy?.88:1),rot=rr(0,6.28);
+ const tIdx=kind.count++;
+ if(snowy)nSnow++;else nForest++;
  dum.position.set(x,h+.29*scale,z);dum.rotation.set(0,rot,0);dum.scale.setScalar(scale);dum.updateMatrix();
- (snowy?snowTrunks:forestTrunks).setMatrixAt(tIdx,dum.matrix);
+ kind.trunk.setMatrixAt(tIdx,dum.matrix);
  dum.position.set(x,h,z);dum.updateMatrix();
- (snowy?snowCanopies:forestCanopies).setMatrixAt(tIdx,dum.matrix);
- dum.position.set(x,h+.96*scale,z);dum.updateMatrix();
- (snowy?snowCores:forestCores).setMatrixAt(tIdx,dum.matrix);
- const shade=new THREE.Color('#ffffff').multiplyScalar(rr(.85,1.14));
- (snowy?snowCanopies:forestCanopies).setColorAt(tIdx,shade);
+ kind.canopy.setMatrixAt(tIdx,dum.matrix);
+ dum.position.set(x,h+(species===2?1.07:.96)*scale,z);dum.updateMatrix();
+ kind.core.setMatrixAt(tIdx,dum.matrix);
+ const shade=new THREE.Color('#ffffff').multiplyScalar(rr(.84,1.13));
+ kind.canopy.setColorAt(tIdx,shade);
 }
-for(const [obj,count] of [[forestTrunks,nForest],[forestCanopies,nForest],[forestCores,nForest],[snowTrunks,nSnow],[snowCanopies,nSnow],[snowCores,nSnow]]){obj.count=count;obj.castShadow=true;obj.receiveShadow=true;terrain.add(obj);}
+for(const kind of treeKinds)for(const obj of [kind.trunk,kind.canopy,kind.core]){obj.count=kind.count;obj.castShadow=true;obj.receiveShadow=true;terrain.add(obj);}
 
 // Distinct rock palettes push the quarry and glacial ridge apart visually.
 for(const [xMin,xMax,count,palette] of [

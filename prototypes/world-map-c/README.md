@@ -11,3 +11,5 @@ The code aims at the composition of concept C. The generated nine-view board is 
 Stage labels and names here are placeholders. Production must connect the actual 12-stage campaign data (C1 **Low Tide** through S3 **Whiteout**), unlock state, stars/progress, ride navigation, and touch accessibility. The artwork and interaction are isolated from the shipped world map.
 
 See `docs/evidence/world-map-c/` for an 11.5-second >360° orbit clip, real pointer-selection/focus clip, phone landscape and portrait captures, and measurements.
+
+The later deterministic foliage, coastline, and road pass is reviewed in `docs/evidence/world-map-c/fidelity-pass/`: it contains a matched moving baseline/revised comparison, three 852×393 landscape art angles, 08/12 physical pointer selection, and render counts. Run `node prototypes/world-map-c/capture-fidelity.mjs` while the prototype Vite server is listening to repeat the phone-sized orbit and tap capture. This pass uses only code-generated geometry; it adds no third-party assets. The broad cliff and procedural material language still fall short of the C concept board, and the physical iPhone performance gate is open.
