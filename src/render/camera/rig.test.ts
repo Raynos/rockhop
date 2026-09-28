@@ -103,3 +103,28 @@ describe('camera rig orbit override (garage model explorer)', () => {
     expect(b.overrideKind).toBeNull();
   });
 });
+
+describe('finish camera behind the live result report', () => {
+  it('frames a readable rider inside the left hero window by the first result reveal', () => {
+    const rig = new CameraRig();
+    rig.setAspect(852 / 393);
+    rig.setPhase('riding');
+    rig.finishX = 10;
+    const frames = new FrameBuilder();
+    for (let i = 0; i < 30; i++) rig.update(frames.build(parked(i * 2), 1));
+    rig.setPhase('finished');
+    for (let i = 30; i <= 54; i++) {
+      const state = parked(i * 2);
+      state.finished = true;
+      state.bike.pos.x = 12.5;
+      rig.update(frames.build(state, 1));
+    }
+    const bike = new THREE.Vector3(12.5, 1.85, 0).project(rig.camera);
+    const x = (p: THREE.Vector3) => (p.x + 1) / 2;
+    const y = (p: THREE.Vector3) => (1 - p.y) / 2;
+    expect(x(bike)).toBeGreaterThan(0.15);
+    expect(x(bike)).toBeLessThan(0.4);
+    expect(y(bike)).toBeLessThan(0.5);
+    expect(rig.debug().bikeHeightFrac).toBeGreaterThan(0.17);
+  });
+});

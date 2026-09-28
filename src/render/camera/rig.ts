@@ -3,7 +3,7 @@
  * states (idle ≈40 % frame height, riding ≈24 %, fast/air ≈9 %), bike at
  * x≈30 % / y≈55 % when moving, yaw toward travel + pitch down in the riding
  * state flattening when tight, velocity lookahead, landing shake, crash
- * stop-follow then creep, finish freeze, restart hard cut. Track-authored
+ * stop-follow then creep, finish rider hold, restart hard cut. Track-authored
  * `CameraKey`s override / bias the state table. Everything is clocked from
  * simulated time, so the rig is a pure function of the state history.
  */
@@ -190,7 +190,7 @@ export class CameraRig {
   private primed = false;
   /** Ground height sampler (profile) for the airborne framing; set by the renderer per track. */
   ground: ((x: number) => number) | null = null;
-  /** Finish line x (set per track): the finish hold frames the gate and the coasting bike together. */
+  /** Finish line x (set per track): available for the crossing beat and authored finish dressing. */
   finishX = 0;
 
   constructor() {
@@ -360,35 +360,40 @@ export class CameraRig {
       this.fy.halfLife = 0.18;
     }
     if (f.finished) {
-      // Finish hold (round 9; user frame: smear after the line, camera still chasing). The game
-      // cuts throttle and auto-brakes, so the bike coasts to a stop on the run-out: ease out of
-      // the forward follow over 1.5 s onto the midpoint between the gate and the bike, widen so
-      // both stay in frame (confetti + fireworks burst at the gate posts), and dolly slowly for
-      // 3 s (yaw 15° → 28°, pitch 11° → 7°, a gentle pull-back), then hold. A crash past the
-      // line freezes physics at the tick before (`f.crashed` stays false), so the same hold runs.
+      // Finish hold: the full-width crossing beat shows the checkered gate, then the
+      // report arrives over the right half at 0.4 s. Move into a closer rider shot
+      // on the left while the bike coasts, with a restrained three-second dolly.
+      // A post-line fault freezes physics without exposing a crash in the report.
       if (this.finishT < 0 || cut) this.finishT = t;
       const since = t - this.finishT;
-      const ease = smoothstep(0, 1.5, since);
+      const ease = smoothstep(0, 0.4, since);
       const dolly = smoothstep(0, 3.0, since);
-      this.fx.halfLife = lerp(0.12, 1.0, ease);
+      this.fx.halfLife = 0.1;
       this.fy.halfLife = 0.18; // the run-out often slopes: keep the vertical follow snappy so the bike does not sink to the frame edge
-      const gateX = this.finishX;
-      const midX = lerp(f.bikeX, (f.bikeX + gateX) / 2, ease);
-      followTarget = { x: midX, y: f.bikeY };
-      // Width the frame needs for gate + bike + a margin, as a height fraction at this fov.
-      const need = Math.abs(f.bikeX - gateX) + 6;
-      const visibleH = need / this.aspect;
-      const hfFit = RIDER_HEIGHT / visibleH;
-      const hfHold = lerp(0.24, 0.17, dolly);
-      p.heightFrac = lerp(p.heightFrac, Math.max(0.13, Math.min(hfHold, hfFit)), ease);
-      p.screenX = lerp(p.screenX, 0.5, ease);
-      p.screenY = lerp(p.screenY, 0.58, ease);
-      p.yaw = lerp(p.yaw, moving * lerp(15, 28, dolly) * DEG, ease);
+      // The production result report occupies the right half. Arrive in the left live-scene
+      // window before the report's first reveal (0.4 s after the line).
+      this.screenX.halfLife = 0.08;
+      this.screenY.halfLife = 0.12;
+      this.heightFrac.halfLife = 0.1;
+      // The crossing beat shows the actual gate before the report lands. Once
+      // the report arrives, follow the coasting rider for a readable close shot
+      // in its left hero window instead of widening until both distant objects
+      // shrink to thumbnails.
+      followTarget = { x: f.bikeX, y: f.bikeY };
+      p.heightFrac = lerp(p.heightFrac, lerp(0.3, 0.28, dolly), ease);
+      p.screenX = lerp(p.screenX, 0.235, smoothstep(0, 0.3, since));
+      // Keep the rider above the large LINE COMPLETE caption at the bottom of
+      // the left hero window; that caption otherwise hides the whole bike.
+      p.screenY = lerp(p.screenY, 0.26, ease);
+      p.yaw = lerp(p.yaw, moving * lerp(18, 26, dolly) * DEG, ease);
       p.pitch = lerp(p.pitch, lerp(11, 7, dolly) * DEG, ease);
       p.fov = lerp(p.fov, 34 * DEG, ease);
       this.state = 'finish';
     } else {
       this.finishT = -1;
+      this.screenX.halfLife = 0.5;
+      this.screenY.halfLife = 0.5;
+      this.heightFrac.halfLife = 0.35;
     }
     if (!f.crashed && !f.finished) {
       this.state = this.phase === 'countdown' ? 'countdown' : this.zoom === 2 || airWide ? 'fast' : this.zoom === 1 ? 'riding' : 'idle';

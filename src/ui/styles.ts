@@ -621,115 +621,75 @@ export const HUD_CSS = /* css */ `
 .hints.show { opacity: 1; }
 .hints kbd { font-family: var(--font); font-weight: 800; background: rgba(255,255,255,.12); border: 1px solid var(--line); border-bottom-width: 2px; padding: .05em .45em; border-radius: .25em; margin-right: .35em; font-size: .9em; }
 
-/* ---- results: the survey ticket (store release D19, mockup round1/A-results) ------------------------------------------
-   The cream ticket on the left (a perforated left edge and two ticket bites, contour paper with a survey patch, the ROCKHOP mark top-right): zone · code, track name,
-   CLEAN LINE, TIME (+ the PB line) and BAILS boxes, the local top 5, the four mountain medals. The finish scene stays live
-   on the right. MAP · RETRY · REPLAY · NEXT TRACK (vermilion) along the bottom, the home screen's cards. Proportions from
-   A-results at 1536 × 708: ticket x 4.5–56 %, y 6–74 %; buttons y 81–93 %. */
-.results { position: absolute; inset: 0; --tk: clamp(9px, calc(2.05 * var(--vh) + .18 * var(--vw)), 15.5px); --card-h: clamp(48px, calc(12 * var(--vh)), 96px); background: linear-gradient(90deg, rgba(10,16,18,.28), rgba(10,16,18,0) 60%); opacity: 0; transition: opacity var(--t2) var(--ease); }
-.results.show { opacity: 1; }
-.ticket { position: absolute; left: calc(4.5 * var(--vw) + var(--sal)); top: calc(max(8px, calc(5.5 * var(--vh))) + var(--sat)); width: min(calc(52 * var(--vw)), calc(var(--tk) * 58)); font-size: var(--tk); padding: 1.25em 1.7em 1em 2.3em; color: var(--coal); filter: drop-shadow(0 .5em 1.1em rgba(8,14,16,.42)); transform: translateX(-1.5em); opacity: 0; transition: transform var(--t2) var(--ease), opacity var(--t2) var(--ease); }
-.results.show .ticket { transform: none; opacity: 1; }
-/* The paper: a pseudo so the deckled clip-path does not clip the drop shadow. */
-.ticket { --bite: 64%; }
-/* The paper: a pseudo so its mask does not clip the drop shadow. The mask is the paper minus a perforated left edge (a bite every
-   1em) minus two half-round ticket bites at the medal rule. */
-.ticket::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: .35em .6em .6em .35em; background: var(--contour) 0 0 / 240px 160px, radial-gradient(120% 90% at 80% 0%, #FBF4E4, var(--cream) 55%, var(--cream-2));
-  -webkit-mask: radial-gradient(circle at 0 var(--bite), transparent 1em, #000 calc(1em + 1px)), radial-gradient(circle at 100% var(--bite), transparent 1em, #000 calc(1em + 1px)), radial-gradient(circle at 0 50%, transparent .34em, #000 calc(.34em + 1px)) 0 .2em / 1em 1em repeat-y, linear-gradient(#000, #000) .5em 0 / calc(100% - .5em) 100% no-repeat;
-  -webkit-mask-composite: source-in, source-in, source-over;
-  mask: radial-gradient(circle at 0 var(--bite), transparent 1em, #000 calc(1em + 1px)), radial-gradient(circle at 100% var(--bite), transparent 1em, #000 calc(1em + 1px)), radial-gradient(circle at 0 50%, transparent .34em, #000 calc(.34em + 1px)) 0 .2em / 1em 1em repeat-y, linear-gradient(#000, #000) .5em 0 / calc(100% - .5em) 100% no-repeat;
-  mask-composite: intersect, intersect, add; }
-/* The survey patch: the contour lines drawn close and dark under the route glyph (A-results' right half of the paper). */
-.tk-topo { position: absolute; right: 0; top: 0; width: 58%; height: 70%; z-index: -1; pointer-events: none; background: var(--contour-dark) 30px 12px / 170px 113px; -webkit-mask-image: radial-gradient(closest-side at 62% 48%, #000 35%, transparent); mask-image: radial-gradient(closest-side at 62% 48%, #000 35%, transparent); }
-
-.ticket * { text-shadow: none; }
-.tk-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1em; padding-bottom: .5em; border-bottom: 2px solid rgba(29,35,38,.75); width: 100%; }
-.ticket .ov-title { display: flex; flex-direction: column; gap: .3em; min-width: 0; }
-.ticket .ov-kicker { font: 700 .78em/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--coal); text-shadow: none; }
-.ticket .ov-name { font: 800 1.35em/1 var(--sans); font-stretch: 112%; letter-spacing: .1em; text-transform: uppercase; color: var(--coal); text-shadow: none; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.tk-mark { flex: 0 0 auto; width: 11.5em; color: var(--teal); margin-top: .1em; }
-.tk-stamp { margin: .22em 0 .1em -.04em; font: 400 4.2em/1 var(--display); letter-spacing: -.005em; text-transform: uppercase; color: var(--teal); white-space: nowrap; }
-.tk-body { position: relative; display: flex; align-items: stretch; gap: .8em; padding-bottom: .7em; border-bottom: 1.5px solid rgba(29,35,38,.35); }
-.tk-box { display: flex; flex-direction: column; justify-content: center; gap: .15em; padding: .45em .8em .5em; border: 1.5px solid rgba(29,35,38,.28); border-radius: .35em; background: rgba(255,250,238,.35); }
-.tk-box small { font: 700 .72em/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: rgba(29,35,38,.78); }
-.results .time { font: 800 2.55em/1 var(--sans); font-stretch: 104%; font-variant-numeric: tabular-nums; letter-spacing: -.01em; color: var(--coal); text-shadow: none; }
-.results .time .ms { font-size: 1em; }
-.results .faults b { font: 800 2.55em/1 var(--sans); font-variant-numeric: tabular-nums; color: var(--coal); }
-/* A bailed run: the count in vermilion (A-brand's BAIL +1), the stamp reads CLEARED instead of CLEAN LINE. */
-.results .faults.bailed b { color: var(--vermilion-2); }
-.results .faults { min-width: 5.2em; }
-.results .pb { font: 800 .95em/1.1 var(--sans); letter-spacing: .03em; text-transform: uppercase; color: var(--teal); min-height: 1.1em; text-shadow: none; white-space: nowrap; }
-.results .pb.behind { color: rgba(29,35,38,.7); }
-.results .pb em { font-style: normal; color: var(--vermilion-2); }
-.tk-route { position: absolute; right: .2em; top: -3.8em; width: 4.4em; height: 8em; color: rgba(15,92,99,.62); pointer-events: none; }
-/* Local leaderboard (game.md § leaderboard): the ticket's right column, revealed with the medals. */
-.results .board { flex: 1 1 auto; align-self: stretch; min-width: 8em; max-width: 13em; margin-left: auto; margin-right: 4.6em; padding: .1em 0; font-variant-numeric: tabular-nums; opacity: 0; transform: translateY(.5em); transition: opacity var(--t2) var(--ease), transform var(--t2) var(--ease); }
-.results .board[hidden] { display: none; }
-.results.stage-3 .board, .results.stage-4 .board, .results.stage-5 .board { opacity: 1; transform: none; }
-.results .board-head { font: 700 .66em/1 var(--sans); letter-spacing: .18em; text-transform: uppercase; color: rgba(29,35,38,.7); margin-bottom: .35em; }
-.results .board-head em { font-style: normal; color: var(--teal); }
-.results .board ol { list-style: none; margin: 0; padding: 0; display: grid; row-gap: .1em; }
-.results .board li { display: grid; grid-template-columns: 1em .8em 1fr auto; align-items: center; column-gap: .4em; font: 700 .78em/1.25 var(--sans); color: var(--coal); padding: .05em .3em; border-radius: .2em; }
-.results .board li.you { background: rgba(15,92,99,.14); box-shadow: inset 0 0 0 1px rgba(15,92,99,.45); }
-.results .board li .n { color: rgba(29,35,38,.55); }
-.results .board li small { color: rgba(29,35,38,.6); font-size: .9em; }
-.results .board .dot { display: block; width: .72em; height: .72em; border-radius: 50%; background: currentColor; box-shadow: inset 0 -1px 0 rgba(0,0,0,.3); }
-.results .board .dot.platinum { color: #1E2A2E; box-shadow: inset 0 0 0 1.5px var(--plat); } .results .board .dot.gold { color: #D9A531; } .results .board .dot.silver { color: #9AA3AD; } .results .board .dot.bronze { color: #B8693A; }
-/* Track card: the class in effect's top 5 as medal-coloured chips. */
-/* The four mountain medals, split by hairlines; the one earned lifts with a glint ring, the next one says what it takes. */
-.results .medals { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: .7em; }
-.results .medal { position: relative; display: flex; flex-direction: column; align-items: center; gap: .3em; padding: 0 .4em; text-align: center; font: 800 .74em/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--coal); }
-.results .medal + .medal { border-left: 1.5px solid rgba(29,35,38,.2); }
-.results .medal i { position: relative; z-index: 1; display: block; width: 5.2em; height: 5.2em; border-radius: 50%; background-size: cover; background-position: center; filter: saturate(.55) brightness(1.02); opacity: .74; transition: transform var(--t3) var(--ease), filter var(--t3), opacity var(--t3); }
-.results .medal.bronze { --md: #B8693A; } .results .medal.silver { --md: #AEB6C0; } .results .medal.gold { --md: #E0AE36; } .results .medal.platinum { --md: #9ADBED; }
-.results .medal.platinum i:not(.img) { background: none; box-shadow: none; }
-.results .medal.platinum i svg { display: block; width: 100%; height: 100%; }
-.results .medal i:not(.img) { background: radial-gradient(circle at 36% 30%, rgba(255,255,255,.55), transparent 42%), var(--md); box-shadow: inset 0 0 0 .3em rgba(0,0,0,.18); }
-.results .medal.got i { filter: none; opacity: 1; }
-.results .medal b { position: relative; z-index: 1; font-weight: 800; color: var(--coal); }
-.results .medal small { position: relative; z-index: 1; display: block; min-height: 1em; font: 700 .9em/1.1 var(--sans); letter-spacing: 0; text-transform: none; color: rgba(29,35,38,.75); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.results .medal.next small { color: var(--teal); }
-.results .medal.earned::before { content: ""; position: absolute; left: 50%; top: -.95em; width: 7.1em; height: 7.1em; margin-left: -3.55em; background: var(--laurel) center / contain no-repeat; pointer-events: none; opacity: 0; transform: scale(.8); transition: opacity var(--t3) var(--ease), transform var(--t3) var(--ease); }
-.results.stage-4 .medal.earned::before, .results.stage-5 .medal.earned::before { opacity: 1; transform: none; }
-.results .medal.earned.platinum i::after { content: ""; position: absolute; inset: -.2em; border-radius: 50%; box-shadow: 0 0 1.1em .15em rgba(121,201,228,.7); }
-.ticket .ov-stats { display: flex; justify-content: flex-end; gap: 0; margin-top: .55em; font: 700 .68em/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: rgba(29,35,38,.62); text-shadow: none; white-space: nowrap; }
-.ticket .ov-stats b { color: var(--coal); }
-.ticket .ov-stats b.bike-pro { color: #2a5da8; }
-.ticket .ov-stats i { font-style: normal; margin: 0 .55em; }
-.ticket .tk-reward { margin-top: .42em; padding-top: .36em; border-top: 1px solid rgba(15,92,99,.25); text-align: right; font: 800 clamp(11px, .86em, 15px)/1.1 var(--sans); letter-spacing: .02em; color: var(--teal); font-variant-numeric: tabular-nums; opacity: 0; transform: translateY(.4em); transition: opacity var(--t2) var(--ease), transform var(--t2) var(--ease); }
-.ticket .tk-reward:empty { display: none; }
-.results.stage-4 .tk-reward, .results.stage-5 .tk-reward { opacity: 1; transform: none; }
-/* The action row: the home screen's cards. NEXT TRACK is the vermilion one; REPLAY is a square icon card. */
-#ui .hud .results .tiles { position: absolute; left: calc(4.5 * var(--vw) + var(--sal)); right: calc(4 * var(--vw) + var(--sar)); bottom: calc(max(12px, calc(6.5 * var(--vh))) + var(--sab)); display: flex; gap: calc(1.6 * var(--vw)); justify-content: flex-start; width: auto; }
-#ui .hud .results .tile { flex: 23 1 0; width: auto; height: var(--card-h); min-height: 44px; flex-direction: row; gap: .55em; padding: 0 1em; border: 0; border-radius: 8px; color: var(--teal); background: var(--contour) 0 0 / 240px 160px, linear-gradient(180deg, #F6ECD6, var(--cream) 55%, var(--cream-2)); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -3px 0 rgba(15,92,99,.12), 0 8px 22px rgba(8,14,16,.38); font: 400 clamp(.95rem, calc(4.3 * var(--vh)), 1.8rem)/1 var(--display); letter-spacing: .015em; }
-#ui .hud .results .tile svg { width: 1.15em; height: 1.15em; color: var(--teal); }
-#ui .hud .results .tile span { color: inherit; font: inherit; letter-spacing: inherit; }
-#ui .hud .results .tile span small { display: block; margin-top: .3em; font: 700 .42em/1 var(--sans); letter-spacing: .14em; opacity: .85; }
-#ui .hud .results .tile[data-id="replay"] { flex: 0 0 var(--card-h); padding: 0; }
-#ui .hud .results .tile[data-id="replay"] span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-#ui .hud .results .tile[data-id="next"] { flex-grow: 38; color: var(--amber-ink); background: var(--contour-light) 0 0 / 240px 160px, linear-gradient(180deg, #EE6A40, var(--vermilion) 48%, var(--vermilion-2)); box-shadow: inset 0 1px 0 rgba(255,210,190,.55), inset 0 -4px 0 rgba(100,24,6,.3), 0 10px 26px rgba(80,20,6,.42); text-shadow: 0 2px 0 rgba(120,30,8,.3); }
-#ui .hud .results .tile[data-id="next"] svg { color: var(--amber-ink); }
-#ui .hud .results .tile.on { color: var(--teal); transform: translateY(-3px); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 0 0 3px var(--cream), 0 0 0 5px rgba(15,92,99,.9), 0 12px 26px rgba(8,14,16,.45); }
-#ui .hud .results .tile.on svg { color: currentColor; }
-#ui .hud .results .tile[data-id="next"].on { color: var(--amber-ink); box-shadow: inset 0 1px 0 rgba(255,210,190,.6), 0 0 0 3px var(--cream), 0 0 0 5px rgba(120,30,8,.8), 0 14px 30px rgba(80,20,6,.5); }
-#ui .hud.touch .results .tile.on { transform: none; box-shadow: inset 0 1px 0 rgba(255,255,255,.6), inset 0 -3px 0 rgba(15,92,99,.12), 0 8px 22px rgba(8,14,16,.38); }
-#ui .hud.touch .results .tile[data-id="next"].on { box-shadow: inset 0 1px 0 rgba(255,210,190,.55), inset 0 -4px 0 rgba(100,24,6,.3), 0 10px 26px rgba(80,20,6,.42); }
-#ui .hud .results .tile[disabled] { color: rgba(15,92,99,.45); background: rgba(239,227,200,.55); box-shadow: none; text-shadow: none; }
-#ui .hud .results .tile[data-id="next"][disabled] { color: rgba(255,244,226,.7); background: rgba(196,68,31,.5); }
-#ui .hud .results .tile[disabled] svg { color: currentColor; }
-.results .ov-foot { position: absolute; right: calc(4 * var(--vw) + var(--sar)); top: calc(var(--s4) + var(--sat)); }
-.results .ov-foot .legend { position: static; }
-/* Staged reveal (sim-clocked): ticket 0 · time .15 · bails .35 · medals + tiles + scrim .6 · PB line + earned pop .9. */
-.results .time, .results .faults, .results .medals, .results .pb, .results .tiles, .results .ov-foot, .results .tk-stamp { opacity: 0; transform: translateY(.4em); transition: opacity var(--t2) var(--ease), transform var(--t2) var(--ease); }
-.results .tk-stamp { transform: scale(1.12); transform-origin: 0 60%; }
-.results .tiles .tile { animation: none; }
-.results.stage-1 .time, .results.stage-1 .tk-stamp,
-.results.stage-2 .time, .results.stage-2 .faults, .results.stage-2 .tk-stamp,
-.results.stage-3 .time, .results.stage-3 .faults, .results.stage-3 .medals, .results.stage-3 .tiles, .results.stage-3 .ov-foot, .results.stage-3 .tk-stamp,
-.results.stage-4 .time, .results.stage-4 .faults, .results.stage-4 .medals, .results.stage-4 .tiles, .results.stage-4 .ov-foot, .results.stage-4 .pb, .results.stage-4 .tk-stamp,
-.results.stage-5 .time, .results.stage-5 .faults, .results.stage-5 .medals, .results.stage-5 .tiles, .results.stage-5 .ov-foot, .results.stage-5 .pb, .results.stage-5 .tk-stamp { opacity: 1; transform: none; }
-.results .medal.earned i { transform: scale(.85); }
-.results.stage-4 .medal.earned i, .results.stage-5 .medal.earned i { transform: scale(1.1); }
+/* Finish report: accepted landscape study, driven by the real run and career ledger. The
+   transparent hero window shows the frozen game render; the camera frames rider and gate there. */
+.results{position:absolute;inset:0;opacity:0;background:linear-gradient(90deg,rgba(4,25,29,.20),rgba(4,25,29,.46));transition:opacity var(--t2) var(--ease);--fr-cream:#f4ead4;--fr-ink:#102d32;--fr-orange:#ee5932}
+.results.show{opacity:1}
+.fr-shell{position:absolute;inset:0;padding:8px max(9px,var(--sar)) max(8px,var(--sab)) max(9px,var(--sal));display:grid;grid-template-rows:27px minmax(0,1fr) 55px;gap:7px;box-sizing:border-box;min-width:0}
+.fr-top{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#f7edde;min-width:0}
+.fr-mark{display:flex;align-items:center;gap:9px;height:22px;min-width:0}
+.fr-mark svg{width:126px;height:20px;flex:none}
+.fr-mark span,.fr-bike{font:800 9px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:#d3e5db;white-space:nowrap}
+.fr-main{display:grid;grid-template-columns:minmax(0,47%) minmax(0,53%);gap:6px;min-height:0;padding-right:6px}
+.fr-hero,.fr-report{position:relative;min-width:0;min-height:0;overflow:hidden;border-radius:4px}
+.fr-hero{border:1px solid rgba(235,247,227,.4);box-shadow:inset 0 0 0 1px rgba(9,40,43,.3),0 12px 20px rgba(2,17,20,.24);background:linear-gradient(0deg,rgba(0,24,26,.88),rgba(0,24,26,.17) 42%,rgba(0,24,26,.03) 72%)}
+.fr-hero::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(4,31,36,.16),transparent 60%)}
+.fr-hero-top,.fr-hero-caption{position:absolute;z-index:1;left:15px;text-shadow:0 2px 10px #092c31;color:#f6eee0}
+.fr-hero-top{top:12px;display:flex;align-items:center;gap:8px;font:800 9px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.fr-hero-top i{width:20px;height:3px;background:var(--fr-orange)}
+.fr-hero-caption{bottom:14px;right:10px}
+.fr-hero-caption small{font:800 9px/1 var(--sans);letter-spacing:.17em;text-transform:uppercase;color:#d1e5df}
+.fr-hero-caption strong{display:block;margin-top:6px;font:900 clamp(34px,5.3vw,56px)/.78 var(--display);letter-spacing:.02em}
+.fr-hero-caption strong span{color:var(--fr-orange)}
+.fr-report{display:flex;flex-direction:column;background:var(--fr-cream);color:var(--fr-ink);border:1px solid #fff4dc;padding:12px 16px 10px;box-shadow:0 12px 28px rgba(0,20,22,.36)}
+.fr-report::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.20;background:repeating-radial-gradient(ellipse at 80% 15%,transparent 0 20px,#b8a886 21px,#b8a886 22px,transparent 23px 39px)}
+.fr-report>*{position:relative}
+.fr-report-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:5px;border-bottom:1px solid rgba(11,53,56,.19);gap:8px}
+.fr-report-head .fr-eyebrow,.fr-tag{font:800 10px/1 var(--sans);letter-spacing:.12em;white-space:nowrap;text-transform:uppercase}
+.fr-tag{background:#134f53;color:#fff4dc;padding:5px 7px;font-size:8px;letter-spacing:.1em}
+.fr-title{margin:8px 0 5px;min-height:42px}
+.fr-title small{font:800 10px/1 var(--sans);letter-spacing:.17em;color:#bc512f;text-transform:uppercase}
+.fr-title h2{font:900 clamp(19px,2.9vw,27px)/.95 var(--display);letter-spacing:.025em;margin:2px 0 0;text-transform:uppercase}
+.fr-core{display:grid;grid-template-columns:94px minmax(0,1fr);gap:10px;min-height:92px;border-bottom:1px solid rgba(11,53,56,.19);padding-bottom:7px}
+.fr-medal{display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid rgba(11,53,56,.19);padding-right:10px;color:#216b72}
+.fr-medal-icon{width:59px;height:59px;background-size:contain;background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 3px 1px rgba(0,0,0,.21))}
+.fr-medal-icon svg{display:block;width:100%;height:100%}
+.fr-medal-name{font:900 12px/1 var(--display);letter-spacing:.11em;text-transform:uppercase;margin-top:1px}
+.fr-numbers{display:flex;flex-direction:column;justify-content:center;gap:5px;min-width:0}
+.fr-time-row,.fr-metric{display:flex;align-items:center;justify-content:space-between;gap:8px;font-variant-numeric:tabular-nums}
+.fr-time-row{align-items:end;border-bottom:1px solid rgba(11,53,56,.19);padding-bottom:4px}
+.fr-time-row small,.fr-metric small{font:800 10px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.fr-time-row .time{font:900 clamp(24px,4vw,38px)/.8 var(--display);letter-spacing:.02em;white-space:nowrap}
+.fr-metric{min-height:16px}
+.fr-metric .pb,.fr-metric b{font:800 12px/1 var(--sans);color:var(--fr-ink);white-space:nowrap}
+.fr-metric .pb.best{color:#126973}
+.fr-metric.faults{color:#51696a}
+.fr-metric.faults.bailed b{color:#c8472b}
+.fr-next{display:flex;gap:8px;align-items:flex-start;margin-top:8px;min-height:34px}
+.fr-next i{width:3px;height:28px;flex:none;background:var(--fr-orange)}
+.fr-next b{display:block;font:800 10px/1 var(--sans);letter-spacing:.13em;text-transform:uppercase}
+.fr-next p{margin:2px 0 0;font:600 11px/1.15 var(--sans);color:#38565a}
+.fr-rewards{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(11,53,56,.19);padding-top:5px}
+.fr-rewards>div{display:flex;justify-content:space-between;align-items:center;padding-right:16px;gap:4px}
+.fr-rewards>div+div{border-left:1px solid rgba(11,53,56,.19);padding-left:12px}
+.fr-rewards small{font:800 9px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.fr-rewards strong{font:800 16px/1 var(--display);color:#147079;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fr-report .ov-stats,.fr-report .board{display:none}
+#ui .hud .results .tiles{position:absolute;left:max(9px,var(--sal));right:max(9px,var(--sar));bottom:max(8px,var(--sab));height:55px;width:auto;display:grid;grid-template-columns:1.18fr 1fr .8fr 1fr;gap:6px;justify-content:stretch}
+#ui .hud .results .tile{height:100%;width:100%;min-height:44px;padding:0 8px;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;border:1px solid #d5d6c5;border-radius:4px;color:#0e494e;background:linear-gradient(#fff5df,#e9e1c9);box-shadow:inset 0 1px 0 white,0 6px 0 rgba(0,20,22,.27);text-align:left;font:900 clamp(19px,2.6vw,25px)/.9 var(--display);letter-spacing:.05em}
+#ui .hud .results .tile svg{width:24px;height:24px;flex:none;color:currentColor}
+#ui .hud .results .tile span{font:inherit;color:inherit;white-space:nowrap}
+#ui .hud .results .tile span small{display:block;margin-top:3px;font:800 9px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+#ui .hud .results .tile[data-id='retry']{background:linear-gradient(#f9794e,#e84b2e);border-color:#ffa384;color:#fff8dc;box-shadow:inset 0 1px 0 #ffc2aa,0 6px 0 #98341f}
+#ui .hud .results .tile[data-id='replay']{flex:auto;padding:0 8px}
+#ui .hud .results .tile[data-id='replay'] span{position:static;width:auto;height:auto;overflow:visible;clip:auto}
+#ui .hud .results .tile.on{transform:translateY(-2px);outline:2px solid #fff4dc;outline-offset:1px}
+#ui .hud .results .tile[disabled]{opacity:.47;filter:saturate(.5);box-shadow:none}
+.results .ov-foot{display:none}
+.results .fr-report,.results .fr-hero,.results .tiles{opacity:0;transform:translateY(7px);transition:opacity var(--t2) var(--ease),transform var(--t2) var(--ease)}
+.results.stage-1 .fr-hero,.results.stage-1 .fr-report,.results.stage-2 .fr-hero,.results.stage-2 .fr-report,.results.stage-3 .fr-hero,.results.stage-3 .fr-report,.results.stage-4 .fr-hero,.results.stage-4 .fr-report,.results.stage-5 .fr-hero,.results.stage-5 .fr-report,.results.stage-3 .tiles,.results.stage-4 .tiles,.results.stage-5 .tiles{opacity:1;transform:none}
+@media(max-height:370px){.fr-shell{grid-template-rows:22px minmax(0,1fr) 49px;gap:5px;padding-top:5px}.fr-report{padding:8px 13px 6px}.fr-title{margin:5px 0 3px;min-height:36px}.fr-core{min-height:80px;grid-template-columns:83px minmax(0,1fr)}.fr-medal-icon{width:49px;height:49px}.fr-next{margin-top:5px}#ui .hud .results .tiles{height:49px}#ui .hud .results .tile{font-size:19px}}
+@media(max-width:720px){.fr-main{grid-template-columns:minmax(0,43%) minmax(0,57%)}.fr-report{padding-left:10px;padding-right:10px}.fr-core{grid-template-columns:77px minmax(0,1fr);gap:7px}.fr-medal-icon{width:51px;height:51px}#ui .hud .results .tile{gap:3px;font-size:19px}#ui .hud .results .tile span small{font-size:8px}}
 /* HUD while an overlay is up: the top band, hints and touch buttons hide; kinetic banners stay. */
 .hud .hud-top, .hud .hints { transition: opacity var(--t2) var(--ease); }
 .hud.under-overlay .hud-top, .hud.under-overlay .hints, .hud.results-on .hud-top, .hud.results-on .hints { opacity: 0; pointer-events: none; }

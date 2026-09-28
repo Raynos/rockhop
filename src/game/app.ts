@@ -1020,7 +1020,7 @@ export class App {
   private showResultReward(trackId: string): void {
     const campaign = this.tracks.some((track) => track.id === trackId);
     const wallet = this.economy.snapshot();
-    this.hud.setScrapReward(campaign ? this.lastAward?.delta ?? 0 : null, wallet.wallet, wallet.proOwned, PRO_PRICE);
+    this.hud.setScrapReward(campaign ? this.lastAward?.delta ?? 0 : null, wallet.wallet, wallet.proOwned, PRO_PRICE, campaign ? this.lastAward?.previous : null);
   }
 
   // -- telemetry ------------------------------------------------------------------

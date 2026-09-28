@@ -23,7 +23,7 @@ One complete, landscape-only game on **iOS and Android together**: the 12 main c
 
 | Gate | Status | Current proof / next missing proof |
 | --- | --- | --- |
-| 1. C1 slice | **in progress** | C1 braking has exact replay and a played headless clip; production finish integration, stronger art/sound and new phone players remain. |
+| 1. C1 slice | **in progress** | C1 braking and finish have exact replay; delayed-input bot cleared in 1–3 attempts. The accepted result layout now uses real medal, PB and Scrap data, with a played rider close shot and working App routes. Fresh phone players, a full uninterrupted App clip, richer coast art/sound and physical touch remain. |
 | 2. Twelve-course game | **in progress** | Passive GO fails in the current bot sweep; human difficulty, bike distinction and final medal clocks remain. |
 | 3. Presentation/career | **in progress** | Pro/Scrap exists and the C map works in review mode; map fidelity/device proof, full finish states and four-biome cohesion remain. |
 | 4. Device/reliability | **open** | Latest partial SwiftShader gate is NO-SHIP 9/11; physical device and exact native release gates remain. |

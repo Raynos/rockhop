@@ -75,13 +75,22 @@ export class DomHud implements Hud {
   private readonly resName: HTMLDivElement;
   private readonly resStats: HTMLDivElement;
   private readonly resReward: HTMLDivElement;
+  private readonly resWallet: HTMLDivElement;
+  private readonly resTag: HTMLDivElement;
+  private readonly resHeadline: HTMLDivElement;
+  private readonly resEyebrow: HTMLDivElement;
+  private readonly resGoal: HTMLDivElement;
+  private readonly resMedal: HTMLDivElement;
+  private readonly resMedalIcon: HTMLDivElement;
+  private readonly resMedalName: HTMLDivElement;
   private readonly resTiles: TileRow;
   private readonly resLegend: HTMLDivElement;
   private nextEnabled = true;
   private readonly resTime: HTMLDivElement;
   private readonly resFaults: HTMLDivElement;
   private readonly resPb: HTMLDivElement;
-  private readonly resMedals: Record<'platinum' | 'gold' | 'silver' | 'bronze', HTMLDivElement>;
+  private readonly medalArt: Partial<Record<Medal, string>> = {};
+  private lastResult: RunResult | null = null;
   /** Local per-track leaderboard (game.md § leaderboard): top 5 for the class ridden, this run's row marked. */
   private readonly resBoard: HTMLDivElement;
   private readonly splitEl: HTMLDivElement;
@@ -114,13 +123,18 @@ export class DomHud implements Hud {
 
   /** Painted medal art from the art manifest for the ticket (until it decodes: a disc in the medal colour). */
   setMedalArt(src: Partial<Record<Medal, string>>): void {
-    for (const k of MEDAL_ORDER) {
-      const i = this.resMedals[k].querySelector<HTMLElement>('i');
-      const url = src[k];
-      if (!i || !url) continue;
-      i.classList.add('img');
-      i.style.backgroundImage = `url("${url}")`;
-    }
+    Object.assign(this.medalArt, src);
+    if (this.lastResult) this.paintMedal(this.lastResult.medal);
+  }
+
+  private paintMedal(medal: Medal): void {
+    this.resMedal.className = `fr-medal ${medal}`;
+    this.resMedal.setAttribute('aria-label', `${MEDAL_NAME[medal]} medal`);
+    this.resMedalName.textContent = MEDAL_NAME[medal];
+    const url = this.medalArt[medal];
+    this.resMedalIcon.classList.toggle('img', !!url);
+    this.resMedalIcon.style.backgroundImage = url ? `url("${url}")` : '';
+    this.resMedalIcon.innerHTML = url ? '' : medalSvg(medal);
   }
 
   /**
@@ -175,47 +189,51 @@ export class DomHud implements Hud {
     this.skillCueEl.setAttribute('aria-label', 'Ease off. Brake before the pallet ramp.');
     this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';
 
-    // Results (store release D19, mockup round1/A-results): the survey ticket on the left — zone · code, track name,
-    // CLEAN LINE, TIME / BAILS boxes, the PB line, the four mountain medals — the finish scene live on the right,
-    // and MAP · RETRY · NEXT TRACK (vermilion) along the bottom. The staged reveal classes are the old ones.
+    // Accepted finish study: the live game scene remains visible in the left hero window. The right report
+    // uses only the result and career ledger; the four actions route through App's existing HUD callback.
     this.results = el('div', 'results');
     this.results.innerHTML = `
-      <div class="ticket"><i class="tk-topo"></i>
-        <div class="tk-head"><div class="ov-title"><div class="ov-kicker"></div><div class="ov-name"></div></div><div class="tk-mark">${wordmarkSvg({ title: '' })}</div></div>
-        <div class="tk-stamp">Clean line</div>
-        <div class="tk-body">
-          <div class="tk-box time-box"><small>Time</small><div class="time">0:00.000</div><div class="pb"></div></div>
-          <div class="tk-box faults"><small>Bails</small><b>0</b></div>
-          <div class="board" hidden></div>
-          <svg class="tk-route" viewBox="0 0 60 90" aria-hidden="true"><path d="M8 86C22 70 14 58 28 46S46 30 40 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 4"/><path d="M40 2l6 10h-12z M18 40l5 8h-10z M34 58l4 7h-8z" fill="currentColor"/></svg>
+      <div class="fr-shell">
+        <div class="fr-top"><div class="fr-mark">${wordmarkSvg({ title: '' })}<span>FINISH REPORT</span></div><div class="fr-bike"></div></div>
+        <div class="fr-main">
+          <div class="fr-hero" aria-hidden="true"><div class="fr-hero-top"><i></i><span class="fr-zone"></span></div><div class="fr-hero-caption"><small>FINISH CAMERA · <span class="fr-track"></span></small><strong>LINE<br>COMPLETE<span>.</span></strong></div></div>
+          <div class="fr-report" role="status" aria-live="polite">
+            <div class="fr-report-head"><div class="fr-eyebrow"></div><div class="fr-tag"></div></div>
+            <div class="fr-title"><small class="fr-kicker"></small><h2 class="fr-headline"></h2></div>
+            <div class="fr-core"><div class="fr-medal" aria-label="Medal"><div class="fr-medal-icon"></div><b class="fr-medal-name"></b></div><div class="fr-numbers"><div class="fr-time-row"><small>Finish time</small><div class="time"></div></div><div class="fr-metric"><small class="fr-pb-label">Personal best</small><div class="pb"></div></div><div class="fr-metric faults"><small>Bails</small><b>0</b></div></div></div>
+            <div class="fr-next"><i></i><div><b class="fr-goal-title">Next line</b><p class="fr-goal"></p></div></div>
+            <div class="fr-rewards"><div><small>Scrap earned</small><strong class="tk-reward">—</strong></div><div><small>Wallet</small><strong class="fr-wallet">—</strong></div></div>
+            <div class="ov-stats"></div><div class="board" hidden></div>
+          </div>
         </div>
-        <div class="medals">${MEDAL_ORDER.map((m) => `<div class="medal ${m}"><i></i><b>${MEDAL_NAME[m]}</b><small></small></div>`).join('')}</div>
-        <div class="ov-stats"></div>
-        <div class="tk-reward" role="status"></div>
       </div>`;
-    this.resKicker = this.results.querySelector('.ov-kicker') as HTMLDivElement;
-    this.resName = this.results.querySelector('.ov-name') as HTMLDivElement;
-    this.resStats = this.results.querySelector('.ov-stats') as HTMLDivElement;
+    this.resKicker = this.results.querySelector('.fr-zone') as HTMLDivElement;
+    this.resName = this.results.querySelector('.fr-track') as HTMLDivElement;
+    this.resStats = this.results.querySelector('.fr-bike') as HTMLDivElement;
     this.resReward = this.results.querySelector('.tk-reward') as HTMLDivElement;
+    this.resWallet = this.results.querySelector('.fr-wallet') as HTMLDivElement;
+    this.resTag = this.results.querySelector('.fr-tag') as HTMLDivElement;
+    this.resHeadline = this.results.querySelector('.fr-headline') as HTMLDivElement;
+    this.resEyebrow = this.results.querySelector('.fr-kicker') as HTMLDivElement;
+    this.resGoal = this.results.querySelector('.fr-goal') as HTMLDivElement;
+    this.resMedal = this.results.querySelector('.fr-medal') as HTMLDivElement;
+    this.resMedalIcon = this.results.querySelector('.fr-medal-icon') as HTMLDivElement;
+    this.resMedalName = this.results.querySelector('.fr-medal-name') as HTMLDivElement;
     this.resTime = this.results.querySelector('.time') as HTMLDivElement;
     this.resFaults = this.results.querySelector('.faults b') as HTMLDivElement;
     this.resPb = this.results.querySelector('.pb') as HTMLDivElement;
     this.resBoard = this.results.querySelector('.board') as HTMLDivElement;
-    this.resMedals = {
-      bronze: this.results.querySelector('.medal.bronze') as HTMLDivElement,
-      silver: this.results.querySelector('.medal.silver') as HTMLDivElement,
-      gold: this.results.querySelector('.medal.gold') as HTMLDivElement,
-      platinum: this.results.querySelector('.medal.platinum') as HTMLDivElement,
-    };
-    this.resMedals.platinum.querySelector('i')!.innerHTML = medalSvg('platinum');
     this.resTiles = new TileRow(this.results, null);
-    // DOM order is the pad / keyboard order: MAP · RETRY · REPLAY · NEXT TRACK (NEXT TRACK is the vermilion one).
+    // Match the accepted study's spatial order. Keyboard/gamepad focus starts on Retry.
     this.resTiles.setTiles([
-      { id: 'menu', label: 'Map', icon: 'map' },
       { id: 'retry', label: 'Retry', icon: 'restart' },
-      { id: 'replay', label: 'Replay', icon: 'play' },
       { id: 'next', label: 'Next track', icon: 'next' },
+      { id: 'menu', label: 'Map', icon: 'map' },
+      { id: 'replay', label: 'Replay', icon: 'play' },
     ]);
+    this.resTiles.setLabel('retry', 'Retry', 'Chase the line');
+    this.resTiles.setLabel('menu', 'Map', '12 stops');
+    this.resTiles.setLabel('replay', 'Replay', 'Watch this run');
     // A click can only reach a tile through `.results.live` (styles.ts), and live lands from stage-3; this is the same gate for anything else that calls pick().
     this.resTiles.onPick = (id) => {
       if (this.resultsInteractive()) this.onAction?.(id as HudAction);
@@ -493,43 +511,61 @@ export class DomHud implements Hud {
   }
 
   showResults(r: RunResult): void {
+    this.lastResult = r;
     this.resultsAt = this.simTime;
     this.resultsStage = -1;
     const t = this.track;
     const name = t?.name ?? '';
     const meta = (t?.meta ?? {}) as { zone?: string; code?: string };
     // "DESERT QUARRY / D3" on a ROCKHOP course; the tier on anything else (dev tracks).
-    this.resKicker.textContent = meta.zone ? `${zoneTitle(meta.zone)}${meta.code ? `  /  ${meta.code}` : ''}` : (t?.tier ?? '');
-    this.resKicker.className = 'ov-kicker';
+    this.resKicker.textContent = meta.zone ? `${zoneTitle(meta.zone)}${meta.code ? ` / ${meta.code}` : ''}` : (t?.tier ?? '');
     this.resName.textContent = name;
+    (this.results.querySelector('.fr-eyebrow') as HTMLElement).textContent = `RUN REPORT${meta.code ? `  ${meta.code} / 12` : ''}`;
     const T = r.targetTimeS;
     const bike = r.bike === 'pro' ? 'Pro' : 'Rookie';
-    this.resStats.innerHTML = `<span>Best <b>${r.previousBest !== null ? formatTime(Math.min(r.previousBest, r.time)) : '—'}</b></span>${T ? `<i>·</i><span>Target <b>${formatTime(T)}</b></span>` : ''}<i>·</i><span>Bike <b class="bike-${r.bike ?? 'rookie'}">${bike}</b></span>`;
-    this.resReward.textContent = '';
+    this.resStats.textContent = `${bike} bike${T ? ` · ${formatTime(T)} gold target` : ''}`;
+    this.resReward.textContent = '—';
+    this.resWallet.textContent = '—';
+    this.paintMedal(r.medal);
     const text = formatTime(r.time);
     const dot = text.indexOf('.');
     this.resTime.innerHTML = `${text.slice(0, dot)}<span class="ms">${text.slice(dot)}</span>`;
     this.resFaults.textContent = String(r.faults);
-    // CLEAN LINE is a run without a bail; a bailed clear reads CLEARED, its count in vermilion.
+    // A finish may beat a time without upgrading its medal, or upgrade on a cleaner line.
     this.resFaults.parentElement?.classList.toggle('bailed', r.faults > 0);
-    (this.results.querySelector('.tk-stamp') as HTMLElement).textContent = r.faults > 0 ? 'Cleared' : 'Clean line';
+    if (r.previousBest === null) {
+      this.resTag.textContent = 'NEW COURSE CLEAR';
+      this.resEyebrow.textContent = 'FIRST FINISH';
+      this.resHeadline.textContent = 'YOU FOUND THE LINE';
+    } else if (r.personalBest) {
+      this.resTag.textContent = 'NEW PERSONAL BEST';
+      this.resEyebrow.textContent = 'TIME IMPROVED';
+      this.resHeadline.textContent = 'FASTER THROUGH THE GATE';
+    } else {
+      this.resTag.textContent = 'COURSE CLEARED';
+      this.resEyebrow.textContent = 'RESULT RECORDED';
+      this.resHeadline.textContent = 'ONE MORE RUN?';
+    }
     if (r.personalBest) {
       this.resPb.className = 'pb best';
-      this.resPb.textContent = r.previousBest === null ? 'First clear' : `${formatDelta(r.time - r.previousBest).replace('-', '\u2212')} · New best`;
+      this.resPb.textContent = r.previousBest === null ? formatTime(r.time) : formatDelta(r.time - r.previousBest).replace('-', '\u2212');
+      (this.results.querySelector('.fr-pb-label') as HTMLElement).textContent = r.previousBest === null ? 'First personal best' : 'Beat previous best';
     } else if (r.previousBest !== null) {
       this.resPb.className = 'pb behind';
-      this.resPb.innerHTML = `<em>${formatDelta(r.time - r.previousBest)}</em> · Best ${formatTime(r.previousBest)}`;
+      this.resPb.textContent = formatTime(r.previousBest);
+      (this.results.querySelector('.fr-pb-label') as HTMLElement).textContent = 'Personal best stands';
     } else {
       this.resPb.className = 'pb';
       this.resPb.textContent = '';
     }
     const hints = medalHints(r);
-    for (const k of MEDAL_ORDER) {
-      const m = this.resMedals[k];
-      m.classList.toggle('earned', k === r.medal);
-      m.classList.toggle('got', MEDAL_ORDER.indexOf(k) <= MEDAL_ORDER.indexOf(r.medal));
-      m.classList.toggle('next', hints.next === k);
-      (m.querySelector('small') as HTMLElement).textContent = hints.text[k];
+    const goal = this.results.querySelector('.fr-goal-title') as HTMLElement;
+    if (hints.next) {
+      goal.textContent = `NEXT MEDAL: ${MEDAL_NAME[hints.next].toUpperCase()}`;
+      this.resGoal.textContent = `${hints.text[hints.next]}. ${r.faults ? 'Find a cleaner line and cut the bails.' : 'Brake precisely, then carry speed through the exit.'}`;
+    } else {
+      goal.textContent = 'YOUR NEXT LINE';
+      this.resGoal.textContent = r.personalBest ? 'Diamond is yours. Replay this run or chase a faster split.' : 'Diamond is yours. Replay the line or take on the next course.';
     }
     this.renderBoard(r);
     this.results.className = 'results show stage-0';
@@ -537,19 +573,27 @@ export class DomHud implements Hud {
     reveal(this.results, { surface: this.resTiles.root, when: () => this.resultsStage >= 3 });
     this.root.classList.add('results-on');
     this.resTiles.setDisabled('next', !this.nextEnabled);
-    this.resTiles.focusId(this.nextEnabled ? 'next' : 'retry');
+    this.resTiles.focusId('retry');
     for (const b of this.banners) if (b.kind === 'finish') this.retire(b); // the ticket restates it
   }
 
   /** App-owned career rewards are applied after the deterministic result and only once per medal improvement. */
-  setScrapReward(delta: number | null, wallet: number, proOwned: boolean, price: number): void {
+  setScrapReward(delta: number | null, wallet: number, proOwned: boolean, price: number, previousMedal?: Medal | null): void {
     if (delta === null) {
-      this.resReward.textContent = '';
+      this.resReward.textContent = '—';
+      this.resWallet.textContent = String(wallet);
       return;
     }
-    const earned = delta > 0 ? `+${delta} Scrap earned` : 'No new Scrap';
-    const goal = proOwned ? 'Pro owned' : `${Math.max(0, price - wallet)} to Pro`;
-    this.resReward.textContent = `${earned} · ${wallet} wallet · ${goal}`;
+    this.resReward.textContent = delta > 0 ? `+${delta}` : 'No new Scrap';
+    this.resWallet.textContent = String(wallet);
+    if (previousMedal && delta > 0 && this.lastResult) {
+      this.resTag.textContent = 'MEDAL UPGRADED';
+      this.resEyebrow.textContent = `${MEDAL_NAME[previousMedal].toUpperCase()} → ${MEDAL_NAME[this.lastResult.medal].toUpperCase()}`;
+      this.resHeadline.textContent = 'THE CLEAN LINE PAID OFF';
+    }
+    if (!proOwned && this.lastResult?.medal === 'platinum') {
+      this.resGoal.textContent += ` ${Math.max(0, price - wallet)} Scrap until the Pro bike.`;
+    }
   }
 
   /** The track's top 5 for the class ridden (`BestTimes.board`), medal dot per row, this run's row marked `you`. */
@@ -575,7 +619,7 @@ export class DomHud implements Hud {
     this.nextEnabled = on;
     this.resTiles.setLabel('next', 'Next track', on && name ? escapeHtml(name) : undefined);
     this.resTiles.setDisabled('next', !on);
-    if (this.resultsAt >= 0) this.resTiles.focusId(on ? 'next' : 'retry');
+    if (this.resultsAt >= 0) this.resTiles.focusId('retry');
   }
 
   /** Tiles are on screen (stage ≥ 3, 0.6 s after `showResults`): pad / keyboard may drive them. */
