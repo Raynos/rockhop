@@ -17,7 +17,7 @@ import { rockhop } from './builder';
 export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', {
   technique: 'brake before the beached ramp',
   demands: 'ease off after Marker 2 to settle the pallet ramp and land level on the deck',
-  idea: 'the harbour at low tide: ride the dry causeway out to the containers',
+  idea: 'the dry harbour causeway',
   hero: 'Ease Off for the Beached Ramp',
   attemptsBand: [1, 2], // provisional until real-time touch strangers; paused-step blind play took four attempts
   targetTimeS: 50, // gold: skill-3 bot 29.72 s x 1.6 = 47.5, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
@@ -92,7 +92,7 @@ export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', 
 export const C2 = rockhop('C2', 'c2-crane-hop', 'Crane Hop', 'coast', 'beginner', {
   technique: 'commit to the jump, then release or pitch forward in flight',
   demands: 'the crane hop: an 18 deg kicker off the apron over 5.5 m of harbour onto a container barge',
-  idea: 'hop the harbour pier to pier, then jump the water onto the barge under the crane',
+  idea: 'pier-to-barge harbour jump',
   hero: 'The Crane Hop',
   attemptsBand: [1, 2], // provisional until measured real-time touch attempts
   targetTimeS: 50, // provisional until integrated touch play and medal calibration
@@ -159,12 +159,16 @@ export const C2 = rockhop('C2', 'c2-crane-hop', 'Crane Hop', 'coast', 'beginner'
  */
 export const C3 = rockhop('C3', 'c3-hull-breach', 'Hull Breach', 'coast', 'easy', {
   technique: 'uphill weight and the rear-wheel-first landing',
-  demands: 'the breach: up 40 deg bow plating onto the deck, then off the torn deck edge in one flight onto the beach ramp',
-  idea: 'climb into a beached freighter and burst out through the breach',
+  demands: 'climb the 40 deg bow, set deck speed, clear the breach and land rear first',
+  idea: 'escape the beached freighter',
   hero: 'The Breach',
-  attemptsBand: [1, 3],
-  targetTimeS: 50, // gold: skill-3 bot 30.81 s x 1.6 = 49.3, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  attemptsBand: [2, 3], // provisional: first new skill-3 Rookie bot needed two attempts; phone players unmeasured
+  targetTimeS: 50, // provisional: preserve the campaign clock ladder; refine against real phone attempts
 })
+  .hint('Lean forward up the stern')
+  .hint('Set speed across the hull deck')
+  .hint('Level before the breach')
+  .hint('Land rear wheel first on the beach')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Wreck Beach')
   .flat(6)
@@ -199,13 +203,14 @@ export const C3 = rockhop('C3', 'c3-hull-breach', 'Hull Breach', 'coast', 'easy'
   .flat(8)
   .checkpoint()
   .flat(20)
-  .camera({ mode: 'side', zoomBias: -0.4 })
+  .camera({ mode: 'high34', zoomBias: -0.2 })
   .setPiece('climb', 'The Bow')
   .kickerPlank({ angleDeg: 40, rise: 3.2 }) // the big hull's bow plating: 40 deg over the kicker foot, a momentum climb
-  .box({ width: 12, height: 3.2, prop: 'hull', variant: 1 }) // the deck
+  .box({ width: 16, height: 3.2, prop: 'hull', variant: 1 }) // room to set speed across the hull before the torn opening
   .setPiece('air', 'The Breach')
   .ramp({ length: 2, height: 0.4, surface: 'metal', prop: 'hull' }, { base: 3.2 }) // the torn plating curls up: an 11 deg lip
-  .ramp({ length: 28, height: 2.8, direction: 'down', surface: 'dirt' }) // out through the breach: a 0.8 m drop onto a 10 x h beach ramp
+  .gap({ width: 3.5 }) // daylight through the torn hull: the landing now requires an actual flight
+  .ramp({ length: 28, height: 2.8, direction: 'down', surface: 'dirt' }) // a 0.8 m drop onto a 10 x h beach ramp
   .endSetPiece()
   .camera({ mode: 'side' })
   .flat(12)

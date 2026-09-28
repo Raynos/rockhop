@@ -19,12 +19,12 @@ function slots(b: ReturnType<typeof rockhop>, count: number, pitch: number): Ret
 /**
  * D1 DUST DEVIL — down into the old pit and back up its cut terraces. TEACHES the rolling hop onto sandstone
  * blocks and across a trench, and holding speed through the dust whoops. DEMANDS the terraces: a 0.4 m hop and three
- * 0.3 m cut steps up to 1.3 m, and the roll off the top; then the whoops.
+ * 0.4 m cut steps up to 1.6 m, and the roll off the top; then the whoops.
  */
 export const D1 = rockhop('D1', 'd1-dust-devil', 'Dust Devil', 'quarry', 'medium', {
   technique: 'the hop onto blocks, the cut terraces, and the whoops at speed',
-  demands: 'the terraces: a 0.4 m hop and three 0.3 m cut steps up to 1.3 m, off the top; then a 1.4 m hop across the drill trench',
-  idea: 'the quarry floor: hop the cut blocks, climb the terraces, ride the dust whoops out',
+  demands: 'the terraces: a 0.4 m hop and three 0.4 m cut steps up to 1.6 m, off the top; then a 1.4 m hop across the drill trench',
+  idea: 'climb the quarry terraces',
   hero: 'The Terraces',
   attemptsBand: [3, 6],
   targetTimeS: 50, // gold: skill-3 bot 25.95 s x 1.6 = 41.5, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
@@ -51,10 +51,10 @@ export const D1 = rockhop('D1', 'd1-dust-devil', 'Dust Devil', 'quarry', 'medium
   .camera({ mode: 'side-tight', zoomBias: -0.3 })
   .setPiece('climb', 'The Terraces')
   .ledge({ height: 0.4, length: 7, surface: 'stone', prop: 'block' }) // cut terrace 1: a hop
-  .ledge({ height: 0.7, length: 6, surface: 'stone', prop: 'block' }) // 2: a 0.3 m step
-  .ledge({ height: 1.0, length: 6, surface: 'stone', prop: 'block' }) // 3
-  .ledge({ height: 1.3, length: 8, surface: 'stone', prop: 'block' }) // 4: the top
-  .ramp({ length: 14, height: 1.3, direction: 'down', surface: 'dirt' }) // the haul ramp down
+  .ledge({ height: 0.8, length: 6, surface: 'stone', prop: 'block' }) // 2: a 0.4 m step
+  .ledge({ height: 1.2, length: 6, surface: 'stone', prop: 'block' }) // 3
+  .ledge({ height: 1.6, length: 8, surface: 'stone', prop: 'block' }) // 4: the top
+  .ramp({ length: 16, height: 1.6, direction: 'down', surface: 'dirt' }) // the haul ramp down
   .endSetPiece()
   .camera({ mode: 'side' })
   .flat(12)
@@ -101,7 +101,7 @@ export const D1 = rockhop('D1', 'd1-dust-devil', 'Dust Devil', 'quarry', 'medium
 export const D2 = rockhop('D2', 'd2-conveyor', 'Conveyor', 'quarry', 'hard', {
   technique: 'momentum climbs up the belts and the spinning pulley',
   demands: 'the head pulley: the 45 deg main belt to 3.0 m, a 0.4 m hop onto the drive frame, the spinning head drum, the tail chute down; then the ore-cart run',
-  idea: 'ride the crushing plant: up the conveyors, over the pulleys, out along the ore carts',
+  idea: 'conveyor to ore-cart run',
   hero: 'The Head Pulley',
   attemptsBand: [3, 7],
   targetTimeS: 55, // gold: skill-3 bot 33.84 s x 1.6 = 54.1, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
@@ -150,16 +150,18 @@ export const D2 = rockhop('D2', 'd2-conveyor', 'Conveyor', 'quarry', 'hard', {
   .bumpRow(2, 0.3, 16)
   .flat(8)
   .checkpoint()
-  .flat(16)
+  .flat(30)
   .camera({ mode: 'high34' })
   .setPiece('air', 'The Cart Run')
-  .ramp({ length: 4, height: 1.0, surface: 'metal', prop: 'ore-cart' }) // the ore-cart line
+  .kickerPlank({ angleDeg: 22, rise: 2.2 }) // the high discharge conveyor throws toward the waiting cart
+  .gap({ width: 5.5 })
+  .gapLanding(0.8, 9, 6, 10) // settle onto the ore-cart bed
+  .flat(16)
+  .ramp({ length: 4, height: 0.8, surface: 'metal', prop: 'ore-cart' }) // next rail wagon's nose
   .gap({ width: 3.5 })
-  .platform(12, 0.9, { landing: 0.4, landingLength: 3, length: 2, curve: 0 }) // cart 1
-  .gap({ width: 3.5 })
-  .platform(12, 1.1, { landing: 0.4, landingLength: 3, length: 2, curve: 0 }) // cart 2, higher: land rear first
+  .platform(12, 0.9, { landing: 0.4, landingLength: 3, length: 2, curve: 0 }) // second cart, with a controlled lip
   .gap({ width: 2.5 })
-  .gapLanding(1.1, 5, 6, 10)
+  .gapLanding(0.9, 5, 6, 10) // final cart and runout
   .endSetPiece()
   .camera({ mode: 'side' })
   .flat(12)
@@ -184,10 +186,10 @@ export const D3 = (() => {
   const b = rockhop('D3', 'd3-rope-walk', 'Rope Walk', 'quarry', 'hard', {
     technique: 'the rear-wheel crossing and the lip climb',
     demands: 'the rope walk: up onto the bridge deck at 1.5 m and across six missing boards on the rear wheel',
-    idea: 'cross the main pit on a plank-and-rope bridge with missing boards',
+    idea: 'cross the broken rope bridge',
     hero: 'The Rope Walk',
     attemptsBand: [4, 8],
-    targetTimeS: 55, // gold: skill-3 bot 33.56 s x 1.6 = 53.7, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+    targetTimeS: 55, // main-line clock retained pending the final-four medal-route design round
   })
     .camera({ mode: 'side' })
     .setPiece('start', 'The Pit Rim')
@@ -238,7 +240,7 @@ export const D3 = (() => {
     .ramp({ length: 10, height: 1.5, surface: 'wood', prop: 'rope-bridge' }) // up onto the bridge deck
     .ledge({ height: 1.5, length: 8, surface: 'wood', prop: 'rope-bridge' }); // the deck: set the wheelie
   for (let i = 0; i < 6; i++) {
-    b.gap({ width: 0.7, depth: 1.5, hazard: 'kill' }).ledge({ height: 1.5, length: 1.1, surface: 'wood', prop: 'rope-bridge' }); // a missing board, then a board
+    b.gap({ width: 1.8, depth: 1.5, hazard: 'kill' }).ledge({ height: 1.5, length: 0.6, surface: 'wood', prop: 'rope-bridge' }); // a missing board, then a narrow board
   }
   b.ledge({ height: 1.5, length: 5, surface: 'wood', prop: 'rope-bridge' })
     .ramp({ length: 14, height: 1.5, direction: 'down', surface: 'wood', prop: 'rope-bridge' })

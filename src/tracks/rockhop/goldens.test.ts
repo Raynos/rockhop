@@ -1,7 +1,8 @@
 /**
  * Every ROCKHOP course's skill-3 golden (`harness/inputs/<id>/bot-3.json`, the recording the store evidence, the
- * clip sheets and `harness:determinism` stand on) still finishes, with 0 faults, when replayed in node on today's
- * physics and today's geometry. A physics or geometry change that breaks a golden fails here, in CI, instead of in
+ * clip sheets and `harness:determinism` stand on) still finishes when replayed in node on today's
+ * physics and today's geometry. The C3 Rookie reference intentionally includes one breach failure and a clean
+ * retry, asserted separately with its exact finish hash. A physics or geometry change that breaks a golden fails here, in CI, instead of in
  * the next evidence run: a736a26f (riding-poses physics) left all sixteen short of the line (1-10 faults each) and
  * nothing red said so. Re-record with `pnpm harness:bot <id>` on the new tree.
  */
@@ -17,7 +18,7 @@ import { ROCKHOP_ALL } from '../index';
 const INPUTS = fileURLToPath(new URL('../../../harness/inputs/', import.meta.url));
 
 describe('ROCKHOP goldens replay in node', () => {
-  it.each(ROCKHOP_ALL.map((t) => [t.id] as const))('%s: bot-3.json finishes with 0 faults', async (id) => {
+  it.each(ROCKHOP_ALL.filter((t) => t.id !== 'c3-hull-breach').map((t) => [t.id] as const))('%s: bot-3.json finishes with 0 faults', async (id) => {
     const file = path.join(INPUTS, id, 'bot-3.json');
     expect(fs.existsSync(file), `${id} has no golden`).toBe(true);
     const rec = loadRecording(file);
@@ -26,6 +27,24 @@ describe('ROCKHOP goldens replay in node', () => {
     const sim = await createSimFor(rec);
     sim.run(expandFrames(rec));
     expect({ phase: sim.phase(), faults: sim.faults() }).toEqual({ phase: 'finished', faults: 0 });
+  });
+
+  it('C3 Rookie breach reference crashes once, then finishes with the pinned hash', async () => {
+    const rec = loadRecording(path.join(INPUTS, 'c3-hull-breach', 'bot-3.json'));
+    const sim = await createSimFor(rec);
+    sim.run(expandFrames(rec));
+    expect({ phase: sim.phase(), faults: sim.faults(), hash: sim.hash() }).toEqual({
+      phase: 'finished', faults: 1, hash: '979d7d28f04cc732',
+    });
+  });
+
+  it('C3 Pro has a fault-free reference on the same breach', async () => {
+    const rec = loadRecording(path.join(INPUTS, 'c3-hull-breach', 'bot-3-pro.json'));
+    const sim = await createSimFor(rec);
+    sim.run(expandFrames(rec));
+    expect({ phase: sim.phase(), faults: sim.faults(), hash: sim.hash() }).toEqual({
+      phase: 'finished', faults: 0, hash: '516f6212e2cf6954',
+    });
   });
 
   it('C1 Pro brake line clears without a fault', async () => {

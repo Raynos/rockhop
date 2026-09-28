@@ -16,13 +16,15 @@ import { rockhop } from './builder';
  * 16 m along it, off its lip over the mill pond onto the landing deck.
  */
 export const A1 = rockhop('A1', 'a1-sawdust', 'Sawdust', 'alpine', 'easy', {
-  technique: 'stairs at speed and the rear-wheel-first landing',
-  demands: 'the flume: along the 1.6 m trough and off its lip over 6 m of mill pond onto the landing deck',
-  idea: 'the sawmill yard: timber stairs, the mill race and the flume jump',
+  technique: 'stairs at speed, then release and pitch forward over the flume landing',
+  demands: 'climb the 24 deg flume, cross the pond and land level on the deck',
+  idea: 'sawmill flume jump',
   hero: 'The Flume',
   attemptsBand: [1, 3],
-  targetTimeS: 50, // gold: skill-3 bot 26.53 s x 1.6 = 42.5, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 50, // provisional: new clean Rookie bot 30.35 s; phone medal calibration remains
 })
+  .hint('Gas up the stairs')
+  .hint('Release GO; lean forward at the flume')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Mill Gate')
   .flat(6)
@@ -66,12 +68,12 @@ export const A1 = rockhop('A1', 'a1-sawdust', 'Sawdust', 'alpine', 'easy', {
   .wave(30, 1.2, 16)
   .flat(8)
   .checkpoint()
-  .flat(6)
-  .camera({ mode: 'high34', zoomBias: 0.3 })
+  .flat(18) // full read and restart run-up from Marker 3 to the flume
+  .camera({ mode: 'side-tight', zoomBias: -0.4 })
   .setPiece('air', 'The Flume')
-  .ramp({ length: 12, height: 1.6, surface: 'wood', prop: 'flume' }) // 7.6 deg up onto the trough
-  .box({ width: 16, height: 1.6, surface: 'wood', prop: 'flume' }) // the flume: 16 m of run along the trough
-  .ramp({ length: 2, height: 0.4, surface: 'wood', prop: 'flume' }, { base: 1.6 }) // the trough lip: 11 deg
+  .kickerPlank({ angleDeg: 24, rise: 2.0 }) // short foot gives the flume a readable, committed entry
+  .box({ width: 16, height: 2.0, surface: 'wood', prop: 'flume' }) // the flume: 16 m of run along the trough
+  .ramp({ length: 2, height: 0.4, surface: 'wood', prop: 'flume' }, { base: 2.0 }) // pond lip: level the bike in flight
   .gap({ width: 6 })
   .gapLanding(1.2, 8, 8, 12) // the landing deck over the pond
   .endSetPiece()
@@ -91,13 +93,16 @@ export const A1 = rockhop('A1', 'a1-sawdust', 'Sawdust', 'alpine', 'easy', {
  * past the pivot, let it tip). DEMANDS the jam: a jump onto the teetering log, straight into a five-log pile.
  */
 export const A2 = rockhop('A2', 'a2-log-jam', 'Log Jam', 'alpine', 'medium', {
-  technique: 'logs: piles, loose logs, the big log and the teetering log',
+  technique: 'preload and level over the first log stack, then meter speed across the teetering log',
   demands: 'the jam: a 3.5 m jump onto a 22 deg teetering log, then a five-log two-row pile',
-  idea: 'a river jammed with logs: roll the piles, ride the log that teeters',
+  idea: 'ride the teetering log jam',
   hero: 'The Jam',
   attemptsBand: [2, 4],
   targetTimeS: 50, // gold: skill-3 bot 29.98 s x 1.6 = 48.0, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
 })
+  .hint('Lean back before the log stack; level on top')
+  .hint('Level the landing after the pile')
+  .hint('Slow for the teetering log; gas out as it tips')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Landing')
   .flat(6)
@@ -159,18 +164,19 @@ export const A2 = rockhop('A2', 'a2-log-jam', 'Log Jam', 'alpine', 'medium', {
  * forward) onto cribbing and stumps, and the thin landing on a skid beam. DEMANDS the log loader: a kicker onto the
  * logging truck's bed, a hop onto its log load and across to the landing.
  *
- * Riding-poses physics (a736a26f): the 0.4 m load flipped a 4 m/s bike over its front wheel, and the average reflex
- * player needed 3.84 attempts, above Dust Devil's 3.82. The load is now 0.38 m (its landing lip 2 cm taller, so the
- * landing deck stays at 1.6 m): 3.51, between Log Jam and Dust Devil again.
+ * The former 0.38 m truck load could be passed after automatic respawns under neutral full GO. A 0.5 m load now
+ * requires a deliberate front-wheel lift, with the exit landing raised to match its top. Touch difficulty is unmeasured.
  */
 export const A3 = rockhop('A3', 'a3-timberline', 'Timberline', 'alpine', 'medium', {
-  technique: 'the hop, and the thin landing on a beam',
-  demands: 'the log loader: a kicker onto the truck bed, a 0.38 m hop onto the load and a 1.5 m hop across to the landing',
-  idea: 'the logging road to the timberline: hop the cribbing, ride the beam, jump the loader',
+  technique: 'lift the front for the truck load, then settle on the thin landing',
+  demands: 'hop onto the truck, lift over its 0.5 m log load, then clear the exit',
+  idea: 'hop the logging truck load',
   hero: 'The Log Loader',
   attemptsBand: [2, 5],
-  targetTimeS: 50, // gold: skill-3 bot 23.75 s x 1.6 = 38.0, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 50, // provisional: new clean Rookie bot 24.817 s; preserve campaign clock ladder pending phone play
 })
+  .hint('Lean back to lift onto the log load')
+  .hint('Level the bike over the exit gap')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Logging Road')
   .flat(6)
@@ -218,11 +224,11 @@ export const A3 = rockhop('A3', 'a3-timberline', 'Timberline', 'alpine', 'medium
   .gap({ width: 3 })
   .ramp({ length: 2, height: 0.25, surface: 'metal', prop: 'truck-bed' }, { base: 0.95 })
   .box({ width: 8, height: 1.2, prop: 'truck-bed' }) // the logging truck bed
-  .ledge({ height: 0.38, length: 6, surface: 'wood', prop: 'log-stack' }, { base: 1.2 }) // hop onto the load
+  .ledge({ height: 0.5, length: 6, surface: 'wood', prop: 'log-stack' }, { base: 1.2 }) // full GO noses into the load; lean back to lift
   .gap({ width: 1.5, depth: 2 }) // and across to the landing
-  .ramp({ length: 3, height: 0.32, surface: 'wood', prop: 'timber-deck' }, { base: 1.28 }) // landing lip
-  .box({ width: 6, height: 1.6, surface: 'wood', prop: 'timber-deck' })
-  .ramp({ length: 14, height: 1.6, direction: 'down', surface: 'wood', prop: 'timber-deck' })
+  .ramp({ length: 3, height: 0.32, surface: 'wood', prop: 'timber-deck' }, { base: 1.38 }) // landing lip to 1.7 m deck
+  .box({ width: 6, height: 1.7, surface: 'wood', prop: 'timber-deck' })
+  .ramp({ length: 14, height: 1.7, direction: 'down', surface: 'wood', prop: 'timber-deck' })
   .endSetPiece()
   .camera({ mode: 'side' })
   .flat(12)

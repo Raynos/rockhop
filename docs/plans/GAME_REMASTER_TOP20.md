@@ -10,6 +10,8 @@ ROCKHOP is a compact, premium-feeling trials campaign: every course has a legibl
 
 The qualification branch also has a synthetic upper/lower Diamond-route proof with byte-identical Node, replay and browser hashes; none of the final four courses has that line yet. The [C island integration review](../evidence/world-map-c/integrated-review/README.md) selects real C1–S3 courses at all 12 towers, but stays dev-only after 1–7 fps on headless SwiftShader and a reverse-angle art/visibility miss. [Cached-start isolation](../evidence/cached-boot/README.md) found 3.3–3.6 s after first script in the harness; an extra 5–7 s delayed even a static page, so no phone startup claim follows. A four-section ship gate passed clear, crash and one-tick restart logic but missed first-frame and restart-frame timing on SwiftShader; the remaster remains off `main`.
 
+The next [twelve-course challenge round](../evidence/campaign-retarget/README.md) moved the fixed-input result from 8/12 Rookie and 6/12 Pro passive clears to **0/72 in 600-second three-seed runs**. Played clips and exact replays cover the new Alpine, Quarry, Snowline S1 and Coast C3 gates; all 21 existing bot goldens were re-proved against the current browser build. This is only the first mechanical pass: several courses still clear in one expert-bot attempt, new phone players have not measured learnability, medal clocks remain provisional, and Pro still lacks a proved advantage on the four Diamond routes. The D3 upper-path experiment was removed from the registered course after Rookie succeeded more often in its sweep.
+
 ## Ranked work, with proof rather than completion guesses
 
 | # | Work | Gate |

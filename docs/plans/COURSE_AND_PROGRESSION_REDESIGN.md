@@ -1,6 +1,6 @@
 # ROCKHOP campaign redesign brief
 
-**Status:** all 12 difficulties still need retargeting. C1 and C2 course changes are integrated on a qualification branch ([C1](../evidence/c1-production-integration/README.md), [C2](../evidence/c2-production-integration/README.md)); their accepted clips are not a full touch-player difficulty pass. The [earned Pro and Scrap loop](../evidence/scrap-loop/README.md) is committed locally at `487db605`, but has not passed the release gate or reached production. An opt-in open platform and grounded upper-route Diamond proof now pass synthetic exact Node/replay/browser checks; **no final-four course uses them yet**. [Ranked priorities](GAME_REMASTER_TOP20.md) · [Baseline 12-course probe and clips](../evidence/gameplay-audit/README.md). The user played all 12 on a phone and found them too easy. A fixed-input replay of the baseline clears 8/12 on Rookie and 6/12 on Pro, with some top medals. Both findings require a rebuilt challenge curve, not a label change.
+**Status:** the [first twelve-course challenge pass](../evidence/campaign-retarget/README.md) now rejects fixed GO on both bikes in all 12 courses over 600 simulated seconds and re-proves all 21 existing bot goldens. C1/C2 accepted clips and the new C3/Alpine/Quarry/Snowline clips are not a full touch-player difficulty pass. The [earned Pro and Scrap loop](../evidence/scrap-loop/README.md) is committed locally at `487db605`, but has not passed the release gate or reached production. An opt-in open platform and grounded upper-route Diamond proof pass synthetic exact Node/replay/browser checks; **no final-four course uses them yet**. A real D3 upper route was prototyped and removed because it favored Rookie more often. [Ranked priorities](GAME_REMASTER_TOP20.md) · [Baseline 12-course probe and clips](../evidence/gameplay-audit/README.md). The user played all 12 on a phone and found them too easy; the new bot gate does not replace that human feedback or prove the final curve.
 
 ## Player promise
 
@@ -10,7 +10,7 @@ The final four of twelve are **D3, S1, S2 and S3**. A Starter rider can finish t
 
 ## Twelve signature riding problems
 
-These are intended obstacle tests, not final dimensions or medal times. The C1 prototype comes first; only a played, deterministic solution can establish the pattern for the rest.
+These are intended obstacle tests, not final dimensions or medal times. The implemented first-pass geometry and played outcomes are in the [course evidence](../evidence/campaign-retarget/README.md); some choices below remain design targets rather than current course features.
 
 | Course | Existing set piece to preserve | Required decision and readable failure | Finish or replay hook |
 |---|---|---|---|

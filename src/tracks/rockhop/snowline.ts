@@ -22,13 +22,16 @@ function slots(b: ReturnType<typeof rockhop>, count: number, pitch: number): Ret
  * tower caps climbing 1.3 -> 1.6 over the crevasse and the jump off the top station.
  */
 export const S1 = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard', {
-  technique: 'tower caps and the ice-shelf gap chain',
-  demands: 'the lift line: three tower caps climbing 1.3 -> 1.6 m over the crevasse, off the top station',
-  idea: 'ride the ski-lift line: cap to cap along the towers',
+  technique: 'tower caps, ice-shelf gaps and a controlled station landing',
+  demands: 'settle at the station lip, then climb three tower caps over the crevasse',
+  idea: 'ride the ski-lift towers',
   hero: 'The Lift Line',
   attemptsBand: [5, 10],
-  targetTimeS: 55, // gold: skill-3 bot 30.50 s x 1.6 = 48.8, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 55, // provisional medal clock: the retargeted clean skill-3 runs are 29.96 s Rookie / 29.80 s Pro
 })
+  .hint('Carry speed across the ice shelves')
+  .hint('Ease off at the station lip; land level')
+  .hint('Use rear-wheel grip on the tower caps')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Base Station')
   .flat(6)
@@ -65,11 +68,11 @@ export const S1 = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard',
   .wave(30, 1.2, 16)
   .flat(8)
   .checkpoint()
-  .flat(20)
+  .flat(30) // 28 m is the GO failure threshold; 2 m of margin keeps the repeatable overspeed landing legible
   .camera({ mode: 'side-tight', zoomBias: -0.4 })
-  .kickerPlank({ angleDeg: 40, rise: 2.6 }) // the station ramp: 40 deg ice
-  .box({ width: 12, height: 2.6, surface: 'snow', prop: 'ice-ledge' })
-  .ramp({ length: 22, height: 2.6, direction: 'down', surface: 'snow', prop: 'ice-ledge' })
+  .kickerPlank({ angleDeg: 22, rise: 2.2 }) // the station lip: full throttle pitches the bike high over the deck
+  .box({ width: 12, height: 2.2, surface: 'snow', prop: 'ice-ledge' })
+  .ramp({ length: 28, height: 2.2, direction: 'down', surface: 'snow', prop: 'ice-ledge' })
   .camera({ mode: 'side' })
   .flat(10)
   .rollers(20, 0.25, 3)
@@ -104,7 +107,7 @@ export const S1 = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard',
 export const S2 = rockhop('S2', 's2-cornice', 'Cornice', 'snowline', 'extreme', {
   technique: 'ice faces, the spinning rollers and the fence hop',
   demands: 'the cornice: a 45 deg ice wall onto the ridge, along the cornice and off its wind lip over the crevasse onto the ice shelf',
-  idea: 'climb the ice wall and drop off the cornice',
+  idea: 'drop off the ice cornice',
   hero: 'The Cornice',
   attemptsBand: [6, 12],
   targetTimeS: 60, // gold: skill-3 bot 35.54 s x 1.6 = 56.9, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
@@ -206,7 +209,7 @@ export const S3 = (() => {
   const b = rockhop('S3', 's3-whiteout', 'Whiteout', 'snowline', 'extreme', {
     technique: 'everything, closer together',
     demands: 'the summit: a climbing ice-shelf chain to 2.2 m, four summit tower caps at 2.55 m over the crevasse, off the station and down',
-    idea: 'the summit in a storm: slots, rollers, the shelves up and the summit towers',
+    idea: 'stormy summit tower climb',
     hero: 'The Summit Towers',
     attemptsBand: [8, 16],
     targetTimeS: 60, // gold: skill-3 bot 29.41 s x 1.6 = 47.1, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)

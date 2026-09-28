@@ -1,0 +1,15 @@
+{
+  "course": "s1-lift-line",
+  "method": "For each station run-up length, replay throttle=1 for 120 seconds at 120 Hz from a fresh start with checkpoint restarts; evaluate Rookie and Pro independently.",
+  "stationLip": { "angleDeg": 22, "riseM": 2.2, "deckM": 12, "descentM": 28 },
+  "sweep": [
+    { "runupM": 20, "rookieFinished": true, "proFinished": true },
+    { "runupM": 25, "rookieFinished": true, "proFinished": true },
+    { "runupM": 26, "rookieFinished": false, "proFinished": true },
+    { "runupM": 27, "rookieFinished": false, "proFinished": true },
+    { "runupM": 28, "rookieFinished": false, "proFinished": false },
+    { "runupM": 30, "rookieFinished": false, "proFinished": false }
+  ],
+  "selectedRunupM": 30,
+  "reason": "28 m is the shortest tested shared failure point; 30 m leaves 2 m of deterministic margin without a long straight."
+}

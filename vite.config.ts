@@ -112,7 +112,7 @@ function bundleBudget(): Plugin {
         rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${dev ? '  (dev-only, not budgeted)' : ''}`);
       }
       const ok = total <= BUNDLE_BUDGET_GZ_BYTES;
-      const line = `bundle budget: ${(total / 1024).toFixed(1)} KB gz of ${(BUNDLE_BUDGET_GZ_BYTES / 1024).toFixed(0)} KB — ${ok ? 'OK' : 'OVER BUDGET'}`;
+      const line = `bundle budget: ${(total / 1024).toFixed(1)} KB gz (${total} B) of ${(BUNDLE_BUDGET_GZ_BYTES / 1024).toFixed(0)} KB — ${ok ? 'OK' : 'OVER BUDGET'}`;
       this.info(`\n${rows.join('\n')}\n${line}`);
       if (!ok) this.error(line);
     },
