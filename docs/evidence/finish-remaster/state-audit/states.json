@@ -1,0 +1,797 @@
+{
+  "verdict": "PASS",
+  "source": "production App, four fresh page boots with actual local storage carried into new browser contexts",
+  "viewportCss": [
+    852,
+    393
+  ],
+  "encodedVideo": [
+    852,
+    394
+  ],
+  "fps": 20,
+  "recipe": "authored C1 Rookie bot-3 recording, with 120/60/0/0 leading neutral ticks; actual physics and career ledger, no injected result or PB",
+  "recording": "harness/inputs/c1-low-tide/bot-3.json",
+  "recordingSha256": "0014630db1c635a7e5cb212abed177f379a82dfda196f46ed25991c4649e3652",
+  "clock": "Playwright clock paused after Menu boot; C1 inputs stepped manually at 120 Hz; result reveal advanced in 50 ms frames",
+  "gitSha": "de7a18a80d4feefbb88263c0e54fad14cdf5b147",
+  "frozenIndexSha256": "55eab897d701536936a6b9f8372d3ca0d37ae36743191655cf621117bec6258f",
+  "browser": "headless Chromium / ANGLE SwiftShader",
+  "onboarding": "returning player; fresh career at case 1, then actual storage survives three fresh App boots",
+  "cases": [
+    {
+      "case": "01-first-clear",
+      "leadNeutralTicks": 120,
+      "expected": {
+        "hash": "6283d6b08416e9c3",
+        "time": 31.3,
+        "faults": 0,
+        "medal": "gold",
+        "totalTicks": 3762
+      },
+      "before": {
+        "screen": "menu",
+        "phase": "menu",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 0,
+          "medals": {},
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": null,
+        "tag": "",
+        "kicker": "",
+        "headline": "",
+        "pbLabel": "Personal best",
+        "pbText": "",
+        "medal": "",
+        "timeText": "",
+        "reward": "—",
+        "walletText": "—",
+        "goal": "",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next track",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "exact": {
+        "hash": "6283d6b08416e9c3",
+        "time": 31.3,
+        "faults": 0,
+        "phase": "finished"
+      },
+      "result": {
+        "screen": "run",
+        "phase": "finished",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 31.3,
+        "finishTime": 31.3,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 220,
+          "medals": {
+            "c1-low-tide": "gold"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 31.3,
+          "medal": "gold",
+          "bestMedal": "gold",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "NEW COURSE CLEAR",
+        "kicker": "FIRST FINISH",
+        "headline": "YOU FOUND THE LINE",
+        "pbLabel": "First personal best",
+        "pbText": "0:31.300",
+        "medal": "Gold",
+        "timeText": "0:31.300",
+        "reward": "+220",
+        "walletText": "220",
+        "goal": "0:30.600 to earn. Brake precisely, then carry speed through the exit.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "pointerAction": "retry",
+      "route": {
+        "screen": "run",
+        "phase": "countdown",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 220,
+          "medals": {
+            "c1-low-tide": "gold"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 31.3,
+          "medal": "gold",
+          "bestMedal": "gold",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "NEW COURSE CLEAR",
+        "kicker": "FIRST FINISH",
+        "headline": "YOU FOUND THE LINE",
+        "pbLabel": "First personal best",
+        "pbText": "0:31.300",
+        "medal": "Gold",
+        "timeText": "0:31.300",
+        "reward": "+220",
+        "walletText": "220",
+        "goal": "0:30.600 to earn. Brake precisely, then carry speed through the exit.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "clip": "docs/evidence/finish-remaster/state-audit/01-first-clear.mp4",
+      "frames": 101,
+      "seconds": 5.05
+    },
+    {
+      "case": "02-faster-same-medal",
+      "leadNeutralTicks": 60,
+      "expected": {
+        "hash": "bf3ae3d28d3af0fd",
+        "time": 30.841666666666665,
+        "faults": 0,
+        "medal": "gold",
+        "totalTicks": 3702
+      },
+      "before": {
+        "screen": "menu",
+        "phase": "menu",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 220,
+          "medals": {
+            "c1-low-tide": "gold"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 31.3,
+          "medal": "gold",
+          "bestMedal": "gold",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "",
+        "kicker": "",
+        "headline": "",
+        "pbLabel": "Personal best",
+        "pbText": "",
+        "medal": "",
+        "timeText": "",
+        "reward": "—",
+        "walletText": "—",
+        "goal": "",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next track",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "exact": {
+        "hash": "bf3ae3d28d3af0fd",
+        "time": 30.841666666666665,
+        "faults": 0,
+        "phase": "finished"
+      },
+      "result": {
+        "screen": "run",
+        "phase": "finished",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 30.841666666666665,
+        "finishTime": 30.841666666666665,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 220,
+          "medals": {
+            "c1-low-tide": "gold"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.841666666666665,
+          "medal": "gold",
+          "bestMedal": "gold",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "NEW PERSONAL BEST",
+        "kicker": "TIME IMPROVED",
+        "headline": "FASTER THROUGH THE GATE",
+        "pbLabel": "Beat previous best",
+        "pbText": "−0:00.458",
+        "medal": "Gold",
+        "timeText": "0:30.842",
+        "reward": "No new Scrap",
+        "walletText": "220",
+        "goal": "0:30.600 to earn. Brake precisely, then carry speed through the exit.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "pointerAction": "replay",
+      "route": {
+        "screen": "replay",
+        "phase": "riding",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 220,
+          "medals": {
+            "c1-low-tide": "gold"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.841666666666665,
+          "medal": "gold",
+          "bestMedal": "gold",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "NEW PERSONAL BEST",
+        "kicker": "TIME IMPROVED",
+        "headline": "FASTER THROUGH THE GATE",
+        "pbLabel": "Beat previous best",
+        "pbText": "−0:00.458",
+        "medal": "Gold",
+        "timeText": "0:30.842",
+        "reward": "No new Scrap",
+        "walletText": "220",
+        "goal": "0:30.600 to earn. Brake precisely, then carry speed through the exit.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "clip": "docs/evidence/finish-remaster/state-audit/02-faster-same-medal.mp4",
+      "frames": 102,
+      "seconds": 5.1
+    },
+    {
+      "case": "03-medal-upgrade",
+      "leadNeutralTicks": 0,
+      "expected": {
+        "hash": "2bfe061963ffb058",
+        "time": 30.349999999999998,
+        "faults": 0,
+        "medal": "platinum",
+        "totalTicks": 3642
+      },
+      "before": {
+        "screen": "menu",
+        "phase": "menu",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 220,
+          "medals": {
+            "c1-low-tide": "gold"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.841666666666665,
+          "medal": "gold",
+          "bestMedal": "gold",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "",
+        "kicker": "",
+        "headline": "",
+        "pbLabel": "Personal best",
+        "pbText": "",
+        "medal": "",
+        "timeText": "",
+        "reward": "—",
+        "walletText": "—",
+        "goal": "",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next track",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "exact": {
+        "hash": "2bfe061963ffb058",
+        "time": 30.349999999999998,
+        "faults": 0,
+        "phase": "finished"
+      },
+      "result": {
+        "screen": "run",
+        "phase": "finished",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 30.35,
+        "finishTime": 30.349999999999998,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 300,
+          "medals": {
+            "c1-low-tide": "platinum"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.35,
+          "medal": "platinum",
+          "bestMedal": "platinum",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "MEDAL UPGRADED",
+        "kicker": "GOLD → DIAMOND",
+        "headline": "THE CLEAN LINE PAID OFF",
+        "pbLabel": "Beat previous best",
+        "pbText": "−0:00.492",
+        "medal": "Diamond",
+        "timeText": "0:30.350",
+        "reward": "+80",
+        "walletText": "300",
+        "goal": "Diamond is yours. Replay this run or chase a faster split. 500 Scrap until the Pro bike.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "pointerAction": "menu",
+      "route": {
+        "screen": "tracks",
+        "phase": "menu",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": true,
+        "ledger": {
+          "version": 1,
+          "wallet": 300,
+          "medals": {
+            "c1-low-tide": "platinum"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.35,
+          "medal": "platinum",
+          "bestMedal": "platinum",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "MEDAL UPGRADED",
+        "kicker": "GOLD → DIAMOND",
+        "headline": "THE CLEAN LINE PAID OFF",
+        "pbLabel": "Beat previous best",
+        "pbText": "−0:00.492",
+        "medal": "Diamond",
+        "timeText": "0:30.350",
+        "reward": "+80",
+        "walletText": "300",
+        "goal": "Diamond is yours. Replay this run or chase a faster split. 500 Scrap until the Pro bike.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "clip": "docs/evidence/finish-remaster/state-audit/03-medal-upgrade.mp4",
+      "frames": 102,
+      "seconds": 5.1
+    },
+    {
+      "case": "04-no-gain-after-reload",
+      "leadNeutralTicks": 0,
+      "expected": {
+        "hash": "2bfe061963ffb058",
+        "time": 30.349999999999998,
+        "faults": 0,
+        "medal": "platinum",
+        "totalTicks": 3642
+      },
+      "before": {
+        "screen": "menu",
+        "phase": "menu",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 300,
+          "medals": {
+            "c1-low-tide": "platinum"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.35,
+          "medal": "platinum",
+          "bestMedal": "platinum",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "",
+        "kicker": "",
+        "headline": "",
+        "pbLabel": "Personal best",
+        "pbText": "",
+        "medal": "",
+        "timeText": "",
+        "reward": "—",
+        "walletText": "—",
+        "goal": "",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next track",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "exact": {
+        "hash": "2bfe061963ffb058",
+        "time": 30.349999999999998,
+        "faults": 0,
+        "phase": "finished"
+      },
+      "result": {
+        "screen": "run",
+        "phase": "finished",
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "runTime": 30.35,
+        "finishTime": 30.349999999999998,
+        "faults": 0,
+        "renderEntering": false,
+        "ledger": {
+          "version": 1,
+          "wallet": 300,
+          "medals": {
+            "c1-low-tide": "platinum"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.35,
+          "medal": "platinum",
+          "bestMedal": "platinum",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "COURSE CLEARED",
+        "kicker": "RESULT RECORDED",
+        "headline": "ONE MORE RUN?",
+        "pbLabel": "Personal best stands",
+        "pbText": "0:30.350",
+        "medal": "Diamond",
+        "timeText": "0:30.350",
+        "reward": "No new Scrap",
+        "walletText": "300",
+        "goal": "Diamond is yours. Replay the line or take on the next course. 500 Scrap until the Pro bike.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackCrane Hop",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "pointerAction": "next",
+      "route": {
+        "screen": "run",
+        "phase": "countdown",
+        "trackId": "c2-crane-hop",
+        "seed": 3733111498,
+        "runTime": 0,
+        "finishTime": null,
+        "faults": 0,
+        "renderEntering": true,
+        "ledger": {
+          "version": 1,
+          "wallet": 300,
+          "medals": {
+            "c1-low-tide": "platinum"
+          },
+          "proOwned": false,
+          "equipped": "rookie"
+        },
+        "pb": {
+          "time": 30.35,
+          "medal": "platinum",
+          "bestMedal": "platinum",
+          "faults": 0,
+          "recordingSha256": "stored"
+        },
+        "tag": "COURSE CLEARED",
+        "kicker": "RESULT RECORDED",
+        "headline": "ONE MORE RUN?",
+        "pbLabel": "Personal best stands",
+        "pbText": "0:30.350",
+        "medal": "Diamond",
+        "timeText": "0:30.350",
+        "reward": "No new Scrap",
+        "walletText": "300",
+        "goal": "Diamond is yours. Replay the line or take on the next course. 500 Scrap until the Pro bike.",
+        "tiles": [
+          {
+            "id": "retry",
+            "text": "RetryChase the line",
+            "disabled": false
+          },
+          {
+            "id": "next",
+            "text": "Next trackHull Breach",
+            "disabled": false
+          },
+          {
+            "id": "menu",
+            "text": "Map12 stops",
+            "disabled": false
+          },
+          {
+            "id": "replay",
+            "text": "ReplayWatch this run",
+            "disabled": false
+          }
+        ]
+      },
+      "clip": "docs/evidence/finish-remaster/state-audit/04-no-gain-after-reload.mp4",
+      "frames": 102,
+      "seconds": 5.1
+    }
+  ],
+  "errors": [],
+  "wallMs": 202775
+}

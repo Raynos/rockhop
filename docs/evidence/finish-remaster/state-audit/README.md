@@ -1,0 +1,16 @@
+# Played result-state audit · 852×393 landscape
+
+Four [silent headless clips](01-first-clear.mp4) come from the production App at 852×393 CSS pixels. Each clip shows the last two seconds of an actual C1 ride, the moving finish and complete report reveal, then a real touchscreen action. The video encoder pads the height to 394 pixels. The [machine report](states.json) records the exact physics hash, finish time, visible text, medal, local career record before and after each run, pointer destination, frozen build hash, and browser errors.
+
+| State | Played clip | Contact | Finish | Medal | Scrap / wallet | Pointer destination |
+| --- | --- | --- | ---: | --- | ---: | --- |
+| First clear | [clip](01-first-clear.mp4) | [frames](01-first-clear.jpg) | 0:31.300 | Gold | +220 / 220 | Retry → C1 countdown |
+| Faster PB, same medal | [clip](02-faster-same-medal.mp4) | [frames](02-faster-same-medal.jpg) | 0:30.842 | Gold | +0 / 220 | Replay → playback |
+| Medal upgrade | [clip](03-medal-upgrade.mp4) | [frames](03-medal-upgrade.jpg) | 0:30.350 | Diamond | +80 / 300 | Map → track select |
+| No gain after reload | [clip](04-no-gain-after-reload.mp4) | [frames](04-no-gain-after-reload.jpg) | 0:30.350 | Diamond | +0 / 300 | Next → C2 countdown |
+
+The source is the authored Rookie `harness/inputs/c1-low-tide/bot-3.json` recording. The four rides prepend 120, 60, 0, and 0 neutral 120 Hz input ticks respectively. These are documented input variations, not injected result cards. A Node physics run established each reference hash and finish time; the browser exactly matched all four hashes. The App wrote the Gold PB and 220 Scrap after the first ride, a faster Gold PB without another payout, then a Diamond PB and only the 80 Scrap difference. A new App boot preceded every later ride, with the previous context's actual local storage imported into a fresh context. The identical Diamond recording after the final reload showed “Personal best stands” and “No new Scrap”; its wallet remained 300. All four result controls were enabled; the four tapped destinations are visible at the ends of the clips. `ffprobe` found one video stream and no audio stream in each clip.
+
+The visible copy distinguishes the states: “You found the line,” “Faster through the gate,” “The clean line paid off,” and “One more run?” The [full-size Diamond report frame](inspection.png) shows that the result tag is 8 CSS pixels and the Scrap labels are 9 CSS pixels. The goal paragraph is 11 CSS pixels and wraps across two lines. The reward logic, persistence, and pointer routes passed; small report labels remain a readability and accessibility risk for physical landscape phones. This headless SwiftShader pass does not measure a stranger's attempts, physical touch precision, safe areas, or audible effects.
+
+The first automation attempt inherited a paused Playwright clock into its next page and stalled on the second boot. The next attempt reached the Diamond state but rejected a correct stored PB because the harness compared physics `30.349999999999998` to the saved tick value `30.35` with strict equality. Both were harness errors. The final run used fresh browser contexts and a `10⁻⁶` PB comparison tolerance; discarded attempts produced no retained clips. The repeatable harness is [state-audit.mts](../../../../harness/finish-remaster/state-audit.mts).
