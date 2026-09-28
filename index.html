@@ -88,7 +88,9 @@
       #loader .turn .phone { display: block; width: 18px; height: 28px; box-sizing: border-box; border: 2px solid currentColor; border-radius: 4px; transform: rotate(90deg); }
       /* Two instruments: DOWNLOAD and SETUP, each a three-quarter ring with drum digits, its name and one live line. */
       #loader .gauges { --dial-size: min(44vw, 220px); display: flex; gap: 6vmin; justify-content: center; align-items: flex-start; width: 100%; max-width: 560px; }
-      #loader .gauge { display: flex; flex-direction: column; align-items: center; width: var(--dial-size); height: calc(var(--dial-size) + 48px); text-align: center; }
+      /* Two fixed columns: progress text must never make a dial flex-shrink or grow. On a narrow portrait phone,
+         each dial uses exactly half the available width after the gap. */
+      #loader .gauge { display: flex; flex: 0 0 min(var(--dial-size), calc(50% - 3vmin)); flex-direction: column; align-items: center; min-width: 0; height: calc(var(--dial-size) + 48px); text-align: center; }
       #loader .dial { position: relative; width: 100%; aspect-ratio: 1; }
       #loader .dial svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
       #loader .rail { fill: none; stroke: rgba(239,227,200,.18); stroke-width: 5; stroke-linecap: butt; }
@@ -106,9 +108,9 @@
       #loader .name { margin-top: 6px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: rgba(243,245,248,.6); }
       #loader .line { min-height: 1.4em; margin-top: 2px; font-size: 12px; letter-spacing: .04em; color: rgba(243,245,248,.88); font-variant-numeric: tabular-nums; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
       /* Done steps fold into a count; the full row log sits behind a native disclosure, closed by default. */
-      #loader .row { display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(243,245,248,.62); font-variant-numeric: tabular-nums; }
-      #loader .count { color: #EFE3C8; font-weight: 700; }
-      #loader details { position: relative; }
+      #loader .row { display: flex; align-items: center; justify-content: flex-start; gap: 18px; width: min(100%, 260px); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(243,245,248,.62); font-variant-numeric: tabular-nums; }
+      #loader .count { flex: 1; white-space: nowrap; color: #EFE3C8; font-weight: 700; }
+      #loader details { position: relative; flex: 0 0 100px; }
       #loader summary { list-style: none; cursor: pointer; display: flex; align-items: center; border: 1px solid rgba(239,227,200,.34); border-radius: 999px; padding: 0 16px; min-height: 44px; line-height: 1; -webkit-user-select: none; user-select: none; }
       #loader summary::-webkit-details-marker { display: none; }
       #loader summary::after { content: " ▾"; }
