@@ -1073,6 +1073,7 @@ function mergeStaticSetDressing(){
 const meshMerge=mergeStaticSetDressing();
 
 let selected=0,raf=0,lastRender=0,frames=0,fpsAt=performance.now(),fps=0;
+const frameInterval=1000/60;
 const halo=new THREE.Mesh(new THREE.TorusGeometry(.64,.055,8,48),new THREE.MeshBasicMaterial({color:'#ffd680',transparent:true,opacity:.95}));
 halo.rotation.x=Math.PI/2;terrain.add(halo);
 const beam=new THREE.Mesh(new THREE.CylinderGeometry(.06,.16,2.25,8),new THREE.MeshBasicMaterial({color:'#ffd079',transparent:true,opacity:.25,depthWrite:false}));terrain.add(beam);
@@ -1139,8 +1140,10 @@ function animate(now){
    if(t>=1){focusTween=null;controls.enabled=true;}
  }
  controls.update();
- if(now-lastRender<1000/30)return;
- lastRender=now;
+ if(now-lastRender<frameInterval)return;
+ // Keep the fractional remainder so a 120 Hz display produces 60 renders,
+ // rather than drifting down to every third animation frame.
+ lastRender=now-(now-lastRender)%frameInterval;
  waterUniforms.time.value=now*.001;
  halo.rotation.z=now*.00025;
  beam.material.opacity=.16+.07*Math.sin(now*.0035);
