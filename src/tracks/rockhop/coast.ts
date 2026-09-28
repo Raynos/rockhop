@@ -20,7 +20,7 @@ export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', 
   idea: 'the dry harbour causeway',
   hero: 'Ease Off for the Beached Ramp',
   attemptsBand: [1, 2], // provisional until real-time touch strangers; paused-step blind play took four attempts
-  targetTimeS: 50, // gold: skill-3 bot 29.72 s x 1.6 = 47.5, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 36, // current 30.350 s clean reference just earns Diamond; phone calibration remains
 })
   .hint('Hold the gas up the slipway')
   .hint('Steady gas over the tyres')
@@ -95,7 +95,7 @@ export const C2 = rockhop('C2', 'c2-crane-hop', 'Crane Hop', 'coast', 'beginner'
   idea: 'pier-to-barge harbour jump',
   hero: 'The Crane Hop',
   attemptsBand: [1, 2], // provisional until measured real-time touch attempts
-  targetTimeS: 50, // provisional until integrated touch play and medal calibration
+  targetTimeS: 31, // current 26.608 s clean reference earns Gold; Diamond asks for a faster jump
 })
   .hint('Gas off the first pier lip')
   .hint('Ease off and lean forward over Pier 2’s falling ramp')
@@ -163,7 +163,7 @@ export const C3 = rockhop('C3', 'c3-hull-breach', 'Hull Breach', 'coast', 'easy'
   idea: 'escape the beached freighter',
   hero: 'The Breach',
   attemptsBand: [2, 3], // provisional: first new skill-3 Rookie bot needed two attempts; phone players unmeasured
-  targetTimeS: 50, // provisional: preserve the campaign clock ladder; refine against real phone attempts
+  targetTimeS: 39, // current 37.817 s one-bail Rookie reference earns Gold; clean route remains to prove
 })
   .hint('Lean forward up the stern')
   .hint('Set speed across the hull deck')

@@ -793,7 +793,7 @@ export const HUD_CSS = /* css */ `
 .rotate .btn.reload, #ui .rotate .btn.reload { min-height: 56px; padding: 0 var(--s6); margin-top: var(--s3); border-radius: 10px; font: 400 1.15rem/1 var(--display); letter-spacing: .02em; }
 .rotate .build { position: absolute; bottom: calc(var(--s4) + var(--sab)); left: 0; right: 0; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; opacity: .4; }
 @keyframes rot { 0%, 20% { transform: rotate(0); } 60%, 100% { transform: rotate(90deg); } }
-@media (orientation: portrait) and (pointer: coarse) and (max-width: 900px) { .rotate.armed { display: flex; } }
+@media (orientation: portrait) { .rotate.armed { display: flex; } }
 
 /* Short landscape phones (844×390): tighter type, single-row menus above the fold. html.short = logical height ≤ 500 px (orientation.ts). */
 html.short .settings-wrap { padding-top: calc(var(--s3) + var(--sat)); padding-bottom: calc(var(--s4) + var(--sab)); gap: var(--s2); grid-template-columns: minmax(16rem, 30rem); }

@@ -74,9 +74,9 @@ describe('orientation (rotate-to-play)', () => {
     expect(logicalRect(el)).toEqual({ left: 760, top: 10, right: 840, bottom: 54, width: 80, height: 44 });
   });
 
-  it('stylesheet: no forced-landscape rules; the portrait prompt is CSS-gated on portrait + coarse pointer; phone rules are class-scoped', () => {
+  it('stylesheet: no forced-landscape rules; every portrait viewport gets the rotate prompt; phone rules are class-scoped', () => {
     expect(UI_CSS).not.toMatch(/forced-landscape/);
-    expect(UI_CSS).toMatch(/@media \(orientation: portrait\) and \(pointer: coarse\)[^{]*\{ \.rotate\.armed \{ display: flex; \}/);
+    expect(UI_CSS).toMatch(/@media \(orientation: portrait\) \{ \.rotate\.armed \{ display: flex; \}/);
     expect(UI_CSS).toMatch(/--sat: env\(safe-area-inset-top/);
     expect(UI_CSS).not.toMatch(/@media \(max-height/);
     expect(UI_CSS).toMatch(/html\.short \.tile \{ width: 160px; height: 92px/);

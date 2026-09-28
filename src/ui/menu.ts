@@ -286,7 +286,7 @@ export class PauseMenu {
 }
 
 /**
- * Full-screen portrait prompt (CSS decides when it shows: portrait + coarse pointer). A designed
+ * Full-screen portrait prompt (CSS decides when it shows: any portrait viewport). A designed
  * screen in the menu tokens: wordmark, rotating phone glyph, a "Reload game" button (home-screen /
  * standalone iOS has no browser chrome to reload with), build stamp. Rotate-to-play is the rule:
  * forced landscape was tried and abandoned (round 3, docs/design/game.md §11).

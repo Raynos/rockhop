@@ -104,14 +104,15 @@ export const S1 = rockhop('S1', 's1-lift-line', 'Lift Line', 'snowline', 'hard',
  * the snow-cat's spinning rollers and the fence hop. DEMANDS the cornice: up the ice wall onto the ridge, along the
  * cornice and off its wind lip onto the avalanche slope — then the fences and the shelf chain home.
  */
-export const S2 = rockhop('S2', 's2-cornice', 'Cornice', 'snowline', 'extreme', {
-  technique: 'ice faces, the spinning rollers and the fence hop',
-  demands: 'the cornice: a 45 deg ice wall onto the ridge, along the cornice and off its wind lip over the crevasse onto the ice shelf',
-  idea: 'drop off the ice cornice',
-  hero: 'The Cornice',
-  attemptsBand: [6, 12],
-  targetTimeS: 60, // gold: skill-3 bot 35.54 s x 1.6 = 56.9, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
-})
+export const S2 = (() => {
+  const base = rockhop('S2', 's2-cornice', 'Cornice', 'snowline', 'extreme', {
+    technique: 'ice face, rollers, fence hop',
+    demands: 'wind shelf for Diamond',
+    idea: 'cornice jump',
+    hero: 'The Cornice',
+    attemptsBand: [6, 12],
+    targetTimeS: 44.5, // Pro upper line: 33.792 s < 44.5 * 0.9 * 0.85 = 34.043 s; lower line remains Gold
+  })
   .camera({ mode: 'side' })
   .setPiece('start', 'The Hut')
   .flat(6)
@@ -196,6 +197,15 @@ export const S2 = rockhop('S2', 's2-cornice', 'Cornice', 'snowline', 'extreme', 
   .flat(10)
   .arch({ style: 'finish' })
   .finish();
+  // The Pro's stronger launch from the ice wall can land on this one-way wind shelf. The Rookie's measured
+  // lower trajectory passes underneath; both bikes can still clear the main ice-shelf line below it.
+  // Explicit x prevents the optional shelf from moving the course cursor or changing checkpoint spacing.
+  const deckIndex = base.obstacles.length;
+  base.obstacles.push({ kind: 'open-platform', pos: { x: 157, y: 0 },
+    params: { length: 13, height: 8.5, thickness: 0.18, surface: 'snow' } });
+  base.diamondGoal = { id: 's2-wind-shelf', platformObstacleIndex: deckIndex, x: 165, minRearY: 8.7 };
+  return base;
+})();
 
 /**
  * S3 WHITEOUT — the summit run in the storm. DEMANDS everything the snowline taught, closer together: the crevasse

@@ -27,7 +27,7 @@ export const D1 = rockhop('D1', 'd1-dust-devil', 'Dust Devil', 'quarry', 'medium
   idea: 'climb the quarry terraces',
   hero: 'The Terraces',
   attemptsBand: [3, 6],
-  targetTimeS: 50, // gold: skill-3 bot 25.95 s x 1.6 = 41.5, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 31.5, // 27.058 s clean reference earns Gold; Diamond needs a faster terrace line
 })
   .camera({ mode: 'side' })
   .setPiece('start', 'The Pit Head')
@@ -104,7 +104,7 @@ export const D2 = rockhop('D2', 'd2-conveyor', 'Conveyor', 'quarry', 'hard', {
   idea: 'conveyor to ore-cart run',
   hero: 'The Head Pulley',
   attemptsBand: [3, 7],
-  targetTimeS: 55, // gold: skill-3 bot 33.84 s x 1.6 = 54.1, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 43, // 37.158 s clean reference earns Gold; Diamond needs a quicker cart exit
 })
   .camera({ mode: 'side' })
   .setPiece('start', 'The Weighbridge')

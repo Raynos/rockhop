@@ -134,6 +134,7 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
   const DEPTH = 3;
 
   const sideMatFor = (surface: string, kind: string): string => {
+    if (surface === 'snow') return 'concrete';
     if (kind === 'ramp' || kind === 'plank' || kind === 'stair') return surface === 'metal' ? 'rustSteel' : 'plywood';
     if (kind === 'wall' || kind === 'ledge') return surface === 'wood' ? 'plywood' : 'concrete';
     if (kind === 'box') return surface === 'metal' ? (track.def.id === 'lab-box-climb' ? 'labContainerRed' : 'container') : 'plywood';
@@ -183,7 +184,7 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
         for (const c of cols) {
           if (c.kind === 'polyline') {
             const g = board(c, t, num(p, 'width', DEPTH));
-            if (g) push(buckets, open && surface === 'metal' ? 'rustSteel' : 'plywood', g);
+            if (g) push(buckets, sideMatFor(surface, po.kind), g);
             // Open decks have end trestles only, leaving the lower x-lane clear.
             const pts = c.points;
             const len = Math.hypot(pts[pts.length - 1]!.x - pts[0]!.x, pts[pts.length - 1]!.y - pts[0]!.y);

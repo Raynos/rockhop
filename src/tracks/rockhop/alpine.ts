@@ -21,7 +21,7 @@ export const A1 = rockhop('A1', 'a1-sawdust', 'Sawdust', 'alpine', 'easy', {
   idea: 'sawmill flume jump',
   hero: 'The Flume',
   attemptsBand: [1, 3],
-  targetTimeS: 50, // provisional: new clean Rookie bot 30.35 s; phone medal calibration remains
+  targetTimeS: 35, // 30.350 s clean reference earns Gold; Diamond needs a faster flume line
 })
   .hint('Gas up the stairs')
   .hint('Release GO; lean forward at the flume')
@@ -98,7 +98,7 @@ export const A2 = rockhop('A2', 'a2-log-jam', 'Log Jam', 'alpine', 'medium', {
   idea: 'ride the teetering log jam',
   hero: 'The Jam',
   attemptsBand: [2, 4],
-  targetTimeS: 50, // gold: skill-3 bot 29.98 s x 1.6 = 48.0, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  targetTimeS: 35, // 29.983 s clean reference earns Gold; Pro reference still needed
 })
   .hint('Lean back before the log stack; level on top')
   .hint('Level the landing after the pile')
@@ -173,7 +173,7 @@ export const A3 = rockhop('A3', 'a3-timberline', 'Timberline', 'alpine', 'medium
   idea: 'hop the logging truck load',
   hero: 'The Log Loader',
   attemptsBand: [2, 5],
-  targetTimeS: 50, // provisional: new clean Rookie bot 24.817 s; preserve campaign clock ladder pending phone play
+  targetTimeS: 29, // 24.817 s clean reference earns Gold; Diamond needs a quicker truck exit
 })
   .hint('Lean back to lift onto the log load')
   .hint('Level the bike over the exit gap')
