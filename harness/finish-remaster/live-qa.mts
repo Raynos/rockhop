@@ -40,12 +40,17 @@ try {
   const result = await page.evaluate(() => ({ phase: window.__rockhop!.phase(), screen: window.__rockhop!.app!.screen(), tag: document.querySelector('.fr-tag')?.textContent, earned: document.querySelector('.tk-reward')?.textContent, wallet: document.querySelector('.fr-wallet')?.textContent, medal: document.querySelector('.fr-medal-name')?.textContent, time: document.querySelector('.fr-time-row .time')?.textContent, buttons: [...document.querySelectorAll('.results .tile')].map(x => ({ id:(x as HTMLElement).dataset.id, disabled:(x as HTMLButtonElement).disabled })) }));
   fs.mkdirSync('docs/evidence/finish-remaster', { recursive: true });
   await page.screenshot({ path: 'docs/evidence/finish-remaster/production-live-c1.png', animations: 'disabled' });
-  // The manual clock also stops the reveal watcher that raises pointer-events.
-  // Exercise the App action callback directly; a separate live-RAF touch pass
-  // is still needed for actual pointer hit testing.
-  await page.evaluate(() => (document.querySelector('.results .tile[data-id="menu"]') as HTMLElement).click());
+  // Manual physics owns the recorded time, but the touch invariant uses wall
+  // time. Poll its real reveal clock across the required 150 ms drawn interval,
+  // then send a browser pointer through the visible Map tile.
+  await page.evaluate(() => window.__rockhop!.app!.frame());
+  await page.waitForTimeout(200);
+  await page.evaluate(() => window.__rockhop!.app!.frame());
+  const live = await page.locator('.results.live').count();
+  if (!live) throw new Error('Results never became pointer-interactive');
+  await page.locator('.results .tile[data-id="menu"]').click({ timeout: 5_000 });
   const afterMap = await page.evaluate(() => window.__rockhop!.app!.screen());
-  fs.writeFileSync('docs/evidence/finish-remaster/production-live-c1.json', JSON.stringify({ ...result, afterMap, actionMethod: 'DOM click under manual clock' }, null, 2)+'\n');
+  fs.writeFileSync('docs/evidence/finish-remaster/production-live-c1.json', JSON.stringify({ ...result, afterMap, actionMethod: 'Playwright pointer click after reveal invariant' }, null, 2)+'\n');
   console.log(JSON.stringify({ ...result, afterMap }));
   if (result.phase !== 'finished' || result.tag !== 'NEW COURSE CLEAR' || result.earned !== '+300' || result.wallet !== '300' || result.medal !== 'Diamond' || result.time !== '0:30.350' || afterMap !== 'tracks') throw new Error('Production finish integration failed');
 } finally {
