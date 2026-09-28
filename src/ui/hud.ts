@@ -13,6 +13,7 @@ import type { Hud, HudAction } from './index';
 import { conceal, isLive, reveal } from './live';
 import { TileRow } from './tiles';
 import { MEDAL_NAME, medalSvg, wordmarkSvg, zoneTitle, type MedalId } from './brand';
+import { c1FaultCue, type FaultCue } from './c1FaultCue';
 
 type BannerKind = 'count' | 'go' | 'crash' | 'cp' | 'finish';
 
@@ -70,6 +71,9 @@ export class DomHud implements Hud {
   private readonly hintsEl: HTMLDivElement;
   private readonly skillCueEl: HTMLDivElement;
   private skillCueVisible = false;
+  private faultCue: FaultCue | null = null;
+  private faultCuePending = false;
+  private faultCueUntil = -1;
   private readonly results: HTMLDivElement;
   private readonly resKicker: HTMLDivElement;
   private readonly resName: HTMLDivElement;
@@ -273,6 +277,7 @@ export class DomHud implements Hud {
 
   setTrack(track: TrackDef): void {
     this.track = track;
+    this.clearFaultCue();
     this.setSkillCueVisible(false);
     const craneCue = track.id === 'c2-crane-hop';
     this.skillCueEl.classList.toggle('crane', craneCue);
@@ -400,10 +405,22 @@ export class DomHud implements Hud {
       }
     }
     const x = state.bike.pos.x;
+    if (this.faultCuePending) {
+      this.faultCuePending = false;
+      this.faultCue = t.id === 'c1-low-tide' ? c1FaultCue(x, state.checkpoint, state.bike.angle) : null;
+      if (this.faultCue) {
+        this.faultCueUntil = this.simTime + 3.2;
+        this.skillCueEl.classList.add('fault');
+        this.skillCueEl.setAttribute('aria-label', this.faultCue.accessible);
+        this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">↺</span><span class="skill-cue-copy"><strong>${this.faultCue.title}</strong><small>${this.faultCue.action}</small></span>`;
+      }
+    }
+    const retryLesson = this.faultCue !== null && this.simTime < this.faultCueUntil && (this.phase === 'crashed' || this.phase === 'riding');
+    if (!retryLesson && this.faultCue) this.clearFaultCue();
     // Authored approach lanes. Fixed screen position keeps the prompt pixel-stable as the world moves.
     const c1Lane = t.id === 'c1-low-tide' && x >= 179.6 && x < 209.6;
     const c2Lane = t.id === 'c2-crane-hop' && x >= 284 && x < 323;
-    this.setSkillCueVisible(this.phase === 'riding' && (c1Lane || c2Lane));
+    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Lane)));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);
@@ -429,9 +446,13 @@ export class DomHud implements Hud {
         this.spawn('go', `${COUNTDOWN_WORDS.go}!`, 0.8);
         return;
       case 'fault':
-        if (event.reason !== 'restart') this.pendingCrashAt = this.simTime;
+        if (event.reason !== 'restart') {
+          this.pendingCrashAt = this.simTime;
+          this.faultCuePending = this.track?.id === 'c1-low-tide';
+        }
         return;
       case 'restart':
+        if (event.checkpoint < 0) this.clearFaultCue();
         this.pendingCrashAt = -1;
         if (this.crashBanner) {
           this.retire(this.crashBanner);
@@ -715,6 +736,18 @@ export class DomHud implements Hud {
     if (on === this.skillCueVisible) return;
     this.skillCueVisible = on;
     this.skillCueEl.classList.toggle('show', on);
+  }
+
+  private clearFaultCue(): void {
+    this.faultCue = null;
+    this.faultCuePending = false;
+    this.faultCueUntil = -1;
+    this.skillCueEl.classList.remove('fault');
+    if (this.track?.id === 'c1-low-tide') {
+      this.skillCueEl.setAttribute('aria-label', 'Ease off. Brake before the pallet ramp.');
+      this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';
+    }
+    this.setSkillCueVisible(false);
   }
 
   /**

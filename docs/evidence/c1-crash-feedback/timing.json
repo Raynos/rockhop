@@ -1,0 +1,39 @@
+{
+  "input": "C1 held GO retry-feedback evidence, no lean or brake",
+  "autoEvents": [
+    {
+      "runTick": 2128,
+      "type": "fault",
+      "reason": "crash",
+      "x": 234.414,
+      "checkpoint": 1,
+      "pitchDeg": 119.7,
+      "phase": "crashed",
+      "hash": "a2d32d3b6de04120"
+    },
+    {
+      "runTick": 2248,
+      "type": "restart",
+      "x": 180.692,
+      "checkpoint": 1,
+      "pitchDeg": 1.4,
+      "phase": "riding",
+      "hash": "c6b98d47a4d928fe"
+    }
+  ],
+  "afterFault": {
+    "tick": 2128,
+    "phase": "crashed",
+    "x": 234.41388599534957
+  },
+  "afterManualRestart": {
+    "ticks": 1,
+    "phase": "riding",
+    "x": 180.69215507230817,
+    "checkpoint": 1,
+    "events": [
+      "restart"
+    ],
+    "hash": "c6b98d47a4d928fe"
+  }
+}

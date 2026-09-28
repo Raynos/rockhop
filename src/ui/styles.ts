@@ -561,6 +561,10 @@ export const HUD_CSS = /* css */ `
 .skill-cue { position: absolute; left: calc(18px + var(--sal)); top: calc(56px + var(--sat)); width: 252px; height: 66px; box-sizing: border-box; display: none; align-items: center; gap: 11px; padding: 8px 12px; border: 2px solid #ffbe50; border-radius: 11px; background: rgba(9,39,45,.94); box-shadow: 0 3px 0 #642d1c, 0 8px 20px rgba(0,0,0,.25); color: #fff5d8; font-family: system-ui,-apple-system,sans-serif; text-align: left; pointer-events: none; }
 .skill-cue.show { display: flex; }
 .skill-cue.crane { width: 265px; }
+.skill-cue.fault { width: min(344px, calc(100% - 36px - var(--sal) - var(--sar))); border-color: #f27b4b; box-shadow: 0 3px 0 #642d1c, 0 8px 20px rgba(0,0,0,.35); }
+.skill-cue.fault .skill-cue-icon { background: #ee6a40; color: #fff5d8; font-size: 23px; }
+.skill-cue.fault .skill-cue-copy strong { font-size: 18px; letter-spacing: .045em; }
+.skill-cue.fault .skill-cue-copy small { font-size: 11px; letter-spacing: .01em; }
 .skill-cue.crane .skill-cue-icon { font-size: 22px; }
 .skill-cue.crane .skill-cue-copy strong { font-size: 19px; letter-spacing: .03em; }
 .skill-cue.crane .skill-cue-copy small { font-size: 12px; }
