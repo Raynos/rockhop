@@ -1,5 +1,15 @@
 # B versus C: standalone 3D world-map review
 
+## Mobile still-image review
+
+These are screenshots of the latest **actual prototypes**, not generated concept boards. They show matched front, three-quarter and reverse views for people who cannot load the orbit videos in chat:
+
+| View | B tabletop | C island |
+| --- | --- | --- |
+| Front | [Screenshot](../world-map-b/harbor-after-front.png) | [Screenshot](../world-map-c/fidelity-pass/after/art-front.png) |
+| Three-quarter | [Screenshot](../world-map-b/harbor-after-three-quarter.png) | [Screenshot](../world-map-c/fidelity-pass/after/art-three-quarter.png) |
+| Reverse | [Screenshot](../world-map-b/harbor-after-reverse.png) | [Screenshot](../world-map-c/fidelity-pass/after/art-reverse.png) |
+
 **Parent judgment from played headless captures, 2026-09-28.** Both candidates are genuinely rotatable 3D scenes with 12 roadside rally flag towers. Both preserve the coast → forest → quarry → snow journey and show a landscape-only portrait prompt. Neither meets the nine-view concept board's material, modeling or lighting fidelity, and neither is integrated into the shipping game. The original image-backed map remains in production.
 
 | | B: handcrafted tabletop | C: adventure atlas |
