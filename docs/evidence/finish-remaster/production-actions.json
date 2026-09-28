@@ -1,0 +1,45 @@
+{
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+  "viewport": [
+    852,
+    393
+  ],
+  "actions": [
+    {
+      "action": "replay",
+      "liveBefore": true,
+      "enabled": true,
+      "screen": "replay",
+      "phase": "riding",
+      "trackId": "c1-low-tide",
+      "liveAfter": false
+    },
+    {
+      "action": "retry",
+      "liveBefore": true,
+      "enabled": true,
+      "screen": "run",
+      "phase": "countdown",
+      "trackId": "c1-low-tide",
+      "liveAfter": false
+    },
+    {
+      "action": "next",
+      "liveBefore": true,
+      "enabled": true,
+      "screen": "run",
+      "phase": "countdown",
+      "trackId": "c2-crane-hop",
+      "liveAfter": false
+    },
+    {
+      "action": "menu",
+      "liveBefore": true,
+      "enabled": true,
+      "screen": "tracks",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "liveAfter": false
+    }
+  ]
+}
