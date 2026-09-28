@@ -7,6 +7,8 @@ https://trials-gauntlet-v0-2-2.vercel.app · `RELEASES.md` has the ledger. **Eve
 
 Current C1 partial ship gate at `ece31ba7`: clear/hash, crash and all 20 one-tick restarts pass; software SwiftShader first frame is 5769 ms against its 4000 ms override. [Evidence](../evidence/ios-app-store-audit/c1-current-source-partial-gate.json). The harness path bypasses production shader prewarm; physical iPhone timing remains the release decision.
 
+The user selected the 3D roadside rally flag tower (level-start concept 09) and is comparing visual map directions B and C. Two clean-room standalone prototypes are being built under `prototypes/world-map-b/` and `prototypes/world-map-c/`; the parent will compare their played rotations, level selection and fidelity before changing the production map. The original dirty-file cleanup and GitHub repo rename are complete at `f9f7a05b`. The new `playrockhop` Vercel project is waiting for a project-scoped CI token; the first push passed build and store gates but failed only its deploy step, so the old production site remains live for now.
+
 ## Hero follow-up handoff — historical
 
 **Menu rescue:** main and in-level pause now expose Classic / Blender / Img2 experiment plus all five Blender outfits. Persistence, mobile controls and paused swapping passed the [headless integration check](../evidence/hero-img2-menu/README.md). One experimental rider is selectable; this does not close the garage art or riding-pose milestones. Game deployment remains with the main release owner.
