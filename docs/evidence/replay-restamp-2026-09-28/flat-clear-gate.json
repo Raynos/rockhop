@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260928-174351-c03cc1",
+  "startedAt": "2026-09-28T22:43:51.828Z",
+  "wallMs": 896,
+  "git": "cfb277ca",
+  "srcFingerprint": "d47b0ac8",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "clear"
+  ],
+  "checks": [
+    {
+      "id": "clear.golden",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3.json finish=8.591666666666667 run=8.592 faults=0"
+    },
+    {
+      "id": "clear.finishTimeBitEqual",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "expected 8.591666666666667"
+    },
+    {
+      "id": "clear.hashOk",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "622bb2554e0f9a26 vs pinned 622bb2554e0f9a26"
+    }
+  ],
+  "failed": 0
+}
