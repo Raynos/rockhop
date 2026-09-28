@@ -252,6 +252,14 @@ export class DomHud implements Hud {
   setTrack(track: TrackDef): void {
     this.track = track;
     this.setSkillCueVisible(false);
+    const craneCue = track.id === 'c2-crane-hop';
+    this.skillCueEl.classList.toggle('crane', craneCue);
+    this.skillCueEl.setAttribute('aria-label', craneCue
+      ? 'Level the bike in flight. Release GO or lean forward to meet the barge.'
+      : 'Ease off. Brake before the pallet ramp.');
+    this.skillCueEl.innerHTML = craneCue
+      ? '<span class="skill-cue-icon" aria-hidden="true">↘</span><span class="skill-cue-copy"><strong>LEVEL THE BIKE</strong><small>RELEASE OR LEAN FORWARD</small></span>'
+      : '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';
     this.trackEl.innerHTML = `<b>${escapeHtml(track.tier)}</b>${escapeHtml(track.name)}`;
     for (const m of this.stripMarks) m.remove();
     this.stripMarks = [];
@@ -370,9 +378,10 @@ export class DomHud implements Hud {
       }
     }
     const x = state.bike.pos.x;
-    // C1's authored Marker 2 to ramp-foot braking lane. This prompt is fixed to screen pixels;
-    // moving world/camera geometry never shakes its text during a recorded run.
-    this.setSkillCueVisible(t.id === 'c1-low-tide' && this.phase === 'riding' && x >= 179.6 && x < 209.6);
+    // Authored approach lanes. Fixed screen position keeps the prompt pixel-stable as the world moves.
+    const c1Lane = t.id === 'c1-low-tide' && x >= 179.6 && x < 209.6;
+    const c2Lane = t.id === 'c2-crane-hop' && x >= 284 && x < 323;
+    this.setSkillCueVisible(this.phase === 'riding' && (c1Lane || c2Lane));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);

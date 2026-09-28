@@ -543,9 +543,13 @@ export const HUD_CSS = /* css */ `
 .hud-device.show { opacity: 1; }
 .hud-device i { width: .55em; height: .55em; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
 
-/* C1 teaching cue: fixed on the display while the world scrolls, visible only in the braking lane. */
+/* Track teaching cue: fixed on the display while the world scrolls, visible only in the authored approach lane. */
 .skill-cue { position: absolute; left: calc(18px + var(--sal)); top: calc(56px + var(--sat)); width: 252px; height: 66px; box-sizing: border-box; display: none; align-items: center; gap: 11px; padding: 8px 12px; border: 2px solid #ffbe50; border-radius: 11px; background: rgba(9,39,45,.94); box-shadow: 0 3px 0 #642d1c, 0 8px 20px rgba(0,0,0,.25); color: #fff5d8; font-family: system-ui,-apple-system,sans-serif; text-align: left; pointer-events: none; }
 .skill-cue.show { display: flex; }
+.skill-cue.crane { width: 265px; }
+.skill-cue.crane .skill-cue-icon { font-size: 22px; }
+.skill-cue.crane .skill-cue-copy strong { font-size: 19px; letter-spacing: .03em; }
+.skill-cue.crane .skill-cue-copy small { font-size: 12px; }
 .skill-cue-icon { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border-radius: 7px; background: #ffbd4e; color: #163b3e; font-size: 25px; font-weight: 950; line-height: 1; }
 .skill-cue-copy { display: flex; flex-direction: column; min-width: 0; }
 .skill-cue-copy strong { font-size: 20px; line-height: 22px; font-weight: 950; letter-spacing: .07em; white-space: nowrap; }

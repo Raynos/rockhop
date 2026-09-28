@@ -42,4 +42,21 @@ describe('ROCKHOP goldens replay in node', () => {
     expect(sim.phase()).not.toBe('finished');
     expect(sim.faults()).toBeGreaterThan(0);
   });
+
+  it('C2 Pro corrected landing clears without a fault', async () => {
+    const rec = loadRecording(path.join(INPUTS, 'c2-crane-hop', 'bot-3-pro.json'));
+    const sim = await createSimFor(rec);
+    sim.run(expandFrames(rec));
+    expect({ phase: sim.phase(), faults: sim.faults(), hash: sim.hash() }).toEqual({
+      phase: 'finished', faults: 0, hash: '64ec5d60318654fd',
+    });
+  });
+
+  it.each(['rookie', 'pro'] as const)('C2 %s cannot clear by holding GO for 90 seconds', async (bike) => {
+    const sim = await createSim('c2-crane-hop', undefined, 120, { bike });
+    const go = quantizeInput({ throttle: 1 });
+    for (let tick = 0; tick < 90 * sim.hz && sim.phase() !== 'finished'; tick++) sim.step(go);
+    expect(sim.phase()).not.toBe('finished');
+    expect(sim.faults()).toBeGreaterThan(0);
+  });
 });

@@ -1,6 +1,6 @@
 # C2 Crane Hop: isolated landing-control prototype
 
-**Status: candidate only.** [Source](../../../prototypes/c2-challenge/candidate.ts) uses the real ROCKHOP course builder, compiler, v2 bike physics and run rules, but is injected only in the silent headless harness. The registered C2 course is unchanged. Judge the moving clips before considering production integration.
+**Status: historical standalone candidate, now integrated on the qualification branch.** [Source](../../../prototypes/c2-challenge/candidate.ts) uses the real ROCKHOP course builder, compiler, v2 bike physics and run rules. This study ran only in the silent headless harness; its measured geometry and camera were subsequently registered in [the C2 production-integration checkpoint](../c2-production-integration/README.md) on `feat/c1-braking-gate`. Judge the moving clips before release qualification.
 
 ## Played phone-landscape comparison
 
@@ -38,4 +38,4 @@ The [separate one-tick restart check](restart-verify.json) replays through the r
 
 From the repository root: `pnpm exec tsx prototypes/c2-challenge/probe.mts`, `skilled.mts`, `ablation.mts`, `attempts.mts`, `browser-verify.mts`, `restart-verify.mts`, or `clip.mts rookie go` / `clip.mts rookie` / `clip.mts pro go` / `clip.mts pro`. Dimension and input-search scripts remain under the prototype directory for inspection. `pnpm typecheck` and `pnpm exec oxlint prototypes/c2-challenge` pass.
 
-Before promotion, two fresh real-time phone-touch players must see the landing, discover a correction after failure, and clear in a measured number of attempts. The cue wording should reflect the ablation. Check whether the pier 2 problem teaches a useful first beat or just creates noise; the Pro GO-only run faults there before reaching the signature jump. Then re-pin the registered course golden and prove saved replay, finish ticket, mobile restart, camera and real-device frame timing on the integrated game. No production medal target or difficulty label is justified by this isolated test.
+Before release, two fresh real-time phone-touch players must see the landing, discover a correction after failure, and clear in a measured number of attempts. Check whether the pier 2 problem teaches a useful first beat or just creates noise; the Pro GO-only run faults there before reaching the signature jump. The qualification integration has re-pinned both class goldens and verified exact browser replays, but saved replay, finish ticket, physical mobile restart and real-device frame timing remain open. No medal target or difficulty label is justified by this isolated test alone.

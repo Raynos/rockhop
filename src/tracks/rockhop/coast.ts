@@ -86,22 +86,21 @@ export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', 
   .finish();
 
 /**
- * C2 CRANE HOP — the harbour is a row of timber piers and moored barges. TEACHES the jump: gas up the pier, off
- * at the pallet lip on its end, level in the air, land on the pier's own falling ramp. DEMANDS the crane hop: from
- * the dock apron over 5.5 m of harbour onto a container barge moored under the crane.
+ * C2 CRANE HOP — the harbour is a row of timber piers and moored barges. The final crane kicker
+ * requires a level landing: release GO or pitch forward in flight before the container barge.
  */
 export const C2 = rockhop('C2', 'c2-crane-hop', 'Crane Hop', 'coast', 'beginner', {
-  technique: 'the jump: gas to the lip, off in the air',
-  demands: 'the crane hop: a 14 deg kicker off the apron over 5.5 m of harbour onto a container barge',
+  technique: 'commit to the jump, then release or pitch forward in flight',
+  demands: 'the crane hop: an 18 deg kicker off the apron over 5.5 m of harbour onto a container barge',
   idea: 'hop the harbour pier to pier, then jump the water onto the barge under the crane',
   hero: 'The Crane Hop',
-  attemptsBand: [1, 2],
-  targetTimeS: 50, // gold: skill-3 bot 25.05 s x 1.6 = 40.1, rounded up to 5 s, non-decreasing through the tier (OBSIDIAN = 0.85 x gold, 0 bails)
+  attemptsBand: [1, 2], // provisional until measured real-time touch attempts
+  targetTimeS: 50, // provisional until integrated touch play and medal calibration
 })
-  .hint('Hold the gas off the pier lip') // rockhop-r1: coasting off the lip at full speed pitches the nose down
-  .hint('Lean back if the nose drops') // not forward: leaning forward when the nose rises crashes pier 2 at >= 12 m/s
+  .hint('Gas off the first pier lip')
+  .hint('Ease off and lean forward over Pier 2’s falling ramp')
   .hint('Land on the ramp down')
-  .hint('Full speed for the barge')
+  .hint('At the crane, release GO or lean forward in flight')
   .camera({ mode: 'side' })
   .setPiece('start', 'The Harbour Road')
   .flat(6)
@@ -135,10 +134,10 @@ export const C2 = rockhop('C2', 'c2-crane-hop', 'Crane Hop', 'coast', 'beginner'
   .flat(8)
   .checkpoint()
   .flat(30) // the dock apron: 30 m of flat into the hop
-  .camera({ mode: 'high34', zoomBias: 0.4 })
+  .camera({ mode: 'side-tight', zoomBias: -0.3, pitch: (12 * Math.PI) / 180 })
   .setPiece('air', 'The Crane Hop')
   .arch({ style: 'girder', span: 10, height: 7 }) // the crane gantry over the apron lip
-  .ramp({ length: 6, height: 1.5, surface: 'wood', prop: 'pallet' }) // 14 deg
+  .kickerPlank({ angleDeg: 18, rise: 1.8 })
   .gap({ width: 5.5 })
   .gapLanding(0.8, 9, 6, 10) // the container barge: incline, 9 m roof, the gangway down
   .endSetPiece()
