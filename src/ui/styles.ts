@@ -650,7 +650,7 @@ export const HUD_CSS = /* css */ `
 .fr-report>*{position:relative}
 .fr-report-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:5px;border-bottom:1px solid rgba(11,53,56,.19);gap:8px}
 .fr-report-head .fr-eyebrow,.fr-tag{font:800 10px/1 var(--sans);letter-spacing:.12em;white-space:nowrap;text-transform:uppercase}
-.fr-tag{background:#134f53;color:#fff4dc;padding:5px 7px;font-size:8px;letter-spacing:.1em}
+.fr-tag{background:#134f53;color:#fff4dc;padding:5px 7px;font-size:10px;letter-spacing:.1em}
 .fr-title{margin:8px 0 5px;min-height:42px}
 .fr-title small{font:800 10px/1 var(--sans);letter-spacing:.17em;color:#bc512f;text-transform:uppercase}
 .fr-title h2{font:900 clamp(19px,2.9vw,27px)/.95 var(--display);letter-spacing:.025em;margin:2px 0 0;text-transform:uppercase}
@@ -676,14 +676,14 @@ export const HUD_CSS = /* css */ `
 .fr-rewards{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(11,53,56,.19);padding-top:5px}
 .fr-rewards>div{display:flex;justify-content:space-between;align-items:center;padding-right:16px;gap:4px}
 .fr-rewards>div+div{border-left:1px solid rgba(11,53,56,.19);padding-left:12px}
-.fr-rewards small{font:800 9px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.fr-rewards small{font:800 10px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 .fr-rewards strong{font:800 16px/1 var(--display);color:#147079;font-variant-numeric:tabular-nums;white-space:nowrap}
 .fr-report .ov-stats,.fr-report .board{display:none}
 #ui .hud .results .tiles{position:absolute;left:max(9px,var(--sal));right:max(9px,var(--sar));bottom:max(8px,var(--sab));height:55px;width:auto;display:grid;grid-template-columns:1.18fr 1fr .8fr 1fr;gap:6px;justify-content:stretch}
 #ui .hud .results .tile{height:100%;width:100%;min-height:44px;padding:0 8px;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;border:1px solid #d5d6c5;border-radius:4px;color:#0e494e;background:linear-gradient(#fff5df,#e9e1c9);box-shadow:inset 0 1px 0 white,0 6px 0 rgba(0,20,22,.27);text-align:left;font:900 clamp(19px,2.6vw,25px)/.9 var(--display);letter-spacing:.05em}
 #ui .hud .results .tile svg{width:24px;height:24px;flex:none;color:currentColor}
 #ui .hud .results .tile span{font:inherit;color:inherit;white-space:nowrap}
-#ui .hud .results .tile span small{display:block;margin-top:3px;font:800 9px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+#ui .hud .results .tile span small{display:block;margin-top:3px;font:800 10px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 #ui .hud .results .tile[data-id='retry']{background:linear-gradient(#f9794e,#e84b2e);border-color:#ffa384;color:#fff8dc;box-shadow:inset 0 1px 0 #ffc2aa,0 6px 0 #98341f}
 #ui .hud .results .tile[data-id='replay']{flex:auto;padding:0 8px}
 #ui .hud .results .tile[data-id='replay'] span{position:static;width:auto;height:auto;overflow:visible;clip:auto}
@@ -693,7 +693,7 @@ export const HUD_CSS = /* css */ `
 .results .fr-report,.results .fr-hero,.results .tiles{opacity:0;transform:translateY(7px);transition:opacity var(--t2) var(--ease),transform var(--t2) var(--ease)}
 .results.stage-1 .fr-hero,.results.stage-1 .fr-report,.results.stage-2 .fr-hero,.results.stage-2 .fr-report,.results.stage-3 .fr-hero,.results.stage-3 .fr-report,.results.stage-4 .fr-hero,.results.stage-4 .fr-report,.results.stage-5 .fr-hero,.results.stage-5 .fr-report,.results.stage-3 .tiles,.results.stage-4 .tiles,.results.stage-5 .tiles{opacity:1;transform:none}
 @media(max-height:370px){.fr-shell{grid-template-rows:22px minmax(0,1fr) 49px;gap:5px;padding-top:5px}.fr-report{padding:8px 13px 6px}.fr-title{margin:5px 0 3px;min-height:36px}.fr-core{min-height:80px;grid-template-columns:83px minmax(0,1fr)}.fr-medal-icon{width:49px;height:49px}.fr-next{margin-top:5px}#ui .hud .results .tiles{height:49px}#ui .hud .results .tile{font-size:19px}}
-@media(max-width:720px){.fr-main{grid-template-columns:minmax(0,43%) minmax(0,57%)}.fr-report{padding-left:10px;padding-right:10px}.fr-core{grid-template-columns:77px minmax(0,1fr);gap:7px}.fr-medal-icon{width:51px;height:51px}#ui .hud .results .tile{gap:3px;font-size:19px}#ui .hud .results .tile span small{font-size:8px}}
+@media(max-width:720px){.fr-main{grid-template-columns:minmax(0,43%) minmax(0,57%)}.fr-report{padding-left:10px;padding-right:10px}.fr-core{grid-template-columns:77px minmax(0,1fr);gap:7px}.fr-medal-icon{width:51px;height:51px}#ui .hud .results .tile{gap:3px;font-size:19px}#ui .hud .results .tile span small{font-size:10px}}
 /* HUD while an overlay is up: the top band, hints and touch buttons hide; kinetic banners stay. */
 .hud .hud-top, .hud .hints { transition: opacity var(--t2) var(--ease); }
 .hud.under-overlay .hud-top, .hud.under-overlay .hints, .hud.results-on .hud-top, .hud.results-on .hints { opacity: 0; pointer-events: none; }
