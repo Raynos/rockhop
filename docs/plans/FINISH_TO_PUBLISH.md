@@ -30,6 +30,8 @@ One complete, landscape-only game on **iOS and Android together**: the 12 main c
 | 5. Closed beta/store package | **open** | A current-source Android AAB is signed and its signature verifies locally; the current-source iOS simulator release compiles. The [iOS/Android listing draft](../evidence/store-listing-2026-09-28/README.md) now describes the 12-course Diamond/Scrap/Pro game rather than retired free rides and Obsidian; the metadata check rejects those retired terms. A signed iOS archive, rights resolution, live legal pages, final build-matched media, uploads and tester evidence remain. |
 | 6. Public launch | **open** | Both stores must approve the same qualified game and the user must approve the release. |
 
+The [headless WebKit C-map review](../evidence/world-map-c/webkit-review/README.md) now proves menu entry, portrait rotate gate, remount after rotation, orbit and three real touch selections at phone geometry. It is an opt-in review build, so Gate 3 still needs the selected art quality and physical iPhone qualification before replacing the painted selector.
+
 Gates 1–3 can have separate builders in one checkout, but they share one player-facing candidate and one final judgment. Gate 4 starts profiling early; it is repeated after art or engine changes. Store-account setup, public support contact and Play tester recruitment can proceed in parallel with game work so they do not become the last critical path.
 
 ## Current position, at approval
