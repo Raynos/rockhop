@@ -1,0 +1,51 @@
+# ROCKHOP campaign redesign brief
+
+**Status:** design candidate for the gameplay remaster; no course, bike, currency or medal changes below are in production. [Ranked priorities](GAME_REMASTER_TOP20.md) · [Current 12-course probe and clips](../evidence/gameplay-audit/README.md). The user played all 12 on a phone and found them too easy. A fixed-input replay clears 8/12 on Rookie and 6/12 on Pro, with some top medals. Both findings require a rebuilt challenge curve, not a label change.
+
+## Player promise
+
+Every stage presents a visible riding problem, gives room to read it, lets a wrong input fail for an understandable reason, and restarts at the useful approach in one tick. The first stage can be welcoming and still require a decision. Later stages combine known moves under tighter timing. The displayed difficulty is assigned from new-player attempt data after the geometry and physics are tuned; no zone is precommitted to starting at Hard.
+
+The final four of twelve are **D3, S1, S2 and S3**. A Starter rider can finish their main routes and continue the campaign. Each has a distinct optional Diamond line with a measured climb, jump or landing that demands the purchased second bike *and* skilled input. The camera and map show the line as a desirable challenge, never as an invisible class lock. The two bike classes need a real envelope gap in torque, grip, travel, mass and rotational response before these lines can be authored honestly.
+
+## Twelve signature riding problems
+
+These are intended obstacle tests, not final dimensions or medal times. The C1 prototype comes first; only a played, deterministic solution can establish the pattern for the rest.
+
+| Course | Existing set piece to preserve | Required decision and readable failure | Finish or replay hook |
+|---|---|---|---|
+| C1 Low Tide | Pallet causeway over rising containers | Lift off the throttle and settle the front wheel before the last short container step. A red striped loose pallet tilts or the front wheel strikes its lip when entered flat-out. Show the loose pallet moving before the danger and place its checkpoint before a useful run-up. | First successful release is called out as a controlled crossing, not a lucky crash. |
+| C2 Crane Hop | Dock-to-barge leap beneath the crane | Build speed, then release and correct pitch in flight to land on the barge ramp. Full gas carries too much rotation or overshoots a clearly marked landing shelf. | Replay shows takeoff speed and landing angle. |
+| C3 Hull Breach | Bow plating, deck and torn exit | Lean forward for the steep climb, then change weight to land rear wheel first after the breach. Neutral full gas either loops on the bow or drives the front wheel into the landing. | Silhouette at the breach becomes the first campaign hero shot. |
+| A1 Sawdust | Sawmill stairs and flume | Slow for a moving timber gate, accelerate up the flume, then correct the landing. Full gas collides with the visible gate; braking too long misses the gap. | Show the timing line from gate to flume in replay. |
+| A2 Log Jam | Teetering log and two-row pile | Enter the seesaw slowly enough for it to tip, then accelerate out and lift the front for the log pile. Full gas launches before the board settles. | Replay highlights the pivot and the clean exit. |
+| A3 Timberline | Truck loader, raised log load, narrow beam | Preload and hop onto the load, balance across the beam, then take the small exit hop. Holding GO strikes the load face. | A clean beam crossing earns a memorable camera beat. |
+| D1 Dust Devil | Cut terraces and drill trench | Preload for the first cut block; meter throttle through the ascending steps and hop the trench. Full gas loses the front on a taller face. | Dust reveals tyre contact and the exact missed edge. |
+| D2 Conveyor | Steep belt, spinning head pulley, ore carts | Approach the belt with momentum and forward weight, ease off on the pulley, then commit to the cart chain. Full gas spins or pitches off the head drum. | Split replay at belt crest, pulley, and cart exit. |
+| D3 Rope Walk | Missing-board bridge and lip climb | Hold a rear-wheel line through selected gaps, reset balance on a full board, then climb the stone lip. Full gas drops the front into a clearly visible missing board. The optional Diamond line crosses a longer gap to a high shelf that only bike two can reach in testing. | Camera reveals bridge depth without hiding the next board; Diamond finish follows the high shelf. |
+| S1 Lift Line | Ice shelves and ascending tower caps | Match speed and pitch for the first cap, then make two deliberate corrections along the line. Full gas overshoots a cap. Diamond line uses a taller final cap and harder landing proven beyond Starter's envelope. | A wide view establishes the crevasse before the close balancing shot. |
+| S2 Cornice | Ice wall, wind lip and snow-cat rollers | Enter the wall with momentum and forward weight, settle across rollers, then release at the cornice lip to land on ice. Full gas sails past the safe shelf. Diamond line uses a farther landing available to bike two with measured grip/travel. | Reveal the drop and distant landing before the player commits. |
+| S3 Whiteout | Summit shelf chain, caps and descent | Combine the earlier climb, hop, brake and lean moves in a short readable sequence. Full gas fails the first mandatory skill gate. Diamond line reaches the summit ridge via a second-bike-only climb and completes a clean descent. | Storm parts for the high route and a final campaign finish shot. |
+
+The table's moving props and alternate routes are proposals, not existing features. In particular, no rider should die because an unannounced timer or decorative prop suddenly becomes a collider. Each obstacle is first framed at approach speed, uses a consistent material/collision shape, and explains failure through wheel/ground contact in a silent clip.
+
+## Bike and reward loop to prototype
+
+The Starter bike stays agile, easier to balance and cheaper to recover from mistakes. The earned second bike has a visibly different silhouette and a measurable advantage on steep climbs, long jumps and rough landings, offset by greater inertia on narrow precision sections. The Garage explains these strengths with short played clips and an affordance to compare both bikes on already cleared stages. The user buys bike two once with earned currency; no real-money purchase is proposed.
+
+The working currency is **Scrap**. Each course has a lifetime payout based on the best medal: Bronze 100, Silver 160, Gold 220, Diamond 300. A medal improvement pays only the difference; a repeat or worse result pays zero. Bike two costs 800, so eight Bronze results cover it before D3 even if the player never improves a medal. The economy needs save migration and an idempotent ledger keyed by course; existing Pro owners keep that entitlement. No consumables or repeat-farming loop are needed.
+
+Medals are Bronze, Silver, Gold and **Diamond** in the player-facing UI. Keep the stored top-tier key `platinum` until a migration is proven. Bronze means a clear; Silver and Gold require increasing cleanliness and time; Diamond requires a clean, mastered run with the course's signature move. Final-four Diamond additionally uses the alternate second-bike line. Exact target times and fault counts follow re-authored geometry and actual player samples; the current 0.85× target rule awards too much for passive riding.
+
+## Finish and replay contract
+
+After the finish collider, preserve deterministic physics and show a short rider/bike hero shot. Reveal one medal with time, faults, personal-best delta, newly earned Scrap, wallet total and next bike/medal goal. If the player earns nothing, say so plainly and show the technique they can improve. Present large labelled **Retry**, **Next**, **Map** and **Watch replay** actions at phone landscape size. A replay can seek, change speed and return to the same result without changing rewards. A new medal, first clear, personal best and no improvement need distinct truthful result states.
+
+## Gates before production promotion
+
+1. **C1 slice:** fixed GO-only input fails on both bikes over a long deterministic replay; a human-readable throttle-release solution clears repeatably; moving phone-size footage shows why. No arbitrary invisible blocker or slow restart.
+2. **Course curriculum:** each of 12 has a documented input solution, a fixed GO-only failure on both bikes over representative seeds, and a skilled clear. Checkpoints resume *before* the meaningful approach without letting automatic repeated respawns solve it.
+3. **Difficulty:** two new players per stage, then a larger follow-up sample, record attempts-to-clear, failure site, reason, restart latency and whether they voluntarily retry. Difficulty labels come from the resulting distribution, not this document's adjectives.
+4. **Bikes and Diamond:** blind moving clips distinguish bike feel. Both complete the campaign. Measurements prove Starter cannot take the final-four Diamond line and bike two can, without a hard-coded medal denial. A purchase is affordable by D3 and does not erase existing saves.
+5. **Economy and finish:** first clear/improved medal/repeat/offline restart/migration tests keep the Scrap ledger exact. Phone landscape play can finish, view results, watch and exit replay, retry and continue with readable controls and no duplicate grant.
+6. **Release:** exact recorded inputs replay to byte-identical finish times/hashes. Cold boot, clear, crash and one-tick restart pass on signed device candidates; then final art and store media are captured from that same build.
