@@ -27,6 +27,8 @@ import type { poseAt } from './rider';
 import type { BikePhysicsWorldV2 } from './bike';
 
 const INPUTS = path.resolve(__dirname, '../../../harness/inputs');
+/** Ask 132: keep these historical recordings, but their tracks are no longer registered in the game. */
+const REMOVED_FREE_RIDES = new Set(['p-coast', 'p-alpine', 'p-quarry', 'p-snowline']);
 const BAND_PSI = 0.35;
 const BAND_COM = 0.15;
 const QUIET_TICKS = 60;
@@ -45,6 +47,7 @@ function goldens(): { file: string; rec: InputRecording }[] {
   const out: { file: string; rec: InputRecording }[] = [];
   for (const dir of fs.readdirSync(INPUTS, { withFileTypes: true })) {
     if (!dir.isDirectory()) continue;
+    if (REMOVED_FREE_RIDES.has(dir.name)) continue;
     for (const name of ['bot-3.json', 'bot-3-pro.json']) {
       const file = path.join(INPUTS, dir.name, name);
       if (!fs.existsSync(file)) continue;
