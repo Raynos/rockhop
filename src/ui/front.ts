@@ -510,7 +510,7 @@ export class SettingsScreen extends Screen {
     };
 
     seg('quality', 'Quality', 'Auto climbs to High while the frame holds 60 and steps down when it does not', [{ v: 'auto', l: 'Auto' }, { v: 'low', l: 'Low' }, { v: 'medium', l: 'Med' }, { v: 'high', l: 'High' }], () => s().quality, (v) => this.cb.setQuality(v as QualityChoice));
-    seg('fps', 'Frame rate', 'Auto = 60 · the meter top-right shows what you get', [{ v: 'auto', l: `Auto (${s().fpsInEffect})` }, { v: '30', l: '30' }, { v: '60', l: '60' }], () => s().fps, (v) => this.cb.setFps(v as FpsChoice));
+    seg('fps', 'Frame rate', 'Auto adapts to your device · 30 and 60 set a fixed cap', [{ v: 'auto', l: `Auto (${s().fpsInEffect})` }, { v: '30', l: '30' }, { v: '60', l: '60' }], () => s().fps, (v) => this.cb.setFps(v as FpsChoice));
     seg('sound', 'Sound', 'Engine, impacts, menu cues', [{ v: 'on', l: 'On' }, { v: 'off', l: 'Off' }], () => (s().sound ? 'on' : 'off'), (v) => this.cb.setSound(v === 'on'));
 
     // Slider rows: master volume, then the music under it (when the audio system has a music bus).

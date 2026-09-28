@@ -225,7 +225,7 @@ export class App {
   private fpsChoice: FpsChoice;
   private lastRenderAt = 0;
   private capInEffect = 0;
-  /** Lightweight FPS meter, top-right, always on: rendered frames per second and the quality tier letter. */
+  /** Compact FPS meter for explicit `?perf=1` diagnostics. */
   private readonly fpsEl: HTMLDivElement;
   private fpsFrames = 0;
   private fpsWindowAt = 0;
@@ -275,7 +275,7 @@ export class App {
     this.fpsChoice = loadFpsChoice();
     this.fpsEl = document.createElement('div');
     this.fpsEl.className = 'fpsmeter';
-    this.fpsEl.hidden = !DEV_SURFACES;
+    this.fpsEl.hidden = !DEV_SURFACES || !o.perf;
     this.fpsEl.textContent = '-- fps';
     o.uiRoot.appendChild(this.fpsEl);
     this.soundOn = loadSoundEnabled();
@@ -904,8 +904,8 @@ export class App {
     // the phone paid a full tier frame plus a compositor copy for an invisible canvas).
     scene?.classList.toggle('covered', screen === 'menu');
     this.game.renderEnabled = screen !== 'menu';
-    // Ask 45: the meter never draws over the title strip — the menu renders no frames anyway; every other screen keeps it.
-    this.fpsEl.hidden = !DEV_SURFACES || screen === 'menu'; // a store build shows no dev meter
+    // The compact meter is a diagnostic, never part of the normal game UI.
+    this.fpsEl.hidden = !DEV_SURFACES || !this.o.perf || screen === 'menu';
     scene?.classList.toggle('dim', screen !== 'menu' && screen !== 'garage');
     scene?.classList.toggle('garage', screen === 'garage');
     const dev = this.mux.activeDevice();
@@ -1355,6 +1355,7 @@ export class App {
 
   /** FPS meter: rendered frames over the last 500 ms, the worst frame interval in that window, the tier letter. Two DOM writes per second. */
   private meterFrame(now: number, sinceRender: number): void {
+    if (!DEV_SURFACES || !this.o.perf) return;
     this.fpsFrames++;
     if (sinceRender > this.fpsWorstMs) this.fpsWorstMs = sinceRender;
     if (now - this.fpsWindowAt < 500) return;
