@@ -100,7 +100,12 @@ const edgeDistance = (x,z) => {
 };
 const routeZ = x => -.40 + 2.55*Math.sin(x*.29+.7) + .8*Math.sin(x*.76-.3)
   + .55*Math.sin(x*.12) + 4.0*(smooth(-13,-10,x)-smooth(-2,1,x))
-  + 3.15*(smooth(1,4,x)-smooth(10,14,x));
+  + 3.15*(smooth(1,4,x)-smooth(10,14,x))
+  // Bend the quarry traverse into the red cut bank. The former route crossed
+  // its foreground as one straight beige band, leaving the excavated landform
+  // visually disconnected from the journey. All road/tower meshes share this
+  // curve, so the selectable order and hit positions follow the bend.
+  - 1.8*ridge(x,0,7.8,0,3.1,1);
 const groundHeight = (x,z) => {
   const edge = edgeDistance(x,z);
   const base = .72 + .60*smooth(-15,-5,x) + .36*noise(x*.48,z*.48) + .14*noise(x*1.4,z*1.4);
