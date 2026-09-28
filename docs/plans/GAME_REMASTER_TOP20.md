@@ -42,3 +42,5 @@ ROCKHOP is a compact, premium-feeling trials campaign: every course has a legibl
 - **Result flow:** show the medal, technique and rewards from the just-finished ride; explain the next reachable goal; then offer immediate Retry, Next, Map and Replay.
 
 This is a design candidate, not shipped logic. A C1 vertical slice and two-bike measurements must validate it before it is propagated to all 12 levels. Store submission work remains active but follows gameplay quality.
+
+**Finish study:** a [played landscape prototype](../evidence/finish-remaster/README.md) tests the four truthful result states and full-size Retry/Next/Map/Replay actions. It improves the layout direction, but the rider shot is soft and the routes and Scrap display are placeholders. The production HUD, reward ledger and replay flow still need the work in priorities 6–9.

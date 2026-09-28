@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#092c31">
+  <title>ROCKHOP — Finish moment study</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" aria-label="ROCKHOP finish screen prototype">
+    <div class="world" aria-hidden="true"></div>
+    <header class="topline">
+      <div class="brand">ROCKHOP <span>◆</span> <small>FINISH STUDY / C1 LOW TIDE</small></div>
+      <nav class="scenarios" aria-label="Result scenarios">
+        <button type="button" data-scenario="first" aria-pressed="true">First clear</button>
+        <button type="button" data-scenario="best" aria-pressed="false">New PB</button>
+        <button type="button" data-scenario="medal" aria-pressed="false">Medal up</button>
+        <button type="button" data-scenario="same" aria-pressed="false">No gain</button>
+      </nav>
+    </header>
+
+    <section class="finish" id="finish">
+      <div class="hero" aria-label="Rider crossing the Low Tide finish">
+        <div class="hero-picture"></div>
+        <div class="hero-grain"></div>
+        <div class="hero-top"><span class="hero-line"></span><span>COASTAL SCRAPYARD <b>/ 01</b></span></div>
+        <div class="hero-caption">
+          <div class="hero-kicker">FINISH CAMERA <i></i> LOW TIDE</div>
+          <strong>LINE<br>COMPLETE<span>.</span></strong>
+          <div class="hero-underline">The rider stays in view while the result lands.</div>
+        </div>
+      </div>
+
+      <div class="report" aria-live="polite">
+        <div class="report-head">
+          <span class="eyebrow">RUN REPORT <b>01 / 12</b></span>
+          <span class="report-tag" id="report-tag">NEW COURSE CLEAR</span>
+        </div>
+        <div class="report-title">
+          <div>
+            <div class="title-small" id="title-small">FIRST FINISH</div>
+            <h1 id="headline">YOU FOUND THE LINE</h1>
+          </div>
+          <span class="spark" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="result-core">
+          <div class="medal" id="medal" aria-label="Diamond medal">
+            <svg viewBox="0 0 100 100" role="presentation" aria-hidden="true"><path class="medal-outline" d="M50 3 89 20 96 55 73 88 50 98 27 88 4 55 11 20Z"/><path class="medal-face" d="M50 13 81 27 86 54 68 80 50 87 32 80 14 54 19 27Z"/><path class="facet" d="M19 27 50 13 81 27 68 49 50 87 32 49Z"/><path class="facet-line" d="M19 27 32 49 14 54M81 27 68 49 86 54M32 49 68 49M32 49 50 87 68 49"/><circle cx="50" cy="49" r="5"/></svg>
+            <span id="medal-label">DIAMOND</span>
+          </div>
+          <div class="run-numbers">
+            <div class="time-row"><span>FINISH TIME</span><strong id="run-time">0:31.025</strong></div>
+            <div class="metric-row"><span id="pb-copy">FIRST PERSONAL BEST</span><strong id="pb-value">0:31.025</strong></div>
+            <div class="metric-row faults"><span>BAILS</span><strong id="faults">0</strong></div>
+          </div>
+        </div>
+
+        <div class="next-goal">
+          <span class="rail-mark"></span>
+          <div><b id="goal-title">YOUR NEXT LINE</b><p id="goal-copy">Try the opening brake gate with a slower entry and chase a cleaner split.</p></div>
+        </div>
+        <div class="reward">
+          <div><span>SCRAP EARNED</span><strong>—</strong></div>
+          <div><span>WALLET</span><strong>—</strong></div>
+          <p>Reward system pending · no award claimed in this prototype</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="actions" aria-label="Finish actions">
+      <button type="button" class="action primary" data-action="retry"><span class="action-icon">↻</span><span><b>RETRY</b><small>CHASE THE LINE</small></span></button>
+      <button type="button" class="action" data-action="next"><span class="action-icon">▶</span><span><b>NEXT</b><small>CRANE HOP</small></span></button>
+      <button type="button" class="action" data-action="map"><span class="action-icon">◇</span><span><b>MAP</b><small>12 STOPS</small></span></button>
+      <button type="button" class="action" data-action="replay"><span class="action-icon">▣</span><span><b>REPLAY</b><small>WATCH THIS RUN</small></span></button>
+    </footer>
+
+    <section class="action-state" id="action-state" hidden aria-live="assertive">
+      <div class="action-frame"><span class="action-overline" id="action-overline">RUN RESET</span><h2 id="action-heading">BACK ON THE START LINE</h2><p id="action-detail">The real game would resume immediately; this study only demonstrates the one-tap route.</p><div class="replay-progress" id="replay-progress" hidden><i></i></div><button type="button" id="back">BACK TO RESULT</button></div>
+    </section>
+    <div class="rotate" role="status"><strong>TURN TO LANDSCAPE</strong><span>ROCKHOP is played wide. Rotate your phone to view the finish.</span></div>
+    <div class="prototype-label">VISUAL / INTERACTION PROTOTYPE · SAMPLE RUN DATA</div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

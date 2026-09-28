@@ -1,0 +1,5 @@
+# Finish screen study
+
+Standalone 852×393 landscape interaction study. From the repo root, run `python3 -m http.server 8743 --directory prototypes/finish-remaster` and open `http://127.0.0.1:8743/` in a headless browser. The four scenario chips are prototype controls; the game would show one truthful result from the completed run. The four action buttons are wired to explanatory route states and are not connected to the game engine. Portrait shows a turn-to-landscape prompt.
+
+The hero frame is a real captured C1 gameplay frame from `docs/evidence/gameplay-audit/clips/finish/clip.mp4` at 0.45 seconds, zoomed in CSS. It is deliberately not a fabricated render, though the source game's rider and scene still need a closer production camera shot and more detailed art. This study uses synthetic times in the New PB / Medal up / No gain tabs, and the screen labels all values as sample data. Scrap and wallet show dashes until an economy is implemented. Fonts are local copies of the game's own Archivo and Barlow Condensed files.
