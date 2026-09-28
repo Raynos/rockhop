@@ -1,6 +1,6 @@
 # ROCKHOP — finish the game, then publish it
 
-**Status:** draft for joint review, 2026-09-28. This is the release path above the [current session rounds](REMASTER_CURRENT_ROUND.md). The [ranked top 20](GAME_REMASTER_TOP20.md) explains the quality findings; the [12-course brief](COURSE_AND_PROGRESSION_REDESIGN.md) carries the course design. A milestone closes only with played evidence on its candidate source. No estimate or passing bot result by itself declares the game finished.
+**Status:** active; approved by the user on 2026-09-28. This is the release path above the [current session rounds](REMASTER_CURRENT_ROUND.md). The [ranked top 20](GAME_REMASTER_TOP20.md) explains the quality findings; the [12-course brief](COURSE_AND_PROGRESSION_REDESIGN.md) carries the course design. A milestone closes only with played evidence on its candidate source. No estimate or passing bot result by itself declares the game finished. Archive this plan under `project/archive/` only after all six gates pass and the public release is verified.
 
 ## Release we are building
 
@@ -19,9 +19,20 @@ One complete, landscape-only game on **iOS and Android together**: the 12 main c
 | **5. Closed beta and truthful store package** | Put the candidate on TestFlight and Play testing tracks; use reports to fix gameplay or device failures and repeat the relevant gates. Reconcile every asset-rights declaration, public support/privacy pages, age/content answers and data practices with the signed build. Capture final screenshots and any trailer from real player UI, showing the finished map and controls. | A signed iOS archive and Android App Bundle identify the same source revision and content. Store pages, privacy/support URLs and screenshots are live and accurate. Play's applicable personal-account production-access closed test has at least 12 continuously opted-in testers for 14 days; its feedback and TestFlight feedback are reviewed. Both stores accept the build for release and the user judges the final played build. |
 | **6. Coordinated public launch** | Hold each approved release until both platforms are ready; publish the same game/version together, verify listings, installs, first launch, offline play, support contact and the live web version record. Keep a small hotfix path for a severe launch defect. | The user approves the concrete signed candidate and release controls. Both public listings show the intended build and truthful media, first installs work on each platform, and the release record names the source SHA and native build IDs. |
 
+## Gate status
+
+| Gate | Status | Current proof / next missing proof |
+| --- | --- | --- |
+| 1. C1 slice | **in progress** | C1 braking has exact replay and a played headless clip; production finish integration, stronger art/sound and new phone players remain. |
+| 2. Twelve-course game | **in progress** | Passive GO fails in the current bot sweep; human difficulty, bike distinction and final medal clocks remain. |
+| 3. Presentation/career | **in progress** | Pro/Scrap exists and the C map works in review mode; map fidelity/device proof, full finish states and four-biome cohesion remain. |
+| 4. Device/reliability | **open** | Latest partial SwiftShader gate is NO-SHIP 9/11; physical device and exact native release gates remain. |
+| 5. Closed beta/store package | **open** | Signed candidate, rights, legal pages, store media and tester evidence remain. |
+| 6. Public launch | **open** | Both stores must approve the same qualified game and the user must approve the release. |
+
 Gates 1–3 can have separate builders in one checkout, but they share one player-facing candidate and one final judgment. Gate 4 starts profiling early; it is repeated after art or engine changes. Store-account setup, public support contact and Play tester recruitment can proceed in parallel with game work so they do not become the last critical path.
 
-## Current position, as of this draft
+## Current position, at approval
 
 - **Mechanics are promising, not yet a finished difficulty curve.** The [campaign bot round](../evidence/campaign-retarget/README.md) rejects held GO in 72/72 long bike/course/seed runs. [A2 Pro](../evidence/a2-pro-clear/README.md) and [S3's distinct lower/upper lines](../evidence/s3-fairness/README.md) have exact replays. Human attempts, route reading and medal distributions still decide Gates 1–2.
 - **Career code exists.** Scrap, the 800-Scrap Pro purchase and visible Diamond are on the qualification branch; the [played loop](../evidence/scrap-loop/README.md) is an early proof. The bike's late-game advantage and complete finish/replay motivation still need Gates 1–3.
