@@ -10,21 +10,21 @@ export function mountWorldMap3D(root, onSelect, initialIndex = 0, locked = []) {
 let disposed = false;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#8db4c2');
-scene.fog = new THREE.FogExp2('#9bced0', 0.0045);
+scene.fog = new THREE.FogExp2('#9bced0', 0.0034);
 const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
 renderer.setSize(root.clientWidth, root.clientHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = .94;
+renderer.toneMappingExposure = 1.035;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFShadowMap;
 root.appendChild(renderer.domElement);
 
-const camera = new THREE.PerspectiveCamera(31, root.clientWidth / root.clientHeight, 0.1, 250);
+const camera = new THREE.PerspectiveCamera(30, root.clientWidth / root.clientHeight, 0.1, 250);
 // The atlas is read from above: the far side of the forest must not hide the
 // road when the player turns the island through a full orbit.
-camera.position.set(3, 30, 38);
+camera.position.set(3, 28, 36);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.target.set(0, 0, 0);
 controls.enableDamping = true;
@@ -38,7 +38,7 @@ controls.maxAzimuthAngle = Infinity;
 controls.minAzimuthAngle = -Infinity;
 controls.update();
 
-const hemi = new THREE.HemisphereLight('#d4e9e8', '#49564d', .86);
+const hemi = new THREE.HemisphereLight('#d4e9e8', '#657567', 1.01);
 scene.add(hemi);
 const sun = new THREE.DirectionalLight('#ffe4bc', 2.10);
 sun.position.set(-22, 45, 33);
@@ -129,7 +129,7 @@ scene.add(terrain);
 const nx=220, nz=100, dx=52/nx, dz=23/nz;
 const verts=[], col=[], texcoord=[], indices=[];
 const c = new THREE.Color();
-const cliffRocks=['#626d62','#88907a','#8b553d','#bd7e55','#78939a','#b0c1bc'].map(hex=>new THREE.Color(hex));
+const cliffRocks=['#778174','#9fa88e','#965f41','#cd8e62','#879fa5','#c2d0cb'].map(hex=>new THREE.Color(hex));
 const cliffMix=[new THREE.Color(),new THREE.Color(),new THREE.Color()];
 const colorFor = (x,z,y) => {
   const edge=edgeDistance(x,z);
@@ -162,7 +162,7 @@ const colorFor = (x,z,y) => {
   const ice=cliffMix[2].copy(cliffRocks[4]).lerp(cliffRocks[5],bed*.67);
   const cliffColor=slate.lerp(rust,smooth(-.2,4.6,x+noise(x*.35,z*.35)*1.3))
     .lerp(ice,smooth(11.1,16.3,x+noise(x*.35,z*.35)*1.3));
-  cliffColor.offsetHSL(0,0,(fractured-.5)*.11-.08*(1-smooth(-1.65,.05,y)));
+  cliffColor.offsetHSL(0,0,(fractured-.5)*.11-.045*(1-smooth(-1.65,.05,y)));
   c.lerp(cliffColor,cliff*.94);
   return c;
 };
@@ -343,6 +343,51 @@ for(let i=0;i<165;i++){
 }
 buttresses.forEach((o,i)=>{o.count=buttressCounts[i];o.castShadow=true;o.receiveShadow=true;terrain.add(o);});
 
+// Sediment seams follow the real broken coastline, rather than a flat ring.
+// Their short gaps expose the underlying faceted cliff and keep each biome's
+// rock cut distinct as the island turns. All seams share one small mesh.
+{
+ const positions=[],colors=[],indices=[];
+ const bands=[.878,.918,.955,.982];
+ const palettes=[
+   ['#a2a894','#777f73','#9aa18d','#71796f'],
+   ['#8d9f82','#657d6d','#99a28b','#607367'],
+   ['#d19a68','#9e6446','#c68a5c','#87563f'],
+   ['#dce6df','#93adb0','#c7d6d1','#7899a3'],
+ ];
+ const coastAt=(x,side,target)=>{
+   if(edgeDistance(x,0)>=target)return null;
+   let lo=0,hi=12.5;
+   for(let i=0;i<15;i++){
+     const mid=(lo+hi)/2;
+     if(edgeDistance(x,side*mid)<target)lo=mid;else hi=mid;
+   }
+   return side*(lo+hi)/2;
+ };
+ for(const side of [-1,1])for(let band=0;band<bands.length;band++)for(let i=0;i<188;i++){
+   const x0=-22.55+i*.24,x1=x0+.24;
+   if(hash2(Math.floor(x0/2.1)+band*11,side*19)<.26)continue;
+   const outer=bands[band]+.007;
+   const z00=coastAt(x0,side,bands[band]),z01=coastAt(x0,side,outer);
+   const z10=coastAt(x1,side,bands[band]),z11=coastAt(x1,side,outer);
+   if([z00,z01,z10,z11].some(z=>z===null))continue;
+   const base=positions.length/3;
+   for(const [x,z] of [[x0,z00],[x0,z01],[x1,z10],[x1,z11]]){
+     positions.push(x,groundHeight(x,z)+.035,z);
+     const biome=x>13?3:x>2?2:x>-10?1:0;
+     const color=new THREE.Color(palettes[biome][band]);
+     color.offsetHSL(0,0,(hash2(x*.9,band*17+side)-.5)*.055);
+     colors.push(color.r,color.g,color.b);
+   }
+   indices.push(base,base+1,base+2,base+1,base+3,base+2);
+ }
+ const seams=new THREE.BufferGeometry();
+ seams.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+ seams.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
+ seams.setIndex(indices);seams.computeVertexNormals();
+ terrain.add(new THREE.Mesh(seams,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide})));
+}
+
 // A graded trail pressed into the relief. The center carries warm compacted
 // dirt; its feathered shoulders borrow the surrounding biome color and sink
 // back to the ground. Fine crosswise tessellation avoids the old cut-throughs.
@@ -521,7 +566,13 @@ for(let tries=0;tries<15000&&(nForest<350||nSnow<145);tries++){
  const shade=new THREE.Color('#ffffff').multiplyScalar(rr(.84,1.13));
  kind.canopy.setColorAt(tIdx,shade);
 }
-for(const kind of treeKinds)for(const obj of [kind.trunk,kind.canopy,kind.core]){obj.count=kind.count;obj.castShadow=true;obj.receiveShadow=true;terrain.add(obj);}
+for(const kind of treeKinds)for(const obj of [kind.trunk,kind.canopy,kind.core]){
+ obj.count=kind.count;
+ // A third of the crowns cast the stand's broad shadows. Every crown still
+ // shades in the sun, while the software shadow pass loses most tiny triangles.
+ obj.castShadow=obj===kind.trunk||(obj===kind.canopy&&kind.species===0);
+ obj.receiveShadow=true;terrain.add(obj);
+}
 
 // Mixed broadleaf clumps open the solid wall of identical conifer points.
 // Their three offset crown lobes turn as one 3D tree, with copper foliage
@@ -659,8 +710,10 @@ function mountain(x,z,radius,height){
    const snowline=.29+.07*Math.sin(k*2.1+x*.7)+.04*noise(k*.5,l*.6+z);
    const isSnow=(a.y+b.y+c.y)/(3*height)>snowline;
    const shade=.5+.5*Math.sin(k*2.83+l*1.39+x*.4);
-   const tint=new THREE.Color(isSnow?'#e9f1ee':'#718c92');
-   tint.lerp(new THREE.Color(isSnow?'#fffdf3':'#a7aaa3'),shade*(isSnow?.64:.54));
+   const vein=Math.floor(hash2(x,z)*ringCount);
+   const exposed=isSnow&&l<5&&(k===vein||k===(vein+1)%ringCount);
+   const tint=new THREE.Color(exposed?'#627d85':isSnow?'#d9e8e8':'#637f88');
+   tint.lerp(new THREE.Color(exposed?'#a6bdba':isSnow?'#fffdf4':'#a7aaa3'),shade*(isSnow?.64:.54));
    tint.offsetHSL(0,0,(noise(k*.9,l*.7+z)-.5)*.06);
    for(let v=0;v<3;v++)colors.push(tint.r,tint.g,tint.b);
  };
