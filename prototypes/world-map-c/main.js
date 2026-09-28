@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import skyImageUrl from './assets/sky-alpine-a.png?url';
 
 // Standalone visual study. All of the island, route, set dressing and flag towers
@@ -14,7 +15,7 @@ renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(root.clientWidth, root.clientHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.08;
+renderer.toneMappingExposure = 1.02;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFShadowMap;
 root.appendChild(renderer.domElement);
@@ -34,9 +35,9 @@ controls.maxAzimuthAngle = Infinity;
 controls.minAzimuthAngle = -Infinity;
 controls.update();
 
-const hemi = new THREE.HemisphereLight('#c9e4e7', '#48534b', 1.15);
+const hemi = new THREE.HemisphereLight('#d4e9e8', '#687064', 1.38);
 scene.add(hemi);
-const sun = new THREE.DirectionalLight('#ffddb0', 2.65);
+const sun = new THREE.DirectionalLight('#ffe4bc', 2.25);
 sun.position.set(-22, 45, 33);
 sun.castShadow = true;
 sun.shadow.mapSize.set(2048, 2048);
@@ -52,7 +53,12 @@ const fill = new THREE.DirectionalLight('#a9dfe9', .72);
 fill.position.set(22, 20, -22);
 scene.add(fill);
 
-const mat = (color, roughness = 1, metalness = 0) => new THREE.MeshStandardMaterial({ color, roughness, metalness });
+const materialCache=new Map();
+const mat = (color, roughness = 1, metalness = 0) => {
+ const key=`${color}/${roughness}/${metalness}`;
+ if(!materialCache.has(key))materialCache.set(key,new THREE.MeshStandardMaterial({ color, roughness, metalness }));
+ return materialCache.get(key);
+};
 const simplex = (x, z) => {
   const s = Math.sin(x * 127.1 + z * 311.7) * 43758.5453;
   return (s - Math.floor(s)) * 2 - 1;
@@ -127,9 +133,10 @@ const colorFor = (x,z,y) => {
   const stone=new THREE.Color(x>13?'#5d7681':x>2?'#784b35':'#56605c');
   c.lerp(stone,exposed);
   const rim=smooth(.71,.99,edgeDistance(x,z));
-  const strata=.5+.5*Math.sin(y*5.8+x*.69+noise(x*.8,z*.8)*2.1);
-  const mineral=new THREE.Color(x>13?'#85999c':x>2?'#a5714e':'#72786c');
-  c.lerp(mineral,rim*exposed*(.10+.34*strata));
+  const strata=.5+.5*Math.sin(y*4.65+x*.21+noise(x*.42,z*.42)*.85);
+  const fineBed=.5+.5*Math.sin(y*10.8+x*.53);
+  const mineral=new THREE.Color(x>13?'#a4b9ba':x>2?'#b78158':'#929384');
+  c.lerp(mineral,rim*exposed*(.10+.39*strata+.09*fineBed));
   const variation = noise(x*2.3,z*2.3)*.065 + noise(x*.75,z*.75)*.035;
   c.offsetHSL(0,0,variation);
   if (x > 11 && y > 2.2) c.lerp(new THREE.Color('#f5f5ed'), smooth(2.2,4.1,y)*.6);
@@ -232,12 +239,19 @@ function spanBeam(a,b,width,depth,material,parent=terrain){
 }
 
 // Small disconnected whitecaps follow breaking waves rather than forming UI rings.
-const foamMat=new THREE.MeshBasicMaterial({color:'#d9eeea',transparent:true,opacity:.65});
+const foamMat=new THREE.MeshBasicMaterial({color:'#d9eeea',transparent:true,opacity:.62,side:THREE.DoubleSide,depthWrite:false});
+const foamVerts=[],foamIndices=[];
 for(let i=0;i<185;i++){
  const a=rr(0,Math.PI*2),r=rr(1.01,1.19),x=25.3*Math.cos(a)*r,z=9.7*Math.sin(a)*r;
- const len=rr(.12,.49),pts=[new THREE.Vector3(x-len*.5,-1.00,z),new THREE.Vector3(x,-.99,z+.03),new THREE.Vector3(x+len*.5,-1.00,z)];
- line(pts,foamMat,rr(.009,.023),terrain);
+ const length=rr(.12,.49),width=rr(.009,.023),base=foamVerts.length/3;
+ foamVerts.push(x-length*.5,-.99,z-width,x-length*.5,-.99,z+width,
+                x,-.985,z+.025-width,x,-.985,z+.025+width,
+                x+length*.5,-.99,z-width,x+length*.5,-.99,z+width);
+ foamIndices.push(base,base+1,base+2,base+1,base+3,base+2,
+                  base+2,base+3,base+4,base+3,base+5,base+4);
 }
+const foamGeo=new THREE.BufferGeometry();foamGeo.setAttribute('position',new THREE.Float32BufferAttribute(foamVerts,3));foamGeo.setIndex(foamIndices);foamGeo.computeVertexNormals();
+terrain.add(new THREE.Mesh(foamGeo,foamMat));
 
 // Detached sea stacks and broken promontories give the shoreline a jagged silhouette.
 function seaStack(x,z,radius,height,snowy=false){
@@ -293,23 +307,38 @@ for(let i=0;i<124;i++){
 }
 buttresses.forEach((o,i)=>{o.count=buttressCounts[i];o.castShadow=true;o.receiveShadow=true;terrain.add(o);});
 
-// Coast-to-summit ribbon, made from sampled vertices that lie on the relief.
-function routeMesh(width, color, lift){
- const positions=[],normals=[],uv=[],ind=[];const count=450;
+// A graded trail pressed into the relief. The center carries warm compacted
+// dirt; its feathered shoulders borrow the surrounding biome color and sink
+// back to the ground. Fine crosswise tessellation avoids the old cut-throughs.
+function routeMesh(){
+ const positions=[],routeColors=[],uv=[],ind=[],count=460,across=16,width=1.48;
  for(let i=0;i<=count;i++){
    const x=-22.15 + i/count*44.2,z=routeZ(x);
    const z1=routeZ(x+.04),z0=routeZ(x-.04);
    const tx=.08,tz=z1-z0,l=Math.hypot(tx,tz),px=-tz/l,pz=tx/l;
-   for(const sign of [-1,1]){
+   for(let j=0;j<=across;j++){
+     const sign=-1+2*j/across;
      const xx=x+px*width*sign,zz=z+pz*width*sign;
-     positions.push(xx,groundHeight(xx,zz)+lift,zz);normals.push(0,1,0);uv.push(i/13,sign);
+     const shoulder=smooth(.41,.99,Math.abs(sign));
+     const lift=.105*(1-shoulder)+.025;
+     const terrainY=groundHeight(xx,zz);
+     positions.push(xx,terrainY+lift,zz);uv.push(i/13,sign);
+     const tint=new THREE.Color('#bba16f');
+     tint.lerp(new THREE.Color('#b89568'),smooth(1.5,4.5,x));
+     tint.lerp(new THREE.Color('#b6b7ad'),smooth(12.5,15.5,x));
+     tint.offsetHSL(0,0,.022*noise(xx*.7,zz*.7)+.012*noise(xx*2.0,zz*2.0));
+     const ground=colorFor(xx,zz,terrainY).clone();
+     tint.lerp(ground,shoulder*.96);
+     routeColors.push(tint.r,tint.g,tint.b);
    }
-   if(i<count){const j=i*2;ind.push(j,j+1,j+2,j+1,j+3,j+2);}
+   if(i<count)for(let j=0;j<across;j++){
+     const k=i*(across+1)+j;ind.push(k,k+1,k+across+1,k+1,k+across+2,k+across+1);
+   }
  }
- const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(normals,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));g.setIndex(ind);g.computeVertexNormals();
- const m=new THREE.Mesh(g,mat(color));m.receiveShadow=true;terrain.add(m);return m;
+ const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));g.setAttribute('color',new THREE.Float32BufferAttribute(routeColors,3));g.setIndex(ind);g.computeVertexNormals();
+ const m=new THREE.Mesh(g,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1}));m.receiveShadow=false;terrain.add(m);return m;
 }
-routeMesh(1.28,'#504033',.23);routeMesh(.89,'#e2bb7a',.27);
+routeMesh();
 // A shallow retaining fascia makes the quarry traverse read as a built road
 // rather than a pale decal on the cut bank.
 {
@@ -327,8 +356,8 @@ routeMesh(1.28,'#504033',.23);routeMesh(.89,'#e2bb7a',.27);
 // Off-road dust and wheel marks keep the route legible from the default camera.
 const tire=mat('#8b724e');
 for(const offset of [-.36,.36]){
- const pts=[];for(let i=0;i<310;i++){const x=-22+i/309*44,z=routeZ(x)+offset;pts.push(new THREE.Vector3(x,groundHeight(x,z)+.30,z));}
- line(pts,tire,.018);
+ const pts=[];for(let i=0;i<310;i++){const x=-22+i/309*44,z=routeZ(x)+offset;pts.push(new THREE.Vector3(x,groundHeight(x,z)+.15,z));}
+ line(pts,tire,.012);
 }
 
 // Three authored crown profiles make the forests read as stands of trees, not
@@ -380,9 +409,9 @@ const treeKinds=[
 }));
 const dum=new THREE.Object3D();
 let nForest=0,nSnow=0;
-for(let tries=0;tries<12000&&(nForest<325||nSnow<131);tries++){
- const x=rr(-23.6,24.1),z=rr(-8.7,8.7); if(edgeDistance(x,z)>.87 || Math.abs(routeZ(x)-z)<3.05)continue;
- const snowy=x>12.5; if(snowy ? nSnow>=131 : nForest>=325)continue;
+for(let tries=0;tries<12000&&(nForest<255||nSnow<120);tries++){
+ const x=rr(-23.6,24.1),z=rr(-8.7,8.7); if(edgeDistance(x,z)>.87 || Math.abs(routeZ(x)-z)<4.55)continue;
+ const snowy=x>12.5; if(snowy ? nSnow>=120 : nForest>=255)continue;
  if(!snowy&&(x>1.8&&x<13.0 || x<-11.2&&rand()<.71))continue;
  if(x>-8.0&&x<-2.9&&z>3.5&&z<8.0)continue;
  // A mottled density field leaves sunlit clearings and groups conifers into
@@ -405,6 +434,51 @@ for(let tries=0;tries<12000&&(nForest<325||nSnow<131);tries++){
 }
 for(const kind of treeKinds)for(const obj of [kind.trunk,kind.canopy,kind.core]){obj.count=kind.count;obj.castShadow=true;obj.receiveShadow=true;terrain.add(obj);}
 
+// Mixed broadleaf clumps open the solid wall of identical conifer points.
+// Their three offset crown lobes turn as one 3D tree, with copper foliage
+// appearing near the quarry boundary and cooler greens in the deepwood.
+const broadTrunk=new THREE.InstancedMesh(new THREE.CylinderGeometry(.045,.105,1.0,6),mat('#8a765e'),50);
+const broadCanopy=new THREE.InstancedMesh(new THREE.IcosahedronGeometry(.52,0),mat('#ffffff'),150);
+let broadCount=0,crownCount=0;
+for(let tries=0;tries<1800&&broadCount<38;tries++){
+ const x=rr(-11.2,3.0),z=rr(-7.8,7.5);
+ if(edgeDistance(x,z)>.84||Math.abs(routeZ(x)-z)<4.2||Math.hypot(x+5.5,z-5.2)<2.6)continue;
+ const h=groundHeight(x,z),scale=rr(.65,1.16),rotation=rr(0,6.28);
+ dum.position.set(x,h+.79*scale,z);dum.rotation.set(0,rotation,0);dum.scale.setScalar(scale);dum.updateMatrix();
+ broadTrunk.setMatrixAt(broadCount++,dum.matrix);
+ const copper=smooth(-1.2,2.7,x),tones=copper>.55?['#927b55','#ae915e','#6d7858']:['#718a53','#4f7654','#a1a265'];
+ for(let j=0;j<3;j++){
+   const a=rotation+j*Math.PI*2/3,offset=j===0?.0:.28;
+   dum.position.set(x+Math.cos(a)*offset*scale,h+(1.57+(j%2)*.15)*scale,z+Math.sin(a)*offset*scale);
+   dum.rotation.set(rr(-.12,.12),rr(0,6.28),rr(-.12,.12));dum.scale.setScalar(scale*(j===0?.86:.60));dum.updateMatrix();
+   broadCanopy.setMatrixAt(crownCount,dum.matrix);
+   broadCanopy.setColorAt(crownCount,new THREE.Color(tones[j]));crownCount++;
+ }
+}
+broadTrunk.count=broadCount;broadCanopy.count=crownCount;
+for(const obj of [broadTrunk,broadCanopy]){obj.castShadow=true;obj.receiveShadow=true;terrain.add(obj);}
+
+// A timber fire lookout crowns the forest instead of adding another generic
+// hut at road level. The observation windows remain visible in the orbit.
+const lookout=new THREE.Group();lookout.position.set(-7.6,groundHeight(-7.6,-5.8),-5.8);lookout.scale.setScalar(.83);terrain.add(lookout);
+const lookoutWood=mat('#695a43'),lookoutRoof=mat('#9a5940'),lookoutGlass=mat('#4a727a',.23);
+for(const dx of [-.53,.53])for(const dz of [-.46,.46]){
+ const leg=box(.12,2.9,.12,lookoutWood,dx,1.46,dz,lookout);leg.castShadow=true;
+}
+for(const side of [-1,1]){
+ spanBeam(new THREE.Vector3(-.53,.26,side*.46),new THREE.Vector3(.53,2.72,side*.46),.055,.055,lookoutWood,lookout);
+ spanBeam(new THREE.Vector3(.53,.26,side*.46),new THREE.Vector3(-.53,2.72,side*.46),.055,.055,lookoutWood,lookout);
+}
+box(1.43,.17,1.22,lookoutWood,0,2.83,0,lookout).castShadow=true;
+box(1.17,.75,1.05,lookoutWood,0,3.27,0,lookout).castShadow=true;
+for(const side of [-1,1]){
+ box(.63,.35,.04,lookoutGlass,0,3.34,side*.55,lookout);
+ box(.04,.35,.60,lookoutGlass,side*.60,3.34,0,lookout);
+}
+const lookoutCap=box(1.53,.16,1.31,lookoutRoof,0,3.74,0,lookout);lookoutCap.castShadow=true;
+cylinder(.035,.035,.96,mat('#454843'),.48,4.30,-.37,lookout);
+const lookoutFlag=box(.47,.18,.025,mat('#d2623e'),.74,4.51,-.37,lookout);lookoutFlag.rotation.z=-.11;
+
 // Distinct rock palettes push the quarry and glacial ridge apart visually.
 for(const [xMin,xMax,count,palette] of [
  [-24,-10,180,['#77766a','#938b78','#66635c']],
@@ -422,6 +496,55 @@ for(const [xMin,xMax,count,palette] of [
  }
  instances.forEach((o,i)=>{o.count=totals[i];o.castShadow=true;o.receiveShadow=true;terrain.add(o);});
 }
+
+// The island needed a middle scale between the terrain colors and its large
+// trees. Patchy heath, sedge and frost shrubs make each clearing feel planted
+// by its climate. Each biome uses one shared mesh and one draw call.
+function groundCoverGeometry(kind){
+ const p=[],colors=[],indices=[];
+ const palette=kind===0?['#758652','#586c45','#a7a16d']:
+   kind===1?['#658458','#466c54','#9ba971']:
+   kind===2?['#b68a58','#8d714f','#d1aa70']:
+             ['#718f8b','#aebeb9','#eff1df'];
+ for(let blade=0;blade<5;blade++){
+   const angle=blade*Math.PI*2/5,rad=.105+(blade%2)*.045;
+   const x=Math.cos(angle)*rad,z=Math.sin(angle)*rad;
+   const height=(kind===3?.31:.22)+.08*Math.sin(blade*3+kind);
+   const base=p.length/3;
+   p.push(x-.075,0,z,x+.075,0,z,x*.39,height,z*.39);
+   const tint=new THREE.Color(palette[blade%3]);
+   for(let j=0;j<3;j++)colors.push(tint.r,tint.g,tint.b);
+   indices.push(base,base+1,base+2);
+ }
+ const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));
+ g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();
+ return g;
+}
+const coverMat=new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:1});
+const coverCapacity=[290,540,190,170];
+const covers=[0,1,2,3].map(biome=>new THREE.InstancedMesh(groundCoverGeometry(biome),coverMat,coverCapacity[biome]));
+const coverCount=[0,0,0,0];
+for(let i=0;i<3300;i++){
+ const x=rr(-24,24),z=rr(-9.5,9.5),biome=x>12.8?3:x>2.3?2:x>-10?1:0;
+ if(coverCount[biome]>=covers[biome].count||edgeDistance(x,z)>.83||Math.abs(routeZ(x)-z)<1.42)continue;
+ const y=groundHeight(x,z),s=rr(.58,1.60)*(biome===3?.76:1);
+ dum.position.set(x,y+.025,z);dum.rotation.set(0,rr(0,6.28),0);dum.scale.setScalar(s);dum.updateMatrix();
+ covers[biome].setMatrixAt(coverCount[biome]++,dum.matrix);
+}
+covers.forEach((o,i)=>{o.count=coverCount[i];o.receiveShadow=true;terrain.add(o);});
+
+// Road edge stakes are deliberately lower than the selectable flag towers.
+// They keep the pale trail legible from the reverse orbit without icon plates.
+const stakeGeo=new THREE.CylinderGeometry(.055,.075,.57,5),stakeMat=mat('#66594c');
+const stakes=new THREE.InstancedMesh(stakeGeo,stakeMat,62);
+const stakeCount={value:0};
+for(let x=-21.0;x<22.0;x+=1.38){
+ const z=routeZ(x)+(Math.floor((x+21)/1.38)%2?1.33:-1.33),y=groundHeight(x,z);
+ if(edgeDistance(x,z)>.89)continue;
+ dum.position.set(x,y+.29,z);dum.rotation.set(0,rr(0,6.28),0);dum.scale.setScalar(rr(.8,1.3));dum.updateMatrix();
+ stakes.setMatrixAt(stakeCount.value++,dum.matrix);
+}
+stakes.count=stakeCount.value;stakes.castShadow=true;terrain.add(stakes);
 
 // Faceted glacial massifs protrude above the pine line on the snow end.
 function mountain(x,z,radius,height){
@@ -502,6 +625,34 @@ box(.28,.36,.03,mat('#3c5d67',.15),-.35,.86,.35,excavator);
 spanBeam(new THREE.Vector3(.25,.95,0),new THREE.Vector3(1.42,1.76,0),.17,.23,mat('#a86f38'),excavator);
 spanBeam(new THREE.Vector3(1.42,1.76,0),new THREE.Vector3(2.08,1.16,0),.13,.18,mat('#a86f38'),excavator);
 box(.45,.20,.40,ore,2.20,1.05,0,excavator).rotation.z=.27;
+// A haul truck gives the quarry an unmistakable working scale at wide view.
+const truck=new THREE.Group();truck.position.set(6.2,groundHeight(6.2,-2.0)+.10,-2.0);truck.rotation.y=.36;terrain.add(truck);
+const truckYellow=mat('#cfa25a'),truckDark=mat('#3a403d'),truckSteel=mat('#68605a');
+box(1.65,.26,.78,truckDark,0,.45,0,truck).castShadow=true;
+box(.72,.68,.76,truckYellow,-.48,.88,0,truck).castShadow=true;
+box(.36,.30,.025,mat('#36545d',.24),-.59,1.03,.395,truck);
+const hopper=box(.96,.43,.83,truckYellow,.46,.90,0,truck);hopper.rotation.z=-.12;hopper.castShadow=true;
+box(.94,.07,.83,truckSteel,.46,.68,0,truck);
+for(const x of [-.53,.55])for(const z of [-.46,.46]){
+ const wheel=mesh(new THREE.CylinderGeometry(.33,.33,.16,12),truckDark,x,.34,z,truck);wheel.rotation.x=Math.PI/2;wheel.castShadow=true;
+ const hub=mesh(new THREE.CylinderGeometry(.13,.13,.165,10),truckSteel,x,.34,z+Math.sign(z)*.015,truck);hub.rotation.x=Math.PI/2;
+}
+// A fixed mine headframe gives the excavation a readable industrial skyline.
+const mineFrame=new THREE.Group();mineFrame.position.set(4.7,groundHeight(4.7,-5.1),-5.1);terrain.add(mineFrame);
+const mineIron=mat('#684d43',.75,.22),mineTrim=mat('#bd8150');
+for(const x of [-.63,.63]){
+ spanBeam(new THREE.Vector3(x*1.38,.04,0),new THREE.Vector3(x*.54,3.45,0),.12,.14,mineIron,mineFrame);
+ spanBeam(new THREE.Vector3(x*.54,3.45,0),new THREE.Vector3(0,3.85,0),.10,.12,mineIron,mineFrame);
+}
+for(const y of [.74,1.50,2.30,3.06])box(1.27,.09,.14,mineIron,0,y,0,mineFrame);
+const pulley=mesh(new THREE.TorusGeometry(.42,.085,8,16),mineTrim,0,3.70,.13,mineFrame);pulley.castShadow=true;
+line([new THREE.Vector3(0,3.70,.25),new THREE.Vector3(.17,.24,.25)],mat('#393a38',.62,.3),.016,mineFrame);
+box(.72,.54,.65,mineTrim,0,.29,.10,mineFrame).castShadow=true;
+for(let i=0;i<14;i++){
+ const x=rr(2.2,7.7),z=rr(-7.3,-4.9),y=groundHeight(x,z),s=rr(.20,.49);
+ const oreChunk=mesh(new THREE.IcosahedronGeometry(s,0),i%3?ore:sandstone,x,y+s*.55,z);
+ oreChunk.scale.set(1.1,rr(.55,1.15),.8);oreChunk.castShadow=true;
+}
 // A road bridge spans the eastern ravine on pillars.
 for(let x=17.1;x<21.1;x+=.8){
  const z=routeZ(x),y=groundHeight(x,z);
@@ -523,6 +674,22 @@ for(let i=0;i<13;i++){
  const puff=mesh(new THREE.IcosahedronGeometry(rr(.09,.22),1),new THREE.MeshBasicMaterial({color:'#eaf5ec',transparent:true,opacity:rr(.35,.65)}),rr(-2.55,-1.1),-1.0+rr(-.14,.2),rr(9.8,10.4));
  puff.scale.y=.3;
 }
+const waterwheel=new THREE.Group();waterwheel.position.set(-3.38,groundHeight(-3.38,8.45)-.18,8.65);terrain.add(waterwheel);
+const wheelWood=mat('#725941'),wheelRim=mat('#9b7651');
+for(const depth of [-.12,.12]){
+ const ring=mesh(new THREE.TorusGeometry(.65,.075,7,16),wheelRim,0,0,depth,waterwheel);ring.castShadow=true;
+ for(let i=0;i<8;i++){
+   const a=i*Math.PI/4;
+   spanBeam(new THREE.Vector3(0,0,depth),new THREE.Vector3(Math.cos(a)*.61,Math.sin(a)*.61,depth),.06,.07,wheelWood,waterwheel);
+ }
+}
+for(let i=0;i<8;i++){
+ const a=i*Math.PI/4;
+ const bucket=box(.30,.09,.38,wheelWood,Math.cos(a)*.68,Math.sin(a)*.68,0,waterwheel);
+ bucket.rotation.z=a;bucket.castShadow=true;
+}
+const wheelAxle=cylinder(.12,.12,.55,mat('#4d443d'),0,0,0,waterwheel);wheelAxle.rotation.x=Math.PI/2;
+for(const side of [-1,1])spanBeam(new THREE.Vector3(side*.75,-.72,-.37),new THREE.Vector3(0,0,-.34),.08,.08,wheelWood,waterwheel);
 
 // Harbor: a tapered steel trawler, timber pier, cargo and a visible lattice crane.
 const dock=mat('#574536'),woodTop=mat('#9b7652'),rust=mat('#8e4a37'),roofMat=mat('#45443c');
@@ -554,7 +721,25 @@ for(const side of [-1,1]){
  const rail=[];for(const [x,w] of hullFrames)rail.push(new THREE.Vector3(x,.7,side*w));line(rail,mat('#3c4546',.5,.35),.025,ship);
  for(let i=1;i<hullFrames.length-1;i++)box(.025,.42,.025,mat('#3c4546'),hullFrames[i][0],.5,side*hullFrames[i][1],ship);
 }
+// Glazed gondolas and their cable make the snow pass distinct from the quarry
+// trestle while staying below the level markers in silhouette.
+const cable=mat('#596266',.55,.35),gondolaBlue=mat('#446472'),gondolaRoof=mat('#9aa7a8');
+const cableA=new THREE.Vector3(13.9,groundHeight(13.9,-5.4)+2.02,-5.4);
+const cableB=new THREE.Vector3(20.5,groundHeight(20.5,-5.4)+2.02,-5.4);
+line([cableA,new THREE.Vector3(17.2,(cableA.y+cableB.y)/2-.22,-5.35),cableB],cable,.023);
+for(const t of [.30,.68]){
+ const x=THREE.MathUtils.lerp(cableA.x,cableB.x,t),z=-5.35,y=THREE.MathUtils.lerp(cableA.y,cableB.y,t)-.1;
+ const cabin=new THREE.Group();cabin.position.set(x,y-.78,z);terrain.add(cabin);
+ box(.72,.55,.47,gondolaBlue,0,0,0,cabin).castShadow=true;
+ box(.78,.11,.52,gondolaRoof,0,.32,0,cabin).castShadow=true;
+ for(const side of [-1,1])box(.44,.24,.025,mat('#a7d2d3',.14),0,.04,side*.252,cabin);
+ box(.055,.35,.055,cable,0,.52,0,cabin);
+}
 for(let i=0;i<4;i++)box(.65,.38,.46,mat(i%2?'#6b5e4e':'#865c44'),.2+i*.62,.55,0,ship).castShadow=true;
+for(let i=0;i<3;i++){
+ const o=mesh(new THREE.TorusGeometry(.16,.045,7,12),mat('#ded6bd'),-.65+i*.68,.52,-.67,ship);
+ o.rotation.y=Math.PI/2;
+}
 cylinder(.035,.05,2.3,mat('#4c4540'),-1.02,2.36,0,ship).castShadow=true;
 line([new THREE.Vector3(-1.02,3.5,0),new THREE.Vector3(-2.4,.55,-.34)],mat('#4c4540'),.018,ship);
 line([new THREE.Vector3(-1.02,3.5,0),new THREE.Vector3(1.9,.55,.38)],mat('#4c4540'),.018,ship);
@@ -576,6 +761,31 @@ for(let i=1;i<8;i++){
 }
 line([jibEnd,new THREE.Vector3(jibEnd.x,craneY+1.8,jibEnd.z)],mat('#383b39'),.016);
 mesh(new THREE.TorusGeometry(.18,.042,8,12,Math.PI*1.7),mat('#4c5050',.55,.4),jibEnd.x,craneY+1.67,jibEnd.z).rotation.z=Math.PI/2;
+for(let i=0;i<6;i++){
+ const x=-21.1+i*1.6,z=10.3+Math.sin(i*2.4)*.65;
+ const buoy=mesh(new THREE.ConeGeometry(.18,.38,7),mat(i%2?'#dc8c43':'#e9d5a5'),x,-.72,z);
+ buoy.castShadow=true;
+ cylinder(.025,.035,.26,mat('#6e6a58'),x,-.47,z);
+}
+// A painted harbor light and stacked fishing traps anchor the bare rock head.
+const lightHouse=new THREE.Group();lightHouse.position.set(-21.2,groundHeight(-21.2,-3.2),-3.2);terrain.add(lightHouse);
+const lampWall=mat('#ded5bc'),lampRed=mat('#ad634b'),lampGlass=mat('#ebd5a3',.28);
+cylinder(.40,.50,.75,lampWall,0,.38,0,lightHouse,10).castShadow=true;
+cylinder(.35,.41,.46,lampRed,0,.98,0,lightHouse,10).castShadow=true;
+cylinder(.30,.35,.78,lampWall,0,1.60,0,lightHouse,10).castShadow=true;
+for(let i=0;i<4;i++){
+ const a=i*Math.PI/2;
+ const window=box(.26,.34,.035,lampGlass,Math.cos(a)*.32,2.06,Math.sin(a)*.32,lightHouse);
+ window.rotation.y=-a;
+}
+cylinder(.43,.32,.12,lampRed,0,2.34,0,lightHouse,10).castShadow=true;
+const beaconLamp=cylinder(.13,.13,.18,new THREE.MeshStandardMaterial({color:'#fff3bc',emissive:'#ffbd55',emissiveIntensity:1.4}),0,2.49,0,lightHouse,10);
+beaconLamp.castShadow=false;
+for(let i=0;i<6;i++){
+ const x=-18.0+(i%3)*.44,z=5.0+Math.floor(i/3)*.47,y=groundHeight(x,z);
+ const trap=box(.37,.24,.32,mat('#7b6650'),x,y+.13,z);trap.castShadow=true;
+ for(const side of [-1,1])box(.38,.025,.025,mat('#b39569'),x,y+.26,z+side*.14);
+}
 // Forest sawmill and its log piles.
 function building(x,z,w,d,body,roof){
  const y=groundHeight(x,z),wall=box(w,.8,d,body,x,y+.42,z);wall.castShadow=true;
@@ -595,7 +805,20 @@ for(let i=0;i<11;i++){
 }
 // Quarry machinery, snow chalet and cable pylons are recognizable from wide view.
 building(10.6,-5.8,1.8,1.25,mat('#705a48'),mat('#494843'));
-building(18.5,-2.6,1.7,1.2,mat('#c6c9c2'),mat('#515f62'));
+building(18.5,-2.6,1.7,1.2,mat('#c6c9c2'),mat('#ab6149'));
+// Faceted blue ice tongues and fractured edges make the snow face an actual
+// glacier rather than a white clone of the rocky coast.
+const glacialIce=[mat('#a7cbd0'),mat('#c7dedc'),mat('#6f9ba8')];
+for(let i=0;i<12;i++){
+ const x=rr(14.5,22.6),z=rr(5.2,8.6);if(edgeDistance(x,z)>.92||Math.abs(routeZ(x)-z)<1.6)continue;
+ const y=groundHeight(x,z),w=rr(.24,.68),h=rr(.45,1.22);
+ const ice=mesh(new THREE.IcosahedronGeometry(1,0),glacialIce[i%3],x,y+h*.26,z);
+ ice.scale.set(w,h,w*.7);ice.rotation.set(rr(-.2,.2),rr(0,6.28),rr(-.25,.25));ice.castShadow=true;
+}
+for(let i=0;i<5;i++){
+ const x=15.2+i*1.5,z=7.3+Math.sin(i*2.2)*.5,y=groundHeight(x,z);
+ const fissure=box(rr(.40,.85),.035,.09,mat('#436e7b'),x,y+.09,z);fissure.rotation.y=rr(-.5,.5);
+}
 for(let i=0;i<3;i++){
  const x=14.1+i*3.2,z=-5.4+Math.sin(i)*.8,y=groundHeight(x,z);
  box(.15,2.0,.15,mat('#5c686a'),x,y+1,z).castShadow=true;
@@ -629,6 +852,8 @@ function makeTower(i,x,z){
  const ctx=canvas.getContext('2d');ctx.fillStyle='#19292c';ctx.fillRect(0,0,128,96);ctx.strokeStyle='#f3c777';ctx.lineWidth=4;ctx.strokeRect(5,5,118,86);
  ctx.font='800 59px Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#f8eed4';ctx.fillText(String(i+1).padStart(2,'0'),64,49);
  const plane=new THREE.Mesh(new THREE.PlaneGeometry(.55,.42),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(canvas),side:THREE.DoubleSide}));plane.position.set(-.45,1.03,.057);g.add(plane);
+ const reverseSign=new THREE.Mesh(plane.geometry,plane.material);
+ reverseSign.position.set(-.45,1.03,-.057);reverseSign.rotation.y=Math.PI;g.add(reverseSign);
  const tireMat=mat('#272b2a');
  for(let t=0;t<2;t++){const tire=mesh(new THREE.TorusGeometry(.19,.065,6,10),tireMat,-.38,.08+t*.11,-.27,g);tire.rotation.x=Math.PI/2;}
  const hit=mesh(new THREE.CylinderGeometry(.59,.59,2.3,8),new THREE.MeshBasicMaterial({visible:false}),0,1.1,0,g);hit.userData.stage=i;
@@ -639,6 +864,42 @@ for(let i=0;i<12;i++){
  const x=(i===0?-20.1:-21.2+i*3.77),z=routeZ(x)+(i%2===0?-1.05:1.1);
  makeTower(i,x,z);
 }
+
+// Hand-authored props are built in small pieces above, then baked into a few
+// static material batches. Towers stay separate so their hit meshes, readable
+// numbers and selected beacons keep working. This also leaves dynamic sea and
+// foliage instances untouched.
+function mergeStaticSetDressing(){
+ terrain.updateMatrixWorld(true);
+ const inverseTerrain=terrain.matrixWorld.clone().invert(),stageGroups=new Set(stages.map(stage=>stage.g));
+ const batches=new Map();
+ terrain.traverse(object=>{
+   if(!object.isMesh||object.isInstancedMesh||object===island||object.material.transparent||!object.visible||object.children.length||Object.keys(object.userData).length)return;
+   for(let p=object.parent;p&&p!==terrain;p=p.parent)if(stageGroups.has(p))return;
+   const attrs=Object.entries(object.geometry.attributes).map(([name,attr])=>`${name}:${attr.itemSize}:${attr.normalized}:${attr.array.constructor.name}`).sort().join('|');
+   const key=`${object.material.uuid}/${attrs}/${Boolean(object.geometry.index)}/${object.castShadow}/${object.receiveShadow}`;
+   if(!batches.has(key))batches.set(key,[]);
+   batches.get(key).push(object);
+ });
+ let mergedObjects=0,mergedBatches=0;
+ for(const objects of batches.values()){
+   if(objects.length<2)continue;
+   const geometryCopies=objects.map(object=>{
+     const relative=inverseTerrain.clone().multiply(object.matrixWorld);
+     return object.geometry.clone().applyMatrix4(relative);
+   });
+   const geometry=mergeGeometries(geometryCopies,false);
+   geometryCopies.forEach(copy=>copy.dispose());
+   if(!geometry)continue;
+   const merged=new THREE.Mesh(geometry,objects[0].material);
+   merged.castShadow=objects[0].castShadow;merged.receiveShadow=objects[0].receiveShadow;
+   merged.name=`static-${mergedBatches}`;
+   for(const object of objects)object.parent.remove(object);
+   terrain.add(merged);mergedObjects+=objects.length;mergedBatches++;
+ }
+ return {mergedObjects,mergedBatches};
+}
+const meshMerge=mergeStaticSetDressing();
 
 let selected=0;
 const selectionTitle=document.querySelector('#selection-title');
@@ -707,4 +968,4 @@ function animate(now){
  if(now-last>1000){window.__atlasFPS=Math.round(frames*1000/(now-last));frames=0;last=now;}
 }
 requestAnimationFrame(animate);
-window.__atlas={scene,camera,controls,renderer,stages,selectStage,focusStage,get selected(){return selected;},get fps(){return window.__atlasFPS}};
+window.__atlas={scene,camera,controls,renderer,stages,selectStage,focusStage,meshMerge,get selected(){return selected;},get fps(){return window.__atlasFPS}};

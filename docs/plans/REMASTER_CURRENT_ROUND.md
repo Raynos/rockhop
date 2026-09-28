@@ -7,11 +7,12 @@
 | Lane | Status now | Next proof / delivery |
 |---|---|---|
 | Rock Hop deployment | [Production workflow](https://github.com/Raynos/rockhop/actions/runs/36418092040) passed; https://playrockhop.vercel.app/version.json matches committed `main` (`f9f7a05b`). The old project is `rockhop-legacy-archive`, its rolling alias returns 404, and pinned v0.2.2 still returns 200. | Ship later qualified remaster commits through the same `main` workflow. No local directory rename. |
-| Playable challenge | Main 12 only; free rides removed. C1 brake and C2 jump changes pass exact replay and their clips were accepted. | Qualify real-time landscape phone touch, fix cached boot and ship-gate misses, then redesign C3–S3 against held-GO and attempts-to-clear evidence. |
+| All 12 course difficulties | Main 12 only; free rides removed. C1 brake and C2 jump changes pass exact replay and their clips were accepted, but the full difficulty target is **not done**. | Retarget **C1–S3, all 12 courses**: every clear should require deliberate control, held GO must fail the intended medal/challenge, and medal clocks must match tested attempts-to-clear. Validate with a bot and new landscape phone players, then rename difficulty labels from measured results. |
 | Bike + career | The 800-Scrap Pro purchase, one-time medal improvement rewards, saved ownership and result payout are implemented locally; Diamond is the player-facing top medal. | Land the tested loop. Author optional Pro-favored Diamond lines on D3/S1/S2/S3 through geometry and measured bike behavior; keep all 12 finishable on Starter. |
-| C island map | C selected; 12 flagged 3D towers and four-biome route remain. A further standalone art pass is under review. | Judge the played orbit and every tower tap, improve toward the selected image, qualify landscape iPhone performance, then replace the live image map with real campaign state and Ride navigation. |
+| C island map | C selected; [second played polish pass](../evidence/world-map-c/polish-round-2/README.md) preserves 12 flagged 3D towers and four biomes, with 12/12 taps and 612 front draw calls. | Improve remaining procedural repetition, qualify landscape iPhone performance, then replace the live image map with real C1–S3 labels, campaign state and Ride navigation. |
 | Front end | Hero restored; menu alignment, startup flash, portrait rotate prompt, loading bottom bar and pixel stability have fixes/evidence at different stages. Finish layout accepted. | Recheck cold/cached boot and a real phone video; confirm the actual main menu and finish screen remain stable and legible in landscape. |
 | Full-game audit | [Played audit](../evidence/gameplay-audit/README.md), [visual review](../evidence/gameplay-audit/VISUAL_REVIEW.md), screenshots/trailers and ranked top 20 exist. | Close each priority with played evidence, not a checklist claim; focus on graphics, model quality, skill gates, content loop and replayability before store submission. |
+| Repository cleanup | The original 115-file backlog was committed in small rounds; the repo is now `Raynos/rockhop`. This round's earned-bike loop is committed as `487db605`; map and route research still have owned working files. | Keep one coherent commit per qualified round, update this plan index and ask ledger at each commit, and leave unfinished release work off `main`. |
 | Store release | Web and native shells exist, but this is not yet a finished App Store / Play Store game. | Pass iPhone and Android builds, performance, privacy/support listing and store review gates after the game itself qualifies. |
 
 The current delivery order is **production URL → earned-bike loop → C map art/performance/integration → 12-course challenge → device and store gates**. A production deploy of committed `main` does not imply these in-progress remaster features are shipped.
@@ -23,13 +24,19 @@ The current delivery order is **production URL → earned-bike loop → C map ar
 - Put the earned amount, wallet and next bike goal on the actual finish ticket. Preserve PB ghost, career medal and reward across reload, replay, reset and offline use.
 - Gate with save-migration/idempotence tests, real Garage/result browser interaction at phone landscape size, a deterministic completed ride and a full serial suite. Keep work off `main` until its ship gate and touch check pass.
 
-## 2. Bike purpose and Diamond routes
+## 2. Retarget all twelve courses
+
+- Audit C1–S3 against the user's report that holding GO clears the game. Keep C1's brake skill and C2's flight correction as starting candidates, then tune all twelve for escalating challenge and rapid restarts. A passed deterministic replay alone is not a difficulty pass.
+- For each course, record held-GO behavior, a skilled zero-fault route for both available bikes, Bronze/Silver/Gold/Diamond time bands, bot attempts-to-clear, and a new player's landscape phone attempts-to-clear and restart latency. Make every obstacle readable before it punishes a mistake.
+- Re-test C1 and C2 after the whole-campaign curve is set; their accepted clips are visual approval, not proof that their difficulty is final. Name difficulty bands from the results rather than forcing the whole campaign to start at Hard.
+
+## 3. Bike purpose and Diamond routes
 
 - Measure the existing bikes before changing physics. The 585-case role sweep found a modest stock-Pro climb/rough-landing advantage and a precision disadvantage; stronger presets were inconsistent. Keep the shipped physics while a real alternate line is authored and proven.
-- Give D3, S1, S2 and S3 optional Diamond lines that are reachable through geometry and skilled second-bike control, while Rookie can still finish their main routes. Prove the distinction by broad input search and played clips, never by a bike-ID medal ban. This is a later round if the current save/UI loop qualifies first.
+- Give D3, S1, S2 and S3 optional Diamond lines that are reachable through geometry and skilled second-bike control, while Starter can still finish their main routes. The [D3 proof](../evidence/d3-pro-route/README.md) shows today's Starter golden already earns the top medal at 33.558 s; closed-solid platforms and time-only scoring cannot express a real upper/lower route. Add an open-underneath collider and a deterministic high-route goal before authoring the four lines. Prove the distinction by broad input search and played clips, never by a bike-ID medal ban.
 - Tune medal clocks against real challenge and touch players; do not award Diamond for a passive accelerator-only clear.
 
-## 3. C island world map
+## 4. C island world map
 
 - The user selected the [actual C prototype front view](../evidence/world-map-c/fidelity-pass/after/art-front.png). Retain its four-biome island, continuous 12-stop road and 3D rally flag towers. Improve coast, forest, quarry, snow, harbor, water, terrain materials and depth through a full orbit.
 - Judge moving front, three-quarter and reverse phone-size captures against the selected screenshot and [C concept board](../../assets/design/worldmap-3d/mockups/map-styles/C/board-3x3.jpg). Verify all 12 tower taps and portrait rotate prompt. Measure draw calls, triangles and a physical landscape iPhone before replacing the live image map.
