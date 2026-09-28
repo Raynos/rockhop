@@ -1,0 +1,501 @@
+{
+  "rows": [
+    {
+      "id": "c1-low-tide",
+      "tier": "beginner",
+      "technique": "throttle control",
+      "demands": "the causeway: a pallet ramp onto three containers, stepping up 0.3 m a container on pallet wedges, and the gangway down",
+      "finishX": 449.6,
+      "checkpoints": [
+        88,
+        179.6,
+        291.6
+      ],
+      "colliders": 18,
+      "hazards": 0,
+      "placed": 17,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": null
+        },
+        {
+          "bike": "pro",
+          "cleared": true,
+          "firstFault": null
+        }
+      ]
+    },
+    {
+      "id": "c2-crane-hop",
+      "tier": "beginner",
+      "technique": "the jump: gas to the lip, off in the air",
+      "demands": "the crane hop: a 14 deg kicker off the apron over 5.5 m of harbour onto a container barge",
+      "finishX": 395.9,
+      "checkpoints": [
+        87,
+        187.4,
+        271.4
+      ],
+      "colliders": 26,
+      "hazards": 2,
+      "placed": 24,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": null
+        },
+        {
+          "bike": "pro",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 140.66,
+            "checkpoint": 0,
+            "time": 10.69,
+            "nearestPlaced": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3-hull-breach",
+      "tier": "easy",
+      "technique": "uphill weight and the rear-wheel-first landing",
+      "demands": "the breach: up 40 deg bow plating onto the deck, then off the torn deck edge in one flight onto the beach ramp",
+      "finishX": 434.521437,
+      "checkpoints": [
+        46.4,
+        134.041109,
+        230.241109,
+        336.521437
+      ],
+      "colliders": 31,
+      "hazards": 2,
+      "placed": 26,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 273.51,
+            "checkpoint": 2,
+            "time": 21.24,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 268.52,
+              "distance": 4.99
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 277.32,
+            "checkpoint": 2,
+            "time": 21.43,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 268.52,
+              "distance": 8.8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "a1-sawdust",
+      "tier": "easy",
+      "technique": "stairs at speed and the rear-wheel-first landing",
+      "demands": "the flume: along the 1.6 m trough and off its lip over 6 m of mill pond onto the landing deck",
+      "finishX": 393.8,
+      "checkpoints": [
+        45.6,
+        193,
+        277.8
+      ],
+      "colliders": 29,
+      "hazards": 2,
+      "placed": 26,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": null
+        },
+        {
+          "bike": "pro",
+          "cleared": true,
+          "firstFault": null
+        }
+      ]
+    },
+    {
+      "id": "a2-log-jam",
+      "tier": "medium",
+      "technique": "logs: piles, loose logs, the big log and the teetering log",
+      "demands": "the jam: a 3.5 m jump onto a 22 deg teetering log, then a five-log two-row pile",
+      "finishX": 391.5,
+      "checkpoints": [
+        24,
+        115,
+        274
+      ],
+      "colliders": 44,
+      "hazards": 1,
+      "placed": 22,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 58.42,
+            "checkpoint": 0,
+            "time": 5.76,
+            "nearestPlaced": null
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 57.88,
+            "checkpoint": 0,
+            "time": 6.09,
+            "nearestPlaced": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "a3-timberline",
+      "tier": "medium",
+      "technique": "the hop, and the thin landing on a beam",
+      "demands": "the log loader: a kicker onto the truck bed, a 0.38 m hop onto the load and a 1.5 m hop across to the landing",
+      "finishX": 343.7,
+      "checkpoints": [
+        24,
+        85,
+        174,
+        226.2
+      ],
+      "colliders": 31,
+      "hazards": 4,
+      "placed": 27,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 189.82,
+            "checkpoint": 2,
+            "time": 15.27,
+            "nearestPlaced": {
+              "kind": "box",
+              "x": 190.2,
+              "distance": 0.38
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 38.19,
+            "checkpoint": 0,
+            "time": 4.92,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 38,
+              "distance": 0.19
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d1-dust-devil",
+      "tier": "medium",
+      "technique": "the hop onto blocks, the cut terraces, and the whoops at speed",
+      "demands": "the terraces: a 0.4 m hop and three 0.3 m cut steps up to 1.3 m, off the top; then a 1.4 m hop across the drill trench",
+      "finishX": 374,
+      "checkpoints": [
+        24,
+        75.4,
+        182.4,
+        259
+      ],
+      "colliders": 24,
+      "hazards": 1,
+      "placed": 21,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 99.09,
+            "checkpoint": 1,
+            "time": 9.37,
+            "nearestPlaced": {
+              "kind": "ledge",
+              "x": 98.4,
+              "distance": 0.69
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 38.19,
+            "checkpoint": 0,
+            "time": 4.92,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 38,
+              "distance": 0.19
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d2-conveyor",
+      "tier": "hard",
+      "technique": "momentum climbs up the belts and the spinning pulley",
+      "demands": "the head pulley: the 45 deg main belt to 3.0 m, a 0.4 m hop onto the drive frame, the spinning head drum, the tail chute down; then the ore-cart run",
+      "finishX": 457.751169,
+      "checkpoints": [
+        24,
+        119.326926,
+        194.926926,
+        333.251169
+      ],
+      "colliders": 46,
+      "hazards": 3,
+      "placed": 39,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 65.6,
+            "checkpoint": 0,
+            "time": 6.76,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 61.33,
+              "distance": 4.27
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 64.2,
+            "checkpoint": 0,
+            "time": 7.03,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 61.33,
+              "distance": 2.87
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d3-rope-walk",
+      "tier": "hard",
+      "technique": "the rear-wheel crossing and the lip climb",
+      "demands": "the rope walk: up onto the bridge deck at 1.5 m and across six missing boards on the rear wheel",
+      "finishX": 457.1,
+      "checkpoints": [
+        24,
+        106,
+        169,
+        251.6,
+        337.3
+      ],
+      "colliders": 32,
+      "hazards": 23,
+      "placed": 44,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 199.38,
+            "checkpoint": 2,
+            "time": 16.02,
+            "nearestPlaced": {
+              "kind": "gap",
+              "x": 199.5,
+              "distance": 0.12
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 139.3,
+            "checkpoint": 1,
+            "time": 11.38,
+            "nearestPlaced": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "s1-lift-line",
+      "tier": "hard",
+      "technique": "tower caps and the ice-shelf gap chain",
+      "demands": "the lift line: three tower caps climbing 1.3 -> 1.6 m over the crevasse, off the top station",
+      "finishX": 437.865276,
+      "checkpoints": [
+        24,
+        145.7,
+        236.5,
+        332.065276
+      ],
+      "colliders": 49,
+      "hazards": 5,
+      "placed": 39,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": true,
+          "firstFault": {
+            "reason": "crash",
+            "x": 89.44,
+            "checkpoint": 0,
+            "time": 7.87,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 88.5,
+              "distance": 0.94
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": true,
+          "firstFault": null
+        }
+      ]
+    },
+    {
+      "id": "s2-cornice",
+      "tier": "extreme",
+      "technique": "ice faces, the spinning rollers and the fence hop",
+      "demands": "the cornice: a 45 deg ice wall onto the ridge, along the cornice and off its wind lip over the crevasse onto the ice shelf",
+      "finishX": 459.424243,
+      "checkpoints": [
+        24,
+        110,
+        241.424243,
+        359.824243
+      ],
+      "colliders": 45,
+      "hazards": 11,
+      "placed": 43,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 167.36,
+            "checkpoint": 1,
+            "time": 14.38,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 167.42,
+              "distance": 0.06
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": false,
+          "firstFault": {
+            "reason": "hazard",
+            "x": 165.63,
+            "checkpoint": 1,
+            "time": 13.72,
+            "nearestPlaced": {
+              "kind": "ramp",
+              "x": 167.42,
+              "distance": 1.79
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3-whiteout",
+      "tier": "extreme",
+      "technique": "everything, closer together",
+      "demands": "the summit: a climbing ice-shelf chain to 2.2 m, four summit tower caps at 2.55 m over the crevasse, off the station and down",
+      "finishX": 425.1,
+      "checkpoints": [
+        24,
+        111.5,
+        192.9,
+        271.1
+      ],
+      "colliders": 47,
+      "hazards": 13,
+      "placed": 46,
+      "results": [
+        {
+          "bike": "rookie",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 53.84,
+            "checkpoint": 0,
+            "time": 5.53,
+            "nearestPlaced": {
+              "kind": "gap",
+              "x": 54.5,
+              "distance": 0.66
+            }
+          }
+        },
+        {
+          "bike": "pro",
+          "cleared": false,
+          "firstFault": {
+            "reason": "crash",
+            "x": 53.78,
+            "checkpoint": 0,
+            "time": 5.9,
+            "nearestPlaced": {
+              "kind": "gap",
+              "x": 54.5,
+              "distance": 0.72
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
