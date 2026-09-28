@@ -10,13 +10,13 @@ export function mountWorldMap3D(root, onSelect, initialIndex = 0, locked = []) {
 let disposed = false;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#8db4c2');
-scene.fog = new THREE.FogExp2('#9bced0', 0.008);
+scene.fog = new THREE.FogExp2('#9bced0', 0.0045);
 const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
 renderer.setSize(root.clientWidth, root.clientHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.02;
+renderer.toneMappingExposure = .94;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFShadowMap;
 root.appendChild(renderer.domElement);
@@ -38,9 +38,9 @@ controls.maxAzimuthAngle = Infinity;
 controls.minAzimuthAngle = -Infinity;
 controls.update();
 
-const hemi = new THREE.HemisphereLight('#d4e9e8', '#687064', 1.13);
+const hemi = new THREE.HemisphereLight('#d4e9e8', '#49564d', .86);
 scene.add(hemi);
-const sun = new THREE.DirectionalLight('#ffe4bc', 2.25);
+const sun = new THREE.DirectionalLight('#ffe4bc', 2.10);
 sun.position.set(-22, 45, 33);
 sun.castShadow = true;
 sun.shadow.mapSize.set(1024, 1024);
@@ -52,7 +52,7 @@ sun.shadow.camera.near = 1;
 sun.shadow.camera.far = 110;
 sun.shadow.bias = -0.0003;
 scene.add(sun);
-const fill = new THREE.DirectionalLight('#a9dfe9', .54);
+const fill = new THREE.DirectionalLight('#a9dfe9', .34);
 fill.position.set(22, 20, -22);
 scene.add(fill);
 
@@ -463,12 +463,12 @@ function firGeometry(snowy,species){
 const trunkGeo=new THREE.CylinderGeometry(.044,.095,.65,6),trunkMat=mat('#514433');
 const foliageMat=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide});
 const treeKinds=[
- {snowy:false,species:0,capacity:130,core:'#28553e'},
- {snowy:false,species:1,capacity:110,core:'#1a493a'},
- {snowy:false,species:2,capacity:85,core:'#526b40'},
- {snowy:true,species:0,capacity:48,core:'#315c50'},
- {snowy:true,species:1,capacity:48,core:'#254b43'},
- {snowy:true,species:2,capacity:35,core:'#566c55'},
+ {snowy:false,species:0,capacity:170,core:'#28553e'},
+ {snowy:false,species:1,capacity:160,core:'#1a493a'},
+ {snowy:false,species:2,capacity:125,core:'#526b40'},
+ {snowy:true,species:0,capacity:65,core:'#315c50'},
+ {snowy:true,species:1,capacity:65,core:'#254b43'},
+ {snowy:true,species:2,capacity:50,core:'#566c55'},
 ].map(kind=>({
  ...kind,count:0,
  trunk:new THREE.InstancedMesh(trunkGeo,trunkMat,kind.capacity),
@@ -477,9 +477,9 @@ const treeKinds=[
 }));
 const dum=new THREE.Object3D();
 let nForest=0,nSnow=0;
-for(let tries=0;tries<12000&&(nForest<255||nSnow<120);tries++){
+for(let tries=0;tries<15000&&(nForest<350||nSnow<145);tries++){
  const x=rr(-23.6,24.1),z=rr(-8.7,8.7); if(edgeDistance(x,z)>.87 || Math.abs(routeZ(x)-z)<4.55)continue;
- const snowy=x>12.5; if(snowy ? nSnow>=120 : nForest>=255)continue;
+ const snowy=x>12.5; if(snowy ? nSnow>=145 : nForest>=350)continue;
  if(!snowy&&(x>1.8&&x<13.0 || x<-11.2&&rand()<.71))continue;
  if(x>-8.0&&x<-2.9&&z>3.5&&z<8.0)continue;
  // Three cuttings through the back-facing woodland keep the route and its
