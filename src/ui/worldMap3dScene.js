@@ -1,7 +1,9 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-const skyImageUrl = '/prototypes/world-map-c/assets/sky-alpine-a.png';
+const skyImageUrl = import.meta.env.DEV
+  ? '/prototypes/world-map-c/assets/sky-alpine-a.png'
+  : '/map-review/sky-alpine-a.png';
 
 // Lazy 3D review map. The same procedural island as the selected C prototype
 // is mounted only while the map screen is open; all stage navigation stays in
@@ -576,6 +578,33 @@ for(const kind of treeKinds)for(const obj of [kind.trunk,kind.canopy,kind.core])
  // shades in the sun, while the software shadow pass loses most tiny triangles.
  obj.castShadow=obj===kind.trunk||(obj===kind.canopy&&kind.species===0);
  obj.receiveShadow=true;terrain.add(obj);
+}
+
+// The selected island has a tall woodland skyline behind the trail. Fill the
+// far ridge with staggered crowns, while leaving the three narrow sightlines
+// through the reverse view open. Shared tree geometry keeps this to three
+// instanced draws; the nearer randomized stands still shape the clearings.
+const skylineCapacity=84;
+const skylineTrunks=new THREE.InstancedMesh(trunkGeo,trunkMat,skylineCapacity);
+const skylineCrowns=new THREE.InstancedMesh(treeKinds[0].canopy.geometry,foliageMat,skylineCapacity);
+const skylineCores=new THREE.InstancedMesh(treeKinds[0].core.geometry,treeKinds[0].core.material,skylineCapacity);
+let skylineCount=0;
+for(let row=0;row<3;row++)for(let col=0;col<29;col++){
+ const x=-10.9+col*.46+(hash2(col+41,row+7)-.5)*.30;
+ const z=-5.35-row*.78+(hash2(col+19,row+27)-.5)*.52;
+ if(skylineCount>=skylineCapacity||edgeDistance(x,z)>.83||z>routeZ(x)-4.1)continue;
+ if([[-8.7,.47],[-4.3,.42],[-.2,.48]].some(([center,halfWidth])=>Math.abs(x-center)<halfWidth))continue;
+ const h=groundHeight(x,z),scale=1.15+row*.13+.36*hash2(col+73,row+13);
+ const turn=hash2(col+5,row+67)*Math.PI*2;
+ const index=skylineCount++;
+ dum.position.set(x,h+.29*scale,z);dum.rotation.set(0,turn,0);dum.scale.setScalar(scale);dum.updateMatrix();
+ skylineTrunks.setMatrixAt(index,dum.matrix);
+ dum.position.set(x,h,z);dum.updateMatrix();skylineCrowns.setMatrixAt(index,dum.matrix);
+ dum.position.set(x,h+.96*scale,z);dum.updateMatrix();skylineCores.setMatrixAt(index,dum.matrix);
+ skylineCrowns.setColorAt(index,new THREE.Color('#ffffff').multiplyScalar(.84+.24*hash2(col+97,row+41)));
+}
+for(const obj of [skylineTrunks,skylineCrowns,skylineCores]){
+ obj.count=skylineCount;obj.castShadow=false;obj.receiveShadow=true;terrain.add(obj);
 }
 
 // Mixed broadleaf clumps open the solid wall of identical conifer points.

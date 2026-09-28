@@ -24,6 +24,10 @@ import { wantsHiRes } from '../boot/tier';
 import { allMarkers, buildRegions, fitZoom, FLY_MS, fogPatches, frameFor, locate, MAP, nextGate, PLATE_LEFT, regionPlateSrc, routePath, TAP_SLOP, tierBlend, worldPlateSrc, ZOOM, type FogPatch, type Gate, type Marker, type Region, type RegionId } from './worldMap';
 import { injectWorldMapStyles } from './worldMapStyles';
 import type { MountedWorldMap3DReview } from './worldMap3dScene';
+declare const __MAP3D_REVIEW__: boolean;
+
+// A separate preview build can opt into the unfinished island for phone review.
+// Normal web and store builds fold this branch and its dynamic import away.
 
 interface Cam {
   x: number;
@@ -108,7 +112,7 @@ export class WorldMapScreen extends Screen {
   ) {
     super(parent, 'tracks-screen worldmap-screen');
     injectWorldMapStyles();
-    this.map3dEnabled = import.meta.env.DEV && new URLSearchParams(window.location.search).get('map3d') === '1';
+    this.map3dEnabled = (import.meta.env.DEV || __MAP3D_REVIEW__) && new URLSearchParams(window.location.search).get('map3d') === '1';
     this.root.classList.toggle('wm3d-enabled', this.map3dEnabled);
     this.view = el('div', 'wm-view');
     this.scene = el('div', 'wm-scene');
@@ -960,7 +964,7 @@ export class WorldMapScreen extends Screen {
 
   /** The 3D scene is a review-only, late-loaded renderer. The painted map stays the default and fallback. */
   private async start3d(): Promise<void> {
-    if (!import.meta.env.DEV) return; // Vite folds the import out of every production build.
+    if (!import.meta.env.DEV && !__MAP3D_REVIEW__) return;
     if (!this.map3dEnabled || this.map3dScene || this.map3dLoading || !this.visible) return;
     const token = ++this.map3dToken;
     this.map3dLoading = true;

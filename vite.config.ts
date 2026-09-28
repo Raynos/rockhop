@@ -24,6 +24,21 @@ const esbuild = createRequire(createRequire(import.meta.url).resolve('vite'))('e
  */
 const STORE_BUILD = process.env['VITE_STORE'] === '1';
 const STORE_DEBUG = process.env['VITE_STORE_DEBUG'] === '1';
+const MAP_REVIEW_BUILD = !STORE_BUILD && process.env['VITE_MAP_3D_REVIEW'] === '1';
+
+/** Ship the prototype's sky only in an explicit C-island review build. */
+function mapReviewSky(): Plugin {
+  return {
+    name: 'rockhop:map-review-sky',
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'map-review/sky-alpine-a.png',
+        source: fs.readFileSync(path.resolve('prototypes/world-map-c/assets/sky-alpine-a.png')),
+      });
+    },
+  };
+}
 
 /**
  * `src/core/release.ts` as literal constants for this build. The module itself reads `import.meta.env` (so vitest
@@ -108,7 +123,7 @@ function bundleBudget(): Plugin {
         if (item.type === 'chunk' ? false : !name.endsWith('.js')) continue;
         const gz = gzipSync(item.type === 'chunk' ? Buffer.from(item.code) : Buffer.from(item.source)).length;
         // Explicit review-only chunks are absent from normal player boot: listed, not budgeted.
-        const dev = DEV_CHUNK.test(name);
+        const dev = DEV_CHUNK.test(name) || (MAP_REVIEW_BUILD && /^assets\/worldMap3dScene-[\w-]+\.js$/.test(name));
         if (!dev) total += gz;
         rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${dev ? '  (dev-only, not budgeted)' : ''}`);
       }
@@ -312,7 +327,7 @@ function loadManifest(id: string): Plugin[] {
         let phase: LoadItem['phase'] = 'core';
         // Lazy chunks (the review inbox sheet) are fetched on demand, never streamed by the boot; the offline pack
         // warms every `other` item (src/main.ts). The retired tracks' dev chunk is `dev`: only a `?` dev URL fetches it.
-        if (name === 'model-catalog.json' || name.startsWith('assets/inbox-')) phase = 'other';
+        if (name === 'model-catalog.json' || name.startsWith('assets/inbox-') || name.startsWith('assets/worldMap3dScene-') || name.startsWith('map-review/')) phase = 'other';
         else if (DEV_CHUNK.test(name)) phase = 'dev';
         else if (/worklet/.test(name)) phase = 'audio-worklet';
         else if (/\.(glb|gltf)$/.test(name)) phase = /-lod-[a-f0-9]{16}\.glb$/.test(name) ? 'models-lod' : 'models';
@@ -600,13 +615,13 @@ function buildId(): string {
 }
 
 export default defineConfig({
-  define: { __BUILD_ID__: JSON.stringify(buildId()), __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + 'Z'), __WORLDMAP_V__: JSON.stringify(contentStamp(publicStamp(process.cwd(), ['art/worldmap'])).slice(0, 8)) },
+  define: { __BUILD_ID__: JSON.stringify(buildId()), __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + 'Z'), __WORLDMAP_V__: JSON.stringify(contentStamp(publicStamp(process.cwd(), ['art/worldmap'])).slice(0, 8)), __MAP3D_REVIEW__: JSON.stringify(MAP_REVIEW_BUILD) },
   // Relative base so the built bundle also works when served from a subpath
   // (Vercel preview folders, file listings, the harness preview server).
   base: './',
   // versionJson last: its `generateBundle` must run after the load manifest and the worker stamp are taken.
   // A store build has no service worker and no update probe (Apple 2.5.2: nothing loads code from a server).
-  plugins: [releaseFlags(), retiredTracksLazy(), readableStacks((name) => name === 'three'), bundleBudget(), ...loadManifest(buildId()), ...(STORE_BUILD ? [] : [pwa(buildId())]), pruneFlatModels(), ...(STORE_BUILD ? [storePrune()] : [versionJson(buildId())]), sourcemapsOut()],
+  plugins: [releaseFlags(), retiredTracksLazy(), readableStacks((name) => name === 'three'), bundleBudget(), ...(MAP_REVIEW_BUILD ? [mapReviewSky()] : []), ...loadManifest(buildId()), ...(STORE_BUILD ? [] : [pwa(buildId())]), pruneFlatModels(), ...(STORE_BUILD ? [storePrune()] : [versionJson(buildId())]), sourcemapsOut()],
   // Unmangled identifiers in production: the crash screen's stack must name functions on a phone (`readableStacks`).
   esbuild: { minifyIdentifiers: false },
   worker: { plugins: () => [readableStacks(() => true)] },

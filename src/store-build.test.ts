@@ -42,11 +42,13 @@ function build(name: string, env: Record<string, string>): Built {
 
 let web: Built;
 let store: Built;
+let mapReview: Built;
 
 beforeAll(() => {
-  const { VITE_STORE: _s, VITE_STORE_DEBUG: _d, ...clean } = process.env;
+  const { VITE_STORE: _s, VITE_STORE_DEBUG: _d, VITE_MAP_3D_REVIEW: _m, ...clean } = process.env;
   web = build('web', clean as Record<string, string>);
   store = build('store', { VITE_STORE: '1' });
+  mapReview = build('map-review', { VITE_MAP_3D_REVIEW: '1' });
 }, 120_000);
 
 afterAll(() => {
@@ -90,6 +92,13 @@ describe('store build (VITE_STORE=1) compiles out every dev surface', () => {
     expect(store.files.some((f) => f.startsWith('assets/sky-alpine-a-'))).toBe(false);
     expect(web.text).not.toContain('3D map unavailable; using painted map');
     expect(store.text).not.toContain('3D map unavailable; using painted map');
+  });
+
+  it('puts the C-island scene and its sky only in an explicit map-review build', () => {
+    expect(mapReview.files.some((f) => f.startsWith('assets/worldMap3dScene-'))).toBe(true);
+    expect(mapReview.files).toContain('map-review/sky-alpine-a.png');
+    expect(web.files).not.toContain('map-review/sky-alpine-a.png');
+    expect(store.files).not.toContain('map-review/sky-alpine-a.png');
   });
 
   it('the native platform layer (Capacitor, src/platform) ships in the store build only — the web bundle has none of it', () => {
