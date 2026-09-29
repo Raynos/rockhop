@@ -38,6 +38,16 @@ const opt = (n) => {
 
 const WEB_DIR = join(repo, 'store', 'build', 'web');
 const run = (cmd, a, env = {}, cwd = repo) => execFileSync(cmd, a, { cwd, stdio: 'inherit', env: { ...process.env, ...env } });
+const exportPaths = [
+  'src',
+  'public',
+  'assets/worldmap', // the lazy C island imports its compressed sky from outside src/public
+  'index.html',
+  'vite.config.ts',
+  'package.json',
+  'tsconfig.json',
+  'harness/inputs',
+];
 
 // 0. The source: HEAD, exported clean (only what the build and the gate read), unless --from-tree.
 const sha = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: repo, encoding: 'utf8' }).trim();
@@ -48,7 +58,7 @@ if (!fromTree) {
   if (!existsSync(join(src, '.complete'))) {
     rmSync(src, { recursive: true, force: true });
     mkdirSync(src, { recursive: true });
-    const tar = execFileSync('git', ['archive', '--format=tar', sha, '--', 'src', 'public', 'index.html', 'vite.config.ts', 'package.json', 'tsconfig.json', 'harness/inputs'], { cwd: repo, maxBuffer: 1 << 30 });
+    const tar = execFileSync('git', ['archive', '--format=tar', sha, '--', ...exportPaths], { cwd: repo, maxBuffer: 1 << 30 });
     execFileSync('tar', ['-x', '-C', src], { input: tar, maxBuffer: 1 << 30 });
     symlinkSync(join(repo, 'node_modules'), join(src, 'node_modules'), 'dir');
     writeFileSync(join(src, '.complete'), `${sha}\n`);

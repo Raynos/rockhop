@@ -145,10 +145,10 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      # VITE_STORE=1 into store/build/web (refused if the automation hook survived), then `cap sync` into ios/ and
-      # android/. On Linux the iOS half is the web copy + Package.swift; the Xcode build is the Mac's (RELEASE-RECIPE).
+      # Build from the same clean Git export used for signed local releases. This catches assets that
+      # exist in the checkout but were omitted from the archive before either store shell is synced.
       - name: Store bundle + cap sync
-        run: node scripts/store-build.mjs release --from-tree   # the CI checkout is the commit itself
+        run: node scripts/store-build.mjs release
 
       - name: Store listing (lengths, denied terms)
         run: node scripts/store-metadata.mjs
