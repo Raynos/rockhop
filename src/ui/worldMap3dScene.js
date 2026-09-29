@@ -1166,9 +1166,108 @@ for(let i=0;i<11;i++){
  const x=rr(-8.1,-3.4),z=rr(4.0,6.6),y=groundHeight(x,z);
  const log=cylinder(.14,.14,1.5,woodTop,x,y+.2,z);log.rotation.z=Math.PI/2;log.castShadow=true;
 }
-// Quarry machinery, snow chalet and cable pylons are recognizable from wide view.
+// Quarry machinery and cable pylons are recognizable from wide view.
 building(10.6,-5.8,1.8,1.25,mat('#705a48'),mat('#494843'));
-building(18.5,-2.6,1.7,1.2,mat('#c6c9c2'),mat('#ab6149'));
+// The upper pass is a tiny inhabited village, not a repeated prop cabin. Each
+// house sits on its own stone footing; the roof silhouettes, balconies and
+// timber frames stay legible from the road and from a reverse orbit. Snow is
+// geometry laid across the slate roof, rather than a screen-facing decal.
+const villageStone=mat('#89999a'),villageStoneDark=mat('#647a7c');
+const villageTimber=mat('#694f3e'),villageTrim=mat('#ae8d6b');
+const villageRoof=mat('#445864'),villageRoofDark=mat('#33454e');
+const villageSnow=mat('#e3ece9'),villageSnowBright=mat('#faf8e9');
+const villageGlass=mat('#254b54',.28,.12);
+const villageWindowGlow=new THREE.MeshStandardMaterial({color:'#e9bb76',emissive:'#9d6332',emissiveIntensity:.62,roughness:.36});
+const villageRoot=new THREE.Group();terrain.add(villageRoot);
+function alpineHouse(x,z,w,d,angle,wallColor,kind=0){
+ const house=new THREE.Group();house.position.set(x,groundHeight(x,z)+.04,z);house.rotation.y=angle;villageRoot.add(house);
+ const wall=mat(wallColor),half=w*.5,sideHeight=kind===1?.96:1.12,roofRise=kind===2?.57:.70;
+ const foot=box(w+.21,.35,d+.18,villageStone,0,.15,0,house);foot.castShadow=true;
+ box(w+.30,.095,d+.26,villageStoneDark,0,.34,0,house);
+ const body=box(w,sideHeight,d,wall,0,.39+sideHeight*.5,0,house);body.castShadow=true;
+ // Gable triangles close the ends; the two broad pitches have true thickness.
+ const gable=new THREE.Shape();gable.moveTo(-half,.39+sideHeight);gable.lineTo(half,.39+sideHeight);gable.lineTo(0,.39+sideHeight+roofRise);gable.closePath();
+ const gableGeo=new THREE.ShapeGeometry(gable);
+ for(const face of [-1,1]){
+   const end=mesh(gableGeo,wall,0,0,face*d*.5,house);end.material.side=THREE.DoubleSide;
+   const rail=box(w+.08,.075,.055,villageTimber,0,.40+sideHeight,face*(d*.5+.025),house);rail.castShadow=true;
+ }
+ const roofHalf=half+.18,angleRoof=Math.atan2(roofRise,half),roofLength=Math.hypot(roofHalf,roofRise)+.02;
+ for(const side of [-1,1]){
+   const pitch=box(roofLength,.115,d+.35,side===1?villageRoof:villageRoofDark,side*roofHalf*.46,.43+sideHeight+roofRise*.48,0,house);
+   pitch.rotation.z=-side*angleRoof;pitch.castShadow=true;
+   // Broken snow shelves follow each roof slope. A clear dark strip at the
+   // eave keeps the building readable on the pale winter terrain.
+   const snowShelf=box(roofLength*.82,.047,d+.38,side===1?villageSnowBright:villageSnow,side*roofHalf*.42,.54+sideHeight+roofRise*.48,0,house);
+   snowShelf.rotation.z=-side*angleRoof;snowShelf.castShadow=true;
+   const fascia=box(.065,.13,d+.41,villageTrim,side*(half+.12),.41+sideHeight,0,house);
+   fascia.rotation.z=-side*angleRoof;fascia.castShadow=true;
+ }
+ const ridge=box(.15,.11,d+.41,villageSnowBright,0,.47+sideHeight+roofRise,0,house);ridge.castShadow=true;
+ // The visible front has a real recessed entry, shutters and a lit window.
+ const front=d*.5+.024;
+ box(.36,.72,.07,villageTimber,-w*.21,.75,front,house);
+ box(.23,.05,.075,villageTrim,-w*.21,1.02,front+.01,house);
+ box(.30,.31,.055,villageWindowGlow,w*.20,.99,front,house);
+ for(const dx of [-.19,.19])box(.065,.35,.075,villageTimber,w*.20+dx,.99,front+.02,house);
+ box(.36,.055,.08,villageTrim,w*.20,.79,front+.04,house);
+ for(const side of [-1,1]){
+   const xx=side*(half+.035);
+   for(const zz of [-d*.24,d*.24]){
+     box(.047,.31,.31,villageGlass,xx,.99,zz,house);
+     box(.07,.36,.045,villageTrim,xx,.99,zz-.17,house);
+     box(.07,.36,.045,villageTrim,xx,.99,zz+.17,house);
+   }
+ }
+ for(const xx of [-half+.09,half-.09])for(const zz of [-d*.5+.06,d*.5-.06]){
+   const post=box(.095,sideHeight,.095,villageTimber,xx,.40+sideHeight*.5,zz,house);post.castShadow=true;
+ }
+ box(w+.04,.10,.12,villageTimber,0,.42,front+.045,house);
+ // Stacked stone chimney with a contrasting cap; the taller lodge has a
+ // small porch and balcony to give the group a hierarchy at phone scale.
+ const chimney=box(.22,.82,.25,villageStoneDark,w*.23,.44+sideHeight+roofRise*.75,-d*.2,house);chimney.castShadow=true;
+ box(.32,.11,.34,villageSnowBright,w*.23,.89+sideHeight+roofRise*.75,-d*.2,house).castShadow=true;
+ if(kind===0){
+   const porch=box(w*.64,.10,.48,villageTimber,0,.39,front+.27,house);porch.castShadow=true;
+   for(const xx of [-w*.26,w*.26]){
+     box(.07,.55,.07,villageTimber,xx,.71,front+.46,house).castShadow=true;
+     box(.08,.07,.49,villageTrim,xx,.99,front+.23,house);
+   }
+   box(w*.57,.07,.08,villageTrim,0,.99,front+.46,house);
+ }
+ return house;
+}
+alpineHouse(18.8,-2.45,1.55,1.38,-.18,'#d9d7c8',1);
+alpineHouse(20.62,-2.20,1.96,1.62,.18,'#c6c5b6',0);
+alpineHouse(17.52,1.65,1.34,1.24,-.34,'#e2ddd0',2);
+// Short stone retainers and timber steps make the houses belong to the slope.
+for(const [x,z,rot,length] of [[18.8,-1.45,-.18,1.70],[20.60,-1.05,.18,2.08],[17.50,2.51,-.34,1.47]]){
+ const y=groundHeight(x,z);
+ const wall=box(length,.26,.18,villageStoneDark,x,y+.12,z,villageRoot);wall.rotation.y=rot;wall.castShadow=true;
+ for(const end of [-1,1]){
+   const cap=box(.15,.32,.24,villageStone,x+end*length*.49,y+.16,z,villageRoot);cap.rotation.y=rot;cap.castShadow=true;
+ }
+}
+// The village has many tiny pieces, but one vertex-painted mesh at runtime.
+// Keep roof, window and stone color while avoiding a draw per plank.
+villageRoot.updateMatrixWorld(true);
+const villageMeshes=[];villageRoot.traverse(object=>{if(object.isMesh)villageMeshes.push(object);});
+const villageInverse=villageRoot.matrixWorld.clone().invert(),villagePieces=[];
+for(const object of villageMeshes){
+ const source=object.geometry,piece=source.index?source.toNonIndexed():source.clone();
+ piece.applyMatrix4(villageInverse.clone().multiply(object.matrixWorld));
+ const color=object.material.color||new THREE.Color('#ffffff'),colors=new Float32Array(piece.attributes.position.count*3);
+ for(let i=0;i<piece.attributes.position.count;i++){
+   colors[i*3]=color.r;colors[i*3+1]=color.g;colors[i*3+2]=color.b;
+ }
+ for(const name of Object.keys(piece.attributes))if(name!=='position'&&name!=='normal')piece.deleteAttribute(name);
+ piece.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));villagePieces.push(piece);
+ object.parent.remove(object);
+}
+const villageGeometry=mergeGeometries(villagePieces,false);
+for(const piece of villagePieces)piece.dispose();
+const villagePaint=mesh(villageGeometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,side:THREE.DoubleSide}),0,0,0,villageRoot);
+villagePaint.castShadow=true;villagePaint.receiveShadow=true;
 // Faceted blue ice tongues and fractured edges make the snow face an actual
 // glacier rather than a white clone of the rocky coast.
 const glacialIce=[mat('#a7cbd0'),mat('#c7dedc'),mat('#6f9ba8')];
