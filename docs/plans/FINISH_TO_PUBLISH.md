@@ -1,6 +1,6 @@
 # ROCKHOP — finish the game, then publish it
 
-**Status:** active; approved by the user on 2026-09-28. This is the release path above the [current session rounds](REMASTER_CURRENT_ROUND.md). The [ranked top 20](GAME_REMASTER_TOP20.md) explains the quality findings; the [12-course brief](COURSE_AND_PROGRESSION_REDESIGN.md) carries the course design. A milestone closes only with played evidence on its candidate source. No estimate or passing bot result by itself declares the game finished. Archive this plan under `project/archive/` only after all six gates pass and the public release is verified.
+**Status:** active; approved by the user on 2026-09-28. This is the release path above the [current session rounds](REMASTER_CURRENT_ROUND.md). The [ranked top 20](GAME_REMASTER_TOP20.md) explains the quality findings; the [twelve-course remaster plan](TWELVE_COURSE_REMASTER.md) carries the current gameplay, model and scene work, with the [earlier brief](COURSE_AND_PROGRESSION_REDESIGN.md) as design history. A milestone closes only with played evidence on its candidate source. No estimate or passing bot result by itself declares the game finished. Archive this plan under `project/archive/` only after all six gates pass and the public release is verified.
 
 ## Release we are building
 
