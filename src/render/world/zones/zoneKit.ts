@@ -312,6 +312,61 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const hullsNear = PB('hull-near', G.hullGeometry(track.def.seed ^ 13, 30), painted);
     const lighthouse = PB('lighthouse', G.lighthouseGeometry(), painted, false);
 
+    // Low Tide's first real hazard needs a cue in the yard itself. The checkpoint gantry tells the
+    // rider where they are; this roadside board tells them what to do before the pallet ramp enters
+    // the tight camera. It has no collider and sits behind the ride line, clear of the bike and HUD.
+    const brakeX = 195.5;
+    if (track.def.id === 'c1-low-tide' && brakeX >= x0 && brakeX < x1) {
+      const y = profileY(profile, brakeX);
+      const z = -2.75;
+      const frame = G.merge([
+        G.box(0.14, 2.5, 0.16, brakeX - 1.48, y + 1.25, z, G.rgb(0x704c30)),
+        G.box(0.14, 2.5, 0.16, brakeX + 1.48, y + 1.25, z, G.rgb(0x704c30)),
+        G.box(3.34, 1.48, 0.16, brakeX, y + 2.5, z, G.rgb(0x233f42)),
+      ]);
+      const mount = new THREE.Mesh(frame, painted);
+      mount.name = 'c1-brake-board-frame';
+      mount.castShadow = true;
+      meshes.push(mount);
+
+      const canvas = document.createElement('canvas');
+      canvas.width = 512;
+      canvas.height = 224;
+      const g = canvas.getContext('2d');
+      if (g) {
+        g.fillStyle = '#e7a52b';
+        g.fillRect(0, 0, 512, 224);
+        g.fillStyle = '#143b42';
+        g.fillRect(12, 12, 488, 200);
+        g.fillStyle = '#f3e8c9';
+        g.font = '900 132px Arial Black, sans-serif';
+        g.textAlign = 'center';
+        g.textBaseline = 'middle';
+        g.fillText('BRAKE', 256, 98);
+        g.fillStyle = '#e7a52b';
+        g.fillRect(26, 171, 460, 27);
+        for (let i = 0; i < 8; i++) {
+          g.fillStyle = '#143b42';
+          g.beginPath();
+          g.moveTo(40 + i * 57, 171);
+          g.lineTo(61 + i * 57, 171);
+          g.lineTo(46 + i * 57, 198);
+          g.lineTo(25 + i * 57, 198);
+          g.fill();
+        }
+        const texture = new THREE.CanvasTexture(canvas);
+        texture.colorSpace = THREE.SRGBColorSpace;
+        texture.anisotropy = 8;
+        const face = fogify(new THREE.MeshStandardMaterial({ map: texture, roughness: 0.86, metalness: 0 }));
+        lib.complete(face);
+        const sign = new THREE.Mesh(new THREE.PlaneGeometry(3.18, 1.38), face);
+        sign.position.set(brakeX, y + 2.5, z + 0.09);
+        sign.name = 'c1-brake-board-face';
+        meshes.push(sign);
+        textureBytes += 512 * 224 * 4;
+      }
+    }
+
     /** A container stack (1–h high) at (x, z), `ry` along x or turned. */
     const stack = (x: number, z: number, h: number, ry = 0, far = false): void => {
       const b = far ? containersFar : containers;
