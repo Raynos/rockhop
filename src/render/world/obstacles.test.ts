@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { expect, it, vi } from 'vitest';
 import { compileTrack, getTrack, hashColliders } from '../../tracks';
 import type { MaterialLibrary } from '../materials/library';
+import { MaterialLibrary as RealMaterialLibrary } from '../materials/library';
 import { buildObstacles } from './obstacles';
 
 it('Snow Line retains its wood ramps, crate and plank in one material batch without merge errors', () => {
@@ -48,4 +49,26 @@ it('Container Step skins retain the exact authored collision and batch both refe
   expect(result.group.getObjectByName('obstacles:labContainerIvory')).toBeDefined();
   expect(result.group.getObjectByName('obstacles:darkSteel')).toBeDefined();
   expect(result.drawCalls).toBeLessThan(10);
+});
+
+it('D3 high bridge adds a truss below the one-way deck and keeps the lower road open', () => {
+  const track = compileTrack(getTrack('d3-rope-walk')!);
+  const placed = track.placed.find((p) => p.kind === 'open-platform')!;
+  const deckOnly = { ...track, placed: [placed], colliders: track.colliders.filter((c) => placed.colliderIds.includes(c.id)), hazards: [] };
+  const collisionHash = hashColliders(track.colliders);
+  const bridge = buildObstacles(deckOnly, new RealMaterialLibrary(1));
+  const generic = buildObstacles({ ...deckOnly, def: { ...track.def, id: 'other-track' } }, new RealMaterialLibrary(1));
+  expect(hashColliders(track.colliders)).toBe(collisionHash);
+  expect(bridge.drawCalls).toBe(generic.drawCalls);
+  expect(bridge.triangles).toBeGreaterThan(generic.triangles);
+  expect(bridge.triangles).toBeLessThan(2000);
+  for (const mesh of bridge.group.children as THREE.Mesh[]) {
+    const p = mesh.geometry.getAttribute('position');
+    for (let i = 0; i < p.count; i++) {
+      const x = p.getX(i), y = p.getY(i), z = p.getZ(i);
+      expect(y).toBeLessThanOrEqual(3.5);
+      // Keep visible steel out of the traversable lower corridor, including the rider's headroom.
+      if (x > 397 && x < 429 && Math.abs(z) < 1.6) expect(y).toBeGreaterThan(2.15);
+    }
+  }
 });

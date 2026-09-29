@@ -85,6 +85,68 @@ function board(pl: ColliderPolyline, t: number, depth: number): THREE.BufferGeom
   return extrudePoly(poly, depth);
 }
 
+/** D3's high route is a 34 m span above the lower ride: all dressing is visual, below the one-way top. */
+function quarryHighBridge(buckets: Bucket, pl: ColliderPolyline, profile: readonly Vec2[], thickness: number, depth: number): void {
+  const first = pl.points[0]!;
+  const last = pl.points[pl.points.length - 1]!;
+  const span = last.x - first.x;
+  if (span <= 0) return;
+  const top = first.y;
+  const deck = board(pl, thickness, depth);
+  if (deck) push(buckets, 'pallet', tintGeo(deck, 0x997a56));
+
+  const timber = (x: number, y: number, z: number, sx: number, sy: number, sz: number, color: number): void => {
+    push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(sx, sy, sz), color), at(x, y, z));
+  };
+  const steel = (a: Vec2, b: Vec2, z: number, width: number, color: number): void => {
+    const dx = b.x - a.x;
+    const dy = b.y - a.y;
+    push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(Math.hypot(dx, dy), width, 0.12), color),
+      at((a.x + b.x) / 2, (a.y + b.y) / 2, z, Math.atan2(dy, dx)));
+  };
+
+  // The closely spaced transverse boards show that this upper line is rideable, not a rope or background cable.
+  // Their top faces remain below the authored collider at y=top.
+  for (let x = first.x + 0.45, i = 0; x < last.x - 0.25; x += 0.86, i++) {
+    timber(x, top - 0.045, 0, 0.72, 0.07, depth + 0.13, i % 4 === 0 ? 0xc6a47a : 0xb3946b);
+  }
+  for (const z of [-depth / 2 + 0.2, depth / 2 - 0.2]) {
+    timber((first.x + last.x) / 2, top - 0.23, z, span, 0.2, 0.19, 0x6a4b35);
+  }
+
+  // Two shallow Pratt trusses bear the long span. The chords and diagonals end above the lower rider's head;
+  // no rail runs above the upper riding line, where a visual member would falsely imply a collision.
+  const topY = top - thickness - 0.1;
+  const bottomY = top - 1.22;
+  const bays = 8;
+  for (const z of [-depth / 2 - 0.16, depth / 2 + 0.16]) {
+    steel({ x: first.x, y: topY }, { x: last.x, y: topY }, z, 0.16, 0x665147);
+    steel({ x: first.x, y: bottomY }, { x: last.x, y: bottomY }, z, 0.14, 0x544b45);
+    for (let i = 0; i <= bays; i++) {
+      const x = first.x + span * i / bays;
+      steel({ x, y: bottomY }, { x, y: topY }, z, 0.1, 0x786057);
+      if (i < bays) {
+        const next = first.x + span * (i + 1) / bays;
+        const a = i < bays / 2 ? { x, y: topY } : { x, y: bottomY };
+        const b = i < bays / 2 ? { x: next, y: bottomY } : { x: next, y: topY };
+        steel(a, b, z, 0.09, 0x836959);
+      }
+    }
+  }
+
+  // Quarry abutments sit behind the playable x-y road at the span's ends. A foreground post would look like a
+  // collider even though the Starter can pass through it, so the camera-facing side stays open below the truss.
+  for (const x of [first.x + 0.17, last.x - 0.17]) {
+    const ground = profileY(profile, x);
+    const h = bottomY - ground;
+    if (h <= 0.25) continue;
+    const z = -depth / 2 - 0.95;
+    push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(0.34, h, 0.35), 0x514740),
+      at(x, ground + h / 2, z));
+    timber(x, ground + 0.14, z, 0.7, 0.28, 0.7, 0x806348);
+  }
+}
+
 /** Cable-spool drum: rim cylinder + two flanges + hub, axis along z. */
 function spool(r: number, width: number): THREE.BufferGeometry {
   const parts: THREE.BufferGeometry[] = [];
@@ -183,6 +245,10 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
         const t = num(p, 'thickness', 0.08);
         for (const c of cols) {
           if (c.kind === 'polyline') {
+            if (open && track.def.id === 'd3-rope-walk' && po.pos.x === 396 && num(p, 'length', 0) === 34) {
+              quarryHighBridge(buckets, c, profile, t, num(p, 'width', DEPTH));
+              continue;
+            }
             const g = board(c, t, num(p, 'width', DEPTH));
             if (g) push(buckets, sideMatFor(surface, po.kind), g);
             // Open decks have end trestles only, leaving the lower x-lane clear.
