@@ -105,7 +105,7 @@ function tint(g: THREE.BufferGeometry, r: number, gg: number, b: number): THREE.
 }
 
 /** Individual boards across the track along a polyline, plus two lengthwise edge boards. */
-function boards(pl: ColliderPolyline, rng: Rng, out: Bucket, width = DECK_W): void {
+function boards(pl: ColliderPolyline, rng: Rng, out: Bucket, width = DECK_W, lumScale = 1): void {
   const pts = resample(pl.points, 0.5);
   const pitch = BOARD_W + BOARD_GAP;
   const col = new THREE.Color();
@@ -130,7 +130,7 @@ function boards(pl: ColliderPolyline, rng: Rng, out: Bucket, width = DECK_W): vo
       // Boards run across the track: grain (u) along z; v picks a plank slice per board.
       const v0 = seed * 0.9;
       const wear = rng.next() < 0.12 ? 0.75 : 1;
-      col.multiplyScalar(wear);
+      col.multiplyScalar(wear * lumScale);
       // Round 10 (recipe: edge wear on every plank): both ends of every board darken — grime
       // and split ends where boots and tyres leave the deck — by a per-end random amount, and
       // the worn line down the middle is a touch paler where the tyres polish the grain.
@@ -157,7 +157,7 @@ function boards(pl: ColliderPolyline, rng: Rng, out: Bucket, width = DECK_W): vo
     const mx = (a.x + b.x) / 2;
     const my = (a.y + b.y) / 2;
     for (const side of [-1, 1]) {
-      const c = new THREE.Color(0.7, 0.62, 0.5);
+      const c = new THREE.Color(0.7, 0.62, 0.5).multiplyScalar(lumScale);
       push(out, 'plywood', box(len + 0.02, 0.09, 0.12, mx - Math.sin(ang) * 0.005, my + Math.cos(ang) * 0.005, side * (width / 2 - 0.06), ang, c, (px) => [px / 1.5, 0.35]));
     }
     // Joists under the boards every segment (dark steel), visible from the side.
@@ -307,7 +307,10 @@ export function buildRideSurfaces(track: CompiledTrack, biome: Biome, lib: Mater
     const surf: SurfaceKind = pl.surface === 'dirt' && biome.id === 'snow' && pl.obstacleIndex < 0 ? 'snow' : pl.surface;
     const tile = TILE[surf] ?? 2;
     if (surf === 'wood') {
-      boards(pl, rng, buckets);
+      const cartApproach = track.def.id === 'd2-conveyor' && pl.obstacleIndex >= 0 && pl.points[0]!.x >= 374 && pl.points[0]!.x < 459;
+      // Keep the wood grip honest: the cart loading aprons are timber in the collider and
+      // visibly separate boards in the scene. Lift only these dark planks at phone size.
+      boards(pl, rng, buckets, DECK_W, cartApproach ? 1.55 : 1);
       continue;
     }
     if (surf === 'dirt' && interior) {
@@ -360,9 +363,10 @@ export function buildRideSurfaces(track: CompiledTrack, biome: Biome, lib: Mater
     }
     if (surf === 'metal' || surf === 'grate') {
       const quarrySteel = surf === 'metal' && track.def.id === 'd2-conveyor';
+      const cartDeck = quarrySteel && pl.obstacleIndex >= 0 && pl.points[0]!.x >= 380 && pl.points[0]!.x < 449;
       push(buckets, quarrySteel ? 'quarrySteel' : SURFACE_MATERIAL[surf], ribbonWithShade(pl, ground ? WIDE_SECTION : OBSTACLE_SECTION, tile, ground ? 0 : 0.004,
         (z, drop) => quarrySteel
-          ? (Math.abs(z) < 0.48 ? 0.86 : Math.abs(z) > 1.25 ? 0.77 : 1) * (0.88 + 0.12 * (1 - Math.min(1, -drop)))
+          ? (Math.abs(z) < 0.48 ? 0.86 : Math.abs(z) > 1.25 ? 0.77 : 1) * (0.88 + 0.12 * (1 - Math.min(1, -drop))) * (cartDeck ? 1.15 : 1)
           : 0.7 + 0.3 * (1 - Math.min(1, -drop))));
       edging(pl, 'darkSteel', 0.08, 0.08, 1.52, 0.03, 0.6, 0.6, 0.6, buckets);
       if (quarrySteel) {

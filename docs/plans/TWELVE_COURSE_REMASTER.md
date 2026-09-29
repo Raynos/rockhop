@@ -100,6 +100,8 @@ The [played D2 excerpts](../evidence/course-remaster/d2/README.md) add a rotatin
 
 The [D2 outdoor-steel comparison](../evidence/course-remaster/d2/surface-light/README.md) brightens the feed and head-plant metal deck with dusted, low-metalness steel, side ribs and a visible edge. The full 37.158 s clear and cart fault/retry window retain exact paired hashes and camera checks. The later cart surface is still dark; a broader quarry lighting/material review, fresh fault comprehension and sustained phone pacing remain open.
 
+The [later cart-run comparison](../evidence/course-remaster/d2/cart-run/README.md) gives the actual raised metal landings dusted tops and low wagon rims/hubs, while the wood approaches remain individually planked and locally brighter. Matched 37.158 s full and cart fault clips retain exact hashes and camera checks. A brighter all-steel draft over the wood ramps was rejected because their grip differs from metal. The pale quarry ground still competes with the deck; fresh-player cart understanding and phone pacing remain open.
+
 
 ### 2026-09-29 S1 upper-route finding
 

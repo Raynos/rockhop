@@ -452,12 +452,34 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
         break;
       }
       case 'box': {
+        const d2CartDeck = track.def.id === 'd2-conveyor' && po.pos.x >= 380 && po.pos.x < 449 && surface === 'metal';
         for (const c of cols) {
           if (c.kind === 'box') {
             push(buckets, sideMatFor(surface, 'box'), new THREE.BoxGeometry(c.halfW * 2, c.halfH * 2, DEPTH), at(c.center.x, c.center.y, 0, c.angle));
           } else if (c.kind === 'polyline') {
             const g = skirt(c, profile, DEPTH);
-            if (g) push(buckets, sideMatFor(surface, 'box'), g);
+            if (g) push(buckets, d2CartDeck ? 'plaque' : sideMatFor(surface, 'box'), d2CartDeck ? tintGeo(g, 0x88725a) : g);
+            if (d2CartDeck) {
+              // The three raised landings are low quarry wagons. Dress their camera-facing side below
+              // the real contact line so the rider sees a tub, wheels and the exact safe lip without
+              // an invented rail or a silhouette that could be mistaken for another collision.
+              const a = c.points[0]!;
+              const b = c.points[c.points.length - 1]!;
+              const length = b.x - a.x;
+              const mid = (a.x + b.x) / 2;
+              const top = (a.y + b.y) / 2;
+              const face = DEPTH / 2 + 0.04;
+              push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(length - 0.24, 0.43, 0.075), 0x75513d), at(mid, top - 0.34, face));
+              push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(length - 0.08, 0.07, 0.12), 0xc9aa80), at(mid, top - 0.09, face + 0.06));
+              for (let x = a.x + 0.62; x < b.x - 0.35; x += 1.35) {
+                push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.075, 0.42, 0.09), 0x977454), at(x, top - 0.34, face + 0.06));
+              }
+              for (const x of [a.x + 1.25, b.x - 1.25]) {
+                const wheelY = profileY(profile, x) + 0.18;
+                push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(0.22, 0.22, 0.09, 12).rotateX(Math.PI / 2), 0x51473b), at(x, wheelY, face + 0.1));
+                push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(0.075, 0.075, 0.1, 10).rotateX(Math.PI / 2), 0xd2a36c), at(x, wheelY, face + 0.17));
+              }
+            }
           }
         }
         // Reference lab: red cargo boxes with inset ivory panels and steel ribs.
