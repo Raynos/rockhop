@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "kind": "gate-partial",
-  "runId": "20260928-194912-11c761",
-  "startedAt": "2026-09-29T00:49:12.562Z",
-  "wallMs": 50735,
-  "git": "dc2c2559",
+  "runId": "20260928-201029-8b3b14",
+  "startedAt": "2026-09-29T01:10:29.730Z",
+  "wallMs": 52312,
+  "git": "30028838",
   "srcFingerprint": "d47b0ac8",
   "node": "v24.18.1",
   "chromium": "151.0.7922.34",
@@ -17,15 +17,15 @@
   "checks": [
     {
       "id": "boot.readyP50Ms",
-      "value": 261.0306249999994,
+      "value": 257.5722079999978,
       "limit": 300,
       "pass": true,
       "unit": "ms",
-      "note": "runs 1372/261/275/256/257 min 256 loadavg 4.68/18"
+      "note": "runs 254/264/258/258/255 min 254 loadavg 3.83/18"
     },
     {
       "id": "boot.firstFrameMs",
-      "value": 5734.77499961853,
+      "value": 5766.0199999809265,
       "limit": 4000,
       "pass": false,
       "unit": "ms",
@@ -79,14 +79,14 @@
     },
     {
       "id": "restart.wallMsP95",
-      "value": 0.1100001335144043,
+      "value": 0.125,
       "limit": 5,
       "pass": true,
       "unit": "ms"
     },
     {
       "id": "restart.frameMsP95",
-      "value": 220.71999979019165,
+      "value": 237.51500034332275,
       "limit": 150,
       "pass": false,
       "unit": "ms",
