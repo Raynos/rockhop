@@ -19,6 +19,7 @@ describe('late Diamond high-line guidance', () => {
       const track = getTrack(id)!;
       const cue = diamondRouteCue(track)!;
       expect(cue).toBeTruthy();
+      if (id === 's1-lift-line') expect(cue.title).toBe('LIFT BRIDGE');
       hud.setTrack(track);
       hud.setRun(riding);
       const element = hud.root.querySelector('.skill-cue')!;

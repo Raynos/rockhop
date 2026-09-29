@@ -17,6 +17,8 @@ These are **silent headless game captures**, 852×393 at 20 fps with the actual 
 
 The before clips use a slightly different x window but the same pinned recordings and committed source physics. The new clips' exact windows and camera checks are in [played-clips.json](played-clips.json).
 
+The live S1 Diamond signpost now names the modeled **Lift Bridge**. The [silent Pro approach clip](s1-pro-bridge-cue.mp4) and [contact sheet](s1-pro-bridge-cue-sheet.jpg) show the cue during an actual pinned ride through the new station; the [cue report](cue-report.json) records 73 checked frames with no riding frame outside the camera box. The MP4 has video only. This naming check does not establish that a new player understands the jump in time.
+
 ## Exact gameplay controls
 
 [verify.json](verify.json) records two fresh Node worlds and two fresh browser pages per bike. The pairs agree on finish time and byte-identical state hash. Pro clears the upper goal with zero faults at **30.333 s / Diamond**, hash `4d42e105d6ce4686`. Starter clears below with zero faults at **30.983 s / Gold**, hash `97e0289e3d895fad`. These times and hashes are identical to [the no-exit geometry run](pre-edit-exit-sweep.json). Holding GO for 600 simulated seconds cleared **0/6** runs (three seeds × two classes). The Pro first faults at x294.4; Starter first faults at x89.4.
