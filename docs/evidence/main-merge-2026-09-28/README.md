@@ -15,3 +15,7 @@ Pre-push results on local `main`:
 - The Safari precision guard separately reached menu in four silent headless WebKit normal/null/intermittent cases. A physical iPhone Safari retest remains necessary.
 
 The production CI run and `playrockhop.vercel.app/version.json` SHA are pending until this commit is pushed.
+
+## Production verification
+
+[GitHub run 36519437663](https://github.com/Raynos/rockhop/actions/runs/36519437663) completed successfully for commit `0de5d5a1f197c2dcf9181232ac9280cbbf18ba3d`: typecheck, lint, filtered unit suite, web build, strict store audit, Vercel deployment, exact SHA check, store bundle/cap sync, store metadata/IP audit and Android debug build all passed. A direct uncached read of `https://playrockhop.vercel.app/version.json` returned that SHA. A new silent headless WebKit session at 874×330, DPR 3 reached `.menu-screen.live` in 7.8 s with a canvas, no crash sheet and zero page errors. This is not a physical iPhone Safari verdict.
