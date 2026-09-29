@@ -16,6 +16,8 @@
 
 The [working-quay full comparison](harbor-density/README.md) adds low apron stations and four larger jib silhouettes after a subtle trolley draft failed moving review. It preserves the brake window and exact outcomes, but the foreground still needs a stronger cohesive material and lighting pass before this priority closes.
 
+The [matched ramp-contact full and fault films](ramp-contact/README.md) ground the true pallet kicker with timber and steel braces and mark the receiving container lip below wheel contact. The 16.7 s takeoff reads more plausibly in motion; the rest of the course remains short of the intended material, lighting and model standard.
+
 **Build/check:** Extend the harbor kit along the *entire* ride: layered wet quay and exposed tide-edge materials, modeled container/ship/crane masses at plausible scale, local light/shadow and wheel-contact response, with the brake ramp as the focal obstacle. Preserve the sign, wheel line and landing silhouette through x180–240. Judge matched-input **full moving before/after rides**, plus the same ramp and causeway fault windows at 852×392; require no obstacle/contact occlusion and exact replay hashes if edits are visual only. Profile the resulting draw calls, triangles, memory and sustained frame pacing on the target landscape phones. The current 125–135 calls / 168k–203k triangles near the ramp are a headless low-tier sample, not a device budget or before/after delta ([moving probe](perf-moving.json)). Listen to the real sound/haptics on device; all retained clips are silent.
 
 ### 3. Make the first reward and return path legible enough to invite a second run

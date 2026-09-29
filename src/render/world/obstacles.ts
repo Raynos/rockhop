@@ -320,6 +320,40 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
             }
             const g = board(c, t, num(p, 'width', DEPTH));
             if (g) push(buckets, sideMatFor(surface, po.kind), g);
+            if (!open && track.def.id === 'c1-low-tide' && po.pos.x > 210 && po.pos.x < 211) {
+              // The beached pallet kicker is a short, supported slipway into the container, not a floating
+              // plank. Everything here is beneath the authored one-way top; the wheels still read that edge.
+              const first = c.points[0]!;
+              const last = c.points[c.points.length - 1]!;
+              const length = Math.hypot(last.x - first.x, last.y - first.y);
+              const angle = Math.atan2(last.y - first.y, last.x - first.x);
+              const width = num(p, 'width', DEPTH);
+              for (const z of [-width / 2 + 0.16, width / 2 + 0.08]) {
+                push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(length, 0.19, 0.19), 0x765338),
+                  at((first.x + last.x) / 2, (first.y + last.y) / 2 - 0.22, z, angle));
+              }
+              for (let k = 0; k < 3; k++) {
+                const x = first.x + 0.85 + k * 1.55;
+                const top = yOn(c, x);
+                if (top === null) continue;
+                const ground = profileY(profile, x);
+                const h = top - ground - 0.34;
+                if (h < 0.36) continue;
+                const z = width / 2 + 0.13;
+                push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(0.22, 0.13, 0.34), 0x7f7059),
+                  at(x, ground + 0.07, z));
+                push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(0.15, h, 0.16), 0x634832),
+                  at(x, ground + 0.14 + h / 2, z));
+                const footX = x - 0.7;
+                const footY = profileY(profile, footX) + 0.13;
+                const braceY = top - 0.38;
+                const dx = x - footX;
+                const dy = braceY - footY;
+                push(buckets, 'rustSteel', tintGeo(new THREE.BoxGeometry(Math.hypot(dx, dy), 0.105, 0.1), 0x9f7049),
+                  at((x + footX) / 2, (braceY + footY) / 2, z + 0.04, Math.atan2(dy, dx)));
+              }
+              continue;
+            }
             // Open decks have end trestles only, leaving the lower x-lane clear.
             const pts = c.points;
             const len = Math.hypot(pts[pts.length - 1]!.x - pts[0]!.x, pts[pts.length - 1]!.y - pts[0]!.y);
@@ -706,6 +740,11 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
       solid('container', LIVERY[variant % LIVERY.length]!, (_x, y) => 0.8 + 0.2 * Math.min(1, (y - y0) / 2.6));
       for (const x of [x0 + 0.09, x1 - 0.09]) push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(0.18, y1 - y0, 0.18), 0x707070), at(x, (y0 + y1) / 2, face - 0.05));
       push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(x1 - x0, 0.12, 0.16), 0x707070), at((x0 + x1) / 2, y1 - 0.06, face - 0.05));
+      if (ctx.trackId === 'c1-low-tide' && po.pos.x > 215 && po.pos.x < 216) {
+        // A continuous worn receiving lip makes the exact landing elevation legible at phone size.
+        push(buckets, 'rustSteel', tintGeo(new THREE.BoxGeometry(x1 - x0 - 0.25, 0.14, 0.1), 0xb48452),
+          at((x0 + x1) / 2, y1 - 0.17, face + 0.025));
+      }
       return true;
     }
     case 'pallet':
