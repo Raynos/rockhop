@@ -22,6 +22,9 @@ function loadSdk(): Promise<BrowserSdk | null> {
   sdk ??= import('@sentry/browser').then((sentry) => {
     sentry.init({
       dsn,
+      // The web game's envelopes stay on playrockhop.vercel.app, which iOS content blockers allow.
+      // Capacitor uses a local app origin, so its explicit production URL needs CORS on the tunnel.
+      tunnel: import.meta.env.VITE_STORE === '1' ? 'https://playrockhop.vercel.app/api/sentry' : '/api/sentry',
       release: `rockhop@${__BUILD_ID__}`,
       environment: import.meta.env.PROD ? (import.meta.env.VITE_STORE === '1' ? 'store' : 'production') : 'development',
       // Wild Shard's game client uses explicit error capture: no global duplicate handlers,
@@ -31,6 +34,7 @@ function loadSdk(): Promise<BrowserSdk | null> {
       tracesSampleRate: 0,
       replaysSessionSampleRate: 0,
       replaysOnErrorSampleRate: 0,
+      sendClientReports: false,
       maxBreadcrumbs: 0,
       beforeSend(event) {
         // Review URLs can contain arbitrary query values. Only a stable path belongs in an error.
