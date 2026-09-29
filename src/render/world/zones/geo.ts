@@ -947,6 +947,46 @@ export function iceWallGeometry(seed = 41): THREE.BufferGeometry {
   })();
 }
 
+/** A narrow frost seam on S2's existing cliff; irregular relief leaves the wall texture visible. */
+export function s2IceButtressGeometry(seed: number): THREE.BufferGeometry {
+  const rnd = lcg(seed);
+  const phase = rnd() * 7;
+  const g = new THREE.CylinderGeometry(0.12, 0.55, 3.2, 7, 8).toNonIndexed();
+  g.scale(1, 1, 0.42).translate(0, 1.6, 0);
+  const p = g.getAttribute('position');
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i), y = p.getY(i), z = p.getZ(i);
+    const scallop = 0.06 * Math.sin(y * 5.1 + phase) + 0.04 * Math.sin(y * 11.3 + x * 4.2);
+    p.setXYZ(i, x + 0.13 * Math.sin(y * 1.9 + z * 2.8 + phase) + scallop, y,
+      z + 0.055 * Math.sin(y * 4.6 + x * 6.2 + phase));
+  }
+  g.computeVertexNormals();
+  paint(g, [1, 1, 1]);
+  const c = g.getAttribute('color') as THREE.BufferAttribute;
+  const n = g.getAttribute('normal');
+  const deep = rgb(0x8cabb7), pale = rgb(0xe3edf0);
+  for (let i = 0; i < p.count; i++) {
+    const t = Math.min(1, Math.max(0, p.getY(i) / 3.2));
+    const light = 0.76 + 0.16 * Math.max(0, n.getZ(i)) + 0.05 * Math.sin(p.getX(i) * 8 + phase);
+    c.setXYZ(i, ...deep.map((v, k) => (v + (pale[k]! - v) * t) * light) as [number, number, number]);
+  }
+  return g;
+}
+
+/** S2 upper wind shelf: broken frost and hanging ice below its one-way y=8.5 m collider. */
+export function s2WindShelfUndersideGeometry(length: number, seed: number): THREE.BufferGeometry {
+  const rnd = lcg(seed);
+  const parts: THREE.BufferGeometry[] = [];
+  for (let x = 0.7; x < length - 0.4; x += 1.25 + rnd() * 1.3) {
+    const h = 0.36 + rnd() * 0.78;
+    const width = 0.55 + rnd() * 0.7;
+    parts.push(box(width, 0.075, 0.2, x, -0.11, 0.04, rgb(0xd7e2e6)));
+    parts.push(cyl(0.10 + rnd() * 0.09, 0.012, h, 5, x, -0.19 - h / 2, 0.08,
+      rgb(rnd() > 0.5 ? 0xa9c4cf : 0xc1d5db)));
+  }
+  return merge(parts);
+}
+
 /** Ski-lift tower (B-ride-snow): a tapered steel mast, cross-arm with sheave trains; ~11 m, cable at y 10.6, ±2 m in z. */
 export function liftTowerGeometry(): THREE.BufferGeometry {
   const grey = rgb(0x6a7078);

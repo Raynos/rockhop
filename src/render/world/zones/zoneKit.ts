@@ -824,6 +824,32 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const iceMat = fogify(new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.18, metalness: 0.05, vertexColors: true, emissive: 0x0e2a3a, emissiveIntensity: 0.6 }));
     lib.complete(iceMat);
     const ice = [0, 1].map((i) => PB(`icewall${i}`, G.iceWallGeometry((track.def.seed ^ (i * 17 + 41)) >>> 0), iceMat, false));
+    if (track.def.id === 's2-cornice') {
+      const cornice = track.placed.find((p) => p.kind === 'box' && p.params.prop === 'cornice');
+      const face = cornice && track.colliders.find((c) => c.id === cornice.colliderIds[0]);
+      if (cornice && face?.kind === 'polyline' && face.points.length >= 3) {
+        const bottom = face.points[0]!.y;
+        const height = face.points[1]!.y - bottom;
+        const sourceIce = G.s2IceButtressGeometry(track.def.seed ^ 0x51c2);
+        const buttressParts: THREE.BufferGeometry[] = [];
+        for (const [dx, sx, sy] of [[0.8, 1.25, 0.97], [3.25, 0.94, 0.88], [5.9, 1.32, 0.92],
+          [8.5, 1.15, 0.94], [11.45, 1.24, 0.86], [14.4, 0.95, 0.97]] as const) {
+          buttressParts.push(sourceIce.clone().scale(sx, sy * height / 3.4, 1).translate(cornice.pos.x + dx, bottom, 1.82));
+        }
+        const buttresses = new THREE.Mesh(G.merge(buttressParts), iceMat);
+        buttresses.name = 'zone:s2-cornice-ice-buttresses';
+        meshes.push(buttresses);
+      }
+      const shelf = track.placed.find((p) => p.kind === 'open-platform' && p.pos.x >= 150 && p.pos.x < 175);
+      const deck = shelf && track.colliders.find((c) => c.id === shelf.colliderIds[0]);
+      if (shelf && deck?.kind === 'polyline' && deck.points.length >= 2) {
+        const length = deck.points[1]!.x - deck.points[0]!.x;
+        const underside = new THREE.Mesh(G.s2WindShelfUndersideGeometry(length, track.def.seed ^ 0x51f0), iceMat);
+        underside.name = 'zone:s2-wind-shelf-ice-underside';
+        underside.position.set(shelf.pos.x, deck.points[0]!.y, 1.65);
+        meshes.push(underside);
+      }
+    }
     const towers = PB('lifttower', G.liftTowerGeometry(), painted, false);
     const chairs = PB('liftchair', G.liftChairGeometryZ(), painted, false);
     const cables = PB('liftcable', G.paint(new THREE.BoxGeometry(1, 0.05, 0.05).translate(0.5, 0, 0), G.rgb(0x202428)), painted, false);
