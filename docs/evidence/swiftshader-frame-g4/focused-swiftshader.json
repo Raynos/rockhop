@@ -1,74 +1,35 @@
 {
   "schema": 1,
   "kind": "gate-partial",
-  "runId": "20260928-191718-00a3ec",
-  "startedAt": "2026-09-29T00:17:18.532Z",
-  "wallMs": 50072,
-  "git": "6abf4da3",
+  "runId": "20260928-185516-da8194",
+  "startedAt": "2026-09-28T23:55:16.161Z",
+  "wallMs": 50363,
+  "git": "2cfbf654",
   "srcFingerprint": "d47b0ac8",
   "node": "v24.18.1",
   "chromium": "151.0.7922.34",
   "only": [
     "boot",
-    "clear",
-    "crash",
     "restart"
   ],
   "checks": [
     {
       "id": "boot.readyP50Ms",
-      "value": 260.07945799999834,
+      "value": 263.64883299999747,
       "limit": 300,
       "pass": true,
       "unit": "ms",
-      "note": "runs 1374/260/261/256/258 min 256 loadavg 3.41/18"
+      "note": "runs 1216/256/264/265/258 min 256 loadavg 5.23/18"
     },
     {
       "id": "boot.firstFrameMs",
-      "value": 5775.210000038147,
+      "value": 6021.514999866486,
       "limit": 4000,
       "pass": false,
       "unit": "ms",
       "note": "ready -> first synced frame; SwiftShader limit; ship target 900ms NOT met (informational on this machine)",
       "shipLimit": 900,
       "shipPass": false
-    },
-    {
-      "id": "clear.golden",
-      "value": true,
-      "limit": true,
-      "pass": true,
-      "note": "bot-3.json finish=8.591666666666667 run=8.592 faults=0"
-    },
-    {
-      "id": "clear.finishTimeBitEqual",
-      "value": true,
-      "limit": true,
-      "pass": true,
-      "note": "expected 8.591666666666667"
-    },
-    {
-      "id": "clear.hashOk",
-      "value": true,
-      "limit": true,
-      "pass": true,
-      "note": "622bb2554e0f9a26 vs pinned 622bb2554e0f9a26"
-    },
-    {
-      "id": "crash.faultWithinS",
-      "value": 0.8583333333333333,
-      "limit": 8,
-      "pass": true,
-      "unit": "s",
-      "note": "reason=crash"
-    },
-    {
-      "id": "fault.toControlMs",
-      "value": 25,
-      "limit": 500,
-      "pass": true,
-      "unit": "ms",
-      "note": "crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)"
     },
     {
       "id": "restart.ticks",
@@ -79,14 +40,14 @@
     },
     {
       "id": "restart.wallMsP95",
-      "value": 0.10500001907348633,
+      "value": 0.13000011444091797,
       "limit": 5,
       "pass": true,
       "unit": "ms"
     },
     {
       "id": "restart.frameMsP95",
-      "value": 517.454999923706,
+      "value": 260.80000019073486,
       "limit": 150,
       "pass": false,
       "unit": "ms",

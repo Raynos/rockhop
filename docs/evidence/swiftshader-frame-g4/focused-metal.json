@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260928-185615-148389",
+  "startedAt": "2026-09-28T23:56:15.811Z",
+  "wallMs": 5290,
+  "git": "2cfbf654",
+  "srcFingerprint": "d47b0ac8",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "boot",
+    "restart"
+  ],
+  "checks": [
+    {
+      "id": "boot.readyP50Ms",
+      "value": 209.32779200000004,
+      "limit": 300,
+      "pass": true,
+      "unit": "ms",
+      "note": "runs 230/209/210/207/205 min 205 loadavg 5.59/18"
+    },
+    {
+      "id": "boot.firstFrameMs",
+      "value": 400.9300003051758,
+      "limit": 900,
+      "pass": true,
+      "unit": "ms",
+      "note": "ready -> first synced frame"
+    },
+    {
+      "id": "restart.ticks",
+      "value": 1,
+      "limit": 1,
+      "pass": true,
+      "note": "tick==0 && faulted==null after exactly one tick, 20 reps"
+    },
+    {
+      "id": "restart.wallMsP95",
+      "value": 0.0950002670288086,
+      "limit": 5,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "restart.frameMsP95",
+      "value": 6.565000057220459,
+      "limit": 33,
+      "pass": true,
+      "unit": "ms",
+      "note": "restart -> synced frame"
+    },
+    {
+      "id": "restart.noCountdown",
+      "value": 1,
+      "limit": 12,
+      "pass": true,
+      "unit": " ticks",
+      "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
+    }
+  ],
+  "failed": 0
+}
