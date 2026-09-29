@@ -62,10 +62,15 @@ export async function runWeb(opts: { paced?: boolean; width?: number; height?: n
   try {
     const page = launched.page;
     page.on('pageerror', (e) => notes.push(`pageerror: ${e.message}`));
-    await page.exposeFunction('__rockhopGateSink', (s: string) => {
+    await page.exposeFunction('__rockhopGateSink', async (s: string) => {
       const m = JSON.parse(s) as GateMessages[string];
       messages[m.name] = m;
       fs.writeFileSync(path.join(outDir, `${m.name}.json`), `${JSON.stringify(m, null, 1)}\n`);
+      if (opts.arm?.front?.mapRide && m.name.startsWith('shot-')) {
+        const index = Number(m['index']);
+        await page.screenshot({ path: path.join(outDir, `shot-${index}.png`) });
+        await page.evaluate((n) => ((window as Window & { __rockhopGateAck?: number }).__rockhopGateAck = n), index);
+      }
     });
     await page.addInitScript(armScript, arm);
     await page.goto(server.url);

@@ -68,7 +68,6 @@ type GateWindow = Window & {
   __rockhopAudioContexts?: () => number;
   __trials?: TrialsHook;
   __rockhop?: TrialsHook;
-  __rockhopMap3d?: { selectStage(index: number, focus?: boolean): void; towerScreenPoint(index: number): { x: number; y: number } | null };
   __render?: { canvas: HTMLCanvasElement };
 };
 
@@ -387,6 +386,7 @@ async function shotsStage(cfg: GateConfig): Promise<void> {
 async function frontStage(cfg: GateConfig, first: number): Promise<void> {
   let n = first;
   const h = await waitFor('the hook (front end)', () => hook()?.app && hook());
+  const assertNoCrash = (): void => { if (document.getElementById('crash')) throw new Error('crash sheet appeared during the native map flow'); };
   await waitFor('the loader to leave', () => !document.getElementById('loader'));
   await waitFor('the menu', () => h.app!.screen() === 'menu', 60_000).catch(() => undefined);
   await sleep(1500);
@@ -440,22 +440,16 @@ async function frontStage(cfg: GateConfig, first: number): Promise<void> {
   if (cfg.front?.map) {
     await waitFor('the world map', () => h.app!.screen() === 'tracks', 20_000);
     await waitFor('the 3D island', () => document.querySelector<HTMLElement>('.wm3d-host[data-ready="1"]'), 60_000);
+    assertNoCrash();
     const mapCanvases = document.querySelectorAll('.wm3d-host canvas').length;
     const gameContextLost = w.__render?.canvas.getContext('webgl2')?.isContextLost();
     if (mapCanvases !== 1 || gameContextLost !== true) throw new Error(`native map opened without sole GPU ownership: ${mapCanvases} canvases, game lost=${gameContextLost}`);
     post({ name: 'map-open', mapCanvases, gameContextLost, audioContexts: audioContexts() });
     await shot('world-map', { recording: 'map' });
     if (cfg.front.mapRide) {
-      const map = await waitFor('the map tower probe', () => w.__rockhopMap3d, 10_000);
-      map.selectStage(0, true);
-      await sleep(850); // the authored camera focus must settle before the real tower hit is sent
-      const point = map.towerScreenPoint(0);
-      const canvas = document.querySelector<HTMLCanvasElement>('.wm3d-host canvas');
-      if (!point || !canvas) throw new Error('C1 tower has no screen hit target');
-      for (const type of ['pointerdown', 'pointerup']) canvas.dispatchEvent(new PointerEvent(type, {
-        bubbles: true, clientX: point.x, clientY: point.y, pointerType: 'touch', isPrimary: true,
-      }));
-      await waitFor('C1 selected from its tower', () => document.querySelector<HTMLElement>('.wm3d-detail[data-track="c1-low-tide"]'), 10_000);
+      // The dedicated simulator is freshly installed; C1 is its natural selected tower. Canvas touch is proved
+      // separately by the real WebKit pointer harness — synthetic PointerEvents cannot call setPointerCapture.
+      await waitFor('C1 selected on a fresh map', () => document.querySelector<HTMLElement>('.wm3d-detail[data-track="c1-low-tide"]'), 10_000);
       const ride = await waitFor('the C1 Ride button', () => document.querySelector<HTMLButtonElement>('.wm-ride:not(:disabled)'), 10_000);
       const rideStart = now();
       ride.click();
@@ -465,12 +459,14 @@ async function frontStage(cfg: GateConfig, first: number): Promise<void> {
       }, 60_000);
       await waitFor('the gameplay WebGL context restored', () =>
         document.querySelectorAll('.wm3d-host canvas').length === 0 && w.__render?.canvas.getContext('webgl2')?.isContextLost() === false, 10_000);
+      assertNoCrash();
       post({ name: 'map-ride', trackId: 'c1-low-tide', rideMs: Math.round(now() - rideStart), gameContextLost: false,
         mapCanvases: 0, audioContexts: audioContexts() });
       h.app!.quit();
       await waitFor('menu after C1', () => h.app!.screen() === 'menu', 15_000);
       h.app!.goto('tracks');
       await waitFor('the map reopened', () => document.querySelector<HTMLElement>('.wm3d-host[data-ready="1"]'), 60_000);
+      assertNoCrash();
       const returnCanvases = document.querySelectorAll('.wm3d-host canvas').length;
       const returnGameLost = w.__render?.canvas.getContext('webgl2')?.isContextLost();
       if (returnCanvases !== 1 || returnGameLost !== true) throw new Error(`native map return lost GPU ownership: ${returnCanvases} canvases, game lost=${returnGameLost}`);
@@ -479,6 +475,7 @@ async function frontStage(cfg: GateConfig, first: number): Promise<void> {
       await waitFor('game context after map exit', () =>
         h.app!.screen() === 'menu' && document.querySelectorAll('.wm3d-host canvas').length === 0 &&
         w.__render?.canvas.getContext('webgl2')?.isContextLost() === false, 10_000);
+      assertNoCrash();
       post({ name: 'map-exit', mapCanvases: 0, gameContextLost: false, audioContexts: audioContexts() });
     }
   }

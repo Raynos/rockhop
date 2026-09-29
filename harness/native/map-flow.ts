@@ -11,7 +11,7 @@ const arm = { front: { map: true, mapRide: true } };
 const runs: PlatformRun[] = [];
 for (const platform of ['web', 'ios'] as const) {
   console.info(`native map flow: ${platform} …`);
-  const run = platform === 'web' ? await runWeb({ arm, width: 852, height: 393 }) : await runIos({ arm, record: true, tag: 'map-flow' });
+  const run = platform === 'web' ? await runWeb({ arm, width: 852, height: 393 }) : await runIos({ arm, record: true, tag: 'map-flow', freshInstall: true });
   runs.push(run);
   console.info(`native map flow: ${platform} ${run.ok ? 'completed' : 'FAILED'} in ${run.wallS} s`);
 }
@@ -24,7 +24,7 @@ const report = {
     const ride = run.messages['map-ride'];
     const returned = run.messages['map-return'];
     const exit = run.messages['map-exit'];
-    const pass = run.ok && !!open && !!ride && !!returned && !!exit &&
+    const pass = run.ok && !run.notes.some((note) => note.startsWith('pageerror:')) && !!open && !!ride && !!returned && !!exit &&
       open['mapCanvases'] === 1 && open['gameContextLost'] === true && open['audioContexts'] === 0 &&
       ride['trackId'] === 'c1-low-tide' && ride['mapCanvases'] === 0 && ride['gameContextLost'] === false && ride['audioContexts'] === 0 &&
       returned['mapCanvases'] === 1 && returned['gameContextLost'] === true &&
@@ -41,6 +41,8 @@ for (const run of runs) {
   const sheet = path.join(path.dirname(run.clip), 'sheet.jpg');
   if (fs.existsSync(sheet)) fs.copyFileSync(sheet, path.join(out, `${run.platform}-sheet.jpg`));
 }
+const webMapShot = path.join(REPO_ROOT, 'harness', 'out', 'native', 'web', 'shot-0.png');
+if (fs.existsSync(webMapShot)) fs.copyFileSync(webMapShot, path.join(out, 'web-map.png'));
 fs.writeFileSync(path.join(out, 'report.json'), `${JSON.stringify(report, null, 2)}\n`);
 console.info(`evidence: ${path.relative(REPO_ROOT, out)}`);
 for (const run of report.runs) console.info(`${run.pass ? 'PASS' : 'FAIL'} ${run.platform} map -> C1 -> map -> Menu${run.error ? `: ${JSON.stringify(run.error)}` : ''}`);

@@ -70,7 +70,7 @@ function readMessages(dir: string): GateMessages {
   return out;
 }
 
-export async function runIos(opts: { arm?: Partial<GateArm>; record?: boolean; timeoutS?: number; tag?: string; ipad?: boolean } = {}): Promise<PlatformRun> {
+export async function runIos(opts: { arm?: Partial<GateArm>; record?: boolean; timeoutS?: number; tag?: string; ipad?: boolean; freshInstall?: boolean } = {}): Promise<PlatformRun> {
   const t0 = Date.now();
   const app = iosAppPath();
   if (!fs.existsSync(app)) throw new Error(`no ${path.relative(REPO_ROOT, app)}: run \`node scripts/store-build.mjs debug --ios\``);
@@ -78,6 +78,7 @@ export async function runIos(opts: { arm?: Partial<GateArm>; record?: boolean; t
   const udid = opts.ipad ? ensureDevice(IPAD_DEVICE_NAME, IPAD_DEVICE_TYPE) : ensureDevice();
   await bootDevice(udid);
   sh('xcrun', ['simctl', 'terminate', udid, APP_ID], { allowFail: true });
+  if (opts.freshInstall) sh('xcrun', ['simctl', 'uninstall', udid, APP_ID], { allowFail: true });
   sh('xcrun', ['simctl', 'install', udid, app]);
   const gateDir = path.join(dataDir(udid), 'Documents', 'gate');
   fs.rmSync(gateDir, { recursive: true, force: true });
