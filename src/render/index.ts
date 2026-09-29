@@ -96,6 +96,8 @@ export interface ThreeRendererOptions {
   antialias?: boolean;
   pixelRatio?: number;
   preserveDrawingBuffer?: boolean;
+  /** A retry can ask Safari for its default GPU rather than insisting on high performance. */
+  powerPreference?: WebGLPowerPreference;
   quality?: QualityTier;
   /**
    * Hero model choice (`?rider=proc&bike=proc` to force the procedural kit). Round 10: the
@@ -120,6 +122,14 @@ export interface ThreeRendererOptions {
   artBytes?: ByteProgress;
   /** Boot plan `after` list: per-track art requested after the boot set (never in a number). */
   onTrackArt?: (done: number, total: number, label: string) => void;
+}
+
+/** A transient WebGL allocation failure that may recover on a fresh canvas. */
+export class WebGL2ContextUnavailableError extends Error {
+  constructor(readonly reason: 'null' | 'already-lost' | 'lost-during-init' | 'get-context-threw', cause?: unknown) {
+    super(`WebGL2 context unavailable during renderer startup (${reason})`, { cause });
+    this.name = 'WebGL2ContextUnavailableError';
+  }
 }
 
 type HeroRider = RiderModel | GltfRider;
@@ -374,26 +384,50 @@ export class ThreeRenderer implements GameRenderer {
     parent.appendChild(this.canvas);
     const antialias = options.antialias ?? false;
     const preserveDrawingBuffer = options.preserveDrawingBuffer ?? false;
+    const powerPreference = options.powerPreference ?? 'high-performance';
     // Three r186 assumes every WebGL2 precision query returns an object. On
     // iOS Safari it can return null, causing an uncaught startup TypeError.
     // Reuse the context so Three cannot create a different one after probing.
-    const glContext = this.canvas.getContext('webgl2', {
-      alpha: true, depth: true, stencil: false, antialias,
-      premultipliedAlpha: true, preserveDrawingBuffer,
-      powerPreference: 'high-performance', failIfMajorPerformanceCaveat: false,
-    });
-    if (!glContext || glContext.isContextLost()) {
+    let glContext: WebGL2RenderingContext | null;
+    try {
+      glContext = this.canvas.getContext('webgl2', {
+        alpha: true, depth: true, stencil: false, antialias,
+        premultipliedAlpha: true, preserveDrawingBuffer,
+        powerPreference, failIfMajorPerformanceCaveat: false,
+      });
+    } catch (error) {
       this.canvas.remove();
-      throw new Error('WebGL2 context unavailable during renderer startup');
+      throw new WebGL2ContextUnavailableError('get-context-threw', error);
     }
-    this.renderer = new THREE.WebGLRenderer({
-      canvas: this.canvas,
-      context: glContext,
-      precision: guardWebGLPrecision(glContext),
-      antialias, // Final SMAA handles edges after HDR tone mapping on every tier.
-      powerPreference: 'high-performance',
-      preserveDrawingBuffer,
-    });
+    if (!glContext) {
+      this.canvas.remove();
+      throw new WebGL2ContextUnavailableError('null');
+    }
+    if (glContext.isContextLost()) {
+      this.canvas.remove();
+      throw new WebGL2ContextUnavailableError('already-lost');
+    }
+    try {
+      this.renderer = new THREE.WebGLRenderer({
+        canvas: this.canvas,
+        context: glContext,
+        precision: guardWebGLPrecision(glContext),
+        antialias, // Final SMAA handles edges after HDR tone mapping on every tier.
+        powerPreference,
+        preserveDrawingBuffer,
+      });
+      if (glContext.isContextLost()) {
+        this.renderer.dispose();
+        throw new WebGL2ContextUnavailableError('lost-during-init');
+      }
+    } catch (error) {
+      this.canvas.remove();
+      if (glContext.isContextLost()) throw new WebGL2ContextUnavailableError('lost-during-init', error);
+      // A constructor error can leave a live context bound to an orphan canvas.
+      // Release it now so a later page load does not compete for Safari's small GPU quota.
+      glContext.getExtension('WEBGL_lose_context')?.loseContext();
+      throw error;
+    }
     this.tier = options.quality ?? 'high';
     this.devicePixelRatio = options.pixelRatio ?? Math.min(window.devicePixelRatio || 1, 2);
     this.pixelRatio = tierPixelRatio(this.tier, this.devicePixelRatio, this.width, this.phoneHigh);

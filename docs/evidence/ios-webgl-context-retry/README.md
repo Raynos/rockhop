@@ -1,0 +1,9 @@
+# iPhone Safari WebGL2 startup recovery
+
+The user's 2026-09-29 phone screenshot shows public build `0de5d5a` failing about 1.7 seconds into boot with `WebGL2 context unavailable during renderer startup`. The first precision guard addressed the previous null shader-format crash but did not recover from a WebGL2 context that Safari declines or loses during renderer construction. The next public runtime (`1e1dc9de`) had the same renderer code and remains affected.
+
+Normal game boot now retries only context-unavailable renderer construction, on a **fresh canvas** each time. The first request keeps the existing `high-performance` preference; subsequent requests use `default`. Delays are 250, 750, 1500 and 3000 ms, then the existing crash sheet appears with a reason (`null`, `already-lost`, `lost-during-init`, or `get-context-threw`). Non-context errors are not retried. Failed canvases are removed before the next attempt; a constructor failure releases its live context where possible.
+
+The focused retry/precision tests pass **7/7**, plus typecheck and lint. In silent headless WebKit at iPhone landscape geometry, normal boot reached Menu on one context request; two injected null, already-lost, or thrown requests recovered on the third; an injected loss during Three construction recovered on the second. Each recovered case had the same three app canvases as normal boot. A persistent-null injection made exactly five requests, left zero app canvases and produced the diagnostic crash sheet. The automation constructed no AudioContext.
+
+This is a bounded recovery for transient Safari GPU allocation failure, not proof that the user's physical iPhone can allocate a WebGL2 context. A physical reload on the deployed SHA and a played level remain required before closing the release blocker. If the phone still fails, the reason suffix and copied report will distinguish which failure persists.

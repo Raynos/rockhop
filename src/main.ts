@@ -28,6 +28,7 @@ import { DEFAULT_PHYSICS_HZ, type PhysicsVersion } from './core';
 import * as audioMod from './audio';
 import { createBikePhysicsV2 } from './physics/v2/bike';
 import * as renderMod from './render';
+import { retryWebGL2Startup } from './render/startupRetry';
 import type { AudioSystem } from './audio';
 import type { PhysicsWorld } from './physics';
 import type { GameRenderer } from './render';
@@ -102,12 +103,12 @@ interface RendererBootHooks {
 /** What the renderer is constructed with, beyond the model choice: the same outfit, class and start tier the boot inline declared (ask 43). */
 interface HeroStart { riderOutfit: RiderOutfit; bikeClass: BikeClass; quality: QualityTier; deviceClass: 'phone' | 'desktop' }
 
-function makeRenderer(parent: HTMLElement, harness: boolean, models: ModelChoices, start: HeroStart, boot?: RendererBootHooks): { renderer: GameRenderer; kind: string } {
+function makeRenderer(parent: HTMLElement, harness: boolean, models: ModelChoices, start: HeroStart, boot?: RendererBootHooks, powerPreference?: WebGLPowerPreference): { renderer: GameRenderer; kind: string } {
   const m = renderMod as AnyModule;
   // riderModel / bikeModel: 'proc' | 'gltf' — the render owner reads them; unknown keys are ignored today.
   // riderOutfit / bikeClass / quality / deviceClass: what the first frame draws (src/game/startTier.ts); every hero
   // file is fetched before `ready` whatever they are (ask 50), so a later outfit / class / tier is a resident swap.
-  const opts = { ...(harness ? { pixelRatio: 1 } : {}), preserveDrawingBuffer: harness, ...models, ...start, ...(boot ?? {}) };
+  const opts = { ...(harness ? { pixelRatio: 1 } : {}), preserveDrawingBuffer: harness, ...models, ...start, ...(boot ?? {}), ...(powerPreference ? { powerPreference } : {}) };
   const create = m['createRenderer'];
   if (typeof create === 'function') {
     return { renderer: (create as (p: HTMLElement, o: typeof opts) => GameRenderer)(parent, opts), kind: 'createRenderer' };
@@ -266,7 +267,9 @@ function boot(): void {
         if (crashTest === 'boot') crashTestBoot();
         // The two downloads boot awaits (hero glTF, boot art set) start in the renderer's constructor, each with its
         // DOWNLOAD reader; per-track art after the boot set is an `after` item.
-        return makeRenderer(appRoot, false, models, start, { heroBytes: plan.reader('heroModels'), artBytes: plan.reader('bootArt'), onTrackArt: (done, total) => plan.after('trackArt', done, total) });
+        return retryWebGL2Startup((attempt) => makeRenderer(appRoot, false, models, start, {
+          heroBytes: plan.reader('heroModels'), artBytes: plan.reader('bootArt'), onTrackArt: (done, total) => plan.after('trackArt', done, total),
+        }, attempt === 0 ? 'high-performance' : 'default'));
       });
       const { renderer, kind: renderKind } = sRenderer.value;
       const sPhysics = await sRenderer.step('physics', async () => {
