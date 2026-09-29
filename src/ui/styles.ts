@@ -135,8 +135,7 @@ export const FRONT_CSS = /* css */ `
    height (PLAY 16 %), GARAGE 24 % · SETTINGS 25 % · PLAY 38 % of the width. Nothing states progress (ask 42). */
 .menu-screen { --card-h: clamp(52px, calc(12.7 * var(--vh)), 104px); --play-h: clamp(60px, calc(16 * var(--vh)), 128px); --foot-h: max(44px, calc(8 * var(--vh))); --mx: calc(5 * var(--vw)); background: var(--coal); }
 .menu-keyart { position: absolute; inset: 0; pointer-events: none; background-size: cover; background-position: 58% 42%; transform-origin: 60% 40%; opacity: 0; transition: opacity var(--t3) var(--ease); }
-.menu-keyart.loaded { opacity: 1; animation: kenburns 28s var(--ease) infinite alternate; }
-@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.045); } }
+.menu-keyart.loaded { opacity: 1; }
 /* A light hand: the sky darkens a touch behind the wordmark, the ground a touch under the cards. */
 .menu-shade { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 70% at 0% 0%, rgba(10,22,25,.42), transparent 55%), linear-gradient(180deg, transparent 62%, rgba(10,16,18,.42)); }
 .menu-head { position: absolute; left: calc(var(--mx) + var(--sal)); top: calc(max(10px, calc(5.5 * var(--vh))) + var(--sat)); display: flex; flex-direction: column; align-items: flex-start; gap: max(4px, calc(1 * var(--vh))); pointer-events: none; }
@@ -788,7 +787,6 @@ html.narrow .settings-wrap { grid-template-columns: 1fr; }
 @media (prefers-reduced-motion: reduce) {
   .overlay.show .tile, .overlay.show .ov-foot { animation: fadein var(--t2) var(--ease) both; }
   .results .time, .results .faults, .results .medals, .results .pb, .results .tiles, .results .ov-foot, .results .tk-stamp, .ticket { transform: none; }
-  .menu-keyart.loaded { animation: none; }
 }
 `;
 

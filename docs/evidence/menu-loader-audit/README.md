@@ -15,7 +15,7 @@ The full [before measurements](before/measurements.json.gz) and [after measureme
 | Old Trials flash | The first HTML bytes paint the ROCKHOP SVG; the first loader frame, video, menu, and document title show ROCKHOP. No user-facing Trials title appeared in these fresh contexts. | A player upgrading from an old domain/service worker cache remains a separate migration test. |
 | Portrait orientation | Loading displays “Rotate your phone to landscape”; after loading, `.rotate.armed` has `display:flex` and covers the portrait menu ([frame](after/webkit-430x932-cold-end.png)). | Verified in emulation. |
 | Portrait bottom strip | The after [loading frame](after/webkit-430x932-cold-loading.png) has no bar. At x=10 physical px, sampled top, middle, and last row all read the same RGB **(15,92,99)**; `#loader` fills the measured 430×932 viewport. | **Unresolved on the reported physical iPhone.** Recheck Safari standalone launch, changing browser chrome/visual viewport, safe area, and OS splash transition on device. |
-| Menu image movement | `.menu-keyart.loaded` intentionally runs `kenburns` from scale 1 to 1.045 over 28 s. The cards and wordmark do not share that transform. | If the user's “loading screen shake” refers to the attached **menu** frame, disable the art movement or judge a longer phone clip before tuning. |
+| Menu image movement | `.menu-keyart.loaded` originally ran `kenburns` from scale 1 to 1.045 over 28 s. The cards and wordmark did not share that transform. A [later stable-hero pass](stable-hero/README.md) removed it and measured byte-identical art crops 2.5 s apart in normal-motion WebKit. | Fixed in the web source; physical-phone recording remains the final check. |
 
 ## Reproduced and fixed: loader layout shake
 
