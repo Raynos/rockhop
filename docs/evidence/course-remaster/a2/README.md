@@ -1,0 +1,7 @@
+# A2 Log Jam — pivot and cut-end model pass
+
+The [silent played final-jam clip](jam-after.mp4) follows the recorded Rookie route through the jump, tipping log and two-row pile at 852×392, high renderer quality. [The contact sheet](sheet.jpg) indexes the 101-frame window; [capture data](capture.json) records the exact input, camera checks and end state. Its browser state at tick 3252 matches a fresh Node replay byte for byte: `83cd9b3616f46581`. The obstacle source SHA-256 at capture was `07343434dba2d15738e147906ede4b5244f5639939a0ad532e29c0242e33ae37`.
+
+The [frozen full-ride baseline](../baseline-clips/a2-log-jam/clip.mp4) showed a dark plank over indistinct cribbing at the final pivot. The [earlier first-pile fault clip](../../alpine-retarget/clips/a2-log-jam-rookie-go/clip.mp4) showed the front wheel lifting and the rider flipping over dark log ends. This pass adds a planed top and bark scoring to the moving log, a fixed axle and diagonal timber supports beneath it, and pale cut faces on the pivot cribbing and both playable log piles. The contact profile, seesaw angle and physics are unchanged.
+
+At phone size, the pivot's support and the pile's rows now separate in motion while the riding top remains visible. Full A2 obstacle geometry measures **2,808 → 6,948 triangles** and **6 → 8 draw calls**. The 101-frame played capture has no riding camera-box or roll violations. A fresh fault replay and physical-phone frame pacing are still needed before A2 is called fully remastered.

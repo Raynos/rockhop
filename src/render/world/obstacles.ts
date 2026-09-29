@@ -1053,6 +1053,15 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
       geo = tintGeo(new THREE.IcosahedronGeometry(r, 1).scale(1.2, 1, 1.1), 0xf0dcc0);
     } else geo = tintGeo(new THREE.CylinderGeometry(r, r, w, 16).rotateX(Math.PI / 2), prop === 'snowcat' ? 0x2a2a2a : 0x555555);
     roller(c, geo, mat);
+    if (ctx.trackId === 'a2-log-jam' && po.kind === 'logpile' && prop === 'log' && !c.rolls) {
+      // The near cut face belongs to the same circular collider as the bark body. A pale end-grain disk and a
+      // fine growth ring separate the overlapping rows in the approach and make a nose-first pile fault legible.
+      const z = (w + 0.6) / 2 + 0.025;
+      push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(r * 0.84, r * 0.84, 0.04, 14).rotateX(Math.PI / 2), 0xd9b47e),
+        at(c.center.x, c.center.y, z));
+      push(buckets, 'pallet', tintGeo(new THREE.TorusGeometry(r * 0.51, 0.014, 4, 14), 0x765337),
+        at(c.center.x, c.center.y, z + 0.026));
+    }
   }
   if (polys.length || boxes.length) solid(prop === 'snowcat' ? 'container' : 'pallet', prop === 'snowcat' ? 0xc4321e : 0x8a6a48);
   return true;
@@ -1138,19 +1147,45 @@ function seesawProp(prop: string, c: Extract<Collider, { kind: 'seesaw' }>, lib:
   }
   if (prop === 'log') {
     const wood = vc('pallet');
-    // Hewn log: flat top (the ridden face, pale sawn wood), bark below, the diameter tapering toward the tips.
-    const bark = hull(0.42, 0.1, 1.0, depth * 0.55, 0.55, 0x5a4030, (x, y) => (y > t - 0.03 ? 2.2 : 0.8 + 0.2 * Math.abs(Math.sin(x * 3))));
+    // Hewn log: the flat planed face remains below the moving collider top; a wider, faceted bark body tapers
+    // toward both tips so the log can still reach its authored tilt limit without a false ground contact.
+    const bark = hull(0.48, 0.1, 1.0, depth * 0.64, 0.58, 0x765237,
+      (x, y) => (y > t - 0.03 ? 1.45 : 0.82 + 0.15 * Math.abs(Math.sin(x * 3))));
     const parts: THREE.BufferGeometry[] = [bark];
-    for (const s of [-1, 1]) parts.push(G.paint(new THREE.CylinderGeometry(0.2, 0.2, 0.03, 12).rotateZ(Math.PI / 2).scale(1, 0.5, depth * 0.55 * 2.4), G.rgb(0xd6b080)).translate(s * (L - 0.01), t - 0.08, 0));
-    const moving = [mesh(G.merge(parts), wood)];
+    for (const z of [-depth * 0.32 - 0.025, depth * 0.32 + 0.025]) {
+      for (const y of [t - 0.14, t - 0.29]) parts.push(G.box(L * 2 - 0.3, 0.023, 0.045, 0, y, z, G.rgb(0xa4764c)));
+    }
+    const planed: THREE.BufferGeometry[] = [G.box(L * 2 - 0.08, 0.045, depth * 0.51, 0, t - 0.034, 0, G.rgb(0xc69b66))];
+    for (const s of [-1, 1]) {
+      const cap = new THREE.CylinderGeometry(0.13, 0.13, 0.035, 14).rotateZ(Math.PI / 2);
+      planed.push(G.paint(cap, G.rgb(0xd6ad77)).translate(s * (L - 0.05), t - 0.14, 0));
+    }
+    const moving = [mesh(G.merge(parts), wood), mesh(G.merge(planed), vc('plaque'))];
     // The jam: a pile of logs under the fulcrum.
     const jam: THREE.BufferGeometry[] = [];
+    const cuts: THREE.BufferGeometry[] = [];
     const n = Math.max(1, Math.floor((h - 0.2) / 0.36));
     for (let r = 0; r < n; r++) for (let k = 0; k < Math.max(1, 3 - r); k++) {
       const x = (k - (Math.max(1, 3 - r) - 1) / 2) * 0.4;
-      jam.push(G.paint(new THREE.CylinderGeometry(0.19, 0.19, depth + 0.4, 9).rotateX(Math.PI / 2).translate(x, 0.19 + r * 0.34, 0), G.rgb(0x5a4030), () => 0.8 + 0.2 * r));
+      const y = 0.19 + r * 0.34;
+      jam.push(G.paint(new THREE.CylinderGeometry(0.19, 0.19, depth + 0.4, 9).rotateX(Math.PI / 2).translate(x, y, 0),
+        G.rgb(r % 2 ? 0x755137 : 0x62442f), () => 0.84 + 0.12 * r));
+      cuts.push(G.paint(new THREE.CylinderGeometry(0.16, 0.16, 0.04, 12).rotateX(Math.PI / 2)
+        .translate(x, y, (depth + 0.4) / 2 + 0.02), G.rgb(0xd4ac78)));
     }
     standBase.push(['pallet', G.merge(jam)]);
+    standBase.push(['plaque', G.merge(cuts)]);
+    // Cribbing and a fixed axle make the real hinge readable when the upper log tips under the rider.
+    standBase.push(['pallet', G.box(1.25, 0.15, depth * 0.8, 0, h - 0.31, 0, G.rgb(0x9d754c))]);
+    for (const s of [-1, 1]) {
+      const ax = s * 0.55, ay = 0.28, bx = s * 0.19, by = h - 0.37;
+      const len = Math.hypot(bx - ax, by - ay);
+      const brace = new THREE.BoxGeometry(len, 0.11, 0.12).rotateZ(Math.atan2(by - ay, bx - ax))
+        .translate((ax + bx) / 2, (ay + by) / 2, depth * 0.5 + 0.1);
+      standBase.push(['pallet', G.paint(brace, G.rgb(0xa27a50))]);
+    }
+    standBase.push(['darkSteel', G.paint(new THREE.CylinderGeometry(0.16, 0.16, 0.16, 16).rotateX(Math.PI / 2)
+      .translate(0, h - 0.14, depth * 0.43 + 0.16), G.rgb(0xaaa69d))]);
     return { moving, stand: standBase };
   }
   return null;
