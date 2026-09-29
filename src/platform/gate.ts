@@ -44,7 +44,7 @@ export interface GateConfig {
    * ridden over the line in the app (its inputs fed tick for tick from GO, synchronously, so no wall-clock frame can
    * interleave) and the results ticket shot once its reveal lands, then its MAP tile; `map` — the world map shot.
    */
-  front?: { results?: string; map?: boolean };
+  front?: { results?: string; map?: boolean; mapRide?: boolean };
 }
 
 export interface ShotSpec {
@@ -68,6 +68,8 @@ type GateWindow = Window & {
   __rockhopAudioContexts?: () => number;
   __trials?: TrialsHook;
   __rockhop?: TrialsHook;
+  __rockhopMap3d?: { selectStage(index: number, focus?: boolean): void; towerScreenPoint(index: number): { x: number; y: number } | null };
+  __render?: { canvas: HTMLCanvasElement };
 };
 
 const w = window as GateWindow;
@@ -437,8 +439,48 @@ async function frontStage(cfg: GateConfig, first: number): Promise<void> {
   } else if (cfg.front?.map) h.app!.goto('tracks');
   if (cfg.front?.map) {
     await waitFor('the world map', () => h.app!.screen() === 'tracks', 20_000);
-    await sleep(4000); // the map's own open: plate, trail, markers, the focused card
+    await waitFor('the 3D island', () => document.querySelector<HTMLElement>('.wm3d-host[data-ready="1"]'), 60_000);
+    const mapCanvases = document.querySelectorAll('.wm3d-host canvas').length;
+    const gameContextLost = w.__render?.canvas.getContext('webgl2')?.isContextLost();
+    if (mapCanvases !== 1 || gameContextLost !== true) throw new Error(`native map opened without sole GPU ownership: ${mapCanvases} canvases, game lost=${gameContextLost}`);
+    post({ name: 'map-open', mapCanvases, gameContextLost, audioContexts: audioContexts() });
     await shot('world-map', { recording: 'map' });
+    if (cfg.front.mapRide) {
+      const map = await waitFor('the map tower probe', () => w.__rockhopMap3d, 10_000);
+      map.selectStage(0, true);
+      await sleep(850); // the authored camera focus must settle before the real tower hit is sent
+      const point = map.towerScreenPoint(0);
+      const canvas = document.querySelector<HTMLCanvasElement>('.wm3d-host canvas');
+      if (!point || !canvas) throw new Error('C1 tower has no screen hit target');
+      for (const type of ['pointerdown', 'pointerup']) canvas.dispatchEvent(new PointerEvent(type, {
+        bubbles: true, clientX: point.x, clientY: point.y, pointerType: 'touch', isPrimary: true,
+      }));
+      await waitFor('C1 selected from its tower', () => document.querySelector<HTMLElement>('.wm3d-detail[data-track="c1-low-tide"]'), 10_000);
+      const ride = await waitFor('the C1 Ride button', () => document.querySelector<HTMLButtonElement>('.wm-ride:not(:disabled)'), 10_000);
+      const rideStart = now();
+      ride.click();
+      await waitFor('C1 riding from the map', () => {
+        document.querySelector<HTMLButtonElement>('.ob-card button')?.click();
+        return h.app!.screen() === 'run' && h.phase() === 'riding';
+      }, 60_000);
+      await waitFor('the gameplay WebGL context restored', () =>
+        document.querySelectorAll('.wm3d-host canvas').length === 0 && w.__render?.canvas.getContext('webgl2')?.isContextLost() === false, 10_000);
+      post({ name: 'map-ride', trackId: 'c1-low-tide', rideMs: Math.round(now() - rideStart), gameContextLost: false,
+        mapCanvases: 0, audioContexts: audioContexts() });
+      h.app!.quit();
+      await waitFor('menu after C1', () => h.app!.screen() === 'menu', 15_000);
+      h.app!.goto('tracks');
+      await waitFor('the map reopened', () => document.querySelector<HTMLElement>('.wm3d-host[data-ready="1"]'), 60_000);
+      const returnCanvases = document.querySelectorAll('.wm3d-host canvas').length;
+      const returnGameLost = w.__render?.canvas.getContext('webgl2')?.isContextLost();
+      if (returnCanvases !== 1 || returnGameLost !== true) throw new Error(`native map return lost GPU ownership: ${returnCanvases} canvases, game lost=${returnGameLost}`);
+      post({ name: 'map-return', mapCanvases: returnCanvases, gameContextLost: returnGameLost });
+      h.app!.goto('menu');
+      await waitFor('game context after map exit', () =>
+        h.app!.screen() === 'menu' && document.querySelectorAll('.wm3d-host canvas').length === 0 &&
+        w.__render?.canvas.getContext('webgl2')?.isContextLost() === false, 10_000);
+      post({ name: 'map-exit', mapCanvases: 0, gameContextLost: false, audioContexts: audioContexts() });
+    }
   }
   post({ name: 'done', shots: n });
 }

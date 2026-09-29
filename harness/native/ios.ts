@@ -126,5 +126,6 @@ export async function runIos(opts: { arm?: Partial<GateArm>; record?: boolean; t
   for (const [name, m] of Object.entries(messages)) fs.writeFileSync(path.join(outDir, `${name}.json`), `${JSON.stringify(m, null, 1)}\n`);
   const runtime = sh('xcrun', ['simctl', 'list', 'devices', '--json']).includes(udid) ? udid : 'unknown';
   const device = opts.ipad ? `iOS Simulator ${IPAD_DEVICE_NAME} (iPad Pro 11-inch M5, iPhone app in compatibility mode, ${runtime})` : `iOS Simulator ${IOS_DEVICE_NAME} (iPhone 17 Pro Max, ${runtime})`;
-  return { platform: opts.ipad ? 'ipad' : 'ios', device, ok: !messages['error'] && !!messages['result'], messages, clip: clipOut, wallS: Math.round((Date.now() - t0) / 1000), notes };
+  const completed = opts.arm?.front?.mapRide ? !!messages['map-exit'] && !!messages['done'] : !!messages['result'];
+  return { platform: opts.ipad ? 'ipad' : 'ios', device, ok: !messages['error'] && completed, messages, clip: clipOut, wallS: Math.round((Date.now() - t0) / 1000), notes };
 }

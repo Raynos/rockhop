@@ -50,10 +50,10 @@ function armScript(arm: GateArm & { platform: 'web' }): void {
   g['__rockhopGatePost'] = (m: unknown) => (g['__rockhopGateSink'] as (s: string) => void)(JSON.stringify(m));
 }
 
-export async function runWeb(opts: { paced?: boolean; width?: number; height?: number } = {}): Promise<PlatformRun> {
+export async function runWeb(opts: { paced?: boolean; width?: number; height?: number; arm?: Partial<GateArm> } = {}): Promise<PlatformRun> {
   const t0 = Date.now();
   const manifest = readManifest();
-  const arm = { ...armFor(manifest, { paced: opts.paced === false ? -1 : 0 }), platform: 'web' as const };
+  const arm = { ...armFor(manifest, { paced: opts.paced === false ? -1 : 0, ...opts.arm }), platform: 'web' as const };
   const server = await serveWebDir();
   const launched = await launchBrowser({ width: opts.width ?? 1280, height: opts.height ?? 720 });
   const messages: GateMessages = {};
@@ -74,5 +74,6 @@ export async function runWeb(opts: { paced?: boolean; width?: number; height?: n
     await launched.close();
     await server.close();
   }
-  return { platform: 'web', device: `headless Chromium (${launched.flagSet})`, ok: !messages['error'] && !!messages['result'], messages, clip: null, wallS: Math.round((Date.now() - t0) / 1000), notes };
+  const completed = opts.arm?.front?.mapRide ? !!messages['map-exit'] && !!messages['done'] : !!messages['result'];
+  return { platform: 'web', device: `headless Chromium (${launched.flagSet})`, ok: !messages['error'] && completed, messages, clip: null, wallS: Math.round((Date.now() - t0) / 1000), notes };
 }

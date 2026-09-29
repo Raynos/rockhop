@@ -1,0 +1,638 @@
+{
+ "at": "2026-09-29T05:20:52.565Z",
+ "source": "1895a1e28627acf9f92e0cb4451e7857b5b22803",
+ "runs": [
+  {
+   "platform": "web",
+   "device": "headless Chromium (angle-metal)",
+   "ok": true,
+   "wallS": 17,
+   "clip": null,
+   "notes": [
+    "renderer ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+   ],
+   "checks": [
+    {
+     "id": "gate.completed",
+     "value": true,
+     "limit": true,
+     "pass": true
+    },
+    {
+     "id": "boot.toMenuMs",
+     "value": 4824,
+     "limit": "menu",
+     "pass": true,
+     "informational": true,
+     "note": "cold start → the loader gone over the menu (the whole offline pack is read from the app bundle; hook at 464 ms)"
+    },
+    {
+     "id": "start.toRiding",
+     "value": 5191,
+     "limit": "riding",
+     "pass": true,
+     "note": "app.play('flat-test') through the countdown"
+    },
+    {
+     "id": "silent.audioContexts",
+     "value": 0,
+     "limit": 0,
+     "pass": true,
+     "note": "navigator.webdriver under the gate; AudioContexts constructed"
+    },
+    {
+     "id": "clear.golden",
+     "value": "gate/flat-test.bot-3.json: 8.591666666666667",
+     "limit": "all cleared",
+     "pass": true
+    },
+    {
+     "id": "crash.faultWithinS",
+     "value": 0.8583333333333333,
+     "limit": 8,
+     "pass": true,
+     "note": "crash"
+    },
+    {
+     "id": "fault.toControlMs",
+     "value": 25,
+     "limit": 500,
+     "pass": true
+    },
+    {
+     "id": "restart.ticks",
+     "value": 1,
+     "limit": 1,
+     "pass": true
+    },
+    {
+     "id": "restart.wallMsP95",
+     "value": 0.10000038146972656,
+     "limit": 5,
+     "pass": true,
+     "informational": false
+    },
+    {
+     "id": "restart.frameMsP95",
+     "value": 3.5,
+     "limit": 33,
+     "pass": true,
+     "informational": true,
+     "note": "restart → synced frame"
+    },
+    {
+     "id": "restart.noCountdown",
+     "value": 1,
+     "limit": 12,
+     "pass": true
+    },
+    {
+     "id": "silent.audioContexts.harness",
+     "value": 0,
+     "limit": 0,
+     "pass": true
+    }
+   ],
+   "boot": {
+    "name": "boot",
+    "hookMs": 464,
+    "loaderGoneMs": 4824,
+    "menuMs": 4824,
+    "track": "flat-test",
+    "startToRidingMs": 5191,
+    "startError": null,
+    "renderer": {
+     "biome": "coast",
+     "zoom": "idle",
+     "phase": "riding",
+     "tier": "low",
+     "dpr": 1,
+     "devicePixelRatio": 1,
+     "canvasW": 1280,
+     "canvasH": 720,
+     "calls": 117,
+     "tris": 71844,
+     "rtMpx": 4.87,
+     "rtMB": 44.2,
+     "rtPasses": "shadow 512×512 | scene:hdr 1280×720 | composite:graded 1280×720 | smaa:edges 1280×720 | smaa:weights 1280×720 | smaa→canvas 1280×720",
+     "shadowMap": 512,
+     "heroTris": 13626,
+     "heroDoc": "bike-lod rider-lod",
+     "riderOutfit": "street-mustard",
+     "riderMaterialVariant": null,
+     "heroShadow": "hero-only",
+     "trackCalls": 13,
+     "trackTris": 70328,
+     "textureGenMs": 264.7000002861023,
+     "passes": 5,
+     "stalePrograms": 20,
+     "skippedFrames": 0,
+     "deviceClass": "desktop",
+     "profile": "low",
+     "bloomers": 0,
+     "entryMs": 0,
+     "entering": true
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36",
+    "screen": {
+     "w": 1280,
+     "h": 720,
+     "dpr": 1
+    },
+    "platform": "web",
+    "atMs": 11617
+   },
+   "result": {
+    "name": "result",
+    "readyMs": 175,
+    "clear": [
+     {
+      "file": "gate/flat-test.bot-3.json",
+      "trackId": "flat-test",
+      "bike": "rookie",
+      "ticks": 1031,
+      "finishTime": 8.591666666666667,
+      "finishTimeHex": "efeeeeeeee2e2140",
+      "hash": "622bb2554e0f9a26",
+      "cleared": true,
+      "wallMs": 68
+     }
+    ],
+    "paced": {
+     "file": "gate/flat-test.bot-3.json (paced)",
+     "trackId": "flat-test",
+     "bike": "rookie",
+     "ticks": 1031,
+     "finishTime": 8.591666666666667,
+     "finishTimeHex": "efeeeeeeee2e2140",
+     "hash": "622bb2554e0f9a26",
+     "cleared": true,
+     "wallMs": 823,
+     "frames": 516,
+     "longFrames": 0
+    },
+    "crash": {
+     "file": "gate/flat-test.crash.json",
+     "trackId": "flat-test",
+     "fault": {
+      "tick": 103,
+      "time": 0.8583333333333333,
+      "reason": "crash"
+     },
+     "toControlTicks": 3,
+     "toControlMs": 25,
+     "wallMs": 4
+    },
+    "restart": {
+     "track": "flat-test",
+     "reps": 20,
+     "ticksOk": true,
+     "wallMsP95": 0.10000038146972656,
+     "frameMsP95": 3.5,
+     "movesAfterTicks": 1,
+     "wallMs": [
+      0.1,
+      0.1,
+      0,
+      0.1,
+      0.1,
+      0.1,
+      0,
+      0,
+      0.1,
+      0.1,
+      0,
+      0,
+      0.1,
+      0.1,
+      0,
+      0.1,
+      0.1,
+      0,
+      0.1,
+      0.1
+     ],
+     "frameMs": [
+      3.5,
+      3.2,
+      3.2,
+      3.1,
+      3.2,
+      3.4,
+      3,
+      3.2,
+      3.4,
+      3.4,
+      3,
+      3,
+      3.1,
+      3.5,
+      2.9,
+      3,
+      3.8,
+      2.9,
+      2.8,
+      2.7
+     ]
+    },
+    "errors": [
+     "gate/b1-first-ride.bot-3.json: Error: unknown track b1-first-ride"
+    ],
+    "info": {
+     "version": "0.2.2-core",
+     "physicsHz": 120,
+     "trackId": "flat-test",
+     "seed": 3277865877,
+     "bike": "rookie",
+     "harness": true,
+     "readyAtMs": 53.1,
+     "loadTrackMs": 37.9,
+     "render": {
+      "biome": "industrial",
+      "zoom": "idle",
+      "phase": "riding",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 1280,
+      "canvasH": 720,
+      "calls": 173,
+      "tris": 256556,
+      "rtMpx": 10.34,
+      "rtMB": 84.1,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 1280×720 | ao 640×360 | ao:blur 640×360 | bloom:bright 640×360 | bloom:h0 640×360 | bloom:v0 640×360 | bloom:h1 320×180 | bloom:v1 320×180 | bloom:h2 160×90 | bloom:v2 160×90 | bloom:h3 80×45 | bloom:v3 80×45 | bloom:h4 40×23 | bloom:v4 40×23 | bloom:composite 640×360 | composite:graded 1280×720 | smaa:edges 1280×720 | smaa:weights 1280×720 | smaa→canvas 1280×720",
+      "shadowMap": 2048,
+      "heroTris": 92170,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 9,
+      "trackTris": 48516,
+      "textureGenMs": 310.7000002861023,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 156.9,
+      "entering": false
+     },
+     "qualityWhy": "",
+     "quality": "high",
+     "entryHold": false,
+     "modules": {
+      "physics": "createBikePhysics",
+      "render": "ThreeRenderer",
+      "audio": "WebAudioSystem",
+      "rider": "gltf",
+      "bike": "gltf"
+     }
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "platform": "web",
+    "atMs": 5002
+   }
+  },
+  {
+   "platform": "ios",
+   "device": "iOS Simulator rockhop-gate (iPhone 17 Pro Max, 5D278BE8-2D5C-4DD3-996A-86F2C4159160)",
+   "ok": true,
+   "wallS": 46,
+   "clip": "harness/out/native/ios/clip.mp4",
+   "notes": [],
+   "checks": [
+    {
+     "id": "gate.completed",
+     "value": true,
+     "limit": true,
+     "pass": true
+    },
+    {
+     "id": "boot.toMenuMs",
+     "value": 4586,
+     "limit": "menu",
+     "pass": true,
+     "informational": true,
+     "note": "cold start → the loader gone over the menu (the whole offline pack is read from the app bundle; hook at 784 ms)"
+    },
+    {
+     "id": "start.toRiding",
+     "value": 3696,
+     "limit": "riding",
+     "pass": true,
+     "note": "app.play('flat-test') through the countdown"
+    },
+    {
+     "id": "silent.audioContexts",
+     "value": 0,
+     "limit": 0,
+     "pass": true,
+     "note": "navigator.webdriver under the gate; AudioContexts constructed"
+    },
+    {
+     "id": "clear.golden",
+     "value": "gate/flat-test.bot-3.json: 8.591666666666667",
+     "limit": "all cleared",
+     "pass": true
+    },
+    {
+     "id": "crash.faultWithinS",
+     "value": 0.8583333333333333,
+     "limit": 8,
+     "pass": true,
+     "note": "crash"
+    },
+    {
+     "id": "fault.toControlMs",
+     "value": 25,
+     "limit": 500,
+     "pass": true
+    },
+    {
+     "id": "restart.ticks",
+     "value": 1,
+     "limit": 1,
+     "pass": true
+    },
+    {
+     "id": "restart.wallMsP95",
+     "value": 0,
+     "limit": 5,
+     "pass": true,
+     "informational": false
+    },
+    {
+     "id": "restart.frameMsP95",
+     "value": 6,
+     "limit": 33,
+     "pass": true,
+     "informational": false,
+     "note": "restart → synced frame"
+    },
+    {
+     "id": "restart.noCountdown",
+     "value": 1,
+     "limit": 12,
+     "pass": true
+    },
+    {
+     "id": "silent.audioContexts.harness",
+     "value": 0,
+     "limit": 0,
+     "pass": true
+    }
+   ],
+   "boot": {
+    "name": "boot",
+    "hookMs": 784,
+    "loaderGoneMs": 4586,
+    "menuMs": 4586,
+    "track": "flat-test",
+    "startToRidingMs": 3696,
+    "startError": null,
+    "renderer": {
+     "biome": "coast",
+     "zoom": "idle",
+     "phase": "riding",
+     "tier": "low",
+     "dpr": 1.5,
+     "devicePixelRatio": 1.5,
+     "canvasW": 1434,
+     "canvasH": 660,
+     "calls": 121,
+     "tris": 94130,
+     "rtMpx": 4.99,
+     "rtMB": 45.3,
+     "rtPasses": "shadow 512×512 | scene:hdr 1434×660 | composite:graded 1434×660 | smaa:edges 1434×660 | smaa:weights 1434×660 | smaa→canvas 1434×660",
+     "shadowMap": 512,
+     "heroTris": 13626,
+     "heroDoc": "bike-lod rider-lod",
+     "riderOutfit": "street-mustard",
+     "riderMaterialVariant": null,
+     "heroShadow": "hero-only",
+     "trackCalls": 13,
+     "trackTris": 70328,
+     "textureGenMs": 450.0000000000007,
+     "passes": 5,
+     "stalePrograms": 20,
+     "skippedFrames": 0,
+     "deviceClass": "phone",
+     "profile": "low",
+     "bloomers": 0,
+     "entryMs": 0,
+     "entering": true
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+    "screen": {
+     "w": 956,
+     "h": 440,
+     "dpr": 3
+    },
+    "platform": "ios",
+    "atMs": 9890
+   },
+   "result": {
+    "name": "result",
+    "readyMs": 173,
+    "clear": [
+     {
+      "file": "gate/flat-test.bot-3.json",
+      "trackId": "flat-test",
+      "bike": "rookie",
+      "ticks": 1031,
+      "finishTime": 8.591666666666667,
+      "finishTimeHex": "efeeeeeeee2e2140",
+      "hash": "622bb2554e0f9a26",
+      "cleared": true,
+      "wallMs": 124
+     }
+    ],
+    "paced": {
+     "file": "gate/flat-test.bot-3.json (paced)",
+     "trackId": "flat-test",
+     "bike": "rookie",
+     "ticks": 1031,
+     "finishTime": 8.591666666666667,
+     "finishTimeHex": "efeeeeeeee2e2140",
+     "hash": "622bb2554e0f9a26",
+     "cleared": true,
+     "wallMs": 8643,
+     "frames": 516,
+     "longFrames": 1
+    },
+    "crash": {
+     "file": "gate/flat-test.crash.json",
+     "trackId": "flat-test",
+     "fault": {
+      "tick": 103,
+      "time": 0.8583333333333333,
+      "reason": "crash"
+     },
+     "toControlTicks": 3,
+     "toControlMs": 25,
+     "wallMs": 4
+    },
+    "restart": {
+     "track": "flat-test",
+     "reps": 20,
+     "ticksOk": true,
+     "wallMsP95": 0,
+     "frameMsP95": 6,
+     "movesAfterTicks": 1,
+     "wallMs": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "frameMs": [
+      4,
+      7,
+      4,
+      6,
+      5,
+      6,
+      5,
+      5,
+      5,
+      4,
+      5,
+      5,
+      4,
+      4,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4
+     ]
+    },
+    "errors": [
+     "gate/b1-first-ride.bot-3.json: Error: unknown track b1-first-ride"
+    ],
+    "info": {
+     "version": "0.2.2-core",
+     "physicsHz": 120,
+     "trackId": "flat-test",
+     "seed": 3277865877,
+     "bike": "rookie",
+     "harness": true,
+     "readyAtMs": 55,
+     "loadTrackMs": 51,
+     "render": {
+      "biome": "industrial",
+      "zoom": "idle",
+      "phase": "riding",
+      "tier": "medium",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 956,
+      "canvasH": 440,
+      "calls": 161,
+      "tris": 251160,
+      "rtMpx": 3.27,
+      "rtMB": 28.2,
+      "rtPasses": "shadow 1024×1024 | scene:hdr 956×440 | bloom:bright 239×110 | bloom:h0 239×110 | bloom:v0 239×110 | bloom:h1 120×55 | bloom:v1 120×55 | bloom:h2 60×28 | bloom:v2 60×28 | bloom:h3 30×14 | bloom:v3 30×14 | bloom:h4 15×7 | bloom:v4 15×7 | bloom:composite 239×110 | composite:graded 956×440 | smaa:edges 956×440 | smaa:weights 956×440 | smaa→canvas 956×440",
+      "shadowMap": 1024,
+      "heroTris": 92170,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 9,
+      "trackTris": 48516,
+      "textureGenMs": 542,
+      "passes": 17,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "phone",
+      "profile": "medium",
+      "bloomers": 0,
+      "entryMs": 347,
+      "entering": false
+     },
+     "qualityWhy": "",
+     "quality": "high",
+     "entryHold": false,
+     "modules": {
+      "physics": "createBikePhysics",
+      "render": "ThreeRenderer",
+      "audio": "WebAudioSystem",
+      "rider": "gltf",
+      "bike": "gltf"
+     }
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "platform": "ios",
+    "atMs": 12948
+   }
+  }
+ ],
+ "bar3": [
+  {
+   "recording": "gate/flat-test.bot-3.json",
+   "trackId": "flat-test",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 8.591666666666667,
+     "finishTimeHex": "efeeeeeeee2e2140",
+     "hash": "622bb2554e0f9a26",
+     "ticks": 1031
+    },
+    "ios": {
+     "finishTime": 8.591666666666667,
+     "finishTimeHex": "efeeeeeeee2e2140",
+     "hash": "622bb2554e0f9a26",
+     "ticks": 1031
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/flat-test.bot-3.json (paced)",
+   "trackId": "flat-test",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 8.591666666666667,
+     "finishTimeHex": "efeeeeeeee2e2140",
+     "hash": "622bb2554e0f9a26",
+     "ticks": 1031
+    },
+    "ios": {
+     "finishTime": 8.591666666666667,
+     "finishTimeHex": "efeeeeeeee2e2140",
+     "hash": "622bb2554e0f9a26",
+     "ticks": 1031
+    }
+   },
+   "identical": true
+  }
+ ]
+}

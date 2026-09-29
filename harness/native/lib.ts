@@ -25,6 +25,7 @@ export interface GateArm {
   paced: number;
   track: string;
   restartReps: number;
+  front?: { map?: boolean; mapRide?: boolean };
 }
 
 export interface ClearRow {

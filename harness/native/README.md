@@ -12,11 +12,14 @@ It checks the same things each time: cold boot, start a track, replay goldens to
 node scripts/store-build.mjs debug --ios --android    # VITE_STORE=1 VITE_STORE_DEBUG=1 → store/build/web, cap sync, .app + .apk
 npx tsx harness/native/gate.ts web,ios --evidence          # the web leg renders on Metal by default on macOS
 npx tsx harness/native/gate.ts web,ios --from-out --evidence   # re-report the last runs without launching anything
+npx tsx harness/native/map-flow.ts               # default 3D map -> C1 tower/Ride -> map -> Menu in web/iOS
 ```
 
 **Source rule (parent, 2026-09-22):** the bundle is always built from a clean `git archive` export of HEAD (`/tmp/rockhop-build-<sha>`, node_modules linked), never from the shared working tree, which carries other sessions' uncommitted physics and UI. `store/build/SOURCE` records the sha and `gate.json` reports it as `source`. `--from-tree` is for local iteration only.
 
 **Load rule (user, 2026-09-22):** do not start the Android emulator unless the user asks for it. With software GL it held about 490 % CPU and pushed the shared host to a load average of 50, so the Android leg is BLOCKED. The user's own Android phone is the Android check. Run the iOS Simulator leg only when `uptime` shows a load average under 12, and run one gate at a time. Web legs render on Metal by default on macOS.
+
+The map-flow command uses the same clean debug shell. Its front-end runner waits for the C island to own the sole GPU context, dispatches a pointer tap on C1's actual tower, presses Ride, checks that the gameplay WebGL context restored, returns to the island, then exits to Menu. It records a silent simulator clip and JSON report under `docs/evidence/store-release/native/map-flow-<stamp>/`. Physical iPhone touch and sustained performance remain separate gates.
 
 ## How a run works
 
