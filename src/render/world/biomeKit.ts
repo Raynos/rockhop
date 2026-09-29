@@ -840,7 +840,7 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
     // (2048×512, tiles in x, alpha-faded bottom) at z −140 and the sky panorama at z −330
     // (plus `scene.background`, set by the renderer); the near/mid geometry stays. Without
     // the pack: the three parallax silhouette tiers.
-    const plateId = PLATE_ID[biome.id];
+    const plateId = biome.id === 'coast' && track.def.id === 'c1-low-tide' ? 'plate-coast-low-tide' : PLATE_ID[biome.id];
     const skyId = SKY_ID[biome.id];
     const plateTex = plateId ? (art?.texture(plateId, true, true) ?? null) : null;
     const skyTex = skyId ? (art?.texture(skyId, true, true) ?? null) : null;

@@ -52,6 +52,7 @@ export const PUBLIC_BYTES = {
   "art:plate-alpine": 138888,
   "art:plate-canyon": 20586,
   "art:plate-coast": 111820,
+  "art:plate-coast-low-tide": 105854,
   "art:plate-foundry": 48592,
   "art:plate-industrial": 40574,
   "art:plate-nightcity": 62428,
@@ -131,4 +132,4 @@ export const PUBLIC_BYTES = {
 // The offline pack as each device tier downloads it (`packMembership`, src/boot/asset-totals.ts):
 // tier-free assets in both, og.jpg in neither, one of the 1x/2x pair each. Generated, so the module
 // path and `__BOOT_TOTALS__` are the same numbers rather than two sums that could drift (totals.ts).
-export const OFFLINE_PACK_BYTES = { '1x': 5394456, '2x': 6485667 };
+export const OFFLINE_PACK_BYTES = { '1x': 5500310, '2x': 6591521 };

@@ -51,7 +51,7 @@ const REJECTED = new Set(['stencil-apex', 'stencil-taro', 'tyremark-straight', '
 const HALL_DECAL_IDS = ['poster-tyres', 'sign-hard-hat', 'sign-overhead-crane', 'sign-forklift', 'sign-exit', 'graffiti-grind', 'graffiti-skull', 'graffiti-tag-wall', 'graffiti-wheel'];
 
 /** Ids a biome's world draws (loaded ones are used; missing ones fall back to procedural). Ask 62: `crowd-night` is no longer requested (the crowd is painted; see `world/gates.ts` CROWD_PHOTO_SHEET). */
-export function idsFor(biome: string): string[] {
+export function idsFor(biome: string, trackId?: string): string[] {
   switch (biome) {
     case 'industrial':
       return [...COMMON_IDS, ...HALL_SKIN_IDS, 'plate-industrial', ...HALL_DECAL_IDS];
@@ -62,6 +62,7 @@ export function idsFor(biome: string): string[] {
     case 'snow':
       return [...COMMON_IDS, 'plate-snowline', 'sky-snowline'];
     case 'coast':
+      return [...COMMON_IDS, trackId === 'c1-low-tide' ? 'plate-coast-low-tide' : 'plate-coast', 'sky-coast'];
     case 'alpine':
     case 'quarry':
       return [...COMMON_IDS, `plate-${biome}`, `sky-${biome}`];

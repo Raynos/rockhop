@@ -6,6 +6,8 @@ The later [coast-wide before/after round](coast-wide/README.md) adds a profiled 
 
 The [C1-only ridden-surface round](surface-horizon/README.md) darkens the wet concrete and gives it two-slab joints, with matched full/ramp/fault motion, exact hashes and unchanged geometry cost. Its attempted photo-water grade was rejected; the cyan seam remains open, as does complete art sign-off.
 
+The [C1-only horizon-plate round](horizon-plate/README.md) replaces the bright cyan water band with a quieter harbor color while keeping the original Coast plate on C2 and C3. Matched full, ramp and both fault windows retain exact replay hashes and visible contact. It adds about 106 KB to the offline pack and is still an incremental image pass, not complete Coast art or physical-phone sign-off.
+
 ## Played clips
 
 | Clip | What it shows |

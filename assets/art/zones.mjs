@@ -24,6 +24,7 @@ const dims = (f) => sh('magick', ['identify', '-format', '%w %h', f]).split(' ')
 /** The picked raw per asset + the source band (rows) that becomes the 4:1 plate / 2:1 sky. */
 export const ZONE_ART = [
   { id: 'plate-coast', src: 'plate-coast-b', kind: 'plate-far', biome: 'coast', y: 290, h: 430, fade: 0.2 },
+  { id: 'plate-coast-low-tide', src: 'plate-coast-low-tide', file: 'assets/art/sources/plate-coast-low-tide.png', kind: 'plate-far', biome: 'coast', y: 290, h: 430, fade: 0.2 },
   { id: 'plate-alpine', src: 'plate-alpine-b', kind: 'plate-far', biome: 'alpine', y: 330, h: 500, fade: 0.22 },
   { id: 'plate-quarry', src: 'plate-quarry-a', kind: 'plate-far', biome: 'quarry', y: 170, h: 470, fade: 0.2 },
   { id: 'plate-snowline', src: 'plate-snowline-b', kind: 'plate-far', biome: 'snow', y: 280, h: 500, fade: 0.22 },
@@ -50,7 +51,7 @@ function fadeBottom(inFile, outPng, frac) {
 
 const rows = [];
 for (const a of ZONE_ART) {
-  const file = join(gen, a.src + '.png');
+  const file = a.file ? join(repo, a.file) : join(gen, a.src + '.png');
   if (!existsSync(file)) {
     console.warn('missing raw', file);
     continue;
@@ -76,7 +77,14 @@ for (const a of ZONE_ART) {
   console.log(a.id.padEnd(18), `${ow}x${oh}`.padEnd(10), (bytes / 1024).toFixed(0) + ' KB');
 }
 const full = JSON.parse(readFileSync(FULL_MANIFEST, 'utf8'));
-const ids = new Set(rows.map((r) => r.id));
-full.assets = [...full.assets.filter((a) => !ids.has(a.id)), ...rows];
+const generated = new Map(rows.map((r) => [r.id, r]));
+const seen = new Set();
+full.assets = full.assets.map((a) => {
+  const fresh = generated.get(a.id);
+  if (!fresh) return a;
+  seen.add(a.id);
+  return fresh;
+});
+for (const row of rows) if (!seen.has(row.id)) full.assets.push(row);
 writeManifests(full);
 console.log(`zone art: ${rows.length} assets, ${(rows.reduce((s, r) => s + r.bytes, 0) / 1024).toFixed(0)} KB`);

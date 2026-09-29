@@ -1317,7 +1317,7 @@ export class ThreeRenderer implements GameRenderer {
     // Per-track art (round 9): request what this biome draws beyond the boot set (other
     // plates + skies, wall decals, the night crowd). `whenReady()` waits for it; if it lands
     // before the first frame the world is rebuilt with it (`onRequestSettled`).
-    this.artIds = idsFor(biome.id);
+    this.artIds = idsFor(biome.id, track.def.id);
     void this.art.load();
     if (!this.art.requested(this.artIds)) {
       const pending = this.art.pendingBytes(this.artIds);
