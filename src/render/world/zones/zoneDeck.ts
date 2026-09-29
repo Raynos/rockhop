@@ -318,6 +318,53 @@ const quarryFace: Painter = (g, w, h, r) => {
   g.fillRect(0, h * 0.85, w, h * 0.15);
 };
 
+/** D1's unbonded quarry cut: exposed sediment, broken seams and sparse fractures. */
+const dustDevilFace: Painter = (g, w, h, r) => {
+  const ground = g.createLinearGradient(0, 0, 0, h);
+  ground.addColorStop(0, '#baa07c');
+  ground.addColorStop(0.56, '#a58665');
+  ground.addColorStop(1, '#80664e');
+  g.fillStyle = ground;
+  g.fillRect(0, 0, w, h);
+  speckle(g, w, h, r, 11000, ['#d1b795', '#866e55', '#c6a987', '#98795e'], [1, 3]);
+  blotches(g, w, h, r, 36, (a) => `rgba(67,52,42,${a * 0.26})`, [8, 34]);
+  for (const [i, y] of [0.13, 0.28, 0.46, 0.65, 0.82].entries()) {
+    const wave = (x: number): number => y * h + Math.sin(x / w * Math.PI * 4 + i * 1.7) * 3
+      + Math.sin(x / w * Math.PI * 10 + i * 0.9) * 1.6;
+    g.fillStyle = i % 2 ? 'rgba(70,52,39,0.10)' : 'rgba(241,218,176,0.13)';
+    g.beginPath();
+    g.moveTo(0, wave(0));
+    for (let x = 8; x <= w; x += 8) g.lineTo(x, wave(x));
+    for (let x = w; x >= 0; x -= 8) g.lineTo(x, wave(x) + 10 + 8 * Math.sin(i * 2.3) ** 2);
+    g.closePath();
+    g.fill();
+    g.strokeStyle = 'rgba(69,49,36,0.24)';
+    g.lineWidth = 1.3;
+    g.beginPath();
+    g.moveTo(0, wave(0));
+    for (let x = 8; x <= w; x += 8) g.lineTo(x, wave(x));
+    g.stroke();
+  }
+  for (let i = 0; i < 15; i++) {
+    const x = r() * w, y = r() * h * 0.9;
+    const len = 12 + r() * 42;
+    for (const dx of [-w, 0, w]) {
+      g.strokeStyle = 'rgba(57,43,35,0.27)';
+      g.lineWidth = 1 + r() * 0.9;
+      g.beginPath();
+      g.moveTo(x + dx, y);
+      g.lineTo(x + dx + (r() - 0.5) * 7, y + len * 0.45);
+      g.lineTo(x + dx + (r() - 0.5) * 13, y + len);
+      g.stroke();
+    }
+  }
+  const foot = g.createLinearGradient(0, h * 0.72, 0, h);
+  foot.addColorStop(0, 'rgba(58,43,32,0)');
+  foot.addColorStop(1, 'rgba(58,43,32,0.27)');
+  g.fillStyle = foot;
+  g.fillRect(0, h * 0.72, w, h * 0.28);
+};
+
 /** ALPINE face: an earth bank — grass fringe at the top, roots, embedded stones, darker damp foot. */
 const alpineFace: Painter = (g, w, h, r) => {
   const gr = g.createLinearGradient(0, 0, 0, h);
@@ -396,18 +443,18 @@ const PAINTED = new WeakMap<MaterialLibrary, Map<string, { mat: THREE.MeshStanda
  * A zone's painted top / face material, made once per library and zone (the deck, the course's obstacle tops and
  * the quarry's cut-block props share them). `bytes` is reported by the first caller only.
  */
-export function zonePaint(lib: MaterialLibrary, id: BiomeId, part: 'top' | 'face', lowTide = false): { mat: THREE.MeshStandardMaterial; bytes: number } | null {
+export function zonePaint(lib: MaterialLibrary, id: BiomeId, part: 'top' | 'face', lowTide = false, d1Cut = false): { mat: THREE.MeshStandardMaterial; bytes: number } | null {
   const paint = PAINT[id];
   if (!paint) return null;
   let m = PAINTED.get(lib);
   if (!m) PAINTED.set(lib, (m = new Map()));
-  const key = `${id}:${part}${lowTide && id === 'coast' && part === 'top' ? ':low-tide' : ''}`;
+  const key = `${id}:${part}${lowTide && id === 'coast' && part === 'top' ? ':low-tide' : ''}${d1Cut && id === 'quarry' && part === 'face' ? ':d1-cut' : ''}`;
   const hit = m.get(key);
   if (hit) return { mat: hit.mat, bytes: 0 };
   const seed = part === 'top' ? 0x70b : 0xfa ^ 0x3c;
   const made = part === 'top'
     ? painted(lib, paint.topMat, lowTide && id === 'coast' ? lowTideTop : paint.top, 512, 512, seed)
-    : painted(lib, paint.faceMat, paint.face, 512, 256, seed);
+    : painted(lib, paint.faceMat, d1Cut && id === 'quarry' ? dustDevilFace : paint.face, 512, 256, seed);
   if (lowTide && id === 'coast' && part === 'top') {
     made.mat.roughness = 0.63;
   }
@@ -554,7 +601,7 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
   }
   const faceGeos = [face, backWall, ...caps].filter((g): g is THREE.BufferGeometry => !!g);
   const faceGeo = faceGeos.length === 1 ? faceGeos[0]! : mergeAll(faceGeos);
-  const facePaint = zonePaint(lib, id, 'face')!;
+  const facePaint = zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;
   out.textureBytes += facePaint.bytes;
   out.meshes.push({ name: `zonedeck:face:${id}`, geo: faceGeo, mat: facePaint.mat, castShadow: false });
 

@@ -84,7 +84,7 @@ The [A2 pivot pass](../evidence/course-remaster/a2/README.md) models the moving 
 
 ### 2026-09-29 D1 anticipation finding
 
-The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a short lift/level prompt with two physical witnesses at the actual x98.4 and x104.4 ledges, where five of seven blind attempts failed. A [matched contact-riser pass](../evidence/course-remaster/d1/rock-cut/README.md) darkens only the four real step faces without changing physics or the exact replay hash. Four broader rock overlays were rejected in motion as masonry, retaining wall or hanging teeth. This is a small contact cue, not course or art sign-off; fresh uncoached attempts and an authored quarry composition remain necessary.
+The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a short lift/level prompt with two physical witnesses at the actual x98.4 and x104.4 ledges, where five of seven blind attempts failed. A [matched contact-riser pass](../evidence/course-remaster/d1/rock-cut/README.md) darkens only the four real step faces. A [later material pass](../evidence/course-remaster/d1/strata-composition/README.md) replaces the block-bond quarry face on D1's road wall and actual obstacle skirts with muted eroded sediment; its full ride and fault/retry hashes stay exact. Broad 3D overlays were rejected in motion. These are contact/material cues, not course or art sign-off; fresh uncoached attempts and broader quarry composition remain necessary.
 
 ### 2026-09-29 C3 hull finding
 

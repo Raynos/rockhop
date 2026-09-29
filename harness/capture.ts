@@ -5,6 +5,7 @@
  *   pnpm harness:capture <input-file> [--out harness/out/capture/<name>/clip.mp4]
  *        [--fps 60] [--width 1280] [--height 720] [--tail 1] [--no-stop-on-finish]
  *        [--mode screenshot|canvas] [--keep-frames] [--dev] [--quality high] [--from-tick N] [--to-tick N]
+ *        [--url https://host/ --expect-sha <full commit SHA>]  (frozen deployed baseline)
  *        [--rider-probe]   (round 13b: per-frame simulated-vs-drawn rider torso → rider-probe.json, summary in capture.json)
  *
  * Emits: clip.mp4 (h264 yuv420p), sheet.jpg (4x2 contact sheet), capture.json.
@@ -27,6 +28,9 @@ import type { InputFrame, PhysicsState, QualityTier } from '../src/core/types';
 export interface CaptureOptions {
   recording: InputRecording;
   outMp4: string;
+  /** Existing deployed build; bypasses the local preview server. Requires expectSha. */
+  url?: string;
+  expectSha?: string;
   fps?: number;
   width?: number;
   height?: number;
@@ -251,6 +255,14 @@ export function describeCamera(c: CameraCheck | null): string {
   return `camera: ${c.pass ? 'PASS' : 'FAIL'} ${c.frames} frames${c.settleExcluded ? ` (${c.settleExcluded} settle excluded)` : ''}, bike x ${c.minX}..${c.maxX} y ${c.minY}..${c.maxY} (box ${c.box.min}..${c.box.max}; out ${c.outOfBox}, riding ${c.outOfBoxRiding}), clamped ${c.clamped} (${c.clampedPct}%), max|roll| ${c.maxAbsRoll.toExponential(1)}${c.rollViolations ? ` ROLL x${c.rollViolations}` : ''}, states ${states}${c.violations.length ? `; first: ${c.violations.slice(0, 3).map((v) => `f${v.frame}@t${v.tick} (${v.x},${v.y}) ${v.state ?? ''}`).join(', ')}` : ''}`;
 }
 
+async function assertRemoteVersion(url: string, expectedSha: string): Promise<void> {
+  const versionUrl = new URL('/version.json', url);
+  const response = await fetch(versionUrl, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`remote version probe ${response.status}: ${versionUrl}`);
+  const version = await response.json() as { sha?: string };
+  if (version.sha !== expectedSha) throw new Error(`remote version ${version.sha ?? 'missing'} != expected ${expectedSha}`);
+}
+
 export async function captureClip(o: CaptureOptions): Promise<CaptureResult> {
   const fps = o.fps ?? 60;
   const width = o.width ?? 1280;
@@ -269,11 +281,15 @@ export async function captureClip(o: CaptureOptions): Promise<CaptureResult> {
   fs.mkdirSync(framesDir, { recursive: true });
 
   const t0 = performance.now();
-  const server = await startServer({ dev: o.dev ?? false, forceBuild: o.build ?? false });
+  if (o.url) {
+    if (!o.expectSha) throw new Error('remote capture requires --expect-sha');
+    await assertRemoteVersion(o.url, o.expectSha);
+  }
+  const server = o.url ? null : await startServer({ dev: o.dev ?? false, forceBuild: o.build ?? false });
   const launched = await launchBrowser({ width, height, logConsole: o.verbose ?? false });
   try {
     const { page } = launched;
-    await openGame(page, server.url);
+    await openGame(page, o.url ?? server!.url);
     const hook = new HookClient(page);
     if (o.recording.header.bike && o.recording.header.bike !== 'rookie') await hook.setBike(o.recording.header.bike);
     if (!(await hook.loadTrack(o.recording.header.trackId, o.recording.header.seed))) {
@@ -384,6 +400,7 @@ export async function captureClip(o: CaptureOptions): Promise<CaptureResult> {
     await contactSheet({ frames: framePaths, out: sheet, cols: o.sheetCols ?? 4, rows: o.sheetRows ?? 2 });
     const probe = await probeVideo(o.outMp4);
     if (!(o.keepFrames ?? false)) fs.rmSync(framesDir, { recursive: true, force: true });
+    if (o.url) await assertRemoteVersion(o.url, o.expectSha!);
 
     return {
       mp4: o.outMp4,
@@ -401,7 +418,7 @@ export async function captureClip(o: CaptureOptions): Promise<CaptureResult> {
   } finally {
     // The clip is already on disk here; a teardown failure (browser pipe, preview server socket) is not a capture failure.
     await launched.close().catch((e: unknown) => console.error(`capture: browser close failed (ignored): ${e instanceof Error ? e.message : String(e)}`));
-    await server.close().catch((e: unknown) => console.error(`capture: server close failed (ignored): ${e instanceof Error ? e.message : String(e)}`));
+    await server?.close().catch((e: unknown) => console.error(`capture: server close failed (ignored): ${e instanceof Error ? e.message : String(e)}`));
   }
 }
 
@@ -418,6 +435,8 @@ async function main(): Promise<void> {
   const result = await captureClip({
     recording,
     outMp4,
+    ...(flags['url'] !== undefined ? { url: flagStr(flags, 'url', '') } : {}),
+    ...(flags['expect-sha'] !== undefined ? { expectSha: flagStr(flags, 'expect-sha', '') } : {}),
     fps: flagNum(flags, 'fps', 60),
     width: flagNum(flags, 'width', 1280),
     height: flagNum(flags, 'height', 720),
@@ -435,7 +454,9 @@ async function main(): Promise<void> {
   });
   const reportFile = path.join(path.dirname(outMp4), 'capture.json');
   const { rider, ...rest } = result;
-  writeJson(reportFile, { input: path.resolve(inputFile), header: recording.header, ...rest, rider: rider ? { ...rider, rows: undefined, rowsFile: 'rider-probe.json' } : null });
+  writeJson(reportFile, { input: path.resolve(inputFile), header: recording.header,
+    source: flags['url'] !== undefined ? { url: flagStr(flags, 'url', ''), verifiedSha: flagStr(flags, 'expect-sha', '') } : { kind: 'local-dist' },
+    ...rest, rider: rider ? { ...rider, rows: undefined, rowsFile: 'rider-probe.json' } : null });
   if (rider) writeJson(path.join(path.dirname(outMp4), 'rider-probe.json'), rider);
   if (flagBool(flags, 'json')) console.log(JSON.stringify(result));
   else {

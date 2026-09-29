@@ -575,7 +575,7 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
     if (tinted) for (const g of geos) if (!g.getAttribute('color')) G.paint(g, [1, 1, 1]);
     const merged = geos.length === 1 ? geos[0]! : mergeGeometries(geos, false);
     if (!merged) throw new Error(`Obstacle material batch could not merge: ${matName}`);
-    const zp = matName.startsWith('zone:') ? zonePaint(lib, track.def.meta?.biome ?? 'industrial', matName.slice(5) as 'top' | 'face') : null;
+    const zp = matName.startsWith('zone:') ? zonePaint(lib, track.def.meta?.biome ?? 'industrial', matName.slice(5) as 'top' | 'face', false, track.def.id === 'd1-dust-devil') : null;
     let mat = zp ? zp.mat : lib.get(matName.startsWith('zone:') ? 'concrete' : matName);
     const metal = matName === 'rustSteel' || matName === 'darkSteel';
     if (tinted && (!mat.vertexColors || metal)) {
@@ -690,7 +690,7 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
   /** A spinning (registered in `drums`) or static body for a circle collider. */
   const roller = (c: ColliderCircle, geo: THREE.BufferGeometry, mat: string): void => {
     if (c.rolls) {
-      const dm = mat.startsWith('zone:') ? (zonePaint(ctx.lib, ctx.biome, mat.slice(5) as 'top' | 'face')?.mat ?? ctx.lib.derive('concrete')) : ctx.lib.derive(mat);
+      const dm = mat.startsWith('zone:') ? (zonePaint(ctx.lib, ctx.biome, mat.slice(5) as 'top' | 'face', false, ctx.trackId === 'd1-dust-devil')?.mat ?? ctx.lib.derive('concrete')) : ctx.lib.derive(mat);
       dm.vertexColors = true;
       const m = new THREE.Mesh(geo, fogify(dm));
       m.position.set(c.center.x, c.center.y, 0);

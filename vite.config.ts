@@ -93,9 +93,9 @@ const INLINE_BUDGET_BYTES = 8 * 1024;
  *
  * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
-// The accepted C3 ship and S1 bridge models add about 1.1 KB gzipped beyond the
-// prior round. Raise this by one KiB and keep the player payload bounded.
-const BUNDLE_BUDGET_GZ_BYTES = 660 * 1024;
+// D1's accepted sediment face replaces the quarry-block material on its true terrace
+// skirts and road wall. Keep a one-KiB bounded increment for this moving-reviewed pass.
+const BUNDLE_BUDGET_GZ_BYTES = 661 * 1024;
 
 function bundleBudget(): Plugin {
   return {
