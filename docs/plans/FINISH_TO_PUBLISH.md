@@ -32,6 +32,8 @@ One complete, landscape-only game on **iOS and Android together**: the 12 main c
 
 The [headless WebKit C-map review](../evidence/world-map-c/webkit-review/README.md) now proves menu entry, portrait rotate gate, remount after rotation, orbit and three real touch selections at phone geometry. It is an opt-in review build, so Gate 3 still needs the selected art quality and physical iPhone qualification before replacing the painted selector.
 
+A [played forest-trail contrast pass](../evidence/world-map-c/forest-trail-contrast/README.md) darkens the woodland ground and narrows its winding pale road. Before/after WebKit orbits keep 12/12 real tower taps, 258 draw calls, 409,034 triangles and the same recorded frame-rate samples. This resolves a local visual mismatch; broader reference fidelity and physical-phone qualification remain open.
+
 The [beard source audit](../evidence/hero-art/delivery/provenance/beard-rights-audit/README.md) found conflicting licence notices in the previously shipped street-rider facial hair. All six current runtime exports now omit those meshes/textures, and the strict store audit rejects their reintroduction. The rest of the content-rights declaration and final signed-payload check remain part of Gate 5.
 
 A [clean-source native rebuild](../evidence/native-compile-2026-09-28/README.md) from `42e401f3` now produces an upload-key-signed Android AAB and unsigned iOS Release simulator app with the revised rider. The strict release-payload scan passes 0/168 hits, including the excluded facial-hair names. This is compile and payload evidence; device play and store submission remain open.

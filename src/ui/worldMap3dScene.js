@@ -142,7 +142,9 @@ const colorFor = (x,z,y) => {
   const edge=edgeDistance(x,z);
   const borderNoise=noise(x*.47,z*.47)*1.6;
   c.set(y < .42 ? '#766f5b' : '#77795d');
-  c.lerp(new THREE.Color(y > 1.25 ? '#75836c' : '#597657'),smooth(-13.8,-8.7,x+borderNoise));
+  // Cooler, darker woodland soil keeps the winding pale trail distinct. The
+  // previous sage floor became one broad beige clearing in warm sunlight.
+  c.lerp(new THREE.Color(y > 1.25 ? '#60765d' : '#48674d'),smooth(-13.8,-8.7,x+borderNoise));
   c.lerp(new THREE.Color(y > 2.1 ? '#b07145' : '#a66b46'),smooth(.2,4.1,x+borderNoise));
   c.lerp(new THREE.Color(y > 1.2 ? '#dce7e7' : '#a5b5ad'),smooth(11.8,15.5,x+borderNoise));
   const sx=(groundHeight(x+.16,z)-groundHeight(x-.16,z))/.32;
@@ -398,9 +400,11 @@ buttresses.forEach((o,i)=>{o.count=buttressCounts[i];o.castShadow=true;o.receive
 // dirt; its feathered shoulders borrow the surrounding biome color and sink
 // back to the ground. Fine crosswise tessellation avoids the old cut-throughs.
 function routeMesh(){
- const positions=[],routeColors=[],uv=[],ind=[],count=460,across=16,width=1.58;
+ const positions=[],routeColors=[],uv=[],ind=[],count=460,across=16;
  for(let i=0;i<=count;i++){
    const x=-22.15 + i/count*44.2,z=routeZ(x);
+   const forestBand=smooth(-13,-10,x)*(1-smooth(1,4,x));
+   const width=1.43-.20*forestBand;
    const z1=routeZ(x+.04),z0=routeZ(x-.04);
    const tx=.08,tz=z1-z0,l=Math.hypot(tx,tz),px=-tz/l,pz=tx/l;
    for(let j=0;j<=across;j++){
@@ -434,10 +438,11 @@ function routeKerb(side){
  const positions=[],colors=[],indices=[],count=340;
  for(let i=0;i<=count;i++){
    const x=-22.15+i/count*44.2,z=routeZ(x),t=(routeZ(x+.04)-routeZ(x-.04))/.08;
+   const forestBand=smooth(-13,-10,x)*(1-smooth(1,4,x));
    const perpX=-t/Math.hypot(1,t),perpZ=1/Math.hypot(1,t);
    const crest=x>13?'#b7c4bf':x>2?'#d2a06a':'#bca178';
    for(let edge=0;edge<2;edge++){
-     const offset=side*(1.28+edge*.10),xx=x+perpX*offset,zz=z+perpZ*offset;
+     const offset=side*(1.28-.19*forestBand+edge*.10),xx=x+perpX*offset,zz=z+perpZ*offset;
      positions.push(xx,groundHeight(xx,zz)+.19-edge*.035,zz);
      const color=new THREE.Color(crest);color.offsetHSL(0,0,(noise(x*1.3,side*3)-.5)*.075);
      colors.push(color.r,color.g,color.b);
