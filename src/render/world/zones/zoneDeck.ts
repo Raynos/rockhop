@@ -124,6 +124,20 @@ const coastTop: Painter = (g, w, h, r) => {
   g.fillRect(0, Math.round(h * 0.5) + 3, w, 2);
 };
 
+/** C1 after the tide: repaired concrete bays, deep damp aggregate, tar seams and thin reflected glints. */
+const lowTideTop: Painter = (g, w, h, r) => {
+  g.fillStyle = '#505b57';
+  g.fillRect(0, 0, w, h);
+  speckle(g, w, h, r, 13000, ['#697570', '#384845', '#858c80', '#424c48', '#989a8a'], [1, 3]);
+  blotches(g, w, h, r, 28, (a) => `rgba(24,43,45,${a * 0.54})`, [28, 110]);
+  // The 6 m tile contains two 3 m slabs; the joints remain below the wheel silhouette.
+  g.fillStyle = 'rgba(25,34,35,0.72)';
+  for (const x of [0, w / 2]) g.fillRect(x, 0, 3, h);
+  g.fillRect(0, h * 0.5, w, 2);
+  g.fillStyle = 'rgba(196,191,173,0.21)';
+  for (const x of [3, w / 2 + 3]) g.fillRect(x, 0, 2, h);
+};
+
 /** QUARRY top: pale packed dust — cream grain, pebbles, faint drying cracks. */
 const quarryTop: Painter = (g, w, h, r) => {
   g.fillStyle = '#d8bc92';
@@ -382,16 +396,21 @@ const PAINTED = new WeakMap<MaterialLibrary, Map<string, { mat: THREE.MeshStanda
  * A zone's painted top / face material, made once per library and zone (the deck, the course's obstacle tops and
  * the quarry's cut-block props share them). `bytes` is reported by the first caller only.
  */
-export function zonePaint(lib: MaterialLibrary, id: BiomeId, part: 'top' | 'face'): { mat: THREE.MeshStandardMaterial; bytes: number } | null {
+export function zonePaint(lib: MaterialLibrary, id: BiomeId, part: 'top' | 'face', lowTide = false): { mat: THREE.MeshStandardMaterial; bytes: number } | null {
   const paint = PAINT[id];
   if (!paint) return null;
   let m = PAINTED.get(lib);
   if (!m) PAINTED.set(lib, (m = new Map()));
-  const key = `${id}:${part}`;
+  const key = `${id}:${part}${lowTide && id === 'coast' && part === 'top' ? ':low-tide' : ''}`;
   const hit = m.get(key);
   if (hit) return { mat: hit.mat, bytes: 0 };
   const seed = part === 'top' ? 0x70b : 0xfa ^ 0x3c;
-  const made = part === 'top' ? painted(lib, paint.topMat, paint.top, 512, 512, seed) : painted(lib, paint.faceMat, paint.face, 512, 256, seed);
+  const made = part === 'top'
+    ? painted(lib, paint.topMat, lowTide && id === 'coast' ? lowTideTop : paint.top, 512, 512, seed)
+    : painted(lib, paint.faceMat, paint.face, 512, 256, seed);
+  if (lowTide && id === 'coast' && part === 'top') {
+    made.mat.roughness = 0.63;
+  }
   m.set(key, made);
   return made;
 }
@@ -470,7 +489,8 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
   const rnd = lcg(seed);
 
   // --- the top: the ridden line with the zone's tread --------------------------------------------------------
-  const topTile = TOP_TILE[id] ?? 3;
+  const lowTide = id === 'coast' && track.def.id === 'c1-low-tide';
+  const topTile = lowTide ? 6 : TOP_TILE[id] ?? 3;
   const top = ribbonGeometry(line, topSection(f, id), topTile, 0);
   {
     const pos = top.getAttribute('position');
@@ -481,7 +501,7 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
       const az = Math.abs(z);
       // Worn line / ruts, the arris a touch darker, the far apron falling into shade; slow tone drift along x.
       let s = col.getX(i);
-      if (id === 'coast') s *= az < 0.35 ? 0.74 : 0.82;
+      if (id === 'coast') s *= lowTide ? (az < 0.35 ? 0.86 : 0.94) : (az < 0.35 ? 0.74 : 0.82);
       else if (id === 'quarry') s *= Math.abs(az - 0.4) < 0.16 ? 0.86 : 1.02;
       else s *= Math.abs(az - 0.4) < 0.18 ? 0.8 : az < 0.2 ? 1.06 : 1;
       if (z > f.edge - 0.08) s *= 0.8;
@@ -492,7 +512,7 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
       } else col.setXYZ(i, s, s, s);
     }
   }
-  const topPaint = zonePaint(lib, id, 'top')!;
+  const topPaint = zonePaint(lib, id, 'top', lowTide)!;
   out.textureBytes += topPaint.bytes;
   out.meshes.push({ name: `zonedeck:top:${id}`, geo: top, mat: topPaint.mat, castShadow: false });
 

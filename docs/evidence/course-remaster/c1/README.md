@@ -4,6 +4,8 @@
 
 The later [coast-wide before/after round](coast-wide/README.md) adds a profiled wet quay edge, exposed foreshore, open loading sheds and inshore workboats along the complete ride. Its matched full, ramp and fault clips preserve exact contact and finish hashes. The photographic cyan horizon and broad pale riding slab still prevent visual sign-off.
 
+The [C1-only ridden-surface round](surface-horizon/README.md) darkens the wet concrete and gives it two-slab joints, with matched full/ramp/fault motion, exact hashes and unchanged geometry cost. Its attempted photo-water grade was rejected; the cyan seam remains open, as does complete art sign-off.
+
 ## Played clips
 
 | Clip | What it shows |
