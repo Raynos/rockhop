@@ -271,7 +271,7 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
     for (const c of cols) handled.add(c.id);
     // Store release: a ROCKHOP zone prop (`params.prop`, src/tracks/kinds.ts PROPS) draws its own body over the
     // same colliders; an unknown prop falls through to the base kind.
-    if (typeof p.prop === 'string' && zoneProp(p.prop, po, cols, { biome: track.def.meta?.biome ?? 'industrial', buckets, group, drums, profile, lib, depth: DEPTH })) continue;
+    if (typeof p.prop === 'string' && zoneProp(p.prop, po, cols, { trackId: track.def.id, biome: track.def.meta?.biome ?? 'industrial', buckets, group, drums, profile, lib, depth: DEPTH })) continue;
     switch (po.kind) {
       case 'ramp':
       case 'stair':
@@ -599,6 +599,7 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
 // ---------------------------------------------------------------------------------------------------------------
 
 interface PropCtx {
+  trackId: string;
   biome: BiomeId;
   buckets: Bucket;
   group: THREE.Group;
@@ -862,6 +863,60 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
           for (const z of [-face + 0.15, face - 0.15]) push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(0.14, h, 0.14), 0x5a4030), at(x, gy + h / 2, z));
           push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(0.1, 0.1, depth - 0.2), 0x5a4030), at(x, gy + h * 0.45, 0));
           if (h > 0.6) push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(0.08, Math.hypot(h, depth - 0.3), 0.06), 0x5a4030), at(x, gy + h / 2, face - 0.1, 0));
+        }
+        if (ctx.trackId === 'a1-sawdust' && po.kind === 'box' && x1c - x0c > 5) {
+          // A1's 16 m flume compiles to a polyline, even though the authored piece is called a box. Its collision
+          // is only the top, so the underside stays open. Timber chords and diagonal bays reveal the span and the
+          // mill machinery without adding a fake wall or any members above the front wheel's contact surface.
+          const span = x1c - x0c;
+          const flatY = pts[pts.length - 1]!.y; // first point is the vertical support rising from ground
+          const near = face + 0.08;
+          // Leave 0.34 m of vertical clearance below the top: the front beam must not mask the water surface
+          // at the shallow game camera angle, where riders read the exit lip and time their release.
+          push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(span, 0.2, 0.16), 0xf0c992),
+            at((x0c + x1c) / 2, flatY - 0.44, near));
+          push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(span, 0.16, 0.14), 0xb28b5f),
+            at((x0c + x1c) / 2, flatY - 1.04, near + 0.02));
+          for (let x = x0c + 0.22; x < x1c - 0.2; x += 1.6) {
+            const bay = Math.min(1.6, x1c - x - 0.12);
+            if (bay < 0.3) continue;
+            const a = { x, y: flatY - 0.55 };
+            const b = { x: x + bay, y: flatY - 0.98 };
+            const dx = b.x - a.x;
+            const dy = b.y - a.y;
+            push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(Math.hypot(dx, dy), 0.105, 0.11), 0xd3a773),
+              at((a.x + b.x) / 2, (a.y + b.y) / 2, near + 0.13, Math.atan2(dy, dx)));
+            push(buckets, 'darkSteel', tintGeo(new THREE.CylinderGeometry(0.045, 0.045, 0.035, 8).rotateX(Math.PI / 2), 0xb9aaa0),
+              at(x, flatY - 0.55, near + 0.2));
+          }
+          // Mill waterwheel: mounted in the open central bay, ahead of the dense entry cribbing. The pale
+          // weathered wood separates it from the dark scaffold at phone size; its rim stays below the road.
+          const wx = x0c + 8.2;
+          const wy = flatY - 1.22;
+          const wz = face + 0.42;
+          push(buckets, 'plaque', tintGeo(new THREE.TorusGeometry(0.66, 0.09, 6, 24), 0xcba06d), at(wx, wy, wz));
+          push(buckets, 'darkSteel', tintGeo(new THREE.CylinderGeometry(0.15, 0.15, 0.2, 12).rotateX(Math.PI / 2), 0x484c4a),
+            at(wx, wy, wz + 0.04));
+          for (let i = 0; i < 8; i++) {
+            const a = i * Math.PI / 4;
+            push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.56, 0.09, 0.1), 0xb98b5d),
+              at(wx + Math.cos(a) * 0.33, wy + Math.sin(a) * 0.33, wz + 0.02, a));
+            push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.11, 0.23, 0.18), 0xa77a4d),
+              at(wx + Math.cos(a) * 0.67, wy + Math.sin(a) * 0.67, wz + 0.02, a));
+          }
+        } else if (ctx.trackId === 'a1-sawdust' && po.kind === 'ramp' && x1c - x0c > 1) {
+          // Continue the framed trough up the short exit ramp. The bright end grain belongs on the true
+          // takeoff edge, beyond the raised lip, so the rider sees the correct release point in motion.
+          const a = pts[0]!;
+          const b = pts[pts.length - 1]!;
+          const ang = Math.atan2(b.y - a.y, b.x - a.x);
+          const len = Math.hypot(b.x - a.x, b.y - a.y);
+          for (const [offset, height, color] of [[0.44, 0.2, 0xf0c992], [1.04, 0.16, 0xb28b5f]] as const) {
+            push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(len, height, 0.16), color),
+              at((a.x + b.x) / 2, (a.y + b.y) / 2 - offset, face + 0.08, ang));
+          }
+          push(buckets, 'pallet', tintGeo(new THREE.BoxGeometry(0.2, 0.18, depth), 0xe3bd87),
+            at(b.x - 0.1, b.y - 0.12, 0));
         }
         // Water sheeting off the high end (the lip): a thin falling curtain beyond the collider, then splash.
         const hi = pts[pts.length - 1]!.y >= pts[0]!.y ? pts[pts.length - 1]! : pts[0]!;

@@ -1,0 +1,7 @@
+# A1 Sawdust — flume structure pass
+
+The [silent 852×392 played clip](clip.mp4) follows the recorded Rookie input from the approach through the flume and pond landing. [The contact sheet](sheet.jpg) indexes its 130 frames; [capture data](clip.json) records the input, tick window, camera checks and exact browser/Node state hash. It was captured from a frozen, non-shipping QA build with `src/render/world/obstacles.ts` SHA-256 `b2a507a43fea1d6304b850d0bce9f1ecfff534ec4c1979ce70427cbffb8ad550`.
+
+The 16 m raised trough now shows a timber truss and waterwheel below the riding surface. Its short sloped exit continues the side frame, and the bright timber cap marks the actual takeoff lip. The water contact strip, rider and far landing remain readable in motion. The old [same-window played clip](../../alpine-retarget/clips/a1-sawdust-rookie-skilled/clip.mp4) shows the thin trestle version; the separate [full baseline ride](../baseline-clips/a1-sawdust/clip.mp4) used a higher renderer tier and is not a direct pixel comparison.
+
+The obstacle builder reports **4,332 → 5,360 triangles** and **5 → 6 draw calls** for the full A1 obstacle set. Colliders, physics and recorded input did not change. The clip has zero camera-box violations, zero roll violations and an exact browser/Node end-window hash of `f1bbb11bc69f3f5a`. This is a prop pass, not a full A1 remaster or a physical-phone performance sign-off.

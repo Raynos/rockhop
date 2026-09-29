@@ -69,3 +69,7 @@ The [baseline inventory](../evidence/course-remaster/BASELINE.md) now indexes fu
 ### 2026-09-29 C1 visual finding
 
 The [played C1 harbor round](../evidence/course-remaster/c1/README.md) removes random clutter from the brake approach and adds a modeled winch, service pier and salvage derrick behind the landing. The 31.33-second phone-size headless ride remains a clean 30.35-second finish; the ramp and tire contact stay visible. The current quay, water and distant image plate still need a broader Coast material/lighting pass. C1 remains open under the full course and physical-phone criteria. The third-round cold boot/clear/crash/restart gate passed 11/11 on host Metal.
+
+### 2026-09-29 A1 visual finding
+
+The [played A1 flume round](../evidence/course-remaster/a1/README.md) gives the raised trough a timber truss and waterwheel and carries its frame to the actual pond takeoff lip. Its 130-frame riding window keeps the tire surface, rider and landing visible with exact browser/Node state hash. The obstacle set costs 1,028 additional triangles and one draw call; colliders and physics are unchanged. A full A1 ride after the prop pass, physical phone pacing and new-player response remain open, so this is a bounded scene pass rather than course sign-off.
