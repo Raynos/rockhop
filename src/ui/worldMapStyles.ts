@@ -47,6 +47,13 @@ export const WORLD_MAP_CSS = `
 #ui .worldmap-screen .wm-dock .wm-ride em.silver { color: #d4e7ec; }
 #ui .worldmap-screen .wm-dock .wm-ride em.gold { color: #ffd477; }
 #ui .worldmap-screen .wm-dock .wm-ride em.platinum { color: #79f2ee; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder { display: flex; gap: 5px; margin-top: 4px; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder i { display: block; width: 9px; height: 9px; border: 1px solid #dce9db; border-radius: 50%; box-shadow: inset 0 1px 2px #ffffff88, 0 1px 2px #061b1dbb; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder i.bronze { background: #be784c; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder i.silver { background: #d4e3e6; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder i.gold { background: #ffd258; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder i.platinum { background: #70eeed; }
+#ui .worldmap-screen .wm-dock .wm-medal-ladder i.unearned { background: #304b50; border-color: #718789; }
 #ui .worldmap-screen .wm-dock .wm-ride .rule { color: #ffd477; }
 #ui .worldmap-screen .wm-dock .wm-ride .ride-arrow { color: #ffb754; font: 800 10px/1 var(--sans); white-space: nowrap; }
 #ui .worldmap-screen .wm-dock .wm-ride[disabled] { opacity: .72; cursor: default; }

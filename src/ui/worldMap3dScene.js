@@ -1353,14 +1353,13 @@ function makeTower(i,x,z){
  const beacon=box(.21,.18,.17,towerMaterials.lamp,0,1.76,0,g);beacon.material=new THREE.MeshStandardMaterial({color:'#ffdf91',emissive:'#ff8a28',emissiveIntensity:1.8,roughness:.3});
  const upperFlag=makeFlag(.58,.34,biome===3?towerMaterials.cream:towerMaterials.red,g,1.13);
  const lowerFlag=makeFlag(.50,.28,biome===3?towerMaterials.red:towerMaterials.yellow,g,.73);
- const sign=box(.57,.46,.04,towerMaterials.black,-.45,1.03,.03,g);sign.castShadow=true;
- // Canvas marker stays a textured part of the box and turns with the tower.
- const canvas=document.createElement('canvas');canvas.width=128;canvas.height=96;
- const ctx=canvas.getContext('2d');ctx.fillStyle='#19292c';ctx.fillRect(0,0,128,96);ctx.strokeStyle='#f3c777';ctx.lineWidth=4;ctx.strokeRect(5,5,118,86);
- ctx.font='800 59px Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#f8eed4';ctx.fillText(String(i+1).padStart(2,'0'),64,49);
- const plane=new THREE.Mesh(new THREE.PlaneGeometry(.55,.42),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(canvas),side:THREE.DoubleSide}));plane.position.set(-.45,1.03,.057);g.add(plane);
- const reverseSign=new THREE.Mesh(plane.geometry,plane.material);
- reverseSign.position.set(-.45,1.03,-.057);reverseSign.rotation.y=Math.PI;g.add(reverseSign);
+ // A camera-facing plate remains readable while the island pans or rotates.
+ // The four small lamps are the actual Bronze/Silver/Gold/Diamond ladder.
+ const canvas=document.createElement('canvas');canvas.width=256;canvas.height=176;
+ const labelTexture=new THREE.CanvasTexture(canvas);
+ labelTexture.colorSpace=THREE.SRGBColorSpace;
+ const label=new THREE.Mesh(new THREE.PlaneGeometry(1.37,.94),new THREE.MeshBasicMaterial({map:labelTexture,transparent:true,depthWrite:false,side:THREE.DoubleSide,toneMapped:false}));
+ label.position.set(-.48,1.14,.10);label.renderOrder=3;g.add(label);
  const tireMat=mat('#272b2a');
  for(let t=0;t<2;t++){const tire=mesh(new THREE.TorusGeometry(.19,.065,6,10),tireMat,-.38,.08+t*.11,-.27,g);tire.rotation.x=Math.PI/2;}
  const hit=mesh(new THREE.CylinderGeometry(.59,.59,2.3,8),new THREE.MeshBasicMaterial({visible:false}),0,1.1,0,g);hit.userData.stage=i;
@@ -1380,7 +1379,7 @@ function makeTower(i,x,z){
  ringGeometry.setIndex(ringFaces);
  const stateRing=new THREE.Mesh(ringGeometry,new THREE.MeshBasicMaterial({color:'#e9be65',side:THREE.DoubleSide,transparent:true,opacity:1,depthWrite:false,toneMapped:false}));
  stateRing.renderOrder=2;terrain.add(stateRing);
- g.userData.index=i;stages.push({g,hit,x,z,y,beacon,upperFlag,lowerFlag,stateRing});
+ g.userData.index=i;stages.push({g,hit,x,z,y,beacon,upperFlag,lowerFlag,stateRing,label,canvas,labelTexture});
  return g;
 }
 for(let i=0;i<12;i++){
@@ -1453,6 +1452,30 @@ function setProgress(nextLocks,nextMedals){
 }
 const medalFlags={bronze:mat('#b87342',.38,.55),silver:mat('#e0e8e4',.28,.66),gold:mat('#f4c34c',.32,.55),platinum:mat('#7af0ee',.2,.45)};
 const stateRingColors={locked:'#74878a',available:'#ffd17a',bronze:'#dd9161',silver:'#d9e8e8',gold:'#ffd44f',platinum:'#72f4ee'};
+function paintStageLabel(stage,index,state){
+ const ctx=stage.canvas.getContext('2d');
+ ctx.clearRect(0,0,256,176);
+ ctx.shadowColor='#0b1d22b8';ctx.shadowBlur=12;ctx.shadowOffsetY=5;
+ ctx.fillStyle=state==='locked'?'#203138':'#142c32';
+ ctx.beginPath();ctx.roundRect(14,8,228,105,12);ctx.fill();
+ ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+ ctx.strokeStyle=state==='locked'?'#8b9b9b':state==='available'?'#f6d794':stateRingColors[state];
+ ctx.lineWidth=5;ctx.stroke();
+ ctx.fillStyle=state==='locked'?'#a6b2b2':'#fff9e9';
+ ctx.font='900 75px Arial';ctx.textAlign='center';ctx.textBaseline='middle';
+ ctx.fillText(String(index+1).padStart(2,'0'),128,63);
+ const rank={bronze:1,silver:2,gold:3,platinum:4}[state]??0;
+ const colors=['#be784c','#d4e3e6','#ffd258','#70eeed'];
+ for(let slot=0;slot<4;slot++){
+   const x=62+slot*44;
+   ctx.beginPath();ctx.arc(x,143,14,0,Math.PI*2);
+   ctx.fillStyle=state==='locked'?'#34494e':slot<rank?colors[slot]:'#304b50';ctx.fill();
+   ctx.strokeStyle=state==='locked'?'#687b7d':'#f5ecce';ctx.lineWidth=3;ctx.stroke();
+   if(slot<rank){ctx.beginPath();ctx.arc(x-4,138,3.5,0,Math.PI*2);ctx.fillStyle='#fff8ddaa';ctx.fill();}
+ }
+ stage.labelTexture.needsUpdate=true;
+ stage.label.userData.state=state;
+}
 function applyProgress(){
  for(let i=0;i<stages.length;i++){
    const stage=stages[i],biome=Math.floor(i/3),isLocked=!!locked[i],earned=medalFlags[medals[i]];
@@ -1462,6 +1485,7 @@ function applyProgress(){
    stage.stateRing.material.color.set(stateRingColors[state]);
    stage.stateRing.material.opacity=isLocked?.65:1;
    stage.stateRing.userData.state=state;
+   paintStageLabel(stage,i,state);
  }
 }
 applyProgress();
@@ -1521,6 +1545,7 @@ function animate(now){
  waterUniforms.time.value=now*.001;
  halo.rotation.z=now*.00025;
  beam.material.opacity=.16+.07*Math.sin(now*.0035);
+ stages.forEach(stage=>stage.label.quaternion.copy(camera.quaternion));
  stages.forEach((stage,i)=>{stage.beacon.material.emissiveIntensity=i===selected?2.6+Math.sin(now*.006)*.4:1.1;});
  renderer.render(scene,camera);
  frames++;
@@ -1537,8 +1562,8 @@ function dispose(){
  controls.dispose();
  const geometries=new Set(),materials=new Set(),textures=new Set();
  scene.traverse(object=>{
-   if(!object.isMesh)return;
-   geometries.add(object.geometry);
+   if(!object.isMesh&&!object.isSprite)return;
+   if(object.geometry)geometries.add(object.geometry);
    const list=Array.isArray(object.material)?object.material:[object.material];
    for(const material of list){materials.add(material);if(material.map)textures.add(material.map);}
  });

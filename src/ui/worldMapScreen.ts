@@ -243,12 +243,14 @@ export class WorldMapScreen extends Screen {
       : `<div class="times"><b class="${best ? '' : 'none'}">${best ? formatTime(best.time) : '—'}</b> / ${target ? formatTime(target) : '—'}</div>`;
     const stateLabel = marker.locked ? 'Locked' : marker.medal ? `${MEDAL_NAME[marker.medal]} cleared` : 'Ready to ride';
     const dockState = marker.locked ? 'Locked' : marker.medal ? MEDAL_NAME[marker.medal] : 'Ready';
+    const medalRank = marker.medal ? ['bronze', 'silver', 'gold', 'platinum'].indexOf(marker.medal) + 1 : 0;
+    const medalLadder = marker.locked ? '' : `<span class="wm-medal-ladder" aria-hidden="true">${(['bronze', 'silver', 'gold', 'platinum'] as const).map((medal, index) => `<i class="${index < medalRank ? medal : 'unearned'}"></i>`).join('')}</span>`;
     const number = String(this.focus + 1).padStart(2, '0');
     this.detail.innerHTML = `<div class="head"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(stageLabel(marker.region))}</div><div class="name">${escapeHtml(track.name)}</div>${times}${marker.locked ? '' : this.boardHtml(track.id)}<div class="wm3d-state ${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(stateLabel)}</div>`;
     this.detail.dataset['track'] = track.id;
     this.detail.classList.toggle('locked', marker.locked);
     this.ride.disabled = marker.locked;
-    this.ride.innerHTML = `<img class="thumb" src="/art/thumbs/${encodeURIComponent(track.id)}.webp" alt="" loading="lazy"><span class="copy"><strong>${number} · ${escapeHtml(track.name)}</strong><small>${escapeHtml(stageLabel(marker.region))} · <em class="${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(dockState)}</em></small>${marker.locked ? `<small class="rule">${escapeHtml(marker.rule ?? '')}</small>` : ''}</span><span class="ride-arrow" aria-hidden="true">${marker.locked ? '◆' : 'RIDE ›'}</span>`;
+    this.ride.innerHTML = `<img class="thumb" src="/art/thumbs/${encodeURIComponent(track.id)}.webp" alt="" loading="lazy"><span class="copy"><strong>${number} · ${escapeHtml(track.name)}</strong><small>${escapeHtml(stageLabel(marker.region))} · <em class="${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(dockState)}</em></small>${marker.locked ? `<small class="rule">${escapeHtml(marker.rule ?? '')}</small>` : medalLadder}</span><span class="ride-arrow" aria-hidden="true">${marker.locked ? '◆' : 'RIDE ›'}</span>`;
     this.ride.setAttribute('aria-label', marker.locked ? `Level ${number}, ${marker.code} ${track.name} locked. ${marker.rule ?? ''}` : `Ride selected level ${number}: ${marker.code} ${track.name}`);
     this.ghost.hidden = !best?.recording || marker.locked;
     this.ghost.innerHTML = `<span>▶</span> ${this.state().ghost ? 'Ghost' : 'Watch PB'}`;

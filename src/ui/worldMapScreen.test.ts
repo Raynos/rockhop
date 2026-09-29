@@ -80,8 +80,14 @@ describe('shipped 3D island level select', () => {
       mounts.calls[0]!.select(index);
       expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe(ALL[index]!.id);
     }
+    mounts.calls[0]!.select(0);
+    expect(document.querySelectorAll('.wm-ride .wm-medal-ladder i:not(.unearned)')).toHaveLength(3);
+    expect(document.querySelector('.wm-ride .wm-medal-ladder i.gold')).not.toBeNull();
+    mounts.calls[0]!.select(3);
+    expect(document.querySelectorAll('.wm-ride .wm-medal-ladder i.unearned')).toHaveLength(4);
     mounts.calls[0]!.select(6);
     expect(document.querySelector<HTMLButtonElement>('.wm-ride')?.disabled).toBe(true);
+    expect(document.querySelector('.wm-ride .wm-medal-ladder')).toBeNull();
     expect(document.querySelector('.wm3d-detail .rule')?.textContent).toContain('Medal every Alpine track');
     screen.confirm();
     expect(cb.play).not.toHaveBeenCalled();
