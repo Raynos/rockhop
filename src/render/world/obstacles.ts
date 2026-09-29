@@ -735,8 +735,68 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
     }
     case 'gangway':
     case 'hull': {
-      solid('rustSteel', prop === 'hull' ? 0xc07040 : 0x9a9a94, (x, y) => 0.75 + 0.25 * Math.sin(x * 1.7 + y));
-      if (prop === 'hull') for (let x = x0 + 0.5; x < x1; x += 1.1) {
+      const breachHull = prop === 'hull' && ctx.trackId === 'c3-hull-breach' && po.pos.x > 250;
+      // The large C3 wreck used the corrugated container map and read as a shipping box. Its bow and curled
+      // breach lip are one smooth steel shell; the original collider skirt remains its exact XY outline.
+      solid(breachHull ? 'plaque' : 'rustSteel', breachHull ? 0x8d4935 : prop === 'hull' ? 0xc07040 : 0x9a9a94,
+        (x, y) => 0.75 + 0.25 * Math.sin(x * 1.7 + y));
+      if (breachHull && po.kind === 'box' && x1 - x0 > 12) {
+        const span = x1 - x0;
+        const height = y1 - y0;
+        const colors = [0x9d5038, 0x82442f, 0xa5583d, 0x914632, 0x9f543a];
+        const skinZ = (y: number): number => face + 0.11 + 0.36 * Math.max(0, Math.min(1, (y - y0) / height));
+        // Five welded, faceted plates lean inward toward the keel. Their top follows the collider deck; the
+        // camera-facing side has vessel depth instead of a flat container wall.
+        for (let i = 0; i < 5; i++) {
+          const width = span / 5 - 0.045;
+          const g = new THREE.BoxGeometry(width, height - 0.1, 0.07, 1, 6, 1);
+          const pos = g.getAttribute('position');
+          for (let k = 0; k < pos.count; k++) {
+            const worldY = y0 + height / 2 + pos.getY(k);
+            pos.setZ(k, pos.getZ(k) + skinZ(worldY) - face);
+          }
+          g.translate(x0 + span * (i + 0.5) / 5, y0 + height / 2, face);
+          g.computeVertexNormals();
+          push(buckets, 'plaque', tintGeo(g, colors[i]!, (_x, y) => 0.76 + 0.22 * (y - y0) / height));
+        }
+        for (const y of [y0 + 0.62, y0 + 1.48, y0 + 2.34]) {
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(span - 0.18, 0.075, 0.09), 0x64372c),
+            at((x0 + x1) / 2, y, skinZ(y) + 0.055));
+          for (let x = x0 + 0.42; x < x1 - 0.24; x += 0.78) {
+            push(buckets, 'plaque', tintGeo(new THREE.SphereGeometry(0.037, 6, 4), 0xc18e68),
+              at(x, y + 0.095, skinZ(y) + 0.105));
+          }
+        }
+        // Shallow scupper rings and a continuous sheer band identify ship plating without creating holes in
+        // the collision wall. The roadward steel is flush to the top contact line.
+        for (const x of [x0 + 3.6, x0 + 11.4]) {
+          const y = y1 - 0.8;
+          push(buckets, 'darkSteel', tintGeo(new THREE.CylinderGeometry(0.19, 0.19, 0.05, 16).rotateX(Math.PI / 2), 0x2c2825),
+            at(x, y, skinZ(y) + 0.095));
+          push(buckets, 'plaque', tintGeo(new THREE.TorusGeometry(0.19, 0.04, 6, 20), 0xc79771),
+            at(x, y, skinZ(y) + 0.13));
+        }
+        push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(span, 0.14, 0.2), 0xd2a078),
+          at((x0 + x1) / 2, y1 - 0.085, skinZ(y1) + 0.04));
+        push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(span - 0.06, 0.02, depth - 0.05), 0x795b4e),
+          at((x0 + x1) / 2, y1 - 0.002, 0));
+      }
+      if (breachHull && po.kind === 'ramp' && x0 > 270 && polys.length) {
+        const end = polys[0]!.points.reduce((high, q) => q.y > high.y ? q : high);
+        // The fracture stays below the contact lip: pale cut metal marks the *actual* launch edge, with torn
+        // tabs hanging under it rather than teeth above the riding line.
+        push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.18, 0.14, depth), 0xe8ae80),
+          at(end.x - 0.09, end.y - 0.085, 0));
+        for (const z of [-1.05, -0.35, 0.35, 1.05]) {
+          const tab = extrudePoly([
+            { x: end.x - 0.42, y: end.y - 0.12 },
+            { x: end.x - 0.04, y: end.y - 0.08 },
+            { x: end.x - 0.18, y: end.y - 0.55 },
+          ], 0.12);
+          push(buckets, 'plaque', tintGeo(tab, 0xc47d5b), at(0, 0, z));
+        }
+      }
+      if (prop === 'hull' && !breachHull) for (let x = x0 + 0.5; x < x1; x += 1.1) {
         const gy = profileY(profile, x);
         const h = topAt(x) - gy;
         if (h > 0.2 && Number.isFinite(h)) push(buckets, 'rustSteel', tintGeo(new THREE.BoxGeometry(0.12, h, 0.1), 0x6a3a22), at(x, gy + h / 2, face + 0.03));

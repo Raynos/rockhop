@@ -85,3 +85,7 @@ The [A2 pivot pass](../evidence/course-remaster/a2/README.md) models the moving 
 ### 2026-09-29 D1 anticipation finding
 
 The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a short lift/level prompt with two physical witnesses at the actual x98.4 and x104.4 ledges, where five of seven blind attempts failed. The replay prefix hash is unchanged and the markers do not enter the riding ribbon. The rise itself remains too subtle against the pale quarry scene; this is an anticipation aid, not course or art sign-off. Fresh uncoached attempts and a broader contact-scale rock redesign remain necessary.
+
+### 2026-09-29 C3 hull finding
+
+The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) replaces the large corrugated-box look with steel plates, weld lines and a cut exit edge at the actual launch lip. The exact capture prefix hash matches Node and the ride camera remains within bounds. The vessel still inherits a broad rectangular collider silhouette and needs a full course, fault/retry and physical-device pass.
