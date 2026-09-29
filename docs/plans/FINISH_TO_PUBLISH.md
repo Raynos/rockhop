@@ -50,6 +50,8 @@ The [beard source audit](../evidence/hero-art/delivery/provenance/beard-rights-a
 
 A [clean-source native rebuild](../evidence/native-compile-2026-09-28/README.md) from `904bf473` now produces an upload-key-signed Android AAB and unsigned iOS Release simulator app with the revised rider and finish goal. The strict release-payload scan passes 0/168 hits, including the excluded facial-hair names. This is compile and payload evidence; device play and store submission remain open.
 
+A [current cached-boot WebKit readout](../evidence/cached-boot-g4/README.md) on the `fac8b984` review source reaches the menu in 3,015/3,029/3,014 ms on three service-worker-controlled warm loads at 852×393. About 2.03 s remains after downloads complete. The ≤5 s acceptance target still requires the user's physical iPhone.
+
 Gates 1–3 can have separate builders in one checkout, but they share one player-facing candidate and one final judgment. Gate 4 starts profiling early; it is repeated after art or engine changes. Store-account setup, public support contact and Play tester recruitment can proceed in parallel with game work so they do not become the last critical path.
 
 ## Current position, at approval

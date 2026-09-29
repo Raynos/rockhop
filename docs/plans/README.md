@@ -17,6 +17,8 @@ A [played finish-goal pass](../evidence/finish-remaster/state-audit/README.md) s
 
 The [menu hero is now static](../evidence/menu-loader-audit/stable-hero/README.md): its old 28-second scale loop is gone, and two loaded normal-motion WebKit art crops 2.5 seconds apart are byte-identical. The loader's physical-iPhone bottom-strip report remains open.
 
+The [current review-source cached WebKit boot](../evidence/cached-boot-g4/README.md) reaches the menu in 3,015/3,029/3,014 ms on three service-worker-controlled landscape warm visits with zero page errors. This host result does not close the user's ≤5 s physical-iPhone target.
+
 Gate 2's [Diamond-route signposts](../evidence/diamond-route-cues/README.md) put short, route-specific HUD cues at the D3/S1/S2/S3 upper-line approaches. Four silent pinned Pro clips show the cues with a visible rider at 852×393, and a focused test checks their actual goal IDs and approach windows. The cues leave physics untouched; human comprehension and a material Pro advantage remain unproved.
 
 The [D3 longer-high-deck pass](../evidence/d3-bike-role/README.md) gives Pro a visible 0.60-second full-route improvement while leaving Starter's clean lower Gold unchanged. A matched 1,800-plan sweep increases clean Pro upper outcomes 35→92 and finds zero Starter upper outcomes. All 74 bot recordings were browser-proven and restamped to `a4be385f` without changing input runs; the full serial suite passes 100 files / 1,419 tests (2 skipped). This is bounded D3 evidence, not a final-four human bike-role verdict; the long beam still needs a stronger model.

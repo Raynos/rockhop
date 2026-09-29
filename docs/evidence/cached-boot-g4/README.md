@@ -35,3 +35,7 @@ BOOT_DIST=/tmp/rockhop-g4-after.oSiEzE pnpm exec tsx docs/evidence/cached-boot-g
 ```
 
 `pnpm typecheck`, `pnpm exec vitest run src/render/bikeLivery.test.ts` (3 passed), and `git diff --check` passed. A physical iPhone landscape test is still required before claiming the ≤5 s cached boot target or judging loading-screen pixel stability.
+
+## Current review-source readout
+
+The normal startup path inside committed review source `fac8b984` was remeasured on 2026-09-29 with the same silent WebKit script and the local `dist` (`index.html` SHA-256 prefix `909e8c60c672e89e`). [Raw phase rows](current-webkit.txt) show cold fill at **4,006 ms** and three service-worker-controlled warm visits at **3,015 / 3,029 / 3,014 ms** from navigation to loader removal. Warm DOWNLOAD-100%-to-ready was **2,029 / 2,036 / 2,027 ms**; shader preparation was **402 / 402 / 403 ms** and the post-shader first frame **263 / 265 / 265 ms**. All four reached a visible menu with zero page errors. The warm host result clears 5 s, but is not a physical-iPhone acceptance result, and the remaining roughly 2 s after bytes complete remains a useful optimization target if phone timing misses.
