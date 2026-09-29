@@ -7,14 +7,14 @@ a player who knows the controls and the feel notes but not the track** — not u
 input timing on a keyboard or a phone, onboarding or enjoyment. Human sessions on the real desktop and phone interfaces are a
 separate instrument (the parent's device reports); do not read a stranger median as a human one.
 
-**The verdict (round 11, audit §4).** `report` counts completed sessions on the current src fingerprint and the tier's default
-bike (`defaultBikeForTier`; `--bike` overrides) and prints a census: `n`, the censored sessions (in progress / abandoned — never
+**The verdict (round 11, audit §4).** `report` counts completed sessions on the current src fingerprint and the new profile's
+Rookie for ROCKHOP (`--bike pro` reports the earned route separately; retired tracks retain their tier default) and prints a census: `n`, the censored sessions (in progress / abandoned — never
 in a median), stale-src and other-bike exclusions, and the exact bound asserted. Verdict: `PASS` (n >= 2, every counted session
 cleared, band[0] <= median <= 1.5 x band[1]) · `FAIL` (median above the limit or a counted session did not clear) · `UNDER-BAND`
 (all cleared, median below the authored floor — easier than authored; within the ship limit, a tracks note) · `INSUFFICIENT`
 (n < 2) · `n/a` (no band).
 
-0. **Bike.** `start` / `prep` default to the tier's bike (`defaultBikeForTier`, round 12); `--bike rookie|pro` overrides. Round 12's first hard round rode nine Rookie sessions because the old default was Rookie — they stand as informational rows.
+0. **Bike.** `start` / `prep` default to Rookie on all twelve ROCKHOP courses because a fresh profile has not bought Pro. Use `--bike pro` for the earned route. Retired tracks keep their tier default.
 1. Either create the session yourself (`pnpm harness:stranger start --track <id> --agent <name>` prints the session id and the first `look`) or let the stranger do it — PROTOCOL.md's Setup section tells it to run `start` on `b1-first-ride` unless you name another track. Node physics only, no browser; state lives in `harness/out/stranger/<track>/<id>/` (`state.json`, `attempts/NNN.json`, `log.txt`).
 2. Spawn a **fresh** agent (no repo context, no `src/`, no bot output). Its whole prompt is `PROTOCOL.md` verbatim, optionally plus one line naming the track (and the session id if you created it). Nothing else.
 3. It plays with `pnpm harness:stranger <cmd> --session <id>` (env `TRIALS_STRANGER_SESSION=<id>` also works). Every call reloads the sim from the snapshot, so calls are independent processes but the run is continuous; there is no undo.

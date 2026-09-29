@@ -20,7 +20,7 @@ import { writeJson } from '../lib/report';
 import type { AttemptLog, BestAttempt, StrangerSession } from '../lib/schema';
 import { createSim } from '../lib/sim';
 import { STRANGER_OUT, type PersistedState } from './session';
-import { defaultBikeForTier } from '../../src/game/rules';
+import { defaultStrangerBike } from './bike';
 import type { InputRecording } from '../../src/core/replay';
 
 /** Older session.json files (before round 11) carry the bike only in the recording header. */
@@ -193,9 +193,9 @@ export async function report(trackId: string, o: { fresh?: boolean; bike?: 'rook
     }
   }
 
-  // The band is authored for the tier's default bike (`defaultBikeForTier`): medians count that class
-  // unless `--bike` says otherwise; the other class's rows stay in the table, marked.
-  const bike = o.bike ?? defaultBikeForTier(sim.track.tier, null);
+  // Campaign medians follow the new player's owned Rookie. An explicit --bike pro reports the
+  // earned Pro route separately; legacy tracks retain their tier default.
+  const bike = o.bike ?? defaultStrangerBike(trackId);
   const counted = rows.filter((r) => r.status === 'done' && (!fresh || !r.stale) && r.bike === bike);
   const censored = rows
     .filter((r): r is SessionRow & { status: 'in-progress' | 'abandoned' } => r.status !== 'done' && r.bike === bike)

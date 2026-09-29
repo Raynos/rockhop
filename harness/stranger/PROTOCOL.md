@@ -129,7 +129,7 @@ A `play` string is a list of slot codes, each with an optional repeat count. Eac
   leaves a knee-high kicker at about 8 m/s under full gas and lands level-ish on its own. Braking on the
   ramp face or just before a riser drops the nose over the bars; slow down *before* the ramp, not on it.
 
-- **Pro bike (the default on hard and extreme; the track card says which you have).** Same thrust as
+- **Pro bike (available after its Garage purchase; the track card says which you have).** Same thrust as
   the Rookie up to 16 m/s, a little more on top (22 m/s). On the ground it has the same wheelie ECU as
   the Rookie: plain `g` from a standstill lifts the front to about 30 deg and rides a power wheelie
   down on its own — it does not loop. Lean-back under gas is still you, not the ECU: `gb` (full lean-back)

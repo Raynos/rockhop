@@ -24,10 +24,8 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEFAULT_BIKE, type BikeClass, type GameEvent, type InputFrame, type PhysicsState } from '../../src/core/types';
+import { type GameEvent, type InputFrame, type PhysicsState } from '../../src/core/types';
 import { parseBike } from '../lib/sim';
-import { getTrack } from '../../src/tracks';
-import { defaultBikeForTier } from '../../src/game/rules';
 import { encodeJSON } from '../../src/core/replay';
 import { ACTIONS, COAST, RESTART_FRAME, formatActions, macroFrameAt, macroTicks, parseSlots, type MacroCtx } from '../bot/actions';
 import { flagBool, flagNum, flagStr, parseArgs } from '../lib/args';
@@ -54,6 +52,7 @@ import {
   type PersistedState,
 } from './session';
 import { asciiView } from './view';
+import { bikeForTrack } from './bike';
 
 const MAX_SLOTS = 40;
 
@@ -492,17 +491,6 @@ function spawnBlock(trackId: string, sessionId: string): string {
  * Parent side: one fresh session per agent x track (so the stranger never picks a track or
  * an id), plus the exact prompt per session. Nothing here counts as a call.
  */
-/**
- * Round 12: the bike a stranger rides when `--bike` is not given is the TIER'S default (the menu's
- * default; `defaultBikeForTier`): Rookie on beginner / easy, Pro on hard / extreme, `DEFAULT_BIKE` on
- * medium. Round 12's first hard round rode nine Rookie sessions because `prep` defaulted to Rookie.
- */
-export function bikeForTrack(trackId: string, flag: unknown): BikeClass {
-  const t = getTrack(trackId);
-  const tierDefault = t ? defaultBikeForTier(t.tier, null) : DEFAULT_BIKE;
-  return parseBike(flag, tierDefault);
-}
-
 async function prep(tracks: string[], agents: string[], round: string, bikeFlag: unknown): Promise<{ dir: string; sessions: Array<{ trackId: string; sessionId: string; agent: string }> }> {
   const dir = path.join(STRANGER_OUT, 'rounds', round);
   fs.mkdirSync(dir, { recursive: true });
