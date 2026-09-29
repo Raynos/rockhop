@@ -96,6 +96,8 @@ The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) first re
 
 The [played D2 excerpts](../evidence/course-remaster/d2/README.md) add a rotating pulley face, belt supports and a loaded ore cart. The cart window retains an exact Node/browser prefix hash, while the full Node input still finishes clean. A separate surface/lighting pass is needed because the black riding ribbon remains visually dominant. Fresh two-bike fault response and physical-phone pacing remain open.
 
+The [D2 outdoor-steel comparison](../evidence/course-remaster/d2/surface-light/README.md) brightens the feed and head-plant metal deck with dusted, low-metalness steel, side ribs and a visible edge. The full 37.158 s clear and cart fault/retry window retain exact paired hashes and camera checks. The later cart surface is still dark; a broader quarry lighting/material review, fresh fault comprehension and sustained phone pacing remain open.
+
 
 ### 2026-09-29 S1 upper-route finding
 

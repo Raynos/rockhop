@@ -359,8 +359,29 @@ export function buildRideSurfaces(track: CompiledTrack, biome: Biome, lib: Mater
       continue;
     }
     if (surf === 'metal' || surf === 'grate') {
-      push(buckets, SURFACE_MATERIAL[surf], ribbonWithShade(pl, ground ? WIDE_SECTION : OBSTACLE_SECTION, tile, ground ? 0 : 0.004, (_z, drop) => 0.7 + 0.3 * (1 - Math.min(1, -drop))));
+      const quarrySteel = surf === 'metal' && track.def.id === 'd2-conveyor';
+      push(buckets, quarrySteel ? 'quarrySteel' : SURFACE_MATERIAL[surf], ribbonWithShade(pl, ground ? WIDE_SECTION : OBSTACLE_SECTION, tile, ground ? 0 : 0.004,
+        (z, drop) => quarrySteel
+          ? (Math.abs(z) < 0.48 ? 0.86 : Math.abs(z) > 1.25 ? 0.77 : 1) * (0.88 + 0.12 * (1 - Math.min(1, -drop)))
+          : 0.7 + 0.3 * (1 - Math.min(1, -drop))));
       edging(pl, 'darkSteel', 0.08, 0.08, 1.52, 0.03, 0.6, 0.6, 0.6, buckets);
+      if (quarrySteel) {
+        // Ribbed anti-slip panels remain beneath the collider top. A thin, pale outer
+        // edge makes the actual safe deck visible against the stone apron and cart gaps.
+        edging(pl, 'quarrySteel', 0.075, 0.012, 1.37, 0.008, 1.15, 1.07, 0.91, buckets);
+        const pts = resample(pl.points, 0.7);
+        for (let i = 1; i < pts.length; i++) {
+          const a = pts[i - 1]!;
+          const b = pts[i]!;
+          const length = Math.hypot(b.x - a.x, b.y - a.y);
+          if (length < 0.01) continue;
+          const ang = Math.atan2(b.y - a.y, b.x - a.x);
+          const mx = (a.x + b.x) / 2 - Math.sin(ang) * 0.009;
+          const my = (a.y + b.y) / 2 + Math.cos(ang) * 0.009;
+          // Shallow ribs occupy the side bays; keep the central wheel line calm.
+          for (const side of [-1, 1]) push(buckets, 'quarrySteel', tint(box(Math.min(length, 0.055), 0.012, 0.54, mx, my, side * 0.98, ang), 1.18, 1.08, 0.9));
+        }
+      }
       // Foundry: grating strips along both edges of a steel plate (z 0.95–1.45), lifted 1 cm. The
       // ground bed is dirt (its strips are in the interior-dirt branch above); this covers a metal ground polyline.
       if (biome.id === 'foundry' && ground) edging(pl, 'grate', 0.5, 0.03, 1.2, 0.012, 0.8, 0.8, 0.8, buckets);

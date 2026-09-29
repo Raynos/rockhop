@@ -57,6 +57,9 @@ export class MaterialLibrary {
     std('dirt', { color: 0x948676, roughness: 0.95 });
     std('plank', { color: 0xc9b58e, roughness: 0.75 });
     std('steelPlate', { color: 0x5a5b5e, roughness: 0.55, metalness: 0.8 });
+    // D2's outdoor plant deck is dusted, oxidised tread plate. The shared polished steel
+    // reflects the quarry's dark side of the environment and hides the ridden surface.
+    std('quarrySteel', { color: 0x9d8a72, roughness: 0.88, metalness: 0.12 });
     std('concrete', { color: 0xa4a29e, roughness: 0.85 });
     std('rubberMat', { color: 0x1c1c1e, roughness: 0.9 });
     std('grate', { color: 0x3a3c40, roughness: 0.6, metalness: 0.7 });
@@ -225,7 +228,7 @@ export class MaterialLibrary {
     { painter: 'dirt', size: 512, strength: 2.0, targets: ['dirt'] },
     { painter: 'plank', size: 512, strength: 1.4, rotate: true, targets: ['plank', 'plywood', 'pallet'] },
     { painter: 'concrete', size: 512, strength: 1.2, targets: ['concrete', 'asphaltWet'] },
-    { painter: 'rust', size: 256, strength: 1.2, targets: ['steelPlate', 'rustSteel', 'grate', 'darkSteel'], noAlbedo: false },
+    { painter: 'rust', size: 256, strength: 1.2, targets: ['steelPlate', 'rustSteel', 'grate', 'darkSteel', 'quarrySteel'], noAlbedo: false },
     { painter: 'corrugated', size: 512, strength: 2.2, targets: ['container', 'containerRed', 'containerBlue', 'barrelRed', 'barrelWhite', 'barrelBlue'] },
     { painter: 'rubber', size: 256, strength: 2.5, targets: ['tyre'], noAlbedo: true },
     { painter: 'paintMetallic', size: 256, strength: 0.6, targets: ['framePaint', 'framePaintLow', 'bodyPaint', 'helmet'] }, // flake + edge chips (albedo only darkens at chips)
@@ -289,17 +292,18 @@ export class MaterialLibrary {
     }
     for (const name of job.targets) {
       const m = this.get(name);
-      if (!job.noAlbedo) m.map = set.map;
+      const dustedQuarrySteel = name === 'quarrySteel';
+      if (!job.noAlbedo && !dustedQuarrySteel) m.map = set.map;
       m.normalMap = set.normalMap;
-      m.normalScale.set(1, 1);
+      m.normalScale.set(dustedQuarrySteel ? 0.6 : 1, dustedQuarrySteel ? 0.6 : 1);
       m.roughnessMap = set.ormMap;
       m.metalnessMap = set.ormMap;
       m.aoMap = set.ormMap;
       m.aoMapIntensity = 0.8;
       // When a map is present the scalar multiplies the texel; painters bake
       // mid-grey so the scalar keeps its meaning.
-      if (m.metalnessMap) m.metalness = Math.max(m.metalness, 1);
-      m.roughness = 1;
+      if (m.metalnessMap && !dustedQuarrySteel) m.metalness = Math.max(m.metalness, 1);
+      m.roughness = dustedQuarrySteel ? 0.88 : 1;
       m.needsUpdate = true;
     }
     this.generateMs += performance.now() - t0;

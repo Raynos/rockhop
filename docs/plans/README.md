@@ -32,7 +32,7 @@
 
 **C3 hull round:** [played Hull Breach window](../evidence/course-remaster/c3/README.md) gives the wreck segmented steel plating and a visible torn exit lip. The captured state hash matches Node, and the obstacle cost rises by 2,928 triangles and one draw call. The broad boxy hull profile and physical-phone performance remain open.
 
-**D2 machinery round:** [played Conveyor excerpts](../evidence/course-remaster/d2/README.md) give the head pulley a spinning spoke face, the belt supports and cleats, and the later cart a tub and visible load. A cart-window browser/Node hash matches; the full Node ride still finishes clean. The dark riding surface, full browser ride, new-player fault response and phone pacing remain open.
+**D2 machinery and surface rounds:** [played Conveyor excerpts](../evidence/course-remaster/d2/README.md) give the head pulley a spinning spoke face, belt supports and cleats, and the later cart a tub and visible load. The [matched full ride and cart fault](../evidence/course-remaster/d2/surface-light/README.md) replace near-black outdoor metal with dusted steel and visible side edges while preserving exact finish and fault-window hashes. The later cart surface, new-player fault response and phone pacing remain open.
 
 **S1 upper-route round:** [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows an earlier two-beat cue for the optional Diamond bridge. Rookie lower and Pro upper finish states remain identical in Node and two browser loads. A new player's ability to see and choose the upper line remains open.
 
