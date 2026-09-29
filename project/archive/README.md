@@ -13,6 +13,7 @@ Rules
 - Never archive by copying; never archive scratch (`harness/out`, scratchpads are not in the repo).
 
 Contents
+- `VERCEL_BUILD_CPU.md` — Rockhop's prebuilt, hourly/manual release workflow, closed 2026-09-29 at `023c172d`; live deploy and no-change skip verified.
 - `PERF.md` — the perf plan, closed 2026-09-15 at cut #4b (`831e9c4`); the live remainder is `docs/plans/PERF-BACKLOG.md`.
 - `physics-v2.md` — the physics v2 design, closed 2026-09-15 at tag `physics-v2-final` (R6); status lives on in `docs/design/physics.md`.
 - `MEGA_PLAN.md` — the v0.1.0 → v0.2.0 mega build, closed 2026-09-15 at tag `v0.2.0` (`b52dfd0`); the numbers are in `RELEASES.md`.
