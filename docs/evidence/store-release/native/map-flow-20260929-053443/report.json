@@ -1,0 +1,92 @@
+{
+  "source": "124e8b003c742033f42d0249ed3bc07958d0bbaf",
+  "at": "2026-09-29T05:34:43.885Z",
+  "runs": [
+    {
+      "platform": "web",
+      "device": "headless Chromium (angle-swiftshader)",
+      "wallS": 46,
+      "pass": true,
+      "open": {
+        "name": "map-open",
+        "mapCanvases": 1,
+        "gameContextLost": true,
+        "audioContexts": 0,
+        "platform": "web",
+        "atMs": 24553
+      },
+      "ride": {
+        "name": "map-ride",
+        "trackId": "c1-low-tide",
+        "rideMs": 12318,
+        "gameContextLost": false,
+        "mapCanvases": 0,
+        "audioContexts": 0,
+        "platform": "web",
+        "atMs": 40168
+      },
+      "returned": {
+        "name": "map-return",
+        "mapCanvases": 1,
+        "gameContextLost": true,
+        "platform": "web",
+        "atMs": 45422
+      },
+      "exit": {
+        "name": "map-exit",
+        "mapCanvases": 0,
+        "gameContextLost": false,
+        "audioContexts": 0,
+        "platform": "web",
+        "atMs": 45761
+      },
+      "error": null,
+      "notes": [
+        "renderer ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)"
+      ],
+      "clip": null
+    },
+    {
+      "platform": "ios",
+      "device": "iOS Simulator rockhop-gate (iPhone 17 Pro Max, 5D278BE8-2D5C-4DD3-996A-86F2C4159160)",
+      "wallS": 25,
+      "pass": true,
+      "open": {
+        "name": "map-open",
+        "mapCanvases": 1,
+        "gameContextLost": true,
+        "audioContexts": 0,
+        "platform": "ios",
+        "atMs": 9931
+      },
+      "ride": {
+        "name": "map-ride",
+        "trackId": "c1-low-tide",
+        "rideMs": 3667,
+        "gameContextLost": false,
+        "mapCanvases": 0,
+        "audioContexts": 0,
+        "platform": "ios",
+        "atMs": 16274
+      },
+      "returned": {
+        "name": "map-return",
+        "mapCanvases": 1,
+        "gameContextLost": true,
+        "platform": "ios",
+        "atMs": 16678
+      },
+      "exit": {
+        "name": "map-exit",
+        "mapCanvases": 0,
+        "gameContextLost": false,
+        "audioContexts": 0,
+        "platform": "ios",
+        "atMs": 16715
+      },
+      "error": null,
+      "notes": [],
+      "clip": "harness/out/native/ios-map-flow/clip.mp4"
+    }
+  ]
+}

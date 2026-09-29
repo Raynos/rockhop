@@ -7,6 +7,10 @@ The harness is `harness/native/README.md`. Each run is written to its own `<stam
 
 Since `20260923-005522`, `scripts/store-build.mjs` builds from a clean `git archive` of HEAD, never the shared working tree. The sha is `source` in `gate.json`.
 
+## 20260929-053443 — C island GPU handoff in the iOS store shell
+
+The [clean-source map-flow report](map-flow-20260929-053443/README.md) and silent simulator clip show Menu → C island → C1 Ride → Menu → C island → Menu on `124e8b00`. Web and iOS both kept one live map context, restored the gameplay context before riding, and restored it again on map exit, with zero AudioContexts and no crash sheet. The preceding clean-source [native gate](20260929-052052/gate.json) on `1895a1e2` also passed exact finish bytes/hash, crash and one-tick restart in web and iOS. Physical iPhone touch and sustained GPU performance remain open.
+
 ## 20260928-233600 — current C1 and S2 Pro exact in web/iOS
 
 The clean-export debug bundle names `ad4326922a5045aeae9cff531772bed5a565ff04`. The [gate report](20260928-233600/gate.json), [played silent iOS clip](20260928-233600/ios-clip.mp4) and [clip sheet](20260928-233600/ios-sheet.jpg) record cold boot, the paced C1 ride, crash and 20 restarts. Web and iOS passed every configured check with zero AudioContexts under automation.
