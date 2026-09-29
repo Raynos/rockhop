@@ -5,7 +5,7 @@
 //
 // Scans the BUILT store artefacts — `dist/` from `pnpm build:store`, the native shells, and the exact Capacitor
 // payload at `store/build/web/` when present (or the dirs given) — for the denylist: the franchise terms (the Trials / Ubisoft / RedLynx names,
-// "gauntlet", "no fear", "demo") and the name of every retired level, read from src/tracks `RETIRED_TRACKS` (the
+// "gauntlet", "no fear", "demo"), known excluded rider assets with conflicting licence notices, and the name of every retired level, read from src/tracks `RETIRED_TRACKS` (the
 // curriculum, the `p<n>-*` playgrounds, the Labs; loaded through tsx, the tracks are TypeScript). Internal code and
 // docs are out of scope; what a reviewer or player can extract is in.
 //
@@ -13,7 +13,8 @@
 // names only as a title) is documented and implemented in scripts/ip-audit-rules.mjs and pinned by
 // scripts/ip-audit.test.mjs.
 //
-// Text files are read whole; a .glb's JSON chunk is read (node and material names ship in it). Other binaries
+// Text files are read whole; a .glb's JSON chunk is read (node and material names ship in it). The rider-asset
+// exclusion applies only to GLBs, since provenance documents may name the original source. Other binaries
 // (images, audio, fonts) are skipped. Reports hits per term and per file. `--strict` exits 1 on any hit (or when
 // a requested directory is missing, or there is nothing to scan): CI runs it strict on the store build
 // (.github/workflows/deploy.yml).
@@ -21,7 +22,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { tsImport } from 'tsx/esm/api';
-import { FRANCHISE_TERMS, GENERIC_LEVEL_NAMES, auditText } from './ip-audit-rules.mjs';
+import { DISPUTED_RIDER_ASSETS, FRANCHISE_TERMS, GENERIC_LEVEL_NAMES, assetRightsHits, auditText } from './ip-audit-rules.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -71,7 +72,7 @@ function files(dir) {
 }
 
 const levels = await levelNames();
-const terms = [...FRANCHISE_TERMS, ...levels.filter((n) => !FRANCHISE_TERMS.includes(n.toLowerCase()))];
+const terms = [...FRANCHISE_TERMS, ...levels.filter((n) => !FRANCHISE_TERMS.includes(n.toLowerCase())), ...DISPUTED_RIDER_ASSETS];
 const byTerm = Object.fromEntries(terms.map((t) => [t, 0]));
 const byFile = {};
 let scanned = 0;
@@ -84,6 +85,7 @@ for (const dir of dirs) {
     else continue;
     scanned += 1;
     const hits = auditText(text, levels);
+    if (f.endsWith('.glb')) Object.assign(hits, assetRightsHits(text));
     if (!Object.keys(hits).length) continue;
     byFile[relative(repo, f)] = hits;
     for (const [t, n] of Object.entries(hits)) byTerm[t] += n;
@@ -97,7 +99,7 @@ if (asJson) {
   if (missing.length) console.log(`ip-audit: missing requested directories: ${missing.map((d) => relative(repo, d)).join(', ')}`);
   if (!dirs.length || !scanned) console.log('ip-audit: nothing to scan (build the payload first)');
   console.log(`ip-audit: ${total} hits in ${Object.keys(byFile).length} of ${scanned} files scanned (${dirs.map((d) => relative(repo, d)).join(', ')})`);
-  console.log(`terms: ${FRANCHISE_TERMS.length} franchise + ${levels.length} retired level names (${levels.filter((n) => GENERIC_LEVEL_NAMES.has(n)).length} generic: title context only)`);
+  console.log(`terms: ${FRANCHISE_TERMS.length} franchise + ${levels.length} retired level names (${levels.filter((n) => GENERIC_LEVEL_NAMES.has(n)).length} generic: title context only) + ${DISPUTED_RIDER_ASSETS.length} excluded rider-asset names in GLBs`);
   console.log('\nby term');
   for (const t of terms) if (byTerm[t]) console.log(`  ${String(byTerm[t]).padStart(6)}  ${t}`);
   console.log('\nby file');

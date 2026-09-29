@@ -32,6 +32,8 @@ One complete, landscape-only game on **iOS and Android together**: the 12 main c
 
 The [headless WebKit C-map review](../evidence/world-map-c/webkit-review/README.md) now proves menu entry, portrait rotate gate, remount after rotation, orbit and three real touch selections at phone geometry. It is an opt-in review build, so Gate 3 still needs the selected art quality and physical iPhone qualification before replacing the painted selector.
 
+The [beard source audit](../evidence/hero-art/delivery/provenance/beard-rights-audit/README.md) found conflicting licence notices in the previously shipped street-rider facial hair. All six current runtime exports now omit those meshes/textures, and the strict store audit rejects their reintroduction. The rest of the content-rights declaration and final signed-payload check remain part of Gate 5.
+
 Gates 1–3 can have separate builders in one checkout, but they share one player-facing candidate and one final judgment. Gate 4 starts profiling early; it is repeated after art or engine changes. Store-account setup, public support contact and Play tester recruitment can proceed in parallel with game work so they do not become the last critical path.
 
 ## Current position, at approval

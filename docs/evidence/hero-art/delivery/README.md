@@ -2,6 +2,8 @@
 
 The seven delivered GLBs live in `assets/blender/hero-art/delivery/` (with `manifest.json`: prototype path, sha256, bytes, Astra's commits `85a03c8` / `4d2e762` / `9471131`); the editable masters in `assets/blender/hero-art/masters/` (local, sha256 in its README); the game rebuild is `node assets/blender/hero_art_build.mjs` (recipe: `assets/blender/README.md`). Links inside the copied documents were rewritten to these locations; anything not copied points at the archived prototype path and is marked so.
 
+**Current runtime variation:** the six shipped street-rider GLBs omit the delivered Grinsegold beard and moustache because their source files carry conflicting licence notices. The [2026-09-28 rights audit and clean-runtime WebKit review](provenance/beard-rights-audit/README.md) record the exclusion and exact model hashes. The editable delivery and historical handoff below retain the original assets for provenance; they are not browser/store payloads.
+
 | file | what it is |
 |---|---|
 | `ART_HANDOFF.md` (13 KB) | Astra's original handoff: catalog, rebuild pipeline, rig/coordinate contract, verification boundaries, source terms |

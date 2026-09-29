@@ -42,33 +42,33 @@ export const MODEL_ASSETS = {
     "sha256": "4a9801c2a4148f450874b87f65e604a29967924ace1d52341ab5176b7804c6b4"
   },
   "models/rider-street-charcoal-lod.glb": {
-    "url": "models/8e7b1bc154e23855/rider-street-charcoal-lod-2769317a38c360d6.glb",
-    "bytes": 1706116,
-    "sha256": "2769317a38c360d6b48503462c6ace8ff04bdfe2e492a53101a6444bbdea406c"
+    "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+    "bytes": 1472164,
+    "sha256": "fec85cbceaa7ad681f2f0d1cbc42d29d3a2a27f2583ac20329cb58892f966d56"
   },
   "models/rider-street-charcoal.glb": {
-    "url": "models/8e7b1bc154e23855/rider-street-charcoal-0e7f2231e7f15dd5.glb",
-    "bytes": 3486936,
-    "sha256": "0e7f2231e7f15dd542b90f614e73cdda9aea937b656fcd72d61b6742b04223c0"
+    "url": "models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+    "bytes": 3234924,
+    "sha256": "0c14eb52f0aaed2622d7a67c5533a520bbbc96b67071fa32d711b82c00806663"
   },
   "models/rider-street-mustard-lod.glb": {
-    "url": "models/72619c57c200c5c9/rider-street-mustard-lod-5d8cdbd9a2d3035f.glb",
-    "bytes": 1753248,
-    "sha256": "5d8cdbd9a2d3035f928f1800d25f5c26ed1c39afca27b7ac7f1643f31b1ae5d8"
+    "url": "models/2a3c78a70e16ff1a/rider-street-mustard-lod-b1563f6eedbddb0a.glb",
+    "bytes": 1520840,
+    "sha256": "b1563f6eedbddb0af7b80765bcb66e21167a426e38234a1b3da07c08716e3518"
   },
   "models/rider-street-mustard.glb": {
-    "url": "models/72619c57c200c5c9/rider-street-mustard-c08dabf79dc45d2f.glb",
-    "bytes": 3616248,
-    "sha256": "c08dabf79dc45d2f3d36d8caa5971ff85008b63ea84431d23730c86afd0caa52"
+    "url": "models/2a3c78a70e16ff1a/rider-street-mustard-11743d396b85b9e9.glb",
+    "bytes": 3363820,
+    "sha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c"
   },
   "models/rider-street-openface-lod.glb": {
-    "url": "models/055a33c00bdb65ab/rider-street-openface-lod-d86ca40f97b7a06c.glb",
-    "bytes": 1480200,
-    "sha256": "d86ca40f97b7a06c0ea77b04d32d85053e5fbe3a338fb033e31ed53c957863f7"
+    "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+    "bytes": 1245476,
+    "sha256": "369e586fe3268929a2955522b68f07408d2085f5f9746d7e56b7b8bc5f93c5aa"
   },
   "models/rider-street-openface.glb": {
-    "url": "models/055a33c00bdb65ab/rider-street-openface-438e972824940b55.glb",
-    "bytes": 3015116,
-    "sha256": "438e972824940b5537716c7e22657b15ccc9dc1a0d394a685088d10f08073db8"
+    "url": "models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+    "bytes": 2796628,
+    "sha256": "a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998"
   }
 } as const;

@@ -20,6 +20,13 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..',
 const BLENDER = process.env.BLENDER ?? '/Applications/Blender.app/Contents/MacOS/Blender';
 const DELIVERY = 'assets/blender/hero-art/delivery';  // byte-for-byte copies of the selection; manifest.json has the prototype paths + sha256
 const UNPACK = 'assets/blender/unpack_meshopt.mjs';
+// These two delivered third-party meshes have contradictory source-file licence headers.
+// Keep the editable delivery intact for provenance, but do not put either mesh or its
+// dedicated textures into a player/store rider export.
+const STREET_FACIAL_HAIR_TO_DROP = [
+  'Street01_grinsegold_full_beard_Runtime',
+  'Street01_grinsegold_moustache_Runtime',
+];
 
 /** Game outputs -> delivery selections (OPUS_HANDOFF.md "Exact selections"; manifest.json in DELIVERY maps back to the prototype). */
 export const OUTPUTS = {
@@ -64,16 +71,32 @@ export async function build(name, { lod, stage = 0, scratch, dry = false }) {
     '--input', decoded, '--output', rawOut, '--kind', spec.kind, '--tris', String(budget.tris), '--report', report,
     '--stage', String(stage), '--no-meshopt'];
   if (lod) blenderArgs.push('--lod', '--min-tris', spec.kind === 'bike' ? '24' : '120');
+  if (name.startsWith('rider-street-')) blenderArgs.push('--drop', ...STREET_FACIAL_HAIR_TO_DROP);
   const t0 = Date.now();
   run(BLENDER, blenderArgs, `blender ${outName}`);
   const blenderSeconds = (Date.now() - t0) / 1000;
   const packed = path.join(scratch, `${outName}.glb`);
-  const packReport = await pack(rawOut, packed, {});
+  // The editable delivery retains provenance extras with the old prototype name.
+  // Scene extras are not used by the player and must not leak into store GLBs.
+  const packReport = await pack(rawOut, packed, { stripSceneExtras: name.startsWith('rider-street-') });
   const verified = spec.kind === 'bike'
     ? await verifyBike(decoded, packed, { tris: budget.tris, draws: budget.draws })
     : await verifyRider(decoded, packed, { tris: budget.tris, draws: budget.draws });
   const reduce = JSON.parse(fs.readFileSync(report, 'utf8'));
   const stats = glbStats(packed);
+  if (name.startsWith('rider-street-')) {
+    const glb = fs.readFileSync(packed);
+    const jsonLength = glb.readUInt32LE(12);
+    const document = JSON.parse(glb.subarray(20, 20 + jsonLength).toString('utf8'));
+    const disputed = /grinsegold|full_beard|moustache|trials/i;
+    const remaining = [
+      ...(document.nodes ?? []), ...(document.meshes ?? []), ...(document.materials ?? []),
+      ...(document.textures ?? []), ...(document.images ?? []),
+    ].map(item => item.name ?? '').filter(name => disputed.test(name));
+    if (remaining.length || /trials/i.test(JSON.stringify(document))) {
+      throw new Error(`${outName}: disputed asset or retired brand payload remains: ${remaining.join(', ')}`);
+    }
+  }
   const audit = {
     source: spec.source,
     sourceSha256: sourceSha,

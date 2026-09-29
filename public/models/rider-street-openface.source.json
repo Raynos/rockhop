@@ -2,7 +2,7 @@
   "source": "assets/blender/hero-art/delivery/street-openface-remaster.glb",
   "sourceSha256": "f01c3abc274d457a812af51753ba1ed54e7ad979f7c60a8564c2f08f359ee7df",
   "decodedSha256": "21275ff4c9e372e334dd98f6c4344eee4bdd9998480fbc79909b7647f0ec0ece",
-  "exportSha256": "438e972824940b5537716c7e22657b15ccc9dc1a0d394a685088d10f08073db8",
+  "exportSha256": "a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998",
   "kind": "rider",
   "lod": false,
   "stage": 1,
@@ -19,15 +19,25 @@
   "reduced": {
     "triangles": {
       "budget": 60000,
-      "before": 219340,
-      "after": 58816,
-      "ratio": 0.24538017178804739
+      "before": 218472,
+      "after": 58814,
+      "ratio": 0.24786931818181815
     },
     "dropped": [
       {
         "object": "rider",
         "mesh": "rider",
         "tris": 0
+      },
+      {
+        "object": "Street01_grinsegold_full_beard_Runtime",
+        "mesh": "full_beard.001",
+        "tris": 748
+      },
+      {
+        "object": "Street01_grinsegold_moustache_Runtime",
+        "mesh": "moustache.001",
+        "tris": 120
       },
       {
         "object": "Street01_Bystedt_CurlyGroom_Runtime",
@@ -64,37 +74,32 @@
       {
         "object": "MPFB_AdultMale_SourceProbe.high-poly_Runtime",
         "before": 2040,
-        "after": 490
+        "after": 494
       },
       {
         "object": "Street01_Authored_EditableBody_Runtime",
         "before": 34358,
-        "after": 8261
-      },
-      {
-        "object": "Street01_grinsegold_full_beard_Runtime",
-        "before": 748,
-        "after": 392
+        "after": 8345
       },
       {
         "object": "rider:anatomical sweatshirt",
         "before": 132256,
-        "after": 31802
+        "after": 32126
       },
       {
         "object": "rider:folded hood",
         "before": 1916,
-        "after": 460
+        "after": 464
       },
       {
         "object": "rider:cotton_laces",
         "before": 6336,
-        "after": 1522
+        "after": 1538
       },
       {
         "object": "rider:hero footwear construction",
         "before": 5952,
-        "after": 1430
+        "after": 1444
       },
       {
         "object": "rider:trainer_rubber",
@@ -104,7 +109,7 @@
       {
         "object": "rider:trainer_upper",
         "before": 4224,
-        "after": 1014
+        "after": 1024
       },
       {
         "object": "rider:glove_top",
@@ -124,12 +129,12 @@
       {
         "object": "rider.001",
         "before": 8068,
-        "after": 1939
+        "after": 1959
       },
       {
         "object": "rider:openface helmet",
         "before": 13708,
-        "after": 3294
+        "after": 3328
       }
     ],
     "images": [
@@ -309,7 +314,7 @@
         "rider:openface helmet:hires"
       ],
       "hiresNormal": {
-        "fallbackTexels": 87483,
+        "fallbackTexels": 85228,
         "texels": 4194304
       }
     }
@@ -327,20 +332,20 @@
       "inverse binds",
       "clip times"
     ],
-    "rawBytes": 5084164,
-    "packedBytes": 3015120
+    "rawBytes": 4869320,
+    "packedBytes": 2796628
   },
   "verified": {
-    "bytes": 3015116,
-    "sha256": "438e972824940b5537716c7e22657b15ccc9dc1a0d394a685088d10f08073db8",
-    "triangles": 58816,
-    "vertices": 41917,
-    "draws": 5,
-    "meshes": 5,
-    "materials": 5,
-    "images": 7,
+    "bytes": 2796628,
+    "sha256": "a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998",
+    "triangles": 58814,
+    "vertices": 42007,
+    "draws": 3,
+    "meshes": 3,
+    "materials": 3,
+    "images": 5,
     "maxTexture": 2048,
-    "imageBytes": 1887378,
+    "imageBytes": 1671167,
     "bones": 19,
     "clips": {
       "compression": {
@@ -415,35 +420,21 @@
         "kind": "jpeg",
         "w": 2048,
         "h": 2048,
-        "bytes": 395241
+        "bytes": 397272
       },
       {
         "name": "rider_body_orm",
         "kind": "jpeg",
         "w": 1024,
         "h": 1024,
-        "bytes": 417987
+        "bytes": 423560
       },
       {
         "name": "rider_body_albedo",
         "kind": "jpeg",
         "w": 2048,
         "h": 2048,
-        "bytes": 504964
-      },
-      {
-        "name": "Full_beard_black_diff",
-        "kind": "png",
-        "w": 512,
-        "h": 512,
-        "bytes": 151652
-      },
-      {
-        "name": "Moustache_black_diff",
-        "kind": "png",
-        "w": 512,
-        "h": 512,
-        "bytes": 81103
+        "bytes": 513904
       }
     ],
     "meshList": [
@@ -459,8 +450,8 @@
       },
       {
         "name": "high-poly.001",
-        "tris": 490,
-        "verts": 291,
+        "tris": 494,
+        "verts": 294,
         "primitives": 1,
         "instances": 1,
         "materials": [
@@ -469,40 +460,15 @@
       },
       {
         "name": "rider_body",
-        "tris": 57622,
-        "verts": 41176,
+        "tris": 58128,
+        "verts": 41589,
         "primitives": 1,
         "instances": 1,
         "materials": [
           "rider_body"
         ]
-      },
-      {
-        "name": "full_beard.001",
-        "tris": 392,
-        "verts": 245,
-        "primitives": 1,
-        "instances": 1,
-        "materials": [
-          "Street01_Authored_EditableBody.grinsegold_full_beard"
-        ]
-      },
-      {
-        "name": "moustache.001",
-        "tris": 120,
-        "verts": 81,
-        "primitives": 1,
-        "instances": 1,
-        "materials": [
-          "Street01_Authored_EditableBody.grinsegold_moustache"
-        ]
       }
     ]
   },
-  "blenderSeconds": 5.966,
-  "extrasScrub": {
-    "script": "assets/art/scrub-glb-extras.mjs",
-    "previousSha256": "dfa54ff6efe7dec910de63aa1d49dcc3d8095a44f3c41a4b32c2df96f262ac59",
-    "note": "provenance extras only; BIN chunk byte-identical"
-  }
+  "blenderSeconds": 6.231
 }

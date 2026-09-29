@@ -5,11 +5,36 @@ import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { GENERIC_LEVEL_NAMES, auditText, franchiseHits, levelHits } from './ip-audit-rules.mjs';
+import { GENERIC_LEVEL_NAMES, assetRightsHits, auditText, franchiseHits, levelHits } from './ip-audit-rules.mjs';
 
 const auditScript = join(dirname(fileURLToPath(import.meta.url)), 'ip-audit.mjs');
 
 describe('strict artifact scan', () => {
+  it('rejects the disputed facial-hair mesh when it returns to a release GLB', () => {
+    const root = mkdtempSync(join(tmpdir(), 'rockhop-ip-audit-'));
+    try {
+      const models = join(root, 'models');
+      mkdirSync(models, { recursive: true });
+      const json = Buffer.from(JSON.stringify({ nodes: [{ name: 'Street01_grinsegold_full_beard_Runtime' }] }));
+      const padded = Buffer.alloc(Math.ceil(json.length / 4) * 4, 0x20);
+      json.copy(padded);
+      const glb = Buffer.alloc(20 + padded.length);
+      glb.writeUInt32LE(0x46546c67, 0);
+      glb.writeUInt32LE(2, 4);
+      glb.writeUInt32LE(glb.length, 8);
+      glb.writeUInt32LE(padded.length, 12);
+      glb.writeUInt32LE(0x4e4f534a, 16);
+      padded.copy(glb, 20);
+      writeFileSync(join(models, 'rider.glb'), glb);
+      const run = spawnSync(process.execPath, [auditScript, '--strict', '--json', root], { encoding: 'utf8' });
+      expect(run.status).toBe(1);
+      const report = JSON.parse(run.stdout);
+      expect(report.byFile['models/rider.glb'] ?? Object.values(report.byFile)[0]).toMatchObject({ grinsegold: 1, full_beard: 1 });
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+
   it('finds a retired brand name inside the Capacitor build/web payload when scanning its parent', () => {
     const root = mkdtempSync(join(tmpdir(), 'rockhop-ip-audit-'));
     try {
@@ -134,5 +159,12 @@ describe('auditText', () => {
   it('reports per term, a name that is a franchise term once, nothing for clean text', () => {
     expect(auditText('Trials Gauntlet: The Stack, "Lean Back"', ['The Stack', 'Lean Back', 'Gauntlet'])).toEqual({ trials: 1, gauntlet: 1, 'The Stack': 1, 'Lean Back': 1 });
     expect(auditText('ROCKHOP. Lean back if the nose drops. Licence: ARISING FROM', ['Lean Back'])).toEqual({});
+  });
+});
+
+describe('known rights exclusions', () => {
+  it('scans GLB JSON names without flagging ordinary game copy', () => {
+    expect(assetRightsHits('{"name":"Moustache_black_diff"}')).toEqual({ moustache: 1 });
+    expect(assetRightsHits('{"name":"rockhop_rider_skin"}')).toEqual({});
   });
 });

@@ -69,6 +69,7 @@ export async function pack(input, output, options = {}) {
   await MeshoptEncoder.ready; await MeshoptDecoder.ready;
   const raw = fs.readFileSync(input);
   const { doc, bin } = readGlb(raw);
+  if (options.stripSceneExtras) for (const scene of doc.scenes ?? []) delete scene.extras;
   assert.equal(doc.buffers.length, 1, 'single embedded buffer');
   assert(!(doc.bufferViews ?? []).some(v => v.extensions?.EXT_meshopt_compression), 'input already compressed');
   const role = roles(doc);

@@ -27,6 +27,18 @@
 /** Case-insensitive, whole-word (rule 1). */
 export const FRANCHISE_TERMS = ['trials', 'gauntlet', 'ubisoft', 'redlynx', 'evolution', 'rising', 'fusion', 'no fear', 'demo'];
 
+/** Source meshes with conflicting licence notices; they must not return to a shipped rider GLB. */
+export const DISPUTED_RIDER_ASSETS = ['grinsegold', 'full_beard', 'moustache'];
+
+export function assetRightsHits(glbJson) {
+  const out = {};
+  for (const name of DISPUTED_RIDER_ASSETS) {
+    const n = [...glbJson.matchAll(new RegExp(name, 'gi'))].length;
+    if (n) out[name] = n;
+  }
+  return out;
+}
+
 /** Retired level names made only of riding vocabulary: flagged in title context only (rule 2). */
 export const GENERIC_LEVEL_NAMES = new Set([
   'First Ride',

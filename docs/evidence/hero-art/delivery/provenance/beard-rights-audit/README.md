@@ -1,0 +1,41 @@
+# Beard rights evidence check — 2026-09-28
+
+**Disposition:** the exact rights of the original Grinsegold beard/moustache remain unresolved. The runtime replacement path below excludes their meshes and textures from the six street-rider GLBs. The editable delivery still contains the original source for provenance and must not be mistaken for a distributable game payload. The broader store content-rights answer still needs a final check against every other third-party component. This is an evidence assessment, not a legal opinion.
+
+## Reproduced chain of custody
+
+- The archived source URL in [`authored-beard/provenance.json`](../authored-beard/provenance.json) downloaded successfully today. The ZIP SHA-256 is `09ed71439c853eac01a92f6e4463f15d0701f08b7d9ff777771d10c3e590e770`, exactly matching that record. The ZIP's `packs/bodyparts06.json` SHA-256 is `0b3a1e829db059db5c55736478b9db4d660e2c22b04d58c3d715629efe300847`; its entries name `grinsegold` as author and `CC-BY` as license for both `grinsegold_full_beard` (source `/node/188`) and `grinsegold_moustache` (`/node/187`). The [official pack listing](https://static.makehumancommunity.org/assets/assetpacks/bodyparts06.html) independently names both and says CC-BY.
+- In that *same* archive, **both** `.mhclo` fitting files **and both `.obj` geometry files** begin with `# author grinsegold` and `# license AGPL3`. For example, `clothes/grinsegold_full_beard/full_beard.obj` SHA-256 `dd7defd621f8ade07ae89159ee8c20696261786b8f308e1aad2cf69e78d83866`; `clothes/grinsegold_moustache/moustache.obj` SHA-256 `d0d40298a00b686cef04f0b96359a90403c43d891d23b20aaf6bdb2a0d896e4f`. This is a conflict in the geometry's own source header, not only in an unused metadata file.
+- The [official MakeClothes instructions](https://static.makehumancommunity.org/assets/creatingassets/makeclothes/clothes.html) say the exporter inserts license text into the MHCLO header and its **default is AGPL3**. MakeHuman's [archived external-tools documentation](https://static.makehumancommunity.org/oldsite/documentation/big_dump_from_drupal.html) says an original clothes author may choose a license independently of the AGPL MakeClothes script. Thus the headers **could** be unchanged exporter defaults and the later pack listing an intentional CC-BY declaration; the available records do not prove the author's intent or the precedence of those declarations. The original asset pages were unavailable when checked; no author clarification was found.
+- The *previous* runtime build contained this material. Its `public/models/rider-street-{mustard,charcoal,openface}{,-lod}.glb` (six files) each had beard and moustache nodes, meshes and images. The previous `rider-street-mustard.glb` SHA-256 was `c08dabf79dc45d2f3d36d8caa5971ff85008b63ea84431d23730c86afd0caa52`. The race rider GLBs had no such named nodes. This establishes the release issue that the replacement below addresses; it does not prove byte-level identity to the ZIP after fitting and compression.
+
+## Practical release implication
+
+The [MakeHuman asset-pack FAQ](https://static.makehumancommunity.org/assets/assetpacks/faq.html) treats third-party pack assets according to their own licenses; MakeHuman's [core CC0 license](https://static.makehumancommunity.org/about/license.html) does not override this beard's stated terms. Its [CC-BY guidance for games](https://static.makehumancommunity.org/oldsite/faq/what_do_i_need_to_do_when_i_use_a_ccby_asset.html) says to identify the asset and author in an accessible About/legal screen. Under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), a usable attribution normally preserves the author, source, license link and indication of changes. The pack says only `CC-BY`, without a version, so **4.0 is a guidance reference, not a verified version for these files**. The prior `src/ui/front.ts` credits named `grinsegold` and `CC-BY` without source and license links or fitted-change details. Since the new runtime excludes that material, the shipped credits should instead remove the beard claim; a future reintroduction would need complete attribution and resolved terms. CC-BY itself permits use in a game with attribution; it does not require opening the game's source. No conclusion is made here about the consequences if the AGPL3 source headers govern instead.
+
+**Decision path:** (1) obtain written clarification from `grinsegold` or the pack maintainer that the exact `full_beard.obj`, `moustache.obj`, images and fitted derivatives may ship under a specified CC-BY version, then keep that record and complete attribution; or (2) exclude those assets from all distributed rider models. Path 2 is implemented for the runtime exports below. Do not treat the present CC-BY listing alone as a conclusive resolution of the contradictory source headers or reintroduce this material without resolving it.
+
+## Runtime exclusion and played review
+
+`assets/blender/hero_art_build.mjs` now passes the two exact Grinsegold object names to the existing Blender importer `--drop` option for each street export and rejects any packed GLB with disputed node, mesh, material, texture or image names. The packer also omits legacy scene extras from these six exports, removing two retired-brand metadata values inherited from the editable delivery. This is reproducible from the committed delivery and build recipe:
+
+```sh
+node assets/blender/hero_art_build.mjs rider-street-mustard rider-street-charcoal rider-street-openface --stage 1
+pnpm build
+node_modules/.bin/tsx assets/blender/hero-art/garage-review.mts --out=harness/out/street-rider-review
+```
+
+Each of the six `.source.json` reports records **748 beard + 120 moustache triangles dropped before decimation, joining and texture packing**. Each GLB still has one skin, 19 bones and six animation clips; no disputed names remain in any exported node, mesh, material, texture or image. This is an export-time omission, not a one-off edit to GLB bytes. The lossless source GLBs under `assets/blender/hero-art/delivery/` intentionally retain the original nodes and are **not** part of the checked browser `dist/models/` output. A fresh `pnpm build:store` followed by `node scripts/ip-audit.mjs --strict dist` scanned 35 release files with **zero** retired-brand, retired-level or disputed-rider-asset hits. The strict audit now explicitly rejects the known disputed names in any shipped GLB.
+
+| Clean street rider GLB | SHA-256 |
+| --- | --- |
+| `rider-street-mustard.glb` | `11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c` |
+| `rider-street-mustard-lod.glb` | `b1563f6eedbddb0af7b80765bcb66e21167a426e38234a1b3da07c08716e3518` |
+| `rider-street-charcoal.glb` | `0c14eb52f0aaed2622d7a67c5533a520bbbc96b67071fa32d711b82c00806663` |
+| `rider-street-charcoal-lod.glb` | `fec85cbceaa7ad681f2f0d1cbc42d29d3a2a27f2583ac20329cb58892f966d56` |
+| `rider-street-openface.glb` | `a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998` |
+| `rider-street-openface-lod.glb` | `369e586fe3268929a2955522b68f07408d2085f5f9746d7e56b7b8bc5f93c5aa` |
+
+The [silent WebKit Garage clip](runtime-clean-garage.mp4) at 874×330 landscape shows a real menu tap and the three street outfits on the game's animated `sit_cruise` stage; the [three-variant board](three-street-riders.jpg) is for close inspection. The [run report](loaded-hashes.json) records all six fetched GLB response SHA-256 values equal to the fresh `public/models/` and `dist/model-catalog.json` values, three animated stage observations and no page errors. The clean-shaven face remains legible and the rider pose credible at this phone viewport. This is a headless WebKit judgment, not a physical-device approval.
+
+During the first reviewer attempt, `.menu-screen.live` existed **behind** `#loader`; a tap at Garage's center hit that overlay during setup and did not navigate. A second real tap after the overlay cleared worked. The final reviewer waits for `elementFromPoint` to resolve to the Garage button before tapping and navigated on its first tap with no fallback. An older generic `hero-art-clip.mts` run is excluded from this acceptance: it served stale beard GLBs from `dist/` and later timed out when trying to equip the now-locked Pro bike. The fresh clip and hashes above are the replacement evidence.
