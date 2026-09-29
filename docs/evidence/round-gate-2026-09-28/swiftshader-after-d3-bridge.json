@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260928-205715-e4c871",
+  "startedAt": "2026-09-29T01:57:15.966Z",
+  "wallMs": 50679,
+  "git": "1b60c715",
+  "srcFingerprint": "a4be385f",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "boot",
+    "clear",
+    "crash",
+    "restart"
+  ],
+  "checks": [
+    {
+      "id": "boot.readyP50Ms",
+      "value": 260.14295800000036,
+      "limit": 300,
+      "pass": true,
+      "unit": "ms",
+      "note": "runs 256/264/260/258/271 min 256 loadavg 3.04/18"
+    },
+    {
+      "id": "boot.firstFrameMs",
+      "value": 5774.319999694824,
+      "limit": 4000,
+      "pass": false,
+      "unit": "ms",
+      "note": "ready -> first synced frame; SwiftShader limit; ship target 900ms NOT met (informational on this machine)",
+      "shipLimit": 900,
+      "shipPass": false
+    },
+    {
+      "id": "clear.golden",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3.json finish=8.591666666666667 run=8.592 faults=0"
+    },
+    {
+      "id": "clear.finishTimeBitEqual",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "expected 8.591666666666667"
+    },
+    {
+      "id": "clear.hashOk",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "622bb2554e0f9a26 vs pinned 622bb2554e0f9a26"
+    },
+    {
+      "id": "crash.faultWithinS",
+      "value": 0.8583333333333333,
+      "limit": 8,
+      "pass": true,
+      "unit": "s",
+      "note": "reason=crash"
+    },
+    {
+      "id": "fault.toControlMs",
+      "value": 25,
+      "limit": 500,
+      "pass": true,
+      "unit": "ms",
+      "note": "crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)"
+    },
+    {
+      "id": "restart.ticks",
+      "value": 1,
+      "limit": 1,
+      "pass": true,
+      "note": "tick==0 && faulted==null after exactly one tick, 20 reps"
+    },
+    {
+      "id": "restart.wallMsP95",
+      "value": 0.10500001907348633,
+      "limit": 5,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "restart.frameMsP95",
+      "value": 217.46000003814697,
+      "limit": 150,
+      "pass": false,
+      "unit": "ms",
+      "note": "restart -> synced frame; SwiftShader limit; ship target 33ms NOT met (informational on this machine)",
+      "shipLimit": 33,
+      "shipPass": false
+    },
+    {
+      "id": "restart.noCountdown",
+      "value": 1,
+      "limit": 12,
+      "pass": true,
+      "unit": " ticks",
+      "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
+    }
+  ],
+  "failed": 2
+}
