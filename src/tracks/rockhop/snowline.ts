@@ -100,11 +100,13 @@ export const S1 = (() => {
   .flat(10)
   .arch({ style: 'finish' })
   .finish();
-  // The upper station shelf begins beyond the mandatory deck. Its one-way surface leaves the descending piste
-  // open below, while a level Pro station jump can put the rear wheel on the high line.
+  // The optional lift-station bridge sits above the descending piste. Its one-way surface leaves the Starter
+  // road open below; the sloped exit is a real one-way riding surface and drops toward the piste after the deck.
   const deckIndex = base.obstacles.length;
   base.obstacles.push({ kind: 'open-platform', pos: { x: 288, y: 0 },
     params: { length: 10, height: 4.6, thickness: 0.18, surface: 'snow' } });
+  base.obstacles.push({ kind: 'plank', pos: { x: 298, y: 0 },
+    params: { length: 8, height: 4.6, angleDeg: -15, thickness: 0.18, oneWay: true, surface: 'snow' } });
   base.diamondGoal = { id: 's1-station-shelf', platformObstacleIndex: deckIndex, x: 293.5, minRearY: 4.8 };
   return base;
 })();

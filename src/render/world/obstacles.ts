@@ -147,6 +147,67 @@ function quarryHighBridge(buckets: Bucket, pl: ColliderPolyline, profile: readon
   }
 }
 
+/** S1's elevated station road: a snow-capped steel span and a real descending one-way exit. */
+function snowLiftBridge(buckets: Bucket, pl: ColliderPolyline, profile: readonly Vec2[], depth: number,
+  stationEnd: 'landing' | 'exit'): void {
+  const a = pl.points[0]!;
+  const b = pl.points[pl.points.length - 1]!;
+  if (b.x <= a.x) return;
+  const span = b.x - a.x;
+  const face = depth / 2;
+  const deck = board(pl, 0.18, depth);
+  if (deck) push(buckets, 'snow', tintGeo(deck, 0xeaf5fa));
+
+  const snow = (x: number, y: number, z: number, sx: number, sy: number, sz: number, color: number, rz = 0): void => {
+    push(buckets, 'snow', tintGeo(new THREE.BoxGeometry(sx, sy, sz), color), at(x, y, z, rz));
+  };
+  const steel = (p: Vec2, q: Vec2, z: number, width: number, color: number): void => {
+    const dx = q.x - p.x;
+    const dy = q.y - p.y;
+    push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(Math.hypot(dx, dy), width, 0.14), color),
+      at((p.x + q.x) / 2, (p.y + q.y) / 2, z, Math.atan2(dy, dx)));
+  };
+  const topAt = (x: number): number => a.y + (b.y - a.y) * (x - a.x) / span;
+
+  // Low packed-snow ribs point along the ridden line. Every piece sits below the authored contact surface.
+  for (let x = a.x + 0.35, i = 0; x < b.x - 0.25; x += 0.7, i++) {
+    snow(x, topAt(x) - 0.04, 0, 0.48, 0.055, depth + 0.16,
+      i % 4 === 0 ? 0xffffff : 0xd7eafa, Math.atan2(b.y - a.y, span));
+  }
+  for (const z of [-face - 0.1, face + 0.1]) {
+    steel({ x: a.x, y: a.y - 0.22 }, { x: b.x, y: b.y - 0.22 }, z, 0.14, 0x5c7179);
+    steel({ x: a.x, y: a.y - 0.64 }, { x: b.x, y: b.y - 0.64 }, z, 0.12, 0x405a64);
+    const bays = Math.max(3, Math.round(span / 1.8));
+    for (let i = 0; i <= bays; i++) {
+      const x = a.x + span * i / bays;
+      steel({ x, y: topAt(x) - 0.64 }, { x, y: topAt(x) - 0.22 }, z, 0.075, 0x7e9aa4);
+      if (i < bays) {
+        const next = a.x + span * (i + 1) / bays;
+        steel({ x, y: topAt(x) - (i % 2 ? 0.22 : 0.64) },
+          { x: next, y: topAt(next) - (i % 2 ? 0.64 : 0.22) }, z, 0.08, 0x6d8790);
+      }
+    }
+  }
+
+  // The lift supports are entirely behind the riding plane. The lower bike never appears to cross a foreground
+  // column, and the underside has enough apparent headroom to keep the lower piste readable.
+  const supports = stationEnd === 'landing' ? [a.x + 0.16] : [b.x - 0.16];
+  for (const x of supports) {
+    const beamY = topAt(x) - 0.72;
+    const groundY = profileY(profile, x);
+    const h = beamY - groundY;
+    if (h < 0.4) continue;
+    const z = -face - 0.92;
+    push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(0.31, h, 0.34), 0x526b75),
+      at(x, groundY + h / 2, z));
+    push(buckets, 'darkSteel', tintGeo(new THREE.BoxGeometry(0.86, 0.16, 0.82), 0x40545c),
+      at(x, groundY + 0.08, z));
+    for (const side of [-1, 1]) {
+      steel({ x: x + side * 0.42, y: groundY + 0.18 }, { x, y: beamY - 0.12 }, z, 0.08, 0x77909a);
+    }
+  }
+}
+
 /** Cable-spool drum: rim cylinder + two flanges + hub, axis along z. */
 function spool(r: number, width: number): THREE.BufferGeometry {
   const parts: THREE.BufferGeometry[] = [];
@@ -245,6 +306,12 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
         const t = num(p, 'thickness', 0.08);
         for (const c of cols) {
           if (c.kind === 'polyline') {
+            if (track.def.id === 's1-lift-line' &&
+              ((open && po.pos.x === 288 && num(p, 'length', 0) === 10) ||
+                (!open && po.pos.x === 298 && num(p, 'angleDeg', 0) === -15 && num(p, 'length', 0) === 8))) {
+              snowLiftBridge(buckets, c, profile, num(p, 'width', DEPTH), open ? 'landing' : 'exit');
+              continue;
+            }
             if (open && track.def.id === 'd3-rope-walk' && po.pos.x === 396 && num(p, 'length', 0) === 34) {
               quarryHighBridge(buckets, c, profile, t, num(p, 'width', DEPTH));
               continue;

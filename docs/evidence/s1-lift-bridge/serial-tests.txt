@@ -1,0 +1,2268 @@
+
+ RUN  v3.2.7 /Users/raynos/projects/game-demos/trials-gauntlet-demo
+
+ ✓ src/render/hero/gltfRiderCloth.test.ts (14 tests) 10799ms
+   ✓ rider-street-mustard.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  1944ms
+   ✓ rider-street-mustard-lod.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  431ms
+   ✓ rider-street-charcoal.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  1895ms
+   ✓ rider-street-charcoal-lod.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  413ms
+   ✓ rider-street-openface.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  1779ms
+   ✓ rider-street-openface-lod.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  382ms
+   ✓ rider-race-bluewhite.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  1305ms
+   ✓ rider-race-bluewhite-lod.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  343ms
+   ✓ rider-race-charcoalyellow.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  1301ms
+   ✓ rider-race-charcoalyellow-lod.glb keeps source geometry immutable, normalized weights and coincident sleeve seams  343ms
+   ✓ keeps shared conditioned geometry alive until the final rider releases it  326ms
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > envelope on every riding tick of every golden (both classes): hips >= seatY - 0.08 m, hips x <= tankX + 0.08 m, leg / arm <= reach + 0.08 m; COM <= 0.15 m and psi <= 0.35 rad on every riding tick >= 60 ticks after the last over-demand tick; no COM excursion > 0.35 m longer than 60 ticks; every golden finishes
+R8 residuals: none
+R8 envelope: 74 goldens, 294380 riding ticks, over-demand 25.5 %; COM outside 0.15: 13500 (4.59 %), p50 / p95 / p99 / max 0.015 / 0.146 / 0.255 / 0.689 m; 0-0.1 s: n 160354 p50 0.031 p95 0.170 p99 0.315 max 0.689; 0.1-0.25 s: n 57083 p50 0.012 p95 0.031 p99 0.059 max 0.493; 0.25-0.5 s: n 43933 p50 0.011 p95 0.022 p99 0.036 max 0.166; 0.5-1 s: n 22796 p50 0.010 p95 0.019 p99 0.029 max 0.082; >=1 s: n 10214 p50 0.010 p95 0.015 p99 0.019 max 0.062; recovered ticks 33010; longest excursions e1-uphill-weight/bot-3.json 0.24 s @3242, h3-fire-line/bot-3.json 0.24 s @4652, s2-cornice/bot-3.json 0.24 s @1770; envelope min hipY 0.423 max hipX 0.324 max leg 0.881 max arm 0.581; faults 9: b2-lean-back/bot-3-pro.json @342 sensor, b2-lean-back/bot-3-pro.json @1119 sensor, b2-lean-back/bot-3-pro.json @1661 sensor, b3-kicker-row/bot-3.json @661 sensor, h3-fire-line/bot-3.json @4908 sensor, h3-fire-line/bot-3-pro.json @4520 thrown, m2-drum-roll/bot-3.json @1854 sensor, p4-night-circuit/bot-3.json @2282 sensor, x1-vertical-limit/bot-3-pro.json @5298 sensor
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > the landing punch: a 3 m flat drop at lean 0 / +0.5 on both classes sits the rider onto the seat and rides away, no fault (before R8 the body went 1.25 m through the chassis)
+FEEL r8.punch.rookie.3m@6.lean0 = hips min 0.456 (seat 0.2) seatJ 86 N s rear 100% pitch -8..13 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.rookie.3m@12.lean0 = hips min 0.455 (seat 0.2) seatJ 110 N s rear 100% pitch -8..9 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.rookie.3m@6.lean0.5 = hips min 0.441 (seat 0.2) seatJ 63 N s rear 100% pitch -23..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.rookie.3m@12.lean0.5 = hips min 0.432 (seat 0.2) seatJ 78 N s rear 100% pitch -26..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@6.lean0 = hips min 0.456 (seat 0.2) seatJ 80 N s rear 100% pitch -8..16 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@12.lean0 = hips min 0.457 (seat 0.2) seatJ 104 N s rear 100% pitch -7..11 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@6.lean0.5 = hips min 0.450 (seat 0.2) seatJ 60 N s rear 100% pitch -19..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+FEEL r8.punch.pro.3m@12.lean0.5 = hips min 0.439 (seat 0.2) seatJ 109 N s rear 100% pitch -23..10 rides away [hips >= seat - 0.05, seat impulse > 0, no fault]
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > severe rear-first impact faults within 0.3 s; a milder 40 deg impact is ridden; a reach overload explicitly throws the rider
+FEEL r8.thrown.rookie.50deg@3rad/s.-8m/s = fault thrown @0.20s max grip 3000 N [physical fault within 0.3 s]
+FEEL r8.thrown.rookie.40deg@2rad/s.-8m/s = ridden max grip 1133 N [ridden, grip < 2500 N]
+FEEL r8.thrown.pro.50deg@3rad/s.-8m/s = fault thrown @0.20s max grip 2849 N [physical fault within 0.3 s]
+FEEL r8.thrown.pro.40deg@2rad/s.-8m/s = ridden max grip 1125 N [ridden, grip < 2500 N]
+
+stdout | src/physics/v2/r8.test.ts > R8: the hold envelope, the thrown rider and the brake brace > brakes: a plain full brake from 6 / 10 / 15 m/s at lean 0 stops upright on both classes (<= 15 deg nose-down, rear off < 0.4 s); with the brace off the 15 m/s stop endos; brake + lean +1 from 10 m/s lifts the rear within 0.2 s and released after 0.3 s rides away
+FEEL r8.brake.rookie.v6.lean0 = v0 6.0 stop 0.79 s pitch min -7 rear-off 0.16 s upright [stops upright]
+FEEL r8.brake.rookie.v10.lean0 = v0 9.9 stop 1.28 s pitch min -8 rear-off 0.20 s upright [stops upright]
+FEEL r8.brake.rookie.v15.lean0 = v0 14.4 stop 1.83 s pitch min -9 rear-off 0.25 s upright [stops upright]
+FEEL r8.brake.rookie.v15.lean0.noBrace.noLift = stop 2.03 s pitch min -14 rear-off 0.98 s upright [info (R7 slider: endo; R9 hinge: rides the lift edge)]
+FEEL r8.stoppie.rookie.v10.lean+1.noLift = off 1.04 s rides away [info: Rookie 0.06-0.08 s longer without the lift control (Pro identical)]
+FEEL r8.stoppie.rookie.v10.lean+1.0.2s = rear lifts @0.11 s, off 0.87 s, pitch min -40 rides away | brace off: off 0.87 s rides away [rear off within 0.2 s for >= 0.5 s, no fault, same with the brace off]
+FEEL r8.stoppie.rookie.v10.lean+1.held = rear lifts @0.11 s crash@0.68s [info: a held +1 goes over (R7 identical)]
+FEEL r8.brake.pro.v6.lean0 = v0 6.0 stop 0.77 s pitch min -6 rear-off 0.18 s upright [stops upright]
+FEEL r8.brake.pro.v10.lean0 = v0 9.9 stop 1.24 s pitch min -7 rear-off 0.21 s upright [stops upright]
+FEEL r8.brake.pro.v15.lean0 = v0 14.5 stop 1.79 s pitch min -7 rear-off 0.26 s upright [stops upright]
+FEEL r8.brake.pro.v15.lean0.noBrace.noLift = stop 2.00 s pitch min -11 rear-off 0.92 s upright [info (R7 slider: endo; R9 hinge: rides the lift edge)]
+FEEL r8.stoppie.pro.v10.lean+1.noLift = off 1.28 s rides away [info: Rookie 0.06-0.08 s longer without the lift control (Pro identical)]
+FEEL r8.stoppie.pro.v10.lean+1.0.2s = rear lifts @0.10 s, off 1.28 s, pitch min -52 rides away | brace off: off 1.28 s rides away [rear off within 0.2 s for >= 0.5 s, no fault, same with the brace off]
+FEEL r8.stoppie.pro.v10.lean+1.held = rear lifts @0.10 s crash@0.69s [info: a held +1 goes over (R7 identical)]
+
+ ✓ src/physics/v2/r8.test.ts (5 tests) 6559ms
+   ✓ R8: the hold envelope, the thrown rider and the brake brace > envelope on every riding tick of every golden (both classes): hips >= seatY - 0.08 m, hips x <= tankX + 0.08 m, leg / arm <= reach + 0.08 m; COM <= 0.15 m and psi <= 0.35 rad on every riding tick >= 60 ticks after the last over-demand tick; no COM excursion > 0.35 m longer than 60 ticks; every golden finishes  6382ms
+ ✓ src/store-build.test.ts (16 tests) 5119ms
+stdout | src/physics/v2/r7.test.ts > R7: the rider body is held, exported and deterministic (every bot golden, both classes) > pose band: rotation within 0.35 rad on >= 94 % of riding ticks per golden; recovery band |COM - target| <= 0.15 m and |psi err| <= 0.35 rad on EVERY riding tick >= 120 ticks after the last over-demand tick (> F_max / m_R over 6 ticks); no COM excursion > 0.35 m longer than 180 ticks; no coasting push (>= 60 unchanged input ticks)
+R7 band: 74 goldens, 294380 riding ticks; over-demand 66200 (22.5 %); outside psi 3289 (1.117 %), outside COM 13500 (4.586 %); recovered ticks 12058 (4.1 %) outside 0, max COM 0.062 m psi 0.207 rad; excursions > 0.35 m: 154, longest e1-uphill-weight/bot-3.json 0.24 s @3242, h3-fire-line/bot-3.json 0.24 s @4652, s2-cornice/bot-3.json 0.24 s @1770; worst COM 6: lab-ramp-jump/bot-3.json psi 0.38 com 0.31 out 4/77 of 613 @443 | lab-box-climb/bot-3.json psi 0.35 com 0.36 out 1/51 of 545 @283 | e1-uphill-weight/bot-3.json psi 0.98 com 0.52 out 81/430 of 5383 @2964 | m2-drum-roll/bot-3.json psi 0.83 com 0.48 out 37/393 of 5375 @4573 | b2-lean-back/bot-3.json psi 0.42 com 0.39 out 14/317 of 4627 @1524 | x2-pipe-dream/bot-3.json psi 0.66 com 0.48 out 29/351 of 5166 @4040
+
+ ✓ src/physics/v2/r7.test.ts (3 tests) 4551ms
+   ✓ R7: the rider body is held, exported and deterministic (every bot golden, both classes) > pose band: rotation within 0.35 rad on >= 94 % of riding ticks per golden; recovery band |COM - target| <= 0.15 m and |psi err| <= 0.35 rad on EVERY riding tick >= 120 ticks after the last over-demand tick (> F_max / m_R over 6 ticks); no COM excursion > 0.35 m longer than 180 ticks; no coasting push (>= 60 unchanged input ticks)  3880ms
+   ✓ R7: the rider body is held, exported and deterministic (every bot golden, both classes) > the exported body hashes identically across two replays (b1 Rookie + Pro, e2 Rookie + Pro)  670ms
+ ✓ src/audio/dsp/synth.test.ts (19 tests) 4082ms
+   ✓ RockhopSynth (offline, node) > renders the gauntlet byte-identically twice, under the -1 dBTP ceiling, faster than realtime  617ms
+   ✓ RockhopSynth (offline, node) > tyre roll is silent at rest and grows with speed on every surface  303ms
+   ✓ RockhopSynth (offline, node) > music bed: silent in the run scene, a -30..-14 dBFS loop in the menu and results, byte-identical, in the key of D  408ms
+   ✓ RockhopSynth (offline, node) > budget: the full mix (crowd + results music + rooms) renders one 60 Hz frame in ≤ 0.5 ms of CPU in node (≤ 0.8 under vitest)  1599ms
+ ✓ src/render/hero/gltfRiderPhysical.test.ts (60 tests) 2389ms
+ ✓ src/render/hero/gltfBike.test.ts (28 tests | 2 skipped) 2171ms
+   ✓ bike-rookie.glb articulated geometry > preserves wheel world angles, fixed fork alignment, and shock roll through a production replay  564ms
+   ✓ bike-rookie-lod.glb articulated geometry > preserves wheel world angles, fixed fork alignment, and shock roll through a production replay  510ms
+   ✓ bike-pro.glb articulated geometry > preserves wheel world angles, fixed fork alignment, and shock roll through a production replay  498ms
+   ✓ bike-pro-lod.glb articulated geometry > preserves wheel world angles, fixed fork alignment, and shock roll through a production replay  490ms
+ ✓ src/render/hero/gltfRiderStance.test.ts (40 tests) 1786ms
+stdout | src/physics/v2/property.test.ts > bounded response (§14.1) > flat dirt: 200 reachable states x 6 one-quantum perturbations: per-tick |dv| <= 0.02 m/s, |dw| <= 0.05 rad/s; 30-tick divergence <= 10x
+PROP bounded flat dirt: n 965 (0 contact-onset ticks) per-tick dv 5.59e-4 dw 8.14e-2; 30-tick dv 0.0119 dw 0.0104
+
+stdout | src/physics/v2/property.test.ts > bounded response (§14.1) > 30 deg kicker: 200 reachable states x 6 one-quantum perturbations: per-tick |dv| <= 0.02 m/s, |dw| <= 0.05 rad/s; 30-tick divergence <= 10x
+PROP bounded 30 deg kicker: n 957 (1 contact-onset ticks) per-tick dv 4.88e-3 dw 8.13e-2; 30-tick dv 0.0121 dw 0.1401
+
+stdout | src/physics/v2/property.test.ts > bounded response (§14.1) > 60 deg plank: 200 reachable states x 6 one-quantum perturbations: per-tick |dv| <= 0.02 m/s, |dw| <= 0.05 rad/s; 30-tick divergence <= 10x
+PROP bounded 60 deg plank: n 922 (1 contact-onset ticks) per-tick dv 3.08e-3 dw 7.80e-2; 30-tick dv 0.0502 dw 0.1989
+
+stdout | src/physics/v2/property.test.ts > monotone responses (§14.1) > throttle -> acceleration is non-decreasing at every speed 0-19 m/s, both wheels down (lean +0.5)
+PROP monotone throttle: worst neighbour step 0.0000 m/s2 (>= -0.01)
+
+stdout | src/physics/v2/property.test.ts > monotone responses (§14.1) > lean -> equilibrium pitch (max over 0.5-4 s from rest, past the pose transient) is non-increasing in lean at throttle 0.4 / 0.7 / 1.0 (A§2.7 P6)
+PROP monotone lean thr 0.4: max pitch by lean +1..-1 = 4.7 4.1 3.5 2.7 3.3 4.2 6.4 8.3 180.0
+PROP monotone lean thr 0.7: max pitch by lean +1..-1 = 4.7 4.1 4.1 4.1 4.7 5.3 180.0 180.0 180.0
+PROP monotone lean thr 1: max pitch by lean +1..-1 = 5.1 5.1 5.6 5.1 5.4 180.0 180.0 180.0 180.0
+
+stdout | src/physics/v2/property.test.ts > conservation (§14.1) > free flight, K_att 0, no drag: every velocity-level force is a pair - angular momentum of C+Wr+Wf+R about the system COM is constant to 1e-6 under a lean and throttle sequence (position pass off)
+PROP conservation (velocity pass only): L0 -15.2803 N m s, max |dL| 8.12e-13
+
+stdout | src/physics/v2/property.test.ts > conservation (§14.1) > with the split-impulse position pass on, the slider projections leak <= 2e-3 N m s over 1 s (a geometric projection, not a force; documented in physics.md)
+PROP conservation (with position pass): L0 -15.2236 N m s, max |dL| 9.13e-2
+
+stdout | src/physics/v2/property.test.ts > stability of the accelerating bike with weight forward (§10) > at 6 m/s, full throttle, lean +0.5: a +6 deg / +0.5 rad/s pitch perturbation decays back toward the riding equilibrium within 1.5 s, no loop
+PROP stability: dpitch 0.25/0.5/1.0/1.5/2.0 s = 0.6 / 5.3 / 4.4 / 3.7 / 3.4 deg, peak 10.0
+
+stdout | src/physics/v2/property.test.ts > stability of the accelerating bike with weight forward (§10) > the pitch-alone linearisation is unstable (e-fold ~0.3 s) but the lean input has authority over it: the static balance pitch rises monotonically with lean and spans >= 7 deg
+PROP balance pitch by lean -1..+1 = 28.5 39.8 51.9 56.9 65.0 deg
+
+stdout | src/physics/v2/property.test.ts > learnable (§14.3) > proportional failure: the reference hop delayed by 1/2/4/8 ticks degrades smoothly, never to a crash
+LEARN hop apex ref 0.459 m; delayed 1/2/4/8 ticks 0.459 0.459 0.459 0.459
+
+stdout | src/physics/v2/property.test.ts > learnable (§14.3) > R2: the snap at half the target rate (2.5 of 5 m/s) keeps most of the apex, at 1.5 m/s (the spec's "half") a third: the body, not the target, is the limit at F_max 3200 (spec band 55-75 % at half rate; the slow snap is the learnable failure, continuous, never a crash)
+LEARN half-rate snap 0.266 of 0.459 m (58 %) [55-75 %]; 1.5 m/s 0.069 (15 %)
+
+stdout | src/physics/v2/property.test.ts > learnable (§14.3) > no knife edge in the input space: preload lean -1..-0.3 and throttle 0.2..0.6 swept in quanta give a continuous apex (neighbour jump <= 0.03 m)
+LEARN knife edge: lean sweep (every 2 quanta) 0.459 0.455 0.447 0.437 0.418 0.411 0.407 0.402 0.399 0.359 0.310 0.277; throttle sweep 0.454 0.455 0.456 0.458 0.458 0.459 0.459 0.459 0.461 0.463 0.465 0.466 0.465; max neighbour jump 0.0149 m
+
+stdout | src/physics/v2/property.test.ts > learnable (§14.3) > same move, same result on any surface: the reference hop apex on dirt / wood / concrete within 5 %
+LEARN surfaces: dirt / wood / concrete apex 0.459 / 0.459 / 0.459 m
+
+ ✓ src/physics/v2/property.test.ts (14 tests) 1250ms
+ ✓ src/render/hero/gltfRiderRelease.test.ts (20 tests) 1044ms
+ ✓ src/render/hero/gltfRiderStage.test.ts (40 tests) 991ms
+ ✓ src/render/hero/brakeHose.test.ts (8 tests) 667ms
+ ✓ src/tracks/rockhop/goldens.test.ts (20 tests) 600ms
+stdout | src/physics/v2/r3.test.ts > landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > drops of 1.5 / 2 / 3 m at 6 and 12 m/s, lean 0 and +0.5, both classes: land and ride away, no fault, rebound < 0.15 m, pitch within -35..+35 (R2: 2 m at lean 0 rebounded 0.6 m, 2.5-3 m looped)
+FEEL land.rookie.1.5m@6.lean0 = rear 100% pitch -5..10 rebound 0.05 air-after 0.03 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.1.5m@6.lean0.5 = rear 90% pitch -7..2 rebound 0.00 air-after 0.13 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@6.lean0 = rear 100% pitch -6..11 rebound 0.07 air-after 0.04 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@6.lean0.5 = rear 100% pitch -12..3 rebound 0.00 air-after 0.13 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@6.lean0 = rear 100% pitch -8..13 rebound 0.11 air-after 0.07 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@6.lean0.5 = rear 100% pitch -23..4 rebound 0.00 air-after 0.21 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.1.5m@12.lean0 = rear 100% pitch -5..7 rebound 0.06 air-after 0.03 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.1.5m@12.lean0.5 = rear 86% pitch -8..2 rebound 0.00 air-after 0.10 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@12.lean0 = rear 100% pitch -6..8 rebound 0.08 air-after 0.06 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@12.lean0.5 = rear 98% pitch -14..4 rebound 0.00 air-after 0.11 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@12.lean0 = rear 100% pitch -8..9 rebound 0.11 air-after 0.07 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@12.lean0.5 = rear 100% pitch -26..3 rebound 0.00 air-after 0.20 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@6.lean0 = rear 100% pitch -4..12 rebound 0.07 air-after 0.10 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@6.lean0.5 = rear 83% pitch -4..2 rebound 0.00 air-after 0.17 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@6.lean0 = rear 100% pitch -5..13 rebound 0.09 air-after 0.11 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@6.lean0.5 = rear 99% pitch -9..3 rebound 0.00 air-after 0.18 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@6.lean0 = rear 100% pitch -8..16 rebound 0.13 air-after 0.13 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@6.lean0.5 = rear 100% pitch -19..4 rebound 0.00 air-after 0.23 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@12.lean0 = rear 100% pitch -5..9 rebound 0.08 air-after 0.11 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@12.lean0.5 = rear 79% pitch -6..2 rebound 0.00 air-after 0.15 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@12.lean0 = rear 100% pitch -6..10 rebound 0.10 air-after 0.12 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@12.lean0.5 = rear 94% pitch -12..3 rebound 0.00 air-after 0.16 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@12.lean0 = rear 100% pitch -7..11 rebound 0.14 air-after 0.15 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@12.lean0.5 = rear 100% pitch -23..3 rebound 0.00 air-after 0.24 s rides away [rides away, rebound < 0.15, pitch within +-35]
+
+stdout | src/physics/v2/r3.test.ts > landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > the closing cap bounds force during landing recovery; intended hops retain >= 97 % of the uncapped apex and >= 0.45 m
+FEEL land.capOff.2m.rebound = 0.067 [informational control; do not require a pogo]
+FEEL land.capOff.3m.result = rides away [no fault]
+FEEL hop.capOn.apex = 0.458 [>= 0.45]
+FEEL hop.capOff.apex = 0.458 [info (R2)]
+
+stdout | src/physics/v2/r3.test.ts > classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > rookie: full gas at lean 0 lifts <= 10 deg and never loops (loop-out needs a lean back: -0.25 loops in ~1.1 s, -0.5 in ~0.8 s; the parent asked -0.5 or harder: the critical lean sits between 0 and -0.25 on this table, see physics.md); 0 -> 16 <= 4.2 s; top 20
+FEEL class.rookie.launch = 1:5.1deg 0.5:5.6deg 0.25:5.1deg 0:5.4deg -0.25:loop 1.84s -0.5:loop 0.87s -1:loop 0.68s [lean: max pitch or loop time]
+FEEL class.rookie.t16 = 3.967 [<= 4.2 s]
+FEEL class.rookie.top = 20.022 [20 +- 0.5]
+FEEL class.rookie.sag = 21.5 / 28.6 [info: rear / front % at speed]
+
+stdout | src/physics/v2/r3.test.ts > classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > pro (R6): full gas at lean 0 from a standstill lifts hard (25-40 deg) and rides the power wheelie down without looping (R3-R5 looped in 0.95 s: harness r11 lost every Pro first attempt at 4 m), +0.25 / +0.5 / +1 do not loop, lean -0.25 / -0.5 / -1 loop in < 1.5 s (the lean fade: leaning back is the rider taking over); 0 -> 16 < rookie at +0.5; top 21
+FEEL class.pro.launch = 1:5.0deg 0.5:27.2deg 0.25:4.7deg 0:29.8deg -0.25:loop 1.22s -0.5:loop 0.68s -1:loop 0.57s [lean: max pitch or loop time]
+FEEL class.pro.t16 = 3.575 [info (< rookie)]
+FEEL class.pro.top = 21.019 [21 +- 0.5]
+
+stdout | src/physics/v2/r3.test.ts > classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > both classes: coasting balance by lean, air control in 0.5 s at 8 m/s (rookie in the 25-40 band; pro has less attitude assist, K_att 260), open-loop divergence 1-2 s
+FEEL class.rookie.balanceDeg.byLean = 28.5 / 39.8 / 51.9 / 56.9 / 65.0 [lean -1 / -0.5 / 0 / 0.5 / 1]
+FEEL class.rookie.air0.5s.lean-1/+1 = 35.5 / -31.9 [+25..40 / -25..-40]
+FEEL class.rookie.openLoopDivergeS = 1.158 [1-2 s]
+FEEL class.pro.balanceDeg.byLean = 28.1 / 38.9 / 50.6 / 55.4 / 63.1 [lean -1 / -0.5 / 0 / 0.5 / 1]
+FEEL class.pro.air0.5s.lean-1/+1 = 33.9 / -30.9 [less than the rookie]
+FEEL class.pro.openLoopDivergeS = 1.067 [1-2 s]
+
+stdout | src/physics/v2/r3.test.ts > hop matrix per class (R3): the intent gate keeps R2's hop > reference hop >= 0.45 m, front leaves first, lands within +-20 on both classes; matrix preload -0.25..-1 x snap 4 / 8 / 16 / one-tick
+FEEL hop.rookie.ref = apex 0.46 first front both-off 0.13 s land -13.5 [>= 0.45 m, front, level]
+FEEL hop.rookie.matrix.preLean-0.25 = 0.13 / 0.22 / 0.24 / 0.26 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.rookie.matrix.preLean-0.5 = 0.06 / 0.40 / 0.42 / 0.40 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.rookie.matrix.preLean-0.75 = 0.08 / 0.39 / 0.45 / 0.42 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.rookie.matrix.preLean-1 = 0.08 / 0.39 / 0.47 / 0.46 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.ref = apex 0.47 first front both-off 0.13 s land -13.7 [>= 0.45 m, front, level]
+FEEL hop.pro.matrix.preLean-0.25 = 0.12 / 0.24 / 0.26 / 0.29 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.matrix.preLean-0.5 = 0.08 / 0.43 / 0.46 / 0.44 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.matrix.preLean-0.75 = 0.09 / 0.42 / 0.46 / 0.45 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.matrix.preLean-1 = 0.08 / 0.42 / 0.48 / 0.47 [snap 4 / 8 / 16 / one-tick: apex m]
+
+stdout | src/physics/v2/r3.test.ts > climbs with the Trials technique (R3 decision 3) > rookie tops a 4 m 45 deg plank from a crawl (2 m/s) and at 5 m/s: front rolls onto the face at neutral, gas, then the weight is thrown to +1; 50 deg needs 6 m/s; pro table printed (its momentum rows 55-60 are not made by this controller: the base transition at 6-10 m/s, not the geometry, is where it fails)
+FEEL climb.rookie.table = 40@2:TOP 45@2:TOP 45@5:stall 75% 50@5:FAULT 50@6:FAULT 55@6:stall 21% 55@8:stall 35% 60@8:stall 25% [TOP / stall %]
+FEEL climb.pro.table = 40@2:TOP 45@2:stall 61% 45@5:TOP 50@5:stall 45% 50@6:FAULT 55@6:stall 26% 55@8:stall 45% 60@8:stall 28% [TOP / stall %]
+
+stdout | src/physics/v2/r3.test.ts > climbs with the Trials technique (R3 decision 3) > the constant-speed climb limit is geometry, atan(d/h) at lean +1 (the front load on a slope is d cos - h sin): 37 deg on this table; steeper is a momentum climb
+FEEL climb.rookie.crawlLimitDeg = 36.837 [info: atan(d/h) at lean +1]
+FEEL climb.pro.crawlLimitDeg = 36.218 [info: atan(d/h) at lean +1]
+
+stdout | src/physics/v2/r3.test.ts > wheelie hold with anticipation (R3 decision 4) > a 60 Hz / 100 ms controller that leads the pitch by 0.25 s (pitch + rate x horizon) holds 40 +- 8 deg for >= 10 s of 12 on both classes without looping; the R2 PD on the current pitch loops against the Rookie's 0.15 s throttle
+FEEL wheelie.rookie.hold.inBandS = 10.808 [>= 10 s within +-8 of 40]
+FEEL wheelie.rookie.hold.frontUpS = 12.500 [info]
+FEEL wheelie.rookie.hold.meanDeg = 39.822 [info]
+FEEL wheelie.rookie.hold.vmax = 6.847 [info]
+FEEL wheelie.pro.hold.inBandS = 12.500 [>= 10 s within +-8 of 40]
+FEEL wheelie.pro.hold.frontUpS = 12.500 [info]
+FEEL wheelie.pro.hold.meanDeg = 39.992 [info]
+FEEL wheelie.pro.hold.vmax = 5.980 [info]
+
+stdout | src/physics/v2/r3.test.ts > lab-physics-test hop per class (R3 decision 5) > the lip hop at 7 / 8 / 9 m/s: clears onto the ledge on both classes at 8-9; the margin over the ledge corner is printed (spec wants >= 0.1 m of clear air)
+FEEL lab.rookie.hop@7 = NOT cleared margin 0.73 apex 2.36 land -22 crash [cleared, margin >= 0.1]
+FEEL lab.rookie.hop@8 = cleared margin -0.15 apex 1.43 land -1  [cleared, margin >= 0.1]
+FEEL lab.rookie.hop@9 = cleared margin -0.15 apex 1.23 land 6  [cleared, margin >= 0.1]
+FEEL lab.pro.hop@7 = NOT cleared margin 0.69 apex 2.38 land -25 crash [cleared, margin >= 0.1]
+FEEL lab.pro.hop@8 = cleared margin -0.10 apex 1.56 land -8  [cleared, margin >= 0.1]
+FEEL lab.pro.hop@9 = cleared margin -0.13 apex 1.51 land 1  [cleared, margin >= 0.1]
+
+stdout | src/physics/v2/r3.test.ts > cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node)
+FEEL cost.usPerTick.p50 = 4.079 [<= 5]
+FEEL cost.usPerTick.p95 = 4.948 [info: 2.7-3.0 alone; the full parallel suite pushes it past 5 on a shared host]
+
+ ✓ src/physics/v2/r3.test.ts (12 tests) 598ms
+stdout | src/physics/v2/r2.test.ts > the hop (R2 decision d; §9.5, §14.2, §14.3) > reference flat hop from a standing start (0.3 s preload, full-travel snap held 0.22 s, 0.1 s tuck): rear apex 0.45-0.65 m, front leaves first, lands near level; both-wheels-off is 0.29 s against the 0.35-0.6 band (the front lands first: the bike noses down through the flight, see physics.md)
+FEEL hop.ref.rearApex = 0.458 [0.45-0.65 m]
+FEEL hop.ref.frontApex = 0.107 [info (0.6-0.9 spec)]
+FEEL hop.ref.bothOffS = 0.125 [0.35-0.6 s (spec; measured short: the nose drops in flight)]
+FEEL hop.ref.firstOff = front [front]
+FEEL hop.ref.landPitchDeg = -13.512 [info (level-ish)]
+FEEL hop.ref.pitchRange = -22.8..15.8 [info]
+FEEL hop.ref.maxRearCompPct = 100.000 [info (bottoms at 100)]
+
+stdout | src/physics/v2/r2.test.ts > the hop (R2 decision d; §9.5, §14.2, §14.3) > the third lean-back (tuck) lifts the rear a further ~0.1 m; throttle through the snap changes the apex continuously (and slightly down: the rear spins and the nose rises)
+FEEL hop.tuck.gain = -0.042 [0.1-0.2 m (parent); measured]
+FEEL hop.throttleThroughSnap.apex = 0.490 / 0.458 / 0.428 / 0.394 [thr 0 / 0.3 / 0.6 / 1: continuous]
+
+stdout | src/physics/v2/r2.test.ts > the hop (R2 decision d; §9.5, §14.2, §14.3) > preload time: the apex rises with the preload up to the maximum rear load (~0.4 s) and falls past it ("release when the load is at its maximum")
+FEEL hop.byPreloadS.apex = 0.15:0.337 0.2:0.379 0.25:0.429 0.3:0.458 0.35:0.468 0.4:0.463 0.5:0.451 [rising to a peak near the max load]
+
+stdout | src/physics/v2/r2.test.ts > the hop (R2 decision d; §9.5, §14.2, §14.3) > monotone in preload depth (lean -0.25 / -0.5 / -0.75 / -1 at a fixed 0.3 s) at snap rates >= 8 units/s and in snap speed (4 / 8 / 16 lean units per s) at every depth, no crash anywhere; the one-tick snap is within 10 % of the fastest ramp (a 4 units/s snap is no hop: 0.07-0.28 m)
+FEEL hop.matrix.preLean-0.25 = 0.133 / 0.217 / 0.239 / 0.258 [snap rate 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.matrix.preLean-0.5 = 0.061 / 0.396 / 0.422 / 0.399 [snap rate 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.matrix.preLean-0.75 = 0.078 / 0.394 / 0.448 / 0.422 [snap rate 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.matrix.preLean-1 = 0.081 / 0.393 / 0.471 / 0.458 [snap rate 4 / 8 / 16 / one-tick: apex m]
+
+stdout | src/physics/v2/r2.test.ts > the hop (R2 decision d; §9.5, §14.2, §14.3) > continuous: one preload-lean quantum changes the apex by < 3 cm; a 1-tick-late snap loses <= 15 %; identical on dirt / wood / metal / concrete
+FEEL hop.quantumJump = 0.007 [< 0.03 m]
+FEEL hop.oneTickLate.ratio = 1.006 [>= 0.85]
+FEEL hop.oneTickEarly.ratio = 0.993 [info]
+FEEL hop.surfaces.apex = 0.458 / 0.458 / 0.458 / 0.458 [identical]
+
+stdout | src/physics/v2/r2.test.ts > the hop (R2 decision d; §9.5, §14.2, §14.3) > seated (no preload): a snap from neutral pops the rear ~0.2 m off the front wheel with both wheels off for only ~0.04 s - a pivot, not a hop (parent asked rear <= 0.1 m: not met, the rear-apex metric counts the nose-down pivot)
+FEEL hop.seated.rearApex = 0.214 [<= 0.1 m (parent); measured]
+FEEL hop.seated.bothOffS = 0.050 [info: ~0.04 s]
+
+stdout | src/physics/v2/r2.test.ts > wheelie balance and hold (R2 decision b; §10) > the coasting balance pitch is about the rear AXLE with the attitude torque in the moment balance: ~50 deg at lean 0 on the mid row, monotone in lean, spanning ~27 deg (lean -1) to ~69 deg (lean +1); the front lifts at lean 0 only above a/g = d/h = 0.64
+FEEL wheelie.coastBalanceDeg.byLean = 28.5 / 39.8 / 51.9 / 56.9 / 65.0 [lean -1 / -0.5 / 0 / 0.5 / 1]
+FEEL wheelie.coast.from40.pitchAfter0.3s = 27.707 [falls (< p)]
+FEEL wheelie.coast.from60.pitchAfter0.3s = 66.783 [rises (> p)]
+
+stdout | src/physics/v2/r2.test.ts > wheelie balance and hold (R2 decision b; §10) > open-loop divergence from the balance is 1-2 s (CONTRACT 2.5): parked at the coasting balance +2 deg with constant throttle 0.1, the pitch leaves the +-10 deg band in 1-2 s
+FEEL wheelie.openLoop.divergeS = 1.158 [1-2 s]
+
+stdout | src/physics/v2/r2.test.ts > wheelie balance and hold (R2 decision b; §10) > a 60 Hz / 100 ms lean + throttle + rear-brake controller keeps the front wheel up ~10 s without looping (target 40 deg: the pitch rides 20-45 deg, mean ~31, 5.9 s inside +-8; the parent's 40 +- 8 for >= 10 s is NOT met - the 100 ms latency against the 0.3 s e-fold leaves a +-9 deg limit cycle and the mean throttle drifts the speed up)
+FEEL wheelie.hold60Hz100ms.frontUpS = 12.500 [>= 10 s of 12]
+FEEL wheelie.hold60Hz100ms.inBandS = 10.842 [>= 10 s within +-8 deg (parent; not met)]
+FEEL wheelie.hold60Hz100ms.meanPitchDeg = 39.812 [info]
+FEEL wheelie.hold60Hz100ms.firstFrontDownS = -1.000 [never (-1)]
+FEEL wheelie.hold60Hz100ms.vmax = 6.862 [info (the mean throttle drifts the speed up)]
+
+stdout | src/physics/v2/r2.test.ts > landing absorption (R2 decision d; §9.5) > a 1.5 m flat drop at 6 m/s, level: the rear compresses >= 80 % and returns to sag, the rider sinks and comes back, no fault; a 3 m drop with the rider forward bottoms out with a bounded buck (no fault, rebound < 0.15 m, pitch within +-30); at lean 0 the 2 m drop pogos 0.2 m and 2.5-3 m loops (R3)
+FEEL land.1.5m.maxRearCompPct = 100.000 [>= 80]
+FEEL land.1.5m.maxFrontCompPct = 85.566 [info]
+FEEL land.1.5m.riderSink = 0.228 [info (crouch 0..1)]
+FEEL land.1.5m.settledCompPct = 30.737 [~29 (sag)]
+FEEL land.1.5m.pitchRange = -4.8..9.6 [info]
+FEEL land.3m.lean+0.5.maxRearCompPct = 100.000 [100 (bottoms)]
+FEEL land.3m.lean+0.5.reboundM = 0.000 [< 0.15 m]
+FEEL land.3m.lean+0.5.pitchRange = -22.6..3.7 [within +-30]
+FEEL land.3m.lean+0.5.result = rides away [no fault]
+FEEL land.3m.lean0.result = rides away [info: loops (R3)]
+FEEL land.2m.lean0.reboundM = 0.067 [info: the rider-servo pogo (R3)]
+FEEL land.2m.lean0.result = rides away [no fault]
+
+stdout | src/physics/v2/r2.test.ts > climbs (R2 decision c: crawl <= 45 dropped to the 0.6 g truth; 50-60 with entry speed; 65+ needs a hop) > plank table, 4 m wood: crawl (2 m/s entry) and a 6 m/s entry with the rider forward - the crawl limit at a_peak 0.61 g is 35 deg (40 stalls half way), 6 m/s tops 40 and stalls 45 at 62 %; 50-60 are NOT made on 6 m/s (parent row c needs more entry speed or thrust); 55-65 stall at the base, no fault
+FEEL climb.table = 30deg@2m/s:TOP 30deg@6m/s:TOP 35deg@2m/s:TOP 35deg@6m/s:TOP 40deg@2m/s:stall 64% 40deg@6m/s:TOP 45deg@2m/s:stall 38% 45deg@6m/s:TOP 50deg@2m/s:stall 16% 50deg@6m/s:stall 0% 55deg@2m/s:stall 0% 55deg@6m/s:stall 0% 60deg@2m/s:stall 0% 60deg@6m/s:stall 0% 65deg@2m/s:stall 0% 65deg@6m/s:stall 0% [TOP / stall %]
+
+stdout | src/physics/v2/r2.test.ts > kickers (R2 decision e) > curriculum kickers 17-22 deg, 1 m tall, at 8 / 11 / 14 m/s, lean +0.25 on the ground: with the lean HELD in the air the bike nose-dives (K_att -75 N m for 1-2 s of flight: -25 at 11 m/s, -50..-80 and a crash at 14 - the parent row as stated fights the declared air control); with the lean released to 0 in the air every 8 / 11 m/s row lands within +-20 deg of flat with no fault (14 m/s is a 1.7 s flight and needs air control)
+FEEL kicker.leanHeld.table = 17deg@8: launch 13 land -14 air 0.75s | 17deg@11: launch 18 land -13 air 1.03s | 17deg@14: launch 18 land -39 air 1.04s | 20deg@8: launch 18 land -10 air 0.86s | 20deg@11: launch 20 land -25 air 1.08s | 20deg@14: launch 21 land -53 air 1.16s | 22deg@8: launch 22 land 21 air 0.94s | 22deg@11: launch 22 land -36 air 1.08s | 22deg@14: launch 22 land -65 air 1.32s FAULT [info]
+FEEL kicker.leanHeld.worstLandPitchDeg = 53.362 [info]
+FEEL kicker.leanHeld.faults = 1.000 [info]
+FEEL kicker.leanReleased.table = 17deg@8: launch 13 land -1 air 0.68s | 17deg@11: launch 18 land 13 air 0.89s | 20deg@8: launch 18 land 6 air 0.73s | 20deg@11: launch 20 land 6 air 1.04s | 22deg@8: launch 22 land 8 air 0.81s | 22deg@11: launch 22 land -2 air 1.13s [landing pitch within +-20 of flat, no fault]
+FEEL kicker.leanReleased.worstLandPitchDeg = 12.555 [<= 20]
+FEEL kicker.leanReleased.faults = 0.000 [0]
+FEEL kicker.leanReleased@14.table = 17deg@14: launch 18 land -2 air 1.18s | 20deg@14: launch 21 land -8 air 1.28s | 22deg@14: launch 22 land -16 air 1.32s [info]
+
+stdout | src/physics/v2/r2.test.ts > lab-physics-test (§15) > a correct hop at 8-9 m/s gets onto the ledge (+0.4 m across the 3 m pit) and rides on - the rear meets the ledge corner and rolls over it (the >= 0.1 m clear-air margin is not met, see the comment); rolling it off at the same speed puts the front wheel into the ledge face and endos (§15 called the miss survivable; it is not on this plant - a crash, never a clear)
+FEEL lab.hop@8.cleared = 1.000 [1]
+FEEL lab.hop@8.marginM = -0.054 [>= 0.1]
+FEEL lab.hop@8.apexM = 1.426 [info (rear centre above the run-up)]
+FEEL lab.hop@8.airS = 0.200 [info]
+FEEL lab.hop@8.landPitchDeg = -1.491 [info]
+FEEL lab.roll@8.result = crash [not cleared (§15 said no fault; measured: endo on the face)]
+FEEL lab.hop@9.cleared = 1.000 [1]
+FEEL lab.hop@9.marginM = -0.047 [>= 0.1]
+FEEL lab.hop@9.apexM = 1.229 [info (rear centre above the run-up)]
+FEEL lab.hop@9.airS = 0.175 [info]
+FEEL lab.hop@9.landPitchDeg = 6.154 [info]
+FEEL lab.roll@9.result = crash [not cleared (§15 said no fault; measured: endo on the face)]
+
+ ✓ src/physics/v2/r2.test.ts (13 tests) 581ms
+stdout | src/boot/plan.test.ts > boot plan invariant (property) > 3000 random event sequences: both fractions non-decreasing, setup < 1 until the last weighted step, both exactly 1 on done()
+property: 3000 sequences, 323604 events (max 167 per sequence), 204648 views checked
+
+ ✓ src/boot/plan.test.ts (5 tests) 501ms
+   ✓ boot plan invariant (property) > 3000 random event sequences: both fractions non-decreasing, setup < 1 until the last weighted step, both exactly 1 on done()  432ms
+ ✓ src/physics/v2/snapshot.test.ts (5 tests) 423ms
+stdout | src/physics/v2/world.test.ts > performance > riding: µs/tick p95 <= 10 over 20k ticks (node, §14.1)
+PERF riding us/tick p95 = 4.33 [<= 10]
+
+stdout | src/physics/v2/world.test.ts > performance > ragdolling: µs/tick p95 <= 80 (crash every 2.5 s)
+PERF ragdoll us/tick p95 = 9.17 [<= 80]
+
+ ✓ src/physics/v2/world.test.ts (15 tests) 410ms
+stdout | src/physics/v2/r6.test.ts > R6 physics.md §8.1: same-tick finish / fault precedence (audit §5) > a fault in the tick the front wheel crosses the line, with the wheel <= one radius past it, VOIDS the finish: only `fault` is emitted, finishTime stays null (the audit probe: before R6 `finish` came first and Game scored a fault-free 1/120 s clear)
+FEEL finish.sameTick.onTheLine = fault frontPast 0.051 finishTime null faulted crash voided true [fault only, finishTime null, voided]
+
+stdout | src/physics/v2/r6.test.ts > R6 physics.md §8.1: same-tick finish / fault precedence (audit §5) > the exception: a fault in the crossing tick with the wheel already > R past the line is a crash AFTER the finish - `finish` then `fault`, finishTime set (reachable only by teleport: at 21 m/s the wheel moves 0.175 m per tick)
+FEEL finish.sameTick.pastR = finish,fault frontPast 0.421 finishTime 0.008333333333333333 voided false [finish,fault; finishTime set; not voided]
+
+stdout | src/physics/v2/r6.test.ts > R6 physics.md §8.1: same-tick finish / fault precedence (audit §5) > a clean crossing is untouched: `finish` at the crossing tick, no fault, not voided; and the run stays `finished` (the fault sensors keep running after the line, a later tumble is a post-finish fault Game ignores)
+FEEL finish.clean = finish yes time 10.158333333333333 faulted null voided false frontPast 0.018 [finish, no fault, not voided]
+
+stdout | src/physics/v2/r6.test.ts > R6: the Pro launch (ground ECU, raw air) > pro: plain gas from a standstill at lean 0 lifts 25-40 deg and does not loop; 1 s and 2 s throttle ramps at lean 0 do not loop; full gas at lean 0 from an 8 m/s roll does not loop; the ECU is off in the air (airGain 0: the Pro air rows are R5's); the Rookie rows are R4's (6-7 deg, never loops)
+FEEL pro.launch.gas1.lean0 = max 29.8 deg loop - t16 4.61 [25-40 deg, no loop (R3-R5: loop 0.95 s)]
+FEEL pro.launch.ramp1s.lean0 = max 29.4 loop - [no loop]
+FEEL pro.launch.ramp2s.lean0 = max 26.5 loop - [no loop]
+FEEL pro.launch.gas1.from8 = max 14.0 loop - [no loop (R3-R5: loop 1.5 s)]
+FEEL rookie.launch.gas1.lean0 = max 5.4 loop - t16 3.97 [R4: 6.7 deg, no loop, 3.97 s]
+
+stdout | src/physics/v2/r6.test.ts > R6: the air-sign table per class (harness r11: "Pro in-air lean reads inverted on its first slot") > held lean gives both classes 25–40 degrees in the commanded direction over 0.5 s; reaction torque keeps its sign and an early Pro dip stays bounded
+FEEL air.rookie.held-1 = first 1 °/s, 0.2 / 0.9 / 36.5 deg at 0.05 / 0.1 / 0.5 s [+25..+40 at 0.5 s]
+FEEL air.rookie.held+1 = first 1 °/s, 0.0 / -0.2 / -31.2 [-25..-40 at 0.5 s]
+FEEL air.rookie.tap50ms-1 = 0.2 / 1.2 / 5.1 [info: the first-slot read]
+FEEL air.rookie.tap50ms+1 = 0.0 / -1.0 / -9.6 [info]
+FEEL air.rookie.tap125ms-1 = 0.2 / 0.9 / 14.8 [info]
+FEEL air.rookie.attTorque = lean -1 279 N m, lean +1 -285 [+ / - (nose-up positive)]
+FEEL air.pro.held-1 = first -84 °/s, -1.2 / -0.7 / 33.4 deg at 0.05 / 0.1 / 0.5 s [+25..+40 at 0.5 s]
+FEEL air.pro.held+1 = first 116 °/s, 4.5 / 4.6 / -31.1 [-25..-40 at 0.5 s]
+FEEL air.pro.tap50ms-1 = -1.2 / 1.9 / 2.9 [info: the first-slot read]
+FEEL air.pro.tap50ms+1 = 4.5 / 0.2 / -11.5 [info]
+FEEL air.pro.tap125ms-1 = -1.2 / -0.7 / 11.9 [info]
+FEEL air.pro.attTorque = lean -1 294 N m, lean +1 -342 [+ / - (nose-up positive)]
+FEEL air.pro.airRateGain1.tap125ms-1 = -0.0 / 0.5 / 12.4; held 0.5 s 33.3 [option: dip -10 -> ~-0.6, held within 1.5 deg of raw]
+
+stdout | src/physics/v2/r6.test.ts > R6: the hop machine on planks (harness r11 m3 @ 410 / x3 @ 280 traces) and the preload gate > lean-0 keys never arm the intent slot (the pose target is a function of the lean alone): the m3 `push` at 402 m is the rider's rebound after a bottomed landing on the board, at the 0.3 F_max cap - a readout, not a throw; at <= 0.4 throttle the landing rides on both classes at 3-5 m/s
+FEEL seesaw.land.rookie.v3.thr0 = intent max 0.00 push 0 t rear-off vy 1.0 lift 1173 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.rookie.v3.thr0.4 = intent max 0.00 push 0 t rear-off vy 1.0 lift 1172 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.rookie.v4.thr0 = intent max 0.00 push 0 t rear-off vy 1.3 lift 1173 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.rookie.v4.thr0.4 = intent max 0.00 push 0 t rear-off vy 1.3 lift 1172 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.rookie.v5.thr0 = intent max 0.00 push 0 t rear-off vy 1.7 lift 1174 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.rookie.v5.thr0.4 = intent max 0.00 push 0 t rear-off vy 1.7 lift 1173 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.pro.v3.thr0 = intent max 0.00 push 0 t rear-off vy 1.1 lift 1048 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.pro.v3.thr0.4 = intent max 0.00 push 0 t rear-off vy 1.1 lift 1044 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.pro.v4.thr0 = intent max 0.00 push 0 t rear-off vy 1.4 lift 1049 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.pro.v4.thr0.4 = intent max 0.00 push 0 t rear-off vy 1.5 lift 1045 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.pro.v5.thr0 = intent max 0.00 push 0 t rear-off vy 1.8 lift 1050 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.pro.v5.thr0.4 = intent max 0.00 push 0 t rear-off vy 1.9 lift 1046 N [intent 0, no fault, lift <= 0.3 F_max + gravity]
+FEEL seesaw.land.gas1.v5 = rookie rides / pro crash [info: full gas up the 21 deg board holds an ECU wheelie into the tipping end (the m3 lesson: <= 0.4 throttle)]
+
+stdout | src/physics/v2/r6.test.ts > R6: the hop machine on planks (harness r11 m3 @ 410 / x3 @ 280 traces) and the preload gate > the optional preload gate preserves the hop at 0.05 m, arms on eligible pulse trains, and cannot arm at an unreachable physical preload threshold
+FEEL gate.hop.ref = M0 0.458 M0.05 0.453 [R3 0.462; within 0.01]
+FEEL gate.hop.pre-0.25@8 = M0 0.21 M0.05 0.20 M0.15 0.08 [R3 0.29; 0.15 kills it]
+FEEL gate.train8/8 = M0 peak 244 intent 1.00; M0.05 240 / 1.00; M0.15 131 / 0.00; 3/3 @ M0.075 114 / 1.00 [the 67 ms train arms at every M that keeps the matrix]
+
+stdout | src/physics/v2/r6.test.ts > R6: the wheelie hold at 45 deg (audit §4: the lean-only row) > the throttle-actuated anticipation controller (R3 V3, 60 Hz / 100 ms) holds 40 +- 8 deg for >= 10 s of 12 on both classes as shipped, and 45 +- 8 deg for >= 10 s on both with the ECU off (the spec's 45 band is the raw bike's: at 45 the park lean is -0.2 / -0.12 where the ECU's loop-margin term trims the throttle and the front drops - R6 deviation 30); the lean-only controller at a fixed throttle 0.5 (the audit row) loops within 3 s on both - printed, not a requirement of this model (R6 deviation 31: even K_att 1500 holds 2.7 s and costs the air band)
+FEEL hold.rookie.throttleV3.40 = inBand 10.81 s vmax 6.8 [>= 10 s within +-8 of 40 (R3 row)]
+FEEL hold.rookie.throttleV3.45 = inBand 0.39 s vmax 20.0 [info: the ECU trims a wheelie held above ~40 at lean > -0.5]
+FEEL hold.rookie.throttleV3.45.ecuOff = inBand 11.60 s vmax 5.6 [>= 10 s within +-8 of 45 (raw bike)]
+FEEL hold.rookie.leanOnly.45.thr0.5 = inBand 0.91 s vmax 5.9 LOOP [info: the audit row (10 s) is not reachable by lean alone]
+FEEL hold.pro.throttleV3.40 = inBand 12.50 s vmax 6.0 [>= 10 s within +-8 of 40 (R3 row)]
+FEEL hold.pro.throttleV3.45 = inBand 0.39 s vmax 21.0 [info: the ECU trims a wheelie held above ~40 at lean > -0.5]
+FEEL hold.pro.throttleV3.45.ecuOff = inBand 12.28 s vmax 4.5 [>= 10 s within +-8 of 45 (raw bike)]
+FEEL hold.pro.leanOnly.45.thr0.5 = inBand 0.45 s vmax 5.4 LOOP [info: the audit row (10 s) is not reachable by lean alone]
+
+ ✓ src/physics/v2/r6.test.ts (9 tests) 385ms
+ ✓ src/render/hero/heroArt.test.ts (10 tests) 361ms
+stdout | src/tracks/tracks.test.ts > flat-test > prints the course summary
+flat-test  "Flat Test Strip"  tier=beginner  length=120 m  obstacles=2  colliders=4  hazards=0
+  checkpoints: 40, 80  finishX=120  bounds=[-10,200]x[0,2.5]  oobY=-6
+  # 0 ramp    @ 150.0 y=0     length=3 height=0.75 curve=0 direction=up
+  # 1 box     @ 153.0 y=0     width=2.4 height=2.5
+  hash=5fa63cf0d7255978
+
+stdout | src/tracks/tracks.test.ts > gap-test > prints the course summary
+gap-test  "Gap Test"  tier=beginner  length=57 m  obstacles=4  colliders=6  hazards=1
+  biome=industrial  technique="jump a gap"
+  attemptsBand=1-3  targetTimeS=10  cameraKeys=0  hints=0
+  checkpoints: 20  finishX=57  bounds=[-10,100.112592]x[-3,4]  oobY=-9
+  # 0 ramp    @  30.0 y=0     length=4 height=1 curve=0 direction=up
+  # 1 gap     @  34.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 2 ramp    @  87.0 y=0     length=3 height=0.75 curve=0 direction=up
+  # 3 box     @  90.0 y=0     width=2.4 height=2.5
+  hash=9c5b11a3d361033a
+
+stdout | src/tracks/tracks.test.ts > b1-first-ride > prints the course summary
+b1-first-ride  "First Ride"  tier=beginner  length=583 m  obstacles=2  colliders=4  hazards=0
+  biome=industrial  technique="throttle control"  demands="slow down after the long descent for a speed hump and a low plateau, then hold the gas home"
+  attemptsBand=1-1  targetTimeS=65  cameraKeys=1  hints=4
+  checkpoints: 66, 236, 412  finishX=583  bounds=[-10,626.112592]x[-2,2]  oobY=-8
+  # 0 ramp    @ 613.0 y=-2    length=3 height=0.75 curve=0 direction=up
+  # 1 box     @ 616.0 y=-2    width=2.4 height=2.5
+  hash=902dbe88263f9034
+
+stdout | src/tracks/tracks.test.ts > b2-lean-back > prints the course summary
+b2-lean-back  "Lean Back"  tier=beginner  length=592 m  obstacles=23  colliders=31  hazards=0
+  biome=industrial  technique="weight shift on drops"  demands="1.8 m drop onto a landing ramp: lean back or nose in"
+  attemptsBand=1-2  targetTimeS=65  cameraKeys=3  hints=4
+  checkpoints: 55, 254, 395, 502  finishX=592.2  bounds=[-10,635.312592]x[-0.7,4]  oobY=-6.7
+  # 0 drum    @  18.0 y=0     radius=0.5 depth=0.7 rolls=false
+  # 1 drum    @  27.0 y=0     radius=0.5 depth=0.7 rolls=false
+  # 2 ramp    @  60.6 y=0     length=8 height=0.5 curve=0 direction=up
+  # 3 ledge   @  68.6 y=0     height=0.5 length=10
+  # 4 ramp    @  78.6 y=0     length=4 height=0.5 curve=0 direction=down
+  # 5 ramp    @  94.6 y=0     length=10 height=1 curve=0 direction=up
+  # 6 box     @ 104.6 y=0     width=10 height=1
+  # 7 ramp    @ 114.6 y=0     length=8 height=1 curve=0 direction=down
+  # 8 ramp    @ 259.8 y=0     length=12 height=1.2 curve=0 direction=up
+  # 9 box     @ 271.8 y=0     width=4 height=1.2
+  #10 ramp    @ 275.8 y=0     length=9.6 height=1.2 curve=0 direction=down
+  #11 ramp    @ 322.2 y=0     length=15 height=1.5 curve=0 direction=up
+  #12 box     @ 337.2 y=0     width=6 height=1.5
+  #13 box     @ 343.2 y=0     width=6 height=1
+  #14 box     @ 349.2 y=0     width=6 height=0.5
+  #15 ramp    @ 401.2 y=0     length=10 height=1 curve=0 direction=up
+  #16 box     @ 411.2 y=0     width=8 height=1
+  #17 ramp    @ 419.2 y=0     length=8 height=1 curve=0 direction=down
+  #18 ramp    @ 508.2 y=0     length=18 height=1.8 curve=0 direction=up
+  #19 box     @ 526.2 y=0     width=10 height=1.8
+  #20 ramp    @ 536.2 y=0     length=14 height=1.8 curve=0 direction=down
+  #21 ramp    @ 622.2 y=0     length=3 height=0.75 curve=0 direction=up
+  #22 box     @ 625.2 y=0     width=2.4 height=2.5
+  hash=08f25f7f2fd0ed13
+
+stdout | src/tracks/tracks.test.ts > b3-kicker-row > prints the course summary
+b3-kicker-row  "Kicker Row"  tier=beginner  length=472 m  obstacles=15  colliders=22  hazards=3
+  biome=industrial  technique="jump and level in the air"  demands="kicker over a 5 m gap: speed to the lip, off the gas in the air"
+  attemptsBand=1-2  targetTimeS=65  cameraKeys=5  hints=4
+  checkpoints: 20, 134, 299, 384  finishX=471.8  bounds=[-10,514.912592]x[-7.5,0.8]  oobY=-13.5
+  # 0 ramp    @  36.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 1 ramp    @  70.0 y=-0.8  length=4 height=1 curve=0 direction=up
+  # 2 ramp    @ 150.0 y=-1.8  length=6 height=1.2 curve=0 direction=up
+  # 3 ramp    @ 218.8 y=-3    length=6 height=1.5 curve=0 direction=up
+  # 4 ramp    @ 314.8 y=-4.5  length=4 height=1 curve=0.3 direction=up
+  # 5 gap     @ 318.8 y=-4.5  width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 6 ramp    @ 334.8 y=-4.5  length=4 height=1.2 curve=0.3 direction=up
+  # 7 gap     @ 338.8 y=-4.5  width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 8 ramp    @ 399.8 y=-4.5  length=6 height=1.5 curve=0 direction=up
+  # 9 gap     @ 405.8 y=-4.5  width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #10 ramp    @ 409.8 y=-4.5  length=6 height=0.6 curve=0 direction=up
+  #11 box     @ 415.8 y=-4.5  width=8 height=0.6
+  #12 ramp    @ 423.8 y=-4.5  length=10 height=0.6 curve=0 direction=down
+  #13 ramp    @ 501.8 y=-4.5  length=3 height=0.75 curve=0 direction=up
+  #14 box     @ 504.8 y=-4.5  width=2.4 height=2.5
+  hash=f4d927174df8786f
+
+stdout | src/tracks/tracks.test.ts > e1-uphill-weight > prints the course summary
+e1-uphill-weight  "Uphill Weight"  tier=easy  length=544 m  obstacles=32  colliders=48  hazards=0
+  biome=canyon  technique="lean forward on steep climbs"  demands="45 deg plank over a 0.3 m kicker foot from a 20 m run-up (13 m/s: a momentum climb), then a long ramp descent"
+  attemptsBand=2-4  targetTimeS=70  cameraKeys=9  hints=0
+  checkpoints: 46, 184, 284, 416  finishX=543.89207  bounds=[-10,587.004662]x[-0.003646,4]  oobY=-6.003646
+  # 0 plank   @  62.0 y=0     length=6 angleDeg=30 height=0
+  # 1 box     @  67.2 y=0     width=8 height=3
+  # 2 ramp    @  75.2 y=0     length=18 height=3 curve=0 direction=down
+  # 3 ramp    @ 133.2 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  # 4 ramp    @ 134.7 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  # 5 ramp    @ 141.2 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  # 6 ramp    @ 142.7 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  # 7 ramp    @ 149.2 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  # 8 ramp    @ 150.7 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  # 9 ramp    @ 200.2 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #10 plank   @ 201.0 y=0.3   length=5.13 angleDeg=40 height=0
+  #11 box     @ 205.0 y=0     width=6 height=3.6
+  #12 ramp    @ 211.0 y=0     length=22 height=3.6 curve=0 direction=down
+  #13 ramp    @ 265.0 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  #14 ramp    @ 266.5 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  #15 ramp    @ 273.0 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  #16 ramp    @ 274.5 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  #17 ramp    @ 300.0 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #18 plank   @ 300.8 y=0.3   length=3.57 angleDeg=36 height=0
+  #19 box     @ 303.7 y=0     width=6 height=2.4
+  #20 ramp    @ 309.7 y=0     length=15 height=2.4 curve=0 direction=down
+  #21 ramp    @ 332.7 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  #22 ramp    @ 334.2 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  #23 ramp    @ 340.7 y=0     length=1.5 height=0.3 curve=-0.5 direction=up
+  #24 ramp    @ 342.2 y=0     length=1.5 height=0.3 curve=-0.5 direction=down
+  #25 ramp    @ 435.7 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #26 plank   @ 436.5 y=0.3   length=3.96 angleDeg=45 height=0
+  #27 ramp    @ 439.3 y=3.1   length=2 height=0.6 curve=-0.4 direction=up
+  #28 box     @ 441.3 y=0     width=8.6 height=3.7
+  #29 ramp    @ 449.9 y=0     length=22 height=3.7 curve=0 direction=down
+  #30 ramp    @ 573.9 y=0     length=3 height=0.75 curve=0 direction=up
+  #31 box     @ 576.9 y=0     width=2.4 height=2.5
+  hash=5f0cf6704b41cb3f
+
+stdout | src/tracks/tracks.test.ts > e2-rear-wheel-first > prints the course summary
+e2-rear-wheel-first  "Rear Wheel First"  tier=easy  length=616 m  obstacles=35  colliders=42  hazards=8
+  biome=canyon  technique="rear-wheel-first gap landing"  demands="gap onto a long landing ramp, immediately a second gap from a kicker on the platform"
+  attemptsBand=3-5  targetTimeS=70  cameraKeys=9  hints=0
+  checkpoints: 24, 149, 285, 467  finishX=616.1  bounds=[-10,659.212592]x[-3,4]  oobY=-9
+  # 0 ramp    @  40.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 1 gap     @  44.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 2 ramp    @  57.0 y=0     length=5 height=1.2 curve=0 direction=up
+  # 3 gap     @  62.0 y=0     width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 4 ramp    @  66.0 y=0     length=6 height=1 curve=0 direction=up
+  # 5 box     @  72.0 y=0     width=4 height=1
+  # 6 ramp    @  76.0 y=0     length=4 height=1 curve=0 direction=down
+  # 7 ramp    @ 165.2 y=0     length=5 height=1.5 curve=0 direction=up
+  # 8 gap     @ 170.2 y=0     width=5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 9 ramp    @ 175.2 y=0     length=8 height=1 curve=0 direction=up
+  #10 box     @ 183.2 y=0     width=8 height=1
+  #11 ramp    @ 191.2 y=0     length=10 height=1 curve=0 direction=down
+  #12 ramp    @ 245.2 y=0     length=4 height=1 curve=0.3 direction=up
+  #13 gap     @ 249.2 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #14 ramp    @ 264.2 y=0     length=4 height=1 curve=0.3 direction=up
+  #15 gap     @ 268.2 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #16 ramp    @ 301.2 y=0     length=5 height=1.2 curve=0 direction=up
+  #17 gap     @ 306.2 y=0     width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #18 ramp    @ 310.2 y=0     length=6 height=0.8 curve=0 direction=up
+  #19 box     @ 316.2 y=0     width=6 height=0.8
+  #20 ramp    @ 322.2 y=0     length=8 height=0.8 curve=0 direction=down
+  #21 ramp    @ 366.2 y=0     length=6 height=1 curve=0 direction=up
+  #22 box     @ 372.2 y=0     width=8 height=1
+  #23 ramp    @ 380.2 y=0     length=10 height=1 curve=0 direction=down
+  #24 ramp    @ 483.4 y=0     length=5 height=1.5 curve=0 direction=up
+  #25 gap     @ 488.4 y=0     width=5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #26 ramp    @ 493.4 y=0     length=12 height=0.6 curve=0 direction=up
+  #27 box     @ 505.4 y=0     width=3 height=0.6
+  #28 ramp    @ 508.4 y=0.6   length=5 height=1 curve=0 direction=up
+  #29 gap     @ 513.4 y=0     width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #30 ramp    @ 517.4 y=0     length=8 height=1 curve=0 direction=up
+  #31 box     @ 525.4 y=0     width=6 height=1
+  #32 ramp    @ 531.4 y=0     length=10 height=1 curve=0 direction=down
+  #33 ramp    @ 646.1 y=0     length=3 height=0.75 curve=0 direction=up
+  #34 box     @ 649.1 y=0     width=2.4 height=2.5
+  hash=6b7d3b8a265f22ec
+
+stdout | src/tracks/tracks.test.ts > e3-stairway > prints the course summary
+e3-stairway  "Stairway"  tier=easy  length=544 m  obstacles=24  colliders=32  hazards=1
+  biome=canyon  technique="stairs: gas up, brake down"  demands="8 x 0.15 m steps up at speed (0.6 m runs), 8 steps down at a 0.5 m run, a 1.5 m gap onto a landing ramp"
+  attemptsBand=3-6  targetTimeS=70  cameraKeys=9  hints=0
+  checkpoints: 6, 135, 235, 384  finishX=543.7  bounds=[-10,586.812592]x[-3,4]  oobY=-9
+  # 0 stair   @  22.0 y=0     count=6 height=0.13 length=0.8 direction=up
+  # 1 box     @  26.8 y=0     width=6 height=0.75
+  # 2 stair   @  32.8 y=0     count=5 height=0.15 length=0.6 direction=down
+  # 3 stair   @ 151.2 y=0     count=10 height=0.12 length=0.8 direction=up
+  # 4 box     @ 159.2 y=0     width=6 height=1.2
+  # 5 stair   @ 165.2 y=0     count=8 height=0.15 length=0.6 direction=down
+  # 6 ramp    @ 178.8 y=0     length=6 height=1 curve=0 direction=up
+  # 7 box     @ 184.8 y=0     width=8 height=1
+  # 8 ramp    @ 192.8 y=0     length=10 height=1 curve=0 direction=down
+  # 9 stair   @ 250.8 y=0     count=10 height=0.12 length=0.8 direction=up
+  #10 box     @ 258.8 y=0     width=8 height=1.2
+  #11 stair   @ 266.8 y=0     count=8 height=0.15 length=0.6 direction=down
+  #12 stair   @ 400.2 y=0     count=10 height=0.12 length=0.8 direction=up
+  #13 box     @ 408.2 y=0     width=4 height=1.2
+  #14 stair   @ 412.2 y=0     count=8 height=0.15 length=0.5 direction=down
+  #15 gap     @ 422.2 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #16 ramp    @ 423.7 y=0     length=4 height=0.4 curve=0 direction=up
+  #17 box     @ 427.7 y=0     width=4 height=0.4
+  #18 ramp    @ 431.7 y=0     length=6 height=0.4 curve=0 direction=down
+  #19 ramp    @ 481.7 y=0     length=6 height=1 curve=0 direction=up
+  #20 box     @ 487.7 y=0     width=8 height=1
+  #21 ramp    @ 495.7 y=0     length=10 height=1 curve=0 direction=down
+  #22 ramp    @ 573.7 y=0     length=3 height=0.75 curve=0 direction=up
+  #23 box     @ 576.7 y=0     width=2.4 height=2.5
+  hash=c0451ab68206f608
+
+stdout | src/tracks/tracks.test.ts > m1-hop-up > prints the course summary
+m1-hop-up  "Hop Up"  tier=medium  length=481 m  obstacles=20  colliders=26  hazards=2
+  biome=industrial  technique="bunny hop onto ledges"  demands="0.9 m total rise from a 16 m run-up in 0.3 m steps (hop the 0.6 rolling, or three 0.3s), then a 2 m hop across to a 0.9 m platform"
+  attemptsBand=5-9  targetTimeS=70  cameraKeys=8  hints=0
+  checkpoints: 41, 103, 264, 347  finishX=481  bounds=[-10,524.112592]x[-3,4]  oobY=-9
+  # 0 ledge   @  21.0 y=0     height=0.4 length=6
+  # 1 ramp    @  27.0 y=0     length=4 height=0.4 curve=0 direction=down
+  # 2 ledge   @ 109.0 y=0     height=0.45 length=4
+  # 3 gap     @ 113.0 y=0     width=1.5 depth=2 hazard=water rise=0 floor=dirt (decor)
+  # 4 ramp    @ 176.3 y=0     length=6 height=1 curve=0 direction=up
+  # 5 box     @ 182.3 y=0     width=8 height=1
+  # 6 ramp    @ 190.3 y=0     length=10 height=1 curve=0 direction=down
+  # 7 ledge   @ 272.3 y=0     height=0.4 length=8
+  # 8 ledge   @ 280.3 y=0     height=0.75 length=4
+  # 9 ramp    @ 284.3 y=0     length=8 height=0.75 curve=0 direction=down
+  #10 ledge   @ 363.3 y=0     height=0.3 length=6
+  #11 ledge   @ 369.3 y=0     height=0.6 length=1.5
+  #12 ramp    @ 370.8 y=0.6   length=3 height=0.3 curve=0 direction=up
+  #13 ledge   @ 373.8 y=0     height=0.9 length=6
+  #14 gap     @ 379.8 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #15 ramp    @ 381.8 y=0.65  length=2 height=0.25 curve=0 direction=up
+  #16 box     @ 383.8 y=0     width=6 height=0.9
+  #17 ramp    @ 389.8 y=0     length=8 height=0.9 curve=0 direction=down
+  #18 ramp    @ 511.0 y=0     length=3 height=0.75 curve=0 direction=up
+  #19 box     @ 514.0 y=0     width=2.4 height=2.5
+  hash=2aa21256a0b430e2
+
+stdout | src/tracks/tracks.test.ts > m2-drum-roll > prints the course summary
+m2-drum-roll  "Drum Roll"  tier=medium  length=488 m  obstacles=37  colliders=61  hazards=1
+  biome=snow  technique="logs and drums: roll the top from the shelf"  demands="hop from a 1.2 m box onto a spinning drum and off again, then a five-log two-row pyramid"
+  attemptsBand=6-12  targetTimeS=70  cameraKeys=9  hints=3
+  checkpoints: 24, 155, 279, 385  finishX=488.2  bounds=[-10,531.312592]x[-2,4]  oobY=-8
+  # 0 drum    @  27.0 y=0     radius=0.5 depth=0.7 rolls=false
+  # 1 drum    @  40.0 y=0     radius=0.8 depth=1.2 rolls=false
+  # 2 drum    @  47.6 y=0     radius=0.3 depth=0.3 rolls=false
+  # 3 drum    @  53.2 y=0     radius=0.3 depth=0.3 rolls=false
+  # 4 drum    @  58.8 y=0     radius=0.3 depth=0.3 rolls=false
+  # 5 drum    @  59.4 y=0     radius=0.3 depth=0.3 rolls=false
+  # 6 ramp    @ 171.2 y=0     length=3 height=0.6 curve=0.3 direction=up
+  # 7 logpile @ 174.2 y=0     radius=0.3 count=3 rows=2
+  # 8 ramp    @ 182.0 y=0     length=3 height=1 curve=0 direction=up
+  # 9 box     @ 185.0 y=0     width=1 height=1
+  #10 drum    @ 186.0 y=0     radius=0.6 depth=0 rolls=false
+  #11 box     @ 187.2 y=0     width=1 height=1
+  #12 ramp    @ 188.2 y=0     length=3 height=1 curve=0 direction=down
+  #13 ramp    @ 295.0 y=0     length=4 height=1.2 curve=0 direction=up
+  #14 box     @ 299.0 y=0     width=1 height=1.2
+  #15 drum    @ 300.0 y=0     radius=0.8 depth=0 rolls=false
+  #16 gap     @ 301.6 y=0     width=2 depth=2 hazard=water rise=0 floor=dirt (decor)
+  #17 drum    @ 303.6 y=0     radius=0.8 depth=0 rolls=false
+  #18 ramp    @ 311.2 y=0     length=4 height=1.2 curve=0 direction=up
+  #19 box     @ 315.2 y=0     width=1 height=1.2
+  #20 drum    @ 316.2 y=0     radius=0.8 depth=0 rolls=true
+  #21 box     @ 317.8 y=0     width=1 height=1.2
+  #22 ramp    @ 318.8 y=0     length=4 height=1.2 curve=0 direction=down
+  #23 ramp    @ 328.8 y=0     length=6 height=1 curve=0 direction=up
+  #24 box     @ 334.8 y=0     width=8 height=1
+  #25 ramp    @ 342.8 y=0     length=10 height=1 curve=0 direction=down
+  #26 ramp    @ 400.8 y=0     length=4 height=1.2 curve=0 direction=up
+  #27 box     @ 404.8 y=0     width=3 height=1.2
+  #28 drum    @ 407.8 y=0     radius=0.8 depth=0 rolls=true
+  #29 box     @ 409.4 y=0     width=3 height=1.2
+  #30 ramp    @ 412.4 y=0     length=4 height=1.2 curve=0 direction=down
+  #31 ramp    @ 422.4 y=0     length=3 height=0.6 curve=0.3 direction=up
+  #32 logpile @ 425.4 y=0     radius=0.3 count=5 rows=2
+  #33 ramp    @ 431.4 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  #34 seesaw  @ 432.2 y=0     length=6 height=1
+  #35 ramp    @ 518.2 y=0     length=3 height=0.75 curve=0 direction=up
+  #36 box     @ 521.2 y=0     width=2.4 height=2.5
+  hash=3fa4e931463d0b2c
+
+stdout | src/tracks/tracks.test.ts > m3-see-saw > prints the course summary
+m3-see-saw  "See-Saw"  tier=medium  length=504 m  obstacles=33  colliders=45  hazards=5
+  biome=foundry  technique="see-saw timing and thin landings"  demands="land on a 22 deg see-saw from a 3 m gap, then a kicker onto a 3 m plank at 1.5 and a 2.5 m gap to a box"
+  attemptsBand=8-12  targetTimeS=70  cameraKeys=9  hints=0
+  checkpoints: 28, 174, 300, 376  finishX=504.1  bounds=[-10,547.212592]x[-3,4]  oobY=-9
+  # 0 ramp    @  31.0 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  # 1 seesaw  @  31.8 y=0     length=6 height=0.8
+  # 2 ramp    @  45.8 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  # 3 seesaw  @  46.6 y=0     length=8 height=1.2
+  # 4 ramp    @ 179.8 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  # 5 seesaw  @ 180.6 y=0     length=8 height=1.5
+  # 6 ramp    @ 202.6 y=0     length=6 height=1.5 curve=0 direction=up
+  # 7 gap     @ 208.6 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 8 ramp    @ 211.6 y=1.25  length=2 height=0.25 curve=0 direction=up
+  # 9 plank   @ 213.6 y=0     length=6 angleDeg=0 height=1.5
+  #10 ramp    @ 219.6 y=0     length=4 height=1.5 curve=0 direction=down
+  #11 ramp    @ 267.6 y=0     length=6 height=1 curve=0 direction=up
+  #12 box     @ 273.6 y=0     width=8 height=1
+  #13 ramp    @ 281.6 y=0     length=10 height=1 curve=0 direction=down
+  #14 ramp    @ 315.6 y=0     length=4 height=1 curve=0 direction=up
+  #15 gap     @ 319.6 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #16 ramp    @ 322.6 y=0.75  length=2 height=0.25 curve=0 direction=up
+  #17 plank   @ 324.6 y=0     length=4 angleDeg=0 height=1
+  #18 ramp    @ 328.6 y=0     length=3 height=1 curve=0 direction=down
+  #19 ramp    @ 335.6 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  #20 seesaw  @ 336.4 y=0     length=8 height=1.5
+  #21 ramp    @ 392.4 y=0     length=4 height=1 curve=0 direction=up
+  #22 gap     @ 396.4 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #23 seesaw  @ 399.4 y=0     length=8 height=1.6
+  #24 ramp    @ 421.4 y=0     length=6 height=1.5 curve=0 direction=up
+  #25 gap     @ 427.4 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #26 ramp    @ 430.4 y=1.25  length=2 height=0.25 curve=0 direction=up
+  #27 plank   @ 432.4 y=0     length=4 angleDeg=0 height=1.5
+  #28 gap     @ 436.4 y=0     width=2.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #29 box     @ 438.9 y=0     width=6 height=1.5
+  #30 ramp    @ 444.9 y=0     length=8 height=1.5 curve=0.3 direction=down
+  #31 ramp    @ 534.1 y=0     length=3 height=0.75 curve=0 direction=up
+  #32 box     @ 537.1 y=0     width=2.4 height=2.5
+  hash=fa769b148652d3d6
+
+stdout | src/tracks/tracks.test.ts > h1-wheelie-wire > prints the course summary
+h1-wheelie-wire  "Rooftop Wire"  tier=hard  length=622 m  obstacles=46  colliders=20  hazards=30
+  biome=nightCity  technique="sustained wheelie and the lip climb"  demands="1.4 m lip climb (or the 0.3 m hop off its ramp) straight into the parapet wire: 10 rail slots at 2.0 m, then the roof ends in a 40 deg roll-off"
+  attemptsBand=10-18  targetTimeS=85  cameraKeys=5  hints=0
+  checkpoints: 28, 191, 331, 480, 574  finishX=622.3  bounds=[-10,665.412592]x[-1.5,7.4]  oobY=-7.5
+  setPieces: start"The Grid"[0-28], balance"The Wire"[496-535], drop"The Drop"[539-566], finish[610-622]
+  # 0 gap     @  51.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 1 gap     @  53.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 2 gap     @  56.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 3 gap     @  58.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 4 gap     @  61.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 5 gap     @  63.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 6 gap     @  66.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 7 gap     @  68.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 8 ramp    @ 206.8 y=2     length=3.5 height=0.7 curve=0 direction=up
+  # 9 wall    @ 210.3 y=2     height=1 width=6 lip=0.15
+  #10 gap     @ 219.3 y=2     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #11 gap     @ 222.3 y=2     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #12 gap     @ 225.3 y=2     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #13 gap     @ 228.3 y=2     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #14 gap     @ 231.3 y=2     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #15 gap     @ 234.3 y=2     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #16 ramp    @ 267.3 y=2     length=6 height=1 curve=0 direction=up
+  #17 box     @ 273.3 y=2     width=8 height=1
+  #18 ramp    @ 281.3 y=2     length=10 height=1 curve=0 direction=down
+  #19 ramp    @ 347.3 y=4     length=4.5 height=0.9 curve=0 direction=up
+  #20 wall    @ 351.8 y=4     height=1.2 width=5 lip=0.15
+  #21 gap     @ 359.8 y=4     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #22 gap     @ 362.3 y=4     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #23 gap     @ 364.8 y=4     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #24 gap     @ 367.3 y=4     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #25 gap     @ 369.8 y=4     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #26 gap     @ 372.3 y=4     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #27 ramp    @ 496.0 y=6     length=5.5 height=1.1 curve=0 direction=up
+  #28 wall    @ 501.5 y=6     height=1.4 width=8 lip=0.2
+  #29 gap     @ 512.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #30 gap     @ 515.0 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #31 gap     @ 517.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #32 gap     @ 520.0 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #33 gap     @ 522.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #34 gap     @ 524.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #35 gap     @ 526.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #36 gap     @ 528.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #37 gap     @ 530.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #38 gap     @ 532.5 y=6     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #39 ramp    @ 652.3 y=0     length=3 height=0.75 curve=0 direction=up
+  #40 box     @ 655.3 y=0     width=2.4 height=2.5
+  #41 arch    @   3.0 y=0     span=6 height=5 style=girder (decor)
+  #42 arch    @ 527.5 y=6     span=6 height=5 style=crowd (decor)
+  #43 tunnel  @ 538.5 y=6     length=30 height=5 style=scaffold (decor)
+  #44 arch    @ 607.3 y=0     span=6 height=5 style=crowd (decor)
+  #45 arch    @ 619.3 y=0     span=6 height=5 style=finish (decor)
+  hash=f443f76227be344a
+
+stdout | src/tracks/tracks.test.ts > h2-gap-chain > prints the course summary
+h2-gap-chain  "Container Yard"  tier=hard  length=665 m  obstacles=63  colliders=64  hazards=14
+  biome=nightCity  technique="gap chains: read the width, set the speed"  demands="the crane jump (6 x 1.5 kicker over 5 m of water from the apron), then three 8 m platforms at 1.0 with 3 m gaps and the last gap onto a landing incline"
+  attemptsBand=14-22  targetTimeS=85  cameraKeys=8  hints=0
+  checkpoints: 28, 211, 406, 536  finishX=664.8  bounds=[-10,707.912592]x[-3,4]  oobY=-9
+  setPieces: start"Container Yard"[0-28], tunnel"Under the Stacks"[131-161], air"The Crane Jump"[436-467], air"Chain C"[552-614], finish[653-665]
+  # 0 ramp    @  44.0 y=0     length=4 height=1 curve=0 direction=up
+  # 1 gap     @  48.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 2 ramp    @  51.0 y=0.4   length=3 height=0.4 curve=0 direction=up
+  # 3 box     @  54.0 y=0     width=7 height=0.8
+  # 4 ramp    @  61.0 y=0.8   length=2 height=0.4 curve=0 direction=up
+  # 5 gap     @  63.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 6 ramp    @  66.0 y=0.4   length=3 height=0.4 curve=0 direction=up
+  # 7 box     @  69.0 y=0     width=7 height=0.8
+  # 8 ramp    @  76.0 y=0.8   length=2 height=0.4 curve=0 direction=up
+  # 9 gap     @  78.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #10 ramp    @  81.0 y=0.4   length=3 height=0.4 curve=0 direction=up
+  #11 box     @  84.0 y=0     width=7 height=0.8
+  #12 ramp    @  91.0 y=0.8   length=2 height=0.4 curve=0 direction=up
+  #13 gap     @  93.0 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #14 ramp    @ 226.8 y=0     length=5 height=1.2 curve=0 direction=up
+  #15 gap     @ 231.8 y=0     width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #16 ramp    @ 235.8 y=0.8   length=3 height=0.4 curve=0 direction=up
+  #17 box     @ 238.8 y=0     width=7 height=1.2
+  #18 ramp    @ 245.8 y=1.2   length=2 height=0.4 curve=0 direction=up
+  #19 gap     @ 247.8 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #20 ramp    @ 250.8 y=1     length=3 height=0.4 curve=0 direction=up
+  #21 box     @ 253.8 y=0     width=7 height=1.4
+  #22 ramp    @ 260.8 y=1.4   length=2 height=0.4 curve=0 direction=up
+  #23 gap     @ 262.8 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #24 ramp    @ 265.8 y=1.2   length=3 height=0.4 curve=0 direction=up
+  #25 box     @ 268.8 y=0     width=7 height=1.6
+  #26 ramp    @ 275.8 y=1.6   length=2 height=0.4 curve=0 direction=up
+  #27 gap     @ 277.8 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #28 ramp    @ 279.8 y=1.4   length=3 height=0.4 curve=0 direction=up
+  #29 box     @ 282.8 y=0     width=7 height=1.8
+  #30 ramp    @ 289.8 y=1.8   length=2 height=0.4 curve=0 direction=up
+  #31 gap     @ 291.8 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #32 ramp    @ 294.8 y=1.8   length=2 height=0.4 curve=0 direction=up
+  #33 box     @ 296.8 y=0     width=5 height=2.2
+  #34 ramp    @ 301.8 y=0     length=10 height=2.2 curve=0.3 direction=down
+  #35 ramp    @ 435.6 y=2.4   length=6 height=1.5 curve=0 direction=up
+  #36 gap     @ 441.6 y=2.4   width=5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #37 ramp    @ 446.6 y=2.4   length=6 height=1 curve=0 direction=up
+  #38 box     @ 452.6 y=2.4   width=6 height=1
+  #39 ramp    @ 458.6 y=2.4   length=8 height=1 curve=0 direction=down
+  #40 ramp    @ 551.6 y=0     length=4 height=1 curve=0 direction=up
+  #41 gap     @ 555.6 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #42 ramp    @ 558.6 y=0.6   length=3 height=0.4 curve=0 direction=up
+  #43 box     @ 561.6 y=0     width=3 height=1
+  #44 ramp    @ 564.6 y=1     length=2 height=0.4 curve=0 direction=up
+  #45 gap     @ 566.6 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #46 ramp    @ 569.6 y=0.6   length=3 height=0.4 curve=0 direction=up
+  #47 box     @ 572.6 y=0     width=3 height=1
+  #48 ramp    @ 575.6 y=1     length=2 height=0.4 curve=0 direction=up
+  #49 gap     @ 577.6 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #50 ramp    @ 580.6 y=0.6   length=3 height=0.4 curve=0 direction=up
+  #51 box     @ 583.6 y=0     width=3 height=1
+  #52 ramp    @ 586.6 y=1     length=2 height=0.4 curve=0 direction=up
+  #53 gap     @ 588.6 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #54 ramp    @ 591.6 y=0     length=6 height=1 curve=0 direction=up
+  #55 box     @ 597.6 y=0     width=6 height=1
+  #56 ramp    @ 603.6 y=0     length=10 height=1 curve=0 direction=down
+  #57 ramp    @ 694.8 y=0     length=3 height=0.75 curve=0 direction=up
+  #58 box     @ 697.8 y=0     width=2.4 height=2.5
+  #59 arch    @   3.0 y=0     span=6 height=5 style=girder (decor)
+  #60 tunnel  @ 131.0 y=0     length=30 height=5 style=concrete (decor)
+  #61 arch    @ 526.6 y=0     span=6 height=5 style=crowd (decor)
+  #62 arch    @ 661.8 y=0     span=6 height=5 style=finish (decor)
+  hash=98647438be6695da
+
+stdout | src/tracks/tracks.test.ts > h3-fire-line > prints the course summary
+h3-fire-line  "The Pour"  tier=hard  length=629 m  obstacles=30  colliders=62  hazards=26
+  biome=foundry  technique="commit at speed over fire, then stop hard"  demands="two fire rows inside the pour tunnel without a brake between them; then six barrels straight into a 12 m brake zone, a hump and a 0.5 m kerb"
+  attemptsBand=18-25  targetTimeS=85  cameraKeys=4  hints=0
+  checkpoints: 28, 201, 338, 455  finishX=629.2  bounds=[-10,672.312592]x[-4,2]  oobY=-10
+  setPieces: start"The Hall Door"[0-28], fire"Ladle 1"[51-70], fire"Ladle 2"[224-244], tunnel"The Pour"[341-361], fire"The Pour"[361-417], fire"Ladle 4"[478-532], finish[617-629]
+  # 0 ramp    @  51.0 y=0     length=5 height=2 curve=0 direction=up
+  # 1 barrel  @  57.0 y=0     count=4 spacing=0.8 burning=true
+  # 2 ramp    @  62.0 y=0     length=8 height=2 curve=0 direction=down
+  # 3 ramp    @ 169.2 y=0     length=6 height=1 curve=0 direction=up
+  # 4 box     @ 175.2 y=0     width=8 height=1
+  # 5 ramp    @ 183.2 y=0     length=10 height=1 curve=0 direction=down
+  # 6 ramp    @ 224.2 y=0     length=5 height=2 curve=0 direction=up
+  # 7 barrel  @ 230.2 y=0     count=5 spacing=0.8 burning=true
+  # 8 ramp    @ 236.0 y=0     length=8 height=2 curve=0 direction=down
+  # 9 ledge   @ 256.0 y=0     height=0.45 length=8
+  #10 ramp    @ 361.0 y=-2    length=5 height=2 curve=0 direction=up
+  #11 barrel  @ 367.0 y=-2    count=5 spacing=0.8 burning=true
+  #12 ramp    @ 372.8 y=-2    length=8 height=2 curve=0 direction=down
+  #13 ramp    @ 396.8 y=-2    length=5 height=2 curve=0 direction=up
+  #14 barrel  @ 402.8 y=-2    count=6 spacing=0.8 burning=true
+  #15 ramp    @ 409.4 y=-2    length=8 height=2 curve=0 direction=down
+  #16 ramp    @ 478.4 y=-2    length=5 height=2 curve=0 direction=up
+  #17 barrel  @ 484.4 y=-2    count=6 spacing=0.8 burning=true
+  #18 ramp    @ 491.0 y=-2    length=8 height=2 curve=0 direction=down
+  #19 ramp    @ 511.0 y=-2    length=1.5 height=0.3 curve=-0.5 direction=up
+  #20 ramp    @ 512.5 y=-2    length=1.5 height=0.3 curve=-0.5 direction=down
+  #21 ledge   @ 520.0 y=-2    height=0.5 length=6
+  #22 ramp    @ 526.0 y=-2    length=6 height=0.5 curve=0 direction=down
+  #23 ramp    @ 659.2 y=-4    length=3 height=0.75 curve=0 direction=up
+  #24 box     @ 662.2 y=-4    width=2.4 height=2.5
+  #25 arch    @   3.0 y=0     span=6 height=5 style=girder (decor)
+  #26 tunnel  @ 341.0 y=-2    length=60 height=5 style=foundry (decor)
+  #27 arch    @ 420.4 y=-2    span=6 height=5 style=crowd (decor)
+  #28 arch    @ 517.0 y=-2    span=6 height=4 style=girder (decor)
+  #29 arch    @ 626.2 y=-4    span=6 height=5 style=finish (decor)
+  hash=e761dd99b994ee19
+
+stdout | src/tracks/tracks.test.ts > x1-vertical-limit > prints the course summary
+x1-vertical-limit  "The Ascent"  tier=extreme  length=744 m  obstacles=44  colliders=62  hazards=3
+  biome=snow  technique="45 deg momentum climbs and pillar-cap rows"  demands="three 45 deg faces of 3.6 / 3.9 / 4.5 m from 30 m run-ins, the pillar caps level then rising 1.2 -> 1.8 from a 0.8 m ledge, and the summit: the 4.5 m face straight onto three caps over the crevasse, then the glissade"
+  attemptsBand=30-45  targetTimeS=90  cameraKeys=12  hints=0
+  checkpoints: 76, 205, 400, 546, 636  finishX=744.172729  bounds=[-10,787.285321]x[-2,10.5]  oobY=-8
+  setPieces: start"Base Camp"[0-30], climb"Face 1"[30-68], balance"The Pillars"[104-127], climb"Face 2"[235-278], balance"The Rising Pillars"[416-444], climb"The Summit"[576-628], drop"The Glissade"[639-695], finish[732-744]
+  # 0 ramp    @  30.0 y=0     length=0.82 height=0.3 curve=0 direction=up
+  # 1 plank   @  30.8 y=0.3   length=4.67 angleDeg=45 height=0
+  # 2 box     @  34.1 y=0     width=12 height=3.6
+  # 3 ramp    @  46.1 y=0     length=22 height=3.6 curve=0 direction=down
+  # 4 ramp    @ 104.1 y=0     length=4 height=0.8 curve=0 direction=up
+  # 5 box     @ 108.1 y=0     width=3 height=0.8
+  # 6 gap     @ 111.1 y=0     width=3.7 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  # 7 pole    @ 111.1 y=0     height=1.2 radius=0.25 count=1 spacing=1.8
+  # 8 pole    @ 112.7 y=0     height=1.2 radius=0.25 count=1 spacing=1.8
+  # 9 pole    @ 114.3 y=0     height=1.2 radius=0.25 count=1 spacing=1.8
+  #10 box     @ 115.3 y=0     width=4 height=1.2
+  #11 ramp    @ 119.3 y=0     length=8 height=1.2 curve=0 direction=down
+  #12 ramp    @ 235.3 y=2     length=0.82 height=0.3 curve=0 direction=up
+  #13 plank   @ 236.1 y=2.3   length=5.09 angleDeg=45 height=0
+  #14 box     @ 239.7 y=2     width=16 height=3.9
+  #15 ramp    @ 255.7 y=2     length=22 height=3.9 curve=0 direction=down
+  #16 ramp    @ 367.5 y=4     length=6 height=1 curve=0 direction=up
+  #17 box     @ 373.5 y=4     width=8 height=1
+  #18 ramp    @ 381.5 y=4     length=10 height=1 curve=0 direction=down
+  #19 ramp    @ 415.5 y=4     length=4 height=0.8 curve=0 direction=up
+  #20 box     @ 419.5 y=4     width=3 height=0.8
+  #21 gap     @ 422.5 y=4     width=6.9 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #22 pole    @ 422.5 y=4     height=1.2 radius=0.25 count=1 spacing=1.8
+  #23 pole    @ 424.1 y=4     height=1.35 radius=0.25 count=1 spacing=1.8
+  #24 pole    @ 425.7 y=4     height=1.5 radius=0.25 count=1 spacing=1.8
+  #25 pole    @ 427.3 y=4     height=1.65 radius=0.25 count=1 spacing=1.8
+  #26 pole    @ 428.9 y=4     height=1.8 radius=0.25 count=1 spacing=1.8
+  #27 box     @ 429.9 y=4     width=6 height=1.8
+  #28 ramp    @ 435.9 y=4     length=8 height=1.8 curve=0 direction=down
+  #29 ramp    @ 575.9 y=6     length=0.82 height=0.3 curve=0 direction=up
+  #30 plank   @ 576.8 y=6.3   length=5.94 angleDeg=45 height=0
+  #31 box     @ 581.0 y=6     width=16 height=4.5
+  #32 gap     @ 597.0 y=6     width=3.7 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #33 pole    @ 597.0 y=6     height=4.5 radius=0.25 count=1 spacing=1.8
+  #34 pole    @ 598.6 y=6     height=4.5 radius=0.25 count=1 spacing=1.8
+  #35 pole    @ 600.2 y=6     height=4.5 radius=0.25 count=1 spacing=1.8
+  #36 box     @ 601.0 y=6     width=3 height=4.5
+  #37 ramp    @ 604.0 y=6     length=24 height=4.5 curve=0 direction=down
+  #38 ramp    @ 774.2 y=0     length=3 height=0.75 curve=0 direction=up
+  #39 box     @ 777.2 y=0     width=2.4 height=2.5
+  #40 arch    @   3.0 y=0     span=6 height=5 style=girder (decor)
+  #41 tunnel  @ 597.0 y=6     length=12 height=5 style=ice (decor)
+  #42 arch    @ 729.2 y=0     span=6 height=5 style=crowd (decor)
+  #43 arch    @ 741.2 y=0     span=6 height=5 style=finish (decor)
+  hash=cd1451008b6850dd
+
+stdout | src/tracks/tracks.test.ts > x2-pipe-dream > prints the course summary
+x2-pipe-dream  "The Rolling Mill"  tier=extreme  length=564 m  obstacles=47  colliders=62  hazards=5
+  biome=foundry  technique="spinning drums with gaps and see-saw drops"  demands="the big roller: a kicker off the 15 m platform over 4 m of melt onto a spinning drum top; then the demand — see-saw drop, the spinning shelf drum, a 2 m hop onto another spinning drum and off over its shelf"
+  attemptsBand=40-60  targetTimeS=95  cameraKeys=8  hints=0
+  checkpoints: 24, 181, 335, 396  finishX=563.6  bounds=[-10,606.712592]x[-3,3.260001]  oobY=-9
+  setPieces: start"The Rolling Mill"[0-24], tunnel"The Duct"[116-175], fire"The Big Roller"[231-249], balance"The Pipe Run"[351-364], finish[552-564]
+  # 0 ramp    @  40.0 y=0     length=4 height=1.2 curve=0 direction=up
+  # 1 box     @  44.0 y=0     width=1 height=1.2
+  # 2 drum    @  45.0 y=0     radius=0.8 depth=0 rolls=true
+  # 3 gap     @  46.6 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 4 box     @  48.6 y=0     width=4 height=0.8
+  # 5 ramp    @  52.6 y=0     length=4 height=0.8 curve=0 direction=down
+  # 6 ramp    @  62.6 y=0     length=3 height=0.6 curve=0.3 direction=up
+  # 7 logpile @  65.6 y=0     radius=0.3 count=5 rows=2
+  # 8 ramp    @  74.6 y=0     length=4 height=1.2 curve=0 direction=up
+  # 9 box     @  78.6 y=0     width=1 height=1.2
+  #10 drum    @  79.6 y=0     radius=0.8 depth=0 rolls=true
+  #11 box     @  81.2 y=0     width=1 height=1.2
+  #12 ramp    @  82.2 y=0     length=4 height=1.2 curve=0 direction=down
+  #13 ramp    @ 197.4 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  #14 seesaw  @ 198.2 y=0     length=8 height=1.6
+  #15 ramp    @ 208.2 y=0     length=5 height=1.4 curve=0 direction=up
+  #16 box     @ 213.2 y=0     width=1 height=1.4
+  #17 drum    @ 214.2 y=0     radius=1 depth=0 rolls=false
+  #18 box     @ 216.2 y=0     width=15 height=1.8
+  #19 ramp    @ 231.2 y=1.8   length=2 height=0.4 curve=0 direction=up
+  #20 gap     @ 233.2 y=0     width=4 depth=3 hazard=fire rise=0 floor=dirt (decor)
+  #21 drum    @ 237.2 y=0     radius=1 depth=0 rolls=true
+  #22 box     @ 239.2 y=0     width=2 height=1.6
+  #23 ramp    @ 241.2 y=0     length=8 height=1.6 curve=0 direction=down
+  #24 ramp    @ 351.0 y=0     length=4 height=1.3 curve=0 direction=up
+  #25 box     @ 355.0 y=0     width=1 height=1.3
+  #26 drum    @ 356.0 y=0     radius=0.9 depth=0 rolls=true
+  #27 gap     @ 357.8 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #28 drum    @ 359.3 y=0     radius=0.9 depth=0 rolls=true
+  #29 gap     @ 361.1 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #30 drum    @ 362.6 y=0     radius=0.9 depth=0 rolls=true
+  #31 ramp    @ 412.4 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  #32 seesaw  @ 413.2 y=0     length=8 height=1.6
+  #33 ramp    @ 437.2 y=0     length=4 height=1.2 curve=0 direction=up
+  #34 box     @ 441.2 y=0     width=1 height=1.2
+  #35 drum    @ 442.2 y=0     radius=0.8 depth=0 rolls=true
+  #36 gap     @ 443.8 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #37 drum    @ 445.8 y=0     radius=0.8 depth=0 rolls=true
+  #38 box     @ 447.4 y=0     width=2 height=1.4
+  #39 ramp    @ 449.4 y=0     length=6 height=1.4 curve=0 direction=down
+  #40 ledge   @ 464.4 y=0     height=0.5 length=4
+  #41 ramp    @ 593.6 y=-1.5  length=3 height=0.75 curve=0 direction=up
+  #42 box     @ 596.6 y=-1.5  width=2.4 height=2.5
+  #43 arch    @   3.0 y=0     span=6 height=5 style=girder (decor)
+  #44 tunnel  @ 116.2 y=0     length=40 height=5 style=pipe (decor)
+  #45 arch    @ 252.2 y=0     span=6 height=5 style=crowd (decor)
+  #46 arch    @ 560.6 y=-1.5  span=6 height=5 style=finish (decor)
+  hash=5895dbb70a461f9d
+
+stdout | src/tracks/tracks.test.ts > x3-gauntlet > prints the course summary
+x3-gauntlet  "The Stack"  tier=extreme  length=575 m  obstacles=56  colliders=67  hazards=17
+  biome=foundry  technique="everything, in order"  demands="45 deg plank over a kicker foot, drop cascade, 0.15 m stairs into a gap, hop ledge, spinning drum, 22 deg see-saw landing, lip climb + rails, lipped gap chain, fire, the 4.5 m face onto the chimney caps"
+  attemptsBand=60-80  targetTimeS=95  cameraKeys=12  hints=0
+  checkpoints: 28, 187, 248, 333, 416, 477  finishX=575.048486  bounds=[-10,618.161078]x[-3,4.5]  oobY=-9
+  setPieces: start"The Stack"[0-28], tunnel"Hall Two"[193-236], fire"The Pour"[439-460], climb"The Stack"[507-559], finish[563-575]
+  # 0 ramp    @  48.0 y=0     length=0.82 height=0.3 curve=0 direction=up
+  # 1 plank   @  48.8 y=0.3   length=4.67 angleDeg=45 height=0
+  # 2 box     @  52.1 y=0     width=12 height=3.6
+  # 3 ramp    @  64.1 y=1.5   length=22 height=2.1 curve=0 direction=down
+  # 4 box     @  86.1 y=0     width=6 height=1.5
+  # 5 box     @  92.1 y=0     width=6 height=1
+  # 6 box     @  98.1 y=0     width=6 height=0.5
+  # 7 stair   @ 152.1 y=0     count=8 height=0.15 length=0.6 direction=up
+  # 8 box     @ 156.9 y=0     width=4 height=1.2
+  # 9 stair   @ 160.9 y=0     count=8 height=0.15 length=0.5 direction=down
+  #10 gap     @ 170.9 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #11 ledge   @ 192.9 y=0     height=0.5 length=8
+  #12 gap     @ 200.9 y=0     width=1.5 depth=2 hazard=water rise=0 floor=dirt (decor)
+  #13 ramp    @ 224.4 y=0     length=4 height=1.2 curve=0 direction=up
+  #14 box     @ 228.4 y=0     width=1 height=1.2
+  #15 drum    @ 229.4 y=0     radius=0.8 depth=0 rolls=true
+  #16 box     @ 231.0 y=0     width=1 height=1.2
+  #17 ramp    @ 232.0 y=0     length=4 height=1.2 curve=0 direction=down
+  #18 ramp    @ 264.0 y=0     length=4 height=1 curve=0 direction=up
+  #19 gap     @ 268.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #20 seesaw  @ 271.0 y=0     length=8 height=1.6
+  #21 ramp    @ 295.0 y=0     length=5.5 height=1.1 curve=0 direction=up
+  #22 wall    @ 300.5 y=0     height=1.4 width=4 lip=0.2
+  #23 gap     @ 312.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #24 gap     @ 314.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #25 gap     @ 316.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #26 gap     @ 318.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #27 ramp    @ 349.2 y=0     length=4 height=1 curve=0 direction=up
+  #28 gap     @ 353.2 y=0     width=2.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #29 ramp    @ 355.7 y=0.75  length=2 height=0.25 curve=0 direction=up
+  #30 box     @ 357.7 y=0     width=1.5 height=1
+  #31 ramp    @ 359.2 y=1     length=2 height=0.4 curve=0 direction=up
+  #32 gap     @ 361.2 y=0     width=2.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #33 ramp    @ 363.7 y=0.75  length=2 height=0.25 curve=0 direction=up
+  #34 box     @ 365.7 y=0     width=1.5 height=1
+  #35 ramp    @ 367.2 y=1     length=2 height=0.4 curve=0 direction=up
+  #36 gap     @ 369.2 y=0     width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #37 ramp    @ 439.4 y=0     length=5 height=2 curve=0 direction=up
+  #38 barrel  @ 445.4 y=0     count=6 spacing=0.8 burning=true
+  #39 ramp    @ 452.0 y=0     length=8 height=2 curve=0 direction=down
+  #40 ramp    @ 507.0 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #41 plank   @ 507.8 y=0.3   length=5.94 angleDeg=45 height=0
+  #42 box     @ 512.0 y=0     width=16 height=4.5
+  #43 gap     @ 528.0 y=0     width=3.7 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #44 pole    @ 528.0 y=0     height=4.5 radius=0.25 count=1 spacing=1.8
+  #45 pole    @ 529.6 y=0     height=4.5 radius=0.25 count=1 spacing=1.8
+  #46 pole    @ 531.2 y=0     height=4.5 radius=0.25 count=1 spacing=1.8
+  #47 box     @ 532.0 y=0     width=3 height=4.5
+  #48 ramp    @ 535.0 y=0     length=24 height=4.5 curve=0 direction=down
+  #49 ramp    @ 605.0 y=0     length=3 height=0.75 curve=0 direction=up
+  #50 box     @ 608.0 y=0     width=2.4 height=2.5
+  #51 arch    @   3.0 y=0     span=6 height=5 style=girder (decor)
+  #52 tunnel  @ 192.9 y=0     length=50 height=5 style=concrete (decor)
+  #53 arch    @ 413.4 y=0     span=6 height=5 style=crowd (decor)
+  #54 arch    @ 525.0 y=0     span=6 height=5 style=pipe (decor)
+  #55 arch    @ 572.0 y=0     span=6 height=5 style=finish (decor)
+  hash=570081114fc3f8c5
+
+stdout | src/tracks/tracks.test.ts > p1-container-yard > prints the course summary
+p1-container-yard  "Yard Playground"  tier=beginner  length=504 m  obstacles=17  colliders=19  hazards=1
+  biome=industrial  technique="the industrial kit at beginner pace"  demands="nothing new: kickers onto the downslope, sunk drums, a 2 m gap, a 0.4 m kerb hop, a plank onto a container, a 1.0 m ramp drop"
+  attemptsBand=1-2  targetTimeS=70  cameraKeys=1  hints=4
+  checkpoints: 68, 160, 272, 369  finishX=503.877684  bounds=[-10,546.990276]x[-3.8,2]  oobY=-9.8
+  setPieces: start"The Yard Gate"[0-24], tunnel"Under the Stacks"[375-409], finish[496-504]
+  # 0 ramp    @  84.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 1 drum    @ 116.0 y=-0.8  radius=0.5 depth=0.7 rolls=false
+  # 2 drum    @ 125.0 y=-0.8  radius=0.5 depth=0.7 rolls=false
+  # 3 ramp    @ 176.0 y=-0.8  length=4 height=1 curve=0.3 direction=up
+  # 4 gap     @ 180.0 y=-0.8  width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 5 ramp    @ 196.0 y=-0.8  length=6 height=1.2 curve=0 direction=up
+  # 6 ledge   @ 280.4 y=-2    height=0.35 length=6
+  # 7 ramp    @ 286.4 y=-2    length=4 height=0.35 curve=0 direction=down
+  # 8 plank   @ 302.4 y=-2    length=3.24 angleDeg=18 height=0
+  # 9 box     @ 305.5 y=-2    width=6 height=1
+  #10 ramp    @ 311.5 y=-2    length=10 height=1 curve=0 direction=down
+  #11 ramp    @ 533.9 y=-2    length=3 height=0.75 curve=0 direction=up
+  #12 box     @ 536.9 y=-2    width=2.4 height=2.5
+  #13 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #14 tunnel  @ 375.5 y=-2    length=24 height=5 style=scaffold (decor)
+  #15 arch    @ 492.9 y=-2    span=6 height=5 style=crowd (decor)
+  #16 arch    @ 500.9 y=-2    span=6 height=5 style=finish (decor)
+  hash=ff682526064d0601
+
+stdout | src/tracks/tracks.test.ts > p2-canyon-run > prints the course summary
+p2-canyon-run  "Canyon Run"  tier=beginner  length=494 m  obstacles=21  colliders=26  hazards=1
+  biome=canyon  technique="the canyon kit at beginner pace"  demands="nothing new: kickers onto the downslope, a 2 m water gap, logs, a 0.3 m shelf, 0.12 m stairs, a 15 deg see-saw, a 1.2 m ramp drop"
+  attemptsBand=1-2  targetTimeS=70  cameraKeys=1  hints=4
+  checkpoints: 68, 182, 291, 391  finishX=493.6  bounds=[-10,536.712592]x[-5,2]  oobY=-11
+  setPieces: start"The Wash"[0-24], drop"The Tower Deck"[397-432], finish[486-494]
+  # 0 ramp    @  84.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 1 ramp    @ 118.0 y=-0.8  length=6 height=1.2 curve=0 direction=up
+  # 2 drum    @ 188.0 y=-2    radius=0.5 depth=0.7 rolls=false
+  # 3 drum    @ 197.0 y=-2    radius=0.5 depth=0.7 rolls=false
+  # 4 ramp    @ 214.0 y=-2    length=4 height=1 curve=0.3 direction=up
+  # 5 gap     @ 218.0 y=-2    width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 6 ledge   @ 234.0 y=-2    height=0.3 length=6
+  # 7 ramp    @ 240.0 y=-2    length=3 height=0.3 curve=0 direction=down
+  # 8 stair   @ 307.4 y=-2    count=5 height=0.12 length=0.8 direction=up
+  # 9 box     @ 311.4 y=-2    width=6 height=0.6
+  #10 ramp    @ 317.4 y=-2    length=5 height=0.6 curve=0 direction=down
+  #11 ramp    @ 334.4 y=-2    length=0.8 height=0.15 curve=0.5 direction=up
+  #12 seesaw  @ 335.2 y=-2    length=6 height=0.8
+  #13 ramp    @ 397.2 y=-2    length=12 height=1.2 curve=0 direction=up
+  #14 box     @ 409.2 y=-2    width=8 height=1.2
+  #15 ramp    @ 417.2 y=-2    length=14.4 height=1.2 curve=0 direction=down
+  #16 ramp    @ 523.6 y=-2    length=3 height=0.75 curve=0 direction=up
+  #17 box     @ 526.6 y=-2    width=2.4 height=2.5
+  #18 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #19 arch    @ 482.6 y=-2    span=6 height=5 style=crowd (decor)
+  #20 arch    @ 490.6 y=-2    span=6 height=5 style=finish (decor)
+  hash=7ca086566699c6e1
+
+stdout | src/tracks/tracks.test.ts > p3-snow-line > prints the course summary
+p3-snow-line  "Snow Line"  tier=beginner  length=488 m  obstacles=21  colliders=27  hazards=1
+  biome=snow  technique="the snow kit at beginner pace"  demands="nothing new: kickers onto the downslope, a log pile behind its ramp, a 2 m pond gap, a plank onto a crate, a 1.0 m ramp drop, a 17 deg see-saw"
+  attemptsBand=1-2  targetTimeS=70  cameraKeys=1  hints=4
+  checkpoints: 68, 182, 297, 399  finishX=488.277684  bounds=[-10,531.390276]x[-5,2]  oobY=-11
+  setPieces: start"The Trailhead"[0-24], balance"The Lift Line"[415-424], tunnel"The Ice Cave"[438-474], finish[480-488]
+  # 0 ramp    @  84.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 1 ramp    @ 118.0 y=-0.8  length=6 height=1.2 curve=0 direction=up
+  # 2 ramp    @ 198.0 y=-2    length=4 height=0.6 curve=0 direction=up
+  # 3 logpile @ 202.0 y=-2    radius=0.3 count=3 rows=1
+  # 4 drum    @ 213.8 y=-2    radius=0.3 depth=0.3 rolls=false
+  # 5 drum    @ 222.4 y=-2    radius=0.3 depth=0.3 rolls=false
+  # 6 ramp    @ 239.0 y=-2    length=4 height=1 curve=0.3 direction=up
+  # 7 gap     @ 243.0 y=-2    width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 8 plank   @ 313.4 y=-2    length=3.24 angleDeg=18 height=0
+  # 9 box     @ 316.5 y=-2    width=6 height=1
+  #10 ramp    @ 322.5 y=-2    length=10 height=1 curve=0 direction=down
+  #11 ledge   @ 344.5 y=-2    height=0.3 length=6
+  #12 ramp    @ 350.5 y=-2    length=3 height=0.3 curve=0 direction=down
+  #13 ramp    @ 415.5 y=-2    length=0.8 height=0.15 curve=0.5 direction=up
+  #14 seesaw  @ 416.3 y=-2    length=8 height=1.2
+  #15 ramp    @ 518.3 y=-2    length=3 height=0.75 curve=0 direction=up
+  #16 box     @ 521.3 y=-2    width=2.4 height=2.5
+  #17 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #18 tunnel  @ 438.3 y=-2    length=20 height=5 style=ice (decor)
+  #19 arch    @ 477.3 y=-2    span=6 height=5 style=crowd (decor)
+  #20 arch    @ 485.3 y=-2    span=6 height=5 style=finish (decor)
+  hash=626e6e1e19416ce4
+
+stdout | src/tracks/tracks.test.ts > p4-night-circuit > prints the course summary
+p4-night-circuit  "Night Circuit"  tier=beginner  length=498 m  obstacles=23  colliders=30  hazards=1
+  biome=nightCity  technique="the night-city kit at beginner pace"  demands="nothing new: 0.3 m kerbs, 0.12 m subway stairs, kickers onto the downslope, a 2 m gap, a 0.4 m kerb hop, a 15 deg see-saw, a 1.0 m ramp drop"
+  attemptsBand=1-2  targetTimeS=70  cameraKeys=1  hints=4
+  checkpoints: 52, 231, 313, 402  finishX=498.2  bounds=[-10,541.312592]x[-5,2]  oobY=-11
+  setPieces: start"The Grid"[0-24], drop"The Loading Bay"[408-436], finish[490-498]
+  # 0 ledge   @  24.0 y=0     height=0.3 length=4
+  # 1 ramp    @  28.0 y=0     length=3 height=0.3 curve=0 direction=down
+  # 2 ledge   @  39.0 y=0     height=0.3 length=4
+  # 3 ramp    @  43.0 y=0     length=3 height=0.3 curve=0 direction=down
+  # 4 stair   @ 106.0 y=0     count=5 height=0.12 length=0.8 direction=up
+  # 5 box     @ 110.0 y=0     width=6 height=0.6
+  # 6 ramp    @ 116.0 y=0     length=5 height=0.6 curve=0 direction=down
+  # 7 ramp    @ 133.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 8 ramp    @ 167.0 y=-0.8  length=6 height=1.2 curve=0 direction=up
+  # 9 ramp    @ 247.0 y=-2    length=4 height=1 curve=0.3 direction=up
+  #10 gap     @ 251.0 y=-2    width=2 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #11 ledge   @ 321.0 y=-2    height=0.4 length=6
+  #12 ramp    @ 327.0 y=-2    length=4 height=0.4 curve=0 direction=down
+  #13 ramp    @ 343.0 y=-2    length=0.8 height=0.15 curve=0.5 direction=up
+  #14 seesaw  @ 343.8 y=-2    length=6 height=0.8
+  #15 ramp    @ 408.2 y=-2    length=10 height=1 curve=0 direction=up
+  #16 box     @ 418.2 y=-2    width=8 height=1
+  #17 ramp    @ 426.2 y=-2    length=10 height=1 curve=0 direction=down
+  #18 ramp    @ 528.2 y=-2    length=3 height=0.75 curve=0 direction=up
+  #19 box     @ 531.2 y=-2    width=2.4 height=2.5
+  #20 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #21 arch    @ 487.2 y=-2    span=6 height=5 style=crowd (decor)
+  #22 arch    @ 495.2 y=-2    span=6 height=5 style=finish (decor)
+  hash=2473ed2345fcfbbf
+
+stdout | src/tracks/tracks.test.ts > p5-foundry-floor > prints the course summary
+p5-foundry-floor  "Foundry Floor"  tier=beginner  length=443 m  obstacles=19  colliders=22  hazards=1
+  biome=foundry  technique="the foundry kit at beginner pace"  demands="nothing new: kickers onto the downslope, sunk spools, a 2 m fire gap, a plank onto a container, a 1.0 m ramp drop, a 17 deg see-saw"
+  attemptsBand=1-2  targetTimeS=70  cameraKeys=1  hints=4
+  checkpoints: 68, 174, 252, 354  finishX=442.547477  bounds=[-10,485.660069]x[-5,2]  oobY=-11
+  setPieces: start"The Hall Door"[0-24], fire"The Melt"[190-196], tunnel"The Duct"[210-244], balance"The Trough"[370-379], finish[435-443]
+  # 0 ramp    @  84.0 y=0     length=4 height=0.8 curve=0 direction=up
+  # 1 ramp    @ 118.0 y=-0.8  length=6 height=1.2 curve=0 direction=up
+  # 2 drum    @ 156.0 y=-2    radius=0.5 depth=0.7 rolls=false
+  # 3 drum    @ 165.0 y=-2    radius=0.5 depth=0.7 rolls=false
+  # 4 ramp    @ 190.0 y=-2    length=4 height=1 curve=0 direction=up
+  # 5 gap     @ 194.0 y=-2    width=2 depth=3 hazard=fire rise=0 floor=dirt (decor)
+  # 6 plank   @ 268.0 y=-2    length=2.92 angleDeg=20 height=0
+  # 7 box     @ 270.7 y=-2    width=6 height=1
+  # 8 ramp    @ 276.7 y=-2    length=10 height=1 curve=0 direction=down
+  # 9 ledge   @ 298.7 y=-2    height=0.3 length=6
+  #10 ramp    @ 304.7 y=-2    length=3 height=0.3 curve=0 direction=down
+  #11 ramp    @ 369.7 y=-2    length=0.8 height=0.15 curve=0.5 direction=up
+  #12 seesaw  @ 370.5 y=-2    length=8 height=1.2
+  #13 ramp    @ 472.5 y=-2    length=3 height=0.75 curve=0 direction=up
+  #14 box     @ 475.5 y=-2    width=2.4 height=2.5
+  #15 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #16 tunnel  @ 210.0 y=-2    length=30 height=5 style=pipe (decor)
+  #17 arch    @ 431.5 y=-2    span=6 height=5 style=pipe (decor)
+  #18 arch    @ 439.5 y=-2    span=6 height=5 style=finish (decor)
+  hash=62441dbb288a26da
+
+stdout | src/tracks/tracks.test.ts > lab-physics-test > prints the course summary
+lab-physics-test  "Physics Test"  tier=medium  length=100 m  obstacles=5  colliders=9  hazards=0
+  biome=industrial  technique="the bunny hop"  demands="one hop from an 11 deg lip onto a ledge 0.3 m above it across a 3 m dry pit; full gas over a crest without looping"
+  attemptsBand=3-8  targetTimeS=12  cameraKeys=1  hints=1
+  checkpoints: 30, 62  finishX=100  bounds=[-10,143.112592]x[-1.5,5.5]  oobY=-7.5
+  # 0 ramp    @  40.0 y=0     length=6 height=1.2 curve=0 direction=up
+  # 1 box     @  46.0 y=0     width=0.3 height=1.2
+  # 2 gap     @  46.3 y=0     width=3 depth=1.5 hazard=none rise=1.5 floor=rubber
+  # 3 ramp    @ 130.0 y=1.5   length=3 height=0.75 curve=0 direction=up
+  # 4 box     @ 133.0 y=1.5   width=2.4 height=2.5
+  hash=f99707f44193c58b
+
+stdout | src/tracks/tracks.test.ts > lab-flat-200 > prints the course summary
+lab-flat-200  "Flat 200"  tier=beginner  length=200 m  obstacles=2  colliders=4  hazards=0
+  biome=industrial  technique="envelope measurement"  demands="nothing: 200 m of flat dirt for the physics engineer"
+  attemptsBand=1-1  targetTimeS=17  cameraKeys=1  hints=1
+  checkpoints: 50, 100, 150  finishX=200  bounds=[-10,243.112592]x[0,4]  oobY=-6
+  # 0 ramp    @ 230.0 y=0     length=3 height=0.75 curve=0 direction=up
+  # 1 box     @ 233.0 y=0     width=2.4 height=2.5
+  hash=a5372af3c4fbcb76
+
+stdout | src/tracks/tracks.test.ts > lab-box-climb > prints the course summary
+lab-box-climb  "Container Step"  tier=medium  length=33 m  obstacles=5  colliders=8  hazards=0
+  biome=industrial  technique="rear-wheel lift and forward transfer"  demands="lift onto a 0.65 m container, then climb the next 0.6 m step without catching the front wheel"
+  attemptsBand=3-8  targetTimeS=12  cameraKeys=1  hints=1
+  checkpoints:   finishX=33  bounds=[-10,76.112592]x[0,4]  oobY=-6
+  setPieces: climb"Container step transfer"[12-23]
+  # 0 box     @  12.0 y=0     width=3 height=0.65
+  # 1 box     @  15.0 y=0     width=4 height=1.25
+  # 2 ramp    @  19.0 y=0     length=4 height=1.25 curve=0 direction=down
+  # 3 ramp    @  63.0 y=0     length=3 height=0.75 curve=0 direction=up
+  # 4 box     @  66.0 y=0     width=2.4 height=2.5
+  hash=f0b20891910a2574
+
+stdout | src/tracks/tracks.test.ts > lab-ramp-jump > prints the course summary
+lab-ramp-jump  "Timber Launch"  tier=easy  length=38 m  obstacles=6  colliders=9  hazards=0
+  biome=industrial  technique="ramp preload and airborne landing control"  demands="settle after the small approach ramp, launch from the concave timber ramp, and land across the 3 m dry gap"
+  attemptsBand=2-6  targetTimeS=12  cameraKeys=1  hints=1
+  checkpoints:   finishX=38  bounds=[-10,81.112592]x[-1,5.8]  oobY=-7
+  setPieces: air"Timber launch and landing"[17-38]
+  # 0 ramp    @   8.0 y=0     length=3 height=0.65 curve=0.3 direction=up
+  # 1 ramp    @  11.0 y=0     length=3 height=0.65 curve=0 direction=down
+  # 2 ramp    @  17.0 y=0     length=6 height=2.4 curve=0.65 direction=up
+  # 3 gap     @  23.0 y=0     width=3 depth=1 hazard=none rise=1.8 floor=dirt (decor)
+  # 4 ramp    @  68.0 y=1.8   length=3 height=0.75 curve=0 direction=up
+  # 5 box     @  71.0 y=1.8   width=2.4 height=2.5
+  hash=22f91aa336287081
+
+stdout | src/tracks/tracks.test.ts > c1-low-tide > prints the course summary
+c1-low-tide  "Low Tide"  tier=beginner  length=435 m  obstacles=22  colliders=24  hazards=0
+  biome=coast  technique="brake before the beached ramp"  demands="ease off after Marker 2 to settle the pallet ramp and land level on the deck"
+  attemptsBand=1-2  targetTimeS=36  cameraKeys=5  hints=4
+  checkpoints: 88, 180, 277  finishX=435.126908  bounds=[-10,478.2395]x[-1.02,4]  oobY=-7.02
+  setPieces: start"The Slipway"[0-24], balance"Ease Off for the Beached Ramp"[192-255], balance"The Causeway"[285-347], finish[425-435]
+  # 0 drum    @  92.0 y=0     radius=0.6 depth=1.02 rolls=false
+  # 1 drum    @  98.2 y=0     radius=0.6 depth=1.02 rolls=false
+  # 2 drum    @ 104.4 y=0     radius=0.6 depth=1.02 rolls=false
+  # 3 ledge   @ 157.6 y=0     height=0.3 length=6
+  # 4 ramp    @ 163.6 y=0     length=4 height=0.3 curve=0 direction=down
+  # 5 ramp    @ 209.6 y=0     length=0.82 height=0.3 curve=0 direction=up
+  # 6 plank   @ 210.4 y=0.3   length=5.07 angleDeg=22 height=0
+  # 7 box     @ 215.1 y=0     width=12 height=2.2
+  # 8 ramp    @ 227.1 y=0     length=28 height=2.2 curve=0 direction=down
+  # 9 ramp    @ 285.1 y=0     length=12 height=1 curve=0 direction=up
+  #10 box     @ 297.1 y=0     width=8 height=1
+  #11 ramp    @ 305.1 y=1     length=4 height=0.3 curve=0 direction=up
+  #12 box     @ 309.1 y=0     width=6 height=1.3
+  #13 ramp    @ 315.1 y=1.3   length=4 height=0.3 curve=0 direction=up
+  #14 box     @ 319.1 y=0     width=8 height=1.6
+  #15 ramp    @ 327.1 y=0     length=20 height=1.6 curve=0 direction=down
+  #16 ramp    @ 465.1 y=0     length=3 height=0.75 curve=0 direction=up
+  #17 box     @ 468.1 y=0     width=2.4 height=2.5
+  #18 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #19 arch    @ 186.6 y=0     span=10 height=6 style=girder (decor)
+  #20 arch    @ 422.1 y=0     span=6 height=5 style=crowd (decor)
+  #21 arch    @ 432.1 y=0     span=6 height=5 style=finish (decor)
+  hash=76ea3119b6f91726
+
+stdout | src/tracks/tracks.test.ts > c2-crane-hop > prints the course summary
+c2-crane-hop  "Crane Hop"  tier=beginner  length=395 m  obstacles=25  colliders=27  hazards=2
+  biome=coast  technique="commit to the jump, then release or pitch forward in flight"  demands="the crane hop: an 18 deg kicker off the apron over 5.5 m of harbour onto a container barge"
+  attemptsBand=1-2  targetTimeS=31  cameraKeys=3  hints=4
+  checkpoints: 87, 187, 271  finishX=395.340768  bounds=[-10,438.45336]x[-3,4]  oobY=-9
+  setPieces: start"The Harbour Road"[0-24], air"The Crane Hop"[301-337], finish[385-395]
+  # 0 ramp    @  40.0 y=0     length=10 height=1 curve=0 direction=up
+  # 1 box     @  50.0 y=0     width=6 height=1
+  # 2 ramp    @  56.0 y=1     length=3 height=0.5 curve=0 direction=up
+  # 3 ramp    @  59.0 y=0     length=14 height=1 curve=0 direction=down
+  # 4 ramp    @ 103.0 y=0     length=10 height=1.2 curve=0 direction=up
+  # 5 box     @ 113.0 y=0     width=5 height=1.2
+  # 6 ramp    @ 118.0 y=1.2   length=3 height=0.75 curve=0 direction=up
+  # 7 ramp    @ 121.0 y=0     length=16 height=1.2 curve=0 direction=down
+  # 8 ramp    @ 203.4 y=0     length=5 height=1 curve=0 direction=up
+  # 9 gap     @ 208.4 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #10 ramp    @ 211.4 y=0     length=6 height=0.6 curve=0 direction=up
+  #11 box     @ 217.4 y=0     width=6 height=0.6
+  #12 ramp    @ 223.4 y=0     length=8 height=0.6 curve=0 direction=down
+  #13 ramp    @ 301.4 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #14 plank   @ 302.2 y=0.3   length=4.85 angleDeg=18 height=0
+  #15 gap     @ 306.8 y=0     width=5.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #16 ramp    @ 312.3 y=0     length=6 height=0.8 curve=0 direction=up
+  #17 box     @ 318.3 y=0     width=9 height=0.8
+  #18 ramp    @ 327.3 y=0     length=10 height=0.8 curve=0 direction=down
+  #19 ramp    @ 425.3 y=0     length=3 height=0.75 curve=0 direction=up
+  #20 box     @ 428.3 y=0     width=2.4 height=2.5
+  #21 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #22 arch    @ 296.4 y=0     span=10 height=7 style=girder (decor)
+  #23 arch    @ 382.3 y=0     span=6 height=5 style=crowd (decor)
+  #24 arch    @ 392.3 y=0     span=6 height=5 style=finish (decor)
+  hash=df72daa55f60a8bf
+
+stdout | src/tracks/tracks.test.ts > c3-hull-breach > prints the course summary
+c3-hull-breach  "Hull Breach"  tier=easy  length=442 m  obstacles=27  colliders=32  hazards=3
+  biome=coast  technique="uphill weight and the rear-wheel-first landing"  demands="climb the 40 deg bow, set deck speed, clear the breach and land rear first"
+  attemptsBand=2-3  targetTimeS=39  cameraKeys=9  hints=4
+  checkpoints: 46, 134, 230, 344  finishX=442.021437  bounds=[-10,485.134029]x[-3,4]  oobY=-9
+  setPieces: start"The Wreck Beach"[0-24], climb"The Stern"[62-96], climb"The Bow"[250-271], air"The Breach"[271-304], finish[432-442]
+  # 0 drum    @  24.0 y=0     radius=0.6 depth=1 rolls=false
+  # 1 drum    @  35.2 y=0     radius=0.6 depth=1 rolls=false
+  # 2 ramp    @  62.4 y=0     length=0.82 height=0.3 curve=0 direction=up
+  # 3 plank   @  63.2 y=0.3   length=3.4 angleDeg=34 height=0
+  # 4 box     @  66.0 y=0     width=10 height=2.2
+  # 5 ramp    @  76.0 y=0     length=20 height=2.2 curve=0 direction=down
+  # 6 ramp    @ 150.0 y=0     length=5 height=1.2 curve=0 direction=up
+  # 7 gap     @ 155.0 y=0     width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 8 ramp    @ 159.0 y=0     length=8 height=1 curve=0 direction=up
+  # 9 box     @ 167.0 y=0     width=6 height=1
+  #10 ramp    @ 173.0 y=0     length=10 height=1 curve=0 direction=down
+  #11 ramp    @ 250.2 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #12 plank   @ 251.1 y=0.3   length=4.51 angleDeg=40 height=0
+  #13 box     @ 254.5 y=0     width=16 height=3.2
+  #14 ramp    @ 270.5 y=3.2   length=2 height=0.4 curve=0 direction=up
+  #15 gap     @ 272.5 y=0     width=3.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #16 ramp    @ 276.0 y=0     length=28 height=2.8 curve=0 direction=down
+  #17 ramp    @ 360.0 y=0     length=5 height=1 curve=0 direction=up
+  #18 gap     @ 365.0 y=0     width=4 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #19 ramp    @ 369.0 y=0     length=6 height=0.8 curve=0 direction=up
+  #20 box     @ 375.0 y=0     width=5 height=0.8
+  #21 ramp    @ 380.0 y=0     length=8 height=0.8 curve=0 direction=down
+  #22 ramp    @ 472.0 y=0     length=3 height=0.75 curve=0 direction=up
+  #23 box     @ 475.0 y=0     width=2.4 height=2.5
+  #24 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #25 arch    @ 429.0 y=0     span=6 height=5 style=crowd (decor)
+  #26 arch    @ 439.0 y=0     span=6 height=5 style=finish (decor)
+  hash=dcd871366552383e
+
+stdout | src/tracks/tracks.test.ts > a1-sawdust > prints the course summary
+a1-sawdust  "Sawdust"  tier=easy  length=398 m  obstacles=27  colliders=31  hazards=2
+  biome=alpine  technique="stairs at speed, then release and pitch forward over the flume landing"  demands="climb the 24 deg flume, cross the pond and land level on the deck"
+  attemptsBand=1-3  targetTimeS=35  cameraKeys=9  hints=2
+  checkpoints: 46, 193, 278  finishX=398.442506  bounds=[-10,441.555098]x[-3,4]  oobY=-9
+  setPieces: start"The Mill Gate"[0-24], climb"The Loading Dock"[62-86], climb"The Saw Shed"[209-228], air"The Flume"[296-352], finish[388-398]
+  # 0 drum    @  24.0 y=0     radius=0.4 depth=0.6 rolls=false
+  # 1 drum    @  32.8 y=0     radius=0.4 depth=0.6 rolls=false
+  # 2 stair   @  61.6 y=0     count=8 height=0.12 length=0.8 direction=up
+  # 3 box     @  68.0 y=0     width=8 height=0.96
+  # 4 ramp    @  76.0 y=0     length=10 height=0.96 curve=0 direction=down
+  # 5 ramp    @ 136.0 y=0     length=5 height=1.2 curve=0 direction=up
+  # 6 gap     @ 141.0 y=0     width=5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 7 ramp    @ 146.0 y=0     length=8 height=1 curve=0 direction=up
+  # 8 box     @ 154.0 y=0     width=6 height=1
+  # 9 ramp    @ 160.0 y=0     length=10 height=1 curve=0 direction=down
+  #10 drum    @ 182.0 y=0     radius=0.5 depth=0.75 rolls=false
+  #11 stair   @ 209.0 y=0     count=10 height=0.12 length=0.8 direction=up
+  #12 box     @ 217.0 y=0     width=6 height=1.2
+  #13 stair   @ 223.0 y=0     count=8 height=0.15 length=0.6 direction=down
+  #14 ramp    @ 295.8 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #15 plank   @ 296.6 y=0.3   length=4.18 angleDeg=24 height=0
+  #16 box     @ 300.4 y=0     width=16 height=2
+  #17 ramp    @ 316.4 y=2     length=2 height=0.4 curve=0 direction=up
+  #18 gap     @ 318.4 y=0     width=6 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #19 ramp    @ 324.4 y=0     length=8 height=1.2 curve=0 direction=up
+  #20 box     @ 332.4 y=0     width=8 height=1.2
+  #21 ramp    @ 340.4 y=0     length=12 height=1.2 curve=0 direction=down
+  #22 ramp    @ 428.4 y=0     length=3 height=0.75 curve=0 direction=up
+  #23 box     @ 431.4 y=0     width=2.4 height=2.5
+  #24 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #25 arch    @ 385.4 y=0     span=6 height=5 style=crowd (decor)
+  #26 arch    @ 395.4 y=0     span=6 height=5 style=finish (decor)
+  hash=3576427b1ee3ff5a
+
+stdout | src/tracks/tracks.test.ts > a2-log-jam > prints the course summary
+a2-log-jam  "Log Jam"  tier=medium  length=392 m  obstacles=22  colliders=44  hazards=1
+  biome=alpine  technique="preload and level over the first log stack, then meter speed across the teetering log"  demands="the jam: a 3.5 m jump onto a 22 deg teetering log, then a five-log two-row pile"
+  attemptsBand=2-4  targetTimeS=35  cameraKeys=10  hints=3
+  checkpoints: 24, 115, 274  finishX=391.5  bounds=[-10,434.612592]x[-3,4]  oobY=-9
+  setPieces: start"The Landing"[0-24], balance"The Jam"[290-336], finish[382-392]
+  # 0 ramp    @  40.0 y=0     length=4 height=0.6 curve=0 direction=up
+  # 1 logpile @  44.0 y=0     radius=0.3 count=5 rows=2
+  # 2 ramp    @ 118.0 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  # 3 seesaw  @ 118.8 y=0     length=8 height=1.2
+  # 4 ramp    @ 196.8 y=0     length=3 height=1 curve=0 direction=up
+  # 5 box     @ 199.8 y=0     width=1 height=1
+  # 6 drum    @ 200.8 y=0     radius=0.6 depth=0 rolls=false
+  # 7 box     @ 202.0 y=0     width=1 height=1
+  # 8 ramp    @ 203.0 y=0     length=3 height=1 curve=0 direction=down
+  # 9 ramp    @ 216.0 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  #10 seesaw  @ 216.8 y=0     length=8 height=1.5
+  #11 ramp    @ 290.0 y=0     length=4 height=1 curve=0 direction=up
+  #12 gap     @ 294.0 y=0     width=3.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #13 seesaw  @ 297.5 y=0     length=8 height=1.6
+  #14 ramp    @ 319.5 y=0     length=4 height=0.6 curve=0 direction=up
+  #15 logpile @ 323.5 y=0     radius=0.3 count=5 rows=2
+  #16 ramp    @ 326.5 y=0     length=9 height=0.9 curve=0 direction=down
+  #17 ramp    @ 421.5 y=0     length=3 height=0.75 curve=0 direction=up
+  #18 box     @ 424.5 y=0     width=2.4 height=2.5
+  #19 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #20 arch    @ 378.5 y=0     span=6 height=5 style=crowd (decor)
+  #21 arch    @ 388.5 y=0     span=6 height=5 style=finish (decor)
+  hash=17aa87ab00450408
+
+stdout | src/tracks/tracks.test.ts > a3-timberline > prints the course summary
+a3-timberline  "Timberline"  tier=medium  length=344 m  obstacles=27  colliders=31  hazards=4
+  biome=alpine  technique="lift the front for the truck load, then settle on the thin landing"  demands="hop onto the truck, lift over its 0.5 m log load, then clear the exit"
+  attemptsBand=2-5  targetTimeS=29  cameraKeys=9  hints=2
+  checkpoints: 24, 85, 174, 226  finishX=343.7  bounds=[-10,386.812592]x[-3,4]  oobY=-9
+  setPieces: start"The Logging Road"[0-24], air"The Log Loader"[242-292], finish[334-344]
+  # 0 ledge   @  31.0 y=0     height=0.4 length=7
+  # 1 ramp    @  38.0 y=0     length=5 height=0.4 curve=0 direction=down
+  # 2 ramp    @ 101.0 y=0     length=5 height=1 curve=0 direction=up
+  # 3 gap     @ 106.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 4 ramp    @ 109.0 y=0.75  length=2 height=0.25 curve=0 direction=up
+  # 5 plank   @ 111.0 y=0     length=6 angleDeg=0 height=1
+  # 6 ramp    @ 117.0 y=0     length=5 height=1 curve=0 direction=down
+  # 7 ledge   @ 181.0 y=0     height=0.4 length=6
+  # 8 gap     @ 187.0 y=0     width=1.2 depth=2 hazard=water rise=0 floor=dirt (decor)
+  # 9 ramp    @ 188.2 y=0.2   length=2 height=0.2 curve=0 direction=up
+  #10 box     @ 190.2 y=0     width=6 height=0.4
+  #11 ramp    @ 196.2 y=0     length=5 height=0.4 curve=0 direction=down
+  #12 drum    @ 215.2 y=0     radius=0.5 depth=0.75 rolls=false
+  #13 ramp    @ 242.2 y=0     length=6 height=1.2 curve=0 direction=up
+  #14 gap     @ 248.2 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #15 ramp    @ 251.2 y=0.95  length=2 height=0.25 curve=0 direction=up
+  #16 box     @ 253.2 y=0     width=8 height=1.2
+  #17 ledge   @ 261.2 y=1.2   height=0.5 length=6
+  #18 gap     @ 267.2 y=0     width=1.5 depth=2 hazard=water rise=0 floor=dirt (decor)
+  #19 ramp    @ 268.7 y=1.38  length=3 height=0.32 curve=0 direction=up
+  #20 box     @ 271.7 y=0     width=6 height=1.7
+  #21 ramp    @ 277.7 y=0     length=14 height=1.7 curve=0 direction=down
+  #22 ramp    @ 373.7 y=0     length=3 height=0.75 curve=0 direction=up
+  #23 box     @ 376.7 y=0     width=2.4 height=2.5
+  #24 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #25 arch    @ 330.7 y=0     span=6 height=5 style=crowd (decor)
+  #26 arch    @ 340.7 y=0     span=6 height=5 style=finish (decor)
+  hash=0f8561baf09bd28e
+
+stdout | src/tracks/tracks.test.ts > d1-dust-devil > prints the course summary
+d1-dust-devil  "Dust Devil"  tier=medium  length=376 m  obstacles=21  colliders=24  hazards=1
+  biome=quarry  technique="the hop onto blocks, the cut terraces, and the whoops at speed"  demands="the terraces: a 0.4 m hop and three 0.4 m cut steps up to 1.6 m, off the top; then a 1.4 m hop across the drill trench"
+  attemptsBand=3-6  targetTimeS=31.5  cameraKeys=10  hints=0
+  checkpoints: 24, 75, 184, 261  finishX=376  bounds=[-10,419.112592]x[-2,4]  oobY=-8
+  setPieces: start"The Pit Head"[0-24], climb"The Terraces"[91-134], drop"The Dust Devil"[290-358], finish[366-376]
+  # 0 ledge   @  31.0 y=0     height=0.4 length=7
+  # 1 ramp    @  38.0 y=0     length=5 height=0.4 curve=0 direction=down
+  # 2 drum    @  53.0 y=0     radius=0.6 depth=1 rolls=false
+  # 3 drum    @  62.2 y=0     radius=0.6 depth=1 rolls=false
+  # 4 ledge   @  91.4 y=0     height=0.4 length=7
+  # 5 ledge   @  98.4 y=0     height=0.8 length=6
+  # 6 ledge   @ 104.4 y=0     height=1.2 length=6
+  # 7 ledge   @ 110.4 y=0     height=1.6 length=8
+  # 8 ramp    @ 118.4 y=0     length=16 height=1.6 curve=0 direction=down
+  # 9 ledge   @ 191.4 y=0     height=0.4 length=6
+  #10 gap     @ 197.4 y=0     width=1.4 depth=2 hazard=water rise=0 floor=dirt (decor)
+  #11 ramp    @ 198.8 y=0.2   length=2 height=0.2 curve=0 direction=up
+  #12 box     @ 200.8 y=0     width=6 height=0.4
+  #13 ramp    @ 206.8 y=0     length=5 height=0.4 curve=0 direction=down
+  #14 ledge   @ 268.0 y=0     height=0.4 length=7
+  #15 ramp    @ 275.0 y=0     length=5 height=0.4 curve=0 direction=down
+  #16 ramp    @ 406.0 y=0     length=3 height=0.75 curve=0 direction=up
+  #17 box     @ 409.0 y=0     width=2.4 height=2.5
+  #18 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #19 arch    @ 363.0 y=0     span=6 height=5 style=crowd (decor)
+  #20 arch    @ 373.0 y=0     span=6 height=5 style=finish (decor)
+  hash=e929843cb2cd5fb3
+
+stdout | src/tracks/tracks.test.ts > d2-conveyor > prints the course summary
+d2-conveyor  "Conveyor"  tier=hard  length=508 m  obstacles=41  colliders=49  hazards=3
+  biome=quarry  technique="momentum climbs up the belts and the spinning pulley"  demands="the head pulley: the 45 deg main belt to 3.0 m, a 0.4 m hop onto the drive frame, the spinning head drum, the tail chute down; then the ore-cart run"
+  attemptsBand=3-7  targetTimeS=43  cameraKeys=9  hints=0
+  checkpoints: 24, 119, 195, 333  finishX=508.278077  bounds=[-10,551.390669]x[-3,5]  oobY=-9
+  setPieces: start"The Weighbridge"[0-24], climb"The Feed Belt"[44-81], climb"The Head Pulley"[225-286], air"The Cart Run"[363-458], finish[498-508]
+  # 0 ramp    @  44.0 y=0     length=0.82 height=0.3 curve=0 direction=up
+  # 1 plank   @  44.8 y=0.3   length=3.27 angleDeg=40 height=0
+  # 2 box     @  47.3 y=0     width=8 height=2.4
+  # 3 ledge   @  55.3 y=2.4   height=0.4 length=6
+  # 4 ramp    @  61.3 y=0     length=20 height=2.8 curve=0 direction=down
+  # 5 ramp    @ 135.3 y=0     length=4 height=1.2 curve=0 direction=up
+  # 6 box     @ 139.3 y=0     width=1 height=1.2
+  # 7 drum    @ 140.3 y=0     radius=0.8 depth=0 rolls=true
+  # 8 box     @ 141.9 y=0     width=1 height=1.2
+  # 9 ramp    @ 142.9 y=0     length=4 height=1.2 curve=0 direction=down
+  #10 ramp    @ 224.9 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #11 plank   @ 225.8 y=0.3   length=3.82 angleDeg=45 height=0
+  #12 box     @ 228.5 y=0     width=10 height=3
+  #13 ledge   @ 238.5 y=3     height=0.4 length=6
+  #14 ramp    @ 244.5 y=3.4   length=4 height=1.2 curve=0 direction=up
+  #15 box     @ 248.5 y=3.4   width=1 height=1.2
+  #16 drum    @ 249.5 y=3.4   radius=0.8 depth=0 rolls=true
+  #17 box     @ 251.1 y=3.4   width=1 height=1.2
+  #18 ramp    @ 252.1 y=3.4   length=4 height=1.2 curve=0 direction=down
+  #19 box     @ 256.1 y=0     width=4 height=3.4
+  #20 ramp    @ 260.1 y=0     length=26 height=3.4 curve=0 direction=down
+  #21 ramp    @ 363.3 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #22 plank   @ 364.1 y=0.3   length=5.07 angleDeg=22 height=0
+  #23 gap     @ 368.8 y=0     width=5.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #24 ramp    @ 374.3 y=0     length=6 height=0.8 curve=0 direction=up
+  #25 box     @ 380.3 y=0     width=9 height=0.8
+  #26 ramp    @ 389.3 y=0     length=10 height=0.8 curve=0 direction=down
+  #27 ramp    @ 415.3 y=0     length=4 height=0.8 curve=0 direction=up
+  #28 gap     @ 419.3 y=0     width=3.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #29 ramp    @ 422.8 y=0.5   length=3 height=0.4 curve=0 direction=up
+  #30 box     @ 425.8 y=0     width=7 height=0.9
+  #31 ramp    @ 432.8 y=0.9   length=2 height=0.4 curve=0 direction=up
+  #32 gap     @ 434.8 y=0     width=2.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #33 ramp    @ 437.3 y=0     length=6 height=0.9 curve=0 direction=up
+  #34 box     @ 443.3 y=0     width=5 height=0.9
+  #35 ramp    @ 448.3 y=0     length=10 height=0.9 curve=0 direction=down
+  #36 ramp    @ 538.3 y=0     length=3 height=0.75 curve=0 direction=up
+  #37 box     @ 541.3 y=0     width=2.4 height=2.5
+  #38 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #39 arch    @ 495.3 y=0     span=6 height=5 style=crowd (decor)
+  #40 arch    @ 505.3 y=0     span=6 height=5 style=finish (decor)
+  hash=5728b6bceabad9cb
+
+stdout | src/tracks/tracks.test.ts > d3-rope-walk > prints the course summary
+d3-rope-walk  "Rope Walk"  tier=hard  length=461 m  obstacles=46  colliders=34  hazards=23
+  biome=quarry  technique="the rear-wheel crossing and the lip climb"  demands="the rope walk: up onto the bridge deck at 1.5 m and across six missing boards on the rear wheel"
+  attemptsBand=4-8  targetTimeS=43.75  cameraKeys=9  hints=0
+  checkpoints: 24, 106, 169, 252, 337  finishX=460.7  bounds=[-10,503.812592]x[-1.5,4]  oobY=-7.5
+  setPieces: start"The Pit Rim"[0-24], balance"The Rope Walk"[353-405], finish[451-461]
+  # 0 gap     @  47.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 1 gap     @  49.6 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 2 gap     @  52.2 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 3 gap     @  54.8 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 4 gap     @  57.4 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 5 ramp    @ 109.0 y=0     length=0.8 height=0.15 curve=0.5 direction=up
+  # 6 seesaw  @ 109.8 y=0     length=8 height=1.2
+  # 7 ramp    @ 185.0 y=0     length=3.5 height=0.7 curve=0 direction=up
+  # 8 wall    @ 188.5 y=0     height=1 width=8 lip=0.15
+  # 9 gap     @ 199.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #10 gap     @ 201.8 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #11 gap     @ 204.1 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #12 gap     @ 206.4 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #13 gap     @ 208.7 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #14 gap     @ 211.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #15 gap     @ 213.3 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #16 ramp    @ 267.6 y=0     length=4.5 height=0.9 curve=0 direction=up
+  #17 wall    @ 272.1 y=0     height=1.2 width=8 lip=0.15
+  #18 gap     @ 283.1 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #19 gap     @ 285.3 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #20 gap     @ 287.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #21 gap     @ 289.7 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #22 gap     @ 291.9 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #23 ramp    @ 353.3 y=0     length=10 height=1.5 curve=0 direction=up
+  #24 ledge   @ 363.3 y=0     height=1.5 length=8
+  #25 gap     @ 371.3 y=0     width=1.8 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #26 ledge   @ 373.1 y=0     height=1.5 length=0.6
+  #27 gap     @ 373.7 y=0     width=1.8 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #28 ledge   @ 375.5 y=0     height=1.5 length=0.6
+  #29 gap     @ 376.1 y=0     width=1.8 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #30 ledge   @ 377.9 y=0     height=1.5 length=0.6
+  #31 gap     @ 378.5 y=0     width=1.8 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #32 ledge   @ 380.3 y=0     height=1.5 length=0.6
+  #33 gap     @ 380.9 y=0     width=1.8 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #34 ledge   @ 382.7 y=0     height=1.5 length=0.6
+  #35 gap     @ 383.3 y=0     width=1.8 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #36 ledge   @ 385.1 y=0     height=1.5 length=0.6
+  #37 ledge   @ 385.7 y=0     height=1.5 length=5
+  #38 ramp    @ 390.7 y=0     length=14 height=1.5 curve=0 direction=down
+  #39 ramp    @ 490.7 y=0     length=3 height=0.75 curve=0 direction=up
+  #40 box     @ 493.7 y=0     width=2.4 height=2.5
+  #41 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #42 arch    @ 447.7 y=0     span=6 height=5 style=crowd (decor)
+  #43 arch    @ 457.7 y=0     span=6 height=5 style=finish (decor)
+  #44 plank   @ 385.7 y=1.5   length=5 angleDeg=18 height=0.2
+  #45 open-platform @ 396.0 y=0     length=34 height=3.5 thickness=0.18
+  hash=d5f37b8ce4abcf3b
+
+stdout | src/tracks/tracks.test.ts > s1-lift-line > prints the course summary
+s1-lift-line  "Lift Line"  tier=hard  length=456 m  obstacles=41  colliders=51  hazards=5
+  biome=snow  technique="tower caps, ice-shelf gaps and a controlled station landing"  demands="settle at the station lip, then climb three tower caps over the crevasse"
+  attemptsBand=5-10  targetTimeS=40.25  cameraKeys=9  hints=4
+  checkpoints: 24, 146, 237, 350  finishX=455.826908  bounds=[-10,498.9395]x[-3,4.6]  oobY=-9
+  setPieces: start"The Base Station"[0-24], balance"The First Towers"[158-187], balance"The Lift Line"[362-400], finish[446-456]
+  # 0 ramp    @  40.0 y=0     length=5 height=1 curve=0 direction=up
+  # 1 gap     @  45.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 2 ramp    @  48.0 y=0.6   length=3 height=0.4 curve=0 direction=up
+  # 3 box     @  51.0 y=0     width=7 height=1
+  # 4 ramp    @  58.0 y=1     length=2 height=0.4 curve=0 direction=up
+  # 5 gap     @  60.0 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 6 ramp    @  63.0 y=0.8   length=3 height=0.4 curve=0 direction=up
+  # 7 box     @  66.0 y=0     width=7 height=1.2
+  # 8 ramp    @  73.0 y=1.2   length=2 height=0.4 curve=0 direction=up
+  # 9 gap     @  75.0 y=0     width=2.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #10 ramp    @  77.5 y=0     length=6 height=1.2 curve=0 direction=up
+  #11 box     @  83.5 y=0     width=5 height=1.2
+  #12 ramp    @  88.5 y=0     length=10 height=1.2 curve=0 direction=down
+  #13 ramp    @ 157.7 y=0     length=5 height=1 curve=0 direction=up
+  #14 box     @ 162.7 y=0     width=4 height=1
+  #15 gap     @ 166.7 y=0     width=4.2 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #16 pole    @ 166.7 y=0     height=1.3 radius=0.3 count=1 spacing=1.8
+  #17 pole    @ 168.5 y=0     height=1.3 radius=0.3 count=1 spacing=1.8
+  #18 pole    @ 170.3 y=0     height=1.3 radius=0.3 count=1 spacing=1.8
+  #19 box     @ 171.5 y=0     width=5 height=1.3
+  #20 ramp    @ 176.5 y=0     length=10 height=1.3 curve=0 direction=down
+  #21 ramp    @ 266.5 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #22 plank   @ 267.3 y=0.3   length=5.07 angleDeg=22 height=0
+  #23 box     @ 272.0 y=0     width=12 height=2.2
+  #24 ramp    @ 284.0 y=0     length=28 height=2.2 curve=0 direction=down
+  #25 ramp    @ 362.0 y=0     length=5 height=1 curve=0 direction=up
+  #26 box     @ 367.0 y=0     width=4 height=1
+  #27 gap     @ 371.0 y=0     width=4.2 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #28 pole    @ 371.0 y=0     height=1.3 radius=0.3 count=1 spacing=1.8
+  #29 pole    @ 372.8 y=0     height=1.45 radius=0.3 count=1 spacing=1.8
+  #30 pole    @ 374.6 y=0     height=1.6 radius=0.3 count=1 spacing=1.8
+  #31 box     @ 375.8 y=0     width=6 height=1.6
+  #32 ramp    @ 381.8 y=1.6   length=2 height=0.4 curve=0 direction=up
+  #33 ramp    @ 383.8 y=0     length=16 height=1.5 curve=0 direction=down
+  #34 ramp    @ 485.8 y=0     length=3 height=0.75 curve=0 direction=up
+  #35 box     @ 488.8 y=0     width=2.4 height=2.5
+  #36 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #37 arch    @ 442.8 y=0     span=6 height=5 style=crowd (decor)
+  #38 arch    @ 452.8 y=0     span=6 height=5 style=finish (decor)
+  #39 open-platform @ 288.0 y=0     length=10 height=4.6 thickness=0.18
+  #40 plank   @ 298.0 y=0     length=8 angleDeg=-15 height=4.6
+  hash=d062c03be545fd64
+
+stdout | src/tracks/tracks.test.ts > s2-cornice > prints the course summary
+s2-cornice  "Cornice"  tier=extreme  length=459 m  obstacles=44  colliders=46  hazards=11
+  biome=snow  technique="ice face, rollers, fence hop"  demands="wind shelf for Diamond"
+  attemptsBand=6-12  targetTimeS=44.5  cameraKeys=10  hints=0
+  checkpoints: 24, 110, 241, 360  finishX=459.424243  bounds=[-10,502.536835]x[-3,8.5]  oobY=-9
+  setPieces: start"The Hut"[0-24], balance"The Snow-Cat"[40-63], climb"The Cornice"[140-201], finish[449-459]
+  # 0 ramp    @  40.0 y=0     length=4 height=1.2 curve=0 direction=up
+  # 1 box     @  44.0 y=0     width=1 height=1.2
+  # 2 drum    @  45.0 y=0     radius=0.8 depth=0 rolls=true
+  # 3 gap     @  46.6 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 4 drum    @  48.1 y=0     radius=0.8 depth=0 rolls=true
+  # 5 gap     @  49.7 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  # 6 drum    @  51.2 y=0     radius=0.8 depth=0 rolls=true
+  # 7 box     @  52.8 y=0     width=2 height=1.2
+  # 8 ramp    @  54.8 y=0     length=8 height=1.2 curve=0 direction=down
+  # 9 ramp    @ 140.0 y=0     length=0.82 height=0.3 curve=0 direction=up
+  #10 plank   @ 140.8 y=0.3   length=4.38 angleDeg=45 height=0
+  #11 box     @ 143.9 y=0     width=16 height=3.4
+  #12 ramp    @ 159.9 y=3.4   length=2 height=0.4 curve=0 direction=up
+  #13 gap     @ 161.9 y=0     width=5.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #14 ramp    @ 167.4 y=0     length=8 height=2.2 curve=0 direction=up
+  #15 box     @ 175.4 y=0     width=6 height=2.2
+  #16 ramp    @ 181.4 y=0     length=20 height=2.2 curve=0 direction=down
+  #17 ledge   @ 249.4 y=0     height=0.4 length=6
+  #18 gap     @ 255.4 y=0     width=1.2 depth=2 hazard=water rise=0 floor=dirt (decor)
+  #19 ramp    @ 256.6 y=0.2   length=2 height=0.2 curve=0 direction=up
+  #20 box     @ 258.6 y=0     width=6 height=0.4
+  #21 ramp    @ 264.6 y=0     length=5 height=0.4 curve=0 direction=down
+  #22 ramp    @ 283.6 y=0     length=3.5 height=0.7 curve=0 direction=up
+  #23 wall    @ 287.1 y=0     height=1 width=8 lip=0.15
+  #24 gap     @ 298.1 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #25 gap     @ 300.3 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #26 gap     @ 302.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #27 gap     @ 304.7 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #28 gap     @ 306.9 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #29 gap     @ 309.1 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  #30 ramp    @ 371.8 y=0     length=5 height=1 curve=0 direction=up
+  #31 box     @ 376.8 y=0     width=4 height=1
+  #32 gap     @ 380.8 y=0     width=4 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #33 pole    @ 380.8 y=0     height=1.35 radius=0.3 count=1 spacing=1.8
+  #34 pole    @ 382.5 y=0     height=1.35 radius=0.3 count=1 spacing=1.8
+  #35 pole    @ 384.2 y=0     height=1.35 radius=0.3 count=1 spacing=1.8
+  #36 box     @ 385.4 y=0     width=5 height=1.35
+  #37 ramp    @ 390.4 y=0     length=11 height=1.35 curve=0 direction=down
+  #38 ramp    @ 489.4 y=0     length=3 height=0.75 curve=0 direction=up
+  #39 box     @ 492.4 y=0     width=2.4 height=2.5
+  #40 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #41 arch    @ 446.4 y=0     span=6 height=5 style=crowd (decor)
+  #42 arch    @ 456.4 y=0     span=6 height=5 style=finish (decor)
+  #43 open-platform @ 157.0 y=0     length=13 height=8.5 thickness=0.18
+  hash=9c9e7d52ddebf852
+
+stdout | src/tracks/tracks.test.ts > s3-whiteout > prints the course summary
+s3-whiteout  "Whiteout"  tier=extreme  length=425 m  obstacles=47  colliders=48  hazards=13
+  biome=snow  technique="everything, closer together"  demands="the summit: a climbing ice-shelf chain to 2.2 m, four summit tower caps at 2.55 m over the crevasse, off the station and down"
+  attemptsBand=8-16  targetTimeS=39.5  cameraKeys=11  hints=1
+  checkpoints: 24, 112, 193, 271  finishX=425.1  bounds=[-10,468.212592]x[-3,4]  oobY=-9
+  setPieces: start"The Top Station"[0-24], climb"The Summit Towers"[287-367], drop"The Whiteout"[377-407], finish[415-425]
+  # 0 ramp    @  40.0 y=0     length=3.5 height=0.7 curve=0 direction=up
+  # 1 wall    @  43.5 y=0     height=1 width=8 lip=0.15
+  # 2 gap     @  54.5 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 3 gap     @  56.8 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 4 gap     @  59.1 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 5 gap     @  61.4 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 6 gap     @  63.7 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 7 gap     @  66.0 y=0     width=0.7 depth=1.5 hazard=kill rise=0 floor=dirt (decor)
+  # 8 ramp    @ 127.5 y=0     length=4 height=1.3 curve=0 direction=up
+  # 9 box     @ 131.5 y=0     width=1 height=1.3
+  #10 drum    @ 132.5 y=0     radius=0.9 depth=0 rolls=true
+  #11 gap     @ 134.3 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #12 drum    @ 135.8 y=0     radius=0.9 depth=0 rolls=true
+  #13 gap     @ 137.6 y=0     width=1.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #14 drum    @ 139.1 y=0     radius=0.9 depth=0 rolls=true
+  #15 box     @ 140.9 y=0     width=2 height=1.3
+  #16 ramp    @ 142.9 y=0     length=10 height=1.3 curve=0 direction=down
+  #17 ledge   @ 200.9 y=0     height=0.4 length=6
+  #18 gap     @ 206.9 y=0     width=1.2 depth=2 hazard=water rise=0 floor=dirt (decor)
+  #19 ramp    @ 208.1 y=0.2   length=2 height=0.2 curve=0 direction=up
+  #20 box     @ 210.1 y=0     width=6 height=0.4
+  #21 ramp    @ 216.1 y=0     length=5 height=0.4 curve=0 direction=down
+  #22 ramp    @ 287.1 y=0     length=5 height=1 curve=0 direction=up
+  #23 gap     @ 292.1 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #24 ramp    @ 295.1 y=1     length=3 height=0.4 curve=0 direction=up
+  #25 box     @ 298.1 y=0     width=5 height=1.4
+  #26 ramp    @ 303.1 y=1.4   length=2 height=0.4 curve=0 direction=up
+  #27 gap     @ 305.1 y=0     width=3 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #28 ramp    @ 308.1 y=1.4   length=3 height=0.4 curve=0 direction=up
+  #29 box     @ 311.1 y=0     width=5 height=1.8
+  #30 ramp    @ 316.1 y=1.8   length=2 height=0.4 curve=0 direction=up
+  #31 gap     @ 318.1 y=0     width=2.5 depth=3 hazard=water rise=0 floor=dirt (decor)
+  #32 ramp    @ 320.6 y=1.8   length=3 height=0.4 curve=0 direction=up
+  #33 box     @ 323.6 y=0     width=10 height=2.2
+  #34 gap     @ 333.6 y=0     width=6 depth=2 hazard=kill rise=0 floor=dirt (decor)
+  #35 pole    @ 333.6 y=0     height=2.55 radius=0.3 count=1 spacing=1.8
+  #36 pole    @ 335.4 y=0     height=2.55 radius=0.3 count=1 spacing=1.8
+  #37 pole    @ 337.2 y=0     height=2.55 radius=0.3 count=1 spacing=1.8
+  #38 pole    @ 339.0 y=0     height=2.55 radius=0.3 count=1 spacing=1.8
+  #39 box     @ 340.1 y=0     width=5 height=2.6
+  #40 ramp    @ 345.1 y=0     length=22 height=2.6 curve=0 direction=down
+  #41 ramp    @ 455.1 y=0     length=3 height=0.75 curve=0 direction=up
+  #42 box     @ 458.1 y=0     width=2.4 height=2.5
+  #43 arch    @   3.0 y=0     span=6 height=5 style=start (decor)
+  #44 arch    @ 412.1 y=0     span=6 height=5 style=crowd (decor)
+  #45 arch    @ 422.1 y=0     span=6 height=5 style=finish (decor)
+  #46 open-platform @ 144.0 y=0     length=8 height=3.1 thickness=0.18
+  hash=70b3eeca1aed9ccb
+
+ ✓ src/tracks/tracks.test.ts (429 tests) 343ms
+ ✓ src/physics/snapshot.test.ts (3 tests) 275ms
+stdout | src/physics/feel.test.ts > static settle (F1) > sits level at static sag and comes to rest
+FEEL settle.pitchDeg = 0.790 [|pitch| < 1]
+FEEL settle.rearComp = 0.271 [0.08-0.35]
+FEEL settle.frontComp = 0.254 [0.03-0.35]
+FEEL settle.speed = 0.000 [< 0.01]
+
+stdout | src/physics/feel.test.ts > launch and top speed (C2) > 0 -> 16 m/s on flat dirt in <= 3.5 s and limiter-bound top speed ~20 m/s
+FEEL launch.t16 = 2.192 [<= 3.5 s]
+FEEL launch.topSpeed = 20.351 [19-21 m/s]
+FEEL launch.maxPitchDeg = 8.340 [info]
+
+stdout | src/physics/feel.test.ts > stranger launch and speed governor (round 2) > thr=1 lean=+0.4 held constant finishes flat-test without a fault
+FEEL stranger.thr1.lean0.4.finish = 7.042 [> 0, no fault]
+
+stdout | src/physics/feel.test.ts > stranger launch and speed governor (round 2) > thr=1 lean=0 held from rest lifts the front into a self-limiting wheelie (30-40 deg, never loops) and reaches the finish (round 8: pitch-aware drive; round 7 looped at 2.26 s / x 24 m, every stranger's first crash); lean -0.3 the same
+FEEL wheelieControl.thr1.lean0.maxPitchDeg = 38.033 [25-42 (a wheelie, not a loop)]
+FEEL wheelieControl.thr1.lean0.plateauDeg = 37.5..38.0 [info (pitch band after 3 s)]
+FEEL wheelieControl.thr1.lean0.finish = 9.308 [> 0, no fault (120 m)]
+FEEL wheelieControl.thr1.lean0.top = 13.914 [info (the wheelie costs top speed)]
+FEEL wheelieControl.thr1.lean-0.3.maxPitchDeg = 39.176 [25-42]
+FEEL wheelieControl.thr1.lean-0.3.finish = 9.042 [> 0, no fault]
+
+stdout | src/physics/feel.test.ts > stranger launch and speed governor (round 2) > looping is deliberate: thr=1 with lean <= -0.5 (the wheelie control is off) still loops (lean -0.5 at ~1.4 s; lean -1 at 2.4 s: sitting all the way back at full throttle is the hop preload and the crouched rider loops when he stands back up); the control never touches partial throttle
+FEEL loop.thr1.leanBack.at = 2.492 [loops (design ~0.7-1.2 s; 2.4: the preload crouch delays it, 12.4 (0b))]
+FEEL loop.thr1.lean-0.5.at = 1.367 [loops <= 1.5 s]
+FEEL loop.thr0.7.lean0.maxPitchDeg = 6.992 [< 15 (front stays down)]
+
+stdout | src/physics/feel.test.ts > stranger launch and speed governor (round 2) > partial throttle tops out below the limiter: thr 0.3 ~ 11-13, thr 0.6 ~ 16-18, thr 1 ~ 20 m/s
+FEEL governor.thr0.3.top = 10.963 [11-13 m/s]
+FEEL governor.thr0.6.top = 17.801 [16-18 m/s]
+FEEL governor.thr1.top = 18.656 [18-21 m/s (lean +1: the rear is nearly unloaded at speed and spins, round 9: the drag field acts through the low lean-+1 COM)]
+FEEL governor.thr1.lean1.t16 = 2.983 [<= 4.5 s (full forward lean unloads the rear off the line)]
+
+stdout | src/physics/feel.test.ts > brakes (C4) > stops from 10 m/s without an endo (lean back)
+FEEL brake.stopDist.leanBack = 3.140 [<= 4.5 m]
+FEEL brake.minPitchDeg.leanBack = -7.582 [> -30]
+
+stdout | src/physics/feel.test.ts > brakes (C4) > full brake at neutral lean does not flip the bike
+FEEL brake.stopDist.lean0 = 5.087 [info]
+
+stdout | src/physics/feel.test.ts > bunny hop technique (C5) > stationary hop from lean-back preload + snap forward: rear apex 0.55-0.75 m, phases visible
+FEEL hop.rearApex = 0.671 [0.55-0.75 m]
+FEEL hop.airtime = 0.525 [0.45-0.9 s]
+FEEL hop.phases = idle>preload>push>recover [idle>preload>push>recover]
+
+stdout | src/physics/feel.test.ts > bunny hop technique (C5) > 5 m/s run-up onto a 0.9 m ledge: wheelie held at 45 deg so the front meets the lip, snap 1.3 m out, rear follows, rides away (round 6: 6 of 80 hopper parameter combos make it at 1.4 g)
+FEEL ledge.0.9.made = yes [yes]
+FEEL ledge.0.9.rearLiftAtWall = 1.063 [info (>= 0.9 needed: the plate no longer hooks the edge)]
+FEEL ledge.0.9.landPitchDeg = -11.061 [info]
+FEEL ledge.0.9.rideAway = yes [yes]
+FEEL ledge.0.9.fault = none [none]
+
+stdout | src/physics/feel.test.ts > bunny hop technique (C5) > 5 m/s run-up onto a 0.5 m ledge is makeable
+FEEL ledge.0.5.made = yes [yes]
+
+stdout | src/physics/feel.test.ts > climb (C6) > sustains a 55 deg plank with lean forward (climber: pop, walk the rear into the corner, throttle as the pitch loop)
+FEEL climb.55.top = yes [yes]
+FEEL climb.55.time = 1.775 [info (4 m plank)]
+FEEL climb.55.fault = none [none]
+
+stdout | src/physics/feel.test.ts > climb (C6) > climbs >= 2.5 m of a 60 deg plank with lean forward without a fault (round 7: crests the 3.46 m plank in 3.0 s; round 6 hung at 2.96 m)
+FEEL climb.60.maxY = 3.464 [>= 2.5 m of 3.46]
+FEEL climb.60.top = yes [yes]
+FEEL climb.60.time = 2.908 [info (4 m plank)]
+FEEL climb.60.fault = none [none]
+
+stdout | src/physics/feel.test.ts > climb (C6) > stalls on a 65 deg plank and rolls back without a fault
+FEEL climb.65.top = no [no]
+FEEL climb.65.rollback = 0.397 [> 0.2 m (stalls at the base corner, comes back down on the front wheel)]
+FEEL climb.65.fault = none [none]
+
+stdout | src/physics/feel.test.ts > climb (C6) > does not climb a 70 deg plank by riding
+FEEL climb.70.top = no [no]
+
+stdout | src/physics/feel.test.ts > wheelie balance (C7) > balance pitch at lean 0 is 40-50 deg; lean moves it
+FEEL wheelie.balanceDeg.lean0 = 48.442 [40-50]
+FEEL wheelie.balanceDeg.leanBack = 38.055 [< lean0]
+FEEL wheelie.balanceDeg.leanFwd = 70.197 [> lean0]
+FEEL wheelie.balanceDeg.accel3 = 36.120 [< lean0 (gas lifts the nose)]
+
+stdout | src/physics/feel.test.ts > wheelie balance (C7) > open loop diverges in 1-2 s from a 0.5 deg error, in the direction of the error
+FEEL wheelie.openLoopLeave.+0.5 = 0.775 [1-2 s]
+FEEL wheelie.openLoopLeave.-0.5 = 0.767 [1-2 s]
+
+stdout | src/physics/feel.test.ts > wheelie balance (C7) > PD controller (60 Hz, 100 ms latency) holds a balance-point wheelie >= 10 s with the rider sat back past the wheelie control (44 deg at lean -0.5, kp 0.1 kd 0.03; round 7: 6 s at 45 deg / lean -0.3 and no gain pair held); at neutral-ish lean the control itself parks the nose at 33-37 deg whatever the PD asks for
+FEEL wheelie.pdHeld = 12.000 [>= 10 s (44 deg target, lean -0.5: the pure plant, control off)]
+FEEL wheelie.pdRmsErrDeg = 6.431 [< 12 (a real balance-point hold)]
+FEEL wheelie.pdBandDeg = 35.4..54.5 [info (after 2 s)]
+FEEL wheelie.pdLeanSaturated = 0.000 [< 0.2]
+FEEL wheelie.pdNeutral.held = 12.000 [info (45 deg target parks the lean at -0.3: the wheelie control holds it)]
+FEEL wheelie.pdNeutral.bandDeg = 16.1..32.2 [info (the control plateau, below the 45 asked)]
+
+stdout | src/physics/feel.test.ts > landing recovery (F6) > rides away from a 2 m drop at 6 m/s for every pitch in [-5, +40] deg; reports the survivable range
+FEEL landing.survivablePitchDeg = -30..60 [includes -5..35 (design asks 40)]
+FEEL landing.rearFirstFrom = -10.000 [info]
+
+stdout | src/physics/feel.test.ts > landing envelope audit (round 3) > drop 1.5/2.5/3.5 m at 0/4/8 m/s and pitch -20/0/+20/+40: prints survival, peak compression, bottom-out; flat 1.5 and 2.5 m drops survive
+LAND 1.5m 0m/s -20deg: OK  first F comp R0.94 F0.94 pitch -11..3
+LAND 1.5m 0m/s +0deg: OK  first R comp R1.00 F0.97 BOTTOM pitch 0..13
+LAND 1.5m 0m/s +20deg: OK  first R comp R0.94 F0.97 pitch -0..30
+LAND 1.5m 0m/s +40deg: OK  first R comp R1.00 F0.95 BOTTOM pitch -0..41
+LAND 1.5m 4m/s -20deg: OK  first F comp R1.00 F0.93 BOTTOM pitch -11..3
+LAND 1.5m 4m/s +0deg: OK  first R comp R0.90 F0.97 pitch -0..12
+LAND 1.5m 4m/s +20deg: OK  first R comp R0.91 F0.96 pitch -0..31
+LAND 1.5m 4m/s +40deg: OK  first R comp R0.97 F0.97 pitch -1..41
+LAND 1.5m 8m/s -20deg: OK  first F comp R0.98 F0.93 pitch -12..3
+LAND 1.5m 8m/s +0deg: OK  first R comp R0.91 F0.99 BOTTOM pitch -0..10
+LAND 1.5m 8m/s +20deg: OK  first R comp R0.99 F0.97 BOTTOM pitch -1..31
+LAND 1.5m 8m/s +40deg: OK  first R comp R0.89 F0.99 BOTTOM pitch -1..41
+LAND 2.5m 0m/s -20deg: OK  first F comp R1.00 F1.00 BOTTOM pitch -3..4
+LAND 2.5m 0m/s +0deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -0..20
+LAND 2.5m 0m/s +20deg: OK  first R comp R0.96 F1.00 BOTTOM pitch 0..35
+LAND 2.5m 0m/s +40deg: OK  first R comp R1.00 F1.00 BOTTOM pitch 0..42
+LAND 2.5m 4m/s -20deg: OK  first F comp R1.00 F1.00 BOTTOM pitch -4..4
+LAND 2.5m 4m/s +0deg: OK  first R comp R0.96 F1.00 BOTTOM pitch 0..17
+LAND 2.5m 4m/s +20deg: OK  first R comp R0.96 F1.00 BOTTOM pitch 0..35
+LAND 2.5m 4m/s +40deg: OK  first R comp R0.97 F1.00 BOTTOM pitch 0..42
+LAND 2.5m 8m/s -20deg: OK  first F comp R1.00 F1.00 BOTTOM pitch -7..3
+LAND 2.5m 8m/s +0deg: OK  first R comp R1.00 F0.98 BOTTOM pitch 0..14
+LAND 2.5m 8m/s +20deg: OK  first R comp R0.95 F1.00 BOTTOM pitch 0..35
+LAND 2.5m 8m/s +40deg: OK  first R comp R1.00 F0.99 BOTTOM pitch 0..42
+LAND 3.5m 0m/s -20deg: OK  first R comp R0.97 F1.00 BOTTOM pitch 0..5
+LAND 3.5m 0m/s +0deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -1..25
+LAND 3.5m 0m/s +20deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -1..38
+LAND 3.5m 0m/s +40deg: OK  first R comp R0.95 F1.00 BOTTOM pitch 0..43
+LAND 3.5m 4m/s -20deg: OK  first R comp R0.99 F1.00 BOTTOM pitch 1..4
+LAND 3.5m 4m/s +0deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -0..22
+LAND 3.5m 4m/s +20deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -0..39
+LAND 3.5m 4m/s +40deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -0..42
+LAND 3.5m 8m/s -20deg: OK  first F comp R1.00 F1.00 BOTTOM pitch -3..4
+LAND 3.5m 8m/s +0deg: OK  first R comp R0.99 F1.00 BOTTOM pitch 0..18
+LAND 3.5m 8m/s +20deg: OK  first R comp R1.00 F1.00 BOTTOM pitch 0..39
+LAND 3.5m 8m/s +40deg: OK  first R comp R1.00 F1.00 BOTTOM pitch -0..43
+
+stdout | src/physics/feel.test.ts > nose-down landings (round 4) > 3.5 m at 8 m/s nose-down -20/-40: a free front wheel kicks the nose back up (rides away, ~400 deg/s whip); the brake grabbed on landing endos
+FEEL landing.noseDown.-20.free = rides away pitch -3..4 rate 428 [rides away (vertical impulse ahead of the COM pitches nose-up)]
+FEEL landing.noseDown.-20.brake = rides away pitch -15..2 [dives past -15, rides away (round 11; -40 in round 9)]
+FEEL landing.noseDown.-40.free = rides away pitch -23..6 rate 510 [rides away (vertical impulse ahead of the COM pitches nose-up)]
+FEEL landing.noseDown.-40.brake = rides away pitch -34..4 [dives past -30 (round 11: the air-dragged front meets the ground spinning; round 9 endoed)]
+
+stdout | src/physics/feel.test.ts > air control (F9) > brake pitches nose-down, throttle nose-up, lean back nose-up (0.5 s airborne)
+FEEL air.brake0.5s.pitchDeg = -13.480 [-10..-30]
+FEEL air.throttle0.5s.pitchDeg = 14.831 [+5..+30]
+FEEL air.leanBack0.5s.pitchDeg = 26.745 [> 0]
+
+stdout | src/physics/feel.test.ts > air control (F9) > airPitch controller lands within 15 deg of a target after a 4 m drop (round 6: from -5 deg; at 1.4 g the drop is 0.76 s of air and the authority for -20 -> +15 is not there, see F9 for the per-input numbers)
+FEEL air.controlledLandingPitchDeg = 13.561 [15 +- 15]
+
+stdout | src/physics/feel.test.ts > weight: airtime at 1.4 g (round 6, blind critics: "2.2 s of airtime with frozen pitch off a 45 deg ramp") > stationary hop ~0.6 s of air at a 0.6-0.7 m apex; a 1 m 45 deg kicker gives ~1.0-1.2 s at 10 m/s; 2 m drop falls in ~0.5 s (was 0.62)
+FEEL airtime.hop = 0.525 s at 0.67 m [0.45-0.7 s, 0.6-0.7 m (was 0.56 s / 0.62 m at 9.81)]
+FEEL airtime.kicker45.1m.6ms = 0.600 s (lip 3.4 m/s, launch pitch 83, drift -83 deg, crash) [info (was 1.06 / 1.49 at 9.81)]
+FEEL airtime.kicker45.1m.10ms = 0.892 s (lip 6.5 m/s, launch pitch 53, drift 49 deg, crash) [1.0-1.2 s (was 1.40 at 9.81)]
+FEEL airtime.kicker45.1m.14ms = 1.058 s (lip 9.4 m/s, launch pitch 40, drift 25 deg, lands) [info (was 1.06 / 1.49 at 9.81)]
+FEEL airtime.drop2m = 0.508 [~0.5 s (was 0.62 at 9.81)]
+
+stdout | src/physics/feel.test.ts > suspension that reads (round 6, blind critics: "no squat on the ramp, no compression or rebound at touchdown") > static sag 25-30 % of travel both ends; 1.5 m drop compresses >= 80 % then rebounds past sag and returns (one damped cycle); 3 m drop bottoms out and bucks (chassis lifts 5-10 cm, pitch kicks 3-5 deg)
+FEEL susp.sag = R 0.273 F 0.253 [0.25-0.30 (was 0.10 / 0.24)]
+FEEL susp.drop1.5 = peak R 0.90 F 0.97, rebound to 0.20 at +0.31 s, back to sag at +0.38 s [peak >= 0.8, rebound below sag, one cycle ~0.5 s]
+FEEL susp.drop3.buck = bottom 0 ticks, chassis lift 18.7 cm, pitch kick 14.3 deg [bottoms; lift 5-25 cm (asked 5-10; the whole bike hops off a 9 m/s impact); kick 3-15 deg]
+
+stdout | src/physics/feel.test.ts > suspension that reads (round 6, blind critics: "no squat on the ramp, no compression or rebound at touchdown") > throttle squat: full throttle from rest adds >= 20 % of travel to the rear for >= 0.3 s; braking dive: hard front brake from 10 m/s compresses the front >= 50 %
+FEEL susp.squat = sag 0.27 -> peak 0.83, >= sag+0.20 for 0.80 s [>= +0.20 for >= 0.3 s]
+FEEL susp.dive = sag 0.25 -> peak 0.69 (lean 0) [>= 0.50]
+
+stdout | src/physics/feel.test.ts > drums and logs (round 4) > a 0.3 m-proud sunk drum (M2 bump, r 0.5 depth 0.7) rolls over with constant lean 0.4 + throttle at 3/5/8 m/s
+DRUM sunk r0.5 d0.7 3m/s const: OVER @2.5s - minV 8.5 park 0.0s spin 0.0
+DRUM sunk r0.5 d0.7 5m/s const: OVER @2.3s - minV 9.0 park 0.0s spin 0.0
+DRUM sunk r0.5 d0.7 8m/s const: OVER @2.1s - minV 9.5 park 0.0s spin 0.0
+
+stdout | src/physics/feel.test.ts > drums and logs (round 4) > a 0.3 m log (0.6 m tall, b2) is a wall to a constant lean at 3/5 m/s (parks or crashes; round 7: at 8 m/s the damped-leg landing lets it bounce over) and crosses with a front lift at 3/5/8 m/s
+DRUM log r0.3 3m/s const: no - minV -1.7 park 5.6s spin 0.0
+DRUM log r0.3 3m/s lean-1: OVER @2.8s - minV 1.6 park 0.0s spin 0.0
+DRUM log r0.3 3m/s lift: OVER @4.3s - minV 1.3 park 0.0s spin 0.0
+DRUM log r0.3 5m/s const: no crash minV -0.6 park 0.1s spin 0.0
+DRUM log r0.3 5m/s lean-1: OVER @2.6s - minV 2.2 park 0.0s spin 0.0
+DRUM log r0.3 5m/s lift: OVER @3.2s - minV 1.2 park 0.0s spin 0.0
+DRUM log r0.3 8m/s const: no - minV -1.7 park 5.4s spin 0.0
+DRUM log r0.3 8m/s lean-1: OVER @2.3s - minV 2.0 park 0.0s spin 0.0
+DRUM log r0.3 8m/s lift: OVER @2.5s - minV 1.7 park 0.0s spin 0.0
+
+stdout | src/physics/feel.test.ts > drums and logs (round 4) > a rolling 0.3 m log spins under the tyre (> 1 rad) and still crosses with a front lift
+DRUM log r0.3 rolls 3m/s lift: OVER @4.3s - minV 1.2 park 0.0s spin 28.9
+DRUM log r0.3 rolls 5m/s lift: OVER @3.3s - minV 0.8 park 0.0s spin 33.6
+
+stdout | src/physics/feel.test.ts > drums and logs (round 4) > drums of r 0.45 / 0.6 / 0.9 standing on the ground: report (geometry: the face bulges into the frame underside, so a front lift hangs the bash plate on the face; these need a hop, a kicker or a sunk base)
+DRUM drum r0.45 3m/s const: no crash minV -2.3 park 0.0s spin 0.0
+DRUM drum r0.45 3m/s lift: no crash minV -0.2 park 0.1s spin 0.0
+DRUM drum r0.45 5m/s const: no crash minV -0.7 park 0.1s spin 0.0
+DRUM drum r0.45 5m/s lift: no - minV -0.9 park 5.4s spin 0.0
+DRUM drum r0.45 8m/s const: no crash minV -2.0 park 0.1s spin 0.0
+DRUM drum r0.45 8m/s lift: no - minV -1.5 park 6.1s spin 0.0
+DRUM drum r0.6 3m/s const: no crash minV -1.1 park 0.1s spin 0.0
+DRUM drum r0.6 3m/s lift: no crash minV -1.2 park 0.0s spin 0.0
+DRUM drum r0.6 5m/s const: no crash minV -1.2 park 0.1s spin 0.0
+DRUM drum r0.6 5m/s lift: no - minV -1.1 park 5.8s spin 0.0
+DRUM drum r0.6 8m/s const: no crash minV -1.4 park 0.1s spin 0.0
+DRUM drum r0.6 8m/s lift: no - minV -1.5 park 6.2s spin 0.0
+DRUM drum r0.9 3m/s const: no crash minV -1.6 park 0.0s spin 0.0
+DRUM drum r0.9 3m/s lift: no - minV -0.5 park 4.8s spin 0.0
+DRUM drum r0.9 5m/s const: no crash minV -1.5 park 0.0s spin 0.0
+DRUM drum r0.9 5m/s lift: no - minV -0.8 park 5.7s spin 0.0
+DRUM drum r0.9 8m/s const: no crash minV -1.9 park 0.0s spin 0.0
+DRUM drum r0.9 8m/s lift: no - minV -1.2 park 6.1s spin 0.0
+
+stdout | src/physics/feel.test.ts > rider pose from the rider mass (round 4, blind critic: "rider bolted to bike") > a lean step 0 -> +1 reaches 90 % of the pose in 0.15-0.35 s (a 0.73 m shift of 75 kg under the 2 kN brace cap: 0.28 s, no overshoot); the pose settles at the input; torsoPitch is the transient only and crouch the hop preload only (round 10, RIDER_CHAIN.md "Curves")
+FEEL pose.lean.t90.fwd = 0.267 [0.15-0.35 s (design asked 0.10-0.15; the brace cap sets it)]
+FEEL pose.lean.overshoot.fwd = 0.000 [0-0.1 (slight)]
+FEEL pose.lean.t90.back = 0.250 [0.15-0.35 s]
+FEEL pose.lean.overshoot.back = 0.000 [0-0.1]
+FEEL pose.torso.transientPeak.fwd = 0.273 [info (rad; the swing lagging the lean, + = pitched forward)]
+FEEL pose.torso.transientPeak.back = -0.287 [info]
+FEEL pose.torso.settleT.fwd = 0.508 [< 0.75 s (back within 0.02 rad)]
+FEEL pose.torso.settled.fwd = 0.001 [|x| < 0.03 (no steady lean bias; was -0.34 per unit lean)]
+FEEL pose.torso.settled.back = -0.012 [|x| < 0.03]
+FEEL pose.crouch.leanOnly.fwd = 0.000 [0 (a lean is not a crouch; was 1.0 at lean >= 0.6)]
+FEEL pose.crouch.leanOnly.back = 1.000 [0 (was 0.67 at lean -1; throttle 0.3 is the hop threshold, lean -1 preloads)]
+FEEL pose.lean.settle.fwd = 0.982 [0.9-1]
+
+stdout | src/physics/feel.test.ts > rider pose from the rider mass (round 4, blind critic: "rider bolted to bike") > crouch reports the hop preload alone: 0 through a lean-forward and a lean-back below the hop threshold, the eased preload state during one
+FEEL pose.crouch.leanSweep = 0.000 [0 (lean -1 then +1 at 9 m/s, throttle 0.25: no hop, no crouch)]
+FEEL pose.crouch.preload0.3s = 1.000 [0.9-1 (0.3 s into a preload: crouchTime 0.25 s, eased)]
+
+stdout | src/physics/feel.test.ts > seesaw (round 4, the compiled `seesaw` kind) > L6 h1.0: rides up the resting end (the 0.12 m board lip is a step, not a wall), the board does not move until the front passes the pivot, tips in 0.3-1.0 s (clips 16/17: ~0.5 s), rides off at 3/5/8 m/s
+SEESAW L6 h1.0 3m/s: OVER @7.6s - tip 0.48s limit 18 deg, reached -18, moved before the pivot 0.00 deg, lip 0.12 m park 0.0s
+SEESAW L6 h1.0 5m/s: OVER @4.7s - tip 0.53s limit 18 deg, reached -18, moved before the pivot 0.00 deg, lip 0.12 m park 0.0s
+SEESAW L6 h1.0 8m/s: OVER @3.2s - tip 0.56s limit 18 deg, reached -16, moved before the pivot 0.01 deg, lip 0.12 m park 0.0s
+
+stdout | src/physics/feel.test.ts > seesaw (round 4, the compiled `seesaw` kind) > the curriculum boards (L6 h0.8 entry, L8 h1.2 entry, L6 h1.5 entry, L8 h2.0 bare, L5 h1.0 bare) all ride over at 5 m/s
+SEESAW L6 h0.8 entry 5m/s: OVER @4.6s - tip 0.43s limit 14 deg, reached -14, moved before the pivot 0.00 deg, lip 0.12 m park 0.0s
+SEESAW L8 h1.2 entry 5m/s: OVER @5.2s - tip 0.53s limit 17 deg, reached -17, moved before the pivot 0.00 deg, lip 0.12 m park 0.0s
+SEESAW L6 h1.5 entry 5m/s: OVER @5.0s - tip 0.73s limit 29 deg, reached -29, moved before the pivot 0.00 deg, lip 0.12 m park 0.0s
+SEESAW L8 h2 bare 5m/s: OVER @5.7s - tip 0.84s limit 29 deg, reached -29, moved before the pivot 0.00 deg, lip 0.12 m park 0.0s
+SEESAW L5 h1 bare 5m/s: OVER @4.5s - tip 0.58s limit 22 deg, reached -22, moved before the pivot 0.01 deg, lip 0.12 m park 0.0s
+
+ ✓ src/physics/feel.test.ts (36 tests) 256ms
+stdout | src/physics/v2/feel.test.ts > static (F1, §5) > sits at rest at static sag; rear sag 28-32 %
+FEEL static.rearSagPct = 28.112 [28-32]
+FEEL static.frontSagPct = 18.751 [spec 24-28; measured ~16.7 (R6 deviation 27: the table's front load on a 7500 N/m spring tilted 23 deg; not asserted)]
+FEEL static.pitchDeg = 1.309 [info: the two static sags on the spec axles pitch the frame ~2 deg nose-up]
+FEEL static.comD = 0.540 [~0.55 (§2)]
+FEEL static.comH = 0.782 [~0.79 (§2; CONTRACT 0.45 above the axle line)]
+FEEL static.balancePitchDeg = 51.854 [info: atan(d/h) at lean 0; CONTRACT says 40-50]
+FEEL static.speed = 0.001 [< 0.01]
+
+stdout | src/physics/v2/feel.test.ts > launch, top speed, the lean ladder (§7, §10, §14.2) > top speed 20 +- 0.5 m/s at the limiter; lean +0.25 launch lifts the front <= 10 deg and finishes 120 m
+FEEL launch.lean+0.25.t16 = 3.967 [3.5-4.2 s (R3: the low-speed knot; R1 measured 4.47)]
+FEEL launch.lean+0.25.topSpeed = 20.023 [19.5-20.5]
+FEEL launch.lean+0.25.maxPitchDeg = 5.138 [<= 10]
+FEEL launch.lean+0.25.finish120 = 8.883 [> 0, no fault]
+FEEL launch.lean+0.5.maxPitchDeg = 5.566 [<= 10]
+FEEL launch.lean+1.maxPitchDeg = 5.065 [<= 10]
+
+stdout | src/physics/v2/feel.test.ts > launch, top speed, the lean ladder (§7, §10, §14.2) > full throttle at lean 0 never loops and finishes 120 m (spec band: a 45-65 deg self-limiting wheelie; §10's own d/h analysis puts any sustained lift past ~32 deg on the far side of the balance point, so the honest bike does not lift at neutral on the mid row)
+FEEL launch.lean0.maxPitchDeg = 5.441 [spec 45-65; consistent model: <= 10 (no sustained lift possible without a loop)]
+FEEL launch.lean0.loopT = -1.000 [never (-1)]
+FEEL launch.lean0.pitchAt16 = 3.891 [< 20]
+FEEL launch.lean0.finish120 = 8.892 [> 0]
+
+stdout | src/physics/v2/feel.test.ts > launch, top speed, the lean ladder (§7, §10, §14.2) > full throttle at lean -0.25 / -0.5 / -1 lifts the front and loops with a loop time monotone in lean; -1 within ~1.3 s (spec: 60-75 deg hold >= 3 s / loops >= 2 s / loops <= 1 s - the hold row is not reachable by a rigid body at constant input, CONTRACT 2.5 "open-loop diverges in 1-2 s")
+FEEL launch.lean-0.25.loopT = 1.842 [monotone in lean (spec: hold / >= 2 s)]
+FEEL launch.lean-0.5.loopT = 0.867 [monotone in lean (spec: hold / >= 2 s)]
+FEEL launch.lean-1.loopT = 0.683 [<= 1.3 s]
+
+stdout | src/physics/v2/feel.test.ts > launch, top speed, the lean ladder (§7, §10, §14.2) > snap-forward recovers a 20 deg wheelie with throttle held: <= 30 deg after 0.5 s and no loop; from 30 deg with throttle cut: < 60 deg at 0.5 s, < 15 deg at 1 s and no loop
+FEEL snap.from20.throttleHeld.pitchAt0.5s = 19.393 [< 30 deg at 0.5 s, no loop (R3: 24.6, the knot pushes through the correction; R1 3.2)]
+FEEL snap.from30.throttleHeld.max = 91.080 [info (spec < 15 at 0.5 s; loops: true)]
+FEEL snap.from30.throttle0.pitchAt0.5s = 44.602 [< 30 deg at 0.5 s and < 15 deg at 1.0 s, no loop (R6 deviation 28: the spec's < 15 at 0.5 s was R1's 0.04 s throttle; the Rookie's 0.15 s throttle keeps the thrust ~0.3 s after the cut)]
+FEEL snap.from30.throttle0.pitchAt1.0s = -10.490 [< 15 deg]
+FEEL snap.from30.throttle0.3.pitchAt0.5s = 53.455 [info (hovers near the throttle-0.3 balance ~27 deg first)]
+FEEL snap.from40.throttle0.loops = 1.000 [info (1 = loops: past the recovery envelope)]
+
+stdout | src/physics/v2/feel.test.ts > brakes (§8) > neutral: 10 -> 0 in <= 7 m, rear lifts <= 0.6 s, pitch >= -25 deg (a settling stoppie); hard-forward endos
+FEEL brake.neutral.dist = 6.414 [<= 7 m (from 9.9 m/s)]
+FEEL brake.neutral.rearOffS = 0.008 [<= 0.6 s]
+FEEL brake.neutral.minPitchDeg = -7.906 [>= -25]
+FEEL brake.hardForward.result = crash [endo (crash)]
+FEEL brake.hardForward.rearOffS = 0.600 [info]
+
+stdout | src/physics/v2/feel.test.ts > brakes (§8) > hard-back: 10 -> 0 in <= 6 m with the rear down or off <= 0.3 s (spec <= 5.0 m: R6 deviation 29, the toy's 650 N m; ours is 560 N m = 0.9 g, 5.64 m)
+FEEL brake.hardBack.dist = 5.398 [<= 6 m asserted (spec 5.0 at 650 N m)]
+FEEL brake.hardBack.rearOffS = 0.017 [<= 0.3 s]
+FEEL brake.hardBack.minPitchDeg = -6.809 [info]
+
+stdout | src/physics/v2/feel.test.ts > reverse (ask 35, R10; physics.md "Reverse") > rookie: brake held from rest engages after 0.2 s, creeps back, settles at -2.2-2.6 (vmax 2.5) m/s by 2.5 s; release stops it within 1.5 s; throttle overrides; never faults
+FEEL reverse.rookie.engageS = 0.267 [0.2 .. 0.35 (the gate holds engageS before anything moves)]
+FEEL reverse.rookie.v2s = 2.392 [>= 1.5 (moving back by 2 s of hold)]
+FEEL reverse.rookie.settled = 2.438 [2.2-2.6 (vmax 2.5)]
+FEEL reverse.rookie.dist3s = 4.227 [>= 3 m back]
+FEEL reverse.rookie.maxPitchDeg = 4.142 [<= 8 (a creep, not a wheelie)]
+FEEL reverse.rookie.caliperNmAtCreep = 0.000 [0 (both calipers faded out)]
+FEEL reverse.rookie.releaseStopS = 0.933 [<= 1.5 s to |v| < 0.1]
+FEEL reverse.rookie.releaseOffS = 1.483 [<= 2.1 s to authority 0]
+FEEL reverse.rookie.vAfterRelease3s = 0.001 [< 0.1]
+FEEL reverse.rookie.throttleOverrideV2s = 8.504 [> 5 (forward)]
+
+stdout | src/physics/v2/feel.test.ts > reverse (ask 35, R10; physics.md "Reverse") > rookie: brake from 10 m/s is the brake - no reverse until the stop has held 0.2 s, then the continued hold creeps back
+FEEL reverse.rookie.fromSpeed.stopDist = -2.352 [info (the brake is unchanged; the neutral row asserts <= 7 m)]
+FEEL reverse.rookie.fromSpeed.minVBeforeStop = 0.338 [> 0.3 (never backwards mid-brake)]
+FEEL reverse.rookie.fromSpeed.dwellS = 0.208 [>= 0.2 (engaged only after the stop held engageS)]
+FEEL reverse.rookie.fromSpeed.vAt6s = 2.440 [2.2-2.6 (vmax 2.5)]
+
+stdout | src/physics/v2/feel.test.ts > reverse (ask 35, R10; physics.md "Reverse") > pro: brake held from rest engages after 0.2 s, creeps back, settles at -2.7-3.1 (vmax 3.0) m/s by 2.5 s; release stops it within 1.5 s; throttle overrides; never faults
+FEEL reverse.pro.engageS = 0.267 [0.2 .. 0.35 (the gate holds engageS before anything moves)]
+FEEL reverse.pro.v2s = 2.911 [>= 1.5 (moving back by 2 s of hold)]
+FEEL reverse.pro.settled = 2.934 [2.7-3.1 (vmax 3.0)]
+FEEL reverse.pro.dist3s = 5.294 [>= 3 m back]
+FEEL reverse.pro.maxPitchDeg = 4.069 [<= 8 (a creep, not a wheelie)]
+FEEL reverse.pro.caliperNmAtCreep = 0.000 [0 (both calipers faded out)]
+FEEL reverse.pro.releaseStopS = 0.967 [<= 1.5 s to |v| < 0.1]
+FEEL reverse.pro.releaseOffS = 1.408 [<= 2.0 s to authority 0]
+FEEL reverse.pro.vAfterRelease3s = 0.001 [< 0.1]
+FEEL reverse.pro.throttleOverrideV2s = 7.515 [> 5 (forward)]
+
+stdout | src/physics/v2/feel.test.ts > reverse (ask 35, R10; physics.md "Reverse") > pro: brake from 10 m/s is the brake - no reverse until the stop has held 0.2 s, then the continued hold creeps back
+FEEL reverse.pro.fromSpeed.stopDist = -4.479 [info (the brake is unchanged; the neutral row asserts <= 7 m)]
+FEEL reverse.pro.fromSpeed.minVBeforeStop = 0.338 [> 0.3 (never backwards mid-brake)]
+FEEL reverse.pro.fromSpeed.dwellS = 0.208 [>= 0.2 (engaged only after the stop held engageS)]
+FEEL reverse.pro.fromSpeed.vAt6s = 2.935 [2.7-3.1 (vmax 3.0)]
+
+stdout | src/physics/v2/feel.test.ts > air control (§9.4, §14.2) > 0.5 s at 8 / 14 / 20 m/s: lean -1 +25..+40, lean +1 -25..-40, throttle +8..+15 at 8 m/s falling to ~0 at the limiter, brake -12..-40 rising with speed, none within +-5
+FEEL air.8.none = -1.373 [+-5]
+FEEL air.8.lean-1 = 37.378 [+25..+40]
+FEEL air.8.lean+1 = -30.157 [-25..-40]
+FEEL air.8.throttle = 8.004 [+8..+15]
+FEEL air.8.brake = -12.061 [-12..-40, rising with speed]
+FEEL air.14.none = -0.719 [+-5]
+FEEL air.14.lean-1 = 37.942 [+25..+40]
+FEEL air.14.lean+1 = -29.549 [-25..-40]
+FEEL air.14.throttle = 4.141 [between]
+FEEL air.14.brake = -19.714 [-12..-40, rising with speed]
+FEEL air.20.none = -1.421 [+-5]
+FEEL air.20.lean-1 = 37.209 [+25..+40]
+FEEL air.20.lean+1 = -30.159 [-25..-40]
+FEEL air.20.throttle = -0.679 [~0 (limiter)]
+FEEL air.20.brake = -26.127 [-12..-40, rising with speed]
+
+ ✓ src/physics/v2/feel.test.ts (12 tests) 256ms
+stdout | src/physics/world.test.ts > ragdoll feel (round 4, blind critic: "slides off as a stiff plank") > crashed bike at 7 m/s scrubs to rest within 3.5 m (rear locked by the stalled engine); limbs tumble independently (spread > 60 deg) and the rider is thrown clear of the bike
+RAGDOLL 7 m/s: bike travel 2.47 m, stopped after 1.10 s, limb angle spread 86 deg, hip swing 93 deg, head travel 0.66 m
+
+stdout | src/physics/world.test.ts > ragdoll spawn continuity (round 6, blind critic: "limbs pop at the crash tick") > loop-out crash at 7 m/s and a nose-plant: every ragdoll body sits on the drawn chain of the previous tick (< 2 cm / 5 deg after the frame's one-tick motion) and carries the bike's velocity
+RAGDOLL spawn continuity (loop, sensor): max body offset 0.22 cm, max axis error 0.37 deg, torso velocity vs the frame's rigid field 1.72 m/s (= rider mass relative motion)
+RAGDOLL spawn continuity (plant, sensor): max body offset 0.14 cm, max axis error 0.27 deg, torso velocity vs the frame's rigid field 1.38 m/s (= rider mass relative motion)
+
+stdout | src/physics/world.test.ts > rider chain vs the reference (round 10: the chain is pose.ts's, checked against RIDER_CHAIN.md's canonical joint tables) > hands on the grips and ankles on the pegs in every pose; hips / shoulders / head / elbow / knee within 3 cm and torso / head angles within 5 deg of stand_attack (lean 0), hang_back (lean -1), forward_attack (lean +1) and hang_back + crouch (a held preload)
+CHAIN stand_attack (pose lean 0.00 crouch 0.00 torsoPitch -0.002): joint error cm hips 0.0, shoulders 0.1, head 0.1, elbow 0.0, knee 0.1; torso 40.0 vs 40 deg, head 66.0 vs 66; hand off grip 0.0 mm, ankle off peg 0.0 mm
+CHAIN hang_back (pose lean -1.00 crouch 0.00 torsoPitch -0.013): joint error cm hips 0.0, shoulders 0.4, head 0.4, elbow 0.5, knee 0.0; torso 55.5 vs 55 deg, head 75.0 vs 75; hand off grip 0.0 mm, ankle off peg 0.0 mm
+CHAIN forward_attack (pose lean 1.00 crouch 0.00 torsoPitch 0.009): joint error cm hips 0.0, shoulders 0.2, head 0.2, elbow 0.1, knee 0.1; torso 25.8 vs 26 deg, head 42.1 vs 42; hand off grip 0.0 mm, ankle off peg 0.0 mm
+CHAIN hang_back_crouch (pose lean -1.00 crouch 1.00 torsoPitch -0.012): joint error cm hips 0.0, shoulders 0.4, head 0.5, elbow 0.2, knee 0.0; torso 50.0 vs 50 deg, head 62.0 vs 62; hand off grip 0.0 mm, ankle off peg 0.0 mm
+
+stdout | src/physics/world.test.ts > performance > riding: µs/tick p95 <= 60 over 20k ticks (node)
+PERF riding: p95 2.3 us/tick, mean 1.8 us/tick
+
+stdout | src/physics/world.test.ts > performance > ragdolling: µs/tick p95 <= 80 (crash every 2.5 s, 20k ticks)
+PERF ragdoll: p95 1.7 us/tick, mean 1.5 us/tick (ragdolling 10% of ticks)
+
+ ✓ src/physics/world.test.ts (18 tests) 235ms
+ ✓ scripts/ip-audit.test.mjs (60 tests) 201ms
+ ✓ src/tracks/rockhop/rockhop.test.ts (18 tests) 211ms
+stdout | src/physics/classes.test.ts > two bikes (round 11): Rookie is the round-10 tuning, Pro the honest one > Pro: 0 -> 16 <= 3.0 s, limiter-bound top ~22 m/s; lean >= 0.4 at full gas never loops; lean 0 loops after >= 1.2 s (no wheelie control: that is the skill); partial throttle has no governor
+FEEL pro.thr1.lean0.loopAt = 1.467 [>= 1.2 s (Rookie: never, 38 deg wheelie)]
+FEEL pro.thr1.lean0.4.maxPitchDeg = 7.523 [< 15, finishes]
+FEEL pro.thr1.lean0.4.t16 = 1.400 [<= 3.0 s]
+FEEL pro.thr1.lean0.4.top = 22.072 [21-23 m/s (limiter at 22.0)]
+FEEL pro.thr1.lean0.2.maxPitchDeg = 8.903 [info]
+FEEL pro.thr1.lean1.top = 21.126 [info]
+FEEL pro.thr0.3.top = 21.987 [no governor: reaches the limiter (Rookie 11 m/s)]
+
+stdout | src/physics/classes.test.ts > two bikes (round 11): Rookie is the round-10 tuning, Pro the honest one > Pro: 55 / 60 deg planks climb as on Rookie, 65 stalls; stationary hop 0.6-0.7 m; the 0.9 m ledge at 5 m/s
+FEEL pro.climb.55 = true 1.02 s [top (Rookie 1.77 s)]
+FEEL pro.climb.60 = true 2.27 s [top (Rookie 2.91 s)]
+FEEL pro.climb.65 = false maxY 0.26 [stalls]
+FEEL pro.hop.rearApex = 0.687 [0.6-0.7 m (Rookie 0.676)]
+FEEL pro.ledge0.9 = made [made (10 of 36 hopper combos; Rookie 12 of 36)]
+
+stdout | src/physics/classes.test.ts > two bikes (round 11): Rookie is the round-10 tuning, Pro the honest one > wheelie PD hold: the throttle-only PD (60 Hz, 100 ms) balances by accelerating - Rookie 12 s to the drag limit at 11 m/s, Pro until the limiter cuts at 22 m/s (>= 3.5 s); neither holds 10 s at a held speed (12.4 (0))
+FEEL pd.rookie.held = 12.0 s at 11.2 m/s [>= 10 s]
+FEEL pd.pro.held = 4.2 s at 22.0 m/s [>= 3.5 s, drops at the limiter (~22 m/s)]
+
+stdout | src/physics/classes.test.ts > Rookie wheelie control on crests, bumps and lips (round 11, strangers on b1/b2/b3) > full gas at lean 0 over a 20 x 2 m cosine crest: Rookie stays under 45 deg and never faults; Pro loops (the skill)
+FEEL crest.rookie.maxPitchDeg = 42.281 [<= 45, no fault (round 10: 43 with the front memory, 60-120 on b1 per the strangers)]
+FEEL crest.pro = crash max 142 [loops]
+
+stdout | src/physics/classes.test.ts > Rookie wheelie control on crests, bumps and lips (round 11, strangers on b1/b2/b3) > full gas at lean 0 off a 4 x 0.8 kicker at 8 and 11 m/s: Rookie lands and rides away (round 10 looped at 128 deg: the lip read as a 90 deg climb and the rear spun to the limiter in the air); Pro loops
+FEEL kicker4x0.8.8.rookie = rides away max 65 [no fault (the 50-65 deg peak is the ballistic launch attitude; the asked <= 45 is open)]
+FEEL kicker4x0.8.8.pro = crash max 128 [loops]
+FEEL kicker4x0.8.11.rookie = rides away max 65 [no fault (the 50-65 deg peak is the ballistic launch attitude; the asked <= 45 is open)]
+FEEL kicker4x0.8.11.pro = crash max 132 [loops]
+
+stdout | src/physics/classes.test.ts > Rookie wheelie control on crests, bumps and lips (round 11, strangers on b1/b2/b3) > full gas at lean 0 from rest into a row of 0.3 m-proud r 0.5 drums: reports (both builds nose over at 13-17 m/s: a bump launch, not a wheelie-control case)
+FEEL drumRow@12.rookie = crash pitch -130..20 [info (round 10: the same)]
+FEEL drumRow@30.rookie = crash pitch -123..35 [info (round 10: the same)]
+
+stdout | src/physics/classes.test.ts > one-way plank straddle (round 11, tracks.md 6.1: the m3 wedge) > a 9 m/s arrival with the rear wheel anywhere from 0.7 m below to level with a one-way plank (front on top) lands on it or falls past it, never hangs (round 10: 9 of 45 hung with the rear wheel through the board)
+FEEL wedge.9ms = on 34 fell 11 hang 0 of 45 [hang 0]
+
+ ✓ src/physics/classes.test.ts (8 tests) 187ms
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > Rookie, free air at 10 m/s: releasing lean -1 -> 0 kicks <= 120 deg/s (R4: +245) in steps <= 15 deg/s per tick (R4: 43); with gas on top <= 125; the limit reads 1 on the HUD. The held-lean rows are K_att's and move little (0 -> -1: rate at 0.5 s 171 -> ~153, angle 33 -> ~31)
+FEEL r5.rookie.release-1to0 = peak 68 deg/s (raw 202) step -5/tick (raw 41) angle 17.8 @0.3s (raw 16.4) 25.3 @0.5s lim 1.00 [peak <= 120, step <= 15; angle @0.3 <= 15 asked (K_att momentum: not met)]
+FEEL r5.rookie.release+gas = peak 69 angle 29.2 @0.5s [peak <= 125]
+FEEL r5.rookie.press0to-1 = peak 141 rate@0.5 141 (raw 138) angle@0.5 33.8 (raw 33.9) [rate <= 110 / angle <= 22 asked (K_att: not met)]
+FEEL r5.rookie.press0to+1 = peak -146 rate@0.5 -146 angle@0.5 -33.8 [info]
+
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > Pro stays raw: gain 0, the limit reads 0 through the flight, the release kick is R4's 200-300 deg/s
+FEEL r5.pro.release-1to0 = peak 210 step 47/tick lim 0.00 [raw: 200-300, lim 0]
+
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > the throttle / brake air nudges are untouched on both classes (throttle +4..12 deg per 0.5 s, brake -8..-25): the limit is on the rider, not the wheels
+FEEL r5.rookie.nudges = throttle 6.2 (raw 6.2) brake -15.0 (raw -15.0) @0.5s [identical to raw]
+FEEL r5.pro.nudges = throttle 7.9 (raw 7.9) brake -15.8 (raw -15.8) @0.5s [identical to raw]
+
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > grounded rows hold: the reference hop (snap ramping past take-off) and the landing table are identical with the limit on and off (the intent gate carries a ground-started throw through the air; a still target at landing keeps the R3 cap)
+FEEL r5.hop.-1@Infinity.on/off = 0.458 / 0.458 [equal to 3 decimals (R3 matrix)]
+FEEL r5.hop.-1@8.on/off = 0.393 / 0.393 [equal to 3 decimals (R3 matrix)]
+FEEL r5.hop.-0.5@16.on/off = 0.422 / 0.422 [equal to 3 decimals (R3 matrix)]
+FEEL r5.land.1.5m@6.lean0 = rear 100% pitch -5..10 rebound 0.05 rides | raw rear 100% rebound 0.05 [R3 landing table, identical]
+FEEL r5.land.2m@12.lean0 = rear 100% pitch -6..8 rebound 0.08 rides | raw rear 100% rebound 0.08 [R3 landing table, identical]
+FEEL r5.land.3m@6.lean0.5 = rear 100% pitch -23..4 rebound 0.00 rides | raw rear 100% rebound 0.00 [R3 landing table, identical]
+
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > continuous: the limit blends in over 0.1 s of both-wheels-off and out over 0.1 s after the first touch - never a step > dt/0.1 per tick; a lean pressed while airborne is limited from its first tick (no escalation through the travel it allows)
+FEEL r5.blend = peak 1.00 max step/tick 0.083 at landing 0.94 -> 0 after [step <= 1/12 + eps; peak 1]
+
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > the beginner's panic (1.5 m ledge, lean -1 held from the edge through the landing) is NOT the servo's: the swing happens with the rear still on the ledge, then K_att holds +300 N m through 0.45 s of air and the rear-first landing at 100 % travel loops - a crash on both classes with the limit on or off; lean -0.5 held rides away (measured for the parent)
+FEEL r5.panic.rookie.lean-1@10 = lands 19 deg at 128 deg/s -> rides (raw: 19 / 128 -> rides) lim 0.85 [measured: crash either way (K_att), not the servo]
+FEEL r5.panic.rookie.lean-0.5/0@10 = 2 deg / 59 deg/s -> rides | lean 0: -19 / -21 -> rides [rides away]
+FEEL r5.panic.pro.lean-1@10 = lands 22 deg at 135 deg/s -> rides (raw: 22 / 135 -> rides) lim 0.00 [measured: crash either way (K_att), not the servo]
+FEEL r5.panic.pro.lean-0.5/0@10 = 4 deg / 62 deg/s -> rides | lean 0: -16 / -6 -> rides [rides away]
+
+stdout | src/physics/v2/r5.test.ts > R5: the Rookie air limit (rider.airRate*) - the pose swing in free air is rate-limited, the throw on the ground is not > cost: a limited flight and its landing tick at <= 5 us/tick p50 (node, shared host)
+FEEL r5.cost.usPerTick.p50 = 4.708 [<= 5]
+
+ ✓ src/physics/v2/r5.test.ts (8 tests) 155ms
+ ✓ src/core/rng.test.ts (5 tests) 135ms
+stdout | src/physics/v2/r4.test.ts > R4 mechanism 2: the round-8 "air-throttle kick" is the rider pose swing, not the throttle > throttle in the air is bounded by the wheel spin-up (<= 30 deg/s peak, 4-12 deg in 0.5 s) and brake in the air by the wheels' spin momentum (-30..-60 deg/s peak) on both classes
+FEEL air.rookie.throttleTap = peak 20 deg/s step 2 /tick angle 6.2 @0.5s [peak <= 30, 4..12 deg]
+FEEL air.rookie.brakeTap = peak -40 deg/s step 6 /tick angle -15.0 @0.5s [peak -30..-60, -8..-25 deg]
+FEEL air.pro.throttleTap = peak 23 deg/s step -3 /tick angle 7.9 @0.5s [peak <= 30, 4..12 deg]
+FEEL air.pro.brakeTap = peak -41 deg/s step 6 /tick angle -15.8 @0.5s [peak -30..-60, -8..-25 deg]
+
+stdout | src/physics/v2/r4.test.ts > R4 mechanism 2: the round-8 "air-throttle kick" is the rider pose swing, not the throttle > a full pose swing in the air is the 200-400 deg/s step: releasing lean -1 to 0 kicks +230..260 deg/s within 0.07 s (43 deg/s per tick = F_max x the grip lever / I_chassis), pressing 0 to -1 dips the nose first (-140 deg/s) then K_att lifts it; genuine two-body dynamics, > 8x the throttle tap (raw: the Pro, and the Rookie with the R5 air limit off - r5.test.ts has the limited Rookie)
+FEEL air.rookie.swing-1to0 = peak 202 deg/s step 41 /tick angle 24.3 @0.5s [measured: the kick (200-300)]
+FEEL air.rookie.swing0to-1 = peak 138 deg/s step 70 /tick angle 33.9 @0.5s rate@0.5 138 [measured: dip then K_att]
+FEEL air.rookie.swing-1to0+gas = peak 203 angle 32.2 @0.5s [measured: swing + 20 of throttle]
+FEEL air.pro.swing-1to0 = peak 210 deg/s step 47 /tick angle 22.6 @0.5s [measured: the kick (200-300)]
+FEEL air.pro.swing0to-1 = peak 132 deg/s step 68 /tick angle 31.8 @0.5s rate@0.5 132 [measured: dip then K_att]
+FEEL air.pro.swing-1to0+gas = peak 215 angle 36.5 @0.5s [measured: swing + 20 of throttle]
+
+stdout | src/physics/v2/r4.test.ts > R4 mechanism 2: the round-8 "air-throttle kick" is the rider pose swing, not the throttle > a rear touchdown pitched 20 deg above a 20 deg ramp passes sin(20) of the normal impulse rigidly through the slider: <= 60 deg/s per tick at 1-2 m/s of approach, gas on or off (genuine, a landing, not a solver spike)
+FEEL touchdown.rookie.vn1.thr1 = step -42 deg/s per tick, peak N 2077 N [<= 60 per tick]
+FEEL touchdown.rookie.vn2.thr1 = step -59 deg/s per tick, peak N 2146 N [<= 60 per tick]
+FEEL touchdown.rookie.vn1.thr0 = step -42 deg/s per tick, peak N 2077 N [<= 60 per tick]
+FEEL touchdown.rookie.vn2.thr0 = step -59 deg/s per tick, peak N 2146 N [<= 60 per tick]
+FEEL touchdown.pro.vn1.thr1 = step 45 deg/s per tick, peak N 8510 N [<= 60 per tick]
+FEEL touchdown.pro.vn2.thr1 = step 44 deg/s per tick, peak N 7888 N [<= 60 per tick]
+FEEL touchdown.pro.vn1.thr0 = step 55 deg/s per tick, peak N 3881 N [<= 60 per tick]
+FEEL touchdown.pro.vn2.thr0 = step 45 deg/s per tick, peak N 4723 N [<= 60 per tick]
+
+stdout | src/physics/v2/r4.test.ts > R4 mechanism 1 + the Rookie assist: on-ramp front lift under full gas > a 20 deg slope lowers the front-lift threshold from ~0.6 g to ~0.22 g: raw (either class with the ECU off; R6: the Pro carries the ground ECU too, so its raw row is the gain-0 override) full gas at lean 0 wheelies 40-55 deg over the slope and leaves a 6 m lip at 65-80 deg nose-up rotating 150+ deg/s; the R6 Pro (ECU on the ground) leaves the same lip <= 25 deg
+FEEL ramp20@10.proRaw.lean0 = over slope 48.5 lip pitch 71.9 rate 213 v 10.6 [raw (R3-R5 Pro): loops off the lip]
+FEEL ramp20@10.rookieRaw.lean0 = over slope 35.8 lip pitch 56.8 rate 115 v 9.9 [R3 Rookie (assist off)]
+FEEL ramp20@10.pro.lean0 = over slope 10.0 lip pitch 19.7 rate -69 v 8.0 assist max 1.00 [R6 Pro (ground ECU): lip <= 25]
+
+stdout | src/physics/v2/r4.test.ts > R4 mechanism 1 + the Rookie assist: on-ramp front lift under full gas > Rookie (wheelie control on): the same ramp at lean 0 lifts <= 15 deg over the slope, leaves the lip <= 25 deg nose-up with the nose already coming down (rate <= 0) and no brake; the lean-forward technique (+1, assist faded out) gives the same picture with 1 m/s more lip speed
+FEEL ramp20@10.rookie.lean0 = over slope 9.5 lip pitch 15.0 rate -72 v 8.1 assist max 0.86 [lean 0: over <= 15, lip <= 25, rate <= 0]
+FEEL ramp20@10.rookie.lean0.2 = over slope 7.3 lip pitch 17.9 rate -55 v 8.4 assist max 0.66 [lean 0: over <= 15, lip <= 25, rate <= 0]
+FEEL ramp20@10.rookie.lean0.4 = over slope 7.4 lip pitch 16.0 rate -63 v 8.6 assist max 0.65 [lean 0: over <= 15, lip <= 25, rate <= 0]
+FEEL ramp20@10.rookie.lean1 = over slope 3.3 lip pitch 11.9 rate -67 v 8.3 assist max 0.00 [lean 0: over <= 15, lip <= 25, rate <= 0]
+
+stdout | src/physics/v2/r4.test.ts > R4 mechanism 1 + the Rookie assist: on-ramp front lift under full gas > the assist is a neutral-lean safety, not a governor: it fades out by |lean| 0.5, so the Rookie still loops under gas at lean -0.5 (~0.8 s) and -1, loops slower at -0.25, and the R3 hop / wheelie hold / climb throw rows stand (r3.test.ts)
+FEEL launch.rookie.lean0 = max pitch 5.4 loop nan [<= 10 deg, no loop]
+FEEL launch.rookie.lean-0.25 = loop 1.84 s [info (R3: 1.10)]
+FEEL launch.rookie.lean-0.5 = loop 0.87 s [loops (R3: 0.82)]
+
+ ✓ src/physics/v2/r4.test.ts (7 tests) 114ms
+ ✓ src/physics/v2/r9.test.ts (6 tests) 100ms
+ ✓ harness/reflex/reflex.test.ts (7 tests) 94ms
+ ✓ src/render/hero/gltfRiderAdditive.test.ts (3 tests) 58ms
+ ✓ src/game/game.test.ts (20 tests) 55ms
+ ✓ harness/lib/production-sim.test.ts (2 tests) 46ms
+ ✓ src/game/routeGoal.test.ts (3 tests) 43ms
+ ✓ src/render/world/obstacles.test.ts (3 tests) 42ms
+ ✓ src/audio/model/mapParams.test.ts (19 tests) 41ms
+ ✓ src/boot/model-catalog.test.ts (3 tests) 36ms
+ ✓ src/core/replay.test.ts (10 tests) 19ms
+ ✓ src/physics/dmath.test.ts (3 tests) 15ms
+ ✓ harness/lib/metrics.test.ts (2 tests) 9ms
+ ✓ src/game/entry.test.ts (3 tests) 9ms
+ ✓ src/tracks/compile.test.ts (29 tests) 9ms
+ ✓ src/render/rider/pose.test.ts (16 tests) 9ms
+ ✓ api/inbox.test.ts (9 tests) 9ms
+ ✓ src/game/mockPhysics.test.ts (4 tests) 7ms
+ ✓ src/audio/music/player.test.ts (14 tests) 5ms
+ ✓ src/ui/worldMap.test.ts (11 tests) 5ms
+ ✓ harness/compare/battery.test.ts (7 tests) 5ms
+ ✓ src/tracks/validators.test.ts (29 tests) 5ms
+ ✓ src/render/post/chain.test.ts (4 tests) 5ms
+ ✓ src/render/resourceRetirement.test.ts (7 tests) 5ms
+ ✓ src/render/world/crowd.test.ts (12 tests) 4ms
+ ✓ src/render/camera/rig.test.ts (4 tests) 4ms
+ ✓ src/ui/best.test.ts (8 tests) 3ms
+ ✓ src/tracks/courses/lab-reference.test.ts (3 tests) 4ms
+ ✓ harness/compare/audio.test.ts (8 tests) 4ms
+ ✓ src/render/contextResources.test.ts (3 tests) 3ms
+ ✓ src/render/bikeLivery.test.ts (3 tests) 3ms
+ ✓ src/ui/progress.test.ts (4 tests) 2ms
+ ✓ src/game/review.test.ts (5 tests) 3ms
+ ✓ src/game/bench.test.ts (6 tests) 3ms
+ ✓ src/render/world/props.test.ts (6 tests) 2ms
+ ✓ src/ui/economy.test.ts (7 tests) 2ms
+ ✓ src/game/cadence.test.ts (6 tests) 2ms
+ ✓ src/render/frame.test.ts (4 tests) 2ms
+ ✓ src/render/hero/lodChoice.test.ts (9 tests) 2ms
+ ✓ src/boot/totals.test.ts (5 tests) 2ms
+ ✓ src/ui/art.test.ts (5 tests) 2ms
+ ✓ src/render/hero/urls.test.ts (2 tests) 2ms
+ ✓ src/render/hero/clipAliases.test.ts (3 tests) 2ms
+ ✓ src/core/loop.test.ts (4 tests) 1ms
+ ✓ harness/bot/play.test.ts (3 tests) 1ms
+ ✓ src/core/hash.test.ts (4 tests) 1ms
+ ✓ src/game/flow.test.ts (4 tests) 1ms
+ ✓ src/ui/perf.test.ts (2 tests) 1ms
+ ✓ src/ui/storageMigration.test.ts (4 tests) 1ms
+ ✓ src/render/hero/gltfLoading.test.ts (1 test) 1ms
+ ✓ harness/lib/ffmpeg.test.ts (2 tests) 1ms
+ ✓ src/ui/garage.test.ts (18 tests) 353ms
+ ✓ src/ui/worldMapScreen.test.ts (10 tests) 120ms
+stderr | src/ui/inbox.test.ts > review inbox: context capture > captureScreenshot renders until a frame is actually drawn (a paused game skips unchanged frames)
+Error: Not implemented: HTMLCanvasElement.prototype.getContext (without installing the canvas npm package)
+    at module.exports (/Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/jsdom@26.1.0/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+    at HTMLCanvasElementImpl.getContext (/Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/jsdom@26.1.0/node_modules/jsdom/lib/jsdom/living/nodes/HTMLCanvasElement-impl.js:42:5)
+    at HTMLCanvasElement.getContext (/Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/jsdom@26.1.0/node_modules/jsdom/lib/jsdom/living/generated/HTMLCanvasElement.js:131:58)
+    at captureScreenshot (/Users/raynos/projects/game-demos/trials-gauntlet-demo/src/ui/inbox.ts:192:21)
+    at /Users/raynos/projects/game-demos/trials-gauntlet-demo/src/ui/inbox.test.ts:69:5
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10) undefined
+Error: Not implemented: HTMLCanvasElement.prototype.getContext (without installing the canvas npm package)
+    at module.exports (/Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/jsdom@26.1.0/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+    at HTMLCanvasElementImpl.getContext (/Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/jsdom@26.1.0/node_modules/jsdom/lib/jsdom/living/nodes/HTMLCanvasElement-impl.js:42:5)
+    at HTMLCanvasElement.getContext (/Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/jsdom@26.1.0/node_modules/jsdom/lib/jsdom/living/generated/HTMLCanvasElement.js:131:58)
+    at captureScreenshot (/Users/raynos/projects/game-demos/trials-gauntlet-demo/src/ui/inbox.ts:192:21)
+    at /Users/raynos/projects/game-demos/trials-gauntlet-demo/src/ui/inbox.test.ts:74:5
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:752:26
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:1863:10) undefined
+
+ ✓ src/ui/inbox.test.ts (13 tests) 93ms
+stderr | src/platform/storage.test.ts > persistentStorage > a failing durable write is logged, never thrown, and localStorage still has the value
+[rockhop] durable storage write failed Error: disk full
+    at Object.kv.set (/Users/raynos/projects/game-demos/trials-gauntlet-demo/src/platform/storage.test.ts:80:35)
+    at /Users/raynos/projects/game-demos/trials-gauntlet-demo/src/platform/storage.ts:56:23
+    at /Users/raynos/projects/game-demos/trials-gauntlet-demo/src/platform/storage.ts:40:32
+    at /Users/raynos/projects/game-demos/trials-gauntlet-demo/src/platform/storage.test.ts:83:5
+    at file:///Users/raynos/projects/game-demos/trials-gauntlet-demo/node_modules/.pnpm/@vitest+runner@3.2.7/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20
+
+ ✓ src/platform/storage.test.ts (5 tests) 42ms
+ ✓ src/ui/front.test.ts (6 tests) 42ms
+ ✓ src/ui/menu.test.ts (3 tests) 31ms
+ ✓ src/ui/hud.finish.test.ts (3 tests) 29ms
+ ✓ src/boot/render.test.ts (2 tests) 27ms
+ ✓ src/ui/c1FaultCue.test.ts (4 tests) 25ms
+ ✓ src/ui/live.test.ts (5 tests) 22ms
+ ✓ src/game/input/touch.test.ts (11 tests) 20ms
+ ✓ src/ui/hud.diamond-route.test.ts (1 test) 17ms
+ ✓ src/ui/errorModal.test.ts (12 tests) 14ms
+ ✓ src/ui/updatePill.test.ts (4 tests) 7ms
+ ✓ src/boot/outfit.test.ts (2 tests) 5ms
+ ✓ src/boot/offline-pack.test.ts (5 tests) 3ms
+ ✓ src/ui/orientation.test.ts (7 tests) 3ms
+ ✓ src/ui/outfit.test.ts (5 tests) 2ms
+ ✓ src/game/bike.test.ts (5 tests) 2ms
+
+ Test Files  100 passed (100)
+      Tests  1420 passed | 2 skipped (1422)
+   Start at  21:25:52
+   Duration  63.51s (transform 1.02s, setup 0ms, collect 3.20s, tests 49.18s, environment 2.45s, prepare 2.06s)
