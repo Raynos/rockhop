@@ -853,8 +853,9 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
     case 'truck-bed':
     case 'ore-cart': {
       if (!polys.length && !boxes.length) return false;
-      solid('rustSteel', prop === 'ore-cart' ? 0x9a5430 : 0x5a5c60, (x, y) => 0.8 + 0.2 * Math.sin(x * 2.3 + y * 1.7));
-      for (const x of [x0 + 0.5, x1 - 0.5]) for (const z of [-1.3, 1.3]) push(buckets, 'tyre', tintGeo(new THREE.CylinderGeometry(0.35, 0.35, 0.3, 12).rotateX(Math.PI / 2), 0x333333), at(x, profileY(profile, x) + 0.35, z));
+      const d2Cart = prop === 'ore-cart' && ctx.trackId === 'd2-conveyor';
+      solid(d2Cart ? 'plaque' : 'rustSteel', prop === 'ore-cart' ? 0x9a5430 : 0x5a5c60, (x, y) => 0.8 + 0.2 * Math.sin(x * 2.3 + y * 1.7));
+      for (const x of [x0 + 0.5, x1 - 0.5]) for (const z of [-1.3, 1.3]) push(buckets, d2Cart ? 'plaque' : 'tyre', tintGeo(new THREE.CylinderGeometry(0.35, 0.35, 0.3, 12).rotateX(Math.PI / 2), 0x333333), at(x, profileY(profile, x) + 0.35, z));
       if (prop === 'truck-bed') {
         // Bolster stakes along the far side and a log load behind the rider (outside the lane, above the bed).
         for (let x = x0 + 0.4; x < x1; x += 1.6) {
@@ -868,20 +869,70 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
           push(buckets, 'pallet', tintGeo(new THREE.CylinderGeometry(0.24, 0.24, L, 9).rotateZ(Math.PI / 2), 0x5a4030), at((x0 + x1) / 2, Math.max(topAt(x0 + 0.2), topAt(x1 - 0.2)) + dy, dz));
         }
       } else {
+        if (d2Cart) {
+          // The last cart is a four-metre uphill nose. Its sided tub and wheel hubs must follow that collider,
+          // not suggest a taller load above the wheel line or an invisible obstacle at the gap.
+          for (const z of [-face + 0.04, face - 0.04]) {
+            const a = polys[0]!.points[0]!;
+            const b = polys[0]!.points[1]!;
+            const length = Math.hypot(b.x - a.x, b.y - a.y);
+            const angle = Math.atan2(b.y - a.y, b.x - a.x);
+            push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(length, 0.11, 0.08), 0xe0a96b), at((a.x + b.x) / 2, (a.y + b.y) / 2 - 0.08, z, angle));
+            if (z < 0) {
+              // A raised far wall supplies the wagon profile without covering the near tire contact.
+              push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(length, 0.42, 0.1), 0x9b5738), at((a.x + b.x) / 2, (a.y + b.y) / 2 + 0.17, z, angle));
+              push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(length, 0.055, 0.12), 0xe0a96b), at((a.x + b.x) / 2, (a.y + b.y) / 2 + 0.39, z, angle));
+            }
+            for (let x = x0 + 0.4; x < x1 - 0.2; x += 0.75) {
+              const top = yOn(polys[0]!, x);
+              const base = profileY(profile, x);
+              if (top !== null && top - base > 0.15) push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.075, top - base - 0.08, 0.075), 0x563522), at(x, (top + base) / 2 - 0.04, z));
+            }
+          }
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.13, 0.55, 2.8), 0x995335), at(x1 - 0.075, topAt(x1 - 0.2) - 0.2, 0));
+          for (const x of [x0 + 0.5, x1 - 0.5]) push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(0.17, 0.17, 0.035, 12).rotateX(Math.PI / 2), 0xd7a66e), at(x, profileY(profile, x) + 0.35, face + 0.18));
+        }
         // A rubble load struck along the cart's far rim.
         const rnd = G.lcg(Math.round(x0 * 10));
         for (let x = x0 + 0.3; x < x1 - 0.2; x += 0.35) {
           const t = topAt(x);
-          if (Number.isFinite(t)) push(buckets, 'zone:top', tintGeo(new THREE.IcosahedronGeometry(0.14 + rnd() * 0.1, 0).scale(1.2, 0.8, 1), 0xffffff), at(x, t + 0.05, -1.25 + rnd() * 0.3));
+          if (Number.isFinite(t)) push(buckets, d2Cart ? 'plaque' : 'zone:top', tintGeo(new THREE.IcosahedronGeometry(0.14 + rnd() * 0.1, 0).scale(1.2, 0.8, 1), d2Cart ? 0xc8a47c : 0xffffff), at(x, t + 0.05, -1.25 + rnd() * 0.3));
         }
       }
       return true;
     }
     case 'conveyor': {
-      plankBoard('tyre', 0x4a4844, 0.12);
+      const d2Belt = ctx.trackId === 'd2-conveyor';
+      plankBoard(d2Belt ? 'plaque' : 'tyre', d2Belt ? 0x48443d : 0x4a4844, d2Belt ? 0.18 : 0.12);
       for (const c of polys) {
         const q0 = c.points[0]!;
         const q1 = c.points[c.points.length - 1]!;
+        if (d2Belt) {
+          const dx = q1.x - q0.x;
+          const dy = q1.y - q0.y;
+          const angle = Math.atan2(dy, dx);
+          const length = Math.hypot(dx, dy);
+          const midX = (q0.x + q1.x) / 2;
+          const midY = (q0.y + q1.y) / 2;
+          // Paired stringers and regular cross-cleats show belt direction, support and its exact rolling top.
+          for (const z of [-face + 0.1, face - 0.1]) push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(length, 0.16, 0.12), 0x97623e), at(midX, midY - 0.2, z, angle));
+          for (let x = q0.x + 0.45; x < q1.x - 0.2; x += 0.72) {
+            const y = yOn(c, x);
+            if (y !== null) push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.085, 0.022, depth - 0.22), 0xb5966b), at(x, y + 0.001, 0, angle));
+          }
+          for (let x = q0.x + 1; x < q1.x - 0.4; x += 2.5) {
+            const y = yOn(c, x);
+            if (y === null) continue;
+            const gy = profileY(profile, x);
+            const h = y - gy - 0.2;
+            if (h < 0.32) continue;
+            for (const z of [-face + 0.1, face - 0.1]) {
+              push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.11, h, 0.11), 0x806248), at(x, gy + h / 2, z));
+              push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(0.16, 0.16, 0.04, 12).rotateX(Math.PI / 2), 0xcea46c), at(x, y - 0.18, z + (z > 0 ? 0.075 : -0.075)));
+            }
+          }
+          continue;
+        }
         for (let i = 0; i <= 8; i++) {
           const t = i / 8;
           const x = q0.x + (q1.x - q0.x) * t;
@@ -1101,13 +1152,31 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
       mat = 'pallet';
       geo = tintGeo(new THREE.CylinderGeometry(r, r * 0.97, w + 0.6, 14).rotateX(Math.PI / 2), 0x6a4c34);
     } else if (prop === 'pulley') {
-      mat = 'rustSteel';
-      geo = G.merge([
-        tintGeo(new THREE.CylinderGeometry(r, r, w, 20).rotateX(Math.PI / 2), 0x3a3836),
-        tintGeo(new THREE.CylinderGeometry(r * 1.12, r * 1.12, 0.1, 20).rotateX(Math.PI / 2).translate(0, 0, w / 2), 0x9a5a34),
-        tintGeo(new THREE.CylinderGeometry(r * 1.12, r * 1.12, 0.1, 20).rotateX(Math.PI / 2).translate(0, 0, -w / 2), 0x9a5a34),
-        tintGeo(new THREE.BoxGeometry(r * 1.8, 0.08, 0.04).translate(0, 0, w / 2 + 0.06), 0xe8e2d0),
-      ]);
+      if (ctx.trackId === 'd2-conveyor') {
+        // All face marks live in the rolling mesh: the spoke motion is the physics drum's actual rotation.
+        mat = 'plaque';
+        const front = w / 2 + 0.09;
+        const parts: THREE.BufferGeometry[] = [
+          tintGeo(new THREE.CylinderGeometry(r, r, w, 24).rotateX(Math.PI / 2), 0x3d3c38),
+          tintGeo(new THREE.CylinderGeometry(r * 1.08, r * 1.08, 0.085, 24).rotateX(Math.PI / 2).translate(0, 0, w / 2), 0xa6643f),
+          tintGeo(new THREE.TorusGeometry(r * 0.84, 0.055, 6, 28).translate(0, 0, front), 0xe2b777),
+          tintGeo(new THREE.CylinderGeometry(r * 0.15, r * 0.15, 0.12, 12).rotateX(Math.PI / 2).translate(0, 0, front), 0xe6d0a6),
+        ];
+        for (let i = 0; i < 8; i++) parts.push(tintGeo(new THREE.BoxGeometry(r * 1.32, 0.085, 0.045).rotateZ(i * Math.PI / 4).translate(0, 0, front - 0.025), i % 2 ? 0x694b37 : 0xe0b16a));
+        geo = G.merge(parts);
+        const h = c.center.y - gy - r * 0.6;
+        if (h > 0.2) for (const dx of [-0.55, 0.55]) {
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.12, h, 0.12), 0x76563d), at(c.center.x + dx, gy + h / 2, -face + 0.18));
+        }
+      } else {
+        mat = 'rustSteel';
+        geo = G.merge([
+          tintGeo(new THREE.CylinderGeometry(r, r, w, 20).rotateX(Math.PI / 2), 0x3a3836),
+          tintGeo(new THREE.CylinderGeometry(r * 1.12, r * 1.12, 0.1, 20).rotateX(Math.PI / 2).translate(0, 0, w / 2), 0x9a5a34),
+          tintGeo(new THREE.CylinderGeometry(r * 1.12, r * 1.12, 0.1, 20).rotateX(Math.PI / 2).translate(0, 0, -w / 2), 0x9a5a34),
+          tintGeo(new THREE.BoxGeometry(r * 1.8, 0.08, 0.04).translate(0, 0, w / 2 + 0.06), 0xe8e2d0),
+        ]);
+      }
     } else if (prop === 'rubble') {
       mat = 'zone:top'; // the quarry's painted pale dust / stone (zoneDeck.ts)
       geo = tintGeo(new THREE.IcosahedronGeometry(r, 1).scale(1.2, 1, 1.1), 0xf0dcc0);
