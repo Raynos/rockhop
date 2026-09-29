@@ -76,6 +76,7 @@ export class DomHud implements Hud {
   private s3OpeningCueOn = false;
   private d1TerraceCueOn = false;
   private routeCue: DiamondRouteCue | null = null;
+  private routeCueAction: string | null = null;
   private faultCue: FaultCue | null = null;
   private faultCuePending = false;
   private faultCueUntil = -1;
@@ -288,12 +289,12 @@ export class DomHud implements Hud {
     this.clearFaultCue();
     this.setSkillCueVisible(false);
     this.routeCue = diamondRouteCue(track);
+    this.routeCueAction = null;
     const craneCue = track.id === 'c2-crane-hop';
     this.skillCueEl.classList.toggle('crane', craneCue);
     this.skillCueEl.classList.toggle('route', this.routeCue !== null);
     if (this.routeCue) {
-      this.skillCueEl.setAttribute('aria-label', `Diamond high line: ${this.routeCue.action}`);
-      this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">◇</span><span class="skill-cue-copy"><strong>${escapeHtml(this.routeCue.title)}</strong><small>${escapeHtml(this.routeCue.action)}</small></span>`;
+      this.renderRouteCue(this.routeCue.action);
     } else {
       this.skillCueEl.setAttribute('aria-label', craneCue
         ? 'Level the bike in flight. Release GO or lean forward to meet the barge.'
@@ -457,8 +458,7 @@ export class DomHud implements Hud {
         this.skillCueEl.setAttribute('aria-label', 'First shelf. Lift the front before the step, then level over the crevasses.');
         this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↗</span><span class="skill-cue-copy"><strong>LIFT TO THE SHELF</strong><small>LEVEL OVER CREVASSES</small></span>';
       } else if (this.routeCue) {
-        this.skillCueEl.setAttribute('aria-label', `Diamond high line: ${this.routeCue.action}`);
-        this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">◇</span><span class="skill-cue-copy"><strong>${escapeHtml(this.routeCue.title)}</strong><small>${escapeHtml(this.routeCue.action)}</small></span>`;
+        this.renderRouteCue(this.routeCue.action);
       }
     }
     // The two quarry rises that account for most blind D1 faults need a decision
@@ -472,6 +472,11 @@ export class DomHud implements Hud {
       }
     }
     const highLine = this.routeCue !== null && x >= this.routeCue.x0 && x < this.routeCue.x1;
+    if (highLine && !retryLesson && this.routeCue) {
+      const beat = this.routeCue.secondBeat;
+      const action = beat && x >= beat.x0 ? beat.action : this.routeCue.action;
+      if (action !== this.routeCueAction) this.renderRouteCue(action);
+    }
     this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || s3Opening || d1Terraces || highLine)));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
@@ -787,6 +792,13 @@ export class DomHud implements Hud {
 
   // -- internals ------------------------------------------------------------
 
+  private renderRouteCue(action: string): void {
+    if (!this.routeCue) return;
+    this.routeCueAction = action;
+    this.skillCueEl.setAttribute('aria-label', `Diamond high line: ${action}`);
+    this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">◇</span><span class="skill-cue-copy"><strong>${escapeHtml(this.routeCue.title)}</strong><small>${escapeHtml(action)}</small></span>`;
+  }
+
   private setSkillCueVisible(on: boolean): void {
     if (on === this.skillCueVisible) return;
     this.skillCueVisible = on;
@@ -798,6 +810,9 @@ export class DomHud implements Hud {
     this.faultCuePending = false;
     this.faultCueUntil = -1;
     this.skillCueEl.classList.remove('fault');
+    // The shared cue slot may still contain a retry lesson. Force the route prompt
+    // to repaint when its approach window resumes.
+    if (this.routeCue) this.routeCueAction = null;
     if (this.track?.id === 'c1-low-tide') {
       this.skillCueEl.setAttribute('aria-label', 'Ease off. Brake before the pallet ramp.');
       this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';

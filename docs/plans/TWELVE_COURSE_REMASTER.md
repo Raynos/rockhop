@@ -93,3 +93,7 @@ The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) replaces
 ### 2026-09-29 D2 machinery finding
 
 The [played D2 excerpts](../evidence/course-remaster/d2/README.md) add a rotating pulley face, belt supports and a loaded ore cart. The cart window retains an exact Node/browser prefix hash, while the full Node input still finishes clean. A separate surface/lighting pass is needed because the black riding ribbon remains visually dominant. Fresh two-bike fault response and physical-phone pacing remain open.
+
+### 2026-09-29 S1 upper-route finding
+
+The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows a two-beat Diamond prompt starting 13 m earlier: settle before the bridge lip, then level for its deck. Both pinned lower Rookie and upper Pro finishes remain exact in Node and two browser loads. Whether a new rider understands and chooses the high line remains unmeasured.

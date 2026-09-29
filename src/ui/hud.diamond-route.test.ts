@@ -38,6 +38,66 @@ describe('late Diamond high-line guidance', () => {
     expect(hud.root.querySelector('.skill-cue')?.textContent).toContain('EASE OFF');
   });
 
+  it('gives Lift Line an early settle beat, then a level beat without moving its fixed HUD box', () => {
+    const hud = new DomHud(document.body);
+    const route = diamondRouteCue(getTrack('s1-lift-line')!)!;
+    expect(route.x0).toBe(245);
+    expect(route.secondBeat?.x0).toBe(275);
+    hud.setTrack(getTrack('s1-lift-line')!);
+    hud.setRun(riding);
+    const cue = hud.root.querySelector('.skill-cue')!;
+    hud.update(at(244.9));
+    expect(cue.classList.contains('show')).toBe(false);
+    hud.update(at(245));
+    expect(cue.classList.contains('show')).toBe(true);
+    expect(cue.textContent).toContain('SETTLE AT LIP');
+    expect(cue.getAttribute('aria-label')).toContain('SETTLE AT LIP');
+    hud.update(at(274.9));
+    expect(cue.textContent).toContain('SETTLE AT LIP');
+    hud.update(at(275));
+    expect(cue.textContent).toContain('LEVEL FOR DECK');
+    expect(cue.getAttribute('aria-label')).toContain('LEVEL FOR DECK');
+    expect(cue.classList.contains('route')).toBe(true);
+    hud.update(at(274));
+    expect(cue.textContent).toContain('SETTLE AT LIP');
+    hud.update(at(294));
+    expect(cue.classList.contains('show')).toBe(false);
+    hud.setTrack(getTrack('s2-cornice')!);
+    expect(cue.textContent).toContain('WIND SHELF');
+    expect(cue.textContent).not.toContain('SETTLE');
+    for (const id of ['d3-rope-walk', 's2-cornice', 's3-whiteout']) {
+      const track = getTrack(id)!;
+      const other = diamondRouteCue(track)!;
+      expect(other.secondBeat).toBeUndefined();
+      hud.setTrack(track);
+      hud.setRun(riding);
+      hud.update(at((other.x0 + other.x1) / 2));
+      expect(cue.textContent).toContain(other.action);
+    }
+  });
+
+  it('keeps an active retry lesson over the route beat and restores the beat when it expires', () => {
+    const hud = new DomHud(document.body);
+    hud.setTrack(getTrack('s1-lift-line')!);
+    hud.setRun(riding);
+    const cue = hud.root.querySelector('.skill-cue')!;
+    hud.update(at(274));
+    expect(cue.textContent).toContain('SETTLE AT LIP');
+    // A future route-specific fault lesson shares this HUD slot. Simulate it here
+    // until a track author supplies the fault trigger, then cross the beat boundary.
+    const fault = hud as unknown as { faultCue: object | null; faultCueUntil: number };
+    fault.faultCue = {};
+    fault.faultCueUntil = 4;
+    cue.innerHTML = '<strong>RETRY THE LANDING</strong>';
+    cue.classList.add('fault');
+    hud.update(at(275));
+    expect(cue.textContent).toContain('RETRY THE LANDING');
+    hud.setRun({ ...riding, simTime: 5 });
+    hud.update(at(275));
+    expect(cue.textContent).toContain('LEVEL FOR DECK');
+    expect(cue.classList.contains('fault')).toBe(false);
+  });
+
   it('teaches the first Whiteout shelf before the gap, then restores the earlier upper-route prompt', () => {
     const hud = new DomHud(document.body);
     const track = getTrack('s3-whiteout')!;
