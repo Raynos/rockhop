@@ -724,51 +724,55 @@ for(let x=-21.0;x<22.0;x+=1.38){
 }
 stakes.count=stakeCount.value;stakes.castShadow=true;terrain.add(stakes);
 
-// Faceted glacial massifs protrude above the pine line on the snow end.
+// Each summit is a small joined ridge rather than a smooth, repeated cone.
+// The feet sample the island height field, so the broad rock shoulders meet
+// the snow ground without an obvious cylindrical collar when the map turns.
 const mountainMaterial=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,flatShading:true,side:THREE.DoubleSide});
-function mountain(x,z,radius,height){
- const ringCount=13,levels=[0,.15,.34,.55,.73,.89,1],sizes=[1,.82,.62,.43,.27,.11,0];
- const rings=[],positions=[],colors=[];
+function mountain(x,z,rx,rz,height,phase){
+ const sectors=17,levels=[0,.12,.27,.43,.59,.73,.85,.94,1];
+ const widths=[1,.91,.79,.65,.51,.37,.24,.12,0];
+ const points=[],positions=[],colors=[];
  for(let l=0;l<levels.length;l++){
    const ring=[];
-   for(let k=0;k<ringCount;k++){
-     const a=k/ringCount*Math.PI*2;
-     const ridge=.82+.15*Math.sin(k*2.23+x*1.7)+.10*Math.sin(k*4.7+z)
-       +.055*Math.sin(k*7.1+l*2.8+x);
-     const spire=levels[l]*levels[l];
-     const r=radius*sizes[l]*ridge;
-     ring.push(new THREE.Vector3(Math.cos(a)*r+spire*.24,
-       levels[l]*height+.12*noise(k*.31+l*.2+x,k*.23+z),
-       Math.sin(a)*r-spire*.18));
+   for(let k=0;k<sectors;k++){
+     const a=k/sectors*Math.PI*2,up=levels[l];
+     const shoulder=1+.12*Math.sin(a*3+phase)+.065*Math.sin(a*7-phase*.7)
+       +.04*Math.sin(a*11+l*.9+phase);
+     const r=widths[l]*shoulder;
+     const wx=x+Math.cos(a)*rx*r+up*up*.24;
+     const wz=z+Math.sin(a)*rz*r-up*up*.12;
+     const rise=height*up+(.08*Math.sin(k*2.4+phase+l*.8))*Math.sin(up*Math.PI);
+     ring.push({x:wx,y:groundHeight(wx,wz)+rise-.10,z:wz,rise});
    }
-   rings.push(ring);
+   points.push(ring);
  }
  const addFace=(a,b,c,l,k)=>{
    positions.push(a.x,a.y,a.z,b.x,b.y,b.z,c.x,c.y,c.z);
-   const snowline=.29+.07*Math.sin(k*2.1+x*.7)+.04*noise(k*.5,l*.6+z);
-   const isSnow=(a.y+b.y+c.y)/(3*height)>snowline;
-   const shade=.5+.5*Math.sin(k*2.83+l*1.39+x*.4);
-   const vein=Math.floor(hash2(x,z)*ringCount);
-   const exposed=isSnow&&l<5&&(k===vein||k===(vein+1)%ringCount);
-   const tint=new THREE.Color(exposed?'#627d85':isSnow?'#d9e8e8':'#637f88');
-   tint.lerp(new THREE.Color(exposed?'#a6bdba':isSnow?'#fffdf4':'#a7aaa3'),shade*(isSnow?.64:.54));
-   tint.offsetHSL(0,0,(noise(k*.9,l*.7+z)-.5)*.06);
+   const elevation=(a.rise+b.rise+c.rise)/(3*height);
+   const cut=.35+.07*Math.sin(k*.85+phase)+.03*Math.sin(k*2.6+l*.4);
+   const couloir=Math.sin(k*1.15+phase)>.72&&l<6;
+   const exposed=elevation>cut && couloir;
+   const snow=elevation>cut&&!exposed;
+   const shade=.5+.5*Math.sin(k*2.55+l*1.1+phase);
+   const tint=new THREE.Color(snow?'#d7e4e1':exposed?'#66818a':'#61777e');
+   tint.lerp(new THREE.Color(snow?'#fffdf0':exposed?'#aec0be':'#a4aaa7'),shade*(snow?.72:.60));
+   if(!snow&&!exposed&&elevation<.17)tint.lerp(new THREE.Color('#a5b9b7'),.32);
    for(let v=0;v<3;v++)colors.push(tint.r,tint.g,tint.b);
  };
- for(let l=0;l<levels.length-1;l++)for(let k=0;k<ringCount;k++){
-   const next=(k+1)%ringCount;
-   addFace(rings[l][k],rings[l][next],rings[l+1][k],l,k);
-   addFace(rings[l][next],rings[l+1][next],rings[l+1][k],l,k);
+ for(let l=0;l<levels.length-1;l++)for(let k=0;k<sectors;k++){
+   const next=(k+1)%sectors;
+   addFace(points[l][k],points[l][next],points[l+1][k],l,k);
+   addFace(points[l][next],points[l+1][next],points[l+1][k],l,k);
  }
  const g=new THREE.BufferGeometry();
  g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
  g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.computeVertexNormals();
- const o=mesh(g,mountainMaterial,x,groundHeight(x,z)-.2,z);
+ const o=mesh(g,mountainMaterial,0,0,0);
  o.castShadow=true;o.receiveShadow=true;
 }
-mountain(15.4,4.7,2.6,2.65);
-mountain(18.4,-4.5,2.45,3.15);
-mountain(14.1,-5.2,2.1,2.45);
+mountain(15.4,4.7,2.75,2.60,2.95,.7);
+mountain(18.4,-4.9,2.65,2.65,3.55,1.8);
+mountain(13.9,-5.5,2.20,2.25,2.60,3.2);
 
 // Open-cut quarry benches follow an irregular horseshoe; each wall and shelf has volume.
 const sandstone=mat('#a6633b'),ore=mat('#755849');
