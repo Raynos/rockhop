@@ -29,6 +29,8 @@ import { chromium, type BrowserContext, type Page } from 'playwright';
 import { preview, type PreviewServer } from 'vite';
 import { encodeJSON } from '../../src/core/replay';
 import { AVAILABLE_RIDER_PRESETS } from '../../src/core/riderPresets';
+import { PRO_PRICE, SCRAP_REWARD } from '../../src/ui/economy';
+import { ROCKHOP_TRACKS } from '../../src/tracks/rockhop';
 import { pickGolden } from '../lib/golden';
 import { loadRecording } from '../lib/recording';
 import { DIST_DIR, OUT_DIR, REPO_ROOT } from '../lib/paths';
@@ -268,6 +270,12 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
   const goldenFile = pickGolden(GOLDEN_TRACK, log);
   const goldenJson = goldenFile ? encodeJSON(loadRecording(goldenFile)) : null;
   measured['golden'] = goldenFile ? path.relative(REPO_ROOT, goldenFile) : null;
+  // Four Gold career medals earn enough Scrap for the real Garage purchase. Seed the PBs before
+  // the one online load so CareerEconomy performs its normal backfill; the offline phase must
+  // still inspect the locked bike and spend Scrap through the player's Buy Pro button.
+  const medalSeed = ROCKHOP_TRACKS.slice(0, Math.ceil(PRO_PRICE / SCRAP_REWARD.gold)).map((track) => track.id);
+  if (medalSeed.length * SCRAP_REWARD.gold < PRO_PRICE) throw new Error('offline e2e: campaign cannot earn Pro');
+  measured['garageMedalSeed'] = medalSeed;
 
   const profile = path.join(OUT_DIR, '.offline-profile', String(process.pid));
   fs.rmSync(profile, { recursive: true, force: true });
@@ -284,6 +292,10 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
     let onlineRide: { hash: string; finishTime: number | null; faults: number } | null = null;
     {
       const ctx = await open(false);
+      await ctx.addInitScript((ids) => {
+        if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
+        for (const id of ids) localStorage.setItem(`rockhop.best.${id}`, JSON.stringify({ time: 60, faults: 0, medal: 'gold', bike: 'rookie' }));
+      }, medalSeed);
       const { page, read } = await bootPage(ctx, url, onlineErrors);
       await page.waitForFunction(() => navigator.serviceWorker.controller !== null, null, { timeout: 60_000 }).catch(() => undefined);
       await page.evaluate(() => navigator.serviceWorker.ready.then(() => undefined)).catch(() => undefined);
@@ -380,6 +392,7 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
       });
       const combos: { combo: string; heroDoc: string; ok: boolean; tapped: boolean; rect?: unknown }[] = [];
       let garageOk = false;
+      let proPurchase: { initialWallet: string; locked: boolean; buyVisible: boolean; bought: boolean; owned: boolean; finalWallet: string } | null = null;
       // A real emulated finger, not `page.click`: the front end only takes pointers inside a `.live`
       // element (src/ui/live.ts), so a synthetic click on a rail button silently does nothing.
       // A raw emulated finger at the button's centre. NOT `page.tap(selector)`: Playwright's actionability
@@ -419,6 +432,14 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
         // (the R6 touch invariant): tapping the instant the class lands is a tap on nothing.
         await page.waitForTimeout(3000);
         garageOk = true;
+        const initialWallet = await page.locator('.gp-wallet b').textContent().catch(() => '');
+        const locked = (await page.locator('button[data-bike="pro"]').getAttribute('aria-label').catch(() => ''))?.includes('locked') ?? false;
+        const inspected = await tap('button[data-bike="pro"]');
+        const buyVisible = inspected && await page.locator('.gp-buy:not([disabled])').count() === 1;
+        const bought = buyVisible && await tap('.gp-buy');
+        const owned = (await page.locator('button[data-bike="pro"]').getAttribute('aria-label').catch(() => ''))?.includes('equipped') ?? false;
+        const finalWallet = await page.locator('.gp-wallet b').textContent().catch(() => '');
+        proPurchase = { initialWallet: initialWallet ?? '', locked, buyVisible, bought, owned, finalWallet: finalWallet ?? '' };
         for (const bike of ['rookie', 'pro'] as const) {
           await page.waitForFunction(() => ((window as unknown as { __render?: { heroLoading?: number } }).__render?.heroLoading ?? 0) === 0, null, { timeout: 90_000 }).catch(() => undefined);
           await tap(`button[data-bike="${bike}"]`);
@@ -462,15 +483,16 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
       } catch (e) {
         combos.push({ combo: 'garage', heroDoc: String(e), tapped: false, ok: false });
       }
-      const swapsOk = garageOk && combos.length === AVAILABLE_RIDER_PRESETS.length * 2 && combos.every((c) => c.ok) && modelFailures.length === 0;
-      check('offline.garageSwapsOffline', swapsOk, `${combos.filter((c) => c.ok).length}/${combos.length} combinations`, `${modelFailures.length} failed /models/ requests${combos.filter((c) => !c.ok).length ? `; bad: ${combos.filter((c) => !c.ok).map((c) => `${c.combo} (${c.heroDoc || 'no document'})`).join(', ')}` : ''}`);
+      const purchaseOk = !!proPurchase && proPurchase.locked && proPurchase.buyVisible && proPurchase.bought && proPurchase.owned && Number(proPurchase.initialWallet.replaceAll(',', '')) >= PRO_PRICE && Number(proPurchase.finalWallet.replaceAll(',', '')) === Number(proPurchase.initialWallet.replaceAll(',', '')) - PRO_PRICE;
+      const swapsOk = garageOk && purchaseOk && combos.length === AVAILABLE_RIDER_PRESETS.length * 2 && combos.every((c) => c.ok) && modelFailures.length === 0;
+      check('offline.garageSwapsOffline', swapsOk, `${combos.filter((c) => c.ok).length}/${combos.length} combinations`, `Pro locked→bought ${purchaseOk ? 'PASS' : 'FAIL'} (${proPurchase?.initialWallet ?? '?'}→${proPurchase?.finalWallet ?? '?'} Scrap); ${modelFailures.length} failed /models/ requests${combos.filter((c) => !c.ok).length ? `; bad: ${combos.filter((c) => !c.ok).map((c) => `${c.combo} (${c.heroDoc || 'no document'})`).join(', ')}` : ''}`);
 
       // The ride: the golden recording through the page's own solver, offline, against the online run.
       const offRide = goldenJson ? await replayGolden(page, goldenJson) : null;
       const rideOk = !!offRide && !!onlineRide && offRide.hash === onlineRide.hash && offRide.finishTime === onlineRide.finishTime && offRide.finishTime !== null;
       check('offline.rideFinishes', rideOk, offRide ? `${offRide.finishTime?.toFixed(4) ?? 'no finish'} s · ${offRide.hash.slice(0, 12)}` : 'no replay', onlineRide ? `online ${onlineRide.finishTime?.toFixed(4) ?? 'none'} · ${onlineRide.hash.slice(0, 12)}` : 'no online run to compare');
 
-      measured['offline'] = { read: { ...read, errors: undefined }, nav, isolated, wire: { bytes: wire.bytes, requests: wire.requests }, frame, ride: offRide, worldMap: wm, inbox, garage: { combos, modelFailures } };
+      measured['offline'] = { read: { ...read, errors: undefined }, nav, isolated, wire: { bytes: wire.bytes, requests: wire.requests }, frame, ride: offRide, worldMap: wm, inbox, garage: { proPurchase, combos, modelFailures } };
       check('offline.noPageErrors', offErrors.length === 0, offErrors.length, offErrors.slice(0, 3).join(' | '));
       await ctx.close();
     }
