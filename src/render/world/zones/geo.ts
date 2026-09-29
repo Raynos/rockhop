@@ -260,6 +260,49 @@ export function lowTideWorkboatGeometry(): THREE.BufferGeometry {
   return ao(merge(parts), 9.5, 0.24);
 }
 
+/** Repeated working-quay bay: a low wet apron, drain, inset steel edge and timber fenders. */
+export function lowTideLoadingBayGeometry(): THREE.BufferGeometry {
+  const concrete = rgb(0x89897b), wet = rgb(0x435a57), seam = rgb(0x344746);
+  const iron = rgb(0x52605e), worn = rgb(0x9b8264), timber = rgb(0x65513d);
+  const parts: THREE.BufferGeometry[] = [
+    box(8.8, 0.16, 2.8, 0, 0.08, 0, concrete),
+    box(8.3, 0.014, 0.75, 0, 0.166, -0.67, wet),
+    box(8.8, 0.11, 0.16, 0, 0.17, 1.34, iron),
+    box(8.8, 0.018, 0.12, 0, 0.235, 1.24, worn),
+    box(7.65, 0.018, 0.21, 0, 0.178, 0.84, seam),
+  ];
+  for (const x of [-3.55, 3.55]) {
+    parts.push(box(0.36, 0.44, 0.32, x, -0.15, 1.43, timber));
+    parts.push(box(0.42, 0.055, 0.4, x, 0.09, 1.43, worn));
+  }
+  return ao(merge(parts), 0.55, 0.19, -0.3);
+}
+
+/** Compact powered jib hoist with a legible triangular arm, hanging block and weighted foot. */
+export function lowTideQuayHoistGeometry(): THREE.BufferGeometry {
+  const dark = rgb(0x293e40), steel = rgb(0x63706a), rust = rgb(0x9b643c);
+  const caution = rgb(0xb39a63), rope = rgb(0x524b36);
+  const parts: THREE.BufferGeometry[] = [
+    box(2.2, 0.36, 2.2, 0, 0.18, 0, dark),
+    box(1.55, 0.16, 1.55, 0, 0.42, 0, caution),
+    box(0.55, 6.6, 0.55, 0, 3.64, 0, rust),
+    box(0.82, 0.28, 0.82, 0, 6.98, 0, steel),
+    box(5.5, 0.28, 0.42, 2.75, 6.76, 0, rust),
+    box(0.74, 0.42, 0.64, 5.26, 6.7, 0, steel),
+    box(0.52, 0.6, 0.45, -0.62, 3.18, 0, steel),
+    box(0.45, 0.22, 0.54, 5.26, 4.08, 0, dark),
+    beam(0, 4.45, 0, 4.9, 6.7, 0, 0.18, steel),
+    beam(0, 6.72, 0, 4.5, 4.62, 0, 0.12, steel),
+    beam(0, 0.5, 0.5, 0, 3.4, 0.5, 0.12, dark),
+    cyl(0.065, 0.065, 2.1, 6, 5.26, 5.22, 0, rope),
+  ];
+  for (const x of [-0.65, 0.65]) {
+    parts.push(beam(x, 0.4, -0.65, x * 0.42, 3.25, 0, 0.12, steel));
+    parts.push(beam(x, 0.4, 0.65, x * 0.42, 3.25, 0, 0.12, steel));
+  }
+  return ao(merge(parts), 7.2, 0.22);
+}
+
 /**
  * Low Tide's deck-side salvage derrick. Its broad side profile, machinery cab, exposed bracing,
  * sheaves and hanging hook read at riding zoom. Origin is the feet; the boom reaches towards -x.

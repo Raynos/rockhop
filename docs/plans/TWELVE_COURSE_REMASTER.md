@@ -70,6 +70,8 @@ The [baseline inventory](../evidence/course-remaster/BASELINE.md) indexes full c
 
 The [played C1 harbor round](../evidence/course-remaster/c1/README.md) removes random clutter from the brake approach and adds a modeled winch, service pier and salvage derrick behind the landing. A [later full-course Coast pass](../evidence/course-remaster/c1/coast-wide/README.md) adds a profiled wet quay edge, exposed foreshore, open loading sheds and inshore workboats. A [C1-only deck round](../evidence/course-remaster/c1/surface-horizon/README.md) darkens the pale ridden concrete. Its photo-water shader trials failed visual review and were removed. A [new C1-only plate](../evidence/course-remaster/c1/horizon-plate/README.md) instead reduces the bright cyan water band. The [subsequent sparse-foreground pass](../evidence/course-remaster/c1/new-foreground/README.md) reduces repeated tire stacks and keeps the ramp, deck fault and causeway retry readable; matched full rides retain the exact 30.35 s finish and tail hash. The plate adds about 106 KB to the offline pack and leaves C2/C3 untouched. C1 is still an incremental art pass, not a full-course remaster or physical-phone sign-off.
 
+A [later working-quay comparison](../evidence/course-remaster/c1/harbor-density/README.md) replaces more random shelf scrap with ten low loading aprons and four grounded jib silhouettes. Matched full, ramp and two fault/retry windows retain identical hashes and camera bounds; the x190–258 brake sightline stays open. The first trolley draft read too subtly at phone size and was removed. The retained hoists add some midground depth but do not close the whole-course material, phone performance, audio or human-readability bar.
+
 ### 2026-09-29 A1 visual finding
 
 The [played A1 flume round](../evidence/course-remaster/a1/README.md) gives the raised trough a timber truss and waterwheel and carries its frame to the actual pond takeoff lip. Its 130-frame riding window keeps the tire surface, rider and landing visible with exact browser/Node state hash. A [matched full-ride mill pass](../evidence/course-remaster/a1/mill-complex/README.md) now fills the empty stair-section background with a saw shed, blade bay, conveyor and cut stock; before/after finishes and tail hashes agree exactly. Colliders and physics are unchanged. Physical phone pacing, richer timber/contact material and new-player response remain open, so these are bounded scene passes rather than course sign-off.
@@ -93,6 +95,7 @@ The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) first re
 ### 2026-09-29 D2 machinery finding
 
 The [played D2 excerpts](../evidence/course-remaster/d2/README.md) add a rotating pulley face, belt supports and a loaded ore cart. The cart window retains an exact Node/browser prefix hash, while the full Node input still finishes clean. A separate surface/lighting pass is needed because the black riding ribbon remains visually dominant. Fresh two-bike fault response and physical-phone pacing remain open.
+
 
 ### 2026-09-29 S1 upper-route finding
 

@@ -341,6 +341,10 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const lowTidePier = lowTide ? PB('c1-service-pier', G.lowTideServicePierGeometry(), painted) : null;
     const lowTideWarehouse = lowTide ? PB('c1-quay-warehouse', G.lowTideWarehouseGeometry(), painted) : null;
     const lowTideWorkboat = lowTide ? PB('c1-inshore-coaster', G.lowTideWorkboatGeometry(), painted, false) : null;
+    const lowTideLoadingBay = lowTide ? PB('c1-loading-bay', G.lowTideLoadingBayGeometry(), painted) : null;
+    const lowTideQuayHoist = lowTide ? PB('c1-quay-hoist', G.lowTideQuayHoistGeometry(), painted) : null;
+    const loadingBays = [29, 63, 105, 144, 276, 312, 352, 390, 434, 466];
+    const inLoadingBay = (x: number): boolean => lowTide && loadingBays.some((bay) => Math.abs(x - bay) < 5.6);
     const craneHop = track.def.id === 'c2-crane-hop';
     if (craneHop) {
       PB('c2-pier-2-trestle', c2PierTrestleGeometry(), painted).add(119, 0, 0);
@@ -426,6 +430,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       // A deliberate open sightline lets the rider read C1's braking ramp and container landing.
       // The dock machinery below takes the place of the random scrap in this short section.
       if (lowTide && x >= 190 && x < 258) continue;
+      if (inLoadingBay(x)) continue;
       if (craneHop && ((x >= 96 && x < 142) || (x >= 286 && x < 341))) continue;
       const r = rng.next();
       if (r < 0.2) continue;
@@ -459,12 +464,24 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     // Mid band (z −10 … −12): a container block now and then along the quay, low enough to keep the bay in view.
     for (let x = x0; x < x1; x += rng.range(24, 40)) {
       if (lowTide && x >= 188 && x < 258) continue;
+      if (inLoadingBay(x)) continue;
       if (craneHop && ((x >= 90 && x < 145) || (x >= 282 && x < 342))) continue;
       if (rng.next() < 0.35) continue;
       const n = rng.int(1, 2);
       for (let i = 0; i < n; i++) stack(x + i * 6.2, -11 + rng.range(-0.4, 0.4), rng.next() < 0.3 ? 2 : 1);
     }
     if (lowTide) {
+      // Low wet aprons, drainage slots and powered jib hoists turn scattered yard stretches
+      // into a working quay. Both hazard windows retain an open view of the tire contact.
+      for (const x of loadingBays) if (x >= x0 && x < x1) {
+        const z = -8.25;
+        const y = gy(x, z);
+        lowTideLoadingBay!.add(x, y - 0.035, z);
+        if ([63, 144, 352, 434].includes(x)) {
+          lowTideQuayHoist!.add(x - 2.1, gy(x - 2.1, -9.7), -9.7);
+          shadowAt(x - 2.1, -9.7, 2.1, 1.2);
+        }
+      }
       // Built harbor masses repeat at a believable scale throughout the ride, while the
       // braking approach and the x205–240 contact line keep their open sightline.
       for (const x of [35, 112, 303, 393]) if (x >= x0 && x < x1) {
