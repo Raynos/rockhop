@@ -41,6 +41,7 @@ import { tagBloomers } from './post/emissiveBloom';
 import { HALL } from './world/hall';
 import { buildGarageStage, GARAGE_LAMPS, type GarageStage } from './world/garageStage';
 import { buildRideSurfaces } from './world/deck';
+import { guardWebGLPrecision } from './webglPrecision';
 
 /** One frame later (rAF, or a macrotask without one) — the ≤ 16 ms task boundary for `prepare()` and track entry. */
 const yieldFrame = (): Promise<void> => new Promise((r) => (typeof requestAnimationFrame === 'function' ? requestAnimationFrame(() => r()) : setTimeout(r, 0)));
@@ -371,11 +372,27 @@ export class ThreeRenderer implements GameRenderer {
   constructor(parent: HTMLElement, options: ThreeRendererOptions = {}) {
     this.canvas = document.createElement('canvas');
     parent.appendChild(this.canvas);
+    const antialias = options.antialias ?? false;
+    const preserveDrawingBuffer = options.preserveDrawingBuffer ?? false;
+    // Three r186 assumes every WebGL2 precision query returns an object. On
+    // iOS Safari it can return null, causing an uncaught startup TypeError.
+    // Reuse the context so Three cannot create a different one after probing.
+    const glContext = this.canvas.getContext('webgl2', {
+      alpha: true, depth: true, stencil: false, antialias,
+      premultipliedAlpha: true, preserveDrawingBuffer,
+      powerPreference: 'high-performance', failIfMajorPerformanceCaveat: false,
+    });
+    if (!glContext || glContext.isContextLost()) {
+      this.canvas.remove();
+      throw new Error('WebGL2 context unavailable during renderer startup');
+    }
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
-      antialias: options.antialias ?? false, // Final SMAA handles edges after HDR tone mapping on every tier.
+      context: glContext,
+      precision: guardWebGLPrecision(glContext),
+      antialias, // Final SMAA handles edges after HDR tone mapping on every tier.
       powerPreference: 'high-performance',
-      preserveDrawingBuffer: options.preserveDrawingBuffer ?? false,
+      preserveDrawingBuffer,
     });
     this.tier = options.quality ?? 'high';
     this.devicePixelRatio = options.pixelRatio ?? Math.min(window.devicePixelRatio || 1, 2);
