@@ -255,12 +255,13 @@ export const D3 = (() => {
     .arch({ style: 'finish' });
   const track = b.finish();
   // A rising launch plank offers a higher, one-way landing above the normal bridge exit.
-  // The continuous lower passage remains the main line; the deck is optional.
+  // The longer deck carries a clean launch over the first wave crest; the continuous lower
+  // passage remains the main line. The deck is optional and its proof has no bike-ID check.
   track.obstacles.push({ kind: 'plank', pos: { x: 385.7, y: 1.5 },
     params: { length: 5, height: 0.2, angleDeg: 18, prop: 'rope-bridge' } });
   const deckIndex = track.obstacles.length;
   track.obstacles.push({ kind: 'open-platform', pos: { x: 396, y: 0 },
-    params: { length: 18, height: 3.5 } });
+    params: { length: 34, height: 3.5 } });
   track.diamondGoal = { id: 'd3-high-bridge', platformObstacleIndex: deckIndex, x: 404, minRearY: 3.7 };
   return track;
 })();
