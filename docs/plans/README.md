@@ -8,6 +8,8 @@
 
 **First course visual round:** [C1 moving evidence](../evidence/course-remaster/c1/README.md) shows a clear brake-ramp sightline and an authored dock winch, pier and derrick. The 11/11 [host Metal partial gate](../evidence/course-remaster/c1/ship-gate-partial.json) covers cold boot, clear, crash and instant restart. C1 is an incremental art pass; its full remaster and physical-phone sign-off remain open.
 
+**C1 production-slice audit:** [the played-evidence review](../evidence/course-remaster/c1/VERTICAL_SLICE_AUDIT.md) orders the remaining first-course work: measure real-time brake understanding, raise the full Coast foreground to one material/lighting standard, then prove the first reward and voluntary replay through a single current-source 3D-map-to-Garage journey. Its cited clips span multiple source rounds, so an integrated current-build ride and uncoached physical-phone players are still required.
+
 **Alpine visual round:** [A1 played flume footage](../evidence/course-remaster/a1/README.md) shows a framed timber trough, waterwheel and true takeoff lip without a collider change. The exact 130-frame replay and obstacle cost are recorded. Full-course, physical-phone and uncoached-player criteria remain open.
 
 **A2 model round:** [played Log Jam footage](../evidence/course-remaster/a2/README.md) shows a modeled pivot, axle and cut ends on the moving timber and log piles. The captured input retains its exact finish hash and camera bounds; the additional 4,140 obstacle triangles and two draw calls still need sustained phone performance review. A2 is an incremental model pass, with fresh fault and human readability gates open.

@@ -101,3 +101,7 @@ The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.m
 ### 2026-09-29 A3 truck finding
 
 The [played Timberline window](../evidence/course-remaster/a3/README.md) gives the raised platform a chassis, wheels and strapped load without altering the x253.2–261.2 m collider. The browser/Node capture prefix is exact and the full Node input still finishes clean. The red scenic cab, exit beam, fresh fault/retry understanding and physical-phone pacing remain open.
+
+### 2026-09-29 C1 production-slice review
+
+The [evidence-linked C1 audit](../evidence/course-remaster/c1/VERTICAL_SLICE_AUDIT.md) identifies the brake decision, full-course foreground quality and first-win replay loop as the ordered work, with measurable new-player and single-build integration checks. Existing clips span separate source rounds; none proves a current-build, uncoached physical-phone first session. Pass 1 remains open.
