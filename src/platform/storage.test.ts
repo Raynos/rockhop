@@ -83,4 +83,39 @@ describe('persistentStorage', () => {
     await durableFlushed();
     expect(localStorage.getItem('rockhop.x')).toBe('1');
   });
+
+  it('recovers a newer medal after the app exits before the durable write finishes', async () => {
+    const kv = memoryKV({ 'rockhop.medal.c1': 'bronze' });
+    await hydrateStorage(kv);
+    const set = kv.set;
+    kv.set = () => new Promise<void>(() => undefined);
+    persistentStorage()!.setItem('rockhop.medal.c1', 'diamond');
+    resetStorageForTests(); // new WebView process; its unfinished bridge request is gone
+    kv.set = set;
+    await hydrateStorage(kv);
+    expect(localStorage.getItem('rockhop.medal.c1')).toBe('diamond');
+    expect(kv.data.get('rockhop.medal.c1')).toBe('diamond');
+  });
+
+  it('recovers a pending removal and clear after the app exits', async () => {
+    const kv = memoryKV({ 'rockhop.best.c1': '30', 'rockhop.scrap': '800' });
+    await hydrateStorage(kv);
+    const remove = kv.remove;
+    kv.remove = () => new Promise<void>(() => undefined);
+    persistentStorage()!.removeItem('rockhop.best.c1');
+    resetStorageForTests();
+    kv.remove = remove;
+    await hydrateStorage(kv);
+    expect(localStorage.getItem('rockhop.best.c1')).toBeNull();
+    expect(kv.data.has('rockhop.best.c1')).toBe(false);
+
+    const clear = kv.clear;
+    kv.clear = () => new Promise<void>(() => undefined);
+    persistentStorage()!.clear();
+    resetStorageForTests();
+    kv.clear = clear;
+    await hydrateStorage(kv);
+    expect(localStorage.getItem('rockhop.scrap')).toBeNull();
+    expect(kv.data.size).toBe(0);
+  });
 });
