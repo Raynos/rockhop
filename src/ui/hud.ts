@@ -13,6 +13,7 @@ import type { Hud, HudAction } from './index';
 import { conceal, isLive, reveal } from './live';
 import { TileRow } from './tiles';
 import { MEDAL_NAME, medalSvg, wordmarkSvg, zoneTitle, type MedalId } from './brand';
+import { diamondRouteCue, type DiamondRouteCue } from './diamondRouteCue';
 import { c1FaultCue, type FaultCue } from './c1FaultCue';
 
 type BannerKind = 'count' | 'go' | 'crash' | 'cp' | 'finish';
@@ -71,6 +72,7 @@ export class DomHud implements Hud {
   private readonly hintsEl: HTMLDivElement;
   private readonly skillCueEl: HTMLDivElement;
   private skillCueVisible = false;
+  private routeCue: DiamondRouteCue | null = null;
   private faultCue: FaultCue | null = null;
   private faultCuePending = false;
   private faultCueUntil = -1;
@@ -279,14 +281,21 @@ export class DomHud implements Hud {
     this.track = track;
     this.clearFaultCue();
     this.setSkillCueVisible(false);
+    this.routeCue = diamondRouteCue(track);
     const craneCue = track.id === 'c2-crane-hop';
     this.skillCueEl.classList.toggle('crane', craneCue);
-    this.skillCueEl.setAttribute('aria-label', craneCue
-      ? 'Level the bike in flight. Release GO or lean forward to meet the barge.'
-      : 'Ease off. Brake before the pallet ramp.');
-    this.skillCueEl.innerHTML = craneCue
-      ? '<span class="skill-cue-icon" aria-hidden="true">↘</span><span class="skill-cue-copy"><strong>LEVEL THE BIKE</strong><small>RELEASE OR LEAN FORWARD</small></span>'
-      : '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';
+    this.skillCueEl.classList.toggle('route', this.routeCue !== null);
+    if (this.routeCue) {
+      this.skillCueEl.setAttribute('aria-label', `Diamond high line: ${this.routeCue.action}`);
+      this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">◇</span><span class="skill-cue-copy"><strong>${escapeHtml(this.routeCue.title)}</strong><small>${escapeHtml(this.routeCue.action)}</small></span>`;
+    } else {
+      this.skillCueEl.setAttribute('aria-label', craneCue
+        ? 'Level the bike in flight. Release GO or lean forward to meet the barge.'
+        : 'Ease off. Brake before the pallet ramp.');
+      this.skillCueEl.innerHTML = craneCue
+        ? '<span class="skill-cue-icon" aria-hidden="true">↘</span><span class="skill-cue-copy"><strong>LEVEL THE BIKE</strong><small>RELEASE OR LEAN FORWARD</small></span>'
+        : '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';
+    }
     this.trackEl.innerHTML = `<b>${escapeHtml(track.tier)}</b>${escapeHtml(track.name)}`;
     for (const m of this.stripMarks) m.remove();
     this.stripMarks = [];
@@ -420,7 +429,8 @@ export class DomHud implements Hud {
     // Authored approach lanes. Fixed screen position keeps the prompt pixel-stable as the world moves.
     const c1Lane = t.id === 'c1-low-tide' && x >= 179.6 && x < 209.6;
     const c2Lane = t.id === 'c2-crane-hop' && x >= 284 && x < 323;
-    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Lane)));
+    const highLine = this.routeCue !== null && x >= this.routeCue.x0 && x < this.routeCue.x1;
+    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Lane || highLine)));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);

@@ -568,6 +568,10 @@ export const HUD_CSS = /* css */ `
 .skill-cue.crane .skill-cue-icon { font-size: 22px; }
 .skill-cue.crane .skill-cue-copy strong { font-size: 19px; letter-spacing: .03em; }
 .skill-cue.crane .skill-cue-copy small { font-size: 12px; }
+.skill-cue.route { width: 318px; border-color: #addfe8; color: #f2fcff; box-shadow: 0 3px 0 #2d5962, 0 8px 20px rgba(0,0,0,.25); }
+.skill-cue.route .skill-cue-icon { background: #b9e8ef; color: #114650; font-size: 26px; }
+.skill-cue.route .skill-cue-copy strong { font-size: 18px; letter-spacing: .04em; }
+.skill-cue.route .skill-cue-copy small { font-size: 11px; color: #d5f0f0; }
 .skill-cue-icon { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border-radius: 7px; background: #ffbd4e; color: #163b3e; font-size: 25px; font-weight: 950; line-height: 1; }
 .skill-cue-copy { display: flex; flex-direction: column; min-width: 0; }
 .skill-cue-copy strong { font-size: 20px; line-height: 22px; font-weight: 950; letter-spacing: .07em; white-space: nowrap; }
