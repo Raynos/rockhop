@@ -1,0 +1,31 @@
+
+> rockhop@0.3.2 harness:bot /Users/raynos/projects/game-demos/trials-gauntlet-demo
+> tsx harness/bot/bot.ts --refresh-goldens --jobs 3 --tracks c1-low-tide,c2-crane-hop,c3-hull-breach,a1-sawdust,a2-log-jam,a3-timberline,d1-dust-devil,d2-conveyor,d3-rope-walk,s1-lift-line,s2-cornice,s3-whiteout
+
+refresh-goldens: src=a4be385f tracks=12 jobs=3 loadavg 7.9 5.1 4.1 / 18 cores
+  24 golden(s) to re-prove in the browser, 3 at a time
+  RESTAMPED c1-low-tide          bot-3.json     finish 30.350 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED c1-low-tide          bot-3-pro.json finish 29.300 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED c2-crane-hop         bot-3.json     finish 26.608 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED c2-crane-hop         bot-3-pro.json finish 25.833 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED c3-hull-breach       bot-3.json     finish 35.100 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED c3-hull-breach       bot-3-pro.json finish 30.217 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED a1-sawdust           bot-3.json     finish 30.350 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED a1-sawdust           bot-3-pro.json finish 28.992 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED a2-log-jam           bot-3.json     finish 29.983 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED a2-log-jam           bot-3-pro.json finish 29.892 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED a3-timberline        bot-3.json     finish 24.817 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED a3-timberline        bot-3-pro.json finish 23.233 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED d1-dust-devil        bot-3.json     finish 27.058 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED d1-dust-devil        bot-3-pro.json finish 26.200 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED d2-conveyor          bot-3.json     finish 37.158 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED d2-conveyor          bot-3-pro.json finish 36.825 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED d3-rope-walk         bot-3.json     finish 35.333 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED d3-rope-walk         bot-3-pro.json finish 32.350 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED s1-lift-line         bot-3.json     finish 30.983 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED s1-lift-line         bot-3-pro.json finish 30.333 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED s2-cornice           bot-3.json     finish 35.542 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED s2-cornice           bot-3-pro.json finish 33.792 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED s3-whiteout          bot-3.json     finish 31.725 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+  RESTAMPED s3-whiteout          bot-3-pro.json finish 29.600 s, 1 attempt(s), node == browser; d47b0ac8 -> a4be385f
+refresh-goldens: fresh 0, restamped 24, stale 0; tracks with a proven golden 12/12
