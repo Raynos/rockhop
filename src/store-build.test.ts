@@ -42,13 +42,11 @@ function build(name: string, env: Record<string, string>): Built {
 
 let web: Built;
 let store: Built;
-let mapReview: Built;
 
 beforeAll(() => {
-  const { VITE_STORE: _s, VITE_STORE_DEBUG: _d, VITE_MAP_3D_REVIEW: _m, ...clean } = process.env;
+  const { VITE_STORE: _s, VITE_STORE_DEBUG: _d, ...clean } = process.env;
   web = build('web', clean as Record<string, string>);
   store = build('store', { VITE_STORE: '1' });
-  mapReview = build('map-review', { VITE_MAP_3D_REVIEW: '1' });
 }, 120_000);
 
 afterAll(() => {
@@ -87,26 +85,29 @@ describe('store build (VITE_STORE=1) compiles out every dev surface', () => {
     });
   }
 
-  it('ships no service worker, version probe, bench golden, inbox or 3D map chunk file', () => {
+  it('ships no service worker, version probe, bench golden or inbox in the store build', () => {
     for (const f of ['sw.js', 'version.json', 'bench/b1-bot-3.json']) {
       expect(web.files).toContain(f);
       expect(store.files).not.toContain(f);
     }
     expect(web.files.some((f) => f.startsWith('assets/inbox-'))).toBe(true);
     expect(store.files.some((f) => f.startsWith('assets/inbox-'))).toBe(false);
-    expect(web.files.some((f) => f.startsWith('assets/worldMap3dScene-'))).toBe(false);
-    expect(store.files.some((f) => f.startsWith('assets/worldMap3dScene-'))).toBe(false);
-    expect(web.files.some((f) => f.startsWith('assets/sky-alpine-a-'))).toBe(false);
-    expect(store.files.some((f) => f.startsWith('assets/sky-alpine-a-'))).toBe(false);
-    expect(web.text).not.toContain('3D map unavailable; using painted map');
-    expect(store.text).not.toContain('3D map unavailable; using painted map');
+    expect(web.text).not.toContain('using painted map');
+    expect(store.text).not.toContain('using painted map');
   });
 
-  it('puts the C-island scene and its sky only in an explicit map-review build', () => {
-    expect(mapReview.files.some((f) => f.startsWith('assets/worldMap3dScene-'))).toBe(true);
-    expect(mapReview.files).toContain('map-review/sky-alpine-a.png');
-    expect(web.files).not.toContain('map-review/sky-alpine-a.png');
-    expect(store.files).not.toContain('map-review/sky-alpine-a.png');
+  it('ships hashed C-island assets in both player builds for offline prefetch, without HTML preload', () => {
+    for (const built of [web, store]) {
+      const chunk = built.files.find((f) => /^assets\/worldMap3dScene-[\w-]+\.js$/.test(f));
+      const sky = built.files.find((f) => /^assets\/sky-alpine-a-[\w-]+\.webp$/.test(f));
+      expect(chunk).toBeDefined();
+      expect(sky).toBeDefined();
+      const manifest = JSON.parse(fs.readFileSync(path.join(built.dir, 'load-manifest.json'), 'utf8')) as { items: { path: string; phase: string }[] };
+      expect(manifest.items.find((item) => item.path === `./${chunk}`)?.phase).toBe('worldmap');
+      expect(manifest.items.find((item) => item.path === `./${sky}`)?.phase).toBe('worldmap');
+      expect(built.files.some((f) => f.startsWith('art/worldmap/'))).toBe(false);
+      expect(fs.readFileSync(path.join(built.dir, 'index.html'), 'utf8')).not.toContain(chunk);
+    }
   });
 
   it('the native platform layer (Capacitor, src/platform) ships in the store build only — the web bundle has none of it', () => {

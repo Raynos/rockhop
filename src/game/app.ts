@@ -75,6 +75,7 @@ import { ExitConfirm } from '../ui/exitConfirm';
 import { Bench, type BenchOptions, type FrameSplit } from './bench';
 import { DEV_SURFACES } from '../core/release';
 import { persistentStorage } from '../platform/storage';
+import { showThrown } from '../ui/errorModal';
 import { onSystemBack, exitApp } from '../platform/back';
 import { FrameCadence } from './cadence';
 import { BACKDROP_TRACK } from './flow';
@@ -120,6 +121,8 @@ export interface AppOptions {
   onRiderOutfitChange?: ((outfit: RiderOutfit) => Promise<boolean>) | undefined;
   /** Garage round: stage the hero on the renderer's workshop set while the garage screen is up (`setGarageStage`). */
   onGarageStage?: ((on: boolean) => void) | undefined;
+  /** Transfer the phone GPU from the gameplay renderer to the 3D map and back. */
+  mapGpu?: { before3d(): Promise<boolean>; after3d(): Promise<boolean> | boolean } | undefined;
   /** Garage round: the model explorer's orbit camera (`setCameraOverride`); null = the menu framing. */
   setCameraOverride?: ((o: CameraOverride | null) => void) | undefined;
   /** `?trace=1`: live InputFrame bars under the HUD timer (filming the phone). */
@@ -220,6 +223,8 @@ export class App {
   private lastAward: AwardResult | null = null;
   private readonly tracks: TrackDef[];
   private screen: AppScreen = 'menu';
+  private mapExitPending: Promise<boolean> | null = null;
+  private mapLaunchPending = false;
   private qualityChoice: QualityChoice;
   /** Frame cap (Settings · Frame rate). 'auto' = 30 on phones, 60 elsewhere; the RAF loop skips frames to match. */
   private fpsChoice: FpsChoice;
@@ -412,7 +417,7 @@ export class App {
     };
 
     this.menu = new MainMenuScreen(o.uiRoot, this.sfx, this.art, cb); // the title menu reads no state (ask 42: it leaks nothing)
-    this.tracksScreen = new WorldMapScreen(o.uiRoot, this.sfx, this.art, cb, bestOf, state, (id, bike) => this.bestTimes.board(id, bike));
+    this.tracksScreen = new WorldMapScreen(o.uiRoot, this.sfx, this.art, cb, bestOf, state, (id, bike) => this.bestTimes.board(id, bike), o.mapGpu);
     this.settings = new SettingsScreen(o.uiRoot, this.sfx, cb, state);
     this.credits = new CreditsScreen(o.uiRoot, this.sfx, cb, this.art);
     this.garage = new GarageScreen(o.uiRoot, this.sfx, this.art, {
@@ -628,7 +633,15 @@ export class App {
     this.enterReplay({ json: last.json, kind: isPb ? 'pb' : 'last', isPb }, { from: 'results' });
   }
 
-  private enterReplay(src: ReplaySource, ret: { from: 'results' } | { from: 'tracks' }): void {
+  private enterReplay(src: ReplaySource, ret: { from: 'results' } | { from: 'tracks' }, mapRestored = false): void {
+    if (ret.from === 'tracks' && this.screen === 'tracks' && !mapRestored) {
+      this.tracksScreen.hide();
+      void this.restoreAfterMap().then((restored) => {
+        if (restored && this.screen === 'tracks') this.enterReplay(src, ret, true);
+        else if (!restored) this.mapRestoreFailed();
+      });
+      return;
+    }
     if (this.replay.active) return;
     const fromResults = ret.from === 'results';
     this.replayReturn = fromResults ? { from: 'results', snap: this.game.snapshot(), counters: this.game.counters(), result: this.game.result() } : { from: 'tracks' };
@@ -879,6 +892,7 @@ export class App {
   }
 
   goto(screen: FrontScreen): void {
+    const fromTracks = this.screen === 'tracks';
     this.navLog.record('goto', this.navContext(), null, screen);
     if (this.replay.active) this.replay.close();
     if (this.review.active) {
@@ -895,6 +909,9 @@ export class App {
     this.pause.hide();
     this.menu.hide();
     this.tracksScreen.hide();
+    if (fromTracks && screen !== 'garage') {
+      void this.restoreAfterMap().then((restored) => { if (!restored) this.mapRestoreFailed(); });
+    } else if (fromTracks) void this.restoreAfterMap();
     this.settings.hide();
     this.credits.hide();
     this.garage.hide();
@@ -903,7 +920,7 @@ export class App {
     // The menu's key art covers the canvas: no WebGL frame at all while it is up (PERF.md #1 —
     // the phone paid a full tier frame plus a compositor copy for an invisible canvas).
     scene?.classList.toggle('covered', screen === 'menu');
-    this.game.renderEnabled = screen !== 'menu';
+    this.game.renderEnabled = screen !== 'menu' && screen !== 'tracks';
     // The compact meter is a diagnostic, never part of the normal game UI.
     this.fpsEl.hidden = !DEV_SURFACES || !this.o.perf || screen === 'menu';
     scene?.classList.toggle('dim', screen !== 'menu' && screen !== 'garage');
@@ -914,10 +931,15 @@ export class App {
       this.menu.setDevice(dev);
       this.menu.show();
     } else if (screen === 'garage') {
-      const economy = this.economy.snapshot();
-      this.garage.setEconomy({ scrap: economy.wallet, proOwned: economy.proOwned, proPrice: PRO_PRICE });
-      this.garage.setDevice(dev);
-      this.garage.show(this.bikeInEffect(), this.riderOutfit);
+      const showGarage = (): void => {
+        if (this.screen !== 'garage') return;
+        const economy = this.economy.snapshot();
+        this.garage.setEconomy({ scrap: economy.wallet, proOwned: economy.proOwned, proPrice: PRO_PRICE });
+        this.garage.setDevice(dev);
+        this.garage.show(this.bikeInEffect(), this.riderOutfit);
+      };
+      if (this.mapExitPending) void this.mapExitPending.then((restored) => restored ? showGarage() : this.mapRestoreFailed());
+      else showGarage();
     } else if (screen === 'tracks') {
       this.tracksScreen.build(this.tracks);
       this.tracksScreen.setDevice(dev);
@@ -932,7 +954,36 @@ export class App {
     } else this.credits.show();
   }
 
+  private restoreAfterMap(): Promise<boolean> {
+    if (this.mapExitPending) return this.mapExitPending;
+    const pending = Promise.resolve(this.o.mapGpu?.after3d() ?? true).catch(() => false);
+    this.mapExitPending = pending;
+    void pending.finally(() => { if (this.mapExitPending === pending) this.mapExitPending = null; });
+    return pending;
+  }
+
+  private mapRestoreFailed(): void {
+    this.goto('menu');
+    showThrown(new Error('WebGL2 context could not restore after the world map. Reload to retry.'));
+  }
+
   private play(id: string): void {
+    if (this.mapLaunchPending) return;
+    if (this.screen === 'tracks') this.tracksScreen.hide();
+    if (this.screen === 'tracks' || this.mapExitPending) {
+      this.mapLaunchPending = true;
+      const screen = this.screen;
+      void this.restoreAfterMap().then((restored) => {
+        this.mapLaunchPending = false;
+        if (!restored) { this.mapRestoreFailed(); return; }
+        if (this.screen === screen) this.startTrack(id);
+      });
+      return;
+    }
+    this.startTrack(id);
+  }
+
+  private startTrack(id: string): void {
     const def = getTrack(id);
     if (!def) return;
     // Bike: the owned Garage choice, otherwise Starter.

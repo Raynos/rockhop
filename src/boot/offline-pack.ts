@@ -26,18 +26,9 @@
  * DOWNLOAD invariant catching it.
  */
 import { BOOT_IDS } from '../render/art/boot-set';
-import { REGIONS, regionPlateSrc, worldMapIndexSrc, worldPlateSrc } from '../ui/worldMap';
 import { packMembership } from './asset-totals';
-import { artTier, wantsHiRes } from './tier';
+import { artTier } from './tier';
 import type { ArtEntry } from '../ui/art';
-
-/** The world map's plates and index: not in the art manifest, `<img>`-loaded by `worldMapScreen.ts`. One tier. */
-export function worldMapUrls(): string[] {
-  const hi = wantsHiRes();
-  const out = [worldMapIndexSrc(), worldPlateSrc(hi)];
-  for (const r of REGIONS) out.push(regionPlateSrc(r.id, hi));
-  return out;
-}
 
 /** `[url, declared bytes]` for everything the boot has not already fetched, in the order it is streamed. */
 export function offlinePackUrls(entries: readonly ArtEntry[]): [url: string, bytes: number][] {
@@ -51,11 +42,6 @@ export function offlinePackUrls(entries: readonly ArtEntry[]): [url: string, byt
     if (where === null || (where !== 'both' && where !== tier)) continue;
     seen.add(e.src);
     out.push([e.src, e.bytes ?? 0]);
-  }
-  for (const u of worldMapUrls()) {
-    if (seen.has(u)) continue;
-    seen.add(u);
-    out.push([u, 0]);
   }
   return out;
 }

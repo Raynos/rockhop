@@ -1,0 +1,40 @@
+{
+  "engine": "headless WebKit with service worker",
+  "errors": [
+    "Failed to load resource: Could not connect to the server."
+  ],
+  "failedRequests": [
+    "http://127.0.0.1:58710/version.json?t=1790657465865: Could not connect to the server."
+  ],
+  "cached": {
+    "controlled": true,
+    "names": [
+      "rockhop-shell-ba2e5222-02c8eb3555",
+      "rockhop-static-1f989ef69a",
+      "rockhop-immutable",
+      "rockhop-audio"
+    ],
+    "chunk": "http://127.0.0.1:58710/assets/worldMap3dScene-CU8LLdGv.js",
+    "sky": "http://127.0.0.1:58710/assets/sky-alpine-a-duW0jn55.webp"
+  },
+  "offlineFetch": {
+    "chunk": {
+      "status": 200,
+      "bytes": 93944
+    },
+    "sky": {
+      "status": 200,
+      "bytes": 106254
+    }
+  },
+  "offlineMap": {
+    "selected": "c1-low-tide",
+    "canvas": 1,
+    "towerPoints": 12,
+    "nonNullPoints": 12
+  },
+  "expectedOfflineVersionProbe": [
+    "http://127.0.0.1:58710/version.json?t=1790657465865: Could not connect to the server."
+  ],
+  "pass": true
+}

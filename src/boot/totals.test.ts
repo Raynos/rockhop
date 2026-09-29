@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { PUBLIC_BYTES } from './plan.generated';
 import { BOOT_BYTE_TOTALS, HERO_FILES, bootByteTotals } from './totals';
 import { BOOT_IDS } from '../render/art/boot-set';
-import { declaredBootTotals, emptyBootTotals, emptyPackBytes, HERO_FILE_SET, offlinePackBytes, packMembership, platePackMembership } from './asset-totals';
+import { declaredBootTotals, emptyBootTotals, emptyPackBytes, HERO_FILE_SET, offlinePackBytes, packMembership } from './asset-totals';
 import { HERO_FILES_BY_OUTFIT_CLASS } from '../render/hero/urls';
 
 // Distinct fixture sizes make a missed or double-counted file observable.
@@ -48,9 +48,6 @@ describe('declared byte totals', () => {
     expect(packMembership({ kind: 'keyart', variant: '2x' })).toBe('2x');
     expect(packMembership({ kind: 'medal', variant: '1x' })).toBe('1x');
     expect(packMembership({ kind: 'track-card' })).toBe('both');
-    expect(platePackMembership('art/worldmap/world-1536.webp')).toBe('2x');
-    expect(platePackMembership('art/worldmap/region-snow-1024.webp?v=abc')).toBe('1x');
-    expect(platePackMembership('art/worldmap/worldmap.json')).toBe('both');
 
     const facets: Record<string, { kind?: string; variant?: string }> = {
       'og-card': { kind: 'social' },
@@ -65,13 +62,10 @@ describe('declared byte totals', () => {
         ['art:keyart-hi', 200],
         ['art:keyart-lo', 70],
         ['art:card', 30],
-        ['art/worldmap/world-1536.webp', 340],
-        ['art/worldmap/world-1024.webp', 218],
-        ['art/worldmap/worldmap.json', 4],
       ],
       (id) => facets[id] ?? {},
     );
-    expect(pack).toEqual({ '1x': 70 + 30 + 218 + 4, '2x': 200 + 30 + 340 + 4 }); // og.jpg in neither; the boot-set row in neither
+    expect(pack).toEqual({ '1x': 70 + 30, '2x': 200 + 30 }); // og.jpg in neither; the boot-set row in neither
   });
 
   it('rejects a missing declared model instead of shrinking the denominator', () => {

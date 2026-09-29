@@ -8,7 +8,6 @@ import { defineConfig, type Plugin } from 'vite';
 import { HERO_FILES_BY_OUTFIT } from './src/render/hero/urls';
 import { declaredBootTotals, emptyBootTotals, offlinePackBytes, type DeclaredBootTotals } from './src/boot/asset-totals';
 import { modelAssetsPlugin, type ModelAsset } from './src/boot/model-catalog';
-import { REGIONS } from './src/ui/worldMap';
 
 /** esbuild's own API (bundling the inline loader). Not a direct dependency: resolved through Vite's, so the two never disagree. */
 interface Esbuild {
@@ -24,22 +23,6 @@ const esbuild = createRequire(createRequire(import.meta.url).resolve('vite'))('e
  */
 const STORE_BUILD = process.env['VITE_STORE'] === '1';
 const STORE_DEBUG = process.env['VITE_STORE_DEBUG'] === '1';
-const MAP_REVIEW_BUILD = !STORE_BUILD && process.env['VITE_MAP_3D_REVIEW'] === '1';
-
-/** Ship the prototype's sky only in an explicit C-island review build. */
-function mapReviewSky(): Plugin {
-  return {
-    name: 'rockhop:map-review-sky',
-    generateBundle() {
-      this.emitFile({
-        type: 'asset',
-        fileName: 'map-review/sky-alpine-a.png',
-        source: fs.readFileSync(path.resolve('prototypes/world-map-c/assets/sky-alpine-a.png')),
-      });
-    },
-  };
-}
-
 /**
  * `src/core/release.ts` as literal constants for this build. The module itself reads `import.meta.env` (so vitest
  * and the tsx harness get a normal build), but a derived const is not something Rollup folds at every import
@@ -110,7 +93,7 @@ const INLINE_BUDGET_BYTES = 8 * 1024;
  *
  * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
-const BUNDLE_BUDGET_GZ_BYTES = 640 * 1024;
+const BUNDLE_BUDGET_GZ_BYTES = 656 * 1024;
 
 function bundleBudget(): Plugin {
   return {
@@ -125,7 +108,7 @@ function bundleBudget(): Plugin {
         if (item.type === 'chunk' ? false : !name.endsWith('.js')) continue;
         const gz = gzipSync(item.type === 'chunk' ? Buffer.from(item.code) : Buffer.from(item.source)).length;
         // Explicit review-only chunks are absent from normal player boot: listed, not budgeted.
-        const excluded = DEV_CHUNK.test(name) || CRASH_REPORT_CHUNK.test(name) || (MAP_REVIEW_BUILD && /^assets\/worldMap3dScene-[\w-]+\.js$/.test(name));
+        const excluded = DEV_CHUNK.test(name) || CRASH_REPORT_CHUNK.test(name);
         if (!excluded) total += gz;
         rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${excluded ? '  (outside player budget)' : ''}`);
       }
@@ -189,13 +172,6 @@ function publicItems(root: string): LoadItem[] {
   } catch {
     /* no art pack */
   }
-  // The world map's plates are `<img>`-loaded by src/ui/worldMapScreen.ts, never listed in the art
-  // manifest — so until this walk existed the service worker could not even name them (plan §2.1(d)).
-  const wm = path.join(pub, 'art', 'worldmap');
-  for (const f of (fs.existsSync(wm) ? fs.readdirSync(wm) : []).sort()) {
-    const b = stat(`art/worldmap/${f}`);
-    if (b) items.push({ path: `./art/worldmap/${f}`, bytes: b, gz: b, phase: 'worldmap', label: `worldmap ${f}` });
-  }
   // iOS launch images (assets/brand/tools/build_assets.py): iOS fetches these itself when the app is added to the
   // home screen, so nothing in the page requests them -- they are listed so the worker can name them
   // and so the deploy's byte table is honest, not so the boot spends 1.2 MB on them.
@@ -253,12 +229,7 @@ export function writeBootPlanTable(root: string, modelAssets?: readonly ModelAss
   } catch {
     /* no art pack: the table has no art keys and steps.ts fails to typecheck — a boot that awaits art it cannot have is a build error, not a 44 % */
   }
-  // Ask 58: the world map's plates are `<img>`-loaded and are in no manifest the boot reads, so they are
-  // put in the byte table here — one key per file; `platePackMembership` splits the two tiers, and a
-  // device fetches the one `worldMapUrls()` names.
-  const wm = path.join(pub, 'art', 'worldmap');
-  for (const f of fs.existsSync(wm) ? fs.readdirSync(wm).sort() : []) rows.set(`art/worldmap/${f}`, fs.statSync(path.join(wm, f)).size);
-  const pack = offlinePackBytes(rows, (id) => facets.get(id) ?? {}, REGIONS.map((r) => r.id));
+  const pack = offlinePackBytes(rows, (id) => facets.get(id) ?? {});
   const keys = [...rows.keys()].sort();
   const body = keys.map((k) => `  ${JSON.stringify(k)}: ${rows.get(k)},`).join('\n');
   const src = [
@@ -283,10 +254,9 @@ export function writeBootPlanTable(root: string, modelAssets?: readonly ModelAss
     if (b === undefined) throw new Error(`boot plan: ${k} is awaited by the boot but missing from public/`);
     return b;
   };
-  // The offline pack's denominator: every art asset the boot set does not already cover, plus every
-  // world-map plate (`offlinePackBytes`, the same rule `src/boot/totals.ts` applies to the generated
-  // table). `src/boot/offline-pack.ts` names the same two sets at runtime; the step closes the source
-  // when it completes, so a manifest that has drifted degrades the picture, never the number.
+  // The offline pack's denominator covers art assets the boot set does not already own.
+  // `src/boot/offline-pack.ts` names those files at runtime. Lazy map JS and sky are warmed
+  // separately from the load manifest, outside this art byte dial.
   return declaredBootTotals(need, pack);
 }
 
@@ -329,7 +299,8 @@ function loadManifest(id: string): Plugin[] {
         let phase: LoadItem['phase'] = 'core';
         // Lazy chunks (the review inbox sheet) are fetched on demand, never streamed by the boot; the offline pack
         // warms every `other` item (src/main.ts). The retired tracks' dev chunk is `dev`: only a `?` dev URL fetches it.
-        if (name === 'model-catalog.json' || name.startsWith('assets/inbox-') || name.startsWith('assets/worldMap3dScene-') || name.startsWith('map-review/')) phase = 'other';
+        if (name.startsWith('assets/worldMap3dScene-') || /^assets\/sky-alpine-a-[\w-]+\.webp$/.test(name)) phase = 'worldmap';
+        else if (name === 'model-catalog.json' || name.startsWith('assets/inbox-')) phase = 'other';
         else if (DEV_CHUNK.test(name)) phase = 'dev';
         else if (CRASH_REPORT_CHUNK.test(name)) phase = 'telemetry';
         else if (/worklet/.test(name)) phase = 'audio-worklet';
@@ -618,13 +589,13 @@ function buildId(): string {
 }
 
 export default defineConfig({
-  define: { __BUILD_ID__: JSON.stringify(buildId()), __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + 'Z'), __WORLDMAP_V__: JSON.stringify(contentStamp(publicStamp(process.cwd(), ['art/worldmap'])).slice(0, 8)), __MAP3D_REVIEW__: JSON.stringify(MAP_REVIEW_BUILD) },
+  define: { __BUILD_ID__: JSON.stringify(buildId()), __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ') + 'Z') },
   // Relative base so the built bundle also works when served from a subpath
   // (Vercel preview folders, file listings, the harness preview server).
   base: './',
   // versionJson last: its `generateBundle` must run after the load manifest and the worker stamp are taken.
   // A store build has no service worker and no update probe (Apple 2.5.2: nothing loads code from a server).
-  plugins: [releaseFlags(), retiredTracksLazy(), readableStacks((name) => name === 'three'), bundleBudget(), ...(MAP_REVIEW_BUILD ? [mapReviewSky()] : []), ...loadManifest(buildId()), ...(STORE_BUILD ? [] : [pwa(buildId())]), pruneFlatModels(), ...(STORE_BUILD ? [storePrune()] : [versionJson(buildId())]), sourcemapsOut()],
+  plugins: [releaseFlags(), retiredTracksLazy(), readableStacks((name) => name === 'three'), bundleBudget(), ...loadManifest(buildId()), ...(STORE_BUILD ? [] : [pwa(buildId())]), pruneFlatModels(), ...(STORE_BUILD ? [storePrune()] : [versionJson(buildId())]), sourcemapsOut()],
   // Unmangled identifiers in production: the crash screen's stack must name functions on a phone (`readableStacks`).
   esbuild: { minifyIdentifiers: false },
   worker: { plugins: () => [readableStacks(() => true)] },

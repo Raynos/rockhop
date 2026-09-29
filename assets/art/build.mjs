@@ -329,20 +329,6 @@ for (const bike of ['rookie', 'pro']) {
   if (!thumbs.length) console.warn('no thumbs: run `npx tsx assets/art/thumbs.mts`');
 }
 
-{
-  // World map plates (the level select's painted continent, project/archive/WORLD_MAP.md): assets/art/worldmap.mjs cuts the
-  // world plate and the five region plates at 2x / 1x into public/art/worldmap/ and writes worldmap.json; recorded here
-  // so the manifest carries their bytes and tier (lazy — never on the boot set).
-  const meta = join(pub, 'worldmap/worldmap.json');
-  const plates = existsSync(meta) ? JSON.parse(readFileSync(meta, 'utf8')).plates : [];
-  for (const t of plates) {
-    if (!existsSync(join(pub, t.path.replace(/^art\//, '')))) continue;
-    const { id, path, kind, src, ...tags } = t;
-    record(`worldmap-${id}`, path.replace(/^art\//, ''), kind, tags, src);
-  }
-  if (!plates.length) console.warn('no world map plates: run `node assets/art/worldmap.mjs`');
-}
-
 // --- manifest -----------------------------------------------------------------------------------------
 const out = fullManifest(manifest, sel.rejected);
 writeManifests(out);

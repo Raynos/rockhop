@@ -10,13 +10,12 @@ export interface MountedWorldMap3D {
 
 export function mountWorldMap3D(root: HTMLElement, onSelect: (index: number) => void, initialIndex?: number, locked?: boolean[], medals?: (string | null)[]): MountedWorldMap3D;
 
-export interface MountedWorldMap3DReview {
+export interface MountedWorldMap3DShell {
   selectStage(index: number, focus?: boolean): void;
   setLocked(locked: boolean[]): void;
   setProgress(locked: boolean[], medals: (string | null)[]): void;
-  setDetail(html: string, id: string, locked: boolean, medal?: string | null): void;
   resize(): void;
   dispose(): void;
 }
 
-export function mountWorldMap3DReview(root: HTMLElement, onSelect: (index: number) => void, initialIndex?: number, locked?: boolean[], medals?: (string | null)[]): MountedWorldMap3DReview;
+export function mountWorldMap3DShell(root: HTMLElement, onSelect: (index: number) => void, initialIndex?: number, locked?: boolean[], medals?: (string | null)[], onError?: (error: unknown) => void): MountedWorldMap3DShell;

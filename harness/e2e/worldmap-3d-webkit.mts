@@ -1,62 +1,81 @@
-/** Silent iOS-WebKit smoke for the review-only C island, from the real menu. */
-/* oxlint-disable typescript/no-explicit-any -- browser probes read the review hook. */
+/**
+ * Silent WebKit cutover gate on the normal URL:
+ * pnpm exec tsx harness/e2e/worldmap-3d-webkit.mts [output-directory]
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 import { webkit } from 'playwright';
+import { ROCKHOP_ALL } from '../../src/tracks';
 import { startServer } from '../lib/server';
 import { REPO_ROOT } from '../lib/paths';
 
+type MapProbe = {
+  selectStage(index: number, focus?: boolean): void;
+  towerScreenPoint(index: number): { x: number; y: number } | null;
+  stats(): { selected: number; disposed: boolean };
+};
+type HookWindow = Window & { __rockhopMap3d?: MapProbe; __render?: { canvas: HTMLCanvasElement }; __rockhop?: { app?: { screen(): string } } };
+
 const out = path.resolve(REPO_ROOT, process.argv[2] ?? 'harness/out/worldmap-3d-webkit');
 fs.mkdirSync(out, { recursive: true });
-const server = await startServer({ freeze: true });
+const server = await startServer({ freeze: true, forceBuild: true });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({
-  viewport: { width: 852, height: 393 },
-  deviceScaleFactor: 2,
-  isMobile: true,
-  hasTouch: true,
+  viewport: { width: 852, height: 393 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true,
   recordVideo: { dir: out, size: { width: 852, height: 393 } },
 });
 await context.addInitScript(() => localStorage.setItem('rockhop.onboarded', '1'));
 const page = await context.newPage();
 const video = page.video();
 const errors: string[] = [];
-const assetResponses: { url: string; status: number }[] = [];
+const requests: string[] = [];
 page.on('pageerror', error => errors.push(error.message));
 page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
-page.on('response', response => {
-  if (response.url().includes('island-sky') || response.url().includes('worldMap3dScene')) {
-    assetResponses.push({ url: response.url(), status: response.status() });
-  }
-});
-const report: Record<string, unknown> = { source: (await import('node:child_process')).execFileSync('git', ['rev-parse', 'HEAD'], { cwd: REPO_ROOT, encoding: 'utf8' }).trim(), engine: 'Playwright WebKit', errors, assetResponses };
+page.on('request', request => requests.push(request.url()));
+const expected = ROCKHOP_ALL.map(track => track.id);
+const report: Record<string, unknown> = { engine: 'headless WebKit', normalUrl: true, expected, errors };
+
+const mapReady = () => page.waitForFunction(() =>
+  document.querySelector('.wm3d-host')?.getAttribute('data-ready') === '1' &&
+  !!(window as HookWindow).__rockhopMap3d, null, { timeout: 60_000 });
 
 try {
-  await page.goto(`${server.url}?map3d=1&sw=0&audio=0`, { waitUntil: 'domcontentloaded' });
+  await page.goto(`${server.url}?sw=0`, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('.menu-screen.live', { timeout: 120_000 });
+  const bootRequests = [...requests];
   await page.locator('.menu-screen.live .menu-item[data-id=play]').click();
-  await page.waitForFunction(() => document.querySelector('.wm3d-host')?.getAttribute('data-ready') === '1' && !!(window as any).__rockhopMap3d, null, { timeout: 60_000 });
-  await page.waitForTimeout(800);
+  await mapReady();
   report.open = await page.evaluate(() => ({
     canvas: document.querySelectorAll('.wm3d-host canvas').length,
-    rotate: getComputedStyle(document.querySelector('.wm3d-rotate')!).display,
-    stats: (window as any).__rockhopMap3d.stats(),
+    painted: document.querySelector('.wm-view') !== null,
+    loading: getComputedStyle(document.querySelector('.wm3d-loading')!).display,
+    gameContextLost: (window as HookWindow).__render?.canvas.getContext('webgl2')?.isContextLost(),
   }));
   await page.screenshot({ path: path.join(out, 'landscape-front.png') });
 
+  const selected: { index: number; id: string | null; tower: { x: number; y: number } | null }[] = [];
+  for (let i = 0; i < expected.length; i++) {
+    await page.evaluate(index => (window as HookWindow).__rockhopMap3d!.selectStage(index, true), i);
+    await page.waitForTimeout(760);
+    const tower = await page.evaluate(index => (window as HookWindow).__rockhopMap3d!.towerScreenPoint(index), i);
+    if (tower) await page.touchscreen.tap(tower.x, tower.y);
+    const id = await page.locator('.wm3d-detail').getAttribute('data-track');
+    selected.push({ index: i, id, tower });
+  }
+  report.selected = selected;
+  await page.screenshot({ path: path.join(out, 'twelve-towers.png') });
+
   await page.setViewportSize({ width: 393, height: 852 });
-  await page.waitForTimeout(400);
+  await page.waitForFunction(() => document.querySelectorAll('.wm3d-host canvas').length === 0, null, { timeout: 20_000 });
   report.portrait = await page.evaluate(() => ({
-    rotate: getComputedStyle(document.querySelector('.wm3d-rotate')!).display,
     prompt: document.querySelector('.wm3d-rotate')?.textContent?.trim(),
+    display: getComputedStyle(document.querySelector('.wm3d-rotate')!).display,
     canvas: document.querySelectorAll('.wm3d-host canvas').length,
-    host: getComputedStyle(document.querySelector('.wm3d-host')!).display,
   }));
   await page.screenshot({ path: path.join(out, 'portrait-rotate.png') });
-  await page.setViewportSize({ width: 852, height: 393 });
-  await page.waitForFunction(() => document.querySelector('.wm3d-host')?.getAttribute('data-ready') === '1' && !!(window as any).__rockhopMap3d, null, { timeout: 60_000 });
 
-  // Move the real camera before tapping; screenshot the resulting three-quarter composition.
+  await page.setViewportSize({ width: 852, height: 393 });
+  await mapReady();
   await page.mouse.move(620, 280);
   await page.mouse.down();
   for (let i = 1; i <= 24; i++) {
@@ -64,36 +83,56 @@ try {
     await page.waitForTimeout(16);
   }
   await page.mouse.up();
-  await page.waitForTimeout(600);
-  report.orbit = await page.evaluate(() => (window as any).__rockhopMap3d.stats());
+  await page.waitForTimeout(300);
   await page.screenshot({ path: path.join(out, 'landscape-orbit.png') });
 
-  const selections: { from: number; target: number; point: { x: number; y: number } | null; track: string | undefined; selected: number | undefined }[] = [];
-  for (const from of [0, 5, 10]) {
-    const target = from + 1;
-    await page.evaluate(i => (window as any).__rockhopMap3d.selectStage(i, true), from);
-    await page.waitForTimeout(850);
-    const point = await page.evaluate(i => (window as any).__rockhopMap3d.towerScreenPoint(i), target) as { x: number; y: number } | null;
-    if (point) await page.touchscreen.tap(point.x, point.y);
-    await page.waitForTimeout(100);
-    selections.push(await page.evaluate(({ from, target, point }) => ({
-      from, target, point, track: document.querySelector('.wm3d-detail')?.getAttribute('data-track') ?? undefined,
-      selected: (window as any).__rockhopMap3d?.stats()?.selected,
-    }), { from, target, point }));
-  }
-  report.selections = selections;
-  await page.screenshot({ path: path.join(out, 'landscape-selection.png') });
-  const portrait = report.portrait as { rotate: string; prompt: string; canvas: number; host: string };
-  const open = report.open as { canvas: number; rotate: string };
-  const passed = open.canvas === 1 && open.rotate === 'none' && portrait.rotate === 'flex' && portrait.host === 'none' && portrait.canvas === 0 && portrait.prompt.includes('Rotate your phone') && selections.every(s => !!s.point && !!s.track && s.selected === s.target) && errors.length === 0;
-  report.pass = passed;
-  fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2));
-  if (!passed) process.exitCode = 1;
+  await page.locator('.worldmap-screen.live .backbtn').click();
+  await page.waitForSelector('.menu-screen.live', { timeout: 20_000 });
+  report.menu = await page.evaluate(() => ({
+    mapCanvases: document.querySelectorAll('.wm3d-host canvas').length,
+    mapHook: !!(window as HookWindow).__rockhopMap3d,
+  }));
+
+  await page.locator('.menu-screen.live .menu-item[data-id=play]').click();
+  await mapReady();
+  await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.selectStage(0, true));
+  await page.waitForTimeout(760);
+  const c1 = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.towerScreenPoint(0));
+  if (c1) await page.touchscreen.tap(c1.x, c1.y);
+  await page.locator('.wm-ride').click();
+  await page.waitForFunction(() => (window as HookWindow).__rockhop?.app?.screen() === 'run', null, { timeout: 60_000 });
+  report.ride = await page.evaluate(() => ({
+    screen: (window as HookWindow).__rockhop?.app?.screen(),
+    mapCanvases: document.querySelectorAll('.wm3d-host canvas').length,
+    mapHook: !!(window as HookWindow).__rockhopMap3d,
+    gameContextLost: (window as HookWindow).__render?.canvas.getContext('webgl2')?.isContextLost(),
+  }));
+
+  const open = report.open as { canvas: number; painted: boolean; loading: string; gameContextLost: boolean };
+  const portrait = report.portrait as { prompt: string; display: string; canvas: number };
+  const menu = report.menu as { mapCanvases: number; mapHook: boolean };
+  const ride = report.ride as { screen: string; mapCanvases: number; mapHook: boolean; gameContextLost: boolean };
+  report.requests = {
+    painted: requests.filter(url => url.includes('/art/worldmap/')),
+    mapChunk: requests.filter(url => url.includes('worldMap3dScene')),
+    sky: requests.filter(url => /\/assets\/sky-alpine-a-[\w-]+\.webp/.test(url)),
+    bootMapChunk: bootRequests.filter(url => url.includes('worldMap3dScene')),
+    bootSky: bootRequests.filter(url => /\/assets\/sky-alpine-a-[\w-]+\.webp/.test(url)),
+  };
+  const r = report.requests as { painted: string[]; mapChunk: string[]; sky: string[]; bootMapChunk: string[]; bootSky: string[] };
+  report.pass =
+    expected.length === 12 && selected.every((entry, i) => !!entry.tower && entry.id === expected[i]) &&
+    open.canvas === 1 && !open.painted && open.loading === 'none' &&
+    portrait.canvas === 0 && portrait.display === 'flex' && portrait.prompt.includes('Rotate your phone') &&
+    menu.mapCanvases === 0 && !menu.mapHook && ride.screen === 'run' && ride.mapCanvases === 0 && !ride.mapHook &&
+    ride.gameContextLost === false && r.painted.length === 0 && r.mapChunk.length >= 1 && r.sky.length >= 1 &&
+    r.bootMapChunk.length >= 1 && r.bootSky.length >= 1 && errors.length === 0;
+  if (!report.pass) process.exitCode = 1;
 } catch (error) {
   report.failure = String(error);
-  fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2));
   process.exitCode = 1;
 } finally {
+  fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 2));
   await context.close();
   if (video) fs.renameSync(await video.path(), path.join(out, 'played-map.webm'));
   await browser.close();

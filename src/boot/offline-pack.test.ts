@@ -10,10 +10,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { offlinePackUrls, worldMapUrls } from './offline-pack';
+import { offlinePackUrls } from './offline-pack';
 import { OFFLINE_PACK_BYTES, PUBLIC_BYTES } from './plan.generated';
 import { ArtManifest } from '../ui/art';
-import { REGIONS } from '../ui/worldMap';
 
 const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/art/manifest.json'), 'utf8')) as { assets: { id: string; path: string }[] };
 const art = ArtManifest.from(raw);
@@ -23,7 +22,6 @@ const table = PUBLIC_BYTES as Readonly<Record<string, number>>;
 /** A pack URL → its key in the build's byte table (the `?v=` the manifest adds is not part of the key). */
 function tableKey(url: string): string {
   const clean = url.split('?')[0]!;
-  if (clean.startsWith('art/worldmap/')) return clean;
   const e = art.all().find((a) => a.src === url);
   return `art:${e?.id ?? clean}`;
 }
@@ -48,11 +46,8 @@ describe('the offline pack (ask 59: one tier, no link-preview card)', () => {
     expect(raw.assets.filter((entry) => entry.id.startsWith('thumb-'))).toHaveLength(12);
   });
 
-  it('takes one world-map tier, all five regions, and never the other tier', () => {
-    const wm = worldMapUrls();
-    expect(wm.filter((u) => u.includes('-1024.webp'))).toHaveLength(REGIONS.length + 1); // five regions + the world plate
-    expect(wm.filter((u) => u.includes('-1536.webp'))).toHaveLength(0);
-    expect(wm.some((u) => u.includes('worldmap.json'))).toBe(true);
+  it('does not download retired painted map plates', () => {
+    expect(urls.some(([url]) => url.startsWith('art/worldmap/'))).toBe(false);
   });
 
   // A variant with no sibling would be fetched by half the devices and drawn by all of them: offline, the

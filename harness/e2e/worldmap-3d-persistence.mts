@@ -1,4 +1,4 @@
-/** Silent WebKit check of saved Coast medals, Alpine unlock, touch selection, and Ride on the review C map. */
+/** Silent WebKit check of saved Coast medals, Alpine unlock, touch selection, and Ride on the default C map. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { webkit } from 'playwright';
@@ -30,27 +30,33 @@ async function openMap(): Promise<void> {
   await page.waitForTimeout(850); // finish the real menu-to-map transition before evidence frames
 }
 
+async function tapTower(index: number): Promise<void> {
+  await page.evaluate(i => (window as Window & { __rockhopMap3d?: { selectStage(i: number, focus: boolean): void } }).__rockhopMap3d!.selectStage(i, true), index);
+  await page.waitForTimeout(850);
+  const point = await page.evaluate(i => (window as Window & { __rockhopMap3d?: { towerScreenPoint(i: number): { x: number; y: number } } }).__rockhopMap3d!.towerScreenPoint(i), index);
+  await page.touchscreen.tap(point.x, point.y);
+}
+
 try {
-  await page.goto(`${server.url}?map3d=1&sw=0&audio=0`, { waitUntil: 'domcontentloaded' });
+  await page.goto(`${server.url}?sw=0`, { waitUntil: 'domcontentloaded' });
   await openMap();
+  await tapTower(3);
   report.before = await page.evaluate(() => ({
     count: document.querySelector('.wm-progress')?.textContent?.trim(),
-    coast: [...document.querySelectorAll('.wm-marker')].slice(0, 3).map(e => e.className),
-    alpine: document.querySelector('.wm-marker[data-track="a1-sawdust"]')?.className,
+    alpineLocked: document.querySelector('.wm3d-detail')?.classList.contains('locked'),
+    alpineTrack: document.querySelector('.wm3d-detail')?.getAttribute('data-track'),
   }));
-  await page.evaluate(() => (window as Window & { __rockhopMap3d?: { selectStage(i: number, focus: boolean): void } }).__rockhopMap3d!.selectStage(0, true));
-  await page.waitForTimeout(850);
-  const earnedPoint = await page.evaluate(() => (window as Window & { __rockhopMap3d?: { towerScreenPoint(i: number): { x: number; y: number } } }).__rockhopMap3d!.towerScreenPoint(0));
-  await page.touchscreen.tap(earnedPoint.x, earnedPoint.y);
+  await tapTower(0);
   report.medal = await page.locator('.wm3d-detail .wm3d-medal').textContent();
   await page.screenshot({ path: path.join(out, 'two-coast-saved.png') });
   await page.evaluate(() => localStorage.setItem('rockhop.best.c3-hull-breach', JSON.stringify({ time: 45, faults: 0, medal: 'bronze' })));
   await page.reload({ waitUntil: 'domcontentloaded' });
   await openMap();
+  await tapTower(3);
   report.after = await page.evaluate(() => ({
     count: document.querySelector('.wm-progress')?.textContent?.trim(),
-    coast: [...document.querySelectorAll('.wm-marker')].slice(0, 3).map(e => e.className),
-    alpine: document.querySelector('.wm-marker[data-track="a1-sawdust"]')?.className,
+    alpineLocked: document.querySelector('.wm3d-detail')?.classList.contains('locked'),
+    alpineTrack: document.querySelector('.wm3d-detail')?.getAttribute('data-track'),
   }));
   await page.screenshot({ path: path.join(out, 'alpine-unlocked.png') });
   await page.evaluate(() => (window as Window & { __rockhopMap3d?: { selectStage(i: number, focus: boolean): void } }).__rockhopMap3d!.selectStage(2, true));
@@ -62,10 +68,10 @@ try {
   await page.locator('.wm-ride').click();
   await page.waitForFunction(() => (window as Window & { __rockhop?: { app?: { screen(): string } } }).__rockhop?.app?.screen() === 'run', null, { timeout: 60_000 });
   report.ride = await page.evaluate(() => (window as Window & { __rockhop?: { app?: { screen(): string } } }).__rockhop?.app?.screen());
-  const before = report.before as { count?: string; alpine?: string };
-  const after = report.after as { count?: string; alpine?: string };
+  const before = report.before as { count?: string; alpineLocked?: boolean; alpineTrack?: string };
+  const after = report.after as { count?: string; alpineLocked?: boolean; alpineTrack?: string };
   const touch = report.touch as { track?: string; rideDisabled?: boolean };
-  report.pass = before.count?.includes('2 / 12') && before.alpine?.includes('locked') && report.medal === 'bronze cleared' && after.count?.includes('3 / 12') && !after.alpine?.includes('locked') && touch.track === 'a1-sawdust' && touch.rideDisabled === false && report.ride === 'run' && errors.length === 0;
+  report.pass = before.count?.includes('2 / 12') && before.alpineTrack === 'a1-sawdust' && before.alpineLocked === true && report.medal === 'Bronze cleared' && after.count?.includes('3 / 12') && after.alpineTrack === 'a1-sawdust' && after.alpineLocked === false && touch.track === 'a1-sawdust' && touch.rideDisabled === false && report.ride === 'run' && errors.length === 0;
   if (!report.pass) process.exitCode = 1;
 } catch (error) {
   report.failure = String(error);

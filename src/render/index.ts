@@ -57,6 +57,10 @@ export interface GameRenderer {
   stats(): RenderStats;
   readonly framesRendered: number;
   dispose(): void;
+  /** Release this context while the 3D map owns the phone GPU; false when safe release is unsupported. */
+  suspendGpu?(): Promise<boolean>;
+  /** Restore this renderer after the map has disposed its own context. */
+  resumeGpu?(): Promise<boolean>;
   // CONTRACT §2.7 additions
   onEvent(e: GameEvent): void;
   setQuality(tier: QualityTier): void;
@@ -205,6 +209,11 @@ export class ThreeRenderer implements GameRenderer {
   /** Invalidates queued compile batches before detached owners can be retired. */
   private sceneEpoch = 0;
   private contextUnavailable = false;
+  private mapGpuSuspended = false;
+  private mapGpuSuspendPending: Promise<boolean> | null = null;
+  private mapGpuResumeRequested = false;
+  private mapGpuRestorePending: Promise<boolean> | null = null;
+  private mapGpuLossExtension: WEBGL_lose_context | null = null;
   private restored: Promise<void> = Promise.resolve();
   private resolveRestored: (() => void) | null = null;
   private readonly onContextLost = (): void => {
@@ -229,6 +238,8 @@ export class ThreeRenderer implements GameRenderer {
   };
   private readonly onContextRestored = (): void => {
     this.contextUnavailable = false;
+    this.mapGpuSuspended = false;
+    this.mapGpuLossExtension = null;
     this.retirement.contextRestored();
     if (!this.disposed) {
       this.ensureLighting();
@@ -240,6 +251,93 @@ export class ThreeRenderer implements GameRenderer {
     this.resolveRestored?.();
     this.resolveRestored = null;
   };
+
+  /** The map owns the only live phone context until it closes. This releases GPU allocations but keeps CPU scene data. */
+  suspendGpu(): Promise<boolean> {
+    if (this.disposed) return Promise.resolve(false);
+    if (this.mapGpuRestorePending) return this.mapGpuRestorePending.then((restored) => restored && this.suspendGpu());
+    if (this.mapGpuSuspended) return Promise.resolve(true);
+    if (this.mapGpuSuspendPending) return this.mapGpuSuspendPending;
+    this.mapGpuResumeRequested = false;
+    const work = this.loseContextForMap().then((lost) => {
+      if (this.mapGpuResumeRequested) {
+        this.mapGpuResumeRequested = false;
+        if (lost) void this.resumeGpu();
+        return false;
+      }
+      return lost;
+    });
+    this.mapGpuSuspendPending = work.finally(() => { this.mapGpuSuspendPending = null; });
+    return this.mapGpuSuspendPending;
+  }
+
+  private async loseContextForMap(): Promise<boolean> {
+    if (this.contextUnavailable) return false; // A real device loss is not ours to restore.
+    const gl = this.renderer.getContext();
+    const extension = gl.getExtension('WEBGL_lose_context');
+    if (!extension) return false;
+    this.mapGpuLossExtension = extension;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let onLost: (() => void) | undefined;
+    const lost = new Promise<boolean>((resolve) => {
+      onLost = () => { if (timer) clearTimeout(timer); resolve(true); };
+      this.canvas.addEventListener('webglcontextlost', onLost, { once: true });
+      timer = setTimeout(() => {
+        if (onLost) this.canvas.removeEventListener('webglcontextlost', onLost);
+        resolve(false);
+      }, 2000);
+    });
+    try {
+      extension.loseContext();
+    } catch {
+      if (onLost) this.canvas.removeEventListener('webglcontextlost', onLost);
+      if (timer) clearTimeout(timer);
+      this.mapGpuLossExtension = null;
+      return false;
+    }
+    if (!await lost || !this.contextUnavailable) {
+      if (gl.isContextLost()) {
+        try { extension.restoreContext(); } catch { /* A failed recovery is reported by resumeGpu. */ }
+      }
+      return false;
+    }
+    this.mapGpuSuspended = true;
+    return true;
+  }
+
+  resumeGpu(): Promise<boolean> {
+    if (this.mapGpuSuspendPending && !this.mapGpuSuspended) {
+      this.mapGpuResumeRequested = true;
+      return this.mapGpuSuspendPending.then(() => this.resumeGpu());
+    }
+    if (this.mapGpuRestorePending) return this.mapGpuRestorePending;
+    if (this.disposed) return Promise.resolve(false);
+    if (!this.mapGpuSuspended) return Promise.resolve(!this.contextUnavailable);
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let onRestored: (() => void) | undefined;
+    let settle: ((restored: boolean) => void) | undefined;
+    const restored = new Promise<boolean>((resolve) => {
+      settle = resolve;
+      onRestored = () => { if (timer) clearTimeout(timer); resolve(true); };
+      this.canvas.addEventListener('webglcontextrestored', onRestored, { once: true });
+      timer = setTimeout(() => {
+        if (onRestored) this.canvas.removeEventListener('webglcontextrestored', onRestored);
+        resolve(false);
+      }, 2500);
+    });
+    // WebKit returns null from getExtension after loss, so Three's forceContextRestore()
+    // cannot reacquire it. Retain the extension object fetched while the context was alive.
+    try {
+      this.mapGpuLossExtension?.restoreContext();
+    } catch {
+      if (onRestored) this.canvas.removeEventListener('webglcontextrestored', onRestored);
+      if (timer) clearTimeout(timer);
+      settle?.(false);
+    }
+    this.mapGpuRestorePending = restored.then((didRestore) => didRestore && !this.contextUnavailable);
+    void this.mapGpuRestorePending.finally(() => { this.mapGpuRestorePending = null; });
+    return this.mapGpuRestorePending;
+  }
   private readonly scene = new THREE.Scene();
   private readonly lib: MaterialLibrary;
   private lightingRig: LightingRig | null = null;

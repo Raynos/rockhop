@@ -339,6 +339,10 @@ function boot(): void {
             const r = renderer as Partial<{ setGarageStage(on: boolean): void }>;
             if (typeof r.setGarageStage === 'function') r.setGarageStage(on);
           },
+          mapGpu: {
+            before3d: () => renderer.suspendGpu?.() ?? Promise.resolve(false),
+            after3d: () => renderer.resumeGpu?.() ?? Promise.resolve(false),
+          },
           setCameraOverride: (o) => {
             if (typeof renderer.setCameraOverride === 'function') renderer.setCameraOverride(o);
           },
@@ -383,9 +387,9 @@ function boot(): void {
       });
       const shell = sFront.value;
       // Ask 58: everything the game can show, in the first bar. The user asked for it to behave like a
-      // game — "load everything up front, but aggressively cache it" — so the rest of the art pack and
-      // both world-map tiers are streamed here, counted honestly, and kept by the service worker's
-      // cacheFirst. A file the pack has lost is a picture that degrades, never a boot that fails.
+      // game — "load everything up front, but aggressively cache it" — so the rest of the art pack
+      // is streamed here and counted by the byte dial. The lazy map JS and hashed sky are fetched
+      // below in this same step, outside the art byte dial, and cached for the first offline PLAY.
       const sPack = await sFront.step('offlinePack', async (p) => {
         const reader = plan.reader('offlinePack');
         await art.load();
@@ -399,14 +403,13 @@ function boot(): void {
           }
         };
         await Promise.all([pull(), pull(), pull(), pull()]);
-        // The chunks nothing fetches until a gesture: the audio worklet (loaded on the first unlock,
-        // `src/audio/graph/webAudio.ts`) and the review sheet. Offline they were the two things that
-        // still went to the wire -- the worklet failed with "worklet timeout" and dropped the game to
-        // the fallback graph. Plain `fetch`, outside the reader: a few KB must not move a 38 MB number.
+        // Warm lazy code and assets needed for the first offline PLAY, including the 3D map
+        // and its sky, plus the audio worklet and review sheet. These are outside the art
+        // reader's byte dial; the hashed sky URL is exactly what TextureLoader will request.
         await fetch('./load-manifest.json')
           .then((r) => (r.ok ? (r.json() as Promise<{ items?: { path: string; phase: string }[] }>) : null))
           .then(async (m) => {
-            for (const item of m?.items ?? []) if (item.phase === 'audio-worklet' || item.phase === 'other') await fetch(item.path).catch(() => undefined);
+            for (const item of m?.items ?? []) if (item.phase === 'audio-worklet' || item.phase === 'other' || item.phase === 'worldmap') await fetch(item.path).catch(() => undefined);
           })
           .catch(() => undefined);
       });

@@ -1,20 +1,41 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-const skyImageUrl = import.meta.env.DEV
-  ? '/prototypes/world-map-c/assets/sky-alpine-a.png'
-  : '/map-review/sky-alpine-a.png';
+import { guardWebGLPrecision } from '../render/webglPrecision';
+import skyImageUrl from '../../assets/worldmap/sky-alpine-a.webp?url';
 
-// Lazy 3D review map. The same procedural island as the selected C prototype
-// is mounted only while the map screen is open; all stage navigation stays in
-// WorldMapScreen. All route, terrain and towers are real meshes.
+/** Safari can return a lost context or a null precision query during startup. */
+function createMapRenderer() {
+ let lastError = new Error('3D map WebGL2 context unavailable');
+ for (const preference of ['default', 'low-power']) {
+   const canvas = document.createElement('canvas');
+   let gl = null;
+   try {
+     gl = canvas.getContext('webgl2', { alpha: false, depth: true, stencil: false,
+       antialias: false, premultipliedAlpha: true, powerPreference: preference,
+       failIfMajorPerformanceCaveat: false });
+     if (!gl || gl.isContextLost()) throw new Error('3D map WebGL2 context unavailable');
+     const renderer = new THREE.WebGLRenderer({ canvas, context: gl,
+       precision: guardWebGLPrecision(gl), antialias: false, powerPreference: preference });
+     if (gl.isContextLost()) { renderer.dispose(); throw new Error('3D map WebGL2 context lost during startup'); }
+     return renderer;
+   } catch (error) {
+     lastError = error;
+     gl?.getExtension('WEBGL_lose_context')?.loseContext();
+     canvas.remove();
+   }
+ }
+ throw lastError;
+}
+
+// Lazy 3D island. All route, terrain and towers are real meshes.
 export function mountWorldMap3D(root, onSelect, initialIndex = 0, locked = [], medals = []) {
 let disposed = false;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#8db4c2');
 scene.fog = new THREE.FogExp2('#9bced0', 0.0034);
-const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+const renderer = createMapRenderer();
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.25));
 renderer.setSize(root.clientWidth, root.clientHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -1483,63 +1504,35 @@ return {
 };
 }
 
-// The review shell lives in this lazy chunk, keeping its DOM, portrait handling
-// and renderer lifecycle out of the player-loaded map screen.
-const REVIEW_CSS = `
-.worldmap-screen .wm3d-host, .worldmap-screen .wm3d-detail, .worldmap-screen .wm3d-rotate { display: none; }
-.worldmap-screen.wm3d-enabled .wm-view { display: none; }
-.worldmap-screen.wm3d-enabled .wm3d-host { display: block; position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #1c5265; touch-action: none; }
-.worldmap-screen.wm3d-enabled .wm3d-host canvas { display: block; width: 100%; height: 100%; touch-action: none; }
-.worldmap-screen.wm3d-enabled .wm3d-detail { display: block; position: absolute; left: 50%; top: calc(14px + var(--sat)); z-index: 5; transform: translateX(-50%); min-width: min(27vw, 210px); max-width: min(35vw, 275px); padding: 8px 12px; border-radius: 10px; background: rgba(15, 31, 35, .92); box-shadow: 0 0 0 1px rgba(239, 227, 200, .25), 0 8px 25px #09181c99; color: var(--cream); text-align: center; pointer-events: none; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .head { color: var(--ochre); font: 800 10px/1.2 var(--sans); letter-spacing: .11em; text-transform: uppercase; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .name { margin-top: 3px; font: 400 21px/1 var(--display); text-transform: uppercase; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .times { margin-top: 4px; color: var(--ink-dim); font: 700 11px/1.2 var(--mono); }
-.worldmap-screen.wm3d-enabled .wm3d-detail .times b { color: var(--green); }
-.worldmap-screen.wm3d-enabled .wm3d-detail .rule { margin-top: 5px; color: var(--ochre); font: 800 10px/1.2 var(--sans); text-transform: uppercase; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal { margin-top: 5px; color: var(--medal-color); font: 800 10px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.bronze { --medal-color: #dba372; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.silver { --medal-color: #e0e8e4; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.gold { --medal-color: #f4c34c; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.platinum { --medal-color: #7af0ee; }
-.worldmap-screen.wm3d-enabled .wm3d-detail .board, .worldmap-screen.wm3d-enabled .wm3d-detail .wm-card-ghost { display: none; }
-.worldmap-screen.wm3d-enabled .wm-brand, .worldmap-screen.wm3d-enabled .backbtn, .worldmap-screen.wm3d-enabled .wm-progress, .worldmap-screen.wm3d-enabled .wm-actions { z-index: 6; }
-.worldmap-screen.wm3d-enabled .legend { display: none; }
-@media (orientation: portrait) {
-  .worldmap-screen.wm3d-enabled .wm3d-host, .worldmap-screen.wm3d-enabled .wm3d-detail, .worldmap-screen.wm3d-enabled .wm-brand, .worldmap-screen.wm3d-enabled .backbtn, .worldmap-screen.wm3d-enabled .wm-progress, .worldmap-screen.wm3d-enabled .wm-actions { display: none; }
-  .worldmap-screen.wm3d-enabled .wm3d-rotate { display: flex; position: absolute; inset: 0; z-index: 10; align-items: center; justify-content: center; flex-direction: column; gap: 12px; background: radial-gradient(circle at 50% 40%, #247283, #0c454e 72%); color: var(--cream); text-align: center; text-transform: uppercase; }
-  .worldmap-screen.wm3d-enabled .wm3d-rotate span { font-size: 72px; line-height: 1; }
-  .worldmap-screen.wm3d-enabled .wm3d-rotate strong { font: 400 clamp(28px, 7vw, 48px)/1 var(--display); }
-  .worldmap-screen.wm3d-enabled .wm3d-rotate small { font: 700 13px/1.4 var(--sans); letter-spacing: .18em; }
-}
-`;
-export function mountWorldMap3DReview(root,onSelect,initialIndex=0,locked=[],medals=[]){
- if(!document.getElementById("worldmap-3d-review-css")){const style=document.createElement("style");style.id="worldmap-3d-review-css";style.textContent=REVIEW_CSS;document.head.appendChild(style);}
- const host=document.createElement('div'),detail=document.createElement('div'),rotate=document.createElement('div');
- host.className='wm3d-host';detail.className='wm3d-detail';rotate.className='wm3d-rotate';
- rotate.innerHTML='<span>↻</span><strong>Rotate your phone</strong><small>ROCKHOP plays in landscape</small>';
- root.append(host,detail,rotate);
- let scene=null,index=initialIndex,locks=locked,earned=medals,disposed=false;
- function resize(){
-   if(disposed)return;
-   if(window.innerHeight>window.innerWidth){
-     scene?.dispose();scene=null;delete host.dataset.ready;delete window.__rockhopMap3d;
-   }else if(!scene){
-     scene=mountWorldMap3D(host,onSelect,index,locks,earned);
-     host.dataset.ready='1';window.__rockhopMap3d=scene;
-   }else scene.resize();
+
+/** Owns one map renderer, created only after the gameplay GPU context is released. */
+export function mountWorldMap3DShell(root, onSelect, initialIndex=0, locked=[], medals=[], onError=console.error) {
+ const host=document.createElement('div');
+ host.className='wm3d-host';
+ root.appendChild(host);
+ let scene;
+ try {
+   scene=mountWorldMap3D(host,onSelect,initialIndex,locked,medals);
+   host.dataset.ready='1';
+   window.__rockhopMap3d=scene;
+ } catch (error) {
+   host.remove();
+   throw error;
  }
- window.addEventListener('resize',resize);
- resize();
+ const lost=(event)=>{event.preventDefault();onError(new Error('3D map WebGL context lost'));};
+ sceneCanvas().addEventListener('webglcontextlost',lost);
+ function sceneCanvas(){return host.querySelector('canvas');}
  return {
-   selectStage(next,focus){index=next;scene?.selectStage(next,focus);},
-   setLocked(next){locks=next;scene?.setLocked(next);},
-   setProgress(nextLocks,nextMedals){locks=nextLocks;earned=nextMedals;scene?.setProgress(nextLocks,nextMedals);},
-   setDetail(html,id,isLocked,medal){
-     const label=medal==='platinum'?'Diamond':medal;
-     detail.innerHTML=html+(label&&!isLocked?`<div class="wm3d-medal ${medal}">${label} cleared</div>`:'');
-     detail.dataset.track=id;detail.classList.toggle('locked',isLocked);
+   selectStage(index,focus){scene?.selectStage(index,focus);},
+   setLocked(next){scene?.setLocked(next);},
+   setProgress(nextLocks,nextMedals){scene?.setProgress(nextLocks,nextMedals);},
+   resize(){scene?.resize();},
+   dispose(){
+     if(!scene)return;
+     sceneCanvas()?.removeEventListener('webglcontextlost',lost);
+     scene.dispose();scene=null;
+     delete window.__rockhopMap3d;
+     host.remove();
    },
-   resize,
-   dispose(){if(disposed)return;disposed=true;window.removeEventListener('resize',resize);scene?.dispose();scene=null;delete window.__rockhopMap3d;host.remove();detail.remove();rotate.remove();},
  };
 }

@@ -8,7 +8,7 @@ export type BootAssetKey = (typeof HERO_FILES_BY_OUTFIT)[RiderOutfit][number] | 
 /**
  * Ask 50: the boot bar covers EVERY hero file (five outfits, two classes, authored + LOD) — one number,
  * nothing streams after. Ask 58 adds `offlinePack`: the user asked for the game to behave like a game —
- * everything loaded up front, then cached — so the rest of the art pack and both world-map tiers are in
+ * everything loaded up front, then cached — so the rest of the art pack is in
  * the same bar (`src/boot/offline-pack.ts`).
  */
 export interface DeclaredBootTotals {
@@ -39,15 +39,6 @@ export function packMembership(a: { kind?: string; variant?: string }): ArtTier 
   return a.variant === '1x' || a.variant === '2x' ? a.variant : 'both';
 }
 
-/**
- * The same rule for a world-map plate, which is not in the art manifest and carries its tier in its
- * filename (`world-1536.webp`, `region-snow-1024.webp` — `src/ui/worldMap.ts` builds these names).
- * `worldmap.json` and anything else there is tier-free.
- */
-export function platePackMembership(file: string): ArtTier | 'both' {
-  return /-1536\.webp(\?|$)/.test(file) ? '2x' : /-1024\.webp(\?|$)/.test(file) ? '1x' : 'both';
-}
-
 export function emptyPackBytes(): OfflinePackBytes {
   return { '1x': 0, '2x': 0 };
 }
@@ -57,20 +48,12 @@ export const HERO_FILE_SET: readonly BootAssetKey[] = [...new Set(Object.values(
 
 /**
  * The offline pack's declared bytes from the build's byte table: every art asset the boot set does not
- * already cover, plus every world-map plate — bucketed by `packMembership` so the number a device is
+ * already cover — bucketed by `packMembership` so the number a device is
  * shown is the number that device actually downloads. Called once, by the build (`vite.config.ts`,
  * which has the manifest and therefore the facets); the result is written into `plan.generated.ts`,
  * so the module path (`totals.ts`) and `__BOOT_TOTALS__` cannot be different sums.
  */
-export function offlinePackBytes(rows: Iterable<readonly [string, number]>, facetOf: (id: string) => { kind?: string; variant?: string } = () => ({}), regionIds?: readonly string[]): OfflinePackBytes {
-  // A region plate counts only when the world map can fetch it (`worldMapUrls` names `REGIONS` alone): plates
-  // for regions the map does not draw yet (the ROCKHOP zones' region-<zone>-*.webp before the map switches to
-  // them) sit in public/ and in the byte table but are never downloaded, so they are not promised either.
-  const regions = regionIds ? new Set(regionIds) : null;
-  const fetched = (key: string): boolean => {
-    const m = /^art\/worldmap\/region-(.+)-(?:1024|1536)\.webp$/.exec(key);
-    return !m || !regions || regions.has(m[1]!);
-  };
+export function offlinePackBytes(rows: Iterable<readonly [string, number]>, facetOf: (id: string) => { kind?: string; variant?: string } = () => ({})): OfflinePackBytes {
   const boot = new Set<string>(BOOT_IDS);
   const out = emptyPackBytes();
   const add = (where: ArtTier | 'both' | null, bytes: number): void => {
@@ -83,7 +66,7 @@ export function offlinePackBytes(rows: Iterable<readonly [string, number]>, face
     if (key.startsWith('art:')) {
       const id = key.slice(4);
       if (!boot.has(id)) add(packMembership(facetOf(id)), bytes);
-    } else if (key.startsWith('art/worldmap/') && fetched(key)) add(platePackMembership(key), bytes);
+    }
   }
   return out;
 }
