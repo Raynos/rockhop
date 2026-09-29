@@ -22,3 +22,9 @@ waiting on. IDs never reused. Ported from the FF15 demo's `HUMAN_REVIEW.md`.
 - **HR-20 — Recruit 12 Android closed testers (ask 104, D15).** Waiting on: you — Google opens Play production only after a closed test with ≥ 12 testers
   opted in for 14 continuous days. You said you need to recruit; gather 12 Google-account emails (friends, or a tester-exchange community) so the test
   can start the day the first build is on the internal track (after HR-16).
+
+- **HR-21 — Uncoached C1 phone play for the twelve-course remaster (ask 170).** Waiting on: you and three fresh players — on landscape iPhones,
+  have each start Low Tide without a technique briefing. Record attempts to clear, what they expect at the brake ramp before reaching it, each
+  fault and the action they try next, Retry-to-control feel, the earned medal/next goal, and whether anyone voluntarily replays. A short screen
+  recording plus `?review=1` notes is enough; the parent will compare this with the played bot and CLI evidence. This is a C1 sign-off gate,
+  not a prerequisite for the independent course/art work.

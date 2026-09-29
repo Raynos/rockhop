@@ -10,7 +10,7 @@
  * the pinned recording, just as in the existing finish App harness.
  *
  * Run only when the shared browser/build slot is free:
- *   pnpm exec tsx harness/course-remaster/c1-integrated-first-win.mts
+ *   pnpm exec tsx harness/course-remaster/c1-integrated-first-win.mts --out docs/evidence/course-remaster/c1/current-map-first-win --quick-first
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -29,7 +29,10 @@ type MapProbe = {
 type MapWindow = Window & { __rockhopMap3d?: MapProbe };
 
 const root = process.cwd();
-const out = path.join(root, 'docs/evidence/course-remaster/c1/integrated-first-win');
+const outArg = process.argv.indexOf('--out');
+const out = path.resolve(root, outArg < 0 ? 'docs/evidence/course-remaster/c1/integrated-first-win' : process.argv[outArg + 1]!);
+if (!out.startsWith(path.resolve(root, 'docs/evidence/course-remaster/c1') + path.sep)) throw new Error(`Refusing evidence output outside C1: ${out}`);
+const quickFirst = process.argv.includes('--quick-first');
 const privateDist = path.join(root, 'harness/out/c1-integrated-first-win-dist');
 const framesDir = path.join(root, 'harness/out/c1-integrated-first-win-frames');
 const clip = path.join(out, 'played-flow.mp4');
@@ -126,6 +129,9 @@ async function state(): Promise<Record<string, unknown>> {
       paintedMapPresent: document.querySelector('.wm-view') !== null,
       mapStates: map?.viewState().states ?? null,
       mapSelected: document.querySelector('.wm3d-detail')?.getAttribute('data-track') ?? null,
+      mapQuick: document.querySelector('.wm-quick')?.getAttribute('aria-label') ?? null,
+      mapLadder: document.querySelectorAll('.wm-ride .wm-medal-ladder i').length,
+      mapLadderEarned: document.querySelectorAll('.wm-ride .wm-medal-ladder i:not(.unearned)').length,
       medal: document.querySelector('.fr-medal-name')?.textContent?.trim() ?? null,
       reward: document.querySelector('.tk-reward')?.textContent?.trim() ?? null,
       walletText: document.querySelector('.fr-wallet')?.textContent?.trim() ?? null,
@@ -180,13 +186,19 @@ async function mapReady(label: string): Promise<void> {
   const m = await state();
   assert(m.mapCanvasCount === 1 && m.paintedMapPresent === false, 'Default 3D map missing or painted map present', m);
 }
-async function selectC1AndRide(): Promise<void> {
-  const point = await page.evaluate(() => (window as MapWindow).__rockhopMap3d?.towerScreenPoint(0) ?? null);
-  assert(point, 'C1 tower has no screen point');
-  await page.touchscreen.tap(point.x, point.y);
-  await pump('C1 tower selection', () => page.locator('.wm3d-detail[data-track="c1-low-tide"]').count().then(Boolean), 80);
-  await roll(9);
-  await tap('.tracks-screen.live .wm-ride');
+async function selectC1AndRide(useQuick = false): Promise<void> {
+  if (useQuick) {
+    const current = await state();
+    assert(String(current.mapQuick).includes('C1 Low Tide') && current.mapLadder === 4, 'Command-strip quick target is not first C1 ride', current);
+    await tap('.tracks-screen.live .wm-quick');
+  } else {
+    const point = await page.evaluate(() => (window as MapWindow).__rockhopMap3d?.towerScreenPoint(0) ?? null);
+    assert(point, 'C1 tower has no screen point');
+    await page.touchscreen.tap(point.x, point.y);
+    await pump('C1 tower selection', () => page.locator('.wm3d-detail[data-track="c1-low-tide"]').count().then(Boolean), 80);
+    await roll(9);
+    await tap('.tracks-screen.live .wm-ride');
+  }
   await pump('C1 countdown', () => page.evaluate(() => window.__rockhop?.app?.screen() === 'run' && window.__rockhop?.phase() === 'countdown'), 180);
   await mark('c1-countdown');
   await roll(50);
@@ -247,7 +259,7 @@ try {
   const firstMap = await mark('first-3d-map');
   assert((firstMap.mapStates as string[] | null)?.[0] === 'available', 'C1 not available before first ride', firstMap);
   await roll(20);
-  await selectC1AndRide();
+  await selectC1AndRide(quickFirst);
   const firstResult = await ride('first');
   const firstLedger = firstResult.ledger as { wallet?: number; medals?: Record<string, string> } | null;
   assert(firstResult.medal === 'Diamond' && firstResult.reward === '+300' && firstResult.walletText === '300' && firstResult.resultTime === '0:30.350' && firstLedger?.wallet === 300 && firstLedger.medals?.['c1-low-tide'] === 'platinum', 'First-win reward/medal incorrect', firstResult);
@@ -257,6 +269,7 @@ try {
   await mapReady('3D map after first result');
   const earnedMap = await mark('earned-medal-map');
   assert((earnedMap.mapStates as string[] | null)?.[0] === 'platinum', 'C1 Diamond marker absent after first win', earnedMap);
+  if (quickFirst) assert(earnedMap.mapSelected === 'c1-low-tide' && earnedMap.mapLadderEarned === 4, 'C1 Diamond ladder absent in selected tile', earnedMap);
   await roll(18);
   await tap('.tracks-screen.live .backbtn');
   await pump('Menu after Map', () => page.locator('.menu-screen.live').count().then(Boolean), 120);
@@ -283,6 +296,7 @@ try {
   await mapReady('3D map after reload');
   const savedMap = await mark('saved-medal-map');
   assert((savedMap.mapStates as string[] | null)?.[0] === 'platinum' && (savedMap.ledger as {wallet?: number} | null)?.wallet === 300, 'Reload lost C1 medal or Scrap', savedMap);
+  if (quickFirst) assert(savedMap.mapSelected === 'c1-low-tide' && savedMap.mapLadderEarned === 4, 'Reload lost C1 Diamond ladder', savedMap);
   await roll(16);
   await mark('film-end-saved-map');
   filming = false;
@@ -300,7 +314,7 @@ try {
     wipHarnessSha256: sha256(fs.readFileSync(new URL(import.meta.url))),
     viewportCss: [width, height], video: { path: path.relative(root, clip), fps, frames: frame, seconds: frame / fps, sizeBytes: fs.statSync(clip).size, sha256: sha256(fs.readFileSync(clip)), audio: 'none' },
     recording: path.relative(root, recordingPath), recordingSha256: sha256(recordingBytes), recordingHeader: rec.header,
-    method: 'One live App page; Playwright clock drives UI; 120 Hz pinned input manually stepped and rendered at 20 fps; final countdown fraction skipped for exact input alignment. The repeated clean C1 ride and no-duplicate-payout check run after the continuous first-journey clip ends, on the same reloaded page.',
+    method: `One live App page; first C1 launch uses ${quickFirst ? 'the command-strip Play Next button' : 'tower selection and Ride'}; Playwright clock drives UI; 120 Hz pinned input manually stepped and rendered at 20 fps; final countdown fraction skipped for exact input alignment. The repeated clean C1 ride and no-duplicate-payout check run after the continuous first-journey clip ends, on the same reloaded page.`,
     expected, firstResult, earnedMap, garage, reloaded, savedMap, repeatedResult,
     marks, rideSamples, pageErrors, consoleErrors, wallMs: Date.now() - wallStart,
   };

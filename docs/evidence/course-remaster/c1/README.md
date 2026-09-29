@@ -2,6 +2,8 @@
 
 **Status:** visual iteration, not course-remaster sign-off. The rider still needs an uncoached physical-phone review and the Coast art needs a larger material and lighting pass.
 
+The later [coast-wide before/after round](coast-wide/README.md) adds a profiled wet quay edge, exposed foreshore, open loading sheds and inshore workboats along the complete ride. Its matched full, ramp and fault clips preserve exact contact and finish hashes. The photographic cyan horizon and broad pale riding slab still prevent visual sign-off.
+
 ## Played clips
 
 | Clip | What it shows |

@@ -164,6 +164,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const idx: number[] = [];
     const C = {
       yard: G.rgb(0x8a7e6e), sand: G.rgb(0xc8b088), wet: G.rgb(0x6e604c),
+      quayDry: G.rgb(0x77776e), quayWet: G.rgb(0x485e5b), tideSilt: G.rgb(0x3c5552),
       grass: G.rgb(0x5e7e36), grass2: G.rgb(0x7a9040), trail: G.rgb(0x8a6c4a),
       dust: G.rgb(0xf6e4c0), snow: G.rgb(0xf2f6fc), rockSnow: G.rgb(0x7a7e88),
     };
@@ -172,6 +173,11 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       const n = 0.9 + 0.1 * Math.sin(x * 0.37 + z * 0.9) * Math.sin(x * 0.11 - z * 0.23);
       const az = Math.abs(z);
       if (id === 'coast') {
+        if (track.def.id === 'c1-low-tide') {
+          if (z < -10) return mix(C.quayWet, C.tideSilt, Math.min(1, (az - 10) / 8), n);
+          if (z > 2) return mix(C.quayDry, C.quayWet, Math.min(1, (z - 2) / 7), n);
+          return mix(C.quayDry, C.quayWet, 0.18, n);
+        }
         if (y < floor - 2.0) return mix(C.wet, C.sand, 0.2, n);
         return mix(C.yard, C.sand, z < -12 ? Math.min(1, (az - 12) / 4) : 0, n);
       }
@@ -284,7 +290,23 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
   function buildCoast(): void {
     const lowTide = track.def.id === 'c1-low-tide';
     const seaY = floor - 2.4;
-    water(x0 - 260, x1 + 260, -15, -205, seaY, 0x0c5660, 0x1a5e78, 'sea');
+    water(x0 - 260, x1 + 260, -15, -205, seaY,
+      lowTide ? 0x244a52 : 0x0c5660, lowTide ? 0x2b5969 : 0x1a5e78, 'sea');
+    if (lowTide) {
+      const skinLine: { x: number; y: number }[] = [];
+      for (let x = x0 - 8; x <= x1 + 8; x += 2) skinLine.push({ x, y: profileY(profile, x) });
+      const skinMat = lib.derive('concrete');
+      skinMat.color.setRGB(1.35, 1.35, 1.35);
+      skinMat.vertexColors = true;
+      skinMat.roughness = 0.92;
+      skinMat.needsUpdate = true;
+      const skin = new THREE.Mesh(G.lowTideQuaySkinGeometry(skinLine, track.def.seed ^ 0xc015), skinMat);
+      skin.name = 'zone:c1-wet-quay-skin';
+      skin.receiveShadow = true;
+      meshes.push(skin);
+      const foreshore = PB('c1-exposed-tide', G.lowTideForeshoreGeometry(track.def.seed ^ 0x71de), painted, false);
+      for (let x = x0 - 4; x < x1 + 4; x += 8) foreshore.add(x + 4, seaY, -16.7);
+    }
     // Foam where the beach meets the sea.
     const foamMat = new THREE.MeshStandardMaterial({ color: 0xf4fbff, roughness: 0.6, map: radialDiscTexture(1.4), transparent: true, opacity: 0.55, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 });
     lib.complete(foamMat);
@@ -315,6 +337,8 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const lowTideDerrick = lowTide ? PB('c1-salvage-derrick', G.lowTideDerrickGeometry(), painted) : null;
     const lowTideWinch = lowTide ? PB('c1-dock-winch', G.lowTideWinchGeometry(), painted) : null;
     const lowTidePier = lowTide ? PB('c1-service-pier', G.lowTideServicePierGeometry(), painted) : null;
+    const lowTideWarehouse = lowTide ? PB('c1-quay-warehouse', G.lowTideWarehouseGeometry(), painted) : null;
+    const lowTideWorkboat = lowTide ? PB('c1-inshore-coaster', G.lowTideWorkboatGeometry(), painted, false) : null;
 
     // Low Tide's first real hazard needs a cue in the yard itself. The checkpoint gantry tells the
     // rider where they are; this roadside board tells them what to do before the pallet ramp enters
@@ -431,6 +455,17 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       for (let i = 0; i < n; i++) stack(x + i * 6.2, -11 + rng.range(-0.4, 0.4), rng.next() < 0.3 ? 2 : 1);
     }
     if (lowTide) {
+      // Built harbor masses repeat at a believable scale throughout the ride, while the
+      // braking approach and the x205–240 contact line keep their open sightline.
+      for (const x of [35, 112, 303, 393]) if (x >= x0 && x < x1) {
+        lowTideWarehouse!.add(x, gy(x, -10.8) - 0.08, -10.8, 0, 0.78,
+          x === 303 ? 0xd5c4ae : x === 112 ? 0xa9c2bb : null);
+        shadowAt(x, -10.8, 5.9, 3.2);
+      }
+      for (const x of [72, 149, 273, 371]) if (x >= x0 && x < x1) {
+        lowTideWorkboat!.add(x, seaY - 0.75, -31 - (x % 3) * 4, x === 149 ? -0.08 : 0.04,
+          x === 273 ? 0.82 : 1);
+      }
       // These two machines make the beached pallet ramp read as part of a working dock.
       // They stand behind the collision ribbon, clear of the approach and landing camera.
       lowTideWinch!.add(198, gy(198, -7.7), -7.7, -0.08, 0.9);

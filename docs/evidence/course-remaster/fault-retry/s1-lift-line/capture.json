@@ -1,0 +1,110 @@
+{
+  "courseId": "s1-lift-line",
+  "sourceHead": "6a13360eff11424036c82f09f20ee3cedb8d6697",
+  "sourceTreeSha256": "e1c7f49b12d785cf2eec485a2a0ccc8c3130e8924b72fb638f547501ebd1d4ca",
+  "buildIndexSha256": "ad0c60bde1212ac58c98590682b65738b0a82b6bdb2ae5f554128afbc5532ce7",
+  "origin": "scripted Rookie held-GO + manual restart",
+  "recording": "docs/evidence/course-remaster/fault-retry/s1-lift-line/scripted-input.json",
+  "recordingSha256": "54b08e3944b3cb6c042115df3c51be647bc973a8eb17c4f9cf19347768a98961",
+  "recordingFinished": false,
+  "recordingFinalHash": "a2402a6404a2b753",
+  "window": {
+    "startTick": 764,
+    "endTick": 1264,
+    "fps": 20,
+    "width": 852,
+    "height": 392
+  },
+  "fault": {
+    "tick": 944,
+    "type": "fault",
+    "reason": "crash",
+    "x": 89.44288166125244,
+    "checkpoint": 0,
+    "phase": "crashed",
+    "hash": "1ccb1ada5144c992"
+  },
+  "retry": {
+    "tick": 963,
+    "type": "restart",
+    "x": 25.092155072308177,
+    "checkpoint": 0,
+    "phase": "riding",
+    "hash": "4689e8f404001aa8"
+  },
+  "allFaultRestartEvents": [
+    {
+      "tick": 944,
+      "type": "fault",
+      "reason": "crash",
+      "x": 89.44288166125244,
+      "checkpoint": 0,
+      "phase": "crashed",
+      "hash": "1ccb1ada5144c992"
+    },
+    {
+      "tick": 963,
+      "type": "restart",
+      "x": 25.092155072308177,
+      "checkpoint": 0,
+      "phase": "riding",
+      "hash": "4689e8f404001aa8"
+    }
+  ],
+  "faultToRestartTicks": 19,
+  "faultToRestartMsSim": 158.33333333333334,
+  "firstActiveInputTick": 964,
+  "faultToActiveInputMsSim": 166.66666666666666,
+  "inputAtFault": {
+    "throttle": 1,
+    "brake": 0,
+    "lean": 0,
+    "hop": false,
+    "restart": false
+  },
+  "firstActiveInputAfterRetry": {
+    "throttle": 0.5019607843137255,
+    "brake": 0,
+    "lean": 0,
+    "hop": false,
+    "restart": false
+  },
+  "firstActiveInputChanged": true,
+  "browserClip": {
+    "frames": 84,
+    "seconds": 4.2,
+    "finalHash": "f0c53f63ae376fda",
+    "expectedNodeHash": "f0c53f63ae376fda",
+    "endInputTick": 1266,
+    "physicsStateTick": 303,
+    "mp4Sha256": "d7962e43de9814918cf1dbc354c77970641f22c328504bfdb9941b43a8b0c94a",
+    "camera": {
+      "frames": 84,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 6.938893903907228e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 15,
+        "riding": 42,
+        "crash": 3,
+        "idle": 14
+      },
+      "minX": 0.311,
+      "maxX": 0.451,
+      "minY": 0.419,
+      "maxY": 0.563,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    },
+    "wallMs": 25931.627292
+  },
+  "limitations": "Silent headless browser at landscape phone geometry. Latencies are simulation time from recorded fault to automatic checkpoint restart and the first subsequent non-neutral input, not physical touch or rendered wall-clock latency. A non-neutral input need not be an effective correction. The prior prefix is stepped without frames; the window itself is played."
+}

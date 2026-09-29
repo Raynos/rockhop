@@ -120,6 +120,146 @@ export function lattice(w: number, h: number, col: RGB, s = 0.1, bays = Math.max
 // COAST
 // ---------------------------------------------------------------------------
 
+/** C1's dock face and damp wheel-side shoulder, following the real ground profile in world coordinates. */
+export function lowTideQuaySkinGeometry(line: { x: number; y: number }[], seed: number): THREE.BufferGeometry {
+  const rnd = lcg(seed);
+  const pos: number[] = [], colors: number[] = [], uv: number[] = [];
+  const faceZ = 2.045;
+  const addQuad = (a: [number, number, number], b: [number, number, number],
+    c: [number, number, number], d: [number, number, number], top: RGB, bottom: RGB, k: number): void => {
+    for (const [j, v] of [a, b, c, c, b, d].entries()) {
+      const color = j === 1 || j === 4 || j === 5 ? bottom : top;
+      pos.push(...v);
+      colors.push(color[0] * k, color[1] * k, color[2] * k);
+      uv.push(v[0] / 4, (v[1] + v[2]) / 3);
+    }
+  };
+  const stone = rgb(0xaaa69b), tide = rgb(0x617671), joint = rgb(0x485450);
+  for (let i = 1; i < line.length; i++) {
+    const a = line[i - 1]!, b = line[i]!;
+    const stain = 0.77 + rnd() * 0.31;
+    addQuad([a.x, a.y - 0.08, faceZ], [a.x, a.y - 1.4, faceZ],
+      [b.x, b.y - 0.08, faceZ], [b.x, b.y - 1.4, faceZ], stone, tide, stain);
+    if (i % 3 === 0) {
+      addQuad([a.x - 0.025, a.y - 0.1, faceZ + 0.002], [a.x - 0.025, a.y - 1.37, faceZ + 0.002],
+        [a.x + 0.025, a.y - 0.1, faceZ + 0.002], [a.x + 0.025, a.y - 1.37, faceZ + 0.002], joint, joint, 0.85);
+    }
+    // Keep the tyre path pale; the wet shoulder stops before the painted safety line.
+    const wet = rgb(i % 7 === 0 ? 0x6c6c62 : 0x73746c);
+    addQuad([a.x, a.y + 0.012, 0.83], [a.x, a.y + 0.012, 1.42],
+      [b.x, b.y + 0.012, 0.83], [b.x, b.y + 0.012, 1.42], wet, wet, 0.85 + rnd() * 0.13);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+  g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+  g.computeVertexNormals();
+  return g;
+}
+
+/** Exposed mud and weed-covered stone at low tide, a broken shelf between the quay and sea. */
+export function lowTideForeshoreGeometry(seed: number): THREE.BufferGeometry {
+  const rnd = lcg(seed);
+  const g = new THREE.PlaneGeometry(8, 3.5, 8, 3).rotateX(-Math.PI / 2);
+  const p = g.getAttribute('position');
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i), z = p.getZ(i);
+    p.setXYZ(i, x + (rnd() - 0.5) * 0.25, 0.03 + 0.035 * Math.sin(x * 2.8 + z * 3.9) + rnd() * 0.018,
+      z + (rnd() - 0.5) * 0.21);
+  }
+  g.computeVertexNormals();
+  const silt = rgb(0x6f7365), weed = rgb(0x405d58), wet = rgb(0x496e70);
+  paint(g, [1, 1, 1]);
+  const c = g.getAttribute('color') as THREE.BufferAttribute;
+  for (let i = 0; i < p.count; i++) {
+    const x = p.getX(i), z = p.getZ(i);
+    const v = 0.5 + 0.5 * Math.sin(x * 2.8 + z * 4.4 + seed * 0.01);
+    const base = z < -0.3 ? wet : v > 0.62 ? weed : silt;
+    const k = 0.83 + rnd() * 0.19;
+    c.setXYZ(i, base[0] * k, base[1] * k, base[2] * k);
+  }
+  return g;
+}
+
+/** Working coast shed: open loading bays, deep roof, cargo masses and a corrugated rear wall. */
+export function lowTideWarehouseGeometry(): THREE.BufferGeometry {
+  const wall = rgb(0x49676b), wallDark = rgb(0x314d50), trim = rgb(0x253b3e);
+  const rust = rgb(0x956349), roof = rgb(0x5b6766), window = rgb(0x233c43);
+  const parts: THREE.BufferGeometry[] = [
+    box(18, 0.25, 8.6, 0, 0.13, 0, trim),
+    box(18, 4.9, 0.24, 0, 2.45, -4.26, wallDark),
+    box(1.45, 4.9, 8.6, -8.28, 2.45, 0, wall),
+    box(1.45, 4.9, 8.6, 8.28, 2.45, 0, wall),
+    box(18, 0.5, 0.32, 0, 4.65, 4.32, trim),
+    box(18.7, 0.23, 4.8, 0, 5.71, -2.32, roof, 0, 0, -0.18),
+    box(18.7, 0.23, 4.8, 0, 5.71, 2.32, roof, 0, 0, 0.18),
+    box(18.8, 0.17, 0.28, 0, 6.11, 0, trim),
+    box(4.2, 1.35, 2.6, -4.1, 0.92, 0.4, rust),
+    box(3.3, 2.35, 2.2, 3.9, 1.43, 0.1, wallDark),
+    box(5.6, 0.23, 3.2, 3.9, 2.75, 0.1, rust),
+  ];
+  for (let x = -8.6; x <= 8.6; x += 0.78) {
+    parts.push(box(0.075, 4.4, 0.08, x, 2.45, -4.08, x % 3 < 1 ? rust : wallDark));
+    for (const z of [-2.32, 2.32]) parts.push(box(0.075, 0.12, 4.8, x, 5.84, z, roof, 0, 0, z < 0 ? -0.18 : 0.18));
+  }
+  for (const x of [-8.1, -4, 0, 4, 8.1]) {
+    parts.push(box(0.33, 4.7, 0.35, x, 2.35, 4.2, trim));
+    parts.push(box(0.58, 0.28, 0.75, x, 0.18, 4.2, rust));
+  }
+  for (const x of [-5.7, 0, 5.7]) {
+    parts.push(box(1.4, 0.85, 0.08, x, 3.25, -4.1, window));
+    parts.push(box(0.07, 0.85, 0.1, x, 3.25, -4.03, rust));
+  }
+  for (const x of [-8.9, 8.9]) {
+    parts.push(cyl(0.12, 0.12, 5.0, 7, x, 2.5, 4.39, trim));
+    parts.push(box(1.0, 0.26, 0.52, x, 5.45, 4.23, rust));
+  }
+  return ao(merge(parts), 5.5, 0.22);
+}
+
+/** Small modeled inshore coaster, scaled to the quay rather than the photographic ocean freighter. */
+export function lowTideWorkboatGeometry(): THREE.BufferGeometry {
+  const hull = rgb(0x415960), waterline = rgb(0x283f45), rust = rgb(0x915439);
+  const cream = rgb(0xb6afa0), rail = rgb(0x374a4d), dark = rgb(0x26383d);
+  const profile = new THREE.Shape();
+  profile.moveTo(-12.9, 3.12);
+  profile.lineTo(13.4, 3.12);
+  profile.lineTo(11.6, 0.72);
+  profile.lineTo(-10.7, 0.5);
+  profile.lineTo(-13.1, 1.2);
+  profile.closePath();
+  const hullBody = new THREE.ExtrudeGeometry(profile, { depth: 5.8, bevelEnabled: true, bevelSize: 0.22,
+    bevelThickness: 0.22, bevelSegments: 1, steps: 1 });
+  hullBody.translate(0, 0, -2.9);
+  paint(hullBody, hull);
+  const parts: THREE.BufferGeometry[] = [
+    hullBody,
+    box(22.6, 0.52, 5.9, 0, 0.8, 0, waterline),
+    box(25.4, 0.2, 6.1, 0, 3.3, 0, rust),
+    box(6.4, 3.9, 5.0, -8.0, 5.3, 0, cream),
+    box(6.8, 0.35, 5.5, -8.0, 7.35, 0, rail),
+    box(6.2, 1.2, 0.1, -8.0, 6.25, 2.55, dark),
+    cyl(0.42, 0.48, 2.25, 9, -9.8, 8.65, -1.2, dark),
+  ];
+  for (let x = -11; x < 12; x += 3.5) {
+    parts.push(box(0.13, 1.08, 0.13, x, 4.03, 3.04, rail));
+    parts.push(box(0.13, 1.08, 0.13, x, 4.03, -3.04, rail));
+  }
+  for (const z of [-3.04, 3.04]) parts.push(box(25.5, 0.11, 0.1, 0, 4.58, z, rail));
+  for (const x of [-3.8, -1.8, 0.2, 2.2, 4.2]) {
+    parts.push(cyl(0.22, 0.22, 0.09, 10, x, 2.3, 3.11, dark, 'z'));
+    parts.push(cyl(0.13, 0.13, 0.1, 10, x, 2.3, 3.17, cream, 'z'));
+  }
+  for (const x of [0, 5.5, 10]) {
+    parts.push(box(4.8, 1.8, 4.2, x, 4.33, 0, x === 5.5 ? rust : hull));
+    parts.push(box(4.9, 0.12, 4.4, x, 5.3, 0, rail));
+  }
+  parts.push(beam(10.2, 4.2, -1.1, 13.7, 9.2, -1.1, 0.23, rust));
+  parts.push(beam(13.7, 9.2, -1.1, 8.2, 9.2, -1.1, 0.17, rust));
+  parts.push(cyl(0.025, 0.025, 3.1, 5, 8.3, 7.65, -1.1, dark));
+  return ao(merge(parts), 9.5, 0.24);
+}
+
 /**
  * Low Tide's deck-side salvage derrick. Its broad side profile, machinery cab, exposed bracing,
  * sheaves and hanging hook read at riding zoom. Origin is the feet; the boom reaches towards -x.
