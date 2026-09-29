@@ -344,26 +344,29 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
         .catch(() => ({ canvas: false, drawn: false }));
       check('offline.firstFrame', frame.canvas && frame.drawn, `${frame.canvas ? 'canvas' : 'no canvas'} / ${frame.drawn ? 'context' : 'no context'}`);
 
-      // The world map, offline: PLAY → the plates the boot already pulled.
+      // The game is landscape-only: rotate the emulated phone before checking the offline 3D island.
+      await page.setViewportSize({ width: 932, height: 430 });
+      // The world map, offline: PLAY → the shipped 3D island and all twelve level choices.
       const wm = await page
         .evaluate(async () => {
           const t = (window as unknown as { __rockhop?: { app?: { goto(s: string): void; screen(): string; frame(): void } } }).__rockhop;
           if (!t?.app) return null;
           t.app.goto('tracks');
-          await new Promise((r) => setTimeout(r, 1500));
+          for (let attempt = 0; attempt < 40; attempt++) {
+            if (document.querySelector('.wm3d-host canvas') || document.querySelector('.wm3d-failure.show')) break;
+            await new Promise((r) => setTimeout(r, 250));
+          }
+          const canvas = document.querySelector<HTMLCanvasElement>('.wm3d-host canvas');
           return {
             screen: t.app.screen(),
-            world: !!document.querySelector('.wm-world.loaded'),
-            regions: document.querySelectorAll('.wm-region.loaded').length,
-            regionsDrawn: document.querySelectorAll('.wm-region').length,
-            markers: document.querySelectorAll('.wm-marker').length,
+            canvas: !!canvas && canvas.width > 0 && canvas.height > 0,
+            levels: document.querySelectorAll('.wm-level-grid .wm-level').length,
+            ride: !!document.querySelector('.wm-dock .wm-ride'),
+            failed: !!document.querySelector('.wm3d-failure.show'),
           };
         })
         .catch(() => null);
-      // Round 3 put both world-map tiers in the first boot, so offline the plates are not a "degrades
-      // gracefully" case any more: they are there, or the offline set is incomplete.
-      // ROCKHOP's map is four zones (90b641a2): every region plate the map draws must decode offline, and there are >= 4.
-      check('offline.worldMapDraws', !!wm && wm.screen === 'tracks' && wm.markers > 0 && wm.world && wm.regions >= 4 && wm.regions === wm.regionsDrawn, wm ? `${wm.screen}: world ${wm.world ? 'loaded' : 'MISSING'}, ${wm.regions}/${wm.regionsDrawn} region plates, ${wm.markers} markers` : 'no world map', 'need the world plate + every drawn region plate (>= 4 zones) loaded, with the origin unreachable');
+      check('offline.worldMapDraws', !!wm && wm.screen === 'tracks' && wm.canvas && wm.levels === 12 && wm.ride && !wm.failed, wm ? `${wm.screen}: 3D canvas ${wm.canvas ? 'ready' : 'MISSING'}, ${wm.levels}/12 levels, ride ${wm.ride ? 'ready' : 'MISSING'}, failure ${wm.failed}` : 'no world map', 'need the shipped 3D island canvas and all twelve level choices with the origin unreachable');
 
       // The review inbox, offline: the note queues in localStorage and says so.
       const inbox = await page

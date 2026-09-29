@@ -533,10 +533,14 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       for (let k = 0; k < n; k++) pallets.add(x + rng.range(-0.06, 0.06), gy(x, z) + k * 0.144, z, ry + rng.range(-0.08, 0.08));
       shadowAt(x, z, 0.9, 0.7);
     };
+    if (lowTide) for (const x of [73, 329]) {
+      const z = nearZ0 + 2.2;
+      lowTideWorkboat!.add(x, gy(x, z) - 0.32, z, 0.1, 0.13);
+    }
     nearLayer(
       (x, z, h) => {
         if (lowTide && x >= 200 && x < 258) return;
-        const r = rng.next();
+        const r = lowTide ? 0.34 + rng.next() * 0.6 : rng.next();
         if (r < 0.2) tyreStack(x, z, h);
         else if (r < 0.34) truckTyre.add(x, gy(x, z), z, rng.range(-0.6, 0.6), fit(0.95, rng.range(0.85, 1.1), h), null, rng.range(-0.15, 0.15));
         else if (r < 0.5) palletPile(x, z, h);
@@ -548,7 +552,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       },
       (x, z, h) => {
         if (lowTide && x >= 200 && x < 258) return;
-        const r = rng.next();
+        const r = lowTide ? 0.34 + rng.next() * 0.48 : rng.next();
         if (r < 0.2) {
           truckTyre.add(x, gy(x, z), z, rng.range(-0.9, 0.9), fit(0.95, rng.range(1.0, 1.35), h), null, rng.range(-0.2, 0.2));
           shadowAt(x, z, 0.9, 0.6);
@@ -565,10 +569,10 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
           shadowAt(x, z, 1.1, 0.6);
         } else if (r < 0.86) bollards.add(x, gy(x, z), z, 0, fit(0.72, 1, h));
         else tyreStack(x, z, h);
-      },
+      }, lowTide ? [6, 13] : undefined, lowTide ? [9, 18] : undefined,
     );
     // Tyre fenders hung on the quay face, every 5–9 m, their tops 17 cm under the deck edge.
-    for (let x = x0 + 4; x < x1; x += rng.range(5, 9)) {
+    for (let x = x0 + 4; x < x1; x += rng.range(lowTide ? 24 : 5, lowTide ? 38 : 9)) {
       const py = deckMin(x, 0.6);
       truckTyre.add(x, py - 1.12, (faceDef?.edge ?? 2) + 0.22, 0, 1, null, 0);
     }

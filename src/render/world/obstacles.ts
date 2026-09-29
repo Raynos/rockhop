@@ -13,6 +13,7 @@ import { fogify } from '../lighting/environment';
 import { profileY } from './track';
 import * as G from './zones/geo';
 import { zoneFace, zonePaint } from './zones/zoneDeck';
+import { a1MillComplexGeometry } from './a1Mill';
 
 export interface ObstacleMeshes {
   group: THREE.Group;
@@ -530,6 +531,12 @@ export function buildObstacles(track: CompiledTrack, lib: MaterialLibrary): Obst
       const g = skirt(c, profile, DEPTH);
       if (g) push(buckets, c.surface === 'metal' ? 'rustSteel' : c.surface === 'concrete' ? 'concrete' : 'plywood', g);
     }
+  }
+
+  if (track.def.id === 'a1-sawdust') {
+    // The old scenic mill sits behind the starting line. This working saw shed instead belongs to the stair
+    // sequence at x209–230; its conveyor, open blade bay and stock all sit behind the rider's z ±1.5 m lane.
+    push(buckets, 'plaque', a1MillComplexGeometry(), at(218.5, profileY(profile, 218.5) - 0.25, -8.5));
   }
 
   // Hazards: fire = glowing grate strip; water = dark plane; kill = nothing visible.

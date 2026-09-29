@@ -1,0 +1,959 @@
+{
+  "schema": 1,
+  "kind": "gate",
+  "runId": "20260929-141321-55d3ac",
+  "startedAt": "2026-09-29T19:13:21.250Z",
+  "wallMs": 186896,
+  "git": "c02afd75",
+  "srcFingerprint": "840b926e",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "trackId": "flat-test",
+  "thresholdsFile": "harness/gate/thresholds.json",
+  "softwareGL": true,
+  "build": {
+    "distBytes": 46578412,
+    "jsGzipBytes": 673000,
+    "buildMs": 0
+  },
+  "browser": {
+    "version": "151.0.7922.34",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "flagSet": "angle-swiftshader"
+  },
+  "checks": [
+    {
+      "id": "boot.readyP50Ms",
+      "value": 254.8259999999973,
+      "limit": 300,
+      "pass": true,
+      "unit": "ms",
+      "note": "runs 252/255/261 min 252 loadavg 7.53/18"
+    },
+    {
+      "id": "boot.firstFrameMs",
+      "value": 5833.485000133514,
+      "limit": 4000,
+      "pass": false,
+      "unit": "ms",
+      "note": "ready -> first synced frame; SwiftShader limit; ship target 900ms NOT met (informational on this machine)",
+      "shipLimit": 900,
+      "shipPass": false
+    },
+    {
+      "id": "clear.golden",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3.json finish=8.591666666666667 run=8.592 faults=0"
+    },
+    {
+      "id": "clear.finishTimeBitEqual",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "expected 8.591666666666667"
+    },
+    {
+      "id": "clear.hashOk",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "622bb2554e0f9a26 vs pinned 622bb2554e0f9a26"
+    },
+    {
+      "id": "clear.pro.flat",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3-pro.json (STALE src=a415fcb8) finish=8.95 faults=0 hash d32110eb8eb945c1 vs pinned d32110eb8eb945c1 (expected finish 8.95)"
+    },
+    {
+      "id": "clear.pro.b1",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3-pro.json (STALE src=a415fcb8) finish=38.825 faults=0 hash 5f78ab40a954f176 vs pinned 5f78ab40a954f176 (expected finish 38.825)"
+    },
+    {
+      "id": "crash.faultWithinS",
+      "value": 0.8583333333333333,
+      "limit": 8,
+      "pass": true,
+      "unit": "s",
+      "note": "reason=crash"
+    },
+    {
+      "id": "fault.toControlMs",
+      "value": 25,
+      "limit": 500,
+      "pass": true,
+      "unit": "ms",
+      "note": "crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)"
+    },
+    {
+      "id": "restart.ticks",
+      "value": 1,
+      "limit": 1,
+      "pass": true,
+      "note": "tick==0 && faulted==null after exactly one tick, 20 reps"
+    },
+    {
+      "id": "restart.wallMsP95",
+      "value": 0.11999988555908203,
+      "limit": 5,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "restart.frameMsP95",
+      "value": 524.7300000190735,
+      "limit": 150,
+      "pass": false,
+      "unit": "ms",
+      "note": "restart -> synced frame; SwiftShader limit; ship target 33ms NOT met (informational on this machine)",
+      "shipLimit": 33,
+      "shipPass": false
+    },
+    {
+      "id": "restart.noCountdown",
+      "value": 1,
+      "limit": 12,
+      "pass": true,
+      "unit": " ticks",
+      "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
+    },
+    {
+      "id": "heap.growthMBPer60s",
+      "value": 1.9464988708496094,
+      "limit": 5,
+      "pass": true,
+      "unit": "MB",
+      "note": "retained heap after GC at both endpoints over 10s of play (--quick: shorter than the 60 s the threshold is written for)"
+    },
+    {
+      "id": "perf.drawCallsMax",
+      "value": 176,
+      "limit": 300,
+      "pass": true
+    },
+    {
+      "id": "perf.trianglesMax",
+      "value": 274874,
+      "limit": 500000,
+      "pass": true
+    },
+    {
+      "id": "perf.texturesMBMax",
+      "value": 80.28110977172851,
+      "limit": 96,
+      "pass": true,
+      "unit": "MB"
+    },
+    {
+      "id": "perf.physicsUsPerTickP95",
+      "value": 52.500009536743164,
+      "limit": 60,
+      "pass": true,
+      "unit": "us"
+    },
+    {
+      "id": "perf.renderSubmitMsP95",
+      "value": 1.9099998474121094,
+      "limit": 4,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "perf.renderSyncedMsP95",
+      "value": 708.1449999809265,
+      "limit": 250,
+      "pass": false,
+      "unit": "ms",
+      "note": "render + readPixels sync; SwiftShader limit; ship target 16ms NOT met (informational on this machine)",
+      "shipLimit": 16,
+      "shipPass": false
+    },
+    {
+      "id": "bundle.jsGzipKB",
+      "value": 657.2265625,
+      "limit": 658,
+      "pass": true,
+      "unit": "KB",
+      "note": "player JS (excluding dev and fatal-error telemetry phases); outside player budget: audio-offline-N1nN73bh.js, legacy-physics-BC7bYX45.js, retired-58iqgRjI.js, sentry-errors-DZ1jjk5-.js 216.2 KB gz; dist 45487 KB raw"
+    },
+    {
+      "id": "determinism.pass",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "9/9 checks"
+    },
+    {
+      "id": "offline.coldStartPlayable",
+      "value": "100/100 done=true in 15855 ms",
+      "limit": true,
+      "pass": true,
+      "note": "9/10 offline e2e checks pass; also failing: offline.worldMapDraws"
+    },
+    {
+      "id": "camera.box",
+      "value": null,
+      "limit": 0,
+      "pass": true,
+      "note": "skipped with --quick"
+    },
+    {
+      "id": "stranger.medianAttempts",
+      "value": "no armed track",
+      "limit": 1.5,
+      "pass": true,
+      "note": "median attempts / (1.5 x band top), every counted session cleared, on src 840b926e and the tier's default bike; armed 0/15 tracks (>= 2 completed); informational (unarmed): b1 0 fresh+2 censored, b2 0 fresh+2 censored, b3 0 fresh+2 censored, e1 0 fresh+2 censored, e2 0 fresh+2 censored, e3 0 fresh+2 censored, m1 0 fresh, m2 0 fresh, m3 0 fresh, h1 0 fresh, h2 0 fresh, h3 0 fresh, x1 0 fresh+1 censored, x2 no report, x3 0 fresh+2 censored"
+    },
+    {
+      "id": "reflex.medianAttempts",
+      "value": "b1 -/1.5 (0 fresh) · b2 -/3 (0 fresh) · b3 -/3 (0 fresh) · e1 -/6 (0 fresh)",
+      "limit": 1.5,
+      "pass": true,
+      "note": "reflex bot (average) median attempts / (1.5 x band top) on src 840b926e; informational until every track has >= 3 seeds on this src (pnpm harness:reflex --all-tracks --seeds 3)"
+    },
+    {
+      "id": "reflex.medianAttempts.pro",
+      "value": "b1 -/1.5 (0 fresh) (not all cleared) · b2 -/3 (0 fresh) (not all cleared) · b3 -/3 (0 fresh) (not all cleared) · e1 -/6 (0 fresh) (not all cleared)",
+      "limit": 1.5,
+      "pass": true,
+      "note": "reflex bot (average) on the Pro bike, same tracks and band; informational (the band is Rookie's): fewer than 3 fresh seeds on some track (pnpm harness:reflex --all-tracks --bike pro --seeds 3)"
+    },
+    {
+      "id": "device.fpsLow60",
+      "value": 59.5,
+      "limit": 55,
+      "pass": true,
+      "note": "b1 ride · low · cap 60 on the user's phone: 59.5 fps, 6 dropped / 20 s, worst 46 ms (docs/device/2026-09-15-5649aa6.md); informational until 3 reports exist (1 filed)"
+    },
+    {
+      "id": "device.thermalDropPct",
+      "value": null,
+      "limit": 10,
+      "pass": true,
+      "note": "no thermal proxy in the latest report"
+    },
+    {
+      "id": "device.worstMsHigh",
+      "value": 81,
+      "limit": 50,
+      "pass": true,
+      "note": "b1 ride · high · cap 30: 30 fps, worst 81 ms — informational (the governor steps down from high on a phone; the perf plan's target is phone-high at 60)"
+    },
+    {
+      "id": "hero.webkit.driftMaxMm",
+      "value": 0,
+      "limit": 5,
+      "pass": true,
+      "note": "rider bone-position drift over the bench flow in WebKit (ANGLE-on-Metal), worst of 4 runs at 2026-09-17T23:16:40Z: 0 mm (the arms bug 2b48370 read 2 600 mm); reach 0 cm, overhang 0.5 px (harness/out/hero-webkit/hero-webkit-2026-09-17T23-16-40.json)"
+    }
+  ],
+  "failed": 3,
+  "pass": false,
+  "boot": {
+    "runs": [
+      252.0609579999982,
+      254.8259999999973,
+      260.74166700000205
+    ],
+    "p50": 254.8259999999973,
+    "min": 252.0609579999982,
+    "max": 260.74166700000205,
+    "firstFrameMs": [
+      6451.3150000572205,
+      5833,
+      5833.485000133514
+    ],
+    "loadavg1": 7.53,
+    "cores": 18,
+    "retried": false
+  },
+  "clear": {
+    "recording": "/Users/raynos/projects/game-demos/trials-gauntlet-demo/harness/inputs/flat-test/bot-3.json",
+    "finishTime": 8.591666666666667,
+    "expected": 8.591666666666667,
+    "hash": "622bb2554e0f9a26",
+    "expectedHash": "622bb2554e0f9a26",
+    "faults": 0,
+    "hashOk": true
+  },
+  "crash": {
+    "recording": "/Users/raynos/projects/game-demos/trials-gauntlet-demo/harness/inputs/flat-test/crash.json",
+    "faultTick": 103,
+    "faultTime": 0.8583333333333333,
+    "reason": "crash"
+  },
+  "restart": {
+    "ticks": 1,
+    "wallMs": [
+      0.2050004005432129,
+      0.10500001907348633,
+      0.09000015258789062,
+      0.07999992370605469,
+      0.11999988555908203,
+      0.07500028610229492,
+      0.06999969482421875,
+      0.10500001907348633,
+      0.06999969482421875,
+      0.059999942779541016,
+      0.05000019073486328,
+      0.04999971389770508,
+      0.05000019073486328,
+      0.05000019073486328,
+      0.059999942779541016,
+      0.05000019073486328,
+      0.039999961853027344,
+      0.039999961853027344,
+      0.04499959945678711,
+      0.04500007629394531
+    ],
+    "frameMs": [
+      1078.3550000190735,
+      227.56500005722046,
+      212.04500007629395,
+      214.56999969482422,
+      210.18499994277954,
+      208.08500003814697,
+      210.70499992370605,
+      209.77500009536743,
+      524.7300000190735,
+      208.55499982833862,
+      212.12000036239624,
+      215.00999975204468,
+      203.875,
+      204.44500017166138,
+      204.41499996185303,
+      208.36499977111816,
+      213.27500009536743,
+      206.4800000190735,
+      210.1399998664856,
+      210.7649998664856
+    ],
+    "noCountdown": true,
+    "movesOnFirstTick": true,
+    "movesAfterTicks": 1
+  },
+  "fault": {
+    "toControlTicks": 3,
+    "toControlMs": 25,
+    "autoRespawnTicks": 122,
+    "autoRespawnMs": 1016.6666666666666
+  },
+  "heap": {
+    "beforeMB": 19.983539581298828,
+    "afterMB": 21.930038452148438,
+    "growthMB": 1.9464988708496094,
+    "seconds": 10
+  },
+  "perf": {
+    "drawCalls": 176,
+    "triangles": 274874,
+    "texturesMB": 80.28110977172851,
+    "physicsUsPerTickP95": 52.500009536743164,
+    "renderSubmitMsP95": 1.9099998474121094,
+    "renderSyncedMsP95": 708.1449999809265
+  },
+  "determinism": {
+    "schema": 1,
+    "kind": "determinism",
+    "runId": "20260929-141321-2e9170",
+    "startedAt": "2026-09-29T19:13:21.554Z",
+    "wallMs": 9241,
+    "git": "c02afd75",
+    "srcFingerprint": "840b926e",
+    "node": "v24.18.1",
+    "chromium": "151.0.7922.34",
+    "physics": "bikePhysicsFactory-v2",
+    "recordingFile": "/Users/raynos/projects/game-demos/trials-gauntlet-demo/harness/inputs/flat-test/bot-3.json",
+    "ticks": 1031,
+    "checks": [
+      {
+        "id": "D1",
+        "name": "cross-load",
+        "pass": true,
+        "hashes": [
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26"
+        ],
+        "note": "2 loads, finish=8.591666666666667"
+      },
+      {
+        "id": "D2",
+        "name": "cross-encoding",
+        "pass": true,
+        "hashes": [
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26"
+        ]
+      },
+      {
+        "id": "D3",
+        "name": "node-vs-browser",
+        "pass": true,
+        "hashes": [
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26"
+        ],
+        "note": "physics=bikePhysicsFactory-v2"
+      },
+      {
+        "id": "D4",
+        "name": "snapshot-node",
+        "pass": true,
+        "hashes": [
+          "4549156034b28e1f",
+          "6bf00b3c91f5c72a",
+          "6adaf6f9074f64a4",
+          "bded9a17b81d60b2"
+        ]
+      },
+      {
+        "id": "D4c",
+        "name": "foreign-snapshot",
+        "pass": true,
+        "hashes": [
+          "4549156034b28e1f",
+          "6bf00b3c91f5c72a",
+          "6adaf6f9074f64a4",
+          "bded9a17b81d60b2"
+        ]
+      },
+      {
+        "id": "D4b",
+        "name": "snapshot-browser",
+        "pass": true,
+        "hashes": [
+          "4549156034b28e1f",
+          "6bf00b3c91f5c72a",
+          "6adaf6f9074f64a4"
+        ]
+      },
+      {
+        "id": "D5",
+        "name": "chunking",
+        "pass": true,
+        "hashes": [
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26"
+        ],
+        "note": "chunks 1,7,15,120 + runRecording"
+      },
+      {
+        "id": "D7",
+        "name": "no-state-leak",
+        "pass": true,
+        "hashes": [
+          "622bb2554e0f9a26",
+          "622bb2554e0f9a26"
+        ]
+      },
+      {
+        "id": "D8",
+        "name": "pinned-hash",
+        "pass": true,
+        "hashes": [
+          "56e0d38f820a3435",
+          "56e0d38f820a3435"
+        ],
+        "note": "pinned physics=bikePhysicsFactory-v2"
+      }
+    ],
+    "pass": true
+  },
+  "stranger": {
+    "srcFingerprint": "840b926e",
+    "armed": false,
+    "minSessions": 2,
+    "rows": [
+      {
+        "trackId": "b1-first-ride",
+        "bike": "rookie",
+        "attemptsBand": [
+          1,
+          1
+        ],
+        "limit": 1.5,
+        "completedFresh": 0,
+        "completedAny": 26,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "b2-lean-back",
+        "bike": "rookie",
+        "attemptsBand": [
+          1,
+          2
+        ],
+        "limit": 3,
+        "completedFresh": 0,
+        "completedAny": 23,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "b3-kicker-row",
+        "bike": "rookie",
+        "attemptsBand": [
+          1,
+          2
+        ],
+        "limit": 3,
+        "completedFresh": 0,
+        "completedAny": 24,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "e1-uphill-weight",
+        "bike": "rookie",
+        "attemptsBand": [
+          2,
+          4
+        ],
+        "limit": 6,
+        "completedFresh": 0,
+        "completedAny": 21,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "e2-rear-wheel-first",
+        "bike": "rookie",
+        "attemptsBand": [
+          3,
+          5
+        ],
+        "limit": 7.5,
+        "completedFresh": 0,
+        "completedAny": 17,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "e3-stairway",
+        "bike": "rookie",
+        "attemptsBand": [
+          3,
+          6
+        ],
+        "limit": 9,
+        "completedFresh": 0,
+        "completedAny": 21,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "m1-hop-up",
+        "bike": "rookie",
+        "attemptsBand": [
+          5,
+          9
+        ],
+        "limit": 13.5,
+        "completedFresh": 0,
+        "completedAny": 2,
+        "censored": 0,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "m2-drum-roll",
+        "bike": "rookie",
+        "attemptsBand": [
+          6,
+          12
+        ],
+        "limit": 18,
+        "completedFresh": 0,
+        "completedAny": 2,
+        "censored": 0,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "m3-see-saw",
+        "bike": "rookie",
+        "attemptsBand": [
+          8,
+          12
+        ],
+        "limit": 18,
+        "completedFresh": 0,
+        "completedAny": 2,
+        "censored": 0,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "h1-wheelie-wire",
+        "bike": "pro",
+        "attemptsBand": [
+          10,
+          18
+        ],
+        "limit": 27,
+        "completedFresh": 0,
+        "completedAny": 6,
+        "censored": 0,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "h2-gap-chain",
+        "bike": "pro",
+        "attemptsBand": [
+          14,
+          22
+        ],
+        "limit": 33,
+        "completedFresh": 0,
+        "completedAny": 8,
+        "censored": 0,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "h3-fire-line",
+        "bike": "pro",
+        "attemptsBand": [
+          18,
+          25
+        ],
+        "limit": 37.5,
+        "completedFresh": 0,
+        "completedAny": 8,
+        "censored": 0,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "x1-vertical-limit",
+        "bike": "pro",
+        "attemptsBand": [
+          30,
+          45
+        ],
+        "limit": 67.5,
+        "completedFresh": 0,
+        "completedAny": 4,
+        "censored": 1,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      },
+      {
+        "trackId": "x3-gauntlet",
+        "bike": "pro",
+        "attemptsBand": [
+          60,
+          80
+        ],
+        "limit": 120,
+        "completedFresh": 0,
+        "completedAny": 6,
+        "censored": 2,
+        "medianAttempts": null,
+        "allCleared": false,
+        "pass": null,
+        "belowBand": false,
+        "sessions": []
+      }
+    ]
+  },
+  "reflex": {
+    "srcFingerprint": "840b926e",
+    "armed": false,
+    "minSeeds": 3,
+    "rows": [
+      {
+        "trackId": "b1-first-ride",
+        "skill": "average",
+        "attemptsBand": [
+          1,
+          1
+        ],
+        "limit": 1.5,
+        "srcFingerprint": "4b9bc981",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      },
+      {
+        "trackId": "b2-lean-back",
+        "skill": "average",
+        "attemptsBand": [
+          1,
+          2
+        ],
+        "limit": 3,
+        "srcFingerprint": "4b9bc981",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      },
+      {
+        "trackId": "b3-kicker-row",
+        "skill": "average",
+        "attemptsBand": [
+          1,
+          2
+        ],
+        "limit": 3,
+        "srcFingerprint": "4b9bc981",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      },
+      {
+        "trackId": "e1-uphill-weight",
+        "skill": "average",
+        "attemptsBand": [
+          2,
+          4
+        ],
+        "limit": 6,
+        "srcFingerprint": "4b9bc981",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      }
+    ]
+  },
+  "reflexPro": {
+    "srcFingerprint": "840b926e",
+    "armed": false,
+    "minSeeds": 3,
+    "rows": [
+      {
+        "trackId": "b1-first-ride",
+        "skill": "average",
+        "attemptsBand": [
+          1,
+          1
+        ],
+        "limit": 1.5,
+        "srcFingerprint": "6412a755",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      },
+      {
+        "trackId": "b2-lean-back",
+        "skill": "average",
+        "attemptsBand": [
+          1,
+          2
+        ],
+        "limit": 3,
+        "srcFingerprint": "6412a755",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      },
+      {
+        "trackId": "b3-kicker-row",
+        "skill": "average",
+        "attemptsBand": [
+          1,
+          2
+        ],
+        "limit": 3,
+        "srcFingerprint": "6412a755",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      },
+      {
+        "trackId": "e1-uphill-weight",
+        "skill": "average",
+        "attemptsBand": [
+          2,
+          4
+        ],
+        "limit": 6,
+        "srcFingerprint": "6412a755",
+        "seedsFresh": 0,
+        "medianAttempts": null,
+        "medianFinishTime": null,
+        "allCleared": false,
+        "pass": null,
+        "deadliest": null
+      }
+    ]
+  },
+  "device": {
+    "reports": 1,
+    "minReports": 3,
+    "armed": false,
+    "latest": {
+      "file": "docs/device/2026-09-15-5649aa6.md",
+      "build": null,
+      "at": null,
+      "ua": null,
+      "rows": [
+        {
+          "scenario": "menu (covered)",
+          "tier": "—",
+          "cap": 30,
+          "fps": 29.7,
+          "dropped": 1,
+          "worstMs": 202
+        },
+        {
+          "scenario": "garage",
+          "tier": "low",
+          "cap": 30,
+          "fps": 30,
+          "dropped": 1,
+          "worstMs": 67
+        },
+        {
+          "scenario": "b1 start line",
+          "tier": "low",
+          "cap": 30,
+          "fps": 30,
+          "dropped": 0,
+          "worstMs": 38
+        },
+        {
+          "scenario": "b1 ride",
+          "tier": "low",
+          "cap": 30,
+          "fps": 30,
+          "dropped": 0,
+          "worstMs": 38
+        },
+        {
+          "scenario": "b1 ride",
+          "tier": "medium",
+          "cap": 30,
+          "fps": 30,
+          "dropped": 0,
+          "worstMs": 36
+        },
+        {
+          "scenario": "b1 ride",
+          "tier": "high",
+          "cap": 30,
+          "fps": 30,
+          "dropped": 1,
+          "worstMs": 81
+        },
+        {
+          "scenario": "b1 ride",
+          "tier": "low",
+          "cap": 60,
+          "fps": 59.5,
+          "dropped": 6,
+          "worstMs": 46
+        }
+      ],
+      "thermal": null
+    },
+    "hero": {
+      "file": "harness/out/hero-webkit/hero-webkit-2026-09-17T23-16-40.json",
+      "at": "2026-09-17T23:16:40Z",
+      "track": "b1-first-ride",
+      "driftMaxMm": 0,
+      "worstReachCm": 0,
+      "worstOverhangPx": 0.5,
+      "results": 4
+    }
+  },
+  "clearPro": [
+    {
+      "trackId": "flat-test",
+      "recording": "/Users/raynos/projects/game-demos/trials-gauntlet-demo/harness/inputs/flat-test/bot-3-pro.json",
+      "finishTime": 8.95,
+      "expected": 8.95,
+      "hash": "d32110eb8eb945c1",
+      "expectedHash": "d32110eb8eb945c1",
+      "faults": 0,
+      "fresh": false
+    },
+    {
+      "trackId": "b1-first-ride",
+      "recording": "/Users/raynos/projects/game-demos/trials-gauntlet-demo/harness/inputs/b1-first-ride/bot-3-pro.json",
+      "finishTime": 38.825,
+      "expected": 38.825,
+      "hash": "5f78ab40a954f176",
+      "expectedHash": "5f78ab40a954f176",
+      "faults": 0,
+      "fresh": false
+    }
+  ]
+}
