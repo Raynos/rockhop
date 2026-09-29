@@ -93,9 +93,9 @@ const INLINE_BUDGET_BYTES = 8 * 1024;
  *
  * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
-// The C2 playable-pier support and the D1 contact riser add about 1.5 KB gzipped
-// beyond the prior round. Keep the budget bounded while their moving evidence is reviewed.
-const BUNDLE_BUDGET_GZ_BYTES = 659 * 1024;
+// The accepted C3 ship and S1 bridge models add about 1.1 KB gzipped beyond the
+// prior round. Raise this by one KiB and keep the player payload bounded.
+const BUNDLE_BUDGET_GZ_BYTES = 660 * 1024;
 
 function bundleBudget(): Plugin {
   return {

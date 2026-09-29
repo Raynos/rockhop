@@ -88,7 +88,7 @@ The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a sho
 
 ### 2026-09-29 C3 hull finding
 
-The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) replaces the large corrugated-box look with steel plates, weld lines and a cut exit edge at the actual launch lip. The exact capture prefix hash matches Node and the ride camera remains within bounds. The vessel still inherits a broad rectangular collider silhouette and needs a full course, fault/retry and physical-device pass.
+The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) first replaced the corrugated-box look with steel plates and a cut edge. The [later matched ship pass](../evidence/course-remaster/c3/breach-art/README.md) adds a tapered side, aft house and lit, layered inner bulkhead under the actual x272.52 launch lip. The old dark end wall and detached beach-wall drafts failed moving review. Colliders and riding line are unchanged; the shore/surf transition, human fault understanding and physical-device performance remain open.
 
 ### 2026-09-29 D2 machinery finding
 
@@ -96,7 +96,7 @@ The [played D2 excerpts](../evidence/course-remaster/d2/README.md) add a rotatin
 
 ### 2026-09-29 S1 upper-route finding
 
-The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows a two-beat Diamond prompt starting 13 m earlier: settle before the bridge lip, then level for its deck. Both pinned lower Rookie and upper Pro finishes remain exact in Node and two browser loads. Whether a new rider understands and chooses the high line remains unmeasured.
+The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows a two-beat Diamond prompt starting 13 m earlier: settle before the bridge lip, then level for its deck. A [matched bridge-support pass](../evidence/course-remaster/s1/bridge-art/README.md) now gives the optional high span visible rear-offset tower-to-deck bracing; full Rookie lower, Pro upper and held-GO fault clips preserve their exact hashes with clear bike silhouettes. The bridge still appears late behind the ice wall; new-rider route choice and physical-device performance remain unmeasured.
 
 ### 2026-09-29 A3 truck finding
 
