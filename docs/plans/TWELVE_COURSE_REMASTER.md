@@ -65,3 +65,7 @@ Capture the current C1/C2/A1/D1/S1 ride and fault baseline at 852×393 landscape
 ### 2026-09-29 baseline result
 
 The [baseline inventory](../evidence/course-remaster/BASELINE.md) now indexes full clean landscape captures for all twelve Rookie courses and all four final-course Pro upper Diamond routes from frozen commit `609293ea`. Every selected input finished with the same time, tick and hash in Node and two fresh browser loads. This is stronger clean-ride coverage than the initial five-course target, but Pass 0 remains open: representative faults and immediate retries are not captured for every course, and no physical phone or uncoached human was measured. The input header/source fingerprint discrepancy is documented in the inventory.
+
+### 2026-09-29 C1 visual finding
+
+The [played C1 harbor round](../evidence/course-remaster/c1/README.md) removes random clutter from the brake approach and adds a modeled winch, service pier and salvage derrick behind the landing. The 31.33-second phone-size headless ride remains a clean 30.35-second finish; the ramp and tire contact stay visible. The current quay, water and distant image plate still need a broader Coast material/lighting pass. C1 remains open under the full course and physical-phone criteria. The third-round cold boot/clear/crash/restart gate passed 11/11 on host Metal.

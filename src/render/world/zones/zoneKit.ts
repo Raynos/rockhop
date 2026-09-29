@@ -282,6 +282,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
   // COAST — C-ride: container stacks, gantry cranes, beached hulls, buoys, pallets, tyres, rope; the bay behind.
   // =========================================================================================================
   function buildCoast(): void {
+    const lowTide = track.def.id === 'c1-low-tide';
     const seaY = floor - 2.4;
     water(x0 - 260, x1 + 260, -15, -205, seaY, 0x0c5660, 0x1a5e78, 'sea');
     // Foam where the beach meets the sea.
@@ -311,6 +312,9 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const hulls = PB('hull', G.hullGeometry(track.def.seed ^ 11), painted, false);
     const hullsNear = PB('hull-near', G.hullGeometry(track.def.seed ^ 13, 30), painted);
     const lighthouse = PB('lighthouse', G.lighthouseGeometry(), painted, false);
+    const lowTideDerrick = lowTide ? PB('c1-salvage-derrick', G.lowTideDerrickGeometry(), painted) : null;
+    const lowTideWinch = lowTide ? PB('c1-dock-winch', G.lowTideWinchGeometry(), painted) : null;
+    const lowTidePier = lowTide ? PB('c1-service-pier', G.lowTideServicePierGeometry(), painted) : null;
 
     // Low Tide's first real hazard needs a cue in the yard itself. The checkpoint gantry tells the
     // rider where they are; this roadside board tells them what to do before the pallet ramp enters
@@ -387,6 +391,9 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
 
     // Near shelf (z −3.6 … −8.5): the scrapyard proper, 2.4 m slots.
     for (let x = x0 + 6; x < x1; x += 2.4) {
+      // A deliberate open sightline lets the rider read C1's braking ramp and container landing.
+      // The dock machinery below takes the place of the random scrap in this short section.
+      if (lowTide && x >= 190 && x < 258) continue;
       const r = rng.next();
       if (r < 0.2) continue;
       const z = rng.range(-3.8, -7.5);
@@ -418,12 +425,36 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     }
     // Mid band (z −10 … −12): a container block now and then along the quay, low enough to keep the bay in view.
     for (let x = x0; x < x1; x += rng.range(24, 40)) {
+      if (lowTide && x >= 188 && x < 258) continue;
       if (rng.next() < 0.35) continue;
       const n = rng.int(1, 2);
       for (let i = 0; i < n; i++) stack(x + i * 6.2, -11 + rng.range(-0.4, 0.4), rng.next() < 0.3 ? 2 : 1);
     }
+    if (lowTide) {
+      // These two machines make the beached pallet ramp read as part of a working dock.
+      // They stand behind the collision ribbon, clear of the approach and landing camera.
+      lowTideWinch!.add(198, gy(198, -7.7), -7.7, -0.08, 0.9);
+      lowTidePier!.add(232, gy(232, -10.1) - 0.8, -10.1);
+      // The long horizontal boom stays at a readable height in the tight riding camera.
+      lowTideDerrick!.add(232, gy(232, -10.1) + 0.6, -10.1, 0, 0.82, null, 0, 0.48, 0.82);
+      shadows.add(232, gy(232, -10.1) + 0.62, -10.1, 0, 3.4, null, 0, 1, 2.4);
+      for (const [x, z] of [[190, -7.4], [202, -8.1], [247, -8.1]] as const) {
+        pallets.add(x, gy(x, z), z, 0.06);
+        pallets.add(x + 0.1, gy(x, z) + 0.144, z + 0.08, -0.04);
+      }
+      for (const x of [203, 233, 251]) bollards.add(x, gy(x, -8.6), -8.6, 0, 1.12);
+      // Timber fender piles break up the continuous pale wall at the hero move without
+      // adding new obstacles or reaching the rider's tire contact plane.
+      for (let x = 202; x <= 256; x += 4.5) {
+        const y = gy(x, 3.1);
+        piles.add(x, y - 0.32, 2.45, 0, 1.25, null, 0, 1.55, 1.25);
+      }
+    }
     // Piers on piles into the bay, each carrying a crane and container rows, every ~90–130 m.
     for (let px = x0 + rng.range(20, 60); px < x1 + 40; px += rng.range(90, 130)) {
+      // Keep one industrial silhouette behind C1's landing; a second gantry directly
+      // behind the salvage derrick flattened both structures into a lattice tangle.
+      if (lowTide && px > 160 && px < 290) continue;
       const deckY = gy(px, -12) + 0.1;
       // The pier: a causeway on piles out to a quay block at z −45 … −75 carrying a crane and container rows.
       for (let z = -16; z >= -44; z -= 4) for (const dx of [-2, 2]) piles.add(px + dx, seaY - 1.5, z, 0, 1, null, 0, deckY - seaY + 1.5, 1);
@@ -469,6 +500,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     };
     nearLayer(
       (x, z, h) => {
+        if (lowTide && x >= 200 && x < 258) return;
         const r = rng.next();
         if (r < 0.2) tyreStack(x, z, h);
         else if (r < 0.34) truckTyre.add(x, gy(x, z), z, rng.range(-0.6, 0.6), fit(0.95, rng.range(0.85, 1.1), h), null, rng.range(-0.15, 0.15));
@@ -480,6 +512,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
         else boulder(x, z, rng.range(0.25, 0.45), rng.range(0.15, 0.3));
       },
       (x, z, h) => {
+        if (lowTide && x >= 200 && x < 258) return;
         const r = rng.next();
         if (r < 0.2) {
           truckTyre.add(x, gy(x, z), z, rng.range(-0.9, 0.9), fit(0.95, rng.range(1.0, 1.35), h), null, rng.range(-0.2, 0.2));

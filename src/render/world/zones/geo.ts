@@ -120,6 +120,106 @@ export function lattice(w: number, h: number, col: RGB, s = 0.1, bays = Math.max
 // COAST
 // ---------------------------------------------------------------------------
 
+/**
+ * Low Tide's deck-side salvage derrick. Its broad side profile, machinery cab, exposed bracing,
+ * sheaves and hanging hook read at riding zoom. Origin is the feet; the boom reaches towards -x.
+ * It stays behind the ride ribbon and has no collider.
+ */
+export function lowTideDerrickGeometry(): THREE.BufferGeometry {
+  const steel = rgb(0xa85b31);
+  const shade = rgb(0x583f36);
+  const edge = rgb(0xd2a64f);
+  const glass = rgb(0x253e43);
+  const cable = rgb(0x323d3e);
+  const parts: THREE.BufferGeometry[] = [];
+  for (const x of [-2.4, 2.4]) {
+    for (const z of [-1.8, 1.8]) {
+      parts.push(box(0.48, 0.5, 0.5, x, 0.25, z, shade));
+      parts.push(beam(x, 0.5, z, x * 0.44, 11.4, z * 0.54, 0.27, steel));
+    }
+  }
+  for (let i = 1; i <= 5; i++) {
+    const y = i * 1.9;
+    const w = 2.4 - (y / 11.4) * 1.34;
+    parts.push(beam(-w, y, 1.45, w, y + 1.9, 1.45, 0.11, shade));
+    parts.push(beam(w, y, 1.45, -w, y + 1.9, 1.45, 0.11, shade));
+    parts.push(box(w * 2, 0.16, 3, 0, y, 0, edge));
+  }
+  parts.push(box(6.2, 0.36, 4.6, 0, 0.72, 0, shade));
+  parts.push(box(3.5, 2.65, 3.0, 1.0, 2.4, -0.15, steel));
+  parts.push(box(3.56, 1.12, 0.08, 1.0, 2.8, 1.39, glass));
+  parts.push(box(1.0, 0.24, 3.4, 1.0, 4.05, -0.15, edge));
+  // Lattice boom and backstay. The foreground face is intentionally open, so its bracing is visible.
+  for (const z of [-1.15, 1.15]) {
+    parts.push(beam(0, 10.6, z * 0.5, -12, 14.2, z, 0.37, steel));
+    parts.push(beam(0, 11.65, z * 0.5, -12, 14.2, z, 0.2, edge));
+    for (let i = 0; i < 6; i++) {
+      const x = -i * 2;
+      const x1 = x - 2;
+      parts.push(beam(x, 10.6 - x * 0.3, z, x1, 11.65 - x1 * 0.22, z, 0.12, shade));
+    }
+  }
+  parts.push(beam(0, 11.6, 0, 4.5, 6, 0, 0.22, cable));
+  parts.push(beam(-12, 14.25, 0, 1.5, 12.3, 0, 0.15, cable));
+  parts.push(cyl(0.6, 0.6, 1.7, 12, -11.8, 14.1, 0, shade, 'z'));
+  parts.push(cyl(0.36, 0.36, 1.85, 12, -11.8, 14.1, 0, edge, 'z'));
+  for (const x of [-12.2, -11.4]) parts.push(cyl(0.03, 0.03, 5.7, 5, x, 10.9, 0, cable));
+  parts.push(box(1.0, 0.7, 1.45, -11.8, 7.75, 0, edge));
+  parts.push(beam(-11.8, 7.4, 0, -11.8, 6.65, 0, 0.2, shade));
+  parts.push(beam(-11.8, 6.65, 0, -12.25, 6.45, 0, 0.18, shade));
+  return ao(merge(parts), 15, 0.27);
+}
+
+/** A compact dock winch with a visible cable drum, geared end plates and mooring bollards. */
+export function lowTideWinchGeometry(): THREE.BufferGeometry {
+  const rust = rgb(0x8f5637);
+  const metal = rgb(0x37484b);
+  const rim = rgb(0xd2a64f);
+  const parts: THREE.BufferGeometry[] = [
+    box(3.6, 0.38, 2.0, 0, 0.19, 0, metal),
+    box(2.8, 0.65, 1.6, 0, 0.7, 0, rust),
+    cyl(0.65, 0.65, 2.5, 12, 0, 1.45, 0, metal, 'x'),
+  ];
+  for (const x of [-1.32, 1.32]) {
+    parts.push(cyl(0.83, 0.83, 0.13, 14, x, 1.45, 0, rim, 'x'));
+    parts.push(cyl(0.24, 0.24, 0.17, 10, x * 1.13, 1.45, 0, metal, 'x'));
+  }
+  for (let i = 0; i < 7; i++) {
+    const a = i * Math.PI * 2 / 7;
+    parts.push(cyl(0.045, 0.045, 2.45, 6, 0, 1.45 + Math.sin(a) * 0.61, Math.cos(a) * 0.61, rim, 'x'));
+  }
+  parts.push(box(0.42, 1.3, 0.45, 1.42, 2.55, -0.7, metal));
+  parts.push(box(1.8, 0.14, 0.3, 1.1, 3.2, -0.7, rim));
+  return ao(merge(parts), 3.3, 0.2);
+}
+
+/**
+ * Narrow service pier under the C1 salvage machine. Open braces and individually laid boards
+ * give a visible bridge between the tire route and the water without creating a fake collider.
+ */
+export function lowTideServicePierGeometry(): THREE.BufferGeometry {
+  const frame = rgb(0x39484a);
+  const wood = rgb(0x675d4b);
+  const woodAlt = rgb(0x4c4d44);
+  const rail = rgb(0x526365);
+  const parts: THREE.BufferGeometry[] = [];
+  for (const z of [-1.7, 1.7]) {
+    parts.push(box(23, 0.3, 0.2, 0, 1.1, z, frame));
+    for (let x = -11; x <= 11; x += 5.5) {
+      parts.push(box(0.28, 2.15, 0.28, x, 0.1, z, frame));
+      if (x < 11) parts.push(beam(x, -0.45, z, x + 5.5, 1.0, z, 0.12, frame));
+    }
+  }
+  for (let x = -10.8; x <= 10.8; x += 0.68) {
+    const bay = Math.floor((x + 11) / 5.5);
+    parts.push(box(0.55, 0.16, 3.8, x, 1.33, 0, bay % 2 === 0 ? woodAlt : wood));
+  }
+  // Rail on the water side only, leaving the road-facing machinery legible.
+  for (let x = -11; x <= 11; x += 5.5) parts.push(box(0.12, 1.0, 0.12, x, 1.85, -1.65, rail));
+  parts.push(box(22, 0.1, 0.12, 0, 2.32, -1.65, rail));
+  return ao(merge(parts), 2.5, 0.24);
+}
+
 /** Ship-to-shore gantry crane (C-ride): four legs on rails, a portal beam, a boom reaching `boom` m out over −z. ~24 m tall. */
 export function gantryCraneGeometry(col: number = 0x2e8c8a, boom = 34): THREE.BufferGeometry {
   const c = rgb(col);
