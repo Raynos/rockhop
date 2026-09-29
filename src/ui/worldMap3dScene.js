@@ -54,18 +54,21 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.055;
 controls.enablePan = true;
 controls.screenSpacePanning = false;
+let focusTween = null;
 // The map is a level picker: dragging moves the island. Orbit is an explicit
 // mode on touch and remains available on the right mouse button.
 let dragMode = 'pan';
 function setDragMode(mode) {
  const nextMode = mode === 'orbit' ? 'orbit' : 'pan';
+ if (nextMode !== dragMode) { focusTween = null; controls.enabled = true; }
  if (nextMode === 'orbit' && dragMode === 'pan') {
    // Orbit around the island, not the last panned corner of the sea.
    const damping=controls.enableDamping;
    controls.enableDamping=false;controls.update();controls.enableDamping=damping;
    const offset = camera.position.clone().sub(controls.target);
+   const distance = Math.max(offset.length(), 38);
    controls.target.set(0, 0, 0);
-   camera.position.copy(offset);
+   camera.position.copy(offset.normalize().multiplyScalar(distance));
  }
  dragMode = nextMode;
  controls.mouseButtons.LEFT = dragMode === 'pan' ? THREE.MOUSE.PAN : THREE.MOUSE.ROTATE;
@@ -1426,7 +1429,7 @@ const halo=new THREE.Mesh(new THREE.TorusGeometry(.64,.055,8,48),new THREE.MeshB
 halo.rotation.x=Math.PI/2;terrain.add(halo);
 const beam=new THREE.Mesh(new THREE.CylinderGeometry(.06,.16,2.25,8),new THREE.MeshBasicMaterial({color:'#ffd079',transparent:true,opacity:.25,depthWrite:false}));terrain.add(beam);
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
-let focusTween=null,downX=0,downY=0;
+let downX=0,downY=0;
 function selectStage(index,focus=false){
  if(index<0||index>=stages.length||disposed)return;
  selected=index;
@@ -1463,7 +1466,10 @@ function applyProgress(){
 }
 applyProgress();
 selectStage(initialIndex);
-function onPointerDown(event){downX=event.clientX;downY=event.clientY;}
+function onPointerDown(event){
+ downX=event.clientX;downY=event.clientY;
+ if(focusTween){focusTween=null;controls.enabled=true;}
+}
 function onPointerUp(event){
  if(disposed||Math.hypot(event.clientX-downX,event.clientY-downY)>8)return;
  const rect=renderer.domElement.getBoundingClientRect();
@@ -1484,7 +1490,7 @@ function onPointerUp(event){
    onSelect(index);
  }
 }
-renderer.domElement.addEventListener('pointerdown',onPointerDown);
+renderer.domElement.addEventListener('pointerdown',onPointerDown,true);
 renderer.domElement.addEventListener('pointerup',onPointerUp);
 function resize(){
  if(disposed)return;
@@ -1526,7 +1532,7 @@ function dispose(){
  disposed=true;
  cancelAnimationFrame(raf);
  window.removeEventListener('resize',resize);
- renderer.domElement.removeEventListener('pointerdown',onPointerDown);
+ renderer.domElement.removeEventListener('pointerdown',onPointerDown,true);
  renderer.domElement.removeEventListener('pointerup',onPointerUp);
  controls.dispose();
  const geometries=new Set(),materials=new Set(),textures=new Set();
@@ -1543,7 +1549,7 @@ function dispose(){
 }
 return {
  selectStage,setLocked,setProgress,setDragMode,resize,dispose,
- viewState(){return {dragMode,target:{x:controls.target.x,y:controls.target.y,z:controls.target.z},azimuth:controls.getAzimuthalAngle(),states:stages.map(stage=>stage.stateRing.userData.state)};},
+ viewState(){return {dragMode,target:{x:controls.target.x,y:controls.target.y,z:controls.target.z},azimuth:controls.getAzimuthalAngle(),distance:camera.position.distanceTo(controls.target),states:stages.map(stage=>stage.stateRing.userData.state)};},
  stats(){return {fps,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,meshMerge,selected,disposed};},
  towerScreenPoint(index){
    const stage=stages[index];if(!stage)return null;

@@ -3,7 +3,7 @@ export interface MountedWorldMap3D {
   setLocked(locked: boolean[]): void;
   setProgress(locked: boolean[], medals: (string | null)[]): void;
   setDragMode(mode: 'pan' | 'orbit'): void;
-  viewState(): { dragMode: 'pan' | 'orbit'; target: { x: number; y: number; z: number }; azimuth: number; states: string[] };
+  viewState(): { dragMode: 'pan' | 'orbit'; target: { x: number; y: number; z: number }; azimuth: number; distance: number; states: string[] };
   resize(): void;
   dispose(): void;
   stats(): { fps: number; drawCalls: number; triangles: number; meshMerge: { mergedObjects: number; mergedBatches: number }; selected: number; disposed: boolean };

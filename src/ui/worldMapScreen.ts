@@ -164,6 +164,11 @@ export class WorldMapScreen extends Screen {
     this.loading = false;
     this.map?.dispose();
     this.map = null;
+    // Each fresh map visit starts with the level-finding gesture.
+    this.dragMode = 'pan';
+    this.orbit.innerHTML = 'Rotate <small>map view</small>';
+    this.orbit.setAttribute('aria-label', 'Switch map drag to rotate');
+    this.orbit.setAttribute('aria-pressed', 'false');
     this.loadingView.classList.remove('show');
     this.restoreGpu();
   }

@@ -12,9 +12,9 @@ import { REPO_ROOT } from '../lib/paths';
 type MapProbe = {
   selectStage(index: number, focus?: boolean): void;
   setProgress(locked: boolean[], medals: (string | null)[]): void;
-  viewState(): { dragMode: string; target: { x: number; y: number; z: number }; azimuth: number; states: string[] };
+  viewState(): { dragMode: string; target: { x: number; y: number; z: number }; azimuth: number; distance: number; states: string[] };
   towerScreenPoint(index: number): { x: number; y: number } | null;
-  stats(): { selected: number; disposed: boolean };
+  stats(): { selected: number; disposed: boolean; fps: number; drawCalls: number; triangles: number };
 };
 type HookWindow = Window & { __rockhopMap3d?: MapProbe; __render?: { canvas: HTMLCanvasElement }; __rockhop?: { app?: { screen(): string } } };
 
@@ -54,6 +54,8 @@ try {
     gameContextLost: (window as HookWindow).__render?.canvas.getContext('webgl2')?.isContextLost(),
   }));
   await page.screenshot({ path: path.join(out, 'landscape-front.png') });
+  await page.waitForTimeout(1200);
+  report.mapStats = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.stats());
   report.campaignStates = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState().states);
   await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.setProgress(
     Array.from({ length: 12 }, (_, i) => i === 5),
@@ -73,6 +75,18 @@ try {
   }
   report.selected = selected;
   await page.screenshot({ path: path.join(out, 'twelve-towers.png') });
+  // A player often drags immediately after tapping a tower. The focus camera
+  // animation must yield to that first pointerdown, not swallow the gesture.
+  const beforeSelectionPan = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
+  await page.mouse.move(400, 260);
+  await page.mouse.down();
+  for (let i = 1; i <= 12; i++) await page.mouse.move(400 + i * 10, 260);
+  await page.mouse.up();
+  await page.waitForTimeout(300);
+  const afterSelectionPan = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
+  report.postSelectionPan = { before: beforeSelectionPan, after: afterSelectionPan };
+  await page.locator('.wm-orbit').click();
+  report.postSelectionOrbit = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
 
   await page.setViewportSize({ width: 393, height: 852 });
   await page.waitForFunction(() => document.querySelectorAll('.wm3d-host canvas').length === 0, null, { timeout: 20_000 });
@@ -146,6 +160,8 @@ try {
   };
   const r = report.requests as { painted: string[]; mapChunk: string[]; sky: string[]; bootMapChunk: string[]; bootSky: string[] };
   const moved = Math.hypot(afterPan.target.x - beforePan.target.x, afterPan.target.z - beforePan.target.z);
+  const movedAfterSelection = Math.hypot(afterSelectionPan.target.x - beforeSelectionPan.target.x, afterSelectionPan.target.z - beforeSelectionPan.target.z);
+  const postSelectionOrbit = report.postSelectionOrbit as ReturnType<MapProbe['viewState']>;
   const spun = Math.abs(afterOrbit.azimuth - beforeOrbit.azimuth);
   report.pass =
     expected.length === 12 && selected.every((entry, i) => !!entry.tower && entry.id === expected[i]) &&
@@ -154,7 +170,9 @@ try {
     menu.mapCanvases === 0 && !menu.mapHook && ride.screen === 'run' && ride.mapCanvases === 0 && !ride.mapHook &&
     ride.gameContextLost === false && r.painted.length === 0 && r.mapChunk.length >= 1 && r.sky.length >= 1 &&
     r.bootMapChunk.length >= 1 && r.bootSky.length >= 1 &&
-    moved > 1 && Math.abs(afterPan.azimuth - beforePan.azimuth) < 0.02 &&
+    moved > 1 && movedAfterSelection > .5 && postSelectionOrbit.dragMode === 'orbit' &&
+    Math.abs(postSelectionOrbit.target.x) < .01 && Math.abs(postSelectionOrbit.target.z) < .01 && postSelectionOrbit.distance >= 38 &&
+    Math.abs(afterPan.azimuth - beforePan.azimuth) < 0.02 &&
     beforePan.dragMode === 'pan' && beforeOrbit.dragMode === 'orbit' && spun > 0.1 &&
     (report.medalStates as string[]).slice(0, 6).join(',') === 'bronze,silver,gold,platinum,available,locked' &&
     errors.length === 0;
