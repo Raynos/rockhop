@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "kind": "gate-partial",
-  "runId": "20260929-100204-4a15ee",
-  "startedAt": "2026-09-29T15:02:04.710Z",
-  "wallMs": 8877,
-  "git": "13134604",
+  "runId": "20260929-172215-d3c2e2",
+  "startedAt": "2026-09-29T22:22:15.495Z",
+  "wallMs": 38352,
+  "git": "54d6add5",
   "srcFingerprint": "840b926e",
   "node": "v24.18.1",
   "chromium": "151.0.7922.34",
@@ -17,19 +17,21 @@
   "checks": [
     {
       "id": "boot.readyP50Ms",
-      "value": 202.06395799999973,
+      "value": 268.4476250000007,
       "limit": 300,
       "pass": true,
       "unit": "ms",
-      "note": "runs 201/202/203/206/92 min 92 loadavg 3.09/18"
+      "note": "runs 1406/268/256 min 256 loadavg 5.4/18"
     },
     {
       "id": "boot.firstFrameMs",
-      "value": 404.085000038147,
-      "limit": 900,
-      "pass": true,
+      "value": 5926.039999961853,
+      "limit": 4000,
+      "pass": false,
       "unit": "ms",
-      "note": "ready -> first synced frame"
+      "note": "ready -> first synced frame; SwiftShader limit; ship target 900ms NOT met (informational on this machine)",
+      "shipLimit": 900,
+      "shipPass": false
     },
     {
       "id": "clear.golden",
@@ -77,18 +79,20 @@
     },
     {
       "id": "restart.wallMsP95",
-      "value": 0.09999990463256836,
+      "value": 0.13499975204467773,
       "limit": 5,
       "pass": true,
       "unit": "ms"
     },
     {
       "id": "restart.frameMsP95",
-      "value": 6.434999942779541,
-      "limit": 33,
-      "pass": true,
+      "value": 551.8949999809265,
+      "limit": 150,
+      "pass": false,
       "unit": "ms",
-      "note": "restart -> synced frame"
+      "note": "restart -> synced frame; SwiftShader limit; ship target 33ms NOT met (informational on this machine)",
+      "shipLimit": 33,
+      "shipPass": false
     },
     {
       "id": "restart.noCountdown",
@@ -99,5 +103,5 @@
       "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
     }
   ],
-  "failed": 0
+  "failed": 2
 }

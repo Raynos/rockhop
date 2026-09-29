@@ -103,6 +103,10 @@ The [D2 outdoor-steel comparison](../evidence/course-remaster/d2/surface-light/R
 
 The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows a two-beat Diamond prompt starting 13 m earlier: settle before the bridge lip, then level for its deck. A [matched bridge-support pass](../evidence/course-remaster/s1/bridge-art/README.md) now gives the optional high span visible rear-offset tower-to-deck bracing; full Rookie lower, Pro upper and held-GO fault clips preserve their exact hashes with clear bike silhouettes. The bridge still appears late behind the ice wall; new-rider route choice and physical-device performance remain unmeasured.
 
+### 2026-09-29 S2 cornice finding
+
+The [matched S2 cut-lip and landing films](../evidence/course-remaster/s2/cornice-landmark/README.md) replace repeated snow scallops with a short hanging ice undercut and a layered far landing. A longer blade-shaped trial was rejected because it looked rideable past the collider edge. Final Rookie lower and Pro upper replays remain exact in Node and two fresh browsers; full, obstacle and fault windows retain paired hashes and camera bounds. The [third-round gate](../evidence/course-remaster/round-gate-2026-09-29/after-s2/README.md) is 9/11 on host SwiftShader due two frame-time misses. This is a bounded lip silhouette pass; the larger snowcat/ice-wall art, human drop prediction and physical-phone pacing remain open.
+
 ### 2026-09-29 A3 truck finding
 
 The [played Timberline window](../evidence/course-remaster/a3/README.md) gives the raised platform a chassis, wheels and strapped load without altering the x253.2–261.2 m collider. The browser/Node capture prefix is exact and the full Node input still finishes clean. The red scenic cab, exit beam, fresh fault/retry understanding and physical-phone pacing remain open.

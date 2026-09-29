@@ -34,6 +34,8 @@
 
 **D2 machinery and surface rounds:** [played Conveyor excerpts](../evidence/course-remaster/d2/README.md) give the head pulley a spinning spoke face, belt supports and cleats, and the later cart a tub and visible load. The [matched full ride and cart fault](../evidence/course-remaster/d2/surface-light/README.md) replace near-black outdoor metal with dusted steel and visible side edges while preserving exact finish and fault-window hashes. The later cart surface, new-player fault response and phone pacing remain open.
 
+**S2 cornice round:** [matched Rookie lower, Pro upper and fault clips](../evidence/course-remaster/s2/cornice-landmark/README.md) give the actual wind lip a short hanging cut and the far landing a layered ice face. A longer fake-riding-shelf trial was rejected. Exact replays and camera checks pass; the [third-round quick gate](../evidence/course-remaster/round-gate-2026-09-29/after-s2/README.md) is 9/11 on host SwiftShader due first/restarted frame timing. Human route understanding, full Snowline art and phone performance remain open.
+
 **S1 upper-route round:** [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows an earlier two-beat cue for the optional Diamond bridge. Rookie lower and Pro upper finish states remain identical in Node and two browser loads. A new player's ability to see and choose the upper line remains open.
 
 **A3 truck round:** [played Timberline approach](../evidence/course-remaster/a3/README.md) gives the raised truck platform visible wheels, chassis and log straps while retaining its exact collider and replay prefix. The scenic cab, exit beam, full ride and fresh fault explanation remain open.

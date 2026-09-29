@@ -792,18 +792,23 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
     case 'ice-ledge':
       solid('snow', 0x8cc8e4, (_x, y) => 0.6 + 0.4 * Math.min(1, (y - y0) / Math.max(0.3, y1 - y0)));
       plankBoard('snow', 0xf4f8ff, 0.18);
+      if (ctx.trackId === 's2-cornice' && x0 > 167 && x0 < 168) push(buckets, 'snow', tintGeo(extrudePoly([
+        { x: x0, y: topAt(x0) - 0.13 }, { x: x1, y: topAt(x1) - 0.13 },
+        { x: x1, y: topAt(x1) - 0.78 }, { x: x0, y: topAt(x0) - 0.67 },
+      ], depth + 0.5), 0x6398aa));
       return true;
     case 'cornice': {
-      // Wind-sculpted: the snow body, a curled overhang at the downhill lip (below the ridden top) and wind
-      // scallops along both faces.
+      // The cornice hangs past the final contact point; the blue cut face reveals the gap and landing slope.
       solid('snow', 0xf2f6fc, (_x, y) => 0.85 + 0.15 * Math.min(1, (y - y0) / 1.5));
-      const lipX = polys.length ? (topAt(x1 - 0.05) >= topAt(x0 + 0.05) ? x1 : x0) : x1;
-      const dir = lipX === x1 ? 1 : -1;
-      const ly = topAt(lipX - dir * 0.05);
-      if (Number.isFinite(ly)) push(buckets, 'snow', G.snowBankGeometryZ(41).scale(1.4, 0.9, depth * 1.05).translate(0, -0.45, 0), at(lipX + dir * 0.2, ly - 0.12, 0));
-      for (let x = x0 + 0.6; x < x1 - 0.4; x += 1.3) {
-        const t = topAt(x);
-        if (Number.isFinite(t) && t - profileY(profile, x) > 0.5) for (const z of [-face, face]) push(buckets, 'snow', G.snowBankGeometryZ(43 + Math.round(x)).scale(1.2, 0.8, 0.5), at(x, t - 0.55, z));
+      if (po.kind === 'ramp') {
+        const top = topAt(x1);
+        push(buckets, 'snow', tintGeo(extrudePoly([
+          { x: x1 - 0.9, y: topAt(x1 - 0.9) - 0.16 },
+          { x: x1 - 0.25, y: topAt(x1 - 0.25) - 0.12 },
+          { x: x1 + 0.16, y: top - 0.38 }, { x: x1 + 0.32, y: top - 0.57 },
+          { x: x1 + 0.08, y: top - 0.66 }, { x: x1 - 0.14, y: top - 0.38 },
+          { x: x1 - 0.58, y: topAt(x1 - 0.58) - 0.46 },
+        ], depth + 0.35), 0x91b4bf));
       }
       return true;
     }
