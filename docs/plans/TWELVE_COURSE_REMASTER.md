@@ -61,3 +61,7 @@ A course counts as finished only when its gameplay, scenery, camera, sound, rewa
 ## First execution round
 
 Capture the current C1/C2/A1/D1/S1 ride and fault baseline at 852×393 landscape; record exact code revision and measurement method. Then build the C1 harbor and riding surface as the visual template, retest its brake approach on a physical phone, and bring the moving before/after clip to the user. The remaining courses follow the measured four-biome exemplar pass above.
+
+### 2026-09-29 baseline result
+
+The [baseline inventory](../evidence/course-remaster/BASELINE.md) now indexes full clean landscape captures for all twelve Rookie courses and all four final-course Pro upper Diamond routes from frozen commit `609293ea`. Every selected input finished with the same time, tick and hash in Node and two fresh browser loads. This is stronger clean-ride coverage than the initial five-course target, but Pass 0 remains open: representative faults and immediate retries are not captured for every course, and no physical phone or uncoached human was measured. The input header/source fingerprint discrepancy is documented in the inventory.

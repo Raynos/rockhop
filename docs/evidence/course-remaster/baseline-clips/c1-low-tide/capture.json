@@ -1,0 +1,45 @@
+{
+  "frozenCommit": "609293eaac58913420a1e06ca8fc530bfc907cc1",
+  "archiveSourceFingerprint": "d61e8029",
+  "recording": {
+    "path": "harness/inputs/c1-low-tide/bot-3.json",
+    "sha256": "ce9eb69fb42766f75c3e0bd381558ad0d32ba88c65c066a66efb5caf5a7466ec",
+    "headerSourceFingerprint": "a415fcb8",
+    "bike": "rookie",
+    "seed": 341352973,
+    "physicsHz": 120
+  },
+  "verifiedFinish": {
+    "timeSeconds": 30.35,
+    "tick": 3642,
+    "faults": 0,
+    "hash": "2bfe061963ffb058",
+    "nodeAndTwoFreshBrowserLoadsIdentical": true
+  },
+  "capture": {
+    "kind": "silent headless Chromium ANGLE Metal",
+    "viewport": "852x394 landscape",
+    "fps": 20,
+    "rendererQuality": "high",
+    "durationSeconds": 30.8,
+    "frames": 616,
+    "finishTailSeconds": 0.5,
+    "endOfClipHash": "23adcf3b771bcd0a",
+    "cameraRidingOutOfBoxFrames": 0,
+    "cameraRollViolations": 0,
+    "cameraClampedFrames": 0,
+    "wallMs": 34312
+  },
+  "video": {
+    "path": "clip.mp4",
+    "codec": "H.264",
+    "encoder": "libx264 CRF 26 slow",
+    "bytes": 5472232,
+    "sha256": "e0b211f92ff2a39f5170a869f1ab63b4bb4e307ee58c3b4649b86055a0a4f6a9"
+  },
+  "limits": [
+    "Input header source fingerprint differs from archive fingerprint; this exact input still matched Node and two browser finish hashes.",
+    "End-of-clip hash includes the finish tail and differs from the verified finish-state hash.",
+    "Headless landscape viewport is not a physical phone test."
+  ]
+}

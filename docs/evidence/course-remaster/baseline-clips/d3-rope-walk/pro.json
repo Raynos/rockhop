@@ -1,0 +1,48 @@
+{
+  "frozenCommit": "609293eaac58913420a1e06ca8fc530bfc907cc1",
+  "archiveSourceFingerprint": "d61e8029",
+  "recording": {
+    "path": "harness/inputs/d3-rope-walk/bot-3-pro.json",
+    "sha256": "823a6896d4871abe705fb3f66dfc2f084de29e64f00eed1518c3e27c9dd13d69",
+    "headerSourceFingerprint": "a415fcb8",
+    "bike": "pro",
+    "seed": 1,
+    "physicsHz": 120
+  },
+  "verifiedFinish": {
+    "timeSeconds": 32.35,
+    "tick": 3954,
+    "faults": 0,
+    "hash": "bfbcea0b936c54aa",
+    "diamondRouteCrossed": true,
+    "medal": "Diamond",
+    "nodeAndTwoFreshBrowserLoadsIdentical": true
+  },
+  "capture": {
+    "kind": "silent headless Chromium ANGLE Metal",
+    "viewport": "852x394 landscape",
+    "fps": 20,
+    "rendererQuality": "high",
+    "durationSeconds": 32.85,
+    "frames": 657,
+    "finishTailSeconds": 0.5,
+    "endOfClipHash": "9271f6237c0039bb",
+    "cameraRidingOutOfBoxFrames": 0,
+    "cameraRollViolations": 0,
+    "cameraClampedFrames": 0,
+    "wallMs": 40957
+  },
+  "video": {
+    "path": "pro.mp4",
+    "codec": "H.264",
+    "encoder": "libx264 CRF 26 slow",
+    "bytes": 5818580,
+    "sha256": "58e256c45c4cee8bb6600ffdbd50b3ca80bd3422e9f5080f249c4eef18a783df"
+  },
+  "limits": [
+    "Input header source fingerprint differs from archive fingerprint; this exact input still matched Node and two browser finish hashes.",
+    "End-of-clip hash includes the finish tail and differs from the verified finish-state hash.",
+    "Headless landscape viewport is not a physical phone test.",
+    "D3 Pro finishes in 32.35 s here; the older 8fa49c3e medal audit recorded 32.95 s, so use this build-specific result."
+  ]
+}
