@@ -1,0 +1,9 @@
+# C-map saved career and touch Ride — committed WebKit check
+
+The review-only C island was rebuilt from committed `a27289fd`. The [silent played UI clip](played-save-reload.webm) starts at the real menu at 852×393 CSS pixels and DPR 2. It opens the C map, selects the earned C1 tower with a real touch, reloads, selects the newly open A1 tower with a real touch, and presses Ride into the run. [The machine report](report.json) has zero page/console errors and passes.
+
+This test uses a **seeded saved-career fixture** so it can target the zone boundary. It does not claim a player earned the medals in that clip. With C1 and C2 Bronze records, the map showed **2/12 cleared**, copper earned flags, a “Bronze cleared” selected card, and locked A1. Adding C3 Bronze to storage and reloading showed **3/12 cleared**, then A1 open. The A1 tower touch selected `a1-sawdust`; the enabled Ride button started the `run` screen. [Before](two-coast-saved.png) and [after](alpine-unlocked.png) are frames from that UI sequence.
+
+The tower flag uses the saved medal color: Bronze copper, Silver pale metal, Gold yellow, Diamond cyan. Locked flags stay grey and uncleared open flags retain biome colors. The selected card names the earned medal. The painted selector remains the default in normal web and store builds; this island is opt-in through `?map3d=1` on a review build.
+
+Reproduce with `VITE_MAP_3D_REVIEW=1 pnpm build` and `pnpm exec tsx harness/e2e/worldmap-3d-persistence.mts docs/evidence/world-map-c/persistence`. Typecheck, lint and the review build passed on this source. The prior all-12 tower-tap and portrait/orbit checks remain in the map evidence; this check adds saved-state reload and Ride. A physical landscape iPhone must still pass pacing, touch sizing, orientation and art review before the 3D map replaces the painted selector.
