@@ -107,6 +107,10 @@ The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.m
 
 The [matched S2 cut-lip and landing films](../evidence/course-remaster/s2/cornice-landmark/README.md) replace repeated snow scallops with a short hanging ice undercut and a layered far landing. A longer blade-shaped trial was rejected because it looked rideable past the collider edge. Final Rookie lower and Pro upper replays remain exact in Node and two fresh browsers; full, obstacle and fault windows retain paired hashes and camera bounds. The [third-round gate](../evidence/course-remaster/round-gate-2026-09-29/after-s2/README.md) is 9/11 on host SwiftShader due two frame-time misses. This is a bounded lip silhouette pass; the larger snowcat/ice-wall art, human drop prediction and physical-phone pacing remain open.
 
+### 2026-09-29 course-art budget finding
+
+The [production CSS comment cut](../evidence/course-remaster/bundle-headroom/README.md) removes only comments from five static UI CSS strings during the Vite build. It restores 5,461 B gzip of player JavaScript headroom (671,375/676,864 B) for later authored scene code without changing the source CSS or boot request graph. It does not close any course or device gate.
+
 ### 2026-09-29 A3 truck finding
 
 The [played Timberline window](../evidence/course-remaster/a3/README.md) gives the raised platform a chassis, wheels and strapped load without altering the x253.2–261.2 m collider. The browser/Node capture prefix is exact and the full Node input still finishes clean. The red scenic cab, exit beam, fresh fault/retry understanding and physical-phone pacing remain open.

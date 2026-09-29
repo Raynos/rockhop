@@ -69,6 +69,37 @@ function retiredTracksLazy(): Plugin {
   };
 }
 
+/** Keep the UI's documented CSS in source without shipping its comments as JavaScript string data. */
+function stripShippedCssComments(): Plugin {
+  let file = path.resolve('src', 'ui', 'styles.ts');
+  return {
+    name: 'rockhop:strip-shipped-css-comments',
+    apply: 'build',
+    enforce: 'pre',
+    configResolved(c) {
+      file = path.resolve(c.root, 'src', 'ui', 'styles.ts');
+    },
+    load(id) {
+      if (path.resolve(id.split('?')[0]!) !== file) return null;
+      const source = fs.readFileSync(file, 'utf8');
+      const marker = /\/\* css \*\/\s*`/g;
+      const count = [...source.matchAll(marker)].length;
+      let stripped = 0;
+      const output = source.replace(/(\/\* css \*\/\s*`)([^`]*)(`)/g, (_whole, open: string, css: string, close: string) => {
+        if (css.includes('${')) throw new Error('styles.ts: CSS templates must not interpolate');
+        const comments = css.match(/\/\*[^]*?\*\//g) ?? [];
+        const clean = css.replace(/\/\*[^]*?\*\//g, '');
+        if (clean.includes('/*') || clean.includes('*/')) throw new Error('styles.ts: unterminated CSS comment');
+        stripped += 1;
+        if (!comments.length) throw new Error('styles.ts: expected documented CSS template');
+        return open + clean + close;
+      });
+      if (count !== 5 || stripped !== count) throw new Error(`styles.ts: expected five static CSS templates, found ${count} markers and ${stripped} complete templates`);
+      return output;
+    },
+  };
+}
+
 /**
  * Dev chunks, never fetched by a normal player: the retired tracks (`retiredTracksLazy`, a `?` dev URL only,
  * absent from a store build), the v1 solver (`?physics=v1` only), and the main-thread audio renderer
@@ -597,7 +628,7 @@ export default defineConfig({
   base: './',
   // versionJson last: its `generateBundle` must run after the load manifest and the worker stamp are taken.
   // A store build has no service worker and no update probe (Apple 2.5.2: nothing loads code from a server).
-  plugins: [releaseFlags(), retiredTracksLazy(), readableStacks((name) => name === 'three'), bundleBudget(), ...loadManifest(buildId()), ...(STORE_BUILD ? [] : [pwa(buildId())]), pruneFlatModels(), ...(STORE_BUILD ? [storePrune()] : [versionJson(buildId())]), sourcemapsOut()],
+  plugins: [releaseFlags(), retiredTracksLazy(), stripShippedCssComments(), readableStacks((name) => name === 'three'), bundleBudget(), ...loadManifest(buildId()), ...(STORE_BUILD ? [] : [pwa(buildId())]), pruneFlatModels(), ...(STORE_BUILD ? [storePrune()] : [versionJson(buildId())]), sourcemapsOut()],
   // Unmangled identifiers in production: the crash screen's stack must name functions on a phone (`readableStacks`).
   esbuild: { minifyIdentifiers: false },
   worker: { plugins: () => [readableStacks(() => true)] },
