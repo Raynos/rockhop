@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "kind": "gate-partial",
-  "runId": "20260928-194243-75bc74",
-  "startedAt": "2026-09-29T00:42:43.364Z",
-  "wallMs": 51558,
+  "runId": "20260928-194227-a0bb7b",
+  "startedAt": "2026-09-29T00:42:27.132Z",
+  "wallMs": 6907,
   "git": "710f1f4d",
   "srcFingerprint": "d47b0ac8",
   "node": "v24.18.1",
@@ -17,21 +17,19 @@
   "checks": [
     {
       "id": "boot.readyP50Ms",
-      "value": 263.6222080000007,
+      "value": 203.82687499999975,
       "limit": 300,
       "pass": true,
       "unit": "ms",
-      "note": "runs 1398/257/257/264/264 min 257 loadavg 4.26/18"
+      "note": "runs 269/206/93/95/204 min 93 loadavg 5.33/18"
     },
     {
       "id": "boot.firstFrameMs",
-      "value": 5819.829999923706,
-      "limit": 4000,
-      "pass": false,
+      "value": 396.3699998855591,
+      "limit": 900,
+      "pass": true,
       "unit": "ms",
-      "note": "ready -> first synced frame; SwiftShader limit; ship target 900ms NOT met (informational on this machine)",
-      "shipLimit": 900,
-      "shipPass": false
+      "note": "ready -> first synced frame"
     },
     {
       "id": "clear.golden",
@@ -79,20 +77,18 @@
     },
     {
       "id": "restart.wallMsP95",
-      "value": 0.125,
+      "value": 0.09999990463256836,
       "limit": 5,
       "pass": true,
       "unit": "ms"
     },
     {
       "id": "restart.frameMsP95",
-      "value": 225.15000009536743,
-      "limit": 150,
-      "pass": false,
+      "value": 5.87000036239624,
+      "limit": 33,
+      "pass": true,
       "unit": "ms",
-      "note": "restart -> synced frame; SwiftShader limit; ship target 33ms NOT met (informational on this machine)",
-      "shipLimit": 33,
-      "shipPass": false
+      "note": "restart -> synced frame"
     },
     {
       "id": "restart.noCountdown",
@@ -103,5 +99,5 @@
       "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
     }
   ],
-  "failed": 2
+  "failed": 0
 }
