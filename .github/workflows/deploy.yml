@@ -16,7 +16,8 @@ on:
   workflow_dispatch: # deploy HEAD on demand: gh workflow run deploy
 
 concurrency:
-  group: deploy-${{ github.ref }}
+  # Push checks (including the Android store job) must not queue an on-demand release.
+  group: deploy-${{ github.ref }}-${{ github.event_name == 'push' && 'checks' || 'production' }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
