@@ -883,6 +883,10 @@ export function benchGeometry(seed = 23): THREE.BufferGeometry {
 export function d1TerraceEdgeGeometry(length: number, rise: number, seed: number): THREE.BufferGeometry {
   const rnd = lcg(seed);
   const parts: THREE.BufferGeometry[] = [];
+  // The real step face crosses the whole tyre path; the old narrow near-edge
+  // witness left its contact plane almost invisible against the pale tread.
+  parts.push(box(0.095, rise - 0.018, 3.55, 0.035, rise / 2 - 0.009, -1.08, rgb(0x4f3d31)));
+  parts.push(box(0.09, 0.045, 3.55, 0.035, rise - 0.045, -1.08, rgb(0x9c7750)));
   parts.push(box(0.72, rise - 0.018, 0.12, 0.36, rise / 2, 0, rgb(0x41362d)));
   parts.push(box(0.74, 0.075, 0.14, 0.37, rise - 0.047, 0.015, rgb(0x9b572e)));
   parts.push(box(length - 0.1, 0.062, 0.11, length / 2, rise - 0.041, 0.045, rgb(0x59483a)));

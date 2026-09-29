@@ -21,6 +21,7 @@ import { PropBatch, bakeAO, containerGeometry, contactShadowBatch, drumGeometry,
 import { profileY } from '../track';
 import type { SetPiecePlan } from '../setPieces';
 import * as G from './geo';
+import { c2JumpCraneGeometry, c2LandingFasciaGeometry, c2PierTrestleGeometry } from './c2PierArt';
 import { ZONE_FACE, zonePaint } from './zoneDeck';
 
 /** The zone ids this kit builds (`snow` is SNOWLINE). */
@@ -339,6 +340,12 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const lowTidePier = lowTide ? PB('c1-service-pier', G.lowTideServicePierGeometry(), painted) : null;
     const lowTideWarehouse = lowTide ? PB('c1-quay-warehouse', G.lowTideWarehouseGeometry(), painted) : null;
     const lowTideWorkboat = lowTide ? PB('c1-inshore-coaster', G.lowTideWorkboatGeometry(), painted, false) : null;
+    const craneHop = track.def.id === 'c2-crane-hop';
+    if (craneHop) {
+      PB('c2-pier-2-trestle', c2PierTrestleGeometry(), painted).add(119, 0, 0);
+      PB('c2-container-barge-fascia', c2LandingFasciaGeometry(track), painted).add(320, 0, 0);
+      PB('c2-flight-crane', c2JumpCraneGeometry(), painted).add(299, 0, -8, 0, 0.62, null, 0, 0.42, 0.62);
+    }
 
     // Low Tide's first real hazard needs a cue in the yard itself. The checkpoint gantry tells the
     // rider where they are; this roadside board tells them what to do before the pallet ramp enters
@@ -418,6 +425,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       // A deliberate open sightline lets the rider read C1's braking ramp and container landing.
       // The dock machinery below takes the place of the random scrap in this short section.
       if (lowTide && x >= 190 && x < 258) continue;
+      if (craneHop && ((x >= 96 && x < 142) || (x >= 286 && x < 341))) continue;
       const r = rng.next();
       if (r < 0.2) continue;
       const z = rng.range(-3.8, -7.5);
@@ -450,6 +458,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     // Mid band (z −10 … −12): a container block now and then along the quay, low enough to keep the bay in view.
     for (let x = x0; x < x1; x += rng.range(24, 40)) {
       if (lowTide && x >= 188 && x < 258) continue;
+      if (craneHop && ((x >= 90 && x < 145) || (x >= 282 && x < 342))) continue;
       if (rng.next() < 0.35) continue;
       const n = rng.int(1, 2);
       for (let i = 0; i < n; i++) stack(x + i * 6.2, -11 + rng.range(-0.4, 0.4), rng.next() < 0.3 ? 2 : 1);
@@ -490,6 +499,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       // Keep one industrial silhouette behind C1's landing; a second gantry directly
       // behind the salvage derrick flattened both structures into a lattice tangle.
       if (lowTide && px > 160 && px < 290) continue;
+      if (craneHop && px > 260 && px < 355) continue; // the actual kicker crane owns this skyline
       const deckY = gy(px, -12) + 0.1;
       // The pier: a causeway on piles out to a quay block at z −45 … −75 carrying a crane and container rows.
       for (let z = -16; z >= -44; z -= 4) for (const dx of [-2, 2]) piles.add(px + dx, seaY - 1.5, z, 0, 1, null, 0, deckY - seaY + 1.5, 1);
@@ -537,9 +547,14 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       const z = nearZ0 + 2.2;
       lowTideWorkboat!.add(x, gy(x, z) - 0.32, z, 0.1, 0.13);
     }
+    if (craneHop) for (const x of [100, 117, 136, 290, 307, 335]) {
+      const z = nearZ0 + 1.35;
+      bollards.add(x, gy(x, z), z, 0, 1.05);
+    }
     nearLayer(
       (x, z, h) => {
         if (lowTide && x >= 200 && x < 258) return;
+        if (craneHop && ((x >= 92 && x < 145) || (x >= 284 && x < 342))) return;
         const r = lowTide ? 0.34 + rng.next() * 0.6 : rng.next();
         if (r < 0.2) tyreStack(x, z, h);
         else if (r < 0.34) truckTyre.add(x, gy(x, z), z, rng.range(-0.6, 0.6), fit(0.95, rng.range(0.85, 1.1), h), null, rng.range(-0.15, 0.15));
@@ -552,6 +567,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
       },
       (x, z, h) => {
         if (lowTide && x >= 200 && x < 258) return;
+        if (craneHop && ((x >= 92 && x < 145) || (x >= 284 && x < 342))) return;
         const r = lowTide ? 0.34 + rng.next() * 0.48 : rng.next();
         if (r < 0.2) {
           truckTyre.add(x, gy(x, z), z, rng.range(-0.9, 0.9), fit(0.95, rng.range(1.0, 1.35), h), null, rng.range(-0.2, 0.2));

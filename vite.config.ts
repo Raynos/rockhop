@@ -93,9 +93,9 @@ const INLINE_BUDGET_BYTES = 8 * 1024;
  *
  * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
-// Two authored course-scene passes add about 1.3 KB gzipped over the c02afd75 game. The
-// 2 KB increase keeps this a bounded player-payload gate while the models are judged in motion.
-const BUNDLE_BUDGET_GZ_BYTES = 658 * 1024;
+// The C2 playable-pier support and the D1 contact riser add about 1.5 KB gzipped
+// beyond the prior round. Keep the budget bounded while their moving evidence is reviewed.
+const BUNDLE_BUDGET_GZ_BYTES = 659 * 1024;
 
 function bundleBudget(): Plugin {
   return {

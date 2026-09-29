@@ -76,7 +76,7 @@ The [played A1 flume round](../evidence/course-remaster/a1/README.md) gives the 
 
 ### 2026-09-29 C2 cue finding
 
-The [played Pier 2 fault/retry clip](../evidence/course-remaster/c2/README.md) places an ordered ease/lift/coast cue before the pier and replaces the misleading lean-forward hint. Replaying the old four-attempt input preserves its exact window-end hash, including the fault. The cue is visible at phone size; whether a new rider learns the move in fewer attempts remains unmeasured. The course's pier/crane/barge models and full clean ride still need visual remaster review.
+The [played Pier 2 fault/retry clip](../evidence/course-remaster/c2/README.md) places an ordered ease/lift/coast cue before the pier and replaces the misleading lean-forward hint. Replaying the old four-attempt input preserves its exact window-end hash, including the fault. A [matched full-ride scenery pass](../evidence/course-remaster/c2/pier-art/README.md) now gives Pier 2 a visible trestle, joins the final landing fascia to its actual collider profile and fits a crane hook into the jump camera; the 26.608333 s finish and tail hash stay exact. The remaining foreground repetition, human cue comprehension and physical-phone pacing keep C2 open.
 
 ### 2026-09-29 A2 and S3 findings
 
@@ -84,7 +84,7 @@ The [A2 pivot pass](../evidence/course-remaster/a2/README.md) models the moving 
 
 ### 2026-09-29 D1 anticipation finding
 
-The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a short lift/level prompt with two physical witnesses at the actual x98.4 and x104.4 ledges, where five of seven blind attempts failed. The replay prefix hash is unchanged and the markers do not enter the riding ribbon. The rise itself remains too subtle against the pale quarry scene; this is an anticipation aid, not course or art sign-off. Fresh uncoached attempts and a broader contact-scale rock redesign remain necessary.
+The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a short lift/level prompt with two physical witnesses at the actual x98.4 and x104.4 ledges, where five of seven blind attempts failed. A [matched contact-riser pass](../evidence/course-remaster/d1/rock-cut/README.md) darkens only the four real step faces without changing physics or the exact replay hash. Four broader rock overlays were rejected in motion as masonry, retaining wall or hanging teeth. This is a small contact cue, not course or art sign-off; fresh uncoached attempts and an authored quarry composition remain necessary.
 
 ### 2026-09-29 C3 hull finding
 

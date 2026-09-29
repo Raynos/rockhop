@@ -1,0 +1,5 @@
+# C2 pier + D1 step-cue round gate
+
+The integrated source passes typecheck, lint, the serial Vitest suite (**1,431 passed; 2 skipped**) and the production build. Player JavaScript is **674,335 B gzipped**, below the revised **659 KiB / 674,816 B** cap by **481 B**. The scenery adds no collision, camera or physics changes. The matched [C2 full rides](../../../c2/pier-art/README.md) finish at exactly **26.608333 s** with equal tail hashes; the [D1 step-window rides](../../../d1/rock-cut/README.md) have the same tick-1152 hash.
+
+The [partial ship-gate report](ship-gate.partial.json) ran cold boot, clear, crash and instant restart: **9/11 checks pass**, so this round remains **NO-SHIP** on this host's SwiftShader. Exact clear finishes in **8.591667 s** with pinned hash `622bb2554e0f9a26`; crash occurs at **0.858 s**; fault-to-control is **25 ms**; restart logic takes one tick. First synced frame is **5,763/4,000 ms** and restart synced frame p95 is **227/150 ms**, both over the SwiftShader thresholds. Those two failures are not physical-phone measurements. The full third-round gate and uncoached landscape-device review remain open release requirements.
