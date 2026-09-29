@@ -56,6 +56,8 @@ The S1 in-game Diamond cue now calls the modeled feature **Lift Bridge**. A [fre
 
 The [post-S1 four-section gate](../evidence/round-gate-2026-09-28/README.md) on committed `95fac983` passes 11/11 host Metal and 9/11 SwiftShader with current-stamp input, exact finish/hash, crash and one-tick restart. The same two software-rendered frame limits miss. This is not the full release gate and does not replace physical-phone play.
 
+The [next four-section gate](../evidence/round-gate-2026-09-28/README.md) on committed `5d47e301`, after the HUD cue and protected preview update, again passes 11/11 Metal and 9/11 SwiftShader with exact finish/hash, crash and one-tick restart. Software first/restart frames still miss; release remains NO-SHIP.
+
 A [played snow-massif pass](../evidence/world-map-c/snow-massif-pass/README.md) replaces the three repeated cones with broader asymmetric rock/snow ridges. The before/after WebKit orbits keep 12/12 real tower taps and 258 draw calls; triangles rise 0.17%, and a no-video host run remains at 60 fps. Recorded-video fps dipped, so physical-phone pacing and fuller reference fidelity remain open.
 
 A [snow-village model pass](../evidence/world-map-c/village-fidelity/README.md) replaces the lone box cabin with three distinct alpine houses, roof snow, timber and stone detail. Silent before/after WebKit orbits keep 12/12 tower taps and reduce draw calls 258→256; recorded-video samples dip while separate no-video samples remain at 60 fps. The full map still needs reference-level quality and physical-phone pacing before it can replace the painted selector.
