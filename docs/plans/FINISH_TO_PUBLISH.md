@@ -34,6 +34,8 @@ The [headless WebKit C-map review](../evidence/world-map-c/webkit-review/README.
 
 A [played finish-goal pass](../evidence/finish-remaster/state-audit/README.md) now shows remaining Scrap toward the earned Pro after Gold as well as Diamond, in the existing compact heading. All four real result/payout/reload/action states passed again at 852×393; physical-phone readability remains open.
 
+A [second bike-role envelope sweep](../evidence/pro-envelope-v2/README.md) replayed 945 static obstacle cases exactly across five presets. A modest midrange Pro candidate gains a few shelf/gap outcomes but lacks a broad class advantage; no production tuning or claim of a Pro-only Diamond boundary was made. Gate 2 still needs played full-route counterplay and human attempts.
+
 A [played snow-massif pass](../evidence/world-map-c/snow-massif-pass/README.md) replaces the three repeated cones with broader asymmetric rock/snow ridges. The before/after WebKit orbits keep 12/12 real tower taps and 258 draw calls; triangles rise 0.17%, and a no-video host run remains at 60 fps. Recorded-video fps dipped, so physical-phone pacing and fuller reference fidelity remain open.
 
 A [played forest-trail contrast pass](../evidence/world-map-c/forest-trail-contrast/README.md) darkens the woodland ground and narrows its winding pale road. Before/after WebKit orbits keep 12/12 real tower taps, 258 draw calls, 409,034 triangles and the same recorded frame-rate samples. This resolves a local visual mismatch; broader reference fidelity and physical-phone qualification remain open. The [protected preview](../evidence/world-map-c/review-build/README.md) serves exact `c3cde271` assets; the serial suite passes 1,418 tests (2 skipped), with typecheck and lint green.
