@@ -11,7 +11,7 @@ A [second Pro envelope sweep](../evidence/pro-envelope-v2/README.md) verified 94
 
 A [played C-island snow-massif pass](../evidence/world-map-c/snow-massif-pass/README.md) broadens the three snow peaks into asymmetric ridges, keeping 12/12 touch selections and 258 draw calls in headless WebKit. The recorded-video fps dipped while a separate no-video run held 60; phone performance remains open.
 
-A [played C-island forest trail pass](../evidence/world-map-c/forest-trail-contrast/README.md) improves road contrast through woodland with 12/12 WebKit tower taps and unchanged draw calls/triangles. The [protected review preview](../evidence/world-map-c/review-build/README.md) serves exact `c3cde271` assets, and the serial suite passes 1,418 tests (2 skipped), typecheck and lint. Fuller art and physical-phone gates remain.
+A [played C-island forest trail pass](../evidence/world-map-c/forest-trail-contrast/README.md) improves road contrast through woodland with 12/12 WebKit tower taps and unchanged draw calls/triangles. The [protected review preview](../evidence/world-map-c/review-build/README.md) now serves exact `4d744e69` assets including the snow massif; the prior serial suite passes 1,418 tests (2 skipped), typecheck and lint. Fuller art and physical-phone gates remain.
 
 A [played finish-goal pass](../evidence/finish-remaster/state-audit/README.md) shows Pro progress after Gold and Diamond in the compact result heading. Four real App states still pass exact replay, saved payout and action routing; phone readability remains open.
 
