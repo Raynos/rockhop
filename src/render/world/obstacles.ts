@@ -854,19 +854,41 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
     case 'ore-cart': {
       if (!polys.length && !boxes.length) return false;
       const d2Cart = prop === 'ore-cart' && ctx.trackId === 'd2-conveyor';
-      solid(d2Cart ? 'plaque' : 'rustSteel', prop === 'ore-cart' ? 0x9a5430 : 0x5a5c60, (x, y) => 0.8 + 0.2 * Math.sin(x * 2.3 + y * 1.7));
-      for (const x of [x0 + 0.5, x1 - 0.5]) for (const z of [-1.3, 1.3]) push(buckets, d2Cart ? 'plaque' : 'tyre', tintGeo(new THREE.CylinderGeometry(0.35, 0.35, 0.3, 12).rotateX(Math.PI / 2), 0x333333), at(x, profileY(profile, x) + 0.35, z));
+      const a3Truck = prop === 'truck-bed' && ctx.trackId === 'a3-timberline' && po.kind === 'box';
+      solid(d2Cart || a3Truck ? 'plaque' : 'rustSteel', prop === 'ore-cart' ? 0x9a5430 : a3Truck ? 0x655241 : 0x5a5c60, (x, y) => 0.8 + 0.2 * Math.sin(x * 2.3 + y * 1.7));
+      if (!a3Truck) for (const x of [x0 + 0.5, x1 - 0.5]) for (const z of [-1.3, 1.3]) push(buckets, d2Cart ? 'plaque' : 'tyre', tintGeo(new THREE.CylinderGeometry(0.35, 0.35, 0.3, 12).rotateX(Math.PI / 2), 0x333333), at(x, profileY(profile, x) + 0.35, z));
       if (prop === 'truck-bed') {
+        if (a3Truck) {
+          // The eight-metre contact box is the bed floor. Put the chassis and rim on its camera face so a rider
+          // reaching the raised log load sees a logging truck rather than an unbroken rectangular wall.
+          const top = topAt((x0 + x1) / 2);
+          const floor = profileY(profile, (x0 + x1) / 2);
+          const sideZ = face + 0.07;
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(x1 - x0 - 0.3, 0.48, 0.1), 0x935338), at((x0 + x1) / 2, top - 0.34, sideZ));
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(x1 - x0 - 0.2, 0.09, 0.15), 0xd6aa73), at((x0 + x1) / 2, top - 0.07, sideZ + 0.04));
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(x1 - x0 - 0.4, 0.18, 0.2), 0x554334), at((x0 + x1) / 2, floor + 0.4, sideZ + 0.08));
+          for (let x = x0 + 0.55; x < x1 - 0.3; x += 0.85) push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.075, 0.38, 0.13), 0x6a3827), at(x, top - 0.37, sideZ + 0.09));
+          for (const x of [x0 + 1.4, x1 - 1.4]) {
+            push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(0.47, 0.47, 0.22, 16).rotateX(Math.PI / 2), 0x383630), at(x, floor + 0.43, sideZ + 0.24));
+            push(buckets, 'plaque', tintGeo(new THREE.TorusGeometry(0.33, 0.055, 6, 18), 0x967d5e), at(x, floor + 0.43, sideZ + 0.37));
+            push(buckets, 'plaque', tintGeo(new THREE.CylinderGeometry(0.16, 0.16, 0.035, 12).rotateX(Math.PI / 2), 0xd5b482), at(x, floor + 0.43, sideZ + 0.37));
+          }
+        }
         // Bolster stakes along the far side and a log load behind the rider (outside the lane, above the bed).
         for (let x = x0 + 0.4; x < x1; x += 1.6) {
           const t = topAt(x);
           if (!Number.isFinite(t)) continue;
-          push(buckets, 'rustSteel', tintGeo(new THREE.BoxGeometry(0.14, 1.3, 0.14), 0x3a3c40), at(x, t + 0.65, -1.45));
+          push(buckets, a3Truck ? 'plaque' : 'rustSteel', tintGeo(new THREE.BoxGeometry(0.14, 1.3, 0.14), a3Truck ? 0x806044 : 0x3a3c40), at(x, t + 0.65, -1.45));
         }
         for (const [dz, dy] of [[-1.15, 0.28], [-0.72, 0.28], [-0.95, 0.72]] as const) {
           const L = x1 - x0 - 0.2;
           if (L < 0.5) continue;
           push(buckets, 'pallet', tintGeo(new THREE.CylinderGeometry(0.24, 0.24, L, 9).rotateZ(Math.PI / 2), 0x5a4030), at((x0 + x1) / 2, Math.max(topAt(x0 + 0.2), topAt(x1 - 0.2)) + dy, dz));
+        }
+        if (a3Truck) for (const x of [x0 + 1.6, x0 + 4.0, x1 - 1.6]) {
+          // Ratchet straps stay on the far half of the deck, clear of the ridden surface.
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.095, 0.9, 0.055), 0xd5aa67), at(x, topAt(x) + 0.36, -1.16));
+          push(buckets, 'plaque', tintGeo(new THREE.BoxGeometry(0.18, 0.12, 0.08), 0x554334), at(x, topAt(x) - 0.03, -1.17));
         }
       } else {
         if (d2Cart) {

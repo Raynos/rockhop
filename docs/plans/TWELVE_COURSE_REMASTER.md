@@ -97,3 +97,7 @@ The [played D2 excerpts](../evidence/course-remaster/d2/README.md) add a rotatin
 ### 2026-09-29 S1 upper-route finding
 
 The [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows a two-beat Diamond prompt starting 13 m earlier: settle before the bridge lip, then level for its deck. Both pinned lower Rookie and upper Pro finishes remain exact in Node and two browser loads. Whether a new rider understands and chooses the high line remains unmeasured.
+
+### 2026-09-29 A3 truck finding
+
+The [played Timberline window](../evidence/course-remaster/a3/README.md) gives the raised platform a chassis, wheels and strapped load without altering the x253.2–261.2 m collider. The browser/Node capture prefix is exact and the full Node input still finishes clean. The red scenic cab, exit beam, fresh fault/retry understanding and physical-phone pacing remain open.
