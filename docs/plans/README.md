@@ -1,6 +1,6 @@
 # What we are building — the plans and where each stands
 
-**Vercel Build CPU:** [VERCEL_BUILD_CPU.md](VERCEL_BUILD_CPU.md) is in progress for ask 169: replace Rockhop's Vercel-side push builds with GitHub prebuilt uploads while retaining the production checks.
+**Vercel Build CPU:** [VERCEL_BUILD_CPU.md](VERCEL_BUILD_CPU.md) is in progress for ask 169: Rockhop's prebuilt upload is verified; hourly/manual deployments with a live-SHA skip are being rolled out because both old and new uploads hit Vercel's one-minute billing floor.
 
 **Current twelve-course work:** [TWELVE_COURSE_REMASTER.md](TWELVE_COURSE_REMASTER.md) is the active course-by-course gameplay, model and scene execution plan. The last verified runtime build before this documentation round served `9df4d736` at https://playrockhop.vercel.app ([workflow 36532522357](https://github.com/Raynos/rockhop/actions/runs/36532522357)). The 12-course fixed-GO and exact-replay baselines are established, but no level has passed the complete visual, physical-phone and uncoached-player remaster gate. Its first round records the current rides and builds C1 as the quality template; C2/A1/D1/S1 then prove the four biome kits. The older [campaign redesign brief](COURSE_AND_PROGRESSION_REDESIGN.md) records design intent and dated implementation notes, while [FINISH_TO_PUBLISH.md](FINISH_TO_PUBLISH.md) remains the six-gate release authority.
 

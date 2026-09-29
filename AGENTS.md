@@ -9,7 +9,7 @@
 - A recorded input replays to a byte-identical finish time, or the physics is broken.
 - One commit per round; the subject states the finding.
 - Ship gate every third round: cold boot, clear a track, crash, instant restart.
-- A push to `main` is a production deploy (`.github/workflows/deploy.yml`: typecheck, lint, tests, local `vercel build`, then `vercel deploy --prebuilt`). Watch the run and confirm `/version.json` names your SHA; a red run is yours to fix now. Work players must not get yet stays off `main`. No hand `vercel deploy --prod`; `gh workflow run deploy` re-ships HEAD.
+- A push to `main` runs release gates; hourly or manual `.github/workflows/deploy.yml` runs deploy the latest main commit only if `/version.json` names a different SHA. CI builds locally with `vercel build` and uploads with `vercel deploy --prebuilt`. Watch the deploy run and confirm `/version.json` names its SHA; a red run is yours to fix now. Work players must not get yet stays off `main`. No hand `vercel deploy --prod`; `gh workflow run deploy` requests an immediate checked deploy of HEAD.
 - Never announce completion while budget remains.
 - This game should be playable on mobile iOS safari & desktop.
 - Favor subagents over workflows where possible, as subagents are resumable.

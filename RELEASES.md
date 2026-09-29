@@ -18,8 +18,9 @@ alias was retired on 2026-09-28. Pinned release URLs remain available.
 Release media (the trailer, the 15 s cut, the contact sheet, the cut list and the build montage of each pin) is kept
 permanently in `project/releases/<version>/` and served at **https://trials-gauntlet-media.vercel.app/** (`pnpm media:deploy`).
 
-Production itself is continuous: every green push to `main` deploys (`.github/workflows/deploy.yml`, Vercel output built
-in GitHub Actions and uploaded with `--prebuilt`). A pin is still manual: either alias the CI deployment of the tagged commit
+Production deploys hourly when the latest `main` SHA differs from `/version.json`, or on demand with `gh workflow run deploy`
+(`.github/workflows/deploy.yml`, Vercel output built in GitHub Actions and uploaded with `--prebuilt`). Pushes and PRs run
+release gates without deploying. A pin is still manual: either alias the CI deployment of the tagged commit
 (`vercel ls trials-gauntlet-demo`, then `vercel alias set` below), or rebuild it from a clean export. To pin a new one (the v0.2.1 recipe): tag, then `git archive <tag> | tar -x -C <clean dir>`, `pnpm install --frozen-lockfile`,
 `vercel link --yes --project trials-gauntlet-demo` there (never deploy from `dist/` — the Vercel project's preset is Vite, so a
 bare `dist` upload tries to run `vite build` on the server and fails), `VERCEL_GIT_COMMIT_SHA=<sha> vercel build --prod`
