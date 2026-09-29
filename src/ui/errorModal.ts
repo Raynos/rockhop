@@ -23,6 +23,7 @@
 
 import { copyText } from './clipboard';
 import { AUTOMATION_HOOK } from '../core/release';
+import { captureBrowserError } from '../telemetry/browserErrors';
 
 declare const __BUILD_ID__: string | undefined;
 declare const __BUILD_TIME__: string | undefined;
@@ -204,6 +205,7 @@ export function showError(message: string, stack = ''): void {
 /** A thrown value → the screen. For errors a caller caught (main.ts `bootFront`) but that still end the game. */
 export function showThrown(reason: unknown): void {
   const d = describe(reason);
+  captureBrowserError(reason, 'boot');
   showError(d.message, d.stack);
 }
 
@@ -241,6 +243,7 @@ export function installErrorModal(): void {
       e.stopImmediatePropagation();
       if (isNoise({ message: e.message, error: e.error, filename: e.filename }, ctx())) return;
       const d = e.error !== undefined && e.error !== null ? describe(e.error) : { message: e.message || 'Unknown error', stack: '' };
+      captureBrowserError(e.error ?? new Error(e.message || 'Unknown error'), 'window');
       showError(d.message, d.stack || (e.filename ? `at ${e.filename}:${e.lineno}:${e.colno}` : ''));
     },
     true,
@@ -251,6 +254,7 @@ export function installErrorModal(): void {
       e.stopImmediatePropagation();
       const d = describe(e.reason);
       if (isNoise({ message: d.message, error: e.reason }, ctx())) return;
+      captureBrowserError(e.reason, 'rejection');
       showError(`Unhandled rejection · ${d.message}`, d.stack);
     },
     true,
