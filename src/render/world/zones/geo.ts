@@ -778,6 +778,51 @@ export function loggingTruckGeometry(): THREE.BufferGeometry {
   return merge(parts);
 }
 
+/** A3's parked log loader: a glass-sided operator cab and articulated knuckle boom over its own load.
+ * The whole vehicle is scenery at z=-9.5, behind the actual truck-bed and exit contact line. */
+export function loggingLoaderGeometry(): THREE.BufferGeometry {
+  const p: THREE.BufferGeometry[] = [loggingTruckGeometry()];
+  const red = rgb(0xb84329), edge = rgb(0xefad63), glass = rgb(0x203d47);
+  const iron = rgb(0x353b39), piston = rgb(0xc6b6a0), rubber = rgb(0x222727);
+  // Angular near-side cab reads as a real machine even at a 392 px landscape height.
+  p.push(box(2.35, 0.16, 2.7, 5.5, 3.57, 0, red));
+  for (const side of [-1, 1]) {
+    const z = side * 1.285;
+    p.push(box(1.43, 0.88, 0.045, 5.42, 2.77, z, glass));
+    p.push(beam(4.66, 2.22, z + side * 0.04, 4.66, 3.47, z + side * 0.04, 0.08, edge));
+    p.push(beam(6.11, 2.24, z + side * 0.04, 6.28, 3.45, z + side * 0.04, 0.095, edge));
+    p.push(box(1.6, 0.09, 0.09, 5.42, 2.31, z + side * 0.04, edge));
+    p.push(box(0.33, 0.07, 0.07, 5.01, 1.97, z + side * 0.07, piston));
+    p.push(box(2.9, 0.12, 0.18, 5.65, 1.34, z + side * 0.13, iron));
+    p.push(box(0.8, 0.16, 0.12, 6.85, 2.47, z + side * 0.05, iron));
+    p.push(box(0.55, 0.24, 0.08, 7.30, 1.78, z + side * 0.06, edge));
+    p.push(paint(new THREE.TorusGeometry(0.58, 0.065, 5, 14).translate(6.6, 0.52, z + side * 0.04), rubber));
+  }
+  p.push(box(0.14, 0.8, 1.85, 7.76, 1.76, 0, iron));
+  for (const z of [-0.78, 0.78]) p.push(box(0.16, 0.15, 0.18, 7.86, 2.02, z, edge));
+  p.push(cyl(0.12, 0.12, 1.8, 8, 4.45, 3.86, -0.88, iron)); // exhaust stack
+  p.push(cyl(0.2, 0.2, 0.15, 10, 4.45, 4.75, -0.88, piston));
+
+  // The elevated loader boom is parked above its own logs. Two side rails and diagonal rams
+  // make the load path legible; the short hanging grapple never appears as a rideable bridge.
+  for (const z of [-0.75, 0.75]) {
+    p.push(beam(3.75, 2.35, z, 3.75, 3.5, z, 0.3, iron));
+    p.push(beam(3.75, 3.5, z, 0.72, 5.92, z, 0.42, red));
+    p.push(beam(0.72, 5.92, z, -2.65, 5.15, z, 0.36, red));
+    p.push(beam(3.65, 3.04, z, 1.12, 5.45, z, 0.13, piston));
+    p.push(beam(1.32, 5.50, z, -1.45, 5.42, z, 0.1, piston));
+    p.push(cyl(0.27, 0.27, 0.16, 10, 3.75, 3.52, z, iron, 'z'));
+    p.push(cyl(0.24, 0.24, 0.16, 10, 0.72, 5.92, z, iron, 'z'));
+  }
+  p.push(beam(-2.65, 5.15, 0, -3.05, 4.48, 0, 0.14, iron));
+  p.push(box(0.76, 0.23, 1.34, -3.06, 4.37, 0, edge));
+  for (const z of [-0.53, 0.53]) {
+    p.push(beam(-3.34, 4.32, z, -3.44, 3.58, z, 0.14, iron));
+    p.push(beam(-3.44, 3.58, z, -3.10, 3.31, z, 0.13, iron));
+  }
+  return merge(p);
+}
+
 /** Tree stump with a pale ringed top (0.5 m tall, 0.9 m across). */
 export function stumpGeometry(): THREE.BufferGeometry {
   const g = new THREE.CylinderGeometry(0.4, 0.5, 0.55, 9).translate(0, 0.275, 0);

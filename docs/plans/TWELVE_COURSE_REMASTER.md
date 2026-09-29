@@ -117,6 +117,8 @@ The [production CSS comment cut](../evidence/course-remaster/bundle-headroom/REA
 
 The [played Timberline window](../evidence/course-remaster/a3/README.md) gives the raised platform a chassis, wheels and strapped load without altering the x253.2–261.2 m collider. The browser/Node capture prefix is exact and the full Node input still finishes clean. The red scenic cab, exit beam, fresh fault/retry understanding and physical-phone pacing remain open.
 
+The [subsequent A3 loader comparison](../evidence/course-remaster/a3/loader-cab/README.md) turns the scenic red block into a glass-framed cab with an articulated hydraulic boom behind the truck exit. Matched full, beam, loader and fault/retry clips retain exact hashes and camera checks, with no new draw call or collider. The [third-round host gate](../evidence/course-remaster/round-gate-2026-09-29/after-a3/README.md) is 8/11 on SwiftShader, missing three timing rows while clear/crash/restart logic passes. The exit beam material, fresh fault comprehension and phone pacing remain open.
+
 ### 2026-09-29 C1 production-slice review
 
 The [evidence-linked C1 audit](../evidence/course-remaster/c1/VERTICAL_SLICE_AUDIT.md) identifies the brake decision, full-course foreground quality and first-win replay loop as the ordered work. The [current command-strip first-win recording](../evidence/course-remaster/c1/current-map-first-win/README.md) now proves one source's Menu→quick-launch→exact C1 Diamond/+300→earned map medal→Garage→reload path; a second same-medal clear pays no extra Scrap. It closes the integration check, not the uncoached physical-phone first session, audible mix, sustained frame pacing or voluntary replay. Pass 1 remains open.

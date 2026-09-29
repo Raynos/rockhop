@@ -636,7 +636,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const ramps = PB('timberramp', G.timberRampGeometry(), wood);
     const mill = PB('sawmill', G.sawmillGeometry(), wood);
     const wheel = PB('waterwheel', G.waterWheelGeometry(), wood);
-    const truck = PB('loggingtruck', G.loggingTruckGeometry(), painted);
+    const truck = PB('loggingtruck', track.def.id === 'a3-timberline' ? G.loggingLoaderGeometry() : G.loggingTruckGeometry(), painted);
     const cabinGeo = G.merge([G.box(5, 3, 4, 0, 1.5, 0, G.rgb(0x7a5638)), G.box(5.6, 0.2, 2.6, 0, 3.6, 1.1, G.rgb(0x4a4a48), 0, 0, -0.55), G.box(5.6, 0.2, 2.6, 0, 3.6, -1.1, G.rgb(0x4a4a48), 0, 0, 0.55), G.box(1.2, 1.9, 0.1, -1, 0.95, 2.02, G.rgb(0x2a1e14)), G.box(1.0, 0.8, 0.1, 1.2, 1.8, 2.02, G.rgb(0x1a1c1c))]);
     const cabins = PB('cabin', G.ao(cabinGeo, 1.5, 0.35), wood);
 

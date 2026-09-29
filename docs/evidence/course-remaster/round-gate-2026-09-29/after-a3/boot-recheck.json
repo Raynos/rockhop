@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260929-180647-9e49f5",
+  "startedAt": "2026-09-29T23:06:47.959Z",
+  "wallMs": 49704,
+  "git": "0f245151",
+  "srcFingerprint": "840b926e",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "boot"
+  ],
+  "checks": [
+    {
+      "id": "boot.readyP50Ms",
+      "value": 564.8067909999991,
+      "limit": 300,
+      "pass": false,
+      "unit": "ms",
+      "note": "runs 2455/565/464 min 464 loadavg 13.32/18"
+    },
+    {
+      "id": "boot.firstFrameMs",
+      "value": 13913.150000095367,
+      "limit": 4000,
+      "pass": false,
+      "unit": "ms",
+      "note": "ready -> first synced frame; SwiftShader limit; ship target 900ms NOT met (informational on this machine)",
+      "shipLimit": 900,
+      "shipPass": false
+    }
+  ],
+  "failed": 2
+}
