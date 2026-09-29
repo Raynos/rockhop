@@ -662,6 +662,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
   // QUARRY — Q2 (+ Q1 props): cut blocks, ore carts on rails, the terraced pit with its pool, headframe, conveyors.
   // =========================================================================================================
   function buildQuarry(): void {
+    const dustDevil = track.def.id === 'd1-dust-devil';
     const benchGeos = [0, 1].map((i) => G.benchGeometry((track.def.seed ^ (i * 101 + 23)) >>> 0));
     const benches = benchGeos.map((g, i) => PB(`bench${i}`, g, rock));
     const blockGeos = [0, 1, 2].map((i) => G.cutBlockGeometry((track.def.seed ^ (i * 53 + 19)) >>> 0));
@@ -700,6 +701,25 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     const scrub = PB('scrub', G.scrubGeometry(track.def.seed ^ 37), foliage);
     const poles = PB('surveypole', G.surveyPoleGeometry(3), painted);
     const rubble = PB('rubble', rockGeometry(track.def.seed ^ 0x77, 1), rock, false);
+    if (dustDevil) {
+      // Mark the four actual 0.4 m rises, with no parallel decorative platform. Read the
+      // colliders so an authored ledge change cannot leave a misleading step in the scenery.
+      const steps = track.placed.filter((p) => p.kind === 'ledge' && p.pos.x >= 90 && p.pos.x < 120);
+      for (const [i, p] of steps.entries()) {
+        const length = p.params.length;
+        const collider = track.colliders.find((c) => c.id === p.colliderIds[0]);
+        if (typeof length !== 'number' || collider?.kind !== 'polyline' || collider.points.length < 2) continue;
+        const bottom = collider.points[0]!.y;
+        const rise = collider.points[1]!.y - bottom;
+        if (rise <= 0) continue;
+        PB(`d1-terrace-edge-${i}`, G.d1TerraceEdgeGeometry(length, rise, track.def.seed ^ (i * 73 + 19)), painted, false)
+          .add(p.pos.x, bottom, 1.54);
+        if (i === 1 || i === 2) {
+          PB(`d1-terrace-witness-${i}`, G.d1TerraceWitnessGeometry(rise), painted, false)
+            .add(p.pos.x, bottom, -2.5);
+        }
+      }
+    }
     for (let x = x0 + 4; x < x1; x += rng.range(0.9, 2.2)) {
       const side = rng.next() < 0.6 ? -1 : 1;
       const z = side * rng.range(2.75, 3.6);

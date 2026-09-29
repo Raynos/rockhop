@@ -1,0 +1,21 @@
+# D1 Dust Devil: cut-terrace visual trial
+
+2026-09-29. This is a **partial anticipation aid, not a course-remaster pass**. The blind baseline needed 8 attempts; five of seven ended attempts failed at the x≈97–103 terrace rises (`harness/out/metrics/d1-dust-devil.stranger.md`). The terrace skill and fault rate have not been retested with fresh players.
+
+## Played comparison
+
+The [before clip](before-phone.mp4) and [after clip](after-phone.mp4) replay the same Rookie `harness/inputs/d1-dust-devil/bot-3.json`, ticks 800–1150, seed 1, 852×392, 20 fps. The [before](before-sheet.jpg) and [after](after-sheet.jpg) strips sample the moving clips. Both have 59 frames, 2.95 seconds, and the same tick-1152 state hash `28bed8c0e827ed08`. This proves the captured prefix is unchanged; the full 27.058-second finish was not browser-replayed for this art trial. The camera box passed in both captures.
+
+The compiled D1 collider ledges are x=91.4 (0→0.4 m), x=98.4 (0.4→0.8 m), x=104.4 (0.8→1.2 m), and x=110.4 (1.2→1.6 m). The final candidate puts slim dark faces below all four real lips and two sculpted quarry witnesses at the repeated faulting cuts x=98.4 and 104.4 m, z=−2.5 m. Their low returns stop short of the z=−1.5 m riding ribbon. The markers read several metres before contact and do not cover the rider or tyres. They look somewhat like yellow-arrow signposts, and **the actual rock rise remains pale and only a few phone pixels high**. The bright photo plate and broad pale masonry still dominate the frame. This is useful anticipation but does not close the visual or attempts-to-clear bar. A later round needs a larger authored cut/lighting composition at tyre scale, camera anticipation, and an uncoached rider test.
+
+A [combined played clip](cue-and-witness.mp4) and [contact sheet](cue-and-witness-sheet.jpg) add a short **LIFT BEFORE THE CUT / LEVEL FOR THE NEXT STEP** prompt at x76–97 to the final witnesses. The prompt appears before x98.4, exits before the first impact, and stays in a fixed HUD slot. The 76 frames at 852×392 cover ticks 700–1152 and end on the same `28bed8c0e827ed08` state hash as the visual comparison. The [capture report](cue-and-witness-capture.json) has zero riding camera-box and roll violations. A focused HUD test checks the cue boundaries and track switch. No fresh player has yet shown that the prompt lowers the 8-attempt blind baseline.
+
+Four discarded played iterations are retained for diagnosis: [v1](rejected-v1-phone.mp4) added a broad pale parallel shelf that falsely suggested a rideable surface; [v2](rejected-v2-phone.mp4) narrowed the face but skipped random props, changing the seeded headframe placement; [v3](rejected-v3-phone.mp4) restored the seeded layout and darkened the true lip, but remained too subtle; [v4](rejected-v4-phone.mp4) painted the actual upper tread and side wall, but looked like an applied flat strip. The final candidate restores the original background prop sequence and leaves the rideable top unpainted.
+
+## Build and cost
+
+The final capture was built in the shared checkout as other agents completed unrelated UI/obstacle edits; the D1 source was frozen at `geo.ts` SHA-256 `f3e116a6762141bca4b5623bd48359fc9db0b95ad06cd705073759c60ea17314` and `zoneKit.ts` SHA-256 `a2b9c343909aaf2b2a9ea64401004ecec04d38572c0f3bb8943c00297051b9b1`. The [before](before-capture.json) and [after](after-capture.json) capture reports record the replay and encoded media. `pnpm typecheck`, focused `oxlint`, and `git diff --check` passed. No collider or physics source changed.
+
+The [before](before-perf.json) and [after](after-perf.json) probes sample 33 rendered moving frames after warm-up on Chromium SwiftShader at 852×393, low quality. CPU render submission median was 0.645→0.645 ms; p95 0.860→0.815 ms. Synchronized software-frame median was 109.535→109.440 ms; p95 233.705→231.405 ms. At tick 970 (x≈102.8 m), draw calls 115→118 and triangles 166,793→167,353 (+560); texture estimate stayed 28.95 MiB. SwiftShader pacing noise is much larger than this change, and these numbers do not establish iPhone GPU performance.
+
+The [third-round host Metal gate](ship-gate-partial.json) passed 11/11 cold boot, flat clear, crash and instant restart checks with the D1 cue, witnesses and current shared course source present. It is a partial smoke gate, not a release verdict.

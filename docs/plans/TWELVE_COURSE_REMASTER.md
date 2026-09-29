@@ -81,3 +81,7 @@ The [played Pier 2 fault/retry clip](../evidence/course-remaster/c2/README.md) p
 ### 2026-09-29 A2 and S3 findings
 
 The [A2 pivot pass](../evidence/course-remaster/a2/README.md) models the moving timber's axle, cribbing and cut faces without changing its collider. The played window retains its exact state hash; fresh faults and physical-phone pacing are open. The [S3 full ride](../evidence/course-remaster/s3/README.md) displays a first-shelf cue before the opening crevasse and starts the optional Diamond route cue earlier. Rookie and Pro finishes remain exact in Node and two browser runs. The [D1/S1/S3 fault diagnosis](../evidence/course-remaster/DIAGNOSIS.md) records the current evidence behind these cue choices; uncoached comprehension and full visual remaster remain open.
+
+### 2026-09-29 D1 anticipation finding
+
+The [played D1 approach](../evidence/course-remaster/d1/README.md) couples a short lift/level prompt with two physical witnesses at the actual x98.4 and x104.4 ledges, where five of seven blind attempts failed. The replay prefix hash is unchanged and the markers do not enter the riding ribbon. The rise itself remains too subtle against the pale quarry scene; this is an anticipation aid, not course or art sign-off. Fresh uncoached attempts and a broader contact-scale rock redesign remain necessary.

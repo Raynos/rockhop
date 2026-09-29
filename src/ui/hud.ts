@@ -74,6 +74,7 @@ export class DomHud implements Hud {
   private skillCueVisible = false;
   private c2CuePhase: 'pier' | 'crane' | null = null;
   private s3OpeningCueOn = false;
+  private d1TerraceCueOn = false;
   private routeCue: DiamondRouteCue | null = null;
   private faultCue: FaultCue | null = null;
   private faultCuePending = false;
@@ -283,6 +284,7 @@ export class DomHud implements Hud {
     this.track = track;
     this.c2CuePhase = null;
     this.s3OpeningCueOn = false;
+    this.d1TerraceCueOn = false;
     this.clearFaultCue();
     this.setSkillCueVisible(false);
     this.routeCue = diamondRouteCue(track);
@@ -459,8 +461,18 @@ export class DomHud implements Hud {
         this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">◇</span><span class="skill-cue-copy"><strong>${escapeHtml(this.routeCue.title)}</strong><small>${escapeHtml(this.routeCue.action)}</small></span>`;
       }
     }
+    // The two quarry rises that account for most blind D1 faults need a decision
+    // before the first contact, while both are still visible in the approach.
+    const d1Terraces = t.id === 'd1-dust-devil' && x >= 76 && x < 97;
+    if (d1Terraces !== this.d1TerraceCueOn) {
+      this.d1TerraceCueOn = d1Terraces;
+      if (d1Terraces) {
+        this.skillCueEl.setAttribute('aria-label', 'Quarry steps. Lift before the first cut, then level the bike for the next step.');
+        this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↗</span><span class="skill-cue-copy"><strong>LIFT BEFORE THE CUT</strong><small>LEVEL FOR THE NEXT STEP</small></span>';
+      }
+    }
     const highLine = this.routeCue !== null && x >= this.routeCue.x0 && x < this.routeCue.x1;
-    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || s3Opening || highLine)));
+    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || s3Opening || d1Terraces || highLine)));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);

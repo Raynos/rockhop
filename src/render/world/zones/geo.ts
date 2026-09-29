@@ -739,6 +739,40 @@ export function benchGeometry(seed = 23): THREE.BufferGeometry {
   return g;
 }
 
+/** D1's real 0.4 m step, with a dark cut face and a lip below its collider top. */
+export function d1TerraceEdgeGeometry(length: number, rise: number, seed: number): THREE.BufferGeometry {
+  const rnd = lcg(seed);
+  const parts: THREE.BufferGeometry[] = [];
+  parts.push(box(0.72, rise - 0.018, 0.12, 0.36, rise / 2, 0, rgb(0x41362d)));
+  parts.push(box(0.74, 0.075, 0.14, 0.37, rise - 0.047, 0.015, rgb(0x9b572e)));
+  parts.push(box(length - 0.1, 0.062, 0.11, length / 2, rise - 0.041, 0.045, rgb(0x59483a)));
+  // Irregular drill kerfs sit below the lip, with no geometry above the rideable plane.
+  for (let x = 0.85; x < length - 0.25; x += 1.45 + rnd() * 0.35) {
+    parts.push(box(0.055, 0.11, 0.095, x, rise - 0.09, 0.05, rgb(0x352c28)));
+  }
+  return merge(parts);
+}
+
+/** Quarry cut witness: a surveyed rock/steel marker outside the D1 riding ribbon. */
+export function d1TerraceWitnessGeometry(rise: number): THREE.BufferGeometry {
+  const stone = rgb(0x5b4a3b), deepStone = rgb(0x332f2b);
+  const iron = rgb(0x263538), rust = rgb(0xa3532d), amber = rgb(0xf1b65f);
+  const parts: THREE.BufferGeometry[] = [];
+  // A low return joins the marker to the real riser at the far road edge. Both
+  // stay beyond z=-1.5; the marker never creates a parallel riding surface.
+  parts.push(box(0.32, rise - 0.02, 0.95, 0.02, rise / 2, 0.43, deepStone));
+  parts.push(box(0.85, 0.3, 0.78, 0, 0.12, -0.13, stone));
+  parts.push(cyl(0.23, 0.38, 1.82, 4, 0, 1.05, -0.13, deepStone));
+  parts.push(box(0.62, 0.18, 0.6, 0, 1.95, -0.13, rust));
+  // Broad iron placard and a painted upward chevron read before the tyre reaches
+  // the 0.4 m cut; they are physical model faces, not screen-space UI.
+  parts.push(box(0.7, 0.61, 0.06, 0, 1.35, 0.23, iron));
+  parts.push(box(0.12, 0.45, 0.025, -0.16, 1.35, 0.28, amber, -0.7));
+  parts.push(box(0.12, 0.45, 0.025, 0.16, 1.35, 0.28, amber, 0.7));
+  for (const y of [0.42, 0.67]) parts.push(box(0.56, 0.045, 0.065, 0, y, 0.29, rust));
+  return merge(parts);
+}
+
 /** Mine headframe (Q2): an A-frame lattice tower with sheave wheels on top and a hoist house at its foot; ~17 m. */
 export function headframeGeometry(): THREE.BufferGeometry {
   const rust = rgb(0x8a4e2e);
