@@ -1,9 +1,9 @@
-# Continuous deployment: every push to main that passes the gates ships prebuilt output to Vercel
-# (https://playrockhop.vercel.app). Pull requests run the same gates and deploy nothing.
+# Pushes and pull requests run release gates. Hourly or manual runs ship the latest green main
+# commit to https://playrockhop.vercel.app only when that SHA is not already live.
 # Ported from project-wildshard-singleplayer (ask 84). Pins (v0.x aliases) stay manual: RELEASES.md.
 #
 # Secrets: VERCEL_BUILD_TOKEN (team-scoped CLI token), VERCEL_ORG_ID (team id), VERCEL_PROJECT_ID.
-# Until VERCEL_BUILD_TOKEN exists the gates still run and the job stays green with a warning.
+# Until VERCEL_BUILD_TOKEN exists the gates still run and scheduled deploys warn.
 name: deploy
 
 on:
@@ -11,7 +11,9 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch: # re-deploy HEAD by hand: gh workflow run deploy
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch: # deploy HEAD on demand: gh workflow run deploy
 
 concurrency:
   group: deploy-${{ github.ref }}
@@ -20,7 +22,7 @@ concurrency:
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  DEPLOY: ${{ github.event_name != 'pull_request' && secrets.VERCEL_BUILD_TOKEN != '' }}
+  DEPLOY: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && secrets.VERCEL_BUILD_TOKEN != '' }}
   PROD_URL: https://playrockhop.vercel.app
 
 jobs:
@@ -43,21 +45,40 @@ jobs:
             !/project/releases/
           sparse-checkout-cone-mode: false
 
+      - name: Skip if this commit is already live
+        id: live
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          live=$(curl -fsS "$PROD_URL/version.json?t=$(date +%s)" || true)
+          live_sha=$(printf '%s' "$live" | jq -r '.sha // empty' 2>/dev/null || true)
+          if [ "$live_sha" = "$GITHUB_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+            echo "Already live: $GITHUB_SHA"
+          else
+            echo "current=false" >> "$GITHUB_OUTPUT"
+            echo "Latest main $GITHUB_SHA is not live (current: ${live_sha:-unavailable})"
+          fi
+
       - uses: pnpm/action-setup@v4 # version from package.json packageManager
+        if: steps.live.outputs.current != 'true'
 
       - uses: actions/setup-node@v4
+        if: steps.live.outputs.current != 'true'
         with:
           node-version: 24
           cache: pnpm
 
       - name: Install
+        if: steps.live.outputs.current != 'true'
         run: pnpm install --frozen-lockfile
 
       # ---- gates: a red step here means no deploy -----------------------------------------------
       - name: Typecheck (app + harness)
+        if: steps.live.outputs.current != 'true'
         run: pnpm run typecheck
 
       - name: Lint
+        if: steps.live.outputs.current != 'true'
         run: pnpm run lint
 
       # Everything except the wall-clock budgets (µs/tick, synth CPU per frame): a shared runner reads them
@@ -65,11 +86,12 @@ jobs:
       # here. `ffmpeg resolution` checks the local capture toolchain, which the runner does not have. The
       # runner is also slower, hence the longer per-test timeout.
       - name: Unit tests
+        if: steps.live.outputs.current != 'true'
         run: pnpm exec vitest run --testTimeout=30000 -t '^(?!.*(s/tick|of CPU|ffmpeg resolution)).*$'
 
-      # Pushes get their web build from `vercel build` below; PRs still need this gate.
-      - name: Web build (PR or missing deploy token)
-        if: github.event_name == 'pull_request' || env.DEPLOY != 'true'
+      # Pushes and PRs need a web gate; scheduled/manual deploys get it from `vercel build`.
+      - name: Web build (push or PR)
+        if: steps.live.outputs.current != 'true' && env.DEPLOY != 'true'
         run: pnpm run build
 
       # Store release bar 1 (docs/plans/STORE_RELEASE.md P0.4): the store bundle's denylist hits = 0, blocking
@@ -77,6 +99,7 @@ jobs:
       # web output below is a separate Vercel artifact, so this dist/ is never shipped. The report
       # reaches the summary before the exit status does (no `| tee`: without pipefail it would swallow the failure).
       - name: IP audit (store build, strict)
+        if: steps.live.outputs.current != 'true'
         run: |
           pnpm run build:store
           set +e
@@ -87,15 +110,15 @@ jobs:
           { echo '### IP audit (store build)'; echo '```'; head -40 ip-audit.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           exit $status
 
-      # ---- deploy (main only) ------------------------------------------------------------------
+      # ---- deploy (hourly or manual; latest main only) -----------------------------------------
       - name: No token, no deploy
-        if: github.event_name != 'pull_request' && env.DEPLOY != 'true'
+        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && env.DEPLOY != 'true'
         run: echo "::warning::VERCEL_BUILD_TOKEN secret is not set — gates passed but nothing was deployed"
 
       # A team-scoped token supports the account lookup used by pull/build/deploy. Build here,
       # then upload the artifact without a second Vercel-side Vite build.
       - name: Build Vercel output in GitHub Actions
-        if: env.DEPLOY == 'true'
+        if: env.DEPLOY == 'true' && steps.live.outputs.current != 'true'
         env:
           VERCEL_BUILD_TOKEN: ${{ secrets.VERCEL_BUILD_TOKEN }}
           VERCEL_GIT_COMMIT_SHA: ${{ github.sha }}
@@ -112,7 +135,7 @@ jobs:
           python3 scripts/vercel-deref-func.py .vercel/output/functions/api/inbox.func
 
       - name: Deploy prebuilt output
-        if: env.DEPLOY == 'true'
+        if: env.DEPLOY == 'true' && steps.live.outputs.current != 'true'
         env:
           VERCEL_BUILD_TOKEN: ${{ secrets.VERCEL_BUILD_TOKEN }}
         run: |
@@ -122,20 +145,21 @@ jobs:
 
       # The deploy command returns once the deployment is ready; prove production now serves this commit.
       - name: Production serves this commit
-        if: env.DEPLOY == 'true'
+        if: env.DEPLOY == 'true' && steps.live.outputs.current != 'true'
         run: |
-          sha=$(echo "${{ github.sha }}" | cut -c1-7)
           for i in $(seq 1 30); do
             live=$(curl -fsS "$PROD_URL/version.json?t=$(date +%s)" || true)
-            case "$live" in *"$sha"*) echo "live: $live"; exit 0;; esac
+            live_sha=$(printf '%s' "$live" | jq -r '.sha // empty' 2>/dev/null || true)
+            if [ "$live_sha" = "$GITHUB_SHA" ]; then echo "live: $live"; exit 0; fi
             sleep 10
           done
-          echo "::error::$PROD_URL/version.json does not report $sha after 5 min: $live"
+          echo "::error::$PROD_URL/version.json does not report $GITHUB_SHA after 5 min: $live"
           exit 1
 
   # Store release (docs/plans/STORE_RELEASE.md Phase 5-6): the App Store / Google Play bundle and both native shells.
   # Its own job, in parallel: the web deploy above never waits for it, and a red store job never blocks a deploy.
   store:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
