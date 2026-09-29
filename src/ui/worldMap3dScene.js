@@ -241,15 +241,17 @@ const waterMaterial=new THREE.ShaderMaterial({uniforms:waterUniforms,transparent
    float backB=.23*exp(-pow((unscaledX-5.1)/3.3,2.)-pow((p.y+8.1)/2.2,2.));
    float backHead=.13*exp(-pow((unscaledX+3.8)/2.2,2.)-pow((p.y+8.8)/2.5,2.));
    r+=front*(coveA+coveB+coveC-headA-headB)+rear*(backA+backB-backHead);
-   float shallow=1.-smoothstep(.93,1.18,r);
-   vec3 deep=vec3(.009,.115,.162),cove=vec3(.036,.295,.345);
-   vec3 color=mix(deep,cove,shallow*.67+.17*n);
+   // Keep open water in the same blue-green family as the shore. The old
+   // near-black deep-water value made a hard, rectangular-looking patch when
+   // the broad sea was viewed obliquely against the lighter sky horizon.
+   float shallow=1.-smoothstep(.91,1.43,r);
+   vec3 deep=vec3(.024,.195,.250),cove=vec3(.046,.295,.340);
+   vec3 color=mix(deep,cove,shallow*.63+.10*n);
    float ripples=valueNoise(vec2(p.x*2.4+p.y*.35+time*.26,p.y*1.8-time*.18));
-   float shortCrest=smoothstep(.76,.9,ripples)*(.025+.085*n2);
+   float shortCrest=smoothstep(.78,.92,ripples)*(.020+.071*n2);
    float foamBand=1.-smoothstep(.025,.145,abs(r-1.01));
    float foam=foamBand*step(.49,n+.17*n2+.12*sin(p.x*5.+time*.7))*.58;
-   float sparkle=pow(max(0.,sin(p.x*3.2+p.y*1.5+time*.4)),56.)*.045*n2;
-   color+=vec3(shortCrest+sparkle)*vec3(.38,.74,.77);
+   color+=vec3(shortCrest)*vec3(.38,.74,.77);
    color=mix(color,vec3(.70,.84,.83),foam);
    float cameraDistance=length(vWorld.xz-cameraPosition.xz);
    float horizonAlpha=1.-smoothstep(43.,72.,cameraDistance);

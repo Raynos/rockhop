@@ -68,6 +68,8 @@ A [played forest-trail contrast pass](../evidence/world-map-c/forest-trail-contr
 
 A [water-plane probe](../evidence/world-map-c/water-plane-probe/README.md) cut 12,798 triangles in a played C-map orbit but did not remove the regular water lines or dark patch, and headless SwiftShader stayed at about 5–6 fps. Both before/after passes kept 12/12 tower taps. The candidate was rejected for Gate 3 art fidelity and its source change reverted; the normal painted selector remains in place.
 
+The follow-up [water shader pass](../evidence/world-map-c/water-patch-fix/README.md) traced the dark patch to the near-black deep-water gradient and the straight glints to a repeated sine highlight. A matched played WebKit orbit now shows a continuous teal sea with quieter glints, 12/12 tower taps and zero page errors. Draw calls/triangles remain 256/412,634, and matched no-video host Metal stays at 60 fps with 8.3 ms median and 10.0 ms oblique p95. Physical iPhone art/pacing and the wider map quality bar remain open; the map is still opt-in.
+
 A [stable-hero pass](../evidence/menu-loader-audit/stable-hero/README.md) removes the menu key art's 28-second scale loop. Two normal-motion WebKit captures of the loaded hero are byte-identical 2.5 seconds apart, with no CSS transform. The physical iPhone loading-strip report and warm-start measurement remain open.
 
 The [beard source audit](../evidence/hero-art/delivery/provenance/beard-rights-audit/README.md) found conflicting licence notices in the previously shipped street-rider facial hair. All six current runtime exports now omit those meshes/textures, and the strict store audit rejects their reintroduction. The rest of the content-rights declaration and final signed-payload check remain part of Gate 5.

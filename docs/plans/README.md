@@ -45,6 +45,8 @@ The [current S1 played HUD clip](../evidence/s1-lift-bridge/s1-pro-bridge-cue.mp
 
 A [C-map water-plane probe](../evidence/world-map-c/water-plane-probe/README.md) kept 12/12 taps and removed 12,798 triangles, but the visual defect survived and software orbit stayed at 5–6 fps. Its source edit was rejected and reverted; reference-level map art and physical-phone pacing remain Gate 3 blockers.
 
+The accepted [C-map water shader pass](../evidence/world-map-c/water-patch-fix/README.md) fixes the navy patch and repeated straight glints in a played orbit. It keeps 12/12 taps, 256 calls and 412,634 triangles; matched no-video host Metal stays at 60 fps / 8.3 ms median. Physical landscape iPhone judgment and broader reference fidelity remain open.
+
 The [post-preview four-section gate](../evidence/round-gate-2026-09-28/README.md) on `5d47e301` passes 11/11 Mac Metal and 9/11 SwiftShader with exact finish/crash/restart. Software first/restart frame timing and physical phones remain open; this is not a ship verdict.
 
 The [post-S1 four-section gate](../evidence/round-gate-2026-09-28/README.md) on `95fac983` passes 11/11 host Metal and 9/11 SwiftShader with current-stamp input and exact clear/crash/restart. The two software frame misses and physical-phone release gates remain open.
