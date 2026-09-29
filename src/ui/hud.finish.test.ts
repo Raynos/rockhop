@@ -30,7 +30,7 @@ describe('production finish report', () => {
     expect(copy(hud, '.time')).toBe('0:30.350');
     expect(copy(hud, '.tk-reward')).toBe('+300');
     expect(copy(hud, '.fr-wallet')).toBe('300');
-    expect(copy(hud, '.fr-goal')).toContain('500 Scrap until the Pro bike');
+    expect(copy(hud, '.fr-goal-title')).toBe('YOUR NEXT LINE · 500 TO PRO');
   });
 
   it('distinguishes a faster PB, a career medal upgrade and a no-gain clear', () => {
@@ -39,6 +39,7 @@ describe('production finish report', () => {
     hud.setScrapReward(0, 520, false, 800, 'gold');
     expect(copy(hud, '.fr-tag')).toBe('NEW PERSONAL BEST');
     expect(copy(hud, '.pb')).toBe('−0:01.600');
+    expect(copy(hud, '.fr-goal-title')).toBe('NEXT MEDAL: DIAMOND · 280 TO PRO');
 
     hud.showResults({ ...first, previousBest: 31, time: 31.2, personalBest: false });
     hud.setScrapReward(140, 660, false, 800, 'silver');
@@ -52,6 +53,9 @@ describe('production finish report', () => {
     expect(copy(hud, '.fr-headline')).toBe('ONE MORE RUN?');
     expect(copy(hud, '.tk-reward')).toBe('No new Scrap');
     expect(copy(hud, '.pb')).toBe('0:39.000');
+    expect(copy(hud, '.fr-goal-title')).toBe('NEXT MEDAL: DIAMOND · 140 TO PRO');
+    hud.setScrapReward(0, 800, false, 800, 'gold');
+    expect(copy(hud, '.fr-goal-title')).toBe('NEXT MEDAL: DIAMOND · BUY PRO');
   });
 
   it('keeps all four real destinations and gates selection until reveal stage 3', () => {

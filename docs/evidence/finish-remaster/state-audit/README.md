@@ -18,3 +18,7 @@ The first automation attempt inherited a paused Playwright clock into its next p
 ## Label readability pass
 
 On the qualification branch after `237a9196`, the result tag, Scrap labels and button subtitles were raised to **10 CSS pixels**. The four production App clips above were replayed and replaced from the current-stamp C1 recording; all four exact results, payouts, reload state and tapped destinations passed again. The [Diamond frame](label-polish.png) shows the larger labels without clipping at 852×393. Physical-phone readability remains to be judged by a player.
+
+## Earned Pro goal on every result
+
+The finish report previously mentioned remaining Scrap only after Diamond, leaving the bike goal invisible after Bronze, Silver and Gold. The report now adds compact progress to its existing goal heading on every campaign finish. [Played first Gold](pro-goal-first-gold.png) shows `NEXT MEDAL: DIAMOND · 580 TO PRO` beside the real +220 payout; [played Diamond upgrade](pro-goal-diamond.png) shows `YOUR NEXT LINE · 500 TO PRO` beside the real +80 improvement and 300 wallet. Both are frames extracted from the four authentic clips above. The heading leaves the technique sentence beneath it readable without adding another row to the 852×393 layout. The four-state App replay passed exact physics hashes, saved wallet values, no duplicate payout and all four pointer destinations again. The focused HUD test covers Gold progress, no-gain progress and the `BUY PRO` state at the 800-Scrap threshold. Physical-phone reading remains open.

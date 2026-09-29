@@ -612,8 +612,11 @@ export class DomHud implements Hud {
       this.resEyebrow.textContent = `${MEDAL_NAME[previousMedal].toUpperCase()} → ${MEDAL_NAME[this.lastResult.medal].toUpperCase()}`;
       this.resHeadline.textContent = 'THE CLEAN LINE PAID OFF';
     }
-    if (!proOwned && this.lastResult?.medal === 'platinum') {
-      this.resGoal.textContent += ` ${Math.max(0, price - wallet)} Scrap until the Pro bike.`;
+    if (!proOwned && this.lastResult) {
+      const next = medalHints(this.lastResult).next;
+      const base = next ? `NEXT MEDAL: ${MEDAL_NAME[next].toUpperCase()}` : 'YOUR NEXT LINE';
+      const remaining = Math.max(0, price - wallet);
+      (this.results.querySelector('.fr-goal-title') as HTMLElement).textContent = `${base} · ${remaining ? `${remaining} TO PRO` : 'BUY PRO'}`;
     }
   }
 
