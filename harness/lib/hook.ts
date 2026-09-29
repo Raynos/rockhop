@@ -158,11 +158,12 @@ export class HookClient {
   }
 
   /** Run a whole recording in one round trip, on the bike class its header names (`__trialsRunAs`). */
-  runRecording(json: string): Promise<{ state: PhysicsState; hash: string; wallMs: number }> {
+  runRecording(json: string): Promise<{ state: PhysicsState; hash: string; runTime: number; faults: number; wallMs: number }> {
     return this.page.evaluate((j) => {
       const t0 = performance.now();
       const state = (window.__trialsRunAs ?? window.__rockhop!.runRecording)(j);
-      return { state, hash: window.__rockhop!.hashState(), wallMs: performance.now() - t0 };
+      const hook = window.__rockhop!;
+      return { state, hash: hook.hashState(), runTime: hook.runTime(), faults: hook.faults(), wallMs: performance.now() - t0 };
     }, json);
   }
 }

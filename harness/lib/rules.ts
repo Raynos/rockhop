@@ -101,7 +101,6 @@ export class RunRules {
 
   private emit(e: GameEvent): void {
     if (e.type === 'fault') this.c.faults++;
-    if (e.type === 'restart' && e.checkpoint < 0) this.c.faults = 0;
     this.pending.push(e);
   }
 
