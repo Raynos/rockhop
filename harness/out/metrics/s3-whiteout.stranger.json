@@ -1,0 +1,118 @@
+{
+  "schema": 2,
+  "kind": "stranger-metrics",
+  "trackId": "s3-whiteout",
+  "attemptsBand": [
+    8,
+    16
+  ],
+  "physics": "bikePhysicsFactory-v2",
+  "srcFingerprint": "a415fcb8",
+  "updatedAt": "2026-09-29T06:21:04.089Z",
+  "includeStale": false,
+  "sessions": [
+    {
+      "sessionId": "s3-whiteout-20260929-011719",
+      "agent": "s3-stranger",
+      "bike": "pro",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 3,
+      "cleared": true,
+      "finishTime": 48.075,
+      "calls": 38,
+      "wallMs": 224394,
+      "firstCheckpointCalls": 3,
+      "faultsByCheckpoint": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bestAttempt": {
+        "n": 3,
+        "cleared": true,
+        "x": 425.1,
+        "startTick": 4138,
+        "endTick": 6116,
+        "recordingFile": "harness/inputs/s3-whiteout/stranger-s3-whiteout-20260929-011719.json"
+      },
+      "recordingFile": "harness/inputs/s3-whiteout/stranger-s3-whiteout-20260929-011719.json",
+      "deaths": [
+        {
+          "n": 1,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 55.752,
+          "checkpoint": 0,
+          "obstacle": "gap @ 56.8 m",
+          "calls": 5
+        },
+        {
+          "n": 2,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 343.669,
+          "checkpoint": 3,
+          "obstacle": "ramp @ 345.1 m",
+          "calls": 27
+        }
+      ]
+    }
+  ],
+  "bike": "pro",
+  "completed": 1,
+  "clearedCount": 1,
+  "medianAttempts": 3,
+  "medianFinishTime": 48.075,
+  "medianCalls": 38,
+  "medianWallMs": 224394,
+  "census": {
+    "n": 1,
+    "minSessions": 2,
+    "censored": [],
+    "staleExcluded": 0,
+    "otherBikeExcluded": 0
+  },
+  "asserted": {
+    "band": [
+      8,
+      16
+    ],
+    "factor": 1.5,
+    "limit": 24
+  },
+  "verdict": "INSUFFICIENT",
+  "pass": null,
+  "deaths": {
+    "total": 2,
+    "byReason": {
+      "crash": 2
+    },
+    "byObstacle": [
+      {
+        "obstacle": "gap @ 56.8 m",
+        "count": 1,
+        "xs": [
+          55.8
+        ]
+      },
+      {
+        "obstacle": "ramp @ 345.1 m",
+        "count": 1,
+        "xs": [
+          343.7
+        ]
+      }
+    ],
+    "byCheckpoint": [
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  }
+}

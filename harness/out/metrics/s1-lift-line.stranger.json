@@ -1,0 +1,82 @@
+{
+  "schema": 2,
+  "kind": "stranger-metrics",
+  "trackId": "s1-lift-line",
+  "attemptsBand": [
+    5,
+    10
+  ],
+  "physics": "bikePhysicsFactory-v2",
+  "srcFingerprint": "a415fcb8",
+  "updatedAt": "2026-09-29T06:11:42.690Z",
+  "includeStale": false,
+  "sessions": [
+    {
+      "sessionId": "s1-lift-line-20260929-010918",
+      "agent": "codex-s1-stranger",
+      "bike": "pro",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 1,
+      "cleared": true,
+      "finishTime": 37.2667,
+      "calls": 28,
+      "wallMs": 144137,
+      "firstCheckpointCalls": 3,
+      "faultsByCheckpoint": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bestAttempt": {
+        "n": 1,
+        "cleared": true,
+        "x": 455.827,
+        "startTick": 0,
+        "endTick": 4829,
+        "recordingFile": "harness/inputs/s1-lift-line/stranger-s1-lift-line-20260929-010918.json"
+      },
+      "recordingFile": "harness/inputs/s1-lift-line/stranger-s1-lift-line-20260929-010918.json",
+      "deaths": []
+    }
+  ],
+  "bike": "pro",
+  "completed": 1,
+  "clearedCount": 1,
+  "medianAttempts": 1,
+  "medianFinishTime": 37.2667,
+  "medianCalls": 28,
+  "medianWallMs": 144137,
+  "census": {
+    "n": 1,
+    "minSessions": 2,
+    "censored": [],
+    "staleExcluded": 0,
+    "otherBikeExcluded": 0
+  },
+  "asserted": {
+    "band": [
+      5,
+      10
+    ],
+    "factor": 1.5,
+    "limit": 15
+  },
+  "verdict": "INSUFFICIENT",
+  "pass": null,
+  "deaths": {
+    "total": 0,
+    "byReason": {},
+    "byObstacle": [],
+    "byCheckpoint": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

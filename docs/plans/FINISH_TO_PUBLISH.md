@@ -21,6 +21,8 @@ One complete, landscape-only game on **iOS and Android together**: the 12 main c
 
 ## Gate status
 
+The [29 September blind twelve-course baseline](../evidence/stranger-2026-09-29/README.md) cleared all twelve courses in 15 briefed CLI sessions. All 15 recorded runs matched Node and two browser loads on result clock, faults and state hash. D1 and D3 took the most attempts, while C2's second rider found a potentially misleading Pier 2 cue. These sessions precede the map-source cleanup; they do not satisfy the two-player current-source median or uncoached physical-phone exit bars. The new harness default now rides the owned Rookie on every campaign course, with earned Pro audited separately. A subsequent four-section host Metal gate passed 11/11; SwiftShader missed its two rendered-frame timing limits.
+
 | Gate | Status | Current proof / next missing proof |
 | --- | --- | --- |
 | 1. C1 slice | **in progress** | C1 braking and finish have exact replay; delayed-input bot cleared in 1–3 attempts. Played deck/causeway faults now teach a location-specific correction through the one-second checkpoint respawn; manual retry responds on the next simulation tick. The accepted result layout uses real medal, PB and Scrap data, with a played rider close shot and pointer-tested Replay, Retry, Next and Map actions. A [continuous headless App clip](../evidence/finish-remaster/README.md) reaches Menu→Map→C1→real Diamond/+300 Scrap→Map→Garage on one page with exact physics. A [played in-world BRAKE board](../evidence/c1-quality-next/README.md) now cues the first pallet ramp in motion; exact Rookie/Pro clears and 0/6 held-GO attempts remain. Fresh phone players, real-time pacing, richer coast art/sound and physical touch remain. |

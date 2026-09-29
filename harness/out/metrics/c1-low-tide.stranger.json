@@ -4,13 +4,73 @@
   "trackId": "c1-low-tide",
   "attemptsBand": [
     1,
-    1
+    2
   ],
   "physics": "bikePhysicsFactory-v2",
-  "srcFingerprint": "da1d4b3e",
-  "updatedAt": "2026-09-23T00:48:09.449Z",
+  "srcFingerprint": "a415fcb8",
+  "updatedAt": "2026-09-29T05:51:12.372Z",
   "includeStale": false,
   "sessions": [
+    {
+      "sessionId": "c1-low-tide-20260929-004845",
+      "agent": "codex-c1-stranger",
+      "bike": "rookie",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 1,
+      "cleared": true,
+      "finishTime": 31.475,
+      "calls": 13,
+      "wallMs": 48445,
+      "firstCheckpointCalls": 3,
+      "faultsByCheckpoint": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bestAttempt": {
+        "n": 1,
+        "cleared": true,
+        "x": 435.127,
+        "startTick": 0,
+        "endTick": 4137,
+        "recordingFile": "harness/inputs/c1-low-tide/stranger-c1-low-tide-20260929-004845.json"
+      },
+      "recordingFile": "harness/inputs/c1-low-tide/stranger-c1-low-tide-20260929-004845.json",
+      "deaths": []
+    },
+    {
+      "sessionId": "c1-low-tide-20260929-005020",
+      "agent": "c1-stranger-two",
+      "bike": "rookie",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 1,
+      "cleared": true,
+      "finishTime": 32.4,
+      "calls": 13,
+      "wallMs": 52096,
+      "firstCheckpointCalls": 3,
+      "faultsByCheckpoint": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bestAttempt": {
+        "n": 1,
+        "cleared": true,
+        "x": 435.127,
+        "startTick": 0,
+        "endTick": 4245,
+        "recordingFile": "harness/inputs/c1-low-tide/stranger-c1-low-tide-20260929-005020.json"
+      },
+      "recordingFile": "harness/inputs/c1-low-tide/stranger-c1-low-tide-20260929-005020.json",
+      "deaths": []
+    },
     {
       "sessionId": "c1-low-tide-rockhop-r1-s1-20260922-191353",
       "agent": "s1",
@@ -46,7 +106,7 @@
           "reason": "crash",
           "x": 327.69,
           "checkpoint": 2,
-          "obstacle": "ramp @ 329.6 m",
+          "obstacle": "ramp @ 327.1 m",
           "calls": 6
         }
       ]
@@ -56,7 +116,7 @@
       "agent": "s2",
       "bike": "rookie",
       "status": "done",
-      "stale": false,
+      "stale": true,
       "srcFingerprint": "da1d4b3e",
       "strangerAttempts": 1,
       "cleared": true,
@@ -86,7 +146,7 @@
       "agent": "s3",
       "bike": "rookie",
       "status": "done",
-      "stale": false,
+      "stale": true,
       "srcFingerprint": "da1d4b3e",
       "strangerAttempts": 1,
       "cleared": true,
@@ -116,23 +176,23 @@
   "completed": 2,
   "clearedCount": 2,
   "medianAttempts": 1,
-  "medianFinishTime": 31.975,
-  "medianCalls": 9,
-  "medianWallMs": 21265,
+  "medianFinishTime": 31.9375,
+  "medianCalls": 13,
+  "medianWallMs": 50270.5,
   "census": {
     "n": 2,
     "minSessions": 2,
     "censored": [],
-    "staleExcluded": 1,
+    "staleExcluded": 3,
     "otherBikeExcluded": 0
   },
   "asserted": {
     "band": [
       1,
-      1
+      2
     ],
     "factor": 1.5,
-    "limit": 1.5
+    "limit": 3
   },
   "verdict": "PASS",
   "pass": true,

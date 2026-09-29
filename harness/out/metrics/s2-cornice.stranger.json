@@ -1,0 +1,144 @@
+{
+  "schema": 2,
+  "kind": "stranger-metrics",
+  "trackId": "s2-cornice",
+  "attemptsBand": [
+    6,
+    12
+  ],
+  "physics": "bikePhysicsFactory-v2",
+  "srcFingerprint": "a415fcb8",
+  "updatedAt": "2026-09-29T06:16:43.014Z",
+  "includeStale": false,
+  "sessions": [
+    {
+      "sessionId": "s2-cornice-20260929-011233",
+      "agent": "codex-s2-stranger",
+      "bike": "pro",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 5,
+      "cleared": true,
+      "finishTime": 60.4083,
+      "calls": 42,
+      "wallMs": 249912,
+      "firstCheckpointCalls": 2,
+      "faultsByCheckpoint": [
+        0,
+        0,
+        0,
+        1,
+        3
+      ],
+      "bestAttempt": {
+        "n": 5,
+        "cleared": true,
+        "x": 459.424,
+        "startTick": 6164,
+        "endTick": 7602,
+        "recordingFile": "harness/inputs/s2-cornice/stranger-s2-cornice-20260929-011233.json"
+      },
+      "recordingFile": "harness/inputs/s2-cornice/stranger-s2-cornice-20260929-011233.json",
+      "deaths": [
+        {
+          "n": 1,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 300.304,
+          "checkpoint": 2,
+          "obstacle": "gap @ 300.3 m",
+          "calls": 17
+        },
+        {
+          "n": 2,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 398.303,
+          "checkpoint": 3,
+          "obstacle": null,
+          "calls": 31
+        },
+        {
+          "n": 3,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 385.65,
+          "checkpoint": 3,
+          "obstacle": "box @ 385.4 m",
+          "calls": 35
+        },
+        {
+          "n": 4,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 385.461,
+          "checkpoint": 3,
+          "obstacle": "box @ 385.4 m",
+          "calls": 36
+        }
+      ]
+    }
+  ],
+  "bike": "pro",
+  "completed": 1,
+  "clearedCount": 1,
+  "medianAttempts": 5,
+  "medianFinishTime": 60.4083,
+  "medianCalls": 42,
+  "medianWallMs": 249912,
+  "census": {
+    "n": 1,
+    "minSessions": 2,
+    "censored": [],
+    "staleExcluded": 0,
+    "otherBikeExcluded": 0
+  },
+  "asserted": {
+    "band": [
+      6,
+      12
+    ],
+    "factor": 1.5,
+    "limit": 18
+  },
+  "verdict": "INSUFFICIENT",
+  "pass": null,
+  "deaths": {
+    "total": 4,
+    "byReason": {
+      "crash": 4
+    },
+    "byObstacle": [
+      {
+        "obstacle": "box @ 385.4 m",
+        "count": 2,
+        "xs": [
+          385.7,
+          385.5
+        ]
+      },
+      {
+        "obstacle": "gap @ 300.3 m",
+        "count": 1,
+        "xs": [
+          300.3
+        ]
+      },
+      {
+        "obstacle": "ground",
+        "count": 1,
+        "xs": [
+          398.3
+        ]
+      }
+    ],
+    "byCheckpoint": [
+      0,
+      0,
+      0,
+      1,
+      3
+    ]
+  }
+}

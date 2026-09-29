@@ -7,10 +7,98 @@
     2
   ],
   "physics": "bikePhysicsFactory-v2",
-  "srcFingerprint": "da1d4b3e",
-  "updatedAt": "2026-09-23T00:48:33.523Z",
+  "srcFingerprint": "a415fcb8",
+  "updatedAt": "2026-09-29T05:53:34.544Z",
   "includeStale": false,
   "sessions": [
+    {
+      "sessionId": "c2-crane-hop-20260929-004855",
+      "agent": "codex-c2-stranger",
+      "bike": "rookie",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 1,
+      "cleared": true,
+      "finishTime": 27.8583,
+      "calls": 14,
+      "wallMs": 50303,
+      "firstCheckpointCalls": 4,
+      "faultsByCheckpoint": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bestAttempt": {
+        "n": 1,
+        "cleared": true,
+        "x": 395.341,
+        "startTick": 0,
+        "endTick": 3699,
+        "recordingFile": "harness/inputs/c2-crane-hop/stranger-c2-crane-hop-20260929-004855.json"
+      },
+      "recordingFile": "harness/inputs/c2-crane-hop/stranger-c2-crane-hop-20260929-004855.json",
+      "deaths": []
+    },
+    {
+      "sessionId": "c2-crane-hop-20260929-005026",
+      "agent": "c2-stranger-two",
+      "bike": "rookie",
+      "status": "done",
+      "stale": false,
+      "srcFingerprint": "a415fcb8",
+      "strangerAttempts": 4,
+      "cleared": true,
+      "finishTime": 49.5167,
+      "calls": 35,
+      "wallMs": 187871,
+      "firstCheckpointCalls": 8,
+      "faultsByCheckpoint": [
+        1,
+        2,
+        0,
+        0
+      ],
+      "bestAttempt": {
+        "n": 4,
+        "cleared": true,
+        "x": 395.341,
+        "startTick": 3215,
+        "endTick": 6301,
+        "recordingFile": "harness/inputs/c2-crane-hop/stranger-c2-crane-hop-20260929-005026.json"
+      },
+      "recordingFile": "harness/inputs/c2-crane-hop/stranger-c2-crane-hop-20260929-005026.json",
+      "deaths": [
+        {
+          "n": 1,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 75.408,
+          "checkpoint": -1,
+          "obstacle": null,
+          "calls": 4
+        },
+        {
+          "n": 2,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 139.566,
+          "checkpoint": 0,
+          "obstacle": null,
+          "calls": 13
+        },
+        {
+          "n": 3,
+          "endedBy": "fault",
+          "reason": "crash",
+          "x": 141.754,
+          "checkpoint": 0,
+          "obstacle": null,
+          "calls": 19
+        }
+      ]
+    },
     {
       "sessionId": "c2-crane-hop-rockhop-r1-s1-20260922-191353",
       "agent": "s1",
@@ -56,7 +144,7 @@
       "agent": "s2",
       "bike": "rookie",
       "status": "done",
-      "stale": false,
+      "stale": true,
       "srcFingerprint": "da1d4b3e",
       "strangerAttempts": 1,
       "cleared": true,
@@ -86,7 +174,7 @@
       "agent": "s3",
       "bike": "rookie",
       "status": "done",
-      "stale": false,
+      "stale": true,
       "srcFingerprint": "da1d4b3e",
       "strangerAttempts": 1,
       "cleared": true,
@@ -115,15 +203,15 @@
   "bike": "rookie",
   "completed": 2,
   "clearedCount": 2,
-  "medianAttempts": 1,
-  "medianFinishTime": 26.0792,
-  "medianCalls": 10,
-  "medianWallMs": 30756.5,
+  "medianAttempts": 2.5,
+  "medianFinishTime": 38.6875,
+  "medianCalls": 24.5,
+  "medianWallMs": 119087,
   "census": {
     "n": 2,
     "minSessions": 2,
     "censored": [],
-    "staleExcluded": 1,
+    "staleExcluded": 3,
     "otherBikeExcluded": 0
   },
   "asserted": {
@@ -137,12 +225,24 @@
   "verdict": "PASS",
   "pass": true,
   "deaths": {
-    "total": 0,
-    "byReason": {},
-    "byObstacle": [],
+    "total": 3,
+    "byReason": {
+      "crash": 3
+    },
+    "byObstacle": [
+      {
+        "obstacle": "ground",
+        "count": 3,
+        "xs": [
+          75.4,
+          139.6,
+          141.8
+        ]
+      }
+    ],
     "byCheckpoint": [
-      0,
-      0,
+      1,
+      2,
       0,
       0
     ]
