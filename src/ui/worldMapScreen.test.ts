@@ -88,6 +88,44 @@ describe('shipped 3D island level select', () => {
     screen.hide();
   });
 
+  it('keeps Play Next one tap away even when a different level is selected', async () => {
+    const { screen, cb } = fixture({ seeded: true, lastPlayed: 'c1-low-tide' });
+    await vi.waitFor(() => expect(mounts.calls).toHaveLength(1));
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('c1-low-tide');
+    const quick = document.querySelector<HTMLButtonElement>('.wm-quick')!;
+    expect(quick.getAttribute('aria-label')).toContain('A1 Sawdust');
+    document.querySelector<HTMLButtonElement>('.wm-next')!.click();
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('c2-crane-hop');
+    document.querySelector<HTMLButtonElement>('.wm-previous')!.click();
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('c1-low-tide');
+    vi.useFakeTimers();
+    quick.click();
+    vi.advanceTimersByTime(200);
+    expect(cb.play).toHaveBeenCalledWith('a1-sawdust');
+    vi.advanceTimersByTime(300);
+    expect(screen.visible).toBe(false);
+  });
+
+  it('opens all twelve courses directly and explains locks without losing Quick Play', async () => {
+    const { screen, cb } = fixture({ seeded: true });
+    await vi.waitFor(() => expect(mounts.calls).toHaveLength(1));
+    const levels = document.querySelector<HTMLButtonElement>('.wm-levels')!;
+    levels.click();
+    expect(levels.getAttribute('aria-expanded')).toBe('true');
+    expect(document.querySelectorAll('.wm-level-grid .wm-level')).toHaveLength(12);
+    document.querySelector<HTMLButtonElement>('.wm-level[data-index="6"]')!.click();
+    expect(levels.getAttribute('aria-expanded')).toBe('false');
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('d1-dust-devil');
+    expect(document.querySelector<HTMLButtonElement>('.wm-ride')!.disabled).toBe(true);
+    expect(document.querySelector('.wm-ride')?.textContent).toContain('Medal every Alpine track');
+    levels.click();
+    screen.back();
+    expect(levels.getAttribute('aria-expanded')).toBe('false');
+    expect(cb.goto).not.toHaveBeenCalled();
+    expect(document.querySelector<HTMLButtonElement>('.wm-quick')!.disabled).toBe(false);
+    screen.hide();
+  });
+
   it('starts with map movement and gives rotation an explicit reversible control', async () => {
     const { screen } = fixture({ seeded: true });
     await vi.waitFor(() => expect(mounts.calls).toHaveLength(1));

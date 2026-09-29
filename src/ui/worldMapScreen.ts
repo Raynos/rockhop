@@ -29,6 +29,12 @@ export class WorldMapScreen extends Screen {
   private readonly progress: HTMLDivElement;
   private readonly detail: HTMLDivElement;
   private readonly ride: HTMLButtonElement;
+  private readonly quick: HTMLButtonElement;
+  private readonly previous: HTMLButtonElement;
+  private readonly next: HTMLButtonElement;
+  private readonly levels: HTMLButtonElement;
+  private readonly levelTray: HTMLDivElement;
+  private readonly levelSummary: HTMLDivElement;
   private readonly ghost: HTMLButtonElement;
   private readonly orbit: HTMLButtonElement;
   private readonly failure: HTMLDivElement;
@@ -36,6 +42,8 @@ export class WorldMapScreen extends Screen {
   private readonly rotate: HTMLDivElement;
   private markers: Marker[] = [];
   private focus = 0;
+  private quickIndex = 0;
+  private campaignComplete = false;
   private action = -1;
   private launching = false;
   private map: MountedWorldMap3DShell | null = null;
@@ -60,16 +68,32 @@ export class WorldMapScreen extends Screen {
     const brand = el('div', 'wm-brand', `<div class="plate"><b class="wordmark">${wordmarkSvg()}</b><span>World map</span></div>${DEV_SURFACES ? `<div class="stamp">${escapeHtml(BUILD_STAMP_SHORT)}</div>` : ''}`);
     this.progress = el('div', 'wm-progress');
     this.detail = el('div', 'wm3d-detail');
-    const actions = el('div', 'wm-actions');
+    const dock = el('div', 'wm-dock');
+    this.previous = el('button', 'wm-step wm-previous', '<span aria-hidden="true">‹</span>');
+    this.previous.type = 'button';
+    this.previous.setAttribute('aria-label', 'Previous level');
     this.ride = el('button', 'wm-ride');
     this.ride.type = 'button';
+    this.next = el('button', 'wm-step wm-next', '<span aria-hidden="true">›</span>');
+    this.next.type = 'button';
+    this.next.setAttribute('aria-label', 'Next level');
+    this.levels = el('button', 'wm-levels', '<span aria-hidden="true">☷</span> Levels');
+    this.levels.type = 'button';
+    this.levels.setAttribute('aria-expanded', 'false');
+    this.levels.setAttribute('aria-controls', 'wm-level-tray');
+    this.quick = el('button', 'wm-quick');
+    this.quick.type = 'button';
+    this.levelTray = el('div', 'wm-level-tray');
+    this.levelTray.id = 'wm-level-tray';
+    this.levelTray.hidden = true;
+    this.levelSummary = el('div', 'wm-level-summary');
     this.ghost = el('button', 'wm-ghost');
     this.ghost.type = 'button';
     this.orbit = el('button', 'wm-orbit', 'Rotate <small>map view</small>');
     this.orbit.type = 'button';
     this.orbit.setAttribute('aria-label', 'Switch map drag to rotate');
     this.orbit.setAttribute('aria-pressed', 'false');
-    actions.append(this.orbit, this.ride, this.ghost);
+    dock.append(this.progress, this.previous, this.ride, this.next, this.levels, this.quick);
     this.failure = el('div', 'wm3d-failure', '<strong>Map unavailable</strong><p>The 3D map could not start. Try again.</p>');
     const retry = el('button', '', 'Retry map');
     retry.type = 'button';
@@ -85,9 +109,13 @@ export class WorldMapScreen extends Screen {
     this.loadingView.append(loadingMenu);
     this.rotate = el('div', 'wm3d-rotate', '<span>↻</span><strong>Rotate your phone</strong><small>ROCKHOP plays in landscape</small>');
     this.legend = el('div', 'legend');
-    this.root.append(brand, this.progress, this.detail, actions, this.loadingView, this.failure, this.rotate, this.legend);
+    this.root.append(brand, this.detail, this.orbit, this.ghost, this.levelTray, dock, this.loadingView, this.failure, this.rotate, this.legend);
     this.addBackButton('Menu');
     this.ride.addEventListener('click', () => { this.action = -1; this.confirm(); });
+    this.quick.addEventListener('click', () => this.launch(this.quickIndex));
+    this.previous.addEventListener('click', () => this.step(-1));
+    this.next.addEventListener('click', () => this.step(1));
+    this.levels.addEventListener('click', () => this.toggleLevels());
     this.ghost.addEventListener('click', () => this.alt());
     this.orbit.addEventListener('click', () => {
       this.dragMode = this.dragMode === 'pan' ? 'orbit' : 'pan';
@@ -98,7 +126,7 @@ export class WorldMapScreen extends Screen {
     });
     window.addEventListener('resize', () => {
       if (!this.visible) return;
-      if (window.innerHeight > window.innerWidth) this.stop3d();
+      if (window.innerHeight > window.innerWidth) { this.toggleLevels(false); this.stop3d(); }
       else { this.map?.resize(); void this.start3d(); }
       this.rotate.classList.toggle('show', window.innerHeight > window.innerWidth);
     });
@@ -114,8 +142,15 @@ export class WorldMapScreen extends Screen {
     const dot = (m: Medal, n: number): string => `<span class="${m}" title="${MEDAL_NAME[m]}">${medalSvg(m, MEDAL_NAME[m])}${n}</span>`;
     this.progress.innerHTML = `<span class="n"><b>${totals.cleared}</b> / ${totals.total} cleared</span><span class="dots">${dot('platinum', totals.platinum)}${dot('gold', totals.gold)}${dot('silver', totals.silver)}${dot('bronze', totals.bronze)}</span>`;
     const target = nextTrack(ship, medalOf, false, state.lastPlayed);
+    const quickTarget = nextTrack(ship, medalOf, false, totals.cleared === totals.total ? state.lastPlayed : null);
     this.focus = Math.max(0, this.markers.findIndex((marker) => marker.track.id === target?.id));
+    this.quickIndex = Math.max(0, this.markers.findIndex((marker) => marker.track.id === quickTarget?.id));
+    this.campaignComplete = totals.cleared === totals.total;
     this.action = -1;
+    this.renderLevels();
+    const nextMarker = this.markers[this.quickIndex]!;
+    this.quick.innerHTML = `<span class="play" aria-hidden="true">▶</span><span>${this.campaignComplete ? 'Play again' : 'Play next'}<small>${escapeHtml(nextMarker.code)} · ${escapeHtml(nextMarker.track.name)}</small></span>`;
+    this.quick.setAttribute('aria-label', `${this.campaignComplete ? 'Play again' : 'Play next'}: ${nextMarker.code} ${nextMarker.track.name}`);
     this.renderFocus(false);
     this.map?.setProgress(this.markers.map((marker) => marker.locked), this.markers.map((marker) => marker.medal));
   }
@@ -187,6 +222,7 @@ export class WorldMapScreen extends Screen {
   }
 
   override hide(): void {
+    this.toggleLevels(false);
     this.stop3d();
     super.hide();
   }
@@ -206,13 +242,20 @@ export class WorldMapScreen extends Screen {
     const times = marker.locked ? `<div class="rule">Locked · ${escapeHtml(marker.rule ?? '')}</div>`
       : `<div class="times"><b class="${best ? '' : 'none'}">${best ? formatTime(best.time) : '—'}</b> / ${target ? formatTime(target) : '—'}</div>`;
     const stateLabel = marker.locked ? 'Locked' : marker.medal ? `${MEDAL_NAME[marker.medal]} cleared` : 'Ready to ride';
+    const dockState = marker.locked ? 'Locked' : marker.medal ? MEDAL_NAME[marker.medal] : 'Ready';
+    const number = String(this.focus + 1).padStart(2, '0');
     this.detail.innerHTML = `<div class="head"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(stageLabel(marker.region))}</div><div class="name">${escapeHtml(track.name)}</div>${times}${marker.locked ? '' : this.boardHtml(track.id)}<div class="wm3d-state ${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(stateLabel)}</div>`;
     this.detail.dataset['track'] = track.id;
     this.detail.classList.toggle('locked', marker.locked);
     this.ride.disabled = marker.locked;
-    this.ride.innerHTML = marker.locked ? `Locked <small>${escapeHtml(marker.rule ?? '')}</small>` : `Ride <small>${escapeHtml(track.name)}</small><span class="arrow">›</span>`;
+    this.ride.innerHTML = `<img class="thumb" src="/art/thumbs/${encodeURIComponent(track.id)}.webp" alt="" loading="lazy"><span class="copy"><strong>${number} · ${escapeHtml(track.name)}</strong><small>${escapeHtml(stageLabel(marker.region))} · <em class="${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(dockState)}</em></small>${marker.locked ? `<small class="rule">${escapeHtml(marker.rule ?? '')}</small>` : ''}</span><span class="ride-arrow" aria-hidden="true">${marker.locked ? '◆' : 'RIDE ›'}</span>`;
+    this.ride.setAttribute('aria-label', marker.locked ? `Level ${number}, ${marker.code} ${track.name} locked. ${marker.rule ?? ''}` : `Ride selected level ${number}: ${marker.code} ${track.name}`);
     this.ghost.hidden = !best?.recording || marker.locked;
     this.ghost.innerHTML = `<span>▶</span> ${this.state().ghost ? 'Ghost' : 'Watch PB'}`;
+    this.levelSummary.innerHTML = marker.locked
+      ? `<b>${number} · ${escapeHtml(track.name)}</b><span>Locked · ${escapeHtml(marker.rule ?? '')}</span>`
+      : `<b>${number} · ${escapeHtml(track.name)}</b><span>Best ${best ? formatTime(best.time) : '—'} · Target ${target ? formatTime(target) : '—'}</span>${this.boardHtml(track.id)}`;
+    for (const button of this.levelTray.querySelectorAll<HTMLButtonElement>('[data-index]')) button.classList.toggle('selected', Number(button.dataset['index']) === this.focus);
     this.map?.selectStage(this.focus, animate);
     this.applyAction();
   }
@@ -229,6 +272,33 @@ export class WorldMapScreen extends Screen {
     this.action = -1;
     if (tick && moved) this.sfx.tick();
     this.renderFocus(moved);
+  }
+
+  private step(direction: -1 | 1): void {
+    if (this.launching || !this.markers.length) return;
+    this.focusMarker((this.focus + direction + this.markers.length) % this.markers.length, true);
+  }
+
+  private toggleLevels(force?: boolean): void {
+    const open = force ?? this.levelTray.hidden;
+    this.levelTray.hidden = !open;
+    this.levels.setAttribute('aria-expanded', String(open));
+  }
+
+  private renderLevels(): void {
+    this.levelTray.replaceChildren();
+    const header = el('div', 'wm-level-tray-head', '<strong>Choose a level</strong><span>Tap a stop to focus it on the island</span>');
+    const grid = el('div', 'wm-level-grid');
+    this.markers.forEach((marker, index) => {
+      const button = el('button', `wm-level ${marker.locked ? 'locked' : marker.medal ?? 'available'}`,
+        `<b>${String(index + 1).padStart(2, '0')}</b><span>${escapeHtml(marker.track.name)}</span><small>${marker.locked ? '◆' : marker.medal ? medalSvg(marker.medal, MEDAL_NAME[marker.medal]) : '○'}</small>`);
+      button.type = 'button';
+      button.dataset['index'] = String(index);
+      button.setAttribute('aria-label', `${marker.code} ${marker.track.name}, ${marker.locked ? 'locked' : marker.medal ? `${MEDAL_NAME[marker.medal]} cleared` : 'ready to ride'}`);
+      button.addEventListener('click', () => { this.focusMarker(index, true); this.toggleLevels(false); });
+      grid.append(button);
+    });
+    this.levelTray.append(header, grid, this.levelSummary);
   }
 
   current(): { marker: Marker } | null {
@@ -261,9 +331,13 @@ export class WorldMapScreen extends Screen {
   }
 
   confirm(): void {
-    const marker = this.markers[this.focus];
-    if (!marker || this.launching) return;
     if (this.action === 1) return this.alt();
+    this.launch(this.focus);
+  }
+
+  private launch(index: number): void {
+    const marker = this.markers[index];
+    if (!marker || this.launching) return;
     if (marker.locked) {
       this.sfx.back();
       this.ride.animate?.([{ translate: '0 0' }, { translate: '-6px 0' }, { translate: '6px 0' }, { translate: '0 0' }], { duration: 240 });
@@ -278,6 +352,7 @@ export class WorldMapScreen extends Screen {
 
   back(): void {
     if (this.launching) return;
+    if (!this.levelTray.hidden) { this.toggleLevels(false); this.sfx.back(); return; }
     this.sfx.back();
     this.cb.goto('menu');
   }
