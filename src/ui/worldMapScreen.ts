@@ -772,7 +772,7 @@ export class WorldMapScreen extends Screen {
     this.userMoved = false;
     this.applyFocus(false);
     this.layout();
-    if (this.map3dEnabled) this.map3dScene?.setLocked(this.refs.map((ref) => ref.marker.locked));
+    if (this.map3dEnabled) this.map3dScene?.setProgress(this.refs.map((ref) => ref.marker.locked), this.refs.map((ref) => ref.marker.medal));
   }
 
   private indexOf(at: { region: number; marker: number }): number {
@@ -864,7 +864,7 @@ export class WorldMapScreen extends Screen {
     this.ride.innerHTML = marker.locked ? `Locked <small>${escapeHtml(marker.rule ?? '')}</small>` : `Ride <small>${escapeHtml(t.name)}</small><span class="arrow">›</span>`;
     this.ghost.hidden = !canGhost;
     this.ghost.innerHTML = `<span>▶</span> ${this.state().ghost ? 'Ghost' : 'Watch PB'}`;
-    this.map3dScene?.setDetail(this.card.innerHTML, t.id, marker.locked);
+    this.map3dScene?.setDetail(this.card.innerHTML, t.id, marker.locked, marker.medal);
     this.applyAction();
   }
 
@@ -972,12 +972,13 @@ export class WorldMapScreen extends Screen {
       const { mountWorldMap3DReview } = await import('./worldMap3dScene');
       if (token !== this.map3dToken || !this.visible) return;
       const locked = this.refs.map((ref) => ref.marker.locked);
+      const medals = this.refs.map((ref) => ref.marker.medal);
       const scene = mountWorldMap3DReview(this.root, (stage) => {
         if (this.refs[stage]) this.focusMarker(stage, true, false);
-      }, this.focus, locked);
+      }, this.focus, locked, medals);
       this.map3dScene = scene;
       const current = this.current()?.marker;
-      if (current) scene.setDetail(this.card.innerHTML, current.track.id, current.locked);
+      if (current) scene.setDetail(this.card.innerHTML, current.track.id, current.locked, current.medal);
     } catch (error) {
       if (token === this.map3dToken) {
         console.error('3D map unavailable; using painted map', error);

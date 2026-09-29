@@ -8,7 +8,7 @@ const skyImageUrl = import.meta.env.DEV
 // Lazy 3D review map. The same procedural island as the selected C prototype
 // is mounted only while the map screen is open; all stage navigation stays in
 // WorldMapScreen. All route, terrain and towers are real meshes.
-export function mountWorldMap3D(root, onSelect, initialIndex = 0, locked = []) {
+export function mountWorldMap3D(root, onSelect, initialIndex = 0, locked = [], medals = []) {
 let disposed = false;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#8db4c2');
@@ -1381,13 +1381,22 @@ function selectStage(index,focus=false){
  }
 }
 function setLocked(next){
+ locked=next;
+ applyProgress();
+}
+function setProgress(nextLocks,nextMedals){
+ locked=nextLocks;medals=nextMedals;
+ applyProgress();
+}
+const medalFlags={bronze:mat('#b87342',.38,.55),silver:mat('#e0e8e4',.28,.66),gold:mat('#f4c34c',.32,.55),platinum:mat('#7af0ee',.2,.45)};
+function applyProgress(){
  for(let i=0;i<stages.length;i++){
-   const stage=stages[i],biome=Math.floor(i/3),isLocked=!!next[i];
-   stage.upperFlag.material=isLocked?mat('#68767a'):biome===3?towerMaterials.cream:towerMaterials.red;
+   const stage=stages[i],biome=Math.floor(i/3),isLocked=!!locked[i],earned=medalFlags[medals[i]];
+   stage.upperFlag.material=isLocked?mat('#68767a'):earned??(biome===3?towerMaterials.cream:towerMaterials.red);
    stage.lowerFlag.material=isLocked?mat('#657175'):biome===3?towerMaterials.red:towerMaterials.yellow;
  }
 }
-setLocked(locked);
+applyProgress();
 selectStage(initialIndex);
 function onPointerDown(event){downX=event.clientX;downY=event.clientY;}
 function onPointerUp(event){
@@ -1462,7 +1471,7 @@ function dispose(){
  renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
 }
 return {
- selectStage,setLocked,resize,dispose,
+ selectStage,setLocked,setProgress,resize,dispose,
  stats(){return {fps,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,meshMerge,selected,disposed};},
  towerScreenPoint(index){
    const stage=stages[index];if(!stage)return null;
@@ -1485,6 +1494,11 @@ const REVIEW_CSS = `
 .worldmap-screen.wm3d-enabled .wm3d-detail .times { margin-top: 4px; color: var(--ink-dim); font: 700 11px/1.2 var(--mono); }
 .worldmap-screen.wm3d-enabled .wm3d-detail .times b { color: var(--green); }
 .worldmap-screen.wm3d-enabled .wm3d-detail .rule { margin-top: 5px; color: var(--ochre); font: 800 10px/1.2 var(--sans); text-transform: uppercase; }
+.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal { margin-top: 5px; color: var(--medal-color); font: 800 10px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.bronze { --medal-color: #dba372; }
+.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.silver { --medal-color: #e0e8e4; }
+.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.gold { --medal-color: #f4c34c; }
+.worldmap-screen.wm3d-enabled .wm3d-detail .wm3d-medal.platinum { --medal-color: #7af0ee; }
 .worldmap-screen.wm3d-enabled .wm3d-detail .board, .worldmap-screen.wm3d-enabled .wm3d-detail .wm-card-ghost { display: none; }
 .worldmap-screen.wm3d-enabled .wm-brand, .worldmap-screen.wm3d-enabled .backbtn, .worldmap-screen.wm3d-enabled .wm-progress, .worldmap-screen.wm3d-enabled .wm-actions { z-index: 6; }
 .worldmap-screen.wm3d-enabled .legend { display: none; }
@@ -1496,19 +1510,19 @@ const REVIEW_CSS = `
   .worldmap-screen.wm3d-enabled .wm3d-rotate small { font: 700 13px/1.4 var(--sans); letter-spacing: .18em; }
 }
 `;
-export function mountWorldMap3DReview(root,onSelect,initialIndex=0,locked=[]){
+export function mountWorldMap3DReview(root,onSelect,initialIndex=0,locked=[],medals=[]){
  if(!document.getElementById("worldmap-3d-review-css")){const style=document.createElement("style");style.id="worldmap-3d-review-css";style.textContent=REVIEW_CSS;document.head.appendChild(style);}
  const host=document.createElement('div'),detail=document.createElement('div'),rotate=document.createElement('div');
  host.className='wm3d-host';detail.className='wm3d-detail';rotate.className='wm3d-rotate';
  rotate.innerHTML='<span>↻</span><strong>Rotate your phone</strong><small>ROCKHOP plays in landscape</small>';
  root.append(host,detail,rotate);
- let scene=null,index=initialIndex,locks=locked,disposed=false;
+ let scene=null,index=initialIndex,locks=locked,earned=medals,disposed=false;
  function resize(){
    if(disposed)return;
    if(window.innerHeight>window.innerWidth){
      scene?.dispose();scene=null;delete host.dataset.ready;delete window.__rockhopMap3d;
    }else if(!scene){
-     scene=mountWorldMap3D(host,onSelect,index,locks);
+     scene=mountWorldMap3D(host,onSelect,index,locks,earned);
      host.dataset.ready='1';window.__rockhopMap3d=scene;
    }else scene.resize();
  }
@@ -1517,7 +1531,12 @@ export function mountWorldMap3DReview(root,onSelect,initialIndex=0,locked=[]){
  return {
    selectStage(next,focus){index=next;scene?.selectStage(next,focus);},
    setLocked(next){locks=next;scene?.setLocked(next);},
-   setDetail(html,id,isLocked){detail.innerHTML=html;detail.dataset.track=id;detail.classList.toggle('locked',isLocked);},
+   setProgress(nextLocks,nextMedals){locks=nextLocks;earned=nextMedals;scene?.setProgress(nextLocks,nextMedals);},
+   setDetail(html,id,isLocked,medal){
+     const label=medal==='platinum'?'Diamond':medal;
+     detail.innerHTML=html+(label&&!isLocked?`<div class="wm3d-medal ${medal}">${label} cleared</div>`:'');
+     detail.dataset.track=id;detail.classList.toggle('locked',isLocked);
+   },
    resize,
    dispose(){if(disposed)return;disposed=true;window.removeEventListener('resize',resize);scene?.dispose();scene=null;delete window.__rockhopMap3d;host.remove();detail.remove();rotate.remove();},
  };
