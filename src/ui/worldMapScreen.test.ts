@@ -8,7 +8,7 @@ import type { FrontCallbacks, FrontState } from './front';
 import type { UiSfx } from './sfx';
 import { WorldMapScreen } from './worldMapScreen';
 
-const mounts = vi.hoisted(() => ({ calls: [] as Array<{ root: HTMLElement; select: (index: number) => void; scene: { dispose: ReturnType<typeof vi.fn>; selectStage: ReturnType<typeof vi.fn>; setProgress: ReturnType<typeof vi.fn>; resize: ReturnType<typeof vi.fn> } }> }));
+const mounts = vi.hoisted(() => ({ calls: [] as Array<{ root: HTMLElement; select: (index: number) => void; scene: { dispose: ReturnType<typeof vi.fn>; selectStage: ReturnType<typeof vi.fn>; setProgress: ReturnType<typeof vi.fn>; setDragMode: ReturnType<typeof vi.fn>; resize: ReturnType<typeof vi.fn> } }> }));
 vi.mock('./worldMap3dScene', () => ({
   mountWorldMap3DShell: vi.fn((root: HTMLElement, select: (index: number) => void) => {
     const host = document.createElement('div');
@@ -19,6 +19,7 @@ vi.mock('./worldMap3dScene', () => ({
       dispose: vi.fn(() => host.remove()),
       selectStage: vi.fn(),
       setProgress: vi.fn(),
+      setDragMode: vi.fn(),
       resize: vi.fn(),
     };
     mounts.calls.push({ root, select, scene });
@@ -84,6 +85,28 @@ describe('shipped 3D island level select', () => {
     expect(document.querySelector('.wm3d-detail .rule')?.textContent).toContain('Medal every Alpine track');
     screen.confirm();
     expect(cb.play).not.toHaveBeenCalled();
+    screen.hide();
+  });
+
+  it('starts with map movement and gives rotation an explicit reversible control', async () => {
+    const { screen } = fixture({ seeded: true });
+    await vi.waitFor(() => expect(mounts.calls).toHaveLength(1));
+    const scene = mounts.calls[0]!.scene;
+    expect(scene.setDragMode).toHaveBeenCalledWith('pan');
+    const orbit = document.querySelector<HTMLButtonElement>('.wm-orbit')!;
+    expect(orbit.getAttribute('aria-pressed')).toBe('false');
+    orbit.click();
+    expect(scene.setDragMode).toHaveBeenLastCalledWith('orbit');
+    expect(orbit.getAttribute('aria-pressed')).toBe('true');
+    orbit.click();
+    expect(scene.setDragMode).toHaveBeenLastCalledWith('pan');
+    expect(orbit.getAttribute('aria-pressed')).toBe('false');
+    mounts.calls[0]!.select(0);
+    expect(document.querySelector('.wm3d-state')?.textContent).toContain('Gold cleared');
+    mounts.calls[0]!.select(3);
+    expect(document.querySelector('.wm3d-state')?.textContent).toContain('Ready to ride');
+    mounts.calls[0]!.select(6);
+    expect(document.querySelector('.wm3d-state')?.textContent).toContain('Locked');
     screen.hide();
   });
 

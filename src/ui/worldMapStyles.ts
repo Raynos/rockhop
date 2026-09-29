@@ -21,17 +21,21 @@ export const WORLD_MAP_CSS = `
 .worldmap-screen .wm3d-detail .times b { color: var(--green); }
 .worldmap-screen .wm3d-detail .rule { margin-top: 5px; color: var(--ochre); font: 800 10px/1.2 var(--sans); text-transform: uppercase; }
 .worldmap-screen .wm3d-detail .board { display: none; }
-.worldmap-screen .wm3d-detail .wm3d-medal { margin-top: 5px; font: 800 10px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
-.worldmap-screen .wm3d-detail .wm3d-medal.bronze { color: #dba372; }
-.worldmap-screen .wm3d-detail .wm3d-medal.silver { color: #e0e8e4; }
-.worldmap-screen .wm3d-detail .wm3d-medal.gold { color: #f4c34c; }
-.worldmap-screen .wm3d-detail .wm3d-medal.platinum { color: #7af0ee; }
+.worldmap-screen .wm3d-detail .wm3d-state { margin-top: 5px; font: 800 10px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.worldmap-screen .wm3d-detail .wm3d-state.available { color: #ffd17a; }
+.worldmap-screen .wm3d-detail .wm3d-state.locked { color: #9baaad; }
+.worldmap-screen .wm3d-detail .wm3d-state.bronze { color: #dd9161; }
+.worldmap-screen .wm3d-detail .wm3d-state.silver { color: #d9e8e8; }
+.worldmap-screen .wm3d-detail .wm3d-state.gold { color: #ffd44f; }
+.worldmap-screen .wm3d-detail .wm3d-state.platinum { color: #72f4ee; }
 .worldmap-screen .wm-actions { position: absolute; right: calc(18px + var(--sar)); bottom: calc(12px + var(--sab)); z-index: 6; display: flex; gap: 8px; }
 #ui .wm-actions button { min-height: 48px; min-width: 48px; border: 0; padding: 0 15px; cursor: pointer; font: 800 15px/1 var(--sans); text-transform: uppercase; }
 #ui .wm-actions button small { display: block; margin-top: 3px; font: 700 9px/1 var(--sans); letter-spacing: .05em; }
 #ui .wm-actions .wm-ride { color: var(--teal); background: var(--cream); border-radius: 10px; box-shadow: 0 6px 20px #09232bb8; }
 #ui .wm-actions .wm-ride[disabled] { color: var(--ink-dim); background: #162a2c; cursor: default; }
 #ui .wm-actions .wm-ghost { color: var(--cream); background: #162a2c; border-radius: 10px; }
+#ui .wm-actions .wm-orbit { color: var(--cream); background: #173841e8; border: 1px solid #b8d0c8aa; border-radius: 10px; }
+#ui .wm-actions .wm-orbit[aria-pressed="true"] { color: #173841; background: #ffd17a; }
 #ui .wm-actions .wm-ghost[hidden] { display: none; }
 #ui .wm-actions button.on { outline: 3px solid var(--ochre); }
 .worldmap-screen .legend { display: none; }

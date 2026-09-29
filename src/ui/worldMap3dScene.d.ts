@@ -2,6 +2,8 @@ export interface MountedWorldMap3D {
   selectStage(index: number, focus?: boolean): void;
   setLocked(locked: boolean[]): void;
   setProgress(locked: boolean[], medals: (string | null)[]): void;
+  setDragMode(mode: 'pan' | 'orbit'): void;
+  viewState(): { dragMode: 'pan' | 'orbit'; target: { x: number; y: number; z: number }; azimuth: number; states: string[] };
   resize(): void;
   dispose(): void;
   stats(): { fps: number; drawCalls: number; triangles: number; meshMerge: { mergedObjects: number; mergedBatches: number }; selected: number; disposed: boolean };
@@ -14,6 +16,7 @@ export interface MountedWorldMap3DShell {
   selectStage(index: number, focus?: boolean): void;
   setLocked(locked: boolean[]): void;
   setProgress(locked: boolean[], medals: (string | null)[]): void;
+  setDragMode(mode: 'pan' | 'orbit'): void;
   resize(): void;
   dispose(): void;
 }

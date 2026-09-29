@@ -52,7 +52,28 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.target.set(0, 0, 0);
 controls.enableDamping = true;
 controls.dampingFactor = 0.055;
-controls.enablePan = false;
+controls.enablePan = true;
+controls.screenSpacePanning = false;
+// The map is a level picker: dragging moves the island. Orbit is an explicit
+// mode on touch and remains available on the right mouse button.
+let dragMode = 'pan';
+function setDragMode(mode) {
+ const nextMode = mode === 'orbit' ? 'orbit' : 'pan';
+ if (nextMode === 'orbit' && dragMode === 'pan') {
+   // Orbit around the island, not the last panned corner of the sea.
+   const damping=controls.enableDamping;
+   controls.enableDamping=false;controls.update();controls.enableDamping=damping;
+   const offset = camera.position.clone().sub(controls.target);
+   controls.target.set(0, 0, 0);
+   camera.position.copy(offset);
+ }
+ dragMode = nextMode;
+ controls.mouseButtons.LEFT = dragMode === 'pan' ? THREE.MOUSE.PAN : THREE.MOUSE.ROTATE;
+ controls.mouseButtons.RIGHT = dragMode === 'pan' ? THREE.MOUSE.ROTATE : THREE.MOUSE.PAN;
+ controls.touches.ONE = dragMode === 'pan' ? THREE.TOUCH.PAN : THREE.TOUCH.ROTATE;
+ controls.touches.TWO = THREE.TOUCH.DOLLY_ROTATE;
+}
+setDragMode('pan');
 controls.minPolarAngle = 0.42;
 controls.maxPolarAngle = 0.91;
 controls.minDistance = 12;
@@ -1340,7 +1361,23 @@ function makeTower(i,x,z){
  const tireMat=mat('#272b2a');
  for(let t=0;t<2;t++){const tire=mesh(new THREE.TorusGeometry(.19,.065,6,10),tireMat,-.38,.08+t*.11,-.27,g);tire.rotation.x=Math.PI/2;}
  const hit=mesh(new THREE.CylinderGeometry(.59,.59,2.3,8),new THREE.MeshBasicMaterial({visible:false}),0,1.1,0,g);hit.userData.stage=i;
- g.userData.index=i;stages.push({g,hit,x,z,y,beacon,upperFlag,lowerFlag});
+ // A thin luminous route marker reads as a game state without turning the
+ // tower into a physical arena. It follows the terrain and is visible at zoom.
+ const ringPoints=[],ringFaces=[],ringSegments=40;
+ for(let j=0;j<=ringSegments;j++){
+   const angle=j*2*Math.PI/ringSegments;
+   for(const radius of [.86,1.13]){
+     const rx=x+Math.cos(angle)*radius,rz=z+Math.sin(angle)*radius;
+     ringPoints.push(rx,groundHeight(rx,rz)+.23,rz);
+   }
+   if(j<ringSegments){const k=j*2;ringFaces.push(k,k+1,k+2,k+1,k+3,k+2);}
+ }
+ const ringGeometry=new THREE.BufferGeometry();
+ ringGeometry.setAttribute('position',new THREE.Float32BufferAttribute(ringPoints,3));
+ ringGeometry.setIndex(ringFaces);
+ const stateRing=new THREE.Mesh(ringGeometry,new THREE.MeshBasicMaterial({color:'#e9be65',side:THREE.DoubleSide,transparent:true,opacity:1,depthWrite:false,toneMapped:false}));
+ stateRing.renderOrder=2;terrain.add(stateRing);
+ g.userData.index=i;stages.push({g,hit,x,z,y,beacon,upperFlag,lowerFlag,stateRing});
  return g;
 }
 for(let i=0;i<12;i++){
@@ -1354,7 +1391,7 @@ for(let i=0;i<12;i++){
 function mergeStaticSetDressing(){
  terrain.updateMatrixWorld(true);
  const inverseTerrain=terrain.matrixWorld.clone().invert();
- const dynamic=new Set(stages.flatMap(stage=>[stage.hit,stage.beacon,stage.upperFlag,stage.lowerFlag]));
+ const dynamic=new Set(stages.flatMap(stage=>[stage.hit,stage.beacon,stage.upperFlag,stage.lowerFlag,stage.stateRing]));
  const batches=new Map();
  terrain.traverse(object=>{
    if(!object.isMesh||object.isInstancedMesh||object===island||dynamic.has(object)||object.material.transparent||!object.visible||object.children.length||Object.keys(object.userData).length)return;
@@ -1412,11 +1449,16 @@ function setProgress(nextLocks,nextMedals){
  applyProgress();
 }
 const medalFlags={bronze:mat('#b87342',.38,.55),silver:mat('#e0e8e4',.28,.66),gold:mat('#f4c34c',.32,.55),platinum:mat('#7af0ee',.2,.45)};
+const stateRingColors={locked:'#74878a',available:'#ffd17a',bronze:'#dd9161',silver:'#d9e8e8',gold:'#ffd44f',platinum:'#72f4ee'};
 function applyProgress(){
  for(let i=0;i<stages.length;i++){
    const stage=stages[i],biome=Math.floor(i/3),isLocked=!!locked[i],earned=medalFlags[medals[i]];
    stage.upperFlag.material=isLocked?mat('#68767a'):earned??(biome===3?towerMaterials.cream:towerMaterials.red);
    stage.lowerFlag.material=isLocked?mat('#657175'):biome===3?towerMaterials.red:towerMaterials.yellow;
+   const state=isLocked?'locked':medals[i] in medalFlags?medals[i]:'available';
+   stage.stateRing.material.color.set(stateRingColors[state]);
+   stage.stateRing.material.opacity=isLocked?.65:1;
+   stage.stateRing.userData.state=state;
  }
 }
 applyProgress();
@@ -1460,6 +1502,12 @@ function animate(now){
    if(t>=1){focusTween=null;controls.enabled=true;}
  }
  controls.update();
+ // Keep the focus over the island after a long pan, without snapping the view.
+ const targetX=THREE.MathUtils.clamp(controls.target.x,-19,19);
+ const targetZ=THREE.MathUtils.clamp(controls.target.z,-9,9);
+ camera.position.x+=targetX-controls.target.x;
+ camera.position.z+=targetZ-controls.target.z;
+ controls.target.x=targetX;controls.target.z=targetZ;
  if(now-lastRender<frameInterval)return;
  // Keep the fractional remainder so a 120 Hz display produces 60 renders,
  // rather than drifting down to every third animation frame.
@@ -1494,7 +1542,8 @@ function dispose(){
  renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
 }
 return {
- selectStage,setLocked,setProgress,resize,dispose,
+ selectStage,setLocked,setProgress,setDragMode,resize,dispose,
+ viewState(){return {dragMode,target:{x:controls.target.x,y:controls.target.y,z:controls.target.z},azimuth:controls.getAzimuthalAngle(),states:stages.map(stage=>stage.stateRing.userData.state)};},
  stats(){return {fps,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,meshMerge,selected,disposed};},
  towerScreenPoint(index){
    const stage=stages[index];if(!stage)return null;
@@ -1526,6 +1575,7 @@ export function mountWorldMap3DShell(root, onSelect, initialIndex=0, locked=[], 
    selectStage(index,focus){scene?.selectStage(index,focus);},
    setLocked(next){scene?.setLocked(next);},
    setProgress(nextLocks,nextMedals){scene?.setProgress(nextLocks,nextMedals);},
+   setDragMode(mode){scene?.setDragMode(mode);},
    resize(){scene?.resize();},
    dispose(){
      if(!scene)return;

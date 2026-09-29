@@ -11,6 +11,8 @@ import { REPO_ROOT } from '../lib/paths';
 
 type MapProbe = {
   selectStage(index: number, focus?: boolean): void;
+  setProgress(locked: boolean[], medals: (string | null)[]): void;
+  viewState(): { dragMode: string; target: { x: number; y: number; z: number }; azimuth: number; states: string[] };
   towerScreenPoint(index: number): { x: number; y: number } | null;
   stats(): { selected: number; disposed: boolean };
 };
@@ -52,6 +54,13 @@ try {
     gameContextLost: (window as HookWindow).__render?.canvas.getContext('webgl2')?.isContextLost(),
   }));
   await page.screenshot({ path: path.join(out, 'landscape-front.png') });
+  report.campaignStates = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState().states);
+  await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.setProgress(
+    Array.from({ length: 12 }, (_, i) => i === 5),
+    ['bronze', 'silver', 'gold', 'platinum', null, null, null, null, null, null, null, null],
+  ));
+  report.medalStates = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState().states);
+  await page.screenshot({ path: path.join(out, 'medal-state-markers.png') });
 
   const selected: { index: number; id: string | null; tower: { x: number; y: number } | null }[] = [];
   for (let i = 0; i < expected.length; i++) {
@@ -76,6 +85,7 @@ try {
 
   await page.setViewportSize({ width: 852, height: 393 });
   await mapReady();
+  const beforePan = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
   await page.mouse.move(620, 280);
   await page.mouse.down();
   for (let i = 1; i <= 24; i++) {
@@ -84,7 +94,22 @@ try {
   }
   await page.mouse.up();
   await page.waitForTimeout(300);
-  await page.screenshot({ path: path.join(out, 'landscape-orbit.png') });
+  const afterPan = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
+  report.pan = { before: beforePan, after: afterPan };
+  await page.screenshot({ path: path.join(out, 'landscape-panned.png') });
+  await page.locator('.wm-orbit').click();
+  const beforeOrbit = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
+  await page.mouse.move(620, 280);
+  await page.mouse.down();
+  for (let i = 1; i <= 20; i++) {
+    await page.mouse.move(620 - i * 7, 280);
+    await page.waitForTimeout(16);
+  }
+  await page.mouse.up();
+  await page.waitForTimeout(300);
+  const afterOrbit = await page.evaluate(() => (window as HookWindow).__rockhopMap3d!.viewState());
+  report.orbit = { before: beforeOrbit, after: afterOrbit };
+  await page.screenshot({ path: path.join(out, 'landscape-rotated.png') });
 
   await page.locator('.worldmap-screen.live .backbtn').click();
   await page.waitForSelector('.menu-screen.live', { timeout: 20_000 });
@@ -120,13 +145,19 @@ try {
     bootSky: bootRequests.filter(url => /\/assets\/sky-alpine-a-[\w-]+\.webp/.test(url)),
   };
   const r = report.requests as { painted: string[]; mapChunk: string[]; sky: string[]; bootMapChunk: string[]; bootSky: string[] };
+  const moved = Math.hypot(afterPan.target.x - beforePan.target.x, afterPan.target.z - beforePan.target.z);
+  const spun = Math.abs(afterOrbit.azimuth - beforeOrbit.azimuth);
   report.pass =
     expected.length === 12 && selected.every((entry, i) => !!entry.tower && entry.id === expected[i]) &&
     open.canvas === 1 && !open.painted && open.loading === 'none' &&
     portrait.canvas === 0 && portrait.display === 'flex' && portrait.prompt.includes('Rotate your phone') &&
     menu.mapCanvases === 0 && !menu.mapHook && ride.screen === 'run' && ride.mapCanvases === 0 && !ride.mapHook &&
     ride.gameContextLost === false && r.painted.length === 0 && r.mapChunk.length >= 1 && r.sky.length >= 1 &&
-    r.bootMapChunk.length >= 1 && r.bootSky.length >= 1 && errors.length === 0;
+    r.bootMapChunk.length >= 1 && r.bootSky.length >= 1 &&
+    moved > 1 && Math.abs(afterPan.azimuth - beforePan.azimuth) < 0.02 &&
+    beforePan.dragMode === 'pan' && beforeOrbit.dragMode === 'orbit' && spun > 0.1 &&
+    (report.medalStates as string[]).slice(0, 6).join(',') === 'bronze,silver,gold,platinum,available,locked' &&
+    errors.length === 0;
   if (!report.pass) process.exitCode = 1;
 } catch (error) {
   report.failure = String(error);

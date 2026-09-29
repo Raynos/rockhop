@@ -30,6 +30,7 @@ export class WorldMapScreen extends Screen {
   private readonly detail: HTMLDivElement;
   private readonly ride: HTMLButtonElement;
   private readonly ghost: HTMLButtonElement;
+  private readonly orbit: HTMLButtonElement;
   private readonly failure: HTMLDivElement;
   private readonly loadingView: HTMLDivElement;
   private readonly rotate: HTMLDivElement;
@@ -38,6 +39,7 @@ export class WorldMapScreen extends Screen {
   private action = -1;
   private launching = false;
   private map: MountedWorldMap3DShell | null = null;
+  private dragMode: 'pan' | 'orbit' = 'pan';
   private loading = false;
   private token = 0;
   private gpuOwned = false;
@@ -63,7 +65,11 @@ export class WorldMapScreen extends Screen {
     this.ride.type = 'button';
     this.ghost = el('button', 'wm-ghost');
     this.ghost.type = 'button';
-    actions.append(this.ride, this.ghost);
+    this.orbit = el('button', 'wm-orbit', 'Rotate <small>map view</small>');
+    this.orbit.type = 'button';
+    this.orbit.setAttribute('aria-label', 'Switch map drag to rotate');
+    this.orbit.setAttribute('aria-pressed', 'false');
+    actions.append(this.orbit, this.ride, this.ghost);
     this.failure = el('div', 'wm3d-failure', '<strong>Map unavailable</strong><p>The 3D map could not start. Try again.</p>');
     const retry = el('button', '', 'Retry map');
     retry.type = 'button';
@@ -83,6 +89,13 @@ export class WorldMapScreen extends Screen {
     this.addBackButton('Menu');
     this.ride.addEventListener('click', () => { this.action = -1; this.confirm(); });
     this.ghost.addEventListener('click', () => this.alt());
+    this.orbit.addEventListener('click', () => {
+      this.dragMode = this.dragMode === 'pan' ? 'orbit' : 'pan';
+      this.map?.setDragMode(this.dragMode);
+      this.orbit.innerHTML = this.dragMode === 'pan' ? 'Rotate <small>map view</small>' : 'Move <small>map view</small>';
+      this.orbit.setAttribute('aria-label', this.dragMode === 'pan' ? 'Switch map drag to rotate' : 'Switch map drag to move');
+      this.orbit.setAttribute('aria-pressed', String(this.dragMode === 'orbit'));
+    });
     window.addEventListener('resize', () => {
       if (!this.visible) return;
       if (window.innerHeight > window.innerWidth) this.stop3d();
@@ -127,6 +140,7 @@ export class WorldMapScreen extends Screen {
       if (token !== this.token || !this.visible) return;
       this.map = mountWorldMap3DShell(this.root, (index) => this.focusMarker(index, true), this.focus,
         this.markers.map((marker) => marker.locked), this.markers.map((marker) => marker.medal), (error) => this.mapFailed(error));
+      this.map.setDragMode(this.dragMode);
       this.renderFocus(false);
       this.loadingView.classList.remove('show');
     } catch (error) {
@@ -186,7 +200,8 @@ export class WorldMapScreen extends Screen {
     const target = track.meta?.targetTimeS;
     const times = marker.locked ? `<div class="rule">Locked · ${escapeHtml(marker.rule ?? '')}</div>`
       : `<div class="times"><b class="${best ? '' : 'none'}">${best ? formatTime(best.time) : '—'}</b> / ${target ? formatTime(target) : '—'}</div>`;
-    this.detail.innerHTML = `<div class="head"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(stageLabel(marker.region))}</div><div class="name">${escapeHtml(track.name)}</div>${times}${marker.locked ? '' : this.boardHtml(track.id)}${marker.medal && !marker.locked ? `<div class="wm3d-medal ${marker.medal}">${escapeHtml(MEDAL_NAME[marker.medal])} cleared</div>` : ''}`;
+    const stateLabel = marker.locked ? 'Locked' : marker.medal ? `${MEDAL_NAME[marker.medal]} cleared` : 'Ready to ride';
+    this.detail.innerHTML = `<div class="head"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(stageLabel(marker.region))}</div><div class="name">${escapeHtml(track.name)}</div>${times}${marker.locked ? '' : this.boardHtml(track.id)}<div class="wm3d-state ${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(stateLabel)}</div>`;
     this.detail.dataset['track'] = track.id;
     this.detail.classList.toggle('locked', marker.locked);
     this.ride.disabled = marker.locked;
@@ -221,9 +236,9 @@ export class WorldMapScreen extends Screen {
 
   override setDevice(device: 'keyboard' | 'gamepad' | 'touch' | null): void {
     if (!this.legend) return;
-    this.legend.innerHTML = device === 'touch' ? '<span>Tap a tower</span><span>Drag to orbit · pinch to zoom</span>'
+    this.legend.innerHTML = device === 'touch' ? '<span>Tap a tower</span><span>Drag to move · Rotate button · pinch to zoom</span>'
       : device === 'gamepad' ? '<span><i class="pad">✚</i>Tracks</span><span><i class="pad a">A</i>Ride</span><span><i class="pad b">B</i>Back</span>'
-        : '<span><kbd>←→</kbd>Tracks</span><span><kbd>Enter</kbd>Ride</span><span><kbd>V</kbd>Ghost</span><span>Drag to orbit</span><span><kbd>Esc</kbd>Back</span>';
+        : '<span><kbd>←→</kbd>Tracks</span><span><kbd>Enter</kbd>Ride</span><span><kbd>V</kbd>Ghost</span><span>Drag to move · right drag to orbit</span><span><kbd>Esc</kbd>Back</span>';
   }
 
   nav(dx: number, dy: number): void {
