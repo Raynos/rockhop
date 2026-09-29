@@ -1,7 +1,7 @@
 /**
  * ROCKHOP course set: twelve original tracks in four zones, three per zone. This is the set the store build ships;
- * until then the tracks are registered for `getTrack(id)` only (playable by `?track=<id>`, the harness, the
- * reviewer) and `listTrackIds()` / `ALL_TRACKS` — the shipped world map and progression — are unchanged.
+ * the 3D island lists these tracks in normal play. They also resolve through `getTrack(id)` for the harness
+ * and reviewer. `listTrackIds()` / `ALL_TRACKS` remain dev fixture and retired-track catalogs.
  *
  * The retired set (the 15-track curriculum, the five `p<n>-*` playgrounds, the Labs in `../courses`) stays in the
  * repo as dev-only reference: `RETIRED_TRACKS` names it, and `scripts/track-originality.mjs` holds every track

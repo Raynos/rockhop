@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-/** Twelve-course 3D island level select. Progression remains in worldMap.ts. */
+/** Twelve-course 3D island level select. */
 import type { BikeClass, Medal, TrackDef } from '../core/types';
 import type { ArtManifest } from './art';
 import type { BestEntry, BoardEntry } from './best';
@@ -9,7 +9,7 @@ import { DEV_SURFACES } from '../core/release';
 import { MEDAL_NAME, medalSvg, wordmarkSvg } from './brand';
 import { medalTotals, nextTrack, shipTracks, stageLabel, type MedalOf } from './progress';
 import type { UiSfx } from './sfx';
-import { allMarkers, buildRegions, type Marker, type RegionId } from './worldMap';
+import { buildCampaignMarkers, type Marker, type RegionId } from './campaignMap';
 import { injectWorldMapStyles } from './worldMapStyles';
 import type { MountedWorldMap3DShell } from './worldMap3dScene';
 
@@ -95,8 +95,7 @@ export class WorldMapScreen extends Screen {
     const state = this.state();
     const medalOf: MedalOf = (id) => this.bestOf(id)?.medal ?? null;
     const ship = shipTracks(tracks, false);
-    const ids = new Set(ship.map((track) => track.id));
-    this.markers = allMarkers(buildRegions(tracks, medalOf, false)).filter((marker) => ids.has(marker.track.id));
+    this.markers = buildCampaignMarkers(ship, medalOf);
     if (this.markers.length !== 12) throw new Error(`3D map expected twelve campaign courses; got ${this.markers.length}`);
     const totals = medalTotals(ship, medalOf);
     const dot = (m: Medal, n: number): string => `<span class="${m}" title="${MEDAL_NAME[m]}">${medalSvg(m, MEDAL_NAME[m])}${n}</span>`;

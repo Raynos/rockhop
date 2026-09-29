@@ -3,7 +3,7 @@
  * bar covers every hero file whatever the saved outfit, class or tier, so nothing here reads a preference any more.
  *
  * Ask 59: the ONE thing it does select is the device's resolution tier. The pack ships two tiers of the key art,
- * the garage bikes, the medals and every world-map plate; a device fetches one of them (`src/boot/offline-pack.ts`
+ * the garage bikes and the medals; a device fetches one of them (`src/boot/offline-pack.ts`
  * picks the same tier through the same `artTier()`), so the denominator is the pack as THIS device downloads
  * it — still declared before the first byte, still never growing mid-boot.
  */
