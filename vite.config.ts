@@ -93,6 +93,8 @@ function retiredTracksLazy(): Plugin {
  * worklet asset). Phase `dev`: not streamed, not warmed.
  */
 const DEV_CHUNK = /^assets\/(retired|audio-offline|legacy-physics)-[\w-]+\.js$/;
+// Loaded only after a fatal error, never during normal play or boot.
+const CRASH_REPORT_CHUNK = /^assets\/sentry-errors-[\w-]+\.js$/;
 
 /** The inline loader script (`src/boot/inline.ts` bundled) must paint with the first HTML bytes: ≤ 8 KB minified. */
 const INLINE_BUDGET_BYTES = 8 * 1024;
@@ -106,7 +108,7 @@ const INLINE_BUDGET_BYTES = 8 * 1024;
  * moves by 40 KB (the delta plus the headroom it ate); the gate's threshold and the CONTRACT line are the
  * parent's call.
  *
- * Since the ROCKHOP gate round both count the same set: every JS file but the `DEV_CHUNK`s, worklet asset included.
+ * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
 const BUNDLE_BUDGET_GZ_BYTES = 640 * 1024;
 
@@ -123,9 +125,9 @@ function bundleBudget(): Plugin {
         if (item.type === 'chunk' ? false : !name.endsWith('.js')) continue;
         const gz = gzipSync(item.type === 'chunk' ? Buffer.from(item.code) : Buffer.from(item.source)).length;
         // Explicit review-only chunks are absent from normal player boot: listed, not budgeted.
-        const dev = DEV_CHUNK.test(name) || (MAP_REVIEW_BUILD && /^assets\/worldMap3dScene-[\w-]+\.js$/.test(name));
-        if (!dev) total += gz;
-        rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${dev ? '  (dev-only, not budgeted)' : ''}`);
+        const excluded = DEV_CHUNK.test(name) || CRASH_REPORT_CHUNK.test(name) || (MAP_REVIEW_BUILD && /^assets\/worldMap3dScene-[\w-]+\.js$/.test(name));
+        if (!excluded) total += gz;
+        rows.push(`  ${name.padEnd(40)} ${(gz / 1024).toFixed(1).padStart(8)} KB gz${excluded ? '  (outside player budget)' : ''}`);
       }
       const ok = total <= BUNDLE_BUDGET_GZ_BYTES;
       const line = `bundle budget: ${(total / 1024).toFixed(1)} KB gz (${total} B) of ${(BUNDLE_BUDGET_GZ_BYTES / 1024).toFixed(0)} KB — ${ok ? 'OK' : 'OVER BUDGET'}`;
@@ -155,7 +157,7 @@ interface LoadItem {
   path: string;
   bytes: number;
   gz: number;
-  phase: 'core' | 'title' | 'menu' | 'world' | 'worldmap' | 'models' | 'models-lod' | 'audio-worklet' | 'other' | 'dev';
+  phase: 'core' | 'title' | 'menu' | 'world' | 'worldmap' | 'models' | 'models-lod' | 'audio-worklet' | 'other' | 'telemetry' | 'dev';
   label?: string;
 }
 
@@ -329,6 +331,7 @@ function loadManifest(id: string): Plugin[] {
         // warms every `other` item (src/main.ts). The retired tracks' dev chunk is `dev`: only a `?` dev URL fetches it.
         if (name === 'model-catalog.json' || name.startsWith('assets/inbox-') || name.startsWith('assets/worldMap3dScene-') || name.startsWith('map-review/')) phase = 'other';
         else if (DEV_CHUNK.test(name)) phase = 'dev';
+        else if (CRASH_REPORT_CHUNK.test(name)) phase = 'telemetry';
         else if (/worklet/.test(name)) phase = 'audio-worklet';
         else if (/\.(glb|gltf)$/.test(name)) phase = /-lod-[a-f0-9]{16}\.glb$/.test(name) ? 'models-lod' : 'models';
         const label = /three/.test(name) ? 'three.js' : item.type === 'chunk' && item.isEntry ? 'game (index.js)' : name.replace(/^assets\//, '');
@@ -634,6 +637,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           three: ['three'],
+          'sentry-errors': ['@sentry/browser'],
         },
         // The audio renderer and v1 physics are explicit review-only paths, never normal player boots.
         chunkFileNames: (c) => (c.facadeModuleId?.endsWith('/src/audio/offline.ts') ? 'assets/audio-offline-[hash].js'

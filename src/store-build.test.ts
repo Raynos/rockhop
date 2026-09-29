@@ -62,7 +62,8 @@ const FEATURES: Record<string, (string | RegExp)[]> = {
   'on-device bench': ['bench/b1-bot-3.json', 'bench-copy'],
   'Labs tracks': ['Container Step', 'Timber Launch', 'Physics Test', 'Flat 200'],
   'model dev switch (procedural / modelled)': ['Applies on the next track load'],
-  '?-param dev modes (the page never reads its query string)': ['location.search', 'touchdebug', 'harness=1'],
+  // The lazy Sentry SDK may inspect location.search for its own URL handling; these are the game's dev controls.
+  '?-param dev modes': ['touchdebug', 'harness=1'],
   'service worker': ['./sw.js'],
   'update pill + version probe': ['version.json'],
   'window.__rockhop automation hook': [/window\.__rockhop\s*=/],
@@ -72,6 +73,13 @@ const FEATURES: Record<string, (string | RegExp)[]> = {
 const has = (text: string, m: string | RegExp): boolean => (typeof m === 'string' ? text.includes(m) : m.test(text));
 
 describe('store build (VITE_STORE=1) compiles out every dev surface', () => {
+  it('keeps the crash-only Sentry SDK out of the normal boot set', () => {
+    const chunk = web.files.find((f) => /^assets\/sentry-errors-[\w-]+\.js$/.test(f));
+    expect(chunk).toBeDefined();
+    const manifest = JSON.parse(fs.readFileSync(path.join(web.dir, 'load-manifest.json'), 'utf8')) as { items: { path: string; phase: string }[] };
+    expect(manifest.items.find((item) => item.path === `./${chunk}`)?.phase).toBe('telemetry');
+    expect(fs.readFileSync(path.join(web.dir, 'index.html'), 'utf8')).not.toContain(chunk);
+  });
   for (const [feature, markers] of Object.entries(FEATURES)) {
     it(`${feature}: in the web build, absent from the store build`, () => {
       for (const m of markers) expect(has(web.text, m), `web build lost marker ${String(m)} — update the marker`).toBe(true);

@@ -59,7 +59,7 @@ export function captureBrowserError(reason: unknown, source: CrashSource): void 
   if (!shouldReportBrowserError({
     dsn,
     webdriver: navigator.webdriver === true,
-    search: location.search,
+    search: import.meta.env.VITE_STORE === '1' ? '' : location.search,
     test: import.meta.env.VITE_SENTRY_TEST === '1',
   })) return;
   void loadSdk().then((sentry) => {

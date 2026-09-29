@@ -172,10 +172,9 @@ function dirBytes(dir: string): number {
 }
 
 /**
- * G8: gzip of the JS a web player downloads — every `assets/*.js` except the load manifest's `dev` phase (the
- * retired tracks' `?`-URL chunk, the harness-only audio renderer: vite.config.ts `DEV_CHUNK`, the rule the build's
- * own budget applies). The lazy chunks a player does fetch (the audio worklet, the review sheet the offline pack
- * warms) count. Without a manifest every file counts.
+ * G8: gzip of the JS a web player downloads — every `assets/*.js` except the manifest's dev-only and
+ * fatal-error-only telemetry phases. The lazy chunks a player does fetch (audio worklet, review sheet) count.
+ * Without a manifest every file counts.
  */
 function jsGzipBytes(dir: string): { total: number; dev: number; devFiles: string[] } {
   const assets = path.join(dir, 'assets');
@@ -184,7 +183,7 @@ function jsGzipBytes(dir: string): { total: number; dev: number; devFiles: strin
   const devPaths = new Set<string>();
   try {
     const m = JSON.parse(fs.readFileSync(path.join(dir, 'load-manifest.json'), 'utf8')) as { items?: { path: string; phase: string }[] };
-    for (const i of m.items ?? []) if (i.phase === 'dev') devPaths.add(i.path.replace(/^\.\//, ''));
+    for (const i of m.items ?? []) if (i.phase === 'dev' || i.phase === 'telemetry') devPaths.add(i.path.replace(/^\.\//, ''));
   } catch {
     // no manifest: count everything
   }
@@ -597,7 +596,7 @@ async function main(): Promise<void> {
     // G8 bundle
     const runBundle = (check: (c: GateCheck) => void): Promise<void> => (async () => {
     const gzKB = gz / 1024;
-    check({ id: 'bundle.jsGzipKB', value: gzKB, limit: num('bundle.jsGzipKB'), pass: gz > 0 && gzKB <= num('bundle.jsGzipKB'), unit: 'KB', note: `player JS (every assets/*.js but the manifest's dev phase); dev-only, not counted: ${js.devFiles.join(', ') || 'none'} ${(js.dev / 1024).toFixed(1)} KB gz; dist ${(distBytes / 1024).toFixed(0)} KB raw` });
+    check({ id: 'bundle.jsGzipKB', value: gzKB, limit: num('bundle.jsGzipKB'), pass: gz > 0 && gzKB <= num('bundle.jsGzipKB'), unit: 'KB', note: `player JS (excluding dev and fatal-error telemetry phases); outside player budget: ${js.devFiles.join(', ') || 'none'} ${(js.dev / 1024).toFixed(1)} KB gz; dist ${(distBytes / 1024).toFixed(0)} KB raw` });
     })();
 
     // G9 determinism on the golden recording
