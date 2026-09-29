@@ -35,7 +35,7 @@ The [post-map four-section smoke gate](../evidence/round-gate-2026-09-28/README.
 
 A [clean-source iOS WKWebView gate](../evidence/store-release/native/20260929-021213/README.md) on `6a70d2a2` matches web float64 finish bytes and state hash, a paced replay, crash and 20 one-tick restarts with zero AudioContexts. Simulator cold menu is 4,335 ms. Physical iPhone/Android and a signed release candidate remain open; the Android emulator stays off at the user's request.
 
-The [current protected C-map review preview](../evidence/world-map-c/review-build/README.md) serves committed `9b619c03` with the D3 bridge and saved-medal flags at `?map3d=1`. Exact remote version and map/sky assets were verified; public `main` remains `f9f7a05b`.
+The [current protected C-map review preview](../evidence/world-map-c/review-build/README.md) serves committed `ea93e1e3` with the D3 bridge, S1 lift bridge/HUD cue and saved-medal flags at `?map3d=1`. Exact remote version and map/sky assets were verified; public `main` remains `f9f7a05b`.
 
 Gate 2's [S1 lift-station bridge pass](../evidence/s1-lift-bridge/README.md) gives the Pro upper route a modeled support and downhill exit while preserving exact Pro Diamond and Starter Gold pins. A bounded recovery sweep improves clean upper finishes from three to six variants but is still narrow; human play remains decisive. The S1 collider golden and all 74 source-stamped recordings were updated after browser proof, with unchanged inputs; the full serial suite passes 1,420 tests (2 skipped).
 
