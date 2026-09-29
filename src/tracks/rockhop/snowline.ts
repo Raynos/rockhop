@@ -236,7 +236,7 @@ export const S3 = (() => {
     attemptsBand: [8, 16],
     targetTimeS: 39.5, // Pro upper reference 29.600 s; Diamond 30.218 s also requires summit-shelf proof
   })
-    .hint('Ride high over the snow-cat to catch the wind shelf')
+    .hint('Lift the front onto the first shelf; level across the crevasses')
     .camera({ mode: 'side' })
     .setPiece('start', 'The Top Station')
     .flat(6)

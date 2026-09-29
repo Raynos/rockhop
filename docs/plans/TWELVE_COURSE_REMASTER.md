@@ -77,3 +77,7 @@ The [played A1 flume round](../evidence/course-remaster/a1/README.md) gives the 
 ### 2026-09-29 C2 cue finding
 
 The [played Pier 2 fault/retry clip](../evidence/course-remaster/c2/README.md) places an ordered ease/lift/coast cue before the pier and replaces the misleading lean-forward hint. Replaying the old four-attempt input preserves its exact window-end hash, including the fault. The cue is visible at phone size; whether a new rider learns the move in fewer attempts remains unmeasured. The course's pier/crane/barge models and full clean ride still need visual remaster review.
+
+### 2026-09-29 A2 and S3 findings
+
+The [A2 pivot pass](../evidence/course-remaster/a2/README.md) models the moving timber's axle, cribbing and cut faces without changing its collider. The played window retains its exact state hash; fresh faults and physical-phone pacing are open. The [S3 full ride](../evidence/course-remaster/s3/README.md) displays a first-shelf cue before the opening crevasse and starts the optional Diamond route cue earlier. Rookie and Pro finishes remain exact in Node and two browser runs. The [D1/S1/S3 fault diagnosis](../evidence/course-remaster/DIAGNOSIS.md) records the current evidence behind these cue choices; uncoached comprehension and full visual remaster remain open.

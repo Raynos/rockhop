@@ -1,0 +1,68 @@
+{
+  "baseCommit": "5cac3e4c33c44dfcb3c40c296411602daccda7dd",
+  "sourceFiles": [
+    "src/tracks/rockhop/snowline.ts",
+    "src/ui/diamondRouteCue.ts",
+    "src/ui/hud.ts"
+  ],
+  "cases": [
+    {
+      "bike": "rookie",
+      "input": "harness/inputs/s3-whiteout/bot-3.json",
+      "inputSha256": "58f06e00869704e32647cb74c06db1661fe2c30fa95afa04d8f622dcb0c2e80e",
+      "node": {
+        "hash": "6706e22e5f446466",
+        "runTime": 31.725,
+        "faults": 0,
+        "finishTime": 31.724999999999998,
+        "tick": 3807
+      },
+      "browserRuns": [
+        {
+          "hash": "6706e22e5f446466",
+          "runTime": 31.725,
+          "finishTime": 31.724999999999998,
+          "tick": 3807,
+          "faults": 0
+        },
+        {
+          "hash": "6706e22e5f446466",
+          "runTime": 31.725,
+          "finishTime": 31.724999999999998,
+          "tick": 3807,
+          "faults": 0
+        }
+      ],
+      "matchesPreCueBaselineHash": true
+    },
+    {
+      "bike": "pro",
+      "input": "harness/inputs/s3-whiteout/bot-3-pro.json",
+      "inputSha256": "8ef1bebca78b5f8f91c3d68373eecbb098484f604fa11e00452fe78c66a361f8",
+      "node": {
+        "hash": "ac95fa85250009d9",
+        "runTime": 29.6,
+        "faults": 0,
+        "finishTime": 29.599999999999998,
+        "tick": 3552
+      },
+      "browserRuns": [
+        {
+          "hash": "ac95fa85250009d9",
+          "runTime": 29.6,
+          "finishTime": 29.599999999999998,
+          "tick": 3552,
+          "faults": 0
+        },
+        {
+          "hash": "ac95fa85250009d9",
+          "runTime": 29.6,
+          "finishTime": 29.599999999999998,
+          "tick": 3552,
+          "faults": 0
+        }
+      ],
+      "matchesPreCueBaselineHash": true
+    }
+  ]
+}

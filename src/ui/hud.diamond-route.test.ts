@@ -37,4 +37,36 @@ describe('late Diamond high-line guidance', () => {
     expect(hud.root.querySelector('.skill-cue')?.classList.contains('route')).toBe(false);
     expect(hud.root.querySelector('.skill-cue')?.textContent).toContain('EASE OFF');
   });
+
+  it('teaches the first Whiteout shelf before the gap, then restores the earlier upper-route prompt', () => {
+    const hud = new DomHud(document.body);
+    const track = getTrack('s3-whiteout')!;
+    const route = diamondRouteCue(track)!;
+    hud.setTrack(track);
+    hud.setRun({ ...riding, phase: 'countdown' });
+    expect(hud.root.querySelector('.hints')?.textContent).toContain('first shelf');
+    hud.setRun(riding);
+    const cue = hud.root.querySelector('.skill-cue')!;
+    hud.update(at(27.9));
+    expect(cue.classList.contains('show')).toBe(false);
+    hud.update(at(28));
+    expect(cue.classList.contains('show')).toBe(true);
+    expect(cue.classList.contains('route')).toBe(false);
+    expect(cue.textContent).toContain('LIFT TO THE SHELF');
+    hud.update(at(52.9));
+    expect(cue.classList.contains('show')).toBe(true);
+    hud.update(at(53));
+    expect(cue.classList.contains('show')).toBe(false);
+    expect(cue.classList.contains('route')).toBe(true);
+    expect(cue.textContent).toContain('SNOWCAT SHELF');
+    expect(route.x0).toBe(108);
+    hud.update(at(route.x0));
+    expect(cue.classList.contains('show')).toBe(true);
+    expect(cue.textContent).toContain('UPPER DECK');
+    hud.update(at(route.x1));
+    expect(cue.classList.contains('show')).toBe(false);
+    hud.setTrack(getTrack('d1-dust-devil')!);
+    expect(cue.classList.contains('route')).toBe(false);
+    expect(cue.textContent).not.toContain('SNOWCAT');
+  });
 });

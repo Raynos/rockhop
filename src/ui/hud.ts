@@ -73,6 +73,7 @@ export class DomHud implements Hud {
   private readonly skillCueEl: HTMLDivElement;
   private skillCueVisible = false;
   private c2CuePhase: 'pier' | 'crane' | null = null;
+  private s3OpeningCueOn = false;
   private routeCue: DiamondRouteCue | null = null;
   private faultCue: FaultCue | null = null;
   private faultCuePending = false;
@@ -281,6 +282,7 @@ export class DomHud implements Hud {
   setTrack(track: TrackDef): void {
     this.track = track;
     this.c2CuePhase = null;
+    this.s3OpeningCueOn = false;
     this.clearFaultCue();
     this.setSkillCueVisible(false);
     this.routeCue = diamondRouteCue(track);
@@ -443,8 +445,22 @@ export class DomHud implements Hud {
         this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↘</span><span class="skill-cue-copy"><strong>LEVEL THE BIKE</strong><small>RELEASE OR LEAN FORWARD</small></span>';
       }
     }
+    // The first Whiteout shelf is mandatory. Its short lesson ends before the crevasse,
+    // then the same fixed HUD slot is restored for the later optional upper route.
+    const s3Opening = t.id === 's3-whiteout' && x >= 28 && x < 53;
+    if (s3Opening !== this.s3OpeningCueOn) {
+      this.s3OpeningCueOn = s3Opening;
+      this.skillCueEl.classList.toggle('route', !s3Opening && this.routeCue !== null);
+      if (s3Opening) {
+        this.skillCueEl.setAttribute('aria-label', 'First shelf. Lift the front before the step, then level over the crevasses.');
+        this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↗</span><span class="skill-cue-copy"><strong>LIFT TO THE SHELF</strong><small>LEVEL OVER CREVASSES</small></span>';
+      } else if (this.routeCue) {
+        this.skillCueEl.setAttribute('aria-label', `Diamond high line: ${this.routeCue.action}`);
+        this.skillCueEl.innerHTML = `<span class="skill-cue-icon" aria-hidden="true">◇</span><span class="skill-cue-copy"><strong>${escapeHtml(this.routeCue.title)}</strong><small>${escapeHtml(this.routeCue.action)}</small></span>`;
+      }
+    }
     const highLine = this.routeCue !== null && x >= this.routeCue.x0 && x < this.routeCue.x1;
-    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || highLine)));
+    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || s3Opening || highLine)));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);
