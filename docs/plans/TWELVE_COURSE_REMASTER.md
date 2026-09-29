@@ -73,3 +73,7 @@ The [played C1 harbor round](../evidence/course-remaster/c1/README.md) removes r
 ### 2026-09-29 A1 visual finding
 
 The [played A1 flume round](../evidence/course-remaster/a1/README.md) gives the raised trough a timber truss and waterwheel and carries its frame to the actual pond takeoff lip. Its 130-frame riding window keeps the tire surface, rider and landing visible with exact browser/Node state hash. The obstacle set costs 1,028 additional triangles and one draw call; colliders and physics are unchanged. A full A1 ride after the prop pass, physical phone pacing and new-player response remain open, so this is a bounded scene pass rather than course sign-off.
+
+### 2026-09-29 C2 cue finding
+
+The [played Pier 2 fault/retry clip](../evidence/course-remaster/c2/README.md) places an ordered ease/lift/coast cue before the pier and replaces the misleading lean-forward hint. Replaying the old four-attempt input preserves its exact window-end hash, including the fault. The cue is visible at phone size; whether a new rider learns the move in fewer attempts remains unmeasured. The course's pier/crane/barge models and full clean ride still need visual remaster review.

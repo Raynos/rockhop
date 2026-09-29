@@ -1,0 +1,7 @@
+# C2 Pier 2 approach cue
+
+The second briefed Rookie rider needed four attempts and reported that “lean forward” at Pier 2 encouraged a nose dive into the descending ramp. Their [earlier played fault clip](../../stranger-2026-09-29/c2-pier2-fault/clip.mp4) records that failure and checkpoint recovery.
+
+The [new 9.33-second played capture](pier2-cue.mp4) replays that **same four-attempt input** through the Pier 2 approach, fault and retry at landscape phone size. The cue appears just after the checkpoint, before the rising pier, and reads **EASE BEFORE LIP / LIFT BRIEFLY · COAST DOWN**. The authored track hint says the same move; the final crane hop keeps its separate level-the-bike instruction. The [sheet](sheet.jpg) indexes cue timing and the [capture record](capture.json) gives the input and camera checks. Source at capture was HEAD `dda42caf` plus `coast.ts` SHA-256 `20e7cfc0f2b8f3671e5032f2b6dff49daee8fbebd4c7a5a96bfa0afbcebad682` and `hud.ts` SHA-256 `e60ad0ebececf600d86c71e9909e6644bf9f99014a77ab75c6f1908189140dbc`.
+
+The recorded input still faults; a text change cannot alter that pre-recorded control sequence. Its end-window state hash remains `cdd53e41090271a6`, identical to the earlier fault capture, and the new clip has zero riding camera-box or roll violations. A fresh uncoached player must show whether the instruction actually lowers attempts and makes the cause understandable. C2 scenery and full-course sign-off remain open.

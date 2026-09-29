@@ -72,6 +72,7 @@ export class DomHud implements Hud {
   private readonly hintsEl: HTMLDivElement;
   private readonly skillCueEl: HTMLDivElement;
   private skillCueVisible = false;
+  private c2CuePhase: 'pier' | 'crane' | null = null;
   private routeCue: DiamondRouteCue | null = null;
   private faultCue: FaultCue | null = null;
   private faultCuePending = false;
@@ -279,6 +280,7 @@ export class DomHud implements Hud {
 
   setTrack(track: TrackDef): void {
     this.track = track;
+    this.c2CuePhase = null;
     this.clearFaultCue();
     this.setSkillCueVisible(false);
     this.routeCue = diamondRouteCue(track);
@@ -428,9 +430,21 @@ export class DomHud implements Hud {
     if (!retryLesson && this.faultCue) this.clearFaultCue();
     // Authored approach lanes. Fixed screen position keeps the prompt pixel-stable as the world moves.
     const c1Lane = t.id === 'c1-low-tide' && x >= 179.6 && x < 209.6;
+    const c2Pier = t.id === 'c2-crane-hop' && x >= 87 && x < 136;
     const c2Lane = t.id === 'c2-crane-hop' && x >= 284 && x < 323;
+    const c2Phase = c2Pier ? 'pier' : c2Lane ? 'crane' : null;
+    if (c2Phase !== this.c2CuePhase) {
+      this.c2CuePhase = c2Phase;
+      if (c2Phase === 'pier') {
+        this.skillCueEl.setAttribute('aria-label', 'Pier 2. Ease off before the lip, lift the front briefly, then coast onto the down ramp.');
+        this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↗</span><span class="skill-cue-copy"><strong>EASE BEFORE LIP</strong><small>LIFT BRIEFLY · COAST DOWN</small></span>';
+      } else if (c2Phase === 'crane') {
+        this.skillCueEl.setAttribute('aria-label', 'Crane hop. Level the bike in flight. Release GO or lean forward to meet the barge.');
+        this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↘</span><span class="skill-cue-copy"><strong>LEVEL THE BIKE</strong><small>RELEASE OR LEAN FORWARD</small></span>';
+      }
+    }
     const highLine = this.routeCue !== null && x >= this.routeCue.x0 && x < this.routeCue.x1;
-    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Lane || highLine)));
+    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || highLine)));
     if (x !== this.lastStripX) {
       this.lastStripX = x;
       const f = clamp01((x - t.start.pos.x) / span);

@@ -98,7 +98,7 @@ export const C2 = rockhop('C2', 'c2-crane-hop', 'Crane Hop', 'coast', 'beginner'
   targetTimeS: 31, // current 26.608 s clean reference earns Gold; Diamond asks for a faster jump
 })
   .hint('Gas off the first pier lip')
-  .hint('Ease off and lean forward over Pier 2’s falling ramp')
+  .hint('Ease before Pier 2, lift the front briefly, then coast onto the down ramp')
   .hint('Land on the ramp down')
   .hint('At the crane, release GO or lean forward in flight')
   .camera({ mode: 'side' })
