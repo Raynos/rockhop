@@ -1,0 +1,1120 @@
+{
+  "verdict": "PASS",
+  "engine": "headless WebKit",
+  "source": {
+    "head": "0e75f4159e5c6183f213489b4dd5bf23345a84f2",
+    "sourceTreeSha256": "dc0d38902fff60c822edace29c1fa93f2abdcf68b114dfc932f7c651e9eb12fa",
+    "archive": true,
+    "wip": []
+  },
+  "privateBuildIndexSha256": "c91c5475eced2389c57cd1cb9488e6ddb997e745e49f983b21fcf06d56825873",
+  "wipHarnessSha256": "e2ee218d9ccc6d19baa6842ef31eef26b9141ca0f5ede15e8354788a1b9fd8a6",
+  "viewportCss": [
+    852,
+    392
+  ],
+  "video": {
+    "path": "docs/evidence/course-remaster/c1/integrated-first-win/played-flow.mp4",
+    "fps": 20,
+    "frames": 834,
+    "seconds": 41.7,
+    "sizeBytes": 8700620,
+    "sha256": "df928c15a375271ac4aa5457c2d1a3e0ee1e4cf55ea1378b6f77220642929109",
+    "audio": "none"
+  },
+  "recording": "harness/inputs/c1-low-tide/bot-3.json",
+  "recordingSha256": "ce9eb69fb42766f75c3e0bd381558ad0d32ba88c65c066a66efb5caf5a7466ec",
+  "recordingHeader": {
+    "version": 1,
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "physicsHz": 120,
+    "note": "standalone-c1-challenge marker2-brake-pallet-ramp bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+    "bike": "rookie",
+    "physics": "v2"
+  },
+  "method": "One live App page; Playwright clock drives UI; 120 Hz pinned input manually stepped and rendered at 20 fps; final countdown fraction skipped for exact input alignment. The repeated clean C1 ride and no-duplicate-payout check run after the continuous first-journey clip ends, on the same reloaded page.",
+  "expected": {
+    "hash": "2bfe061963ffb058",
+    "finishTime": 30.349999999999998,
+    "tick": 3642,
+    "faults": 0
+  },
+  "firstResult": {
+    "name": "first-result",
+    "onVideo": true,
+    "frame": 761,
+    "videoS": 38.05,
+    "screen": "run",
+    "phase": "finished",
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "entryHold": false,
+    "renderEntering": false,
+    "runTime": 30.35,
+    "finishTime": 30.349999999999998,
+    "faults": 0,
+    "mapCanvasCount": 0,
+    "paintedMapPresent": false,
+    "mapStates": null,
+    "mapSelected": "c1-low-tide",
+    "medal": "Diamond",
+    "reward": "+300",
+    "walletText": "300",
+    "resultTime": "0:30.350",
+    "garageWallet": "Scrap0",
+    "ledger": {
+      "version": 1,
+      "wallet": 300,
+      "medals": {
+        "c1-low-tide": "platinum"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "pb": {
+      "time": 30.35,
+      "bestMedal": "platinum",
+      "faults": 0
+    }
+  },
+  "earnedMap": {
+    "name": "earned-medal-map",
+    "onVideo": true,
+    "frame": 761,
+    "videoS": 38.05,
+    "screen": "tracks",
+    "phase": "menu",
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "entryHold": false,
+    "renderEntering": false,
+    "runTime": 0,
+    "finishTime": null,
+    "faults": 0,
+    "mapCanvasCount": 1,
+    "paintedMapPresent": false,
+    "mapStates": [
+      "platinum",
+      "available",
+      "available",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked"
+    ],
+    "mapSelected": "c1-low-tide",
+    "medal": "Diamond",
+    "reward": "+300",
+    "walletText": "300",
+    "resultTime": "0:30.350",
+    "garageWallet": "Scrap0",
+    "ledger": {
+      "version": 1,
+      "wallet": 300,
+      "medals": {
+        "c1-low-tide": "platinum"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "pb": {
+      "time": 30.35,
+      "bestMedal": "platinum",
+      "faults": 0
+    }
+  },
+  "garage": {
+    "name": "garage-wallet",
+    "onVideo": true,
+    "frame": 805,
+    "videoS": 40.25,
+    "screen": "garage",
+    "phase": "menu",
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "entryHold": false,
+    "renderEntering": false,
+    "runTime": 0,
+    "finishTime": null,
+    "faults": 0,
+    "mapCanvasCount": 0,
+    "paintedMapPresent": false,
+    "mapStates": null,
+    "mapSelected": "c1-low-tide",
+    "medal": "Diamond",
+    "reward": "+300",
+    "walletText": "300",
+    "resultTime": "0:30.350",
+    "garageWallet": "Scrap300",
+    "ledger": {
+      "version": 1,
+      "wallet": 300,
+      "medals": {
+        "c1-low-tide": "platinum"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "pb": {
+      "time": 30.35,
+      "bestMedal": "platinum",
+      "faults": 0
+    }
+  },
+  "reloaded": {
+    "name": "menu-after-reload",
+    "onVideo": true,
+    "frame": 805,
+    "videoS": 40.25,
+    "screen": "menu",
+    "phase": "menu",
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "entryHold": false,
+    "renderEntering": false,
+    "runTime": 0,
+    "finishTime": null,
+    "faults": 0,
+    "mapCanvasCount": 0,
+    "paintedMapPresent": false,
+    "mapStates": null,
+    "mapSelected": null,
+    "medal": "",
+    "reward": "—",
+    "walletText": "—",
+    "resultTime": "",
+    "garageWallet": "Scrap0",
+    "ledger": {
+      "version": 1,
+      "wallet": 300,
+      "medals": {
+        "c1-low-tide": "platinum"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "pb": {
+      "time": 30.35,
+      "bestMedal": "platinum",
+      "faults": 0
+    }
+  },
+  "savedMap": {
+    "name": "saved-medal-map",
+    "onVideo": true,
+    "frame": 818,
+    "videoS": 40.9,
+    "screen": "tracks",
+    "phase": "menu",
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "entryHold": false,
+    "renderEntering": false,
+    "runTime": 0,
+    "finishTime": null,
+    "faults": 0,
+    "mapCanvasCount": 1,
+    "paintedMapPresent": false,
+    "mapStates": [
+      "platinum",
+      "available",
+      "available",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked",
+      "locked"
+    ],
+    "mapSelected": "c1-low-tide",
+    "medal": "",
+    "reward": "—",
+    "walletText": "—",
+    "resultTime": "",
+    "garageWallet": "Scrap0",
+    "ledger": {
+      "version": 1,
+      "wallet": 300,
+      "medals": {
+        "c1-low-tide": "platinum"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "pb": {
+      "time": 30.35,
+      "bestMedal": "platinum",
+      "faults": 0
+    }
+  },
+  "repeatedResult": {
+    "name": "repeat-result",
+    "onVideo": false,
+    "frame": 834,
+    "videoS": 41.7,
+    "screen": "run",
+    "phase": "finished",
+    "trackId": "c1-low-tide",
+    "seed": 341352973,
+    "entryHold": false,
+    "renderEntering": false,
+    "runTime": 30.35,
+    "finishTime": 30.349999999999998,
+    "faults": 0,
+    "mapCanvasCount": 0,
+    "paintedMapPresent": false,
+    "mapStates": null,
+    "mapSelected": "c1-low-tide",
+    "medal": "Diamond",
+    "reward": "No new Scrap",
+    "walletText": "300",
+    "resultTime": "0:30.350",
+    "garageWallet": "Scrap0",
+    "ledger": {
+      "version": 1,
+      "wallet": 300,
+      "medals": {
+        "c1-low-tide": "platinum"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "pb": {
+      "time": 30.35,
+      "bestMedal": "platinum",
+      "faults": 0
+    }
+  },
+  "marks": [
+    {
+      "name": "menu",
+      "onVideo": true,
+      "frame": 0,
+      "videoS": 0,
+      "screen": "menu",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": null,
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": null
+    },
+    {
+      "name": "first-3d-map",
+      "onVideo": true,
+      "frame": 17,
+      "videoS": 0.85,
+      "screen": "tracks",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 1,
+      "paintedMapPresent": false,
+      "mapStates": [
+        "available",
+        "available",
+        "available",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked"
+      ],
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": null
+    },
+    {
+      "name": "c1-countdown",
+      "onVideo": true,
+      "frame": 50,
+      "videoS": 2.5,
+      "screen": "run",
+      "phase": "countdown",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": true,
+      "renderEntering": true,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": null
+    },
+    {
+      "name": "first-go",
+      "onVideo": true,
+      "frame": 100,
+      "videoS": 5,
+      "screen": "run",
+      "phase": "riding",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": null
+    },
+    {
+      "name": "first-exact-finish",
+      "onVideo": true,
+      "frame": 707,
+      "videoS": 35.35,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 30.35,
+      "finishTime": 30.349999999999998,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": null
+    },
+    {
+      "name": "first-result",
+      "onVideo": true,
+      "frame": 761,
+      "videoS": 38.05,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 30.35,
+      "finishTime": 30.349999999999998,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "Diamond",
+      "reward": "+300",
+      "walletText": "300",
+      "resultTime": "0:30.350",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "earned-medal-map",
+      "onVideo": true,
+      "frame": 761,
+      "videoS": 38.05,
+      "screen": "tracks",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 1,
+      "paintedMapPresent": false,
+      "mapStates": [
+        "platinum",
+        "available",
+        "available",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked"
+      ],
+      "mapSelected": "c1-low-tide",
+      "medal": "Diamond",
+      "reward": "+300",
+      "walletText": "300",
+      "resultTime": "0:30.350",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "garage-wallet",
+      "onVideo": true,
+      "frame": 805,
+      "videoS": 40.25,
+      "screen": "garage",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "Diamond",
+      "reward": "+300",
+      "walletText": "300",
+      "resultTime": "0:30.350",
+      "garageWallet": "Scrap300",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "menu-after-reload",
+      "onVideo": true,
+      "frame": 805,
+      "videoS": 40.25,
+      "screen": "menu",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": null,
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "saved-medal-map",
+      "onVideo": true,
+      "frame": 818,
+      "videoS": 40.9,
+      "screen": "tracks",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 1,
+      "paintedMapPresent": false,
+      "mapStates": [
+        "platinum",
+        "available",
+        "available",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked"
+      ],
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "film-end-saved-map",
+      "onVideo": true,
+      "frame": 834,
+      "videoS": 41.7,
+      "screen": "tracks",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 1,
+      "paintedMapPresent": false,
+      "mapStates": [
+        "platinum",
+        "available",
+        "available",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked",
+        "locked"
+      ],
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "c1-countdown",
+      "onVideo": false,
+      "frame": 834,
+      "videoS": 41.7,
+      "screen": "run",
+      "phase": "countdown",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": true,
+      "renderEntering": true,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "repeat-go",
+      "onVideo": false,
+      "frame": 834,
+      "videoS": 41.7,
+      "screen": "run",
+      "phase": "riding",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 0,
+      "finishTime": null,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "repeat-exact-finish",
+      "onVideo": false,
+      "frame": 834,
+      "videoS": 41.7,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 30.35,
+      "finishTime": 30.349999999999998,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "",
+      "reward": "—",
+      "walletText": "—",
+      "resultTime": "",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    },
+    {
+      "name": "repeat-result",
+      "onVideo": false,
+      "frame": 834,
+      "videoS": 41.7,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "entryHold": false,
+      "renderEntering": false,
+      "runTime": 30.35,
+      "finishTime": 30.349999999999998,
+      "faults": 0,
+      "mapCanvasCount": 0,
+      "paintedMapPresent": false,
+      "mapStates": null,
+      "mapSelected": "c1-low-tide",
+      "medal": "Diamond",
+      "reward": "No new Scrap",
+      "walletText": "300",
+      "resultTime": "0:30.350",
+      "garageWallet": "Scrap0",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "pb": {
+        "time": 30.35,
+        "bestMedal": "platinum",
+        "faults": 0
+      }
+    }
+  ],
+  "rideSamples": [
+    {
+      "label": "first",
+      "frame": 101,
+      "inputTick": 6,
+      "runTime": 0.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 141,
+      "inputTick": 246,
+      "runTime": 2.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 181,
+      "inputTick": 486,
+      "runTime": 4.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 221,
+      "inputTick": 726,
+      "runTime": 6.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 261,
+      "inputTick": 966,
+      "runTime": 8.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 301,
+      "inputTick": 1206,
+      "runTime": 10.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 341,
+      "inputTick": 1446,
+      "runTime": 12.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 381,
+      "inputTick": 1686,
+      "runTime": 14.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 421,
+      "inputTick": 1926,
+      "runTime": 16.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 461,
+      "inputTick": 2166,
+      "runTime": 18.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 501,
+      "inputTick": 2406,
+      "runTime": 20.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 541,
+      "inputTick": 2646,
+      "runTime": 22.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 581,
+      "inputTick": 2886,
+      "runTime": 24.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 621,
+      "inputTick": 3126,
+      "runTime": 26.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 661,
+      "inputTick": 3366,
+      "runTime": 28.05,
+      "phase": "riding"
+    },
+    {
+      "label": "first",
+      "frame": 701,
+      "inputTick": 3606,
+      "runTime": 30.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 6,
+      "runTime": 0.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 246,
+      "runTime": 2.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 486,
+      "runTime": 4.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 726,
+      "runTime": 6.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 966,
+      "runTime": 8.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 1206,
+      "runTime": 10.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 1446,
+      "runTime": 12.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 1686,
+      "runTime": 14.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 1926,
+      "runTime": 16.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 2166,
+      "runTime": 18.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 2406,
+      "runTime": 20.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 2646,
+      "runTime": 22.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 2886,
+      "runTime": 24.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 3126,
+      "runTime": 26.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 3366,
+      "runTime": 28.05,
+      "phase": "riding"
+    },
+    {
+      "label": "repeat",
+      "frame": 834,
+      "inputTick": 3606,
+      "runTime": 30.05,
+      "phase": "riding"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "wallMs": 75074
+}
