@@ -159,3 +159,15 @@ Fresh silent low/high baseline exact clear/crash/one-tick restart passes.
 
 Limits: No deformed collision or visible bike contact pass. Source old head
 stays rejected. New anatomical hands are unbuilt; no bake or gameplay rig.
+
+Finding: Private capture records actual consumed assets and post-render
+visible-surface results; absent maps remain unmeasured. Bind its helper to
+the game's existing Three runtime, with full prefix and exact physics proof.
+
+Validation: Parent reran13focused tests/typecheck/lint and independently
+verified all8 retained prefix state/hash/phase/time samples against CPU Game.
+Existing silent WebKit capture has0errors/AudioContexts and4unmeasured slots.
+
+Limits: Final constructor identity/live-scene-root guards await fresh
+browser execution; no actual new rider maps, contact or appearance pass.
+Two setup failures and the reported checkpoint-order miss stay preserved.

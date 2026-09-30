@@ -1,0 +1,74 @@
+{
+  "status": "private integration preflight; no actual surface mappings or rider contact gate accepted",
+  "tests": "13 focused tests passed",
+  "harnessTypecheck": "exit0",
+  "focusedLint": "exit0",
+  "sourceFiles": [
+    {
+      "file": "harness/hero-capture.mts",
+      "sha256": "e48b05ae98fe8d583cb49a703674c18feb24395733aabb1a3c7dc5c9d89a01d3"
+    },
+    {
+      "file": "harness/hero-remaster/capture-options.mts",
+      "sha256": "f693b306fa9f154ddc6bb6c3405b819213505f3cb98a959e38bd8696f3b71a78"
+    },
+    {
+      "file": "harness/hero-remaster/capture-options.test.ts",
+      "sha256": "d42be0a27d8be51e1d06066fdbfeb860092af7ad3a2f62b9de627185b5461191"
+    },
+    {
+      "file": "harness/hero-remaster/contact-browser.mts",
+      "sha256": "f633ea66dc49cd6106a52dd8bfa18a6958b1572c01af66a5bc3f442bf514e43e"
+    },
+    {
+      "file": "harness/hero-remaster/private-contact-bundle.mts",
+      "sha256": "e996ae20c983630c57223c01851132c6940083eaa3dfe4c61d5cdeaf66b06fcd"
+    },
+    {
+      "file": "harness/hero-remaster/private-contact-bundle.test.ts",
+      "sha256": "a6b6234824e202ba8ea353655063f4d9c535ff6611befb34fc3bf83cd8964f8e"
+    },
+    {
+      "file": "harness/hero-remaster/verify-contact-capture.mts",
+      "sha256": "8977b84e79380d41824031da41a62c0760b66f4f30442bd8a08c51bf6dc8f5bf"
+    }
+  ],
+  "reports": [
+    {
+      "file": "bundle-api-failure-process.json",
+      "sha256": "fbf7cab22c577af3d13e4a0af6022b6caa7dd26755f1ec5adb0af1e3b29ee0b9",
+      "source": "harness/out/hero-remaster/contact-integration/baseline-unmeasured/process.json"
+    },
+    {
+      "file": "duplicate-three-failure.json",
+      "sha256": "b7833cf8d319501583ddcd4b3985a2967de30acaa6a777a1d5c022c36c311e32",
+      "source": "harness/out/hero-remaster/contact-integration/baseline-unmeasured-v2/failure.json"
+    },
+    {
+      "file": "duplicate-three-process.json",
+      "sha256": "1be373d163b55fed2307133fe04ef7c9ca04d81a52485a297cf4b91540915fc3",
+      "source": "harness/out/hero-remaster/contact-integration/baseline-unmeasured-v2/process.json"
+    },
+    {
+      "file": "existing-three-process.json",
+      "sha256": "8cf0a5eb0254d9108780546f8df4e3e0a3c20fbef53b0eee5123517944deb943",
+      "source": "harness/out/hero-remaster/contact-integration/baseline-existing-three/process.json"
+    },
+    {
+      "file": "existing-three-capture.json",
+      "sha256": "6344b177e178233d8f4d18acb6b9fa69b8c3c564f37a027e3899da1ee8514a88",
+      "source": "harness/out/hero-remaster/contact-integration/baseline-existing-three/evidence.json"
+    },
+    {
+      "file": "existing-three-cpu-verification.json",
+      "sha256": "00452e0640e192e2e137f1a7cefb0c21cc69c301d3f5243bfec408632205b201",
+      "source": "harness/out/hero-remaster/contact-integration/baseline-existing-three/cpu-verification.json"
+    }
+  ],
+  "currentConstructorIdentityGuardBrowserExecuted": false,
+  "reason": "Constructor identity guard and rider live-scene root correction were prepared after the successful missing-mapping capture; parent checkpoint pending before any further browser run",
+  "productionSourceChanged": false,
+  "physicsSourceChanged": false,
+  "unmeasuredFourSlots": true,
+  "currentLiveSceneRootCorrectionBrowserExecuted": false
+}

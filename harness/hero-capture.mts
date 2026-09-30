@@ -4,8 +4,13 @@ import type { SkinnedMesh } from 'three';
 import { decodeJSON, iterateFrames } from '../src/core/replay';
 import type { QualityTier } from '../src/core/types';
 import type { HeroHarnessWindow } from './hero-browser';
+import type { SurfaceContactManifest, ContactId, ContactMeasurement } from './hero-remaster/surface-contacts.mjs';
+import type * as ContactBrowserModule from './hero-remaster/contact-browser.mjs';
+import type { Object3D } from 'three';
+import { captureOptions } from './hero-remaster/capture-options.mjs';
+import { privateContactBundle } from './hero-remaster/private-contact-bundle.mjs';
 // Played hero capture with full prefix rendering, exact timestamps and consumed-model byte proofs.
-// Run: tsx harness/hero-capture.mts build recording output fromTick toTick [quality] [outfit] [fps] [widthxheight] [swiftshader|metal|webkit] [deviceDpr=1] [phone|desktop]
+// Run: tsx harness/hero-capture.mts build recording output fromTick toTick [quality] [outfit] [fps] [widthxheight] [swiftshader|metal|webkit] [deviceDpr=1] [phone|desktop] [--surface-map FILE]
 import { createServer } from 'node:http';
 import { readFile, readdir, mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -13,7 +18,8 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { chromium, webkit } from 'playwright';
 
-const [buildArg, recordingArg, outArg, fromArg, toArg, quality = 'high', outfit = 'street', fpsArg = '60', size = '1280x720', angleBackend = 'swiftshader', dprArg = '1', deviceClass = 'desktop'] = process.argv.slice(2);
+const options = captureOptions(process.argv.slice(2));
+const [buildArg, recordingArg, outArg, fromArg, toArg, quality = 'high', outfit = 'street', fpsArg = '60', size = '1280x720', angleBackend = 'swiftshader', dprArg = '1', deviceClass = 'desktop'] = options.positional;
 if (!buildArg || !recordingArg || !outArg) throw new Error('build recording output fromTick toTick [quality] [outfit] [fps] [widthxheight] [swiftshader|metal|webkit] [deviceDpr=1] [phone|desktop]');
 const normalizedOutfit = normalizeRiderOutfit(outfit);
 if (!normalizedOutfit || !['low', 'medium', 'high'].includes(quality)) throw new Error('invalid outfit or quality');
@@ -38,6 +44,24 @@ if (to > inputs.length || from < 0 || to <= from) throw new Error('invalid captu
 await mkdir(path.join(out, 'frames'), { recursive: true });
 if ((await readdir(path.join(out, 'frames'))).length) throw new Error('capture requires a fresh frames directory');
 const sha = (b: Buffer) => createHash('sha256').update(b).digest('hex');
+const surfaceMapBytes = options.surfaceMap ? await readFile(path.resolve(options.surfaceMap)) : null;
+const surfaceMapping = surfaceMapBytes ? JSON.parse(surfaceMapBytes.toString('utf8')) as SurfaceContactManifest : null;
+const helperCode = await privateContactBundle();
+await writeFile(path.join(out, 'contact-probe.js'), helperCode);
+if (surfaceMapBytes) await writeFile(path.join(out, 'surface-map.json'), surfaceMapBytes);
+const helperSourceFiles = await Promise.all(['harness/hero-remaster/contact-browser.mts', 'harness/hero-remaster/surface-contacts.mts',
+  'harness/hero-remaster/capture-options.mts', 'harness/hero-remaster/private-contact-bundle.mts',
+  'harness/hero-capture.mts'].map(async file => ({ file, sha256: sha(await readFile(file)) })));
+type ContactWindow = HeroHarnessWindow & {
+  __rockhopContactTHREE: HeroHarnessWindow['__render']['debug']['THREE'];
+  RockhopContactProbe: typeof ContactBrowserModule;
+  __surfaceContactCapture: {
+    probe: { sample: () => Record<ContactId, ContactMeasurement> };
+    riderRoot: Object3D; riderInstanceRoot: Object3D; bikeRoot: Object3D; riderSource: unknown; bikeSource: unknown;
+  };
+  __heroCaptureAudio: { contexts: number };
+};
+let surfaceContactSetup: Record<string, unknown> | null = null;
 const buildFiles: Record<string, string> = {};
 async function inventory(dir: string): Promise<void> {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -83,6 +107,16 @@ const executionErrors: string[] = [];
 try {
   const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: devicePixelRatio });
   await page.addInitScript(() => {
+    const audioWindow = window as unknown as { AudioContext?: typeof AudioContext;
+      webkitAudioContext?: typeof AudioContext; __heroCaptureAudio: { contexts: number } };
+    audioWindow.__heroCaptureAudio = { contexts: 0 };
+    for (const key of ['AudioContext', 'webkitAudioContext'] as const) {
+      const ctor = audioWindow[key];
+      if (ctor) audioWindow[key] = new Proxy(ctor, { construct(target, args, newTarget) {
+        audioWindow.__heroCaptureAudio.contexts++;
+        return Reflect.construct(target, args, newTarget);
+      } });
+    }
     const originalError = console.error.bind(console);
     console.error = (...args: unknown[]) => {
       originalError(...args);
@@ -166,6 +200,34 @@ try {
     const render = r.render.bind(r);
     r.render = state => render(state, 1);
   }, { tier: quality as QualityTier, width, height, devicePixelRatio, deviceClass });
+  // Browser-side bundle is isolated from the immutable game build. Every distance read below
+  // uses the current cloned/conditioned scene, never the parsed source scene or a Node pose.
+  await page.evaluate(() => {
+    const w = window as unknown as ContactWindow;
+    w.__rockhopContactTHREE = w.__render.debug.THREE;
+  });
+  await page.addScriptTag({ content: helperCode });
+  surfaceContactSetup = await page.evaluate(async ({ mapping, entries }) => {
+    const w = window as unknown as ContactWindow, r = w.__render, proof = w.__assetProof;
+    const constructorIdentity = w.RockhopContactProbe.ContactVector3 === r.debug.THREE.Vector3;
+    if (!constructorIdentity) throw new Error('contact helper must share the live Three Vector3 constructor');
+    await Promise.all(proof.pending);
+    if (proof.errors.length) throw new Error(proof.errors.join('\n'));
+    const heroDoc = r.debugInfo().heroDoc;
+    const bikeLogical = entries[/\bbike-lod\b/.test(heroDoc) ? 1 : 0]!;
+    const riderLogical = entries[/\brider-lod\b/.test(heroDoc) ? 3 : 2]!;
+    const bikeSHA256 = proof.hashes[bikeLogical.url], riderSHA256 = proof.hashes[riderLogical.url];
+    if (bikeSHA256 !== bikeLogical.sha256 || riderSHA256 !== riderLogical.sha256)
+      throw new Error('active contact models do not match their actual consumed bytes');
+    const rider = r.debug.rider, bike = r.debug.bike;
+    // GltfRider.attach places its private clone under bike.frame while riding; rider.root
+    // owns it only during ragdoll. Reviewed patch locators therefore root at the live scene.
+    w.__surfaceContactCapture = { probe: await w.RockhopContactProbe.prepareSurfaceContacts(mapping,
+      { rider: r.debug.scene, bike: bike.root }, { riderSHA256, bikeSHA256 }),
+      riderRoot: r.debug.scene, riderInstanceRoot: rider.root, bikeRoot: bike.root, riderSource: rider.source, bikeSource: bike.source };
+    return { constructorIdentity, riderPatchRoot: 'live rendered scene (clone reparents for riding/ragdoll)', suppliedMapping: mapping !== null, heroDoc, rider: { logical: riderLogical.logical, url: riderLogical.url, sha256: riderSHA256 },
+      bike: { logical: bikeLogical.logical, url: bikeLogical.url, sha256: bikeSHA256 } };
+  }, { mapping: surfaceMapping, entries: logicalFiles.map(logical => catalog.models.find(m => m.logical === logical)!) });
   const graphics = await page.evaluate(() => {
     const r = (window as unknown as HeroHarnessWindow).__render;
     const gl = r.debug.renderer.getContext();
@@ -199,6 +261,12 @@ try {
       const state = t.getState();
       const renderedTime = r.frames.frame.tSim;
       if (Math.abs(renderedTime - state.time) > 1e-9) throw new Error(`display time ${renderedTime} differs from state time ${state.time}`);
+      const w = window as unknown as ContactWindow, contact = w.__surfaceContactCapture;
+      const sameLiveModels = contact.riderRoot === d.scene && contact.riderInstanceRoot === d.rider.root && contact.bikeRoot === d.bike.root &&
+        contact.riderSource === d.rider.source && contact.bikeSource === d.bike.source;
+      const surfaceContacts: Record<ContactId, ContactMeasurement> = sameLiveModels ? contact.probe.sample() :
+        Object.fromEntries(w.RockhopContactProbe.CONTACT_IDS.map(id => [id,
+          { status: 'unmeasured', reason: 'live models switched; prepare new consumed-byte mappings' }])) as Record<ContactId, ContactMeasurement>;
       const contacts: Record<string, number[]> = {};
       if (!state.ragdoll) d.bike.frame.traverse(o => {
         if ('isBone' in o && o.isBone && /^(hand|foot)[.]?[LR]$/.test(o.name)) {
@@ -216,7 +284,7 @@ try {
           if (!(bone.name in jointWorld)) jointWorld[bone.name] = bone.getWorldPosition(new d.THREE.Vector3()).toArray();
         }
       });
-      return { jointWorld, renderMs, renderSyncedMs, segmentTick: state.tick, stateTime: state.time, renderedTime, runTime: t.runTime(), phase: t.phase(), stateHash: t.hashState(), stateJson: JSON.stringify(state), boneOrigins: contacts, rider: structuredClone(d.rider.debug), camera: t.camera(), heroDoc: r.debugInfo().heroDoc };
+      return { surfaceContacts, ragdoll: state.ragdoll !== undefined && state.ragdoll !== null, jointWorld, renderMs, renderSyncedMs, segmentTick: state.tick, stateTime: state.time, renderedTime, runTime: t.runTime(), phase: t.phase(), stateHash: t.hashState(), stateJson: JSON.stringify(state), boneOrigins: contacts, rider: structuredClone(d.rider.debug), camera: t.camera(), heroDoc: r.debugInfo().heroDoc };
     }, inputs.slice(tick, tick + ticksPerFrame));
     trace.push({ inputTick: tick + ticksPerFrame, ...sample });
     if (tick >= from) {
@@ -234,7 +302,13 @@ try {
   if (modelProof.errors.length) throw new Error(modelProof.errors.join('\n'));
   Object.assign(downloads, modelProof.hashes);
   for (const name of Object.keys(assetBytes)) if (downloads[name] !== assetBytes[name]) throw new Error(`download bytes differ for ${name}`);
-  const report = { build, buildFiles, servedFiles, recording: path.resolve(recordingArg), recordingSha256: sha(recordingBytes), assetBytes, downloads, physics, hz, fps, from, to, firstFrameInputTick: from + ticksPerFrame, interval: '(from,to]', frames: frame, prefixRendered: true, renderAlpha: 1, setup: 'await scene readiness between class, track and quality changes', quality, outfit, width, height, devicePixelRatio, deviceClass, graphics: { requestedBackend: angleBackend, launchArgs, ...browserIdentity, hostPlatform: process.platform, ...graphics }, captureWallMs: performance.now() - captureStarted, errors, trace };
+  const automationProof = await page.evaluate(() => ({ webdriver: navigator.webdriver,
+    audioContexts: (window as unknown as ContactWindow).__heroCaptureAudio.contexts }));
+  if (!automationProof.webdriver || automationProof.audioContexts !== 0) throw new Error('capture must be webdriver with no AudioContext construction');
+  const surfaceContactProof = { setup: surfaceContactSetup, mappingPath: options.surfaceMap ? path.resolve(options.surfaceMap) : null,
+    mappingSHA256: surfaceMapBytes ? sha(surfaceMapBytes) : null, browserBundleSHA256: sha(Buffer.from(helperCode)), helperSourceFiles,
+    measurement: 'post-render live skin surface sampling; missing or unverified definitions remain unmeasured', acceptedContactGate: false };
+  const report = { automationProof, surfaceContactProof, build, buildFiles, servedFiles, recording: path.resolve(recordingArg), recordingSha256: sha(recordingBytes), assetBytes, downloads, physics, hz, fps, from, to, firstFrameInputTick: from + ticksPerFrame, interval: '(from,to]', frames: frame, prefixRendered: true, renderAlpha: 1, setup: 'await scene readiness between class, track and quality changes', quality, outfit, width, height, devicePixelRatio, deviceClass, graphics: { requestedBackend: angleBackend, launchArgs, ...browserIdentity, hostPlatform: process.platform, ...graphics }, captureWallMs: performance.now() - captureStarted, errors, trace };
   await writeFile(path.join(out, 'evidence.json'), JSON.stringify(report, null, 2));
   const ff = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-framerate', String(fps), '-i', path.join(out, 'frames', 'frame-%05d.png'), '-frames:v', String(frame), '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', path.join(out, 'clip.mp4')], { encoding: 'utf8' });
   if (ff.status !== 0) throw new Error(ff.stderr);
