@@ -129,4 +129,28 @@ describe('late Diamond high-line guidance', () => {
     expect(cue.classList.contains('route')).toBe(false);
     expect(cue.textContent).not.toContain('SNOWCAT');
   });
+  it('teaches the Pro ore-cart landing then restores its distant mastery prompt', () => {
+    const hud = new DomHud(document.body);
+    const track = getTrack('d3-rope-walk')!;
+    const route = diamondRouteCue(track)!;
+    hud.setTrack(track);
+    hud.setRun(riding);
+    const cue = hud.root.querySelector('.skill-cue')!;
+    hud.update(at(99));
+    expect(cue.classList.contains('show')).toBe(false);
+    hud.update(at(101));
+    expect(cue.textContent).toContain('RELEASE GO');
+    expect(cue.classList.contains('show')).toBe(true);
+    expect(cue.classList.contains('route')).toBe(false);
+    hud.update(at(144));
+    expect(cue.classList.contains('show')).toBe(false);
+    expect(cue.classList.contains('route')).toBe(true);
+    hud.update(at(route.x0));
+    expect(cue.textContent).toContain(route.action);
+    expect(cue.textContent).not.toContain('ORE CART');
+    hud.setTrack(getTrack('s3-whiteout')!);
+    hud.update(at(30));
+    expect(cue.textContent).toContain('LIFT TO THE SHELF');
+  });
+
 });

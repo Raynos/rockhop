@@ -1,0 +1,28 @@
+--- a/src/ui/hud.ts
++++ b/src/ui/hud.ts
+@@ -77 +77 @@
+-  private s3OpeningCueOn = false;
++  private openingCueOn = false;
+@@ -288 +288 @@
+-    this.s3OpeningCueOn = false;
++    this.openingCueOn = false;
+@@ -453,2 +453 @@
+-    // The first Whiteout shelf is mandatory. Its short lesson ends before the crevasse,
+-    // then the same fixed HUD slot is restored for the later optional upper route.
++    // Mandatory opening lessons share the fixed slot, then restore the optional upper route.
+@@ -456,3 +455,5 @@
+-    if (s3Opening !== this.s3OpeningCueOn) {
+-      this.s3OpeningCueOn = s3Opening;
+-      this.skillCueEl.classList.toggle('route', !s3Opening && this.routeCue !== null);
++    const d3Cart = t.id === 'd3-rope-walk' && x >= 100 && x < 144;
++    const opening = s3Opening || d3Cart;
++    if (opening !== this.openingCueOn) {
++      this.openingCueOn = opening;
++      this.skillCueEl.classList.toggle('route', !opening && this.routeCue !== null);
+@@ -461,0 +463,3 @@
++      } else if (d3Cart) {
++        this.skillCueEl.setAttribute('aria-label', 'Ore cart. Release GO in flight and level the bike for the landing.');
++        this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↘</span><span class="skill-cue-copy"><strong>ORE CART</strong><small>RELEASE GO · LAND LEVEL</small></span>';
+@@ -482 +486 @@
+-    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || s3Opening || d1Terraces || highLine)));
++    this.setSkillCueVisible(retryLesson || (this.phase === 'riding' && (c1Lane || c2Phase !== null || opening || d1Terraces || highLine)));

@@ -1,0 +1,90 @@
+{
+  "status": "parent-motion-review-pending",
+  "normalSourceEditedByBuilder": false,
+  "rootNormalChange": "D3 ore-cart HUD x100..144; literal shortening tofit",
+  "buildBytes": {
+    "baseline": 716369,
+    "corrected": 716454,
+    "cap": 716800
+  },
+  "pairedWindows": [
+    {
+      "name": "clean",
+      "frames": 74,
+      "seconds": 3.7,
+      "hash": "a15e326a2dce7922",
+      "camera": "74/74"
+    },
+    {
+      "name": "fault-retry",
+      "frames": 111,
+      "seconds": 5.55,
+      "hash": "7bbbd108d9d1171b",
+      "camera": "111/111"
+    }
+  ],
+  "fullCurrentReplay": {
+    "time": 32.458333333333336,
+    "faults": 0,
+    "hash": "774c599b55917f5a",
+    "nodeBrowserExact": true
+  },
+  "tests": [
+    "Both frozen typechecks zero diagnostics",
+    "Scoped prototype lint pass",
+    "Existing Vite normal caps pass"
+  ],
+  "files": [
+    ".gitignore",
+    "README.md",
+    "build.mjs",
+    "capture.mjs",
+    "check.mjs",
+    "checks.json",
+    "d3-held-go-retry.json",
+    "fault-prefix.mts",
+    "fault-proof.json",
+    "initial-manifest-identity.json",
+    "overrides.mjs",
+    "pair.mts",
+    "prepare.mjs",
+    "review-initial/after-build-output.txt",
+    "review-initial/after-build.json",
+    "review-initial/after-capture-harness.json",
+    "review-initial/after-d3-pro-cart-capture.json",
+    "review-initial/after-d3-pro-fault-capture.json",
+    "review-initial/before-build-output.txt",
+    "review-initial/before-build.json",
+    "review-initial/before-capture-harness.json",
+    "review-initial/before-d3-pro-cart-capture.json",
+    "review-initial/before-d3-pro-fault-capture.json",
+    "review-initial/capture-limit.json",
+    "review-initial/d3-pro-cart-compare.json",
+    "review-initial/d3-pro-cart-compare.mp4",
+    "review-initial/d3-pro-fault-compare.json",
+    "review-initial/d3-pro-fault-compare.mp4",
+    "review-initial/full-replay.json",
+    "review/after-build-output.txt",
+    "review/after-build.json",
+    "review/after-capture-harness.json",
+    "review/after-d3-pro-cart-capture.json",
+    "review/after-d3-pro-fault-capture.json",
+    "review/before-build-output.txt",
+    "review/before-build.json",
+    "review/before-capture-harness.json",
+    "review/before-d3-pro-cart-capture.json",
+    "review/before-d3-pro-fault-capture.json",
+    "review/capture-limit.json",
+    "review/d3-pro-cart-compare.json",
+    "review/d3-pro-cart-compare.mp4",
+    "review/d3-pro-fault-compare.json",
+    "review/d3-pro-fault-compare.mp4",
+    "review/full-replay.json",
+    "review/text-fit-frame.jpg",
+    "runner.mts",
+    "runtime-initial.patch",
+    "runtime.patch",
+    "snapshot-manifest.json"
+  ],
+  "limits": "Scripted Node/browser replay, no human comprehension or physical-phone sustained performance."
+}
