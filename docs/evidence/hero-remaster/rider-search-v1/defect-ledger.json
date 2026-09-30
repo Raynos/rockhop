@@ -1,12 +1,12 @@
 {
-  "status": "checkpoint1 P3 two failures; stopped pending explicit human direction",
+  "status": "checkpoint1 original P3 direction chosen; targeted manual body inspection; face/head frozen",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
     "P3",
     "T1"
   ],
-  "shortlistMeaning": "Historical P3/T1 bounded correction shortlist; P3 exhausted, new direction requires explicit human choice",
+  "shortlistMeaning": "Historical P3/T1 corrections preserved; user chooses original P3 for targeted manual body approach, no accepted body",
   "limits": {
     "maximumShortlistedBodies": 2,
     "maximumCorrectionPassesPerBody": 2,
@@ -688,9 +688,12 @@
   "stopRule": "A third fix of any defect is forbidden after two failures until baseline/both failed evidence is shown and a user chooses another candidate, a specifically bounded new approach, or revert/abandon. Renaming tools/defects does not reset counts.",
   "userChoice": {
     "requested": "Choose H21-4 new bounded refinement, another preserved body/control, specifically bounded manual P3 retopology with new explicit budget, or revert/abandon",
-    "received": false,
+    "received": true,
     "queue": "project/human-in-the-loop/QUEUE.md#HR-23",
-    "scope": "P3 corrections exhausted; no third correction or silent shortlist replacement. Human chooses next bounded visual direction; checkpoint2 still requires body acceptance."
+    "scope": "Offered targeted manual body retopology approach: at most two additional attempts within remaining stage1 time ceiling; no global remesh/rebake; no body acceptance",
+    "decision": "Original brown-haired/bearded bottom-right P3 as starting point; preserve existing face/head",
+    "spokenLabel": "R-free corrected to B-free; interpreted from immediately shown bottom-right P3 and face preference",
+    "evidence": "choice/README.md"
   },
   "runtimePreservation": {
     "files": [
@@ -738,5 +741,16 @@
     "strongestNewOption": "H21-4",
     "comparison": "hunyuan21/README.md",
     "shortlistChange": "pending human direction; P3/T1 historical correction counts preserved"
+  },
+  "selectedDirection": "P3 original; preserve face/head",
+  "manualP3Approach": {
+    "name": "targeted manual repair with frozen head/face",
+    "attempts": [],
+    "maximumAdditionalAttempts": 2,
+    "historicalTopologyFailedFixes": 2,
+    "headFaceFrozen": true,
+    "globalRemeshRebakeAllowed": false,
+    "stage1HourCeilingUnchanged": 8,
+    "status": "inspection only; no new correction yet"
   }
 }

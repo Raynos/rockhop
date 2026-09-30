@@ -227,8 +227,12 @@ updating asks/index before the next experiment. No scheduling or deployment.
   P3 repair 1 failed its face-budget check before baking; repair 2 completes
   export but loses major body surfaces. [Baseline and both failures](../evidence/hero-remaster/rider-search-v1/variants/pixal03-repair2/README.md)
   are preserved. P3 has exhausted both passes: no third fix without a new
-  specifically bounded human choice, filed in HR-23. T1 has one pass left
-  only if chosen. No rig or normal asset promotion.
+  specifically bounded human choice. The user now chooses original P3's less
+  damaged face as the starting point: [face-first decision](../evidence/hero-remaster/rider-search-v1/choice/README.md).
+  Preserve head/face; targeted manual body repair is limited to two additional
+  attempts within the remaining stage1 time ceiling. Historical failures stay
+  two; no global remesh/rebake retry. T1 is not selected. No body acceptance,
+  rig or normal asset promotion.
 - [Matched gameplay inputs](../evidence/hero-remaster/rider-search-v1/gameplay-inputs/README.md)
   are prepared and independently repeated for12 cases across both bikes.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation
