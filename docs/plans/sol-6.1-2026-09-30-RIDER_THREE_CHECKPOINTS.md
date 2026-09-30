@@ -75,7 +75,7 @@ knees, legs and shoes before any riding fit or skinning.
 
 Working exports: 55k faces/2048 textures; review copies: 20k/1024. These are
 offline comparison budgets, not production limits. Preserve native Hunyuan
-shape and TRELLIS mesh/latent outputs. Label painted working exports that
+shape and TRELLIS decoded mesh/voxel attributes (not sampler latents). Label working exports that
 already underwent provider reduction. No rig fit can hide a bad raw body.
 
 Gate 1: five target boards, ten baseline model boards/orbits, Pixal3D results
@@ -92,6 +92,11 @@ Pixal3D alongside it, with labels and separate results. Inspected 2026-09-30:
 Current code builds on TRELLIS.2, has CUDA-oriented dependencies, and supports
 single-image plus calibrated multi-view inference with separate weights.
 This does not establish compatibility with the installed Mac/MPS port.
+Local feasibility update: [LocalAI's isolated community MPS port](../../../../localai/docs/pixal3d.md)
+is already installed at source 0be9e69 with canonical single-image weights;
+its textured sample smoke passed. A separate frozen rider canary now tests
+1024cascade/12steps/seed42 with native NPZ before export processing. The sample
+does not prove rider quality; the existing ten-candidate comparison stays fixed.
 
 Bound feasibility to two active hours and two fixes of any setup defect.
 Inventory backend, dependencies, code revisions, weights and available compute.
