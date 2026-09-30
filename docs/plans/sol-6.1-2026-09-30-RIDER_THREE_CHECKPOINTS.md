@@ -230,7 +230,7 @@ updating asks/index before the next experiment. No scheduling or deployment.
   are prepared and independently repeated for12 cases across both bikes.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation
   does not advance either later visual gate.
-- [ ] Additive Hunyuan3D 2.1 canary and five-design comparison (ask228).
+- [ ] Additive Hunyuan3D 2.1 five-design comparison (ask228): canary complete, unaccepted; explicit scene-axis display derivative recorded.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.

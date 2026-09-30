@@ -9,3 +9,18 @@ renderer remains frozen38da9202. Canary queued behind the canonical lock.
 
 Limits: No quality verdict yet. Three gates, rider-only scope, correction
 counts and stage bounds remain. Older bodies and player assets unchanged.
+
+## Canary and coordinate evidence
+
+Finding: H21-1 generates native316,248 faces and55k working faces. It improves
+adult face/clothing detail over H1 but retains fused hands, rough hair and small
+lower-body defects. Source export appears upside down; identity-node fix1
+fails, X180 relative scene correction2 matches upright native display.
+
+Validation: All source/output hashes, native vertices/indices,54render frames,
+three exact-yaw boards and36frame/12fps orbit verified. Binary buffer/UV/image
+bytes in display derivative are identical. All fifteen prior bodies unchanged.
+
+Limits: One failed setup fix counted. Upstream axis disagreement unisolated;
+no body/rig/sitting/gameplay acceptance. P3 gray partial exporter warned invalid
+mesh; its broken GLB cannot establish pre-export voxel shape. No further P3 fix.

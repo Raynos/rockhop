@@ -8,7 +8,10 @@ usable textured export. The identical-settings diagnostic reproduction
 is evidence of that same failure, not a second correction.
 
 [Gray partial board](board.png) shows the unrebaked intermediate geometry.
-Its UVs are invalid; only gray geometry is interpretable. Closed edge counts
+Its UVs are unrebaked and the exporter warned of invalid mesh geometry.
+The partial GLB renders severely broken surfaces; that warning means this
+render cannot establish the pre-export voxel silhouette. Export validity
+would also need repair within the remaining pass. Closed edge counts
 do not pass anatomy, material, rig or motion review. The frozen P3 original
 remains intact. One correction pass remains before the required user choice.
 The next requested experiment is additive Hunyuan3D 2.1; a P3 retry is deferred.

@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
+import struct
 import subprocess
 import numpy as np
 import trimesh
@@ -38,15 +39,43 @@ native = np.load(source / 'raw-shape.npz')
 mesh = trimesh.load(source / 'raw-shape.glb', process=False, force='mesh')
 assert np.array_equal(mesh.faces, native['faces'])
 assert np.array_equal(mesh.vertices, native['vertices'].astype(np.float32))
-reduced = source / 'reduced.glb'
+# Painted export is upside down relative to native. Preserve it and the failed
+# identity-node probe; use an explicit X180deg scene display derivative.
+original = source / 'model.glb'
+display = source / 'working-display2.glb'
+data = original.read_bytes()
+json_length = struct.unpack_from('<I', data, 12)[0]
+document = json.loads(data[20:20 + json_length])
+assert len(document['nodes']) == 1
+rotation = document['nodes'][0]['rotation']
+assert np.allclose(rotation, [np.sqrt(.5), 0, 0, np.sqrt(.5)], atol=1e-6)
+document['nodes'][0]['rotation'] = [-float(np.sqrt(.5)), 0, 0, float(np.sqrt(.5))]
+encoded = json.dumps(document, separators=(',', ':')).encode()
+encoded += b' ' * ((-len(encoded)) % 4)
+tail = data[20 + json_length:]
+rectified = struct.pack('<4sII', b'glTF', 2, 20 + len(encoded) + len(tail))
+rectified += struct.pack('<I4s', len(encoded), b'JSON') + encoded + tail
+if display.exists():
+    assert display.read_bytes() == rectified
+else:
+    display.write_bytes(rectified)
+assert display.read_bytes()[20 + len(encoded):] == tail
+(evidence / 'display-axis.json').write_text(json.dumps({
+    'status': 'explicit scene-axis display derivative; source preserved',
+    'sourceSHA256': sha(original), 'displaySHA256': sha(display),
+    'sourceNodeRotation': rotation, 'displayNodeRotation': document['nodes'][0]['rotation'],
+    'change': 'X180deg scene display rotation relative to exported node; align native upright body',
+    'binaryBufferAndImagesUnchanged': True,
+    'limits': ['Scene alignment only, no anatomy or texture correction']}, indent=2) + '\n')
+reduced = source / 'reduced-display2.glb'
 if not reduced.exists():
     with (source / 'reduction.log').open('w') as log:
         subprocess.run([BLENDER, '-b', '--factory-startup', '--python-exit-code', '1',
                         '--python', str(ROOT / 'launcher-source/reduce_hunyuan.py'), '--',
-                        str(source / 'model.glb'), str(reduced), '20000', '1024'],
+                        str(display), str(reduced), '20000', '1024'],
                        stdout=log, stderr=subprocess.STDOUT, check=True)
 records = []
-for tier, model, n, gray in [('working', source / 'model.glb', 36, False),
+for tier, model, n, gray in [('working', display, 36, False),
                             ('reduced', reduced, 9, False),
                             ('native-gray', source / 'raw-shape.glb', 9, True)]:
     folder = base / tier

@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 unaccepted; P3 repair1 failed setup; additive Hunyuan2.1 requested",
+  "status": "checkpoint1 unaccepted; H21-1 canary complete, remaining four designs next",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 6576,
-    "conservativeChargedHoursUpperBound": 1.827,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 10050,
+    "conservativeChargedHoursUpperBound": 2.792,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -413,6 +413,36 @@
       "measuredRig": "none; unskinned output",
       "sittingGate": "not started",
       "gameplayGate": "not started"
+    },
+    {
+      "id": "H21-1",
+      "engine": "hunyuan21",
+      "design": "01",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/raw-shape.npz",
+          "sha256": "e4580ff1b95af69c0cfe4273f34913950ae284ab32d4d38254cfbd5f55e6055d"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/model.glb",
+          "sha256": "c96edc5e73a8a48ae656b73756e7075234226514fcd496e00e4ab27466104751"
+        },
+        "display": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/working-display2.glb",
+          "sha256": "783b58fec94aa9657dc44bed14d4767af610bfa29b336f916d5107118a01d5cb"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/reduced-display2.glb",
+          "sha256": "f3496eb9ca734a0971ead34953e4a1b1175bb05fef9f3968c933ebfc35395ab0"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "nine native/working/reduced views;36frame working orbit; fused fingers/coarse hair remain",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
     }
   ],
   "defects": [
@@ -497,6 +527,29 @@
       "failedFixes": 2,
       "evidence": "../rider-selection/README.md",
       "verdict": "historic limit already reached; do not revive recipe without a new human choice"
+    },
+    {
+      "id": "H21-DISPLAY-AXIS-01",
+      "stage": 1,
+      "bodies": [
+        "H21-1"
+      ],
+      "failedFixes": 1,
+      "attempts": [
+        {
+          "number": 1,
+          "change": "identity scene node",
+          "verdict": "failed; horizontal body/incorrect display height",
+          "evidence": "hunyuan21/export-axis-fix1/01/working/board.png"
+        },
+        {
+          "number": 2,
+          "change": "X180 scene relative to source node; binary buffers identical",
+          "verdict": "passes upright/front display check; body quality unaccepted",
+          "evidence": "hunyuan21/01/display-axis.json"
+        }
+      ],
+      "verdict": "display corrected; upstream cause unisolated; same transformation can be verified for remaining outputs"
     }
   ],
   "stopRule": "A third fix of any defect is forbidden after two failures until baseline/both failed evidence is shown and a user chooses another candidate, a specifically bounded new approach, or revert/abandon. Renaming tools/defects does not reset counts.",
