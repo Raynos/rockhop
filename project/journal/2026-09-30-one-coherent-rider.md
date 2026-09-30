@@ -79,3 +79,15 @@ one768-edge base boundary verified; dense surgical preflight is not reusable.
 
 Limits: No texture bake, accepted head/body join or rig. Trial1 is a failed
 geometry attempt; provenance rerun did not reset its count.
+
+Finding: H21-4 preserves a continuous hoodie/back and cuff transitions but
+has fused mitten hands and rough frontal toes/soles. Keep the body direction
+and use local glove reconstruction rather than whole-body remeshing.
+
+Validation: Parent inspected matched PBR/gray hand, leg and full-back boards;
+28 frame/source hashes verified. Working position-weld geometry has one
+component and no boundary/nonmanifold edges. Fresh silent WebKit low/high
+clear is byte-identical40.083333333333336s; crash/one-tick restart pass.
+
+Limits: Joint probes are uncertain estimates, not a bind skeleton; no hand
+correction, self-intersection, new rider contact or device acceptance yet.

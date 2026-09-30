@@ -1,0 +1,158 @@
+{
+  "status": "provisional visible-envelope estimates; NOT final measured rig mapping",
+  "basis": "1.8m display height, ground z0, body front -Y, lateral X; height includes rejected hair; hidden joint centres visually estimated",
+  "uncertaintyMeters": {
+    "lateral": 0.03,
+    "vertical": 0.03,
+    "depth": 0.05
+  },
+  "estimateMethod": "Manual inspection of calibrated orthographic front/profile images; symmetric centres are a proposed clean-bind target, not a measurement of existing bilateral anatomy.",
+  "pointsBlenderZUpMeters": {
+    "pelvis": [
+      0,
+      0,
+      0.94
+    ],
+    "shoulder.positive": [
+      0.2,
+      0,
+      1.41
+    ],
+    "elbow.positive": [
+      0.29,
+      0,
+      1.16
+    ],
+    "wrist.positive": [
+      0.35,
+      0,
+      0.94
+    ],
+    "hip.positive": [
+      0.09,
+      0,
+      0.94
+    ],
+    "knee.positive": [
+      0.14,
+      0,
+      0.5
+    ],
+    "ankle.positive": [
+      0.17,
+      0,
+      0.105
+    ],
+    "palm.positive": [
+      0.352,
+      0,
+      0.855
+    ],
+    "sole.positive": [
+      0.17,
+      -0.06,
+      0.015
+    ],
+    "shoulder.negative": [
+      -0.2,
+      0,
+      1.41
+    ],
+    "elbow.negative": [
+      -0.29,
+      0,
+      1.16
+    ],
+    "wrist.negative": [
+      -0.35,
+      0,
+      0.94
+    ],
+    "hip.negative": [
+      -0.09,
+      0,
+      0.94
+    ],
+    "knee.negative": [
+      -0.14,
+      0,
+      0.5
+    ],
+    "ankle.negative": [
+      -0.17,
+      0,
+      0.105
+    ],
+    "palm.negative": [
+      -0.352,
+      0,
+      0.855
+    ],
+    "sole.negative": [
+      -0.17,
+      -0.06,
+      0.015
+    ]
+  },
+  "uniform1p78ConversionFactor": 0.9888888888888889,
+  "runtimeAdapterAxisFormula": "runtime (X,Y,Z) = (-BlenderY, BlenderZ, BlenderX); left/right sign must be verified against actual socket convention",
+  "estimatedSegmentsMetersAt1p8": {
+    "torso": 0.47,
+    "upperArm": 0.26570660511172844,
+    "forearm": 0.22803508501982758,
+    "thigh": 0.4428317965096905,
+    "shin": 0.3961376023555452
+  },
+  "physicalSegmentsMetersUnchanged": {
+    "torso": 0.52,
+    "upperArm": 0.32,
+    "forearm": 0.27,
+    "thigh": 0.46,
+    "shin": 0.43
+  },
+  "provisionalRenderToPhysicsRatios": {
+    "torso": 1.1063829787234043,
+    "upperArm": 1.2043358871919703,
+    "forearm": 1.1840283260644895,
+    "thigh": 1.0387691300074335,
+    "shin": 1.085481402025709
+  },
+  "sourceContract": {
+    "boneCount": 19,
+    "boneOrder": [
+      "pelvis",
+      "spine",
+      "chest",
+      "neck",
+      "head",
+      "shoulder.L",
+      "upperArm.L",
+      "forearm.L",
+      "hand.L",
+      "shoulder.R",
+      "upperArm.R",
+      "forearm.R",
+      "hand.R",
+      "thigh.L",
+      "shin.L",
+      "foot.L",
+      "thigh.R",
+      "shin.R",
+      "foot.R"
+    ],
+    "sockets": [
+      "gripSocket.L",
+      "gripSocket.R",
+      "soleSocket.L",
+      "soleSocket.R"
+    ],
+    "runtimeUp": "Y",
+    "runtimeForward": "X",
+    "fileAxleShiftMeters": 0.65
+  },
+  "limits": [
+    "No approved hidden joint centres or final anatomy lengths yet. Do not construct an adapter by treating these estimates as measured bind transforms.",
+    "One uniform scale cannot preserve torso, arm, leg and hand-contact proportions simultaneously.",
+    "Palm/sole points are visual labels, not valid bike-space contact measurement. Native relaxed mitten shapes cannot wrap a grip."
+  ]
+}
