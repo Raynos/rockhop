@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 twenty bodies compared; no body accepted; visual direction pending",
+  "status": "checkpoint1 P3 final allowed native-based correction2 in progress; visual direction pending",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -355,9 +355,9 @@
         }
       },
       "generationFailures": 0,
-      "correctionPasses": 1,
+      "correctionPasses": 2,
       "accepted": false,
-      "reviewExtent": "Nine-view working/reduced/native and gray export diagnosis; first unaccepted whole-body repair preview in progress",
+      "reviewExtent": "last allowed native-geometry repair2 in progress; baseline and failed repair1 preserved",
       "measuredRig": "none; unskinned output",
       "sittingGate": "not started",
       "gameplayGate": "not started"
@@ -635,6 +635,16 @@
           "runtime": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/variants/pixal03-repair1",
           "verdict": "repair1 failed before UV/baking: 90972 faces exceeds bounded export check",
           "evidence": "variants/pixal03-repair1/README.md"
+        },
+        {
+          "number": 2,
+          "scope": "dense same-body native geometry, clean custom data, voxel700, triangulate before one decimation; existing working PBR donor",
+          "sourceSHA256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+          "nativeSHA256": "25bdbe14475519e108167e008e2117bac6636363ade66aa99de558d6366d5c26",
+          "recipe": "assets/blender/hero-remaster/rider/search-v1/repair_pixal03_v2.py",
+          "recipeSHA256": "e843bd45f052aa708b1958b2ca9e9c1d10d1ebb70ee61fd8a13ff833437f7db5",
+          "runtime": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/variants/pixal03-repair2",
+          "verdict": "in progress; last allowed pass"
         }
       ]
     },
