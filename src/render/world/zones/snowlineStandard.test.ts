@@ -10,7 +10,7 @@ import { PropBatch } from '../props';
 import { loadSnowlineStandard, snapshotSnowlineAnchors, snowContactFaceGeometry } from './snowlineStandard';
 
 async function asset(lod = false) {
-  const file = new URL(`../../../../assets/blender/course-kits/snowline-standard/out/snowline-standard${lod ? '-lod' : ''}-packed.glb`, import.meta.url);
+  const file = new URL(`../../../../harness/fixtures/snowline-standard/snowline-standard${lod ? '-lod' : ''}-packed.glb`, import.meta.url);
   const bytes = readFileSync(file);
   const jsonLength=bytes.readUInt32LE(12);
   const doc=JSON.parse(bytes.subarray(20,20+jsonLength).toString());
