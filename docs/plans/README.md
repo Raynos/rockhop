@@ -420,3 +420,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Final cleanup / course ownership (2026-09-30):** The verified Street wrist repair is on main as `931ed3d8`. The parent retains a tested multi-family course owner; the new Coast integration stays a development prototype pending matched played review. Completed courses remain 0/12. Ask 208 tracks the remaining checkpoint commits.
 
 **Coast grounding checkpoint (2026-09-30):** Terrain-following warehouse/yard foundations, four pier shore connectors and the 51-placement C1 proposal are retained as unimported helpers. Seven site and nine loader tests pass; whole-course moving review and phone qualification remain open.
+
+**Final outstanding-file cleanup (2026-09-30):** The original backlog and subsequent hero/Coast checkpoints are committed on main. The unfinished authored harbor hook and exact assets are preserved in `prototypes/coast-authored-integration-v1/`; normal biome hooks are unchanged. Typecheck, lint, build, 22 focused tests and a fresh 14/14 C1 host partial gate pass. Ask 208 is done; course acceptance remains 0/12.

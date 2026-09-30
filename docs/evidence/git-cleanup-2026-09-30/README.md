@@ -66,3 +66,22 @@ and retains its red candidate report alongside the corrected hero plan.
 
 The plan/source checkpoint retains selective zero-area donor-face removal and
 the current quantitative result, with no production promotion or art claim.
+
+## Final newly authored checkpoint cleanup
+
+The verified Street wrist repair landed as `931ed3d8`. Separate parent rounds
+retain multi-family ownership (`8cd9f9ed`), grounded Coast site/placements
+(`65ec10e6`), and the unfinished played Coast integration prototype. No new
+course is accepted; the normal production biome hook is unchanged. The
+prototype retains every exact input blob and records its mismatched rider
+baseline rather than claiming an attributable graphics comparison.
+
+Final typecheck, repository lint, normal build and 22 focused ownership/site/
+loader tests pass. [Fresh C1 host gate](final-coast-checkpoint-round-gate.json)
+passes 14/14: boot p50 203.47 ms, exact Rookie/Pro clears, crash recovery,
+20 one-tick restarts, synced restart p95 4.98 ms and 691.16 KiB player gzip.
+[Build provenance](final-coast-checkpoint-provenance.json) identifies the
+actual output. This is a partial host gate, not physical-device or release
+qualification. The final commit leaves no tracked or untracked Git changes
+at the cleanup snapshot; ignored caches, editable masters and capture outputs
+remain local.
