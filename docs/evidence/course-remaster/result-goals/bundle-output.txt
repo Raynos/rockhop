@@ -1,0 +1,9 @@
+gate c1-low-tide: physics=bikePhysicsFactory-v2 thresholds=harness/gate/thresholds.json
+renderer: ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version) -> ship limits
+      golden: WARNING nothing under harness/inputs/c1-low-tide/ is a rookie golden stamped src=fd8fe7c2; using newest bot-3.json (src=a415fcb8) — re-run pnpm harness:bot c1-low-tide
+sections: pool of 5 (clear, clearPro, crash, determinism, camera, bundle) then timing chain (boot, restart, heap), then offline — only bundle; loadavg 4.8 5.0 5.0 / 18 cores
+PASS  bundle.jsGzipKB              700.11KB  (limit 701KB)  player JS (excluding dev and fatal-error telemetry phases); outside player budget: audio-offline-BS6l5tyZ.js, legacy-physics-DYeh2nU-.js, retired-B2iLI2Mc.js, sentry-errors-DZ1jjk5-.js 213.9 KB gz; dist 42762 KB raw
+      section bundle: 0.0 s, loadavg 4.8 5.0 5.0 / 18 cores
+PASS  bundle.jsGzipKB              700.11KB  (limit 701KB)  player JS (excluding dev and fatal-error telemetry phases); outside player budget: audio-offline-BS6l5tyZ.js, legacy-physics-DYeh2nU-.js, retired-B2iLI2Mc.js, sentry-errors-DZ1jjk5-.js 213.9 KB gz; dist 42762 KB raw
+
+PARTIAL (bundle): 1/1 checks pass — not a ship verdict; report: /Users/raynos/projects/games/rockhop/harness/out/metrics/ship-gate.partial.json

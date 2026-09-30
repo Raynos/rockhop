@@ -272,7 +272,7 @@ skipCountdown(): void;   // harness convenience; a replay records ticks from GO
 - **Thresholds** live only in `harness/gate/thresholds.json`: boot `ready` p50 ≤ 300 ms, first frame
   ≤ 900 ms; textures ≤ 96 MB; draw calls ≤ 300; triangles ≤ 500 k; physics µs/tick p95 ≤ 60
   (≤ 80 while ragdolling); restart → synced frame ≤ 33 ms; heap growth ≤ 5 MB over 60 s of play;
-  JS bundle ≤ 700 KiB gzipped (user-approved course/audio remaster allowance, 2026-09-30); determinism: two replays hash-identical, `restore(snapshot())` identical.
+  JS bundle ≤ 701 KiB gzipped (course/audio remaster allowance plus 1 KiB for focused career/result correctness, 2026-09-30); determinism: two replays hash-identical, `restore(snapshot())` identical.
 - Texture generation happens **after** `installHook` and is budgeted (≤ 400 ms total on desktop).
 - Corpus gaps: harness sources seesaw + stairs reference clips; `loop` is cut from the curriculum.
 

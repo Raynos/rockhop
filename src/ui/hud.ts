@@ -649,7 +649,7 @@ export class DomHud implements Hud {
       this.resGoal.textContent = `${hints.text[hints.next]}. ${r.faults ? 'Find a cleaner line and cut the bails.' : 'Brake precisely, then carry speed through the exit.'}`;
     } else {
       goal.textContent = 'YOUR NEXT LINE';
-      this.resGoal.textContent = r.personalBest ? 'Diamond is yours. Replay this run or chase a faster split.' : 'Diamond is yours. Replay the line or take on the next course.';
+      this.resGoal.textContent = r.personalBest || r.trackId === 's3-whiteout' ? 'Diamond is yours. Replay this run or chase a faster split.' : 'Diamond is yours. Replay the line or take on the next course.';
     }
     this.renderBoard(r);
     this.results.className = 'results show stage-0';
@@ -946,13 +946,20 @@ export class DomHud implements Hud {
  * or "0 bails to earn" when the time was already there); the rest stay quiet. Thresholds are the tracks' own
  * (src/tracks/rockhop/builder.ts `medalTargets`: OBSIDIAN ≤ 0.85 T · 0 bails, GOLD ≤ T · ≤ 1, SILVER ≤ 1.25 T · ≤ 5).
  */
-export function medalHints(r: Pick<RunResult, 'medal' | 'targetTimeS' | 'time' | 'faults'>): { next: MedalId | null; text: Record<MedalId, string> } {
+export function medalHints(r: Pick<RunResult, 'medal' | 'targetTimeS' | 'time' | 'faults' | 'routeProof'>): { next: MedalId | null; text: Record<MedalId, string> } {
   const text: Record<MedalId, string> = { bronze: '', silver: '', gold: '', platinum: '' };
   const T = r.targetTimeS;
   const next = MEDAL_ORDER[MEDAL_ORDER.indexOf(r.medal) + 1] ?? null;
   if (!next || !T) return { next: T ? next : null, text };
   const need = { silver: { t: T * 1.25, b: 5 }, gold: { t: T, b: 1 }, platinum: { t: T * 0.85, b: 0 } }[next as 'silver' | 'gold' | 'platinum'];
   const timeOk = r.time <= need.t + 1e-9;
+  if (next === 'platinum' && r.routeProof?.crossed === false) {
+    const requirements = ['Take the upper route'];
+    if (!timeOk) requirements.push(formatTime(need.t));
+    if (r.faults > need.b) requirements.push('no bails');
+    text[next] = `${requirements.join(' · ')} to earn`;
+    return { next, text };
+  }
   text[next] = timeOk && r.faults > need.b ? `${need.b === 0 ? 'No' : `≤ ${need.b}`} ${need.b === 1 ? 'bail' : 'bails'} to earn` : `${formatTime(need.t)} to earn`;
   return { next, text };
 }

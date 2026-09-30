@@ -58,6 +58,14 @@ describe('production finish report', () => {
     expect(copy(hud, '.fr-goal-title')).toBe('NEXT MEDAL: DIAMOND · BUY PRO');
   });
 
+  it('gives the final repeated Diamond a replay goal instead of a nonexistent next course', () => {
+    const hud = setup();
+    hud.setTrack(getTrack('s3-whiteout')!);
+    hud.showResults({ ...first, trackId: 's3-whiteout', personalBest: false, previousBest: 30 });
+    expect(copy(hud, '.fr-goal')).not.toContain('next course');
+    expect(hud.root.textContent).toContain('Replay this run or chase a faster split.');
+  });
+
   it('keeps all four real destinations and gates selection until reveal stage 3', () => {
     const hud = setup();
     const action = vi.fn();
