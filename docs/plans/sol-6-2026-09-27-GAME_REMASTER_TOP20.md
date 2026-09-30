@@ -3,6 +3,8 @@
 
 **Status:** active, gameplay audit in progress. This replaces the 2026-09-28 store-first top 10 after the user played all 12 courses and reported that holding GO can clear them, the bikes lack purpose, and the finish screen and replay loop feel unfinished. The user wants a studio-quality game before store submission. The unified game/native/store checklist is in [sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
 
+**2026-09-30 correction:** The [current twelve-course plan](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md) sets Rookie levels 1–8, purchased Pro levels 9–12 and a **1,840-Scrap** price. Seven Gold plus one Diamond or four Silver plus four Diamond on the first eight funds it exactly. Older 800-Scrap and Rookie-lower-route references below are dated evidence, not current career rules.
+
 ## The game a studio would build
 
 ROCKHOP is a compact, premium-feeling trials campaign: every course has a legible riding problem, a deliberate input solution, a fast crash/retry loop, and a finish worth chasing again. The opening teaches brake, throttle release, weight shift, preload and landing through real but understandable obstacles. Later courses combine techniques. Difficulty labels follow measured player experience; the user's Hard-to-Super-Extreme suggestion was an over-correction, not a fixed four-zone naming rule. The two bikes create different valid lines and the earned second bike opens the highest achievement on the last four stages. The world map, course scenery, rider, bike, camera, sound and rewards share one art direction. The player should want another attempt because they understand what to improve.
@@ -42,7 +44,7 @@ The [twelve-course challenge round](../evidence/campaign-retarget/README.md) mov
 
 - **Medal ladder:** Bronze, Silver, Gold, Diamond. Underlying `platinum` key remains until a tested save migration is justified; the display and art change to Diamond.
 - **Scrap rewards:** first Bronze/Silver/Gold/Diamond on each course makes its total lifetime payout 100/160/220/300 Scrap. Upgrading a medal grants only the difference; replaying the same medal grants zero. This makes skill rewarding without a grinding loophole.
-- **Bike two price:** 800 Scrap. Eight Bronze medals pay exactly 800, so every player who reaches the last four can buy it. No other paid item at launch and no real-money purchase.
+- **Bike two price:** 1,840 Scrap. Seven Gold plus one Diamond, or four Silver plus four Diamond, pay exactly 1,840 across the first eight courses. Eight Bronze medals pay 800, so the player must improve medals before the Pro-only last four. No other paid item at launch and no real-money purchase.
 - **Bike roles:** Starter is light, precise and forgiving; the second bike has stronger torque, more travel and grip for late climbs/landings, with more inertia and harder tight balance. The final four Diamond lines require its measured capability, not a hard-coded medal denial.
 - **Result flow:** show the medal, technique and rewards from the just-finished ride; explain the next reachable goal; then offer immediate Retry, Next, Map and Replay.
 

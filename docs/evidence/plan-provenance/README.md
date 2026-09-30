@@ -27,7 +27,7 @@ The local app catalog contains ChatGPT-backed entries, but the inspected Codex/C
 
 The original `FINISH_TO_PUBLISH.md` was Sol 6. The consolidated replacement is `sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`, authored in the later session under the user-confirmed Sol 6.1 label. Its new authorship does not rewrite predecessor history.
 
-During this audit, another writer renamed the active course plan to an unknown-model filename and retired the campaign/session predecessors. This audit preserves that organization and updates the active course prefix to verified `sol-6-2026-09-29-TWELVE_COURSE_REMASTER.md`; no course work is changed.
+During this audit, another writer renamed the active course plan to an unknown-model filename and retired the campaign/session predecessors. This audit established the original Sol 6 creation. The user subsequently specified Sol 6.1 for the current rewritten working plan, now `sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md`; the historical attribution above remains Sol 6.
 
 ## Local creation pointers
 

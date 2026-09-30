@@ -4,7 +4,7 @@
 This is the single game-to-store release plan. It merges the former finish-to-publish, iOS finish and store-release
 plans; their snapshots are preserved in [the archive](../../project/archive/README.md). The user also retired the
 old riding-pose and performance plans; their unresolved release requirements are included here.
-The [twelve-course execution plan](sol-6-2026-09-29-TWELVE_COURSE_REMASTER.md) owns course building; the [ranked quality findings](sol-6-2026-09-27-GAME_REMASTER_TOP20.md)
+The [twelve-course execution plan](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md) owns course building; the [ranked quality findings](sol-6-2026-09-27-GAME_REMASTER_TOP20.md)
 and [retired session record](../../project/archive/sol-6-2026-09-28-REMASTER_CURRENT_ROUND.md) preserve earlier findings. The parent owns status and final judgment.
 No estimate or passing bot result declares the game finished. Archive this plan only after all six gates and verified public launch.
 
@@ -18,10 +18,10 @@ No estimate or passing bot result declares the game finished. Archive this plan 
   twelve rally-flag towers and command-strip A are the accepted map direction. It is already the default web selector.
   Final reference fidelity, physical-phone gestures and pacing remain open.
 - Bronze, Silver, Gold and Diamond; `platinum` remains the compatible stored top-tier key. Lifetime course payouts
-  are 100/160/220/300 Scrap. Improvements pay only the difference; repeats pay zero. Pro costs **800 Scrap**.
-  Four Silver plus four Diamond, or seven Gold plus one Diamond, both afford it; seven Bronze being insufficient is intentional.
-- The latest user direction requires the earned second bike for **levels 8–12 (D2–S3)**, with upgrade communication
-  and a fair earning path before D2. This is a target under the active remaster revision, not a shipped claim.
+  are 100/160/220/300 Scrap. Improvements pay only the difference; repeats pay zero. Pro costs **1,840 Scrap**.
+  Four Silver plus four Diamond, or seven Gold plus one Diamond, both fund it exactly; eight Bronze yield only 800.
+- The latest user direction requires the earned second bike for **levels 9–12 (D3–S3)**, with upgrade communication
+  and medal improvement on levels 1–8 before D3. This is a target under the active remaster revision, not a shipped claim.
   Historical both-bike clears and optional final-four Diamond routes remain useful diagnostic evidence; they no longer
   define the campaign-access promise. No bike-ID scoring ban substitutes for a meaningful physical advantage.
 - Preserve saved ownership, PB ghosts, career medals, wallet and replay identity through migration and offline use.

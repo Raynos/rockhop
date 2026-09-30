@@ -1,4 +1,4 @@
-<!-- Naming: sol-6; verified from local Codex creation-turn metadata; date is first Git introduction. -->
+<!-- Naming: current revision is Sol 6.1 at the user's direction; original Sol 6 creation is recorded in docs/evidence/plan-provenance/; date is first Git introduction. -->
 # Twelve-course gameplay and visual remaster
 
 **Status:** active · **0/12 courses fully signed off**. This is the execution plan for [finish-to-publish Gates 1–3](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). It absorbs the skill, economy and finish contracts from the [retired campaign brief](../../project/archive/sol-6-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md). Mechanical baselines and bounded art passes are evidence, not completed courses.
@@ -14,10 +14,13 @@ A course counts as finished only when its gameplay, scenery, camera, sound, rewa
 ## Current campaign decision and progression contract
 
 - **Levels 1–8 (C1–D2): Rookie career. Levels 9–12 (D3, S1, S2, S3): purchased and equipped Pro career.** A difficulty step at 8→9 is intentional. Developer replays may probe any bike, but map, Quick Play, Results Next and normal direct links must honor the career boundary. No bike-ID denial is needed in medal scoring because the whole late course is a Pro career stage.
-- Complete all first eight courses for at least Bronze. The lifetime medal ledger pays Bronze 100, Silver 160, Gold 220 and Diamond 300 Scrap per course; improvements pay only the difference. Eight Bronze medals yield exactly **800 Scrap**, the one-time Pro price, before D3. Repeat clears pay zero. Existing legitimate Pro ownership and saved progress survive migration, reload and offline play.
-- After D2, the map and result point to a clear **Buy Pro → Equip Pro → D3** sequence. D3 teaches the changed handling before S1–S3 combine it with tighter snow control. The Garage must accurately show Pro's capability and chosen bike. A player can return to Rookie on stages 1–8 after purchase.
+- Complete all first eight courses for at least Bronze. The lifetime medal ledger pays Bronze 100, Silver 160, Gold 220 and Diamond 300 Scrap per course; improvements pay only the difference. Pro costs **1,840 Scrap**. **Seven Gold plus one Diamond** or **four Silver plus four Diamond** on the first eight pays exactly 1,840. Eight Bronze pays only 800 and does not unlock the purchase; replaying for better medals is the intended skill gate. Repeat clears pay zero. Existing legitimate Pro ownership and saved progress survive migration, reload and offline play.
+- After D2, the map and result show the wallet shortfall and a clear **improve medals → Buy Pro → Equip Pro → D3** sequence. D3 teaches the changed handling before S1–S3 combine it with tighter snow control. The Garage must accurately show Pro's capability and chosen bike. A player can return to Rookie on stages 1–8 after purchase.
 - The **access rule alone does not make the second bike worth earning**. Stock Pro is only modestly faster (1000 versus 880 N peak force, 21 versus 20 m/s top speed) and has the same tyre grip and 0.26/0.24 m travel as Rookie. The [measured envelope](../evidence/pro-envelope-v2/README.md) does not yet demonstrate a broad, dependable capability difference. Retune Pro's motor, suspension, grip and balance as a measured package, then author D3–S3 for its new envelope. Do not adopt candidate values without controlled full-course rides and new-player testing.
+- After Pro physics changes, recalibrate authored medal targets **and** the current global Pro `0.9×` time multiplier in `src/game/rules.ts`. Old D3/S1/S3 Diamond clocks have large spare time while S2 is tight; the new late-game curve must be judged from fresh Pro lines and human attempts.
 - The four late Diamond lines remain optional mastery routes **within Pro stages**. Bronze through Diamond still require real riding, authored route goals, calibrated times and clean runs; no passive clear earns a medal. Store release is free with no ads or real-money purchase.
+
+The [normal-app headless career check](../evidence/pro-career-gate/README.md) now exercises the exact 1,840-Scrap combinations, blocked eight-Bronze purchase, map/Garage action, direct late-course links and retained legacy ownership. Its medals are seeded fixtures; actual player earning, new Pro physics and physical-phone flow remain open.
 
 ## Shared production bar
 
@@ -36,10 +39,29 @@ A course counts as finished only when its gameplay, scenery, camera, sound, rewa
 | The 12/12 clean clips, 24 pinned bot rides and 0/72 passive clears are valuable **mechanical baselines**, but none measure uncoached phone learning or complete art quality. Calling this one-third done confused coverage with completion. | Track baseline coverage separately from **0/12 signed-off courses**. A course closes only after a complete moving ride, representative fault/retry, truthful result, model/material/audio review, exact replay and physical-phone learner/performance checks. |
 | Many tiny isolated surface, cue and prop passes preserved old inputs exactly while the whole course still looked sparse or flat. Several D1 overlays were rejected after moving review. | Build full-course vertical slices around the actual tire path, hero landmark, biome kit, light, camera, sound and reward. Compare the entire played ride and failure at landscape phone size. Keep a bounded pass only when it demonstrably improves that complete view; do not count it as a fraction of a finished course. |
 | Protecting old hashes sometimes displaced the original goal of making riding more fun. The late Rookie route is clean and the stock Pro advantage is too narrow for an obvious class split. | Permit track and physics changes. Keep before clips and inputs, then capture **new** deterministic goldens after the revised ride passes player and visual judgment. Prototype the Pro envelope across terrain, then tune D3 as its teaching level and S1–S3 as escalating applications. |
-| The eight-Bronze economy already pays 800 Scrap, but old zone unlocks could expose D3 after only six clears and the old brief allowed Rookie to finish all twelve. | Make the full eight medals, purchase and Pro equip an explicit D3–S3 career gate across map, Quick Play, Next and direct URLs. Test a fresh save through D2→Garage→D3 and a migrated owned-Pro save. A developer bypass is for diagnostic captures only. |
+| The prior 800-Scrap price let eight Bronze clears buy Pro, contrary to the intended medal-mastery gate. Old zone unlocks could also expose D3 after only six clears, and the old brief allowed Rookie to finish all twelve. | Set the purchase at 1,840; prove both specified medal combinations fund it and eight Bronze do not. Make eight first-course medals, purchase and Pro equip an explicit D3–S3 career gate across map, Quick Play, Next and direct URLs. Test fresh-save D2→medal upgrades→Garage→D3 and a migrated owned-Pro save. A developer bypass is for diagnostic captures only. |
 | A long held-GO sweep can reject trivial control, but cannot establish fun, fairness, medal calibration or replay motivation. | Measure attempts-to-clear, first fault location, understood correction, retry latency, earned medals and voluntary replays from uncoached riders. Retarget difficulty and clocks from that distribution; check the full curriculum after each course change. |
 
 The current visual audit still names four large gaps: flat Coast road/water, repetitive Alpine trees and machinery, sparse Quarry scale and uniform Snowline surfaces. Each biome exemplar must establish a reusable model/material/light standard before broad rollout. Sound, moving camera, contact and result presentation are included in that exemplar, not postponed to a generic final polish pass.
+
+## Graphics audit by course · 0/12 signed off
+
+These are played **bounded improvements**, not full-course art approvals. Each named gap must be judged in a moving ride and fault/retry at landscape phone size, then checked on a physical device.
+
+| Course | Best current visual evidence | Remaining full-ride gap |
+|---|---|---|
+| C1 | [Harbor, quay, road and ramp contact](../evidence/course-remaster/c1/README.md) | Coast-wide material/lighting quality, water, audible mix |
+| C2 | [Pier support and landing](../evidence/course-remaster/c2/pier-art/README.md) | Barge/crane models and dock-to-flight continuity |
+| C3 | [Wreck hull and cut bulkhead](../evidence/course-remaster/c3/breach-art/README.md) | Surf/shore transition and ship material finish |
+| A1 | [Mill, conveyor, wheel and flume](../evidence/course-remaster/a1/mill-complex/README.md) | Coherent forest and mill material standard |
+| A2 | [Log pivot, axle and cut ends](../evidence/course-remaster/a2/README.md) | Forest depth and contact detail through the whole ride |
+| A3 | [Loader cab, boom and strapped load](../evidence/course-remaster/a3/loader-cab/README.md) | Beam, terrain and machinery material finish |
+| D1 | [True terrace tops and entry faces](../evidence/course-remaster/d1/contact-road/README.md) | Larger quarry sculpt and human ledge anticipation |
+| D2 | [Pulley, cart and ridden metal](../evidence/course-remaster/d2/cart-run/README.md) | Belt/cart visual cohesion and quarry lighting |
+| D3 | [Supported high bridge](../evidence/d3-bridge-visual/README.md) | Lower route, gap depth and quarry-wide composition |
+| S1 | [Lift frames, cable and bridge support](../evidence/course-remaster/s1/bridge-art/README.md) | Ice/deck visibility and complete scene depth |
+| S2 | [Cornice lip and far landing](../evidence/course-remaster/s2/cornice-landmark/README.md) | Snowcat, ice wall and broad snow material quality |
+| S3 | [Shelf and upper-route cues](../evidence/course-remaster/s3/README.md) | Summit landmark, storm clearing and finale shot |
 
 ## Course briefs
 

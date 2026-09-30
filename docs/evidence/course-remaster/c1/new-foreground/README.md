@@ -10,4 +10,4 @@ The full before/after ride is the matched comparison for geometry and behavior. 
 
 ## Release status
 
-This is not a course sign-off. Uncoached landscape iPhone rides, physical-device pacing, a cohesive harbor art pass and the complete C1 production-slice gate remain open. See the [vertical-slice audit](../VERTICAL_SLICE_AUDIT.md) and [twelve-course plan](../../../../plans/sol-6-2026-09-29-TWELVE_COURSE_REMASTER.md).
+This is not a course sign-off. Uncoached landscape iPhone rides, physical-device pacing, a cohesive harbor art pass and the complete C1 production-slice gate remain open. See the [vertical-slice audit](../VERTICAL_SLICE_AUDIT.md) and [twelve-course plan](../../../../plans/sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md).
