@@ -1,0 +1,2027 @@
+{
+  "variant": "rookie",
+  "lod": true,
+  "baseline": {
+    "file": "/Users/raynos/projects/games/rockhop/public/models/bike-rookie-lod.glb",
+    "bytes": 870436,
+    "sha256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+    "triangles": 5793,
+    "vertices": 8918,
+    "draws": 23,
+    "meshes": 23,
+    "nodes": 46,
+    "materials": 4,
+    "textures": 8,
+    "images": 8,
+    "maxTexture": 1024,
+    "imageBytes": 707457,
+    "bones": 0,
+    "skins": 0,
+    "clips": [],
+    "sockets": 22,
+    "variants": null,
+    "extensionsUsed": [
+      "KHR_texture_transform",
+      "EXT_meshopt_compression"
+    ],
+    "extensionsRequired": [
+      "KHR_texture_transform",
+      "EXT_meshopt_compression"
+    ],
+    "imageList": [
+      {
+        "index": 0,
+        "name": "bike_atlas_normal",
+        "mime": "image/jpeg",
+        "bytes": 116298,
+        "h": 1024,
+        "w": 1024,
+        "kind": "jpeg"
+      },
+      {
+        "index": 1,
+        "name": "bike_atlas_orm",
+        "mime": "image/jpeg",
+        "bytes": 131792,
+        "h": 512,
+        "w": 512,
+        "kind": "jpeg"
+      },
+      {
+        "index": 2,
+        "name": "bike_atlas_albedo",
+        "mime": "image/jpeg",
+        "bytes": 261864,
+        "h": 1024,
+        "w": 1024,
+        "kind": "jpeg"
+      },
+      {
+        "index": 3,
+        "name": "bike_mech_normal",
+        "mime": "image/png",
+        "bytes": 46604,
+        "w": 256,
+        "h": 256,
+        "kind": "png"
+      },
+      {
+        "index": 4,
+        "name": "bike_mech_orm",
+        "mime": "image/png",
+        "bytes": 122922,
+        "w": 256,
+        "h": 256,
+        "kind": "png"
+      },
+      {
+        "index": 5,
+        "name": "bike_mech_albedo",
+        "mime": "image/jpeg",
+        "bytes": 19394,
+        "h": 256,
+        "w": 256,
+        "kind": "jpeg"
+      },
+      {
+        "index": 6,
+        "name": "chain_links",
+        "mime": "image/png",
+        "bytes": 450,
+        "w": 64,
+        "h": 32,
+        "kind": "png"
+      },
+      {
+        "index": 7,
+        "name": "bike_spokecard",
+        "mime": "image/png",
+        "bytes": 8133,
+        "w": 128,
+        "h": 128,
+        "kind": "png"
+      }
+    ],
+    "meshList": [
+      {
+        "name": "bodywork",
+        "tris": 126,
+        "verts": 220,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "brake_hose",
+        "tris": 296,
+        "verts": 264,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_mech"
+        ]
+      },
+      {
+        "name": "chain",
+        "tris": 768,
+        "verts": 388,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "chain_links"
+        ]
+      },
+      {
+        "name": "engine",
+        "tris": 316,
+        "verts": 572,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "exhaust",
+        "tris": 139,
+        "verts": 202,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "fork_lower",
+        "tris": 172,
+        "verts": 272,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "fork_upper",
+        "tris": 110,
+        "verts": 254,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "frame",
+        "tris": 272,
+        "verts": 576,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "handlebar",
+        "tris": 568,
+        "verts": 818,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "pegs",
+        "tris": 48,
+        "verts": 120,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "shock_body",
+        "tris": 30,
+        "verts": 70,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "shock_clevis",
+        "tris": 22,
+        "verts": 46,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "shock_shaft",
+        "tris": 22,
+        "verts": 34,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "shock_spring",
+        "tris": 148,
+        "verts": 363,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "sprocket_front",
+        "tris": 22,
+        "verts": 40,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "swingarm",
+        "tris": 138,
+        "verts": 282,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "wheel_front_blur",
+        "tris": 128,
+        "verts": 224,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_spokecard"
+        ]
+      },
+      {
+        "name": "wheel_front_spokes",
+        "tris": 256,
+        "verts": 512,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "wheel_front",
+        "tris": 856,
+        "verts": 1345,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "sprocket_rear",
+        "tris": 48,
+        "verts": 64,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "wheel_rear_blur",
+        "tris": 128,
+        "verts": 272,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_spokecard"
+        ]
+      },
+      {
+        "name": "wheel_rear_spokes",
+        "tris": 256,
+        "verts": 512,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      },
+      {
+        "name": "wheel_rear",
+        "tris": 924,
+        "verts": 1468,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_atlas"
+        ]
+      }
+    ],
+    "jointNames": [],
+    "socketNames": [
+      "attach_chassis_com",
+      "attach_countershaft",
+      "attach_fork_top",
+      "attach_frame_origin",
+      "attach_front_axle_rest",
+      "attach_front_pitch",
+      "attach_grip_L",
+      "attach_grip_R",
+      "attach_peg_L",
+      "attach_peg_R",
+      "attach_rear_axle_rest",
+      "attach_shock_top",
+      "attach_swing_pivot",
+      "attach_exhaust_outlet",
+      "attach_shock_rod_top",
+      "attach_shock_upper_seat",
+      "attach_shock_eye",
+      "attach_shock_lower_seat",
+      "attach_shock_link",
+      "attach_swing_axle",
+      "attach_rear_pitch",
+      "attach_rear_sprocket"
+    ]
+  },
+  "candidate": {
+    "file": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/bike-rookie-remaster-lod.glb",
+    "bytes": 485604,
+    "sha256": "25fafd2d1fb984b002f8d75fb611656990ca465013823f1c4623a1688b5d97a2",
+    "triangles": 5769,
+    "vertices": 9404,
+    "draws": 23,
+    "meshes": 23,
+    "nodes": 46,
+    "materials": 4,
+    "textures": 8,
+    "images": 8,
+    "maxTexture": 512,
+    "imageBytes": 314533,
+    "bones": 0,
+    "skins": 0,
+    "clips": [],
+    "sockets": 22,
+    "variants": null,
+    "extensionsUsed": [
+      "KHR_texture_transform",
+      "EXT_meshopt_compression"
+    ],
+    "extensionsRequired": [
+      "KHR_texture_transform",
+      "EXT_meshopt_compression"
+    ],
+    "imageList": [
+      {
+        "index": 0,
+        "name": "bike-rookie-remaster-lod.raw_normal",
+        "mime": "image/jpeg",
+        "bytes": 9337,
+        "h": 256,
+        "w": 256,
+        "kind": "jpeg"
+      },
+      {
+        "index": 1,
+        "name": "bike-rookie-remaster-lod.raw_orm",
+        "mime": "image/jpeg",
+        "bytes": 30374,
+        "h": 256,
+        "w": 256,
+        "kind": "jpeg"
+      },
+      {
+        "index": 2,
+        "name": "bike-rookie-remaster-lod.raw_albedo",
+        "mime": "image/jpeg",
+        "bytes": 77319,
+        "h": 512,
+        "w": 512,
+        "kind": "jpeg"
+      },
+      {
+        "index": 3,
+        "name": "bike_mech_normal",
+        "mime": "image/png",
+        "bytes": 46604,
+        "w": 256,
+        "h": 256,
+        "kind": "png"
+      },
+      {
+        "index": 4,
+        "name": "bike_mech_orm",
+        "mime": "image/png",
+        "bytes": 122922,
+        "w": 256,
+        "h": 256,
+        "kind": "png"
+      },
+      {
+        "index": 5,
+        "name": "bike_mech_albedo",
+        "mime": "image/jpeg",
+        "bytes": 19394,
+        "h": 256,
+        "w": 256,
+        "kind": "jpeg"
+      },
+      {
+        "index": 6,
+        "name": "chain_links",
+        "mime": "image/png",
+        "bytes": 450,
+        "w": 64,
+        "h": 32,
+        "kind": "png"
+      },
+      {
+        "index": 7,
+        "name": "bike_spokecard",
+        "mime": "image/png",
+        "bytes": 8133,
+        "w": 128,
+        "h": 128,
+        "kind": "png"
+      }
+    ],
+    "meshList": [
+      {
+        "name": "candidate_bodywork",
+        "tris": 454,
+        "verts": 747,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "brake_hose",
+        "tris": 296,
+        "verts": 264,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_mech"
+        ]
+      },
+      {
+        "name": "chain",
+        "tris": 768,
+        "verts": 388,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "chain_links"
+        ]
+      },
+      {
+        "name": "candidate_engine",
+        "tris": 804,
+        "verts": 1276,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "candidate_exhaust",
+        "tris": 227,
+        "verts": 286,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "fork_lower",
+        "tris": 172,
+        "verts": 272,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "fork_upper",
+        "tris": 110,
+        "verts": 254,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "frame",
+        "tris": 179,
+        "verts": 401,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "handlebar",
+        "tris": 373,
+        "verts": 735,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "pegs",
+        "tris": 31,
+        "verts": 75,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "shock_body",
+        "tris": 30,
+        "verts": 70,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "shock_clevis",
+        "tris": 22,
+        "verts": 46,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "shock_shaft",
+        "tris": 22,
+        "verts": 34,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "shock_spring",
+        "tris": 148,
+        "verts": 363,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "sprocket_front",
+        "tris": 22,
+        "verts": 40,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "swingarm",
+        "tris": 138,
+        "verts": 282,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "wheel_front_blur",
+        "tris": 128,
+        "verts": 224,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_spokecard"
+        ]
+      },
+      {
+        "name": "wheel_front_spokes",
+        "tris": 256,
+        "verts": 512,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "wheel_front",
+        "tris": 565,
+        "verts": 1107,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "sprocket_rear",
+        "tris": 31,
+        "verts": 41,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "wheel_rear_blur",
+        "tris": 128,
+        "verts": 272,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_spokecard"
+        ]
+      },
+      {
+        "name": "wheel_rear_spokes",
+        "tris": 256,
+        "verts": 512,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      },
+      {
+        "name": "wheel_rear",
+        "tris": 609,
+        "verts": 1203,
+        "primitives": 1,
+        "instances": 1,
+        "materials": [
+          "bike_remaster_pbr"
+        ]
+      }
+    ],
+    "jointNames": [],
+    "socketNames": [
+      "attach_chassis_com",
+      "attach_countershaft",
+      "attach_fork_top",
+      "attach_frame_origin",
+      "attach_front_axle_rest",
+      "attach_front_pitch",
+      "attach_grip_L",
+      "attach_grip_R",
+      "attach_peg_L",
+      "attach_peg_R",
+      "attach_rear_axle_rest",
+      "attach_shock_top",
+      "attach_swing_pivot",
+      "attach_exhaust_outlet",
+      "attach_shock_rod_top",
+      "attach_shock_upper_seat",
+      "attach_shock_eye",
+      "attach_shock_lower_seat",
+      "attach_shock_link",
+      "attach_swing_axle",
+      "attach_rear_pitch",
+      "attach_rear_sprocket"
+    ]
+  },
+  "decodedRgbaEstimate": {
+    "baseline": 10297344,
+    "candidate": 2433024,
+    "excludesMipmapsAndDriverDuplication": true
+  },
+  "sourceSha256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+  "output": "assets/blender/hero-remaster/bike/bike-rookie-remaster-lod.glb",
+  "verification": {
+    "bytes": 485604,
+    "sha256": "25fafd2d1fb984b002f8d75fb611656990ca465013823f1c4623a1688b5d97a2",
+    "triangles": 5769,
+    "vertices": 9404,
+    "draws": 23,
+    "meshes": 23,
+    "materials": 4,
+    "images": 8,
+    "maxTexture": 512,
+    "imageBytes": 314533,
+    "parts": 23,
+    "markers": 22,
+    "transformError": 5.960464477539063e-8,
+    "protectedError": 0,
+    "extras": {
+      "frame": [
+        "name"
+      ],
+      "bodywork": [
+        "name"
+      ],
+      "engine": [
+        "name"
+      ],
+      "exhaust": [
+        "name"
+      ],
+      "handlebar": [
+        "name"
+      ],
+      "pegs": [
+        "name"
+      ],
+      "fork_upper": [
+        "name"
+      ],
+      "fork_lower": [
+        "name"
+      ],
+      "swingarm": [
+        "name"
+      ],
+      "shock_body": [
+        "name"
+      ],
+      "shock_shaft": [
+        "name"
+      ],
+      "shock_clevis": [
+        "name"
+      ],
+      "shock_spring": [
+        "name"
+      ],
+      "wheel_front": [
+        "name"
+      ],
+      "wheel_front_spokes": [
+        "name"
+      ],
+      "wheel_front_blur": [
+        "name"
+      ],
+      "wheel_rear": [
+        "name"
+      ],
+      "wheel_rear_spokes": [
+        "name"
+      ],
+      "wheel_rear_blur": [
+        "name"
+      ],
+      "sprocket_front": [
+        "name"
+      ],
+      "sprocket_rear": [
+        "name"
+      ],
+      "chain": [
+        "name",
+        "tube_radius",
+        "link_pitch",
+        "rest_length"
+      ],
+      "brake_hose": [
+        "name",
+        "hose_stations",
+        "hose_length",
+        "hose_segments",
+        "hose_radius"
+      ],
+      "attach_frame_origin": [
+        "name"
+      ],
+      "attach_chassis_com": [
+        "name"
+      ],
+      "attach_swing_pivot": [
+        "name"
+      ],
+      "attach_swing_axle": [
+        "name"
+      ],
+      "attach_shock_link": [
+        "name"
+      ],
+      "attach_fork_top": [
+        "name"
+      ],
+      "attach_front_axle_rest": [
+        "name"
+      ],
+      "attach_rear_axle_rest": [
+        "name"
+      ],
+      "attach_shock_top": [
+        "name"
+      ],
+      "attach_shock_upper_seat": [
+        "name"
+      ],
+      "attach_shock_lower_seat": [
+        "name"
+      ],
+      "attach_shock_rod_top": [
+        "name"
+      ],
+      "attach_shock_eye": [
+        "name"
+      ],
+      "attach_countershaft": [
+        "name"
+      ],
+      "attach_front_pitch": [
+        "name"
+      ],
+      "attach_rear_sprocket": [
+        "name"
+      ],
+      "attach_rear_pitch": [
+        "name"
+      ],
+      "attach_exhaust_outlet": [
+        "name"
+      ],
+      "attach_grip_L": [
+        "name"
+      ],
+      "attach_grip_R": [
+        "name"
+      ],
+      "attach_peg_L": [
+        "name"
+      ],
+      "attach_peg_R": [
+        "name"
+      ]
+    },
+    "extensions": [
+      "KHR_texture_transform",
+      "EXT_meshopt_compression"
+    ],
+    "bounds": {
+      "min": [
+        -0.4150145649909973,
+        -0.3497467041015625,
+        -0.437408447265625
+      ],
+      "max": [
+        1.6615874767303467,
+        0.8586344718933105,
+        0.437408447265625
+      ]
+    }
+  },
+  "pack": {
+    "input": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/bike-rookie-remaster-lod.raw.glb",
+    "output": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/bike-rookie-remaster-lod.glb",
+    "views": [
+      {
+        "view": 0,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 747,
+        "from": 8964,
+        "to": 2105,
+        "maxError": 0.000015169382095336914
+      },
+      {
+        "view": 1,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 747,
+        "from": 8964,
+        "to": 1303,
+        "maxError": 0.016155043644123346
+      },
+      {
+        "view": 2,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 747,
+        "from": 5976,
+        "to": 4329,
+        "maxError": 0
+      },
+      {
+        "view": 3,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1362,
+        "from": 2724,
+        "to": 2094,
+        "maxError": 0
+      },
+      {
+        "view": 4,
+        "role": "image",
+        "mode": "raw",
+        "from": 9337,
+        "to": 9337
+      },
+      {
+        "view": 5,
+        "role": "image",
+        "mode": "raw",
+        "from": 30374,
+        "to": 30374
+      },
+      {
+        "view": 6,
+        "role": "image",
+        "mode": "raw",
+        "from": 77319,
+        "to": 77319
+      },
+      {
+        "view": 7,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 264,
+        "from": 3168,
+        "to": 565,
+        "maxError": 0
+      },
+      {
+        "view": 8,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 264,
+        "from": 3168,
+        "to": 404,
+        "maxError": 0.00012686529496856483
+      },
+      {
+        "view": 9,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 264,
+        "from": 2112,
+        "to": 1672,
+        "maxError": 0
+      },
+      {
+        "view": 10,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 888,
+        "from": 1776,
+        "to": 1002,
+        "maxError": 0
+      },
+      {
+        "view": 11,
+        "role": "image",
+        "mode": "raw",
+        "from": 46604,
+        "to": 46604
+      },
+      {
+        "view": 12,
+        "role": "image",
+        "mode": "raw",
+        "from": 122922,
+        "to": 122922
+      },
+      {
+        "view": 13,
+        "role": "image",
+        "mode": "raw",
+        "from": 19394,
+        "to": 19394
+      },
+      {
+        "view": 14,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 388,
+        "from": 4656,
+        "to": 1986,
+        "maxError": 0
+      },
+      {
+        "view": 15,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 388,
+        "from": 4656,
+        "to": 803,
+        "maxError": 0.00036055512101368283
+      },
+      {
+        "view": 16,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 388,
+        "from": 3104,
+        "to": 952,
+        "maxError": 0
+      },
+      {
+        "view": 17,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 2304,
+        "from": 4608,
+        "to": 1174,
+        "maxError": 0
+      },
+      {
+        "view": 18,
+        "role": "image",
+        "mode": "raw",
+        "from": 450,
+        "to": 450
+      },
+      {
+        "view": 19,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 1276,
+        "from": 15312,
+        "to": 3193,
+        "maxError": 0.000015228986740112305
+      },
+      {
+        "view": 20,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 1276,
+        "from": 15312,
+        "to": 1600,
+        "maxError": 0.013786323821845754
+      },
+      {
+        "view": 21,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1276,
+        "from": 10208,
+        "to": 8102,
+        "maxError": 0
+      },
+      {
+        "view": 22,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 2412,
+        "from": 4824,
+        "to": 3616,
+        "maxError": 0
+      },
+      {
+        "view": 23,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 286,
+        "from": 3432,
+        "to": 919,
+        "maxError": 0.00001519918441772461
+      },
+      {
+        "view": 24,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 286,
+        "from": 3432,
+        "to": 402,
+        "maxError": 0.014466159299417912
+      },
+      {
+        "view": 25,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 286,
+        "from": 2288,
+        "to": 1873,
+        "maxError": 0
+      },
+      {
+        "view": 26,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 681,
+        "from": 1362,
+        "to": 1010,
+        "maxError": 0
+      },
+      {
+        "view": 27,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 272,
+        "from": 3264,
+        "to": 1095,
+        "maxError": 0
+      },
+      {
+        "view": 28,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 272,
+        "from": 3264,
+        "to": 324,
+        "maxError": 0.00014528036270941737
+      },
+      {
+        "view": 29,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 272,
+        "from": 2176,
+        "to": 1833,
+        "maxError": 0
+      },
+      {
+        "view": 30,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 516,
+        "from": 1032,
+        "to": 547,
+        "maxError": 0
+      },
+      {
+        "view": 31,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 254,
+        "from": 3048,
+        "to": 1023,
+        "maxError": 0
+      },
+      {
+        "view": 32,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 254,
+        "from": 3048,
+        "to": 273,
+        "maxError": 0.00018157753302769792
+      },
+      {
+        "view": 33,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 254,
+        "from": 2032,
+        "to": 1595,
+        "maxError": 0
+      },
+      {
+        "view": 34,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 330,
+        "from": 660,
+        "to": 456,
+        "maxError": 0
+      },
+      {
+        "view": 35,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 401,
+        "from": 4812,
+        "to": 1621,
+        "maxError": 0.000023365020751953125
+      },
+      {
+        "view": 36,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 401,
+        "from": 4812,
+        "to": 542,
+        "maxError": 0.01481443867591151
+      },
+      {
+        "view": 37,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 401,
+        "from": 3208,
+        "to": 2647,
+        "maxError": 0
+      },
+      {
+        "view": 38,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 537,
+        "from": 1074,
+        "to": 715,
+        "maxError": 0
+      },
+      {
+        "view": 39,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 735,
+        "from": 8820,
+        "to": 3126,
+        "maxError": 0.000007573515176773071
+      },
+      {
+        "view": 40,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 735,
+        "from": 8820,
+        "to": 1195,
+        "maxError": 0.016370726040399724
+      },
+      {
+        "view": 41,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 735,
+        "from": 5880,
+        "to": 4928,
+        "maxError": 0
+      },
+      {
+        "view": 42,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1119,
+        "from": 2238,
+        "to": 1398,
+        "maxError": 0
+      },
+      {
+        "view": 43,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 75,
+        "from": 900,
+        "to": 357,
+        "maxError": 0
+      },
+      {
+        "view": 44,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 75,
+        "from": 900,
+        "to": 121,
+        "maxError": 0.0001238750461006883
+      },
+      {
+        "view": 45,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 75,
+        "from": 600,
+        "to": 513,
+        "maxError": 0
+      },
+      {
+        "view": 46,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 93,
+        "from": 186,
+        "to": 143,
+        "maxError": 0
+      },
+      {
+        "view": 47,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 70,
+        "from": 840,
+        "to": 310,
+        "maxError": 0
+      },
+      {
+        "view": 48,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 70,
+        "from": 840,
+        "to": 98,
+        "maxError": 0.00012267487367841612
+      },
+      {
+        "view": 49,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 70,
+        "from": 560,
+        "to": 490,
+        "maxError": 0
+      },
+      {
+        "view": 50,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 90,
+        "from": 180,
+        "to": 133,
+        "maxError": 0
+      },
+      {
+        "view": 51,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 46,
+        "from": 552,
+        "to": 183,
+        "maxError": 0.0000057220458984375
+      },
+      {
+        "view": 52,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 46,
+        "from": 552,
+        "to": 67,
+        "maxError": 0.00017013506707109897
+      },
+      {
+        "view": 53,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 46,
+        "from": 368,
+        "to": 335,
+        "maxError": 0
+      },
+      {
+        "view": 54,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 66,
+        "from": 132,
+        "to": 96,
+        "maxError": 0
+      },
+      {
+        "view": 55,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 34,
+        "from": 408,
+        "to": 123,
+        "maxError": 0.00001430511474609375
+      },
+      {
+        "view": 56,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 34,
+        "from": 408,
+        "to": 60,
+        "maxError": 0.0001516365169203283
+      },
+      {
+        "view": 57,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 34,
+        "from": 272,
+        "to": 258,
+        "maxError": 0
+      },
+      {
+        "view": 58,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 66,
+        "from": 132,
+        "to": 82,
+        "maxError": 0
+      },
+      {
+        "view": 59,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 363,
+        "from": 4356,
+        "to": 928,
+        "maxError": 0
+      },
+      {
+        "view": 60,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 363,
+        "from": 4356,
+        "to": 281,
+        "maxError": 0.009525969226224966
+      },
+      {
+        "view": 61,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 363,
+        "from": 2904,
+        "to": 2497,
+        "maxError": 0
+      },
+      {
+        "view": 62,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 444,
+        "from": 888,
+        "to": 641,
+        "maxError": 0
+      },
+      {
+        "view": 63,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 40,
+        "from": 480,
+        "to": 207,
+        "maxError": 0
+      },
+      {
+        "view": 64,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 40,
+        "from": 480,
+        "to": 68,
+        "maxError": 0.00012164784154450076
+      },
+      {
+        "view": 65,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 40,
+        "from": 320,
+        "to": 273,
+        "maxError": 0
+      },
+      {
+        "view": 66,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 66,
+        "from": 132,
+        "to": 93,
+        "maxError": 0
+      },
+      {
+        "view": 67,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 282,
+        "from": 3384,
+        "to": 926,
+        "maxError": 0.000003814697265625
+      },
+      {
+        "view": 68,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 282,
+        "from": 3384,
+        "to": 284,
+        "maxError": 0.0001640144219034541
+      },
+      {
+        "view": 69,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 282,
+        "from": 2256,
+        "to": 1899,
+        "maxError": 0
+      },
+      {
+        "view": 70,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 414,
+        "from": 828,
+        "to": 517,
+        "maxError": 0
+      },
+      {
+        "view": 71,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 224,
+        "from": 2688,
+        "to": 1026,
+        "maxError": 0
+      },
+      {
+        "view": 72,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 224,
+        "from": 2688,
+        "to": 230,
+        "maxError": 0.0003162277681289378
+      },
+      {
+        "view": 73,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 224,
+        "from": 1792,
+        "to": 963,
+        "maxError": 0
+      },
+      {
+        "view": 74,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 384,
+        "from": 768,
+        "to": 418,
+        "maxError": 0
+      },
+      {
+        "view": 75,
+        "role": "image",
+        "mode": "raw",
+        "from": 8133,
+        "to": 8133
+      },
+      {
+        "view": 76,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 512,
+        "from": 6144,
+        "to": 2355,
+        "maxError": 0
+      },
+      {
+        "view": 77,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 512,
+        "from": 6144,
+        "to": 700,
+        "maxError": 0.00029903573691428823
+      },
+      {
+        "view": 78,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 512,
+        "from": 4096,
+        "to": 3132,
+        "maxError": 0
+      },
+      {
+        "view": 79,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 768,
+        "from": 1536,
+        "to": 908,
+        "maxError": 0
+      },
+      {
+        "view": 80,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 1107,
+        "from": 13284,
+        "to": 5152,
+        "maxError": 0.0000152587890625
+      },
+      {
+        "view": 81,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 1107,
+        "from": 13284,
+        "to": 1608,
+        "maxError": 0.01582327304986733
+      },
+      {
+        "view": 82,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1107,
+        "from": 8856,
+        "to": 7246,
+        "maxError": 0
+      },
+      {
+        "view": 83,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1695,
+        "from": 3390,
+        "to": 2086,
+        "maxError": 0
+      },
+      {
+        "view": 84,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 41,
+        "from": 492,
+        "to": 269,
+        "maxError": 0.0000018477439880371094
+      },
+      {
+        "view": 85,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 41,
+        "from": 492,
+        "to": 106,
+        "maxError": 0.01284201243254892
+      },
+      {
+        "view": 86,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 41,
+        "from": 328,
+        "to": 292,
+        "maxError": 0
+      },
+      {
+        "view": 87,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 93,
+        "from": 186,
+        "to": 114,
+        "maxError": 0
+      },
+      {
+        "view": 88,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 272,
+        "from": 3264,
+        "to": 1092,
+        "maxError": 0
+      },
+      {
+        "view": 89,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 272,
+        "from": 3264,
+        "to": 282,
+        "maxError": 0.00036055512101368283
+      },
+      {
+        "view": 90,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 272,
+        "from": 2176,
+        "to": 1011,
+        "maxError": 0
+      },
+      {
+        "view": 91,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 384,
+        "from": 768,
+        "to": 754,
+        "maxError": 0
+      },
+      {
+        "view": 92,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 512,
+        "from": 6144,
+        "to": 2343,
+        "maxError": 0
+      },
+      {
+        "view": 93,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 512,
+        "from": 6144,
+        "to": 696,
+        "maxError": 0.00034218388865486186
+      },
+      {
+        "view": 94,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 512,
+        "from": 4096,
+        "to": 3290,
+        "maxError": 0
+      },
+      {
+        "view": 95,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 768,
+        "from": 1536,
+        "to": 908,
+        "maxError": 0
+      },
+      {
+        "view": 96,
+        "role": "attr:POSITION",
+        "mode": "ATTRIBUTES",
+        "filter": "EXPONENTIAL",
+        "bits": 16,
+        "count": 1203,
+        "from": 14436,
+        "to": 5301,
+        "maxError": 0.0000074803829193115234
+      },
+      {
+        "view": 97,
+        "role": "attr:NORMAL",
+        "mode": "ATTRIBUTES",
+        "filter": "OCTAHEDRAL",
+        "bits": 8,
+        "count": 1203,
+        "from": 14436,
+        "to": 1780,
+        "maxError": 0.015546017732462659
+      },
+      {
+        "view": 98,
+        "role": "attr:TEXCOORD",
+        "mode": "ATTRIBUTES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1203,
+        "from": 9624,
+        "to": 7558,
+        "maxError": 0
+      },
+      {
+        "view": 99,
+        "role": "indices",
+        "mode": "TRIANGLES",
+        "filter": "NONE",
+        "bits": null,
+        "count": 1827,
+        "from": 3654,
+        "to": 2335,
+        "maxError": 0
+      }
+    ],
+    "positionBits": 16,
+    "normalBits": 8,
+    "quatBits": 16,
+    "inputBytes": 676648,
+    "outputBytes": 485604,
+    "compressedViews": 92
+  },
+  "blender": {
+    "variant": "rookie",
+    "lod": true,
+    "source": "assets/blender/hero-remaster/bike/baseline-rookie-lod.decoded.glb",
+    "sourceSha256": "821698d2f4cf63bccc610f94046f951c679e57a6c8145511528e5ed07b641a56",
+    "parts": {
+      "bodywork": 454,
+      "brake_hose": 296,
+      "chain": 768,
+      "engine": 804,
+      "exhaust": 227,
+      "fork_lower": 172,
+      "fork_upper": 110,
+      "frame": 179,
+      "handlebar": 373,
+      "pegs": 31,
+      "shock_body": 30,
+      "shock_clevis": 22,
+      "shock_shaft": 22,
+      "shock_spring": 148,
+      "sprocket_front": 22,
+      "swingarm": 138,
+      "wheel_front": 565,
+      "wheel_front_blur": 128,
+      "wheel_front_spokes": 256,
+      "wheel_rear": 609,
+      "sprocket_rear": 31,
+      "wheel_rear_blur": 128,
+      "wheel_rear_spokes": 256
+    },
+    "triangles": 5769,
+    "nodeContractExact": true,
+    "texturePaths": {
+      "normal": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/textures/bike-rookie-remaster-lod.raw_normal.jpg",
+      "orm": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/textures/bike-rookie-remaster-lod.raw_orm.jpg",
+      "albedo": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/textures/bike-rookie-remaster-lod.raw_albedo.jpg",
+      "occlusion": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/bike/textures/bike-rookie-remaster-lod.raw_orm.jpg"
+    },
+    "authorship": "New Blender-authored panel/engine/exhaust geometry and PBR surfaces; production wheels/fork/interfaces retained; no neural geometry included."
+  },
+  "recipeSha256": "6dd23dc8a9f491d873b542e714213493a3d72540f77e2a5e72a7c5d990571bcd",
+  "masterSha256": "909c3079c159af2a947b526b02feef1bb70555f5204049b44e08d67d9b708dac"
+}

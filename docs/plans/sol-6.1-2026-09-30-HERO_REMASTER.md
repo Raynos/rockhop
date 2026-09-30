@@ -1,6 +1,6 @@
 # Rider and motorbike remaster
 
-Status: **in progress — build now; user returns tomorrow for the A/B**.
+Status: **in progress — whole Street/Blender/UniMate candidate built privately; art remains below target**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · ask 191.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gate 3 for presentation and Gate 4 for devices.
 Bar: [mission §3–4](../mission.md): a readable person on a mechanically credible motorbike, at phone frame rates.
@@ -31,7 +31,7 @@ Inventory checked 2026-09-30 against paths and runner source. `localai/docs/3d-m
 
 ## Local installation and storage contract
 
-UniMate's setup is the first implementation milestone, not an installed-state claim:
+UniMate's setup and CPU/MPS inference are now verified; these are the installed locations:
 
 | Content | Destination |
 |---|---|
@@ -80,10 +80,21 @@ Deliver a silent **before/after orbit movie**, a **candidate idle movie**, and *
 - [x] Inventory installed local tools/runners and existing weight locations; correct the stale TRELLIS execution assumption.
 - [x] Define three concept directions, concrete local layout and whole-hero Garage deliverables.
 - [x] User authorises pursuing the mockups and tomorrow's actual A/B; start with A and B, retain C as a study.
-- [ ] Install and validate UniMate locally; run the bounded geometry bake-off.
-- [ ] Build and show the complete first Garage candidate; extend to all variants and maneuvers.
+- [x] Install and validate UniMate locally; run both Hunyuan and TRELLIS on the same seed-42 full-body reference.
+- [x] Build the complete first Street rider + Rookie/Pro bike candidate in the actual Garage, with a protected UniMate idle.
+- [x] Move the Garage closer and raise bounded inspection resolution/edge smoothing; verify twenty family swaps and restore riding quality on exit.
+- [ ] Match the concepts: head/hair, cloth/contact transitions and manufactured materials still need art iteration; new Race-family rider geometry remains open.
+- [ ] Extend moving maneuver and family remaster review beyond the first Street candidate.
 - [ ] Physical-device and final art/release acceptance.
 
 Ask 196 corrects the timing: **build immediately; no scheduled run**. The mistaken `rockhop-in-engine-hero-versus-mockup` automation was deleted. Bounded builders own UniMate setup, neural rider candidates and Blender bike candidates; the parent owns integration and judges moving actual-Garage evidence. The user returns tomorrow for the comparison; no public deployment or paid compute is authorised.
 
-Sources: [UniMate](https://github.com/Friedrich-M/UniMate), [official model card](https://huggingface.co/Linzhan/UniMate), [Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), local `~/projects/localai/docs/3d-models.md` and `~/projects/weights/MODELS.md`. This plan authorises no claim that a new model is already in the Garage.
+The first moving candidate combines contact-corrected Hunyuan/Blender Street geometry, Blender Rookie/Pro full+LOD bikes and an offline UniMate neck turn. TRELLIS's raw mesh is retained as comparison evidence; its open seams lost this whole-body selection. UniMate's clip is named `idle_breathe` for the existing optional runtime slot, but the measured visible motion is a subtle neck turn, not generated chest breathing. CPU, MPS and repeat-seed results are in [tool evidence](../evidence/hero-remaster/unimate/README.md); setup wrappers were committed separately in localai at `db6ed0b`.
+
+The current Garage moves from distance 6 to 4.4 and preserves complete hero visibility at approximately 78% of viewport height. Actual phone WebKit inspection draws 1748×660 instead of 1311×495 at 874×330 CSS/DPR3; desktop DPR1 draws 1920×1080 instead of 1280×720. Stronger existing SMAA runs only in inspection; exit restores the prior riding policy. This is supersampling/capped raster resolution, not a temporal upscaler or AAA acceptance. Headless render-target memory increases with pixel count; physical-phone pacing remains an open release gate.
+
+Private asset mappings and moving reports live under [delivery evidence](../evidence/hero-remaster/delivery/README.md). Candidate models are not promoted into `public/models`; the shared main checkout's unrelated course/audio work is preserved. Full rendered bot replay clears in 40.083333333333336 seconds on low/high with identical finish bytes `abaaaaaaaa0a4440`; forced crash and one-tick restart also pass. A bot proxy does not replace the stranger or physical-phone judgments.
+
+The bounded V5 art correction reduces the cap and adds swept hair/brows, plus darker manufactured bike materials. Actual engine review found the Garage's neutral emissive lift whitening vertex-painted strands; those surfaces now retain authored shading. Whole phone/desktop rotations and played Street footage accept this as the current **private prototype**, still below the concept. Next loop prioritises a properly defined face and hair silhouette, garment/contact transitions, and neutral studio lighting/material response. The existing loader's 1024-pixel rider atlas cap and biome environment must be evaluated with actual render/texture budgets before promising finer close-up detail. New Race geometry follows; no mockup-quality or AAA bar is closed by this first integration.
+
+Sources: [UniMate](https://github.com/Friedrich-M/UniMate), [official model card](https://huggingface.co/Linzhan/UniMate), [Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), local `~/projects/localai/docs/3d-models.md` and `~/projects/weights/MODELS.md`.

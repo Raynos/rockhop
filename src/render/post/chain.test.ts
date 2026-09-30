@@ -50,6 +50,33 @@ it('disposes every owned pass including SMAA and lazy phone bloom', () => {
   expect(renderer.setRenderTarget).toHaveBeenCalledWith(null);
 });
 
+it('keeps Garage inspection AA through quality changes and restores each riding preset on exit', () => {
+  const { chain } = fixture();
+  const aa = (chain as unknown as {
+    aa: { _materialEdges: THREE.ShaderMaterial; _materialWeights: THREE.ShaderMaterial };
+  }).aa;
+  const expectAA = (low: boolean) => {
+    expect(aa._materialEdges.defines.SMAA_THRESHOLD).toBe(low ? '0.15' : '0.1');
+    expect(aa._materialWeights.defines.SMAA_MAX_SEARCH_STEPS).toBe(low ? '4' : '8');
+  };
+  chain.setQuality('low');
+  expectAA(true);
+  chain.setInspection(true);
+  for (const [tier, phone] of [['medium', false], ['high', true], ['high', false], ['low', false]] as const) {
+    chain.setQuality(tier, phone);
+    const before = chain.passWrites();
+    expectAA(false);
+    expect(chain.sceneTarget?.samples).toBe(0);
+    chain.setInspection(false);
+    expectAA(tier !== 'high' || phone);
+    expect(chain.passWrites()).toEqual(before);
+    chain.setInspection(true);
+    expectAA(false);
+    expect(chain.passWrites()).toEqual(before);
+  }
+  chain.dispose();
+});
+
 it('uses mobile 1.5 DPR without exceeding the low-tier width budget or device resolution', () => {
   expect(tierPixelRatio('low', 3, 874)).toBe(1.5);
   expect(tierPixelRatio('low', 3, 2000)).toBe(0.8);

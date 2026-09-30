@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-30",
+  "target": "A Street mockup",
+  "imagegen": {
+    "promptRole": "Clean full-body A-pose modelling reference, clean-shaven identity",
+    "source": "Codex imagegen built-in",
+    "generatedImage": "/Users/raynos/.codex/generated_images/01a0f12c-d453-7131-a25d-cbf991bc23bc/exec-04aac9cb-5946-4713-80b9-d8fda04b9885.png"
+  },
+  "inputs": {
+    "assets/design/hero-remaster/round1/A-street-remaster.png": {
+      "bytes": 2263353,
+      "sha256": "8e2ce35ec3d4061fd7d9417cad063ffecf6a4d98faecdb5cd42e86fd1da11f91"
+    },
+    "assets/blender/hero-remaster/rider/refs/street-apose.png": {
+      "bytes": 1788000,
+      "sha256": "3abccc3f2377e48f01c5611d0f64cf08fe06f986c68382d0222e0c09b157834a"
+    },
+    "public/models/rider-street-mustard.glb": {
+      "bytes": 3363820,
+      "sha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c"
+    }
+  },
+  "upstream": {
+    "hunyuan": {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2",
+      "revision": "f8db63096c8282cb27354314d896feba5ba6ff8a"
+    },
+    "trellisMac": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac",
+      "revision": "d58628f4f5b9c3de8274cb110074154f4b31cef2"
+    },
+    "trellis2": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2",
+      "revision": "75fbf0183001ed9876c8dbb35de6b68552ee08bd"
+    }
+  },
+  "seed": 42,
+  "neuralRuns": {
+    "hunyuan-42": {
+      "image": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/raw/cutouts/street-apose.png",
+      "shape": "turbo",
+      "seed": 42,
+      "load_s": 73.4,
+      "shape_s": 15.0,
+      "raw_faces": 308024,
+      "faces": 55000,
+      "paint_s": 48.3,
+      "peak_rss_gb": 16.11,
+      "mps_driver_gb": 19.67
+    },
+    "trellis-42": {
+      "image": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/raw/cutouts/street-apose.png",
+      "pipeline": "512",
+      "seed": 42,
+      "load_s": 224.1,
+      "gen_s": 48.5,
+      "raw_verts": 412791,
+      "raw_faces": 979590,
+      "bake_s": 10.3,
+      "glb_faces": 52221,
+      "peak_rss_gb": 20.79,
+      "mps_driver_gb": 5.44
+    }
+  },
+  "firstUsefulGeometry": "complete Hunyuan body fitted in Blender, preserving baseline rig and clips",
+  "contactCorrection": "parent actual Garage flagged neural gloves/shoes; v3 substitutes exact baseline authored contact geometry and weights",
+  "visualAcceptance": "parent judges actual Garage and played clips; no builder acceptance claim",
+  "baselineRetention": {
+    "gitRevision": "ec04192d61e39dcc8bdb80fd97842e8019ef4e55",
+    "gitPath": "public/models/rider-street-mustard.glb",
+    "restoredIgnoredPath": "assets/blender/hero-remaster/rider/work/source-baseline.glb",
+    "sha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c",
+    "purpose": "Original reviewed contact geometry/weights survive later public model promotion."
+  }
+}

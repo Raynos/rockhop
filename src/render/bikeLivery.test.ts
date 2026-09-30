@@ -34,7 +34,7 @@ function fixture(tier: 'high' | 'medium' | 'low' = 'medium', deviceClass: 'phone
     models: { bikeModel: 'gltf', riderModel: 'gltf' }, tier, deviceClass, stageOn: false, disposed: false, phase: 'menu',
     riderOutfit: 'street-mustard', riderDocumentOutfit: null, bikeClass: 'rookie', bikeDocumentClass: null,
     heroDocs: new Map<string, GLTF>(), heroDocUrl: new Map<GLTF, string>(), heroPool: new Map<GLTF, unknown>(),
-    heroLoading: 0, heroPending: Promise.resolve(), invalidate: vi.fn(), scene, sceneEpoch: 0,
+    heroLoading: 0, heroPending: Promise.resolve(), invalidate: vi.fn(), resize: vi.fn(), scene, sceneEpoch: 0,
     bike: { root: { name: 'bike:proc' }, placer: {}, ground: null, dispose: vi.fn() }, rider: { root: { name: 'rider:proc' }, detach: vi.fn(), attach: vi.fn(), dispose: vi.fn() },
     bikeRef: null as unknown, riderRef: null as unknown, ghost: null, retireObject: vi.fn(), applyTierVisibility: vi.fn(), swapPendingFrame: null,
     heroSwaps: [] as unknown[],

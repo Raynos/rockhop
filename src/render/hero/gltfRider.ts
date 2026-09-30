@@ -94,6 +94,10 @@ function sampler(clip: THREE.AnimationClip, w: ClipWindow): ClipSampler {
 }
 
 export class GltfRider {
+  private stageTime: number | null = null;
+  get hasStageMotion(): boolean { return this.clips.has('idle_breathe'); }
+  /** Explicit presentation time, supplied only while the Garage is visible. */
+  setStageTime(seconds: number): void { this.stageTime = seconds; }
   readonly root = new THREE.Group();
   readonly triangles: number;
   readonly materials: THREE.MeshStandardMaterial[];
@@ -343,9 +347,10 @@ export class GltfRider {
 
   /** The authored stage clip evaluated whole onto the bones, in the bone's own space; the contact residuals are measured, never corrected. */
   private poseStage(f: RenderFrame): boolean {
-    const s = this.clips.get(STAGE_CLIP);
+    const clip = this.hasStageMotion ? 'idle_breathe' : STAGE_CLIP;
+    const s = this.clips.get(clip);
     if (!s) return false;
-    const tt = s.from + (f.tSim % s.duration);
+    const tt = s.from + ((this.stageTime ?? f.tSim) % s.duration);
     for (const name of ORDER) {
       const b = this.bones.get(name);
       if (!b) continue;
@@ -362,7 +367,7 @@ export class GltfRider {
     }
     const d = this.debug;
     d.physicalPose = false;
-    d.stageClip = STAGE_CLIP;
+    d.stageClip = clip;
     d.additiveWeight = 0;
     d.comResidual = 0;
     if (this.bike) {

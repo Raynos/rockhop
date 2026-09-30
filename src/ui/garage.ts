@@ -84,7 +84,7 @@ export const BALANCE_HINT = 'Wheelie balance point: ~50° at neutral · lean bac
 export const GARAGE_VIEW = {
   yaw: 0.42,
   pitch: 0.12,
-  dist: 6.0,
+  dist: 4.4,
   /** Where the hero's centre lands on the frame: between the rail (left ~27 %) and the panel (right ~23 %), mid-height. */
   screenX: 0.52,
   screenY: 0.47,

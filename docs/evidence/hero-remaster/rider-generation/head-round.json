@@ -1,0 +1,344 @@
+{
+  "date": "2026-09-30",
+  "scope": "One bounded deterministic Blender head/hair round; whole body/rig/contact/clip contracts retained.",
+  "source": {
+    "": {
+      "path": "assets/blender/hero-remaster/rider/candidate-v3.glb",
+      "bytes": 2853896,
+      "sha256": "74556389549c714d8cc3ac953664a98c92275b668943201f84663dcc33682798"
+    },
+    "-lod": {
+      "path": "assets/blender/hero-remaster/rider/candidate-v3-lod.glb",
+      "bytes": 966868,
+      "sha256": "95bc6c8330e48e70c4d2e3986014914743590c8a4a7772c1d498a751fd289ff6"
+    }
+  },
+  "recipe": [
+    "refine_head.py",
+    "graft_head.mjs",
+    "rebuild-head.sh"
+  ],
+  "changes": {
+    "capScale": {
+      "lateral": 0.93,
+      "forward": 0.91,
+      "height": 0.92
+    },
+    "jawWidthScale": 1.045,
+    "hairStrands": {
+      "full": 64,
+      "lod": 9
+    },
+    "headNormals": "area-weighted average across duplicate positions/UV seams"
+  },
+  "failedTrial": "First coarse6-ring3.5mm strands read as raised zigzag worms in the builder diagnostic; final10-ring1.4mm curves are smoothed four passes and darker/rougher.",
+  "graftProofs": {
+    "": {
+      "source": "assets/blender/hero-remaster/rider/candidate-v3.glb",
+      "donor": "assets/blender/hero-remaster/rider/work/head-detail.glb",
+      "output": "assets/blender/hero-remaster/rider/candidate-v5.glb",
+      "sha256": "8fd36c2dcabe9f4e24931eac0622d039ef7d6eb0f329c041db77edeed092c613",
+      "bytes": 3032272,
+      "headVerticesPatched": 3389,
+      "extraTriangles": 4952,
+      "hairClumps": 64,
+      "originalAnimationMetadataPreserved": true,
+      "originalSkinMetadataPreserved": true,
+      "originalNodeTransformsPreserved": true,
+      "outsideHeadByteDifferences": 0
+    },
+    "-lod": {
+      "source": "assets/blender/hero-remaster/rider/candidate-v3-lod.glb",
+      "donor": "assets/blender/hero-remaster/rider/work/head-detail-lod.glb",
+      "output": "assets/blender/hero-remaster/rider/candidate-v5-lod.glb",
+      "sha256": "919d3b0fc094b5312e4c3923630cc29c243911e03953b895f9b4dd4b525f3cad",
+      "bytes": 973404,
+      "headVerticesPatched": 651,
+      "extraTriangles": 80,
+      "hairClumps": 9,
+      "originalAnimationMetadataPreserved": true,
+      "originalSkinMetadataPreserved": true,
+      "originalNodeTransformsPreserved": true,
+      "outsideHeadByteDifferences": 0
+    }
+  },
+  "sixClipContracts": {
+    "": {
+      "bytes": 1430944,
+      "sha256": "f2d1b6e386de37601145a3502168cb72689f585443b6e378b4b8994b37d1f181",
+      "triangles": 58800,
+      "vertices": 38016,
+      "draws": 3,
+      "meshes": 3,
+      "materials": 3,
+      "images": 2,
+      "maxTexture": 2048,
+      "imageBytes": 395789,
+      "bones": 19,
+      "sockets": [
+        "gripSocket.L",
+        "gripSocket.R",
+        "soleSocket.L",
+        "soleSocket.R"
+      ],
+      "clips": {
+        "compression": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.304122463131045e-05
+        },
+        "extension": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 9.170918990327483e-05
+        },
+        "forward_attack": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "hang_back": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "landing_absorption": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.890131018616351e-05
+        },
+        "sit_cruise": {
+          "duration": 1.966667,
+          "durationError": 3.178914398382915e-08,
+          "frames": 60,
+          "worstWorldError": 1.4174831751311951e-05
+        }
+      },
+      "restError": 2.980232238769531e-07,
+      "bindError": 7.301568984985352e-07,
+      "socketError": 1.5273690223693848e-07,
+      "clipError": 9.170918990327483e-05,
+      "rawWeightError": 1.1920928955078125e-07,
+      "extensions": [
+        "EXT_meshopt_compression"
+      ]
+    },
+    "-lod": {
+      "bytes": 556348,
+      "sha256": "261089d09ab61da7b5d2884896b6f26b3bc7ef5a87ebce2ad423cd73acb865eb",
+      "triangles": 7979,
+      "vertices": 8242,
+      "draws": 3,
+      "meshes": 3,
+      "materials": 3,
+      "images": 2,
+      "maxTexture": 1024,
+      "imageBytes": 200540,
+      "bones": 19,
+      "sockets": [
+        "gripSocket.L",
+        "gripSocket.R",
+        "soleSocket.L",
+        "soleSocket.R"
+      ],
+      "clips": {
+        "compression": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.304122463131045e-05
+        },
+        "extension": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 9.170918990327483e-05
+        },
+        "forward_attack": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "hang_back": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "landing_absorption": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.890131018616351e-05
+        },
+        "sit_cruise": {
+          "duration": 1.966667,
+          "durationError": 3.178914398382915e-08,
+          "frames": 60,
+          "worstWorldError": 1.4174831751311951e-05
+        }
+      },
+      "restError": 2.980232238769531e-07,
+      "bindError": 7.301568984985352e-07,
+      "socketError": 1.5273690223693848e-07,
+      "clipError": 9.170918990327483e-05,
+      "rawWeightError": 1.2200325727462769e-07,
+      "extensions": [
+        "EXT_meshopt_compression"
+      ]
+    }
+  },
+  "visualLimit": "Modest cap/strand/surface refinement; existing soft painted face and simplified cap still differ materially from concept A. No new neural batch or image-generation detail is presented as engine art.",
+  "acceptance": "Only parent can judge whole actual Garage and played ride clips; isolated head diagnostics are builder-only.",
+  "finalSevenClipContracts": {
+    "": {
+      "bytes": 1439900,
+      "sha256": "57c298f4d6c1371ab35c085f95679e5ae1545d57f3cbb5542b89ff7249321081",
+      "triangles": 58800,
+      "vertices": 38016,
+      "draws": 3,
+      "meshes": 3,
+      "materials": 3,
+      "images": 2,
+      "maxTexture": 2048,
+      "imageBytes": 395789,
+      "bones": 19,
+      "sockets": [
+        "gripSocket.L",
+        "gripSocket.R",
+        "soleSocket.L",
+        "soleSocket.R"
+      ],
+      "clips": {
+        "compression": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.304122463131045e-05
+        },
+        "extension": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 9.170918990327483e-05
+        },
+        "forward_attack": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "hang_back": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "landing_absorption": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.890131018616351e-05
+        },
+        "sit_cruise": {
+          "duration": 1.966667,
+          "durationError": 3.178914398382915e-08,
+          "frames": 60,
+          "worstWorldError": 1.4174831751311951e-05
+        },
+        "idle_breathe": {
+          "duration": 2,
+          "durationError": 0,
+          "frames": 61,
+          "worstWorldError": 1.4174831751311951e-05
+        }
+      },
+      "restError": 2.980232238769531e-07,
+      "bindError": 7.301568984985352e-07,
+      "socketError": 1.5273690223693848e-07,
+      "clipError": 9.170918990327483e-05,
+      "rawWeightError": 1.1920928955078125e-07,
+      "extensions": [
+        "EXT_meshopt_compression"
+      ]
+    },
+    "-lod": {
+      "bytes": 565300,
+      "sha256": "2619cbdf43e0cb23f0f8daadde0795dca24e42eba3f62dd5c67401c3534b4628",
+      "triangles": 7979,
+      "vertices": 8242,
+      "draws": 3,
+      "meshes": 3,
+      "materials": 3,
+      "images": 2,
+      "maxTexture": 1024,
+      "imageBytes": 200540,
+      "bones": 19,
+      "sockets": [
+        "gripSocket.L",
+        "gripSocket.R",
+        "soleSocket.L",
+        "soleSocket.R"
+      ],
+      "clips": {
+        "compression": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.304122463131045e-05
+        },
+        "extension": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 9.170918990327483e-05
+        },
+        "forward_attack": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "hang_back": {
+          "duration": 3.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 120,
+          "worstWorldError": 7.016718380689065e-05
+        },
+        "landing_absorption": {
+          "duration": 4.966667,
+          "durationError": 3.1789143761784544e-08,
+          "frames": 150,
+          "worstWorldError": 7.890131018616351e-05
+        },
+        "sit_cruise": {
+          "duration": 1.966667,
+          "durationError": 3.178914398382915e-08,
+          "frames": 60,
+          "worstWorldError": 1.4174831751311951e-05
+        },
+        "idle_breathe": {
+          "duration": 2,
+          "durationError": 0,
+          "frames": 61,
+          "worstWorldError": 1.4174831751311951e-05
+        }
+      },
+      "restError": 2.980232238769531e-07,
+      "bindError": 7.301568984985352e-07,
+      "socketError": 1.5273690223693848e-07,
+      "clipError": 9.170918990327483e-05,
+      "rawWeightError": 1.2200325727462769e-07,
+      "extensions": [
+        "EXT_meshopt_compression"
+      ]
+    }
+  },
+  "idlePreservation": "UniMate v5 expanded verifier: original six clips + V4 neck/head idle input/output accessor bytes identical; protected sockets/joint positions max0m over121mixer samples."
+}

@@ -28,6 +28,7 @@ import { LightingRig, fogify } from './lighting/environment';
 import { MaterialLibrary } from './materials/library';
 import { Emitters } from './particles/emitters';
 import { PostChain, tierPixelRatio, type PassWrite } from './post/chain';
+import { garagePixelRatio } from './garageQuality';
 import { RiderModel } from './rider/riderModel';
 import { SKY_ID, buildBiomeKit } from './world/biomeKit';
 import { ZONE_TIME } from './world/zones/zoneKit';
@@ -94,6 +95,8 @@ export interface GameRenderer {
    * screen is up; `false` restores the track exactly. Pair with `setCameraOverride({ mode: 'orbit', … })`.
    */
   setGarageStage?(on: boolean): void;
+  /** Presentation only: elapsed time for an animated Garage, independent of physics. */
+  advancePresentation?(elapsedSeconds: number): void;
 }
 
 export interface ThreeRendererOptions {
@@ -380,6 +383,7 @@ export class ThreeRenderer implements GameRenderer {
   /** Garage round: the workshop set (built once, `world/garageStage.ts`), whether it is up, and the world meshes it hid. */
   private stage: GarageStage | null = null;
   private stageOn = false;
+  private stageTime = 0;
   private readonly stageHidden = new Set<THREE.Object3D>();
   private stageX = NaN;
   private stageSavedBackground: THREE.Scene['background'] = null;
@@ -602,6 +606,7 @@ export class ThreeRenderer implements GameRenderer {
     if (!this.postRef) {
       this.postRef = new PostChain(this.renderer, this.scene, this.rig.camera);
       this.postRef.setQuality(this.tier, this.phoneHigh);
+      this.postRef.setInspection(this.stageOn);
       this.postRef.setSize(this.width, this.height, this.pixelRatio);
       this.postRef.applyBiome(this.biome);
     }
@@ -754,7 +759,9 @@ export class ThreeRenderer implements GameRenderer {
   private applyHeroStageLift(instance: GltfBike | GltfRider, on: boolean): void {
     for (const m of instance.materials) {
       const saved = this.heroStageLift.get(m);
-      if (on && !saved && m.map) {
+      // Vertex colour contributes to diffuse shading, not emissiveMap. The
+      // neutral map added by complete() would turn dark strands into white light.
+      if (on && !saved && m.map && !m.vertexColors) {
         this.heroStageLift.set(m, { emissive: m.emissive.clone(), emissiveMap: m.emissiveMap });
         m.emissiveMap = m.map;
         m.emissive.setRGB(HERO_STAGE_LIFT[0], HERO_STAGE_LIFT[1], HERO_STAGE_LIFT[2]);
@@ -1461,6 +1468,9 @@ export class ThreeRenderer implements GameRenderer {
   setGarageStage(on: boolean): void {
     if (this.disposed || this.stageOn === on) return;
     this.stageOn = on;
+    this.stageTime = 0;
+    this.postRef?.setInspection(on);
+    this.resize(this.width, this.height);
     // Ask 43 round 2: the garage shows the authored rider on every tier while the level rides the LOD — the
     // document changes with the stage on the phone tiers, so the hero is rebuilt (the same swap as a tier change;
     // desktop-high draws the authored file in both and rebuilds nothing).
@@ -1473,6 +1483,12 @@ export class ThreeRenderer implements GameRenderer {
     if (on) this.applyGarageStage();
     else this.clearGarageStage();
     this.invalidate();
+  }
+
+  advancePresentation(elapsedSeconds: number): void {
+    if (!this.stageOn || !(this.rider instanceof GltfRider) || !this.rider.hasStageMotion || !Number.isFinite(elapsedSeconds) || elapsedSeconds <= 0) return;
+    this.stageTime += Math.min(elapsedSeconds, 0.1);
+    this.frameDirty = true;
   }
 
   private applyGarageStage(): void {
@@ -1934,6 +1950,7 @@ export class ThreeRenderer implements GameRenderer {
     else this.lighting.follow(this.rig.targetX, this.rig.targetY, this.rig.distance > 20);
 
     this.bike.update(f);
+    if (this.stageOn && this.rider instanceof GltfRider) this.rider.setStageTime(this.stageTime);
     this.rider.update(f);
     if (this.reflection) this.syncReflection(this.reflection); // garage round: the twins follow the hero's matrices
     // Ghost: same interpolation, its own state history; capped at 35 % opacity.
@@ -2114,7 +2131,10 @@ export class ThreeRenderer implements GameRenderer {
     // Tier caps: low/medium ≤ 1.5 (low ≤ 1600 px wide), phone-high ≤ 1.5,
     // high ≤ 2 — and the canvas itself is sized by it (the browser upscales the canvas; the
     // composite no longer writes a full-DPR frame).
-    const pr = tierPixelRatio(this.tier, this.devicePixelRatio, width, this.phoneHigh);
+    const displayDpr = Math.max(this.devicePixelRatio, typeof window === 'undefined' ? 1 : window.devicePixelRatio || 1);
+    const pr = this.stageOn
+      ? garagePixelRatio(displayDpr, width, height)
+      : tierPixelRatio(this.tier, this.devicePixelRatio, width, this.phoneHigh);
     if (pr !== this.pixelRatio) {
       this.pixelRatio = pr;
       this.renderer.setPixelRatio(pr);

@@ -395,6 +395,7 @@ export class PostChain {
   readonly composite: ShaderPass;
   private readonly aa: FinalSMAA;
   private tier: QualityTier = 'high';
+  private inspection = false;
   private width = 1280;
   private height = 720;
   private pixelRatio = 1;
@@ -435,11 +436,17 @@ export class PostChain {
     this.ao.setCamera(camera as THREE.PerspectiveCamera);
   }
 
+  /** Garage inspection keeps stronger final edge AA independently of the riding tier. */
+  setInspection(on: boolean): void {
+    this.inspection = on;
+    this.aa.setLow(!this.inspection && (this.tier !== 'high' || this.phoneHigh));
+  }
+
   setQuality(tier: QualityTier, phoneHigh = false): void {
     this.tier = tier;
     this.phoneHigh = phoneHigh && tier === 'high';
     this.bypass = false;
-    this.aa.setLow(tier !== 'high' || this.phoneHigh);
+    this.aa.setLow(!this.inspection && (tier !== 'high' || this.phoneHigh));
     this.bloom.enabled = tier !== 'low' && !this.phoneHigh;
     this.composite.uniforms.uBloom!.value = this.bloom.enabled || this.phoneHigh ? 1.0 : 0.0;
     if (this.phoneHigh && !this.emissive) this.emissive = new EmissiveBloom(this.renderer);

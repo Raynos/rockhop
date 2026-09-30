@@ -1,0 +1,75 @@
+{
+  "device": "mps",
+  "seed": 42,
+  "ode_steps": 50,
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "/Users/raynos/projects/localai/bin/unimate/inference_entry.py",
+    "--exp-dir",
+    "/Users/raynos/projects/localai/runtime/unimate/runs/experiment-mps",
+    "--output-dir",
+    "/Users/raynos/projects/localai/runtime/unimate/runs/mps-repeat42",
+    "--test-cases-json",
+    "/Users/raynos/projects/localai/runtime/unimate/runs/experiment-mps/idle-cases.json",
+    "--seed",
+    "42",
+    "--batch-size",
+    "1",
+    "--num-repetitions",
+    "1",
+    "--cfg-scale",
+    "3.0",
+    "--only-save-motion",
+    "--motion-edit",
+    "--keep-joints",
+    "pelvis,spine,chest,shoulder.L,shoulder.R,upperArm.L,upperArm.R,forearm.L,forearm.R,hand.L,hand.R,thigh.L,thigh.R,shin.L,shin.R,foot.L,foot.R",
+    "--gt-start-frame",
+    "0"
+  ],
+  "prompt": "A motorcycle rider stays seated, hands firmly holding handlebars and feet on pegs, with a very subtle relaxed head turn and gentle breathing. No body translation, no standing or waving.",
+  "protected_joint_names": [
+    "pelvis",
+    "spine",
+    "chest",
+    "shoulder.L",
+    "shoulder.R",
+    "upperArm.L",
+    "upperArm.R",
+    "forearm.L",
+    "forearm.R",
+    "hand.L",
+    "hand.R",
+    "thigh.L",
+    "thigh.R",
+    "shin.L",
+    "shin.R",
+    "foot.L",
+    "foot.R"
+  ],
+  "upstream_revision": "5d6aabedd947297b5ba6706d8e9113e68c0c3e4f",
+  "returncode": 0,
+  "elapsed_seconds": 39.362,
+  "outputs": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/unimate/runs/mps-repeat42/motion_edit/motions/RockhopRider-sit_cruise-000-gt_rep_0-0.npy",
+      "shape": [
+        59,
+        19,
+        12
+      ],
+      "finite": true,
+      "sha256": "a61f28e7b84bc9f20bf28b0ebef0fd938e9a70036118cc0ca806c58b9b3dfc87"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/unimate/runs/mps-repeat42/motion_edit/motions/RockhopRider-sit_cruise-000-rep_0-0.npy",
+      "shape": [
+        59,
+        19,
+        12
+      ],
+      "finite": true,
+      "sha256": "d344e199962694b366ee386412cde8b255e9398e769af5e02df7aa738d1fbb55"
+    }
+  ],
+  "inference_pass": true
+}
