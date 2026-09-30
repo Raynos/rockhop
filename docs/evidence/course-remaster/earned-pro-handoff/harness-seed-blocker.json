@@ -1,0 +1,640 @@
+{
+  "verdict": "BLOCKED",
+  "source": {
+    "head": "b2cf4f736ccc5fa13aa57e63ffa106faf1ea935e",
+    "buildVersion": {
+      "build": "52f6ba23",
+      "sha": "52f6ba2313895203a8d2716c8d01ff8fd5257c70",
+      "time": "2026-09-30T17:51:16.427Z"
+    },
+    "appSha256": "8a47788ce063fd9e714cb51503b7198fa912e1dc5dff708908c1be82c65a9378",
+    "hudSha256": "bed96398e4a442fae4f039fcf0e2dbd01cfeac208b8f456db044073ec8ce3a89"
+  },
+  "frozenIdentities": {
+    "index.html": "c14165fa04ce57e04ca8711efb4c143baff884ed1f8cc509aa1311ec9f80b66c",
+    "version.json": "4aeedb4c3edf753d505ffa03ee8fc67f34323e2f46f2d754509817f27a4f9666",
+    "assets/audio-offline-CxfzjCwN.js": "32557976971f71a27b9559fa27d7daad8460e0e1a41850050624703ab7fa7259",
+    "assets/inbox-BCBLLNP9.js": "d2091cd57ce43abe6d7421bed0a560fa0a226b2b245bfee09a85910fa5dc74cb",
+    "assets/index-BiytsazG.js": "c2e8c20433420112e80037d3db276be6d425aab054fd4da86790a3465fcf02ce",
+    "assets/legacy-physics-C65hyTZY.js": "7d5f3b46afe5f7ea5629d90c6db0b9ea943ebf15afdf54780cbb8fb092f25f69",
+    "assets/retired-DwWcTUSU.js": "cc709910262a872e356ea4efad84d12a969659b6ccd43d5ac21b7d9bc993fa47",
+    "assets/sentry-errors-DZ1jjk5-.js": "250b78dad9d601fd32b41f1460b088fa59e9a739f316570f8003433d1917516e",
+    "assets/three-C7fBpum8.js": "e4e5305f8f10635545f532df5e8b416acf964e2196d14b954dfd5055665bccab",
+    "assets/worklet-CT-J7623.js": "89f1d20a91cafb7d969151cd9df0bc80f092c5c2a7cc2cf5c529b044540082a6",
+    "assets/worklet-DAkd6Thg.js": "173de8f93352d1b062fe7e6c32ba9bb42e3c907f21863f6fd4d6e1b2fefa1872",
+    "assets/worldMap3dScene-C8mVIKEH.js": "f7598901a5bc9cf9c87c7c77e800fda895403e6f3b868007fcb1b1ffcdce28a0"
+  },
+  "served": {
+    "assets/three-C7fBpum8.js": "e4e5305f8f10635545f532df5e8b416acf964e2196d14b954dfd5055665bccab",
+    "assets/index-BiytsazG.js": "c2e8c20433420112e80037d3db276be6d425aab054fd4da86790a3465fcf02ce",
+    "assets/retired-DwWcTUSU.js": "cc709910262a872e356ea4efad84d12a969659b6ccd43d5ac21b7d9bc993fa47",
+    "assets/inbox-BCBLLNP9.js": "d2091cd57ce43abe6d7421bed0a560fa0a226b2b245bfee09a85910fa5dc74cb",
+    "assets/worklet-DAkd6Thg.js": "173de8f93352d1b062fe7e6c32ba9bb42e3c907f21863f6fd4d6e1b2fefa1872",
+    "assets/worldMap3dScene-C8mVIKEH.js": "f7598901a5bc9cf9c87c7c77e800fda895403e6f3b868007fcb1b1ffcdce28a0",
+    "assets/worklet-CT-J7623.js": "89f1d20a91cafb7d969151cd9df0bc80f092c5c2a7cc2cf5c529b044540082a6",
+    "version.json": "4aeedb4c3edf753d505ffa03ee8fc67f34323e2f46f2d754509817f27a4f9666"
+  },
+  "stage": "ride:d1-dust-devil",
+  "message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1813218294 !== 1\n",
+  "marks": [
+    {
+      "name": "fresh-menu",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "menu",
+      "phase": "menu",
+      "trackId": "c1-low-tide",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "—",
+      "next": "Next track",
+      "nextDisabled": false,
+      "resultMedal": "",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "c1-low-tide:exact-finish",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c1-low-tide",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 0,
+        "medals": {},
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "—",
+      "next": "Next trackCrane Hop",
+      "nextDisabled": false,
+      "resultMedal": "",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "c1-low-tide:published-result",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c1-low-tide",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+300",
+      "next": "Next trackCrane Hop",
+      "nextDisabled": false,
+      "resultMedal": "Diamond",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "c2-crane-hop:exact-finish",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c2-crane-hop",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+300",
+      "next": "Next trackHull Breach",
+      "nextDisabled": false,
+      "resultMedal": "Diamond",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "c2-crane-hop:published-result",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c2-crane-hop",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 520,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackHull Breach",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "c3-hull-breach:exact-finish",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c3-hull-breach",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 520,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next track",
+      "nextDisabled": true,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "c3-hull-breach:published-result",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "c3-hull-breach",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 740,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackSawdust",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "a1-sawdust:exact-finish",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "a1-sawdust",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 740,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackLog Jam",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "a1-sawdust:published-result",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "a1-sawdust",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 960,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackLog Jam",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "a2-log-jam:exact-finish",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "a2-log-jam",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 960,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackTimberline",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "a2-log-jam:published-result",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "a2-log-jam",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 1180,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold",
+          "a2-log-jam": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackTimberline",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "a3-timberline:exact-finish",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "a3-timberline",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 1180,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold",
+          "a2-log-jam": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next track",
+      "nextDisabled": true,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    },
+    {
+      "name": "a3-timberline:published-result",
+      "frame": 0,
+      "videoS": 0,
+      "onVideo": false,
+      "screen": "run",
+      "phase": "finished",
+      "trackId": "a3-timberline",
+      "bike": "rookie",
+      "ledger": {
+        "version": 1,
+        "wallet": 1400,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold",
+          "a2-log-jam": "gold",
+          "a3-timberline": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "next": "Next trackDust Devil",
+      "nextDisabled": false,
+      "resultMedal": "Gold",
+      "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+    }
+  ],
+  "rides": [
+    {
+      "id": "c1-low-tide",
+      "recording": "harness/inputs/c1-low-tide/bot-3.json",
+      "recordingSha256": "ce9eb69fb42766f75c3e0bd381558ad0d32ba88c65c066a66efb5caf5a7466ec",
+      "header": {
+        "version": 1,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "physicsHz": 120,
+        "note": "standalone-c1-challenge marker2-brake-pallet-ramp bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "expected": {
+        "hash": "2bfe061963ffb058",
+        "finishTime": 30.349999999999998,
+        "tick": 3642,
+        "faults": 0
+      },
+      "actual": {
+        "hash": "2bfe061963ffb058",
+        "finishTime": 30.349999999999998,
+        "tick": 3642,
+        "faults": 0
+      },
+      "ledger": {
+        "version": 1,
+        "wallet": 300,
+        "medals": {
+          "c1-low-tide": "platinum"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+300",
+      "medal": "Diamond"
+    },
+    {
+      "id": "c2-crane-hop",
+      "recording": "harness/inputs/c2-crane-hop/bot-3.json",
+      "recordingSha256": "182d7b484142ef8f7cd45adfd7234bdfc068d37129dd4aa761d55b2f066c7028",
+      "header": {
+        "version": 1,
+        "trackId": "c2-crane-hop",
+        "seed": 3733111498,
+        "physicsHz": 120,
+        "note": "C2 registered: gentle Pier 2 correction, release-only crane landing bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "expected": {
+        "hash": "88a0573d42a3ca40",
+        "finishTime": 26.608333333333334,
+        "tick": 3193,
+        "faults": 0
+      },
+      "actual": {
+        "hash": "88a0573d42a3ca40",
+        "finishTime": 26.608333333333334,
+        "tick": 3193,
+        "faults": 0
+      },
+      "ledger": {
+        "version": 1,
+        "wallet": 520,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "medal": "Gold"
+    },
+    {
+      "id": "c3-hull-breach",
+      "recording": "harness/inputs/c3-hull-breach/bot-3.json",
+      "recordingSha256": "253ac1398a236cb32d79ed537737d884c792773c5aee1e1af708a11465212b13",
+      "header": {
+        "version": 1,
+        "trackId": "c3-hull-breach",
+        "seed": 1478967505,
+        "physicsHz": 120,
+        "note": "C3 Rookie clean stage 3 bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "expected": {
+        "hash": "bcbe71b98fcd500a",
+        "finishTime": 35.1,
+        "tick": 4212,
+        "faults": 0
+      },
+      "actual": {
+        "hash": "bcbe71b98fcd500a",
+        "finishTime": 35.1,
+        "tick": 4212,
+        "faults": 0
+      },
+      "ledger": {
+        "version": 1,
+        "wallet": 740,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "medal": "Gold"
+    },
+    {
+      "id": "a1-sawdust",
+      "recording": "harness/inputs/a1-sawdust/bot-3.json",
+      "recordingSha256": "611795e3f00fb504902d5a5b1ca44490206229144fbaaf0e03ce573316f6ef8f",
+      "header": {
+        "version": 1,
+        "trackId": "a1-sawdust",
+        "seed": 4096148763,
+        "physicsHz": 120,
+        "note": "A1 flume: release GO and lean forward x=316..324 bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "expected": {
+        "hash": "91f3878cfca365d6",
+        "finishTime": 30.349999999999998,
+        "tick": 3642,
+        "faults": 0
+      },
+      "actual": {
+        "hash": "91f3878cfca365d6",
+        "finishTime": 30.349999999999998,
+        "tick": 3642,
+        "faults": 0
+      },
+      "ledger": {
+        "version": 1,
+        "wallet": 960,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "medal": "Gold"
+    },
+    {
+      "id": "a2-log-jam",
+      "recording": "harness/inputs/a2-log-jam/bot-3.json",
+      "recordingSha256": "8ff1785f871b040e130b873b35274030599f7b7b4f40bfab62f56253c5fc8633",
+      "header": {
+        "version": 1,
+        "trackId": "a2-log-jam",
+        "seed": 3947357332,
+        "physicsHz": 120,
+        "note": "bot skill=3 outcome=finished bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "expected": {
+        "hash": "82b364d5e95115f0",
+        "finishTime": 29.983333333333334,
+        "tick": 3598,
+        "faults": 0
+      },
+      "actual": {
+        "hash": "82b364d5e95115f0",
+        "finishTime": 29.983333333333334,
+        "tick": 3598,
+        "faults": 0
+      },
+      "ledger": {
+        "version": 1,
+        "wallet": 1180,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold",
+          "a2-log-jam": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "medal": "Gold"
+    },
+    {
+      "id": "a3-timberline",
+      "recording": "harness/inputs/a3-timberline/bot-3.json",
+      "recordingSha256": "ed5af2eaf96b2c277e5168581d74243984f3c9a7784b2b6116ecbd2b474cc6cf",
+      "header": {
+        "version": 1,
+        "trackId": "a3-timberline",
+        "seed": 849270865,
+        "physicsHz": 120,
+        "note": "Alpine isolated skill-3 bot rookie bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "expected": {
+        "hash": "7c8649893814e931",
+        "finishTime": 24.816666666666666,
+        "tick": 2978,
+        "faults": 0
+      },
+      "actual": {
+        "hash": "7c8649893814e931",
+        "finishTime": 24.816666666666666,
+        "tick": 2978,
+        "faults": 0
+      },
+      "ledger": {
+        "version": 1,
+        "wallet": 1400,
+        "medals": {
+          "c1-low-tide": "platinum",
+          "c2-crane-hop": "gold",
+          "c3-hull-breach": "gold",
+          "a1-sawdust": "gold",
+          "a2-log-jam": "gold",
+          "a3-timberline": "gold"
+        },
+        "proOwned": false,
+        "equipped": "rookie"
+      },
+      "reward": "+220",
+      "medal": "Gold"
+    }
+  ],
+  "state": {
+    "screen": "run",
+    "phase": "riding",
+    "trackId": "d1-dust-devil",
+    "bike": "rookie",
+    "ledger": {
+      "version": 1,
+      "wallet": 1400,
+      "medals": {
+        "c1-low-tide": "platinum",
+        "c2-crane-hop": "gold",
+        "c3-hull-breach": "gold",
+        "a1-sawdust": "gold",
+        "a2-log-jam": "gold",
+        "a3-timberline": "gold"
+      },
+      "proOwned": false,
+      "equipped": "rookie"
+    },
+    "reward": "+220",
+    "next": "Next trackConveyor",
+    "nextDisabled": false,
+    "resultMedal": "Gold",
+    "garageState": "Pro unlocks for 1,840 Scrap · tap to inspect"
+  },
+  "pageErrors": [],
+  "consoleErrors": []
+}
