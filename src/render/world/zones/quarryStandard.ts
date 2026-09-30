@@ -4,14 +4,19 @@
  * Ridden ribbons, obstacles and the D3 high/low bridge are never modified.
  */
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import type { ColliderPolyline, CompiledTrack } from '../../../core/types';
 import type { MaterialLibrary } from '../../materials/library';
 import { fogify } from '../../lighting/environment';
+import { modelAssetUrl } from '../../hero/urls';
+import type { CourseAssetDelivery } from '../courseAssets';
 import { PropBatch, type WorldDetail } from '../props';
 import * as G from './geo';
 
 export type QuarryTrackId = 'd1-dust-devil' | 'd2-conveyor' | 'd3-rope-walk';
 export type QuarryLandmarkKind = 'drill' | 'crusher' | 'haul' | 'gantry' | 'ridge';
+export type QuarryMachineKind = Exclude<QuarryLandmarkKind, 'ridge'>;
 export interface QuarryLandmark { kind: QuarryLandmarkKind; x: number; z: number; scale: number; yaw: number }
 export interface QuarryContact { x0: number; x1: number; bottomY: number; topY: number; colliderId: number }
 export interface QuarryStandardPlan {
@@ -35,14 +40,18 @@ export interface QuarryStandardKit {
   dispose(): void;
 }
 
-/** Keep D1's accepted exact-collider edge/witness batches and all obstacle art. */
+/** Retire only after original ZoneKit has consumed its RNG. Authored machine
+ * batches retire only after the GLB delivery succeeds, leaving a real fallback
+ * if a model fails to decode. D1 collider edge/witness and D2/D3 obstacles
+ * never appear in these sets. Rocks/contact shadows remain until a played
+ * review proves their replacement gives at least equal depth and contact. */
 export const QUARRY_STANDARD_REPLACE = {
   meshes: new Set(['terrain', 'zone:pitfloor', 'zone:pool']),
-  batches: new Set([
-    'bench0', 'bench1', 'block0', 'block1', 'block2', 'rubble', 'rubblepile',
-    'scrub', 'surveypole', 'rail', 'orecart', 'hut', 'haultruck', 'headframe',
-    'conveyor', 'zrock0', 'zrock1', 'zrock2', 'zrockfar', 'contactshadow',
-  ]),
+  terrainBatches: new Set(['bench0', 'bench1']),
+  authoredBatches: new Set(['haultruck', 'headframe', 'conveyor']),
+  reviewBeforeRetirement: new Set(['block0', 'block1', 'block2', 'rubble',
+    'rubblepile', 'scrub', 'surveypole', 'rail', 'orecart', 'hut', 'zrock0',
+    'zrock1', 'zrock2', 'zrockfar', 'contactshadow']),
   plate: 'sky-and-haze-only',
 } as const;
 
@@ -106,30 +115,28 @@ const C = {
   yellow: rgb(0xe1ad39), dust: rgb(0xd2bb94), pool: rgb(0x245a5c),
   glass: rgb(0x59787d), tyre: rgb(0x25292a),
 };
-type Surface = 'strata' | 'dust' | 'steel' | 'pool';
+type Surface = 'strata' | 'pool';
 function textureData(surface: Surface, size: number): [THREE.DataTexture, THREE.DataTexture, THREE.DataTexture] {
   const albedo = new Uint8Array(size * size * 4), normal = new Uint8Array(size * size * 4), orm = new Uint8Array(size * size * 4);
   const base: Record<Surface, readonly [number, number, number]> = {
-    strata: [221, 202, 171], dust: [214, 196, 166], steel: [206, 210, 203], pool: [37, 91, 99],
+    strata: [221, 202, 171], pool: [37, 91, 99],
   };
   const [red, green, blue] = base[surface];
   for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) {
     const i = (y * size + x) * 4;
     const n = key(0x73151, x + y * size, surface.charCodeAt(0)) - 0.5;
     const strata = surface === 'strata' ? 15 * Math.sin(y * 0.095 + 0.3 * Math.sin(x * 0.033)) : 0;
-    const aggregate = surface === 'dust' ? 12 * Math.sin(x * 0.13 + y * 0.18) : 0;
-    const oxide = surface === 'steel' ? 16 * Math.max(0, Math.sin(x * 0.1 - y * 0.05)) : 0;
     const ripple = surface === 'pool' ? 8 * Math.sin(x * 0.1 + y * 0.041) : 0;
-    const v = Math.round(14 * n + strata + aggregate + ripple);
-    albedo[i] = Math.max(0, Math.min(255, red + v + oxide));
-    albedo[i + 1] = Math.max(0, Math.min(255, green + v - oxide * 0.5));
-    albedo[i + 2] = Math.max(0, Math.min(255, blue + v - oxide));
+    const v = Math.round(14 * n + strata + ripple);
+    albedo[i] = Math.max(0, Math.min(255, red + v));
+    albedo[i + 1] = Math.max(0, Math.min(255, green + v));
+    albedo[i + 2] = Math.max(0, Math.min(255, blue + v));
     albedo[i + 3] = 255;
     normal[i] = Math.round(128 + (surface === 'pool' ? 20 * Math.cos(x * 0.1 + y * 0.041) : n * 22));
     normal[i + 1] = Math.round(128 + (surface === 'strata' ? 15 * Math.cos(y * 0.095) : n * 15));
     normal[i + 2] = 248; normal[i + 3] = 255;
-    orm[i] = 255; orm[i + 1] = surface === 'pool' ? 111 : surface === 'steel' ? 171 : 222;
-    orm[i + 2] = surface === 'steel' ? 92 : 0; orm[i + 3] = 255;
+    orm[i] = 255; orm[i + 1] = surface === 'pool' ? 111 : 222;
+    orm[i + 2] = 0; orm[i + 3] = 255;
   }
   const tex = (pixels: Uint8Array, srgb: boolean): THREE.DataTexture => {
     const t = new THREE.DataTexture(pixels, size, size, THREE.RGBAFormat);
@@ -208,68 +215,6 @@ function contactBedding(plan: QuarryStandardPlan): THREE.BufferGeometry | null {
   return G.merge(parts);
 }
 
-function drillGeometry(low: boolean): THREE.BufferGeometry {
-  const p: THREE.BufferGeometry[] = [
-    G.box(5.2, 0.65, 3.5, 0, 1.1, 0, C.steel),
-    G.box(2.3, 2.9, 2.6, -1.1, 2.65, 0, C.yellow),
-    G.box(1.8, 1.15, 0.05, -1.1, 3.35, 1.33, C.glass),
-    G.box(0.52, 16, 0.52, 1.15, 8.8, -0.2, C.oxide),
-    G.box(2.7, 0.55, 2.2, 1.15, 16.5, -0.2, C.dark),
-    G.cyl(0.2, 0.2, 11.5, 8, 1.15, 5.5, -0.2, C.steel),
-  ];
-  for (const side of [-1, 1]) {
-    p.push(G.box(6.0, 0.55, 0.56, 0, 0.55, side * 1.55, C.dark));
-    for (let i = 0; i < (low ? 3 : 6); i++) p.push(G.box(0.12, 0.15, 0.6, -2.5 + i * (low ? 2.5 : 1.0), 0.55, side * 1.55, C.steel));
-    p.push(G.beam(1.15, 1.0, side * 1.0, 1.15, 16.2, side * 1.0, 0.16, C.dark));
-  }
-  return G.merge(p);
-}
-function crusherGeometry(low: boolean): THREE.BufferGeometry {
-  const p: THREE.BufferGeometry[] = [
-    G.box(10.2, 1.0, 5.6, 0, 1.1, 0, C.dark),
-    G.box(5.7, 6.8, 4.2, -1.8, 4.6, 0, C.oxide),
-    G.box(7.1, 0.6, 4.5, -1.8, 8.2, 0, C.yellow),
-    G.box(4.8, 1.0, 3.0, 2.4, 5.2, 0, C.steel),
-    G.box(2.6, 2.1, 3.8, -1.8, 1.8, 3.1, C.dark),
-  ];
-  for (const side of [-1, 1]) {
-    p.push(G.cyl(0.75, 0.75, 0.35, low ? 10 : 16, 2.9, 5.1, side * 2.3, C.dark, 'z'));
-    for (let i = 0; i < (low ? 3 : 6); i++)
-      p.push(G.box(0.18, 6.0, 0.12, -4.1 + i * (low ? 2.3 : 1.15), 4.6, side * 2.15, C.steel));
-  }
-  p.push(G.beam(2, 7.7, 0, 17, 4.1, -3.1, 0.5, C.oxide));
-  p.push(G.beam(2, 7.2, 0, 17, 3.6, -3.1, 0.42, C.dark));
-  for (const x of [6, 12, 16]) p.push(G.beam(x, 4.0, -3.1, x, 0.2, -3.1, 0.17, C.dark));
-  return G.merge(p);
-}
-function haulGeometry(low: boolean): THREE.BufferGeometry {
-  const p: THREE.BufferGeometry[] = [
-    G.box(8.5, 2.9, 3.5, 0, 3.3, 0, C.yellow),
-    G.box(7.3, 0.25, 3.7, 0.2, 4.9, 0, C.dark),
-    G.box(2.8, 2.3, 3.2, -3.7, 3.6, 0, C.yellow),
-    G.box(2.5, 0.95, 0.05, -3.7, 4.08, 1.64, C.glass),
-    G.box(7.5, 0.9, 3.2, 0.5, 1.7, 0, C.oxide),
-  ];
-  for (const x of [-3.2, 2.7]) for (const side of [-1, 1]) {
-    p.push(G.cyl(1.18, 1.18, 0.5, low ? 12 : 18, x, 1.2, side * 1.67, C.tyre, 'z'));
-    p.push(G.cyl(0.5, 0.5, 0.52, 10, x, 1.2, side * 1.67, C.steel, 'z'));
-  }
-  return G.merge(p);
-}
-function gantryGeometry(low: boolean): THREE.BufferGeometry {
-  const p: THREE.BufferGeometry[] = [G.box(21, 0.52, 5.8, 0, 11.2, 0, C.dark)];
-  for (const x of [-9.5, 9.5]) for (const z of [-2.5, 2.5]) {
-    p.push(G.box(0.34, 11, 0.34, x, 5.6, z, C.oxide));
-    p.push(G.box(1.15, 0.24, 1.15, x, 0.15, z, C.steel));
-  }
-  for (let x = -9; x < 9; x += low ? 6 : 3) {
-    p.push(G.beam(x, 11.2, -2.6, x + (low ? 6 : 3), 12.6, -2.6, 0.14, C.yellow));
-    p.push(G.beam(x, 11.2, 2.6, x + (low ? 6 : 3), 12.6, 2.6, 0.14, C.yellow));
-  }
-  p.push(G.box(2.4, 2.1, 2.5, 1.9, 12.8, 0, C.yellow));
-  p.push(G.box(2.2, 0.75, 0.05, 1.9, 13.3, 1.28, C.glass));
-  return G.merge(p);
-}
 function ridgeGeometry(seed: number): THREE.BufferGeometry {
   const pos: number[] = [], col: number[] = [], idx: number[] = [];
   const xRows = [-9, -7, -5, -2, 0, 3, 5, 7, 9];
@@ -294,10 +239,10 @@ function ridgeGeometry(seed: number): THREE.BufferGeometry {
 
 export function buildQuarryStandard(plan: QuarryStandardPlan, options: QuarryStandardOptions): QuarryStandardKit {
   const { lib, detail, groundAt } = options;
-  const low = detail === 'low', size = low ? 128 : 256;
+  const low = detail === 'low', size = low ? 64 : 128;
   const meshes: THREE.Mesh[] = [], batches: PropBatch[] = [], scroll: QuarryStandardKit['scroll'] = [];
   const ownedGeo = new Set<THREE.BufferGeometry>(), ownedMat = new Set<THREE.Material>(), ownedTex = new Set<THREE.Texture>();
-  const surfaces = Object.fromEntries((['strata', 'dust', 'steel', 'pool'] as const).map(s => {
+  const surfaces = Object.fromEntries((['strata', 'pool'] as const).map(s => {
     const [m, maps] = material(s, size, lib); ownedMat.add(m); maps.forEach(t => ownedTex.add(t)); return [s, m];
   })) as Record<Surface, THREE.MeshStandardMaterial>;
   const mesh = (name: string, geo: THREE.BufferGeometry, mat: THREE.Material): THREE.Mesh => {
@@ -344,17 +289,8 @@ export function buildQuarryStandard(plan: QuarryStandardPlan, options: QuarrySta
     ridge.add(x + 12 * key(plan.seed, x, 28), plan.pitY, -107 - 8 * key(plan.seed, x, 29),
       0, 0.9 + key(plan.seed, x, 30) * 0.45);
   }
-  const machines = new Map<QuarryLandmarkKind, PropBatch>();
-  for (const a of plan.landmarks) {
-    let b = machines.get(a.kind);
-    if (!b) {
-      const geo = a.kind === 'drill' ? drillGeometry(low) : a.kind === 'crusher' ? crusherGeometry(low)
-        : a.kind === 'haul' ? haulGeometry(low) : gantryGeometry(low);
-      b = batch(a.kind, geo, surfaces.steel); machines.set(a.kind, b);
-    }
-    const y = a.z < -38 ? plan.pitY + 0.08 : height(a.x, a.z);
-    b.add(a.x, y, a.z, a.yaw, a.scale);
-  }
+  // The manufactured machines are a separate demand-loaded CourseAssetDelivery.
+  // This synchronous terrain kit never claims a replacement before GLB decode.
   const scree = batch('angular-scree', G.merge([
     G.box(0.8, 0.32, 0.65, -0.25, 0.15, 0, C.bed, 0.16),
     G.box(0.55, 0.19, 0.42, 0.42, 0.08, -0.22, C.pale, -0.2),
@@ -379,4 +315,105 @@ export function buildQuarryStandard(plan: QuarryStandardPlan, options: QuarrySta
       for (const m of ownedMat) m.dispose();
       disposeMaps(); meshes.length = 0; batches.length = 0; scroll.length = 0;
     } };
+}
+
+/** The parent may mount this promise through mountCourseAssets. Every model is
+ * decoded only for a course that places it, and all late/cancelled resources
+ * stay within the CourseAssetDelivery lifetime. The legacy machine batches
+ * remain visible until this promise resolves and the owner attaches its root.
+ */
+export async function loadQuarryLandmarks(
+  plan: QuarryStandardPlan, detail: 'full' | 'lod', lib: MaterialLibrary,
+  groundAt: (x: number, z: number) => number,
+  resolveAssetUrl: (logicalPath: string) => string = modelAssetUrl,
+): Promise<CourseAssetDelivery> {
+  const kinds = [...new Set(plan.landmarks.map(a => a.kind))]
+    .filter((k): k is QuarryMachineKind => k !== 'ridge');
+  const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+  const settled = await Promise.allSettled(kinds.map(async kind => {
+    const file = `models/course-kits/quarry-standard/quarry-${kind}${detail === 'lod' ? '-lod' : ''}-packed.glb`;
+    return [kind, await loader.loadAsync(resolveAssetUrl(file))] as const;
+  }));
+  const sources = new Map<QuarryMachineKind, THREE.Group>();
+  const geometries = new Set<THREE.BufferGeometry>();
+  const materials = new Set<THREE.Material>();
+  const maps = new Set<THREE.Texture>();
+  const root = new THREE.Group(); root.name = `quarry:authored:${plan.id}`;
+  let textureBytes = 0, disposed = false;
+  const dispose = (): void => {
+    if (disposed) return; disposed = true;
+    for (const geometry of geometries) geometry.dispose();
+    for (const material of materials) material.dispose();
+    const closed = new Set<unknown>();
+    for (const map of maps) {
+      const image = map.image as { close?: () => void } | undefined;
+      map.dispose();
+      if (image?.close && !closed.has(image)) { closed.add(image); image.close(); }
+    }
+    root.clear();
+    for (const scene of sources.values()) scene.clear();
+  };
+  try {
+    for (const item of settled) {
+      if (item.status === 'rejected') throw item.reason;
+      const [kind, gltf] = item.value;
+      const scene = gltf.scene;
+      scene.updateMatrixWorld(true);
+      let count = 0;
+      scene.traverse(object => {
+        const mesh = object as THREE.Mesh;
+        if (!mesh.isMesh) return;
+        count++;
+        geometries.add(mesh.geometry);
+        for (const mat of Array.isArray(mesh.material) ? mesh.material : [mesh.material]) {
+          materials.add(mat);
+          const standard = mat as THREE.MeshStandardMaterial;
+          if (!standard.isMeshStandardMaterial) continue;
+          for (const map of [standard.map, standard.normalMap, standard.roughnessMap,
+            standard.metalnessMap, standard.aoMap, standard.emissiveMap, standard.alphaMap]) {
+            if (!map || maps.has(map)) continue;
+            maps.add(map);
+            const image = map.image as { width?: number; height?: number } | undefined;
+            textureBytes += (image?.width ?? 0) * (image?.height ?? 0) * 4 * 1.33;
+          }
+          fogify(standard); lib.complete(standard);
+        }
+        mesh.castShadow = false; mesh.receiveShadow = true;
+      });
+      if (count < 1 || count > 7) throw new Error(`quarry ${kind} has ${count} decoded draws`);
+      sources.set(kind, scene);
+    }
+    for (const landmark of plan.landmarks) {
+      if (landmark.kind === 'ridge') continue;
+      const prototype = sources.get(landmark.kind);
+      if (!prototype) throw new Error(`quarry ${landmark.kind} model absent`);
+      const instance = prototype.clone(true);
+      instance.name = `quarry:${landmark.kind}:${Math.round(landmark.x)}`;
+      instance.position.set(landmark.x,
+        quarryCutY(plan, groundAt, landmark.x, landmark.z) + 0.08, landmark.z);
+      instance.rotation.y = landmark.yaw;
+      instance.scale.setScalar(landmark.scale);
+      root.add(instance);
+    }
+    return { root, textureBytes, dispose };
+  } catch (error) {
+    for (const item of settled) if (item.status === 'fulfilled') {
+      // Include a partial source that failed material preparation above.
+      const [, gltf] = item.value;
+      gltf.scene.traverse(object => {
+        const mesh = object as THREE.Mesh;
+        if (!mesh.isMesh) return;
+        geometries.add(mesh.geometry);
+        for (const mat of Array.isArray(mesh.material) ? mesh.material : [mesh.material]) {
+          materials.add(mat);
+          const standard = mat as THREE.MeshStandardMaterial;
+          for (const map of [standard.map, standard.normalMap, standard.roughnessMap,
+            standard.metalnessMap, standard.aoMap, standard.emissiveMap, standard.alphaMap]) if (map) maps.add(map);
+        }
+      });
+      sources.set(item.value[0], gltf.scene);
+    }
+    dispose();
+    throw error;
+  }
 }

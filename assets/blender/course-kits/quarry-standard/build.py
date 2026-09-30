@@ -365,6 +365,10 @@ def material_join():
         bpy.context.view_layer.objects.active = o
         for modifier in list(o.modifiers):
             bpy.ops.object.modifier_apply(modifier=modifier.name)
+        # Join into an unrotated frame. The first active object is often a
+        # splayed beam; leaving its transform on the merged mesh displaced
+        # gantry feet below the authored ground plane on Blender 5.2 export.
+        bpy.ops.object.transform_apply(location=False, rotation=True, scale=True)
     for m in (yellow, oxide, galv, dark, rubber, glass, ore, cream):
         same = [o for o in asset_collection.objects if o.type == 'MESH' and o.data.materials and o.data.materials[0] == m]
         if len(same) < 2: continue
