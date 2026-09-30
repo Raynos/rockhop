@@ -1,0 +1,70 @@
+diff --git a/src/render/world/biomeKit.ts b/src/render/world/biomeKit.ts
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -55 +55 @@
+-import { loadCoastHarbor, planC1Harbor, removeC1HarborPlaceholders } from './zones/coastHarbor';
++import { loadCoastHarbor, planC1Harbor, planFarCoastHarbor, removeC1HarborPlaceholders } from './zones/coastHarbor';
+@@ -853 +853 @@
+-    const plateId = biome.id === 'coast' && track.def.id === 'c1-low-tide' ? 'plate-coast-low-tide' : PLATE_ID[biome.id];
++    const plateId = biome.id === 'coast' && (track.def.id === 'c1-low-tide' || authoredCourse) ? 'plate-coast-low-tide' : PLATE_ID[biome.id];
+@@ -866 +866 @@
+-      const sky = addPlane(sw, sh, skyMat, midX, floorY - 60 + sh / 2, sz);
++      const sky = addPlane(sw, sh, skyMat, midX, floorY - (authoredCourse && biome.id === 'coast' && track.def.id !== 'c1-low-tide' ? 145 : 60) + sh / 2, sz);
+@@ -884 +884 @@
+-      if (authoredCourse && track.def.id === 'c1-low-tide') originalCoastPlate = plate;
++      if (authoredCourse && biome.id === 'coast') originalCoastPlate = plate;
+@@ -1027,0 +1028,36 @@
++      }
++      if (authoredCourse && (track.def.id === 'c2-crane-hop' || track.def.id === 'c3-hull-breach')) {
++        // Retain the generated far vessels as a live fallback until both the
++        // authored bank and analytic sea are mounted. Route obstacles and all
++        // near seeded yard props keep their original batches and RNG sequence.
++        const removed: PropBatch[] = [];
++        for (const batch of zk.batches) if (batch.name === 'hull' || batch.name === 'hull-near') {
++          const old = new PropBatch(`coast-original-${batch.name}`, batch.geometry, batch.material, batch.shadows);
++          old.items.push(...batch.items.splice(0));
++          if (old.items.length) removed.push(old);
++        }
++        const fallback = new THREE.Group();
++        fallback.name = 'coast-original-far-hulls-fallback';
++        fallback.add(...buildBatches(removed).objects); group.add(fallback);
++        const seaY = Math.min(...profile.map(p => p.y)) - 0.42 - 2.4;
++        const groundAt = (x: number,z: number) => zoneGround('coast',profile,x,z);
++        const oldSea = zk.meshes.find(mesh => mesh.name === 'zone:sea');
++        const placements = planFarCoastHarbor(track.def.id,seaY);
++        const owner = mountCourseAssets(loadCoastHarbor(placements,{
++          detail:'full',completeMaterial:material=>{lib.complete(material);},
++        }).then(asset=>{
++          let water: ReturnType<typeof buildCoastWater> | undefined;
++          try {
++            water = buildCoastWater({x0:x0-260,x1:x1+260,seaY,groundAt,
++              completeMaterial:material=>{lib.complete(material);}});
++            const ownedWater = water; asset.root.add(water.root);
++            return {root:asset.root,textureBytes:asset.textureBytes,
++              dispose(){ownedWater.dispose();asset.dispose();}};
++          } catch(error){water?.dispose();asset.dispose();throw error;}
++        }));
++        void owner.ready.then(()=>{if(owner.root.children.length){
++          fallback.visible=false;
++          if(oldSea) oldSea.visible=false;
++          if(originalCoastPlate) originalCoastPlate.visible=false;
++        }});
++        courseAssets=owner; group.add(owner.root);
+diff --git a/src/render/world/zones/coastHarbor.ts b/src/render/world/zones/coastHarbor.ts
+--- a/src/render/world/zones/coastHarbor.ts
++++ b/src/render/world/zones/coastHarbor.ts
+@@ -72,0 +73,14 @@
++}
++
++/** Sparse far-water bank for C2/C3. Keep the ridden pier/crane and breach art. */
++export function planFarCoastHarbor(courseId: string, seaY: number): CoastHarborPlacement[] {
++  const anchors: readonly (readonly [CoastHarborVariant, number, number, number])[] = courseId === 'c2-crane-hop'
++    ? [['cargo-freighter', 47, -85, .82], ['cargo-freighter', 186, -104, .90],
++      ['cargo-barge', 248, -67, .68], ['cargo-freighter', 389, -91, .82]]
++    : [['cargo-freighter', 44, -86, .82], ['loading-pier', 133, -57, .72],
++      ['harbor-crane', 129, -56, .68], ['cargo-freighter', 187, -111, .78],
++      ['cargo-freighter', 371, -91, .82]];
++  return anchors.map(([variant, x, z, scale]) => ({
++    variant, x, y: variant === 'loading-pier' || variant === 'harbor-crane' ? seaY + 2.6 : seaY,
++    z, scale,
++  }));

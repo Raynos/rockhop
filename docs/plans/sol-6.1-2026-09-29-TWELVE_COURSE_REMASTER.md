@@ -330,3 +330,11 @@ Required-map failure and delayed-course-switch browser cases pass 2/2; 28 focuse
 [Current challenge/progression audit](../evidence/course-remaster/challenge-progression-audit/README.md) confirms24 clean references and selected first-eight Rookie7 Gold+1 Diamond =1,840 Scrap. Best older assisted results combine to1,160 across different sessions; this suggests an earned-progression risk, not a measured single-player grind. The68 functional tests pass. HR-24 requests two unbriefed empty-save landscape career runs, with price/clocks held fixed until actual results support tuning.
 
 [Five corrected A2/A3 forest pairs](../../prototypes/alpine-forest-rollout-v2/README.md) improve silhouette/readability and pass4/4 lifecycle checks, but their hook plus Coast frontage exceeds the cap. One targeted shared-owner correction still fails. Retain the normal original A2/A3 forest and defer this optional rollout; reuse the already accepted A1 surface/lake kit next. No whole-course count increase.
+
+## Shared Alpine surfaces retained · 2026-09-30
+
+[Four matched A2/A3 full/fault comparisons](../../prototypes/alpine-surface-rollout-v1/README.md) retain the accepted A1 soil/bank/lake kit on all three Alpine courses. Quieter foreground separates the rider, log/beam and contact edges; original cones and landmarks remain. Only three material selectors change, with no new delivered assets or async map dependency. Frozen cost +52 B; normal typecheck/scoped lint and 715,624 B combined player build pass. The separate optional botanical bank rollout stays deferred. The integrated offline check passes11/11, and the prior loaded C1 boot failure passes on a serialized14/14 recheck after our GPU lanes stop. Physical phone, earned career, audio and full-course approval remain open.
+
+## C2/C3 far-scene reuse rejected · 2026-09-30
+
+[Matched full rides](../../prototypes/coast-family-v1/c2c3-reuse-review/README.md) reject sparse authored vessels/analytic sea against a cyan far view, despite exact outcomes/camera and passing cap. One sky-position correction had no visible effect; do not continue that atmosphere loop. Keep normal C2/C3 scenery and defer optional far-bank reuse. A narrower existing-prop foreground clutter pass can target the obvious tyre/scrap repetition without a new asset campaign.
