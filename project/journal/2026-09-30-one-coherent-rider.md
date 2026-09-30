@@ -171,3 +171,16 @@ Existing silent WebKit capture has0errors/AudioContexts and4unmeasured slots.
 Limits: Final constructor identity/live-scene-root guards await fresh
 browser execution; no actual new rider maps, contact or appearance pass.
 Two setup failures and the reported checkpoint-order miss stay preserved.
+
+Finding: Authored face cage passes topology but fails actual appearance:
+cheek/temple seams, nostril spikes, faceted jaw/neck and simplified ears.
+Stop before baking; use a fresh anatomical retopology cage with protected
+facial feature loops and smooth fitting transitions.
+
+Validation: Parent inspected full gray four-view board; source/construction
+and renderer hashes frozen. One120-edge neck boundary/0nonmanifold edges.
+Initial guide bound120mmnative front/25mmear is distinct from later
+accepted dense fit maximum3.926mmnative; narrow fit metric is not a pass.
+
+Limits: No accepted head, neck join, texture or rig. Fresh CC0 MPFB cage
+capability is read-only; original90min feasibility deadline remains.

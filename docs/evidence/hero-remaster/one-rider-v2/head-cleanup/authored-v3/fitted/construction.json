@@ -1,0 +1,83 @@
+{
+  "status": "UNACCEPTED authored cage feasibility; gray parent review required",
+  "sources": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/authored-v3/constrained-layout/layout.npz": "761d9d7e87ab87e0bb7181340e85eef02605fde346849556576b954e74e36c32",
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e"
+  },
+  "sourcesAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/authored-v3/constrained-layout/layout.npz": "761d9d7e87ab87e0bb7181340e85eef02605fde346849556576b954e74e36c32",
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e"
+  },
+  "scriptSHA256": "59c8a3a8072a25b7903a828904ba005f2274ac414c775cdbacae25f561314356",
+  "blender": "5.2.1 LTS",
+  "vertices": 26955,
+  "faces": 53788,
+  "topology": {
+    "boundaryEdges": 120,
+    "nonmanifoldEdges": 0,
+    "nearZeroAreaFaces": 3
+  },
+  "initialSourceGuide": {
+    "frontSkin": {
+      "count": 4518,
+      "maximum": 0.11995455734542614,
+      "percentiles": [
+        0.042909845607144496,
+        0.10443743647773007,
+        0.11703700394245324
+      ]
+    },
+    "frontSkinMaximumAllowed": 0.12,
+    "earFoldGuide": {
+      "count": 157,
+      "maximum": 0.019978331554933414,
+      "percentiles": [
+        0.01694413938438925,
+        0.019515595695074994,
+        0.01972959479229908
+      ]
+    },
+    "earMaximumAllowed": 0.025,
+    "earGuideBlend": 0.8,
+    "rejectedVertices": 947,
+    "method": "frontal semantic chart and closest folded-ear source guides",
+    "disclosure": "Initial authored cage placement; not the later <=.004-native dense fit"
+  },
+  "subdivision": {
+    "cuts": 1,
+    "selectedFacialEdges": 10908
+  },
+  "boundedDenseFit": {
+    "displacements": {
+      "count": 9911,
+      "maximum": 0.003925329582911206,
+      "percentiles": [
+        0.0004634272285582927,
+        0.0015956302806575157,
+        0.002430008265156797
+      ]
+    },
+    "maximumAllowed": 0.004,
+    "missingWithinBound": 196,
+    "inconsistentNormalRejected": 4557,
+    "finalAcceptedSampleDistance": {
+      "count": 9911,
+      "maximum": 3.4142850324769825e-08,
+      "percentiles": [
+        0.0,
+        1.4901161193847656e-08,
+        1.666000493116826e-08
+      ]
+    }
+  },
+  "wallSeconds": 8.031930124852806,
+  "limits": [
+    "Folded ears are authored/source-guided; closest points alone cannot prove undercut fidelity.",
+    "Post-fit error applies only accepted samples; rejects and authored skull/neck are excluded.",
+    "Initial source-guided displacement is separately bounded and can exceed.004 native units.",
+    "Dense source topology is not repaired or claimed clean.",
+    "No new textures, detail/PBR bake, neck/body join, rig or gameplay pass."
+  ]
+}

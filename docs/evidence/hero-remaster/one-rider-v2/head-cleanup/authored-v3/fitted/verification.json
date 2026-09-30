@@ -1,0 +1,81 @@
+{
+  "status": "UNACCEPTED authored feasibility; visible anatomy fails; no bake",
+  "topology": {
+    "vertices": 26955,
+    "faces": 53788,
+    "boundaryEdges": 120,
+    "boundaryDegreeExactlyTwo": true,
+    "boundaryNativeYRange": [
+      -0.3100000023841858,
+      -0.3100000023841858
+    ],
+    "nonmanifoldEdges": 0,
+    "nearZeroAreaFaces": 3
+  },
+  "sourcesUnchanged": true,
+  "initialSourceGuide": {
+    "frontSkin": {
+      "count": 4518,
+      "maximum": 0.11995455734542614,
+      "percentiles": [
+        0.042909845607144496,
+        0.10443743647773007,
+        0.11703700394245324
+      ]
+    },
+    "frontSkinMaximumAllowed": 0.12,
+    "earFoldGuide": {
+      "count": 157,
+      "maximum": 0.019978331554933414,
+      "percentiles": [
+        0.01694413938438925,
+        0.019515595695074994,
+        0.01972959479229908
+      ]
+    },
+    "earMaximumAllowed": 0.025,
+    "earGuideBlend": 0.8,
+    "rejectedVertices": 947,
+    "method": "frontal semantic chart and closest folded-ear source guides",
+    "disclosure": "Initial authored cage placement; not the later <=.004-native dense fit"
+  },
+  "boundedDenseFit": {
+    "displacements": {
+      "count": 9911,
+      "maximum": 0.003925329582911206,
+      "percentiles": [
+        0.0004634272285582927,
+        0.0015956302806575157,
+        0.002430008265156797
+      ]
+    },
+    "maximumAllowed": 0.004,
+    "missingWithinBound": 196,
+    "inconsistentNormalRejected": 4557,
+    "finalAcceptedSampleDistance": {
+      "count": 9911,
+      "maximum": 3.4142850324769825e-08,
+      "percentiles": [
+        0.0,
+        1.4901161193847656e-08,
+        1.666000493116826e-08
+      ]
+    }
+  },
+  "outputSHA256": {
+    "head.npz": "37a511b6e3118581fda3ab9ee9126825a463976cb36d0df6e3f42bd9574fde6d",
+    "head.glb": "4cecd8fbf8d242eb11e8123564a3dadda4a61103807cfbb6109309fb3fa6d849",
+    "head.blend": "bfd44aabeea0a1c8e4d77f589edc7180b59b86246d1799c2cec261a0c5c9f42e",
+    "fit-samples.npz": "da3cc5f9fd2e3b28934090214fb8c908c2573f2a4df8384781d29c2405a64b1c"
+  },
+  "visibleDefects": [
+    "Severe face-to-temple transitions and cheek seams.",
+    "Nostril spikes and residual forehead/beard irregularities.",
+    "Simplified displaced ears do not preserve source folded anatomy convincingly.",
+    "Faceted jaw/neck transitions and generic crown proportions."
+  ],
+  "limit": "Numerically small accepted-sample error does not measure rejected or authored regions.",
+  "noFurtherGeometryCorrection": true,
+  "noTextures": true,
+  "noNeckFit": true
+}
