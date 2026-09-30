@@ -1,0 +1,13 @@
+{
+  "defect": "T-EXPORT-01",
+  "candidate": "trellis01",
+  "attempt": 1,
+  "scope": "Export-only, unchanged native mesh/voxel attributes; no rig or generation changes",
+  "hypothesis": "Native exporter cleanup/simplification introduces large surface tears; a higher face export followed by Blender DECIMATE may retain source shape better",
+  "commands": [
+    "trellis_rebake.py originalNPZ --faces200000 --tex2048 without remesh",
+    "frozen reduce_hunyuan.py highfaceGLB target55000 tex2048",
+    "common renderer working36frames +gray diagnostic"
+  ],
+  "budget": "One attempted correction now; at most two failed fixes, then show evidence and ask"
+}

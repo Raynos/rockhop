@@ -69,3 +69,10 @@ bytes remain intact. Gray native geometry is independent of texture/export.
 camera and frame integrity are verified in the baseline/Pixal reports. The
 parent's visual observations do not assert a played sitting/gameplay pass.
 The [original A1/A2 controls](../../rider-selection/README.md) remain available.
+
+## Bounded correction evidence
+
+[T1 export correction 1](../variants/trellis-01-export1/README.md) closes much
+of the giant export tearing, but still leaves unacceptable pitted cloth,
+wrists and shoes. T-EXPORT-01 has **one failed fix**. The original fifteen-body
+comparison stays frozen; no other body silently receives this variant.
