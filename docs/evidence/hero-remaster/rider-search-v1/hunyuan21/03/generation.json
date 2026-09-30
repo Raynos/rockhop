@@ -1,0 +1,75 @@
+{
+  "inputSHA256": "082788c2bf9e324302692b99c79b78ad2c1ef2a5c7168cca4aa34e69b57f0985",
+  "input": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/cutouts/03.png",
+  "runnerSHA256": "dfcb588ef1279e70d54993acc9e547f41e95ad1fc59f08dfb5923d07f3f45241",
+  "version": "Hunyuan3D-2.1",
+  "device": "mps",
+  "seed": 42,
+  "shape_steps": 30,
+  "paint_steps": 15,
+  "octree": 380,
+  "paint_views": 6,
+  "paint_view_size": 512,
+  "render_size": 1024,
+  "texture_size": 2048,
+  "torch": "2.14.0",
+  "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+  "cpu_components": [
+    "texture rendering/baking",
+    "custom_rasterizer",
+    "mesh_inpaint_processor",
+    "marching cubes",
+    "Blender export"
+  ],
+  "source_commit": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+  "weights_revision": "0b94677654c57bb9a6b6845cd7b704ccf551d327",
+  "shape_seconds": 32.843,
+  "raw_faces": 338506,
+  "nativeSHA256": "e953a8383e57e5b7581ec512d2d5c8eb4d6e15cfa09789d35576398295274a3f",
+  "faces": 55000,
+  "paint_seconds": 76.138,
+  "wall_seconds": 124.474,
+  "peak_rss_gb": 23.071,
+  "outputs": {
+    "shape.obj": {
+      "bytes": 2041179,
+      "sha256": "5e72ec1c32a92a7cbd3371386fdcd5facf6344c839f15502077b5f55622ec705"
+    },
+    "raw-shape.glb": {
+      "bytes": 6093584,
+      "sha256": "31280b95966049527298bcc2792d51e28476381d1565b08a2b06ddfb76b6c60f"
+    },
+    "textured.mtl": {
+      "bytes": 146,
+      "sha256": "49b39fff6c994ae9b8bbfec7b6854e05183efdb7965c02175ac37e3e46bb67cf"
+    },
+    "textured_roughness.jpg": {
+      "bytes": 591440,
+      "sha256": "14eeeacae947c258509192a4967c187e484499164fb3201b4cb1496a8bad76f2"
+    },
+    "textured.obj": {
+      "bytes": 3934220,
+      "sha256": "7fa3f05448dc682dc9a6ece4aa7fdfdbea6148442c4387fdf0f5ffae779dc093"
+    },
+    "raw-shape.npz": {
+      "bytes": 2530228,
+      "sha256": "e953a8383e57e5b7581ec512d2d5c8eb4d6e15cfa09789d35576398295274a3f"
+    },
+    "textured_metallic.jpg": {
+      "bytes": 459995,
+      "sha256": "6c89b663ba5b2bba11d5b5ac17fa53a961c3e867fbed57a967c7deed062f0a85"
+    },
+    "model.glb": {
+      "bytes": 5979640,
+      "sha256": "fa49b5851eed0401709a4b4634cf0fddd55be65776d7ff091afb498819983b65"
+    },
+    "shape.glb": {
+      "bytes": 990408,
+      "sha256": "12f4fd39c9fd37facc888f3274dc7bb874cad5f9589d752b59d142bf07dc6a00"
+    },
+    "textured.jpg": {
+      "bytes": 968633,
+      "sha256": "c4b6b95e4664afe9e5d8d4cb169fc322c3f89dd8723634ca18748b9ae7f0972b"
+    }
+  }
+}

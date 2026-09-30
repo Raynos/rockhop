@@ -44,3 +44,10 @@ the installed Mac experiment, not a portable model installation. Missing
 masters/dependencies are an explicit precondition, never regenerated silently.
 The fifteen bodies, native/reduced boards, moving orbits and comparisons are
 indexed in the [review gallery](../../../../../docs/evidence/hero-remaster/rider-search-v1/review/README.md).
+
+The additive Hunyuan3D 2.1 lane has its own native-preserving LocalAI runner.
+render_hunyuan21.py verifies source geometry and creates an explicit scene-axis
+display copy, never a source overwrite. verify_hunyuan21.py checks all five
+plus the fifteen controls; compose_hunyuan21.py adds separate pixel-only layouts.
+The [twenty-body gallery](../../../../../docs/evidence/hero-remaster/rider-search-v1/hunyuan21/README.md)
+records settings, failed-axis evidence and unaccepted results.

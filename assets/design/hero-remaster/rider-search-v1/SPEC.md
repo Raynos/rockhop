@@ -1,10 +1,10 @@
 # Rider search: body, sitting motion, Garage contact
 
-Status: active — asks 218–220, 225–226; rider only. Bike art is out of this session.
+Status: active — asks 218–220, 225–228; rider only. Bike art is out of this session.
 
 Execution authority: [RIDER_THREE_CHECKPOINTS](../../../../docs/plans/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
 Its bounds, two-failed-fix rule, explicit rig mapping, physical lean/landing/
-contact matrix and additional Pixal3D lane govern this specification.
+contact matrix and additional Pixal3D/Hunyuan3D 2.1 lanes govern this specification.
 
 The user prefers different parts of A1/A2 and sees potential in raw generation.
 Neither existing pose is accepted. Stop patching the rejected fresh Blender
@@ -52,3 +52,5 @@ Commit each stable reference, generation or comparison finding on main. Save
 source prompts, input/output hashes, tool revisions, seeds and rejection reasons.
 Parent judges moving evidence; the user chooses visual direction. Existing A1/A2
 remain controls and normal assets stay unchanged through this search.
+
+Ask228 adds five H21 bodies with the same frozen inputs and exact studio camera. The [twenty-body comparison](../../../../docs/evidence/hero-remaster/rider-search-v1/hunyuan21/README.md) preserves the original fifteen; all bodies remain unaccepted.

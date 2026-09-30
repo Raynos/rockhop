@@ -24,3 +24,22 @@ bytes in display derivative are identical. All fifteen prior bodies unchanged.
 Limits: One failed setup fix counted. Upstream axis disagreement unisolated;
 no body/rig/sitting/gameplay acceptance. P3 gray partial exporter warned invalid
 mesh; its broken GLB cannot establish pre-export voxel shape. No further P3 fix.
+
+## Five-design trial
+
+Finding: All five additive H21 bodies are compared; twenty-body layouts leave
+original H/T/P boards intact. H21-4 is the strongest new option for silhouette
+and hoodie continuity, but all retain fused fingers/coarse hair and small
+lower-body defects. No body accepted or promoted; human direction remains open.
+
+Validation: Five native geometries, source hashes, 270 frames, 15 exact-yaw
+boards and five 36-frame/12fps orbits verified. Every H21 display copy preserves
+binary geometry/UV/image bytes. Fifteen control source hashes stay identical.
+Fresh silent headless WebKit low/high baseline cold entries each clear B1 in
+40.083333333333336s with Node hash/Float64 equality, crash, restart tick0 and
+zero page errors. Runtime mapping/geometry and normal full/LOD hashes unchanged.
+
+Limits: Native imports differ by2/10 triangles for H21-2/4; repeat-index source
+counts match but exact omission identity unisolated. Host baseline check does
+not pass an H21 rig, sitting, contact, frame-latency or device/release gate.
+The formal P3/T1 correction shortlist/history stays until human direction.

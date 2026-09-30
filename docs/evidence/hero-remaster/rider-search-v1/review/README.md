@@ -83,3 +83,9 @@ comparison stays frozen; no other body silently receives this variant.
 [motion preflight](../gate2-preflight.md) records the existing physical contract
 and what the prior UniMate test actually demonstrated. Both later gates remain
 unstarted until the selected body passes checkpoint 1.
+
+## Requested additional model
+
+Ask228 adds [five Hunyuan3D 2.1 bodies and a separate twenty-body overview](../hunyuan21/README.md),
+preserving every H/T/P body and board above. H21-4 is the strongest new
+alternative; no visual direction or body is accepted.
