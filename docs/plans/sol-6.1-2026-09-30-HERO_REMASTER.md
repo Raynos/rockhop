@@ -1,6 +1,8 @@
 # Rider and motorbike remaster
 
 Status: **awaiting rider selection — ask 216 stops further rebuilds after rejecting both fresh Blender candidates**.
+
+Selection evidence: [five labeled 2×2 rider boards](../evidence/hero-remaster/rider-selection/README.md). Wait for the user’s tile choice or explicit revert/abandon direction; do not start another art experiment.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · ask 191.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gate 3 for presentation and Gate 4 for devices.
 Bar: [mission §3–4](../mission.md): a readable person on a mechanically credible motorbike, at phone frame rates.
