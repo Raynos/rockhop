@@ -1,0 +1,60 @@
+{
+  "status": "frozen raw-body render invocation; parent judges",
+  "renderer": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/render_raw.py",
+  "rendererSHA256": "38da920203ac1f1b7e9cfb085eb6783702e5c4487c710a6022768fdd5658ddae",
+  "launcherSHA256": "22437104c9be0dea28fa46040cdb82979b901f2b1f7b0199be01a9b29f6438eb",
+  "nativeTrellisTransform": {
+    "source": "/Users/raynos/ml/img2mesh/trellis-mac/deps/trellis2-apple/o-voxel/o_voxel/postprocess.py",
+    "sourceSHA256": "f6b2850f78b4d6ea126c5e750e20a6dfa523ff6e1e80b5a97cfd79f9291dc7c0",
+    "lines": [
+      476,
+      477
+    ],
+    "mapping": "(x,y,z) -> (x,z,-y), same as o_voxel.to_glb; no merge, cleanup, remesh, reduction or geometry fit",
+    "matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ]
+  },
+  "frames": {
+    "working": 36,
+    "reduced": 9,
+    "native-gray": 9
+  },
+  "boardYaws": [
+    0,
+    40,
+    80,
+    120,
+    160,
+    200,
+    240,
+    280,
+    320
+  ],
+  "video": {
+    "workingFrames": 36,
+    "fps": 12,
+    "codec": "libx264",
+    "pixelFormat": "yuv420p"
+  },
+  "limits": [
+    "Static unrigged turntable, not gameplay or acceptance",
+    "Working/reduced texture diagnostic sets metallic0; raw PBR source remains unchanged",
+    "Native-gray display uses exact native topology with neutral material only",
+    "Host may be contended; elapsed render time is not a benchmark"
+  ]
+}

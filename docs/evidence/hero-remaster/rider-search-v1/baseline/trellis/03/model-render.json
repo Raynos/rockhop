@@ -1,0 +1,81 @@
+{
+  "engine": "trellis",
+  "design": "03",
+  "status": "rendered static diagnostics; parent judges",
+  "views": [
+    {
+      "tier": "working",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/render_raw.py",
+        "--",
+        "--input",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/03.glb",
+        "--out",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/working",
+        "--frames",
+        "36"
+      ],
+      "wallSeconds": 82.229,
+      "manifest": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/working/manifest.json",
+      "manifestSHA256": "319be1ce438c586b64d028ae04142aba34b0d2fd36def596cb0c0a8f20717434",
+      "video": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/working/orbit.mp4",
+        "sha256": "90404bf6dd496636d6d22c30240ccd054664fe691adb2a6029b425054729e046",
+        "bytes": 320511
+      }
+    },
+    {
+      "tier": "reduced",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/render_raw.py",
+        "--",
+        "--input",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/03.reduced.glb",
+        "--out",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/reduced",
+        "--frames",
+        "9"
+      ],
+      "wallSeconds": 13.206,
+      "manifest": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/reduced/manifest.json",
+      "manifestSHA256": "5dd7bc9f7533ae8d76829aeec43123ab648bf16cdfb1cc535b417a19f00563e7",
+      "video": null
+    },
+    {
+      "tier": "native-gray",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/render_raw.py",
+        "--",
+        "--input",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/native-gray/native.glb",
+        "--out",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/native-gray",
+        "--frames",
+        "9",
+        "--gray"
+      ],
+      "wallSeconds": 14.512,
+      "manifest": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/trellis/03/native-gray/manifest.json",
+      "manifestSHA256": "bfa4b8832e8dc28ed11f7c028c01c699daa94bd22b57d36ef79e46ab60ad604c",
+      "video": null
+    }
+  ]
+}

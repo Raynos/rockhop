@@ -39,7 +39,13 @@ render_raw.py. Exact nine yaws and whole orbit; common scale/light/framing.
 Textured diagnostics force metallic0 on every engine, explicitly recorded;
 Hunyuan's provider export omits metallicFactor and glTF therefore defaults to1.
 Native PBR bytes stay intact. Gray views expose native geometry independently
-of texture and provider simplification. Exact-yaw boards/orbits are in progress.
+of texture and provider simplification. Baseline now has30exact-yaw boards and
+ten complete36frame/12fps orbits under baseline/{hunyuan,trellis}/01..05.
+Each body has working/reduced/native-gray boards and working/orbit.mp4;
+verification.json proves540framehashes/yaws and source integrity. Native HY
+imports omit only2/4/6/0/2 repeated-index zero-area faces; raw sources retain
+them, and no nondegenerate face count is lost. Native TRELLIS axis-converted
+display vertices/indices match the preserved NPZ exactly.
 
 Concept boards have approximate yaw/pose and cannot supply calibrated camera
 transforms for Pixal multiview. No rig, sitting animation, gameplay/contact pass,
