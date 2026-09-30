@@ -12,7 +12,7 @@ const revision = execFileSync('git', ['rev-parse', 'HEAD'], {encoding:'utf8'}).t
 const frozen = path.join(output, '.inputs');
 fs.mkdirSync(frozen, {recursive:true});
 for (const directory of ['src', 'public']) fs.cpSync(path.join(repo,directory),path.join(frozen,directory),{recursive:true});
-for (const file of ['vite.config.ts','tsconfig.json','package.json']) fs.copyFileSync(path.join(repo,file),path.join(frozen,file));
+for (const file of ['index.html','vite.config.ts','tsconfig.json','package.json']) fs.copyFileSync(path.join(repo,file),path.join(frozen,file));
 fs.symlinkSync(path.join(repo,'node_modules'),path.join(frozen,'node_modules'),'dir');
 const bank = path.join(frozen,'public/models/course-kits/snowline-standard');
 fs.mkdirSync(bank,{recursive:true});
@@ -36,7 +36,7 @@ for (const phase of ['before','after'] as const) {
   const sourceRoot=path.join(output,`${phase}-source`);
   fs.mkdirSync(sourceRoot,{recursive:true});
   for(const directory of ['src','public'])fs.cpSync(path.join(frozen,directory),path.join(sourceRoot,directory),{recursive:true});
-  for(const file of ['vite.config.ts','tsconfig.json','package.json'])fs.copyFileSync(path.join(frozen,file),path.join(sourceRoot,file));
+  for(const file of ['index.html','vite.config.ts','tsconfig.json','package.json'])fs.copyFileSync(path.join(frozen,file),path.join(sourceRoot,file));
   fs.symlinkSync(path.join(repo,'node_modules'),path.join(sourceRoot,'node_modules'),'dir');
   if(phase==='after') {
     const file=path.join(sourceRoot,'src/render/world/biomeKit.ts');
@@ -62,8 +62,13 @@ for (const phase of ['before','after'] as const) {
   process.env.VERCEL_GIT_COMMIT_SHA=revision;process.chdir(sourceRoot);
   try { await build({root:sourceRoot,configFile:path.join(sourceRoot,'vite.config.ts'),logLevel:'warn',build:{outDir}}); }
   finally { process.chdir(repo);if(previousSha===undefined)delete process.env.VERCEL_GIT_COMMIT_SHA;else process.env.VERCEL_GIT_COMMIT_SHA=previousSha; }
+  const html=fs.readFileSync(path.join(outDir,'index.html'),'utf8');
+  const entry=/src="([^"]*assets\/index-[^"]+\.js)"/.exec(html)?.[1];
+  if(!entry)throw new Error('Missing built app entry');
+  const entrySHA256=sha(fs.readFileSync(path.resolve(outDir,entry)));
+  const compiledSourceHashes=hashTree(path.join(sourceRoot,'src'));
   const catalog=JSON.parse(fs.readFileSync(path.join(outDir,'model-catalog.json'),'utf8'));
-  fs.writeFileSync(path.join(outDir,'snowline-review.json'),JSON.stringify({phase,revision,sourceHashes,modelSources,catalog,limits:'Private source/model snapshot, not a release build or accepted course. Same assets exist in both phases; baseline does not decode the candidate.'},null,2)+'\n');
+  fs.writeFileSync(path.join(outDir,'snowline-review.json'),JSON.stringify({phase,revision,sourceHashes,compiledSourceHashes,entry,entrySHA256,modelSources,catalog,limits:'Private source/model snapshot, not a release build or accepted course. Same assets exist in both phases; baseline does not decode the candidate.'},null,2)+'\n');
   console.log(JSON.stringify({phase,outDir,changed}));
 }
 const catalogs=['before','after'].map(phase=>JSON.parse(fs.readFileSync(path.join(output,phase,'model-catalog.json'),'utf8')));
