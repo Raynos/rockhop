@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import type { CourseAssetDelivery } from '../courseAssets';
 import { modelAssetUrl, modelResourceUrl } from '../../hero/urls';
+import type { PropBatch } from '../props';
 import { fogify } from '../../lighting/environment';
 
 export const COAST_HARBOR_VARIANTS = ['cargo-freighter', 'cargo-barge', 'harbor-crane',
@@ -56,12 +57,13 @@ export function planC1Harbor(groundAt: (x: number, z: number) => number, seaY: n
     add('loading-pier',x,z,scale); add('harbor-crane',x-4*scale,z+scale,scale);
   }
   for (const [x,scale] of [[32,.64],[109,.68],[282,.62],[370,.68],[450,.60]] as const)
-    add('open-warehouse',x,-17.4,scale);
+    add('open-warehouse',x,-9.8,scale);
   for (const [x,z,scale,yaw] of [[8,-12,.7,.03],[61,-12,.67,-.04],[92,-12,.62,.04],
     [146,-12,.67,-.05],[276,-12,.6,.04],[316,-12,.63,-.03],[345,-12,.6,.035],
-    [403,-12,.66,-.04],[477,-12,.6,.02]] as const) add('logistics-yard',x,z,scale,yaw);
+    [403,-12,.66,-.04],[477,-12,.6,.02]] as const) add('logistics-yard',x,z + 2.2,scale,yaw);
   for (const x of [23,49,78,103,143,165,274,298,331,359,392,423,461,489])
     add('dock-station',x,-5.8,.72,x%2 ? .06 : -.08);
+  for (const x of [31,79,132,278,337,391,455,484]) add('dock-station',x,7.4,.65,.08);
   return placements;
 }
 
@@ -184,4 +186,19 @@ export async function loadCoastHarbor(placements: readonly CoastHarborPlacement[
     }
     return { root, textureBytes, dispose };
   } catch (error) { dispose(); throw error; }
+}
+
+/** Retain actual hero-window items; the parent builds removed items as fallback. */
+export function removeC1HarborPlaceholders(batches: readonly PropBatch[]): void {
+  const replaced = new Set(['container','container-far','pallet','tyres','tyreflat',
+    'drum','buoy','buoylying','bollard','rope','net','scrap0','scrap1','trucktyre',
+    'pierdeck','pile','quay','crane','crane-rust','hull','hull-near',
+    'c1-inshore-coaster','c1-quay-warehouse','c1-loading-bay','c1-quay-hoist','contactshadow']);
+  for (const batch of batches) if (replaced.has(batch.name)) {
+    const kept = batch.items.filter(item => {
+      const x = item.m.elements[12]!;
+      return x >= 180 && x <= 260;
+    });
+    batch.items.splice(0,batch.items.length,...kept);
+  }
 }

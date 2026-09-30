@@ -79,10 +79,10 @@ describe('Coast authored leaf lifecycle', () => {
     await expect(loadCoastHarbor([placement],{...options,completeMaterial(){throw Error('complete failed');}})).rejects.toThrow('complete failed');expect(dispose).toHaveBeenCalledOnce();
   });
   it('builds a pure entire C1 plan with no tall actor in the brake reading window', () => {
-    const plan=planC1Harbor((x,z)=>x*.001+z*.001,-2.82);expect(plan).toHaveLength(43);
+    const plan=planC1Harbor((x,z)=>x*.001+z*.001,-2.82);expect(plan).toHaveLength(51);
     expect(planC1Harbor((x,z)=>x*.001+z*.001,-2.82)).toEqual(plan);
     for(const p of plan){expect(p.x<180||p.x>260).toBe(true);expect([p.x,p.y,p.z].every(Number.isFinite)).toBe(true);}
     expect(plan.find(p=>p.variant==='cargo-freighter')!.y).toBe(-2.82);
-    expect(plan.find(p=>p.variant==='open-warehouse')!.y).toBeCloseTo(.0146);
+    expect(plan.find(p=>p.variant==='open-warehouse')!.y).toBeCloseTo(.0222);
   });
 });

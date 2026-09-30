@@ -418,3 +418,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Wrist plan/source checkpoint:** The current graft recipe records selective zero-area inherited donor-face removal and preserves nonzero contact geometry. Updated hero priorities and the latest quantitative report are committed with syntax checks passing. Actual repair/export and moving full/LOD acceptance remain with the hero chat; production is unchanged.
 
 **Final cleanup / course ownership (2026-09-30):** The verified Street wrist repair is on main as `931ed3d8`. The parent retains a tested multi-family course owner; the new Coast integration stays a development prototype pending matched played review. Completed courses remain 0/12. Ask 208 tracks the remaining checkpoint commits.
+
+**Coast grounding checkpoint (2026-09-30):** Terrain-following warehouse/yard foundations, four pier shore connectors and the 51-placement C1 proposal are retained as unimported helpers. Seven site and nine loader tests pass; whole-course moving review and phone qualification remain open.
