@@ -78,6 +78,8 @@
 
 **S2 cornice round:** [matched Rookie lower, Pro upper and fault clips](../evidence/course-remaster/s2/cornice-landmark/README.md) give the actual wind lip a short hanging cut and the far landing a layered ice face. A longer fake-riding-shelf trial was rejected. Exact replays and camera checks pass; the [third-round quick gate](../evidence/course-remaster/round-gate-2026-09-29/after-s2/README.md) is 9/11 on host SwiftShader due first/restarted frame timing. Human route understanding, full Snowline art and phone performance remain open.
 
+**Remaster JavaScript allowance (ask 198):** User approved increasing the player transfer cap from 661 to 700 KiB. Build, ship-gate threshold and design contract agree; the normal 2026-09-30 build passes at 686,085 B with 30,715 B headroom. Boot, frame-time and GPU-memory gates remain unchanged.
+
 **Course-art bundle headroom:** [the build-only CSS comment cut](../evidence/course-remaster/bundle-headroom/README.md) frees 5,461 B gzip in the normal-player JavaScript budget without changing CSS rules or boot requests. The edited build is 671,375/676,864 B. The exact clear/restart logic passes the quick gate; two SwiftShader frame-time rows and physical-phone performance remain open.
 
 **S1 upper-route round:** [full played Lift Line Pro ride](../evidence/course-remaster/s1-cue/README.md) shows an earlier two-beat cue for the optional Diamond bridge. Rookie lower and Pro upper finish states remain identical in Node and two browser loads. A new player's ability to see and choose the upper line remains open.

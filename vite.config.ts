@@ -114,19 +114,14 @@ const CRASH_REPORT_CHUNK = /^assets\/sentry-errors-[\w-]+\.js$/;
 const INLINE_BUDGET_BYTES = 8 * 1024;
 
 /**
- * CONTRACT §3: JS bundle ≤ 600 KB gzipped. Fails the build when exceeded.
- *
- * Ask 84 §3 made the game's own chunks ship with their real identifiers (`readableStacks` below): +29.6 KB gz
- * on the entry chunk, measured A/B on one tree (570.0 → 599.8 KB by this plugin's count, which leaves out the
- * audio-worklet asset the ship gate's `bundle.jsGzipKB` also sums). The +30 KB is real, so the build's budget
- * moves by 40 KB (the delta plus the headroom it ate); the gate's threshold and the CONTRACT line are the
- * parent's call.
+ * CONTRACT §3: player JS ≤ 700 KiB gzipped. Fails the build when exceeded.
+ * The user approved a bounded allowance for the course/audio remaster after the
+ * combined player build reached 685,904 B, 9,040 B above the old 661 KiB cap.
+ * This transfer-size allowance does not change boot, frame-time or GPU-memory limits.
  *
  * Both gates count player JS, excluding dev-only chunks and the fatal-error-only Sentry SDK.
  */
-// D1's accepted sediment face replaces the quarry-block material on its true terrace
-// skirts and road wall. Keep a one-KiB bounded increment for this moving-reviewed pass.
-const BUNDLE_BUDGET_GZ_BYTES = 661 * 1024;
+const BUNDLE_BUDGET_GZ_BYTES = 700 * 1024;
 
 function bundleBudget(): Plugin {
   return {
