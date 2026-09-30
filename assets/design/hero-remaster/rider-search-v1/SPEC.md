@@ -1,6 +1,10 @@
 # Rider search: body, sitting motion, Garage contact
 
-Status: active — asks 218–220; rider only. Bike art is out of this session.
+Status: active — asks 218–220, 225–226; rider only. Bike art is out of this session.
+
+Execution authority: [RIDER_THREE_CHECKPOINTS](../../../../docs/plans/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
+Its bounds, two-failed-fix rule, explicit rig mapping, physical lean/landing/
+contact matrix and additional Pixal3D lane govern this specification.
 
 The user prefers different parts of A1/A2 and sees potential in raw generation.
 Neither existing pose is accepted. Stop patching the rejected fresh Blender

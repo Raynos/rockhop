@@ -9,7 +9,16 @@ Bar: [mission §3–4](../mission.md): a readable person on a mechanically credi
 
 The immediate deliverable is a **five-design rider-body comparison** before rig fitting. Bike improvement is out of scope for this session; keep the existing bike fixed. No raw neural mesh automatically replaces the production hero.
 
-## Authoritative current method — asks 218–220
+## Rider execution authority — asks 225–226
+
+The new [RIDER_THREE_CHECKPOINTS](sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md)
+governs this rider-only session: retain physical posing/leaning, map changed
+anatomy explicitly, match lean/landing/contact gameplay evidence, stop after
+two failed fixes of a defect, and evaluate Pixal3D as an additional lane.
+Body, sitting and riding remain ordered gates. Broader hero/release work stays
+open here. The following section records the preceding method.
+
+## Previous three-checkpoint method — asks 218–220
 
 The user separates raw anatomy/clothing from skeleton, weights and posing.
 A1 has a more convincing lower body; A2 improves several face/hair/material
