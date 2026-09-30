@@ -24,8 +24,9 @@ concurrent track-budget/preload warnings, not a clean release qualification.
 
 The builder accidentally overwrote named outputs during a reproduction attempt.
 These consumed bytes remain immutable in the captured build; deterministic
-source correction uses a new revision. This review does not claim that the
-first frozen binaries reproduce from the corrected recipe. No public asset is
+source correction uses a new revision. The corrected [rebuild proof](whole-rider-v1-rebuild-proof.json) reproduces
+the first full hash exactly; its deterministic LOD has a new `92a009ad…`
+hash. This review continues to reference the original `e8f42657…` LOD. No public asset is
 replaced; body art, exact surface contact and physical-device acceptance remain open.
 
 [Low/high replay](whole-rider-v1-parent-replay.json) finishes at tick 4810

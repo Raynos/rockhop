@@ -1,0 +1,27 @@
+{
+  "status": "unaccepted deterministic source checkpoint; original whole shape rejected by parent",
+  "finding": "Make material majority ties deterministic in semantic material order; run full source regeneration twice in separate Blender processes",
+  "originalFrozen": {
+    "full": "d0a1533a8ab6d24335f7da41f67e1c6ed727975b665760e9cb462123dd75156c",
+    "lod": "e8f4265744970aedd3e5f95314e610c4600faf751ee4f24996794dddac8b550c",
+    "sourceCode": "fad55ef92b7d8b574118fba839bf381cfb7654a9addd9693453b6c3cc0ea5f4f"
+  },
+  "deterministicRevision": "whole-rider-v1a",
+  "repeatedHashes": {
+    "whole-rider-v1a-packed.glb": "d0a1533a8ab6d24335f7da41f67e1c6ed727975b665760e9cb462123dd75156c",
+    "whole-rider-v1a-lod-packed.glb": "92a009adcc1e37c51fbbe5594b69ec67a019d134ce5b3d69eb56db6c85d0ae94"
+  },
+  "sourceCodeSha256": "acb7c059b5ef20698457e56ff0f77d261cbb0be4747d1887cdaf737c4e705200",
+  "originalRigGitRevision": "ec04192d61e39dcc8bdb80fd97842e8019ef4e55",
+  "originalRigPackedSha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c",
+  "sourceGeneration": "probe_fresh_base.py regenerates ignored fresh-base.blend from installed MPFB core base.obj and macro targets; rebuild.sh recovers numeric rig from pinned Git revision",
+  "scopeLimit": "Deterministic full matches original frozen full exactly; LOD is a new named revision with deterministic material tie choice; neither is accepted/promoted",
+  "parentRejects": [
+    "bulbous shoulder/chest sleeve silhouette",
+    "bulging eyes",
+    "dark cap hair",
+    "tight featureless denim",
+    "glove misses grip despite numeric socket gate",
+    "shoe/ankle transition"
+  ]
+}
