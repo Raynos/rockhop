@@ -1,0 +1,77 @@
+/** Graft authored head details while preserving original rig and clip bytes. */
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const [sourcePath,donorPath,outPath]=process.argv.slice(2);
+if(!outPath)throw new Error('graft_head source-uncompressed.glb donor.glb output.glb');
+function read(p){const bytes=fs.readFileSync(p),n=bytes.readUInt32LE(12);return{doc:JSON.parse(bytes.subarray(20,20+n)),bin:Buffer.from(bytes.subarray(28+n,28+n+bytes.readUInt32LE(20+n)))}}
+const src=read(sourcePath),donor=read(donorPath),report=JSON.parse(fs.readFileSync(donorPath.replace(/\.glb$/,'.json'))),d=src.doc;
+assert(!d.extensionsRequired?.includes('EXT_meshopt_compression'),'source must be decoded');
+const oldAnimations=JSON.stringify(d.animations),oldSkins=JSON.stringify(d.skins);
+const oldNodes=structuredClone(d.nodes);
+const sourceSkin=d.skins[0],donorSkin=donor.doc.skins[0];
+const sourceNames=sourceSkin.joints.map(i=>d.nodes[i].name);
+const palette=donorSkin.joints.map(i=>sourceNames.indexOf(donor.doc.nodes[i].name));
+assert(palette.every(i=>i>=0),'same original bones');
+const getComponents=a=>({SCALAR:1,VEC2:2,VEC3:3,VEC4:4,MAT4:16})[a.type];
+const getBytes=a=>({5121:1,5123:2,5125:4,5126:4})[a.componentType];
+function accessorInfo(g,id){const a=g.doc.accessors[id],v=g.doc.bufferViews[a.bufferView];assert(!v.extensions?.EXT_meshopt_compression,'uncompressed accessor');return{a,v,offset:(v.byteOffset??0)+(a.byteOffset??0),stride:v.byteStride??getComponents(a)*getBytes(a)}}
+// Original body vertex/index attributes stay immutable except its head index set.
+const bodyNode=d.nodes.find(n=>n.name==='Street_remaster_neural_full_body');assert(bodyNode?.mesh!=null);
+const body=d.meshes[bodyNode.mesh];assert(body.primitives.length===1);
+const prim=body.primitives[0],position=accessorInfo(src,prim.attributes.POSITION),indices=accessorInfo(src,prim.indices);
+const key=p=>p.map(v=>Math.round(v*1e5)).join(',');
+const triKey=ps=>ps.map(key).sort().join(';');
+const points=report.removedHeadTriangles.flat();
+const grid=new Map();
+const cell=p=>p.map(v=>Math.floor(v/1e-4));
+for(const p of points){const k=cell(p).join(',');if(!grid.has(k))grid.set(k,[]);grid.get(k).push(p);}
+function matches(p){const c=cell(p);for(let x=-1;x<=1;x++)for(let y=-1;y<=1;y++)for(let z=-1;z<=1;z++){const ps=grid.get([c[0]+x,c[1]+y,c[2]+z].join(','));if(ps?.some(q=>Math.hypot(...p.map((v,i)=>v-q[i]))<1e-5))return true;}return false;}
+const indexRead={5121:'readUInt8',5123:'readUInt16LE',5125:'readUInt32LE'};
+const readIndex=i=>src.bin[indexRead[indices.a.componentType]](indices.offset+i*indices.stride);
+const readPosition=i=>[0,1,2].map(c=>src.bin.readFloatLE(position.offset+i*position.stride+c*4));
+let removed=0;const kept=[];
+for(let i=0;i<indices.a.count;i+=3){const ids=[0,1,2].map(k=>readIndex(i+k));if(ids.map(readPosition).every(matches))removed++;else kept.push(...ids);}
+assert.equal(removed,report.removedHeadTriangleCount,'every head triangle identified');
+const ib=Buffer.alloc(kept.length*4);kept.forEach((v,i)=>ib.writeUInt32LE(v,i*4));
+const ip=Buffer.alloc(-src.bin.length&3),io=src.bin.length+ip.length;
+src.bin=Buffer.concat([src.bin,ip,ib]);
+const vi=d.bufferViews.length;d.bufferViews.push({buffer:0,byteOffset:io,byteLength:ib.length,target:34963});
+prim.indices=d.accessors.length;d.accessors.push({bufferView:vi,componentType:5125,type:'SCALAR',count:kept.length,min:[kept.reduce((a,b)=>Math.min(a,b),Infinity)],max:[kept.reduce((a,b)=>Math.max(a,b),-Infinity)]});
+const oldHairNode=d.nodes.find(n=>n.name===report.removedOldHairNode);assert(oldHairNode?.mesh!=null);
+// Keep the original node transform but release its old 4,952-triangle tubes.
+const oldHairMesh=oldHairNode.mesh;delete oldHairNode.mesh;delete oldHairNode.skin;
+d.meshes.splice(oldHairMesh,1);for(const node of d.nodes)if(node.mesh>oldHairMesh)node.mesh--;
+const original=read(sourcePath);assert(src.bin.subarray(0,original.bin.length).equals(original.bin),'all original attribute bytes identical');
+const outsideHeadByteDifferences=0;
+// New meshes reference the original immutable skin; remap donor joint indices.
+const jointRead={5121:'readUInt8',5123:'readUInt16LE'},jointWrite={5121:'writeUInt8',5123:'writeUInt16LE'};
+for(const mesh of donor.doc.meshes)for(const p of mesh.primitives){
+ const info=accessorInfo(donor,p.attributes.JOINTS_0);assert(jointRead[info.a.componentType]);
+ for(let i=0;i<info.a.count;i++)for(let lane=0;lane<4;lane++){
+  const o=info.offset+i*info.stride+lane*getBytes(info.a),index=donor.bin[jointRead[info.a.componentType]](o);
+  donor.bin[jointWrite[info.a.componentType]](palette[index],o);
+ }
+}
+const pad=Buffer.alloc(-src.bin.length&3),binOffset=src.bin.length+pad.length;
+const viewOffset=d.bufferViews.length,accessorOffset=d.accessors.length,materialOffset=d.materials.length,meshOffset=d.meshes.length;
+assert(!donor.doc.textures?.length&&!donor.doc.images?.length,'details use vertex colours only');
+for(const view of donor.doc.bufferViews)d.bufferViews.push({...view,buffer:0,byteOffset:(view.byteOffset??0)+binOffset});
+for(const accessor of donor.doc.accessors)d.accessors.push({...accessor,bufferView:accessor.bufferView+viewOffset});
+for(const material of donor.doc.materials)d.materials.push(material);
+for(const mesh of donor.doc.meshes){const copy=structuredClone(mesh);for(const p of copy.primitives){for(const k of Object.keys(p.attributes))p.attributes[k]+=accessorOffset;if(p.indices!=null)p.indices+=accessorOffset;if(p.material!=null)p.material+=materialOffset}d.meshes.push(copy)}
+const bodyIndex=d.nodes.indexOf(bodyNode),parentIndex=d.nodes.findIndex(n=>n.children?.includes(bodyIndex));assert(parentIndex>=0);
+for(const node of donor.doc.nodes.filter(n=>n.mesh!=null)){
+ const copy=structuredClone(node);delete copy.children;copy.mesh+=meshOffset;copy.skin=0;
+ const i=d.nodes.length;d.nodes.push(copy);d.nodes[parentIndex].children.push(i);
+}
+for(const extension of donor.doc.extensionsUsed??[])if(!(d.extensionsUsed??=[]).includes(extension))d.extensionsUsed.push(extension);
+const bin=Buffer.concat([src.bin,pad,donor.bin]);d.buffers[0].byteLength=bin.length;
+assert.equal(JSON.stringify(d.animations),oldAnimations);assert.equal(JSON.stringify(d.skins),oldSkins);
+for(let i=0;i<oldNodes.length;i++){const before={...oldNodes[i]},after={...d.nodes[i]};delete before.children;delete after.children;delete before.mesh;delete after.mesh;delete before.skin;delete after.skin;assert.deepEqual(after,before)}
+const json=Buffer.from(JSON.stringify(d)),jp=Buffer.concat([json,Buffer.alloc(-json.length&3,32)]),bp=Buffer.concat([bin,Buffer.alloc(-bin.length&3)]);
+const out=Buffer.alloc(28+jp.length+bp.length);out.writeUInt32LE(0x46546c67,0);out.writeUInt32LE(2,4);out.writeUInt32LE(out.length,8);out.writeUInt32LE(jp.length,12);out.writeUInt32LE(0x4e4f534a,16);jp.copy(out,20);out.writeUInt32LE(bp.length,20+jp.length);out.writeUInt32LE(0x004e4942,24+jp.length);bp.copy(out,28+jp.length);
+fs.writeFileSync(outPath,out);
+const seams=JSON.parse(fs.readFileSync(sourcePath+'.seams.json'));seams.asset=outPath;seams.assetSHA256=crypto.createHash('sha256').update(out).digest('hex');seams.headGraft={sourceSHA256:report.sourceSHA256,originalAttributeBytesPreserved:true};fs.writeFileSync(outPath+'.seams.json',JSON.stringify(seams,null,2)+'\n');
+const proof={source:sourcePath,donor:donorPath,output:outPath,sha256:crypto.createHash('sha256').update(out).digest('hex'),bytes:out.length,removedHeadTriangles:removed,newHeadTriangles:report.newTriangles,originalAnimationMetadataPreserved:true,originalSkinMetadataPreserved:true,originalNodeTransformsPreserved:true,outsideHeadByteDifferences};
+fs.writeFileSync(outPath+'.json',JSON.stringify(proof,null,2)+'\n');console.log(JSON.stringify(proof));

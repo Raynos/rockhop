@@ -424,3 +424,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Final outstanding-file cleanup (2026-09-30):** The original backlog and subsequent hero/Coast checkpoints are committed on main. The unfinished authored harbor hook and exact assets are preserved in `prototypes/coast-authored-integration-v1/`; normal biome hooks are unchanged. Typecheck, lint, build, 22 focused tests and a fresh 14/14 C1 host partial gate pass. Ask 208 is done; course acceptance remains 0/12.
 
 **Face authoring source checkpoint (2026-09-30):** The new V7 head-only recipes and full donor report are committed as development inputs. Syntax, finite donor data, local input hash and Blender source inspection pass; no V7 rider promotion or visual acceptance is claimed.
+
+**Face graft source checkpoint (2026-09-30):** Subsequent V7 full/LOD metadata, sewn-contour manifests, graft, skin-paint and offline render recipes are retained as development files. Syntax/JSON checks pass; candidate acceptance remains with the hero review round.

@@ -54,7 +54,7 @@ def surface(theta,z):
 # Concentrate facial vertical samples on lids/nose/lips instead of uniform rings.
 levels=[.041,.048,.053,.059,.062,.064,.0668,.069,.072,.079,.087,.092,.097,.101,.105,.108,.112,.116,.123,.135,.150,.166,.182,.197,.210,.220,.223]
 if a.lod:levels=[.041,.053,.064,.0668,.072,.087,.097,.101,.108,.116,.135,.160,.185,.207,.223]
-segments=56 if not a.lod else 24
+segments=56 if not a.lod else 22
 for z in levels:
  for j in range(segments):p,c=surface(j*math.tau/segments,z);vertex(p,c)
 for r in range(len(levels)-1):
@@ -89,10 +89,10 @@ def ellipsoid(center,scale,color,rows=4,cols=8,rotation=0):
    k=(j+1)%cols;x=start+r*cols+j;y=start+r*cols+k
    if r>0:faces.append((x,y,x+cols))
    if r<rows-1:faces.append((y,y+cols,x+cols))
-for side in [-1,1]:ellipsoid((-.004,side*.086,.104),(.015,.008,.026),(.48,.275,.185),3 if a.lod else 6,6 if a.lod else 10)
+for side in [-1,1]:ellipsoid((-.004,side*.086,.104),(.015,.008,.026),(.48,.275,.185),3 if a.lod else 6,5 if a.lod else 10)
 # Compact closed curl masses overlap a fitted scalp cap. No sparse tube hairs.
 # Same seeded silhouette at both detail tiers, with larger LOD clumps.
-start=len(verts);hairlevels=[.130,.154,.181,.205,.226,.234];hs=16 if a.lod else 32
+start=len(verts);hairlevels=[.130,.154,.181,.205,.226,.234];hs=12 if a.lod else 32
 for r,z in enumerate(hairlevels):
  for j in range(hs):
   theta=j*math.tau/hs;p,_=surface(theta,min(z,.223));p=list(p)
