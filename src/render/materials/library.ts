@@ -65,7 +65,7 @@ export class MaterialLibrary {
     std('grate', { color: 0x3a3c40, roughness: 0.6, metalness: 0.7 });
     std('rock', { color: 0xc49a74, roughness: 0.9 });
     std('asphaltWet', { color: 0x2a2c30, roughness: 0.3 }); // nightCity ride surface: wet, reflective
-    std('snow', { color: 0xeef3f8, roughness: 0.7 });
+    std('snow', { color: 0xeef3f8, roughness: 0.9 });
     // Props
     std('container', { color: 0xffffff, roughness: 0.5, metalness: 0.6 }); // per-instance colour
     std('containerRed', { color: 0x8a2c22, roughness: 0.5, metalness: 0.6 });
@@ -235,7 +235,7 @@ export class MaterialLibrary {
     { painter: 'brushed', size: 256, strength: 0.5, targets: ['alloyBrushed', 'anodised', 'exhaust', 'rim'], noAlbedo: true },
     { painter: 'fabric', size: 256, strength: 0.8, targets: ['jersey', 'pants', 'gloves', 'riderCloth'], noAlbedo: true },
     { painter: 'rock', size: 512, strength: 2.0, targets: ['rock'] },
-    { painter: 'snow', size: 256, strength: 1.5, targets: ['snow'] },
+    { painter: 'snow', size: 256, strength: 0.2, targets: ['snow'] },
   ];
   private nextJob = 0;
 

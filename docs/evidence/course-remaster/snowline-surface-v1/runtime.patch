@@ -1,0 +1,10 @@
+diff --git a/src/render/materials/library.ts b/src/render/materials/library.ts
+index 90f0195f..260559b2 100644
+--- a/src/render/materials/library.ts
++++ b/src/render/materials/library.ts
+@@ -68 +68 @@ export class MaterialLibrary {
+-    std('snow', { color: 0xeef3f8, roughness: 0.7 });
++    std('snow', { color: 0xeef3f8, roughness: 0.9 });
+@@ -238 +238 @@ export class MaterialLibrary {
+-    { painter: 'snow', size: 256, strength: 1.5, targets: ['snow'] },
++    { painter: 'snow', size: 256, strength: 0.2, targets: ['snow'] },
