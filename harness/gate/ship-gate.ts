@@ -15,9 +15,9 @@
  *   G7 heap + perf      N s of play: heap growth, draw calls, tris, textures, physics us/tick, render submit ms
  *   G8 bundle           gzip of the player's JS: dist/assets/*.js minus the load manifest's dev phase
  *   G9 determinism      gate/determinism.ts on the golden recording
- *   G10 stranger        out/metrics/{b1,b2,b3,e1}.stranger.json: median attempts of completed sessions on the
- *                       working tree's src fingerprint vs 1.5 x meta.attemptsBand[1]. Informational until all
- *                       four tracks have >= 2 such sessions (stranger.minSessions); then a real check.
+ *   G10 stranger        out/metrics/<course>.stranger.json: median attempts on the career bike (Rookie C1–D2,
+ *                       Pro D3–S3) and working tree's src fingerprint vs 1.5 x meta.attemptsBand[1]. Each
+ *                       course arms after >= 2 completed sessions (stranger.minSessions).
  *   G11 device + hero   gate/device-rows.ts: the newest docs/device report (fps on low at cap 60, thermal fall-off,
  *                       high worst ms — informational until device.minReports reports) and the newest WebKit hero
  *                       run (rider drift <= hero.driftMaxMm, a real check when a run exists). Rider on Glass G5.
@@ -34,10 +34,12 @@ import { spawn } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { gzipSync } from 'node:zlib';
 import { build } from 'vite';
 import { expandFrames, type InputRecording } from '../../src/core/replay';
 import { DEFAULT_BIKE, type BikeClass, type FaultReason } from '../../src/core/types';
+import { ROCKHOP_TRACKS } from '../../src/tracks/rockhop';
 import { flagBool, flagNum, flagStr, parseArgs } from '../lib/args';
 import { closeIsolated, isolatedPage } from '../lib/browser';
 import { openGame, readHeap } from '../lib/hook';
@@ -56,6 +58,14 @@ import { deviceChecks } from './device-rows';
 
 export const THRESHOLDS_FILE = path.join(HARNESS_DIR, 'gate', 'thresholds.json');
 export type Thresholds = Record<string, number | boolean | string>;
+const METRICS_DIR = path.join(HARNESS_DIR, 'out', 'metrics');
+const CAMPAIGN_TRACK_IDS = ROCKHOP_TRACKS.map((track) => track.id);
+/** Career bike, derived from the shipped order rather than a retired tier label. */
+export function campaignBikeForTrack(trackId: string): BikeClass {
+  const index = CAMPAIGN_TRACK_IDS.indexOf(trackId);
+  if (index < 0) throw new Error(`Not a shipped ROCKHOP course: ${trackId}`);
+  return index < 8 ? 'rookie' : 'pro';
+}
 
 /** Ship targets + the SwiftShader overrides (applied when the renderer string says SwiftShader). */
 export function loadThresholds(): { ship: Thresholds; swiftshader: Record<string, number> } {
@@ -68,18 +78,19 @@ export function loadThresholds(): { ship: Thresholds; swiftshader: Record<string
 
 /**
  * G10 second row: the reflex bot (harness/reflex, a real-time controller with human limits) at `average`
- * on the same four tracks — median attempts over the seeds recorded on the working tree's src fingerprint.
- * Informational until every track has >= minSeeds such seeds; then all four within factor x band top and cleared.
+ * on the shipped courses and their career bikes — median attempts over the seeds recorded on the working tree's
+ * src fingerprint. Informational until every course has >= minSeeds such seeds; then all must clear within band.
  */
-export function reflexRows(tracks: readonly string[], factor: number, skill: 'novice' | 'average' | 'good' = 'average', bike: BikeClass = DEFAULT_BIKE): GateReflexRow[] {
+export function reflexRows(tracks: readonly string[], factor: number, skill: 'novice' | 'average' | 'good' = 'average', bike?: BikeClass, metricsDir = METRICS_DIR): GateReflexRow[] {
   const fp = srcFingerprint();
   const rows: GateReflexRow[] = [];
   for (const trackId of tracks) {
-    const file = path.join(HARNESS_DIR, 'out', 'metrics', `${trackId}${bike === DEFAULT_BIKE ? '' : `.${bike}`}.reflex.json`);
+    const judgedBike = bike ?? campaignBikeForTrack(trackId);
+    const file = path.join(metricsDir, `${trackId}${judgedBike === DEFAULT_BIKE ? '' : `.${judgedBike}`}.reflex.json`);
     if (!fs.existsSync(file)) continue;
     const m = JSON.parse(fs.readFileSync(file, 'utf8')) as ReflexTrackMetrics;
     const row = m.bySkill.find((r) => r.skill === skill);
-    const fresh = fingerprintMatches(m.srcFingerprint, fp) && row ? row : null;
+    const fresh = m.trackId === trackId && (m.bike ?? DEFAULT_BIKE) === judgedBike && fingerprintMatches(m.srcFingerprint, fp) && row ? row : null;
     const band = m.attemptsBand ?? null;
     const limit = band ? factor * band[1] : null;
     rows.push({
@@ -99,21 +110,9 @@ export function reflexRows(tracks: readonly string[], factor: number, skill: 'no
   return rows;
 }
 
-/** The tracks a stranger round judges (harness-metrics.md §3). */
-/** The reflex row's four judged tracks (G10 second row; the reflex bot's `average` medians are recorded for these). */
-export const REFLEX_TRACKS = ['b1-first-ride', 'b2-lean-back', 'b3-kicker-row', 'e1-uphill-weight'] as const;
-/**
- * G10 stranger row (round 11, audit §4): every course with an authored `attemptsBand` — the whole curriculum, every
- * tier — not the first four. Each track arms on its own once >= stranger.minSessions completed sessions exist on this
- * src and the tier's default bike; unarmed tracks are listed as informational in the note, never as a pass.
- */
-export const STRANGER_TRACKS = [
-  'b1-first-ride', 'b2-lean-back', 'b3-kicker-row',
-  'e1-uphill-weight', 'e2-rear-wheel-first', 'e3-stairway',
-  'm1-hop-up', 'm2-drum-roll', 'm3-see-saw',
-  'h1-wheelie-wire', 'h2-gap-chain', 'h3-fire-line',
-  'x1-vertical-limit', 'x2-pipe-dream', 'x3-gauntlet',
-] as const;
+/** G10 inventories follow the actual twelve-course player campaign. */
+export const REFLEX_TRACKS = CAMPAIGN_TRACK_IDS;
+export const STRANGER_TRACKS = CAMPAIGN_TRACK_IDS;
 
 /** G2b: Pro clears on the first and ninth shipped campaign courses. */
 export const PRO_CLEAR_TRACKS = ['c1-low-tide', 'd3-rope-walk'] as const;
@@ -122,19 +121,20 @@ export const PRO_CLEAR_TRACKS = ['c1-low-tide', 'd3-rope-walk'] as const;
  * One row per stranger metrics file: median attempts over the sessions completed on the
  * working tree's src fingerprint (the file's own medians may be from an older run of `report`).
  */
-export function strangerRows(tracks: readonly string[], factor: number): GateStrangerRow[] {
+export function strangerRows(tracks: readonly string[], factor: number, metricsDir = METRICS_DIR): GateStrangerRow[] {
   const fp = srcFingerprint();
   const rows: GateStrangerRow[] = [];
   for (const trackId of tracks) {
-    const file = path.join(HARNESS_DIR, 'out', 'metrics', `${trackId}.stranger.json`);
+    const file = path.join(metricsDir, `${trackId}.stranger.json`);
     if (!fs.existsSync(file)) continue;
     const m = JSON.parse(fs.readFileSync(file, 'utf8')) as {
       attemptsBand?: [number, number] | null;
       bike?: 'rookie' | 'pro';
       sessions: Array<{ sessionId: string; status: string; srcFingerprint: string | null; strangerAttempts: number; cleared: boolean; bike?: 'rookie' | 'pro' }>;
     };
-    // The band is authored for the tier's default bike; the report records which class its medians count.
-    const bike = m.bike ?? 'rookie';
+    // The file lists every session, even when an older report selected Rookie for its own median.
+    // The release gate judges the career class: Rookie for 1–8, earned Pro for 9–12.
+    const bike = campaignBikeForTrack(trackId);
     const onBike = m.sessions.filter((x) => (x.bike ?? 'rookie') === bike);
     const fresh = onBike.filter((x) => x.status === 'done' && fingerprintMatches(x.srcFingerprint, fp));
     const censored = onBike.filter((x) => x.status !== 'done').length;
@@ -662,8 +662,8 @@ async function main(): Promise<void> {
 
     // G10 rows are file reads: they run last, in-process, in order.
     const runRows = (check: (c: GateCheck) => void): Promise<void> => (async () => {
-    // G10 stranger: every banded course, on the physics in the working tree right now. Each track arms on its own
-    // (>= minSessions completed on this src + default bike); the check fails if ANY armed track is outside its
+    // G10 stranger: every shipped course, on the physics in the working tree right now. Each track arms on its own
+    // (>= minSessions completed on this src + career bike); the check fails if ANY armed track is outside its
     // limit or did not clear, and the note names the tracks that are still informational and every censored session.
     const stranger = strangerRows(STRANGER_TRACKS, num('stranger.attemptsBandFactor'));
     const minSessions = num('stranger.minSessions') || 2;
@@ -679,11 +679,11 @@ async function main(): Promise<void> {
       value: summary || 'no armed track',
       limit: num('stranger.attemptsBandFactor'),
       pass: armed ? allPass : true,
-      note: `median attempts / (${num('stranger.attemptsBandFactor')} x band top), every counted session cleared, on src ${srcFingerprint()} and the tier's default bike; armed ${armedRows.length}/${STRANGER_TRACKS.length} tracks (>= ${minSessions} completed)${armed ? `: ${allPass ? 'all armed within the limit' : `OUTSIDE: ${armedRows.filter((r) => r.pass !== true).map((r) => short(r.trackId)).join(', ')}`}` : ''}; informational (unarmed): ${unarmedNote || 'none'}`,
+      note: `median attempts / (${num('stranger.attemptsBandFactor')} x band top), every counted session cleared, on src ${srcFingerprint()} and the career bike (Rookie 1–8, Pro 9–12); armed ${armedRows.length}/${STRANGER_TRACKS.length} tracks (>= ${minSessions} completed)${armed ? `: ${allPass ? 'all armed within the limit' : `OUTSIDE: ${armedRows.filter((r) => r.pass !== true).map((r) => short(r.trackId)).join(', ')}`}` : ''}; informational (unarmed): ${unarmedNote || 'none'}`,
     });
     report.stranger = { srcFingerprint: srcFingerprint(), armed, minSessions, rows: stranger };
 
-    // G10, second row: the reflex bot (average) on the four judged tracks, seeds recorded on this src.
+    // G10, second row: the reflex bot (average) on all twelve career routes, seeds recorded on this src.
     const reflex = reflexRows(REFLEX_TRACKS, num('reflex.attemptsBandFactor') || 1.5);
     const minSeeds = num('reflex.minSeeds') || 3;
     const reflexArmed = reflex.length === REFLEX_TRACKS.length && reflex.every((r) => r.seedsFresh >= minSeeds);
@@ -694,12 +694,12 @@ async function main(): Promise<void> {
       value: reflexSummary || 'no reflex metrics',
       limit: num('reflex.attemptsBandFactor') || 1.5,
       pass: reflexArmed ? reflexPass : true,
-      note: `reflex bot (average) median attempts / (${num('reflex.attemptsBandFactor') || 1.5} x band top) on src ${srcFingerprint()}; ${reflexArmed ? `armed: ${reflexPass ? 'all four within band' : 'outside band'}` : `informational until every track has >= ${minSeeds} seeds on this src (pnpm harness:reflex --all-tracks --seeds 3)`}`,
+      note: `reflex bot (average) on career bikes (Rookie 1–8, Pro 9–12), median attempts / (${num('reflex.attemptsBandFactor') || 1.5} x band top) on src ${srcFingerprint()}; ${reflexArmed ? `armed: ${reflexPass ? 'all twelve within band' : 'outside band'}` : `informational until every track has >= ${minSeeds} seeds on this src and its career bike`}`,
     });
     report.reflex = { srcFingerprint: srcFingerprint(), armed: reflexArmed, minSeeds, rows: reflex };
 
-    // G10, third row: the same reflex medians on the Pro bike. Informational by design — the attempts band is
-    // authored for the tier's default bike (Rookie on beginner/easy) — but reported per track so a Pro regression is visible.
+    // G10, third row: diagnostic Pro medians on all twelve courses. Informational by design: the early-course
+    // attempts bands target Rookie, while the four late-course Pro bands are already judged in the primary row.
     const reflexPro = reflexRows(REFLEX_TRACKS, num('reflex.attemptsBandFactor') || 1.5, 'average', 'pro');
     const reflexProArmed = reflexPro.length === REFLEX_TRACKS.length && reflexPro.every((r) => r.seedsFresh >= minSeeds);
     const reflexProSummary = reflexPro.length ? reflexPro.map((r) => `${r.trackId.split('-')[0]} ${r.medianAttempts ?? '-'}/${r.limit ?? '-'}${r.seedsFresh < minSeeds ? ` (${r.seedsFresh} fresh)` : ''}${r.allCleared ? '' : ' (not all cleared)'}`).join(' · ') : 'no <track>.pro.reflex.json yet';
@@ -708,7 +708,7 @@ async function main(): Promise<void> {
       value: reflexProSummary,
       limit: num('reflex.attemptsBandFactor') || 1.5,
       pass: true,
-      note: `reflex bot (average) on the Pro bike, same tracks and band; informational (the band is Rookie's): ${reflexProArmed ? `${reflexPro.filter((r) => r.pass).length}/${reflexPro.length} within band` : `fewer than ${minSeeds} fresh seeds on some track (pnpm harness:reflex --all-tracks --bike pro --seeds 3)`}`,
+      note: `diagnostic reflex bot (average) on Pro across all twelve; always informational (early-course bands target Rookie, late Pro is judged above): ${reflexProArmed ? `${reflexPro.filter((r) => r.pass).length}/${reflexPro.length} within band` : `fewer than ${minSeeds} fresh seeds on some track`}`,
     });
     report.reflexPro = { srcFingerprint: srcFingerprint(), armed: reflexProArmed, minSeeds, rows: reflexPro };
 
@@ -820,7 +820,10 @@ async function main(): Promise<void> {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Unit tests import the G10 readers without starting a browser or running the ship gate.
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
