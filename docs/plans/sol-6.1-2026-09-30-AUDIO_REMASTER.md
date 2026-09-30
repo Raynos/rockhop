@@ -32,7 +32,9 @@ during testing.
   played-run mixes, never auto-playing audio on the user's machine.
 - [x] Land only audio-owned changes directly on main with provenance,
   journal and checks; human listening remains HR-22.
-- [ ] Push main, run the checked deployment and verify production version SHA.
+- [x] Push main and request the checked CI deployment.
+  The workflow must pass and production version SHA must match before the
+  parent reports the audio shipped.
 
 ## Decoder precision correction
 

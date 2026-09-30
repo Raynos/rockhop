@@ -1,6 +1,6 @@
 # What we are building — the plans and where each stands
 
-**Audio remaster (asks 193, 204, 207):** [Execution plan](sol-6.1-2026-09-30-AUDIO_REMASTER.md) delivers seven fresh score cues, all remastered procedural families and qualified recorded reactions/environment beds. Audio commit `0e00571a` is on main and pushed; production CI is being retried after repairing the Garage LOD test fixture for the new resize behavior. Listening and phone balance remain HR-22 without blocking publication.
+**Audio remaster (asks 193, 204, 207):** [Execution plan](sol-6.1-2026-09-30-AUDIO_REMASTER.md) delivers seven fresh score cues, all remastered procedural families and qualified recorded reactions/environment beds. Audio commit `0e00571a` and the corrected Garage CI fixture are committed on main. Publishing uses checked CI and production-SHA verification; listening and phone balance remain HR-22 without blocking publication.
 
 **Hero remaster (asks 191, 195–197, 201–203, 205–206):** [The active plan](sol-6.1-2026-09-30-HERO_REMASTER.md#mockup-matching-production-phase--asks-205206) extends the reviewed V5 baseline into reference calibration, Blender shape/retopology, baked materials, Garage lighting, motion/families and device qualification. Installed Hunyuan/TRELLIS and UniMate have run; closer/sharper inspection and exact replay pass host proxies. User requires all owned work merged into main in this one checkout. Mockup resemblance, new Race bodies and physical-device acceptance remain open; HR-23 and FINISH_TO_PUBLISH Gates 3/4 remain authoritative.
 
