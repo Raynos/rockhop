@@ -1,0 +1,145 @@
+{
+  "track": "c3-hull-breach",
+  "seed": 1478967505,
+  "sourcePath": "harness/inputs/c3-hull-breach/bot-3-pro.json",
+  "rounds": [
+    {
+      "round": 1,
+      "before": {
+        "fault": {
+          "x": 17.56786143087725,
+          "tick": 379,
+          "reason": "crash"
+        },
+        "maxX": 17.56786143087725,
+        "phase": "crashed",
+        "time": 3.158333333333333,
+        "hash": "759e02d29d95db70"
+      },
+      "after": {
+        "fault": {
+          "x": 64.81267515475454,
+          "tick": 763,
+          "reason": "crash"
+        },
+        "maxX": 64.81267515475454,
+        "phase": "crashed",
+        "time": 6.358333333333333,
+        "hash": "0db8f23e0e2eee12"
+      },
+      "patch": "x0.0-tick0-300-t1l0",
+      "tested": 460
+    },
+    {
+      "round": 2,
+      "before": {
+        "fault": {
+          "x": 64.81267515475454,
+          "tick": 763,
+          "reason": "crash"
+        },
+        "maxX": 64.81267515475454,
+        "phase": "crashed",
+        "time": 6.358333333333333,
+        "hash": "0db8f23e0e2eee12"
+      },
+      "after": {
+        "fault": {
+          "x": 168.9900706133101,
+          "tick": 1825,
+          "reason": "crash"
+        },
+        "maxX": 168.9900706133101,
+        "phase": "crashed",
+        "time": 15.208333333333334,
+        "hash": "f47e1a477993bde9"
+      },
+      "patch": "x39.8-tick555-180-t0.35l-0.5",
+      "tested": 575
+    },
+    {
+      "round": 3,
+      "before": {
+        "fault": {
+          "x": 168.9900706133101,
+          "tick": 1825,
+          "reason": "crash"
+        },
+        "maxX": 168.9900706133101,
+        "phase": "crashed",
+        "time": 15.208333333333334,
+        "hash": "f47e1a477993bde9"
+      },
+      "after": {
+        "fault": {
+          "x": 228.63640861693105,
+          "tick": 2287,
+          "reason": "crash"
+        },
+        "maxX": 228.63640861693105,
+        "phase": "crashed",
+        "time": 19.058333333333334,
+        "hash": "63453c7c648ca180"
+      },
+      "patch": "x154.0-tick1675-300-t1l0",
+      "tested": 575
+    },
+    {
+      "round": 4,
+      "before": {
+        "fault": {
+          "x": 228.63640861693105,
+          "tick": 2287,
+          "reason": "crash"
+        },
+        "maxX": 228.63640861693105,
+        "phase": "crashed",
+        "time": 19.058333333333334,
+        "hash": "63453c7c648ca180"
+      },
+      "after": {
+        "fault": {
+          "x": 329.92793103477305,
+          "tick": 3455,
+          "reason": "crash"
+        },
+        "maxX": 329.92793103477305,
+        "phase": "crashed",
+        "time": 28.791666666666668,
+        "hash": "e299047b6aae3029"
+      },
+      "patch": "x188.6-tick1994-300-t0.35l1",
+      "tested": 575
+    },
+    {
+      "round": 5,
+      "before": {
+        "fault": {
+          "x": 329.92793103477305,
+          "tick": 3455,
+          "reason": "crash"
+        },
+        "maxX": 329.92793103477305,
+        "phase": "crashed",
+        "time": 28.791666666666668,
+        "hash": "e299047b6aae3029"
+      },
+      "after": {
+        "fault": null,
+        "maxX": 351.44200875498166,
+        "phase": "riding",
+        "time": 30.216666666666665,
+        "hash": "ea99b3076126f88b"
+      },
+      "patch": "x314.9-tick3328-180-t1l-0.5",
+      "tested": 575
+    }
+  ],
+  "outcome": {
+    "fault": null,
+    "maxX": 351.44200875498166,
+    "phase": "riding",
+    "time": 30.216666666666665,
+    "hash": "ea99b3076126f88b"
+  }
+}

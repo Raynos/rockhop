@@ -417,8 +417,11 @@ const gearFor = (top: number): number => 10000 / ((top / 0.34) * (60 / (2 * Math
 
 export const BIKE_PRESETS_V2: Readonly<Record<BikeClassV2, PartialTuningV2>> = Object.freeze({
   rookie: {},
-  // Pro (R3): raw. 4 kg lighter, 1 000 N (0.71 g at the knot), a 0.08 s throttle (the launch kick the Rookie
-  // filters), K_att 260 (less attitude assist), stiffer springs, 21 m/s. R6: the R4 ECU trim on the GROUND (same
+  // Pro: long-travel snow-capable race bike. The end-of-campaign envelope uses 0.28/0.26 m travel, a 1.05 snow
+  // tyre coefficient and a 23 m/s high-speed gear/curve while keeping 1 000 N at the low-speed knot. More low-speed
+  // thrust plus extra travel made S1 passively clear under held GO; this candidate measured 0/72 passive clears
+  // in the Node rules mirror across both bikes and three seeds. It is 4 kg lighter, has a 0.08 s throttle and K_att 260 (less
+  // attitude assist). R6: the R4 ECU trim on the GROUND (same
   // margins / rates / lean fade as the Rookie; `airGain` 0 keeps the air raw): plain gas from a standstill at lean 0
   // lifts to ~32 deg and rides a 16-32 deg power wheelie down at 14 m/s instead of looping in 0.95 s (harness r11:
   // every Pro stranger lost its first attempt at 4 m); full gas at lean <= -0.25 still loops (0.56 / 0.66 / 1.35 s
@@ -429,8 +432,9 @@ export const BIKE_PRESETS_V2: Readonly<Record<BikeClassV2, PartialTuningV2>> = O
     chassis: { mass: 54, inertia: 11 },
     // R8 Astra port: one asset, one geometry - the Pro rides the same swingarm arc and fork line (wheelbase 1.30;
     // R3's 1.28 put its axles 1.0 / 1.1 cm inboard of the glb's markers and its rear 37 mm off the arm's end).
-    suspension: { rear: { k: 12000, cReb: 425 }, front: { k: 9000, cReb: 425 } },
-    engine: { Fpeak: 1000, curveV: [0, 3, 5, 8, 12.6, 17.85, 21], curveF: [1.0, 1.0, 1.0, 1.0, 0.7, 0.48, 0.35], throttleTau: 0.08, gear: gearFor(21), reverse: { vmax: 3, engageV: 0.3, engageS: 0.2, rampS: 0.5, F: 500, gain: 800 }, wheelieControl: { gain: 1, rate0: 0.5, rate1: 1.2, topOut: 0.03, margin0: 0.25, margin1: 0.4, leanFull: 0.15, leanOff: 0.5, leanFwdFull: 0.6, leanFwdOff: 0.9, airGain: 0 } },
+    suspension: { rear: { travel: 0.28, k: 12000, cReb: 475 }, front: { travel: 0.26, k: 9000, cReb: 475 } },
+    tyre: { mu: { snow: 1.05 } },
+    engine: { Fpeak: 1000, curveV: [0, 3, 5, 8, 13, 19, 23], curveF: [1.0, 1.0, 1.0, 1.0, 0.75, 0.55, 0.35], throttleTau: 0.08, gear: gearFor(23), reverse: { vmax: 3, engageV: 0.3, engageS: 0.2, rampS: 0.5, F: 500, gain: 800 }, wheelieControl: { gain: 1, rate0: 0.5, rate1: 1.2, topOut: 0.03, margin0: 0.25, margin1: 0.4, leanFull: 0.15, leanOff: 0.5, leanFwdFull: 0.6, leanFwdOff: 0.9, airGain: 0 } },
     rider: { kp: 45000, Katt: 260, cAtt: 29, airRateGain: 0, airCattAdd: 0 },
   },
 });

@@ -1,6 +1,6 @@
 /**
  * R7 (physics.md v2 status R7): the rider body is held by the linkage couple and exported as
- * `PhysicsState.riderBody`. Three permanent rows over every bot golden, both classes:
+ * `PhysicsState.riderBody`. Three permanent rows over all 12 shipped ROCKHOP bot goldens, both classes:
  *
  *  1. pose band - the body is held by its pose: the rotation within +-0.35 rad on >= 94 % of riding ticks per
  *     golden (before R7 the E2 Rookie body wound up to 834 rad and sank 1.4 m), and the RECOVERY band: on every
@@ -22,13 +22,12 @@ import { describe, expect, it } from 'vitest';
 import { decodeJSON, expandFrames, type InputRecording } from '../../core/replay';
 import { hashPhysicsState } from '../../core/hash';
 import type { InputFrame } from '../../core/types';
+import { ROCKHOP_ALL } from '../../tracks/rockhop';
 import { createSimFor } from '../../../harness/lib/sim';
 import type { poseAt } from './rider';
 import type { BikePhysicsWorldV2 } from './bike';
 
 const INPUTS = path.resolve(__dirname, '../../../harness/inputs');
-/** Ask 132: keep these historical recordings, but their tracks are no longer registered in the game. */
-const REMOVED_FREE_RIDES = new Set(['p-coast', 'p-alpine', 'p-quarry', 'p-snowline']);
 const BAND_PSI = 0.35;
 const BAND_COM = 0.15;
 const QUIET_TICKS = 60;
@@ -45,15 +44,14 @@ const DT = 1 / 120;
 
 function goldens(): { file: string; rec: InputRecording }[] {
   const out: { file: string; rec: InputRecording }[] = [];
-  for (const dir of fs.readdirSync(INPUTS, { withFileTypes: true })) {
-    if (!dir.isDirectory()) continue;
-    if (REMOVED_FREE_RIDES.has(dir.name)) continue;
+  // Exercise both classes on every shipped course; retired curriculum and labs are dev fixtures.
+  for (const track of ROCKHOP_ALL) {
     for (const name of ['bot-3.json', 'bot-3-pro.json']) {
-      const file = path.join(INPUTS, dir.name, name);
+      const file = path.join(INPUTS, track.id, name);
       if (!fs.existsSync(file)) continue;
       const rec = decodeJSON(fs.readFileSync(file, 'utf8'));
       if (rec.header.physics === 'v1') continue;
-      out.push({ file: `${dir.name}/${name}`, rec });
+      out.push({ file: `${track.id}/${name}`, rec });
     }
   }
   return out;
@@ -215,7 +213,7 @@ describe('R7: the rider body is held, exported and deterministic (every bot gold
   const all = goldens();
 
   it('lists goldens for both classes', () => {
-    expect(all.length).toBeGreaterThanOrEqual(30);
+    expect(all.length).toBe(24);
     expect(all.some((g) => g.file.endsWith('bot-3-pro.json'))).toBe(true);
   });
 
@@ -278,8 +276,8 @@ describe('R7: the rider body is held, exported and deterministic (every bot gold
     120_000,
   );
 
-  it('the exported body hashes identically across two replays (b1 Rookie + Pro, e2 Rookie + Pro)', async () => {
-    const pick = all.filter((g) => /^(b1-first-ride|e2-rear-wheel-first)\//.test(g.file));
+  it('the exported body hashes identically across two replays (C1 Rookie + Pro, D3 Rookie + Pro)', async () => {
+    const pick = all.filter((g) => /^(c1-low-tide|d3-rope-walk)\//.test(g.file));
     expect(pick.length).toBe(4);
     for (const g of pick) {
       const h1: string[] = [];

@@ -115,8 +115,8 @@ export const STRANGER_TRACKS = [
   'x1-vertical-limit', 'x2-pipe-dream', 'x3-gauntlet',
 ] as const;
 
-/** G2b: the tracks the gate clears on the Pro bike by golden replay (round 7). */
-export const PRO_CLEAR_TRACKS = ['flat-test', 'b1-first-ride'] as const;
+/** G2b: Pro clears on the first and ninth shipped campaign courses. */
+export const PRO_CLEAR_TRACKS = ['c1-low-tide', 'd3-rope-walk'] as const;
 
 /**
  * One row per stranger metrics file: median attempts over the sessions completed on the
@@ -336,7 +336,7 @@ async function main(): Promise<void> {
     }
     })();
 
-    // G2b clear on the Pro bike: flat-test + b1 by their `bot-3-pro.json` goldens (fingerprint-matched), pinned under `<track>:pro`.
+    // G2b clear on the Pro bike: C1 + D3 by their `bot-3-pro.json` goldens (fingerprint-matched), pinned under `<track>:pro`.
     // The two tracks verify concurrently; their rows are emitted in PRO_CLEAR_TRACKS order.
     const runClearPro = (check: (c: GateCheck) => void): Promise<void> => (async () => {
     const proRows = await mapPool([...PRO_CLEAR_TRACKS], 2, async (proTrack) => {
@@ -361,9 +361,9 @@ async function main(): Promise<void> {
       const row = { trackId: proTrack, recording: c.file, finishTime: r.finishTime, expected: entry.golden.finishTime, hash: r.hash, expectedHash: entry.golden.hash, faults: r.faults, fresh: c.fresh };
       const chk: GateCheck = {
         id,
-        value: cleared && pinnedOk,
+        value: c.fresh && cleared && pinnedOk,
         limit: true,
-        pass: cleared && pinnedOk,
+        pass: c.fresh && cleared && pinnedOk,
         note: `${path.basename(c.file)} (${c.fresh ? 'src matches' : `STALE src=${c.stamp ?? 'unstamped'}`}) finish=${r.finishTime} faults=${r.faults} hash ${r.hash} vs pinned ${entry.golden.hash} (expected finish ${entry.golden.finishTime})`,
       };
       return { row, chk };

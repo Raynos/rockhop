@@ -123,7 +123,7 @@ describe('R4 mechanism 2: the round-8 "air-throttle kick" is the rider pose swin
     }
   });
 
-  it('a full pose swing in the air is the 200-400 deg/s step: releasing lean -1 to 0 kicks +230..260 deg/s within 0.07 s (43 deg/s per tick = F_max x the grip lever / I_chassis), pressing 0 to -1 dips the nose first (-140 deg/s) then K_att lifts it; genuine two-body dynamics, > 8x the throttle tap (raw: the Pro, and the Rookie with the R5 air limit off - r5.test.ts has the limited Rookie)', () => {
+  it('a full pose swing in the air reaches 200-300 deg/s: releasing lean -1 to 0 gives a >35 deg/s per-tick step, pressing 0 to -1 dips the nose then K_att lifts it; genuine two-body dynamics, >7.5x the throttle tap (raw: the Pro, and the Rookie with the R5 air limit off - r5.test.ts has the limited Rookie)', () => {
     for (const cls of BIKE_CLASSES_V2) {
       const raw = cls === 'rookie' ? AIR_RAW : undefined;
       const rel = air(cls, { lean: -1 }, { lean: 0 }, raw);
@@ -133,9 +133,12 @@ describe('R4 mechanism 2: the round-8 "air-throttle kick" is the rider pose swin
       feel(`air.${cls}.swing-1to0`, `peak ${f(rel.peakRate, 0)} deg/s step ${f(rel.peakStep, 0)} /tick angle ${f(rel.ang05)} @0.5s`, 'measured: the kick (200-300)');
       feel(`air.${cls}.swing0to-1`, `peak ${f(press.peakRate, 0)} deg/s step ${f(press.peakStep, 0)} /tick angle ${f(press.ang05)} @0.5s rate@0.5 ${f(press.rate05, 0)}`, 'measured: dip then K_att');
       feel(`air.${cls}.swing-1to0+gas`, `peak ${f(both.peakRate, 0)} angle ${f(both.ang05)} @0.5s`, 'measured: swing + 20 of throttle');
+      feel(`air.${cls}.poseVsThrottle`, rel.peakRate / Math.abs(t.peakRate), '>7.5x');
       expect(rel.peakRate).toBeGreaterThan(200);
       expect(rel.peakRate).toBeLessThan(300);
-      expect(rel.peakRate).toBeGreaterThan(8 * Math.abs(t.peakRate));
+      // The Pro's taller final gear changes wheel spin in air; its measured pose/throttle ratio is 7.874x.
+      // Keep a wide separation without coupling this gate to the previous 21 m/s gear.
+      expect(rel.peakRate).toBeGreaterThan(7.5 * Math.abs(t.peakRate));
       expect(Math.abs(rel.peakStep)).toBeGreaterThan(35);
       expect(both.peakRate - rel.peakRate).toBeLessThan(25);
     }

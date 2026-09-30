@@ -1,0 +1,61 @@
+
+> rockhop@0.3.2 build /Users/raynos/projects/games/rockhop
+> vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 493 modules transformed.
+rendering chunks...
+[plugin rockhop:bundle-budget]
+  assets/three-eJZiNNgZ.js                    187.6 KB gz
+  assets/sentry-errors-DZ1jjk5-.js            175.5 KB gz  (outside player budget)
+  assets/index-8SMDZrIx.js                    433.7 KB gz
+  assets/legacy-physics-CnF4phSW.js            14.9 KB gz  (outside player budget)
+  assets/retired-BmS-E9pw.js                   10.1 KB gz  (outside player budget)
+  assets/inbox-DLR1N7xh.js                      3.8 KB gz
+  assets/audio-offline-DQ9swp1X.js             13.0 KB gz  (outside player budget)
+  assets/worklet-lsdhNsiP.js                    0.1 KB gz
+  assets/worldMap3dScene-4R6fV4qQ.js           28.6 KB gz
+  assets/worklet-BaGI96WZ.js                   16.9 KB gz
+bundle budget: 670.7 KB gz (686792 B) of 700 KB — OK
+[plugin rockhop:load-manifest] load manifest: core 2235 KB, title 1896 KB, menu 1461 KB, world 4286 KB, models 18313 KB
+[plugin rockhop:pwa] sw.js emitted (rockhop-shell-868c78c4-142324144a, rockhop-static-d3893e742c, rockhop-immutable)
+[plugin rockhop:prune-flat-models] pruned 28 unrequested flat model copies from dist/models (25.52 MB)
+[plugin rockhop:sourcemaps-out] moved 10 source maps out of the deploy to dist-maps
+computing gzip size...
+dist/version.json                                                                    0.10 kB │ gzip:   0.11 kB
+dist/model-catalog.json                                                              3.57 kB │ gzip:   0.97 kB
+dist/sw.js                                                                          13.47 kB
+dist/load-manifest.json                                                             19.98 kB │ gzip:   3.68 kB
+dist/index.html                                                                     29.90 kB │ gzip:   9.63 kB
+dist/assets/worklet-BaGI96WZ.js                                                     52.21 kB
+dist/assets/sky-alpine-a-duW0jn55.webp                                             106.25 kB
+dist/models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb                     864.84 kB
+dist/models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb                  870.44 kB
+dist/models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb    912.70 kB
+dist/models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb         946.82 kB
+dist/models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb      1,245.48 kB
+dist/models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb      1,472.16 kB
+dist/models/2a3c78a70e16ff1a/rider-street-mustard-lod-b1563f6eedbddb0a.glb       1,520.84 kB
+dist/models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb                       2,270.54 kB
+dist/models/98214c3b3099a465/bike-rookie-e55919d602678493.glb                    2,283.04 kB
+dist/models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb      2,355.38 kB
+dist/models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb           2,448.15 kB
+dist/models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb          2,796.63 kB
+dist/models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb          3,234.92 kB
+dist/models/2a3c78a70e16ff1a/rider-street-mustard-11743d396b85b9e9.glb           3,363.82 kB
+dist/assets/worklet-lsdhNsiP.js                                                      0.10 kB │ gzip:   0.10 kB │ map:     0.10 kB
+dist/assets/inbox-DLR1N7xh.js                                                       10.07 kB │ gzip:   3.92 kB │ map:    27.46 kB
+dist/assets/audio-offline-DQ9swp1X.js                                               41.54 kB │ gzip:  13.33 kB │ map:   132.98 kB
+dist/assets/legacy-physics-CnF4phSW.js                                              45.70 kB │ gzip:  15.25 kB │ map:   160.27 kB
+dist/assets/retired-BmS-E9pw.js                                                     47.67 kB │ gzip:  10.32 kB │ map:   164.34 kB
+dist/assets/worldMap3dScene-4R6fV4qQ.js                                             97.32 kB │ gzip:  29.25 kB │ map:   232.52 kB
+dist/assets/sentry-errors-DZ1jjk5-.js                                              670.20 kB │ gzip: 179.72 kB │ map: 2,029.48 kB
+dist/assets/three-eJZiNNgZ.js                                                      746.58 kB │ gzip: 192.08 kB │ map: 3,158.95 kB
+dist/assets/index-8SMDZrIx.js                                                    1,433.03 kB │ gzip: 444.30 kB │ map: 4,170.64 kB
+
+(!) Some chunks are larger than 700 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.16s

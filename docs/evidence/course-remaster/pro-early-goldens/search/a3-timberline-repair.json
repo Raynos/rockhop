@@ -1,0 +1,145 @@
+{
+  "track": "a3-timberline",
+  "seed": 849270865,
+  "sourcePath": "harness/inputs/a3-timberline/bot-3-pro.json",
+  "rounds": [
+    {
+      "round": 1,
+      "before": {
+        "fault": {
+          "x": 17.227319468193123,
+          "tick": 376,
+          "reason": "crash"
+        },
+        "maxX": 17.227319468193123,
+        "phase": "crashed",
+        "time": 3.1333333333333333,
+        "hash": "be765c4f272f44df"
+      },
+      "after": {
+        "fault": {
+          "x": 64.48605254511816,
+          "tick": 792,
+          "reason": "crash"
+        },
+        "maxX": 64.48605254511816,
+        "phase": "crashed",
+        "time": 6.6,
+        "hash": "d70ef70a54412a2a"
+      },
+      "patch": "x9.2-tick257-180-t1l1",
+      "tested": 460
+    },
+    {
+      "round": 2,
+      "before": {
+        "fault": {
+          "x": 64.48605254511816,
+          "tick": 792,
+          "reason": "crash"
+        },
+        "maxX": 64.48605254511816,
+        "phase": "crashed",
+        "time": 6.6,
+        "hash": "d70ef70a54412a2a"
+      },
+      "after": {
+        "fault": {
+          "x": 125.0364690295881,
+          "tick": 1278,
+          "reason": "crash"
+        },
+        "maxX": 125.0364690295881,
+        "phase": "crashed",
+        "time": 10.65,
+        "hash": "aac8fcdb3c6e0b82"
+      },
+      "patch": "x24.5-tick445-30-t0.35l-1",
+      "tested": 575
+    },
+    {
+      "round": 3,
+      "before": {
+        "fault": {
+          "x": 125.0364690295881,
+          "tick": 1278,
+          "reason": "crash"
+        },
+        "maxX": 125.0364690295881,
+        "phase": "crashed",
+        "time": 10.65,
+        "hash": "aac8fcdb3c6e0b82"
+      },
+      "after": {
+        "fault": {
+          "x": 224.57704782960863,
+          "tick": 2136,
+          "reason": "crash"
+        },
+        "maxX": 224.57704782960863,
+        "phase": "crashed",
+        "time": 17.8,
+        "hash": "ef2188c6878ff457"
+      },
+      "patch": "x117.0-tick1212-300-t1l0.5",
+      "tested": 575
+    },
+    {
+      "round": 4,
+      "before": {
+        "fault": {
+          "x": 224.57704782960863,
+          "tick": 2136,
+          "reason": "crash"
+        },
+        "maxX": 224.57704782960863,
+        "phase": "crashed",
+        "time": 17.8,
+        "hash": "ef2188c6878ff457"
+      },
+      "after": {
+        "fault": {
+          "x": 312.0693746029606,
+          "tick": 2702,
+          "reason": "crash"
+        },
+        "maxX": 312.0693746029606,
+        "phase": "crashed",
+        "time": 22.516666666666666,
+        "hash": "fa26fc1da9d9fc5a"
+      },
+      "patch": "x209.6-tick2000-300-t1l1",
+      "tested": 575
+    },
+    {
+      "round": 5,
+      "before": {
+        "fault": {
+          "x": 312.0693746029606,
+          "tick": 2702,
+          "reason": "crash"
+        },
+        "maxX": 312.0693746029606,
+        "phase": "crashed",
+        "time": 22.516666666666666,
+        "hash": "fa26fc1da9d9fc5a"
+      },
+      "after": {
+        "fault": null,
+        "maxX": 326.21648891518373,
+        "phase": "riding",
+        "time": 23.233333333333334,
+        "hash": "5ce4d1f21aaa7b1a"
+      },
+      "patch": "x272.1-tick2442-180-t1l0",
+      "tested": 575
+    }
+  ],
+  "outcome": {
+    "fault": null,
+    "maxX": 326.21648891518373,
+    "phase": "riding",
+    "time": 23.233333333333334,
+    "hash": "5ce4d1f21aaa7b1a"
+  }
+}

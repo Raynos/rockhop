@@ -43,7 +43,7 @@ describe('ROCKHOP goldens replay in node', () => {
     const sim = await createSimFor(rec);
     sim.run(expandFrames(rec));
     expect({ phase: sim.phase(), faults: sim.faults(), hash: sim.hash() }).toEqual({
-      phase: 'finished', faults: 0, hash: '516f6212e2cf6954',
+      phase: 'finished', faults: 0, hash: '2816823aece6ead6',
     });
   });
 
@@ -67,7 +67,7 @@ describe('ROCKHOP goldens replay in node', () => {
     const sim = await createSimFor(rec);
     sim.run(expandFrames(rec));
     expect({ phase: sim.phase(), faults: sim.faults(), hash: sim.hash() }).toEqual({
-      phase: 'finished', faults: 0, hash: '64ec5d60318654fd',
+      phase: 'finished', faults: 0, hash: '2c0081dd610d64bc',
     });
   });
 

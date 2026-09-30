@@ -1,0 +1,151 @@
+{
+  "track": "d2-conveyor",
+  "seed": 1,
+  "sourcePath": "docs/evidence/course-remaster/pro-early-goldens/historical/d2-conveyor.bot-3-pro.json",
+  "rounds": [
+    {
+      "round": 1,
+      "before": {
+        "fault": {
+          "x": 17.22731946838153,
+          "tick": 376,
+          "reason": "crash"
+        },
+        "maxX": 17.22731946838153,
+        "phase": "crashed",
+        "time": 3.1333333333333333,
+        "hash": "532742eb5c7eb80e",
+        "ticks": 376
+      },
+      "after": {
+        "fault": {
+          "x": 103.53633425040401,
+          "tick": 1175,
+          "reason": "crash"
+        },
+        "maxX": 103.53633425040401,
+        "phase": "crashed",
+        "time": 9.791666666666666,
+        "hash": "f0b6b2fadcd0897b"
+      },
+      "patch": "x9.2-tick257-180-t1l0.5",
+      "tested": 460
+    },
+    {
+      "round": 2,
+      "before": {
+        "fault": {
+          "x": 103.53633425040401,
+          "tick": 1175,
+          "reason": "crash"
+        },
+        "maxX": 103.53633425040401,
+        "phase": "crashed",
+        "time": 9.791666666666666,
+        "hash": "f0b6b2fadcd0897b",
+        "ticks": 1175
+      },
+      "after": {
+        "fault": {
+          "x": 176.9920802105563,
+          "tick": 1765,
+          "reason": "crash"
+        },
+        "maxX": 176.9920802105563,
+        "phase": "crashed",
+        "time": 14.708333333333334,
+        "hash": "6df5bd221887d420"
+      },
+      "patch": "x88.5-tick1070-60-t0.35l-0.5",
+      "tested": 575
+    },
+    {
+      "round": 3,
+      "before": {
+        "fault": {
+          "x": 176.9920802105563,
+          "tick": 1765,
+          "reason": "crash"
+        },
+        "maxX": 176.9920802105563,
+        "phase": "crashed",
+        "time": 14.708333333333334,
+        "hash": "6df5bd221887d420",
+        "ticks": 1765
+      },
+      "after": {
+        "fault": {
+          "x": 268.11305859670284,
+          "tick": 2910,
+          "reason": "crash"
+        },
+        "maxX": 268.11305859670284,
+        "phase": "crashed",
+        "time": 24.25,
+        "hash": "3f2d0d90c30a8e0f"
+      },
+      "patch": "x169.0-tick1676-300-t0.35l1",
+      "tested": 575
+    },
+    {
+      "round": 4,
+      "before": {
+        "fault": {
+          "x": 268.11305859670284,
+          "tick": 2910,
+          "reason": "crash"
+        },
+        "maxX": 268.11305859670284,
+        "phase": "crashed",
+        "time": 24.25,
+        "hash": "3f2d0d90c30a8e0f",
+        "ticks": 2910
+      },
+      "after": {
+        "fault": {
+          "x": 407.9751938932124,
+          "tick": 4082,
+          "reason": "crash"
+        },
+        "maxX": 407.9751938932124,
+        "phase": "crashed",
+        "time": 34.016666666666666,
+        "hash": "ff1ef8fec06192ab"
+      },
+      "patch": "x243.1-tick2572-300-t0.35l0",
+      "tested": 575
+    },
+    {
+      "round": 5,
+      "before": {
+        "fault": {
+          "x": 407.9751938932124,
+          "tick": 4082,
+          "reason": "crash"
+        },
+        "maxX": 407.9751938932124,
+        "phase": "crashed",
+        "time": 34.016666666666666,
+        "hash": "ff1ef8fec06192ab",
+        "ticks": 4082
+      },
+      "after": {
+        "fault": null,
+        "maxX": 454.7588967629815,
+        "phase": "riding",
+        "time": 36.825,
+        "hash": "0d51bd37adebcf5b"
+      },
+      "patch": "x383.0-tick3877-300-t1l1",
+      "tested": 575
+    }
+  ],
+  "outcome": {
+    "fault": null,
+    "maxX": 454.7588967629815,
+    "phase": "riding",
+    "time": 36.825,
+    "hash": "0d51bd37adebcf5b",
+    "ticks": 4419
+  }
+}

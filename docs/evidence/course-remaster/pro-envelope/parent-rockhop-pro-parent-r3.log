@@ -1,0 +1,130 @@
+
+ RUN  v3.2.7 /Users/raynos/projects/games/rockhop
+
+stdout | src/physics/v2/r3.test.ts > landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > drops of 1.5 / 2 / 3 m at 6 and 12 m/s, lean 0 and +0.5, both classes: land and ride away, no fault, rebound < 0.15 m, pitch within -35..+35 (R2: 2 m at lean 0 rebounded 0.6 m, 2.5-3 m looped)
+FEEL land.rookie.1.5m@6.lean0 = rear 100% pitch -5..10 rebound 0.05 air-after 0.03 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.1.5m@6.lean0.5 = rear 90% pitch -7..2 rebound 0.00 air-after 0.13 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@6.lean0 = rear 100% pitch -6..11 rebound 0.07 air-after 0.04 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@6.lean0.5 = rear 100% pitch -12..3 rebound 0.00 air-after 0.13 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@6.lean0 = rear 100% pitch -8..13 rebound 0.11 air-after 0.07 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@6.lean0.5 = rear 100% pitch -23..4 rebound 0.00 air-after 0.21 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.1.5m@12.lean0 = rear 100% pitch -5..7 rebound 0.06 air-after 0.03 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.1.5m@12.lean0.5 = rear 86% pitch -8..2 rebound 0.00 air-after 0.10 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@12.lean0 = rear 100% pitch -6..8 rebound 0.08 air-after 0.06 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.2m@12.lean0.5 = rear 98% pitch -14..4 rebound 0.00 air-after 0.11 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@12.lean0 = rear 100% pitch -8..9 rebound 0.11 air-after 0.07 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.rookie.3m@12.lean0.5 = rear 100% pitch -26..3 rebound 0.00 air-after 0.20 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@6.lean0 = rear 100% pitch -4..12 rebound 0.07 air-after 0.11 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@6.lean0.5 = rear 79% pitch -4..2 rebound 0.00 air-after 0.19 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@6.lean0 = rear 100% pitch -5..13 rebound 0.09 air-after 0.12 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@6.lean0.5 = rear 92% pitch -9..3 rebound 0.00 air-after 0.19 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@6.lean0 = rear 100% pitch -8..17 rebound 0.14 air-after 0.15 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@6.lean0.5 = rear 100% pitch -19..4 rebound 0.00 air-after 0.23 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@12.lean0 = rear 100% pitch -4..9 rebound 0.08 air-after 0.11 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.1.5m@12.lean0.5 = rear 75% pitch -6..2 rebound 0.00 air-after 0.17 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@12.lean0 = rear 100% pitch -5..11 rebound 0.09 air-after 0.13 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.2m@12.lean0.5 = rear 88% pitch -11..2 rebound 0.00 air-after 0.17 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@12.lean0 = rear 100% pitch -7..13 rebound 0.13 air-after 0.16 s rides away [rides away, rebound < 0.15, pitch within +-35]
+FEEL land.pro.3m@12.lean0.5 = rear 95% pitch -22..3 rebound 0.00 air-after 0.23 s rides away [rides away, rebound < 0.15, pitch within +-35]
+
+stdout | src/physics/v2/r3.test.ts > landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > the closing cap bounds force during landing recovery; intended hops retain >= 97 % of the uncapped apex and >= 0.45 m
+FEEL land.capOff.2m.rebound = 0.067 [informational control; do not require a pogo]
+FEEL land.capOff.3m.result = rides away [no fault]
+FEEL hop.capOn.apex = 0.458 [>= 0.45]
+FEEL hop.capOff.apex = 0.458 [info (R2)]
+
+stdout | src/physics/v2/r3.test.ts > classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > rookie: full gas at lean 0 lifts <= 10 deg and never loops (loop-out needs a lean back: -0.25 loops in ~1.1 s, -0.5 in ~0.8 s; the parent asked -0.5 or harder: the critical lean sits between 0 and -0.25 on this table, see physics.md); 0 -> 16 <= 4.2 s; top 20
+FEEL class.rookie.launch = 1:5.1deg 0.5:5.6deg 0.25:5.1deg 0:5.4deg -0.25:loop 1.84s -0.5:loop 0.87s -1:loop 0.68s [lean: max pitch or loop time]
+FEEL class.rookie.t16 = 3.967 [<= 4.2 s]
+FEEL class.rookie.top = 20.022 [20 +- 0.5]
+FEEL class.rookie.sag = 21.5 / 28.6 [info: rear / front % at speed]
+
+stdout | src/physics/v2/r3.test.ts > classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > pro (R6): full gas at lean 0 from a standstill lifts hard (25-40 deg) and rides the power wheelie down without looping (R3-R5 looped in 0.95 s: harness r11 lost every Pro first attempt at 4 m), +0.25 / +0.5 / +1 do not loop, lean -0.25 / -0.5 / -1 loop in < 1.5 s (the lean fade: leaning back is the rider taking over); 0 -> 16 < rookie at +0.5; top 23
+FEEL class.pro.launch = 1:5.0deg 0.5:8.8deg 0.25:4.8deg 0:29.8deg -0.25:loop 1.23s -0.5:loop 0.69s -1:loop 0.58s [lean: max pitch or loop time]
+FEEL class.pro.t16 = 3.075 [info (< rookie)]
+FEEL class.pro.top = 23.021 [23 +- 0.5]
+
+stdout | src/physics/v2/r3.test.ts > classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > both classes: coasting balance by lean, air control in 0.5 s at 8 m/s (rookie in the 25-40 band; pro has less attitude assist, K_att 260), open-loop divergence 1-2 s
+FEEL class.rookie.balanceDeg.byLean = 28.5 / 39.8 / 51.9 / 56.9 / 65.0 [lean -1 / -0.5 / 0 / 0.5 / 1]
+FEEL class.rookie.air0.5s.lean-1/+1 = 35.5 / -31.9 [+25..40 / -25..-40]
+FEEL class.rookie.openLoopDivergeS = 1.158 [1-2 s]
+FEEL class.pro.balanceDeg.byLean = 28.1 / 38.9 / 50.6 / 55.4 / 63.1 [lean -1 / -0.5 / 0 / 0.5 / 1]
+FEEL class.pro.air0.5s.lean-1/+1 = 33.8 / -30.9 [less than the rookie]
+FEEL class.pro.openLoopDivergeS = 1.067 [1-2 s]
+
+stdout | src/physics/v2/r3.test.ts > hop matrix per class (R3): the intent gate keeps R2's hop > reference hop >= 0.45 m, front leaves first, lands within +-20 on both classes; matrix preload -0.25..-1 x snap 4 / 8 / 16 / one-tick
+FEEL hop.rookie.ref = apex 0.46 first front both-off 0.13 s land -13.5 [>= 0.45 m, front, level]
+FEEL hop.rookie.matrix.preLean-0.25 = 0.13 / 0.22 / 0.24 / 0.26 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.rookie.matrix.preLean-0.5 = 0.06 / 0.40 / 0.42 / 0.40 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.rookie.matrix.preLean-0.75 = 0.08 / 0.39 / 0.45 / 0.42 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.rookie.matrix.preLean-1 = 0.08 / 0.39 / 0.47 / 0.46 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.ref = apex 0.45 first front both-off 0.13 s land -12.2 [>= 0.45 m, front, level]
+FEEL hop.pro.matrix.preLean-0.25 = 0.12 / 0.23 / 0.26 / 0.28 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.matrix.preLean-0.5 = 0.08 / 0.42 / 0.45 / 0.43 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.matrix.preLean-0.75 = 0.09 / 0.41 / 0.45 / 0.44 [snap 4 / 8 / 16 / one-tick: apex m]
+FEEL hop.pro.matrix.preLean-1 = 0.09 / 0.40 / 0.46 / 0.45 [snap 4 / 8 / 16 / one-tick: apex m]
+
+stdout | src/physics/v2/r3.test.ts > climbs with the Trials technique (R3 decision 3) > rookie tops a 4 m 45 deg plank from a crawl (2 m/s) and at 5 m/s: front rolls onto the face at neutral, gas, then the weight is thrown to +1; 50 deg needs 6 m/s; pro table printed (its momentum rows 55-60 are not made by this controller: the base transition at 6-10 m/s, not the geometry, is where it fails)
+FEEL climb.rookie.table = 40@2:TOP 45@2:TOP 45@5:stall 75% 50@5:FAULT 50@6:FAULT 55@6:stall 21% 55@8:stall 35% 60@8:stall 25% [TOP / stall %]
+FEEL climb.pro.table = 40@2:TOP 45@2:stall 61% 45@5:TOP 50@5:stall 47% 50@6:stall 57% 55@6:stall 30% 55@8:stall 46% 60@8:stall 28% [TOP / stall %]
+
+stdout | src/physics/v2/r3.test.ts > climbs with the Trials technique (R3 decision 3) > the constant-speed climb limit is geometry, atan(d/h) at lean +1 (the front load on a slope is d cos - h sin): 37 deg on this table; steeper is a momentum climb
+FEEL climb.rookie.crawlLimitDeg = 36.837 [info: atan(d/h) at lean +1]
+FEEL climb.pro.crawlLimitDeg = 36.218 [info: atan(d/h) at lean +1]
+
+stdout | src/physics/v2/r3.test.ts > wheelie hold with anticipation (R3 decision 4) > a 60 Hz / 100 ms controller that leads the pitch by 0.25 s (pitch + rate x horizon) holds 40 +- 8 deg for >= 10 s of 12 on both classes without looping; the R2 PD on the current pitch loops against the Rookie's 0.15 s throttle
+FEEL wheelie.rookie.hold.inBandS = 10.808 [>= 10 s within +-8 of 40]
+FEEL wheelie.rookie.hold.frontUpS = 12.500 [info]
+FEEL wheelie.rookie.hold.meanDeg = 39.822 [info]
+FEEL wheelie.rookie.hold.vmax = 6.847 [info]
+FEEL wheelie.pro.hold.inBandS = 12.500 [>= 10 s within +-8 of 40]
+FEEL wheelie.pro.hold.frontUpS = 12.500 [info]
+FEEL wheelie.pro.hold.meanDeg = 39.985 [info]
+FEEL wheelie.pro.hold.vmax = 6.003 [info]
+
+stdout | src/physics/v2/r3.test.ts > lab-physics-test hop per class (R3 decision 5) > the lip hop at 7 / 8 / 9 m/s: clears onto the ledge on both classes at 8-9; the margin over the ledge corner is printed (spec wants >= 0.1 m of clear air)
+FEEL lab.rookie.hop@7 = NOT cleared margin 0.73 apex 2.36 land -22 crash [cleared, margin >= 0.1]
+FEEL lab.rookie.hop@8 = cleared margin -0.15 apex 1.43 land -1  [cleared, margin >= 0.1]
+FEEL lab.rookie.hop@9 = cleared margin -0.15 apex 1.23 land 6  [cleared, margin >= 0.1]
+FEEL lab.pro.hop@7 = NOT cleared margin 0.72 apex 2.61 land -22 crash [cleared, margin >= 0.1]
+FEEL lab.pro.hop@8 = cleared margin -0.10 apex 1.59 land -8  [cleared, margin >= 0.1]
+FEEL lab.pro.hop@9 = cleared margin -0.15 apex 1.54 land 4  [cleared, margin >= 0.1]
+
+stdout | src/physics/v2/r3.test.ts > cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node)
+FEEL cost.usPerTick.p50 = 8.600 [<= 5]
+FEEL cost.usPerTick.p95 = 13.500 [info: 2.7-3.0 alone; the full parallel suite pushes it past 5 on a shared host]
+
+ ❯ src/physics/v2/r3.test.ts (12 tests | 1 failed) 1395ms
+   ✓ landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > drops of 1.5 / 2 / 3 m at 6 and 12 m/s, lean 0 and +0.5, both classes: land and ride away, no fault, rebound < 0.15 m, pitch within -35..+35 (R2: 2 m at lean 0 rebounded 0.6 m, 2.5-3 m looped) 156ms
+   ✓ landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > the closing cap bounds force during landing recovery; intended hops retain >= 97 % of the uncapped apex and >= 0.45 m 68ms
+   ✓ landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > snapshot round-trip through a landing: restore at the touchdown tick, then 240 ticks hash-equal to the straight run (the intent slot is in F) 18ms
+   ✓ classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > rookie: full gas at lean 0 lifts <= 10 deg and never loops (loop-out needs a lean back: -0.25 loops in ~1.1 s, -0.5 in ~0.8 s; the parent asked -0.5 or harder: the critical lean sits between 0 and -0.25 on this table, see physics.md); 0 -> 16 <= 4.2 s; top 20 134ms
+   ✓ classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > pro (R6): full gas at lean 0 from a standstill lifts hard (25-40 deg) and rides the power wheelie down without looping (R3-R5 looped in 0.95 s: harness r11 lost every Pro first attempt at 4 m), +0.25 / +0.5 / +1 do not loop, lean -0.25 / -0.5 / -1 loop in < 1.5 s (the lean fade: leaning back is the rider taking over); 0 -> 16 < rookie at +0.5; top 23 102ms
+   ✓ classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > both classes: coasting balance by lean, air control in 0.5 s at 8 m/s (rookie in the 25-40 band; pro has less attitude assist, K_att 260), open-loop divergence 1-2 s 32ms
+   ✓ hop matrix per class (R3): the intent gate keeps R2's hop > reference hop >= 0.45 m, front leaves first, lands within +-20 on both classes; matrix preload -0.25..-1 x snap 4 / 8 / 16 / one-tick 180ms
+   ✓ climbs with the Trials technique (R3 decision 3) > rookie tops a 4 m 45 deg plank from a crawl (2 m/s) and at 5 m/s: front rolls onto the face at neutral, gas, then the weight is thrown to +1; 50 deg needs 6 m/s; pro table printed (its momentum rows 55-60 are not made by this controller: the base transition at 6-10 m/s, not the geometry, is where it fails)  317ms
+   ✓ climbs with the Trials technique (R3 decision 3) > the constant-speed climb limit is geometry, atan(d/h) at lean +1 (the front load on a slope is d cos - h sin): 37 deg on this table; steeper is a momentum climb 3ms
+   ✓ wheelie hold with anticipation (R3 decision 4) > a 60 Hz / 100 ms controller that leads the pitch by 0.25 s (pitch + rate x horizon) holds 40 +- 8 deg for >= 10 s of 12 on both classes without looping; the R2 PD on the current pitch loops against the Rookie's 0.15 s throttle 59ms
+   ✓ lab-physics-test hop per class (R3 decision 5) > the lip hop at 7 / 8 / 9 m/s: clears onto the ledge on both classes at 8-9; the margin over the ledge corner is printed (spec wants >= 0.1 m of clear air) 116ms
+   × cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node) 207ms
+     → expected 8.600409999999101 to be less than or equal to 5
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/physics/v2/r3.test.ts > cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node)
+AssertionError: expected 8.600409999999101 to be less than or equal to 5
+ ❯ src/physics/v2/r3.test.ts:532:17
+    530|     feel('cost.usPerTick.p50', p50, '<= 5');
+    531|     feel('cost.usPerTick.p95', p95, 'info: 2.7-3.0 alone; the full par…
+    532|     expect(p50).toBeLessThanOrEqual(5);
+       |                 ^
+    533|   });
+    534| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 passed (12)
+   Start at  03:12:04
+   Duration  2.22s (transform 263ms, setup 0ms, collect 318ms, tests 1.39s, environment 0ms, prepare 150ms)

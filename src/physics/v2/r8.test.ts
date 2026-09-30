@@ -5,7 +5,7 @@
  * and the reach impulse averaged over gripTau above gripN is the thrown-rider fault. Under braking the rider braces
  * back (the pose table's brake row), so a plain full brake on the flat is stoppie-safe at the tier's speeds.
  *
- *  1. envelope, every bot golden of both classes: on EVERY riding tick the hips sit no more than 5 cm below the
+ *  1. envelope, every shipped ROCKHOP bot golden of both classes: on EVERY riding tick the hips sit no more than 5 cm below the
  *     seat line / ahead of the tank line and the leg / arm no more than 5 cm over reach (before R8 an 8 g landing
  *     put the hips 1.96 m below the chassis and the body 2.6 m from its pose); the COM is within 0.15 m and the
  *     angle within 0.35 rad of the pose on every riding tick >= 0.5 s after the last over-demand tick (R7: 1.0 s);
@@ -25,6 +25,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { decodeJSON, expandFrames, quantizeInput, type InputRecording } from '../../core/replay';
+import { ROCKHOP_ALL } from '../../tracks/rockhop';
 import { createSimFor } from '../../../harness/lib/sim';
 import { makeRiderRigPose, riderRigFromCOM, RIDER_TORSO_REST } from '../../core/riderGeometry';
 import { createBikePhysicsV2 as createBikePhysics, NSCALAR, type BikePhysicsWorldV2 } from './bike';
@@ -36,8 +37,6 @@ const HZ = 120;
 const DT = 1 / HZ;
 const G = 9.81;
 const INPUTS = path.resolve(__dirname, '../../../harness/inputs');
-/** Ask 132: keep these historical recordings, but their tracks are no longer registered in the game. */
-const REMOVED_FREE_RIDES = new Set(['p-coast', 'p-alpine', 'p-quarry', 'p-snowline']);
 const BAND_PSI = 0.35;
 const BAND_COM = 0.15;
 const RECOVER_TICKS = 60;
@@ -62,15 +61,14 @@ function feel(name: string, value: number | string, band: string): void {
 
 function goldens(): { file: string; rec: InputRecording }[] {
   const out: { file: string; rec: InputRecording }[] = [];
-  for (const dir of fs.readdirSync(INPUTS, { withFileTypes: true })) {
-    if (!dir.isDirectory()) continue;
-    if (REMOVED_FREE_RIDES.has(dir.name)) continue;
+  // Exercise both classes on every shipped course; retired curriculum and labs are dev fixtures.
+  for (const track of ROCKHOP_ALL) {
     for (const name of ['bot-3.json', 'bot-3-pro.json']) {
-      const file = path.join(INPUTS, dir.name, name);
+      const file = path.join(INPUTS, track.id, name);
       if (!fs.existsSync(file)) continue;
       const rec = decodeJSON(fs.readFileSync(file, 'utf8'));
       if (rec.header.physics === 'v1') continue;
-      out.push({ file: `${dir.name}/${name}`, rec });
+      out.push({ file: `${track.id}/${name}`, rec });
     }
   }
   return out;
@@ -398,7 +396,7 @@ describe('R8: the hold envelope, the thrown rider and the brake brace', () => {
   it(
     `envelope on every riding tick of every golden (both classes): hips >= seatY - ${SLOP} m, hips x <= tankX + ${SLOP} m, leg / arm <= reach + ${SLOP} m; COM <= ${BAND_COM} m and psi <= ${BAND_PSI} rad on every riding tick >= ${RECOVER_TICKS} ticks after the last over-demand tick; no COM excursion > ${EXCURSION_M} m longer than ${EXCURSION_MAX_TICKS} ticks; every golden finishes`,
     async () => {
-      expect(all.length).toBeGreaterThanOrEqual(30);
+      expect(all.length).toBe(24);
       const rows: Row[] = [];
       for (const g of all) rows.push(await replay(g.rec, g.file));
       const allCom: number[] = [];

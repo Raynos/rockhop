@@ -1,0 +1,39 @@
+{
+  "track": "d2-conveyor",
+  "seed": 1,
+  "sourcePath": "/tmp/rockhop-pro-early-d2-conveyor-tail.candidate.json",
+  "rounds": [
+    {
+      "round": 1,
+      "before": {
+        "fault": {
+          "x": 485.85136330076017,
+          "tick": 4698,
+          "reason": "crash"
+        },
+        "maxX": 485.85136330076017,
+        "phase": "crashed",
+        "time": 39.15,
+        "hash": "587882f53381c30a",
+        "ticks": 4698
+      },
+      "after": {
+        "fault": null,
+        "maxX": 489.7957432101804,
+        "phase": "riding",
+        "time": 39.15,
+        "hash": "9bc88642dbe5da50"
+      },
+      "patch": "x445.9-tick4345-300-t1l0",
+      "tested": 575
+    }
+  ],
+  "outcome": {
+    "fault": null,
+    "maxX": 489.7957432101804,
+    "phase": "riding",
+    "time": 39.15,
+    "hash": "9bc88642dbe5da50",
+    "ticks": 4698
+  }
+}

@@ -355,7 +355,7 @@ describe('classes as parameter rows (R3 decision 2): rookie forgiving, pro raw',
     feel('class.rookie.sag', `${f(w.getState().wheels.rear.compression * 100, 1)} / ${f(w.getState().wheels.front.compression * 100, 1)}`, 'info: rear / front % at speed');
   });
 
-  it('pro (R6): full gas at lean 0 from a standstill lifts hard (25-40 deg) and rides the power wheelie down without looping (R3-R5 looped in 0.95 s: harness r11 lost every Pro first attempt at 4 m), +0.25 / +0.5 / +1 do not loop, lean -0.25 / -0.5 / -1 loop in < 1.5 s (the lean fade: leaning back is the rider taking over); 0 -> 16 < rookie at +0.5; top 21', () => {
+  it('pro (R6): full gas at lean 0 from a standstill lifts hard (25-40 deg) and rides the power wheelie down without looping (R3-R5 looped in 0.95 s: harness r11 lost every Pro first attempt at 4 m), +0.25 / +0.5 / +1 do not loop, lean -0.25 / -0.5 / -1 loop in < 1.5 s (the lean fade: leaning back is the rider taking over); 0 -> 16 < rookie at +0.5; top 23', () => {
     const rows = [1, 0.5, 0.25, 0, -0.25, -0.5, -1].map((l) => ({ l, r: launch('pro', l) }));
     feel('class.pro.launch', rows.map(({ l, r }) => `${l}:${Number.isNaN(r.loopT) ? f(r.maxPitch, 1) + 'deg' : 'loop ' + f(r.loopT, 2) + 's'}`).join(' '), 'lean: max pitch or loop time');
     const at = (l: number) => rows.find((x) => x.l === l)!.r;
@@ -375,8 +375,8 @@ describe('classes as parameter rows (R3 decision 2): rookie forgiving, pro raw',
     const w = flatWorld('pro');
     let top = 0;
     stepN(w, { throttle: 1, lean: 0.5 }, HZ * 20, (st) => (top = Math.max(top, st.bike.vel.x)));
-    feel('class.pro.top', top, '21 +- 0.5');
-    expect(Math.abs(top - 21)).toBeLessThan(0.5);
+    feel('class.pro.top', top, '23 +- 0.5');
+    expect(Math.abs(top - 23)).toBeLessThan(0.5);
   });
 
   it('both classes: coasting balance by lean, air control in 0.5 s at 8 m/s (rookie in the 25-40 band; pro has less attitude assist, K_att 260), open-loop divergence 1-2 s', () => {
