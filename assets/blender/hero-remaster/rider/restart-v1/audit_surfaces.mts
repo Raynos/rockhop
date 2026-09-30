@@ -77,8 +77,11 @@ for(const lod of [false,true]){
    const socket=frame.getObjectByName(THREE.PropertyBinding.sanitizeNodeName(`${r.name==='wrist'?'gripSocket':'soleSocket'}.${r.side}`));
    const socketPoint=socket?.getWorldPosition(new THREE.Vector3());
    const nearestSurface=socketPoint&&(r.name==='wrist'||r.name==='ankle')?Math.min(...r.faces.map(es=>{const[p,q,t]=es.map(world);return new THREE.Triangle(p!,q!,t!).closestPointToPoint(socketPoint,new THREE.Vector3()).distanceTo(socketPoint)})):null;
+   const closestSurface=socketPoint&&(r.name==='wrist'||r.name==='ankle')?r.faces.map(es=>{const[p,q,t]=es.map(world);const point=new THREE.Triangle(p!,q!,t!).closestPointToPoint(socketPoint,new THREE.Vector3());return{point,distance:point.distanceTo(socketPoint)}}).sort((a,b)=>a.distance-b.distance)[0]:null;
+   const ownBone=bones.find(b=>boneName(b.name)===`${r.bone}.${r.side}`)!;
+   const surfaceOffsetInBone=closestSurface&&socketPoint?new THREE.Vector3().subVectors(socketPoint,closestSurface.point).applyMatrix3(new THREE.Matrix3().setFromMatrix4(ownBone.matrixWorld).invert()).toArray():null;
    const contactDistance=socket&&(r.name==='wrist'||r.name==='ankle')?Math.min(...r.endpoints.map(e=>world(e).distanceTo(socket.getWorldPosition(new THREE.Vector3())))):null;
-   return{side:r.side,region:r.name,pairs:r.pairs.length,maxLocalPositionDifferenceMetres:maxPositionDrift,maxRawWeightL1,maxWorldGapMetres:maxGap,selectedTriangles:r.faces.length,collapsedTriangles,minAreaSquareMetres:minArea,nearestVertexToSocketMetres:contactDistance,nearestTriangleSurfaceToSocketMetres:nearestSurface};
+   return{side:r.side,region:r.name,pairs:r.pairs.length,maxLocalPositionDifferenceMetres:maxPositionDrift,maxRawWeightL1,maxWorldGapMetres:maxGap,selectedTriangles:r.faces.length,collapsedTriangles,minAreaSquareMetres:minArea,nearestVertexToSocketMetres:contactDistance,nearestTriangleSurfaceToSocketMetres:nearestSurface,surfaceOffsetToContactInBoneMetres:surfaceOffsetInBone};
   })});
  }
  reports.push({tier:lod?'lod':'full',file,sha256:sha,regions:regions.map(({endpoints,pairs,faces,...r})=>({...r,selectedVertices:endpoints.length,selectedTriangles:faces.length,vertexPairs:pairs.length})),poses:rows});rider.dispose();

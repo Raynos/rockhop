@@ -1,0 +1,62 @@
+{
+  "status": "UNACCEPTED frozen complete v2 fit; parent moving review required",
+  "sourceRecipeSHA256": "ff17ffe476348e1583617a3634bf64839f873074a4feba4c6aa3e3be394004a4",
+  "rebuild": "assets/blender/hero-remaster/rider/restart-v1/rebuild_v2.sh",
+  "repeatedPackedSHA256": {
+    "full": "89935b89694861b138c3f51abb6294b32749e1ed1b696249652239735a1cd629",
+    "lod": "045c06a39691431badc0c3b5a5a94d63942c7949d7bad8a96581b062e8d41847"
+  },
+  "originalRigRevision": "ec04192d61e39dcc8bdb80fd97842e8019ef4e55",
+  "freshBase": {
+    "sourceMeshSHA256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "freshAdultMacroRecipe": "probe_fresh_base.py",
+    "retainedBodySourceVertexIDs": [
+      0,
+      13379
+    ],
+    "oldHeroMeshRetained": false
+  },
+  "nativeEyes": {
+    "license": "CC0 official MakeHuman system asset pack; explicit MHClO/MHMat declarations",
+    "packSHA256": "b542127a8e25547c7c29c19f2d1d2adb9a664c80396ecd694095dbc8028a0107",
+    "fitMethod": "MPFB HumanService.add_mhclo_asset to the fresh adult base using original native helper correspondence before MASK evaluation; preserve native eye UVs, collapse into runtime head bone",
+    "fittedVertices": 96,
+    "sourceFiles": [
+      {
+        "file": "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/low-poly/low-poly.mhclo",
+        "sha256": "68582e28e9176cba7cfcf35208f671b6201b8d1bc95c32decff61a3160ec34d8",
+        "bytes": 1344
+      },
+      {
+        "file": "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/low-poly/low-poly.obj",
+        "sha256": "783fe1e6331162c876520b4c2bed7a8ca06354ca15497e8ebd68bb1b59f4d3de",
+        "bytes": 6604
+      },
+      {
+        "file": "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/materials/brown.mhmat",
+        "sha256": "4abad93ce50541c08127721e77bce035640c9f16bed16cd0f5524b1cd5908465",
+        "bytes": 1247
+      },
+      {
+        "file": "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/materials/brown_eye.png",
+        "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+        "bytes": 610817
+      }
+    ],
+    "maxTexture": 1024,
+    "renderAlpha": "opaque; no source transparent blend/alpha-to-coverage carried into runtime"
+  },
+  "fitChanges": [
+    "Native torso topology projected to deliberately quiet cloth cross sections, upper-arm inflation reduced",
+    "Fresh hand longitudinal fit and measured inward/back bind-frame translation around actual bar socket",
+    "New opaque scalp shell and irregular curl masses fit fresh scalp coordinates",
+    "Official native eye geometry/UV/brown map replaces independently guessed eyes"
+  ],
+  "retainedLimits": [
+    "No authored cotton/denim UV/PBR bake yet",
+    "Nearest palm surface passes the distance proxy; actual finger enclosure is a parent moving-review decision",
+    "Garment shape, hair, face, shoe/ankle transition and whole resemblance remain unaccepted",
+    "LOD retains one 1024 eye texture and is 351392 bytes larger than V6; author tier texture after UV/screen-size audit",
+    "No physical iPhone or stranger bar claimed"
+  ]
+}
