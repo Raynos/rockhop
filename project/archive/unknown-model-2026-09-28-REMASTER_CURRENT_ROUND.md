@@ -1,4 +1,6 @@
 <!-- Naming: model author unknown; date is first Git introduction, not last update. -->
+**Retired: 2026-09-30 · provenance `f2dd04ab`.** This dated session checklist is superseded by the [active twelve-course remaster](../../docs/plans/unknown-model-2026-09-29-TWELVE_COURSE_REMASTER.md) and [finish-to-publish plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). Its old requirement that both bikes clear all twelve courses is obsolete: Rookie serves levels 1–8 and purchased Pro is required for levels 9–12. Retirement does not certify any unfinished game or store gate.
+
 # Current remaster round — 2026-09-29
 
 **Scope:** one short index of every live thread from this session. The [active finish-to-publish plan](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) orders the remaining release gates; the [ranked top 20](unknown-model-2026-09-27-GAME_REMASTER_TOP20.md) is the whole-game audit; the [campaign brief](unknown-model-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md) specifies the 12-course and Diamond-route design. All work stays on `main` in the single checkout; pushes run release gates and hourly/manual checked runs deploy the latest main, so each round must be independently qualified before push.

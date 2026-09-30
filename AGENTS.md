@@ -13,7 +13,7 @@
 - Never announce completion while budget remains.
 - This game should be playable on mobile iOS safari & desktop.
 - Favor subagents over workflows where possible, as subagents are resumable.
-- Plans and their status live in `docs/plans/README.md` (kept current by the parent at every commit); release authority: `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`; active course work: `docs/plans/TWELVE_COURSE_REMASTER.md`; physics library is parked in `docs/plans/unknown-model-2026-09-15-USE_A_REAL_PHYSICS_LIBRARY.md`; closed plans, including `WORLD_MAP.md` and `HERO_ART_INTEGRATION.md`, are in `project/archive/`. The hero art recipe is `assets/blender/hero-art/` (delivery + ignored masters), its handoff record `docs/evidence/hero-art/delivery/`.
+- Plans and their status live in `docs/plans/README.md` (kept current by the parent at every commit); release authority: `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`; active course work: `docs/plans/unknown-model-2026-09-29-TWELVE_COURSE_REMASTER.md`; physics library is parked in `docs/plans/unknown-model-2026-09-15-USE_A_REAL_PHYSICS_LIBRARY.md`; closed plans, including `WORLD_MAP.md` and `HERO_ART_INTEGRATION.md`, are in `project/archive/`. The hero art recipe is `assets/blender/hero-art/` (delivery + ignored masters), its handoff record `docs/evidence/hero-art/delivery/`.
 - Plans use `MODEL-YYYY-MM-DD-NAME.md` (creation date; `unknown-model` when provenance is unavailable); the index records any active-writer rename deferral.
 - Completed plans and permanently stale docs are archived under `project/archive/` (rules in its README); status docs never move.
 - `docs/mission.md` holds the bars no plan can close; plans carry measurable proxies and may cite a mission line as their bar.

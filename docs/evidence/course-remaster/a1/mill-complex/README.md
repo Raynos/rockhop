@@ -8,4 +8,4 @@ The silent [before](before/full/clip.mp4) and [after](after/full/clip.mp4) full 
 
 The new model merges into the existing `plaque` scenery batch, without an extra draw call or a collider change. It is gated to `a1-sawdust`. A short [headless SwiftShader inventory](after/perf-a1.json) at 852×392, low tier reports 108 draw calls, 288,565 triangles and 48.3 MiB estimated textures, below the shared static budgets; its slow software-raster timing is not an iPhone performance claim. The full-course ride is exact, but fresh human fault comprehension and physical-device pacing remain open.
 
-This is one step toward the [A1 course brief](../../../../plans/TWELVE_COURSE_REMASTER.md), not a completed course. The gate timing, flume, model materials and complete course arc still require a moving review and uncoached landscape players.
+This is one step toward the [A1 course brief](../../../../plans/unknown-model-2026-09-29-TWELVE_COURSE_REMASTER.md), not a completed course. The gate timing, flume, model materials and complete course arc still require a moving review and uncoached landscape players.
