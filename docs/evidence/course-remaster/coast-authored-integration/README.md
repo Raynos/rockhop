@@ -26,8 +26,8 @@ matched full/fault capture with an identical rider pair before deciding on
 whole-course graphics or promoting this prototype.
 
 The application/harness typecheck, repository lint, six ownership tests,
-seven grounding tests and nine isolated harbor-loader tests pass. The normal
-production build excludes this unfinished integration; source and the exact
+seven grounding tests and nine isolated harbor-loader tests pass. At the original checkpoint the normal
+production build excluded this unfinished integration; source and the exact
 five asset inputs are retained under
 [the prototype](../../../../prototypes/coast-authored-integration-v1/README.md).
 Full frame pacing, missing-resource browser fallbacks, late course switches,
@@ -106,3 +106,18 @@ with authored materials and course-specific service details. Judge another
 whole ride and both fault windows before propagating to C2/C3. Human first-win
 attempts, voluntary replay, audible mix and physical landscape iPhone/Android
 pacing remain required. No course is signed off: **0/12**.
+
+## Causeway fault/retry follow-up
+
+The [matched recorded causeway failure](v2-causeway/comparison.json) now covers
+the other C1 retry window on the same frozen model/resource bank: 55 frames
+per phase, exact input SHA, no finish and identical hash `60b50763097b18a8`.
+Both camera checks pass. The parent retains the harbor background here: the
+steps, tire contact, bail and release-lean-back correction remain visible.
+
+![Original / selected V2 causeway fault and retry](played-causeway-before-after.mp4)
+
+A [fresh main-player-source build](v2-causeway/main-build.json) also passes the
+required [14/14 partial round gate](v2-causeway/round-gate.json), with player
+gzip 697.51 KiB under the unchanged cap. This follow-up adds played coverage,
+not art/device/course sign-off or a full ship verdict.

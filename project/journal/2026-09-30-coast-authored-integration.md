@@ -17,3 +17,16 @@ fronts, ground/shore materials, water finish, audible mix, fresh uncoached
 learning and physical-device pacing remain open. Cached cold boot is still
 12.5 seconds on the host. Whole-repository lint has concurrent hero-authoring
 diagnostics; only owned-source lint passes. No deployment or ship verdict.
+
+## Causeway fault/retry follow-up
+
+Finding: The authored harbor preserves the other C1 correction/retry view;
+the causeway steps and release-lean-back message remain readable in motion.
+
+Validation: Two matched frozen captures have 55 frames, the same input SHA
+and exact hash `60b50763097b18a8`; both camera checks pass. A fresh
+main-player-source build passes the required 14/14 partial round gate.
+[Film and gate](../../docs/evidence/course-remaster/coast-authored-integration/README.md#causeway-faultretry-follow-up).
+
+Limits: Host gameplay coverage only; no physics edit, full release verdict
+or additional human/device/course acceptance.
