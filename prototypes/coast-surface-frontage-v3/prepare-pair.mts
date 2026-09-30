@@ -61,6 +61,8 @@ const worldmapBefore = inventory(path.join(repo,'assets/worldmap'));
 const harnessLibBefore = inventory(path.join(repo,'harness/lib'));
 const harnessTypeFile = 'harness/gate/device-rows.ts';
 const harnessTypeSHA = sha(fs.readFileSync(path.join(repo,harnessTypeFile)));
+const alpineTestFixture = 'assets/blender/course-kits/alpine-trees/rollout-fixture.ts';
+const alpineTestFixtureSHA = sha(fs.readFileSync(path.join(repo,alpineTestFixture)));
 const configFiles = ['index.html','vite.config.ts','package.json','tsconfig.json','vitest.config.ts'];
 const configBefore = Object.fromEntries(configFiles.map(file => [file,sha(fs.readFileSync(path.join(repo,file)))]));
 const head = execFileSync('git',['rev-parse','HEAD'],{cwd:repo,encoding:'utf8'}).trim();
@@ -72,11 +74,14 @@ copy(path.join(repo,'assets/worldmap'),path.join(frozen,'assets/worldmap'));
 copy(path.join(repo,'harness/lib'),path.join(frozen,'harness/lib'));
 fs.mkdirSync(path.join(frozen,'harness/gate'),{recursive:true});
 fs.copyFileSync(path.join(repo,harnessTypeFile),path.join(frozen,harnessTypeFile));
+fs.mkdirSync(path.dirname(path.join(frozen,alpineTestFixture)),{recursive:true});
+fs.copyFileSync(path.join(repo,alpineTestFixture),path.join(frozen,alpineTestFixture));
 for (const file of configFiles) fs.copyFileSync(path.join(repo,file),path.join(frozen,file));
 if (!same(sourceBefore,inventory(path.join(repo,'src'))) || !same(publicBefore,inventory(path.join(repo,'public'))) ||
     !same(worldmapBefore,inventory(path.join(repo,'assets/worldmap'))) ||
     !same(harnessLibBefore,inventory(path.join(repo,'harness/lib'))) ||
     harnessTypeSHA!==sha(fs.readFileSync(path.join(repo,harnessTypeFile))) ||
+    alpineTestFixtureSHA!==sha(fs.readFileSync(path.join(repo,alpineTestFixture))) ||
     !same(configBefore,Object.fromEntries(configFiles.map(file => [file,sha(fs.readFileSync(path.join(repo,file)))]))))
   throw new Error('Live source/public changed during freeze; discard this output and prepare again');
 
@@ -115,6 +120,7 @@ const provenance = {
   sourceInventorySHA256:sha(JSON.stringify(sourceBefore)),
   harnessLibraryInventorySHA256:sha(JSON.stringify(harnessLibBefore)),
   harnessTypeSHA256:harnessTypeSHA,
+  alpineTestFixtureSHA256:alpineTestFixtureSHA,
   publicInventorySHA256:sha(JSON.stringify(publicBefore)),
   worldmapInventorySHA256:sha(JSON.stringify(worldmapBefore)),
   frozenBankInventorySHA256:sha(JSON.stringify(bank)),

@@ -1,0 +1,31 @@
+diff --git a/src/render/world/zones/coastHarbor.ts b/src/render/world/zones/coastHarbor.ts
+--- a/src/render/world/zones/coastHarbor.ts
++++ b/src/render/world/zones/coastHarbor.ts
+@@ -13 +13 @@
+-  'loading-pier', 'open-warehouse', 'logistics-yard', 'dock-station'] as const;
++  'loading-pier', 'open-warehouse', 'brick-repair-shed', 'sawtooth-maintenance-hall', 'logistics-yard', 'dock-station'] as const;
+@@ -30,2 +30,3 @@
+-export const COAST_HARBOR_MAPS = ['coast-albedo.phone.webp', 'coast-normal.phone.webp', 'coast-arm.phone.webp'] as const;
+-const PREFIX = 'models/course-kits/coast-harbor/';
++export const COAST_HARBOR_MAPS = ['coast-albedo.phone.webp', 'coast-normal.phone.webp', 'coast-arm.phone.webp',
++  'frontage-albedo.phone.webp', 'frontage-normal.phone.webp', 'frontage-arm.phone.webp'] as const;
++const PREFIX = 'models/course-kits/coast-frontage/';
+@@ -62,2 +63,3 @@
+-  for (const [x,scale] of [[32,.64],[109,.68],[282,.62],[370,.68],[450,.60]] as const)
+-    add('open-warehouse',x,-9.8,scale);
++  for (const [x,scale,variant] of [[32,.64,'brick-repair-shed'],[109,.68,'sawtooth-maintenance-hall'],
++    [282,.62,'open-warehouse'],[370,.68,'brick-repair-shed'],[450,.60,'sawtooth-maintenance-hall']] as const)
++    add(variant,x,-9.8,scale);
+@@ -121 +123 @@
+-    const logical = PREFIX + (options.detail === 'full' ? 'coast-harbor.glb' : 'coast-harbor-lod.glb');
++    const logical = PREFIX + (options.detail === 'full' ? 'coast-frontage.glb' : 'coast-frontage-lod.glb');
+@@ -137 +139,2 @@
+-        if (material.name === 'coast manufactured PBR atlas' && (!material.map || !material.normalMap || !material.roughnessMap || !material.metalnessMap))
++        if ((material.name === 'coast manufactured PBR atlas' || material.name === 'frontage brick/steel PBR atlas')
++          && (!material.map || !material.normalMap || !material.roughnessMap || !material.metalnessMap))
+diff --git a/src/render/world/zones/coastHarborSite.ts b/src/render/world/zones/coastHarborSite.ts
+--- a/src/render/world/zones/coastHarborSite.ts
++++ b/src/render/world/zones/coastHarborSite.ts
+@@ -13,0 +14,2 @@
++  'brick-repair-shed': [-14.15, 14.15, -6.6, 7.56],
++  'sawtooth-maintenance-hall': [-14.15, 14.15, -6.6, 7.56],
