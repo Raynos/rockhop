@@ -5,7 +5,7 @@ Produces only a material image and measurements. No mesh is imported or edited.
 import bpy,sys,argparse,json,math
 from pathlib import Path
 import numpy as np
-ap=argparse.ArgumentParser();ap.add_argument('--geometry',required=True);ap.add_argument('--image',required=True);ap.add_argument('--out',required=True);a=ap.parse_args(sys.argv[sys.argv.index('--')+1:])
+ap=argparse.ArgumentParser();ap.add_argument('--geometry',required=True);ap.add_argument('--image',required=True);ap.add_argument('--out',required=True);ap.add_argument('--material-split',action='store_true');ap.add_argument('--target');a=ap.parse_args(sys.argv[sys.argv.index('--')+1:])
 g=json.loads(Path(a.geometry).read_text());img=bpy.data.images.load(str(Path(a.image).resolve()),check_existing=False);img.colorspace_settings.name='Non-Color';w,h=img.size
 pixels=np.empty(w*h*4,np.float32);img.pixels.foreach_get(pixels);pixels=pixels.reshape(h,w,4);original=pixels.copy()
 positions=np.asarray(g['positions']);uv=np.asarray(g['uv']);tri=np.asarray(g['triangles']);forearm=np.asarray(g['forearmWeight']);head=np.asarray(g['headDominant'])
@@ -24,11 +24,18 @@ referenceTone=np.median(np.asarray(ref_samples),axis=0)
 headSamples=sample(uv[head]);headSamples=headSamples[skin_colour(headSamples)];sourceHeadTone=np.median(headSamples,axis=0)
 # Remove photographic directional shading from the finish: a bounded clean
 # neutral warm albedo, biased toward the existing head so wrists share its hue.
-target=np.clip(sourceHeadTone*.65+referenceTone*.35,[.60,.43,.32],[.80,.65,.55])
+target=np.asarray([float(c) for c in a.target.split(',')]) if a.target else np.clip(sourceHeadTone*.65+referenceTone*.35,[.60,.43,.32],[.80,.65,.55])
 # Geometric bounds cover exposed forearms and the sleeve transition; a per-
 # texel skin classifier protects the mustard fabric within those UV triangles.
 centres=positions[tri].mean(axis=1);weights=forearm[tri].mean(axis=1)
 candidate=(weights>.65)&(centres[:,0]>.83)&(centres[:,1]>.86)&(centres[:,1]<1.11)&(np.abs(centres[:,2])>.27)
+barycentric=np.asarray([[1/3,1/3,1/3],[.6,.2,.2],[.2,.6,.2],[.2,.2,.6],[.45,.45,.1],[.45,.1,.45],[.1,.45,.45]])
+faceUV=np.einsum('sj,tjd->tsd',barycentric,uv[tri]);faceColours=sample(faceUV.reshape(-1,2)).reshape(len(tri),7,3);skinScore=np.mean(skin_colour(faceColours),axis=1)
+selectedFaces=candidate&(skinScore>=4/7)
+forced=np.asarray(g['forceSkinTriangles'],dtype=int);selectedFaces[forced]=True
+if a.material_split:
+ report={'method':'Offline Blender material selection from geometric forearm region and seven UV albedo samples per face; every actual V6 wrist cut-edge triangle is included. No texture pixel is changed; reused/shared UVs cannot alias the skin material onto clothing.','candidateForearmTriangles':int(np.count_nonzero(candidate)),'selectedSkinTriangles':int(np.count_nonzero(selectedFaces)),'forcedWristCutTriangles':len(forced),'forcedTrianglesBelowSkinThreshold':int(np.count_nonzero(skinScore[forced]<4/7)),'selectedFaceIndices':np.flatnonzero(selectedFaces).tolist(),'targetSRGB':target.tolist(),'targetLinear':[float(c/12.92 if c<=.04045 else ((c+.055)/1.055)**2.4) for c in target],'sourceHeadMedianSRGB':sourceHeadTone.tolist(),'referenceForearmMedianSRGB':referenceTone.tolist(),'skinRoughness':.72,'sourceImageDimensions':[w,h],'imagePixelsChanged':0,'uvAliasChanges':0,'selectionSource':'Existing packed V6 positions, normalized bone weights, retained original body albedo and exact wrist correspondence map.'}
+ Path(a.out+'.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k!='selectedFaceIndices'}));sys.exit(0)
 selected=np.zeros((h,w),bool);unrelated=np.zeros((h,w),bool)
 def raster(ids,dest):
  for ids0 in ids:
