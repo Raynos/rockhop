@@ -26,6 +26,8 @@
 
 **Authored Alpine forest delivery:** The [A1 botanical forest](../evidence/course-remaster/alpine-tree-kit/README.md) replaces all 276 audited cone-tree anchors with ten shared variants. Matched full/fault/restart motion gives a bounded art gain; missing maps retain the original forest and late course loads retire safely. The extended offline suite passes 11/11, including both authored scenes and the exact first-eight-course Pro purchase; the third-round host Metal partial gate passes 14/14. Terrain/lake/mill refinement, A2/A3 rollout and physical-device gates remain open. Courses stay **0/12**.
 
+**Whole Coast candidate finding:** The [first complete C1 scene replacement](../evidence/course-remaster/coast-standard/README.md) preserves replay/camera checks but fails moving art review: sparse ocean, generic freight/warehouses and tiled foreground. Production hooks are restored. The next pass authors a detailed Blender harbor family and coherent near/mid/far composition before C2/C3 rollout; no course credit.
+
 **In-ride performance readout:** A small tappable FPS/frame-time pill on every course opens the detailed debug panel. The [silent landscape phone and desktop interaction gate](../../harness/e2e/perf-panel.mts) passed; software-renderer numbers are not physical-device performance evidence.
 
 **Remaster progress (ask 199):** Full-plan effort is estimated at **20–25%**, graphics effort at **5–10%**, and fully signed-off courses remain **0/12**. These planning estimates separate implemented foundations from course acceptance. The [four before/after boards](../evidence/course-remaster/progress-board-2026-09-30/README.md) cover all twelve using archived played captures; differing render tiers and unchanged art are labelled.
@@ -383,8 +385,6 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Latest visual revision (asks 78–80):** two short Evolution-inspired Labs and a standing forward candidate are available for review. User rejected the previous forward pose; backward is retained. The new candidate passes the two Labs replays but causes hop/climb/recovery regressions (10 full-suite failures), so prior qualification does not apply. See [review checkpoint](../evidence/labs-evolution/README.md). Not release-ready.
 
-**Whole Coast candidate finding:** The [first complete C1 scene replacement](../evidence/course-remaster/coast-standard/README.md) preserves replay/camera checks but fails moving art review: sparse ocean, generic freight/warehouses and tiled foreground. Production hooks are restored. The next pass authors a detailed Blender harbor family and coherent near/mid/far composition before C2/C3 rollout; no course credit.
-
 **Alpine rollout proposal:** [A2/A3 seeded inventory and scene draft](../evidence/course-remaster/alpine-tree-kit/alpine-scene-standard-proposal.md) preserve every audited anchor and protected riding window. Nine-cluster bounds are construction estimates. A1 material refinement and played A2/A3 integration remain next; the proposal has no runtime hook or new public assets.
 
 **Snowline source candidate:** [Authored glacier/lift/snowcat/station/beacon family](../evidence/course-remaster/snowline-standard/README.md) has a reproducible Blender recipe, exact decoder geometry report and five focused contact tests. It remains unimported, with exports outside public models. Whole-ride graphics, browser textures and phone budgets are open; 0/3 Snowline signoffs.
@@ -394,3 +394,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **R3 CPU finding:** [The exact p50 gate remains red](../evidence/course-remaster/pro-envelope/cpu/README.md), with its five-microsecond threshold and Rookie arithmetic unchanged. The title correction, bounded warmed probe, profile and host snapshots document the finding; host contention is not established as the sole cause.
 
 **Snowline verifier finding:** Combined-tree lint caught a missing sort comparator; its explicit UTF-16 comparator preserves the exact saved decoder report. Full typecheck, lint and thirteen focused Snowline/Garage tests pass. The candidate remains unintegrated.
+
+**Main cleanup (ask 208):** [Ten coherent commits](../evidence/git-cleanup-2026-09-30/README.md) retain all outstanding audio, hero and course work with candidate status explicit. Full typecheck/lint/build and thirteen focused tests pass; the second required Metal partial gate passes 14/14 after retaining the initial timing misses. CPU, physical-device and full-course gates remain open; 0/12 accepted courses.

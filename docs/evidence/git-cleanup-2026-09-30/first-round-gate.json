@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "kind": "gate-partial",
-  "runId": "20260930-055903-579737",
-  "startedAt": "2026-09-30T10:59:03.223Z",
-  "wallMs": 7646,
-  "git": "8e052083",
+  "runId": "20260930-055546-4b467e",
+  "startedAt": "2026-09-30T10:55:46.948Z",
+  "wallMs": 12897,
+  "git": "659a3999",
   "srcFingerprint": "fd8fe7c2",
   "node": "v24.18.1",
   "chromium": "151.0.7922.34",
@@ -19,15 +19,15 @@
   "checks": [
     {
       "id": "boot.readyP50Ms",
-      "value": 138.0704999999998,
+      "value": 329.9360830000005,
       "limit": 300,
-      "pass": true,
+      "pass": false,
       "unit": "ms",
-      "note": "runs 144/138/121 min 121 loadavg 3.26/18"
+      "note": "runs 203/366/330 min 203 loadavg 5.6/18"
     },
     {
       "id": "boot.firstFrameMs",
-      "value": 502.70499992370605,
+      "value": 819.5999999046326,
       "limit": 900,
       "pass": true,
       "unit": "ms",
@@ -93,16 +93,16 @@
     },
     {
       "id": "restart.wallMsP95",
-      "value": 0.19500017166137695,
+      "value": 0.309999942779541,
       "limit": 5,
       "pass": true,
       "unit": "ms"
     },
     {
       "id": "restart.frameMsP95",
-      "value": 31.55500030517578,
+      "value": 38.77500009536743,
       "limit": 33,
-      "pass": true,
+      "pass": false,
       "unit": "ms",
       "note": "restart -> synced frame"
     },
@@ -116,12 +116,12 @@
     },
     {
       "id": "bundle.jsGzipKB",
-      "value": 691.16796875,
+      "value": 691.16015625,
       "limit": 700,
       "pass": true,
       "unit": "KB",
-      "note": "player JS (excluding dev and fatal-error telemetry phases); outside player budget: audio-offline-BU21mjaQ.js, legacy-physics-BaJt9gS0.js, retired-VZE1vyY-.js, sentry-errors-DZ1jjk5-.js 213.9 KB gz; dist 44021 KB raw"
+      "note": "player JS (excluding dev and fatal-error telemetry phases); outside player budget: audio-offline-CN5NUJ8H.js, legacy-physics-FzJewpbZ.js, retired-BmqSgaOR.js, sentry-errors-DZ1jjk5-.js 213.9 KB gz; dist 44021 KB raw"
     }
   ],
-  "failed": 0
+  "failed": 2
 }
