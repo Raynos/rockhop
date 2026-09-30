@@ -1,0 +1,128 @@
+{
+  "before": "assets/blender/hero-remaster/rider/candidate-v5-lod.glb",
+  "beforeSHA256": "b696cda1f89a41ed3975516513ad295e1cf9c4a641337ae92cfb11d23951c12b",
+  "after": "assets/blender/hero-remaster/rider/candidate-v6-lod.glb",
+  "afterSHA256": "3f2977797331078df93e41774e097868116ce826ac7eb46a805c77e1172d6482",
+  "method": "Bidirectional vertex-to-triangle nearest-surface distances in exact raw glTF rest coordinates; bounded approximation proxy, not a moving visual acceptance claim.",
+  "headRegion": "Vertices whose largest skin influence is the head bone, covering the generated face/jaw/crown, excluding separate preserved authored strands.",
+  "bodyTrianglesBefore": 6299,
+  "bodyTrianglesAfter": 5948,
+  "regions": {
+    "wholeBody": {
+      "beforeBounds": {
+        "minimum": [
+          0.2551584541797638,
+          0.1087033748626709,
+          -0.49157387018203735
+        ],
+        "maximum": [
+          0.9955213665962219,
+          1.4992398023605347,
+          0.48947927355766296
+        ]
+      },
+      "afterBounds": {
+        "minimum": [
+          0.25322726368904114,
+          0.10870317369699478,
+          -0.490904301404953
+        ],
+        "maximum": [
+          0.9957775473594666,
+          1.4992398023605347,
+          0.48835960030555725
+        ]
+      },
+      "beforeToAfter": {
+        "samples": 5826,
+        "medianMetres": 0.0006535975262522697,
+        "p95Metres": 0.05748623609542847,
+        "maxMetres": 0.12178047001361847
+      },
+      "afterToBefore": {
+        "samples": 4688,
+        "medianMetres": 0.0007728819618932903,
+        "p95Metres": 0.0032417848706245422,
+        "maxMetres": 0.018413236364722252
+      }
+    },
+    "bodyOutsideWrists": {
+      "beforeBounds": {
+        "minimum": [
+          0.2551584541797638,
+          0.1087033748626709,
+          -0.49157387018203735
+        ],
+        "maximum": [
+          0.9955213665962219,
+          1.4992398023605347,
+          0.48947927355766296
+        ]
+      },
+      "afterBounds": {
+        "minimum": [
+          0.25322726368904114,
+          0.10870317369699478,
+          -0.490904301404953
+        ],
+        "maximum": [
+          0.9943873882293701,
+          1.4992398023605347,
+          0.48835960030555725
+        ]
+      },
+      "beforeToAfter": {
+        "samples": 5023,
+        "medianMetres": 0.0005962686846032739,
+        "p95Metres": 0.0029941920656710863,
+        "maxMetres": 0.013261214829981327
+      },
+      "afterToBefore": {
+        "samples": 4221,
+        "medianMetres": 0.0007807480869814754,
+        "p95Metres": 0.0032858792692422867,
+        "maxMetres": 0.018413236364722252
+      }
+    },
+    "head": {
+      "beforeBounds": {
+        "minimum": [
+          0.7082751393318176,
+          1.2394014596939087,
+          -0.10287344455718994
+        ],
+        "maximum": [
+          0.9913449883460999,
+          1.4992398023605347,
+          0.11236795783042908
+        ]
+      },
+      "afterBounds": {
+        "minimum": [
+          0.7019815444946289,
+          1.242965817451477,
+          -0.09824736416339874
+        ],
+        "maximum": [
+          0.9913451075553894,
+          1.4992398023605347,
+          0.10967317223548889
+        ]
+      },
+      "beforeToAfter": {
+        "samples": 827,
+        "medianMetres": 0.0006295207422226667,
+        "p95Metres": 0.0036070337519049644,
+        "maxMetres": 0.013261214829981327
+      },
+      "afterToBefore": {
+        "samples": 800,
+        "medianMetres": 0.0008559425477869809,
+        "p95Metres": 0.004630645737051964,
+        "maxMetres": 0.010487043298780918
+      }
+    }
+  },
+  "authoredContactsAndHeadStrands": "byte-identical V5 LOD donor meshes; see clean-lod-source proof",
+  "scopeException": "Full-derived body simplified after skin-aware positional welding because original V5 LOD had no closed topological forearm-winding cycle."
+}

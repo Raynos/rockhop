@@ -90,3 +90,8 @@ reports are in the adjacent rider/bike/UniMate evidence directories.
 Tests: 38 targeted runtime checks, application+harness typecheck and owned-path
 lint pass. Physical iPhone, uncoached stranger, whole-family new art and final
 human visual acceptance remain open in the active plan.
+
+
+## V6 wrist repair supersedes the Street prototype
+
+Ask 211 exposed a visible defect missed by the V5 socket-only review: rest-coincident glove/forearm vertices split by up to 35 mm. [The V6 moving delivery](../wrists/delivery/README.md) replaces malformed ends with completely sewn full/LOD contours and promotes both Street files into the normal public model paths. Bike candidates remain private. The V5 wrist-continuity acceptance is withdrawn; V6 passes the stronger complete-ring, skinning and moving checks. Overall mockup resemblance, skin colour transitions and physical-device acceptance remain open.

@@ -10,9 +10,9 @@ Run from the repository root:
 ```sh
 pnpm exec tsx harness/hero-remaster/wrist-seams.mts \
   --full=assets/blender/hero-remaster/rider/candidate-v6-packed.glb \
-  --full-map=assets/blender/hero-remaster/rider/candidate-v6.glb.seams.json \
+  --full-map=assets/blender/hero-remaster/rider/candidate-v6-packed.glb.seams.json \
   --lod=assets/blender/hero-remaster/rider/candidate-v6-lod-packed.glb \
-  --lod-map=assets/blender/hero-remaster/rider/candidate-v6-lod.glb.seams.json
+  --lod-map=assets/blender/hero-remaster/rider/candidate-v6-lod-packed.glb.seams.json
 ```
 
 The harness independently checks every consecutive edge of all four explicit
@@ -21,12 +21,19 @@ and repair contour edge must have one incident triangle and opposite winding.
 All remaining internal repair edges must have two consistently wound faces;
 unmapped open repair edges and nonmanifold repair edges fail.
 
-The builder's raw vertex indices and recorded positions are checked first.
-For packed GLBs the harness independently reproduces the production
-`EXPONENTIAL/16/SharedVector` position filter. The decoded result must match
-exactly at every mapped index. Quantization drift from the raw model is
-reported separately from opposing-surface seam error, which must remain below
-one micrometre. The map is not accepted solely because vertices look nearby.
+The durable packed-map mode checks the actual target asset SHA against the
+committed correspondence map. Every mapped index must equal its recorded
+packed position exactly. The raw source and correspondence hashes remain
+provenance, explicitly marked as not independently reproduced in this mode.
+This lets the gate use shipped GLBs and committed maps without ignored masters.
+
+An explicit raw-map argument enables a second mode: the builder's raw indices
+and recorded positions are checked first, then the harness independently
+reproduces the production `EXPONENTIAL/16/SharedVector` position filter. The
+decoded result must match exactly at every mapped index. Quantization drift
+from the raw model is separate from opposing-surface seam error, which must
+remain below one micrometre. Neither mode accepts a map solely because its
+vertices look nearby.
 
 For each correspondence the harness compares raw and normalized skin weights
 by bone name. It also checks the full homogeneous linear skinning expression:
@@ -54,8 +61,15 @@ inconsistent internal edges and 86 inconsistently wound contour edges.
 The builder changed the zipper to coherent winding derived from the actual
 source edge directions. The subsequent probe exposed sixteen pre-existing
 zero-area glove triangles (ten left, six right), also present in the original
-production donor. Final results remain in `v6-seams.json`; no failure is
-silently relabelled a visual pass.
+production donor. The builder removed only those exact zero-area donor index triples, preserving
+all contact attributes and every nonzero donor face. Full V6 and the rebuilt LOD then passed the
+strict gate with zero seam error and zero collapsed wrist-region triangles in
+all seven cases each. Final results remain in `v6-seams.json`; no failure is silently
+relabelled a visual pass.
+
+Two metadata mutation probes in `v6-seams-negative.json` also fail as required:
+a wrong target SHA and an omitted contour vertex. Both leave the real asset
+unchanged and exit 1, even though the sampled world seam distances remain zero.
 
 Textures, GPU material appearance, self-intersections, silhouette quality,
 physics, physical iPhone behavior, and human acceptance require their own

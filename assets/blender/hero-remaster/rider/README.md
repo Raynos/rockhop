@@ -44,3 +44,45 @@ Reports, source hashes, measured neural timings and complete silent moving raw o
 The Hunyuan head/hair is softer than the image mockup; v5 is a modest local refinement, not a reconstruction of the mockup's face or curly hair. Its first coarse strand trial read as raised zigzags and was replaced by thinner smooth curves. The neural mitten fingers were replaced by authored gloves. TRELLIS has finer texture/hair detail but visible open flakes around hood/cuffs/pocket/shoes in its full moving orbit. No second seed was necessary to obtain a useful complete candidate. The garment fit is manually parameterized and still requires played maneuver/device review. Isolated head diagnostics inform the builder only; the parent judges the complete candidate in actual Garage and riding footage. No candidate is released or accepted here.
 
 Generator notices are adjacent in `licenses/`. Current component licensing and distribution scope follow the project/localai contracts; no checkpoint ships with the game.
+
+## V6 wrist surface repair
+
+Run `bash assets/blender/hero-remaster/rider/rebuild-wrists.sh` after the
+retained V5 raw masters exist. It checks their exact hashes, restores complete
+actual body/glove contour correspondence, and reproduces the two measured
+packed output hashes. It retains the same nineteen bones, four sockets,
+six authored clips and optional two-second UniMate neck idle.
+
+The full repair removes 1,396 malformed terminal forearm triangles, averages
+99 cut-boundary UV-duplicate weights, and inserts 385 coherently oriented
+anatomical triangles. Its body rings contain 42 left/39 right endpoints; each
+full glove cuff contains 88. Sixteen inherited exact-zero-area glove faces are
+removed by index only: every contact vertex attribute and nonzero face stays
+unchanged. Full V6 is 57,773 triangles, four draws and 1,442,236 bytes.
+
+The V5 phone body had 4,504 open geometric edges and no closed path winding
+around either forearm in the local band. A bridge alone could not certify that
+source. The parent authorized replacing its neural body with a reduction of
+the repaired full body. `rebuild_lod_body.py` welds only exactly equal positions
+and skin weights, preserves loop UVs and all 81 actual wrist endpoints, and
+reduces the body to 5,948 triangles. The V5 LOD authored contact mesh (1,600
+triangles), swept hair/brows (80 triangles), original atlas, rig and clips are
+retained byte-for-byte. Its actual curved cuff contours contain 66 left/62
+right endpoints; 209 new bridge triangles join them. LOD V6 is 7,837 triangles,
+four draws and 530,340 bytes.
+
+This necessary LOD replacement changes neural body/head simplification outside
+the wrist. Bidirectional rest-surface distances versus V5 LOD have roughly
+3.0–3.3 mm p95 outside wrists and 3.6–4.6 mm p95 at the generated head. Maximum
+changes reach 18.4 mm outside wrists and 13.3 mm at the head; these are measured
+approximation limits, not a visual acceptance claim. Exact original authored
+head strands, palms, fingers and shoes remain intact.
+
+`pack_wrists.mjs` publishes exact decoded packed-position seam maps alongside
+the GLBs, preserving raw-coordinate/hash provenance and vertex identities.
+The independent gate in `harness/hero-remaster/wrist-seams.mts` checks every
+closed contour, source/repair winding, nondegenerate surfaces and exact skin
+coefficients/world positions across seven runtime cases for both tiers.
+Source parity, budget, deviation and complete rebuild reports are under
+`docs/evidence/hero-remaster/rider-generation/v6-*.json`. Only the parent judges
+actual Garage and recorded riding footage and promotes the delivery.

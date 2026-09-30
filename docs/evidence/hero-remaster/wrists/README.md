@@ -1,5 +1,7 @@
 # Wrist surface diagnostic
 
+V6 update: [the repaired full/LOD Street rider is in the normal main model paths](delivery/README.md). Complete contour and skinning checks pass, with actual moving before/after and played rides. The measurements below retain the original V5 failure. The baseline runner now restores its original donor from pinned git revision `ec04192d61e39dcc8bdb80fd97842e8019ef4e55`, so promotion does not change the before measurement.
+
 Reproduce with `pnpm exec tsx harness/hero-remaster/wrists.mts`. This is a
 headless CPU geometry audit of immutable production original full/LOD and
 V5 full/LOD assets. Every source SHA is recorded. No browser, audio, asset or

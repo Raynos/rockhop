@@ -1,0 +1,34 @@
+{
+  "recipe": "assets/blender/hero-remaster/rider/rebuild-wrists.sh",
+  "blenderVersion": "5.2.1 LTS 9e2066aef7ef",
+  "validation": "Complete rebuild exited0 and reproduced both final packed SHA256 hashes; exact coordinate/weight weld reproduced the same LOD hash as the preliminary rounded-key recipe.",
+  "sources": {
+    "fullV5RawSHA256": "9745955fcaeee25a6c30a5b40f6d620a732fa9b7faf762d8efc26e44331b24e6",
+    "lodV5RawSHA256": "b696cda1f89a41ed3975516513ad295e1cf9c4a641337ae92cfb11d23951c12b"
+  },
+  "exports": [
+    {
+      "lod": false,
+      "sha256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61",
+      "bytes": 1442236,
+      "triangles": 57773,
+      "draws": 4,
+      "maxTexture": 2048,
+      "imageBytes": 395789,
+      "rigContractPassed": true,
+      "packedSeamMap": "assets/blender/hero-remaster/rider/candidate-v6-packed.glb.seams.json"
+    },
+    {
+      "lod": true,
+      "sha256": "def6821d99fe7d73442735f1010bdd7e68bd2057d6de25643d91e31429aad72a",
+      "bytes": 530340,
+      "triangles": 7837,
+      "draws": 4,
+      "maxTexture": 1024,
+      "imageBytes": 200540,
+      "rigContractPassed": true,
+      "packedSeamMap": "assets/blender/hero-remaster/rider/candidate-v6-lod-packed.glb.seams.json"
+    }
+  ],
+  "prerequisite": "Ignored V5 raw masters from rebuild.sh + rebuild-head.sh and same installed local UniMate idle donor; the wrapper hash-checks source and output identities."
+}

@@ -212,8 +212,8 @@ describe.skipIf(!RIDER)('Astra rider (race-bluewhite) through the game loader', 
   });
 });
 
-describe.skipIf(!STREET)('Astra street rider (mustard, stage-0 file) through prepareHero', () => {
-  it('merges the fourteen skinned parts down to one draw per material, keeps every triangle and leaves no physical / blended material', async () => {
+describe.skipIf(!STREET)('Delivered Street rider through prepareHero', () => {
+  it('keeps every triangle, respects material draw grouping and leaves no physical / blended material', async () => {
     const gltf = await loadRigAt(STREET!, true);
     const raw = countMeshes(gltf.scene);
     await prepareHero(gltf);
@@ -224,7 +224,9 @@ describe.skipIf(!STREET)('Astra street rider (mustard, stage-0 file) through pre
     expect(after.meshes).toBeLessThanOrEqual(raw.meshes); // the stage file arrives part-joined by the art build; what is left shares no material
     expect(after.meshes).toBeLessThanOrEqual(materials.size);
     expect(after.physical).toBe(0);
-    expect(raw.physical).toBeGreaterThan(0); // KHR_materials_specular on the skin / hair
+    // The remaster is already standard PBR; the legacy Race fixture above
+    // separately proves physical-material flattening. Preserve every draw here.
+    expect(raw.meshes).toBeGreaterThan(0);
     const rider = new GltfRider(gltf, lib);
     expect(rider.debug.bones).toBe(19);
     expect(rider.debug.clips).toContain('land_absorb');

@@ -72,14 +72,14 @@ export const MODEL_ASSETS = {
     "sha256": "0c14eb52f0aaed2622d7a67c5533a520bbbc96b67071fa32d711b82c00806663"
   },
   "models/rider-street-mustard-lod.glb": {
-    "url": "models/2a3c78a70e16ff1a/rider-street-mustard-lod-b1563f6eedbddb0a.glb",
-    "bytes": 1520840,
-    "sha256": "b1563f6eedbddb0af7b80765bcb66e21167a426e38234a1b3da07c08716e3518"
+    "url": "models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+    "bytes": 530340,
+    "sha256": "def6821d99fe7d73442735f1010bdd7e68bd2057d6de25643d91e31429aad72a"
   },
   "models/rider-street-mustard.glb": {
-    "url": "models/2a3c78a70e16ff1a/rider-street-mustard-11743d396b85b9e9.glb",
-    "bytes": 3363820,
-    "sha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c"
+    "url": "models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+    "bytes": 1442236,
+    "sha256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61"
   },
   "models/rider-street-openface-lod.glb": {
     "url": "models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",

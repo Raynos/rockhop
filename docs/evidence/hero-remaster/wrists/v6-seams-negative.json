@@ -1,0 +1,26 @@
+{
+  "method": "Mutation probes alter correspondence metadata only; actual GLB remains unchanged. Both commands returned exit 1. Positive full audit separately passes.",
+  "tests": [
+    {
+      "name": "wrong-sha",
+      "mutation": "Replace assetSHA256 with 64 zeroes",
+      "expectedProcessExitCode": 1,
+      "pass": false,
+      "failures": [
+        "full: packed map asset SHA mismatch"
+      ],
+      "targetAssetSHA256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61"
+    },
+    {
+      "name": "missing-contour-edge",
+      "mutation": "Delete orderedPairs[3] from the left body contour",
+      "expectedProcessExitCode": 1,
+      "pass": false,
+      "failures": [
+        "full/L/body: actual topology is not a closed sewn boundary",
+        "full: unmapped or nonmanifold repair edges"
+      ],
+      "targetAssetSHA256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61"
+    }
+  ]
+}

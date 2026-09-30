@@ -21,7 +21,12 @@ const dpr = Number(arg('dpr', '1'));
 const inspection = arg('inspection', 'after');
 assert(['before', 'after'].includes(inspection));
 fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
-const manifest = JSON.parse(fs.readFileSync(path.join(build, 'hero-review.json'), 'utf8'));
+const manifestFile = path.join(build, 'hero-review.json');
+const manifest = fs.existsSync(manifestFile)
+  ? JSON.parse(fs.readFileSync(manifestFile, 'utf8'))
+  : { kind: 'normal game build', mapping: Object.fromEntries(
+    ['models/rider-street-mustard.glb', 'models/rider-street-mustard-lod.glb'].map(logical => [logical, logical])),
+  models: JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json'), 'utf8')).models };
 const hash = (bytes: Buffer) => crypto.createHash('sha256').update(bytes).digest('hex');
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const url = server.resolvedUrls!.local[0];

@@ -1,6 +1,6 @@
 # Rider and motorbike remaster
 
-Status: **in progress — reviewed V5 source/exports merged on main; mockup-matching production next**.
+Status: **in progress — V6 Street wrist repair in normal main assets; remaining mockup-matching production open**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · ask 191.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gate 3 for presentation and Gate 4 for devices.
 Bar: [mission §3–4](../mission.md): a readable person on a mechanically credible motorbike, at phone frame rates.
@@ -93,7 +93,7 @@ The first moving candidate combines contact-corrected Hunyuan/Blender Street geo
 
 The current Garage moves from distance 6 to 4.4 and preserves complete hero visibility at approximately 78% of viewport height. Actual phone WebKit inspection draws 1748×660 instead of 1311×495 at 874×330 CSS/DPR3; desktop DPR1 draws 1920×1080 instead of 1280×720. Stronger existing SMAA runs only in inspection; exit restores the prior riding policy. This is supersampling/capped raster resolution, not a temporal upscaler or AAA acceptance. Headless render-target memory increases with pixel count; physical-phone pacing remains an open release gate.
 
-Private asset mappings and moving reports live under [delivery evidence](../evidence/hero-remaster/delivery/README.md). Candidate models are not promoted into `public/models`; the shared main checkout's unrelated course/audio work is preserved. Full rendered bot replay clears in 40.083333333333336 seconds on low/high with identical finish bytes `abaaaaaaaa0a4440`; forced crash and one-tick restart also pass. A bot proxy does not replace the stranger or physical-phone judgments.
+Private asset mappings and moving reports live under [delivery evidence](../evidence/hero-remaster/delivery/README.md). The initial V5 candidates were private. V6 Street full/LOD wrist repairs now use the normal `public/models` paths; bike candidates remain private. The shared main checkout's unrelated course/audio work is preserved. Full rendered bot replay clears in 40.083333333333336 seconds on low/high with identical finish bytes `abaaaaaaaa0a4440`; forced crash and one-tick restart also pass. A bot proxy does not replace the stranger or physical-phone judgments.
 
 The bounded V5 art correction reduces the cap and adds swept hair/brows, plus darker manufactured bike materials. Actual engine review found the Garage's neutral emissive lift whitening vertex-painted strands; those surfaces now retain authored shading. Whole phone/desktop rotations and played Street footage accept this as the current **private prototype**, still below the concept. Next loop prioritises a properly defined face and hair silhouette, garment/contact transitions, and neutral studio lighting/material response. The existing loader's 1024-pixel rider atlas cap and biome environment must be evaluated with actual render/texture budgets before promising finer close-up detail. New Race geometry follows; no mockup-quality or AAA bar is closed by this first integration.
 
@@ -189,5 +189,15 @@ compression, extension and landing. Preserve the protected donor hands/soles,
 rig and existing clips. Judge actual Garage rotation and played ride movies;
 synthetic CPU pose samples complement these clips rather than replace them.
 The [wrist evidence](../evidence/hero-remaster/wrists/README.md) records the
-measured failure and the repair gate. Full repair is under evaluation; the LOD
-must pass before promotion. No cosmetic or final art bar is closed here.
+measured failure and the repair gate. Full and LOD now pass the strict complete-contour gate: all 3,759 runtime
+correspondences have zero splitting, identical weights and bind coefficients;
+winding and collapsed-triangle checks pass. Parent accepts wrist continuity
+in actual Garage and played full/LOD rides. Both Street exports are promoted
+into the normal main asset paths with a shipped-asset regression test. The LOD
+body was necessarily rebuilt from the repaired full body because its old
+forearm topology had no closed ring; authored LOD contacts and hair remain
+unchanged. Exact clear/crash/restart and twenty swaps pass the normal build.
+[Moving delivery](../evidence/hero-remaster/wrists/delivery/README.md) records
+hashes, scope and retained limits. Cosmetic M1/M2 work resumes with skin
+colour transitions, face/hair and garment definition. No final art or
+physical-device bar is closed here.

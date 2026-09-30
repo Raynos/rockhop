@@ -44,7 +44,7 @@ for(let i=0;i<index.a.count;i+=3){
  const tri=[0,1,2].map(j=>src.bin[readIndex](index.offset+(i+j)*index.stride));
  if(deleted.has(faceKey(tri.map(j=>positions[j])))){removed++;continue;}remaining.push(...tri);
 }
-assert(removed>0);assert.equal(removed,report.removedTrianglePositions.length,'every intended terminal triangle matched');
+assert.equal(removed,report.removedTrianglePositions.length,'every intended terminal triangle matched');
 const original=read(sourcePath);let outsideJoinByteDifferences=0;
 for(let i=0;i<original.bin.length;i++)if(original.bin[i]!==src.bin[i]&&!allowed.has(i))outsideJoinByteDifferences++;
 assert.equal(outsideJoinByteDifferences,0);

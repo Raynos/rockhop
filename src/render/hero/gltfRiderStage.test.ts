@@ -73,17 +73,22 @@ const subjects = AVAILABLE_RIDER_PRESETS.flatMap((p) => [`rider-${p.id}.glb`, `r
 
 describe.each(subjects)('$file garage stage', ({ file }) => {
   let gltf: GLTF;
-  beforeAll(async () => { gltf = await loadRig(file); await prepareHero(gltf); });
+  let stageClip: string, duration: number;
+  beforeAll(async () => {
+    gltf = await loadRig(file); await prepareHero(gltf);
+    stageClip = gltf.animations.some(c => c.name === 'idle_breathe') ? 'idle_breathe' : 'sit_cruise';
+    duration = gltf.animations.find(c => c.name === stageClip)!.duration;
+  });
 
-  it('plays sit_cruise whole: every joint where the prototype put it, hands on the grips and soles on the pegs by authorship', () => {
+  it('plays the delivered stage clip whole, with authored joint placement and grip/sole contacts', () => {
     const rig = fixture(gltf);
     rig.rider.setStage(true);
-    for (const [frame, t] of [[physicsFrame(-0.46, 0.75, 40, 0), 0], [physicsFrame(-0.22, 0.9, 26, 3.25), 3.25 % 1.967], [physicsFrame(-0.57, 0.6, 55, 78.433), 78.433 % 1.967]] as const) {
+    for (const [frame, t] of [[physicsFrame(-0.46, 0.75, 40, 0), 0], [physicsFrame(-0.22, 0.9, 26, 3.25), 3.25 % duration], [physicsFrame(-0.57, 0.6, 55, 78.433), 78.433 % duration]] as const) {
       rig.update(frame);
-      expect(rig.rider.debug.stageClip).toBe('sit_cruise');
+      expect(rig.rider.debug.stageClip).toBe(stageClip);
       expect(rig.rider.debug.physicalPose).toBe(false);
       // The physics frame is not consulted: three different bodies, one authored pose (to the mixer's own evaluation).
-      expect(maxDistance(rig.joints(), authored(gltf, 'sit_cruise', t))).toBeLessThan(1e-4); // 43 µm: the driver renormalises the quantised keys, the mixer does not
+      expect(maxDistance(rig.joints(), authored(gltf, stageClip, t))).toBeLessThan(1e-4); // 43 µm: the driver renormalises the quantised keys, the mixer does not
     }
     const d = rig.rider.debug;
     // The authored hands / soles land on the delivered contacts: measured, never corrected by IK (bar: a few mm).
@@ -104,15 +109,23 @@ describe.each(subjects)('$file garage stage', ({ file }) => {
     expect(Math.atan2(torso.y, torso.x) * 180 / Math.PI).toBeCloseTo(51.7, 0);
   });
 
-  it('is a static hold on this delivery: the loop never moves a joint', () => {
+  it('keeps protected joints fixed while allowing the delivered neck idle', () => {
     const rig = fixture(gltf);
     rig.rider.setStage(true);
     rig.update(physicsFrame(-0.46, 0.75, 40, 0));
     const first = rig.joints();
+    let largestIdleMotion = 0;
     for (const t of [0.5, 1.0, 1.5, 1.966, 1.967, 2.4]) {
       rig.update(physicsFrame(-0.46, 0.75, 40, t));
-      expect(maxDistance(rig.joints(), first), `t=${t}`).toBeLessThan(1e-6);
+      const current = rig.joints();
+      largestIdleMotion = Math.max(largestIdleMotion, maxDistance(current, first));
+      for (const [i, name] of JOINTS.entries()) {
+        if (stageClip === 'idle_breathe' && ['neck', 'head'].includes(name)) continue;
+        expect(current[i]!.distanceTo(first[i]!), `${name} t=${t}`).toBeLessThan(1e-6);
+      }
+      expect(maxDistance(current, authored(gltf, stageClip, t % duration))).toBeLessThan(1e-4);
     }
+    if (stageClip === 'idle_breathe') expect(largestIdleMotion).toBeGreaterThan(.001);
   });
 
   it('leaving the stage holds the clip pose while the frame is frozen, then blends to the physics pose in 250 ms of sim time without a pop', () => {
@@ -164,7 +177,7 @@ describe.each(subjects)('$file garage stage', ({ file }) => {
     rig.rider.setStage(true);
     rig.rider.setStage(true);
     rig.update(physicsFrame(-0.46, 0.75, 40, 0));
-    expect(rig.rider.debug.stageClip).toBe('sit_cruise');
+    expect(rig.rider.debug.stageClip).toBe(stageClip);
     rig.rider.setStage(false);
     rig.rider.setStage(false);
     expect(rig.rider.debug.stageBlend).toBe(0); // not yet measured: the blend reports on the next update

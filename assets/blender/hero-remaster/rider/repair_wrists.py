@@ -108,7 +108,14 @@ for side in ['L','R']:
   if amount>.60 and u>cut and rad<.105:doomed.add(f.index)
  deleted.update(doomed)
  bs=boundaries(body,doomed);start=min((l for l in bs if (l['centre']-wrist).length<.18 and len(l['ids'])>=3),key=lambda l:abs((l['centre']-wrist).dot(axis)-cut));assert dict(start['degree'])=={2:len(start['ids'])},start['degree']
- gs=boundaries(contact,set());end=min((l for l in gs if (l['centre']-wrist).length<.08 and max(l['ps'][i].x for i in l['ids'])-min(l['ps'][i].x for i in l['ids'])<.0001),key=lambda l:(l['centre']-wrist).length);assert dict(end['degree'])=={2:len(end['ids'])},end['degree']
+ gs=boundaries(contact,set())
+ if a.lod:
+  # The retained 1600-triangle contact LOD has a curved cuff opening; the
+  # original flat-X full-detail filter would instead reject its real contour.
+  expected=wrist+Vector((-.012,0,-.035))
+  end=min((l for l in gs if (l['centre']-expected).length<.04 and len(l['ids'])>=20 and dict(l['degree'])=={2:len(l['ids'])}),key=lambda l:(l['centre']-expected).length)
+ else:end=min((l for l in gs if (l['centre']-wrist).length<.08 and max(l['ps'][i].x for i in l['ids'])-min(l['ps'][i].x for i in l['ids'])<.0001),key=lambda l:(l['centre']-wrist).length)
+ assert dict(end['degree'])=={2:len(end['ids'])},end['degree']
  A=Vector((0,1,0));A=(A-axis*A.dot(axis)).normalized();B=axis.cross(A).normalized();EA=Vector((0,1,0));EB=Vector((0,0,1))
  startids=orient_boundary(body,doomed,start,ordered(start,A,B),True);endids=orient_boundary(contact,set(),end,ordered(end,EA,EB),False)
  rows=[];startws=[];startcs=[];endws=[]

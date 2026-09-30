@@ -22,15 +22,15 @@ import { makeRiderRigPose, riderRigFromHips, riderPoseAtLean, RIDER_TORSO_REST }
 type Ref = { meshName: string; vertexIndices: number[] };
 type Pair = { source: Ref; repair: Ref; restPosition: number[] };
 type Join = { join: string; closedCycle: boolean; orderedPairs: Pair[] };
-type SeamMap = { asset: string; coordinateWeldMetres: number; seams: { side: string; joins: Join[] }[] };
+type SeamMap = { asset: string; assetSHA256?: string; rawAssetSHA256?: string; rawCorrespondenceSHA256?: string; coordinateWeldMetres: number; seams: { side: string; joins: Join[] }[] };
 type Endpoint = { mesh: THREE.SkinnedMesh; index: number };
 type Edge = { count: number; direction: number };
 const arg = (name: string) => process.argv.find(a => a.startsWith(`--${name}=`))?.slice(name.length + 3);
 const out = path.resolve(arg('out') ?? 'docs/evidence/hero-remaster/wrists/v6-seams.json');
 const full = arg('full') ?? 'assets/blender/hero-remaster/rider/candidate-v6-packed.glb';
-const fullMap = arg('full-map') ?? 'assets/blender/hero-remaster/rider/candidate-v6.glb.seams.json';
+const fullMap = arg('full-map') ?? 'assets/blender/hero-remaster/rider/candidate-v6-packed.glb.seams.json';
 const subjects = [{ label: 'full', file: full, map: fullMap }];
-if (arg('lod')) subjects.push({ label: 'lod', file: arg('lod')!, map: arg('lod-map') ?? 'assets/blender/hero-remaster/rider/candidate-v6-lod.glb.seams.json' });
+if (arg('lod')) subjects.push({ label: 'lod', file: arg('lod')!, map: arg('lod-map') ?? 'assets/blender/hero-remaster/rider/candidate-v6-lod-packed.glb.seams.json' });
 const poses = [
   { name: 'garage', stage: true, hips: [-.46, .75, 40] },
   ...[-1, 0, 1].map(lean => {
@@ -124,10 +124,14 @@ const reports = [];
 for (const subject of subjects) {
   const bytes = fs.readFileSync(subject.file), mapBytes = fs.readFileSync(subject.map), mapping = JSON.parse(mapBytes.toString()) as SeamMap;
   const gltf = await loadRigAt(pathToFileURL(path.resolve(subject.file)), true);
-  const rawBytes = fs.readFileSync(mapping.asset), raw = await loadRigAt(pathToFileURL(path.resolve(mapping.asset)), true);
+  const packedMapping = typeof mapping.assetSHA256 === 'string';
+  const targetSHA = crypto.createHash('sha256').update(bytes).digest('hex');
+  if (packedMapping) check(targetSHA === mapping.assetSHA256, `${subject.label}: packed map asset SHA mismatch`);
+  const rawBytes = packedMapping ? null : fs.readFileSync(mapping.asset);
+  const raw = rawBytes ? await loadRigAt(pathToFileURL(path.resolve(mapping.asset)), true) : null;
   const rawMeshes = new Map<string, THREE.SkinnedMesh>();
-  raw.scene.traverse(o => { if ((o as THREE.SkinnedMesh).isSkinnedMesh) rawMeshes.set(o.name, o as THREE.SkinnedMesh); });
-  const packed = !bytes.equals(rawBytes), expectedPositions = new Map<string, Float32Array>();
+  raw?.scene.traverse(o => { if ((o as THREE.SkinnedMesh).isSkinnedMesh) rawMeshes.set(o.name, o as THREE.SkinnedMesh); });
+  const packed = packedMapping || (rawBytes !== null && !bytes.equals(rawBytes)), expectedPositions = new Map<string, Float32Array>();
   for (const [name, mesh] of rawMeshes) {
     const positions = mesh.geometry.getAttribute('position'), floats = new Float32Array(positions.count * 3);
     for (let i = 0; i < positions.count; i++) for (let c = 0; c < 3; c++) floats[i * 3 + c] = positions.getComponent(i, c);
@@ -147,14 +151,21 @@ for (const subject of subjects) {
     const mesh = meshes.get(ref.meshName); if (!mesh) throw new Error(`Map mesh missing: ${ref.meshName}`);
     const endpoint = { mesh, index };
     if (index < 0 || index >= mesh.geometry.getAttribute('position').count) throw new Error(`Invalid map index ${ref.meshName}:${index}`);
-    const rawMesh = rawMeshes.get(ref.meshName); if (!rawMesh) throw new Error(`Raw map mesh missing: ${ref.meshName}`);
-    const rawPosition = position({ mesh: rawMesh, index }), currentPosition = position(endpoint);
-    const rawError = rawPosition.distanceTo(new THREE.Vector3(...expected)); rawMapPositionMax = Math.max(rawMapPositionMax, rawError);
-    const expectedArray = expectedPositions.get(ref.meshName)!, packedExpected = new THREE.Vector3().fromArray(expectedArray, index * 3);
-    const packingError = currentPosition.distanceTo(packedExpected); expectedPackedPositionMax = Math.max(expectedPackedPositionMax, packingError);
-    packedPositionDriftMax = Math.max(packedPositionDriftMax, rawPosition.distanceTo(currentPosition));
-    check(rawError <= mapping.coordinateWeldMetres, `${subject.label}: raw map position mismatch ${ref.meshName}:${index}`);
-    check(packingError === 0, `${subject.label}: packed map index differs from production EXPONENTIAL/16/SharedVector stream ${ref.meshName}:${index}`);
+    const currentPosition = position(endpoint);
+    if (packedMapping) {
+      const error = currentPosition.distanceTo(new THREE.Vector3(...expected));
+      expectedPackedPositionMax = Math.max(expectedPackedPositionMax, error);
+      check(error === 0, `${subject.label}: packed map position mismatch ${ref.meshName}:${index}`);
+    } else {
+      const rawMesh = rawMeshes.get(ref.meshName); if (!rawMesh) throw new Error(`Raw map mesh missing: ${ref.meshName}`);
+      const rawPosition = position({ mesh: rawMesh, index });
+      const rawError = rawPosition.distanceTo(new THREE.Vector3(...expected)); rawMapPositionMax = Math.max(rawMapPositionMax, rawError);
+      const expectedArray = expectedPositions.get(ref.meshName)!, packedExpected = new THREE.Vector3().fromArray(expectedArray, index * 3);
+      const packingError = currentPosition.distanceTo(packedExpected); expectedPackedPositionMax = Math.max(expectedPackedPositionMax, packingError);
+      packedPositionDriftMax = Math.max(packedPositionDriftMax, rawPosition.distanceTo(currentPosition));
+      check(rawError <= mapping.coordinateWeldMetres, `${subject.label}: raw map position mismatch ${ref.meshName}:${index}`);
+      check(packingError === 0, `${subject.label}: packed map index differs from production EXPONENTIAL/16/SharedVector stream ${ref.meshName}:${index}`);
+    }
     return endpoint;
   });
   const joins = mapping.seams.flatMap(s => s.joins.map(j => {
@@ -219,9 +230,9 @@ for (const subject of subjects) {
         const area = new THREE.Triangle(points[0]!, points[1]!, points[2]!).getArea();
         if (area < limits.triangleAreaSquareMetres || !Number.isFinite(area)) {
           collapsedByMesh[mesh.name] = (collapsedByMesh[mesh.name] ?? 0) + 1;
-          const rawMesh = rawMeshes.get(mesh.name)!;
-          const rawPoints = indices.map(index => position({ mesh: rawMesh, index }));
-          collapsedTriangles.push({ mesh: mesh.name, triangle, vertices: indices, runtimeAreaSquareMetres: area, rawRestAreaSquareMetres: new THREE.Triangle(rawPoints[0]!, rawPoints[1]!, rawPoints[2]!).getArea(), restPositions: indices.map(index => position({ mesh, index }).toArray()), runtimeCentroid: points.reduce((p, q) => p.add(q), new THREE.Vector3()).multiplyScalar(1 / 3).toArray() });
+          const rawMesh = rawMeshes.get(mesh.name);
+          const rawPoints = rawMesh ? indices.map(index => position({ mesh: rawMesh, index })) : null;
+          collapsedTriangles.push({ mesh: mesh.name, triangle, vertices: indices, runtimeAreaSquareMetres: area, rawRestAreaSquareMetres: rawPoints ? new THREE.Triangle(rawPoints[0]!, rawPoints[1]!, rawPoints[2]!).getArea() : null, restPositions: indices.map(index => position({ mesh, index }).toArray()), runtimeCentroid: points.reduce((p, q) => p.add(q), new THREE.Vector3()).multiplyScalar(1 / 3).toArray() });
         }
       }
       check(Object.values(collapsedByMesh).every(n => n === 0), `${subject.label}/${pose.name}/${side}: collapsed triangles in wrist region`);
@@ -229,7 +240,7 @@ for (const subject of subjects) {
     });
     rows.push({ pose: pose.name, syntheticRuntimeFrame: true, wristRegion, stageClip: rider.debug.stageClip, joins: joinRows, repairTriangles: idx.count / 3, degenerateRepairTriangles, minRepairTriangleAreaSquareMetres: minRepairTriangleArea });
   }
-  reports.push({ subject: subject.label, file: subject.file, sha256: crypto.createHash('sha256').update(bytes).digest('hex'), map: subject.map, mapSHA256: crypto.createHash('sha256').update(mapBytes).digest('hex'), rawMapAsset: mapping.asset, rawMapAssetSHA256: crypto.createHash('sha256').update(rawBytes).digest('hex'), mapAssociation: { packed, rawMapPositionMaxMetres: rawMapPositionMax, packedPositionDriftMaxMetres: packedPositionDriftMax, expectedPackedPositionMaxMetres: expectedPackedPositionMax, method: 'Raw explicit indices validated against recorded positions, then independently reproduced production EXPONENTIAL/16/SharedVector packing with unchanged indices.' }, topology: joins.map(j => ({ side: j.side, join: j.join, ...j.topology })), unmappedRepairBoundaryEdges, nonManifoldRepairEdges, inconsistentInternalRepairWindingEdges, poses: rows });
+  reports.push({ subject: subject.label, file: subject.file, sha256: crypto.createHash('sha256').update(bytes).digest('hex'), map: subject.map, mapSHA256: crypto.createHash('sha256').update(mapBytes).digest('hex'), rawProvenance: { rawAsset: packedMapping ? null : mapping.asset, rawAssetSHA256: rawBytes ? crypto.createHash('sha256').update(rawBytes).digest('hex') : mapping.rawAssetSHA256 ?? null, rawCorrespondenceSHA256: mapping.rawCorrespondenceSHA256 ?? null, rawSourceLoadedAndReproductionVerified: !packedMapping }, mapAssociation: { packed, rawMapPositionMaxMetres: packedMapping ? null : rawMapPositionMax, packedPositionDriftMaxMetres: packedMapping ? null : packedPositionDriftMax, expectedPackedPositionMaxMetres: expectedPackedPositionMax, method: packedMapping ? 'Target asset SHA matches committed packed correspondence; every mapped decoded position equals its recorded packed position exactly. Raw provenance hashes recorded but raw sources are not loaded or independently reproduced in this mode.' : 'Raw explicit indices validated against recorded positions, then independently reproduced production EXPONENTIAL/16/SharedVector packing with unchanged indices.' }, topology: joins.map(j => ({ side: j.side, join: j.join, ...j.topology })), unmappedRepairBoundaryEdges, nonManifoldRepairEdges, inconsistentInternalRepairWindingEdges, poses: rows });
   rider.dispose();
 }
 const report = { pass: failures.length === 0, limits, method: 'Explicit contour correspondence; independent welded triangle-edge incidence; raw and normalized bone-name weights; bind-aware homogeneous LBS coefficients with identical live bone objects and outer transforms; production prepareHero/GltfRider/conditionSleeveSkin CPU deformation.', limitations: ['Seven synthetic runtime frame cases are quantitative probes, not played game evidence.', 'No textures, GPU, silhouettes, collisions, self-intersections or art acceptance asserted.', 'Matching linear skinning coefficients bounds seam splitting for arbitrary bone transforms; triangle areas are checked only in listed cases.', 'Position weld is 1 micrometre for actual edge topology; map association uses its recorded coordinateWeldMetres.'], subjects: reports, failures };
