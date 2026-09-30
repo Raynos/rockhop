@@ -1,0 +1,174 @@
+{
+  "status": "unapplied offline C1 material candidate; no played/device approval",
+  "authoring": "physical dimensions, manufactured joints/tie holes, damp/salt/rust deposits; no photo inputs",
+  "sourceSha256": "ad2a396fac252cb183f5a67cb243b831cf441891386f7c71500aee83c3d77e48",
+  "files": [
+    {
+      "file": "quay-top-albedo.phone.webp",
+      "bytes": 2476,
+      "sha256": "f984d287bf25c3d5fbf346f19a0eb7721b6a202faf0c03eb2dd7b96cfa96cf02",
+      "width": 512,
+      "height": 512,
+      "channel": "albedo",
+      "colorSpace": "sRGB",
+      "physicalMetres": [
+        12,
+        6
+      ]
+    },
+    {
+      "file": "quay-top-normal.phone.webp",
+      "bytes": 23272,
+      "sha256": "9c1302846f7771649369a14532f337c36fd62b2bddd8d0243f0f98689e0e5386",
+      "width": 512,
+      "height": 512,
+      "channel": "normal",
+      "colorSpace": "linear",
+      "physicalMetres": [
+        12,
+        6
+      ]
+    },
+    {
+      "file": "quay-top-arm.phone.webp",
+      "bytes": 13628,
+      "sha256": "004232889fadd3038bdb71c36181b19c7bf0a739b138371e631f8a55bf50fc95",
+      "width": 512,
+      "height": 512,
+      "channel": "arm",
+      "colorSpace": "linear",
+      "physicalMetres": [
+        12,
+        6
+      ]
+    },
+    {
+      "file": "quay-wall-albedo.phone.webp",
+      "bytes": 1178,
+      "sha256": "b80de8fbf2086ce56e90aa8babdbe25069ced4437c7269163e4832486b09feb4",
+      "width": 512,
+      "height": 128,
+      "channel": "albedo",
+      "colorSpace": "sRGB",
+      "physicalMetres": [
+        12,
+        1.45
+      ]
+    },
+    {
+      "file": "quay-wall-normal.phone.webp",
+      "bytes": 1504,
+      "sha256": "051261d80cb48476328c77d24bc8a8cbe4b062c062ff1fe18a484a328a30a429",
+      "width": 512,
+      "height": 128,
+      "channel": "normal",
+      "colorSpace": "linear",
+      "physicalMetres": [
+        12,
+        1.45
+      ]
+    },
+    {
+      "file": "quay-wall-arm.phone.webp",
+      "bytes": 2062,
+      "sha256": "b3def903a8f2612443a557dd2a32c2625110bf12ef8178bccb19700e2f6748b4",
+      "width": 512,
+      "height": 128,
+      "channel": "arm",
+      "colorSpace": "linear",
+      "physicalMetres": [
+        12,
+        1.45
+      ]
+    },
+    {
+      "file": "tidal-ground-albedo.phone.webp",
+      "bytes": 878,
+      "sha256": "fa29b910b641b5e4a98f26b33c7807dd8e52d749c0ffa6f05f4e6b45c57c71ab",
+      "width": 256,
+      "height": 256,
+      "channel": "albedo",
+      "colorSpace": "sRGB",
+      "physicalMetres": [
+        8,
+        8
+      ]
+    },
+    {
+      "file": "tidal-ground-normal.phone.webp",
+      "bytes": 218,
+      "sha256": "45daaaa44467352e457cc5fa988f86987b1e2e4ed73470a3871b7a08d452754a",
+      "width": 256,
+      "height": 256,
+      "channel": "normal",
+      "colorSpace": "linear",
+      "physicalMetres": [
+        8,
+        8
+      ]
+    },
+    {
+      "file": "tidal-ground-arm.phone.webp",
+      "bytes": 2496,
+      "sha256": "b8df895a8cfffc857c6375f1149fbeb5efd76db340315ac1b741f2092cc32d94",
+      "width": 256,
+      "height": 256,
+      "channel": "arm",
+      "colorSpace": "linear",
+      "physicalMetres": [
+        8,
+        8
+      ]
+    }
+  ],
+  "compressedBytes": 47712,
+  "residentRgba8MipsBytes": 6291456.0,
+  "mapping": {
+    "top": {
+      "existingUV": "arc/6,z/6",
+      "repeat": [
+        0.5,
+        1
+      ],
+      "tileMetres": [
+        12,
+        6
+      ],
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    },
+    "wall": {
+      "existingUV": "x/4,(profileY-y)/1.45",
+      "repeat": [
+        0.3333333333333333,
+        1
+      ],
+      "tileMetres": [
+        12,
+        1.45
+      ],
+      "wrap": [
+        "repeat",
+        "clamp"
+      ],
+      "flipY": false
+    },
+    "terrain": {
+      "existingUV": "x/4,z/4",
+      "repeat": [
+        0.5,
+        0.5
+      ],
+      "tileMetres": [
+        8,
+        8
+      ],
+      "wrap": [
+        "repeat",
+        "repeat"
+      ]
+    }
+  }
+}
