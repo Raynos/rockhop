@@ -15,10 +15,10 @@ order; don't paraphrase or shortcut. The push in step 5 deploys (CI, since ask 8
    **only the paths your owners touched** (never `git add -A`, never `git commit` with no pathspec); if a shared
    file (`docs/tasks/ASKS.md`, `docs/plans/README.md`, `harness/e2e/touch.mts`…) carries someone else's hunks,
    commit only your hunks through a temporary index (`GIT_INDEX_FILE` → `read-tree HEAD` → `apply --cached` your
-   hunk → `write-tree` → `commit-tree` → `update-ref refs/heads/main <new> <old>`, then `git reset -q -- <paths>`).
-   One commit per round; the subject states the finding; typecheck (`pnpm typecheck`), lint and `vitest` green on
+   hunk → ordinary `git commit -F <message>` with that private index, so both Git hooks run; do not sweep or reset the shared index). If using `commit-tree`, explicitly run `.githooks/pre-commit` and `.githooks/commit-msg <message>` with the same index first.
+   One commit per round; follow `docs/git/COMMITS.md` for conventional subjects, why-first body, `Validation:`, real tool/model `Assisted-by:` and the ≥ 30-line journal gate; typecheck (`pnpm typecheck`), lint and `vitest` green on
    what you touched — say plainly what is red and whose it is. The md-budget hook refuses a > 40 % markdown commit
-   unless the subject starts `Docs:` / `Design:`.
+   except `docs`/`design` types (scopes allowed); evidence and journals are excluded.
 2. **Ledgers.** Every ask you took this session is a row in `docs/tasks/ASKS.md` and its status is true
    (**done** with the commit / evidence path, **in flight** with the owner, or **dropped** with the user's words).
    `docs/plans/README.md` rows for any plan you moved are current; a closed plan carries its `Closed:` header and

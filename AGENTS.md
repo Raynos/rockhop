@@ -7,7 +7,7 @@
 - Evidence is played, never posed — judge clips, not stills.
 - The metric is attempts-to-clear and restart latency, from a bot and a stranger.
 - A recorded input replays to a byte-identical finish time, or the physics is broken.
-- One commit per round; the subject states the finding.
+- One coherent finding per round, one commit per round. Use `type(scope): finding` (≤ 72 characters), a why-first body, `Validation:` with actual outcomes, and mandatory final `Assisted-by: tool:actual-model` (resolve from the active session; no placeholders). Include a `project/journal/` entry for ≥ 30 added/deleted non-journal text lines; smaller commits are exempt. Canonical style, pre-commit checks and setup: `docs/git/COMMITS.md`.
 - Ship gate every third round: cold boot, clear a track, crash, instant restart.
 - A push to `main` runs release gates; hourly or manual `.github/workflows/deploy.yml` runs deploy the latest main commit only if `/version.json` names a different SHA. CI builds locally with `vercel build` and uploads with `vercel deploy --prebuilt`. Watch the deploy run and confirm `/version.json` names its SHA; a red run is yours to fix now. Work players must not get yet stays off `main`. No hand `vercel deploy --prod`; `gh workflow run deploy` requests an immediate checked deploy of HEAD.
 - Never announce completion while budget remains.
@@ -19,4 +19,4 @@
 - `docs/mission.md` holds the bars no plan can close; plans carry measurable proxies and may cite a mission line as their bar.
 - Every user ask → a row in `docs/tasks/ASKS.md` before you start; flip it when it lands; rows never leave.
 - Only a human can call it → `project/human-in-the-loop/QUEUE.md` (file, don't block; a line is deleted when decided). `.claude/hooks/session-brief.sh` prints that queue + open asks at session start — relay first, zero tool calls.
-- Pointers: pins + deploy recipe `RELEASES.md` · claim evidence `docs/evidence/<topic>/` · device reports `docs/device/` · design rounds `assets/design/<screen>/SPEC.md` (recipe in `tracks/SPEC.md`; the user picks) · harness `harness/README.md`, stranger `harness/stranger/PROTOCOL.md`, battery `harness/compare/RUBRIC.md` · design canon `docs/design/CONTRACT.md` · the user's phone notes: `?review=1` in-game → `/drain-inbox`. Markdown budget 80/20: the commit hook refuses a > 40 % md commit unless the subject starts `Design:`/`Docs:`.
+- Pointers: pins + deploy recipe `RELEASES.md` · claim evidence `docs/evidence/<topic>/` · device reports `docs/device/` · design rounds `assets/design/<screen>/SPEC.md` (recipe in `tracks/SPEC.md`; the user picks) · harness `harness/README.md`, stranger `harness/stranger/PROTOCOL.md`, battery `harness/compare/RUBRIC.md` · design canon `docs/design/CONTRACT.md` · the user's phone notes: `?review=1` in-game → `/drain-inbox`. Markdown budget 80/20: the commit hook refuses a > 40 % md commit except `docs`/`design` types (scopes allowed); evidence and journals are excluded.

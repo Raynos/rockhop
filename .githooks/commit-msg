@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-# commit-msg — the markdown budget guard (.claude/hooks/md-ratio.sh). Enable per clone: git config core.hooksPath .githooks
-exec bash "$(git rev-parse --show-toplevel)/.claude/hooks/md-ratio.sh" commit "$1"
+# Enable per clone: git config core.hooksPath .githooks
+set -euo pipefail
+root="$(git rev-parse --show-toplevel)"
+node "$root/.githooks/check-commit-message.mjs" "$1"
+exec bash "$root/.claude/hooks/md-ratio.sh" commit "$1"
