@@ -1,0 +1,104 @@
+{
+  "sha": "85d701c694148d45658162361df1e737521a90cf",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+  "menuReady": {
+    "menuShown": true,
+    "loader": null
+  },
+  "menu": {
+    "xhr": [],
+    "fetch": [],
+    "resources": [],
+    "title": "ROCKHOP",
+    "hasCanvas": true
+  },
+  "harnessBefore": {
+    "xhr": [],
+    "fetch": []
+  },
+  "harnessAfter": {
+    "xhr": [],
+    "fetch": [
+      "http://127.0.0.1:48766/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+      "http://127.0.0.1:48766/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb"
+    ],
+    "resources": [
+      "http://127.0.0.1:48766/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+      "http://127.0.0.1:48766/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb"
+    ]
+  },
+  "loaded": {
+    "stats": {
+      "calls": 533,
+      "triangles": 629954,
+      "points": 6656,
+      "lines": 0,
+      "geometries": 226,
+      "textures": 59,
+      "programs": 28,
+      "texturesMB": 36.57746940612791,
+      "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "contextKind": "webgl2"
+    },
+    "info": {
+      "version": "0.2.2-core",
+      "physicsHz": 120,
+      "trackId": "c1-low-tide",
+      "seed": 1,
+      "bike": "rookie",
+      "harness": true,
+      "readyAtMs": 49,
+      "loadTrackMs": 113.5,
+      "lastRender": {
+        "prepMs": 0,
+        "hudMs": 0,
+        "audioMs": 0,
+        "submitMs": 0,
+        "syncMs": 0
+      },
+      "render": {
+        "biome": "coast",
+        "zoom": "idle",
+        "phase": "menu",
+        "tier": "high",
+        "dpr": 1,
+        "devicePixelRatio": 1,
+        "canvasW": 852,
+        "canvasH": 392,
+        "calls": 533,
+        "tris": 629954,
+        "rtMpx": 6.42,
+        "rtMB": 50.9,
+        "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+        "shadowMap": 2048,
+        "heroTris": 92170,
+        "heroDoc": "bike rider",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "world",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 0,
+        "passes": 19,
+        "stalePrograms": 2,
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "high",
+        "bloomers": 0,
+        "entryMs": 276,
+        "entering": false
+      },
+      "qualityWhy": "",
+      "quality": "high",
+      "entryHold": false,
+      "modules": {
+        "physics": "createBikePhysics",
+        "render": "ThreeRenderer",
+        "audio": "WebAudioSystem",
+        "rider": "gltf",
+        "bike": "gltf"
+      }
+    }
+  },
+  "errors": []
+}

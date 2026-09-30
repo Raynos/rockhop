@@ -107,6 +107,8 @@ export const PUBLIC_BYTES = {
   "models/bike-rookie-lod.source.json": 14406,
   "models/bike-rookie.glb": 2283036,
   "models/bike-rookie.source.json": 12578,
+  "models/c1-harbor-tug-lod.glb": 213636,
+  "models/c1-harbor-tug.glb": 274268,
   "models/rider-race-bluewhite-lod.glb": 946824,
   "models/rider-race-bluewhite-lod.source.json": 9556,
   "models/rider-race-bluewhite.glb": 2448152,
@@ -126,10 +128,10 @@ export const PUBLIC_BYTES = {
   "models/rider-street-openface-lod.glb": 1245476,
   "models/rider-street-openface-lod.source.json": 14803,
   "models/rider-street-openface.glb": 2796628,
-  "models/rider-street-openface.source.json": 10839,
+  "models/rider-street-openface.source.json": 10839
 } as const;
 
 // The offline pack as each device tier downloads it (`packMembership`, src/boot/asset-totals.ts):
 // tier-free assets in both, og.jpg in neither, one of the 1x/2x pair each. Generated, so the module
 // path and `__BOOT_TOTALS__` are the same numbers rather than two sums that could drift (totals.ts).
-export const OFFLINE_PACK_BYTES = { '1x': 5500310, '2x': 6591521 };
+export const OFFLINE_PACK_BYTES = { '1x': 5988214, '2x': 7079425 };

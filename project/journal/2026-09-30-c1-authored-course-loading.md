@@ -1,0 +1,7 @@
+# C1 authored course loading
+
+Finding: A byte-addressed Blender tug improves C1’s short harbor landmark. Course assets need first-loader byte caching, course-entry shader warm-up and course-owned resource retirement; otherwise initial offline play misses new scenery. Both tug files are prefetched, Menu skips mesh decoding, load failure preserves the old vessel and cancelled loads cannot attach to another course. Nested external maps receive immutable snapshots for the next biome kit.
+
+Validation: 25 focused boot/catalog/entry/owner/bitmap-lifetime tests pass. Full TypeScript and targeted lint pass. Production builds retain the 8 KiB inline and 700 KiB player gzip caps. Matched full, vessel and fault/retry clips preserve the exact Rookie endpoint. The complete origin-shutdown offline suite passes 10/10, including exact C1 clear, ten Garage combinations and update with zero re-fetched model bytes. See [delivery evidence](../../docs/evidence/course-remaster/c1/harbor-tug/README.md).
+
+Limits: One brief landmark, not a full Coast or course remaster. Shared-tree captures include other owners’ uncommitted work; their fingerprints and timing confounders are recorded. Host SwiftShader/Metal proxies do not prove physical-phone art, timing or uncoached play. Plan remains active and 0/12 courses are signed off. The preceding status-only turn made no implementation progress; this round resumes authoritative code and offline evidence.

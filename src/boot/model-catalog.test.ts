@@ -3,7 +3,7 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import { createServer, type ViteDevServer } from 'vite';
-import { modelAssetsPlugin, readModelCatalog, writeModelCatalog } from './model-catalog';
+import { modelAssetsPlugin, readModelCatalog, readModelResources, writeModelCatalog } from './model-catalog';
 
 const directories: string[] = [];
 const servers: ViteDevServer[] = [];
@@ -29,6 +29,24 @@ async function fixture() {
 }
 
 describe('content-addressed model byte snapshots', () => {
+  it('snapshots nested course maps and changes their URL when their bytes change', async () => {
+    const { root, publicDir } = await fixture();
+    const directory = path.join(publicDir, 'models/course-kits/forest');
+    await mkdir(directory, { recursive: true });
+    const file = path.join(directory, 'bark.phone.webp');
+    const bytes = Buffer.from([1, 7, 9]);
+    await writeFile(file, bytes);
+    const first = readModelResources(publicDir);
+    expect(first).toHaveLength(1);
+    expect(first[0]!.logical).toBe('models/course-kits/forest/bark.phone.webp');
+    expect(first[0]!.url).toContain(`bark.phone-${hash(bytes).slice(0, 16)}.webp`);
+    writeModelCatalog(root, readModelCatalog(publicDir), first);
+    expect(await readFile(path.join(root, 'src/render/hero/models.generated.ts'), 'utf8')).toContain('MODEL_RESOURCES');
+    await writeFile(file, Buffer.from([1, 7, 10]));
+    expect(readModelResources(publicDir)[0]!.url).not.toBe(first[0]!.url);
+    expect(first[0]!.bytes).toEqual(bytes);
+  });
+
   it('hashes actual bytes, generates the same runtime URLs, and advances both paths together', async () => {
     const { root, publicDir, full, lod } = await fixture();
     const before = readModelCatalog(publicDir, ['models/bike.glb', 'models/bike-lod.glb']);
@@ -59,24 +77,28 @@ describe('content-addressed model byte snapshots', () => {
 
   it('serves and emits byte-identical bodies at the generated URLs, with unknown snapshots rejected', async () => {
     const { root, publicDir } = await fixture();
+    const mapDirectory = path.join(publicDir, 'models/course-kits/forest');
+    await mkdir(mapDirectory, { recursive: true });
+    await writeFile(path.join(mapDirectory, 'bark.phone.webp'), Buffer.from([7, 8, 9]));
     const plugin = modelAssetsPlugin(['models/bike.glb', 'models/bike-lod.glb']);
     const server = await createServer({ root, configFile: false, logLevel: 'silent', plugins: [plugin], server: { host: '127.0.0.1', port: 0 } });
     servers.push(server);
     await server.listen();
     const address = server.httpServer!.address();
     if (!address || typeof address === 'string') throw new Error('Expected local HTTP server');
-    const assets = readModelCatalog(publicDir);
+    const assets = [...readModelCatalog(publicDir), ...readModelResources(publicDir)];
     const emitted: { fileName: string; source: Uint8Array | string }[] = [];
     // Exercise the emission hook without starting a build or writing dist.
     const emit = plugin.generateBundle as (this: { emitFile(asset: { fileName: string; source: Uint8Array | string }): void }) => void;
     emit.call({ emitFile: asset => { emitted.push(asset); } });
     const catalog = emitted.find(item => item.fileName === 'model-catalog.json')!;
     const metadata = JSON.parse(typeof catalog.source === 'string' ? catalog.source : Buffer.from(catalog.source).toString()) as { models: { logical: string; url: string; bytes: number; sha256: string }[] };
-    expect(metadata.models).toEqual(assets.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })));
+    expect(metadata.models).toEqual(assets.filter(asset => asset.logical.endsWith('.glb')).map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })));
     for (const asset of assets) {
       const response = await fetch(`http://127.0.0.1:${address.port}/${asset.url}?ignored-by-old-sw=1`);
       expect(response.status).toBe(200);
-      expect(response.headers.get('content-type')).toBe('model/gltf-binary');
+      expect(response.headers.get('content-type')).toBe(asset.logical.endsWith('.webp') ? 'image/webp' : 'model/gltf-binary');
+      expect(response.headers.get('cache-control')).toBe('public, max-age=31536000, immutable');
       expect(Number(response.headers.get('content-length'))).toBe(asset.bytes.length);
       const served = Buffer.from(await response.arrayBuffer());
       expect(hash(served)).toBe(asset.sha256);
@@ -85,5 +107,7 @@ describe('content-addressed model byte snapshots', () => {
     }
     const missing = await fetch(`http://127.0.0.1:${address.port}/models/0000000000000000/bike-0000000000000000.glb`);
     expect(missing.status).toBe(404);
+    const missingMap = await fetch(`http://127.0.0.1:${address.port}/models/course-kits/forest/0000000000000000/bark.phone-0000000000000000.webp`);
+    expect(missingMap.status).toBe(404);
   });
 });

@@ -333,6 +333,7 @@ function loadManifest(id: string): Plugin[] {
         else if (CRASH_REPORT_CHUNK.test(name)) phase = 'telemetry';
         else if (/worklet/.test(name)) phase = 'audio-worklet';
         else if (/\.(glb|gltf)$/.test(name)) phase = /-lod-[a-f0-9]{16}\.glb$/.test(name) ? 'models-lod' : 'models';
+        else if (name.startsWith('models/') && /\.(webp|png|jpe?g|avif|ktx2)$/.test(name)) phase = 'world';
         const label = /three/.test(name) ? 'three.js' : item.type === 'chunk' && item.isEntry ? 'game (index.js)' : name.replace(/^assets\//, '');
         items.push({ path: `./${name}`, bytes: buf.length, gz, phase, label });
       }
@@ -430,13 +431,23 @@ function pruneFlatModels(): Plugin {
       if (!fs.existsSync(dir)) return;
       let bytes = 0;
       let n = 0;
-      for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-        if (!e.isFile()) continue; // the `<pairHash>/` folders the runtime actually fetches stay
-        const p = path.join(dir, e.name);
-        bytes += fs.statSync(p).size;
-        n += 1;
-        fs.rmSync(p);
-      }
+      // Remove only source paths actually present under public/models. Byte-addressed
+      // model/map snapshots remain, including nested course-kit directories.
+      const source = path.join(process.cwd(), 'public', 'models');
+      const prune = (folder: string, relative = ''): void => {
+        for (const e of fs.readdirSync(folder, { withFileTypes: true })) {
+          const rel = path.join(relative, e.name);
+          if (e.isDirectory()) prune(path.join(folder, e.name), rel);
+          else {
+            const file = path.join(dir, rel);
+            if (!fs.existsSync(file)) continue;
+            bytes += fs.statSync(file).size;
+            n += 1;
+            fs.rmSync(file);
+          }
+        }
+      };
+      if (fs.existsSync(source)) prune(source);
       if (n) this.info(`pruned ${n} unrequested flat model copies from dist/models (${(bytes / 1024 / 1024).toFixed(2)} MB)`);
     },
   };

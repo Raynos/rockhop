@@ -6,7 +6,7 @@
 ## Progress measures · 2026-09-30
 
 - **Full-plan effort: estimated 20–25% complete.** This is a planning judgment, not a counted gate. The challenge rejection/reference baselines, 1,840-Scrap economy, purchase/access flow and performance readout are implemented. The differentiated Pro package has exact full-course replay and passive-clear evidence; the integrated partial boot/clear/crash/restart gate passes, while full release and human calibration gates remain open. Human difficulty/medal tuning, most authored course art and full device qualification remain.
-- **Graphics effort: estimated 5–10% complete.** Accepted surface, prop and landmark improvements are incremental. The new Blender C1 tug and Alpine tree kit are candidates, excluded from accepted progress until integration and played review. Four complete biome standards and most course-specific scenery remain.
+- **Graphics effort: estimated 5–10% complete.** Accepted surface, prop and landmark improvements are incremental. The Blender C1 tug is accepted as a bounded played model improvement; the whole Alpine tree kit remains a candidate pending integration and moving review. Four complete biome standards and most course-specific scenery remain.
 - **Finished courses: 0/12, or 0%.** No complete gameplay/art/audio/reward/recovery slice has passed all its acceptance gates. Baseline coverage is 12/12; it must not be reported as twelve finished courses.
 
 The [twelve-course before/after board](../evidence/course-remaster/progress-board-2026-09-30/README.md) shows unchanged frames from the saved start-of-remaster baseline and the accepted art captures. It exposes the limited visual delta, including unchanged D3 scenery and S3 cue-only work. The capture tiers differ; the board records this limit and exact video/frame provenance. Re-estimate effort when a complete biome exemplar passes, rather than incrementing it for every small patch.
@@ -73,7 +73,7 @@ These are played **bounded improvements**, not full-course art approvals. Each n
 
 | Course | Best current visual evidence | Remaining full-ride gap |
 |---|---|---|
-| C1 | [Harbor, quay, road and ramp contact](../evidence/course-remaster/c1/README.md) | Coast-wide material/lighting quality, water, audible mix |
+| C1 | [Harbor, quay, road and ramp contact](../evidence/course-remaster/c1/README.md); [authored working tug](../evidence/course-remaster/c1/harbor-tug/README.md) | Coast-wide material/lighting quality, water, audible mix |
 | C2 | [Pier support and landing](../evidence/course-remaster/c2/pier-art/README.md) | Barge/crane models and dock-to-flight continuity |
 | C3 | [Wreck hull and cut bulkhead](../evidence/course-remaster/c3/breach-art/README.md) | Surf/shore transition and ship material finish |
 | A1 | [Mill, conveyor, wheel and flume](../evidence/course-remaster/a1/mill-complex/README.md) | Coherent forest and mill material standard |
@@ -204,3 +204,9 @@ The [subsequent A3 loader comparison](../evidence/course-remaster/a3/loader-cab/
 ### 2026-09-29 C1 production-slice review
 
 The [evidence-linked C1 audit](../evidence/course-remaster/c1/VERTICAL_SLICE_AUDIT.md) identifies the brake decision, full-course foreground quality and first-win replay loop as the ordered work. The [current command-strip first-win recording](../evidence/course-remaster/c1/current-map-first-win/README.md) now proves one source's Menu→quick-launch→exact C1 Diamond/+300→earned map medal→Garage→reload path; a second same-medal clear pays no extra Scrap. It closes the integration check, not the uncoached physical-phone first session, audible mix, sustained frame pacing or voluntary replay. Pass 1 remains open.
+
+## Authored course loading · 2026-09-30
+
+The [C1 working tug delivery](../evidence/course-remaster/c1/harbor-tug/README.md) establishes a source-built full/LOD model, cached during initial loading and decoded only for a real course entry. Entry warm-up awaits the owner; a failed load preserves its procedural fallback and a late result cannot attach to a retired course. Named asset materials and owned maps retire with the course. Menu backdrop intent survives bike reloads.
+
+The complete [offline gate](../evidence/course-remaster/c1/harbor-tug/offline/offline.json) passes 10/10 on the shared candidate build: first-load caches contain both tug files, the origin is shut down for cold launch and exact C1 clear, ten Garage combinations work, and an update re-fetches zero model bytes. This is headless SwiftShader evidence on the host, not physical-phone timing or a clean release build. Most Coast scenery and all complete course acceptance checks remain open.

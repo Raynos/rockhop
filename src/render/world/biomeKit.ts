@@ -50,6 +50,8 @@ import {
 } from './props';
 import type { WorldDetail } from './props';
 import { buildZoneKit, isZone } from './zones/zoneKit';
+import { mountCourseAssets, type CourseAssetOwner } from './courseAssets';
+import { loadC1Harbor } from './zones/c1Harbor';
 
 /** Art-pack far plate / sky panorama per exterior biome (the ROCKHOP zones' are `plate-<zone>` / `sky-<zone>`). */
 export const PLATE_ID: Partial<Record<string, string>> = { canyon: 'plate-canyon', nightCity: 'plate-nightcity', coast: 'plate-coast', alpine: 'plate-alpine', quarry: 'plate-quarry', snow: 'plate-snowline' };
@@ -57,6 +59,7 @@ export const SKY_ID: Partial<Record<string, string>> = { canyon: 'sky-canyon', n
 
 export interface BiomeKit {
   group: THREE.Group;
+  courseAssets: CourseAssetOwner | undefined;
   drawCalls: number;
   triangles: number;
   textureBytes: number;
@@ -732,7 +735,7 @@ function citySilhouette(rng: Rng): THREE.CanvasTexture {
 // Builders
 // ---------------------------------------------------------------------------
 
-export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialLibrary, art: ArtLibrary | null = null, detail: WorldDetail = 'high'): BiomeKit {
+export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialLibrary, art: ArtLibrary | null = null, detail: WorldDetail = 'high', authoredCourse = false): BiomeKit {
   const group = new THREE.Group();
   const keepOut = foregroundKeepOut(track);
   const plan = planSetPieces(track, keepOut); // round 15: the playgrounds' tunnels / beats / every set piece (tracks.md §7.3)
@@ -744,6 +747,7 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
   const fountains: BiomeKit['fountains'] = [];
   const lamps: BiomeKit['lamps'] = [];
   let textureBytes = 0;
+  let courseAssets: CourseAssetOwner | undefined;
   const profile = track.def.profile;
   const x0 = track.bounds.minX - 40;
   const x1 = track.bounds.maxX + 60;
@@ -946,6 +950,29 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
     const PB = (name: string, geo: THREE.BufferGeometry, mat: THREE.Material, shadows = true): PropBatch => new PropBatch(name, vc(geo), mat, shadows);
     if (isZone(biome.id)) {
       const zk = buildZoneKit({ track, biome, lib, rng, detail, keepOut, plan, x0, x1 });
+      // Keep a procedural vessel until the authored replacement has actually decoded.
+      // The menu backdrop deliberately skips authored course decoding.
+      if (authoredCourse && track.def.id === 'c1-low-tide') {
+        const boats = zk.batches.find(b => b.name === 'c1-inshore-coaster');
+        const i = boats?.items.findIndex(item => Math.abs(item.m.elements[12]! - 149) < 0.01) ?? -1;
+        let fallback: THREE.Group | null = null;
+        if (boats && i >= 0) {
+          const old = new PropBatch('c1-tug-fallback', boats.geometry, boats.material, false);
+          old.items.push(...boats.items.splice(i, 1));
+          fallback = old.build();
+          if (fallback) group.add(fallback);
+        }
+        courseAssets = mountCourseAssets(loadC1Harbor(detail === 'low' ? 'lod' : 'full', lib).then(asset => {
+          const scale = 1.18;
+          const seaY = Math.min(...profile.map(p => p.y)) - 0.42 - 2.4;
+          asset.root.position.set(146, seaY - 1.25 * scale, -34);
+          asset.root.rotation.y = -0.07;
+          asset.root.scale.setScalar(scale);
+          if (fallback) fallback.visible = false;
+          return asset;
+        }));
+        group.add(courseAssets.root);
+      }
       meshes.push(...zk.meshes);
       batches.push(...zk.batches);
       scroll.push(...zk.scroll);
@@ -1720,5 +1747,5 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
   }
   drawCalls -= Math.max(0, built.merged - built.mergedDraws);
   for (const l of lights) group.add(l);
-  return { group, drawCalls, triangles, textureBytes, flicker, lights, scroll, fountains, lamps, occluders };
+  return { group, courseAssets, drawCalls, triangles, textureBytes, flicker, lights, scroll, fountains, lamps, occluders };
 }

@@ -26,7 +26,8 @@
  * DOWNLOAD invariant catching it.
  */
 import { BOOT_IDS } from '../render/art/boot-set';
-import { packMembership } from './asset-totals';
+import { packMembership, HERO_FILE_SET } from './asset-totals';
+import { MODEL_ASSETS, MODEL_RESOURCES } from '../render/hero/models.generated';
 import { artTier } from './tier';
 import type { ArtEntry } from '../ui/art';
 
@@ -42,6 +43,13 @@ export function offlinePackUrls(entries: readonly ArtEntry[]): [url: string, byt
     if (where === null || (where !== 'both' && where !== tier)) continue;
     seen.add(e.src);
     out.push([e.src, e.bytes ?? 0]);
+  }
+  // Download bytes once during boot; course entry later decodes from the cache.
+  const heroes = new Set<string>(HERO_FILE_SET);
+  for (const [logical, asset] of Object.entries({ ...MODEL_ASSETS, ...MODEL_RESOURCES })) {
+    if (heroes.has(logical) || seen.has(asset.url)) continue;
+    seen.add(asset.url);
+    out.push([asset.url, asset.bytes]);
   }
   return out;
 }

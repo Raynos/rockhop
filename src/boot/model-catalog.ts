@@ -38,11 +38,32 @@ export function readModelCatalog(publicDir: string, required: readonly string[] 
   });
 }
 
-export function writeModelCatalog(root: string, assets: readonly ModelAsset[]): void {
+/** External course maps receive byte snapshots just like their model pair. */
+export function readModelResources(publicDir: string): ModelAsset[] {
+  const assets: ModelAsset[] = [];
+  const walk = (directory: string, prefix: string): void => {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const logical = `${prefix}/${entry.name}`;
+      if (entry.isDirectory()) walk(path.join(directory, entry.name), logical);
+      else if (/\.(webp|png|jpe?g|avif|ktx2)$/.test(entry.name)) {
+        const bytes = fs.readFileSync(path.join(directory, entry.name));
+        const digest = sha(bytes), ext = path.posix.extname(logical);
+        const name = path.posix.basename(logical, ext), folder = path.posix.dirname(logical);
+        assets.push({ logical, url: `${folder}/${digest.slice(0, 16)}/${name}-${digest.slice(0, 16)}${ext}`, bytes, sha256: digest });
+      }
+    }
+  };
+  const directory = path.join(publicDir, 'models');
+  if (fs.existsSync(directory)) walk(directory, 'models');
+  return assets.sort((a, b) => a.logical.localeCompare(b.logical));
+}
+
+export function writeModelCatalog(root: string, assets: readonly ModelAsset[], resources: readonly ModelAsset[] = []): void {
   const values = Object.fromEntries(assets.map(asset => [asset.logical, { url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 }]));
   const source = '// Generated from public/models by trials:model-assets. Do not edit.\n'
     + '// URLs identify the snapshotted full/LOD pair and each file\'s actual bytes.\n'
-    + `export const MODEL_ASSETS = ${JSON.stringify(values, null, 2)} as const;\n`;
+    + `export const MODEL_ASSETS = ${JSON.stringify(values, null, 2)} as const;\n`
+    + `export const MODEL_RESOURCES = ${JSON.stringify(Object.fromEntries(resources.map(a => [a.logical, { url: a.url, bytes: a.bytes.length, sha256: a.sha256 }])), null, 2)} as const;\n`;
   const output = path.join(root, 'src', 'render', 'hero', 'models.generated.ts');
   if (!fs.existsSync(output) || fs.readFileSync(output, 'utf8') !== source) fs.writeFileSync(output, source);
 }
@@ -51,13 +72,15 @@ export function writeModelCatalog(root: string, assets: readonly ModelAsset[]): 
 export function modelAssetsPlugin(required: readonly string[], onCatalog?: (assets: readonly ModelAsset[], root: string) => void): Plugin {
   let root = process.cwd();
   let assets: ModelAsset[] = [];
+  let resources: ModelAsset[] = [];
   const aliases = new Map<string, ModelAsset>();
   const refresh = (): void => {
     const next = readModelCatalog(path.join(root, 'public'), required);
-    writeModelCatalog(root, next);
+    resources = readModelResources(path.join(root, 'public'));
+    writeModelCatalog(root, next, resources);
     assets = next;
     // Retain old dev snapshots while modules referring to their URLs remain in flight.
-    for (const asset of next) aliases.set(`/${asset.url}`, asset);
+    for (const asset of [...next, ...resources]) aliases.set(`/${asset.url}`, asset);
     onCatalog?.(next, root);
   };
   return {
@@ -66,23 +89,23 @@ export function modelAssetsPlugin(required: readonly string[], onCatalog?: (asse
     configResolved(config) { root = config.root; refresh(); },
     buildStart() {
       // Fail rather than compile a URL for bytes modified after config resolution.
-      const current = readModelCatalog(path.join(root, 'public'), required);
-      if (JSON.stringify(current.map(asset => [asset.logical, asset.sha256])) !== JSON.stringify(assets.map(asset => [asset.logical, asset.sha256]))) {
+      const current = [...readModelCatalog(path.join(root, 'public'), required), ...readModelResources(path.join(root, 'public'))];
+      if (JSON.stringify(current.map(asset => [asset.logical, asset.sha256])) !== JSON.stringify([...assets, ...resources].map(asset => [asset.logical, asset.sha256]))) {
         throw new Error('model catalog: assets changed during build startup; restart the build');
       }
-      for (const asset of assets) this.addWatchFile(path.join(root, 'public', asset.logical));
+      for (const asset of [...assets, ...resources]) this.addWatchFile(path.join(root, 'public', asset.logical));
     },
     generateBundle() {
-      for (const asset of assets) this.emitFile({ type: 'asset', fileName: asset.url, source: asset.bytes });
+      for (const asset of [...assets, ...resources]) this.emitFile({ type: 'asset', fileName: asset.url, source: asset.bytes });
       this.emitFile({
         type: 'asset', fileName: 'model-catalog.json',
-        source: JSON.stringify({ models: assets.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })) }, null, 2) + '\n',
+        source: JSON.stringify({ models: assets.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })), resources: resources.map(asset => ({ logical: asset.logical, url: asset.url, bytes: asset.bytes.length, sha256: asset.sha256 })) }, null, 2) + '\n',
       });
     },
     configureServer(server) {
       const update = (file: string): void => {
         const modelRoot = path.join(root, 'public', 'models') + path.sep;
-        if (!file.startsWith(modelRoot) || !file.endsWith('.glb')) return;
+        if (!file.startsWith(modelRoot) || !/\.(glb|webp|png|jpe?g|avif|ktx2)$/.test(file)) return;
         try {
           refresh();
           server.ws.send({ type: 'full-reload' });
@@ -99,14 +122,16 @@ export function modelAssetsPlugin(required: readonly string[], onCatalog?: (asse
         const pathname = new URL(req.url ?? '/', 'http://localhost').pathname;
         const asset = aliases.get(pathname);
         if (!asset) {
-          if (/^\/models\/.+\/[\w-]+-[a-f0-9]{16}\.glb$/.test(pathname)) {
+          if (/^\/models\/(?:[\w-]+\/)*[a-f0-9]{16}\/[\w.-]+-[a-f0-9]{16}\.(?:glb|webp|png|jpe?g|avif|ktx2)$/.test(pathname)) {
             res.statusCode = 404;
             res.end('Unknown model byte snapshot');
             return;
           }
           return next();
         }
-        res.setHeader('Content-Type', 'model/gltf-binary');
+        const ext = path.posix.extname(asset.logical);
+        const mime: Record<string, string> = { '.glb': 'model/gltf-binary', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.avif': 'image/avif', '.ktx2': 'image/ktx2' };
+        res.setHeader('Content-Type', mime[ext] ?? 'application/octet-stream');
         res.setHeader('Content-Length', asset.bytes.length);
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
         res.end(req.method === 'HEAD' ? undefined : asset.bytes);

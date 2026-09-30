@@ -63,7 +63,9 @@ export function offlinePackBytes(rows: Iterable<readonly [string, number]>, face
     } else if (where) out[where] += bytes;
   };
   for (const [key, bytes] of rows) {
-    if (key.startsWith('art:')) {
+    if (key.startsWith('models/') && !HERO_FILE_SET.includes(key as BootAssetKey) && /\.(glb|webp|png|jpe?g|avif|ktx2)$/.test(key)) {
+      add('both', bytes);
+    } else if (key.startsWith('art:')) {
       const id = key.slice(4);
       if (!boot.has(id)) add(packMembership(facetOf(id)), bytes);
     }

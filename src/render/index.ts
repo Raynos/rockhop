@@ -30,6 +30,7 @@ import { Emitters } from './particles/emitters';
 import { PostChain, tierPixelRatio, type PassWrite } from './post/chain';
 import { RiderModel } from './rider/riderModel';
 import { SKY_ID, buildBiomeKit } from './world/biomeKit';
+import type { CourseAssetOwner } from './world/courseAssets';
 import { ZONE_TIME } from './world/zones/zoneKit';
 import { PropBatch, tierCasts, tierHides, tierManaged } from './world/props';
 import { shrinkSkinArrays } from './world/skinArray';
@@ -48,7 +49,7 @@ const yieldFrame = (): Promise<void> => new Promise((r) => (typeof requestAnimat
 
 export interface GameRenderer {
   readonly canvas: HTMLCanvasElement;
-  setTrack(track: CompiledTrack): void;
+  setTrack(track: CompiledTrack, options?: { backdrop?: boolean }): void;
   /** Draw one frame. Returns render time in ms (performance.now delta). */
   render(state: PhysicsState, alpha: number): number;
   /** Block until the GPU has finished the last frame (1x1 readPixels). */
@@ -172,6 +173,8 @@ export const RENDER_BUDGET: RenderBudget = { calls: 300, triangles: 500_000, tex
 
 interface World {
   group: THREE.Group;
+  courseAssets: CourseAssetOwner | undefined;
+  courseAssetTextureBytes: number;
   obstacles: ObstacleMeshes;
   gates: Gates;
   flicker: THREE.MeshStandardMaterial[];
@@ -208,6 +211,7 @@ export class ThreeRenderer implements GameRenderer {
   private terminalPrograms = { deleted: 0, contextReleased: 0 };
   /** Invalidates queued compile batches before detached owners can be retired. */
   private sceneEpoch = 0;
+  private trackBackdrop = false;
   private contextUnavailable = false;
   private mapGpuSuspended = false;
   private mapGpuSuspendPending: Promise<boolean> | null = null;
@@ -970,7 +974,7 @@ export class ThreeRenderer implements GameRenderer {
   private rebuildIfArtLanded(): void {
     if (this.disposed) return;
     const w = this.world;
-    if (this.track && w && this.art.ok && w.builtAtFrame === this.frameCount && w.artKey !== this.artKey()) this.setTrack(this.track);
+    if (this.track && w && this.art.ok && w.builtAtFrame === this.frameCount && w.artKey !== this.artKey()) this.setTrack(this.track, { backdrop: this.trackBackdrop });
   }
 
   private prepared: Promise<void> | null = null;
@@ -1235,6 +1239,19 @@ export class ThreeRenderer implements GameRenderer {
       if (stale()) return;
       const world = this.world;
       if (!world) return;
+      if (world.courseAssets) {
+        await world.courseAssets.ready;
+        if (stale() || this.world !== world) return;
+        const assets = world.courseAssets.root;
+        harmonizeUv1(assets);
+        if (this.tier === 'low') shrinkTextures(assets, 512, 256);
+        assets.updateMatrixWorld(true);
+        assets.traverse(o => { o.matrixAutoUpdate = false; });
+        world.textureBytes += world.courseAssets.textureBytes - world.courseAssetTextureBytes;
+        world.courseAssetTextureBytes = world.courseAssets.textureBytes;
+        // Late assets need the same program/shadow and Garage rules as built batches.
+        this.applyTierVisibility();
+      }
       const mats = this.collectMaterials(world.group);
       st.materials = mats.length;
       // 1. Textures: `initTexture` uploads without a draw, ≤ 16 ms per task.
@@ -1304,8 +1321,9 @@ export class ThreeRenderer implements GameRenderer {
 
   // -- contract -------------------------------------------------------------
 
-  setTrack(track: CompiledTrack): void {
+  setTrack(track: CompiledTrack, options: { backdrop?: boolean } = {}): void {
     if (this.disposed) return;
+    this.trackBackdrop = options.backdrop ?? false;
     this.clearWorld();
     this.track = track;
     const biome = biomeFor(track.def.meta?.biome);
@@ -1364,7 +1382,7 @@ export class ThreeRenderer implements GameRenderer {
     const ribbons = buildRideSurfaces(track, this.biome, this.lib);
     const obstacles = buildObstacles(track, this.lib);
     const gates = buildGates(track, this.biome, this.lib, art);
-    const kit = buildBiomeKit(track, this.biome, this.lib, art, this.tier);
+    const kit = buildBiomeKit(track, this.biome, this.lib, art, this.tier, !this.trackBackdrop);
     group.add(ribbons.group, ribbons.supports, obstacles.group, gates.group, kit.group);
     // One program variant for the whole world: every standard material gets the full map set.
     group.traverse((o) => {
@@ -1392,6 +1410,8 @@ export class ThreeRenderer implements GameRenderer {
     this.applyTierVisibility();
     this.world = {
       group,
+      courseAssets: kit.courseAssets,
+      courseAssetTextureBytes: 0,
       obstacles,
       gates,
       flicker: kit.flicker,
@@ -2224,6 +2244,9 @@ export class ThreeRenderer implements GameRenderer {
     /** Ask 50: hero document loads (fetch / parse / prepare ms per file) and hero swaps (build ms, first-frame ms, programs + textures added in it). */
     heroSwap: { loads: typeof heroLoads; swaps: ThreeRenderer['heroSwaps'] };
     entering: boolean;
+    courseAssetsEnabled: boolean;
+    courseAssetsMounted: number;
+    courseAssetsTextureMB: number;
     retirement: ResourceRetirement['stats'];
     terminalPrograms: ThreeRenderer['terminalPrograms'];
     art: { settled: boolean; ok: boolean; loadMs: number; deliveredMB: number; inWorld: boolean; trackComplete: boolean; trackIds: number; builtAtFrame: number; frames: number };
@@ -2279,6 +2302,9 @@ export class ThreeRenderer implements GameRenderer {
       entry: this.entryStats,
       heroSwap: { loads: heroLoads, swaps: this.heroSwaps },
       entering: this.entering,
+      courseAssetsEnabled: !!this.world?.courseAssets,
+      courseAssetsMounted: this.world?.courseAssets?.root.children.length ?? 0,
+      courseAssetsTextureMB: +((this.world?.courseAssetTextureBytes ?? 0) / 1048576).toFixed(3),
       retirement: { ...this.retirement.stats },
       terminalPrograms: { ...this.terminalPrograms },
       art: { settled: this.art.settled, ok: this.art.ok, loadMs: Math.round(this.art.loadMs), deliveredMB: +(this.art.bytesDelivered / (1024 * 1024)).toFixed(2), inWorld: this.world?.withArt ?? false, trackComplete: this.art.requested(this.artIds), trackIds: this.artIds.length, builtAtFrame: this.world?.builtAtFrame ?? -1, frames: this.frameCount },
@@ -2357,11 +2383,16 @@ export class ThreeRenderer implements GameRenderer {
     this.sceneEpoch++;
     const w = this.world;
     if (!w) return;
+    w.courseAssets?.cancel();
     this.scene.remove(w.group);
     this.world = null;
     this.stageHidden.clear(); // garage round: the meshes the stage hid go with the world (the new world is hidden afresh in setTrack)
-    const owned = this.collectMaterials(w.group).filter((material) => !material.name);
-    this.retirement.retire(materialPrograms(this.renderer, owned), () => w.group.traverse((o) => {
+    const assetMaterials = new Set(w.courseAssets ? this.collectMaterials(w.courseAssets.root) : []);
+    const owned = this.collectMaterials(w.group).filter(material => !material.name || assetMaterials.has(material));
+    this.retirement.retire(materialPrograms(this.renderer, owned), () => {
+      // Authored ownership includes named GLB materials and embedded textures.
+      w.courseAssets?.dispose();
+      w.group.traverse((o) => {
       const m = o as THREE.Mesh;
       if (m.geometry) m.geometry.dispose();
       const mats = Array.isArray(m.material) ? m.material : m.material ? [m.material] : [];
@@ -2374,7 +2405,8 @@ export class ThreeRenderer implements GameRenderer {
           (mat as THREE.Material).dispose();
         }
       }
-    }));
+      });
+    });
   }
 }
 

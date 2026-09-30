@@ -73,6 +73,16 @@ describe('declared byte totals', () => {
     expect(() => declaredBootTotals(key => key === 'models/bike-pro.glb' ? 0 : 10, emptyPackBytes())).toThrow('models/bike-pro.glb');
   });
 
+  it('counts course models and maps up front without counting heroes or source records twice', () => {
+    expect(offlinePackBytes([
+      ['models/bike-rookie.glb', 900],
+      ['models/c1-harbor-tug.glb', 100],
+      ['models/c1-harbor-tug-lod.glb', 40],
+      ['models/course-kits/forest/bark.phone.webp', 20],
+      ['models/course-kits/forest/source.json', 800],
+    ])).toEqual({ '1x': 160, '2x': 160 });
+  });
+
   it('has an all-zero shape for the build before the catalog is read', () => {
     expect(emptyBootTotals()).toEqual({ heroModels: 0, bootArt: 0, offlinePack: { '1x': 0, '2x': 0 } });
   });

@@ -51,7 +51,7 @@ const SHELL_CRITICAL = ['./index.html', './offline.html', './manifest.webmanifes
 /** Nice to have at install; absent in the harness's `art=absent` configuration, so never fatal. */
 const SHELL_OPTIONAL = ['./art/icons/apple-touch-icon.png', './art/icons/favicon.svg', './art/icons/favicon-32.png', './art/icons/icon-192.png', './art/icons/icon-maskable-192.png'];
 
-const IMMUTABLE_RE = /\/assets\/.+-[\w-]{8}\.\w+$|\/models\/[a-f0-9]{16}\/[\w-]+-[a-f0-9]{16}\.glb$/;
+const IMMUTABLE_RE = /\/assets\/.+-[\w-]{8}\.\w+$|\/models\/(?:[\w-]+\/)*[a-f0-9]{16}\/[\w.-]+-[a-f0-9]{16}\.(?:glb|webp|png|jpe?g|avif|ktx2)$/;
 const STATIC_RE = /\/fonts\/|\/art\/|\/models\//;
 /** A music cue: `/audio/<cue>-<8 hex>.m4a`; group 1 is the cue, the part two builds of the same cue share. */
 const AUDIO_RE = /\/audio\/([\w-]+)-[a-f0-9]{8}\.m4a$/;

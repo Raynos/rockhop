@@ -15,7 +15,9 @@ class EntryRenderer implements GameRenderer {
   resolve: (() => void) | null = null;
   private pending: Promise<void> = Promise.resolve();
   info: RunInfo | null = null;
-  setTrack(_t: CompiledTrack): void {
+  trackOptions: ({ backdrop?: boolean } | undefined)[] = [];
+  setTrack(_t: CompiledTrack, options?: { backdrop?: boolean }): void {
+    this.trackOptions.push(options);
     this.entering = true;
     this.pending = new Promise<void>((res) => (this.resolve = res));
   }
@@ -54,6 +56,18 @@ const flush = (): Promise<void> => new Promise((r) => setTimeout(r, 0));
 const types = (events: GameEvent[]): string[] => events.map((e) => (e.type === 'countdown' ? `countdown${e.n}` : e.type));
 
 describe('track entry hold', () => {
+  it('keeps authored scenery out of a menu bike reload, then enables it for a ride', () => {
+    const renderer = new EntryRenderer();
+    const game = new Game({ physics: new MockPhysics(120), renderer });
+    game.loadTrack('c1-low-tide', undefined, 'rookie', { backdrop: true });
+    game.toMenu();
+    game.setBike('pro');
+    game.startRun();
+    expect(renderer.trackOptions).toEqual([{ backdrop: true }, { backdrop: true }]);
+    game.loadTrack('c1-low-tide', undefined, 'pro');
+    expect(renderer.trackOptions.at(-1)).toBeUndefined();
+  });
+
   it('holds the countdown while the renderer is entering, releases it with the 3 on whenReady()', async () => {
     const renderer = new EntryRenderer();
     const game = new Game({ physics: new MockPhysics(120), renderer });

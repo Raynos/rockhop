@@ -13,6 +13,8 @@ import { describe, expect, it } from 'vitest';
 import { offlinePackUrls } from './offline-pack';
 import { OFFLINE_PACK_BYTES, PUBLIC_BYTES } from './plan.generated';
 import { ArtManifest } from '../ui/art';
+import { MODEL_ASSETS, MODEL_RESOURCES } from '../render/hero/models.generated';
+import { HERO_FILE_SET } from './asset-totals';
 
 const raw = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public/art/manifest.json'), 'utf8')) as { assets: { id: string; path: string }[] };
 const art = ArtManifest.from(raw);
@@ -21,12 +23,24 @@ const table = PUBLIC_BYTES as Readonly<Record<string, number>>;
 
 /** A pack URL → its key in the build's byte table (the `?v=` the manifest adds is not part of the key). */
 function tableKey(url: string): string {
+  const logical = Object.entries({ ...MODEL_ASSETS, ...MODEL_RESOURCES }).find(([, a]) => a.url === url)?.[0];
+  if (logical) return logical;
   const clean = url.split('?')[0]!;
   const e = art.all().find((a) => a.src === url);
   return `art:${e?.id ?? clean}`;
 }
 
 describe('the offline pack (ask 59: one tier, no link-preview card)', () => {
+  it('warms every authored course model/map once without duplicating hero downloads', () => {
+    const heroes = new Set<string>(HERO_FILE_SET);
+    const picked = new Map(urls);
+    for (const [logical, asset] of Object.entries({ ...MODEL_ASSETS, ...MODEL_RESOURCES })) {
+      if (heroes.has(logical)) expect(picked.has(asset.url)).toBe(false);
+      else expect(picked.get(asset.url), logical).toBe(asset.bytes);
+    }
+    expect(picked.size).toBe(urls.length);
+  });
+
   it('fetches exactly the bytes the DOWNLOAD denominator declares for this device', () => {
     const summed = urls.reduce((n, [u]) => n + (table[tableKey(u)] ?? 0), 0);
     for (const [u] of urls) expect(table[tableKey(u)], `${u} is fetched but not in the byte table`).toBeGreaterThan(0);

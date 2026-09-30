@@ -21,6 +21,16 @@ export const MODEL_ASSETS = {
     "bytes": 2283036,
     "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
   },
+  "models/c1-harbor-tug-lod.glb": {
+    "url": "models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+    "bytes": 213636,
+    "sha256": "bf0bddee9b84ea3c0bafb48b23c766db66e4eb08b7dfac77667684d23ab41b24"
+  },
+  "models/c1-harbor-tug.glb": {
+    "url": "models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+    "bytes": 274268,
+    "sha256": "b55802fbb49b8732fffb251687a3bf18104c5dfe41ac4e38234f08b3a49fedab"
+  },
   "models/rider-race-bluewhite-lod.glb": {
     "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
     "bytes": 946824,
@@ -72,3 +82,4 @@ export const MODEL_ASSETS = {
     "sha256": "a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998"
   }
 } as const;
+export const MODEL_RESOURCES = {} as const;

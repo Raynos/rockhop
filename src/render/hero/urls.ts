@@ -8,7 +8,7 @@
  * (`rider-{street,openface,race}.glb` + `bike.glb`, palettes by variant) was retired in round 5.
  */
 import type { BikeClass, RiderOutfit } from '../../core/types';
-import { MODEL_ASSETS } from './models.generated';
+import { MODEL_ASSETS, MODEL_RESOURCES } from './models.generated';
 
 export const HERO = {
   rider: {
@@ -35,6 +35,14 @@ export function modelAssetUrl(logicalPath: string): string {
   const asset = MODEL_ASSETS[logicalPath as keyof typeof MODEL_ASSETS];
   if (!asset) throw new Error(`No generated model asset for ${logicalPath}`);
   return asset.url;
+}
+
+/** External authored-course maps use the same immutable byte snapshot contract. */
+export function modelResourceUrl(logicalPath: string): string {
+  const resources: Readonly<Record<string, { url: string }>> = MODEL_RESOURCES;
+  const resource = resources[logicalPath];
+  if (!resource) throw new Error(`No generated model resource for ${logicalPath}`);
+  return resource.url;
 }
 
 /** The compiled byte size of a logical model (the twin's `after` total in src/render/index.ts). */

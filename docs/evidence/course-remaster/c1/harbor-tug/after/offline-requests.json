@@ -1,0 +1,127 @@
+{
+  "sha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+  "menuReady": {
+    "menuShown": true,
+    "loader": null
+  },
+  "menu": {
+    "xhr": [],
+    "fetch": [
+      "models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+      "models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb"
+    ],
+    "fetchKind": [
+      "string",
+      "string"
+    ],
+    "fetchStack": [
+      "Error\n    at window.fetch (<anonymous>:2:798)\n    at streamBytes (http://127.0.0.1:48767/assets/index-Denvr2mj.js:1931:53816)\n    at pull (http://127.0.0.1:48767/assets/index-Denvr2mj.js:1947:11756)\n    at async Promise.all (index 0)\n    at async http://127.0.0.1:48767/assets/index-Denvr2mj.js:1947:11812\n    at async R (http://127.0.0.1:48767/:164:2608)\n    at async Object.step (http://127.0.0.1:48767/:164:2805)\n    at async bootFront (http://127.0.0.1:48767/assets/index-Denvr2mj.js:1947:11509)",
+      "Error\n    at window.fetch (<anonymous>:2:798)\n    at streamBytes (http://127.0.0.1:48767/assets/index-Denvr2mj.js:1931:53816)\n    at pull (http://127.0.0.1:48767/assets/index-Denvr2mj.js:1947:11756)\n    at async Promise.all (index 1)\n    at async http://127.0.0.1:48767/assets/index-Denvr2mj.js:1947:11812\n    at async R (http://127.0.0.1:48767/:164:2608)\n    at async Object.step (http://127.0.0.1:48767/:164:2805)\n    at async bootFront (http://127.0.0.1:48767/assets/index-Denvr2mj.js:1947:11509)"
+    ],
+    "resources": [
+      "http://127.0.0.1:48767/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+      "http://127.0.0.1:48767/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb"
+    ],
+    "title": "ROCKHOP",
+    "hasCanvas": true
+  },
+  "harnessBefore": {
+    "xhr": [],
+    "fetch": [],
+    "fetchKind": []
+  },
+  "harnessAfter": {
+    "xhr": [],
+    "fetch": [
+      "http://127.0.0.1:48767/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+      "http://127.0.0.1:48767/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb"
+    ],
+    "fetchKind": [
+      "Request",
+      "Request"
+    ],
+    "fetchStack": [
+      "Error\n    at window.fetch (<anonymous>:2:798)\n    at On.load (http://127.0.0.1:48767/assets/three-eJZiNNgZ.js:5:34364)\n    at GLTFLoader.load (http://127.0.0.1:48767/assets/index-Denvr2mj.js:101:31647)\n    at http://127.0.0.1:48767/assets/three-eJZiNNgZ.js:5:33168\n    at new Promise (<anonymous>)\n    at GLTFLoader.loadAsync (http://127.0.0.1:48767/assets/three-eJZiNNgZ.js:5:33140)\n    at loadC1Harbor (http://127.0.0.1:48767/assets/index-Denvr2mj.js:894:845)\n    at buildBiomeKit (http://127.0.0.1:48767/assets/index-Denvr2mj.js:894:25230)\n    at ThreeRenderer.setTrack (http://127.0.0.1:48767/assets/index-Denvr2mj.js:920:104717)\n    at Game.loadTrack (http://127.0.0.1:48767/assets/index-Denvr2mj.js:920:138726)",
+      "Error\n    at window.fetch (<anonymous>:2:798)\n    at On.load (http://127.0.0.1:48767/assets/three-eJZiNNgZ.js:5:34364)\n    at GLTFLoader.load (http://127.0.0.1:48767/assets/index-Denvr2mj.js:101:31647)\n    at http://127.0.0.1:48767/assets/three-eJZiNNgZ.js:5:33168\n    at new Promise (<anonymous>)\n    at GLTFLoader.loadAsync (http://127.0.0.1:48767/assets/three-eJZiNNgZ.js:5:33140)\n    at loadC1Harbor (http://127.0.0.1:48767/assets/index-Denvr2mj.js:894:845)\n    at buildBiomeKit (http://127.0.0.1:48767/assets/index-Denvr2mj.js:894:25230)\n    at ThreeRenderer.setTrack (http://127.0.0.1:48767/assets/index-Denvr2mj.js:920:104717)\n    at ThreeRenderer.rebuildIfArtLanded (http://127.0.0.1:48767/assets/index-Denvr2mj.js:920:95788)"
+    ],
+    "resources": [
+      "http://127.0.0.1:48767/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+      "http://127.0.0.1:48767/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb"
+    ]
+  },
+  "loaded": {
+    "stats": {
+      "calls": 533,
+      "triangles": 629954,
+      "points": 6656,
+      "lines": 0,
+      "geometries": 226,
+      "textures": 59,
+      "programs": 30,
+      "texturesMB": 36.57746940612791,
+      "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "contextKind": "webgl2"
+    },
+    "info": {
+      "version": "0.2.2-core",
+      "physicsHz": 120,
+      "trackId": "c1-low-tide",
+      "seed": 1,
+      "bike": "rookie",
+      "harness": true,
+      "readyAtMs": 102.7,
+      "loadTrackMs": 148.9,
+      "lastRender": {
+        "prepMs": 0,
+        "hudMs": 0,
+        "audioMs": 0,
+        "submitMs": 0,
+        "syncMs": 0
+      },
+      "render": {
+        "biome": "coast",
+        "zoom": "idle",
+        "phase": "menu",
+        "tier": "high",
+        "dpr": 1,
+        "devicePixelRatio": 1,
+        "canvasW": 852,
+        "canvasH": 392,
+        "calls": 533,
+        "tris": 629954,
+        "rtMpx": 6.42,
+        "rtMB": 50.9,
+        "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+        "shadowMap": 2048,
+        "heroTris": 92170,
+        "heroDoc": "bike rider",
+        "riderOutfit": "street-mustard",
+        "riderMaterialVariant": null,
+        "heroShadow": "world",
+        "trackCalls": 13,
+        "trackTris": 70328,
+        "textureGenMs": 0,
+        "passes": 19,
+        "stalePrograms": 3,
+        "skippedFrames": 0,
+        "deviceClass": "desktop",
+        "profile": "high",
+        "bloomers": 0,
+        "entryMs": 299.6,
+        "entering": false
+      },
+      "qualityWhy": "",
+      "quality": "high",
+      "entryHold": false,
+      "modules": {
+        "physics": "createBikePhysics",
+        "render": "ThreeRenderer",
+        "audio": "WebAudioSystem",
+        "rider": "gltf",
+        "bike": "gltf"
+      }
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,75 @@
+{
+  "sourceVersion": {
+    "build": "701e58bd",
+    "sha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "time": "2026-09-30T09:07:23.425Z"
+  },
+  "indexJs": "index-Denvr2mj.js",
+  "indexSha256": "bae7b8be3ab4f9b87d139065843dc1c7caad50351f256689ec1bc057d1ccb3d7",
+  "sourceLimit": "Shared dirty tree at HEAD 701e58bd; includes uncommitted hero/audio and non-mounted Alpine catalog candidate. No clean-source or physical-device claim.",
+  "cachedTugUrls": [
+    "/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+    "/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb"
+  ],
+  "tugEntries": 2,
+  "allChecks": [
+    {
+      "id": "offline.cacheAfterFirstLoad",
+      "pass": true,
+      "value": "147 entries \u00b7 32 models \u00b7 40.00 MB",
+      "note": "need \u2265 14 models, \u2265 5 assets+fonts, \u2265 27 MB; wire 36.90 MB"
+    },
+    {
+      "id": "offline.coldStartPlayable",
+      "pass": true,
+      "value": "100/100 done=true in 22156 ms",
+      "note": "0 origin requests, transferSize 0, workerStart 1.17 ms, crossOriginIsolated true"
+    },
+    {
+      "id": "offline.firstFrame",
+      "pass": true,
+      "value": "canvas / context"
+    },
+    {
+      "id": "offline.worldMapDraws",
+      "pass": true,
+      "value": "tracks: 3D canvas ready, 12/12 levels, ride ready, failure false",
+      "note": "need the shipped 3D island canvas and all twelve level choices with the origin unreachable"
+    },
+    {
+      "id": "offline.inboxQueues",
+      "pass": true,
+      "value": "POST /api/inbox \u2192 TypeError: Failed to fetch",
+      "note": "the worker bypasses /api/; the queue itself is src/ui/inbox.ts NoteQueue (unit-tested)"
+    },
+    {
+      "id": "offline.garageSwapsOffline",
+      "pass": true,
+      "value": "10/10 combinations",
+      "note": "Pro locked\u2192bought PASS (1,980\u2192140 Scrap); 0 failed /models/ requests"
+    },
+    {
+      "id": "offline.rideFinishes",
+      "pass": true,
+      "value": "30.3500 s \u00b7 2bfe061963ff",
+      "note": "online 30.3500 \u00b7 2bfe061963ff"
+    },
+    {
+      "id": "offline.noPageErrors",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "id": "offline.slowStart",
+      "pass": true,
+      "value": "22670 ms at 50 kbps / 400 ms RTT",
+      "note": "offline was 22156 ms; limit \u00d71.6 = 35450 ms; 103 B over the wire"
+    },
+    {
+      "id": "offline.updateSurvives",
+      "pass": true,
+      "value": "32 models kept \u00b7 50.3 KB re-fetched",
+      "note": "0 B of models off the wire (must be 0); loader 100/100"
+    }
+  ]
+}

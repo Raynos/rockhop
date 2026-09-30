@@ -20,6 +20,8 @@
 
 **Pro capability round:** [Measured package and replay evidence](../evidence/course-remaster/pro-envelope/README.md) gives Pro 23 m/s speed, longer suspension and better snow grip with Rookie unchanged. All 24 shipping reference rides clear; 24/24 fresh-browser Pro checks match Node, and held GO clears 0/72. These proofs support the earned-bike role, while the integrated Metal partial boot/clear/crash/restart gate passes 14/14. The Node CPU timing gate, medal calibration, full release check and physical-phone play remain open. Courses remain **0/12** signed off.
 
+**Authored C1 model delivery:** The [working tug](../evidence/course-remaster/c1/harbor-tug/README.md) passes matched played review as a bounded asset improvement. Its full/LOD bytes now cache during the first loader, while real course entry owns decode, warm-up, fallback and teardown. The complete offline suite passes 10/10 on the shared candidate; phone performance and complete Coast art remain open. Courses stay **0/12**.
+
 **In-ride performance readout:** A small tappable FPS/frame-time pill on every course opens the detailed debug panel. The [silent landscape phone and desktop interaction gate](../../harness/e2e/perf-panel.mts) passed; software-renderer numbers are not physical-device performance evidence.
 
 **Remaster progress (ask 199):** Full-plan effort is estimated at **20–25%**, graphics effort at **5–10%**, and fully signed-off courses remain **0/12**. These planning estimates separate implemented foundations from course acceptance. The [four before/after boards](../evidence/course-remaster/progress-board-2026-09-30/README.md) cover all twelve using archived played captures; differing render tiers and unchanged art are labelled.

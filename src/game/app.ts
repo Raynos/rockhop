@@ -919,7 +919,7 @@ export class App {
     const vol = this.soundOn ? this.volume : 0;
     this.audio?.setMasterVolume(0);
     if (!fresh && this.game.currentTrack?.id === id) this.game.startRun();
-    else this.game.loadTrack(id);
+    else this.game.loadTrack(id, undefined, undefined, { backdrop: true });
     this.game.toMenu();
     this.hud.hideNow(); // no HUD frame (timer, "3" banner) under the menu
     setTimeout(() => this.audio?.setMasterVolume(vol), 60);

@@ -222,6 +222,7 @@ export class Game {
   private bike: BikeClass = DEFAULT_BIKE;
   /** The class the physics was last loaded with; a menu-phase `setBike` may leave it behind until the next arm. */
   private loadedBike: BikeClass = DEFAULT_BIKE;
+  private loadedBackdrop = false;
   /** `?perf=1`: time each physics step (µs) for the overlay. Off by default — no per-tick `performance.now`. */
   perfTiming = false;
   readonly physicsUs = new Percentiles(240);
@@ -370,7 +371,7 @@ export class Game {
     this.bike = bike;
     if (!this.track) return;
     if (this.phaseValue === 'countdown') {
-      this.loadTrack(this.track.id, this.seed);
+      this.loadTrack(this.track.id, this.seed, undefined, { backdrop: this.loadedBackdrop });
     } else if (this.phaseValue === 'menu') {
       // Garage preview (ask 29): nothing ticks under the menus, so the physics row waits for the next arm
       // (`startRun` / `loadTrack` reload it when the class moved). Only the hero's livery and the engine
@@ -381,7 +382,7 @@ export class Game {
     }
   }
 
-  loadTrack(id: string = DEFAULT_TRACK_ID, seed?: number, bike?: BikeClass): boolean {
+  loadTrack(id: string = DEFAULT_TRACK_ID, seed?: number, bike?: BikeClass, options?: { backdrop?: boolean }): boolean {
     const track = getTrack(id);
     if (!track) return false;
     const t0 = performance.now();
@@ -392,7 +393,8 @@ export class Game {
     this.compiled = compiled;
     this.physics.loadTrack(compiled, this.seed, { bike: this.bike });
     this.loadedBike = this.bike;
-    this.renderer.setTrack(compiled);
+    this.loadedBackdrop = options?.backdrop ?? false;
+    this.renderer.setTrack(compiled, options);
     // CONTRACT §2.7 `setBikeClass` (render round 11): the hero wears the class livery on every load path —
     // garage preview (`setBike` reload), track launch, `hook.setBike`, a replay's `header.bike`. Optional: a
     // renderer without it keeps the default livery and the garage card tint carries the colour.
@@ -449,7 +451,7 @@ export class Game {
     if (!this.track) return;
     if (this.loadedBike !== this.bike) {
       // A garage preview moved the class while the menu was up: the physics row is loaded now, not then.
-      this.loadTrack(this.track.id, this.seed);
+      this.loadTrack(this.track.id, this.seed, undefined, { backdrop: this.loadedBackdrop });
       return;
     }
     this.physics.reset(-1);
