@@ -11,6 +11,21 @@
 
 The [twelve-course before/after board](../evidence/course-remaster/progress-board-2026-09-30/README.md) shows unchanged frames from the saved start-of-remaster baseline and the accepted art captures. It exposes the limited visual delta, including unchanged D3 scenery and S3 cue-only work. The capture tiers differ; the board records this limit and exact video/frame provenance. Re-estimate effort when a complete biome exemplar passes, rather than incrementing it for every small patch.
 
+## Remaining-time estimate · 2026-09-30
+
+**Provisional: 5–10 focused working days of implementation/art iteration,
+plus physical-phone and fresh-player testing. Confidence is low.** This is
+a scheduling estimate, not measured completion velocity or a promise.
+Re-estimate after one whole biome exemplar passes its moving art and
+performance checks; none has passed the complete course bar yet.
+
+The remaining work is four coherent biome standards and twelve distinct
+landmark/skill arcs, parent full-ride/fault judgement, human difficulty and
+medal calibration, career/reward/replay integration, and device pacing/
+recovery. Human availability can extend the schedule. App-store account and
+publication lead times belong to FINISH_TO_PUBLISH rather than this estimate.
+Prepared source kits do not advance the signed-off course count.
+
 ## Starting point and target
 
 The user played all twelve earlier courses and found that holding GO could clear them. The first [mechanical challenge pass](../evidence/campaign-retarget/README.md) now gives **0/72 held-GO clears** across both bikes and three seeds. [Twenty-four clean reference rides](../evidence/campaign-medal-audit/README.md) cover both bikes on every course. A [briefed blind CLI audit](../evidence/stranger-2026-09-29/README.md) cleared all twelve in fifteen sessions and verified exact Node and two-browser replays. These are useful baselines, not a verdict on real-time touch difficulty, visual quality or replay appeal.
