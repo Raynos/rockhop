@@ -27,8 +27,9 @@ import { loadRecording, recordingHeader, saveRecording } from '../lib/recording'
 import { fail, writeJson } from '../lib/report';
 import type { ReflexDeath, ReflexRunReport, ReflexSkill, ReflexTrackMetrics } from '../lib/schema';
 import { defaultJobs, loadLine, runWorkerLoop, WorkerPool } from '../lib/pool';
-import { createSim, listSimTracks, parseBike, type Sim } from '../lib/sim';
+import { createSim, listSimTracks, type Sim } from '../lib/sim';
 import { DEFAULT_BIKE, type BikeClass } from '../../src/core/types';
+import { reflexBikesForTrack } from '../stranger/bike';
 import { BrowserVerifier } from '../lib/verify';
 import { ReflexBrowser } from './browser';
 import { SKILLS, type SkillName } from './controller';
@@ -430,10 +431,11 @@ async function main(): Promise<void> {
     return;
   }
   const bikeFlag = flags.bike;
-  const bikes: BikeClass[] = bikeFlag === 'both' || bikeFlag === 'rookie,pro' ? ['rookie', 'pro'] : [parseBike(bikeFlag)];
   if (flagBool(flags, 'all-tracks')) {
     const only = typeof flags.tracks === 'string' ? flags.tracks.split(',') : null;
     const ids = listSimTracks().filter((id) => !only || only.includes(id));
+    const bikes: BikeClass[] = bikeFlag === undefined ? ['rookie', 'pro'] : reflexBikesForTrack('', bikeFlag);
+    const idsForBike = (bike: BikeClass): string[] => ids.filter((id) => reflexBikesForTrack(id, bikeFlag).includes(bike));
     // Round 10 (tracks r8 request d): the 3-seed medians on e2 / e3 / m1 / m3 move 3x under identical geometry;
     // `--noisy a,b,c` runs those tracks on `--noisy-seeds` (9) seeds while the rest keep `--seeds`.
     const noisy = new Set(typeof flags.noisy === 'string' ? flags.noisy.split(',').map((x) => x.trim()) : []);
@@ -452,7 +454,7 @@ async function main(): Promise<void> {
     const cells: ReflexJob[] = [];
     const probes = new Map<string, Sim>();
     for (const bike of bikes) {
-      for (const id of ids) {
+      for (const id of idsForBike(bike)) {
         const probe = await createSim(id, undefined, undefined, { bike });
         probes.set(`${bike}/${id}`, probe);
         const baseSeed = flags.seed !== undefined ? flagNum(flags, 'seed', probe.seed) : probe.seed;
@@ -468,7 +470,7 @@ async function main(): Promise<void> {
     const reportOf = (c: ReflexJob): ReflexRunReport => reports[cellIndex.get(c)!]!;
     const metricsByBikeTrack = new Map<string, ReflexTrackMetrics>();
     for (const bike of bikes) {
-      for (const id of ids) {
+      for (const id of idsForBike(bike)) {
         const bySkill = new Map<SkillName, ReflexRunReport[]>();
         for (const sk of skillList) bySkill.set(sk, cells.filter((c) => c.opts.bike === bike && c.trackId === id && c.skill === sk).map(reportOf));
         metricsByBikeTrack.set(`${bike}/${id}`, updateTrackMetrics(probes.get(`${bike}/${id}`)!, bySkill));
@@ -476,7 +478,8 @@ async function main(): Promise<void> {
     }
     for (const bike of bikes) {
       for (const sk of skillList) {
-        const rows = ids.map((id) => metricsByBikeTrack.get(`${bike}/${id}`)!);
+        const rows = idsForBike(bike).map((id) => metricsByBikeTrack.get(`${bike}/${id}`)!);
+        if (rows.length === 0) continue;
         const runsWallS = cells.filter((c) => c.opts.bike === bike && c.skill === sk).reduce((a, c) => a + reportOf(c).wallMs, 0) / 1000;
         sections.push(
           [
@@ -509,7 +512,8 @@ async function main(): Promise<void> {
   const trackId = positional[0];
   if (!trackId) fail('usage: harness/reflex/reflex.ts <trackId> [--skill novice|average|good] [--seeds N] [--attempts-cap 50] [--browser N] | --all-tracks | --calibrate');
   const skills: SkillName[] = flagBool(flags, 'all-skills') ? ['novice', 'average', 'good'] : [skill];
-  const bike = bikes.length === 1 ? bikes[0]! : fail('--bike both is for --all-tracks; pick rookie or pro for one track');
+  const launchBikes = reflexBikesForTrack(trackId, bikeFlag);
+  const bike = launchBikes.length === 1 ? launchBikes[0]! : fail('--bike both is for --all-tracks; pick rookie or pro for one track');
   const { metrics } = await runTrack(trackId, skills, seeds, flags, bike);
   console.log(`\n${tableMarkdown([metrics], skills[0]!)}`);
   console.log(`metrics: ${path.relative(process.cwd(), reflexMetricsFile(trackId, bike))} ${metrics.bySkill.map((s) => `${s.skill}:${s.medianAttempts}`).join(' ')}${metrics.browser ? ` browser:${metrics.browser.medianAttempts} (fps ${metrics.browser.fps.map((f) => f.toFixed(0)).join('/')}, roundTrip ${metrics.browser.roundTrips.every(Boolean) ? 'all' : 'SOME FAIL'})` : ''}`);

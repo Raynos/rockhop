@@ -59,7 +59,7 @@ import { deviceChecks } from './device-rows';
 export const THRESHOLDS_FILE = path.join(HARNESS_DIR, 'gate', 'thresholds.json');
 export type Thresholds = Record<string, number | boolean | string>;
 const METRICS_DIR = path.join(HARNESS_DIR, 'out', 'metrics');
-const CAMPAIGN_TRACK_IDS = ROCKHOP_TRACKS.map((track) => track.id);
+const CAMPAIGN_TRACK_IDS: readonly string[] = ROCKHOP_TRACKS.map((track) => track.id);
 /** Career bike, derived from the shipped order rather than a retired tier label. */
 export function campaignBikeForTrack(trackId: string): BikeClass {
   const index = CAMPAIGN_TRACK_IDS.indexOf(trackId);
