@@ -14,10 +14,10 @@ Rules
 - Never archive by copying; never archive scratch (`harness/out`, scratchpads are not in the repo).
 
 Contents
-- `unknown-model-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md` — merged into the active twelve-course remaster on 2026-09-30; its Rookie-clear-all premise is superseded.
-- `unknown-model-2026-09-28-REMASTER_CURRENT_ROUND.md` — user-retired session checklist, superseded 2026-09-30 by the active twelve-course and unified release plans; old both-bike requirement is obsolete.
-- `unknown-model-2026-09-27-IOS_APP_STORE_FINISH.md` and `unknown-model-2026-09-22-STORE_RELEASE.md` — superseded 2026-09-29 by `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`; open release work was merged, not marked complete.
-- `unknown-model-2026-09-16-RIDING_POSES.md` and `unknown-model-2026-09-15-PERF-BACKLOG.md` — retired at the user’s request 2026-09-29; unresolved motion/art and current-device performance requirements continue in the unified plan.
+- `sol-6-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md` — merged into the active twelve-course remaster on 2026-09-30; its Rookie-clear-all premise is superseded.
+- `sol-6-2026-09-28-REMASTER_CURRENT_ROUND.md` — user-retired session checklist, superseded 2026-09-30 by the active twelve-course and unified release plans; old both-bike requirement is obsolete.
+- `sol-6-2026-09-27-IOS_APP_STORE_FINISH.md` and `opus-5.5-2026-09-22-STORE_RELEASE.md` — superseded 2026-09-29 by `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`; open release work was merged, not marked complete.
+- `opus-5-2026-09-16-RIDING_POSES.md` and `opus-5-2026-09-15-PERF-BACKLOG.md` — retired at the user’s request 2026-09-29; unresolved motion/art and current-device performance requirements continue in the unified plan.
 - `VERCEL_BUILD_CPU.md` — Rockhop's prebuilt, hourly/manual release workflow, closed 2026-09-29 at `023c172d`; live deploy and no-change skip verified.
 - `PERF.md` — the perf plan, closed 2026-09-15 at cut #4b (`831e9c4`); the live remainder is `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`.
 - `physics-v2.md` — the physics v2 design, closed 2026-09-15 at tag `physics-v2-final` (R6); status lives on in `docs/design/physics.md`.

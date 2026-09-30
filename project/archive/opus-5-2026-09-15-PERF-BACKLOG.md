@@ -1,4 +1,4 @@
-**Retired: 2026-09-29 · retired at the user’s request; unresolved release requirements carried forward.** [Current plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). Consolidation baseline: `2199dff3`; this is not a game-completion claim. Model author unknown; filename date is first Git introduction.
+**Retired: 2026-09-29 · retired at the user’s request; unresolved release requirements carried forward.** [Current plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). Consolidation baseline: `2199dff3`; this is not a game-completion claim. Model attribution: `opus-5` from creation-commit Co-Authored-By trailer; no matching Codex creation record found; filename date is first Git introduction.
 
 # PERF backlog — the cuts `PERF.md` did not land
 

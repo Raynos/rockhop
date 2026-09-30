@@ -39,7 +39,7 @@ the 60-cap governor and the phone-high tier stand.
    (two bars, monotone, 100 at the end), missing-file recovery kept.
 2. **Rig binding.** Map the 19 bones / 26 sockets onto `riderRig.ts` and `riderBody.drawn`; grips and soles on the
    physics contact points, the 11 mm sole/peg offset resolved here or declared. The six clips are reference only —
-   the physical path drives the pose ([RIDING_POSES.md](unknown-model-2026-09-16-RIDING_POSES.md)).
+   the physical path drives the pose ([RIDING_POSES.md](opus-5-2026-09-16-RIDING_POSES.md)).
 3. **LOD and tiers.** A decimated LOD chain under `lod.ts` so low / medium / phone-high each fit their draw / tri /
    Mpx budgets; textures per tier (KTX2 on phones, RGBA8 desktop-high).
 4. **Garage first, level second.** The orbit garage (`src/render/world/garageStage.ts`) at 30 fps on the phone proxy, then b1 at the

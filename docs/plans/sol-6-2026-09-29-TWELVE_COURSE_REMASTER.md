@@ -1,7 +1,7 @@
-<!-- Naming: original model author unverified; date is first Git introduction. -->
+<!-- Naming: sol-6; verified from local Codex creation-turn metadata; date is first Git introduction. -->
 # Twelve-course gameplay and visual remaster
 
-**Status:** active · **0/12 courses fully signed off**. This is the execution plan for [finish-to-publish Gates 1–3](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). It absorbs the skill, economy and finish contracts from the [retired campaign brief](../../project/archive/unknown-model-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md). Mechanical baselines and bounded art passes are evidence, not completed courses.
+**Status:** active · **0/12 courses fully signed off**. This is the execution plan for [finish-to-publish Gates 1–3](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). It absorbs the skill, economy and finish contracts from the [retired campaign brief](../../project/archive/sol-6-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md). Mechanical baselines and bounded art passes are evidence, not completed courses.
 
 ## Starting point and target
 

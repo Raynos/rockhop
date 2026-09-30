@@ -1,6 +1,6 @@
 # Store release — round 1: three identities (mockups, nothing decided)
 
-Ask 95, plan [STORE_RELEASE.md](../../../../project/archive/unknown-model-2026-09-22-STORE_RELEASE.md) Phases 1–2. Same game, new expression: name,
+Ask 95, plan [STORE_RELEASE.md](../../../../project/archive/opus-5.5-2026-09-22-STORE_RELEASE.md) Phases 1–2. Same game, new expression: name,
 palette, HUD, words, zones. **The user picks; no game code changed.** Names are *placeholder candidates*, not yet
 checked against stores or trademarks (R1 does that).
 

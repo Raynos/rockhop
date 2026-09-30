@@ -1,6 +1,6 @@
 # Store release — round 2: ROCKHOP quarry, harbour home, icon, feature graphic (mockups, the user picks)
 
-Ask 98 after round 1's picks (D17–D22 in [STORE_RELEASE.md](../../../../project/archive/unknown-model-2026-09-22-STORE_RELEASE.md)). Seven Codex
+Ask 98 after round 1's picks (D17–D22 in [STORE_RELEASE.md](../../../../project/archive/opus-5.5-2026-09-22-STORE_RELEASE.md)). Seven Codex
 `gpt-6-sol` image_gen runs in parallel, 80–249 s (`briefs/gen.sh`, `briefs/common.md` + one brief each). References:
 round 1's B-ride / B-ride-snow / C-ride for the quarry, C-menu + A-menu for the home screen, A-brand for the rest.
 

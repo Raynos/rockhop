@@ -4,8 +4,8 @@
 This is the single game-to-store release plan. It merges the former finish-to-publish, iOS finish and store-release
 plans; their snapshots are preserved in [the archive](../../project/archive/README.md). The user also retired the
 old riding-pose and performance plans; their unresolved release requirements are included here.
-The [twelve-course execution plan](unknown-model-2026-09-29-TWELVE_COURSE_REMASTER.md) owns course building; the [ranked quality findings](unknown-model-2026-09-27-GAME_REMASTER_TOP20.md)
-and [retired session record](../../project/archive/unknown-model-2026-09-28-REMASTER_CURRENT_ROUND.md) preserve earlier findings. The parent owns status and final judgment.
+The [twelve-course execution plan](sol-6-2026-09-29-TWELVE_COURSE_REMASTER.md) owns course building; the [ranked quality findings](sol-6-2026-09-27-GAME_REMASTER_TOP20.md)
+and [retired session record](../../project/archive/sol-6-2026-09-28-REMASTER_CURRENT_ROUND.md) preserve earlier findings. The parent owns status and final judgment.
 No estimate or passing bot result declares the game finished. Archive this plan only after all six gates and verified public launch.
 
 ## Product and decisions

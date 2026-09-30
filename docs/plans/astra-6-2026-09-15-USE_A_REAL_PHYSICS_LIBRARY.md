@@ -1,4 +1,4 @@
-<!-- Naming: model author unknown; date is first Git introduction, not last update. -->
+<!-- Naming: astra-6; source: local Codex creation-turn metadata. Date is first Git introduction, not last update. -->
 # Use a real physics library
 
 **Status: planned; implementation not started.** Requested by the user on 2026-09-15 to preserve the library-review recommendation as executable project work. Parent owns this plan and its row in [README.md](README.md).
