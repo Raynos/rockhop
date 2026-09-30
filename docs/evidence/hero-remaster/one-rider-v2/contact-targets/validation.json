@@ -1,0 +1,60 @@
+{
+  "status": "measured source geometry only; no rider contact gate or accepted runtime mappings",
+  "harnessTypecheck": "exit0",
+  "focusedLint": "exit0",
+  "sourceFiles": [
+    {
+      "file": "harness/hero-remaster/contact-targets/measure-grips.mts",
+      "sha256": "674ea2330c638a4438d0d1a0b74568ea9b453a0bc0e62bba2f3f86d3c5b81208"
+    },
+    {
+      "file": "harness/hero-remaster/contact-targets/fit-grips.mts",
+      "sha256": "7276480809091324b8aa792052a8fc43cffbc9c372d392463c3bd9ca505aba57"
+    },
+    {
+      "file": "harness/hero-remaster/contact-targets/source-types.mts",
+      "sha256": "89a283f2a44812c765f531b852c5aeca760656f35b045bf49955561fcd99a89c"
+    },
+    {
+      "file": "harness/hero-remaster/contact-targets/render-isolation.py",
+      "sha256": "ab06e91f14aced339320e61504f7601a11637c13afc84554fba3f9438f1c3f69"
+    },
+    {
+      "file": "harness/hero-remaster/contact-targets/compose-isolation.py",
+      "sha256": "b9b9d7112ad2a2d0e795d8621340bdbfb56ebe9a5e117ea44b14f042a9a915e9"
+    }
+  ],
+  "actualSourceAssets": [
+    {
+      "name": "bike-rookie.glb",
+      "sourceSHA256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+      "geometrySHA256": "d71bba425e45365b13f4fef9e617de6fae65bfa8173d4c56c8bbad57a97320a1",
+      "isolationSHA256": "7c776a0e25d8cd52d6aa5400c85887f06895764f6c7bc332af568fd0bace14ba"
+    },
+    {
+      "name": "bike-rookie-lod.glb",
+      "sourceSHA256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+      "geometrySHA256": "9cf05690517e592750af31ea9d1e0e35836bb1e9f5423ef3f8ddcccf8647137c",
+      "isolationSHA256": "0bc26a7b3f00c601bc15d83b856ca1c59492b00b4b497b53293b0e8d320462b5"
+    },
+    {
+      "name": "bike-pro.glb",
+      "sourceSHA256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86",
+      "geometrySHA256": "d71bba425e45365b13f4fef9e617de6fae65bfa8173d4c56c8bbad57a97320a1",
+      "isolationSHA256": "b394a0a2b41c4c09d9c3872221df2ba0813ade112526284a6e2e9e16a36a19cb"
+    },
+    {
+      "name": "bike-pro-lod.glb",
+      "sourceSHA256": "37455064bf7b6012d67e99454cefced5a1aceac3747796f11cdcfe839436a2b7",
+      "geometrySHA256": "9cf05690517e592750af31ea9d1e0e35836bb1e9f5423ef3f8ddcccf8647137c",
+      "isolationSHA256": "291c10d9d2b5ac1d23a53a0fbc5aa9a3cc6c853d6ead9ee51ea46eea34205c8a"
+    }
+  ],
+  "geometryClassPairsIdentical": true,
+  "blender": "Cycles CPU 5.2.1, matched source PBR/gray",
+  "gpuJobs": "one silent guard capture only, canonical lock, actual results in guard-capture/process.json",
+  "fittingOutputs": "harness/out/hero-remaster/contact-targets/fitted-frame",
+  "decodedOutputs": "harness/out/hero-remaster/contact-targets/decoded-frame",
+  "footpegSourceAudit": "actual rounded box/support geometry in pegs/; no cylinder or source/runtime mapping accepted",
+  "footpegDecodedOutputs": "harness/out/hero-remaster/contact-targets/decoded-with-pegs"
+}

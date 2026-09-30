@@ -210,3 +210,17 @@ recorded separately from corrected66pairs.
 
 Limits: Neutral anatomy approval does not accept body scale, wrist bridge,
 textures, rig or visible bike contacts. Temporary motion is diagnostic only.
+
+Finding: Actual full bike grips measure32–34mm diameter, not the22mm
+hand-wrap assumption. Retain exact full/LOD triangle patches; footpegs
+are rounded platforms plus teeth, unsuitable for a passing cylinder proxy.
+
+Validation: Parent inspected matched source PBR/gray full/LOD grips;
+actual compressed asset hashes/patch indices frozen. Final live-scene and
+constructor guards ran in a silent locked capture with8exact CPU states,
+0errors/AudioContexts and all4contacts explicitly unmeasured. Harness
+typecheck and focused oxlint pass.
+
+Limits: Short integration prefix is not a clear, lean or landing pass.
+No new rider mapping or visible contact accepted; coarse LOD peg defects
+are existing bike evidence, not permission for out-of-scope bike edits.
