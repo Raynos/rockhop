@@ -1,15 +1,39 @@
 # Rider and motorbike remaster
 
-Status: **awaiting rider selection — ask 216 stops further rebuilds after rejecting both fresh Blender candidates**.
+Status: **active — rider-only five-design search and three ordered checkpoints, asks 218–220**.
 
-Selection evidence: [five labeled 2×2 rider boards](../evidence/hero-remaster/rider-selection/README.md). Wait for the user’s tile choice or explicit revert/abandon direction; do not start another art experiment.
+Selection evidence: [five labeled 2×2 rider boards](../evidence/hero-remaster/rider-selection/README.md). User prefers different A1/A2 qualities and authorizes a new five-design Hunyuan/TRELLIS search. Both fresh Blender bodies remain rejected.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · ask 191.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gate 3 for presentation and Gate 4 for devices.
 Bar: [mission §3–4](../mission.md): a readable person on a mechanically credible motorbike, at phone frame rates.
 
-The first deliverable is a **complete candidate rider and bike in the real Garage**, seen rotating and moving. Do not repeat the earlier head/hair-only loop. Generate geometry and animation as separate candidates; Blender assembles, repairs and exports the accepted whole. No raw neural mesh automatically replaces the production hero.
+The immediate deliverable is a **five-design rider-body comparison** before rig fitting. Bike improvement is out of scope for this session; keep the existing bike fixed. No raw neural mesh automatically replaces the production hero.
 
-## Whole-rider restart — user override, ask 214
+## Authoritative current method — asks 218–220
+
+The user separates raw anatomy/clothing from skeleton, weights and posing.
+A1 has a more convincing lower body; A2 improves several face/hair/material
+features but makes joint/pose problems more obvious. Neither is accepted.
+Use [the three-checkpoint specification](../../assets/design/hero-remaster/rider-search-v1/SPEC.md)
+and its saved five prompts as the immediate execution order:
+
+1. Five neutral adult rider references and nine-angle concept targets, each
+   passed through Hunyuan3D and TRELLIS.2. Compare ten native model turntables
+   and matching nine-angle boards before any rig fitting. Refine/select the
+   complete body, including knees, hands/wrists and footwear, as checkpoint 1.
+2. The selected same body stands then sits on a fixed box/bench. Make nine
+   target frames and compare the complete UniMate/Blender animation with nine
+   actual frame samples. Diagnose shape, bind fit, skinning and posing separately.
+3. The same rider sits on the existing bike. Compare nine target/actual Garage
+   angles and played motion; qualify visible grips/soles and natural limb chains.
+
+This supersedes the Blender-only restart method and earlier combined bike
+work below. Bike art is parked outside this session. Broader optimisation,
+family, source/replay, human/device and release gates remain open; the old
+M1–M5 plan cannot be called complete solely by selecting a raw mesh.
+
+## Historical whole-rider restart — ask 214, method superseded
+
 
 The user rejects the current remastered body, face and limb proportions as a
 regression and requests a complete rebuild from scratch. Stop the V7 skin and
