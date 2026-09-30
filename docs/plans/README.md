@@ -25,7 +25,7 @@ Checkpoint 1 head constrained topology now passes one neck boundary; source fitt
 
 Checkpoint 1 authored cage [passes topology but fails face appearance](../evidence/hero-remaster/one-rider-v2/head-cleanup/authored-v3/README.md): seams, nostril spikes and simplified ears. Stop before baking; fresh anatomical CC0 retopology cage is the delegated alternative, preserving Pixal visual/detail target and original90min deadline. Anatomical hand correction is underway. No accepted head/collar/character/rig; three ordered gates and model8h ceiling remain.
 
-Checkpoint 1 now has neutral anatomical hands approved for assembly, while fresh anatomical head fitting is rejected for a cheek scar and generic jaw/brow. One deliberate reference-landmark correction removes dense snaps; original00:31:54UTC feasibility deadline remains. Explicit local collar rebuilding is in review. Round18 silent low/high player baseline retains exact clear/crash/1ms restart. No accepted character, texture, rig or visible contact.
+Checkpoint 1 now has neutral anatomical hands approved for assembly and a reference-landmark head correction ongoing. Explicit local hood rim removes old hair but trial1 fails pointed anchors/thin cloth/UV stripes; freeze before one ring/UV correction. No accepted full character, neck join, textures or rig. Three rider-only gates and source/current gameplay behavior remain unchanged.
 
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 

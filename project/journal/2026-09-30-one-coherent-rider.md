@@ -238,3 +238,14 @@ clear,0faults and1ms one-tick crash/restart with no browser errors.
 Limits: No likeness, UV/detail bake, skin/hood join or rig accepted.
 Anatomical eye component boundaries and jagged neck remain disclosed.
 Original90min head feasibility deadline remains00:31:54UTC.
+
+Finding: Explicit local hood-rim retopology removes old hair but first
+trial fails cloth appearance: pointed anchors, thin rim and donor-UV
+stripes. Freeze before one ordered-ring/UV correction.
+
+Validation: Parent inspected actual PBR front/rear and matched four-angle
+PBR/gray evidence. One105edge collar opening/0nonmanifold edges; retained
+original triangle positions/UVs exact and original source SHA unchanged.
+
+Limits: No accepted collar, texture/detail bake, new head attachment or
+neck deformation. Neutral material preview will not imply texture success.
