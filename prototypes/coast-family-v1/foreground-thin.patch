@@ -1,0 +1,49 @@
+--- a/src/render/world/zones/zoneKit.ts
++++ b/src/render/world/zones/zoneKit.ts
+@@ -552,0 +553,14 @@
++    const thinDecor = track.def.id === 'c2-crane-hop' || track.def.id === 'c3-hull-breach';
++    type BatchItem = PropBatch['items'][number];
++    const nearDecor = [tyreFlat, truckTyre, ...scrap];
++    const nearDecorGroups: { x: number; items: { batch: PropBatch; item: BatchItem }[]; shadows: BatchItem[] }[] = [];
++    // Tag complete placement groups while the seeded builder runs. The cull below happens only
++    // after all generation is finished; neither selection nor deletion consumes an RNG draw.
++    const recordNearDecor = (x: number, place: () => void): void => {
++      if (!thinDecor) { place(); return; }
++      const starts = nearDecor.map((batch) => batch.count);
++      const shadowStart = shadows.count;
++      place();
++      const items = nearDecor.flatMap((batch, i) => batch.items.slice(starts[i]!).map((item) => ({ batch, item })));
++      if (items.length) nearDecorGroups.push({ x, items, shadows: shadows.items.slice(shadowStart) });
++    };
+@@ -573,0 +588 @@
++        recordNearDecor(x, () => {
+@@ -584,0 +600 @@
++        });
+@@ -586,0 +603 @@
++        recordNearDecor(x, () => {
+@@ -605,0 +623 @@
++        });
+@@ -608,0 +627 @@
++    const fenders: BatchItem[] = [];
+@@ -611,0 +631,21 @@
++      if (thinDecor) fenders.push(truckTyre.items[truckTyre.count - 1]!);
++    }
++    if (thinDecor) {
++      const removed = new Map<PropBatch, Set<BatchItem>>();
++      const mark = (batch: PropBatch, item: BatchItem): void => {
++        let list = removed.get(batch);
++        if (!list) { list = new Set<BatchItem>(); removed.set(batch, list); }
++        list.add(item);
++      };
++      let lastKeptX = -Infinity;
++      for (const group of nearDecorGroups.sort((a, b) => a.x - b.x)) {
++        if (group.x - lastKeptX >= 6) { lastKeptX = group.x; continue; }
++        for (const { batch, item } of group.items) mark(batch, item);
++        for (const item of group.shadows) mark(shadows, item);
++      }
++      for (let i = 0; i < fenders.length; i++) if (i % 4 !== 0) mark(truckTyre, fenders[i]!);
++      for (const [batch, deleted] of removed) {
++        let write = 0;
++        for (const item of batch.items) if (!deleted.has(item)) batch.items[write++] = item;
++        batch.items.length = write;
++      }

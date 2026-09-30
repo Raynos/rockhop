@@ -550,6 +550,20 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     // Round 2 near layer (C-ride's bottom third): truck tyres, tyre stacks, rope coils, nets, rusty scrap, pallets,
     // drums, a beached buoy, bollards; tyre fenders hung on the quay face.
     const truckTyre = PB('trucktyre', G.truckTyreGeometry(), tyreM);
+    const thinDecor = track.def.id === 'c2-crane-hop' || track.def.id === 'c3-hull-breach';
+    type BatchItem = PropBatch['items'][number];
+    const nearDecor = [tyreFlat, truckTyre, ...scrap];
+    const nearDecorGroups: { x: number; items: { batch: PropBatch; item: BatchItem }[]; shadows: BatchItem[] }[] = [];
+    // Tag complete placement groups while the seeded builder runs. The cull below happens only
+    // after all generation is finished; neither selection nor deletion consumes an RNG draw.
+    const recordNearDecor = (x: number, place: () => void): void => {
+      if (!thinDecor) { place(); return; }
+      const starts = nearDecor.map((batch) => batch.count);
+      const shadowStart = shadows.count;
+      place();
+      const items = nearDecor.flatMap((batch, i) => batch.items.slice(starts[i]!).map((item) => ({ batch, item })));
+      if (items.length) nearDecorGroups.push({ x, items, shadows: shadows.items.slice(shadowStart) });
+    };
     const tyreStack = (x: number, z: number, h: number): void => {
       const n = Math.max(1, Math.min(rng.int(1, 3), Math.floor(h / 0.32)));
       for (let k = 0; k < n; k++) tyreFlat.add(x + rng.range(-0.08, 0.08), gy(x, z) + k * 0.3, z + rng.range(-0.08, 0.08), 0, rng.range(0.95, 1.15));
@@ -571,6 +585,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     }
     nearLayer(
       (x, z, h) => {
+        recordNearDecor(x, () => {
         if (lowTide && x >= 200 && x < 258) return;
         if (craneHop && ((x >= 92 && x < 145) || (x >= 284 && x < 342))) return;
         const r = lowTide ? 0.34 + rng.next() * 0.6 : rng.next();
@@ -582,8 +597,10 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
         else if (r < 0.78) drums.add(x, gy(x, z) + 0.29, z, rng.range(-0.4, 0.4), 1, rng.next() < 0.5 ? 0x9a4a24 : 0x2a6a6a, Math.PI / 2);
         else if (r < 0.86) scrap[rng.int(0, 1)]!.add(x, gy(x, z), z, rng.range(0, 6), fit(1.2, rng.range(0.5, 0.8), h), SCRAP_LIFT);
         else boulder(x, z, rng.range(0.25, 0.45), rng.range(0.15, 0.3));
+        });
       },
       (x, z, h) => {
+        recordNearDecor(x, () => {
         if (lowTide && x >= 200 && x < 258) return;
         if (craneHop && ((x >= 92 && x < 145) || (x >= 284 && x < 342))) return;
         const r = lowTide ? 0.34 + rng.next() * 0.48 : rng.next();
@@ -603,12 +620,35 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
           shadowAt(x, z, 1.1, 0.6);
         } else if (r < 0.86) bollards.add(x, gy(x, z), z, 0, fit(0.72, 1, h));
         else tyreStack(x, z, h);
+        });
       }, lowTide ? [6, 13] : undefined, lowTide ? [9, 18] : undefined,
     );
     // Tyre fenders hung on the quay face, every 5–9 m, their tops 17 cm under the deck edge.
+    const fenders: BatchItem[] = [];
     for (let x = x0 + 4; x < x1; x += rng.range(lowTide ? 24 : 5, lowTide ? 38 : 9)) {
       const py = deckMin(x, 0.6);
       truckTyre.add(x, py - 1.12, (faceDef?.edge ?? 2) + 0.22, 0, 1, null, 0);
+      if (thinDecor) fenders.push(truckTyre.items[truckTyre.count - 1]!);
+    }
+    if (thinDecor) {
+      const removed = new Map<PropBatch, Set<BatchItem>>();
+      const mark = (batch: PropBatch, item: BatchItem): void => {
+        let list = removed.get(batch);
+        if (!list) { list = new Set<BatchItem>(); removed.set(batch, list); }
+        list.add(item);
+      };
+      let lastKeptX = -Infinity;
+      for (const group of nearDecorGroups.sort((a, b) => a.x - b.x)) {
+        if (group.x - lastKeptX >= 6) { lastKeptX = group.x; continue; }
+        for (const { batch, item } of group.items) mark(batch, item);
+        for (const item of group.shadows) mark(shadows, item);
+      }
+      for (let i = 0; i < fenders.length; i++) if (i % 4 !== 0) mark(truckTyre, fenders[i]!);
+      for (const [batch, deleted] of removed) {
+        let write = 0;
+        for (const item of batch.items) if (!deleted.has(item)) batch.items[write++] = item;
+        batch.items.length = write;
+      }
     }
   }
 

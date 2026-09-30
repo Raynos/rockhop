@@ -1,0 +1,131 @@
+{
+  "status": "unaccepted private C2/C3 foreground art trial",
+  "sourceHead": "6c2d4c7b4206e8350211b7d59a80b19696e69460",
+  "backend": "Metal",
+  "tier": "low",
+  "viewport": [
+    852,
+    392
+  ],
+  "patch": "prototypes/coast-family-v1/foreground-thin.patch",
+  "patchSha256": "399f6c6c79d9e4c004b35da59913806b87a5fe90caa14e638f880187e61f2a79",
+  "budget": {
+    "beforeBytes": 715622,
+    "afterBytes": 716044,
+    "capBytes": 716800
+  },
+  "entries": {
+    "before": "3c66f3aed9c63c82ff768de2ee52e683bce8d3225c82833eb21d2885bc337de4",
+    "after": "8b89a792215af4aca5eb478a4e33772aa83852cfdbef2e3f105170d3023370bc"
+  },
+  "cases": {
+    "c2-full": {
+      "input": "harness/inputs/c2-crane-hop/bot-3.json",
+      "inputSha256": "182d7b484142ef8f7cd45adfd7234bdfc068d37129dd4aa761d55b2f066c7028",
+      "window": [
+        0,
+        null
+      ],
+      "before": {
+        "frames": 320,
+        "seconds": 26.666666666666668,
+        "finishTime": 26.608333333333334,
+        "finalHash": "572e7665ab85ba49",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "5a13d0c1add8a735baa0e98cac289fe91cf91e32c66f3ecf6c0d11abbc59ad3a"
+      },
+      "after": {
+        "frames": 320,
+        "seconds": 26.666666666666668,
+        "finishTime": 26.608333333333334,
+        "finalHash": "572e7665ab85ba49",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "8219e9ec263fefda5dfc13c44dc22ea2b4bded9484a789c2d2fb112cfbb93b8f"
+      },
+      "comparisonLocal": "/private/tmp/rockhop-coast-foreground-thin-1/visual/c2-full-compare.mp4"
+    },
+    "c3-full": {
+      "input": "harness/inputs/c3-hull-breach/bot-3.json",
+      "inputSha256": "253ac1398a236cb32d79ed537737d884c792773c5aee1e1af708a11465212b13",
+      "window": [
+        0,
+        null
+      ],
+      "before": {
+        "frames": 422,
+        "seconds": 35.166666666666664,
+        "finishTime": 35.1,
+        "finalHash": "e7264abb27aa04f7",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "7110f197f54b22b1001dc35f7ce23cd72c3853a8f96740d784729d4a2031e8f8"
+      },
+      "after": {
+        "frames": 422,
+        "seconds": 35.166666666666664,
+        "finishTime": 35.1,
+        "finalHash": "e7264abb27aa04f7",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "68c04f50ec759515460ebce6a3fc32f85e15b526de7a05defe43078c3bf1a553"
+      },
+      "comparisonLocal": "/private/tmp/rockhop-coast-foreground-thin-1/visual/c3-full-compare.mp4"
+    },
+    "c2-fault": {
+      "input": "docs/evidence/c2-challenge/rookie-learned.json",
+      "inputSha256": "a13ce9fd818d8a1585f1ae3bce8ee404f10d6bd58a1ad691b012098635dc9d9d",
+      "window": [
+        2560,
+        3140
+      ],
+      "before": {
+        "frames": 98,
+        "seconds": 4.9,
+        "finishTime": null,
+        "finalHash": "44911bd3e9eb3c88",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "63f964fd198fcb80f22d0f928bbd213a3b39be8c3e3b4af8ed9d3ccd26935639"
+      },
+      "after": {
+        "frames": 98,
+        "seconds": 4.9,
+        "finishTime": null,
+        "finalHash": "44911bd3e9eb3c88",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "5cac531699934b24cee789cc4fd46c7a00903eda431a733d97cd10588ed396ad"
+      },
+      "comparisonLocal": "/private/tmp/rockhop-coast-foreground-thin-1/visual/c2-fault-compare.mp4"
+    },
+    "c3-fault": {
+      "input": "harness/inputs/c3-hull-breach/stranger-c3-hull-breach-20260929-005150.json",
+      "inputSha256": "55a270b7f1a048ebe9a25e36e1a7465074527e741c5fd8033740f8f250ceab5a",
+      "window": [
+        3171,
+        3772
+      ],
+      "before": {
+        "frames": 101,
+        "seconds": 5.05,
+        "finishTime": null,
+        "finalHash": "cc18afa56ff22b05",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "26b84859c1c5c636190bebcb92581cb3743a957c4bdbe5a225fe3a1224d7894e"
+      },
+      "after": {
+        "frames": 101,
+        "seconds": 5.05,
+        "finishTime": null,
+        "finalHash": "cc18afa56ff22b05",
+        "cameraPass": true,
+        "violations": 0,
+        "clipSha256": "a64175c1a480ce870ccf84bd4773d8a3ae695f6b19e3744009a50612bc74cfca"
+      },
+      "comparisonLocal": "/private/tmp/rockhop-coast-foreground-thin-1/visual/c3-fault-compare.mp4"
+    }
+  }
+}
