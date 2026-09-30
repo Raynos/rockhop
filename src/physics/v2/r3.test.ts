@@ -513,7 +513,7 @@ describe('lab-physics-test hop per class (R3 decision 5)', () => {
 // ---------------------------------------------------------------------------
 
 describe('cost (R3 decision 7)', () => {
-  it('riding: <= 5 us/tick p95 over 20k ticks (node)', () => {
+  it('riding: <= 5 us/tick p50 over 20k ticks (node)', () => {
     const w = flatWorld('rookie');
     const script = (i: number): InputFrame => quantizeInput({ throttle: 0.6 + 0.3 * Math.sin(i / 90), lean: 0.4 * Math.sin(i / 200), brake: i % 500 < 30 ? 0.5 : 0 });
     for (let i = 0; i < 2000; i++) w.step(script(i));

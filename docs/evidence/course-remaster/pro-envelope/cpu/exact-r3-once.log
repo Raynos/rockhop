@@ -1,0 +1,41 @@
+
+ RUN  v3.2.7 /Users/raynos/projects/games/rockhop
+
+stdout | src/physics/v2/r3.test.ts > cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node)
+FEEL cost.usPerTick.p50 = 7.162 [<= 5]
+FEEL cost.usPerTick.p95 = 13.638 [info: 2.7-3.0 alone; the full parallel suite pushes it past 5 on a shared host]
+
+ ❯ src/physics/v2/r3.test.ts (12 tests | 1 failed | 11 skipped) 220ms
+   ↓ landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > drops of 1.5 / 2 / 3 m at 6 and 12 m/s, lean 0 and +0.5, both classes: land and ride away, no fault, rebound < 0.15 m, pitch within -35..+35 (R2: 2 m at lean 0 rebounded 0.6 m, 2.5-3 m looped)
+   ↓ landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > the closing cap bounds force during landing recovery; intended hops retain >= 97 % of the uncapped apex and >= 0.45 m
+   ↓ landing (R3 decision 1): the intent gate separates a landing recovery from the hop push > snapshot round-trip through a landing: restore at the touchdown tick, then 240 ticks hash-equal to the straight run (the intent slot is in F)
+   ↓ classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > rookie: full gas at lean 0 lifts <= 10 deg and never loops (loop-out needs a lean back: -0.25 loops in ~1.1 s, -0.5 in ~0.8 s; the parent asked -0.5 or harder: the critical lean sits between 0 and -0.25 on this table, see physics.md); 0 -> 16 <= 4.2 s; top 20
+   ↓ classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > pro (R6): full gas at lean 0 from a standstill lifts hard (25-40 deg) and rides the power wheelie down without looping (R3-R5 looped in 0.95 s: harness r11 lost every Pro first attempt at 4 m), +0.25 / +0.5 / +1 do not loop, lean -0.25 / -0.5 / -1 loop in < 1.5 s (the lean fade: leaning back is the rider taking over); 0 -> 16 < rookie at +0.5; top 23
+   ↓ classes as parameter rows (R3 decision 2): rookie forgiving, pro raw > both classes: coasting balance by lean, air control in 0.5 s at 8 m/s (rookie in the 25-40 band; pro has less attitude assist, K_att 260), open-loop divergence 1-2 s
+   ↓ hop matrix per class (R3): the intent gate keeps R2's hop > reference hop >= 0.45 m, front leaves first, lands within +-20 on both classes; matrix preload -0.25..-1 x snap 4 / 8 / 16 / one-tick
+   ↓ climbs with the Trials technique (R3 decision 3) > rookie tops a 4 m 45 deg plank from a crawl (2 m/s) and at 5 m/s: front rolls onto the face at neutral, gas, then the weight is thrown to +1; 50 deg needs 6 m/s; pro table printed (its momentum rows 55-60 are not made by this controller: the base transition at 6-10 m/s, not the geometry, is where it fails)
+   ↓ climbs with the Trials technique (R3 decision 3) > the constant-speed climb limit is geometry, atan(d/h) at lean +1 (the front load on a slope is d cos - h sin): 37 deg on this table; steeper is a momentum climb
+   ↓ wheelie hold with anticipation (R3 decision 4) > a 60 Hz / 100 ms controller that leads the pitch by 0.25 s (pitch + rate x horizon) holds 40 +- 8 deg for >= 10 s of 12 on both classes without looping; the R2 PD on the current pitch loops against the Rookie's 0.15 s throttle
+   ↓ lab-physics-test hop per class (R3 decision 5) > the lip hop at 7 / 8 / 9 m/s: clears onto the ledge on both classes at 8-9; the margin over the ledge corner is printed (spec wants >= 0.1 m of clear air)
+   × cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node) 220ms
+     → expected 7.162499999999454 to be less than or equal to 5
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/physics/v2/r3.test.ts > cost (R3 decision 7) > riding: <= 5 us/tick p95 over 20k ticks (node)
+AssertionError: expected 7.162499999999454 to be less than or equal to 5
+ ❯ src/physics/v2/r3.test.ts:532:17
+    530|     feel('cost.usPerTick.p50', p50, '<= 5');
+    531|     feel('cost.usPerTick.p95', p95, 'info: 2.7-3.0 alone; the full par…
+    532|     expect(p50).toBeLessThanOrEqual(5);
+       |                 ^
+    533|   });
+    534| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 skipped (12)
+   Start at  03:58:40
+   Duration  726ms (transform 193ms, setup 0ms, collect 261ms, tests 220ms, environment 0ms, prepare 70ms)

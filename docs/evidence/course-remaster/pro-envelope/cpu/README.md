@@ -1,0 +1,13 @@
+# R3 CPU p50 audit, 2026-09-30
+
+The exact R3 cost test is **red**. Its test title formerly said p95, but the assertion is and remains `p50 <= 5 µs/tick` over 200 blocks of 100 Rookie ticks. The title is corrected in `src/physics/v2/r3.test.ts`; the 5 µs/tick threshold and measurement code are unchanged. One requested isolated filtered run measured **p50 7.1625, p95 13.638 µs/tick** ([log](exact-r3-once.log)). There were no subsequent exact-test retries.
+
+The Pro physics commit `701e58bd` changed the **Pro** tuning row and physics test/fixture coverage. R3's cost row creates `flatWorld('rookie')`; its Rookie preset and `src/physics/v2/bike.ts` arithmetic are byte-identical to the parent commit. This is evidence against a new Pro-physics cost in this test, not proof that the R3 limit is safe on every host.
+
+The bounded [warmed 20k-tick microprobe](warmed-20k.json) replicated the Rookie input, 2,000-tick warmup, 200 × 100-tick timing blocks and fault restarts without Vitest. It measured wall p50 **4.028**, main-thread CPU p50 **3.90**, wall p95 **9.488 µs/tick** under load average 12.90 on an 18-core host. A 120k-tick [sampled profile](r3-warmed.cpuprofile) ([summary](hotpaths.json), [probe row](profiled-120k.json)) found 65/398 self samples (16.3%) in the preexisting `riderRigFromHips`, 38/398 (9.5%) in `solve`, and 28/398 (7.0%) in `suspensionGeometry`. This profile is for locating work; its timing is not a replacement for the exact gate.
+
+[Before](host-load-before.txt) and [after](host-load-after.txt) the exact red run, host load was 15.75 and 16.84 on 18 cores. [Process snapshots](host-processes-before.txt) and [after](host-processes-after.txt) include two concurrent Blender jobs above 100% CPU, Chromium headless renderers and iOS Simulator services. The warm probe also saw 1,322 involuntary process context switches. Host contention is a plausible cause of the wall-clock spread; these observations do not prove it is the only cause.
+
+## Decision
+
+Keep the exact R3 gate red and its 5 µs/tick limit intact. When the competing Blender, Chromium and simulator work is quiet, run that same filtered assertion once under a controlled host load with wall and main-thread CPU measurements. If main-thread CPU p50 is still above 5, profile the existing rider geometry/solver calls and prototype only an arithmetic-preserving reduction in a separate round; all 24 shipping replay hashes, the 0/72 held-GO check and the physics suite must remain exact. If CPU p50 is below 5 but wall p50 stays high, address runner/host isolation rather than retuning the bike. No physics arithmetic or replay input changed in this audit.
