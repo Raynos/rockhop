@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import {describe,it,expect,vi,beforeEach} from 'vitest';
 import {A2,A3} from '../../../tracks/rockhop/alpine';
 import {compileTrack} from '../../../tracks/compile';
-import {actualAlpineBatches} from '../../../../assets/blender/course-kits/alpine-trees/rollout-fixture';
+// CI excludes the Blender authoring tree; keep this shared seeded fixture in harness.
+import {actualAlpineBatches} from '../../../../harness/fixtures/alpine-rollout';
 import {PropBatch} from '../props';
 import {zoneGround} from './zoneKit';
 import {alpineForestApplicable,planAlpineForest,removeAlpineForestPlaceholders,loadAlpineForest} from './alpineForest';

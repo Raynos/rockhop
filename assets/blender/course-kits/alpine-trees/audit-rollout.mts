@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {A2,A3} from '../../../../src/tracks/rockhop/alpine';
 import {compileTrack} from '../../../../src/tracks/compile';
 import {alpineForestAnchorHash,planAlpineForest} from '../../../../src/render/world/zones/alpineForest';
-import {actualAlpineBatches} from './rollout-fixture';
+import {actualAlpineBatches} from '../../../../harness/fixtures/alpine-rollout';
 const prototypes=JSON.parse(fs.readFileSync(new URL('../../../../docs/evidence/course-remaster/alpine-tree-kit/build-report.json',import.meta.url),'utf8')) as {variants:{file:string;meshes:{name:string;triangles:number}[]}[]};
 const triangles=(level:'full'|'near',variant:string)=>prototypes.variants.find(v=>v.file===`trees-${level}.phone.glb`)!.meshes.filter(m=>m.name.startsWith(`${variant}__`)).reduce((n,m)=>n+m.triangles,0);
 const rows=[A2,A3].map(def=>{

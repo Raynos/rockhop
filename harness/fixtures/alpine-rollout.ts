@@ -1,11 +1,11 @@
 /** Node-only actual seeded builders. Canvas/art pixels are stubs, never visual evidence. */
 import * as THREE from 'three';
-import type { CompiledTrack } from '../../../../src/core/types';
-import { MaterialLibrary } from '../../../../src/render/materials/library';
-import { BIOMES } from '../../../../src/render/biomes';
-import { buildBiomeKit } from '../../../../src/render/world/biomeKit';
-import { PropBatch } from '../../../../src/render/world/props';
-import type { ArtLibrary } from '../../../../src/render/art/library';
+import type { CompiledTrack } from '../../src/core/types';
+import { MaterialLibrary } from '../../src/render/materials/library';
+import { BIOMES } from '../../src/render/biomes';
+import { buildBiomeKit } from '../../src/render/world/biomeKit';
+import { PropBatch } from '../../src/render/world/props';
+import type { ArtLibrary } from '../../src/render/art/library';
 export function actualAlpineBatches(track:CompiledTrack):PropBatch[] {
   const previous=Object.getOwnPropertyDescriptor(globalThis,'document'),noop=()=>undefined,gradient={addColorStop:noop};
   const context=new Proxy<Record<string,unknown>>({}, {get(target,key){
