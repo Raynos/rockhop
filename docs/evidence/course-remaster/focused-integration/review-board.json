@@ -1,0 +1,35 @@
+{
+  "layout": "4 rows x 2 columns; left/right are original matched comparison-video halves",
+  "frameExtraction": "ffmpeg -ss <requestedSecond> -i <source> -frames:v 1; requested times approximate to source frame cadence",
+  "rows": [
+    {
+      "course": "C1  \u00b7  COAST FRONTAGE",
+      "source": "docs/evidence/course-remaster/coast-frontage/full-compare.mp4",
+      "requestedSecond": 3.0,
+      "sourceSha256": "0006598e8aa47b4cb658897416caf7b72f6c54ed29d8366b523a788b9fa19063",
+      "extractedFrameSha256": "0dfe8b1b0ca0102c28d7d18e5f987ba2f5acb422a5b1bd2a6c990e20c0c7a58d"
+    },
+    {
+      "course": "A2  \u00b7  ALPINE SURFACE",
+      "source": "prototypes/alpine-surface-rollout-v1/review/a2-full-compare.mp4",
+      "requestedSecond": 8.0,
+      "sourceSha256": "0320071f98baf643eb7e9885a7552a68ffe8f37bcb088b27109c3c362102c14b",
+      "extractedFrameSha256": "b1c5b59268933e7437a819dd1dc22a6a1d432fea7603bee9eb22b7557824bd2f"
+    },
+    {
+      "course": "D1  \u00b7  QUARRY TREAD",
+      "source": "docs/evidence/course-remaster/quarry-standard/paint-polish/full-compare.mp4",
+      "requestedSecond": 5.0,
+      "sourceSha256": "1d0fe7f7df4f043bf3772f93024c1d9c3a9f553488563190533897fc6f77a005",
+      "extractedFrameSha256": "f240296723bc3225910e7db69f6d0d5152d1555fa7e03e7f20930c4393d481e7"
+    },
+    {
+      "course": "S1  \u00b7  SNOWLINE SURFACE",
+      "source": "docs/evidence/course-remaster/snowline-surface-v1/s1/compare.mp4",
+      "requestedSecond": 10.0,
+      "sourceSha256": "38ae6b8460652b0b34d93319d21985005ccfd32a006f6b5a8c4824740c078f76",
+      "extractedFrameSha256": "e7388c991d5fc7dbe57c47ee7964452a852106f35db0dc3a33061df6eb6bcb4b"
+    }
+  ],
+  "boardSha256": "a880bea343bafb125009094084d06a1113d85c72ea3442c44eb90dfbe4eb43e9"
+}

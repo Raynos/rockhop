@@ -338,3 +338,24 @@ Required-map failure and delayed-course-switch browser cases pass 2/2; 28 focuse
 ## C2/C3 far-scene reuse rejected · 2026-09-30
 
 [Matched full rides](../../prototypes/coast-family-v1/c2c3-reuse-review/README.md) reject sparse authored vessels/analytic sea against a cyan far view, despite exact outcomes/camera and passing cap. One sky-position correction had no visible effect; do not continue that atmosphere loop. Keep normal C2/C3 scenery and defer optional far-bank reuse. A narrower existing-prop foreground clutter pass can target the obvious tyre/scrap repetition without a new asset campaign.
+
+## Focused four-biome pass landed · 2026-09-30
+
+All twelve courses now have the retained focused treatment below in normal main.
+This closes this bounded parallel art pass, not complete-course acceptance.
+
+| Courses | Retained normal improvement |
+|---|---|
+| C1 | Authored harbor and varied service-bay/warehouse frontage; existing stronger quay retained. |
+| C2–C3 | Complete decorative tyre/scrap groups thinned after seeded generation; paired contact shadows removed together, original skyline/shore retained. |
+| A1–A3 | Shared quieter ground, bank, tread and lake; A1 botanical forest retained, optional A2/A3 authored forest deferred. |
+| D1–D3 | Warm low-contrast tread and shallow concrete relief; existing machines and ledges retained. |
+| S1–S3 | Quieter snow normal response and roughness; existing shelf/gap geometry retained. |
+
+[Coast full/fault films](../../prototypes/coast-family-v1/foreground-thin-review/README.md) preserve paired outcomes/camera. Normal typecheck/scoped lint/build pass at716,052 B; required serialized C2 partial gate passes14/14. Earlier integrated offline passes11/11; no new assets or offline mechanism were added by this final decorative cull. These are host checks, not a full release verdict.
+
+[Two complete resource cycles](../../prototypes/alpine-surface-rollout-v1/churn-qualification.json) retain zero undisposed retired course-owned Canvas/geometry and identical cycle endpoints190 geometries/79 textures/38 programs. Strict per-course cold/warm texture/program equality remains false. Shared cache warming is a source-supported inference; no phone-memory or third-lap claim.
+
+[Review board](../evidence/course-remaster/focused-integration/review-board.jpg) indexes matched played frames from four retained biome passes. It is a review aid; source films remain the acceptance evidence.
+
+**Next highest-value work:** obtain HR-21 fresh C1 attempts/retry feedback and HR-24 empty-save earned-Pro career runs; qualify sustained landscape physical-phone performance and audio. Tune only demonstrated unfair cues, checkpoint problems or medal/currency pacing. Keep price1840 and Rookie1–8 / purchased-equipped Pro9–12 unchanged until actual earned runs support a change. Do not start another scenery/model campaign or revisit deferred byte/material trials in this focused round. Complete-course count stays0/12 pending the remaining gates.

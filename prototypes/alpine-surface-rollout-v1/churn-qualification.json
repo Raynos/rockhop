@@ -1,0 +1,98 @@
+{
+  "normalEntrySHA256": "3027c9937090e835f56d8be5bb0d8dc2558e8b881bb09af07815fdb75d82e59d",
+  "sourceVersion": "a559d87a3c7827f96c94c723b474eb452df17d5d",
+  "sequenceEntries": 12,
+  "ownedAlpineCanvasPass": true,
+  "allRegisteredCanvasDisposedAtFinalExit": true,
+  "oldCourseGeometryPass": true,
+  "perCourseGeometryGPUCountsStable": true,
+  "staleOwnerPass": true,
+  "completeCycleGPUCountsStable": true,
+  "cycleEndpoints": {
+    "first": {
+      "geometries": 190,
+      "textures": 79,
+      "programs": 38
+    },
+    "second": {
+      "geometries": 190,
+      "textures": 79,
+      "programs": 38
+    }
+  },
+  "strictPerCourseColdVsWarmCountEquality": false,
+  "coldVsWarmDeltas": [
+    {
+      "course": "a1-sawdust",
+      "delta": {
+        "geometries": 0,
+        "textures": 20,
+        "programs": 3
+      },
+      "oldCanvasClear": true,
+      "oldGeometryClear": true
+    },
+    {
+      "course": "a2-log-jam",
+      "delta": {
+        "geometries": 0,
+        "textures": 14,
+        "programs": 2
+      },
+      "oldCanvasClear": true,
+      "oldGeometryClear": true
+    },
+    {
+      "course": "a3-timberline",
+      "delta": {
+        "geometries": 0,
+        "textures": 12,
+        "programs": 2
+      },
+      "oldCanvasClear": true,
+      "oldGeometryClear": true
+    },
+    {
+      "course": "c1-low-tide",
+      "delta": {
+        "geometries": 0,
+        "textures": 10,
+        "programs": 1
+      },
+      "oldCanvasClear": true,
+      "oldGeometryClear": true
+    },
+    {
+      "course": "d1-dust-devil",
+      "delta": {
+        "geometries": 0,
+        "textures": 5,
+        "programs": 0
+      },
+      "oldCanvasClear": true,
+      "oldGeometryClear": true
+    },
+    {
+      "course": "s1-lift-line",
+      "delta": {
+        "geometries": 0,
+        "textures": 0,
+        "programs": 0
+      },
+      "oldCanvasClear": true,
+      "oldGeometryClear": true
+    }
+  ],
+  "cacheInterpretation": {
+    "status": "source-supported inference, not an additional measured third lap",
+    "artTextureCache": "ArtLibrary.texture memoizes shared GPU textures by asset id until ArtLibrary.dispose/releaseGPU (src/render/art/library.ts:299\u2013326).",
+    "programCache": "clearWorld retires unnamed/owned materials; shared library and resident hero materials retain normal Three program references (src/render/index.ts:2396\u20132438).",
+    "boundedObservation": "Texture/program cold-vs-warm deltas fall to zero at S1; both completed six-world cycles end at identical counters. No measured unbounded growth in this two-lap sequence."
+  },
+  "limits": [
+    "Strict same-course texture/program equality between cold first lap and warmed second lap was not met; original false result preserved.",
+    "No third lap or timing benchmark; do not claim all intermediate warmed profiles qualified.",
+    "No runtime fixes, art/source changes or further browser run.",
+    "First harness-only __name serialization failure produced zero rows; preserved in churn-harness-startup-error.json. One complete twelve-entry sequence then ran on the same frozen player bytes."
+  ]
+}

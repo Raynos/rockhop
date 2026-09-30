@@ -1,5 +1,7 @@
 # A2/A3 existing Alpine surface comparison — retained as bounded normal polish
 
+Normal selectors landed in `c42ef636`; these frozen pairs retain their exact pre-integration provenance. Whole-course/device approval remains separate.
+
 Before left / after right: [A2 full](review/a2-full-compare.mp4),
 [A2 first-pile fault/retry](review/a2-fault-compare.mp4),
 [A3 full](review/a3-full-compare.mp4), [A3 loader fault](review/a3-fault-compare.mp4).
@@ -54,3 +56,32 @@ redesign loop.
 ## Parent normal integration
 
 Decoded consecutive full-ride and fault frames retain quieter ground and tread separating the rider, timber surfaces and contact edges. Normal main applies only the three recorded selectors. App typecheck/scoped lint and a fresh combined build pass at715,624 B under716,800 B. Original cone forest and all physical/camera behavior remain. This is a bounded shared material pass; no whole-course/physical-phone approval.
+
+## Normal course-entry churn qualification
+
+[churn-proof.json](churn-proof.json) records the one complete low 852×392 Metal
+A1→A2→A3→C1→D1→S1 sequence twice against the normal build. Actual entry hash
+`3027c9937090e835f56d8be5bb0d8dc2558e8b881bb09af07815fdb75d82e59d`
+contains the three accepted surface selectors and no A2/A3 authored forest hook.
+The build version predates the source commit; the actual code fingerprint and
+current shared HEAD are separate proof fields. No player code or clocks changed.
+
+[churn-qualification.json](churn-qualification.json) separates measured ownership
+from cold/warm caches: all 42 registered Alpine role Canvas maps dispose by final
+exit, all prior tracked course geometries dispose, and each course's geometry GPU
+count matches across laps. Owners are A1 mounted 1, C1 mounted 2 (one combined root
+and its two child ownership roots), others mounted 0; no prior owner UUID returns.
+
+Both completed cycles end at **190 geometries /79 textures /38 programs** at S1.
+Strict per-course cold-versus-warm texture/program equality fails and remains
+false in the raw report: texture deltas are +20,+14,+12,+10,+5,0 and program
+deltas +3,+2,+2,+1,0,0. ArtLibrary memoizes shared art textures; named library and
+resident hero programs survive world retirement. That source-supported cache
+interpretation is an inference. This proves owned Canvas/geometry retirement and
+a stable cycle endpoint, without claiming a third-lap warmed-profile measurement.
+
+The first harness callback failed on missing TSX __name serialization before any
+row; its failed artifact is retained. The same frozen bytes then ran the sole
+complete 12-entry sequence. Browser/server stopped afterwards; no runtime fix or
+additional capture/timing loop. `churn.mts` reuses existing headless hook, WebGL
+info, renderer readiness and disposal events; its registries store strings only.
