@@ -17,3 +17,7 @@ Limits: Only C1 is paced/rendered; twelve new art/device/player approvals are no
 Finding: Retain the successful clean iOS build output under a tracked .txt name; .log is intentionally ignored.
 Validation: The captured Xcode/Capacitor output ends in the successful debug app build and synced bundle; the evidence link now resolves.
 Limits: This records the existing run, not another compile or a physical-phone pass.
+
+Finding: Qualify the current unsigned iOS Release configuration as well as the played debug shell.
+Validation: Clean-export release --ios compile passes; actual release web/shell strict IP audit has zero hits in198 files. Generated dependency path edits are restored after the build.
+Limits: Source59492376 is a docs/evidence successor of the played3f6b5662; player exports are unchanged. No signed-device or physical-phone claim.

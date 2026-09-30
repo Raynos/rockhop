@@ -1,0 +1,30 @@
+store-build: release bundle from HEAD 594923766d (clean export /tmp/rockhop-build-594923766d24892b840954718dbc9fd71a1ca421)
+
+(!) Some chunks are larger than 700 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✔ Copying web assets from web to android/app/src/main/assets/public in 72.00ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 824.29μs
+✔ copy android in 77.95ms
+✔ Updating Android plugins in 990.33μs
+[info] Found 2 Capacitor plugins for android:
+       @capacitor/app@8.1.1
+       @capacitor/preferences@8.0.1
+✔ update android in 12.35ms
+✔ Copying web assets from web to ios/App/App/public in 51.71ms
+✔ Creating capacitor.config.json in ios/App/App in 981.13μs
+✔ copy ios in 58.72ms
+✔ Updating iOS plugins in 957.54μs
+[info] All Capacitor plugins have a Package.swift file and will be included in Package.swift
+[info] Writing Package.swift
+[info] Found 2 Capacitor plugins for ios:
+       @capacitor/app@8.1.1
+       @capacitor/preferences@8.0.1
+✔ update ios in 7.28ms
+✔ copy web in 1.78ms
+✔ update web in 2.00ms
+[info] Sync finished in 0.177s
+2026-09-30 15:21:13.319 xcodebuild[36342:152771163] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+store-build: store/build/ios-derived/Build/Products/Release-iphonesimulator/App.app
+store-build: release bundle in store/build/web, shells synced

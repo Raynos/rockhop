@@ -41,3 +41,13 @@ Limits: Android emulator remains off. Physical iPhone/Android touch,
 thermal/memory pacing, interruptions and audio, signed release payloads,
 unbriefed learning/medal calibration and S1 anticipation remain open.
 No complete-course or signed-store acceptance is claimed.
+
+## Release configuration compile
+
+`node scripts/store-build.mjs release --ios` from clean source59492376
+passes the unsigned iOS Simulator Release build. [Compiler output](release-build-output.txt)
+retains that source; it differs from the debug source only in evidence/docs.
+The strict [actual release bundle/shell IP audit](release-ip-audit.txt) reports
+zero hits in198 scanned files. Gate assets/automation are excluded by the
+release build. This is compile/payload qualification, not signed-device,
+TestFlight or App Store approval.
