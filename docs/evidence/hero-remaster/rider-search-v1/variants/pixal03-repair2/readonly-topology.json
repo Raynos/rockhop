@@ -1,0 +1,64 @@
+{
+  "status": "read-only source analysis, no third repair or body acceptance",
+  "positionWeldDigits": 8,
+  "ignoresUVNormalSeamsForEdgeCounts": true,
+  "records": [
+    {
+      "label": "P3 native",
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/pixal/03/native.glb",
+      "sha256": "25bdbe14475519e108167e008e2117bac6636363ade66aa99de558d6366d5c26",
+      "sourceVertices": 1698038,
+      "positionWeldedVertices": 1695324,
+      "faces": 4780832,
+      "boundaryEdges": 152395,
+      "edgesWithMoreThanTwoFaces": 1185189,
+      "watertight": false,
+      "EulerNumber": 246449,
+      "repeatIndexFaces": 0
+    },
+    {
+      "label": "P3 repair2 geometry",
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/variants/pixal03-repair2/geometry-only.glb",
+      "sha256": "d0ef040327cc6389fb7068df511ad15bc43ad69624c5d97d84fa4eff27945117",
+      "sourceVertices": 32312,
+      "positionWeldedVertices": 32273,
+      "faces": 52659,
+      "boundaryEdges": 7021,
+      "edgesWithMoreThanTwoFaces": 33,
+      "watertight": false,
+      "EulerNumber": 2515,
+      "repeatIndexFaces": 77
+    },
+    {
+      "label": "H21-4 native",
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/raw-shape.glb",
+      "sha256": "ab0d2dbf0fa624641338f58753b4b418e193e822280452fa83fdd58db2591f25",
+      "sourceVertices": 172223,
+      "positionWeldedVertices": 172223,
+      "faces": 344456,
+      "boundaryEdges": 0,
+      "edgesWithMoreThanTwoFaces": 10,
+      "watertight": false,
+      "EulerNumber": 7,
+      "repeatIndexFaces": 10
+    },
+    {
+      "label": "H21-4 working display",
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/working-display2.glb",
+      "sha256": "f657aa963f2e582a9f70291b3dbd160dafd6e944419d48b21b0425521d4cd63a",
+      "sourceVertices": 38363,
+      "positionWeldedVertices": 27468,
+      "faces": 55000,
+      "boundaryEdges": 0,
+      "edgesWithMoreThanTwoFaces": 0,
+      "watertight": true,
+      "EulerNumber": -32,
+      "repeatIndexFaces": 0
+    }
+  ],
+  "limits": [
+    "Edge counts depend on declared positional weld",
+    "Native anatomy and manifold counts do not certify bind/weights or contacts",
+    "Root cause of repair surface loss remains unisolated; visual evidence rejects it"
+  ]
+}

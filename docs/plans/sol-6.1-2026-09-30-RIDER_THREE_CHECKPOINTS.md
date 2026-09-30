@@ -224,8 +224,11 @@ updating asks/index before the next experiment. No scheduling or deployment.
   45 boards/15 full orbits; P3 preliminary recommendation, unaccepted.
 - Current defects/counts: [ledger](../evidence/hero-remaster/rider-search-v1/defect-ledger.json).
   T1 export correction 1 partly improves tearing but fails body quality;
-  P3 repair 1 failed its face-budget check before baking; one pass remains. User body choice requested
-  and filed in HR-23. No rig or normal asset promotion.
+  P3 repair 1 failed its face-budget check before baking; repair 2 completes
+  export but loses major body surfaces. [Baseline and both failures](../evidence/hero-remaster/rider-search-v1/variants/pixal03-repair2/README.md)
+  are preserved. P3 has exhausted both passes: no third fix without a new
+  specifically bounded human choice, filed in HR-23. T1 has one pass left
+  only if chosen. No rig or normal asset promotion.
 - [Matched gameplay inputs](../evidence/hero-remaster/rider-search-v1/gameplay-inputs/README.md)
   are prepared and independently repeated for12 cases across both bikes.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation

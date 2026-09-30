@@ -1,0 +1,73 @@
+{
+  "status": "generated unaccepted geometry preview; visual judgment pending",
+  "attempt": {
+    "defect": "P3-TOPOLOGY-01",
+    "candidate": "P3",
+    "attempt": 2,
+    "status": "unaccepted preview; parent must judge before any next stage",
+    "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/working.glb",
+    "sourceSHA256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+    "recipeSHA256": "e843bd45f052aa708b1958b2ca9e9c1d10d1ebb70ee61fd8a13ff833437f7db5",
+    "native": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/pixal/03/native.glb",
+    "nativeSHA256": "25bdbe14475519e108167e008e2117bac6636363ade66aa99de558d6366d5c26",
+    "hypothesis": "Use dense same-body native geometry before damaged reduction; clear UV/custom-data, voxel700 then triangulate before one decimation, retaining native hand detail and existing PBR appearance",
+    "scope": "Same whole body, geometry derivative only; no rig, anatomy target, pose or physics edits",
+    "voxelResolutionOverHeight": 700,
+    "requestedFaces": 55000,
+    "textureSize": 2048,
+    "limits": [
+      "Voxel/decimation may soften fingers or folds; comparison required",
+      "Texture defects already in the source may persist",
+      "This is not deformation or rig acceptance"
+    ]
+  },
+  "blender": "5.2.1 LTS",
+  "sourceUnchanged": true,
+  "nativeHeight": 0.8882767856121063,
+  "voxelSize": 0.0012689668365887233,
+  "nativeBefore": {
+    "vertices": 1695324,
+    "triangles": 4780832,
+    "boundaryEdges": 152395,
+    "edgesNotManifold": 1337584
+  },
+  "before": {
+    "vertices": 56743,
+    "triangles": 52943,
+    "boundaryEdges": 47405,
+    "edgesNotManifold": 47405
+  },
+  "afterVoxel": {
+    "vertices": 279158,
+    "triangles": 548692,
+    "boundaryEdges": 0,
+    "edgesNotManifold": 0
+  },
+  "after": {
+    "vertices": 32312,
+    "triangles": 52659,
+    "boundaryEdges": 7023,
+    "edgesNotManifold": 7023
+  },
+  "topologyMethod": "BMesh edge incidence on actual imported/repaired mesh; raw source UV splits can differ from positional-weld audit",
+  "UV": "Smart Project75deg / margin.003 / area weight1",
+  "bake": {
+    "channels": [
+      "Base Color",
+      "Roughness",
+      "Metallic"
+    ],
+    "type": "EMIT",
+    "samples": 1,
+    "CPUThreads": 6,
+    "cageExtrusion": 0.0035531071424484252,
+    "maxRayDistance": 0.010659321427345277,
+    "paddingPixels": 8
+  },
+  "outputSHA256": "367462a01c6a11d67f19404234ca9272f7b166667a016b7d307ba880e7f6fd3f",
+  "textureFiles": {
+    "Metallic.png": "bb2a28b96a1239887bb016f814653d270c117251c121aebe4be59a60c6e888fa",
+    "Base-Color.png": "c5a6ca65e83959b6105aeef5e07020487b5b33f4d67480e342493e594f0b79f5",
+    "Roughness.png": "a7f2dae75c64e8f045b13c154c3d7dc138b14ef38667abdba1fdacb9985a3d65"
+  }
+}

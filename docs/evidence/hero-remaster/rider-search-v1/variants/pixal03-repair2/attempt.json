@@ -1,0 +1,21 @@
+{
+  "defect": "P3-TOPOLOGY-01",
+  "candidate": "P3",
+  "attempt": 2,
+  "status": "unaccepted preview; parent must judge before any next stage",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/working.glb",
+  "sourceSHA256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+  "recipeSHA256": "e843bd45f052aa708b1958b2ca9e9c1d10d1ebb70ee61fd8a13ff833437f7db5",
+  "native": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/rendered/pixal/03/native.glb",
+  "nativeSHA256": "25bdbe14475519e108167e008e2117bac6636363ade66aa99de558d6366d5c26",
+  "hypothesis": "Use dense same-body native geometry before damaged reduction; clear UV/custom-data, voxel700 then triangulate before one decimation, retaining native hand detail and existing PBR appearance",
+  "scope": "Same whole body, geometry derivative only; no rig, anatomy target, pose or physics edits",
+  "voxelResolutionOverHeight": 700,
+  "requestedFaces": 55000,
+  "textureSize": 2048,
+  "limits": [
+    "Voxel/decimation may soften fingers or folds; comparison required",
+    "Texture defects already in the source may persist",
+    "This is not deformation or rig acceptance"
+  ]
+}

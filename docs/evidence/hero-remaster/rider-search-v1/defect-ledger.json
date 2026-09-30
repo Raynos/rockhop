@@ -1,12 +1,12 @@
 {
-  "status": "checkpoint1 P3 final allowed native-based correction2 in progress; visual direction pending",
+  "status": "checkpoint1 P3 two failures; stopped pending explicit human direction",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
     "P3",
     "T1"
   ],
-  "shortlistMeaning": "P3 recommended for user visual choice; T1 export-only diagnostic alternative",
+  "shortlistMeaning": "Historical P3/T1 bounded correction shortlist; P3 exhausted, new direction requires explicit human choice",
   "limits": {
     "maximumShortlistedBodies": 2,
     "maximumCorrectionPassesPerBody": 2,
@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 11607,
-    "conservativeChargedHoursUpperBound": 3.224,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 14334,
+    "conservativeChargedHoursUpperBound": 3.982,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -357,7 +357,7 @@
       "generationFailures": 0,
       "correctionPasses": 2,
       "accepted": false,
-      "reviewExtent": "last allowed native-geometry repair2 in progress; baseline and failed repair1 preserved",
+      "reviewExtent": "baseline and both failed corrections preserved; fix2 major surface loss in gray/painted nine views and whole orbit; stopped",
       "measuredRig": "none; unskinned output",
       "sittingGate": "not started",
       "gameplayGate": "not started"
@@ -622,10 +622,10 @@
         "P3"
       ],
       "symptom": "Small hood and ankle/shoe geometry breaks, coarse hands; boundary/nonmanifold edges after declared position weld",
-      "failedFixes": 1,
+      "failedFixes": 2,
       "cause": "not yet isolated between native geometry and export; requires deformable topology refinement",
       "evidence": "diagnostics/pixal03/verification.json",
-      "verdict": "repair1 failed before UV/baking: 90972 faces exceeds bounded export check",
+      "verdict": "both corrections failed; no third correction without a specifically bounded new human choice",
       "attempts": [
         {
           "number": 1,
@@ -644,9 +644,12 @@
           "recipe": "assets/blender/hero-remaster/rider/search-v1/repair_pixal03_v2.py",
           "recipeSHA256": "e843bd45f052aa708b1958b2ca9e9c1d10d1ebb70ee61fd8a13ff833437f7db5",
           "runtime": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/variants/pixal03-repair2",
-          "verdict": "in progress; last allowed pass"
+          "verdict": "failed body quality: major surface loss in painted/gray despite 52659 faces and successful bake; duplicate validation/open edges remain",
+          "evidence": "variants/pixal03-repair2/README.md",
+          "outputSHA256": "367462a01c6a11d67f19404234ca9272f7b166667a016b7d307ba880e7f6fd3f"
         }
-      ]
+      ],
+      "decision": "STOP; show baseline/both failures and ask H21-4, another body/control, explicit new bounded approach, or revert/abandon"
     },
     {
       "id": "LEGACY-BLENDER-SHOULDERS",
@@ -684,10 +687,10 @@
   ],
   "stopRule": "A third fix of any defect is forbidden after two failures until baseline/both failed evidence is shown and a user chooses another candidate, a specifically bounded new approach, or revert/abandon. Renaming tools/defects does not reset counts.",
   "userChoice": {
-    "requested": "Choose P3, H21-4, another H/T/P/H21 body, an original control, or revert/abandon",
+    "requested": "Choose H21-4 new bounded refinement, another preserved body/control, specifically bounded manual P3 retopology with new explicit budget, or revert/abandon",
     "received": false,
     "queue": "project/human-in-the-loop/QUEUE.md#HR-23",
-    "scope": "User chooses accepted visual direction before checkpoint2; parent may build the already-authorized bounded shortlist previews meanwhile"
+    "scope": "P3 corrections exhausted; no third correction or silent shortlist replacement. Human chooses next bounded visual direction; checkpoint2 still requires body acceptance."
   },
   "runtimePreservation": {
     "files": [
