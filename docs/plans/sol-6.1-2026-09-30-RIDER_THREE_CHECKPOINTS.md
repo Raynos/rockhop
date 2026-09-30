@@ -190,7 +190,7 @@ updating asks/index before the next experiment. No scheduling or deployment.
 
 - [x] New rider-only plan recorded with current safeguards.
 - [x] Five front references and five nine-angle targets generated locally.
-- [ ] Freeze/hash inputs and inspect board consistency limitations.
+- [x] Freeze/hash inputs and inspect board consistency limitations.
 - [ ] Ten Hunyuan/TRELLIS bodies and additive Pixal3D feasibility compared.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
