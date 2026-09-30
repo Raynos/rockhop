@@ -1,5 +1,7 @@
 # What we are building — the plans and where each stands
 
+**UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
+
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
 
 **Plan names:** `MODEL-YYYY-MM-DD-NAME.md`. The unified release plan is `sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md` (user-confirmed model). Historical prefixes are now recovered from creation-turn Codex metadata or explicit Git co-author trailers; see [model provenance](../evidence/plan-provenance/README.md). Dates are first Git introduction, not last edit. Use `unknown-model` only when neither source establishes attribution. `README.md` stays the status index. `sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md` is the current Sol 6.1 revision of the active course plan; its first Git introduction date remains 2026-09-29. The original Sol 6 creation is preserved in the provenance record.
