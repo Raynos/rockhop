@@ -1277,6 +1277,10 @@ export class App {
 
   // -- per frame ----------------------------------------------------------------
 
+  private syncAudioPause(): void {
+    this.audio?.setPaused?.((this.screen === 'run' || this.screen === 'replay') && this.game.paused());
+  }
+
   /** One app frame with its split bracketed into `frameSplit` (four `performance.now()` calls; the game adds its own). */
   private tickFrame(elapsed: number, render = true): void {
     const sp = this.frameSplit;
@@ -1325,6 +1329,7 @@ export class App {
         this.replayMuted = scrub;
         this.audio?.setMasterVolume(scrub || !this.soundOn ? 0 : this.volume);
       }
+      this.syncAudioPause();
       this.game.advance(elapsed);
       if (this.screen === 'replay') {
         this.replay.afterFrame();
@@ -1351,6 +1356,7 @@ export class App {
       this.prevRestart = frame.restart === true;
       this.prevThrottle = frame.throttle > 0;
       this.review.frame(elapsed);
+      this.syncAudioPause();
       this.game.advance(elapsed);
       this.settleTouch(elapsed);
       this.labPanel.update(performance.now());
@@ -1361,6 +1367,7 @@ export class App {
       if (meta.confirm || meta.back || meta.pause || throttleEdge || restartEdge) this.onboard.dismiss();
       this.prevRestart = frame.restart === true;
       this.prevThrottle = frame.throttle > 0;
+      this.syncAudioPause();
       this.game.advance(0);
       return;
     }
@@ -1398,6 +1405,7 @@ export class App {
     const dev = this.mux.activeDevice();
     if (dev) this.hud.setDevice(dev, this.mux.idleFrames() < DEVICE_SHOW_FRAMES);
 
+    this.syncAudioPause();
     if (render) {
       const tA = performance.now();
       this.game.advance(elapsed);

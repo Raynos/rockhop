@@ -5,6 +5,38 @@
  */
 
 export const TWO_PI = Math.PI * 2;
+const SINE_SIZE = 4096;
+const SINE = Float64Array.from({ length: SINE_SIZE + 1 }, (_, i) => Math.sin(i / SINE_SIZE * TWO_PI));
+
+/** Phase in [0,1): interpolated sine, < 0.0000003 error, no per-sample trig. */
+export function sineCycle(phase: number): number {
+  const x = phase * SINE_SIZE;
+  const i = x | 0;
+  return SINE[i]! + (SINE[i + 1]! - SINE[i]!) * (x - i);
+}
+
+/** Polynomial band-limited step: removes the folding harmonics of a raw saw. */
+export function bandLimitedSaw(phase: number, step: number): number {
+  const dt = step > 0 ? step : 1e-8;
+  let correction = 0;
+  if (phase < dt) {
+    const t = phase / dt;
+    correction = t + t - t * t - 1;
+  } else if (phase > 1 - dt) {
+    const t = (phase - 1) / dt;
+    correction = t * t + t + t + 1;
+  }
+  return 2 * phase - 1 - correction;
+}
+
+/** Rounded glottal opening and fast closure, adapted from Wildshard's vocal source. */
+export function glottalPulse(phase: number, tension: number): number {
+  const open = 0.73 - 0.28 * clamp(tension, 0, 1);
+  const rise = open * 0.65;
+  if (phase < rise) return 0.5 - 0.5 * Math.cos(Math.PI * phase / rise) - 0.32;
+  if (phase < open) return Math.cos((phase - rise) / (open - rise) * Math.PI * 0.5) - 0.32;
+  return -0.32;
+}
 
 export const dbToGain = (db: number): number => Math.pow(10, db / 20);
 export const clamp = (v: number, lo: number, hi: number): number => (v < lo ? lo : v > hi ? hi : v);
@@ -58,6 +90,9 @@ export class NoiseColour {
   private b1 = 0;
   private b2 = 0;
   private brown = 0;
+  reset(): void {
+    this.b0 = this.b1 = this.b2 = this.brown = 0;
+  }
   pink(w: number): number {
     this.b0 = 0.99765 * this.b0 + w * 0.099046;
     this.b1 = 0.963 * this.b1 + w * 0.2965164;

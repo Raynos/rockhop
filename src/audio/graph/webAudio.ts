@@ -17,13 +17,15 @@
 import type { BikeClass, CompiledTrack, GameEvent, InputFrame, PhysicsState } from '../../core/types';
 import type { PhysicsFactory } from '../../physics';
 import type { AudioSystem } from '../index';
-import { ModelDriver, type AudioScene } from '../driver';
+import { ModelDriver, silenceGameplay, type AudioScene } from '../driver';
 import type { OfflineOptions } from '../offline';
 import { FallbackGraph } from './fallback';
 import { silentAutomation } from '../automation';
 import { MusicPlayer, type MusicPlayerOptions } from '../music/player';
 import { zoneOf, type MusicZone } from '../music/zone';
 import { SCENE_MENU, SCENE_RESULTS } from '../model/mapParams';
+import { P_HEADER, P_TRANSIENT_COUNT, P_TRANSIENT_STRIDE, P_SCENE } from '../params';
+import { SamplePlayer, type SamplePlayerOptions } from '../samples/player';
 
 const WORKLET_NAME = 'rockhop-synth';
 
@@ -39,6 +41,8 @@ export interface WebAudioOptions {
   workletTimeoutMs?: number;
   /** Recorded music: false = procedural bed only; an object overrides the player (tests: cues, fetch). */
   music?: boolean | Omit<MusicPlayerOptions, 'onBed'>;
+  /** Recorded reactions and biome beds; failed files leave each procedural family available. */
+  samples?: boolean | Omit<SamplePlayerOptions, 'onCoverage'>;
 }
 
 /**
@@ -56,6 +60,9 @@ export class WebAudioSystem implements AudioSystem {
   readonly driver = new ModelDriver();
   private ctx: AudioContext | null = null;
   private backend: Backend | null = null;
+  private mix: DynamicsCompressorNode | null = null;
+  private gameplay: GainNode | null = null;
+  private paused = false;
   private unlocking: Promise<void> | null = null;
   private master = 1;
   private disposed = false;
@@ -63,6 +70,7 @@ export class WebAudioSystem implements AudioSystem {
   private seed = 0;
   private onVisibility: (() => void) | null = null;
   private music: MusicPlayer | null = null;
+  private samples: SamplePlayer | null = null;
   private appScene: AudioScene | null = null;
   private zone: MusicZone | null = null;
   private musicVolume = 1;
@@ -93,6 +101,7 @@ export class WebAudioSystem implements AudioSystem {
     this.seed = seed >>> 0;
     this.zone = zoneOf(track);
     this.music?.setZone(this.zone);
+    this.samples?.setZone(this.zone);
     this.driver.setTrack(track, this.seed);
     if (this.backend?.kind === 'worklet') {
       this.backend.node.port.postMessage({ seed: this.seed });
@@ -116,10 +125,38 @@ export class WebAudioSystem implements AudioSystem {
     this.postScene();
   }
 
+  private frontScene(): boolean {
+    const scene = this.musicScene();
+    return scene === 'menu' || scene === 'map';
+  }
+
+  private gameplayPaused(): boolean {
+    return this.paused && !this.frontScene();
+  }
+
+  setPaused(paused: boolean): void {
+    if (paused === this.paused) return;
+    this.paused = paused;
+    this.syncPause();
+    if (this.gameplayPaused()) {
+      this.driver.flush();
+      this.samples?.restart(false);
+      this.music?.setDuckDb(0);
+      if (this.backend?.kind === 'fallback') this.backend.graph.cancelShots();
+      else this.backend?.node.port.postMessage({ paused: true });
+    }
+  }
+
+  private syncPause(): void {
+    const context = this.ctx;
+    if (this.gameplay && context) this.gameplay.gain.setTargetAtTime(this.gameplayPaused() ? 0 : 1, context.currentTime, 0.008);
+  }
+
   /** The music-only slider (0..1). Scales the recorded cues; the master scales everything. */
   setMusicVolume(v: number): void {
     this.musicVolume = Math.max(0, Math.min(1, v));
     this.music?.setMusicVolume(this.musicVolume);
+    if (this.backend?.kind === 'worklet') this.backend.node.port.postMessage({ musicVolume: this.musicVolume * this.musicVolume });
   }
 
   /** The recorded-music player, once the context exists (null before the first gesture / under automation). */
@@ -138,6 +175,25 @@ export class WebAudioSystem implements AudioSystem {
     const b = this.backend;
     if (b?.kind === 'worklet') b.node.port.postMessage({ scene: this.driver.scene });
     this.music?.setScene(this.musicScene(), this.zone ?? undefined);
+    this.samples?.setScene(this.musicScene());
+    this.syncPause();
+    if (this.musicScene() !== 'run' && b) {
+      const packed = this.driver.packed;
+      silenceGameplay(packed);
+      packed[P_TRANSIENT_COUNT] = 0;
+      packed[P_SCENE] = this.driver.scene;
+      if (b.kind === 'worklet') b.node.port.postMessage(packed);
+      else b.graph.setParams(packed);
+      if (this.frontScene()) {
+        this.driver.flush();
+        if (b.kind === 'fallback') b.graph.cancelShots();
+        else b.node.port.postMessage({ paused: true }); // drop delayed gameplay reactions
+      }
+    }
+  }
+
+  get samplePlayer(): SamplePlayer | null {
+    return this.samples;
   }
 
   private postBed(on: boolean): void {
@@ -187,43 +243,74 @@ export class WebAudioSystem implements AudioSystem {
   }
 
   private async buildBackend(ctx: AudioContext): Promise<void> {
+    // The synth limiter cannot see recorded music or samples: protect their summed mix too.
+    const mix = ctx.createDynamicsCompressor();
+    mix.threshold.value = -2.5;
+    mix.knee.value = 0;
+    mix.ratio.value = 20;
+    mix.attack.value = 0.003;
+    mix.release.value = 0.08;
+    mix.connect(ctx.destination);
+    this.mix = mix;
+    const gameplay = ctx.createGain();
+    gameplay.gain.value = 0; // no unconfigured startup quantum reaches the shared mix
+    gameplay.connect(mix);
+    this.gameplay = gameplay;
     let backend: Backend | null = null;
     if (!this.opts.forceFallback && typeof ctx.audioWorklet?.addModule === 'function') {
       try {
-        const timeout = new Promise<never>((_, reject) =>
-          setTimeout(() => reject(new Error('worklet timeout')), this.opts.workletTimeoutMs ?? 4000),
-        );
-        // Vite bundles `./worklet?worker&url` into its own chunk and hands back its URL.
-        // The specifier is cast so tsc (which lacks vite/client types in the harness
-        // config) does not try to resolve it; esbuild strips the cast before Vite sees it.
-        const mod = (await import('./worklet?worker&url' as string)) as { default: string };
-        await Promise.race([ctx.audioWorklet.addModule(mod.default), timeout]);
+        let timeoutId: ReturnType<typeof setTimeout> | undefined;
+        const timeout = new Promise<never>((_, reject) => {
+          timeoutId = setTimeout(() => reject(new Error('worklet timeout')), this.opts.workletTimeoutMs ?? 4000);
+        });
+        try {
+          await Promise.race([
+            (async () => {
+              // Vite bundles the DSP as its own worklet asset; the timeout includes importing it.
+              const mod = (await import('./worklet?worker&url' as string)) as { default: string };
+              await ctx.audioWorklet.addModule(mod.default);
+            })(),
+            timeout,
+          ]);
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (this.disposed) return;
         const node = new AudioWorkletNode(ctx, WORKLET_NAME, {
           numberOfInputs: 0,
           numberOfOutputs: 1,
           outputChannelCount: [2],
         });
-        node.connect(ctx.destination);
+        node.connect(gameplay);
         node.port.postMessage({ seed: this.seed });
         node.port.postMessage({ master: this.master });
+        node.port.postMessage({ musicVolume: this.musicVolume * this.musicVolume });
         node.port.postMessage({ scene: this.driver.scene });
         backend = { kind: 'worklet', node };
       } catch {
         backend = null;
       }
     }
+    if (this.disposed) return;
     if (!backend) {
-      const graph = new FallbackGraph(ctx, ctx.destination);
+      const graph = new FallbackGraph(ctx, gameplay);
       graph.setMaster(this.master);
       backend = { kind: 'fallback', graph };
     }
-    if (this.disposed) return;
+    if (this.disposed) {
+      if (backend.kind === 'fallback') backend.graph.dispose();
+      else {
+        backend.node.port.postMessage({ stop: true });
+        backend.node.disconnect();
+      }
+      return;
+    }
     this.backend = backend;
     if (this.track) this.driver.setTrack(this.track, this.seed);
     if (this.opts.music !== false) {
       const mo = typeof this.opts.music === 'object' ? this.opts.music : {};
       try {
-        this.music = new MusicPlayer(ctx, ctx.destination, { ...mo, onBed: (on) => this.postBed(on) });
+        this.music = new MusicPlayer(ctx, mix, { ...mo, onBed: (on) => this.postBed(on) });
         this.music.setVolume(this.master);
         this.music.setMusicVolume(this.musicVolume);
         this.music.setScene(this.musicScene(), this.zone ?? undefined);
@@ -231,9 +318,30 @@ export class WebAudioSystem implements AudioSystem {
         this.music = null; // the procedural bed stays
       }
     }
+    if (this.opts.samples !== false) {
+      const sampleOptions = typeof this.opts.samples === 'object' ? this.opts.samples : {};
+      try {
+        this.samples = new SamplePlayer(ctx, gameplay, {
+          ...sampleOptions,
+          onCoverage: ({ ambience }) => {
+            if (this.backend?.kind === 'worklet') this.backend.node.port.postMessage({ ambience: !ambience });
+          },
+        });
+        this.samples.setVolume(this.master);
+        this.samples.setZone(this.zone ?? 'coast');
+        this.samples.setScene(this.musicScene());
+      } catch {
+        this.samples = null;
+      }
+    }
+    this.postScene();
   }
 
   update(state: PhysicsState, dt: number, input?: Readonly<InputFrame>): void {
+    if (this.gameplayPaused()) {
+      this.driver.flush();
+      return;
+    }
     const packed = this.driver.update(state, dt, input);
     const m = this.music;
     if (m) {
@@ -241,8 +349,29 @@ export class WebAudioSystem implements AudioSystem {
       m.setDuckDb(this.driver.scene === SCENE_MENU || this.driver.scene === SCENE_RESULTS ? 0 : engineDuckDb(p.engineGain, p.load));
       if (!this.appScene) m.setScene(this.musicScene(), this.zone ?? undefined);
     }
+    if (this.musicScene() !== 'run') silenceGameplay(packed);
+    if (this.frontScene()) {
+      packed[P_TRANSIENT_COUNT] = 0;
+      this.driver.params.transientCount = 0;
+    }
     const b = this.backend;
     if (b && this.ctx && this.ctx.state === 'running') {
+      const samples = this.samples;
+      if (samples) {
+        if (!this.appScene) samples.setScene(this.musicScene());
+        samples.update(this.driver.params);
+        // Compact the already-packed queue only when a recorded voice actually starts.
+        // Pending/failed files keep their synth voice, with its original sample-accurate delay.
+        let retained = 0;
+        const params = this.driver.params;
+        for (let i = 0; i < params.transientCount; i++) {
+          if (samples.playTransient(params.transients[i]!)) continue;
+          const from = P_HEADER + i * P_TRANSIENT_STRIDE;
+          const to = P_HEADER + retained++ * P_TRANSIENT_STRIDE;
+          if (from !== to) packed.copyWithin(to, from, from + P_TRANSIENT_STRIDE);
+        }
+        packed[P_TRANSIENT_COUNT] = retained;
+      }
       if (b.kind === 'worklet') b.node.port.postMessage(packed);
       else b.graph.setParams(packed);
     }
@@ -251,6 +380,7 @@ export class WebAudioSystem implements AudioSystem {
 
   onEvent(event: GameEvent): void {
     const before = this.driver.scene;
+    if (event.type === 'restart') this.samples?.restart();
     this.driver.onEvent(event);
     // scene edges from events reach the worklet even when no frame follows (finish → results in the menu-less case)
     if (this.driver.scene !== before) this.postScene();
@@ -260,6 +390,7 @@ export class WebAudioSystem implements AudioSystem {
     const p = Math.max(0, Math.min(1, v));
     this.master = p * p; // perceptual
     this.music?.setVolume(this.master);
+    this.samples?.setVolume(this.master);
     const b = this.backend;
     if (!b) return;
     if (b.kind === 'worklet') b.node.port.postMessage({ master: this.master });
@@ -274,11 +405,18 @@ export class WebAudioSystem implements AudioSystem {
     if (b?.kind === 'worklet') {
       b.node.port.postMessage({ stop: true });
       b.node.disconnect();
-    }
+    } else if (b?.kind === 'fallback') b.graph.dispose();
     this.backend = null;
     this.music?.dispose();
     this.music = null;
+    this.samples?.dispose();
+    this.samples = null;
+    this.gameplay?.disconnect();
+    this.gameplay = null;
+    this.mix?.disconnect();
+    this.mix = null;
     if (this.ctx && !this.opts.context) void this.ctx.close().catch(() => undefined);
+    if (this.ctx) this.ctx.onstatechange = null;
     this.ctx = null;
   }
 }

@@ -1,7 +1,7 @@
 /**
  * MusicBed — a procedural loop for the front end (scene 1) and results (scene 2), composed at
- * construction from the seed and rendered sample by sample. No audio files: the choice over a CC0
- * download is documented in docs/design/audio.md §11.
+ * construction from the seed and rendered sample by sample. Recorded themes
+ * replace it when loaded; this bed preserves musical feedback while offline.
  *
  *   92 bpm, 8 bars of 16ths (128 steps), key of D — the same key as the stinger family, so the
  *   finish fanfare (D5 F#5 A5 D6) resolves into the results bed.
@@ -12,8 +12,11 @@
  *            hats on the off-8ths, a clap on 2 and 4 — and a denser (8-of-16) brighter pluck.
  *   scene 0  silent; scene changes fade over 0.8 s in / 0.5 s out and restart the loop at step 0, so the
  *            menu always opens the same way for a seed.
+ * Remaster: alias-suppressed oscillator edges, a softly detuned stereo pad,
+ * velocity-shaped wooden plucks, restrained swing, open-hat accents and clap
+ * flams. The D tonal center remains shared with the menu and race cue family.
  */
-import { Biquad, NoiseRng, TWO_PI, dbToGain, smoothCoef } from './util';
+import { Biquad, NoiseRng, TWO_PI, bandLimitedSaw, dbToGain, smoothCoef, sineCycle } from './util';
 
 const BPM = 92;
 const STEPS = 128;
@@ -80,6 +83,7 @@ export class MusicBed {
   private readonly padInc = new Float64Array(PAD_VOICES * 2);
   private readonly padIncTarget = new Float64Array(PAD_VOICES * 2);
   private readonly padLp: Biquad;
+  private readonly padLpR: Biquad;
   private lfo = 0;
   private lpCountdown = 0;
   // bass
@@ -102,6 +106,9 @@ export class MusicBed {
   private kickEnv = 0;
   private hatEnv = 0;
   private clapEnv = 0;
+  private clapFlam = 0;
+  private clapFlamCount = 0;
+  private hatDecay = 0;
   private readonly hatHp: Biquad;
   private readonly clapBp: Biquad;
 
@@ -114,6 +121,8 @@ export class MusicBed {
     this.spStep = Math.round((sr * 60) / BPM / 4);
     this.padLp = new Biquad(sr);
     this.padLp.lowpass(900, 0.9);
+    this.padLpR = new Biquad(sr);
+    this.padLpR.lowpass(1040, 0.7);
     this.bassLp = new Biquad(sr);
     this.bassLp.lowpass(250, 0.8);
     this.bassDecay = Math.exp(-1 / (0.35 * sr));
@@ -187,7 +196,7 @@ export class MusicBed {
     if (a.bassPattern[step % 16]) {
       const oct = step % 32 === 24 && !menu ? 12 : 0;
       this.bassInc = semi(D2, ch.root + oct) / sr;
-      this.bassEnv = 1;
+      this.bassEnv = step % 4 === 0 ? 1 : 0.82;
     }
     // pluck
     if (a.pluckPattern[step % 16]) {
@@ -198,7 +207,7 @@ export class MusicBed {
       this.plNext = (this.plNext + 1) % PLUCKS;
       this.plInc[k] = f / sr;
       this.plPhase[k] = 0;
-      this.plEnv[k] = menu ? 0.7 : 1;
+      this.plEnv[k] = (menu ? 0.7 : 1) * (step % 4 === 0 ? 1 : 0.84);
       this.plPan[k] = (step % 4) / 3 - 0.5;
     }
     // drums (results)
@@ -209,8 +218,15 @@ export class MusicBed {
         this.kickF = 130;
         this.kickPhase = 0;
       }
-      if (s16 % 4 === 2) this.hatEnv = s16 % 8 === 2 ? 0.8 : 0.55;
-      if (s16 === 4 || s16 === 12) this.clapEnv = 1;
+      if (s16 % 4 === 2) {
+        this.hatEnv = s16 % 8 === 2 ? 0.8 : 0.55;
+        this.hatDecay = Math.exp(-1 / ((s16 === 14 ? 0.075 : 0.025) * sr));
+      }
+      if (s16 === 4 || s16 === 12) {
+        this.clapEnv = 0.65;
+        this.clapFlam = Math.round(0.006 * sr);
+        this.clapFlamCount = 2;
+      }
     }
   }
 
@@ -225,15 +241,16 @@ export class MusicBed {
     const hatG = dbToGain(-30);
     const clapG = dbToGain(-24);
     const kickDecay = Math.exp(-1 / (0.18 * sr));
-    const hatDecay = Math.exp(-1 / (0.03 * sr));
     const clapDecay = Math.exp(-1 / (0.08 * sr));
     const kGlide = smoothCoef(0.05, sr);
+    const kickGlide = smoothCoef(0.03, sr);
     for (let i = 0; i < n; i++) {
       this.gain += (this.gainTarget - this.gain) * (this.gainTarget > this.gain ? this.kIn : this.kOut);
       if (this.arr === null) continue;
       if (this.gainTarget > 0 || this.gain > 1e-4) {
         if (--this.stepCountdown <= 0) {
-          this.stepCountdown = this.spStep;
+          // A modest eighth-note swing, with the same exact total bar length.
+          this.stepCountdown = this.spStep + Math.round(sr * 0.006) * (this.step % 2 === 0 ? 1 : -1);
           this.onStep(this.step);
           this.step = (this.step + 1) % STEPS;
         }
@@ -244,22 +261,27 @@ export class MusicBed {
         this.lfo += (TWO_PI * 0.08 * 256) / sr;
         if (this.lfo > TWO_PI) this.lfo -= TWO_PI;
         this.padLp.lowpass(1000 + 400 * Math.sin(this.lfo), 0.9);
+        this.padLpR.lowpass(1100 + 320 * Math.sin(this.lfo + 0.7), 0.7);
       }
       let pad = 0;
+      let padR = 0;
       for (let v = 0; v < PAD_VOICES * 2; v++) {
         this.padInc[v] = this.padInc[v]! + (this.padIncTarget[v]! - this.padInc[v]!) * kGlide;
         let ph = this.padPhase[v]! + this.padInc[v]!;
         if (ph >= 1) ph -= 1;
         this.padPhase[v] = ph;
-        pad += 2 * ph - 1;
+        const saw = bandLimitedSaw(ph, this.padInc[v]!);
+        pad += saw * (v % 2 === 0 ? 1 : 0.45);
+        padR += saw * (v % 2 === 0 ? 0.45 : 1);
       }
-      pad = this.padLp.process(pad / (PAD_VOICES * 2)) * padG;
+      pad = this.padLp.process(pad / (PAD_VOICES * 1.45)) * padG;
+      padR = this.padLpR.process(padR / (PAD_VOICES * 1.45)) * padG;
       // bass
       let bass = 0;
       if (this.bassEnv > 1e-4) {
         this.bassPhase += this.bassInc;
         if (this.bassPhase >= 1) this.bassPhase -= 1;
-        bass = (Math.sin(this.bassPhase * TWO_PI) + 0.3 * (2 * this.bassPhase - 1)) * this.bassEnv;
+        bass = (sineCycle(this.bassPhase) + 0.22 * bandLimitedSaw(this.bassPhase, this.bassInc)) * this.bassEnv;
         this.bassEnv *= this.bassDecay;
       }
       bass = this.bassLp.process(bass) * bassG;
@@ -273,7 +295,8 @@ export class MusicBed {
         if (ph >= 1) ph -= 1;
         this.plPhase[k] = ph;
         const tri = 4 * Math.abs(ph - 0.5) - 1;
-        const s = (tri + 0.3 * Math.sin(ph * 2 * TWO_PI)) * e;
+        // A woody pluck: the upper mode fades faster than the fundamental.
+        const s = (tri + 0.4 * e * sineCycle(ph * 2 % 1)) * e;
         this.plEnv[k] = e * this.plDecay;
         const p = this.plPan[k]!;
         plL += s * (0.5 - p * 0.5);
@@ -284,17 +307,22 @@ export class MusicBed {
       // drums
       let dr = 0;
       if (this.kickEnv > 1e-4) {
-        this.kickF += (42 - this.kickF) * (1 - Math.exp(-1 / (0.03 * sr)));
+        this.kickF += (42 - this.kickF) * kickGlide;
         this.kickPhase += this.kickF / sr;
         if (this.kickPhase >= 1) this.kickPhase -= 1;
-        dr += Math.sin(this.kickPhase * TWO_PI) * this.kickEnv * kickG;
+        dr += sineCycle(this.kickPhase) * this.kickEnv * kickG;
         this.kickEnv *= kickDecay;
+      }
+      if (this.clapFlamCount > 0 && --this.clapFlam <= 0) {
+        this.clapEnv = this.clapFlamCount === 2 ? 0.8 : 1;
+        this.clapFlam = Math.round(0.007 * sr);
+        this.clapFlamCount--;
       }
       if (this.hatEnv > 1e-4 || this.clapEnv > 1e-4) {
         const w = this.rng.n();
         if (this.hatEnv > 1e-4) {
           dr += this.hatHp.process(w) * this.hatEnv * hatG;
-          this.hatEnv *= hatDecay;
+          this.hatEnv *= this.hatDecay;
         }
         if (this.clapEnv > 1e-4) {
           dr += this.clapBp.process(w) * this.clapEnv * clapG;
@@ -302,8 +330,8 @@ export class MusicBed {
         }
       }
       const g = this.gain;
-      const mono = (pad + bass + plMono + dr) * g;
-      const side = plSide * g;
+      const mono = ((pad + padR) * 0.5 + bass + plMono + dr) * g;
+      const side = (plSide + (pad - padR) * 0.5) * g;
       L[off + i] = L[off + i]! + mono + side;
       R[off + i] = R[off + i]! + mono - side;
     }

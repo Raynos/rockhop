@@ -11,9 +11,10 @@ import { NEUTRAL_INPUT, decodeAny, iterateFrames, type GameEvent, type InputFram
 import type { PhysicsFactory, PhysicsWorld } from '../physics';
 import { compileTrack, getTrack } from '../tracks';
 import type { BikeClass, CompiledTrack } from '../core/types';
-import { ModelDriver, type AudioScene } from './driver';
+import { ModelDriver, silenceGameplay, type AudioScene } from './driver';
 import { RockhopSynth, type SynthOptions } from './dsp/synth';
-import type { Stand } from './model/mapParams';
+import { SCENE_MENU, SCENE_RUN, type Stand } from './model/mapParams';
+import { P_TRANSIENT_COUNT } from './params';
 
 export const OFFLINE_SAMPLE_RATE = 48000;
 export const OFFLINE_UPDATE_HZ = 60;
@@ -22,6 +23,8 @@ export interface OfflineOptions {
   sampleRate?: number;
   updateHz?: number;
   solo?: SynthOptions['solo'];
+  /** Match the live master slider (0..1, squared); default1. Recordings omit wall-clock pauses. */
+  masterVolume?: number;
   /** Emit 3-2-1-GO before the first tick (adds 3 s); default false: `go` at t = 0. */
   countdown?: boolean;
   /**
@@ -66,6 +69,8 @@ export function renderScript(script: StateScript, seconds: number, opts: Offline
   if (opts.stands) driver.scratch.stands = opts.stands;
   driver.setBike(opts.bike);
   const synth = new RockhopSynth(sampleRate, { seed, solo: opts.solo ?? null });
+  const volume = Math.max(0, Math.min(1, opts.masterVolume ?? 1));
+  synth.setMaster(volume * volume, true);
   const L = new Float32Array(updates * spu);
   const R = new Float32Array(updates * spu);
   const emit = (e: GameEvent): void => driver.onEvent(e);
@@ -73,6 +78,8 @@ export function renderScript(script: StateScript, seconds: number, opts: Offline
     const state = script(u, u / updateHz, emit);
     const packed = driver.update(state, 1 / updateHz, undefined);
     opts.onUpdate?.(u, state, driver);
+    if (driver.scene !== SCENE_RUN) silenceGameplay(packed);
+    if (driver.scene === SCENE_MENU) packed[P_TRANSIENT_COUNT] = 0;
     synth.setParams(packed);
     driver.flush();
     synth.process(L, R, u * spu, spu);
@@ -137,6 +144,8 @@ export function renderWorld(src: WorldSource, seconds: number, opts: OfflineOpti
   driver.setBike(src.bike);
   driver.setScene(opts.scene === undefined ? 'run' : opts.scene);
   const synth = new RockhopSynth(sampleRate, { seed: src.seed, solo: opts.solo ?? null });
+  const volume = Math.max(0, Math.min(1, opts.masterVolume ?? 1));
+  synth.setMaster(volume * volume, true);
   let current: Readonly<InputFrame> = NEUTRAL_INPUT;
   const preroll = opts.countdown ? 3 * updateHz : 0;
   const updates = Math.ceil(seconds * updateHz);
@@ -189,6 +198,8 @@ export function renderWorld(src: WorldSource, seconds: number, opts: OfflineOpti
     }
     const packed = driver.update(lastState, 1 / updateHz, current);
     opts.onUpdate?.(u, lastState, driver);
+    if (driver.scene !== SCENE_RUN) silenceGameplay(packed);
+    if (driver.scene === SCENE_MENU) packed[P_TRANSIENT_COUNT] = 0;
     synth.setParams(packed);
     driver.flush();
     synth.process(L, R, u * spu, spu);

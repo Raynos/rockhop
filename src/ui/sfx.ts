@@ -1,11 +1,6 @@
-/**
- * Menu sound cues (focus tick, confirm, back), synthesised — no assets. Uses
- * the game's AudioContext when the audio system exposes one (`context`
- * getter on WebAudioSystem) so there is a single output graph; otherwise a
- * tiny private context created on first use. Silent until `unlock()` (a user
- * gesture) like everything else, and it follows the Sound setting.
- */
+/** Cached PCM from the game's D-key cue family, unlocked by a user gesture. */
 import { silentAutomation } from '../audio/automation';
+import { renderMenuCue, type MenuCue } from '../audio/dsp/ui';
 
 interface ContextSource {
   context?: AudioContext | null;
@@ -14,27 +9,33 @@ interface ContextSource {
 export class UiSfx {
   private ctx: AudioContext | null = null;
   private gain: GainNode | null = null;
+  private readonly buffers = new Map<MenuCue, AudioBuffer>();
   private volume = 1;
   private enabled = true;
-  private lastTick = 0;
+  private lastTick = -Infinity;
 
   constructor(private readonly source?: ContextSource) {}
 
   setVolume(v: number): void {
     this.volume = Math.max(0, Math.min(1, v));
-    if (this.gain) this.gain.gain.value = this.volume * 0.5;
+    if (this.gain) this.gain.gain.value = this.enabled ? this.volume * this.volume : 0;
   }
 
   setEnabled(on: boolean): void {
     this.enabled = on;
+    if (this.gain) this.gain.gain.value = on ? this.volume * this.volume : 0;
   }
 
   private context(): AudioContext | null {
-    if (!this.enabled || this.volume <= 0) return null;
+    if (!this.enabled || this.volume <= 0 || silentAutomation()) return null;
     const shared = this.source?.context ?? null;
-    const ctx = shared ?? this.ctx;
-    if (!ctx) {
-      if (typeof AudioContext === 'undefined' || silentAutomation()) return null;
+    if (shared && this.ctx && this.ctx !== shared) {
+      const previous = this.ctx;
+      this.ctx = null;
+      void previous.close().catch(() => undefined);
+    }
+    if (!(shared ?? this.ctx)) {
+      if (typeof AudioContext === 'undefined') return null;
       try {
         this.ctx = new AudioContext({ latencyHint: 'interactive' });
       } catch {
@@ -44,50 +45,42 @@ export class UiSfx {
     const c = (shared ?? this.ctx)!;
     if (c.state === 'suspended') void c.resume().catch(() => undefined);
     if (!this.gain || this.gain.context !== c) {
+      this.gain?.disconnect();
+      this.buffers.clear();
       this.gain = c.createGain();
-      this.gain.gain.value = this.volume * 0.5;
+      this.gain.gain.value = this.volume * this.volume;
       this.gain.connect(c.destination);
     }
     return c;
   }
 
-  private blip(freq: number, dur: number, type: OscillatorType, level: number, slide = 1): void {
+  private play(cue: MenuCue): void {
     const c = this.context();
     if (!c || !this.gain) return;
-    const t = c.currentTime;
-    const o = c.createOscillator();
-    const g = c.createGain();
-    o.type = type;
-    o.frequency.setValueAtTime(freq, t);
-    if (slide !== 1) o.frequency.exponentialRampToValueAtTime(freq * slide, t + dur);
-    g.gain.setValueAtTime(0.0001, t);
-    g.gain.exponentialRampToValueAtTime(level, t + 0.004);
-    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
-    o.connect(g).connect(this.gain);
-    o.start(t);
-    o.stop(t + dur + 0.02);
+    let buffer = this.buffers.get(cue);
+    if (!buffer) {
+      const pcm = renderMenuCue(cue, c.sampleRate);
+      buffer = c.createBuffer(2, pcm[0].length, c.sampleRate);
+      buffer.getChannelData(0).set(pcm[0]);
+      buffer.getChannelData(1).set(pcm[1]);
+      this.buffers.set(cue, buffer);
+    }
+    const voice = c.createBufferSource();
+    voice.buffer = buffer;
+    voice.connect(this.gain);
+    voice.onended = () => voice.disconnect();
+    voice.start();
   }
 
-  /** Focus moved. Rate-limited so a held stick does not machine-gun. */
+  /** Focus moved. A held stick gets at most one quiet click every 40 ms. */
   tick(): void {
     const now = performance.now();
     if (now - this.lastTick < 40) return;
     this.lastTick = now;
-    this.blip(1900, 0.045, 'square', 0.12);
+    this.play('menuFocus');
   }
 
-  confirm(): void {
-    this.blip(620, 0.09, 'triangle', 0.35, 1.5);
-    this.blip(1240, 0.14, 'sine', 0.2, 1.2);
-  }
-
-  back(): void {
-    this.blip(520, 0.1, 'triangle', 0.25, 0.7);
-  }
-
-  /** Track select → countdown. */
-  launch(): void {
-    this.blip(180, 0.35, 'sawtooth', 0.22, 2.8);
-    this.blip(900, 0.2, 'sine', 0.18, 1.6);
-  }
+  confirm(): void { this.play('menuConfirm'); }
+  back(): void { this.play('menuBack'); }
+  launch(): void { this.play('menuLaunch'); }
 }

@@ -14,7 +14,7 @@
  * 80 m from the nearest stand is met by nothing. All randomness is the per-voice xorshift; two renders
  * are byte-identical.
  */
-import { Biquad, NoiseColour, NoiseRng, TWO_PI, clamp, dbToGain, smoothCoef } from './util';
+import { Biquad, NoiseColour, NoiseRng, TWO_PI, bandLimitedSaw, clamp, dbToGain, smoothCoef, sineCycle } from './util';
 
 const BANDS = [280, 520, 900] as const;
 const WHISTLES = 3;
@@ -27,6 +27,12 @@ export class Crowd {
   private readonly bright: Biquad;
   private readonly ooh: Biquad;
   private readonly clapBp: Biquad;
+  private readonly clapBody: Biquad;
+  private readonly sideBand: Biquad;
+  private readonly personPhase = new Float64Array(2);
+  private readonly personRate = new Float64Array(2);
+  private readonly clapEcho: Float32Array;
+  private clapEchoPos = 0;
   private readonly walk = new Float64Array(BANDS.length);
   private readonly walkTarget = new Float64Array(BANDS.length);
   private readonly kWalk: number;
@@ -79,6 +85,15 @@ export class Crowd {
     this.ooh.peaking(350, 3, 0);
     this.clapBp = new Biquad(sr);
     this.clapBp.bandpass(1900, 1.1);
+    this.clapBody = new Biquad(sr);
+    this.clapBody.bandpass(730, 0.85);
+    this.sideBand = new Biquad(sr);
+    this.sideBand.bandpass(780, 0.6);
+    this.clapEcho = new Float32Array(Math.max(1, Math.round(0.007 * sr)));
+    for (let i = 0; i < this.personPhase.length; i++) {
+      this.personPhase[i] = this.rng.u();
+      this.personRate[i] = (113 + i * 69) / sr;
+    }
     this.kWalk = smoothCoef(0.35, sr);
     this.kDensity = smoothCoef(0.25, sr);
     this.kShift = smoothCoef(0.12, sr);
@@ -111,7 +126,13 @@ export class Crowd {
     this.reactKind = 0;
     this.reactEnv = 0;
     this.reactPending = 0;
+    this.bandShiftTarget = 1;
+    this.ooh.peaking(350, 3, 0);
     this.clapOn = false;
+    this.clapEnv = 0;
+    this.clapBp.reset();
+    this.clapBody.reset();
+    this.clapEcho.fill(0);
     for (let i = 0; i < WHISTLES; i++) this.wEnv[i] = 0;
   }
 
@@ -121,6 +142,7 @@ export class Crowd {
     this.reactGain = gain;
     this.reactT = 0;
     this.reactEnv = 0;
+    this.ooh.peaking(350, 3, 0);
     this.bandShiftTarget = 1;
     if (kind === 1) {
       this.reactAtt = 0.12 * sr;
@@ -189,12 +211,22 @@ export class Crowd {
         if (--this.walkCountdown <= 0) {
           this.walkCountdown = Math.round(0.12 * sr);
           for (let b = 0; b < BANDS.length; b++) this.walkTarget[b] = this.rng.range2(0.25, 1);
-          if ((this.walkCountdown & 1) === 0 && Math.abs(this.bandShift - 1) > 0.01) {
-            for (let b = 0; b < BANDS.length; b++) this.bands[b]!.bandpass(BANDS[b]! * this.bandShift, 2);
-          }
+          // Retune back to neutral as well: a previous groan must not permanently
+          // leave the stand speaking through its lowered vowel bands.
+          for (let b = 0; b < BANDS.length; b++) this.bands[b]!.bandpass(BANDS[b]! * this.bandShift, 2);
         }
         const w = this.rng.n();
-        const pk = this.colour.pink(w);
+        let people = 0;
+        for (let p = 0; p < this.personPhase.length; p++) {
+          const rate = this.personRate[p]! * this.bandShift;
+          let phase = this.personPhase[p]! + rate;
+          if (phase >= 1) phase -= 1;
+          this.personPhase[p] = phase;
+          people += bandLimitedSaw(phase, rate) * (p & 1 ? 0.13 : 0.16);
+        }
+        // Voiced vowel fragments supply the human chest; pink aspiration supplies
+        // the diffuse stand, with independent filtered chatter at its edges.
+        const pk = this.colour.pink(w) + people;
         let bed = 0;
         for (let b = 0; b < BANDS.length; b++) {
           const wk = this.walk[b]! + (this.walkTarget[b]! - this.walk[b]!) * this.kWalk;
@@ -207,7 +239,7 @@ export class Crowd {
         const bright = this.reactKind === 1 || this.reactKind === 2 ? this.bright.process(w) * 0.5 * react : 0;
         const mono = (bed + bright) * bedBase * lift * Math.max(this.density, react * 0.8);
         // a wide crowd: slight L/R decorrelation from the second noise draw
-        const spread = this.rng.n() * 0.15 * bedBase * lift * Math.max(this.density, react * 0.8);
+        const spread = this.sideBand.process(this.rng.n()) * 0.32 * bedBase * lift * Math.max(this.density, react * 0.8);
         l = mono + spread;
         r = mono - spread;
       }
@@ -224,7 +256,7 @@ export class Crowd {
           const f = this.wFreq[k]! * (1 + 0.012 * Math.sin(this.wVib + k));
           this.wPhase[k] = this.wPhase[k]! + f / sr;
           if (this.wPhase[k]! >= 1) this.wPhase[k] = this.wPhase[k]! - 1;
-          const s = Math.sin(this.wPhase[k]! * TWO_PI) * this.wEnv[k]! * this.wGain[k]!;
+          const s = sineCycle(this.wPhase[k]!) * this.wEnv[k]! * this.wGain[k]!;
           this.wEnv[k] = this.wEnv[k]! * (1 - 1 / (0.25 * sr));
           l += s * (k === 1 ? 0.4 : 0.8);
           r += s * (k === 1 ? 0.8 : 0.4);
@@ -242,11 +274,15 @@ export class Crowd {
         }
         let clap = 0;
         if (this.clapEnv > 1e-3) {
-          clap = this.clapBp.process(this.rng.n()) * this.clapEnv * this.clapGain;
+          const strike = this.rng.n() * this.clapEnv;
+          clap = (this.clapBp.process(strike) + this.clapBody.process(strike) * 0.45) * this.clapGain;
           this.clapEnv *= this.clapDecay;
         }
-        l += clap * (1 - this.clapPan * 0.5);
-        r += clap * (1 + this.clapPan * 0.5);
+        const reflected = this.clapEcho[this.clapEchoPos]!;
+        this.clapEcho[this.clapEchoPos] = clap;
+        if (++this.clapEchoPos >= this.clapEcho.length) this.clapEchoPos = 0;
+        l += clap * (1 - this.clapPan * 0.5) + reflected * 0.2;
+        r += clap * (1 + this.clapPan * 0.5) + reflected * 0.32;
         this.clapT++;
         if (--this.clapLeft <= 0) this.clapOn = false;
       }

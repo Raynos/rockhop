@@ -1,0 +1,264 @@
+{
+  "source": "HEAD DSP versus current DSP; same esbuild options and input fixture; silent PCM only",
+  "sampleRate": 48000,
+  "fixtures": [
+    {
+      "file": "full-gauntlet-before.wav",
+      "sha256": "71e92c6b2a3a396b7f87050cfd09384abfcebf50fd80568de4488433d5aa7c10",
+      "rmsDb": -19.453140373268152,
+      "peakDb": -4.416675312999495
+    },
+    {
+      "file": "full-gauntlet-after.wav",
+      "sha256": "2bd343e02d4c5c576b9f1510cfdff7bb80bceffccaf773ca36355f6f89d7dc9b",
+      "rmsDb": -19.638710605100883,
+      "peakDb": -4.416675312999495
+    },
+    {
+      "file": "engine-before.wav",
+      "sha256": "7e40261a57e0eb2bc37373b759c262a5686bfea68774758af34d66bad64dd804",
+      "rmsDb": -22.01072793579387,
+      "peakDb": -6.749355854849258
+    },
+    {
+      "file": "engine-after.wav",
+      "sha256": "7543522884ed81ab98cea335680c9bc0d390b13e83047baf562b382edb0d8c78",
+      "rmsDb": -21.61052936971947,
+      "peakDb": -6.173127122891183
+    },
+    {
+      "file": "eight-surfaces-before.wav",
+      "sha256": "3009b91accdb606302bd4b08cb7b47732a625d6adc535d519c03cda3f1e7a006",
+      "rmsDb": -31.462956379986004,
+      "peakDb": -15.279601919938305
+    },
+    {
+      "file": "eight-surfaces-after.wav",
+      "sha256": "674610bcd8a5b8cab81c4dc1533b4d3cabb0ce3d881b70b7a238d0852704efb5",
+      "rmsDb": -33.228190973664596,
+      "peakDb": -16.050624337952396
+    },
+    {
+      "file": "material-landings-before.wav",
+      "sha256": "23dbbcaf1269378050ccabaca81b4bea43f682c146d909db37aa60b67ad6c18e",
+      "rmsDb": -22.136833223131255,
+      "peakDb": -4.416675312999495
+    },
+    {
+      "file": "material-landings-after.wav",
+      "sha256": "3e95cfe46d7aa2810497cc22259db01ae2ab1929f02a7862306b650f5ef3f0f9",
+      "rmsDb": -22.009529109873654,
+      "peakDb": -4.415535620555005
+    },
+    {
+      "file": "crash-restart-before.wav",
+      "sha256": "a6d0aa1db5b75b10216154a6b0f0927ef6cf56032ba758c80e967ce6abe99f29",
+      "rmsDb": -20.917322193185576,
+      "peakDb": -5.648906846725969,
+      "repeatR": 0.21564412286756782
+    },
+    {
+      "file": "crash-restart-after.wav",
+      "sha256": "40855543239cffcce6066fda7605b2c109b703a0ec63289eac311b6a82f42f4c",
+      "rmsDb": -20.610419299921375,
+      "peakDb": -4.729608023876969,
+      "repeatR": 0.3155679813681212
+    },
+    {
+      "file": "crowd-before.wav",
+      "sha256": "f8d69529f238fac77c6da0488bc3ab63194b863fe33abaceb7acd0d3c0434f46",
+      "rmsDb": -35.123413301635345,
+      "peakDb": -16.885008325530116
+    },
+    {
+      "file": "crowd-after.wav",
+      "sha256": "e79e080963b094e044d6e9617cd3e12e067771859f96ffc7711aa689e336f2ef",
+      "rmsDb": -35.79607003352904,
+      "peakDb": -17.09455748677428
+    },
+    {
+      "file": "race-cues-before.wav",
+      "sha256": "49429d51667f0d35b3f62571e32406568c66f21154db96e0198a0a7e24069282",
+      "rmsDb": -32.10439628181377,
+      "peakDb": -8.855239869352856
+    },
+    {
+      "file": "race-cues-after.wav",
+      "sha256": "4ed751b2a6bd687b4c372515f54797953c8d8f9a4c7b7622d872d1d01539fc69",
+      "rmsDb": -31.73039036774416,
+      "peakDb": -10.210544745288693
+    },
+    {
+      "file": "fallback-menu-before.wav",
+      "sha256": "9e930e9e88b7fca324a12f1a17ed62543d213ba74b7f586cbaa328f7f5dc5b5b",
+      "rmsDb": -28.642313277696736,
+      "peakDb": -17.125302759642903
+    },
+    {
+      "file": "fallback-menu-after.wav",
+      "sha256": "fe18ee2e8e4061daf3d7f68444be38d7dbf8fb9ebd78d4560d04a1941b74f88e",
+      "rmsDb": -29.439043088331548,
+      "peakDb": -18.42431348829633
+    },
+    {
+      "file": "fallback-results-before.wav",
+      "sha256": "eda670755b481013737d6ad87eeec907a7b665cbe4571f1bcd8e7badf0e75b58",
+      "rmsDb": -25.946981222393866,
+      "peakDb": -12.79550988081009
+    },
+    {
+      "file": "fallback-results-after.wav",
+      "sha256": "bb45650ebb343ebe60c6b8d969f4ced1e3322544bb32fc66ab47de59da5f4960",
+      "rmsDb": -26.5611391696022,
+      "peakDb": -13.63552907952734
+    },
+    {
+      "file": "environment-coast-before.wav",
+      "sha256": "7425deb677ef9e688c28968324da2f3fabedeed6209e3e3b910f6bb48b97d78c",
+      "rmsDb": -43.25684460365318,
+      "peakDb": -30.821472208441314
+    },
+    {
+      "file": "environment-coast-after.wav",
+      "sha256": "882b1f3881194194167311226c1780b26428e87e3b2ec5f105c999179f5d48c4",
+      "rmsDb": -41.62319400487498,
+      "peakDb": -25.186282465603668
+    },
+    {
+      "file": "environment-alpine-before.wav",
+      "sha256": "7425deb677ef9e688c28968324da2f3fabedeed6209e3e3b910f6bb48b97d78c",
+      "rmsDb": -43.25684460365318,
+      "peakDb": -30.821472208441314
+    },
+    {
+      "file": "environment-alpine-after.wav",
+      "sha256": "c0837c2c88f36f7dedc88379b8058cb31a31f256f78f173319fa869d94926cd1",
+      "rmsDb": -44.6745285286082,
+      "peakDb": -30.0005274485541
+    },
+    {
+      "file": "environment-quarry-before.wav",
+      "sha256": "7425deb677ef9e688c28968324da2f3fabedeed6209e3e3b910f6bb48b97d78c",
+      "rmsDb": -43.25684460365318,
+      "peakDb": -30.821472208441314
+    },
+    {
+      "file": "environment-quarry-after.wav",
+      "sha256": "14b7b8023ee8f9ef200c7d5efa9fb8b8ad02dbdf8c5724aade486751c498c061",
+      "rmsDb": -43.65584472987722,
+      "peakDb": -28.850318445308343
+    },
+    {
+      "file": "environment-0-before.wav",
+      "sha256": "5a32d262baa5bd12cbe7e636ff01abbe83fc1d03e56a8713a80249cd930585fb",
+      "rmsDb": -43.1822000965806,
+      "peakDb": -31.8822305234686
+    },
+    {
+      "file": "environment-0-after.wav",
+      "sha256": "c1cbaba7cd3cfe9eeabbd855c41741a18eb07eb42af322d38eca088bd3187845",
+      "rmsDb": -43.13539347572699,
+      "peakDb": -31.48958286851895
+    },
+    {
+      "file": "environment-1-before.wav",
+      "sha256": "bde75e3cdf2764dcd653e1211b81aa9bbf4e9782240b6a98fa91d42ced493202",
+      "rmsDb": -41.95980136192411,
+      "peakDb": -29.237317930992923
+    },
+    {
+      "file": "environment-1-after.wav",
+      "sha256": "0a40207f67f9d40ddb9a59d1e13b5140ef9912a1cb7298a4528766bcdeaa66e1",
+      "rmsDb": -41.59022172478189,
+      "peakDb": -27.450113985116662
+    },
+    {
+      "file": "environment-2-before.wav",
+      "sha256": "e5d42d3e39b4f23d0ac25d5196120e0983643bc8da53be86ddd68f2e46db7331",
+      "rmsDb": -45.15160637664226,
+      "peakDb": -31.531037051964965
+    },
+    {
+      "file": "environment-2-after.wav",
+      "sha256": "3fcef71cef50be3eb4b14e0cc980bee71bac4f5dd4dc7094e230fc4257c65143",
+      "rmsDb": -44.78462009908511,
+      "peakDb": -30.127514489389053
+    },
+    {
+      "file": "environment-3-before.wav",
+      "sha256": "40eab7f8c3bb221e5a7a3513e42570f55f6dfb7b86f532ad5b184bed939d7afc",
+      "rmsDb": -42.28263571741841,
+      "peakDb": -30.067746176877705
+    },
+    {
+      "file": "environment-3-after.wav",
+      "sha256": "a9c1ac04ea1f3a8022f7bb458ecd0d83809442dc557e08ee0983e4a82e338885",
+      "rmsDb": -41.88503966358766,
+      "peakDb": -29.414923721117404
+    },
+    {
+      "file": "environment-4-before.wav",
+      "sha256": "8a730d2f229700cacc463296e5b7cc6fc071949dc50c9e8579c2df8738471a23",
+      "rmsDb": -40.40231445951136,
+      "peakDb": -26.692247591247188
+    },
+    {
+      "file": "environment-4-after.wav",
+      "sha256": "93df2879cb1d1d7349ce3c15678266e88e917535aa0be3c3abd8e60fa89405ce",
+      "rmsDb": -40.08947142906227,
+      "peakDb": -26.397703588084617
+    }
+  ],
+  "cpu": [
+    {
+      "name": "before",
+      "round": 0,
+      "msPer60HzFrame": 0.3504720588235293
+    },
+    {
+      "name": "after",
+      "round": 0,
+      "msPer60HzFrame": 0.37837896176470615
+    },
+    {
+      "name": "before",
+      "round": 1,
+      "msPer60HzFrame": 0.3402287176470589
+    },
+    {
+      "name": "after",
+      "round": 1,
+      "msPer60HzFrame": 0.3352281039215692
+    },
+    {
+      "name": "before",
+      "round": 2,
+      "msPer60HzFrame": 0.3095499598039222
+    },
+    {
+      "name": "after",
+      "round": 2,
+      "msPer60HzFrame": 0.31488100490196125
+    },
+    {
+      "name": "before",
+      "round": 3,
+      "msPer60HzFrame": 0.28552965686274495
+    },
+    {
+      "name": "after",
+      "round": 3,
+      "msPer60HzFrame": 0.35726977156862755
+    },
+    {
+      "name": "before",
+      "round": 4,
+      "msPer60HzFrame": 0.289644158823529
+    },
+    {
+      "name": "after",
+      "round": 4,
+      "msPer60HzFrame": 0.27786785098039274
+    }
+  ]
+}

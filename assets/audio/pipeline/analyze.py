@@ -213,16 +213,22 @@ def seam_metrics(body, natural, sr=SR):
     """The wrap (body[-1] → body[0]) against the natural continuation (body[-1] → natural[0])."""
     mono = body.mean(axis=1)
     nat = natural.mean(axis=1)
-    d = np.abs(np.diff(mono))
-    click = abs(mono[0] - mono[-1]) / (np.percentile(d, 99.9) + 1e-9)
     w = int(0.05 * sr)
-    tail = db((mono[-w:] ** 2).mean())
-    step = abs(tail - db((mono[:w] ** 2).mean())) - abs(tail - db((nat[:w] ** 2).mean()))
+    # Opposite stereo discontinuities can cancel in the mid signal. Gate
+    # each physical channel; retain the mid spectrum only for musical flux.
+    clicks, steps, errors = [], [], []
+    for channel in range(body.shape[1]):
+        b, continuation = body[:, channel], natural[:, channel]
+        d = np.abs(np.diff(b))
+        clicks.append(abs(b[0]-b[-1])/(np.percentile(d, 99.9)+1e-9))
+        tail = db((b[-w:]**2).mean())
+        steps.append(abs(tail-db((b[:w]**2).mean()))-abs(tail-db((continuation[:w]**2).mean())))
+        errors.append(db(((b[:w]-continuation[:w])**2).mean()/max((continuation[:w]**2).mean(), 1e-12)))
+    click, step, err = max(clicks), max(steps, key=abs), max(errors)
     n = 2048
     last = _spec(mono[-n:])
     flux_loop = np.sqrt(((_spec(mono[:n]) - last).clip(min=0) ** 2).sum())
     flux_nat = np.sqrt(((_spec(nat[:n]) - last).clip(min=0) ** 2).sum())
-    err = db(((mono[:w] - nat[:w]) ** 2).mean() / max((nat[:w] ** 2).mean(), 1e-12))
     return dict(seam_click=round(float(click), 3), seam_step_db=round(float(step), 2),
                 seam_flux_x=round(float(flux_loop / max(flux_nat, 1e-9)), 3), seam_err_db=round(float(err), 1))
 

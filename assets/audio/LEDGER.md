@@ -1,10 +1,51 @@
 # ROCKHOP music ledger
 
+## Review delivery (2026-09-30)
+
+Ask 193 replaces the six historical loops with original Rockhop
+MiniMax-Music3 scores and adds a four-second results excerpt. This follows
+Wildshard Singleplayer’s local generation, screening, detected-beat loops,
+mastering and lifecycle workflow, using fresh prompts and sources.
+All procedural sound families are remastered; MOSS-SoundEffect v2 supplies
+five crowd/rider families and four environment beds with synthesis fallback.
+
+| cue | delivered file | loop/sting seconds | decoded LUFS | decoded dBTP |
+|---|---|---:|---:|---:|
+| menu | `menu-5246888f.mp3` | 33.506 | -18.00 | -3.73 |
+| map | `map-768b83c4.mp3` | 26.958 | -18.00 | -2.35 |
+| coast | `coast-138653e7.mp3` | 24.892 | -18.00 | -3.08 |
+| alpine | `alpine-9593e6b7.mp3` | 29.931 | -18.00 | -4.66 |
+| quarry | `quarry-fe5dba27.mp3` | 32.415 | -18.03 | -2.39 |
+| snowline | `snowline-cb054b7b.mp3` | 22.361 | -18.00 | -2.77 |
+| results | `results-6b8f5a93.mp3` | 4.000 | -16.03 | -2.93 |
+
+The seven scores total **3,609,435 bytes**; five SFX files add **884,577
+bytes** (4,494,012 bytes combined). Masters use MP3 for verified matching
+Chromium/WebKit timing. The reaction atlas is dual mono, averaged to mono
+before live panning; this avoids WebKit’s mono-MP3 priming offset without
+changing the intended reaction level. Environment beds retain stereo routing.
+
+`picks.json` and `pipeline/sfx_report.json` record prompts, seeds, hashes,
+selection/decoder measurements and model manifests. `pipeline/remaster_*.py`
+and `pipeline/sfx_*` reproduce the process. Diffusion/language components
+remain bf16; original waveform decoder weights and execution are float32.
+Raw renders, saved latents, discarded takes and weights remain outside git.
+
+Credits and delivered model licences identify MiniMax-Music3 and OpenMOSS.
+The [music licence](https://huggingface.co/MiniMaxAI/MiniMax-Music3/blob/main/LICENSE)
+and [SFX licence](https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0/blob/main/LICENSE)
+are the primary sources. The [audition](../../docs/evidence/audio-remaster/audition/index.html)
+and [played evidence](../../docs/evidence/audio-remaster/README.md) accompany
+the review candidate. Human taste and phone balance remain HR-22; this
+round does not publish it. ACE-Step stays retired.
+
+The following delivery is historical and retained for the before comparison.
+
 Store release D4 / Phase 4 (`docs/plans/STORE_RELEASE.md`). This file records every render: the cue, prompt, seed, model, commit,
 weights hash, duration and licence. The shipped picks are marked. Nobody on the project can listen to a render, so every pick below
 was made by measurement. **The user can swap any pick** (see [Swapping a pick](#swapping-a-pick)).
 
-## Status (2026-09-22)
+## Historical delivery (2026-09-22)
 
 | cue | shipped | file (public/audio) | loop | source |
 |---|---|---|---|---|

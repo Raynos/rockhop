@@ -8,7 +8,7 @@ import type { CompiledTrack, GameEvent, InputFrame, PhysicsState } from '../core
 import type { BikeClass } from '../core/types';
 import { applyEvent } from './model/events';
 import { SCENE_MENU, SCENE_RESULTS, SCENE_RUN, createScratch, mapParams, resetScratch, standsOf, type ModelScratch } from './model/mapParams';
-import { PACKED_LENGTH, biomeIndex, createParams, packParams, type AudioParams } from './params';
+import { PACKED_LENGTH, P_ENGINE_GAIN, P_TYRE_SPEED, P_SKID, P_CHAIN_HZ, P_WIND, P_AMBIENT_GAIN, P_CROWD, P_SCRAPE, biomeIndex, createParams, packParams, type AudioParams } from './params';
 
 import type { AudioScene } from './index';
 export type { AudioScene };
@@ -16,6 +16,11 @@ export type { AudioScene };
 export const SCENE_INDEX: Record<AudioScene, number> = { run: SCENE_RUN, menu: SCENE_MENU, map: SCENE_MENU, results: SCENE_RESULTS };
 
 export const AUDIO_SEED_SALT = 0xa0d10;
+
+/** A front screen may carry music, but never the last moving bike's continuous voices. */
+export function silenceGameplay(packed: Float32Array): void {
+  for (const index of [P_ENGINE_GAIN, P_TYRE_SPEED, P_TYRE_SPEED + 1, P_SKID, P_CHAIN_HZ, P_WIND, P_AMBIENT_GAIN, P_CROWD, P_SCRAPE]) packed[index] = 0;
+}
 
 export class ModelDriver {
   readonly params: AudioParams = createParams();

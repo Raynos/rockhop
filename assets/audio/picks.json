@@ -1,443 +1,738 @@
 {
- "total_bytes": 7735667,
- "cues": {
-  "menu": {
-   "stem": "menu-b-s47",
-   "entry": {
-    "file": "menu-c017aa05.m4a",
-    "loop": true,
-    "pre": 0.5,
-    "len": 71.111479,
-    "gainDb": 0,
-    "bpm": 108,
-    "bytes": 1458085
-   },
-   "verify": {
-    "decoded_len": 3463104,
-    "expected_len": 3461351,
-    "lufs": -16.02,
-    "tp_dbtp": -2.15,
-    "decoder_shift_samples": 0,
-    "periodic_err_db": -24.6,
-    "seam": {
-     "seam_click": 0.085,
-     "seam_step_db": 0.04,
-     "seam_flux_x": 1.007,
-     "seam_err_db": -28.0
-    },
-    "seam_offset2112": {
-     "seam_click": 0.074,
-     "seam_step_db": -0.05,
-     "seam_flux_x": 1.006,
-     "seam_err_db": -28.4
-    },
-    "bands": {
-     "sub": -6.66,
-     "engine": -4.5,
-     "lowmid": -9.28,
-     "presence": -14.83,
-     "air": -19.26
-    }
-   },
-   "caption": "cheerful instrumental indie rock theme, jangly clean guitars, bouncy bass, tight live drums, bright marimba lead melody, optimistic sunlit outdoor adventure, playful and confident, major key",
-   "seed": 47,
-   "dit": "acestep-v15-turbo",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "loop": {
-    "t0_s": 11.192,
-    "t0": 537217,
-    "len": 3413351,
-    "len_s": 71.11148,
-    "bars": 32,
-    "seam_sim": 0.9579,
-    "seam_chroma": 0.9959,
-    "seam_xcorr": 0.9392,
-    "bpm_exact": 107.999,
-    "seam_click": 0.088,
-    "seam_step_db": 1.21,
-    "seam_flux_x": 1.119,
-    "seam_err_db": -12.1,
-    "body_lufs": -14.1,
-    "body_bands": {
-     "sub": -6.66,
-     "engine": -4.51,
-     "lowmid": -9.28,
-     "presence": -14.79,
-     "air": -19.18
-    },
-    "body_tempo": {
-     "bpm": 107.67,
-     "err_pct": -0.31,
-     "ibi_cv_pct": 1.54
-    },
-    "body_silence_s": 0.0
-   },
-   "sting": null
+  "total_bytes": 3609435,
+  "target_lufs": -18.0,
+  "model_manifest": {
+    "path": "assets/audio/pipeline/remaster-model.json",
+    "sha256": "08e6f1a32e629bce2231be14968615e73d4ff7c103750ad3783ced8f721efc1c"
   },
-  "map": {
-   "stem": "map-a-s23",
-   "entry": {
-    "file": "map-88c58de3.m4a",
-    "loop": true,
-    "pre": 0.5,
-    "len": 59.997854,
-    "gainDb": 0,
-    "bpm": 96,
-    "bytes": 1233707
-   },
-   "verify": {
-    "decoded_len": 2929600,
-    "expected_len": 2927897,
-    "lufs": -16.02,
-    "tp_dbtp": -3.26,
-    "decoder_shift_samples": 0,
-    "periodic_err_db": -22.9,
-    "seam": {
-     "seam_click": 0.103,
-     "seam_step_db": -0.1,
-     "seam_flux_x": 1.02,
-     "seam_err_db": -29.9
+  "cues": {
+    "menu": {
+      "stem": "menu-minimax-s502",
+      "entry": {
+        "file": "menu-5246888f.mp3",
+        "loop": true,
+        "pre": 0.5,
+        "len": 33.506395833333336,
+        "gainDb": 0,
+        "bpm": 85.9537,
+        "bytes": 691245
+      },
+      "verify": {
+        "decoded_len": 1656307,
+        "expected_len": 1656307,
+        "lufs": -18.0,
+        "tp_dbtp": -3.73,
+        "decoder_shift_samples": 0,
+        "periodic_err_db": -29.1,
+        "periodic_err_db_channels": [
+          -29.1,
+          -29.3
+        ],
+        "seam": {
+          "seam_click": 0.601,
+          "seam_step_db": 0.24,
+          "seam_flux_x": 0.996,
+          "seam_err_db": -22.9
+        },
+        "seam_offset2112": {
+          "seam_click": 0.26,
+          "seam_step_db": 0.03,
+          "seam_flux_x": 1.035,
+          "seam_err_db": -23.0
+        },
+        "bands": {
+          "sub": -13.51,
+          "engine": -3.71,
+          "lowmid": -5.97,
+          "presence": -7.87,
+          "air": -40.25
+        },
+        "codec_loudness_correction_db": 0.5
+      },
+      "source": {
+        "bpm": 108,
+        "key": "D major",
+        "duration": 60,
+        "caption": "Genre: upbeat indie adventure rock, premium motorbike game soundtrack. BPM: 108. Key: D major. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: a memorable four-note rising motif on clean electric guitar and marimba; tight live drums, handclaps, warm bass; sunny confident outdoor expedition, a proper title melody with breathing room. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "menu",
+        "seed": 502,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": null,
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 286.05,
+        "duration_requested_s": 60,
+        "duration_actual_s": 60.070023,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 42.5,
+          "wired_gib": 12.2,
+          "free_gib": 31.3,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 58.0,
+          "wired_gib": 21.8,
+          "free_gib": 0.6,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 28.38
+      },
+      "analysis": {
+        "stem": "menu-minimax-s502",
+        "cue": "menu",
+        "loop": {
+          "start": 1092267,
+          "end": 2700574,
+          "bars": 12,
+          "bpm": 85.9537,
+          "similarity": 0.6948,
+          "boundary_level_db": 1.17,
+          "requested_bpm": 108,
+          "detected_beats": 86
+        },
+        "silence_s": 0.0,
+        "raw_lufs": -14.3,
+        "raw_tp_dbtp": 0.17,
+        "loop_version": 4,
+        "raw_duration_s": 60.070042,
+        "screen": {
+          "vocal_energy_pct": 0.001,
+          "cue_fit": 0.12819,
+          "vocal_semantic": 0.37086,
+          "instrumental_semantic": 0.11749
+        },
+        "loop_silence_s": 0.0
+      },
+      "raw_sha256": "b0822ab3ae4095e16794352f25bbe8f33cd80d103895b223bf4451e0139da5f6"
     },
-    "seam_offset2112": {
-     "seam_click": 0.018,
-     "seam_step_db": -0.08,
-     "seam_flux_x": 0.988,
-     "seam_err_db": -28.0
+    "map": {
+      "stem": "map-minimax-s502",
+      "entry": {
+        "file": "map-768b83c4.mp3",
+        "loop": true,
+        "pre": 0.5,
+        "len": 26.958375,
+        "gainDb": 0,
+        "bpm": 71.2209,
+        "bytes": 560205
+      },
+      "verify": {
+        "decoded_len": 1342002,
+        "expected_len": 1342002,
+        "lufs": -18.0,
+        "tp_dbtp": -2.35,
+        "decoder_shift_samples": 0,
+        "periodic_err_db": -25.3,
+        "periodic_err_db_channels": [
+          -25.3,
+          -27.9
+        ],
+        "seam": {
+          "seam_click": 0.135,
+          "seam_step_db": -0.07,
+          "seam_flux_x": 1.01,
+          "seam_err_db": -26.1
+        },
+        "seam_offset2112": {
+          "seam_click": 0.076,
+          "seam_step_db": 0.1,
+          "seam_flux_x": 1.027,
+          "seam_err_db": -24.9
+        },
+        "bands": {
+          "sub": -6.92,
+          "engine": -4.05,
+          "lowmid": -7.15,
+          "presence": -14.64,
+          "air": -20.53
+        },
+        "codec_loudness_correction_db": 0.48
+      },
+      "source": {
+        "bpm": 94,
+        "key": "D major",
+        "duration": 60,
+        "caption": "Genre: light instrumental travel groove, premium motorbike game soundtrack. BPM: 94. Key: D major. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: the same rising four-note motif gently picked on acoustic guitar, soft brushed drums, shaker, muted marimba and warm round bass; curious surveying of an island, relaxed navigation, space between phrases. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "map",
+        "seed": 502,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": null,
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 217.89,
+        "duration_requested_s": 60,
+        "duration_actual_s": 47.728617,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 42.5,
+          "wired_gib": 12.2,
+          "free_gib": 31.3,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 67.6,
+          "wired_gib": 18.7,
+          "free_gib": 4.5,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 29.77
+      },
+      "analysis": {
+        "stem": "map-minimax-s502",
+        "cue": "map",
+        "loop": {
+          "start": 176100,
+          "end": 1470102,
+          "bars": 8,
+          "bpm": 71.2209,
+          "similarity": 0.5024,
+          "boundary_level_db": 0.35,
+          "requested_bpm": 94,
+          "detected_beats": 51
+        },
+        "silence_s": 0.2,
+        "raw_lufs": -15.26,
+        "raw_tp_dbtp": 0.24,
+        "loop_version": 4,
+        "raw_duration_s": 47.728625,
+        "screen": {
+          "vocal_energy_pct": 0.062,
+          "cue_fit": 0.23741,
+          "vocal_semantic": 0.29254,
+          "instrumental_semantic": 0.0928
+        },
+        "loop_silence_s": 0.1
+      },
+      "raw_sha256": "58a8f18eb015ce1bf1e9ccb7d8305eb5a4fffdf3631cd84a4dea47ccf4b743b2"
     },
-    "bands": {
-     "sub": -10.06,
-     "engine": -4.22,
-     "lowmid": -9.06,
-     "presence": -13.9,
-     "air": -18.28
+    "coast": {
+      "stem": "coast-minimax-s502",
+      "entry": {
+        "file": "coast-138653e7.mp3",
+        "loop": true,
+        "pre": 0.5,
+        "len": 24.891791666666666,
+        "gainDb": 0,
+        "bpm": 115.7008,
+        "bytes": 518925
+      },
+      "verify": {
+        "decoded_len": 1242806,
+        "expected_len": 1242806,
+        "lufs": -18.0,
+        "tp_dbtp": -3.08,
+        "decoder_shift_samples": 0,
+        "periodic_err_db": -24.5,
+        "periodic_err_db_channels": [
+          -24.5,
+          -24.5
+        ],
+        "seam": {
+          "seam_click": 0.021,
+          "seam_step_db": -0.05,
+          "seam_flux_x": 1.005,
+          "seam_err_db": -27.1
+        },
+        "seam_offset2112": {
+          "seam_click": 0.072,
+          "seam_step_db": 0.05,
+          "seam_flux_x": 0.996,
+          "seam_err_db": -26.0
+        },
+        "bands": {
+          "sub": -10.81,
+          "engine": -6.93,
+          "lowmid": -4.26,
+          "presence": -7.77,
+          "air": -26.17
+        },
+        "codec_loudness_correction_db": 0.44
+      },
+      "source": {
+        "bpm": 126,
+        "key": "E major",
+        "duration": 60,
+        "caption": "Genre: driving instrumental surf rock, premium motorbike game soundtrack. BPM: 126. Key: E major. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: twangy clean reverb guitar hook, tom fills, tambourine, bouncy bass and small found-metal percussion accents; sunlit working harbor, salt spray and forward momentum; punch without dense low-mid distortion. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "coast",
+        "seed": 502,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": {
+          "same_latent": true,
+          "samples": 705536,
+          "fp32_unique": 702692,
+          "bf16_unique": 3692,
+          "rms_error": 0.0009570354595780373,
+          "snr_db": 44.52513122558594
+        },
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 177.5,
+        "duration_requested_s": 60,
+        "duration_actual_s": 35.87483,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 44.0,
+          "wired_gib": 12.3,
+          "free_gib": 42.8,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 60.7,
+          "wired_gib": 21.6,
+          "free_gib": 0.2,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 25.3
+      },
+      "analysis": {
+        "stem": "coast-minimax-s502",
+        "cue": "coast",
+        "loop": {
+          "start": 244088,
+          "end": 1438894,
+          "bars": 12,
+          "bpm": 115.7008,
+          "similarity": 0.7715,
+          "boundary_level_db": 0.02,
+          "requested_bpm": 126,
+          "detected_beats": 66
+        },
+        "silence_s": 0.0,
+        "raw_lufs": -13.49,
+        "raw_tp_dbtp": 0.02,
+        "loop_version": 4,
+        "raw_duration_s": 35.874833,
+        "screen": {
+          "vocal_energy_pct": 0.0,
+          "cue_fit": 0.33368,
+          "vocal_semantic": 0.28848,
+          "instrumental_semantic": 0.00387
+        },
+        "loop_silence_s": 0.0
+      },
+      "raw_sha256": "62d8137677cc2ab638ee82ac74b01bb8733cdce2bb2ab7f19b78ccac84cef209"
+    },
+    "alpine": {
+      "stem": "alpine-minimax-s501",
+      "entry": {
+        "file": "alpine-9593e6b7.mp3",
+        "loop": true,
+        "pre": 0.5,
+        "len": 29.930520833333333,
+        "gainDb": 0,
+        "bpm": 96.2228,
+        "bytes": 619725
+      },
+      "verify": {
+        "decoded_len": 1484665,
+        "expected_len": 1484665,
+        "lufs": -18.0,
+        "tp_dbtp": -4.66,
+        "decoder_shift_samples": 0,
+        "periodic_err_db": -25.9,
+        "periodic_err_db_channels": [
+          -26.7,
+          -25.9
+        ],
+        "seam": {
+          "seam_click": 0.042,
+          "seam_step_db": -0.06,
+          "seam_flux_x": 1.025,
+          "seam_err_db": -28.0
+        },
+        "seam_offset2112": {
+          "seam_click": 0.054,
+          "seam_step_db": -0.11,
+          "seam_flux_x": 0.995,
+          "seam_err_db": -31.5
+        },
+        "bands": {
+          "sub": -8.25,
+          "engine": -5.05,
+          "lowmid": -6.32,
+          "presence": -7.84,
+          "air": -21.61
+        },
+        "codec_loudness_correction_db": 0.48
+      },
+      "source": {
+        "bpm": 116,
+        "key": "A major",
+        "duration": 60,
+        "caption": "Genre: driving instrumental folk rock, premium motorbike game soundtrack. BPM: 116. Key: A major. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: warm acoustic strum, melodic mandolin and fiddle phrases, stomp claps, brushed snare and rounded bass; woodland lumber trail, agile playful climbs and clear bright mountain air. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "alpine",
+        "seed": 501,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": null,
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 256.6,
+        "duration_requested_s": 60,
+        "duration_actual_s": 57.550658,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 38.1,
+          "wired_gib": 11.2,
+          "free_gib": 34.6,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 57.4,
+          "wired_gib": 18.7,
+          "free_gib": 0.4,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 29.37
+      },
+      "analysis": {
+        "stem": "alpine-minimax-s501",
+        "cue": "alpine",
+        "loop": {
+          "start": 1100069,
+          "end": 2536734,
+          "bars": 12,
+          "bpm": 96.2228,
+          "similarity": 0.7498,
+          "boundary_level_db": 0.91,
+          "requested_bpm": 116,
+          "detected_beats": 89
+        },
+        "silence_s": 0.8,
+        "raw_lufs": -13.13,
+        "raw_tp_dbtp": 0.13,
+        "loop_version": 4,
+        "raw_duration_s": 57.550667,
+        "screen": {
+          "vocal_energy_pct": 0.032,
+          "cue_fit": 0.2699,
+          "vocal_semantic": 0.27596,
+          "instrumental_semantic": 0.06677
+        },
+        "loop_silence_s": 0.0
+      },
+      "raw_sha256": "46ca114fdbd9bdac98da87d62caded7206d14da56098bd6386a93e9f4b3f41d4"
+    },
+    "quarry": {
+      "stem": "quarry-minimax-s501",
+      "entry": {
+        "file": "quarry-fe5dba27.mp3",
+        "loop": true,
+        "pre": 0.5,
+        "len": 32.4150625,
+        "gainDb": 0,
+        "bpm": 88.8476,
+        "bytes": 669645
+      },
+      "verify": {
+        "decoded_len": 1603923,
+        "expected_len": 1603923,
+        "lufs": -18.03,
+        "tp_dbtp": -2.39,
+        "decoder_shift_samples": 0,
+        "periodic_err_db": -31.2,
+        "periodic_err_db_channels": [
+          -32.6,
+          -31.2
+        ],
+        "seam": {
+          "seam_click": 0.026,
+          "seam_step_db": -0.08,
+          "seam_flux_x": 0.965,
+          "seam_err_db": -25.6
+        },
+        "seam_offset2112": {
+          "seam_click": 0.019,
+          "seam_step_db": -0.1,
+          "seam_flux_x": 0.996,
+          "seam_err_db": -26.5
+        },
+        "bands": {
+          "sub": -7.19,
+          "engine": -5.53,
+          "lowmid": -5.3,
+          "presence": -11.72,
+          "air": -26.32
+        },
+        "codec_loudness_correction_db": 0.59
+      },
+      "source": {
+        "bpm": 108,
+        "key": "E minor",
+        "duration": 60,
+        "caption": "Genre: instrumental desert groove rock, premium motorbike game soundtrack. BPM: 108. Key: E minor. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: dry baritone guitar and short slide phrases, syncopated floor toms, cajon and frame drum, sparse bass; sun-baked stone terraces, deliberate traction and weight; confident muscular rhythm, no metal or abrasive distortion. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "quarry",
+        "seed": 501,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": null,
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 263.78,
+        "duration_requested_s": 60,
+        "duration_actual_s": 60.070023,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 38.1,
+          "wired_gib": 11.2,
+          "free_gib": 34.6,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 59.9,
+          "wired_gib": 16.0,
+          "free_gib": 5.6,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 27.56
+      },
+      "analysis": {
+        "stem": "quarry-minimax-s501",
+        "cue": "quarry",
+        "loop": {
+          "start": 228484,
+          "end": 1784407,
+          "bars": 12,
+          "bpm": 88.8476,
+          "similarity": 0.5618,
+          "boundary_level_db": 4.55,
+          "requested_bpm": 108,
+          "detected_beats": 89
+        },
+        "silence_s": 0.0,
+        "raw_lufs": -15.96,
+        "raw_tp_dbtp": 0.06,
+        "loop_version": 4,
+        "raw_duration_s": 60.070042,
+        "screen": {
+          "vocal_energy_pct": 0.0,
+          "cue_fit": 0.29744,
+          "vocal_semantic": 0.35021,
+          "instrumental_semantic": 0.09383
+        },
+        "loop_silence_s": 0.0
+      },
+      "raw_sha256": "ec6975efadb7cc6579bae58fe2314fb8968d4943a809e589713418ed81706ca6"
+    },
+    "snowline": {
+      "stem": "snowline-minimax-s501",
+      "entry": {
+        "file": "snowline-cb054b7b.mp3",
+        "loop": true,
+        "pre": 0.5,
+        "len": 22.3608125,
+        "gainDb": 0,
+        "bpm": 128.7968,
+        "bytes": 468525
+      },
+      "verify": {
+        "decoded_len": 1121319,
+        "expected_len": 1121319,
+        "lufs": -18.0,
+        "tp_dbtp": -2.77,
+        "decoder_shift_samples": 0,
+        "periodic_err_db": -20.8,
+        "periodic_err_db_channels": [
+          -20.8,
+          -21.4
+        ],
+        "seam": {
+          "seam_click": 0.162,
+          "seam_step_db": -0.21,
+          "seam_flux_x": 0.982,
+          "seam_err_db": -4.6
+        },
+        "seam_offset2112": {
+          "seam_click": 0.063,
+          "seam_step_db": 0.12,
+          "seam_flux_x": 0.952,
+          "seam_err_db": -11.8
+        },
+        "bands": {
+          "sub": -11.39,
+          "engine": -6.37,
+          "lowmid": -4.45,
+          "presence": -5.91,
+          "air": -14.93
+        },
+        "codec_loudness_correction_db": 0.56
+      },
+      "source": {
+        "bpm": 142,
+        "key": "B minor",
+        "duration": 60,
+        "caption": "Genre: crisp instrumental electronic adventure rock, premium motorbike game soundtrack. BPM: 142. Key: B minor. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: icy glass bell motif, clean plucked guitar and synth arpeggios, tight breakbeat, restrained bass and pizzicato strings; exposed snowy ridge, precise technical riding, urgent bright energy; recognizably winter, no surf guitar. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "snowline",
+        "seed": 501,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": null,
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 226.29,
+        "duration_requested_s": 60,
+        "duration_actual_s": 60.070023,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 34.7,
+          "wired_gib": 10.0,
+          "free_gib": 42.9,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 48.1,
+          "wired_gib": 19.6,
+          "free_gib": 0.2,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 28.42
+      },
+      "analysis": {
+        "stem": "snowline-minimax-s501",
+        "cue": "snowline",
+        "loop": {
+          "start": 225141,
+          "end": 1298460,
+          "bars": 12,
+          "bpm": 128.7968,
+          "similarity": 0.3146,
+          "boundary_level_db": 4.77,
+          "requested_bpm": 142,
+          "detected_beats": 125
+        },
+        "silence_s": 0.8,
+        "raw_lufs": -14.19,
+        "raw_tp_dbtp": 0.63,
+        "loop_version": 4,
+        "raw_duration_s": 60.070042,
+        "screen": {
+          "vocal_energy_pct": 0.007,
+          "cue_fit": 0.23506,
+          "vocal_semantic": 0.26645,
+          "instrumental_semantic": 0.02236
+        },
+        "loop_silence_s": 0.0
+      },
+      "raw_sha256": "08b243dd3c4eb9d5a2444fad92f02f5ede7f956a9d5b7113038f3316485c84d9"
+    },
+    "results": {
+      "stem": "menu-minimax-s502",
+      "entry": {
+        "file": "results-6b8f5a93.mp3",
+        "loop": false,
+        "pre": 0,
+        "len": 4.0,
+        "gainDb": 0,
+        "bpm": 85.9537,
+        "bytes": 81165
+      },
+      "verify": {
+        "decoded_len": 192000,
+        "expected_len": 192000,
+        "lufs": -16.03,
+        "tp_dbtp": -2.93,
+        "decoder_shift_samples": 0,
+        "codec_loudness_correction_db": 0.45
+      },
+      "trim_end_sample": 2883360,
+      "source": {
+        "bpm": 108,
+        "key": "D major",
+        "duration": 60,
+        "caption": "Genre: upbeat indie adventure rock, premium motorbike game soundtrack. BPM: 108. Key: D major. Instrumental only, absolutely no singing, spoken words, humming, choir or vocal samples. Arrangement: a memorable four-note rising motif on clean electric guitar and marimba; tight live drums, handclaps, warm bass; sunny confident outdoor expedition, a proper title melody with breathing room. A steady groove starts by the second bar and lasts to the end. A melodic hook develops over distinct phrases; avoid a monotonous two-bar loop. No fade-out, no long intro, no dramatic silence. Production: clear warm organic stereo mix, controlled sub-bass, leave room for a close engine and tyre sound in the center.",
+        "lyrics": "[Intro]\n[Instrumental]\n[Instrumental]\n[Solo]\n[Instrumental]",
+        "cue": "menu",
+        "seed": 502,
+        "model": "MiniMaxAI/MiniMax-Music3",
+        "dit": "MiniMax-Music3",
+        "lm": "Qwen3-8B + 0.6B local LM",
+        "steps": 30,
+        "license": "MiniMax-Music3 Community License",
+        "backend": "PyTorch mps, bf16 generation / fp32 vocoder",
+        "decoder_precision": "float32",
+        "decoder_comparison": null,
+        "code": "diffusers 0.40.0, torch 2.14.0",
+        "sample_rate": 44100,
+        "gen_time_s": 286.05,
+        "duration_requested_s": 60,
+        "duration_actual_s": 60.070023,
+        "memory_before_load": {
+          "pressure": 1,
+          "anonymous_gib": 42.5,
+          "wired_gib": 12.2,
+          "free_gib": 31.3,
+          "reserve_gib": 30,
+          "other_large_pids": []
+        },
+        "memory_before_take": {
+          "pressure": 1,
+          "anonymous_gib": 58.0,
+          "wired_gib": 21.8,
+          "free_gib": 0.6,
+          "reserve_gib": 0,
+          "other_large_pids": []
+        },
+        "mps_driver_gb": 28.38
+      },
+      "raw_sha256": "b0822ab3ae4095e16794352f25bbe8f33cd80d103895b223bf4451e0139da5f6"
     }
-   },
-   "caption": "light exploratory instrumental, plucked acoustic guitar, marimba, soft shaker, warm upright bass, gentle brushed drums, curious and sunny, planning a summer expedition, major key",
-   "seed": 23,
-   "dit": "acestep-v15-turbo",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "loop": {
-    "t0_s": 5.7353,
-    "t0": 275296,
-    "len": 2879897,
-    "len_s": 59.99785,
-    "bars": 24,
-    "seam_sim": 0.664,
-    "seam_chroma": 0.9928,
-    "seam_xcorr": 0.6882,
-    "bpm_exact": 96.003,
-    "seam_click": 0.035,
-    "seam_step_db": 1.25,
-    "seam_flux_x": 0.88,
-    "seam_err_db": -8.0,
-    "body_lufs": -12.67,
-    "body_bands": {
-     "sub": -10.06,
-     "engine": -4.22,
-     "lowmid": -9.06,
-     "presence": -13.86,
-     "air": -18.21
-    },
-    "body_tempo": {
-     "bpm": 95.7,
-     "err_pct": -0.31,
-     "ibi_cv_pct": 1.46
-    },
-    "body_silence_s": 0.0
-   },
-   "sting": null
-  },
-  "coast": {
-   "stem": "coast-b-s11",
-   "entry": {
-    "file": "coast-4ec96bd3.m4a",
-    "loop": true,
-    "pre": 0.5,
-    "len": 60.954458,
-    "gainDb": 0,
-    "bpm": 126,
-    "bytes": 1253087
-   },
-   "verify": {
-    "decoded_len": 2975680,
-    "expected_len": 2973814,
-    "lufs": -16.02,
-    "tp_dbtp": -2.33,
-    "decoder_shift_samples": 0,
-    "periodic_err_db": -19.8,
-    "seam": {
-     "seam_click": 0.233,
-     "seam_step_db": 0.11,
-     "seam_flux_x": 1.015,
-     "seam_err_db": -19.9
-    },
-    "seam_offset2112": {
-     "seam_click": 0.116,
-     "seam_step_db": -0.06,
-     "seam_flux_x": 0.988,
-     "seam_err_db": -23.9
-    },
-    "bands": {
-     "sub": -6.4,
-     "engine": -5.4,
-     "lowmid": -12.23,
-     "presence": -16.79,
-     "air": -18.58
-    }
-   },
-   "caption": "upbeat instrumental beach rock, clean jangly guitars, steel drum accents, found-metal percussion hits, punchy snare, tambourine, busy bassline, sunny coastal scrapyard, rhythmic and playful",
-   "seed": 11,
-   "dit": "acestep-v15-turbo",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "loop": {
-    "t0_s": 16.6487,
-    "t0": 799138,
-    "len": 2925814,
-    "len_s": 60.95446,
-    "bars": 32,
-    "seam_sim": 0.7756,
-    "seam_chroma": 0.9884,
-    "seam_xcorr": 0.2239,
-    "bpm_exact": 125.996,
-    "seam_click": 0.272,
-    "seam_step_db": 0.63,
-    "seam_flux_x": 0.857,
-    "seam_err_db": -0.4,
-    "body_lufs": -13.49,
-    "body_bands": {
-     "sub": -6.99,
-     "engine": -4.65,
-     "lowmid": -12.61,
-     "presence": -17.69,
-     "air": -19.59
-    },
-    "body_tempo": {
-     "bpm": 123.05,
-     "err_pct": -2.34,
-     "ibi_cv_pct": 0.87
-    },
-    "body_silence_s": 0.0
-   },
-   "sting": null
-  },
-  "alpine": {
-   "stem": "alpine-a-s11",
-   "entry": {
-    "file": "alpine-fa9271c0.m4a",
-    "loop": true,
-    "pre": 0.5,
-    "len": 49.655479,
-    "gainDb": 0,
-    "bpm": 116,
-    "bytes": 1024921
-   },
-   "verify": {
-    "decoded_len": 2432960,
-    "expected_len": 2431463,
-    "lufs": -16.03,
-    "tp_dbtp": -1.73,
-    "decoder_shift_samples": 0,
-    "periodic_err_db": -17.8,
-    "seam": {
-     "seam_click": 0.107,
-     "seam_step_db": -0.0,
-     "seam_flux_x": 0.98,
-     "seam_err_db": -26.1
-    },
-    "seam_offset2112": {
-     "seam_click": 0.012,
-     "seam_step_db": 0.06,
-     "seam_flux_x": 0.998,
-     "seam_err_db": -23.3
-    },
-    "bands": {
-     "sub": -5.42,
-     "engine": -6.17,
-     "lowmid": -10.03,
-     "presence": -14.82,
-     "air": -17.46
-    }
-   },
-   "caption": "warm driving instrumental folk rock, strummed acoustic guitars, banjo, stomp and clap percussion, upright bass, fiddle melody, forest trail energy, uplifting and confident",
-   "seed": 11,
-   "dit": "acestep-v15-turbo",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "loop": {
-    "t0_s": 30.3485,
-    "t0": 1456727,
-    "len": 2383463,
-    "len_s": 49.65548,
-    "bars": 24,
-    "seam_sim": 0.9084,
-    "seam_chroma": 0.9978,
-    "seam_xcorr": 0.775,
-    "bpm_exact": 115.999,
-    "seam_click": 0.067,
-    "seam_step_db": -1.33,
-    "seam_flux_x": 1.488,
-    "seam_err_db": -7.2,
-    "body_lufs": -13.47,
-    "body_bands": {
-     "sub": -5.89,
-     "engine": -5.34,
-     "lowmid": -10.28,
-     "presence": -15.6,
-     "air": -18.3
-    },
-    "body_tempo": {
-     "bpm": 117.45,
-     "err_pct": 1.25,
-     "ibi_cv_pct": 3.32
-    },
-    "body_silence_s": 0.0
-   },
-   "sting": null
-  },
-  "quarry": {
-   "stem": "quarry-b-s23",
-   "entry": {
-    "file": "quarry-06f54be7.m4a",
-    "loop": true,
-    "pre": 0.5,
-    "len": 73.846292,
-    "gainDb": 0,
-    "bpm": 104,
-    "bytes": 1513210
-   },
-   "verify": {
-    "decoded_len": 3594176,
-    "expected_len": 3592622,
-    "lufs": -16.1,
-    "tp_dbtp": -1.31,
-    "decoder_shift_samples": 0,
-    "periodic_err_db": -19.2,
-    "seam": {
-     "seam_click": 0.35,
-     "seam_step_db": -0.12,
-     "seam_flux_x": 1.002,
-     "seam_err_db": -29.1
-    },
-    "seam_offset2112": {
-     "seam_click": 0.002,
-     "seam_step_db": -0.13,
-     "seam_flux_x": 0.999,
-     "seam_err_db": -22.9
-    },
-    "bands": {
-     "sub": -7.38,
-     "engine": -6.23,
-     "lowmid": -11.23,
-     "presence": -13.16,
-     "air": -15.27
-    }
-   },
-   "caption": "instrumental desert groove, twangy slide guitar, hand percussion, djembe and cajon, rolling bass, dry dusty heat, rhythmic and driving, bright midday sun",
-   "seed": 23,
-   "dit": "acestep-v15-turbo",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "loop": {
-    "t0_s": 13.8855,
-    "t0": 666506,
-    "len": 3544622,
-    "len_s": 73.84629,
-    "bars": 32,
-    "seam_sim": 0.9548,
-    "seam_chroma": 0.998,
-    "seam_xcorr": 0.9643,
-    "bpm_exact": 104.0,
-    "seam_click": 0.31,
-    "seam_step_db": 2.28,
-    "seam_flux_x": 1.179,
-    "seam_err_db": -9.3,
-    "body_lufs": -16.14,
-    "body_bands": {
-     "sub": -8.0,
-     "engine": -5.39,
-     "lowmid": -11.59,
-     "presence": -13.86,
-     "air": -16.13
-    },
-    "body_tempo": {
-     "bpm": 103.36,
-     "err_pct": -0.62,
-     "ibi_cv_pct": 1.87
-    },
-    "body_silence_s": 0.0
-   },
-   "sting": null
-  },
-  "snowline": {
-   "stem": "coast-b-s47",
-   "entry": {
-    "file": "snowline-9710fc81.m4a",
-    "loop": true,
-    "pre": 0.5,
-    "len": 60.945021,
-    "gainDb": 0,
-    "bpm": 126,
-    "bytes": 1252657
-   },
-   "verify": {
-    "decoded_len": 2974656,
-    "expected_len": 2973361,
-    "lufs": -16.14,
-    "tp_dbtp": -1.2,
-    "decoder_shift_samples": 0,
-    "periodic_err_db": -16.4,
-    "seam": {
-     "seam_click": 0.386,
-     "seam_step_db": 0.07,
-     "seam_flux_x": 0.994,
-     "seam_err_db": -15.3
-    },
-    "seam_offset2112": {
-     "seam_click": 0.069,
-     "seam_step_db": 0.2,
-     "seam_flux_x": 1.003,
-     "seam_err_db": -20.5
-    },
-    "bands": {
-     "sub": -6.0,
-     "engine": -5.33,
-     "lowmid": -10.39,
-     "presence": -11.66,
-     "air": -14.74
-    }
-   },
-   "caption": "upbeat instrumental beach rock, clean jangly guitars, steel drum accents, found-metal percussion hits, punchy snare, tambourine, busy bassline, sunny coastal scrapyard, rhythmic and playful",
-   "seed": 47,
-   "dit": "acestep-v15-turbo",
-   "lm": "acestep-5Hz-lm-1.7B",
-   "loop": {
-    "t0_s": 4.8297,
-    "t0": 231828,
-    "len": 2925361,
-    "len_s": 60.94502,
-    "bars": 32,
-    "seam_sim": 0.7237,
-    "seam_chroma": 0.9835,
-    "seam_xcorr": 0.2083,
-    "bpm_exact": 126.015,
-    "seam_click": 0.174,
-    "seam_step_db": 1.78,
-    "seam_flux_x": 0.928,
-    "seam_err_db": 2.7,
-    "body_lufs": -17.08,
-    "body_bands": {
-     "sub": -6.56,
-     "engine": -4.59,
-     "lowmid": -10.75,
-     "presence": -12.5,
-     "air": -15.61
-    },
-    "body_tempo": {
-     "bpm": 129.2,
-     "err_pct": 2.54,
-     "ibi_cv_pct": 2.34
-    },
-    "body_silence_s": 0.0
-   },
-   "sting": null
   }
- }
 }

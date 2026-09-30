@@ -739,7 +739,7 @@ export class CreditsScreen extends Screen {
         <dt>Game</dt><dd><b>${GAME_NAME}</b> — dirt bikes, rocks, higher lines. A 2.5D motorbike physics game by Jake Verbaten.</dd>
         <dt>Engine</dt><dd>TypeScript · three.js · WebGL2 · Web Audio. 120 Hz fixed-step bike physics; every run replays byte-identical.</dd>
         <dt>Design</dt><dd>Twelve tracks across four zones, each one tuned so a crash is only ever one tap from another try.</dd>
-        <dt>Music</dt><dd>Music generated with <b>ACE-Step 1.5</b> (MIT). Engine, tyres, crowd and ambience are synthesised in code.</dd>
+        <dt>Music</dt><dd>Soundtrack generated with <b>MiniMax-Music3</b>. Recorded crowd, rider and environment sounds generated with <b>MOSS-SoundEffect-v2.0</b> by OpenMOSS (Apache-2.0). Engine, tyres, impacts and interface sounds authored in code; audio mastered for ROCKHOP.</dd>
         <dt>Type</dt><dd><b>Archivo Black</b> and <b>Archivo</b> by Omnibus-Type; <b>Barlow Condensed</b> by Jeremy Tribby (all SIL OFL 1.1).</dd>
         <dt>Art</dt><dd>Key art, icons, medals and world textures generated for ROCKHOP; the zones are built in-engine.</dd>
         <dt>Hero</dt><dd>Rider and bike authored in Blender by Astra (five outfits, two liveries). Body and skin from <b>MPFB / MakeHuman</b> system assets (CC0) and the Blender Studio human base meshes (CC0); hair from <b>Daniel Bystedt</b>'s Hair Styles (CC BY-SA), baked to a curl shell for the game; the study head <b>Infinite, 3D Head Scan by Lee Perry-Smith</b> (CC BY 3.0, via three.js); cotton and denim from <b>Poly Haven</b> (CC0). Full provenance and licences ship with the source.</dd>

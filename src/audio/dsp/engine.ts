@@ -1,5 +1,5 @@
 /**
- * Single-cylinder 250 cc 4-stroke trials engine (Montesa 4RT / Beta Evo 4T character), round 4:
+ * Single-cylinder 250 cc 4-stroke trials engine (Montesa 4RT / Beta Evo 4T character):
  * **per-firing resonator excitation** instead of a harmonic bank.
  *
  *   fFire = rpm / 120           (one power stroke per two revolutions)
@@ -33,8 +33,12 @@
  * return mostly right (5.9 / 13.7 / 27 ms) and some left (9.3 / 19.1 ms), damped — early reflections off the
  * course; the intake hiss is independent noise per channel. Rev limiter: two cycles in every six emit nothing (an ignition-cut stutter).
  * All randomness from the seeded NoiseRng; no allocation after construction.
+ * Remaster: pressure-rounded exhaust, a torque-fed 170–260 Hz chest mode for
+ * small speakers, filtered valve/piston detail, and a 45 ms intake bark on a
+ * throttle rise. Added mechanical detail shares the original noise draw so
+ * combustion jitter retains its independent cadence.
  */
-import { Biquad, NoiseRng, TWO_PI, clamp, dbToGain, smoothCoef } from './util';
+import { Biquad, NoiseRng, clamp, dbToGain, smoothCoef, sineCycle } from './util';
 
 const IDLE = 1500;
 const REDLINE = 10000;
@@ -58,6 +62,8 @@ export class EngineVoice {
   private gulp = 0;
   private gulpDecay = 0;
   private valveEnv = 0;
+  private pistonEnv = 0;
+  private throttleSnap = 0;
   // targets / smoothed
   private rpmTarget = IDLE;
   private loadTarget = 0;
@@ -90,6 +96,9 @@ export class EngineVoice {
   private readonly intakeL: Biquad;
   private readonly intakeR: Biquad;
   private readonly mech: Biquad;
+  private readonly valve: Biquad;
+  private readonly piston: Biquad;
+  private readonly chest: Biquad;
   private readonly whineBp: Biquad;
   private whinePhase = 0;
   private chatterPhase = 0;
@@ -129,7 +138,13 @@ export class EngineVoice {
     this.intakeL = new Biquad(sr);
     this.intakeR = new Biquad(sr);
     this.mech = new Biquad(sr);
-    this.mech.bandpass(1100, 0.6);
+    this.mech.bandpass(950, 0.9);
+    this.valve = new Biquad(sr);
+    this.valve.bandpass(2350, 1.3);
+    this.piston = new Biquad(sr);
+    this.piston.bandpass(410, 2.2);
+    this.chest = new Biquad(sr);
+    this.chest.bandpass(190, 1.4);
     this.whineBp = new Biquad(sr);
     this.whineBp.bandpass(2800, 6);
     const maxTap = Math.ceil((TAPS_MS[TAPS_MS.length - 1]! / 1000) * sr) + 2;
@@ -142,7 +157,9 @@ export class EngineVoice {
 
   set(rpm: number, load: number, limiter: boolean, gain: number, clutch = 0, speed = 0, torque = load, bike = 0, lug = 0): void {
     this.rpmTarget = clamp(rpm, 150, 14000);
-    this.loadTarget = clamp(load, 0, 1);
+    const newLoad = clamp(load, 0, 1);
+    this.throttleSnap = Math.max(this.throttleSnap, newLoad - this.loadTarget);
+    this.loadTarget = newLoad;
     this.limiter = limiter;
     this.gainTarget = clamp(gain, 0, 1);
     this.clutchTarget = clamp(clutch, 0, 1);
@@ -168,6 +185,7 @@ export class EngineVoice {
     const fi = 600 + 1600 * load;
     this.intakeL.bandpass(fi, 0.9);
     this.intakeR.bandpass(fi * 1.07, 0.9);
+    this.chest.bandpass(170 + 90 * this.torque + (pro ? 35 : 0), 1.4);
     this.intakeGain = dbToGain(-46 + 14 * load + 6 * lug + (pro ? 2 : 0));
     this.burstGain = dbToGain(-34 + 10 * load + 8 * lug + (pro ? 3 : 0));
     // per-pulse energy: up with load and lug, down with rev (the pulse density carries the loudness: 6.7× more
@@ -211,7 +229,10 @@ export class EngineVoice {
     const burstGain = this.burstGain;
     const mechGain = dbToGain(-46);
     const valveGain = dbToGain(-36);
+    const pistonGain = dbToGain(-37);
     const valveDecay = Math.exp(-dt / 0.0008);
+    const pistonDecay = Math.exp(-dt / 0.002);
+    const snapDecay = Math.exp(-dt / 0.045);
     const excDecay = Math.exp(-dt / 0.0007);
     const jitter = 0.05 - 0.028 * load + 0.015 * lug;
     const huntOn = load < 0.25 || lug > 0.3;
@@ -246,6 +267,8 @@ export class EngineVoice {
           this.pipe1.reset();
           this.pipe2.reset();
           this.body.reset();
+          this.chest.reset();
+          this.excEnv = this.burstEnv = 0;
         } else {
           let amp = this.pulseAmp * (1 + 0.15 * this.rng.n());
           let burst = 1;
@@ -266,6 +289,7 @@ export class EngineVoice {
         if (!cut) this.gulp = 1;
         this.gulpDecay = Math.exp(-dt / (0.3 / Math.max(5, fFire)));
         this.valveEnv = 1;
+        this.pistonEnv = 0.5 + 0.5 * load;
       }
       if (prev < 0.5 && this.phase >= 0.5) this.valveEnv = 0.7;
 
@@ -280,20 +304,28 @@ export class EngineVoice {
         burst = this.burstEnv * this.rng.n();
         this.burstEnv *= this.burstDecay;
       }
-      let ex = this.pipe1.process(exc) * 5.5 + this.pipe2.process(exc) * 2.0 + this.body.process(exc) * 1.4;
+      const pipe = this.pipe1.process(exc) * 5.5 + this.pipe2.process(exc) * 2.0;
+      // The warm chest mode survives a phone speaker; pressure saturation rounds
+      // the exhaust's leading edge without flattening the firing rhythm.
+      let ex = pipe / (1 + Math.abs(pipe) * (0.12 + 0.12 * load)) + this.body.process(exc) * 1.4;
+      ex += this.chest.process(exc) * (0.4 + 0.5 * this.torque);
       ex = this.hp.process(this.lp.process(ex));
       ex += this.burstLp.process(this.burstHp.process(burst)) * burstGain * 6;
 
       // -- continuous bed: intake (decorrelated), mechanical, valve train ---------------
-      const g = (0.45 + 0.55 * this.gulp) * intakeGain;
+      const g = (0.32 + 0.68 * this.gulp + 1.8 * this.throttleSnap) * intakeGain;
       this.gulp *= this.gulpDecay;
+      this.throttleSnap *= snapDecay;
       const inL = this.intakeL.process(this.rng.n()) * g;
       const inR = this.intakeR.process(this.rng.n()) * g;
-      let bed = this.mech.process(this.rng.n()) * mechGain;
+      const mechanicalNoise = this.rng.n();
+      let bed = this.mech.process(mechanicalNoise) * mechGain;
       if (this.valveEnv > 1e-3) {
-        bed += this.valveEnv * this.rng.n() * valveGain;
+        bed += this.valve.process(this.valveEnv * this.rng.n()) * valveGain * 2;
         this.valveEnv *= valveDecay;
       }
+      bed += this.piston.process(this.pistonEnv * mechanicalNoise) * pistonGain;
+      this.pistonEnv *= pistonDecay;
 
       // -- clutch slip whine -----------------------------------------------------
       let whine = 0;
@@ -302,8 +334,8 @@ export class EngineVoice {
         if (this.whinePhase >= 1) this.whinePhase -= 1;
         this.chatterPhase += dChatter;
         if (this.chatterPhase >= 1) this.chatterPhase -= 1;
-        const chatter = 0.6 + 0.4 * Math.sin(this.chatterPhase * TWO_PI);
-        whine = (Math.sin(this.whinePhase * TWO_PI) * 0.5 + this.whineBp.process(this.rng.n()) * 2) * chatter * whineGain;
+        const chatter = 0.6 + 0.4 * sineCycle(this.chatterPhase);
+        whine = (sineCycle(this.whinePhase) * 0.5 + this.whineBp.process(this.rng.n()) * 2) * chatter * whineGain;
       }
 
       // -- stereo: dry slightly left, early reflections of the exhaust path -----------

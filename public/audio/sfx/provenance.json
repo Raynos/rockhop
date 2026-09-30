@@ -1,0 +1,999 @@
+{
+  "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+  "model_manifest": {
+    "path": "assets/audio/pipeline/sfx-model.json",
+    "sha256": "70e34a2eeaa8718ec9f57219a1ef859c7e7ccc1dc0a10942242e6d2217d3aa0e"
+  },
+  "model_licence": "Apache-2.0",
+  "weights_redistributed": false,
+  "review": "Objective semantic/loudness/seam proxies; human listening pending",
+  "qualification": {
+    "beds": "rank<=2 and own zone leads all biome descriptions",
+    "crowd": "rank<=3",
+    "grunt": "rank<=2",
+    "negative_winner_rejects": [
+      "a person speaking intelligible words",
+      "music with melody and instruments",
+      "silence"
+    ],
+    "loop": "wrap derivative ratio<=3 and 50ms RMS energy step<=6dB",
+    "variant": "second qualified take p>=80% of best",
+    "original_fp32_decoder_required": true
+  },
+  "families": {
+    "crowdRoar": {
+      "shipped": true,
+      "seed": 1,
+      "selected_seeds": [
+        1,
+        2
+      ],
+      "selected_trim_start_s": 0.0020625,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/crowdRoar/1.wav",
+          "sha256": "10df2319cd42af23611c221be995501b7399a127b9a7067b6aba7ba748ef2182",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "crowdRoar",
+            "kind": "oneshot",
+            "seed": 1,
+            "prompt": "An outdoor mountain bike race crowd of thirty spectators gives a short natural excited roar, scattered whoops and cheers. Close lively human voices, no words, no announcer, no music, no instruments, no engine, no reverb tail.",
+            "desc": "A small outdoor sports crowd gives a sudden excited roar.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 3.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 38.72,
+            "model_load_s": 6.5,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "a6513232538570f9183112a7fffa55d206da43fbd7654ca0c65b96f03430f7d0",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": {
+              "same_latent_sha256": "b00fe678411b79e6805163f7ef910737cee6bc90fe61b1105a838af7c04357bf",
+              "samples": 144000,
+              "bf16_unique_values": 2967,
+              "fp32_unique_values": 143811,
+              "bf16_grid_fraction": 1.0,
+              "fp32_bf16_grid_fraction": 3.472222222222222e-05,
+              "rms_error": 0.0034648399529224037,
+              "relative_snr_db": 43.346876815231205,
+              "bf16_fullscale_values": 54,
+              "fp32_fullscale_values": 0,
+              "fp32_peak": 0.9994269013404846,
+              "note": "Identical latent; FP32 decode reloads original float32 DAC checkpoint weights after bf16 reference. Fullscale tanh rounding is not a hard-clipping diagnosis."
+            },
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 41.6,
+                "wired_gib": 13.6,
+                "free_gib": 28.6,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 48.7,
+                "wired_gib": 20.8,
+                "free_gib": 14.0,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.64
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.9994269013404846,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0.0020625,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.9866,
+              "match": "A small outdoor sports crowd gives a sudden excited roar.",
+              "offset_s": 0,
+              "best_bed": "coast"
+            }
+          ],
+          "rank": 1,
+          "p": 0.9866,
+          "match": "A small outdoor sports crowd gives a sudden excited roar.",
+          "offset_s": 0,
+          "best_bed": "coast"
+        },
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/crowdRoar/2.wav",
+          "sha256": "221ed1d8ed0509402694cfaee4c1407d877f370fd38937dd83cbc12b72fc9a6d",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "crowdRoar",
+            "kind": "oneshot",
+            "seed": 2,
+            "prompt": "An outdoor mountain bike race crowd of thirty spectators gives a short natural excited roar, scattered whoops and cheers. Close lively human voices, no words, no announcer, no music, no instruments, no engine, no reverb tail.",
+            "desc": "A small outdoor sports crowd gives a sudden excited roar.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 3.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 33.03,
+            "model_load_s": 6.5,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "12a04994a4391d5aed0063f4ee7be0d85279df1fcdee1073f6f446514fea05df",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 41.6,
+                "wired_gib": 13.6,
+                "free_gib": 28.6,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 51.5,
+                "wired_gib": 24.6,
+                "free_gib": 7.1,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.4
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.9994926452636719,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0.0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.9813,
+              "match": "A small outdoor sports crowd gives a sudden excited roar.",
+              "offset_s": 0,
+              "best_bed": "coast"
+            }
+          ],
+          "rank": 1,
+          "p": 0.9813,
+          "match": "A small outdoor sports crowd gives a sudden excited roar.",
+          "offset_s": 0,
+          "best_bed": "coast"
+        }
+      ],
+      "fallback": null
+    },
+    "crowdCheer": {
+      "shipped": true,
+      "seed": 3,
+      "selected_seeds": [
+        3
+      ],
+      "selected_trim_start_s": 0.0,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/crowdCheer/3.wav",
+          "sha256": "d41a2ceb6e4542b44c3bc71286988e8ed404d5658a53f50ebfc9565062564f4b",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "crowdCheer",
+            "kind": "oneshot",
+            "seed": 3,
+            "prompt": "A small group of seven spectators celebrating a successful bicycle jump with spontaneous cheers and whoops. Several brief high pitched joyful whooping calls, happy laughter and excited breaths from individual people, lively natural outdoor human crowd sounds. Short nonverbal celebration.",
+            "desc": "A handful of spectators cheer and whoop for a bike stunt.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 2.5,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 28.44,
+            "model_load_s": 5.9,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "ef2ad966c9494588d780ff6eb826a9303c3a1932108acd63a3c7a906372bb526",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 43.8,
+                "wired_gib": 10.8,
+                "free_gib": 28.1,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 52.1,
+                "wired_gib": 18.1,
+                "free_gib": 12.7,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.08
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.945216178894043,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0.0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.3683,
+              "match": "A handful of spectators cheer and whoop for a bike stunt.",
+              "offset_s": 0,
+              "best_bed": "alpine"
+            }
+          ],
+          "rank": 1,
+          "p": 0.3683,
+          "match": "A handful of spectators cheer and whoop for a bike stunt.",
+          "offset_s": 0,
+          "best_bed": "alpine"
+        }
+      ],
+      "fallback": null
+    },
+    "crowdApplause": {
+      "shipped": true,
+      "seed": 2,
+      "selected_seeds": [
+        2
+      ],
+      "selected_trim_start_s": 0.0,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/crowdApplause/2.wav",
+          "sha256": "9a995ea5e65612fe7cb301bd4e2871d0ce0c11e53d4d79baca400e40c783f9b9",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "crowdApplause",
+            "kind": "oneshot",
+            "seed": 2,
+            "prompt": "Thirty outdoor sports spectators break into warm celebratory applause, uneven hand claps and a few happy whoops, then settle away. Natural close crowd, no speech or words, no announcer, no music, no instruments, no engine.",
+            "desc": "A small outdoor crowd claps and cheers at a race finish.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 4.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 28.9,
+            "model_load_s": 6.5,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "3f5f7db965b1d2d45024a2e53c4312d8114f1f038b8b2a7c094985051c7e324f",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 41.6,
+                "wired_gib": 13.6,
+                "free_gib": 28.6,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 49.8,
+                "wired_gib": 26.0,
+                "free_gib": 7.3,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.4
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.958742082118988,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0.0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.957,
+              "match": "A small outdoor crowd claps and cheers at a race finish.",
+              "offset_s": 0,
+              "best_bed": "alpine"
+            }
+          ],
+          "rank": 1,
+          "p": 0.957,
+          "match": "A small outdoor crowd claps and cheers at a race finish.",
+          "offset_s": 0,
+          "best_bed": "alpine"
+        }
+      ],
+      "fallback": null
+    },
+    "crowdGroan": {
+      "shipped": true,
+      "seed": 2,
+      "selected_seeds": [
+        2
+      ],
+      "selected_trim_start_s": 0.009770833333333333,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/crowdGroan/2.wav",
+          "sha256": "646f59db306bcd148af13f9daff30429902917d6a7d5294d2fa62ba158a9c18b",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "crowdGroan",
+            "kind": "oneshot",
+            "seed": 2,
+            "prompt": "Seven spectators at an outdoor bicycle race react together to a tumble with a short sympathetic ooh and ah groan, then silence. Human nonverbal crowd reaction, no intelligible speech, not screaming, no music, no instruments, no engine.",
+            "desc": "Sports spectators react with a sympathetic disappointed groan.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 2.5,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 29.03,
+            "model_load_s": 6.5,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "474803f8614847dcb5e4e50e63b96967c0876d0280c320f1136caf4e6bc6f92e",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 41.6,
+                "wired_gib": 13.6,
+                "free_gib": 28.6,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 45.0,
+                "wired_gib": 22.3,
+                "free_gib": 15.7,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.4
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.9887237548828125,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0.009770833333333333,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.9783,
+              "match": "Sports spectators react with a sympathetic disappointed groan.",
+              "offset_s": 0,
+              "best_bed": "coast"
+            }
+          ],
+          "rank": 1,
+          "p": 0.9783,
+          "match": "Sports spectators react with a sympathetic disappointed groan.",
+          "offset_s": 0,
+          "best_bed": "coast"
+        }
+      ],
+      "fallback": null
+    },
+    "grunt": {
+      "shipped": true,
+      "seed": 1,
+      "selected_seeds": [
+        1
+      ],
+      "selected_trim_start_s": 1.0465,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/grunt/1.wav",
+          "sha256": "fd51475a76c7e0d0a616c43a5f968c0df74c604108584670f149b88ed9a1cad6",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "grunt",
+            "kind": "oneshot",
+            "seed": 1,
+            "prompt": "A single adult mountain bike rider gives one brief low breathy strained impact grunt and a short exhale after falling onto padded clothing. Natural close dry nonverbal human exertion, no words, no screaming, no speech, no music, no crowd.",
+            "desc": "An adult rider makes a brief strained nonverbal impact grunt.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 1.5,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 33.12,
+            "model_load_s": 6.5,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "01c24f96666fadf8acbeb75160b6259c009fb7117e1bf9d215099e6e1491e328",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 41.6,
+                "wired_gib": 13.6,
+                "free_gib": 28.6,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 55.4,
+                "wired_gib": 20.1,
+                "free_gib": 7.8,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.4
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.999256432056427,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 1.0465,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.8862,
+              "match": "An adult rider makes a brief strained nonverbal impact grunt.",
+              "offset_s": 0,
+              "best_bed": "alpine"
+            }
+          ],
+          "rank": 1,
+          "p": 0.8862,
+          "match": "An adult rider makes a brief strained nonverbal impact grunt.",
+          "offset_s": 0,
+          "best_bed": "alpine"
+        }
+      ],
+      "fallback": null
+    },
+    "coast": {
+      "shipped": true,
+      "seed": 3,
+      "selected_seeds": null,
+      "selected_trim_start_s": 0.0,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/coast/3.wav",
+          "sha256": "3e8a7926b45bfca37ea38e5aae6857decc0c4759e18df4ef04dfa8fa03013748",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "coast",
+            "kind": "bed",
+            "seed": 3,
+            "prompt": "Ocean waves breaking continuously on a rocky pebbled beach. Repeated gentle surf washes with foamy water receding over stones, seagulls cry above the sea. Clear audible waves and gulls with a light sea breeze. Natural coastal field recording, steady background ambience.",
+            "desc": "Gentle coastal surf, sea breeze and distant seabirds outdoors.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 20.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 27.95,
+            "model_load_s": 5.9,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "7d15b59aad3e2ca2bbbf7602767b4b1c590ed0836d8dc16b0b0beb0048616f08",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 43.8,
+                "wired_gib": 10.8,
+                "free_gib": 28.1,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 59.0,
+                "wired_gib": 21.1,
+                "free_gib": 2.4,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 21.92
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.6039535999298096,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.9849,
+              "match": "Gentle coastal surf, sea breeze and distant seabirds outdoors.",
+              "offset_s": 0.0,
+              "best_bed": "coast"
+            },
+            {
+              "rank": 1,
+              "p": 0.8947,
+              "match": "Gentle coastal surf, sea breeze and distant seabirds outdoors.",
+              "offset_s": 5.0,
+              "best_bed": "coast"
+            },
+            {
+              "rank": 1,
+              "p": 0.9034,
+              "match": "Gentle coastal surf, sea breeze and distant seabirds outdoors.",
+              "offset_s": 10.0,
+              "best_bed": "coast"
+            }
+          ],
+          "rank": 1,
+          "p": 0.9849,
+          "match": "Gentle coastal surf, sea breeze and distant seabirds outdoors.",
+          "offset_s": 0.0,
+          "best_bed": "coast"
+        }
+      ],
+      "fallback": null
+    },
+    "alpine": {
+      "shipped": true,
+      "seed": 4,
+      "selected_seeds": null,
+      "selected_trim_start_s": 0.0,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/alpine/4.wav",
+          "sha256": "ae8e6c3d8bc0f62cd047f8f368495d2a6348cfc5870afaceb0d98ebde1a3008f",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "alpine",
+            "kind": "bed",
+            "seed": 4,
+            "prompt": "Birds chirping and singing in a pine forest on a mountain trail. Several clear small bird calls answer one another over a constant soft rustle of pine needles and leaves in a light breeze. Natural alpine woodland field recording, continuous forest ambience.",
+            "desc": "A quiet alpine woodland with light wind and distant birds.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 20.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 26.05,
+            "model_load_s": 5.9,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "4ab12b41e658f393388edc97deb18335ef503f2e29484e53d08ff1ec660b3219",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 43.8,
+                "wired_gib": 10.8,
+                "free_gib": 28.1,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 54.7,
+                "wired_gib": 21.4,
+                "free_gib": 7.1,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 21.85
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.28867214918136597,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 1.0,
+              "match": "A quiet alpine woodland with light wind and distant birds.",
+              "offset_s": 0.0,
+              "best_bed": "alpine"
+            },
+            {
+              "rank": 1,
+              "p": 0.9999,
+              "match": "A quiet alpine woodland with light wind and distant birds.",
+              "offset_s": 5.0,
+              "best_bed": "alpine"
+            },
+            {
+              "rank": 1,
+              "p": 0.9999,
+              "match": "A quiet alpine woodland with light wind and distant birds.",
+              "offset_s": 10.0,
+              "best_bed": "alpine"
+            }
+          ],
+          "rank": 1,
+          "p": 1.0,
+          "match": "A quiet alpine woodland with light wind and distant birds.",
+          "offset_s": 0.0,
+          "best_bed": "alpine"
+        }
+      ],
+      "fallback": null
+    },
+    "quarry": {
+      "shipped": true,
+      "seed": 3,
+      "selected_seeds": null,
+      "selected_trim_start_s": 5.0,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/quarry/3.wav",
+          "sha256": "6644a86688b53050c2bcdb32492c4180813daeff33d1c7768b6cdccce161bc22",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "quarry",
+            "kind": "bed",
+            "seed": 3,
+            "prompt": "An industrial extraction fan running steadily in an empty stone quarry work yard. A continuous low mechanical ventilation hum and airy fan whir with faint metallic rattling, occasional tiny gravel ticks in a dry breeze. Restrained distant industrial quarry ambience.",
+            "desc": "An empty rocky quarry with low wind and distant industrial hum.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 20.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 27.79,
+            "model_load_s": 5.9,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "cbdbf97d16d408bdc30133f1800e612d6543253d7b79f39948a89449f2907f46",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 43.8,
+                "wired_gib": 10.8,
+                "free_gib": 28.1,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 57.9,
+                "wired_gib": 20.4,
+                "free_gib": 5.3,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 21.92
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.3056354224681854,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.912,
+              "match": "An empty rocky quarry with low wind and distant industrial hum.",
+              "offset_s": 0.0,
+              "best_bed": "quarry"
+            },
+            {
+              "rank": 1,
+              "p": 0.9281,
+              "match": "An empty rocky quarry with low wind and distant industrial hum.",
+              "offset_s": 5.0,
+              "best_bed": "quarry"
+            },
+            {
+              "rank": 1,
+              "p": 0.9003,
+              "match": "An empty rocky quarry with low wind and distant industrial hum.",
+              "offset_s": 10.0,
+              "best_bed": "quarry"
+            }
+          ],
+          "rank": 1,
+          "p": 0.9281,
+          "match": "An empty rocky quarry with low wind and distant industrial hum.",
+          "offset_s": 5.0,
+          "best_bed": "quarry"
+        }
+      ],
+      "fallback": null
+    },
+    "snowline": {
+      "shipped": true,
+      "seed": 2,
+      "selected_seeds": null,
+      "selected_trim_start_s": 0.0,
+      "takes": [
+        {
+          "wav": "/Users/raynos/ml/music/rockhop-sfx-2026-09-30/moss/snowline/2.wav",
+          "sha256": "5657b6f6d3a8a6ce5c22e1ddeec6f863ad1c2d4d0f7e05d701fe5922a189c427",
+          "source": {
+            "model": "MOSS-SoundEffect v2.0",
+            "repo": "OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "code_commit": "MOSS-TTS 934d682, torch 2.9.0",
+            "backend": "PyTorch mps bf16",
+            "family": "snowline",
+            "kind": "bed",
+            "seed": 2,
+            "prompt": "Hushed snow covered mountain pass ambience, soft steady airy winter breeze over snow drifts, very faint occasional icy branch creaks far away. Quiet stable continuous natural stereo background, not a blizzard, no birds, no people, no footsteps, no engine, no music.",
+            "desc": "A hushed snowy mountain with soft cold wind.",
+            "licence": "Apache-2.0",
+            "model_source": "https://huggingface.co/OpenMOSS-Team/MOSS-SoundEffect-v2.0",
+            "duration_s": 20.0,
+            "steps": 50,
+            "cfg": 4.0,
+            "gen_time_s": 30.49,
+            "model_load_s": 6.5,
+            "master_format": "float32 WAV",
+            "waveform_decode": "float32",
+            "replaced_master": {
+              "prior_sha256": "eeefb617d2544337fb30ded588765c2d88d960ed3578df496d1eda94f8c3818f",
+              "reason": "Preserve prior decoder/storage precision master before explicit rerender"
+            },
+            "decoder_checkpoint_dtypes": [
+              "torch.float32"
+            ],
+            "decoder_weights": "original float32 checkpoint reloaded",
+            "precision_comparison": null,
+            "resource_policy": {
+              "anonymous_limit_gib": 70,
+              "load_reserve_gib": 22,
+              "load_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 41.6,
+                "wired_gib": 13.6,
+                "free_gib": 28.6,
+                "reserve_gib": 22,
+                "other_over_15gb": []
+              },
+              "take_snapshot": {
+                "pressure": 1,
+                "anonymous_gib": 46.0,
+                "wired_gib": 23.1,
+                "free_gib": 13.8,
+                "reserve_gib": 0,
+                "other_over_15gb": []
+              }
+            },
+            "mps_driver_gb": 22.4
+          },
+          "source_format": "FLOAT",
+          "source_peak": 0.330778032541275,
+          "source_fullscale_samples": 0,
+          "source_pcm_rail_samples": 0,
+          "trim_start_s": 0,
+          "windows": [
+            {
+              "rank": 1,
+              "p": 0.969,
+              "match": "A hushed snowy mountain with soft cold wind.",
+              "offset_s": 0.0,
+              "best_bed": "snowline"
+            },
+            {
+              "rank": 1,
+              "p": 0.9614,
+              "match": "A hushed snowy mountain with soft cold wind.",
+              "offset_s": 5.0,
+              "best_bed": "snowline"
+            },
+            {
+              "rank": 1,
+              "p": 0.9591,
+              "match": "A hushed snowy mountain with soft cold wind.",
+              "offset_s": 10.0,
+              "best_bed": "snowline"
+            }
+          ],
+          "rank": 1,
+          "p": 0.969,
+          "match": "A hushed snowy mountain with soft cold wind.",
+          "offset_s": 0.0,
+          "best_bed": "snowline"
+        }
+      ],
+      "fallback": null
+    }
+  },
+  "files": {
+    "bed-coast-96488b78d07f.mp3": {
+      "codec": "MP3 libmp3lame",
+      "bitrate": "128k",
+      "channels": 2,
+      "lufs": -26.4,
+      "truepeak_dbfs": -10.7,
+      "decode_lag_s": 0.0,
+      "decoded_duration_s": 9.65,
+      "bytes": 155565,
+      "sha256": "96488b78d07f0200f666821ddcef9a915c2841d66845a30a65f0676a217d4e67",
+      "decoded_clipped_samples": 0,
+      "wrap_delta": 0.007975373417139053,
+      "ordinary_step_p95": 0.01754889450967312,
+      "wrap_derivative_ratio": 0.45446585896011576,
+      "wrap_energy_step_db_50ms": 0.3384124554352492,
+      "seam_proxy_pass": true
+    },
+    "bed-alpine-0dc228e1204e.mp3": {
+      "codec": "MP3 libmp3lame",
+      "bitrate": "128k",
+      "channels": 2,
+      "lufs": -26.5,
+      "truepeak_dbfs": -12.6,
+      "decode_lag_s": 0.0,
+      "decoded_duration_s": 9.65,
+      "bytes": 155565,
+      "sha256": "0dc228e1204ed5de182540ef54fc108fa1f0542e5b20aeb20025cfa8e36cdbf6",
+      "decoded_clipped_samples": 0,
+      "wrap_delta": 0.011384300887584686,
+      "ordinary_step_p95": 0.024992937222123146,
+      "wrap_derivative_ratio": 0.455500719519576,
+      "wrap_energy_step_db_50ms": 1.0855173215733291,
+      "seam_proxy_pass": true
+    },
+    "bed-quarry-264b46915ff5.mp3": {
+      "codec": "MP3 libmp3lame",
+      "bitrate": "128k",
+      "channels": 2,
+      "lufs": -26.5,
+      "truepeak_dbfs": -15.1,
+      "decode_lag_s": 0.0,
+      "decoded_duration_s": 9.65,
+      "bytes": 155565,
+      "sha256": "264b46915ff593feb4e292ad1ce1ebf1cc873dbcd88c34fe69ba5eb68be65fcf",
+      "decoded_clipped_samples": 0,
+      "wrap_delta": 0.004914375022053719,
+      "ordinary_step_p95": 0.006854820530861616,
+      "wrap_derivative_ratio": 0.716922492708355,
+      "wrap_energy_step_db_50ms": 1.5871745035037512,
+      "seam_proxy_pass": true
+    },
+    "bed-snowline-c05360b2b26a.mp3": {
+      "codec": "MP3 libmp3lame",
+      "bitrate": "128k",
+      "channels": 2,
+      "lufs": -28.7,
+      "truepeak_dbfs": -5.9,
+      "decode_lag_s": 0.0,
+      "decoded_duration_s": 9.65,
+      "bytes": 155565,
+      "sha256": "c05360b2b26a08f00edb5f8277c7148da93280d7f362ebfd71945a027f9af142",
+      "decoded_clipped_samples": 0,
+      "wrap_delta": 0.0020175278186798096,
+      "ordinary_step_p95": 0.0024189383257180452,
+      "wrap_derivative_ratio": 0.8340550882300484,
+      "wrap_energy_step_db_50ms": 2.707511360765632,
+      "seam_proxy_pass": true
+    },
+    "reactions-1047a82f15d6.mp3": {
+      "codec": "MP3 libmp3lame",
+      "bitrate": "128k",
+      "channels": 2,
+      "lufs": -16.6,
+      "truepeak_dbfs": -3.0,
+      "decode_lag_s": 0.0,
+      "decoded_duration_s": 16.334833333333332,
+      "bytes": 262317,
+      "sha256": "1047a82f15d6d5f0707f3b02cd1e1e509f76ad196ab86faef847845bc2159fe2",
+      "decoded_clipped_samples": 0,
+      "runtime_channel_mapping": "Dual mono averaged to mono before equal-power panning"
+    }
+  }
+}

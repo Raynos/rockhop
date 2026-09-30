@@ -1,0 +1,93 @@
+{
+  "base_commit": "f5a161d3600aaf9a4f0d4b79a18a904542799b1e",
+  "tested_export_tree": "b72fda90b9c6aa6ca81847b530a0369b0b9a4223",
+  "tested_runtime_files_sha256": {
+    "src/audio/automation.ts": "10c00693952da8245cf083e177ec1d57a9d8cf9f72aef541b0021ab0833ab3e8",
+    "src/audio/driver.ts": "c501bcc000977afdeaf40b4dc3dc5ab258550fd1fba1337ff1415d79e81a60a6",
+    "src/audio/dsp/ambience.ts": "eb0f1c203d0f96367e53813c3233aad02f9927df461c0856e5637aeb47a8b9a3",
+    "src/audio/dsp/crowd.ts": "2183d843987cf30ba2b35c4dfb6aa793fbc3efed80f25f2639baa0a18ec04b1e",
+    "src/audio/dsp/engine.ts": "c5e03a6303b2b54d23ec2fd9365a2883e727b9e4ec1279e3191b1f2593b487aa",
+    "src/audio/dsp/music.ts": "aac70a59760989366debf6cc7b01461d7d61334e08d408da734e80b98b99afbd",
+    "src/audio/dsp/remaster.test.ts": "e267c1f77ed2bf4efa6b2c55350719b0ff0cfb32e76db0864317b790f601572b",
+    "src/audio/dsp/synth.test.ts": "27eb4586c4db9415d095bd4a8078a898f436bb57ae9c686852db6e9ccd1bc979",
+    "src/audio/dsp/synth.ts": "cdaa430b081b29bc52d554aeb397fde635e14caf6e541f13841ef78eb493f313",
+    "src/audio/dsp/tyres.ts": "953c97f2ce1b3b9047c5d2ef84584bec8b3e5335e60afadd97d521997521c4ad",
+    "src/audio/dsp/ui.ts": "f4642550ad87e38ca4ca48b17f59cdcff001532e1efb20473f58cb296f97b10b",
+    "src/audio/dsp/util.ts": "111e44a70775d1772b68e789c20ed2dc8141e00f5dabcefdc1778625de435999",
+    "src/audio/dsp/voices.ts": "7f2c2560a116a6d899d91070eaa2efc4c82ff9209a3f13847792ac9833e0e0e5",
+    "src/audio/graph/fallback.ts": "765593b9e01aaecd6a6ad0017423706508d4f471a5b3648bdab2b946867c9f10",
+    "src/audio/graph/webAudio.ts": "4cc0158998b722af7fa12f731edf86b0647e49eb1e5f69e5c920a552f707367d",
+    "src/audio/graph/worklet.test.ts": "b80d90e924c99cae93f3042d5c1e882525b938eaf8e1f6c731f1496849a97f41",
+    "src/audio/graph/worklet.ts": "ce91b6308a296401c7740a0123c1b2fb805a360446a0a2572ca2845d5a553de5",
+    "src/audio/index.ts": "3291228243fcac8dcb114dc78e6623e9051aac7237a014e5a65727be59c59060",
+    "src/audio/model/events.ts": "db7ba872a26f5c41824b07a7764b276a7dc5c0390949bd1595d41c302dea0ba8",
+    "src/audio/model/mapParams.test.ts": "3bf0cc2ad549ae56efe385a9a45cd47ab78f3d6a56be18dff191134325d36060",
+    "src/audio/model/mapParams.ts": "844e758155d669bb1e2d5f33a6ef032f6e5efad9e98ede4e50e1e48cdc0a7b80",
+    "src/audio/music/cues.generated.ts": "b0f4172cf0483f9ed790eea9ce72b2c639c5acef92cb960eb3680055e45e207a",
+    "src/audio/music/cues.ts": "62f681e33d7c85dd188743c8ff7b902bc1a9be791de165a163677848948933dc",
+    "src/audio/music/player.test.ts": "b8eb1203d8b3d48c722037696a9e319c505755b81acf8f2fec783f6d5a683d94",
+    "src/audio/music/player.ts": "c9b53cc69a13d0b7712cdf4b28c1f2cbb53c381a87abc5cdd6fed7d9fcc6e29a",
+    "src/audio/music/zone.ts": "0d4a3e3307507a2a76ec00fed27020c43314a9cececff1957f88211c65bb3e5b",
+    "src/audio/offline.test.ts": "9b822721e962afde11a9d16d1d306ea258d878874e944729f888b644277d4e02",
+    "src/audio/offline.ts": "4050d3800e75bd494810f98e2b7b309ce99ad7402692bcd293aeb28be690f545",
+    "src/audio/params.ts": "f9b6a9a8a8e26b62c2c60ef604ed240646ef3dd5dead6e488e9b5a40e3fdf8d6",
+    "src/audio/samples/manifest.json": "09003b26c46bb6c3577ad34d523a3e0a59703c6394b9c0b2e36bc708cd00ce6c",
+    "src/audio/samples/offline.test.ts": "7a316cd3a1a9cbe6503647121cabad6c60fea5e85ed27eb70c60712f9223c7ed",
+    "src/audio/samples/offline.ts": "0d48eb6c700cea892547703ee3e692ecc05099e3f73b0bda1f23359bc0ceb01e",
+    "src/audio/samples/player.test.ts": "ac1bab0183d29c4a5174489903a19199c12919de312f5af666df3a4d7106513d",
+    "src/audio/samples/player.ts": "743343dc2e3d8e9d0548572c434b2f967f48142bf65bc8a8cbf7355373caaa19",
+    "src/audio/tools/beats.ts": "7bf65fed17948c3a11b434194a9a31ef99062a44bcc17fd70df0217bd7053bcb",
+    "src/audio/tools/critic.ts": "6a28578e3a8a94f19273c921ae589c0e9635b65e354553a6117d18ea31da8def",
+    "src/audio/tools/fixture.ts": "bd1e3cfeebf49b063498ef6a7567bb3bccdea91c597d76937228eff2f55835e2",
+    "src/audio/tools/renderDemo.ts": "fad12b9551fdf6c977d07ac386c55d2eab638f984a596f0d693a83f5f068129f",
+    "src/game/app.ts": "4c58433694518b1ce9a462ce522c4196ceac0482ccfff2c5bf0d297c3a1a4a27",
+    "src/pwa/sw.js": "35f00805e18c4f99cce558e7b33cb4f559bfaa1d42185d4e4658c9a1a34521f7",
+    "src/ui/front.ts": "776caab808f0f004a17585d257d1d05d06f495bfd08cbc4ccae0c38e35f86cff",
+    "src/ui/sfx.ts": "caae7eb3f8e2174c05d44007ec96b4c100b35dd89d49113018535791cceb1d20"
+  },
+  "validation": {
+    "typecheck": "pass",
+    "lint": "pass",
+    "production_build": "pass",
+    "bundle_gzip_bytes": 689599,
+    "bundle_budget_bytes": 716800,
+    "audio_tests": {
+      "files": 11,
+      "passed": 95
+    },
+    "pipeline_tests": {
+      "music": 5,
+      "sfx": 8,
+      "passed": 13
+    },
+    "whole_suite": {
+      "passed": 1490,
+      "skipped": 2,
+      "files": 118,
+      "method": "Serial suite: 117 suites/1473 tests pass. The 17 store-build tests pass separately with VERCEL_GIT_COMMIT_SHA supplied for the export without Git metadata.",
+      "initial_parallel_failures": "Two unchanged physics wall-clock benchmarks exceeded 5 us/tick p50 under parallel contention (5.04833 and 7.04100); serial rerun measured 4.090 and 4.833, passing without source edits.",
+      "serial_setup_correction": "Store-build initially lacked a build SHA environment variable in this source export. Its separate corrected-environment rerun passes all 17 tests."
+    },
+    "native_decode": [
+      {
+        "engine": "chromium",
+        "version": "151.0.7922.34",
+        "files": 12,
+        "live_contexts": 0,
+        "max_offset_samples": 0,
+        "max_gain_error_db": 1.7275567059050392e-06,
+        "min_correlation": 0.9999999999997607
+      },
+      {
+        "engine": "webkit",
+        "version": "26.5",
+        "files": 12,
+        "live_contexts": 0,
+        "max_offset_samples": 0,
+        "max_gain_error_db": 0.00021142502882296987,
+        "min_correlation": 0.9999997304822498
+      }
+    ]
+  },
+  "limits": "No physical phone listening or stranger judgment. Export is a source snapshot, not a second checkout/worktree. Native asset probe ran against byte-identical delivered files; runtime smoke/pause ran on the isolated candidate."
+}

@@ -24,23 +24,43 @@ class RockhopSynthProcessor extends AudioWorkletProcessor {
   private alive = true;
   private scene = 0;
   private bed = true;
+  private master = 1;
+  private volumeInitialized = false;
+  private musicVolume = 1;
+  private ambience = true;
 
   constructor() {
     super();
     this.port.onmessage = (ev: MessageEvent) => {
-      const d = ev.data as Float32Array | { master?: number; seed?: number; scene?: number; bed?: boolean; stop?: boolean };
+      const d = ev.data as Float32Array | { master?: number; seed?: number; scene?: number; bed?: boolean; musicVolume?: number; ambience?: boolean; paused?: boolean; stop?: boolean };
       if (d instanceof Float32Array) this.synth.setParams(d);
-      else if (typeof d.master === 'number') this.synth.setMaster(d.master);
+      else if (typeof d.master === 'number') {
+        this.master = d.master;
+        this.synth.setMaster(this.master, !this.volumeInitialized);
+        this.volumeInitialized = true;
+      }
       else if (typeof d.seed === 'number') {
         this.synth = new RockhopSynth(sampleRate, { seed: d.seed });
+        this.synth.setMaster(this.master, true);
+        this.synth.setMusicVolume(this.musicVolume, true);
+        this.synth.setAmbienceEnabled(this.ambience);
         this.synth.setScene(this.scene);
         this.synth.setBed(this.bed);
+      } else if (typeof d.musicVolume === 'number') {
+        this.musicVolume = d.musicVolume;
+        this.synth.setMusicVolume(this.musicVolume);
+      } else if (typeof d.ambience === 'boolean') {
+        this.ambience = d.ambience;
+        this.synth.setAmbienceEnabled(this.ambience);
       } else if (typeof d.bed === 'boolean') {
         this.bed = d.bed;
         this.synth.setBed(d.bed);
       } else if (typeof d.scene === 'number') {
         this.scene = d.scene;
         this.synth.setScene(d.scene);
+      } else if (d.paused) {
+        this.synth.pool.killBuses(true, true, true);
+        this.synth.crowd.kill();
       } else if (d.stop) this.alive = false;
     };
   }

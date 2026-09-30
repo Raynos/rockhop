@@ -1,0 +1,130 @@
+{
+  "c1-ride": {
+    "input": {
+      "path": "harness/inputs/c1-low-tide/bot-3.json",
+      "sha256": "ce9eb69fb42766f75c3e0bd381558ad0d32ba88c65c066a66efb5caf5a7466ec",
+      "header": {
+        "version": 1,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "physicsHz": 120,
+        "note": "standalone-c1-challenge marker2-brake-pallet-ramp bike=rookie physics=v2 src=a415fcb8 restamped-from=a4be385f",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "frames": 3642
+    },
+    "physics": {
+      "sourceFingerprint": "fd8fe7c2",
+      "solver": "bikePhysicsFactory-v2",
+      "finish": {
+        "time": 30.35,
+        "tick": 3642,
+        "hash": "2bfe061963ffb058"
+      },
+      "faults": 0,
+      "finalHash": "23adcf3b771bcd0a",
+      "finalTick": 3696
+    },
+    "channels": 2,
+    "sample_rate": 48000,
+    "duration_s": 30.8,
+    "master_slider": 0.8,
+    "lufs": -18.31,
+    "tp_dbtp": -6.3,
+    "music": {
+      "ride_file": "coast-138653e7.mp3",
+      "results_file": "results-6b8f5a93.mp3",
+      "results_at_s": 30.733333333333334,
+      "assumption": "Predecoded cues; actual loading latency is covered by runtime regressions, not this offline proxy."
+    },
+    "limit": "Offline mix proxy; neural/DSP assets and model envelopes are real, native browser compressor and phone speakers are not recorded.",
+    "pcm_sha256": "29ac8c10cca386b71d058891d71e8e793d7a2ee4be97606f076143a3399df0a3",
+    "video_source": "docs/evidence/course-remaster/baseline-clips/c1-low-tide/clip.mp4",
+    "capture": {
+      "frozenCommit": "609293eaac58913420a1e06ca8fc530bfc907cc1",
+      "archiveSourceFingerprint": "d61e8029",
+      "recording": {
+        "path": "harness/inputs/c1-low-tide/bot-3.json",
+        "sha256": "ce9eb69fb42766f75c3e0bd381558ad0d32ba88c65c066a66efb5caf5a7466ec",
+        "headerSourceFingerprint": "a415fcb8",
+        "bike": "rookie",
+        "seed": 341352973,
+        "physicsHz": 120
+      },
+      "verifiedFinish": {
+        "timeSeconds": 30.35,
+        "tick": 3642,
+        "faults": 0,
+        "hash": "2bfe061963ffb058",
+        "nodeAndTwoFreshBrowserLoadsIdentical": true
+      },
+      "capture": {
+        "kind": "silent headless Chromium ANGLE Metal",
+        "viewport": "852x394 landscape",
+        "fps": 20,
+        "rendererQuality": "high",
+        "durationSeconds": 30.8,
+        "frames": 616,
+        "finishTailSeconds": 0.5,
+        "endOfClipHash": "23adcf3b771bcd0a",
+        "cameraRidingOutOfBoxFrames": 0,
+        "cameraRollViolations": 0,
+        "cameraClampedFrames": 0,
+        "wallMs": 34312
+      },
+      "video": {
+        "path": "clip.mp4",
+        "codec": "H.264",
+        "encoder": "libx264 CRF 26 slow",
+        "bytes": 5472232,
+        "sha256": "e0b211f92ff2a39f5170a869f1ab63b4bb4e307ee58c3b4649b86055a0a4f6a9"
+      },
+      "limits": [
+        "Input header source fingerprint differs from archive fingerprint; this exact input still matched Node and two browser finish hashes.",
+        "End-of-clip hash includes the finish tail and differs from the verified finish-state hash.",
+        "Headless landscape viewport is not a physical phone test."
+      ]
+    },
+    "decoded_tp_dbtp": -6.19
+  },
+  "c1-crash-restart": {
+    "input": {
+      "path": "harness/inputs/c1-low-tide/crash.json",
+      "sha256": "cfbb535816de5898427aa95451cb7c41cd9871b169ee81f492fb47151bd42523",
+      "header": {
+        "version": 1,
+        "trackId": "c1-low-tide",
+        "seed": 341352973,
+        "physicsHz": 120,
+        "note": "crash probe gas-back: crash at tick 102 bike=rookie physics=v2 src=79e5b6f3",
+        "bike": "rookie",
+        "physics": "v2"
+      },
+      "frames": 283
+    },
+    "physics": {
+      "sourceFingerprint": "fd8fe7c2",
+      "solver": "bikePhysicsFactory-v2",
+      "finish": null,
+      "faults": 1,
+      "finalHash": "01708fdebaf5c829",
+      "finalTick": 600
+    },
+    "channels": 2,
+    "sample_rate": 48000,
+    "duration_s": 5.0,
+    "master_slider": 0.8,
+    "lufs": -24.37,
+    "tp_dbtp": -7.53,
+    "music": {
+      "ride_file": "coast-138653e7.mp3",
+      "results_file": "results-6b8f5a93.mp3",
+      "results_at_s": null,
+      "assumption": "Predecoded cues; actual loading latency is covered by runtime regressions, not this offline proxy."
+    },
+    "limit": "Offline mix proxy; neural/DSP assets and model envelopes are real, native browser compressor and phone speakers are not recorded.",
+    "pcm_sha256": "53cb9843ddbf765e8b7b5913f28c38e24fbedd9900ba18a9d6f69307957b40ee",
+    "decoded_tp_dbtp": -7.96
+  }
+}

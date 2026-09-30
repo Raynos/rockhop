@@ -12,7 +12,8 @@ import type { BiomeId, SurfaceKind } from '../core/types';
 // ---------------------------------------------------------------------------
 
 export const SURFACES: readonly SurfaceKind[] = ['dirt', 'wood', 'metal', 'concrete', 'rubber', 'grate', 'stone', 'snow'];
-export const BIOMES: readonly BiomeId[] = ['industrial', 'canyon', 'snow', 'nightCity', 'foundry'];
+/** Append only: existing recordings/worklet messages retain their biome indices. */
+export const BIOMES: readonly BiomeId[] = ['industrial', 'canyon', 'snow', 'nightCity', 'foundry', 'coast', 'alpine', 'quarry'];
 
 export function surfaceIndex(s: SurfaceKind | null): number {
   if (s === null) return -1;
@@ -56,6 +57,10 @@ export const TRANSIENT_KINDS = [
   'bodyThud', // 26 a ragdoll body meeting the ground (soft, few)
   // round 4
   'scrub', // 27 tyre scrub after a touchdown: gain = landing gain, pitch = speed / 20
+  'menuFocus', // 28 tactile navigation click
+  'menuConfirm', // 29 D-A tuned confirmation
+  'menuBack', // 30 falling muted mallet
+  'menuLaunch', // 31 D-key lift into the starting gate
 ] as const;
 export type TransientKind = (typeof TRANSIENT_KINDS)[number];
 export const TK: Record<TransientKind, number> = Object.fromEntries(TRANSIENT_KINDS.map((k, i) => [k, i])) as Record<

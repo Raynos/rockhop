@@ -1,0 +1,2200 @@
+{
+  "recording": {
+    "path": "harness/inputs/c1-low-tide/crash.json",
+    "sha256": "cfbb535816de5898427aa95451cb7c41cd9871b169ee81f492fb47151bd42523",
+    "header": {
+      "version": 1,
+      "trackId": "c1-low-tide",
+      "seed": 341352973,
+      "physicsHz": 120,
+      "note": "crash probe gas-back: crash at tick 102 bike=rookie physics=v2 src=79e5b6f3",
+      "bike": "rookie",
+      "physics": "v2"
+    },
+    "frames": 283
+  },
+  "physics": {
+    "sourceFingerprint": "fd8fe7c2",
+    "solver": "bikePhysicsFactory-v2",
+    "finish": null,
+    "faults": 1,
+    "finalHash": "01708fdebaf5c829",
+    "finalTick": 600
+  },
+  "audio": {
+    "seconds": 5,
+    "sampleRate": 48000,
+    "updateHz": 60,
+    "channels": 2,
+    "proceduralRecordedFamiliesSuppressed": [
+      "grunt",
+      "crowdRoar",
+      "crowdCheer",
+      "crowdGroan",
+      "crowdApplause"
+    ],
+    "proceduralBiomeBedSuppressed": true,
+    "zone": "coast",
+    "sampleManifestSha256": "09003b26c46bb6c3577ad34d523a3e0a59703c6394b9c0b2e36bc708cd00ce6c",
+    "musicSuppressed": true
+  },
+  "events": [
+    {
+      "time": 0.8583333333333333,
+      "tick": 103,
+      "event": {
+        "type": "fault",
+        "reason": "crash",
+        "tick": 103,
+        "time": 0.8583333333333333
+      }
+    },
+    {
+      "time": 1.5416666666666667,
+      "tick": 185,
+      "event": {
+        "type": "land",
+        "impulse": 7.02598815403204,
+        "wheel": "rear",
+        "surface": "dirt",
+        "tick": 184
+      }
+    },
+    {
+      "time": 1.8583333333333334,
+      "tick": 223,
+      "event": {
+        "type": "restart",
+        "checkpoint": -1,
+        "tick": 0
+      }
+    }
+  ],
+  "transients": [
+    {
+      "time": 0.89,
+      "update": 51,
+      "kind": 5,
+      "gain": 1,
+      "pitch": 0,
+      "pan": 0,
+      "delay": 0.04,
+      "family": "grunt"
+    },
+    {
+      "time": 1.07,
+      "update": 51,
+      "kind": 23,
+      "gain": 1,
+      "pitch": 0,
+      "pan": 0,
+      "delay": 0.22,
+      "family": "crowdGroan"
+    }
+  ],
+  "envelope": [
+    {
+      "time": 0,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 1.3074792243767313
+    },
+    {
+      "time": 0.016666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 1.5834439576123573
+    },
+    {
+      "time": 0.03333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 1.8311242168044424
+    },
+    {
+      "time": 0.05,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.0534189646665912
+    },
+    {
+      "time": 0.06666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.252930040310182
+    },
+    {
+      "time": 0.08333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.4319926123559528
+    },
+    {
+      "time": 0.1,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.5927025108125448
+    },
+    {
+      "time": 0.11666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.7369407576267717
+    },
+    {
+      "time": 0.13333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.8663955830223657
+    },
+    {
+      "time": 0.15,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 2.9825821853164722
+    },
+    {
+      "time": 0.16666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 3,
+      "musicDuckDb": 3.0868604654917924
+    },
+    {
+      "time": 0.18333333333333332,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.1804509440978963
+    },
+    {
+      "time": 0.2,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.2644490467803835
+    },
+    {
+      "time": 0.21666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.339837925642228
+    },
+    {
+      "time": 0.23333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.407499966504382
+    },
+    {
+      "time": 0.25,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.468227116751855
+    },
+    {
+      "time": 0.26666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.5227301546470944
+    },
+    {
+      "time": 0.2833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.5716470086029326
+    },
+    {
+      "time": 0.3,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.6155502237876735
+    },
+    {
+      "time": 0.31666666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.6549536634548647
+    },
+    {
+      "time": 0.3333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.690318523433175
+    },
+    {
+      "time": 0.35,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.7220587301727113
+    },
+    {
+      "time": 0.36666666666666664,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.750545785528971
+    },
+    {
+      "time": 0.38333333333333336,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.7761131149899905
+    },
+    {
+      "time": 0.4,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.7990599702403243
+    },
+    {
+      "time": 0.4166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.819654931739238
+    },
+    {
+      "time": 0.43333333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.8381390523089003
+    },
+    {
+      "time": 0.45,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.854728678526548
+    },
+    {
+      "time": 0.4666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.8696179829434945
+    },
+    {
+      "time": 0.48333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.88298123676923
+    },
+    {
+      "time": 0.5,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.894974849621137
+    },
+    {
+      "time": 0.5166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9057392002139837
+    },
+    {
+      "time": 0.5333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9154002794164278
+    },
+    {
+      "time": 0.55,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9240711649056026
+    },
+    {
+      "time": 0.5666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.93185334467982
+    },
+    {
+      "time": 0.5833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9388379049203928
+    },
+    {
+      "time": 0.6,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9451065961058367
+    },
+    {
+      "time": 0.6166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9507327898567617
+    },
+    {
+      "time": 0.6333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.955782337710777
+    },
+    {
+      "time": 0.65,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.960314341878924
+    },
+    {
+      "time": 0.6666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9643818470049066
+    },
+    {
+      "time": 0.6833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9680324610237943
+    },
+    {
+      "time": 0.7,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9713089123870065
+    },
+    {
+      "time": 0.7166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9742495501755952
+    },
+    {
+      "time": 0.7333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9768887929553816
+    },
+    {
+      "time": 0.75,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9792575316275447
+    },
+    {
+      "time": 0.7666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.981383490989818
+    },
+    {
+      "time": 0.7833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.983291554240169
+    },
+    {
+      "time": 0.8,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.985004054221093
+    },
+    {
+      "time": 0.8166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9865410348133903
+    },
+    {
+      "time": 0.8333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 3.9879204855388877
+    },
+    {
+      "time": 0.85,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9988888888888889
+    },
+    {
+      "time": 0.8666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9955555555555555
+    },
+    {
+      "time": 0.8833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.99
+    },
+    {
+      "time": 0.9,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9822222222222222
+    },
+    {
+      "time": 0.9166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9722222222222222
+    },
+    {
+      "time": 0.9333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.96
+    },
+    {
+      "time": 0.95,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9455555555555555
+    },
+    {
+      "time": 0.9666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9288888888888889
+    },
+    {
+      "time": 0.9833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.9099999999999999
+    },
+    {
+      "time": 1,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.888888888888889
+    },
+    {
+      "time": 1.0166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.8655555555555556
+    },
+    {
+      "time": 1.0333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.8399999999999999
+    },
+    {
+      "time": 1.05,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.8122222222222222
+    },
+    {
+      "time": 1.0666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.7822222222222224
+    },
+    {
+      "time": 1.0833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.7499999999999998
+    },
+    {
+      "time": 1.1,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.7155555555555555
+    },
+    {
+      "time": 1.1166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 6,
+      "musicDuckDb": 0.6788888888888889
+    },
+    {
+      "time": 1.1333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.6400000000000001
+    },
+    {
+      "time": 1.15,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.5988888888888886
+    },
+    {
+      "time": 1.1666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.5555555555555555
+    },
+    {
+      "time": 1.1833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.51
+    },
+    {
+      "time": 1.2,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.4622222222222224
+    },
+    {
+      "time": 1.2166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.41222222222222193
+    },
+    {
+      "time": 1.2333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.3599999999999999
+    },
+    {
+      "time": 1.25,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.3055555555555557
+    },
+    {
+      "time": 1.2666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.24888888888888927
+    },
+    {
+      "time": 1.2833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.18999999999999972
+    },
+    {
+      "time": 1.3,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.12888888888888883
+    },
+    {
+      "time": 1.3166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0.06555555555555581
+    },
+    {
+      "time": 1.3333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.35,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.3666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.3833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.4,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.4166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.4333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.45,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.4666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.4833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.5,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.5166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.5333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.55,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.5666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.5833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.6,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.6166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.6333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.65,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.6666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.6833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.7,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.7166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.7333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.75,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.7666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.7833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.8,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.8166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.8333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 0
+    },
+    {
+      "time": 1.85,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.8666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.8833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.9,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.9166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.9333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.95,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.9666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 1.9833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.0166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.033333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.05,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.066666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.0833333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.1,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.1166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.1333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.15,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.1666666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.183333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.2,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.216666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.2333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.25,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.2666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.283333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.3,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.316666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.3333333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.35,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.3666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.3833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.4,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.4166666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.433333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.45,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.466666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.4833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.5,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.5166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.533333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.55,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.566666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.5833333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.6,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.6166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.6333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.65,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.6666666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.683333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.7,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.716666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.7333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.75,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.7666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.783333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.8,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.816666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.8333333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.85,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.8666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.8833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.9,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.9166666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.933333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.95,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.966666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 2.9833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.0166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.033333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.05,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.066666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.0833333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.1,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.1166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.1333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.15,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.1666666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.183333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.2,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.216666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.2333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.25,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.2666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.283333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.3,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.316666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.3333333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.35,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.3666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.3833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.4,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.4166666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.433333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.45,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.466666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.4833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.5,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.5166666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.533333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.55,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.566666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.5833333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.6,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.6166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.6333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.65,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.6666666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.683333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.7,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.716666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.7333333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.75,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.7666666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.783333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.8,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.816666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.8333333333333335,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.85,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.8666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.8833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.9,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.9166666666666665,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.933333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.95,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.966666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 3.9833333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.016666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.033333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.05,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.066666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.083333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.1,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.116666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.133333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.15,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.166666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.183333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.2,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.216666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.233333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.25,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.266666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.283333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.3,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.316666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.333333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.35,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.366666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.383333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.4,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.416666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.433333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.45,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.466666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.483333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.5,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.516666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.533333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.55,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.566666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.583333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.6,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.616666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.633333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.65,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.666666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.683333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.7,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.716666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.733333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.75,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.766666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.783333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.8,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.816666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.833333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.85,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.866666666666666,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.883333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.9,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.916666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.933333333333334,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.95,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.966666666666667,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    },
+    {
+      "time": 4.983333333333333,
+      "scene": "run",
+      "ambientGain": 1,
+      "duckDb": 0,
+      "musicDuckDb": 1
+    }
+  ],
+  "limits": "Sample start times are model update + transient delay (same 60Hz/48kHz schedule as live DSP). Video input is identical; any source fingerprint/hash difference must be resolved before claiming visual alignment. No speakers or subjective audio verdict.",
+  "wavSha256": "436ddb8bfef2c0c7a4be2d6b8b2a024e4a94a999cea70d2a79171b216f1d1609",
+  "byteIdenticalSecondRender": true
+}
