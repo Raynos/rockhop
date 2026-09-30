@@ -31,6 +31,7 @@ import { encodeJSON } from '../../src/core/replay';
 import { AVAILABLE_RIDER_PRESETS } from '../../src/core/riderPresets';
 import { PRO_PRICE, SCRAP_REWARD } from '../../src/ui/economy';
 import { ROCKHOP_TRACKS } from '../../src/tracks/rockhop';
+import { BOOT_TRACE_INIT, readBootTrace, type BootTrace } from '../lib/boot-trace';
 import { pickGolden } from '../lib/golden';
 import { loadRecording } from '../lib/recording';
 import { DIST_DIR, OUT_DIR, REPO_ROOT } from '../lib/paths';
@@ -155,11 +156,13 @@ interface BootRead {
   done: boolean;
   failed: string;
   errors: string[];
+  trace: BootTrace | null;
 }
 
 /** Navigate and sample the loader (the same two painted integers `boot.mts` reads) until it leaves. */
 async function bootPage(ctx: BrowserContext, url: string, errors: string[], capMs = BOOT_CAP_MS): Promise<{ page: Page; read: BootRead }> {
   const page = await ctx.newPage();
+  await page.addInitScript(BOOT_TRACE_INIT);
   page.on('pageerror', (e) => errors.push(e.message));
   const t0 = Date.now();
   let leaveMs = -1;
@@ -190,7 +193,7 @@ async function bootPage(ctx: BrowserContext, url: string, errors: string[], capM
     last = s;
     await page.waitForTimeout(100);
   }
-  return { page, read: { leaveMs, download: last.d, setup: last.s, done: last.done, failed: last.err, errors } };
+  return { page, read: { leaveMs, download: last.d, setup: last.s, done: last.done, failed: last.err, errors, trace: await readBootTrace(page) } };
 }
 
 interface CacheDump {

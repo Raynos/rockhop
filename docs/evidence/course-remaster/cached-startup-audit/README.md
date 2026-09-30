@@ -30,3 +30,30 @@ Menu hero art is not an awaited normal-boot gate: `src/main.ts:316-323` starts i
 Add a **single diagnostic normal-app cached-offline boot** to the existing `harness/e2e/offline.mts` flow, with the same frozen production `dist`, viewport, service-worker cache, and origin-off condition as the 12.479 s run. Record build/HTML hash, browser engine, software-versus-hardware WebGL, `performance.getEntriesByType('navigation')[0]`, `responseEnd`, `domContentLoaded`, first inline/module script, loader `done`, and loader removal on the same `performance.now()` time origin. At the first `#loader[data-done="1"]`, before its 300 ms removal, read every `#loader ol li[data-key]` state and duration (`src/boot/render.ts:68-100`); capture `performance` marks named `render:prepare:*` (`src/render/index.ts:1017-1021`) after boot. The boot plan already stores each step's exact `ms` (`src/boot/plan.ts:145-155,206-219`). A tiny diagnostic hook to serialize `plan.view.rows` at `done()` is preferable to parsing rounded visible text if modifying test-only instrumentation is permitted. `renderer.debugInfo().prepare` and `.heroSwap.loads` contain finer material/hero fetch-parse-prep timing (`src/render/index.ts:2225-2275,2291,2325`), but `Game.rendererDebug()` deliberately filters object fields (`src/game/game.ts:1274-1284`); a narrow diagnostic exposure would be needed to read those from a normal page.
 
 Do **not** compare this result to `?harness=1` readiness. First classify the 12.479 s into (a) pre-entry/core/worker, (b) `offlinePack`, (c) `materials`/`heroModels`, (d) `shaders`/`firstFrame`, (e) fonts/other, and (f) 300 ms removal. Only then change the dominant step, and retest the same normal offline flow plus first Garage swap and first world-map entry. A physical iPhone landscape cached boot remains a separate release qualification; all timings cited here are host-browser measurements.
+
+## First measured phase trace
+
+The test-only observer now preserves the normal loader rows before removal.
+One frozen normal-app offline suite passes **11/11**, retaining actual offline
+assets, exact ride hashes, ten Garage swaps and the 1,840-Scrap purchase.
+[Full report](trace-swiftshader/report.json) and [phase/source summary](trace-swiftshader/summary.json).
+
+The cached offline page reaches loader done at **13,395 ms** and removal at
+**13,696 ms** on the page clock. The harness receives its sample at **16,945
+ms** wall time; that later observation is not the exact removal timestamp.
+The largest declared step is **firstFrame 5,827 ms**; renderer construction
+is 2,186 ms, first-track preparation 1,760 ms, shader compilation 1,188 ms,
+procedural materials 675 ms and hero-model preparation 523 ms. Cached pack
+reading takes **269 ms**, with zero origin bytes/requests. Within firstFrame,
+existing marks put post first-draw work at about **3,936 ms** and resident
+hero first-draw work at **1,891 ms**. This identifies measured portions of
+this run, not isolated causes of the earlier untraced 12,479 ms run.
+
+**Benchmark correction:** `harness/e2e/offline.mts` hard-codes SwiftShader
+launch arguments and ignores `TRIALS_BROWSER_BACKEND=metal`. No actual GL
+renderer string was saved in this first trace. These figures therefore
+cannot be called Metal or physical-phone startup timings. Next make the
+persistent-context suite honor an explicit backend, save/verify the actual
+renderer, and run the same frozen normal-app flow once on hardware. Retain
+the portable software gate and all thresholds. No product optimization or
+phone speed improvement has landed.

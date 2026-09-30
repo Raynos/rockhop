@@ -1,0 +1,289 @@
+{
+  "launchArgs": [
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader",
+    "--ignore-gpu-blocklist"
+  ],
+  "requestedEnv": "metal",
+  "envHonored": false,
+  "actualRendererCaptured": false,
+  "version": {
+    "build": "1aafc118",
+    "sha": "1aafc11890950f38c23d616832ba6ff7ebe44afe",
+    "time": "2026-09-30T13:43:07.995Z"
+  },
+  "entry": "./assets/index-C2Kngvs9.js",
+  "entrySHA256": "a955c7dd5d1e40931ebd766fc7f5826bf81db46ec4233f0f053c9b9b31ce7dbb",
+  "phases": {
+    "online": {
+      "hostLeaveMs": 18270,
+      "pageLoaderDoneMs": 14786.324999809265,
+      "pageLoaderRemovedMs": 18268.009999752045,
+      "rows": {
+        "core": 81,
+        "evaluate": 34,
+        "renderer": 1905,
+        "physics": 1,
+        "audio": 0,
+        "game": 3,
+        "front": 234,
+        "offlinePack": 394,
+        "track": 1742,
+        "heroMeshes": 99,
+        "lighting": 212,
+        "postChain": 372,
+        "materials": 764,
+        "heroModels": 508,
+        "bootArt": 8,
+        "shaders": 1265,
+        "firstFrame": 7116,
+        "fonts": 10
+      },
+      "marks": [
+        {
+          "name": "render:ctor",
+          "startTimeMs": 2053.1050000190735
+        },
+        {
+          "name": "render:prepare:art:start",
+          "startTimeMs": 4431.224999904633
+        },
+        {
+          "name": "render:prepare:hero:bike",
+          "startTimeMs": 4438.974999904633
+        },
+        {
+          "name": "render:prepare:hero:rider",
+          "startTimeMs": 4529.795000076294
+        },
+        {
+          "name": "render:prepare:lighting",
+          "startTimeMs": 4741.889999866486
+        },
+        {
+          "name": "render:prepare:post:create",
+          "startTimeMs": 5114.195000171661
+        },
+        {
+          "name": "render:prepare:materials",
+          "startTimeMs": 5878.255000114441
+        },
+        {
+          "name": "render:prepare:hero:gltf",
+          "startTimeMs": 6386.505000114441
+        },
+        {
+          "name": "render:prepare:art:settled",
+          "startTimeMs": 6386.735000133514
+        },
+        {
+          "name": "render:prepare:shaders",
+          "startTimeMs": 7659.579999923706
+        },
+        {
+          "name": "render:prepare:firstframe:post",
+          "startTimeMs": 11532.420000076294
+        },
+        {
+          "name": "render:prepare:firstframe:heroes",
+          "startTimeMs": 14776.025000095367
+        },
+        {
+          "name": "render:entry",
+          "startTimeMs": 18267.614999771118
+        }
+      ],
+      "navigation": {
+        "startTimeMs": 0,
+        "workerStartMs": 0,
+        "fetchStartMs": 0.09999990463256836,
+        "responseStartMs": 7.855000019073486,
+        "responseEndMs": 8.384999752044678,
+        "domInteractiveMs": 43.58500003814697,
+        "domContentLoadedEventStartMs": 43.58500003814697,
+        "domContentLoadedEventEndMs": 43.59499979019165,
+        "loadEventEndMs": 43.614999771118164,
+        "transferSize": 9932
+      }
+    },
+    "offline": {
+      "hostLeaveMs": 16945,
+      "pageLoaderDoneMs": 13395.449999809265,
+      "pageLoaderRemovedMs": 13696.179999828339,
+      "rows": {
+        "core": 15,
+        "evaluate": 38,
+        "renderer": 2186,
+        "physics": 2,
+        "audio": 3,
+        "game": 15,
+        "front": 248,
+        "offlinePack": 269,
+        "track": 1760,
+        "heroMeshes": 87,
+        "lighting": 180,
+        "postChain": 334,
+        "materials": 675,
+        "heroModels": 523,
+        "bootArt": 1,
+        "shaders": 1188,
+        "firstFrame": 5827,
+        "fonts": 9
+      },
+      "marks": [
+        {
+          "name": "render:ctor",
+          "startTimeMs": 2269.2649998664856
+        },
+        {
+          "name": "render:prepare:art:start",
+          "startTimeMs": 4569.359999656677
+        },
+        {
+          "name": "render:prepare:hero:bike",
+          "startTimeMs": 4571.344999790192
+        },
+        {
+          "name": "render:prepare:hero:rider",
+          "startTimeMs": 4656.70999956131
+        },
+        {
+          "name": "render:prepare:lighting",
+          "startTimeMs": 4836.614999771118
+        },
+        {
+          "name": "render:prepare:post:create",
+          "startTimeMs": 5170.919999599457
+        },
+        {
+          "name": "render:prepare:materials",
+          "startTimeMs": 5846.199999809265
+        },
+        {
+          "name": "render:prepare:hero:gltf",
+          "startTimeMs": 6369.4349999427795
+        },
+        {
+          "name": "render:prepare:art:settled",
+          "startTimeMs": 6369.579999923706
+        },
+        {
+          "name": "render:prepare:shaders",
+          "startTimeMs": 7558.304999828339
+        },
+        {
+          "name": "render:prepare:firstframe:post",
+          "startTimeMs": 11494.46499967575
+        },
+        {
+          "name": "render:prepare:firstframe:heroes",
+          "startTimeMs": 13385.614999771118
+        },
+        {
+          "name": "render:entry",
+          "startTimeMs": 16942.629999637604
+        }
+      ],
+      "navigation": {
+        "startTimeMs": 0,
+        "workerStartMs": 1.2099995613098145,
+        "fetchStartMs": 22.959999561309814,
+        "responseStartMs": 24.024999618530273,
+        "responseEndMs": 25.264999866485596,
+        "domInteractiveMs": 30.625,
+        "domContentLoadedEventStartMs": 30.62999963760376,
+        "domContentLoadedEventEndMs": 30.644999980926514,
+        "loadEventEndMs": 39.71499967575073,
+        "transferSize": 0
+      }
+    },
+    "updateBoot": {
+      "hostLeaveMs": 14834,
+      "pageLoaderDoneMs": 14446.69000005722,
+      "pageLoaderRemovedMs": 14747.420000076294,
+      "rows": {
+        "core": 1120,
+        "evaluate": 29,
+        "renderer": 57,
+        "physics": 1,
+        "audio": 5,
+        "game": 63,
+        "front": 481,
+        "offlinePack": 33,
+        "track": 1738,
+        "heroMeshes": 91,
+        "lighting": 188,
+        "postChain": 319,
+        "materials": 677,
+        "heroModels": 458,
+        "bootArt": 8,
+        "shaders": 1163,
+        "firstFrame": 7000,
+        "fonts": 3
+      },
+      "marks": [
+        {
+          "name": "render:ctor",
+          "startTimeMs": 2213.4500002861023
+        },
+        {
+          "name": "render:prepare:art:start",
+          "startTimeMs": 4538.050000190735
+        },
+        {
+          "name": "render:prepare:hero:bike",
+          "startTimeMs": 4539.79000043869
+        },
+        {
+          "name": "render:prepare:hero:rider",
+          "startTimeMs": 4629.545000076294
+        },
+        {
+          "name": "render:prepare:lighting",
+          "startTimeMs": 4817.760000228882
+        },
+        {
+          "name": "render:prepare:post:create",
+          "startTimeMs": 5136.900000095367
+        },
+        {
+          "name": "render:prepare:materials",
+          "startTimeMs": 5814.030000209808
+        },
+        {
+          "name": "render:prepare:hero:gltf",
+          "startTimeMs": 6271.740000247955
+        },
+        {
+          "name": "render:prepare:art:settled",
+          "startTimeMs": 6271.950000286102
+        },
+        {
+          "name": "render:prepare:shaders",
+          "startTimeMs": 7442.910000324249
+        },
+        {
+          "name": "render:prepare:firstframe:post",
+          "startTimeMs": 11931.890000343323
+        },
+        {
+          "name": "render:prepare:firstframe:heroes",
+          "startTimeMs": 14443.005000114441
+        }
+      ],
+      "navigation": {
+        "startTimeMs": 0,
+        "workerStartMs": 1004.125,
+        "fetchStartMs": 1004.1750001907349,
+        "responseStartMs": 1004.6750001907349,
+        "responseEndMs": 1005.3650002479553,
+        "domInteractiveMs": 1008.2850003242493,
+        "domContentLoadedEventStartMs": 1008.2900004386902,
+        "domContentLoadedEventEndMs": 1008.3000001907349,
+        "loadEventEndMs": 1008.6500000953674,
+        "transferSize": 0
+      }
+    }
+  },
+  "limits": "One shared-host normal-app trace. Fixed SwiftShader launch args override the requested env; actual GL renderer was not recorded in this run. Loader durations are rounded; insertion timestamps are observer times. No phone qualification or before/after speed claim."
+}
