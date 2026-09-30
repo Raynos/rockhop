@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { describe, expect, it, vi } from 'vitest';
-import { mountCourseAssets, type CourseAssetDelivery } from './courseAssets';
+import { combineCourseAssets, mountCourseAssets, type CourseAssetDelivery } from './courseAssets';
 
 function delayed() {
   let resolve!: (asset: CourseAssetDelivery) => void;
@@ -51,5 +51,25 @@ describe('authored course asset lifetime', () => {
     expect(report).toHaveBeenCalledExactlyOnceWith(error);
     expect(owner.root.children).toHaveLength(0);
     owner.dispose();
+  });
+});
+
+describe('combined authored families', () => {
+  it('waits for both, counts both, and retires their resources once', async () => {
+    const a = delayed(), b = delayed();
+    const combined = combineCourseAssets(mountCourseAssets(a.promise), mountCourseAssets(b.promise));
+    a.resolve(a.asset); await Promise.resolve(); expect(combined.root.children).toHaveLength(0);
+    b.resolve(b.asset); await combined.ready;
+    expect(combined.root.children).toHaveLength(2); expect(combined.textureBytes).toBe(2048);
+    combined.dispose(); combined.dispose();
+    expect(a.asset.dispose).toHaveBeenCalledOnce(); expect(b.asset.dispose).toHaveBeenCalledOnce();
+    expect(combined.textureBytes).toBe(0); expect(combined.root.children).toHaveLength(0);
+  });
+  it('rejects late attachment to a cancelled combined world', async () => {
+    const a = delayed(), b = delayed();
+    const combined = combineCourseAssets(mountCourseAssets(a.promise), mountCourseAssets(b.promise));
+    combined.cancel(); a.resolve(a.asset); b.resolve(b.asset); await combined.ready;
+    expect(combined.root.children).toHaveLength(0);
+    expect(a.asset.dispose).toHaveBeenCalledOnce(); expect(b.asset.dispose).toHaveBeenCalledOnce();
   });
 });

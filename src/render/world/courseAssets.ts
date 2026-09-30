@@ -49,3 +49,23 @@ export function mountCourseAssets(
     },
   };
 }
+
+/** Multiple authored families share one entry barrier and retirement lifetime. */
+export function combineCourseAssets(...owners: CourseAssetOwner[]): CourseAssetOwner {
+  const root = new THREE.Group(); root.name = 'course-owned-assets';
+  let cancelled = false, disposed = false;
+  const ready = Promise.all(owners.map(owner => owner.ready)).then(() => {
+    if (!cancelled && !disposed) root.add(...owners.filter(owner => owner.root.children.length).map(owner => owner.root));
+  });
+  return {
+    root, ready,
+    get textureBytes() { return owners.reduce((sum, owner) => sum + owner.textureBytes, 0); },
+    cancel() { cancelled = true; for (const owner of owners) owner.cancel(); },
+    dispose() {
+      if (disposed) return;
+      disposed = cancelled = true;
+      for (const owner of owners) owner.dispose();
+      root.clear();
+    },
+  };
+}
