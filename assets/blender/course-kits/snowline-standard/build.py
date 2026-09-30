@@ -118,11 +118,15 @@ def beam(name, a, b, width, m):
     return o
 
 
-def glacier_wall(w=10.0, h=11.8, depth=2.0):
+def glacier_wall(w=10.0, h=11.8, depth=2.0, variant=0):
     # Hand-segmented shelf: cap, blue transparent-looking bands, dark basal
     # overhang, trapped moraine and fracture tongues. The shape is not a box.
     levels = [(0, .40), (.14, .64), (.27, .84), (.46, 1), (.63, .92),
-              (.77, .85), (.91, .95), (1, .75)]
+              (.77, .85), (.91, .95), (1, .75)] if variant==0 else [
+              (0,.57),(.12,.71),(.30,.96),(.47,.79),(.62,1.04),
+              (.76,.80),(.89,.94),(1,.71)]
+    pockets = [(-2.8,.51),(.35,.38),(3.15,.70)] if variant==0 else [
+               (-3.9,.34),(-1.15,.68),(2.1,.50),(4.2,.80)]
     for side in (-1, 1):
         verts = []
         for j, (t, bulge) in enumerate(levels):
@@ -131,12 +135,12 @@ def glacier_wall(w=10.0, h=11.8, depth=2.0):
                 x = -w/2 + w*i/12
                 # Three deeply scooped shear pockets break the rectangular
                 # silhouette; coherent height modulation makes actual 3D ribs.
-                pocket = sum(.48*math.exp(-((x-c)/.82)**2 - ((t-v)/.23)**2)
-                             for c,v in [(-2.8,.51),(.35,.38),(3.15,.70)])
-                ridge = .18*math.sin(i*1.47 + j*.93) + .12*math.sin(i*4.1-j)
+                pocket = sum((.48+.10*variant)*math.exp(-((x-c)/(.82+.1*variant))**2 - ((t-v)/.23)**2)
+                             for c,v in pockets)
+                ridge = .18*math.sin(i*1.47 + j*.93+variant*1.3) + .12*math.sin(i*4.1-j+variant*.8)
                 y = side * (depth*.43*bulge + ridge - pocket)
                 verts.append((x + .08*math.sin(j*1.6+i*.7), y,
-                              z + .18*math.sin(i*.96+j) + .10*math.sin(i*2.1)))
+                              z + .18*math.sin(i*.96+j+variant*1.6) + .10*math.sin(i*2.1+variant)))
         faces = [(j*13+i, j*13+i+1, (j+1)*13+i+1, (j+1)*13+i)
                  for j in range(len(levels)-1) for i in range(12)]
         o = mesh('stratified face', verts, faces, ice_face)
@@ -148,14 +152,18 @@ def glacier_wall(w=10.0, h=11.8, depth=2.0):
     # than a zero-thickness theatre flat when the camera swings in the S runs.
     for side in (-1,1):
         xs = side*w/2
-        mesh('broken glacier end return',[(xs,-depth*.52,0),(xs,-depth*.75,h*.27),
+        end=[(xs,-depth*.52,0),(xs,-depth*.75,h*.27),
              (xs,-depth*.67,h*.74),(xs,-depth*.35,h),
-             (xs,depth*.35,h),(xs,depth*.67,h*.74),(xs,depth*.75,h*.27),(xs,depth*.52,0)],
-             [(0,1,2,3,4,5,6,7)],ice_dark)
+             (xs,depth*.35,h),(xs,depth*.67,h*.74),(xs,depth*.75,h*.27),(xs,depth*.52,0)]
+        # Three angled strata close the volume without one theatrical black
+        # sheet at an oblique camera angle; joints vanish when modules overlap.
+        mesh('fractured basal return', [end[i] for i in (0,1,6,7)],[(0,1,2,3)],ice_dark)
+        mesh('blue mid return',[end[i] for i in (1,2,5,6)],[(0,1,2,3)],ice)
+        mesh('snow shoulder return',[end[i] for i in (2,3,4,5)],[(0,1,2,3)],ice_face)
     for i in range(11):
         x = -w/2 + i*w/10
         top = h*(.92+.035*math.sin(i*2.3))
-        if i in (2,6,9):
+        if i in ((2,6,9) if variant==0 else (1,4,8)):
             # Deep, tapered rift wedges replace the uniform hairline cracks.
             mesh('rift cavity',[(x-.26,-depth*.57,top*.34),(x-.38,-depth*.47,top*.72),
                  (x+.31,-depth*.49,top*.76),(x+.23,-depth*.59,top*.25),
@@ -170,13 +178,16 @@ def glacier_wall(w=10.0, h=11.8, depth=2.0):
         if i % 2 == 0:
             beam('buried vertical moraine', (x-.08,-depth*.54,top*.10), (x+.13,-depth*.58,top*.38), .045, stone)
     # Saw-toothed snow cornice rolls over the ice lip, with an irregular undercut.
-    crown = [(-w/2+i*w/12, -depth*.52-.25*math.sin(i*1.3), h+.17*math.sin(i*1.8)) for i in range(13)]
+    crown = [(-w/2+i*w/12, -depth*.52-.25*math.sin(i*1.3+variant),
+              h+.27*math.sin(i*1.8+variant*1.7)-.12*variant*math.sin(i*.7)) for i in range(13)]
     tube('wind rolled cornice', crown, .31, snow_edge, 3)
     for i in range(8):
         x=-w/2 + (i+.4)*w/8
         length=.5 + .7*((i*7)%5)/4
         beam('blue hanging fracture', (x,-depth*.50,h-.18), (x+.18,-depth*.58,h-.18-length), .07, ice)
-    for i,(x,width,protrude) in enumerate([(-3.9,1.5,.38),(-.9,1.15,.61),(2.3,1.8,.46),(4.1,.75,.26)]):
+    shoulders=[(-3.9,1.5,.38),(-.9,1.15,.61),(2.3,1.8,.46),(4.1,.75,.26)] if variant==0 else [
+        (-4.4,.9,.25),(-2.3,1.9,.71),(.8,1.4,.43),(3.9,1.3,.59)]
+    for i,(x,width,protrude) in enumerate(shoulders):
         mesh('thick buttress shoulder',[(x-width/2,-depth*.41,h*.56),
              (x+width/2,-depth*.42,h*.56),(x+width*.72,-depth*.41,h*.9),
              (x-width*.6,-depth*.42,h*.94),(x-width*.42,-depth*.41-protrude,h*.60),
@@ -192,8 +203,10 @@ def glacier_wall(w=10.0, h=11.8, depth=2.0):
              [(0,1,2,3),(3,2,5,4)],snow_edge if i%3 else snow)
 
 
-current='gorge-wall'
+current='gorge-wall-a'
 glacier_wall()
+current='gorge-wall-b'
+glacier_wall(variant=1)
 
 current='shelf-face'
 # Under-contact bracket; local z=0 is its top, everything extends below.
@@ -471,14 +484,14 @@ scene.render.resolution_x=640;scene.render.resolution_y=480
 scene.render.resolution_percentage=100
 scene.render.image_settings.file_format='PNG'
 scene.view_settings.view_transform='AgX'
-for i,(name,deg) in enumerate([(n,a) for n in ('gorge-wall','lift-tower','snowcat') for a in (0,45,100)],1):
+for i,(name,deg) in enumerate([(n,a) for n in ('gorge-wall-a','lift-tower','snowcat') for a in (0,45,100)],1):
     for o in protos: o.hide_render=o.name!=f'snowline:{name}'
     a=math.radians(deg)
     cam.location=(20*math.sin(a),-20*math.cos(a),13)
     cam.rotation_euler=(Vector((0,0,5))-cam.location).to_track_quat('-Z','Y').to_euler()
     scene.render.filepath=str(out/f'angle-{i:02d}-{name}-{deg:03d}.png')
     bpy.ops.render.render(write_still=True)
-for name,scale in [('shelf-face',11.5),('lift-station',21.5),('summit-beacon',19.0)]:
+for name,scale in [('gorge-wall-b',17.5),('shelf-face',11.5),('lift-station',21.5),('summit-beacon',19.0)]:
     for o in protos: o.hide_render=o.name!=f'snowline:{name}'
     a=math.radians(38)
     cam.location=(20*math.sin(a),-20*math.cos(a),13)

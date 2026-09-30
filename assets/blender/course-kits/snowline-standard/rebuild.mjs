@@ -22,17 +22,19 @@ run('blender', ['-b', '--python-exit-code', '1', '--python', path.join(dir, 'bui
 for (const stem of ['snowline-standard', 'snowline-standard-lod']) {
   run(process.execPath, [path.join(root, 'assets/blender/hero_art_pack.mjs'),
     path.join(out, `${stem}.glb`), path.join(out, `${stem}-packed.glb`)]);
+  run(process.execPath, [path.join(dir,'dedupe-textures.mjs'),path.join(out,`${stem}-packed.glb`)]);
 }
 run('magick', ['montage', ...[
-  'angle-01-gorge-wall-000.png', 'angle-02-gorge-wall-045.png', 'angle-03-gorge-wall-100.png',
+  'angle-01-gorge-wall-a-000.png', 'angle-02-gorge-wall-a-045.png', 'angle-03-gorge-wall-a-100.png',
   'angle-04-lift-tower-000.png', 'angle-05-lift-tower-045.png', 'angle-06-lift-tower-100.png',
   'angle-07-snowcat-000.png', 'angle-08-snowcat-045.png', 'angle-09-snowcat-100.png',
 ].map(f => path.join(out, f)), '-tile', '3x3', '-geometry', '640x480+4+4',
   '-background', '#142d36', path.join(out, 'nine-angle-board.jpg')]);
 run('magick', ['montage', ...[
-  'angle-02-gorge-wall-045.png','family-shelf-face.png','angle-05-lift-tower-045.png',
-  'angle-08-snowcat-045.png','family-lift-station.png','family-summit-beacon.png',
-].map(f=>path.join(out,f)),'-tile','3x2','-geometry','640x480+4+4',
+  'angle-02-gorge-wall-a-045.png','family-gorge-wall-b.png','family-shelf-face.png',
+  'angle-05-lift-tower-045.png','family-lift-station.png','angle-08-snowcat-045.png',
+  'family-summit-beacon.png','angle-09-snowcat-100.png','angle-04-lift-tower-000.png',
+].map(f=>path.join(out,f)),'-tile','3x3','-geometry','640x480+4+4',
   '-background','#142d36',path.join(out,'family-board.jpg')]);
 const sha = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const models = ['snowline-standard-packed.glb', 'snowline-standard-lod-packed.glb'].map(file => {

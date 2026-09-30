@@ -40,8 +40,8 @@ export interface SnowlineAsset {
 
 interface PrototypePart { geometry: THREE.BufferGeometry; material: THREE.Material | THREE.Material[] }
 interface Prototype { parts: PrototypePart[] }
-type PrototypeName = 'gorge-wall' | 'shelf-face' | 'lift-tower' | 'lift-chair' | 'lift-station' | 'snowcat' | 'summit-beacon';
-const PROTOTYPES: readonly PrototypeName[] = ['gorge-wall', 'shelf-face', 'lift-tower', 'lift-chair', 'lift-station', 'snowcat', 'summit-beacon'];
+type PrototypeName = 'gorge-wall-a' | 'gorge-wall-b' | 'shelf-face' | 'lift-tower' | 'lift-chair' | 'lift-station' | 'snowcat' | 'summit-beacon';
+const PROTOTYPES: readonly PrototypeName[] = ['gorge-wall-a', 'gorge-wall-b', 'shelf-face', 'lift-tower', 'lift-chair', 'lift-station', 'snowcat', 'summit-beacon'];
 const scratchPos = new THREE.Vector3();
 const scratchRot = new THREE.Quaternion();
 const scratchScale = new THREE.Vector3();
@@ -78,26 +78,33 @@ export function snowContactFaceGeometry(track: CompiledTrack, x0: number, x1: nu
     if (gaps.some(g => x < g.x1 - .05 && nx > g.x0 + .05)) continue;
     const y0 = profileY(track.def.profile, x) - .115;
     const y1 = profileY(track.def.profile, nx) - .115;
-    // The near-side shoulder is a carved strip, not a second playable deck.
-    // Windward x bands expose blue ice; leeward bands carry old snow crust.
-    const exposure=noise(Math.floor(x/7)*7,track.def.seed^0x517a);
-    const shoulderMid=exposure>.62?windIce:exposure<.27?powder:crust;
-    const shoulder=[
-      {z:1.74,dy:0,color:crust},
-      {z:2.20,dy:-.18-.12*exposure,color:shoulderMid},
-      {z:3.25,dy:-.43,color:powder},
-      {z:3.95,dy:-.58,color:crust},
-    ];
-    for(let row=0;row<shoulder.length-1;row++) {
-      const a=shoulder[row]!,b=shoulder[row+1]!;
-      const nr=(noise(x+row*.8,track.def.seed)-.5)*.045;
-      const shoulderY=(sx:number,py:number,level:number):number=>level<2?py+shoulder[level]!.dy:
-        zoneGround('snow',track.def.profile,sx,shoulder[level]!.z)+.026;
-      const l:[number,number,number,THREE.Color]=[x,shoulderY(x,y0,row),a.z+nr,a.color];
-      const d:[number,number,number,THREE.Color]=[x,shoulderY(x,y0,row+1),b.z+nr,b.color];
-      const r:[number,number,number,THREE.Color]=[nx,shoulderY(nx,y1,row),a.z+nr,a.color];
-      const f:[number,number,number,THREE.Color]=[nx,shoulderY(nx,y1,row+1),b.z+nr,b.color];
-      for(const v of [l,d,r,r,d,f]) add(v[0],v[1],v[2],v[3]);
+    // Only intermittent wind-scoured outcrops cover the old ground. A
+    // continuous white shoulder would read as another arbitrary slab sheet.
+    const patchStart=Math.floor(x/9)*9;
+    const exposure=noise(patchStart,track.def.seed^0x517a);
+    if(exposure>.56) {
+      const taper=(sx:number):number=>Math.max(0,Math.min(1,(sx-patchStart)/1.5,(patchStart+9-sx)/1.5));
+      const shoulderMid=exposure>.78?windIce:crust;
+      const shoulder=[
+        {z:1.74,dy:0,color:crust},
+        {z:2.20,dy:-.18-.12*exposure,color:shoulderMid},
+        {z:3.25,dy:-.43,color:windIce},
+        {z:3.95,dy:-.58,color:powder},
+      ];
+      for(let row=0;row<shoulder.length-1;row++) {
+        const a=shoulder[row]!,b=shoulder[row+1]!;
+        const nr=(noise(x+row*.8,track.def.seed)-.5)*.045;
+        const shoulderY=(sx:number,py:number,level:number):number=>level<2?py+shoulder[level]!.dy:
+          zoneGround('snow',track.def.profile,sx,shoulder[level]!.z)+.026;
+        const point=(sx:number,py:number,level:number,color:THREE.Color):[number,number,number,THREE.Color]=>{
+          const t=taper(sx);
+          const strip=shoulder[level]!;
+          return [sx,py+(shoulderY(sx,py,level)-py)*t,1.74+(strip.z-1.74)*t+nr,color];
+        };
+        const l=point(x,y0,row,a.color), d=point(x,y0,row+1,b.color);
+        const r=point(nx,y1,row,a.color), f=point(nx,y1,row+1,b.color);
+        for(const v of [l,d,r,r,d,f]) add(v[0],v[1],v[2],v[3]);
+      }
     }
     for (let band = 0; band < 3; band++) {
       const a = band === 0 ? 0 : band === 1 ? 1.0 : 2.15;
@@ -223,14 +230,16 @@ export async function loadSnowlineStandard(
     // Legacy wall geometry is unit width. Its long second instances carry the
     // actual 9–14 m section span; the short rib instances are intentionally
     // suppressed instead of multiplying the new model count.
-    const walls: THREE.Matrix4[] = [];
-    for (const key of ['icewall0','icewall1'] as const) for (const old of anchors[key]) {
-      old.decompose(scratchPos,scratchRot,scratchScale);
-      if (scratchScale.x < 7) continue;
-      walls.push(matrix(scratchPos.x,scratchPos.y,scratchPos.z,0,
-        scratchScale.x/10, scratchScale.y/11.8, 1.0));
+    for (const [key, prototype] of [['icewall0','gorge-wall-a'],['icewall1','gorge-wall-b']] as const) {
+      const walls: THREE.Matrix4[] = [];
+      for (const old of anchors[key]) {
+        old.decompose(scratchPos,scratchRot,scratchScale);
+        if (scratchScale.x < 7) continue;
+        walls.push(matrix(scratchPos.x,scratchPos.y,scratchPos.z,0,
+          scratchScale.x/10, scratchScale.y/11.8, 1.0));
+      }
+      addInstances(prototype, walls);
     }
-    addInstances('gorge-wall', walls);
     const towerRotation = new THREE.Matrix4().makeRotationY(Math.PI/2);
     addInstances('lift-tower', anchors.lifttower.map(old => old.clone().multiply(towerRotation)));
     addInstances('lift-chair', anchors.liftchair.map(old => {
@@ -284,7 +293,7 @@ export async function loadSnowlineStandard(
     // comparison. This candidate only adds below-contact ice to their front.
     addInstances('shelf-face',shelfFaces);
     // A single visible mesh per 40 m; gap spans have no face triangles.
-    const faceMat = (prototypes.get('gorge-wall')!.parts[0]!.material as THREE.MeshStandardMaterial).clone();
+    const faceMat = (prototypes.get('gorge-wall-a')!.parts[0]!.material as THREE.MeshStandardMaterial).clone();
     materials.add(faceMat);
     faceMat.vertexColors = true;
     faceMat.side = THREE.DoubleSide;

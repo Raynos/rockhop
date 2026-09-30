@@ -66,18 +66,21 @@ describe('Snowline Standard isolated candidate', () => {
     const lod=await asset(true);
     const bitmap={width:16,height:16,close:vi.fn()};
     const normalBitmap={width:8,height:8,close:vi.fn()};
-    const wall=full.scene.getObjectByName('snowlinegorge-wall') as THREE.Mesh;
+    const wall=full.scene.getObjectByName('snowlinegorge-wall-a') as THREE.Mesh;
     (wall.material as THREE.MeshStandardMaterial).map=new THREE.Texture(bitmap);
     (wall.material as THREE.MeshStandardMaterial).normalMap=new THREE.Texture(normalBitmap);
     vi.spyOn(GLTFLoader.prototype,'loadAsync').mockImplementation(async url=>url.includes('-lod')?lod:full);
     const track=compileTrack(S2);
     const old=new THREE.Matrix4().makeTranslation(92,-12,-52);
     old.scale(new THREE.Vector3(11,12,1));
-    const anchors={icewall0:[old],icewall1:[],lifttower:[new THREE.Matrix4().makeTranslation(110,-1,-72)],
+    const other=new THREE.Matrix4().makeTranslation(122,-12,-52);
+    other.scale(new THREE.Vector3(10,11,1));
+    const anchors={icewall0:[old],icewall1:[other],lifttower:[new THREE.Matrix4().makeTranslation(110,-1,-72)],
       liftchair:[],snowcat:[]};
     const lib={complete:()=>{}} as never;
     const delivery=await loadSnowlineStandard(track,anchors,'full',lib);
-    expect(delivery.root.getObjectByName('snowline:gorge-wall:2:0')).toBeInstanceOf(THREE.InstancedMesh);
+    expect(delivery.root.getObjectByName('snowline:gorge-wall-a:2:0')).toBeInstanceOf(THREE.InstancedMesh);
+    expect(delivery.root.getObjectByName('snowline:gorge-wall-b:3:0')).toBeInstanceOf(THREE.InstancedMesh);
     expect(delivery.root.getObjectByName('snowline:lift-tower:2:0')).toBeInstanceOf(THREE.InstancedMesh);
     expect(delivery.root.children.some(o=>o.name.startsWith('snowline:contact-face:'))).toBe(true);
     expect(delivery.root.children.some(o=>o.name.startsWith('snowline:snowcat:'))).toBe(true);

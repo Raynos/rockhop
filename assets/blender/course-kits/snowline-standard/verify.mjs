@@ -5,10 +5,10 @@ import { fileURLToPath } from 'node:url';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
-import { glbStats } from '../../glb_stats.mjs';
+import { glbStats, readGlb } from '../../glb_stats.mjs';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const expected = new Set(['gorge-wall','shelf-face','lift-tower','lift-chair','lift-station','snowcat','summit-beacon']);
+const expected = new Set(['gorge-wall-a','gorge-wall-b','shelf-face','lift-tower','lift-chair','lift-station','snowcat','summit-beacon']);
 await MeshoptDecoder.ready;
 const report = [];
 function geometryOnly(bytes){
@@ -34,6 +34,7 @@ function geometryOnly(bytes){
 for (const file of ['snowline-standard-packed.glb','snowline-standard-lod-packed.glb']) {
   const bytes = fs.readFileSync(path.join(dir,'out',file));
   const s = glbStats(path.join(dir,'out',file));
+  if(readGlb(bytes).doc.textures?.length!==2) throw new Error(`${file}: duplicate material texture upload`);
   if(s.maxTexture>512||s.imageBytes>2_000_000) throw new Error(`${file}: texture budget`);
   const geometry=geometryOnly(bytes);
   const loaded = await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder)

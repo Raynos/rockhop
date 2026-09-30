@@ -1,0 +1,28 @@
+diff --git a/src/render/world/biomeKit.ts b/src/render/world/biomeKit.ts
+index 2c1509e1..3be19074 100644
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -54,0 +55 @@ import { loadC1Harbor } from './zones/c1Harbor';
++import { loadSnowlineStandard, snapshotSnowlineAnchors, SNOWLINE_AUTHORED_BATCHES } from './zones/snowlineStandard';
+@@ -1009,0 +1011,21 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
++      // Build all seeded legacy scenery before replacing selected Snowline families.
++      // Keep a separate procedural fallback until GLB delivery actually mounts.
++      if (authoredCourse && biome.id === 'snow') {
++        const anchors = snapshotSnowlineAnchors(zk.batches);
++        const replace = new Set<string>(SNOWLINE_AUTHORED_BATCHES);
++        const removed: PropBatch[] = [];
++        for (const batch of zk.batches) {
++          if (!replace.has(batch.name) || !batch.items.length) continue;
++          const old = new PropBatch(`snowline-original-${batch.name}`, batch.geometry, batch.material, batch.shadows);
++          old.items.push(...batch.items.splice(0));
++          removed.push(old);
++        }
++        const fallback = new THREE.Group();
++        fallback.name = 'snowline-original-fallback';
++        fallback.add(...buildBatches(removed).objects);
++        group.add(fallback);
++        const owner = mountCourseAssets(loadSnowlineStandard(track, anchors, detail === 'low' ? 'lod' : 'full', lib));
++        void owner.ready.then(() => { if (owner.root.children.length) fallback.visible = false; });
++        courseAssets = owner;
++        group.add(owner.root);
++      }
