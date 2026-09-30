@@ -11,7 +11,7 @@ if (fs.existsSync(output)) throw new Error('Use a fresh output directory');
 const revision = execFileSync('git', ['rev-parse', 'HEAD'], {encoding:'utf8'}).trim();
 const frozen = path.join(output, '.inputs');
 fs.mkdirSync(frozen, {recursive:true});
-for (const directory of ['src', 'public']) fs.cpSync(path.join(repo,directory),path.join(frozen,directory),{recursive:true});
+for (const directory of ['src', 'public', 'assets/worldmap']) fs.cpSync(path.join(repo,directory),path.join(frozen,directory),{recursive:true});
 for (const file of ['index.html','vite.config.ts','tsconfig.json','package.json']) fs.copyFileSync(path.join(repo,file),path.join(frozen,file));
 fs.symlinkSync(path.join(repo,'node_modules'),path.join(frozen,'node_modules'),'dir');
 const bank = path.join(frozen,'public/models/course-kits/snowline-standard');
@@ -35,7 +35,7 @@ const modelSources = hashTree(path.join(frozen,'public/models'));
 for (const phase of ['before','after'] as const) {
   const sourceRoot=path.join(output,`${phase}-source`);
   fs.mkdirSync(sourceRoot,{recursive:true});
-  for(const directory of ['src','public'])fs.cpSync(path.join(frozen,directory),path.join(sourceRoot,directory),{recursive:true});
+  for(const directory of ['src','public','assets/worldmap'])fs.cpSync(path.join(frozen,directory),path.join(sourceRoot,directory),{recursive:true});
   for(const file of ['index.html','vite.config.ts','tsconfig.json','package.json'])fs.copyFileSync(path.join(frozen,file),path.join(sourceRoot,file));
   fs.symlinkSync(path.join(repo,'node_modules'),path.join(sourceRoot,'node_modules'),'dir');
   if(phase==='after') {
