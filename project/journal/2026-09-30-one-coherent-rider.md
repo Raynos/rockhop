@@ -125,3 +125,14 @@ clear40.083333333333336s, exact finish bytes, crash/one-tick restart pass.
 
 Limits: No accepted head/neck/rig. Authored-cage feasibility is bounded90min
 and remains within model-stage8h ceiling, presently~5.82h charged.
+
+Finding: Colour-seeded nonplanar collar cut retains old nape/hair despite a
+single clean edge circuit. Reject it before neck sewing; use explicit
+spatial hood/skin landmarks instead of relying on texture classification.
+
+Validation: Parent inspected front/profile/rear and three-quarter PBR/gray;
+16 matched source/cut frames verify hashes and fixed-world cameras.
+Cut41,343faces,111boundary/0nonmanifold edges; source bytes untouched.
+
+Limits: Five protected seed faces lost in component filtering; no accepted
+collar, new head join, deformation, rig or moving-gameplay evidence.
