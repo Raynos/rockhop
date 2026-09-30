@@ -3,6 +3,14 @@
 
 **Status:** active · **0/12 courses fully signed off**. This is the execution plan for [finish-to-publish Gates 1–3](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). It absorbs the skill, economy and finish contracts from the [retired campaign brief](../../project/archive/sol-6-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md). Mechanical baselines and bounded art passes are evidence, not completed courses.
 
+## Progress measures · 2026-09-30
+
+- **Full-plan effort: estimated 20–25% complete.** This is a planning judgment, not a counted gate. The challenge rejection/reference baselines, 1,840-Scrap economy, purchase/access flow and performance readout are implemented. Pro handling is still a candidate under final replay validation. Human difficulty/medal tuning, most authored course art and full device qualification remain.
+- **Graphics effort: estimated 5–10% complete.** Accepted surface, prop and landmark improvements are incremental. The new Blender C1 tug and Alpine tree kit are candidates, excluded from accepted progress until integration and played review. Four complete biome standards and most course-specific scenery remain.
+- **Finished courses: 0/12, or 0%.** No complete gameplay/art/audio/reward/recovery slice has passed all its acceptance gates. Baseline coverage is 12/12; it must not be reported as twelve finished courses.
+
+The [twelve-course before/after board](../evidence/course-remaster/progress-board-2026-09-30/README.md) shows unchanged frames from the saved start-of-remaster baseline and the accepted art captures. It exposes the limited visual delta, including unchanged D3 scenery and S3 cue-only work. The capture tiers differ; the board records this limit and exact video/frame provenance. Re-estimate effort when a complete biome exemplar passes, rather than incrementing it for every small patch.
+
 ## Starting point and target
 
 The user played all twelve earlier courses and found that holding GO could clear them. The first [mechanical challenge pass](../evidence/campaign-retarget/README.md) now gives **0/72 held-GO clears** across both bikes and three seeds. [Twenty-four clean reference rides](../evidence/campaign-medal-audit/README.md) cover both bikes on every course. A [briefed blind CLI audit](../evidence/stranger-2026-09-29/README.md) cleared all twelve in fifteen sessions and verified exact Node and two-browser replays. These are useful baselines, not a verdict on real-time touch difficulty, visual quality or replay appeal.
