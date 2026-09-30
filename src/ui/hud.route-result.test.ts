@@ -1,16 +1,13 @@
 // @vitest-environment jsdom
-import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { RunResult } from '../core/types';
 import { medalFor, targetForBike } from '../game/rules';
 import { D3 } from '../tracks/rockhop/quarry';
 import { medalHints } from './hud';
 
-// Measured current-Pro lower finish: already faster than Diamond, but no upper-deck proof.
-const measured = JSON.parse(readFileSync('docs/evidence/course-remaster/pro-envelope/d3-pro-mechanic.json', 'utf8')) as {
-  lowerClears: { time: number; proof: boolean; fault: boolean; hash: string }[];
-};
-const lower = measured.lowerClears[0]!;
+// Measured current-Pro lower finish (pro-envelope/d3-pro-mechanic.json,
+// hash 1a78b2cf3f3e2f3f). Keep the small regression fixture inside CI's sparse tree.
+const lower = { time: 31.933333333333334, proof: false };
 const result: Pick<RunResult, 'medal' | 'targetTimeS' | 'time' | 'faults' | 'routeProof'> = {
   medal: medalFor(lower.time, 0, D3.meta!.targetTimeS, 'pro', lower.proof),
   targetTimeS: targetForBike(D3.meta!.targetTimeS, 'pro'),
@@ -21,7 +18,6 @@ const result: Pick<RunResult, 'medal' | 'targetTimeS' | 'time' | 'faults' | 'rou
 
 describe('results explain the missing Diamond route', () => {
   it('gives the measured fast, clean lower-route Gold finish an actionable route goal', () => {
-    expect(lower).toMatchObject({ time: 31.933333333333334, proof: false, fault: false, hash: '1a78b2cf3f3e2f3f' });
     expect(result.medal).toBe('gold');
     expect(result.time).toBeLessThan(result.targetTimeS! * 0.85);
     expect(medalHints(result)).toMatchObject({ next: 'platinum', text: { platinum: 'Take the upper route to earn' } });
