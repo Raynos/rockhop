@@ -91,3 +91,14 @@ clear is byte-identical40.083333333333336s; crash/one-tick restart pass.
 
 Limits: Joint probes are uncertain estimates, not a bind skeleton; no hand
 correction, self-intersection, new rider contact or device acceptance yet.
+
+Finding: Visible contact preflight measures reviewed deformed palm/sole
+patches instead of treating bone/socket origins as skin contact. Missing or
+stale asset/skin mappings remain unmeasured, with no automatic pass flag.
+
+Validation: Parent reran9 synthetic surface-distance/skinning tests,
+harness typecheck and focused lint; all passed. Reviewed the signed-distance
+and hash-bound patch implementation. No player source/physics changed.
+
+Limits: Capsule/cylinder approximation must match each actual visible target;
+new rider mappings and played maximum lean/landing footage remain absent.

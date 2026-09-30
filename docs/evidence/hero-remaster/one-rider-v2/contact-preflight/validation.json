@@ -1,0 +1,47 @@
+{
+  "status": "CPU helper preflight only; actual new rider contacts unmeasured",
+  "sourceFiles": [
+    {
+      "file": "harness/hero-remaster/surface-contacts.mts",
+      "sha256": "dc6eb5767e094adc5abbe7ea270adff6b59f7f496589838987a25b5aea8fe04e"
+    },
+    {
+      "file": "harness/hero-remaster/surface-contacts.test.ts",
+      "sha256": "6858448c92ea75704f790ec42ee85f957ec8d1e46825af84977877b320e822d8"
+    },
+    {
+      "file": "harness/hero-capture.mts",
+      "sha256": "4c218153e995a881597311803c67b1c2af5a20c1894089dc356501cc59c8daf7"
+    },
+    {
+      "file": "src/render/hero/gltfRider.ts",
+      "sha256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935"
+    },
+    {
+      "file": "src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    },
+    {
+      "file": "docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/manifest.json",
+      "sha256": "986c55635392b693ccb1bd7986bd9dbe70733193c9fad3641c872804437fd22f"
+    }
+  ],
+  "checks": [
+    {
+      "command": "pnpm exec vitest run harness/hero-remaster/surface-contacts.test.ts",
+      "outcome": "9 tests passed"
+    },
+    {
+      "command": "pnpm exec tsc -p tsconfig.harness.json --noEmit",
+      "outcome": "exit 0"
+    },
+    {
+      "command": "pnpm exec oxlint harness/hero-remaster/surface-contacts.mts harness/hero-remaster/surface-contacts.test.ts",
+      "outcome": "exit 0"
+    }
+  ],
+  "browserWork": false,
+  "gpuWork": false,
+  "changedPlayerSources": false,
+  "acceptedContactMappings": false
+}
