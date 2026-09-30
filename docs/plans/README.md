@@ -527,3 +527,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Replay goals made truthful:** Results now name the required upper route when a fast Gold has no Diamond proof, preserving unmet clock/no-bail goals; final repeated Diamond recommends replay/splits. Four route plus ten finish/opening checks pass. [Final build evidence](../evidence/course-remaster/result-goals/README.md) records716,915 B emitted player gzip under the explicit701 KiB allowance for focused career fixes; full filtered CPU suite1,553 passes, typecheck/lint pass. Physical-phone/player approval remains open.
 
 **Result regression fits CI checkout:** The measured lower-route result fixture now lives inside its focused test; CI excludes the large evidence tree, so tests must not read that external report at runtime. Four route checks pass and provenance remains documented. No player behavior changed.
+
+**Committed lint blocker cleared:** Three clean, frozen V7 export scripts now use the explicit native UTF-16 string ordering and remove unused bindings; full repository lint and syntax checks pass. No active hero search path or generated model was changed.

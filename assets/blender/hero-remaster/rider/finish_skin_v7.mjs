@@ -20,7 +20,8 @@ function acc(ai){
 const body=d.nodes.find(n=>n.name==='Street_remaster_neural_full_body'),p=d.meshes[body.mesh].primitives[0],positions=acc(p.attributes.POSITION),uv=acc(p.attributes.TEXCOORD_0),ids=acc(p.indices).map(v=>v[0]),joints=acc(p.attributes.JOINTS_0),weights=acc(p.attributes.WEIGHTS_0),names=d.skins[body.skin].joints.map(i=>d.nodes[i].name);
 const seamMap=JSON.parse(fs.readFileSync(input+'.seams.json'));
 const pointKey=p=>p.map(v=>Math.round(v*1e6)).join(',');
-const edgeKey=(a,b)=>[pointKey(a),pointKey(b)].sort().join('|');
+const utf16Compare=(a,b)=>a<b?-1:a>b?1:0;
+const edgeKey=(a,b)=>[pointKey(a),pointKey(b)].sort(utf16Compare).join('|');
 const contourEdges=new Set(seamMap.seams.flatMap(side=>side.joins.filter(j=>j.join==='body').flatMap(join=>join.orderedPairs.map((p,i)=>edgeKey(p.restPosition,join.orderedPairs[(i+1)%join.orderedPairs.length].restPosition)))));
 const forceSkinTriangles=[],seenCutEdges=new Set();
 for(let i=0;i<ids.length;i+=3){const ps=ids.slice(i,i+3).map(j=>positions[j]);const matches=[0,1,2].map(j=>edgeKey(ps[j],ps[(j+1)%3])).filter(k=>contourEdges.has(k));matches.forEach(k=>seenCutEdges.add(k));if(matches.length)forceSkinTriangles.push(i/3);}
@@ -76,7 +77,7 @@ function compactAttribute(id){
 }
 const skinAttributes=compact?Object.fromEntries(Object.entries(p.attributes).map(([name,id])=>[name,compactAttribute(id)])):structuredClone(p.attributes);
 const clothIndex=indexStream(cloth),skinIndex=indexStream(compact?skin.map(old=>oldToCompact.get(old)):skin);
-function canonicalTriangle(t){return [t,t.slice(1).concat(t[0]),t.slice(2).concat(t.slice(0,2))].map(x=>x.join(',')).sort()[0];}
+function canonicalTriangle(t){return [t,t.slice(1).concat(t[0]),t.slice(2).concat(t.slice(0,2))].map(x=>x.join(',')).sort(utf16Compare)[0];}
 function triangleSet(indices){const set=new Map();for(let i=0;i<indices.length;i+=3){const key=canonicalTriangle(indices.slice(i,i+3));set.set(key,(set.get(key)??0)+1);}return set;}
 assert.deepEqual(triangleSet(decodedStreams[0].concat(compact?decodedStreams[1].map(i=>compactVertices[i]):decodedStreams[1])),triangleSet(ids),'decoded split triangle set preserves original oriented faces and multiplicities');
 p.indices=clothIndex.accessor;
@@ -102,6 +103,6 @@ const bin=Buffer.concat(chunks);assert.deepEqual(bin.subarray(0,b.length),b);d.b
 const output=writeGlb(d,bin);fs.writeFileSync(out,output);
 for(const side of seamMap.seams)for(const join of side.joins)if(join.join==='body')for(const pair of join.orderedPairs){pair.source.originalMeshName=pair.source.meshName;pair.source.meshName='Street_forearm_skin';if(compact){pair.source.originalVertexIndices=pair.source.vertexIndices;pair.source.vertexIndices=pair.source.vertexIndices.map(old=>oldToCompact.get(old));assert(pair.source.vertexIndices.every(i=>i!=null));}}
 seamMap.asset=out;seamMap.assetSHA256=sha(output);seamMap.materialSourceAssetSHA256=sha(source);seamMap.materialSourceMapSHA256=sha(fs.readFileSync(input+'.seams.json'));fs.writeFileSync(out+'.seams.json',JSON.stringify(seamMap,null,2)+'\n');
-const {selectedFaceIndices,...selection}=paint;
+const {selectedFaceIndices:_selectedFaceIndices,...selection}=paint;
 const proof={source:input,sourceSHA256:sha(source),output:out,sha256:sha(output),bytes:output.length,originalPackedBINPrefixByteIdentical:true,originalGeometryAccessorsAndBufferViewsUnchanged:true,positionsNormalsUVsJointsWeightsRigClipsUnchanged:true,originalOrientedTriangleSetAndMultiplicityUnchanged:true,originalBodyTriangles:ids.length/3,bodyClothTriangles:cloth.length/3,exposedSkinTriangles:skin.length/3,sourceVertexColourAccessorBytesRetained:true,changedAttributeBindings:[{mesh:repair.name,attribute:'COLOR_0',oldAccessor:oldColour,newAccessor:null,reason:'Approved material-only disconnection of noisy V6 vertex albedo; stored original colour bytes retained.'}],changedIndexBindings:[{mesh:body.name,oldAccessor:original.meshes[body.mesh].primitives[0].indices,newAccessor:clothIndex.accessor},{mesh:'Street_forearm_skin',newAccessor:skinIndex.accessor}],seamCorrespondenceGroupCardinalityAndPositionsUnchanged:true,compactForearm:compact?{vertices:compactVertices.length,referencedVertices:usedVertices.size,mandatoryUnreferencedSeamWitnesses:compactVertices.length-usedVertices.size,compactVertexToOriginal:compactVertices,attributes:compactAttributeProof,oldToNewSeamRemapExplicit:true,originalBodyBuffersUntouched:true}:null,seamSourceMeshRemap:{from:body.name,to:'Street_forearm_skin'},skinSelection:selection,materialTradeoff:{drawsBefore:4,drawsAfter:5,originalImageBytesUnchanged:true,indexStreams:[clothIndex,skinIndex],addedTransferBytes:output.length-source.length,newIndexStreamsDecodedBytes:clothIndex.decodedBytes+skinIndex.decodedBytes,liveDecodedIndexDeltaBytes:clothIndex.decodedBytes+skinIndex.decodedBytes-ids.length*4,bodyVertexAttributeAccessorsShared:!compact,forearmAttributeCopyIsCompact:compact,losslessAtlasRouteRejected:{fullBodyJPEGBytes:305303,fullBodyPNGBytes:4103707,reason:'About3.8MB image growth to repaint4195skin texels is disproportionate.'}},artStatus:'requires parent actual moving engine judgment'};
 fs.writeFileSync(out+'.json',JSON.stringify(proof,null,2)+'\n');console.log(JSON.stringify(proof));

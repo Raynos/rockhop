@@ -20,8 +20,7 @@ function accessorInfo(g,id){const a=g.doc.accessors[id],v=g.doc.bufferViews[a.bu
 const bodyNode=d.nodes.find(n=>n.name==='Street_remaster_neural_full_body');assert(bodyNode?.mesh!=null);
 const body=d.meshes[bodyNode.mesh];assert(body.primitives.length===1);
 const prim=body.primitives[0],position=accessorInfo(src,prim.attributes.POSITION),indices=accessorInfo(src,prim.indices);
-const key=p=>p.map(v=>Math.round(v*1e5)).join(',');
-const triKey=ps=>ps.map(key).sort().join(';');
+const utf16Compare=(a,b)=>a<b?-1:a>b?1:0;
 const indexRead={5121:'readUInt8',5123:'readUInt16LE',5125:'readUInt32LE'};
 const readIndex=i=>src.bin[indexRead[indices.a.componentType]](indices.offset+i*indices.stride);
 const readPosition=i=>[0,1,2].map(c=>src.bin.readFloatLE(position.offset+i*position.stride+c*4));
@@ -29,9 +28,9 @@ const cell=p=>p.map(v=>Math.floor(v/1e-4)),grid=new Map();
 for(let i=0;i<position.a.count;i++){const p=readPosition(i),k=cell(p).join(',');if(!grid.has(k))grid.set(k,[]);grid.get(k).push(p);}
 const canonical=p=>p.map(v=>v.toString()).join(',');
 function nearest(p){const c=cell(p);let best=null,distance=1e-5;for(let x=-1;x<=1;x++)for(let y=-1;y<=1;y++)for(let z=-1;z<=1;z++)for(const q of grid.get([c[0]+x,c[1]+y,c[2]+z].join(','))??[]){const dist=Math.hypot(...p.map((v,i)=>v-q[i]));if(dist<distance){best=q;distance=dist;}}assert(best,'Blender triangle maps to source geometry');return canonical(best);}
-const remove=new Set(report.removedHeadTriangles.map(ps=>ps.map(nearest).sort().join(';')));
+const remove=new Set(report.removedHeadTriangles.map(ps=>ps.map(nearest).sort(utf16Compare).join(';')));
 let removed=0;const kept=[];
-for(let i=0;i<indices.a.count;i+=3){const ids=[0,1,2].map(k=>readIndex(i+k));if(remove.has(ids.map(readPosition).map(canonical).sort().join(';')))removed++;else kept.push(...ids);}
+for(let i=0;i<indices.a.count;i+=3){const ids=[0,1,2].map(k=>readIndex(i+k));if(remove.has(ids.map(readPosition).map(canonical).sort(utf16Compare).join(';')))removed++;else kept.push(...ids);}
 assert.equal(removed,report.removedHeadTriangleCount,'every head triangle identified');
 const ib=Buffer.alloc(kept.length*4);kept.forEach((v,i)=>ib.writeUInt32LE(v,i*4));
 const ip=Buffer.alloc(-src.bin.length&3),io=src.bin.length+ip.length;
