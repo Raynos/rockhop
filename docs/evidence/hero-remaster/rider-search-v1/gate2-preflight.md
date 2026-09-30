@@ -33,3 +33,7 @@ restart through silent headless WebKit. Pin valid recordings/build/asset SHAs.
 
 No sitting/gameplay test is marked passed here. Physical phone/desktop
 acceptance and user body choice remain required later gates.
+
+[Pinned actual inputs](gameplay-inputs/README.md) now cover12 maneuver cases
+across both bikes, with65,978 independently repeated CPU input steps. This is
+preparation for later matched captures, not a sitting or visible-contact pass.

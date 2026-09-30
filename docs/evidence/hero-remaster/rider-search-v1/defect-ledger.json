@@ -14,14 +14,14 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 4826,
-    "conservativeChargedHoursUpperBound": 1.341,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 6576,
+    "conservativeChargedHoursUpperBound": 1.827,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
       "pixal/01..05/result.json"
     ],
-    "method": "Charge all observed goal wall time conservatively, including inference waits; actual hands-on time is not inferred by subtracting overlapping processes. Do not charge subsequent waiting for user choice. Start a new active interval on resumption."
+    "method": "Conservatively charge observed active goal wall time, including inference and independent preparation. Input-choice idle time is not chargeable on later resumption."
   },
   "candidates": [
     {
@@ -524,5 +524,13 @@
     "newMapping": "not created; source rig not yet selected",
     "physicsChangedByThisWork": false,
     "playerAssetsChangedByThisWork": false
+  },
+  "gameplayInputPreparation": {
+    "path": "gameplay-inputs/manifest.json",
+    "currentSourceRevalidation": "gameplay-inputs/source-revalidation.json",
+    "cases": 12,
+    "independentPlaysPerScan": 32,
+    "steppedInputsPerScan": 65978,
+    "visualContactAcceptance": false
   }
 }

@@ -203,6 +203,10 @@ updating asks/index before the next experiment. No scheduling or deployment.
   T1 export correction 1 partly improves tearing but fails body quality;
   P3 gray/export diagnosis has no attempted fixes. User body choice requested
   and filed in HR-23. No rig or normal asset promotion.
+- [Matched gameplay inputs](../evidence/hero-remaster/rider-search-v1/gameplay-inputs/README.md)
+  are prepared and independently repeated for12 cases across both bikes.
+  Visible contact/rig/capture acceptance remains unmeasured. This preparation
+  does not advance either later visual gate.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.
