@@ -1,7 +1,65 @@
 <!-- Naming: current revision is Sol 6.1 at the user's direction; original Sol 6 creation is recorded in docs/evidence/plan-provenance/; date is first Git introduction. -->
 # Twelve-course gameplay and visual remaster
 
-**Status:** active · **0/12 courses fully signed off**. This is the execution plan for [finish-to-publish Gates 1–3](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). It absorbs the skill, economy and finish contracts from the [retired campaign brief](../../project/archive/sol-6-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md). Mechanical baselines and bounded art passes are evidence, not completed courses.
+**Status:** active · **0/12 courses fully signed off**. This is the execution plan for [finish-to-publish Gates 1–3](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). It absorbs the skill, economy and finish contracts from the [retired campaign brief](../../project/archive/sol-6-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md). Mechanical baselines and bounded art passes are evidence, not completed courses. The focused scope below supersedes earlier requirements for bespoke models and cinematics on every course.
+
+## Approved focused scope · 2026-09-30
+
+The user chose **keep all 12 courses with focused polish**, then directed maximum
+parallelism and only the biggest improvements for the effort. This changes
+the deliverables and build order; it does not award completion credit.
+
+**Keep:** twelve challenging courses, Rookie on 1–8 and purchased/equipped
+Pro on 9–12, the existing 1,840-Scrap medal economy, instant retry, working
+results/map/Garage, deterministic replays and landscape mobile support.
+
+**Build:** four coherent shared biome kits, applied across three courses each.
+Prioritize the ridden ground, material contrast, near-camera scenery, contact
+and visible takeoff/landing edges. Reuse completed authored assets and existing
+course landmarks. Each course keeps its distinct obstacle sequence and visual
+identity; it no longer needs a newly built unique hero model or prop family.
+Tune known unfair cues/checkpoints and medal clocks from played evidence.
+Change geometry or bike physics only to fix a demonstrated gameplay problem.
+
+**Defer:** bespoke replacement of every landmark, new model-generation
+campaigns, extra routes/modes, new cinematic finale or camera sequences,
+new reward systems and another map/results redesign. Hero rebuilding remains
+in its separate plan. The mission's long-term art aspiration does not require
+an unlimited studio-quality iteration loop to finish this focused release.
+
+### Four concurrent biome lanes
+
+| Owner | Courses | Highest-value work |
+|---|---|---|
+| Coast builder | C1–C3 | Reuse the completed harbor and quay kit; coherent ground/water and clear pier, breach and landing surfaces. |
+| Alpine builder | A1–A3 | Reuse the botanical forest and timber/steel materials; improve floor/lake cohesion and visibility around the mill, log and loader. |
+| Quarry builder | D1–D3 | Reuse the completed machinery/rock kit; readable terraces, belts and gaps, with a clear first Pro stage. |
+| Parent / Snowline | S1–S3 | Reuse the completed snow/ice/lift kit; readable shelf depth, cornice and summit obstacles. Integrate and judge all four lanes. |
+
+Use all four available agent slots in the same checkout on main. Builders own
+separate leaf/asset paths; the parent owns shared hooks, player asset staging,
+plan status and acceptance. CPU authoring/builds and silent visual captures can
+overlap. Run timed performance and physics benchmarks separately on a quiet
+host; elapsed capture time under concurrency is not a performance result.
+
+### Stop rules and acceptance
+
+- Choose a change because it fixes a conspicuous played-frame defect, unclear
+  mandatory obstacle or measured failure. Fix shared problems once per biome.
+- Finish a full-ride comparison and representative fault/retry, then keep or
+  reject the candidate. Avoid further polishing of an invisible detail or
+  additional comparison infrastructure when the existing harness can decide.
+- If a candidate fails a real budget or visual check, make one targeted
+  correction when the cause is understood; otherwise retain the working
+  fallback and move to the next high-value course issue. Defer optional art
+  explicitly instead of repeatedly inventing new versions.
+- Retain exact replay, passive-GO rejection, reward/access/save/offline checks,
+  truthful collision silhouettes, responsive retry and phone pacing gates.
+  Human play/device/audio checks remain release gates and do not serialize
+  independent authoring. A source checkpoint is not a finished course.
+- Commit stable findings early; run only checks needed for the remaining risk
+  and the mandatory third-round ship gate. Do not rerun passed suites merely
+  to accumulate evidence.
 
 ## Progress measures · 2026-09-30
 
@@ -19,8 +77,8 @@ a scheduling estimate, not measured completion velocity or a promise.
 Re-estimate after one whole biome exemplar passes its moving art and
 performance checks; none has passed the complete course bar yet.
 
-The remaining work is four coherent biome standards and twelve distinct
-landmark/skill arcs, parent full-ride/fault judgement, human difficulty and
+The remaining work is four shared biome kits applied across twelve existing
+skill arcs, parent full-ride/fault judgement, human difficulty and
 medal calibration, career/reward/replay integration, and device pacing/
 recovery. Human availability can extend the schedule. App-store account and
 publication lead times belong to FINISH_TO_PUBLISH rather than this estimate.
@@ -50,7 +108,7 @@ The [normal-app headless career check](../evidence/pro-career-gate/README.md) no
 1. **Skill arc:** give each course an opening read, two or three connected riding decisions, and a recognizable climax. A wrong move fails for a visible reason. The first course teaches; later courses combine known skills with new timing. Retain the 12-course, four-biome route and remove no main course.
 2. **Responsive recovery:** place checkpoints before useful approaches, keep manual restart on the next simulation tick, and show one concrete correction after a fault. Measure elapsed time from fault to controllable retry on a phone.
 3. **Truthful geometry:** the collision profile, render silhouette, tire contact, debris and failure camera agree. Every mandatory hazard is visible soon enough to act at approach speed. Avoid decorative props that suddenly collide and landings hidden behind scenery.
-4. **Authored scenery:** build four reusable biome kits, then give every course one distinct hero landmark and close-range prop set. Vary shape, scale, wear, materials and placement. Add foreground, middle distance and background depth without hiding the path. Use batching and level of detail to preserve physical-phone frame pacing.
+4. **Authored scenery:** apply four reusable biome kits across the existing course landmarks. Prioritize shared ground/material quality, shape and contact in the riding view. Vary placement and wear without requiring bespoke new models for every course. Preserve physical-phone frame pacing and clear hazards.
 5. **Bike roles:** Rookie must complete C1–D2; purchased Pro must complete D3–S3. Its silhouette and handling need a materially different, measured advantage for steep climbs, long gaps and rough snow landings, with a meaningful precision tradeoff. Show that advantage in D3 terrain and Garage communication. A tested physics change requires fresh exact replays; historical hashes are comparisons, not constraints on the redesign.
 6. **Career and replay:** Bronze, Silver, Gold and Diamond clocks come from observed clean human rides. Each course has a reason to improve: a faster line, a better medal, a visible Pro route, or a satisfying mastery beat. The finish shows real PB, faults, medal, newly earned Scrap, wallet and next goal. First clear, faster PB, medal upgrade and no-gain repeat must be truthful; Retry, Next, Map and Watch Replay work at phone size without duplicate rewards. Preserve the stored `platinum` key until a tested migration changes it.
 7. **Landscape presentation:** judge the complete ride in motion at phone size with audio both on and off. Portrait shows the rotate prompt from first paint. The rider, obstacle and intended line must stay readable through camera moves and effects.
@@ -65,7 +123,7 @@ The [normal-app headless career check](../evidence/pro-career-gate/README.md) no
 | The prior 800-Scrap price let eight Bronze clears buy Pro, contrary to the intended medal-mastery gate. Old zone unlocks could also expose D3 after only six clears, and the old brief allowed Rookie to finish all twelve. | Set the purchase at 1,840; prove both specified medal combinations fund it and eight Bronze do not. Make eight first-course medals, purchase and Pro equip an explicit D3–S3 career gate across map, Quick Play, Next and direct URLs. Test fresh-save D2→medal upgrades→Garage→D3 and a migrated owned-Pro save. A developer bypass is for diagnostic captures only. |
 | A long held-GO sweep can reject trivial control, but cannot establish fun, fairness, medal calibration or replay motivation. | Measure attempts-to-clear, first fault location, understood correction, retry latency, earned medals and voluntary replays from uncoached riders. Retarget difficulty and clocks from that distribution; check the full curriculum after each course change. |
 
-The current visual audit still names four large gaps: flat Coast road/water, repetitive Alpine trees and machinery, sparse Quarry scale and uniform Snowline surfaces. Each biome exemplar must establish a reusable model/material/light standard before broad rollout. Sound, moving camera, contact and result presentation are included in that exemplar, not postponed to a generic final polish pass.
+The current visual audit still names four large gaps: flat Coast road/water, repetitive Alpine trees and machinery, sparse Quarry scale and uniform Snowline surfaces. Four biome lanes now address these together using existing kits. Judge each shared change across its three courses; no lane waits for complete C1 human sign-off to start. Preserve working sound, camera and results, correcting demonstrated defects rather than reopening their designs.
 
 ## Art and model production method · Wildshard comparison, 2026-09-30
 
@@ -74,13 +132,13 @@ Rockhop's rider and bikes already have editable Blender masters, baked PBR mater
 | Technique to apply | Rockhop use and acceptance rule |
 |---|---|
 | Start from real play frames | Choose matched approach, contact, fault, exit and result frames from a full 852×392 landscape ride. Make a target board beside the *current in-game frame*. Mockups direct modelling; full moving before/after rides and fault/retry clips decide whether the work stays. |
-| Build distinctive near-field models offline | For each course's one hero landmark and the repeated biome kit, author in Blender or make single-object 3/4 references, generate both TRELLIS.2 and Hunyuan3D candidates where useful, then hand-fix silhouette, open shells, scale, pivots and material regions in Blender. Raw image-to-3D output is a candidate, never a finished rideable prop. Compare the exported model with its reference at several angles and in the actual ride camera. |
+| Reuse completed near-field assets | Use the authored Blender/full-LOD biome banks and current course landmarks. Fix conspicuous scale, material or contact problems in the riding view. New bespoke models and image-to-3D campaigns are deferred for this focused course pass. |
 | Keep contact geometry truthful | Export the current `CompiledTrack` riding surfaces and hazard positions to the Blender scene as immutable guides. Render the tire path from those same colliders per [the track mesh contract](../design/CONTRACT.md#26-track-meta-consumers-c13-c14-c15); build visual thickness, wear and supporting structure around them. A pretty mesh cannot imply a safe landing or wall that physics does not provide. Any intentional route-geometry edit gets new collision data, new recordings and an uncoached fault-read test. |
 | Give each biome a material and shape language | Coast: wet steel, timber, working harbor vessels and readable surf; Alpine: age/species-varied trees with bark/branch cards and a credible mill/loader; Quarry: layered tire-scale rock, conveyors and dust; Snowline: carved ice, crevasse depth, lift machinery and changing snow exposure. Use shared atlas/PBR texture sets, baked short-range AO/contact and restrained live sun, fog and water so a generated prop belongs in its scene. Distant plates remain atmosphere only. |
 | Make reproducible runtime assets | Keep authored source and a scripted, pinned export recipe; generate full/LOD meshopt GLBs and compressed texture tiers, record source/output hashes, validate the production decoder, and compare rebuilds. Reuse Rockhop's protected hero-source discipline rather than replacing its rider/bike package. Place/instance repeated props deterministically; select near, mid and far LODs from the real camera. |
 | Budget on a device, in motion | Preserve the contract's loaded-track limits of 20 calls/80k triangles for track+obstacles and whole-frame limits of 300 calls/500k triangles and 96 MB textures until measured device evidence supports a change. Record draw calls, triangles, texture memory, p50/p95 frame time, boot memory and load time in a full landscape ride on physical iPhone and Android. A simulator or desktop gain does not establish phone memory safety; Wildshard's facade multi-draw incident is the specific warning. |
 
-**Build order:** finish C1 as a complete Coast production slice, then A1 forest/mill, D1 quarry and S1 snow as four material/model exemplars. Use the approved kit and measured budgets to build the other eight. Ship neither a set of independent generated models nor a backdrop change as a course remaster without the gameplay, camera, sound, result, retry and phone evidence above. The latest C1 plate/ship iteration was rejected after moving review and a host submit-time regression; its source was restored. The next C1 pass uses the offline model/material method above.
+**Build order:** work on Coast, Alpine, Quarry and Snowline concurrently, reusing completed banks and applying each kit to its three courses. Start with the existing prepared comparisons rather than creating new prototypes. Parent reviews moving results and integrates accepted changes as they arrive; timed qualification and final campaign checks are serialized. The earlier rejected C1 plate/ship pass remains rejected. Complete-course and device gates still apply.
 
 ## Graphics audit by course · 0/12 signed off
 
@@ -102,6 +160,11 @@ These are played **bounded improvements**, not full-course art approvals. Each n
 | S3 | [Shelf and upper-route cues](../evidence/course-remaster/s3/README.md) | Summit landmark, storm clearing and finale shot |
 
 ## Course briefs
+
+The focused scope supersedes the bespoke construction/cinematic language in
+these earlier briefs. Their gameplay problems and distinct landmark identities
+remain the target; reuse existing landmarks and improve shared materials,
+contact and readability first. Optional new geometry waits for later scope.
 
 “Current signal” names evidence to investigate, not a final difficulty rating. Course geometry, authored models and cues ship together; remeasure medal clocks after each accepted change.
 
@@ -125,9 +188,9 @@ These are played **bounded improvements**, not full-course art approvals. Each n
 | Pass | Deliverable | Exit check |
 |---|---|---|
 | **0. Freeze the baseline** | Record current landscape, phone-size full ride and failure clips for every course, both bikes where routes differ; log source SHA, obstacle/fault positions, attempts, restart time, medal and performance. Use the current visual review and blind audit as the first comparison. | Twelve course folders under `docs/evidence/course-remaster/` contain a baseline clip and open-issue list. Claims distinguish headless captures from a physical phone. |
-| **1. C1 production slice** | Finish one Coast course end to end: hazard readability, harbor models, lighting/contact, camera, sound, checkpoint, finish and Garage handoff. Establish asset and performance budgets from this slice. | Finish-to-publish Gate 1: three new landscape-phone players, two clears, one voluntary retry, plus exact two-bike replays and a full menu-to-Garage clip. |
-| **2. Four biome exemplars and Pro handoff** | Establish Coast at C1, Alpine at A1, Quarry at D1 and Snowline at S1, then apply the measured kits to C2's cue and D3's Pro teaching route. Prove the four material/model families stay within device memory and frame budgets. Fix D1's high fault count and the D2→Garage→D3 handoff. | The user sees four moving phone-size exemplar rides and failure clips plus the earned bike handoff. Physical landscape iPhone review checks readability and pacing before the remaining asset rollout. |
-| **3. Complete each biome** | Finish C3, A2/A3, D2 and S1–S3. Author each landmark and skill arc, then revise route cues and medal clocks. Review adjacent courses together so challenge and scenery escalate across the campaign. | Twelve distinct full rides, Rookie references for 1–8, Pro references for 9–12, a fresh held-GO gate and exact Node/two-browser replays after each accepted physics or geometry change. |
+| **1. Four parallel shared-kit passes** | Coast C1–C3, Alpine A1–A3, Quarry D1–D3 and Snowline S1–S3 improve shared ground/materials and existing landmark contact/readability. Reuse prepared candidates; no new bespoke model families. | Parent full-ride/fault comparison accepts or rejects each candidate; existing build limits and ownership/fallback checks pass. No lane waits for another biome's human approval. |
+| **2. Targeted course/gameplay fixes** | Correct demonstrated cue/checkpoint problems, D1 repeated surprise and the D2→Garage→D3 Pro teaching handoff. Recalibrate clocks where actual clean lines changed. Keep working camera, sound and results. | Twelve distinct full rides, Rookie references for 1–8, Pro for 9–12, held-GO rejection and exact replays after accepted mechanical changes; four kits stay within frame/memory limits. |
+| **3. Complete-course review** | Review all twelve rides/faults and the earned bike handoff on the integrated build. Correct material hazards, unfair faults or recovery defects; defer optional decorative upgrades. | Finish-to-publish Gate 1: three new landscape-phone C1 players, two clears, one voluntary retry, exact replays and full menu-to-Garage flow. Physical phone readability/pacing remains required across the campaign. |
 | **4. Campaign tuning** | Run uncoached new-player sessions through C1–C3 and full-campaign attempts. Tune checkpoints, fault explanation, difficulty labels, medal thresholds, Pro advantage, Scrap pacing and replay hooks from measured behavior. | Finish-to-publish Gate 2: at least three new players try C1–C3 and two attempt the whole campaign. Publish attempts, common faults, time-to-retry, medal spread, bike choice and voluntary replays. |
 | **5. Release candidate** | Review all four biome rides beside menu, 3D map, Garage and result in one continuous build; close performance, touch, offline/save and native gates on the same SHA. | Gate 3 and Gate 4 evidence, followed by signed beta and store gates in [the release plan](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). No course is marked complete from isolated screenshots. |
 
@@ -141,7 +204,9 @@ These are played **bounded improvements**, not full-course art approvals. Each n
 
 ## First execution round
 
-Capture the current C1/C2/A1/D1/S1 ride and fault baseline at 852×393 landscape; record exact code revision and measurement method. Then build the C1 harbor and riding surface as the visual template, retest its brake approach on a physical phone, and bring the moving before/after clip to the user. The remaining courses follow the measured four-biome exemplar pass above.
+Historical starting round: capture C1/C2/A1/D1/S1 ride and fault baselines at
+landscape phone size. Those baselines and the retained harbor/forest work now
+feed the four concurrent focused-kit passes above; do not restart the audit.
 
 ### 2026-09-29 baseline result
 
