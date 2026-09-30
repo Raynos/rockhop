@@ -37,7 +37,7 @@ Further authoring work appeared after the initial clean snapshot. It is now
 retained in separate Alpine material, Quarry machinery, Coast harbor,
 Snowline refinement and wrist-diagnostic commits. Original runtime hooks
 remain unchanged; unaccepted kits and repair recipes are explicitly labelled.
-The final status round makes **20 main commits** since cleanup began, including
+The final status round makes **22 main commits** since cleanup began, including
 the audio publishing record and CI fixture portability correction.
 
 Final application/harness typecheck, repository lint and normal build pass.
@@ -60,3 +60,9 @@ red initial V6 report; typecheck and focused lint pass. The repair stays open.
 
 The latest repair source checkpoint additionally retains coherent boundary
 winding and packed-coordinate correspondence; syntax passes, acceptance open.
+
+The final wrist-region audit checkpoint broadens the collapsed-triangle gate
+and retains its red candidate report alongside the corrected hero plan.
+
+The plan/source checkpoint retains selective zero-area donor-face removal and
+the current quantitative result, with no production promotion or art claim.

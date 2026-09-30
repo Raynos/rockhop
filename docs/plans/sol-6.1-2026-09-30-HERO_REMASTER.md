@@ -169,3 +169,25 @@ for the next round; the installed toolchain is sufficient to attempt it.
 Bake/colour references: [Blender render baking](https://docs.blender.org/manual/en/latest/render/cycles/baking.html)
 and [Three.js colour management](https://threejs.org/manual/pages/color-management.html).
 These document the pipeline, not evidence of achieved visual quality.
+
+
+### Wrist repair overrides the cosmetic order — ask 211
+
+The user identified a critical visible gap between the hands and forearms.
+The prior V5 prototype acceptance missed this defect: correct grip sockets
+are insufficient. A runtime audit reproduces 26 mm separation in Garage and
+35 mm during physical posing between rest-coincident vertices with different
+skin weights, plus collapsed terminal forearm triangles. This finding takes
+priority over face, hair, bike and lighting work in M1.
+
+Replace malformed terminal forearms with actual closed contour topology.
+Require full and LOD body→wrist→glove rings, coherent winding, nondegenerate
+faces and explicit complete vertex correspondence. Check actual prepared and
+conditioned geometry: equal named bone weights, bind-aware skinning
+coefficients and world positions through Garage, neutral, both leans,
+compression, extension and landing. Preserve the protected donor hands/soles,
+rig and existing clips. Judge actual Garage rotation and played ride movies;
+synthetic CPU pose samples complement these clips rather than replace them.
+The [wrist evidence](../evidence/hero-remaster/wrists/README.md) records the
+measured failure and the repair gate. Full repair is under evaluation; the LOD
+must pass before promotion. No cosmetic or final art bar is closed here.

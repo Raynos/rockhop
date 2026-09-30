@@ -52,6 +52,28 @@ const indexBytes=Buffer.alloc(remaining.length*4);remaining.forEach((x,i)=>index
 const indexOffset=src.bin.length+(-src.bin.length&3),indexView=d.bufferViews.length;d.bufferViews.push({buffer:0,byteOffset:indexOffset,byteLength:indexBytes.length});
 primitive.indices=d.accessors.length;d.accessors.push({bufferView:indexView,componentType:5125,count:remaining.length,type:'SCALAR'});
 src.bin=Buffer.concat([src.bin,Buffer.alloc(-src.bin.length&3),indexBytes]);
+// Retire only exact-zero-area inherited donor faces. Palms, finger and shoe
+// positions/normals/UVs/weights remain byte-identical; every nonzero face keeps
+// its original triangle and ordering.
+const contactNode=d.nodes.find(n=>n.name==='Authored_grips_and_soles');
+const contactPrimitive=d.meshes[contactNode.mesh].primitives[0];
+const cp=accessorInfo(src,contactPrimitive.attributes.POSITION),ci=accessorInfo(src,contactPrimitive.indices);
+const cr=ci.a.componentType===5123?'readUInt16LE':'readUInt32LE',contactRemaining=[],removedContactTriangles=[];
+for(let at=0;at<ci.a.count;at+=3){
+ const ids=[0,1,2].map(j=>src.bin[cr](ci.offset+(at+j)*ci.stride));
+ const ps=ids.map(i=>[0,1,2].map(c=>src.bin.readFloatLE(cp.offset+i*cp.stride+c*4)));
+ const u=ps[1].map((v,c)=>v-ps[0][c]),v=ps[2].map((v,c)=>v-ps[0][c]);
+ const cross=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+ if(cross.every(x=>x===0))removedContactTriangles.push({sourceTriangle:at/3,vertexIndices:ids,positions:ps});
+ else contactRemaining.push(...ids);
+}
+if(removedContactTriangles.length){
+ const bytes=Buffer.alloc(contactRemaining.length*4);contactRemaining.forEach((x,i)=>bytes.writeUInt32LE(x,i*4));
+ const offset=src.bin.length+(-src.bin.length&3),view=d.bufferViews.length;
+ d.bufferViews.push({buffer:0,byteOffset:offset,byteLength:bytes.length});
+ contactPrimitive.indices=d.accessors.length;d.accessors.push({bufferView:view,componentType:5125,count:contactRemaining.length,type:'SCALAR'});
+ src.bin=Buffer.concat([src.bin,Buffer.alloc(-src.bin.length&3),bytes]);
+}
 // New meshes reference the original immutable skin; remap donor joint indices.
 const jointRead={5121:'readUInt8',5123:'readUInt16LE'},jointWrite={5121:'writeUInt8',5123:'writeUInt16LE'};
 for(const mesh of donor.doc.meshes)for(const p of mesh.primitives){
@@ -96,5 +118,5 @@ const seamMap={asset:outPath,coordinateWeldMetres:1e-5,method:'Closed actual edg
  return {join:which,closedCycle:true,orderedPairs:s[which].sourcePositions.map((p,i)=>{const k=key(p),sourceIndices=lookup.get(k),repairIndices=bridgeLookup.get(k);assert(sourceIndices?.length&&repairIndices?.length,`seam ${s.side}/${which}/${i} maps every endpoint`);return{source:{meshName,vertexIndices:sourceIndices},repair:{meshName:bridgeName,vertexIndices:repairIndices},restPosition:p}})};
  })}))};
 fs.writeFileSync(outPath+'.seams.json',JSON.stringify(seamMap,null,2)+'\n');
-const proof={source:sourcePath,donor:donorPath,output:outPath,sha256:crypto.createHash('sha256').update(out).digest('hex'),bytes:out.length,boundaryWeightVerticesPatched:patched,removedTriangles:removed,extraTriangles:report.extraTriangles,wristContours:report.sides,originalAnimationMetadataPreserved:true,originalSkinMetadataPreserved:true,originalNodeTransformsPreserved:true,outsideJoinByteDifferences};
+const proof={source:sourcePath,donor:donorPath,output:outPath,sha256:crypto.createHash('sha256').update(out).digest('hex'),bytes:out.length,boundaryWeightVerticesPatched:patched,removedTriangles:removed,extraTriangles:report.extraTriangles,removedExactZeroAreaContactTriangles:removedContactTriangles,nonzeroContactTrianglesPreserved:true,wristContours:report.sides,originalAnimationMetadataPreserved:true,originalSkinMetadataPreserved:true,originalNodeTransformsPreserved:true,outsideJoinByteDifferences};
 fs.writeFileSync(outPath+'.json',JSON.stringify(proof,null,2)+'\n');console.log(JSON.stringify(proof));

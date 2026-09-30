@@ -413,4 +413,6 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Wrist recipe follow-up checkpoint:** Main retains the actively authored source-boundary winding and decoded packed-coordinate correspondence recipe, with Python/MJS syntax checks passing. The earlier red seam report remains preserved; revised export/seam and moving full/LOD acceptance remain with the hero chat. Player runtime and public assets are unchanged.
 
-**Wrist-region gate checkpoint:** The current seam probe also checks all wrist-region triangles and its V6 candidate remains red for collapsed geometry. Harness typecheck and focused lint pass. The updated hero plan makes full/LOD surface integrity the first acceptance gate; the player runtime is unchanged.
+**Wrist-region gate checkpoint:** The first expanded seam probe checks all wrist-region triangles and its V6 candidate failed for collapsed geometry. Harness typecheck and focused lint pass. The updated hero plan makes full/LOD surface integrity the first acceptance gate; the player runtime is unchanged.
+
+**Wrist plan/source checkpoint:** The current graft recipe records selective zero-area inherited donor-face removal and preserves nonzero contact geometry. Updated hero priorities and the latest quantitative report are committed with syntax checks passing. Actual repair/export and moving full/LOD acceptance remain with the hero chat; production is unchanged.
