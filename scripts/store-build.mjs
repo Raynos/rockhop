@@ -22,6 +22,7 @@ import { execFileSync } from 'node:child_process';
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import careerGate from '../harness/native/career-gate.json' with { type: 'json' };
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -90,8 +91,8 @@ if (texts.some(([p]) => p.endsWith('.map'))) throw new Error('store-build: a sou
 //    (`bot-3*.json`) and crash recording under harness/inputs goes in (~0.5 MB, debug builds only), so the
 //    screenshot pipeline (harness/native/screens.ts) can ride any track; `clear`/`crash` name the gate's own set.
 if (mode === 'debug') {
-  const clear = (opt('gate') ?? 'harness/inputs/flat-test/bot-3.json,harness/inputs/b1-first-ride/bot-3.json').split(',').filter(Boolean);
-  const crash = opt('crash') ?? 'harness/inputs/flat-test/crash.json';
+  const clear = (opt('gate') ?? careerGate.clear.join(',')).split(',').filter(Boolean);
+  const crash = opt('crash') ?? careerGate.crash;
   const gateDir = join(WEB_DIR, 'gate');
   mkdirSync(gateDir, { recursive: true });
   const name = (f) => `${basename(dirname(f))}.${basename(f)}`;

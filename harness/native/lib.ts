@@ -70,8 +70,18 @@ export function buildMode(): string {
   return fs.existsSync(f) ? fs.readFileSync(f, 'utf8').trim() : 'none';
 }
 
-export function armFor(m: GateManifest, over: Partial<GateArm> = {}): GateArm {
-  return { clear: m.clear, crash: m.crash, paced: 0, track: 'flat-test', restartReps: 20, ...over };
+export function armFor(m: GateManifest, over: Partial<GateArm> = {}, webDir = WEB_DIR): GateArm {
+  const clear = over.clear ?? m.clear;
+  const first = clear[0];
+  if (!first && !over.track) throw new Error('native gate needs a clear recording or an explicit track');
+  const track = over.track ?? (() => {
+    const file = path.join(webDir, first!);
+    const recording = JSON.parse(fs.readFileSync(file, 'utf8')) as { header?: { trackId?: unknown } };
+    const id = recording.header?.trackId;
+    if (typeof id !== 'string' || !id) throw new Error(`native gate recording ${first} has no header.trackId`);
+    return id;
+  })();
+  return { clear, crash: m.crash, paced: 0, track, restartReps: 20, ...over };
 }
 
 export function sh(cmd: string, args: string[], opts: { env?: Record<string, string>; cwd?: string; allowFail?: boolean; input?: string } = {}): string {

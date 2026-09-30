@@ -69,7 +69,7 @@ host; elapsed capture time under concurrency is not a performance result.
 | Challenge and bike mechanics | **24 clean bike/course references; 0/72 passive-GO clears** on the differentiated package. Rookie career 1–8, purchased-equipped Pro 9–12. | Human handling, difficulty curve and medal-clock calibration, including the global Pro 0.9 multiplier. |
 | Scrap and Pro integration | Empty-save normal App rides earn **300 + 7×220 = 1,840**, explicit purchase spends to 0 and equipped Pro starts D3; repeat D2 pays 0. | HR-24 measures a new person's actual time/medals to earn Pro. Recorded reference inputs are not a new player. |
 | Highest-impact recovery/UI defects | D2 Buy/Equip/Improve flow, actionable map earning, D3 ore-cart lesson, missing upper-route Diamond result goal and pending-finish reward loss are corrected. | Unbriefed comprehension and physical-phone touch/pacing. |
-| Integrated host checks | Full earlier host gate 31/31, offline 11/11; current career fixes pass boot/clear/crash/one-tick retry. Final filtered release CPU suite 1,553 passes. | A checked deployed SHA, native release gates and real landscape iPhone/Android qualification. Reports identify their actual working-source builds. |
+| Integrated host and release checks | Full earlier host gate 31/31, offline 11/11; current career fixes pass boot/clear/crash/one-tick retry. Final filtered release CPU suite 1,553 passes. Checked production `38427ee` and its web/store CI jobs are green. | Current native replay/recovery qualification and real landscape iPhone/Android play remain. Reports identify their actual source/build scope. |
 | Whole-course acceptance | **0/12 signed off**. | Human play, audio, phone pacing and unresolved route anticipation prevent complete approval. |
 
 The earlier 20–25% total-effort / 5–10% graphics estimates predate the focused
@@ -327,7 +327,7 @@ The [full C1 comparison](../evidence/course-remaster/coast-standard/README.md#pa
 
 The [matched selected V2 round](../evidence/course-remaster/coast-authored-integration/README.md#selected-v2--bounded-harbor-integration) replaces generic C1 harbor scenery with the full Blender ship/crane/warehouse bank, 52 deterministic placements, terrain-grounded dry foundations, four pier approaches and one owned zero-texture analytical PBR sea. Both compared full rides use one immutable rider/bike/model/resource bank. The complete ride and accelerator-only fault preserve exact hashes and camera bounds. The parent retains improved harbor shape/depth; repetitive warehouse frontage and schematic ground/shore keep the whole Coast standard open. C2/C3 rollout waits for that standard.
 
-Required-map failure and delayed-course-switch browser cases pass 2/2; 28 focused owner/site/water/loader tests, full typecheck and scoped lint pass. The normal build passes 11/11 offline checks and 14/14 partial boot/clear/Pro-clear/crash/restart/bundle checks. Online/offline rides match, real seeded Pro purchase spends 1,840→0 Scrap, and updates fetch zero model bytes. Cached cold startup is still 12.5 seconds on this host. Draws p95 are 101, triangles p95/max 157,152/168,290, texture allocation max 41.53 MB and synced render p95 4.045 ms. Player JS is 697.52 KiB gzip under the unchanged 700 KiB cap. These shared-host checks do not establish physical-device pacing, uncoached learning, audio quality or full release readiness. Concurrent hero-development lint diagnostics remain outside this round; complete course count stays **0/12**.
+Required-map failure and delayed-course-switch browser cases pass 2/2; 28 focused owner/site/water/loader tests, full typecheck and scoped lint pass. The normal build passes 11/11 offline checks and 14/14 partial boot/clear/Pro-clear/crash/restart/bundle checks. Online/offline rides match, real seeded Pro purchase spends 1,840→0 Scrap, and updates fetch zero model bytes. That historical software-renderer offline run observed 12.5 seconds from navigation to loader removal. The [later normal cached hardware trace](../evidence/course-remaster/cached-startup-audit/README.md#hardware-qualified-normal-cached-boot) measures 3.5055 seconds on ANGLE Metal with the same app entry as its software comparison; this is not physical-iPhone timing or the separate harness-hook boot clock. Draws p95 are 101, triangles p95/max 157,152/168,290, texture allocation max 41.53 MB and synced render p95 4.045 ms. Player JS is 697.52 KiB gzip under the unchanged 700 KiB cap. These shared-host checks do not establish physical-device pacing, uncoached learning, audio quality or full release readiness. Concurrent hero-development lint diagnostics remain outside this round; complete course count stays **0/12**.
 
 ## Focused Alpine material pass retained · 2026-09-30
 
@@ -389,3 +389,22 @@ This closes this bounded parallel art pass, not complete-course acceptance.
 - [Rejected S1 sightline evidence](../../prototypes/s1-landing-sightline-v1/README.md) stays unpromoted. Terrain anticipation is open; do not describe the remaining gates as only administrative/device work.
 
 **Next:** fresh C1 learning/retry, earned-Pro pacing, upper-route anticipation and physical-phone/audio qualification on a checked release. Correct observed defects, then rerun affected evidence. No new scenery/model campaign or deferred variant loop. **0/12 fully signed off.**
+
+## Checked focused delivery · 2026-09-30
+
+Production [playrockhop.vercel.app](https://playrockhop.vercel.app) was checked
+against `/version.json`: **38427ee21aaff8f50913f2c649ce520eaf798ac3**.
+The [checked deployment](https://github.com/Raynos/rockhop/actions/runs/36767546480)
+passes typecheck, lint, unit tests, strict store IP audit and prebuilt upload;
+the [same-SHA push](https://github.com/Raynos/rockhop/actions/runs/36767491566)
+also passes the separate clean-export store/metadata/IP and Android debug job.
+This closes checked web delivery, not signed-store or physical-device acceptance.
+
+Three bounded read-only reviews found no further demonstrated autonomous
+career/course correction under the approved scope. Existing exact mechanics,
+shared-kit motion, real earning/purchase and lifecycle proofs are retained.
+S1 anticipation, unbriefed difficulty/earning calibration and audible/device
+qualification remain open. The native debug gate now selects the twelve career recordings and a C1
+crash; boot/restart derive the selected track rather than flat-test. Three
+focused reader/default regression cases pass. A current clean-source played
+web/iOS gate is next; the old native proof cannot qualify current compatibility.
