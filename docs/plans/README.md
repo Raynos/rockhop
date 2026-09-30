@@ -32,6 +32,8 @@
 
 **D1 terrain finding:** [Two larger matched moving trials](../evidence/course-remaster/d1/terrain-composition/README.md) reject front-bank and rear-wall meshes: both overwhelm the quarry view without making the four real 0.4 m contacts legible. Source is restored. The next visual pass must integrate the actual road top and step silhouette; fresh riders and phone performance remain open.
 
+**D1 retry lesson:** [The paired fault/retry ride](../evidence/course-remaster/d1/fault-lesson/README.md) now names the first or second terrace at the measured failure positions and carries a lift/level correction through the automatic checkpoint restart. The input's end hash is unchanged. The third-round quick gate is 9/11 on SwiftShader timing; true ledge visibility, fresh-player attempts and device pacing remain open.
+
 **A2 model round:** [played Log Jam footage](../evidence/course-remaster/a2/README.md) shows a modeled pivot, axle and cut ends on the moving timber and log piles. The captured input retains its exact finish hash and camera bounds; the additional 4,140 obstacle triangles and two draw calls still need sustained phone performance review. A2 is an incremental model pass, with fresh fault and human readability gates open.
 
 **C2 teachability round:** [Pier 2 played fault/retry evidence](../evidence/course-remaster/c2/README.md) shows the new ease, brief front lift and coast cue before the lip at phone size, with unchanged exact replay hash. A new rider must still establish whether the cue improves attempts-to-clear.

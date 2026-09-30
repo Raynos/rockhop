@@ -96,6 +96,8 @@ Two [camera-lead](../evidence/course-remaster/d1/terrace-sightline/README.md) an
 
 A [larger terrain-composition trial](../evidence/course-remaster/d1/terrain-composition/README.md) also failed the moving phone-size gate and was reverted. A front cut became a retaining slab; a corrected rear cut obscured quarry machinery as a beige wall, while the true step lips remained pale and tiny. The next trial must change the road top and contact-edge silhouette together at the four collider rises, not add another bank or wall. The excerpt hash and camera bounds stayed exact, but rejected art received no full-course verification.
 
+The [first D1 fault lesson](../evidence/course-remaster/d1/fault-lesson/README.md) uses the recorded x98.82 m and x102.75–103.31 m failures to name the first or second terrace and give a short lift/level correction through checkpoint retry. A matched moving failure/retry pair stays byte-identical, and clean Rookie/Pro Node finishes remain exact. This repairs missing feedback without claiming that the pale ledges are readable or that uncoached attempts improve. The third-round partial host gate is 9/11, missing SwiftShader frame-time rows.
+
 ### 2026-09-29 C3 hull finding
 
 The [played Hull Breach pass](../evidence/course-remaster/c3/README.md) first replaced the corrugated-box look with steel plates and a cut edge. The [later matched ship pass](../evidence/course-remaster/c3/breach-art/README.md) adds a tapered side, aft house and lit, layered inner bulkhead under the actual x272.52 launch lip. The old dark end wall and detached beach-wall drafts failed moving review. Colliders and riding line are unchanged; the shore/surf transition, human fault understanding and physical-device performance remain open.

@@ -15,6 +15,7 @@ import { TileRow } from './tiles';
 import { MEDAL_NAME, medalSvg, wordmarkSvg, zoneTitle, type MedalId } from './brand';
 import { diamondRouteCue, type DiamondRouteCue } from './diamondRouteCue';
 import { c1FaultCue, type FaultCue } from './c1FaultCue';
+import { d1FaultCue } from './d1FaultCue';
 
 type BannerKind = 'count' | 'go' | 'crash' | 'cp' | 'finish';
 
@@ -423,7 +424,8 @@ export class DomHud implements Hud {
     const x = state.bike.pos.x;
     if (this.faultCuePending) {
       this.faultCuePending = false;
-      this.faultCue = t.id === 'c1-low-tide' ? c1FaultCue(x, state.checkpoint, state.bike.angle) : null;
+      this.faultCue = t.id === 'c1-low-tide' ? c1FaultCue(x, state.checkpoint, state.bike.angle)
+        : t.id === 'd1-dust-devil' ? d1FaultCue(x, state.checkpoint) : null;
       if (this.faultCue) {
         this.faultCueUntil = this.simTime + 3.2;
         this.skillCueEl.classList.add('fault');
@@ -464,7 +466,7 @@ export class DomHud implements Hud {
     // The two quarry rises that account for most blind D1 faults need a decision
     // before the first contact, while both are still visible in the approach.
     const d1Terraces = t.id === 'd1-dust-devil' && x >= 76 && x < 97;
-    if (d1Terraces !== this.d1TerraceCueOn) {
+    if (!retryLesson && d1Terraces !== this.d1TerraceCueOn) {
       this.d1TerraceCueOn = d1Terraces;
       if (d1Terraces) {
         this.skillCueEl.setAttribute('aria-label', 'Quarry steps. Lift before the first cut, then level the bike for the next step.');
@@ -505,7 +507,7 @@ export class DomHud implements Hud {
       case 'fault':
         if (event.reason !== 'restart') {
           this.pendingCrashAt = this.simTime;
-          this.faultCuePending = this.track?.id === 'c1-low-tide';
+          this.faultCuePending = this.track?.id === 'c1-low-tide' || this.track?.id === 'd1-dust-devil';
         }
         return;
       case 'restart':
@@ -813,6 +815,7 @@ export class DomHud implements Hud {
     // The shared cue slot may still contain a retry lesson. Force the route prompt
     // to repaint when its approach window resumes.
     if (this.routeCue) this.routeCueAction = null;
+    if (this.track?.id === 'd1-dust-devil') this.d1TerraceCueOn = false;
     if (this.track?.id === 'c1-low-tide') {
       this.skillCueEl.setAttribute('aria-label', 'Ease off. Brake before the pallet ramp.');
       this.skillCueEl.innerHTML = '<span class="skill-cue-icon" aria-hidden="true">↓</span><span class="skill-cue-copy"><strong>EASE OFF</strong><small>BRAKE BEFORE THE RAMP</small></span>';

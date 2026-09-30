@@ -563,7 +563,7 @@ export const HUD_CSS = /* css */ `
 .skill-cue.fault { width: min(344px, calc(100% - 36px - var(--sal) - var(--sar))); border-color: #f27b4b; box-shadow: 0 3px 0 #642d1c, 0 8px 20px rgba(0,0,0,.35); }
 .skill-cue.fault .skill-cue-icon { background: #ee6a40; color: #fff5d8; font-size: 23px; }
 .skill-cue.fault .skill-cue-copy strong { font-size: 18px; letter-spacing: .045em; }
-.skill-cue.fault .skill-cue-copy small { font-size: 11px; letter-spacing: .01em; }
+.skill-cue.fault .skill-cue-copy small { font-size: 12px; letter-spacing: .01em; }
 .skill-cue.crane .skill-cue-icon { font-size: 22px; }
 .skill-cue.crane .skill-cue-copy strong { font-size: 19px; letter-spacing: .03em; }
 .skill-cue.crane .skill-cue-copy small { font-size: 12px; }
