@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — checkpoint 1; ask232 hairstyle/body direction approval pending**.
+Status: **active — checkpoint 1; asks233–234 approved H21-4/new Pixal buzz-cut direction**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -54,7 +54,8 @@ the choice is pending. File the decision in
 The task-2 comparison findings and latest request supersede the earlier P3
 head-freeze/manual-body route. Original P3 and its two failed repairs remain
 preserved; stop automated P3 repairs. Reopen the donor choice, including H21-4,
-and obtain approval before expensive generation or substantial refinement.
+with direction approved in asks233–234. Autonomous execution and visual
+decisions are authorized; preserve failure bounds and report actual evidence.
 Historical production A1/A2 are comparison-only, never a head/body donor.
 
 [Approval package](../evidence/hero-remaster/one-rider-v2/README.md) provides three
@@ -64,10 +65,10 @@ Compact hair is a testable hypothesis; it does not establish clean topology.
 The crop concept still has shallow waviness. Generated images preserve visual
 identity/clothes/pose/light, with small image-detail drift measured explicitly.
 
-Proposed single direction: H21-4 body plus a NEW detailed Pixal head/neck using
-approved hairstyle/reference. The old detailed busts are failure/control
-evidence, not final assets. The user may choose another donor or hairstyle.
-No new 3D generation/refinement starts until that direction is approved.
+Approved single direction: H21-4 body plus a NEW detailed Pixal head/neck
+using buzz cut. The old detailed busts are failure/control evidence, not final
+assets. Asks233–234 authorize execution and delegate subsequent appearance
+decisions; the parent must judge recorded evidence before advancing a gate.
 
 1. Freeze selected source hashes, hair reference and settings. Retain decoded
    high-resolution vertices/faces before any cleanup, native Metal remesh or
@@ -88,11 +89,11 @@ No new 3D generation/refinement starts until that direction is approved.
    alternative, never relabeling the same cut as a generator failure.
 4. Show one actual clean textured full character, face closeups, neck-join
    closeups from front/profile/rear/three-quarter, matching gray geometry and
-   a complete turntable. List visible defects. Seek appearance approval before
-   full-character rigging. Local neck deformation preview may test the join,
+   a complete turntable. List visible defects. Judge appearance against the approved target before
+   full-character rigging; ask233 delegates this decision. Local neck deformation preview may test the join,
    clearly labeled temporary: prove turn/bend in a clip before calling the
    join deformation-ready. No static assembly is game-ready.
-5. After appearance approval, adapt the existing19-bone/bind/socket contract
+5. After recorded appearance acceptance, adapt the existing19-bone/bind/socket contract
    with explicit source/rest/axis/length/socket mappings and new weights.
    Preserve physical COM/lean targets, arm/leg IK, grips/soles, shared geometry
    and Garage blending; old bone positions may change through the measured
@@ -297,7 +298,7 @@ updating asks/index before the next experiment. No scheduling or deployment.
   does not advance either later visual gate.
 - [x] Additive Hunyuan3D 2.1 five-design comparison (ask228): [twenty-body gallery](../evidence/hero-remaster/rider-search-v1/hunyuan21/README.md); H21-4 strongest new option, unaccepted. Explicit scene-axis display derivative and one failed setup fix recorded.
 - [x] Ask232 three compact-hair concepts and five-donor matched PBR/gray review.
-- [ ] Ask232 single body/head/hair direction approved before substantial work.
+- [x] Ask232 direction approved in asks233–234 before substantial work.
 - [ ] Actual coherent new head/body with hood-preserving join and complete review.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.

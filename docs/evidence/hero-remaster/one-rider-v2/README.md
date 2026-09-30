@@ -1,7 +1,8 @@
 # One coherent rider — approval package
 
 Status: reference mockups and read-only donor review complete; direction
-approval pending. No new3D generation, cleanup, assembly or rig performed.
+approved in asks233–234, autonomous execution delegated. New bust reference
+and bounded generation recipe ready; no new3D generation or assembly yet.
 Ask232 supersedes the preceding P3-only head-preservation proposal.
 
 ## Hair target
@@ -40,14 +41,14 @@ None is skinned or accepted; source bytes are unchanged.
 | COMP-B Hunyuan2.1 | Coherent alternative body, close to H21-4; broad knee/foot forms and coarse hands. Existing bust slabs cannot be called decoder failures without the missing dense shape. |
 | COMP-C TRELLIS.2 | Extensive hoodie and hand breaks in gray as well as PBR. Higher repair burden for this task. |
 
-Proposed direction: **H21-4 body + NEW detailed Pixal head/neck + hairstyle1
+Approved direction: **H21-4 body + NEW detailed Pixal head/neck + hairstyle1
 buzz cut**. The prior detailed Pixal bust has the more readable face among
 the task-2 busts, but porous hair/patchy beard remain defects; it is evidence
 for testing a new simpler-hair bust, not a final asset or a quality guarantee.
 Actual Hunyuan3D2.1 supplied the body; no2.0 substitution. Historical production
-rider is comparison-only. Old P3 selection does not authorize this new route.
+rider is comparison-only. Asks233–234 authorize this route and subsequent visual decisions.
 
-## What happens after approval
+## Approved execution
 
 Generate one new head/neck using the approved identity/hair, preserving the
 decoded high-resolution shape before processing and keeping reproducible
@@ -65,7 +66,7 @@ front/profile/rear/three-quarter, normals/materials and later turn/bend.
 First deliver one actual textured whole rider, face and neck closeups, matched
 gray and a complete orbit with defects stated. Local neck deformation clips
 are temporary join diagnostics, not runtime proof. Full rigging requires
-appearance approval; then explicit19-bone adapter/weights and the existing
+recorded parent appearance acceptance under delegated ask233 decisions; then explicit19-bone adapter/weights and the existing
 ordered sitting and Garage/riding checkpoints. Preserve physics-driven lean,
 COM/IK/contacts and blending; validate seated/max-lean/landings in motion.
 All stage bounds and twice-failed-technique stop rules persist.
@@ -83,8 +84,26 @@ generator neck failures. The retained Hunyuan hair slabs exist pre-paint,
 but that saved mesh is post-decimation; dense decoder versus reducer origin
 remains unisolated. Do not revive either failed assembly technique silently.
 
-Unfinished: direction approval, new head generation, cleanup/join, actual
-character appearance approval, sitting, riding contacts and physical devices.
+Unfinished: new head generation, cleanup/join, actual character appearance
+judgment, sitting, riding contacts and physical devices.
+
+## New bust reference and bounded worker
+
+[Reference](../../../../assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png)
+derives the approved face with a compact buzz silhouette and visible neck/
+clavicle base. Fine stubble remains in the raster; no topology benefit claimed.
+Built-in imagegen [prompt](../../../../assets/design/hero-remaster/one-rider-v2/head/prompt.json)
+and untouched source are retained.
+
+`generate_bust.py` uses the installed Pixal worker in its existing environment,
+without editing shared port files. `lockf -k` encloses sampling and native Metal
+export; queue time is outside the <=30-minute batch. Memory is polled at most
+every10 seconds and work stops at anonymous70GiB or the batch deadline.
+Dense `raw.npz` is saved before asset_to_glb remeshing/decimation; native export
+is separately retained. Worker source HEAD is dirty: relevant file hashes and
+status are recorded before/after, never represented as a clean commit.
+Read-only preflight passes at anonymous24.3GiB; generation has not started.
+No static output is promoted into player assets.
 
 ## Required baseline round check
 

@@ -22,3 +22,15 @@ Validation: Fresh private build and silent WebKit low/high cold entry,
 zero page errors. Canonical model lock held, anonymous memory below70GB.
 
 Limits: Baseline player only; no proposed rider, join, contact or device pass.
+
+Finding: Asks233–234 approve H21-4/new Pixal buzz-cut direction and delegate
+visual decisions. Freeze the new head reference and bounded lock recipe
+before spending the next generation batch.
+
+Validation: Built-in reference inspected for face, compact scalp, full neck
+and clavicles. Worker preflight resolves installed model/source paths,
+hashes and anonymous24.3GiB. Source inspection confirms save_mesh precedes
+asset_to_glb cleanup/remesh/decimation; no shared worker files changed.
+
+Limits: Stubble in the raster is not clean topology. No new3D generation,
+clean join, rig or motion pass yet. P3/cut failures stay stopped and recorded.
