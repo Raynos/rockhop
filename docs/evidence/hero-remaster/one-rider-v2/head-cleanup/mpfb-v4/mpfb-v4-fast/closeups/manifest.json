@@ -1,0 +1,283 @@
+{
+  "status": "ISOLATED STATIC COMPARISON; no gameplay or art acceptance",
+  "engine": "trellis",
+  "input": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-fast/head.glb",
+  "inputSHA256": "5ebed41657e2613b04fd9bd12c0bb4a793ca062cb51a81bc670acad7895956f6",
+  "inputSHA256After": "5ebed41657e2613b04fd9bd12c0bb4a793ca062cb51a81bc670acad7895956f6",
+  "rendererSHA256": "af9464e337caa331fb0d4f0becfdfdf2b7755c67a5dd9b0a5b3c4fa7eb1a90e1",
+  "derivedFrom": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/render_raw.py",
+    "sha256AtDerivation": "38da920203ac1f1b7e9cfb085eb6783702e5c4487c710a6022768fdd5658ddae"
+  },
+  "blender": "5.2.1 LTS",
+  "wallSeconds": 7.536,
+  "triangles": 147296,
+  "visibleMeshes": [
+    "NEW native CC0 eyeballs with same anchor adapter",
+    "UNACCEPTED fresh anatomical head fit"
+  ],
+  "excludedInvisibleMeshes": [],
+  "alignment": {
+    "commonFront": "Blender -Y",
+    "zRotationDegrees": 0,
+    "xRotationDegrees": 0,
+    "rootObjects": [
+      "NEW native CC0 eyeballs with same anchor adapter",
+      "UNACCEPTED fresh anatomical head fit"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        1.862645149230957e-09
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "animationPolicy": "imported rest/bind pose; actions disabled, NLA muted, bone matrix_basis identity",
+  "armatures": [],
+  "boundsAfterAlignmentBeforeNormalization": [
+    [
+      -0.3778933584690094,
+      -0.2554555833339691,
+      -0.5000379681587219
+    ],
+    [
+      0.3778933584690094,
+      0.15863022208213806,
+      0.35344773530960083
+    ]
+  ],
+  "boundsMethod": "evaluated visible meshes only",
+  "uniformScale": 1.9295196229771312,
+  "normalizationTranslation": [
+    0.0018313649343326688,
+    -0.028417404741048813,
+    0.9648330807685852
+  ],
+  "displayHeight": 1.8,
+  "orthoScale": 0.98,
+  "framingPolicy": "fixed dense source bounds and scale; retained face does not grow when scalp/base is shortened",
+  "lights": [
+    {
+      "name": "Key",
+      "position": [
+        3,
+        -4,
+        4
+      ],
+      "powerWatts": 600,
+      "size": 4
+    },
+    {
+      "name": "Fill",
+      "position": [
+        -3,
+        -2,
+        2.5
+      ],
+      "powerWatts": 350,
+      "size": 4
+    },
+    {
+      "name": "Rim",
+      "position": [
+        1,
+        3,
+        3
+      ],
+      "powerWatts": 450,
+      "size": 3
+    }
+  ],
+  "world": {
+    "rgb": [
+      0.16,
+      0.16,
+      0.16
+    ],
+    "strength": 0.65
+  },
+  "resolution": [
+    768,
+    768
+  ],
+  "samples": 12,
+  "backend": "Cycles CPU",
+  "viewTransform": "AgX",
+  "materialMode": "neutral-gray",
+  "materialChanges": [
+    {
+      "mesh": "NEW native CC0 eyeballs with same anchor adapter",
+      "replacedMaterials": [
+        "Neutral gray anatomical inspection"
+      ]
+    },
+    {
+      "mesh": "UNACCEPTED fresh anatomical head fit",
+      "replacedMaterials": [
+        "Neutral gray anatomical inspection"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "frame": 0,
+      "yaw": 0.0,
+      "file": "0000.png",
+      "sha256": "b100a70c15daea1154673c565b6c1ed6157ae4712320e31f12d701753080d58e",
+      "wallSeconds": 1.897,
+      "cameraMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.1799999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "frame": 1,
+      "yaw": 45.0,
+      "file": "0001.png",
+      "sha256": "f98a7166f1cbf78e36f5efe018bd8211a46dcbc97970b394ff899633b05682f3",
+      "wallSeconds": 1.872,
+      "cameraMatrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.8284270763397217
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.8284270763397217
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.1799999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "frame": 2,
+      "yaw": 90.0,
+      "file": "0002.png",
+      "sha256": "85abd7cb5361452796062acf5acdf2cc5623fc6b8819eaff9952179917d7a739",
+      "wallSeconds": 1.799,
+      "cameraMatrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.1799999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "frame": 3,
+      "yaw": 180.0,
+      "file": "0003.png",
+      "sha256": "70cee26e11353d6e7694cc732f52c282d2048fc99c3a237875891a8cc8e5f947",
+      "wallSeconds": 1.757,
+      "cameraMatrix": [
+        [
+          -1.0,
+          -1.509957598955225e-07,
+          1.5099581673894136e-07,
+          4.898587410340671e-16
+        ],
+        [
+          1.5099580252808664e-07,
+          1.6292069915380125e-07,
+          1.0,
+          4.0
+        ],
+        [
+          -1.5099578831723193e-07,
+          1.0,
+          -1.6292068494294654e-07,
+          1.1799999475479126
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "limits": [
+    "Source GLB bytes are unchanged; normalization and alignment affect display only.",
+    "Native PBR mode makes no material edits; gray diagnostic temporarily replaces visible materials.",
+    "Baseline production bind/rest pose differs from reference A-pose; anatomy and pose are not equivalent.",
+    "Engine orientation defaults must be visually checked for each new export.",
+    "Static views do not verify rig quality, animation, gameplay or acceptance.",
+    "Elapsed time can include concurrent host work; this is not a performance benchmark."
+  ]
+}

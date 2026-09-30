@@ -851,7 +851,17 @@
       "ear": 0.025
     },
     "nextSpecificRetopology": "Freshly instantiated anatomical CC0 MPFB head cage, preserved eye/lip/nose/ear loops, Pixal facial guide/detail with smooth bounded transitions; no historical mesh",
-    "deadlineUTC": "2026-10-01T00:31:54Z"
+    "deadlineUTC": "2026-10-01T00:31:54Z",
+    "freshAnatomicalFit": {
+      "appearanceAccepted": false,
+      "failedFixes": 1,
+      "failure": "Visible left cheek/nose scar; generic delicate jaw/brow unlike approved adult male target",
+      "evidence": "../one-rider-v2/head-cleanup/mpfb-v4/verification.json",
+      "anatomicalSource": "Fresh CC0 MPFB, no historical graft",
+      "nextSpecificCorrection": "Disable scar-producing dense snaps; smooth reference chin/jaw/lip/brow landmark shifts with protected feature loops",
+      "deadlineUnchanged": true,
+      "noUVBakeRigJoin": true
+    }
   },
   "oneRiderV2AnatomicalHands": {
     "neutralAnatomyApprovedForAssembly": true,

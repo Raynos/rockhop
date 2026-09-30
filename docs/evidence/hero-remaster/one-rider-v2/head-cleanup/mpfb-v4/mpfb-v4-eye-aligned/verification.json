@@ -1,0 +1,414 @@
+{
+  "runtime": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned",
+  "construction": {
+    "status": "UNACCEPTED fresh anatomical CC0 retopology alternative; gray review",
+    "sources": {
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-anatomical-source.blend": "3c255ac91f6983c51cc4307baf8c305dcd9f3035c48c3fc1711594666e81bce8",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+      "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+      "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.mhclo": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d",
+      "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1"
+    },
+    "sourcesAfter": {
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-anatomical-source.blend": "3c255ac91f6983c51cc4307baf8c305dcd9f3035c48c3fc1711594666e81bce8",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+      "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+      "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.mhclo": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d",
+      "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1"
+    },
+    "scriptSHA256": "1243aba7a1d1ed6c5b9bfeab48f27181b29d8069d6fc34f8ca65fe2981d715c1",
+    "adapter": {
+      "xScale": 2.5,
+      "verticalScale": 2.035,
+      "depthScale": 2.0,
+      "verticalTranslation": -3.0374322091937067,
+      "depthTranslation": -0.08
+    },
+    "initialSmoothAnchors": {
+      "sourceNative": [
+        [
+          0.07693751715123653,
+          0.11100000000000021,
+          0.16906993657350539
+        ],
+        [
+          -0.07693751715123653,
+          0.11100000000000021,
+          0.16906993657350539
+        ],
+        [
+          0.0,
+          -0.020482989016461062,
+          0.22962559539977817
+        ],
+        [
+          0.0,
+          0.03465700632333757,
+          0.256139976978302
+        ]
+      ],
+      "targetNative": [
+        [
+          0.081,
+          0.111,
+          0.16906993657350539
+        ],
+        [
+          -0.081,
+          0.111,
+          0.16906993657350539
+        ],
+        [
+          0.0,
+          -0.032,
+          0.22962559539977817
+        ],
+        [
+          0.0,
+          0.035,
+          0.256139976978302
+        ]
+      ],
+      "requestedShifts": [
+        [
+          0.0040624828487634684,
+          -2.0816681711721685e-16,
+          0.0
+        ],
+        [
+          -0.0040624828487634684,
+          -2.0816681711721685e-16,
+          0.0
+        ],
+        [
+          0.0,
+          -0.011517010983538939,
+          0.0
+        ],
+        [
+          0.0,
+          0.0003429936766624342,
+          0.0
+        ]
+      ],
+      "actualDisplacements": {
+        "count": 4377,
+        "maximum": 0.00501256469019404,
+        "percentiles": [
+          0.0008728999287045005,
+          0.0037594829700185765,
+          0.004791473600891564
+        ]
+      },
+      "sigmaNative": 0.06,
+      "method": "normalized Gaussian RBF displacement, denominator1+sum(weights)"
+    },
+    "anatomicalTopology": {
+      "skinVertices": 69681,
+      "skinTriangles": 139136,
+      "skinBoundaryEdges": 224,
+      "skinNonmanifoldEdges": 0,
+      "protectedSubdividedVertices": 45049,
+      "nativeEyeVertices": 4164,
+      "nativeEyePolygons": 4080
+    },
+    "denseFit": {
+      "displacements": {
+        "count": 601,
+        "maximum": 0.003988782570538904,
+        "percentiles": [
+          0.0020101977474762936,
+          0.003786314217600191,
+          0.003947528374557473
+        ]
+      },
+      "maximumAllowed": 0.004,
+      "missingWithinBound": 10370,
+      "normalRejected": 1625,
+      "method": "smooth group-weighted bounded fit of verified bare skin only"
+    },
+    "eyeIPDNative": 0.162,
+    "nativeEyePlacement": {
+      "method": "component translation onto measured NEW anatomical eye anchors",
+      "components": [
+        {
+          "side": 1,
+          "actualNativeAssetCenter": [
+            0.07162090041674674,
+            0.0488739249706267,
+            0.1777594071626663
+          ],
+          "anatomicalNativeAnchor": [
+            0.07693751715123653,
+            0.11100000000000021,
+            0.16906993657350539
+          ],
+          "translation": [
+            0.0053166167344897985,
+            0.062126075029373506,
+            -0.00868947058916092
+          ]
+        },
+        {
+          "side": -1,
+          "actualNativeAssetCenter": [
+            -0.07162089576013386,
+            0.048873803675174576,
+            0.1777594071626663
+          ],
+          "anatomicalNativeAnchor": [
+            -0.07693751715123653,
+            0.11100000000000021,
+            0.16906993657350539
+          ],
+          "translation": [
+            -0.005316621391102672,
+            0.06212619632482563,
+            -0.00868947058916092
+          ]
+        }
+      ],
+      "sourceGeometryRetained": true
+    },
+    "suggestedWorldScale": 0.42,
+    "suggestedWorldIPDMeters": 0.06804,
+    "wallSeconds": 6.016107415780425,
+    "limits": [
+      "Anatomical template is fresh CC0 source, not historical production.",
+      "Anchor targets are proposed approximations; protected face/ears are not identical to Pixal.",
+      "Dense fit measures accepted skin only, not whole-head target conformity.",
+      "Untextured anatomical source has no approved buzz material yet.",
+      "No UV/detail/PBR bake, joined body neck, rig or gameplay acceptance."
+    ]
+  },
+  "skinTopology": {
+    "boundaryEdges": 224,
+    "nonmanifoldEdges": 0,
+    "boundaryComponents": [
+      {
+        "vertices": 224,
+        "degrees": [
+          2
+        ],
+        "bounds": [
+          [
+            -0.3778933584690094,
+            -0.2167881429195404,
+            -0.15863022208213806
+          ],
+          [
+            0.3778933584690094,
+            -0.19005930423736572,
+            0.05819329246878624
+          ]
+        ],
+        "center": [
+          3.6255056734546542e-09,
+          -0.20625285804271698,
+          -0.04632728174328804
+        ]
+      }
+    ],
+    "zeroAreaTriangles": 0
+  },
+  "actualEyeSidedBoundingCentersNative": [
+    [
+      -0.07846187241375446,
+      0.11101656407117844,
+      0.1690540611743927
+    ],
+    [
+      0.07846186496317387,
+      0.11101646721363068,
+      0.16905416548252106
+    ]
+  ],
+  "actualEyeSidedCenterDistanceNative": 0.1569237373769929,
+  "estimatedWorldIPDMetersAtScale042": 0.06590796969833701,
+  "eyeComponents": [
+    {
+      "vertices": 1001,
+      "triangles": 1960,
+      "bounds": [
+        [
+          0.04039319232106209,
+          0.08138535916805267,
+          0.14470382034778595
+        ],
+        [
+          0.11653053760528564,
+          0.14064757525920868,
+          0.19340451061725616
+        ]
+      ],
+      "boundaryEdges": 40,
+      "nonmanifoldEdges": 0,
+      "boundaryComponents": [
+        {
+          "vertices": 40,
+          "degrees": [
+            2
+          ],
+          "bounds": [
+            [
+              0.041516296565532684,
+              0.08445083349943161,
+              0.14470382034778595
+            ],
+            [
+              0.1122535690665245,
+              0.1395178735256195,
+              0.15125246345996857
+            ]
+          ],
+          "center": [
+            0.07696422711014747,
+            0.11207924466580152,
+            0.1480349838733673
+          ]
+        }
+      ],
+      "zeroAreaTriangles": 0
+    },
+    {
+      "vertices": 1081,
+      "triangles": 2120,
+      "bounds": [
+        [
+          0.04141475260257721,
+          0.08220679312944412,
+          0.14509627223014832
+        ],
+        [
+          0.1155749261379242,
+          0.13981470465660095,
+          0.18906128406524658
+        ]
+      ],
+      "boundaryEdges": 40,
+      "nonmanifoldEdges": 0,
+      "boundaryComponents": [
+        {
+          "vertices": 40,
+          "degrees": [
+            2
+          ],
+          "bounds": [
+            [
+              0.04246965050697327,
+              0.08517473191022873,
+              0.14509627223014832
+            ],
+            [
+              0.11141335964202881,
+              0.1387493759393692,
+              0.151643306016922
+            ]
+          ],
+          "center": [
+            0.07701736344024539,
+            0.11206326633691788,
+            0.1484227694571018
+          ]
+        }
+      ],
+      "zeroAreaTriangles": 0
+    },
+    {
+      "vertices": 1001,
+      "triangles": 1960,
+      "bounds": [
+        [
+          -0.11653054505586624,
+          0.08138541877269745,
+          0.14470380544662476
+        ],
+        [
+          -0.040393199771642685,
+          0.14064770936965942,
+          0.19340431690216064
+        ]
+      ],
+      "boundaryEdges": 40,
+      "nonmanifoldEdges": 0,
+      "boundaryComponents": [
+        {
+          "vertices": 40,
+          "degrees": [
+            2
+          ],
+          "bounds": [
+            [
+              -0.1122535765171051,
+              0.0844511091709137,
+              0.14470380544662476
+            ],
+            [
+              -0.04151630401611328,
+              0.1395181566476822,
+              0.15125246345996857
+            ]
+          ],
+          "center": [
+            -0.07696422934532166,
+            0.11207943633198739,
+            0.14803498424589634
+          ]
+        }
+      ],
+      "zeroAreaTriangles": 0
+    },
+    {
+      "vertices": 1081,
+      "triangles": 2120,
+      "bounds": [
+        [
+          -0.11557493358850479,
+          0.08220691978931427,
+          0.14509627223014832
+        ],
+        [
+          -0.04141475632786751,
+          0.13981473445892334,
+          0.18906128406524658
+        ]
+      ],
+      "boundaryEdges": 40,
+      "nonmanifoldEdges": 0,
+      "boundaryComponents": [
+        {
+          "vertices": 40,
+          "degrees": [
+            2
+          ],
+          "bounds": [
+            [
+              -0.11141337454319,
+              0.08517500758171082,
+              0.14509627223014832
+            ],
+            [
+              -0.042469654232263565,
+              0.13874934613704681,
+              0.1516433209180832
+            ]
+          ],
+          "center": [
+            -0.07701736809685826,
+            0.11206337716430426,
+            0.14842276982963085
+          ]
+        }
+      ],
+      "zeroAreaTriangles": 0
+    }
+  ],
+  "noUVBake": true,
+  "UVLimit": "Construction from_pydata drops source UV coordinates; no usable character UV/bake is claimed.",
+  "masterHashes": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/head.glb": "8a8a937744d7892a724ab6c3123e22d65a030864c0840e7297050abb4b12a91b",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/head.blend": "3210495c8ca6862211e8a3646da09616fbbed544fd8b74302da27885592a677d",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/head-skin.npz": "269a022d2d763fcb135ac7a804da4f07b8fd6ada468daef76fa5539a7d45a691",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/fit-samples.npz": "4d51cda4e76400eddc55cab8fec11de2b82591dabf0b9e6eddf0a16471cc7692"
+  }
+}

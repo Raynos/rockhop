@@ -1,0 +1,181 @@
+{
+  "status": "UNACCEPTED fresh anatomical CC0 retopology alternative; gray review",
+  "sources": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-anatomical-source.blend": "3c255ac91f6983c51cc4307baf8c305dcd9f3035c48c3fc1711594666e81bce8",
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.mhclo": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1"
+  },
+  "sourcesAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-anatomical-source.blend": "3c255ac91f6983c51cc4307baf8c305dcd9f3035c48c3fc1711594666e81bce8",
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.mhclo": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1"
+  },
+  "scriptSHA256": "1243aba7a1d1ed6c5b9bfeab48f27181b29d8069d6fc34f8ca65fe2981d715c1",
+  "adapter": {
+    "xScale": 2.5,
+    "verticalScale": 2.035,
+    "depthScale": 2.0,
+    "verticalTranslation": -3.0374322091937067,
+    "depthTranslation": -0.08
+  },
+  "initialSmoothAnchors": {
+    "sourceNative": [
+      [
+        0.07693751715123653,
+        0.11100000000000021,
+        0.16906993657350539
+      ],
+      [
+        -0.07693751715123653,
+        0.11100000000000021,
+        0.16906993657350539
+      ],
+      [
+        0.0,
+        -0.020482989016461062,
+        0.22962559539977817
+      ],
+      [
+        0.0,
+        0.03465700632333757,
+        0.256139976978302
+      ]
+    ],
+    "targetNative": [
+      [
+        0.081,
+        0.111,
+        0.16906993657350539
+      ],
+      [
+        -0.081,
+        0.111,
+        0.16906993657350539
+      ],
+      [
+        0.0,
+        -0.032,
+        0.22962559539977817
+      ],
+      [
+        0.0,
+        0.035,
+        0.256139976978302
+      ]
+    ],
+    "requestedShifts": [
+      [
+        0.0040624828487634684,
+        -2.0816681711721685e-16,
+        0.0
+      ],
+      [
+        -0.0040624828487634684,
+        -2.0816681711721685e-16,
+        0.0
+      ],
+      [
+        0.0,
+        -0.011517010983538939,
+        0.0
+      ],
+      [
+        0.0,
+        0.0003429936766624342,
+        0.0
+      ]
+    ],
+    "actualDisplacements": {
+      "count": 4377,
+      "maximum": 0.00501256469019404,
+      "percentiles": [
+        0.0008728999287045005,
+        0.0037594829700185765,
+        0.004791473600891564
+      ]
+    },
+    "sigmaNative": 0.06,
+    "method": "normalized Gaussian RBF displacement, denominator1+sum(weights)"
+  },
+  "anatomicalTopology": {
+    "skinVertices": 69681,
+    "skinTriangles": 139136,
+    "skinBoundaryEdges": 224,
+    "skinNonmanifoldEdges": 0,
+    "protectedSubdividedVertices": 45049,
+    "nativeEyeVertices": 4164,
+    "nativeEyePolygons": 4080
+  },
+  "denseFit": {
+    "displacements": {
+      "count": 601,
+      "maximum": 0.003988782570538904,
+      "percentiles": [
+        0.0020101977474762936,
+        0.003786314217600191,
+        0.003947528374557473
+      ]
+    },
+    "maximumAllowed": 0.004,
+    "missingWithinBound": 10370,
+    "normalRejected": 1625,
+    "method": "smooth group-weighted bounded fit of verified bare skin only"
+  },
+  "eyeIPDNative": 0.162,
+  "nativeEyePlacement": {
+    "method": "component translation onto measured NEW anatomical eye anchors",
+    "components": [
+      {
+        "side": 1,
+        "actualNativeAssetCenter": [
+          0.07162090041674674,
+          0.0488739249706267,
+          0.1777594071626663
+        ],
+        "anatomicalNativeAnchor": [
+          0.07693751715123653,
+          0.11100000000000021,
+          0.16906993657350539
+        ],
+        "translation": [
+          0.0053166167344897985,
+          0.062126075029373506,
+          -0.00868947058916092
+        ]
+      },
+      {
+        "side": -1,
+        "actualNativeAssetCenter": [
+          -0.07162089576013386,
+          0.048873803675174576,
+          0.1777594071626663
+        ],
+        "anatomicalNativeAnchor": [
+          -0.07693751715123653,
+          0.11100000000000021,
+          0.16906993657350539
+        ],
+        "translation": [
+          -0.005316621391102672,
+          0.06212619632482563,
+          -0.00868947058916092
+        ]
+      }
+    ],
+    "sourceGeometryRetained": true
+  },
+  "suggestedWorldScale": 0.42,
+  "suggestedWorldIPDMeters": 0.06804,
+  "wallSeconds": 6.016107415780425,
+  "limits": [
+    "Anatomical template is fresh CC0 source, not historical production.",
+    "Anchor targets are proposed approximations; protected face/ears are not identical to Pixal.",
+    "Dense fit measures accepted skin only, not whole-head target conformity.",
+    "Untextured anatomical source has no approved buzz material yet.",
+    "No UV/detail/PBR bake, joined body neck, rig or gameplay acceptance."
+  ]
+}

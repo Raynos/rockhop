@@ -224,3 +224,17 @@ typecheck and focused oxlint pass.
 Limits: Short integration prefix is not a clear, lean or landing pass.
 No new rider mapping or visible contact accepted; coarse LOD peg defects
 are existing bike evidence, not permission for out-of-scope bike edits.
+
+Finding: Fresh anatomical head has coherent eyelids, eyes, lips and ears,
+but parent rejects the fitted surface: cheek scar and generic delicate
+jaw/brow. Remove scar-producing snaps and use deliberate reference landmarks.
+
+Validation: Parent reviewed actual front/profile gray; four angles and
+closeups frozen. One224edge skin neck boundary,0nonmanifold/zero-area
+triangles. Native eye positioning correction preserved alongside first
+prototype. Fresh silent low/high baseline retains exact40.083333333333336s
+clear,0faults and1ms one-tick crash/restart with no browser errors.
+
+Limits: No likeness, UV/detail bake, skin/hood join or rig accepted.
+Anatomical eye component boundaries and jagged neck remain disclosed.
+Original90min head feasibility deadline remains00:31:54UTC.
