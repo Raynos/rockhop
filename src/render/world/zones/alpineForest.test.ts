@@ -17,7 +17,7 @@ beforeEach(()=>vi.mocked(loadAlpineTreeKit).mockReset());
 describe('complete A2/A3 forest rollout candidate',()=>{
   it.each(fixtures)('uses exact audited source anchors and truthful ground contact: $track.def.id',({track,batches})=>{
     const plan=planAlpineForest(track,batches),trees=[...plan.nearClusters.flat(),...plan.farBanks.flat()];
-    expect(alpineForestApplicable(track)).toBe(true);expect(trees).toHaveLength(track.def.id==='a2-log-jam'?260:262);
+    expect(alpineForestApplicable(track)).toBe(true);expect(trees).toHaveLength(track.def.id==='a2-log-jam'?266:268);
     for(const tree of trees) {
       expect(tree.y).toBe(zoneGround('alpine',track.def.profile,tree.x,tree.z)-.04);
       expect([tree.x,tree.y,tree.z,tree.scale,tree.yaw].every(Number.isFinite)).toBe(true);
@@ -35,6 +35,12 @@ describe('complete A2/A3 forest rollout candidate',()=>{
       const original=source.find(b=>`alpine-original-${b.name}`===fallback.name)!;
       expect(fallback.geometry).toBe(original.geometry);expect(fallback.material).toBe(original.material);
     }
+  });
+  it('accepts sub-GPU trig rounding while preserving original source matrices',()=>{
+    const {track,batches}=fixtures[0]!,source=copy(batches),matrix=source.find(b=>/^pine\d$/.test(b.name))!.items[0]!.m;
+    const original=matrix.elements[0]!;matrix.elements[0]=original+Number.EPSILON;
+    expect(planAlpineForest(track,source).nearTrees).toBe(51);
+    expect(matrix.elements[0]).toBe(original+Number.EPSILON);
   });
   it('rejects any changed tree before mutating any original item',()=>{
     const {track,batches}=fixtures[0]!,source=copy(batches);source.find(b=>/^pine\d$/.test(b.name))!.items[0]!.m.elements[12]!+=.001;

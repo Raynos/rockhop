@@ -16,9 +16,10 @@ export function actualAlpineBatches(track:CompiledTrack):PropBatch[] {
   }});
   Object.defineProperty(globalThis,'document',{value:{createElement:()=>({width:0,height:0,getContext:()=>context})},configurable:true});
   const dummy=new THREE.DataTexture(new Uint8Array([128,128,128,255]),1,1),art={texture:()=>dummy,entry:()=>({bytes:0}),has:()=>true,bitmap:()=>({width:512,height:512})}as unknown as ArtLibrary;
-  const batches=new Set<PropBatch>(),add=PropBatch.prototype.add;
-  PropBatch.prototype.add=function(...args:Parameters<typeof add>){add.apply(this,args);batches.add(this);};
+  // buildBatches splits foreground items in place. Snapshot at add-time, before that split.
+  const batches=new Map<PropBatch,PropBatch['items']>(),add=PropBatch.prototype.add;
+  PropBatch.prototype.add=function(...args:Parameters<typeof add>){add.apply(this,args);const items=batches.get(this)??[];items.push(this.items[this.items.length-1]!);batches.set(this,items);};
   try {buildBiomeKit(track,BIOMES.alpine,new MaterialLibrary(track.def.seed),art,'low',false);}
   finally {PropBatch.prototype.add=add;if(previous)Object.defineProperty(globalThis,'document',previous);else Reflect.deleteProperty(globalThis,'document');}
-  return [...batches];
+  return [...batches].map(([batch,items])=>{const source=new PropBatch(batch.name,batch.geometry,batch.material,batch.shadows);source.items.push(...items);return source;});
 }

@@ -1,0 +1,65 @@
+{
+  "status": "first-private-player-candidate-rejected-before-capture",
+  "indexSHA256": "ee5acfc0590188f27ca7ce60c8b684bd230830ab9f1bca5936a0d04df1237755",
+  "causes": [
+    "CPU fixture observed source after buildBatches removed original foreground items into occluder meshes. Hook observes complete prebuild source.",
+    "Node/Chrome quaternion trig differs by Float64 ULP; scene hashes now use GPU Float32 precision without altering original matrices."
+  ],
+  "observedOwner": {
+    "enabled": false,
+    "mounted": 0,
+    "originalFamilyRetained": true,
+    "sourceValidationFailedBeforeRemoval": true
+  },
+  "browserReadMethod": "CDP breakpoint at validated() in the immutable entry, no player bytes changed",
+  "tracks": [
+    {
+      "course": "a2",
+      "browserTrials": [
+        {
+          "near": 51,
+          "far": 215,
+          "float64Hash": "98b3dc794d8a2563",
+          "gpuFloat32Hash": "cf9768f05ed6fb9b"
+        },
+        {
+          "near": 51,
+          "far": 215,
+          "float64Hash": "98b3dc794d8a2563",
+          "gpuFloat32Hash": "cf9768f05ed6fb9b"
+        }
+      ],
+      "nodeGPUFloat32Hash": "cf9768f05ed6fb9b"
+    },
+    {
+      "course": "a3",
+      "browserTrials": [
+        {
+          "near": 59,
+          "far": 209,
+          "float64Hash": "17abc1d154ed11a6",
+          "gpuFloat32Hash": "e347205b901b5490"
+        },
+        {
+          "near": 59,
+          "far": 209,
+          "float64Hash": "17abc1d154ed11a6",
+          "gpuFloat32Hash": "e347205b901b5490"
+        }
+      ],
+      "nodeGPUFloat32Hash": "e347205b901b5490"
+    }
+  ],
+  "fixedSourceValidation": {
+    "tests": 12,
+    "appTypecheck": true,
+    "scopedLint": true,
+    "movingAfterCapture": false,
+    "fixedPlayerBuild": false
+  },
+  "limits": [
+    "Pre-fix candidate intentionally keeps originals. No authored A2/A3 played visual verdict exists yet.",
+    "Concurrent visual lane; no qualified timing benchmark.",
+    "Both source pair builds include the same dirty library.ts snapshot recorded in manifest."
+  ]
+}

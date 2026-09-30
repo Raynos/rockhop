@@ -2,15 +2,17 @@
 
 Reduced-scope lane: reuse the existing Alpine phone model/maps and existing
 mill/log/loader geometry. This source slice adds no machinery, textures or
-public bank. A1 keeps its accepted 55/221-anchor forest and awaits the private
-whole-scene material comparison; these helpers address A2/A3 continuity.
+public bank. A1 keeps its accepted 55/221-anchor forest and quieter materials; these helpers address A2/A3 continuity.
 
 `src/render/world/zones/alpineForest.ts` is unimported. It verifies each course's
-seed/collider hash, exact source tree matrices/colours and matching contact
+seed/collider hash, GPU Float32 source tree signatures and matching contact
 shadow count before removing anything. The source hash derives from actual
 current builders, not copied screenshots or independently rerun scene RNG.
 `anchor-audit.json` records the input source hashes and conservative forest
-costs. A2 has 45 near/215 far originals; A3 has 53 near/209 far originals.
+costs. A2 has 51 near/215 far originals; A3 has 59 near/209 far originals.
+The audit retains add-time item references before buildBatches splits foreground
+items into occluder meshes. Browser/Node trig may differ by one Float64 ULP, so
+signatures use Float32 GPU precision while exact original matrices stay unchanged.
 Roots use exact zoneGround minus 4 cm, with the original x/z/yaw anchors.
 Close hazard and foreground crowns become low regrowth; A2 retains denser
 mixed stands while A3 uses younger trees and snags. Near clusters span 48 m
@@ -43,15 +45,17 @@ Do not relax the 700 KiB player or resource/frame budgets to integrate them.
 
 ## Checks and remaining review
 
-Eleven focused tests exercise actual seeded source builders, atomic validation,
+Twelve focused tests exercise actual seeded source builders, atomic validation,
 dedicated item-identity fallback, exact ground contact, deterministic placement,
 foreground height, cancellation, failed mounting and far-only allocation.
 Run `pnpm exec vitest run src/render/world/zones/alpineForest.test.ts` and
 `pnpm exec tsx assets/blender/course-kits/alpine-trees/audit-rollout.mts`.
 The fixture stubs Canvas/art pixels and calls normal main builders in Node.
 
-No shared biome hook, public bytes, production build, browser capture or
-timing run is delivered by this checkpoint. Parent must review matched full
+No shared biome hook or public bytes are activated. The first private frozen
+pair passed both budgets but failed the source guard and retained originals;
+`prototypes/alpine-forest-rollout-v1/startup-failure-proof.json` records the
+audit defects and corrected source checks. A fixed moving trial remains open. Parent must review matched full
 rides and log-pivot/beam/loader fault/recovery views at 852×392 low tier, with
 the same rider/input/camera/physics and actual bank hashes. Keep the current
 log top, teetering motion, beam contact, loader pose and silhouette readability.

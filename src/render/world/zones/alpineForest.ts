@@ -12,9 +12,9 @@ import { loadAlpineTreeKit, type AlpineTreeLoadOptions, type AlpineTreePlacement
 
 interface TrackSpec { seed:number; hash:string; anchors:string; near:number; far:number; shadows:number; guards:readonly (readonly [number,number])[] }
 const SPECS:Readonly<Record<string,TrackSpec>>={
-  'a2-log-jam':{seed:3947357332,hash:'17aa87ab00450408',anchors:'ad9f2f7c9f6973fe',near:45,far:215,shadows:21,
+  'a2-log-jam':{seed:3947357332,hash:'17aa87ab00450408',anchors:'cf9768f05ed6fb9b',near:51,far:215,shadows:27,
     guards:[[-10,61],[108,150.8],[186.8,248.8],[280,345.5],[371.5,401.5]]},
-  'a3-timberline':{seed:849270865,hash:'0f8561baf09bd28e',anchors:'ab80c291e59862d5',near:53,far:209,shadows:33,
+  'a3-timberline':{seed:849270865,hash:'0f8561baf09bd28e',anchors:'e347205b901b5490',near:59,far:209,shadows:39,
     guards:[[-10,53],[91,146],[171,211.2],[232.2,301.7],[323.7,353.7]]},
 };
 const HEIGHT:Readonly<Record<AlpineTreeVariant,number>>={
@@ -34,14 +34,15 @@ function specOf(track:CompiledTrack):TrackSpec {
   if(!alpineForestApplicable(track)) throw new Error('Alpine forest requires the audited A2/A3 seed and collider hash');
   return SPECS[track.def.id]!;
 }
-/** Canonical full source matrices and colours, independent of batch container order. */
+/** Scene signatures use GPU Float32 precision: browser/Node trig can differ by one Float64 ULP.
+ * Original double matrices/colours are retained unchanged for placement and fallback. */
 export function alpineForestAnchorHash(batches:readonly PropBatch[]):string {
   const hash=new StateHasher();
   for(const batch of batches.filter(b=>TREE.test(b.name)).sort((a,b)=>a.name.localeCompare(b.name))) {
     hash.string(batch.name).number(batch.items.length);
     for(const {m,c} of batch.items) {
-      for(const value of m.elements) hash.number(value);
-      hash.bool(!!c);if(c) hash.number(c.r).number(c.g).number(c.b);
+      for(const value of m.elements) hash.number(Math.fround(value));
+      hash.bool(!!c);if(c) hash.number(Math.fround(c.r)).number(Math.fround(c.g)).number(Math.fround(c.b));
     }
   }
   return hash.digest();

@@ -1,0 +1,29 @@
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -58,0 +59 @@
++import { alpineForestApplicable, planAlpineForest, removeAlpineForestPlaceholders, loadAlpineForest } from './zones/alpineForest';
+@@ -1061,0 +1063,24 @@
++      if (authoredCourse && alpineForestApplicable(track)) {
++        let prepared: { plan: ReturnType<typeof planAlpineForest>; originals: PropBatch[] } | undefined;
++        try {
++          const forestPlan = planAlpineForest(track, zk.batches);
++          const removed = removeAlpineForestPlaceholders(track, zk.batches);
++          prepared = { plan: forestPlan, originals: removed.originals };
++        } catch (error) { console.warn('[render] Alpine forest source validation failed; retaining originals', error); }
++        if (prepared) {
++          const fallback = new THREE.Group(); fallback.name = 'alpine-original-forest-fallback';
++          fallback.add(...buildBatches(prepared.originals).objects); group.add(fallback);
++          const owner = mountCourseAssets(loadAlpineForest(prepared.plan, {
++            completeMaterial: material => { lib.complete(material); },
++          }).then(asset => {
++            asset.root.traverse(object => {
++              if (!(object as THREE.Mesh).isMesh) return;
++              object.name = `props:${object.name}`;
++              object.userData['castHigh'] = object.castShadow;
++              object.userData['receiveHigh'] = object.receiveShadow;
++            }); return asset;
++          }));
++          void owner.ready.then(() => { if (owner.root.children.length) fallback.visible = false; });
++          courseAssets = owner; group.add(owner.root);
++        }
++      }
