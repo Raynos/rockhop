@@ -2,7 +2,8 @@
  * No decoding occurs until loadCoastHarbor is invoked for a played course.
  */
 import * as THREE from 'three';
-import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader, type GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import type { CourseAssetDelivery } from '../courseAssets';
 import { modelAssetUrl, modelResourceUrl } from '../../hero/urls';
 import type { PropBatch } from '../props';
@@ -116,9 +117,6 @@ export async function loadCoastHarbor(placements: readonly CoastHarborPlacement[
     const assetRoot = options.assetRoot ?? new URL(import.meta.env.BASE_URL, document.baseURI).href;
     const manager = new THREE.LoadingManager().setURLModifier(url => coastHarborResourceUrl(url, assetRoot, options.resolveResource ?? modelResourceUrl));
     manager.onError = url => { failed.add(url); };
-    const [{ GLTFLoader }, { MeshoptDecoder }] = await Promise.all([
-      import('three/examples/jsm/loaders/GLTFLoader.js'), import('three/examples/jsm/libs/meshopt_decoder.module.js'),
-    ]);
     if (retired) throw new Error('Coast harbor cancelled');
     const logical = PREFIX + (options.detail === 'full' ? 'coast-harbor.glb' : 'coast-harbor-lod.glb');
     const gltf = await new GLTFLoader(manager).setMeshoptDecoder(MeshoptDecoder)

@@ -3,7 +3,8 @@
  * Source texture names resolve outside catalog hash folders at the fetch boundary.
  */
 import * as THREE from 'three';
-import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader, type GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { modelAssetUrl, modelResourceUrl } from '../../hero/urls';
 import { fogify } from '../../lighting/environment';
@@ -165,10 +166,6 @@ export async function loadAlpineTreeKit(options: AlpineTreeLoadOptions = {}): Pr
   try {
     // Far-only background banks avoid all model decoding and prototype allocations.
     if (options.banks !== 'far-only') {
-      const [{ GLTFLoader }, { MeshoptDecoder }] = await Promise.all([
-        import('three/examples/jsm/loaders/GLTFLoader.js'),
-        import('three/examples/jsm/libs/meshopt_decoder.module.js'),
-      ]);
       if (released) return null;
       const loader = new GLTFLoader(manager).setMeshoptDecoder(MeshoptDecoder);
       // Sequential parsing allows near/full material sharing and prompt cleanup after abort.
