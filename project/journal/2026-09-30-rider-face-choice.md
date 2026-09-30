@@ -12,3 +12,14 @@ Choice evidence: [board and decision](../../docs/evidence/hero-remaster/rider-se
 
 Limits: Direction choice only; P3's face still imperfect. Frozen head and
 face must survive local repairs. No global remesh/rebake or normal promotion.
+
+Finding: Local P3 inspection freezes original head/neck vertex/UV and face
+records. Largest non-head boundary groups lie around hands and are branched,
+so filling every boundary would be an unjustified repair.
+
+Validation: Original GLB SHA unchanged; 115 boundary groups and730 overlap
+edge groups located on an analysis-only weld. Original index degeneracy1
+is distinguished from80 repeat-position triangles after analysis welding.
+
+Limits: No new correction attempted. Many overlaps touch the frozen head;
+numeric cleanup alone cannot establish visible quality or rig readiness.
