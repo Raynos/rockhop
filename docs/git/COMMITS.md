@@ -2,6 +2,11 @@
 
 AGENTS.md points here; this is the canonical policy for every tool.
 Keep one coherent finding in each round's commit.
+Commit early and often directly on `main`: land a finished finding before
+starting the next experiment. Do not accumulate an entire plan or session.
+Stable experimental recipes and evidence may land as explicitly unaccepted
+checkpoints while visual/device review continues; keep their exports out of
+normal player paths until the required review passes.
 
 ## Message
 

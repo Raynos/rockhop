@@ -1,5 +1,10 @@
 # What we are building — the plans and where each stands
 
+Commit cadence: small, frequent main commits are explicit in `AGENTS.md` and
+`docs/git/COMMITS.md` (ask 213). Ask 214 rejects the current remastered rider:
+stop the skin/head patch loop, show matched actual-game before/after and restart
+the complete rider in Blender under the existing hero plan.
+
 **Audio remaster (asks 193, 204, 207):** [Execution plan](sol-6.1-2026-09-30-AUDIO_REMASTER.md) delivers seven fresh score cues, all remastered procedural families and qualified recorded reactions/environment beds. Audio commit `0e00571a` and the corrected Garage CI fixture are committed on main. Publishing uses checked CI and production-SHA verification; listening and phone balance remain HR-22 without blocking publication.
 
 **Hero remaster (asks 191, 195–197, 201–203, 205–206):** [The active plan](sol-6.1-2026-09-30-HERO_REMASTER.md#mockup-matching-production-phase--asks-205206) extends the reviewed V5 baseline into reference calibration, Blender shape/retopology, baked materials, Garage lighting, motion/families and device qualification. Installed Hunyuan/TRELLIS and UniMate have run; closer/sharper inspection and exact replay pass host proxies. User requires all owned work merged into main in this one checkout. Ask 211 lands V6 Street full/LOD wrist continuity in the normal main model paths: complete contour/skinning checks, played clips, exact clear/crash/restart and twenty swaps pass. Remaining M1/M2 work includes skin colour transitions and face/hair definition. [Same-asset lighting probes](../evidence/hero-remaster/lighting/v6-probes/README.md) separate authored skin mottling from the Garage emissive lift; M3 also needs a key independent of the world biome. Mockup resemblance, new Race bodies and physical-device acceptance remain open; HR-23 and FINISH_TO_PUBLISH Gates 3/4 remain authoritative.
