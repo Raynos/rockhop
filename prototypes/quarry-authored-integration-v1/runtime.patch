@@ -1,0 +1,62 @@
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -58,0 +59 @@
++import { buildQuarryStandard, loadQuarryLandmarks, planQuarryStandard, QUARRY_STANDARD_REPLACE } from './zones/quarryStandard';
+@@ -755,0 +757 @@
++  let originalQuarryPlate: THREE.Mesh | undefined;
+@@ -883,0 +886 @@
++      if (authoredCourse && track.def.id === 'd1-dust-devil') originalQuarryPlate = plate;
+@@ -1020,0 +1024,48 @@
++      if (authoredCourse && track.def.id === 'd1-dust-devil') {
++        // The original ZoneKit has already consumed its entire seeded RNG sequence.
++        // Keep exact old meshes and machine matrices as a fallback until every authored
++        // machine has decoded and its course-owned root has attached.
++        const quarryPlan = planQuarryStandard(track, x0, x1);
++        const groundAt = (x: number, z: number): number => zoneGround('quarry', profile, x, z);
++        const quarry = buildQuarryStandard(quarryPlan, { lib, detail, groundAt });
++        const retiredMeshes = zk.meshes.filter(mesh => QUARRY_STANDARD_REPLACE.meshes.has(mesh.name));
++        const retiredNames: ReadonlySet<string> = new Set([
++          ...QUARRY_STANDARD_REPLACE.terrainBatches,
++          ...QUARRY_STANDARD_REPLACE.authoredBatches,
++        ]);
++        const retiredBatches = zk.batches.filter(batch => retiredNames.has(batch.name));
++        const keepMeshes = zk.meshes.filter(mesh => !retiredMeshes.includes(mesh));
++        const keepBatches = zk.batches.filter(batch => !retiredBatches.includes(batch));
++        zk.meshes.splice(0, zk.meshes.length, ...keepMeshes);
++        zk.batches.splice(0, zk.batches.length, ...keepBatches);
++
++        const fallback = new THREE.Group(); fallback.name = 'd1-original-quarry-fallback';
++        fallback.add(...retiredMeshes, ...buildBatches(retiredBatches).objects);
++        group.add(fallback);
++        const authored = new THREE.Group(); authored.name = 'd1-authored-quarry-terrain';
++        authored.add(...quarry.meshes, ...buildBatches(quarry.batches).objects);
++        authored.visible = false;
++        group.add(authored);
++        textureBytes += quarry.textureBytes;
++        scroll.push(...quarry.scroll);
++
++        const machines = mountCourseAssets(loadQuarryLandmarks(
++          quarryPlan, detail === 'low' ? 'lod' : 'full', lib, groundAt,
++        ));
++        void machines.ready.then(() => {
++          // mountCourseAssets catches decode failure and resolves empty. In that case
++          // original terrain, plate and all old machines remain visible together.
++          if (!machines.root.children.length) return;
++          fallback.visible = false;
++          authored.visible = true;
++          if (originalQuarryPlate) originalQuarryPlate.visible = false;
++        });
++        courseAssets = {
++          root: machines.root,
++          ready: machines.ready,
++          get textureBytes() { return machines.textureBytes; },
++          cancel() { machines.cancel(); },
++          dispose() { machines.dispose(); quarry.dispose(); },
++        };
++        group.add(courseAssets.root);
++      }
+--- a/src/render/world/zones/quarryStandard.ts
++++ b/src/render/world/zones/quarryStandard.ts
+@@ -334 +334 @@
+-    const file = `models/course-kits/quarry-standard/quarry-${kind}${detail === 'lod' ? '-lod' : ''}-packed.glb`;
++    const file = `models/course-kits/quarry-standard/quarry-${kind}-packed${detail === 'lod' ? '-lod' : ''}.glb`;
