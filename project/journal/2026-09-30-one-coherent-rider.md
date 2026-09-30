@@ -136,3 +136,14 @@ Cut41,343faces,111boundary/0nonmanifold edges; source bytes untouched.
 
 Limits: Five protected seed faces lost in component filtering; no accepted
 collar, new head join, deformation, rig or moving-gameplay evidence.
+
+Finding: Unconstrained face-chart triangulation breaks deliberate eyelid,
+lip and nostril boundaries twice. Stop that topology implementation before
+source fitting; choose constrained ring-edge triangulation in isolated venv.
+
+Validation: Exact recipe snapshots match both failed gate hashes; first
+365boundary/0nonmanifold edges, second227boundary/15nonmanifold edges,
+expected single120-edge neck boundary. Dense/reduced source bytes unchanged.
+
+Limits: No authored face fit or appearance acceptance. Pinned Triangle
+dependency is task-local only; existing90min cage/model-stage bounds remain.

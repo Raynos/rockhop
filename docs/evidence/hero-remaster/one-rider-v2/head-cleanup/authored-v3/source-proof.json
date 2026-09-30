@@ -1,0 +1,28 @@
+{
+  "status": "two failed unfitted topology gates; constrained construction not run",
+  "sourceAssetsTouched": false,
+  "dense": {
+    "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz",
+    "sha256ObservedAfterGates": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+    "matchesPreviousMeasuredSHA256": true
+  },
+  "reduced": {
+    "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb",
+    "sha256ObservedAfterGates": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+    "matchesPreviousMeasuredSHA256": true
+  },
+  "recipes": {
+    "author_cage_v3_gate1.py": "fbef9459766b876804f0b79771914f9d2137d8057bb2c2d33bf6ea986cea2260",
+    "author_cage_v3.py": "db6c2fd3460b300058e44617378d4f88644ad63ed2e46cb3e18d9bdc192da1da"
+  },
+  "dependencyInstall": {
+    "scope": "ignored task-local venv, working model environments unchanged",
+    "venv": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/authored-v3/triangulator-venv",
+    "pinnedRequestedPackage": "triangle==20250106",
+    "actualInstalledPackages": ["triangle==20250106", "numpy==2.2.6"],
+    "wheel": "triangle-20250106-cp310-cp310-macosx_11_0_arm64.whl",
+    "gpuWork": false
+  },
+  "validation": ["both recipe SHA256 values match their frozen gate reports", "py_compile passes", "owned whitespace diff check passes"],
+  "limits": ["No source guide placement or bounded dense fit has run", "No gray anatomy acceptance, bake, body join, rig or gameplay claim"]
+}

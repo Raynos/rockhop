@@ -1,0 +1,80 @@
+{
+  "status": "UNACCEPTED authored topology feasibility; not fitted",
+  "vertices": 16047,
+  "faces": 32056,
+  "boundaryEdges": 227,
+  "nonmanifoldEdges": 15,
+  "features": [
+    {
+      "name": "left eyelid",
+      "x": -0.081,
+      "y": 0.111,
+      "rx": 0.048,
+      "ry": 0.026,
+      "code": 1,
+      "ringVertices": 48,
+      "concentricRings": 7
+    },
+    {
+      "name": "right eyelid",
+      "x": 0.081,
+      "y": 0.111,
+      "rx": 0.048,
+      "ry": 0.026,
+      "code": 1,
+      "ringVertices": 48,
+      "concentricRings": 7
+    },
+    {
+      "name": "lip",
+      "x": 0,
+      "y": -0.032,
+      "rx": 0.07,
+      "ry": 0.024,
+      "code": 2,
+      "ringVertices": 48,
+      "concentricRings": 7
+    },
+    {
+      "name": "left nostril",
+      "x": -0.024,
+      "y": 0.025,
+      "rx": 0.012,
+      "ry": 0.008,
+      "code": 3,
+      "ringVertices": 32,
+      "concentricRings": 7
+    },
+    {
+      "name": "right nostril",
+      "x": 0.024,
+      "y": 0.025,
+      "rx": 0.012,
+      "ry": 0.008,
+      "code": 3,
+      "ringVertices": 32,
+      "concentricRings": 7
+    }
+  ],
+  "ears": [
+    {
+      "side": 1,
+      "sharedBaseVertices": 88,
+      "helixConchaRings": 6
+    },
+    {
+      "side": -1,
+      "sharedBaseVertices": 88,
+      "helixConchaRings": 6
+    }
+  ],
+  "scalpRingVertices": 120,
+  "neckRows": 33,
+  "headTopNativeY": 0.34,
+  "scriptSHA256": "db6c2fd3460b300058e44617378d4f88644ad63ed2e46cb3e18d9bdc192da1da",
+  "limits": [
+    "Front chart uses authored feature rings, not a source mesh cut.",
+    "Ear folds are explicit authored rings; their shape still requires source review.",
+    "Initial source-guided placement is not bounded dense fitting."
+  ]
+}
