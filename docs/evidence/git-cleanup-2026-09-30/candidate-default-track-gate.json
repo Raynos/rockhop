@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "kind": "gate-partial",
-  "runId": "20260930-063413-a9f587",
-  "startedAt": "2026-09-30T11:34:13.777Z",
-  "wallMs": 4835,
+  "runId": "20260930-063332-9f4c5a",
+  "startedAt": "2026-09-30T11:33:32.426Z",
+  "wallMs": 5005,
   "git": "9254fc42",
   "srcFingerprint": "fd8fe7c2",
   "node": "v24.18.1",
@@ -19,15 +19,15 @@
   "checks": [
     {
       "id": "boot.readyP50Ms",
-      "value": 196.37633300000016,
+      "value": 200.76129199999968,
       "limit": 300,
       "pass": true,
       "unit": "ms",
-      "note": "runs 199/196/90 min 90 loadavg 3.42/18"
+      "note": "runs 200/209/201 min 200 loadavg 3.12/18"
     },
     {
       "id": "boot.firstFrameMs",
-      "value": 388.1300001144409,
+      "value": 497,
       "limit": 900,
       "pass": true,
       "unit": "ms",
@@ -38,21 +38,21 @@
       "value": true,
       "limit": true,
       "pass": true,
-      "note": "bot-3.json finish=30.349999999999998 run=30.350 faults=0"
+      "note": "bot-3.json finish=8.591666666666667 run=8.592 faults=0"
     },
     {
       "id": "clear.finishTimeBitEqual",
       "value": true,
       "limit": true,
       "pass": true,
-      "note": "expected 30.349999999999998"
+      "note": "expected 8.591666666666667"
     },
     {
       "id": "clear.hashOk",
       "value": true,
       "limit": true,
       "pass": true,
-      "note": "2bfe061963ffb058 vs pinned 2bfe061963ffb058"
+      "note": "622bb2554e0f9a26 vs pinned 622bb2554e0f9a26"
     },
     {
       "id": "clear.pro.c1",
@@ -93,14 +93,14 @@
     },
     {
       "id": "restart.wallMsP95",
-      "value": 0.1549997329711914,
+      "value": 0.09499979019165039,
       "limit": 5,
       "pass": true,
       "unit": "ms"
     },
     {
       "id": "restart.frameMsP95",
-      "value": 4.864999771118164,
+      "value": 5.514999866485596,
       "limit": 33,
       "pass": true,
       "unit": "ms",

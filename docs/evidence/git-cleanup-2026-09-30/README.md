@@ -30,3 +30,27 @@ The final round commits this evidence, plan/ask reconciliation and latest host g
 - Credential-pattern scan of newly committed text and outstanding files: no token/private-key pattern hits; commit hooks run for every round.
 
 The recorded R3 CPU failure remains open; its five-microsecond limit is unchanged. Physical landscape phones, uncoached rider trials and whole-course graphics remain unqualified. Other chat owns the checked audio deployment and its Garage fixture CI repair; this cleanup is a main commit claim, not a production claim.
+
+## Follow-up candidate cleanup
+
+Further authoring work appeared after the initial clean snapshot. It is now
+retained in separate Alpine material, Quarry machinery, Coast harbor,
+Snowline refinement and wrist-diagnostic commits. Original runtime hooks
+remain unchanged; unaccepted kits and repair recipes are explicitly labelled.
+The final status round makes **18 main commits** since cleanup began, including
+the audio publishing record and CI fixture portability correction.
+
+Final application/harness typecheck, repository lint and normal build pass.
+Fourteen Snowline/LOD tests and nine isolated Coast lifecycle tests pass.
+Fresh CPU wrist reports match all ten saved JSON baselines; Python/MJS repair
+recipe syntax passes without claiming a completed repair. Credential-pattern
+scan of new text found no hits. Both Git hooks run for every commit.
+
+The [C1 host Metal partial round gate](candidate-checkpoint-round-gate.json)
+passes 14/14: cold boot, exact Rookie C1 and Pro C1/D3 clears, crash, control
+recovery, 20 one-tick restarts and 691.16 KiB player gzip under 700 KiB.
+The [first follow-up gate](candidate-default-track-gate.json) also passes 14/14
+but uses default flat-test for Rookie, so C1 was rechecked explicitly.
+[Build provenance](candidate-checkpoint-provenance.json) identifies the built
+entry baseline. This is no full ship verdict or physical-phone qualification.
+Concurrent new hero work can create further edits after this cleanup snapshot.
