@@ -180,6 +180,21 @@ for (const subject of subjects) {
   check(inconsistentInternalRepairWindingEdges === 0, `${subject.label}: inconsistent internal repair winding`);
   const nonManifoldRepairEdges = [...repairEdges.values()].filter(e => e.count > 2).length;
   check(unmappedRepairBoundaryEdges === 0 && nonManifoldRepairEdges === 0, `${subject.label}: unmapped or nonmanifold repair edges`);
+  const wristFaces = ['L', 'R'].map(side => {
+    const bone = repairMesh.skeleton.bones.find(b => boneName(b.name) === `hand.${side}`)!;
+    const wrist = bone.getWorldPosition(new THREE.Vector3());
+    const faces: { mesh: THREE.SkinnedMesh; indices: number[]; triangle: number }[] = [];
+    for (const mesh of meshes.values()) {
+      const idx = mesh.geometry.index!;
+      for (let i = 0; i < idx.count; i += 3) {
+        const indices = [idx.getX(i), idx.getX(i + 1), idx.getX(i + 2)];
+        const center = indices.reduce((p, index) => p.add(world({ mesh, index })), new THREE.Vector3()).multiplyScalar(1 / 3);
+        const influence = indices.reduce((sum, index) => { const w = weights({ mesh, index }); return sum + (w.get(`hand.${side}`) ?? 0) + (w.get(`forearm.${side}`) ?? 0); }, 0) / 3;
+        if (center.distanceTo(wrist) <= .25 && influence >= .15) faces.push({ mesh, indices, triangle: i / 3 });
+      }
+    }
+    return { side, faces };
+  });
   const rows = [];
   // GltfRider's Garage uses authored weights; riding uses conditionSleeveSkin output.
   for (const pose of poses) {
@@ -197,7 +212,22 @@ for (const subject of subjects) {
       if (area < limits.triangleAreaSquareMetres || !Number.isFinite(area)) degenerateRepairTriangles++;
     }
     check(degenerateRepairTriangles === 0, `${subject.label}/${pose.name}: collapsed repair triangles`);
-    rows.push({ pose: pose.name, syntheticRuntimeFrame: true, stageClip: rider.debug.stageClip, joins: joinRows, repairTriangles: idx.count / 3, degenerateRepairTriangles, minRepairTriangleAreaSquareMetres: minRepairTriangleArea });
+    const wristRegion = wristFaces.map(({ side, faces }) => {
+      const collapsedByMesh: Record<string, number> = {}, collapsedTriangles = [];
+      for (const { mesh, indices, triangle } of faces) {
+        const points = indices.map(index => world({ mesh, index }));
+        const area = new THREE.Triangle(points[0]!, points[1]!, points[2]!).getArea();
+        if (area < limits.triangleAreaSquareMetres || !Number.isFinite(area)) {
+          collapsedByMesh[mesh.name] = (collapsedByMesh[mesh.name] ?? 0) + 1;
+          const rawMesh = rawMeshes.get(mesh.name)!;
+          const rawPoints = indices.map(index => position({ mesh: rawMesh, index }));
+          collapsedTriangles.push({ mesh: mesh.name, triangle, vertices: indices, runtimeAreaSquareMetres: area, rawRestAreaSquareMetres: new THREE.Triangle(rawPoints[0]!, rawPoints[1]!, rawPoints[2]!).getArea(), restPositions: indices.map(index => position({ mesh, index }).toArray()), runtimeCentroid: points.reduce((p, q) => p.add(q), new THREE.Vector3()).multiplyScalar(1 / 3).toArray() });
+        }
+      }
+      check(Object.values(collapsedByMesh).every(n => n === 0), `${subject.label}/${pose.name}/${side}: collapsed triangles in wrist region`);
+      return { side, selectedTriangles: faces.length, collapsedByMesh, collapsedTriangles };
+    });
+    rows.push({ pose: pose.name, syntheticRuntimeFrame: true, wristRegion, stageClip: rider.debug.stageClip, joins: joinRows, repairTriangles: idx.count / 3, degenerateRepairTriangles, minRepairTriangleAreaSquareMetres: minRepairTriangleArea });
   }
   reports.push({ subject: subject.label, file: subject.file, sha256: crypto.createHash('sha256').update(bytes).digest('hex'), map: subject.map, mapSHA256: crypto.createHash('sha256').update(mapBytes).digest('hex'), rawMapAsset: mapping.asset, rawMapAssetSHA256: crypto.createHash('sha256').update(rawBytes).digest('hex'), mapAssociation: { packed, rawMapPositionMaxMetres: rawMapPositionMax, packedPositionDriftMaxMetres: packedPositionDriftMax, expectedPackedPositionMaxMetres: expectedPackedPositionMax, method: 'Raw explicit indices validated against recorded positions, then independently reproduced production EXPONENTIAL/16/SharedVector packing with unchanged indices.' }, topology: joins.map(j => ({ side: j.side, join: j.join, ...j.topology })), unmappedRepairBoundaryEdges, nonManifoldRepairEdges, inconsistentInternalRepairWindingEdges, poses: rows });
   rider.dispose();
