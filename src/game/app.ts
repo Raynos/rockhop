@@ -179,7 +179,7 @@ export class App {
   private readonly pause: PauseMenu;
   private readonly garage: GarageScreen;
   private readonly onboard: OnboardingCard;
-  private readonly perf: PerfOverlay | null;
+  private readonly perf: PerfOverlay;
   private readonly lastRuns = new LastRuns();
   private readonly replayBar: ReplayBar;
   private readonly replay: ReplaySession;
@@ -230,8 +230,8 @@ export class App {
   private fpsChoice: FpsChoice;
   private lastRenderAt = 0;
   private capInEffect = 0;
-  /** Compact FPS meter for explicit `?perf=1` diagnostics. */
-  private readonly fpsEl: HTMLDivElement;
+  /** Tappable FPS pill on every level; expands the detailed frame panel. */
+  private readonly fpsEl: HTMLButtonElement;
   private fpsFrames = 0;
   private fpsWindowAt = 0;
   private fpsWorstMs = 0;
@@ -278,10 +278,22 @@ export class App {
 
     this.qualityChoice = loadQualityOverride();
     this.fpsChoice = loadFpsChoice();
-    this.fpsEl = document.createElement('div');
+    this.fpsEl = document.createElement('button');
+    this.fpsEl.type = 'button';
     this.fpsEl.className = 'fpsmeter';
-    this.fpsEl.hidden = !DEV_SURFACES || !o.perf;
+    this.fpsEl.hidden = true;
+    this.fpsEl.setAttribute('aria-label', 'Frame rate; show performance details');
+    this.fpsEl.setAttribute('aria-controls', 'rockhop-perf-details');
+    this.fpsEl.setAttribute('aria-expanded', 'false');
     this.fpsEl.textContent = '-- fps';
+    this.fpsEl.addEventListener('pointerdown', (event) => event.stopPropagation());
+    this.fpsEl.addEventListener('click', (event) => {
+      event.stopPropagation();
+      this.perf.setOpen(!this.perf.expanded);
+      this.game.perfTiming = this.perf.expanded;
+      this.fpsEl.setAttribute('aria-expanded', String(this.perf.expanded));
+      this.fpsEl.setAttribute('aria-label', this.perf.expanded ? 'Frame rate; hide performance details' : 'Frame rate; show performance details');
+    });
     o.uiRoot.appendChild(this.fpsEl);
     this.soundOn = loadSoundEnabled();
     this.volume = loadVolume();
@@ -438,8 +450,10 @@ export class App {
       this.game.setPaused(false);
       this.lastNow = performance.now();
     });
-    this.perf = o.perf ? new PerfOverlay(o.uiRoot) : null;
-    if (o.perf) this.game.perfTiming = true;
+    this.perf = new PerfOverlay(o.uiRoot);
+    this.perf.setOpen(o.perf === true);
+    this.fpsEl.setAttribute('aria-expanded', String(this.perf.expanded));
+    this.game.perfTiming = this.perf.expanded;
     this.labPanel = new LabPanel(o.uiRoot, this.game.physicsHz);
     this.traceBars = o.trace ? new TraceBars(o.uiRoot) : null;
     this.replayBar = new ReplayBar(o.uiRoot, {
@@ -921,8 +935,10 @@ export class App {
     // the phone paid a full tier frame plus a compositor copy for an invisible canvas).
     scene?.classList.toggle('covered', screen === 'menu');
     this.game.renderEnabled = screen !== 'menu' && screen !== 'tracks';
-    // The compact meter is a diagnostic, never part of the normal game UI.
-    this.fpsEl.hidden = !DEV_SURFACES || !this.o.perf || screen === 'menu';
+    this.fpsEl.hidden = true;
+    this.perf.setOpen(false);
+    this.game.perfTiming = false;
+    this.fpsEl.setAttribute('aria-expanded', 'false');
     scene?.classList.toggle('dim', screen !== 'menu' && screen !== 'garage');
     scene?.classList.toggle('garage', screen === 'garage');
     const dev = this.mux.activeDevice();
@@ -1016,6 +1032,11 @@ export class App {
     this.garage.hide();
     this.settings.hide();
     this.credits.hide();
+    if (this.o.perf) {
+      this.perf.setOpen(true);
+      this.game.perfTiming = true;
+      this.fpsEl.setAttribute('aria-expanded', 'true');
+    }
     // Track select hides itself after its fly-up (same-scene handoff).
     if (!this.tracksScreen.visible) this.tracksScreen.hide();
     this.pause.hide();
@@ -1242,7 +1263,9 @@ export class App {
     sp.pollMs = sp.advanceMs = 0;
     this.game.lastAdvance.ticks = 0;
     this.game.lastAdvance.physicsMs = 0;
-    if (this.perf) this.perf.root.hidden = !(this.screen === 'run' && !this.pause.visible && this.game.phase() !== 'finished' && !this.onboard.visible);
+    const meterVisible = this.screen === 'run' && !this.pause.visible && this.game.phase() !== 'finished' && !this.onboard.visible;
+    this.fpsEl.hidden = !meterVisible;
+    this.perf.root.hidden = !meterVisible || !this.perf.expanded;
     const { frame, meta } = this.mux.poll();
     sp.pollMs = performance.now() - t0;
     const restartEdge = frame.restart === true && !this.prevRestart;
@@ -1354,7 +1377,7 @@ export class App {
       if (show) this.traceBars.update(this.game.effectiveInput());
     }
     this.labPanel.update(performance.now());
-    this.perf?.update(performance.now(), () => ({
+    if (this.perf.expanded && !this.perf.root.hidden) this.perf.update(performance.now(), () => ({
       frameMs: this.frameMs.stats(),
       physicsUs: this.game.physicsUs.stats(),
       stats: this.safeStats(),
@@ -1406,7 +1429,7 @@ export class App {
 
   /** FPS meter: rendered frames over the last 500 ms, the worst frame interval in that window, the tier letter. Two DOM writes per second. */
   private meterFrame(now: number, sinceRender: number): void {
-    if (!DEV_SURFACES || !this.o.perf) return;
+    if (this.fpsEl.hidden) return;
     this.fpsFrames++;
     if (sinceRender > this.fpsWorstMs) this.fpsWorstMs = sinceRender;
     if (now - this.fpsWindowAt < 500) return;

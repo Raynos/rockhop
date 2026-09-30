@@ -1,5 +1,5 @@
 /**
- * `?perf=1` overlay (MEGA_PLAN P3, real-device evidence): fps, frame ms p50/p95, physics
+ * Expandable in-run frame panel (initially expanded by `?perf=1`): fps, frame ms p50/p95, physics
  * µs/tick, draw calls / triangles from `stats()`, the quality tier and why it was chosen, and the
  * renderer's `debugInfo()` scalars (PERF.md: tier · deviceClass/profile · dpr · canvas · calls · tris ·
  * rtMpx · passes · shadow · heroTris · skippedFrames · stalePrograms · entryMs). Compact, top-left under
@@ -53,6 +53,7 @@ export function perfLines(s: PerfSample): string[] {
 
 export class PerfOverlay {
   readonly root: HTMLPreElement;
+  private open = false;
   private lastPaint = 0;
   private lastText = '';
   /** DOM writes so far (instrument: the e2e asserts ≤ 2/s). */
@@ -61,9 +62,20 @@ export class PerfOverlay {
   constructor(parent: HTMLElement) {
     this.root = document.createElement('pre');
     this.root.className = 'perf';
+    this.root.id = 'rockhop-perf-details';
+    this.root.setAttribute('role', 'region');
+    this.root.setAttribute('aria-label', 'Performance details');
     this.root.textContent = 'perf…';
     this.root.hidden = true;
     parent.appendChild(this.root);
+  }
+
+  get expanded(): boolean { return this.open; }
+
+  /** The compact counter controls this panel. Closing it stops the optional physics timing. */
+  setOpen(open: boolean): void {
+    this.open = open;
+    this.root.hidden = !open;
   }
 
   /** Call every frame with the wall clock; samples at most every `PERF_PAINT_MS` and writes only on a change. */

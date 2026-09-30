@@ -468,9 +468,9 @@ html.short .trace { top: calc(4.2rem + var(--sat)); width: 160px; }
 .setting .btns { display: inline-flex; gap: var(--s2); }
 .setting .btns .btn[hidden] { display: none; }
 
-/* ---- perf overlay (?perf=1): top-left under the pause button, never over the bike ---- */
+/* ---- live frame meter: compact pill, tap for detail, never on the title screen ---- */
 .perf[hidden] { display: none; }
-.perf { position: absolute; left: calc(.8rem + var(--sal)); top: calc(4.4rem + var(--sat)); margin: 0; padding: .35rem .55rem; z-index: 6; pointer-events: none; font: 11px/1.4 var(--mono); color: #cfe; background: rgba(0,0,0,.72); border: 1px solid var(--line-2); border-radius: var(--r1); white-space: pre; text-shadow: none; }
+.perf { position: absolute; left: calc(.8rem + var(--sal)); top: calc(4.4rem + var(--sat)); max-width: min(480px, calc(100vw - 1.6rem - var(--sal) - var(--sar))); max-height: calc(100dvh - 5rem - var(--sat) - var(--sab)); overflow: auto; margin: 0; padding: .6rem .7rem; z-index: 19; pointer-events: auto; font: 11px/1.45 var(--mono); color: #e8f4ed; background: rgba(8,22,25,.94); border: 1px solid var(--cream-2); border-radius: var(--r1); box-shadow: 0 10px 30px rgba(0,0,0,.45); white-space: pre; text-shadow: none; font-variant-numeric: tabular-nums; }
 
 /* ?bench=1 (src/game/bench.ts): START card, one status line under the meter while it runs, the report panel at the end. */
 .bench { position: absolute; inset: 0; pointer-events: none; z-index: 40; }
@@ -495,9 +495,10 @@ html.short .trace { top: calc(4.2rem + var(--sat)); width: 160px; }
 .bench-btns .btn { font-size: .78rem; padding: var(--s2) var(--s4); }
 .bench-note { font: 11px/1.3 var(--mono); color: var(--ink-dim); }
 .bench-report textarea { width: 100%; min-height: 6rem; font: 10px/1.3 var(--mono); background: rgba(0,0,0,.5); color: var(--ink); border: 1px solid var(--line); border-radius: var(--r1); }
-.fpsmeter { position: absolute; right: calc(.5rem + var(--sar)); top: calc(.15rem + var(--sat)); z-index: 7; pointer-events: none; font: 600 10px/1.4 var(--mono); letter-spacing: .04em; color: rgba(255,255,255,.55); text-shadow: 0 1px 2px rgba(0,0,0,.8); }
-.fpsmeter.bad { color: #ff7a5c; }
-.hud.touch ~ .fpsmeter, .touch-layer.on.visible ~ .fpsmeter { top: calc(4.2rem + var(--sat)); }
+#ui .fpsmeter { appearance: none; position: absolute; right: calc(.5rem + var(--sar)); top: calc(3.8rem + var(--sat)); z-index: 20; display: flex; align-items: center; justify-content: center; box-sizing: border-box; min-width: 96px; min-height: 44px; padding: 0 9px; border: 1px solid rgba(239,227,200,.38); border-radius: var(--r1); background: rgba(8,22,25,.82); color: var(--cream); font: 700 10px/1.2 var(--mono); letter-spacing: .02em; font-variant-numeric: tabular-nums; cursor: pointer; pointer-events: auto; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+#ui .fpsmeter[hidden] { display: none; }
+#ui .fpsmeter[aria-expanded='true'], #ui .fpsmeter:focus-visible { border-color: var(--cream); outline: 2px solid var(--teal); outline-offset: 1px; }
+#ui .fpsmeter.bad { color: #ff7a5c; }
 /* Results on a phone: the meter leaves the top-right corner to the leaderboard (§18) and sits in the empty legend corner. */
 .hud.touch.results-on ~ .fpsmeter { top: auto; bottom: calc(.2rem + var(--sab)); }
 
