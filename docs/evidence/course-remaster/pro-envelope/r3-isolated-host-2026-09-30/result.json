@@ -1,0 +1,67 @@
+{
+  "kind": "r3-exact-isolated-host",
+  "localDate": "2026-09-30",
+  "timeZone": "America/Panama",
+  "headAtRun": "bdf002fad9e8033afb239f4c69b49c0c28a718ed",
+  "command": "pnpm exec vitest run src/physics/v2/r3.test.ts -t 'riding: <= 5 us/tick p50' --maxWorkers=1 --no-file-parallelism",
+  "exitCode": 0,
+  "stdout": "\n RUN  v3.2.7 /Users/raynos/projects/games/rockhop\n\nstdout | src/physics/v2/r3.test.ts > cost (R3 decision 7) > riding: <= 5 us/tick p50 over 20k ticks (node)\nFEEL cost.usPerTick.p50 = 4.115 [<= 5]\nFEEL cost.usPerTick.p95 = 7.929 [info: 2.7-3.0 alone; the full parallel suite pushes it past 5 on a shared host]\n\n ✓ src/physics/v2/r3.test.ts (12 tests | 11 skipped) 121ms\n\n Test Files  1 passed (1)\n      Tests  1 passed | 11 skipped (12)\n   Start at  07:37:31\n   Duration  350ms (transform 98ms, setup 0ms, collect 125ms, tests 121ms, environment 0ms, prepare 30ms)\n\n",
+  "test": {
+    "limitUsPerTickP50": 5,
+    "observedUsPerTick": {
+      "p50": 4.115,
+      "p95": 7.929
+    },
+    "warmupTicks": 2000,
+    "measuredBlocks": 200,
+    "ticksPerBlock": 100,
+    "measuredTicks": 20000,
+    "assertion": "p50 <= 5",
+    "p95Role": "informational",
+    "passed": 1,
+    "skipped": 11
+  },
+  "runner": {
+    "name": "Vitest",
+    "version": "3.2.7",
+    "maxWorkers": 1,
+    "fileParallelism": false
+  },
+  "hostBefore": {
+    "logicalCpus": 18,
+    "loadAverage1m": 5.06,
+    "loadAverage5m": 4.46,
+    "loadAverage15m": 3.97,
+    "observation": "Top-process snapshot before the run did not include the later high-CPU Blender or Chromium renderer jobs."
+  },
+  "hostAfter": {
+    "loadAverage1m": 6.77,
+    "loadAverage5m": 4.91,
+    "loadAverage15m": 4.16,
+    "observation": "Blender at 428.4% CPU and Chromium headless renderers appeared in the later process snapshot. Blender elapsed time placed start after R3 execution."
+  },
+  "sourceSha256": {
+    "src/physics/v2/r3.test.ts": "9aa6fe4b22ea3f87658bd37f60b1eb519cd4d0a05af2ca541902a07a52d2012b",
+    "src/physics/v2/bike.ts": "519dd15990b427bdbc66810d14c29866b443a31b9a87a68d84114144dd8c21a9",
+    "src/physics/v2/tuning.ts": "9e972b943eb3a49c17caaef20c64e62dc6a15dd43fd23b0778b5b879fa85ef3a",
+    "src/core/riderGeometry.ts": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011",
+    "src/physics/v2/engine.ts": "087797ef768af3f5f292df8d4583bf2d553d98d68311f8b3522c135bbd32beaa",
+    "src/physics/v2/tyre.ts": "335b249e98295f708da1d3899527d09bd00b2a6b391de39b5e1fbfc7251b9498",
+    "src/physics/collision.ts": "50dc3d78a86d991164e6f391af29b491437c47245a8d75835891141669dfaf2c",
+    "src/physics/dmath.ts": "b0f5e4536ba39ad4d1e53e4da9a9b89412f75594e206815e7ccc08f726f2893e"
+  },
+  "qualification": {
+    "isolatedNodeR3Passed": true,
+    "fullSuite": false,
+    "ci": false,
+    "physicalDevice": false,
+    "thresholdChanged": false
+  },
+  "priorProfile": {
+    "path": "docs/evidence/course-remaster/pro-envelope/cpu/hotpaths.json",
+    "selfSamples": 398,
+    "riderRigFromHipsPct": 16.3,
+    "solvePct": 9.5,
+    "suspensionGeometryPct": 7
+  }
+}

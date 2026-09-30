@@ -431,3 +431,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Face authoring source checkpoint (2026-09-30):** The new V7 head-only recipes and full donor report are committed as development inputs. Syntax, finite donor data, local input hash and Blender source inspection pass; no V7 rider promotion or visual acceptance is claimed.
 
 **Face graft source checkpoint (2026-09-30):** Subsequent V7 full/LOD metadata, sewn-contour manifests, graft, skin-paint and offline render recipes are retained as development files. Syntax/JSON checks pass; candidate acceptance remains with the hero review round.
+
+**R3 isolated-host finding (2026-09-30):** [One unchanged CPU gate run](../evidence/course-remaster/pro-envelope/r3-isolated-host-2026-09-30/README.md) passes at 4.115 µs p50 against the original 5 µs limit. Earlier loaded/full-suite misses remain valid; this is neither a full-suite nor CI or phone verdict. Keep the threshold and Rookie arithmetic unchanged; qualify a quiet CPU lane before claiming reliable release timing.
