@@ -1,0 +1,116 @@
+{
+  "input": "docs/evidence/alpine-retarget/a1-sawdust-rookie-restart.rec.json",
+  "inputSha256": "9cd1baa6ded132ef7f9b797a61f0cb09d693c7786bb279e838235e63bcffdb01",
+  "source": {
+    "url": "http://127.0.0.1:48272/",
+    "versionSha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "versionTime": "2026-09-30T09:34:58.881Z",
+    "indexUrl": "http://127.0.0.1:48272/assets/index-DQuHDZdR.js",
+    "indexSHA256": "4904ab3a01120571f53ab5cfd912ba9f1ab34640d648499773f4f8af03ce0623",
+    "htmlSHA256": "64716aa7aa85e64386976cf7bee92da49344ac1003e4e94709a18c2635568502"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:48272/",
+    "versionSha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "versionTime": "2026-09-30T09:34:58.881Z",
+    "indexUrl": "http://127.0.0.1:48272/assets/index-DQuHDZdR.js",
+    "indexSHA256": "4904ab3a01120571f53ab5cfd912ba9f1ab34640d648499773f4f8af03ce0623",
+    "htmlSHA256": "64716aa7aa85e64386976cf7bee92da49344ac1003e4e94709a18c2635568502"
+  },
+  "entry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 352,
+      "tris": 607018,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+      "shadowMap": 2048,
+      "heroTris": 92170,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 74798,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 310.2,
+      "entering": false,
+      "courseAssetsEnabled": true,
+      "courseAssetsMounted": 1,
+      "courseAssetsTextureMB": 6.333
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "expectMount": true,
+  "backend": "metal",
+  "strictBackendVerifier": "harness/lib/browser.ts",
+  "quality": "low",
+  "viewport": {
+    "width": 852,
+    "height": 392
+  },
+  "window": [
+    2910,
+    3035
+  ],
+  "expectedHash": "4b9a060e15075b4a",
+  "mp4": "/Users/raynos/projects/games/rockhop/docs/evidence/course-remaster/alpine-tree-kit/after/fault-restart/clip.mp4",
+  "sheet": "/Users/raynos/projects/games/rockhop/docs/evidence/course-remaster/alpine-tree-kit/after/fault-restart/sheet.jpg",
+  "frames": 125,
+  "seconds": 1.0416666666666667,
+  "finalHash": "4b9a060e15075b4a",
+  "ticksSimulated": 0,
+  "finishTime": null,
+  "probe": {
+    "durationSec": 1.041667,
+    "fps": 120,
+    "width": 852,
+    "height": 392,
+    "codec": "h264",
+    "frames": 125,
+    "sizeBytes": 1540498
+  },
+  "wallMs": 7816.6152919999995,
+  "camera": {
+    "frames": 125,
+    "box": {
+      "min": 0.2,
+      "max": 0.8
+    },
+    "outOfBox": 0,
+    "outOfBoxRiding": 0,
+    "rollViolations": 0,
+    "maxAbsRoll": 3.469446951953614e-18,
+    "clamped": 0,
+    "clampedPct": 0,
+    "states": {
+      "fast": 40,
+      "riding": 23,
+      "crash": 1,
+      "idle": 1
+    },
+    "minX": 0.342,
+    "maxX": 0.45,
+    "minY": 0.436,
+    "maxY": 0.55,
+    "violations": [],
+    "settleExcluded": 60,
+    "pass": true
+  },
+  "rider": null,
+  "clipSha256": "f806ee6bafad88375c982abe46baf7108c86c03714aa25e61517099653a3824a"
+}

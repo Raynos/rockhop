@@ -1,0 +1,98 @@
+{
+  "candidate": true,
+  "assumptions": [
+    "Camera zoom 1; physical 3D distance is at least absolute x distance.",
+    "LOD hysteresis moves return thresholds inward, so 26/65 m bound remains conservative.",
+    "No frustum benefit or deterministic-removal savings credited.",
+    "One shadow pass; parent must apply quality policy to mounted Alpine mesh names."
+  ],
+  "clusters": [
+    {
+      "cluster": 1,
+      "centreX": 36.666666666666664,
+      "widthX": 10,
+      "triangles": {
+        "full": 4960,
+        "near": 884,
+        "far": 12
+      },
+      "mainDraws": {
+        "full": 6,
+        "near": 6,
+        "far": 1
+      }
+    },
+    {
+      "cluster": 2,
+      "centreX": 114.0,
+      "widthX": 10,
+      "triangles": {
+        "full": 4200,
+        "near": 924,
+        "far": 12
+      },
+      "mainDraws": {
+        "full": 6,
+        "near": 6,
+        "far": 1
+      }
+    },
+    {
+      "cluster": 3,
+      "centreX": 180.66666666666666,
+      "widthX": 8,
+      "triangles": {
+        "full": 3476,
+        "near": 788,
+        "far": 12
+      },
+      "mainDraws": {
+        "full": 6,
+        "near": 6,
+        "far": 1
+      }
+    },
+    {
+      "cluster": 4,
+      "centreX": 248.33333333333334,
+      "widthX": 11,
+      "triangles": {
+        "full": 4960,
+        "near": 884,
+        "far": 12
+      },
+      "mainDraws": {
+        "full": 6,
+        "near": 6,
+        "far": 1
+      }
+    },
+    {
+      "cluster": 5,
+      "centreX": 366.3333333333333,
+      "widthX": 9,
+      "triangles": {
+        "full": 6410,
+        "near": 1142,
+        "far": 12
+      },
+      "mainDraws": {
+        "full": 6,
+        "near": 6,
+        "far": 1
+      }
+    }
+  ],
+  "maxSimultaneousFullClusters": 1,
+  "maxSimultaneousFullOrNearClusters": 2,
+  "maxCandidateMainDraws": 15,
+  "maxCandidateShadowDrawsPerPass": 6,
+  "maxCandidateMainTriangles": 6458,
+  "staticWorldBaselineMaterialDraws": 178,
+  "staticWorldWithCandidateMainDrawUpper": 193,
+  "staticWorldBaselineShadowMeshes": 96,
+  "staticWorldWithCandidateShadowDrawUpper": 102,
+  "historicalThreeSecondWholeFrameCalls": 108,
+  "historicalWindowConservativeWithCandidateCalls": 129,
+  "historicalWarning": "108 is a previous 3 s start-window SwiftShader sample, not current same-state measurement or whole-course peak."
+}

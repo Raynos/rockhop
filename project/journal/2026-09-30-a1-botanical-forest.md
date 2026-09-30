@@ -1,0 +1,7 @@
+# A1 botanical forest and required-map fallback
+
+Finding: Ten authored tree variants replace all 276 audited A1 cone anchors with shared model/map ownership. Parent full/fault/restart motion accepts botanical variety as a bounded gain. A resolved GLTF with a missing map previously hid the original forest; LoadingManager failures now reject partial documents before library completion, preserving fallback. Late A1→D1 completion disposes resources without attachment.
+
+Validation: Eleven focused loader/lifetime tests, full TypeScript and targeted lint pass. The extended frozen-source offline suite passes 11/11, including C1/A1 mounted scenery with the origin shut down and the exact first-eight medal purchase at 1,840→0. Third-round Metal partial boot/clear/Pro-clear/crash/restart/bundle passes 14/14. Matched A1 full/fault/restart state hashes and cameras agree. See [evidence](../../docs/evidence/course-remaster/alpine-tree-kit/README.md) and asks 170/176.
+
+Limits: Source comparisons include concurrent hero/audio edits; timing deltas are not solely attributed to this kit. Full-ride p95 calls84→97, triangles123,061→93,875, synced3.1→4.0ms; both traces retain a ~106ms readback spike. A1 terrain/lake/mill and canopy/skyline refinement, A2/A3 rollout, whole course acceptance and physical phones remain open. The preceding user status reply was no progress; this round changes source and adds runtime evidence. No release or course sign-off claimed.

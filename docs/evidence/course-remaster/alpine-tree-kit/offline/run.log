@@ -1,0 +1,16 @@
+    golden: WARNING nothing under harness/inputs/c1-low-tide/ is a rookie golden stamped src=fd8fe7c2; using newest bot-3.json (src=a415fcb8) — re-run pnpm harness:bot c1-low-tide
+    server http://127.0.0.1:62960/
+    online boot 14506 ms, 36918702 B over the wire
+  PASS offline.cacheAfterFirstLoad    147 entries · 32 models · 40.06 MB  need ≥ 14 models, ≥ 5 assets+fonts, ≥ 27 MB; wire 36.92 MB
+  PASS offline.coldStartPlayable      100/100 done=true in 11154 ms  0 origin requests, transferSize 0, workerStart 0.83 ms, crossOriginIsolated true
+  PASS offline.firstFrame             canvas / context
+  PASS offline.worldMapDraws          tracks: 3D canvas ready, 12/12 levels, ride ready, failure false  need the shipped 3D island canvas and all twelve level choices with the origin unreachable
+  PASS offline.inboxQueues            POST /api/inbox → TypeError: Failed to fetch  the worker bypasses /api/; the queue itself is src/ui/inbox.ts NoteQueue (unit-tested)
+  PASS offline.garageSwapsOffline     10/10 combinations  Pro locked→bought PASS (1,840→0 Scrap); 0 failed /models/ requests
+  PASS offline.rideFinishes           30.3500 s · 2bfe061963ff  online 30.3500 · 2bfe061963ff
+  PASS offline.authoredCourseAssets   2/2 mounted  C1 tug and full A1 forest must decode, attach and draw after the origin is shut down
+  PASS offline.noPageErrors           0
+  PASS offline.slowStart              15136 ms at 50 kbps / 400 ms RTT  offline was 11154 ms; limit ×1.6 = 17846 ms; 103 B over the wire
+  PASS offline.updateSurvives         32 models kept · 50.3 KB re-fetched  0 B of models off the wire (must be 0); loader 100/100
+
+offline e2e: 11/11 checks pass → harness/out/offline/offline.json

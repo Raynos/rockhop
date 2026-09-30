@@ -1,0 +1,215 @@
+{
+  "beforeSource": {
+    "url": "http://127.0.0.1:48271/",
+    "versionSha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "versionTime": "2026-09-30T09:27:06.118Z",
+    "indexUrl": "http://127.0.0.1:48271/assets/index-CbcWbNM_.js",
+    "indexSHA256": "519aafb84d7f0e944e369caf7fa039daa473dbf1558d1676823b8e3322c167af",
+    "htmlSHA256": "3cccdd096d756ebc13a6a4b776b1f6fc063c3714c19b06d2ebb914e057abb9b9"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:48272/",
+    "versionSha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "versionTime": "2026-09-30T09:34:58.881Z",
+    "indexUrl": "http://127.0.0.1:48272/assets/index-DQuHDZdR.js",
+    "indexSHA256": "4904ab3a01120571f53ab5cfd912ba9f1ab34640d648499773f4f8af03ce0623",
+    "htmlSHA256": "64716aa7aa85e64386976cf7bee92da49344ac1003e4e94709a18c2635568502"
+  },
+  "backend": {
+    "ok": true,
+    "kind": "webgl2",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "vendor": "Google Inc. (Apple)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "maxTextureSize": 16384
+  },
+  "config": {
+    "tier": "low",
+    "fps": 20,
+    "width": 852,
+    "height": 392,
+    "physicsHz": 120,
+    "ticksPerFrame": 6
+  },
+  "inputSHA256": "611795e3f00fb504902d5a5b1ca44490206229144fbaaf0e03ce573316f6ef8f",
+  "frames": 607,
+  "finalHash": "91f3878cfca365d6",
+  "finalTick": 3642,
+  "finishTime": 30.349999999999998,
+  "errors": {
+    "before": [],
+    "after": []
+  },
+  "camera": {
+    "before": {
+      "frames": 607,
+      "outOfBoxRiding": 0,
+      "maxAbsRoll": 6.93889390390723e-18
+    },
+    "after": {
+      "frames": 607,
+      "outOfBoxRiding": 0,
+      "maxAbsRoll": 6.93889390390723e-18
+    }
+  },
+  "summary": {
+    "before": {
+      "calls": {
+        "p50": 78,
+        "p95": 84,
+        "max": 86
+      },
+      "triangles": {
+        "p50": 111186,
+        "p95": 123061,
+        "max": 131428
+      },
+      "submitMs": {
+        "p50": 0.40000009536743164,
+        "p95": 0.6999998092651367,
+        "max": 1.5999999046325684
+      },
+      "syncedMs": {
+        "p50": 1.8000001907348633,
+        "p95": 3.0999999046325684,
+        "max": 106.2000002861023
+      },
+      "physicsMs": {
+        "p50": 0.09999990463256836,
+        "p95": 0.19999980926513672,
+        "max": 2.5
+      }
+    },
+    "after": {
+      "calls": {
+        "p50": 83,
+        "p95": 97,
+        "max": 101
+      },
+      "triangles": {
+        "p50": 82562,
+        "p95": 93875,
+        "max": 97307
+      },
+      "submitMs": {
+        "p50": 0.5999999046325684,
+        "p95": 0.8000001907348633,
+        "max": 1.6999998092651367
+      },
+      "syncedMs": {
+        "p50": 2.3000001907348633,
+        "p95": 4,
+        "max": 106.2999997138977
+      },
+      "physicsMs": {
+        "p50": 0.09999990463256836,
+        "p95": 0.20000028610229492,
+        "max": 2.299999713897705
+      }
+    }
+  },
+  "maxima": {
+    "before": {
+      "calls": 86,
+      "triangles": 131428,
+      "texturesMB": 39.464665496826164,
+      "textures": 94,
+      "geometries": 213,
+      "programs": 33
+    },
+    "after": {
+      "calls": 101,
+      "triangles": 97307,
+      "texturesMB": 44.29679049682616,
+      "textures": 107,
+      "geometries": 229,
+      "programs": 37
+    }
+  },
+  "readbackSpikes": {
+    "before": {
+      "tick": 12,
+      "x": 0.6019818800292874,
+      "physicsMs": 0.5,
+      "submitMs": 1.1999998092651367,
+      "syncedMs": 106.2000002861023,
+      "camera": {
+        "pos": {
+          "x": 2.931255063335099,
+          "y": 2.499293921705181
+        },
+        "clamped": false,
+        "posZ": 9.121100262842484,
+        "fovBoostDeg": 0,
+        "dist": 9.52560471714763,
+        "bikeScreenX": 0.45028049522432645,
+        "bikeScreenY": 0.5502759518062299,
+        "bikeHeightFrac": 0.3942518299004155,
+        "roll": 3.469446951953614e-18,
+        "yaw": 0.1954768762233649,
+        "pitch": 0.1392772743091475,
+        "state": "idle"
+      },
+      "phase": "riding",
+      "calls": 74,
+      "triangles": 84660,
+      "points": 512,
+      "lines": 0,
+      "geometries": 211,
+      "textures": 88,
+      "programs": 33,
+      "texturesMB": 39.464665496826164,
+      "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "contextKind": "webgl2"
+    },
+    "after": {
+      "tick": 12,
+      "x": 0.6019818800292874,
+      "physicsMs": 0.5,
+      "submitMs": 1.3000001907348633,
+      "syncedMs": 106.2999997138977,
+      "camera": {
+        "pos": {
+          "x": 2.931255063335099,
+          "y": 2.499293921705181
+        },
+        "clamped": false,
+        "posZ": 9.121100262842484,
+        "fovBoostDeg": 0,
+        "dist": 9.52560471714763,
+        "bikeScreenX": 0.45028049522432645,
+        "bikeScreenY": 0.5502759518062299,
+        "bikeHeightFrac": 0.3942518299004155,
+        "roll": 3.469446951953614e-18,
+        "yaw": 0.1954768762233649,
+        "pitch": 0.1392772743091475,
+        "state": "idle"
+      },
+      "phase": "riding",
+      "calls": 87,
+      "triangles": 75127,
+      "points": 512,
+      "lines": 0,
+      "geometries": 222,
+      "textures": 101,
+      "programs": 37,
+      "texturesMB": 44.29679049682616,
+      "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+      "contextKind": "webgl2"
+    }
+  },
+  "limitations": [
+    "Headless Chromium on Apple M5 Max Metal; landscape phone viewport with desktop device class, not physical iOS Safari.",
+    "Both version SHA values derive from the same HEAD; actual entry JS hashes distinguish frozen shared dirty builds. Concurrent uncommitted renderer/app/physics/audio work may accompany forest integration, so this is not an isolated forest cost measurement.",
+    "texturesMB is renderer estimated texture allocation, not process/driver total memory. Heap growth has no equivalent forced-GC boundaries and is not a leak result.",
+    "Both traces retain the approximately 106ms synced readback spike at tick12/x0.6019818800292874. No sample was removed.",
+    "Paired clips use the pre-missing-map-fix build. The subsequent source fix affects failure handling only; visual provenance remains bound to the captured JS hashes."
+  ],
+  "p95Delta": {
+    "calls": 13,
+    "triangles": -29186,
+    "submitMs": 0.10000038146972656,
+    "syncedMs": 0.9000000953674316,
+    "physicsMs": 4.76837158203125e-07
+  }
+}

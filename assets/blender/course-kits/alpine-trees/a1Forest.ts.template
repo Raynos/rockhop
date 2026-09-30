@@ -1,0 +1,134 @@
+/** Full A1 forest candidate, authored from the current seeded placement audit.
+ * Regenerate with assets/blender/course-kits/alpine-trees/author-a1-forest.py.
+ * Anchor audit SHA-256: __AUDIT_SHA__
+ * Parent must generate all original zone props before filtering the replaced family.
+ */
+import * as THREE from 'three';
+import type { CompiledTrack } from '../../../core/types';
+import type { CourseAssetDelivery } from '../courseAssets';
+import type { PropBatch } from '../props';
+import { zoneGround } from './zoneKit';
+import { loadAlpineTreeKit, type AlpineTreeLoadOptions, type AlpineTreePlacement, type AlpineTreeVariant } from './alpineTrees';
+
+export const A1_FOREST_TRACK_HASH = '3576427b1ee3ff5a';
+export const A1_FOREST_SEED = 4096148763;
+type Anchor = readonly [batch: string, item: number, x: number, z: number, originalHeightScale: number, yaw: number];
+const ANCHORS: readonly Anchor[] = [
+__ANCHORS__
+];
+const HEIGHT: Readonly<Record<AlpineTreeVariant, number>> = {
+  'pine-a': 22, 'pine-b': 17, 'pine-c': 26, 'pine-young': 13, 'fir-a': 24, 'fir-b': 30,
+  'snag-a': 14, 'snag-b': 10, 'sapling-pine': 3.2, 'sapling-fir': 4.5,
+};
+/** Keep mature crowns out of the close mill, log, dock, race, shed and flume reading windows. */
+export const A1_FOREST_SIGHTLINES = [
+  { name: 'mill gate and early logs', x0: -24, x1: 56 },
+  { name: 'loading dock', x0: 56, x1: 95 },
+  { name: 'mill race and log landing', x0: 128, x1: 188 },
+  { name: 'saw shed', x0: 193, x1: 234 },
+  { name: 'flume approach and landing', x0: 272, x1: 356 },
+  { name: 'finish rollers and gate', x0: 383, x1: 410 },
+] as const;
+export interface A1ForestPlan {
+  nearClusters: readonly (readonly AlpineTreePlacement[])[];
+  farBanks: readonly (readonly AlpineTreePlacement[])[];
+  nearTrees: number;
+  farTrees: number;
+}
+
+export function a1ForestApplicable(track: CompiledTrack): boolean {
+  return track.def.id === 'a1-sawdust' && track.def.seed === A1_FOREST_SEED && track.hash === A1_FOREST_TRACK_HASH;
+}
+function assertTrack(track: CompiledTrack): void {
+  if (!a1ForestApplicable(track)) throw new Error('A1 forest anchors require the audited A1 seed and track hash');
+}
+function seedOf([batch, item]: Anchor): number {
+  let value = (A1_FOREST_SEED ^ Math.imul(item + 1, 0x9e3779b1)) >>> 0;
+  for (const char of batch) value = Math.imul(value ^ char.charCodeAt(0), 16777619) >>> 0;
+  return value;
+}
+function placement(anchor: Anchor, track: CompiledTrack): AlpineTreePlacement {
+  const [batch, , x, z, oldHeight, yaw] = anchor;
+  const n = seedOf(anchor), t = (n % 1000) / 999;
+  const far = batch.startsWith('pinefar');
+  const guarded = A1_FOREST_SIGHTLINES.some(range => x >= range.x0 - 3 && x <= range.x1 + 3);
+  let variant: AlpineTreeVariant, height: number;
+  if (far) {
+    // Two permanent atlas banks retain the original lake-side anchors. No mesh upgrades.
+    const palette: readonly AlpineTreeVariant[] = ['pine-a', 'pine-b', 'pine-c', 'fir-a', 'fir-b', 'pine-young'];
+    variant = n % 23 === 0 ? 'snag-b' : palette[n % palette.length]!;
+    height = variant === 'snag-b' ? 6 + t * 3 : Math.min(oldHeight * 10, 9 + t * 6);
+  } else if (z > 0 || (guarded && z > -20)) {
+    // The original foreground trees and close hazard anchors become low regrowth.
+    variant = n % 2 ? 'sapling-pine' : 'sapling-fir';
+    height = z > 0 ? 1.0 + t * .4 : 1.7 + t * .7;
+  } else if (guarded) {
+    variant = n % 7 === 0 ? 'snag-a' : n % 3 === 0 ? 'pine-young' : 'pine-b';
+    height = 5.3 + t * 1.5;
+  } else {
+    const palette: readonly AlpineTreeVariant[] = ['pine-a', 'pine-b', 'pine-b', 'fir-a', 'pine-young', 'snag-a', 'sapling-pine', 'sapling-fir'];
+    variant = palette[n % palette.length]!;
+    height = variant.startsWith('sapling') ? 2.5 + t : variant === 'snag-a' ? 6 + t * 2 : Math.min(oldHeight * 10, 8 + t * 4);
+  }
+  return { variant, x, y: zoneGround('alpine', track.def.profile, x, z) - .04, z, scale: height / HEIGHT[variant], yaw };
+}
+
+/** Static anchor and grouping decisions; no runtime RNG or per-tree model duplication. */
+export function buildA1ForestPlan(track: CompiledTrack): A1ForestPlan {
+  assertTrack(track);
+  const near = new Map<string, AlpineTreePlacement[]>();
+  const far: [AlpineTreePlacement[], AlpineTreePlacement[]] = [[], []];
+  for (const anchor of ANCHORS) {
+    const tree = placement(anchor, track);
+    if (anchor[0].startsWith('pinefar')) { far[tree.z < -49 ? 1 : 0].push(tree); continue; }
+    // Near LOD roots remain local. Foreground regrowth has independent bounds/selection.
+    const key = `${Math.floor(tree.x / 24)}:${tree.z > 0 ? 'front' : 'back'}`;
+    const cluster = near.get(key) ?? [];
+    cluster.push(tree); near.set(key, cluster);
+  }
+  return { nearClusters: [...near.values()], farBanks: far, nearTrees: 55, farTrees: 221 };
+}
+
+/** Validate the entire old family before mutating; mismatched builders cannot erase a forest. */
+export function removeA1ForestPlaceholders(batches: readonly PropBatch[], track: CompiledTrack): { near: number; far: number; shadows: number } {
+  assertTrack(track);
+  const matches = (name: string, x: number, z: number, shadow = false): boolean => ANCHORS.some(anchor =>
+    (shadow ? !anchor[0].startsWith('pinefar') && anchor[3] > -20 : anchor[0] === name) &&
+    Math.abs(anchor[2] - x) < 1e-7 && Math.abs(anchor[3] - z) < 1e-7);
+  const removals: { batch: PropBatch; indices: number[] }[] = [];
+  const result = { near: 0, far: 0, shadows: 0 };
+  for (const batch of batches) {
+    const tree = /^pine(?:far)?\d$/.test(batch.name), shadow = batch.name === 'contactshadow';
+    if (!tree && !shadow) continue;
+    const indices: number[] = [];
+    batch.items.forEach(({ m }, i) => {
+      if (!matches(batch.name, m.elements[12]!, m.elements[14]!, shadow)) {
+        if (tree) throw new Error(`A1 forest source placement changed: ${batch.name}:${i}`);
+        return;
+      }
+      indices.push(i);
+      result[shadow ? 'shadows' : batch.name.startsWith('pinefar') ? 'far' : 'near']++;
+    });
+    removals.push({ batch, indices });
+  }
+  if (result.near !== 55 || result.far !== 221) throw new Error(`A1 forest expected 55/221 original trees, found ${result.near}/${result.far}`);
+  for (const { batch, indices } of removals) for (const i of indices.reverse()) batch.items.splice(i, 1);
+  return result;
+}
+
+/** One course-owned bank load; parent owns entry cancellation and renderer retirement. */
+export async function loadA1Forest(track: CompiledTrack, options: AlpineTreeLoadOptions = {}): Promise<CourseAssetDelivery> {
+  const plan = buildA1ForestPlan(track);
+  const kit = await loadAlpineTreeKit(options);
+  if (!kit) throw new Error('A1 forest assets failed or were cancelled');
+  try {
+    if (options.signal?.aborted) throw new Error('A1 forest course was cancelled');
+    const root = new THREE.Group(); root.name = 'a1-botanical-forest';
+    if (options.banks === 'far-only') root.add(kit.farCluster(plan.nearClusters.flat()));
+    else for (const trees of plan.nearClusters) root.add(kit.cluster(trees));
+    for (const trees of plan.farBanks) root.add(kit.farCluster(trees));
+    return { root, textureBytes: kit.textureBytes, dispose: kit.release };
+  } catch (error) {
+    kit.release(); options.onError?.(error); throw error;
+  }
+}

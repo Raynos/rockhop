@@ -52,6 +52,7 @@ import type { WorldDetail } from './props';
 import { buildZoneKit, isZone } from './zones/zoneKit';
 import { mountCourseAssets, type CourseAssetOwner } from './courseAssets';
 import { loadC1Harbor } from './zones/c1Harbor';
+import { a1ForestApplicable, loadA1Forest, removeA1ForestPlaceholders } from './zones/a1Forest';
 
 /** Art-pack far plate / sky panorama per exterior biome (the ROCKHOP zones' are `plate-<zone>` / `sky-<zone>`). */
 export const PLATE_ID: Partial<Record<string, string>> = { canyon: 'plate-canyon', nightCity: 'plate-nightcity', coast: 'plate-coast', alpine: 'plate-alpine', quarry: 'plate-quarry', snow: 'plate-snowline' };
@@ -972,6 +973,39 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
           return asset;
         }));
         group.add(courseAssets.root);
+      }
+      if (authoredCourse && a1ForestApplicable(track)) {
+        // Preserve the actual seeded matrices/colours for an independent fallback.
+        // Generate the old family first so later scenery keeps the same RNG sequence.
+        const original = zk.batches.map(batch => ({ batch, items: [...batch.items] }));
+        removeA1ForestPlaceholders(zk.batches, track);
+        const removed: PropBatch[] = [];
+        for (const { batch, items } of original) {
+          const retained = new Set(batch.items);
+          const old = new PropBatch(`a1-original-${batch.name}`, batch.geometry, batch.material, batch.shadows);
+          old.items.push(...items.filter(item => !retained.has(item)));
+          if (old.items.length) removed.push(old);
+        }
+        const fallback = new THREE.Group();
+        fallback.add(...buildBatches(removed).objects);
+        fallback.name = 'a1-original-forest-fallback';
+        group.add(fallback);
+        const owner = mountCourseAssets(loadA1Forest(track, {
+          completeMaterial: material => { lib.complete(material); },
+        }).then(asset => {
+          asset.root.traverse(object => {
+            if (!(object as THREE.Mesh).isMesh) return;
+            // Tier rules manage shadows without overriding the LOD's visibility.
+            object.name = `props:${object.name}`;
+            object.userData['castHigh'] = object.castShadow;
+            object.userData['receiveHigh'] = object.receiveShadow;
+          });
+          return asset;
+        }));
+        // ready also resolves after a failed load; only a live attachment hides originals.
+        void owner.ready.then(() => { if (owner.root.children.length) fallback.visible = false; });
+        courseAssets = owner;
+        group.add(owner.root);
       }
       meshes.push(...zk.meshes);
       batches.push(...zk.batches);

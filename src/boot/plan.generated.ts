@@ -109,6 +109,22 @@ export const PUBLIC_BYTES = {
   "models/bike-rookie.source.json": 12578,
   "models/c1-harbor-tug-lod.glb": 213636,
   "models/c1-harbor-tug.glb": 274268,
+  "models/course-kits/alpine-trees/bark_willow_02-arm.phone.webp": 14176,
+  "models/course-kits/alpine-trees/bark_willow_02-diffuse.phone.webp": 19454,
+  "models/course-kits/alpine-trees/bark_willow_02-nor_gl.phone.webp": 26570,
+  "models/course-kits/alpine-trees/cards-albedo.phone.webp": 74974,
+  "models/course-kits/alpine-trees/cards-arm.phone.webp": 24258,
+  "models/course-kits/alpine-trees/cards-normal.phone.webp": 27870,
+  "models/course-kits/alpine-trees/fir_bark-arm.phone.webp": 9566,
+  "models/course-kits/alpine-trees/fir_bark-diffuse.phone.webp": 10634,
+  "models/course-kits/alpine-trees/fir_bark-nor_gl.phone.webp": 26368,
+  "models/course-kits/alpine-trees/impostor-albedo.phone.webp": 46414,
+  "models/course-kits/alpine-trees/impostor-normal.phone.webp": 28540,
+  "models/course-kits/alpine-trees/pine_bark-arm.phone.webp": 11536,
+  "models/course-kits/alpine-trees/pine_bark-diffuse.phone.webp": 13740,
+  "models/course-kits/alpine-trees/pine_bark-nor_gl.phone.webp": 21264,
+  "models/course-kits/alpine-trees/trees-lod.glb": 169428,
+  "models/course-kits/alpine-trees/trees.glb": 564700,
   "models/rider-race-bluewhite-lod.glb": 946824,
   "models/rider-race-bluewhite-lod.source.json": 9556,
   "models/rider-race-bluewhite.glb": 2448152,
@@ -128,10 +144,10 @@ export const PUBLIC_BYTES = {
   "models/rider-street-openface-lod.glb": 1245476,
   "models/rider-street-openface-lod.source.json": 14803,
   "models/rider-street-openface.glb": 2796628,
-  "models/rider-street-openface.source.json": 10839
+  "models/rider-street-openface.source.json": 10839,
 } as const;
 
 // The offline pack as each device tier downloads it (`packMembership`, src/boot/asset-totals.ts):
 // tier-free assets in both, og.jpg in neither, one of the 1x/2x pair each. Generated, so the module
 // path and `__BOOT_TOTALS__` are the same numbers rather than two sums that could drift (totals.ts).
-export const OFFLINE_PACK_BYTES = { '1x': 5988214, '2x': 7079425 };
+export const OFFLINE_PACK_BYTES = { '1x': 7077706, '2x': 8168917 };

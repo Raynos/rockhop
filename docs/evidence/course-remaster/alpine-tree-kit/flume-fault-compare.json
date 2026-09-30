@@ -1,0 +1,175 @@
+{
+  "name": "flume-fault",
+  "left": "before",
+  "right": "after",
+  "input": "assets/blender/course-kits/alpine-trees/a1-held-go.rec.json",
+  "inputSha256": "87acb68ce81eedfe9cb6b97faf226658c412064ad028bd0f82cc01d46f05e71f",
+  "window": [
+    2520,
+    3156
+  ],
+  "frames": 106,
+  "finalHash": "9b8c25c5404681b3",
+  "finishTime": null,
+  "quality": "low",
+  "backend": "metal",
+  "camera": {
+    "before": {
+      "frames": 106,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953615e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 72,
+        "riding": 3,
+        "crash": 20,
+        "idle": 1
+      },
+      "minX": 0.323,
+      "maxX": 0.593,
+      "minY": 0.234,
+      "maxY": 0.559,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    },
+    "after": {
+      "frames": 106,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953615e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 72,
+        "riding": 3,
+        "crash": 20,
+        "idle": 1
+      },
+      "minX": 0.323,
+      "maxX": 0.593,
+      "minY": 0.234,
+      "maxY": 0.559,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    }
+  },
+  "beforeSource": {
+    "url": "http://127.0.0.1:48271/",
+    "versionSha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "versionTime": "2026-09-30T09:27:06.118Z",
+    "indexUrl": "http://127.0.0.1:48271/assets/index-CbcWbNM_.js",
+    "indexSHA256": "519aafb84d7f0e944e369caf7fa039daa473dbf1558d1676823b8e3322c167af",
+    "htmlSHA256": "3cccdd096d756ebc13a6a4b776b1f6fc063c3714c19b06d2ebb914e057abb9b9"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:48272/",
+    "versionSha": "701e58bd97c5a03ba3c22dd3a62f025bee764026",
+    "versionTime": "2026-09-30T09:34:58.881Z",
+    "indexUrl": "http://127.0.0.1:48272/assets/index-DQuHDZdR.js",
+    "indexSHA256": "4904ab3a01120571f53ab5cfd912ba9f1ab34640d648499773f4f8af03ce0623",
+    "htmlSHA256": "64716aa7aa85e64386976cf7bee92da49344ac1003e4e94709a18c2635568502"
+  },
+  "beforeEntry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 325,
+      "tris": 681843,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+      "shadowMap": 2048,
+      "heroTris": 92170,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 74798,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 112.3,
+      "entering": false
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "afterEntry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 352,
+      "tris": 607018,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+      "shadowMap": 2048,
+      "heroTris": 92170,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 74798,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 1443.3,
+      "entering": false,
+      "courseAssetsEnabled": true,
+      "courseAssetsMounted": 1,
+      "courseAssetsTextureMB": 6.333
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "rawClipSHA256": {
+    "before": "2a611c0d0619821eb51ab19a3dfdd6b95412e1b2fea18ad5769dc6181f535a1e",
+    "after": "2e43864460c6485bbb77d2fb9dd16d80023e9917b26e05d82e37e6f627a3814d"
+  },
+  "output": "/Users/raynos/projects/games/rockhop/docs/evidence/course-remaster/alpine-tree-kit/flume-fault-compare.mp4",
+  "outputSHA256": "f66360d40ca3860ff07a2526e163e0d4400fd053538d96b0a33a470f69e3a4b2",
+  "probe": {
+    "durationSec": 5.3,
+    "fps": 20,
+    "width": 1704,
+    "height": 392,
+    "codec": "h264",
+    "frames": 106,
+    "sizeBytes": 3794882
+  },
+  "dirtyTreeConfounder": "Version SHA derives from HEAD, not the entire shared dirty source tree. The two actual entry-JS fingerprints are separately verified. Uncommitted renderer/app/physics/audio differences may accompany the forest; timing deltas are not an isolated estimate of the forest alone."
+}

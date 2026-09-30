@@ -22,6 +22,8 @@
 
 **Authored C1 model delivery:** The [working tug](../evidence/course-remaster/c1/harbor-tug/README.md) passes matched played review as a bounded asset improvement. Its full/LOD bytes now cache during the first loader, while real course entry owns decode, warm-up, fallback and teardown. The complete offline suite passes 10/10 on the shared candidate; phone performance and complete Coast art remain open. Courses stay **0/12**.
 
+**Authored Alpine forest delivery:** The [A1 botanical forest](../evidence/course-remaster/alpine-tree-kit/README.md) replaces all 276 audited cone-tree anchors with ten shared variants. Matched full/fault/restart motion gives a bounded art gain; missing maps retain the original forest and late course loads retire safely. The extended offline suite passes 11/11, including both authored scenes and the exact first-eight-course Pro purchase; the third-round host Metal partial gate passes 14/14. Terrain/lake/mill refinement, A2/A3 rollout and physical-device gates remain open. Courses stay **0/12**.
+
 **In-ride performance readout:** A small tappable FPS/frame-time pill on every course opens the detailed debug panel. The [silent landscape phone and desktop interaction gate](../../harness/e2e/perf-panel.mts) passed; software-renderer numbers are not physical-device performance evidence.
 
 **Remaster progress (ask 199):** Full-plan effort is estimated at **20–25%**, graphics effort at **5–10%**, and fully signed-off courses remain **0/12**. These planning estimates separate implemented foundations from course acceptance. The [four before/after boards](../evidence/course-remaster/progress-board-2026-09-30/README.md) cover all twelve using archived played captures; differing render tiers and unchanged art are labelled.

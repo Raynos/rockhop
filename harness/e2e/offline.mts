@@ -71,6 +71,8 @@ class CountingServer {
   private server: PreviewServer | null = null;
   port = 0;
 
+  constructor(private readonly distDir: string) {}
+
   reset(): void {
     this.wire.bytes = 0;
     this.wire.requests = 0;
@@ -87,7 +89,7 @@ class CountingServer {
       root: REPO_ROOT,
       configFile: path.join(REPO_ROOT, 'vite.config.ts'),
       logLevel: 'warn',
-      build: { outDir: DIST_DIR },
+      build: { outDir: this.distDir },
       preview: { host: '127.0.0.1', port: this.port, strictPort: this.port !== 0 },
       plugins: [
         {
@@ -99,7 +101,7 @@ class CountingServer {
               // A "new build": the same worker with a different stamp. The browser sees a byte-different
               // sw.js, installs it, and the boot adopts it — no second `vite build` needed.
               if (this.bumpBuild && url === '/sw.js') {
-                const src = fs.readFileSync(path.join(DIST_DIR, 'sw.js'), 'utf8').replace(/^const BUILD = '([^']+)';/m, `const BUILD = '$1-${this.bumpBuild}';`);
+                const src = fs.readFileSync(path.join(this.distDir, 'sw.js'), 'utf8').replace(/^const BUILD = '([^']+)';/m, `const BUILD = '$1-${this.bumpBuild}';`);
                 const buf = Buffer.from(src);
                 wire.bytes += buf.length;
                 wire.requests++;
@@ -256,7 +258,7 @@ async function replayGolden(page: Page, json: string): Promise<{ hash: string; f
 // The suite
 // ---------------------------------------------------------------------------------------------------
 
-export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string } = {}): Promise<OfflineReport> {
+export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string; distDir?: string } = {}): Promise<OfflineReport> {
   const log = (m: string): void => {
     if (opts.verbose) console.log(`    ${m}`);
   };
@@ -270,17 +272,20 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
   const goldenFile = pickGolden(GOLDEN_TRACK, log);
   const goldenJson = goldenFile ? encodeJSON(loadRecording(goldenFile)) : null;
   measured['golden'] = goldenFile ? path.relative(REPO_ROOT, goldenFile) : null;
-  // Four Gold career medals earn enough Scrap for the real Garage purchase. Seed the PBs before
+  // Seven Gold and one Diamond in the Rookie's eight courses fund Pro exactly.
+  // Seed the PBs before
   // the one online load so CareerEconomy performs its normal backfill; the offline phase must
   // still inspect the locked bike and spend Scrap through the player's Buy Pro button.
-  const medalSeed = ROCKHOP_TRACKS.slice(0, Math.ceil(PRO_PRICE / SCRAP_REWARD.gold)).map((track) => track.id);
-  if (medalSeed.length * SCRAP_REWARD.gold < PRO_PRICE) throw new Error('offline e2e: campaign cannot earn Pro');
+  const medalSeed = ROCKHOP_TRACKS.slice(0, 8).map((track, i) => ({ id: track.id, medal: i === 7 ? 'platinum' as const : 'gold' as const }));
+  if (medalSeed.reduce((sum, entry) => sum + SCRAP_REWARD[entry.medal], 0) !== PRO_PRICE) throw new Error('offline e2e: Rookie medals must fund Pro exactly');
   measured['garageMedalSeed'] = medalSeed;
 
   const profile = path.join(OUT_DIR, '.offline-profile', String(process.pid));
   fs.rmSync(profile, { recursive: true, force: true });
   fs.mkdirSync(profile, { recursive: true });
-  const server = new CountingServer();
+  const distDir = path.resolve(opts.distDir ?? DIST_DIR);
+  measured['distDir'] = distDir;
+  const server = new CountingServer(distDir);
   const url = (await server.start()) + '/';
   log(`server ${url}`);
   const open = (offline: boolean): Promise<BrowserContext> => chromium.launchPersistentContext(profile, { headless: true, args: ARGS, ...GEOM, offline });
@@ -292,9 +297,9 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
     let onlineRide: { hash: string; finishTime: number | null; faults: number } | null = null;
     {
       const ctx = await open(false);
-      await ctx.addInitScript((ids) => {
+      await ctx.addInitScript((entries) => {
         if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
-        for (const id of ids) localStorage.setItem(`rockhop.best.${id}`, JSON.stringify({ time: 60, faults: 0, medal: 'gold', bike: 'rookie' }));
+        for (const entry of entries) localStorage.setItem(`rockhop.best.${entry.id}`, JSON.stringify({ time: 60, faults: 0, medal: entry.medal, bike: 'rookie' }));
       }, medalSeed);
       const { page, read } = await bootPage(ctx, url, onlineErrors);
       await page.waitForFunction(() => navigator.serviceWorker.controller !== null, null, { timeout: 60_000 }).catch(() => undefined);
@@ -495,6 +500,30 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
       const rideOk = !!offRide && !!onlineRide && offRide.hash === onlineRide.hash && offRide.finishTime === onlineRide.finishTime && offRide.finishTime !== null;
       check('offline.rideFinishes', rideOk, offRide ? `${offRide.finishTime?.toFixed(4) ?? 'no finish'} s · ${offRide.hash.slice(0, 12)}` : 'no replay', onlineRide ? `online ${onlineRide.finishTime?.toFixed(4) ?? 'none'} · ${onlineRide.hash.slice(0, 12)}` : 'no online run to compare');
 
+      // CPU replay alone cannot prove that newly authored scenery decoded offline.
+      // Await real renderer entries with the origin still shut down, then draw them.
+      const authored = await page.evaluate(async () => {
+        const t = (window as unknown as { __rockhop?: {
+          loadTrack(id: string, seed?: number): Promise<boolean>;
+          setBike(bike: string): void;
+          render(sync?: boolean): number;
+          info(): { render: Record<string, unknown> };
+        } }).__rockhop;
+        if (!t) return null;
+        t.setBike('rookie');
+        const entries = [];
+        for (const id of ['c1-low-tide', 'a1-sawdust']) {
+          const loaded = await t.loadTrack(id, 1);
+          t.render(true);
+          const info = t.info().render;
+          entries.push({ id, loaded, enabled: info['courseAssetsEnabled'], mounted: info['courseAssetsMounted'], textureMB: info['courseAssetsTextureMB'] });
+        }
+        return entries;
+      }).catch(() => null);
+      const authoredOk = !!authored && authored.length === 2 && authored.every(entry => entry.loaded && entry.enabled === true && entry.mounted === 1 && Number(entry.textureMB) > 0);
+      check('offline.authoredCourseAssets', authoredOk, authored ? `${authored.filter(entry => entry.mounted === 1).length}/2 mounted` : 'no renderer entries', 'C1 tug and full A1 forest must decode, attach and draw after the origin is shut down');
+      measured['authoredCourseAssets'] = authored;
+
       measured['offline'] = { read: { ...read, errors: undefined }, nav, isolated, wire: { bytes: wire.bytes, requests: wire.requests }, frame, ride: offRide, worldMap: wm, inbox, garage: { proPurchase, combos, modelFailures } };
       check('offline.noPageErrors', offErrors.length === 0, offErrors.length, offErrors.slice(0, 3).join(' | '));
       await ctx.close();
@@ -560,7 +589,8 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = new Map(process.argv.slice(2).map((a) => a.replace(/^--/, '').split('=') as [string, string]));
-  const report = await offlineSuite({ verbose: args.get('verbose') === '1' });
+  const distDir = args.get('dist');
+  const report = await offlineSuite({ verbose: args.get('verbose') === '1', ...(distDir ? { distDir } : {}) });
   const out = path.join(OUT_DIR, 'offline', 'offline.json');
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, JSON.stringify(report.measured, null, 2));

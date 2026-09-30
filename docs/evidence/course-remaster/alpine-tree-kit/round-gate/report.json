@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260930-051348-199bf0",
+  "startedAt": "2026-09-30T10:13:48.251Z",
+  "wallMs": 5419,
+  "git": "f5a161d3",
+  "srcFingerprint": "fd8fe7c2",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "boot",
+    "clear",
+    "clearPro",
+    "crash",
+    "restart",
+    "bundle"
+  ],
+  "checks": [
+    {
+      "id": "boot.readyP50Ms",
+      "value": 115.42524999999989,
+      "limit": 300,
+      "pass": true,
+      "unit": "ms",
+      "note": "runs 115/238/106 min 106 loadavg 2.5/18"
+    },
+    {
+      "id": "boot.firstFrameMs",
+      "value": 493.32499980926514,
+      "limit": 900,
+      "pass": true,
+      "unit": "ms",
+      "note": "ready -> first synced frame"
+    },
+    {
+      "id": "clear.golden",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3.json finish=30.349999999999998 run=30.350 faults=0"
+    },
+    {
+      "id": "clear.finishTimeBitEqual",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "expected 30.349999999999998"
+    },
+    {
+      "id": "clear.hashOk",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "2bfe061963ffb058 vs pinned 2bfe061963ffb058"
+    },
+    {
+      "id": "clear.pro.c1",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3-pro.json (src matches) finish=28.15 faults=0 hash 7ebdd3902741b09d vs pinned 7ebdd3902741b09d (expected finish 28.15)"
+    },
+    {
+      "id": "clear.pro.d3",
+      "value": true,
+      "limit": true,
+      "pass": true,
+      "note": "bot-3-pro.json (src matches) finish=32.458333333333336 faults=0 hash 774c599b55917f5a vs pinned 774c599b55917f5a (expected finish 32.458333333333336)"
+    },
+    {
+      "id": "crash.faultWithinS",
+      "value": 0.8583333333333333,
+      "limit": 8,
+      "pass": true,
+      "unit": "s",
+      "note": "reason=crash"
+    },
+    {
+      "id": "fault.toControlMs",
+      "value": 25,
+      "limit": 500,
+      "pass": true,
+      "unit": "ms",
+      "note": "crash tick -> restart mash on the next tick -> bike moving; auto-respawn path 1017 ms (CONTRACT §2.8: 1.0 s)"
+    },
+    {
+      "id": "restart.ticks",
+      "value": 1,
+      "limit": 1,
+      "pass": true,
+      "note": "tick==0 && faulted==null after exactly one tick, 20 reps"
+    },
+    {
+      "id": "restart.wallMsP95",
+      "value": 0.15999984741210938,
+      "limit": 5,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "restart.frameMsP95",
+      "value": 5.005000114440918,
+      "limit": 33,
+      "pass": true,
+      "unit": "ms",
+      "note": "restart -> synced frame"
+    },
+    {
+      "id": "restart.noCountdown",
+      "value": 1,
+      "limit": 12,
+      "pass": true,
+      "unit": " ticks",
+      "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
+    },
+    {
+      "id": "bundle.jsGzipKB",
+      "value": 691.15625,
+      "limit": 700,
+      "pass": true,
+      "unit": "KB",
+      "note": "player JS (excluding dev and fatal-error telemetry phases); outside player budget: audio-offline-pCHlt1VQ.js, legacy-physics-w7EuEkNl.js, retired-i9lO8tn5.js, sentry-errors-DZ1jjk5-.js 213.9 KB gz; dist 44021 KB raw"
+    }
+  ],
+  "failed": 0
+}
