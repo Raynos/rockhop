@@ -15,6 +15,7 @@
  * `?rider=` stays a harness / debug override. Copy follows the current v2 preset and R6 wheelie tests.
  */
 import type { BikeClass, RiderOutfit } from '../core/types';
+import { PRO_PRICE } from './economy';
 import { RIDER_PRESETS } from '../core/riderPresets';
 import type { ArtManifest } from './art';
 import { BUILD_STAMP_SHORT, escapeHtml } from './front';
@@ -165,7 +166,7 @@ export class GarageScreen {
   private current: BikeClass = 'rookie';
   /** Bike whose spec is shown. A locked Pro can be inspected without equipping it. */
   private inspected: BikeClass = 'rookie';
-  private economy: GarageEconomyView = { scrap: 0, proOwned: false, proPrice: 800 };
+  private economy: GarageEconomyView = { scrap: 0, proOwned: false, proPrice: PRO_PRICE };
   private economyVersion = 0;
   private purchaseFailed = false;
   private outfitFocus: RiderOutfit = DEFAULT_RIDER_OUTFIT;
@@ -285,7 +286,7 @@ export class GarageScreen {
     this.economy = {
       scrap: Math.max(0, Math.floor(Number.isFinite(view.scrap) ? view.scrap : 0)),
       proOwned: view.proOwned,
-      proPrice: Math.max(1, Math.floor(Number.isFinite(view.proPrice) ? view.proPrice : 800)),
+      proPrice: Math.max(1, Math.floor(Number.isFinite(view.proPrice) ? view.proPrice : PRO_PRICE)),
     };
     this.economyVersion++;
     if (!this.economy.proOwned && this.current === 'pro') {
@@ -296,9 +297,9 @@ export class GarageScreen {
     this.paint();
   }
 
-  show(current: BikeClass, outfit: RiderOutfit = DEFAULT_RIDER_OUTFIT): void {
+  show(current: BikeClass, outfit: RiderOutfit = DEFAULT_RIDER_OUTFIT, inspect: BikeClass = current): void {
     this.current = current === 'pro' && !this.economy.proOwned ? 'rookie' : current;
-    this.focus = this.inspected = this.current;
+    this.focus = this.inspected = inspect;
     this.currentOutfit = this.outfitFocus = outfit;
     this.resetView();
     this.paint();
@@ -551,7 +552,7 @@ export class GarageScreen {
     const progress = Math.min(100, Math.round((scrap / proPrice) * 100));
     const wallet = `<div class="gp-wallet"><span>Scrap</span><b>${scrap.toLocaleString('en-US')}</b></div>`;
     const state = proOwned
-      ? `<div class="gp-bike-state">${this.current === 'pro' ? 'Pro equipped' : 'Pro owned · tap its chip to equip'}</div>`
+      ? `<div class="gp-bike-state">${this.current === 'pro' ? 'Pro equipped' : this.inspected === 'pro' ? 'Pro owned · ready to equip' : 'Pro owned · tap its chip to equip'}</div>${this.inspected === 'pro' && this.current !== 'pro' ? '<button class="gp-equip" type="button">Equip Pro</button>' : ''}`
       : this.inspected === 'pro'
         ? `<div class="gp-bike-state">Unlock Pro · ${proPrice.toLocaleString('en-US')} Scrap</div>
           <div class="gp-scrap-progress" role="progressbar" aria-label="Scrap toward Pro" aria-valuemin="0" aria-valuemax="${proPrice}" aria-valuenow="${Math.min(scrap, proPrice)}"><i style="width:${progress}%"></i></div>
@@ -563,6 +564,11 @@ export class GarageScreen {
     if (this.economyPanel.innerHTML === markup) return;
     this.economyPanel.innerHTML = markup;
     this.economyPanel.querySelector<HTMLButtonElement>('.gp-buy')?.addEventListener('click', () => this.buyPro());
+    this.economyPanel.querySelector<HTMLButtonElement>('.gp-equip')?.addEventListener('click', () => {
+      if (!this.canAct()) return;
+      this.focus = this.inspected = 'pro';
+      this.commitBike();
+    });
   }
 
   private buyPro(): void {

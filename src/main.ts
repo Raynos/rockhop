@@ -435,6 +435,7 @@ function boot(): void {
         if (f) await f.ready;
       });
       sFonts.done();
+      shell.completeBootNavigation();
       // After the boot, never inside it: the version check must not sit in the boot's byte count or requests.
       // A store build loads no code from a server (Apple 2.5.2): no version check, no pill.
       if (DEV_SURFACES) installUpdatePill();

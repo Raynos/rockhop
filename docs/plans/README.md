@@ -12,7 +12,7 @@
 
 **Vercel Build CPU:** [VERCEL_BUILD_CPU.md](../../project/archive/VERCEL_BUILD_CPU.md) is done for ask 169. Rockhop builds prebuilt output in GitHub Actions, deploys hourly or manually only when the full SHA changes, and keeps push/PR gates. The manual release and no-change skip are verified; the first natural hourly timer is pending.
 
-**Current career correction:** Pro costs **1,840 Scrap**: seven Gold plus one Diamond, or four Silver plus four Diamond, on levels 1–8. Eight Bronze yield 800 and require medal improvement. The [normal-app headless gate](../evidence/pro-career-gate/README.md) checks both exact purchases, Bronze-only denial, late-course access and retained ownership; uncoached earning and phone play remain open. The old 800-Scrap purchase proof is historical.
+**Current career correction:** Pro costs **1,840 Scrap**: seven Gold plus one Diamond, or four Silver plus four Diamond, on levels 1–8. Eight Bronze yield 800 and require medal improvement. Map, Quick Play, Results Next and direct launch enforce the bought-and-equipped Pro gate on levels 9–12; the [normal-app headless gate](../evidence/pro-career-gate/README.md) checks exact purchases, Bronze-only denial, late-course access and retained ownership. Uncoached earning, differentiated bike handling and phone play remain open. The old 800-Scrap purchase proof is historical.
 
 **In-ride performance readout:** A small tappable FPS/frame-time pill on every course opens the detailed debug panel. The [silent landscape phone and desktop interaction gate](../../harness/e2e/perf-panel.mts) passed; software-renderer numbers are not physical-device performance evidence.
 

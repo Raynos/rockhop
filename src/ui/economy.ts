@@ -8,7 +8,7 @@ import type { BikeClass, Medal } from '../core/types';
 import { persistentStorage } from '../platform/storage';
 import { ROCKHOP_TRACKS } from '../tracks/rockhop';
 
-export const PRO_PRICE = 800;
+export const PRO_PRICE = 1840;
 export const SCRAP_REWARD: Readonly<Record<Medal, number>> = Object.freeze({ bronze: 100, silver: 160, gold: 220, platinum: 300 });
 export const ECONOMY_KEY = 'rockhop.economy.v1';
 

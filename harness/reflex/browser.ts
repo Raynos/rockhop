@@ -141,6 +141,8 @@ export class ReflexBrowser {
       if (virtual) await page.clock.install({ time: clock0 });
       const url = new URL(server.url);
       url.searchParams.set('track', trackId);
+      // This is an explicit headless skill test of a requested course, not a career launch.
+      url.searchParams.set('dev', '1');
       // Round 10: `?track=` goes straight to the run, but a first launch ever shows the onboarding card with the game
       // paused (phase 'menu') until a key — a fresh Playwright context is always a first launch, which is the round-9
       // "expected the countdown after pauseAt, got 'menu'". A returning player has `rockhop.onboarded` set; so does the driver.

@@ -3,10 +3,12 @@
  * ALPINE, QUARRY, SNOWLINE; a zone opens when every track of every earlier zone holds a medal. A track list with no
  * zones (the retired curriculum, dev lists, old tests) progresses by tier exactly as before. Playgrounds are outside
  * medals. Historical playground handling remains for dev-only retired courses; the shipped ROCKHOP catalog is twelve
- * campaign tracks. `?dev=1` unlocks everything. Pure functions, unit-tested.
+ * campaign tracks. The first eight medals open course 9, and courses 9–12 require the purchased/equipped Pro.
+ * `?dev=1` unlocks everything. Pure functions, unit-tested.
  */
-import type { Medal, TrackDef, TrackTier } from '../core/types';
+import type { BikeClass, Medal, TrackDef, TrackTier } from '../core/types';
 import { isPlaygroundTrackId } from '../tracks';
+import { PRO_PRICE } from './economy';
 
 export const TIER_ORDER: readonly TrackTier[] = ['beginner', 'easy', 'medium', 'hard', 'extreme'];
 export const TIER_LABEL: Record<TrackTier, string> = { beginner: 'Beginner', easy: 'Easy', medium: 'Medium', hard: 'Hard', extreme: 'Extreme' };
@@ -42,6 +44,20 @@ export function stageLabel(stage: string): string {
 }
 
 export type MedalOf = (trackId: string) => Medal | null;
+
+/** The first eight courses build the Starter career; the final four require the purchased, equipped Pro. */
+export const STARTER_COURSE_IDS = [
+  'c1-low-tide', 'c2-crane-hop', 'c3-hull-breach',
+  'a1-sawdust', 'a2-log-jam', 'a3-timberline',
+  'd1-dust-devil', 'd2-conveyor',
+] as const;
+export const PRO_COURSE_IDS = ['d3-rope-walk', 's1-lift-line', 's2-cornice', 's3-whiteout'] as const;
+const proCourseIds: ReadonlySet<string> = new Set(PRO_COURSE_IDS);
+
+export interface CareerBikeState { proOwned: boolean; equipped: BikeClass }
+export interface TrackLock { reason: string; garage: boolean }
+
+export function isProCourse(t: TrackDef): boolean { return proCourseIds.has(t.id); }
 
 /** Lab tracks (`lab-*`, src/tracks `isLabTrackId`): listed last under "Lab", outside progression, medals and the career line. */
 export function isLabTrack(t: TrackDef): boolean {
@@ -92,10 +108,29 @@ export function stageUnlocked(tracks: readonly TrackDef[], stage: string, medalO
   return true;
 }
 
-/** Whether a track can be ridden: its stage is open (a playground opens with its zone; a Lab track always). */
-export function trackUnlocked(tracks: readonly TrackDef[], t: TrackDef, medalOf: MedalOf, devUnlock = false): boolean {
-  if (isLabTrack(t) || (isPlaygroundTrack(t) && zoneOf(t) === null)) return true;
-  return stageUnlocked(tracks, stageOf(t), medalOf, devUnlock);
+/** Authoritative career gate shared by map, quick play, result Next, and direct launch. */
+export function trackLock(
+  tracks: readonly TrackDef[], t: TrackDef, medalOf: MedalOf,
+  bike: CareerBikeState = { proOwned: false, equipped: 'rookie' }, devUnlock = false,
+): TrackLock | null {
+  if (devUnlock || isLabTrack(t) || (isPlaygroundTrack(t) && zoneOf(t) === null)) return null;
+  if (isProCourse(t) && STARTER_COURSE_IDS.some((id) => tracks.some((track) => track.id === id) && medalOf(id) === null)) {
+    return { reason: 'Medal levels 01–08 to unlock the Pro run', garage: false };
+  }
+  if (!stageUnlocked(tracks, stageOf(t), medalOf)) {
+    return { reason: unlockRuleFor(tracks, stageOf(t)), garage: false };
+  }
+  if (isProCourse(t) && !bike.proOwned) return { reason: `Buy the Pro bike in Garage · ${PRO_PRICE} Scrap`, garage: true };
+  if (isProCourse(t) && bike.equipped !== 'pro') return { reason: 'Equip the Pro bike in Garage', garage: true };
+  return null;
+}
+
+/** Whether a track can be ridden, including the final-four purchased-bike rule. */
+export function trackUnlocked(
+  tracks: readonly TrackDef[], t: TrackDef, medalOf: MedalOf, devUnlock = false,
+  bike: CareerBikeState = { proOwned: false, equipped: 'rookie' },
+): boolean {
+  return trackLock(tracks, t, medalOf, bike, devUnlock) === null;
 }
 
 /** The first locked stage's gate rule (`Medal every Coast track`), '' for the first stage. */

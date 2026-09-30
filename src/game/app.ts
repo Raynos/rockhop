@@ -70,6 +70,7 @@ import { tickLive } from '../ui/live';
 import { applyOrientation } from '../ui/orientation';
 import { loadRiderOutfit, saveRiderOutfit } from '../ui/outfit';
 import { CareerEconomy, PRO_PRICE, type AwardResult } from '../ui/economy';
+import { trackLock } from '../ui/progress';
 import { copyText } from '../ui/clipboard';
 import { ExitConfirm } from '../ui/exitConfirm';
 import { Bench, type BenchOptions, type FrameSplit } from './bench';
@@ -245,6 +246,7 @@ export class App {
   private raf = 0;
   private audioUnlocked = false;
   private lastTrackId: string | null = null;
+  private pendingLockedInitialTrack: string | null = null;
   /** Seconds of riding since the last GO (touch zones settle at 3 s). */
   private rideSeconds = 0;
   private settled = false;
@@ -345,6 +347,7 @@ export class App {
         this.play(id);
       },
       goto: (s: FrontScreen) => this.goto(s),
+      openProGarage: () => this.goto('garage', true),
       setQuality: (q: QualityChoice) => this.chooseQuality(q),
       setFps: (v: FpsChoice) => {
         this.fpsChoice = v;
@@ -429,7 +432,7 @@ export class App {
     };
 
     this.menu = new MainMenuScreen(o.uiRoot, this.sfx, this.art, cb); // the title menu reads no state (ask 42: it leaks nothing)
-    this.tracksScreen = new WorldMapScreen(o.uiRoot, this.sfx, this.art, cb, bestOf, state, (id, bike) => this.bestTimes.board(id, bike), o.mapGpu);
+    this.tracksScreen = new WorldMapScreen(o.uiRoot, this.sfx, this.art, cb, bestOf, state, (id, bike) => this.bestTimes.board(id, bike), o.mapGpu, () => this.economy.snapshot());
     this.settings = new SettingsScreen(o.uiRoot, this.sfx, cb, state);
     this.credits = new CreditsScreen(o.uiRoot, this.sfx, cb, this.art);
     this.garage = new GarageScreen(o.uiRoot, this.sfx, this.art, {
@@ -580,7 +583,7 @@ export class App {
 
     this.hud.onAction = (a) => {
       if (a === 'retry') this.fullRestart('results:retry');
-      else if (a === 'next') this.play(this.nextTrackId());
+      else if (a === 'next' && this.nextTrackEnabled()) this.play(this.nextTrackId());
       else if (a === 'menu') this.quit('results:map', 'tracks');
       else if (a === 'pause') this.togglePause('hud:pause');
       else if (a === 'replay') this.watchLastRun();
@@ -848,8 +851,16 @@ export class App {
     if (d0) this.onDevice(d0);
     if (this.o.initialReview && this.enterReview(this.o.initialReview)) {
       /* the reviewer owns the scene */
-    } else if (this.o.initialTrack && getTrack(this.o.initialTrack)) this.play(this.o.initialTrack);
-    else {
+    } else if (this.o.initialTrack && getTrack(this.o.initialTrack)) {
+      const initial = getTrack(this.o.initialTrack)!;
+      if (this.careerLock(initial)) {
+        // The renderer's boot prepare still needs its WebGL context. Wait until the boot plan is done before
+        // entering the 3D map, which suspends that context; otherwise the loader can stay over an unusable map.
+        this.pendingLockedInitialTrack = initial.id;
+        this.loadBackdrop(BACKDROP_TRACK);
+        this.goto('menu');
+      } else this.play(initial.id);
+    } else {
       this.loadBackdrop(BACKDROP_TRACK);
       this.goto('menu');
     }
@@ -882,6 +893,15 @@ export class App {
     this.raf = requestAnimationFrame(frame);
   }
 
+  /** Finish a locked direct URL after the renderer has completed its boot work. */
+  completeBootNavigation(): void {
+    const id = this.pendingLockedInitialTrack;
+    if (!id) return;
+    this.pendingLockedInitialTrack = null;
+    this.tracksScreen.preferTrack(id);
+    this.goto('tracks');
+  }
+
   stop(): void {
     cancelAnimationFrame(this.raf);
   }
@@ -905,7 +925,7 @@ export class App {
     setTimeout(() => this.audio?.setMasterVolume(vol), 60);
   }
 
-  goto(screen: FrontScreen): void {
+  goto(screen: FrontScreen, inspectPro = false): void {
     const fromTracks = this.screen === 'tracks';
     this.navLog.record('goto', this.navContext(), null, screen);
     if (this.replay.active) this.replay.close();
@@ -952,7 +972,7 @@ export class App {
         const economy = this.economy.snapshot();
         this.garage.setEconomy({ scrap: economy.wallet, proOwned: economy.proOwned, proPrice: PRO_PRICE });
         this.garage.setDevice(dev);
-        this.garage.show(this.bikeInEffect(), this.riderOutfit);
+        this.garage.show(this.bikeInEffect(), this.riderOutfit, inspectPro ? 'pro' : undefined);
       };
       if (this.mapExitPending) void this.mapExitPending.then((restored) => restored ? showGarage() : this.mapRestoreFailed());
       else showGarage();
@@ -985,6 +1005,13 @@ export class App {
 
   private play(id: string): void {
     if (this.mapLaunchPending) return;
+    const def = getTrack(id);
+    if (!def || this.careerLock(def)) {
+      if (def) this.tracksScreen.preferTrack(id);
+      if (this.screen !== 'tracks') this.goto('tracks');
+      else this.tracksScreen.build(this.tracks);
+      return;
+    }
     if (this.screen === 'tracks') this.tracksScreen.hide();
     if (this.screen === 'tracks' || this.mapExitPending) {
       this.mapLaunchPending = true;
@@ -1002,6 +1029,8 @@ export class App {
   private startTrack(id: string): void {
     const def = getTrack(id);
     if (!def) return;
+    // Recheck after the asynchronous map GPU handoff. A stale map button or direct URL cannot bypass the career gate.
+    if (this.careerLock(def)) { this.tracksScreen.preferTrack(id); this.goto('tracks'); return; }
     // Bike: the owned Garage choice, otherwise Starter.
     const bike = this.bikeInEffect();
     this.collector.abandon();
@@ -1067,6 +1096,13 @@ export class App {
   /** Class the next launch would ride: the owned Garage choice, otherwise Starter. */
   private bikeInEffect(): BikeClass {
     return this.bikeChoice === 'pro' && this.economy.snapshot().proOwned ? 'pro' : 'rookie';
+  }
+
+  private careerLock(track: TrackDef): boolean {
+    if (!this.tracks.some((campaign) => campaign.id === track.id)) return false;
+    const economy = this.economy.snapshot();
+    return trackLock(this.tracks, track, (id) => this.bestTimes.get(id)?.medal ?? null,
+      { proOwned: economy.proOwned, equipped: this.bikeInEffect() }, this.o.dev ?? false) !== null;
   }
 
   /**
@@ -1216,7 +1252,8 @@ export class App {
     const i = ship.findIndex((t) => t.id === this.lastTrackId);
     const next = ship[i + 1];
     if (!next) return false;
-    return trackUnlocked(this.tracks, next, (id) => this.bestTimes.get(id)?.medal ?? null, this.o.dev ?? false);
+    return trackUnlocked(this.tracks, next, (id) => this.bestTimes.get(id)?.medal ?? null, this.o.dev ?? false,
+      { proOwned: this.economy.snapshot().proOwned, equipped: this.bikeInEffect() });
   }
 
   private nextTrackId(): string {

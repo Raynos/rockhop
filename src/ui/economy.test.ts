@@ -34,23 +34,39 @@ describe('CareerEconomy', () => {
     expect(economy.snapshot().lifetimeEarned).toBe(0);
   });
 
-  it('spends exactly once at 800 and requires ownership before equip', () => {
+  it('requires medal improvements: eight Bronze cannot buy, seven Gold plus one Diamond buys once at 1,840', () => {
     const store = new MemoryStorage();
     const economy = new CareerEconomy(store);
     expect(economy.equip('pro')).toBe(false);
     expect(economy.purchasePro()).toBe('insufficient-scrap');
-    MAIN.slice(0, 7).forEach((id) => economy.award(id, 'bronze'));
+    MAIN.slice(0, 8).forEach((id) => economy.award(id, 'bronze'));
+    expect(economy.snapshot().wallet).toBe(800);
     expect(economy.purchasePro()).toBe('insufficient-scrap');
-    economy.award(MAIN[7]!, 'bronze');
+    MAIN.slice(0, 7).forEach((id) => economy.award(id, 'gold'));
+    expect(economy.snapshot().wallet).toBe(1640);
+    expect(economy.purchasePro()).toBe('insufficient-scrap');
+    economy.award(MAIN[7]!, 'platinum');
     expect(economy.snapshot().wallet).toBe(PRO_PRICE);
     expect(economy.purchasePro()).toBe('purchased');
-    expect(economy.snapshot()).toMatchObject({ wallet: 0, lifetimeEarned: 800, proOwned: true, equipped: 'rookie' });
+    expect(economy.snapshot()).toMatchObject({ wallet: 0, lifetimeEarned: 1840, proOwned: true, equipped: 'rookie' });
     expect(economy.purchasePro()).toBe('already-owned');
     expect(economy.equip('pro')).toBe(true);
     expect(store.getItem('rockhop.bikeClass')).toBe('pro');
     expect(new CareerEconomy(store).snapshot()).toMatchObject({ wallet: 0, proOwned: true, equipped: 'pro' });
-    expect(economy.award(SECOND, 'silver').delta).toBe(60);
-    expect(economy.snapshot().wallet).toBe(60);
+    expect(economy.award(FIRST, 'platinum').delta).toBe(80);
+    expect(economy.snapshot().wallet).toBe(80);
+  });
+
+  it('also buys at four Silver plus four Diamond, including across a reload', () => {
+    const store = new MemoryStorage();
+    const economy = new CareerEconomy(store);
+    MAIN.slice(0, 4).forEach((id) => economy.award(id, 'silver'));
+    MAIN.slice(4, 8).forEach((id) => economy.award(id, 'platinum'));
+    expect(economy.snapshot()).toMatchObject({ wallet: 1840, lifetimeEarned: 1840, proOwned: false });
+    const reloaded = new CareerEconomy(store);
+    expect(reloaded.purchasePro()).toBe('purchased');
+    expect(reloaded.purchasePro()).toBe('already-owned');
+    expect(new CareerEconomy(store).snapshot()).toMatchObject({ wallet: 0, lifetimeEarned: 1840, proOwned: true });
   });
 
   it('backfills the highest stored career medal and preserves old Pro usage without paying twice', () => {
@@ -92,8 +108,9 @@ describe('CareerEconomy', () => {
     expect(economy.snapshot()).toMatchObject({ wallet: 0, lifetimeEarned: 0, proOwned: false, equipped: 'rookie' });
     const store = new MemoryStorage();
     const saved = new CareerEconomy(store);
-    MAIN.slice(0, 8).forEach((id) => saved.award(id, 'bronze'));
-    saved.purchasePro();
+    MAIN.slice(0, 7).forEach((id) => saved.award(id, 'gold'));
+    saved.award(MAIN[7]!, 'platinum');
+    expect(saved.purchasePro()).toBe('purchased');
     saved.equip('pro');
     saved.clear();
     expect(store.getItem(ECONOMY_KEY)).toBeNull();

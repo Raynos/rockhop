@@ -10,6 +10,7 @@ import { MEDAL_NAME, medalSvg, wordmarkSvg } from './brand';
 import { medalTotals, nextTrack, shipTracks, stageLabel, type MedalOf } from './progress';
 import type { UiSfx } from './sfx';
 import { buildCampaignMarkers, type Marker, type RegionId } from './campaignMap';
+import { PRO_PRICE, type EconomySnapshot } from './economy';
 import { injectWorldMapStyles } from './worldMapStyles';
 import type { MountedWorldMap3DShell } from './worldMap3dScene';
 
@@ -43,6 +44,7 @@ export class WorldMapScreen extends Screen {
   private markers: Marker[] = [];
   private focus = 0;
   private quickIndex = 0;
+  private preferredTrack: string | null = null;
   private campaignComplete = false;
   private action = -1;
   private launching = false;
@@ -62,6 +64,7 @@ export class WorldMapScreen extends Screen {
     private readonly state: () => FrontState,
     private readonly boardOf?: (id: string, bike: BikeClass) => BoardEntry[],
     private readonly gpu?: WorldMapGpuHooks,
+    private readonly career?: () => EconomySnapshot,
   ) {
     super(parent, 'tracks-screen worldmap-screen wm3d-enabled');
     injectWorldMapStyles();
@@ -136,21 +139,30 @@ export class WorldMapScreen extends Screen {
     const state = this.state();
     const medalOf: MedalOf = (id) => this.bestOf(id)?.medal ?? null;
     const ship = shipTracks(tracks, false);
-    this.markers = buildCampaignMarkers(ship, medalOf);
+    const economy = this.career?.();
+    this.markers = buildCampaignMarkers(ship, medalOf, {
+      proOwned: economy?.proOwned ?? state.bikeClass === 'pro', equipped: state.bikeClass,
+    }, state.dev);
     if (this.markers.length !== 12) throw new Error(`3D map expected twelve campaign courses; got ${this.markers.length}`);
     const totals = medalTotals(ship, medalOf);
     const dot = (m: Medal, n: number): string => `<span class="${m}" title="${MEDAL_NAME[m]}">${medalSvg(m, MEDAL_NAME[m])}${n}</span>`;
-    this.progress.innerHTML = `<span class="n"><b>${totals.cleared}</b> / ${totals.total} cleared</span><span class="dots">${dot('platinum', totals.platinum)}${dot('gold', totals.gold)}${dot('silver', totals.silver)}${dot('bronze', totals.bronze)}</span>`;
+    this.progress.innerHTML = `<span class="n"><b>${totals.cleared}</b> / ${totals.total} cleared</span><span class="dots">${dot('platinum', totals.platinum)}${dot('gold', totals.gold)}${dot('silver', totals.silver)}${dot('bronze', totals.bronze)}</span>${economy ? `<span class="scrap">${economy.wallet} Scrap</span>` : ''}`;
     const target = nextTrack(ship, medalOf, false, state.lastPlayed);
     const quickTarget = nextTrack(ship, medalOf, false, totals.cleared === totals.total ? state.lastPlayed : null);
-    this.focus = Math.max(0, this.markers.findIndex((marker) => marker.track.id === target?.id));
+    this.focus = Math.max(0, this.markers.findIndex((marker) => marker.track.id === (this.preferredTrack ?? target?.id)));
+    this.preferredTrack = null;
     this.quickIndex = Math.max(0, this.markers.findIndex((marker) => marker.track.id === quickTarget?.id));
     this.campaignComplete = totals.cleared === totals.total;
     this.action = -1;
     this.renderLevels();
     const nextMarker = this.markers[this.quickIndex]!;
-    this.quick.innerHTML = `<span class="play" aria-hidden="true">▶</span><span>${this.campaignComplete ? 'Play again' : 'Play next'}<small>${escapeHtml(nextMarker.code)} · ${escapeHtml(nextMarker.track.name)}</small></span>`;
-    this.quick.setAttribute('aria-label', `${this.campaignComplete ? 'Play again' : 'Play next'}: ${nextMarker.code} ${nextMarker.track.name}`);
+    const quickLabel = nextMarker.garage ? economy?.proOwned ? 'Equip Pro' : (economy?.wallet ?? 0) >= PRO_PRICE ? 'Buy Pro' : 'Earn Scrap' : nextMarker.locked ? 'Locked' : this.campaignComplete ? 'Play again' : 'Play next';
+    const quickDetail = nextMarker.garage && !economy?.proOwned && (economy?.wallet ?? 0) < PRO_PRICE
+      ? `${PRO_PRICE - (economy?.wallet ?? 0)} more Scrap · improve medals`
+      : nextMarker.garage ? nextMarker.rule ?? '' : `${nextMarker.code} · ${nextMarker.track.name}`;
+    this.quick.innerHTML = `<span class="play" aria-hidden="true">${nextMarker.garage ? '◆' : '▶'}</span><span>${quickLabel}<small>${escapeHtml(quickDetail)}</small></span>`;
+    this.quick.disabled = nextMarker.locked && !nextMarker.garage;
+    this.quick.setAttribute('aria-label', nextMarker.locked ? `${quickLabel}: ${nextMarker.code} ${nextMarker.track.name}. ${nextMarker.rule ?? ''}` : `${quickLabel}: ${nextMarker.code} ${nextMarker.track.name}`);
     this.renderFocus(false);
     this.map?.setProgress(this.markers.map((marker) => marker.locked), this.markers.map((marker) => marker.medal));
   }
@@ -249,9 +261,9 @@ export class WorldMapScreen extends Screen {
     this.detail.innerHTML = `<div class="head"><b>${escapeHtml(marker.code)}</b> · ${escapeHtml(stageLabel(marker.region))}</div><div class="name">${escapeHtml(track.name)}</div>${times}${marker.locked ? '' : this.boardHtml(track.id)}<div class="wm3d-state ${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(stateLabel)}</div>`;
     this.detail.dataset['track'] = track.id;
     this.detail.classList.toggle('locked', marker.locked);
-    this.ride.disabled = marker.locked;
-    this.ride.innerHTML = `<img class="thumb" src="/art/thumbs/${encodeURIComponent(track.id)}.webp" alt="" loading="lazy"><span class="copy"><strong>${number} · ${escapeHtml(track.name)}</strong><small>${escapeHtml(stageLabel(marker.region))} · <em class="${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(dockState)}</em></small>${marker.locked ? `<small class="rule">${escapeHtml(marker.rule ?? '')}</small>` : medalLadder}</span><span class="ride-arrow" aria-hidden="true">${marker.locked ? '◆' : 'RIDE ›'}</span>`;
-    this.ride.setAttribute('aria-label', marker.locked ? `Level ${number}, ${marker.code} ${track.name} locked. ${marker.rule ?? ''}` : `Ride selected level ${number}: ${marker.code} ${track.name}`);
+    this.ride.disabled = marker.locked && !marker.garage;
+    this.ride.innerHTML = `<img class="thumb" src="/art/thumbs/${encodeURIComponent(track.id)}.webp" alt="" loading="lazy"><span class="copy"><strong>${number} · ${escapeHtml(track.name)}</strong><small>${escapeHtml(stageLabel(marker.region))} · <em class="${marker.locked ? 'locked' : marker.medal ?? 'available'}">${escapeHtml(dockState)}</em></small>${marker.locked ? `<small class="rule">${escapeHtml(marker.rule ?? '')}</small>` : medalLadder}</span><span class="ride-arrow" aria-hidden="true">${marker.garage ? 'GARAGE ›' : marker.locked ? '◆' : 'RIDE ›'}</span>`;
+    this.ride.setAttribute('aria-label', marker.locked ? `Level ${number}, ${marker.code} ${track.name} locked. ${marker.rule ?? ''}${marker.garage ? ' Open Garage.' : ''}` : `Ride selected level ${number}: ${marker.code} ${track.name}`);
     this.ghost.hidden = !best?.recording || marker.locked;
     this.ghost.innerHTML = `<span>▶</span> ${this.state().ghost ? 'Ghost' : 'Watch PB'}`;
     this.levelSummary.innerHTML = marker.locked
@@ -307,6 +319,9 @@ export class WorldMapScreen extends Screen {
     return this.markers[this.focus] ? { marker: this.markers[this.focus]! } : null;
   }
 
+  /** A rejected direct launch lands on its locked tower so the reason and Garage action are visible. */
+  preferTrack(id: string): void { this.preferredTrack = id; }
+
   currentRegion(): RegionId | null {
     return this.markers[this.focus]?.region ?? null;
   }
@@ -341,6 +356,12 @@ export class WorldMapScreen extends Screen {
     const marker = this.markers[index];
     if (!marker || this.launching) return;
     if (marker.locked) {
+      if (marker.garage) {
+        this.sfx.confirm();
+        if (this.cb.openProGarage) this.cb.openProGarage();
+        else this.cb.goto('garage');
+        return;
+      }
       this.sfx.back();
       this.ride.animate?.([{ translate: '0 0' }, { translate: '-6px 0' }, { translate: '6px 0' }, { translate: '0 0' }], { duration: 240 });
       return;

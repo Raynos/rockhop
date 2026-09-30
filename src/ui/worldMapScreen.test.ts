@@ -1,11 +1,12 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { Medal, TrackDef } from '../core/types';
+import type { BikeClass, Medal, TrackDef } from '../core/types';
 import { ROCKHOP_ALL } from '../tracks';
 import type { ArtManifest } from './art';
 import type { BestEntry } from './best';
 import type { FrontCallbacks, FrontState } from './front';
 import type { UiSfx } from './sfx';
+import type { EconomySnapshot } from './economy';
 import { WorldMapScreen } from './worldMapScreen';
 
 const mounts = vi.hoisted(() => ({ calls: [] as Array<{ root: HTMLElement; select: (index: number) => void; scene: { dispose: ReturnType<typeof vi.fn>; selectStage: ReturnType<typeof vi.fn>; setProgress: ReturnType<typeof vi.fn>; setDragMode: ReturnType<typeof vi.fn>; resize: ReturnType<typeof vi.fn> } }> }));
@@ -41,16 +42,17 @@ afterEach(() => {
   document.head.innerHTML = '';
 });
 
-function fixture(options: { seeded?: boolean; lastPlayed?: string | null; recording?: boolean; gpu?: { before3d(): Promise<boolean>; after3d(): Promise<boolean> | boolean } } = {}) {
+function fixture(options: { seeded?: boolean; medals?: Record<string, Medal>; proOwned?: boolean; bikeClass?: BikeClass; wallet?: number; lastPlayed?: string | null; recording?: boolean; gpu?: { before3d(): Promise<boolean>; after3d(): Promise<boolean> | boolean } } = {}) {
   const bestOf = (id: string): BestEntry | null => {
-    const medal = options.seeded ? SEEDED[id] : undefined;
+    const medal = options.medals?.[id] ?? (options.seeded ? SEEDED[id] : undefined);
     if (!medal) return null;
     return { time: 41.2, faults: 0, medal, bike: 'rookie', ...(options.recording ? { recording: '{}' } : {}) } as BestEntry;
   };
-  const state = { dev: false, lastPlayed: options.lastPlayed ?? null, ghost: true, bikeClass: 'rookie' } as FrontState;
-  const cb = { play: vi.fn(), goto: vi.fn(), watchPb: vi.fn() } as unknown as FrontCallbacks;
+  const state = { dev: false, lastPlayed: options.lastPlayed ?? null, ghost: true, bikeClass: options.bikeClass ?? 'rookie' } as FrontState;
+  const cb = { play: vi.fn(), goto: vi.fn(), openProGarage: vi.fn(), watchPb: vi.fn() } as unknown as FrontCallbacks;
   const sfx = { tick: vi.fn(), confirm: vi.fn(), back: vi.fn(), launch: vi.fn() } as unknown as UiSfx;
-  const screen = new WorldMapScreen(document.body, sfx, {} as ArtManifest, cb, bestOf, () => state, () => [], options.gpu);
+  const career = () => ({ proOwned: options.proOwned ?? false, equipped: options.bikeClass ?? 'rookie', wallet: options.wallet ?? 0 }) as EconomySnapshot;
+  const screen = new WorldMapScreen(document.body, sfx, {} as ArtManifest, cb, bestOf, () => state, () => [], options.gpu, career);
   screen.build(ALL);
   screen.show();
   return { screen, cb, sfx };
@@ -110,6 +112,56 @@ describe('shipped 3D island level select', () => {
     expect(cb.play).toHaveBeenCalledWith('a1-sawdust');
     vi.advanceTimersByTime(300);
     expect(screen.visible).toBe(false);
+  });
+
+  it('turns the course 9 quick action into a Garage path until Pro is bought and equipped', async () => {
+    const eight = Object.fromEntries(ALL.slice(0, 8).map((track) => [track.id, 'bronze'])) as Record<string, Medal>;
+    const earn = fixture({ medals: eight, wallet: 800 });
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('d3-rope-walk');
+    expect(document.querySelector('.wm-progress')?.textContent).toContain('800 Scrap');
+    expect(document.querySelector<HTMLButtonElement>('.wm-ride')?.disabled).toBe(false);
+    expect(document.querySelector('.wm-quick')?.textContent).toContain('Earn Scrap');
+    expect(document.querySelector('.wm-quick')?.textContent).toContain('1040 more Scrap');
+    document.querySelector<HTMLButtonElement>('.wm-quick')!.click();
+    expect(earn.cb.openProGarage).toHaveBeenCalledOnce();
+    expect(earn.cb.goto).not.toHaveBeenCalled();
+    expect(earn.cb.play).not.toHaveBeenCalled();
+    earn.screen.hide();
+    earn.screen.root.remove();
+
+    const improved = Object.fromEntries(ALL.slice(0, 8).map((track, index) => [track.id, index === 7 ? 'platinum' : 'gold'])) as Record<string, Medal>;
+    const buy = fixture({ medals: improved, wallet: 1840 });
+    expect(document.querySelector('.wm-quick')?.textContent).toContain('Buy Pro');
+    buy.screen.hide();
+    buy.screen.root.remove();
+
+    const equip = fixture({ medals: eight, proOwned: true, bikeClass: 'rookie' });
+    expect(document.querySelector('.wm-quick')?.textContent).toContain('Equip Pro');
+    document.querySelector<HTMLButtonElement>('.wm-ride')!.click();
+    expect(equip.cb.openProGarage).toHaveBeenCalledOnce();
+    expect(equip.cb.goto).not.toHaveBeenCalled();
+    expect(equip.cb.play).not.toHaveBeenCalled();
+    equip.screen.hide();
+    equip.screen.root.remove();
+
+    const ride = fixture({ medals: eight, proOwned: true, bikeClass: 'pro' });
+    expect(document.querySelector('.wm-quick')?.textContent).toContain('Play next');
+    vi.useFakeTimers();
+    document.querySelector<HTMLButtonElement>('.wm-quick')!.click();
+    vi.advanceTimersByTime(200);
+    expect(ride.cb.play).toHaveBeenCalledWith('d3-rope-walk');
+    vi.advanceTimersByTime(300);
+    ride.screen.hide();
+  });
+
+  it('focuses a rejected direct launch on its locked tower and explains the missing medals', () => {
+    const { screen } = fixture();
+    screen.preferTrack('d3-rope-walk');
+    screen.build(ALL);
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('d3-rope-walk');
+    expect(document.querySelector('.wm3d-detail .rule')?.textContent).toContain('Medal levels 01–08');
+    expect(document.querySelector<HTMLButtonElement>('.wm-ride')?.disabled).toBe(true);
+    screen.hide();
   });
 
   it('opens all twelve courses directly and explains locks without losing Quick Play', async () => {

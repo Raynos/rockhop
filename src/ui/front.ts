@@ -27,6 +27,8 @@ export interface FrontCallbacks {
   /** Time attack: the last played (or next) track, straight in. */
   timeAttack(trackId: string): void;
   goto(screen: FrontScreen): void;
+  /** A Pro-locked map action opens Garage with the Pro purchase/equip sheet selected. */
+  openProGarage?(): void;
   setQuality(q: QualityChoice): void;
   setFps(v: FpsChoice): void;
   setSound(on: boolean): void;

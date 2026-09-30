@@ -3,6 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ArtManifest } from './art';
 import type { RiderOutfit } from '../core/types';
 import { GARAGE_VIEW, GarageScreen, type GarageCallbacks, type GarageView } from './garage';
+import { PRO_PRICE } from './economy';
 import { LIVE_DELAY_MS, resetLive, setLiveClock, tickLive } from './live';
 import type { UiSfx } from './sfx';
 
@@ -24,7 +25,7 @@ function fixture() {
   const sfx = { tick: vi.fn(), confirm: vi.fn(), back: vi.fn() };
   const art = { whenReady: () => undefined } as unknown as ArtManifest;
   const garage = new GarageScreen(document.body, sfx as unknown as UiSfx, art, cb);
-  garage.setEconomy({ scrap: 0, proOwned: true, proPrice: 800 });
+  garage.setEconomy({ scrap: 0, proOwned: true, proPrice: PRO_PRICE });
   const outfit = (name: string) => garage.root.querySelector<HTMLButtonElement>(`button[data-outfit="${name}"]`)!;
   const bike = (name: string) => garage.root.querySelector<HTMLButtonElement>(`button[data-bike="${name}"]`)!;
   const hover = (el: HTMLElement, pointerType = 'mouse') => {
@@ -42,13 +43,35 @@ function fixture() {
 }
 
 describe('garage earned Pro purchase', () => {
+  it('opens a map-requested Pro sheet with the buy or equip action immediately available', () => {
+    const buy = fixture();
+    buy.garage.setEconomy({ scrap: PRO_PRICE, proOwned: false, proPrice: PRO_PRICE });
+    buy.garage.show('rookie', 'street-mustard', 'pro');
+    buy.makeLive();
+    expect(buy.garage.root.querySelector('.gp-name b')?.textContent).toBe('Pro');
+    expect(buy.bike('rookie').getAttribute('aria-pressed')).toBe('true');
+    expect(buy.garage.root.querySelector<HTMLButtonElement>('.gp-buy')?.disabled).toBe(false);
+    buy.garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
+    expect(buy.cb.purchasePro).toHaveBeenCalledOnce();
+    expect(buy.cb.setBike).toHaveBeenCalledExactlyOnceWith('pro');
+
+    const equip = fixture();
+    equip.garage.show('rookie', 'street-mustard', 'pro');
+    equip.makeLive();
+    expect(equip.garage.root.querySelector('.gp-name b')?.textContent).toBe('Pro');
+    expect(equip.garage.root.querySelector<HTMLButtonElement>('.gp-equip')?.textContent).toBe('Equip Pro');
+    equip.garage.root.querySelector<HTMLButtonElement>('.gp-equip')!.click();
+    expect(equip.cb.setBike).toHaveBeenCalledExactlyOnceWith('pro');
+    expect(equip.bike('pro').getAttribute('aria-pressed')).toBe('true');
+  });
+
   it('shows a locked Pro and its price without equipping it or changing the staged bike', () => {
     const { garage, cb, bike, makeLive } = fixture();
-    garage.setEconomy({ scrap: 380, proOwned: false, proPrice: 800 });
+    garage.setEconomy({ scrap: 380, proOwned: false, proPrice: PRO_PRICE });
     garage.show('rookie');
     makeLive();
     expect(bike('pro').disabled).toBe(false);
-    expect(bike('pro').getAttribute('aria-label')).toContain('locked, 800 Scrap');
+    expect(bike('pro').getAttribute('aria-label')).toContain('locked, 1840 Scrap');
     bike('pro').click();
     expect(garage.root.querySelector('.gp-name b')?.textContent).toBe('Pro');
     expect(bike('rookie').getAttribute('aria-pressed')).toBe('true');
@@ -56,7 +79,7 @@ describe('garage earned Pro purchase', () => {
     expect(cb.setBike).not.toHaveBeenCalled();
     expect(cb.purchasePro).not.toHaveBeenCalled();
     expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('380');
-    expect(garage.root.querySelector('.gp-scrap-remaining')?.textContent).toContain('420 more Scrap');
+    expect(garage.root.querySelector('.gp-scrap-remaining')?.textContent).toContain('1,460 more Scrap');
     expect(garage.root.querySelector<HTMLButtonElement>('.gp-buy')?.disabled).toBe(true);
     expect(garage.root.querySelector('[role="progressbar"]')?.getAttribute('aria-valuenow')).toBe('380');
     bike('pro').dispatchEvent(new MouseEvent('pointerleave'));
@@ -65,7 +88,7 @@ describe('garage earned Pro purchase', () => {
 
   it('buys once, spends Scrap, and equips Pro only after the authoritative purchase succeeds', () => {
     const { garage, cb, bike, makeLive } = fixture();
-    garage.setEconomy({ scrap: 900, proOwned: false, proPrice: 800 });
+    garage.setEconomy({ scrap: 1940, proOwned: false, proPrice: PRO_PRICE });
     garage.show('rookie');
     makeLive();
     bike('pro').click();
@@ -82,7 +105,7 @@ describe('garage earned Pro purchase', () => {
 
   it('keeps the bike locked if saving the purchase fails, then permits retry', () => {
     const { garage, cb, bike, makeLive } = fixture();
-    garage.setEconomy({ scrap: 800, proOwned: false, proPrice: 800 });
+    garage.setEconomy({ scrap: PRO_PRICE, proOwned: false, proPrice: PRO_PRICE });
     cb.purchasePro.mockReturnValueOnce(false);
     garage.show('rookie');
     makeLive();
@@ -90,7 +113,7 @@ describe('garage earned Pro purchase', () => {
     garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
     expect(cb.setBike).not.toHaveBeenCalled();
     expect(garage.root.querySelector('.gp-purchase-error')?.textContent).toContain('could not be saved');
-    expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('800');
+    expect(garage.root.querySelector('.gp-wallet')?.textContent).toContain('1,840');
     garage.root.querySelector<HTMLButtonElement>('.gp-buy')!.click();
     expect(cb.purchasePro).toHaveBeenCalledTimes(2);
     expect(cb.setBike).toHaveBeenCalledExactlyOnceWith('pro');
@@ -98,9 +121,9 @@ describe('garage earned Pro purchase', () => {
 
   it('respects an authoritative balance refresh during the purchase callback', () => {
     const { garage, cb, bike, makeLive } = fixture();
-    garage.setEconomy({ scrap: 850, proOwned: false, proPrice: 800 });
+    garage.setEconomy({ scrap: 1890, proOwned: false, proPrice: PRO_PRICE });
     cb.purchasePro.mockImplementation(() => {
-      garage.setEconomy({ scrap: 50, proOwned: true, proPrice: 800 });
+      garage.setEconomy({ scrap: 50, proOwned: true, proPrice: PRO_PRICE });
       return true;
     });
     garage.show('rookie');

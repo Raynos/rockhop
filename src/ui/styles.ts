@@ -457,7 +457,7 @@ html.short .trace { top: calc(4.2rem + var(--sat)); width: 160px; }
 .gp-scrap-progress { display: block; height: 5px; border-radius: 5px; background: rgba(15,92,99,.17); overflow: hidden; }
 .gp-scrap-progress i { display: block; height: 100%; background: var(--vermilion); }
 .gp-scrap-remaining { color: rgba(29,35,38,.72); line-height: 1.2; }
-.gp-buy { pointer-events: auto; width: 100%; min-height: 44px; border: 0; border-radius: 6px; background: var(--vermilion); color: var(--cream); font: 800 .76rem/1.1 var(--font); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; }
+.gp-buy, .gp-equip { pointer-events: auto; width: 100%; min-height: 44px; border: 0; border-radius: 6px; background: var(--vermilion); color: var(--cream); font: 800 .76rem/1.1 var(--font); text-transform: uppercase; letter-spacing: .08em; cursor: pointer; }
 .gp-buy:disabled { background: rgba(29,35,38,.18); color: rgba(29,35,38,.65); cursor: default; }
 .gp-purchase-error { color: #9c4328; line-height: 1.2; }
 .outfit-current { color: var(--teal); font: 700 .7rem/1.3 var(--font); letter-spacing: .02em; }
