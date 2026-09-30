@@ -11,7 +11,7 @@ the complete rider in Blender under the existing hero plan.
 
 **Rider-only execution (asks 225–226):** [RIDER_THREE_CHECKPOINTS](sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md) is the new session authority. Keep neutral model, same-body standing-to-sitting, and same-body Garage/riding as ordered visual gates. Preserve physics-driven posing/leaning with explicit rig mapping, matched maximum-lean/landing/recovery and visible grip/peg evidence. Each stage is bounded; two failed fixes require evidence and a user choice. Pixal3D is evaluated alongside the frozen Hunyuan3D/TRELLIS.2 campaign. Bike art stays out of scope; no new body is accepted or promoted.
 
-Checkpoint 1 now has [thirty baseline nine-angle boards and ten full raw-model orbits](../evidence/hero-remaster/rider-search-v1/README.md), with source/hash/camera verification. Pixal adds five independent candidates; no baseline is replaced. Body selection, rig fitting and gameplay acceptance remain open.
+Checkpoint 1 now has [fifteen bodies across all three generators](../evidence/hero-remaster/rider-search-v1/review/README.md), with 45 nine-angle boards, fifteen full orbits and 810 verified frames. Pixal is additive; all baselines remain preserved. P3 is the preliminary refinement recommendation, with hand/topology issues unaccepted. Body choice and later sitting/gameplay gates remain open.
 
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 

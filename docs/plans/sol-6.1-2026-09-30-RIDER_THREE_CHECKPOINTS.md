@@ -1,7 +1,7 @@
 # Rider remaster — three visual checkpoints
 
 Status: **active — checkpoint 1; no new body accepted or promoted**.
-Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–226.
+Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–227.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
 release obligations. Its previous rider execution method is superseded here.
@@ -196,7 +196,9 @@ updating asks/index before the next experiment. No scheduling or deployment.
 - [x] New rider-only plan recorded with current safeguards.
 - [x] Five front references and five nine-angle targets generated locally.
 - [x] Freeze/hash inputs and inspect board consistency limitations.
-- [ ] Ten Hunyuan/TRELLIS bodies and additive Pixal3D feasibility compared.
+- [x] Ten Hunyuan/TRELLIS bodies and five additive Pixal3D bodies compared.
+  [Fifteen-body gallery](../evidence/hero-remaster/rider-search-v1/review/README.md):
+  45 boards/15 full orbits; P3 preliminary recommendation, unaccepted.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.

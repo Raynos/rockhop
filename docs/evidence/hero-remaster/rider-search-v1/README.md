@@ -25,10 +25,13 @@ Different generation resolution/settings are disclosed; neither frozen engine
 is replaced. Native NPZ before cleanup/export is retained. Native exporter
 remeshes/cleans/simplifies the painted output; preserve that distinction.
 
-Canary01 succeeds, retaining native4,504,156triangles. Generation81.8s,
-CLI182.7s; wrapper wall includes shared-lock waiting. Its full native body has
-not yet been judged. Front/rear diagnostic PNGs and manifests are in
-pixal-canary; four additional designs are being generated serially.
+All five Pixal bodies now succeed. Native triangle counts are
+4,504,156 / 4,553,354 / 4,780,832 / 4,728,694 / 4,194,024. Canary generation
+81.8s, CLI182.7s; wrapper wall includes shared-lock waiting. The additive
+lane has fifteen nine-angle boards, five complete orbits and 270 verified
+frames under pixal/01..05. Native display vertices/indices equal the original
+NPZ after recorded axis conversion. Source hashes remain intact.
+The earlier front/rear canary diagnostics remain under pixal-canary.
 Pixal exports face the opposite axis from Hunyuan/TRELLIS; comparison cameras
 use a recorded180° yaw offset, without changing frozen source geometry.
 
@@ -50,3 +53,12 @@ display vertices/indices match the preserved NPZ exactly.
 Concept boards have approximate yaw/pose and cannot supply calibrated camera
 transforms for Pixal multiview. No rig, sitting animation, gameplay/contact pass,
 body selection or device/art acceptance is claimed by this checkpoint.
+
+## All fifteen bodies
+
+The [review gallery](review/README.md) preserves five targets against each of
+the three engines, plus a labeled front overview and native geometry overview.
+The complete comparison now contains 45 nine-angle boards, fifteen full
+working orbits and 810 individually verified source render frames. These
+are unrigged body diagnostics. P3 is the parent's preliminary recommendation;
+visual direction, hand topology repair and all later gates remain open.

@@ -1,0 +1,47 @@
+{
+  "portHead": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+  "changedSources": {
+    "extern/mtlgemm/setup.py": "19ccf9271c3128f4cff0779ed626ba91678a72ac8c86b50303770e66afbe400f",
+    "generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "pixal3d/pipelines/rembg/BiRefNet.py": "b38519546c6bc67fd6f6ce1802ff1e57145417177d5eab722a356f3db681ff5a",
+    "pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e"
+  },
+  "pipelineSHA256": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7",
+  "wrapperSHA256": "25b4d39b69b9b511b11759881dff28246b4f90a531d5395870f948bbd16c71ff",
+  "launcherSHA256": "e17c9aad65ecb274334678af56cbc8a6edb12941b764c5dd95da467c4a281074",
+  "environment": {
+    "python": "3.10.19 (main, Feb 12 2026, 00:36:33) [Clang 21.1.4 ]",
+    "packages": {
+      "torch": "2.12.0",
+      "numpy": "2.2.6",
+      "Pillow": "12.2.0",
+      "transformers": "5.9.0"
+    }
+  },
+  "references": {
+    "01": "d17210891e43c704d2dca8a0966f07bf68b0b642a6240ac346f73e13ee2823ca",
+    "02": "664931ddc2949f604594dd406d2b014d83784d64c2aa20008c05d61c6420de08",
+    "03": "082788c2bf9e324302692b99c79b78ad2c1ef2a5c7168cca4aa34e69b57f0985",
+    "04": "83dc328211396ab3c383a42f6d2b41467c4cd6bd387d57ceaba46b71f19f21f0",
+    "05": "d8cb3b005244cb37da960fb54b0be27edd5371b4d9fc2f0762c5e067d95f16ed"
+  },
+  "settings": {
+    "seed": 42,
+    "pipeline": "1024_cascade",
+    "stepsPerStage": 12,
+    "maxTokens": 49152,
+    "workingFaces": 55000,
+    "workingTexture": 2048,
+    "reviewFaces": 20000,
+    "reviewTexture": 1024,
+    "sparseAttention": "naive",
+    "nativeRemesh": true,
+    "cosmeticTexRecalibration": false
+  },
+  "status": "UNACCEPTED additional single-image lane; does not replace Hunyuan/TRELLIS",
+  "limits": [
+    "Native raw mesh checkpoint preserved before export",
+    "Working native exporter may remesh/clean/simplify; labeled separately",
+    "Resolution differs from TRELLIS512 and Hunyuan turbo"
+  ]
+}

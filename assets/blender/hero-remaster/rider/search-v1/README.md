@@ -24,3 +24,23 @@ forces metallic0 for all engines; native PBR bytes remain intact. Gray views
 separate geometry from baked texture. Each render records exact input/source
 hashes, triangle count, normalization and camera matrices. This is a raw-model
 gate, not animated gameplay evidence.
+
+## Reproduce the frozen comparison
+
+The masters remain in ~/projects/localai/runtime/rockhop-rider-search-v1.
+render_batch.py, verify_renders.py and diagnose_native_import.py are byte-exact
+copies of the frozen runtime scripts. **Copy them into that runtime directory
+before invoking them:** they deliberately resolve ROOT from their own location.
+Do not run those three directly from this recipe directory or change their
+bytes; recipe.json checks the original launcher SHA. Use the installed Pixal
+venv Python (numpy, trimesh and Pillow) and the recorded source runtimes.
+render_batch.py resumes existing manifests and regenerates pixel-only layouts;
+verify_renders.py and diagnose_native_import.py check existing outputs.
+
+render_pixal.py and verify_pixal.py already name the recorded absolute runtime.
+compose_review.py runs from this recipe directory, using those preserved
+render frames and the committed references/targets. These scripts describe
+the installed Mac experiment, not a portable model installation. Missing
+masters/dependencies are an explicit precondition, never regenerated silently.
+The fifteen bodies, native/reduced boards, moving orbits and comparisons are
+indexed in the [review gallery](../../../../../docs/evidence/hero-remaster/rider-search-v1/review/README.md).

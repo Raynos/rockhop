@@ -1,0 +1,66 @@
+{
+  "status": "GENERATED; parent body review pending",
+  "id": "03",
+  "wallSeconds": 283.883,
+  "commands": [
+    {
+      "argv": [
+        "/Users/raynos/projects/localai/bin/img2mesh/pixal3d-run.sh",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/refs/03.png",
+        "--output",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/working.glb",
+        "--seed",
+        "42",
+        "--pipeline-type",
+        "1024_cascade",
+        "--steps",
+        "12",
+        "--texture-size",
+        "2048",
+        "--max-num-tokens",
+        "49152",
+        "--native-decimation-target",
+        "55000",
+        "--save-mesh",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/native.npz"
+      ],
+      "wallSeconds": 238.728
+    },
+    {
+      "argv": [
+        "/Users/raynos/projects/localai/bin/img2mesh/pixal3d-run.sh",
+        "--load-mesh",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/native.npz",
+        "--output",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/reduced.glb",
+        "--texture-size",
+        "1024",
+        "--native-decimation-target",
+        "20000"
+      ],
+      "wallSeconds": 45.155
+    }
+  ],
+  "files": {
+    "command-0.log": {
+      "sha256": "9374c7c5e21083fc7c9891e7c3c802794a1eff5295f7500b59bf0e9c6ae56bd4",
+      "bytes": 10297
+    },
+    "command-1.log": {
+      "sha256": "553abe945b26ee9b2f95c017352ac25b39d44f63cab35facfaa031a3ce432b83",
+      "bytes": 3628
+    },
+    "native.npz": {
+      "sha256": "372d70c17ab75a77d5c5fe324fee68c14a1bb6e7fbc1c3c95b5b1ebd8eb6a728",
+      "bytes": 191517796
+    },
+    "working.glb": {
+      "sha256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+      "bytes": 3631180
+    },
+    "reduced.glb": {
+      "sha256": "8611363622715a2a0ef861ccccb87be094e3ad996d4e9a63d0d0f7623516c9b1",
+      "bytes": 1221176
+    }
+  }
+}
