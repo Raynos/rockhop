@@ -1,0 +1,140 @@
+{
+  "status": "PREPARED; parent checkpoint and references readiness required before inference",
+  "references": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/refs/01.png",
+      "sha256": "d17210891e43c704d2dca8a0966f07bf68b0b642a6240ac346f73e13ee2823ca",
+      "bytes": 1757982
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/refs/02.png",
+      "sha256": "664931ddc2949f604594dd406d2b014d83784d64c2aa20008c05d61c6420de08",
+      "bytes": 1955316
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/refs/03.png",
+      "sha256": "082788c2bf9e324302692b99c79b78ad2c1ef2a5c7168cca4aa34e69b57f0985",
+      "bytes": 1908397
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/refs/04.png",
+      "sha256": "83dc328211396ab3c383a42f6d2b41467c4cd6bd387d57ceaba46b71f19f21f0",
+      "bytes": 1776222
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/refs/05.png",
+      "sha256": "d8cb3b005244cb37da960fb54b0be27edd5371b4d9fc2f0762c5e067d95f16ed",
+      "bytes": 1773983
+    }
+  ],
+  "params": {
+    "seed": 42,
+    "fullFaces": 55000,
+    "fullTexture": 2048,
+    "reducedFaces": 20000,
+    "reducedTexture": 1024,
+    "hunyuanShape": "turbo",
+    "hunyuanSteps": 5,
+    "hunyuanOctree": 380,
+    "hunyuanRender": 1024,
+    "trellisPipeline": "512",
+    "trellisSteps": "native pipeline.json samplers (12 each)",
+    "trellisPresimplifyFaces": 200000
+  },
+  "runners": {
+    "cutout.py": {
+      "sourceSHA256": "488ece603dac28a24c4bc6a3436d0fe1c3e7fee537fa8fc5224595fad077bb94",
+      "frozenSHA256": "488ece603dac28a24c4bc6a3436d0fe1c3e7fee537fa8fc5224595fad077bb94"
+    },
+    "hy3d_batch.py": {
+      "sourceSHA256": "0b0d4a3621536e1acd319af5abda85cafd847829993b14a43f85c3689486d1ff",
+      "frozenSHA256": "ceada9aeda775db3a3dc782c8fa853398ca203178b371962524b33b651dcac31"
+    },
+    "trellis_batch.py": {
+      "sourceSHA256": "52e462ddc5d25666c28f3193eac2fccd653735585cc1b46019e4ac29a88610e8",
+      "frozenSHA256": "52e462ddc5d25666c28f3193eac2fccd653735585cc1b46019e4ac29a88610e8"
+    },
+    "trellis_rebake.py": {
+      "sourceSHA256": "f1ba53d24559e4f34f098eec44857103f026904be14e24e926ad6320ed5ffa5d",
+      "frozenSHA256": "f1ba53d24559e4f34f098eec44857103f026904be14e24e926ad6320ed5ffa5d"
+    }
+  },
+  "launcherSHA256": "314959b9bb9e45fe60ecbc2f6e052010a8ce55891a00d5d1b341eb6613f42a0a",
+  "reducerSHA256": "136f44065dc651b5c44089f9a562a3a60b0426084ed17454bada6a4605972233",
+  "nativePorts": {
+    "hunyuan": {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2",
+      "head": "f8db63096c8282cb27354314d896feba5ba6ff8a",
+      "status": "M hy3dgen/texgen/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.cpp\n M hy3dgen/texgen/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.h\n M hy3dgen/texgen/custom_rasterizer/setup.py\n M hy3dgen/texgen/differentiable_renderer/mesh_render.py\n M hy3dgen/texgen/hunyuanpaint/pipeline.py\n M hy3dgen/texgen/pipelines.py\n M hy3dgen/texgen/utils/multiview_utils.py\n?? build-mac/",
+      "changedSourceHashes": {
+        "build-mac/custom_rasterizer/custom_rasterizer/__init__.py": "fc8d879119366a423c592854d98b75ba949ab80771a84b567b1b9389fd3dfd73",
+        "build-mac/custom_rasterizer/custom_rasterizer/io_glb.py": "2a09c2b2430fe60f4b7634616a386211469aee02686e8752368b19d5582b4b82",
+        "build-mac/custom_rasterizer/custom_rasterizer/io_obj.py": "60ae829e19b1c46a11575582a4716a64444a795d88009eec348ad752b2b7016b",
+        "build-mac/custom_rasterizer/custom_rasterizer/render.py": "2cea9999d02268266f2f6bb46450cb0f220f032e41d663ad7d12546c0a1fd139",
+        "build-mac/custom_rasterizer/setup.py": "c0a955d8db919f1ae8d46c7bc5858e9aab6c998a44d0a20010553669da78f2e9",
+        "hy3dgen/texgen/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.cpp": "bae1e33fbbbb4bb1ef17a8643bff72bdcee0425158eb52d09bc4b1b665a5a8ff",
+        "hy3dgen/texgen/custom_rasterizer/lib/custom_rasterizer_kernel/rasterizer.h": "6d3e023e5be22833cbbef6f79464c81857d1822c955a5f582cb7c5f6b114d8dc",
+        "hy3dgen/texgen/custom_rasterizer/setup.py": "0d1def3297056c7931fbf2a73396e42c41a198c0cb8ff0706f25392ebca5d28b",
+        "hy3dgen/texgen/differentiable_renderer/mesh_render.py": "a10a30989ae6c8a8831bb85089745c4a184892b58b2f7d3f1aaf372735be32b0",
+        "hy3dgen/texgen/hunyuanpaint/pipeline.py": "9e26a509d9013d78587a8338e1bc6b40a6b638599e1b0c8b9d1f89e0c2e8e146",
+        "hy3dgen/texgen/pipelines.py": "525fc009d88ddad1207672ce2b3398de60b8e7c7448a267ae113791673c3b035",
+        "hy3dgen/texgen/utils/multiview_utils.py": "09c1d317de98b743a0259c6fafe54f75424748c785528d68f11a3dbde16b0769"
+      }
+    },
+    "trellisMac": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac",
+      "head": "d58628f4f5b9c3de8274cb110074154f4b31cef2",
+      "status": "",
+      "changedSourceHashes": {}
+    },
+    "trellis2": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2",
+      "head": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+      "status": "M trellis2/models/sc_vaes/fdg_vae.py\n M trellis2/modules/image_feature_extractor.py\n M trellis2/modules/sparse/attention/full_attn.py\n M trellis2/modules/sparse/config.py\n M trellis2/pipelines/base.py\n M trellis2/pipelines/rembg/BiRefNet.py\n M trellis2/pipelines/trellis2_image_to_3d.py\n M trellis2/representations/mesh/base.py\n?? trellis2/modules/sparse/conv/conv_none.py",
+      "changedSourceHashes": {
+        "trellis2/models/sc_vaes/fdg_vae.py": "b775638bf661132dc4cf23311a25fa3d4153c3217bc066b302404b316a70b52d",
+        "trellis2/modules/image_feature_extractor.py": "710bda0470ff8262023f307a84040ec074432485d66bd29b4e902096e955b51b",
+        "trellis2/modules/sparse/attention/full_attn.py": "c37d4abbf277e70be8a57852bcfe2bf415f08a5e792abbe5687db7a8c458ecec",
+        "trellis2/modules/sparse/config.py": "39dd455ff0b467803beba36c2288264e006a74ac5b53581ea9bf0c9fbc86b48b",
+        "trellis2/modules/sparse/conv/conv_none.py": "debac02c641d14bbc7819c9da8e97ba32505174a032496f89184443511890a57",
+        "trellis2/pipelines/base.py": "1cdb6c440c573118bb53db8733c1534338fd546a618227421fc6163340a192f3",
+        "trellis2/pipelines/rembg/BiRefNet.py": "9134054cfc47936323f4da10ff3f19004062a4c9045fd31a640f95b46a1101b3",
+        "trellis2/pipelines/trellis2_image_to_3d.py": "48a47e42f0d4f116701502730226216364dbfc3fe394343b3646170fe27ccc58",
+        "trellis2/representations/mesh/base.py": "df620089837b689c5b8d98b3fea7e50ab1216fdee85bd77bf9403850a37a011e"
+      }
+    }
+  },
+  "installedEnvironments": {
+    "hunyuan": {
+      "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+      "packages": {
+        "torch": "2.14.0",
+        "numpy": "2.4.6",
+        "Pillow": "12.3.0",
+        "diffusers": "0.40.0",
+        "transformers": "5.17.0"
+      }
+    },
+    "trellis": {
+      "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+      "packages": {
+        "torch": "2.14.0",
+        "numpy": "2.4.6",
+        "Pillow": "12.3.0",
+        "transformers": "5.17.0",
+        "fast-simplification": "0.2.0"
+      }
+    }
+  },
+  "pipelineConfig": {
+    "path": "/Users/raynos/ml/img2mesh/trellis-view/pipeline.json",
+    "sha256": "8d7ce55f476486f8efe4005bbbdbfb889aeda5c7d3b8e779a3e3d0df5161ae07"
+  },
+  "weightsRoot": "/Users/raynos/projects/weights/manual",
+  "limits": [
+    "Raw static model comparison; no rig fit or player promotion",
+    "Working textured export is reduced; untouched decode retained separately",
+    "Same frozen cutout is fed to both engines",
+    "No performance or art acceptance asserted"
+  ]
+}

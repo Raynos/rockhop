@@ -1,0 +1,122 @@
+{
+  "status": "stage complete; parent judges candidates",
+  "stage": "hunyuan",
+  "wallSeconds": 179.78,
+  "commands": [
+    {
+      "argv": [
+        "/Users/raynos/ml/img2mesh/Hunyuan3D-2/.venv/bin/python",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/launcher-source/hy3d_batch.py",
+        "--out",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan",
+        "--faces",
+        "55000",
+        "--tex",
+        "2048",
+        "--render",
+        "1024",
+        "--octree",
+        "380",
+        "--seed",
+        "42",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/cutouts/01.png",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/cutouts/02.png",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/cutouts/03.png",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/cutouts/04.png",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/cutouts/05.png"
+      ],
+      "wallSeconds": 174.464
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/launcher-source/reduce_hunyuan.py",
+        "--",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/01.glb",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/01.reduced.glb",
+        "20000",
+        "1024"
+      ],
+      "wallSeconds": 1.539
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/launcher-source/reduce_hunyuan.py",
+        "--",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/02.glb",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/02.reduced.glb",
+        "20000",
+        "1024"
+      ],
+      "wallSeconds": 0.93
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/launcher-source/reduce_hunyuan.py",
+        "--",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/03.glb",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/03.reduced.glb",
+        "20000",
+        "1024"
+      ],
+      "wallSeconds": 0.916
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/launcher-source/reduce_hunyuan.py",
+        "--",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/04.glb",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/04.reduced.glb",
+        "20000",
+        "1024"
+      ],
+      "wallSeconds": 0.965
+    },
+    {
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/launcher-source/reduce_hunyuan.py",
+        "--",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/05.glb",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/05.reduced.glb",
+        "20000",
+        "1024"
+      ],
+      "wallSeconds": 0.93
+    }
+  ],
+  "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+  "packages": {
+    "torch": "2.14.0",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0"
+  }
+}
