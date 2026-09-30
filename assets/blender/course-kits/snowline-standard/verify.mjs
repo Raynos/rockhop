@@ -59,7 +59,7 @@ for (const file of ['snowline-standard-packed.glb','snowline-standard-lod-packed
     if(parts<1||parts>4) throw new Error(`${file}: bad part count ${name}:${parts}`);
   }
   report.push({ file,sha256:s.sha256,bytes:s.bytes,triangles:s.triangles,draws:s.draws,
-    images:s.imageList,names:[...names].sort(),decoder:'three GLTFLoader + bundled MeshoptDecoder; texture metadata from original GLB' });
+    images:s.imageList,names:[...names].sort((a,b)=>a<b?-1:a>b?1:0),decoder:'three GLTFLoader + bundled MeshoptDecoder; texture metadata from original GLB' });
 }
 fs.writeFileSync(path.join(dir,'out','decoder-report.json'),JSON.stringify(report,null,2)+'\n');
 process.stdout.write(JSON.stringify(report,null,2)+'\n');

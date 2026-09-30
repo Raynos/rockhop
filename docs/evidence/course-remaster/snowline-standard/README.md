@@ -25,3 +25,7 @@ The [manifest](manifest.json) records every packed-model, board, source and Blen
 5. Compare complete S1, S2, S3 Rookie and Pro played rides at 852×393, upper-route and held-GO fault/retry windows, and at least two actual phone tiers. Reject if the station masks landing judgement, the snowcat falsely changes the roller line, wall repetition remains flat in motion, the S2 gap appears bridged, or frame pacing/texture/draw budgets regress. Run exact replay, crash/restart, missing/late GLB and cached-offline gates. There is no course signoff before uncoached physical-phone riders.
 
 The current candidate does **not** replace the white riding-tread material or the seeded snowbank/fence/pine families. Those remain part of the overall Snowline full-biome gate; this candidate should be judged in motion and rejected or extended if those existing families still make the complete ride look schematic.
+
+## Combined-tree verification
+
+The parent full-repository lint caught a missing explicit sort comparator in the offline verifier. Its follow-up uses the same UTF-16 name ordering. Full repository typecheck and lint pass; thirteen focused Snowline/Garage tests pass. The corrected verifier parses both packed exports successfully, and its decoder report is byte-identical to this saved report. No runtime integration or course acceptance is implied.

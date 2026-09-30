@@ -392,3 +392,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Quarry source candidate:** The isolated initial scene scaffold and Blender drill/crusher/haul/gantry recipe are saved. Blender export succeeded into ignored masters; the scaffold still uses generic machinery and is unaccepted. Decoder, material, contact and played review remain pending before any integration.
 
 **R3 CPU finding:** [The exact p50 gate remains red](../evidence/course-remaster/pro-envelope/cpu/README.md), with its five-microsecond threshold and Rookie arithmetic unchanged. The title correction, bounded warmed probe, profile and host snapshots document the finding; host contention is not established as the sole cause.
+
+**Snowline verifier finding:** Combined-tree lint caught a missing sort comparator; its explicit UTF-16 comparator preserves the exact saved decoder report. Full typecheck, lint and thirteen focused Snowline/Garage tests pass. The candidate remains unintegrated.
