@@ -82,6 +82,23 @@ def ordered(loop,basisA,basisB):
   assert nxt not in ids,'closed contour self-revisit';ids.append(nxt)
  assert len(ids)==len(loop['ids']),'complete closed actual edge cycle'
  return ids
+def orient_boundary(o,deleted,loop,ids,opposite):
+ # Read the actual source triangle winding. A zipper has a forward first-row
+ # edge and a backward final-row edge; orient complete rows, never individual
+ # faces, so every internal zipper edge is shared with opposite directions.
+ ps,ix,_=weld(o);directions=defaultdict(list)
+ for f in o.data.polygons:
+  if f.index in deleted:continue
+  vs=[ix[i] for i in f.vertices]
+  for i,j in zip(vs,vs[1:]+vs[:1]):
+   if i!=j:directions[tuple(sorted((i,j)))].append(1 if i<j else -1)
+ signs=[]
+ for i,j in zip(ids,ids[1:]+ids[:1]):
+  ds=directions[tuple(sorted((i,j)))];assert len(ds)==1,(o.name,i,j,ds)
+  signs.append(ds[0]*(1 if i<j else -1))
+ assert len(set(signs))==1,(o.name,'source boundary winding',Counter(signs))
+ if (signs[0]>0)==opposite:ids=[ids[0]]+list(reversed(ids[1:]))
+ return ids
 for side in ['L','R']:
  b=arm.data.bones['forearm.'+side];elbow=b.head_local;wrist=b.tail_local;axis=(wrist-elbow).normalized();cut=-.10
  doomed=set()
@@ -93,7 +110,7 @@ for side in ['L','R']:
  bs=boundaries(body,doomed);start=min((l for l in bs if (l['centre']-wrist).length<.18 and len(l['ids'])>=3),key=lambda l:abs((l['centre']-wrist).dot(axis)-cut));assert dict(start['degree'])=={2:len(start['ids'])},start['degree']
  gs=boundaries(contact,set());end=min((l for l in gs if (l['centre']-wrist).length<.08 and max(l['ps'][i].x for i in l['ids'])-min(l['ps'][i].x for i in l['ids'])<.0001),key=lambda l:(l['centre']-wrist).length);assert dict(end['degree'])=={2:len(end['ids'])},end['degree']
  A=Vector((0,1,0));A=(A-axis*A.dot(axis)).normalized();B=axis.cross(A).normalized();EA=Vector((0,1,0));EB=Vector((0,0,1))
- startids=ordered(start,A,B);endids=ordered(end,EA,EB)
+ startids=orient_boundary(body,doomed,start,ordered(start,A,B),True);endids=orient_boundary(contact,set(),end,ordered(end,EA,EB),False)
  rows=[];startws=[];startcs=[];endws=[]
  for l,ids,targetws in [(start,startids,startws),(end,endids,endws)]:
   for i in ids:
@@ -135,10 +152,7 @@ for side in ['L','R']:
    else:faces.append((ia,rb[(j+1)%len(rb)],ib));j+=1
  seams.append({'side':side,'body':{'sourceVertices':[start['orig'][i] for i in startids],'sourcePositions':[gltf(start['ps'][i]) for i in startids],'bridgeVertices':rows[0]},'glove':{'sourceVertices':[end['orig'][i] for i in endids],'sourcePositions':[gltf(end['ps'][i]) for i in endids],'bridgeVertices':rows[-1]}})
  sides.append({'side':side,'cutAxisMetres':cut,'bodyContourVertices':len(startids),'gloveContourVertices':len(endids),'removedTriangles':len(doomed),'startCentre':gltf(start['centre']),'gloveCentre':gltf(end['centre']),'endpointSpanMetres':(end['centre']-start['centre']).length})
-# Orient each triangle outwards relative to the local wrist centre line.
-for j,f in enumerate(faces):
- p,q,r=[Vector(verts[i]) for i in f];centre=(p+q+r)/3;side='L' if centre.y<0 else 'R';s=next(s for s in sides if s['side']==side);c0=Vector((s['startCentre'][0],-s['startCentre'][2],s['startCentre'][1]));c1=Vector((s['gloveCentre'][0],-s['gloveCentre'][2],s['gloveCentre'][1]));d=c1-c0;t=max(0,min(1,(centre-c0).dot(d)/d.length_squared));out=centre-(c0+d*t)
- if (q-p).cross(r-p).dot(out)<0:faces[j]=(f[0],f[2],f[1])
+# Row winding is coherent and matches both directed original boundaries.
 me=bpy.data.meshes.new('Measured anatomical wrist retopology');me.from_pydata(verts,[],faces);me.update();ob=bpy.data.objects.new('Street_continuous_wrists',me);bpy.context.scene.collection.objects.link(ob)
 for f in me.polygons:f.use_smooth=True
 ca=me.color_attributes.new(name='Color',type='FLOAT_COLOR',domain='POINT')
