@@ -62,6 +62,8 @@
 
 **D1 contact-road round:** The [matched moving full rides and fault/retry](../evidence/course-remaster/d1/contact-road/README.md) now tint only the four real terrace collider tops and short entry faces. The Rookie and historical Pro finish times and hashes stay exact in that frozen comparison. This is a bounded contact-readability gain; the larger quarry scene, fresh rider attempts and device pacing remain open.
 
+**Third-round host gate:** The [2026-09-30 C1 cold-boot/clear/crash/restart report](../evidence/course-remaster/round-gate-2026-09-30/README.md) is 9/11 on SwiftShader. Exact clear/hash, crash control and one-tick restart pass; first-frame and restart-frame host timing fail. This is a partial host result, not physical-phone release evidence.
+
 **C3 hull round:** [played Hull Breach window](../evidence/course-remaster/c3/README.md) gives the wreck segmented steel plating and a visible torn exit lip. The captured state hash matches Node, and the obstacle cost rises by 2,928 triangles and one draw call. The broad boxy hull profile and physical-phone performance remain open.
 
 **D2 machinery and surface rounds:** [played Conveyor excerpts](../evidence/course-remaster/d2/README.md) give the head pulley a spinning spoke face, belt supports and cleats, and the later cart a tub and visible load. The [matched full ride and cart fault](../evidence/course-remaster/d2/surface-light/README.md) replace near-black outdoor metal with dusted steel and visible side edges while preserving exact finish and fault-window hashes. The later cart surface, new-player fault response and phone pacing remain open.
