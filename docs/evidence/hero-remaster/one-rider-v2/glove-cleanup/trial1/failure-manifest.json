@@ -1,0 +1,34 @@
+{
+  "status": "failed technique stopped; no replacement run",
+  "sourceSHA256": "f657aa963f2e582a9f70291b3dbd160dafd6e944419d48b21b0425521d4cd63a",
+  "rawSHA256": "4a10d00eb42b08910e015efe117f6b28f07be2c7d76e311613a38ac5303d0247",
+  "sourceUnchanged": true,
+  "rawUnchanged": true,
+  "failures": [
+    {
+      "attempt": 1,
+      "exitCode": 1,
+      "recipe": "assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/trial1-failure-01.py",
+      "recipeSHA256": "192ddbfeee8abb9aca944b7514382397bdb6731ea455386b0731074fb14051c8",
+      "log": "docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/trial1/failure-01-log.txt",
+      "logSHA256": "cc2166142e4db715773b6e543340755eb3c94d2bdd9e80e743e61914d4bc2bbf",
+      "logProvenance": "verbatim captured exec_command tool stdout; not a fabricated process replay"
+    },
+    {
+      "attempt": 2,
+      "exitCode": 1,
+      "recipe": "assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/trial1-failure-02.py",
+      "recipeSHA256": "65321d0466794d8d7547abe1716b046600be5d062db2a8b4418927644e45762f",
+      "log": "docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/trial1/failure-02-log.txt",
+      "logSHA256": "f5eddb273734f2116fa17591f9ab647a752ba06516cbd6171fff346e0dbd168f",
+      "logProvenance": "verbatim captured exec_command tool stdout; not a fabricated process replay"
+    }
+  ],
+  "outputs": {
+    "exportedCharacter": false,
+    "master": false,
+    "rig": false,
+    "render": false
+  },
+  "nextTechniqueAuthorized": false
+}

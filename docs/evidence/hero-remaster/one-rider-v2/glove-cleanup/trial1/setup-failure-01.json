@@ -1,0 +1,9 @@
+{
+  "status": "failed before derivative export; source unchanged",
+  "defect": "new authored patch duplicate/sliver face after local voxel union and wrist bisect",
+  "exception": "ValueError: faces.new(...): face already exists",
+  "location": "trial1.py, copy authored patch face into source BMesh",
+  "fixAttempt": "position weld and dissolve degenerate edges on new authored patch only, before copying and sewing",
+  "scope": "one technical setup correction; not whole-body remesh or accepted anatomy correction",
+  "failedAttempts": 1
+}

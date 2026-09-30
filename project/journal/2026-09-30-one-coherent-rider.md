@@ -102,3 +102,14 @@ and hash-bound patch implementation. No player source/physics changed.
 
 Limits: Capsule/cylinder approximation must match each actual visible target;
 new rider mappings and played maximum lean/landing footage remain absent.
+
+Finding: Local voxel-union glove construction fails twice before export
+on duplicate BMesh faces. Stop this technique; choose explicit sewn palm
+and finger-branch topology under delegated autonomous direction.
+
+Validation: Exact failing recipe snapshots and captured process logs
+match frozen hashes; both exit1. Donor and raw source hashes unchanged.
+No exported derivative, master, render or rig exists from this trial.
+
+Limits: The explicit branch alternative is not yet constructed or accepted;
+no glove anatomy, wrist deformation or visible contact pass.
