@@ -31,7 +31,7 @@ Track active work separately from idle inference/download time.
 
 | Stage | Initial batch | Ceiling before evidence and a user choice |
 |---|---|---|
-| 1 — model | Five designs × Hunyuan3D/TRELLIS.2 = ten bodies; additive Pixal3D trial | Shortlist at most two bodies; at most two correction passes per body; eight active hours |
+| 1 — model | Five designs × Hunyuan3D/TRELLIS.2 = ten bodies; additive Pixal3D and Hunyuan3D 2.1 lanes | Shortlist at most two bodies; at most two correction passes per body; eight active hours |
 | 2 — sitting | One selected body, one motion target/clip and explicit mapping | At most two correction passes; six active hours |
 | 3 — riding | Same body, fixed Rookie/Pro bikes, one matched Garage/gameplay matrix | At most two correction passes; six active hours |
 
@@ -114,6 +114,29 @@ Multi-view is a separately labeled experiment after the single-image trial.
 It needs consistent separate views with credible framing/camera transforms.
 Do not assign fictitious calibrated transforms to imagegen board tiles.
 Disclose its additional inputs when comparing with single-image generators.
+
+### Hunyuan3D 2.1 — fourth lane, ask228
+
+The user explicitly adds the freshly downloaded2.1. Preserve all fifteen
+H/T/P bodies and their gallery; label new results H21-1 through H21-5.
+Use the same five frozen RGBA references/seed42 and common exact-yaw renderer.
+The installed runner uses MPS shape/PBR inference with CPU rendering/baking;
+freeze code adaptations, dependencies and canonical weight hashes in LocalAI.
+Keep the single shared model lock through inference, painting and export;
+never evict another chat's model servers. One body per <=30minute lock batch.
+
+Run one normal-quality canary (30shape steps, octree380, guidance5,
+15PBR steps, six512px views,1024render,2048texture), then the other four if
+it completes. Preserve native NPZ/GLB before cleanup, a requested55k painted
+working body and separate20k/1024 reduction. These settings differ from older
+Hunyuan turbo, TRELLIS512 and Pixal1024cascade; disclose them instead of
+claiming equal inference cost. Compare native/working/reduced geometry, nine
+views and full36frame orbits. Add comparison boards without overwriting the
+original fifteen-body boards. No quality score from setup readiness alone.
+
+Feasibility shares the same two-hour/two-failed-fix setup bound as Pixal;
+all subsequent model refinement remains inside stage1's existing bounds.
+No automatic shortlist/body acceptance, rig work or normal asset promotion.
 
 ## Checkpoint 2 — the same body stands and sits
 
@@ -207,6 +230,7 @@ updating asks/index before the next experiment. No scheduling or deployment.
   are prepared and independently repeated for12 cases across both bikes.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation
   does not advance either later visual gate.
+- [ ] Additive Hunyuan3D 2.1 canary and five-design comparison (ask228).
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.
