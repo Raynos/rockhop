@@ -37,7 +37,7 @@ describe('ThreeRenderer.riderDoc / bikeDoc', () => {
     const rider = { name: 'authored' } as unknown as GLTF, riderLod = { name: 'lod' } as unknown as GLTF;
     const bike = { name: 'bike' } as unknown as GLTF, bikeLod = { name: 'bike-lod' } as unknown as GLTF;
     const heroDocs = new Map<string, GLTF>([['models/rider-street-mustard.glb', rider], ['models/rider-street-mustard-lod.glb', riderLod], ['models/bike-rookie.glb', bike], ['models/bike-rookie-lod.glb', bikeLod]]);
-    const fields = { tier, deviceClass, stageOn: false, disposed: false, heroDocs, riderOutfit: 'street-mustard', bikeClass: 'rookie', models: { bikeModel: 'proc', riderModel: 'proc' }, heroPool: new Map() };
+    const fields = { tier, deviceClass, stageOn: false, disposed: false, width: 852, height: 393, heroDocs, riderOutfit: 'street-mustard', bikeClass: 'rookie', models: { bikeModel: 'proc', riderModel: 'proc' }, heroPool: new Map() };
     const renderer = Object.assign(Object.create(ThreeRenderer.prototype) as object, fields) as unknown as { stageOn: boolean; riderDoc(): GLTF | null; bikeDoc(): GLTF | null; setGarageStage(on: boolean): void };
     return { renderer, rider, riderLod, bike, bikeLod };
   }
@@ -58,15 +58,18 @@ describe('ThreeRenderer.riderDoc / bikeDoc', () => {
     for (const [tier, device, swaps] of [['low', 'phone', true], ['high', 'desktop', false]] as const) {
       const { renderer, rider, riderLod, bike, bikeLod } = fixture(tier, device);
       const applyModels = vi.fn();
+      const resize = vi.fn(); // This selection fixture has no GPU; raster behavior has its own regression.
       const live = { source: renderer.riderDoc() };
-      Object.assign(renderer, { bikeRef: {}, riderRef: live, applyModels, applyGarageStage: vi.fn(), clearGarageStage: vi.fn(), invalidate: vi.fn() });
+      Object.assign(renderer, { bikeRef: {}, riderRef: live, resize, applyModels, applyGarageStage: vi.fn(), clearGarageStage: vi.fn(), invalidate: vi.fn() });
       renderer.setGarageStage(true);
+      expect(resize).toHaveBeenNthCalledWith(1, 852, 393);
       expect(applyModels).toHaveBeenCalledTimes(1);
       // The swap is only real when the document differs — `applyModels` compares `source` to `riderDoc()` / `bikeDoc()`.
       expect(live.source !== renderer.riderDoc()).toBe(swaps);
       expect(renderer.riderDoc()).toBe(rider);
       expect(renderer.bikeDoc()).toBe(bike);
       renderer.setGarageStage(false);
+      expect(resize).toHaveBeenNthCalledWith(2, 852, 393);
       expect(renderer.riderDoc()).toBe(swaps ? riderLod : rider);
       expect(renderer.bikeDoc()).toBe(swaps ? bikeLod : bike);
     }
