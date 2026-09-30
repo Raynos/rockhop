@@ -85,3 +85,8 @@ actual output. This is a partial host gate, not physical-device or release
 qualification. The final commit leaves no tracked or untracked Git changes
 at the cleanup snapshot; ignored caches, editable masters and capture outputs
 remain local.
+
+The final source-retention round also saves three newly written V7 face
+recipe/inspection/donor files. Python syntax, 4,714 finite donor triangles,
+local V6 input hash and Blender source inspection pass. These files do not
+replace the verified production wrist pair or qualify the facial remaster.
