@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import * as THREE from 'three';
 import { loadRigAt } from '../../src/render/hero/gltfTestUtils';
 import { prepareHero } from '../../src/render/hero/lod';
@@ -23,9 +24,13 @@ type Anchor = { centerHandLocal: THREE.Vector3; normalHandLocal: THREE.Vector3; 
 const anchors = new Map<Side, Anchor>();
 const out = path.resolve(process.argv.find(x => x.startsWith('--out='))?.slice(6) ?? 'docs/evidence/hero-remaster/wrists');
 fs.mkdirSync(out, { recursive: true });
+// Pin the donor so the before audit remains reproducible after promotion.
+const donorCommit = 'ec04192d61e39dcc8bdb80fd97842e8019ef4e55';
+const donorPaths = ['rider-street-mustard.glb', 'rider-street-mustard-lod.glb'];
+for (const filename of donorPaths) fs.writeFileSync(path.join(out, filename), execFileSync('git', ['show', `${donorCommit}:public/models/${filename}`], { maxBuffer: 16 * 1024 * 1024 }));
 const subjects = [
-  ['original-full', 'public/models/rider-street-mustard.glb'],
-  ['original-lod', 'public/models/rider-street-mustard-lod.glb'],
+  ['original-full', path.join(out, donorPaths[0]!)],
+  ['original-lod', path.join(out, donorPaths[1]!)],
   ['v5-full', 'assets/blender/hero-remaster/rider/candidate-v5-packed.glb'],
   ['v5-lod', 'assets/blender/hero-remaster/rider/candidate-v5-lod-packed.glb'],
 ] as const;
@@ -247,3 +252,5 @@ for (const [label, relative] of subjects) {
 }
 fs.writeFileSync(path.join(out, 'runtime-matrices.json'), JSON.stringify(matrixReports, null, 2) + '\n');
 fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify({ method: { decoder: 'GLTFLoader/MeshoptDecoder, prepareHero, new GltfRider, real setStage/update, getVertexPosition', sourceSelection: 'Bind/rest: triangle centroid within25cm of hand bone and average same-side forearm+hand weight>=.15. Original glove partition average hand weight>.55; V5 authored contact mesh separate.', topology: 'Open edges after10micrometre position welding; selected midpoints axial[-12,+10]cm, radius<=20cm, side arm weight>=.10. Selected region can truncate an edge component, so a noncycle is diagnostic, not definitive full-mesh topology.', slices: 'Triangle-plane intersections in runtime elbow→wrist frame.101planes every2mm from-12cm to+8cm;32radial rays each. Hits at radii8mm..20cm. Full angular occupancy alone does not prove connected/watertight seam.', cuffAnchor: 'Actual unique original-full closed88vertex glove opening, mean hand weight>.99; centroid and plane normal transformed through corresponding hand bone. Shared full donor reference is explicit for LOD rather than inventing a closed LOD contour.41planes every2mm ±4cm; focus ±1cm.', surfaceDistance: 'Deterministic maximum64open-edge midpoint samples permesh to opposing complete selected nondegenerate triangles; excluded degenerate count explicit. Never arbitrary nearestvertex.', coincidentCandidates: 'Cross-mesh vertices in same100micrometre rest-world bin, restdistance<=200micrometres. Normalize weights by actual skeleton bone names, compareL1 and actual deformedpositions. Does NOT establish full-ring correspondence.', poses: 'Garage plays accepted clip at.75seconds. Six riding poses use real GltfRider physical IK path from explicit hips/torso table,20updates to settle stageexit; synthetic runtime frames, not recorded actual Game events.' }, unmeasured: ['Watertight stitched sleeve/glove ring correspondence', 'Material/texture silhouette and actual camera exposure', 'Continuous every-tick recorded riding/crash pose sweep', 'Visual hand-size acceptance', 'Actual engine frame matrix parity; parent camera harness owns comparison'], reports }, null, 2) + '\n');
+
+for (const filename of donorPaths) fs.unlinkSync(path.join(out, filename));

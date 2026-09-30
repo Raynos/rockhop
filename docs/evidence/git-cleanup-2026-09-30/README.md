@@ -37,7 +37,7 @@ Further authoring work appeared after the initial clean snapshot. It is now
 retained in separate Alpine material, Quarry machinery, Coast harbor,
 Snowline refinement and wrist-diagnostic commits. Original runtime hooks
 remain unchanged; unaccepted kits and repair recipes are explicitly labelled.
-The final status round makes **18 main commits** since cleanup began, including
+The final status round makes **19 main commits** since cleanup began, including
 the audio publishing record and CI fixture portability correction.
 
 Final application/harness typecheck, repository lint and normal build pass.
@@ -54,3 +54,6 @@ but uses default flat-test for Rookie, so C1 was rechecked explicitly.
 [Build provenance](candidate-checkpoint-provenance.json) identifies the built
 entry baseline. This is no full ship verdict or physical-phone qualification.
 Concurrent new hero work can create further edits after this cleanup snapshot.
+
+A final checkpoint retains the newly added wrist sewn-contour audit and its
+red initial V6 report; typecheck and focused lint pass. The repair stays open.

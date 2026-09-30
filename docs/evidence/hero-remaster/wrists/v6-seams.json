@@ -1,0 +1,496 @@
+{
+  "pass": false,
+  "limits": {
+    "positionMetres": 0.000001,
+    "normalizedWeightL1": 0.000001,
+    "rawWeightL1": 0.000001,
+    "coefficientMaxAbs": 0.000001,
+    "worldGapMetres": 0.000001,
+    "triangleAreaSquareMetres": 1e-10
+  },
+  "method": "Explicit contour correspondence; independent welded triangle-edge incidence; raw and normalized bone-name weights; bind-aware homogeneous LBS coefficients with identical live bone objects and outer transforms; production prepareHero/GltfRider/conditionSleeveSkin CPU deformation.",
+  "limitations": [
+    "Seven synthetic runtime frame cases are quantitative probes, not played game evidence.",
+    "No textures, GPU, silhouettes, collisions, self-intersections or art acceptance asserted.",
+    "Matching linear skinning coefficients bounds seam splitting for arbitrary bone transforms; triangle areas are checked only in listed cases.",
+    "Position weld is 1 micrometre for actual edge topology; map association uses its recorded coordinateWeldMetres."
+  ],
+  "subjects": [
+    {
+      "subject": "full",
+      "file": "assets/blender/hero-remaster/rider/candidate-v6-packed.glb",
+      "sha256": "151f3ba3632ef99f11dbd16cf0cb6a9438c4a558592abc9c57145a6b63e87d0d",
+      "map": "assets/blender/hero-remaster/rider/candidate-v6.glb.seams.json",
+      "mapSHA256": "c878169b6d0ccc99aa539a38d3f540e9c862fa5e7a84714dfa309773d4d5dd65",
+      "rawMapAsset": "assets/blender/hero-remaster/rider/candidate-v6.glb",
+      "rawMapAssetSHA256": "94dd8e2b2e94cf6fe84efa99639b3659f7bc4251287ca231f4d5a519a55982d3",
+      "mapAssociation": {
+        "packed": true,
+        "rawMapPositionMaxMetres": 0,
+        "packedPositionDriftMaxMetres": 0.00002366341931696394,
+        "expectedPackedPositionMaxMetres": 0,
+        "method": "Raw explicit indices validated against recorded positions, then independently reproduced production EXPONENTIAL/16/SharedVector packing with unchanged indices."
+      },
+      "topology": [
+        {
+          "side": "L",
+          "join": "body",
+          "declaredClosedCycle": true,
+          "contourVertices": 42,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 4
+        },
+        {
+          "side": "L",
+          "join": "glove",
+          "declaredClosedCycle": true,
+          "contourVertices": 88,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 39
+        },
+        {
+          "side": "R",
+          "join": "body",
+          "declaredClosedCycle": true,
+          "contourVertices": 39,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 4
+        },
+        {
+          "side": "R",
+          "join": "glove",
+          "declaredClosedCycle": true,
+          "contourVertices": 88,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 39
+        }
+      ],
+      "unmappedRepairBoundaryEdges": 0,
+      "nonManifoldRepairEdges": 0,
+      "inconsistentInternalRepairWindingEdges": 74,
+      "poses": [
+        {
+          "pose": "garage",
+          "syntheticRuntimeFrame": true,
+          "stageClip": "idle_breathe",
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 9.73443908285951e-7
+        },
+        {
+          "pose": "backlean",
+          "syntheticRuntimeFrame": true,
+          "stageClip": null,
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 0.000004632971141755033
+        },
+        {
+          "pose": "neutral",
+          "syntheticRuntimeFrame": true,
+          "stageClip": null,
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 0.000004214209569353125
+        },
+        {
+          "pose": "forwardlean",
+          "syntheticRuntimeFrame": true,
+          "stageClip": null,
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 0.0000012439084317559117
+        },
+        {
+          "pose": "compression",
+          "syntheticRuntimeFrame": true,
+          "stageClip": null,
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 0.000004724495445517387
+        },
+        {
+          "pose": "extension",
+          "syntheticRuntimeFrame": true,
+          "stageClip": null,
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 0.000002800824672431159
+        },
+        {
+          "pose": "landing",
+          "syntheticRuntimeFrame": true,
+          "stageClip": null,
+          "joins": [
+            {
+              "side": "L",
+              "join": "body",
+              "vertexPairs": 52,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "L",
+              "join": "glove",
+              "vertexPairs": 103,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "body",
+              "vertexPairs": 47,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "side": "R",
+              "join": "glove",
+              "vertexPairs": 112,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ],
+          "repairTriangles": 385,
+          "degenerateRepairTriangles": 0,
+          "minRepairTriangleAreaSquareMetres": 0.00000468175928548425
+        }
+      ]
+    }
+  ],
+  "failures": [
+    "full/L/body: actual topology is not a closed sewn boundary",
+    "full/L/glove: actual topology is not a closed sewn boundary",
+    "full/R/body: actual topology is not a closed sewn boundary",
+    "full/R/glove: actual topology is not a closed sewn boundary",
+    "full: inconsistent internal repair winding"
+  ]
+}
