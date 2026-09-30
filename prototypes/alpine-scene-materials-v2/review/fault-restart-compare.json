@@ -1,0 +1,264 @@
+{
+  "name": "fault-restart",
+  "left": "before",
+  "right": "after",
+  "input": "docs/evidence/alpine-retarget/a1-sawdust-rookie-restart.rec.json",
+  "inputSha256": "9cd1baa6ded132ef7f9b797a61f0cb09d693c7786bb279e838235e63bcffdb01",
+  "window": [
+    2910,
+    3035
+  ],
+  "frames": 125,
+  "finalHash": "4b9a060e15075b4a",
+  "finishTime": null,
+  "quality": "low",
+  "backend": "metal",
+  "camera": {
+    "before": {
+      "frames": 125,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953614e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 40,
+        "riding": 23,
+        "crash": 1,
+        "idle": 1
+      },
+      "minX": 0.342,
+      "maxX": 0.45,
+      "minY": 0.436,
+      "maxY": 0.55,
+      "violations": [],
+      "settleExcluded": 60,
+      "pass": true
+    },
+    "after": {
+      "frames": 125,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953614e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 40,
+        "riding": 23,
+        "crash": 1,
+        "idle": 1
+      },
+      "minX": 0.342,
+      "maxX": 0.45,
+      "minY": 0.436,
+      "maxY": 0.55,
+      "violations": [],
+      "settleExcluded": 60,
+      "pass": true
+    }
+  },
+  "beforeSource": {
+    "url": "http://127.0.0.1:65097/",
+    "versionSha": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+    "versionTime": "2026-09-30T14:38:22.007Z",
+    "indexUrl": "http://127.0.0.1:65097/assets/index-BlzZpmz_.js",
+    "indexSHA256": "2aacd37c4e7558a69371e52caa216d091ac60cb9c48065cd2eb835e65565c2a8",
+    "htmlSHA256": "79753ee6375b9210382e77f0daba822562754e2a97bf9003c45b60fd71bb4202"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:65175/",
+    "versionSha": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+    "versionTime": "2026-09-30T14:38:22.007Z",
+    "indexUrl": "http://127.0.0.1:65175/assets/index-4mIMAxiw.js",
+    "indexSHA256": "344332e22eef754bae71f33219edfc86998a9ff25d37b3ee1d780b882f6af253",
+    "htmlSHA256": "1bd9a6d6f8875514b08d116d805ac4bcf4e09401ecbd02b9cb68f9056f909591"
+  },
+  "beforeEntry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 352,
+      "tris": 604632,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+      "shadowMap": 2048,
+      "heroTris": 90977,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 74798,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 294.3,
+      "entering": false,
+      "courseAssetsEnabled": true,
+      "courseAssetsMounted": 1,
+      "courseAssetsTextureMB": 6.333
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "afterEntry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 352,
+      "tris": 604632,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 852×392 | ao 426×196 | ao:blur 426×196 | bloom:bright 426×196 | bloom:h0 426×196 | bloom:v0 426×196 | bloom:h1 213×98 | bloom:v1 213×98 | bloom:h2 107×49 | bloom:v2 107×49 | bloom:h3 54×25 | bloom:v3 54×25 | bloom:h4 27×13 | bloom:v4 27×13 | bloom:composite 426×196 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+      "shadowMap": 2048,
+      "heroTris": 90977,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 74798,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 296.2,
+      "entering": false,
+      "courseAssetsEnabled": true,
+      "courseAssetsMounted": 1,
+      "courseAssetsTextureMB": 6.333
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "rawClipSHA256": {
+    "before": "06f7f07910da9fc2f00de7e32b8e4274a6dfcf8dadadb5f79f8376ecd0aa9e8d",
+    "after": "76a8b104d76edb08e588bfa8fe9ba0f708e476b9a7a8f8999a581ec51af64507"
+  },
+  "output": "/Users/raynos/projects/games/rockhop/prototypes/alpine-scene-materials-v2/review/fault-restart-compare.mp4",
+  "outputSHA256": "c65a67613015acc46d7485aa4dac671310b876d84c662fb2d56ef142d8269234",
+  "probe": {
+    "durationSec": 1.041667,
+    "fps": 120,
+    "width": 1704,
+    "height": 392,
+    "codec": "h264",
+    "frames": 125,
+    "sizeBytes": 960491
+  },
+  "dirtyTreeConfounder": "Both phases use the same frozen full application/public/harness inputs. Only the two recorded material-hook module overrides differ. Concurrent live main/hero work is excluded from these builds. Historical snapshot dirty status remains in snapshot-manifest.json. These captures provide no isolated or concurrent host timing measurement.",
+  "snapshotManifestSHA256": "305a45187e5008e98ab408e8c5616da93464d76e71536e415b6af23931f27fe2",
+  "builds": {
+    "before": {
+      "schema": 1,
+      "phase": "before",
+      "status": 0,
+      "scratch": "/private/var/folders/fj/nk4z2jhn4rj0kq09f047sl180000gn/T/rockhop-alpine-materials-v2-before-L6rLqm",
+      "sourceHEAD": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+      "snapshotManifestSHA256": "305a45187e5008e98ab408e8c5616da93464d76e71536e415b6af23931f27fe2",
+      "prebuildAppSHA256": "d5bfa602826754f1516daa62e11092c3c6ab09e644db630f8808031d273cf834",
+      "bankSHA256": "ae55edb67472e4634be3b856110dc7dc8aa08383b866051b85fb61458bd26954",
+      "privateConfigSHA256": "e96c5e3fbf3707cfcb785b61ffb92d509c59301808461f9774ff8cad62855c1d",
+      "overrides": [],
+      "generated": [
+        {
+          "file": "src/boot/plan.generated.ts",
+          "sha256": "b7fd01a0809e01c8932514a5eed5f58e97538714ea01f5199eb0dcfa9ee2b8ef"
+        },
+        {
+          "file": "src/render/hero/models.generated.ts",
+          "sha256": "56ff571b32de8253f6b7914fe48ea06cd3005378fd84a09c7557ac614a2eb7e6"
+        }
+      ],
+      "budget": {
+        "playerGzipBytes": 716800,
+        "inlineRawBytes": 8192,
+        "normalGates": true
+      },
+      "entry": "./assets/index-BlzZpmz_.js",
+      "indexSHA256": "2aacd37c4e7558a69371e52caa216d091ac60cb9c48065cd2eb835e65565c2a8",
+      "catalogSHA256": "2d9e63e82e4610b1033f15ea1c1c56fb29c17473cb6a9cd021c3739b521d6467",
+      "version": {
+        "sha": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+        "build": "7fe59bc",
+        "time": "2026-09-30T14:38:22.007Z"
+      },
+      "measuredPlayerGzipBytes": 714077
+    },
+    "after": {
+      "schema": 1,
+      "phase": "after",
+      "status": 0,
+      "scratch": "/private/var/folders/fj/nk4z2jhn4rj0kq09f047sl180000gn/T/rockhop-alpine-materials-v2-after-iXX0tq",
+      "sourceHEAD": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+      "snapshotManifestSHA256": "305a45187e5008e98ab408e8c5616da93464d76e71536e415b6af23931f27fe2",
+      "prebuildAppSHA256": "d5bfa602826754f1516daa62e11092c3c6ab09e644db630f8808031d273cf834",
+      "bankSHA256": "ae55edb67472e4634be3b856110dc7dc8aa08383b866051b85fb61458bd26954",
+      "privateConfigSHA256": "9ddd56d6149adb12128f77314544ec9e258a2b97534135d3e61ff41d4220a38d",
+      "overrides": [
+        {
+          "file": "src/render/world/biomeKit.ts",
+          "bytes": 101122,
+          "sha256": "556c22bc85b6db16bb5e7bc70beaa932032d9bb6186179d918cf3560572bbad8"
+        },
+        {
+          "file": "src/render/world/zones/zoneDeck.ts",
+          "bytes": 29774,
+          "sha256": "0d8253f71145c79e47911b4f54865625acc57963c49bc52569d1af093070972a"
+        }
+      ],
+      "generated": [
+        {
+          "file": "src/boot/plan.generated.ts",
+          "sha256": "b7fd01a0809e01c8932514a5eed5f58e97538714ea01f5199eb0dcfa9ee2b8ef"
+        },
+        {
+          "file": "src/render/hero/models.generated.ts",
+          "sha256": "56ff571b32de8253f6b7914fe48ea06cd3005378fd84a09c7557ac614a2eb7e6"
+        }
+      ],
+      "budget": {
+        "playerGzipBytes": 716800,
+        "inlineRawBytes": 8192,
+        "normalGates": true
+      },
+      "entry": "./assets/index-4mIMAxiw.js",
+      "indexSHA256": "344332e22eef754bae71f33219edfc86998a9ff25d37b3ee1d780b882f6af253",
+      "catalogSHA256": "2d9e63e82e4610b1033f15ea1c1c56fb29c17473cb6a9cd021c3739b521d6467",
+      "version": {
+        "sha": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+        "build": "7fe59bc",
+        "time": "2026-09-30T14:38:22.007Z"
+      },
+      "measuredPlayerGzipBytes": 715349
+    }
+  }
+}

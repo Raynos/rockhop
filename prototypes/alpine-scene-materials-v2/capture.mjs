@@ -5,7 +5,7 @@ import http from 'node:http';
 import { spawn } from 'node:child_process';
 import { home, project, common, sha, verifySnapshot } from './prepare.mjs';
 const [phase, which] = process.argv.slice(2);
-if (!['before','after'].includes(phase) || (which && !['full','flume-fault','fault-restart','perf'].includes(which))) throw new Error('Usage: TRIALS_BROWSER_BACKEND=metal node capture.mjs before|after [full|flume-fault|fault-restart|perf]');
+if (!['before','after'].includes(phase) || (which && !['full','flume-fault','fault-restart','perf','lifecycle'].includes(which))) throw new Error('Usage: TRIALS_BROWSER_BACKEND=metal node capture.mjs before|after [full|flume-fault|fault-restart|perf|lifecycle]');
 if(process.env.TRIALS_BROWSER_BACKEND!=='metal') throw new Error('Matched capture requires the parent-owned Metal lane');
 const manifest=verifySnapshot();
 const output=path.join(home,'out',phase),dist=path.join(output,'dist');
@@ -32,8 +32,14 @@ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 try {
   const address=server.address();if(!address||typeof address==='string') throw new Error('Missing frozen server address');
   const env={...process.env,A1_CAPTURE_URL:`http://127.0.0.1:${address.port}/`,A1_CAPTURE_SHA:manifest.head,A1_CAPTURE_INDEX_SHA:build.indexSHA256,A1_EXPECT_MOUNT:'1'};
-  const script=which==='perf'?'a1-full-ride-perf.mts':'a1-frozen-capture.mts';
-  const args=which==='perf'?[path.join(output,'perf.json'),'low']:[path.join(output,'captures'),...(which?[which]:[])];
+  const script=which==='lifecycle'?'a1-frozen-lifecycle.mts':which==='perf'?'a1-full-ride-perf.mts':'a1-frozen-capture.mts';
+  if(which==='lifecycle') {
+    // Supplement the non-player harness only; original app/bank snapshots stay exact.
+    const file='assets/blender/course-kits/alpine-trees/a1-frozen-lifecycle.mts';
+    const bytes=fs.readFileSync(path.join(project,file));fs.writeFileSync(path.join(common,file),bytes);
+    fs.writeFileSync(path.join(output,'lifecycle-harness.json'),JSON.stringify({file,sha256:sha(bytes),usesFrozenHarnessLibraries:true},null,2)+'\n');
+  }
+  const args=which==='lifecycle'?[path.join(output,'lifecycle.json')]:which==='perf'?[path.join(output,'perf.json'),'low']:[path.join(output,'captures'),...(which?[which]:[])];
   const status=await new Promise((resolve,reject)=>{
     const child=spawn(process.execPath,[path.join(project,'node_modules/tsx/dist/cli.mjs'),path.join(common,'assets/blender/course-kits/alpine-trees',script),...args],{cwd:common,env,stdio:'inherit'});
     child.once('error',reject);child.once('exit',code=>resolve(code??1));

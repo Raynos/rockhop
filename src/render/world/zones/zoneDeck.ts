@@ -19,6 +19,7 @@ import type { MaterialLibrary } from '../../materials/library';
 import { profileY, resample, ribbonGeometry } from '../track';
 import { canvas, tex } from '../canvasTex';
 import { lcg } from './geo';
+import { alpineSoil } from './alpineSurface';
 
 export interface ZoneFace {
   /** z of the deck's near edge (the face's top). */
@@ -559,7 +560,7 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
       } else col.setXYZ(i, s, s, s);
     }
   }
-  const topPaint = zonePaint(lib, id, 'top', lowTide)!;
+  const topPaint = track.def.id === 'a1-sawdust' ? alpineSoil(lib, 'tread') : zonePaint(lib, id, 'top', lowTide)!;
   out.textureBytes += topPaint.bytes;
   out.meshes.push({ name: `zonedeck:top:${id}`, geo: top, mat: topPaint.mat, castShadow: false });
 
@@ -601,7 +602,7 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
   }
   const faceGeos = [face, backWall, ...caps].filter((g): g is THREE.BufferGeometry => !!g);
   const faceGeo = faceGeos.length === 1 ? faceGeos[0]! : mergeAll(faceGeos);
-  const facePaint = zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;
+  const facePaint = track.def.id === 'a1-sawdust' ? alpineSoil(lib, 'bank') : zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;
   out.textureBytes += facePaint.bytes;
   out.meshes.push({ name: `zonedeck:face:${id}`, geo: faceGeo, mat: facePaint.mat, castShadow: false });
 

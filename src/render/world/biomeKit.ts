@@ -56,6 +56,7 @@ import { loadCoastHarbor, planC1Harbor, removeC1HarborPlaceholders } from './zon
 import { buildCoastHarborSite, groundCoastHarborPlacements } from './zones/coastHarborSite';
 import { buildCoastWater } from './zones/coastWater';
 import { a1ForestApplicable, loadA1Forest, removeA1ForestPlaceholders } from './zones/a1Forest';
+import { applyAlpineSurface, calibrateAlpineCanopy } from './zones/alpineSurface';
 
 /** Art-pack far plate / sky panorama per exterior biome (the ROCKHOP zones' are `plate-<zone>` / `sky-<zone>`). */
 export const PLATE_ID: Partial<Record<string, string>> = { canyon: 'plate-canyon', nightCity: 'plate-nightcity', coast: 'plate-coast', alpine: 'plate-alpine', quarry: 'plate-quarry', snow: 'plate-snowline' };
@@ -956,6 +957,13 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
     const PB = (name: string, geo: THREE.BufferGeometry, mat: THREE.Material, shadows = true): PropBatch => new PropBatch(name, vc(geo), mat, shadows);
     if (isZone(biome.id)) {
       const zk = buildZoneKit({ track, biome, lib, rng, detail, keepOut, plan, x0, x1 });
+      if (track.def.id === 'a1-sawdust') {
+        // This kit is still detached: no displaced material has been rendered/compiled.
+        // The terrain clone borrows library maps; dispose only its material object.
+        const displaced = zk.meshes.find(mesh => mesh.name === 'terrain')?.material;
+        applyAlpineSurface(zk, lib);
+        for (const material of Array.isArray(displaced) ? displaced : displaced ? [displaced] : []) material.dispose();
+      }
       // Keep a procedural vessel until the authored replacement has actually decoded.
       // The menu backdrop deliberately skips authored course decoding.
       if (authoredCourse && track.def.id === 'c1-low-tide') {
@@ -1035,7 +1043,7 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
         fallback.name = 'a1-original-forest-fallback';
         group.add(fallback);
         const owner = mountCourseAssets(loadA1Forest(track, {
-          completeMaterial: material => { lib.complete(material); },
+          completeMaterial: material => { lib.complete(material); calibrateAlpineCanopy(material); },
         }).then(asset => {
           asset.root.traverse(object => {
             if (!(object as THREE.Mesh).isMesh) return;

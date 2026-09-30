@@ -1,0 +1,499 @@
+{
+  "source": {
+    "url": "http://127.0.0.1:49458/",
+    "versionSha": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+    "versionTime": "2026-09-30T14:38:22.007Z",
+    "indexUrl": "http://127.0.0.1:49458/assets/index-4mIMAxiw.js",
+    "indexSHA256": "344332e22eef754bae71f33219edfc86998a9ff25d37b3ee1d780b882f6af253",
+    "htmlSHA256": "1bd9a6d6f8875514b08d116d805ac4bcf4e09401ecbd02b9cb68f9056f909591"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:49458/",
+    "versionSha": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+    "versionTime": "2026-09-30T14:38:22.007Z",
+    "indexUrl": "http://127.0.0.1:49458/assets/index-4mIMAxiw.js",
+    "indexSHA256": "344332e22eef754bae71f33219edfc86998a9ff25d37b3ee1d780b882f6af253",
+    "htmlSHA256": "1bd9a6d6f8875514b08d116d805ac4bcf4e09401ecbd02b9cb68f9056f909591"
+  },
+  "backend": "metal",
+  "results": [
+    {
+      "mode": "missing-map",
+      "pass": true,
+      "requests": [
+        "http://127.0.0.1:49458/models/course-kits/alpine-trees/d18d289ca18daf36/cards-albedo.phone-d18d289ca18daf36.webp",
+        "http://127.0.0.1:49458/models/course-kits/alpine-trees/d18d289ca18daf36/cards-albedo.phone-d18d289ca18daf36.webp"
+      ],
+      "errors": [],
+      "warnings": [
+        "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "Failed to load resource: net::ERR_FAILED",
+        "THREE.GLTFLoader: Couldn't load texture cards-albedo.phone.webp",
+        "[render] course assets failed Error: A1 forest assets failed or were cancelled\n    at loadA1Forest (http://127.0.0.1:49458/assets/index-4mIMAxiw.js:948:36254)",
+        "Failed to load resource: net::ERR_FAILED",
+        "THREE.GLTFLoader: Couldn't load texture cards-albedo.phone.webp",
+        "[render] course assets failed Error: A1 forest assets failed or were cancelled\n    at loadA1Forest (http://127.0.0.1:49458/assets/index-4mIMAxiw.js:948:36254)"
+      ],
+      "before": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "a1-sawdust",
+          "seed": 849270865,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 81.4,
+          "loadTrackMs": 132.3,
+          "lastRender": {
+            "prepMs": 0.34999990463256836,
+            "hudMs": 0.23000001907348633,
+            "audioMs": 0.2849998474121094,
+            "submitMs": 258.4450001716614,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "alpine",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 78,
+            "tris": 102387,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 13,
+            "trackTris": 74798,
+            "textureGenMs": 239.94000005722046,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 0,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 204.2,
+            "entering": false,
+            "courseAssetsEnabled": true,
+            "courseAssetsMounted": 0,
+            "courseAssetsTextureMB": 0
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 78,
+          "triangles": 102387,
+          "points": 0,
+          "lines": 0,
+          "geometries": 157,
+          "textures": 61,
+          "programs": 27,
+          "texturesMB": 36.57499557495116,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 3,
+            "counts": [
+              {
+                "name": "props:a1-original-contactshadow"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              }
+            ]
+          },
+          {
+            "visible": true,
+            "attached": true,
+            "children": 3,
+            "counts": [
+              {
+                "name": "props:a1-original-contactshadow"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          },
+          {
+            "attached": true,
+            "children": 0
+          }
+        ],
+        "geometryDisposals": 577,
+        "textureDisposals": 158
+      },
+      "after": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "a1-sawdust",
+          "seed": 849270865,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 81.4,
+          "loadTrackMs": 132.3,
+          "lastRender": {
+            "prepMs": 0.010000228881835938,
+            "hudMs": 0.04500007629394531,
+            "audioMs": 0.06999969482421875,
+            "submitMs": 0.125,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "alpine",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 78,
+            "tris": 102387,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 13,
+            "trackTris": 74798,
+            "textureGenMs": 239.94000005722046,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 1,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 204.2,
+            "entering": false,
+            "courseAssetsEnabled": true,
+            "courseAssetsMounted": 0,
+            "courseAssetsTextureMB": 0
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 78,
+          "triangles": 102387,
+          "points": 0,
+          "lines": 0,
+          "geometries": 157,
+          "textures": 61,
+          "programs": 27,
+          "texturesMB": 36.57499557495116,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 3,
+            "counts": [
+              {
+                "name": "props:a1-original-contactshadow"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              }
+            ]
+          },
+          {
+            "visible": true,
+            "attached": true,
+            "children": 3,
+            "counts": [
+              {
+                "name": "props:a1-original-contactshadow"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          },
+          {
+            "attached": true,
+            "children": 0
+          }
+        ],
+        "geometryDisposals": 577,
+        "textureDisposals": 158
+      }
+    },
+    {
+      "mode": "late-switch",
+      "pass": true,
+      "requests": [
+        "http://127.0.0.1:49458/models/course-kits/alpine-trees/91ca25d71be698ad/trees-lod-8aa2e8f5f041e852.glb",
+        "http://127.0.0.1:49458/models/course-kits/alpine-trees/91ca25d71be698ad/trees-fab79d15f9a3e120.glb"
+      ],
+      "errors": [],
+      "warnings": [
+        "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+      ],
+      "before": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "d1-dust-devil",
+          "seed": 1,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 79.4,
+          "loadTrackMs": 60.5,
+          "lastRender": {
+            "prepMs": 0.3600001335144043,
+            "hudMs": 0.25,
+            "audioMs": 0.3299999237060547,
+            "submitMs": 256.53000020980835,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "quarry",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 74,
+            "tris": 82294,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 11,
+            "trackTris": 23946,
+            "textureGenMs": 238.60999965667725,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 0,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 357.2,
+            "entering": false,
+            "courseAssetsEnabled": false,
+            "courseAssetsMounted": 0,
+            "courseAssetsTextureMB": 0
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 74,
+          "triangles": 82294,
+          "points": 0,
+          "lines": 0,
+          "geometries": 128,
+          "textures": 65,
+          "programs": 26,
+          "texturesMB": 39.542694213867186,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 3,
+            "counts": [
+              {
+                "name": "props:a1-original-contactshadow"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          }
+        ],
+        "geometryDisposals": 534,
+        "textureDisposals": 137
+      },
+      "after": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "d1-dust-devil",
+          "seed": 1,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 79.4,
+          "loadTrackMs": 60.5,
+          "lastRender": {
+            "prepMs": 0.04499959945678711,
+            "hudMs": 0.1100001335144043,
+            "audioMs": 0.125,
+            "submitMs": 0.3450002670288086,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "quarry",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 74,
+            "tris": 82294,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 11,
+            "trackTris": 23946,
+            "textureGenMs": 238.60999965667725,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 1,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 357.2,
+            "entering": false,
+            "courseAssetsEnabled": false,
+            "courseAssetsMounted": 0,
+            "courseAssetsTextureMB": 0
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 74,
+          "triangles": 82294,
+          "points": 0,
+          "lines": 0,
+          "geometries": 128,
+          "textures": 65,
+          "programs": 26,
+          "texturesMB": 39.542694213867186,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 3,
+            "counts": [
+              {
+                "name": "props:a1-original-contactshadow"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          }
+        ],
+        "geometryDisposals": 913,
+        "textureDisposals": 163
+      }
+    }
+  ]
+}
