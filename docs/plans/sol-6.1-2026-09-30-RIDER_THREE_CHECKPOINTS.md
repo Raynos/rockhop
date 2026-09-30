@@ -70,6 +70,14 @@ using buzz cut. The old detailed busts are failure/control evidence, not final
 assets. Asks233–234 authorize execution and delegate subsequent appearance
 decisions; the parent must judge recorded evidence before advancing a gate.
 
+Fresh Pixal buzz-bust MPS sampling failed twice at the shared memory guard
+(attempt1 overshot to82.2GiB; attempt2 stopped at66.7GiB). Stop that technique.
+Under ask233 delegated choices, inspect the preserved NEW task-2 Pixal bust
+and use targeted compact-scalp retopology if its face passes gray/PBR review.
+Retain its dense decoded source and native PBR; this is an explicit method
+change, not a fresh successful buzz generation. H21-4 old face/hair are
+rejected in ask235 and will be removed, not promoted.
+
 1. Freeze selected source hashes, hair reference and settings. Retain decoded
    high-resolution vertices/faces before any cleanup, native Metal remesh or
    decimation; keep separate high/cleaned/reduced reports. Do not call saved

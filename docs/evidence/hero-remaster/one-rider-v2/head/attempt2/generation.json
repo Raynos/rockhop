@@ -1,0 +1,1587 @@
+{
+  "status": "stopped at memory/time bound; retained partial evidence",
+  "accepted": false,
+  "command": [
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/pixal_cache_worker.py",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+    "--device",
+    "mps",
+    "--model-path",
+    "/Users/raynos/ml/img2mesh/pixal-view",
+    "--pipeline-type",
+    "1024_cascade",
+    "--steps",
+    "24",
+    "--seed",
+    "42",
+    "--texture-size",
+    "1024",
+    "--native-decimation-target",
+    "100000",
+    "--save-mesh",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/buzz-bust-02/raw.npz",
+    "--output",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/buzz-bust-02/bust.glb"
+  ],
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "lockMethod": "lockf -k",
+  "batchLimitSeconds": 1800,
+  "anonymousLimitGiB": 70,
+  "stopAtAnonymousGiB": 65,
+  "memoryPollSeconds": 1,
+  "attempt": 2,
+  "adaptation": "installed stage cache hooks + predecode latent/shape checkpoints; export atlas1024",
+  "sourceHashesBefore": {
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/rembg/BiRefNet.py": "b38519546c6bc67fd6f6ce1802ff1e57145417177d5eab722a356f3db681ff5a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e",
+    "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/generate_bust.py": "b971ba2859f6c5e707a3a19d619e356d2faf4bade8be03d7acced11c5da3df84",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/pixal_cache_worker.py": "45e446f8c3e39a0c8265fa6da2d8c7c7334aa736aab952090794fe1ca00b235e"
+  },
+  "memorySamples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 24.3,
+      "wiredGiB": 7.5,
+      "freeGiB": 55.8
+    },
+    {
+      "seconds": 0.04,
+      "anonymousGiB": 24.3,
+      "wiredGiB": 7.5,
+      "freeGiB": 55.8
+    },
+    {
+      "seconds": 1.08,
+      "anonymousGiB": 24.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 55.7
+    },
+    {
+      "seconds": 2.12,
+      "anonymousGiB": 25.2,
+      "wiredGiB": 7.2,
+      "freeGiB": 55.2
+    },
+    {
+      "seconds": 3.17,
+      "anonymousGiB": 28.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 52.3
+    },
+    {
+      "seconds": 4.2,
+      "anonymousGiB": 29.9,
+      "wiredGiB": 7.4,
+      "freeGiB": 50.2
+    },
+    {
+      "seconds": 5.24,
+      "anonymousGiB": 30.1,
+      "wiredGiB": 7.1,
+      "freeGiB": 50.2
+    },
+    {
+      "seconds": 6.27,
+      "anonymousGiB": 30.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 50.3
+    },
+    {
+      "seconds": 7.32,
+      "anonymousGiB": 30.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 50.3
+    },
+    {
+      "seconds": 8.35,
+      "anonymousGiB": 29.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 50.3
+    },
+    {
+      "seconds": 9.38,
+      "anonymousGiB": 29.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 50.4
+    },
+    {
+      "seconds": 10.41,
+      "anonymousGiB": 29.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 50.4
+    },
+    {
+      "seconds": 11.45,
+      "anonymousGiB": 30.1,
+      "wiredGiB": 7.5,
+      "freeGiB": 49.9
+    },
+    {
+      "seconds": 12.49,
+      "anonymousGiB": 30.0,
+      "wiredGiB": 7.6,
+      "freeGiB": 49.9
+    },
+    {
+      "seconds": 13.53,
+      "anonymousGiB": 30.5,
+      "wiredGiB": 7.2,
+      "freeGiB": 49.8
+    },
+    {
+      "seconds": 14.57,
+      "anonymousGiB": 30.4,
+      "wiredGiB": 7.2,
+      "freeGiB": 49.9
+    },
+    {
+      "seconds": 15.6,
+      "anonymousGiB": 29.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 48.3
+    },
+    {
+      "seconds": 16.64,
+      "anonymousGiB": 29.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 45.7
+    },
+    {
+      "seconds": 17.67,
+      "anonymousGiB": 31.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 43.2
+    },
+    {
+      "seconds": 18.71,
+      "anonymousGiB": 33.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 40.8
+    },
+    {
+      "seconds": 19.74,
+      "anonymousGiB": 35.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 38.6
+    },
+    {
+      "seconds": 20.77,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 38.6
+    },
+    {
+      "seconds": 21.82,
+      "anonymousGiB": 35.7,
+      "wiredGiB": 7.1,
+      "freeGiB": 38.7
+    },
+    {
+      "seconds": 22.86,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 38.7
+    },
+    {
+      "seconds": 23.89,
+      "anonymousGiB": 35.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 38.2
+    },
+    {
+      "seconds": 24.93,
+      "anonymousGiB": 36.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 37.6
+    },
+    {
+      "seconds": 25.97,
+      "anonymousGiB": 36.2,
+      "wiredGiB": 7.2,
+      "freeGiB": 36.6
+    },
+    {
+      "seconds": 27.01,
+      "anonymousGiB": 36.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 35.3
+    },
+    {
+      "seconds": 28.05,
+      "anonymousGiB": 36.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 35.3
+    },
+    {
+      "seconds": 29.09,
+      "anonymousGiB": 36.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 33.7
+    },
+    {
+      "seconds": 30.13,
+      "anonymousGiB": 36.3,
+      "wiredGiB": 7.2,
+      "freeGiB": 33.6
+    },
+    {
+      "seconds": 31.17,
+      "anonymousGiB": 34.0,
+      "wiredGiB": 7.1,
+      "freeGiB": 34.9
+    },
+    {
+      "seconds": 32.21,
+      "anonymousGiB": 34.0,
+      "wiredGiB": 7.2,
+      "freeGiB": 31.5
+    },
+    {
+      "seconds": 33.25,
+      "anonymousGiB": 34.1,
+      "wiredGiB": 7.1,
+      "freeGiB": 29.0
+    },
+    {
+      "seconds": 34.29,
+      "anonymousGiB": 37.1,
+      "wiredGiB": 7.2,
+      "freeGiB": 25.4
+    },
+    {
+      "seconds": 35.32,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 24.7
+    },
+    {
+      "seconds": 36.36,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 24.7
+    },
+    {
+      "seconds": 37.4,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 24.7
+    },
+    {
+      "seconds": 38.44,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 39.47,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 40.5,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 41.54,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 42.57,
+      "anonymousGiB": 37.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 43.61,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.6
+    },
+    {
+      "seconds": 44.64,
+      "anonymousGiB": 37.6,
+      "wiredGiB": 7.1,
+      "freeGiB": 24.8
+    },
+    {
+      "seconds": 45.67,
+      "anonymousGiB": 37.6,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.8
+    },
+    {
+      "seconds": 46.7,
+      "anonymousGiB": 38.4,
+      "wiredGiB": 7.1,
+      "freeGiB": 24.0
+    },
+    {
+      "seconds": 47.75,
+      "anonymousGiB": 40.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 21.7
+    },
+    {
+      "seconds": 48.79,
+      "anonymousGiB": 42.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.6
+    },
+    {
+      "seconds": 49.82,
+      "anonymousGiB": 42.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.6
+    },
+    {
+      "seconds": 50.86,
+      "anonymousGiB": 42.8,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.6
+    },
+    {
+      "seconds": 51.9,
+      "anonymousGiB": 42.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 52.93,
+      "anonymousGiB": 42.9,
+      "wiredGiB": 7.1,
+      "freeGiB": 19.5
+    },
+    {
+      "seconds": 53.96,
+      "anonymousGiB": 43.4,
+      "wiredGiB": 7.2,
+      "freeGiB": 18.9
+    },
+    {
+      "seconds": 55.0,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.0
+    },
+    {
+      "seconds": 56.04,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.0
+    },
+    {
+      "seconds": 57.08,
+      "anonymousGiB": 42.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.7
+    },
+    {
+      "seconds": 58.11,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.0
+    },
+    {
+      "seconds": 59.15,
+      "anonymousGiB": 43.3,
+      "wiredGiB": 7.2,
+      "freeGiB": 19.0
+    },
+    {
+      "seconds": 60.18,
+      "anonymousGiB": 40.9,
+      "wiredGiB": 7.2,
+      "freeGiB": 21.4
+    },
+    {
+      "seconds": 61.21,
+      "anonymousGiB": 41.7,
+      "wiredGiB": 10.4,
+      "freeGiB": 17.4
+    },
+    {
+      "seconds": 62.24,
+      "anonymousGiB": 44.8,
+      "wiredGiB": 10.3,
+      "freeGiB": 14.4
+    },
+    {
+      "seconds": 63.29,
+      "anonymousGiB": 48.2,
+      "wiredGiB": 7.2,
+      "freeGiB": 14.1
+    },
+    {
+      "seconds": 64.32,
+      "anonymousGiB": 48.2,
+      "wiredGiB": 7.1,
+      "freeGiB": 14.1
+    },
+    {
+      "seconds": 65.35,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 11.9,
+      "freeGiB": 13.2
+    },
+    {
+      "seconds": 66.39,
+      "anonymousGiB": 41.0,
+      "wiredGiB": 15.1,
+      "freeGiB": 13.4
+    },
+    {
+      "seconds": 67.44,
+      "anonymousGiB": 41.1,
+      "wiredGiB": 15.0,
+      "freeGiB": 13.4
+    },
+    {
+      "seconds": 68.49,
+      "anonymousGiB": 41.1,
+      "wiredGiB": 15.0,
+      "freeGiB": 13.4
+    },
+    {
+      "seconds": 69.54,
+      "anonymousGiB": 41.1,
+      "wiredGiB": 15.0,
+      "freeGiB": 13.4
+    },
+    {
+      "seconds": 70.58,
+      "anonymousGiB": 41.1,
+      "wiredGiB": 15.0,
+      "freeGiB": 13.4
+    },
+    {
+      "seconds": 71.62,
+      "anonymousGiB": 41.0,
+      "wiredGiB": 15.0,
+      "freeGiB": 13.5
+    },
+    {
+      "seconds": 72.67,
+      "anonymousGiB": 41.1,
+      "wiredGiB": 15.2,
+      "freeGiB": 13.2
+    },
+    {
+      "seconds": 73.72,
+      "anonymousGiB": 43.2,
+      "wiredGiB": 15.1,
+      "freeGiB": 11.1
+    },
+    {
+      "seconds": 74.8,
+      "anonymousGiB": 44.3,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.9
+    },
+    {
+      "seconds": 75.84,
+      "anonymousGiB": 44.3,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.9
+    },
+    {
+      "seconds": 76.89,
+      "anonymousGiB": 44.3,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.9
+    },
+    {
+      "seconds": 77.95,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.9
+    },
+    {
+      "seconds": 79.0,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.8
+    },
+    {
+      "seconds": 80.06,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.8
+    },
+    {
+      "seconds": 81.12,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.8
+    },
+    {
+      "seconds": 82.16,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.7
+    },
+    {
+      "seconds": 83.21,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.7
+    },
+    {
+      "seconds": 84.26,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.7
+    },
+    {
+      "seconds": 85.3,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 15.4,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 86.34,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 15.4,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 87.4,
+      "anonymousGiB": 44.4,
+      "wiredGiB": 15.4,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 88.45,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 89.51,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 90.56,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 91.61,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 92.67,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 93.72,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.6
+    },
+    {
+      "seconds": 94.78,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 15.4,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 95.83,
+      "anonymousGiB": 44.5,
+      "wiredGiB": 15.4,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 96.89,
+      "anonymousGiB": 44.7,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 97.95,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 99.01,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 100.06,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 101.12,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 102.16,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 103.22,
+      "anonymousGiB": 44.7,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 104.26,
+      "anonymousGiB": 44.7,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 105.32,
+      "anonymousGiB": 44.7,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 106.37,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 107.41,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.2,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 108.48,
+      "anonymousGiB": 44.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 9.5
+    },
+    {
+      "seconds": 109.53,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.3,
+      "freeGiB": 8.1
+    },
+    {
+      "seconds": 110.57,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 18.9,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 111.62,
+      "anonymousGiB": 46.2,
+      "wiredGiB": 17.9,
+      "freeGiB": 5.3
+    },
+    {
+      "seconds": 112.67,
+      "anonymousGiB": 49.3,
+      "wiredGiB": 14.9,
+      "freeGiB": 5.3
+    },
+    {
+      "seconds": 113.72,
+      "anonymousGiB": 49.4,
+      "wiredGiB": 14.8,
+      "freeGiB": 5.3
+    },
+    {
+      "seconds": 114.77,
+      "anonymousGiB": 47.8,
+      "wiredGiB": 14.7,
+      "freeGiB": 6.9
+    },
+    {
+      "seconds": 115.81,
+      "anonymousGiB": 47.5,
+      "wiredGiB": 14.9,
+      "freeGiB": 7.0
+    },
+    {
+      "seconds": 116.86,
+      "anonymousGiB": 47.6,
+      "wiredGiB": 15.2,
+      "freeGiB": 6.6
+    },
+    {
+      "seconds": 117.91,
+      "anonymousGiB": 48.0,
+      "wiredGiB": 14.8,
+      "freeGiB": 6.7
+    },
+    {
+      "seconds": 118.95,
+      "anonymousGiB": 47.9,
+      "wiredGiB": 14.7,
+      "freeGiB": 6.8
+    },
+    {
+      "seconds": 120.01,
+      "anonymousGiB": 47.8,
+      "wiredGiB": 14.8,
+      "freeGiB": 6.9
+    },
+    {
+      "seconds": 121.05,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 14.8,
+      "freeGiB": 6.9
+    },
+    {
+      "seconds": 122.1,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 14.8,
+      "freeGiB": 7.0
+    },
+    {
+      "seconds": 123.16,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 14.8,
+      "freeGiB": 7.0
+    },
+    {
+      "seconds": 124.21,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 14.7,
+      "freeGiB": 7.1
+    },
+    {
+      "seconds": 125.25,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 14.7,
+      "freeGiB": 7.1
+    },
+    {
+      "seconds": 126.3,
+      "anonymousGiB": 47.6,
+      "wiredGiB": 14.7,
+      "freeGiB": 7.1
+    },
+    {
+      "seconds": 127.34,
+      "anonymousGiB": 45.5,
+      "wiredGiB": 11.7,
+      "freeGiB": 12.3
+    },
+    {
+      "seconds": 128.38,
+      "anonymousGiB": 45.5,
+      "wiredGiB": 14.8,
+      "freeGiB": 9.2
+    },
+    {
+      "seconds": 129.43,
+      "anonymousGiB": 45.5,
+      "wiredGiB": 19.3,
+      "freeGiB": 4.7
+    },
+    {
+      "seconds": 130.48,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 21.3,
+      "freeGiB": 2.1
+    },
+    {
+      "seconds": 131.53,
+      "anonymousGiB": 51.5,
+      "wiredGiB": 16.3,
+      "freeGiB": 2.2
+    },
+    {
+      "seconds": 132.59,
+      "anonymousGiB": 51.1,
+      "wiredGiB": 16.7,
+      "freeGiB": 2.2
+    },
+    {
+      "seconds": 133.64,
+      "anonymousGiB": 52.1,
+      "wiredGiB": 15.8,
+      "freeGiB": 2.2
+    },
+    {
+      "seconds": 134.69,
+      "anonymousGiB": 49.5,
+      "wiredGiB": 16.3,
+      "freeGiB": 4.2
+    },
+    {
+      "seconds": 135.73,
+      "anonymousGiB": 49.0,
+      "wiredGiB": 16.8,
+      "freeGiB": 4.2
+    },
+    {
+      "seconds": 136.78,
+      "anonymousGiB": 50.0,
+      "wiredGiB": 15.7,
+      "freeGiB": 4.2
+    },
+    {
+      "seconds": 137.82,
+      "anonymousGiB": 49.5,
+      "wiredGiB": 16.2,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 138.87,
+      "anonymousGiB": 49.1,
+      "wiredGiB": 16.7,
+      "freeGiB": 15.5
+    },
+    {
+      "seconds": 139.92,
+      "anonymousGiB": 50.1,
+      "wiredGiB": 15.7,
+      "freeGiB": 21.5
+    },
+    {
+      "seconds": 140.97,
+      "anonymousGiB": 49.5,
+      "wiredGiB": 16.3,
+      "freeGiB": 26.7
+    },
+    {
+      "seconds": 142.02,
+      "anonymousGiB": 49.0,
+      "wiredGiB": 16.8,
+      "freeGiB": 26.8
+    },
+    {
+      "seconds": 143.07,
+      "anonymousGiB": 50.0,
+      "wiredGiB": 15.7,
+      "freeGiB": 26.8
+    },
+    {
+      "seconds": 144.11,
+      "anonymousGiB": 49.6,
+      "wiredGiB": 16.2,
+      "freeGiB": 26.7
+    },
+    {
+      "seconds": 145.15,
+      "anonymousGiB": 49.0,
+      "wiredGiB": 16.8,
+      "freeGiB": 26.8
+    },
+    {
+      "seconds": 146.2,
+      "anonymousGiB": 50.1,
+      "wiredGiB": 15.7,
+      "freeGiB": 26.7
+    },
+    {
+      "seconds": 147.25,
+      "anonymousGiB": 49.6,
+      "wiredGiB": 16.3,
+      "freeGiB": 26.7
+    },
+    {
+      "seconds": 148.29,
+      "anonymousGiB": 49.1,
+      "wiredGiB": 16.8,
+      "freeGiB": 27.3
+    },
+    {
+      "seconds": 149.34,
+      "anonymousGiB": 50.1,
+      "wiredGiB": 15.8,
+      "freeGiB": 27.2
+    },
+    {
+      "seconds": 150.38,
+      "anonymousGiB": 49.7,
+      "wiredGiB": 16.2,
+      "freeGiB": 28.2
+    },
+    {
+      "seconds": 151.43,
+      "anonymousGiB": 49.2,
+      "wiredGiB": 16.8,
+      "freeGiB": 28.3
+    },
+    {
+      "seconds": 152.47,
+      "anonymousGiB": 50.2,
+      "wiredGiB": 15.7,
+      "freeGiB": 33.9
+    },
+    {
+      "seconds": 153.51,
+      "anonymousGiB": 49.6,
+      "wiredGiB": 16.3,
+      "freeGiB": 34.7
+    },
+    {
+      "seconds": 154.56,
+      "anonymousGiB": 49.1,
+      "wiredGiB": 16.8,
+      "freeGiB": 37.5
+    },
+    {
+      "seconds": 155.6,
+      "anonymousGiB": 49.3,
+      "wiredGiB": 15.7,
+      "freeGiB": 39.4
+    },
+    {
+      "seconds": 156.65,
+      "anonymousGiB": 48.1,
+      "wiredGiB": 16.2,
+      "freeGiB": 42.0
+    },
+    {
+      "seconds": 157.69,
+      "anonymousGiB": 47.5,
+      "wiredGiB": 16.6,
+      "freeGiB": 42.1
+    },
+    {
+      "seconds": 158.74,
+      "anonymousGiB": 48.6,
+      "wiredGiB": 15.6,
+      "freeGiB": 43.3
+    },
+    {
+      "seconds": 159.78,
+      "anonymousGiB": 48.0,
+      "wiredGiB": 16.1,
+      "freeGiB": 43.3
+    },
+    {
+      "seconds": 160.84,
+      "anonymousGiB": 47.6,
+      "wiredGiB": 16.6,
+      "freeGiB": 43.5
+    },
+    {
+      "seconds": 161.88,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 15.6,
+      "freeGiB": 43.4
+    },
+    {
+      "seconds": 162.92,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 16.1,
+      "freeGiB": 43.4
+    },
+    {
+      "seconds": 163.96,
+      "anonymousGiB": 47.8,
+      "wiredGiB": 16.6,
+      "freeGiB": 43.4
+    },
+    {
+      "seconds": 165.0,
+      "anonymousGiB": 48.8,
+      "wiredGiB": 15.6,
+      "freeGiB": 43.4
+    },
+    {
+      "seconds": 166.05,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 16.1,
+      "freeGiB": 43.4
+    },
+    {
+      "seconds": 167.09,
+      "anonymousGiB": 49.0,
+      "wiredGiB": 15.6,
+      "freeGiB": 43.2
+    },
+    {
+      "seconds": 168.14,
+      "anonymousGiB": 49.0,
+      "wiredGiB": 15.7,
+      "freeGiB": 43.2
+    },
+    {
+      "seconds": 169.18,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 16.1,
+      "freeGiB": 44.0
+    },
+    {
+      "seconds": 170.23,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.0
+    },
+    {
+      "seconds": 171.27,
+      "anonymousGiB": 47.5,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.9
+    },
+    {
+      "seconds": 172.32,
+      "anonymousGiB": 47.0,
+      "wiredGiB": 16.0,
+      "freeGiB": 45.0
+    },
+    {
+      "seconds": 173.37,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 174.41,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 175.46,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 16.0,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 176.5,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.5,
+      "freeGiB": 46.0
+    },
+    {
+      "seconds": 177.55,
+      "anonymousGiB": 47.1,
+      "wiredGiB": 15.0,
+      "freeGiB": 46.0
+    },
+    {
+      "seconds": 178.59,
+      "anonymousGiB": 46.2,
+      "wiredGiB": 16.0,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 179.64,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 180.68,
+      "anonymousGiB": 47.2,
+      "wiredGiB": 15.0,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 181.72,
+      "anonymousGiB": 45.7,
+      "wiredGiB": 16.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 182.77,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 183.82,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 184.86,
+      "anonymousGiB": 45.9,
+      "wiredGiB": 16.3,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 185.91,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 186.96,
+      "anonymousGiB": 47.2,
+      "wiredGiB": 15.0,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 188.01,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 16.0,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 189.06,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 190.1,
+      "anonymousGiB": 47.2,
+      "wiredGiB": 14.9,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 191.16,
+      "anonymousGiB": 45.7,
+      "wiredGiB": 16.5,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 192.21,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.7
+    },
+    {
+      "seconds": 193.26,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 16.1,
+      "freeGiB": 44.9
+    },
+    {
+      "seconds": 194.3,
+      "anonymousGiB": 46.4,
+      "wiredGiB": 16.5,
+      "freeGiB": 44.1
+    },
+    {
+      "seconds": 195.36,
+      "anonymousGiB": 47.3,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 196.42,
+      "anonymousGiB": 48.6,
+      "wiredGiB": 14.9,
+      "freeGiB": 43.4
+    },
+    {
+      "seconds": 197.47,
+      "anonymousGiB": 46.2,
+      "wiredGiB": 16.0,
+      "freeGiB": 44.7
+    },
+    {
+      "seconds": 198.53,
+      "anonymousGiB": 48.0,
+      "wiredGiB": 15.6,
+      "freeGiB": 43.5
+    },
+    {
+      "seconds": 199.58,
+      "anonymousGiB": 49.1,
+      "wiredGiB": 15.7,
+      "freeGiB": 42.2
+    },
+    {
+      "seconds": 200.67,
+      "anonymousGiB": 47.3,
+      "wiredGiB": 16.1,
+      "freeGiB": 43.6
+    },
+    {
+      "seconds": 201.76,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 15.5,
+      "freeGiB": 43.8
+    },
+    {
+      "seconds": 202.84,
+      "anonymousGiB": 46.8,
+      "wiredGiB": 15.4,
+      "freeGiB": 44.8
+    },
+    {
+      "seconds": 203.88,
+      "anonymousGiB": 46.8,
+      "wiredGiB": 15.9,
+      "freeGiB": 44.0
+    },
+    {
+      "seconds": 204.93,
+      "anonymousGiB": 47.1,
+      "wiredGiB": 16.4,
+      "freeGiB": 42.9
+    },
+    {
+      "seconds": 205.97,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.3
+    },
+    {
+      "seconds": 207.02,
+      "anonymousGiB": 46.2,
+      "wiredGiB": 16.0,
+      "freeGiB": 45.4
+    },
+    {
+      "seconds": 208.06,
+      "anonymousGiB": 45.7,
+      "wiredGiB": 16.4,
+      "freeGiB": 45.4
+    },
+    {
+      "seconds": 209.11,
+      "anonymousGiB": 46.7,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.4
+    },
+    {
+      "seconds": 210.16,
+      "anonymousGiB": 46.2,
+      "wiredGiB": 15.9,
+      "freeGiB": 45.5
+    },
+    {
+      "seconds": 211.21,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 16.4,
+      "freeGiB": 45.5
+    },
+    {
+      "seconds": 212.25,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.6
+    },
+    {
+      "seconds": 213.3,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 214.34,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 16.4,
+      "freeGiB": 46.0
+    },
+    {
+      "seconds": 215.38,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 216.42,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 217.47,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 16.4,
+      "freeGiB": 46.1
+    },
+    {
+      "seconds": 218.52,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.4,
+      "freeGiB": 46.1
+    },
+    {
+      "seconds": 219.56,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 46.1
+    },
+    {
+      "seconds": 220.6,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.4,
+      "freeGiB": 46.1
+    },
+    {
+      "seconds": 221.64,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.4,
+      "freeGiB": 46.1
+    },
+    {
+      "seconds": 222.68,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 46.1
+    },
+    {
+      "seconds": 223.73,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 224.77,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.4,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 225.81,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 226.85,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 227.89,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 228.93,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 229.98,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 231.03,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 16.4,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 232.07,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 16.4,
+      "freeGiB": 46.3
+    },
+    {
+      "seconds": 233.11,
+      "anonymousGiB": 47.6,
+      "wiredGiB": 14.3,
+      "freeGiB": 46.3
+    },
+    {
+      "seconds": 234.16,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 15.9,
+      "freeGiB": 46.3
+    },
+    {
+      "seconds": 235.2,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 16.4,
+      "freeGiB": 46.3
+    },
+    {
+      "seconds": 236.24,
+      "anonymousGiB": 46.6,
+      "wiredGiB": 15.3,
+      "freeGiB": 46.3
+    },
+    {
+      "seconds": 237.28,
+      "anonymousGiB": 46.1,
+      "wiredGiB": 16.0,
+      "freeGiB": 46.2
+    },
+    {
+      "seconds": 238.33,
+      "anonymousGiB": 45.8,
+      "wiredGiB": 16.4,
+      "freeGiB": 45.9
+    },
+    {
+      "seconds": 239.38,
+      "anonymousGiB": 47.1,
+      "wiredGiB": 15.4,
+      "freeGiB": 45.6
+    },
+    {
+      "seconds": 240.43,
+      "anonymousGiB": 46.9,
+      "wiredGiB": 16.0,
+      "freeGiB": 45.2
+    },
+    {
+      "seconds": 241.49,
+      "anonymousGiB": 46.4,
+      "wiredGiB": 16.5,
+      "freeGiB": 45.1
+    },
+    {
+      "seconds": 242.53,
+      "anonymousGiB": 47.4,
+      "wiredGiB": 15.5,
+      "freeGiB": 45.1
+    },
+    {
+      "seconds": 243.57,
+      "anonymousGiB": 47.4,
+      "wiredGiB": 16.2,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 244.62,
+      "anonymousGiB": 46.9,
+      "wiredGiB": 17.1,
+      "freeGiB": 43.9
+    },
+    {
+      "seconds": 245.67,
+      "anonymousGiB": 48.2,
+      "wiredGiB": 15.8,
+      "freeGiB": 43.9
+    },
+    {
+      "seconds": 246.72,
+      "anonymousGiB": 47.8,
+      "wiredGiB": 16.1,
+      "freeGiB": 44.0
+    },
+    {
+      "seconds": 247.76,
+      "anonymousGiB": 47.3,
+      "wiredGiB": 16.5,
+      "freeGiB": 44.1
+    },
+    {
+      "seconds": 248.8,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 249.84,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 16.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 250.88,
+      "anonymousGiB": 47.2,
+      "wiredGiB": 16.5,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 251.92,
+      "anonymousGiB": 48.2,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 252.97,
+      "anonymousGiB": 47.7,
+      "wiredGiB": 16.0,
+      "freeGiB": 44.2
+    },
+    {
+      "seconds": 254.02,
+      "anonymousGiB": 48.2,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 255.07,
+      "anonymousGiB": 48.1,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.3
+    },
+    {
+      "seconds": 256.11,
+      "anonymousGiB": 47.6,
+      "wiredGiB": 16.0,
+      "freeGiB": 44.5
+    },
+    {
+      "seconds": 257.15,
+      "anonymousGiB": 48.1,
+      "wiredGiB": 15.5,
+      "freeGiB": 44.5
+    },
+    {
+      "seconds": 258.19,
+      "anonymousGiB": 48.1,
+      "wiredGiB": 19.5,
+      "freeGiB": 40.5
+    },
+    {
+      "seconds": 259.24,
+      "anonymousGiB": 45.6,
+      "wiredGiB": 27.0,
+      "freeGiB": 35.5
+    },
+    {
+      "seconds": 260.28,
+      "anonymousGiB": 53.2,
+      "wiredGiB": 34.1,
+      "freeGiB": 20.9
+    },
+    {
+      "seconds": 261.31,
+      "anonymousGiB": 63.4,
+      "wiredGiB": 23.8,
+      "freeGiB": 20.9
+    },
+    {
+      "seconds": 262.35,
+      "anonymousGiB": 52.4,
+      "wiredGiB": 33.9,
+      "freeGiB": 21.8
+    },
+    {
+      "seconds": 263.39,
+      "anonymousGiB": 66.7,
+      "wiredGiB": 19.6,
+      "freeGiB": 21.9
+    }
+  ],
+  "sourceHEAD": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+  "sourceDirty": " M extern/mtlgemm/setup.py\n M generate_mps.py\n M pixal3d/pipelines/rembg/BiRefNet.py\n M pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py\n?? extern/o_voxel/third_party/\n",
+  "decodedShape": "raw.npz before installed asset_to_glb cleanup/remesh/decimation",
+  "exitCode": -15,
+  "elapsedSeconds": 263.747,
+  "sourceHashesAfter": {
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/rembg/BiRefNet.py": "b38519546c6bc67fd6f6ce1802ff1e57145417177d5eab722a356f3db681ff5a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e",
+    "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/generate_bust.py": "b971ba2859f6c5e707a3a19d619e356d2faf4bade8be03d7acced11c5da3df84",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/pixal_cache_worker.py": "45e446f8c3e39a0c8265fa6da2d8c7c7334aa736aab952090794fe1ca00b235e"
+  },
+  "sourceUnchanged": true,
+  "outputs": {}
+}

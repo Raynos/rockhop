@@ -1,0 +1,63 @@
+{
+  "status": "unaccepted generated comparison bust; targeted cleanup alternative, not a fresh buzz-cut generation",
+  "sources": {
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": {
+      "sha256": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+      "bytes": 444885209
+    },
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb": {
+      "sha256": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+      "bytes": 5617724
+    },
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/settings.json": {
+      "sha256": "7d402d353f2044433534119f6a60b61f0b844a7837f63047665a45d194aa8b44",
+      "bytes": 1401
+    },
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/run.json": {
+      "sha256": "6f1acb78c6df40a2885a88717cb3f312ec6f57bd2795df8c15256117b92ec851",
+      "bytes": 1606
+    }
+  },
+  "denseFaces": 10163546,
+  "denseVertices": 4087593,
+  "PBRFaces": 89653,
+  "sourceUnchanged": true,
+  "originalSettings": {
+    "purpose": "separate detailed head-neck fitting experiment; no promotion",
+    "identity_source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/comfy/input/rider-reference-01.png",
+    "reference": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+    "reference_sha256": "12c45d565c0bc2f358bc9e7e0dab23e3234086dc3841185a1bc831b75c71f0d5",
+    "source_commit": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+    "seed": 42,
+    "pipeline": "1024_cascade",
+    "steps": 24,
+    "texture_size": 2048,
+    "face_target": 100000,
+    "backend": "MPS with Metal native mesh export",
+    "command": [
+      "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+      "-u",
+      "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+      "--model-path",
+      "/Users/raynos/ml/img2mesh/pixal-view",
+      "--device",
+      "mps",
+      "--pipeline-type",
+      "1024_cascade",
+      "--steps",
+      "24",
+      "--seed",
+      "42",
+      "--texture-size",
+      "2048",
+      "--native-decimation-target",
+      "100000",
+      "--save-mesh",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz",
+      "--output",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb"
+    ],
+    "started_at": "2026-09-30T17:58:23.867874+00:00"
+  }
+}

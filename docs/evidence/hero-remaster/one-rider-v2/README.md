@@ -2,7 +2,8 @@
 
 Status: reference mockups and read-only donor review complete; direction
 approved in asks233–234, autonomous execution delegated. New bust reference
-and bounded generation recipe ready; first new3D batch stopped at a memory overshoot; no mesh or assembly yet.
+and bounded generation recipe ready; two fresh Pixal sampling batches stopped; preserved NEW Pixal bust
+cleanup alternative selected. No cleaned character or assembly yet.
 Ask232 supersedes the preceding P3-only head-preservation proposal.
 
 ## Hair target
@@ -117,3 +118,7 @@ bytes, crash and one-tick restart, with zero page errors. Restart render
 submission is1/2ms, not phone frame latency. [Process record](player-baseline-process.json)
 shows canonical GPU lock and memory check. Production rider only: this does
 not pass the proposed new character, neck, sitting or riding contact gates.
+
+The pictured H21-4 old face/hair are rejected (ask235): the body selection
+is for garment/body geometry only. [New-head alternative and both sampling
+failures](head/README.md) are explicit; historical production stays comparison-only.

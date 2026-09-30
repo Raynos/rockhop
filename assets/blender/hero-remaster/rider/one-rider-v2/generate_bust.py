@@ -30,6 +30,14 @@ def hashes():
     return {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in SOURCES}
 
 
+def file_sha(path):
+    digest = hashlib.sha256()
+    with path.open('rb') as handle:
+        for chunk in iter(lambda: handle.read(4 * 1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 def memory():
     values = subprocess.check_output(['bash', str(LOCALAI / 'bin/mem-gb.sh')], text=True)
     return dict(zip(['anonymousGiB', 'wiredGiB', 'freeGiB'], map(float, values.split())))
@@ -109,7 +117,7 @@ def worker(attempt):
     record['sourceHashesAfter'] = hashes()
     record['sourceUnchanged'] = before == record['sourceHashesAfter']
     record['outputs'] = {p.name: {'bytes': p.stat().st_size,
-                         'sha256': hashlib.file_digest(p.open('rb'), 'sha256').hexdigest()}
+                         'sha256': file_sha(p)}
                          for p in [OUT / 'raw.npz', OUT / 'bust.glb', OUT / 'sampled-latents.pt',
                                    OUT / 'decoded-shape-0.npz'] if p.exists()}
     if record['status'] == 'started':

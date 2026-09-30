@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 approved direction; first new Pixal bust batch stopped at memory bound; one cache-managed alternative prepared",
+  "status": "checkpoint1 new Pixal MPS sampling stopped after two failures; preserved NEW Pixal bust targeted cleanup alternative selected",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -770,7 +770,7 @@
     "hair": "1 buzz cut",
     "approved": true,
     "automatedP3Repairs": "stopped at two failures",
-    "new3DGeneration": "attempt1 stopped at decode memory overshoot; no mesh; attempt2 cache-managed recipe ready",
+    "new3DGeneration": "two fresh sampling failures stopped; explicit preserved NEW Pixal bust cleanup alternative, not historical production",
     "oldProductionDonorAllowed": false,
     "evidence": "../one-rider-v2/README.md",
     "approvalAsks": [
@@ -779,10 +779,13 @@
     ]
   },
   "oneRiderV2Bust": {
-    "failedBatches": 1,
+    "failedBatches": 2,
     "technique": "Pixal MPS1024-cascade new buzz bust",
     "failure": "post-texture sampling decode memory overshoot82.2GiB; no source mesh produced",
     "evidence": "../one-rider-v2/head/attempt1/generation.json",
-    "next": "one cache-managed attempt, early retained latents/decoded shape,1second poll65GiB stop; second memory failure ends technique"
+    "next": "Preserved NEW task-2 Pixal bust: inspect PBR/gray dense/export; targeted scalp retopology, preserve facial/neck geometry; no third sample",
+    "status": "STOPPED: fresh Pixal MPS buzz-bust sampling",
+    "secondFailure": "65GiB protective threshold reached66.7GiB, no checkpoint/output",
+    "evidence2": "../one-rider-v2/head/attempt2/generation.json"
   }
 }

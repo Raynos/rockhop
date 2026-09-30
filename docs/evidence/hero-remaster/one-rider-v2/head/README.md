@@ -25,3 +25,24 @@ work must use retained stages with a specific CPU-decoding alternative, or
 another documented head method, rather than a third identical sample.
 
 No anatomical cut, neck assembly, skinning or player change has occurred.
+
+## Second outcome — this sampling approach is stopped
+
+Attempt2 terminated at263.747s, exit-15, anonymous66.7GiB. Source hashes
+unchanged; no mesh/GLB or latent checkpoint was reached. The threshold
+stopped work before70GiB, but sampling still failed. [Report](attempt2/generation.json).
+Two failures end fresh Pixal MPS bust sampling here; no third request queued.
+
+Recorded alternative under ask233: inspect the preserved NEW task-2 Pixal
+bust, then targeted compact-scalp retopology while preserving its facial and
+neck geometry. This source is a generated comparison bust, never historical
+production. Its untouched10,163,546-face dense shape and89,653-face PBR export
+are retained. Porous hair, patchy beard and soft eye detail remain defects;
+the source is not accepted. This is a method change, not a successful new
+buzz-reference sample or a silent reset of the two failures. If neutral gray
+shows unacceptable face geometry, reject before polishing textures.
+
+[Third-round unchanged-player check](round3-player-baseline/player-baseline-round-check.json)
+passes fresh silent WebKit low/high boot, clear40.083333333333336s with exact
+Node state/Float64 finish bytes, crash and one-tick restart2ms render submission,
+zero page errors. Current normal player only; no new rider/contact/device pass.

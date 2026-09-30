@@ -45,3 +45,15 @@ syntax parsed; installed source confirms stage cache hooks and decode order.
 Limits: 10second monitoring allowed an overshoot. Next batch uses1second
 poll/65GiB stop and early stage retention; efficacy unproven. No third
 identical MPS sample after a second memory failure; no character accepted.
+
+Finding: Two failed new Pixal MPS bust batches stop sampling. Choose explicit
+preserved NEW Pixal source/targeted scalp cleanup alternative under autonomy;
+H21-4 old head is rejected, body selection only.
+
+Validation: Attempt2 terminated263.747s at anonymous66.7GiB, source hashes
+unchanged, no output/checkpoint. Dense source10,163,546faces and native
+PBR89,653faces retained with hashes. Fresh silent low/high WebKit cold entry,
+exact40.083333333333336s clear, crash and one-tick restart pass; zero errors.
+
+Limits: Preserved Pixal face/scalp has unaccepted defects; no cleaned
+character or assembly. No new rider, contact or device pass from baseline.
