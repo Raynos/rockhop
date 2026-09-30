@@ -388,3 +388,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Alpine rollout proposal:** [A2/A3 seeded inventory and scene draft](../evidence/course-remaster/alpine-tree-kit/alpine-scene-standard-proposal.md) preserve every audited anchor and protected riding window. Nine-cluster bounds are construction estimates. A1 material refinement and played A2/A3 integration remain next; the proposal has no runtime hook or new public assets.
 
 **Snowline source candidate:** [Authored glacier/lift/snowcat/station/beacon family](../evidence/course-remaster/snowline-standard/README.md) has a reproducible Blender recipe, exact decoder geometry report and five focused contact tests. It remains unimported, with exports outside public models. Whole-ride graphics, browser textures and phone budgets are open; 0/3 Snowline signoffs.
+
+**Quarry source candidate:** The isolated initial scene scaffold and Blender drill/crusher/haul/gantry recipe are saved. Blender export succeeded into ignored masters; the scaffold still uses generic machinery and is unaccepted. Decoder, material, contact and played review remain pending before any integration.
