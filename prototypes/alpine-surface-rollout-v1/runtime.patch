@@ -1,0 +1,13 @@
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -960 +960 @@
+-      if (track.def.id === 'a1-sawdust') {
++      if (['a1-sawdust','a2-log-jam','a3-timberline'].includes(track.def.id)) {
+--- a/src/render/world/zones/zoneDeck.ts
++++ b/src/render/world/zones/zoneDeck.ts
+@@ -568 +568 @@
+-  const topPaint = track.def.id === 'a1-sawdust' ? alpineSoil(lib, 'tread') : zonePaint(lib, id, 'top', lowTide)!;
++  const topPaint = ['a1-sawdust','a2-log-jam','a3-timberline'].includes(track.def.id) ? alpineSoil(lib, 'tread') : zonePaint(lib, id, 'top', lowTide)!;
+@@ -610 +610 @@
+-  const facePaint = track.def.id === 'a1-sawdust' ? alpineSoil(lib, 'bank') : zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;
++  const facePaint = ['a1-sawdust','a2-log-jam','a3-timberline'].includes(track.def.id) ? alpineSoil(lib, 'bank') : zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;

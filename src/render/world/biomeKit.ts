@@ -957,7 +957,7 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
     const PB = (name: string, geo: THREE.BufferGeometry, mat: THREE.Material, shadows = true): PropBatch => new PropBatch(name, vc(geo), mat, shadows);
     if (isZone(biome.id)) {
       const zk = buildZoneKit({ track, biome, lib, rng, detail, keepOut, plan, x0, x1 });
-      if (track.def.id === 'a1-sawdust') {
+      if (['a1-sawdust','a2-log-jam','a3-timberline'].includes(track.def.id)) {
         // This kit is still detached: no displaced material has been rendered/compiled.
         // The terrain clone borrows library maps; dispose only its material object.
         const displaced = zk.meshes.find(mesh => mesh.name === 'terrain')?.material;

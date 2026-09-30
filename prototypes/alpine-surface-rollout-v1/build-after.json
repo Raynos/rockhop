@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "phase": "after",
+  "status": 0,
+  "scratch": "/private/var/folders/fj/nk4z2jhn4rj0kq09f047sl180000gn/T/rockhop-alpine-surface-rollout-v1-after-FO9nTf",
+  "sourceHEAD": "45bc55d8938a8378e0c2f4f494aea2f5d90ace6c",
+  "snapshotManifestSHA256": "64f7152b2481364ebd3b528869e7668eceb29d0056d42e36a76a15a141acd3e9",
+  "prebuildAppSHA256": "82887764c05a4e0b189fa56fe9f2b36e440a45cf62e4332517d9b7e141d3ec83",
+  "bankSHA256": "e04f5a22fefd7ac23d8586a49a2fe10211d0db8c4b0b98c1a2c5f5d03a5e7320",
+  "privateConfigSHA256": "58f4aec08c22e1c3314919f7dfbd43c29ef40927afcdf8662a6dba34775d8043",
+  "overrides": [
+    {
+      "file": "src/render/world/biomeKit.ts",
+      "bytes": 101159,
+      "sha256": "4be53b7c3a089909b94a70fd156b2c12f06fbf620c6c74aadadb9952fc6cd49d"
+    },
+    {
+      "file": "src/render/world/zones/zoneDeck.ts",
+      "bytes": 30082,
+      "sha256": "50723694f6dca06074cf8d3c4fda17cb589a3f4b3a82efd92c34cf9d190d5df8"
+    }
+  ],
+  "generated": [
+    {
+      "file": "src/boot/plan.generated.ts",
+      "sha256": "515f861deef855bea16df1142276c9b0b2d0a25bdd5e690d6599e8bbc9a8590a"
+    },
+    {
+      "file": "src/render/hero/models.generated.ts",
+      "sha256": "a118b022c8bac46d315ae0cb81b86ad002985836c9902634f85c552a100bc4e2"
+    }
+  ],
+  "budget": {
+    "playerGzipBytes": 716800,
+    "inlineRawBytes": 8192,
+    "normalGates": true
+  },
+  "entry": "./assets/index-C44ojrvL.js",
+  "indexSHA256": "e54e52bbed962d1ea92462c1efbd2bfc2ed19b01fe54619d7ac780f9cd573356",
+  "catalogSHA256": "9ab0dac1b76242a2eed66319060cea7709ad930be4def9b917836033f14ee7b2",
+  "version": {
+    "sha": "45bc55d8938a8378e0c2f4f494aea2f5d90ace6c",
+    "build": "45bc55d",
+    "time": "2026-09-30T16:52:41.682Z"
+  },
+  "measuredPlayerGzipBytes": 715616
+}

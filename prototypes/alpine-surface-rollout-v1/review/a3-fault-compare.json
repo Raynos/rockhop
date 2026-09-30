@@ -1,0 +1,178 @@
+{
+  "name": "a3-fault",
+  "left": "before",
+  "right": "after",
+  "input": "harness/inputs/a3-timberline/stranger-a3-timberline-20260929-010154.json",
+  "inputSha256": "94ded7d25bfcc99e6ede45c9dbfba77234bb7d169f2f74fe7942978b9cf27bf1",
+  "window": [
+    2364,
+    2724
+  ],
+  "frames": 60,
+  "finalHash": "e8791dbc59a11abb",
+  "finishTime": null,
+  "quality": "low",
+  "backend": "metal",
+  "camera": {
+    "before": {
+      "frames": 60,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953615e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 12,
+        "riding": 7,
+        "crash": 20,
+        "idle": 11
+      },
+      "minX": 0.327,
+      "maxX": 0.526,
+      "minY": 0.446,
+      "maxY": 0.58,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    },
+    "after": {
+      "frames": 60,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953615e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 12,
+        "riding": 7,
+        "crash": 20,
+        "idle": 11
+      },
+      "minX": 0.327,
+      "maxX": 0.526,
+      "minY": 0.446,
+      "maxY": 0.58,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    }
+  },
+  "beforeSource": {
+    "url": "http://127.0.0.1:54368/",
+    "versionSha": "45bc55d8938a8378e0c2f4f494aea2f5d90ace6c",
+    "versionTime": "2026-09-30T16:52:41.682Z",
+    "indexUrl": "http://127.0.0.1:54368/assets/index-DSaqR-vT.js",
+    "indexSHA256": "5298a978f4bfd5b18d6dfe95cd193e95d88dac8a63745f7c075d12c3677afa25",
+    "htmlSHA256": "c10e0a4acae59957015bd6657019f6f20ce727f78e0741f1fbe5586b89c9414d"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:54134/",
+    "versionSha": "45bc55d8938a8378e0c2f4f494aea2f5d90ace6c",
+    "versionTime": "2026-09-30T16:52:41.682Z",
+    "indexUrl": "http://127.0.0.1:54134/assets/index-C44ojrvL.js",
+    "indexSHA256": "e54e52bbed962d1ea92462c1efbd2bfc2ed19b01fe54619d7ac780f9cd573356",
+    "htmlSHA256": "7ed48e7c4da30fd0d4024283787ed0e59563d62cadf3d1a0415a22f38303809b"
+  },
+  "beforeEntry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 304,
+      "tris": 631257,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048\u00d72048 | scene:hdr 852\u00d7392 | ao 426\u00d7196 | ao:blur 426\u00d7196 | bloom:bright 426\u00d7196 | bloom:h0 426\u00d7196 | bloom:v0 426\u00d7196 | bloom:h1 213\u00d798 | bloom:v1 213\u00d798 | bloom:h2 107\u00d749 | bloom:v2 107\u00d749 | bloom:h3 54\u00d725 | bloom:v3 54\u00d725 | bloom:h4 27\u00d713 | bloom:v4 27\u00d713 | bloom:composite 426\u00d7196 | composite:graded 852\u00d7392 | smaa:edges 852\u00d7392 | smaa:weights 852\u00d7392 | smaa\u2192canvas 852\u00d7392",
+      "shadowMap": 2048,
+      "heroTris": 90977,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 64494,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 696,
+      "entering": false,
+      "courseAssetsEnabled": false,
+      "courseAssetsMounted": 0,
+      "courseAssetsTextureMB": 0
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "afterEntry": {
+    "render": {
+      "biome": "alpine",
+      "zoom": "idle",
+      "phase": "menu",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 852,
+      "canvasH": 392,
+      "calls": 304,
+      "tris": 631257,
+      "rtMpx": 6.42,
+      "rtMB": 50.9,
+      "rtPasses": "shadow 2048\u00d72048 | scene:hdr 852\u00d7392 | ao 426\u00d7196 | ao:blur 426\u00d7196 | bloom:bright 426\u00d7196 | bloom:h0 426\u00d7196 | bloom:v0 426\u00d7196 | bloom:h1 213\u00d798 | bloom:v1 213\u00d798 | bloom:h2 107\u00d749 | bloom:v2 107\u00d749 | bloom:h3 54\u00d725 | bloom:v3 54\u00d725 | bloom:h4 27\u00d713 | bloom:v4 27\u00d713 | bloom:composite 426\u00d7196 | composite:graded 852\u00d7392 | smaa:edges 852\u00d7392 | smaa:weights 852\u00d7392 | smaa\u2192canvas 852\u00d7392",
+      "shadowMap": 2048,
+      "heroTris": 90977,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 64494,
+      "textureGenMs": 0,
+      "passes": 19,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 179.3,
+      "entering": false,
+      "courseAssetsEnabled": false,
+      "courseAssetsMounted": 0,
+      "courseAssetsTextureMB": 0
+    },
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+  },
+  "rawClipSHA256": {
+    "before": "22e16671825272933abf9b705d5fb7fcb67c8b121079f00bb4e5e7abda0199c4",
+    "after": "412f59ec6d4655d2a74068b50e94cf9ecab7209c50f2f5ef2bacdafed5ef7a25"
+  },
+  "output": "/Users/raynos/projects/games/rockhop/prototypes/alpine-surface-rollout-v1/review/a3-fault-compare.json",
+  "outputSHA256": "5f74a5efdc2c9387cec8677863f3547e44f3a658a954bc271c4b3f35cf129426",
+  "probe": {
+    "durationSec": 3,
+    "fps": 20,
+    "width": 1704,
+    "height": 392,
+    "codec": "h264",
+    "frames": 60,
+    "sizeBytes": 1710886
+  },
+  "dirtyTreeConfounder": "Both phases use the same frozen full source/public snapshot, with original A2/A3 trees. Only the recorded biomeKit/zoneDeck soil, bank and lake selectors differ. Normal Coast frontage bank is included identically. No timing qualification or physical-device acceptance."
+}
