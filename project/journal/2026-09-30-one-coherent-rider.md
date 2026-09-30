@@ -249,3 +249,14 @@ original triangle positions/UVs exact and original source SHA unchanged.
 
 Limits: No accepted collar, texture/detail bake, new head attachment or
 neck deformation. Neutral material preview will not imply texture success.
+
+Finding: Second anatomical fitting correction removes the cheek scar
+but creates a mouth smirk and angular pointed jaw. Stop Gaussian shaping
+and dense snapping; inspect native anatomical male/age targets as alternative.
+
+Validation: Parent inspected actual gray front; four angles and closeups
+frozen. Exactly601dense snaps restored; authored shift max.050077native,
+later dense fit0. Source hashes untouched and topology unchanged.
+
+Limits: No accepted face/likeness, UV, bake, neck join or rig. Native
+preset capability is read-only; original90min feasibility bound remains.

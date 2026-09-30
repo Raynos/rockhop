@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 23933,
-    "conservativeChargedHoursUpperBound": 6.648,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 24661,
+    "conservativeChargedHoursUpperBound": 6.85,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -854,13 +854,14 @@
     "deadlineUTC": "2026-10-01T00:31:54Z",
     "freshAnatomicalFit": {
       "appearanceAccepted": false,
-      "failedFixes": 1,
-      "failure": "Visible left cheek/nose scar; generic delicate jaw/brow unlike approved adult male target",
-      "evidence": "../one-rider-v2/head-cleanup/mpfb-v4/verification.json",
+      "failedFixes": 2,
+      "failure": "v5 removes scar but creates unnatural mouth smirk and angular pointed jaw; appearance/likeness rejected",
+      "evidence": "../one-rider-v2/head-cleanup/mpfb-v5-landmarks/verification.json",
       "anatomicalSource": "Fresh CC0 MPFB, no historical graft",
-      "nextSpecificCorrection": "Disable scar-producing dense snaps; smooth reference chin/jaw/lip/brow landmark shifts with protected feature loops",
+      "nextSpecificCorrection": "Read-only assess installed native male/age macro targets as explicit alternative; no third manual warp",
       "deadlineUnchanged": true,
-      "noUVBakeRigJoin": true
+      "noUVBakeRigJoin": true,
+      "stoppedTechnique": "Gaussian anatomical landmark shaping and dense snapping"
     }
   },
   "oneRiderV2AnatomicalHands": {

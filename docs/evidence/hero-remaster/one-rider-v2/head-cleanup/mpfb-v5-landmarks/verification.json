@@ -1,0 +1,318 @@
+{
+  "status": "UNACCEPTED one targeted geometry correction; parent judgment required",
+  "verifierSHA256": "6de711c9b1be0e70e6a99832e8360f6ee739f818df9333baf7dc95d39435e339",
+  "construction": {
+    "status": "UNACCEPTED single targeted landmark/scar-removal correction; gray review",
+    "sources": {
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/head.blend": "3210495c8ca6862211e8a3646da09616fbbed544fd8b74302da27885592a677d",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/fit-samples.npz": "4d51cda4e76400eddc55cab8fec11de2b82591dabf0b9e6eddf0a16471cc7692",
+      "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36"
+    },
+    "sourcesAfter": {
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/head.blend": "3210495c8ca6862211e8a3646da09616fbbed544fd8b74302da27885592a677d",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/fit-samples.npz": "4d51cda4e76400eddc55cab8fec11de2b82591dabf0b9e6eddf0a16471cc7692",
+      "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36"
+    },
+    "scriptSHA256": "c38a98c7e65a5839718886aba1caa212ce8b51755a27f355cb7cf1e467136608",
+    "restoredDenseSnapVertices": 601,
+    "laterDenseFit": {
+      "count": 0,
+      "maximumNative": 0,
+      "reason": "Rejected narrow snap created cheek/nose scar; no surface projection in correction."
+    },
+    "authoredInitialLandmarks": {
+      "sourceNative": [
+        [
+          0.0,
+          -0.117967,
+          0.171723
+        ],
+        [
+          -0.115684,
+          -0.065009,
+          0.116365
+        ],
+        [
+          0.115684,
+          -0.065009,
+          0.116365
+        ],
+        [
+          0.0,
+          -0.025,
+          0.232
+        ],
+        [
+          -0.081,
+          0.151,
+          0.219
+        ],
+        [
+          0.081,
+          0.151,
+          0.219
+        ],
+        [
+          -0.078462,
+          0.111,
+          0.169
+        ],
+        [
+          0.078462,
+          0.111,
+          0.169
+        ],
+        [
+          0.0,
+          0.035,
+          0.256
+        ]
+      ],
+      "targetNative": [
+        [
+          0.0,
+          -0.168,
+          0.173
+        ],
+        [
+          -0.137,
+          -0.097,
+          0.118
+        ],
+        [
+          0.137,
+          -0.097,
+          0.118
+        ],
+        [
+          0.0,
+          -0.0445,
+          0.232
+        ],
+        [
+          -0.081,
+          0.155,
+          0.231
+        ],
+        [
+          0.081,
+          0.155,
+          0.231
+        ],
+        [
+          -0.078462,
+          0.111,
+          0.169
+        ],
+        [
+          0.078462,
+          0.111,
+          0.169
+        ],
+        [
+          0.0,
+          0.035,
+          0.256
+        ]
+      ],
+      "widthsNative": [
+        0.075,
+        0.075,
+        0.075,
+        0.045,
+        0.028,
+        0.028,
+        0.032,
+        0.032,
+        0.04
+      ],
+      "coefficients": [
+        [
+          1.414768681744335e-19,
+          -0.048015479779530204,
+          0.0011731669230545323
+        ],
+        [
+          -0.021317569291329403,
+          -0.030422046442019287,
+          0.0015966031948846625
+        ],
+        [
+          0.0213175692913294,
+          -0.030422046442019287,
+          0.0015966031948846623
+        ],
+        [
+          1.1628990907010384e-20,
+          -0.013839093838861382,
+          -0.00015389161212113868
+        ],
+        [
+          -8.7817941170331e-08,
+          0.004000255982146403,
+          0.012001162349486474
+        ],
+        [
+          8.781794117033096e-08,
+          0.004000255982146402,
+          0.012001162349486474
+        ],
+        [
+          4.124317771936494e-05,
+          3.9231569290059407e-05,
+          -6.688257460558015e-05
+        ],
+        [
+          -4.124317771936493e-05,
+          3.9231569290059407e-05,
+          -6.688257460558015e-05
+        ],
+        [
+          2.501655317198833e-22,
+          0.0020017152310641446,
+          1.2828866411702384e-05
+        ]
+      ],
+      "interpolation": "Gaussian RBF landmark field, continuous, same field for head/eyes",
+      "appliedDisplacements": {
+        "UNACCEPTED fresh anatomical head fit": {
+          "vertices": 69681,
+          "maximumNative": 0.05007720394556525,
+          "percentilesNative": [
+            0.00025375868714217257,
+            0.02369653645421706,
+            0.03691196869932101
+          ]
+        },
+        "NEW native CC0 eyeballs with same anchor adapter": {
+          "vertices": 4164,
+          "maximumNative": 0.0014956936606688655,
+          "percentilesNative": [
+            0.0002195595561409814,
+            0.0009859506984365846,
+            0.0013168961585884554
+          ]
+        }
+      },
+      "targetInterpretation": "Front-reference manual pixel measurements normalized by actual previous native IPD; depth hypotheses authored."
+    },
+    "referencePixelLandmarks": {
+      "pupils": [
+        [
+          481,
+          414
+        ],
+        [
+          701,
+          414
+        ]
+      ],
+      "chin": [
+        589,
+        805
+      ],
+      "mouth": [
+        588,
+        632
+      ],
+      "jawAngles": [
+        [
+          400,
+          706
+        ],
+        [
+          785,
+          706
+        ]
+      ]
+    },
+    "unchangedTopology": {
+      "skinVertices": 69681,
+      "skinTriangles": 139136
+    },
+    "limits": [
+      "No identity or geometry acceptance is claimed.",
+      "Initial landmark changes exceed .004native and are distinct from zero later dense fit.",
+      "Source UV coordinates remain absent; no texture/detail bake.",
+      "Neck base remains source-derived, unjoined, and unaccepted.",
+      "Brow prominence and depth are authored hypotheses requiring actual visual judgment.",
+      "No historical donor, global remesh/projection, GPU, or new AI sampling."
+    ]
+  },
+  "skinTopology": {
+    "vertices": 69681,
+    "triangles": 139136,
+    "boundaryEdges": 224,
+    "nonmanifoldEdges": 0,
+    "zeroAreaTriangles": 0,
+    "boundaries": [
+      {
+        "vertices": 224,
+        "degrees": [
+          2
+        ],
+        "bounds": [
+          [
+            -0.3778933584690094,
+            -0.21720410883426666,
+            -0.15863022208213806
+          ],
+          [
+            0.3778933584690094,
+            -0.19158634543418884,
+            0.05824314057826996
+          ]
+        ]
+      }
+    ]
+  },
+  "actualEyeSidedBoundingCentersNative": [
+    [
+      -0.07849397324025631,
+      0.11085328832268715,
+      0.16935735940933228
+    ],
+    [
+      0.07849396578967571,
+      0.11085319146513939,
+      0.16935566067695618
+    ]
+  ],
+  "actualEyeSidedCenterDistanceNative": 0.1569879390391527,
+  "estimatedWorldIPDMetersAtScale042": 0.06593493439644413,
+  "masterHashes": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v5-landmarks/head.blend": "9e412112a87eba1605d60ca3e80f4bab554c03d34d09f1c76248018bdb5f1bac",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v5-landmarks/head.glb": "e5cba756b1f42e4e402070c1dbf5dec8352be329251afe10ab7e66d5795614c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v5-landmarks/head-skin.npz": "1592ecedbed0d9e3ace7f68800defed683d16f7d1d0ee7c6eb97db261c92210a"
+  },
+  "sourceProof": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/head.blend": {
+      "before": "3210495c8ca6862211e8a3646da09616fbbed544fd8b74302da27885592a677d",
+      "after": "3210495c8ca6862211e8a3646da09616fbbed544fd8b74302da27885592a677d",
+      "unchanged": true
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v4-eye-aligned/fit-samples.npz": {
+      "before": "4d51cda4e76400eddc55cab8fec11de2b82591dabf0b9e6eddf0a16471cc7692",
+      "after": "4d51cda4e76400eddc55cab8fec11de2b82591dabf0b9e6eddf0a16471cc7692",
+      "unchanged": true
+    },
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": {
+      "before": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36",
+      "after": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36",
+      "unchanged": true
+    }
+  },
+  "observed": [
+    "Prior cheek/nose scar removed by exact recorded snap reversion.",
+    "Anatomical eyelids/eyeballs, ear folds, lip loops and continuous scalp preserved.",
+    "Angular jaw/chin and upward-curved mouth corners may depart from reference.",
+    "Adult male target likeness remains unaccepted; no cosmetic texture can establish it.",
+    "Source-derived jagged neck base remains unjoined.",
+    "No skin/eye UVs, textures, buzz material, rig or moving evidence."
+  ],
+  "limits": [
+    "Topology counts do not prove likeness or self-intersection freedom.",
+    "Initial authored landmark movement is separately disclosed from zero later dense fit.",
+    "Both earlier head methods and all prior topology/appearance failures remain frozen."
+  ]
+}
