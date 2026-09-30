@@ -141,11 +141,11 @@ const lowTideTop: Painter = (g, w, h, r) => {
 
 /** QUARRY top: pale packed dust — cream grain, pebbles, faint drying cracks. */
 const quarryTop: Painter = (g, w, h, r) => {
-  g.fillStyle = '#d8bc92';
+  g.fillStyle = '#c8a77d';
   g.fillRect(0, 0, w, h);
-  speckle(g, w, h, r, 12000, ['#e6d0aa', '#c9a87c', '#d2b288', '#bc9a70', '#ecdcbc'], [1, 3]);
-  blotches(g, w, h, r, 14, (a) => `rgba(176,128,84,${a * 0.4})`, [30, 100]);
-  speckle(g, w, h, r, 260, ['#bfa27a', '#f8f0e0', '#a88a66', '#d8b890'], [3, 7]);
+  speckle(g, w, h, r, 7000, ['#d6b991', '#bb9a72', '#caaa80', '#b18e68', '#dfc49d'], [1, 2]);
+  blotches(g, w, h, r, 10, (a) => `rgba(152,108,69,${a * 0.28})`, [30, 100]);
+  speckle(g, w, h, r, 180, ['#aa8865', '#e2cba7', '#b5936b', '#d2b38a'], [3, 6]);
   g.strokeStyle = 'rgba(150,118,84,0.35)';
   g.lineWidth = 1.2;
   for (let i = 0; i < 16; i++) {
@@ -458,6 +458,11 @@ export function zonePaint(lib: MaterialLibrary, id: BiomeId, part: 'top' | 'face
     : painted(lib, paint.faceMat, d1Cut && id === 'quarry' ? dustDevilFace : paint.face, 512, 256, seed);
   if (lowTide && id === 'coast' && part === 'top') {
     made.mat.roughness = 0.63;
+  }
+  if (id === 'quarry' && part === 'top') {
+    // Packed tread keeps the existing concrete normal map, with shallow relief at tire scale.
+    made.mat.userData.normalScaleOverride = true;
+    made.mat.normalScale.set(0.24, 0.24);
   }
   m.set(key, made);
   return made;

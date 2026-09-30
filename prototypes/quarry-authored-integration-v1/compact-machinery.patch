@@ -1,0 +1,29 @@
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -58,0 +59 @@
++import { loadQuarryLandmarks, planQuarryStandard, QUARRY_STANDARD_REPLACE } from './zones/quarryStandard';
+@@ -1019,0 +1021,19 @@
++      }
++      if (authoredCourse && (track.def.id === 'd1-dust-devil' || track.def.id === 'd2-conveyor' || track.def.id === 'd3-rope-walk')) {
++        // Seeded ZoneKit generation is complete; retain the exact old machines
++        // until every authored model has decoded and attached.
++        const old = zk.batches.filter(b => QUARRY_STANDARD_REPLACE.authoredBatches.has(b.name));
++        zk.batches.splice(0, zk.batches.length, ...zk.batches.filter(b => !old.includes(b)));
++        const fallback = new THREE.Group(); fallback.name = 'quarry-original-machinery-fallback';
++        fallback.add(...buildBatches(old).objects); group.add(fallback);
++        const quarryPlan = planQuarryStandard(track, x0, x1);
++        const groundAt = (x: number, z: number): number => zoneGround('quarry', profile, x, z);
++        const owner = mountCourseAssets(loadQuarryLandmarks(
++          quarryPlan, detail === 'low' ? 'lod' : 'full', lib, groundAt,
++        ).then(asset => {
++          // The legacy pit floor lies 1.4 m below the broader authored terrain plan.
++          for (const object of asset.root.children) object.position.y = quarryPlan.pitY - 1.4 + 0.08;
++          return asset;
++        }));
++        void owner.ready.then(() => { if (owner.root.children.length) fallback.visible = false; });
++        courseAssets = owner; group.add(owner.root);
+--- a/src/render/world/zones/quarryStandard.ts
++++ b/src/render/world/zones/quarryStandard.ts
+@@ -334 +334 @@
+-    const file = `models/course-kits/quarry-standard/quarry-${kind}${detail === 'lod' ? '-lod' : ''}-packed.glb`;
++    const file = `models/course-kits/quarry-standard/quarry-${kind}-packed${detail === 'lod' ? '-lod' : ''}.glb`;

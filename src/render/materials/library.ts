@@ -201,7 +201,7 @@ export class MaterialLibrary {
     // load 1 and load 2 of the same track drew different containers (49 vs 70 MB of textures).
     if (!m.map || m.map === mapAtDerive || m.map === base.map) m.map = base.map;
     m.normalMap = base.normalMap;
-    m.normalScale.copy(base.normalScale);
+    if (!m.userData.normalScaleOverride) m.normalScale.copy(base.normalScale);
     m.roughnessMap = base.roughnessMap;
     m.metalnessMap = base.metalnessMap;
     m.aoMap = base.aoMap;

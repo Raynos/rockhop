@@ -316,3 +316,7 @@ Required-map failure and delayed-course-switch browser cases pass 2/2; 28 focuse
 ## Focused shared Snowline surface retained · 2026-09-30
 
 [Three matched Pro full rides and diagnostic fault](../evidence/course-remaster/snowline-surface-v1/README.md) retain a two-scalar normal-strength/roughness correction across S1–S3, reducing the distracting blue crinkle field while preserving actual edges/gaps. Full finishes/hashes and camera checks match; normal combined A1/Snowline build is 698.56 KiB and required S1 partial round check passes 14/14. Existing model/texture dimensions, jobs, geometry, physics and camera are unchanged. The rejected full wall swap stays deferred; machinery/forest/plate and human/device/audio limits remain. This is a bounded shared improvement, not three signed-off courses.
+
+## Focused shared Quarry tread retained · 2026-09-30
+
+[Matched D1/D2 Rookie and D3 Pro motion](../evidence/course-remaster/quarry-standard/paint-polish/README.md) retains lower-contrast packed tread with shallow concrete relief, preserving actual ledges, machinery and contact geometry. Full/fault times, hashes and camera match. The late-map lifecycle test, app typecheck/scoped lint and fresh normal combined A1/Snow/Quarry build pass at 698.44 KiB. Whole/compact machine swaps and too-subtle off-road tint remain deferred. Physical phone, player comprehension and full-course standards remain open; no complete-course count increase.
