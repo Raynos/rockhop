@@ -75,4 +75,31 @@ describe('production finish report', () => {
     hud.resultsConfirm();
     expect(action).toHaveBeenLastCalledWith('next');
   });
+
+  it('uses the existing revealed next tile for the earned-bike handoff and resets its label', () => {
+    const hud = setup();
+    const action = vi.fn();
+    hud.onAction = action;
+    hud.setTrack(getTrack('d2-conveyor')!);
+    let simTime = 0;
+    for (const [label, detail] of [['Improve medals', '1040 Scrap to Pro'], ['Buy Pro', 'Garage · 1840 Scrap'], ['Equip Pro', 'Garage · Pro run']]) {
+      hud.setNextEnabled(true, detail, label);
+      hud.showResults({ ...first, trackId: 'd2-conveyor' });
+      const next = hud.root.querySelector<HTMLButtonElement>('[data-id="next"]')!;
+      expect(next.disabled).toBe(false);
+      expect(next.textContent).toContain(label);
+      expect(next.textContent).toContain(detail);
+      action.mockClear();
+      next.click();
+      expect(action).not.toHaveBeenCalled();
+      hud.setRun({ phase: 'finished', simTime: ++simTime, runTime: 30.35, faults: 0 } as Parameters<DomHud['setRun']>[0]);
+      next.click();
+      expect(action).toHaveBeenCalledExactlyOnceWith('next');
+    }
+    hud.setNextEnabled(true, 'Rope Walk');
+    expect(hud.root.querySelector('[data-id="next"]')?.textContent).toContain('Next track');
+    hud.setNextEnabled(false);
+    expect(hud.root.querySelector<HTMLButtonElement>('[data-id="next"]')?.disabled).toBe(true);
+  });
+
 });

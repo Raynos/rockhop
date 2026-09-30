@@ -56,7 +56,6 @@ import {
   saveTelemetryEnabled,
   saveVolume,
   shipTracks,
-  trackUnlocked,
   type BestEntry,
   type BestTimes,
   type DomHud,
@@ -69,8 +68,8 @@ import {
 import { tickLive } from '../ui/live';
 import { applyOrientation } from '../ui/orientation';
 import { loadRiderOutfit, saveRiderOutfit } from '../ui/outfit';
-import { CareerEconomy, PRO_PRICE, type AwardResult } from '../ui/economy';
-import { trackLock } from '../ui/progress';
+import { CareerEconomy, PRO_PRICE, type AwardResult, type EconomySnapshot } from '../ui/economy';
+import { trackLock, type MedalOf } from '../ui/progress';
 import { copyText } from '../ui/clipboard';
 import { ExitConfirm } from '../ui/exitConfirm';
 import { Bench, type BenchOptions, type FrameSplit } from './bench';
@@ -87,6 +86,34 @@ import { ReplaySession, type ReplaySource } from './replay';
 import { ReviewSession } from './review';
 import { BenchLog, RunCollector, RunLog } from './telemetry';
 import { isPhone, startTier } from './startTier';
+
+/** Result continuation uses the same career gate as a normal launch. */
+export interface ResultNextAction {
+  enabled: boolean;
+  label: string;
+  detail: string | null;
+  destination: 'track' | 'map' | 'garage';
+  trackId: string | null;
+}
+
+export function resultNextAction(
+  tracks: readonly TrackDef[], currentId: string | null, medalOf: MedalOf,
+  economy: Pick<EconomySnapshot, 'wallet' | 'proOwned'>, equipped: BikeClass, dev = false,
+): ResultNextAction {
+  const ship = shipTracks(tracks, dev);
+  const next = ship[ship.findIndex((track) => track.id === currentId) + 1];
+  const action: ResultNextAction = { enabled: false, label: 'Next track', detail: null, destination: 'track', trackId: next?.id ?? null };
+  if (!next) return action;
+  const lock = trackLock(tracks, next, medalOf, { proOwned: economy.proOwned, equipped }, dev);
+  if (!lock) return { ...action, enabled: true, detail: next.name };
+  // Only the earned-bike boundary gets a continuation; earlier medal locks remain locked.
+  if (currentId !== 'd2-conveyor' || next.id !== 'd3-rope-walk' || !lock.garage) return action;
+  if (economy.proOwned) return { ...action, enabled: true, label: 'Equip Pro', detail: 'Garage · Pro run', destination: 'garage' };
+  const remaining = Math.max(0, PRO_PRICE - economy.wallet);
+  return remaining
+    ? { ...action, enabled: true, label: 'Improve medals', detail: `${remaining} Scrap to Pro`, destination: 'map' }
+    : { ...action, enabled: true, label: 'Buy Pro', detail: `Garage · ${PRO_PRICE} Scrap`, destination: 'garage' };
+}
 
 export interface AppOptions {
   game: Game;
@@ -583,7 +610,7 @@ export class App {
 
     this.hud.onAction = (a) => {
       if (a === 'retry') this.fullRestart('results:retry');
-      else if (a === 'next' && this.nextTrackEnabled()) this.play(this.nextTrackId());
+      else if (a === 'next') this.continueResult();
       else if (a === 'menu') this.quit('results:map', 'tracks');
       else if (a === 'pause') this.togglePause('hud:pause');
       else if (a === 'replay') this.watchLastRun();
@@ -629,7 +656,7 @@ export class App {
       this.lastAward = this.economy.award(r.trackId, r.medal);
       this.showResultReward(r.trackId);
       this.setAudioScene('results');
-      this.hud.setNextEnabled(this.nextTrackEnabled(), this.nextTrackName());
+      this.syncResultNext();
       this.touch.setOverlay(true);
       this.logRun(r);
       // "Last run" storage (replay viewer): every finished run, PB or not.
@@ -709,7 +736,7 @@ export class App {
       this.screenAt = performance.now();
       this.touch.setEnabled(true);
       if (ret.result) {
-        this.hud.setNextEnabled(this.nextTrackEnabled(), this.nextTrackName());
+        this.syncResultNext();
         this.hud.setReplayEnabled(true);
         this.hud.showResults(ret.result);
         this.showResultReward(ret.result.trackId);
@@ -1073,7 +1100,7 @@ export class App {
     this.game.setPaused(false);
     this.touch.setEnabled(true);
     this.touch.setOverlay(false);
-    this.hud.setNextEnabled(this.nextTrackEnabled(), this.nextTrackName());
+    this.syncResultNext();
     // First launch ever: one card (gas / brake / lean), the countdown waits behind it.
     if (!loadOnboarded() && !this.bench) {
       this.game.setPaused(true);
@@ -1171,7 +1198,7 @@ export class App {
    * its frozen finish state under the menu (user screenshot, round 3).
    */
   /** Leave the run for the front end: the menu (pause · Quit), or the world map (the results ticket's MAP). */
-  private quit(via: string, to: FrontScreen = 'menu'): void {
+  private quit(via: string, to: FrontScreen = 'menu', inspectPro = false): void {
     this.navLog.record('quit', this.navContext(), via);
     this.game.setPaused(false);
     this.pause.hide();
@@ -1179,7 +1206,7 @@ export class App {
     this.hud.hideResults();
     this.touch.setEnabled(false);
     this.loadBackdrop(BACKDROP_TRACK, true);
-    this.goto(to);
+    this.goto(to, inspectPro);
   }
 
   /** Resume: the game unpauses on this frame; the overlay fades over --t1 while the HUD fades back over --t2 (SPEC §6). */
@@ -1246,26 +1273,22 @@ export class App {
     this.audio?.setScene?.(scene);
   }
 
-  /** The next ship track exists, is not this one, and its tier is unlocked (src/ui/progress.ts rule). */
-  private nextTrackEnabled(): boolean {
-    const ship = shipTracks(this.tracks, this.o.dev ?? false);
-    const i = ship.findIndex((t) => t.id === this.lastTrackId);
-    const next = ship[i + 1];
-    if (!next) return false;
-    return trackUnlocked(this.tracks, next, (id) => this.bestTimes.get(id)?.medal ?? null, this.o.dev ?? false,
-      { proOwned: this.economy.snapshot().proOwned, equipped: this.bikeInEffect() });
+  private resultNext(): ResultNextAction {
+    return resultNextAction(this.tracks, this.lastTrackId, (id) => this.bestTimes.get(id)?.medal ?? null,
+      this.economy.snapshot(), this.bikeInEffect(), this.o.dev ?? false);
   }
 
-  private nextTrackId(): string {
-    const ship = shipTracks(this.tracks, this.o.dev ?? false);
-    const i = ship.findIndex((t) => t.id === this.lastTrackId);
-    return ship[(i + 1) % ship.length]?.id ?? ship[0]!.id;
+  private syncResultNext(): void {
+    const action = this.resultNext();
+    this.hud.setNextEnabled(action.enabled, action.detail, action.label);
   }
 
-  private nextTrackName(): string | null {
-    const ship = shipTracks(this.tracks, this.o.dev ?? false);
-    const i = ship.findIndex((t) => t.id === this.lastTrackId);
-    return ship[i + 1]?.name ?? null;
+  private continueResult(): void {
+    const action = this.resultNext();
+    if (!action.enabled) return;
+    if (action.destination === 'map') this.quit('results:improve-medals', 'tracks');
+    else if (action.destination === 'garage') this.quit('results:pro-garage', 'garage', true);
+    else if (action.trackId) this.play(action.trackId);
   }
 
   /** The zone the player is up to (the home screen's key art follows it): the first zone with an unmedalled track. */

@@ -697,10 +697,10 @@ export class DomHud implements Hud {
     this.resBoard.hidden = false;
   }
 
-  /** NEXT TRACK is disabled when the next track is locked / this is the last one (App decides); `name` labels the tile with the track ahead. */
-  setNextEnabled(on: boolean, name?: string | null): void {
+  /** App supplies the next course or the earned-bike handoff; ordinary locks and the finale stay disabled. */
+  setNextEnabled(on: boolean, name?: string | null, label = 'Next track'): void {
     this.nextEnabled = on;
-    this.resTiles.setLabel('next', 'Next track', on && name ? escapeHtml(name) : undefined);
+    this.resTiles.setLabel('next', escapeHtml(label), on && name ? escapeHtml(name) : undefined);
     this.resTiles.setDisabled('next', !on);
     if (this.resultsAt >= 0) this.resTiles.focusId('retry');
   }
