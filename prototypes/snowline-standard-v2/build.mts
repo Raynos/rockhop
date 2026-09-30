@@ -6,8 +6,11 @@ import { execFileSync } from 'node:child_process';
 import { build } from 'vite';
 
 const repo = process.cwd();
-const output = path.resolve(process.argv[2] ?? 'harness/out/snowline-standard-v2');
-if (fs.existsSync(output)) throw new Error('Use a fresh output directory');
+const requestedOutput = path.resolve(process.argv[2] ?? 'harness/out/snowline-standard-v2');
+if (fs.existsSync(requestedOutput)) throw new Error('Use a fresh output directory');
+fs.mkdirSync(requestedOutput,{recursive:true});
+// Rollup canonicalizes macOS /tmp. Config exact-ID transforms must match it.
+const output = fs.realpathSync(requestedOutput);
 const revision = execFileSync('git', ['rev-parse', 'HEAD'], {encoding:'utf8'}).trim();
 const frozen = path.join(output, '.inputs');
 fs.mkdirSync(frozen, {recursive:true});
