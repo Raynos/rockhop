@@ -1,0 +1,9 @@
+{
+  "status": "one addon registration failure, corrected before fresh source creation",
+  "exceptionEvidence": "The 'bl_ext.fresh_hand_mpfb.mpfb' addon does not exist!? during UiService get_preference in register",
+  "originalCall": "addon_utils.enable('bl_ext.fresh_hand_mpfb.mpfb',default_set=False,persistent=False)",
+  "specificFix": "default_set=True registers the in-process addon preference entry; no save_userpref or Desktop installation mutation",
+  "correctedOutcome": "fresh-anatomical-source.blend saved successfully from new HumanService.create_human",
+  "logLimits": "Initial exec_command output was truncated; this JSON preserves the actual visible failure snippet, not a fabricated full traceback",
+  "failedAttempts": 1
+}

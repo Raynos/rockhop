@@ -1,0 +1,94 @@
+{
+  "status": "NEUTRAL MODEL gray evidence, parent acceptance pending; no curl/contact pass",
+  "sourceNPZs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-hand-L.npz": "f41e27ac0ba4472b7fce76afe0637f643c69807d86ee52dc6bee21894b7dbcdb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-hand-R.npz": "ca7e030b09e3a81650b4ea3f071c755450e38eb17c6fcb0c455f1c29924b9221"
+  },
+  "sourceNPZsAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-hand-L.npz": "f41e27ac0ba4472b7fce76afe0637f643c69807d86ee52dc6bee21894b7dbcdb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-hand-R.npz": "ca7e030b09e3a81650b4ea3f071c755450e38eb17c6fcb0c455f1c29924b9221"
+  },
+  "metrics": [
+    {
+      "side": "L",
+      "sourceNPZSHA256": "f41e27ac0ba4472b7fce76afe0637f643c69807d86ee52dc6bee21894b7dbcdb",
+      "vertices": 1668,
+      "faces": 1654,
+      "shapeKeys": false,
+      "nonadjacentBVHOverlapPairs": 0,
+      "displayBounds": [
+        [
+          -0.08029755204916,
+          -0.017592506483197212,
+          -0.18284565210342407
+        ],
+        [
+          0.051553547382354736,
+          0.060411226004362106,
+          0.017000000923871994
+        ]
+      ]
+    },
+    {
+      "side": "R",
+      "sourceNPZSHA256": "ca7e030b09e3a81650b4ea3f071c755450e38eb17c6fcb0c455f1c29924b9221",
+      "vertices": 1668,
+      "faces": 1654,
+      "shapeKeys": false,
+      "nonadjacentBVHOverlapPairs": 0,
+      "displayBounds": [
+        [
+          -0.051553547382354736,
+          -0.017592506483197212,
+          -0.18284566700458527
+        ],
+        [
+          0.0802975594997406,
+          0.060411226004362106,
+          0.017000000923871994
+        ]
+      ]
+    }
+  ],
+  "views": [
+    {
+      "side": "L",
+      "view": "front",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/neutral-L-front.png",
+      "sha256": "7f55705084fc76a452022f7094b976b691c2be30efa5ba20f18033313c0426b2"
+    },
+    {
+      "side": "L",
+      "view": "profile",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/neutral-L-profile.png",
+      "sha256": "cca8489c8e00a81546646102f67bb1b43327d126f231d64b06302778c0db148c"
+    },
+    {
+      "side": "L",
+      "view": "back",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/neutral-L-back.png",
+      "sha256": "9f01f86974ca6904dbb7ddc5a0ab0ee46d7a23bed16071acd57739cf37490f33"
+    },
+    {
+      "side": "R",
+      "view": "front",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/neutral-R-front.png",
+      "sha256": "e6817125945530b644f655f8cde57e4ce1393f5f2201bda67235f3c8de523b5b"
+    },
+    {
+      "side": "R",
+      "view": "profile",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/neutral-R-profile.png",
+      "sha256": "e119343a2dada3682c58231d3bcc115334897dd0bd12bc9a9cd8212d420c4e23"
+    },
+    {
+      "side": "R",
+      "view": "back",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/neutral-R-back.png",
+      "sha256": "b61d6b1d3ce4245d7d949e0630c9fac1be040b5ad98ed21c9ebb0a58bc38a67e"
+    }
+  ],
+  "threads": 4,
+  "displayCorrection": "Fresh meshes from frozen canonical NPZ preserve source anatomy/native weights but remove inherited untransformed shape keys",
+  "recipeSHA256": "61c042f3f20a94b71a5cece13dcf2fcdba1a1f15f71a505e33b67454047de0b2"
+}

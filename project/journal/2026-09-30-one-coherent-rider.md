@@ -197,3 +197,16 @@ in one tick and1ms; no browser errors.
 
 Limits: Four protected seed faces were lost. No clean collar, new head
 attachment, deformation, character or rig pass. Player assets untouched.
+
+Finding: Fresh anatomical neutral hands pass parent model-level review,
+while fixed curl fails posing with66 remaining intersection/touch pairs.
+Stop fixed curl and assemble neutral hands before measured-grip solving.
+
+Validation: Parent inspected six-view neutral board; all complete1656
+polygons/1668vertices and native weights per hand retained,22edge intended
+wrist boundary,0other nonmanifold edges and0neutral overlap candidates.
+All frozen manifest/source hashes verified. Prior curl341pairs remain
+recorded separately from corrected66pairs.
+
+Limits: Neutral anatomy approval does not accept body scale, wrist bridge,
+textures, rig or visible bike contacts. Temporary motion is diagnostic only.

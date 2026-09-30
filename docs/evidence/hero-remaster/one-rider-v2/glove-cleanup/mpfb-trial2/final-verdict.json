@@ -1,0 +1,83 @@
+{
+  "status": "MODEL neutral evidence pending parent; POSE fixed-angle curl failed and stopped; no bake/promotion",
+  "sourceHashesUntouched": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/working-display2.glb": "f657aa963f2e582a9f70291b3dbd160dafd6e944419d48b21b0425521d4cd63a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/raw-shape.npz": "4a10d00eb42b08910e015efe117f6b28f07be2c7d76e311613a38ac5303d0247",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-anatomical-source.blend": "3c255ac91f6983c51cc4307baf8c305dcd9f3035c48c3fc1711594666e81bce8"
+  },
+  "anatomy": {
+    "freshCC0MPFB": true,
+    "completeNeutralCagePerHand": {
+      "vertices": 1668,
+      "faces": 1656,
+      "intentionalWristBoundaryEdges": 22,
+      "nonmanifoldBeyondWrist": 0
+    },
+    "nativeWeightsPreserved": true,
+    "neutralDisplayNonadjacentOverlapCandidates": 0,
+    "parentAppearanceAccepted": false
+  },
+  "posing": {
+    "initialNonadjacentOverlapTouchTrianglePairs": 341,
+    "mirroredCorrectionNonadjacentOverlapTouchTrianglePairs": 66,
+    "fixedCurlTechniqueStopped": true,
+    "contactPass": false,
+    "temporaryMotionOnly": true
+  },
+  "failedSetupsAndEvidenceCorrections": [
+    "addon registration corrected once",
+    "native mirrored signed axes corrected once; fixedcurl stopped after both setupcorrections",
+    "initial diagnostic clipped fingertips/missing distal temporaryweights corrected in separate inspector",
+    "neutral inheritedshape-key blankdisplay preserved",
+    "neutral tri/quad-only serialization omitted2wristcutngons; completeexport verified all1656faces"
+  ],
+  "sourceProtection": {
+    "positionsAndUVFingerprintsVerified": true,
+    "protects": "hood/cuffs/torso/feet/legs; distalconnectedglovecomponent only removed",
+    "globalNormalsHashPreserved": false
+  },
+  "reference": "actual-grip-reference.json contains consumedfullrubber surfacefit;22mm hypothesis superseded",
+  "proposedSpecificAlternative": "After parent decision, measured-grip nativechain solving with selfcollision; reviewed gripmorph and19bone adapter. Do not repeat blindfixedcurl.",
+  "files": {
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/actual-grip-reference.json": "6064e568bf7f77f538f768f831b392fa97f2a167401aed6b9afdf99efde4b7a1",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/report.json": "07b5a321f62fd2d593cc4c7e2ec5c7ab4bdd2e356655eb485dbae40b04ac998a",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/README.md": "d8eafa8ee5e8bb42937178b153647951e05eb9057d3e7143e8dda186d25b04af",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/addon-registration-setup-failure.json": "19597e164ade7d936483104918fa8dc2f07982105a105e83de0d9339eeb08455",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/inspection.json": "ec8dfc6c22e9170cdcb99d92b5b4bacd694d337245ef292918a0c094f574e67a",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/native-pose-handness-failure.json": "715f6903595f366cbc009d248c48eac311b7efb470d6fb8d98c9b5b5c60e4c7d",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-source.json": "b89937e48508c816b57e3b9ef4965a09e45d81bc170fca9ab6eb45f8d69e252c",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/report.json": "ef5ea5242f392edf4ee7a54925c0e680001650f4bb24a9e66110bfa3a84dc044",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/README.md": "7146462b73e2ce4b02523ea489e1ffa772faa866a551e55025612046afd2b10d",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/report.json": "bb935e4fb995811d4dac1d84f3e019479b09d043d5839001419162cff480a466",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/README.md": "63eecc9044707a2e4e3e99d79a210d25ae09b7f33bd1765a04a4dd3970203135",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/temporary-seam-motion.mp4": "e29e16e30a3f800619ddb9a097b8428a121d9e94c4e4de6f2c188c1bc90dbc84",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/anatomical-glove-gray-pbr.jpg": "70200a329962f782b766b52f320d29582606d3b709f1d2424e40edabbfbd04ab",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/verification.json": "5cde25afe3bf2d623a236792ced6e7811e9d3bfdf1ffb17f0abb3d660709fb35",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/inspection.json": "4f0a9a44043d137749bea74d30b42b9586a1063b64246d5abcdf64058de8b777",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-complete/report.json": "66647b96fb34761886899fdc87886a5dc6617fb68f731c4d5c2474b87b066b74",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-complete/README.md": "7fa74f0d6b1d9ccd744d9bbc5b314f91b16ab6a33421c518bbf4423e3245e0aa",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-complete/verification.json": "186e454e8ed463545e7a1c5a06738c39b4e3ae50de6c65fc77957e4909fde8e1",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-complete/neutral-anatomy-board.jpg": "1a8bad9bc2bcb588bef4c3c212a0ca8370939ab7adf05683cbda95280a8cf482",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/report.json": "6f6468b81263121d1992d87821df16d542b6c76ef3a961367eca3460e151fdea",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-corrected/README.md": "f4e368c3de708a00056243fee8067f3da9e5e19b0a6441583b8490b665510312",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/neutral_mpfb_hands.py": "dfdbaa43771d3c1817ec7374fab6f165549f98b5ca6f7a5d87c70094425e90ef",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/compose_mpfb_gloves.py": "06670bce0924c9d458d50b050b9cdd936cd5f2022b6fc4f4a660b7d0cef09df0",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/inspect_mpfb_corrected.py": "98c3eaeabb9965ec37e5e83659474390a3baa6866e4e632c6550b864bb9385b5",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/mpfb_gloves_mirror_corrected.py": "d046e854d5514e7a70ca73087bab3e65782c22738e6f7d0e0306e55ef3cebccf",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/mpfb_hand_probe.py": "5d48df05a5406f5aebcf188bbe55aa6aaa1f2e39ff3b9e942d830694a99eebef",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/mpfb_gloves_trial2.py": "f03584e86ca75b023c4ea03c5dacff2cc99676a18d752b1e6851da9a8b745751",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/inspect_mpfb_gloves.py": "d598058ef0eb2df07d9570b35fdbedda7ee7428cdfc46a1d9e4fc3f1bc634acc",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/render_neutral_cages.py": "61c042f3f20a94b71a5cece13dcf2fcdba1a1f15f71a505e33b67454047de0b2",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/render_neutral_complete.py": "89e2182982fe644e17da249ed077bc37f3a542636bcd5b5731d6a9212bb32702",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/compose_neutral_evidence.py": "f648e7a04c309ad874b391d246a7cb7040a190f0020ae3ed24a33cdf95646cce",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/fresh-anatomical-source.blend": "3c255ac91f6983c51cc4307baf8c305dcd9f3035c48c3fc1711594666e81bce8",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/body-gloves.blend": "3b821d3a91a4bf9542aed99e4dda5d4814aa2f7517caf4d98957bc2c64184bb9",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/body-gloves.glb": "3c6b6281fc6054b1e0672e562fd052f09272719c7c45ecbaeb59c06681e3dbe2",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/body-gloves.blend": "b035c620ec8a17fcd9e5f8462b1af75aef4ca78b663cbf772085916fe8d1ff5a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/body-gloves.glb": "32c54c90e3d70ea8cecc7fd6d689ef93fd2ce416051a8e597aad17e79eca3554",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/mirror-corrected/temporary-wrist-diagnostic.blend": "6b40637e154665b1fed352ebe91e2e7f98e87b62722910c096f37c592d05ce76",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-anatomical-hands.blend": "28175eefc601af05c71bef962fc8576eea31124fb5a9cad30bf433d4b2c566eb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/display-complete/neutral-anatomical-cages.blend": "202b8114bc5c2a47424bdc8c0e6f7e4f33526cf1d0ea825e3987af81c255f2a1"
+  },
+  "noFinalCharacterRigOrRuntime": true
+}
