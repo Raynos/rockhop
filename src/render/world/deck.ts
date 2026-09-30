@@ -284,6 +284,12 @@ export function buildRideSurfaces(track: CompiledTrack, biome: Biome, lib: Mater
   // Store release round 2: coast / quarry / alpine ride a built slab (quay, sandstone courses, forest bank) —
   // the ground line's top, near face, pit walls and edge trim come from zones/zoneDeck.ts.
   const zoneDeck = zoneFace(biome.id) ? buildZoneDeck(track, biome.id, lib) : null;
+  // D1's four cut steps are separate stone obstacle ribbons, not part of the
+  // quarry ground slab. Tint their *actual collider tops* so the step sequence
+  // reads at tire scale; decorations beside the road cannot do that job.
+  const d1TerraceColliders = new Set(track.def.id === 'd1-dust-devil'
+    ? track.placed.filter((p) => p.kind === 'ledge' && p.pos.x >= 90 && p.pos.x < 120).flatMap((p) => p.colliderIds)
+    : []);
   let zoneDeckTris = 0;
   if (zoneDeck) {
     for (const m of zoneDeck.meshes) {
@@ -407,6 +413,16 @@ export function buildRideSurfaces(track: CompiledTrack, biome: Biome, lib: Mater
     }
     const paleStone = surf === 'stone' && biome.id === 'quarry'; // cut sandstone, not the baked-orange rock albedo
     const rib = ribbonWithShade(pl, ground ? WIDE_SECTION : OBSTACLE_SECTION, tile, ground ? 0 : 0.004, (_z, drop) => 0.55 + 0.45 * (1 - Math.min(1, -drop * 0.9)));
+    if (d1TerraceColliders.has(pl.id)) {
+      const positions = rib.getAttribute('position') as THREE.BufferAttribute;
+      const colors = rib.getAttribute('color') as THREE.BufferAttribute;
+      for (let i = 0; i < colors.count; i++) {
+        const x = positions.getX(i);
+        const z = positions.getZ(i);
+        const stone = 0.92 + 0.09 * Math.sin(x * 1.75 + z * 1.1) + 0.045 * Math.sin(x * 4.8 - z * 2.4);
+        colors.setXYZ(i, colors.getX(i) * 0.48 * stone, colors.getY(i) * 0.37 * stone, colors.getZ(i) * 0.28 * stone);
+      }
+    }
     push(buckets, paleStone ? 'zone:top' : (SURFACE_MATERIAL[surf] ?? 'dirt'), rib); // quarry stone: the zone's painted pale dust
   }
 

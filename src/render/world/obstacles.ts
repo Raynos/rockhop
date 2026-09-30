@@ -846,7 +846,16 @@ function zoneProp(prop: string, po: PlacedObstacle, cols: Collider[], ctx: PropC
       // Round 2: cut sandstone courses — the quarry deck's own painting (zoneDeck.ts), mapped in world space so
       // the courses run level and continue across neighbouring blocks: 4 m of course per u, 1.7 m per v.
       const before = (buckets.get('zone:face') ?? []).length;
+      const d1Terrace = ctx.trackId === 'd1-dust-devil' && po.kind === 'ledge' && x0 >= 90 && x0 < 120;
       solid('zone:face', 0xffffff, (_x, y) => 0.92 + 0.08 * Math.min(1, (y - y0) / 1.5));
+      if (d1Terrace) {
+        // Only the actual 0.4 m entry cut gets a darker exposed face. Keep
+        // the full support skirt in the existing stone so it cannot read as
+        // another large decorative wall beside the tire-contact plane.
+        const rise = polys[0]!.points[1]!.y - polys[0]!.points[0]!.y;
+        push(buckets, 'zone:face', tintGeo(new THREE.BoxGeometry(0.12, rise - 0.02, depth + 0.04), 0x7a604b),
+          at(x0 - 0.045, y1 - rise / 2 - 0.01, 0));
+      }
       for (const g of (buckets.get('zone:face') ?? []).slice(before)) worldUv(g, 4, 1.7);
       return true;
     }
