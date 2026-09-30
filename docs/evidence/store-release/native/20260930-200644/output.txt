@@ -1,0 +1,76 @@
+native gate: bundle source 3f6b5662db973f87aa61c02088911e3f2bb7b00c
+native gate: web …
+native gate: web completed in 16 s (renderer ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version))
+native gate: ios …
+native gate: ios completed in 79 s
+
+web — headless Chromium (angle-metal)
+  PASS  gate.completed                 true  (limit true)
+  PASS  boot.toMenuMs                  3450  (limit "menu")  cold start → the loader gone over the menu (the whole offline pack is read from the app bundle; hook at 229 ms)
+  PASS  start.toRiding                 3479  (limit "riding")  app.play('c1-low-tide') through the countdown
+  PASS  silent.audioContexts           0  (limit 0)  navigator.webdriver under the gate; AudioContexts constructed
+  PASS  clear.golden                   "gate/c1-low-tide.bot-3.json: 30.349999999999998; gate/c2-crane-hop.bot-3.json: 26.608333333333334; gate/c3-hull-breach.bot-3.json: 35.1; gate/a1-sawdust.bot-3.json: 30.349999999999998; gate/a2-log-jam.bot-3.json: 29.983333333333334; gate/a3-timberline.bot-3.json: 24.816666666666666; gate/d1-dust-devil.bot-3.json: 27.058333333333334; gate/d2-conveyor.bot-3.json: 37.15833333333333; gate/d3-rope-walk.bot-3-pro.json: 32.458333333333336; gate/s1-lift-line.bot-3-pro.json: 28.416666666666668; gate/s2-cornice.bot-3-pro.json: 30.616666666666667; gate/s3-whiteout.bot-3-pro.json: 27.341666666666665"  (limit "all cleared")
+  PASS  crash.faultWithinS             0.8583333333333333  (limit 8)  crash
+  PASS  fault.toControlMs              25  (limit 500)
+  PASS  restart.ticks                  1  (limit 1)
+  PASS  restart.wallMsP95              0.19999980926513672  (limit 5)
+  PASS  restart.frameMsP95             4.900000095367432  (limit 33)  restart → synced frame
+  PASS  restart.noCountdown            1  (limit 12)
+  PASS  silent.audioContexts.harness   0  (limit 0)
+
+ios — iOS Simulator rockhop-gate (iPhone 17 Pro Max, 5D278BE8-2D5C-4DD3-996A-86F2C4159160)
+  PASS  gate.completed                 true  (limit true)
+  PASS  boot.toMenuMs                  4825  (limit "menu")  cold start → the loader gone over the menu (the whole offline pack is read from the app bundle; hook at 685 ms)
+  PASS  start.toRiding                 3787  (limit "riding")  app.play('c1-low-tide') through the countdown
+  PASS  silent.audioContexts           0  (limit 0)  navigator.webdriver under the gate; AudioContexts constructed
+  PASS  clear.golden                   "gate/c1-low-tide.bot-3.json: 30.349999999999998; gate/c2-crane-hop.bot-3.json: 26.608333333333334; gate/c3-hull-breach.bot-3.json: 35.1; gate/a1-sawdust.bot-3.json: 30.349999999999998; gate/a2-log-jam.bot-3.json: 29.983333333333334; gate/a3-timberline.bot-3.json: 24.816666666666666; gate/d1-dust-devil.bot-3.json: 27.058333333333334; gate/d2-conveyor.bot-3.json: 37.15833333333333; gate/d3-rope-walk.bot-3-pro.json: 32.458333333333336; gate/s1-lift-line.bot-3-pro.json: 28.416666666666668; gate/s2-cornice.bot-3-pro.json: 30.616666666666667; gate/s3-whiteout.bot-3-pro.json: 27.341666666666665"  (limit "all cleared")
+  PASS  crash.faultWithinS             0.8583333333333333  (limit 8)  crash
+  PASS  fault.toControlMs              25  (limit 500)
+  PASS  restart.ticks                  1  (limit 1)
+  PASS  restart.wallMsP95              1  (limit 5)
+  PASS  restart.frameMsP95             6  (limit 33)  restart → synced frame
+  PASS  restart.noCountdown            1  (limit 12)
+  PASS  silent.audioContexts.harness   0  (limit 0)
+
+bar 3 — finish time (float64 bytes) and state hash per platform
+  IDENTICAL  gate/c1-low-tide.bot-3.json
+      web 30.349999999999998 [9999999999593e40] 2bfe061963ffb058
+      ios 30.349999999999998 [9999999999593e40] 2bfe061963ffb058
+  IDENTICAL  gate/c2-crane-hop.bot-3.json
+      web 26.608333333333334 [bcbbbbbbbb9b3a40] 88a0573d42a3ca40
+      ios 26.608333333333334 [bcbbbbbbbb9b3a40] 88a0573d42a3ca40
+  IDENTICAL  gate/c3-hull-breach.bot-3.json
+      web 35.1 [cdcccccccc8c4140] bcbe71b98fcd500a
+      ios 35.1 [cdcccccccc8c4140] bcbe71b98fcd500a
+  IDENTICAL  gate/a1-sawdust.bot-3.json
+      web 30.349999999999998 [9999999999593e40] 91f3878cfca365d6
+      ios 30.349999999999998 [9999999999593e40] 91f3878cfca365d6
+  IDENTICAL  gate/a2-log-jam.bot-3.json
+      web 29.983333333333334 [bcbbbbbbbbfb3d40] 82b364d5e95115f0
+      ios 29.983333333333334 [bcbbbbbbbbfb3d40] 82b364d5e95115f0
+  IDENTICAL  gate/a3-timberline.bot-3.json
+      web 24.816666666666666 [1111111111d13840] 7c8649893814e931
+      ios 24.816666666666666 [1111111111d13840] 7c8649893814e931
+  IDENTICAL  gate/d1-dust-devil.bot-3.json
+      web 27.058333333333334 [efeeeeeeee0e3b40] 1f14e1b4bfde3ab1
+      ios 27.058333333333334 [efeeeeeeee0e3b40] 1f14e1b4bfde3ab1
+  IDENTICAL  gate/d2-conveyor.bot-3.json
+      web 37.15833333333333 [4444444444944240] 0783873ba9ba4df4
+      ios 37.15833333333333 [4444444444944240] 0783873ba9ba4df4
+  IDENTICAL  gate/d3-rope-walk.bot-3-pro.json
+      web 32.458333333333336 [abaaaaaaaa3a4040] 774c599b55917f5a
+      ios 32.458333333333336 [abaaaaaaaa3a4040] 774c599b55917f5a
+  IDENTICAL  gate/s1-lift-line.bot-3-pro.json
+      web 28.416666666666668 [abaaaaaaaa6a3c40] d97cb0a3bcce46ce
+      ios 28.416666666666668 [abaaaaaaaa6a3c40] d97cb0a3bcce46ce
+  IDENTICAL  gate/s2-cornice.bot-3-pro.json
+      web 30.616666666666667 [dedddddddd9d3e40] 16253eea0a4f94af
+      ios 30.616666666666667 [dedddddddd9d3e40] 16253eea0a4f94af
+  IDENTICAL  gate/s3-whiteout.bot-3-pro.json
+      web 27.341666666666665 [7777777777573b40] 1cd4dd3ff5886f6c
+      ios 27.341666666666665 [7777777777573b40] 1cd4dd3ff5886f6c
+  IDENTICAL  gate/c1-low-tide.bot-3.json (paced)
+      web 30.349999999999998 [9999999999593e40] 2bfe061963ffb058
+      ios 30.349999999999998 [9999999999593e40] 2bfe061963ffb058
+
+evidence: docs/evidence/store-release/native/20260930-200644

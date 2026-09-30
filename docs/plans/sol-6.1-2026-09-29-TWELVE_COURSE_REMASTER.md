@@ -69,7 +69,7 @@ host; elapsed capture time under concurrency is not a performance result.
 | Challenge and bike mechanics | **24 clean bike/course references; 0/72 passive-GO clears** on the differentiated package. Rookie career 1–8, purchased-equipped Pro 9–12. | Human handling, difficulty curve and medal-clock calibration, including the global Pro 0.9 multiplier. |
 | Scrap and Pro integration | Empty-save normal App rides earn **300 + 7×220 = 1,840**, explicit purchase spends to 0 and equipped Pro starts D3; repeat D2 pays 0. | HR-24 measures a new person's actual time/medals to earn Pro. Recorded reference inputs are not a new player. |
 | Highest-impact recovery/UI defects | D2 Buy/Equip/Improve flow, actionable map earning, D3 ore-cart lesson, missing upper-route Diamond result goal and pending-finish reward loss are corrected. | Unbriefed comprehension and physical-phone touch/pacing. |
-| Integrated host and release checks | Full earlier host gate 31/31, offline 11/11; current career fixes pass boot/clear/crash/one-tick retry. Final filtered release CPU suite 1,553 passes. Checked production `38427ee` and its web/store CI jobs are green. | Current native replay/recovery qualification and real landscape iPhone/Android play remain. Reports identify their actual source/build scope. |
+| Integrated host and release checks | Full earlier host gate 31/31, offline 11/11; current career fixes pass boot/clear/crash/one-tick retry. Final filtered release CPU suite 1,553 passes. Checked production `38427ee` and its web/store CI jobs are green. | Current [clean-source web/iOS career and recovery](../evidence/store-release/native/20260930-200644/README.md) passes, including same-bundle map handoff. Signed/native physical-device and landscape iPhone/Android play remain. |
 | Whole-course acceptance | **0/12 signed off**. | Human play, audio, phone pacing and unresolved route anticipation prevent complete approval. |
 
 The earlier 20–25% total-effort / 5–10% graphics estimates predate the focused
@@ -406,5 +406,4 @@ shared-kit motion, real earning/purchase and lifecycle proofs are retained.
 S1 anticipation, unbriefed difficulty/earning calibration and audible/device
 qualification remain open. The native debug gate now selects the twelve career recordings and a C1
 crash; boot/restart derive the selected track rather than flat-test. Three
-focused reader/default regression cases pass. A current clean-source played
-web/iOS gate is next; the old native proof cannot qualify current compatibility.
+focused reader/default regression cases pass. The [current clean-source web/iOS run](../evidence/store-release/native/20260930-200644/README.md) now passes all twelve career clears, exact Node/web/iOS finish bytes/hashes, C1 crash/one-tick retry and zero-audio checks. The same bundle passes normal map context handoff; physical-device and signed-release qualification remain open.

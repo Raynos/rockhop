@@ -1,0 +1,1108 @@
+{
+ "at": "2026-09-30T20:06:44.490Z",
+ "source": "3f6b5662db973f87aa61c02088911e3f2bb7b00c",
+ "runs": [
+  {
+   "platform": "web",
+   "device": "headless Chromium (angle-metal)",
+   "ok": true,
+   "wallS": 16,
+   "clip": null,
+   "notes": [
+    "renderer ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)"
+   ],
+   "checks": [
+    {
+     "id": "gate.completed",
+     "value": true,
+     "limit": true,
+     "pass": true
+    },
+    {
+     "id": "boot.toMenuMs",
+     "value": 3450,
+     "limit": "menu",
+     "pass": true,
+     "informational": true,
+     "note": "cold start → the loader gone over the menu (the whole offline pack is read from the app bundle; hook at 229 ms)"
+    },
+    {
+     "id": "start.toRiding",
+     "value": 3479,
+     "limit": "riding",
+     "pass": true,
+     "note": "app.play('c1-low-tide') through the countdown"
+    },
+    {
+     "id": "silent.audioContexts",
+     "value": 0,
+     "limit": 0,
+     "pass": true,
+     "note": "navigator.webdriver under the gate; AudioContexts constructed"
+    },
+    {
+     "id": "clear.golden",
+     "value": "gate/c1-low-tide.bot-3.json: 30.349999999999998; gate/c2-crane-hop.bot-3.json: 26.608333333333334; gate/c3-hull-breach.bot-3.json: 35.1; gate/a1-sawdust.bot-3.json: 30.349999999999998; gate/a2-log-jam.bot-3.json: 29.983333333333334; gate/a3-timberline.bot-3.json: 24.816666666666666; gate/d1-dust-devil.bot-3.json: 27.058333333333334; gate/d2-conveyor.bot-3.json: 37.15833333333333; gate/d3-rope-walk.bot-3-pro.json: 32.458333333333336; gate/s1-lift-line.bot-3-pro.json: 28.416666666666668; gate/s2-cornice.bot-3-pro.json: 30.616666666666667; gate/s3-whiteout.bot-3-pro.json: 27.341666666666665",
+     "limit": "all cleared",
+     "pass": true
+    },
+    {
+     "id": "crash.faultWithinS",
+     "value": 0.8583333333333333,
+     "limit": 8,
+     "pass": true,
+     "note": "crash"
+    },
+    {
+     "id": "fault.toControlMs",
+     "value": 25,
+     "limit": 500,
+     "pass": true
+    },
+    {
+     "id": "restart.ticks",
+     "value": 1,
+     "limit": 1,
+     "pass": true
+    },
+    {
+     "id": "restart.wallMsP95",
+     "value": 0.19999980926513672,
+     "limit": 5,
+     "pass": true,
+     "informational": false
+    },
+    {
+     "id": "restart.frameMsP95",
+     "value": 4.900000095367432,
+     "limit": 33,
+     "pass": true,
+     "informational": true,
+     "note": "restart → synced frame"
+    },
+    {
+     "id": "restart.noCountdown",
+     "value": 1,
+     "limit": 12,
+     "pass": true
+    },
+    {
+     "id": "silent.audioContexts.harness",
+     "value": 0,
+     "limit": 0,
+     "pass": true
+    }
+   ],
+   "boot": {
+    "name": "boot",
+    "hookMs": 229,
+    "loaderGoneMs": 3450,
+    "menuMs": 3450,
+    "track": "c1-low-tide",
+    "startToRidingMs": 3479,
+    "startError": null,
+    "renderer": {
+     "biome": "coast",
+     "zoom": "idle",
+     "phase": "riding",
+     "tier": "medium",
+     "dpr": 1,
+     "devicePixelRatio": 1,
+     "canvasW": 1280,
+     "canvasH": 720,
+     "calls": 104,
+     "tris": 245510,
+     "rtMpx": 5.93,
+     "rtMB": 52.2,
+     "rtPasses": "shadow 1024×1024 | scene:hdr 1280×720 | bloom:bright 320×180 | bloom:h0 320×180 | bloom:v0 320×180 | bloom:h1 160×90 | bloom:v1 160×90 | bloom:h2 80×45 | bloom:v2 80×45 | bloom:h3 40×23 | bloom:v3 40×23 | bloom:h4 20×12 | bloom:v4 20×12 | bloom:composite 320×180 | composite:graded 1280×720 | smaa:edges 1280×720 | smaa:weights 1280×720 | smaa→canvas 1280×720",
+     "shadowMap": 1024,
+     "heroTris": 90977,
+     "heroDoc": "bike rider",
+     "riderOutfit": "street-mustard",
+     "riderMaterialVariant": null,
+     "heroShadow": "world",
+     "trackCalls": 13,
+     "trackTris": 70328,
+     "textureGenMs": 243.20000076293945,
+     "passes": 17,
+     "stalePrograms": 1,
+     "skippedFrames": 0,
+     "deviceClass": "desktop",
+     "profile": "medium",
+     "bloomers": 0,
+     "entryMs": 0,
+     "entering": true,
+     "courseAssetsEnabled": false,
+     "courseAssetsMounted": 0,
+     "courseAssetsTextureMB": 0
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36",
+    "screen": {
+     "w": 1280,
+     "h": 720,
+     "dpr": 1
+    },
+    "platform": "web",
+    "atMs": 8491
+   },
+   "result": {
+    "name": "result",
+    "readyMs": 180,
+    "clear": [
+     {
+      "file": "gate/c1-low-tide.bot-3.json",
+      "trackId": "c1-low-tide",
+      "bike": "rookie",
+      "ticks": 3642,
+      "finishTime": 30.349999999999998,
+      "finishTimeHex": "9999999999593e40",
+      "hash": "2bfe061963ffb058",
+      "cleared": true,
+      "wallMs": 130
+     },
+     {
+      "file": "gate/c2-crane-hop.bot-3.json",
+      "trackId": "c2-crane-hop",
+      "bike": "rookie",
+      "ticks": 3193,
+      "finishTime": 26.608333333333334,
+      "finishTimeHex": "bcbbbbbbbb9b3a40",
+      "hash": "88a0573d42a3ca40",
+      "cleared": true,
+      "wallMs": 86
+     },
+     {
+      "file": "gate/c3-hull-breach.bot-3.json",
+      "trackId": "c3-hull-breach",
+      "bike": "rookie",
+      "ticks": 4212,
+      "finishTime": 35.1,
+      "finishTimeHex": "cdcccccccc8c4140",
+      "hash": "bcbe71b98fcd500a",
+      "cleared": true,
+      "wallMs": 107
+     },
+     {
+      "file": "gate/a1-sawdust.bot-3.json",
+      "trackId": "a1-sawdust",
+      "bike": "rookie",
+      "ticks": 3642,
+      "finishTime": 30.349999999999998,
+      "finishTimeHex": "9999999999593e40",
+      "hash": "91f3878cfca365d6",
+      "cleared": true,
+      "wallMs": 115
+     },
+     {
+      "file": "gate/a2-log-jam.bot-3.json",
+      "trackId": "a2-log-jam",
+      "bike": "rookie",
+      "ticks": 3598,
+      "finishTime": 29.983333333333334,
+      "finishTimeHex": "bcbbbbbbbbfb3d40",
+      "hash": "82b364d5e95115f0",
+      "cleared": true,
+      "wallMs": 103
+     },
+     {
+      "file": "gate/a3-timberline.bot-3.json",
+      "trackId": "a3-timberline",
+      "bike": "rookie",
+      "ticks": 2978,
+      "finishTime": 24.816666666666666,
+      "finishTimeHex": "1111111111d13840",
+      "hash": "7c8649893814e931",
+      "cleared": true,
+      "wallMs": 89
+     },
+     {
+      "file": "gate/d1-dust-devil.bot-3.json",
+      "trackId": "d1-dust-devil",
+      "bike": "rookie",
+      "ticks": 3247,
+      "finishTime": 27.058333333333334,
+      "finishTimeHex": "efeeeeeeee0e3b40",
+      "hash": "1f14e1b4bfde3ab1",
+      "cleared": true,
+      "wallMs": 67
+     },
+     {
+      "file": "gate/d2-conveyor.bot-3.json",
+      "trackId": "d2-conveyor",
+      "bike": "rookie",
+      "ticks": 4459,
+      "finishTime": 37.15833333333333,
+      "finishTimeHex": "4444444444944240",
+      "hash": "0783873ba9ba4df4",
+      "cleared": true,
+      "wallMs": 74
+     },
+     {
+      "file": "gate/d3-rope-walk.bot-3-pro.json",
+      "trackId": "d3-rope-walk",
+      "bike": "pro",
+      "ticks": 3895,
+      "finishTime": 32.458333333333336,
+      "finishTimeHex": "abaaaaaaaa3a4040",
+      "hash": "774c599b55917f5a",
+      "cleared": true,
+      "wallMs": 85
+     },
+     {
+      "file": "gate/s1-lift-line.bot-3-pro.json",
+      "trackId": "s1-lift-line",
+      "bike": "pro",
+      "ticks": 3410,
+      "finishTime": 28.416666666666668,
+      "finishTimeHex": "abaaaaaaaa6a3c40",
+      "hash": "d97cb0a3bcce46ce",
+      "cleared": true,
+      "wallMs": 94
+     },
+     {
+      "file": "gate/s2-cornice.bot-3-pro.json",
+      "trackId": "s2-cornice",
+      "bike": "pro",
+      "ticks": 3674,
+      "finishTime": 30.616666666666667,
+      "finishTimeHex": "dedddddddd9d3e40",
+      "hash": "16253eea0a4f94af",
+      "cleared": true,
+      "wallMs": 81
+     },
+     {
+      "file": "gate/s3-whiteout.bot-3-pro.json",
+      "trackId": "s3-whiteout",
+      "bike": "pro",
+      "ticks": 3281,
+      "finishTime": 27.341666666666665,
+      "finishTimeHex": "7777777777573b40",
+      "hash": "1cd4dd3ff5886f6c",
+      "cleared": true,
+      "wallMs": 85
+     }
+    ],
+    "paced": {
+     "file": "gate/c1-low-tide.bot-3.json (paced)",
+     "trackId": "c1-low-tide",
+     "bike": "rookie",
+     "ticks": 3642,
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "2bfe061963ffb058",
+     "cleared": true,
+     "wallMs": 2967,
+     "frames": 1821,
+     "longFrames": 0
+    },
+    "crash": {
+     "file": "gate/c1-low-tide.crash.json",
+     "trackId": "c1-low-tide",
+     "fault": {
+      "tick": 103,
+      "time": 0.8583333333333333,
+      "reason": "crash"
+     },
+     "toControlTicks": 3,
+     "toControlMs": 25,
+     "wallMs": 5
+    },
+    "restart": {
+     "track": "c1-low-tide",
+     "reps": 20,
+     "ticksOk": true,
+     "wallMsP95": 0.19999980926513672,
+     "frameMsP95": 4.900000095367432,
+     "movesAfterTicks": 1,
+     "wallMs": [
+      0.2,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0,
+      0,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.2,
+      0.2,
+      0,
+      0.1,
+      0,
+      0.2,
+      0.1
+     ],
+     "frameMs": [
+      4.5,
+      4,
+      4.9,
+      3.9,
+      4,
+      3.7,
+      3.9,
+      4.5,
+      3.7,
+      4.3,
+      3.6,
+      4,
+      3.7,
+      3.9,
+      4.6,
+      4.1,
+      4.9,
+      3.5,
+      3.9,
+      5.1
+     ]
+    },
+    "errors": [],
+    "info": {
+     "version": "0.2.2-core",
+     "physicsHz": 120,
+     "trackId": "c1-low-tide",
+     "seed": 341352973,
+     "bike": "rookie",
+     "harness": true,
+     "readyAtMs": 45.3,
+     "loadTrackMs": 63.5,
+     "render": {
+      "biome": "coast",
+      "zoom": "idle",
+      "phase": "riding",
+      "tier": "high",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 1280,
+      "canvasH": 720,
+      "calls": 107,
+      "tris": 245932,
+      "rtMpx": 10.34,
+      "rtMB": 84.1,
+      "rtPasses": "shadow 2048×2048 | scene:hdr 1280×720 | ao 640×360 | ao:blur 640×360 | bloom:bright 640×360 | bloom:h0 640×360 | bloom:v0 640×360 | bloom:h1 320×180 | bloom:v1 320×180 | bloom:h2 160×90 | bloom:v2 160×90 | bloom:h3 80×45 | bloom:v3 80×45 | bloom:h4 40×23 | bloom:v4 40×23 | bloom:composite 640×360 | composite:graded 1280×720 | smaa:edges 1280×720 | smaa:weights 1280×720 | smaa→canvas 1280×720",
+      "shadowMap": 2048,
+      "heroTris": 90977,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 70328,
+      "textureGenMs": 297.2999997138977,
+      "passes": 19,
+      "stalePrograms": 5,
+      "skippedFrames": 0,
+      "deviceClass": "desktop",
+      "profile": "high",
+      "bloomers": 0,
+      "entryMs": 231.1,
+      "entering": false,
+      "courseAssetsEnabled": true,
+      "courseAssetsMounted": 2,
+      "courseAssetsTextureMB": 5.665
+     },
+     "qualityWhy": "",
+     "quality": "high",
+     "entryHold": false,
+     "modules": {
+      "physics": "createBikePhysics",
+      "render": "ThreeRenderer",
+      "audio": "WebAudioSystem",
+      "rider": "gltf",
+      "bike": "gltf"
+     }
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "platform": "web",
+    "atMs": 6497
+   }
+  },
+  {
+   "platform": "ios",
+   "device": "iOS Simulator rockhop-gate (iPhone 17 Pro Max, 5D278BE8-2D5C-4DD3-996A-86F2C4159160)",
+   "ok": true,
+   "wallS": 79,
+   "clip": "harness/out/native/ios/clip.mp4",
+   "notes": [],
+   "checks": [
+    {
+     "id": "gate.completed",
+     "value": true,
+     "limit": true,
+     "pass": true
+    },
+    {
+     "id": "boot.toMenuMs",
+     "value": 4825,
+     "limit": "menu",
+     "pass": true,
+     "informational": true,
+     "note": "cold start → the loader gone over the menu (the whole offline pack is read from the app bundle; hook at 685 ms)"
+    },
+    {
+     "id": "start.toRiding",
+     "value": 3787,
+     "limit": "riding",
+     "pass": true,
+     "note": "app.play('c1-low-tide') through the countdown"
+    },
+    {
+     "id": "silent.audioContexts",
+     "value": 0,
+     "limit": 0,
+     "pass": true,
+     "note": "navigator.webdriver under the gate; AudioContexts constructed"
+    },
+    {
+     "id": "clear.golden",
+     "value": "gate/c1-low-tide.bot-3.json: 30.349999999999998; gate/c2-crane-hop.bot-3.json: 26.608333333333334; gate/c3-hull-breach.bot-3.json: 35.1; gate/a1-sawdust.bot-3.json: 30.349999999999998; gate/a2-log-jam.bot-3.json: 29.983333333333334; gate/a3-timberline.bot-3.json: 24.816666666666666; gate/d1-dust-devil.bot-3.json: 27.058333333333334; gate/d2-conveyor.bot-3.json: 37.15833333333333; gate/d3-rope-walk.bot-3-pro.json: 32.458333333333336; gate/s1-lift-line.bot-3-pro.json: 28.416666666666668; gate/s2-cornice.bot-3-pro.json: 30.616666666666667; gate/s3-whiteout.bot-3-pro.json: 27.341666666666665",
+     "limit": "all cleared",
+     "pass": true
+    },
+    {
+     "id": "crash.faultWithinS",
+     "value": 0.8583333333333333,
+     "limit": 8,
+     "pass": true,
+     "note": "crash"
+    },
+    {
+     "id": "fault.toControlMs",
+     "value": 25,
+     "limit": 500,
+     "pass": true
+    },
+    {
+     "id": "restart.ticks",
+     "value": 1,
+     "limit": 1,
+     "pass": true
+    },
+    {
+     "id": "restart.wallMsP95",
+     "value": 1,
+     "limit": 5,
+     "pass": true,
+     "informational": false
+    },
+    {
+     "id": "restart.frameMsP95",
+     "value": 6,
+     "limit": 33,
+     "pass": true,
+     "informational": false,
+     "note": "restart → synced frame"
+    },
+    {
+     "id": "restart.noCountdown",
+     "value": 1,
+     "limit": 12,
+     "pass": true
+    },
+    {
+     "id": "silent.audioContexts.harness",
+     "value": 0,
+     "limit": 0,
+     "pass": true
+    }
+   ],
+   "boot": {
+    "name": "boot",
+    "hookMs": 685,
+    "loaderGoneMs": 4825,
+    "menuMs": 4826,
+    "track": "c1-low-tide",
+    "startToRidingMs": 3787,
+    "startError": null,
+    "renderer": {
+     "biome": "coast",
+     "zoom": "idle",
+     "phase": "riding",
+     "tier": "low",
+     "dpr": 1.5,
+     "devicePixelRatio": 1.5,
+     "canvasW": 1434,
+     "canvasH": 660,
+     "calls": 80,
+     "tris": 90866,
+     "rtMpx": 4.99,
+     "rtMB": 45.3,
+     "rtPasses": "shadow 512×512 | scene:hdr 1434×660 | composite:graded 1434×660 | smaa:edges 1434×660 | smaa:weights 1434×660 | smaa→canvas 1434×660",
+     "shadowMap": 512,
+     "heroTris": 13630,
+     "heroDoc": "bike-lod rider-lod",
+     "riderOutfit": "street-mustard",
+     "riderMaterialVariant": null,
+     "heroShadow": "hero-only",
+     "trackCalls": 13,
+     "trackTris": 70328,
+     "textureGenMs": 432.0000000000007,
+     "passes": 5,
+     "stalePrograms": 1,
+     "skippedFrames": 0,
+     "deviceClass": "phone",
+     "profile": "low",
+     "bloomers": 0,
+     "entryMs": 0,
+     "entering": true,
+     "courseAssetsEnabled": false,
+     "courseAssetsMounted": 0,
+     "courseAssetsTextureMB": 0
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+    "screen": {
+     "w": 956,
+     "h": 440,
+     "dpr": 3
+    },
+    "platform": "ios",
+    "atMs": 10192
+   },
+   "result": {
+    "name": "result",
+    "readyMs": 231,
+    "clear": [
+     {
+      "file": "gate/c1-low-tide.bot-3.json",
+      "trackId": "c1-low-tide",
+      "bike": "rookie",
+      "ticks": 3642,
+      "finishTime": 30.349999999999998,
+      "finishTimeHex": "9999999999593e40",
+      "hash": "2bfe061963ffb058",
+      "cleared": true,
+      "wallMs": 154
+     },
+     {
+      "file": "gate/c2-crane-hop.bot-3.json",
+      "trackId": "c2-crane-hop",
+      "bike": "rookie",
+      "ticks": 3193,
+      "finishTime": 26.608333333333334,
+      "finishTimeHex": "bcbbbbbbbb9b3a40",
+      "hash": "88a0573d42a3ca40",
+      "cleared": true,
+      "wallMs": 122
+     },
+     {
+      "file": "gate/c3-hull-breach.bot-3.json",
+      "trackId": "c3-hull-breach",
+      "bike": "rookie",
+      "ticks": 4212,
+      "finishTime": 35.1,
+      "finishTimeHex": "cdcccccccc8c4140",
+      "hash": "bcbe71b98fcd500a",
+      "cleared": true,
+      "wallMs": 123
+     },
+     {
+      "file": "gate/a1-sawdust.bot-3.json",
+      "trackId": "a1-sawdust",
+      "bike": "rookie",
+      "ticks": 3642,
+      "finishTime": 30.349999999999998,
+      "finishTimeHex": "9999999999593e40",
+      "hash": "91f3878cfca365d6",
+      "cleared": true,
+      "wallMs": 142
+     },
+     {
+      "file": "gate/a2-log-jam.bot-3.json",
+      "trackId": "a2-log-jam",
+      "bike": "rookie",
+      "ticks": 3598,
+      "finishTime": 29.983333333333334,
+      "finishTimeHex": "bcbbbbbbbbfb3d40",
+      "hash": "82b364d5e95115f0",
+      "cleared": true,
+      "wallMs": 129
+     },
+     {
+      "file": "gate/a3-timberline.bot-3.json",
+      "trackId": "a3-timberline",
+      "bike": "rookie",
+      "ticks": 2978,
+      "finishTime": 24.816666666666666,
+      "finishTimeHex": "1111111111d13840",
+      "hash": "7c8649893814e931",
+      "cleared": true,
+      "wallMs": 94
+     },
+     {
+      "file": "gate/d1-dust-devil.bot-3.json",
+      "trackId": "d1-dust-devil",
+      "bike": "rookie",
+      "ticks": 3247,
+      "finishTime": 27.058333333333334,
+      "finishTimeHex": "efeeeeeeee0e3b40",
+      "hash": "1f14e1b4bfde3ab1",
+      "cleared": true,
+      "wallMs": 89
+     },
+     {
+      "file": "gate/d2-conveyor.bot-3.json",
+      "trackId": "d2-conveyor",
+      "bike": "rookie",
+      "ticks": 4459,
+      "finishTime": 37.15833333333333,
+      "finishTimeHex": "4444444444944240",
+      "hash": "0783873ba9ba4df4",
+      "cleared": true,
+      "wallMs": 81
+     },
+     {
+      "file": "gate/d3-rope-walk.bot-3-pro.json",
+      "trackId": "d3-rope-walk",
+      "bike": "pro",
+      "ticks": 3895,
+      "finishTime": 32.458333333333336,
+      "finishTimeHex": "abaaaaaaaa3a4040",
+      "hash": "774c599b55917f5a",
+      "cleared": true,
+      "wallMs": 87
+     },
+     {
+      "file": "gate/s1-lift-line.bot-3-pro.json",
+      "trackId": "s1-lift-line",
+      "bike": "pro",
+      "ticks": 3410,
+      "finishTime": 28.416666666666668,
+      "finishTimeHex": "abaaaaaaaa6a3c40",
+      "hash": "d97cb0a3bcce46ce",
+      "cleared": true,
+      "wallMs": 111
+     },
+     {
+      "file": "gate/s2-cornice.bot-3-pro.json",
+      "trackId": "s2-cornice",
+      "bike": "pro",
+      "ticks": 3674,
+      "finishTime": 30.616666666666667,
+      "finishTimeHex": "dedddddddd9d3e40",
+      "hash": "16253eea0a4f94af",
+      "cleared": true,
+      "wallMs": 99
+     },
+     {
+      "file": "gate/s3-whiteout.bot-3-pro.json",
+      "trackId": "s3-whiteout",
+      "bike": "pro",
+      "ticks": 3281,
+      "finishTime": 27.341666666666665,
+      "finishTimeHex": "7777777777573b40",
+      "hash": "1cd4dd3ff5886f6c",
+      "cleared": true,
+      "wallMs": 98
+     }
+    ],
+    "paced": {
+     "file": "gate/c1-low-tide.bot-3.json (paced)",
+     "trackId": "c1-low-tide",
+     "bike": "rookie",
+     "ticks": 3642,
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "2bfe061963ffb058",
+     "cleared": true,
+     "wallMs": 30390,
+     "frames": 1821,
+     "longFrames": 0
+    },
+    "crash": {
+     "file": "gate/c1-low-tide.crash.json",
+     "trackId": "c1-low-tide",
+     "fault": {
+      "tick": 103,
+      "time": 0.8583333333333333,
+      "reason": "crash"
+     },
+     "toControlTicks": 3,
+     "toControlMs": 25,
+     "wallMs": 4
+    },
+    "restart": {
+     "track": "c1-low-tide",
+     "reps": 20,
+     "ticksOk": true,
+     "wallMsP95": 1,
+     "frameMsP95": 6,
+     "movesAfterTicks": 1,
+     "wallMs": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "frameMs": [
+      6,
+      5,
+      4,
+      5,
+      4,
+      6,
+      4,
+      5,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4,
+      6,
+      5,
+      4,
+      5,
+      5,
+      4
+     ]
+    },
+    "errors": [],
+    "info": {
+     "version": "0.2.2-core",
+     "physicsHz": 120,
+     "trackId": "c1-low-tide",
+     "seed": 341352973,
+     "bike": "rookie",
+     "harness": true,
+     "readyAtMs": 59,
+     "loadTrackMs": 71,
+     "render": {
+      "biome": "coast",
+      "zoom": "idle",
+      "phase": "riding",
+      "tier": "medium",
+      "dpr": 1,
+      "devicePixelRatio": 1,
+      "canvasW": 956,
+      "canvasH": 440,
+      "calls": 107,
+      "tris": 251602,
+      "rtMpx": 3.27,
+      "rtMB": 28.2,
+      "rtPasses": "shadow 1024×1024 | scene:hdr 956×440 | bloom:bright 239×110 | bloom:h0 239×110 | bloom:v0 239×110 | bloom:h1 120×55 | bloom:v1 120×55 | bloom:h2 60×28 | bloom:v2 60×28 | bloom:h3 30×14 | bloom:v3 30×14 | bloom:h4 15×7 | bloom:v4 15×7 | bloom:composite 239×110 | composite:graded 956×440 | smaa:edges 956×440 | smaa:weights 956×440 | smaa→canvas 956×440",
+      "shadowMap": 1024,
+      "heroTris": 90977,
+      "heroDoc": "bike rider",
+      "riderOutfit": "street-mustard",
+      "riderMaterialVariant": null,
+      "heroShadow": "world",
+      "trackCalls": 13,
+      "trackTris": 70328,
+      "textureGenMs": 521,
+      "passes": 17,
+      "stalePrograms": 2,
+      "skippedFrames": 0,
+      "deviceClass": "phone",
+      "profile": "medium",
+      "bloomers": 0,
+      "entryMs": 297,
+      "entering": false,
+      "courseAssetsEnabled": true,
+      "courseAssetsMounted": 2,
+      "courseAssetsTextureMB": 5.665
+     },
+     "qualityWhy": "",
+     "quality": "high",
+     "entryHold": false,
+     "modules": {
+      "physics": "createBikePhysics",
+      "render": "ThreeRenderer",
+      "audio": "WebAudioSystem",
+      "rider": "gltf",
+      "bike": "gltf"
+     }
+    },
+    "webdriver": true,
+    "audioContexts": 0,
+    "platform": "ios",
+    "atMs": 37482
+   }
+  }
+ ],
+ "bar3": [
+  {
+   "recording": "gate/c1-low-tide.bot-3.json",
+   "trackId": "c1-low-tide",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "2bfe061963ffb058",
+     "ticks": 3642
+    },
+    "ios": {
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "2bfe061963ffb058",
+     "ticks": 3642
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/c2-crane-hop.bot-3.json",
+   "trackId": "c2-crane-hop",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 26.608333333333334,
+     "finishTimeHex": "bcbbbbbbbb9b3a40",
+     "hash": "88a0573d42a3ca40",
+     "ticks": 3193
+    },
+    "ios": {
+     "finishTime": 26.608333333333334,
+     "finishTimeHex": "bcbbbbbbbb9b3a40",
+     "hash": "88a0573d42a3ca40",
+     "ticks": 3193
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/c3-hull-breach.bot-3.json",
+   "trackId": "c3-hull-breach",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 35.1,
+     "finishTimeHex": "cdcccccccc8c4140",
+     "hash": "bcbe71b98fcd500a",
+     "ticks": 4212
+    },
+    "ios": {
+     "finishTime": 35.1,
+     "finishTimeHex": "cdcccccccc8c4140",
+     "hash": "bcbe71b98fcd500a",
+     "ticks": 4212
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/a1-sawdust.bot-3.json",
+   "trackId": "a1-sawdust",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "91f3878cfca365d6",
+     "ticks": 3642
+    },
+    "ios": {
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "91f3878cfca365d6",
+     "ticks": 3642
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/a2-log-jam.bot-3.json",
+   "trackId": "a2-log-jam",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 29.983333333333334,
+     "finishTimeHex": "bcbbbbbbbbfb3d40",
+     "hash": "82b364d5e95115f0",
+     "ticks": 3598
+    },
+    "ios": {
+     "finishTime": 29.983333333333334,
+     "finishTimeHex": "bcbbbbbbbbfb3d40",
+     "hash": "82b364d5e95115f0",
+     "ticks": 3598
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/a3-timberline.bot-3.json",
+   "trackId": "a3-timberline",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 24.816666666666666,
+     "finishTimeHex": "1111111111d13840",
+     "hash": "7c8649893814e931",
+     "ticks": 2978
+    },
+    "ios": {
+     "finishTime": 24.816666666666666,
+     "finishTimeHex": "1111111111d13840",
+     "hash": "7c8649893814e931",
+     "ticks": 2978
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/d1-dust-devil.bot-3.json",
+   "trackId": "d1-dust-devil",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 27.058333333333334,
+     "finishTimeHex": "efeeeeeeee0e3b40",
+     "hash": "1f14e1b4bfde3ab1",
+     "ticks": 3247
+    },
+    "ios": {
+     "finishTime": 27.058333333333334,
+     "finishTimeHex": "efeeeeeeee0e3b40",
+     "hash": "1f14e1b4bfde3ab1",
+     "ticks": 3247
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/d2-conveyor.bot-3.json",
+   "trackId": "d2-conveyor",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 37.15833333333333,
+     "finishTimeHex": "4444444444944240",
+     "hash": "0783873ba9ba4df4",
+     "ticks": 4459
+    },
+    "ios": {
+     "finishTime": 37.15833333333333,
+     "finishTimeHex": "4444444444944240",
+     "hash": "0783873ba9ba4df4",
+     "ticks": 4459
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/d3-rope-walk.bot-3-pro.json",
+   "trackId": "d3-rope-walk",
+   "bike": "pro",
+   "byPlatform": {
+    "web": {
+     "finishTime": 32.458333333333336,
+     "finishTimeHex": "abaaaaaaaa3a4040",
+     "hash": "774c599b55917f5a",
+     "ticks": 3895
+    },
+    "ios": {
+     "finishTime": 32.458333333333336,
+     "finishTimeHex": "abaaaaaaaa3a4040",
+     "hash": "774c599b55917f5a",
+     "ticks": 3895
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/s1-lift-line.bot-3-pro.json",
+   "trackId": "s1-lift-line",
+   "bike": "pro",
+   "byPlatform": {
+    "web": {
+     "finishTime": 28.416666666666668,
+     "finishTimeHex": "abaaaaaaaa6a3c40",
+     "hash": "d97cb0a3bcce46ce",
+     "ticks": 3410
+    },
+    "ios": {
+     "finishTime": 28.416666666666668,
+     "finishTimeHex": "abaaaaaaaa6a3c40",
+     "hash": "d97cb0a3bcce46ce",
+     "ticks": 3410
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/s2-cornice.bot-3-pro.json",
+   "trackId": "s2-cornice",
+   "bike": "pro",
+   "byPlatform": {
+    "web": {
+     "finishTime": 30.616666666666667,
+     "finishTimeHex": "dedddddddd9d3e40",
+     "hash": "16253eea0a4f94af",
+     "ticks": 3674
+    },
+    "ios": {
+     "finishTime": 30.616666666666667,
+     "finishTimeHex": "dedddddddd9d3e40",
+     "hash": "16253eea0a4f94af",
+     "ticks": 3674
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/s3-whiteout.bot-3-pro.json",
+   "trackId": "s3-whiteout",
+   "bike": "pro",
+   "byPlatform": {
+    "web": {
+     "finishTime": 27.341666666666665,
+     "finishTimeHex": "7777777777573b40",
+     "hash": "1cd4dd3ff5886f6c",
+     "ticks": 3281
+    },
+    "ios": {
+     "finishTime": 27.341666666666665,
+     "finishTimeHex": "7777777777573b40",
+     "hash": "1cd4dd3ff5886f6c",
+     "ticks": 3281
+    }
+   },
+   "identical": true
+  },
+  {
+   "recording": "gate/c1-low-tide.bot-3.json (paced)",
+   "trackId": "c1-low-tide",
+   "bike": "rookie",
+   "byPlatform": {
+    "web": {
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "2bfe061963ffb058",
+     "ticks": 3642
+    },
+    "ios": {
+     "finishTime": 30.349999999999998,
+     "finishTimeHex": "9999999999593e40",
+     "hash": "2bfe061963ffb058",
+     "ticks": 3642
+    }
+   },
+   "identical": true
+  }
+ ]
+}
