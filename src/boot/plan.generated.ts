@@ -125,6 +125,11 @@ export const PUBLIC_BYTES = {
   "models/course-kits/alpine-trees/pine_bark-nor_gl.phone.webp": 21264,
   "models/course-kits/alpine-trees/trees-lod.glb": 169428,
   "models/course-kits/alpine-trees/trees.glb": 564700,
+  "models/course-kits/coast-harbor/coast-albedo.phone.webp": 192204,
+  "models/course-kits/coast-harbor/coast-arm.phone.webp": 9758,
+  "models/course-kits/coast-harbor/coast-harbor-lod.glb": 328996,
+  "models/course-kits/coast-harbor/coast-harbor.glb": 833348,
+  "models/course-kits/coast-harbor/coast-normal.phone.webp": 20342,
   "models/rider-race-bluewhite-lod.glb": 946824,
   "models/rider-race-bluewhite-lod.source.json": 9556,
   "models/rider-race-bluewhite.glb": 2448152,
@@ -150,4 +155,4 @@ export const PUBLIC_BYTES = {
 // The offline pack as each device tier downloads it (`packMembership`, src/boot/asset-totals.ts):
 // tier-free assets in both, og.jpg in neither, one of the 1x/2x pair each. Generated, so the module
 // path and `__BOOT_TOTALS__` are the same numbers rather than two sums that could drift (totals.ts).
-export const OFFLINE_PACK_BYTES = { '1x': 7077706, '2x': 8168917 };
+export const OFFLINE_PACK_BYTES = { '1x': 8462354, '2x': 9553565 };

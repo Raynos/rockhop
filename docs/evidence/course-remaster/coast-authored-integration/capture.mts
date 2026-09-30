@@ -33,6 +33,7 @@ try {
  for(const c of [
   {name:'full',file:'harness/inputs/c1-low-tide/bot-3.json',start:0,end:undefined,fps:12},
   {name:'deck-fault',file:'docs/evidence/c1-crash-feedback/held-go.json',start:2040,end:2460,fps:20},
+  {name:'causeway-fault',file:'docs/evidence/c1-crash-feedback/causeway-loop.json',start:2700,end:3028,fps:20},
  ]) {
   if(only && c.name !== only) continue;
   const dest=path.join(outDir,c.name);mkdirSync(dest,{recursive:true});

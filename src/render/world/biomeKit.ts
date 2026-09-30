@@ -49,9 +49,12 @@ import {
   windmillGeometry,
 } from './props';
 import type { WorldDetail } from './props';
-import { buildZoneKit, isZone } from './zones/zoneKit';
-import { mountCourseAssets, type CourseAssetOwner } from './courseAssets';
+import { buildZoneKit, isZone, zoneGround } from './zones/zoneKit';
+import { combineCourseAssets, mountCourseAssets, type CourseAssetOwner } from './courseAssets';
 import { loadC1Harbor } from './zones/c1Harbor';
+import { loadCoastHarbor, planC1Harbor, removeC1HarborPlaceholders } from './zones/coastHarbor';
+import { buildCoastHarborSite, groundCoastHarborPlacements } from './zones/coastHarborSite';
+import { buildCoastWater } from './zones/coastWater';
 import { a1ForestApplicable, loadA1Forest, removeA1ForestPlaceholders } from './zones/a1Forest';
 
 /** Art-pack far plate / sky panorama per exterior biome (the ROCKHOP zones' are `plate-<zone>` / `sky-<zone>`). */
@@ -749,6 +752,7 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
   const lamps: BiomeKit['lamps'] = [];
   let textureBytes = 0;
   let courseAssets: CourseAssetOwner | undefined;
+  let originalCoastPlate: THREE.Mesh | undefined;
   const profile = track.def.profile;
   const x0 = track.bounds.minX - 40;
   const x1 = track.bounds.maxX + 60;
@@ -876,6 +880,7 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
       const plate = addPlane(pw, ph, plateMat, midX, plateBase + ph / 2, pz);
       plate.receiveShadow = false;
       plate.renderOrder = -2;
+      if (authoredCourse && track.def.id === 'c1-low-tide') originalCoastPlate = plate;
       // One near silhouette tier keeps the mid-ground depth step (fogged like the props).
       // Round 9: not for snow — the flat pine strip read as paper cut-outs in front of the
       // plate; the snow kit puts a row of real conifers at z −30…−44 instead.
@@ -969,10 +974,49 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
           asset.root.position.set(146, seaY - 1.25 * scale, -34);
           asset.root.rotation.y = -0.07;
           asset.root.scale.setScalar(scale);
-          if (fallback) fallback.visible = false;
           return asset;
         }));
-        group.add(courseAssets.root);
+        const tug = courseAssets;
+        void tug.ready.then(() => { if (tug.root.children.length && fallback) fallback.visible = false; });
+        const originals = zk.batches.map(batch => ({batch,items:[...batch.items]}));
+        removeC1HarborPlaceholders(zk.batches);
+        const removed = originals.map(({batch,items}) => {
+          const kept = new Set(batch.items);
+          const old = new PropBatch(`c1-original-${batch.name}`,batch.geometry,batch.material,batch.shadows);
+          old.items.push(...items.filter(item => !kept.has(item))); return old;
+        }).filter(batch => batch.items.length);
+        const harborFallback = new THREE.Group(); harborFallback.name = 'c1-original-harbor-fallback';
+        harborFallback.add(...buildBatches(removed).objects); group.add(harborFallback);
+        const seaY = Math.min(...profile.map(p => p.y)) - 0.42 - 2.4;
+        const groundAt = (x: number,z: number) => zoneGround('coast',profile,x,z);
+        const placements = groundCoastHarborPlacements(planC1Harbor(groundAt,seaY),groundAt);
+        const originalSea = zk.meshes.find(mesh => mesh.name === 'zone:sea');
+        const harbor = mountCourseAssets(loadCoastHarbor(placements,{
+          detail: 'full', completeMaterial: material => { lib.complete(material); },
+        }).then(asset => {
+          let site: ReturnType<typeof buildCoastHarborSite> | undefined;
+          let water: ReturnType<typeof buildCoastWater> | undefined;
+          try {
+            site = buildCoastHarborSite(placements,{groundAt,seaY,concrete:lib.get('concrete')});
+            const padMaterials = new Set<THREE.Material>();
+            site.root.traverse(object => {
+              if (!(object instanceof THREE.Mesh)) return;
+              const material = object.material as THREE.MeshStandardMaterial;
+              if (!padMaterials.has(material)) { material.color.multiplyScalar(0.66); padMaterials.add(material); }
+            });
+            water = buildCoastWater({x0:x0-260,x1:x1+260,seaY,groundAt,completeMaterial:material=>{lib.complete(material);}});
+            const ownedSite = site, ownedWater = water; asset.root.add(site.root,water.root);
+            return { root:asset.root,textureBytes:asset.textureBytes,dispose() { ownedWater.dispose(); ownedSite.dispose(); asset.dispose(); } };
+          } catch (error) { water?.dispose(); site?.dispose(); asset.dispose(); throw error; }
+        }));
+        void harbor.ready.then(() => {
+          if (harbor.root.children.length) {
+            harborFallback.visible = false;
+            if (originalCoastPlate) originalCoastPlate.visible = false;
+            if (originalSea) originalSea.visible = false;
+          }
+        });
+        courseAssets = combineCourseAssets(tug,harbor); group.add(courseAssets.root);
       }
       if (authoredCourse && a1ForestApplicable(track)) {
         // Preserve the actual seeded matrices/colours for an independent fallback.

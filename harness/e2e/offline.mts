@@ -516,12 +516,12 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
           const loaded = await t.loadTrack(id, 1);
           t.render(true);
           const info = t.info().render;
-          entries.push({ id, loaded, enabled: info['courseAssetsEnabled'], mounted: info['courseAssetsMounted'], textureMB: info['courseAssetsTextureMB'] });
+          entries.push({ id, expectedOwners:id==='c1-low-tide'?2:1, loaded, enabled: info['courseAssetsEnabled'], mounted: info['courseAssetsMounted'], textureMB: info['courseAssetsTextureMB'] });
         }
         return entries;
       }).catch(() => null);
-      const authoredOk = !!authored && authored.length === 2 && authored.every(entry => entry.loaded && entry.enabled === true && entry.mounted === 1 && Number(entry.textureMB) > 0);
-      check('offline.authoredCourseAssets', authoredOk, authored ? `${authored.filter(entry => entry.mounted === 1).length}/2 mounted` : 'no renderer entries', 'C1 tug and full A1 forest must decode, attach and draw after the origin is shut down');
+      const authoredOk = !!authored && authored.length === 2 && authored.every(entry => entry.loaded && entry.enabled === true && entry.mounted === entry.expectedOwners && Number(entry.textureMB) > 0);
+      check('offline.authoredCourseAssets', authoredOk, authored ? `${authored.filter(entry => entry.mounted === entry.expectedOwners).length}/2 mounted` : 'no renderer entries', 'C1 tug plus authored harbor/water and full A1 forest must decode, attach and draw after the origin is shut down');
       measured['authoredCourseAssets'] = authored;
 
       measured['offline'] = { read: { ...read, errors: undefined }, nav, isolated, wire: { bytes: wire.bytes, requests: wire.requests }, frame, ride: offRide, worldMap: wm, inbox, garage: { proPurchase, combos, modelFailures } };

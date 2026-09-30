@@ -41,6 +41,16 @@ export const MODEL_ASSETS = {
     "bytes": 564700,
     "sha256": "fab79d15f9a3e120ae33820385276c8f688f2b37af98439a8a3e671143d3ac1a"
   },
+  "models/course-kits/coast-harbor/coast-harbor-lod.glb": {
+    "url": "models/course-kits/coast-harbor/fe966e4bea1c6a92/coast-harbor-lod-12f10c88716765b2.glb",
+    "bytes": 328996,
+    "sha256": "12f10c88716765b2e31518fff246e0f66ad59b68aa64974907da3a9a81bf3fc7"
+  },
+  "models/course-kits/coast-harbor/coast-harbor.glb": {
+    "url": "models/course-kits/coast-harbor/fe966e4bea1c6a92/coast-harbor-3c9fcaf62d1355c6.glb",
+    "bytes": 833348,
+    "sha256": "3c9fcaf62d1355c68af48662f9198822cde53db41f5d39e210db7c2abf8db62b"
+  },
   "models/rider-race-bluewhite-lod.glb": {
     "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
     "bytes": 946824,
@@ -162,5 +172,20 @@ export const MODEL_RESOURCES = {
     "url": "models/course-kits/alpine-trees/83926e86793d57c4/pine_bark-nor_gl.phone-83926e86793d57c4.webp",
     "bytes": 21264,
     "sha256": "83926e86793d57c41bf76a30d4ffa702fa371b1159eab3bcb90f505451deaec6"
+  },
+  "models/course-kits/coast-harbor/coast-albedo.phone.webp": {
+    "url": "models/course-kits/coast-harbor/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
+    "bytes": 192204,
+    "sha256": "6bbbef3e1273787587cffd4e0f2b4e8fdf1f173e4a22b2d9296e0fe0d544dec8"
+  },
+  "models/course-kits/coast-harbor/coast-arm.phone.webp": {
+    "url": "models/course-kits/coast-harbor/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
+    "bytes": 9758,
+    "sha256": "7ef8ea04566fef194cf5104041461ca890b19c2394f8d27b36feb0bd1fda78be"
+  },
+  "models/course-kits/coast-harbor/coast-normal.phone.webp": {
+    "url": "models/course-kits/coast-harbor/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
+    "bytes": 20342,
+    "sha256": "4f83c0f35100efbf803beee630c7f39fab33864e1b7d73a682c547f619817bbb"
   }
 } as const;

@@ -51,6 +51,8 @@ export function planC1Harbor(groundAt: (x: number, z: number) => number, seaY: n
   };
   for (const [x, z, scale, yaw] of [[40,-65,.90,.04],[137,-77,1,-.055],[313,-68,.94,.05],[433,-92,1.04,-.08]] as const)
     add('cargo-freighter', x, z, scale, yaw);
+  // A low far-water vessel fills the protected window without a near mass.
+  add('cargo-freighter',236,-118,.74,.035);
   for (const [x,z,scale,yaw] of [[64,-30,.72,.06],[330,-34,.68,-.04],[473,-55,.82,.03]] as const)
     add('cargo-barge',x,z,scale,yaw);
   for (const [x,z,scale] of [[28,-47,.82],[126,-51,.88],[306,-47,.82],[411,-53,.9]] as const) {
@@ -197,7 +199,8 @@ export function removeC1HarborPlaceholders(batches: readonly PropBatch[]): void 
   for (const batch of batches) if (replaced.has(batch.name)) {
     const kept = batch.items.filter(item => {
       const x = item.m.elements[12]!;
-      return x >= 180 && x <= 260;
+      // Keep the near brake/landing props; retire generic far-water hulls.
+      return x >= 180 && x <= 260 && item.m.elements[14]! > -15;
     });
     batch.items.splice(0,batch.items.length,...kept);
   }
