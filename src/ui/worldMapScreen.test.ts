@@ -114,7 +114,7 @@ describe('shipped 3D island level select', () => {
     expect(screen.visible).toBe(false);
   });
 
-  it('turns the course 9 quick action into a Garage path until Pro is bought and equipped', async () => {
+  it('sends an underfunded rider to an improvable Rookie course, then buys or equips Pro when ready', async () => {
     const eight = Object.fromEntries(ALL.slice(0, 8).map((track) => [track.id, 'bronze'])) as Record<string, Medal>;
     const earn = fixture({ medals: eight, wallet: 800 });
     expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('d3-rope-walk');
@@ -122,16 +122,24 @@ describe('shipped 3D island level select', () => {
     expect(document.querySelector<HTMLButtonElement>('.wm-ride')?.disabled).toBe(false);
     expect(document.querySelector('.wm-quick')?.textContent).toContain('Earn Scrap');
     expect(document.querySelector('.wm-quick')?.textContent).toContain('1040 more Scrap');
+    expect(document.querySelector<HTMLButtonElement>('.wm-quick')?.getAttribute('aria-label')).toContain('C1 Low Tide');
+    vi.useFakeTimers();
     document.querySelector<HTMLButtonElement>('.wm-quick')!.click();
-    expect(earn.cb.openProGarage).toHaveBeenCalledOnce();
+    vi.advanceTimersByTime(200);
+    expect(earn.cb.play).toHaveBeenCalledWith('c1-low-tide');
+    expect(earn.cb.openProGarage).not.toHaveBeenCalled();
     expect(earn.cb.goto).not.toHaveBeenCalled();
-    expect(earn.cb.play).not.toHaveBeenCalled();
+    vi.advanceTimersByTime(300);
     earn.screen.hide();
     earn.screen.root.remove();
+    vi.useRealTimers();
 
     const improved = Object.fromEntries(ALL.slice(0, 8).map((track, index) => [track.id, index === 7 ? 'platinum' : 'gold'])) as Record<string, Medal>;
     const buy = fixture({ medals: improved, wallet: 1840 });
     expect(document.querySelector('.wm-quick')?.textContent).toContain('Buy Pro');
+    document.querySelector<HTMLButtonElement>('.wm-quick')!.click();
+    expect(buy.cb.openProGarage).toHaveBeenCalledOnce();
+    expect(buy.cb.play).not.toHaveBeenCalled();
     buy.screen.hide();
     buy.screen.root.remove();
 
@@ -152,6 +160,20 @@ describe('shipped 3D island level select', () => {
     expect(ride.cb.play).toHaveBeenCalledWith('d3-rope-walk');
     vi.advanceTimersByTime(300);
     ride.screen.hide();
+  });
+
+  it('targets the lowest earned medal when asking for more Scrap', () => {
+    const medals = Object.fromEntries(ALL.slice(0, 8).map((track, index) => [track.id, index === 2 ? 'silver' : 'gold'])) as Record<string, Medal>;
+    const { screen, cb } = fixture({ medals, wallet: 1500 });
+    expect(document.querySelector('.wm3d-detail')?.getAttribute('data-track')).toBe('d3-rope-walk');
+    expect(document.querySelector<HTMLButtonElement>('.wm-quick')?.getAttribute('aria-label')).toContain('C3 Hull Breach');
+    vi.useFakeTimers();
+    document.querySelector<HTMLButtonElement>('.wm-quick')!.click();
+    vi.advanceTimersByTime(200);
+    expect(cb.play).toHaveBeenCalledWith('c3-hull-breach');
+    expect(cb.openProGarage).not.toHaveBeenCalled();
+    vi.advanceTimersByTime(300);
+    screen.hide();
   });
 
   it('focuses a rejected direct launch on its locked tower and explains the missing medals', () => {

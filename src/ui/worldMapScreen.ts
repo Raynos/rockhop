@@ -10,7 +10,7 @@ import { MEDAL_NAME, medalSvg, wordmarkSvg } from './brand';
 import { medalTotals, nextTrack, shipTracks, stageLabel, type MedalOf } from './progress';
 import type { UiSfx } from './sfx';
 import { buildCampaignMarkers, type Marker, type RegionId } from './campaignMap';
-import { PRO_PRICE, type EconomySnapshot } from './economy';
+import { PRO_PRICE, SCRAP_REWARD, type EconomySnapshot } from './economy';
 import { injectWorldMapStyles } from './worldMapStyles';
 import type { MountedWorldMap3DShell } from './worldMap3dScene';
 
@@ -155,10 +155,23 @@ export class WorldMapScreen extends Screen {
     this.campaignComplete = totals.cleared === totals.total;
     this.action = -1;
     this.renderLevels();
+    const blockedByPrice = this.markers[this.quickIndex]?.garage && !economy?.proOwned && (economy?.wallet ?? 0) < PRO_PRICE;
+    let earnIndex = -1;
+    let lowestReward = Infinity;
+    if (blockedByPrice) {
+      for (let index = 0; index < Math.min(8, this.markers.length); index++) {
+        const marker = this.markers[index]!;
+        if (marker.locked || marker.medal === 'platinum') continue;
+        const reward = marker.medal ? SCRAP_REWARD[marker.medal] : 0;
+        if (reward < lowestReward) { earnIndex = index; lowestReward = reward; }
+      }
+      if (earnIndex >= 0) this.quickIndex = earnIndex;
+    }
     const nextMarker = this.markers[this.quickIndex]!;
-    const quickLabel = nextMarker.garage ? economy?.proOwned ? 'Equip Pro' : (economy?.wallet ?? 0) >= PRO_PRICE ? 'Buy Pro' : 'Earn Scrap' : nextMarker.locked ? 'Locked' : this.campaignComplete ? 'Play again' : 'Play next';
-    const quickDetail = nextMarker.garage && !economy?.proOwned && (economy?.wallet ?? 0) < PRO_PRICE
-      ? `${PRO_PRICE - (economy?.wallet ?? 0)} more Scrap · improve medals`
+    const earning = blockedByPrice && earnIndex >= 0;
+    const quickLabel = earning ? 'Earn Scrap' : nextMarker.garage ? economy?.proOwned ? 'Equip Pro' : (economy?.wallet ?? 0) >= PRO_PRICE ? 'Buy Pro' : 'View Garage' : nextMarker.locked ? 'Locked' : this.campaignComplete ? 'Play again' : 'Play next';
+    const quickDetail = earning ? `${PRO_PRICE - (economy?.wallet ?? 0)} more Scrap · improve ${nextMarker.code} medal`
+      : blockedByPrice ? `${PRO_PRICE - (economy?.wallet ?? 0)} more Scrap · check wallet`
       : nextMarker.garage ? nextMarker.rule ?? '' : `${nextMarker.code} · ${nextMarker.track.name}`;
     this.quick.innerHTML = `<span class="play" aria-hidden="true">${nextMarker.garage ? '◆' : '▶'}</span><span>${quickLabel}<small>${escapeHtml(quickDetail)}</small></span>`;
     this.quick.disabled = nextMarker.locked && !nextMarker.garage;

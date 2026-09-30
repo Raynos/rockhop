@@ -519,3 +519,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **D3 Pro landing instruction retained:** [Matched moving clean/fault/retry proof](../../prototypes/d3-pro-landing-lesson-v1/README.md) retains the short ore-cart instruction before the first demonstrated passive-GO fault. Physics, camera and exact full Pro outcome remain unchanged; one copy correction fixes phone-width overflow. Parent accepts this bounded cue; human learning and complete-course approval remain open.
 
 **Learner launch bikes aligned:** Stranger and reflex defaults now select Rookie for current courses1–8 and Pro9–12, matching G10. Explicit diagnostic choices and legacy defaults stay supported. Three focused tests, harness typecheck and scoped lint pass; no learner sessions or broad sweeps are fabricated.
+
+**Map Scrap action made actionable:** The underfunded Pro quick action launches the unlocked first-eight course with the lowest earned medal rather than opening an unaffordable purchase. Funded Buy Pro, owned Equip Pro and equipped Pro play retain their paths. Ten focused map tests and scoped checks pass; human earning pace remains open.
