@@ -5,6 +5,7 @@ with `git mv` so history follows them. Nothing in this folder is a source of tru
 is needed again it moves back out.
 
 Rules
+- User-directed consolidation/retirement may archive a superseded plan with a **Retired** header, successor pointer and provenance revision; this does not claim its product gates passed.
 - A plan moves here when its tracker row in `docs/plans/README.md` reads done and the pin/tag that
   closed it is named at the top of the file (add a one-line "Closed: <date> · <commit/tag>" header).
 - A design or research doc moves here when the thing it describes is gone from the code (not when
@@ -13,8 +14,10 @@ Rules
 - Never archive by copying; never archive scratch (`harness/out`, scratchpads are not in the repo).
 
 Contents
+- `unknown-model-2026-09-27-IOS_APP_STORE_FINISH.md` and `unknown-model-2026-09-22-STORE_RELEASE.md` — superseded 2026-09-29 by `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`; open release work was merged, not marked complete.
+- `unknown-model-2026-09-16-RIDING_POSES.md` and `unknown-model-2026-09-15-PERF-BACKLOG.md` — retired at the user’s request 2026-09-29; unresolved motion/art and current-device performance requirements continue in the unified plan.
 - `VERCEL_BUILD_CPU.md` — Rockhop's prebuilt, hourly/manual release workflow, closed 2026-09-29 at `023c172d`; live deploy and no-change skip verified.
-- `PERF.md` — the perf plan, closed 2026-09-15 at cut #4b (`831e9c4`); the live remainder is `docs/plans/PERF-BACKLOG.md`.
+- `PERF.md` — the perf plan, closed 2026-09-15 at cut #4b (`831e9c4`); the live remainder is `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`.
 - `physics-v2.md` — the physics v2 design, closed 2026-09-15 at tag `physics-v2-final` (R6); status lives on in `docs/design/physics.md`.
 - `MEGA_PLAN.md` — the v0.1.0 → v0.2.0 mega build, closed 2026-09-15 at tag `v0.2.0` (`b52dfd0`); the numbers are in `RELEASES.md`.
 - `CLOSEOUT.md` — the 3-hour close-out contract of 2026-09-15; ran to its outcome.
@@ -27,4 +30,4 @@ Contents
 - `HERO_GARAGE_PRODUCTION.md` — Astra's Blender art plan, closed 2026-09-17 with ask 43: delivery integrated, prototype retired; the recipe lives in `assets/blender/hero-art/`, the handoff in `docs/evidence/hero-art/delivery/`.
 - `PWA_OFFLINE.md` — offline PWA plan, closed 2026-09-21 at tag `pwa-offline-complete`: origin-down headless gate proved an offline B1 finish, and the user confirmed the PWA works offline on the actual phone.
 - `WORLD_MAP.md` — painted continent level select, closed 2026-09-21 on the user's acceptance (ask 71), pinned to the last framing fix `411697e`; actual iPhone gesture performance remains unmeasured by the user's closure choice.
-- `HERO_ART_INTEGRATION.md` — catalog rider, bike and garage, closed 2026-09-21 on the user's acceptance (ask 71), pinned to `v0.3.0`; the measured phone-high gap moved to `docs/plans/PERF-BACKLOG.md`, and actual iPhone garage fps remains unmeasured.
+- `HERO_ART_INTEGRATION.md` — catalog rider, bike and garage, closed 2026-09-21 on the user's acceptance (ask 71), pinned to `v0.3.0`; the measured phone-high gap moved to `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`, and actual iPhone garage fps remains unmeasured.

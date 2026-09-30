@@ -89,7 +89,7 @@ This is a local personal-project delivery. Preserve source notices and provenanc
 
 - Original editable body and bike sources: `assets/blender/source/` at repository root; retain repository/source notices.
 - MPFB/MakeHuman generated head and core asset data, including the selected skin pack: **CC0-1.0**, as recorded in [authored-human provenance](provenance/authored-human/provenance.json) and its asset license files. Tool/code licensing is separate from generated asset licensing.
-- Grinsegold beard and moustache: the official asset pack says **CC-BY**, while embedded MHCLO headers contain **AGPL** notices. [Authored-beard source records](provenance/authored-beard/) retain that unresolved conflict. Do not infer public-distribution clearance from local use.
+- Grinsegold beard and moustache: the official asset pack says **CC-BY**, while embedded MHCLO headers contain **AGPL** notices. [Authored-beard source records](provenance/authored-beard) retain that unresolved conflict. Do not infer public-distribution clearance from local use.
 - Curly hair derives from **Daniel Bystedt's Hair Styles Blender demo**, **CC BY-SA**, with the version unspecified in the saved upstream evidence. [Replacement-hair provenance](provenance/replacement-hair/provenance.json) records the source. Preserve attribution and applicable share-alike obligations.
 
 Neither Hunyuan nor TRELLIS output is part of this delivery. Their stopped experiments are independent of the authored asset pipeline. No public release or blanket redistribution clearance is claimed.

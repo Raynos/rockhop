@@ -1,6 +1,6 @@
 # iOS App Store finish audit — 2026-09-27
 
-Source under review: committed `fa45298f8c123e75340973e43a904a7ed3f36c09` plus this round's menu changes. Live `https://trials-gauntlet-demo.vercel.app/version.json` named the committed SHA at review time. The audit plan is [IOS_APP_STORE_FINISH.md](../../plans/IOS_APP_STORE_FINISH.md).
+Source under review: committed `fa45298f8c123e75340973e43a904a7ed3f36c09` plus this round's menu changes. Live `https://trials-gauntlet-demo.vercel.app/version.json` named the committed SHA at review time. The audit plan is [IOS_APP_STORE_FINISH.md](../../../project/archive/unknown-model-2026-09-27-IOS_APP_STORE_FINISH.md).
 
 ## Played and inspected
 

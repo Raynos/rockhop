@@ -9,7 +9,7 @@ Answers for every compliance form in App Store Connect and the Play Console, fol
 
 The listing text lives in `metadata/` in fastlane layout, checked by `node scripts/store-metadata.mjs`. **Before each submission**, check every answer here against the build being submitted. It is the build that makes these answers true.
 
-**Submission hold (2026-09-27 audit):** the legal URLs below returned 404, and the content-rights answer below was inaccurate. Follow [the iOS finish plan](../docs/plans/IOS_APP_STORE_FINISH.md) and update this document plus App Store Connect from a verified release build before submission.
+**Submission hold (2026-09-27 audit):** the legal URLs below returned 404, and the content-rights answer below was inaccurate. Follow [the unified release plan](../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) and update this document plus App Store Connect from a verified release build before submission.
 
 ## Both stores
 

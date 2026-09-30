@@ -1,9 +1,11 @@
+**Retired: 2026-09-29 · retired at the user’s request; unresolved release requirements carried forward.** [Current plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). Consolidation baseline: `2199dff3`; this is not a game-completion claim. Model author unknown; filename date is first Git introduction.
+
 # Riding poses and elbows
 
 Split out of `project/archive/HERO_OPEN_WORK.md` §1–2 on 2026-09-16. Owner: the physics owner (`src/physics/v2/rider.ts`,
 `tuning.ts`) with the hero render owner for the drawn chain (`src/render/hero/riderRig.ts`, `gltfRider*.ts`). Gameplay
-priority. Sibling plans: [HERO_ART_INTEGRATION.md](../../project/archive/HERO_ART_INTEGRATION.md) (the new assets),
-`project/archive/CHROMIUM_METAL_SHADER_INIT.md` (startup bug, closed as non-repro). The tracker is [README.md](README.md).
+priority. Sibling plans: [HERO_ART_INTEGRATION.md](HERO_ART_INTEGRATION.md) (the new assets),
+`project/archive/CHROMIUM_METAL_SHADER_INIT.md` (startup bug, closed as non-repro). The tracker is [README.md](../../docs/plans/README.md).
 
 ## Current-build audit — 2026-09-21 (ask 73)
 
@@ -44,12 +46,12 @@ its next steps, while preserving all six required behaviors.
 ## Active implementation — ask 73
 
 Decisions resolved: **forward lean first**, style grounded in **Evolution / Fusion / Rising**, physics changes
-authorized. [Research](../research/riding-poses-trials.md) includes primary developer/manual/tutorial sources and
+authorized. [Research](../../docs/research/riding-poses-trials.md) includes primary developer/manual/tutorial sources and
 timestamped sequences from the local recorded-play corpus. Their common cue is substantial whole-body movement:
 pelvis off the saddle and chest over the bars, rearward compression, then extension. Numerical targets below are
 our geometry requirements, not purported measurements of the reference games.
 
-[Current-geometry evidence](../evidence/riding-poses/current-geometry/README.md) measures all ten shipped rider
+[Current-geometry evidence](../../docs/evidence/riding-poses/current-geometry/README.md) measures all ten shipped rider
 assets on both classes: visible forward rise is only 12.5 cm; neutral head/sensor mismatch is 21.3 cm; half-back
 input leaves the visible rider seated while the physical COM shifts 15 cm. Existing physics baseline is 106/106.
 
@@ -73,7 +75,7 @@ input leaves the visible rider seated while the physical COM shifts 15 cm. Exist
    is relabeled as verification of the new physics. Actual iPhone claims require an actual device reading.
 
 Round 1 (`4fa79c3e`) separately addresses ask 74's pixelation with HDR/SMAA and repairs Snow Line's missing
-obstacle batch; [evidence](../evidence/render-aa/round1/README.md). It does not close any pose requirement.
+obstacle batch; [evidence](../../docs/evidence/render-aa/round1/README.md). It does not close any pose requirement.
 
 ## Current qualification findings — round 2, not completion
 
@@ -95,7 +97,7 @@ without the previously rejected outer-arm craters.
   Real hands/soles and snapshot restoration have independent actual-GLB coverage on both classes.
 - Continuous rear-to-forward transfer and landing compliance preserve the positive hop, mild-impact,
   air-control, equilibrium, conservation and handling requirements. Obsolete assertions that required
-  a bad response were reviewed explicitly in [handling-review.md](../evidence/riding-poses/handling-review.md);
+  a bad response were reviewed explicitly in [handling-review.md](../../docs/evidence/riding-poses/handling-review.md);
   the new positive bars were not lowered.
 - Fresh input-only production recordings produce 0.477 m Rookie / 0.501 m Pro rear-wheel hop height,
   actual crashes, and one-input-tick restart. Recorded Node snapshots match byte for byte.
@@ -129,7 +131,7 @@ remains frozen at `1255af7f`; no completion or deployment is claimed.
   target demand above the actual cap during the alleged recovered window. No test
   or runtime change has been accepted yet; preserve the 60-tick/0.15m requirements.
 
-Resume from [PAUSE.md](../evidence/riding-poses/qualification-round3/PAUSE.md).
+Resume from [PAUSE.md](../../docs/evidence/riding-poses/qualification-round3/PAUSE.md).
 The six checkboxes remain open until the final acceptance audit, and this plan
 remains live rather than archived.
 
@@ -181,12 +183,12 @@ and over-reach is explicit; the handling rows pass; changed physics carries fres
 replay and bot + stranger attempts-to-clear on b1–e3 (n ≥ 2). Static poses or geometry checks alone cannot close
 this. Physics changes go through the owner protocol (`project/archive/blender-branch-merge.md`).
 
-**Latest visual revision (asks 78–80):** two short Evolution-inspired Labs and a standing forward candidate are available for review. User rejected the previous forward pose; backward is retained. The new candidate passes the two Labs replays but causes hop/climb/recovery regressions (10 full-suite failures), so prior qualification does not apply. See [review checkpoint](../evidence/labs-evolution/README.md). Not release-ready.
+**Latest visual revision (asks 78–80):** two short Evolution-inspired Labs and a standing forward candidate are available for review. User rejected the previous forward pose; backward is retained. The new candidate passes the two Labs replays but causes hop/climb/recovery regressions (10 full-suite failures), so prior qualification does not apply. See [review checkpoint](../../docs/evidence/labs-evolution/README.md). Not release-ready.
 
 **Qualification update, ask 82 (2026-09-22):** the standing-forward candidate has since been retuned and recorded in a silent, aligned before/after clip (`harness/out/pose-motion-review/before-after-release-candidate-labelled-silent.mp4`). Fresh skill-3 recordings cleared all 26 covered tracks on Rookie/Pro where a golden exists: 50/50 exact Node/browser replays on snapshot `2ea9f379`. Two blind strangers per B1–E3 track cleared (12/12) on an earlier pose-equivalent snapshot. A full serial suite still failed nine checks on the first pass: the public B1 bench fixture was stale and is now updated; a one-quantum brake input exposes a discontinuous brace and three bounded-response failures; R7 and R8 found one coasting-push and 17 post-demand angular-band ticks; three CPU measurements exceeded their limits while the host was heavily loaded. A continuous brake experiment passed the bounded-response and stoppie tests but invalidated 9–13 existing golden clears, so it was rejected and the proven input/physics combination restored. Concurrent Rockhop edits/commits have since changed the shared source fingerprint, making the snapshot's goldens stale until they are re-proved on the release commit. A silent Metal gate was stopped when source changed during the run; green CI and production SHA check remain open. This plan is live; do not ship or claim completion from the 50 clears alone.
 
 **Current qualification, same day:** a capped, command-following brake brace passes the bounded-response tests; one-sided seat support closes the deep-under-saddle trap seen in M2 Pro; a snapshot-owned lean-edge recency gate removes the coasting hop; the standing rider reaches into genuine uphill wheel contacts. The 26 pre-Rockhop courses have 50/50 exact Node/silent-browser finishing replays on source `207404d3`, with 47 bot-authored controls and three explicitly stranger-derived qualifying controls (B2 Pro, B3 Rookie, E2 Rookie). A fresh M2 Pro bot cleared after the seat repair. **Twelve new independent blind sessions on this exact source cleared B1–E3, two per track:** medians 1 / 1.5 / 2.5 / 3 / 3.5 / 1 attempts in course order; five are in band and E3 is under-band (too easy, not a fail). Current silent 6 s neutral→forward→back clips for Rookie and Pro are in `harness/out/pose-motion-review/` and each has video only. The integrated full suite last ran at 1,352 passed, eight failed, two skipped: two now-corrected rebrand menu expectations, two R7/R8 checks reading **12 new Rockhop recordings that all fail to finish** on the current pose physics, three CPU timing checks on a loaded host (isolated R3 and world pass, R5 is 0.04–0.54 µs over), and one cloth-test timeout (passes in isolation). Typecheck, lint and build pass after integration fixes. The silent Metal gate reached 25/31: cold boot, clear, crash, one-tick restart, offline play and camera pass; three old physics pins now pass 6/6 after deliberate repinning, heap growth passes in the quiet recheck, but synchronized render readback remains highly variable under GPU contention (45.59–160.28 ms vs 16 ms). Final Rockhop controls, full integrated green suite/Metal gate, CI and production SHA remain release gates. The earlier 50/50 line is historical and should not be read as 50 fresh bot searches.
 
-**Further current-code audit:** production skinning was rerun after the seat repair on all 20 outfit/detail/class combinations. Transition inputs covered 1,700 garment samples with a minimum rear-fender clearance of 8.195 mm and no overlap beyond 5 mm. Actual H2 thrown inputs covered 2,490 pre-release garment samples; the deepest sampled overlap was 3.060 mm, inside the declared 5 mm inspection envelope. Both audits held their four pose/renderer source hashes stable. Headless WebKit at 874×330 CSS pixels and DPR 3 passed low/LOD and high/full hero paths through B1 tick 700 with zero IK residual or bone drift. A subsequent provenance-only GLB scrub changed file hashes but left all 14 model BIN chunks and every non-`extras` JSON field identical. [Evidence](../evidence/riding-poses/qualification-round4/README.md). These results support pose/cloth and phone-render compatibility, but do not replace played release judgment, final-source Rockhop clears, full ship gate, green deploy CI or production SHA verification.
+**Further current-code audit:** production skinning was rerun after the seat repair on all 20 outfit/detail/class combinations. Transition inputs covered 1,700 garment samples with a minimum rear-fender clearance of 8.195 mm and no overlap beyond 5 mm. Actual H2 thrown inputs covered 2,490 pre-release garment samples; the deepest sampled overlap was 3.060 mm, inside the declared 5 mm inspection envelope. Both audits held their four pose/renderer source hashes stable. Headless WebKit at 874×330 CSS pixels and DPR 3 passed low/LOD and high/full hero paths through B1 tick 700 with zero IK residual or bone drift. A subsequent provenance-only GLB scrub changed file hashes but left all 14 model BIN chunks and every non-`extras` JSON field identical. [Evidence](../../docs/evidence/riding-poses/qualification-round4/README.md). These results support pose/cloth and phone-render compatibility, but do not replace played release judgment, final-source Rockhop clears, full ship gate, green deploy CI or production SHA verification.
 
-**Final track-source integration:** Rockhop's `a7ed0716` commit re-recorded its goldens and passed deploy CI; production `/version.json` returned that SHA. The 50 pre-Rockhop pose goldens were then re-proved as exact finishing Node/browser replays and restamped to simulation `2249b7bb`. Source diff plus 12 fresh Node/browser replays prove the earlier blind B1–E3 inputs still clear with their original attempts and rounded run clocks: only Rockhop source changed, not the six courses or pose physics. The original session stamps are preserved. The first silent Metal gate on the shared in-progress UI worktree reached 29/31, with pose gameplay, replay, camera and synced rendering green; bundle size and retained heap failed, while the offline world-map subcheck saw only four of five plates. [Evidence](../evidence/riding-poses/qualification-round4/README.md). The pose plan remains open until the shared build's final gate is green, the six visual/cloth/contact behavior boxes are accepted on played evidence and the released SHA is verified after the pose evidence commit is pushed.
+**Final track-source integration:** Rockhop's `a7ed0716` commit re-recorded its goldens and passed deploy CI; production `/version.json` returned that SHA. The 50 pre-Rockhop pose goldens were then re-proved as exact finishing Node/browser replays and restamped to simulation `2249b7bb`. Source diff plus 12 fresh Node/browser replays prove the earlier blind B1–E3 inputs still clear with their original attempts and rounded run clocks: only Rockhop source changed, not the six courses or pose physics. The original session stamps are preserved. The first silent Metal gate on the shared in-progress UI worktree reached 29/31, with pose gameplay, replay, camera and synced rendering green; bundle size and retained heap failed, while the offline world-map subcheck saw only four of five plates. [Evidence](../../docs/evidence/riding-poses/qualification-round4/README.md). The pose plan remains open until the shared build's final gate is green, the six visual/cloth/contact behavior boxes are accepted on played evidence and the released SHA is verified after the pose evidence commit is pushed.

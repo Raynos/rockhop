@@ -1,3 +1,5 @@
+**Retired: 2026-09-29 · retired at the user’s request; unresolved release requirements carried forward.** [Current plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). Consolidation baseline: `2199dff3`; this is not a game-completion claim. Model author unknown; filename date is first Git introduction.
+
 # PERF backlog — the cuts `PERF.md` did not land
 
 Opened 2026-09-15 when `project/archive/PERF.md` closed as a ledger (cuts #0, #1, #3, #4a, #4b and the matrix half of #5 landed; phone-high tier live; 60-cap governor live; bench + WebKit gate in the harness, now ship-gate G11 rows). Everything below is ranked by **factor ÷ effort** the way `PERF.md` §3.2 ranked the originals; the numbers quote the closed ledger's last state (b1, phone geometry 874×330 @ 3, `pnpm harness:bench --tiers high,medium,low --tracks b1,h3 --geoms phone`). The cost model is `PERF.md` §2: `ms ≈ 4.4·effMpx + 0.02·calls + 0.004·ktris + 1.0`.

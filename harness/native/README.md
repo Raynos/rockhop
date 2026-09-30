@@ -1,6 +1,6 @@
 # Native gate — the ship gate and bar 3 inside the real shells
 
-`docs/plans/STORE_RELEASE.md` bars 3 and 5. The same in-app runner, `src/platform/gate.ts`, runs in three places:
+[Unified release plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gates 4–5. The same in-app runner, `src/platform/gate.ts`, runs in three places:
 
 - the iOS WKWebView (Simulator)
 - the Android WebView (emulator)

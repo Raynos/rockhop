@@ -7,7 +7,7 @@ waiting on. IDs never reused. Ported from the FF15 demo's `HUMAN_REVIEW.md`.
 - **HR-05 — First review-inbox note.** Waiting on: you — when the ✎ NOTE button ships, enter the password once and send one note;
   I pull it and the loop is proven.
 
-- **HR-16 — Open the two store accounts (ask 86, [STORE_RELEASE.md](../../docs/plans/STORE_RELEASE.md)).** Waiting on: you — enrol at
+- **HR-16 — Open the two store accounts (ask 86, [unified release plan](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md)).** Waiting on: you — enrol at
   developer.apple.com/programs (individual, $99/yr; your legal name shows as seller) and play.google.com/console (personal,
   $25; identity verification can take days). Start now: Google's 12-tester × 14-day closed test can't begin until the account exists.
 

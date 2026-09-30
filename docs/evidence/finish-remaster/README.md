@@ -2,7 +2,7 @@
 
 **User review (2026-09-28):** the finish screen looks fine for now. Preserve this layout direction while integrating the real finish camera, reward ledger and functional destinations. This accepts the prototype direction, not production completion.
 
-The standalone [prototype](../../../prototypes/finish-remaster/) tests a clearer finish hierarchy at the user's landscape phone size. It does not replace the game's HUD. It uses a frame from the [played C1 finish clip](../gameplay-audit/clips/finish/clip.mp4), plus local game fonts. The other result times are explicitly sample data.
+The standalone [prototype](../../../prototypes/finish-remaster) tests a clearer finish hierarchy at the user's landscape phone size. It does not replace the game's HUD. It uses a frame from the [played C1 finish clip](../gameplay-audit/clips/finish/clip.mp4), plus local game fonts. The other result times are explicitly sample data.
 
 ## Played evidence
 

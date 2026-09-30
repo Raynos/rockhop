@@ -128,7 +128,7 @@ An older fingerprint does not itself prove a particular track changed: the hash 
 
 The 0.24 ms restart is one headless call, not a p95 end-to-end visual latency measurement. The 121 ms dev hook readiness is not cold user startup: `?harness=1` bypasses normal boot and exposes readiness before full scene preparation. Neither establishes production load or real-device performance. The complete ship gate was not rerun after the production boot blocker; no current full memory/performance pass is claimed.
 
-Selected logs and machine-readable results are in [evidence](evidence/). Full scratch logs are retained locally under `harness/out/audit-20260915/`.
+Selected logs and machine-readable results are in [evidence](evidence). Full scratch logs are retained locally under `harness/out/audit-20260915/`.
 
 ## Recommended order of work
 

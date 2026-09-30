@@ -1,6 +1,6 @@
 # Twelve-course gameplay and visual remaster
 
-**Status:** active. This is the execution plan for [finish-to-publish Gate 1 and Gate 2](FINISH_TO_PUBLISH.md), and supplies the four-biome riding review for Gate 3. The [earlier campaign brief](COURSE_AND_PROGRESSION_REDESIGN.md) defines the intended skill problems; its dated implementation claims are historical. No course is certified as fully remastered yet.
+**Status:** active. This is the execution plan for [finish-to-publish Gate 1 and Gate 2](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), and supplies the four-biome riding review for Gate 3. The [earlier campaign brief](unknown-model-2026-09-27-COURSE_AND_PROGRESSION_REDESIGN.md) defines the intended skill problems; its dated implementation claims are historical. No course is certified as fully remastered yet.
 
 ## Starting point and target
 
@@ -48,7 +48,7 @@ A course counts as finished only when its gameplay, scenery, camera, sound, rewa
 | **2. Four biome exemplars** | Apply the same quality to C2, A1, D1 and S1. Prove that four biome kits can produce distinct rides and that the visual system stays within device memory and frame budgets. Fix C2's misleading cue and D1's high fault count here. | The user sees four moving phone-size rides and failure clips. Physical landscape iPhone review checks readability and pacing before the remaining asset rollout. |
 | **3. Complete each biome** | Finish C3, A2/A3, D2/D3 and S2/S3. Author each landmark and skill arc, then revise route cues and medal clocks. Review adjacent courses together so challenge and scenery escalate across the campaign. | Twelve distinct full rides, clean both-bike references, 0/72 held-GO gate and exact Node/two-browser replays after each accepted physics or geometry change. |
 | **4. Campaign tuning** | Run uncoached new-player sessions through C1–C3 and full-campaign attempts. Tune checkpoints, fault explanation, difficulty labels, medal thresholds, Pro advantage, Scrap pacing and replay hooks from measured behavior. | Finish-to-publish Gate 2: at least three new players try C1–C3 and two attempt the whole campaign. Publish attempts, common faults, time-to-retry, medal spread, bike choice and voluntary replays. |
-| **5. Release candidate** | Review all four biome rides beside menu, 3D map, Garage and result in one continuous build; close performance, touch, offline/save and native gates on the same SHA. | Gate 3 and Gate 4 evidence, followed by signed beta and store gates in [the release plan](FINISH_TO_PUBLISH.md). No course is marked complete from isolated screenshots. |
+| **5. Release candidate** | Review all four biome rides beside menu, 3D map, Garage and result in one continuous build; close performance, touch, offline/save and native gates on the same SHA. | Gate 3 and Gate 4 evidence, followed by signed beta and store gates in [the release plan](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md). No course is marked complete from isolated screenshots. |
 
 ## Evidence and change rules
 
