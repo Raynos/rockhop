@@ -10,7 +10,7 @@ import type { PropBatch } from '../props';
 import { fogify } from '../../lighting/environment';
 
 export const COAST_HARBOR_VARIANTS = ['cargo-freighter', 'cargo-barge', 'harbor-crane',
-  'loading-pier', 'open-warehouse', 'logistics-yard', 'dock-station'] as const;
+  'loading-pier', 'open-warehouse', 'brick-repair-shed', 'sawtooth-maintenance-hall', 'logistics-yard', 'dock-station'] as const;
 export type CoastHarborVariant = typeof COAST_HARBOR_VARIANTS[number];
 export interface CoastHarborPlacement {
   variant: CoastHarborVariant;
@@ -27,8 +27,9 @@ export interface CoastHarborOptions {
   resolveModel?: (logicalPath: string) => string;
   resolveResource?: (logicalPath: string) => string;
 }
-export const COAST_HARBOR_MAPS = ['coast-albedo.phone.webp', 'coast-normal.phone.webp', 'coast-arm.phone.webp'] as const;
-const PREFIX = 'models/course-kits/coast-harbor/';
+export const COAST_HARBOR_MAPS = ['coast-albedo.phone.webp', 'coast-normal.phone.webp', 'coast-arm.phone.webp',
+  'frontage-albedo.phone.webp', 'frontage-normal.phone.webp', 'frontage-arm.phone.webp'] as const;
+const PREFIX = 'models/course-kits/coast-frontage/';
 const MAPS = new Set<string>(COAST_HARBOR_MAPS);
 const TEXTURE_KEYS = ['map', 'normalMap', 'roughnessMap', 'metalnessMap', 'aoMap', 'emissiveMap'] as const;
 
@@ -59,8 +60,9 @@ export function planC1Harbor(groundAt: (x: number, z: number) => number, seaY: n
   for (const [x,z,scale] of [[28,-47,.82],[126,-51,.88],[306,-47,.82],[411,-53,.9]] as const) {
     add('loading-pier',x,z,scale); add('harbor-crane',x-4*scale,z+scale,scale);
   }
-  for (const [x,scale] of [[32,.64],[109,.68],[282,.62],[370,.68],[450,.60]] as const)
-    add('open-warehouse',x,-9.8,scale);
+  for (const [x,scale,variant] of [[32,.64,'brick-repair-shed'],[109,.68,'sawtooth-maintenance-hall'],
+    [282,.62,'open-warehouse'],[370,.68,'brick-repair-shed'],[450,.60,'sawtooth-maintenance-hall']] as const)
+    add(variant,x,-9.8,scale);
   for (const [x,z,scale,yaw] of [[8,-12,.7,.03],[61,-12,.67,-.04],[92,-12,.62,.04],
     [146,-12,.67,-.05],[276,-12,.6,.04],[316,-12,.63,-.03],[345,-12,.6,.035],
     [403,-12,.66,-.04],[477,-12,.6,.02]] as const) add('logistics-yard',x,z + 2.2,scale,yaw);
@@ -118,7 +120,7 @@ export async function loadCoastHarbor(placements: readonly CoastHarborPlacement[
     const manager = new THREE.LoadingManager().setURLModifier(url => coastHarborResourceUrl(url, assetRoot, options.resolveResource ?? modelResourceUrl));
     manager.onError = url => { failed.add(url); };
     if (retired) throw new Error('Coast harbor cancelled');
-    const logical = PREFIX + (options.detail === 'full' ? 'coast-harbor.glb' : 'coast-harbor-lod.glb');
+    const logical = PREFIX + (options.detail === 'full' ? 'coast-frontage.glb' : 'coast-frontage-lod.glb');
     const gltf = await new GLTFLoader(manager).setMeshoptDecoder(MeshoptDecoder)
       .loadAsync(new URL((options.resolveModel ?? modelAssetUrl)(logical), assetRoot).href);
     own(gltf); // late resolved resources are owned even if abort already cleared earlier resources
@@ -134,7 +136,8 @@ export async function loadCoastHarbor(placements: readonly CoastHarborPlacement[
         if (Array.isArray(object.material)) throw new Error('Coast primitives must have one material');
         const material = object.material as THREE.MeshStandardMaterial;
         if (!material.isMeshStandardMaterial) throw new Error('Coast model requires PBR materials');
-        if (material.name === 'coast manufactured PBR atlas' && (!material.map || !material.normalMap || !material.roughnessMap || !material.metalnessMap))
+        if ((material.name === 'coast manufactured PBR atlas' || material.name === 'frontage brick/steel PBR atlas')
+          && (!material.map || !material.normalMap || !material.roughnessMap || !material.metalnessMap))
           throw new Error('Coast required PBR map missing');
         // Packed normals are normalized bytes. Expand only transformed position/normal,
         // preserving UV and other untouched arrays; every prototype is transformed once.

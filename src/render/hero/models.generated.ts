@@ -41,15 +41,15 @@ export const MODEL_ASSETS = {
     "bytes": 564700,
     "sha256": "fab79d15f9a3e120ae33820385276c8f688f2b37af98439a8a3e671143d3ac1a"
   },
-  "models/course-kits/coast-harbor/coast-harbor-lod.glb": {
-    "url": "models/course-kits/coast-harbor/fe966e4bea1c6a92/coast-harbor-lod-12f10c88716765b2.glb",
-    "bytes": 328996,
-    "sha256": "12f10c88716765b2e31518fff246e0f66ad59b68aa64974907da3a9a81bf3fc7"
+  "models/course-kits/coast-frontage/coast-frontage-lod.glb": {
+    "url": "models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-lod-b614184510f599a3.glb",
+    "bytes": 392796,
+    "sha256": "b614184510f599a3311082152ad2d593b0163b74cceb768ad6307ffc0f888c67"
   },
-  "models/course-kits/coast-harbor/coast-harbor.glb": {
-    "url": "models/course-kits/coast-harbor/fe966e4bea1c6a92/coast-harbor-3c9fcaf62d1355c6.glb",
-    "bytes": 833348,
-    "sha256": "3c9fcaf62d1355c68af48662f9198822cde53db41f5d39e210db7c2abf8db62b"
+  "models/course-kits/coast-frontage/coast-frontage.glb": {
+    "url": "models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb",
+    "bytes": 950860,
+    "sha256": "95fe300274c04e6eebb7e30d20e492729616bdc8a5d6e3bc62d5ae1fc663cb51"
   },
   "models/rider-race-bluewhite-lod.glb": {
     "url": "models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
@@ -173,19 +173,34 @@ export const MODEL_RESOURCES = {
     "bytes": 21264,
     "sha256": "83926e86793d57c41bf76a30d4ffa702fa371b1159eab3bcb90f505451deaec6"
   },
-  "models/course-kits/coast-harbor/coast-albedo.phone.webp": {
-    "url": "models/course-kits/coast-harbor/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
+  "models/course-kits/coast-frontage/coast-albedo.phone.webp": {
+    "url": "models/course-kits/coast-frontage/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
     "bytes": 192204,
     "sha256": "6bbbef3e1273787587cffd4e0f2b4e8fdf1f173e4a22b2d9296e0fe0d544dec8"
   },
-  "models/course-kits/coast-harbor/coast-arm.phone.webp": {
-    "url": "models/course-kits/coast-harbor/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
+  "models/course-kits/coast-frontage/coast-arm.phone.webp": {
+    "url": "models/course-kits/coast-frontage/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
     "bytes": 9758,
     "sha256": "7ef8ea04566fef194cf5104041461ca890b19c2394f8d27b36feb0bd1fda78be"
   },
-  "models/course-kits/coast-harbor/coast-normal.phone.webp": {
-    "url": "models/course-kits/coast-harbor/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
+  "models/course-kits/coast-frontage/coast-normal.phone.webp": {
+    "url": "models/course-kits/coast-frontage/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
     "bytes": 20342,
     "sha256": "4f83c0f35100efbf803beee630c7f39fab33864e1b7d73a682c547f619817bbb"
+  },
+  "models/course-kits/coast-frontage/frontage-albedo.phone.webp": {
+    "url": "models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp",
+    "bytes": 16832,
+    "sha256": "df56343262497dfe45f8acd51e286bc05d974231e3f1df775b1f2929fb290349"
+  },
+  "models/course-kits/coast-frontage/frontage-arm.phone.webp": {
+    "url": "models/course-kits/coast-frontage/196e99318a3bd23b/frontage-arm.phone-196e99318a3bd23b.webp",
+    "bytes": 1726,
+    "sha256": "196e99318a3bd23bf1e51cbaf67282304245e564eba3a13308f82feb22b2d317"
+  },
+  "models/course-kits/coast-frontage/frontage-normal.phone.webp": {
+    "url": "models/course-kits/coast-frontage/6b18cc8114a4bf6a/frontage-normal.phone-6b18cc8114a4bf6a.webp",
+    "bytes": 1338,
+    "sha256": "6b18cc8114a4bf6a3eca3717331050fd775c865054ec0476d30f2c581ead1f63"
   }
 } as const;

@@ -11,6 +11,8 @@ type Point = readonly [number, number];
 type Footprint = readonly [number, number, number, number];
 export const COAST_DRY_FOOTPRINTS: Readonly<Partial<Record<CoastHarborPlacement['variant'], Footprint>>> = {
   'open-warehouse': [-14.15, 14.15, -6.6, 7.56],
+  'brick-repair-shed': [-14.15, 14.15, -6.6, 7.56],
+  'sawtooth-maintenance-hall': [-14.15, 14.15, -6.6, 7.56],
   'logistics-yard': [-7.08, 6.08, -4.10, 5.90],
 };
 const CHUNK = 64;

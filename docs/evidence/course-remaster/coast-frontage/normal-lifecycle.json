@@ -1,0 +1,658 @@
+{
+  "source": {
+    "url": "http://127.0.0.1:53318/",
+    "versionSha": "98d09fc4496c6573eca0995a9bef3e081873a649",
+    "versionTime": "2026-09-30T16:36:23.021Z",
+    "indexUrl": "http://127.0.0.1:53318/assets/index-qVelGwF7.js",
+    "indexSHA256": "d6b2287ef8b931e0f266593d4b03c4e6869aeb61f600424dda1625c183f31caa",
+    "htmlSHA256": "41f9e964ab3033327fcf935290201a8697611f2975fede45e10c32ad7efd072b"
+  },
+  "afterSource": {
+    "url": "http://127.0.0.1:53318/",
+    "versionSha": "98d09fc4496c6573eca0995a9bef3e081873a649",
+    "versionTime": "2026-09-30T16:36:23.021Z",
+    "indexUrl": "http://127.0.0.1:53318/assets/index-qVelGwF7.js",
+    "indexSHA256": "d6b2287ef8b931e0f266593d4b03c4e6869aeb61f600424dda1625c183f31caa",
+    "htmlSHA256": "41f9e964ab3033327fcf935290201a8697611f2975fede45e10c32ad7efd072b"
+  },
+  "backend": "metal",
+  "results": [
+    {
+      "mode": "missing-map",
+      "pass": true,
+      "requests": [
+        "http://127.0.0.1:53318/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp",
+        "http://127.0.0.1:53318/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp"
+      ],
+      "errors": [],
+      "warnings": [
+        "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently",
+        "Failed to load resource: net::ERR_FAILED",
+        "THREE.GLTFLoader: Couldn't load texture frontage-albedo.phone.webp",
+        "[render] course assets failed Error: Coast harbor required resources failed: http://127.0.0.1:53318/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp\n    at loadCoastHarbor (http://127.0.0.1:53318/assets/index-qVelGwF7.js:894:6310)",
+        "Failed to load resource: net::ERR_FAILED",
+        "THREE.GLTFLoader: Couldn't load texture frontage-albedo.phone.webp",
+        "[render] course assets failed Error: Coast harbor required resources failed: http://127.0.0.1:53318/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp\n    at loadCoastHarbor (http://127.0.0.1:53318/assets/index-qVelGwF7.js:894:6310)"
+      ],
+      "before": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "c1-low-tide",
+          "seed": 341352973,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 105.6,
+          "loadTrackMs": 120.8,
+          "lastRender": {
+            "prepMs": 0.3449997901916504,
+            "hudMs": 0.23000001907348633,
+            "audioMs": 0.2850003242492676,
+            "submitMs": 269.0349998474121,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "coast",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 89,
+            "tris": 86466,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 13,
+            "trackTris": 70328,
+            "textureGenMs": 241.89999914169312,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 0,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 287.4,
+            "entering": false,
+            "courseAssetsEnabled": true,
+            "courseAssetsMounted": 1,
+            "courseAssetsTextureMB": 0.665
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 89,
+          "triangles": 86466,
+          "points": 0,
+          "lines": 0,
+          "geometries": 197,
+          "textures": 71,
+          "programs": 29,
+          "texturesMB": 39.53008854675291,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 11,
+            "counts": [
+              {
+                "name": "props:c1-original-contactshadow"
+              },
+              {
+                "name": "props:c1-original-container"
+              },
+              {
+                "name": "props:c1-original-container-far"
+              },
+              {
+                "name": "props:merged:nocast:pallet"
+              },
+              {
+                "name": "props:merged:nocast:tyre"
+              },
+              {
+                "name": "props:c1-original-drum"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:mat"
+              },
+              {
+                "name": "props:c1-original-quay"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              }
+            ]
+          },
+          {
+            "visible": true,
+            "attached": true,
+            "children": 11,
+            "counts": [
+              {
+                "name": "props:c1-original-contactshadow"
+              },
+              {
+                "name": "props:c1-original-container"
+              },
+              {
+                "name": "props:c1-original-container-far"
+              },
+              {
+                "name": "props:merged:nocast:pallet"
+              },
+              {
+                "name": "props:merged:nocast:tyre"
+              },
+              {
+                "name": "props:c1-original-drum"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:mat"
+              },
+              {
+                "name": "props:c1-original-quay"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          },
+          {
+            "attached": false,
+            "children": 0
+          },
+          {
+            "attached": true,
+            "children": 1
+          },
+          {
+            "attached": true,
+            "children": 1
+          }
+        ],
+        "geometryDisposals": 643,
+        "textureDisposals": 138
+      },
+      "after": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "c1-low-tide",
+          "seed": 341352973,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 105.6,
+          "loadTrackMs": 120.8,
+          "lastRender": {
+            "prepMs": 0.019999980926513672,
+            "hudMs": 0.05000019073486328,
+            "audioMs": 0.06500005722045898,
+            "submitMs": 0.13499975204467773,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "coast",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 89,
+            "tris": 86466,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 13,
+            "trackTris": 70328,
+            "textureGenMs": 241.89999914169312,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 1,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 287.4,
+            "entering": false,
+            "courseAssetsEnabled": true,
+            "courseAssetsMounted": 1,
+            "courseAssetsTextureMB": 0.665
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 89,
+          "triangles": 86466,
+          "points": 0,
+          "lines": 0,
+          "geometries": 197,
+          "textures": 71,
+          "programs": 29,
+          "texturesMB": 39.53008854675291,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 11,
+            "counts": [
+              {
+                "name": "props:c1-original-contactshadow"
+              },
+              {
+                "name": "props:c1-original-container"
+              },
+              {
+                "name": "props:c1-original-container-far"
+              },
+              {
+                "name": "props:merged:nocast:pallet"
+              },
+              {
+                "name": "props:merged:nocast:tyre"
+              },
+              {
+                "name": "props:c1-original-drum"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:mat"
+              },
+              {
+                "name": "props:c1-original-quay"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              }
+            ]
+          },
+          {
+            "visible": true,
+            "attached": true,
+            "children": 11,
+            "counts": [
+              {
+                "name": "props:c1-original-contactshadow"
+              },
+              {
+                "name": "props:c1-original-container"
+              },
+              {
+                "name": "props:c1-original-container-far"
+              },
+              {
+                "name": "props:merged:nocast:pallet"
+              },
+              {
+                "name": "props:merged:nocast:tyre"
+              },
+              {
+                "name": "props:c1-original-drum"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:mat"
+              },
+              {
+                "name": "props:c1-original-quay"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          },
+          {
+            "attached": false,
+            "children": 0
+          },
+          {
+            "attached": true,
+            "children": 1
+          },
+          {
+            "attached": true,
+            "children": 1
+          }
+        ],
+        "geometryDisposals": 643,
+        "textureDisposals": 138
+      }
+    },
+    {
+      "mode": "late-switch",
+      "pass": true,
+      "requests": [
+        "http://127.0.0.1:53318/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb"
+      ],
+      "errors": [],
+      "warnings": [
+        "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently"
+      ],
+      "before": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "d1-dust-devil",
+          "seed": 1,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 129.7,
+          "loadTrackMs": 63.7,
+          "lastRender": {
+            "prepMs": 0.35500001907348633,
+            "hudMs": 0.23999977111816406,
+            "audioMs": 0.2800002098083496,
+            "submitMs": 259.1449999809265,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "quarry",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 76,
+            "tris": 82298,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 11,
+            "trackTris": 23946,
+            "textureGenMs": 240.0750002861023,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 0,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 319.2,
+            "entering": false,
+            "courseAssetsEnabled": false,
+            "courseAssetsMounted": 0,
+            "courseAssetsTextureMB": 0
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 76,
+          "triangles": 82298,
+          "points": 0,
+          "lines": 0,
+          "geometries": 130,
+          "textures": 67,
+          "programs": 28,
+          "texturesMB": 39.52750027465818,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 11,
+            "counts": [
+              {
+                "name": "props:c1-original-contactshadow"
+              },
+              {
+                "name": "props:c1-original-container"
+              },
+              {
+                "name": "props:c1-original-container-far"
+              },
+              {
+                "name": "props:merged:nocast:pallet"
+              },
+              {
+                "name": "props:merged:nocast:tyre"
+              },
+              {
+                "name": "props:c1-original-drum"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:mat"
+              },
+              {
+                "name": "props:c1-original-quay"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          }
+        ],
+        "geometryDisposals": 722,
+        "textureDisposals": 187
+      },
+      "after": {
+        "info": {
+          "version": "0.2.2-core",
+          "physicsHz": 120,
+          "trackId": "d1-dust-devil",
+          "seed": 1,
+          "bike": "rookie",
+          "harness": true,
+          "readyAtMs": 129.7,
+          "loadTrackMs": 63.7,
+          "lastRender": {
+            "prepMs": 0.019999980926513672,
+            "hudMs": 0.039999961853027344,
+            "audioMs": 0.059999942779541016,
+            "submitMs": 0.125,
+            "syncMs": 0
+          },
+          "render": {
+            "biome": "quarry",
+            "zoom": "idle",
+            "phase": "riding",
+            "tier": "low",
+            "dpr": 1,
+            "devicePixelRatio": 1,
+            "canvasW": 852,
+            "canvasH": 392,
+            "calls": 76,
+            "tris": 82298,
+            "rtMpx": 1.93,
+            "rtMB": 17.3,
+            "rtPasses": "shadow 512×512 | scene:hdr 852×392 | composite:graded 852×392 | smaa:edges 852×392 | smaa:weights 852×392 | smaa→canvas 852×392",
+            "shadowMap": 512,
+            "heroTris": 13630,
+            "heroDoc": "bike-lod rider-lod",
+            "riderOutfit": "street-mustard",
+            "riderMaterialVariant": null,
+            "heroShadow": "hero-only",
+            "trackCalls": 11,
+            "trackTris": 23946,
+            "textureGenMs": 240.0750002861023,
+            "passes": 5,
+            "stalePrograms": 2,
+            "skippedFrames": 1,
+            "deviceClass": "desktop",
+            "profile": "low",
+            "bloomers": 0,
+            "entryMs": 319.2,
+            "entering": false,
+            "courseAssetsEnabled": false,
+            "courseAssetsMounted": 0,
+            "courseAssetsTextureMB": 0
+          },
+          "qualityWhy": "",
+          "quality": "low",
+          "entryHold": false,
+          "modules": {
+            "physics": "createBikePhysics",
+            "render": "ThreeRenderer",
+            "audio": "WebAudioSystem",
+            "rider": "gltf",
+            "bike": "gltf"
+          }
+        },
+        "stats": {
+          "calls": 76,
+          "triangles": 82298,
+          "points": 0,
+          "lines": 0,
+          "geometries": 130,
+          "textures": 67,
+          "programs": 28,
+          "texturesMB": 39.52750027465818,
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        },
+        "fallbacks": [
+          {
+            "visible": true,
+            "attached": true,
+            "children": 11,
+            "counts": [
+              {
+                "name": "props:c1-original-contactshadow"
+              },
+              {
+                "name": "props:c1-original-container"
+              },
+              {
+                "name": "props:c1-original-container-far"
+              },
+              {
+                "name": "props:merged:nocast:pallet"
+              },
+              {
+                "name": "props:merged:nocast:tyre"
+              },
+              {
+                "name": "props:c1-original-drum"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              },
+              {
+                "name": "props:merged:nocast:zone-foliage"
+              },
+              {
+                "name": "props:merged:nocast:mat"
+              },
+              {
+                "name": "props:c1-original-quay"
+              },
+              {
+                "name": "props:merged:nocast:zone-painted"
+              }
+            ]
+          }
+        ],
+        "owners": [
+          {
+            "attached": true,
+            "children": 0
+          }
+        ],
+        "geometryDisposals": 748,
+        "textureDisposals": 193
+      }
+    }
+  ]
+}
