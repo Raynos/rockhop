@@ -1,11 +1,33 @@
 # Rider and motorbike remaster
 
-Status: **in progress — V6 Street wrist repair in normal main assets; remaining mockup-matching production open**.
+Status: **in progress — user rejects the current body; whole-rider Blender restart required by ask 214**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · ask 191.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gate 3 for presentation and Gate 4 for devices.
 Bar: [mission §3–4](../mission.md): a readable person on a mechanically credible motorbike, at phone frame rates.
 
 The first deliverable is a **complete candidate rider and bike in the real Garage**, seen rotating and moving. Do not repeat the earlier head/hair-only loop. Generate geometry and animation as separate candidates; Blender assembles, repairs and exports the accepted whole. No raw neural mesh automatically replaces the production hero.
+
+## Whole-rider restart — user override, ask 214
+
+The user rejects the current remastered body, face and limb proportions as a
+regression and requests a complete rebuild from scratch. Stop the V7 skin and
+head patch loop. Its frozen recipes and gates are unaccepted experiments,
+retained for evidence rather than promoted. Technical wrist continuity does
+not constitute acceptance of the whole body.
+
+First show a matched actual-game original-versus-current comparison. Then
+create a new complete Blender-authored rider: adult anatomy, proportionate
+limbs, deliberate hands/feet, face, hair, hoodie and jeans. Do not graft another
+head onto the rejected neural body. Reuse numeric rig/contact/animation
+contracts to keep gameplay compatible; author new model geometry and materials.
+Installed Hunyuan/TRELLIS may supply bounded component sculpt references, not
+an automatic whole-body replacement. UniMate follows a coherent accepted body.
+
+Review the entire rider rotating and riding beside the original and concept A
+before detail polish or family propagation. No claim of mockup resemblance or
+promotion is justified by a seam/rig test alone. Commit each stable shape,
+material or gate finding on main before the next experiment; mark unfinished
+art explicitly. M1–M5 and human/device acceptance remain open.
 
 ## Scope and visual target
 

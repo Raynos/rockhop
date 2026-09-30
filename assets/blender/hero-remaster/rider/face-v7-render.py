@@ -31,7 +31,7 @@ lo=Vector([min(v[i] for v in pts) for i in range(3)]);hi=Vector([max(v[i] for v 
 arm=next(o for o in bpy.data.objects if o.type=='ARMATURE');bone=arm.pose.bones['head'];centre=arm.matrix_world@(bone.head+(bone.tail-bone.head)*.72);size=.28
 world=bpy.data.worlds.new('Neutral studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.12,.145,.17,1);world.node_tree.nodes['Background'].inputs[1].default_value=.5;scene.world=world
 for name,off,power,ls in [('Key',(3,-4,4),600,3),('Fill',(-3,3,2),450,3),('Rim',(-2,-3,4),600,2)]:
- data=bpy.data.lights.new(name,'AREA');data.energy=power;data.size=ls*size
+ data=bpy.data.lights.new(name,'AREA');data.energy=power*size*size*.3;data.size=ls*size
  obj=bpy.data.objects.new(name,data);scene.collection.objects.link(obj);obj.location=centre+Vector(off)*size;obj.rotation_euler=(centre-obj.location).to_track_quat('-Z','Y').to_euler()
 camdata=bpy.data.cameras.new('Moving orbit');cam=bpy.data.objects.new('Moving orbit',camdata);scene.collection.objects.link(cam);scene.camera=cam;camdata.type='ORTHO';camdata.ortho_scale=size*1.4
 scene.render.engine='CYCLES';scene.cycles.samples=a.sample;scene.cycles.use_denoising=True;scene.render.resolution_x=512;scene.render.resolution_y=512;scene.render.resolution_percentage=100

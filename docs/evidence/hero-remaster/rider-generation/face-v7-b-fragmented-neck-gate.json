@@ -1,0 +1,2422 @@
+{
+  "method": "explicit source/graft neck contours; triangle edge incidence; production prepareHero and GltfRider; raw and normalized named weights; bind-aware LBS coefficients; seven runtime frame conditions",
+  "limits": {
+    "positionMetres": 0.000001,
+    "normalizedWeightL1": 0.000001,
+    "rawWeightL1": 0.000001,
+    "coefficientMaxAbs": 0.000001,
+    "worldGapMetres": 0.000001,
+    "triangleAreaSquareMetres": 1e-10
+  },
+  "passed": false,
+  "failures": [
+    "full/neck-0: contour is not a closed sewn boundary",
+    "full/neck-1: contour is not a closed sewn boundary",
+    "full/neck-2: contour is not a closed sewn boundary",
+    "lod/neck-2: contour is not a closed sewn boundary",
+    "lod/neck-3: contour is not a closed sewn boundary",
+    "lod/neck-5: contour is not a closed sewn boundary",
+    "lod/neck-6: contour is not a closed sewn boundary"
+  ],
+  "reports": [
+    {
+      "tier": "full",
+      "asset": "assets/blender/hero-remaster/rider/face-v7-b-full-packed.glb",
+      "sha256": "a4d07e7bcbacb031ed6ac41218acb21c248006e8a7bede61f195288bfa4119d6",
+      "topology": [
+        {
+          "join": "neck-0",
+          "declaredClosedCycle": true,
+          "contourVertices": 5,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 2,
+          "mismatches": [
+            {
+              "from": "750549,1331116,-35278",
+              "to": "751099,1325745,-32715",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "751099,1325745,-32715",
+              "to": "747498,1327271,-35461",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-1",
+          "declaredClosedCycle": true,
+          "contourVertices": 176,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 2,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": [
+            {
+              "from": "760010,1306335,-46753",
+              "to": "762695,1300781,-51392",
+              "source": {
+                "count": 3,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "762695,1300781,-51392",
+              "to": "761108,1296509,-55054",
+              "source": {
+                "count": 3,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-2",
+          "declaredClosedCycle": true,
+          "contourVertices": 10,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 1,
+          "mismatches": [
+            {
+              "from": "747498,1327271,-35461",
+              "to": "750549,1331116,-35278",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-3",
+          "declaredClosedCycle": true,
+          "contourVertices": 3,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-4",
+          "declaredClosedCycle": true,
+          "contourVertices": 22,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-5",
+          "declaredClosedCycle": true,
+          "contourVertices": 21,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-6",
+          "declaredClosedCycle": true,
+          "contourVertices": 3,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-7",
+          "declaredClosedCycle": true,
+          "contourVertices": 6,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-8",
+          "declaredClosedCycle": true,
+          "contourVertices": 9,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-9",
+          "declaredClosedCycle": true,
+          "contourVertices": 11,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-10",
+          "declaredClosedCycle": true,
+          "contourVertices": 13,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-11",
+          "declaredClosedCycle": true,
+          "contourVertices": 24,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-12",
+          "declaredClosedCycle": true,
+          "contourVertices": 3,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-13",
+          "declaredClosedCycle": true,
+          "contourVertices": 6,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        }
+      ],
+      "poses": [
+        {
+          "pose": "garage",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "backlean",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "neutral",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "forwardlean",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "compression",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "extension",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "landing",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 22,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 322,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 10,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 34,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 49,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 3,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 16,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-10",
+              "vertexPairs": 18,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-11",
+              "vertexPairs": 40,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-12",
+              "vertexPairs": 4,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-13",
+              "vertexPairs": 7,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "lod",
+      "asset": "assets/blender/hero-remaster/rider/face-v7-b-lod-packed.glb",
+      "sha256": "810dbd551c8fae22d4f2e57b519fd982a6657d6789e435c515405c364c254fa3",
+      "topology": [
+        {
+          "join": "neck-0",
+          "declaredClosedCycle": true,
+          "contourVertices": 4,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-1",
+          "declaredClosedCycle": true,
+          "contourVertices": 8,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-2",
+          "declaredClosedCycle": true,
+          "contourVertices": 10,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 4,
+          "mismatches": [
+            {
+              "from": "749084,1324036,33936",
+              "to": "750793,1325439,22461",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "750793,1325439,22461",
+              "to": "750366,1330750,7385",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            },
+            {
+              "from": "750366,1330750,7385",
+              "to": "751465,1325745,427",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "751465,1325745,427",
+              "to": "751160,1318237,16113",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-3",
+          "declaredClosedCycle": true,
+          "contourVertices": 6,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 1,
+          "mismatches": [
+            {
+              "from": "751160,1318237,16113",
+              "to": "749084,1324036,33936",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-4",
+          "declaredClosedCycle": true,
+          "contourVertices": 3,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-5",
+          "declaredClosedCycle": true,
+          "contourVertices": 16,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 7,
+          "mismatches": [
+            {
+              "from": "747070,1315735,-37903",
+              "to": "744019,1335510,-19714",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            },
+            {
+              "from": "744019,1335510,-19714",
+              "to": "748413,1327637,-35828",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "748413,1327637,-35828",
+              "to": "751038,1326233,-33447",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "751038,1326233,-33447",
+              "to": "754150,1327393,-41504",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "754150,1327393,-41504",
+              "to": "755920,1322083,-42725",
+              "source": {
+                "count": 1,
+                "direction": 1
+              },
+              "repair": {
+                "count": 1,
+                "direction": 1
+              }
+            },
+            {
+              "from": "755920,1322083,-42725",
+              "to": "754883,1324951,-46082",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            },
+            {
+              "from": "754883,1324951,-46082",
+              "to": "748230,1313110,-47607",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-6",
+          "declaredClosedCycle": true,
+          "contourVertices": 37,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 1,
+          "mismatches": [
+            {
+              "from": "748230,1313110,-47607",
+              "to": "747070,1315735,-37903",
+              "source": {
+                "count": 1,
+                "direction": -1
+              },
+              "repair": {
+                "count": 1,
+                "direction": -1
+              }
+            }
+          ]
+        },
+        {
+          "join": "neck-7",
+          "declaredClosedCycle": true,
+          "contourVertices": 3,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-8",
+          "declaredClosedCycle": true,
+          "contourVertices": 3,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        },
+        {
+          "join": "neck-9",
+          "declaredClosedCycle": true,
+          "contourVertices": 5,
+          "duplicateContourVertices": 0,
+          "missingSourceBoundaryEdges": 0,
+          "missingRepairBoundaryEdges": 0,
+          "inconsistentWindingEdges": 0,
+          "mismatches": []
+        }
+      ],
+      "poses": [
+        {
+          "pose": "garage",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "backlean",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "neutral",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "forwardlean",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "compression",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "extension",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        },
+        {
+          "pose": "landing",
+          "contours": [
+            {
+              "join": "neck-0",
+              "vertexPairs": 12,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-1",
+              "vertexPairs": 19,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-2",
+              "vertexPairs": 44,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-3",
+              "vertexPairs": 31,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-4",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-5",
+              "vertexPairs": 53,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-6",
+              "vertexPairs": 98,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-7",
+              "vertexPairs": 6,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-8",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            },
+            {
+              "join": "neck-9",
+              "vertexPairs": 11,
+              "localPositionMaxMetres": 0,
+              "normalizedWeightL1Max": 0,
+              "rawWeightL1Max": 0,
+              "coefficientMaxAbs": 0,
+              "outerTransformMaxAbs": 0,
+              "differentLiveBones": 0,
+              "worldGapMaxMetres": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
