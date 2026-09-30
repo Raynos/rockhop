@@ -66,7 +66,7 @@ for (const phase of ['before','after'] as const) {
   try { await build({root:sourceRoot,configFile:path.join(sourceRoot,'vite.config.ts'),logLevel:'warn',build:{outDir}}); }
   finally { process.chdir(repo);if(previousSha===undefined)delete process.env.VERCEL_GIT_COMMIT_SHA;else process.env.VERCEL_GIT_COMMIT_SHA=previousSha; }
   const html=fs.readFileSync(path.join(outDir,'index.html'),'utf8');
-  const entry=/src="([^"]*assets\/index-[^"]+\.js)"/.exec(html)?.[1];
+  const entry=/data-entry="([^"]*assets\/index-[^"]+\.js)"/.exec(html)?.[1];
   if(!entry)throw new Error('Missing built app entry');
   const entrySHA256=sha(fs.readFileSync(path.resolve(outDir,entry)));
   const compiledSourceHashes=hashTree(path.join(sourceRoot,'src'));
