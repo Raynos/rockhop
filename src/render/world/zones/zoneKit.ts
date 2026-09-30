@@ -22,7 +22,7 @@ import { profileY } from '../track';
 import type { SetPiecePlan } from '../setPieces';
 import * as G from './geo';
 import { c2JumpCraneGeometry, c2LandingFasciaGeometry, c2PierTrestleGeometry } from './c2PierArt';
-import { s1LiftTerminalGeometry } from './s1BridgeArt';
+import { s1LiftRouteReadGeometry, s1LiftTerminalGeometry } from './s1BridgeArt';
 import { ZONE_FACE, zonePaint } from './zoneDeck';
 
 /** The zone ids this kit builds (`snow` is SNOWLINE). */
@@ -925,9 +925,11 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     }
     const towers = PB('lifttower', G.liftTowerGeometry(), painted, false);
     if (track.def.id === 's1-lift-line') {
-      const terminal = new THREE.Mesh(s1LiftTerminalGeometry(), painted);
+      const terminalY = gy(289.2, -5.7);
+      const route = s1LiftRouteReadGeometry().translate(-289.2, -terminalY, 5.7);
+      const terminal = new THREE.Mesh(G.merge([s1LiftTerminalGeometry(), route]), painted);
       terminal.name = 'zone:s1-lift-bridge-terminal';
-      terminal.position.set(289.2, gy(289.2, -5.7), -5.7);
+      terminal.position.set(289.2, terminalY, -5.7);
       meshes.push(terminal);
     }
     const chairs = PB('liftchair', G.liftChairGeometryZ(), painted, false);
