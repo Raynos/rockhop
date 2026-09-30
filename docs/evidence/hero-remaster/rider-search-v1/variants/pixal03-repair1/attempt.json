@@ -1,0 +1,19 @@
+{
+  "defect": "P3-TOPOLOGY-01",
+  "candidate": "P3",
+  "attempt": 1,
+  "status": "unaccepted preview; parent must judge before any next stage",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/working.glb",
+  "sourceSHA256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+  "recipeSHA256": "f40cd3453077427f7532b0d712d266016b442678aa5a2afd1cea0f61ada59b41",
+  "hypothesis": "A fine voxel union can close small export breaks without replacing body anatomy; separate UV/PBR rebake preserves existing appearance",
+  "scope": "Same whole body, geometry derivative only; no rig, anatomy target, pose or physics edits",
+  "voxelResolutionOverHeight": 900,
+  "requestedFaces": 55000,
+  "textureSize": 2048,
+  "limits": [
+    "Voxel/decimation may soften fingers or folds; comparison required",
+    "Texture defects already in the source may persist",
+    "This is not deformation or rig acceptance"
+  ]
+}

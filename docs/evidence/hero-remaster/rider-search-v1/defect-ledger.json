@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 body choice pending; no accepted body",
+  "status": "checkpoint1 unaccepted; P3 repair1 failed setup; additive Hunyuan2.1 requested",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -355,9 +355,9 @@
         }
       },
       "generationFailures": 0,
-      "correctionPasses": 0,
+      "correctionPasses": 1,
       "accepted": false,
-      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "reviewExtent": "Nine-view working/reduced/native and gray export diagnosis; first unaccepted whole-body repair preview in progress",
       "measuredRig": "none; unskinned output",
       "sittingGate": "not started",
       "gameplayGate": "not started"
@@ -472,10 +472,21 @@
         "P3"
       ],
       "symptom": "Small hood and ankle/shoe geometry breaks, coarse hands; boundary/nonmanifold edges after declared position weld",
-      "failedFixes": 0,
+      "failedFixes": 1,
       "cause": "not yet isolated between native geometry and export; requires deformable topology refinement",
       "evidence": "diagnostics/pixal03/verification.json",
-      "verdict": "no correction attempted; not rig-ready accepted"
+      "verdict": "repair1 failed before UV/baking: 90972 faces exceeds bounded export check",
+      "attempts": [
+        {
+          "number": 1,
+          "scope": "Separate Blender voxel-union/decimation/UV-PBR rebake derivative, unchanged source/body identity",
+          "sourceSHA256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+          "recipe": "assets/blender/hero-remaster/rider/search-v1/repair_pixal03.py",
+          "runtime": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/variants/pixal03-repair1",
+          "verdict": "repair1 failed before UV/baking: 90972 faces exceeds bounded export check",
+          "evidence": "variants/pixal03-repair1/README.md"
+        }
+      ]
     },
     {
       "id": "LEGACY-BLENDER-SHOULDERS",
@@ -492,7 +503,8 @@
   "userChoice": {
     "requested": "Choose P3 for refinement, another H/T/P body, or revert/abandon",
     "received": false,
-    "queue": "project/human-in-the-loop/QUEUE.md#HR-23"
+    "queue": "project/human-in-the-loop/QUEUE.md#HR-23",
+    "scope": "User chooses accepted visual direction before checkpoint2; parent may build the already-authorized bounded shortlist previews meanwhile"
   },
   "runtimePreservation": {
     "files": [

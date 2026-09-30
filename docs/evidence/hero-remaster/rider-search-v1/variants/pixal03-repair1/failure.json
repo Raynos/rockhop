@@ -1,0 +1,29 @@
+{
+  "status": "diagnostic reproduction of failed first attempt; no corrected settings",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/rider-search-v1/probe-repair-failure.py\", line 7, in <module>\n    exec(compile(script.read_text(),str(script),'exec'),scope)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/repair_pixal03.py\", line 96, in <module>\n    assert after['triangles'] <= 56000 and after['triangles'] > 50000\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "before": {
+    "vertices": 56743,
+    "triangles": 52943,
+    "boundaryEdges": 47405,
+    "edgesNotManifold": 47405
+  },
+  "afterVoxel": {
+    "vertices": 1299606,
+    "triangles": 2448264,
+    "boundaryEdges": 0,
+    "edgesNotManifold": 0
+  },
+  "afterDecimation": {
+    "vertices": 120960,
+    "triangles": 90972,
+    "boundaryEdges": 0,
+    "edgesNotManifold": 0
+  },
+  "sourceSHA256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005",
+  "recipeSHA256": "f40cd3453077427f7532b0d712d266016b442678aa5a2afd1cea0f61ada59b41",
+  "partial": "gray-partial.glb",
+  "limits": [
+    "Same failing recipe/settings, not a new fix",
+    "Unrebaked UVs are invalid; gray geometry only"
+  ]
+}
