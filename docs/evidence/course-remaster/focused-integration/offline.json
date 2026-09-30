@@ -1,0 +1,1264 @@
+{
+  "browserBackend": {
+    "requested": "metal",
+    "platform": "darwin",
+    "launchArgs": [
+      "--use-angle=metal",
+      "--enable-webgl",
+      "--ignore-gpu-blocklist"
+    ]
+  },
+  "golden": "harness/inputs/c1-low-tide/bot-3.json",
+  "garageMedalSeed": [
+    {
+      "id": "c1-low-tide",
+      "medal": "gold"
+    },
+    {
+      "id": "c2-crane-hop",
+      "medal": "gold"
+    },
+    {
+      "id": "c3-hull-breach",
+      "medal": "gold"
+    },
+    {
+      "id": "a1-sawdust",
+      "medal": "gold"
+    },
+    {
+      "id": "a2-log-jam",
+      "medal": "gold"
+    },
+    {
+      "id": "a3-timberline",
+      "medal": "gold"
+    },
+    {
+      "id": "d1-dust-devil",
+      "medal": "gold"
+    },
+    {
+      "id": "d2-conveyor",
+      "medal": "platinum"
+    }
+  ],
+  "distDir": "/Users/raynos/projects/games/rockhop/dist",
+  "online": {
+    "read": {
+      "leaveMs": 3657,
+      "download": 100,
+      "setup": 100,
+      "done": true,
+      "failed": "",
+      "trace": {
+        "observerInstalledAtMs": 36.920000076293945,
+        "observerReadyState": "loading",
+        "loaderFirstObservedAtMs": 40.25,
+        "moduleScriptFirstObservedAtMs": 147.9850001335144,
+        "loaderDoneObservedAtMs": 3309.925000190735,
+        "loaderRemovedObservedAtMs": 3610.5599999427795,
+        "rowsAtDone": [
+          {
+            "key": "core",
+            "label": "Core",
+            "state": "ok",
+            "durationMsRounded": 106,
+            "text": "106 ms"
+          },
+          {
+            "key": "evaluate",
+            "label": "Parse",
+            "state": "ok",
+            "durationMsRounded": 37,
+            "text": "37 ms"
+          },
+          {
+            "key": "renderer",
+            "label": "Renderer",
+            "state": "ok",
+            "durationMsRounded": 208,
+            "text": "208 ms"
+          },
+          {
+            "key": "physics",
+            "label": "Physics",
+            "state": "ok",
+            "durationMsRounded": 1,
+            "text": "1 ms"
+          },
+          {
+            "key": "audio",
+            "label": "Audio",
+            "state": "ok",
+            "durationMsRounded": 1,
+            "text": "1 ms"
+          },
+          {
+            "key": "game",
+            "label": "Game + HUD",
+            "state": "ok",
+            "durationMsRounded": 3,
+            "text": "3 ms"
+          },
+          {
+            "key": "front",
+            "label": "Front end",
+            "state": "ok",
+            "durationMsRounded": 77,
+            "text": "77 ms"
+          },
+          {
+            "key": "offlinePack",
+            "label": "Offline pack",
+            "state": "ok",
+            "durationMsRounded": 410,
+            "text": "410 ms"
+          },
+          {
+            "key": "track",
+            "label": "First track",
+            "state": "ok",
+            "durationMsRounded": 170,
+            "text": "170 ms"
+          },
+          {
+            "key": "heroMeshes",
+            "label": "Hero meshes",
+            "state": "ok",
+            "durationMsRounded": 90,
+            "text": "90 ms"
+          },
+          {
+            "key": "lighting",
+            "label": "Lighting",
+            "state": "ok",
+            "durationMsRounded": 59,
+            "text": "59 ms"
+          },
+          {
+            "key": "postChain",
+            "label": "Post",
+            "state": "ok",
+            "durationMsRounded": 7,
+            "text": "7 ms"
+          },
+          {
+            "key": "materials",
+            "label": "Textures",
+            "state": "ok",
+            "durationMsRounded": 284,
+            "text": "284 ms"
+          },
+          {
+            "key": "heroModels",
+            "label": "Hero models",
+            "state": "ok",
+            "durationMsRounded": 519,
+            "text": "519 ms"
+          },
+          {
+            "key": "bootArt",
+            "label": "World art",
+            "state": "ok",
+            "durationMsRounded": 5,
+            "text": "5 ms"
+          },
+          {
+            "key": "shaders",
+            "label": "Shaders",
+            "state": "ok",
+            "durationMsRounded": 721,
+            "text": "721 ms"
+          },
+          {
+            "key": "firstFrame",
+            "label": "First frame",
+            "state": "ok",
+            "durationMsRounded": 558,
+            "text": "558 ms"
+          },
+          {
+            "key": "fonts",
+            "label": "Fonts",
+            "state": "ok",
+            "durationMsRounded": 8,
+            "text": "8 ms"
+          },
+          {
+            "key": "after",
+            "label": "After start",
+            "state": "bghead",
+            "durationMsRounded": null,
+            "text": ""
+          },
+          {
+            "key": "after:keyArt",
+            "label": "Key art",
+            "state": "bg in",
+            "durationMsRounded": null,
+            "text": "463 KB / 463 KB"
+          },
+          {
+            "key": "after:trackArt",
+            "label": "Track art",
+            "state": "bg in",
+            "durationMsRounded": null,
+            "text": "173 KB / 173 KB"
+          }
+        ],
+        "timeOrigin": 1790787247225.94,
+        "sampledAtMs": 3659.295000076294,
+        "navigation": {
+          "startTimeMs": 0,
+          "workerStartMs": 0,
+          "fetchStartMs": 0.125,
+          "responseStartMs": 8.889999866485596,
+          "responseEndMs": 9.514999866485596,
+          "domInteractiveMs": 56.84999990463257,
+          "domContentLoadedEventStartMs": 56.860000133514404,
+          "domContentLoadedEventEndMs": 56.86999988555908,
+          "loadEventEndMs": 56.885000228881836,
+          "transferSize": 9933
+        },
+        "marks": [
+          {
+            "name": "render:ctor",
+            "startTimeMs": 393.28000020980835
+          },
+          {
+            "name": "render:prepare:art:start",
+            "startTimeMs": 1058.5100002288818
+          },
+          {
+            "name": "render:prepare:hero:bike",
+            "startTimeMs": 1064.375
+          },
+          {
+            "name": "render:prepare:hero:rider",
+            "startTimeMs": 1148.085000038147
+          },
+          {
+            "name": "render:prepare:lighting",
+            "startTimeMs": 1207.1500000953674
+          },
+          {
+            "name": "render:prepare:post:create",
+            "startTimeMs": 1213.9450001716614
+          },
+          {
+            "name": "render:prepare:materials",
+            "startTimeMs": 1498.4800000190735
+          },
+          {
+            "name": "render:prepare:hero:gltf",
+            "startTimeMs": 2017.6050000190735
+          },
+          {
+            "name": "render:prepare:art:settled",
+            "startTimeMs": 2017.7300000190735
+          },
+          {
+            "name": "render:prepare:shaders",
+            "startTimeMs": 2743.0149998664856
+          },
+          {
+            "name": "render:prepare:firstframe:post",
+            "startTimeMs": 3089.9100003242493
+          },
+          {
+            "name": "render:prepare:firstframe:heroes",
+            "startTimeMs": 3300.885000228882
+          },
+          {
+            "name": "render:entry",
+            "startTimeMs": 3326.135000228882
+          }
+        ],
+        "actualRenderer": {
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        }
+      }
+    },
+    "dump": {
+      "caches": {
+        "rockhop-shell-45bc55d8-8d8faed514": 4,
+        "rockhop-static-d3893e742c": 104,
+        "rockhop-immutable": 47,
+        "rockhop-audio": 0
+      },
+      "entries": 155,
+      "models": 40,
+      "assets": 7,
+      "fonts": 5,
+      "art": 98,
+      "usage": 38787840,
+      "version": {
+        "type": "VERSION",
+        "build": "45bc55d8-8d8faed514",
+        "caches": [
+          "rockhop-shell-45bc55d8-8d8faed514",
+          "rockhop-static-d3893e742c",
+          "rockhop-immutable",
+          "rockhop-audio"
+        ],
+        "entries": 155,
+        "models": 40,
+        "bytes": 37360187
+      }
+    },
+    "wire": {
+      "bytes": 35601214,
+      "requests": 161
+    },
+    "ride": {
+      "hash": "2bfe061963ffb058",
+      "finishTime": 30.349999999999998,
+      "faults": 0
+    }
+  },
+  "cachedUrls": [
+    "/art/icons/apple-touch-icon.png",
+    "/art/icons/apple-touch-icon.png",
+    "/art/icons/emblem-512.png",
+    "/art/icons/favicon-16.png",
+    "/art/icons/favicon-32.png",
+    "/art/icons/favicon-32.png",
+    "/art/icons/favicon.svg",
+    "/art/icons/favicon.svg",
+    "/art/icons/icon-1024.png",
+    "/art/icons/icon-192.png",
+    "/art/icons/icon-192.png",
+    "/art/icons/icon-512.png",
+    "/art/icons/icon-maskable-192.png",
+    "/art/icons/icon-maskable-192.png",
+    "/art/icons/icon-maskable-512.png",
+    "/art/manifest.json",
+    "/art/menu/bike-pro-1536.webp",
+    "/art/menu/bike-pro-alt.webp",
+    "/art/menu/bike-rookie-1536.webp",
+    "/art/menu/bike-rookie-alt.webp",
+    "/art/menu/garage-plate.webp",
+    "/art/menu/keyart-harbour-1920.webp",
+    "/art/menu/keyart-harbour-960.webp",
+    "/art/menu/keyart-quarry-1920.webp",
+    "/art/menu/keyart-quarry-960.webp",
+    "/art/menu/medal-bronze-512.png",
+    "/art/menu/medal-gold-512.png",
+    "/art/menu/medal-obsidian-512.png",
+    "/art/menu/medal-silver-512.png",
+    "/art/menu/results-alpine.webp",
+    "/art/menu/results-coast.webp",
+    "/art/menu/results-quarry.webp",
+    "/art/menu/results-snowline.webp",
+    "/art/plates/plate-alpine.webp",
+    "/art/plates/plate-canyon.webp",
+    "/art/plates/plate-coast-low-tide.webp",
+    "/art/plates/plate-coast-low-tide.webp",
+    "/art/plates/plate-coast.webp",
+    "/art/plates/plate-foundry.webp",
+    "/art/plates/plate-industrial.webp",
+    "/art/plates/plate-nightcity.webp",
+    "/art/plates/plate-quarry.webp",
+    "/art/plates/plate-snow.webp",
+    "/art/plates/plate-snowline.webp",
+    "/art/plates/sky-alpine.webp",
+    "/art/plates/sky-canyon.webp",
+    "/art/plates/sky-coast.webp",
+    "/art/plates/sky-coast.webp",
+    "/art/plates/sky-foundry.webp",
+    "/art/plates/sky-industrial.webp",
+    "/art/plates/sky-nightcity.webp",
+    "/art/plates/sky-quarry.webp",
+    "/art/plates/sky-snow.webp",
+    "/art/plates/sky-snowline.webp",
+    "/art/thumbs/a1-sawdust.webp",
+    "/art/thumbs/a2-log-jam.webp",
+    "/art/thumbs/a3-timberline.webp",
+    "/art/thumbs/c1-low-tide.webp",
+    "/art/thumbs/c2-crane-hop.webp",
+    "/art/thumbs/c3-hull-breach.webp",
+    "/art/thumbs/d1-dust-devil.webp",
+    "/art/thumbs/d2-conveyor.webp",
+    "/art/thumbs/d3-rope-walk.webp",
+    "/art/thumbs/s1-lift-line.webp",
+    "/art/thumbs/s2-cornice.webp",
+    "/art/thumbs/s3-whiteout.webp",
+    "/art/world/banner-apex-suspension.webp",
+    "/art/world/banner-bolt-energy.webp",
+    "/art/world/banner-kestrel-tyres.webp",
+    "/art/world/banner-nordvik.webp",
+    "/art/world/banner-vortex-oil.webp",
+    "/art/world/crowd-day.webp",
+    "/art/world/crowd-night.webp",
+    "/art/world/graffiti-grind.webp",
+    "/art/world/graffiti-skull.webp",
+    "/art/world/graffiti-tag-wall.webp",
+    "/art/world/graffiti-wheel.webp",
+    "/art/world/kit-pro.webp",
+    "/art/world/kit-rookie.webp",
+    "/art/world/mask-edge-grime.webp",
+    "/art/world/mask-grime-spatter.webp",
+    "/art/world/mask-rivet-drips.webp",
+    "/art/world/mask-rust-streaks.webp",
+    "/art/world/poster-tyres.webp",
+    "/art/world/sign-exit.webp",
+    "/art/world/sign-forklift.webp",
+    "/art/world/sign-hard-hat.webp",
+    "/art/world/sign-overhead-crane.webp",
+    "/art/world/stencil-apex.webp",
+    "/art/world/stencil-arrows.webp",
+    "/art/world/stencil-hazard.webp",
+    "/art/world/stencil-hkr.webp",
+    "/art/world/stencil-nordvik.webp",
+    "/art/world/stencil-serial.webp",
+    "/art/world/stencil-taro.webp",
+    "/art/world/stencil-weights.webp",
+    "/art/world/tyremark-arc.webp",
+    "/art/world/tyremark-straight.webp",
+    "/assets/inbox-Bfa5OmqB.js",
+    "/assets/index-CMvOKb42.js",
+    "/assets/sky-alpine-a-duW0jn55.webp",
+    "/assets/three-C7fBpum8.js",
+    "/assets/worklet-CT-J7623.js",
+    "/assets/worklet-DAkd6Thg.js",
+    "/assets/worldMap3dScene-CRWO4I1u.js",
+    "/fonts/Archivo-Rockhop.woff2",
+    "/fonts/ArchivoBlack-Rockhop.woff2",
+    "/fonts/BarlowCondensed-BlackItalic.woff2",
+    "/fonts/BarlowCondensed-Bold.woff2",
+    "/fonts/BarlowCondensed-Medium.woff2",
+    "/index.html",
+    "/load-manifest.json",
+    "/manifest.webmanifest",
+    "/model-catalog.json",
+    "/models/3abafaa9ba2be816/rider-street-mustard-bbf2d63694fd22cf.glb",
+    "/models/3abafaa9ba2be816/rider-street-mustard-lod-def6821d99fe7d73.glb",
+    "/models/624657da70e8c78d/c1-harbor-tug-b55802fbb49b8732.glb",
+    "/models/624657da70e8c78d/c1-harbor-tug-lod-bf0bddee9b84ea3c.glb",
+    "/models/6ffd0a14f8f8e55c/rider-street-openface-a875ae974381dff1.glb",
+    "/models/6ffd0a14f8f8e55c/rider-street-openface-lod-369e586fe3268929.glb",
+    "/models/98214c3b3099a465/bike-rookie-e55919d602678493.glb",
+    "/models/98214c3b3099a465/bike-rookie-lod-4ec26ad0a0c08f7e.glb",
+    "/models/a7d3e3df18ab35a0/rider-street-charcoal-0c14eb52f0aaed26.glb",
+    "/models/a7d3e3df18ab35a0/rider-street-charcoal-lod-fec85cbceaa7ad68.glb",
+    "/models/bb3ec209a0dcc809/bike-pro-0acc9ac86eeca76c.glb",
+    "/models/bb3ec209a0dcc809/bike-pro-lod-37455064bf7b6012.glb",
+    "/models/c49fd28578f306a9/rider-race-bluewhite-28a1e706cf13337a.glb",
+    "/models/c49fd28578f306a9/rider-race-bluewhite-lod-2bbe14c984d760e5.glb",
+    "/models/course-kits/alpine-trees/0073dc44c9eebab2/cards-normal.phone-0073dc44c9eebab2.webp",
+    "/models/course-kits/alpine-trees/06ca84d6b38809e4/pine_bark-diffuse.phone-06ca84d6b38809e4.webp",
+    "/models/course-kits/alpine-trees/19b3fd57c67d2783/cards-arm.phone-19b3fd57c67d2783.webp",
+    "/models/course-kits/alpine-trees/1a51b43616599cf2/fir_bark-nor_gl.phone-1a51b43616599cf2.webp",
+    "/models/course-kits/alpine-trees/2586e7f04b0819c8/bark_willow_02-arm.phone-2586e7f04b0819c8.webp",
+    "/models/course-kits/alpine-trees/408707ab642701ca/impostor-normal.phone-408707ab642701ca.webp",
+    "/models/course-kits/alpine-trees/6a282e05dc5e3bc9/pine_bark-arm.phone-6a282e05dc5e3bc9.webp",
+    "/models/course-kits/alpine-trees/789cf59fd6692128/bark_willow_02-diffuse.phone-789cf59fd6692128.webp",
+    "/models/course-kits/alpine-trees/83926e86793d57c4/pine_bark-nor_gl.phone-83926e86793d57c4.webp",
+    "/models/course-kits/alpine-trees/8df4d71773c63f35/fir_bark-arm.phone-8df4d71773c63f35.webp",
+    "/models/course-kits/alpine-trees/91ca25d71be698ad/trees-fab79d15f9a3e120.glb",
+    "/models/course-kits/alpine-trees/91ca25d71be698ad/trees-lod-8aa2e8f5f041e852.glb",
+    "/models/course-kits/alpine-trees/9c12ba6b1af4e963/impostor-albedo.phone-9c12ba6b1af4e963.webp",
+    "/models/course-kits/alpine-trees/d18d289ca18daf36/cards-albedo.phone-d18d289ca18daf36.webp",
+    "/models/course-kits/alpine-trees/d44af17987d0dd78/bark_willow_02-nor_gl.phone-d44af17987d0dd78.webp",
+    "/models/course-kits/alpine-trees/d8455200e700ac24/fir_bark-diffuse.phone-d8455200e700ac24.webp",
+    "/models/course-kits/coast-frontage/196e99318a3bd23b/frontage-arm.phone-196e99318a3bd23b.webp",
+    "/models/course-kits/coast-frontage/4f83c0f35100efbf/coast-normal.phone-4f83c0f35100efbf.webp",
+    "/models/course-kits/coast-frontage/6b18cc8114a4bf6a/frontage-normal.phone-6b18cc8114a4bf6a.webp",
+    "/models/course-kits/coast-frontage/6bbbef3e12737875/coast-albedo.phone-6bbbef3e12737875.webp",
+    "/models/course-kits/coast-frontage/7ef8ea04566fef19/coast-arm.phone-7ef8ea04566fef19.webp",
+    "/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-95fe300274c04e6e.glb",
+    "/models/course-kits/coast-frontage/918b21884fbf220d/coast-frontage-lod-b614184510f599a3.glb",
+    "/models/course-kits/coast-frontage/df56343262497dfe/frontage-albedo.phone-df56343262497dfe.webp",
+    "/models/f7e7252c644c5eee/rider-race-charcoalyellow-4a9801c2a4148f45.glb",
+    "/models/f7e7252c644c5eee/rider-race-charcoalyellow-lod-31229d98fde8964c.glb",
+    "/offline.html"
+  ],
+  "authoredCourseAssets": [
+    {
+      "id": "c1-low-tide",
+      "expectedOwners": 2,
+      "loaded": true,
+      "enabled": true,
+      "mounted": 2,
+      "textureMB": 5.665
+    },
+    {
+      "id": "a1-sawdust",
+      "expectedOwners": 1,
+      "loaded": true,
+      "enabled": true,
+      "mounted": 1,
+      "textureMB": 6.333
+    }
+  ],
+  "offline": {
+    "read": {
+      "leaveMs": 2721,
+      "download": 100,
+      "setup": 100,
+      "done": true,
+      "failed": "",
+      "trace": {
+        "observerInstalledAtMs": 33.27999973297119,
+        "observerReadyState": "loading",
+        "loaderFirstObservedAtMs": 35.109999656677246,
+        "moduleScriptFirstObservedAtMs": 52.795000076293945,
+        "loaderDoneObservedAtMs": 2379.4649996757507,
+        "loaderRemovedObservedAtMs": 2680.625,
+        "rowsAtDone": [
+          {
+            "key": "core",
+            "label": "Core",
+            "state": "ok",
+            "durationMsRounded": 16,
+            "text": "16 ms"
+          },
+          {
+            "key": "evaluate",
+            "label": "Parse",
+            "state": "ok",
+            "durationMsRounded": 37,
+            "text": "37 ms"
+          },
+          {
+            "key": "renderer",
+            "label": "Renderer",
+            "state": "ok",
+            "durationMsRounded": 20,
+            "text": "20 ms"
+          },
+          {
+            "key": "physics",
+            "label": "Physics",
+            "state": "ok",
+            "durationMsRounded": 2,
+            "text": "2 ms"
+          },
+          {
+            "key": "audio",
+            "label": "Audio",
+            "state": "ok",
+            "durationMsRounded": 5,
+            "text": "5 ms"
+          },
+          {
+            "key": "game",
+            "label": "Game + HUD",
+            "state": "ok",
+            "durationMsRounded": 63,
+            "text": "63 ms"
+          },
+          {
+            "key": "front",
+            "label": "Front end",
+            "state": "ok",
+            "durationMsRounded": 70,
+            "text": "70 ms"
+          },
+          {
+            "key": "offlinePack",
+            "label": "Offline pack",
+            "state": "ok",
+            "durationMsRounded": 246,
+            "text": "246 ms"
+          },
+          {
+            "key": "track",
+            "label": "First track",
+            "state": "ok",
+            "durationMsRounded": 156,
+            "text": "156 ms"
+          },
+          {
+            "key": "heroMeshes",
+            "label": "Hero meshes",
+            "state": "ok",
+            "durationMsRounded": 93,
+            "text": "93 ms"
+          },
+          {
+            "key": "lighting",
+            "label": "Lighting",
+            "state": "ok",
+            "durationMsRounded": 1,
+            "text": "1 ms"
+          },
+          {
+            "key": "postChain",
+            "label": "Post",
+            "state": "ok",
+            "durationMsRounded": 3,
+            "text": "3 ms"
+          },
+          {
+            "key": "materials",
+            "label": "Textures",
+            "state": "ok",
+            "durationMsRounded": 299,
+            "text": "299 ms"
+          },
+          {
+            "key": "heroModels",
+            "label": "Hero models",
+            "state": "ok",
+            "durationMsRounded": 547,
+            "text": "547 ms"
+          },
+          {
+            "key": "bootArt",
+            "label": "World art",
+            "state": "ok",
+            "durationMsRounded": 3,
+            "text": "3 ms"
+          },
+          {
+            "key": "shaders",
+            "label": "Shaders",
+            "state": "ok",
+            "durationMsRounded": 342,
+            "text": "342 ms"
+          },
+          {
+            "key": "firstFrame",
+            "label": "First frame",
+            "state": "ok",
+            "durationMsRounded": 425,
+            "text": "425 ms"
+          },
+          {
+            "key": "fonts",
+            "label": "Fonts",
+            "state": "ok",
+            "durationMsRounded": 12,
+            "text": "12 ms"
+          },
+          {
+            "key": "after",
+            "label": "After start",
+            "state": "bghead",
+            "durationMsRounded": null,
+            "text": ""
+          },
+          {
+            "key": "after:keyArt",
+            "label": "Key art",
+            "state": "bg in",
+            "durationMsRounded": null,
+            "text": "463 KB / 463 KB"
+          },
+          {
+            "key": "after:trackArt",
+            "label": "Track art",
+            "state": "bg in",
+            "durationMsRounded": null,
+            "text": "173 KB / 173 KB"
+          }
+        ],
+        "timeOrigin": 1790787254265.895,
+        "sampledAtMs": 2722.6349997520447,
+        "navigation": {
+          "startTimeMs": 0,
+          "workerStartMs": 0.8299999237060547,
+          "fetchStartMs": 28.34999990463257,
+          "responseStartMs": 29.514999866485596,
+          "responseEndMs": 30.894999980926514,
+          "domInteractiveMs": 36.549999713897705,
+          "domContentLoadedEventStartMs": 36.549999713897705,
+          "domContentLoadedEventEndMs": 36.56500005722046,
+          "loadEventEndMs": 45.924999713897705,
+          "transferSize": 0
+        },
+        "marks": [
+          {
+            "name": "render:ctor",
+            "startTimeMs": 109.40499973297119
+          },
+          {
+            "name": "render:prepare:art:start",
+            "startTimeMs": 652.6599998474121
+          },
+          {
+            "name": "render:prepare:hero:bike",
+            "startTimeMs": 658.039999961853
+          },
+          {
+            "name": "render:prepare:hero:rider",
+            "startTimeMs": 745.4899997711182
+          },
+          {
+            "name": "render:prepare:lighting",
+            "startTimeMs": 746.5199999809265
+          },
+          {
+            "name": "render:prepare:post:create",
+            "startTimeMs": 749.5
+          },
+          {
+            "name": "render:prepare:materials",
+            "startTimeMs": 1049.0599999427795
+          },
+          {
+            "name": "render:prepare:hero:gltf",
+            "startTimeMs": 1595.8249998092651
+          },
+          {
+            "name": "render:prepare:art:settled",
+            "startTimeMs": 1595.9649996757507
+          },
+          {
+            "name": "render:prepare:shaders",
+            "startTimeMs": 1941.1449999809265
+          },
+          {
+            "name": "render:prepare:firstframe:post",
+            "startTimeMs": 2151.5049996376038
+          },
+          {
+            "name": "render:prepare:firstframe:heroes",
+            "startTimeMs": 2366.5949997901917
+          },
+          {
+            "name": "render:entry",
+            "startTimeMs": 2398.375
+          }
+        ],
+        "actualRenderer": {
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        }
+      }
+    },
+    "nav": {
+      "transferSize": 0,
+      "workerStart": 0.8299999237060547
+    },
+    "isolated": {
+      "isolated": true,
+      "resolution": 2728.454999923706
+    },
+    "wire": {
+      "bytes": 0,
+      "requests": 0
+    },
+    "frame": {
+      "canvas": true,
+      "drawn": true
+    },
+    "ride": {
+      "hash": "2bfe061963ffb058",
+      "finishTime": 30.349999999999998,
+      "faults": 0
+    },
+    "worldMap": {
+      "screen": "tracks",
+      "canvas": true,
+      "levels": 12,
+      "ride": true,
+      "failed": false
+    },
+    "inbox": {
+      "before": [],
+      "err": "TypeError: Failed to fetch",
+      "queueKeys": []
+    },
+    "garage": {
+      "proPurchase": {
+        "initialWallet": "1,840",
+        "locked": true,
+        "buyVisible": true,
+        "bought": true,
+        "owned": true,
+        "finalWallet": "0"
+      },
+      "combos": [
+        {
+          "combo": "street-mustard x rookie",
+          "heroDoc": "bike rider [street-mustard / rookie]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Mustard · barehead selected",
+            "loading": 0,
+            "outfit": "street-mustard",
+            "bike": "rookie"
+          },
+          "ok": true
+        },
+        {
+          "combo": "street-openface x rookie",
+          "heroDoc": "bike rider [street-openface / rookie]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Charcoal · open-face selected",
+            "loading": 0,
+            "outfit": "street-openface",
+            "bike": "rookie"
+          },
+          "ok": true
+        },
+        {
+          "combo": "race-bluewhite x rookie",
+          "heroDoc": "bike rider [race-bluewhite / rookie]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Blue & white · Race selected",
+            "loading": 0,
+            "outfit": "race-bluewhite",
+            "bike": "rookie"
+          },
+          "ok": true
+        },
+        {
+          "combo": "street-charcoal x rookie",
+          "heroDoc": "bike rider [street-charcoal / rookie]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Charcoal · barehead selected",
+            "loading": 0,
+            "outfit": "street-charcoal",
+            "bike": "rookie"
+          },
+          "ok": true
+        },
+        {
+          "combo": "race-charcoalyellow x rookie",
+          "heroDoc": "bike rider [race-charcoalyellow / rookie]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Charcoal & yellow · Race selected",
+            "loading": 0,
+            "outfit": "race-charcoalyellow",
+            "bike": "rookie"
+          },
+          "ok": true
+        },
+        {
+          "combo": "street-mustard x pro",
+          "heroDoc": "bike rider [street-mustard / pro]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Mustard · barehead selected",
+            "loading": 0,
+            "outfit": "street-mustard",
+            "bike": "pro"
+          },
+          "ok": true
+        },
+        {
+          "combo": "street-openface x pro",
+          "heroDoc": "bike rider [street-openface / pro]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Charcoal · open-face selected",
+            "loading": 0,
+            "outfit": "street-openface",
+            "bike": "pro"
+          },
+          "ok": true
+        },
+        {
+          "combo": "race-bluewhite x pro",
+          "heroDoc": "bike rider [race-bluewhite / pro]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Blue & white · Race selected",
+            "loading": 0,
+            "outfit": "race-bluewhite",
+            "bike": "pro"
+          },
+          "ok": true
+        },
+        {
+          "combo": "street-charcoal x pro",
+          "heroDoc": "bike rider [street-charcoal / pro]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Charcoal · barehead selected",
+            "loading": 0,
+            "outfit": "street-charcoal",
+            "bike": "pro"
+          },
+          "ok": true
+        },
+        {
+          "combo": "race-charcoalyellow x pro",
+          "heroDoc": "bike rider [race-charcoalyellow / pro]",
+          "tapped": true,
+          "rect": {
+            "selected": "chip outfit-button on selected",
+            "status": "Charcoal & yellow · Race selected",
+            "loading": 0,
+            "outfit": "race-charcoalyellow",
+            "bike": "pro"
+          },
+          "ok": true
+        }
+      ],
+      "modelFailures": []
+    }
+  },
+  "slowStart": {
+    "leaveMs": 2545,
+    "offlineMs": 2721,
+    "wire": {
+      "bytes": 103,
+      "requests": 5
+    }
+  },
+  "updateBoot": {
+    "read": {
+      "leaveMs": 3564,
+      "download": 100,
+      "setup": 100,
+      "done": true,
+      "failed": "",
+      "trace": {
+        "observerInstalledAtMs": 1015.0699996948242,
+        "observerReadyState": "loading",
+        "loaderFirstObservedAtMs": 1016.3949999809265,
+        "moduleScriptFirstObservedAtMs": 1024.164999961853,
+        "loaderDoneObservedAtMs": 3136.1399998664856,
+        "loaderRemovedObservedAtMs": 3438.289999961853,
+        "rowsAtDone": [
+          {
+            "key": "core",
+            "label": "Core",
+            "state": "ok",
+            "durationMsRounded": 7,
+            "text": "7 ms"
+          },
+          {
+            "key": "evaluate",
+            "label": "Parse",
+            "state": "ok",
+            "durationMsRounded": 31,
+            "text": "31 ms"
+          },
+          {
+            "key": "renderer",
+            "label": "Renderer",
+            "state": "ok",
+            "durationMsRounded": 10,
+            "text": "10 ms"
+          },
+          {
+            "key": "physics",
+            "label": "Physics",
+            "state": "ok",
+            "durationMsRounded": 1,
+            "text": "1 ms"
+          },
+          {
+            "key": "audio",
+            "label": "Audio",
+            "state": "ok",
+            "durationMsRounded": 67,
+            "text": "67 ms"
+          },
+          {
+            "key": "game",
+            "label": "Game + HUD",
+            "state": "ok",
+            "durationMsRounded": 12,
+            "text": "12 ms"
+          },
+          {
+            "key": "front",
+            "label": "Front end",
+            "state": "ok",
+            "durationMsRounded": 26,
+            "text": "26 ms"
+          },
+          {
+            "key": "offlinePack",
+            "label": "Offline pack",
+            "state": "ok",
+            "durationMsRounded": 356,
+            "text": "356 ms"
+          },
+          {
+            "key": "track",
+            "label": "First track",
+            "state": "ok",
+            "durationMsRounded": 126,
+            "text": "126 ms"
+          },
+          {
+            "key": "heroMeshes",
+            "label": "Hero meshes",
+            "state": "ok",
+            "durationMsRounded": 9,
+            "text": "9 ms"
+          },
+          {
+            "key": "lighting",
+            "label": "Lighting",
+            "state": "ok",
+            "durationMsRounded": 95,
+            "text": "95 ms"
+          },
+          {
+            "key": "postChain",
+            "label": "Post",
+            "state": "ok",
+            "durationMsRounded": 1,
+            "text": "1 ms"
+          },
+          {
+            "key": "materials",
+            "label": "Textures",
+            "state": "ok",
+            "durationMsRounded": 350,
+            "text": "350 ms"
+          },
+          {
+            "key": "heroModels",
+            "label": "Hero models",
+            "state": "ok",
+            "durationMsRounded": 496,
+            "text": "496 ms"
+          },
+          {
+            "key": "bootArt",
+            "label": "World art",
+            "state": "ok",
+            "durationMsRounded": 9,
+            "text": "9 ms"
+          },
+          {
+            "key": "shaders",
+            "label": "Shaders",
+            "state": "ok",
+            "durationMsRounded": 348,
+            "text": "348 ms"
+          },
+          {
+            "key": "firstFrame",
+            "label": "First frame",
+            "state": "ok",
+            "durationMsRounded": 161,
+            "text": "161 ms"
+          },
+          {
+            "key": "fonts",
+            "label": "Fonts",
+            "state": "ok",
+            "durationMsRounded": 12,
+            "text": "12 ms"
+          },
+          {
+            "key": "after",
+            "label": "After start",
+            "state": "bghead",
+            "durationMsRounded": null,
+            "text": ""
+          },
+          {
+            "key": "after:keyArt",
+            "label": "Key art",
+            "state": "bg in",
+            "durationMsRounded": null,
+            "text": "463 KB / 463 KB"
+          },
+          {
+            "key": "after:trackArt",
+            "label": "Track art",
+            "state": "bg in",
+            "durationMsRounded": null,
+            "text": "173 KB / 173 KB"
+          }
+        ],
+        "timeOrigin": 1790787267018.12,
+        "sampledAtMs": 3468.375,
+        "navigation": {
+          "startTimeMs": 0,
+          "workerStartMs": 1002.579999923706,
+          "fetchStartMs": 1002.6399998664856,
+          "responseStartMs": 1003.1399998664856,
+          "responseEndMs": 1003.9949998855591,
+          "domInteractiveMs": 1016.960000038147,
+          "domContentLoadedEventStartMs": 1016.960000038147,
+          "domContentLoadedEventEndMs": 1016.9800000190735,
+          "loadEventEndMs": 1017.8049998283386,
+          "transferSize": 0
+        },
+        "marks": [
+          {
+            "name": "render:ctor",
+            "startTimeMs": 1065.2799997329712
+          },
+          {
+            "name": "render:prepare:art:start",
+            "startTimeMs": 1654.8150000572205
+          },
+          {
+            "name": "render:prepare:hero:bike",
+            "startTimeMs": 1655.6349997520447
+          },
+          {
+            "name": "render:prepare:hero:rider",
+            "startTimeMs": 1664.0999999046326
+          },
+          {
+            "name": "render:prepare:lighting",
+            "startTimeMs": 1758.960000038147
+          },
+          {
+            "name": "render:prepare:post:create",
+            "startTimeMs": 1759.869999885559
+          },
+          {
+            "name": "render:prepare:materials",
+            "startTimeMs": 2109.534999847412
+          },
+          {
+            "name": "render:prepare:hero:gltf",
+            "startTimeMs": 2605.2699999809265
+          },
+          {
+            "name": "render:prepare:art:settled",
+            "startTimeMs": 2605.460000038147
+          },
+          {
+            "name": "render:prepare:shaders",
+            "startTimeMs": 2961.744999885559
+          },
+          {
+            "name": "render:prepare:firstframe:post",
+            "startTimeMs": 3042.619999885559
+          },
+          {
+            "name": "render:prepare:firstframe:heroes",
+            "startTimeMs": 3123.2249999046326
+          },
+          {
+            "name": "render:entry",
+            "startTimeMs": 3154.744999885559
+          }
+        ],
+        "actualRenderer": {
+          "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+          "contextKind": "webgl2"
+        }
+      }
+    },
+    "dump": {
+      "caches": {
+        "rockhop-static-d3893e742c": 104,
+        "rockhop-immutable": 47,
+        "rockhop-audio": 0,
+        "rockhop-shell-45bc55d8-8d8faed514-next": 4
+      },
+      "entries": 155,
+      "models": 40,
+      "assets": 7,
+      "fonts": 5,
+      "art": 98,
+      "usage": 38964224,
+      "version": {
+        "type": "VERSION",
+        "build": "45bc55d8-8d8faed514-next",
+        "caches": [
+          "rockhop-shell-45bc55d8-8d8faed514-next",
+          "rockhop-static-d3893e742c",
+          "rockhop-immutable",
+          "rockhop-audio"
+        ],
+        "entries": 155,
+        "models": 40,
+        "bytes": 37360187
+      }
+    },
+    "wire": {
+      "bytes": 50335,
+      "requests": 14,
+      "byUrl": {
+        "/": 9633,
+        "/sw.js": 40599,
+        "/load-manifest.json": 0,
+        "/index.html": 0,
+        "/offline.html": 0,
+        "/manifest.webmanifest": 0,
+        "/model-catalog.json": 0,
+        "/version.json": 103
+      }
+    },
+    "modelBytes": 0
+  },
+  "checks": [
+    {
+      "id": "offline.cacheAfterFirstLoad",
+      "pass": true,
+      "value": "155 entries · 40 models · 38.79 MB",
+      "note": "need ≥ 14 models, ≥ 5 assets+fonts, ≥ 27 MB; wire 35.60 MB"
+    },
+    {
+      "id": "offline.coldStartPlayable",
+      "pass": true,
+      "value": "100/100 done=true in 2721 ms",
+      "note": "0 origin requests, transferSize 0, workerStart 0.83 ms, crossOriginIsolated true"
+    },
+    {
+      "id": "offline.firstFrame",
+      "pass": true,
+      "value": "canvas / context"
+    },
+    {
+      "id": "offline.worldMapDraws",
+      "pass": true,
+      "value": "tracks: 3D canvas ready, 12/12 levels, ride ready, failure false",
+      "note": "need the shipped 3D island canvas and all twelve level choices with the origin unreachable"
+    },
+    {
+      "id": "offline.inboxQueues",
+      "pass": true,
+      "value": "POST /api/inbox → TypeError: Failed to fetch",
+      "note": "the worker bypasses /api/; the queue itself is src/ui/inbox.ts NoteQueue (unit-tested)"
+    },
+    {
+      "id": "offline.garageSwapsOffline",
+      "pass": true,
+      "value": "10/10 combinations",
+      "note": "Pro locked→bought PASS (1,840→0 Scrap); 0 failed /models/ requests"
+    },
+    {
+      "id": "offline.rideFinishes",
+      "pass": true,
+      "value": "30.3500 s · 2bfe061963ff",
+      "note": "online 30.3500 · 2bfe061963ff"
+    },
+    {
+      "id": "offline.authoredCourseAssets",
+      "pass": true,
+      "value": "2/2 mounted",
+      "note": "C1 tug plus authored harbor/water and full A1 forest must decode, attach and draw after the origin is shut down"
+    },
+    {
+      "id": "offline.noPageErrors",
+      "pass": true,
+      "value": 0
+    },
+    {
+      "id": "offline.slowStart",
+      "pass": true,
+      "value": "2545 ms at 50 kbps / 400 ms RTT",
+      "note": "offline was 2721 ms; limit ×1.6 = 4354 ms; 103 B over the wire"
+    },
+    {
+      "id": "offline.updateSurvives",
+      "pass": true,
+      "value": "40 models kept · 50.3 KB re-fetched",
+      "note": "0 B of models off the wire (must be 0); loader 100/100"
+    }
+  ]
+}
