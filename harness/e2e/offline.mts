@@ -31,7 +31,7 @@ import { encodeJSON } from '../../src/core/replay';
 import { AVAILABLE_RIDER_PRESETS } from '../../src/core/riderPresets';
 import { PRO_PRICE, SCRAP_REWARD } from '../../src/ui/economy';
 import { ROCKHOP_TRACKS } from '../../src/tracks/rockhop';
-import { BOOT_TRACE_INIT, readBootTrace, type BootTrace } from '../lib/boot-trace';
+import { BOOT_TRACE_INIT, assertRequestedBootRenderer, readBootTrace, selectOfflineBrowserBackend, type BootTrace, type OfflineBrowserBackend } from '../lib/boot-trace';
 import { pickGolden } from '../lib/golden';
 import { loadRecording } from '../lib/recording';
 import { DIST_DIR, OUT_DIR, REPO_ROOT } from '../lib/paths';
@@ -50,7 +50,6 @@ export interface OfflineReport {
 
 /** The shipped game's first course: the retired curriculum (b1…) is a lazy `?`-URL dev chunk no offline player has. */
 const GOLDEN_TRACK = 'c1-low-tide';
-const ARGS = ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'];
 const GEOM = { viewport: { width: 430, height: 932 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true } as const;
 /** SwiftShader boots the whole 27 MB in ~15 s; a throttled row needs a lot more rope than that. */
 const BOOT_CAP_MS = 240_000;
@@ -160,7 +159,7 @@ interface BootRead {
 }
 
 /** Navigate and sample the loader (the same two painted integers `boot.mts` reads) until it leaves. */
-async function bootPage(ctx: BrowserContext, url: string, errors: string[], capMs = BOOT_CAP_MS): Promise<{ page: Page; read: BootRead }> {
+async function bootPage(ctx: BrowserContext, url: string, errors: string[], backend: OfflineBrowserBackend, phase: string, capMs = BOOT_CAP_MS): Promise<{ page: Page; read: BootRead }> {
   const page = await ctx.newPage();
   await page.addInitScript(BOOT_TRACE_INIT);
   page.on('pageerror', (e) => errors.push(e.message));
@@ -193,7 +192,14 @@ async function bootPage(ctx: BrowserContext, url: string, errors: string[], capM
     last = s;
     await page.waitForTimeout(100);
   }
-  return { page, read: { leaveMs, download: last.d, setup: last.s, done: last.done, failed: last.err, errors, trace: await readBootTrace(page) } };
+  const trace = await readBootTrace(page);
+  try {
+    assertRequestedBootRenderer(backend, trace?.actualRenderer ?? null, phase);
+  } catch (error) {
+    await ctx.close();
+    throw error;
+  }
+  return { page, read: { leaveMs, download: last.d, setup: last.s, done: last.done, failed: last.err, errors, trace } };
 }
 
 interface CacheDump {
@@ -262,11 +268,13 @@ async function replayGolden(page: Page, json: string): Promise<{ hash: string; f
 // ---------------------------------------------------------------------------------------------------
 
 export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string; distDir?: string } = {}): Promise<OfflineReport> {
+  const browserBackend = selectOfflineBrowserBackend();
   const log = (m: string): void => {
     if (opts.verbose) console.log(`    ${m}`);
   };
   const checks: OfflineCheck[] = [];
   const measured: Record<string, unknown> = {};
+  measured['browserBackend'] = { requested: browserBackend.backend, platform: process.platform, launchArgs: browserBackend.args };
   const check = (id: string, pass: boolean, value: OfflineCheck['value'], note?: string): void => {
     checks.push({ id, pass, value, ...(note ? { note } : {}) });
     console.log(`  ${pass ? 'PASS' : 'FAIL'} ${id.padEnd(30)} ${String(value)}${note ? `  ${note}` : ''}`);
@@ -291,7 +299,7 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
   const server = new CountingServer(distDir);
   const url = (await server.start()) + '/';
   log(`server ${url}`);
-  const open = (offline: boolean): Promise<BrowserContext> => chromium.launchPersistentContext(profile, { headless: true, args: ARGS, ...GEOM, offline });
+  const open = (offline: boolean): Promise<BrowserContext> => chromium.launchPersistentContext(profile, { headless: true, args: browserBackend.args, ...GEOM, offline });
 
   try {
     // ---- 1. ONE online load -------------------------------------------------------------------
@@ -304,7 +312,7 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
         if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
         for (const entry of entries) localStorage.setItem(`rockhop.best.${entry.id}`, JSON.stringify({ time: 60, faults: 0, medal: entry.medal, bike: 'rookie' }));
       }, medalSeed);
-      const { page, read } = await bootPage(ctx, url, onlineErrors);
+      const { page, read } = await bootPage(ctx, url, onlineErrors, browserBackend.backend, 'online cache-fill boot');
       await page.waitForFunction(() => navigator.serviceWorker.controller !== null, null, { timeout: 60_000 }).catch(() => undefined);
       await page.evaluate(() => navigator.serviceWorker.ready.then(() => undefined)).catch(() => undefined);
       await page.waitForTimeout(3000);
@@ -327,7 +335,7 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
     {
       const ctx = await open(true);
       await ctx.setOffline(true);
-      const { page, read } = await bootPage(ctx, url, offErrors);
+      const { page, read } = await bootPage(ctx, url, offErrors, browserBackend.backend, 'cold cached offline boot');
       const wire = server.snapshot();
       const nav = await page
         .evaluate(() => {
@@ -568,7 +576,7 @@ export async function offlineSuite(opts: { verbose?: boolean; stillsDir?: string
     {
       const ctx = await open(false);
       const errs: string[] = [];
-      const { page, read } = await bootPage(ctx, url, errs);
+      const { page, read } = await bootPage(ctx, url, errs, browserBackend.backend, 'post-update boot');
       await page.waitForTimeout(2000);
       const dump = await dumpCache(page);
       const wire = server.snapshot();

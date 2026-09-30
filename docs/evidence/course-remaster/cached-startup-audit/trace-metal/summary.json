@@ -1,0 +1,307 @@
+{
+  "browserBackend": {
+    "requested": "metal",
+    "platform": "darwin",
+    "launchArgs": [
+      "--use-angle=metal",
+      "--enable-webgl",
+      "--ignore-gpu-blocklist"
+    ]
+  },
+  "version": {
+    "build": "1aafc118",
+    "sha": "1aafc11890950f38c23d616832ba6ff7ebe44afe",
+    "time": "2026-09-30T13:43:07.995Z"
+  },
+  "entry": "./assets/index-C2Kngvs9.js",
+  "entrySHA256": "a955c7dd5d1e40931ebd766fc7f5826bf81db46ec4233f0f053c9b9b31ce7dbb",
+  "sameAppAsSoftwareTrace": true,
+  "phases": {
+    "online": {
+      "hostLeaveMs": 3767,
+      "pageLoaderDoneMs": 3439.1850004196167,
+      "pageLoaderRemovedMs": 3739.6450004577637,
+      "actualRenderer": {
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "rows": {
+        "core": 92,
+        "evaluate": 36,
+        "renderer": 19,
+        "physics": 1,
+        "audio": 0,
+        "game": 2,
+        "front": 100,
+        "offlinePack": 401,
+        "track": 155,
+        "heroMeshes": 20,
+        "lighting": 77,
+        "postChain": 105,
+        "materials": 279,
+        "heroModels": 488,
+        "bootArt": 2,
+        "shaders": 1401,
+        "firstFrame": 210,
+        "fonts": 11
+      },
+      "marks": [
+        {
+          "name": "render:ctor",
+          "startTimeMs": 183.0900001525879
+        },
+        {
+          "name": "render:prepare:art:start",
+          "startTimeMs": 845.9050002098083
+        },
+        {
+          "name": "render:prepare:hero:bike",
+          "startTimeMs": 846.875
+        },
+        {
+          "name": "render:prepare:hero:rider",
+          "startTimeMs": 866.3450002670288
+        },
+        {
+          "name": "render:prepare:lighting",
+          "startTimeMs": 943.7750000953674
+        },
+        {
+          "name": "render:prepare:post:create",
+          "startTimeMs": 1048.8450002670288
+        },
+        {
+          "name": "render:prepare:materials",
+          "startTimeMs": 1327.9400000572205
+        },
+        {
+          "name": "render:prepare:hero:gltf",
+          "startTimeMs": 1815.6050000190735
+        },
+        {
+          "name": "render:prepare:art:settled",
+          "startTimeMs": 1815.7350001335144
+        },
+        {
+          "name": "render:prepare:shaders",
+          "startTimeMs": 3218.455000400543
+        },
+        {
+          "name": "render:prepare:firstframe:post",
+          "startTimeMs": 3344.9050002098083
+        },
+        {
+          "name": "render:prepare:firstframe:heroes",
+          "startTimeMs": 3428.0200004577637
+        },
+        {
+          "name": "render:entry",
+          "startTimeMs": 3507.080000400543
+        }
+      ],
+      "navigation": {
+        "startTimeMs": 0,
+        "workerStartMs": 0,
+        "fetchStartMs": 0.13000011444091797,
+        "responseStartMs": 7.480000019073486,
+        "responseEndMs": 8.365000247955322,
+        "domInteractiveMs": 47.110000133514404,
+        "domContentLoadedEventStartMs": 47.11500024795532,
+        "domContentLoadedEventEndMs": 47.125,
+        "loadEventEndMs": 47.140000343322754,
+        "transferSize": 9932
+      }
+    },
+    "offline": {
+      "hostLeaveMs": 3533,
+      "pageLoaderDoneMs": 3205.125,
+      "pageLoaderRemovedMs": 3505.5,
+      "actualRenderer": {
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "rows": {
+        "core": 17,
+        "evaluate": 36,
+        "renderer": 13,
+        "physics": 1,
+        "audio": 5,
+        "game": 41,
+        "front": 74,
+        "offlinePack": 255,
+        "track": 153,
+        "heroMeshes": 23,
+        "lighting": 70,
+        "postChain": 1,
+        "materials": 281,
+        "heroModels": 483,
+        "bootArt": 8,
+        "shaders": 1413,
+        "firstFrame": 287,
+        "fonts": 11
+      },
+      "marks": [
+        {
+          "name": "render:ctor",
+          "startTimeMs": 96.5149998664856
+        },
+        {
+          "name": "render:prepare:art:start",
+          "startTimeMs": 627.789999961853
+        },
+        {
+          "name": "render:prepare:hero:bike",
+          "startTimeMs": 628.664999961853
+        },
+        {
+          "name": "render:prepare:hero:rider",
+          "startTimeMs": 650.6799998283386
+        },
+        {
+          "name": "render:prepare:lighting",
+          "startTimeMs": 720.4899997711182
+        },
+        {
+          "name": "render:prepare:post:create",
+          "startTimeMs": 721.4249997138977
+        },
+        {
+          "name": "render:prepare:materials",
+          "startTimeMs": 1002.0699996948242
+        },
+        {
+          "name": "render:prepare:hero:gltf",
+          "startTimeMs": 1485.5049996376038
+        },
+        {
+          "name": "render:prepare:art:settled",
+          "startTimeMs": 1485.6499996185303
+        },
+        {
+          "name": "render:prepare:shaders",
+          "startTimeMs": 2906.710000038147
+        },
+        {
+          "name": "render:prepare:firstframe:post",
+          "startTimeMs": 3116.6449999809265
+        },
+        {
+          "name": "render:prepare:firstframe:heroes",
+          "startTimeMs": 3193.585000038147
+        },
+        {
+          "name": "render:entry",
+          "startTimeMs": 3223.585000038147
+        }
+      ],
+      "navigation": {
+        "startTimeMs": 0,
+        "workerStartMs": 0.5999999046325684,
+        "fetchStartMs": 22.949999809265137,
+        "responseStartMs": 23.984999656677246,
+        "responseEndMs": 25.230000019073486,
+        "domInteractiveMs": 30.545000076293945,
+        "domContentLoadedEventStartMs": 30.549999713897705,
+        "domContentLoadedEventEndMs": 30.55999994277954,
+        "loadEventEndMs": 39.894999980926514,
+        "transferSize": 0
+      }
+    },
+    "updateBoot": {
+      "hostLeaveMs": 4223,
+      "pageLoaderDoneMs": 3812.4500002861023,
+      "pageLoaderRemovedMs": 4113.570000171661,
+      "actualRenderer": {
+        "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+        "contextKind": "webgl2"
+      },
+      "rows": {
+        "core": 7,
+        "evaluate": 28,
+        "renderer": 9,
+        "physics": 1,
+        "audio": 53,
+        "game": 21,
+        "front": 22,
+        "offlinePack": 293,
+        "track": 120,
+        "heroMeshes": 73,
+        "lighting": 1,
+        "postChain": 3,
+        "materials": 318,
+        "heroModels": 469,
+        "bootArt": 6,
+        "shaders": 1209,
+        "firstFrame": 158,
+        "fonts": 11
+      },
+      "marks": [
+        {
+          "name": "render:ctor",
+          "startTimeMs": 1053.789999961853
+        },
+        {
+          "name": "render:prepare:art:start",
+          "startTimeMs": 1564.4900002479553
+        },
+        {
+          "name": "render:prepare:hero:bike",
+          "startTimeMs": 1568.3700003623962
+        },
+        {
+          "name": "render:prepare:hero:rider",
+          "startTimeMs": 1637.1600003242493
+        },
+        {
+          "name": "render:prepare:lighting",
+          "startTimeMs": 1637.9900002479553
+        },
+        {
+          "name": "render:prepare:post:create",
+          "startTimeMs": 1641.215000152588
+        },
+        {
+          "name": "render:prepare:materials",
+          "startTimeMs": 1959.4950003623962
+        },
+        {
+          "name": "render:prepare:hero:gltf",
+          "startTimeMs": 2428.1150002479553
+        },
+        {
+          "name": "render:prepare:art:settled",
+          "startTimeMs": 2428.25
+        },
+        {
+          "name": "render:prepare:shaders",
+          "startTimeMs": 3643.510000228882
+        },
+        {
+          "name": "render:prepare:firstframe:post",
+          "startTimeMs": 3722.720000267029
+        },
+        {
+          "name": "render:prepare:firstframe:heroes",
+          "startTimeMs": 3801.095000267029
+        },
+        {
+          "name": "render:entry",
+          "startTimeMs": 3863.085000038147
+        }
+      ],
+      "navigation": {
+        "startTimeMs": 0,
+        "workerStartMs": 1003.2699999809265,
+        "fetchStartMs": 1003.3150000572205,
+        "responseStartMs": 1003.7300000190735,
+        "responseEndMs": 1004.3800001144409,
+        "domInteractiveMs": 1009.5550003051758,
+        "domContentLoadedEventStartMs": 1009.5599999427795,
+        "domContentLoadedEventEndMs": 1009.579999923706,
+        "loadEventEndMs": 1010.4050002098083,
+        "transferSize": 0
+      }
+    }
+  },
+  "limits": "One hardware-qualified normal-app shared-host trace, same immutable app as software-configured trace. This corrects benchmark attribution; no product startup code change or phone speed improvement. Shader timings are not repeat-run controlled before/after measurements."
+}

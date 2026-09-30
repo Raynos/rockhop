@@ -57,3 +57,35 @@ persistent-context suite honor an explicit backend, save/verify the actual
 renderer, and run the same frozen normal-app flow once on hardware. Retain
 the portable software gate and all thresholds. No product optimization or
 phone speed improvement has landed.
+
+## Hardware-qualified normal cached boot
+
+The persistent-context test now honors an explicit macOS Metal request,
+records `window.__render.stats()` for each normal boot, and refuses a
+missing/software renderer. Default portable runs keep their original
+SwiftShader flags. No game startup source or gate limit changed.
+[Full hardware report](trace-metal/report.json) and
+[immutable-source/phase summary](trace-metal/summary.json).
+
+All three boots report WebGL2 through **ANGLE Metal, Apple M5 Max**. The
+app entry SHA-256 is identical to the earlier software-configured trace.
+The cold cached offline boot removes its loader at **3,505.5 ms** on the
+page clock; the host observes **3,533 ms**. It performs zero origin
+requests and transfers zero navigation bytes. Its loader rows measure
+**255 ms** cached pack work, **13 ms** renderer construction, **153 ms**
+first-track preparation, **281 ms** procedural materials, **483 ms** hero
+models, **1,413 ms** shader preparation and **287 ms** first-frame work.
+Online fill observes 3,767 ms; post-update boot observes 4,223 ms.
+
+The same **11/11** checks pass: the twelve-level map, real 1,840→0 Scrap
+purchase, ten offline outfit/bike combinations, exact 30.35-second ride
+and `2bfe061963ffb058` hash, owned C1/A1 art, and zero model bytes fetched
+after update. The first-frame row is 287 ms versus 5,827 ms in the earlier
+software-configured run. This is a backend comparison on a shared host,
+not an isolated speed optimization or an iPhone result. Shader compilation
+is now the largest declared hardware step. Retain prewarm correctness and
+collect the physical landscape phone trace before changing its scheduling.
+
+Command: `TRIALS_BROWSER_BACKEND=metal pnpm exec tsx harness/e2e/offline.mts --dist=<same frozen app>`; launch flags and actual renderer are stored in the report. The original 12.479-second observation was untraced and software-configured; its exact causes remain unmeasured.
+
+Parent backend regression checks (two tests), harness typecheck/scoped lint and the required [third-round host partial gate](trace-metal/round-gate.json) pass **14/14** for cold boot, exact Rookie/Pro clear, crash, instant restart and unchanged 697.51 KiB / 700 KiB player bundle. This partial hook-based gate supplements the normal offline trace; it remains distinct from a full release or phone gate.
