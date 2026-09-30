@@ -1,0 +1,275 @@
+{
+  "status": "ISOLATED STATIC COMPARISON; no gameplay or art acceptance",
+  "engine": "trellis",
+  "input": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/trial1-frozen/head.glb",
+  "inputSHA256": "655431716490110145bda1cd0db0239dce344db2364d7aac9730ab3aa78ceae5",
+  "inputSHA256After": "655431716490110145bda1cd0db0239dce344db2364d7aac9730ab3aa78ceae5",
+  "rendererSHA256": "5758cbf4fa0ffa89a330d65400419e85a397def56d444f86ee8199fe17d55a0b",
+  "derivedFrom": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/search-v1/render_raw.py",
+    "sha256AtDerivation": "38da920203ac1f1b7e9cfb085eb6783702e5c4487c710a6022768fdd5658ddae"
+  },
+  "blender": "5.2.1 LTS",
+  "wallSeconds": 6.09,
+  "triangles": 982272,
+  "visibleMeshes": [
+    "UNACCEPTED dense-projected compact head"
+  ],
+  "excludedInvisibleMeshes": [],
+  "alignment": {
+    "commonFront": "Blender -Y",
+    "zRotationDegrees": 0,
+    "xRotationDegrees": 0,
+    "rootObjects": [
+      "UNACCEPTED dense-projected compact head"
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        1.862645149230957e-09
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "animationPolicy": "imported rest/bind pose; actions disabled, NLA muted, bone matrix_basis identity",
+  "armatures": [],
+  "boundsAfterAlignmentBeforeNormalization": [
+    [
+      -0.29612964391708374,
+      -0.2874404489994049,
+      -0.5000379681587219
+    ],
+    [
+      0.30761539936065674,
+      0.3098272383213043,
+      0.36500000953674316
+    ]
+  ],
+  "boundsMethod": "evaluated visible meshes only",
+  "uniformScale": 1.9295196229771312,
+  "normalizationTranslation": [
+    0.0018313649343326688,
+    -0.028417404741048813,
+    0.9648330807685852
+  ],
+  "displayHeight": 1.8,
+  "orthoScale": 2.15,
+  "framingPolicy": "fixed dense source bounds and scale; retained face does not grow when scalp/base is shortened",
+  "lights": [
+    {
+      "name": "Key",
+      "position": [
+        3,
+        -4,
+        4
+      ],
+      "powerWatts": 600,
+      "size": 4
+    },
+    {
+      "name": "Fill",
+      "position": [
+        -3,
+        -2,
+        2.5
+      ],
+      "powerWatts": 350,
+      "size": 4
+    },
+    {
+      "name": "Rim",
+      "position": [
+        1,
+        3,
+        3
+      ],
+      "powerWatts": 450,
+      "size": 3
+    }
+  ],
+  "world": {
+    "rgb": [
+      0.16,
+      0.16,
+      0.16
+    ],
+    "strength": 0.65
+  },
+  "resolution": [
+    512,
+    768
+  ],
+  "samples": 12,
+  "backend": "Cycles CPU",
+  "viewTransform": "AgX",
+  "materialMode": "neutral-gray",
+  "materialChanges": [
+    {
+      "mesh": "UNACCEPTED dense-projected compact head",
+      "replacedMaterials": [
+        "Gray inspection only"
+      ]
+    }
+  ],
+  "views": [
+    {
+      "frame": 0,
+      "yaw": 0.0,
+      "file": "0000.png",
+      "sha256": "769f7dca55adeb361e2fddf390717bf605c8fafc3ead6ca7bd0a3257e12bbdcf",
+      "wallSeconds": 1.252,
+      "cameraMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.8999999761581421
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "frame": 1,
+      "yaw": 45.0,
+      "file": "0001.png",
+      "sha256": "8d53f3f80144fe4cc582f770ad4bb504c71821f0954aaeadfcd8f03e132299d8",
+      "wallSeconds": 1.223,
+      "cameraMatrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.8284270763397217
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.8284270763397217
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          0.8999999761581421
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "frame": 2,
+      "yaw": 90.0,
+      "file": "0002.png",
+      "sha256": "0efa412cc4539b4fc88b3cce1032f0cde4354b63a40df55666e04879505fe5fb",
+      "wallSeconds": 1.258,
+      "cameraMatrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.8999999761581421
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "frame": 3,
+      "yaw": 180.0,
+      "file": "0003.png",
+      "sha256": "da6a460840913ccb6a5950cdf18a584a486c6ebfc7b038ce8eee7fa13c67badb",
+      "wallSeconds": 1.25,
+      "cameraMatrix": [
+        [
+          -1.0,
+          -1.509957598955225e-07,
+          1.5099581673894136e-07,
+          4.898587410340671e-16
+        ],
+        [
+          1.5099580252808664e-07,
+          1.6292069915380125e-07,
+          1.0,
+          4.0
+        ],
+        [
+          -1.5099578831723193e-07,
+          1.0,
+          -1.6292068494294654e-07,
+          0.8999999761581421
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "limits": [
+    "Source GLB bytes are unchanged; normalization and alignment affect display only.",
+    "Native PBR mode makes no material edits; gray diagnostic temporarily replaces visible materials.",
+    "Baseline production bind/rest pose differs from reference A-pose; anatomy and pose are not equivalent.",
+    "Engine orientation defaults must be visually checked for each new export.",
+    "Static views do not verify rig quality, animation, gameplay or acceptance.",
+    "Elapsed time can include concurrent host work; this is not a performance benchmark."
+  ]
+}

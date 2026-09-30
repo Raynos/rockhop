@@ -1,0 +1,32 @@
+{
+  "status": "UNACCEPTED first corrective trial; gray review before bake",
+  "source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz",
+  "sourceSHA256": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+  "sourceSHA256After": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+  "scriptSHA256": "f20bf36869f8d8bb1185f3a8aaa566b495aad8c4b8861e6bc3bacfc30a4431ed",
+  "blender": "5.2.1 LTS",
+  "vertices": 491521,
+  "faces": 982272,
+  "angles": 768,
+  "rows": 640,
+  "raysMissed": 148,
+  "raysMissingOutsideScalp": 112,
+  "method": "dense BVH outer surface projection + continuous analytic scalp",
+  "scalp": {
+    "xRadius": 0.215,
+    "zRadius": 0.245,
+    "yRadius": 0.325,
+    "centerNativeY": 0.04,
+    "centerNativeZ": -0.025
+  },
+  "boundaryEdges": 768,
+  "nonmanifoldEdges": 0,
+  "openBoundary": "single base loop at nativeY=-.31, for body join",
+  "wallSeconds": 7.451240666210651,
+  "limits": [
+    "Cylindrical projection cannot preserve folded ear undercuts.",
+    "Missing non-scalp rays require visual review; no inferred pass.",
+    "Face surface sampled at finite grid resolution, not untouched triangles.",
+    "No UVs/detail/PBR bake, rig, neck join, or game readiness."
+  ]
+}

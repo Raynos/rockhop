@@ -1,0 +1,36 @@
+{
+  "status": "FAILED parent geometry judgment: residual curls, beard pits/spikes, compressed ears",
+  "vertices": 491521,
+  "faces": 982272,
+  "boundaryEdges": 768,
+  "boundaryVertices": 768,
+  "boundaryDegreeExactlyTwo": true,
+  "boundaryNativeYRange": [
+    -0.3100000023841858,
+    -0.3100000023841858
+  ],
+  "nonmanifoldEdges": 0,
+  "nearZeroAreaFaces": 0,
+  "sourceSHA256": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+  "outputSHA256": {
+    "head.glb": "655431716490110145bda1cd0db0239dce344db2364d7aac9730ab3aa78ceae5",
+    "head.npz": "3022e687a98240014e2a2130a2589dc0ec7a5bbaf55ebecc1a35eddf1a3b3312",
+    "head.blend": "1a80641a0c44b6112768b2626c7bed48c439cf2fdc0b20aef3c40d2f97ad67ad"
+  },
+  "visibleDefects": [
+    "Curly fringe and nape remnants below provisional contour.",
+    "Radial FDG discontinuities create beard pits/spikes.",
+    "Ear projection compresses undercuts.",
+    "Scalp is a plain smooth mass, no short-hair texture yet."
+  ],
+  "limitations": [
+    "Topology counts do not establish anatomical quality.",
+    "Single base boundary is intentional, awaiting parent body join.",
+    "No texture bake, neck integration, rig or motion pass."
+  ],
+  "parentJudgment": {
+    "accepted": false,
+    "failedCleanupAttempts": 1,
+    "next": "one source-topology scaffold/subdivision/shrinkwrap attempt, explicit semantic scalp stitch; no bake before gray judgment"
+  }
+}

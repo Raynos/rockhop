@@ -68,3 +68,14 @@ verified against source/renderer hashes. Dense display changes axes only,
 
 Limits: Independent bounds normalization is recorded, PBR only on reduced
 export. Facial/source defects remain; no cleanup, join, rig or motion pass.
+
+Finding: Parent rejects first radial head cleanup for retained curls, severe
+beard pits/spikes and compressed ears. Good edge counts are not appearance
+acceptance; use one source-topology scaffold alternative before textures.
+
+Validation: Four actual gray views inspected. Immutable recipe matches
+frozen runtime; source SHA unchanged.982,272faces,0nonmanifold edges and
+one768-edge base boundary verified; dense surgical preflight is not reusable.
+
+Limits: No texture bake, accepted head/body join or rig. Trial1 is a failed
+geometry attempt; provenance rerun did not reset its count.
