@@ -34,3 +34,14 @@ asset_to_glb cleanup/remesh/decimation; no shared worker files changed.
 
 Limits: Stubble in the raster is not clean topology. No new3D generation,
 clean join, rig or motion pass yet. P3/cut failures stay stopped and recorded.
+
+Finding: New Pixal bust attempt1 failed the shared memory bound after texture
+sampling. Stop and retain actual failure; prepare one cache-managed approach.
+
+Validation: Lock-held worker terminated at342.099s, exit-15, peak observed
+anonymous82.2GiB. No raw mesh/GLB; source hashes unchanged. Owned shim
+syntax parsed; installed source confirms stage cache hooks and decode order.
+
+Limits: 10second monitoring allowed an overshoot. Next batch uses1second
+poll/65GiB stop and early stage retention; efficacy unproven. No third
+identical MPS sample after a second memory failure; no character accepted.

@@ -1,0 +1,271 @@
+{
+  "status": "stopped at memory/time bound; retained partial evidence",
+  "accepted": false,
+  "command": [
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+    "-u",
+    "generate_mps.py",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+    "--device",
+    "mps",
+    "--model-path",
+    "/Users/raynos/ml/img2mesh/pixal-view",
+    "--pipeline-type",
+    "1024_cascade",
+    "--steps",
+    "24",
+    "--seed",
+    "42",
+    "--texture-size",
+    "2048",
+    "--native-decimation-target",
+    "100000",
+    "--save-mesh",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/buzz-bust-01/raw.npz",
+    "--output",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/buzz-bust-01/bust.glb"
+  ],
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "lockMethod": "lockf -k",
+  "batchLimitSeconds": 1800,
+  "anonymousLimitGiB": 70,
+  "sourceHashesBefore": {
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/rembg/BiRefNet.py": "b38519546c6bc67fd6f6ce1802ff1e57145417177d5eab722a356f3db681ff5a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e",
+    "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36"
+  },
+  "memorySamples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 24.2,
+      "wiredGiB": 7.2,
+      "freeGiB": 17.9
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 24.2,
+      "wiredGiB": 7.2,
+      "freeGiB": 17.9
+    },
+    {
+      "seconds": 10.06,
+      "anonymousGiB": 29.4,
+      "wiredGiB": 7.2,
+      "freeGiB": 12.5
+    },
+    {
+      "seconds": 20.09,
+      "anonymousGiB": 35.1,
+      "wiredGiB": 7.6,
+      "freeGiB": 0.8
+    },
+    {
+      "seconds": 30.12,
+      "anonymousGiB": 35.2,
+      "wiredGiB": 7.2,
+      "freeGiB": 1.1
+    },
+    {
+      "seconds": 40.16,
+      "anonymousGiB": 36.5,
+      "wiredGiB": 7.1,
+      "freeGiB": 0.1
+    },
+    {
+      "seconds": 50.21,
+      "anonymousGiB": 37.4,
+      "wiredGiB": 7.2,
+      "freeGiB": 0.1
+    },
+    {
+      "seconds": 60.25,
+      "anonymousGiB": 41.8,
+      "wiredGiB": 7.1,
+      "freeGiB": 0.1
+    },
+    {
+      "seconds": 70.3,
+      "anonymousGiB": 48.3,
+      "wiredGiB": 7.6,
+      "freeGiB": 0.1
+    },
+    {
+      "seconds": 80.35,
+      "anonymousGiB": 41.0,
+      "wiredGiB": 15.0,
+      "freeGiB": 4.0
+    },
+    {
+      "seconds": 90.41,
+      "anonymousGiB": 40.9,
+      "wiredGiB": 15.0,
+      "freeGiB": 4.1
+    },
+    {
+      "seconds": 100.46,
+      "anonymousGiB": 40.9,
+      "wiredGiB": 15.0,
+      "freeGiB": 4.1
+    },
+    {
+      "seconds": 110.52,
+      "anonymousGiB": 40.9,
+      "wiredGiB": 15.0,
+      "freeGiB": 4.1
+    },
+    {
+      "seconds": 120.58,
+      "anonymousGiB": 47.5,
+      "wiredGiB": 15.6,
+      "freeGiB": 2.1
+    },
+    {
+      "seconds": 130.63,
+      "anonymousGiB": 45.8,
+      "wiredGiB": 15.6,
+      "freeGiB": 3.8
+    },
+    {
+      "seconds": 140.68,
+      "anonymousGiB": 42.9,
+      "wiredGiB": 27.6,
+      "freeGiB": 2.2
+    },
+    {
+      "seconds": 150.73,
+      "anonymousGiB": 48.9,
+      "wiredGiB": 19.5,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 160.78,
+      "anonymousGiB": 48.9,
+      "wiredGiB": 19.5,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 170.83,
+      "anonymousGiB": 49.8,
+      "wiredGiB": 18.6,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 180.89,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 19.5,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 190.94,
+      "anonymousGiB": 48.6,
+      "wiredGiB": 19.6,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 200.99,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 19.5,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 211.05,
+      "anonymousGiB": 48.6,
+      "wiredGiB": 19.5,
+      "freeGiB": 4.5
+    },
+    {
+      "seconds": 221.09,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 19.4,
+      "freeGiB": 4.6
+    },
+    {
+      "seconds": 231.15,
+      "anonymousGiB": 48.7,
+      "wiredGiB": 19.4,
+      "freeGiB": 4.6
+    },
+    {
+      "seconds": 241.19,
+      "anonymousGiB": 49.6,
+      "wiredGiB": 18.5,
+      "freeGiB": 4.6
+    },
+    {
+      "seconds": 251.24,
+      "anonymousGiB": 48.5,
+      "wiredGiB": 19.4,
+      "freeGiB": 4.8
+    },
+    {
+      "seconds": 261.3,
+      "anonymousGiB": 48.5,
+      "wiredGiB": 23.9,
+      "freeGiB": 0.3
+    },
+    {
+      "seconds": 271.35,
+      "anonymousGiB": 66.2,
+      "wiredGiB": 22.6,
+      "freeGiB": 4.4
+    },
+    {
+      "seconds": 281.4,
+      "anonymousGiB": 65.2,
+      "wiredGiB": 23.5,
+      "freeGiB": 4.4
+    },
+    {
+      "seconds": 291.46,
+      "anonymousGiB": 66.1,
+      "wiredGiB": 22.6,
+      "freeGiB": 4.4
+    },
+    {
+      "seconds": 301.51,
+      "anonymousGiB": 65.2,
+      "wiredGiB": 23.6,
+      "freeGiB": 4.4
+    },
+    {
+      "seconds": 311.55,
+      "anonymousGiB": 66.1,
+      "wiredGiB": 22.9,
+      "freeGiB": 4.1
+    },
+    {
+      "seconds": 321.61,
+      "anonymousGiB": 65.3,
+      "wiredGiB": 23.5,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 331.65,
+      "anonymousGiB": 65.2,
+      "wiredGiB": 23.5,
+      "freeGiB": 4.3
+    },
+    {
+      "seconds": 341.7,
+      "anonymousGiB": 82.2,
+      "wiredGiB": 8.4,
+      "freeGiB": 2.4
+    }
+  ],
+  "sourceHEAD": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+  "sourceDirty": " M extern/mtlgemm/setup.py\n M generate_mps.py\n M pixal3d/pipelines/rembg/BiRefNet.py\n M pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py\n?? extern/o_voxel/third_party/\n",
+  "decodedShape": "raw.npz before installed asset_to_glb cleanup/remesh/decimation",
+  "exitCode": -15,
+  "elapsedSeconds": 342.099,
+  "sourceHashesAfter": {
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/rembg/BiRefNet.py": "b38519546c6bc67fd6f6ce1802ff1e57145417177d5eab722a356f3db681ff5a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e",
+    "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36"
+  },
+  "sourceUnchanged": true,
+  "outputs": {}
+}

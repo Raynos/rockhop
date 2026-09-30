@@ -22,7 +22,8 @@ OUT = LOCALAI / 'runtime/rockhop-rider-search-v1/one-rider-v2/buzz-bust-01'
 REFERENCE = REPO / 'assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png'
 SOURCES = [PORT / 'generate_mps.py', PORT / 'pixal3d/pipelines/rembg/BiRefNet.py',
            PORT / 'pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py',
-           Path('/Users/raynos/ml/img2mesh/pixal-view/pipeline.json'), REFERENCE]
+           Path('/Users/raynos/ml/img2mesh/pixal-view/pipeline.json'), REFERENCE,
+           Path(__file__), Path(__file__).with_name('pixal_cache_worker.py')]
 
 
 def hashes():
@@ -43,7 +44,10 @@ def stop(process):
         process.wait()
 
 
-def worker():
+def worker(attempt):
+    global OUT
+    if attempt == 2:
+        OUT = OUT.with_name('buzz-bust-02')
     OUT.mkdir(parents=True, exist_ok=True)
     assert not (OUT / 'generation.json').exists(), 'Use a fresh numbered experiment'
     before = hashes()
@@ -59,14 +63,18 @@ def worker():
         'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1',
         'PYTORCH_ENABLE_MPS_FALLBACK': '1', 'SPARSE_ATTN_BACKEND': 'naive',
     })
-    command = [str(PYTHON), '-u', 'generate_mps.py', str(REFERENCE),
+    entry = str(Path(__file__).with_name('pixal_cache_worker.py')) if attempt == 2 else 'generate_mps.py'
+    command = [str(PYTHON), '-u', entry, str(REFERENCE),
                '--device', 'mps', '--model-path', '/Users/raynos/ml/img2mesh/pixal-view',
                '--pipeline-type', '1024_cascade', '--steps', '24', '--seed', '42',
-               '--texture-size', '2048', '--native-decimation-target', '100000',
+               '--texture-size', '1024' if attempt == 2 else '2048', '--native-decimation-target', '100000',
                '--save-mesh', str(OUT / 'raw.npz'), '--output', str(OUT / 'bust.glb')]
     record = {'status': 'started', 'accepted': False, 'command': command,
               'lock': str(LOCALAI / '.model.lock'), 'lockMethod': 'lockf -k',
               'batchLimitSeconds': 1800, 'anonymousLimitGiB': 70,
+              'stopAtAnonymousGiB': 65 if attempt == 2 else 70,
+              'memoryPollSeconds': 1 if attempt == 2 else 10, 'attempt': attempt,
+              'adaptation': 'installed stage cache hooks + predecode latent/shape checkpoints; export atlas1024' if attempt == 2 else 'installed CLI unchanged',
               'sourceHashesBefore': before, 'memorySamples': [],
               'sourceHEAD': subprocess.check_output(['git', '-C', str(PORT), 'rev-parse', 'HEAD'], text=True).strip(),
               'sourceDirty': subprocess.check_output(['git', '-C', str(PORT), 'status', '--short'], text=True),
@@ -87,13 +95,13 @@ def worker():
         while process.poll() is None:
             sample = {'seconds': round(time.monotonic() - started, 2), **memory()}
             record['memorySamples'].append(sample)
-            if sample['anonymousGiB'] >= 70 or time.monotonic() >= deadline:
+            if sample['anonymousGiB'] >= record['stopAtAnonymousGiB'] or time.monotonic() >= deadline:
                 record['status'] = 'stopped at memory/time bound; retained partial evidence'
                 stop(process)
                 break
             report.write_text(json.dumps(record, indent=2) + '\n')
             try:
-                process.wait(timeout=10)
+                process.wait(timeout=record['memoryPollSeconds'])
             except subprocess.TimeoutExpired:
                 pass
         record['exitCode'] = process.returncode
@@ -102,7 +110,8 @@ def worker():
     record['sourceUnchanged'] = before == record['sourceHashesAfter']
     record['outputs'] = {p.name: {'bytes': p.stat().st_size,
                          'sha256': hashlib.file_digest(p.open('rb'), 'sha256').hexdigest()}
-                         for p in [OUT / 'raw.npz', OUT / 'bust.glb'] if p.exists()}
+                         for p in [OUT / 'raw.npz', OUT / 'bust.glb', OUT / 'sampled-latents.pt',
+                                   OUT / 'decoded-shape-0.npz'] if p.exists()}
     if record['status'] == 'started':
         record['status'] = 'generated; visual/geometry review pending' if process.returncode == 0 else 'worker failed'
     report.write_text(json.dumps(record, indent=2) + '\n')
@@ -114,12 +123,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--worker', action='store_true')
     parser.add_argument('--preflight', action='store_true')
+    parser.add_argument('--attempt', type=int, choices=[1, 2], default=1)
     args = parser.parse_args()
     if args.preflight:
         assert PYTHON.exists() and all(p.exists() for p in SOURCES)
         print(json.dumps({'sourceHashes': hashes(), 'output': str(OUT), 'memory': memory()}, indent=2))
     elif args.worker:
-        sys.exit(worker())
+        sys.exit(worker(args.attempt))
     else:
         os.execvp('lockf', ['lockf', '-k', str(LOCALAI / '.model.lock'),
-                            str(PYTHON), '-u', str(Path(__file__).resolve()), '--worker'])
+                            str(PYTHON), '-u', str(Path(__file__).resolve()), '--worker',
+                            '--attempt', str(args.attempt)])

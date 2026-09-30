@@ -2,7 +2,7 @@
 
 Status: reference mockups and read-only donor review complete; direction
 approved in asks233–234, autonomous execution delegated. New bust reference
-and bounded generation recipe ready; no new3D generation or assembly yet.
+and bounded generation recipe ready; first new3D batch stopped at a memory overshoot; no mesh or assembly yet.
 Ask232 supersedes the preceding P3-only head-preservation proposal.
 
 ## Hair target
@@ -102,7 +102,10 @@ every10 seconds and work stops at anonymous70GiB or the batch deadline.
 Dense `raw.npz` is saved before asset_to_glb remeshing/decimation; native export
 is separately retained. Worker source HEAD is dirty: relevant file hashes and
 status are recorded before/after, never represented as a clean commit.
-Read-only preflight passes at anonymous24.3GiB; generation has not started.
+Read-only preflight passed at anonymous24.3GiB. [First batch](head/README.md)
+stopped at82.2GiB after texture sampling; no raw mesh/GLB. The10-second
+monitor overshot the limit. One cache-managed retry is prepared with early
+latent/dense checkpoints,1second polling and65GiB stop threshold.
 No static output is promoted into player assets.
 
 ## Required baseline round check

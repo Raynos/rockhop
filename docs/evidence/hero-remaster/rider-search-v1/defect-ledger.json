@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 asks233\u2013234 direction approved; new bust reference/locked generation recipe ready",
+  "status": "checkpoint1 approved direction; first new Pixal bust batch stopped at memory bound; one cache-managed alternative prepared",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -770,12 +770,19 @@
     "hair": "1 buzz cut",
     "approved": true,
     "automatedP3Repairs": "stopped at two failures",
-    "new3DGeneration": "not started; reference and bounded recipe ready",
+    "new3DGeneration": "attempt1 stopped at decode memory overshoot; no mesh; attempt2 cache-managed recipe ready",
     "oldProductionDonorAllowed": false,
     "evidence": "../one-rider-v2/README.md",
     "approvalAsks": [
       233,
       234
     ]
+  },
+  "oneRiderV2Bust": {
+    "failedBatches": 1,
+    "technique": "Pixal MPS1024-cascade new buzz bust",
+    "failure": "post-texture sampling decode memory overshoot82.2GiB; no source mesh produced",
+    "evidence": "../one-rider-v2/head/attempt1/generation.json",
+    "next": "one cache-managed attempt, early retained latents/decoded shape,1second poll65GiB stop; second memory failure ends technique"
   }
 }
