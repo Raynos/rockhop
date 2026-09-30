@@ -61,28 +61,48 @@ host; elapsed capture time under concurrency is not a performance result.
   and the mandatory third-round ship gate. Do not rerun passed suites merely
   to accumulate evidence.
 
-## Progress measures · 2026-09-30
+## Current progress · focused scope, 2026-09-30
 
-- **Full-plan effort: estimated 20–25% complete.** This is a planning judgment, not a counted gate. The challenge rejection/reference baselines, 1,840-Scrap economy, purchase/access flow and performance readout are implemented. The differentiated Pro package has exact full-course replay and passive-clear evidence; the integrated partial boot/clear/crash/restart gate passes, while full release and human calibration gates remain open. Human difficulty/medal tuning, most authored course art and full device qualification remain.
-- **Graphics effort: estimated 5–10% complete.** Accepted surface, prop and landmark improvements are incremental. The Blender C1 tug and detailed harbor are accepted as bounded played model improvements; the A1 botanical forest is accepted as a bounded played improvement. Four complete biome standards and most course-specific scenery remain.
-- **Finished courses: 0/12, or 0%.** No complete gameplay/art/audio/reward/recovery slice has passed all its acceptance gates. Baseline coverage is 12/12; it must not be reported as twelve finished courses.
+| Deliverable | Measured status | Remaining qualification |
+|---|---|---|
+| Four shared biome treatments across twelve courses | **12/12 applied in normal main**; retained full/fault comparisons are indexed below. | Bounded surface/scenery improvements, not twelve complete art approvals. Optional rejected model/forest/far-scene variants remain deferred. |
+| Challenge and bike mechanics | **24 clean bike/course references; 0/72 passive-GO clears** on the differentiated package. Rookie career 1–8, purchased-equipped Pro 9–12. | Human handling, difficulty curve and medal-clock calibration, including the global Pro 0.9 multiplier. |
+| Scrap and Pro integration | Empty-save normal App rides earn **300 + 7×220 = 1,840**, explicit purchase spends to 0 and equipped Pro starts D3; repeat D2 pays 0. | HR-24 measures a new person's actual time/medals to earn Pro. Recorded reference inputs are not a new player. |
+| Highest-impact recovery/UI defects | D2 Buy/Equip/Improve flow, actionable map earning, D3 ore-cart lesson, missing upper-route Diamond result goal and pending-finish reward loss are corrected. | Unbriefed comprehension and physical-phone touch/pacing. |
+| Integrated host checks | Full earlier host gate 31/31, offline 11/11; current career fixes pass boot/clear/crash/one-tick retry. Final filtered release CPU suite 1,553 passes. | A checked deployed SHA, native release gates and real landscape iPhone/Android qualification. Reports identify their actual working-source builds. |
+| Whole-course acceptance | **0/12 signed off**. | Human play, audio, phone pacing and unresolved route anticipation prevent complete approval. |
 
-The [twelve-course before/after board](../evidence/course-remaster/progress-board-2026-09-30/README.md) shows unchanged frames from the saved start-of-remaster baseline and the accepted art captures. It exposes the limited visual delta, including unchanged D3 scenery and S3 cue-only work. The capture tiers differ; the board records this limit and exact video/frame provenance. Re-estimate effort when a complete biome exemplar passes, rather than incrementing it for every small patch.
+The earlier 20–25% total-effort / 5–10% graphics estimates predate the focused
+scope and are **retired**, not updated by counting commits. Shared-kit delivery,
+mechanical coverage and whole-course acceptance are different measures. The
+[focused played-frame board](../evidence/course-remaster/focused-integration/review-board.jpg)
+indexes retained moving comparisons; it does not award acceptance.
 
-## Remaining-time estimate · 2026-09-30
+## Remaining work and schedule · focused scope
 
-**Provisional: 5–10 focused working days of implementation/art iteration,
-plus physical-phone and fresh-player testing. Confidence is low.** This is
-a scheduling estimate, not measured completion velocity or a promise.
-Re-estimate after one whole biome exemplar passes its moving art and
-performance checks; none has passed the complete course bar yet.
+1. Resolve only demonstrated remaining gameplay problems. **S1's optional
+   upper landing still becomes visible after takeoff**; three camera trials
+   failed. Keep the current working route/signs, retain the rejected proof and
+   avoid another blind camera loop. Before signing off Diamond mastery, use
+   unbriefed route attempts to choose one conservative, played correction if
+   the existing cue is insufficient. Mandatory lower-route completion and
+   recorded upper-route reachability are distinct from anticipation.
+2. Run HR-21: three new landscape-phone C1 sessions, at least two clears and
+   one voluntary retry. Run HR-24: two empty-save first-eight careers through
+   the explicit 1,840-Scrap purchase and level 9, or record the 90-minute stop.
+   Use observed failures/medal spread to tune checkpoints/clocks/earning;
+   price and the 1–8 / 9–12 class boundary stay fixed until data warrants change.
+3. Qualify audible balance and sustained landscape iPhone/Android pacing,
+   touch, safe areas, save/reload/offline and recovery on the checked release
+   SHA. HR-22 and the release plan own audio/native/store qualification.
+4. After one bounded correction per demonstrated issue, replay exact inputs
+   and recheck only affected gates. Review the twelve course slices together;
+   archive this plan only when the shared bar passes, never from host coverage.
 
-The remaining work is four shared biome kits applied across twelve existing
-skill arcs, parent full-ride/fault judgement, human difficulty and
-medal calibration, career/reward/replay integration, and device pacing/
-recovery. Human availability can extend the schedule. App-store account and
-publication lead times belong to FINISH_TO_PUBLISH rather than this estimate.
-Prepared source kits do not advance the signed-off course count.
+No reliable calendar ETA follows from the earlier 5–10-day art estimate; that
+estimate belonged to a larger scope. The focused art pass is landed. The next
+scheduling dependency is fresh-player and phone evidence, then measured tuning.
+Do not fill that wait with another asset campaign or optional test framework.
 
 ## Starting point and target
 
@@ -101,7 +121,7 @@ A course counts as finished only when its gameplay, scenery, camera, sound, rewa
 - After Pro physics changes, recalibrate authored medal targets **and** the current global Pro `0.9×` time multiplier in `src/game/rules.ts`. Old D3/S1/S3 Diamond clocks have large spare time while S2 is tight; the new late-game curve must be judged from fresh Pro lines and human attempts.
 - The four late Diamond lines remain optional mastery routes **within Pro stages**. Bronze through Diamond still require real riding, authored route goals, calibrated times and clean runs; no passive clear earns a medal. Store release is free with no ads or real-money purchase.
 
-The [normal-app headless career check](../evidence/pro-career-gate/README.md) now exercises the exact 1,840-Scrap combinations, blocked eight-Bronze purchase, map/Garage action, direct late-course links and retained legacy ownership. Its medals are seeded fixtures; actual player earning, new Pro physics and physical-phone flow remain open.
+The [normal-app career gate](../evidence/pro-career-gate/README.md) exercises specified medal combinations, blocked eight-Bronze purchase, direct late-course links and retained legacy ownership. Its seeded fixtures are now complemented by the [empty-save earned handoff](../evidence/course-remaster/earned-pro-handoff/README.md): actual recorded first-eight finishes award 1,840, purchase/equip Pro and start D3 through normal App flow. Actual unbriefed earning pace and physical-phone flow remain open.
 
 ## Shared production bar
 
@@ -358,4 +378,14 @@ This closes this bounded parallel art pass, not complete-course acceptance.
 
 [Review board](../evidence/course-remaster/focused-integration/review-board.jpg) indexes matched played frames from four retained biome passes. It is a review aid; source films remain the acceptance evidence.
 
-**Next highest-value work:** obtain HR-21 fresh C1 attempts/retry feedback and HR-24 empty-save earned-Pro career runs; qualify sustained landscape physical-phone performance and audio. Tune only demonstrated unfair cues, checkpoint problems or medal/currency pacing. Keep price1840 and Rookie1–8 / purchased-equipped Pro9–12 unchanged until actual earned runs support a change. Do not start another scenery/model campaign or revisit deferred byte/material trials in this focused round. Complete-course count stays0/12 pending the remaining gates.
+## Focused recovery and career integration landed · 2026-09-30
+
+- [Earned normal App handoff](../evidence/course-remaster/earned-pro-handoff/README.md) closes recorded-input earning→purchase→equip→D3, with exact endpoints and repeat/no-award behavior.
+- D2's existing result action now says Improve medals, Buy Pro or Equip Pro and takes the corresponding real path. The underfunded map Earn Scrap action launches an unlocked first-eight course with the lowest earned medal.
+- [D3 ore-cart moving lesson](../../prototypes/d3-pro-landing-lesson-v1/README.md) explains releasing GO/landing level before the first demonstrated Pro passive failure, then restores later optional mastery guidance.
+- [Pending-finish lifecycle proof](../evidence/course-remaster/finish-retry-round-gate/README.md) preserves real PB/medal/Scrap through immediate retry, menu or track replacement; repeats pay0 and replay never awards. Ordinary result delay remains.
+- [Results replay goals](../evidence/course-remaster/result-goals/README.md) name a missing upper-route Diamond requirement and give final S3 a valid replay/split goal. The focused correctness fixes use an explicit 701 KiB player-JS allowance; actual emitted gzip 716,915 B passes. This small reserve does not start another byte-polish loop.
+- Stranger/reflex launch defaults and gate census now agree on the current twelve-course career bikes; retired/wrong-bike reports cannot qualify the current curriculum. Fresh unbriefed difficulty evidence still belongs to people.
+- [Rejected S1 sightline evidence](../../prototypes/s1-landing-sightline-v1/README.md) stays unpromoted. Terrain anticipation is open; do not describe the remaining gates as only administrative/device work.
+
+**Next:** fresh C1 learning/retry, earned-Pro pacing, upper-route anticipation and physical-phone/audio qualification on a checked release. Correct observed defects, then rerun affected evidence. No new scenery/model campaign or deferred variant loop. **0/12 fully signed off.**
