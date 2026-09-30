@@ -1,0 +1,133 @@
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -49,10 +49,11 @@
+   windmillGeometry,
+ } from './props';
+ import type { WorldDetail } from './props';
+-import { buildZoneKit, isZone } from './zones/zoneKit';
++import { buildZoneKit, isZone, zoneGround } from './zones/zoneKit';
+ import { mountCourseAssets, type CourseAssetOwner } from './courseAssets';
+ import { loadC1Harbor } from './zones/c1Harbor';
+ import { a1ForestApplicable, loadA1Forest, removeA1ForestPlaceholders } from './zones/a1Forest';
++import { buildCoastStandard, planCoastStandard, COAST_STANDARD_REPLACE } from './zones/coastStandard';
+
+ /** Art-pack far plate / sky panorama per exterior biome (the ROCKHOP zones' are `plate-<zone>` / `sky-<zone>`). */
+ export const PLATE_ID: Partial<Record<string, string>> = { canyon: 'plate-canyon', nightCity: 'plate-nightcity', coast: 'plate-coast', alpine: 'plate-alpine', quarry: 'plate-quarry', snow: 'plate-snowline' };
+@@ -61,6 +62,7 @@
+ export interface BiomeKit {
+   group: THREE.Group;
+   courseAssets: CourseAssetOwner | undefined;
++  disposeMaps(): void;
+   drawCalls: number;
+   triangles: number;
+   textureBytes: number;
+@@ -749,6 +751,8 @@
+   const lamps: BiomeKit['lamps'] = [];
+   let textureBytes = 0;
+   let courseAssets: CourseAssetOwner | undefined;
++  const mapRetirements: (() => void)[] = [];
++  const coastStandard = authoredCourse && track.def.id === 'c1-low-tide';
+   const profile = track.def.profile;
+   const x0 = track.bounds.minX - 40;
+   const x1 = track.bounds.maxX + 60;
+@@ -847,10 +851,10 @@
+     // the pack: the three parallax silhouette tiers.
+     const plateId = biome.id === 'coast' && track.def.id === 'c1-low-tide' ? 'plate-coast-low-tide' : PLATE_ID[biome.id];
+     const skyId = SKY_ID[biome.id];
+-    const plateTex = plateId ? (art?.texture(plateId, true, true) ?? null) : null;
++    const plateTex = !coastStandard && plateId ? (art?.texture(plateId, true, true) ?? null) : null;
+     const skyTex = skyId ? (art?.texture(skyId, true, true) ?? null) : null;
+-    if (plateTex && skyTex) {
+-      textureBytes += (art!.entry(plateId!)?.bytes ?? 0) + (art!.entry(skyId!)?.bytes ?? 0);
++    if (skyTex && (plateTex || coastStandard)) {
++      textureBytes += (plateTex ? art!.entry(plateId!)?.bytes ?? 0 : 0) + (art!.entry(skyId!)?.bytes ?? 0);
+       // Sky: a 2:1 panorama; 2048 px ≈ 360° of azimuth at this distance, so one repeat per ~2000 m.
+       const sz = -330;
+       const sw = span * 3 + Math.abs(sz) * 2;
+@@ -864,6 +868,7 @@
+       // Far plate: 4:1 strip, interest in the middle band, alpha fades out at the bottom so it
+       // sits on the sky without a hard base line. 700 m of world per repeat keeps the mesas
+       // building-sized; nightCity a little tighter.
++      if (plateTex) {
+       const pz = -200;
+       const pw = span * 3 + Math.abs(pz) * 2;
+       const perRepeat = biome.id === 'nightCity' ? 560 : 720;
+@@ -876,6 +881,7 @@
+       const plate = addPlane(pw, ph, plateMat, midX, plateBase + ph / 2, pz);
+       plate.receiveShadow = false;
+       plate.renderOrder = -2;
++      }
+       // One near silhouette tier keeps the mid-ground depth step (fogged like the props).
+       // Round 9: not for snow — the flat pine strip read as paper cut-outs in front of the
+       // plate; the snow kit puts a row of real conifers at z −30…−44 instead.
+@@ -1006,6 +1012,36 @@
+         void owner.ready.then(() => { if (owner.root.children.length) fallback.visible = false; });
+         courseAssets = owner;
+         group.add(owner.root);
++      }
++      if (coastStandard) {
++        // The complete original kit consumed its RNG before replacement. Preserve
++        // the extracted tug fallback and any geometry used by surviving families.
++        const oldMeshes = zk.meshes.filter(mesh => COAST_STANDARD_REPLACE.meshes.has(mesh.name));
++        const oldBatches = zk.batches.filter(batch => COAST_STANDARD_REPLACE.batches.has(batch.name));
++        zk.meshes.splice(0, zk.meshes.length, ...zk.meshes.filter(mesh => !COAST_STANDARD_REPLACE.meshes.has(mesh.name)));
++        zk.batches.splice(0, zk.batches.length, ...zk.batches.filter(batch => !COAST_STANDARD_REPLACE.batches.has(batch.name)));
++        const keptGeometry = new Set([...zk.meshes.map(mesh => mesh.geometry), ...zk.batches.map(batch => batch.geometry)]);
++        group.traverse(object => {
++          const geometry = (object as THREE.Mesh).geometry;
++          if (geometry) keptGeometry.add(geometry);
++        });
++        const oldGeometry = new Set([...oldMeshes.map(mesh => mesh.geometry), ...oldBatches.map(batch => batch.geometry)]);
++        for (const geometry of oldGeometry) if (!keptGeometry.has(geometry)) geometry.dispose();
++        // Old scatter shadows belong to the removed props, not the new harbor.
++        const removedPositions = new Set(oldBatches.flatMap(batch => batch.items.map(item => `${item.m.elements[12]!.toFixed(3)}:${item.m.elements[14]!.toFixed(3)}`)));
++        const shadows = zk.batches.find(batch => batch.name === 'contactshadow');
++        if (shadows) shadows.items.splice(0, shadows.items.length, ...shadows.items.filter(item => !removedPositions.has(`${item.m.elements[12]!.toFixed(3)}:${item.m.elements[14]!.toFixed(3)}`)));
++        const foam = oldBatches.find(batch => batch.name === 'foam')?.material as THREE.MeshStandardMaterial | undefined;
++        foam?.map?.dispose();
++        foam?.dispose();
++        const standard = buildCoastStandard(planCoastStandard(track, x0, x1), {
++          lib, detail, groundAt: (x, z) => zoneGround('coast', profile, x, z),
++        });
++        meshes.push(...standard.meshes);
++        batches.push(...standard.batches);
++        scroll.push(...standard.scroll);
++        textureBytes += standard.textureBytes;
++        mapRetirements.push(standard.disposeMaps);
+       }
+       meshes.push(...zk.meshes);
+       batches.push(...zk.batches);
+@@ -1781,5 +1817,5 @@
+   }
+   drawCalls -= Math.max(0, built.merged - built.mergedDraws);
+   for (const l of lights) group.add(l);
+-  return { group, courseAssets, drawCalls, triangles, textureBytes, flicker, lights, scroll, fountains, lamps, occluders };
+-}
++  return { group, courseAssets, disposeMaps: () => { for (const retire of mapRetirements) retire(); }, drawCalls, triangles, textureBytes, flicker, lights, scroll, fountains, lamps, occluders };
++}
+--- a/src/render/index.ts
++++ b/src/render/index.ts
+@@ -175,6 +175,7 @@
+   group: THREE.Group;
+   courseAssets: CourseAssetOwner | undefined;
+   courseAssetTextureBytes: number;
++  disposeWorldMaps(): void;
+   obstacles: ObstacleMeshes;
+   gates: Gates;
+   flicker: THREE.MeshStandardMaterial[];
+@@ -1412,6 +1413,7 @@
+       group,
+       courseAssets: kit.courseAssets,
+       courseAssetTextureBytes: 0,
++      disposeWorldMaps: kit.disposeMaps,
+       obstacles,
+       gates,
+       flicker: kit.flicker,
+@@ -2392,6 +2394,7 @@
+     this.retirement.retire(materialPrograms(this.renderer, owned), () => {
+       // Authored ownership includes named GLB materials and embedded textures.
+       w.courseAssets?.dispose();
++      w.disposeWorldMaps();
+       w.group.traverse((o) => {
+       const m = o as THREE.Mesh;
+       if (m.geometry) m.geometry.dispose();
