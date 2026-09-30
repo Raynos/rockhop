@@ -1,0 +1,61 @@
+{
+  "status": "FAILED corrective attempt2; method stopped; no accepted head",
+  "actualCutVertices": 14743,
+  "actualCutFaces": 28758,
+  "boundaryEdges": 1378,
+  "nonmanifoldEdges": 0,
+  "nearZeroAreaFaces": 63,
+  "scaffoldGate": "zero nonmanifold edges; 15 rear-scalp boundary edges before cut",
+  "stitchGate": {
+    "scalpLoops": 19,
+    "baseLoops": 2,
+    "loopSizes": [
+      311,
+      20,
+      5,
+      20,
+      365,
+      11,
+      6,
+      52,
+      17,
+      75,
+      12,
+      7,
+      66,
+      31,
+      18,
+      37,
+      6,
+      23,
+      3,
+      147,
+      146
+    ]
+  },
+  "denseDetailFit": {
+    "performed": false,
+    "errorMeasurement": null,
+    "reason": "Stopped at scalp contour gate before subdivision or fitting"
+  },
+  "sourceSHA256": {
+    "dense": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+    "reduced": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154"
+  },
+  "outputSHA256": {
+    "cut.npz": "66b405d46d8f595715f58df78385db8cae3f573c71ad3997bb25d6177ba2fed4",
+    "cut.glb": "f822741cf52c09fbaceb10d322630f806aa1d6f8ae2c1310960eafa061dac965",
+    "cut.blend": "c56f40d85313ad9b9c97f2d1f5aa33c196863d071f5f669e732565689cf53783"
+  },
+  "exportWarning": "Blender exporter reports mesh invalid; diagnostic only",
+  "visibleDefects": [
+    "No scalp cap: 19 scalp contours prevent one clean sewn boundary.",
+    "Fringe/temple/nape curl remnants remain visible.",
+    "Beard irregularities remain, inherited from original scaffold.",
+    "Two base contours prevent a single intended neck join."
+  ],
+  "limits": [
+    "Neutral-gray diagnostics are the failed cut, not a complete corrected head.",
+    "No bake, new texture, fitted dense face, joined body, rig or moving proof."
+  ]
+}

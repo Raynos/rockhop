@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 14334,
-    "conservativeChargedHoursUpperBound": 3.982,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 20939,
+    "conservativeChargedHoursUpperBound": 5.816,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -789,12 +789,18 @@
     "evidence2": "../one-rider-v2/head/attempt2/generation.json"
   },
   "oneRiderV2HeadCleanup": {
-    "failedFixes": 1,
+    "failedFixes": 2,
     "defect": "compact scalp without curls and natural intact facial/ear geometry",
     "attempt1": "dense radial reconstruction loses undercuts, beard pits/spikes, remaining fringe/nape curls",
     "evidence": "../one-rider-v2/head-cleanup/trial1/verification.json",
     "specificAttempt2": "preserved reduced skin topology scaffold, selective dense-surface facial projection, protected ears/lips, stitched compact scalp",
-    "bakeAllowed": false
+    "bakeAllowed": false,
+    "status": "STOPPED radial reconstruction and automatic source-contour scaffold techniques",
+    "attempt2": "Repaired scaffold cut yields19 scalp contours and2 base loops; no dense fit/cap/bake",
+    "evidence2": "../one-rider-v2/head-cleanup/trial2/verification.json",
+    "specificAlternative": "Explicit authored face/ear/neck cage, deliberate eye/lip rings and ONE scalp boundary; bounded dense facial fitting, no automated contour filling or radial surface redo",
+    "alternativeAuthority": "asks233,234 autonomous parent choice",
+    "alternativeBoundMinutes": 90
   },
   "oneRiderV2GloveCleanup": {
     "failedSetupFixes": 2,

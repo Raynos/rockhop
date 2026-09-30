@@ -1,0 +1,58 @@
+{
+  "status": "UNACCEPTED repaired source scaffold, not dense original",
+  "source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb",
+  "sourceSHA256": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+  "sourceSHA256After": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+  "scriptSHA256": "c7c8cf10e551ebf84a5f848f76e24028500a5d8b8cd6b90d2c4e08383664d4ff",
+  "stages": [
+    {
+      "stage": "raw GLB includes UV/normal splits",
+      "vertices": 112165,
+      "faces": 89653,
+      "boundaryEdges": 103835,
+      "nonmanifoldEdges": 0
+    },
+    {
+      "stage": "position seam weld",
+      "vertices": 41172,
+      "faces": 89653,
+      "boundaryEdges": 48,
+      "nonmanifoldEdges": 7235
+    },
+    {
+      "stage": "remove degenerate and duplicate faces",
+      "vertices": 41170,
+      "faces": 84873,
+      "boundaryEdges": 4160,
+      "nonmanifoldEdges": 3878
+    },
+    {
+      "stage": "remove minimum-area offending nonmanifold faces",
+      "vertices": 41170,
+      "faces": 80791,
+      "boundaryEdges": 7757,
+      "nonmanifoldEdges": 0
+    },
+    {
+      "stage": "close only holes with at most 128 edges",
+      "vertices": 41170,
+      "faces": 83397,
+      "boundaryEdges": 2226,
+      "nonmanifoldEdges": 597
+    },
+    {
+      "stage": "largest connected skin component",
+      "vertices": 38344,
+      "faces": 79832,
+      "boundaryEdges": 273,
+      "nonmanifoldEdges": 250
+    }
+  ],
+  "sourceComponents": 976,
+  "wallSeconds": 0.36537679098546505,
+  "limits": [
+    "Original GLB UVs/textures retained untouched, not copied to this scaffold.",
+    "Small-hole fill can simplify crease anatomy; gray review required.",
+    "No dense fit or scalp stitching yet."
+  ]
+}

@@ -113,3 +113,15 @@ No exported derivative, master, render or rig exists from this trial.
 
 Limits: The explicit branch alternative is not yet constructed or accepted;
 no glove anatomy, wrist deformation or visible contact pass.
+
+Finding: The second head scaffold fails its scalp/neck stitch gate:19 scalp
+contours and2 base loops remain. Stop automatic scaffold contour repair
+with two head failures preserved; authorize one explicit authored-cage route.
+
+Validation: Parent inspected actual four-view cut diagnostics and source
+hashes;14,743vertices/28,758triangles,1,378boundary edges,0nonmanifold edges.
+No dense fitting/cap/bake occurred. Fresh silent WebKit low/high baseline
+clear40.083333333333336s, exact finish bytes, crash/one-tick restart pass.
+
+Limits: No accepted head/neck/rig. Authored-cage feasibility is bounded90min
+and remains within model-stage8h ceiling, presently~5.82h charged.

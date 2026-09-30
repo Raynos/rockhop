@@ -56,3 +56,43 @@ source topology reusable solely because it renders smoothly.
 
 No body join, neck bending, textures, rigging, animation, contacts, gameplay,
 or game readiness is established by this diagnostic.
+
+## Second corrective outcome: stop this approach
+
+The parent rejected trial 1 and selected repaired source topology scaffolding
+for one second bounded correction. The source reduced GLB also contains
+duplicate/internal triangles after positional seam welding. Counts are
+preserved in the [stage reports](trial2/trial2-scaffold--scaffold-report.json).
+Minimum-area offending-face removal reached zero nonmanifold edges, but
+MeshLab small-hole fill reintroduced them. That fill was abandoned. Explicit
+simple-boundary-loop fills and zero-displacement disconnected-vertex-fan
+splits produced a scaffold with zero nonmanifold edges and one residual
+15-edge rear-hair defect, located within the intended scalp removal region.
+These edits are scaffolding preparation, not evidence of a finished face.
+
+The actual nonplanar scalp cut then produced **19 scalp loops and two base
+loops**. The stitch gate stopped before creating a cap, selective subdivision,
+dense fitting, or texture bake. [Actual four-view cut diagnostics](trial2/gray-four-views.jpg)
+show intact source face/ear shape but remaining temple/nape curls and beard
+irregularities; the scalp is open. The diagnostic GLB exporter warned that
+the mesh is invalid. Neither its appearance nor its zero nonmanifold-edge
+count is an acceptance claim. [Verification](trial2/verification.json)
+records the raw cut topology and explicitly absent dense-fit error metric.
+
+Two corrective approaches have now failed. No third radial reconstruction,
+automated contour-fill iteration, or cosmetic bake is queued. All dense,
+reduced, trial 1, and trial 2 sources remain retained unchanged. Trial 2
+runtime masters live under the same ignored `head-cleanup/` root in
+`trial2-scaffold`, `trial2-finalized`, `trial2-split`, `trial2-sewn`,
+`trial2-head`, and `trial2-diagnostic`; the latter is the failed cut only.
+
+The specific next method would be authored face/ear/neck retopology with a
+deliberately laid single scalp boundary, rather than recovering a boundary
+from the damaged source triangle soup. Keep existing source folded-ear/lip
+patches as protected geometry references. Lay an explicit quad cage around
+eyelid and lip rings, nose wings, cheek/jaw flow, the full neck, and one
+continuous scalp ring. Fit only verified skin patches to the retained dense
+surface with bounded displacement; do not fit the scalp to curls or the jaw
+to detached beard dust. The parent must choose a feasible bounded version
+within the remaining model-stage time before work starts. This is a proposed
+different method, not an uncounted third repair or an accepted deliverable.
