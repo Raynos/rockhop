@@ -184,3 +184,16 @@ accepted dense fit maximum3.926mmnative; narrow fit metric is not a pass.
 
 Limits: No accepted head, neck join, texture or rig. Fresh CC0 MPFB cage
 capability is read-only; original90min feasibility deadline remains.
+
+Finding: The second colour-seeded collar cut still leaves old hair/rim
+fragments and creates two rear hood holes. Stop graph cutting after two
+failed fixes; explicitly rebuild the local collar/rim instead.
+
+Validation: Parent reviewed source/both failures in matched PBR and gray;
+24 frame hashes verified. Trial2 has three125/41/33-edge boundaries and
+zero nonmanifold edges. Fresh silent low/high WebKit baseline clears in
+40.083333333333336s with byte-identical finish,0faults, then crash/restart
+in one tick and1ms; no browser errors.
+
+Limits: Four protected seed faces were lost. No clean collar, new head
+attachment, deformation, character or rig pass. Player assets untouched.

@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 preserved Pixal targeted head cleanup attempt1 rejected; one scaffold alternative authorized",
+  "status": "Checkpoint1 unaccepted: collar graph cut stopped; fresh anatomical head and neutral hand review ongoing",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 20939,
-    "conservativeChargedHoursUpperBound": 5.816,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 23933,
+    "conservativeChargedHoursUpperBound": 6.648,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -822,12 +822,15 @@
     }
   },
   "oneRiderV2CollarSelection": {
-    "failedFixes": 1,
+    "failedFixes": 2,
     "technique": "PBR-colour-seeded nonplanar face graph cut",
-    "failure": "Retains rejected old dark nape/hair and malformed skin rim, drops5protected seeds",
-    "evidence": "../one-rider-v2/collar/trial1/verification.json",
+    "failure": "Trial2 retains gold spike/rim fragments, opens two unintended rear hood loops and drops4protected seeds",
+    "evidence": "../one-rider-v2/collar/trial2/verification.json",
     "specificAttempt2": "Explicit spatial hood/skin collar landmarks and preserved triangle boundary",
-    "acceptedJoin": false
+    "acceptedJoin": false,
+    "stoppedTechnique": "PBR-colour-seeded nonplanar face graph cut",
+    "specificAlternative": "Explicit local collar/hood rim retopology on reviewed garment anchors; preserve source outside collar region",
+    "alternativeAuthority": "asks233,234 autonomous parent choice"
   },
   "oneRiderV2AuthoredHead": {
     "startedUTC": "2026-09-30T23:01:54Z",
