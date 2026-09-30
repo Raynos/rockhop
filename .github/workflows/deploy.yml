@@ -82,6 +82,14 @@ jobs:
         if: steps.live.outputs.current != 'true'
         run: pnpm run lint
 
+      - name: Audio decoder test dependency
+        if: steps.live.outputs.current != 'true'
+        run: |
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+
       # Everything except the wall-clock budgets (µs/tick, synth CPU per frame): a shared runner reads them
       # 2.5–4× over (probe run 35776724665), so they are measured on real hardware (pnpm harness:bench), not
       # here. `ffmpeg resolution` checks the local capture toolchain, which the runner does not have. The

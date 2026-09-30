@@ -2,7 +2,7 @@
 
 - Never your own browser. Headless harness only.
 - All testing is silent. Under automation (`navigator.webdriver`) the game opens no AudioContext; never pass `?audible=1` in a run the user can hear.
-- One checkout, no worktrees. Retire subagents by 150 responses.
+- Work only on `main`; no branches or worktrees. Retire subagents by 150 responses.
 - Builders own paths and verify; only the parent judges.
 - Evidence is played, never posed — judge clips, not stills.
 - The metric is attempts-to-clear and restart latency, from a bot and a stranger.

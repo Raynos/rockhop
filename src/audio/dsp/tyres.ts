@@ -3,20 +3,20 @@
  * Surface index order matches params.SURFACES:
  *   0 dirt, 1 wood, 2 metal, 3 concrete, 4 rubber, 5 grate, 6 stone, 7 snow
  */
-import { Biquad, NoiseColour, NoiseRng, TWO_PI, clamp, dbToGain, smoothCoef } from './util';
+import { Biquad, NoiseColour, NoiseRng, TWO_PI, clamp, dbToGain, smoothCoef, sineCycle } from './util';
 
 /** base gain dB at 10 m/s per surface */
 const BASE_DB = [-18, -20, -22, -20, -24, -19, -19, -20];
 /** grain rate per second at 0 m/s and per m/s, grain length s, grain centre Hz, Q */
 const GRAINS: readonly (readonly [number, number, number, number, number] | null)[] = [
-  [25, 6, 0.003, 1800, 2], // dirt crackle
+  [18, 7, 0.006, 1600, 1.3], // loose grit, soft grains
+  [4, 1.2, 0.012, 460, 2.8], // grain of flexible wood beneath the joint thuds
+  [7, 2, 0.004, 2700, 3.5], // hard particles on sheet metal
+  [12, 3, 0.002, 3200, 0.8], // fine concrete texture
+  [3, 0.7, 0.009, 330, 1], // muffled rubber contact
   null,
-  null,
-  null,
-  null,
-  null,
-  [12, 4, 0.002, 2500, 3], // stone clatter
-  [50, 12, 0.004, 1200, 1.5], // snow crunch
+  [10, 4, 0.009, 2300, 2.2], // loose stone clatter
+  [38, 10, 0.012, 1050, 0.9], // compressed snow crunch
 ];
 
 const GRATE_MAX = 4096;
@@ -43,6 +43,8 @@ export class TyreVoice {
   private noiseKind = 0; // 0 white 1 pink 2 brown
   private whineHz = 0;
   private whinePh = 0;
+  private treadPhase = 0;
+  private treadHz = 0;
 
   constructor(sr: number, seed: number) {
     this.sr = sr;
@@ -60,12 +62,17 @@ export class TyreVoice {
       this.surface = surface;
       this.f1.reset();
       this.f2.reset();
+      this.grainBp.reset();
+      this.colour.reset();
+      this.grainEnv = 0;
+      this.grate.fill(0);
     }
     if (surface < 0 || speed <= 0) {
       this.gainTarget = 0;
       return;
     }
     const v = speed;
+    this.treadHz = v / (TWO_PI * 0.34);
     this.gainTarget = dbToGain(BASE_DB[surface] ?? -20) * Math.pow(v / 10, 0.7);
     this.hissGain = 0;
     this.noiseKind = 0;
@@ -82,8 +89,9 @@ export class TyreVoice {
         this.f2.peaking(220, 6, 8);
         break;
       case 2: // metal
-        this.f1.highpass(700, 0.7);
-        this.f2.peaking(1850, 6, 2);
+        this.noiseKind = 1;
+        this.f1.highpass(500, 0.7);
+        this.f2.peaking(1450, 4, 5);
         break;
       case 3: // concrete
         this.noiseKind = 1;
@@ -93,7 +101,7 @@ export class TyreVoice {
       case 4: // rubber
         this.noiseKind = 2;
         this.f1.lowpass(500, 0.7);
-        this.f2.peaking(95, 4, 6);
+        this.f2.peaking(180, 2, 5);
         break;
       case 5: // grate: comb buzz at v / 0.05 m
         this.f1.peaking(2400, 8, 6);
@@ -156,9 +164,13 @@ export class TyreVoice {
       if (this.whineHz > 0) {
         this.whinePh += this.whineHz / this.sr;
         if (this.whinePh >= 1) this.whinePh -= 1;
-        x += (Math.sin(this.whinePh * TWO_PI) + 0.5 * Math.sin(this.whinePh * 2 * TWO_PI)) * 0.35;
+        x += (sineCycle(this.whinePh) + 0.5 * sineCycle(this.whinePh * 2 % 1)) * 0.35;
       }
-      out[off + i] = out[off + i]! + x * this.gain;
+      this.treadPhase += this.treadHz / this.sr;
+      if (this.treadPhase >= 1) this.treadPhase -= 1;
+      // Wheel-revolution contact flutter keeps a surface moving rather than a static noise bed.
+      const contact = 0.78 + 0.22 * Math.abs(2 * this.treadPhase - 1);
+      out[off + i] = out[off + i]! + x * this.gain * contact;
     }
   }
 }
@@ -170,8 +182,14 @@ export class SkidVoice {
   private gainTarget = 0;
   private gain = 0;
   private readonly kGain: number;
+  private readonly sr: number;
+  private phase = 0;
+  private chatterPhase = 0;
+  private hz = 1700;
+  private scrape = false;
 
   constructor(sr: number, seed: number) {
+    this.sr = sr;
     this.rng = new NoiseRng(seed);
     this.bp = new Biquad(sr);
     this.bp2 = new Biquad(sr);
@@ -181,16 +199,20 @@ export class SkidVoice {
 
   /** Rear tyre skid: white → BP 1200 + 1400·slip Hz Q 3, −30 + 22·slip dB above slip 0.25. */
   set(slip: number): void {
+    this.scrape = false;
+    this.bp2.bypass();
     if (slip < 0.25) {
       this.gainTarget = 0;
       return;
     }
-    this.bp.bandpass(1200 + 1400 * slip, 3);
+    this.hz = 950 + 1400 * slip;
+    this.bp.bandpass(1200 + 1400 * slip, 1.5);
     this.gainTarget = dbToGain(-30 + 22 * slip);
   }
 
   /** Crashed frame scrubbing the ground: gritty 400 Hz–3 kHz noise, −24 + 10·scrape dB. */
   setScrape(scrape: number): void {
+    this.scrape = true;
     if (scrape < 0.02) {
       this.gainTarget = 0;
       return;
@@ -204,7 +226,16 @@ export class SkidVoice {
     if (this.gain < 1e-5 && this.gainTarget < 1e-5) return;
     for (let i = 0; i < n; i++) {
       this.gain += (this.gainTarget - this.gain) * this.kGain;
-      out[off + i] = out[off + i]! + this.bp2.process(this.bp.process(this.rng.n())) * this.gain;
+      this.chatterPhase += (this.scrape ? 86 : 61) / this.sr;
+      if (this.chatterPhase >= 1) this.chatterPhase -= 1;
+      const flutter = 0.72 + 0.28 * sineCycle(this.chatterPhase);
+      let friction = this.bp2.process(this.bp.process(this.rng.n()));
+      if (!this.scrape) {
+        this.phase += this.hz / this.sr;
+        if (this.phase >= 1) this.phase -= 1;
+        friction += 0.16 * sineCycle(this.phase) * flutter;
+      }
+      out[off + i] = out[off + i]! + friction * flutter * this.gain;
     }
   }
 }
@@ -214,6 +245,7 @@ export class ChainVoice {
   private readonly sr: number;
   private readonly rng: NoiseRng;
   private readonly mesh: Biquad;
+  private readonly rattle: Biquad;
   private ph1 = 0;
   private ph2 = 0;
   private hz = 0;
@@ -227,7 +259,9 @@ export class ChainVoice {
     this.sr = sr;
     this.rng = new NoiseRng(seed);
     this.mesh = new Biquad(sr);
-    this.mesh.peaking(1600, 3, 6);
+    this.mesh.peaking(1600, 2, 4);
+    this.rattle = new Biquad(sr);
+    this.rattle.bandpass(2400, 1.4);
     this.kGain = smoothCoef(0.02, sr);
   }
 
@@ -264,9 +298,11 @@ export class ChainVoice {
       if (this.ph1 >= 1) this.ph1 -= 1;
       this.ph2 += d2;
       if (this.ph2 >= 1) this.ph2 -= 1;
-      let x = Math.sin(this.ph1 * TWO_PI) + g2 * Math.sin(this.ph2 * TWO_PI);
+      let x = sineCycle(this.ph1) + g2 * sineCycle(this.ph2);
       x = x + 0.3 * x * x * x;
-      out[off + i] = out[off + i]! + this.mesh.process(x) * this.gain;
+      const lash = this.ph1 < 0.13 ? 1 - this.ph1 / 0.13 : 0;
+      const rattle = this.rattle.process(this.rng.n() * lash) * 0.6;
+      out[off + i] = out[off + i]! + (this.mesh.process(x) * 0.82 + rattle) * this.gain;
     }
   }
 }

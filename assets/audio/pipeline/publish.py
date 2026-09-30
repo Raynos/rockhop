@@ -135,7 +135,10 @@ def verify(path, cue, L, src):
         seg = y[sh + 256: sh + 2 * P - 256]
         seg2 = y[sh + 256 + L: sh + 2 * P - 256 + L]
         n = min(len(seg), len(seg2))
-        v["periodic_err_db"] = round(float(10 * np.log10(((seg[:n] - seg2[:n]) ** 2).mean() / max((seg[:n] ** 2).mean(), 1e-12))), 1)
+        per_channel = 10*np.log10(np.maximum(((seg[:n]-seg2[:n])**2).mean(axis=0), 1e-20)
+                                  / np.maximum((seg[:n]**2).mean(axis=0), 1e-12))
+        v["periodic_err_db"] = round(float(per_channel.max()), 1)
+        v["periodic_err_db_channels"] = [round(float(value), 1) for value in per_channel]
         v["seam"] = seam_metrics(y[P: P + L], y[P + L: P + L + SR // 10])
         v["seam_offset2112"] = seam_metrics(y[P + 2112: P + 2112 + L], y[P + 2112 + L: P + 2112 + L + SR // 10])
         v["bands"] = band_shares(y[P: P + L].mean(axis=1))
@@ -168,8 +171,8 @@ def render_cue(render_dir, stem, out_dir, named=True, cue=None):
     return entry, v, m, side
 
 
-def write_generated(entries):
-    lines = ["// Written by assets/audio/pipeline/publish.py — do not edit by hand.",
+def write_generated(entries, generator="assets/audio/pipeline/publish.py"):
+    lines = [f"// Written by {generator} — do not edit by hand.",
              "import type { CueFile, MusicCue } from './cues';", "",
              "export const CUE_FILES: Partial<Record<MusicCue, CueFile>> = {"]
     for cue in ["menu", "map", "coast", "alpine", "quarry", "snowline", "results"]:

@@ -84,6 +84,9 @@ const ROOMS: readonly { fb: number; lp: number }[] = [
   { fb: 0.35, lp: 3000 }, // snow: hush, almost no room
   { fb: 0.55, lp: 3500 }, // nightCity: street-canyon
   { fb: 0.7, lp: 2000 }, // foundry: big, hot, very damped
+  { fb: 0.38, lp: 3200 }, // coast: open shore, short scattered reflections
+  { fb: 0.42, lp: 2400 }, // alpine: trees absorb the bright tail
+  { fb: 0.58, lp: 3300 }, // quarry: exposed rock, with the outdoor slap below
 ];
 
 export class RockhopSynth {
@@ -112,6 +115,10 @@ export class RockhopSynth {
   /** Procedural music bed gate: 0 while a recorded cue (src/audio/music) carries the scene. */
   private bedGain = 1;
   private bedTarget = 1;
+  private musicGain = 1;
+  private musicTarget = 1;
+  /** Scene edges must not expose stale continuous voices while their gains settle. */
+  private gameSceneGain = 1;
   private readonly kDuckAtt: number;
   private readonly kDuckRel: number;
   private limEnv = 0;
@@ -163,8 +170,21 @@ export class RockhopSynth {
     this.limRel = Math.exp(-1 / (0.08 * sampleRate));
   }
 
-  setMaster(v: number): void {
+  setMaster(v: number, immediate = false): void {
     this.masterTarget = clamp(v, 0, 1);
+    if (immediate) this.masterGain = this.masterTarget;
+  }
+
+  /** The Music setting applies equally when recorded cues are unavailable. */
+  setMusicVolume(v: number, immediate = false): void {
+    this.musicTarget = clamp(v, 0, 1);
+    if (immediate) this.musicGain = this.musicTarget;
+  }
+
+  /** Recorded environment beds replace only the world bed, never physics-fed wind. */
+  setAmbienceEnabled(on: boolean): void {
+    this.ambience.setBedEnabled(on);
+    if (!on) this.pool.killBuses(false, false, true);
   }
 
   setSolo(solo: SynthOptions['solo']): void {
@@ -178,7 +198,9 @@ export class RockhopSynth {
 
   /** Music scene without a params frame (the front end posts no frames): 0 run, 1 menu, 2 results. */
   setScene(scene: number): void {
-    this.music.setScene(Math.round(scene));
+    const index = Math.round(scene);
+    this.gameSceneGain = index === 0 ? 1 : 0;
+    this.music.setScene(index);
   }
 
   /** Apply one packed AudioParams frame; transients are queued immediately. */
@@ -196,12 +218,12 @@ export class RockhopSynth {
       const room = ROOMS[biome] ?? ROOMS[0]!;
       this.reverb.setFeedback(room.fb);
       this.reverb.setDamping(room.lp);
-      this.slapOn = biome === 1;
+      this.slapOn = biome === 1 || biome === 7;
       if (!this.slapOn) this.slap.fill(0);
     }
     this.ambience.set(biome, p[P_AMBIENT_GAIN]!, p[P_WIND]!, airborne);
     this.crowd.set(p[P_CROWD]!);
-    this.music.setScene(Math.round(p[P_SCENE]!));
+    this.setScene(p[P_SCENE]!);
     this.duckTarget = dbToGain(-Math.max(0, p[P_DUCK_DB]!));
     const count = Math.min(Math.round(p[P_TRANSIENT_COUNT]!), (p.length - P_HEADER) / P_TRANSIENT_STRIDE);
     for (let i = 0; i < count; i++) {
@@ -325,11 +347,12 @@ export class RockhopSynth {
       }
       const rev = this.reverbHold > 0 ? 0 : this.reverb.process(send);
       this.bedGain += (this.bedTarget - this.bedGain) * this.kDuckRel;
-      const musL = mL[i]! * gM * this.bedGain;
-      const musR = mR[i]! * gM * this.bedGain;
+      this.musicGain += (this.musicTarget - this.musicGain) * this.kMaster;
+      const musL = mL[i]! * gM * this.bedGain * this.musicGain;
+      const musR = mR[i]! * gM * this.bedGain * this.musicGain;
 
-      let l = (gameL * this.duckGain + uiL + rev + musL) * TRIMS.master * this.masterGain;
-      let r = (gameR * this.duckGain + uiR + rev + musR) * TRIMS.master * this.masterGain;
+      let l = (gameL * this.duckGain * this.gameSceneGain + uiL + rev + musL) * TRIMS.master * this.masterGain;
+      let r = (gameR * this.duckGain * this.gameSceneGain + uiR + rev + musR) * TRIMS.master * this.masterGain;
 
       // limiter: peak follower, instant attack, 80 ms release
       const peak = Math.max(Math.abs(l), Math.abs(r));

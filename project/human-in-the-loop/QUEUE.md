@@ -28,3 +28,9 @@ waiting on. IDs never reused. Ported from the FF15 demo's `HUMAN_REVIEW.md`.
   fault and the action they try next, Retry-to-control feel, the earned medal/next goal, and whether anyone voluntarily replays. A short screen
   recording plus `?review=1` notes is enough; the parent will compare this with the played bot and CLI evidence. This is a C1 sign-off gate,
   not a prerequisite for the independent course/art work.
+
+- **HR-22 — Audio remaster audition and phone balance (ask 193).** Waiting on: you — compare the
+  [before/after audition](../../docs/evidence/audio-remaster/audition/index.html) and played ride/crash mixes, then ride on
+  iPhone Safari and desktop speakers/headphones. Judge musical taste, recognizable crowd/rider reactions, engine/traction
+  readability, seams, mute, background/foreground recovery and Retry-to-control feel. Automated checks stay silent and
+  cannot close these listening/device judgments.

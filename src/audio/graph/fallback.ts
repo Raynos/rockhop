@@ -34,6 +34,9 @@ export class FallbackGraph {
   private readonly windGain: GainNode;
   private readonly noise: AudioBuffer;
   private limiterPhase = 0;
+  private readonly sources = new Set<AudioScheduledSourceNode>();
+  private disposed = false;
+  private readonly shots = new Map<AudioScheduledSourceNode, AudioNode[]>();
 
   constructor(ctx: BaseAudioContext, destination: AudioNode) {
     this.ctx = ctx;
@@ -65,6 +68,8 @@ export class FallbackGraph {
     this.saw.connect(this.engineLp);
     this.sq.connect(this.sqGain).connect(this.engineLp);
     this.engineLp.connect(this.engineGain).connect(this.game);
+    this.sources.add(this.saw);
+    this.sources.add(this.sq);
     this.saw.start();
     this.sq.start();
 
@@ -88,6 +93,7 @@ export class FallbackGraph {
     this.windGain = ctx.createGain();
     this.windGain.gain.value = 0;
     src.connect(windHp).connect(this.windGain).connect(this.game);
+    this.sources.add(src);
     src.start();
   }
 
@@ -96,6 +102,7 @@ export class FallbackGraph {
   }
 
   setParams(p: Float32Array): void {
+    if (this.disposed) return;
     const t = this.ctx.currentTime;
     const rpm = p[P_RPM]!;
     const load = clamp(p[P_LOAD]!, 0, 1);
@@ -132,6 +139,7 @@ export class FallbackGraph {
     g.gain.linearRampToValueAtTime(dbToGain(db), at + 0.003);
     g.gain.exponentialRampToValueAtTime(1e-4, at + dur);
     o.connect(g).connect(this.master);
+    this.trackShot(o, [g]);
     o.start(at);
     o.stop(at + dur + 0.01);
   }
@@ -147,8 +155,49 @@ export class FallbackGraph {
     g.gain.setValueAtTime(dbToGain(db), at);
     g.gain.exponentialRampToValueAtTime(1e-4, at + dur);
     s.connect(bq).connect(g).connect(this.master);
+    this.trackShot(s, [bq, g]);
     s.start(at);
     s.stop(at + dur + 0.01);
+  }
+
+  cancelShots(): void {
+    for (const [source, nodes] of this.shots) {
+      source.onended = null;
+      try { source.stop(this.ctx.currentTime); } catch { /* already ended */ }
+      source.disconnect();
+      for (const node of nodes) node.disconnect();
+      this.sources.delete(source);
+    }
+    this.shots.clear();
+  }
+
+  /** Stop oscillators and pending one-shots even when the caller owns the context. */
+  dispose(): void {
+    if (this.disposed) return;
+    this.disposed = true;
+    this.cancelShots();
+    for (const source of this.sources) {
+      try {
+        source.stop(this.ctx.currentTime);
+      } catch {
+        /* already ended */
+      }
+      source.disconnect();
+    }
+    this.sources.clear();
+    this.master.disconnect();
+    this.game.disconnect();
+  }
+
+  private trackShot(source: AudioScheduledSourceNode, nodes: AudioNode[]): void {
+    this.sources.add(source);
+    this.shots.set(source, nodes);
+    source.onended = () => {
+      this.sources.delete(source);
+      this.shots.delete(source);
+      source.disconnect();
+      for (const node of nodes) node.disconnect();
+    };
   }
 
   private oneShot(kind: number, gain: number, pitch: number, at: number): void {

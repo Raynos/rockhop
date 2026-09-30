@@ -13,11 +13,11 @@
  *                             public/ alone, so a JS-only deploy does NOT re-download 7 MB of art.
  *   rockhop-shell-<build>     the ~25 KB that changes every build: index.html, offline.html,
  *                             manifest.webmanifest, load-manifest.json.
- *   rockhop-audio             the recorded music (/audio/<cue>-<8 hex>.m4a, src/audio/music/cues.ts):
- *                             content-addressed, cache-first from the FIRST play, never precached (6.5 MB
+ *   rockhop-audio             recorded music and SFX (/audio/[sfx/]<cue>-<hash>.mp3 or .m4a):
+ *                             content-addressed, cache-first from the FIRST play, never precached (files
  *                             the player may never hear). Not in the load-manifest, so the immutable prune
  *                             would drop it: its own cache, which keeps one file per cue (a new hash of
- *                             `menu` replaces the old one when it is first fetched).
+ *                             `menu` replaces the old one when it is first fetched; SFX keys retain their namespace).
  *
  *   install   precache the critical shell (strict — a failed shell fails install, so the old worker
  *             keeps serving) plus the icons (tolerant: the `art=absent` harness config has none).
@@ -53,8 +53,8 @@ const SHELL_OPTIONAL = ['./art/icons/apple-touch-icon.png', './art/icons/favicon
 
 const IMMUTABLE_RE = /\/assets\/.+-[\w-]{8}\.\w+$|\/models\/(?:[\w-]+\/)*[a-f0-9]{16}\/[\w.-]+-[a-f0-9]{16}\.(?:glb|webp|png|jpe?g|avif|ktx2)$/;
 const STATIC_RE = /\/fonts\/|\/art\/|\/models\//;
-/** A music cue: `/audio/<cue>-<8 hex>.m4a`; group 1 is the cue, the part two builds of the same cue share. */
-const AUDIO_RE = /\/audio\/([\w-]+)-[a-f0-9]{8}\.m4a$/;
+/** Content-hashed music/SFX; group 1 retains `sfx/` so equal names do not prune each other. */
+const AUDIO_RE = /\/audio\/((?:sfx\/)?[\w-]+)-[a-f0-9]{8,64}\.(?:mp3|m4a)$/;
 
 const cacheFor = (pathname) => (IMMUTABLE_RE.test(pathname) ? IMMUTABLE_CACHE : STATIC);
 
@@ -249,7 +249,7 @@ async function cacheFirst(req, name) {
   return res;
 }
 
-/** Cache-first for a music cue; a first fetch also drops the cue's older hashes, so the cache holds one file per cue. */
+/** Cache-first for an audio asset; a first fetch drops its older hashes, retaining one per namespaced cue. */
 async function audioFirst(req, cue) {
   const cache = await caches.open(AUDIO_CACHE);
   const hit = await cache.match(req, MATCH_OPTS);

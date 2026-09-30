@@ -35,6 +35,8 @@ export interface AudioSystem {
   setScene?(scene: AudioScene | null): void;
   /** Additive (store release Phase 4): the music-only slider, 0..1 (default 1). The master still scales it. */
   setMusicVolume?(v: number): void;
+  /** Pause gameplay voices while recorded music keeps its playback phase. */
+  setPaused?(paused: boolean): void;
 }
 
 export class NullAudio implements AudioSystem {

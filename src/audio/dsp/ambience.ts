@@ -1,10 +1,10 @@
 /**
  * Per-biome ambience beds + speed wind. Biome index order matches
- * params.BIOMES: 0 industrial, 1 canyon, 2 snow, 3 nightCity, 4 foundry.
+ * params.BIOMES: five legacy worlds, then coast, alpine and quarry.
  * Sparse events (creak, bird, clank, crackle) go through the voice pool on
  * the ambient bus with seeded timers.
  */
-import { Biquad, NoiseColour, NoiseRng, TWO_PI, clamp, dbToGain, smoothCoef } from './util';
+import { Biquad, NoiseColour, NoiseRng, TWO_PI, clamp, dbToGain, smoothCoef, sineCycle } from './util';
 import type { VoicePool } from './voices';
 
 export class Ambience {
@@ -12,6 +12,8 @@ export class Ambience {
   private readonly rng: NoiseRng;
   private readonly colour = new NoiseColour();
   private readonly colour2 = new NoiseColour();
+  private readonly colourR = new NoiseColour();
+  private readonly bedSide: Biquad;
   private readonly bedLp: Biquad;
   private readonly bedLp2: Biquad;
   private readonly hiss: Biquad;
@@ -27,6 +29,8 @@ export class Ambience {
   private windHi = 0.25;
   private biome = -1;
   private gainTarget = 1;
+  private requestedGain = 1;
+  private bedEnabled = true;
   private gain = 0;
   private readonly kGain: number;
   private windTarget = 0;
@@ -57,6 +61,7 @@ export class Ambience {
     this.sr = sr;
     this.rng = new NoiseRng(seed);
     this.bedLp = new Biquad(sr);
+    this.bedSide = new Biquad(sr);
     this.bedLp2 = new Biquad(sr);
     this.hiss = new Biquad(sr);
     this.neonLp = new Biquad(sr);
@@ -82,7 +87,8 @@ export class Ambience {
       this.biome = biome;
       this.configure();
     }
-    this.gainTarget = clamp(ambientGain, 0, 1);
+    this.requestedGain = clamp(ambientGain, 0, 1);
+    this.gainTarget = this.bedEnabled ? this.requestedGain : 0;
     const w = clamp(wind, 0, 1);
     // round 4: 20 dB of rise over the speed range (was 14) to ≈ −28 dBFS at 14 m/s, so the wind is heard climbing with the launch
     this.windTarget = dbToGain(-36 + 20 * w + (airborne ? 3 : 0)) * (wind > 0.01 ? 1 : 0);
@@ -94,7 +100,17 @@ export class Ambience {
     }
   }
 
+  /** A loaded environment recording replaces the bed; helmet wind remains reactive. */
+  setBedEnabled(on: boolean): void {
+    this.bedEnabled = on;
+    this.gainTarget = on ? this.requestedGain : 0;
+  }
+
   private configure(): void {
+    this.bedLp.reset();
+    this.bedSide.reset();
+    this.colour.reset();
+    this.colourR.reset();
     this.nextEvent = 0;
     this.crackleRate = 0;
     this.bedGain2 = 0;
@@ -104,24 +120,56 @@ export class Ambience {
         this.bedGain = dbToGain(-33);
         this.bedLp2.lowpass(180, 0.7);
         this.bedGain2 = dbToGain(-36);
+        this.bedSide.bandpass(650, 0.7);
         break;
       case 1: // canyon wind
         this.bedLp.lowpass(320, 0.7);
         this.bedGain = dbToGain(-27);
+        this.bedSide.bandpass(480, 0.8);
         break;
       case 2: // snow: hush (a quieter, darker bed than the canyon) + hiss; the gusts are events
         this.bedLp.lowpass(420, 0.7);
         this.bedGain = dbToGain(-31);
         this.hiss.highpass(6000, 0.7);
+        this.bedSide.bandpass(950, 0.5);
         break;
       case 3: // night city traffic bed
         this.bedLp.lowpass(140, 0.7);
         this.bedGain = dbToGain(-25);
+        this.bedSide.bandpass(360, 0.75);
+        break;
+      case 5: // shore: rolling low surf with a brighter wash of foam
+        this.bedLp.lowpass(650, 0.7);
+        this.bedGain = dbToGain(-27);
+        this.bedLp2.reset();
+        this.colour2.reset();
+        this.bedLp2.lowpass(2800, 0.6);
+        this.bedGain2 = dbToGain(-37);
+        this.bedSide.bandpass(1000, 0.6);
+        break;
+      case 6: // forest canopy: soft air through branches and dry leaves
+        this.bedLp.lowpass(700, 0.7);
+        this.bedGain = dbToGain(-29);
+        this.bedLp2.reset();
+        this.colour2.reset();
+        this.bedLp2.bandpass(2600, 0.65);
+        this.bedGain2 = dbToGain(-36);
+        this.bedSide.bandpass(1400, 0.6);
+        break;
+      case 7: // quarry: distant diesel, loose stone and open air
+        this.bedLp.lowpass(260, 0.7);
+        this.bedGain = dbToGain(-28);
+        this.bedLp2.reset();
+        this.colour2.reset();
+        this.bedLp2.bandpass(900, 0.8);
+        this.bedGain2 = dbToGain(-37);
+        this.bedSide.bandpass(600, 0.8);
         break;
       default: // foundry roar
         this.bedLp.lowpass(220, 0.7);
         this.bedGain = dbToGain(-22);
         this.crackleRate = 4 / this.sr;
+        this.bedSide.bandpass(780, 0.7);
         break;
     }
   }
@@ -144,6 +192,15 @@ export class Ambience {
       const steam = this.rng.u() < 0.5;
       pool.trigger({ kind: steam ? 107 : 102, gain: 1, pitch: 0, pan: this.rng.range2(-0.4, 0.4), delay: 0 });
       this.nextEvent = this.rng.range2(5, 11) * this.sr;
+    } else if (b === 5) {
+      pool.trigger({ kind: 108, gain: 1, pitch: 0, pan: this.rng.range2(-0.8, 0.8), delay: 0 });
+      this.nextEvent = this.rng.range2(8, 18) * this.sr;
+    } else if (b === 6) {
+      pool.trigger({ kind: this.rng.u() < 0.65 ? 101 : 109, gain: 1, pitch: 0, pan: this.rng.range2(-0.8, 0.8), delay: 0 });
+      this.nextEvent = this.rng.range2(4, 10) * this.sr;
+    } else if (b === 7) {
+      pool.trigger({ kind: 110, gain: 1, pitch: 0, pan: this.rng.range2(-0.6, 0.6), delay: 0 });
+      this.nextEvent = this.rng.range2(7, 15) * this.sr;
     } else {
       this.nextEvent = 30 * this.sr;
     }
@@ -165,13 +222,17 @@ export class Ambience {
     } else if (b === 4) {
       this.lfo1 += TWO_PI * 6 * blockDt;
       this.lfoGain = dbToGain(3 * Math.sin(this.lfo1));
+    } else if (b >= 5 && b <= 7) {
+      this.lfo1 += TWO_PI * (b === 5 ? 0.12 : b === 6 ? 0.19 : 0.07) * blockDt;
+      this.lfo2 += TWO_PI * 0.037 * blockDt;
+      this.lfoGain = dbToGain((b === 5 ? 5 : 3) * Math.sin(this.lfo1) + 2 * Math.sin(this.lfo2));
     } else {
       this.lfoGain = 1;
     }
     if (this.lfo1 > TWO_PI) this.lfo1 -= TWO_PI;
     if (this.lfo2 > TWO_PI) this.lfo2 -= TWO_PI;
 
-    if (this.gain > 1e-4 || this.gainTarget > 1e-4) {
+    if (this.bedEnabled && (this.gain > 1e-4 || this.gainTarget > 1e-4)) {
       this.nextEvent -= n;
       if (this.nextEvent <= 0) this.scheduleEvent(pool);
       if (b === 0) {
@@ -206,18 +267,24 @@ export class Ambience {
       const g = this.gain;
       if (g > 1e-4) {
         const bed = this.bedLp.process(this.colour.brownian(wL)) * this.bedGain * this.lfoGain;
-        l += bed;
-        r += bed;
+        const distance = this.bedSide.process(this.colourR.pink(wR)) * this.bedGain * 0.32 * this.lfoGain;
+        l += bed + distance;
+        r += bed - distance * 0.8;
         if (b === 0) {
-          this.hum1 += (TWO_PI * 60) / sr;
-          this.hum2 += (TWO_PI * 120) / sr;
-          const hum = (Math.sin(this.hum1) + 0.6 * Math.sin(this.hum2)) * humG;
+          this.hum1 += 60 / sr;
+          if (this.hum1 >= 1) this.hum1 -= 1;
+          this.hum2 += 120 / sr;
+          if (this.hum2 >= 1) this.hum2 -= 1;
+          const hum = (sineCycle(this.hum1) + 0.6 * sineCycle(this.hum2)) * humG;
           const hvac = this.bedLp2.process(this.colour2.pink(wR)) * this.bedGain2;
           // conveyor: 90 / 135 Hz partials under a slow 0.4 Hz swell
-          this.conv1 += (TWO_PI * 90) / sr;
-          this.conv2 += (TWO_PI * 135) / sr;
-          this.convAm += (TWO_PI * 0.4) / sr;
-          const conv = (Math.sin(this.conv1) + 0.5 * Math.sin(this.conv2)) * convG * (0.7 + 0.3 * Math.sin(this.convAm));
+          this.conv1 += 90 / sr;
+          if (this.conv1 >= 1) this.conv1 -= 1;
+          this.conv2 += 135 / sr;
+          if (this.conv2 >= 1) this.conv2 -= 1;
+          this.convAm += 0.4 / sr;
+          if (this.convAm >= 1) this.convAm -= 1;
+          const conv = (sineCycle(this.conv1) + 0.5 * sineCycle(this.conv2)) * convG * (0.7 + 0.3 * sineCycle(this.convAm));
           l += hum + hvac + conv;
           r += hum + hvac + conv * 0.8;
         } else if (b === 2) {
@@ -227,11 +294,12 @@ export class Ambience {
         } else if (b === 3) {
           this.neon += 120 / sr;
           if (this.neon >= 1) this.neon -= 1;
-          const nz = this.neonLp.process((2 * this.neon - 1) + Math.sin(this.neon * TWO_PI * 2)) * neonG;
-          this.cricket += (TWO_PI * 4200) / sr;
+          const nz = this.neonLp.process((2 * this.neon - 1) + sineCycle(this.neon * 2 % 1)) * neonG;
+          this.cricket += 4200 / sr;
+          if (this.cricket >= 1) this.cricket -= 1;
           this.cricketGate += 18 / sr;
           if (this.cricketGate >= 1) this.cricketGate -= 1;
-          const cr = this.cricketGate < 0.6 ? Math.sin(this.cricket) * cricketG : 0;
+          const cr = this.cricketGate < 0.6 ? sineCycle(this.cricket) * cricketG : 0;
           l += nz + cr * 0.4;
           r += nz + cr;
         } else if (b === 4) {
@@ -239,7 +307,21 @@ export class Ambience {
           const hs = this.hissHp.process(wR) * furnaceHissG;
           l += hs;
           r += hs * 0.85;
-          if (crackleRate > 0 && this.rng.u() < crackleRate) pool.trigger({ kind: 103, gain: 1, pitch: 0, pan: this.rng.range2(-0.7, 0.7), delay: 0 });
+          if (this.bedEnabled && crackleRate > 0 && this.rng.u() < crackleRate) pool.trigger({ kind: 103, gain: 1, pitch: 0, pan: this.rng.range2(-0.7, 0.7), delay: 0 });
+        } else if (b >= 5 && b <= 7) {
+          const texture = this.bedLp2.process(b === 5 ? wR : this.colour2.pink(wR)) * this.bedGain2 * this.lfoGain;
+          l += texture * 0.65;
+          r += texture;
+          if (b === 7) {
+            // Low diesel firing pulses, softened by distance; no mains hum or indoor press.
+            this.conv1 += 73 / sr;
+            if (this.conv1 >= 1) this.conv1 -= 1;
+            this.conv2 += 109.5 / sr;
+            if (this.conv2 >= 1) this.conv2 -= 1;
+            const motor = (sineCycle(this.conv1) + 0.35 * sineCycle(this.conv2)) * convG * this.lfoGain;
+            l += motor;
+            r += motor * 0.7;
+          }
         }
         l *= g;
         r *= g;
@@ -258,11 +340,5 @@ export class Ambience {
       L[off + i] = L[off + i]! + l;
       R[off + i] = R[off + i]! + r;
     }
-    if (this.hum1 > TWO_PI) this.hum1 -= TWO_PI;
-    if (this.hum2 > TWO_PI) this.hum2 -= TWO_PI;
-    if (this.cricket > TWO_PI) this.cricket -= TWO_PI;
-    if (this.conv1 > TWO_PI) this.conv1 -= TWO_PI;
-    if (this.conv2 > TWO_PI) this.conv2 -= TWO_PI;
-    if (this.convAm > TWO_PI) this.convAm -= TWO_PI;
   }
 }

@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-30T10:03:10.120Z",
+  "mode": "dev",
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+  "coldBootMs": 1261.7378749999998,
+  "contexts": 0,
+  "pageErrors": [],
+  "clear": {
+    "finishTime": 8.591666666666667,
+    "hash": "622bb2554e0f9a26"
+  },
+  "crash": {
+    "phase": "crashed",
+    "tick": 103,
+    "faults": 1,
+    "hash": "ea9c0da0bbca16ea",
+    "framesPlayed": 103
+  },
+  "restart": {
+    "before": {
+      "phase": "crashed",
+      "tick": 103
+    },
+    "phase": "riding",
+    "resetTick": 0,
+    "withinPageCallMs": 0.12000036239624023,
+    "commandMs": 2.8168749999986176,
+    "commandScope": "Crash-prefix replay plus restart in one browser call prevents an intervening RAF auto-restart.",
+    "transition": "Synchronous within restart(), before another physics step; commandMs includes crash replay, browser IPC/render contention."
+  },
+  "limits": "Silent browser verifies lifecycle/physics only; fake graph tests verify music, samples and mixer. Browser command latency is not phone restart latency. No physical iPhone or subjective listening verdict."
+}

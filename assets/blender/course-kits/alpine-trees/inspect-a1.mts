@@ -76,7 +76,7 @@ const report = {
   sourceHashes: Object.fromEntries(['src/render/world/zones/zoneKit.ts','src/render/world/biomeKit.ts','src/tracks/rockhop/alpine.ts'].map(file => [file, createHash('sha256').update(readFileSync(file)).digest('hex')])),
   biomeReportedDraws: kit.drawCalls, biomeConstructedMeshNodes: worldCounts.biome!.meshes, biomeConstructedTriangles: worldCounts.biome!.triangles,
   constructedWorld: worldCounts, constructedWorldTotal: allWorldCounts,
-  allOriginalTreePlacements: rows.filter(row => /^pine/.test(row.name)),
+  allOriginalTreePlacements: rows.filter(row => row.name.startsWith('pine')),
   removeTrees: selected, removeContactShadows: selectedShadows,
 };
 writeFileSync(new URL('../../../../docs/evidence/course-remaster/alpine-tree-kit/a1-existing-tree-audit.json', import.meta.url), JSON.stringify(report, null, 2)+'\n');
