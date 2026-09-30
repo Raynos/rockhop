@@ -201,3 +201,11 @@ unchanged. Exact clear/crash/restart and twenty swaps pass the normal build.
 hashes, scope and retained limits. Cosmetic M1/M2 work resumes with skin
 colour transitions, face/hair and garment definition. No final art or
 physical-device bar is closed here.
+
+The [same-V6 lighting probes](../evidence/hero-remaster/lighting/v6-probes/README.md)
+isolate the Garage lift from geometry: restoring authored emission alone is
+too dark, while neutral fill improves surface contrast but brightens the room.
+Neither removes authored forearm mottling. Production lighting remains unchanged
+pending the skin/head finish. M3 must also make its key independent of the
+loaded world: the Coast Garage has no pooled work-lamp spot despite that key
+being described in the stage recipe. The probe adds no GPU light or post pass.

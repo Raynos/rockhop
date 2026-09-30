@@ -1,5 +1,6 @@
 /** Silent actual Garage review of a frozen hero build; never a posed substitute scene.
  * tsx harness/hero-remaster/review.mts --build=DIR --out=DIR [--outfit=street-mustard]
+ * [--lighting=baseline|no-lift|neutral-fill] [--frames=120]
  */
 /* oxlint-disable typescript/no-explicit-any -- actual browser review hooks. */
 import fs from 'node:fs';
@@ -20,6 +21,10 @@ const width = dimensions[0]!, height = dimensions[1]!;
 const dpr = Number(arg('dpr', '1'));
 const inspection = arg('inspection', 'after');
 assert(['before', 'after'].includes(inspection));
+const lighting = arg('lighting', 'baseline');
+assert(['baseline', 'no-lift', 'neutral-fill'].includes(lighting));
+const frameCount = Number(arg('frames', '120'));
+assert(Number.isInteger(frameCount) && frameCount >= 30);
 fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
 const manifestFile = path.join(build, 'hero-review.json');
 const manifest = fs.existsSync(manifestFile)
@@ -34,7 +39,7 @@ const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: dpr, ...(dpr > 1 ? { isMobile: true, hasTouch: true } : {}) });
 await context.addInitScript(() => localStorage.setItem('rockhop.onboarded', '1'));
 const page = await context.newPage();
-const report: any = { build, outfit, width, height, dpr, inspection, view: GARAGE_VIEW, manifest, loaded: [], errors: [], samples: [] };
+const report: any = { build, outfit, width, height, dpr, inspection, lighting, frameCount, view: GARAGE_VIEW, manifest, loaded: [], errors: [], samples: [] };
 const responses: Promise<void>[] = [];
 page.on('pageerror', e => report.errors.push(e.message));
 page.on('response', r => {
@@ -56,6 +61,38 @@ try {
   await page.waitForFunction(id => (window as any).__render.debugInfo().riderOutfit === id, outfit);
   await page.evaluate(async () => (window as any).__render.whenReady());
   await page.waitForTimeout(500);
+  report.lightingProbe = await page.evaluate(mode => {
+    const r = (window as any).__render, d = r.debug;
+    let lightCount = 0;
+    d.scene.traverse((o: any) => { if (o.isLight) lightCount++; });
+    const before = {
+      sun: { color: d.lighting.sun.color.getHex(), intensity: d.lighting.sun.intensity },
+      hemi: { sky: d.lighting.hemi.color.getHex(), ground: d.lighting.hemi.groundColor.getHex(), intensity: d.lighting.hemi.intensity },
+      environmentIntensity: d.scene.environmentIntensity,
+      lightCount,
+      resources: r.debugInfo(),
+    };
+    if (mode !== 'baseline') {
+      r.applyHeroStageLift(d.rider, false);
+      r.applyHeroStageLift(d.bike, false);
+    }
+    if (mode === 'neutral-fill') {
+      d.lighting.sun.color.setHex(0xd7e2ff);
+      d.lighting.sun.intensity = 1.8;
+      d.lighting.hemi.color.setHex(0xaab8cc);
+      d.lighting.hemi.groundColor.setHex(0x7c6d5d);
+      d.lighting.hemi.intensity = 0.9;
+      d.scene.environmentIntensity = 0.65;
+    }
+    r.invalidate(); (window as any).__rockhop.render(true);
+    return { before, after: {
+      sun: { color: d.lighting.sun.color.getHex(), intensity: d.lighting.sun.intensity },
+      hemi: { sky: d.lighting.hemi.color.getHex(), ground: d.lighting.hemi.groundColor.getHex(), intensity: d.lighting.hemi.intensity },
+      environmentIntensity: d.scene.environmentIntensity,
+      lightCount,
+      resources: r.debugInfo(),
+    }, note: 'Diagnostic uniform/material changes in the actual Garage. No new light, mesh, render pass, camera or injected pose.' };
+  }, lighting);
   if (inspection === 'before') await page.evaluate(({ width, height, dpr }) => {
     const r = (window as any).__render;
     // Reproduce the previous inspection policy on identical candidate bytes,
@@ -96,8 +133,8 @@ try {
   assert(report.heroBounds.x0 >= 0 && report.heroBounds.y0 >= 0 && report.heroBounds.x1 <= width && report.heroBounds.y1 <= height, 'complete hero fits the opening view');
   // Real Garage orbit: ordered frames through both sides/back, with the same
   // camera and exact screenshot cadence in baseline and candidate builds.
-  for (let i = 0; i < 120; i++) {
-    const yaw = i * Math.PI * 2 / 120;
+  for (let i = 0; i < frameCount; i++) {
+    const yaw = i * Math.PI * 2 / frameCount;
     const sample = await page.evaluate(({ yaw, i, view }) => {
       const r = (window as any).__render;
       r.setCameraOverride({ mode: 'orbit', yaw, pitch: view.pitch, dist: view.dist, screenX: view.screenX, screenY: view.screenY });
