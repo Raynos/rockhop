@@ -324,3 +324,9 @@ Required-map failure and delayed-course-switch browser cases pass 2/2; 28 focuse
 ## Focused Coast frontage retained · 2026-09-30
 
 [Actual C1 moving comparison and normal integration](../evidence/course-remaster/coast-frontage/README.md) retain brick service bays and varied rooflines while keeping the current ground/water and all route geometry. The nine-prototype bank replaces its redundant predecessor; +201,208 delivered bytes. Twenty-four loader/site/water tests, 2/2 new-map/late-switch browser checks and required 14/14 C1 partial gate pass under the unchanged cap. Pale office walls and physical-phone/fresh-player limits remain; C2/C3 reuse is independent under the approved focused scope rather than waiting for complete C1 sign-off.
+
+## Focused gameplay audit and bounded forest stop · 2026-09-30
+
+[Current challenge/progression audit](../evidence/course-remaster/challenge-progression-audit/README.md) confirms24 clean references and selected first-eight Rookie7 Gold+1 Diamond =1,840 Scrap. Best older assisted results combine to1,160 across different sessions; this suggests an earned-progression risk, not a measured single-player grind. The68 functional tests pass. HR-24 requests two unbriefed empty-save landscape career runs, with price/clocks held fixed until actual results support tuning.
+
+[Five corrected A2/A3 forest pairs](../../prototypes/alpine-forest-rollout-v2/README.md) improve silhouette/readability and pass4/4 lifecycle checks, but their hook plus Coast frontage exceeds the cap. One targeted shared-owner correction still fails. Retain the normal original A2/A3 forest and defer this optional rollout; reuse the already accepted A1 surface/lake kit next. No whole-course count increase.
