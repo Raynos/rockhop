@@ -32,6 +32,7 @@ export interface BikeSpec {
   line: string;
   /** 0..1 bars. */
   power: number;
+  /** Dry-surface grip; the Pro snow advantage is described in the note. */
   grip: number;
   weight: number;
   weightFeel: string;
@@ -52,21 +53,21 @@ export const BIKE_SPECS: Record<BikeClass, BikeSpec> = {
     grip: 0.82,
     weight: 0.58,
     weightFeel: '58 kg',
-    note: 'Shared tyre grip and travel · precise control',
+    note: 'Shorter suspension travel · assisted air control',
     tint: '#E4572E',
   },
   pro: {
     id: 'pro',
     name: 'Pro',
     // Current Pro: 54 kg chassis, 1 000 N, 0.08 s throttle versus Starter's 58 kg/880 N/0.15 s.
-    // A scripted 54-case shelf sweep favoured Pro 6 to 4, while Starter held the raised-nose
-    // balance sweep 27 to 24. Tyre grip and suspension travel remain identical.
-    line: 'Stronger engine and quicker throttle help climb shelves and recover rough drops.',
+    // Dry-surface grip is shared. Pro adds snow grip (1.05 vs 0.90) and longer rear/front
+    // suspension travel (0.28/0.26 m vs 0.26/0.24 m) in BIKE_PRESETS_V2.
+    line: 'Stronger engine, quicker throttle and longer travel for the final four courses.',
     power: 0.86,
     grip: 0.82,
     weight: 0.54,
     weightFeel: '54 kg',
-    note: 'Shared tyre grip and travel · raw air attitude',
+    note: 'Better snow grip · raw air attitude',
     tint: '#2a5da8',
   },
 };
@@ -537,7 +538,7 @@ export class GarageScreen {
     // the pointer), then the outfit line. The balance hint rides as the sheet's title.
     const spec = BIKE_SPECS[this.inspected];
     const sheet = `<div class="gp-name" style="--tint:${spec.tint}"><b>${escapeHtml(spec.name)}</b><small>${spec.id === 'rookie' ? 'Class A' : 'Class P'}</small></div>
-      <div class="gp-stats">${bar('Power', spec.power)}${bar('Grip', spec.grip)}${bar('Weight', spec.weight, spec.weightFeel)}</div>
+      <div class="gp-stats">${bar('Power', spec.power)}${bar('Dry grip', spec.grip)}${bar('Weight', spec.weight, spec.weightFeel)}</div>
       <div class="gp-line">${escapeHtml(spec.line)}</div>
       <div class="gp-note">${escapeHtml(spec.note)}</div>
       <div class="gp-kv"><span>Outfit</span><b>${escapeHtml(OUTFIT_LABEL[this.currentOutfit])}</b></div>`;
