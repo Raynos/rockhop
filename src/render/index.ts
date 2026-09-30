@@ -768,7 +768,9 @@ export class ThreeRenderer implements GameRenderer {
       if (on && !saved && m.map && !m.vertexColors) {
         this.heroStageLift.set(m, { emissive: m.emissive.clone(), emissiveMap: m.emissiveMap });
         m.emissiveMap = m.map;
-        m.emissive.setRGB(HERO_STAGE_LIFT[0], HERO_STAGE_LIFT[1], HERO_STAGE_LIFT[2]);
+        // Albedo is map * colour. Constant-colour skin receives the library's
+        // neutral map; ignoring its factor would replace warm skin with white.
+        m.emissive.setRGB(HERO_STAGE_LIFT[0], HERO_STAGE_LIFT[1], HERO_STAGE_LIFT[2]).multiply(m.color);
       } else if (!on && saved) {
         m.emissive.copy(saved.emissive);
         m.emissiveMap = saved.emissiveMap;

@@ -33,6 +33,8 @@ it('restores authored emission after repeated textured-material stage entry and 
     stage(true);
     expect(material.emissiveMap).toBe(albedo);
     expect(material.color.getHex()).toBe(0x203040);
+    const expected = new THREE.Color().setRGB(0.3, 0.4, 0.7).multiply(material.color);
+    expect(material.emissive.toArray()).toEqual(expected.toArray());
     stage(false);
     expect(material.emissiveMap).toBe(emission);
     expect(material.emissive.getHex()).toBe(0x102030);
