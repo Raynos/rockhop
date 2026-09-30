@@ -355,7 +355,7 @@ export function buildZoneKit(ctx: ZoneCtx): ZoneKit {
     // Low Tide's first real hazard needs a cue in the yard itself. The checkpoint gantry tells the
     // rider where they are; this roadside board tells them what to do before the pallet ramp enters
     // the tight camera. It has no collider and sits behind the ride line, clear of the bike and HUD.
-    const brakeX = 195.5;
+    const brakeX = 185.5;
     if (track.def.id === 'c1-low-tide' && brakeX >= x0 && brakeX < x1) {
       const y = profileY(profile, brakeX);
       const z = -2.75;

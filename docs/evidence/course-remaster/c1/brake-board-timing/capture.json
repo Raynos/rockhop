@@ -1,0 +1,123 @@
+{
+  "baselineSha": "b778880c94067d7b2f09cb30cc7799104c60d074",
+  "candidate": "same source plus c1 brake board x195.5 -> x185.5; no collider/camera/input edits",
+  "input": "harness/inputs/c1-low-tide/bot-3.json",
+  "inputSha256": "ce9eb69fb42766f75c3e0bd381558ad0d32ba88c65c066a66efb5caf5a7466ec",
+  "windowTicks": [
+    1600,
+    2180
+  ],
+  "geometry": [
+    852,
+    392
+  ],
+  "fps": 20,
+  "before": {
+    "source": {
+      "url": "https://playrockhop.vercel.app/",
+      "verifiedSha": "b778880c94067d7b2f09cb30cc7799104c60d074"
+    },
+    "frames": 98,
+    "endHash": "e3dfe74eab9ba178",
+    "camera": {
+      "frames": 98,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953614e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "riding": 30,
+        "fast": 58
+      },
+      "minX": 0.236,
+      "maxX": 0.405,
+      "minY": 0.336,
+      "maxY": 0.558,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    }
+  },
+  "after": {
+    "source": {
+      "kind": "local-dist"
+    },
+    "frames": 98,
+    "endHash": "e3dfe74eab9ba178",
+    "camera": {
+      "frames": 98,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953614e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "riding": 30,
+        "fast": 58
+      },
+      "minX": 0.236,
+      "maxX": 0.405,
+      "minY": 0.336,
+      "maxY": 0.558,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    }
+  },
+  "faultRetry": {
+    "input": "docs/evidence/c1-crash-feedback/held-go.json",
+    "windowTicks": [
+      1900,
+      2460
+    ],
+    "frames": 94,
+    "endHash": "1b27e28eb116e6f5",
+    "camera": {
+      "frames": 94,
+      "box": {
+        "min": 0.2,
+        "max": 0.8
+      },
+      "outOfBox": 0,
+      "outOfBoxRiding": 0,
+      "rollViolations": 0,
+      "maxAbsRoll": 3.469446951953614e-18,
+      "clamped": 0,
+      "clampedPct": 0,
+      "states": {
+        "fast": 28,
+        "crash": 20,
+        "idle": 12,
+        "riding": 24
+      },
+      "minX": 0.235,
+      "maxX": 0.669,
+      "minY": 0.26,
+      "maxY": 0.595,
+      "violations": [],
+      "settleExcluded": 10,
+      "pass": true
+    }
+  },
+  "cleanNode": {
+    "rookie": {
+      "finishSeconds": 30.35,
+      "hash": "2bfe061963ffb058"
+    },
+    "pro": {
+      "finishSeconds": 29.3,
+      "hash": "7f41206ed23dc00d"
+    }
+  }
+}
