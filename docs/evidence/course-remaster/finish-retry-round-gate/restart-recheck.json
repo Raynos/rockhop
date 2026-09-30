@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "kind": "gate-partial",
+  "runId": "20260930-132748-228fbb",
+  "startedAt": "2026-09-30T18:27:48.295Z",
+  "wallMs": 2624,
+  "git": "13621e60",
+  "srcFingerprint": "fd8fe7c2",
+  "node": "v24.18.1",
+  "chromium": "151.0.7922.34",
+  "only": [
+    "restart"
+  ],
+  "checks": [
+    {
+      "id": "restart.ticks",
+      "value": 1,
+      "limit": 1,
+      "pass": true,
+      "note": "tick==0 && faulted==null after exactly one tick, 20 reps"
+    },
+    {
+      "id": "restart.wallMsP95",
+      "value": 0.16499996185302734,
+      "limit": 5,
+      "pass": true,
+      "unit": "ms"
+    },
+    {
+      "id": "restart.frameMsP95",
+      "value": 7.490000247955322,
+      "limit": 33,
+      "pass": true,
+      "unit": "ms",
+      "note": "restart -> synced frame"
+    },
+    {
+      "id": "restart.noCountdown",
+      "value": 1,
+      "limit": 12,
+      "pass": true,
+      "unit": " ticks",
+      "note": "worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20"
+    }
+  ],
+  "failed": 0
+}

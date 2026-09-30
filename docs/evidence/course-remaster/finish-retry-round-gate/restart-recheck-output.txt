@@ -1,0 +1,15 @@
+gate c1-low-tide: physics=bikePhysicsFactory-v2 thresholds=harness/gate/thresholds.json
+renderer: ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version) -> ship limits
+      golden: WARNING nothing under harness/inputs/c1-low-tide/ is a rookie golden stamped src=fd8fe7c2; using newest bot-3.json (src=a415fcb8) — re-run pnpm harness:bot c1-low-tide
+sections: pool of 5 (clear, clearPro, crash, determinism, camera, bundle) then timing chain (boot, restart, heap), then offline — only restart; loadavg 4.9 4.9 5.1 / 18 cores
+PASS  restart.ticks                1  (limit 1)  tick==0 && faulted==null after exactly one tick, 20 reps
+PASS  restart.wallMsP95            0.16ms  (limit 5ms)
+PASS  restart.frameMsP95           7.49ms  (limit 33ms)  restart -> synced frame
+PASS  restart.noCountdown          1 ticks  (limit 12 ticks)  worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20
+      section restart: 2.2 s, loadavg 4.9 4.9 5.1 / 18 cores
+PASS  restart.ticks                1  (limit 1)  tick==0 && faulted==null after exactly one tick, 20 reps
+PASS  restart.wallMsP95            0.16ms  (limit 5ms)
+PASS  restart.frameMsP95           7.49ms  (limit 33ms)  restart -> synced frame
+PASS  restart.noCountdown          1 ticks  (limit 12 ticks)  worst of 20 reps: held throttle after the restart tick until the bike rolls (a countdown would be 360+); first-tick roll yes; game faults=20
+
+PARTIAL (restart): 4/4 checks pass — not a ship verdict; report: /Users/raynos/projects/games/rockhop/harness/out/metrics/ship-gate.partial.json

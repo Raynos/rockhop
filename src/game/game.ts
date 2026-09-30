@@ -385,6 +385,7 @@ export class Game {
   loadTrack(id: string = DEFAULT_TRACK_ID, seed?: number, bike?: BikeClass, options?: { backdrop?: boolean }): boolean {
     const track = getTrack(id);
     if (!track) return false;
+    this.publishPendingFinish();
     const t0 = performance.now();
     this.track = track;
     this.seed = (seed ?? track.seed) >>> 0;
@@ -422,6 +423,7 @@ export class Game {
 
   /** Back to the menu phase: nothing ticks until the next loadTrack/startRun. */
   toMenu(): void {
+    this.publishPendingFinish();
     this.entryHold = false;
     this.entryToken++;
     this.setPhase('menu');
@@ -677,6 +679,7 @@ export class Game {
 
   /** Full restart: faults and run clock reset, countdown again. */
   restartFromStart(): void {
+    this.publishPendingFinish();
     this.physics.reset(-1);
     this.physics.drainEvents();
     this.lastState = null;
@@ -894,6 +897,13 @@ export class Game {
       default:
         this.emit(e);
     }
+  }
+
+  /** Save a clear before lifecycle exits discard its pending result, without delaying the exit. */
+  private publishPendingFinish(): void {
+    if (this.phaseValue !== 'finished' || this.resultsShown) return;
+    this.resultsShown = true; // Set before callbacks: a result listener can re-enter a lifecycle exit.
+    this.publishResults();
   }
 
   private publishResults(): void {

@@ -1,4 +1,9 @@
 import { describe, expect, it } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { decodeJSON, expandFrames } from '../core/replay';
+import { createBikePhysicsV2 } from '../physics/v2/bike';
+import { BestTimes } from '../ui/best';
+import { CareerEconomy } from '../ui/economy';
 import { hashPhysicsState } from '../core/hash';
 import type { CameraDebug, CompiledTrack, GameEvent, InputFrame, PhysicsState, RenderStats } from '../core/types';
 import type { GameRenderer } from '../render';
@@ -700,4 +705,72 @@ describe('replay viewer playback (docs/design/game.md §16)', () => {
     g.setLabMode(false);
     expect(g.ghostState()).toBeNull(); // no PB store → no PB ghost
   });
+});
+
+
+describe('earned finish survives immediate lifecycle exits', () => {
+  const recording = decodeJSON(readFileSync(new URL('../../harness/inputs/c1-low-tide/bot-3.json', import.meta.url), 'utf8'));
+  const inputs = expandFrames(recording);
+  for (const retry of ['restart edge', 'direct restart', 'menu', 'track change'] as const) {
+    it(`${retry} saves the real C1 Diamond once before clearing its pending result`, () => {
+      const economy = new CareerEconomy(null);
+      const best = new BestTimes();
+      const game = new Game({ physics: createBikePhysicsV2(120), renderer: new StubRenderer(),
+        bestTimes: best, autoRecord: true, ghostEnabled: false, physicsVersion: 'v2' });
+      const awards: number[] = [];
+      game.onResults = result => {
+        expect(result).toMatchObject({ trackId: 'c1-low-tide', medal: 'platinum', faults: 0 });
+        awards.push(economy.award(result.trackId, result.medal).delta);
+        if (retry === 'menu') game.toMenu(); // Re-entry must not recursively publish the same result.
+      };
+      game.loadTrack(recording.header.trackId, recording.header.seed, 'rookie');
+      const ride = () => {
+        game.skipCountdown();
+        for (const input of inputs) { game.setInput(input); game.step(1); }
+        expect(game.phase()).toBe('finished');
+        expect(game.hashState()).toBe('2bfe061963ffb058');
+      };
+      const leave = (target: Game) => {
+        if (retry === 'restart edge') {
+          if (target.inPlayback()) target.restart();
+          else { target.setInput({ restart: true }); target.step(1); }
+        } else if (retry === 'menu') target.toMenu();
+        else if (retry === 'track change') target.loadTrack('c2-crane-hop');
+        else target.restartFromStart();
+      };
+      const restart = () => {
+        leave(game);
+        expect(game.phase()).toBe(retry === 'menu' ? 'menu' : 'countdown');
+        if (retry !== 'menu') {
+          expect(game.runTime()).toBe(0);
+          expect(game.getState().tick).toBe(0);
+        }
+      };
+      ride();
+      expect(awards).toEqual([]); // Normal result reveal still waits 0.4 simulated seconds.
+      restart();
+      expect(awards).toEqual([300]);
+      expect(economy.snapshot().wallet).toBe(300);
+      expect(best.get('c1-low-tide')).toMatchObject({ medal: 'platinum', time: 30.35 });
+      expect(best.get('c1-low-tide')?.recording).toBeTruthy();
+      game.step(48);
+      expect(awards).toEqual([300]); // No late publication from the discarded finish hold.
+      game.loadTrack(recording.header.trackId, recording.header.seed, 'rookie');
+      ride();
+      restart();
+      expect(awards).toEqual([300, 0]);
+      expect(economy.snapshot().wallet).toBe(300);
+      game.step(48);
+      expect(awards).toEqual([300, 0]);
+
+      const replay = new Game({ physics: createBikePhysicsV2(120), renderer: new StubRenderer(), physicsVersion: 'v2' });
+      replay.onResults = result => awards.push(economy.award(result.trackId, result.medal).delta);
+      expect(replay.startPlayback(best.get('c1-low-tide')!.recording!, { ghost: false })).toBe(true);
+      for (let i = 0; i < inputs.length; i++) replay.step(1);
+      expect(replay.phase()).toBe('finished');
+      leave(replay);
+      replay.step(48);
+      expect(awards).toEqual([300, 0]); // Replays never pay or publish a finish result.
+    });
+  }
 });
