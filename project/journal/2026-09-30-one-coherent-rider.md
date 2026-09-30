@@ -57,3 +57,14 @@ exact40.083333333333336s clear, crash and one-tick restart pass; zero errors.
 
 Limits: Preserved Pixal face/scalp has unaccepted defects; no cleaned
 character or assembly. No new rider, contact or device pass from baseline.
+
+Finding: Preserved dense Pixal bust has smoother forehead/cheeks than its
+reduced export; curls/beard noise exist before reduction. Keep dense source
+for targeted scalp/beard cleanup instead of polishing the faceted export.
+
+Validation: Twelve matched CPU PBR/gray/dense-gray frames across four yaws
+verified against source/renderer hashes. Dense display changes axes only,
+4,087,593vertices and10,163,546faces unchanged; original sources retained.
+
+Limits: Independent bounds normalization is recorded, PBR only on reduced
+export. Facial/source defects remain; no cleanup, join, rig or motion pass.

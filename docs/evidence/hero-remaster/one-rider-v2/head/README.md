@@ -46,3 +46,13 @@ shows unacceptable face geometry, reject before polishing textures.
 passes fresh silent WebKit low/high boot, clear40.083333333333336s with exact
 Node state/Float64 finish bytes, crash and one-tick restart2ms render submission,
 zero page errors. Current normal player only; no new rider/contact/device pass.
+
+## Dense-source diagnosis
+
+[Matched four-view PBR/gray/dense-gray board](preserved-review/matched-pbr-gray-dense.jpg)
+shows smoother dense cheeks/forehead than the reduced export, which has
+faceting and a jagged base. Porous curls and beard noise are already in the
+saved dense Pixal source; this does not change the separate unisolated
+Hunyuan decoder/reducer finding. Preserve the dense facial surface, target
+the scalp/beard, and inspect geometry before baking detail/PBR. Source remains
+unaccepted. [Measurements/limits](preserved-review/verification.json).
