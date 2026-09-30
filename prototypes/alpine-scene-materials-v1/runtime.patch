@@ -1,0 +1,23 @@
+diff --git a/src/render/world/biomeKit.ts b/src/render/world/biomeKit.ts
+index 2c1509e1..39492bbb 100644
+--- a/src/render/world/biomeKit.ts
++++ b/src/render/world/biomeKit.ts
+@@ -52,0 +53 @@ import { buildZoneKit, isZone } from './zones/zoneKit';
++import { applyAlpineSurface, calibrateAlpineCanopy } from './zones/alpineSurface';
+@@ -953,0 +955 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
++      if (track.def.id === 'a1-sawdust') applyAlpineSurface(zk, lib);
+@@ -994 +996 @@ export function buildBiomeKit(track: CompiledTrack, biome: Biome, lib: MaterialL
+-          completeMaterial: material => { lib.complete(material); },
++          completeMaterial: material => { lib.complete(material); calibrateAlpineCanopy(material); },
+diff --git a/src/render/world/zones/zoneDeck.ts b/src/render/world/zones/zoneDeck.ts
+index df3daacc..cb3908fb 100644
+--- a/src/render/world/zones/zoneDeck.ts
++++ b/src/render/world/zones/zoneDeck.ts
+@@ -21,0 +22 @@ import { lcg } from './geo';
++import { alpineSoil } from './alpineSurface';
+@@ -562 +563 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
+-  const topPaint = zonePaint(lib, id, 'top', lowTide)!;
++  const topPaint = track.def.id === 'a1-sawdust' ? alpineSoil(lib, 'tread') : zonePaint(lib, id, 'top', lowTide)!;
+@@ -604 +605 @@ export function buildZoneDeck(track: CompiledTrack, id: BiomeId, lib: MaterialLi
+-  const facePaint = zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;
++  const facePaint = track.def.id === 'a1-sawdust' ? alpineSoil(lib, 'bank') : zonePaint(lib, id, 'face', false, track.def.id === 'd1-dust-devil')!;

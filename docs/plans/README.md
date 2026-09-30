@@ -396,3 +396,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Snowline verifier finding:** Combined-tree lint caught a missing sort comparator; its explicit UTF-16 comparator preserves the exact saved decoder report. Full typecheck, lint and thirteen focused Snowline/Garage tests pass. The candidate remains unintegrated.
 
 **Main cleanup (ask 208):** [Ten coherent commits](../evidence/git-cleanup-2026-09-30/README.md) retain all outstanding audio, hero and course work with candidate status explicit. Full typecheck/lint/build and thirteen focused tests pass; the second required Metal partial gate passes 14/14 after retaining the initial timing misses. CPU, physical-device and full-course gates remain open; 0/12 accepted courses.
+
+**Alpine scene material candidate:** [Matched full A1 ride](../evidence/course-remaster/alpine-scene-materials/README.md) preserves the exact finish and state hash while testing soil, lake and foliage together. Source is unimported and integration is isolated in a prototype patch; moving art acceptance, faults, lifecycle, performance and phone checks remain open. No additional course credit.
