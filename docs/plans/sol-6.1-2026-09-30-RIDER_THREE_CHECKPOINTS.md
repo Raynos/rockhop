@@ -199,6 +199,10 @@ updating asks/index before the next experiment. No scheduling or deployment.
 - [x] Ten Hunyuan/TRELLIS bodies and five additive Pixal3D bodies compared.
   [Fifteen-body gallery](../evidence/hero-remaster/rider-search-v1/review/README.md):
   45 boards/15 full orbits; P3 preliminary recommendation, unaccepted.
+- Current defects/counts: [ledger](../evidence/hero-remaster/rider-search-v1/defect-ledger.json).
+  T1 export correction 1 partly improves tearing but fails body quality;
+  P3 gray/export diagnosis has no attempted fixes. User body choice requested
+  and filed in HR-23. No rig or normal asset promotion.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.

@@ -9,9 +9,11 @@ No existing comparison or normal player asset has been replaced.
 The parent recommends **P3 for refinement**, subject to your visual choice.
 It retains adult proportions, coherent hoodie volume, denim and shoes across
 nine views better than the current Hunyuan lane. The face is stylized and the
-hands remain soft. Small dark openings around the sleeve/hoodie are visible;
-the reduced export also exposes a lower-back hoodie opening. These require
-geometry inspection and a bounded correction before body acceptance.
+hands remain soft. Dark patches around the sleeve/hoodie are visible.
+The [gray export diagnosis](../diagnostics/pixal03/README.md) confirms that the
+lower-back painted patch is not a large geometry opening there; small hood/
+ankle/shoe breaks and problematic export topology remain. These require a
+bounded correction before body acceptance.
 
 Hunyuan's current turbo recipe makes smooth, coherent bodies but loses the
 adult face, finger separation and shoe detail. TRELLIS retains useful adult
@@ -76,3 +78,8 @@ The [original A1/A2 controls](../../rider-selection/README.md) remain available.
 of the giant export tearing, but still leaves unacceptable pitted cloth,
 wrists and shoes. T-EXPORT-01 has **one failed fix**. The original fifteen-body
 comparison stays frozen; no other body silently receives this variant.
+
+[Defect ledger](../defect-ledger.json) preserves candidate hashes and counts;
+[motion preflight](../gate2-preflight.md) records the existing physical contract
+and what the prior UniMate test actually demonstrated. Both later gates remain
+unstarted until the selected body passes checkpoint 1.

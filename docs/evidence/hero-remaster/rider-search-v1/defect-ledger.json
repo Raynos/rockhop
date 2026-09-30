@@ -1,0 +1,528 @@
+{
+  "status": "checkpoint1 body choice pending; no accepted body",
+  "date": "2026-09-30",
+  "candidateIdsStable": true,
+  "shortlist": [
+    "P3",
+    "T1"
+  ],
+  "shortlistMeaning": "P3 recommended for user visual choice; T1 export-only diagnostic alternative",
+  "limits": {
+    "maximumShortlistedBodies": 2,
+    "maximumCorrectionPassesPerBody": 2,
+    "sameDefectFailedFixesBeforeAsk": 2,
+    "stage1ActiveHourCeiling": 8
+  },
+  "stageAccounting": {
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 4826,
+    "conservativeChargedHoursUpperBound": 1.341,
+    "knownGenerationTimesSeparatelyRecorded": [
+      "hunyuan-run.json",
+      "trellis-run.json",
+      "pixal/01..05/result.json"
+    ],
+    "method": "Charge all observed goal wall time conservatively, including inference waits; actual hands-on time is not inferred by subtracting overlapping processes. Do not charge subsequent waiting for user choice. Start a new active interval on resumption."
+  },
+  "candidates": [
+    {
+      "id": "H1",
+      "engine": "hunyuan",
+      "design": "01",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/01.raw-shape.npz",
+          "sha256": "1ce37726c998470901995a7b79f791726567912c0bbef4f49571ef251d33a1ad"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/01.glb",
+          "sha256": "7cc4c84bcb143888fafdde4b4d99b016070cc1a7a7d4d120f2e0b3b20bca735f"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/01.reduced.glb",
+          "sha256": "ded7c4eb18a7bf9371dc79b6df636064bc4c6c6892d980b6588e4e85d4493f3c"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "H2",
+      "engine": "hunyuan",
+      "design": "02",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/02.raw-shape.npz",
+          "sha256": "d7a93a1a306cc2c8cac00336255495250259ac398b6b0146a6bcbf4b8bd073d7"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/02.glb",
+          "sha256": "192427b4b49e0396da0259ed8f5c05b5cef5261ae25645679eddef6006a30cb0"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/02.reduced.glb",
+          "sha256": "cfa470623688f78f3908958a7604a39cda5e9f4b6401aedeeae7fe07a78a502c"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "H3",
+      "engine": "hunyuan",
+      "design": "03",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/03.raw-shape.npz",
+          "sha256": "366f83e9591317a8b90bb7c7f94209d8278d153028825ed4dec514ffe1344fbe"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/03.glb",
+          "sha256": "76a1ddaf49f74889006fdffad89f8bff5c3154aef41a0c9c4609e1b42571b58e"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/03.reduced.glb",
+          "sha256": "48aecb9a8c1773472a9960de5df37a0d3fcbd11525efa6a87be63248e4b980e6"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "H4",
+      "engine": "hunyuan",
+      "design": "04",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/04.raw-shape.npz",
+          "sha256": "6ebd0cd5490043381666606cf952bac5b0ddd55f02a4b3716837258487a2facc"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/04.glb",
+          "sha256": "42ca84ffc5f5809884df971ddd0c9bb88060acba5a8a33be61b4f82b2d2045d7"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/04.reduced.glb",
+          "sha256": "9b985f69e8cc85aebde814dff4beb626e13f9f0912ace25fb85a54d9c671e0a9"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "H5",
+      "engine": "hunyuan",
+      "design": "05",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/05.raw-shape.npz",
+          "sha256": "343a02f765d961d9b7ffe8a3491aa654d3a9f7ca9424f91172178a0fffbe8e47"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/05.glb",
+          "sha256": "2ba5dadd404203042aa735442b8839eb523ff3f14542bd78e4e40960696ef447"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan/05.reduced.glb",
+          "sha256": "6ff9ba8a14b89ae2aae9029d42d48b182817855be328111942d05454b3250eb7"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "T1",
+      "engine": "trellis",
+      "design": "01",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/01.npz",
+          "sha256": "7d1f92016f59dc773c3d05010c60c650c1625f7d408efff6920af5821f51fd0c"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/01.glb",
+          "sha256": "6c6017160baa28679bfcd8bb5d2fb828c2a7fca1bffe29c7577ed33e0a022cc7"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/01.reduced.glb",
+          "sha256": "781a927a728f69f5a9b427cd2c7c1085a9e792fc67ca4015b83305dbec0dc189"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 1,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "T2",
+      "engine": "trellis",
+      "design": "02",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/02.npz",
+          "sha256": "84fa95a2fe09a673878546e004ff2df741e2f58770912ca3d77bc18ced4a5e0d"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/02.glb",
+          "sha256": "adceb03902214fec09ce0eb5dbb556dbf9438d7b360982c9792facf6d5f1cf37"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/02.reduced.glb",
+          "sha256": "473ed963fca52a26cc26931ebc6ea8d786cdf171878c4d3d24a03f161ddafd0d"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "T3",
+      "engine": "trellis",
+      "design": "03",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/03.npz",
+          "sha256": "e45de07d771da8e5f5750a8b176f1845429d8e7b76b776caeed91f89a91707a4"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/03.glb",
+          "sha256": "54b0d47527eb2ae31655453cf4aef9bcc3f4a36f6f8878ed14a48f0873214035"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/03.reduced.glb",
+          "sha256": "1635390ab8531430763a80b58e4fa881095f4ed3a4cc883542a1117ebcf8e614"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "T4",
+      "engine": "trellis",
+      "design": "04",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/04.npz",
+          "sha256": "507c98ae5ca1dbb7f719006d314390827d70e838c42d36f7733524fdc5760dc0"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/04.glb",
+          "sha256": "f477c1dd6bcd777380705709a5553265b392b206b1e3ae9889349f92901d5782"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/04.reduced.glb",
+          "sha256": "eb4c2b4dc0cbc5aa1069c3a86b366795aedd5a63c96acceb8fd0dd970421900e"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "T5",
+      "engine": "trellis",
+      "design": "05",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/05.npz",
+          "sha256": "3196f76fc49963ec31c8dee9cc3f09d80f09e29d80b07ab5b5184ee862deb7d6"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/05.glb",
+          "sha256": "025412e7fd04a5cf18b0afc3352a9cbe5f8c7394547b0fbe1a6e66376eb52ac8"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/trellis/05.reduced.glb",
+          "sha256": "114d809fd901027a04f5c9430a8492dd96338b55a8193caca77874f297d11fc7"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "P1",
+      "engine": "pixal",
+      "design": "01",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/01/native.npz",
+          "sha256": "92b6b3cf9cbdfa172fd50abcc64550ddb7733638496f5f5e14b33d1a21a1665c"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/01/working.glb",
+          "sha256": "0dfda4a5a6985bdfab694ae3547629a264fa8408592d8d36fcc9a9094c650e13"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/01/reduced.glb",
+          "sha256": "97f918c374dc6f150031b24dfe47e10b2b7999765148198faeacf3779a81a8f8"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "P2",
+      "engine": "pixal",
+      "design": "02",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/02/native.npz",
+          "sha256": "11a6ea44eafca10dff06f2a920fd703bd8491b552fde567d57afd1b4e8ec10ef"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/02/working.glb",
+          "sha256": "d4ed668368806903f123983de5f825b683f7e41521e13215c51f1b35ac5d47b2"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/02/reduced.glb",
+          "sha256": "770ab92470262f7538175390406439e24e143f6e05b3a48be64b65853906f9c2"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "P3",
+      "engine": "pixal",
+      "design": "03",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/native.npz",
+          "sha256": "372d70c17ab75a77d5c5fe324fee68c14a1bb6e7fbc1c3c95b5b1ebd8eb6a728"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/working.glb",
+          "sha256": "fa149ce5584cc2039d92cda7403c852bbe93004c28f1790894492e7ec7d6e005"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/03/reduced.glb",
+          "sha256": "8611363622715a2a0ef861ccccb87be094e3ad996d4e9a63d0d0f7623516c9b1"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "P4",
+      "engine": "pixal",
+      "design": "04",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/04/native.npz",
+          "sha256": "705d50e72109d15e1494e91a44404e0602c1a1fa3a8c6dbd46d5873177fea4b5"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/04/working.glb",
+          "sha256": "31510e538dcda3f8a980017f3b7fad329ffaf33b012bf7363893bd7ed6d059ad"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/04/reduced.glb",
+          "sha256": "33060d2836efef9edaf567066197fad0421e7ac03e51d75e30b3db6e4a5e6579"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    },
+    {
+      "id": "P5",
+      "engine": "pixal",
+      "design": "05",
+      "sourceFiles": {
+        "native": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/05/native.npz",
+          "sha256": "ccace5716f8ab209078f13ca7eb30daaa833f463ac3d65c30dd7ea6c5fdb44db"
+        },
+        "working": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/05/working.glb",
+          "sha256": "ed71c1f663272bd99aab7472db1ae012687ad0583ad27aa57308b81e8a98069c"
+        },
+        "reduced": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/pixal/05/reduced.glb",
+          "sha256": "24cff2f64595e0de56c6936eb4ddf97180edb03e25c2ea6c08494b7b5921efa4"
+        }
+      },
+      "generationFailures": 0,
+      "correctionPasses": 0,
+      "accepted": false,
+      "reviewExtent": "common front/native overview; detailed views in gallery",
+      "measuredRig": "none; unskinned output",
+      "sittingGate": "not started",
+      "gameplayGate": "not started"
+    }
+  ],
+  "defects": [
+    {
+      "id": "H-FIDELITY-01",
+      "stage": 1,
+      "bodies": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "symptom": "Juvenile face and simplified fingers/shoes under the frozen turbo recipe",
+      "failedFixes": 0,
+      "cause": "not isolated; generation/export recipe limitation observed",
+      "verdict": "not chosen; no correction attempted"
+    },
+    {
+      "id": "T-EXPORT-01",
+      "stage": 1,
+      "bodies": [
+        "T1"
+      ],
+      "symptom": "Large working-export cloth/wrist/shoe breakup beyond smaller native holes",
+      "failedFixes": 1,
+      "attempts": [
+        {
+          "number": 1,
+          "scope": "Higher-face native rebake, then Blender DECIMATE on separate derivative",
+          "sourceSHA256": "7d1f92016f59dc773c3d05010c60c650c1625f7d408efff6920af5821f51fd0c",
+          "variantSHA256": "ca177dec13261ddb4e0292a95ee5d4885ef13743bd847fc150d098e1531e5e94",
+          "before": "baseline/trellis/01/working/orbit.mp4",
+          "after": "variants/trellis-01-export1/working/orbit.mp4",
+          "geometryComparison": "variants/trellis-01-export1/gray-comparison.png",
+          "verdict": "partial improvement, failed body-quality gate; rough pitting and glove/shoe breakup remain"
+        }
+      ],
+      "decision": "one bounded pass remains only if this direction is chosen; no silent application to other bodies"
+    },
+    {
+      "id": "P3-SURFACE-01",
+      "stage": 1,
+      "bodies": [
+        "P3"
+      ],
+      "symptom": "Painted hoodie dark patches; gray lower-back surface remains continuous at the dark patch",
+      "failedFixes": 0,
+      "cause": "texture/material export symptom there, separated from smaller geometry defects",
+      "evidence": "diagnostics/pixal03/README.md",
+      "verdict": "no correction attempted"
+    },
+    {
+      "id": "P3-TOPOLOGY-01",
+      "stage": 1,
+      "bodies": [
+        "P3"
+      ],
+      "symptom": "Small hood and ankle/shoe geometry breaks, coarse hands; boundary/nonmanifold edges after declared position weld",
+      "failedFixes": 0,
+      "cause": "not yet isolated between native geometry and export; requires deformable topology refinement",
+      "evidence": "diagnostics/pixal03/verification.json",
+      "verdict": "no correction attempted; not rig-ready accepted"
+    },
+    {
+      "id": "LEGACY-BLENDER-SHOULDERS",
+      "stage": 1,
+      "bodies": [
+        "rejected fresh Blender bodies"
+      ],
+      "failedFixes": 2,
+      "evidence": "../rider-selection/README.md",
+      "verdict": "historic limit already reached; do not revive recipe without a new human choice"
+    }
+  ],
+  "stopRule": "A third fix of any defect is forbidden after two failures until baseline/both failed evidence is shown and a user chooses another candidate, a specifically bounded new approach, or revert/abandon. Renaming tools/defects does not reset counts.",
+  "userChoice": {
+    "requested": "Choose P3 for refinement, another H/T/P body, or revert/abandon",
+    "received": false,
+    "queue": "project/human-in-the-loop/QUEUE.md#HR-23"
+  },
+  "runtimePreservation": {
+    "files": [
+      {
+        "path": "src/core/riderGeometry.ts",
+        "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+      },
+      {
+        "path": "src/render/hero/riderRig.ts",
+        "sha256": "b78c9134f6a3dba8cc56101596d8e097a9a238b084a9bfef908dd33934830130"
+      },
+      {
+        "path": "src/render/hero/gltfRider.ts",
+        "sha256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935"
+      },
+      {
+        "path": "harness/hero-remaster/replay.mts",
+        "sha256": "f4bc930ea36c1e4126bedc3990f79c94191d07fda07438a5dfc9088cabab410b"
+      },
+      {
+        "path": "public/models/rider-street-mustard.glb",
+        "sha256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61"
+      },
+      {
+        "path": "public/models/rider-street-mustard-lod.glb",
+        "sha256": "def6821d99fe7d73442735f1010bdd7e68bd2057d6de25643d91e31429aad72a"
+      }
+    ],
+    "newMapping": "not created; source rig not yet selected",
+    "physicsChangedByThisWork": false,
+    "playerAssetsChangedByThisWork": false
+  }
+}
