@@ -1,0 +1,80 @@
+{
+  "status": "source-only-ready-unaccepted",
+  "sourceHEAD": "7fe59bc9c362de1b4a7036769e0d7071b3178d6b",
+  "manifestSHA256": "305a45187e5008e98ab408e8c5616da93464d76e71536e415b6af23931f27fe2",
+  "checks": {
+    "applicationPhases": "before/after: 0 diagnostics each, 1550 source/declaration files",
+    "testProjectTypecheck": "exit 0",
+    "ownershipTests": "6/6 passed",
+    "scopedLint": "exit 0; recipe/tests/config and both full after overrides"
+  },
+  "buildsRun": false,
+  "browserRun": false,
+  "sharedEdits": false,
+  "sourceFiles": [
+    {
+      "file": "build.mjs",
+      "sha256": "db2fd7fcc7e7a50342cb1cc381a30c0a24cc82a2e9daba8b611dfdde49a8143b"
+    },
+    {
+      "file": "capture.mjs",
+      "sha256": "2a6c1b70e1f5bc3e05f4283cb11ecfdd81acab1ebb122573894a20b3e61ed16d"
+    },
+    {
+      "file": "check.mjs",
+      "sha256": "4040c5f49242913f5c5264c1f7628dabffc442cc42aac8353d0ccfb290e456bc"
+    },
+    {
+      "file": "checks.json",
+      "sha256": "7f24a6ad63dec465321a7059d24d1ec66ce78a352b7c20292f0009452d7d14bd"
+    },
+    {
+      "file": "overrides.mjs",
+      "sha256": "44ce6177c1fb8a1d43003c1ca7bda94d4558a19fa46389147fbd17c88ad3bbbd"
+    },
+    {
+      "file": "ownership.test.ts",
+      "sha256": "0afaabfc049fec193c8d82c18d05295e19bd11a2b1d370649c8fb313a05357b0"
+    },
+    {
+      "file": "prepare.mjs",
+      "sha256": "b4ddf80f3816838e440e4693ea8b017c3ae2a04d240576244351980413900e43"
+    },
+    {
+      "file": "runtime.patch",
+      "sha256": "b78214238969d43d5343a0ab087adaa6d30cf9b7389c85a8bfa80743550fead2"
+    },
+    {
+      "file": "snapshot-manifest.json",
+      "sha256": "305a45187e5008e98ab408e8c5616da93464d76e71536e415b6af23931f27fe2"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha256": "505d3dde3f10da65121aede4af9739d2cac95caf3247d79cd83ee235fd8e1e42"
+    },
+    {
+      "file": "vitest.config.mts",
+      "sha256": "900bd6512fde05028a1f88466b17458504170135e1915e1d082008f2bc52e36d"
+    }
+  ],
+  "patchFormattingCorrection": {
+    "contextLines": 0,
+    "requiredGitOption": "--unidiff-zero",
+    "previousPatchSHA256": "a452d4bd65dbcbe9b065b00108a5308e0114e8928a4706c97f32815f54e2d57e",
+    "currentPatchSHA256": "b78214238969d43d5343a0ab087adaa6d30cf9b7389c85a8bfa80743550fead2",
+    "historicalPreparedSources": [
+      {
+        "file": "src/render/world/biomeKit.ts",
+        "bytes": 101122,
+        "sha256": "556c22bc85b6db16bb5e7bc70beaa932032d9bb6186179d918cf3560572bbad8"
+      },
+      {
+        "file": "src/render/world/zones/zoneDeck.ts",
+        "bytes": 29774,
+        "sha256": "0d8253f71145c79e47911b4f54865625acc57963c49bc52569d1af093070972a"
+      }
+    ],
+    "originalManifestSHA256": "305a45187e5008e98ab408e8c5616da93464d76e71536e415b6af23931f27fe2",
+    "buildsRun": false
+  }
+}
