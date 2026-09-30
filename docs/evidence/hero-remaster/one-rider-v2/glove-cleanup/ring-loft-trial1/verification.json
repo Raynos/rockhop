@@ -1,0 +1,44 @@
+{
+  "status": "FAILED appearance; parent rejected slab palm and unnatural knuckle transition",
+  "verifiedStaticFrames": 12,
+  "verifiedMotionFrames": 72,
+  "video": {
+    "file": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/ring-loft-trial1/temporary-seam-motion.mp4",
+    "sha256": "df59fc5fd63615975209d5c7d2a7d33c889b0f21880e93eeb29e1c30e3f74570",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 960,
+        "height": 520,
+        "r_frame_rate": "12/1",
+        "duration": "3.000000",
+        "nb_frames": "36"
+      }
+    ],
+    "command": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-framerate",
+      "12",
+      "-i",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-combined/%04d.png",
+      "-c:v",
+      "libx264",
+      "-crf",
+      "20",
+      "-pix_fmt",
+      "yuv420p",
+      "-threads",
+      "4",
+      "-movflags",
+      "+faststart",
+      "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/ring-loft-trial1/temporary-seam-motion.mp4"
+    ]
+  },
+  "boardSHA256": "7342694bfa878b8c617df5b0d5e460674fced8b48317641c6f087ab23cfa8f89",
+  "sourcePreservationVerified": true,
+  "rigScope": "temporary local seam test only; not final19bone/gameplay"
+}

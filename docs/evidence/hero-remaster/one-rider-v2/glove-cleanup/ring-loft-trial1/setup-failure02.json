@@ -1,0 +1,12 @@
+{
+  "status": "failed final topology gate; unaccepted diagnostic master only",
+  "exception": "AssertionError: Sewn branches must be manifold",
+  "topology": {
+    "boundaryEdges": 22,
+    "nonmanifoldEdges": 22
+  },
+  "recipe": "assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_failure02.py",
+  "recipeSHA256": "272939e8493399ccfff10bf3490100025d9b95c0aeb6ff7b84275e5d0968cd69",
+  "failedSetupFixesSoFar": 1,
+  "specificFix2": "Connected-component seeded distal glove deletion instead of broad x threshold; protect every foot/knee vertex"
+}

@@ -147,3 +147,15 @@ expected single120-edge neck boundary. Dense/reduced source bytes unchanged.
 
 Limits: No authored face fit or appearance acceptance. Pinned Triangle
 dependency is task-local only; existing90min cage/model-stage bounds remain.
+
+Finding: Explicit sewn glove branches remove mitten fusion and wrist gaps
+but the slab palm/knuckle silhouette fails parent appearance review. Freeze
+it and use freshly generated anatomical CC0 hand topology for correction.
+
+Validation: Parent inspected front/profile/rear gray.12static/72motion
+frames and36-frame silent3s seam clip verified; one connected manifold
+60,896triangle derivative preserves protected body positions/face-loop UVs.
+Fresh silent low/high baseline exact clear/crash/one-tick restart passes.
+
+Limits: No deformed collision or visible bike contact pass. Source old head
+stays rejected. New anatomical hands are unbuilt; no bake or gameplay rig.

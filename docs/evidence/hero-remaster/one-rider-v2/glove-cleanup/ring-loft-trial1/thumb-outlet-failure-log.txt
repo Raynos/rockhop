@@ -1,0 +1,15 @@
+18:03:10 | INFO: Data are loaded, start creating Blender stuff
+18:03:10 | INFO: Blender create Mesh node textured
+18:03:10 | INFO: glTF import finished in 0.05s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_trial1.py", line 126, in <module>
+    thumbroot=indexed_loop(thumbedges)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_trial1.py", line 117, in indexed_loop
+    assert adj and all(len(v)==2 for v in adj.values())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_trial1.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

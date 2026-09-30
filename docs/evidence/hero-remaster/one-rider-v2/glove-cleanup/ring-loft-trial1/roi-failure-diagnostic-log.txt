@@ -1,0 +1,17 @@
+18:04:43 | INFO: Data are loaded, start creating Blender stuff
+18:04:43 | INFO: Blender create Mesh node textured
+18:04:44 | INFO: glTF import finished in 0.05s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_trial1.py:199: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  glove=bpy.data.materials.new('Glove trial provisional PBR; no bake'); glove.use_nodes=True
+SEWN_TOPOLOGY {"vertices": 30404, "faces": 56820, "boundaryEdges": 22, "nonmanifoldEdges": 22}
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_trial1.py", line 210, in <module>
+    assert topology['boundaryEdges']==0 and topology['nonmanifoldEdges']==0,'Sewn branches must be manifold'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Sewn branches must be manifold
+
+Error: script failed, file: 'assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/ring_loft_trial1.py', exiting.
+Info: Saved as "failed-sewn-body.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,844 @@
+{
+  "status": "static/motion evidence only; no parent acceptance or gameplay contact",
+  "recipeSHA256": "421057c67e33dbd7f39fef4300076f2f2376fcd01a39b1f54e0241df2191b260",
+  "blender": "5.2.1 LTS",
+  "backend": "Cycles CPU",
+  "threads": 4,
+  "samples": 24,
+  "componentVertexCounts": [
+    30416
+  ],
+  "protectedSourcePositionSHA256AfterFinal": "3afbb1490f625f2a9b45108ff6d9cd1f6d3110d29ceaa4aed33d3ee31194e3e0",
+  "protectedSourceUVSHA256AfterFinal": "79dcb7e6d42e0a69c0b3defa6d97a716321e7730720237d6530f02a3c39812f0",
+  "sourcePreservationVerifiedAfterFinal": true,
+  "triangles": 60896,
+  "intersectionDiagnostic": {
+    "method": "BVH broadphase plus triangle SAT, tolerance1e-7m; pairs sharing any vertex excluded",
+    "nonadjacentCandidatePairsExamined": 0,
+    "trianglePairsIncludingTouching": 0,
+    "firstPairs": [],
+    "limits": "Tolerance includes touching; does not measure glove-bike fit or deformed self-intersections."
+  },
+  "views": [
+    {
+      "side": 1,
+      "view": "front",
+      "yaw": 0,
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove-1-front-gray.png",
+      "sha256": "06f8663da948422884d382563a9ed34a57903ce746070df2ff357157ff77ec9e"
+    },
+    {
+      "side": 1,
+      "view": "profile",
+      "yaw": 90,
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove-1-profile-gray.png",
+      "sha256": "ee747c4a148071873644ce601f3efb8496e8e28bbbd30dfbfdd8933ba70c825f"
+    },
+    {
+      "side": 1,
+      "view": "back",
+      "yaw": 180,
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove-1-back-gray.png",
+      "sha256": "57cc640fc666430072fd3a3d5cc65187721d3098e08142e0271d79a158b7c8ec"
+    },
+    {
+      "side": -1,
+      "view": "front",
+      "yaw": 0,
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove--1-front-gray.png",
+      "sha256": "85399884608f60e21ba2a4f7b14305370a24086815b04428ed13a3c9e2c97955"
+    },
+    {
+      "side": -1,
+      "view": "profile",
+      "yaw": 270,
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove--1-profile-gray.png",
+      "sha256": "eaf81dd74720828be260a71cbf7c5871755e0b2d33d5fea7ae17a5e54dba28c2"
+    },
+    {
+      "side": -1,
+      "view": "back",
+      "yaw": 180,
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove--1-back-gray.png",
+      "sha256": "bec4f351098319c984dcdbb0ab346d6e789d83038532f48cade2117336aefae0"
+    },
+    {
+      "side": 1,
+      "view": "front",
+      "yaw": 0,
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove-1-front-pbr.png",
+      "sha256": "285de1bf67678fb31ef0ba369892fe7c0abb3457f8792f3f080de0a81d36b90b"
+    },
+    {
+      "side": 1,
+      "view": "profile",
+      "yaw": 90,
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove-1-profile-pbr.png",
+      "sha256": "817324cbe0daa51f5b9da46d3044c2e2435e22d018830df89739b60c9facbf96"
+    },
+    {
+      "side": 1,
+      "view": "back",
+      "yaw": 180,
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove-1-back-pbr.png",
+      "sha256": "bf017a1c71d46d47f930c781714d12578c4d54a5acd81c55077a9a65bc6f2da0"
+    },
+    {
+      "side": -1,
+      "view": "front",
+      "yaw": 0,
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove--1-front-pbr.png",
+      "sha256": "974d9b0d5230af825bb405ef39a015ce822e099c57728a7b6027dd5ab1cf4ebd"
+    },
+    {
+      "side": -1,
+      "view": "profile",
+      "yaw": 270,
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove--1-profile-pbr.png",
+      "sha256": "0e77f303008735be4e30c545892b9341ac76f8147239ece2ac40304037d0446e"
+    },
+    {
+      "side": -1,
+      "view": "back",
+      "yaw": 180,
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/glove--1-back-pbr.png",
+      "sha256": "910c5d52f63cdf4c3953303a87a145c315946e7803e9ff497684fc4194600242"
+    }
+  ],
+  "motion": [
+    {
+      "frame": 0,
+      "side": 1,
+      "seconds": 0.0,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0000.png",
+      "sha256": "ea4a2d842c3cc7dc939d9b85a9ca51f102f712a612c27c64e8418a6c2e2aeacd",
+      "wristFlexDegrees": 0.0,
+      "wristTwistDegrees": 0.0,
+      "forearmFlexDegrees": 0.0
+    },
+    {
+      "frame": 0,
+      "side": -1,
+      "seconds": 0.0,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0000.png",
+      "sha256": "414dbf9f640c5f57facdc3cc05f895db9d86524b4e02227b6fa03c1b86421d43",
+      "wristFlexDegrees": 0.0,
+      "wristTwistDegrees": 0.0,
+      "forearmFlexDegrees": 0.0
+    },
+    {
+      "frame": 1,
+      "side": 1,
+      "seconds": 0.08333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0001.png",
+      "sha256": "83dc0f45ee60665c51ec85f9c1f2d103db3fa67f871ce13e7b15f1053cac7860",
+      "wristFlexDegrees": 5.3567068439591,
+      "wristTwistDegrees": 14.054992963253707,
+      "forearmFlexDegrees": 3.2140241063754598
+    },
+    {
+      "frame": 1,
+      "side": -1,
+      "seconds": 0.08333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0001.png",
+      "sha256": "b2765814bab59a503daf2df24572eb7db687100aa9ea320c6b25e1d5d0ad1b2c",
+      "wristFlexDegrees": 5.3567068439591,
+      "wristTwistDegrees": 14.054992963253707,
+      "forearmFlexDegrees": 3.2140241063754598
+    },
+    {
+      "frame": 2,
+      "side": 1,
+      "seconds": 0.16666666666666666,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0002.png",
+      "sha256": "43580dbfb40d3ea95bcb8ad5c155ac4a3421e90b9ec2238fae384c3efb6aa8a7",
+      "wristFlexDegrees": 10.54124472244028,
+      "wristTwistDegrees": 26.317549037588503,
+      "forearmFlexDegrees": 6.324746833464168
+    },
+    {
+      "frame": 2,
+      "side": -1,
+      "seconds": 0.16666666666666666,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0002.png",
+      "sha256": "71f9864bb183144809b1d0d04e00c6138de5bd26b582f3509310735761d02a0b",
+      "wristFlexDegrees": 10.54124472244028,
+      "wristTwistDegrees": 26.317549037588503,
+      "forearmFlexDegrees": 6.324746833464168
+    },
+    {
+      "frame": 3,
+      "side": 1,
+      "seconds": 0.25,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0003.png",
+      "sha256": "4c6a35f438b81d536c3e96464f9bc9153ecca42e28f858e8a9b7743ea2fe2ff7",
+      "wristFlexDegrees": 15.386978322177184,
+      "wristTwistDegrees": 35.22382127426952,
+      "forearmFlexDegrees": 9.23218699330631
+    },
+    {
+      "frame": 3,
+      "side": -1,
+      "seconds": 0.25,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0003.png",
+      "sha256": "a9461f54e887feedfbfc4d5d88c87ff0c779101db51b10f94e96b67865a8fbf5",
+      "wristFlexDegrees": 15.386978322177184,
+      "wristTwistDegrees": 35.22382127426952,
+      "forearmFlexDegrees": 9.23218699330631
+    },
+    {
+      "frame": 4,
+      "side": 1,
+      "seconds": 0.3333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0004.png",
+      "sha256": "5c4bbe35b06e130521444e7327910a4ccf3a0c37d7d6b2e67dc25a41f1e3c4b2",
+      "wristFlexDegrees": 19.738161778191376,
+      "wristTwistDegrees": 39.63799047071739,
+      "forearmFlexDegrees": 11.842897066914826
+    },
+    {
+      "frame": 4,
+      "side": -1,
+      "seconds": 0.3333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0004.png",
+      "sha256": "8c5a4487097d99eef8a63c76cddc27b0d6bf2db50b8a336f8aa4895071f5d641",
+      "wristFlexDegrees": 19.738161778191376,
+      "wristTwistDegrees": 39.63799047071739,
+      "forearmFlexDegrees": 11.842897066914826
+    },
+    {
+      "frame": 5,
+      "side": 1,
+      "seconds": 0.4166666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0005.png",
+      "sha256": "53f7122ca0c19f9f622e48777c5497b3981c907cf6544b64c085ae91c8e77383",
+      "wristFlexDegrees": 23.454944474040893,
+      "wristTwistDegrees": 38.99711648727295,
+      "forearmFlexDegrees": 14.072966684424536
+    },
+    {
+      "frame": 5,
+      "side": -1,
+      "seconds": 0.4166666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0005.png",
+      "sha256": "55a8de87071d1eabc06b1075247c3da50366e41ece8984d2f581e68fb617ab4d",
+      "wristFlexDegrees": 23.454944474040893,
+      "wristTwistDegrees": 38.99711648727295,
+      "forearmFlexDegrees": 14.072966684424536
+    },
+    {
+      "frame": 6,
+      "side": 1,
+      "seconds": 0.5,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0006.png",
+      "sha256": "e6f968619a35df5604152165cf823313750471d3e5004930e3f8b292ce7e19de",
+      "wristFlexDegrees": 26.41786595570214,
+      "wristTwistDegrees": 33.38293014885211,
+      "forearmFlexDegrees": 15.850719573421284
+    },
+    {
+      "frame": 6,
+      "side": -1,
+      "seconds": 0.5,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0006.png",
+      "sha256": "afa6fa3c387f53c5c05776c4efc8fac050fef90b8aea211b609b183811c545b2",
+      "wristFlexDegrees": 26.41786595570214,
+      "wristTwistDegrees": 33.38293014885211,
+      "forearmFlexDegrees": 15.850719573421284
+    },
+    {
+      "frame": 7,
+      "side": 1,
+      "seconds": 0.5833333333333334,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0007.png",
+      "sha256": "c131b11ac7e465613ee5246a9afe46139a2ece7dd1171628510a3ced3714a868",
+      "wristFlexDegrees": 28.531695488854606,
+      "wristTwistDegrees": 23.51141009169893,
+      "forearmFlexDegrees": 17.119017293312762
+    },
+    {
+      "frame": 7,
+      "side": -1,
+      "seconds": 0.5833333333333334,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0007.png",
+      "sha256": "3d10a52ac07e4b8540a9f6ce6a42badb0f92437c0306caa72dc100ff6eb93dff",
+      "wristFlexDegrees": 28.531695488854606,
+      "wristTwistDegrees": 23.51141009169893,
+      "forearmFlexDegrees": 17.119017293312762
+    },
+    {
+      "frame": 8,
+      "side": 1,
+      "seconds": 0.6666666666666666,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0008.png",
+      "sha256": "b953782d90dd8b3353f9e6c2a811cd242e3b2711b366c77db00b55237a98193d",
+      "wristFlexDegrees": 29.72849285303804,
+      "wristTwistDegrees": 10.64147382266701,
+      "forearmFlexDegrees": 17.837095711822826
+    },
+    {
+      "frame": 8,
+      "side": -1,
+      "seconds": 0.6666666666666666,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0008.png",
+      "sha256": "802b79d586e311221d71610060c18fe8d78ba143c9e084c932da8b9d6cdd21d6",
+      "wristFlexDegrees": 29.72849285303804,
+      "wristTwistDegrees": 10.64147382266701,
+      "forearmFlexDegrees": 17.837095711822826
+    },
+    {
+      "frame": 9,
+      "side": 1,
+      "seconds": 0.75,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0009.png",
+      "sha256": "017d5be29f0708df156a51cdb4d903113143907f662cf3fd86b76c454900eef2",
+      "wristFlexDegrees": 29.96979199623944,
+      "wristTwistDegrees": -3.585572356137317,
+      "forearmFlexDegrees": 17.981875197743665
+    },
+    {
+      "frame": 9,
+      "side": -1,
+      "seconds": 0.75,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0009.png",
+      "sha256": "c66b6bbb6b6e4d66a3ee91a932aaed952a6d649914385ab100ea53d1fd4e0295",
+      "wristFlexDegrees": 29.96979199623944,
+      "wristTwistDegrees": -3.585572356137317,
+      "forearmFlexDegrees": 17.981875197743665
+    },
+    {
+      "frame": 10,
+      "side": 1,
+      "seconds": 0.8333333333333334,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0010.png",
+      "sha256": "d5df7014b9fe92999165e79c50d6f6f8fea008b1ec4291696eee7d8ddc98fae9",
+      "wristFlexDegrees": 29.247837365454707,
+      "wristTwistDegrees": -17.35534956470232,
+      "forearmFlexDegrees": 17.548702419272825
+    },
+    {
+      "frame": 10,
+      "side": -1,
+      "seconds": 0.8333333333333334,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0010.png",
+      "sha256": "40cc9e52a4599fc82b52ee1068d8f1d1c76f25c8d12c3cca8639d00fb141069b",
+      "wristFlexDegrees": 29.247837365454707,
+      "wristTwistDegrees": -17.35534956470232,
+      "forearmFlexDegrees": 17.548702419272825
+    },
+    {
+      "frame": 11,
+      "side": 1,
+      "seconds": 0.9166666666666666,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0011.png",
+      "sha256": "4a0a9436d55b22f8725fb7285ee33e547f146fbce1eb5ed1e9ccacded56bd15f",
+      "wristFlexDegrees": 27.58583317654352,
+      "wristTwistDegrees": -28.911794553095657,
+      "forearmFlexDegrees": 16.55149990592611
+    },
+    {
+      "frame": 11,
+      "side": -1,
+      "seconds": 0.9166666666666666,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0011.png",
+      "sha256": "8226ea09c8144b66111754f6b6e855eb14eca3afc20fd56f238407ab0d5a91da",
+      "wristFlexDegrees": 27.58583317654352,
+      "wristTwistDegrees": -28.911794553095657,
+      "forearmFlexDegrees": 16.55149990592611
+    },
+    {
+      "frame": 12,
+      "side": 1,
+      "seconds": 1.0,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0012.png",
+      "sha256": "c32ab36d2e6aebb7649b49cb3b6903a59062cb086d882b26a7a635191c2c443f",
+      "wristFlexDegrees": 25.037197611639083,
+      "wristTwistDegrees": -36.781110902058025,
+      "forearmFlexDegrees": 15.022318566983449
+    },
+    {
+      "frame": 12,
+      "side": -1,
+      "seconds": 1.0,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0012.png",
+      "sha256": "75017f0fe4689b76bbace934f81e61cdc281f7266c971a758ba24d53c4bc5b2f",
+      "wristFlexDegrees": 25.037197611639083,
+      "wristTwistDegrees": -36.781110902058025,
+      "forearmFlexDegrees": 15.022318566983449
+    },
+    {
+      "frame": 13,
+      "side": 1,
+      "seconds": 1.0833333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0013.png",
+      "sha256": "4689f87498ba46561fc81fc570580a38df6a7ce2d72d7e6d412f9f91ed9437ed",
+      "wristFlexDegrees": 21.683845914821745,
+      "wristTwistDegrees": -39.959722661652584,
+      "forearmFlexDegrees": 13.010307548893048
+    },
+    {
+      "frame": 13,
+      "side": -1,
+      "seconds": 1.0833333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0013.png",
+      "sha256": "b57b9331b2c4d8d9a964a6ab9957339a960fd7b775b221b8b81c9967c0d36a86",
+      "wristFlexDegrees": 21.683845914821745,
+      "wristTwistDegrees": -39.959722661652584,
+      "forearmFlexDegrees": 13.010307548893048
+    },
+    {
+      "frame": 14,
+      "side": 1,
+      "seconds": 1.1666666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0014.png",
+      "sha256": "a74e4ed62641d776854b1d51e00a24a83f259c579b95e04e7f619e2447b2cf29",
+      "wristFlexDegrees": 17.633557568774197,
+      "wristTwistDegrees": -38.042260651806146,
+      "forearmFlexDegrees": 10.580134541264519
+    },
+    {
+      "frame": 14,
+      "side": -1,
+      "seconds": 1.1666666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0014.png",
+      "sha256": "3c9bd382bcfc65905410fc69625bdd4f7917fda94e09118b08cdc2944aceaeb4",
+      "wristFlexDegrees": 17.633557568774197,
+      "wristTwistDegrees": -38.042260651806146,
+      "forearmFlexDegrees": 10.580134541264519
+    },
+    {
+      "frame": 15,
+      "side": 1,
+      "seconds": 1.25,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0015.png",
+      "sha256": "83c2d9d1d32ed7cbd9828cd9dece41c04daeb8d0f6af29fab50f67f5421dbe64",
+      "wristFlexDegrees": 13.016512173526747,
+      "wristTwistDegrees": -31.273259298721197,
+      "forearmFlexDegrees": 7.809907304116048
+    },
+    {
+      "frame": 15,
+      "side": -1,
+      "seconds": 1.25,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0015.png",
+      "sha256": "703a89c15c7c165e7248e42d45366207e18653232e5789de666c01136a5e50d9",
+      "wristFlexDegrees": 13.016512173526747,
+      "wristTwistDegrees": -31.273259298721197,
+      "forearmFlexDegrees": 7.809907304116048
+    },
+    {
+      "frame": 16,
+      "side": 1,
+      "seconds": 1.3333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0016.png",
+      "sha256": "a7b8c9b7ba074f9e4ce8bd1047fb2a90251c8f33960a6ed2e635e1b7eb6ea78d",
+      "wristFlexDegrees": 7.981105367000257,
+      "wristTwistDegrees": -20.515971096236253,
+      "forearmFlexDegrees": 4.788663220200154
+    },
+    {
+      "frame": 16,
+      "side": -1,
+      "seconds": 1.3333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0016.png",
+      "sha256": "89c79a5bc111b56a2620592e1b899a7d2e38ac50982b1dcbbf831e3feb5b6211",
+      "wristFlexDegrees": 7.981105367000257,
+      "wristTwistDegrees": -20.515971096236253,
+      "forearmFlexDegrees": 4.788663220200154
+    },
+    {
+      "frame": 17,
+      "side": 1,
+      "seconds": 1.4166666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0017.png",
+      "sha256": "f543b1e92ca227b75484e76fa1dcfa828ee9dbfe4d305eb078e67c8c52efdca7",
+      "wristFlexDegrees": 2.689179267103009,
+      "wristTwistDegrees": -7.142275791945475,
+      "forearmFlexDegrees": 1.6135075602618052
+    },
+    {
+      "frame": 17,
+      "side": -1,
+      "seconds": 1.4166666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0017.png",
+      "sha256": "156b7658d02be385d73f42c0eed630e85e60f6bc373ca3a695f7be83bd2e981a",
+      "wristFlexDegrees": 2.689179267103009,
+      "wristTwistDegrees": -7.142275791945475,
+      "forearmFlexDegrees": 1.6135075602618052
+    },
+    {
+      "frame": 18,
+      "side": 1,
+      "seconds": 1.5,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0018.png",
+      "sha256": "676351cd1925e3c4d2f8bea6e0ce0fd7fed277ede6096c333b85e11e5dc0f2e1",
+      "wristFlexDegrees": -2.689179267102988,
+      "wristTwistDegrees": 7.142275791945422,
+      "forearmFlexDegrees": -1.6135075602617928
+    },
+    {
+      "frame": 18,
+      "side": -1,
+      "seconds": 1.5,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0018.png",
+      "sha256": "61053b1ce686d488aeeafb7815332c4eb41e27ac3b2c1d5c58e3b0c2f2fbe421",
+      "wristFlexDegrees": -2.689179267102988,
+      "wristTwistDegrees": 7.142275791945422,
+      "forearmFlexDegrees": -1.6135075602617928
+    },
+    {
+      "frame": 19,
+      "side": 1,
+      "seconds": 1.5833333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0019.png",
+      "sha256": "e0a811c6c29642e3bbcc5ea1ee4dd4eb3be1bb43fa2614b4ade9376df3c7489a",
+      "wristFlexDegrees": -7.981105367000237,
+      "wristTwistDegrees": 20.515971096236207,
+      "forearmFlexDegrees": -4.788663220200142
+    },
+    {
+      "frame": 19,
+      "side": -1,
+      "seconds": 1.5833333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0019.png",
+      "sha256": "3c35bce09bfcb8201601506b18def4328c74277780f8876a32a9d5559aad31df",
+      "wristFlexDegrees": -7.981105367000237,
+      "wristTwistDegrees": 20.515971096236207,
+      "forearmFlexDegrees": -4.788663220200142
+    },
+    {
+      "frame": 20,
+      "side": 1,
+      "seconds": 1.6666666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0020.png",
+      "sha256": "798fe1506ef5eab20699100646ffe17589e2b43cf8589385557e81cd8af48d93",
+      "wristFlexDegrees": -13.01651217352674,
+      "wristTwistDegrees": 31.273259298721182,
+      "forearmFlexDegrees": -7.809907304116044
+    },
+    {
+      "frame": 20,
+      "side": -1,
+      "seconds": 1.6666666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0020.png",
+      "sha256": "fc9a2b9023502111543195c0e8825d639faf22648573af6819fd23420ac24525",
+      "wristFlexDegrees": -13.01651217352674,
+      "wristTwistDegrees": 31.273259298721182,
+      "forearmFlexDegrees": -7.809907304116044
+    },
+    {
+      "frame": 21,
+      "side": 1,
+      "seconds": 1.75,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0021.png",
+      "sha256": "d6bd7c58e56da3ad895e60a094a92d4c5e728498ecafadd470d802926b8dce5f",
+      "wristFlexDegrees": -17.63355756877419,
+      "wristTwistDegrees": 38.04226065180614,
+      "forearmFlexDegrees": -10.580134541264515
+    },
+    {
+      "frame": 21,
+      "side": -1,
+      "seconds": 1.75,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0021.png",
+      "sha256": "61a2109147e009fdac98d958c9cf8cc1dd96900e0f574fde0a53712c6c80b0f3",
+      "wristFlexDegrees": -17.63355756877419,
+      "wristTwistDegrees": 38.04226065180614,
+      "forearmFlexDegrees": -10.580134541264515
+    },
+    {
+      "frame": 22,
+      "side": 1,
+      "seconds": 1.8333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0022.png",
+      "sha256": "4c8c2b483e68c44b697cfd648b076787b5fef936f43eb9e3725af0c51c7be358",
+      "wristFlexDegrees": -21.68384591482174,
+      "wristTwistDegrees": 39.95972266165259,
+      "forearmFlexDegrees": -13.010307548893046
+    },
+    {
+      "frame": 22,
+      "side": -1,
+      "seconds": 1.8333333333333333,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0022.png",
+      "sha256": "fd9e70f8c2bf9799dd7b3c8264cf12f4705cc108063d39544e2073eef51fc41f",
+      "wristFlexDegrees": -21.68384591482174,
+      "wristTwistDegrees": 39.95972266165259,
+      "forearmFlexDegrees": -13.010307548893046
+    },
+    {
+      "frame": 23,
+      "side": 1,
+      "seconds": 1.9166666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0023.png",
+      "sha256": "89b0592f537c6cb257dadf57a663dfc2136e120139138897e0a37d41833513d8",
+      "wristFlexDegrees": -25.037197611639076,
+      "wristTwistDegrees": 36.78111090205803,
+      "forearmFlexDegrees": -15.022318566983445
+    },
+    {
+      "frame": 23,
+      "side": -1,
+      "seconds": 1.9166666666666667,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0023.png",
+      "sha256": "fac94be283eaee660991898be317bb22b6893e89e3a7a8d14aecbc5d73955893",
+      "wristFlexDegrees": -25.037197611639076,
+      "wristTwistDegrees": 36.78111090205803,
+      "forearmFlexDegrees": -15.022318566983445
+    },
+    {
+      "frame": 24,
+      "side": 1,
+      "seconds": 2.0,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0024.png",
+      "sha256": "5828e6c938bcaa1d48b771267052ae6f56b8d545455844939464358e76b39920",
+      "wristFlexDegrees": -27.585833176543517,
+      "wristTwistDegrees": 28.91179455309567,
+      "forearmFlexDegrees": -16.55149990592611
+    },
+    {
+      "frame": 24,
+      "side": -1,
+      "seconds": 2.0,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0024.png",
+      "sha256": "8ead2b85b4f58d9ed606db94d9819d9de9bb162e39ec5635e5be86a261272d05",
+      "wristFlexDegrees": -27.585833176543517,
+      "wristTwistDegrees": 28.91179455309567,
+      "forearmFlexDegrees": -16.55149990592611
+    },
+    {
+      "frame": 25,
+      "side": 1,
+      "seconds": 2.0833333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0025.png",
+      "sha256": "ff92e62c823792406c9157e7333d8e73d49f9a12477298649189d6eb06f71bbe",
+      "wristFlexDegrees": -29.247837365454707,
+      "wristTwistDegrees": 17.355349564702337,
+      "forearmFlexDegrees": -17.548702419272825
+    },
+    {
+      "frame": 25,
+      "side": -1,
+      "seconds": 2.0833333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0025.png",
+      "sha256": "dfcb4758703d764315ba444e54e3fae856a12ef56b118bee58977619731832b2",
+      "wristFlexDegrees": -29.247837365454707,
+      "wristTwistDegrees": 17.355349564702337,
+      "forearmFlexDegrees": -17.548702419272825
+    },
+    {
+      "frame": 26,
+      "side": 1,
+      "seconds": 2.1666666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0026.png",
+      "sha256": "b4e316b8a11b5f182a4c7ee69e207d8cd97d566a7f373833f59a7b7b330d7b25",
+      "wristFlexDegrees": -29.969791996239437,
+      "wristTwistDegrees": 3.5855723561373543,
+      "forearmFlexDegrees": -17.981875197743662
+    },
+    {
+      "frame": 26,
+      "side": -1,
+      "seconds": 2.1666666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0026.png",
+      "sha256": "ddb558b01cdaf85b3ad026801af1814e68a6442a4c098e4a02c4e34068ff44e4",
+      "wristFlexDegrees": -29.969791996239437,
+      "wristTwistDegrees": 3.5855723561373543,
+      "forearmFlexDegrees": -17.981875197743662
+    },
+    {
+      "frame": 27,
+      "side": 1,
+      "seconds": 2.25,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0027.png",
+      "sha256": "16557ca16980e72f06afd7be2999b43430025089f0cca6ab0ce4415a50475a10",
+      "wristFlexDegrees": -29.728492853038045,
+      "wristTwistDegrees": -10.641473822666988,
+      "forearmFlexDegrees": -17.837095711822826
+    },
+    {
+      "frame": 27,
+      "side": -1,
+      "seconds": 2.25,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0027.png",
+      "sha256": "0305fa9f909687e3961304d819dc5ff56fc50bc54f77518c86c9f9fd49b730ab",
+      "wristFlexDegrees": -29.728492853038045,
+      "wristTwistDegrees": -10.641473822666988,
+      "forearmFlexDegrees": -17.837095711822826
+    },
+    {
+      "frame": 28,
+      "side": 1,
+      "seconds": 2.3333333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0028.png",
+      "sha256": "97b7242c947ec15e106c84c8be575a9eda03ff6c74fe0127099d74d2f5b3ceed",
+      "wristFlexDegrees": -28.53169548885461,
+      "wristTwistDegrees": -23.511410091698913,
+      "forearmFlexDegrees": -17.119017293312766
+    },
+    {
+      "frame": 28,
+      "side": -1,
+      "seconds": 2.3333333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0028.png",
+      "sha256": "5d9c78fd92945481258598fde64608faae5609d85838c2fb51f51cb3b5785bb4",
+      "wristFlexDegrees": -28.53169548885461,
+      "wristTwistDegrees": -23.511410091698913,
+      "forearmFlexDegrees": -17.119017293312766
+    },
+    {
+      "frame": 29,
+      "side": 1,
+      "seconds": 2.4166666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0029.png",
+      "sha256": "ab0a9e416656d78e313b0eb8b66734269a1e1599d9fdbd98ed535b57a95ef705",
+      "wristFlexDegrees": -26.417865955702144,
+      "wristTwistDegrees": -33.3829301488521,
+      "forearmFlexDegrees": -15.850719573421285
+    },
+    {
+      "frame": 29,
+      "side": -1,
+      "seconds": 2.4166666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0029.png",
+      "sha256": "6b18cb0b372234c74af9c053e56663c4d211f694655894f2a27eaf27730056d2",
+      "wristFlexDegrees": -26.417865955702144,
+      "wristTwistDegrees": -33.3829301488521,
+      "forearmFlexDegrees": -15.850719573421285
+    },
+    {
+      "frame": 30,
+      "side": 1,
+      "seconds": 2.5,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0030.png",
+      "sha256": "58d6d12d48cf3dd15d11cc3edaf091075a12825f529158b646ed4490925194b7",
+      "wristFlexDegrees": -23.454944474040897,
+      "wristTwistDegrees": -38.99711648727294,
+      "forearmFlexDegrees": -14.07296668442454
+    },
+    {
+      "frame": 30,
+      "side": -1,
+      "seconds": 2.5,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0030.png",
+      "sha256": "1700b1da4916cd379cddb17ff47151d9a0418e7e713b6f5c458da0adc63fff6e",
+      "wristFlexDegrees": -23.454944474040897,
+      "wristTwistDegrees": -38.99711648727294,
+      "forearmFlexDegrees": -14.07296668442454
+    },
+    {
+      "frame": 31,
+      "side": 1,
+      "seconds": 2.5833333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0031.png",
+      "sha256": "15cfb6f4877599f4fb6ce0a69f3376f8ba4d1de8c135d01f551c85d5552c7d66",
+      "wristFlexDegrees": -19.738161778191383,
+      "wristTwistDegrees": -39.63799047071739,
+      "forearmFlexDegrees": -11.84289706691483
+    },
+    {
+      "frame": 31,
+      "side": -1,
+      "seconds": 2.5833333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0031.png",
+      "sha256": "eec82b8d5f3f85a703a2d625c8e342aa9d7c8f43a567d50929f2b91432fb2e07",
+      "wristFlexDegrees": -19.738161778191383,
+      "wristTwistDegrees": -39.63799047071739,
+      "forearmFlexDegrees": -11.84289706691483
+    },
+    {
+      "frame": 32,
+      "side": 1,
+      "seconds": 2.6666666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0032.png",
+      "sha256": "790861a5eacdfc0a9364ccbf61290bec52d938affa0478f12096da2aa973819d",
+      "wristFlexDegrees": -15.38697832217719,
+      "wristTwistDegrees": -35.223821274269525,
+      "forearmFlexDegrees": -9.232186993306314
+    },
+    {
+      "frame": 32,
+      "side": -1,
+      "seconds": 2.6666666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0032.png",
+      "sha256": "1159bfbfa0a23801ae8598f9f18eb5110bf68d191f86cc5fd23c737bacfdd471",
+      "wristFlexDegrees": -15.38697832217719,
+      "wristTwistDegrees": -35.223821274269525,
+      "forearmFlexDegrees": -9.232186993306314
+    },
+    {
+      "frame": 33,
+      "side": 1,
+      "seconds": 2.75,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0033.png",
+      "sha256": "d55fe9a03c577acac1984f630497cd4e24b1d742c7d2bba1a348bcd3c4af0e80",
+      "wristFlexDegrees": -10.541244722440288,
+      "wristTwistDegrees": -26.31754903758852,
+      "forearmFlexDegrees": -6.3247468334641725
+    },
+    {
+      "frame": 33,
+      "side": -1,
+      "seconds": 2.75,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0033.png",
+      "sha256": "87d5e7110aeb8fa82a825fc0ae9b5f272bc28cf7e95fb23babf33f8532fb676e",
+      "wristFlexDegrees": -10.541244722440288,
+      "wristTwistDegrees": -26.31754903758852,
+      "forearmFlexDegrees": -6.3247468334641725
+    },
+    {
+      "frame": 34,
+      "side": 1,
+      "seconds": 2.8333333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0034.png",
+      "sha256": "0a614c02ea60e959f49c6744fd93d2ec0df61e00bcb0ac79e25a31a881590a39",
+      "wristFlexDegrees": -5.356706843959106,
+      "wristTwistDegrees": -14.054992963253724,
+      "forearmFlexDegrees": -3.2140241063754638
+    },
+    {
+      "frame": 34,
+      "side": -1,
+      "seconds": 2.8333333333333335,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0034.png",
+      "sha256": "9455fcb7e7f23d6503e98296267cdef0d1364b08fb1a57c753808f8b9bf17180",
+      "wristFlexDegrees": -5.356706843959106,
+      "wristTwistDegrees": -14.054992963253724,
+      "forearmFlexDegrees": -3.2140241063754638
+    },
+    {
+      "frame": 35,
+      "side": 1,
+      "seconds": 2.9166666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion-1-0035.png",
+      "sha256": "bd37fc95c8fc543587dcc9939031e1d076dac2fe18588ecb346071d9aee9a3b4",
+      "wristFlexDegrees": -7.34788079488412e-15,
+      "wristTwistDegrees": -1.9594348786357652e-14,
+      "forearmFlexDegrees": -4.408728476930472e-15
+    },
+    {
+      "frame": 35,
+      "side": -1,
+      "seconds": 2.9166666666666665,
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/ring-loft-trial1/motion--1-0035.png",
+      "sha256": "b2872f28d59f329d202c2edcbd73c385e4bc94e5db0bf5d3a37d98150af3da04",
+      "wristFlexDegrees": -7.34788079488412e-15,
+      "wristTwistDegrees": -1.9594348786357652e-14,
+      "forearmFlexDegrees": -4.408728476930472e-15
+    }
+  ],
+  "temporaryRig": "diagnostic root plus2bones perarm only; no final19bone bind/socket/IK",
+  "wallSeconds": 184.77028020797297
+}
