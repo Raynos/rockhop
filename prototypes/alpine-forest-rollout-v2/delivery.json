@@ -1,0 +1,113 @@
+{
+  "status": "moving-candidate-parent-judgment-pending",
+  "sourceHEAD": "8700c4c2fdb8de80f1745a644152654d639cf716",
+  "appInventorySHA256": "ddf5a80334dd7ab9eda901260ae50daabb8c3f08645e1ffaa9d65a6136e1bb75",
+  "publicInventorySHA256": "ae55edb67472e4634be3b856110dc7dc8aa08383b866051b85fb61458bd26954",
+  "catalogSHA256": "2d9e63e82e4610b1033f15ea1c1c56fb29c17473cb6a9cd021c3739b521d6467",
+  "indexSHA256": {
+    "before": "20168e3052414f5a7659ea17aaa89fc7f07be0b98a2ea108b4bceaf0a17c10fe",
+    "after": "35deef2a4584423fb6dc6e156b81ef9ac023d2aa0f608b2d6a9e70ba4730478f"
+  },
+  "playerGzipBytes": {
+    "before": 715200,
+    "after": 716476,
+    "delta": 1276,
+    "remaining": 324
+  },
+  "captures": [
+    {
+      "name": "a2-full",
+      "frames": 360,
+      "finalHash": "e51e0d1fc00a4c72",
+      "finishTime": 29.983333333333334,
+      "inputSha256": "8ff1785f871b040e130b873b35274030599f7b7b4f40bfab62f56253c5fc8633",
+      "window": [
+        0,
+        null
+      ],
+      "outputSHA256": "3665a73ca5478539d5f1725d9232088bcd84e1d22a8130266ea778fc02da5ec1"
+    },
+    {
+      "name": "a2-log",
+      "frames": 101,
+      "finalHash": "83cd9b3616f46581",
+      "finishTime": null,
+      "inputSha256": "8ff1785f871b040e130b873b35274030599f7b7b4f40bfab62f56253c5fc8633",
+      "window": [
+        2646,
+        3252
+      ],
+      "outputSHA256": "16ae212d5778a4ed2c3c20dfc381ce1149d67c8932ac8b822bbac5f3683ee1ef"
+    },
+    {
+      "name": "a3-full",
+      "frames": 298,
+      "finalHash": "b4140f2cd72ce946",
+      "finishTime": 24.816666666666666,
+      "inputSha256": "ed5af2eaf96b2c277e5168581d74243984f3c9a7784b2b6116ecbd2b474cc6cf",
+      "window": [
+        0,
+        null
+      ],
+      "outputSHA256": "357bbba7d1befc4c5395ef8242066110f6d8bab5b950883cfd0c73a59c178259"
+    },
+    {
+      "name": "a3-beam",
+      "frames": 98,
+      "finalHash": "5bfe958dc04c63ab",
+      "finishTime": null,
+      "inputSha256": "ed5af2eaf96b2c277e5168581d74243984f3c9a7784b2b6116ecbd2b474cc6cf",
+      "window": [
+        1644,
+        2232
+      ],
+      "outputSHA256": "220479b34a55c30278bbcbde9e90201254ee4db71784c3937b88403c73d14f42"
+    },
+    {
+      "name": "a3-fault",
+      "frames": 60,
+      "finalHash": "e8791dbc59a11abb",
+      "finishTime": null,
+      "inputSha256": "94ded7d25bfcc99e6ede45c9dbfba77234bb7d169f2f74fe7942978b9cf27bf1",
+      "window": [
+        2364,
+        2724
+      ],
+      "outputSHA256": "57b689265e280caadacc39b3e62486a51a435c866575df60d5e8983cea3a8edd"
+    }
+  ],
+  "mount": {
+    "beforeMounted": 0,
+    "afterEnabled": true,
+    "afterMounted": 1,
+    "allFiveCameraChecksPass": true
+  },
+  "lifecycle": [
+    {
+      "track": "a2-log-jam",
+      "mode": "missing-map",
+      "pass": true
+    },
+    {
+      "track": "a2-log-jam",
+      "mode": "late-switch",
+      "pass": true
+    },
+    {
+      "track": "a3-timberline",
+      "mode": "missing-map",
+      "pass": true
+    },
+    {
+      "track": "a3-timberline",
+      "mode": "late-switch",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "Same recorded dirty Quarry paint source is present in both phases; no other shared source changes enter the frozen builds.",
+    "No qualified timings under concurrent visual work.",
+    "Headless low852x392 is not physical-device acceptance.",
+    "A2/A3 original terrain, lake, sawmill, logs and loader geometry/materials unchanged; coherent whole-Alpine approval remains parent judgment."
+  ]
+}
