@@ -318,6 +318,7 @@ export class CameraRig {
       const pitch = k.pitch ?? mode.pitch;
       const roll = k.roll ?? mode.roll ?? 0;
       const bias = k.zoomBias ?? mode.zoomBias ?? 0;
+      if (k.screenX !== undefined) p.screenX = lerp(p.screenX, k.screenX, wt);
       if (yaw !== undefined) p.yaw = lerp(p.yaw, yaw, wt);
       if (pitch !== undefined) p.pitch = lerp(p.pitch, pitch, wt);
       p.roll = lerp(p.roll, roll, wt);

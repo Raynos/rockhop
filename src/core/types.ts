@@ -133,6 +133,8 @@ export interface CameraKey {
   roll?: number;
   /** -1..1, tighter / wider than the speed-driven default. */
   zoomBias?: number;
+  /** Normalized horizontal screen target for the followed bike; lower numbers reveal more track ahead. */
+  screenX?: number;
   /** Seconds to blend into this key (default 0.7). */
   blend?: number;
   /** Hard cut instead of blend. */

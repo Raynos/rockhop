@@ -52,10 +52,11 @@ export const C1 = rockhop('C1', 'c1-low-tide', 'Low Tide', 'coast', 'beginner', 
   .checkpoint()
   .flat(12) // checkpoint sightline before the braking marker
   .arch({ style: 'girder', span: 10, height: 6 })
-  .camera({ mode: 'side-tight', zoomBias: -0.4 })
+  .camera({ mode: 'side-tight', zoomBias: 0, screenX: 0.2 })
   .setPiece('balance', 'Ease Off for the Beached Ramp')
   .flat(18)
   .kickerPlank({ angleDeg: 22, rise: 2.2 })
+  .camera({ mode: 'side-tight', zoomBias: -0.4 })
   .box({ width: 12, height: 2.2, surface: 'metal', prop: 'container' })
   .ramp({ length: 28, height: 2.2, direction: 'down', surface: 'wood', prop: 'gangway' })
   .endSetPiece()
