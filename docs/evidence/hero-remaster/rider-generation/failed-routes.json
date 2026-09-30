@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-30",
+  "routes": [
+    {
+      "revision": "fit-v1",
+      "failure": "Low A-pose finger vertices were categorized as legs; fingers stretched into long strips in moving seated orbit.",
+      "fix": "Arm region classified before legs; elbow/wrist measured from raw geometry."
+    },
+    {
+      "revision": "fit-v2",
+      "failure": "Sockets and rig passed, but actual Garage showed neural glove/sole surfaces off the physical contacts.",
+      "fix": "v3 retains original authored gloves/shoes with exact geometry and weights, crops neural hands/feet, fits garment boundaries."
+    },
+    {
+      "diagnostic": "trimesh split(only_watertight=False)",
+      "failure": "Unbounded connected-component construction was killed with exit137; no complete report written.",
+      "fix": "Bounded NumPy edge histogram and sparse graph component count replaces per-component mesh construction."
+    },
+    {
+      "revision": "v3-bike-artifacts",
+      "initialDiagnosis": "New contact geometry suspected after checker patches appeared on bike in phone view.",
+      "correction": "Parent isolated identical artifacts with original rider and same bike; separate bike presentation issue, not a contact-extraction rejection."
+    },
+    {
+      "revision": "head-v5-first-trial",
+      "failure": "First coarse6-ring3.5mm strands read as raised zigzag worms in the builder diagnostic; final10-ring1.4mm curves are smoothed four passes and darker/rougher.",
+      "fix": "Bounded deterministic refinement with thinner/darker/smoother strands; no new neural run; parent whole-scene review remains required."
+    }
+  ]
+}

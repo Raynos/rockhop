@@ -1,0 +1,64 @@
+{
+  "observed_hf_revision": "387a344c3031299bc25fcbef35d36bd186d5afe7",
+  "upstream_revision": "5d6aabedd947297b5ba6706d8e9113e68c0c3e4f",
+  "canonical_weight_root": "/Users/raynos/projects/weights/manual/Linzhan/UniMate",
+  "selected_files": [
+    {
+      "rfilename": "LICENSE",
+      "blobId": "a7194551c7f204cdc6b0ea5380ce1d4a1860a58b",
+      "size": 1068
+    },
+    {
+      "rfilename": "unimate_uniml3d_f60_v2/checkpoints/checkpoint_step_100000.pt",
+      "blobId": "ce5497dad5a3380625a99ae3d0169fa1cc70c2e9",
+      "size": 1185827848,
+      "lfs": {
+        "sha256": "cbcfb7a057e45f967d5964fecf6b3f83358096f1306f25831e1644a18a50eb34",
+        "size": 1185827848,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "unimate_uniml3d_f60_v2/config.json",
+      "blobId": "2c9e03983e829292cc2e59d85b0bb0c5fee393c6",
+      "size": 3223
+    },
+    {
+      "rfilename": "unimate_uniml3d_f60_v2/dataset_stats.npy",
+      "blobId": "a861492311345359a995d6d4e5d0c81bfd9b9e48",
+      "size": 1934,
+      "lfs": {
+        "sha256": "c13ecfe8317c5e7b4a04089b71817d0787494d8f3f1df66b0ac8f496842d2c89",
+        "size": 1934,
+        "pointerSize": 129
+      }
+    }
+  ],
+  "input": {
+    "source": "/Users/raynos/projects/games/rockhop/public/models/rider-street-mustard.glb",
+    "source_sha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c",
+    "input_sha256": "18b00268168cedf0c624c5d7302d87b687eae3d44b9c0649fa33b2bd69e71e7d",
+    "clip": "sit_cruise",
+    "joints": 19,
+    "animation_count": 1
+  },
+  "preprocessing": {
+    "pass": true,
+    "joints": 19,
+    "source_clip": "sit_cruise",
+    "source_frames": 60,
+    "fps": 30,
+    "canonical_asset": "/Users/raynos/projects/localai/runtime/unimate/runs/preprocessed-rider/RockhopRider_canonical.glb",
+    "adaptations": [
+      "meshopt unpack with production decoder",
+      "Blender5 channelbag adapter",
+      "retain static clip/all weighted bones"
+    ],
+    "review_frame": "canonical +Z facing, diameter 2.0; runtime +X metre/socket restoration remains unverified"
+  },
+  "gt_export": {
+    "pass": true,
+    "asset": "/Users/raynos/projects/localai/runtime/unimate/runs/groundtruth-animated.glb",
+    "new_motion": false
+  }
+}

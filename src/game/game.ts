@@ -1007,6 +1007,7 @@ export class Game {
     const ticks0 = this.loop.ticks;
     const lr = this.lastRender;
     lr.prepMs = lr.hudMs = lr.audioMs = lr.submitMs = 0; // a skipped render (renderEnabled false) reports zeros, not the last frame's
+    this.renderer.advancePresentation?.(elapsedSeconds);
     if (this.pausedFlag || this.phaseValue === 'menu') {
       this.loop.renderOnce();
     } else if (this.playbackFrames) {

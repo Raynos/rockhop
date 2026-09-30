@@ -34,3 +34,5 @@ waiting on. IDs never reused. Ported from the FF15 demo's `HUMAN_REVIEW.md`.
   iPhone Safari and desktop speakers/headphones. Judge musical taste, recognizable crowd/rider reactions, engine/traction
   readability, seams, mute, background/foreground recovery and Retry-to-control feel. Automated checks stay silent and
   cannot close these listening/device judgments.
+
+- **HR-23 — Hero remaster visual and phone acceptance (asks 195, 201–203).** Waiting on: you — review the private [actual Garage/ride comparison](../../docs/evidence/hero-remaster/delivery/README.md) against the saved concepts, then judge the final candidate on your landscape iPhone and desktop. The current whole candidate is below the art target; this line does not block further autonomous art/render iteration. Sustained phone pacing and stranger attempts/restart remain release gates.

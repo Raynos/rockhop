@@ -1,0 +1,6 @@
+{
+  "command": "node localai/bin/unimate/verify_idle.mjs <six-raw> <seven-raw> <Rockhop-root> <report>",
+  "full_and_lod_exit_code": 1,
+  "failure": "AssertionError: loop quaternion seam",
+  "diagnosis": "Default seam angleTo does not normalize float32 endpoint quaternions; endpoints contain identical stored components. A temporary runtime verifier copy normalizes endpoint quaternions before angle measurement. No candidate changes or canonical verifier modifications."
+}

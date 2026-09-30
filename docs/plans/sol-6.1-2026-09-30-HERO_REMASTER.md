@@ -1,6 +1,6 @@
 # Rider and motorbike remaster
 
-Status: **in progress — build now; user returns tomorrow for the A/B**.
+Status: **in progress — reviewed V5 source/exports merged on main; mockup-matching production next**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · ask 191.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md), Gate 3 for presentation and Gate 4 for devices.
 Bar: [mission §3–4](../mission.md): a readable person on a mechanically credible motorbike, at phone frame rates.
@@ -31,7 +31,7 @@ Inventory checked 2026-09-30 against paths and runner source. `localai/docs/3d-m
 
 ## Local installation and storage contract
 
-UniMate's setup is the first implementation milestone, not an installed-state claim:
+UniMate's setup and CPU/MPS inference are now verified; these are the installed locations:
 
 | Content | Destination |
 |---|---|
@@ -61,7 +61,7 @@ Limit each neural geometry batch to the listed components and two seeds before j
 
 ## Seeing the candidate in the Garage
 
-Wire candidates through the existing asset loader/catalog in an isolated local review configuration. Do not restore the retired Classic/Img2 model chooser or mix experimental assets into public `main`. Use the actual Garage, not only the old standalone prototype; inspect one common side and three-quarter view, front/reverse, drag rotation and pinch/wheel zoom at landscape phone and desktop sizes. Keep the complete hero unobscured and at least 45% of viewport height, with readable controls and no buttons over the body/bike.
+Wire candidates through the existing asset loader/catalog and capture harness in the one main checkout. The latest user instruction requires owned code, exports and evidence on main; do not restore the retired Classic/Img2 model chooser. Use the actual Garage, not only the old standalone prototype; inspect one common side and three-quarter view, front/reverse, drag rotation and pinch/wheel zoom at landscape phone and desktop sizes. Keep the complete hero unobscured and at least 45% of viewport height, with readable controls and no buttons over the body/bike.
 
 Deliver a silent **before/after orbit movie**, a **candidate idle movie**, and **normal Menu→Garage→outfit/bike swap→ride→crash→instant restart footage**, with exact served GLB hashes. Still images accompany detail notes but never substitute for moving judgment. A protected review build can be prepared after assets pass local checks; do not call a concept mockup the new in-game model. The user can rotate/zoom the accepted candidate in that build and review on their own iPhone before release.
 
@@ -80,10 +80,92 @@ Deliver a silent **before/after orbit movie**, a **candidate idle movie**, and *
 - [x] Inventory installed local tools/runners and existing weight locations; correct the stale TRELLIS execution assumption.
 - [x] Define three concept directions, concrete local layout and whole-hero Garage deliverables.
 - [x] User authorises pursuing the mockups and tomorrow's actual A/B; start with A and B, retain C as a study.
-- [ ] Install and validate UniMate locally; run the bounded geometry bake-off.
-- [ ] Build and show the complete first Garage candidate; extend to all variants and maneuvers.
+- [x] Install and validate UniMate locally; run both Hunyuan and TRELLIS on the same seed-42 full-body reference.
+- [x] Build the complete first Street rider + Rookie/Pro bike candidate in the actual Garage, with a protected UniMate idle.
+- [x] Move the Garage closer and raise bounded inspection resolution/edge smoothing; verify twenty family swaps and restore riding quality on exit.
+- [ ] Match the concepts: head/hair, cloth/contact transitions and manufactured materials still need art iteration; new Race-family rider geometry remains open.
+- [ ] Extend moving maneuver and family remaster review beyond the first Street candidate.
 - [ ] Physical-device and final art/release acceptance.
 
 Ask 196 corrects the timing: **build immediately; no scheduled run**. The mistaken `rockhop-in-engine-hero-versus-mockup` automation was deleted. Bounded builders own UniMate setup, neural rider candidates and Blender bike candidates; the parent owns integration and judges moving actual-Garage evidence. The user returns tomorrow for the comparison; no public deployment or paid compute is authorised.
 
-Sources: [UniMate](https://github.com/Friedrich-M/UniMate), [official model card](https://huggingface.co/Linzhan/UniMate), [Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), local `~/projects/localai/docs/3d-models.md` and `~/projects/weights/MODELS.md`. This plan authorises no claim that a new model is already in the Garage.
+The first moving candidate combines contact-corrected Hunyuan/Blender Street geometry, Blender Rookie/Pro full+LOD bikes and an offline UniMate neck turn. TRELLIS's raw mesh is retained as comparison evidence; its open seams lost this whole-body selection. UniMate's clip is named `idle_breathe` for the existing optional runtime slot, but the measured visible motion is a subtle neck turn, not generated chest breathing. CPU, MPS and repeat-seed results are in [tool evidence](../evidence/hero-remaster/unimate/README.md); setup wrappers were committed separately in localai at `db6ed0b`.
+
+The current Garage moves from distance 6 to 4.4 and preserves complete hero visibility at approximately 78% of viewport height. Actual phone WebKit inspection draws 1748×660 instead of 1311×495 at 874×330 CSS/DPR3; desktop DPR1 draws 1920×1080 instead of 1280×720. Stronger existing SMAA runs only in inspection; exit restores the prior riding policy. This is supersampling/capped raster resolution, not a temporal upscaler or AAA acceptance. Headless render-target memory increases with pixel count; physical-phone pacing remains an open release gate.
+
+Private asset mappings and moving reports live under [delivery evidence](../evidence/hero-remaster/delivery/README.md). Candidate models are not promoted into `public/models`; the shared main checkout's unrelated course/audio work is preserved. Full rendered bot replay clears in 40.083333333333336 seconds on low/high with identical finish bytes `abaaaaaaaa0a4440`; forced crash and one-tick restart also pass. A bot proxy does not replace the stranger or physical-phone judgments.
+
+The bounded V5 art correction reduces the cap and adds swept hair/brows, plus darker manufactured bike materials. Actual engine review found the Garage's neutral emissive lift whitening vertex-painted strands; those surfaces now retain authored shading. Whole phone/desktop rotations and played Street footage accept this as the current **private prototype**, still below the concept. Next loop prioritises a properly defined face and hair silhouette, garment/contact transitions, and neutral studio lighting/material response. The existing loader's 1024-pixel rider atlas cap and biome environment must be evaluated with actual render/texture budgets before promising finer close-up detail. New Race geometry follows; no mockup-quality or AAA bar is closed by this first integration.
+
+Sources: [UniMate](https://github.com/Friedrich-M/UniMate), [official model card](https://huggingface.co/Linzhan/UniMate), [Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), local `~/projects/localai/docs/3d-models.md` and `~/projects/weights/MODELS.md`.
+
+## Mockup-matching production phase — asks 205–206
+
+Updated 2026-09-30. Continue this plan rather than open a competing plan.
+The whole V5 hero is the baseline; the installation and first integration
+rounds above are historical completed work, not work to repeat. The user now
+requires all owned work merged into **main in the one existing checkout**.
+This supersedes the earlier branch policy. Review builds remain useful for
+comparisons; a Git merge does not constitute visual acceptance or deployment.
+
+### Best approach and tool responsibilities
+
+Use A Street/Rookie as the first production target, then B Race/Pro. Match
+large shapes before small surface detail. A single generated picture cannot
+define unseen geometry or guarantee a consistent face, so make a coherent
+side/front/back design from it while keeping the actual bike and seated-contact
+contracts. C remains a style reference rather than another implementation.
+
+Blender owns the finished hero: deliberate anatomy, garment construction,
+mechanical panels, clean topology, UVs, skin weights and baked material maps.
+Hunyuan/TRELLIS provide bounded component studies or sculpt/bake donors when
+they improve a specific visible feature. Their raw meshes are not the final
+production model. UniMate addresses motion after the silhouette and fit work;
+its successful neck idle does not improve mesh detail or render sharpness.
+
+The current full rider already uses 58,800 of its 60,000-triangle ceiling and
+its LOD uses 7,979 of 8,000. Replace poorly allocated geometry and retopologize;
+do not keep adding tubes to the hair. Prefer readable opaque curl masses with
+selective strand detail; judge edge stability during motion at actual phone
+size. The bike is similarly near its 33,500 / 6,000 limits. Budget additional
+shape definition by removing detail that contributes nothing at riding scale.
+
+### Ordered next rounds
+
+| Round | Concrete work | Evidence and exit |
+|---|---|---|
+| M0 — Lock the comparison | Save V5 and concept A in the same board, with actual camera/view size, exposure and asset hashes. Identify the six largest tells: face, hair, cloth, bike shape, material response and lighting. Create a consistent side/front/back design specification; keep physics/contact anchors authoritative. | One ranked discrepancy list and repeatable side/three-quarter/front captures. Same-asset diagnostic clips isolate geometry, texture, lighting and raster changes. |
+| M1 — Define the whole hero | Rebuild a structured face with eyes/lids, nose, mouth, jaw and ears; replace the cap with clear curl groups. Refine shoulders, hoodie thickness/folds, cuffs, trousers and glove/boot transitions. Improve tank/panel thickness, engine casing, exhaust, fork, tyre and disc silhouette without altering protected mechanisms. | Full Garage rotation plus compression/extension/landing ride samples. Compare the complete hero to A; detailed head stills are supplementary. Protected rig/socket/mechanical gates pass and visible surfaces stay attached. |
+| M2 — Bake and shade deliberately | Finish UV layout and rebake high-detail normal, base-colour and roughness data onto the efficient mesh. Give cloth, denim, skin, rubber, paint, cast metal and machined metal distinct responses. Audit actual loaded atlas sizes, UV area, filtering and mip behaviour before changing a texture cap. | Neutral diagnostic orbit distinguishes sculpt defects from shading defects. Normal-map seams, texture stretching, flickering hair and waxy/equally glossy surfaces are absent in actual moving Garage and riding views; record texture memory and transfer bytes. |
+| M3 — Match Garage presentation | Tune a soft key, fill/rim and reflection environment with grounded contact shadows, stable exposure and supported colour management. Compare against the current emissive lift; use a calibrated light/material response for any replacement. Retain bounded resolution and stronger existing inspection AA. | Same geometry and camera in before/after engine clips at desktop and landscape phone sizes. Paint/cloth highlights separate; skin and dark hair preserve contrast; bloom/AO do not obscure shapes. Record target memory and frame pacing, then restore riding quality on exit. |
+| M4 — Finish motion and families | Correct cloth/skin deformation through forward/back lean, suspension compression, extension and landing; evaluate bounded UniMate additions only when contacts remain exact. Build the new Race body/helmet and propagate accepted Street anatomy to the remaining outfits. | All ten outfit/bike combinations in moving Garage review, complete full/LOD reports, twenty bounded swaps and played manoeuvre clips. Existing Race geometry must not be labelled remastered. |
+| M5 — Qualify the combined result | Judge mockup-versus-engine and full rides, run normal build/replay/resource gates, then sustained iPhone Safari and desktop/native checks plus stranger attempts/restart. | Actual human visual acceptance and the existing release gates. A technical proxy never proves that the model looks like the mockup or that a host WebKit run holds 60 fps on a phone. |
+
+Run M0 then M1 first. M2/M3 may alternate when neutral-light evidence shows
+whether the next largest defect comes from geometry, materials or lighting.
+Each implementation round changes one coherent finding, records a moving
+before/after, and gets one main commit. Reject a change that loses the overall
+silhouette, makes contacts worse or causes new runtime flicker. Do not spend
+another round regenerating the whole neural body without a concrete defect
+and a bounded component experiment. Cold boot/clear/crash/instant restart
+remains mandatory every third implementation round.
+
+### Acceptance and honest limits
+
+Compare at the default Garage view and actual riding distance, on both full
+and LOD models. Record the six categories as absent, present-but-wrong, or
+visually coherent, with specific clip timestamps. The target is coherent in
+all categories with no critical contact/mechanical regression; this checklist
+is a production proxy, while final resemblance and taste remain HR-23.
+
+Sustain the existing 60-fps phone bar; do not buy a prettier still by increasing
+unmeasured resolution, draw calls, transparent overdraw or post memory. Measure
+cold/warm entry and swaps, decoded textures, loaded resources and p95 frame
+time against the same-device baseline. Preserve byte-identical replay finish
+times. Refine lighting within the measured budget before proposing costlier
+passes. No new paid tool, model installation or inference runtime is needed
+for the next round; the installed toolchain is sufficient to attempt it.
+
+Bake/colour references: [Blender render baking](https://docs.blender.org/manual/en/latest/render/cycles/baking.html)
+and [Three.js colour management](https://threejs.org/manual/pages/color-management.html).
+These document the pipeline, not evidence of achieved visual quality.

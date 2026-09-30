@@ -112,7 +112,7 @@ try {
     errors.push(message);
     // Browser readback optimization advice is retained in evidence, but is not
     // a rendering failure. Screenshot capture itself exercises readback.
-    const knownWarning = m.type() === 'warning' && /GPU stall due to ReadPixels|KHR_parallel_shader_compile extension not supported|\[render\] track budget:|^Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute/.test(m.text());
+    const knownWarning = m.type() === 'warning' && /GPU stall due to ReadPixels|KHR_parallel_shader_compile extension not supported|\[render\] track budget:|^Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute|was preloaded using link preload but not used within a few seconds/.test(m.text());
     if (!knownWarning) executionErrors.push(message);
   });
   page.on('response', response => {

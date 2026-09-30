@@ -97,7 +97,7 @@ function localTRS(object) {
   return [...object.position.toArray(), ...object.quaternion.toArray(), ...object.scale.toArray()];
 }
 
-export async function verifyRider(sourcePath, outputPath, { tris = 60000, draws = 12, sampleStep = 1 / 30, durationTolerance = 1e-4, poseTolerance = 1e-3 } = {}) {
+export async function verifyRider(sourcePath, outputPath, { tris = 60000, draws = 12, sampleStep = 1 / 30, durationTolerance = 1e-4, poseTolerance = 1e-3, allowGarageIdle = false } = {}) {
   const src = await load(sourcePath), out = await load(outputPath);
   const stats = glbStats(outputPath);
   if (!process.env.HERO_ART_ALLOW_RAW) assert(stats.extensionsUsed.includes('EXT_meshopt_compression'), 'meshopt compression');
@@ -135,21 +135,22 @@ export async function verifyRider(sourcePath, outputPath, { tris = 60000, draws 
   }
   // clips: names, durations, finite tracks, and pose agreement with the source at every 1/30 s
   const names = out.gltf.animations.map(a => a.name).sort();
-  assert.deepEqual(names, Object.keys(RIDER_CLIPS).sort(), 'six exact clips');
+  assert.deepEqual(names.filter(n => !(allowGarageIdle && n === 'idle_breathe')), Object.keys(RIDER_CLIPS).sort(), 'six exact original clips; only an explicitly permitted Garage idle may be added');
   let clipError = 0;
   const clipReport = {};
   for (const clip of out.gltf.animations) {
-    const durationError = near(clip.duration, RIDER_CLIPS[clip.name], durationTolerance, `duration ${clip.name}`);
+    const idle = clip.name === 'idle_breathe';
+    const durationError = near(clip.duration, idle ? 2 : RIDER_CLIPS[clip.name], durationTolerance, `duration ${clip.name}`);
     for (const track of clip.tracks) {
       for (const value of track.values) assert(Number.isFinite(value), `finite ${track.name}`);
       for (const time of track.times) assert(Number.isFinite(time) && time >= 0, `finite time ${track.name}`);
     }
-    const sourceClip = src.gltf.animations.find(a => a.name === clip.name);
+    const sourceClip = src.gltf.animations.find(a => a.name === (idle ? 'sit_cruise' : clip.name));
     const mixerOut = new THREE.AnimationMixer(out.gltf.scene), mixerSrc = new THREE.AnimationMixer(src.gltf.scene);
     const actionOut = mixerOut.clipAction(clip).play(), actionSrc = mixerSrc.clipAction(sourceClip).play();
     let worst = 0, frames = 0;
     for (let t = 0; t <= clip.duration + 1e-6; t += sampleStep) {
-      actionOut.time = t; actionSrc.time = t; mixerOut.update(0); mixerSrc.update(0);
+      actionOut.time = t; actionSrc.time = idle ? 0 : t; mixerOut.update(0); mixerSrc.update(0);
       out.gltf.scene.updateMatrixWorld(true); src.gltf.scene.updateMatrixWorld(true);
       for (const bone of skeletonOut.bones) {
         const s = skeletonSrc.bones.find(b => b.name === bone.name);
@@ -157,6 +158,10 @@ export async function verifyRider(sourcePath, outputPath, { tris = 60000, draws 
         const qo = new THREE.Quaternion().setFromRotationMatrix(bone.matrixWorld), qs = new THREE.Quaternion().setFromRotationMatrix(s.matrixWorld);
         for (const v of [...po.toArray(), ...qo.toArray()]) assert(Number.isFinite(v), `finite pose ${clip.name} ${bone.name} @${t}`);
         const dq = qo.clone().multiply(qs.clone().invert());
+        if (idle && ['neck', 'head'].includes(bone.name)) {
+          assert(2 * Math.atan2(Math.hypot(dq.x, dq.y, dq.z), Math.abs(dq.w)) < 6 * Math.PI / 180, `bounded Garage head motion ${bone.name}`);
+          continue;
+        }
         worst = Math.max(worst, po.distanceTo(ps), 2 * Math.atan2(Math.hypot(dq.x, dq.y, dq.z), Math.abs(dq.w)));
       }
       frames++;
@@ -235,6 +240,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const options = {};
   if (get('--tris')) options.tris = +get('--tris');
   if (get('--draws')) options.draws = +get('--draws');
+  options.allowGarageIdle = argv.includes('--allow-garage-idle');
   const result = kind === 'bike' ? await verifyBike(source, output, options) : await verifyRider(source, output, options);
   process.stdout.write(JSON.stringify(result) + '\n');
 }

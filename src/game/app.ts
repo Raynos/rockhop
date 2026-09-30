@@ -446,7 +446,7 @@ export class App {
       setOutfit: (outfit) => cb.outfits!.set(outfit),
       back: () => this.goto('menu'),
       stage: (on) => o.onGarageStage?.(on),
-      orbit: (view) => o.setCameraOverride?.(view ? { mode: 'orbit', yaw: view.yaw, pitch: view.pitch, dist: view.dist, screenY: view.screenY } : null),
+      orbit: (view) => o.setCameraOverride?.(view ? { mode: 'orbit', yaw: view.yaw, pitch: view.pitch, dist: view.dist, screenX: view.screenX, screenY: view.screenY } : null),
     });
     this.onboard = new OnboardingCard(o.uiRoot, () => {
       saveOnboarded();

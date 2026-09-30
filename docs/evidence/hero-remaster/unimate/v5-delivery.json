@@ -1,0 +1,161 @@
+{
+  "candidates": [
+    {
+      "variant": "full",
+      "source": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/work/candidate-v5-six-packed.glb",
+        "bytes": 1430944,
+        "sha256": "f2d1b6e386de37601145a3502168cb72689f585443b6e378b4b8994b37d1f181"
+      },
+      "candidate": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-packed.glb",
+        "bytes": 1439900,
+        "sha256": "57c298f4d6c1371ab35c085f95679e5ae1545d57f3cbb5542b89ff7249321081"
+      },
+      "accepted_motion": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v4-packed.glb",
+        "bytes": 1407940,
+        "sha256": "3584acf3c07e851e0f2333a28cd15f88723a4907ccf084f39968361848afb93e"
+      },
+      "idle_neck_head_times_and_rotations_byte_identical_to_v4": true,
+      "motion_buffers": {
+        "neck": {
+          "input": {
+            "sha256": "1db052094b15595c3d418040e877d2504c47ec35d6164dad30af703321ce5aff",
+            "count": 60
+          },
+          "output": {
+            "sha256": "635e5362ed886293e6cb6164845d8b85f298260c729f7633b14bd9cdd30798bd",
+            "count": 60
+          }
+        },
+        "head": {
+          "input": {
+            "sha256": "1db052094b15595c3d418040e877d2504c47ec35d6164dad30af703321ce5aff",
+            "count": 60
+          },
+          "output": {
+            "sha256": "81256ab8d256dac04e0b8e956f6d110b2bd95b7f55a63613fdc49e4c7d99cf1a",
+            "count": 60
+          }
+        }
+      },
+      "mixer_report": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-merged-full-validation.json",
+      "contract_report": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-full-contract.json"
+    },
+    {
+      "variant": "lod",
+      "source": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/work/candidate-v5-lod-six-packed.glb",
+        "bytes": 556348,
+        "sha256": "261089d09ab61da7b5d2884896b6f26b3bc7ef5a87ebce2ad423cd73acb865eb"
+      },
+      "candidate": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-lod-packed.glb",
+        "bytes": 565300,
+        "sha256": "2619cbdf43e0cb23f0f8daadde0795dca24e42eba3f62dd5c67401c3534b4628"
+      },
+      "accepted_motion": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v4-lod-packed.glb",
+        "bytes": 560776,
+        "sha256": "777a9ffe572e07014e9c6fb71f4a2f3f13846f6e62e3cdf1e3740863a6009c64"
+      },
+      "idle_neck_head_times_and_rotations_byte_identical_to_v4": true,
+      "motion_buffers": {
+        "neck": {
+          "input": {
+            "sha256": "1db052094b15595c3d418040e877d2504c47ec35d6164dad30af703321ce5aff",
+            "count": 60
+          },
+          "output": {
+            "sha256": "635e5362ed886293e6cb6164845d8b85f298260c729f7633b14bd9cdd30798bd",
+            "count": 60
+          }
+        },
+        "head": {
+          "input": {
+            "sha256": "1db052094b15595c3d418040e877d2504c47ec35d6164dad30af703321ce5aff",
+            "count": 60
+          },
+          "output": {
+            "sha256": "81256ab8d256dac04e0b8e956f6d110b2bd95b7f55a63613fdc49e4c7d99cf1a",
+            "count": 60
+          }
+        }
+      },
+      "mixer_report": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-merged-lod-validation.json",
+      "contract_report": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-lod-contract.json"
+    }
+  ],
+  "ground_truth": {
+    "path": "/Users/raynos/projects/localai/runtime/unimate/runs/mps-seed42/gt-animated.glb",
+    "bytes": 4963640,
+    "sha256": "f9e15b99b01eb12d39ffedbd5d8c99245ab556776000fbe5a36b59f4c2977f12"
+  },
+  "motion_donor": {
+    "path": "/Users/raynos/projects/localai/runtime/unimate/runs/mps-seed42/constrained-animated.glb",
+    "bytes": 4963640,
+    "sha256": "8031f02e1c80fcbdf732a13fc08cd05bdd96063bf8acdb18c126d7f745379534"
+  },
+  "raw_seven_clip_exports": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/work/candidate-v5-seven.glb",
+      "bytes": 3041228,
+      "sha256": "9745955fcaeee25a6c30a5b40f6d620a732fa9b7faf762d8efc26e44331b24e6"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/work/candidate-v5-lod-seven.glb",
+      "bytes": 982356,
+      "sha256": "b696cda1f89a41ed3975516513ad295e1cf9c4a641337ae92cfb11d23951c12b"
+    }
+  ],
+  "reproduction": [
+    {
+      "cwd": "/Users/raynos/projects/localai",
+      "argv": [
+        "node",
+        "bin/unimate/merge_idle.mjs",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/work/candidate-v5-six-packed.glb",
+        "runtime/unimate/runs/mps-seed42/gt-animated.glb",
+        "runtime/unimate/runs/mps-seed42/constrained-animated.glb",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-packed.glb",
+        "/Users/raynos/projects/games/rockhop/node_modules/three/examples/jsm/libs/meshopt_decoder.module.js"
+      ]
+    },
+    {
+      "cwd": "/Users/raynos/projects/localai",
+      "argv": [
+        "node",
+        "bin/unimate/merge_idle.mjs",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/work/candidate-v5-lod-six-packed.glb",
+        "runtime/unimate/runs/mps-seed42/gt-animated.glb",
+        "runtime/unimate/runs/mps-seed42/constrained-animated.glb",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-lod-packed.glb",
+        "/Users/raynos/projects/games/rockhop/node_modules/three/examples/jsm/libs/meshopt_decoder.module.js"
+      ]
+    }
+  ],
+  "original_six_clip_definitions_and_embedded_source_bytes_preserved": true,
+  "geometry_materials_nodes_skins_sockets_accessors_and_bufferviews_preserved": true,
+  "no_new_inference": true,
+  "parent_garage_visual_judgment": "pending",
+  "final_raw_seven_clip_exports": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5.glb",
+      "bytes": 3041228,
+      "sha256": "9745955fcaeee25a6c30a5b40f6d620a732fa9b7faf762d8efc26e44331b24e6"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-lod.glb",
+      "bytes": 982356,
+      "sha256": "b696cda1f89a41ed3975516513ad295e1cf9c4a641337ae92cfb11d23951c12b"
+    }
+  ],
+  "raw_motion_byte_equality_report": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-raw-motion-byte-equality.json",
+  "raw_validation_reports": [
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-merged-full-raw-validation.json",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-merged-lod-raw-validation.json"
+  ],
+  "raw_verifier_diagnostic": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/unimate/v5-raw-verifier-failure.json",
+  "raw_seam_measurement": "Normalized quaternion angular seam zero; unnormalized angleTo artifact recorded explicitly. No animation buffer changes."
+}
