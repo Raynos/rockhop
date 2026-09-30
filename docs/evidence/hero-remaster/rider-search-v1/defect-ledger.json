@@ -1,5 +1,5 @@
 {
-  "status": "checkpoint1 original P3 direction chosen; targeted manual body inspection; face/head frozen",
+  "status": "checkpoint1 ask232 compact-hair concepts/body recommendation ready; fresh direction approval pending",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -687,13 +687,11 @@
   ],
   "stopRule": "A third fix of any defect is forbidden after two failures until baseline/both failed evidence is shown and a user chooses another candidate, a specifically bounded new approach, or revert/abandon. Renaming tools/defects does not reset counts.",
   "userChoice": {
-    "requested": "Choose H21-4 new bounded refinement, another preserved body/control, specifically bounded manual P3 retopology with new explicit budget, or revert/abandon",
-    "received": true,
+    "requested": "Approve hairstyle/body/head direction from one-rider-v2 approval package before expensive generation/substantial refinement",
+    "received": false,
+    "scope": "Fresh ask232 approval supersedes original P3 head-freeze route; historical choices/counts preserved",
     "queue": "project/human-in-the-loop/QUEUE.md#HR-23",
-    "scope": "Offered targeted manual body retopology approach: at most two additional attempts within remaining stage1 time ceiling; no global remesh/rebake; no body acceptance",
-    "decision": "Original brown-haired/bearded bottom-right P3 as starting point; preserve existing face/head",
-    "spokenLabel": "R-free corrected to B-free; interpreted from immediately shown bottom-right P3 and face preference",
-    "evidence": "choice/README.md"
+    "evidence": "../one-rider-v2/README.md"
   },
   "runtimePreservation": {
     "files": [
@@ -742,7 +740,7 @@
     "comparison": "hunyuan21/README.md",
     "shortlistChange": "pending human direction; P3/T1 historical correction counts preserved"
   },
-  "selectedDirection": "P3 original; preserve face/head",
+  "selectedDirection": "reopened by ask232; proposed H21-4 + new detailed Pixal head/neck + buzz cut",
   "manualP3Approach": {
     "name": "targeted manual repair with frozen head/face",
     "attempts": [],
@@ -751,7 +749,28 @@
     "headFaceFrozen": true,
     "globalRemeshRebakeAllowed": false,
     "stage1HourCeilingUnchanged": 8,
-    "status": "read-only locality inspected; frozen head/neck records; no correction yet",
+    "status": "superseded by ask232; stop automated P3 repairs; no manual correction attempted",
     "inspection": "manual-p3/locality-audit.json"
+  },
+  "previousUserChoices": [
+    {
+      "requested": "Choose H21-4 new bounded refinement, another preserved body/control, specifically bounded manual P3 retopology with new explicit budget, or revert/abandon",
+      "received": true,
+      "queue": "project/human-in-the-loop/QUEUE.md#HR-23",
+      "scope": "Offered targeted manual body retopology approach: at most two additional attempts within remaining stage1 time ceiling; no global remesh/rebake; no body acceptance",
+      "decision": "Original brown-haired/bearded bottom-right P3 as starting point; preserve existing face/head",
+      "spokenLabel": "R-free corrected to B-free; interpreted from immediately shown bottom-right P3 and face preference",
+      "evidence": "choice/README.md"
+    }
+  ],
+  "ask232ProposedDirection": {
+    "body": "H21-4",
+    "newHead": "detailed Pixal head/neck from approved same-identity hairstyle reference",
+    "hair": "1 buzz cut",
+    "approved": false,
+    "automatedP3Repairs": "stopped at two failures",
+    "new3DGeneration": "not started",
+    "oldProductionDonorAllowed": false,
+    "evidence": "../one-rider-v2/README.md"
   }
 }

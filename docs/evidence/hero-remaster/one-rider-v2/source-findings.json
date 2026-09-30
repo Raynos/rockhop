@@ -1,0 +1,268 @@
+{
+  "sources": [
+    {
+      "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/README.md",
+      "sha256": "e83866aae4f251f6c0fa978010dc1046551b9ee818d5146e8d73dad071f86d95"
+    },
+    {
+      "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/final-report.json",
+      "sha256": "db4603328291d3c34e6e6ad473180c15e60431be3df71c58913c31e5db55a21a"
+    },
+    {
+      "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/hunyuan21-hair-diagnostic/REPORT.md",
+      "sha256": "13b3d44fa67b8980f04565f12c3a747c1161ab7a35d4840825f7e68813abacae"
+    }
+  ],
+  "finalReport": {
+    "status": "THREE BUST ARMS COMPLETED; MATCHING NEW-BODY STATIC ASSEMBLIES COMPLETE / NOT ACCEPTED",
+    "boards": [
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/historical-vs-three-bust-head-closeups.png",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/three-new-body-static-assemblies.png",
+      "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/three-bust-inspection-board.png"
+    ],
+    "originalRiderReference": {
+      "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/comfy/input/rider-reference-01.png",
+      "sha256": "d17210891e43c704d2dca8a0966f07bf68b0b642a6240ac346f73e13ee2823ca"
+    },
+    "derivedSharedBustReference": {
+      "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+      "sha256": "12c45d565c0bc2f358bc9e7e0dab23e3234086dc3841185a1bc831b75c71f0d5",
+      "method": "Builtin ImageGen same-identity head and neck derivative, not a newly photographed view"
+    },
+    "historicalComparisonOnly": {
+      "commit": "4a670560e661967fa3fa6c74dafac978f20ee02c",
+      "cutoff": "2026-09-29T16:32:00Z",
+      "originalGLB": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/baseline/rider-street-mustard.glb",
+      "originalSHA256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c",
+      "decodedSHA256": "5921f695686d09b81202ee991534eb93ffda4ce9857d813dff9c3643326f26c6"
+    },
+    "engines": {
+      "pixal": {
+        "nativeOriginal": {
+          "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb",
+          "sha256": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154",
+          "bytes": 5617724,
+          "vertices": 112165,
+          "triangles": 89653,
+          "finite": true,
+          "skins": 0,
+          "animations": 0,
+          "materials": 1
+        },
+        "matchingNewBodyStaticAssembly": {
+          "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/assembly-pixal-v4/assembly.glb",
+          "sha256": "9d6cba35d7df11f10040f7dd5b367f702cf709fcede72f72547f0b7e7badf825",
+          "bytes": 7686212,
+          "vertices": 157125,
+          "triangles": 130607,
+          "finite": true,
+          "skins": 0,
+          "animations": 0,
+          "materials": 2
+        },
+        "assemblySettingsEvidence": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/assembly-pixal-v4/assembly.json",
+        "sourceBody": {
+          "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/results/pixal/model.glb": "bba0f39b9f464355e1ff7ad91d9c8d3de4f908ac7b3f123c265e8583a95f7291"
+        },
+        "generationRun": {
+          "purpose": "separate detailed head-neck fitting experiment; no promotion",
+          "identity_source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/comfy/input/rider-reference-01.png",
+          "reference": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+          "reference_sha256": "12c45d565c0bc2f358bc9e7e0dab23e3234086dc3841185a1bc831b75c71f0d5",
+          "source_commit": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+          "seed": 42,
+          "pipeline": "1024_cascade",
+          "steps": 24,
+          "texture_size": 2048,
+          "face_target": 100000,
+          "backend": "MPS with Metal native mesh export",
+          "command": [
+            "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+            "-u",
+            "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+            "--model-path",
+            "/Users/raynos/ml/img2mesh/pixal-view",
+            "--device",
+            "mps",
+            "--pipeline-type",
+            "1024_cascade",
+            "--steps",
+            "24",
+            "--seed",
+            "42",
+            "--texture-size",
+            "2048",
+            "--native-decimation-target",
+            "100000",
+            "--save-mesh",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz",
+            "--output",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/bust.glb"
+          ],
+          "started_at": "2026-09-30T17:58:23.867874+00:00",
+          "returncode": 0,
+          "wall_seconds": 690.271,
+          "finished_at": "2026-09-30T18:09:54.104377+00:00",
+          "glb_exists": true,
+          "glb_sha256": "6ccae4d68ca0395ae3001f8de8739da39857015b0629e51317e99bc8ff1d2154"
+        },
+        "acceptance": "NOT ACCEPTED",
+        "assemblyLimitations": [
+          "No rig, weights, neck motion, leaning or gameplay preservation has been validated: source new bodies are unrigged.",
+          "Planar body cut clips upper hood; assembly-created artifact, not an engine defect.",
+          "Separate overlapping static neck meshes; no weld or normal/material continuity acceptance.",
+          "Cosmetic raw bust defects remain.",
+          "Historical rider used only for comparison; previous baseline-body fit experiment is superseded."
+        ]
+      },
+      "hunyuan21": {
+        "nativeOriginal": {
+          "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/hunyuan21-v1/model.glb",
+          "sha256": "140294a5131b66c59538cc5d505fb57072894c3ecfacc263c4da8ff672eed83b",
+          "bytes": 2922624,
+          "vertices": 41889,
+          "triangles": 55000,
+          "finite": true,
+          "skins": 0,
+          "animations": 0,
+          "materials": 1
+        },
+        "matchingNewBodyStaticAssembly": {
+          "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/assembly-hunyuan21-v4/assembly.glb",
+          "sha256": "eb3befcf1dda982156e4cba2d439fe6fdbe531c53538cb26fac19e0d4716af44",
+          "bytes": 5318672,
+          "vertices": 66299,
+          "triangles": 92942,
+          "finite": true,
+          "skins": 0,
+          "animations": 0,
+          "materials": 2
+        },
+        "assemblySettingsEvidence": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/assembly-hunyuan21-v4/assembly.json",
+        "sourceBody": {
+          "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/results/hunyuan21/model.glb": "21f78eaec66cad9ff9758c52e4dc931be37bb25125bc3371f0ce9d7d7032651e"
+        },
+        "generationRun": {
+          "engine": "Hunyuan3D2.1",
+          "command": [
+            "/Users/raynos/projects/localai/bin/img2mesh/hunyuan21-run.sh",
+            "--image",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+            "--out",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/hunyuan21-v1",
+            "--seed",
+            "42"
+          ],
+          "reference": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+          "reference_sha256": "12c45d565c0bc2f358bc9e7e0dab23e3234086dc3841185a1bc831b75c71f0d5",
+          "started_at": "2026-09-30T18:53:27.518104+00:00",
+          "finished_at": "2026-09-30T18:57:10.825586+00:00",
+          "wall_seconds": 223.31,
+          "returncode": 0,
+          "glb_exists": true,
+          "glb_sha256": "140294a5131b66c59538cc5d505fb57072894c3ecfacc263c4da8ff672eed83b",
+          "lock_protocol": "installedlauncher:lockf-k~/projects/localai/.model.lock;anonymous<70GiB;noeviction;30minmaxsubprocessgroup",
+          "scope": "separate bust experiment; originals A/B/C and production unchanged; not art accepted"
+        },
+        "acceptance": "NOT ACCEPTED",
+        "assemblyLimitations": [
+          "No rig, weights, neck motion, leaning or gameplay preservation has been validated: source new bodies are unrigged.",
+          "Planar body cut clips upper hood; assembly-created artifact, not an engine defect.",
+          "Separate overlapping static neck meshes; no weld or normal/material continuity acceptance.",
+          "Cosmetic raw bust defects remain.",
+          "Historical rider used only for comparison; previous baseline-body fit experiment is superseded."
+        ]
+      },
+      "trellis": {
+        "nativeOriginal": {
+          "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/trellis-v1/reference-head-neck.glb",
+          "sha256": "4fa49843411a442edec9aa069b2a26f8f8e951244c7b80a7f343ba33d297f528",
+          "bytes": 13822024,
+          "vertices": 124983,
+          "triangles": 80576,
+          "finite": true,
+          "skins": 0,
+          "animations": 0,
+          "materials": 1
+        },
+        "matchingNewBodyStaticAssembly": {
+          "path": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/assembly-trellis-v4/assembly.glb",
+          "sha256": "27f635c751ab66ffe82ceef53bd4d06c3f162bbffcbe6022b0fb90c0619816f9",
+          "bytes": 17925588,
+          "vertices": 167887,
+          "triangles": 126500,
+          "finite": true,
+          "skins": 0,
+          "animations": 0,
+          "materials": 2
+        },
+        "assemblySettingsEvidence": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/assembly-trellis-v4/assembly.json",
+        "sourceBody": {
+          "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/results/trellis/rider-reference-01.glb": "472f237e482825791247278c0d50460cfb7797a7c2598d7e32b9549940044923"
+        },
+        "generationRun": {
+          "purpose": "alternative TRELLIS.2 head-neck fitting experiment after Pixal defects; no promotion",
+          "identity_source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/comfy/input/rider-reference-01.png",
+          "reference": "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png",
+          "reference_sha256": "12c45d565c0bc2f358bc9e7e0dab23e3234086dc3841185a1bc831b75c71f0d5",
+          "source_commit": "d58628f4f5b9c3de8274cb110074154f4b31cef2",
+          "seed": 42,
+          "pipeline": "1024_cascade",
+          "steps": 12,
+          "texture_size": 2048,
+          "face_target": 100000,
+          "backend": "MPS with Metal native mesh export",
+          "command": [
+            "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+            "-u",
+            "/Users/raynos/projects/localai/bin/img2mesh/trellis_batch.py",
+            "--out",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/trellis-v1",
+            "--pipeline",
+            "1024_cascade",
+            "--steps",
+            "12",
+            "--seed",
+            "42",
+            "--tex",
+            "2048",
+            "--faces",
+            "100000",
+            "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/reference-head-neck.png"
+          ],
+          "started_at": "2026-09-30T18:27:22.695916+00:00",
+          "returncode": 0,
+          "wall_seconds": 556.45,
+          "finished_at": "2026-09-30T18:36:39.112591+00:00",
+          "glb_exists": true,
+          "glb_sha256": "4fa49843411a442edec9aa069b2a26f8f8e951244c7b80a7f343ba33d297f528"
+        },
+        "acceptance": "NOT ACCEPTED",
+        "assemblyLimitations": [
+          "No rig, weights, neck motion, leaning or gameplay preservation has been validated: source new bodies are unrigged.",
+          "Planar body cut clips upper hood; assembly-created artifact, not an engine defect.",
+          "Separate overlapping static neck meshes; no weld or normal/material continuity acceptance.",
+          "Cosmetic raw bust defects remain.",
+          "Historical rider used only for comparison; previous baseline-body fit experiment is superseded."
+        ]
+      }
+    },
+    "workflow": "Bust generations were standalone model workers. Body A/B/C jobs were Comfy-submitted by root. No Comfy bust history fabricated.",
+    "supersededExperiments": "fit-*-v1 are historical-body fits superseded by the user correction, marked SUPERSEDED-WRONG-BODY.json. They are not requested final combinations. assembly-*-v2/v3 are earlier isolated static placement trials.",
+    "renderBackend": "Cycles explicit CPU; no GPU render",
+    "remainingBlockers": [
+      "None of the raw busts passed cosmetic acceptance: Pixal porous shiny hair and patchy beard, Hunyuan rectangular hair planes, TRELLIS torn/fractured hair/beard surfaces. Raw-versus-export Hunyuan hair diagnosis is delegated separately.",
+      "Final assembly planar neck cut clips upper hood; normal/material continuity remains visible. These are assembly defects, not a claim all generators have neck defects.",
+      "NEW body originals are unrigged, so head/neck skinning, neck turn/bend, riding-pose preservation and runtime gameplay gates are unavailable without a separate rigging task. No rig gate is claimed passed."
+    ],
+    "preservedState": "Original full bodies, native bust GLBs, historical model and production assets untouched. No install/download/training in latest CPU fitting phase.",
+    "ownGpuWorkers": "none active or queued"
+  },
+  "observations": [
+    "Shared sawtooth cut is assembly-created; planar correction clips hood",
+    "Pre-paint Hunyuan bust shape is post-decimation, original dense decoder mesh not retained",
+    "New body originals and busts are unskinned; no assembly or rig acceptance"
+  ],
+  "scope": "User accepts actual Hunyuan2.1 for Americas-only release; no2.0 substitution"
+}

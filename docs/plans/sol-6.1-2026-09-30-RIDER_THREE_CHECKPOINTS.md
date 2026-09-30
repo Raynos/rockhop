@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — checkpoint 1; no new body accepted or promoted**.
+Status: **active — checkpoint 1; ask232 hairstyle/body direction approval pending**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -48,6 +48,64 @@ the choice is pending. File the decision in
 [HR-23](../../project/human-in-the-loop/QUEUE.md) and present the actual question.
 
 ## Checkpoint 1 — complete neutral model
+
+### Current execution — one coherent new rider (ask232)
+
+The task-2 comparison findings and latest request supersede the earlier P3
+head-freeze/manual-body route. Original P3 and its two failed repairs remain
+preserved; stop automated P3 repairs. Reopen the donor choice, including H21-4,
+and obtain approval before expensive generation or substantial refinement.
+Historical production A1/A2 are comparison-only, never a head/body donor.
+
+[Approval package](../evidence/hero-remaster/one-rider-v2/README.md) provides three
+same-identity hairstyle mockups (buzz, short crop, swept back), matched PBR/gray
+front/profile/rear/three-quarter donor renders and the proposed join method.
+Compact hair is a testable hypothesis; it does not establish clean topology.
+The crop concept still has shallow waviness. Generated images preserve visual
+identity/clothes/pose/light, with small image-detail drift measured explicitly.
+
+Proposed single direction: H21-4 body plus a NEW detailed Pixal head/neck using
+approved hairstyle/reference. The old detailed busts are failure/control
+evidence, not final assets. The user may choose another donor or hairstyle.
+No new 3D generation/refinement starts until that direction is approved.
+
+1. Freeze selected source hashes, hair reference and settings. Retain decoded
+   high-resolution vertices/faces before any cleanup, native Metal remesh or
+   decimation; keep separate high/cleaned/reduced reports. Do not call saved
+   post-decimation shape the untouched decoder output. Inspect neutral gray
+   before diagnosing material defects; a face target is not a visual pass.
+2. Use targeted sculpt/retopology for demonstrated holes, disconnected surfaces,
+   clothing intersections and malformed hands. Avoid whole-body remeshing when
+   it destroys anatomy. Preserve original detail/PBR donor data, then bake onto
+   a clean derivative with recorded cage/rays/UVs. Inspect the full back.
+3. Protect hood/clothing geometry. Remove only the selected old skin head/neck
+   along deliberate anatomical loops; build a continuous retopologized skin
+   neck/shoulder transition to the NEW bust. The garment can remain a separate
+   clothing surface, but the skin join cannot be two overlapping disconnected
+   pieces. Match normals, skin tones, roughness and texture density at the join.
+   Neither the shared jagged cutting procedure nor the hood-clipping planar
+   cut is an accepted join technique. Two failed approaches require a specific
+   alternative, never relabeling the same cut as a generator failure.
+4. Show one actual clean textured full character, face closeups, neck-join
+   closeups from front/profile/rear/three-quarter, matching gray geometry and
+   a complete turntable. List visible defects. Seek appearance approval before
+   full-character rigging. Local neck deformation preview may test the join,
+   clearly labeled temporary: prove turn/bend in a clip before calling the
+   join deformation-ready. No static assembly is game-ready.
+5. After appearance approval, adapt the existing19-bone/bind/socket contract
+   with explicit source/rest/axis/length/socket mappings and new weights.
+   Preserve physical COM/lean targets, arm/leg IK, grips/soles, shared geometry
+   and Garage blending; old bone positions may change through the measured
+   adapter, not a physics/handling rewrite. Continue checkpoints2 and3 below.
+
+Existing stage ceilings and two-failure stop rule remain. All local GPU work,
+including native Metal exports, uses lockf -k on the canonical LocalAI lock,
+one workload at a time, anonymous memory<70GB and batches<=30minutes. Never
+steal the lock or evict another asset job. CPU-only diagnostic renders need
+no GPU eviction. Actual Hunyuan3D2.1 is the accepted Americas-only lane; no
+2.0 substitution. Use the working CPU rendering/baking path after the known
+large Metal bake failure and preserve the retained shape. Comfy wrapper nodes
+dispatch isolated workers; keep the working Desktop Comfy install separate.
 
 Goal: coherent adult proportions, face/hair, shoulders, clothes, hands/wrists,
 knees, legs and shoes before any riding fit or skinning.
@@ -238,6 +296,9 @@ updating asks/index before the next experiment. No scheduling or deployment.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation
   does not advance either later visual gate.
 - [x] Additive Hunyuan3D 2.1 five-design comparison (ask228): [twenty-body gallery](../evidence/hero-remaster/rider-search-v1/hunyuan21/README.md); H21-4 strongest new option, unaccepted. Explicit scene-axis display derivative and one failed setup fix recorded.
+- [x] Ask232 three compact-hair concepts and five-donor matched PBR/gray review.
+- [ ] Ask232 single body/head/hair direction approved before substantial work.
+- [ ] Actual coherent new head/body with hood-preserving join and complete review.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.
