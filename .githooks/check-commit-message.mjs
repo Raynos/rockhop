@@ -16,7 +16,8 @@ const lines = message.split('\n');
 const subject = lines[0];
 const pattern = /^(feat|fix|docs|design|art|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9][a-z0-9/-]*\))?!?: \S.*$/;
 if (!pattern.test(subject)) fail('use type(scope): finding (scope optional)');
-if ([...subject].length > 72) fail('subject must be at most 72 characters');
+const subjectLength = Array.from(new Intl.Segmenter('en', { granularity: 'grapheme' }).segment(subject)).length;
+if (subjectLength > 72) fail('subject must be at most 72 characters');
 if (subject.endsWith('.') || subject !== subject.trim()) {
   fail('subject must have no trailing period or whitespace');
 }

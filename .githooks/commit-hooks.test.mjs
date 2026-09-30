@@ -63,6 +63,8 @@ const messageCases = [
   ['comments ignored', valid + '# editor instructions\n', true],
   ['72-character subject', valid.replace(valid.split('\n')[0], 'fix: ' + 'x'.repeat(67)), true],
   ['overlong subject', valid.replace(valid.split('\n')[0], 'fix: ' + 'x'.repeat(68)), false],
+  ['72-grapheme subject', valid.replace(valid.split('\n')[0], 'fix: ' + '🛠️'.repeat(67)), true],
+  ['overlong grapheme subject', valid.replace(valid.split('\n')[0], 'fix: ' + '🛠️'.repeat(68)), false],
   ['legacy subject', valid.replace('fix(boot):', 'Fix:'), false],
   ['unknown type', valid.replace('fix(boot)', 'update(boot)'), false],
   ['uppercase scope', valid.replace('(boot)', '(BOOT)'), false],
@@ -88,18 +90,18 @@ const messageCases = [
     'Co-authored-by: Human <human@example.test>\nAssisted-by:'), true],
 ];
 for (const [name, input, pass] of messageCases) {
-  test(name, (t) => {
+  void test(name, (t) => {
     const result = fixture(t).message(input);
     assert.equal(result.status === 0, pass, result.stderr);
   });
 }
-test('human bypass skips only attribution', (t) => {
+void test('human bypass skips only attribution', (t) => {
   const f = fixture(t);
   assert.equal(f.message(valid.replace('Assisted-by: Codex:gpt-6.1-sol\n', ''),
     { SKIP_ATTRIB: '1' }).status, 0);
   assert.notEqual(f.message('Update everything', { SKIP_ATTRIB: '1' }).status, 0);
 });
-test('Codex resolver uses matching session and latest recorded model', (t) => {
+void test('Codex resolver uses matching session and latest recorded model', (t) => {
   const f = fixture(t);
   const metadata = [
     { type: 'session_meta', payload: { id: 'fixture-session' } },
@@ -120,13 +122,13 @@ test('Codex resolver uses matching session and latest recorded model', (t) => {
   }
   assert.notEqual(f.message(valid, { ...sessionEnv, CODEX_THREAD_ID: 'missing-session' }).status, 0);
 });
-test('small commit succeeds without a journal', (t) => {
+void test('small commit succeeds without a journal', (t) => {
   const f = fixture(t);
   f.write('src.mjs', 'export const x = 2;\n');
   f.write('.git/message', valid);
   f.git('commit', '-qF', '.git/message', '--', 'src.mjs');
 });
-test('journal gate rejects missing, template-only, and empty entries', (t) => {
+void test('journal gate rejects missing, template-only, and empty entries', (t) => {
   const f = fixture(t);
   f.write('work.txt', 'line\n'.repeat(30));
   f.git('add', 'work.txt');
@@ -140,7 +142,7 @@ test('journal gate rejects missing, template-only, and empty entries', (t) => {
   f.git('add', 'project/journal/round.md');
   assert.notEqual(f.run('bash', ['.githooks/pre-commit']).status, 0);
 });
-test('journal and syntax checks read staged blobs', (t) => {
+void test('journal and syntax checks read staged blobs', (t) => {
   const f = fixture(t);
   f.write('work.txt', 'line\n'.repeat(30));
   f.git('add', 'work.txt');
@@ -155,7 +157,7 @@ test('journal and syntax checks read staged blobs', (t) => {
   f.write('src.mjs', 'export const x = 2;\n');
   assert.notEqual(f.run('bash', ['.githooks/pre-commit']).status, 0);
 });
-test('small commits skip journal but retain syntax and whitespace checks', (t) => {
+void test('small commits skip journal but retain syntax and whitespace checks', (t) => {
   const f = fixture(t);
   f.write('src.mjs', 'broken !!!\n');
   f.git('add', 'src.mjs');
@@ -164,7 +166,7 @@ test('small commits skip journal but retain syntax and whitespace checks', (t) =
   f.git('add', 'src.mjs');
   assert.notEqual(f.run('bash', ['.githooks/pre-commit']).status, 0);
 });
-test('29 changed lines need no journal; 30 do', (t) => {
+void test('29 changed lines need no journal; 30 do', (t) => {
   const f = fixture(t);
   f.write('work.txt', 'line\n'.repeat(29));
   f.git('add', 'work.txt');
@@ -176,7 +178,7 @@ test('29 changed lines need no journal; 30 do', (t) => {
   f.git('add', 'project/journal/round.md');
   assert.equal(f.run('bash', ['.githooks/pre-commit']).status, 0);
 });
-test('threshold counts added and deleted lines', (t) => {
+void test('threshold counts added and deleted lines', (t) => {
   const f = fixture(t);
   f.write('work.txt', 'old\n'.repeat(15));
   f.git('add', 'work.txt');
@@ -185,7 +187,7 @@ test('threshold counts added and deleted lines', (t) => {
   f.git('add', 'work.txt');
   assert.notEqual(f.run('bash', ['.githooks/pre-commit']).status, 0);
 });
-test('staged MJS over one MiB receives its full syntax check', (t) => {
+void test('staged MJS over one MiB receives its full syntax check', (t) => {
   const f = fixture(t);
   f.write('large.mjs', 'export const x = 1;\n' + '// valid comment\n'.repeat(70000));
   f.write('project/journal/round.md', journal);
@@ -193,13 +195,13 @@ test('staged MJS over one MiB receives its full syntax check', (t) => {
   const result = f.run('bash', ['.githooks/pre-commit']);
   assert.equal(result.status, 0, result.stderr);
 });
-test('journal itself does not trigger its threshold', (t) => {
+void test('journal itself does not trigger its threshold', (t) => {
   const f = fixture(t);
   f.write('project/journal/round.md', '# Historical note\n'.repeat(40));
   f.git('add', 'project/journal/round.md');
   assert.equal(f.run('bash', ['.githooks/pre-commit']).status, 0);
 });
-test('pathspec commit excludes unrelated staged work and can amend', (t) => {
+void test('pathspec commit excludes unrelated staged work and can amend', (t) => {
   const f = fixture(t);
   f.write('unrelated.mjs', 'broken !!!\n');
   f.git('add', 'unrelated.mjs');
@@ -216,7 +218,7 @@ test('pathspec commit excludes unrelated staged work and can amend', (t) => {
   f.git('commit', '--amend', '-qF', '.git/message', '--', 'src.mjs', 'project/journal/round.md');
   assert.equal(f.git('show', 'HEAD:src.mjs'), 'export const x = 3;\n');
 });
-test('scoped docs/design types pass markdown guard', (t) => {
+void test('scoped docs/design types pass markdown guard', (t) => {
   const f = fixture(t);
   f.write('notes.md', 'notes\n'.repeat(100));
   f.git('add', 'notes.md');
@@ -227,7 +229,7 @@ test('scoped docs/design types pass markdown guard', (t) => {
   f.write('.git/message', 'fix(boot): fix startup\n');
   assert.notEqual(f.run('bash', ['.claude/hooks/md-ratio.sh', 'commit', '.git/message']).status, 0);
 });
-test('evidence markdown is excluded from the commit ratio', (t) => {
+void test('evidence markdown is excluded from the commit ratio', (t) => {
   const f = fixture(t);
   f.write('docs/evidence/example/README.md', 'proof\n'.repeat(100));
   f.write('src.mjs', 'export const x = 2;\n');
@@ -237,7 +239,7 @@ test('evidence markdown is excluded from the commit ratio', (t) => {
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /md 0 \/ code 2/);
 });
-test('markdown just above forty percent is rejected without rounding', (t) => {
+void test('markdown just above forty percent is rejected without rounding', (t) => {
   const f = fixture(t);
   f.write('notes.md', 'notes\n'.repeat(41));
   f.write('code.ts', 'export const x = 1;\n'.repeat(60));
