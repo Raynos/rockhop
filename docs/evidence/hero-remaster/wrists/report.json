@@ -1,0 +1,45 @@
+{
+  "method": {
+    "decoder": "GLTFLoader/MeshoptDecoder, prepareHero, new GltfRider, real setStage/update, getVertexPosition",
+    "sourceSelection": "Bind/rest: triangle centroid within25cm of hand bone and average same-side forearm+hand weight>=.15. Original glove partition average hand weight>.55; V5 authored contact mesh separate.",
+    "topology": "Open edges after10micrometre position welding; selected midpoints axial[-12,+10]cm, radius<=20cm, side arm weight>=.10. Selected region can truncate an edge component, so a noncycle is diagnostic, not definitive full-mesh topology.",
+    "slices": "Triangle-plane intersections in runtime elbow\u2192wrist frame.101planes every2mm from-12cm to+8cm;32radial rays each. Hits at radii8mm..20cm. Full angular occupancy alone does not prove connected/watertight seam.",
+    "cuffAnchor": "Actual unique original-full closed88vertex glove opening, mean hand weight>.99; centroid and plane normal transformed through corresponding hand bone. Shared full donor reference is explicit for LOD rather than inventing a closed LOD contour.41planes every2mm \u00b14cm; focus \u00b11cm.",
+    "surfaceDistance": "Deterministic maximum64open-edge midpoint samples permesh to opposing complete selected nondegenerate triangles; excluded degenerate count explicit. Never arbitrary nearestvertex.",
+    "coincidentCandidates": "Cross-mesh vertices in same100micrometre rest-world bin, restdistance<=200micrometres. Normalize weights by actual skeleton bone names, compareL1 and actual deformedpositions. Does NOT establish full-ring correspondence.",
+    "poses": "Garage plays accepted clip at.75seconds. Six riding poses use real GltfRider physical IK path from explicit hips/torso table,20updates to settle stageexit; synthetic runtime frames, not recorded actual Game events."
+  },
+  "unmeasured": [
+    "Watertight stitched sleeve/glove ring correspondence",
+    "Material/texture silhouette and actual camera exposure",
+    "Continuous every-tick recorded riding/crash pose sweep",
+    "Visual hand-size acceptance",
+    "Actual engine frame matrix parity; parent camera harness owns comparison"
+  ],
+  "reports": [
+    {
+      "subject": "original-full",
+      "source": "/Users/raynos/projects/games/rockhop/public/models/rider-street-mustard.glb",
+      "sha256": "11743d396b85b9e9d06f554e528886c7a093c4f30c6d958ae5750659491bc40c",
+      "report": "original-full.json"
+    },
+    {
+      "subject": "original-lod",
+      "source": "/Users/raynos/projects/games/rockhop/public/models/rider-street-mustard-lod.glb",
+      "sha256": "b1563f6eedbddb0af7b80765bcb66e21167a426e38234a1b3da07c08716e3518",
+      "report": "original-lod.json"
+    },
+    {
+      "subject": "v5-full",
+      "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-packed.glb",
+      "sha256": "57c298f4d6c1371ab35c085f95679e5ae1545d57f3cbb5542b89ff7249321081",
+      "report": "v5-full.json"
+    },
+    {
+      "subject": "v5-lod",
+      "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/candidate-v5-lod-packed.glb",
+      "sha256": "2619cbdf43e0cb23f0f8daadde0795dca24e42eba3f62dd5c67401c3534b4628",
+      "report": "v5-lod.json"
+    }
+  ]
+}
