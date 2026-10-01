@@ -311,3 +311,15 @@ player baseline exact clear/crash/1–2ms restart passes with0errors.
 Limits: No new rider mapping, gameplay contacts or rig pass. Closed
 volume needs separate parent review for self-intersection; disconnected
 platform/teeth compounds require explicit future component handling.
+
+Finding: Nearest Pixal colour transfer fails with forehead/nose islands,
+displaced lips and a helmet scalp. Stop that transfer before a deliberate
+native CC0 skin atlas trial on the approved head's existing UVs.
+
+Validation: Parent reviewed actual PBRfront; matched PBR/gray4views and
+closeups frozen. Geometry/UV SHA remain identical;89.7%eligible coverage
+and0UVconflicts do not imply visual quality. Original donors untouched.
+
+Limits: No accepted head texture/identity/full character. Native skin
+fallback changes colour/detail provenance and must be stated explicitly;
+head feasibility deadline remains00:31:54UTC.

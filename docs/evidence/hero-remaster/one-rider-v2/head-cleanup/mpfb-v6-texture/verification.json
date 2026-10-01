@@ -1,0 +1,220 @@
+{
+  "status": "REJECTED by parent: first CPU texture transfer; visible corruption exposed",
+  "reports": {
+    "transfer.json": {
+      "status": "UNACCEPTED CPU donor albedo/PBR attribute transfer; actual render review",
+      "sourceProof": {
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/uv-transfer-data.npz": {
+          "before": "93ef78efa143432d4c3047f416d809a24445ec7a3d07257793265850358bf2be",
+          "after": "93ef78efa143432d4c3047f416d809a24445ec7a3d07257793265850358bf2be",
+          "unchanged": true
+        },
+        "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": {
+          "before": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+          "after": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+          "unchanged": true
+        }
+      },
+      "scriptSHA256": "dffdd7264ee90f781c4f7d13321f14e03b8b456313e48965b954b0fe60b64a00",
+      "nativeUVSize": 2048,
+      "coveredTexels": 923140,
+      "UVPositionConflictTexels": 0,
+      "paddingPixels": 6,
+      "donorEligibleVertices": 597785,
+      "frontEligibleTexels": 201763,
+      "acceptedDonorTexels": 181013,
+      "acceptedFrontCoverage": 0.8971565648805777,
+      "donorDistanceNative": {
+        "count": 181013,
+        "maximum": 0.044999879098906334,
+        "percentiles": [
+          0.014641124602051353,
+          0.03720170620937356,
+          0.04307610845892382
+        ]
+      },
+      "rejectedFrontDistanceNative": {
+        "count": 20750,
+        "maximum": 0.10255978149648352,
+        "percentiles": [
+          0.05864279878237094,
+          0.08840300863743761,
+          0.09802905131458338
+        ]
+      },
+      "scalpTexels": 459397,
+      "fallbackSkinRGB": [
+        0.6918457746505737,
+        0.5375502705574036,
+        0.4656320810317993
+      ],
+      "textureOnlyAdapter": {
+        "xScale": 0.784,
+        "ySource": [
+          -0.35,
+          -0.205,
+          -0.08,
+          0.111,
+          0.25,
+          0.4
+        ],
+        "yDonor": [
+          -0.28,
+          -0.14,
+          -0.083,
+          0.058,
+          0.215,
+          0.4
+        ],
+        "zScale": 1.0,
+        "explanation": "Approximate front feature correspondence for TEXTURE sampling only; native approved geometry unchanged."
+      },
+      "maps": {
+        "skin-basecolor": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-basecolor.png",
+          "sha256": "8c4e912c29beb04ae38bd5b441e89831c55521919b35e9b0d3af09d42c052d6f"
+        },
+        "skin-roughness": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-roughness.png",
+          "sha256": "447e4c5c3db998471a198a994f5f210eaa685fee2ff218e081b7e09f007bd90e"
+        },
+        "skin-metallic": {
+          "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-metallic.png",
+          "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb"
+        }
+      },
+      "wallSeconds": 23.655010541900992,
+      "limits": [
+        "No shape snapping or vertex displacement; reference likeness remains approximate.",
+        "Donor transfer covers only eligible front skin; ears/neck/back use calibrated skin fallback.",
+        "Roughness/metallic transferred where donor accepted; no donor normal/displacement bake claimed.",
+        "Compact stubble is albedo on continuous native scalp; hair texture is a hypothesis.",
+        "Approximate texture-only adapter may misalign brows/lips; actual render judges it."
+      ]
+    },
+    "material-application.json": {
+      "status": "UNACCEPTED textured feasibility; parent actual appearance review",
+      "geometryBefore": {
+        "NEW native CC0 eye surfaces fitted to baked male source": {
+          "vertices": "9f3a69cba8774758b348a6a720afc1441a25bd1ccd0a8e8e3367f993a10adc27",
+          "triangles": "bc89923d3dc0de4305540562a0639eb993ccabc92b022880e375fb4a16a5c6dc",
+          "UV": "072810d8fbfc24f3b4b67a2951b96257fe90dcd3d569f4825aa713ef811159d4"
+        },
+        "UNACCEPTED native evaluated young-adult male head": {
+          "vertices": "90075204954c2d3e23b14e3b192d53e669e2dd2c9f0d29651b08afd6b827d661",
+          "triangles": "4781696e5f3d3816cd2a3635d41e54dbf499a7b2a3b84c32ec9e4490144d53c8",
+          "UV": "a593c4845e7fe441b3e411618e17316f5871a4b8a0d5f5c83ddd7e10406f21b0"
+        }
+      },
+      "geometryAfter": {
+        "NEW native CC0 eye surfaces fitted to baked male source": {
+          "vertices": "9f3a69cba8774758b348a6a720afc1441a25bd1ccd0a8e8e3367f993a10adc27",
+          "triangles": "bc89923d3dc0de4305540562a0639eb993ccabc92b022880e375fb4a16a5c6dc",
+          "UV": "072810d8fbfc24f3b4b67a2951b96257fe90dcd3d569f4825aa713ef811159d4"
+        },
+        "UNACCEPTED native evaluated young-adult male head": {
+          "vertices": "90075204954c2d3e23b14e3b192d53e669e2dd2c9f0d29651b08afd6b827d661",
+          "triangles": "4781696e5f3d3816cd2a3635d41e54dbf499a7b2a3b84c32ec9e4490144d53c8",
+          "UV": "a593c4845e7fe441b3e411618e17316f5871a4b8a0d5f5c83ddd7e10406f21b0"
+        }
+      },
+      "geometryAndUVUnchanged": true,
+      "inputs": {
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-native-male/head.blend": {
+          "before": "d72826e070df64a49dd52a446c18229329a4a5c962d001f9f5abed0ce8e006e4",
+          "after": "d72826e070df64a49dd52a446c18229329a4a5c962d001f9f5abed0ce8e006e4",
+          "unchanged": true
+        },
+        "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/materials/brown_eye.png": {
+          "before": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+          "after": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+          "unchanged": true
+        },
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-basecolor.png": {
+          "before": "8c4e912c29beb04ae38bd5b441e89831c55521919b35e9b0d3af09d42c052d6f",
+          "after": "8c4e912c29beb04ae38bd5b441e89831c55521919b35e9b0d3af09d42c052d6f",
+          "unchanged": true
+        },
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-metallic.png": {
+          "before": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+          "after": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb",
+          "unchanged": true
+        },
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-roughness.png": {
+          "before": "447e4c5c3db998471a198a994f5f210eaa685fee2ff218e081b7e09f007bd90e",
+          "after": "447e4c5c3db998471a198a994f5f210eaa685fee2ff218e081b7e09f007bd90e",
+          "unchanged": true
+        }
+      },
+      "scriptSHA256": "67ad2f7b6a848ca3fb019eb41c42d9cf5bf0848d1e02dc9a55f98daf38d3b7d5",
+      "eyePBR": {
+        "source": "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/materials/brown_eye.png",
+        "roughness": 0.24,
+        "metallic": 0,
+        "alpha": "native texture"
+      },
+      "limits": [
+        "Native geometry/UVs unchanged; no shape/detail displacement.",
+        "CPU texture transfer is partial and approximate; likeness/final appearance remain unaccepted.",
+        "No joined neck/body, rig, moving contacts, or game-ready claim."
+      ]
+    },
+    "uv-transfer-data.json": {
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-native-male/head.blend",
+      "sourceSHA256": "d72826e070df64a49dd52a446c18229329a4a5c962d001f9f5abed0ce8e006e4",
+      "groups": {
+        "scalp": {
+          "count": 5885,
+          "meanNative": [
+            1.3899890127788694e-08,
+            0.1774916797876358,
+            -0.09662836045026779
+          ]
+        },
+        "ears": {
+          "count": 9890,
+          "meanNative": [
+            -1.1018421730568662e-08,
+            0.05741722136735916,
+            -0.04381809011101723
+          ]
+        },
+        "lips": {
+          "count": 6536,
+          "meanNative": [
+            -6.651792450185212e-09,
+            -0.07960517704486847,
+            0.23105035722255707
+          ]
+        }
+      },
+      "verticesSHA256": "db491fb0a648c011aae54a246f3f95776b13283467ee3d31b080ad3eba3e9265",
+      "facesSHA256": "4781696e5f3d3816cd2a3635d41e54dbf499a7b2a3b84c32ec9e4490144d53c8"
+    }
+  },
+  "geometryAndUVUnchanged": true,
+  "remainingVisibleDefects": [
+    "Forehead/brow/nose color islands misregistered; lip/beard color displaced.",
+    "Sharp face-to-ear/neck fallback boundary is visible in profile.",
+    "Native scalp is continuous geometry but stubble albedo reads helmet-like with jagged nape line.",
+    "Native brown iris/sclera now visible; full identity/appearance still unaccepted."
+  ],
+  "seamReport": {
+    "UVPositionConflictTexels": 0,
+    "paddingPixels": 6,
+    "appearance": "UV raster conflicts0 do not measure visible semantic seams; sharp donor/fallback transition is FAIL."
+  },
+  "masters": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/head.blend": "4324d02d834124e579a8c625c8ac4ecdfdb78544f5c7f98e250c5236840cabc1",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/head.glb": "a174563f0db0610e3f6cb783db1e790ba75177180455676d9ca7bd6d2c9a681e",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-basecolor.png": "8c4e912c29beb04ae38bd5b441e89831c55521919b35e9b0d3af09d42c052d6f",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-roughness.png": "447e4c5c3db998471a198a994f5f210eaa685fee2ff218e081b7e09f007bd90e",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-metallic.png": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb"
+  },
+  "verifierSHA256": "da4b5db9d7fb190e69c8879f5e2570209f7538b34c9e2ec219120452bbdff343",
+  "limits": [
+    "No texture-only corruption is concealed by geometry approval.",
+    "Distance/coverage count accepted samples, not correctness of donor semantic correspondence.",
+    "No normal/displacement donor bake, neck join, rig, animation or gameplay acceptance."
+  ]
+}

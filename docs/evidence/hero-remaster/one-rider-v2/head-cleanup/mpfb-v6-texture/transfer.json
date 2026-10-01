@@ -1,0 +1,91 @@
+{
+  "status": "UNACCEPTED CPU donor albedo/PBR attribute transfer; actual render review",
+  "sourceProof": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/uv-transfer-data.npz": {
+      "before": "93ef78efa143432d4c3047f416d809a24445ec7a3d07257793265850358bf2be",
+      "after": "93ef78efa143432d4c3047f416d809a24445ec7a3d07257793265850358bf2be",
+      "unchanged": true
+    },
+    "/Users/raynos/Documents/Codex/2026-09-30/task-2/comparison/bust/generation-v1/raw.npz": {
+      "before": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+      "after": "f2177ad1a594d815deed225fdaaf93c113431076060176787c8b1e16889c994e",
+      "unchanged": true
+    }
+  },
+  "scriptSHA256": "dffdd7264ee90f781c4f7d13321f14e03b8b456313e48965b954b0fe60b64a00",
+  "nativeUVSize": 2048,
+  "coveredTexels": 923140,
+  "UVPositionConflictTexels": 0,
+  "paddingPixels": 6,
+  "donorEligibleVertices": 597785,
+  "frontEligibleTexels": 201763,
+  "acceptedDonorTexels": 181013,
+  "acceptedFrontCoverage": 0.8971565648805777,
+  "donorDistanceNative": {
+    "count": 181013,
+    "maximum": 0.044999879098906334,
+    "percentiles": [
+      0.014641124602051353,
+      0.03720170620937356,
+      0.04307610845892382
+    ]
+  },
+  "rejectedFrontDistanceNative": {
+    "count": 20750,
+    "maximum": 0.10255978149648352,
+    "percentiles": [
+      0.05864279878237094,
+      0.08840300863743761,
+      0.09802905131458338
+    ]
+  },
+  "scalpTexels": 459397,
+  "fallbackSkinRGB": [
+    0.6918457746505737,
+    0.5375502705574036,
+    0.4656320810317993
+  ],
+  "textureOnlyAdapter": {
+    "xScale": 0.784,
+    "ySource": [
+      -0.35,
+      -0.205,
+      -0.08,
+      0.111,
+      0.25,
+      0.4
+    ],
+    "yDonor": [
+      -0.28,
+      -0.14,
+      -0.083,
+      0.058,
+      0.215,
+      0.4
+    ],
+    "zScale": 1.0,
+    "explanation": "Approximate front feature correspondence for TEXTURE sampling only; native approved geometry unchanged."
+  },
+  "maps": {
+    "skin-basecolor": {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-basecolor.png",
+      "sha256": "8c4e912c29beb04ae38bd5b441e89831c55521919b35e9b0d3af09d42c052d6f"
+    },
+    "skin-roughness": {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-roughness.png",
+      "sha256": "447e4c5c3db998471a198a994f5f210eaa685fee2ff218e081b7e09f007bd90e"
+    },
+    "skin-metallic": {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-texture/skin-metallic.png",
+      "sha256": "47409785b30cc38f1ec62f219ce1c46f885427442416c0768dc470497ef784cb"
+    }
+  },
+  "wallSeconds": 23.655010541900992,
+  "limits": [
+    "No shape snapping or vertex displacement; reference likeness remains approximate.",
+    "Donor transfer covers only eligible front skin; ears/neck/back use calibrated skin fallback.",
+    "Roughness/metallic transferred where donor accepted; no donor normal/displacement bake claimed.",
+    "Compact stubble is albedo on continuous native scalp; hair texture is a hypothesis.",
+    "Approximate texture-only adapter may misalign brows/lips; actual render judges it."
+  ]
+}
