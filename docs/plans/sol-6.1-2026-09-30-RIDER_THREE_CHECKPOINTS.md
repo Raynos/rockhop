@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — checkpoint 1 awaiting bounded user choice after two native collar failures; full character unaccepted**.
+Status: **active — autonomous execution of all three visual checkpoints; full character unaccepted**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -23,29 +23,90 @@ finished target. Preserve both and the rejected fresh Blender bodies as
 Separate **geometry/materials**, **rig/bind/weights**, and **runtime physical
 pose**. Better texture or zero socket error cannot excuse visible bad anatomy.
 
-## Stage bounds and failure decisions
+## Autonomous execution and last-resort safety — asks237–238
 
-Freeze a baseline, manifest and defect ledger before each stage. These ceilings
-require a decision when reached; they never allow advancing a failed gate.
-Track active work separately from idle inference/download time.
+The active goal is to deliver ONE coherent, high-quality textured rider through
+all three visual checkpoints while preserving existing physics-driven posing
+and leaning. The parent owns direction, fallback, appearance, rig and moving
+review decisions. No checkpoint requires human approval, recommendation
+questions or a human-in-the-loop hold. Inform the user through evidence and
+progress updates; do not turn routine implementation decisions into questions.
+This policy supersedes the former two-failure and time-ceiling choice rules.
 
-| Stage | Initial batch | Ceiling before evidence and a user choice |
+Freeze a baseline, source manifest and defect ledger before each stage. Keep
+stable defect IDs, source SHA, approach IDs, settings, before/after clips,
+measurements and parent verdicts. Failed setup, generation, geometry, texture
+and motion trials count; parallel failures count individually. Preserve all
+historical failures. Never reset counts by renaming an approach or defect.
+
+- After FIVE failed attempts using one approach for a defect, retire that
+  approach and autonomously select a materially different method. Switch
+  earlier when evidence demonstrates that the method cannot meet the target.
+  A sampler tweak, ring count, threshold or environment rename is not a new
+  approach. Record the mechanism change and why it addresses the failure.
+- At FIFTEEN failed attempts for the same unresolved defect across approaches,
+  invoke last-resort safety: freeze every output, stop further repair of that
+  source/defect family, and autonomously choose a fundamentally different
+  source or construction architecture. Rebuild the affected component from
+  clean anatomy/garment geometry where appropriate; retire the exhausted
+  lineage and retain its counts. Do not issue attempt16 of the exhausted
+  repair family, promote a failed result, or weaken the visual/physics gates.
+  Tell the user plainly what failed and which fallback was selected; no
+  approval question. New fallback lineage must be explicit and cannot be a
+  renamed version of the exhausted repair.
+- Preserve the last verified production rider until the complete replacement
+  passes actual appearance, sitting, riding and resource checks. Temporary
+  unaccepted assets stay in private evidence/master paths. Last-resort safety
+  can preserve production while independent fallback work continues; it cannot
+  declare this plan complete or silently abandon its intended quality.
+
+| Stage | Initial scope | Autonomous review interval |
 |---|---|---|
-| 1 — model | Five designs × Hunyuan3D/TRELLIS.2 = ten bodies; additive Pixal3D and Hunyuan3D 2.1 lanes | Shortlist at most two bodies; at most two correction passes per body; eight active hours |
-| 2 — sitting | One selected body, one motion target/clip and explicit mapping | At most two correction passes; six active hours |
-| 3 — riding | Same body, fixed Rookie/Pro bikes, one matched Garage/gameplay matrix | At most two correction passes; six active hours |
+| 1 — model | Hunyuan3D/TRELLIS.2 with additive Pixal3D and actual Hunyuan3D2.1; refine one coherent body | Review evidence every eight active hours; choose and record the next bounded batch autonomously |
+| 2 — sitting | Same selected body, motion target/clip and explicit rig adapter | Review every six active hours; choose next bounded batch autonomously |
+| 3 — riding | Same rider, fixed Rookie/Pro bikes, matched Garage/gameplay matrix | Review every six active hours; choose next bounded batch autonomously |
 
-Record stable defect ID, stage, candidate/source SHA, symptom/cause, attempted
-fix, before/after clips, measurements and verdict. **After two failed fixes of
-the same defect, stop dependent work, show baseline plus both failed results,
-and ask the user to choose another candidate, a specifically bounded new
-approach, or revert/abandon.** Do not reset counts by renaming defects or tools.
-Historical fresh-body shoulder failures already count as two; that recipe
-needs a new human choice before another fix. Failed setup/generation fixes
-count too. At a stage ceiling, likewise show evidence and ask for a choice.
-Independent analysis may continue; no third fix or dependent next stage while
-the choice is pending. File the decision in
-[HR-23](../../project/human-in-the-loop/QUEUE.md) and present the actual question.
+These intervals require evidence and parent decisions, not permission or an
+automatic block. Give every experiment a declared wall-time/resource cap;
+on reaching it, freeze evidence and select the next action autonomously under
+the five/fifteen policy. Track active work separately from idle time. No time
+allowance authorizes advancing an unpassed checkpoint.
+
+### Three parallel Blender approaches
+
+Whenever Blender work benefits from alternative mechanisms, the parent may
+use THREE subagents concurrently, each testing a completely different approach
+in a separately isolated Python scripting environment. The parent remains the
+fourth agent and sole integration/visual judge. Agents own separate source,
+output, temporary and evidence directories; no shared deliverable overwrites.
+
+Each lane records its Blender executable/version, Python interpreter/version,
+package inventory and hashes, isolated configuration/script/extension roots,
+CPU thread cap and exact command. Use independent task-local scripting/venv
+roots as needed; do not mutate global Python or the working Desktop Comfy
+installation. Distinct environments must support distinct construction methods,
+not three copies of the same script with different parameters. If the installed
+Blender embeds the same interpreter in all lanes, disclose that shared binary;
+isolate script paths, dependency sets, configuration and state honestly rather
+than claiming three different Python versions.
+
+CPU-only construction/rendering may run in parallel within measured host
+memory/CPU limits. ALL GPU/model/native Metal/export work still acquires
+lockf -k /Users/raynos/projects/localai/.model.lock, one workload at a time,
+anonymous memory below70GB, each batch at most30minutes. Parallel CPU permission
+never permits simultaneous GPU jobs, stealing the lock or evicting another job.
+
+### Collaboration with game development
+
+Keep a current shared handoff in docs/evidence/hero-remaster/one-rider-v2/
+autonomous-handoff.md: stage, selected asset/source SHA, active lane owners,
+last accepted evidence, failed counts, next concrete action and game-contract
+risks. Incoming game-development check-ins can review the same actual clips,
+audit the rig/physics contract and contribute in explicitly owned paths.
+The rider parent integrates and judges; collaborators do not promote unaccepted
+assets or alter physics to make art pass. The user's intended hourly check-ins
+are collaboration context, not a request to create a scheduler or message
+another chat. No recurring job is created by this plan.
 
 ## Checkpoint 1 — complete neutral model
 
@@ -99,14 +160,15 @@ identity remain unaccepted. Isolated glove material bake completed all30
 matched PBR/gray views before its12-minute deadline; material foundation only.
 
 Native collar trial01 retains jagged protrusions and wrong face materials.
-Trial02 removes585 fixed local faces but leaves two branched boundary
-vertices; no second joined output exists. This technique is STOPPED at two
-failures. [Matched evidence and concrete alternative](../evidence/hero-remaster/one-rider-v2/neck-native/manual-panel-choice.md)
-requires a new human choice before dependent refinement. Proposed allowance
-is collar45minutes plus brows15minutes, total60minutes; it is not granted
-and does not silently reset the original model-stage ceiling. Original
-MODEL charge at this checkpoint is7.676hours, below8hours. No full character,
-turntable, skin join or later visual gate is accepted.
+Trial02 removes585 fixed local faces but leaves two branched boundary vertices;
+no second joined output exists. Those failures remain frozen. Asks237–238 remove
+the approval hold and authorize autonomous approach changes and bounded batches.
+The [manual collar-panel alternative](../evidence/hero-remaster/one-rider-v2/neck-native/manual-panel-choice.md)
+is available for autonomous selection alongside materially different Blender
+lanes. Earlier two-failure stop labels and90/12-minute trial deadlines describe
+completed experiments, not current permission requirements. Original MODEL
+charge7.676hours remains historical accounting, not an approval ceiling. No
+full character, turntable, skin join or later visual gate is accepted yet.
 
 1. Freeze selected source hashes, hair reference and settings. Retain decoded
    high-resolution vertices/faces before any cleanup, native Metal remesh or
@@ -123,8 +185,8 @@ turntable, skin join or later visual gate is accepted.
    clothing surface, but the skin join cannot be two overlapping disconnected
    pieces. Match normals, skin tones, roughness and texture density at the join.
    Neither the shared jagged cutting procedure nor the hood-clipping planar
-   cut is an accepted join technique. Two failed approaches require a specific
-   alternative, never relabeling the same cut as a generator failure.
+   cut is an accepted join technique. Switch approaches under the five/fifteen policy, never relabeling
+   the same cut as a generator failure.
 4. Show one actual clean textured full character, face closeups, neck-join
    closeups from front/profile/rear/three-quarter, matching gray geometry and
    a complete turntable. List visible defects. Judge appearance against the approved target before
@@ -137,7 +199,7 @@ turntable, skin join or later visual gate is accepted.
    and Garage blending; old bone positions may change through the measured
    adapter, not a physics/handling rewrite. Continue checkpoints2 and3 below.
 
-Existing stage ceilings and two-failure stop rule remain. All local GPU work,
+Autonomous review intervals and five/fifteen safeguards apply. All local GPU work,
 including native Metal exports, uses lockf -k on the canonical LocalAI lock,
 one workload at a time, anonymous memory<70GB and batches<=30minutes. Never
 steal the lock or evict another asset job. CPU-only diagnostic renders need
@@ -195,7 +257,8 @@ its textured sample smoke passed. A separate frozen rider canary now tests
 1024cascade/12steps/seed42 with native NPZ before export processing. The sample
 does not prove rider quality; the existing ten-candidate comparison stays fixed.
 
-Bound feasibility to two active hours and two fixes of any setup defect.
+Use a two-active-hour feasibility batch, with autonomous follow-up selection
+and the five/fifteen failure policy for setup defects.
 Inventory backend, dependencies, code revisions, weights and available compute.
 Isolate launchers/code in ~/projects/localai and canonical weights in
 ~/projects/weights under their existing storage/lock policies; no weights in
@@ -204,8 +267,8 @@ Git or disruption to working generators. No silent hosted-demo upload.
 If feasible, run one canary using the same frozen single-image input and seed,
 then all five designs. Disclose resolution/sampler differences and use identical
 comparison renderer/export budgets. If infeasible within the bound, show the
-exact blocker and ask about further porting or available compute; retain the
-other comparison and do not invent a quality score.
+exact blocker and autonomously select a port/backend or another installed
+comparison lane; retain all comparisons and do not invent a quality score.
 
 Multi-view is a separately labeled experiment after the single-image trial.
 It needs consistent separate views with credible framing/camera transforms.
@@ -231,9 +294,9 @@ claiming equal inference cost. Compare native/working/reduced geometry, nine
 views and full36frame orbits. Add comparison boards without overwriting the
 original fifteen-body boards. No quality score from setup readiness alone.
 
-Feasibility shares the same two-hour/two-failed-fix setup bound as Pixal;
-all subsequent model refinement remains inside stage1's existing bounds.
-No automatic shortlist/body acceptance, rig work or normal asset promotion.
+Feasibility shares Pixal's two-hour batch and autonomous five/fifteen policy.
+The parent records shortlist/body acceptance from actual evidence before
+rigging. Setup success alone cannot justify normal asset promotion.
 
 ## Checkpoint 2 — the same body stands and sits
 
@@ -298,12 +361,15 @@ Normal reachable poses target visible palm/sole separation ≤10 mm with natural
 orientation and no obvious intersections. Record worst tick/distance for all
 four surfaces separately from socket/bone error. For impacts, separate physical
 shortfall from added mesh/mapping error; retain legitimate ragdoll detachment.
-Exceptions require evidence and a user choice under the stop rule.
+Exceptions require recorded parent evidence and an autonomous decision under
+the five/fifteen safeguards; contact requirements remain unchanged.
 
 Gate 3: matched Garage/gameplay/contact evidence accepted; no physics regression;
-full/LOD meets production/resource budgets; physical phone/desktop review under
-HR-23 and release gates accepted before normal asset promotion. Host captures
-do not certify iPhone pacing or visual acceptance. Bike remaster stays excluded.
+full/LOD meets production/resource budgets. The parent owns visual acceptance
+using matched played evidence and available desktop/mobile harness checks.
+Host captures do not certify physical iPhone pacing. Broader publication/device
+obligations remain under release authority, outside these autonomous rider
+checkpoints; this plan has no human approval gate. Bike remaster stays excluded.
 
 ## Evidence and status
 
@@ -323,13 +389,10 @@ updating asks/index before the next experiment. No scheduling or deployment.
   T1 export correction 1 partly improves tearing but fails body quality;
   P3 repair 1 failed its face-budget check before baking; repair 2 completes
   export but loses major body surfaces. [Baseline and both failures](../evidence/hero-remaster/rider-search-v1/variants/pixal03-repair2/README.md)
-  are preserved. P3 has exhausted both passes: no third fix without a new
-  specifically bounded human choice. The user now chooses original P3's less
-  damaged face as the starting point: [face-first decision](../evidence/hero-remaster/rider-search-v1/choice/README.md).
-  Preserve head/face; targeted manual body repair is limited to two additional
-  attempts within the remaining stage1 time ceiling. Historical failures stay
-  two; no global remesh/rebake retry. T1 is not selected. No body acceptance,
-  rig or normal asset promotion.
+  are preserved. This historical P3 route was superseded by ask232's H21-4/new
+  head direction. No automated P3 repair is resumed; its failures remain
+  comparison evidence, not an outstanding human choice. Current refinement
+  follows the autonomous policy and keeps source history intact.
 - [Matched gameplay inputs](../evidence/hero-remaster/rider-search-v1/gameplay-inputs/README.md)
   are prepared and independently repeated for12 cases across both bikes.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation
@@ -341,4 +404,5 @@ updating asks/index before the next experiment. No scheduling or deployment.
 - [ ] Gate-1 body chosen/refined within bounds.
 - [ ] Same-body mapped standing-to-sitting gate accepted.
 - [ ] Same-body Garage/gameplay/contact gate accepted.
-- [ ] Device/release review and controlled promotion or explicit rejection.
+- [ ] Autonomous final appearance/motion/resource audit and controlled promotion or explicit rejection.
+- [x] Asks237–238 remove human checkpoint holds; five/fifteen safeguards and three isolated parallel Blender lanes authorized.

@@ -408,3 +408,16 @@ Finding: Final neck evidence freezes both failures and HR25 choice.
 Validation: Parent independently hashes source masters, three glove maps
 and all30 actual reimport frames; all match retained proofs.
 Limits: No third collar fix or dependent refinement until user choice.
+
+Finding: Asks237–238 remove rider checkpoint approval holds. Five failed
+attempts of one approach force an autonomous method change;15 of one defect
+retire the exhausted repair lineage and select a clean fallback. Three
+isolated Blender scripting lanes and incoming collaboration are authorized.
+
+Validation: All three appearance/motion/physics gates retained; historical
+failure records preserved. Goal tool reports active after user resumption.
+HR25 resolved and removed; broad release obligations stay separate.
+
+Limits: Policy update is not rider acceptance. Installed Blender binary may
+be shared; isolated environments must disclose exact dependency/version data.
+GPU jobs still serialize under canonical lock; no scheduler created.

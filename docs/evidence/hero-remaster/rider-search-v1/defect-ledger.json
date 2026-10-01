@@ -1,5 +1,5 @@
 {
-  "status": "Checkpoint1 unaccepted: native collar stopped after two failures; new bounded human choice required",
+  "status": "Checkpoint1 unaccepted: autonomous refinement resumed under asks237\u2013238",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -9,9 +9,11 @@
   "shortlistMeaning": "Historical P3/T1 corrections preserved; user chooses original P3 for targeted manual body approach, no accepted body",
   "limits": {
     "maximumShortlistedBodies": 2,
-    "maximumCorrectionPassesPerBody": 2,
-    "sameDefectFailedFixesBeforeAsk": 2,
-    "stage1ActiveHourCeiling": 8
+    "sameApproachFailedAttemptsBeforeAutomaticSwitch": 5,
+    "sameUnresolvedDefectFailedAttemptsBeforeLastResort": 15,
+    "stage1AutonomousReviewIntervalHours": 8,
+    "stage2And3AutonomousReviewIntervalHours": 6,
+    "humanCheckpointApprovalRequired": false
   },
   "stageAccounting": {
     "observedGoalActiveWallSecondsThroughThisCheckpoint": 27635,
@@ -950,11 +952,28 @@
     "appearanceAccepted": false,
     "failure": "Local adjacency fairing leaves jagged upright collar remnants; clearing material slots resets all faces to body atlas",
     "evidence": "../one-rider-v2/neck-native/trial01/parent-review.json",
-    "next": "Human choice required: authored manual collar45min+nativebrows15min new60minute allowance, different body/garment, or stop",
+    "next": "Autonomous distinct Blender approaches; manual seam-landmark panel available without a user question",
     "stoppedTechnique": "Native collar adjacency fairing/fixed local-strip reconstruction",
     "failure2": "Fixed585-face strip leaves172boundaryedges with two degree4 branchvertices; no joined output",
     "evidence2": "../one-rider-v2/neck-native/trial02/forensic.json",
     "comparison": "../one-rider-v2/neck-native/choice-board.jpg",
-    "newBudgetGranted": false
+    "newBudgetGranted": true,
+    "approvalHoldRemovedByAsks": [
+      237,
+      238
+    ],
+    "historicalStoppedTechniquePreserved": true
+  },
+  "failurePolicy": {
+    "authorityAsks": [
+      237,
+      238
+    ],
+    "historicalFailuresPreserved": true,
+    "parallelFailuresCountIndividually": true,
+    "approachSwitch": "Autonomous after5 failures or earlier on evidence",
+    "lastResort": "After15 failures retire exhausted repair lineage; choose clean-source/construction fallback autonomously, no attempt16 or failed promotion",
+    "timeCeilings": "Bound each batch; renew next bounded batch autonomously after evidence review",
+    "normalAssetPromotion": "Only after actual appearance/sitting/riding/resource gates pass"
   }
 }

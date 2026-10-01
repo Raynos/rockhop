@@ -1,4 +1,9 @@
-# Human choice: authored local collar panel + native brows, 60-minute cap
+> Policy supersession: asks237–238 remove all approval holds below. This
+> document preserves the earlier concrete proposal; current execution uses
+> autonomous batches and five/fifteen safeguards in RIDER_THREE_CHECKPOINTS.
+> No human choice or new permission is required to select this method.
+
+# Authored local collar panel + native brows — autonomous candidate
 
 **Not executed.** The native collar technique is stopped after two failures. Trial01 retained tall jagged source remnants and reset material indices. Trial02's exact four-ring strip produced two degree-four boundary branch vertices; no neck join or material refinement followed. The matched board presents the original open retained collar, rejected trial01 and the exact failed trial02 prefix.
 
