@@ -1,0 +1,53 @@
+Traceback (most recent call last):
+  File "/Applications/Blender.app/Contents/Resources/5.2/scripts/modules/addon_utils.py", line 544, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/__init__.py", line 152, in register
+    from .services import LogService  # This will also cascade import the other services
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/services/__init__.py", line 27, in <module>
+    from .uiservice import UiService
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/services/uiservice.py", line 307, in <module>
+    UiService = _UiService()  # pylint: disable=C0103
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/services/uiservice.py", line 40, in __init__
+    label = get_preference("mpfb_shelf_label")
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/__init__.py", line 110, in get_preference
+    raise ValueError("I don't seem to exist")
+ValueError: I don't seem to exist
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-head-brows/add_native_brows.py", line 30, in <module>
+    from bl_ext.owned_brows_mpfb.mpfb.services.humanservice import HumanService
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/services/__init__.py", line 27, in <module>
+    from .uiservice import UiService
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/services/uiservice.py", line 307, in <module>
+    UiService = _UiService()  # pylint: disable=C0103
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/services/uiservice.py", line 40, in __init__
+    label = get_preference("mpfb_shelf_label")
+  File "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/__init__.py", line 110, in get_preference
+    raise ValueError("I don't seem to exist")
+ValueError: I don't seem to exist
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+Could not read preference mpfb_user_data
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+[WARN ] services.locationservice ...............: Could not read preference mpfb_user_data
+[WARN ] services.locationservice ...............: User home directory does not exist /Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-head-brows/environment/extensions/.user/owned_brows_mpfb/mpfb
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+[WARN ] services.locationservice ...............: Could not read preference mpfb_second_root
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+[WARN ] services.locationservice ...............: Could not read preference mh_user_data
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+[WARN ] services.locationservice ...............: Could not read preference mh_auto_user_data
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] services.locationservice ...............: Creating relevant directory: /Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-head-brows/environment/extensions/.user/owned_brows_mpfb/mpfb
+[INFO ] services.locationservice ...............: Creating relevant directory: /Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-head-brows/environment/extensions/.user/owned_brows_mpfb/mpfb/data
+[INFO ] services.locationservice ...............: Creating relevant directory: /Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-head-brows/environment/extensions/.user/owned_brows_mpfb/mpfb/config
+[INFO ] services.locationservice ...............: Creating relevant directory: /Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-head-brows/environment/extensions/.user/owned_brows_mpfb/mpfb/cache
+[INFO ] services.locationservice ...............: Creating relevant directory: /Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-head-brows/environment/extensions/.user/owned_brows_mpfb/mpfb/logs
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+Exception in module register(): /Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/__init__.py
+The 'bl_ext.owned_brows_mpfb.mpfb' addon does not exist!?
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-head-brows/add_native_brows.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

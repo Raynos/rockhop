@@ -101,3 +101,10 @@ so volume extraction did not run. Actual modular hood preserves silhouette
 better than Cflatcollar but has jagged opening/innerislands. Parent rejects
 geometry; neckfamily10/15. Next intrinsic source-surface mapping is a distinct
 mechanism, not a radius tweak. Source face stays3/10 and parent-owned.
+
+Parent nativebrowfit01 fails before source open: isolatedMPFB addon was enabled
+without default preference registration. One setup failure frozen; task-local
+default_setTrue correction next. No brows generated or appearance gain claimed.
+A now audits NEW bust donors/generatorcommands; B/C next modular garment trials
+are independently bounded30minutes. Round39 silent production baseline passes
+byte-identicalclear and crash/restart; no new-rider claim.

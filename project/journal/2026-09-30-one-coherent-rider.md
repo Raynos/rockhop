@@ -475,3 +475,13 @@ inner islands reject geometry; builder16reimportedviews completed,44,016
 source triangles retain positions/UV/materials. Source hashes unchanged.
 Limits: No volume-success, neck motion, final split-edge weights or contacts;
 restoring163sourcegroups fixes metadata only, face remains unaccepted.
+
+## Round39 — isolate native brow addon registration failure
+
+Finding: Parent brow fit stops before source open because isolated MPFB
+preferences are not registered with default_setFalse. Freeze setup; use the
+working nativehead task-localdefault_setTrue registration next.
+Validation: ActualCPUlauncher exits1, error log/source hashes retained and
+two recipes ASTparse. Fresh silent production low/high clear/crash/restart
+passes byte-identically; inspect report for measured restart latency.
+Limits: No brows, new face, neck motion or contact pass generated.

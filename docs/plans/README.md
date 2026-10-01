@@ -31,6 +31,8 @@ Checkpoint 1 rejects C first closed assembly: diagnostic body5/10,face3/10; jagg
 
 Checkpoint 1 freezes all three firstlane findings: A nonseparating seam, C appearance5/10 body3/10 face, B three-contour pre-volume failure. Neckfamily10/15; minimum7 target8 independently. Next modular garment trials and NEW head audit run in isolatedCPUlanes; normal rider/physics unchanged.
 
+Checkpoint 1 body/face minimum7 target8 persists; A audits NEWhead donors and safe generators, B/C test modular hood architecture. Parent browsetup fails before source open (one failure frozen); task-local addonregistration correction next. Neckfamily10/15 retained, round39 production baseline passes, new rider unaccepted.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
