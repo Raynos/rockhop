@@ -881,8 +881,17 @@
     "source": "Fresh CC0 MPFB anatomy; no historical rider meshes",
     "evidence": "../one-rider-v2/glove-cleanup/mpfb-trial2/parent-review.json",
     "nextSpecificTechnique": "Neutral assembly first; measured-grip native-chain collision-aware posing later",
-    "acceptedBodyWristJoin": false,
-    "textureRigContactAccepted": false
+    "acceptedBodyWristJoin": "Neutral shared-index shape only; deformation FAILED",
+    "textureRigContactAccepted": false,
+    "neutralBodyAssemblyShapeApproved": true,
+    "neutralAssemblyEvidence": "../one-rider-v2/glove-cleanup/neutral-assembly/parent-review.json",
+    "temporaryDiagnosticDeformation": {
+      "failedFixes": 1,
+      "failure": "Two fingers stretch into long spikes during wrist/forearm motion",
+      "technique": "Spatial temporary diagnostic weights",
+      "next": "Semantic original hand sets/native total weights; no repeat spatial weighting",
+      "bakeAllowed": false
+    }
   },
   "oneRiderV2ExplicitCollar": {
     "failedFixes": 2,

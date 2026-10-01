@@ -1,0 +1,57 @@
+{
+  "status": "Neutral assembly evidence only; parent judgment pending; no bake",
+  "verifiedStaticFrames": 15,
+  "verifiedMotionFrames": 72,
+  "boards": [
+    {
+      "file": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/fullhand-gray-board.jpg",
+      "sha256": "554b0a896f8aa746db1f01e81ae95b125619fb22b327949e29f98f3e2bfbf5c9"
+    },
+    {
+      "file": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/wristjoin-gray-board.jpg",
+      "sha256": "fb6163fbbb05d1cc5c5959e88a0add6e069c8950c0ff1bdaef556ac3171cdedd"
+    },
+    {
+      "file": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/full-body-gray-board.jpg",
+      "sha256": "80a7bed53ebbc67c27ffcd3cf32610d44e6166716a06c666d4f3d3bed0b7b8f3"
+    }
+  ],
+  "video": {
+    "file": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/temporary-seam-motion.mp4",
+    "sha256": "903d5a543cc670f6e38a50a6d82472fcca618486d965cbe4112ae4fd2bbdbf61",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 960,
+        "height": 520,
+        "r_frame_rate": "12/1",
+        "duration": "3.000000",
+        "nb_frames": "36"
+      }
+    ],
+    "command": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-framerate",
+      "12",
+      "-i",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/motion-combined/%04d.png",
+      "-c:v",
+      "libx264",
+      "-crf",
+      "20",
+      "-pix_fmt",
+      "yuv420p",
+      "-threads",
+      "4",
+      "-movflags",
+      "+faststart",
+      "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/temporary-seam-motion.mp4"
+    ]
+  },
+  "sourcePreservationVerified": true,
+  "rigScope": "temporary local seam test; native anatomy weights remain in clean master; no final19bone/gameplay"
+}

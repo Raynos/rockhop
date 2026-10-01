@@ -286,3 +286,15 @@ failure preserved and corrected before construction.
 Limits: Not exact Pixal likeness or final appearance. Jagged neck base
 is unjoined; no texture/detail, complete character, rig or contact pass.
 Prior manual failures stay stopped and original deadline remains.
+
+Finding: Neutral hands sew cleanly into the body, but moving review
+reveals two stretched finger spikes. Freeze the failed diagnostic rig
+before correcting semantic weight assignment; no hand bake proceeds.
+
+Validation: Parent reviewed hands/wrists/full-body gray and all36moving
+frame pairs plus full frame10. All52,508 retained source triangle/UV
+signatures unchanged, native weight difference0, one connected closed
+59,580triangle mesh/0rest overlap candidates. Frozen hashes verified.
+
+Limits: Motion FAILED despite sound static anatomy. Native weight
+preservation is not a temporary/final rig pass; no contact/gameplay approval.
