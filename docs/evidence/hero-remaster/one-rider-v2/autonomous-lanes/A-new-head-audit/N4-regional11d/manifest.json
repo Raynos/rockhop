@@ -1,0 +1,340 @@
+{
+  "label": "N4-regional11d",
+  "source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/rider-refinement/pixal-comp-a/trial11d-clean-regional-bake/bust.glb",
+  "sourceSHA256": "4ed64e45fed1e67ec8549841afe0939ad5bf67d7f91d2fd6f9b8cee04b304ce4",
+  "sourceSHA256After": "4ed64e45fed1e67ec8549841afe0939ad5bf67d7f91d2fd6f9b8cee04b304ce4",
+  "provenanceFile": "/Users/raynos/Documents/Codex/2026-09-30/task-2/rider-refinement/pixal-comp-a/trial11d-clean-regional-bake/provenance.json",
+  "provenanceSHA256": "9ab6a80cde143adcfd2f10444011bf4c06e2f6080f532cf31a073abb66b577b3",
+  "provenance": {
+    "method": "Deliberate Blender anatomical quad loft with explicit orbital/lid, nose and lip relief; reference-projected albedo; not a successful Pixal generation",
+    "reference": "/Users/raynos/Documents/Codex/2026-09-30/task-2/generated_images/exec-c99b1532-b72a-4c57-a01d-4d5a17ad05b8.png",
+    "referenceSHA256": "8455269c65a4611c42f6765a675698783e986a3e59cbb8e2a0cebb456cffd42c",
+    "topology": {
+      "vertices": 45058,
+      "faces": 45312,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0
+    },
+    "CPU": true,
+    "unrigged": true,
+    "appearanceAccepted": false,
+    "limits": [
+      "Eyes are a baked facial surface with shallow orbital/lid relief, not independently movable eyeballs.",
+      "Identity likeness and side/back ear geometry require actual inspection.",
+      "No graft performed at this stage."
+    ],
+    "sha256": "4ed64e45fed1e67ec8549841afe0939ad5bf67d7f91d2fd6f9b8cee04b304ce4"
+  },
+  "method": "NEW authored Blender loft/reference-projected albedo; not neural output",
+  "noHistoricalProductionDonor": true,
+  "topology": [
+    {
+      "mesh": "Standalone head-neck; Blender reconstruction / reference albedo",
+      "vertices": 45234,
+      "faces": 90112,
+      "boundaryEdges": 354,
+      "nonmanifoldEdges": 354
+    }
+  ],
+  "materials": [
+    {
+      "name": "Regional face bake / matte cropped hair",
+      "nodes": [
+        {
+          "node": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Image Texture",
+          "type": "TEX_IMAGE",
+          "image": "High-resolution reference face bake",
+          "imageSize": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    }
+  ],
+  "alignmentZDegrees": 0,
+  "wholeBoundsBeforeDisplay": [
+    [
+      -0.07798344641923904,
+      -0.08220061659812927,
+      1.4850000143051147
+    ],
+    [
+      0.07798344641923904,
+      0.07977533340454102,
+      1.7599999904632568
+    ]
+  ],
+  "faceROI": "Explicit standalone authored head mesh",
+  "faceROIBoundsBeforeDisplay": [
+    [
+      -0.07798344641923904,
+      -0.08220061659812927,
+      1.4850000143051147
+    ],
+    [
+      0.07798344641923904,
+      0.07977533340454102,
+      1.7599999904632568
+    ]
+  ],
+  "uniformDisplayScale": 1.2823234236455767,
+  "uniformDisplayTranslation": [
+    0.0,
+    0.0015549988020211458,
+    -0.5005697011947632
+  ],
+  "framedHeadWidthM": 0.2,
+  "lights": [
+    {
+      "name": "Key",
+      "position": [
+        3,
+        -4,
+        4
+      ],
+      "powerWatts": 600,
+      "size": 4
+    },
+    {
+      "name": "Fill",
+      "position": [
+        -3,
+        -2,
+        2.5
+      ],
+      "powerWatts": 350,
+      "size": 4
+    },
+    {
+      "name": "Rim",
+      "position": [
+        1,
+        3,
+        3
+      ],
+      "powerWatts": 450,
+      "size": 3
+    }
+  ],
+  "views": [
+    {
+      "mode": "PBR",
+      "view": "front",
+      "yaw": 0,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/PBR-front.png",
+      "SHA256": "82e2bfadb44b4f45b884ac001a641137524768d3c5c661416f36fe8d35a098fa",
+      "wallSeconds": 2.527947375085205,
+      "cameraMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "PBR",
+      "view": "profile",
+      "yaw": 90,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/PBR-profile.png",
+      "SHA256": "2772b3fa4749ca014a6ad51c7452df3b29f49de0a5ade6749fa3fb3757c19bc5",
+      "wallSeconds": 2.5875565838068724,
+      "cameraMatrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "PBR",
+      "view": "three-quarter",
+      "yaw": 45,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/PBR-three-quarter.png",
+      "SHA256": "f84d42bc8e520cbae63fc97458217eca4776ea0351b0b0427bd478e51e28b3ec",
+      "wallSeconds": 2.5982259581796825,
+      "cameraMatrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.8284270763397217
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.8284270763397217
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "gray",
+      "view": "front",
+      "yaw": 0,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/gray-front.png",
+      "SHA256": "09656bd1af8134897d6a05e350c3b0fd0433e946daff3f1f70cdf3ec16cc5b74",
+      "wallSeconds": 2.5026009171269834,
+      "cameraMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "gray",
+      "view": "profile",
+      "yaw": 90,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/gray-profile.png",
+      "SHA256": "93032c73bfc572d98768c886fba65f551d240d4c657ebda25b8ed95edbfe211d",
+      "wallSeconds": 2.5545630413107574,
+      "cameraMatrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "gray",
+      "view": "three-quarter",
+      "yaw": 45,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/gray-three-quarter.png",
+      "SHA256": "ce6d44118d7cab0198467cc9a8bc50132dd990e31cea83b021388de7eabc61d4",
+      "wallSeconds": 2.650359041057527,
+      "cameraMatrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.8284270763397217
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.8284270763397217
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "parentScore": null,
+  "accepted": false
+}

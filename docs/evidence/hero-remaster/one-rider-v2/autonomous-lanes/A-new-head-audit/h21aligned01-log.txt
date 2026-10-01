@@ -1,0 +1,19 @@
+21:05:48 | INFO: Data are loaded, start creating Blender stuff
+21:05:48 | INFO: Blender create Mesh node textured
+21:05:49 | INFO: glTF import finished in 0.06s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_h21_alignment01.py:44: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  materials.append({'name':material.name,'nodes':[{'node':n.name,'type':n.type,'image':n.image.name if n.type=='TEX_IMAGE' and n.image else None,'imageSize':list(n.image.size) if n.type=='TEX_IMAGE' and n.image else None} for n in material.node_tree.nodes] if material.use_nodes else []})
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_h21_alignment01.py:45: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Common gray studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world
+00:03.385  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/alignment-correction01/N2-Hunyuan21-raw/PBR-front.png'
+00:06.078  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/alignment-correction01/N2-Hunyuan21-raw/PBR-profile.png'
+00:08.776  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/alignment-correction01/N2-Hunyuan21-raw/PBR-three-quarter.png'
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_h21_alignment01.py:54: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gray=bpy.data.materials.new('Geometry-only neutral gray');gray.use_nodes=True;shader=gray.node_tree.nodes.get('Principled BSDF');shader.inputs['Base Color'].default_value=(.42,.42,.42,1);shader.inputs['Roughness'].default_value=.65
+00:11.700  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/alignment-correction01/N2-Hunyuan21-raw/gray-front.png'
+00:14.508  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/alignment-correction01/N2-Hunyuan21-raw/gray-profile.png'
+00:17.228  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/alignment-correction01/N2-Hunyuan21-raw/gray-three-quarter.png'
+HEAD_AUDIT_FROZEN 1
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -127,3 +127,11 @@ showunchangedskinunder originalopenhood; no constructedcloth. Neckfamily12/15.
 Next exacttwo-trianglecorrection bounded within existing02:26:30deadline.
 Round42 silentproduction low/highclear remainsbyteidentical40.083333333s,
 crash103ticks, restart2msboth, zeroerrors/audio. Newriderunaccepted.
+
+A NEWfaceaudit complete: sevenactualNEWbusts,48PBR/gray/rawrenders and
+correctedH21X180display; none reachesminimum7. N1diagnostic5bestneuralface,
+N6~4.5bestauthoredfront. Actualretained10.16M/15.92Mrawtriangles show some
+curl/beardnoisebefore reduction; H21pre-reductionshapehistoricallyabsent.
+Parentselects FRESHactualH21buzzsource and reviewedpre-reducerretentionrunner,
+no-evictionwrapper,65decimalGBstopmargin/hard70GB,1spoll/1800sbatch.
+Existingcomparisonsintact; actualgenerationwillbe separatelyqueuedaftercommit.

@@ -1,0 +1,13 @@
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_raw_geometry.py:22: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gray=bpy.data.materials.new('Geometry diagnostic neutral gray');gray.use_nodes=True;shader=gray.node_tree.nodes.get('Principled BSDF');shader.inputs['Base Color'].default_value=(.42,.42,.42,1);shader.inputs['Roughness'].default_value=.65;m.materials.append(gray)
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_raw_geometry.py:23: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Common gray studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world;target=Vector((0,0,1.58))
+00:10.105  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/pre-reduction-gray-front.png'
+00:14.657  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/pre-reduction-gray-profile.png'
+00:19.114  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/pre-reduction-gray-three-quarter.png'
+00:34.061  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/pre-reduction-gray-front.png'
+00:40.657  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/pre-reduction-gray-profile.png'
+00:46.814  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/pre-reduction-gray-three-quarter.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

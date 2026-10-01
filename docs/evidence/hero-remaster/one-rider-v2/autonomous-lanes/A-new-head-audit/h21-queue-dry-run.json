@@ -1,0 +1,29 @@
+{
+  "status": "PREPARED ONLY; parent has not queued GPU work",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/hunyuan21-head-preserve.py",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+    "--out",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01",
+    "--seed",
+    "42",
+    "--shape-steps",
+    "24",
+    "--octree",
+    "320",
+    "--target-faces",
+    "100000"
+  ],
+  "canonicalLock": "/Users/raynos/projects/localai/.model.lock",
+  "lockMode": "lockf -k",
+  "timeLimitSeconds": 1800,
+  "anonymousLimitBytes": 70000000000.0,
+  "limitGiB": 65.1925802230835,
+  "preemptiveStopBytes": 65000000000.0,
+  "preemptiveStopGiB": 60.5359673500061,
+  "pollIntervalSeconds": 1,
+  "eviction": false
+}

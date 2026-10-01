@@ -1,0 +1,497 @@
+{
+  "label": "N7-hair18",
+  "source": "/Users/raynos/Documents/Codex/2026-09-30/task-2/rider-refinement/pixal-comp-a/trial18-hair-ear-costume/bust.glb",
+  "sourceSHA256": "051fb1861988e2f34eb6c59c51896487a84795a2592f876f166ef80f8d491662",
+  "sourceSHA256After": "051fb1861988e2f34eb6c59c51896487a84795a2592f876f166ef80f8d491662",
+  "provenanceFile": "/Users/raynos/Documents/Codex/2026-09-30/task-2/rider-refinement/pixal-comp-a/trial18-hair-ear-costume/construction.json",
+  "provenanceSHA256": "e503555e07bcf817921f0bed230a4036a864feb251389983bb3491856e07a763",
+  "provenance": {
+    "CPU": true,
+    "source": "trial16-integrated-eyelids/bust.blend",
+    "direction": "Cropped swept modeled hair, deliberate helix/antihelix/concha/tragus/lobe cartilage, teal/charcoal exportable cotton normal map",
+    "earVerticesReconstructed": 1472,
+    "closedHairStrands": 74,
+    "topology": [
+      {
+        "name": "Standalone head-neck; Blender reconstruction / reference albedo",
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "vertices": 47564
+      },
+      {
+        "name": "REAL separate eyeball -0.03",
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "vertices": 11522
+      },
+      {
+        "name": "REAL separate eyeball 0.03",
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "vertices": 11522
+      },
+      {
+        "name": "OUR rebuilt hoodie shoulders / capped chest bust",
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "vertices": 38164
+      },
+      {
+        "name": "MODELED swept short hair / not a cap projection",
+        "boundaryEdges": 0,
+        "nonmanifoldEdges": 0,
+        "vertices": 8880
+      }
+    ],
+    "facialIdentityUnchanged": true,
+    "rigged": false,
+    "appearanceAccepted": false,
+    "sha256": "051fb1861988e2f34eb6c59c51896487a84795a2592f876f166ef80f8d491662",
+    "limits": [
+      "Actual hair/ear/material appearance must be inspected.",
+      "Hair consists of intentionally overlapping closed locks rooted in an intact scalp, not hole-covering shells.",
+      "Face/body artistic7\u20138 gate not claimed; rig/contact gates still open."
+    ]
+  },
+  "method": "NEW Blender-derived short swept locks/ears/material refinement",
+  "noHistoricalProductionDonor": true,
+  "topology": [
+    {
+      "mesh": "MODELED swept short hair / not a cap projection",
+      "vertices": 8880,
+      "faces": 17464,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0
+    },
+    {
+      "mesh": "OUR rebuilt hoodie shoulders / capped chest bust",
+      "vertices": 42918,
+      "faces": 76324,
+      "boundaryEdges": 9128,
+      "nonmanifoldEdges": 9128
+    },
+    {
+      "mesh": "REAL separate eyeball 0.03",
+      "vertices": 11522,
+      "faces": 23040,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0
+    },
+    {
+      "mesh": "REAL separate eyeball -0.03",
+      "vertices": 11522,
+      "faces": 23040,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0
+    },
+    {
+      "mesh": "Standalone head-neck; Blender reconstruction / reference albedo",
+      "vertices": 47940,
+      "faces": 95124,
+      "boundaryEdges": 770,
+      "nonmanifoldEdges": 770
+    }
+  ],
+  "materials": [
+    {
+      "name": "Modeled short swept brown hair",
+      "nodes": [
+        {
+          "node": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "imageSize": null
+        }
+      ]
+    },
+    {
+      "name": "Teal charcoal cotton / baked weave normal",
+      "nodes": [
+        {
+          "node": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Color Attribute",
+          "type": "VERTEX_COLOR",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Normal Map",
+          "type": "NORMAL_MAP",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Image Texture",
+          "type": "TEX_IMAGE",
+          "image": "Actual cotton tangent normal atlas",
+          "imageSize": [
+            512,
+            512
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Curved 3D sclera iris pupil 0.03",
+      "nodes": [
+        {
+          "node": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Color Attribute",
+          "type": "VERTEX_COLOR",
+          "image": null,
+          "imageSize": null
+        }
+      ]
+    },
+    {
+      "name": "Curved 3D sclera iris pupil -0.03",
+      "nodes": [
+        {
+          "node": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Color Attribute",
+          "type": "VERTEX_COLOR",
+          "image": null,
+          "imageSize": null
+        }
+      ]
+    },
+    {
+      "name": "Regional face bake / matte cropped hair",
+      "nodes": [
+        {
+          "node": "Principled BSDF",
+          "type": "BSDF_PRINCIPLED",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Material Output",
+          "type": "OUTPUT_MATERIAL",
+          "image": null,
+          "imageSize": null
+        },
+        {
+          "node": "Image Texture",
+          "type": "TEX_IMAGE",
+          "image": "High-resolution reference face bake",
+          "imageSize": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    }
+  ],
+  "alignmentZDegrees": 0,
+  "wholeBoundsBeforeDisplay": [
+    [
+      -0.29743340611457825,
+      -0.11986178904771805,
+      1.315000057220459
+    ],
+    [
+      0.29743722081184387,
+      0.1719973087310791,
+      1.7708088159561157
+    ]
+  ],
+  "faceROI": "Explicit standalone authored head mesh",
+  "faceROIBoundsBeforeDisplay": [
+    [
+      -0.0796700268983841,
+      -0.08220061659812927,
+      1.4850000143051147
+    ],
+    [
+      0.0796700268983841,
+      0.07977533340454102,
+      1.7599999904632568
+    ]
+  ],
+  "uniformDisplayScale": 1.2551771838554286,
+  "uniformDisplayTranslation": [
+    0.0,
+    0.0015220800414681435,
+    -0.45652472972869873
+  ],
+  "framedHeadWidthM": 0.2,
+  "lights": [
+    {
+      "name": "Key",
+      "position": [
+        3,
+        -4,
+        4
+      ],
+      "powerWatts": 600,
+      "size": 4
+    },
+    {
+      "name": "Fill",
+      "position": [
+        -3,
+        -2,
+        2.5
+      ],
+      "powerWatts": 350,
+      "size": 4
+    },
+    {
+      "name": "Rim",
+      "position": [
+        1,
+        3,
+        3
+      ],
+      "powerWatts": 450,
+      "size": 3
+    }
+  ],
+  "views": [
+    {
+      "mode": "PBR",
+      "view": "front",
+      "yaw": 0,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/PBR-front.png",
+      "SHA256": "8a1de7471548358ccabb17f040411f190156fd060434c12089ddc58796a7a934",
+      "wallSeconds": 3.639226125087589,
+      "cameraMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "PBR",
+      "view": "profile",
+      "yaw": 90,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/PBR-profile.png",
+      "SHA256": "08c07577852befbe9cec879429b847fc5cefb52d017920a107ac2ab2d2f6fff5",
+      "wallSeconds": 3.68818062543869,
+      "cameraMatrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "PBR",
+      "view": "three-quarter",
+      "yaw": 45,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/PBR-three-quarter.png",
+      "SHA256": "1a0ec43e3a868d461ef5344ac201116c00edf3a4aeb1438f974290dcc35fd134",
+      "wallSeconds": 3.759172999765724,
+      "cameraMatrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.8284270763397217
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.8284270763397217
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "gray",
+      "view": "front",
+      "yaw": 0,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/gray-front.png",
+      "SHA256": "8ab93086544c2929b34271bc1f81bb20e6b9144bb290fa95c37a2aedfc9ff69f",
+      "wallSeconds": 3.5971842082217336,
+      "cameraMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -4.0
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "gray",
+      "view": "profile",
+      "yaw": 90,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/gray-profile.png",
+      "SHA256": "b886a872c343580609b900ca7c1d1b771f119e2bc0fdc51ff83c58952ca1da8b",
+      "wallSeconds": 3.7883057920262218,
+      "cameraMatrix": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          -2.4492937051703357e-16
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "mode": "gray",
+      "view": "three-quarter",
+      "yaw": 45,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/gray-three-quarter.png",
+      "SHA256": "e06465143645f7831b4cd93fbade21ab161bb9769c7e30e744e6206ccb824538",
+      "wallSeconds": 3.733581957872957,
+      "cameraMatrix": [
+        [
+          0.7071068286895752,
+          -7.450235983696984e-08,
+          0.7071067690849304,
+          2.8284270763397217
+        ],
+        [
+          0.7071067690849304,
+          -1.3631958495352592e-07,
+          -0.7071068286895752,
+          -2.8284270763397217
+        ],
+        [
+          1.490736281084537e-07,
+          1.0,
+          -4.371138828673793e-08,
+          1.5800000429153442
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "parentScore": null,
+  "accepted": false
+}

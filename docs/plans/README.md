@@ -39,6 +39,8 @@ Checkpoint 1 nativebrow fit succeeds with unchanged skin/eyes/UVs; actualbefore/
 
 Checkpoint 1 Cmodularmask leavesoneleftnapedegree4pinch; exactsourcefaces19285/19904 correction next (neckfamily12/15). Bthree-looplining active, A NEWhead/generatoraudit. Face4/10 below7; target8both. Round42silentproductionbyteidenticalclear/crash/2msrestart passes; newrider/rig/contacts unaccepted.
 
+Checkpoint 1 NEWbust audit finds none>=7; N1~5,N6~4.5 diagnostic. Actualraw10.16M/15.92Mtriangle witnesses preserve pre-reductionshape. Parentselects freshactualH21buzz generation with pre-reducerretention/safe no-evictionwrapper, queuedaftercheckpoint. Headlineage13/15, neck12/15beforependingB/Cfailures; whole rider/rig unaccepted.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

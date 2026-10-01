@@ -513,3 +513,13 @@ Validation: Parentreviewed actualeightviewPBRgrayneckboard;16GLBwitnessviews
 frozen,41,744sourcepolygons retained and all sourcehashes unchanged. Fresh
 silentproductionclear/crash/restart passeslow/highbyteidentically,2msrestart.
 Limits: Failedmaskonly, no constructedhood/neckmotion or newrideracceptance.
+
+## Round43 — no preserved new bust reaches the appearance bar
+
+Finding: SevenNEWbusts remainbelow7; choose freshactualH21buzz generation
+withrawshape savedbeforecleanup/reduction ratherthan moregenericfacepatches.
+Validation: Parentreviewed actualPBRfront/profilegray/raw-versus-reducedboards;
+N1~5,N6~4.5best. Actual10.16M/15.92Mrawtriangles renderedwithoutreduction.
+Ownedrunner/wrapperreviewed;10recipesparse,6CPUtests/dryrunpassnomodelimports.
+Limits: Subjectivediagnostic scores; correctedH21orientationfrozenseparately.
+No newgeneration, acceptedbody/face, neckmotion or finalrigfromthisaudit.

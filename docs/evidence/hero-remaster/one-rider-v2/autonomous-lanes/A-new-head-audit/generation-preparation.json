@@ -1,0 +1,90 @@
+{
+  "status": "Prepared only; no GPU/model import executed",
+  "Hunyuan21InstalledRunner": "/Users/raynos/projects/localai/bin/img2mesh/hunyuan21-runner.py",
+  "installedRunnerSHA256": "e1b92d9d6ae016e65bc2b87ff361bbc5816a7a9e5dc6d7261296b4e739a93fde",
+  "preservingOwnedRunner": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/hunyuan21-head-preserve.py",
+  "ownedRunnerSHA256": "e95d3326740f12264cc1a1b2b829772a95a001118d1bfdfcc6f5585d3d9e30cf",
+  "changes": [
+    "24 shape steps, octree320, 100k export target default; explicit CLI controls",
+    "Raw native shape retained before all cleanup and FaceReducer",
+    "CPU Blender export limited to2threads"
+  ],
+  "actualVersion": "Official Hunyuan3D-2.1 pipeline+2.1 paint/PBR configs; no2.0 substitution",
+  "licenses": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/LICENSE",
+      "SHA256": "8e28d8efae5a9ac269c3b7c5df67a5ea4b5f1ae02543d6407dc35ea4b8346ab7",
+      "firstLine": "MIT License"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/LICENSE",
+      "SHA256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "firstLine": "    MIT License"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/LICENSE",
+      "SHA256": "b79ac5e11ce063b6c6570dbe9686a45a03ba08bd248aa6aa82fb342a23a81c0c",
+      "firstLine": "TENCENT HUNYUAN 3D 2.1 COMMUNITY LICENSE AGREEMENT"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/LICENSE",
+      "SHA256": "5bd08f93b2d280bb26ff3eed5d3996fe47a9698b5f7785163928668d7fd578c6",
+      "firstLine": "TENCENT HUNYUAN 3D 2.1 COMMUNITY LICENSE AGREEMENT"
+    }
+  ],
+  "repoCommits": {
+    "Pixal": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+    "TRELLIS2": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+    "Hunyuan21": "82920d643c0dc2f7bfd7255f45f62d386edfe60c"
+  },
+  "Hunyuan21ExistingRawLimitation": "Existing prepaintshape already postreducer; no generator-only attribution possible.",
+  "unsafeGenericWrapper": "run-locked.sh invokes evict.sh; own wrapper avoids it.",
+  "ownedWrapperSHA256": "e70fec41ae91bb66e1b12f5259e8bf4c5d2debfada5fc733115ae220c6136cef",
+  "reference": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+    "SHA256": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36",
+    "mode": "RGBA",
+    "dimensions": [
+      1182,
+      1330
+    ],
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "opaquePixels": 738,
+    "transparentPixels": 789419
+  },
+  "dryRunSHA256": "6898faa9b2e9b69c4cc27bfceb58d1ab5cff9d61e39bba73d21438553bd04e6c",
+  "actualFullExecutionCommand": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/queued_model_worker.py",
+    "--execute",
+    "--tag",
+    "h21-buzz-native01",
+    "--",
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/hunyuan21-head-preserve.py",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+    "--out",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01",
+    "--seed",
+    "42",
+    "--shape-steps",
+    "24",
+    "--octree",
+    "320",
+    "--target-faces",
+    "100000"
+  ],
+  "GPUJobQueued": false,
+  "CPUOnlyWrapperTests": {
+    "tests": 6,
+    "outcome": "PASS; mocked process/lock/memory fixtures, no GPU execution"
+  },
+  "hardAnonymousLimitBytes": 70000000000.0,
+  "preemptiveStopBytes": 65000000000.0,
+  "pollIntervalSeconds": 1
+}

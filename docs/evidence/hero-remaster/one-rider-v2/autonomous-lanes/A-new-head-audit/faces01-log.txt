@@ -1,0 +1,87 @@
+20:57:44 | INFO: Data are loaded, start creating Blender stuff
+20:57:44 | INFO: Blender create Mesh node geometry_0
+20:57:44 | INFO: glTF import finished in 0.11s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_candidates.py:42: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  materials.append({'name':material.name,'nodes':[{'node':n.name,'type':n.type,'image':n.image.name if n.type=='TEX_IMAGE' and n.image else None,'imageSize':list(n.image.size) if n.type=='TEX_IMAGE' and n.image else None} for n in material.node_tree.nodes] if material.use_nodes else []})
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_candidates.py:43: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Common gray studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world
+00:03.524  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/PBR-front.png'
+00:06.617  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/PBR-profile.png'
+00:09.561  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/PBR-three-quarter.png'
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_candidates.py:52: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gray=bpy.data.materials.new('Geometry-only neutral gray');gray.use_nodes=True;shader=gray.node_tree.nodes.get('Principled BSDF');shader.inputs['Base Color'].default_value=(.42,.42,.42,1);shader.inputs['Roughness'].default_value=.65
+00:12.509  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/gray-front.png'
+00:15.651  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/gray-profile.png'
+00:18.583  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N1-Pixal-raw/gray-three-quarter.png'
+20:58:02 | INFO: Data are loaded, start creating Blender stuff
+20:58:02 | INFO: Blender create Mesh node textured
+20:58:02 | INFO: glTF import finished in 0.05s
+00:21.255  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N2-Hunyuan21-raw/PBR-front.png'
+00:23.563  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N2-Hunyuan21-raw/PBR-profile.png'
+00:25.993  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N2-Hunyuan21-raw/PBR-three-quarter.png'
+00:28.466  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N2-Hunyuan21-raw/gray-front.png'
+00:30.878  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N2-Hunyuan21-raw/gray-profile.png'
+00:33.381  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N2-Hunyuan21-raw/gray-three-quarter.png'
+20:58:17 | INFO: Data are loaded, start creating Blender stuff
+20:58:17 | INFO: Blender create Mesh node geometry_0
+20:58:17 | INFO: glTF import finished in 0.11s
+00:36.502  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/PBR-front.png'
+00:39.520  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/PBR-profile.png'
+00:42.562  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/PBR-three-quarter.png'
+00:45.293  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/gray-front.png'
+00:48.405  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/gray-profile.png'
+00:51.468  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N3-TRELLIS2-raw/gray-three-quarter.png'
+20:58:35 | INFO: Data are loaded, start creating Blender stuff
+20:58:35 | INFO: Blender create Mesh node Deliberate anatomical quad head-neck
+20:58:35 | INFO: glTF import finished in 0.05s
+00:54.351  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/PBR-front.png'
+00:56.939  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/PBR-profile.png'
+00:59.537  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/PBR-three-quarter.png'
+01:02.073  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/gray-front.png'
+01:04.628  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/gray-profile.png'
+01:07.278  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N4-regional11d/gray-three-quarter.png'
+20:58:51 | INFO: Data are loaded, start creating Blender stuff
+20:58:51 | INFO: Blender create Mesh node Measured continuous hoodie retopology
+20:58:51 | INFO: Blender create Mesh node REAL lid margin 0.03
+20:58:51 | INFO: Blender create Mesh node REAL lid margin -0.03
+20:58:51 | INFO: Blender create Mesh node REAL separate eyeball 0.03
+20:58:51 | INFO: Blender create Mesh node REAL separate eyeball -0.03
+20:58:51 | INFO: Blender create Mesh node Deliberate anatomical quad head-neck
+20:58:51 | INFO: glTF import finished in 0.15s
+01:11.017  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N5-eyes12c/PBR-front.png'
+01:14.347  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N5-eyes12c/PBR-profile.png'
+01:17.676  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N5-eyes12c/PBR-three-quarter.png'
+01:21.033  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N5-eyes12c/gray-front.png'
+01:24.334  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N5-eyes12c/gray-profile.png'
+01:27.631  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N5-eyes12c/gray-three-quarter.png'
+20:59:11 | INFO: Data are loaded, start creating Blender stuff
+20:59:11 | INFO: Blender create Mesh node Measured continuous hoodie retopology
+20:59:11 | INFO: Blender create Mesh node REAL lid margin 0.03
+20:59:11 | INFO: Blender create Mesh node REAL lid margin -0.03
+20:59:11 | INFO: Blender create Mesh node REAL separate eyeball 0.03
+20:59:11 | INFO: Blender create Mesh node REAL separate eyeball -0.03
+20:59:11 | INFO: Blender create Mesh node Deliberate anatomical quad head-neck
+20:59:12 | INFO: glTF import finished in 0.35s
+01:32.057  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N6-focused14b/PBR-front.png'
+01:35.561  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N6-focused14b/PBR-profile.png'
+01:39.099  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N6-focused14b/PBR-three-quarter.png'
+01:42.740  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N6-focused14b/gray-front.png'
+01:46.219  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N6-focused14b/gray-profile.png'
+01:49.721  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N6-focused14b/gray-three-quarter.png'
+20:59:33 | INFO: Data are loaded, start creating Blender stuff
+20:59:33 | INFO: Blender create Mesh node Closed swept hair strands, intentional hair layering
+20:59:33 | INFO: Blender create Mesh node Measured continuous hoodie retopology
+20:59:34 | INFO: Blender create Mesh node REAL separate eyeball 0.03
+20:59:34 | INFO: Blender create Mesh node REAL separate eyeball -0.03
+20:59:34 | INFO: Blender create Mesh node Deliberate anatomical quad head-neck
+20:59:34 | INFO: glTF import finished in 0.17s
+01:53.984  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/PBR-front.png'
+01:57.673  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/PBR-profile.png'
+02:01.432  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/PBR-three-quarter.png'
+02:05.116  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/gray-front.png'
+02:08.904  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/gray-profile.png'
+02:12.637  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/N7-hair18/gray-three-quarter.png'
+HEAD_AUDIT_FROZEN 7
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
