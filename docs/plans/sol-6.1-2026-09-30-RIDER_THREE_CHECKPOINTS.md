@@ -1206,3 +1206,13 @@ Reject beforeGPU/shader work. No DQexport/sweep or skin-law promotion.
 Next missing factorial control: fresh binds/axes with preserved original
 scalar skin weights, then semantic garment/targeted topology if necessary.
 Original11/22join progress and fresh34rig architecture retained.
+
+Round146: live phonegallery now opens on actual freshC19/body34game clips
+side/rear, matched earlier11links; all21previous videos/media retainedexact,
+23total. Explicit earlier11standing-to-sitting labels prevent stale rig
+confusion. Silent headless390/1200playback/layout/images pass; canonical
+15.23s/27.79GB batch. ExactSite-main5c25e61/259.43MBarchive publishedowner
+private19:48UTC. Ask246done (newrig confirmed/shown), repair239/242/245open.
+Original11/22faceprogress/approvedjoin andfresh34hiparchitecture retained.
+Nextfresh-bind/original-weight causalcontrol then semanticgarment rebuild
+if needed; no DQ/material/nearestbone sweeps. Requiredshipnext147.

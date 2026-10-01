@@ -1539,3 +1539,19 @@ rigid precondition<=2e-15, single-bone matrix parity<=1.7e-15m. Hip flags
 Limits: Normal-opposition/strain diagnostics, no collision/visual/contact
 or production pass. Not Blender PreserveVolume export; no shader written.
 Next isolate fresh binds from scalar weight assignment before reconstruction.
+
+## Round146 — distinguish new skeleton from stale gallery evidence
+
+Finding: User correctly remembers fresh C19 hip improvement; the gallery
+showed older rigs. Add actual34side/rear physics clips at the top, link
+matched old cameras, and label original sitting action as earlierbody11.
+
+Validation: All21priorvideos/media SHAexact; two phonecopies480frames/40s
+960x540, no retiming. Silent390/1200WebKit plays23films and loads images
+without errors/overflow. Canonicallock15.23s/27.79GB. ExactSite source
+5c25e61pushed/verified,259.43MBarchive saved andownerprivate publish
+succeeded19:48UTC. No normal-game main push or deployment.
+
+Limits: Site is evidence, not repaired rider. Severe underarm folds remain;
+fullbody/face/legs/sitting/Garage/support/device gates stay open. Preserve
+newrig architecture and goodhead/hoodjoin; causal weight control next.
