@@ -1,0 +1,63 @@
+{
+  "oneConstruction": true,
+  "noParameterSweep": true,
+  "radialAnnulusPixels": [
+    52,
+    110
+  ],
+  "interiorFeatherPixels": 6,
+  "feather": "product of two cubic smoothsteps, fully weighted58..104px",
+  "pupilProtection": "Exact two original dark connected components from committed27 audit override annulus",
+  "brightScleraGuard": "source min(encodedRGB)>.5 and max-min<.15; no overlap with annuli; all outside active pixels preserved",
+  "alphaProtection": "All alpha values exact; only originally alpha255 RGB eligible",
+  "fixedIntentEncodedSRGB": [
+    0.263,
+    0.155,
+    0.1
+  ],
+  "intentLinearRGB": [
+    0.056236616701557045,
+    0.02077401324787573,
+    0.010022825574869039
+  ],
+  "intentLinearLuminance": 0.027537126992137295,
+  "sourceFibreCurve": "Per-eye source linear luminance normalized by annulus median, exponent0.75, times fixed target linear RGB; feathers blend in linear RGB",
+  "quantization": "standard sRGB transfer; floor(value*255+.5)",
+  "originalOpaqueEyeRoughness": 0.35,
+  "hiddenCorneaMaterialsUnchanged": true,
+  "catchlightsEmissionOpticsAdded": false,
+  "eyes": [
+    {
+      "eye": "negativeZ",
+      "opaquePrimitive": 4,
+      "pupilCentrePixels": [
+        298.7986363636364,
+        726.6986363636364
+      ],
+      "pupilComponent": 291,
+      "pupilPixels": 4400,
+      "annulusPixels": 29522,
+      "eligiblePixels": 29522,
+      "activeFeatherPixels": 29522,
+      "sourceLinearLuminanceMedian": 0.01619701210292605,
+      "maximumTargetLinearChannel": 0.19555559185594343,
+      "minimumPupilProtectedRadius": null
+    },
+    {
+      "eye": "positiveZ",
+      "opaquePrimitive": 6,
+      "pupilCentrePixels": [
+        724.5624859265931,
+        304.7680702544472
+      ],
+      "pupilComponent": 56,
+      "pupilPixels": 4441,
+      "annulusPixels": 29515,
+      "eligiblePixels": 29515,
+      "activeFeatherPixels": 29515,
+      "sourceLinearLuminanceMedian": 0.01619701210292605,
+      "maximumTargetLinearChannel": 0.19555559185594343,
+      "minimumPupilProtectedRadius": null
+    }
+  ]
+}

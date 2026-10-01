@@ -1,0 +1,100 @@
+{
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind22/skin-field01/rider.glb",
+  "sourceSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind28/iris-albedo01/rider.glb",
+  "candidateSHA256": "313f7672002266f333098e39767fde3aa524b58bbc39356841b604da236c9425",
+  "candidateBytes": 22036884,
+  "sourcePNG_SHA256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+  "candidatePNG_SHA256": "e07c003d5fbaa75bee9cb3b195c318d3f2b149612b38452b8ac2682546bd5cb3",
+  "maskNPZ_SHA256": "cd680435040bd778bb55cb900d28d68dadf10ab9f8a2f8a76bb0522366bae571",
+  "originalBinaryPrefixExactBytes": 21395116,
+  "oldGeometryAccessorsUVNormalsSkin19RigHeadHoodNeckExact": true,
+  "onlyMaterialIndexChanges": {
+    "mesh": 1,
+    "primitives": [
+      4,
+      6
+    ],
+    "old": 6,
+    "new": 9
+  },
+  "addedAtlasViewImageTextureMaterial": [
+    166,
+    10,
+    10,
+    9
+  ],
+  "activePixels": 59037,
+  "changedRGBPixels": 58063,
+  "alphaOutsidePupilScleraPixelsExact": true,
+  "sourceUnchanged": true,
+  "proposalSHA256": {
+    "README.md": "17a2a89cf5b7f39134e2073a95c0433f6350397e255e0aee089a01e5334cd16b",
+    "parent-judgment.json": "61c00dcdf73fda05f7855714cc33af9aa784f548da00b212dd6538f6eb7e3d59",
+    "eye-appearance-audit.json": "53906b1209a148d4fa428d39e186141e1042973bc93aed9052e2da3f190addd2"
+  },
+  "settings": {
+    "oneConstruction": true,
+    "noParameterSweep": true,
+    "radialAnnulusPixels": [
+      52,
+      110
+    ],
+    "interiorFeatherPixels": 6,
+    "feather": "product of two cubic smoothsteps, fully weighted58..104px",
+    "pupilProtection": "Exact two original dark connected components from committed27 audit override annulus",
+    "brightScleraGuard": "source min(encodedRGB)>.5 and max-min<.15; no overlap with annuli; all outside active pixels preserved",
+    "alphaProtection": "All alpha values exact; only originally alpha255 RGB eligible",
+    "fixedIntentEncodedSRGB": [
+      0.263,
+      0.155,
+      0.1
+    ],
+    "intentLinearRGB": [
+      0.056236616701557045,
+      0.02077401324787573,
+      0.010022825574869039
+    ],
+    "intentLinearLuminance": 0.027537126992137295,
+    "sourceFibreCurve": "Per-eye source linear luminance normalized by annulus median, exponent0.75, times fixed target linear RGB; feathers blend in linear RGB",
+    "quantization": "standard sRGB transfer; floor(value*255+.5)",
+    "originalOpaqueEyeRoughness": 0.35,
+    "hiddenCorneaMaterialsUnchanged": true,
+    "catchlightsEmissionOpticsAdded": false,
+    "eyes": [
+      {
+        "eye": "negativeZ",
+        "opaquePrimitive": 4,
+        "pupilCentrePixels": [
+          298.7986363636364,
+          726.6986363636364
+        ],
+        "pupilComponent": 291,
+        "pupilPixels": 4400,
+        "annulusPixels": 29522,
+        "eligiblePixels": 29522,
+        "activeFeatherPixels": 29522,
+        "sourceLinearLuminanceMedian": 0.01619701210292605,
+        "maximumTargetLinearChannel": 0.19555559185594343,
+        "minimumPupilProtectedRadius": null
+      },
+      {
+        "eye": "positiveZ",
+        "opaquePrimitive": 6,
+        "pupilCentrePixels": [
+          724.5624859265931,
+          304.7680702544472
+        ],
+        "pupilComponent": 56,
+        "pupilPixels": 4441,
+        "annulusPixels": 29515,
+        "eligiblePixels": 29515,
+        "activeFeatherPixels": 29515,
+        "sourceLinearLuminanceMedian": 0.01619701210292605,
+        "maximumTargetLinearChannel": 0.19555559185594343,
+        "minimumPupilProtectedRadius": null
+      }
+    ]
+  },
+  "limits": "One unaccepted albedo-only candidate. Geometry, gaze, aperture and baseline hidden-cornea behavior unchanged; no moving visual score or optical improvement proved."
+}

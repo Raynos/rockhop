@@ -1395,3 +1395,13 @@ archived. Required low/high ship bytefinish/hash exact, crash103/restart3/4ms.
 Limits: No full-body/face score from crop; boundarycause is still a hypothesis.
 Stop localfield/taper tuning; audit complete connected junction/aliases before
 a continuous topology-aware field or targeted retopology. No promotion.
+
+## Round133 — preserve one iris-only albedo candidate before rendering
+
+Finding: A fixed annulus correction changes iris tone while conserving pupil,
+outer eye, skin and all source character geometry/rig. Rendered merit is open.
+Validation: Parent independently reruns28verifier exit0;58063RGB pixels
+changed,8841pupil pixels and all alpha/sclera/outside mask exact; original
+BIN/accessors/19rig/headhoodneck and materialfactors exact; repeat exact.
+Limits: No appearance pass, optimizedLOD or promotion. Same72-frame actual
+face motion and pixel-identical gray control next; no settings sweep.
