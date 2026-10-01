@@ -57,6 +57,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round128 reproduces52 sleev
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round129 publishes21-video phone gallery preserving all15old clips, adds retained22eye skin/rejected24optics and matched sleeve25baseline/candidate. Local silent390/1200 all21play/nooverflow; exact source private Sites deploy succeeds. Unchanged11 required ship bytefinish/hash exact, crash103/restart1/2ms.26anatomical weights and27iris audit frozen; no asset promotion. PhysicaliPhone/quality open. Ship next132.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round130 parent reproduces27iris audit: fibres/UV intact, dark source luma.086 and actual22poor separation; reference lighting unmatched. One28iris-only append albedo treatment next, preserve pupil/limbus/sclera/skin/rig and baselinecornea. No optics/geometry sweep.26weights frozen for motion; current11/gallery12921videos retained, no promotion. Ship next132.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

@@ -1039,3 +1039,12 @@ Sites deployment succeeded. Required unchanged11 low/high ship passes byte
 finish/hash, crash103ticks/restart1/2ms, errors0. No physicaliPhone pass or new
 asset acceptance.26 anatomicalweights frozen for motion;27iris diagnosis frozen.
 Current11 protected; eye22skin retained; next required ship132.
+
+Round130: parent reruns both27read-only audits and inspects the saved actual
+control board. Iris source fibres/UVs/pupils intact but darkred encodedluma.086;
+actual22near-black pupil/iris distinction. Reference lighting differs, so this
+is tonal priority, not calibratedreflectance or artpass. Authorize ONE28iris
+annulus albedo trial preserving pupils/limbus/sclera/alpha,22geometry/rig/skin
+and baselinecornea. Onefixedbrown intent/linear-fibrecurve, no sweep. Native
+lidfit/small radialgazemismatch remain open.26weights frozen for motion.
+Current11protected, gallery12921videos retained; next required ship132.

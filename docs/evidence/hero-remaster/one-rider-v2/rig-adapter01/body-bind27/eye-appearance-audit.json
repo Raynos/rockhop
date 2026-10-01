@@ -1,0 +1,418 @@
+{
+  "status": "READONLY measured source22 eye texture/UV/occlusion/gaze diagnosis; no candidate or appearance grade",
+  "sourceSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "eyeTexturePNG_SHA256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+  "eyeTexturePixels": [
+    1024,
+    1024
+  ],
+  "eyeTextureSource": "CC0 MakeHuman brown_eye.png, embedded byte exact",
+  "indexConvention": "All primitive, triangle, render-vertex and native source-array IDs zero-based; add1 for an OBJ v token.",
+  "eyes": [
+    {
+      "eye": "negativeZ",
+      "sourcePrimitive": 4,
+      "material": {
+        "name": "CC0 brown iris and sclera",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 8
+          },
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.35,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      },
+      "pupilAndIris": {
+        "pupilTextureComponent": 291,
+        "pupilTexturePixels": 4400,
+        "pupilTextureCentre": [
+          298.7986363636364,
+          726.6986363636364
+        ],
+        "pupilTextureBBoxPixels": [
+          255,
+          686,
+          338,
+          769
+        ],
+        "sourceGLTFPrimitive": 4,
+        "pupilCentreXYZ": [
+          0.7400649816583915,
+          1.6958669437695708,
+          -0.03304714252101549
+        ],
+        "pupilTriangleID": 384,
+        "pupilTriangleVertices": [
+          262,
+          264,
+          267
+        ],
+        "pupilBarycentrics": [
+          0.1383050940851338,
+          0.09557961734630702,
+          0.7661152885685591
+        ],
+        "pupilInterpolatedNormal": [
+          0.9993676999686241,
+          0.023258972716269533,
+          -0.026892758274414612
+        ],
+        "radialGazeAxisXYZ": [
+          0.9949657975214663,
+          -0.0993153845902093,
+          0.013398363563196925
+        ],
+        "radialGazePitchDegrees": -5.70026201454512,
+        "radialGazeYawDegrees": 0.7715072107236812,
+        "pupilYZDiameterMM": [
+          3.8984793081089375,
+          3.8426415310857562
+        ],
+        "irisChromaBBoxPixels": [
+          178,
+          607,
+          413,
+          846
+        ],
+        "irisYZDiameterMM": [
+          10.515708757240949,
+          10.313421756832495
+        ],
+        "irisUnlitMedianRGB": [
+          0.2784313725490196,
+          0.0392156862745098,
+          0.00392156862745098
+        ],
+        "irisUnlitEncodedSRGBLumaPercentiles": [
+          0.02167686274509804,
+          0.0528643137254902,
+          0.08595450980392157,
+          0.16065333333333334,
+          0.33814431372549014
+        ],
+        "irisSamples": 36522
+      },
+      "nativeLoopProvenance": {
+        "nativeSide": "L",
+        "localInnerLoopIDs": [
+          186,
+          199,
+          195,
+          196,
+          197,
+          174,
+          90,
+          89,
+          88,
+          87,
+          86,
+          108,
+          106,
+          107,
+          110,
+          111,
+          112,
+          117,
+          113,
+          114,
+          115,
+          116,
+          109,
+          97,
+          167,
+          96,
+          95,
+          94,
+          93,
+          92,
+          91,
+          194
+        ],
+        "MakeHumanBaseOBJInnerLoopVertexIDs": [
+          13366,
+          13379,
+          13375,
+          13376,
+          13377,
+          13354,
+          7753,
+          7752,
+          7751,
+          7750,
+          7749,
+          7775,
+          7773,
+          7774,
+          7791,
+          7792,
+          7793,
+          7798,
+          7794,
+          7795,
+          7796,
+          7797,
+          7790,
+          7764,
+          11717,
+          7763,
+          7762,
+          7761,
+          7760,
+          7759,
+          7758,
+          13374
+        ],
+        "apertureInnerLoopBBoxXYZ": [
+          [
+            0.7407509521880945,
+            1.693412487868004,
+            -0.044273762536395984
+          ],
+          [
+            0.7451165296711098,
+            1.700478162406988,
+            -0.024439404723390488
+          ]
+        ],
+        "nativeApertureWidthHeightMM": [
+          19.834357813005496,
+          7.065674538984101
+        ],
+        "geometryUnchanged": true
+      },
+      "visibleEyeProjectionBBoxMM": [
+        19.700000000000003,
+        6.900000000000128
+      ],
+      "visibleEyePixels": 10700,
+      "visibleIrisChromaPixels": 5031,
+      "visiblePupilPixels": 1021,
+      "visibleIrisChromaFraction": 0.47018691588785044,
+      "projectionPitchYawDegrees": [
+        0,
+        0
+      ],
+      "gridSpacingMM": 0.1,
+      "visibleIrisChromaSRGBMean": [
+        0.26544881953916033,
+        0.05197403555764765,
+        0.013643002232369056
+      ],
+      "pixelMaskNPZ": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind27/negativeZ-occlusion-field.npz"
+    },
+    {
+      "eye": "positiveZ",
+      "sourcePrimitive": 6,
+      "material": {
+        "name": "CC0 brown iris and sclera",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 8
+          },
+          "baseColorFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "roughnessFactor": 0.35,
+          "metallicFactor": 0
+        },
+        "alphaMode": "OPAQUE",
+        "doubleSided": false
+      },
+      "pupilAndIris": {
+        "pupilTextureComponent": 56,
+        "pupilTexturePixels": 4441,
+        "pupilTextureCentre": [
+          724.5624859265931,
+          304.7680702544472
+        ],
+        "pupilTextureBBoxPixels": [
+          681,
+          264,
+          764,
+          347
+        ],
+        "sourceGLTFPrimitive": 6,
+        "pupilCentreXYZ": [
+          0.7391041609003749,
+          1.6959279212276843,
+          0.03184991466960961
+        ],
+        "pupilTriangleID": 390,
+        "pupilTriangleVertices": [
+          268,
+          269,
+          270
+        ],
+        "pupilBarycentrics": [
+          0.466298568721754,
+          0.43227667565017924,
+          0.10142475562806674
+        ],
+        "pupilInterpolatedNormal": [
+          0.9952603742446571,
+          -0.0944061799934269,
+          0.023329394279187867
+        ],
+        "radialGazeAxisXYZ": [
+          0.9986497412413616,
+          -0.05024848203439542,
+          -0.013182730058698364
+        ],
+        "radialGazePitchDegrees": -2.8804893869872097,
+        "radialGazeYawDegrees": -0.7562921170981208,
+        "pupilYZDiameterMM": [
+          3.7327417673020946,
+          3.811732404476822
+        ],
+        "irisChromaBBoxPixels": [
+          604,
+          185,
+          839,
+          424
+        ],
+        "irisYZDiameterMM": [
+          10.511857933821922,
+          10.272778755665263
+        ],
+        "irisUnlitMedianRGB": [
+          0.2784313725490196,
+          0.0392156862745098,
+          0.00392156862745098
+        ],
+        "irisUnlitEncodedSRGBLumaPercentiles": [
+          0.02167686274509804,
+          0.05311137254901961,
+          0.08602745098039216,
+          0.16066901960784313,
+          0.33814431372549014
+        ],
+        "irisSamples": 36491
+      },
+      "nativeLoopProvenance": {
+        "nativeSide": "R",
+        "localInnerLoopIDs": [
+          186,
+          199,
+          195,
+          196,
+          197,
+          174,
+          90,
+          89,
+          88,
+          87,
+          86,
+          108,
+          106,
+          107,
+          110,
+          111,
+          112,
+          117,
+          113,
+          114,
+          115,
+          116,
+          109,
+          97,
+          167,
+          96,
+          95,
+          94,
+          93,
+          92,
+          91,
+          194
+        ],
+        "MakeHumanBaseOBJInnerLoopVertexIDs": [
+          6770,
+          6783,
+          6779,
+          6780,
+          6781,
+          6758,
+          1061,
+          1060,
+          1059,
+          1058,
+          1057,
+          1083,
+          1081,
+          1082,
+          1099,
+          1100,
+          1101,
+          1106,
+          1102,
+          1103,
+          1104,
+          1105,
+          1098,
+          1072,
+          5102,
+          1071,
+          1070,
+          1069,
+          1068,
+          1067,
+          1066,
+          6778
+        ],
+        "apertureInnerLoopBBoxXYZ": [
+          [
+            0.7397717421880945,
+            1.6929124878680037,
+            0.023239404723390488
+          ],
+          [
+            0.7441373196711097,
+            1.6999781624069878,
+            0.043073762536395985
+          ]
+        ],
+        "nativeApertureWidthHeightMM": [
+          19.834357813005496,
+          7.065674538984101
+        ],
+        "geometryUnchanged": true
+      },
+      "visibleEyeProjectionBBoxMM": [
+        19.699999999999996,
+        6.900000000000128
+      ],
+      "visibleEyePixels": 10700,
+      "visibleIrisChromaPixels": 5222,
+      "visiblePupilPixels": 1014,
+      "visibleIrisChromaFraction": 0.4880373831775701,
+      "projectionPitchYawDegrees": [
+        0,
+        0
+      ],
+      "gridSpacingMM": 0.1,
+      "visibleIrisChromaSRGBMean": [
+        0.2654692546465493,
+        0.05165750719971042,
+        0.013693114478995162
+      ],
+      "pixelMaskNPZ": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind27/positiveZ-occlusion-field.npz"
+    }
+  ],
+  "limits": [
+    "Iris boundary uses declared source chroma threshold, not anatomy ground truth.",
+    "Pupil radial axis is relative to retained donor sphere-fit centre; depressed iris normals are reported separately and are not gaze ground truth.",
+    "CPU frontal field is unlit +X orthographic diagnostic, not matched gameplay camera/light or physical transparency.",
+    "Reference pixel ratios and appearance cause ranking require parent visual judgment.",
+    "No geometry, texture, material, shader, rig, source file or player asset changes."
+  ]
+}

@@ -1365,3 +1365,12 @@ succeeds. Required unchanged11 ship low/high byte-exact finish/hash, crash
 103ticks/restart1/2ms and no errors. All15old clips preserved.
 Limits: Physical iPhone and candidate quality are open. Sleeve25/optics24
 remain rejected;22face6.8 below7. Publication is evidence, not promotion.
+
+## Round130 — choose iris contrast from measured source evidence
+
+Finding: Iris fibres and UVs exist; dark source tonal separation is a better
+next causal test than another physical-cornea or whole-eye reconstruction.
+Validation: Parent independently reruns both read-only27audits exit0 and
+reviews actual/reference control board; source22 and saved-source hashes exact.
+Limits: Reference lights/pose differ and manual annuli are diagnostics. No
+new model or appearance pass. One iris-only append treatment next; lids open.

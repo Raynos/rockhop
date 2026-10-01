@@ -1,0 +1,215 @@
+{
+  "status": "READONLY retained full-resolution pixel controls; no relighting or candidate",
+  "sources": {
+    "approved_bust": {
+      "path": "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+      "SHA256": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36",
+      "dimensions": [
+        1182,
+        1330
+      ],
+      "manualIrisPixelControls": [
+        {
+          "manualAnnulus": [
+            476,
+            413,
+            9,
+            17
+          ],
+          "verticalLimits": [
+            410,
+            420
+          ],
+          "sampledPixels": 186,
+          "medianRGB": [
+            0.25098039215686274,
+            0.1411764705882353,
+            0.08627450980392157
+          ],
+          "encodedSRGBLumaPercentiles": [
+            0.01985490196078431,
+            0.09681411764705881,
+            0.16109960784313726,
+            0.23161019607843136,
+            0.6043796078431373
+          ],
+          "notLightingMatched": true
+        },
+        {
+          "manualAnnulus": [
+            696,
+            415,
+            9,
+            17
+          ],
+          "verticalLimits": [
+            412,
+            422
+          ],
+          "sampledPixels": 186,
+          "medianRGB": [
+            0.27450980392156865,
+            0.16862745098039217,
+            0.11372549019607843
+          ],
+          "encodedSRGBLumaPercentiles": [
+            0.11752313725490197,
+            0.13935137254901958,
+            0.18606509803921567,
+            0.27683843137254904,
+            0.590524705882353
+          ],
+          "notLightingMatched": true
+        }
+      ],
+      "cropRect": [
+        370,
+        365,
+        780,
+        462
+      ]
+    },
+    "actual22": {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind22/played01/actual-front-textured.png",
+      "SHA256": "9c45a2f0270ed657ca22786f9595b196e6c142aabe841a789750e6148dd1bdd8",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "manualIrisPixelControls": [
+        {
+          "manualAnnulus": [
+            1149,
+            685,
+            8,
+            14
+          ],
+          "verticalLimits": [
+            682,
+            692
+          ],
+          "sampledPixels": 146,
+          "medianRGB": [
+            0.1411764705882353,
+            0.09411764705882353,
+            0.09019607843137255
+          ],
+          "encodedSRGBLumaPercentiles": [
+            0.08926980392156862,
+            0.0929443137254902,
+            0.10342235294117647,
+            0.11477019607843138,
+            0.16466980392156863
+          ],
+          "notLightingMatched": true
+        },
+        {
+          "manualAnnulus": [
+            1380,
+            692,
+            8,
+            14
+          ],
+          "verticalLimits": [
+            689,
+            699
+          ],
+          "sampledPixels": 146,
+          "medianRGB": [
+            0.1411764705882353,
+            0.09803921568627451,
+            0.09411764705882353
+          ],
+          "encodedSRGBLumaPercentiles": [
+            0.08593490196078431,
+            0.09461176470588235,
+            0.1073721568627451,
+            0.11924235294117645,
+            0.20555294117647058
+          ],
+          "notLightingMatched": true
+        }
+      ],
+      "cropRect": [
+        1060,
+        625,
+        1450,
+        735
+      ]
+    },
+    "actual24": {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind24/played01/actual-front-textured.png",
+      "SHA256": "99d0e1b4bbc2f3fa38abb4bf9a91373e12824df0801ff73d9bc4384ce5e2d1bf",
+      "dimensions": [
+        2560,
+        1440
+      ],
+      "manualIrisPixelControls": [
+        {
+          "manualAnnulus": [
+            1149,
+            685,
+            8,
+            14
+          ],
+          "verticalLimits": [
+            682,
+            692
+          ],
+          "sampledPixels": 146,
+          "medianRGB": [
+            0.1843137254901961,
+            0.12549019607843137,
+            0.11372549019607843
+          ],
+          "encodedSRGBLumaPercentiles": [
+            0.11390039215686276,
+            0.11980078431372548,
+            0.13576235294117645,
+            0.19169333333333333,
+            0.2490650980392157
+          ],
+          "notLightingMatched": true
+        },
+        {
+          "manualAnnulus": [
+            1380,
+            692,
+            8,
+            14
+          ],
+          "verticalLimits": [
+            689,
+            699
+          ],
+          "sampledPixels": 146,
+          "medianRGB": [
+            0.1843137254901961,
+            0.12549019607843137,
+            0.11764705882352941
+          ],
+          "encodedSRGBLumaPercentiles": [
+            0.1049764705882353,
+            0.11490392156862746,
+            0.13827372549019606,
+            0.19199686274509803,
+            0.2138227450980392
+          ],
+          "notLightingMatched": true
+        }
+      ],
+      "cropRect": [
+        1060,
+        625,
+        1450,
+        735
+      ]
+    }
+  },
+  "limits": [
+    "Reference and gameplay have different head pose, light, tone mapping and sample scale. These are observed pixels, not equivalent material reflectance.",
+    "Manual annuli are reviewer-visible and may include lid/skin pixels; use source texture + UV audit for the causal albedo claim.",
+    "No anatomical iris diameter inferred from photographs.",
+    "Actual24 cloudiness is the parent-rejected shader trial, not a new candidate."
+  ]
+}
