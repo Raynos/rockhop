@@ -1,0 +1,51 @@
+{
+  "captureSHA256": "22cb7128e765645a675c907f046580414844947dcec974ccb636701b124a1f7a",
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body11-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind11/face-focus02/textured",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--center-focus=1",
+        "--surface=textured",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 17.157797583
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body11-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind11/face-focus02/gray",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--center-focus=1",
+        "--surface=gray",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 15.183110042000003
+    }
+  ],
+  "wallSeconds": 32.347533791000004,
+  "peakAnonymousBytes": 37253218304,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limits": "Private camera projection only; same body11 source/build/physics/rig. Partial orbit is not nine-angle acceptance."
+}

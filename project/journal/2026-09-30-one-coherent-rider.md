@@ -1084,3 +1084,14 @@ Parent fullfront18/A-B/all72decoded frames reviewed;NEWbothclear byteexact,
 crash103/restart2msLOW3msHIGH/errors0. Budgetpasses;GPU49.522s/50.984GB lock.
 Limits: Visible face mainly0–29; no rear/nine-angle appearance pass. Source
 geometry/rig preserved, trueLOD/Pro/surface and later motion gates open.
+
+## Round103 — centre the actual skinned face during diagnostic capture
+
+Finding: An opt-in projection window follows actual face vertex40416, keeping
+the head visible through lateral/rear motion without changing the game camera
+or rider pose. Gray eye/lid surfaces need inspection before fitting new eyes.
+Validation: 72 states/debug/hash/bones and camera transform exact to prior;
+PBR/gray focus exact, head-local drift1.4e-14m, NDC error6.8e-16. Parent reviewed
+all72 ordered frames per surface. Typecheck/oxlint pass; lock32.348s/37.253GB.
+Limits: Face6.8 diagnostic, matched appearance and later checkpoints open.
+Initial proof URL equality failed on ephemeral ports; content equality passes.

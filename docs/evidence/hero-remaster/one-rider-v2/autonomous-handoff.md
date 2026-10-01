@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round102, 2026-10-01
+## Current evidence — round103, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -16,8 +16,8 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   remains open. Actual turntable and neck yaw/bend fixtures are retained.
 - Current runtime master is LocalAI `one-rider-v2/rig-adapter01/body-bind11/guarded-correction01/rider.glb`,
   SHA256 `b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754`.
-  Body08 Blender source plus the reproducible CPU skin bake produce body09;
-  do not claim a body09 Blender master.
+  Body08 Blender source plus CPU skin bake produce09; the joint physical
+  color bake derives11. Neither09 nor11 has a separate Blender master.
 - The explicit NEW rig adapter preserves physics COM/lean, arm/leg IK and
   grip/sole behavior. Baking the production conditioning once closes the
   shared307-point body/hood opening in actual played evidence. Existing
@@ -33,8 +33,8 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: actual3Dface focus; zoomed orbitZ0 clips later lean
-  frames. Then anatomical eye/lid components; preserve WHITEbody and19bones.
+- Next bounded action: inspect eye sockets before fresh CC0 eye fitting
+  and targeted lids. Explicit private3Dfocus now retains all72 head views.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
@@ -468,3 +468,6 @@ Round102: KEEP11sharedcolor after playedfrontal/profile, cheek outlines removed.
 72camera/state/debugexact and grayPNGpixel-identical, face6.8diagnostic/open.
 Laterframes out of zoomed view; next3Dsurfacefocus then anatomical eyes/lids.
 NEWbothclear byteexact/crash103/restart2/3ms/errors0; earlier failures retained.
+
+Round103: actual skinned-face projection keeps head visible throughout72
+frames, unchanged state/rig/camera transform. Face6.8; eye geometry audit next.

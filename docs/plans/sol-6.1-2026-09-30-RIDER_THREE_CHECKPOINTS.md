@@ -774,3 +774,10 @@ strictmatchedgateopen. Laterface frames clipped because orbitZ0; next actual3D
 surfacefocus framing, then freshCC0eye/lid anatomical components on sameWHITE
 body. NEWbothcoldclear byteexact/crash103/restart2msLOW3msHIGH/errors0.50.984GB
 peak anonymous/49.522s canonical lock. No later gate or realLOD acceptance.
+
+Round103: explicit private skinned-face projection keeps the moving head in
+view. All72 state/debug/hash/bones and camera transform match source11 played01;
+only view window changes. Paired gray/PBR focus exact; head-local drift1.4e-14m.
+Parent reviewed72 frames per surface, head visible throughout. Face stays6.8
+diagnostic; inspect eye/lid geometry before new CC0 component fitting. Same
+WHITE body/clothes/19bones; no strict appearance or later gate acceptance.
