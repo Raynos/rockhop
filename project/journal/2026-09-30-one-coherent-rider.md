@@ -1415,3 +1415,13 @@ Validation: Parent72ordered PBR frames/closeup reviewed, face6.8 below7;
 loaded. CPU conservation and actual replay pass; all144frames archived.
 Limits: No full-body score or promotion. Stop albedo-only tuning and inspect
 actual prepared normals/material/cornea response before a different mechanism.
+
+## Round136 — fixed reflective eye-coat hypothesis
+
+Finding: Test one reflective layer on opaque eyes after iris-only pigment
+and full transmission failed. Existing pupil normals point forward;
+prepared native cornea remains alpha-discarded. No source geometry change.
+Validation: CPU verification passes exact552vertex/1060triangle fingerprint,
+all other materials,19bones/binds/clips/source and undo/foreign guard.
+Limits: Unaccepted until matched72-frame actual motion; no anatomy,
+full-body, device or performance pass. No parameter sweep or promotion.

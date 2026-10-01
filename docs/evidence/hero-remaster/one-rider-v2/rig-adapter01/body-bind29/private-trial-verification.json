@@ -1,0 +1,49 @@
+{
+  "status": "PASS CPU-only single opaque-eye coat trial; played appearance unaccepted",
+  "sourceSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "sourceGLBBytesUntouched": 21438496,
+  "geometrySHA256": "a6ba58aa72d3da5fd0b31cb9e1c9af5cd3faa6055400f8647f74cf0ce9320f4a",
+  "semanticRegion": {
+    "sourceMesh": 1,
+    "sourcePrimitives": [
+      4,
+      6
+    ],
+    "sourceMaterial": 6,
+    "preparedVertices": 552,
+    "preparedTriangles": 1060
+  },
+  "materialReferencesChanged": 1,
+  "geometryUVNormalsWeightsBindAndClipsExact": true,
+  "otherMaterialsExact": true,
+  "textureReferencesAndCompileHooksRetained": true,
+  "undoAndForeignGuardPassed": true,
+  "settings": {
+    "type": "MeshPhysicalMaterial",
+    "transmission": 0,
+    "thickness": 0,
+    "ior": 1.5,
+    "opacity": 1,
+    "alphaTest": 0,
+    "transparent": false,
+    "depthWrite": true,
+    "side": 2,
+    "roughness": 0.35,
+    "metalness": 0,
+    "envMapIntensity": 0.8,
+    "clearcoat": 1,
+    "clearcoatRoughness": 0.08
+  },
+  "diagnosis": "Prepared22 opaque-eye normals at measured pupils point forward. Roughness.35 dielectric is preserved; original cornea opacity.035 is alpha-discarded. No inverted-normal diagnosis supported.",
+  "hypothesis": "A reflective coat on the opaque eye can add moving wet-surface response without transmissive framebuffer or source pigmentation changes. This cannot restore anatomical corneal bulge or repair exposed lids.",
+  "sources": [
+    "https://threejs.org/docs/pages/MeshPhysicalMaterial.html",
+    "https://docs.blender.org/manual/en/4.5/render/shader_nodes/shader/principled.html"
+  ],
+  "limits": [
+    "No GPU or measured highlight until matched72-frame playback.",
+    "Exact original22 source, not rejected28 albedo or24 transmission.",
+    "Whole eye receives coating; coat normals follow existing iris/sclera surface, no anatomical refraction.",
+    "No full-body, device, performance or production acceptance."
+  ]
+}

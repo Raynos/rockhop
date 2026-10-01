@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round135, 2026-10-01
+## Current evidence — round136, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -781,3 +781,11 @@ after28face6.8below7. Current11/gallery129protected. Nextrequiredship138.
 Round135 encoding note: repository CSV uses LF instead of delivered CRLF;
 records and original source checksum preserved. Parent verifier checks this
 one encoding equivalence and28other exact source/copied hashes.
+
+Round136: opaque-eye coat29 CPU guard passes with source22/allgeometry,
+textures,othermaterials,19rig/bind/clips exact; one reversible material only.
+Preparedcornea remains discarded. No inverted-normal diagnosis supported.
+Fixedclearcoat1/roughness.08 preserves base.35 pigment, uses existing eye
+normals, no transmission/emission/newmesh; not anatomical corneal optics.
+One actual72-frame PBR/gray comparison next, no parameter sweep. Appearance
+unaccepted, body11/join/gallery129protected. Requiredshipnext138.

@@ -12,6 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { decodeJSON, expandFrames } from '../../src/core/replay';
+import { installPrivateEyeCoat29 } from './new-rider-eye-coat29-install.mjs';
 import { installPrivateEyeOptics24 } from './new-rider-eye-optics24-install.mjs';
 const arg = (key: string, fallback = '') => process.argv.find(a => a.startsWith(`--${key}=`))?.slice(key.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
@@ -21,6 +22,7 @@ const recording = decodeJSON(fs.readFileSync(arg('recording', 'harness/inputs/b1
 const inputs = expandFrames(recording), fps = Number(arg('fps', '12')), ticksPerFrame = recording.header.physicsHz / fps;
 assert(Number.isInteger(ticksPerFrame));
 const frames = Math.min(Math.floor(inputs.length / ticksPerFrame), Math.round(Number(arg('seconds', '40')) * fps));
+const eyeCoat29 = arg('eye-coat29', '0') === '1';
 const eyeOptics24 = arg('eye-optics24', '0') === '1';
 const surface = arg('surface', 'textured'); assert(['textured', 'gray'].includes(surface));
 const focus = arg('focus', 'body'); assert(['body', 'hands', 'feet', 'face'].includes(focus));
@@ -63,6 +65,11 @@ try {
     assert.equal(surface, 'textured', 'Optics24 is an isolated PBR material comparison; original gray geometry is unchanged');
     const model = catalog.models.find((m: any) => m.logical === 'models/rider-street-mustard.glb');
     report.privateEyeOptics24 = await installPrivateEyeOptics24(page, model.sha256);
+  }
+  if (eyeCoat29) {
+    assert(!eyeOptics24 && surface === 'textured', 'One isolated PBR eye trial at a time');
+    const model = catalog.models.find((m: any) => m.logical === 'models/rider-street-mustard.glb');
+    report.privateEyeCoat29 = await installPrivateEyeCoat29(page, model.sha256);
   }
   report.loadedMaterials = await page.evaluate(() => {
     const rows: any[] = [];
