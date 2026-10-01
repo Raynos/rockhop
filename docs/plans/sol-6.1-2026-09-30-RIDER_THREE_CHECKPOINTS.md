@@ -1616,3 +1616,22 @@ Whole-movie/unilateral/halfstep appearance, continuous crossings/contact,
 actual Garage/physics/Blender equivalence/mobile/LOD remain open. Shared lock,
 61.556GB/43.51seconds, strict harness types/lint pass. Task-3 construction owner
 retained; cosmetics paused. No source promotion or gallery change. Ship162next.
+
+## Unilateral and analytic halfstep gate — round161
+
+The parent gate now covers28families/5,404exported Three.js samples at48fps,
+including16single-arm/hand controls and1,152bilateral halfsteps. All1,164older
+controls remain exact; unilateral controls leave inactive15bones neutral.
+Grip morph isolation changes1,683vertices on the selected hand and0on the
+opposite hand with identical bones. This is driver verification, not grip/cuff
+contact or hand anatomy acceptance. V5 still collapses cloth: overhead260,
+squat257/sit258; halfsteps expose additional witnesses. Moving unilateral/
+halfstep review remains open; round160film is bilateral24fps only.
+
+Read-only task-3 ray audit identifies actual V5 gameplay frame304. Sampled blue
+slivers hit opaque cloth with blue/gray atlas texels, and one dark underarm sample
+hits folded face8276 with skinned/geometric normal dot-0.97265. Do not infer
+empty holes from those pixels or patch them blindly. Finite rays do not exclude
+other holes, certify every pixel or excuse construction/crossing/strain failures.
+Preserve construction-first order; defer cosmetic repainting. Source/image and
+10raw receipts verified; task-3 ownership unchanged. Ship162next.

@@ -1,0 +1,27 @@
+{
+  "ownerReadOnly": "assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/screenshot01",
+  "sourceFilesSHA256": {
+    "physical-v5-source-identification.json": "fea50a902f0f5beb72629e366ff7e7bccd436e580863c7f0351d97b1825703a2",
+    "screenshot-pixel-ray-audit.json": "13f9e88d40270a8a1a3c4f4852a3c3bba9553f2659f1858e85d8bc98f412da87",
+    "paired-fold-pixel-rays.json": "dd8b7d05a1eb3bc699eae7d6ea84cfd96b17bc1c6fe8268f404243c06263808a"
+  },
+  "sourceSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+  "imageSHA256": "cb16e7af5b40c86df3d474d3f7781692648e0b2f76c00f6bce7021fdd3e3d8c0",
+  "rawReceiptsVerified": 10,
+  "finiteRiderHitSamples": 8,
+  "registrationMaximumErrorM": 3.4107137308371046e-13,
+  "foldFace": 8276,
+  "foldNormalDot": -0.972649839074035,
+  "findings": [
+    "Sampled blue/gray slivers hit opaque source surfaces with blue/gray atlas texels.",
+    "Sampled underarm fold hits backfacing face8276, skinned/geometric normal dot=-0.97265.",
+    "Finite ray evidence corrects empty-hole inference for these pixels; does not dismiss other holes or certify GPU pixels.",
+    "Construction and broad deformation failures remain; do not repair appearance alone."
+  ],
+  "limits": [
+    "Nearest texel samples omit linear/mipmap filtering, vertexcolors, light, BRDF and normalmapping.",
+    "Hits establish rider coverage and source surface/UV provenance at finite rays, not GPU pixel equivalence.",
+    "No scene bike/background occlusion raycast; a closest riderhit might be behind another scene object.",
+    "No inferential claim that every dark sliver is geometric hole."
+  ]
+}

@@ -1762,3 +1762,21 @@ Limits: Partial review is not full-pose acceptance. No supported seat,
 continuous crossing/contact, actual Garage/Blender equivalence/mobile/LOD pass.
 No cosmetic edit, asset promotion, deploy or gallery change. Independent
 construction candidate next through this gate; mandatory ship162.
+
+## Round161 — unilateral and halfstep coverage
+
+Finding: Bilateral24fps evidence can miss asymmetric and between-frame defects.
+Expand controls without changing or promoting the source. Preserve inspected
+ray distinction between opaque atlas/fold artifacts and genuine geometry holes.
+
+Validation: 28families/5,404stock Three.js samples,1.444e-15world/local parity;
+all1,164old controls exact,1,152bilateral halfsteps. Inactive15bones exactneutral;
+selected grip1,683vertices moves, opposite grip0difference. Overhead260,
+squat257/sit258 area-collapse witnesses remain. Source/image/10raw ray receipts
+verified, all8sampled rays hit; fold face8276 normal dot-0.97265. Strict harness
+types/lint pass after explicit L/R key type; no runtime/source change in that fix.
+
+Limits: CPU coverage and morph isolation do not accept motion, joints/contact,
+hands, continuous collisions, Garage/Blender/device/LOD or appearance. No new
+art repair attempt. Task-3 files unchanged; source/head protected, cosmetics
+paused. Render expanded fixture next and retain mandatory ship162.

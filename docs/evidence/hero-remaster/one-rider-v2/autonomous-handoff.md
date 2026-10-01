@@ -16,7 +16,13 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round160, 2026-10-01
+## Current evidence — round161, 2026-10-01
+
+- Round161 expands28families/5,404CPU samples with unilateral grips and analytic
+  halfsteps. All1,164baseline controls exact; new halfsteps retain extra collapse
+  witnesses. New moving review still open; no geometry or cosmetic repair.
+  Sampled gameplay304blue/black slivers are opaque atlas/fold-normal defects,
+  not empty holes at those finite rays. Structural priority remains.
 
 - Round160 actual WebGL12families/1,164frames/48.5s, front/side/back PBR+gray.
   Source SHA and19matrices verified, overhead framing fixed. Partial moving

@@ -2,6 +2,7 @@
 import * as THREE from 'three';
 export interface PoseFrame {
   family: string; frame: number; timeSeconds: number; closedGrip: number;
+  gripSide?: 'L' | 'R' | null;
   deformationWorldColumnMajor: number[][];
 }
 export interface PoseFixture {
@@ -60,7 +61,13 @@ export function createFixturePlayer(scene: THREE.Object3D, fixture: PoseFixture)
         if (!mesh.morphTargetInfluences) continue;
         // These fixtures admit source grip morphs only, never clip compression.
         for (const [name,index] of Object.entries(mesh.morphTargetDictionary ?? {})) {
-          mesh.morphTargetInfluences[index] = /grip/i.test(name) ? frame.closedGrip : 0;
+          const isGrip=/grip/i.test(name);
+          // Keep the untouched hand open in unilateral grip controls. Reject
+          // unknown source names rather than silently curling both hands.
+          if(isGrip && frame.gripSide && !/[._]([LR])$/.test(name))
+            throw new Error('Unmapped side-specific grip target: '+name);
+          const matchesSide=!frame.gripSide || name.endsWith('.'+frame.gripSide) || name.endsWith('_'+frame.gripSide);
+          mesh.morphTargetInfluences[index] = isGrip && matchesSide ? frame.closedGrip : 0;
         }
       }
       scene.updateWorldMatrix(true,true);

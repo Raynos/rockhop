@@ -3,7 +3,8 @@ from pathlib import Path
 import argparse,hashlib,json
 import numpy as np
 from scipy.spatial.transform import Rotation
-p=argparse.ArgumentParser();p.add_argument('--fixture',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--fixture',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
+p.add_argument('--baseline',type=Path);a=p.parse_args()
 assert not a.out.exists()
 f=json.loads(a.fixture.read_text());P=np.asarray(f['referenceCentresWorld']);names=f['jointNames'];rows=[]
 assert len(names)==19 and len(set(names))==19
@@ -12,6 +13,10 @@ for family in f['families']:
  D=np.asarray([s['deformationWorldColumnMajor']for s in samples]).reshape(-1,19,4,4).transpose(0,1,3,2)
  assert np.isfinite(D).all() and np.allclose(D[:, :, 3, :],[0,0,0,1])
  assert np.allclose(D[0],np.eye(4))and np.allclose(D[-1],np.eye(4))
+ if '.' in family:
+  side=family.rsplit('.',1)[1]
+  inactive=[i for i,n in enumerate(names)if n not in [k+'.'+side for k in ['shoulder','upperArm','forearm','hand']]]
+  assert np.array_equal(D[:,inactive],np.broadcast_to(np.eye(4),D[:,inactive].shape)), 'Unilateral control drives an inactive bone'
  rot=D[:,:,:3,:3];assert np.allclose(np.swapaxes(rot,-1,-2)@rot,np.eye(3),atol=1e-8)
  Q=np.einsum('tnij,nj->tni',D,np.c_[P,np.ones(19)])[:,:,:3]
  limb_errors=[]
@@ -23,5 +28,16 @@ for family in f['families']:
  relative=np.swapaxes(rot[:-1],-1,-2)@rot[1:]
  degrees=np.degrees(Rotation.from_matrix(relative.reshape(-1,3,3)).magnitude()).reshape(-1,19)
  rows.append({'family':family,'frames':len(samples),'maximumAdjacentBoneRotationDegrees':float(degrees.max()),'maximumAdjacentJointMotionM':float(np.linalg.norm(np.diff(Q,axis=0),axis=-1).max()),'maximumLimbLengthErrorM':max(limb_errors),'firstStepMaximumRotationDegrees':float(degrees[0].max()),'lastStepMaximumRotationDegrees':float(degrees[-1].max())})
-result={'fixtureSHA256':hashlib.sha256(a.fixture.read_bytes()).hexdigest(),'families':rows,'checks':['19 unique declared bones','proper rigid matrices','exact neutral endpoints','fixed physical limb lengths'],'limits':['Adjacent frame numbers do not establish visually convincing transitions.','Bilateral fixtures only; unilateral and unseen halfsteps remain unmeasured.','No contact, collision, textures, rendering, anatomical or gameplay acceptance.']}
+baseline=None
+if a.baseline:
+ old=json.loads(a.baseline.read_text());assert f['fps']==2*old['fps']
+ compared=0
+ for family in old['families']:
+  before=[s for s in old['frames']if s['family']==family];after=[s for s in f['frames']if s['family']==family][::2]
+  assert len(before)==len(after)
+  for x,y in zip(before,after):
+   assert x['deformationWorldColumnMajor']==y['deformationWorldColumnMajor']and x['closedGrip']==y['closedGrip']and x['timeSeconds']==y['timeSeconds']
+   compared+=1
+ baseline={'sha256':hashlib.sha256(a.baseline.read_bytes()).hexdigest(),'exactPreservedSamples':compared,'newBilateralHalfsteps':len(old['families'])*old['fps']*old['secondsPerFamily']}
+result={'fixtureSHA256':hashlib.sha256(a.fixture.read_bytes()).hexdigest(),'families':rows,'baseline':baseline,'checks':['19 unique declared bones','proper rigid matrices','exact neutral endpoints','fixed physical limb lengths','inactive bones exactly neutral in unilateral controls'],'limits':['Adjacent frame numbers do not establish visually convincing transitions.','New analytic halfsteps and unilateral controls are CPU probes, not rendered appearance acceptance.','No contact, collision, textures, rendering, anatomical or gameplay acceptance.']}
 a.out.parent.mkdir(parents=True,exist_ok=True);a.out.write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(rows))

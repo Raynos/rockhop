@@ -7,7 +7,9 @@ REPO=Path(__file__).resolve().parents[3]
 OWNER=REPO/'assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3'
 MOTION=OWNER/'hoodie-repair02/rig-lane/mechanical-suite/motion.py'
 BASE=OWNER/'hoodie-repair02/scripts/base.py'
-parser=argparse.ArgumentParser();parser.add_argument('--out',type=Path,required=True);args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--out',type=Path,required=True)
+parser.add_argument('--fps',type=int,default=24);parser.add_argument('--asymmetric',action='store_true');args=parser.parse_args()
+assert args.fps in [24,48], 'Only baseline24fps and analytic48fps halfstep fixtures are defined'
 assert not args.out.exists(), 'Freeze fixtures; never overwrite a reviewed sequence'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 inputs=[MOTION,MOTION.parent/'frozen-provenance.json',BASE,OWNER/'experiments/C19-bind.npz',OWNER/'deliverables/C19.glb']
@@ -15,7 +17,7 @@ provenance={str(p):sha(p) for p in inputs}
 sys.path.insert(0,str(MOTION.parent));import motion
 P,IND=motion.P,motion.IND
 assert len(P)==19
-names=list(IND);FPS=24;DURATION=4
+names=list(IND);FPS=args.fps;DURATION=4
 primary={'horizontal','overhead','forward'}
 secondary={'elbow','forearm_twist','wrist_flex','wrist_deviation','grip'}
 def smooth(t):return t*t*(3-2*t)
@@ -44,25 +46,33 @@ def lower(kind,a):
  D=np.repeat(np.eye(4)[None],19,axis=0);D[:,:3,:3]=rotations;D[:,:3,3]=Q-np.einsum('nij,nj->ni',rotations,P)
  return D,errors
 families=['neutral','horizontal','overhead','forward','elbow','forearm_twist','wrist_flex','wrist_deviation','grip','squat','sit','lean']
+if args.asymmetric:
+ families += [kind+'.'+side for kind in families if kind in primary|secondary for side in ['L','R']]
 rows=[]
 for family in families:
+ kind,side=family.rsplit('.',1) if '.'in family else (family,None)
  for k in range(FPS*DURATION+1):
   t=k/(FPS*DURATION);grip=0.;diagnostic={}
-  if family=='neutral':D=np.repeat(np.eye(4)[None],19,axis=0)
-  elif family in primary:D,diagnostic=motion.arm_pose(family,pulse(t),'girdle','legacy')
-  elif family in secondary:
+  if kind=='neutral':D=np.repeat(np.eye(4)[None],19,axis=0)
+  elif kind in primary:D,diagnostic=motion.arm_pose(kind,pulse(t),'girdle','legacy')
+  elif kind in secondary:
    if t<.25:D,diagnostic=motion.arm_pose('forward',.7*smooth(t/.25),'girdle','legacy')
    elif t>.75:D,diagnostic=motion.arm_pose('forward',.7*(1-smooth((t-.75)/.25)),'girdle','legacy')
    else:
     a=pulse((t-.25)/.5)
-    D,diagnostic=motion.arm_pose('forward' if family=='grip' else family,.7 if family=='grip' else a,'girdle','legacy')
-    grip=a if family=='grip' else 0.
-  else:D,diagnostic=lower(family,pulse(t) if family!='lean' else np.sin(2*np.pi*t)**3)
+    D,diagnostic=motion.arm_pose('forward' if kind=='grip' else kind,.7 if kind=='grip' else a,'girdle','legacy')
+    grip=a if kind=='grip' else 0.
+  else:D,diagnostic=lower(kind,pulse(t) if kind!='lean' else np.sin(2*np.pi*t)**3)
+  if side:
+   active=[IND[name+'.'+side] for name in ['shoulder','upperArm','forearm','hand']]
+   for j in range(19):
+    if j not in active:D[j]=np.eye(4)
+   diagnostic={**diagnostic,'activeSide':side,'sides':[r for r in diagnostic.get('sides',[]) if r['side']==side]}
   if k in [0,FPS*DURATION]:
    # Exact neutral at the sequence endpoints; no accumulated drift.
    D=np.repeat(np.eye(4)[None],19,axis=0);grip=0.
   assert np.isfinite(D).all() and np.allclose(np.linalg.det(D[:,:3,:3]),1,atol=1e-8)
-  rows.append({'family':family,'frame':k,'timeSeconds':k/FPS,'closedGrip':grip,'deformationWorldColumnMajor':D.transpose(0,2,1).reshape(19,16).tolist(),'controlDiagnostic':diagnostic})
+  rows.append({'family':family,'frame':k,'timeSeconds':k/FPS,'closedGrip':grip,'gripSide':side,'deformationWorldColumnMajor':D.transpose(0,2,1).reshape(19,16).tolist(),'controlDiagnostic':diagnostic})
 assert all(sha(p)==v for p,v in [(Path(p),v) for p,v in provenance.items()]),'Owner inputs changed during snapshot; do not freeze mixed controls'
 args.out.parent.mkdir(parents=True,exist_ok=True)
 manifest={'schemaVersion':1,'kind':'Continuous authored basic-pose stress fixture; not gameplay or accepted anatomy',
