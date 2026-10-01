@@ -1524,3 +1524,18 @@ CanonicalGPUbatch209.03s,peak36.45GB anonymous; fullframes privately retained.
 Limits: Regional appearance rejection, no fullbody/face grade, Garage,
 standing-transition, support, device or production pass. Retain fresh rig
 architecture; missing fresh-bind/original-weight causal control next.
+
+## Round145 — DQ cannot rescue this garment field
+
+Finding: A true runtime skin-law feasibility probe worsens all four hip
+strain/normal-opposition scopes and both severe arm scopes. Preserve
+fresh rig architecture but reject whole DQ before renderer/shader work.
+
+Validation: Actual34rigid matrices, original22240body positions/weights;
+rigid precondition<=2e-15, single-bone matrix parity<=1.7e-15m. Hip flags
+339/330/316/319 become472/473/560/550; severe armmaxstretch becomes
+25.97/27.24x from18.18/19.29x. CPU only, no GPU workload.
+
+Limits: Normal-opposition/strain diagnostics, no collision/visual/contact
+or production pass. Not Blender PreserveVolume export; no shader written.
+Next isolate fresh binds from scalar weight assignment before reconstruction.

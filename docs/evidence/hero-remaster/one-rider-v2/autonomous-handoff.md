@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round144, 2026-10-01
+## Current evidence — round145, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -873,3 +873,15 @@ final report explicitly failed collision and saddle support. Gallery129
 contains earlier assets, not34; publish a clearly labeled new comparison.
 Next isolate fresh binds from fresh weight assignment before targeted
 garment reconstruction. Original11/approved join/eye22progress preserved.
+
+## Runtime skin-law probe — round145
+
+True dual-quaternion CPU skinning over actual fresh34rigid matrices does
+not rescue the cloth. Hip flags339/330/316/319 become472/473/560/550;
+worst hipstretch2.47/2.47/2.68/2.66x becomes3.02/3.01/3.74/3.66x. Severe
+armstretch18.18/19.29x becomes25.97/27.24x; elbow remains inverted.
+Rigid input errors<=2e-15; singlebone matrix parity<=1.7e-15m.
+Reject beforeGPU/shader work. No DQexport/sweep or skin-law promotion.
+Next missing factorial control: fresh binds/axes with preserved original
+scalar skin weights, then semantic garment/targeted topology if necessary.
+Original11/22join progress and fresh34rig architecture retained.

@@ -1,0 +1,266 @@
+{
+  "status": "Read-only CPU actual skin-law feasibility, no shader/asset export",
+  "sourceSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "fieldSHA256": "c665e6029853c39eef9c814f2ed49f804c7f275dd71ef475f890487a2ee764b3",
+  "law": "Rigid joint matrices to dual quaternions; highest-weight reference hemisphere, normalized dual blend with orthogonality projection; rotation plus translation for position, quaternion rotation for normal. No bone/pose/geometry/weight changes.",
+  "sources": [
+    "https://users.cs.utah.edu/~ladislav/dq/index.html",
+    "https://users.cs.utah.edu/~ladislav/kavan07skinning/kavan07skinning.pdf"
+  ],
+  "rows": [
+    {
+      "sample": 114,
+      "rigidMatrixError": 4.440892098500626e-16,
+      "minimumBlendRealNorm": 0.9034169165122943,
+      "singleBoneCount": 8354,
+      "singleBoneParityErrorM": 7.364386412590295e-16,
+      "maximumPositionDifferenceM": 0.06444123120648465,
+      "scopes": {
+        "armGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 973,
+            "maximumEdgeStretch": 8.563953646084036,
+            "edgeStretchP90P99": [
+              2.2934208619931904,
+              5.368072603964709
+            ],
+            "elbow3789": {
+              "normalDot": -0.9713626051574761,
+              "maximumEdgeStretch": 2.3528551677416414
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 954,
+            "maximumEdgeStretch": 10.277315181351925,
+            "edgeStretchP90P99": [
+              2.4257514138810943,
+              6.26548036542795
+            ],
+            "elbow3789": {
+              "normalDot": -0.9051426200111372,
+              "maximumEdgeStretch": 2.1128273005688185
+            }
+          }
+        },
+        "hipGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 339,
+            "maximumEdgeStretch": 2.4651222319150614,
+            "edgeStretchP90P99": [
+              1.445976839210165,
+              2.2677702621385665
+            ],
+            "elbow3789": {
+              "normalDot": -0.9713626051574761,
+              "maximumEdgeStretch": 2.3528551677416414
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 472,
+            "maximumEdgeStretch": 3.0180214909415675,
+            "edgeStretchP90P99": [
+              1.563279288137886,
+              2.701640221322223
+            ],
+            "elbow3789": {
+              "normalDot": -0.9051426200111372,
+              "maximumEdgeStretch": 2.1128273005688185
+            }
+          }
+        }
+      }
+    },
+    {
+      "sample": 186,
+      "rigidMatrixError": 1.7763568394002505e-15,
+      "minimumBlendRealNorm": 0.9183015270430313,
+      "singleBoneCount": 8354,
+      "singleBoneParityErrorM": 9.192921513844874e-16,
+      "maximumPositionDifferenceM": 0.07531347750377487,
+      "scopes": {
+        "armGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 586,
+            "maximumEdgeStretch": 9.393669537010418,
+            "edgeStretchP90P99": [
+              2.604515166980153,
+              6.3901551976164
+            ],
+            "elbow3789": {
+              "normalDot": -0.8749548140092159,
+              "maximumEdgeStretch": 2.4296700212061846
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 567,
+            "maximumEdgeStretch": 10.935737780863828,
+            "edgeStretchP90P99": [
+              2.705426525269267,
+              7.273661531105958
+            ],
+            "elbow3789": {
+              "normalDot": -0.9990111284933568,
+              "maximumEdgeStretch": 2.586365979380385
+            }
+          }
+        },
+        "hipGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 330,
+            "maximumEdgeStretch": 2.4703949660722744,
+            "edgeStretchP90P99": [
+              1.4479927191074817,
+              2.277299870719771
+            ],
+            "elbow3789": {
+              "normalDot": -0.8749548140092159,
+              "maximumEdgeStretch": 2.4296700212061846
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 473,
+            "maximumEdgeStretch": 3.013464597105484,
+            "edgeStretchP90P99": [
+              1.5569657662314307,
+              2.703913912455708
+            ],
+            "elbow3789": {
+              "normalDot": -0.9990111284933568,
+              "maximumEdgeStretch": 2.586365979380385
+            }
+          }
+        }
+      }
+    },
+    {
+      "sample": 304,
+      "rigidMatrixError": 1.3322676295501878e-15,
+      "minimumBlendRealNorm": 0.8194445349527875,
+      "singleBoneCount": 8354,
+      "singleBoneParityErrorM": 1.025079205553247e-15,
+      "maximumPositionDifferenceM": 0.21336424303746934,
+      "scopes": {
+        "armGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 729,
+            "maximumEdgeStretch": 18.17531339552751,
+            "edgeStretchP90P99": [
+              4.848094101472373,
+              11.709380154725842
+            ],
+            "elbow3789": {
+              "normalDot": -0.5419566646822971,
+              "maximumEdgeStretch": 5.1561859943891495
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 803,
+            "maximumEdgeStretch": 25.96815513509733,
+            "edgeStretchP90P99": [
+              5.361150869842328,
+              15.838213186408511
+            ],
+            "elbow3789": {
+              "normalDot": -0.9836655349885404,
+              "maximumEdgeStretch": 5.379211280273965
+            }
+          }
+        },
+        "hipGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 316,
+            "maximumEdgeStretch": 2.678338751362851,
+            "edgeStretchP90P99": [
+              1.6195718627526776,
+              2.4589626751957554
+            ],
+            "elbow3789": {
+              "normalDot": -0.5419566646822971,
+              "maximumEdgeStretch": 5.1561859943891495
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 560,
+            "maximumEdgeStretch": 3.7412422543427315,
+            "edgeStretchP90P99": [
+              1.8000912927174846,
+              3.3254963114035374
+            ],
+            "elbow3789": {
+              "normalDot": -0.9836655349885404,
+              "maximumEdgeStretch": 5.379211280273965
+            }
+          }
+        }
+      }
+    },
+    {
+      "sample": 426,
+      "rigidMatrixError": 1.9984014443252818e-15,
+      "minimumBlendRealNorm": 0.825008648822759,
+      "singleBoneCount": 8354,
+      "singleBoneParityErrorM": 1.6506985446528573e-15,
+      "maximumPositionDifferenceM": 0.22623548187689052,
+      "scopes": {
+        "armGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 666,
+            "maximumEdgeStretch": 19.286803463468658,
+            "edgeStretchP90P99": [
+              5.295949930315971,
+              12.85629299354962
+            ],
+            "elbow3789": {
+              "normalDot": -0.4843942194927259,
+              "maximumEdgeStretch": 5.517271905265155
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 759,
+            "maximumEdgeStretch": 27.24172293580277,
+            "edgeStretchP90P99": [
+              5.996964430443317,
+              17.241256978000475
+            ],
+            "elbow3789": {
+              "normalDot": -0.9589691747163529,
+              "maximumEdgeStretch": 5.656753902442364
+            }
+          }
+        },
+        "hipGeometry": {
+          "fresh34LBS": {
+            "normalOppositionFlags": 319,
+            "maximumEdgeStretch": 2.6603002812493495,
+            "edgeStretchP90P99": [
+              1.5945118982417068,
+              2.444566433615291
+            ],
+            "elbow3789": {
+              "normalDot": -0.4843942194927259,
+              "maximumEdgeStretch": 5.517271905265155
+            }
+          },
+          "DQProbe": {
+            "normalOppositionFlags": 550,
+            "maximumEdgeStretch": 3.658141375498538,
+            "edgeStretchP90P99": [
+              1.7615570716423818,
+              3.267241620103631
+            ],
+            "elbow3789": {
+              "normalDot": -0.9589691747163529,
+              "maximumEdgeStretch": 5.656753902442364
+            }
+          }
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Whole shader/CPU contact/normal/morph/shadow/depth parity and all480frame continuity unproven.",
+    "Input jointTransforms already include original bind/mesh/bike-frame affines; actual shader must preserve those spaces correctly.",
+    "No Blender DQexport claim; this probe changes the evaluated skin law itself.",
+    "Normal opposition is diagnostic, not intersection or visual acceptance; DQcan bulge and cannot repair poor garment topology."
+  ]
+}

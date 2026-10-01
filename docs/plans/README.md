@@ -87,6 +87,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round143 freezes exact34fre
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round144 actual mappedC19/body34 has fuller hips but severe torso/underarm folds: wholeappearance rejected, fresh skeleton/contact architecture retained.4x480fixed-camera clips/960PBRgray parity andcandidate ship144 pass. Gallery129shows older assets; labeled34comparison next. Original11/join/22protected; nextship147.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round145 trueDQ CPU probe worsens allhip scopes and severe armstrain; reject beforeGPU/shader. Fresh34architecture/regionalhip progress retained, wholeappearance rejected144. Gallery34update next; missing fresh-bind/original-weight control then semantic reconstruction. Shipnext147.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
