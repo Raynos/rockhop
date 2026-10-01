@@ -273,3 +273,16 @@ silent low/high baseline retains byte-identical40.083333333333336s clear,
 Limits: No accepted collar/UV/texture/neck join. Specific alternative is
 native Blender garment-aware sculpt and verified face-corner materials,
 not a third ring correction. Public assets and physics remain unchanged.
+
+Finding: Reading Basis skipped active male/age anatomy. Correct native
+evaluated young-adult male source yields a clean natural head; parent
+approves geometry for texture/join only, with no manual warps or snaps.
+
+Validation: Parent inspected actual front/profile gray. Native facial
+loops/UVs retained, one216edge neck boundary,0nonmanifold/zero-area
+triangles; actual IPD65.93mm at.42. Sources unchanged, first API setup
+failure preserved and corrected before construction.
+
+Limits: Not exact Pixal likeness or final appearance. Jagged neck base
+is unjoined; no texture/detail, complete character, rig or contact pass.
+Prior manual failures stay stopped and original deadline remains.

@@ -1,0 +1,148 @@
+{
+  "status": "UNACCEPTED fresh native evaluated male alternative; parent gray judgment required",
+  "correctionOf": "v4/v5 extracted raw Basis rather than active male/age macro mix. Manual fit failures remain2 and STOPPED.",
+  "macroPreset": {
+    "gender": 1,
+    "age": 0.5,
+    "muscle": 0.6,
+    "weight": 0.5,
+    "proportions": 0.5,
+    "height": 0.5,
+    "cupsize": 0.5,
+    "firmness": 0.5,
+    "race": {
+      "asian": 0.25,
+      "caucasian": 0.35,
+      "african": 0.4
+    }
+  },
+  "calculatedTargetStack": [
+    [
+      "macrodetails/asian-male-young",
+      0.24755
+    ],
+    [
+      "macrodetails/caucasian-male-young",
+      0.34657
+    ],
+    [
+      "macrodetails/african-male-young",
+      0.39608
+    ],
+    [
+      "macrodetails/universal-male-young-averagemuscle-averageweight",
+      0.7960217799999999
+    ],
+    [
+      "macrodetails/universal-male-young-maxmuscle-averageweight",
+      0.19417821999999998
+    ]
+  ],
+  "actualAppliedShapeKeysBeforeBake": [
+    {
+      "name": "$md-$as-$ma-$yn",
+      "value": 0.24754999577999115
+    },
+    {
+      "name": "$md-$ca-$ma-$yn",
+      "value": 0.3465699851512909
+    },
+    {
+      "name": "$md-$af-$ma-$yn",
+      "value": 0.39608001708984375
+    },
+    {
+      "name": "$md-universal-$ma-$yn-$av$mu-$av$wg",
+      "value": 0.7960217595100403
+    },
+    {
+      "name": "$md-universal-$ma-$yn-max$mu-$av$wg",
+      "value": 0.19417822360992432
+    }
+  ],
+  "nativeBake": "TargetService.bake_targets on NEW owned instance before anatomy extraction",
+  "originalNativeEyeCentersMeters": [
+    [
+      0.029360877349972725,
+      -0.12736941780894995,
+      1.6353520452976227
+    ],
+    [
+      -0.029360877349972725,
+      -0.12736941780894995,
+      1.6353520452976227
+    ]
+  ],
+  "originalNativeIPDMeters": 0.05872175469994545,
+  "adapter": {
+    "uniformScale": 2.6723315882136913,
+    "verticalTranslation": -4.259202928498705,
+    "depthTranslation": -0.17137331858324442,
+    "targetIPDNative": 0.156924,
+    "eyeYNative": 0.111,
+    "eyeZNative": 0.169
+  },
+  "neckSourceCut": {
+    "jointNeckMeters": [
+      0.0,
+      -0.012429293245077133,
+      1.496929943561554
+    ],
+    "cutZSourceMeters": 1.461929943561554,
+    "method": "temporary source-neck extraction; no accepted body join"
+  },
+  "UVLayersBeforeSubdivision": {
+    "UNACCEPTED native evaluated young-adult male head": [
+      "UVMap"
+    ],
+    "NEW native CC0 eye surfaces fitted to baked male source": [
+      "UVMap"
+    ]
+  },
+  "UVLayersAfterSubdivision": {
+    "UNACCEPTED native evaluated young-adult male head": [
+      "UVMap"
+    ],
+    "NEW native CC0 eye surfaces fitted to baked male source": [
+      "UVMap"
+    ]
+  },
+  "skinTopology": {
+    "vertices": 69549,
+    "triangles": 138880
+  },
+  "sources": {
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/macro.json": "5b6dfabced7b7912df45d3c39f6ef34bca55a72cb6de8ee6c8d66c371de4447c",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.mhclo": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/asian-male-young.target.gz": "0928ed8b9f08f60afb9884cf9e9f33a939ed3a85d7f136de9ccc88a76981d6d7",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/caucasian-male-young.target.gz": "ffe69537e53148edff2776204ba48cf3bf1f3cbc72966592c8a562ab80b07333",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/african-male-young.target.gz": "05ed84d6df36e788cdfa8da0be15376850524b960cf2f17f3e592b9cf7d21c85",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/universal-male-young-averagemuscle-averageweight.target.gz": "e814651195c53971503d9823d6841216718a561951ef064f81d132297f4fa494",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/universal-male-young-maxmuscle-averageweight.target.gz": "833caafc302bd9306de494f32ee1bc51d3a2e6641183329b031ac06ef0f4277e"
+  },
+  "sourcesAfter": {
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/macro.json": "5b6dfabced7b7912df45d3c39f6ef34bca55a72cb6de8ee6c8d66c371de4447c",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.mhclo": "b183cfe37120ab726f9b3f2ea6cd3a64c44ce7b4bd91a77c841cf70c04f83a0d",
+    "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/asian-male-young.target.gz": "0928ed8b9f08f60afb9884cf9e9f33a939ed3a85d7f136de9ccc88a76981d6d7",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/caucasian-male-young.target.gz": "ffe69537e53148edff2776204ba48cf3bf1f3cbc72966592c8a562ab80b07333",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/african-male-young.target.gz": "05ed84d6df36e788cdfa8da0be15376850524b960cf2f17f3e592b9cf7d21c85",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/universal-male-young-averagemuscle-averageweight.target.gz": "e814651195c53971503d9823d6841216718a561951ef064f81d132297f4fa494",
+    "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/targets/macrodetails/universal-male-young-maxmuscle-averageweight.target.gz": "833caafc302bd9306de494f32ee1bc51d3a2e6641183329b031ac06ef0f4277e"
+  },
+  "freshSourceSHA256": "d59a18033a261322e4aee9e1d1b7d5072eceff4c67c9e4aa87846bf128da9bb7",
+  "scriptSHA256": "1783f92025ccd1db62dae3c575cc40b958a18d8a50c06b5f56ee437234b36c0b",
+  "wallSeconds": 0.595150999724865,
+  "customLandmarkDisplacements": 0,
+  "denseSnaps": 0,
+  "identityTarget": "Approved buzz reference and retained NEW Pixal dense face/detail donor remain target; this native face is not claimed identical.",
+  "limits": [
+    "Neutral face geometry has no accepted likeness, skin texture or buzz material.",
+    "Native UV layers retained; no UV layout quality or bake acceptance claimed.",
+    "Neck base is temporary and unjoined; no body fit, neck movement, rig, or gameplay test.",
+    "No historical donor, manual face warp, dense snap, GPU, AI sampling or texture bake."
+  ]
+}
