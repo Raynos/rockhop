@@ -570,3 +570,12 @@ byteidentically40.083333333s, crash103ticks/restart1and2ms, noerrors.
 Limits: Noactualfreshfaceappearancejudgmentyet; no newrig/gameplaypass.
 Userdirection: Ask240 preservesbest-sofarbody/clothingprogress and requires
 a WHITEfinishedrider matchingapprovedbuzzreference; nofaceacceptanceimplied.
+
+## Round49 — fresh face identity improves while defects remain
+
+Finding: ActualH21WHITEbuzz face is closer to approvedreference; X180display
+chosen, frontaldiagnostic6/10 with blackcheekdefects and soft eye details.
+Validation: ParentviewedfouractualpaintedorientationPNGs; CPUexit0, original
+GLBgeometry/PBR/UVhash unchanged2cd1859e. No recoloring/cleanupperformed.
+Limits: Frontalstaticdiagnostic only; fullface/body/neckmotion stillunaccepted;
+raw-versus-reducedsurface inspection precedes blaming or repairing defects.

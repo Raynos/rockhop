@@ -174,3 +174,9 @@ Ask240 HUMAN: currentnativeassembly is bestyet/feelsprogress; finishedrider must
 be WHITE. Preserve improvedbody/clothing and best-sofarcomparison; approved
 whitebuzzreference is freshH21input. This is directionfeedback, notclosedneck
 acceptance or rig/motionproof. No skinidentity/colorpromotion performedyet.
+
+Round49: Actualfourpaintedwitnesses succeedexit0, X180uprightfront. FreshWHITE
+H21face matchesapprovedtarget/ask240 withoutrecoloring; parentfrontaldiagnostic
+6/10, below7,target8. Blackcheekdefects/soft eyes require actualraw/reducedgray
+diagnosis, no reducer/generatorblameyet. Preservebest-sofarbody/clothingcontrol
+and freshsource. Next matched4viewPBRgray; no geometryfixuntilsourceinspection.
