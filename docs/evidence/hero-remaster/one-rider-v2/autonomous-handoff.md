@@ -16,7 +16,14 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round162, 2026-10-01
+## Current evidence — round163, 2026-10-01
+
+- Round163 literal cuff127edges/65+62vertices:0surface/alias/midpoint gaps
+  across5,404stock Three.js samples,0regional collapse,1.167xmaxstretch.
+  Parent independently recomputes all aliases and incident geometry,20hashes.
+ 46rest folded incident pairs persist; rendered joins/thickness/collisions/
+  visible grip unmeasured. No source change or acceptance. Task3 latest
+  weights still report14.22mm saddle hover, pending independent inspection.
 
 - Round162 publishes version6 at the existing review website, structural-gate
   section.29movies locally play at390/1200px, older23preserved. Two new riding

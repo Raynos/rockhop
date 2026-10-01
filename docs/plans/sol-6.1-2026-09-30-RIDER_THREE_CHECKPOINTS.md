@@ -1648,3 +1648,21 @@ playback remains unmeasured. Source/encoding/publication receipts retained in
 gallery162. Construction/rig/deformation gates remain open, cosmetics paused.
 Retained34ship162passes exactfinish/hash,crash103,restart2/2ms,0errors;
 canonical lock honored. Next mandatory165. Task3 ownership remains separate.
+
+## Actual glove/cuff surface continuity — round163
+
+The integration-owned specialist audits literal cuff surfaces, not hand sockets.
+Both65/62vertex loops and127oppositely-wound shared edges remain exact0gap in
+all5,404stock Three.js unilateral/halfstep samples. The immediate315cloth/
+259glove triangles have0quarter-area collapses; regional maxstretch1.167x.
+Independent raw morph/affine parity<=1.85e-15m; parent independently verifies
+20hash receipts,127edge incidence/directions and all5,404surface alias samples.
+
+However46incident-edge pairs fold to the same side at rest. Rendered continuity,
+thickness, collisions, normals/materials and actual visible grip contact remain
+unmeasured. This protects a literal join contract for future repairs; it does
+not clear hands/cuffs or the character. Do not move sockets to disguise folds.
+No construction/weights/source change or GPU workload. Task3 construction
+remains separate; its latest fresh weights still report14.22mm saddle gap,
+pending parent audit. Prior structural failures and cosmetics pause retained.
+Next moving unilateral/halfstep gate and task3 candidate inspection; ship165.

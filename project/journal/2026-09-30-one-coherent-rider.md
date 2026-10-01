@@ -1797,3 +1797,21 @@ Limits: hosted media playback not independently measured. Reduced riding copies
 are unsuitable for fine appearance grading. New geometry/contact/Garage/mobile
 acceptance remains open; cosmetic work paused. Task3 construction ownership
 preserved. No character repair attempt, threshold relaxation or player promotion.
+
+## Round163 — actual cuff boundary contract
+
+Finding: literal cuff edges already coincide through the controlled motion
+fixture. A socket-only fix cannot explain or solve the remaining visible folds.
+127oppositely-wound edges have0surface/alias/midpoint gaps in5,404samples;
+immediate315cloth/259glove triangles do not collapse.46incident rest pairs fold.
+
+Validation: actual Three.js vertices and independent affine parity<=1.85e-15m.
+Parent verifies20frozen hashes, independently recomputes edge geometry and
+all5,404morphed/normalized-weight alias samples with exact0gap. CPU2threads;
+no GPU/model/source changes. Specialist owns recipes only, parent judgment.
+
+Limits: no rendered continuity, shader/normal-map acceptance, thickness,
+collision or hand/grip contact pass. A narrow intact boundary does not accept
+arm anatomy or sleeve/body deformation. Broader cloth/hips/support failures
+remain. Cosmetic work paused; task3 remains construction owner. No new art
+repair attempt. Next moving expanded gate/candidate inspection; ship165.

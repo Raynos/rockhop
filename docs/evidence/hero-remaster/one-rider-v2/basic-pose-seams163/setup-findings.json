@@ -1,0 +1,15 @@
+{
+  "kind": "Two audit setup corrections; no model/art repair or changed pass thresholds",
+  "findings": [
+    {
+      "issue": "Sparse source grip accessor has no basebufferView",
+      "fix": "Decode zero-initialized+indexed sparse values; exact expanded morph buffers compared against actual GLTFLoader.",
+      "stage": "Before staticinventory existed"
+    },
+    {
+      "issue": "GLTFLoader normalizes Float32weight vectors; strict rawfloat equality failed by7.28e-12 in first witness.",
+      "fix": "Read installed GLTFLoader/SkinnedMesh normalization code; predict Float32(raw*inverseManhattan) independently and verify every lane. Preserve rawsourcefields and report normalizationmax5.96e-8.",
+      "stage": "Before any5404sample actualseam report existed"
+    }
+  ]
+}
