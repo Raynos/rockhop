@@ -421,3 +421,14 @@ HR25 resolved and removed; broad release obligations stay separate.
 Limits: Policy update is not rider acceptance. Installed Blender binary may
 be shared; isolated environments must disclose exact dependency/version data.
 GPU jobs still serialize under canonical lock; no scheduler created.
+
+Finding: Isolated manual-panel setup fails on a stale BMesh lookup table
+after the preserved head mask. One explicit lookup refresh addresses the
+API error without changing source selection or anatomy.
+
+Validation: Actual CPU2-thread process exits1 at01:34:46UTC with the native
+IndexError; recipe, isolated environment command and exact log hash frozen.
+Historical neck6 failures retained; laneA setup1 makes family total7.
+
+Limits: No new geometry/material output or appearance approval yet.
+Parallel volumetric/pattern lanes continue separately; no GPU workload.

@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-manual-panel/setup_probe.py"
+  ],
+  "startedUTC": "2026-10-01T01:34:44.799668+00:00",
+  "completedUTC": "2026-10-01T01:34:46.908577+00:00",
+  "exitCode": 1,
+  "deadlineUTC": "2026-10-01T02:17:00+00:00",
+  "environmentOverrides": {
+    "BLENDER_USER_CONFIG": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-manual-panel/environment/config",
+    "BLENDER_USER_SCRIPTS": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-manual-panel/environment/scripts",
+    "BLENDER_USER_EXTENSIONS": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-manual-panel/environment/extensions",
+    "TMPDIR": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-manual-panel/environment/tmp",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2"
+  },
+  "launcherPythonShared": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+  "launcherPythonVersion": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "scriptSHA256": "1c9acc1ff1329c27d2db754d7b7872541c2486c52a40cf819e2786de6f35dfd1",
+  "log": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-manual-panel/setup.log",
+  "logSHA256": "c920fe21f352d9f64c1a11d2b7286d88c4c9d8d581f92b0e3eec74148882ae3c",
+  "GPUWorkload": false
+}

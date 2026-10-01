@@ -1,0 +1,11 @@
+00:01.374  blend            | Read blend: "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-manual-panel/setup_probe.py", line 30, in <module>
+    co,idx,distance=kt.find(target);vert=bm.verts[idx];report['landmarks'].append({'label':name,'physicalTargetWorldM':target,'bodySourceVertexIndexAfterFixedMask':idx,'actualWorldM':list(co),'distanceFromTargetM':distance,'incidentMaterialIndices':sorted(set(face.material_index for face in vert.link_faces))})
+                                         ~~~~~~~~^^^^^
+IndexError: BMElemSeq[index]: outdated internal index table, run ensure_lookup_table() first
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-manual-panel/setup_probe.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

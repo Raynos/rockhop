@@ -16,14 +16,16 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   movement and actual2048glove PBR maps; coarse source cuffs remain.
 - Neck join remains unresolved: source-mask cuts2, elliptical loft2 and native
   collar trials2 are six failed neck-join attempts across three mechanisms.
-  All six remain in the historical ledger. No counter is reset by this policy.
+  All six remain in the historical ledger. LaneA adds one setup failure from
+  stale BMesh lookup indices; total neck-family failures7. The concrete native
+  lookup refresh is next. No counter is reset by this policy.
 - Actual head/body masters remain ignored under LocalAI runtime; exact source
   hashes and evidence are in head-cleanup/mpfb-v8-palette, glove-cleanup/
   glove-material/isolated-correction01 and neck-native/trial02.
-- Last silent production baseline round30 passes low/high exact40.083333333s
-  clear, crash and1–2ms restart. This tests existing production, not new rider.
+- Last silent production baseline round33 passes low/high exact40.083333333s
+  clear, crash and2ms restart. This tests existing production, not new rider.
 
-## Next parallel Blender lanes
+## Active parallel Blender lanes — first batch ends02:17UTC
 
 A: explicit seam-landmark local quad-panel retopology using native bpy/bmesh,
 keeping the broad source hood and protected native head/UVs. EnvironmentA has
