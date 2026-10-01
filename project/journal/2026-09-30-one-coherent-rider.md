@@ -260,3 +260,16 @@ later dense fit0. Source hashes untouched and topology unchanged.
 
 Limits: No accepted face/likeness, UV, bake, neck join or rig. Native
 preset capability is read-only; original90min feasibility bound remains.
+
+Finding: Second explicit rim still fails soft cloth appearance. Pointed
+side anchors persist and Trimesh export loses the intended separate cloth
+material, preserving UV stripes. Stop elliptical ring loft after two failures.
+
+Validation: Parent reviewed actual PBR front/rear gray and froze8views.
+One105edge opening/0nonmanifold edges; source remains untouched. Fresh
+silent low/high baseline retains byte-identical40.083333333333336s clear,
+0faults and1–2ms one-tick restart,0browser errors.
+
+Limits: No accepted collar/UV/texture/neck join. Specific alternative is
+native Blender garment-aware sculpt and verified face-corner materials,
+not a third ring correction. Public assets and physics remain unchanged.

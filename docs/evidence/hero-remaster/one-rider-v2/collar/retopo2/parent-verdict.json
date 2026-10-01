@@ -1,0 +1,50 @@
+{
+  "status": "REJECTED local rim trial2; explicit elliptical rim technique stopped",
+  "failedFixes": 2,
+  "visibleDefects": [
+    "Source-to-rim transition retains pointed side anchors despite boundary smoothing",
+    "Intended separate plain-cloth preview material did not survive Trimesh multi-material export; native donor UV stripes remain",
+    "Elliptical rim still reads synthetic rather than the source soft folded cloth"
+  ],
+  "geometry": "One105edge open rim and0nonmanifold edges; topology alone is not visual acceptance",
+  "sourceUnchanged": true,
+  "framesVerified": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/pbr/0000.png",
+      "sha256": "ae81c19c446b1c680de53365d93d5c9aa77df6d55e2d209c47a0a00bb33a6766"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/pbr/0001.png",
+      "sha256": "be7981277b4732c381479f87edeb27bfa7ad5feb3e8c578da0d397e41a0a6b7a"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/pbr/0002.png",
+      "sha256": "fa098df683342be0be29dcdc6c26a937f5ee9eb2fc0d4e55efcb16cf85143802"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/pbr/0003.png",
+      "sha256": "facf0d45cdbcfa7e4ce626cba947f29f6bd651803641abd301d776d71c4a8de8"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/gray/0000.png",
+      "sha256": "fe8a681d45462bcabf33806db5c016b34157c8affc164f3e9f7ea826dd2c2114"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/gray/0001.png",
+      "sha256": "ee8853f356fc3925d29f7bb435cc6009b43edc12b9b84522a0be5f48b6f432e6"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/gray/0002.png",
+      "sha256": "b2e361b8cc975f647f0937e8cb358a8ec4e62eacaac63f972d18ddcc507c5b3c"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-retopo2/gray/0003.png",
+      "sha256": "43aa92204a982eee2ebbace537d3ebddc0bd3dd700a910353830ac2740473051"
+    }
+  ],
+  "nextSpecificCorrection": "STOP elliptical ring retopology after two appearance failures. Native Blender face-corner UV/material assignment and wider garment-aware local sculpt/retopology are required; no third ring tweak.",
+  "limits": [
+    "No accepted hood silhouette/texture/skin join",
+    "No deformation/rig/player promotion"
+  ]
+}

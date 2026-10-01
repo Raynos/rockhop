@@ -1,0 +1,24 @@
+{
+  "commands": [
+    [
+      "pnpm",
+      "exec",
+      "tsx",
+      "harness/hero-remaster/build.mts",
+      "--out=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/one-rider-v2-round21-build"
+    ],
+    [
+      "pnpm",
+      "exec",
+      "tsx",
+      "harness/hero-remaster/replay.mts",
+      "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/one-rider-v2-round21-build",
+      "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/head/round21-player-baseline/player-baseline-round-check.json",
+      "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+    ]
+  ],
+  "wallSeconds": 11.064,
+  "anonymousBytesAtLockEntry": 30727143424,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "scope": "Existing production player only, no new rider rig/contact or physical-device claim"
+}

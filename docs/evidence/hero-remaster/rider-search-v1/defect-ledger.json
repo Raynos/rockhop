@@ -885,11 +885,12 @@
     "textureRigContactAccepted": false
   },
   "oneRiderV2ExplicitCollar": {
-    "failedFixes": 1,
+    "failedFixes": 2,
     "appearanceAccepted": false,
-    "evidence": "../one-rider-v2/collar/retopo1/parent-verdict.json",
-    "failure": "Pointed source anchors/thin authored rim and donor-UV stripes",
-    "nextSpecificCorrection": "Smooth ordered arc-length rim/anchor transition and continuous UV cloth preview",
-    "noHeadJoin": true
+    "evidence": "../one-rider-v2/collar/retopo2/parent-verdict.json",
+    "failure": "Pointed side anchors/synthetic elliptical rim persist; multi-material export loses intended cloth preview",
+    "nextSpecificCorrection": "Native Blender garment-aware local sculpt/retopology and face-corner UV/material assignment; no third ring tweak",
+    "noHeadJoin": true,
+    "stoppedTechnique": "Explicit elliptical ring loft over locally cut source collar"
   }
 }
