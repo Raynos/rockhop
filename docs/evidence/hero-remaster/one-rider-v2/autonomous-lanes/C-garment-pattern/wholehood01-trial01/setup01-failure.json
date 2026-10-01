@@ -1,0 +1,29 @@
+{
+  "status": "FAILED NEWdonor01 materialimage lookup setup; no extraction output or receiver change",
+  "actualStartUTC": "2026-10-01 03:00:58 UTC",
+  "originalDeadlineUTC": "2026-10-01 03:30:58 UTC",
+  "freezeUTC": "2026-10-01T03:04:05.141141+00:00",
+  "failureCountNewDonor01": 1,
+  "oldReducedH21_4HoodLineageRetiredFailures": 15,
+  "exception": "StopIteration",
+  "exceptionSourceLine": 8,
+  "cause": "Nameheuristic assumed imported basecolorimage label/name containsBase/base. Actualimported materialname convention differs. Image selection raised beforeclassification, meshconstruction/save or bodyread.",
+  "actualBlenderToolOutputSummary": "22:03:07 imported textured GLB in0.05s; Traceback inspect_wholehood01_mask.py line8; StopIteration. Blender5.2.1quit. exec exited0 although Pythonexception; success determined by missing output/error, notshellcode.",
+  "proposedSpecificCorrection": "FollowPrincipled BSDF Base Color actual socket link upstream to image texture; recordnodesocket/image provenance. No wildcard texture guessing.",
+  "noNextRunBeforeCheckpoint": true,
+  "recipeSHA256": "7d74931e4041902fe7edea207aac27c8f2654d349c0152cfd247fc391cb0e78f",
+  "donorSourceHashesUnchanged": true,
+  "sourceSHA256After": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/working-display2.glb": "783b58fec94aa9657dc44bed14d4767af610bfa29b336f916d5107118a01d5cb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/raw-shape.glb": "42b23ca04f82728299caca26e958996e8ffaeb8fc491d2e77b1983ef4880e0c2",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/raw-shape.npz": "e4580ff1b95af69c0cfe4273f34913950ae284ab32d4d38254cfbd5f55e6055d",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a"
+  },
+  "renderOutputCount": 0,
+  "maskOutputCount": 0,
+  "noGeometryEdited": true,
+  "protectedCurrentBodyHeadBytesUntouched": true,
+  "CPUThreads": 2,
+  "GPU": false
+}

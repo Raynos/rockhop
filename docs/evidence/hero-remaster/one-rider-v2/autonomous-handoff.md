@@ -209,3 +209,9 @@ no majorrearhoodhole visibleinthese3views. ChooseNEWwholehood01 for bounded
 extraction/integration with independentbinding, no oldH21-4rimrepair. Body
 outsidehood protected; face/hairdonor explicitlyrejected. Anewwhitecheeklocal
 classification underway; Btruehoodbagclothdrape alternate assignedCPU.
+
+Round54: NEWdonor01 setup image-nameguess fails beforemask/geometry. Actual
+BSDF BaseColor socket-link lookup correction next; source5hashes unchanged.
+Newdonorfamilysetup1, noappearanceverdict; old15retired. Round54silent
+productionlow/high exact40.083333333s clear, crash103ticks/restart1and2ms,
+zeroerrors. Awhitefacepatch and Bactualclothhoodbag continueCPU inownpaths.

@@ -616,3 +616,12 @@ Validation: Parentactual3x3raw/reduced/PBRboard;316248sourcefaces retained,
 3sourcehashesunchanged, originalwrongdisplay12viewsstillfrozen.
 Limits: No isolatedhoodtopology/coverage orjoinpass; oldface/hairrejected,
 smallrawfloatsnearoldface notadopted. No newrig/neckmotion/playpass.
+
+## Round54 — image names cannot establish material provenance
+
+Finding: NEWdonorhood setup image-nameheuristic raisesStopIteration before
+mask/extraction; replaceguessing with actualBSDF BaseColor socketlinks.
+Validation: Failedrecipe/sourceproof frozen;5sourcehashes intact,no mesh
+change. Freshsilentlow/high productionexactclear/crash/1and2msrestartpasses.
+Limits: Newdonor setupfailure1, nohoodappearancechange/acceptance; old15
+retiredand independentnewface/clothconstruction stillunderway.
