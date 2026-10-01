@@ -1,0 +1,170 @@
+{
+  "status": "PASS read-only append-only material/texture and CPU chart controls; appearance unaccepted",
+  "sourceSHA256": "1f5035eeb5de708d70c889af89e574a0b7be10bcdc73beed7d1e4393fb21dd28",
+  "candidateSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "originalBinaryPrefixExactBytes": 20691508,
+  "accessorListsAndBytesExact": true,
+  "geometryUVNormalsPose19RigAnimationsExact": true,
+  "eyeMaterialsExact": true,
+  "sourceSkinOutsideGraftExact": true,
+  "exactDocumentChange": "Append one bufferView/image/texture/material, increase buffer length and change graft primitive material index only",
+  "oldMaterialFactorsAndSamplerUnchanged": true,
+  "sourceSeamEdges": 725,
+  "maximumSeamChannelError": 0.006712052262232343,
+  "newAtlasBlackPixels": 0,
+  "PNGBytesExact": true,
+  "CPUEncodedSRGBMipControls": [
+    {
+      "level": 0,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.3251095075307591,
+          "newMeanLuma": 0.426832260389273,
+          "newMinLuma": 0.3194101960784314,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.3556984458065314,
+          "newMeanLuma": 0.4050437080307174,
+          "newMinLuma": 0.29114117647058824,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    },
+    {
+      "level": 1,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.3257040704518965,
+          "newMeanLuma": 0.42705166545096335,
+          "newMinLuma": 0.3194101960784314,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.3563471717637709,
+          "newMeanLuma": 0.40526020224132786,
+          "newMinLuma": 0.29114117647058824,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    },
+    {
+      "level": 2,
+      "dimensions": [
+        512,
+        512
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.32616312136668535,
+          "newMeanLuma": 0.42736581782539074,
+          "newMinLuma": 0.3194101960784314,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.3573221062193964,
+          "newMeanLuma": 0.40577554498905044,
+          "newMinLuma": 0.29114117647058824,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    },
+    {
+      "level": 3,
+      "dimensions": [
+        256,
+        256
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.32719838182907446,
+          "newMeanLuma": 0.4280731022976602,
+          "newMinLuma": 0.32043397117169187,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.3588015626695462,
+          "newMeanLuma": 0.4066964851717465,
+          "newMinLuma": 0.29114117647058824,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    },
+    {
+      "level": 4,
+      "dimensions": [
+        128,
+        128
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.3282619377973803,
+          "newMeanLuma": 0.4287006395454875,
+          "newMinLuma": 0.3230486274509804,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.35983093517835885,
+          "newMeanLuma": 0.4080006192776342,
+          "newMinLuma": 0.2911979818290379,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    },
+    {
+      "level": 5,
+      "dimensions": [
+        64,
+        64
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.3350975643392675,
+          "newMeanLuma": 0.4306676102831493,
+          "newMinLuma": 0.32563149900886285,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.3676840192049048,
+          "newMeanLuma": 0.41199099403654316,
+          "newMinLuma": 0.2984480146035454,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    },
+    {
+      "level": 6,
+      "dimensions": [
+        32,
+        32
+      ],
+      "regions": {
+        "positive_native": {
+          "oldMeanLuma": 0.33114284965909635,
+          "newMeanLuma": 0.4324990385822724,
+          "newMinLuma": 0.3412901826611687,
+          "fractionNewBelow025": 0.0
+        },
+        "negative_native": {
+          "oldMeanLuma": 0.3679574825379474,
+          "newMeanLuma": 0.4138687300105304,
+          "newMinLuma": 0.3257024884452072,
+          "fractionNewBelow025": 0.0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "CPU mip means do not establish actual WebGL LOD or sampled lighting.",
+    "The material-only change does not improve physical eye optics or guarantee a7/10 face.",
+    "Parent must render matched controls before accepting this candidate."
+  ]
+}

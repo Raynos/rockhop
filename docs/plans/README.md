@@ -45,6 +45,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round122 existing private g
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round123 rejects sleeve21 corrupt-weight mask:37–44 new folds and worse original elbow stretch all four CPU states. Parent exact verifier passes; hood/rig/contacts preserved. Third-round current11 ship gate passes. Switch to connected sleeve segmentation or local corrective. Hip19 improvement and eye20 geometry retained privately; eye22 local pigment trial underway. Gallery122 retained; no player promotion.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round124 local eye skin22 improves moving face6.3→6.8, still below7.144 ordered frames reviewed;72 gray frames pixel-identical20, geometry/neckhood/rig exact. Low/high replay/boot/crash/restart pass. Retain local material progress; next bounded eye optical diagnostic. Sleeve23 CPU correction ready for motion. Gallery122/current11 retained, no player promotion.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

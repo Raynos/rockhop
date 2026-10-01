@@ -982,3 +982,12 @@ third-round ship on unchanged current11 passes exact finish/hash/crash/restart.
 Next anatomically connected sleeve mask or local elbow corrective. Eye22 CPU
 local skin-field diagnosis underway; dark pre-lighting pigment proved. Current11
 master and protected neck/hood join retained; fullquality/later gates open.
+
+Round124: local eye skin-field correction22 reduces the dark mottled ring in
+actual moving closeups; parent reviews144 decoded frames, face6.8/10 still
+below7. Retain material progress, no face/full-body acceptance. All72 gray
+frames pixel-identical20; geometry/UV/normals/19rig/neckhood exact, old20,691,508
+BIN bytes retained. Low/high finish bytes/hash exact,crash103/restart6ms both,
+errors0. Next bounded native-eye optical/material diagnosis, no recut/field
+sweep. Sleeve23 CPU connected-region correction ready for moving evaluation.
+Current11 master/gallery122 retained; normal assets unchanged. Ship next126.

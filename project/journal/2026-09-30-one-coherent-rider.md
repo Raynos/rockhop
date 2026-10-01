@@ -1304,3 +1304,13 @@ Validation: Parent verifier reproduces all four archived CPU comparisons;
 Unchanged current11 third-round silent boot/clear/crash/restart gate passes.
 Limits: No GPU art trial for failed candidate. Connected sleeve segmentation or
 local corrective geometry is next; full appearance/contact/device gates open.
+
+## Round124 — repair local skin pigment, keep face gate open
+
+Finding: Source texture interpolation caused the dark eye ring. Convex local
+reconstruction improves skin coherence while retaining anatomical graft.
+Validation: Parent independent verifier passes;144 ordered movie frames
+reviewed;72 gray frames pixel-identical; exact rig/input/hash/camera; low/high
+boot/clear/crash/restart passes. Face6.8 remains below7.
+Limits: Flat/exposed eye appearance remains; next optical/material diagnostic.
+No full-body, bench, Garage, phone or release acceptance.

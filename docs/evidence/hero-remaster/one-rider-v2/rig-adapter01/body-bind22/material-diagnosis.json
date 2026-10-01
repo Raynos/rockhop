@@ -1,0 +1,431 @@
+{
+  "status": "CPU material diagnosis before correction",
+  "sourceCandidateSHA256": "1f5035eeb5de708d70c889af89e574a0b7be10bcdc73beed7d1e4393fb21dd28",
+  "inspectedPlayedComparisons": [
+    "body20/played01/actual-before-after-textured.jpg",
+    "body20/played01/actual-before-after-gray.jpg"
+  ],
+  "actualUnlitSkinChartStatistics": {
+    "positive_native": {
+      "triangleCentroidMeanRGB": [
+        0.4855379329502602,
+        0.2910467938003899,
+        0.19013124736142503
+      ],
+      "areaWeightedLuma": 0.34796787098829907,
+      "lumaPercentiles": [
+        0.0,
+        0.08444607730344741,
+        0.30622253741755057,
+        0.5346257936034697,
+        0.5598604849569814
+      ],
+      "fractionLumaBelow025": 0.2708333333333333,
+      "unlitColourOnly": true
+    },
+    "negative_native": {
+      "triangleCentroidMeanRGB": [
+        0.5160727271944767,
+        0.32100062513499716,
+        0.22717087130797617
+      ],
+      "areaWeightedLuma": 0.37551769448359384,
+      "lumaPercentiles": [
+        0.17325803921568628,
+        0.23707180378365456,
+        0.3190205038394589,
+        0.5284625385414136,
+        0.565210126034163
+      ],
+      "fractionLumaBelow025": 0.125,
+      "unlitColourOnly": true
+    },
+    "positive_front_join": {
+      "triangleCentroidMeanRGB": [
+        0.49536790203271724,
+        0.29358776090557925,
+        0.18463121555482778
+      ],
+      "areaWeightedLuma": 0.3234006881371464,
+      "lumaPercentiles": [
+        0.09148040948606004,
+        0.19886982479537002,
+        0.27444149298056814,
+        0.5606015686274509,
+        0.5776925490196076
+      ],
+      "fractionLumaBelow025": 0.4120603015075377,
+      "unlitColourOnly": true
+    },
+    "negative_front_join": {
+      "triangleCentroidMeanRGB": [
+        0.5074865249167115,
+        0.3089237863822989,
+        0.2149969085385227
+      ],
+      "areaWeightedLuma": 0.3476036809361567,
+      "lumaPercentiles": [
+        0.07818767007978523,
+        0.24506770495743144,
+        0.29677439810327455,
+        0.5481761373650677,
+        0.5698964705882352
+      ],
+      "fractionLumaBelow025": 0.12935323383084577,
+      "unlitColourOnly": true
+    }
+  },
+  "healthySourceSamples": [
+    {
+      "eye": "positiveZ",
+      "sourceSkinSamples": 327,
+      "medianRGB": [
+        0.6973460917379342,
+        0.447871485527824,
+        0.3191134780061011
+      ],
+      "lumaPercentiles": [
+        0.28511430337062066,
+        0.3789621707462832,
+        0.49319147848316264,
+        0.5472088612707245,
+        0.6004089165997271
+      ]
+    },
+    {
+      "eye": "negativeZ",
+      "sourceSkinSamples": 371,
+      "medianRGB": [
+        0.6917269837622548,
+        0.4492823834512748,
+        0.3293070954435011
+      ],
+      "lumaPercentiles": [
+        0.28094294550410087,
+        0.3359321080412584,
+        0.49432298520773066,
+        0.5575895462397032,
+        0.5779823153729532
+      ]
+    }
+  ],
+  "retainedFieldVsActualChart": [
+    {
+      "region": "positive_native",
+      "meanRetainedPlanarFieldLuma": 0.32515313594128886,
+      "meanActualChartLuma": 0.3251095075307591,
+      "meanAbsoluteFieldVsChartRGB": 0.00041789834597553163
+    },
+    {
+      "region": "negative_native",
+      "meanRetainedPlanarFieldLuma": 0.3557406656442668,
+      "meanActualChartLuma": 0.3556984458065314,
+      "meanAbsoluteFieldVsChartRGB": 0.0003915411997166136
+    },
+    {
+      "region": "positive_front_join",
+      "meanRetainedPlanarFieldLuma": 0.3259596080826256,
+      "meanActualChartLuma": 0.32861955633488443,
+      "meanAbsoluteFieldVsChartRGB": 0.0058687551310872355
+    },
+    {
+      "region": "negative_front_join",
+      "meanRetainedPlanarFieldLuma": 0.3427361928930536,
+      "meanActualChartLuma": 0.34435670401439383,
+      "meanAbsoluteFieldVsChartRGB": 0.007286169446189676
+    }
+  ],
+  "mipSimulation": [
+    {
+      "level": 0,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.3251095075307591,
+          "meanLumaDeltaVsMip0": 0.0,
+          "maxAbsoluteLumaDeltaVsMip0": 0.0
+        },
+        "negative_native": {
+          "meanLuma": 0.3556984458065314,
+          "meanLumaDeltaVsMip0": 0.0,
+          "maxAbsoluteLumaDeltaVsMip0": 0.0
+        },
+        "positive_front_join": {
+          "meanLuma": 0.32861955633488443,
+          "meanLumaDeltaVsMip0": 0.0,
+          "maxAbsoluteLumaDeltaVsMip0": 0.0
+        },
+        "negative_front_join": {
+          "meanLuma": 0.34435670401439383,
+          "meanLumaDeltaVsMip0": 0.0,
+          "maxAbsoluteLumaDeltaVsMip0": 0.0
+        }
+      }
+    },
+    {
+      "level": 1,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.3257040704518965,
+          "meanLumaDeltaVsMip0": 0.0005945629211374471,
+          "maxAbsoluteLumaDeltaVsMip0": 0.019866924579098
+        },
+        "negative_native": {
+          "meanLuma": 0.3563471717637709,
+          "meanLumaDeltaVsMip0": 0.0006487259572394004,
+          "maxAbsoluteLumaDeltaVsMip0": 0.005813789453718271
+        },
+        "positive_front_join": {
+          "meanLuma": 0.3293451258369022,
+          "meanLumaDeltaVsMip0": 0.0007255695020177667,
+          "maxAbsoluteLumaDeltaVsMip0": 0.0030678917285493212
+        },
+        "negative_front_join": {
+          "meanLuma": 0.34507269046826683,
+          "meanLumaDeltaVsMip0": 0.0007159864538729935,
+          "maxAbsoluteLumaDeltaVsMip0": 0.006077749266025473
+        }
+      }
+    },
+    {
+      "level": 2,
+      "dimensions": [
+        512,
+        512
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.32616312136668535,
+          "meanLumaDeltaVsMip0": 0.0010536138359262968,
+          "maxAbsoluteLumaDeltaVsMip0": 0.05602850727080677
+        },
+        "negative_native": {
+          "meanLuma": 0.3573221062193964,
+          "meanLumaDeltaVsMip0": 0.001623660412864947,
+          "maxAbsoluteLumaDeltaVsMip0": 0.02084087569123899
+        },
+        "positive_front_join": {
+          "meanLuma": 0.3305725236212093,
+          "meanLumaDeltaVsMip0": 0.0019529672863249808,
+          "maxAbsoluteLumaDeltaVsMip0": 0.026621579331686462
+        },
+        "negative_front_join": {
+          "meanLuma": 0.3459970639777284,
+          "meanLumaDeltaVsMip0": 0.0016403599633345424,
+          "maxAbsoluteLumaDeltaVsMip0": 0.014277253164911963
+        }
+      }
+    },
+    {
+      "level": 3,
+      "dimensions": [
+        256,
+        256
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.32719838182907446,
+          "meanLumaDeltaVsMip0": 0.0020888742983153695,
+          "maxAbsoluteLumaDeltaVsMip0": 0.07008000248044921
+        },
+        "negative_native": {
+          "meanLuma": 0.3588015626695462,
+          "meanLumaDeltaVsMip0": 0.003103116863014731,
+          "maxAbsoluteLumaDeltaVsMip0": 0.028045300638668447
+        },
+        "positive_front_join": {
+          "meanLuma": 0.33200456205085166,
+          "meanLumaDeltaVsMip0": 0.003385005715967242,
+          "maxAbsoluteLumaDeltaVsMip0": 0.050479974006496925
+        },
+        "negative_front_join": {
+          "meanLuma": 0.3473071521595345,
+          "meanLumaDeltaVsMip0": 0.0029504481451405984,
+          "maxAbsoluteLumaDeltaVsMip0": 0.016824698080854406
+        }
+      }
+    },
+    {
+      "level": 4,
+      "dimensions": [
+        128,
+        128
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.3282619377973803,
+          "meanLumaDeltaVsMip0": 0.0031524302666211673,
+          "maxAbsoluteLumaDeltaVsMip0": 0.07901486594549614
+        },
+        "negative_native": {
+          "meanLuma": 0.35983093517835885,
+          "meanLumaDeltaVsMip0": 0.004132489371827346,
+          "maxAbsoluteLumaDeltaVsMip0": 0.03851923078293268
+        },
+        "positive_front_join": {
+          "meanLuma": 0.333470971483835,
+          "meanLumaDeltaVsMip0": 0.004851415148950607,
+          "maxAbsoluteLumaDeltaVsMip0": 0.06971362800145692
+        },
+        "negative_front_join": {
+          "meanLuma": 0.3484701570628713,
+          "meanLumaDeltaVsMip0": 0.00411345304847747,
+          "maxAbsoluteLumaDeltaVsMip0": 0.023543900854024774
+        }
+      }
+    },
+    {
+      "level": 5,
+      "dimensions": [
+        64,
+        64
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.3350975643392675,
+          "meanLumaDeltaVsMip0": 0.009988056808508434,
+          "maxAbsoluteLumaDeltaVsMip0": 0.17945307417992698
+        },
+        "negative_native": {
+          "meanLuma": 0.3676840192049048,
+          "meanLumaDeltaVsMip0": 0.01198557339837337,
+          "maxAbsoluteLumaDeltaVsMip0": 0.09261892317275872
+        },
+        "positive_front_join": {
+          "meanLuma": 0.34450741654085526,
+          "meanLumaDeltaVsMip0": 0.015887860205970866,
+          "maxAbsoluteLumaDeltaVsMip0": 0.0788566417060485
+        },
+        "negative_front_join": {
+          "meanLuma": 0.3432418641353283,
+          "meanLumaDeltaVsMip0": -0.0011148398790655407,
+          "maxAbsoluteLumaDeltaVsMip0": 0.06362611109414096
+        }
+      }
+    },
+    {
+      "level": 6,
+      "dimensions": [
+        32,
+        32
+      ],
+      "regions": {
+        "positive_native": {
+          "meanLuma": 0.33114284965909635,
+          "meanLumaDeltaVsMip0": 0.006033342128337277,
+          "maxAbsoluteLumaDeltaVsMip0": 0.2900143100801103
+        },
+        "negative_native": {
+          "meanLuma": 0.3679574825379474,
+          "meanLumaDeltaVsMip0": 0.012259036731415948,
+          "maxAbsoluteLumaDeltaVsMip0": 0.2011885929710338
+        },
+        "positive_front_join": {
+          "meanLuma": 0.339703860151368,
+          "meanLumaDeltaVsMip0": 0.011084303816483588,
+          "maxAbsoluteLumaDeltaVsMip0": 0.22776117945220287
+        },
+        "negative_front_join": {
+          "meanLuma": 0.36394233747675175,
+          "meanLumaDeltaVsMip0": 0.019585633462357897,
+          "maxAbsoluteLumaDeltaVsMip0": 0.1847723590473681
+        }
+      }
+    }
+  ],
+  "graftMaterial": {
+    "doubleSided": true,
+    "extensions": {
+      "KHR_materials_specular": {
+        "specularFactor": 0.25
+      }
+    },
+    "name": "Current11 skin on actual CC0 native anatomical lids",
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "index": 7
+      },
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6200000047683716
+    }
+  },
+  "sampler": {
+    "magFilter": 9729,
+    "minFilter": 9987
+  },
+  "eyeMaterials": [
+    {
+      "name": "CC0 brown iris and sclera",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 8
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "roughnessFactor": 0.35,
+        "metallicFactor": 0
+      },
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "Conservative transparent corneal film",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          0.035
+        ],
+        "roughnessFactor": 0.08,
+        "metallicFactor": 0
+      },
+      "alphaMode": "BLEND",
+      "doubleSided": false,
+      "extras": {
+        "sourceAlphaWasZero": true,
+        "physicalRefraction": false,
+        "adaptation": "Source transparent shell uses neutral3.5percent-alpha film for conservative standard-PBR highlights; no blue diffuse texture or proprietary eye shader."
+      }
+    }
+  ],
+  "chartLayout": {
+    "cellPixels": 48,
+    "triangleCharts": 1525,
+    "atlasPixels": 2048,
+    "filledRows": 37,
+    "blackUnusedRows": 272,
+    "nativeChartRows": {
+      "positive": [
+        0,
+        7
+      ],
+      "negative": [
+        18,
+        26
+      ]
+    },
+    "gutterToChartCornersPixels": 2.5
+  },
+  "diagnosis": [
+    "Dark pigment is already in actual unlit native-lid albedo and its retained planar interior field; eye shader response is not required to create it.",
+    "CPU mip simulation separately measures filter changes; it cannot identify the actual GPU LOD chosen in the played frames.",
+    "The source cornea is a neutral3.5percent-alpha standard-PBR film without refraction. Its weak eye appearance remains a distinct lighting/shader hypothesis, not a proved cause of skin pigment."
+  ],
+  "limits": [
+    "No GPU/render was performed; CPU mip BOX simulation uses sRGB-encoded channel averaging, and is not a WebGL shader capture.",
+    "Texture pigment and shader/filter contributions may coexist.",
+    "Current20 geometry/material/source remain untouched."
+  ]
+}
