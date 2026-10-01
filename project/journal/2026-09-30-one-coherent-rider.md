@@ -1095,3 +1095,15 @@ PBR/gray focus exact, head-local drift1.4e-14m, NDC error6.8e-16. Parent reviewe
 all72 ordered frames per surface. Typecheck/oxlint pass; lock32.348s/37.253GB.
 Limits: Face6.8 diagnostic, matched appearance and later checkpoints open.
 Initial proof URL equality failed on ephemeral ports; content equality passes.
+
+## Round104 — fused eye surfaces need real apertures
+
+Finding: Full-head CPU source inspection shows asymmetric shallow fused eyes,
+with0 boundary edges in each anterior ROI. A separate eye overlay would not
+remove underlying malformed geometry. Next construct continuous local lids.
+Validation: Original11 SHA byte-exact;61,393 vertices/99,914 triangles retained.
+Measured front depths and installed CC0 donor components/provenance recorded.
+Parent gray/textured source projections inspected; CPU-only, no new dependencies.
+Limits: Approximate framing centres are not accepted fit landmarks. First
+projection omitted cheeks; corrected before checkpoint, no source defect.
+Actual played face remains6.8; fitting, motion and later gates remain open.

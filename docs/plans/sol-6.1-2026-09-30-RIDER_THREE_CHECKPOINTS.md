@@ -781,3 +781,10 @@ only view window changes. Paired gray/PBR focus exact; head-local drift1.4e-14m.
 Parent reviewed72 frames per surface, head visible throughout. Face stays6.8
 diagnostic; inspect eye/lid geometry before new CC0 component fitting. Same
 WHITE body/clothes/19bones; no strict appearance or later gate acceptance.
+
+Round104: read-only full-head CPU inspection finds0 eye-aperture boundaries
+in1,657/1,587 anterior ROI vertices. Fused shallow asymmetric surfaces require
+local lid aperture reconstruction before anatomical eyes; plain overlay is
+inadequate. Original source11 SHA preserved. Installed CC0 donor measured;
+fresh CPU topology/donor teammates own separate paths. Face6.8 remains below
+bar. Keep WHITE body/clothes and19-bone behaviour; next ship gate105.

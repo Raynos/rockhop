@@ -1,0 +1,207 @@
+{
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "sourceHeadVertices": 61393,
+  "sourceHeadTriangles": 99914,
+  "headBoundsM": [
+    [
+      0.5498769283294678,
+      1.4228605031967163,
+      -0.1487756222486496
+    ],
+    [
+      0.7834973931312561,
+      1.8225715160369873,
+      0.14736221730709076
+    ]
+  ],
+  "includedPrimitives": [
+    "Original head",
+    "Reconstructed cheek with shared color bake"
+  ],
+  "projection": {
+    "front": "+X looking -X",
+    "horizontal": "-Z",
+    "vertical": "+Y",
+    "zBoundsM": [
+      -0.12,
+      0.12
+    ],
+    "yBoundsM": [
+      1.48,
+      1.82
+    ],
+    "pixels": [
+      1400,
+      1600
+    ]
+  },
+  "privateSurfaceData": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/eye-sockets01/front-surface.npz",
+  "eyes": [
+    {
+      "sideZSign": -1,
+      "approximateFramingCentreM": [
+        0.746,
+        1.694,
+        -0.033
+      ],
+      "ROIHalfHeightM": 0.013,
+      "ROIHalfWidthM": 0.022,
+      "frontMinimumXM": 0.72,
+      "verticesInROI": 1657,
+      "boundaryEdgesInROI": 0,
+      "centreDepthProfile": [
+        {
+          "yM": 1.688,
+          "zM": -0.033,
+          "frontXM": 0.7472266712994157
+        },
+        {
+          "yM": 1.694,
+          "zM": -0.033,
+          "frontXM": 0.7453511609607573
+        },
+        {
+          "yM": 1.7,
+          "zM": -0.033,
+          "frontXM": 0.748212686100075
+        },
+        {
+          "yM": 1.706,
+          "zM": -0.033,
+          "frontXM": 0.7518803708854087
+        }
+      ]
+    },
+    {
+      "sideZSign": 1,
+      "approximateFramingCentreM": [
+        0.746,
+        1.694,
+        0.033
+      ],
+      "ROIHalfHeightM": 0.013,
+      "ROIHalfWidthM": 0.022,
+      "frontMinimumXM": 0.72,
+      "verticesInROI": 1587,
+      "boundaryEdgesInROI": 0,
+      "centreDepthProfile": [
+        {
+          "yM": 1.688,
+          "zM": 0.033,
+          "frontXM": 0.7478658156541435
+        },
+        {
+          "yM": 1.694,
+          "zM": 0.033,
+          "frontXM": 0.7473107393436982
+        },
+        {
+          "yM": 1.7,
+          "zM": 0.033,
+          "frontXM": 0.7495308682611417
+        },
+        {
+          "yM": 1.706,
+          "zM": 0.033,
+          "frontXM": 0.7546203857537823
+        }
+      ]
+    }
+  ],
+  "boundaryWeldToleranceM": 1e-07,
+  "eyeDonor": {
+    "path": "/Users/raynos/projects/weights/makehuman/system-cc0/eyes/high-poly/high-poly.obj",
+    "sha256": "da2493215b708a344c33dc72f2a9a5b8fa985dcc5a70ad3b208995cf871da8e1",
+    "vertices": 1064,
+    "polygons": 1020,
+    "components": [
+      {
+        "vertices": 256,
+        "minRaw": [
+          0.1321,
+          15.5952,
+          1.2212
+        ],
+        "maxRaw": [
+          0.4508,
+          15.906,
+          1.4628
+        ],
+        "meanRaw": [
+          0.29111210937500004,
+          15.746620312499997,
+          1.3756234375000003
+        ]
+      },
+      {
+        "vertices": 276,
+        "minRaw": [
+          0.1369,
+          15.6,
+          1.2233
+        ],
+        "maxRaw": [
+          0.446,
+          15.9011,
+          1.4351
+        ],
+        "meanRaw": [
+          0.2911130434782607,
+          15.74635869565217,
+          1.3707079710144925
+        ]
+      },
+      {
+        "vertices": 256,
+        "minRaw": [
+          -0.4508,
+          15.5952,
+          1.2212
+        ],
+        "maxRaw": [
+          -0.1321,
+          15.906,
+          1.4628
+        ],
+        "meanRaw": [
+          -0.29111210937500004,
+          15.746620312499997,
+          1.3756234375000003
+        ]
+      },
+      {
+        "vertices": 276,
+        "minRaw": [
+          -0.446,
+          15.6,
+          1.2233
+        ],
+        "maxRaw": [
+          -0.1369,
+          15.9011,
+          1.4351
+        ],
+        "meanRaw": [
+          -0.2911130434782607,
+          15.74635869565217,
+          1.3707079710144925
+        ]
+      }
+    ],
+    "licenseHeader": [
+      "# This is a mesh file for MakeHuman",
+      "#",
+      "# This asset was explicitly released as CC0 in september 2020. The license",
+      "# text for CC0 can be found in the root of this repository.",
+      "#",
+      "# The copyright holders at the point of the release to CC0 were:",
+      "#",
+      "# Copyright (C) 2020 Data Collection AB, https://www.datacollection.se",
+      "# Copyright (C) 2020 Joel Palmius",
+      "# Copyright (C) 2020 Jonas Hauquier",
+      "#",
+      "# The primary legal contact for MakeHuman is Data Collection AB."
+    ]
+  },
+  "limits": "Unlit atlas and directional gray CPU source projection, not game PBR/motion acceptance. Eye donor raw coordinates require measured fit. No geometry or textures changed."
+}

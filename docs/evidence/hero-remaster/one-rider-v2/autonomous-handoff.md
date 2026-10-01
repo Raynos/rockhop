@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round103, 2026-10-01
+## Current evidence — round104, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -33,14 +33,15 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: inspect eye sockets before fresh CC0 eye fitting
-  and targeted lids. Explicit private3Dfocus now retains all72 head views.
+- Next bounded action: local continuous lid aperture reconstruction and
+  measured CC0 eyes. Read-only audit finds fused closed anterior eye surfaces.
+  Explicit private3Dfocus retains all72 head views.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
   P3 automated repairs and fixed finger-curl approaches remain stopped at2.
-- No Blender lanes are currently running. Prior lane descriptions below are
-  historical. No routine human approval hold, schedule or outbound message.
+- Two fresh CPU lanes audit eye topology and normalize the CC0 eye donor.
+  Older Blender lane descriptions below are historical. No routine human approval hold, schedule or outbound message.
 
 Actual evidence: [body09 README](rig-adapter01/body-bind09/README.md),
 [before/after](rig-adapter01/body-bind09/played01/actual-before-after.jpg),
@@ -471,3 +472,6 @@ NEWbothclear byteexact/crash103/restart2/3ms/errors0; earlier failures retained.
 
 Round103: actual skinned-face projection keeps head visible throughout72
 frames, unchanged state/rig/camera transform. Face6.8; eye geometry audit next.
+
+Round104: fused source eye surfaces have0 aperture boundary edges in each
+ROI. Local lid reconstruction next; source11 preserved, no new fit accepted.
