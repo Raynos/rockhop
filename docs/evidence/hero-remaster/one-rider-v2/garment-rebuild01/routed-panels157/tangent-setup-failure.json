@@ -1,0 +1,34 @@
+{
+  "kind": "Native topology boundary vertices may have only boundary edge neighbors; no geometry was exported",
+  "literalWitnesses": [
+    {
+      "nativeVertex": 1183,
+      "loopVertices": 22,
+      "incidentUpperQuadIDs": [
+        248
+      ]
+    },
+    {
+      "nativeVertex": 1193,
+      "loopVertices": 22,
+      "incidentUpperQuadIDs": [
+        239
+      ]
+    },
+    {
+      "nativeVertex": 1774,
+      "loopVertices": 22,
+      "incidentUpperQuadIDs": [
+        598
+      ]
+    },
+    {
+      "nativeVertex": 1784,
+      "loopVertices": 22,
+      "incidentUpperQuadIDs": [
+        589
+      ]
+    }
+  ],
+  "fix": "Compute actual incident upper face centroids as inward tangent instead of requiring an edge neighbor outside boundary; same construction settings"
+}

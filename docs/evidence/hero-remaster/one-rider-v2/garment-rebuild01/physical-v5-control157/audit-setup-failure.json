@@ -1,0 +1,8 @@
+{
+  "failure": "Initial audit incorrectly assumed C19/V5 body indices exact. The existing raw audit reported indicesExact=false. Actual body24triangle rows differ, intentionally in V5 source.",
+  "recovery": "Exclude those literal rows from paired source-face scores; leave V5 geometry unchanged.",
+  "assetMutation": false,
+  "rendererMutation": false,
+  "renderBatchRestart": false,
+  "secondSetupFailure": "Triangle-expanded NumPy indexing corrected from sourceP[tri,:,2] to sourceP[tri][:,:,2]. No source mutation or experiment restart."
+}

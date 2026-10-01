@@ -1698,3 +1698,17 @@ Limits: Ordered frames are not continuous playback or target grades. No new
 export, physical integration or art pass; external v7 separate, hips still fail.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-review156.json
 Ask:239,241,242,245,247
+
+## Round157 — structural repairs precede cosmetics and favorable weights
+
+Finding: Actual staticV5 physics improves arm measures but retains visible
+underarm rips and bad hips. Enforce user construction→rig/weights→deformation
+order and continuous exported basic-pose gate, with cosmetics paused.
+Validation: 1920actual matched states/cameras/19bones,960gray/PBRpairs; CPU
+contacts<=2.189um/sharedaliases0gap; side/rear motion windows reject. Candidate
+ship exactfinish/crash/restart2/3ms, lock201.94s/50.58GB. V7 audit freezes111
+finite failed cloth/hip/support receipts; native routed panel520restcrossings.
+Limits: No new whole-motion art, target score, sitting/Garage/contact/mobile/LOD
+pass; source/control copies unaccepted. Pose gate executable implementation next.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-review157.json
+Ask:239,241,242,245,248

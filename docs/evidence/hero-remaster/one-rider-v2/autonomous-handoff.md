@@ -7,7 +7,16 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round156, 2026-10-01
+## Current priority — ask248
+
+Garment construction → rig/weights → deformation, in that order. Cosmetics are
+paused until convincing continuous basic poses in the exported Three.js asset.
+Preserve the liked head/identity and separate task-3 ownership. The new plan
+section is authoritative over old eye/texture next-action notes. V7 finite
+upper-cloth crossing progress is not broad motion, hip/support or production
+acceptance. Basic-pose gate implementation and matched actual V5 control underway.
+
+## Current evidence — round157, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -1174,3 +1183,32 @@ under canonical shared lock. Next159. No complete native garment GLB, new textur
 bake, player promotion, gallery publish, face/fullbody score or later visual gate.
 Next audit frozen external receipts and test reusable shape/weights under actual
 physical driver, alongside new routed native panels. Preserve all failure lineages.
+
+## Structural priority and actual source control — round157 / ask248
+
+The three-layer construction→rig/weights→deformation order and continuous exported
+basic-pose gate are now authoritative near the top of this plan. Cosmetics paused;
+preferred head/identity retained. Historical target scores do not accept rest
+chest/shoulder/underarm defects, broad arms, glove/cuff joins or seated support.
+
+Frozen V5 static source maps explicitly to C19 physics; no authored morph driver.
+Four480frame actual side/rear gray/PBR recordings have exact1920states/cameras/
+19bones versus34. CPU contacts<=2.189um, shared405aliases0gap; arm flags decrease,
+hips remain bad. Actual gray/PBR side299–310 still shows torn-looking underarm
+folds. Parent rejects appearance, preserving matched before/after movies. New
+candidate-active replay/crash/restart passes2/3ms;201.94s canonical lock,50.58GB
+anonymous peak. Source geometry preserved; no player/Garage/LOD/mobile acceptance.
+
+Separate V7 audit proves static attrs sameV5, two hood topology edits, protected
+source head/gloves/grip/sole/image fields.307hood/body groups stay coincident,
+though162groups move<=8.513mm and167reweight together.111finite authored keys/
+halfsteps/offgrid/holdouts have shoulders78FAIL,cuffs76FAIL,hips111FAIL,saddle111
+HOVER (~16.396mm endpoint); zero upper crossings is not a motion pass.49authored
+compression morphs do not provide a physical pose driver. No silent substitution.
+
+One new routed native four-boundary panel retains source fields but fails520rest
+crossings. Reject embedding; no next local garment trial while the independent
+hoodie-repair02 construction owner migrates into owned shared-repo paths. Inspect
+its frozen/migrated artifacts before duplication. Parent owns integration and
+reusable exported basic-pose fixture next. All prior failed lineages remain.
+Next requiredship159; all later visual/visible-contact/device gates remain open.

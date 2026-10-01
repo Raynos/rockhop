@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — white rider minimum appearance checkpoint passed; target8 refinement, sitting rig and riding checkpoints remain open**.
+Status: **active — structural garment/rig/deformation repair first; cosmetics paused; continuous exported basic-pose gate, target8 and sitting/riding checkpoints remain open**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -8,6 +8,71 @@ release obligations. Its previous rider execution method is superseded here.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
 Bar: [mission §3–4](../mission.md): a readable person, credible contacts,
 physics-driven weight shift and bounded phone cost.
+
+## Structural repair order and reusable basic-pose gate — ask248
+
+This is the current execution priority. It supersedes older next-action notes
+about eyes, textures, hair, face cosmetics or microdetails. Preserve the liked
+head, white character identity and hood silhouette. Pause cosmetic refinement
+until the complete exported character has convincing basic poses and continuous
+transitions. Historical static appearance scores do not override this gate.
+The three visual checkpoints, independent full-body/face thresholds, rider-only
+scope, physics behavior, source preservation and autonomous failure bounds remain.
+
+Work through these layers in order; diagnose each before compensating downstream:
+
+1. **Garment construction.** Fix the protruding resting chest, overlapping shoulder
+   inserts and fused underarm web. Build natural shoulder sleeve joins with actual
+   space between each arm and torso. Inspect front/side/back gray and textured
+   neutral views, real 3D crossings and cross-sections before reweighting or baking.
+   Do not conceal a construction defect with normal maps or pose-only morphs.
+2. **Rig and weights.** Verify anatomical head/neck/spine alignment, shoulder pivots,
+   rest/bind cancellation, axes, handedness, units and explicit19bone adapter.
+   Audit ownership by named bone across torso/arm regions and exporter aliases;
+   stop arm bones dragging torso panels. Test the actual glove/hand/cuff surface
+   joins throughout wrist turns, twists and grip. Socket positions alone do not
+   prove skin contact, seam continuity or sound wrists.
+3. **Deformation.** Correct seated/reaching/riding posture and preserve clothing
+   volume through bends. Author local corrective shapes only for residual defects
+   on sound construction/rigging. Give each shape an explicit pose-feature driver,
+   interpolation/domain, protected regions and held-out poses. Verify exported
+   morph-before-LBS behavior in Three.js. Blender Preserve Volume/DQ settings do
+   not automatically transfer to the standard Three.js shader; byte-identical
+   on/off exports cannot prove a runtime volume fix.
+
+Build one reusable deterministic exported-asset pose fixture and motion manifest:
+neutral front/side/back; arms horizontal, overhead and reaching forward; elbow
+bends; forearm twists; wrist turns and closed grip; squat, sit and lean. Include
+left/right asymmetry, forward/reverse transitions, intermediate frames and unseen
+halfsteps. Capture matched gray/textured moving films and visible seam/contact
+closeups with pinned asset, camera/light, joint/weight/morph/driver hashes. Validate
+the GLB actually loaded by Three.js. A few stills, legal bones, socket error or
+favorable strain numbers cannot pass the basic-pose gate. Continuous motion must
+look convincing; rest/pose crossings, tears, pops, volume loss and wrong support
+remain independent failures. Record fixture coverage and unmeasured checks plainly.
+
+Independent findings establish a rest chest bulge, four shoulder-insert crossings
+and major underarm stretch with both tested weight sets. C19 helps hips but still
+fails broader arms. See [consolidated findings](../evidence/hero-remaster/one-rider-v2/independent-pipeline-learnings-2026-10-01/README.md).
+Task-3 owns `/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02`.
+Inspect its frozen artifacts/receipts read-only before duplicating work; keep our
+source/evidence/temporary paths separate, with this parent as sole integration
+owner. V7's zero tested upper-clothing intersections apply to its baked two-second
+transition, not arbitrary gameplay: broader arms, hips and ~16mm saddle hover
+remain failures. Reuse proven source components explicitly; do not silently
+substitute a clip correction or call V7 production-ready.
+
+After construction, rig and continuous basic-pose gates, validate the same rider
+in actual Garage entry/hold/exit and riding/maximum lean/landing/recovery. Test
+signed saddle/bike intersections and support, palm/grip coverage, glove/cuff joins,
+sole/peg contact and motion continuity. Then qualify real lower LOD, package cost,
+mobile runtime latency and physical iOS/desktop behavior. Show matched before/after
+clips, state visible failures, and keep unfinished assets out of player paths.
+
+Parallel CPU specialists may own distinct mechanisms and evidence; parent alone
+integrates and judges. All GPU/model/Metal/export workloads remain serialized under
+`lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
+batches at most30minutes. No routine human checkpoint or outbound message hold.
 
 ## Scope and invariants
 
@@ -1470,3 +1535,32 @@ under canonical shared lock. Next159. No complete native garment GLB, new textur
 bake, player promotion, gallery publish, face/fullbody score or later visual gate.
 Next audit frozen external receipts and test reusable shape/weights under actual
 physical driver, alongside new routed native panels. Preserve all failure lineages.
+
+## Structural priority and actual source control — round157 / ask248
+
+The three-layer construction→rig/weights→deformation order and continuous exported
+basic-pose gate are now authoritative near the top of this plan. Cosmetics paused;
+preferred head/identity retained. Historical target scores do not accept rest
+chest/shoulder/underarm defects, broad arms, glove/cuff joins or seated support.
+
+Frozen V5 static source maps explicitly to C19 physics; no authored morph driver.
+Four480frame actual side/rear gray/PBR recordings have exact1920states/cameras/
+19bones versus34. CPU contacts<=2.189um, shared405aliases0gap; arm flags decrease,
+hips remain bad. Actual gray/PBR side299–310 still shows torn-looking underarm
+folds. Parent rejects appearance, preserving matched before/after movies. New
+candidate-active replay/crash/restart passes2/3ms;201.94s canonical lock,50.58GB
+anonymous peak. Source geometry preserved; no player/Garage/LOD/mobile acceptance.
+
+Separate V7 audit proves static attrs sameV5, two hood topology edits, protected
+source head/gloves/grip/sole/image fields.307hood/body groups stay coincident,
+though162groups move<=8.513mm and167reweight together.111finite authored keys/
+halfsteps/offgrid/holdouts have shoulders78FAIL,cuffs76FAIL,hips111FAIL,saddle111
+HOVER (~16.396mm endpoint); zero upper crossings is not a motion pass.49authored
+compression morphs do not provide a physical pose driver. No silent substitution.
+
+One new routed native four-boundary panel retains source fields but fails520rest
+crossings. Reject embedding; no next local garment trial while the independent
+hoodie-repair02 construction owner migrates into owned shared-repo paths. Inspect
+its frozen/migrated artifacts before duplication. Parent owns integration and
+reusable exported basic-pose fixture next. All prior failed lineages remain.
+Next requiredship159; all later visual/visible-contact/device gates remain open.

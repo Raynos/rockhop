@@ -1,0 +1,578 @@
+{
+  "status": "Unaccepted JSON-only explicit freshC19name/contact mapping; runtime anatomical-axis adapter REQUIRED",
+  "source": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/deliverables/rider-foundation-v5.glb",
+  "sourceSHA256": "de76d9df559521762692b2111839b0907180bfd3d7f5d67593c8955e24c6bb0c",
+  "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb",
+  "candidateSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+  "candidateBytes": 19605020,
+  "sourceV5AllBINBytesExact": true,
+  "sourceV5GeometryUVNormalsWeightsRigInverseBindsMaterialsImagesMorphsAnimationsExact": true,
+  "names": [
+    {
+      "sourceName": "fresh.pelvis",
+      "targetContractName": "pelvis",
+      "node": 3
+    },
+    {
+      "sourceName": "fresh.spine",
+      "targetContractName": "spine",
+      "node": 4
+    },
+    {
+      "sourceName": "fresh.chest",
+      "targetContractName": "chest",
+      "node": 5
+    },
+    {
+      "sourceName": "fresh.neck",
+      "targetContractName": "neck",
+      "node": 6
+    },
+    {
+      "sourceName": "fresh.head",
+      "targetContractName": "head",
+      "node": 7
+    },
+    {
+      "sourceName": "fresh.shoulder.L",
+      "targetContractName": "shoulder.L",
+      "node": 8
+    },
+    {
+      "sourceName": "fresh.upperArm.L",
+      "targetContractName": "upperArm.L",
+      "node": 9
+    },
+    {
+      "sourceName": "fresh.forearm.L",
+      "targetContractName": "forearm.L",
+      "node": 10
+    },
+    {
+      "sourceName": "fresh.hand.L",
+      "targetContractName": "hand.L",
+      "node": 11
+    },
+    {
+      "sourceName": "fresh.shoulder.R",
+      "targetContractName": "shoulder.R",
+      "node": 12
+    },
+    {
+      "sourceName": "fresh.upperArm.R",
+      "targetContractName": "upperArm.R",
+      "node": 13
+    },
+    {
+      "sourceName": "fresh.forearm.R",
+      "targetContractName": "forearm.R",
+      "node": 14
+    },
+    {
+      "sourceName": "fresh.hand.R",
+      "targetContractName": "hand.R",
+      "node": 15
+    },
+    {
+      "sourceName": "fresh.thigh.L",
+      "targetContractName": "thigh.L",
+      "node": 16
+    },
+    {
+      "sourceName": "fresh.shin.L",
+      "targetContractName": "shin.L",
+      "node": 17
+    },
+    {
+      "sourceName": "fresh.foot.L",
+      "targetContractName": "foot.L",
+      "node": 18
+    },
+    {
+      "sourceName": "fresh.thigh.R",
+      "targetContractName": "thigh.R",
+      "node": 19
+    },
+    {
+      "sourceName": "fresh.shin.R",
+      "targetContractName": "shin.R",
+      "node": 20
+    },
+    {
+      "sourceName": "fresh.foot.R",
+      "targetContractName": "foot.R",
+      "node": 21
+    }
+  ],
+  "sockets": [
+    {
+      "socket": "gripSocket.L",
+      "newParent": "hand.L",
+      "node": 22,
+      "sourceRestWorldMatrix": [
+        1.0000000988978006,
+        4.011866222564109e-08,
+        -2.236143894635001e-07,
+        0.0,
+        -7.742360708107299e-08,
+        0.9999998679617381,
+        1.98811136664645e-07,
+        0.0,
+        1.3978451858520646e-07,
+        -2.0618156126861464e-07,
+        0.9999998299265518,
+        0.0,
+        0.6667430324101171,
+        0.7941388206796854,
+        0.3911559370294306,
+        1.0
+      ],
+      "reconstructedRestMatrixMaxError": 0.0
+    },
+    {
+      "socket": "soleSocket.L",
+      "newParent": "foot.L",
+      "node": 23,
+      "sourceRestWorldMatrix": [
+        -1.4580832130841786e-06,
+        -2.6161727520249043e-06,
+        -1.0149990360570278,
+        0.0,
+        5.370134066318144e-07,
+        1.0149998768853108,
+        7.768349783885441e-07,
+        0.0,
+        1.015001346284429,
+        -2.1268850569633457e-09,
+        1.344454122226394e-06,
+        0.0,
+        0.6368240361927665,
+        0.0010146311542833658,
+        0.19299166018661043,
+        1.0
+      ],
+      "reconstructedRestMatrixMaxError": 0.0
+    },
+    {
+      "socket": "gripSocket.R",
+      "newParent": "hand.R",
+      "node": 24,
+      "sourceRestWorldMatrix": [
+        1.0000004264840445,
+        1.659719353064304e-07,
+        6.30029278747557e-08,
+        0.0,
+        -2.7440444860804547e-07,
+        1.0000001545976114,
+        2.392154730967988e-07,
+        0.0,
+        -6.320731682496472e-08,
+        -2.1023633323125068e-07,
+        0.9999998242679717,
+        0.0,
+        0.669579809091219,
+        0.7938029372642919,
+        -0.3837616604019379,
+        1.0
+      ],
+      "reconstructedRestMatrixMaxError": 0.0
+    },
+    {
+      "socket": "soleSocket.R",
+      "newParent": "foot.R",
+      "node": 25,
+      "sourceRestWorldMatrix": [
+        2.1363631789521006e-06,
+        2.5962459035781796e-06,
+        -1.014998794061216,
+        0.0,
+        5.325837170722103e-07,
+        1.0149996423492917,
+        -7.96761145400966e-07,
+        0.0,
+        1.015001157329954,
+        -3.7476703851346826e-08,
+        -6.661725784180395e-07,
+        0.0,
+        0.6454282213392101,
+        0.0009213958346237922,
+        -0.21415370237241316,
+        1.0
+      ],
+      "reconstructedRestMatrixMaxError": 0.0
+    }
+  ],
+  "handMapping": "newTargetQ = oldDesiredDeformation * freshRestQ, oldDesiredDeformation = oldTargetQ * inverse(oldRestQ). Original contact surface rest position/orientation retained under fresh parent.",
+  "newContactMetadata": {
+    "version": 1,
+    "source": "body-bind04 actualNEWwhite19joint",
+    "declaredUniformScale": 1.015,
+    "runtimeAxisMapping": "proper(-Y,Z,-X), nativeL mapsruntimeR",
+    "hands": {
+      "R": {
+        "targetWorldQuaternion": [
+          -0.06680091265211437,
+          -0.05920875234861608,
+          0.5804608413193745,
+          0.8093807345180443
+        ],
+        "sourceNativeSide": "L",
+        "nativeVirtualPhysicsMarker": [
+          0.378090500831604,
+          -0.01929054968059063,
+          0.7820718884468079
+        ],
+        "sourceHandRestMatrix": [
+          [
+            0.8908398747444153,
+            0.27333706617355347,
+            0.36289262771606445,
+            0.35358723998069763
+          ],
+          [
+            -0.2733370065689087,
+            -0.3155636787414551,
+            0.9086838364601135,
+            -0.02724619023501873
+          ],
+          [
+            0.36289283633232117,
+            -0.9086838960647583,
+            -0.206403449177742,
+            0.8695228099822998
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "nativeToRuntimeRotation": [
+          [
+            0.173395596738556,
+            -0.31911899802304494,
+            -0.9317172490259303
+          ],
+          [
+            -0.03939785640271839,
+            -0.9475380625401898,
+            0.3172056571822984
+          ],
+          [
+            -0.9840639084645624,
+            -0.018294401830911043,
+            -0.17687153224614283
+          ]
+        ],
+        "sourceNativeWrist": [
+          0.35358726978302,
+          -0.02724618837237358,
+          0.8695228099822998
+        ],
+        "runtimeRodCentre": [
+          0.9247372330920428,
+          0.7794272215828211,
+          -0.3304915611654677
+        ],
+        "gripMorphName": "gripClosed.R",
+        "sourceMorphSHA256": "626f1d0412583bd1e67054bf318fa1c72717a49f76af9ba87e3d691ff80fcac9"
+      },
+      "L": {
+        "targetWorldQuaternion": [
+          -0.08573923133644505,
+          -0.07740966740660991,
+          -0.5703968264229928,
+          -0.8132059935885937
+        ],
+        "sourceNativeSide": "R",
+        "nativeVirtualPhysicsMarker": [
+          -0.3853270411491394,
+          -0.016481827944517136,
+          0.782585620880127
+        ],
+        "sourceHandRestMatrix": [
+          [
+            0.8443563580513,
+            -0.32228541374206543,
+            -0.428011953830719,
+            -0.3563070297241211
+          ],
+          [
+            0.3222854435443878,
+            -0.3326553404331207,
+            0.8862689137458801,
+            -0.02277236245572567
+          ],
+          [
+            -0.42801210284233093,
+            -0.8862689137458801,
+            -0.1770116686820984,
+            0.8687809705734253
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "nativeToRuntimeRotation": [
+          [
+            -0.22371069813057368,
+            -0.3373103829822689,
+            -0.9144261747534823
+          ],
+          [
+            0.05113919375150902,
+            -0.9409743463329313,
+            0.3345923824682177
+          ],
+          [
+            -0.9733130567316853,
+            0.028088878148967357,
+            0.22775580897082634
+          ]
+        ],
+        "sourceNativeWrist": [
+          -0.3563070595264435,
+          -0.02277236431837082,
+          0.8687809705734253
+        ],
+        "runtimeRodCentre": [
+          0.9247372330920428,
+          0.7794272215828211,
+          0.3304915611654677
+        ],
+        "gripMorphName": "gripClosed.L",
+        "sourceMorphSHA256": "61c05eabac0e3b19401e5c4e172d9ffdd2c32a5864681ba8e336b5dcd7b9089c"
+      }
+    },
+    "legacyAnkleToSoleDisplacement": [
+      -0.01,
+      -0.079,
+      0.0
+    ],
+    "scope": "Privatecontactadapter; sourcebind preserved, physicsunchanged; playedapprovalpending"
+  },
+  "restAxes": [
+    {
+      "bone": "pelvis",
+      "child": "spine",
+      "anatomicalWorldDirection": [
+        -0.05434135602105958,
+        0.9985224168869683,
+        0.0
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 3.1150647599054633
+    },
+    {
+      "bone": "spine",
+      "child": "chest",
+      "anatomicalWorldDirection": [
+        -0.03497858217561866,
+        0.999388062160532,
+        0.0
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 2.0045340321060077
+    },
+    {
+      "bone": "chest",
+      "child": "neck",
+      "anatomicalWorldDirection": [
+        -0.0012127888397701965,
+        0.9999992645713445,
+        -1.5979545063077672e-08
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 0.06948769900166885
+    },
+    {
+      "bone": "neck",
+      "child": "head",
+      "anatomicalWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 0.0
+    },
+    {
+      "bone": "shoulder.L",
+      "child": "upperArm.L",
+      "anatomicalWorldDirection": [
+        -4.936340361529752e-07,
+        -8.641131746132132e-07,
+        0.9999999999995047
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 90.00004951003793
+    },
+    {
+      "bone": "upperArm.L",
+      "child": "forearm.L",
+      "anatomicalWorldDirection": [
+        -0.015382617053537568,
+        -0.9691161626779485,
+        0.24612443667574335
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 165.72331541715215
+    },
+    {
+      "bone": "forearm.L",
+      "child": "hand.L",
+      "anatomicalWorldDirection": [
+        0.17679524517189293,
+        -0.9482110742198246,
+        0.26389240233757505
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 161.47968199017322
+    },
+    {
+      "bone": "thigh.L",
+      "child": "shin.L",
+      "anatomicalWorldDirection": [
+        0.021972797695981833,
+        -0.9961001622178424,
+        0.08544976881770704
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 174.93823309077172
+    },
+    {
+      "bone": "shin.L",
+      "child": "foot.L",
+      "anatomicalWorldDirection": [
+        -0.10874591545168834,
+        -0.9894165765985946,
+        0.09606853712059776
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 171.6567647773388
+    },
+    {
+      "bone": "shoulder.R",
+      "child": "upperArm.R",
+      "anatomicalWorldDirection": [
+        -2.661226404766256e-07,
+        -6.155443515371799e-07,
+        -0.9999999999997752
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 90.00003526809344
+    },
+    {
+      "bone": "upperArm.R",
+      "child": "forearm.R",
+      "anatomicalWorldDirection": [
+        -0.015382633373098196,
+        -0.9691161762181543,
+        -0.24612438234114897
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 165.72331856306468
+    },
+    {
+      "bone": "forearm.R",
+      "child": "hand.R",
+      "anatomicalWorldDirection": [
+        0.19376696646593447,
+        -0.9474962990978227,
+        -0.2543720226410898
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 161.3511815556571
+    },
+    {
+      "bone": "thigh.R",
+      "child": "shin.R",
+      "anatomicalWorldDirection": [
+        0.021972797695981833,
+        -0.9961001622178424,
+        -0.08544976881770704
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 174.93823309077172
+    },
+    {
+      "bone": "shin.R",
+      "child": "foot.R",
+      "anatomicalWorldDirection": [
+        -0.10874588458842706,
+        -0.9894165778193965,
+        -0.09606855948349692
+      ],
+      "conventionalLocalYWorldDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "angleDifferenceDegrees": 171.65676525938858
+    }
+  ],
+  "requiredDriverChange": "FreshC19uses world-aligned bone coordinate bases. The existing d0=local+Y transformed by q0 assumption is invalid for fresh limbs (about180degrees). Use explicit child anatomical rest vectors, preserving q0 and fresh binds. No copying local animated rotations between rigs.",
+  "conditioning": "Explicitly baked freshskin bypass remains required after canonical name mapping; do not run legacy conditionSleeveSkin on renamedfreshgeometry.",
+  "limits": [
+    "Static V5 source mapping only. Authored clips are retained but are not used by this physical control.",
+    "Sockets match rest frames, not proof skinned fingertip/sole pads maintain contact in motion.",
+    "C19authored clips are diagnostic, not game sit_cruise/idle/additive contract; Garage blending remains open.",
+    "No production or face/fullbody quality pass; historical source files untouched."
+  ]
+}

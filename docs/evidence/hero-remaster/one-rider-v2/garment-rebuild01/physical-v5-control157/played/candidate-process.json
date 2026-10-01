@@ -1,0 +1,91 @@
+{
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-fresh-rig-motion.mts",
+        "--build=harness/out/hero-remaster/new-rider-physical-v5-control157-overlay",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/candidate/side/textured",
+        "--angle=side",
+        "--surface=textured",
+        "--camera-version=orbit02",
+        "--sleeve-review-driver=0",
+        "--camera-reference=docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind25/morph01/played/baseline/side/textured/report.json"
+      ],
+      "status": 0,
+      "seconds": 49.449817917000004
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-fresh-rig-motion.mts",
+        "--build=harness/out/hero-remaster/new-rider-physical-v5-control157-overlay",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/candidate/side/gray",
+        "--angle=side",
+        "--surface=gray",
+        "--camera-version=orbit02",
+        "--sleeve-review-driver=0",
+        "--camera-reference=docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind25/morph01/played/baseline/side/gray/report.json"
+      ],
+      "status": 0,
+      "seconds": 44.408542333
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-fresh-rig-motion.mts",
+        "--build=harness/out/hero-remaster/new-rider-physical-v5-control157-overlay",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/candidate/rear-three-quarter/textured",
+        "--angle=rear-three-quarter",
+        "--surface=textured",
+        "--camera-version=orbit02",
+        "--sleeve-review-driver=0",
+        "--camera-reference=docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind25/morph01/played/baseline/rear-three-quarter/textured/report.json"
+      ],
+      "status": 0,
+      "seconds": 48.508205583000006
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-fresh-rig-motion.mts",
+        "--build=harness/out/hero-remaster/new-rider-physical-v5-control157-overlay",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/candidate/rear-three-quarter/gray",
+        "--angle=rear-three-quarter",
+        "--surface=gray",
+        "--camera-version=orbit02",
+        "--sleeve-review-driver=0",
+        "--camera-reference=docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind25/morph01/played/baseline/rear-three-quarter/gray/report.json"
+      ],
+      "status": 0,
+      "seconds": 47.45430816699999
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=harness/out/hero-remaster/new-rider-physical-v5-control157-overlay",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/candidate-ship157.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json",
+        "--sleeve-review-driver=0"
+      ],
+      "status": 0,
+      "seconds": 12.119415083999996
+    }
+  ],
+  "seconds": 201.944278792,
+  "peakAnonymousBytes": 50579587072,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "memoryLimitBytes": 70000000000,
+  "timeLimitSeconds": 1700
+}
