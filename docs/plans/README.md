@@ -55,6 +55,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round127 proves native corn
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round128 reproduces52 sleeve support switches across4×480 actual rows; retained arm travel crosses sparse neighborhoods, no quaternion/world-prefix bug.12fps cannot prove IK discontinuity. Stop sparse ARAP;26 anatomical weights after protected selection proof.27 iris/lid/gaze audit underway; eye22skin retained. Current11/gallery122 retained, no player promotion. Ship next129.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round129 publishes21-video phone gallery preserving all15old clips, adds retained22eye skin/rejected24optics and matched sleeve25baseline/candidate. Local silent390/1200 all21play/nooverflow; exact source private Sites deploy succeeds. Unchanged11 required ship bytefinish/hash exact, crash103/restart1/2ms.26anatomical weights and27iris audit frozen; no asset promotion. PhysicaliPhone/quality open. Ship next132.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

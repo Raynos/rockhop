@@ -1354,3 +1354,14 @@ Validation: Parent reproducible CPU audit passes all4×480 rows; nearest
 reconstruction error2.33e-7rad and camera-relative features agree.
 Limits: 12fps cannot prove instantaneous IK discontinuity. Preserve physics;
 geometry-selected anatomical arm weights and iris/lid audit are next.
+
+## Round129 — preserve all comparisons in the21-video phone gallery
+
+Finding: Hosted actual moving comparisons let the phone review retain both
+improvement and rejected experiments instead of replacing older evidence.
+Validation: Silent390/1200 WebKit all21videos play, four image boards load,
+no overflow; parent reviews layout. Exact pushed source private deployment
+succeeds. Required unchanged11 ship low/high byte-exact finish/hash, crash
+103ticks/restart1/2ms and no errors. All15old clips preserved.
+Limits: Physical iPhone and candidate quality are open. Sleeve25/optics24
+remain rejected;22face6.8 below7. Publication is evidence, not promotion.

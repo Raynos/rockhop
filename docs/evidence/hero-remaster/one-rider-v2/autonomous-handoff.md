@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round128, 2026-10-01
+## Current evidence — round129, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -708,3 +708,13 @@ instantaneous IK discontinuity, so physics stays protected. Stop sparse ARAP
 repair; bounded anatomical sleeve weights26 underway after hood/cuff/core
 selection proof. Eye27 read-only iris/lid/gaze audit underway after optical24
 rejection. Current11/gallery122 retained; no normal asset changes. Ship next129.
+
+Round129: private phone gallery updated to21videos, retaining all15previous
+clips and adding retained22skin/24rejected optics plus matched40sec sleeve25
+baseline/candidate side/rear. Source videos untouched; four gallery review
+encodes recorded. Local silent WebKit390/1200 all21play, images decode, no
+overflow; parent reads actual layout. Exact pushed source and native private
+Sites deployment succeeded. Required unchanged11 low/high ship passes byte
+finish/hash, crash103ticks/restart1/2ms, errors0. No physicaliPhone pass or new
+asset acceptance.26 anatomicalweights frozen for motion;27iris diagnosis frozen.
+Current11 protected; eye22skin retained; next required ship132.
