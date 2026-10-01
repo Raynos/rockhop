@@ -334,3 +334,14 @@ weights. Original native groups and failed evidence remain unchanged.
 
 Limits: Coarse cuff folds/seam stretch14.782mm remain disclosed. This
 temporary preview approves material work only; no collisions/grip/finalrig.
+
+Finding: Native skin atlas aligns cleanly with fixed anatomical UVs,
+but pale/blond palette and weak brows miss the target. Approve mapping
+foundation only; compare darker native atlases without warping geometry.
+
+Validation: Parent reviewed actual PBRfront/profile; source skin/eye
+geometry and UV unchanged. Installed2048CC0diffuse/1024eyes named and
+hashed. Fresh silent low/high exact clear/crash/2–4ms restart passes.
+
+Limits: No normal/roughnessmaps, successfulPixalbake, final likeness or
+character acceptance. Originalheaddeadline00:31:54UTC remains.
