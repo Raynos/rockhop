@@ -1062,3 +1062,14 @@ Parent front18/A-B reviewed;face6.5 unchanged. Sourcebinary/geometry/UV/rig and
 2msLOW3msHIGH/errors0. GPU51.500s/54.236GB under canonical lock.
 Limits: Rejected texture trial. UV duplicate/base-level probe is diagnostic;
 eyes/hair, target8 and later rig/gameplay gates remain open.
+
+## Round101 — shared physical cheek color field
+
+Finding: Joint harmonic surface-color baking is a different mechanism from
+margin-only repair. Keep original WHITEbody/rig; map the shared field into
+originalUVs and protect source head texels outside6mm surface band.
+Validation: Sourcebinary/geometry/UV/rig exact;151sharedpoints0gap;519unknown
+finite colors/382anchors. Guarded finite barycentric bake is byteidentical
+to initial warning-producing bake; sourceRGBmedian10.959→6.869. CPUonly.
+Limits: Modest color proxy, not actual appearance. Keep09; round102played
+comparison and NEWshipgate next. Eyes/hair and target8 remain open.

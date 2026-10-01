@@ -761,3 +761,9 @@ exact;72grayPNGpixel-identical. Source geometry and occupied665739texels exact.
 151shared positions have0gap but localRGB differs; next joint geometry-mapped
 boundary-color bake, no repeat padding/polyfit/remesh. Historical5+1 failures
 retained. NEWbothclear byteexact/crash103/restart2/3ms/errors0; budget passes.
+
+Round101: NEW joint physical harmonic color bake11 preserves allgeometry/UV/rig,
+only image5/6;6mmheadband/151sharedpoints/519unknown/382anchors. SourceRGB
+median10.959→6.869, modest proxyonly. Initialmatmulwarnings/guardedfinite
+correction producebyteidenticalGLB; noappearanceacceptance. Keep09 until
+round102actualzoom3 comparison and NEWshipgate. Eyes/hair/target8 stillopen.

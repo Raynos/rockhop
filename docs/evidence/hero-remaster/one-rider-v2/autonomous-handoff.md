@@ -458,3 +458,8 @@ Round100: REJECT10padding-only; keep09WHITE.72grayPNGpixel-identical and
 camera/state/debug exact;actual cheek outlines persist.151sharedpoints0gap,
 localRGB contrast measured. Next joint color bake with geometric correspondence.
 One margin failure added;historical5 retained;no repeat padding/polyfit.
+
+Round101: joint physical harmoniccolor11 ready foractualreview, sameWHITE09
+rest/UV/rig/clips, onlyimages5/6 changed.151points/519unknown/382anchors,
+6mmband; sourceRGBmedian10.959→6.869proxyonly. Matmulwarning correction
+finite/byteidentical. Keep09 until round102actualface/NEWshipgate review.
