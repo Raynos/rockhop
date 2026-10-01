@@ -1384,3 +1384,14 @@ materials/19bones/debug/contacts/seat and protected surfaces exact.
 Historicalfolds52/4/37/61, originalelbow1.62–2.02x; deterministic repeat exact.
 Limits: Newfolds42/0/29/45,44.55cm motion, worsened extreme gradients and
 pinned shoulderdefects. No artpass; same recorded40sec moving review next.
+
+## Round132 — reject underarm spikes despite improved elbow metrics
+
+Finding: Local anatomical arm weights improve elbow volume but introduce
+large underarm/torso fans; baseline comparison proves a visual regression.
+Validation: Actual4x480matched records exact, parent144candidate/144baseline
+ordered windows plus24candidate frames reviewed; all1920source/movieframes
+archived. Required low/high ship bytefinish/hash exact, crash103/restart3/4ms.
+Limits: No full-body/face score from crop; boundarycause is still a hypothesis.
+Stop localfield/taper tuning; audit complete connected junction/aliases before
+a continuous topology-aware field or targeted retopology. No promotion.

@@ -1057,3 +1057,15 @@ stretch1.62–2.02x/normaldots.94–.98; historicalfolds52/4/37/61 but newfolds
 for same40sec PBR/gray side/rear movingtrial; no sparsecorrectivedriver or
 composition. No artacceptance. One28iris-only append treatment underway.
 Current11/gallery129protected; requiredship132next.
+
+Round132: reject26anatomical sleeve in actual motion. Fuller elbow introduces
+large jagged underarm/torsofans absent from baseline, especially side109–116
+and303–310/421–432; rear hides some. Parent144candidate/144baseline ordered
+windows plus24candidate sequence reviewed. All4x480states/hash/debug/bones/
+camera/anchor exact;1920source/movieframes privately archived;4complete40sec
+movies retained. Required low/high ship132finish/hash byteexact, crash103/
+restart3/4ms, errors0. Stop local field/taper tuning andARAP. Whole connected
+junction/protectedalias audit before continuous topology-aware weights or
+targeted junctionretopology; boundarycause remains hypothesis.28iris-only
+trial separately frozen soon. No fullbody/facegrade fromcrop or promotion.
+Current11/gallery129protected; nextrequiredship135.

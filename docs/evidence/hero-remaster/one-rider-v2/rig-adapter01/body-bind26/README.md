@@ -26,3 +26,24 @@ The source provenance exposes a protected-boundary conflict: shoulder extrema265
 Actual Three.js reconstruction of the same four recorded states verifies exact bones, debug values, palm/sole contacts and seat buffers. Outside changed sleeve vertices, positions and normals remain exact against source11; captured donor hood positions/normals remain exact. Source11's corrected baseline from25 includes retained original grip normal morphs. CPU-to-retained-played contact error stays16.294nm. `verification.json` records independent area/stretch/fold measures, new triangle IDs and original elbow/shoulder witnesses.
 
 The parent owns any subsequent rendered motion judgment after the evidence checkpoint. There is no moving visual score, garment collision certificate, acceptance or production promotion. All58 actual CPU payloads are archived privately with SHA receipts. CPU recipes use two BLAS threads; Python compilation, actual TS execution, targeted lint and deterministic repeat pass. No GPU, model, browser or commit was performed by this builder.
+
+## Parent moving judgment — round132: reject
+
+Actual4x480-frame40sec PBR/gray side/rear clips load exact26 bytes and
+match retained11 input/state/hash/debug/bones/camera/anchor. No corrective
+driver. Parent reviews144 candidate/144 baseline ordered windows and one
+additional24-frame candidate side sequence. All1920source/movie frames
+are archived privately; four complete movies and80ordered boards remain.
+
+The elbow has fuller volume, but the candidate introduces large jagged
+underarm/torso fans that are absent from matched baseline. Rear can hide
+this; side windows109–116,303–310 and421–432 prove rejection. There is no
+full-body/face grade from this crop. Historical fold counts are inadequate.
+
+Stop direct local anatomy field/taper tuning. The frozen torso/hood boundary
+is a plausible conflict but offending projected triangles are not yet mapped.
+Audit the whole connected junction and protected aliases before a topology-
+aware continuous field or targeted junction retopology. Protect head/neck
+geometry and join continuity, without assuming every old shoulder weight
+is good. No ARAP sweep or composition. Required low/high ship132 passes
+byte-exact finish/hash, crash103ticks/restart3/4ms, errors0.
