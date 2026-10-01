@@ -1,0 +1,1086 @@
+{
+  "status": "Coherent source cross-section cage fit; unaccepted before gray/actual pose review",
+  "sourceFit01SHA256": "8a25cafc2a6f2da9d5fdd8ea9c26518a0416f4b707a7f0c5a5ee102b2b7d8a79",
+  "fit04SHA256": "9667f6a19ad0272eff603643f38809c5fe91b9126e0c8c653d60a53f141c48b7",
+  "weightsUVTopologyExact": true,
+  "vertices": 2136,
+  "quads": 2060,
+  "restNormalOpposition": 0,
+  "restEdgeChangeQuantiles": [
+    0.5675702577179649,
+    1.0566496603242093,
+    1.3113444401147731,
+    1.4797673884670794,
+    2.3143939788143135
+  ],
+  "displacementQuantilesM": [
+    0.0004351437533171327,
+    0.019643900199180532,
+    0.04393823372266452,
+    0.09090120716767726,
+    0.09571532053729741
+  ],
+  "hemShiftM": 0.06881879883761166,
+  "seconds": 0.0412101661786437,
+  "settings": {
+    "crossSectionExtent": "Exact triangle-plane intersection min/max, deduplicated at1e-8",
+    "minimumIntersectionPoints": 8,
+    "nativeRoleBlend": "Exact fit01 anatomical weights; no hard per-vertex panel snapping",
+    "upperArmStations": [
+      0.5,
+      0.65,
+      0.85
+    ],
+    "forearmStations": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.85
+    ],
+    "waistStations": [
+      0.1,
+      0.25,
+      0.4,
+      0.5
+    ],
+    "legStationRange": [
+      0.05,
+      0.85
+    ],
+    "radiusScaleGuard": [
+      0.35,
+      3.0
+    ],
+    "detail": "Low-frequency coherent cage only; original source surface not altered or decimated"
+  },
+  "profiles": [
+    {
+      "panel": "torso",
+      "a": [
+        0.64,
+        0.9,
+        0.0
+      ],
+      "b": [
+        0.64,
+        1.48,
+        0.0
+      ],
+      "records": [
+        {
+          "station": 0.05,
+          "nativeCenter": [
+            0.027520585,
+            -0.00174245499999999
+          ],
+          "nativeRadius": [
+            0.114406465,
+            0.171664525
+          ],
+          "sourceCenter": [
+            0.006712725000000003,
+            0.0013869900000000046
+          ],
+          "sourceRadius": [
+            0.143432965,
+            0.19884861
+          ],
+          "nativeSamples": 56,
+          "sourceSamples": 134
+        },
+        {
+          "station": 0.19166666666666665,
+          "nativeCenter": [
+            0.03217107500000001,
+            -0.0011353100000000005
+          ],
+          "nativeRadius": [
+            0.122915905,
+            0.16581587
+          ],
+          "sourceCenter": [
+            0.030778595000000006,
+            0.002805495000000005
+          ],
+          "sourceRadius": [
+            0.14944025500000002,
+            0.197569695
+          ],
+          "nativeSamples": 74,
+          "sourceSamples": 182
+        },
+        {
+          "station": 0.3333333333333333,
+          "nativeCenter": [
+            0.048051670000000005,
+            -1.7400000000000748e-05
+          ],
+          "nativeRadius": [
+            0.11380520000000001,
+            0.16024537
+          ],
+          "sourceCenter": [
+            0.006020915000000002,
+            -0.002424845000000009
+          ],
+          "sourceRadius": [
+            0.160823975,
+            0.198889435
+          ],
+          "nativeSamples": 72,
+          "sourceSamples": 200
+        },
+        {
+          "station": 0.475,
+          "nativeCenter": [
+            0.05021383,
+            -1.0049999999983683e-06
+          ],
+          "nativeRadius": [
+            0.11003729,
+            0.156082275
+          ],
+          "sourceCenter": [
+            -0.0011876049999999944,
+            0.0069472849999999975
+          ],
+          "sourceRadius": [
+            0.15247829499999999,
+            0.223595665
+          ],
+          "nativeSamples": 72,
+          "sourceSamples": 262
+        },
+        {
+          "station": 0.6166666666666667,
+          "nativeCenter": [
+            0.044396255,
+            -1.0999999999761201e-07
+          ],
+          "nativeRadius": [
+            0.11127679500000001,
+            0.1541166
+          ],
+          "sourceCenter": [
+            0.0017571899999999918,
+            -0.004628670000000001
+          ],
+          "sourceRadius": [
+            0.14800611,
+            0.23397319
+          ],
+          "nativeSamples": 72,
+          "sourceSamples": 239
+        },
+        {
+          "station": 0.7583333333333333,
+          "nativeCenter": [
+            0.033897329999999996,
+            -1.3099999999904854e-06
+          ],
+          "nativeRadius": [
+            0.11518344999999999,
+            0.1951507
+          ],
+          "sourceCenter": [
+            0.0009316300000000027,
+            -0.002813214999999994
+          ],
+          "sourceRadius": [
+            0.14109581,
+            0.22625864499999998
+          ],
+          "nativeSamples": 94,
+          "sourceSamples": 264
+        },
+        {
+          "station": 0.9,
+          "nativeCenter": [
+            0.006722220000000001,
+            4.142999999999508e-05
+          ],
+          "nativeRadius": [
+            0.10692756,
+            0.21170403999999998
+          ],
+          "sourceCenter": [
+            0.0029654399999999997,
+            0.003869675000000003
+          ],
+          "sourceRadius": [
+            0.11864442,
+            0.217869555
+          ],
+          "nativeSamples": 72,
+          "sourceSamples": 111
+        }
+      ]
+    },
+    {
+      "panel": "upperArm.L",
+      "a": [
+        0.6296998858451843,
+        1.4616000652313232,
+        0.20807497203350067
+      ],
+      "b": [
+        0.6246249079704285,
+        1.1418750286102295,
+        0.2892748713493347
+      ],
+      "records": [
+        {
+          "station": 0.5,
+          "nativeCenter": [
+            -0.001663590000000003,
+            -0.003196830000000001
+          ],
+          "nativeRadius": [
+            0.0589785,
+            0.053251320000000005
+          ],
+          "sourceCenter": [
+            -0.023329995000000003,
+            -0.007294989999999998
+          ],
+          "sourceRadius": [
+            0.074071445,
+            0.057377929999999994
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 53
+        },
+        {
+          "station": 0.65,
+          "nativeCenter": [
+            0.0025070300000000004,
+            -0.0034843350000000016
+          ],
+          "nativeRadius": [
+            0.05850602,
+            0.051268575
+          ],
+          "sourceCenter": [
+            -0.015612965000000003,
+            -0.009647685
+          ],
+          "sourceRadius": [
+            0.075224235,
+            0.05932243499999999
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 56
+        },
+        {
+          "station": 0.85,
+          "nativeCenter": [
+            0.010090365000000004,
+            -0.004320650000000002
+          ],
+          "nativeRadius": [
+            0.052515905,
+            0.04780334
+          ],
+          "sourceCenter": [
+            -0.007425424999999999,
+            -0.013651644999999997
+          ],
+          "sourceRadius": [
+            0.075935725,
+            0.07366735499999999
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 82
+        }
+      ]
+    },
+    {
+      "panel": "forearm.L",
+      "a": [
+        0.6246249079704285,
+        1.1418750286102295,
+        0.2892748713493347
+      ],
+      "b": [
+        0.6731138825416565,
+        0.8818126916885376,
+        0.3616516590118408
+      ],
+      "records": [
+        {
+          "station": 0.1,
+          "nativeCenter": [
+            0.010794015,
+            -0.003089535000000001
+          ],
+          "nativeRadius": [
+            0.048262945,
+            0.045932755000000006
+          ],
+          "sourceCenter": [
+            -0.01546695,
+            -0.011531375
+          ],
+          "sourceRadius": [
+            0.06749833,
+            0.067362635
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 77
+        },
+        {
+          "station": 0.3,
+          "nativeCenter": [
+            0.00373946,
+            -0.002262054999999999
+          ],
+          "nativeRadius": [
+            0.0457054,
+            0.045543685
+          ],
+          "sourceCenter": [
+            -0.011397540000000001,
+            -0.0036622400000000006
+          ],
+          "sourceRadius": [
+            0.058497980000000005,
+            0.06139286000000001
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 78
+        },
+        {
+          "station": 0.5,
+          "nativeCenter": [
+            0.00030113999999999835,
+            -0.0006477099999999993
+          ],
+          "nativeRadius": [
+            0.04055343,
+            0.041576310000000005
+          ],
+          "sourceCenter": [
+            -0.009682269999999996,
+            0.0006827300000000029
+          ],
+          "sourceRadius": [
+            0.05586792,
+            0.05414478
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 76
+        },
+        {
+          "station": 0.7,
+          "nativeCenter": [
+            -0.0003842450000000018,
+            0.0008923899999999999
+          ],
+          "nativeRadius": [
+            0.035998035,
+            0.03639318
+          ],
+          "sourceCenter": [
+            -0.006485765000000001,
+            0.006497445000000001
+          ],
+          "sourceRadius": [
+            0.049682155000000006,
+            0.043797055
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 68
+        },
+        {
+          "station": 0.85,
+          "nativeCenter": [
+            -0.00031878000000000115,
+            0.0005318900000000001
+          ],
+          "nativeRadius": [
+            0.033242560000000004,
+            0.03252395
+          ],
+          "sourceCenter": [
+            0.0004017249999999986,
+            0.009283625
+          ],
+          "sourceRadius": [
+            0.047867635,
+            0.038706304999999996
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 45
+        }
+      ]
+    },
+    {
+      "panel": "upperArm.R",
+      "a": [
+        0.6297000050544739,
+        1.4616000652313232,
+        -0.20807500183582306
+      ],
+      "b": [
+        0.624625027179718,
+        1.1418750286102295,
+        -0.2892749011516571
+      ],
+      "records": [
+        {
+          "station": 0.5,
+          "nativeCenter": [
+            -0.0016273400000000014,
+            0.00319792
+          ],
+          "nativeRadius": [
+            0.059014750000000005,
+            0.05325053
+          ],
+          "sourceCenter": [
+            -0.006337910000000002,
+            -0.0004540849999999999
+          ],
+          "sourceRadius": [
+            0.08776546,
+            0.057061065
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 77
+        },
+        {
+          "station": 0.65,
+          "nativeCenter": [
+            0.002505924999999999,
+            0.0034896300000000005
+          ],
+          "nativeRadius": [
+            0.058504915,
+            0.05125953
+          ],
+          "sourceCenter": [
+            -0.0045987050000000015,
+            0.008750590000000003
+          ],
+          "sourceRadius": [
+            0.07930785500000001,
+            0.07045727
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 83
+        },
+        {
+          "station": 0.85,
+          "nativeCenter": [
+            0.009991739999999995,
+            0.004332229999999999
+          ],
+          "nativeRadius": [
+            0.052634589999999995,
+            0.04776825
+          ],
+          "sourceCenter": [
+            -0.015681610000000002,
+            0.008430600000000003
+          ],
+          "sourceRadius": [
+            0.0774601,
+            0.07143052999999999
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 88
+        }
+      ]
+    },
+    {
+      "panel": "forearm.R",
+      "a": [
+        0.624625027179718,
+        1.1418750286102295,
+        -0.2892749011516571
+      ],
+      "b": [
+        0.6776549220085144,
+        0.8825655579566956,
+        -0.3588910698890686
+      ],
+      "records": [
+        {
+          "station": 0.1,
+          "nativeCenter": [
+            0.011214025000000002,
+            0.0031491199999999983
+          ],
+          "nativeRadius": [
+            0.048003535,
+            0.04588482
+          ],
+          "sourceCenter": [
+            -0.015758055000000003,
+            0.009796515000000002
+          ],
+          "sourceRadius": [
+            0.073073605,
+            0.066708035
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 88
+        },
+        {
+          "station": 0.3,
+          "nativeCenter": [
+            0.0038309499999999996,
+            0.0022962499999999997
+          ],
+          "nativeRadius": [
+            0.04561791,
+            0.0455495
+          ],
+          "sourceCenter": [
+            -0.016318664999999996,
+            0.0035184299999999995
+          ],
+          "sourceRadius": [
+            0.058983175,
+            0.0582187
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 78
+        },
+        {
+          "station": 0.5,
+          "nativeCenter": [
+            0.00031532499999999825,
+            0.0006475849999999991
+          ],
+          "nativeRadius": [
+            0.040551505,
+            0.041581095
+          ],
+          "sourceCenter": [
+            -0.008545664999999997,
+            -0.003077449999999999
+          ],
+          "sourceRadius": [
+            0.058955885,
+            0.05205316
+          ],
+          "nativeSamples": 42,
+          "sourceSamples": 84
+        },
+        {
+          "station": 0.7,
+          "nativeCenter": [
+            -0.0003717449999999997,
+            -0.0008999449999999992
+          ],
+          "nativeRadius": [
+            0.035973725,
+            0.036387865
+          ],
+          "sourceCenter": [
+            -0.007564645000000002,
+            -0.006599630000000002
+          ],
+          "sourceRadius": [
+            0.047626675,
+            0.04205731
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 62
+        },
+        {
+          "station": 0.85,
+          "nativeCenter": [
+            -0.00032257499999999856,
+            -0.0005072299999999974
+          ],
+          "nativeRadius": [
+            0.033197665,
+            0.03252911
+          ],
+          "sourceCenter": [
+            -0.00317719,
+            -0.009196535000000002
+          ],
+          "sourceRadius": [
+            0.04703332,
+            0.040674945000000004
+          ],
+          "nativeSamples": 40,
+          "sourceSamples": 52
+        }
+      ]
+    },
+    {
+      "panel": "jeansWaist",
+      "a": [
+        0.64,
+        0.78,
+        0.0
+      ],
+      "b": [
+        0.64,
+        1.01,
+        0.0
+      ],
+      "records": [
+        {
+          "station": 0.1,
+          "nativeCenter": [
+            0.017669695,
+            2.4820000000008724e-05
+          ],
+          "nativeRadius": [
+            0.095740865,
+            0.18603887
+          ],
+          "sourceCenter": [
+            0.015525674999999996,
+            0.0036501699999999943
+          ],
+          "sourceRadius": [
+            0.107716815,
+            0.20760804
+          ],
+          "nativeSamples": 74,
+          "sourceSamples": 208
+        },
+        {
+          "station": 0.25,
+          "nativeCenter": [
+            0.015190800000000004,
+            0.0006681149999999969
+          ],
+          "nativeRadius": [
+            0.10537826,
+            0.178312155
+          ],
+          "sourceCenter": [
+            0.0057991150000000005,
+            0.0036544800000000016
+          ],
+          "sourceRadius": [
+            0.11806782499999999,
+            0.20470176
+          ],
+          "nativeSamples": 58,
+          "sourceSamples": 191
+        },
+        {
+          "station": 0.4,
+          "nativeCenter": [
+            0.016982039999999997,
+            8.967000000000003e-05
+          ],
+          "nativeRadius": [
+            0.11242132999999999,
+            0.16953304000000002
+          ],
+          "sourceCenter": [
+            0.007863109999999993,
+            0.002322354999999998
+          ],
+          "sourceRadius": [
+            0.13194684,
+            0.201134345
+          ],
+          "nativeSamples": 58,
+          "sourceSamples": 155
+        },
+        {
+          "station": 0.5,
+          "nativeCenter": [
+            0.018502399999999995,
+            -8.548999999999363e-05
+          ],
+          "nativeRadius": [
+            0.1158611,
+            0.16539607
+          ],
+          "sourceCenter": [
+            0.006693919999999992,
+            0.0001124700000000034
+          ],
+          "sourceRadius": [
+            0.13493274,
+            0.19824302
+          ],
+          "nativeSamples": 64,
+          "sourceSamples": 120
+        }
+      ]
+    },
+    {
+      "panel": "jeansL",
+      "a": [
+        0.64,
+        0.2,
+        0.18
+      ],
+      "b": [
+        0.64,
+        0.96,
+        0.11
+      ],
+      "records": [
+        {
+          "station": 0.05,
+          "nativeCenter": [
+            -0.02984899,
+            -0.004747015
+          ],
+          "nativeRadius": [
+            0.06548723000000001,
+            0.054784775
+          ],
+          "sourceCenter": [
+            -0.03474292500000001,
+            0.011021040000000003
+          ],
+          "sourceRadius": [
+            0.069395765,
+            0.08638629
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 89
+        },
+        {
+          "station": 0.16428571428571428,
+          "nativeCenter": [
+            -0.027660479999999998,
+            -0.004631235000000001
+          ],
+          "nativeRadius": [
+            0.0682057,
+            0.057825005
+          ],
+          "sourceCenter": [
+            -0.035976034999999996,
+            0.004471265000000002
+          ],
+          "sourceRadius": [
+            0.071556425,
+            0.080561365
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 98
+        },
+        {
+          "station": 0.2785714285714286,
+          "nativeCenter": [
+            -0.021381835,
+            -0.0017561199999999964
+          ],
+          "nativeRadius": [
+            0.071489185,
+            0.060959139999999995
+          ],
+          "sourceCenter": [
+            -0.013702015000000005,
+            0.0050327650000000015
+          ],
+          "sourceRadius": [
+            0.081702615,
+            0.07691604499999999
+          ],
+          "nativeSamples": 36,
+          "sourceSamples": 100
+        },
+        {
+          "station": 0.39285714285714285,
+          "nativeCenter": [
+            8.964999999999668e-05,
+            0.00573767
+          ],
+          "nativeRadius": [
+            0.07287678,
+            0.05975471
+          ],
+          "sourceCenter": [
+            0.01271112,
+            0.008137174999999996
+          ],
+          "sourceRadius": [
+            0.08934763000000001,
+            0.069083755
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 101
+        },
+        {
+          "station": 0.5071428571428571,
+          "nativeCenter": [
+            0.017033859999999998,
+            0.012870459999999997
+          ],
+          "nativeRadius": [
+            0.07974869,
+            0.06829033
+          ],
+          "sourceCenter": [
+            0.027464805000000002,
+            0.012123079999999994
+          ],
+          "sourceRadius": [
+            0.08899863499999999,
+            0.0786525
+          ],
+          "nativeSamples": 36,
+          "sourceSamples": 113
+        },
+        {
+          "station": 0.6214285714285714,
+          "nativeCenter": [
+            0.024602659999999995,
+            0.014828204999999997
+          ],
+          "nativeRadius": [
+            0.08540239,
+            0.076700885
+          ],
+          "sourceCenter": [
+            0.022496670000000003,
+            0.009127835
+          ],
+          "sourceRadius": [
+            0.09136315,
+            0.093603705
+          ],
+          "nativeSamples": 36,
+          "sourceSamples": 126
+        },
+        {
+          "station": 0.7357142857142858,
+          "nativeCenter": [
+            0.026075654999999996,
+            0.031233825000000007
+          ],
+          "nativeRadius": [
+            0.089661205,
+            0.094678045
+          ],
+          "sourceCenter": [
+            0.020437250000000004,
+            0.013031540000000001
+          ],
+          "sourceRadius": [
+            0.10009746,
+            0.09424713000000001
+          ],
+          "nativeSamples": 45,
+          "sourceSamples": 103
+        },
+        {
+          "station": 0.85,
+          "nativeCenter": [
+            0.013482300000000003,
+            0.01955524
+          ],
+          "nativeRadius": [
+            0.1046955,
+            0.07320641
+          ],
+          "sourceCenter": [
+            0.006794374999999998,
+            0.007622595000000003
+          ],
+          "sourceRadius": [
+            0.11593862499999999,
+            0.08740751499999999
+          ],
+          "nativeSamples": 28,
+          "sourceSamples": 86
+        }
+      ]
+    },
+    {
+      "panel": "jeansR",
+      "a": [
+        0.64,
+        0.2,
+        -0.18
+      ],
+      "b": [
+        0.64,
+        0.96,
+        -0.11
+      ],
+      "records": [
+        {
+          "station": 0.05,
+          "nativeCenter": [
+            -0.02899083,
+            0.0006196649999999984
+          ],
+          "nativeRadius": [
+            0.07098533,
+            0.058928585
+          ],
+          "sourceCenter": [
+            -0.03559948,
+            -0.009717255000000001
+          ],
+          "sourceRadius": [
+            0.07325953,
+            0.081101055
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 104
+        },
+        {
+          "station": 0.16428571428571428,
+          "nativeCenter": [
+            -0.027949264999999997,
+            0.0001583000000000001
+          ],
+          "nativeRadius": [
+            0.068501255,
+            0.06070607
+          ],
+          "sourceCenter": [
+            -0.031524010000000005,
+            0.00047432499999999767
+          ],
+          "sourceRadius": [
+            0.07146366,
+            0.080626805
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 102
+        },
+        {
+          "station": 0.2785714285714286,
+          "nativeCenter": [
+            -0.019522559999999998,
+            0.0016010650000000022
+          ],
+          "nativeRadius": [
+            0.07211196,
+            0.060660755
+          ],
+          "sourceCenter": [
+            -0.018909395,
+            0.0047116749999999985
+          ],
+          "sourceRadius": [
+            0.075379975,
+            0.078819545
+          ],
+          "nativeSamples": 36,
+          "sourceSamples": 94
+        },
+        {
+          "station": 0.39285714285714285,
+          "nativeCenter": [
+            0.004647980000000003,
+            -0.009782019999999999
+          ],
+          "nativeRadius": [
+            0.06936253,
+            0.06271083
+          ],
+          "sourceCenter": [
+            0.007185404999999999,
+            0.0024298999999999987
+          ],
+          "sourceRadius": [
+            0.09018367499999999,
+            0.07250917
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 99
+        },
+        {
+          "station": 0.5071428571428571,
+          "nativeCenter": [
+            0.020038250000000004,
+            -0.017297424999999998
+          ],
+          "nativeRadius": [
+            0.07474259,
+            0.071523415
+          ],
+          "sourceCenter": [
+            0.022755975000000005,
+            -0.004797300000000004
+          ],
+          "sourceRadius": [
+            0.087761495,
+            0.08006252
+          ],
+          "nativeSamples": 38,
+          "sourceSamples": 107
+        },
+        {
+          "station": 0.6214285714285714,
+          "nativeCenter": [
+            0.025452165,
+            -0.014869710000000001
+          ],
+          "nativeRadius": [
+            0.083112915,
+            0.07796658000000001
+          ],
+          "sourceCenter": [
+            0.023592145000000002,
+            -0.004226305
+          ],
+          "sourceRadius": [
+            0.091042485,
+            0.093997675
+          ],
+          "nativeSamples": 36,
+          "sourceSamples": 106
+        },
+        {
+          "station": 0.7357142857142858,
+          "nativeCenter": [
+            0.024439469999999998,
+            -0.029704645000000002
+          ],
+          "nativeRadius": [
+            0.08740044,
+            0.093630545
+          ],
+          "sourceCenter": [
+            0.020412345,
+            -0.00907231
+          ],
+          "sourceRadius": [
+            0.097769095,
+            0.09686536
+          ],
+          "nativeSamples": 44,
+          "sourceSamples": 104
+        },
+        {
+          "station": 0.85,
+          "nativeCenter": [
+            0.015064149999999998,
+            -0.031446329999999995
+          ],
+          "nativeRadius": [
+            0.10498898,
+            0.08664745
+          ],
+          "sourceCenter": [
+            0.004718649999999998,
+            -0.0026503650000000017
+          ],
+          "sourceRadius": [
+            0.11921275,
+            0.088735745
+          ],
+          "nativeSamples": 30,
+          "sourceSamples": 73
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No texture bake or continuous interface join; head/hood/gloves/shoes original sources protected.",
+    "Actual C19 pose probes, gray turntable and eventual game motion required."
+  ]
+}

@@ -103,6 +103,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round151 source-surface gar
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round152 sparse cage section estimator rejects forearm3.3197x before export. Guard unchanged, source/fit01 preserved, instrumented rerun records same measurement failure. Next actual triangle-plane sections for coherent panel cage; no new model or appearance pass. C19 kept; ship153next,150passed.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round153 coherent triangle-section cage04 retains native fields and zero rest reversals; partial armpit failure kept, bounded correction/guard unchanged.73frame/camera pairs/all72samples reviewed, editable master reopens. Actual C19 probes mixed: fewer shirt folds, severe strain7.37/8.21x; seams/appearance remain open. Literal source seam/skin mapping next; independent hoodie-repair02 active. Retained34ship153passed, next156. No promotion.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

@@ -1641,3 +1641,17 @@ Limits: No model, gray movie, pose/contact or appearance evidence generated.
 Ship150 retained34 passed; next153. All rider quality checkpoints remain open.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/cage03/
 Ask:239,241,242,245
+
+## Round153 — coherent source section cage retained for construction
+
+Finding: Actual triangle sections transfer broad garment volume without
+rest reversals. Retain cage04 for continuous interface construction, not
+as a complete textured or moving rider. Preserve failed partial sections.
+Validation: Serialized native quads/UV/weights exact; reopened Blender
+master59.44nm/2.98e-8precision,73frame/camera receipts/all72samples reviewed.
+Four actual C19 matrices have mixed strain/fold results. Retained34ship153
+both tiers bytefinish/hash/crash103/restart2/4ms/errors0. Guard unchanged.
+Limits: Rear hem/cut hood/cuff/shoe interfaces and severe shirt stretch remain;
+no complete rigged asset, fullbody/face grade, gameplay/contact/device pass.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/cage04/
+Ask:239,241,242,245,247

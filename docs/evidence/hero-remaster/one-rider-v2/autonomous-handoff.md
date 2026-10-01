@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round152, 2026-10-01
+## Current evidence — round153, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -36,14 +36,18 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
 - Fresh C19 skeleton with explicit14 child-axis/contact adapter34 is retained.
   Latest gallery riding clips use34; studio sitting films still use11. The
   new joints improve hips but do not close cloth/collision/seat quality.
-- Clean quad garment fit01 is an unaccepted Blender construction master.
-  Matched gray rest review150 finds narrow sleeves/jeans, missing volume
-  and temporary unstitched rearhood/cuff/shoe/hem interfaces. Preserve the
-  preferred generated silhouette, protected NEW head/hood/gloves and source
-  shoe/sole patches. Shape correspondence and genuine interface topology
-  precede original detail/PBR bake, then actual34physics motion.
-- Required retained34ship150 passes bytefinish/hash both tiers,103crash
-  ticks,3ms restart/errors0. Next153. New garment is not tested in-game yet.
+- Clean garment cage04 is retained as an unaccepted construction fit.
+  Its smoother coherent volume preserves native NPZ topology/UV/weights;
+  literal rest normal reversals0, master reopened with measured float rounding.
+  All72gray samples inspected: fuller sleeves/jeans, peaked rear hem and cut
+  hood/cuff/shoe interfaces remain. Fouractual C19 matrices retain folds and
+  severe shirt strain7.37/8.21x; no moving/appearance acceptance.
+- Next literal boundary audit and continuous source garment/hood/glove/shoe
+  transitions, protecting preferred NEW head/neck/hood and C19 behavior.
+  Rig/pose/contacts and coherent shape before detail/PBR bake. Independent
+  task hoodie-repair02 is active; inspect frozen receipts before adoption.
+- Required retained34ship153 passes bytefinish/hash both tiers,103crash
+  ticks,2/4ms restart/errors0. Next156. New garment is not tested in-game yet.
   Gray rest fixture supplies no fullbody/face score or visual stage pass.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
@@ -1026,3 +1030,24 @@ not a generated asset. Instrumented rerun preserves the exact failure; no
 geometry/weights/UV mutation or relaxed guard. Replace vertex-quantile bins
 with actual triangle-plane section measurements before the next coherent cage.
 Original151failed projection/nativefit01/source34 preserved. Shipnext153.
+
+## Coherent source section cage — round153
+
+Actual triangle-plane sections produce unaccepted native garment fit04.
+NPZ topology/UV/weights exact; reopened Blender master measured59.44nm
+position/2.98e-8weight rounding, exact UV/quads/19groups. Source34 unchanged.
+Zero negative rest normal dots versus105strong oppositions in free projection;
+max rest edge change2.314x. Initial source-cut armpit section fails .35guard;
+retain that failure. One bounded distal-section correction, guard unchanged,
+no free snapping/parameter sweep. Original sources/all prior failures retained.
+
+All72gray ordered frame samples show fuller sleeves/jeans, but peaked rear
+hem and temporary cut hood/cuff/shoe interfaces remain. No textured model/
+face score. Four actual C19 matrices lower jeans maxstrain and shirt fold
+flags, but severe shirt maxstrain rises7.37/8.21x; no motion acceptance.
+Next literal boundary audit and continuous seam/skin mapping with protected
+NEW head/hood/gloves/shoes, then full actual motion before detail/PBR bake.
+Independent hoodie-repair02 active; evaluate finalized source receipts before
+adoption, no silent replacement. Ship153retained34both tiers bytefinish/hash/
+crash103/restart2/4ms/errors0, not a new-garment test. Next156.
+All three quality/moving-contact/Garage/device/LOD gates remain open.

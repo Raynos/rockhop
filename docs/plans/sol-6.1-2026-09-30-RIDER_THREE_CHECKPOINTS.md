@@ -1340,3 +1340,24 @@ not a generated asset. Instrumented rerun preserves the exact failure; no
 geometry/weights/UV mutation or relaxed guard. Replace vertex-quantile bins
 with actual triangle-plane section measurements before the next coherent cage.
 Original151failed projection/nativefit01/source34 preserved. Shipnext153.
+
+## Coherent source section cage — round153
+
+Actual triangle-plane sections produce unaccepted native garment fit04.
+NPZ topology/UV/weights exact; reopened Blender master measured59.44nm
+position/2.98e-8weight rounding, exact UV/quads/19groups. Source34 unchanged.
+Zero negative rest normal dots versus105strong oppositions in free projection;
+max rest edge change2.314x. Initial source-cut armpit section fails .35guard;
+retain that failure. One bounded distal-section correction, guard unchanged,
+no free snapping/parameter sweep. Original sources/all prior failures retained.
+
+All72gray ordered frame samples show fuller sleeves/jeans, but peaked rear
+hem and temporary cut hood/cuff/shoe interfaces remain. No textured model/
+face score. Four actual C19 matrices lower jeans maxstrain and shirt fold
+flags, but severe shirt maxstrain rises7.37/8.21x; no motion acceptance.
+Next literal boundary audit and continuous seam/skin mapping with protected
+NEW head/hood/gloves/shoes, then full actual motion before detail/PBR bake.
+Independent hoodie-repair02 active; evaluate finalized source receipts before
+adoption, no silent replacement. Ship153retained34both tiers bytefinish/hash/
+crash103/restart2/4ms/errors0, not a new-garment test. Next156.
+All three quality/moving-contact/Garage/device/LOD gates remain open.
