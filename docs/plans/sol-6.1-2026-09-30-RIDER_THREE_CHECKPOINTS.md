@@ -991,3 +991,12 @@ BIN bytes retained. Low/high finish bytes/hash exact,crash103/restart6ms both,
 errors0. Next bounded native-eye optical/material diagnosis, no recut/field
 sweep. Sleeve23 CPU connected-region correction ready for moving evaluation.
 Current11 master/gallery122 retained; normal assets unchanged. Ship next126.
+
+Round125: independently verified connected sleeve23 local corrective avoids
+corrupt-weight ROI and frees original elbow witness. Four recorded CPU poses
+fold465/208/255/258→12/6/27/51, source/rig/contact protected. Retain only for one
+private moving trial: posed23.27cm/source38.44cm changes are large; historical
+shoulder maxima remain and4/2/4/4 new geometric fold flags exist. No appearance
+score/pass. Next append-only four-key morph and continuous arm-rotation driver,
+no physics/bone target edit. Eye22 material progress below7 retained;24 optics
+diagnosis underway. Current11/gallery122 retained. Required ship next126.

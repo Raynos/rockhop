@@ -1,0 +1,20 @@
+{
+  "sameFrozenConstructionRepeated": true,
+  "all16PayloadSHA256ValuesExact": true,
+  "repeatElapsedSeconds": 2.349201750010252,
+  "openBLASThreads": "2",
+  "ompThreads": "2",
+  "GPUWorkloads": 0,
+  "modelWorkloads": 0,
+  "browserWorkloads": 0,
+  "readOnlyVerificationPassed": true,
+  "bothPythonRecipesCompile": true,
+  "setupIssues": [
+    {
+      "issue": "An exploratory heredoc invoked python, which is absent from PATH",
+      "resolution": "Used python3 for JSON-only inspection; NumPy/SciPy always used installed UniMate venv",
+      "artAttempt": false
+    }
+  ],
+  "limits": "Deterministic CPU targets only; no art verdict or renderer acceptance."
+}

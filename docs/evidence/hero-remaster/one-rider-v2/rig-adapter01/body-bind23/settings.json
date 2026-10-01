@@ -1,0 +1,12 @@
+{
+  "singleFrozenConstruction": true,
+  "noParameterSweep": true,
+  "method": "Local/global ARAP on source triangle graph with exact-position physical aliases",
+  "iterations": 15,
+  "boundary": "Source-connected geometry ROI; first ring hard pinned; all other-material aliases pinned",
+  "softProximity": ".005+.08*(1-sin(pi*t)^2)^2 times graph degree, source t=(Y-.95)/.43",
+  "weightsUsedForSelection": false,
+  "weightsUsedForHistoricalReportOnly": true,
+  "originalGeometryWeightsBindsBonesPhysicsTexturesUntouched": true,
+  "exportedGLB": false
+}

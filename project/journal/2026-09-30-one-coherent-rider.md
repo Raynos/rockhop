@@ -1314,3 +1314,13 @@ reviewed;72 gray frames pixel-identical; exact rig/input/hash/camera; low/high
 boot/clear/crash/restart passes. Face6.8 remains below7.
 Limits: Flat/exposed eye appearance remains; next optical/material diagnostic.
 No full-body, bench, Garage, phone or release acceptance.
+
+## Round125 — retain geometric elbow corrective for motion trial
+
+Finding: Connected sleeve geometry avoids corrupt-weight eligibility and
+reduces elbow collapse in four actual recorded CPU poses.
+Validation: Parent source/ROI/archived pose/inverse delta verifier exit0;
+fold465/208/255/258→12/6/27/51; original bones/debug/contacts and protected
+surfaces exact. Source deltas roundtrip below1e-12m.
+Limits: Up23.27cm posed motion, unchanged shoulder extremes and new fold
+flags require actual motion review; no art or fullcollision acceptance.
