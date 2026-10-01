@@ -1481,3 +1481,16 @@ skin lanes change; residual4.55e-13/top4loss2.22e-16. Requiredship141
 unchanged11low/high finish/hash exact,crash103ticks/restartpass/errors0.
 Limits: No art score or moving trial; stop anchor/regularization sweeps.
 Audit freshC19bind/mapping or targetedretopo next. Current11/join preserved.
+
+## Round142 — explicit fresh rig adaptation preserves contacts
+
+Finding: World-alignedC19bases invalidate localYlimb assumptions nearly
+180deg. Explicit childaxes/name/socket/desiredhanddeformation adapter
+retains freshbinds/weights and useful hipstrain improvement. Arms still fail.
+Validation: Actual19bone/14axis/4socket guard passes; fourCPUphysical states,
+contacts<=2.19umvsactual11, sharedhoodbody aliasescoincident, restshape/UV/
+normals/indices exact. CPUarchive/rerun, scopedlint/projectharness typecheck
+pass. OnlyC19JSONmapping changes; originalBIN/source files exact.
+Limits: No moving/face/Garage/device acceptance, no native stage/additive
+clip contract. Sourceanchor uniqueness corrected before CPUrun. Keep11/22
+separate; private motion and genuinely different skin/topology next.

@@ -1153,3 +1153,13 @@ sweep. Keep32semanticfinding; nextfreshC19restbind/names/gameplayadapter
 audit orlimitedelbow/shoulderretopo, preservebehavior/join rather thanbad
 historicalpositions. Ship141unchanged11bytefinish/hash/crashrestartpass,
 noerrors. Current11/gallery129preserved; requiredshipnext144.
+
+Round142: explicitC19adapter34 retainsfreshweights/binds/BIN; maps19names,
+4source-surface sockets and14anatomicalchildaxes. C19worldaligned bases
+invalidate oldlocalYassumption bynear180deg; actualCPUaxisguard passes.
+Fourrecordedstates physicsdriven, hand/sole differences<=2.19um andshared
+hoodbody aliasescoincident. Hipstrain4.15/4.01/4.92/4.92→2.47/2.47/2.68/2.66x.
+Armmoreopposition/elbowstillfolded despite lowermaxstrain; wholebodyunaccepted.
+Nextmatchedprivate motion andruntimevolume-preserving skin/targetedjoint
+retopo assessment; no DQexport/weightanchorsweep.11baseline/22faceprogress
+separate, no composition/promotion. Ship141passed; next144.
