@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round104, 2026-10-01
+## Current evidence — round105, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -40,7 +40,8 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
   P3 automated repairs and fixed finger-curl approaches remain stopped at2.
-- Two fresh CPU lanes audit eye topology and normalize the CC0 eye donor.
+- Fresh CPU eye topology and normalized CC0 donor lanes are frozen.
+  Parent will construct the local aperture and evaluate the actual fit.
   Older Blender lane descriptions below are historical. No routine human approval hold, schedule or outbound message.
 
 Actual evidence: [body09 README](rig-adapter01/body-bind09/README.md),
@@ -475,3 +476,7 @@ frames, unchanged state/rig/camera transform. Face6.8; eye geometry audit next.
 
 Round104: fused source eye surfaces have0 aperture boundary edges in each
 ROI. Local lid reconstruction next; source11 preserved, no new fit accepted.
+
+Round105: hidden inner face sheets4.55/6mm require two-sheet apertures and
+continuous lids. Fresh26mm CC0 eye donor frozen, source body11 remains current.
+Current11 both-tier ship gate passes byte-exact clear/crash103/restart2ms.

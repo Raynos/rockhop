@@ -788,3 +788,12 @@ local lid aperture reconstruction before anatomical eyes; plain overlay is
 inadequate. Original source11 SHA preserved. Installed CC0 donor measured;
 fresh CPU topology/donor teammates own separate paths. Face6.8 remains below
 bar. Keep WHITE body/clothes and19-bone behaviour; next ship gate105.
+
+Round105: independent CPU audit exposes inward face sheets4.55/6.00mm behind
+eye seeds. Front-only removal is inadequate. Both sheets must receive a clean
+analytic aperture with a continuous inner lid tunnel. Existing eye regions
+are head-joint4 weight1;19-bone skin remains authoritative. Fresh CC0 donor
+has26mm inner diameter/26.8075mm shell and preserved brown atlas/UVs. Unfitted,
+unaccepted; no body mutation. Parent reviewed report/UV evidence. Current11
+silent third-round gate passes both40.083333333333336/hash/Float64LE exact,
+crash103/restart2ms/errors0; locked10.084s/33.733GB. Next local surgical trial.

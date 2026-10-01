@@ -1107,3 +1107,15 @@ Parent gray/textured source projections inspected; CPU-only, no new dependencies
 Limits: Approximate framing centres are not accepted fit landmarks. First
 projection omitted cheeks; corrected before checkpoint, no source defect.
 Actual played face remains6.8; fitting, motion and later gates remain open.
+
+## Round105 — both face sheets obstruct new eyes
+
+Finding: Independent ray/topology audit finds inward sheets4.55/6.00mm behind
+the eyes. A continuous aperture through both is required. Fresh CC0 brown-eye
+donor is normalized and validated separately, ready for measured fitting.
+Validation: Parent audit/report/UV evidence reviewed; donor16 accessors finite,
+source atlas byte-exact, four source components retained. Current11 both-tier
+coldboot/clear40.083333333333336/hash/Float64LE exact, crash103/restart2ms/errors0.
+Canonical lock10.084s/33.733GB anonymous peak. Source body/head remain untouched.
+Limits: Donor unfitted and unrigged; transparent cornea is a PBR approximation.
+No eye appearance acceptance, realLOD or later checkpoint pass. Face stays6.8.
