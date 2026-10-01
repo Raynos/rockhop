@@ -345,3 +345,13 @@ hashed. Fresh silent low/high exact clear/crash/2–4ms restart passes.
 
 Limits: No normal/roughnessmaps, successfulPixalbake, final likeness or
 character acceptance. Originalheaddeadline00:31:54UTC remains.
+
+Finding: First glove material bake targets body and glove faces into one
+atlas. Reject the setup and preserve evidence before one isolated helper
+correction; native hand shape and weights remain unchanged.
+
+Validation: Native UV/seam preflight reports zero strict interior overlap;
+failed recipe, master and three maps are hashed. Parent reviewed cause.
+
+Limits: Maps unaccepted; no grip, final rig or whole character approval.
+Existing material deadline and stage ceiling remain unchanged.

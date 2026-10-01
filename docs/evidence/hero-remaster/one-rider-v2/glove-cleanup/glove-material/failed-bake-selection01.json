@@ -1,0 +1,25 @@
+{
+  "status": "REJECTED first CPU bake setup: body and glove material images alias",
+  "failureCount": 1,
+  "recipeSHA256": "74fea935cff4a05b56bac35c7bbbbb8efa9de182b0494f67bdce154691aaf69d",
+  "cause": "Both material0(body) and material1(glove) had bake nodes targeting the same image, while only glove-nativeUV/seam layout was overlap-tested. BodyUV raster shares the atlas domain and may overwrite glove values.",
+  "actualMapsUnaccepted": true,
+  "geometryOriginalUVAndNativeWeightsUnchanged": true,
+  "proposedAlternative": "Copied glove+seam-only bakehelper, nativeUV/layout source, same exact positions and normals; attach maps to unmodified clean body.",
+  "files": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/bodyPBR.blend": "d9f7af4f929802cc69c16c3d8a40c1b6c2fc200c7e644c1caa868e4ee0f41854",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/basecolor.png": "b6149f8d6acb92e0bf99310ffb70df922eb30854f35d0c8fe63c61d32685ff40",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/bodyPBR.glb": "14e8c9c325c99b3ea67e0a544fc60a8d88b20a8e238cf5caeb4cb479250c5b49",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/normal.png": "99f3bc8c7e1f60d33f9641ecd417e4b0efd2163b008841d7177df96ac575e50a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/roughness.png": "cf694f46e62e197d0d758a543432c1e471bd1b8047a9197490751775eb7cac51",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/glove-material/uv-layout.json": "075f450b33a0d3c85f6ac955fbb4a6ad581b3d0a6ce4a499f83b58e6b84cfd3a",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/glove-material/report.json": "8d99bf6153493ad2c1d3ebd4d8566a83fba0dbbc2b18fc25017d0a6dde7a6352",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/bake_glove_material01.py": "74fea935cff4a05b56bac35c7bbbbb8efa9de182b0494f67bdce154691aaf69d",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/glove-cleanup/glove-material/failed-bake-selection01.py": "74fea935cff4a05b56bac35c7bbbbb8efa9de182b0494f67bdce154691aaf69d"
+  },
+  "stageStartedHostLocal": "2026-09-30 19:30:10",
+  "stageDeadlineHostLocal": "2026-09-30 19:42:10",
+  "failedBakeFinishedHostLocal": "2026-09-30T19:34:35.981899-05:00",
+  "actualBakeRecipeWallSeconds": 14.651993166655302,
+  "deadlineNotReset": true
+}

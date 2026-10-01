@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 24661,
-    "conservativeChargedHoursUpperBound": 6.85,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 27038,
+    "conservativeChargedHoursUpperBound": 7.511,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -931,5 +931,12 @@
     "geometryAndUVsUnchanged": true,
     "acceptedTexture": false,
     "specificAlternative": "Installed native CC0 young Asian male skin atlas compatible with retained native UVs; deliberate base-colour fallback, actual pores/brows/lips/short stubble; no false Pixal transfer claim"
+  },
+  "oneRiderV2GloveMaterial": {
+    "failedSetupFixes": 1,
+    "failure": "Body and glove material bake images alias; body UV can contaminate glove atlas",
+    "evidence": "../one-rider-v2/glove-cleanup/glove-material/failed-bake-selection01.json",
+    "accepted": false,
+    "next": "One isolated glove+seam-only copied bake helper within original 12-minute deadline"
   }
 }

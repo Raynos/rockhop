@@ -1,0 +1,50 @@
+{
+  "status": "One actual UV material bake; parent PBR review pending",
+  "sourceHashesBefore": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-anatomical-hands.blend": "28175eefc601af05c71bef962fc8576eea31124fb5a9cad30bf433d4b2c566eb"
+  },
+  "sourceHashesAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/mpfb-trial2/neutral-anatomy/neutral-anatomical-hands.blend": "28175eefc601af05c71bef962fc8576eea31124fb5a9cad30bf433d4b2c566eb"
+  },
+  "geometryOriginalUVNativeWeightsSHA256Before": "40ed1d8530019c2d8ee8fede92358e0a5e8b691b27ccf340299efce13c481fb0",
+  "geometryOriginalUVNativeWeightsSHA256After": "40ed1d8530019c2d8ee8fede92358e0a5e8b691b27ccf340299efce13c481fb0",
+  "uvProof": "uv-layout.json",
+  "maps": [
+    {
+      "label": "basecolor",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/basecolor.png",
+      "sha256": "b6149f8d6acb92e0bf99310ffb70df922eb30854f35d0c8fe63c61d32685ff40"
+    },
+    {
+      "label": "roughness",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/roughness.png",
+      "sha256": "cf694f46e62e197d0d758a543432c1e471bd1b8047a9197490751775eb7cac51"
+    },
+    {
+      "label": "normal",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/normal.png",
+      "sha256": "99f3bc8c7e1f60d33f9641ecd417e4b0efd2163b008841d7177df96ac575e50a"
+    }
+  ],
+  "bakeResolution": 2048,
+  "samples": 16,
+  "backend": "CyclesCPU",
+  "threads": 4,
+  "rayScope": "Same-mesh procedural shader evaluation into nativeUV; selected-to-active false, no highpoly raycast/detail transfer claim",
+  "normalSource": "Actual authored3D micrograin bump shader baked tangentNORMAL; must verify output variation/reimport before claiming normalmap",
+  "materialNodesAfterBake": [
+    "ShaderNodeOutputMaterial",
+    "ShaderNodeBsdfPrincipled",
+    "ShaderNodeUVMap",
+    "ShaderNodeTexImage",
+    "ShaderNodeTexImage",
+    "ShaderNodeTexImage",
+    "ShaderNodeNormalMap"
+  ],
+  "masterSHA256": "d9f7af4f929802cc69c16c3d8a40c1b6c2fc200c7e644c1caa868e4ee0f41854",
+  "glbSHA256": "14e8c9c325c99b3ea67e0a544fc60a8d88b20a8e238cf5caeb4cb479250c5b49",
+  "wallSeconds": 14.651993166655302,
+  "recipeSHA256": "74fea935cff4a05b56bac35c7bbbbb8efa9de182b0494f67bdce154691aaf69d"
+}
