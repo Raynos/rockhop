@@ -787,3 +787,8 @@ Limits: No neckmotion/rig pass;productionround72 queued canonical lock.
 Finding: Actual3s/36frame threebone fixture reveals jaw/mouth shearing during30degreeyaw: heightbands cross facialanatomy. Reject weighting, preserve originalstaticWHITEface/body exact. Firstactualneckfixture failure plus prioronesetupfailure. Next rigidwholejaw/head group with transition entirelyin anatomicalneck and lowerheadpivot; independentface pairdistortion measurement. Round72productionexactclear/crash103/restart2msLOW3msHIGH passes.
 Validation: Actual36CPUframes encoded3secondclip; finite evaluatedvertices; yawvisiblyshearsjaw/mouth. Source05unchanged; productionround72exact.
 Limits: Neckmotionfails despite preservedstaticappearance; no nineteenbone/gameplayqualification.
+
+## Round74 — rigid jaw survives actual neck motion
+Finding: Rigidwholejaw/head weighting removes yaw mouthshear in actual36frame/3sCPUneckclip. Parent inspects all36decodedframes plusfullresolution yaw/bend front/profile/rear extrema: no exposedbustbase/seam holes, face shape holds.256facialpairdistances/frame maxerror1.5789836661783685e-07m. Only3bone diagnostic fixture, final19bone/rest/socket/COM/IK mapping absent. Coarseface/hair/glovedetail persists; body7.4/face7.5 diagnostic. Matched9angleWHITEtarget comparison and boundedtarget8refinement next beforecheckpoint1closure.
+Validation: 36CPUframes, silent3secondclip, all36decodedinspection; 256facepairdistances/frame max1.58e-7m; originalsourceunchanged; exported04/05geometricarrays exact.
+Limits: Threebonefixture only, diagnostic7.4/7.5; matchedtarget/refinement and final19bonerig open.

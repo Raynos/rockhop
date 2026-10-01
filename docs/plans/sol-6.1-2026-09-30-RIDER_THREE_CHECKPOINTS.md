@@ -450,3 +450,26 @@ updating asks/index before the next experiment. No scheduling or deployment.
 - [ ] Same-body Garage/gameplay/contact gate accepted.
 - [ ] Autonomous final appearance/motion/resource audit and controlled promotion or explicit rejection.
 - [x] Asks237–238 remove human checkpoint holds; five/fifteen safeguards and three isolated parallel Blender lanes authorized.
+
+## Current private candidate — 2026-10-01
+
+Parent preserves the complete white rider from `parent-assembly/donor-fit05`:
+protected NEW H21-4body/nativehands, NEW donor01hood, actualHunyuan2.1buzz
+head with locally closed cheeks and coherent PBR. The source comparisons
+remain intact. Exact shared307edge garmentrim has no duplicate/nonmanifold
+faces; local65mmalbedo continuity removes the horizontal join stripe.
+
+Actual nineviews, face/neckcloseups, matchedgeometry gray, silentturntable
+and animated30degreeheadyaw/15degreeneckbend are retained. The initial
+fixture blended the jaw and failed; revised rigidface/jaw weights preserve
+256facepairdistances perframe within1.58e-7m. This is a threebone diagnostic,
+not the final19boneadapter, and does not authorize playerasset promotion.
+
+Checkpoint1 remains open: fullbody7.4/face7.5 are diagnostic scores with
+photo camera/light uncertainty. Make the same-white-buzz nineangle target
+comparison and a boundedtarget8 detail refinement before closing it. Keep
+this coherent character as the primary direction; do not restart the body
+or replace historical comparisons. Then implement the explicit19bone
+rest/bind/socket/weight adapter and actual standing-to-sitting evidence.
+No human approval hold applies; the existing five/fifteen switch/retirement
+policy and sharedGPUlock rules continue.
