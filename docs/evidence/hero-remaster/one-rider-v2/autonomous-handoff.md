@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round120, 2026-10-01
+## Current evidence — round121, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -630,3 +630,14 @@ renderer + exact19GLB + harness-installed driver, art-only; production701KiB
 budget still open. Low/high cold boot/clear exact40.083333333333336s/hash,
 crash103ticks, restart5ms both, no errors. Native eye20 CPU export ready for
 parent motion review. Existing gallery115 retained. Normal player assets unchanged.
+
+Round121: connected-sheet native eye20 geometry/export passes independent parent
+verification and current-source private build/replay. Two72-frame textured/gray
+actual clips preserve state/hash/debug/bones/camera. Parent reviewed all144
+ordered candidate frames plus matched closeup: face6.3/10, below7. Dark mottled
+periocular ring and flat exposed eye response remain. Gray anatomy more coherent;
+retain proven geometry only, reject current appearance. Diagnose atlas/skin field,
+chart padding/mips and eye material separately before changing surgery. Prior
+analytic appearance6, native construction2, native appearance1 kept separate.
+19hip stays separate refinement candidate, current11 master/gallery preserved.
+Normal player assets unchanged; next ship123. Sleeve21 bounded CPU lane underway.

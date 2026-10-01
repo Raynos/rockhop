@@ -1,0 +1,77 @@
+{
+  "sourceSHA256": "1f5035eeb5de708d70c889af89e574a0b7be10bcdc73beed7d1e4393fb21dd28",
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/build.mts",
+        "--out=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body20-build",
+        "--models=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind20/played01/mapping-full-diagnostic.json",
+        "--new-rider-adapter=1"
+      ],
+      "status": 0,
+      "seconds": 5.058453999925405
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body20-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind20/played01/replay.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 19.190820625051856
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body20-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind20/played01/textured",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--center-focus=1",
+        "--surface=textured",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 22.250195582862943
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body20-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind20/played01/gray",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--center-focus=1",
+        "--surface=gray",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 21.26480449968949
+    }
+  ],
+  "wallSeconds": 67.7891872911714,
+  "peakAnonymousBytes": 50035343360,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limits": "Both logical tiers use FULL geometry. Eye trial unaccepted until parent actual-motion review; same input and private surface-focus camera."
+}

@@ -1,0 +1,458 @@
+{
+  "status": "PASS independent actual-export CPU contract, source-edge and actual-eye geometry checks; art unaccepted",
+  "candidateSHA256": "1f5035eeb5de708d70c889af89e574a0b7be10bcdc73beed7d1e4393fb21dd28",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "originalBinaryPrefixExactBytes": 13972696,
+  "bodyCheek19RigAnimationsExact": true,
+  "sourceHeadOriginalAttributesExact": true,
+  "graftFrozenPositionsExact": true,
+  "joinedTopology": {
+    "triangles": 105169,
+    "physicalVertices": 52630,
+    "boundaryEdges": 151,
+    "nonManifoldEdges": 0,
+    "closed": false
+  },
+  "allFinite": true,
+  "minimumUVTriangleArea": 0.00022041797637939453,
+  "graftAndEyeHeadJoint4WeightsExact": true,
+  "embeddedConvertedPNGExact": true,
+  "sourceEdgeNormalValuesExact": true,
+  "sourceEdgesChecked": 725,
+  "maximumSourceEdgeColorError": 0.006120614022788046,
+  "actualEyeChecks": [
+    {
+      "actualSurface": "R_cornea",
+      "category": "native_joined_graft",
+      "distanceLowerBoundM": 0.00021559480505514415,
+      "exactMinimumWithinReachM": 0.00021559480505514415,
+      "testedPairs": 2131,
+      "intersectionPairs": 0,
+      "worstPair": [
+        908,
+        345
+      ],
+      "worstTrianglesM": [
+        [
+          [
+            0.740851879119873,
+            1.6947582960128784,
+            -0.026003947481513023
+          ],
+          [
+            0.7410537600517273,
+            1.6953891515731812,
+            -0.024817923083901405
+          ],
+          [
+            0.7428622245788574,
+            1.6951788663864136,
+            -0.025045033544301987
+          ]
+        ],
+        [
+          [
+            0.7405762672424316,
+            1.6941182613372803,
+            -0.02605505660176277
+          ],
+          [
+            0.7417791485786438,
+            1.696305274963379,
+            -0.02851122058928013
+          ],
+          [
+            0.7406604290008545,
+            1.6963893175125122,
+            -0.02571018598973751
+          ]
+        ]
+      ]
+    },
+    {
+      "actualSurface": "R_cornea",
+      "category": "all_retained_source_skin",
+      "distanceLowerBoundM": 0.00025,
+      "exactMinimumWithinReachM": null,
+      "testedPairs": 11,
+      "intersectionPairs": 0,
+      "worstPair": [
+        257,
+        213
+      ],
+      "worstTrianglesM": [
+        [
+          [
+            0.7376332879066467,
+            1.6893630027770996,
+            -0.0446808859705925
+          ],
+          [
+            0.7377753853797913,
+            1.6880806684494019,
+            -0.044698771089315414
+          ],
+          [
+            0.7362539768218994,
+            1.6873120069503784,
+            -0.04672844707965851
+          ]
+        ],
+        [
+          [
+            0.7343517541885376,
+            1.692915439605713,
+            -0.04509032145142555
+          ],
+          [
+            0.7365303635597229,
+            1.6902153491973877,
+            -0.04225564002990723
+          ],
+          [
+            0.7342003583908081,
+            1.6896096467971802,
+            -0.043265022337436676
+          ]
+        ]
+      ]
+    },
+    {
+      "actualSurface": "R_sclera_iris",
+      "category": "native_joined_graft",
+      "distanceLowerBoundM": 0.00025,
+      "exactMinimumWithinReachM": null,
+      "testedPairs": 1573,
+      "intersectionPairs": 0,
+      "worstPair": [
+        908,
+        529
+      ],
+      "worstTrianglesM": [
+        [
+          [
+            0.740851879119873,
+            1.6947582960128784,
+            -0.026003947481513023
+          ],
+          [
+            0.7410537600517273,
+            1.6953891515731812,
+            -0.024817923083901405
+          ],
+          [
+            0.7428622245788574,
+            1.6951788663864136,
+            -0.025045033544301987
+          ]
+        ],
+        [
+          [
+            0.7405258417129517,
+            1.694185495376587,
+            -0.026273757219314575
+          ],
+          [
+            0.7413501739501953,
+            1.6963136196136475,
+            -0.028317755088210106
+          ],
+          [
+            0.7406015396118164,
+            1.6963809728622437,
+            -0.025937296450138092
+          ]
+        ]
+      ]
+    },
+    {
+      "actualSurface": "R_sclera_iris",
+      "category": "all_retained_source_skin",
+      "distanceLowerBoundM": 0.00025,
+      "exactMinimumWithinReachM": null,
+      "testedPairs": 0,
+      "intersectionPairs": 0,
+      "worstPair": null
+    },
+    {
+      "actualSurface": "L_cornea",
+      "category": "native_joined_graft",
+      "distanceLowerBoundM": 0.0002156103924082642,
+      "exactMinimumWithinReachM": 0.0002156103924082642,
+      "testedPairs": 1024,
+      "intersectionPairs": 0,
+      "worstPair": [
+        144,
+        344
+      ],
+      "worstTrianglesM": [
+        [
+          [
+            0.7398726940155029,
+            1.6942583322525024,
+            0.024803947657346725
+          ],
+          [
+            0.7420176267623901,
+            1.6942247152328491,
+            0.024433840066194534
+          ],
+          [
+            0.7418830394744873,
+            1.6946789026260376,
+            0.02384503372013569
+          ]
+        ],
+        [
+          [
+            0.7395970821380615,
+            1.6936182975769043,
+            0.024855056777596474
+          ],
+          [
+            0.7396811842918396,
+            1.6958893537521362,
+            0.024510186165571213
+          ],
+          [
+            0.7407999038696289,
+            1.6958051919937134,
+            0.02731122076511383
+          ]
+        ]
+      ]
+    },
+    {
+      "actualSurface": "L_cornea",
+      "category": "all_retained_source_skin",
+      "distanceLowerBoundM": 0.00025,
+      "exactMinimumWithinReachM": null,
+      "testedPairs": 0,
+      "intersectionPairs": 0,
+      "worstPair": null
+    },
+    {
+      "actualSurface": "L_sclera_iris",
+      "category": "native_joined_graft",
+      "distanceLowerBoundM": 0.00025,
+      "exactMinimumWithinReachM": null,
+      "testedPairs": 637,
+      "intersectionPairs": 0,
+      "worstPair": [
+        144,
+        528
+      ],
+      "worstTrianglesM": [
+        [
+          [
+            0.7398726940155029,
+            1.6942583322525024,
+            0.024803947657346725
+          ],
+          [
+            0.7420176267623901,
+            1.6942247152328491,
+            0.024433840066194534
+          ],
+          [
+            0.7418830394744873,
+            1.6946789026260376,
+            0.02384503372013569
+          ]
+        ],
+        [
+          [
+            0.7395465970039368,
+            1.693685531616211,
+            0.025073757395148277
+          ],
+          [
+            0.7396222949028015,
+            1.6958808898925781,
+            0.024737296625971794
+          ],
+          [
+            0.7403709292411804,
+            1.6958136558532715,
+            0.027117755264043808
+          ]
+        ]
+      ]
+    },
+    {
+      "actualSurface": "L_sclera_iris",
+      "category": "all_retained_source_skin",
+      "distanceLowerBoundM": 0.00025,
+      "exactMinimumWithinReachM": null,
+      "testedPairs": 0,
+      "intersectionPairs": 0,
+      "worstPair": null
+    }
+  ],
+  "actualEyeTopologyAndRays": [
+    {
+      "surface": "R_cornea",
+      "topology": {
+        "triangles": 490,
+        "physicalVertices": 256,
+        "boundaryEdges": 20,
+        "nonManifoldEdges": 0,
+        "closed": false
+      },
+      "UVNormalsIndicesExact": true
+    },
+    {
+      "surface": "R_sclera_iris",
+      "topology": {
+        "triangles": 530,
+        "physicalVertices": 276,
+        "boundaryEdges": 20,
+        "nonManifoldEdges": 0,
+        "closed": false
+      },
+      "UVNormalsIndicesExact": true
+    },
+    {
+      "eye": "negativeZ",
+      "rayYZ": [
+        1.697,
+        -0.0332
+      ],
+      "irisFrontX": 0.7401811274507178,
+      "graftFrontX": null,
+      "skinFrontX": 0.5663838708485176,
+      "visible": true
+    },
+    {
+      "eye": "negativeZ",
+      "rayYZ": [
+        1.695,
+        -0.0332
+      ],
+      "irisFrontX": 0.7401615840915342,
+      "graftFrontX": null,
+      "skinFrontX": 0.5669225238006902,
+      "visible": true
+    },
+    {
+      "eye": "negativeZ",
+      "rayYZ": [
+        1.699,
+        -0.0332
+      ],
+      "irisFrontX": 0.7409125779187193,
+      "graftFrontX": null,
+      "skinFrontX": 0.5658703321300735,
+      "visible": true
+    },
+    {
+      "eye": "negativeZ",
+      "rayYZ": [
+        1.697,
+        -0.0382
+      ],
+      "irisFrontX": 0.7413295816049954,
+      "graftFrontX": null,
+      "skinFrontX": 0.5688236913060144,
+      "visible": true
+    },
+    {
+      "eye": "negativeZ",
+      "rayYZ": [
+        1.697,
+        -0.0282
+      ],
+      "irisFrontX": 0.7413323077030374,
+      "graftFrontX": null,
+      "skinFrontX": 0.5643384241397751,
+      "visible": true
+    },
+    {
+      "surface": "L_cornea",
+      "topology": {
+        "triangles": 490,
+        "physicalVertices": 256,
+        "boundaryEdges": 20,
+        "nonManifoldEdges": 0,
+        "closed": false
+      },
+      "UVNormalsIndicesExact": true
+    },
+    {
+      "surface": "L_sclera_iris",
+      "topology": {
+        "triangles": 530,
+        "physicalVertices": 276,
+        "boundaryEdges": 20,
+        "nonManifoldEdges": 0,
+        "closed": false
+      },
+      "UVNormalsIndicesExact": true
+    },
+    {
+      "eye": "positiveZ",
+      "rayYZ": [
+        1.6965,
+        0.032
+      ],
+      "irisFrontX": 0.73920188706543,
+      "graftFrontX": null,
+      "skinFrontX": 0.5641227714458571,
+      "visible": true
+    },
+    {
+      "eye": "positiveZ",
+      "rayYZ": [
+        1.6945,
+        0.032
+      ],
+      "irisFrontX": 0.7391823588569031,
+      "graftFrontX": null,
+      "skinFrontX": 0.564649861045623,
+      "visible": true
+    },
+    {
+      "eye": "positiveZ",
+      "rayYZ": [
+        1.6985,
+        0.032
+      ],
+      "irisFrontX": 0.7399334133901141,
+      "graftFrontX": null,
+      "skinFrontX": 0.5636428751640281,
+      "visible": true
+    },
+    {
+      "eye": "positiveZ",
+      "rayYZ": [
+        1.6965,
+        0.027
+      ],
+      "irisFrontX": 0.7403530904148594,
+      "graftFrontX": null,
+      "skinFrontX": 0.5624807528200094,
+      "visible": true
+    },
+    {
+      "eye": "positiveZ",
+      "rayYZ": [
+        1.6965,
+        0.037
+      ],
+      "irisFrontX": 0.740350362059523,
+      "graftFrontX": null,
+      "skinFrontX": 0.5661626488635343,
+      "visible": true
+    }
+  ],
+  "geometryAlgorithmSelfTests": {
+    "syntheticCases": 4,
+    "pass": true
+  },
+  "limits": [
+    "No appearance grade or gameplay motion acceptance.",
+    "Eye surfaces remain open-backed; exact surface checks do not invent closed volumes.",
+    "Original source UV/normal hard splits are preserved at each seam edge.",
+    "Both protected-source coverage and declared-aperture area receipts apply to exact exported source positions/indices."
+  ]
+}

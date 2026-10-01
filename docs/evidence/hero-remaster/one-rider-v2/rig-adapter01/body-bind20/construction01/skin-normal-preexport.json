@@ -1,0 +1,40 @@
+{
+  "status": "REJECTED source-skin/normal conversion before export",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "sourceSkinImageBytesUnchanged": true,
+  "originalPBRFactorsCopied": true,
+  "normalMethod": "Area-weighted actual joined geometry interiors; inherited source boundary normals",
+  "maximumPhysicalSourceSeamNormalAngleDegrees": 44.58562300161808,
+  "normalToleranceDegrees": 0.25,
+  "skinConversion": [
+    {
+      "eye": "positiveZ",
+      "healthyExteriorSourceSamples": 327,
+      "boundaryColorConstraints": 364,
+      "maximumBoundaryChannelError": 0.052221358417734176,
+      "meanBoundaryChannelError": 0.0016262976782213056,
+      "boundaryTolerance": 0.03137254901960784,
+      "oldPaintedIrisExcludedFromHealthySamples": true
+    },
+    {
+      "eye": "negativeZ",
+      "healthyExteriorSourceSamples": 371,
+      "boundaryColorConstraints": 361,
+      "maximumBoundaryChannelError": 0.153570582001817,
+      "meanBoundaryChannelError": 0.002381827455268639,
+      "boundaryTolerance": 0.03137254901960784,
+      "oldPaintedIrisExcludedFromHealthySamples": true
+    }
+  ],
+  "newAtlasDimensions": [
+    2048,
+    1024
+  ],
+  "candidateExported": false,
+  "GPUWorkPerformed": false,
+  "limits": [
+    "CPU texel and normal compatibility does not establish parent appearance approval.",
+    "Skin converts measured healthy current11 exterior and exact original boundary colors, not historical rider assets.",
+    "Planar skin UVs may stretch on hidden inward walls; original source/donor detail and UVs remain exact."
+  ]
+}

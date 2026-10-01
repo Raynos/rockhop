@@ -1275,3 +1275,13 @@ Validation: Six keys7.11nm, contacts16.73nm; four264-frame matched actual clips,
 384 candidate frames reviewed; low/high clear/hash exact, crash/restart5ms.
 Limits: Groin/thigh/sleeve folds remain. Art-only frozen renderer overlay after
 three inline bundle overages; no full-body/face/phone/realLOD acceptance.
+
+## Round121 — native eye geometry survives, textured appearance fails
+
+Finding: Connected source sheets allow a measured native lid graft, but dark
+mottled eye-area texture and flat eye response fail the closeup bar at6.3/10.
+Validation: Parent export verifier0,144 ordered candidate frames reviewed;
+72matched state/hash/bone/camera frames per surface; current-source private
+build passes, low/high replay exact, crash/restart3/4ms, no page errors.
+Limits: Geometry progress does not accept appearance. Diagnose material/atlas
+before another surgical alteration; no fullbody/Garage/bench/device pass.

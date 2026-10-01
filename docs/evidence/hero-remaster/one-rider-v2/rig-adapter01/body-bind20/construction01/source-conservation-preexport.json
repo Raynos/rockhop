@@ -1,0 +1,1500 @@
+{
+  "status": "PASS protected source coverage and attributes within explicit float32 bounds; pre-export only",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "outsideDeclaredSurgicalBoundsFaces": 94523,
+  "exactProtectedFaces": 94484,
+  "subdividedProtectedFaces": 39,
+  "removedProtectedFaces": 0,
+  "allOriginalHeadAttributePrefixesExact": true,
+  "source19RigUnchanged": true,
+  "maximumPlaneErrorM": 8.341557346109087e-08,
+  "maximumRelativeAreaError": 4.0114828201208544e-05,
+  "budget": "Two float32 ULPs; propagated barycentric/area/UV/normal/weight bounds, not fitted after measurements.",
+  "coverage": "Independent convex intersections, overlap and union lower bound.",
+  "subdivisionDetails": [
+    {
+      "sourceTriangle": 26778,
+      "updatedTriangleIndices": [
+        26778,
+        26779,
+        26780,
+        26781
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 4.466226716915723e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -4.85722573273506e-17,
+      "maxBarycentricBudget": 0.00018899909209058098,
+      "absoluteAreaErrorM2": 1.4364463761139327e-11,
+      "absoluteAreaBudgetM2": 3.0820805671842814e-09,
+      "relativeAreaError": 6.225854859320156e-06,
+      "relativeAreaBudget": 0.0013358372853382815,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 1.4386924971678944e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 4.551766902283205e-08,
+          "maxBudget": 7.394327348432741e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 9.367656075121022e-06,
+          "maxBudget": 6.315037710521824e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 32535,
+      "updatedTriangleIndices": [
+        33565,
+        33566,
+        33567,
+        33568,
+        33569,
+        33570
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 1.57843237650662e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -3.599217021332812e-05,
+      "maxBarycentricBudget": 0.00018634782359456615,
+      "absoluteAreaErrorM2": 2.283381852237674e-11,
+      "absoluteAreaBudgetM2": 4.404336156305091e-09,
+      "relativeAreaError": 8.958663609984614e-06,
+      "relativeAreaBudget": 0.0017280055900839712,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 1.8231831535092606e-11,
+      "outsideSourceAreaM2": 4.1064320321150014e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 7.16417606350106e-08,
+          "maxBudget": 6.061265403472537e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.722780904628296e-06,
+          "maxBudget": 2.402361229482945e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 32948,
+      "updatedTriangleIndices": [
+        34009,
+        34010,
+        34011,
+        34012,
+        34013
+      ],
+      "subdivisionTriangles": 5,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.421223429925088e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.7173217393761107e-05,
+      "maxBarycentricBudget": 0.00018013798004246995,
+      "absoluteAreaErrorM2": 5.717969583544786e-11,
+      "absoluteAreaBudgetM2": 2.882383113352679e-09,
+      "relativeAreaError": 3.242465879991083e-05,
+      "relativeAreaBudget": 0.0016345013315573768,
+      "overlapAreaM2": 4.8945938991462855e-23,
+      "missingCoverageAreaUpperBoundM2": 4.8945938991462855e-23,
+      "outsideSourceAreaM2": 5.7178148421766787e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 1.3250634955941365e-07,
+          "maxBudget": 5.969333139675627e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.0066440361611306e-05,
+          "maxBudget": 7.926765233608707e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 33036,
+      "updatedTriangleIndices": [
+        34093,
+        34094,
+        34095,
+        34096,
+        34097,
+        34098
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 4.728526735013898e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.855964408023451e-05,
+      "maxBarycentricBudget": 0.0002001001535022487,
+      "absoluteAreaErrorM2": 1.0061626943346993e-10,
+      "absoluteAreaBudgetM2": 5.592444580624382e-09,
+      "relativeAreaError": 2.1201523053830187e-05,
+      "relativeAreaBudget": 0.001178421177519168,
+      "overlapAreaM2": 2.6343979791759867e-22,
+      "missingCoverageAreaUpperBoundM2": 1.9485177136435626e-11,
+      "outsideSourceAreaM2": 1.2009265490610632e-10,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 4.75957451229192e-08,
+          "maxBudget": 1.077714523871881e-06
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 9.511990189392527e-07,
+          "maxBudget": 3.88406648566037e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 33911,
+      "updatedTriangleIndices": [
+        34998,
+        34999,
+        35000,
+        35001
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.7738356970881414e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -9.80089802760098e-06,
+      "maxBarycentricBudget": 0.00022343170492184774,
+      "absoluteAreaErrorM2": 1.1379162558630105e-11,
+      "absoluteAreaBudgetM2": 1.8562620430983302e-09,
+      "relativeAreaError": 9.80411866057012e-06,
+      "relativeAreaBudget": 0.0015993280034343113,
+      "overlapAreaM2": 8.0536358690967e-23,
+      "missingCoverageAreaUpperBoundM2": 8.0536358690967e-23,
+      "outsideSourceAreaM2": 1.137542452695522e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 3.3566902257753384e-08,
+          "maxBudget": 4.909958187522425e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.2394290087611743e-06,
+          "maxBudget": 7.155612427193659e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 34492,
+      "updatedTriangleIndices": [
+        35538,
+        35539,
+        35540,
+        35541
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.959821445622379e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -1.1102230246251565e-16,
+      "maxBarycentricBudget": 0.00012898343794946925,
+      "absoluteAreaErrorM2": 7.848469288278888e-11,
+      "absoluteAreaBudgetM2": 4.429893977774501e-09,
+      "relativeAreaError": 1.4828793330797784e-05,
+      "relativeAreaBudget": 0.0008369782674930886,
+      "overlapAreaM2": 5.876102739805229e-22,
+      "missingCoverageAreaUpperBoundM2": 7.848701378067945e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 1.1623269968730199e-07,
+          "maxBudget": 5.583946631134379e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.5336154546872223e-07,
+          "maxBudget": 7.499731394117348e-06
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 34507,
+      "updatedTriangleIndices": [
+        35570,
+        35571,
+        35572,
+        35573,
+        35574,
+        35575
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.5493834382429645e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.2898349882893854e-16,
+      "maxBarycentricBudget": 0.00021074173241978665,
+      "absoluteAreaErrorM2": 8.963245331200696e-11,
+      "absoluteAreaBudgetM2": 4.754131252746884e-09,
+      "relativeAreaError": 2.8315049664547034e-05,
+      "relativeAreaBudget": 0.0015018384252489352,
+      "overlapAreaM2": 3.5144566087492126e-22,
+      "missingCoverageAreaUpperBoundM2": 8.963678844995127e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 6.874673352808003e-08,
+          "maxBudget": 9.665994650585192e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 2.885444514003077e-06,
+          "maxBudget": 5.242984801894524e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 35532,
+      "updatedTriangleIndices": [
+        36560,
+        36561,
+        36562,
+        36563
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 5.0065799149711755e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -1.361554610612714e-06,
+      "maxBarycentricBudget": 0.00021917880520986736,
+      "absoluteAreaErrorM2": 3.1154074109597453e-12,
+      "absoluteAreaBudgetM2": 3.0623054425679792e-09,
+      "relativeAreaError": 1.3646694983591243e-06,
+      "relativeAreaBudget": 0.0013414087728719402,
+      "overlapAreaM2": 3.1681636495999644e-23,
+      "missingCoverageAreaUpperBoundM2": 5.38587820431994e-22,
+      "outsideSourceAreaM2": 3.108296427453582e-12,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 4.412250542706886e-08,
+          "maxBudget": 7.309345933170342e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.3639072857229984e-06,
+          "maxBudget": 3.633424843122438e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 36147,
+      "updatedTriangleIndices": [
+        37135,
+        37136,
+        37137,
+        37138
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.2626925201796723e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.220446049250313e-16,
+      "maxBarycentricBudget": 0.0002584981507571394,
+      "absoluteAreaErrorM2": 2.8819676353305336e-11,
+      "absoluteAreaBudgetM2": 3.0218718063439457e-09,
+      "relativeAreaError": 1.0472975793564688e-05,
+      "relativeAreaBudget": 0.0010981382959030358,
+      "overlapAreaM2": 1.5275633630961625e-22,
+      "missingCoverageAreaUpperBoundM2": 2.88224046406752e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 7.558466041945877e-08,
+          "maxBudget": 8.021551687902333e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 5.442995440196885e-07,
+          "maxBudget": 2.42782291750668e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 36218,
+      "updatedTriangleIndices": [
+        37219,
+        37220,
+        37221,
+        37222,
+        37223,
+        37224
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.5876876653948734e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": 0.0,
+      "maxBarycentricBudget": 0.00025078937267676164,
+      "absoluteAreaErrorM2": 5.578010039109267e-11,
+      "absoluteAreaBudgetM2": 3.7330015153740424e-09,
+      "relativeAreaError": 2.875666804685157e-05,
+      "relativeAreaBudget": 0.0019244978880164825,
+      "overlapAreaM2": 2.691912692614349e-23,
+      "missingCoverageAreaUpperBoundM2": 5.57946930175819e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 4.1623402169399526e-08,
+          "maxBudget": 7.223546742281112e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.7197347794706275e-06,
+          "maxBudget": 5.2980893311538495e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 36233,
+      "updatedTriangleIndices": [
+        37246,
+        37247,
+        37248,
+        37249
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 8.015520786178977e-09,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -4.3162563365100465e-06,
+      "maxBarycentricBudget": 0.0002016602535955646,
+      "absoluteAreaErrorM2": 1.3107499908475152e-11,
+      "absoluteAreaBudgetM2": 2.895177631532744e-09,
+      "relativeAreaError": 4.31631007289198e-06,
+      "relativeAreaBudget": 0.0009533842808357565,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 2.0228734193664263e-21,
+      "outsideSourceAreaM2": 1.3107336725372219e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 7.372009891426501e-08,
+          "maxBudget": 8.123120786595965e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.9257259828590074e-06,
+          "maxBudget": 3.315868652203004e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 37238,
+      "updatedTriangleIndices": [
+        38189,
+        38190,
+        38191,
+        38192,
+        38193,
+        38194
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 4.203677248441958e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -1.473071955582217e-05,
+      "maxBarycentricBudget": 0.00018933124938349757,
+      "absoluteAreaErrorM2": 2.5299697745059135e-11,
+      "absoluteAreaBudgetM2": 3.845079899514498e-09,
+      "relativeAreaError": 1.1106909182672564e-05,
+      "relativeAreaBudget": 0.0016880420341135365,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 1.3205262403024249e-11,
+      "outsideSourceAreaM2": 3.849732301466163e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 6.171338873262044e-08,
+          "maxBudget": 6.277575148473939e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 2.220446049250313e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.583589853861646e-06,
+          "maxBudget": 5.2647764679231705e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 37270,
+      "updatedTriangleIndices": [
+        38223,
+        38224,
+        38225,
+        38226,
+        38227,
+        38228
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.293294974047552e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -2.377099050665521e-05,
+      "maxBarycentricBudget": 0.00016685121804238128,
+      "absoluteAreaErrorM2": 3.5906879425622214e-11,
+      "absoluteAreaBudgetM2": 4.320545488990642e-09,
+      "relativeAreaError": 1.3577548767484618e-05,
+      "relativeAreaBudget": 0.0016337375460437854,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 6.387984166820663e-11,
+      "outsideSourceAreaM2": 2.7968387377669304e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.746609776924316e-08,
+          "maxBudget": 5.021357118787675e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 2.548774123645181e-06,
+          "maxBudget": 5.2883004064835066e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 37935,
+      "updatedTriangleIndices": [
+        38937,
+        38938,
+        38939,
+        38940,
+        38941
+      ],
+      "subdivisionTriangles": 5,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 5.462696967998186e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -1.995685445498486e-05,
+      "maxBarycentricBudget": 0.00022790657004837615,
+      "absoluteAreaErrorM2": 9.263648319352084e-11,
+      "absoluteAreaBudgetM2": 4.140804815769086e-09,
+      "relativeAreaError": 2.8276775016845766e-05,
+      "relativeAreaBudget": 0.0012639578072018533,
+      "overlapAreaM2": 1.8185800272569527e-22,
+      "missingCoverageAreaUpperBoundM2": 0.0,
+      "outsideSourceAreaM2": 9.261513644211803e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 3.9571645960023716e-08,
+          "maxBudget": 8.510221684960199e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.9000918892730922e-06,
+          "maxBudget": 5.218743402174256e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 38423,
+      "updatedTriangleIndices": [
+        39414,
+        39415,
+        39416,
+        39417
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.446822065610249e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": 0.0,
+      "maxBarycentricBudget": 0.00039743533123092856,
+      "absoluteAreaErrorM2": 2.4983534334104904e-11,
+      "absoluteAreaBudgetM2": 1.8812147061159636e-09,
+      "relativeAreaError": 2.440176847675989e-05,
+      "relativeAreaBudget": 0.0018374087949219013,
+      "overlapAreaM2": 7.104325010463186e-23,
+      "missingCoverageAreaUpperBoundM2": 2.4984751280130097e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 9.187690586109909e-08,
+          "maxBudget": 7.507341203263595e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.2748875770435264e-05,
+          "maxBudget": 0.00014317597558409834
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 38503,
+      "updatedTriangleIndices": [
+        39444,
+        39445,
+        39446,
+        39447
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.788659221309764e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -2.343684773058359e-05,
+      "maxBarycentricBudget": 0.00021866533012217704,
+      "absoluteAreaErrorM2": 2.5883686710973563e-11,
+      "absoluteAreaBudgetM2": 1.9310763082619205e-09,
+      "relativeAreaError": 2.3442034107046133e-05,
+      "relativeAreaBudget": 0.0017489145648789224,
+      "overlapAreaM2": 5.746221353145101e-23,
+      "missingCoverageAreaUpperBoundM2": 3.026343245989753e-22,
+      "outsideSourceAreaM2": 2.587796013690447e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 3.7456800994206674e-08,
+          "maxBudget": 5.09092490987468e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 2.2702089122472735e-06,
+          "maxBudget": 4.913499773038983e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 39010,
+      "updatedTriangleIndices": [
+        39961,
+        39962,
+        39963,
+        39964
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.2516473509287453e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -4.011398232206531e-05,
+      "maxBarycentricBudget": 0.00021756784781019873,
+      "absoluteAreaErrorM2": 4.011759970477275e-11,
+      "absoluteAreaBudgetM2": 1.8086524051477442e-09,
+      "relativeAreaError": 4.0114828201208544e-05,
+      "relativeAreaBudget": 0.0018085274553345909,
+      "overlapAreaM2": 4.163623984147361e-23,
+      "missingCoverageAreaUpperBoundM2": 4.163623984147361e-23,
+      "outsideSourceAreaM2": 4.0116753767188356e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.665101776575199e-08,
+          "maxBudget": 4.13791610649614e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 8.598928049663446e-06,
+          "maxBudget": 0.00020832050335381204
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 46159,
+      "updatedTriangleIndices": [
+        47994,
+        47995,
+        47996,
+        47997
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 1.7942075361412273e-08,
+      "positionBudgetM": 2.665665827198938e-07,
+      "minBarycentric": -2.220446049250313e-16,
+      "maxBarycentricBudget": 0.00030514010080002715,
+      "absoluteAreaErrorM2": 1.6199278045551818e-11,
+      "absoluteAreaBudgetM2": 2.158766947302012e-09,
+      "relativeAreaError": 1.1411399385316454e-05,
+      "relativeAreaBudget": 0.0015207191176182136,
+      "overlapAreaM2": 1.970048858733561e-23,
+      "missingCoverageAreaUpperBoundM2": 1.6200058761911556e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 6.711624500610469e-08,
+          "maxBudget": 7.101628938624961e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 8.22503265038299e-06,
+          "maxBudget": 7.527613908667427e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 46162,
+      "updatedTriangleIndices": [
+        48000,
+        48001,
+        48002,
+        48003,
+        48004,
+        48005
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 9.35654584961498e-09,
+      "positionBudgetM": 2.665665827198938e-07,
+      "minBarycentric": -3.6206062214438894e-05,
+      "maxBarycentricBudget": 0.0002859901994811198,
+      "absoluteAreaErrorM2": 3.4480606920421155e-12,
+      "absoluteAreaBudgetM2": 3.1484217205102046e-09,
+      "relativeAreaError": 2.510183814917916e-06,
+      "relativeAreaBudget": 0.0022920470233022813,
+      "overlapAreaM2": 9.53146425935965e-23,
+      "missingCoverageAreaUpperBoundM2": 1.7191928242852828e-11,
+      "outsideSourceAreaM2": 2.063965540843102e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 1.0729295452094334e-07,
+          "maxBudget": 8.037457566349986e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 9.927568487823508e-06,
+          "maxBudget": 0.00010183725254230003
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 46744,
+      "updatedTriangleIndices": [
+        48645,
+        48646,
+        48647,
+        48648
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.3328565871807295e-08,
+      "positionBudgetM": 2.665665827198938e-07,
+      "minBarycentric": -7.874722253820065e-06,
+      "maxBarycentricBudget": 0.0002483357920079724,
+      "absoluteAreaErrorM2": 8.666210723258194e-12,
+      "absoluteAreaBudgetM2": 1.9571147642207873e-09,
+      "relativeAreaError": 7.876278535496898e-06,
+      "relativeAreaBudget": 0.0017787221544897814,
+      "overlapAreaM2": 3.0539253525166505e-23,
+      "missingCoverageAreaUpperBoundM2": 0.0,
+      "outsideSourceAreaM2": 8.664498358110165e-12,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.236315042678186e-08,
+          "maxBudget": 4.5570527280171763e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.430564410112578e-06,
+          "maxBudget": 5.693988192174726e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 62359,
+      "updatedTriangleIndices": [
+        65175,
+        65176,
+        65177,
+        65178
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.085392314323087e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -2.220446049250313e-16,
+      "maxBarycentricBudget": 0.00013025269588486845,
+      "absoluteAreaErrorM2": 3.8843668787123115e-11,
+      "absoluteAreaBudgetM2": 3.2006388815771615e-09,
+      "relativeAreaError": 1.605833818051246e-05,
+      "relativeAreaBudget": 0.001323174230419285,
+      "overlapAreaM2": 3.356911450270113e-23,
+      "missingCoverageAreaUpperBoundM2": 3.884534045845886e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 1.2021887718649538e-07,
+          "maxBudget": 5.855105769775491e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 7.550450041443613e-07,
+          "maxBudget": 7.039405507924485e-06
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 62962,
+      "updatedTriangleIndices": [
+        65703,
+        65704,
+        65705,
+        65706
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.014178572520383e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -4.440892098500626e-16,
+      "maxBarycentricBudget": 8.355868713316256e-05,
+      "absoluteAreaErrorM2": 2.151952027667421e-11,
+      "absoluteAreaBudgetM2": 3.522014022043041e-09,
+      "relativeAreaError": 5.7037475468648516e-06,
+      "relativeAreaBudget": 0.0009335096033728249,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 2.152073920157555e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 6.81898572052475e-08,
+          "maxBudget": 4.7558795558294335e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 5.169352912774705e-07,
+          "maxBudget": 4.625150334322977e-06
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 63569,
+      "updatedTriangleIndices": [
+        66361,
+        66362,
+        66363,
+        66364,
+        66365,
+        66366,
+        66367
+      ],
+      "subdivisionTriangles": 7,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.1988509065884276e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -1.0002690341792686e-05,
+      "maxBarycentricBudget": 0.00017036029811591687,
+      "absoluteAreaErrorM2": 4.085010247802172e-11,
+      "absoluteAreaBudgetM2": 6.026067488139561e-09,
+      "relativeAreaError": 9.137409731024407e-06,
+      "relativeAreaBudget": 0.001347919451011443,
+      "overlapAreaM2": 1.8612793038905483e-22,
+      "missingCoverageAreaUpperBoundM2": 1.2566176644249897e-12,
+      "outsideSourceAreaM2": 4.209733566554778e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.019973969844216e-08,
+          "maxBudget": 6.549889308087968e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.1385710431549567e-06,
+          "maxBudget": 6.0148011084201015e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 63624,
+      "updatedTriangleIndices": [
+        66455,
+        66456,
+        66457,
+        66458,
+        66459,
+        66460,
+        66461
+      ],
+      "subdivisionTriangles": 7,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 2.7372307375002632e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.160064518681032e-05,
+      "maxBarycentricBudget": 0.000196308105856695,
+      "absoluteAreaErrorM2": 7.053433341700145e-11,
+      "absoluteAreaBudgetM2": 7.535071240780107e-09,
+      "relativeAreaError": 1.5793793588765773e-05,
+      "relativeAreaBudget": 0.0016872259804307011,
+      "overlapAreaM2": 2.788989409487873e-22,
+      "missingCoverageAreaUpperBoundM2": 3.0770336628167647e-11,
+      "outsideSourceAreaM2": 1.012983930495009e-10,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 4.692377703063855e-08,
+          "maxBudget": 1.1600255150893173e-06
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 9.930031401317319e-07,
+          "maxBudget": 3.405366408486505e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 64096,
+      "updatedTriangleIndices": [
+        66933,
+        66934,
+        66935,
+        66936
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 5.085429286157067e-08,
+      "positionBudgetM": 2.6658610497139163e-07,
+      "minBarycentric": -2.220446049250313e-16,
+      "maxBarycentricBudget": 0.00029346035380045237,
+      "absoluteAreaErrorM2": 5.321756362697299e-11,
+      "absoluteAreaBudgetM2": 3.156312010620656e-09,
+      "relativeAreaError": 2.2322616641395532e-05,
+      "relativeAreaBudget": 0.0013239452957220026,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 5.3229194228263023e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 3.944961224355836e-08,
+          "maxBudget": 1.364646202999342e-06
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.4745347027000921e-06,
+          "maxBudget": 6.1010127006671246e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 64652,
+      "updatedTriangleIndices": [
+        67471,
+        67472,
+        67473,
+        67474,
+        67475
+      ],
+      "subdivisionTriangles": 5,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 5.539897351301212e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.7755575615628914e-16,
+      "maxBarycentricBudget": 9.744370768948805e-05,
+      "absoluteAreaErrorM2": 3.6448463933151973e-11,
+      "absoluteAreaBudgetM2": 3.975542736178053e-09,
+      "relativeAreaError": 1.0585316267474191e-05,
+      "relativeAreaBudget": 0.0011545720355866096,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 3.645775567393871e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 6.240721395212034e-08,
+          "maxBudget": 4.916361227312894e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.583215688468533e-07,
+          "maxBudget": 1.2539124455057076e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 65136,
+      "updatedTriangleIndices": [
+        67957,
+        67958,
+        67959,
+        67960
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.165657093180041e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.220446049250313e-16,
+      "maxBarycentricBudget": 0.00016734043820775297,
+      "absoluteAreaErrorM2": 1.5876576336455755e-11,
+      "absoluteAreaBudgetM2": 3.2340933452637927e-09,
+      "relativeAreaError": 4.936252041586661e-06,
+      "relativeAreaBudget": 0.0010055253437470043,
+      "overlapAreaM2": 1.339063052224618e-22,
+      "missingCoverageAreaUpperBoundM2": 1.5877814800586458e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 7.612898345055186e-08,
+          "maxBudget": 7.039008431278752e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.9821936109720717e-06,
+          "maxBudget": 3.34886317765903e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 65175,
+      "updatedTriangleIndices": [
+        68009,
+        68010,
+        68011,
+        68012
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.4305490080825736e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -1.39095284210633e-05,
+      "maxBarycentricBudget": 0.00011446426244551483,
+      "absoluteAreaErrorM2": 2.7578320382042862e-11,
+      "absoluteAreaBudgetM2": 3.138421968892204e-09,
+      "relativeAreaError": 1.3910452240716047e-05,
+      "relativeAreaBudget": 0.0015830140597654174,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 0.0,
+      "outsideSourceAreaM2": 2.757648885276966e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 8.753282743079183e-08,
+          "maxBudget": 5.566881559211792e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.879831728115235e-07,
+          "maxBudget": 8.593951388974443e-06
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 65254,
+      "updatedTriangleIndices": [
+        68115,
+        68116,
+        68117,
+        68118
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.895414180370689e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": 0.0,
+      "maxBarycentricBudget": 0.0003853986249220347,
+      "absoluteAreaErrorM2": 4.633214710499198e-11,
+      "absoluteAreaBudgetM2": 2.2183666686404475e-09,
+      "relativeAreaError": 3.496624516255824e-05,
+      "relativeAreaBudget": 0.0016741713398335484,
+      "overlapAreaM2": 1.6549930737282303e-22,
+      "missingCoverageAreaUpperBoundM2": 4.6337762205482985e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 2.2098337881804042e-07,
+          "maxBudget": 1.521812598238127e-06
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 4.0600268227941605e-06,
+          "maxBudget": 0.00011626398706785208
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 66059,
+      "updatedTriangleIndices": [
+        68936,
+        68937,
+        68938,
+        68939,
+        68940
+      ],
+      "subdivisionTriangles": 5,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.805899328952289e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": 0.0,
+      "maxBarycentricBudget": 0.00016636174268537223,
+      "absoluteAreaErrorM2": 8.551204755726852e-11,
+      "absoluteAreaBudgetM2": 3.4173667380310853e-09,
+      "relativeAreaError": 3.4127349361909065e-05,
+      "relativeAreaBudget": 0.001363850730956345,
+      "overlapAreaM2": 1.7386613276448242e-22,
+      "missingCoverageAreaUpperBoundM2": 8.552037192824967e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 6.191631513052798e-08,
+          "maxBudget": 5.717129567685293e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.8849342035553995e-06,
+          "maxBudget": 3.844427515740415e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 66163,
+      "updatedTriangleIndices": [
+        69008,
+        69009,
+        69010,
+        69011,
+        69012,
+        69013,
+        69014,
+        69015,
+        69016,
+        69017
+      ],
+      "subdivisionTriangles": 10,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 6.948004993339454e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -4.288608817126782e-06,
+      "maxBarycentricBudget": 0.0002575913349300755,
+      "absoluteAreaErrorM2": 2.7989973282564615e-11,
+      "absoluteAreaBudgetM2": 5.7789673717418745e-09,
+      "relativeAreaError": 1.2087878307856396e-05,
+      "relativeAreaBudget": 0.0024957313688542364,
+      "overlapAreaM2": 3.2636684278462205e-23,
+      "missingCoverageAreaUpperBoundM2": 3.170605751788414e-11,
+      "outsideSourceAreaM2": 3.5080243176603455e-12,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.02343802111227e-08,
+          "maxBudget": 7.410317101876769e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.197115234385926e-06,
+          "maxBudget": 7.56702291256532e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 66602,
+      "updatedTriangleIndices": [
+        69483,
+        69484,
+        69485,
+        69486,
+        69487,
+        69488
+      ],
+      "subdivisionTriangles": 6,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 8.341557346109087e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -8.754258378346202e-06,
+      "maxBarycentricBudget": 0.00023508841518021388,
+      "absoluteAreaErrorM2": 1.8246995716782573e-11,
+      "absoluteAreaBudgetM2": 3.5091772880798654e-09,
+      "relativeAreaError": 8.423406745076929e-06,
+      "relativeAreaBudget": 0.0016199503796066421,
+      "overlapAreaM2": 1.2024965306850804e-22,
+      "missingCoverageAreaUpperBoundM2": 1.5632454898906045e-21,
+      "outsideSourceAreaM2": 1.822653249742964e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 7.30529186032669e-08,
+          "maxBudget": 4.882948908714553e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 2.917979459338138e-06,
+          "maxBudget": 8.523115901745609e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 66683,
+      "updatedTriangleIndices": [
+        69560,
+        69561,
+        69562,
+        69563
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 4.6301085352118276e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.5053966338270395e-05,
+      "maxBarycentricBudget": 0.00024891776480559107,
+      "absoluteAreaErrorM2": 6.337424966732747e-11,
+      "absoluteAreaBudgetM2": 2.8893372092497373e-09,
+      "relativeAreaError": 2.505850697709819e-05,
+      "relativeAreaBudget": 0.001142458916629998,
+      "overlapAreaM2": 3.509763730801783e-23,
+      "missingCoverageAreaUpperBoundM2": 0.0,
+      "outsideSourceAreaM2": 6.336276615868813e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 1.620090614995462e-07,
+          "maxBudget": 1.504923188526189e-06
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 5.442635895525072e-06,
+          "maxBudget": 4.195537374161345e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 67087,
+      "updatedTriangleIndices": [
+        69954,
+        69955,
+        69956,
+        69957
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 4.0637481313690896e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -3.0531133177191805e-16,
+      "maxBarycentricBudget": 0.00024256251907265572,
+      "absoluteAreaErrorM2": 4.959687764886781e-11,
+      "absoluteAreaBudgetM2": 2.3784595317325445e-09,
+      "relativeAreaError": 2.5430779046956186e-05,
+      "relativeAreaBudget": 0.0012195541673377492,
+      "overlapAreaM2": 1.3532714484881367e-22,
+      "missingCoverageAreaUpperBoundM2": 4.9603148355696656e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 4.982167578493346e-08,
+          "maxBudget": 5.64554528891743e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 3.6205685091106332e-06,
+          "maxBudget": 9.457279770891553e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 68043,
+      "updatedTriangleIndices": [
+        70945,
+        70946,
+        70947,
+        70948
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 3.179240234444269e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.7255103961953964e-05,
+      "maxBarycentricBudget": 0.00019603409370882717,
+      "absoluteAreaErrorM2": 5.2366368054460505e-11,
+      "absoluteAreaBudgetM2": 2.457051085012548e-09,
+      "relativeAreaError": 2.725764568230898e-05,
+      "relativeAreaBudget": 0.0012789397162116184,
+      "overlapAreaM2": 1.3330743098575555e-22,
+      "missingCoverageAreaUpperBoundM2": 9.86474989294591e-22,
+      "outsideSourceAreaM2": 5.236148499650481e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.875266861909978e-08,
+          "maxBudget": 5.057923788044779e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 4.497190658980799e-06,
+          "maxBudget": 0.00011068288358120032
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 69143,
+      "updatedTriangleIndices": [
+        72112,
+        72113,
+        72114,
+        72115
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 5.9169749713536004e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": 0.0,
+      "maxBarycentricBudget": 0.00021692626774557237,
+      "absoluteAreaErrorM2": 2.226553061402931e-11,
+      "absoluteAreaBudgetM2": 2.6194969685892164e-09,
+      "relativeAreaError": 1.3273205097550959e-05,
+      "relativeAreaBudget": 0.0015615671200124,
+      "overlapAreaM2": 9.31188230782054e-23,
+      "missingCoverageAreaUpperBoundM2": 2.2275446334622744e-11,
+      "outsideSourceAreaM2": 0.0,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.421188520315923e-08,
+          "maxBudget": 5.077243145238733e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 2.039423830757503e-06,
+          "maxBudget": 3.74921642551311e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 70077,
+      "updatedTriangleIndices": [
+        73235,
+        73236,
+        73237,
+        73238
+      ],
+      "subdivisionTriangles": 4,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 1.2945154401417792e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -2.9103044965061997e-06,
+      "maxBarycentricBudget": 0.00014606333173346908,
+      "absoluteAreaErrorM2": 9.83942426166051e-12,
+      "absoluteAreaBudgetM2": 3.2896183390399685e-09,
+      "relativeAreaError": 2.910554261299848e-06,
+      "relativeAreaBudget": 0.0009730866786637665,
+      "overlapAreaM2": 4.691527104304981e-23,
+      "missingCoverageAreaUpperBoundM2": 4.691527104304981e-23,
+      "outsideSourceAreaM2": 9.838579907161362e-12,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 8.097048831423592e-08,
+          "maxBudget": 5.54773121275035e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 0.0,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 9.379047838931065e-07,
+          "maxBudget": 2.7589082346724095e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 72891,
+      "updatedTriangleIndices": [
+        76855,
+        76856,
+        76857,
+        76858,
+        76859,
+        76860,
+        76861,
+        76862
+      ],
+      "subdivisionTriangles": 8,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 5.1856302842453505e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -9.861622778814527e-06,
+      "maxBarycentricBudget": 0.0001508140933192456,
+      "absoluteAreaErrorM2": 4.0889859640597104e-11,
+      "absoluteAreaBudgetM2": 6.8065380622984785e-09,
+      "relativeAreaError": 9.227067865107683e-06,
+      "relativeAreaBudget": 0.0015359404306908373,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 3.551843665875012e-12,
+      "outsideSourceAreaM2": 4.4434366086794984e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 7.344515440266264e-08,
+          "maxBudget": 6.696911720445134e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 1.9734760350886837e-06,
+          "maxBudget": 2.1434319706568655e-05
+        }
+      },
+      "jointSlotsExact": true
+    },
+    {
+      "sourceTriangle": 74553,
+      "updatedTriangleIndices": [
+        78708,
+        78709,
+        78710,
+        78711,
+        78712
+      ],
+      "subdivisionTriangles": 5,
+      "windingPositive": true,
+      "maxPlaneDistanceM": 1.573251571576958e-08,
+      "positionBudgetM": 2.666641796853137e-07,
+      "minBarycentric": -9.783846919061978e-06,
+      "maxBarycentricBudget": 0.00015678481044085742,
+      "absoluteAreaErrorM2": 6.9094888159066e-12,
+      "absoluteAreaBudgetM2": 3.815801119659185e-09,
+      "relativeAreaError": 1.9921864010593447e-06,
+      "relativeAreaBudget": 0.001100195296970694,
+      "overlapAreaM2": 0.0,
+      "missingCoverageAreaUpperBoundM2": 9.523139353237919e-12,
+      "outsideSourceAreaM2": 1.6431885646769527e-11,
+      "interpolation": {
+        "TEXCOORD_0": {
+          "maxError": 5.614902531814181e-08,
+          "maxBudget": 6.204432304385798e-07
+        },
+        "WEIGHTS_0": {
+          "maxError": 1.1102230246251565e-16,
+          "maxBudget": 2.384185791015625e-07
+        },
+        "NORMAL": {
+          "maxError": 7.246611526401381e-07,
+          "maxBudget": 3.0515223094584735e-05
+        }
+      },
+      "jointSlotsExact": true
+    }
+  ],
+  "limits": [
+    "CPU geometry gate. GLB prefix/nodes/animations/body/cheek accessor preservation must be checked after export.",
+    "Protected region conservatively excludes the declared source-sheet-dependent axis-aligned surgical bounds."
+  ]
+}
