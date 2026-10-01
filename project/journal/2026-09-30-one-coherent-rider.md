@@ -1572,3 +1572,18 @@ Retained34ship147 both tiers passes bytefinish/hash/crash/restart/errors.
 Limits: Three setupfailures retained; regional CPU rejection, no36moving
 asset/appearance/bench/Garage/device pass. Next clean garment topology/detail
 bake, protecting native hood/head join and existing behavioral invariants.
+
+## Round148 — separate clean garment topology replaces failed skin repairs
+
+Finding: Select native CC0long-sleeve/jeans02 as clean deformation topology,
+with selected generated shape/texture as fit/bake target. Different source
+architecture; no silent generator replacement or weight sweep.
+
+Validation: Existing archiveSHA b542127a verified;18sourcefiles hashed/private.
+Six native thumbnails inventoried, only02selected. OBJ has2060quads, two
+shirt/jeans components, no nonmanifold/zero-area faces, boundary degree2.
+CC0header/officialpage agree. CPU only; no new GPU/generation workload.
+
+Limits: No source fitting, material bake or rig/motion acceptance. Preserve
+source hood/neck/gloves/shoes and fresh contract; stitch real seam rather
+than overlap. Old failures retained; source topology alone is not success.
