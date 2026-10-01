@@ -893,3 +893,13 @@ Parent inspected116decodedframes acrossfouractualclips; motion1/10 reject.
 Limits: Canonical exports review-only, GTdecodefootdrift0.465mm, opposite
 profilehemisphere inreferenceboard. Original appearance preserved; no
 new-rider player/physics changes or sitting/riding checkpoint closure.
+
+### Round86 — measure actual grip surfaces before fitting the hands
+
+Finding: Actual unchanged rubber grips are slanted17→16mm tapered islands;
+markers4.797mm offaxis. Earlier18mmfixture would misjudge visiblecontact.
+Validation: CPU productiondecoder recovers single44triangle grip perbike/side,
+actualsurfaces identical; source hashes unchanged. Recipe/decodedtapererror
+0.139mm, lint and complete harness typecheck pass.
+Limits: Circumradius is notpolygonface clearance; nativefitting, explicit
+socket/rodaxis mapping and played thumb/finger/wrist contact remain open.

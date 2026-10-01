@@ -604,3 +604,12 @@ Rejectrawmotion, keep stronger originalplantedBlenderclip and sameWHITE
 character. CanonicalGTdecodealsofootdrifts0.465mm; do notpromote it. Switch
 early to authoredanticipation/contactpolish; future neuraladditives must
 protect decoded body. No generator/bodyreplacement or physics edits.
+
+### Actual unchanged rubber-grip islands recovered
+
+Rookie/Pro eachhave one44triangle grip island perside; decodedsurfaces
+identical. Recipe17→16mm taper matchesvertices within0.139mm, circumradii
+15.880–17.103mm. Markers4.797mm off actualrodaxis. Nativeheldshape must use
+realpolygon/taper/axis at1.015scale, with explicitvirtualsocket alignment
+that preserves physicaltargets. Neithermarkercoincidence nor18mmfixture
+is a visiblecontactpass. No bike/player/physics edits; lint/typecheckpass.
