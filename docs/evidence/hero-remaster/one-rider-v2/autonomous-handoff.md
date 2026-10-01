@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round143, 2026-10-01
+## Current evidence — round144, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -850,3 +850,26 @@ state/hash guards, live restaxes/bikeframebones for CPUbrowserparity. No
 candidate recentering orposeinjection. Scopedlint/typechecks/bundle syntax
 pass; actualGPUmotion stillunaccepted. Next4x480PBR/gray side/rear clips,
 requiredcandidate ship144 incanonicalboundedbatch. Current11/22separate.
+
+## Actual fresh-rig motion — round144
+
+Four480-frame side/rear PBR/gray recordings now load exact mapped34.
+Physics input/hash and baseline camera trajectories match exactly. Live
+19bones/14axes use the physical driver; four CPU states reproduce bone
+positions within1.43e-14m. Only COM/sole diagnostic residuals differ by
+<=1.71e-15m (1e-12tolerance); all other CPU debug fields are exact.
+
+Parent inspected five ordered12-frame matched windows. Hips/butt are
+fuller, waistband less collapsed, but long jagged torso/underarm folds and
+bad elbows remain in PBR and gray. Whole-character appearance is rejected.
+Keep the explicit fresh skeleton/contact adapter and regional improvement;
+these crops do not assign fullbody/face scores or pass any whole stage.
+Candidate-active ship144 passes both tiers: exact finish/hash,103crash ticks,
+2/3ms restart and zero page errors. Source movies/all480original frames
+are preserved; matched boards are image samples from those actual movies.
+
+Ask246: confirmed C19 is the independent task's improved fresh rig. Its
+final report explicitly failed collision and saddle support. Gallery129
+contains earlier assets, not34; publish a clearly labeled new comparison.
+Next isolate fresh binds from fresh weight assignment before targeted
+garment reconstruction. Original11/approved join/eye22progress preserved.

@@ -1506,3 +1506,21 @@ actualstate/hash/camera/restaxes/bikeframebones; no pose injection.
 Limits: CPU syntax/overlay receipts are not browser/appearance acceptance.
 Four480frame clips andrequiredship144 next, under canonicalGPUlock/bounds.
 No production/cache/bundle/actualLOD/performance pass.
+
+## Round144 — fresh rig helps hip shape but fails whole moving appearance
+
+Finding: Independent C19 is a real fresh skeleton, now mapped through the
+actual physics/COM/IK/contact adapter. Actual moving hip progress survives,
+but severe underarm/torso folds prohibit accepting the character. Gallery129
+still shows earlier evidence; user's memory of rig improvement is correct.
+
+Validation: Four480-frame exact camera/state/hash clips,960PBRgray parity
+frames; live19bones/14axes and fourCPUstates agree within1.43e-14m. COM/sole
+residual comparison uses1e-12tolerance (actual1.71e-15); other fields exact.
+Five ordered12-frame paired windows inspected. Candidate ship144 both tiers
+pass exact40.083333333333336 finish/hash,103crash ticks,restart2/3ms,errors0.
+CanonicalGPUbatch209.03s,peak36.45GB anonymous; fullframes privately retained.
+
+Limits: Regional appearance rejection, no fullbody/face grade, Garage,
+standing-transition, support, device or production pass. Retain fresh rig
+architecture; missing fresh-bind/original-weight causal control next.
