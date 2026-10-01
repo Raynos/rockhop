@@ -813,3 +813,13 @@ connected and accessible sole views track pegs, but far-side occlusion and
 4.785/4.854mm thumb-pad gaps keep contact gate open. Dark elbow sleeve patches
 need matched gray diagnosis. Original/stale captures preserved as diagnostics.
 No art/player camera/physics changes. Body11 and face6.8 remain current.
+
+Round108: REJECT larger orbital13 correction02 in actual motion. Face diagnostic
+5.5 versus current11 6.8: raised lower lids, overexposed sclera and constant skin
+bands. All72 paired states/debug/bones/camera/focus exact; all144 PBR/gray frames
+reviewed. Independent conservation proves96236 exact protected triangles plus
+40 float32-bounded subdivisions, no lost source surface/body/rig changes.
+Ship gate both tiers byte-identical40.083333333333336s, crash103/restart1/2ms;
+locked46.48s/35.604GB anonymous. Larger-method failures2, totaleye5. Keep11;
+next recess donor and fit thin natural lids to surrounding face, avoid repeating
+outward-only clearance inflation. No appearance/checkpoint/game-ready claim.

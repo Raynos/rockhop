@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round107, 2026-10-01
+## Current evidence — round108, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -33,9 +33,9 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action:36×18mm ordered orbital retopology and explicit
-  lid rings. Small analytic aperture/angular tunnel stopped after3 failures;
-  no candidate exported. Inner face sheet folds invalidate angular sorting.
+- Next bounded action: recess donor and fit thin natural lids against the
+  surrounding source face. Trial13 failed actual appearance5.5 vs11 6.8;
+  no promotion. Larger method2 failures; totaleye5. Small tunnel approachSTOP3.
   Explicit private3Dfocus retains all72 head views.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
@@ -492,3 +492,13 @@ connected and accessible sole views track pegs, but far-side occlusion and
 4.785/4.854mm thumb-pad gaps keep contact gate open. Dark elbow sleeve patches
 need matched gray diagnosis. Original/stale captures preserved as diagnostics.
 No art/player camera/physics changes. Body11 and face6.8 remain current.
+
+Round108: REJECT larger orbital13 correction02 in actual motion. Face diagnostic
+5.5 versus current11 6.8: raised lower lids, overexposed sclera and constant skin
+bands. All72 paired states/debug/bones/camera/focus exact; all144 PBR/gray frames
+reviewed. Independent conservation proves96236 exact protected triangles plus
+40 float32-bounded subdivisions, no lost source surface/body/rig changes.
+Ship gate both tiers byte-identical40.083333333333336s, crash103/restart1/2ms;
+locked46.48s/35.604GB anonymous. Larger-method failures2, totaleye5. Keep11;
+next recess donor and fit thin natural lids to surrounding face, avoid repeating
+outward-only clearance inflation. No appearance/checkpoint/game-ready claim.

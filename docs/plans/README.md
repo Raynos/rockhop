@@ -13,6 +13,8 @@ the complete rider in Blender under the existing hero plan.
 
 Checkpoint 1 has WHITE static minimum; target8 and later gates open. Round107 retains moving contact diagnostics with480 exact states and final surface-centred framing. Thumb-pad gaps4.785/4.854mm keep contact gate open; dark elbow patches need gray diagnosis. Body11 face6.8 remains current; orbital body13 awaits actual review. Next ship gate108.
 
+Checkpoint 1 has WHITE static minimum; target8 and later gates open. Round108 rejects orbital13 face5.5 vs current11 6.8 after144 played PBR/gray frames. Source conservation and ship gate pass; anatomy appearance fails. Keep11; recess donor and shape thin lids next. Larger method2 failures,totaleye5; contact thumb gaps remain open.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

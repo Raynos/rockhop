@@ -1139,3 +1139,14 @@ objects match body09, both maximum leans and landing/recovery recorded. Final
 midpoint drift0/NDCerror1.04e-15. Target lint and harness typecheck pass.
 Limits: Far-side occlusion, conservative envelope bounds, thumb gaps4.785/4.854mm
 and irregular elbow patches remain. No art changes or asset promotion.
+
+## Round108 — valid orbital topology still fails appearance
+
+Finding: Reject13correction02; raised lid bands and exposed sclera make the
+face worse. Keep11 and fit recessed eyes with thinner anatomically shaped lids.
+Validation: Parent reviewed144 actual PBR/gray frames. Exact paired72 state,
+debug,bones,camera,focus. Independent protected surface conservation passes.
+Ship gate both tiers byte-identical40.083333333333336s; crash103/restart1/2ms;
+errors0. CPU recipe syntax passes; locked46.48s/35.604GB anonymous.
+Limits: Face diagnostic5.5 vs6.8, unmatched gameplay lighting; no fullbody
+regrade or checkpoint pass. Larger-method failures2; totaleye5 preserved.
