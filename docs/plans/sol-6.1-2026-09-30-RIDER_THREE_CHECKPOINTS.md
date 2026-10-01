@@ -582,3 +582,14 @@ contact/closeup and actualNEWrig UniMate comparison. Actual unchanged
 Rookie/Pro handlebars expose mixed rod/bend/lever vertices near markers.
 Native18mm fixture is provisional; determine actual surface alignment
 before retainedDQS grip. No bike, physics, player or package changes.
+
+### NEW-rig UniMate input frozen before neural sampling
+
+Private body-bind04 supplied actual meshes/skin/binds/images; original binary
+prefix and definitions exact. Only sampler timestamps appended/retimed from
+actual exported2.0s to59/30s. Installed UniMate will receive thisNEW nineteen-
+bone candidate with standing-to-bench prompt, isolated experiment paths,
+seed42/50steps/MPS and only foot-feature pinning. Measure decoded contact and
+canonical restoration; don't reuse historicalidle or call finiteoutputpass.
+Round84 production baseline passes exact finishbytes/crash103ticks/restart
+1msLOW2msHIGH/errors0. It is not new-rider gameplay evidence.

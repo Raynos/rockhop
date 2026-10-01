@@ -870,3 +870,14 @@ facepair0.1852µm; decoder restshape2.018µm,19bones/fiveprimitives,24finite
 samples. Handlebar decoder/typecheck/lint pass.
 Limits: Private foundation only; seat/closeups/new-rig UniMate/riding
 contacts and target8 polish remain open. Neither bike nor physics edited.
+
+### Round84 — freeze the actual new rig as neural input
+
+Finding: UniMate gets the actual new white body-bind04, including its mesh/
+skin/binds, rather than substituting historical seated idle or geometry.
+Validation: Original binary prefix and mesh/skin/node/material/image/texture
+definitions exact;19joints and only appended animation timestamps. Python
+compile passes. Ship baseline exactfinishbytes/crash103/restart1msLOW2msHIGH,
+zero errors.
+Limits: Neural sampling and actual decoded motion/contact not yet evaluated;
+canonical exports review-only, no new-rider player promotion.
