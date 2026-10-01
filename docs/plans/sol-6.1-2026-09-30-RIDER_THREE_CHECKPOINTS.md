@@ -465,11 +465,13 @@ fixture blended the jaw and failed; revised rigidface/jaw weights preserve
 256facepairdistances perframe within1.58e-7m. This is a threebone diagnostic,
 not the final19boneadapter, and does not authorize playerasset promotion.
 
-Checkpoint1 remains open: fullbody7.4/face7.5 are diagnostic scores with
-photo camera/light uncertainty. Make the same-white-buzz nineangle target
-comparison and a boundedtarget8 detail refinement before closing it. Keep
-this coherent character as the primary direction; do not restart the body
-or replace historical comparisons. Then implement the explicit19bone
-rest/bind/socket/weight adapter and actual standing-to-sitting evidence.
+Checkpoint1 passes the minimum appearance gate after the matched-white-buzz
+nineangle comparison: fullbody7.2/face7.5, independently above7. Exact
+referencecamera/light remain uncertain; no pixelmetric claimed. Target8
+coarseface/glove/shoe/cloth refinement remains a bounded requirement before
+final appearance delivery. Keep this ONE coherent character, preserve the
+source/historicalcomparisons, and proceed to the explicit19bone rest/bind/
+socket/weight adapter and actual standing-to-sitting checkpoint. This is
+not playerasset promotion or a sitting/riding pass.
 No human approval hold applies; the existing five/fifteen switch/retirement
 policy and sharedGPUlock rules continue.

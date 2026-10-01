@@ -795,5 +795,10 @@ Limits: Threebonefixture only, diagnostic7.4/7.5; matchedtarget/refinement and f
 
 ## Round75 — reference consistency drift
 Finding: NewnineangleWHITEbuzz target repeatsonequarter and rolls sleevesabove intendedwristcuffs; do not adoptthesechanges.
-Validation: Parentviews generatedboard; originalinputreferences/actualriderunchanged; firsttargetfailure.
+Validation: Parent views generatedboard; originalinputreferences/actualriderunchanged; firsttargetfailure.
 Limits: Mockupunaccepted; productionround75 queued canonical lock, no passclaimed.
+
+## Round76 — coherent WHITE appearance minimum gate
+Finding: CorrectedWHITEbuzz target fixes duplicatequarter/sleeves. Actual05GLB reordered tosame nineviewclasses, blankmargincrop/uniformscale only. Parent matchedappearance fullbody7.2/face7.5, above minimum7each; facecomparison usespreservedbuzzbustreference andactualfacecloseups. Actualturntable/neckclip previouslyinspected, geometrygray04byteexact05. Checkpoint1 MINIMUM appearancePASS, target8detailpolish tracked; notgame-ready. KeepONEcoherentcandidate into19boneadapter/sittingcheckpoint, preservephysics/COM/IK/contacts. Remaining glovedetail/longneutralfingers, coarseface/eyes/hair, shoelaces/fabricclarity/mustardcolourdifference; exactreferencecamera/lightunknown. Round75productionpending sharedlock.
+Validation: Correctedgeneratedtarget inspected;9actual views matchedbyreorder only; sourcePNGs unchanged; prioractualturntable/neck36decodedframes andparityproof used.
+Limits: Target8notreached, exactphotocamera/lightunknown, no19bonerig/sitting/gameplaypass; round75productionpending.

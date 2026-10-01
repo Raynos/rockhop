@@ -1,0 +1,5 @@
+# Same white rider — matched minimum appearance gate
+
+CorrectedWHITEbuzz target fixes duplicatequarter/sleeves. Actual05GLB reordered tosame nineviewclasses, blankmargincrop/uniformscale only. Parent matchedappearance fullbody7.2/face7.5, above minimum7each; facecomparison usespreservedbuzzbustreference andactualfacecloseups. Actualturntable/neckclip previouslyinspected, geometrygray04byteexact05. Checkpoint1 MINIMUM appearancePASS, target8detailpolish tracked; notgame-ready. KeepONEcoherentcandidate into19boneadapter/sittingcheckpoint, preservephysics/COM/IK/contacts. Remaining glovedetail/longneutralfingers, coarseface/eyes/hair, shoelaces/fabricclarity/mustardcolourdifference; exactreferencecamera/lightunknown. Round75productionpending sharedlock.
+
+In `target-left-actual-right.png`, left is GENERATEDTARGET and right is ACTUALGLB. Actualplayerassets unchanged. Viewpointmatching uses reorder1,8,7,6,5,4,3,2,9; never mirror actualrider. Input/outputpixelSHAs and sourcefilenames retained. Face7.5 is a visual judgment, not objective measurement. The passedthreebonefixture doesnot provide final19boneweights/socket behavior.
