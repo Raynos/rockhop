@@ -782,3 +782,8 @@ Limits: Diagnostic scores, coarsefine detail, local textureattenuation/filtering
 Finding: Actual2s/24frame CPU turntable encoded and decoded all24frames for ordered inspection; whitebody/clothing continuity held through360degrees, coarseglove/shoedetails persist. Neckfixture firstsetup exits before rendering because armature data reused camera data variable. Correct our script; no anatomical failure/no neckpass. Round72production queued sharedGPUlock.
 Validation: 24renderedframes, silentH2642s12fpsclip, all24decodedinspection; neckscript exits1 before render.
 Limits: No neckmotion/rig pass;productionround72 queued canonical lock.
+
+## Round73 — motion exposes jaw weights
+Finding: Actual3s/36frame threebone fixture reveals jaw/mouth shearing during30degreeyaw: heightbands cross facialanatomy. Reject weighting, preserve originalstaticWHITEface/body exact. Firstactualneckfixture failure plus prioronesetupfailure. Next rigidwholejaw/head group with transition entirelyin anatomicalneck and lowerheadpivot; independentface pairdistortion measurement. Round72productionexactclear/crash103/restart2msLOW3msHIGH passes.
+Validation: Actual36CPUframes encoded3secondclip; finite evaluatedvertices; yawvisiblyshearsjaw/mouth. Source05unchanged; productionround72exact.
+Limits: Neckmotionfails despite preservedstaticappearance; no nineteenbone/gameplayqualification.
