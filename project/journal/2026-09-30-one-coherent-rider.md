@@ -672,3 +672,15 @@ simulation moves978vertices,40386protected source triangles stay exact.
 Seven new material charts have zero degenerate UV triangles. No bake ran.
 Limits: Cloth-bag appearance failure1; native gray head is sizing-only.
 Finished character remains white, face/body gates and neck motion unpassed.
+
+## Round60 — closed cheek geometry still needs correct skin texture
+
+Finding: Actual dual-sheet reconstruction closes the cheek holes, but PBR
+bake leaves pale jagged patches. Keep geometry and reject textured result.
+Validation: Parent actual gray/PBR front/profile/quarter/rear; one physical
+component, zero boundary edges, analytic positive cap thickness on both
+cheeks. Original outside buffers exact. Production Low/High byte-identical
+clear40.083333333s, crash103ticks and restart2ms both; zero errors.
+Limits: Fourth local failed attempt includes one API setup and one texture
+failure. Color-space double encoding is a hypothesis awaiting rerender.
+No full-body, neck-motion, rig or new-rider gameplay acceptance.

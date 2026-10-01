@@ -248,3 +248,10 @@ parent rejects paper-crumpled front rim/dark center-neck opening/lower-left
 notch.40386sourcebody triangles exact,7nondegenerate newUVcharts; no bake.
 Firstcloth-bag appearance failure; next fleece stiffness/stable binding
 with actual WHITE bust landmarks. Nativegrayhead sizingcontrol only.
+
+Round60: Local cheek geometry closes, one physical component/zero boundary
+edges, analytic cap separation positive. Parent actual gray/PBR rejects pale
+jagged albedo patches. Keep geometry, validate source sRGB/linear transport
+before next bake. Fourth failed local attempt includes setup and texture.
+Round60 production exact40.083333333s replay, crash103ticks/restart2ms both.
+No accepted whole rider; A conservatively retires after frozen handoff.

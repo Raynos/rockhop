@@ -91,8 +91,10 @@ construction direction; a genuine hood-bag pattern with actual cloth drape
 is the alternative. No minor loft-curve churn. The retired H21-4 hood is
 silhouette/material reference only; body/clothing/hands outside the declared
 whole-hood region remain protected.
-Fresh actual Hunyuan2.1 buzz-bust generation is complete but its appearance
-remains unaccepted pending actual renders. No rig or gameplay gate is passed.
+Fresh actual Hunyuan2.1 white buzz-bust generation and source renders are
+complete. A local dual-sheet repair closes its cheek holes, but its first
+texture bake leaves pale patches. Keep repaired geometry and correct texture
+color transport before appearance acceptance. No rig or gameplay gate passes.
 
 ### Three parallel Blender approaches
 

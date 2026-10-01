@@ -1,0 +1,21 @@
+{
+  "readOnly": true,
+  "atlasMedianSRGB": [
+    0.8784313725490196,
+    0.7294117647058823,
+    0.6549019607843137
+  ],
+  "fitTypicalValues": [
+    0.78,
+    0.53,
+    0.43
+  ],
+  "linearToSRGBOfTypicalValues": [
+    0.8962438838245138,
+    0.7547806693306308,
+    0.6872171460034034
+  ],
+  "hypothesis": "Source image pixel samples may already be sRGB encoded; assigning them directly to linear FLOAT_COLOR then sRGB bake encodes twice",
+  "proven": false,
+  "requiredValidation": "Compare actual source texel values, linearized shader color and saved atlas pixels; actual reimported PBR renders"
+}
