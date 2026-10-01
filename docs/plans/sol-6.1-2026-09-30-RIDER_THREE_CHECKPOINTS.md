@@ -895,3 +895,13 @@ Initial wrong-yaw footage retained as setup evidence. Current11 unchanged;
 local hip-flexion corrective authoring next, native eyelid graft17 CPU ongoing.
 Gallery local WebKit390/1200:9 videos play,4 images decode,no overflow/errors;
 physical iPhone still unverified. Existing private URL retained. Ship next117.
+
+Round116: localized volume-preserving/DQ authoring hypothesis rejected CPU,
+not exported. Six actual current11 poses,3585 local vertices, bone transforms
+unchanged; recorded old skin reconstructed within3e-13m. Hip fold indicators
+improve but upper-leg fold indicators rise in all six; neutral projected seat
+overlap20→135 vertices,3.415→13.452mm; hip stretch4.606→6.208x. No GPU expense.
+Switch early to constrained pose-space hip corrective/sculpt, no DQ parameter
+sweep or global engine skinning change. Current11/head/neck/hood/contacts exact.
+Body17 eyelid construction also frozen pre-export; parent audit next. Existing
+phone gallery shows actual115 motion. Ship next117; all art gates remain open.

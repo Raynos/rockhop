@@ -29,6 +29,8 @@ Checkpoint 1 WHITE minimum; target8/later gates open. Round114 retains a fundame
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round115 actual current11 hip movies show angular butt collapse and groin/hem opening in gray and textured side/rear views.264 physical samples exact,384 movie frames reviewed. Existing private phone gallery expanded:9 clips play at390/1200. No repair accepted; hip corrective and native eye graft17 next. Ship next117.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round116 rejects localized DQ hip target CPU:6 exact poses, upper legs worse all6, seat overlap3.415→13.452mm. No export/GPU; constrained hip corrective sculpt next. Current11 unchanged; private gallery115 live. Native eye17 stopped pre-export, audit next. Ship next117.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

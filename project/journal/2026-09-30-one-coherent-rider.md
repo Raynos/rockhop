@@ -1225,3 +1225,14 @@ frames. Local silent WebKit390/1200:9 movies advance,4 images decode,no errors
 or horizontal overflow. All original/decoded frames privately retained.
 Limits: Current rider unchanged and art unaccepted. Initial wrong-yaw clips
 preserved as setup evidence; no physical iPhone playback verification.
+
+## Round116 — reject localized volume-preserving hip target
+
+Finding: A generic local DQ target reduces hip folds but worsens thigh surfaces
+and sampled seat clearance. Use constrained local anatomy correctives instead.
+Validation: Six actual poses,3585 local vertices, old source file unchanged,
+exact recorded LBS reconstruction within3e-13m. Single-bone DQ checks pass.
+Upper-leg folds worse all six; neutral seat overlap3.415→13.452mm. Frozen
+buffers exact; source/contacts unchanged. No export or GPU work.
+Limits: CPU shape hypothesis only; no visual art judgment. Fold indicator and
+projected vertex clearance cannot certify full self-intersection/collision.
