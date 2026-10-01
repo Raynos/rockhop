@@ -135,3 +135,10 @@ curl/beardnoisebefore reduction; H21pre-reductionshapehistoricallyabsent.
 Parentselects FRESHactualH21buzzsource and reviewedpre-reducerretentionrunner,
 no-evictionwrapper,65decimalGBstopmargin/hard70GB,1spoll/1800sbatch.
 Existingcomparisonsintact; actualgenerationwillbe separatelyqueuedaftercommit.
+
+Btrial03 failedprojectedfootprintgate isfrozen/count13, despiteits2Dpredicate
+beinginvalidfor nonplanarhood/neckjawcoverage. Actual3DBVHread-onlyaudit finds
+6potentiallyvisible skinbasepoints inprofile/rear, so concealmentnotpassed.
+No implicitvolume wasconstructed. FreshH21buzzmodeljobnowcompletedexit0
+138s with985,183rawfacesretainedbeforecleanup, CPUpaintand23.07GBpeakRSS;
+actualrenderreviewnext. No appearanceacceptance fromsuccessfulgeneration.

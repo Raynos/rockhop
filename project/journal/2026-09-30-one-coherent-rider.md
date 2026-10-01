@@ -523,3 +523,12 @@ N1~5,N6~4.5best. Actual10.16M/15.92Mrawtriangles renderedwithoutreduction.
 Ownedrunner/wrapperreviewed;10recipesparse,6CPUtests/dryrunpassnomodelimports.
 Limits: Subjectivediagnostic scores; correctedH21orientationfrozenseparately.
 No newgeneration, acceptedbody/face, neckmotion or finalrigfromthisaudit.
+
+## Round44 — projected containment is not skin coverage
+
+Finding: B annularlining attempt stops at40.8% projectedcontainment failure;
+nonplanarhood versusonejaw/necksectionmakes thatpredicate invalid. Count
+failure honestly; actual3Dbasecoverage has6potentialexposedpointsside/rear.
+Validation: Parentinspected actual3Dprofilewitness andBVHreport; sourcehashes
+unchanged, exactskin216edgebase/cameraocclusion recorded, no volumeexecuted.
+Limits: Staticvertexcoverage doesnotprove triangleclearance or neckmotion.

@@ -1,0 +1,29 @@
+{
+  "status": "FAILED trial03 geometry gate",
+  "architecture": "actual implicit neck annulus plus two implicit cloth cap volumes; top-sheet extraction and indexed source-cloth seams",
+  "priorLaneBFailures": 2,
+  "priorOriginalNeckFailures": 6,
+  "parentDefectFamilyAtStart": 11,
+  "threads": 2,
+  "voxelStepMetres": 0.0015,
+  "volumeHalfThicknessMetres": 0.0025,
+  "nativeHeadChanged": false,
+  "patches": [],
+  "sourceSHA256": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/B-local-volume/trial02/clipped-panel.npz": "5f1140300bc189ec72aa864a4df6868ccb5a9a19b95b796135bcc03c9820d925",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/B-local-volume/trial02/head-source.npz": "088cc5fdf6095c8fe31b12facec44c0e712e95a43e5b69837558330e9841a84b",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/B-local-volume/trial02/exact-three-loops.json": "5312f17057d27115f0753d873c9b72189dd4e2a81d727c1e9980dba08e1f824e"
+  },
+  "sourceClothLoops": [
+    194,
+    43,
+    23
+  ],
+  "neckMeasurementZ": 1.515,
+  "nominalNeckClothClearance": 0.005,
+  "error": "Measured native neck opening is outside main cloth footprint 0.40789473684210525",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/B-local-volume/reconstruct_three_seams_trial03.py\", line 96, in <module>\n    label='neck-lining-annulus' if n==0 else 'posterior-cloth-cap'+str(n);pv,pf,pl=volume_patch(label,v[l],inner if n==0 else None)\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/B-local-volume/reconstruct_three_seams_trial03.py\", line 44, in volume_patch\n    if outside>0:raise ValueError('Measured native neck opening is outside main cloth footprint '+str(outside))\nValueError: Measured native neck opening is outside main cloth footprint 0.40789473684210525\n",
+  "elapsedSeconds": 0.594141083303839,
+  "peakRSSBytes": 116473856,
+  "recipeSHA256": "f8a447b1e09dca164b9b431465e200f04bb69b6d219a47653912a66f2006a557"
+}
