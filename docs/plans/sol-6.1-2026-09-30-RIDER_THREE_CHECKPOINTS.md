@@ -1010,3 +1010,13 @@ ROI, audit arm feature/pose jumps before anatomical weights. Required low/high
 ship passes exact finish/hash,crash103ticks/restart3/4ms with corrective active.
 Eye24 optical test recorded separately; pending judgement. Current11/gallery122
 retained, normal assets unchanged. Next required ship129.
+
+Round127: native cornea discard proved: sourceopacity.035 below runtimealpha.5.
+One private24 physical thin-film restoration preserves actual22 sourceGLB and
+preparedgeometryhash, only one material. Actual72 paired PBR frames state/hash/
+bones/camera/focus exact;72 gray controls pixel-identical22. Parent reviewsall72
+PBR movieframes: cloudy iris/exposed eyes, face6.6 below7 and22's6.8. Reject
+full-transmission optics, retain renderer finding and22skin progress. Next audit
+actualiris texture/lid aperture/gaze; no IOR/roughness sweep or face recut. Sleeve
+25 rejection retained; arm support audit underway. Current11/gallery122 retained;
+normal assets unchanged. Next required ship129.

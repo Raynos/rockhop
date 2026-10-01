@@ -1,0 +1,47 @@
+{
+  "status": "PASS CPU-only reversible private material trial; shader/played appearance unaccepted",
+  "sourceSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "sourceGLBBytesUntouched": 21438496,
+  "expectedMergedCornealGeometrySHA256": "1893dace98039de7b40087c4cbc8ba40b9b95f6dfec7ada808ceba29b1fd9eca",
+  "semanticRegion": {
+    "sourceMesh": 1,
+    "sourcePrimitives": [
+      3,
+      5
+    ],
+    "sourceMaterial": 7,
+    "preparedMesh": "textured_4",
+    "preparedVertices": 524,
+    "preparedTriangles": 980
+  },
+  "materialReferencesChanged": 1,
+  "protectedOtherMaterials": 7,
+  "geometryUVNormalsWeightsAndBindExact": true,
+  "transformsSkeleton19AndClipsExact": true,
+  "sourceImagesAndBinaryByteExact": true,
+  "allTextureReferencesRetained": true,
+  "physicalDefinesAndExistingFogCompileHooksRetained": true,
+  "undoAndForeignGuardPassed": true,
+  "settings": {
+    "type": "MeshPhysicalMaterial",
+    "transmission": 1,
+    "thickness": 0,
+    "ior": 1.5,
+    "opacity": 1,
+    "alphaTest": 0,
+    "transparent": true,
+    "depthWrite": false,
+    "side": 0,
+    "roughness": 0.08,
+    "metalness": 0,
+    "envMapIntensity": 0.8
+  },
+  "limits": [
+    "No GPU/shader execution or highlight evidence; parent must render actual matched motion.",
+    "Thin-film transmission at renderer-default IOR1.5 is a diagnostic, not anatomical or refractive volumetric eye correctness.",
+    "Opacity1 here is transmissive physical dielectric, not an opaque alpha>=.5 discard workaround; iris shader remains unchanged.",
+    "Existing aperture/fit may remain visually exposed despite optics restoration.",
+    "Private physical material adds a transmission shader/framebuffer path; performance and mobile correctness unmeasured.",
+    "Do not rerun prepareHero after this override; normalization would invalidate it."
+  ]
+}

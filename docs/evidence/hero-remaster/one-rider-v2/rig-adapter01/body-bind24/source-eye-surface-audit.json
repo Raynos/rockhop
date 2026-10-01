@@ -1,0 +1,155 @@
+{
+  "status": "PASS read-only actual donor geometry and image census; aperture/fit unchanged and ungraded",
+  "sourceSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "eyes": [
+    {
+      "eye": "negativeZ",
+      "probeCentreYZ": [
+        1.697,
+        -0.0332
+      ],
+      "surfaces": {
+        "cornea": {
+          "primitive": 3,
+          "materialIndex": 7,
+          "renderVertices": 268,
+          "triangles": 490,
+          "centralProbeRadiusMM": 4.5,
+          "centralFrontFacingVertices": 77,
+          "centralNormalTiltDegrees": [
+            4.358731354840149,
+            24.515403355716497,
+            31.89038041870651,
+            34.40016503921289,
+            42.89906609159714
+          ],
+          "centralXRange": [
+            0.7419137358665466,
+            0.7430240511894226,
+            0.743949294090271
+          ],
+          "normalLengthRange": [
+            0.9999999616681283,
+            1.0000000374489855
+          ],
+          "source19BoneHeadWeightExact": true
+        },
+        "irisSclera": {
+          "primitive": 4,
+          "materialIndex": 6,
+          "renderVertices": 276,
+          "triangles": 530,
+          "centralProbeRadiusMM": 4.5,
+          "centralFrontFacingVertices": 100,
+          "centralNormalTiltDegrees": [
+            0.7103636657553306,
+            13.14659165031323,
+            16.184419656506783,
+            21.159998984746796,
+            25.335612678594963
+          ],
+          "centralXRange": [
+            0.7400547862052917,
+            0.7406015396118164,
+            0.741619348526001
+          ],
+          "normalLengthRange": [
+            0.9999999665994985,
+            1.0000000386209036
+          ],
+          "source19BoneHeadWeightExact": true
+        }
+      },
+      "centralAxialGapOfMaximaMM": 2.3299455642700195
+    },
+    {
+      "eye": "positiveZ",
+      "probeCentreYZ": [
+        1.6965,
+        0.032
+      ],
+      "surfaces": {
+        "cornea": {
+          "primitive": 5,
+          "materialIndex": 7,
+          "renderVertices": 256,
+          "triangles": 490,
+          "centralProbeRadiusMM": 4.5,
+          "centralFrontFacingVertices": 74,
+          "centralNormalTiltDegrees": [
+            4.358731354840149,
+            24.448190107801665,
+            31.64315995281391,
+            34.3377247460227,
+            42.89906609159714
+          ],
+          "centralXRange": [
+            0.7409344911575317,
+            0.7420616745948792,
+            0.7429701089859009
+          ],
+          "normalLengthRange": [
+            0.9999999616681283,
+            1.0000000374489855
+          ],
+          "source19BoneHeadWeightExact": true
+        },
+        "irisSclera": {
+          "primitive": 6,
+          "materialIndex": 6,
+          "renderVertices": 276,
+          "triangles": 530,
+          "centralProbeRadiusMM": 4.5,
+          "centralFrontFacingVertices": 100,
+          "centralNormalTiltDegrees": [
+            0.7103636657553306,
+            13.14659165031323,
+            16.184419656506783,
+            21.159998984746796,
+            25.335612678594963
+          ],
+          "centralXRange": [
+            0.7390755414962769,
+            0.7396222949028015,
+            0.7406401038169861
+          ],
+          "normalLengthRange": [
+            0.9999999665994985,
+            1.0000000386209036
+          ],
+          "source19BoneHeadWeightExact": true
+        }
+      },
+      "centralAxialGapOfMaximaMM": 2.330005168914795
+    }
+  ],
+  "opaqueEyeImage": {
+    "imageIndex": 8,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "PNG_SHA256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+    "alphaRange": [
+      0,
+      255
+    ]
+  },
+  "inspectedActualFrames": [
+    "body22/played01/actual-before-after-textured.jpg",
+    "body22/played01/actual-before-after-gray.jpg",
+    "body22/played01/textured/decoded-001.jpg",
+    "body22/played01/textured/decoded-002.jpg"
+  ],
+  "distinction": [
+    "Actual corneal surface has varying front normals and sits ahead of opaque donor surfaces; it is not a flat decal.",
+    "Runtime discards that surface, so its actual curved optical response is missing.",
+    "The remaining exposed iris/aperture impression can still reflect fixed geometry/placement, which this trial does not change.",
+    "Central vertex axial maxima are measurements, not triangle/ray clearance proofs; prior body20 actual-export aperture and clearance receipts remain the geometric authority."
+  ],
+  "limits": [
+    "No model, GPU, render or production changes.",
+    "4.5mm central probes describe existing geometry only; no cut/fit size was swept.",
+    "This does not establish that restoring cornea will reach7/10."
+  ]
+}

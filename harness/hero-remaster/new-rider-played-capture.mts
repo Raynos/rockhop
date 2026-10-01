@@ -12,6 +12,7 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { decodeJSON, expandFrames } from '../../src/core/replay';
+import { installPrivateEyeOptics24 } from './new-rider-eye-optics24-install.mjs';
 const arg = (key: string, fallback = '') => process.argv.find(a => a.startsWith(`--${key}=`))?.slice(key.length + 3) ?? fallback;
 const build = path.resolve(arg('build')), out = path.resolve(arg('out'));
 const mode = arg('mode', 'garage'), tier = arg('tier', 'high');
@@ -20,6 +21,7 @@ const recording = decodeJSON(fs.readFileSync(arg('recording', 'harness/inputs/b1
 const inputs = expandFrames(recording), fps = Number(arg('fps', '12')), ticksPerFrame = recording.header.physicsHz / fps;
 assert(Number.isInteger(ticksPerFrame));
 const frames = Math.min(Math.floor(inputs.length / ticksPerFrame), Math.round(Number(arg('seconds', '40')) * fps));
+const eyeOptics24 = arg('eye-optics24', '0') === '1';
 const surface = arg('surface', 'textured'); assert(['textured', 'gray'].includes(surface));
 const focus = arg('focus', 'body'); assert(['body', 'hands', 'feet', 'face'].includes(focus));
 const detailZoom = Number(arg('detail-zoom', '1'));
@@ -56,6 +58,11 @@ try {
       await t.loadTrack(header.trackId, header.seed); await r.whenReady();
       t.setQuality(tier); await r.whenReady(); t.skipCountdown();
     }, { header: recording.header, tier });
+  }
+  if (eyeOptics24) {
+    assert.equal(surface, 'textured', 'Optics24 is an isolated PBR material comparison; original gray geometry is unchanged');
+    const model = catalog.models.find((m: any) => m.logical === 'models/rider-street-mustard.glb');
+    report.privateEyeOptics24 = await installPrivateEyeOptics24(page, model.sha256);
   }
   report.loadedMaterials = await page.evaluate(() => {
     const rows: any[] = [];

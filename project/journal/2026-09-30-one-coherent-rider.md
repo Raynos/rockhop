@@ -1335,3 +1335,13 @@ Parent CPU verifier passes exact protected rig/contact; low/high third-round
 ship finish/hash exact, crash103ticks/restart3/4ms, errors0.
 Limits: Release bundle/LOD, wholecollision, visiblecontacts and phone open.
 Anatomical ROI retained; pose/feature audit and deliberate weights are next.
+
+## Round127 — retain cornea discard finding, reject transmission treatment
+
+Finding: Hero material normalization hides the real cornea. Restoring it as
+a thin physical transmission film gives cloudy iris instead of natural eyes.
+Validation: Parent reversible CPU verifier exit0; actual runtime geometry
+hash verified;72 PBR moving frames reviewed;72 matched records and gray
+pixel-identical controls; source22 bytes/rig/join/seven other materials exact.
+Limits: Face6.6 below7; no mobile/performance/release acceptance. Inspect
+actual iris/lid/gaze before a different mechanism, no shader parameter sweep.
