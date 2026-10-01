@@ -1555,3 +1555,20 @@ succeeded19:48UTC. No normal-game main push or deployment.
 Limits: Site is evidence, not repaired rider. Severe underarm folds remain;
 fullbody/face/legs/sitting/Garage/support/device gates stay open. Preserve
 newrig architecture and goodhead/hoodjoin; causal weight control next.
+
+## Round147 — both fresh joints and weights contribute; restoration fails
+
+Finding: The missing fresh-bind/original-weight control separates the two
+factors. New joint placement helps hip strain; new weights help further.
+Original weights alone retain severe elbow inversion and55/62x armstretch,
+so scalar field restoration cannot deliver the rider. Stop weight blending.
+
+Validation: All5originalskin values restored; uint8indices losslessly widened
+to uint16; all34non-skin BIN/JSON/binds/metadata exact. Actual19bone CPUfour
+keys, source geometry/skin hashes, zerohoodalias separation,contacts2.19um.
+Hipmaxstretch3.56/3.55/4.08/4.03x, worse than fresh34butbetter thanold11.
+Retained34ship147 both tiers passes bytefinish/hash/crash/restart/errors.
+
+Limits: Three setupfailures retained; regional CPU rejection, no36moving
+asset/appearance/bench/Garage/device pass. Next clean garment topology/detail
+bake, protecting native hood/head join and existing behavioral invariants.
