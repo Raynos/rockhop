@@ -390,3 +390,19 @@ pass, historicalno-metadata byteexact. Five helperinjectionbuilds fail701KiB
 397/220/89/67/32bytes over; STOPcompression/injectionmethod. Next09bakeactual
 conditioned+reconciled weights intoGLB, explicitNEWskipreconditioning. No
 new08playedpass. Round96shipgate due; no budgetwaiver/playerpromotion.
+
+## Round96 current continuation
+
+KEEP09WHITE bakedskin: same08geometry/PBR/face/morph/binds/clips, onlybody/
+hoodskinandrockhopRiderSkinConditioned=1. Private adapter skipsreconditioning
+for explicitNEWmetadata. Build701KiBpasses; 5helperinjection failuresstopped.
+Actual40s480PBR/grayallcontacts/physicsexact, lean±1, shoulderhole removed in
+ordered1secondsamples+full49/420beforeafter. CPU307rim0gap4states; historical
+no-metadata byteexact. NEWround96shipgate exactclear/crash103/restart2msboth.
+Body7.0diagnostic/facecloseupnotregraded(prior6.5), target8stillopen. Next
+actualface texture-density/shading audit: gltf.ts shrinkTextures1024albedo/
+512data may attenuate atlas detail; verify beforegeneration. Then sameNEW
+Garageclips/benchmotion/Pro/surface/fullLOD. No sourceplayer/bike/physicsedit.
+One bake accessor-width setup failure retained; original08Blender source is
+master,09CPU GLB skin bake reproduciblevia new-rider-bake-skin.mts. No09blend
+master claimed. All losslesscaptured09PNG/movies private with hashes.

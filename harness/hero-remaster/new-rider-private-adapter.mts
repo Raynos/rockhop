@@ -3,6 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 export function patchNewRiderSource(source:string, orthogonalElbowPole = true, reconcileClothRim = false){
  const replace=(a:string,b:string)=>{assert.equal(source.split(a).length-1,1,'Private adapter source anchor changed: '+a);source=source.replace(a,b);};
+ replace('    const matMap = new Map<THREE.Material, THREE.Material>();', `    let bakedNewSkin = false;
+    this.scene.traverse(o => { if (o.userData.rockhopRiderSkinConditioned === 1 && typeof o.userData.rockhopRiderContactAdapter === 'string') bakedNewSkin = true; });
+    const matMap = new Map<THREE.Material, THREE.Material>();`);
+ replace('this.releaseSleeveGeometry.push(conditionSleeveSkin(mesh));', 'this.releaseSleeveGeometry.push(bakedNewSkin ? () => {} : conditionSleeveSkin(mesh));');
  replace('  private readonly q0 = new Map<string, THREE.Quaternion>();',`  private readonly q0 = new Map<string, THREE.Quaternion>();
   private readonly newRiderHandTargetQ = new Map<string, THREE.Quaternion>();
   private readonly newRiderSoleOffsets: (THREE.Vector3 | null)[] = [null, null];

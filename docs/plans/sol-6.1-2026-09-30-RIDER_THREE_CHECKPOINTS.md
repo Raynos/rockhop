@@ -723,3 +723,17 @@ none reachnewplayedcapture. Stopinjectionmethod underfive-failurepolicy.
 Nextbake verifiedconditioned+reconciled weights intoasset, explicitNEW
 metadata preventsrepeatconditioning. No budgetwaiver, no humanhold, no
 movingappearance/checkpoint2/3pass. Preserveallfailedreceipts andcomparison.
+
+### Asset-baked skin closes the played shoulder opening without budget waiver
+
+Round96: sameWHITE09bakes actualconditioned+307sharedrimhood weights; private
+NEWmetadata skipsrepeatconditioning. Buildpassesunchanged701KiB, source08
+geometry/face/PBR/morph/bind/socket/clipbytes exact. FouractualCPUstates0rim
+separation;101syntheticcontacts andoldno-metadata snapshots byteexact.
+Actual40s480matchedPBR/gray contactsalltrue, lean±1; ordered1secondsamples and
+fullresolutionbefore/after confirmshoulder openingremoved/hemimproved.
+Round96 NEWshipgate exact40.083333333333336/hash/Float64, crash103/restart2ms
+both/errors0. Retainbakedcorrection, nofinalartpass: body7.0provisional,
+facecloseupnotregraded(prior6.5), camer/lightunmatched, target8open. Next
+facePBR/UVdensityaudit, thenGarage/Pro/realLOD/actualcontactsurfaces. Same
+FULLunderbothLODnames remainsdiagnostic. OneCPU accessor-setupfailretained.

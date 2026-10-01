@@ -1005,3 +1005,16 @@ harness tsc pass. Allfivefailedbuildreceipts retained, canonicalGPUlock.
 Limits: No newplayedappearancepass; runtimeinjectionstopped, no budgetwaiver,
 player/bike/physics edit. Nextbakeweights +explicitNEWskipreconditioning.
 Face8/surface/Garage/Pro/LOD/checkpoints2/3 open. Asks239/240.
+
+## Round96 — bake skin once and retain closed played shoulder
+
+Finding: Asset-baked conditioned/hood-rim skin plus explicitNEWskip removes
+actualshoulderopening without raising701KiB or changing WHITErestcharacter.
+Validation: Byteparity exceptbody/hood weights+metadata;307rim0gap at4actual
+states,101syntheticcontacts/legacy snapshots exact. Actual480PBR/gray all
+contacts, exactfinish/hash/Float64 both tiers, crash103/restart2ms/errors0.
+Lint/harness tsc pass; sharedGPU189.867s/33.285GB. Parent ordered40s samples
+andmatchedbefore/after actual49/420; original frames/movies retained exactly.
+Limits: Private correctiononly; body7.0diagnostic, facecloseupnotregraded,
+prior6.5. Cowl/armpit/waist, face/PBR detail andtarget8open. Garage/Pro/actual
+surfaces/fullLOD andcheckpoints2/3open; oneaccessorsetup failure preserved.
