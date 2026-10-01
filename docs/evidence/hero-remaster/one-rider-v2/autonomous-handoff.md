@@ -202,3 +202,10 @@ Firstnewlineagefailure1, old15retired unchanged.40386originalsourcebody
 triangles exact UV/material/indices, newweightsunassigned. No bake. Earlier
 mechanismchange chosen: NEWdonor01hood primary, genuineclothdrapedhoodbag
 secondary; no minorloftcurvechurn. Preserveuserbest-sofarbody/clothing.
+
+Round53: ParentactualuprightRAW/reduced/PBR hood01 3x3 confirmsnaturalcowl/back
+folds retainedin316248nativefaces. Correcteddisplayonly, all3sourcefilesexact;
+no majorrearhoodhole visibleinthese3views. ChooseNEWwholehood01 for bounded
+extraction/integration with independentbinding, no oldH21-4rimrepair. Body
+outsidehood protected; face/hairdonor explicitlyrejected. Anewwhitecheeklocal
+classification underway; Btruehoodbagclothdrape alternate assignedCPU.

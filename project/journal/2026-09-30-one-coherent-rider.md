@@ -607,3 +607,12 @@ Validation: Parentactualgrayfront/rear views;8reimportviews/sourceguards,
 40386sourcebodytriangles exactUV/material/indices. Binding614UVtriangles
 degenerate; allsourcebytes intact. No texturebake orrig performed.
 Limits: Newlineage1failure, exhaustedold15unchanged; no wholehoodacceptance.
+
+## Round53 — retain raw hood shape for complete donor replacement
+
+Finding: CorrectedRAWhood01 front/profile/rear matchesnaturalcowl/backfolds
+in55kPBRdonor; choose completeNEWhood extraction with independentbinding.
+Validation: Parentactual3x3raw/reduced/PBRboard;316248sourcefaces retained,
+3sourcehashesunchanged, originalwrongdisplay12viewsstillfrozen.
+Limits: No isolatedhoodtopology/coverage orjoinpass; oldface/hairrejected,
+smallrawfloatsnearoldface notadopted. No newrig/neckmotion/playpass.

@@ -1081,7 +1081,9 @@
     "C-wholeHoodRawDisplay": {
       "failedAttempts": 1,
       "failure": "12RAWviews upside-down afterextraX180; originaldata untouched,validPBR/reducedgray32",
-      "next": "RemoveextraX180, inspectonefrontbeforecontinuing"
+      "next": "RemoveextraX180, inspectonefrontbeforecontinuing",
+      "corrected": true,
+      "sourceUnchanged": true
     },
     "H21-freshCheekOpenings": {
       "source": "ActualH21buzz-native01 raw985183 beforecleanup/reducer",
@@ -1126,6 +1128,9 @@
     "sourceDataUnchanged": true,
     "headHairExcluded": true,
     "evidence": "../one-rider-v2/autonomous-lanes/C-garment-pattern/whole-hood-donor-comparison/README.md",
-    "accepted": false
+    "accepted": false,
+    "raw01Inspected": true,
+    "selectedConstructionSource": "H21-01 completehood, originalraw316248 retained, no oldgeneratedhead",
+    "next": "Boundedwholehoodextract/newanatomicalbinding experiment"
   }
 }
