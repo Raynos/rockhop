@@ -838,3 +838,13 @@ Validation: 21924 limbchecks, sourcehashes unchanged; lint/typecheckpass.
 Parent inspects99decoded native frames, rejects distalhold. Actual19skin
 productiondecoder restmax3.033microns/24finiteanimation samples.
 Limits: No played ridingcontact acceptance; new sittingtarget is mockup.
+
+## Round81 — reject seated control drift
+
+Finding: Literalbench probe preserves whiteappearance but our controls
+let feet drift and set an unreachable laphand target. Elbow-only search
+improves arm margin without fixing the frozen leg deficit.
+Validation: CPU2 sitting probe exit0, parent48decodedframes/fullendpoint
+inspection;19joint finite normalized skin.509184reach checks, lint and
+typecheckpass. Productionexactreplay/crash103/restart3/4ms zeroerrors.
+Limits: No accepted sitting, grip or riding asset; corrections remain.

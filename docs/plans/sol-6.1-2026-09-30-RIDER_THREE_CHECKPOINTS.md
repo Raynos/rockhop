@@ -534,3 +534,20 @@ Native articulation01 is rejected after all99 decoded frames: distal
 finger hold fails palm/thumbwrap and introduces21 triangle overlaps.
 Switch early to palm-anchored native IK/thumbopposition and compare
 volume-preserving skinning. Preserve original meshes and wrists.
+
+### Sitting control defects and bounded elbow evidence
+
+Body-bind02 is rejected despite preserved white appearance: actual48frames
+show foot drift (43.50mm peak) and final lap target exceeds arm reach
+(86.99mm). Correct our parent-pose evaluation and hand choreography; this
+is not a generator defect or permission to rebuild the accepted face.
+Native grip02 is still independently in progress; no outcome is inferred.
+
+Bounded elbow-search03 evaluates509184 limb targets: best elbowX.300/
+Z1.160 has strict arm margin0.190mm, still fragile. Leg strict deficit
+1.884mm remains. Do not conflate arm-only safety with all-limb acceptance.
+Review a declared uniform authoring metre-scale adapter as an alternative
+to moving hidden joints toward clothing boundaries; preserve proportions,
+physics and explicit world20mm pelvis/hip offset. Actual moving anatomy
+and all contacts must decide. Round81 baseline passes exactfinishbytes,
+crash103ticks, restart3msLOW/4msHIGH and zero errors.

@@ -1,0 +1,409 @@
+{
+  "status": "Bounded numerical authoring evidence; no rig/source or gameplay acceptance",
+  "sourcesUnchanged": true,
+  "summary": {
+    "candidateCount": 117,
+    "coarseProfiles": 87,
+    "denseLeanSamples": 1001,
+    "totalEvaluatedLimbTargets": 509184,
+    "coarseAndDenseTriangleFeasible": 117,
+    "coarseAndDenseArmsSafe": 5,
+    "coarseAndDenseAllLimbsSafe": 0,
+    "bestArmMathematicalSeed": {
+      "id": "elbow-117",
+      "elbowAbsX": 0.3,
+      "elbowY": 0.025,
+      "elbowZ": 1.16,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2957194616524249,
+          "forearm": 0.2999637604825269,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2957194616524249,
+          "forearm": 0.3004350293245409,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "coarse": {
+        "minimumTriangleMarginM": 0.002297043049573677,
+        "minimumSafeMarginM": -0.0018841757106938806,
+        "minimumArmTriangleMarginM": 0.003168758056733445,
+        "minimumArmSafeMarginM": 0.00019034194605871413,
+        "minimumFootTriangleMarginM": 0.002297043049573677,
+        "minimumFootSafeMarginM": -0.0018841757106938806,
+        "worstShortfallM": 0,
+        "allTriangleReachable": true,
+        "allSafe": false,
+        "armsSafe": true,
+        "minTriangleFrame": {
+          "profileId": "lean-80",
+          "profileIndex": 80,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        },
+        "minSafeFrame": {
+          "profileId": "lean-80",
+          "profileIndex": 80,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        },
+        "minArmSafeFrame": {
+          "profileId": "lean-00",
+          "profileIndex": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "distanceM": 0.5925144640782183,
+          "segmentLengthsM": [
+            0.2957194616524249,
+            0.2999637604825269
+          ],
+          "triangleMarginM": 0.003168758056733445,
+          "safeMarginM": 0.00019034194605871413
+        },
+        "minFootSafeFrame": {
+          "profileId": "lean-80",
+          "profileIndex": 80,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        }
+      },
+      "dense": {
+        "minimumTriangleMarginM": 0.002297043049573677,
+        "minimumSafeMarginM": -0.0018841757106938806,
+        "minimumArmTriangleMarginM": 0.003168758056733445,
+        "minimumArmSafeMarginM": 0.00019034194605871413,
+        "minimumFootTriangleMarginM": 0.002297043049573677,
+        "minimumFootSafeMarginM": -0.0018841757106938806,
+        "worstShortfallM": 0,
+        "allTriangleReachable": true,
+        "allSafe": false,
+        "armsSafe": true,
+        "minTriangleFrame": {
+          "profileId": "dense-1000",
+          "profileIndex": 1000,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        },
+        "minSafeFrame": {
+          "profileId": "dense-1000",
+          "profileIndex": 1000,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        },
+        "minArmSafeFrame": {
+          "profileId": "dense-0000",
+          "profileIndex": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "distanceM": 0.5925144640782183,
+          "segmentLengthsM": [
+            0.2957194616524249,
+            0.2999637604825269
+          ],
+          "triangleMarginM": 0.003168758056733445,
+          "safeMarginM": 0.00019034194605871413
+        },
+        "minFootSafeFrame": {
+          "profileId": "dense-1000",
+          "profileIndex": 1000,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        }
+      }
+    },
+    "frozenElbowBaseline": {
+      "id": "frozen-joint-search02-elbow",
+      "elbowAbsX": 0.285,
+      "elbowY": 0.025,
+      "elbowZ": 1.145,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "coarse": {
+        "minimumTriangleMarginM": 0.0018362051301330506,
+        "minimumSafeMarginM": -0.0018841757106938806,
+        "minimumArmTriangleMarginM": 0.0018362051301330506,
+        "minimumArmSafeMarginM": -0.001135548215908666,
+        "minimumFootTriangleMarginM": 0.002297043049573677,
+        "minimumFootSafeMarginM": -0.0018841757106938806,
+        "worstShortfallM": 0,
+        "allTriangleReachable": true,
+        "allSafe": false,
+        "armsSafe": false,
+        "minTriangleFrame": {
+          "profileId": "lean-00",
+          "profileIndex": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "distanceM": 0.5925144640782183,
+          "segmentLengthsM": [
+            0.3056959273526554,
+            0.2886547418556959
+          ],
+          "triangleMarginM": 0.0018362051301330506,
+          "safeMarginM": -0.001135548215908666
+        },
+        "minSafeFrame": {
+          "profileId": "lean-80",
+          "profileIndex": 80,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        },
+        "minArmSafeFrame": {
+          "profileId": "lean-00",
+          "profileIndex": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "distanceM": 0.5925144640782183,
+          "segmentLengthsM": [
+            0.3056959273526554,
+            0.2886547418556959
+          ],
+          "triangleMarginM": 0.0018362051301330506,
+          "safeMarginM": -0.001135548215908666
+        },
+        "minFootSafeFrame": {
+          "profileId": "lean-80",
+          "profileIndex": 80,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        }
+      },
+      "dense": {
+        "minimumTriangleMarginM": 0.0018362051301330506,
+        "minimumSafeMarginM": -0.0018841757106938806,
+        "minimumArmTriangleMarginM": 0.0018362051301330506,
+        "minimumArmSafeMarginM": -0.001135548215908666,
+        "minimumFootTriangleMarginM": 0.002297043049573677,
+        "minimumFootSafeMarginM": -0.0018841757106938806,
+        "worstShortfallM": 0,
+        "allTriangleReachable": true,
+        "allSafe": false,
+        "armsSafe": false,
+        "minTriangleFrame": {
+          "profileId": "dense-0000",
+          "profileIndex": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "distanceM": 0.5925144640782183,
+          "segmentLengthsM": [
+            0.3056959273526554,
+            0.2886547418556959
+          ],
+          "triangleMarginM": 0.0018362051301330506,
+          "safeMarginM": -0.001135548215908666
+        },
+        "minSafeFrame": {
+          "profileId": "dense-1000",
+          "profileIndex": 1000,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        },
+        "minArmSafeFrame": {
+          "profileId": "dense-0000",
+          "profileIndex": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "distanceM": 0.5925144640782183,
+          "segmentLengthsM": [
+            0.3056959273526554,
+            0.2886547418556959
+          ],
+          "triangleMarginM": 0.0018362051301330506,
+          "safeMarginM": -0.001135548215908666
+        },
+        "minFootSafeFrame": {
+          "profileId": "dense-1000",
+          "profileIndex": 1000,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "distanceM": 0.8339467090039459,
+          "segmentLengthsM": [
+            0.44704585894514215,
+            0.38919789310837744
+          ],
+          "triangleMarginM": 0.002297043049573677,
+          "safeMarginM": -0.0018841757106938806
+        }
+      }
+    }
+  }
+}
