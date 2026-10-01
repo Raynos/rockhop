@@ -235,4 +235,10 @@ assumption rejectedbeforepatch/bake, secondlocalfailure. Parentselects new
 dual-sheetreconciliation: orientation-matchedcaps ofexistingboundaries with
 analyticpositive thickness/nonintersection, ONEphysicalskincomponent. Source
 99485outsidefaces exact. RenewONE30minCPUbatch aftercheckpoint; no moremask
-expansion. Round57productionexactclear/crash/1and2msrestartpasseslow/high.
+expansion. Round57productionexactclear/crash/3and2msrestartpasseslow/high.
+
+Round58: Four-boundary dual-sheet setup stops at Blender5.2 tessellation API
+integer-index mismatch before cap output. Four analytic helper tests pass.
+Source exact, no derivative emitted; unchanged-selection API correction next
+within04:01:29UTC batch cap. Third local attempt includes API setup failure.
+Round57 original receipt is Low3ms/High2ms restart; prior1/2ms prose corrected.

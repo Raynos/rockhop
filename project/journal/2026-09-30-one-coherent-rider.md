@@ -649,6 +649,16 @@ Finding: Exactfan correction resolvespinch buttwo-loopguard iswrong for
 fournativeopposite-facingperimeters. Switch todual-sheetlocal closure.
 Validation: Fourcleanloops36/35/40/40, oppositeadjacentnormal signs;
 99485retainedfaces formonecomponent/sourcebytesexact. No patch/bake ran.
-Freshsilentproductionlow/high exactclear/crash/1and2msrestartpasses.
+Freshsilentproductionlow/high exactclear/crash/3and2msrestartpasses.
 Limits: Secondlocalrepairfailure, face6/10; analyticthickness/closure and
 actualPBR/grayappearance required inrenewedboundedbatch, no rigacceptance.
+
+## Round58 — use native Blender tessellation indices
+
+Finding: Native Blender5.2 returns integer triangle indices; the vector lookup
+stops before cap output. Consume native indices without changing geometry.
+Validation: Four analytic thickness tests passed; failed recipe and process
+receipt frozen, source SHA exact, no derivative emitted. Round57 receipt
+actually reports Low3ms/High2ms restart; earlier prose1/2ms corrected here.
+Limits: Third local cheek attempt, including one API setup failure. Face6/10
+remains unaccepted; no new rig or gameplay pass.

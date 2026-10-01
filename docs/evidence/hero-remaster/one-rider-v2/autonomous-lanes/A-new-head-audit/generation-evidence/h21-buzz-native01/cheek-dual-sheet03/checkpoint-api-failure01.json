@@ -1,0 +1,48 @@
+{
+  "status": "Unaccepted native API setup failure, no derivative/paint emitted",
+  "defectID": "H21-cheekOpenings",
+  "repairAttempt": 3,
+  "failureFamily": "Blender API setup, separate from source geometry/reducer",
+  "actualFailure": "Blender 5.2.1 tessellate_polygon returned integer triangle indices; vector tuple lookup raised TypeError before cap output.",
+  "sourceSHA256After": "2cd1859e05f6aac4d05112027dfaefcc15c7a83f8301ec8e1045fbc8bc326420",
+  "sourceUnchanged": true,
+  "analyticHelperTests": "4 passed, CPU only, before actual trial",
+  "proposedCorrection": "Use returned triangle index integers directly; freeze source API failure before changing recipe.",
+  "files": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03/repair.py",
+      "SHA256": "7d36042a85c84d034f55c0aeaa1fb3f7fa299442e06c0dada24ce8b1f6fa916a",
+      "bytes": 22969
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03/test_sheet_thickness.py",
+      "SHA256": "b6d4c9c18f42058bb8b9bc8755d9641389508c8d838a5017582af32c6738c1b5",
+      "bytes": 1626
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03/sheet_thickness.py",
+      "SHA256": "b1a579cbffcffea4c62712b4668f4f04826e8abe2079f8c4b086f0cc5b2bf265",
+      "bytes": 2568
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03/run_cpu.py",
+      "SHA256": "09e4ad458c0b1b9b28ec23a55766a8db41663d8c8a82bfdd7c0a281ee6fddc9e",
+      "bytes": 2319
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-dual-sheet03/setup.json",
+      "SHA256": "ed6d673f444a69abbd667a79f0f92cfa5ceb7780293eac36cacc1033d1680d51",
+      "bytes": 551
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-dual-sheet03/repair-process.json",
+      "SHA256": "eb6f726ce21f141e34661c837a6dc544d03230c50897c5cf5805bfdc449a799e",
+      "bytes": 742
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-dual-sheet03/repair-log.txt",
+      "SHA256": "86289e2a7052291e750d4814366b0dbe14bbb008908d54b841450f4c13b0b578",
+      "bytes": 898
+    }
+  ]
+}

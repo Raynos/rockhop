@@ -1,0 +1,13 @@
+22:31:30 | INFO: Data are loaded, start creating Blender stuff
+22:31:30 | INFO: Blender create Mesh node textured
+22:31:30 | INFO: glTF import finished in 0.09s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03/repair.py", line 89, in <module>
+    ids=[lookup[tuple(v)] for v in triangle];a,b,c=p[ids];centrePoint=(a+b+c)/3;centrePoint[2]=float(features(centrePoint[None,:2])@coeff);centreID=len(vertices);vertices.append(centrePoint)
+                ~~~~~^^^
+TypeError: 'int' object is not iterable
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03/repair.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
