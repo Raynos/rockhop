@@ -1,0 +1,69 @@
+{
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-threads",
+    "2",
+    "-filter_complex_threads",
+    "1",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-1.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-2.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-3.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-4.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-5.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-6.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-7.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-8.png",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-9.png",
+    "-filter_complex",
+    "[0:v]scale=256:320[v0];[1:v]scale=256:320[v1];[2:v]scale=256:320[v2];[3:v]scale=256:320[v3];[4:v]scale=256:320[v4];[5:v]scale=256:320[v5];[6:v]scale=256:320[v6];[7:v]scale=256:320[v7];[8:v]scale=256:320[v8];[v0][v1][v2][v3][v4][v5][v6][v7][v8]xstack=inputs=9:layout=0_0|256_0|512_0|0_320|256_320|512_320|0_640|256_640|512_640[out]",
+    "-map",
+    "[out]",
+    "-frames:v",
+    "1",
+    "-threads",
+    "2",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/actual-nine-angles.png"
+  ],
+  "inputs": [
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-1.png": "ea79e7854dc4e055c5f00615cac93ec7dbacd7d4f257c3e5e83849cda2be0fcf"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-2.png": "a6860b638e1388523909e4d935c70eff31415c1f92b5f81dc00d1474fd152159"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-3.png": "a175f29c4493cfbfcfcd7066b85ccc5528cfee7bd42a8c61e095db326f644c53"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-4.png": "75ac409aa494091f5925c1fd1026a397ec03e99347969d4dae11c7cd03d97e4e"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-5.png": "c24597db2ecb5b3a7453aaf7eb8dfc3d050903c759c7cec258d180a6e3993a89"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-6.png": "22fdcdad498c2f2d45280e785487a815ef7456289f816fa69e7894e486c3c821"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-7.png": "74cea02d5dac0171e9c9b7f87c702f18d86d6a08c5e5a4168ef580dacf16609b"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-8.png": "6b4e4df7dada203068023ac400abb3ae57056f0fbd2f751b8104033f89c4d748"
+    },
+    {
+      "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05/full-PBR-9.png": "eced9f0bbf2f3e65c28abc16f8848773146beeb1ddd34f2b79153774e798ac3b"
+    }
+  ],
+  "pixelTreatment": "Uniform wholeframe downscale and grid only; no retouch/camera warp/substitution"
+}

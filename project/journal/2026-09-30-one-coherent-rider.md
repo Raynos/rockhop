@@ -772,3 +772,8 @@ Limits: Productionbaseline pending canonical GPU lock; newrider stillunaccepted.
 Finding: Exact boundary subdivision fixes topology:307sharedrimedges,0bridgefaces,0duplicates/0nonmanifold, only237originalhoodneckboundaryedges. Actual matchedgray shows smootherjoin; flat-albedoCPUshaderprobe removes chest/back stripe while normal removal doesnot. Native albedo mismatch is the remaining seam cause. Face7.5/body6.9 diagnostic; no appearance/neckmotionpass.
 Validation: Actual38CPUimages; meshvalidate false(no repair needed), originalbody/sourceSHA unchanged. Flatbase removes stripe, no-normal doesnot.
 Limits: Textured seam stillvisible, fourthnewassemblyfailure, productionround69 queued.
+
+## Round71 — coherent white character appearance
+Finding: Local65mmalbedo continuity bake removes the large horizontal donor/bodystripe inactual GLB. Body7.4/whiteface7.5 diagnostic; source04geometry/UV/materialassignment unchanged, sourceimages retained. Native fine detail/filtering loss disclosed. Best-so-far private candidate, actualturntable/neckmotion next; no checkpoint1/rigpass. Round69production passes byteidentical40.083333333s/crash103ticks/restart1ms both.
+Validation: CPU2actual17views; sourcegeometry/UV/material assignments exact;9angle unretouchedgrid; productionround69exactmatch.
+Limits: Diagnostic scores, coarsefine detail, local textureattenuation/filtering loss. No neckmotion/rig/gameplayqualification.

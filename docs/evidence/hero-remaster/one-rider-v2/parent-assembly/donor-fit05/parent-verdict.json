@@ -1,0 +1,33 @@
+{
+  "judge": "Parent Codex:gpt-6.1-sol",
+  "actualGLBSHA256": "09ff46af02cf9eccafb9093c275fccfb5c97d2342c308575adad4a7ed318010a",
+  "references": {
+    "assets/design/hero-remaster/one-rider-v2/hair/01-buzz.png": "54fde403e8279fed15ffaa68042085e4804e4724db6643b9086e09d2e3d585e8",
+    "assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png": "af8c947e1ccd3701fda804a679acc42b5ad5ed2974e190fea636ed6679077b36"
+  },
+  "fullBody": {
+    "score": 7.4,
+    "proportions": 1.5,
+    "anatomy": 1.4,
+    "clothes": 1.5,
+    "neckRearContinuity": 1.5,
+    "PBR": 1.5
+  },
+  "face": {
+    "score": 7.5,
+    "identity": 1.6,
+    "features": 1.4,
+    "hair": 1.5,
+    "skinPBR": 1.4,
+    "profileNeck": 1.6
+  },
+  "remaining": [
+    "Coarse face/hair/glove/shoe detail",
+    "Glove fingers need refinement/contact evidence",
+    "Small armpit/cowl creases remain",
+    "Local65mmcoat texture detail attenuated; whole-atlas bake changes filtering"
+  ],
+  "verdict": "Best-so-far private appearance candidate; NOTcheckpoint1pass untilactualturntable/neckmotion and matchedreview",
+  "uncertainty": "Photo reference camera/light not reconstructible; diagnostic scores, actual9views and allcamera matrices retained",
+  "next": "Actualturntable plus neckrotation/bending on samecharacter, then boundedtarget8 refinement"
+}
