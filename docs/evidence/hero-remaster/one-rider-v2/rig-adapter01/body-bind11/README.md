@@ -35,3 +35,7 @@ coldboot/clear/crash/restart (round102), source-consumption hashes and parent
 visual verdict. Keep09 as the current private rider until that evidence.
 Eye/lid anatomy, brows/hair and independent target8 remain open. Static CPU
 statistics do not close any appearance, sitting, Garage or riding checkpoint.
+
+Round102 moving verdict: keep the color correction after actual frontal/profile
+inspection. Face6.8 diagnostic still below bar; laterally clipped frames cannot
+prove rear appearance. See played01/README.md for evidence and camera limits.

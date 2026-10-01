@@ -1073,3 +1073,14 @@ finite colors/382anchors. Guarded finite barycentric bake is byteidentical
 to initial warning-producing bake; sourceRGBmedian10.959→6.869. CPUonly.
 Limits: Modest color proxy, not actual appearance. Keep09; round102played
 comparison and NEWshipgate next. Eyes/hair and target8 remain open.
+
+## Round102 — keep the played shared-color cheek correction
+
+Finding: Actual frontal/profile views lose the dark cheek outline. Keep11
+color bake and WHITEbody/rig. Face6.8 remains below bar; eyes/lids next.
+Zoomed orbitZ0 loses the leaning head later, so fix review framing first.
+Validation: 72paired actual camera/state/debug exact;72grayPNGpixel-identical.
+Parent fullfront18/A-B/all72decoded frames reviewed;NEWbothclear byteexact,
+crash103/restart2msLOW3msHIGH/errors0. Budgetpasses;GPU49.522s/50.984GB lock.
+Limits: Visible face mainly0–29; no rear/nine-angle appearance pass. Source
+geometry/rig preserved, trueLOD/Pro/surface and later motion gates open.

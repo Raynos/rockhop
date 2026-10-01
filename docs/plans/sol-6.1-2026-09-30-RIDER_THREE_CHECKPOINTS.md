@@ -767,3 +767,10 @@ only image5/6;6mmheadband/151sharedpoints/519unknown/382anchors. SourceRGB
 median10.959→6.869, modest proxyonly. Initialmatmulwarnings/guardedfinite
 correction producebyteidenticalGLB; noappearanceacceptance. Keep09 until
 round102actualzoom3 comparison and NEWshipgate. Eyes/hair/target8 stillopen.
+
+Round102: KEEP11sharedcolor correction, reviewed frontal cheek outlines removed.
+72pairedstate/debug/cameraexact/72grayPNGpixel-identical. Face6.8diagnostic,
+strictmatchedgateopen. Laterface frames clipped because orbitZ0; next actual3D
+surfacefocus framing, then freshCC0eye/lid anatomical components on sameWHITE
+body. NEWbothcoldclear byteexact/crash103/restart2msLOW3msHIGH/errors0.50.984GB
+peak anonymous/49.522s canonical lock. No later gate or realLOD acceptance.

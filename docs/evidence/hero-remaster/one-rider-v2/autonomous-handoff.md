@@ -7,15 +7,15 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round100, 2026-10-01
+## Current evidence — round102, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
   supplies comparison evidence only. Keep this improved body/clothing.
 - Static matched model appearance reaches body7.2/face7.5 minimum; target8
   remains open. Actual turntable and neck yaw/bend fixtures are retained.
-- Current runtime master is LocalAI `one-rider-v2/rig-adapter01/body-bind09/rider.glb`,
-  SHA256 `974cb07434cb498b15306e1e752691c97b1429a98a74c31391cfc4f800cea363`.
+- Current runtime master is LocalAI `one-rider-v2/rig-adapter01/body-bind11/guarded-correction01/rider.glb`,
+  SHA256 `b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754`.
   Body08 Blender source plus the reproducible CPU skin bake produce body09;
   do not claim a body09 Blender master.
 - The explicit NEW rig adapter preserves physics COM/lean, arm/leg IK and
@@ -27,14 +27,14 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   separate unpassed gate. NEW coldboot/clear/crash/restart passes both tiers:
   exact40.083333333333336 finish/hash368f1ca5bd9e830a;103 crash ticks;2ms restart.
 - In-engine full-body diagnostic7.0 remains provisional because camera/light
-  are unmatched to the mockup. Actual projectionzoom3 face regrade stays diagnostic6.5.
+  are unmatched to the mockup. Sharedcolor11 face regrade reaches diagnostic6.8; strict appearance open.
   Coarse eyes/cheeks/buzz/PBR, cowl creases and waist silhouette remain.
 - Checkpoints2/3 remain OPEN. Blender planted bench foundation is preserved;
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: joint geometry-mapped head/cheek boundary-color bake;
-  margin-only10 rejected, source09 retained and eyes/hair remain coarse.
+- Next bounded action: actual3Dface focus; zoomed orbitZ0 clips later lean
+  frames. Then anatomical eye/lid components; preserve WHITEbody and19bones.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
@@ -463,3 +463,8 @@ Round101: joint physical harmoniccolor11 ready foractualreview, sameWHITE09
 rest/UV/rig/clips, onlyimages5/6 changed.151points/519unknown/382anchors,
 6mmband; sourceRGBmedian10.959→6.869proxyonly. Matmulwarning correction
 finite/byteidentical. Keep09 until round102actualface/NEWshipgate review.
+
+Round102: KEEP11sharedcolor after playedfrontal/profile, cheek outlines removed.
+72camera/state/debugexact and grayPNGpixel-identical, face6.8diagnostic/open.
+Laterframes out of zoomed view; next3Dsurfacefocus then anatomical eyes/lids.
+NEWbothclear byteexact/crash103/restart2/3ms/errors0; earlier failures retained.
