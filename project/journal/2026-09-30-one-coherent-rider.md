@@ -936,3 +936,15 @@ snapshots byte-identical. Base/export parity measured, lint/harness tsc pass.
 Limits: Synthetic profiles are not played lean/contact evidence. One setup
 failure corrected; normals differ <=0.000099317. Thumb gap and moving art,
 Garage and LOD remain open; no player/bike/physics change. Asks239/240.
+
+## Round90 — long replay catches hovering gloves
+
+Finding: Same NEW white19bone rider passes physics replay but fails hand
+contact at5/480sampledframes. Worst actual72.704mm hover; retain source and
+reject contact acceptance before debugging elbow-pole degeneracy.
+Validation: Actual new private coldboot/clear/crash103/restart2msLOW3msHIGH,
+exactfinish/hash, noerrors; first120movingframes and worsttick500 inspected.
+Three40s contact/body clips captured, both actual lean extrema reached.
+Limits: Socket measurements, full candidate under both tier labels, actual
+LOD/Garage/surface and full40s appearance verdict remainopen. GPUlock,
+peak46.956GB; no physics/bike/player changes. Asks239/240.

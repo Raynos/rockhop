@@ -648,3 +648,15 @@ metadata stays byte-identical between classes. Exported normals differ <=
 One float32 determinant setup failure corrected; untouchedsource retained.
 This is unaccepted CPU evidence. Next actualplayed leaning/landing/contact,
 Garage blending and LOD; thumbgap4.715mm stillopen. Checkpoint2/3 stayopen.
+
+### Actual NEW replay rejects intermittent hand contact
+
+Round90 actual privatebody05 clear/crash/restart passes identicalphysics on
+bothtiers (sameFULL candidate intentionally, realLOD open). First4s hands
+allcontact, but40s/480frame actual body/hands/feet exposes5bad frames:
+maximumgrip72.704mm, sole<=1.840µm, actual lean reachesboth-1/+1. Parent
+first120frames/worsttick500 confirms hoveringgloves. Rejectcontact gate;
+retain WHITE anatomy/source. Reproduce suspected nonorthogonal degenerate
+elbowpole fallback, then scoped privatefix without physics changes. This is
+one actualadapter failure; CPU numerical pass never supersedes playedproof.
+No checkpoint2/3 closure; complete40s moving visual review stillpending.

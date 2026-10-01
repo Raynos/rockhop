@@ -1,0 +1,50 @@
+{
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/build.mts",
+        "--out=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body05-build",
+        "--models=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played01/mapping-full-diagnostic.json",
+        "--new-rider-adapter=1"
+      ],
+      "status": 0,
+      "seconds": 4.045844875
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body05-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played01/replay.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 15.172961041999999
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/wrist-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body05-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played01/wrists",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=4",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 27.261380125000002
+    }
+  ],
+  "wallSeconds": 46.493314250000005,
+  "peakAnonymousBytes": 47518121984,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limits": "Both tier modelnames explicitly use the SAME FULL candidate for contact diagnostics; real LOD gate remains unmeasured. Private build only, physics and bikes unchanged."
+}

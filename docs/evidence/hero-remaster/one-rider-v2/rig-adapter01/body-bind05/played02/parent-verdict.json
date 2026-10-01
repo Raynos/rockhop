@@ -1,0 +1,63 @@
+{
+  "status": "REJECT final contact adapter; numerical short-prefix pass misses intermittent played defect",
+  "source": "body-bind05 actual NEW WHITE19joint",
+  "physicsReplay": "both tiers exact368f1ca5bd9e830a, finish40.083333333333336 Float64LEabaaaaaaaa0a4440, crash103 restart2/3ms errors0",
+  "sampledInputTicks": 4800,
+  "framesPerClip": 480,
+  "playedMaximumLean": [
+    -1,
+    1
+  ],
+  "gripMaximumM": 0.07270381047208084,
+  "soleMaximumM": 1.8396878910140118e-06,
+  "failedSampledFrames": [
+    {
+      "i": 49,
+      "tick": 500,
+      "gripErrM": [
+        0.07270381047208084,
+        0.07168402348006107
+      ],
+      "lean": -0.23090673448365068
+    },
+    {
+      "i": 146,
+      "tick": 1470,
+      "gripErrM": [
+        0.07194599464124979,
+        8.186779039412073e-08
+      ],
+      "lean": -0.45730386588741573
+    },
+    {
+      "i": 189,
+      "tick": 1900,
+      "gripErrM": [
+        0.07225065717218633,
+        0.07126199596208824
+      ],
+      "lean": -0.379038692092972
+    },
+    {
+      "i": 195,
+      "tick": 1960,
+      "gripErrM": [
+        0.07229779860479807,
+        0.07130965164093747
+      ],
+      "lean": -0.38062214710501774
+    },
+    {
+      "i": 408,
+      "tick": 4090,
+      "gripErrM": [
+        0.0724983956444928,
+        0.07151446205907742
+      ],
+      "lean": -0.39310139335268474
+    }
+  ],
+  "parentVisualReview": "All120 first4s orderedframes plus actual500tick worst fullbody. No gross wristgap in initialclip, retained proportions/clothes; later bothgloves visibly hover above rods. Full40s body/hands/feet clips retained; appearance and surface verdict pending further moving inspection.",
+  "hypothesis": "Rare projected elbow pole degeneracy: legacy fallback pole is not reprojected perpendicular to direction. Audit/reproduce against actual replay states before private scoped correction.",
+  "scope": "FULL candidate under both tiernames, not realLOD. No player/physics/bike change. No checkpoint2/3 closure."
+}
