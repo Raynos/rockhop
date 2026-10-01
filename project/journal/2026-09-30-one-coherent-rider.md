@@ -298,3 +298,16 @@ signatures unchanged, native weight difference0, one connected closed
 
 Limits: Motion FAILED despite sound static anatomy. Native weight
 preservation is not a temporary/final rig pass; no contact/gameplay approval.
+
+Finding: Private visible-contact probe now supports explicitly reviewed
+actual triangle targets. Open peg teeth report sided/unsigned distance
+and unmeasured penetration; they never become a zero-penetration pass.
+
+Validation: Parent reran21focused tests, full harness typecheck and
+oxlint. Edge/corner/barycentric/transform/closed/open/asset mutation cases
+pass, including actual retained peg surfaces. Fresh silent low/high
+player baseline exact clear/crash/1–2ms restart passes with0errors.
+
+Limits: No new rider mapping, gameplay contacts or rig pass. Closed
+volume needs separate parent review for self-intersection; disconnected
+platform/teeth compounds require explicit future component handling.

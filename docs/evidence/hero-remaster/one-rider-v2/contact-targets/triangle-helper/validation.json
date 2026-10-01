@@ -1,0 +1,90 @@
+{
+  "createdUTC": "2026-10-01T00:04:30.935902+00:00",
+  "checkpoint": "private exact triangle target helper; unaccepted rider preparation",
+  "observedHEAD": "5312be88fdf4ac37e541f52cbc7f75ea18027990",
+  "authorizedPreviousCheckpoint": "b16ca42d",
+  "sourceSHA256": {
+    "harness/hero-remaster/surface-contacts.mts": "21e18d707962699d01d022c1ec66263fc283b5d5b0ab4e242586d15053e2b635",
+    "harness/hero-remaster/surface-contacts.test.ts": "b4036b74b27684b10faca997039afce7a330efd72cf1370a1373d5731f96a974"
+  },
+  "validation": [
+    {
+      "command": "pnpm exec vitest run harness/hero-remaster/surface-contacts.test.ts harness/hero-remaster/capture-options.test.ts harness/hero-remaster/private-contact-bundle.test.ts",
+      "exitCode": 0,
+      "testsPassed": 21,
+      "surfaceTestsPassed": 17,
+      "elapsedSeconds": 0.297
+    },
+    {
+      "command": "pnpm exec tsc -p tsconfig.harness.json --noEmit",
+      "exitCode": 0
+    },
+    {
+      "command": "pnpm exec oxlint harness/hero-remaster/surface-contacts.mts harness/hero-remaster/surface-contacts.test.ts",
+      "exitCode": 0
+    }
+  ],
+  "retainedSourceAssertions": {
+    "bike-rookie.glb": {
+      "actualConsumedSourceSHA256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+      "retainedReportSHA256": "7257904565d62ff793faf4d9dbcd798419610b524ba885bb3dd6d49391d257f8",
+      "platformComponents": [
+        0,
+        12
+      ],
+      "platformClosureChecks": "passed for each individual component",
+      "openSingleTriangleTeethChecked": 0,
+      "runtimeMappingAccepted": false
+    },
+    "bike-rookie-lod.glb": {
+      "actualConsumedSourceSHA256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+      "retainedReportSHA256": "343734c8a2584fb3b1a95954157438c9da310bb70ba214d45d2fe1a105c532e3",
+      "platformComponents": [
+        0,
+        12
+      ],
+      "platformClosureChecks": "passed for each individual component",
+      "openSingleTriangleTeethChecked": 20,
+      "runtimeMappingAccepted": false
+    },
+    "bike-pro.glb": {
+      "actualConsumedSourceSHA256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86",
+      "retainedReportSHA256": "6bec5e4e73e5c4fdc26c74324f9c903d1e0a920e94dfbb6d19e71fdfc75daea5",
+      "platformComponents": [
+        0,
+        12
+      ],
+      "platformClosureChecks": "passed for each individual component",
+      "openSingleTriangleTeethChecked": 0,
+      "runtimeMappingAccepted": false
+    },
+    "bike-pro-lod.glb": {
+      "actualConsumedSourceSHA256": "37455064bf7b6012d67e99454cefced5a1aceac3747796f11cdcfe839436a2b7",
+      "retainedReportSHA256": "84b19b9b33d18c60ba56ff2d0e2bafb9e435d1b1b96ba73c2d213ac0ca85b552",
+      "platformComponents": [
+        0,
+        12
+      ],
+      "platformClosureChecks": "passed for each individual component",
+      "openSingleTriangleTeethChecked": 20,
+      "runtimeMappingAccepted": false
+    }
+  },
+  "actualRiderContacts": {
+    "hand.L": "UNMEASURED: no reviewed new-rig surface mapping",
+    "hand.R": "UNMEASURED: no reviewed new-rig surface mapping",
+    "foot.L": "UNMEASURED: no reviewed new-rig surface mapping",
+    "foot.R": "UNMEASURED: no reviewed new-rig surface mapping"
+  },
+  "GPUWorkloads": 0,
+  "browserCaptures": 0,
+  "physicsOrPlayerSourceChanges": false,
+  "remainingLimits": [
+    "No actual rider or target runtime mapping prepared",
+    "Closed eligibility does not detect geometric self-intersection; separate parent volume review required",
+    "Closed targets support one connected shell only; no multi-component volume union",
+    "Open target penetration is null/unmeasured",
+    "Rider lattice sampling is not continuous collision or a character acceptance gate",
+    "Sharp edge/corner orientation selects one nearest geometric face"
+  ]
+}

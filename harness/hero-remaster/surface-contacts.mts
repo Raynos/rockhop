@@ -1,7 +1,7 @@
 /** Read-only, post-render visible-surface probe. Bundle this into a private harness build;
  * do not infer palm/sole patches from bone names, sockets, or skin weights. */
-import { Vector3 } from 'three';
-import type { BufferGeometry, Object3D, SkinnedMesh } from 'three';
+import { Triangle, Vector3 } from 'three';
+import type { BufferGeometry, Mesh, Object3D, SkinnedMesh } from 'three';
 
 export const CONTACT_IDS = ['hand.L', 'hand.R', 'foot.L', 'foot.R'] as const;
 export type ContactId = typeof CONTACT_IDS[number];
@@ -30,11 +30,30 @@ export interface ContactPrimitive {
   verifiedAgainstVisibleGeometry: boolean;
   evidence: string;
 }
+export interface ContactTriangleTarget {
+  kind: 'triangles';
+  /** Exact live mesh and its owning bike frame. Source accessor indices are not live indices. */
+  mesh: Locator;
+  frame: Locator;
+  geometrySHA256: string;
+  source: { assetSHA256: string; nodeIndex: number; meshIndex: number; primitiveIndex: number; triangleOrdinals: number[] };
+  /** Explicit, separately reviewed correspondence, one runtime ordinal per retained source face. */
+  runtimeTriangleOrdinals: number[];
+  bindingReviewed: boolean;
+  bindingReviewAuthority: 'parent';
+  /** Separate review of a simple, non-self-intersecting closed volume. */
+  closedVolumeReviewed: boolean;
+  evidence: string;
+  closure: 'closed' | 'open';
+  /** Metre-space vertex welding tolerance used only for closure checks. */
+  weldToleranceM: number;
+}
+export type ContactTarget = ContactPrimitive | ContactTriangleTarget;
 export interface SurfaceContactManifest {
   schema: 'rockhop-surface-contacts-v1';
   riderSHA256: string;
   bikeSHA256: string;
-  contacts: Partial<Record<ContactId, { patch: SurfacePatch; target: ContactPrimitive }>>;
+  contacts: Partial<Record<ContactId, { patch: SurfacePatch; target: ContactTarget }>>;
 }
 export interface PrimitiveDistance {
   signedDistanceM: number;
@@ -47,10 +66,18 @@ export type ContactMeasurement = {
   status: 'measured';
   /** No pass flag: a parent must judge coverage, anatomy and played footage together. */
   sampleCount: number;
-  minimumSignedDistanceM: number;
-  maximumSignedDistanceM: number;
+  minimumSignedDistanceM: number | null;
+  maximumSignedDistanceM: number | null;
   minimumAbsoluteSurfaceGapM: number;
-  maximumSampledPenetrationM: number;
+  maximumSampledPenetrationM: number | null;
+  penetrationStatus: 'measured' | 'unmeasured';
+  penetrationLimit: string;
+  /** Open surfaces provide a local face-sided distance, never a volume penetration claim. */
+  minimumSidedDistanceM: number | null;
+  maximumSidedDistanceM: number | null;
+  nearestTargetTriangleOrdinal: number | null;
+  nearestTargetBarycentric: Vec3 | null;
+  nearestTargetNormalWorld: Vec3;
   nearestSampleWorld: Vec3;
   nearestTargetWorld: Vec3;
   nearestNormalMismatchDeg: number;
@@ -140,12 +167,12 @@ function face(g: BufferGeometry, triangle: number): [number, number, number] {
   if (ids.some(v => !Number.isSafeInteger(v) || v < 0 || v >= vertexCount)) throw new Error('patch face references invalid vertex');
   return ids;
 }
-function worldVertex(mesh: SkinnedMesh, index: number): Vector3 {
+function worldVertex(mesh: Mesh, index: number): Vector3 {
   const vertex = mesh.getVertexPosition(index, new Vector3()).applyMatrix4(mesh.matrixWorld);
   if (!finiteVec(vertex.toArray())) throw new Error('nonfinite deformed vertex');
   return vertex;
 }
-function worldFace(mesh: SkinnedMesh, triangle: number): [Vector3, Vector3, Vector3, Vector3] {
+function worldFace(mesh: Mesh, triangle: number): [Vector3, Vector3, Vector3, Vector3] {
   const ids = face(mesh.geometry, triangle), a = worldVertex(mesh, ids[0]), b = worldVertex(mesh, ids[1]), c = worldVertex(mesh, ids[2]);
   const normal = b.clone().sub(a).cross(c.clone().sub(a));
   if (normal.lengthSq() < 1e-20) throw new Error('deformed contact triangle degenerate');
@@ -160,6 +187,114 @@ function worldPrimitive(frame: Object3D, target: ContactPrimitive): { a: Vector3
     throw new Error('primitive transform has nonuniform scale or shear');
   return { a: new Vector3(...target.a).applyMatrix4(frame.matrixWorld),
     b: new Vector3(...target.b).applyMatrix4(frame.matrixWorld), radius: target.radius * sx };
+}
+
+export interface WorldTargetTriangle { ordinal: number; a: Vector3; b: Vector3; c: Vector3 }
+export interface TriangleDistance {
+  unsignedDistanceM: number;
+  signedDistanceM: number | null;
+  sidedDistanceM: number;
+  closestWorld: Vec3;
+  outwardNormalWorld: Vec3;
+  triangleOrdinal: number;
+  barycentric: Vec3;
+}
+
+/** Hash the actual rigid live target indexing/positions. Morphing/skinned targets need a
+ * separate deformation contract; they are intentionally unsupported here. */
+export async function runtimeRigidSurfaceSHA256(mesh: Mesh): Promise<string> {
+  if ((mesh as SkinnedMesh).isSkinnedMesh || mesh.geometry.morphAttributes.position?.length)
+    throw new Error('triangle bike target must be rigid without position morphs');
+  const g = mesh.geometry, p = g.getAttribute('position');
+  if (!p) throw new Error('triangle target has no positions');
+  const payload = JSON.stringify({ schema: 'rockhop-rigid-target-v1', positions:
+    Array.from({ length: p.count }, (_, i) => [p.getX(i), p.getY(i), p.getZ(i)]),
+  index: g.index ? Array.from({ length: g.index.count }, (_, i) => g.index!.getX(i)) : null });
+  const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(payload));
+  return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+}
+
+/** Conservative eligibility check: one connected, edge-manifold, outward-wound shell.
+ * This does not certify absence of geometric self-intersections; human review is required. */
+export function validateClosedTrianglePatch(triangles: WorldTargetTriangle[], weldToleranceM: number): void {
+  if (!Number.isFinite(weldToleranceM) || weldToleranceM < 1e-9 || weldToleranceM > 1e-4)
+    throw new Error('triangle welding tolerance must be 1e-9..1e-4 metres');
+  const vertices: Vector3[] = [], buckets = new Map<string, number[]>(), edges = new Map<string, { direction: number; faces: number[] }>();
+  const welded = (p: Vector3): number => {
+    const x = Math.floor(p.x / weldToleranceM), y = Math.floor(p.y / weldToleranceM), z = Math.floor(p.z / weldToleranceM);
+    for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) for (let dz = -1; dz <= 1; dz++)
+      for (const id of buckets.get(`${x + dx}:${y + dy}:${z + dz}`) ?? [])
+        if (vertices[id]!.distanceTo(p) <= weldToleranceM) return id;
+    const id = vertices.length, key = `${x}:${y}:${z}`;
+    vertices.push(p); buckets.set(key, [...(buckets.get(key) ?? []), id]); return id;
+  };
+  let volume = 0;
+  const origin = triangles[0]?.a;
+  if (!origin) throw new Error('triangle target empty');
+  for (const [fi, t] of triangles.entries()) {
+    if (![t.a, t.b, t.c].every(p => finiteVec(p.toArray()))) throw new Error('nonfinite target triangle');
+    const ids = [welded(t.a), welded(t.b), welded(t.c)];
+    if (new Set(ids).size !== 3 || new Triangle(t.a, t.b, t.c).getArea() < 1e-14)
+      throw new Error('triangle target degenerate under weld');
+    for (let i = 0; i < 3; i++) {
+      const a = ids[i]!, b = ids[(i + 1) % 3]!, key = `${Math.min(a, b)}:${Math.max(a, b)}`;
+      const edge = edges.get(key) ?? { direction: 0, faces: [] };
+      edge.direction += a < b ? 1 : -1; edge.faces.push(fi); edges.set(key, edge);
+    }
+    volume += t.a.clone().sub(origin).dot(t.b.clone().sub(origin).cross(t.c.clone().sub(origin))) / 6;
+  }
+  const neighbours = triangles.map(() => new Set<number>());
+  for (const edge of edges.values()) {
+    if (edge.faces.length !== 2 || edge.direction !== 0) throw new Error('closed target has boundary, nonmanifold edge or inconsistent winding');
+    neighbours[edge.faces[0]!]!.add(edge.faces[1]!); neighbours[edge.faces[1]!]!.add(edge.faces[0]!);
+  }
+  const seen = new Set<number>([0]), pending = [0];
+  while (pending.length) for (const n of neighbours[pending.pop()!]!) if (!seen.has(n)) { seen.add(n); pending.push(n); }
+  if (seen.size !== triangles.length) throw new Error('closed target must be one connected shell');
+  if (volume <= 1e-15) throw new Error('closed target is inward wound or has zero volume');
+}
+
+/** Exact point→retained triangle patch distance. Closed patches are checked for closure,
+ * winding and connectivity; a separate review must rule out self-intersection. Open sided
+ * distance is only relative to the nearest face. */
+export function pointTriangleDistance(point: Vector3, triangles: WorldTargetTriangle[], closure: 'open' | 'closed', weldToleranceM = 1e-7): TriangleDistance {
+  if (closure === 'closed') validateClosedTrianglePatch(triangles, weldToleranceM);
+  return pointValidatedTriangles(point, triangles, closure);
+}
+function pointValidatedTriangles(point: Vector3, triangles: WorldTargetTriangle[], closure: 'open' | 'closed'): TriangleDistance {
+  if (!finiteVec(point.toArray()) || !triangles.length) throw new Error('invalid point or empty triangle patch');
+  let best: TriangleDistance | undefined, angle = 0;
+  for (const t of triangles) {
+    const tri = new Triangle(t.a, t.b, t.c), normal = tri.getNormal(new Vector3());
+    if (tri.getArea() < 1e-14 || !finiteVec(normal.toArray())) throw new Error('target triangle degenerate');
+    const closest = tri.closestPointToPoint(point, new Vector3()), distance = closest.distanceTo(point);
+    if (!best || distance < best.unsignedDistanceM) {
+      const bary = tri.getBarycoord(closest, new Vector3());
+      if (!bary) throw new Error('target barycentric undefined');
+      best = { unsignedDistanceM: distance, signedDistanceM: null, sidedDistanceM: point.clone().sub(closest).dot(normal),
+        closestWorld: closest.toArray(), outwardNormalWorld: normal.toArray(), triangleOrdinal: t.ordinal, barycentric: bary.toArray() };
+    }
+    if (closure === 'closed') {
+      const a = t.a.clone().sub(point), b = t.b.clone().sub(point), c = t.c.clone().sub(point);
+      const la = a.length(), lb = b.length(), lc = c.length();
+      angle += 2 * Math.atan2(a.dot(b.clone().cross(c)), la * lb * lc + a.dot(b) * lc + b.dot(c) * la + c.dot(a) * lb);
+    }
+  }
+  if (!best) throw new Error('triangle target empty');
+  if (closure === 'closed') {
+    if (best.unsignedDistanceM <= 1e-10) best.signedDistanceM = 0;
+    else {
+      const winding = Math.abs(angle) / (4 * Math.PI);
+      if (Math.min(Math.abs(winding), Math.abs(winding - 1)) > 1e-5) throw new Error('closed target inside classification ambiguous');
+      best.signedDistanceM = best.unsignedDistanceM * (winding > .5 ? -1 : 1);
+    }
+  }
+  return best;
+}
+
+function belongsTo(mesh: Object3D, frame: Object3D): boolean {
+  for (let node: Object3D | null = mesh; node; node = node.parent) if (node === frame) return true;
+  return false;
 }
 
 /** Bind once AFTER live model merge, sleeve conditioning and settled tier selection. Source hashes
@@ -181,9 +316,11 @@ export async function prepareSurfaceContacts(manifest: SurfaceContactManifest | 
       // Freeze the supplied definition so a UI edit cannot silently change a prepared probe.
       const { patch, target } = structuredClone(entry);
       if (patch.reviewed !== true || !patch.evidence.trim()) throw new Error('surface patch not visually reviewed');
-      if (target.verifiedAgainstVisibleGeometry !== true || !target.evidence.trim()) throw new Error('target primitive not verified against visible bike');
-      if (!finiteVec(target.a) || !finiteVec(target.b) || !Number.isFinite(target.radius) || target.radius <= 0)
-        throw new Error('invalid primitive definition');
+      if (target.kind !== 'triangles') {
+        if (target.verifiedAgainstVisibleGeometry !== true || !target.evidence.trim()) throw new Error('target primitive not verified against visible bike');
+        if (!finiteVec(target.a) || !finiteVec(target.b) || !Number.isFinite(target.radius) || target.radius <= 0)
+          throw new Error('invalid primitive definition');
+      }
       if (!Number.isSafeInteger(patch.subdivisions) || patch.subdivisions < 2 || patch.subdivisions > 64)
         throw new Error('patch subdivisions must be integer 2..64');
       const mesh = locate(roots.rider, patch.mesh) as SkinnedMesh, frame = locate(roots.bike, target.frame);
@@ -198,21 +335,70 @@ export async function prepareSurfaceContacts(manifest: SurfaceContactManifest | 
         if (!Number.isSafeInteger(v.index) || v.index < 0 || v.index >= mesh.geometry.getAttribute('position').count ||
           !face(mesh.geometry, v.normalTriangle).includes(v.index)) throw new Error('vertex patch or incident normal triangle invalid');
       }
+      let targetMesh: Mesh | undefined, targetGeometry: BufferGeometry | undefined;
+      let targetPositionSnapshot: number[] = [], targetIndexSnapshot: number[] = [];
+      if (target.kind === 'triangles') {
+        if (!target.bindingReviewed || target.bindingReviewAuthority !== 'parent' || !target.evidence.trim()) throw new Error('source to runtime triangle binding not reviewed');
+        if (target.source.assetSHA256 !== consumed.bikeSHA256 || !digestPattern.test(target.source.assetSHA256))
+          throw new Error('triangle source differs from consumed bike bytes');
+        if (![target.source.nodeIndex, target.source.meshIndex, target.source.primitiveIndex].every(v => Number.isSafeInteger(v) && v >= 0))
+          throw new Error('triangle source accessor identity invalid');
+        const source = target.source.triangleOrdinals, runtime = target.runtimeTriangleOrdinals;
+        if (!source?.length || !runtime?.length || source.length !== runtime.length ||
+          source.some(v => !Number.isSafeInteger(v) || v < 0) || new Set(source).size !== source.length || new Set(runtime).size !== runtime.length)
+          throw new Error('explicit source to runtime triangle correspondence missing or duplicated');
+        if (target.closure !== 'open' && target.closure !== 'closed') throw new Error('triangle closure missing');
+        if (target.closure === 'closed' && target.closedVolumeReviewed !== true) throw new Error('closed target volume not reviewed');
+        targetMesh = locate(roots.bike, target.mesh) as Mesh;
+        if (!targetMesh.isMesh || !belongsTo(targetMesh, frame)) throw new Error('triangle mesh is not owned by selected bike frame');
+        if (!digestPattern.test(target.geometrySHA256) || await runtimeRigidSurfaceSHA256(targetMesh) !== target.geometrySHA256)
+          throw new Error('runtime target geometry differs from reviewed binding');
+        for (const tri of runtime) face(targetMesh.geometry, tri);
+        targetGeometry = targetMesh.geometry;
+        const p = targetGeometry.getAttribute('position');
+        targetPositionSnapshot = Array.from({ length: p.count * 3 }, (_, i) => p.getComponent(Math.floor(i / 3), i % 3));
+        targetIndexSnapshot = targetGeometry.index ? Array.from({ length: targetGeometry.index.count }, (_, i) => targetGeometry!.index!.getX(i)) : [];
+      }
       const geometry = mesh.geometry;
       probes.set(id, () => {
         try {
           if (locate(roots.rider, patch.mesh) !== mesh || locate(roots.bike, target.frame) !== frame || mesh.geometry !== geometry)
             throw new Error('live scene/geometry changed; prepare mappings again');
           for (let node: Object3D | null = mesh; node; node = node.parent) if (!node.visible) throw new Error('contact mesh or ancestor hidden');
-          const primitive = worldPrimitive(frame, target);
+          let triangles: WorldTargetTriangle[] = [];
+          if (target.kind === 'triangles') {
+            if (!targetMesh || (targetMesh as SkinnedMesh).isSkinnedMesh || targetMesh.geometry.morphAttributes.position?.length || locate(roots.bike, target.mesh) !== targetMesh || targetMesh.geometry !== targetGeometry ||
+              !belongsTo(targetMesh, frame))
+              throw new Error('live target geometry/frame changed; prepare mappings again');
+            const p = targetMesh.geometry.getAttribute('position'), index = targetMesh.geometry.index;
+            if (p.count * 3 !== targetPositionSnapshot.length || targetPositionSnapshot.some((v, i) => v !== p.getComponent(Math.floor(i / 3), i % 3)) ||
+              (index?.count ?? 0) !== targetIndexSnapshot.length || targetIndexSnapshot.some((v, i) => v !== index!.getX(i)))
+              throw new Error('live target positions/indexing changed; prepare mappings again');
+            for (let node: Object3D | null = targetMesh; node; node = node.parent) if (!node.visible) throw new Error('target mesh or ancestor hidden');
+            triangles = target.runtimeTriangleOrdinals.map(ordinal => {
+              const [a, b, c] = worldFace(targetMesh!, ordinal); return { ordinal, a, b, c };
+            });
+            if (target.closure === 'closed') validateClosedTrianglePatch(triangles, target.weldToleranceM);
+          }
+          const primitive = target.kind === 'triangles' ? null : worldPrimitive(frame, target);
+          const signed = target.kind !== 'triangles' || target.closure === 'closed';
+          let minimumSided = Infinity, maximumSided = -Infinity;
+          let nearestOrdinal: number | null = null, nearestBarycentric: Vec3 | null = null, nearestNormal: Vec3 = [0, 0, 0];
           let count = 0, minimum = Infinity, maximum = -Infinity, absolute = Infinity, maxAngle = 0, spacing = 0;
           let nearest: Vec3 = [0, 0, 0], nearestTarget: Vec3 = [0, 0, 0], nearestAngle = 0;
           const add = (point: Vector3, normal: Vector3) => {
-            const d = pointPrimitiveDistance(point, primitive.a, primitive.b, primitive.radius, target.kind);
+            const d = target.kind === 'triangles' ? pointValidatedTriangles(point, triangles, target.closure) :
+              pointPrimitiveDistance(point, primitive!.a, primitive!.b, primitive!.radius, target.kind);
+            const unsignedDistance = 'unsignedDistanceM' in d ? d.unsignedDistanceM : Math.abs(d.signedDistanceM!);
+            if ('sidedDistanceM' in d) { minimumSided = Math.min(minimumSided, d.sidedDistanceM); maximumSided = Math.max(maximumSided, d.sidedDistanceM); }
             const angle = Math.acos(Math.max(-1, Math.min(1, -normal.dot(new Vector3(...d.outwardNormalWorld))))) * 180 / Math.PI;
-            count++; minimum = Math.min(minimum, d.signedDistanceM); maximum = Math.max(maximum, d.signedDistanceM); maxAngle = Math.max(maxAngle, angle);
-            if (Math.abs(d.signedDistanceM) < absolute) {
-              absolute = Math.abs(d.signedDistanceM); nearest = point.toArray(); nearestTarget = d.closestWorld; nearestAngle = angle;
+            count++;
+            if (d.signedDistanceM !== null) { minimum = Math.min(minimum, d.signedDistanceM); maximum = Math.max(maximum, d.signedDistanceM); }
+            maxAngle = Math.max(maxAngle, angle);
+            if (unsignedDistance < absolute) {
+              absolute = unsignedDistance; nearest = point.toArray(); nearestTarget = d.closestWorld; nearestAngle = angle;
+              nearestNormal = d.outwardNormalWorld;
+              if ('triangleOrdinal' in d) { nearestOrdinal = d.triangleOrdinal; nearestBarycentric = d.barycentric; }
             }
           };
           for (const tri of patch.triangles ?? []) {
@@ -222,8 +408,13 @@ export async function prepareSurfaceContacts(manifest: SurfaceContactManifest | 
               add(a.clone().multiplyScalar(1 - (i + j) / n).addScaledVector(b, i / n).addScaledVector(c, j / n), normal);
           }
           for (const v of patch.vertices ?? []) add(worldVertex(mesh, v.index), worldFace(mesh, v.normalTriangle)[3]);
-          return { status: 'measured', sampleCount: count, minimumSignedDistanceM: minimum, maximumSignedDistanceM: maximum,
-            minimumAbsoluteSurfaceGapM: absolute, maximumSampledPenetrationM: Math.max(0, -minimum),
+          return { status: 'measured', sampleCount: count, minimumSignedDistanceM: signed ? minimum : null, maximumSignedDistanceM: signed ? maximum : null,
+            minimumAbsoluteSurfaceGapM: absolute, maximumSampledPenetrationM: signed ? Math.max(0, -minimum) : null,
+            penetrationStatus: signed ? 'measured' : 'unmeasured',
+            penetrationLimit: signed ? 'point samples only; no whole mesh collision or self-intersection certificate' : 'open target has no enclosed volume; nearest-face sided distance only',
+            minimumSidedDistanceM: target.kind === 'triangles' ? minimumSided : null,
+            maximumSidedDistanceM: target.kind === 'triangles' ? maximumSided : null,
+            nearestTargetTriangleOrdinal: nearestOrdinal, nearestTargetBarycentric: nearestBarycentric, nearestTargetNormalWorld: nearestNormal,
             nearestSampleWorld: nearest, nearestTargetWorld: nearestTarget, nearestNormalMismatchDeg: nearestAngle,
             maximumNormalMismatchDeg: maxAngle, maximumTriangleLatticeEdgeM: spacing };
         } catch (e) { return { status: 'unmeasured', reason: e instanceof Error ? e.message : String(e) }; }
