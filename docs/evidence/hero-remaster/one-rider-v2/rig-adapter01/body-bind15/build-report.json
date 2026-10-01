@@ -1,0 +1,60 @@
+{
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/guarded-correction01/rider.glb",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind15/rider.glb",
+  "candidateSHA256": "5fe72d3513be19e17d3f8d1e481eba76e5100e1be1bf7ee5b9872a1d2a010410",
+  "sourceUnchanged": true,
+  "JSONHeaderAndNodesExact": true,
+  "allBytesOutsideChangedBody0SkinEntriesExact": true,
+  "geometryNormalsUVIndicesMorphImagesMaterialsAnimationBindsSocketsExact": true,
+  "changedVertices": 1778,
+  "changedPhysicalVertices": 1299,
+  "changedBytes": 14178,
+  "physicalAnchors": {
+    "glute": 314,
+    "groin": 183,
+    "upper": 6,
+    "lowerThigh": 2,
+    "free": 1194
+  },
+  "settings": {
+    "name": "one connected glute/groin support trial",
+    "activeBoundsSourceM": {
+      "y": [
+        0.72,
+        0.959175
+      ],
+      "absZBelow": 0.235
+    },
+    "admissibleBones": [
+      "pelvis",
+      "thighL",
+      "thighR"
+    ],
+    "gluteAnchor": {
+      "xBelow": 0.634775,
+      "yFrom": 0.84,
+      "absZFrom": 0.045,
+      "pelvisWeight": 1
+    },
+    "innerGroinAnchor": {
+      "xAbove": 0.68,
+      "yFrom": 0.81,
+      "absZBelow": 0.075,
+      "pelvisWeight": 1
+    },
+    "upperAnchor": {
+      "yFrom": 0.93,
+      "pelvisWeight": 1
+    },
+    "lowerThighAnchor": {
+      "yThrough": 0.74,
+      "pelvisWeight": 0
+    },
+    "graph": "exact-position welded original triangle edges, inverse edge-length Laplacian Dirichlet solve",
+    "boundaries": "all neighbors outside eligible region retain exact current weights",
+    "singleTrial": true,
+    "parameterSweep": false
+  },
+  "limits": "CPU-only single weight trial. No rendered or played adoption; normal player assets untouched."
+}

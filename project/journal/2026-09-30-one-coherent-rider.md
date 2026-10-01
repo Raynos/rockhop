@@ -1192,3 +1192,13 @@ Six recorded states match actual played contacts within16.722nm. Backward lean
 degenerate faces. oxlint passes. Existing body06/08 weights verified exact.
 Limits: Local fold indicators are not complete collision tests or appearance
 acceptance. No GPU, source/candidate edits or player asset promotion.
+
+## Round113 — reject weight redistribution that trades folds for stretching
+
+Finding: Keep current11 and switch early to local hip-flexion correctives.
+Candidate15 reduces folds but worsens stretched thighs and seat overlap.
+Validation: Parent reran SHA-bound six-state comparison. All non-skin bytes and
+physical bones/debug/lean/contact errors exact. Hip stretch4.606x→7.537x;
+seat overlap3.415→18.248mm. Deterministic rebuild exact; recipe lint passes.
+Limits: One anatomical weight trial, no moving art score. Historical waist
+correction retained; protected head/hood, contacts and player assets unchanged.

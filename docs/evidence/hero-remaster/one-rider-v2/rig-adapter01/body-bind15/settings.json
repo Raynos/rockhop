@@ -1,0 +1,39 @@
+{
+  "name": "one connected glute/groin support trial",
+  "activeBoundsSourceM": {
+    "y": [
+      0.72,
+      0.959175
+    ],
+    "absZBelow": 0.235
+  },
+  "admissibleBones": [
+    "pelvis",
+    "thighL",
+    "thighR"
+  ],
+  "gluteAnchor": {
+    "xBelow": 0.634775,
+    "yFrom": 0.84,
+    "absZFrom": 0.045,
+    "pelvisWeight": 1
+  },
+  "innerGroinAnchor": {
+    "xAbove": 0.68,
+    "yFrom": 0.81,
+    "absZBelow": 0.075,
+    "pelvisWeight": 1
+  },
+  "upperAnchor": {
+    "yFrom": 0.93,
+    "pelvisWeight": 1
+  },
+  "lowerThighAnchor": {
+    "yThrough": 0.74,
+    "pelvisWeight": 0
+  },
+  "graph": "exact-position welded original triangle edges, inverse edge-length Laplacian Dirichlet solve",
+  "boundaries": "all neighbors outside eligible region retain exact current weights",
+  "singleTrial": true,
+  "parameterSweep": false
+}

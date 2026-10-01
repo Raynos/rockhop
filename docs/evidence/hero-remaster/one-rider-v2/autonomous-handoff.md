@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round112, 2026-10-01
+## Current evidence — round113, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -542,3 +542,13 @@ Retain deformation diagnosis; no repair or appearance pass. Next anatomical
 pelvis/thigh support weights with protected head/hood/cuffs/feet and fixed
 19-bone/physics/IK targets; local flexion correctives if weight-only loses volume.
 Private phone gallery remains current11. New eyelid donor investigation CPU-only.
+
+Round113: REJECT anatomical weight15 on parent-reproduced six-state regressions.
+Fewer hip folds trade for worse stretch4.606x→7.537x, increased upper-leg folds
+in all6 states and near-neutral contraction/seat overlap3.415→18.248mm. All
+non-skin bytes/physics/bones/debug/contact errors exact11. One failed anatomical
+weight trial, no sweep; legacy06 waist correction retained in failure history.
+Switch early to localized hip-flexion correctives driven by existing bones.
+Current11/head/hood join unchanged. Actual hip camera baseline being corrected;
+first orbit labels used wrong yaw and obscured hips behind forks, preserved.
+New native CC0 eyelid anatomy donor investigation continues, no graft yet.

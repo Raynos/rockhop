@@ -1,0 +1,8 @@
+{
+  "candidateExportedAtFailure": false,
+  "artTrials": 1,
+  "setupFailures": [
+    {"kind":"Python import shadowing","detail":"inspect.py shadowed stdlib inspect.signature during scipy import","fix":"Rename source inventory to source_anatomy.py"},
+    {"kind":"Raw bone name assertion","detail":"GLB joint names use thigh.L/thigh.R; decoder aliases were expected","fix":"Read exact skin joint order, normalize only lookup labels; no node or bone change"}
+  ]
+}
