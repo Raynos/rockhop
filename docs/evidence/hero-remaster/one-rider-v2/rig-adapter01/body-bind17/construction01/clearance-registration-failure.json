@@ -1,0 +1,87 @@
+{
+  "status": "REJECTED before export at unchanged8mm eye-registration safety bound",
+  "eye": "negativeZ",
+  "nativeSide": "L",
+  "eyeDonorPrefix": "R",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "actualEyeDonorSHA256": "c11e5273b7e8d82a94a46d46c853e0ad42e7caeb2328716bc4a5c4090170d0fb",
+  "nativeAperturePositionsExact": true,
+  "nativeRegistrationOnlyOuterBoundaryAndOneRow": true,
+  "originalBinarySourceUnchanged": true,
+  "requiredEyeDepthShiftM": -0.00942846394229005,
+  "safetyBoundM": 0.008,
+  "worstProbe": {
+    "category": "inward_wall",
+    "localTriangle": 676,
+    "globalVertexIDs": [
+      66550,
+      64813,
+      64704
+    ],
+    "trianglePositionsM": [
+      [
+        0.7427529096603394,
+        1.6947835683822632,
+        -0.041035328060388565
+      ],
+      [
+        0.7312707304954529,
+        1.688920259475708,
+        -0.041082821786403656
+      ],
+      [
+        0.731222927570343,
+        1.6888824701309204,
+        -0.04092279449105263
+      ]
+    ],
+    "barycentricProbe": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "probePositionM": [
+      0.731222927570343,
+      1.6888824701309204,
+      -0.04092279449105263
+    ],
+    "actualCorneaFrontXM": 0.7404013915126331,
+    "frontPenetrationM": 0.00917846394229005
+  },
+  "probeCategories": {
+    "native_lid": {
+      "samples": 5040,
+      "samplesInsideGlobeProjection": 4549,
+      "maxFrontPenetrationM": 0.0037666587320093203
+    },
+    "front_join": {
+      "samples": 3015,
+      "samplesInsideGlobeProjection": 1562,
+      "maxFrontPenetrationM": 0.0
+    },
+    "inward_wall": {
+      "samples": 3210,
+      "samplesInsideGlobeProjection": 2403,
+      "maxFrontPenetrationM": 0.00917846394229005
+    }
+  },
+  "nativeSourceScale": 0.0841151730831446,
+  "nativeBasisEyeJointRaw": [
+    0.30775,
+    7.28415,
+    1.24535
+  ],
+  "targetUnshiftedGlobeCenterM": [
+    0.7327137474000001,
+    1.697,
+    -0.0332
+  ],
+  "fitFrame": "Proper native raw Z-forward to riderX,rawY-up toY,rawX to\u2212Z; per-eye translation matching actual retained CC0 donor apex target",
+  "candidateExported": false,
+  "GPUWorkPerformed": false,
+  "limits": [
+    "Sampled front-clearance failure, not an exact triangle intersection report.",
+    "Current11 preserved; all registered native and seam geometry retained in private failure NPZ for parent audit.",
+    "Initial UV-split raw-index guard failure separately retained. No bound relaxed or new appearance claimed."
+  ]
+}

@@ -31,6 +31,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round115 actual current11 h
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round116 rejects localized DQ hip target CPU:6 exact poses, upper legs worse all6, seat overlap3.415→13.452mm. No export/GPU; constrained hip corrective sculpt next. Current11 unchanged; private gallery115 live. Native eye17 stopped pre-export, audit next. Ship next117.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round117 native graft stopped pre-export at conservative inward-wall front-ray test; parent verifies one corneal hit, no actual intersection proved. Keep8mm fit bound, actual triangle/visibility test next. Eye appearance failures6/native stop1 separate. Hip16 DQ rejected; constrained hip corrective next. Current11 unchanged/gallery live; ship117 exact/crash/restart passes,next120.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

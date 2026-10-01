@@ -1,0 +1,10 @@
+{
+  "status": "Initial construction stopped before export at a seam verification assertion",
+  "assertion": "Consistent existing seam winding",
+  "location": "orient_strip of front-source to actual native outer boundary",
+  "initialGuard": "Raw exported vertex-index equality",
+  "finding": "Source head UV/normal splits use several exported indices for one physical boundary point. The source topology extractor returns physical representative points; raw indices do not identify all actual reference boundary edges.",
+  "correction": "Orient seam strips using exact float32 position-canonical indices, preserving source and native geometry.",
+  "candidateExported": false,
+  "limits": "This records a stopped construction and guard correction; it does not establish accepted winding or anatomy. Parent decides defect-attempt accounting."
+}

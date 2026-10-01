@@ -1236,3 +1236,13 @@ Upper-leg folds worse all six; neutral seat overlap3.415→13.452mm. Frozen
 buffers exact; source/contacts unchanged. No export or GPU work.
 Limits: CPU shape hypothesis only; no visual art judgment. Fold indicator and
 projected vertex clearance cannot certify full self-intersection/collision.
+
+## Round117 — distinguish inward wall clearance from actual intersection
+
+Finding: Native graft stops at a front-ray rule that does not prove collision
+for inward wall anatomy. Retain stopped construction and correct test scope.
+Validation: Parent reran frozen source/ray audit, exact native aperture/source11,
+one cornea hit,9.178mm behind front. No GLB/GPU. Ship117 both tiers exact
+40.083333333333336s/hash368f1ca5bd9e830a; crash103/restart2/4ms,errors0.
+Limits: Actual triangle intersection, completed join/conservation/materials
+and moving face quality unmeasured. Keep8mm fit bound; no appearance pass.

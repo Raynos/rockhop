@@ -1,0 +1,61 @@
+{
+  "status": "FROZEN FAILED CONSTRUCTION; independent CPU diagnostic only",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "sourceUnchanged": true,
+  "candidateGLBCount": 0,
+  "GPUWorkPerformed": false,
+  "diagnosticNPZSHA256": "e137447c05ec223edf78cae4e187385477baabbcbd44fe06365fd80c2d3e583a",
+  "worstProbeCategory": "inward_wall",
+  "worstProbePositionM": [
+    0.731222927570343,
+    1.6888824701309204,
+    -0.04092279449105263
+  ],
+  "actualCorneaRayIntersections": [
+    {
+      "triangle": 218,
+      "barycentric": [
+        0.028084669345142865,
+        0.4324986847330499,
+        0.5394166459218073
+      ],
+      "xM": 0.7404013915126331
+    }
+  ],
+  "corneaRayHitCount": 1,
+  "closedSphereInteriorEstablished": false,
+  "frontRayPenetrationM": 0.00917846394229005,
+  "requiredShiftM": -0.00942846394229005,
+  "unchangedSafetyBoundM": 0.008,
+  "nativeAperturePositionMaximumDeltaM": 0.0,
+  "nativeSourceFrame": {
+    "CC0Source": "/Users/raynos/Library/Application Support/Blender/5.1/extensions/user_default/mpfb/data/3dobjs/base.obj",
+    "helperVertexRangeHalfOpen": [
+      14598,
+      14670
+    ],
+    "helperSphereFittedCenterRaw": [
+      0.30776713838215114,
+      7.284138999937668,
+      1.2453500000955435
+    ],
+    "eyeJointRaw": [
+      0.30775,
+      7.28415,
+      1.24535
+    ],
+    "helperSphereFittedRadiusRaw": 0.14954118800015645,
+    "helperSphereFittedRadiusM": 0.012578682911692226,
+    "helperForwardExtentRelativeToJointM": 0.012335490132643151,
+    "actualEyeDonorForwardExtentRelativeToTargetCenterM": 0.01523556187748909,
+    "properRotation": "native (X,Y,Z) -> rider (Z,Y,-X)"
+  },
+  "limits": [
+    "The inward-wall vertex lies 9.178 mm behind the actual corneal front ray within its Y/Z projection. This verifies the conservative front-clearance rejection.",
+    "Only one corneal ray hit exists at this probe. A closed globe interior or actual wall/globe triangle intersection is not proved by this guard.",
+    "The all-graft-front-clearance rule may be too conservative for a deliberately inward wall; parent must distinguish a registration failure from a guard applicability failure before choosing another construction.",
+    "Positive-Z local construction precedes the negative-Z failure; whole-graft export, conservation, texture, normals and motion checks were never reached.",
+    "The source helper/actual donor forward-depth difference is a frame finding; it does not by itself explain or solve the inward-wall failure.",
+    "No safety bound was relaxed. No appearance or game-ready claim is made."
+  ]
+}

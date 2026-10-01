@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round116, 2026-10-01
+## Current evidence — round117, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -584,3 +584,14 @@ Switch early to constrained pose-space hip corrective/sculpt, no DQ parameter
 sweep or global engine skinning change. Current11/head/neck/hood/contacts exact.
 Body17 eyelid construction also frozen pre-export; parent audit next. Existing
 phone gallery shows actual115 motion. Ship next117; all art gates remain open.
+
+Round117: first native anatomical graft frozen pre-export at a conservative
+clearance predicate. Parent independently reran frozen ray/source-frame audit:
+inward wall9.178mm behind corneal front, proposed9.428mm shift exceeds8mm
+bound, but only one ray hit exists; actual wall/globe intersection not proved.
+No bound relaxed; no exported/accepted art. Prior eye appearance failures6,
+one native construction stop separately recorded, no generator blame. Next
+actual triangle/visibility testing by surface category, preserving native lids
+and head/hood/body. Ship117 low/high40.083333333333336s/hash368f1ca5bd9e830a
+exact,crash103/restart2/4ms,errors0; next120. Hip16 DQ rejected; constrained
+hip corrective next. Current11 remains private selection, gallery unchanged.
