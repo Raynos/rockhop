@@ -598,3 +598,12 @@ sourcehashes,111physicalboundaryedges/fourcircuits37/38/17/19, cheekrays
 missfrontandhitbackhead. Freshsilentproductionexactclear/crash/restartpasses.
 Limits: Innercircuitspossiblyislands; classifybeforepatch. Face6/10 below7;
 no acceptedface/wholecharacter, neckmotion or gameplay replacement.
+
+## Round52 — reject stiff fresh hood before baking
+
+Finding: NEWauthoredwholehood appears asflatarmoredcape/collar; switchearlier
+to naturalNEWdonor01, with actualhoodbag/clothdrape asdifferent alternative.
+Validation: Parentactualgrayfront/rear views;8reimportviews/sourceguards,
+40386sourcebodytriangles exactUV/material/indices. Binding614UVtriangles
+degenerate; allsourcebytes intact. No texturebake orrig performed.
+Limits: Newlineage1failure, exhaustedold15unchanged; no wholehoodacceptance.

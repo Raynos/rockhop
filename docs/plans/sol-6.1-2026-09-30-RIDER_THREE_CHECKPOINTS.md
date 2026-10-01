@@ -83,10 +83,14 @@ The reduced H21-4 hood cut/strip/lining repair lineage is retired at fifteen
 failures. The final actual assembly remains below target: diagnostic full
 character5/10, face3/10, with exposed folded lining, incompatible UV chart
 interpolation and225 cloth vertices penetrating skin by up to14.94mm.
-No sixteenth repair is permitted. Parent selected a genuinely NEW authored
-whole hood from four garment panels and a new neck binding, with its own
-coherent UV atlas. The old hood is silhouette/material reference only;
-body/clothing/hands outside the declared whole-hood region remain protected.
+No sixteenth repair is permitted. The genuinely NEW authored four-panel
+hood trial was rejected for a stiff cape/collar silhouette and degenerate
+binding UVs before baking. Its separate new lineage retains one failure.
+Parent now selects a preserved NEW H21-01 whole-hood donor as the primary
+construction direction; a genuine hood-bag pattern with actual cloth drape
+is the alternative. No minor loft-curve churn. The retired H21-4 hood is
+silhouette/material reference only; body/clothing/hands outside the declared
+whole-hood region remain protected.
 Fresh actual Hunyuan2.1 buzz-bust generation is complete but its appearance
 remains unaccepted pending actual renders. No rig or gameplay gate is passed.
 

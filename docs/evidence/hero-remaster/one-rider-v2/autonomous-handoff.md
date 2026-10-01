@@ -195,3 +195,10 @@ fillnotassumed. Freshface6/10 promisingidentitybutgeometryrejected; targeted
 cheekretopology next, preserveUV/PBR/geometryoutsideregion.52actualmatched
 renders/hashessourceunchanged. Freshproductionlow/high byte-identicalclear
 40.083333333s, crash103ticks/restart1and2ms, zeroerrors; no newrigclaim.
+
+Round52: NEWauthoredwholehood trial01 gray form REJECTED: tallflatcape/collar
+withsquarebackblock, no relaxedcowl/folds;614bindingUVtrianglesdegenerate.
+Firstnewlineagefailure1, old15retired unchanged.40386originalsourcebody
+triangles exact UV/material/indices, newweightsunassigned. No bake. Earlier
+mechanismchange chosen: NEWdonor01hood primary, genuineclothdrapedhoodbag
+secondary; no minorloftcurvechurn. Preserveuserbest-sofarbody/clothing.
