@@ -1,0 +1,15 @@
+{
+  "initialDiagnostics": [
+    {
+      "assumption": "Rest difference under2microns",
+      "outcome": "Firstmesh2.7154microns; finalallmeshmax3.0327microns duefloat skin/export. No sourcegeometryfix applied."
+    },
+    {
+      "assumption": "Exportvertices retain perprimitiveindexcounts",
+      "outcome": "Head61099 versus61060 because exportedvertexlayout changes; trianglecounts same. Validateallpositioncorrespondence ratherthan indices."
+    }
+  ],
+  "finalGate": "Every exportedrestskinnedvertex nearest protectedsourceposition afterproperrigidaxis transform within10microns; trianglecounts unchanged. All24AnimationMixersamplesfinite.",
+  "actualSourceGeometryMutation": false,
+  "limits": "CPUdecoder strips textures; runtimefull materialquality/contactchecks open"
+}

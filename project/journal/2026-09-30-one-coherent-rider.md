@@ -828,3 +828,13 @@ Validation: CPU2 bind exits0,19joints/fiveprimitives/four-or-fewer finite
 normalized weights. Parent inspects both actual24frame decoded clips.
 Round78 exact production replay, crash103ticks, restart1/2ms, zeroerrors.
 Limits: Synthetic reach is not played contact; skin/probe unaccepted.
+
+## Round80 — anatomy seeds and moving hand rejection
+
+Finding: Two bounded anatomy seeds reach the finite lean grid with fragile
+margin. Actual native articulation preserves wrists but fails palm wrap
+and introduces overlaps, so switch early to palm-anchored IK.
+Validation: 21924 limbchecks, sourcehashes unchanged; lint/typecheckpass.
+Parent inspects99decoded native frames, rejects distalhold. Actual19skin
+productiondecoder restmax3.033microns/24finiteanimation samples.
+Limits: No played ridingcontact acceptance; new sittingtarget is mockup.

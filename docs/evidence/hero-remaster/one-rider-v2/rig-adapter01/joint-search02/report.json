@@ -1,0 +1,5907 @@
+{
+  "schema": "rockhop.private-new-joint-estimate-search.v1",
+  "status": "Bounded synthetic reach evidence; parent must judge garment joint placement and played skin",
+  "sources": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/contact-adapter01/adapter-metadata.json",
+      "sha256": "067596ae3ff776e1448fce7e5c2ea24655e95b039012608c47785c64369cc24f"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/cuff-runtime-frames.json",
+      "sha256": "fe35843f72eb923017d896802fe5e9f4af3f024cd07e51d6fb778c4b25ef22c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind01/report.json",
+      "sha256": "19d65aaa450e23246278a9b1ec647e0be01f6748ae96a11a11780b384d6142eb"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind01/rider.glb",
+      "sha256": "bb642725914b61bc6bda9090b3071d227508f8adcc87cdd3a610e29aa5d8a18f"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-contact-adapter.mts",
+      "sha256": "c9c12b87abaec035d0a4896914abbca3c17badd017acc29507833278b75675c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-joint-search.mts",
+      "sha256": "e7fe64149e0d11c241a60dabf1ea8e9869a962dabef9e18a0bcd55806f8e544b"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    }
+  ],
+  "sourceHashesAfter": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/contact-adapter01/adapter-metadata.json",
+      "sha256": "067596ae3ff776e1448fce7e5c2ea24655e95b039012608c47785c64369cc24f"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/cuff-runtime-frames.json",
+      "sha256": "fe35843f72eb923017d896802fe5e9f4af3f024cd07e51d6fb778c4b25ef22c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind01/report.json",
+      "sha256": "19d65aaa450e23246278a9b1ec647e0be01f6748ae96a11a11780b384d6142eb"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind01/rider.glb",
+      "sha256": "bb642725914b61bc6bda9090b3071d227508f8adcc87cdd3a610e29aa5d8a18f"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-contact-adapter.mts",
+      "sha256": "c9c12b87abaec035d0a4896914abbca3c17badd017acc29507833278b75675c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-joint-search.mts",
+      "sha256": "e7fe64149e0d11c241a60dabf1ea8e9869a962dabef9e18a0bcd55806f8e544b"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    }
+  ],
+  "sourcesUnchanged": true,
+  "bodyBind01Observed": {
+    "sha256": "bb642725914b61bc6bda9090b3071d227508f8adcc87cdd3a610e29aa5d8a18f",
+    "bones": [
+      {
+        "name": "pelvis",
+        "parent": "NEW_rider_measured-wrist19",
+        "fileWorldPosition": [
+          0.6349999909766849,
+          0.8799999952316284,
+          -5.571037016710793e-9
+        ],
+        "worldQuaternion": [
+          0,
+          0.7071066498756364,
+          0,
+          0.7071069124974343
+        ],
+        "localPosition": [
+          -7.105427357601002e-15,
+          0.8799999952316284,
+          -0.014999985694885254
+        ]
+      },
+      {
+        "name": "spine",
+        "parent": "pelvis",
+        "fileWorldPosition": [
+          0.6349999909766844,
+          1.0399999618530273,
+          -5.571044122138113e-9
+        ],
+        "worldQuaternion": [
+          -0.008836763824021486,
+          0.7070514309092237,
+          0.008836759937458723,
+          0.7070516935256271
+        ],
+        "localPosition": [
+          7.105427357601002e-15,
+          0.15999996662139893,
+          -5.551115123125783e-16
+        ]
+      },
+      {
+        "name": "chest",
+        "parent": "spine",
+        "fileWorldPosition": [
+          0.6299999926619166,
+          1.2400000983049568,
+          -7.428060038168498e-9
+        ],
+        "worldQuaternion": [
+          1.7117112703659037e-9,
+          0.7071066498756363,
+          3.9431392410797744e-10,
+          0.7071069124974343
+        ],
+        "localPosition": [
+          0,
+          0.2000626027584076,
+          3.7252894102834944e-9
+        ]
+      },
+      {
+        "name": "neck",
+        "parent": "chest",
+        "fileWorldPosition": [
+          0.6300000519877443,
+          1.490000128091578,
+          -7.428052215214042e-9
+        ],
+        "worldQuaternion": [
+          1.7117112703659033e-9,
+          0.7071066498756413,
+          3.94313924108017e-10,
+          0.7071069124974293
+        ],
+        "localPosition": [
+          1.4210854715202004e-14,
+          0.25,
+          5.960464477539063e-8
+        ]
+      },
+      {
+        "name": "head",
+        "parent": "neck",
+        "fileWorldPosition": [
+          0.6300000519264027,
+          1.5450000756360356,
+          -7.428052237996509e-9
+        ],
+        "worldQuaternion": [
+          1.7117112703658907e-9,
+          0.7071066498756413,
+          3.943139241080295e-10,
+          0.7071069124974293
+        ],
+        "localPosition": [
+          0,
+          0.0549999475479126,
+          -7.771561172376096e-16
+        ]
+      },
+      {
+        "name": "shoulder.L",
+        "parent": "chest",
+        "fileWorldPosition": [
+          0.6299999801370468,
+          1.3800001006803484,
+          0.06999999047396827
+        ],
+        "worldQuaternion": [
+          -1.2959918722282772e-7,
+          0.7071067811865354,
+          0.7071067811865354,
+          1.30916584960178e-7
+        ],
+        "localPosition": [
+          -0.07000000029802322,
+          0.13999998569488525,
+          1.3629500195122546e-8
+        ]
+      },
+      {
+        "name": "upperArm.L",
+        "parent": "shoulderL",
+        "fileWorldPosition": [
+          0.6299999706296374,
+          1.3800000743156409,
+          0.20499998317091714
+        ],
+        "worldQuaternion": [
+          -0.5861784972284525,
+          0.12751112535666131,
+          0.7958546033821151,
+          -0.08216518802003027
+        ],
+        "localPosition": [
+          -4.063203107307345e-8,
+          0.13500000536441803,
+          -2.6364704197590072e-8
+        ]
+      },
+      {
+        "name": "forearm.L",
+        "parent": "upperArmL",
+        "fileWorldPosition": [
+          0.6250000017458713,
+          1.1250001021740685,
+          0.28499991480001824
+        ],
+        "worldQuaternion": [
+          -0.587442563665219,
+          0.054120016331110236,
+          0.7931058124328484,
+          -0.15154345847414719
+        ],
+        "localPosition": [
+          -1.4901161193847656e-8,
+          0.2673012316226959,
+          -5.960464477539063e-8
+        ]
+      },
+      {
+        "name": "hand.L",
+        "parent": "forearmL",
+        "fileWorldPosition": [
+          0.6727723237019766,
+          0.8687811094863848,
+          0.3563069031949523
+        ],
+        "worldQuaternion": [
+          -0.5329100012986627,
+          0.04473394026656285,
+          0.8118752109491147,
+          -0.23423160252421632
+        ],
+        "localPosition": [
+          2.9802322387695312e-8,
+          0.27021294832229614,
+          -7.450580596923828e-9
+        ]
+      },
+      {
+        "name": "shoulder.R",
+        "parent": "chest",
+        "fileWorldPosition": [
+          0.6300000644791529,
+          1.3800001006803482,
+          -0.07000000533006633
+        ],
+        "worldQuaternion": [
+          -0.7071067811865355,
+          -1.317052129548435e-7,
+          -1.3302261069219382e-7,
+          0.7071067811865352
+        ],
+        "localPosition": [
+          0.07000000029802322,
+          0.13999998569488525,
+          4.597514191573282e-8
+        ]
+      },
+      {
+        "name": "upperArm.R",
+        "parent": "shoulderR",
+        "fileWorldPosition": [
+          0.6300000754206935,
+          1.380000074315641,
+          -0.20499999802701468
+        ],
+        "worldQuaternion": [
+          0.7958548210906934,
+          0.08216523537806565,
+          -0.5861782016453898,
+          -0.12751109484025888
+        ],
+        "localPosition": [
+          -3.919790003692469e-8,
+          0.13500000536441803,
+          -2.6364704197590072e-8
+        ]
+      },
+      {
+        "name": "forearm.R",
+        "parent": "upperArmR",
+        "fileWorldPosition": [
+          0.6250001053368985,
+          1.12500005663917,
+          -0.28499998359366707
+        ],
+        "worldQuaternion": [
+          0.7906974823648654,
+          0.1557828828319263,
+          -0.5903775547138058,
+          -0.04453672314760853
+        ],
+        "localPosition": [
+          2.9802322387695312e-8,
+          0.2673012912273407,
+          7.450580596923828e-9
+        ]
+      },
+      {
+        "name": "hand.R",
+        "parent": "forearmR",
+        "fileWorldPosition": [
+          0.677246363571651,
+          0.8695226671791659,
+          -0.3535871879284791
+        ],
+        "worldQuaternion": [
+          0.7976393389719243,
+          0.21264515812435306,
+          -0.5640154417196386,
+          -0.020978462828329995
+        ],
+        "localPosition": [
+          -4.470348358154297e-8,
+          0.26963406801223755,
+          -2.2351741790771484e-8
+        ]
+      },
+      {
+        "name": "thigh.L",
+        "parent": "pelvis",
+        "fileWorldPosition": [
+          0.634999912818951,
+          0.8999999761581421,
+          0.10499998755669321
+        ],
+        "worldQuaternion": [
+          -0.6693710653755447,
+          0.02443189689688075,
+          0.7410228898302783,
+          -0.047228548140646004
+        ],
+        "localPosition": [
+          -0.10499999672174454,
+          0.019999980926513672,
+          -3.916039048590392e-8
+        ]
+      },
+      {
+        "name": "shin.L",
+        "parent": "thighL",
+        "fileWorldPosition": [
+          0.6499995865419,
+          0.4999998868651924,
+          0.14500058312290154
+        ],
+        "worldQuaternion": [
+          -0.6744568202203978,
+          0.0724149083945964,
+          0.7346529292671109,
+          0.012210691891376444
+        ],
+        "localPosition": [
+          1.4901161193847656e-8,
+          0.40227484703063965,
+          -1.0989606380462646e-7
+        ]
+      },
+      {
+        "name": "foot.L",
+        "parent": "shinL",
+        "fileWorldPosition": [
+          0.604998975304948,
+          0.11499994433297239,
+          0.18000055008126598
+        ],
+        "worldQuaternion": [
+          0.5811920989711097,
+          0.4027614974472593,
+          -0.5811868889722495,
+          0.40276658587218256
+        ],
+        "localPosition": [
+          -3.725290298461914e-9,
+          0.38919779658317566,
+          4.7497451305389404e-8
+        ]
+      },
+      {
+        "name": "thigh.R",
+        "parent": "pelvis",
+        "fileWorldPosition": [
+          0.6350000095297762,
+          0.8999999761581421,
+          -0.10499999869878938
+        ],
+        "worldQuaternion": [
+          0.7410231384368554,
+          0.04722855721472889,
+          -0.6693707901571461,
+          -0.02443187935604184
+        ],
+        "localPosition": [
+          0.10499999672174454,
+          0.019999980926513672,
+          -2.0444254289486707e-8
+        ]
+      },
+      {
+        "name": "shin.R",
+        "parent": "thighR",
+        "fileWorldPosition": [
+          0.6499997131506365,
+          0.5000000073889153,
+          -0.14500058941819452
+        ],
+        "worldQuaternion": [
+          0.7346531809350273,
+          -0.012210671622572614,
+          -0.6744565450666625,
+          -0.07241492129907752
+        ],
+        "localPosition": [
+          3.725290298461914e-9,
+          0.4022747278213501,
+          -1.126900315284729e-7
+        ]
+      },
+      {
+        "name": "foot.R",
+        "parent": "shinR",
+        "fileWorldPosition": [
+          0.6049991665217086,
+          0.1150000553868723,
+          -0.18000060278587326
+        ],
+        "worldQuaternion": [
+          -0.581187155009767,
+          -0.40276638228166495,
+          0.5811919137318333,
+          -0.4027615965930928
+        ],
+        "localPosition": [
+          1.862645149230957e-8,
+          0.38919782638549805,
+          9.313225746154785e-10
+        ]
+      }
+    ],
+    "actualBindLengths": [
+      {
+        "side": "L",
+        "upperArm": 0.2673012804714974,
+        "forearm": 0.27021297813562617,
+        "thigh": 0.40227491755242956,
+        "shin": 0.389197903962237
+      },
+      {
+        "side": "R",
+        "upperArm": 0.267301340076147,
+        "forearm": 0.26963414587788453,
+        "thigh": 0.40227479834311947,
+        "shin": 0.38919791003320586
+      }
+    ],
+    "actualBindLandmarkChecks": [
+      {
+        "side": "R",
+        "maximumWristWorldErrorM": 2.403906980770751e-7,
+        "decodedSourceWristAxleFrame": [
+          0.027246363571651,
+          0.8695226671791659,
+          -0.3535871879284791
+        ]
+      },
+      {
+        "side": "L",
+        "maximumWristWorldErrorM": 2.1303998903925518e-7,
+        "decodedSourceWristAxleFrame": [
+          0.02277232370197657,
+          0.8687811094863848,
+          0.3563069031949523
+        ]
+      }
+    ],
+    "authoredJointDefinitions": {
+      "pelvis": {
+        "head": [
+          0,
+          0.014999999664723873,
+          0.8799999952316284
+        ],
+        "tail": [
+          0,
+          0.014999999664723873,
+          1.0399999618530273
+        ],
+        "parent": null,
+        "status": "Documented under-clothing estimate"
+      },
+      "spine": {
+        "head": [
+          0,
+          0.014999999664723873,
+          1.0399999618530273
+        ],
+        "tail": [
+          0,
+          0.019999999552965164,
+          1.2400000095367432
+        ],
+        "parent": "pelvis",
+        "status": "Documented under-clothing estimate"
+      },
+      "chest": {
+        "head": [
+          0,
+          0.019999999552965164,
+          1.2400000095367432
+        ],
+        "tail": [
+          0,
+          0.019999999552965164,
+          1.4900000095367432
+        ],
+        "parent": "spine",
+        "status": "Documented under-clothing estimate"
+      },
+      "neck": {
+        "head": [
+          0,
+          0.019999999552965164,
+          1.4900000095367432
+        ],
+        "tail": [
+          0,
+          0.019999999552965164,
+          1.5449999570846558
+        ],
+        "parent": "chest",
+        "status": "Documented under-clothing estimate"
+      },
+      "head": {
+        "head": [
+          0,
+          0.019999999552965164,
+          1.5449999570846558
+        ],
+        "tail": [
+          0,
+          0.019999999552965164,
+          1.7949999570846558
+        ],
+        "parent": "neck",
+        "status": "Documented under-clothing estimate"
+      },
+      "shoulder.L": {
+        "head": [
+          -0.07000000029802322,
+          0.019999999552965164,
+          1.3799999952316284
+        ],
+        "tail": [
+          -0.20499999821186066,
+          0.019999999552965164,
+          1.3799999952316284
+        ],
+        "parent": "chest",
+        "status": "Documented under-clothing estimate"
+      },
+      "upperArm.L": {
+        "head": [
+          -0.20499999821186066,
+          0.019999999552965164,
+          1.3799999952316284
+        ],
+        "tail": [
+          -0.2849999964237213,
+          0.02500000037252903,
+          1.125
+        ],
+        "parent": "shoulder.L",
+        "status": "Documented under-clothing estimate"
+      },
+      "forearm.L": {
+        "head": [
+          -0.2849999964237213,
+          0.02500000037252903,
+          1.125
+        ],
+        "tail": [
+          -0.3563070595264435,
+          -0.02277236431837082,
+          0.8687809705734253
+        ],
+        "parent": "upperArm.L",
+        "status": "Documented under-clothing estimate"
+      },
+      "hand.L": {
+        "head": [
+          -0.3563070595264435,
+          -0.02277236431837082,
+          0.8687809705734253
+        ],
+        "tail": [
+          -0.3879428505897522,
+          -0.05542607605457306,
+          0.7817841172218323
+        ],
+        "parent": "forearm.L",
+        "status": "Measured native wrist/palm"
+      },
+      "thigh.L": {
+        "head": [
+          -0.10499999672174454,
+          0.014999999664723873,
+          0.8999999761581421
+        ],
+        "tail": [
+          -0.14499999582767487,
+          0,
+          0.5
+        ],
+        "parent": "pelvis",
+        "status": "Documented under-clothing estimate"
+      },
+      "shin.L": {
+        "head": [
+          -0.14499999582767487,
+          0,
+          0.5
+        ],
+        "tail": [
+          -0.18000000715255737,
+          0.04500000178813934,
+          0.11500000208616257
+        ],
+        "parent": "thigh.L",
+        "status": "Documented under-clothing estimate"
+      },
+      "foot.L": {
+        "head": [
+          -0.18000000715255737,
+          0.04500000178813934,
+          0.11500000208616257
+        ],
+        "tail": [
+          -0.18000000715255737,
+          -0.11500000208616257,
+          0.054999999701976776
+        ],
+        "parent": "shin.L",
+        "status": "Documented under-clothing estimate"
+      },
+      "shoulder.R": {
+        "head": [
+          0.07000000029802322,
+          0.019999999552965164,
+          1.3799999952316284
+        ],
+        "tail": [
+          0.20499999821186066,
+          0.019999999552965164,
+          1.3799999952316284
+        ],
+        "parent": "chest",
+        "status": "Documented under-clothing estimate"
+      },
+      "upperArm.R": {
+        "head": [
+          0.20499999821186066,
+          0.019999999552965164,
+          1.3799999952316284
+        ],
+        "tail": [
+          0.2849999964237213,
+          0.02500000037252903,
+          1.125
+        ],
+        "parent": "shoulder.R",
+        "status": "Documented under-clothing estimate"
+      },
+      "forearm.R": {
+        "head": [
+          0.2849999964237213,
+          0.02500000037252903,
+          1.125
+        ],
+        "tail": [
+          0.35358726978302,
+          -0.02724618837237358,
+          0.8695228099822998
+        ],
+        "parent": "upperArm.R",
+        "status": "Documented under-clothing estimate"
+      },
+      "hand.R": {
+        "head": [
+          0.35358726978302,
+          -0.02724618837237358,
+          0.8695228099822998
+        ],
+        "tail": [
+          0.38041824102401733,
+          -0.05822215974330902,
+          0.780325710773468
+        ],
+        "parent": "forearm.R",
+        "status": "Measured native wrist/palm"
+      },
+      "thigh.R": {
+        "head": [
+          0.10499999672174454,
+          0.014999999664723873,
+          0.8999999761581421
+        ],
+        "tail": [
+          0.14499999582767487,
+          0,
+          0.5
+        ],
+        "parent": "pelvis",
+        "status": "Documented under-clothing estimate"
+      },
+      "shin.R": {
+        "head": [
+          0.14499999582767487,
+          0,
+          0.5
+        ],
+        "tail": [
+          0.18000000715255737,
+          0.04500000178813934,
+          0.11500000208616257
+        ],
+        "parent": "thigh.R",
+        "status": "Documented under-clothing estimate"
+      },
+      "foot.R": {
+        "head": [
+          0.18000000715255737,
+          0.04500000178813934,
+          0.11500000208616257
+        ],
+        "tail": [
+          0.18000000715255737,
+          -0.11500000208616257,
+          0.054999999701976776
+        ],
+        "parent": "shin.R",
+        "status": "Documented under-clothing estimate"
+      }
+    }
+  },
+  "bound": {
+    "shoulderZ": {
+      "min": 1.42,
+      "max": 1.44,
+      "step": 0.0025
+    },
+    "hipZ": {
+      "min": 0.945,
+      "max": 0.96,
+      "step": 0.0025
+    },
+    "pelvisBelowAnatomicalHipM": 0.02,
+    "shoulderHalfM": 0.205,
+    "hipHalfM": 0.105,
+    "shoulderY": 0.02,
+    "hipY": 0.015,
+    "elbow": {
+      "halfX": 0.285,
+      "y": 0.025,
+      "z": 1.145
+    },
+    "knee": {
+      "halfX": 0.145,
+      "y": 0,
+      "z": 0.5
+    },
+    "ankle": {
+      "halfX": 0.18,
+      "y": 0.045,
+      "z": 0.115
+    },
+    "searchAuthority": "Explicit parent authoring estimate bounds; positions hidden by garments are estimates, not measured joints",
+    "finiteGridOnly": true,
+    "profiles": "81 exact shared riderTargetTable lean knots plus six existing synthetic physical test inputs"
+  },
+  "profiles": [
+    {
+      "id": "lean-00",
+      "kind": "shared-lean-knot",
+      "lean": -1,
+      "hips": [
+        -0.66,
+        0.725
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.37228581706383956,
+        "y": 0.7728925016461332,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-01",
+      "kind": "shared-lean-knot",
+      "lean": -0.975,
+      "hips": [
+        -0.6595650000000001,
+        0.72505075
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.37190722254204844,
+        "y": 0.7729243131659782,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-02",
+      "kind": "shared-lean-knot",
+      "lean": -0.95,
+      "hips": [
+        -0.65832,
+        0.725196
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3708235524725695,
+        "y": 0.7730160625082172,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-03",
+      "kind": "shared-lean-knot",
+      "lean": -0.925,
+      "hips": [
+        -0.656355,
+        0.72542525
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.36911294127565036,
+        "y": 0.7731627685338862,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-04",
+      "kind": "shared-lean-knot",
+      "lean": -0.9,
+      "hips": [
+        -0.65376,
+        0.7257279999999999
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3668536457693282,
+        "y": 0.7733594920712725,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-05",
+      "kind": "shared-lean-knot",
+      "lean": -0.875,
+      "hips": [
+        -0.650625,
+        0.72609375
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3641241748462085,
+        "y": 0.7736007209406739,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-06",
+      "kind": "shared-lean-knot",
+      "lean": -0.85,
+      "hips": [
+        -0.6470400000000001,
+        0.7265119999999999
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.36100329557256106,
+        "y": 0.7738801221260683,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-07",
+      "kind": "shared-lean-knot",
+      "lean": -0.825,
+      "hips": [
+        -0.643095,
+        0.72697225
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3575699474620246,
+        "y": 0.7741905888826541,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-08",
+      "kind": "shared-lean-knot",
+      "lean": -0.8,
+      "hips": [
+        -0.63888,
+        0.727464
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3539031176772503,
+        "y": 0.7745244478998401,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-09",
+      "kind": "shared-lean-knot",
+      "lean": -0.775,
+      "hips": [
+        -0.634485,
+        0.72797675
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.350081718677739,
+        "y": 0.7748737131177679,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-10",
+      "kind": "shared-lean-knot",
+      "lean": -0.75,
+      "hips": [
+        -0.63,
+        0.7284999999999999
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.346184490678455,
+        "y": 0.775230318131966,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-11",
+      "kind": "shared-lean-knot",
+      "lean": -0.725,
+      "hips": [
+        -0.625515,
+        0.72902325
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.34228993637916294,
+        "y": 0.7755862969665646,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-12",
+      "kind": "shared-lean-knot",
+      "lean": -0.7,
+      "hips": [
+        -0.62112,
+        0.729536
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.33847628711212924,
+        "y": 0.7759339061248904,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-13",
+      "kind": "shared-lean-knot",
+      "lean": -0.675,
+      "hips": [
+        -0.616905,
+        0.73002775
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.33482149622009877,
+        "y": 0.776265692123316,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-14",
+      "kind": "shared-lean-knot",
+      "lean": -0.65,
+      "hips": [
+        -0.61296,
+        0.730488
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3314032549625232,
+        "y": 0.776574512823482,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-15",
+      "kind": "shared-lean-knot",
+      "lean": -0.625,
+      "hips": [
+        -0.609375,
+        0.73090625
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3282990269879048,
+        "y": 0.7768535213394523,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-16",
+      "kind": "shared-lean-knot",
+      "lean": -0.6,
+      "hips": [
+        -0.60624,
+        0.731272
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.32558609850542186,
+        "y": 0.7770961202295936,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-17",
+      "kind": "shared-lean-knot",
+      "lean": -0.575,
+      "hips": [
+        -0.603645,
+        0.7315747499999999
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3233416423104704,
+        "y": 0.7772958921922776,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-18",
+      "kind": "shared-lean-knot",
+      "lean": -0.55,
+      "hips": [
+        -0.60168,
+        0.731804
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3216427946061656,
+        "y": 0.7774465120960197,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-19",
+      "kind": "shared-lean-knot",
+      "lean": -0.525,
+      "hips": [
+        -0.6004349999999999,
+        0.73194925
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.32056674408664526,
+        "y": 0.7775416441502941,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-20",
+      "kind": "shared-lean-knot",
+      "lean": -0.5,
+      "hips": [
+        -0.6,
+        0.732
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.3201908330219306,
+        "y": 0.7775748275733163,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-21",
+      "kind": "shared-lean-knot",
+      "lean": -0.475,
+      "hips": [
+        -0.598115,
+        0.732
+      ],
+      "torsoRadians": 0.7012951100669714,
+      "physicalCOM": {
+        "x": -0.3189004852792061,
+        "y": 0.7780499535347627,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-22",
+      "kind": "shared-lean-knot",
+      "lean": -0.44999999999999996,
+      "hips": [
+        -0.5927199999999999,
+        0.732
+      ],
+      "torsoRadians": 0.7103490055616922,
+      "physicalCOM": {
+        "x": -0.31521881146301445,
+        "y": 0.779395581161624,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-23",
+      "kind": "shared-lean-knot",
+      "lean": -0.42500000000000004,
+      "hips": [
+        -0.584205,
+        0.732
+      ],
+      "torsoRadians": 0.7246388888123957,
+      "physicalCOM": {
+        "x": -0.30944153559651727,
+        "y": 0.7814768980507687,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-24",
+      "kind": "shared-lean-knot",
+      "lean": -0.4,
+      "hips": [
+        -0.57296,
+        0.732
+      ],
+      "torsoRadians": 0.7435102613495844,
+      "physicalCOM": {
+        "x": -0.30187281070347916,
+        "y": 0.7841466691655383,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-25",
+      "kind": "shared-lean-knot",
+      "lean": -0.375,
+      "hips": [
+        -0.559375,
+        0.732
+      ],
+      "torsoRadians": 0.7663086247037604,
+      "physicalCOM": {
+        "x": -0.29281761397776473,
+        "y": 0.7872536776776609,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-26",
+      "kind": "shared-lean-knot",
+      "lean": -0.35,
+      "hips": [
+        -0.54384,
+        0.732
+      ],
+      "torsoRadians": 0.7923794804054255,
+      "physicalCOM": {
+        "x": -0.28257612148868133,
+        "y": 0.7906494615565369,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-27",
+      "kind": "shared-lean-knot",
+      "lean": -0.32499999999999996,
+      "hips": [
+        -0.526745,
+        0.732
+      ],
+      "torsoRadians": 0.8210683299850825,
+      "physicalCOM": {
+        "x": -0.27144001035025556,
+        "y": 0.7941935835395504,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-28",
+      "kind": "shared-lean-knot",
+      "lean": -0.30000000000000004,
+      "hips": [
+        -0.50848,
+        0.732
+      ],
+      "torsoRadians": 0.8517206749732327,
+      "physicalCOM": {
+        "x": -0.25969030433864093,
+        "y": 0.7977578034280938,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-29",
+      "kind": "shared-lean-knot",
+      "lean": -0.275,
+      "hips": [
+        -0.489435,
+        0.732
+      ],
+      "torsoRadians": 0.8836820169003788,
+      "physicalCOM": {
+        "x": -0.24759630533577695,
+        "y": 0.8012294278039394,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-30",
+      "kind": "shared-lean-knot",
+      "lean": -0.25,
+      "hips": [
+        -0.47,
+        0.732
+      ],
+      "torsoRadians": 0.9162978572970231,
+      "physicalCOM": {
+        "x": -0.23541522440526022,
+        "y": 0.8045139327648254,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-31",
+      "kind": "shared-lean-knot",
+      "lean": -0.22499999999999998,
+      "hips": [
+        -0.450565,
+        0.732
+      ],
+      "torsoRadians": 0.9489136976936672,
+      "physicalCOM": {
+        "x": -0.22339225170960975,
+        "y": 0.8075367969720935,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-32",
+      "kind": "shared-lean-knot",
+      "lean": -0.19999999999999996,
+      "hips": [
+        -0.43152,
+        0.732
+      ],
+      "torsoRadians": 0.9808750396208132,
+      "physicalCOM": {
+        "x": -0.21185963917772035,
+        "y": 0.8102690778607424,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-33",
+      "kind": "shared-lean-knot",
+      "lean": -0.17500000000000004,
+      "hips": [
+        -0.41325500000000004,
+        0.732
+      ],
+      "torsoRadians": 1.0115273846089636,
+      "physicalCOM": {
+        "x": -0.2009884105409887,
+        "y": 0.8126586129947493,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-34",
+      "kind": "shared-lean-knot",
+      "lean": -0.15000000000000002,
+      "hips": [
+        -0.39616000000000007,
+        0.732
+      ],
+      "torsoRadians": 1.0402162341886203,
+      "physicalCOM": {
+        "x": -0.19093593273931192,
+        "y": 0.8146778477512067,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-35",
+      "kind": "shared-lean-knot",
+      "lean": -0.125,
+      "hips": [
+        -0.380625,
+        0.732
+      ],
+      "torsoRadians": 1.0662870898902856,
+      "physicalCOM": {
+        "x": -0.1819025638568626,
+        "y": 0.8163306493468308,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-36",
+      "kind": "shared-lean-knot",
+      "lean": -0.09999999999999998,
+      "hips": [
+        -0.36704,
+        0.732
+      ],
+      "torsoRadians": 1.0890854532444618,
+      "physicalCOM": {
+        "x": -0.17408206562288447,
+        "y": 0.8176340015787888,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-37",
+      "kind": "shared-lean-knot",
+      "lean": -0.07499999999999996,
+      "hips": [
+        -0.355795,
+        0.732
+      ],
+      "torsoRadians": 1.1079568257816503,
+      "physicalCOM": {
+        "x": -0.1676641677162537,
+        "y": 0.8186128611940915,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-38",
+      "kind": "shared-lean-knot",
+      "lean": -0.050000000000000044,
+      "hips": [
+        -0.34728000000000003,
+        0.732
+      ],
+      "torsoRadians": 1.1222467090323538,
+      "physicalCOM": {
+        "x": -0.16283774969576892,
+        "y": 0.8192939830141883,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-39",
+      "kind": "shared-lean-knot",
+      "lean": -0.025000000000000022,
+      "hips": [
+        -0.341885,
+        0.732
+      ],
+      "torsoRadians": 1.1313006045270744,
+      "physicalCOM": {
+        "x": -0.1597946526514299,
+        "y": 0.819698797928322,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-40",
+      "kind": "shared-lean-knot",
+      "lean": 0,
+      "hips": [
+        -0.34,
+        0.732
+      ],
+      "torsoRadians": 1.1344640137963142,
+      "physicalCOM": {
+        "x": -0.1587341171195792,
+        "y": 0.8198353592885336,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-41",
+      "kind": "shared-lean-knot",
+      "lean": 0.02499999999999991,
+      "hips": [
+        -0.33881944444444445,
+        0.7328460648148148
+      ],
+      "torsoRadians": 1.1327469653423845,
+      "physicalCOM": {
+        "x": -0.15755747439691306,
+        "y": 0.8202453816226432,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-42",
+      "kind": "shared-lean-knot",
+      "lean": 0.050000000000000044,
+      "hips": [
+        -0.33555555555555555,
+        0.7351851851851852
+      ],
+      "torsoRadians": 1.1279998313815205,
+      "physicalCOM": {
+        "x": -0.1543065651775967,
+        "y": 0.8213815573432309,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-43",
+      "kind": "shared-lean-knot",
+      "lean": 0.07499999999999996,
+      "hips": [
+        -0.33062500000000006,
+        0.73871875
+      ],
+      "torsoRadians": 1.1208286290151084,
+      "physicalCOM": {
+        "x": -0.14940184178349486,
+        "y": 0.8231046062302021,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-44",
+      "kind": "shared-lean-knot",
+      "lean": 0.10000000000000009,
+      "hips": [
+        -0.3244444444444444,
+        0.7431481481481481
+      ],
+      "torsoRadians": 1.1118393753445357,
+      "physicalCOM": {
+        "x": -0.14326459286883095,
+        "y": 0.8252747721527756,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-45",
+      "kind": "shared-lean-knot",
+      "lean": 0.125,
+      "hips": [
+        -0.3174305555555556,
+        0.7481747685185185
+      ],
+      "torsoRadians": 1.1016380874711893,
+      "physicalCOM": {
+        "x": -0.13631477495395303,
+        "y": 0.8277499251384959,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-46",
+      "kind": "shared-lean-knot",
+      "lean": 0.1499999999999999,
+      "hips": [
+        -0.31000000000000005,
+        0.7535
+      ],
+      "torsoRadians": 1.0908307824964558,
+      "physicalCOM": {
+        "x": -0.12896911019855578,
+        "y": 0.8303849698272341,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-47",
+      "kind": "shared-lean-knot",
+      "lean": 0.17500000000000004,
+      "hips": [
+        -0.30256944444444445,
+        0.7588252314814815
+      ],
+      "torsoRadians": 1.0800234775217226,
+      "physicalCOM": {
+        "x": -0.12163995112851599,
+        "y": 0.8330319972509563,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-48",
+      "kind": "shared-lean-knot",
+      "lean": 0.19999999999999996,
+      "hips": [
+        -0.29555555555555557,
+        0.7638518518518519
+      ],
+      "torsoRadians": 1.069822189648376,
+      "physicalCOM": {
+        "x": -0.11473529578901222,
+        "y": 0.8355407370711357,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-49",
+      "kind": "shared-lean-knot",
+      "lean": 0.2250000000000001,
+      "hips": [
+        -0.289375,
+        0.76828125
+      ],
+      "torsoRadians": 1.0608329359778033,
+      "physicalCOM": {
+        "x": -0.10866002958202912,
+        "y": 0.8377591029006517,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-50",
+      "kind": "shared-lean-knot",
+      "lean": 0.25,
+      "hips": [
+        -0.28444444444444444,
+        0.7718148148148148
+      ],
+      "torsoRadians": 1.0536617336113914,
+      "physicalCOM": {
+        "x": -0.10381802711722009,
+        "y": 0.8395337873909334,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-51",
+      "kind": "shared-lean-knot",
+      "lean": 0.2749999999999999,
+      "hips": [
+        -0.2811805555555556,
+        0.7741539351851852
+      ],
+      "torsoRadians": 1.0489145996505274,
+      "physicalCOM": {
+        "x": -0.10061422807123274,
+        "y": 0.8407109630529327,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-52",
+      "kind": "shared-lean-knot",
+      "lean": 0.30000000000000004,
+      "hips": [
+        -0.28,
+        0.775
+      ],
+      "torsoRadians": 1.0471975511965976,
+      "physicalCOM": {
+        "x": -0.09945557972402046,
+        "y": 0.8411372150178004,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-53",
+      "kind": "shared-lean-knot",
+      "lean": 0.32499999999999996,
+      "hips": [
+        -0.27828125000000004,
+        0.7826484375
+      ],
+      "torsoRadians": 1.0396980895669345,
+      "physicalCOM": {
+        "x": -0.09753685705704804,
+        "y": 0.8463677015389253,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-54",
+      "kind": "shared-lean-knot",
+      "lean": 0.3500000000000001,
+      "hips": [
+        -0.27375,
+        0.8028125000000002
+      ],
+      "torsoRadians": 1.0199267816341862,
+      "physicalCOM": {
+        "x": -0.09274201492917436,
+        "y": 0.8601605938025839,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-55",
+      "kind": "shared-lean-knot",
+      "lean": 0.375,
+      "hips": [
+        -0.26734375,
+        0.8313203125
+      ],
+      "torsoRadians": 0.9919742428327146,
+      "physicalCOM": {
+        "x": -0.08645360686822923,
+        "y": 0.8796928302046445,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-56",
+      "kind": "shared-lean-knot",
+      "lean": 0.3999999999999999,
+      "hips": [
+        -0.26,
+        0.8639999999999999
+      ],
+      "torsoRadians": 0.9599310885968813,
+      "physicalCOM": {
+        "x": -0.07960851874132938,
+        "y": 0.902051663809287,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-57",
+      "kind": "shared-lean-knot",
+      "lean": 0.42500000000000004,
+      "hips": [
+        -0.25265624999999997,
+        0.8966796875
+      ],
+      "torsoRadians": 0.9278879343610478,
+      "physicalCOM": {
+        "x": -0.0735058216393139,
+        "y": 0.9242985971979822,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-58",
+      "kind": "shared-lean-knot",
+      "lean": 0.44999999999999996,
+      "hips": [
+        -0.24625,
+        0.9251874999999999
+      ],
+      "torsoRadians": 0.8999353955595762,
+      "physicalCOM": {
+        "x": -0.06903806161706558,
+        "y": 0.9435421639643335,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-59",
+      "kind": "shared-lean-knot",
+      "lean": 0.4750000000000001,
+      "hips": [
+        -0.24171874999999998,
+        0.9453515625
+      ],
+      "torsoRadians": 0.8801640876268279,
+      "physicalCOM": {
+        "x": -0.06671441541883974,
+        "y": 0.9570414767258342,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-60",
+      "kind": "shared-lean-knot",
+      "lean": 0.5,
+      "hips": [
+        -0.24,
+        0.953
+      ],
+      "torsoRadians": 0.8726646259971648,
+      "physicalCOM": {
+        "x": -0.06612963190771719,
+        "y": 0.9621278510856363,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-61",
+      "kind": "shared-lean-knot",
+      "lean": 0.5249999999999999,
+      "hips": [
+        -0.239275,
+        0.9531522499999999
+      ],
+      "torsoRadians": 0.8724115532556256,
+      "physicalCOM": {
+        "x": -0.06554366362835809,
+        "y": 0.9622045755149023,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-62",
+      "kind": "shared-lean-knot",
+      "lean": 0.55,
+      "hips": [
+        -0.2372,
+        0.953588
+      ],
+      "torsoRadians": 0.8716872416160479,
+      "physicalCOM": {
+        "x": -0.06386732218142553,
+        "y": 0.9624245179994747,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-63",
+      "kind": "shared-lean-knot",
+      "lean": 0.575,
+      "hips": [
+        -0.233925,
+        0.95427575
+      ],
+      "torsoRadians": 0.8705440509559917,
+      "physicalCOM": {
+        "x": -0.06122380291318724,
+        "y": 0.9627727143347615,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-64",
+      "kind": "shared-lean-knot",
+      "lean": 0.6000000000000001,
+      "hips": [
+        -0.22959999999999997,
+        0.9551839999999999
+      ],
+      "torsoRadians": 0.8690343411530165,
+      "physicalCOM": {
+        "x": -0.05773712763775628,
+        "y": 0.9632345249206222,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-65",
+      "kind": "shared-lean-knot",
+      "lean": 0.625,
+      "hips": [
+        -0.224375,
+        0.95628125
+      ],
+      "torsoRadians": 0.8672104720846824,
+      "physicalCOM": {
+        "x": -0.05353180259722843,
+        "y": 0.9637954323883162,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-66",
+      "kind": "shared-lean-knot",
+      "lean": 0.6499999999999999,
+      "hips": [
+        -0.2184,
+        0.9575359999999999
+      ],
+      "torsoRadians": 0.8651248036285493,
+      "physicalCOM": {
+        "x": -0.04873250326629514,
+        "y": 0.964440874883346,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-67",
+      "kind": "shared-lean-knot",
+      "lean": 0.675,
+      "hips": [
+        -0.21182499999999999,
+        0.95891675
+      ],
+      "torsoRadians": 0.8628296956621767,
+      "physicalCOM": {
+        "x": -0.04346377187166542,
+        "y": 0.9651561121731693,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-68",
+      "kind": "shared-lean-knot",
+      "lean": 0.7,
+      "hips": [
+        -0.2048,
+        0.9603919999999999
+      ],
+      "torsoRadians": 0.8603775080631247,
+      "physicalCOM": {
+        "x": -0.03784972303032319,
+        "y": 0.9659261188039443,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-69",
+      "kind": "shared-lean-knot",
+      "lean": 0.7250000000000001,
+      "hips": [
+        -0.19747499999999998,
+        0.96193025
+      ],
+      "torsoRadians": 0.8578206007089529,
+      "physicalCOM": {
+        "x": -0.032013756832449274,
+        "y": 0.9667354982024792,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-70",
+      "kind": "shared-lean-knot",
+      "lean": 0.75,
+      "hips": [
+        -0.19,
+        0.9635
+      ],
+      "torsoRadians": 0.8552113334772214,
+      "physicalCOM": {
+        "x": -0.026078279306992552,
+        "y": 0.9675684130857849,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-71",
+      "kind": "shared-lean-knot",
+      "lean": 0.7749999999999999,
+      "hips": [
+        -0.18252500000000002,
+        0.96506975
+      ],
+      "torsoRadians": 0.8526020662454901,
+      "physicalCOM": {
+        "x": -0.020164430269828563,
+        "y": 0.9684085297753673,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-72",
+      "kind": "shared-lean-knot",
+      "lean": 0.8,
+      "hips": [
+        -0.1752,
+        0.966608
+      ],
+      "torsoRadians": 0.8500451588913183,
+      "physicalCOM": {
+        "x": -0.014391820633349693,
+        "y": 0.9692389763543781,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-73",
+      "kind": "shared-lean-knot",
+      "lean": 0.825,
+      "hips": [
+        -0.16817500000000002,
+        0.96808325
+      ],
+      "torsoRadians": 0.8475929712922662,
+      "physicalCOM": {
+        "x": -0.008878287615811567,
+        "y": 0.9700423168789019,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-74",
+      "kind": "shared-lean-knot",
+      "lean": 0.8500000000000001,
+      "hips": [
+        -0.16159999999999997,
+        0.969464
+      ],
+      "torsoRadians": 0.8452978633258936,
+      "physicalCOM": {
+        "x": -0.0037396888942011763,
+        "y": 0.9708005462355347,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-75",
+      "kind": "shared-lean-knot",
+      "lean": 0.875,
+      "hips": [
+        -0.155625,
+        0.97071875
+      ],
+      "torsoRadians": 0.8432121948697604,
+      "physicalCOM": {
+        "x": 0.0009102231525392156,
+        "y": 0.9714951129887274,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-76",
+      "kind": "shared-lean-knot",
+      "lean": 0.8999999999999999,
+      "hips": [
+        -0.15040000000000003,
+        0.971816
+      ],
+      "torsoRadians": 0.8413883258014263,
+      "physicalCOM": {
+        "x": 0.004959779249312877,
+        "y": 0.972106980690949,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-77",
+      "kind": "shared-lean-knot",
+      "lean": 0.925,
+      "hips": [
+        -0.146075,
+        0.97272425
+      ],
+      "torsoRadians": 0.8398786159984512,
+      "physicalCOM": {
+        "x": 0.008299127776320567,
+        "y": 0.9726167409693955,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-78",
+      "kind": "shared-lean-knot",
+      "lean": 0.95,
+      "hips": [
+        -0.1428,
+        0.9734119999999999
+      ],
+      "torsoRadians": 0.838735425338395,
+      "physicalCOM": {
+        "x": 0.010819617119566576,
+        "y": 0.9730047925084837,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-79",
+      "kind": "shared-lean-knot",
+      "lean": 0.9750000000000001,
+      "hips": [
+        -0.14072500000000002,
+        0.97384775
+      ],
+      "torsoRadians": 0.8380111136988173,
+      "physicalCOM": {
+        "x": 0.012412741224273886,
+        "y": 0.9732515959866852,
+        "z": 0
+      }
+    },
+    {
+      "id": "lean-80",
+      "kind": "shared-lean-knot",
+      "lean": 1,
+      "hips": [
+        -0.14,
+        0.974
+      ],
+      "torsoRadians": 0.8377580409572781,
+      "physicalCOM": {
+        "x": 0.012968651236083827,
+        "y": 0.9733380033155353,
+        "z": 0
+      }
+    },
+    {
+      "id": "diagnostic-0",
+      "kind": "existing-physical-test-input",
+      "lean": null,
+      "hips": [
+        -0.57,
+        0.6
+      ],
+      "torsoRadians": 0.9599310885968813,
+      "physicalCOM": {
+        "x": -0.3205071858029386,
+        "y": 0.7170528193685912,
+        "z": 0
+      }
+    },
+    {
+      "id": "diagnostic-1",
+      "kind": "existing-physical-test-input",
+      "lean": null,
+      "hips": [
+        -0.28,
+        0.85
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.06162396077809445,
+        "y": 0.858949576432047,
+        "z": 0
+      }
+    },
+    {
+      "id": "diagnostic-2",
+      "kind": "existing-physical-test-input",
+      "lean": null,
+      "hips": [
+        -0.22,
+        0.9
+      ],
+      "torsoRadians": 0.4537856055185257,
+      "physicalCOM": {
+        "x": 0.0071941917598438605,
+        "y": 0.8578009099135926,
+        "z": 0
+      }
+    },
+    {
+      "id": "diagnostic-3",
+      "kind": "existing-physical-test-input",
+      "lean": null,
+      "hips": [
+        -0.38,
+        0.78
+      ],
+      "torsoRadians": 0.4886921905584123,
+      "physicalCOM": {
+        "x": -0.1106324408356966,
+        "y": 0.7730789862195091,
+        "z": 0
+      }
+    },
+    {
+      "id": "diagnostic-4",
+      "kind": "existing-physical-test-input",
+      "lean": null,
+      "hips": [
+        -0.14,
+        0.96
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": 0.03301565400115406,
+        "y": 0.9442279585046582,
+        "z": 0
+      }
+    },
+    {
+      "id": "diagnostic-5",
+      "kind": "existing-physical-test-input",
+      "lean": null,
+      "hips": [
+        -0.4,
+        0.7
+      ],
+      "torsoRadians": 0.6981317007977318,
+      "physicalCOM": {
+        "x": -0.14548872010333957,
+        "y": 0.7471715566682728,
+        "z": 0
+      }
+    }
+  ],
+  "contactsUnchanged": true,
+  "physicalPoseAndCOMUnchanged": true,
+  "candidateCount": 63,
+  "frameCountPerCandidate": 87,
+  "limbsPerFrame": 4,
+  "summary": {
+    "sampledAllProfilesFeasibleCount": 2,
+    "sampledAllProfilesAdditiveSafeCount": 0,
+    "lean81KnotsFeasibleCount": 2,
+    "bestMathematicalShortlist": [
+      {
+        "id": "candidate-57",
+        "sourceShoulderZ": 1.44,
+        "sourceAnatomicalHipZ": 0.945,
+        "sourcePelvisHeadZ": 0.9249999999999999,
+        "shoulderToHipM": 0.495,
+        "sourceElbowZ": 1.145,
+        "sourceKneeZ": 0.5,
+        "sourceAnkleZ": 0.115,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2886547418556959,
+            "thigh": 0.44704585894514215,
+            "shin": 0.38919789310837744
+          },
+          {
+            "side": "L",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2892470358503849,
+            "thigh": 0.44704585894514215,
+            "shin": 0.38919789310837744
+          }
+        ],
+        "worstShortfallM": 0,
+        "minimumTriangleMarginM": 0.0018362051301331617,
+        "minimumAdditiveReachMarginM": -0.0018841757106938806,
+        "allSampledProfilesReachable": true,
+        "allSampledProfilesAdditiveSafe": false,
+        "leanOnly": {
+          "worstShortfallM": 0,
+          "minimumTriangleMarginM": 0.0018362051301331617,
+          "minimumAdditiveReachMarginM": -0.0018841757106938806,
+          "all81KnotsReachable": true,
+          "all81KnotsAdditiveSafe": false
+        },
+        "worstRecord": null,
+        "minimumMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": 0.0018362051301331617
+        },
+        "minimumAdditiveMarginRecord": {
+          "profile": "lean-80",
+          "side": "L",
+          "limb": "foot",
+          "marginM": -0.0018841757106938806
+        }
+      },
+      {
+        "id": "candidate-58",
+        "sourceShoulderZ": 1.44,
+        "sourceAnatomicalHipZ": 0.9475,
+        "sourcePelvisHeadZ": 0.9275,
+        "shoulderToHipM": 0.49249999999999994,
+        "sourceElbowZ": 1.145,
+        "sourceKneeZ": 0.5,
+        "sourceAnkleZ": 0.115,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2886547418556959,
+            "thigh": 0.44953448143607405,
+            "shin": 0.38919789310837744
+          },
+          {
+            "side": "L",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2892470358503849,
+            "thigh": 0.44953448143607405,
+            "shin": 0.38919789310837744
+          }
+        ],
+        "worstShortfallM": 0,
+        "minimumTriangleMarginM": 0.0006886609220653206,
+        "minimumAdditiveReachMarginM": -0.002283092423976396,
+        "allSampledProfilesReachable": true,
+        "allSampledProfilesAdditiveSafe": false,
+        "leanOnly": {
+          "worstShortfallM": 0,
+          "minimumTriangleMarginM": 0.0006886609220653206,
+          "minimumAdditiveReachMarginM": -0.002283092423976396,
+          "all81KnotsReachable": true,
+          "all81KnotsAdditiveSafe": false
+        },
+        "worstRecord": null,
+        "minimumMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": 0.0006886609220653206
+        },
+        "minimumAdditiveMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.002283092423976396
+        }
+      },
+      {
+        "id": "candidate-59",
+        "sourceShoulderZ": 1.44,
+        "sourceAnatomicalHipZ": 0.95,
+        "sourcePelvisHeadZ": 0.9299999999999999,
+        "shoulderToHipM": 0.49,
+        "sourceElbowZ": 1.145,
+        "sourceKneeZ": 0.5,
+        "sourceAnkleZ": 0.115,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2886547418556959,
+            "thigh": 0.4520232294915826,
+            "shin": 0.38919789310837744
+          },
+          {
+            "side": "L",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2892470358503849,
+            "thigh": 0.4520232294915826,
+            "shin": 0.38919789310837744
+          }
+        ],
+        "worstShortfallM": 0.0004671768782592567,
+        "minimumTriangleMarginM": -0.0004671768782592567,
+        "minimumAdditiveReachMarginM": -0.0034389302243009734,
+        "allSampledProfilesReachable": false,
+        "allSampledProfilesAdditiveSafe": false,
+        "leanOnly": {
+          "worstShortfallM": 0.0004671768782592567,
+          "minimumTriangleMarginM": -0.0004671768782592567,
+          "minimumAdditiveReachMarginM": -0.0034389302243009734,
+          "all81KnotsReachable": false,
+          "all81KnotsAdditiveSafe": false
+        },
+        "worstRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "shortfallM": 0.0004671768782592567
+        },
+        "minimumMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.0004671768782592567
+        },
+        "minimumAdditiveMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.0034389302243009734
+        }
+      },
+      {
+        "id": "candidate-60",
+        "sourceShoulderZ": 1.44,
+        "sourceAnatomicalHipZ": 0.9525,
+        "sourcePelvisHeadZ": 0.9325,
+        "shoulderToHipM": 0.48749999999999993,
+        "sourceElbowZ": 1.145,
+        "sourceKneeZ": 0.5,
+        "sourceAnkleZ": 0.115,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2886547418556959,
+            "thigh": 0.45451210104902595,
+            "shin": 0.38919789310837744
+          },
+          {
+            "side": "L",
+            "upperArm": 0.3056959273526554,
+            "forearm": 0.2892470358503849,
+            "thigh": 0.45451210104902595,
+            "shin": 0.38919789310837744
+          }
+        ],
+        "worstShortfallM": 0.0016312600174627212,
+        "minimumTriangleMarginM": -0.0016312600174627212,
+        "minimumAdditiveReachMarginM": -0.004603013363504438,
+        "allSampledProfilesReachable": false,
+        "allSampledProfilesAdditiveSafe": false,
+        "leanOnly": {
+          "worstShortfallM": 0.0016312600174627212,
+          "minimumTriangleMarginM": -0.0016312600174627212,
+          "minimumAdditiveReachMarginM": -0.004603013363504438,
+          "all81KnotsReachable": false,
+          "all81KnotsAdditiveSafe": false
+        },
+        "worstRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "shortfallM": 0.0016312600174627212
+        },
+        "minimumMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.0016312600174627212
+        },
+        "minimumAdditiveMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.004603013363504438
+        }
+      },
+      {
+        "id": "candidate-50",
+        "sourceShoulderZ": 1.4375,
+        "sourceAnatomicalHipZ": 0.945,
+        "sourcePelvisHeadZ": 0.9249999999999999,
+        "shoulderToHipM": 0.49250000000000005,
+        "sourceElbowZ": 1.145,
+        "sourceKneeZ": 0.5,
+        "sourceAnkleZ": 0.115,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.30328410772739145,
+            "forearm": 0.2886547418556959,
+            "thigh": 0.44704585894514215,
+            "shin": 0.38919789310837744
+          },
+          {
+            "side": "L",
+            "upperArm": 0.30328410772739145,
+            "forearm": 0.2892470358503849,
+            "thigh": 0.44704585894514215,
+            "shin": 0.38919789310837744
+          }
+        ],
+        "worstShortfallM": 0.0017231587031987239,
+        "minimumTriangleMarginM": -0.0017231587031987239,
+        "minimumAdditiveReachMarginM": -0.004682852951114147,
+        "allSampledProfilesReachable": false,
+        "allSampledProfilesAdditiveSafe": false,
+        "leanOnly": {
+          "worstShortfallM": 0.0017231587031987239,
+          "minimumTriangleMarginM": -0.0017231587031987239,
+          "minimumAdditiveReachMarginM": -0.004682852951114147,
+          "all81KnotsReachable": false,
+          "all81KnotsAdditiveSafe": false
+        },
+        "worstRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "shortfallM": 0.0017231587031987239
+        },
+        "minimumMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.0017231587031987239
+        },
+        "minimumAdditiveMarginRecord": {
+          "profile": "lean-00",
+          "side": "R",
+          "limb": "hand",
+          "marginM": -0.004682852951114147
+        }
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "id": "candidate-01",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.475,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.0268258852186386,
+      "minimumTriangleMarginM": -0.0268258852186386,
+      "minimumAdditiveReachMarginM": -0.029701377486657354,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.0268258852186386,
+        "minimumTriangleMarginM": -0.0268258852186386,
+        "minimumAdditiveReachMarginM": -0.029701377486657354,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.0268258852186386
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0268258852186386
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.029701377486657354
+      }
+    },
+    {
+      "id": "candidate-02",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.4724999999999999,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.028038429373388185,
+      "minimumTriangleMarginM": -0.028038429373388185,
+      "minimumAdditiveReachMarginM": -0.03091392164140694,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.028038429373388185,
+        "minimumTriangleMarginM": -0.028038429373388185,
+        "minimumAdditiveReachMarginM": -0.03091392164140694,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.028038429373388185
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.028038429373388185
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03091392164140694
+      }
+    },
+    {
+      "id": "candidate-03",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.47,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.029258882372232176,
+      "minimumTriangleMarginM": -0.029258882372232176,
+      "minimumAdditiveReachMarginM": -0.03213437464025093,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.029258882372232176,
+        "minimumTriangleMarginM": -0.029258882372232176,
+        "minimumAdditiveReachMarginM": -0.03213437464025093,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.029258882372232176
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.029258882372232176
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03213437464025093
+      }
+    },
+    {
+      "id": "candidate-04",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.4674999999999999,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.030487196398456207,
+      "minimumTriangleMarginM": -0.030487196398456207,
+      "minimumAdditiveReachMarginM": -0.03336268866647496,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.030487196398456207,
+        "minimumTriangleMarginM": -0.030487196398456207,
+        "minimumAdditiveReachMarginM": -0.03336268866647496,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.030487196398456207
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.030487196398456207
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03336268866647496
+      }
+    },
+    {
+      "id": "candidate-05",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.46499999999999997,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.031723323715755036,
+      "minimumTriangleMarginM": -0.031723323715755036,
+      "minimumAdditiveReachMarginM": -0.03459881598377379,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.031723323715755036,
+        "minimumTriangleMarginM": -0.031723323715755036,
+        "minimumAdditiveReachMarginM": -0.03459881598377379,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.031723323715755036
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.031723323715755036
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03459881598377379
+      }
+    },
+    {
+      "id": "candidate-06",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.4624999999999999,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.03296721667357405,
+      "minimumTriangleMarginM": -0.03296721667357405,
+      "minimumAdditiveReachMarginM": -0.035842708941592805,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.03296721667357405,
+        "minimumTriangleMarginM": -0.03296721667357405,
+        "minimumAdditiveReachMarginM": -0.035842708941592805,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.03296721667357405
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03296721667357405
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.035842708941592805
+      }
+    },
+    {
+      "id": "candidate-07",
+      "sourceShoulderZ": 1.42,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.45999999999999996,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.28644371174805,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.034218827712330535,
+      "minimumTriangleMarginM": -0.034218827712330535,
+      "minimumAdditiveReachMarginM": -0.03709431998034929,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.034218827712330535,
+        "minimumTriangleMarginM": -0.034218827712330535,
+        "minimumAdditiveReachMarginM": -0.03709431998034929,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.034218827712330535
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.034218827712330535
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03709431998034929
+      }
+    },
+    {
+      "id": "candidate-08",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.47750000000000015,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02322032810107766,
+      "minimumTriangleMarginM": -0.02322032810107766,
+      "minimumAdditiveReachMarginM": -0.026107825217589253,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02322032810107766,
+        "minimumTriangleMarginM": -0.02322032810107766,
+        "minimumAdditiveReachMarginM": -0.026107825217589253,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02322032810107766
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02322032810107766
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.026107825217589253
+      }
+    },
+    {
+      "id": "candidate-09",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.4750000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.024424915520067425,
+      "minimumTriangleMarginM": -0.024424915520067425,
+      "minimumAdditiveReachMarginM": -0.02731241263657902,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.024424915520067425,
+        "minimumTriangleMarginM": -0.024424915520067425,
+        "minimumAdditiveReachMarginM": -0.02731241263657902,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.024424915520067425
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.024424915520067425
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02731241263657902
+      }
+    },
+    {
+      "id": "candidate-10",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.47250000000000014,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02563745967481701,
+      "minimumTriangleMarginM": -0.02563745967481701,
+      "minimumAdditiveReachMarginM": -0.028524956791328604,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02563745967481701,
+        "minimumTriangleMarginM": -0.02563745967481701,
+        "minimumAdditiveReachMarginM": -0.028524956791328604,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02563745967481701
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02563745967481701
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.028524956791328604
+      }
+    },
+    {
+      "id": "candidate-11",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.4700000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02685791267366111,
+      "minimumTriangleMarginM": -0.02685791267366111,
+      "minimumAdditiveReachMarginM": -0.029745409790172705,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02685791267366111,
+        "minimumTriangleMarginM": -0.02685791267366111,
+        "minimumAdditiveReachMarginM": -0.029745409790172705,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02685791267366111
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02685791267366111
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.029745409790172705
+      }
+    },
+    {
+      "id": "candidate-12",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.46750000000000014,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02808622669988503,
+      "minimumTriangleMarginM": -0.02808622669988503,
+      "minimumAdditiveReachMarginM": -0.030973723816396626,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02808622669988503,
+        "minimumTriangleMarginM": -0.02808622669988503,
+        "minimumAdditiveReachMarginM": -0.030973723816396626,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02808622669988503
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02808622669988503
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.030973723816396626
+      }
+    },
+    {
+      "id": "candidate-13",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.4650000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02932235401718386,
+      "minimumTriangleMarginM": -0.02932235401718386,
+      "minimumAdditiveReachMarginM": -0.032209851133695455,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02932235401718386,
+        "minimumTriangleMarginM": -0.02932235401718386,
+        "minimumAdditiveReachMarginM": -0.032209851133695455,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02932235401718386
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02932235401718386
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.032209851133695455
+      }
+    },
+    {
+      "id": "candidate-14",
+      "sourceShoulderZ": 1.4225,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.46250000000000013,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2888446814466211,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.030566246975002875,
+      "minimumTriangleMarginM": -0.030566246975002875,
+      "minimumAdditiveReachMarginM": -0.03345374409151447,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.030566246975002875,
+        "minimumTriangleMarginM": -0.030566246975002875,
+        "minimumAdditiveReachMarginM": -0.03345374409151447,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.030566246975002875
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.030566246975002875
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.03345374409151447
+      }
+    },
+    {
+      "id": "candidate-15",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.4800000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.019621109241291235,
+      "minimumTriangleMarginM": -0.019621109241291235,
+      "minimumAdditiveReachMarginM": -0.022520619538490827,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.019621109241291235,
+        "minimumTriangleMarginM": -0.019621109241291235,
+        "minimumAdditiveReachMarginM": -0.022520619538490827,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.019621109241291235
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.019621109241291235
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.022520619538490827
+      }
+    },
+    {
+      "id": "candidate-16",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.47750000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.020817691963484708,
+      "minimumTriangleMarginM": -0.020817691963484708,
+      "minimumAdditiveReachMarginM": -0.0237172022606843,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.020817691963484708,
+        "minimumTriangleMarginM": -0.020817691963484708,
+        "minimumAdditiveReachMarginM": -0.0237172022606843,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.020817691963484708
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.020817691963484708
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0237172022606843
+      }
+    },
+    {
+      "id": "candidate-17",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.4750000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.022022279382474474,
+      "minimumTriangleMarginM": -0.022022279382474474,
+      "minimumAdditiveReachMarginM": -0.024921789679674067,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.022022279382474474,
+        "minimumTriangleMarginM": -0.022022279382474474,
+        "minimumAdditiveReachMarginM": -0.024921789679674067,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.022022279382474474
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.022022279382474474
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.024921789679674067
+      }
+    },
+    {
+      "id": "candidate-18",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.47250000000000003,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.023234823537223948,
+      "minimumTriangleMarginM": -0.023234823537223948,
+      "minimumAdditiveReachMarginM": -0.02613433383442354,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.023234823537223948,
+        "minimumTriangleMarginM": -0.023234823537223948,
+        "minimumAdditiveReachMarginM": -0.02613433383442354,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.023234823537223948
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.023234823537223948
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02613433383442354
+      }
+    },
+    {
+      "id": "candidate-19",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.4700000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02445527653606816,
+      "minimumTriangleMarginM": -0.02445527653606816,
+      "minimumAdditiveReachMarginM": -0.027354786833267752,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02445527653606816,
+        "minimumTriangleMarginM": -0.02445527653606816,
+        "minimumAdditiveReachMarginM": -0.027354786833267752,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02445527653606816
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02445527653606816
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.027354786833267752
+      }
+    },
+    {
+      "id": "candidate-20",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.4675,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02568359056229219,
+      "minimumTriangleMarginM": -0.02568359056229219,
+      "minimumAdditiveReachMarginM": -0.028583100859491783,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02568359056229219,
+        "minimumTriangleMarginM": -0.02568359056229219,
+        "minimumAdditiveReachMarginM": -0.028583100859491783,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02568359056229219
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02568359056229219
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.028583100859491783
+      }
+    },
+    {
+      "id": "candidate-21",
+      "sourceShoulderZ": 1.425,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.4650000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.291247317584214,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02691971787959091,
+      "minimumTriangleMarginM": -0.02691971787959091,
+      "minimumAdditiveReachMarginM": -0.029819228176790502,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02691971787959091,
+        "minimumTriangleMarginM": -0.02691971787959091,
+        "minimumAdditiveReachMarginM": -0.029819228176790502,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02691971787959091
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02691971787959091
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.029819228176790502
+      }
+    },
+    {
+      "id": "candidate-22",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.48250000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.016028317568038575,
+      "minimumTriangleMarginM": -0.016028317568038575,
+      "minimumAdditiveReachMarginM": -0.01893984917360092,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.016028317568038575,
+        "minimumTriangleMarginM": -0.016028317568038575,
+        "minimumAdditiveReachMarginM": -0.01893984917360092,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.016028317568038575
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.016028317568038575
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01893984917360092
+      }
+    },
+    {
+      "id": "candidate-23",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.48,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.01721684756872699,
+      "minimumTriangleMarginM": -0.01721684756872699,
+      "minimumAdditiveReachMarginM": -0.020128379174289335,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.01721684756872699,
+        "minimumTriangleMarginM": -0.01721684756872699,
+        "minimumAdditiveReachMarginM": -0.020128379174289335,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.01721684756872699
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01721684756872699
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.020128379174289335
+      }
+    },
+    {
+      "id": "candidate-24",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.47750000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.018413430290920352,
+      "minimumTriangleMarginM": -0.018413430290920352,
+      "minimumAdditiveReachMarginM": -0.021324961896482697,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.018413430290920352,
+        "minimumTriangleMarginM": -0.018413430290920352,
+        "minimumAdditiveReachMarginM": -0.021324961896482697,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.018413430290920352
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.018413430290920352
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.021324961896482697
+      }
+    },
+    {
+      "id": "candidate-25",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.475,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.01961801770991023,
+      "minimumTriangleMarginM": -0.01961801770991023,
+      "minimumAdditiveReachMarginM": -0.022529549315472575,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.01961801770991023,
+        "minimumTriangleMarginM": -0.01961801770991023,
+        "minimumAdditiveReachMarginM": -0.022529549315472575,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.01961801770991023
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01961801770991023
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.022529549315472575
+      }
+    },
+    {
+      "id": "candidate-26",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.47250000000000003,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.02083056186465959,
+      "minimumTriangleMarginM": -0.02083056186465959,
+      "minimumAdditiveReachMarginM": -0.023742093470221937,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.02083056186465959,
+        "minimumTriangleMarginM": -0.02083056186465959,
+        "minimumAdditiveReachMarginM": -0.023742093470221937,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.02083056186465959
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02083056186465959
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.023742093470221937
+      }
+    },
+    {
+      "id": "candidate-27",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.47,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.022051014863503804,
+      "minimumTriangleMarginM": -0.022051014863503804,
+      "minimumAdditiveReachMarginM": -0.02496254646906615,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.022051014863503804,
+        "minimumTriangleMarginM": -0.022051014863503804,
+        "minimumAdditiveReachMarginM": -0.02496254646906615,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.022051014863503804
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.022051014863503804
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02496254646906615
+      }
+    },
+    {
+      "id": "candidate-28",
+      "sourceShoulderZ": 1.4275,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.4675,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.2936515792567784,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.023279328889727835,
+      "minimumTriangleMarginM": -0.023279328889727835,
+      "minimumAdditiveReachMarginM": -0.02619086049529018,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.023279328889727835,
+        "minimumTriangleMarginM": -0.023279328889727835,
+        "minimumAdditiveReachMarginM": -0.02619086049529018,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.023279328889727835
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.023279328889727835
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02619086049529018
+      }
+    },
+    {
+      "id": "candidate-29",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.485,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.012442040766446394,
+      "minimumTriangleMarginM": -0.012442040766446394,
+      "minimumAdditiveReachMarginM": -0.015365601610033641,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.012442040766446394,
+        "minimumTriangleMarginM": -0.012442040766446394,
+        "minimumAdditiveReachMarginM": -0.015365601610033641,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.012442040766446394
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.012442040766446394
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.015365601610033641
+      }
+    },
+    {
+      "id": "candidate-30",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.48249999999999993,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.013622469963067818,
+      "minimumTriangleMarginM": -0.013622469963067818,
+      "minimumAdditiveReachMarginM": -0.016546030806655065,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.013622469963067818,
+        "minimumTriangleMarginM": -0.013622469963067818,
+        "minimumAdditiveReachMarginM": -0.016546030806655065,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.013622469963067818
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.013622469963067818
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.016546030806655065
+      }
+    },
+    {
+      "id": "candidate-31",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.48,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.014810999963756233,
+      "minimumTriangleMarginM": -0.014810999963756233,
+      "minimumAdditiveReachMarginM": -0.01773456080734348,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.014810999963756233,
+        "minimumTriangleMarginM": -0.014810999963756233,
+        "minimumAdditiveReachMarginM": -0.01773456080734348,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.014810999963756233
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.014810999963756233
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01773456080734348
+      }
+    },
+    {
+      "id": "candidate-32",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.4774999999999999,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.016007582685949595,
+      "minimumTriangleMarginM": -0.016007582685949595,
+      "minimumAdditiveReachMarginM": -0.018931143529536842,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.016007582685949595,
+        "minimumTriangleMarginM": -0.016007582685949595,
+        "minimumAdditiveReachMarginM": -0.018931143529536842,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.016007582685949595
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.016007582685949595
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.018931143529536842
+      }
+    },
+    {
+      "id": "candidate-33",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.475,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.017212170104939473,
+      "minimumTriangleMarginM": -0.017212170104939473,
+      "minimumAdditiveReachMarginM": -0.02013573094852672,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.017212170104939473,
+        "minimumTriangleMarginM": -0.017212170104939473,
+        "minimumAdditiveReachMarginM": -0.02013573094852672,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.017212170104939473
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.017212170104939473
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.02013573094852672
+      }
+    },
+    {
+      "id": "candidate-34",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.4724999999999999,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.018424714259689057,
+      "minimumTriangleMarginM": -0.018424714259689057,
+      "minimumAdditiveReachMarginM": -0.021348275103276304,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.018424714259689057,
+        "minimumTriangleMarginM": -0.018424714259689057,
+        "minimumAdditiveReachMarginM": -0.021348275103276304,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.018424714259689057
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.018424714259689057
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.021348275103276304
+      }
+    },
+    {
+      "id": "candidate-35",
+      "sourceShoulderZ": 1.43,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.47,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29605742686174913,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.019645167258533047,
+      "minimumTriangleMarginM": -0.019645167258533047,
+      "minimumAdditiveReachMarginM": -0.022568728102120295,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.019645167258533047,
+        "minimumTriangleMarginM": -0.019645167258533047,
+        "minimumAdditiveReachMarginM": -0.022568728102120295,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.019645167258533047
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.019645167258533047
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.022568728102120295
+      }
+    },
+    {
+      "id": "candidate-36",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.48750000000000016,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.008862365322359511,
+      "minimumTriangleMarginM": -0.008862365322359511,
+      "minimumAdditiveReachMarginM": -0.011797963141876755,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.008862365322359511,
+        "minimumTriangleMarginM": -0.008862365322359511,
+        "minimumAdditiveReachMarginM": -0.011797963141876755,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.008862365322359511
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.008862365322359511
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.011797963141876755
+      }
+    },
+    {
+      "id": "candidate-37",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.4850000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.010034645580437207,
+      "minimumTriangleMarginM": -0.010034645580437207,
+      "minimumAdditiveReachMarginM": -0.01297024339995445,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.010034645580437207,
+        "minimumTriangleMarginM": -0.010034645580437207,
+        "minimumAdditiveReachMarginM": -0.01297024339995445,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.010034645580437207
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.010034645580437207
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01297024339995445
+      }
+    },
+    {
+      "id": "candidate-38",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.48250000000000015,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.011215074777058187,
+      "minimumTriangleMarginM": -0.011215074777058187,
+      "minimumAdditiveReachMarginM": -0.014150672596575431,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.011215074777058187,
+        "minimumTriangleMarginM": -0.011215074777058187,
+        "minimumAdditiveReachMarginM": -0.014150672596575431,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.011215074777058187
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.011215074777058187
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.014150672596575431
+      }
+    },
+    {
+      "id": "candidate-39",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.4800000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.012403604777746824,
+      "minimumTriangleMarginM": -0.012403604777746824,
+      "minimumAdditiveReachMarginM": -0.015339202597264068,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.012403604777746824,
+        "minimumTriangleMarginM": -0.012403604777746824,
+        "minimumAdditiveReachMarginM": -0.015339202597264068,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.012403604777746824
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.012403604777746824
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.015339202597264068
+      }
+    },
+    {
+      "id": "candidate-40",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.47750000000000015,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.013600187499940297,
+      "minimumTriangleMarginM": -0.013600187499940297,
+      "minimumAdditiveReachMarginM": -0.01653578531945754,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.013600187499940297,
+        "minimumTriangleMarginM": -0.013600187499940297,
+        "minimumAdditiveReachMarginM": -0.01653578531945754,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.013600187499940297
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.013600187499940297
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01653578531945754
+      }
+    },
+    {
+      "id": "candidate-41",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.4750000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.014804774918930064,
+      "minimumTriangleMarginM": -0.014804774918930064,
+      "minimumAdditiveReachMarginM": -0.017740372738447308,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.014804774918930064,
+        "minimumTriangleMarginM": -0.014804774918930064,
+        "minimumAdditiveReachMarginM": -0.017740372738447308,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.014804774918930064
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.014804774918930064
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.017740372738447308
+      }
+    },
+    {
+      "id": "candidate-42",
+      "sourceShoulderZ": 1.4325,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.47250000000000014,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.29846482204775837,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.016017319073679648,
+      "minimumTriangleMarginM": -0.016017319073679648,
+      "minimumAdditiveReachMarginM": -0.01895291689319689,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.016017319073679648,
+        "minimumTriangleMarginM": -0.016017319073679648,
+        "minimumAdditiveReachMarginM": -0.01895291689319689,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.016017319073679648
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.016017319073679648
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01895291689319689
+      }
+    },
+    {
+      "id": "candidate-43",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.4900000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.005289376564307058,
+      "minimumTriangleMarginM": -0.005289376564307058,
+      "minimumAdditiveReachMarginM": -0.008237018911918526,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.005289376564307058,
+        "minimumTriangleMarginM": -0.005289376564307058,
+        "minimumAdditiveReachMarginM": -0.008237018911918526,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.005289376564307058
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.005289376564307058
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.008237018911918526
+      }
+    },
+    {
+      "id": "candidate-44",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.48750000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.006453459703510189,
+      "minimumTriangleMarginM": -0.006453459703510189,
+      "minimumAdditiveReachMarginM": -0.009401102051121657,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.006453459703510189,
+        "minimumTriangleMarginM": -0.006453459703510189,
+        "minimumAdditiveReachMarginM": -0.009401102051121657,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.006453459703510189
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.006453459703510189
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.009401102051121657
+      }
+    },
+    {
+      "id": "candidate-45",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.4850000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.007625739961587996,
+      "minimumTriangleMarginM": -0.007625739961587996,
+      "minimumAdditiveReachMarginM": -0.010573382309199464,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.007625739961587996,
+        "minimumTriangleMarginM": -0.007625739961587996,
+        "minimumAdditiveReachMarginM": -0.010573382309199464,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.007625739961587996
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.007625739961587996
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.010573382309199464
+      }
+    },
+    {
+      "id": "candidate-46",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.48250000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.00880616915820931,
+      "minimumTriangleMarginM": -0.00880616915820931,
+      "minimumAdditiveReachMarginM": -0.011753811505820777,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.00880616915820931,
+        "minimumTriangleMarginM": -0.00880616915820931,
+        "minimumAdditiveReachMarginM": -0.011753811505820777,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.00880616915820931
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.00880616915820931
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.011753811505820777
+      }
+    },
+    {
+      "id": "candidate-47",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.4800000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.009994699158897613,
+      "minimumTriangleMarginM": -0.009994699158897613,
+      "minimumAdditiveReachMarginM": -0.01294234150650908,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.009994699158897613,
+        "minimumTriangleMarginM": -0.009994699158897613,
+        "minimumAdditiveReachMarginM": -0.01294234150650908,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.009994699158897613
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.009994699158897613
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01294234150650908
+      }
+    },
+    {
+      "id": "candidate-48",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.47750000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.011191281881091086,
+      "minimumTriangleMarginM": -0.011191281881091086,
+      "minimumAdditiveReachMarginM": -0.014138924228702554,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.011191281881091086,
+        "minimumTriangleMarginM": -0.011191281881091086,
+        "minimumAdditiveReachMarginM": -0.014138924228702554,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.011191281881091086
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.011191281881091086
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.014138924228702554
+      }
+    },
+    {
+      "id": "candidate-49",
+      "sourceShoulderZ": 1.435,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.4750000000000001,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3008737276666077,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.012395869300080853,
+      "minimumTriangleMarginM": -0.012395869300080853,
+      "minimumAdditiveReachMarginM": -0.01534351164769232,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.012395869300080853,
+        "minimumTriangleMarginM": -0.012395869300080853,
+        "minimumAdditiveReachMarginM": -0.01534351164769232,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.012395869300080853
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.012395869300080853
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01534351164769232
+      }
+    },
+    {
+      "id": "candidate-50",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.49250000000000005,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.0017231587031987239,
+      "minimumTriangleMarginM": -0.0017231587031987239,
+      "minimumAdditiveReachMarginM": -0.004682852951114147,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.0017231587031987239,
+        "minimumTriangleMarginM": -0.0017231587031987239,
+        "minimumAdditiveReachMarginM": -0.004682852951114147,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.0017231587031987239
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0017231587031987239
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.004682852951114147
+      }
+    },
+    {
+      "id": "candidate-51",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.49,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.002878996503523301,
+      "minimumTriangleMarginM": -0.002878996503523301,
+      "minimumAdditiveReachMarginM": -0.005838690751438724,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.002878996503523301,
+        "minimumTriangleMarginM": -0.002878996503523301,
+        "minimumAdditiveReachMarginM": -0.005838690751438724,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.002878996503523301
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.002878996503523301
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.005838690751438724
+      }
+    },
+    {
+      "id": "candidate-52",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.48750000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.004043079642726433,
+      "minimumTriangleMarginM": -0.004043079642726433,
+      "minimumAdditiveReachMarginM": -0.007002773890641856,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.004043079642726433,
+        "minimumTriangleMarginM": -0.004043079642726433,
+        "minimumAdditiveReachMarginM": -0.007002773890641856,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.004043079642726433
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.004043079642726433
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.007002773890641856
+      }
+    },
+    {
+      "id": "candidate-53",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.485,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.0052153599008041285,
+      "minimumTriangleMarginM": -0.0052153599008041285,
+      "minimumAdditiveReachMarginM": -0.008175054148719552,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.0052153599008041285,
+        "minimumTriangleMarginM": -0.0052153599008041285,
+        "minimumAdditiveReachMarginM": -0.008175054148719552,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.0052153599008041285
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0052153599008041285
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.008175054148719552
+      }
+    },
+    {
+      "id": "candidate-54",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.48250000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.006395789097425553,
+      "minimumTriangleMarginM": -0.006395789097425553,
+      "minimumAdditiveReachMarginM": -0.009355483345340976,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.006395789097425553,
+        "minimumTriangleMarginM": -0.006395789097425553,
+        "minimumAdditiveReachMarginM": -0.009355483345340976,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.006395789097425553
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.006395789097425553
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.009355483345340976
+      }
+    },
+    {
+      "id": "candidate-55",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.48,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.007584319098113967,
+      "minimumTriangleMarginM": -0.007584319098113967,
+      "minimumAdditiveReachMarginM": -0.01054401334602939,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.007584319098113967,
+        "minimumTriangleMarginM": -0.007584319098113967,
+        "minimumAdditiveReachMarginM": -0.01054401334602939,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.007584319098113967
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.007584319098113967
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.01054401334602939
+      }
+    },
+    {
+      "id": "candidate-56",
+      "sourceShoulderZ": 1.4375,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.47750000000000004,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.30328410772739145,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.00878090182030733,
+      "minimumTriangleMarginM": -0.00878090182030733,
+      "minimumAdditiveReachMarginM": -0.011740596068222753,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.00878090182030733,
+        "minimumTriangleMarginM": -0.00878090182030733,
+        "minimumAdditiveReachMarginM": -0.011740596068222753,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.00878090182030733
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.00878090182030733
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.011740596068222753
+      }
+    },
+    {
+      "id": "candidate-57",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.945,
+      "sourcePelvisHeadZ": 0.9249999999999999,
+      "shoulderToHipM": 0.495,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44704585894514215,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0,
+      "minimumTriangleMarginM": 0.0018362051301331617,
+      "minimumAdditiveReachMarginM": -0.0018841757106938806,
+      "allSampledProfilesReachable": true,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0,
+        "minimumTriangleMarginM": 0.0018362051301331617,
+        "minimumAdditiveReachMarginM": -0.0018841757106938806,
+        "all81KnotsReachable": true,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": null,
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": 0.0018362051301331617
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-80",
+        "side": "L",
+        "limb": "foot",
+        "marginM": -0.0018841757106938806
+      }
+    },
+    {
+      "id": "candidate-58",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.9475,
+      "sourcePelvisHeadZ": 0.9275,
+      "shoulderToHipM": 0.49249999999999994,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.44953448143607405,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0,
+      "minimumTriangleMarginM": 0.0006886609220653206,
+      "minimumAdditiveReachMarginM": -0.002283092423976396,
+      "allSampledProfilesReachable": true,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0,
+        "minimumTriangleMarginM": 0.0006886609220653206,
+        "minimumAdditiveReachMarginM": -0.002283092423976396,
+        "all81KnotsReachable": true,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": null,
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": 0.0006886609220653206
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.002283092423976396
+      }
+    },
+    {
+      "id": "candidate-59",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.95,
+      "sourcePelvisHeadZ": 0.9299999999999999,
+      "shoulderToHipM": 0.49,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4520232294915826,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.0004671768782592567,
+      "minimumTriangleMarginM": -0.0004671768782592567,
+      "minimumAdditiveReachMarginM": -0.0034389302243009734,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.0004671768782592567,
+        "minimumTriangleMarginM": -0.0004671768782592567,
+        "minimumAdditiveReachMarginM": -0.0034389302243009734,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.0004671768782592567
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0004671768782592567
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0034389302243009734
+      }
+    },
+    {
+      "id": "candidate-60",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.9525,
+      "sourcePelvisHeadZ": 0.9325,
+      "shoulderToHipM": 0.48749999999999993,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45451210104902595,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.0016312600174627212,
+      "minimumTriangleMarginM": -0.0016312600174627212,
+      "minimumAdditiveReachMarginM": -0.004603013363504438,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.0016312600174627212,
+        "minimumTriangleMarginM": -0.0016312600174627212,
+        "minimumAdditiveReachMarginM": -0.004603013363504438,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.0016312600174627212
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.0016312600174627212
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.004603013363504438
+      }
+    },
+    {
+      "id": "candidate-61",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.955,
+      "sourcePelvisHeadZ": 0.9349999999999999,
+      "shoulderToHipM": 0.485,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.45700109409059403,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.002803540275540084,
+      "minimumTriangleMarginM": -0.002803540275540084,
+      "minimumAdditiveReachMarginM": -0.005775293621581801,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.002803540275540084,
+        "minimumTriangleMarginM": -0.002803540275540084,
+        "minimumAdditiveReachMarginM": -0.005775293621581801,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.002803540275540084
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.002803540275540084
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.005775293621581801
+      }
+    },
+    {
+      "id": "candidate-62",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.9575,
+      "sourcePelvisHeadZ": 0.9375,
+      "shoulderToHipM": 0.48249999999999993,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.4594902066421003,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.003983969472161508,
+      "minimumTriangleMarginM": -0.003983969472161508,
+      "minimumAdditiveReachMarginM": -0.006955722818203225,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.003983969472161508,
+        "minimumTriangleMarginM": -0.003983969472161508,
+        "minimumAdditiveReachMarginM": -0.006955722818203225,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.003983969472161508
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.003983969472161508
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.006955722818203225
+      }
+    },
+    {
+      "id": "candidate-63",
+      "sourceShoulderZ": 1.44,
+      "sourceAnatomicalHipZ": 0.96,
+      "sourcePelvisHeadZ": 0.94,
+      "shoulderToHipM": 0.48,
+      "sourceElbowZ": 1.145,
+      "sourceKneeZ": 0.5,
+      "sourceAnkleZ": 0.115,
+      "lengths": [
+        {
+          "side": "R",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2886547418556959,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        },
+        {
+          "side": "L",
+          "upperArm": 0.3056959273526554,
+          "forearm": 0.2892470358503849,
+          "thigh": 0.46197943677181125,
+          "shin": 0.38919789310837744
+        }
+      ],
+      "worstShortfallM": 0.005172499472849923,
+      "minimumTriangleMarginM": -0.005172499472849923,
+      "minimumAdditiveReachMarginM": -0.00814425281889164,
+      "allSampledProfilesReachable": false,
+      "allSampledProfilesAdditiveSafe": false,
+      "leanOnly": {
+        "worstShortfallM": 0.005172499472849923,
+        "minimumTriangleMarginM": -0.005172499472849923,
+        "minimumAdditiveReachMarginM": -0.00814425281889164,
+        "all81KnotsReachable": false,
+        "all81KnotsAdditiveSafe": false
+      },
+      "worstRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "shortfallM": 0.005172499472849923
+      },
+      "minimumMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.005172499472849923
+      },
+      "minimumAdditiveMarginRecord": {
+        "profile": "lean-00",
+        "side": "R",
+        "limb": "hand",
+        "marginM": -0.00814425281889164
+      }
+    }
+  ],
+  "limits": [
+    "Source anatomy under clothes is explicitly estimated",
+    "No garment boundaries or new joint centres independently accepted",
+    "Contact targets reuse provisional contact-adapter01 source palm and bottom2mm sole witnesses; no accepted finger wrap/cylinder/sole fit",
+    "No geometry stretch, physics/root-clamp edit, source-skin rewrite or new player asset",
+    "Finite sample grid is not proof over continuous trajectory or all reachable physics states",
+    "Actual NEW render bone length changes can alter drawn segment COM; independent mass/pose agreement remains unmeasured",
+    "No standing-to-sitting, Garage or gameplay moving deformation/contact acceptance from this numerical search"
+  ]
+}

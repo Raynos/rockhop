@@ -512,3 +512,25 @@ first cylinder-placement search found no clear placement. Expand the
 geometric placement search, not the retired fixed-curl technique.
 Round78 production baseline passes exact finish bytes, crash103ticks,
 restart1msLOW/2msHIGH, zero errors.
+
+### Feasible anatomy seeds and seated visual target
+
+The bounded search finds2/63 joint estimates reaching all87 sampled
+profiles. Best seed shoulderZ1.44/hip.945/pelvis.925 has only1.836mm
+triangle margin; stricter additive margin still fails. This is a shortlist
+for actual deformation, not accepted anatomy. Further elbow estimates may
+be searched within the actual garment envelope to improve margin.
+
+The real19bone export preserves source rest positions within3.033microns
+through the production decoder, with unchanged triangle counts; all24
+AnimationMixer samples are finite. Vertex counts can change at split
+attributes, so sourceposition correspondence replaces index equality.
+This is CPU integrity evidence, not engine appearance acceptance.
+
+New same-white-rider sitting target01 supplies nine chronological profile
+samples. Next actual clip must plant the shoes, settle hands on thighs,
+and sit on a literal bench, rather than translate the feet forward.
+Native articulation01 is rejected after all99 decoded frames: distal
+finger hold fails palm/thumbwrap and introduces21 triangle overlaps.
+Switch early to palm-anchored native IK/thumbopposition and compare
+volume-preserving skinning. Preserve original meshes and wrists.
