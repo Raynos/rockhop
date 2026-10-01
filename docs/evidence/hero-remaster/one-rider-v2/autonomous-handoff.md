@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round105, 2026-10-01
+## Current evidence — round106, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -33,8 +33,9 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: local continuous lid aperture reconstruction and
-  measured CC0 eyes. Read-only audit finds fused closed anterior eye surfaces.
+- Next bounded action:36×18mm ordered orbital retopology and explicit
+  lid rings. Small analytic aperture/angular tunnel stopped after3 failures;
+  no candidate exported. Inner face sheet folds invalidate angular sorting.
   Explicit private3Dfocus retains all72 head views.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
@@ -480,3 +481,6 @@ ROI. Local lid reconstruction next; source11 preserved, no new fit accepted.
 Round105: hidden inner face sheets4.55/6mm require two-sheet apertures and
 continuous lids. Fresh26mm CC0 eye donor frozen, source body11 remains current.
 Current11 both-tier ship gate passes byte-exact clear/crash103/restart2ms.
+
+Round106: small aperture/angular tunnel rejected after3 construction guards.
+No exported candidate; source11 current. Larger ordered local retopology next.

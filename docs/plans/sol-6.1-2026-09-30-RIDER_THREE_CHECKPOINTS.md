@@ -797,3 +797,11 @@ has26mm inner diameter/26.8075mm shell and preserved brown atlas/UVs. Unfitted,
 unaccepted; no body mutation. Parent reviewed report/UV evidence. Current11
 silent third-round gate passes both40.083333333333336/hash/Float64LE exact,
 crash103/restart2ms/errors0; locked10.084s/33.733GB. Next local surgical trial.
+
+Round106: STOP small analytic eye aperture/angular tunnel after3 construction
+failures. Conformity and sliver corrections yield8 simple loops/nonmanifold0,
+but folded inner face projection makes zipper miss41 edges/8 zero-area faces.
+No candidate exported; body11 remains current and face6.8. Switch autonomously
+to36×18mm orbital retopology using ordered actual boundaries and deliberate
+lid rings. Source body/head/rig unchanged; five/fifteen limits retained.
+Prepared played/conservation recipes unexecuted until valid geometry exists.

@@ -1381,5 +1381,21 @@
     "faceFramingIncomplete": true,
     "next": "Actual3Dsurface focus then anatomical eyes/lids",
     "priorFailuresPreserved": true
+  },
+  "localEyeApertureSurgery": {
+    "source": "body11",
+    "currentCandidate": "body11 unchanged",
+    "smallApertureApproachFailures": 3,
+    "eyeDefectConstructionFailures": 3,
+    "attempts": [
+      "Nonconforming shared-edge clipping",
+      "Microscopic sliver boundary after conformity",
+      "Folded inner sheet invalidates angular tunnel"
+    ],
+    "status": "Small analytic aperture/angular tunnel stopped early",
+    "next": "36x18mm local orbital retopology with ordered boundaries and deliberate lid rings",
+    "failedCandidateExported": false,
+    "priorFailuresPreserved": true,
+    "limits": "Construction guards failed, no new appearance trial. Five per approach and fifteen per defect remain limits."
   }
 }

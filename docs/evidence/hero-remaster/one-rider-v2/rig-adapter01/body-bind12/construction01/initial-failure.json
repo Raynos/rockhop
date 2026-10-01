@@ -1,0 +1,10 @@
+{
+  "status": "REJECTED before candidate export",
+  "attempt": 1,
+  "technique": "analytic convex ellipse subtraction with per-triangle conforming fragments",
+  "failure": "Canonical boundary contained non-degree-two vertices",
+  "cause": "Plane subtraction introduced source-edge subdivisions outside the final aperture; adjacent retained triangles lacked these matching subdivisions.",
+  "nextMechanismCorrection": "Conform all source triangle edges to shared physical intersection points before boundary analysis.",
+  "candidateWritten": false,
+  "initialRecipe": "assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind12/build_apertures_initial.py"
+}

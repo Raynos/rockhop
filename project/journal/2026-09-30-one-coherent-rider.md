@@ -1119,3 +1119,13 @@ coldboot/clear40.083333333333336/hash/Float64LE exact, crash103/restart2ms/error
 Canonical lock10.084s/33.733GB anonymous peak. Source body/head remain untouched.
 Limits: Donor unfitted and unrigged; transparent cornea is a PBR approximation.
 No eye appearance acceptance, realLOD or later checkpoint pass. Face stays6.8.
+
+## Round106 — folded inner sheet rejects the angular lid tunnel
+
+Finding: Stop the small-aperture approach after3 construction failures.
+Corrected cut has8 simple loops/nonmanifold0, but angular tunnel loses41 rim
+edges and contains8 zero-area triangles. Larger ordered orbital retopology next.
+Validation: Parent inspected frozen failure counts/recipes; source body11 and
+donor unchanged, no candidate exported. Recipe syntax checks pass. No GPU job.
+Limits: No new face score or accepted asset. Prepared capture/conservation
+recipes are unexecuted. Prior failures and five/fifteen safety limits persist.
