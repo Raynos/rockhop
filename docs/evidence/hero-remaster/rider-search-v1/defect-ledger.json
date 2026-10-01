@@ -984,7 +984,7 @@
   "autonomousDefects": {
     "neckJoin": {
       "historicalFailedAttempts": 6,
-      "currentFailedAttempts": 9,
+      "currentFailedAttempts": 10,
       "approaches": {
         "sourceGraphCut": 2,
         "ellipticalLoft": 2,
@@ -996,16 +996,24 @@
         "C-garmentPatternWeld": {
           "geometryFailures": 0,
           "appearanceFailures": 1
+        },
+        "B-localVolumeEuclideanPanel": {
+          "preVolumeGeometryFailures": 1,
+          "volumeStagesExecuted": 0
         }
       },
-      "lastFailure": "C closed welded hood still has jagged rear cloth seam and broad flat collar; parentbody5/10 face3/10",
+      "lastFailure": "B40mmclipping produces3contours187/143/17; stopped before volume, actualwitness has jagged opening/innerislands",
       "fiveFailureSwitch": 5,
       "fifteenFailureLastResort": 15,
-      "next": "Modular continuous skin beneath separately constructed garment; face refined independently"
+      "next": "Test intrinsic garment-surface panel mapping and separate continuous skin, without weakening actual clothing appearance/motion gate"
     },
     "evidenceCornerAudit": {
       "failedAttempts": 1,
       "failure": "C initial GLB audit usedUV0 instead of materialUV1; corrected true maxUVerror2.98e-8 with zero missing sourcecorners"
+    },
+    "B-exportGroupAudit": {
+      "failedAttempts": 1,
+      "failure": "Replacement mesh initially cleared vertex-group definitions; corrected exporter restores163original groups; split-edge weights unmeasured"
     }
   },
   "visualQualityPolicy": {

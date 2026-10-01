@@ -95,3 +95,9 @@ A. Shared skin/cloth weld closes the mesh but leaves a jagged rear cloth seam
 and flat collar. Native weights/protected41,852source triangles survive actual
 reimport; initial UV0audit error frozen separately, correctedUV1maxerror2.98e-8.
 Separate garment architecture and better face follow; no full rig starts.
+
+B firsttrial also frozen: Euclidean clipping yields3contours187/143/17,
+so volume extraction did not run. Actual modular hood preserves silhouette
+better than Cflatcollar but has jagged opening/innerislands. Parent rejects
+geometry; neckfamily10/15. Next intrinsic source-surface mapping is a distinct
+mechanism, not a radius tweak. Source face stays3/10 and parent-owned.

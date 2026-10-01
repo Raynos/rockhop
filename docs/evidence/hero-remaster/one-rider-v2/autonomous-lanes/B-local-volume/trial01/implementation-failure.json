@@ -1,0 +1,9 @@
+{
+  "sourceGroupCount": 163,
+  "firstWitnessExportAPIError": "IndexError: bpy_prop_collection[index]: index80 out of range, size0",
+  "cause": "Replacing Blender mesh clears object vertex groups",
+  "fix": "Recreate exact163 source names; restore unchanged original vertex-indexed source deform weights; new clipped-edge weights remain unmeasured",
+  "classification": "Witness export API repair only; no change to trial geometry or failure counter",
+  "geometryAttemptCount": 1,
+  "firstPanelGateFailed": true
+}

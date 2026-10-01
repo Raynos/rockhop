@@ -465,3 +465,13 @@ Protected41,852source triangles have zero position and native-weight changes;
 materialUV1corner maxerror2.98e-8, initialwrongUV0audit frozen.
 Limits: Scores are diagnostic due to reference lighting/camera differences;
 no neck-motion, final rig or new-rider contact acceptance.
+
+## Round38 — a folded hood produces multiple panel contours
+
+Finding: B Euclidean40mmclipping creates3contours187/143/17; volume stage
+never runs. Preserve exact clipped witness before changing mapping mechanism.
+Validation: Parent inspected actual PBRfront/grayprofile, jagged opening and
+inner islands reject geometry; builder16reimportedviews completed,44,016
+source triangles retain positions/UV/materials. Source hashes unchanged.
+Limits: No volume-success, neck motion, final split-edge weights or contacts;
+restoring163sourcegroups fixes metadata only, face remains unaccepted.

@@ -29,6 +29,8 @@ Checkpoint 1 independently requires minimum7/10 and target8/10 body/face. LaneA 
 
 Checkpoint 1 rejects C first closed assembly: diagnostic body5/10,face3/10; jagged cloth seam/flat collar persist despite preserved source geometry/UV/weights. Minimum7 and target8 remain independent. Neck family9/15 after A/C; modular skin-under-garment and new-face audit next. No new rig/contact acceptance.
 
+Checkpoint 1 freezes all three firstlane findings: A nonseparating seam, C appearance5/10 body3/10 face, B three-contour pre-volume failure. Neckfamily10/15; minimum7 target8 independently. Next modular garment trials and NEW head audit run in isolatedCPUlanes; normal rider/physics unchanged.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
