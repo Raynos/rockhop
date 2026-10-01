@@ -792,3 +792,8 @@ Limits: Neckmotionfails despite preservedstaticappearance; no nineteenbone/gamep
 Finding: Rigidwholejaw/head weighting removes yaw mouthshear in actual36frame/3sCPUneckclip. Parent inspects all36decodedframes plusfullresolution yaw/bend front/profile/rear extrema: no exposedbustbase/seam holes, face shape holds.256facialpairdistances/frame maxerror1.5789836661783685e-07m. Only3bone diagnostic fixture, final19bone/rest/socket/COM/IK mapping absent. Coarseface/hair/glovedetail persists; body7.4/face7.5 diagnostic. Matched9angleWHITEtarget comparison and boundedtarget8refinement next beforecheckpoint1closure.
 Validation: 36CPUframes, silent3secondclip, all36decodedinspection; 256facepairdistances/frame max1.58e-7m; originalsourceunchanged; exported04/05geometricarrays exact.
 Limits: Threebonefixture only, diagnostic7.4/7.5; matchedtarget/refinement and final19bonerig open.
+
+## Round75 — reference consistency drift
+Finding: NewnineangleWHITEbuzz target repeatsonequarter and rolls sleevesabove intendedwristcuffs; do not adoptthesechanges.
+Validation: Parentviews generatedboard; originalinputreferences/actualriderunchanged; firsttargetfailure.
+Limits: Mockupunaccepted; productionround75 queued canonical lock, no passclaimed.
