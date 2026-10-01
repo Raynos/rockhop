@@ -927,3 +927,16 @@ is not art or whole-collision proof. No GLB/GPU/physics change. Next append-only
 private morph targets plus explicit continuous rig driver, actual moving PBR/
 gray and mockup comparison. Current11 unchanged; eye18 geometry lane ongoing.
 Ship next120; target8/full-body/face/animation/Garage/contact gates stay open.
+
+Round119: enlarged inward-sheet eye cut frozen with five degree4 branches.
+Parent reran exact frozen topology/source-face audit. Neighbor normal signs
+change across the physical sheet, so normalX<0 is a procedural classifier
+failure; stop that mechanism, no cut-size sweep. Current11/native/eye donor
+hashes exact. Prior17 wall actual donor triangle proximity/intersections at
+measured−8mm:11 cornea/7 opaque pairs, so wrong front-ray predicate was not
+its only problem. Five tested shifts do not prove the full interval. No18
+export/native assembly/conservation/material/art pass. Next physical connected
+sheet segmentation and coherent donor-aware closure. Prior eye appearance6,
+two native construction stops separate. Hip19 private morph prototype underway,
+6 source targets/oldBIN exact, CPU key reproduction and moving checks next.
+Ship next120; normal player assets unchanged.

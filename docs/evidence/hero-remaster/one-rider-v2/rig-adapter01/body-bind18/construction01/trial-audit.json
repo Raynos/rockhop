@@ -1,0 +1,1853 @@
+{
+  "status": "FROZEN failed source-sheet cut before anatomical assembly; current11 unchanged",
+  "CPUOnly": true,
+  "GPUWorkPerformed": false,
+  "candidateExported": false,
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "failureClassification": "Procedural normal-sign clip classification; not a generator or anatomy failure",
+  "nativeDonorHashesUnchanged": {
+    "L": "0f34dc4467f12f7e0cfddd42dd3823d6c5dfbe91320303286ec3985f441f3e30",
+    "R": "a2d2a9f09d0fc133503725c6332e4dee128fe9973ae199586fe2f2d792144ce6"
+  },
+  "actualEyeDonorSHA256": "c11e5273b7e8d82a94a46d46c853e0ad42e7caeb2328716bc4a5c4090170d0fb",
+  "frozenGeometrySHA256": "fc3e8a4214d826fe31bb3e0c19b9f2755c926857074839e4bb9ea892e6ccd8f7",
+  "geometryAlgorithmSelfTests": {
+    "syntheticCases": 4,
+    "pass": true
+  },
+  "trialROI": {
+    "outerHalfWidthM": 0.018,
+    "outerHalfHeightM": 0.009,
+    "innerHalfWidthM": 0.022,
+    "innerHalfHeightM": 0.017,
+    "outerMinimumXM": 0.72,
+    "innerMinimumXM": 0.69,
+    "innerSourceSheetClassifier": "geometric triangle normal X<0"
+  },
+  "sourceTopology": {
+    "triangles": 99485,
+    "physicalVertices": 49784,
+    "boundaryEdges": 151,
+    "nonManifoldEdges": 0,
+    "closed": false
+  },
+  "stoppedTopology": {
+    "triangles": 103945,
+    "physicalVertices": 52454,
+    "boundaryEdges": 1025,
+    "nonManifoldEdges": 0,
+    "closed": false
+  },
+  "boundaryDegreeHistogram": {
+    "2": 1015,
+    "4": 5
+  },
+  "nonSimpleBoundaryVertices": [
+    {
+      "physicalVertex": 41234,
+      "positionM": [
+        0.7377119660377502,
+        1.6882048845291138,
+        0.0435933843255043
+      ],
+      "boundaryDegree": 4,
+      "boundaryNeighborPositionsM": [
+        [
+          0.7364330291748047,
+          1.689233422279358,
+          0.04486541077494621
+        ],
+        [
+          0.7377117276191711,
+          1.6871726512908936,
+          0.042307741940021515
+        ],
+        [
+          0.7389906644821167,
+          1.6880148649215698,
+          0.043586473912000656
+        ],
+        [
+          0.7385020852088928,
+          1.6880953311920166,
+          0.043586473912000656
+        ]
+      ],
+      "sourceFacesContainingPoint": [
+        {
+          "sourceTriangle": 30961,
+          "normalX": 0.14428012185358202,
+          "inwardClassifier": false,
+          "planeResidualM": 1.1499700625125305e-19,
+          "barycentric": [
+            0.0,
+            1.0,
+            6.956855636877446e-17
+          ],
+          "minimumTriangleX": 0.7362200021743774
+        },
+        {
+          "sourceTriangle": 30962,
+          "normalX": -0.5550797524499899,
+          "inwardClassifier": true,
+          "planeResidualM": 4.84869951806108e-19,
+          "barycentric": [
+            -2.220446049250313e-16,
+            1.0,
+            2.610718242336664e-16
+          ],
+          "minimumTriangleX": 0.7364330291748047
+        },
+        {
+          "sourceTriangle": 30964,
+          "normalX": -0.13506996829694187,
+          "inwardClassifier": true,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "minimumTriangleX": 0.7377117276191711
+        },
+        {
+          "sourceTriangle": 31430,
+          "normalX": 0.13753172840433786,
+          "inwardClassifier": false,
+          "planeResidualM": 2.6832634791959046e-19,
+          "barycentric": [
+            0.0,
+            9.393965505097652e-17,
+            1.0
+          ],
+          "minimumTriangleX": 0.7362200021743774
+        },
+        {
+          "sourceTriangle": 31432,
+          "normalX": 0.0523648396511293,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "minimumTriangleX": 0.7377119660377502
+        },
+        {
+          "sourceTriangle": 31433,
+          "normalX": -0.11178637496846063,
+          "inwardClassifier": true,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "minimumTriangleX": 0.7377117276191711
+        }
+      ]
+    },
+    {
+      "physicalVertex": 40182,
+      "positionM": [
+        0.733801543712616,
+        1.6850682497024536,
+        0.041631583124399185
+      ],
+      "boundaryDegree": 4,
+      "boundaryNeighborPositionsM": [
+        [
+          0.7326138615608215,
+          1.6857494115829468,
+          0.042328059673309326
+        ],
+        [
+          0.7326069474220276,
+          1.686947226524353,
+          0.04327024146914482
+        ],
+        [
+          0.7338991165161133,
+          1.6870497465133667,
+          0.04341534897685051
+        ],
+        [
+          0.7325961589813232,
+          1.6842588186264038,
+          0.040663186460733414
+        ]
+      ],
+      "sourceFacesContainingPoint": [
+        {
+          "sourceTriangle": 31422,
+          "normalX": -0.030514801017741927,
+          "inwardClassifier": true,
+          "planeResidualM": 6.133173666733497e-19,
+          "barycentric": [
+            -2.220446049250313e-16,
+            1.0000000000000002,
+            -9.804458166264084e-17
+          ],
+          "minimumTriangleX": 0.7326069474220276
+        },
+        {
+          "sourceTriangle": 31423,
+          "normalX": 0.10612985934851929,
+          "inwardClassifier": false,
+          "planeResidualM": 4.599880250050122e-19,
+          "barycentric": [
+            4.440892098500626e-16,
+            0.9999999999999997,
+            -7.058078423276263e-17
+          ],
+          "minimumTriangleX": 0.7326069474220276
+        },
+        {
+          "sourceTriangle": 31424,
+          "normalX": 0.18091061895508903,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "minimumTriangleX": 0.733801543712616
+        },
+        {
+          "sourceTriangle": 31915,
+          "normalX": -0.03181956641425343,
+          "inwardClassifier": true,
+          "planeResidualM": 3.0665868333667484e-19,
+          "barycentric": [
+            -2.220446049250313e-16,
+            1.0,
+            1.4829427691076255e-16
+          ],
+          "minimumTriangleX": 0.7325961589813232
+        },
+        {
+          "sourceTriangle": 31924,
+          "normalX": 0.20127896328604555,
+          "inwardClassifier": false,
+          "planeResidualM": 4.4702800766818725e-19,
+          "barycentric": [
+            -2.220446049250313e-16,
+            -6.338125353828726e-18,
+            1.0000000000000002
+          ],
+          "minimumTriangleX": 0.733801543712616
+        },
+        {
+          "sourceTriangle": 32422,
+          "normalX": 0.04735154038447933,
+          "inwardClassifier": false,
+          "planeResidualM": 1.5332934166833742e-19,
+          "barycentric": [
+            0.0,
+            -4.2010109932408607e-17,
+            1.0
+          ],
+          "minimumTriangleX": 0.7325961589813232
+        },
+        {
+          "sourceTriangle": 32424,
+          "normalX": 0.17146661811659958,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "minimumTriangleX": 0.733801543712616
+        },
+        {
+          "sourceTriangle": 32425,
+          "normalX": 0.09495938109476192,
+          "inwardClassifier": false,
+          "planeResidualM": 6.761339363428523e-19,
+          "barycentric": [
+            0.0,
+            -1.6495356135202624e-16,
+            1.0000000000000002
+          ],
+          "minimumTriangleX": 0.733801543712616
+        },
+        {
+          "sourceTriangle": 32432,
+          "normalX": -0.01693888383997182,
+          "inwardClassifier": true,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "minimumTriangleX": 0.7325961589813232
+        }
+      ]
+    },
+    {
+      "physicalVertex": 41579,
+      "positionM": [
+        0.7389906644821167,
+        1.6880148649215698,
+        0.043586473912000656
+      ],
+      "boundaryDegree": 4,
+      "boundaryNeighborPositionsM": [
+        [
+          0.7377119660377502,
+          1.6882048845291138,
+          0.0435933843255043
+        ],
+        [
+          0.7385020852088928,
+          1.6880953311920166,
+          0.043586473912000656
+        ],
+        [
+          0.7377117276191711,
+          1.6871726512908936,
+          0.042307741940021515
+        ],
+        [
+          0.7402696013450623,
+          1.6875852346420288,
+          0.042307741940021515
+        ]
+      ],
+      "sourceFacesContainingPoint": [
+        {
+          "sourceTriangle": 30946,
+          "normalX": -0.11654851593590868,
+          "inwardClassifier": true,
+          "planeResidualM": 1.1519648082658485e-19,
+          "barycentric": [
+            0.0,
+            -2.3361605962367253e-16,
+            1.0000000000000002
+          ],
+          "minimumTriangleX": 0.7385020852088928
+        },
+        {
+          "sourceTriangle": 30948,
+          "normalX": -0.4955801439139493,
+          "inwardClassifier": true,
+          "planeResidualM": 3.0665868333667484e-19,
+          "barycentric": [
+            -2.220446049250313e-16,
+            1.8863285601298778e-16,
+            1.0
+          ],
+          "minimumTriangleX": 0.7389358282089233
+        },
+        {
+          "sourceTriangle": 30949,
+          "normalX": -0.3870555439218704,
+          "inwardClassifier": true,
+          "planeResidualM": 8.490177124190942e-19,
+          "barycentric": [
+            0.0,
+            -3.9083068979692305e-16,
+            1.0000000000000004
+          ],
+          "minimumTriangleX": 0.7389906644821167
+        },
+        {
+          "sourceTriangle": 31432,
+          "normalX": 0.0523648396511293,
+          "inwardClassifier": false,
+          "planeResidualM": 2.1856896994426903e-19,
+          "barycentric": [
+            -6.661338147750939e-16,
+            0.9999999999999996,
+            1.0902753028505606e-15
+          ],
+          "minimumTriangleX": 0.7377119660377502
+        },
+        {
+          "sourceTriangle": 31433,
+          "normalX": -0.11178637496846063,
+          "inwardClassifier": true,
+          "planeResidualM": 5.028266106323029e-20,
+          "barycentric": [
+            0.0,
+            -3.287948798780546e-17,
+            1.0
+          ],
+          "minimumTriangleX": 0.7377117276191711
+        },
+        {
+          "sourceTriangle": 31434,
+          "normalX": 0.2535811578388077,
+          "inwardClassifier": false,
+          "planeResidualM": 4.4702800766818725e-19,
+          "barycentric": [
+            3.3306690738754696e-16,
+            -3.7161319758604728e-16,
+            1.0
+          ],
+          "minimumTriangleX": 0.7377117276191711
+        },
+        {
+          "sourceTriangle": 31435,
+          "normalX": -0.5708712126822593,
+          "inwardClassifier": true,
+          "planeResidualM": 7.866082390670301e-19,
+          "barycentric": [
+            5.551115123125783e-16,
+            0.9999999999999996,
+            -6.770482227467788e-17
+          ],
+          "minimumTriangleX": 0.7389906644821167
+        },
+        {
+          "sourceTriangle": 31436,
+          "normalX": 0.039548678371193705,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "minimumTriangleX": 0.7389906644821167
+        }
+      ]
+    },
+    {
+      "physicalVertex": 42649,
+      "positionM": [
+        0.7415485382080078,
+        1.6866769790649414,
+        0.03591305762529373
+      ],
+      "boundaryDegree": 4,
+      "boundaryNeighborPositionsM": [
+        [
+          0.7428274750709534,
+          1.6855376958847046,
+          0.03654205799102783
+        ],
+        [
+          0.7415485382080078,
+          1.686816692352295,
+          0.03605511412024498
+        ],
+        [
+          0.7428274750709534,
+          1.685855746269226,
+          0.03463432192802429
+        ],
+        [
+          0.7415485382080078,
+          1.6858744621276855,
+          0.03463432192802429
+        ]
+      ],
+      "sourceFacesContainingPoint": [
+        {
+          "sourceTriangle": 33914,
+          "normalX": -0.5210193674926862,
+          "inwardClassifier": true,
+          "planeResidualM": 3.0665868333667484e-19,
+          "barycentric": [
+            2.220446049250313e-16,
+            -2.4028006710554087e-16,
+            1.0
+          ],
+          "minimumTriangleX": 0.7402641177177429
+        },
+        {
+          "sourceTriangle": 33915,
+          "normalX": -0.44352330027608294,
+          "inwardClassifier": true,
+          "planeResidualM": 6.440302930744541e-19,
+          "barycentric": [
+            3.3306690738754696e-16,
+            -1.6375336469933063e-16,
+            0.9999999999999998
+          ],
+          "minimumTriangleX": 0.7395316958427429
+        },
+        {
+          "sourceTriangle": 33917,
+          "normalX": -0.19406476629203195,
+          "inwardClassifier": true,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            -0.0
+          ],
+          "minimumTriangleX": 0.7415485382080078
+        },
+        {
+          "sourceTriangle": 33918,
+          "normalX": 0.6094715509424833,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            0.0,
+            1.0,
+            7.427534206874774e-18
+          ],
+          "minimumTriangleX": 0.7415485382080078
+        },
+        {
+          "sourceTriangle": 33919,
+          "normalX": 0.8402679349629283,
+          "inwardClassifier": false,
+          "planeResidualM": 3.8332335417084355e-20,
+          "barycentric": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0000000000000002
+          ],
+          "minimumTriangleX": 0.7415485382080078
+        },
+        {
+          "sourceTriangle": 34411,
+          "normalX": -0.4614019115875234,
+          "inwardClassifier": true,
+          "planeResidualM": 4.983664308109919e-19,
+          "barycentric": [
+            0.0,
+            0.9999999999999999,
+            9.202129985457845e-17
+          ],
+          "minimumTriangleX": 0.7395316958427429
+        },
+        {
+          "sourceTriangle": 34413,
+          "normalX": -0.3699292208249671,
+          "inwardClassifier": true,
+          "planeResidualM": 6.06087439757635e-20,
+          "barycentric": [
+            -2.220446049250313e-16,
+            0.0,
+            1.0000000000000002
+          ],
+          "minimumTriangleX": 0.7415485382080078
+        },
+        {
+          "sourceTriangle": 34414,
+          "normalX": 0.01239415745022669,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            -0.0,
+            0.0
+          ],
+          "minimumTriangleX": 0.7415485382080078
+        }
+      ]
+    },
+    {
+      "physicalVertex": 40067,
+      "positionM": [
+        0.733290433883667,
+        1.6865841150283813,
+        -0.03839310631155968
+      ],
+      "boundaryDegree": 4,
+      "boundaryNeighborPositionsM": [
+        [
+          0.7334833145141602,
+          1.6854400634765625,
+          -0.03694142401218414
+        ],
+        [
+          0.7351451516151428,
+          1.6855134963989258,
+          -0.03698105365037918
+        ],
+        [
+          0.7314483523368835,
+          1.6881048679351807,
+          -0.039967138320207596
+        ],
+        [
+          0.7327724099159241,
+          1.688101887702942,
+          -0.03979906439781189
+        ]
+      ],
+      "sourceFacesContainingPoint": [
+        {
+          "sourceTriangle": 67079,
+          "normalX": 0.05155770745530587,
+          "inwardClassifier": false,
+          "planeResidualM": 1.1579284277996942e-18,
+          "barycentric": [
+            -6.661338147750939e-16,
+            1.0000000000000004,
+            1.4722247698270067e-16
+          ],
+          "minimumTriangleX": 0.7313170433044434
+        },
+        {
+          "sourceTriangle": 67080,
+          "normalX": -0.019845657380913317,
+          "inwardClassifier": true,
+          "planeResidualM": 5.311484201212962e-19,
+          "barycentric": [
+            3.3306690738754696e-16,
+            0.9999999999999999,
+            -1.69065186601565e-16
+          ],
+          "minimumTriangleX": 0.733290433883667
+        },
+        {
+          "sourceTriangle": 67081,
+          "normalX": 0.014280722270596898,
+          "inwardClassifier": false,
+          "planeResidualM": 1.0164395367051604e-19,
+          "barycentric": [
+            0.0,
+            1.0,
+            5.58762144642888e-17
+          ],
+          "minimumTriangleX": 0.733290433883667
+        },
+        {
+          "sourceTriangle": 67580,
+          "normalX": 0.04649734226472979,
+          "inwardClassifier": false,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "minimumTriangleX": 0.7313170433044434
+        },
+        {
+          "sourceTriangle": 67581,
+          "normalX": -0.09322229092233732,
+          "inwardClassifier": true,
+          "planeResidualM": 0.0,
+          "barycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "minimumTriangleX": 0.7314483523368835
+        },
+        {
+          "sourceTriangle": 67582,
+          "normalX": 0.02655422036282742,
+          "inwardClassifier": false,
+          "planeResidualM": 2.186329704098502e-19,
+          "barycentric": [
+            1.1102230246251565e-16,
+            0.0,
+            0.9999999999999999
+          ],
+          "minimumTriangleX": 0.7327724099159241
+        }
+      ]
+    }
+  ],
+  "actualEyeDonorTopology": {
+    "actualCornea": {
+      "triangles": 490,
+      "physicalVertices": 256,
+      "boundaryEdges": 20,
+      "nonManifoldEdges": 0,
+      "closed": false
+    },
+    "actualIris": {
+      "triangles": 530,
+      "physicalVertices": 276,
+      "boundaryEdges": 20,
+      "nonManifoldEdges": 0,
+      "closed": false
+    }
+  },
+  "priorNegativeZEyePreflight": [
+    {
+      "shiftM": 0,
+      "categories": {
+        "native_lid/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 1495,
+          "intersectionPairs": 116,
+          "worstPair": [
+            20,
+            209
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7442249059677124,
+                1.6927143335342407,
+                -0.040345583111047745
+              ],
+              [
+                0.7445868253707886,
+                1.691532850265503,
+                -0.04085201770067215
+              ],
+              [
+                0.7412158846855164,
+                1.6924337148666382,
+                -0.04320994019508362
+              ]
+            ],
+            [
+              [
+                0.7428266951843643,
+                1.6935799069032074,
+                -0.04232293401360512
+              ],
+              [
+                0.7444585297286057,
+                1.692124714449048,
+                -0.03926955197453499
+              ],
+              [
+                0.7426836989849352,
+                1.6910396286547185,
+                -0.04092662070393562
+              ]
+            ]
+          ]
+        },
+        "native_lid/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 1319,
+          "intersectionPairs": 100,
+          "worstPair": [
+            54,
+            97
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.745579183101654,
+                1.7009323835372925,
+                -0.03666974976658821
+              ],
+              [
+                0.7460586428642273,
+                1.7009828090667725,
+                -0.033490195870399475
+              ],
+              [
+                0.7454950213432312,
+                1.7009912729263306,
+                -0.03350701928138733
+              ]
+            ],
+            [
+              [
+                0.7456024955987477,
+                1.7010493342094124,
+                -0.03322166983485222
+              ],
+              [
+                0.7454847345158004,
+                1.6999558369424195,
+                -0.03441610593795776
+              ],
+              [
+                0.7456193190097355,
+                1.7008222232833505,
+                -0.03471050817966461
+              ]
+            ]
+          ]
+        },
+        "front_join/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 155,
+          "intersectionPairs": 0,
+          "worstPair": [
+            115,
+            213
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7379295825958252,
+                1.6900428533554077,
+                -0.04461907967925072
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.7389050126075745,
+                1.6910762786865234,
+                -0.044248998165130615
+              ]
+            ],
+            [
+              [
+                0.7383517679787719,
+                1.6929153970703483,
+                -0.045090321791172026
+              ],
+              [
+                0.7405303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ],
+              [
+                0.7382003605395102,
+                1.6896096708513797,
+                -0.04326502267718315
+              ]
+            ]
+          ]
+        },
+        "front_join/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 137,
+          "intersectionPairs": 0,
+          "worstPair": [
+            115,
+            213
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7379295825958252,
+                1.6900428533554077,
+                -0.04461907967925072
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.7389050126075745,
+                1.6910762786865234,
+                -0.044248998165130615
+              ]
+            ],
+            [
+              [
+                0.7381835375941836,
+                1.693058392804116,
+                -0.044745449316501616
+              ],
+              [
+                0.7403200628265285,
+                1.6904087647125126,
+                -0.04198647324442863
+              ],
+              [
+                0.738023718449428,
+                1.6898199583664537,
+                -0.042962208729982375
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 3075,
+          "intersectionPairs": 250,
+          "worstPair": [
+            0,
+            351
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7411462664604187,
+                1.6959359645843506,
+                -0.024439405649900436
+              ],
+              [
+                0.744570255279541,
+                1.6970000267028809,
+                -0.015200000256299973
+              ],
+              [
+                0.744605302810669,
+                1.6971806287765503,
+                -0.015217743813991547
+              ]
+            ],
+            [
+              [
+                0.740706992897346,
+                1.6931761538870633,
+                -0.022505397316813468
+              ],
+              [
+                0.7429444562673115,
+                1.6964650572771207,
+                -0.02368301000893116
+              ],
+              [
+                0.7408247539802932,
+                1.6965912300073542,
+                -0.02203435298502445
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 3241,
+          "intersectionPairs": 271,
+          "worstPair": [
+            0,
+            351
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7411462664604187,
+                1.6959359645843506,
+                -0.024439405649900436
+              ],
+              [
+                0.744570255279541,
+                1.6970000267028809,
+                -0.015200000256299973
+              ],
+              [
+                0.744605302810669,
+                1.6971806287765503,
+                -0.015217743813991547
+              ]
+            ],
+            [
+              [
+                0.7405051161564433,
+                1.6933023266755045,
+                -0.02281662296950817
+              ],
+              [
+                0.7428519293695235,
+                1.6964650572771207,
+                -0.02396900240778923
+              ],
+              [
+                0.7406144659995579,
+                1.6965996415382252,
+                -0.022362402048707007
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "shiftM": -0.002,
+      "categories": {
+        "native_lid/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 563,
+          "intersectionPairs": 47,
+          "worstPair": [
+            76,
+            143
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7425005435943604,
+                1.700478196144104,
+                -0.0368211567401886
+              ],
+              [
+                0.7417014241218567,
+                1.7000912427902222,
+                -0.03966424986720085
+              ],
+              [
+                0.7437033653259277,
+                1.700419306755066,
+                -0.03932778909802437
+              ]
+            ],
+            [
+              [
+                0.7429716316565418,
+                1.7022858274430037,
+                -0.0375956598341465
+              ],
+              [
+                0.743913722182765,
+                1.6989716895185412,
+                -0.036998443645238875
+              ],
+              [
+                0.7428959281697416,
+                1.7006539928987623,
+                -0.03926955197453499
+              ]
+            ]
+          ]
+        },
+        "native_lid/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 312,
+          "intersectionPairs": 44,
+          "worstPair": [
+            76,
+            154
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7425005435943604,
+                1.700478196144104,
+                -0.0368211567401886
+              ],
+              [
+                0.7417014241218567,
+                1.7000912427902222,
+                -0.03966424986720085
+              ],
+              [
+                0.7437033653259277,
+                1.700419306755066,
+                -0.03932778909802437
+              ]
+            ],
+            [
+              [
+                0.7411463325425529,
+                1.701730666987598,
+                -0.04068268496990204
+              ],
+              [
+                0.7428370471626067,
+                1.7005194086376578,
+                -0.039076086473464965
+              ],
+              [
+                0.7427613436758065,
+                1.6985679366188124,
+                -0.04012752730846405
+              ]
+            ]
+          ]
+        },
+        "front_join/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 98,
+          "intersectionPairs": 0,
+          "worstPair": [
+            115,
+            212
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7379295825958252,
+                1.6900428533554077,
+                -0.04461907967925072
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.7389050126075745,
+                1.6910762786865234,
+                -0.044248998165130615
+              ]
+            ],
+            [
+              [
+                0.7363517679787719,
+                1.6929153970703483,
+                -0.045090321791172026
+              ],
+              [
+                0.7386901694863581,
+                1.6931845655925573,
+                -0.04387906227707863
+              ],
+              [
+                0.7385303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ]
+            ]
+          ]
+        },
+        "front_join/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 53,
+          "intersectionPairs": 0,
+          "worstPair": [
+            115,
+            212
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7379295825958252,
+                1.6900428533554077,
+                -0.04461907967925072
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.7389050126075745,
+                1.6910762786865234,
+                -0.044248998165130615
+              ]
+            ],
+            [
+              [
+                0.7361835375941836,
+                1.693058392804116,
+                -0.044745449316501616
+              ],
+              [
+                0.7384798815056228,
+                1.6933023266755045,
+                -0.043567836624383925
+              ],
+              [
+                0.7383200628265285,
+                1.6904087647125126,
+                -0.04198647324442863
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 2690,
+          "intersectionPairs": 172,
+          "worstPair": [
+            0,
+            349
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7411462664604187,
+                1.6959359645843506,
+                -0.024439405649900436
+              ],
+              [
+                0.744570255279541,
+                1.6970000267028809,
+                -0.015200000256299973
+              ],
+              [
+                0.744605302810669,
+                1.6971806287765503,
+                -0.015217743813991547
+              ]
+            ],
+            [
+              [
+                0.7408266951843643,
+                1.6935630837250502,
+                -0.02408676255941391
+              ],
+              [
+                0.7426604060038471,
+                1.6963893536156975,
+                -0.025710186329483985
+              ],
+              [
+                0.7409444562673115,
+                1.6964650572771207,
+                -0.02368301000893116
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 2160,
+          "intersectionPairs": 159,
+          "worstPair": [
+            0,
+            349
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7411462664604187,
+                1.6959359645843506,
+                -0.024439405649900436
+              ],
+              [
+                0.744570255279541,
+                1.6970000267028809,
+                -0.015200000256299973
+              ],
+              [
+                0.744605302810669,
+                1.6971806287765503,
+                -0.015217743813991547
+              ]
+            ],
+            [
+              [
+                0.7407425799920702,
+                1.6936640220955015,
+                -0.024355931547284125
+              ],
+              [
+                0.7426015249967122,
+                1.6963809420848266,
+                -0.025937296789884566
+              ],
+              [
+                0.7408519293695235,
+                1.6964650572771207,
+                -0.02396900240778923
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "shiftM": -0.004,
+      "categories": {
+        "native_lid/actualCornea": {
+          "distanceLowerBoundM": 0.00021558474138469287,
+          "exactMinimumWithinReachM": 0.00021558474138469287,
+          "testedPairs": 96,
+          "intersectionPairs": 0,
+          "worstPair": [
+            144,
+            345
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.740851879119873,
+                1.6947582960128784,
+                -0.026003947481513023
+              ],
+              [
+                0.7410537600517273,
+                1.6953891515731812,
+                -0.024817923083901405
+              ],
+              [
+                0.7428622245788574,
+                1.6951788663864136,
+                -0.025045033544301987
+              ]
+            ],
+            [
+              [
+                0.740576290811553,
+                1.6941182439476252,
+                -0.026055056941509246
+              ],
+              [
+                0.7417791376888299,
+                1.6963052384234034,
+                -0.028511220929026602
+              ],
+              [
+                0.7406604060038471,
+                1.6963893536156975,
+                -0.025710186329483985
+              ]
+            ]
+          ]
+        },
+        "native_lid/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 35,
+          "intersectionPairs": 0,
+          "worstPair": [
+            144,
+            529
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.740851879119873,
+                1.6947582960128784,
+                -0.026003947481513023
+              ],
+              [
+                0.7410537600517273,
+                1.6953891515731812,
+                -0.024817923083901405
+              ],
+              [
+                0.7428622245788574,
+                1.6951788663864136,
+                -0.025045033544301987
+              ]
+            ],
+            [
+              [
+                0.740525821509912,
+                1.6941855359617621,
+                -0.02627375755906105
+              ],
+              [
+                0.7413501500218653,
+                1.6963136499542744,
+                -0.02831775542795658
+              ],
+              [
+                0.7406015249967122,
+                1.6963809420848266,
+                -0.025937296789884566
+              ]
+            ]
+          ]
+        },
+        "front_join/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 49,
+          "intersectionPairs": 0,
+          "worstPair": [
+            115,
+            211
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7379295825958252,
+                1.6900428533554077,
+                -0.04461907967925072
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.7389050126075745,
+                1.6910762786865234,
+                -0.044248998165130615
+              ]
+            ],
+            [
+              [
+                0.7366901694863581,
+                1.6931845655925573,
+                -0.04387906227707863
+              ],
+              [
+                0.7386836989849352,
+                1.6910396286547185,
+                -0.04092662070393562
+              ],
+              [
+                0.7365303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ]
+            ]
+          ]
+        },
+        "front_join/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 22,
+          "intersectionPairs": 0,
+          "worstPair": [
+            115,
+            211
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7379295825958252,
+                1.6900428533554077,
+                -0.04461907967925072
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.7389050126075745,
+                1.6910762786865234,
+                -0.044248998165130615
+              ]
+            ],
+            [
+              [
+                0.7364798815056228,
+                1.6933023266755045,
+                -0.043567836624383925
+              ],
+              [
+                0.7385911720871472,
+                1.6911994473338128,
+                -0.04068268496990204
+              ],
+              [
+                0.7363200628265285,
+                1.6904087647125126,
+                -0.04198647324442863
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 1302,
+          "intersectionPairs": 35,
+          "worstPair": [
+            127,
+            213
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.742466926574707,
+                1.6956079006195068,
+                -0.04304568096995354
+              ],
+              [
+                0.7338751554489136,
+                1.6898657083511353,
+                -0.04414118453860283
+              ],
+              [
+                0.7329229116439819,
+                1.6897037029266357,
+                -0.04370433837175369
+              ]
+            ],
+            [
+              [
+                0.7343517679787719,
+                1.6929153970703483,
+                -0.045090321791172026
+              ],
+              [
+                0.7365303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ],
+              [
+                0.7342003605395102,
+                1.6896096708513797,
+                -0.04326502267718315
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 1044,
+          "intersectionPairs": 30,
+          "worstPair": [
+            130,
+            213
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.742466926574707,
+                1.6956079006195068,
+                -0.04304568096995354
+              ],
+              [
+                0.7325716614723206,
+                1.68958580493927,
+                -0.04338627681136131
+              ],
+              [
+                0.7435267567634583,
+                1.6947078704833984,
+                -0.041556842625141144
+              ]
+            ],
+            [
+              [
+                0.7341835375941836,
+                1.693058392804116,
+                -0.044745449316501616
+              ],
+              [
+                0.7363200628265285,
+                1.6904087647125126,
+                -0.04198647324442863
+              ],
+              [
+                0.734023718449428,
+                1.6898199583664537,
+                -0.042962208729982375
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "shiftM": -0.006,
+      "categories": {
+        "native_lid/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 0,
+          "intersectionPairs": 0,
+          "worstPair": null
+        },
+        "native_lid/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 0,
+          "intersectionPairs": 0,
+          "worstPair": null
+        },
+        "front_join/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 3,
+          "intersectionPairs": 0,
+          "worstPair": [
+            112,
+            211
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7368727922439575,
+                1.6906002759933472,
+                -0.04584907740354538
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ],
+              [
+                0.737228274345398,
+                1.6903984546661377,
+                -0.0454036183655262
+              ]
+            ],
+            [
+              [
+                0.7346901694863581,
+                1.6931845655925573,
+                -0.04387906227707863
+              ],
+              [
+                0.7366836989849352,
+                1.6910396286547185,
+                -0.04092662070393562
+              ],
+              [
+                0.7345303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ]
+            ]
+          ]
+        },
+        "front_join/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 1,
+          "intersectionPairs": 0,
+          "worstPair": [
+            111,
+            210
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7368727922439575,
+                1.6906002759933472,
+                -0.04584907740354538
+              ],
+              [
+                0.7379586100578308,
+                1.691923975944519,
+                -0.045824479311704636
+              ],
+              [
+                0.7402307391166687,
+                1.6906845569610596,
+                -0.04334406554698944
+              ]
+            ],
+            [
+              [
+                0.7344798815056228,
+                1.6933023266755045,
+                -0.043567836624383925
+              ],
+              [
+                0.7367425799920702,
+                1.693680845040828,
+                -0.04205376316308975
+              ],
+              [
+                0.7365911720871472,
+                1.6911994473338128,
+                -0.04068268496990204
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 827,
+          "intersectionPairs": 26,
+          "worstPair": [
+            132,
+            213
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7435267567634583,
+                1.6947078704833984,
+                -0.041556842625141144
+              ],
+              [
+                0.7324554324150085,
+                1.6895829439163208,
+                -0.043378785252571106
+              ],
+              [
+                0.7320916652679443,
+                1.6895167827606201,
+                -0.04320026561617851
+              ]
+            ],
+            [
+              [
+                0.7323517679787719,
+                1.6929153970703483,
+                -0.045090321791172026
+              ],
+              [
+                0.7345303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ],
+              [
+                0.7322003605395102,
+                1.6896096708513797,
+                -0.04326502267718315
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 762,
+          "intersectionPairs": 26,
+          "worstPair": [
+            134,
+            213
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7435267567634583,
+                1.6947078704833984,
+                -0.041556842625141144
+              ],
+              [
+                0.7315337061882019,
+                1.6894314289093018,
+                -0.04291566461324692
+              ],
+              [
+                0.731278657913208,
+                1.6893831491470337,
+                -0.04275453835725784
+              ]
+            ],
+            [
+              [
+                0.7321835375941836,
+                1.693058392804116,
+                -0.044745449316501616
+              ],
+              [
+                0.7343200628265285,
+                1.6904087647125126,
+                -0.04198647324442863
+              ],
+              [
+                0.732023718449428,
+                1.6898199583664537,
+                -0.042962208729982375
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "shiftM": -0.008,
+      "categories": {
+        "native_lid/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 0,
+          "intersectionPairs": 0,
+          "worstPair": null
+        },
+        "native_lid/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 0,
+          "intersectionPairs": 0,
+          "worstPair": null
+        },
+        "front_join/actualCornea": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 0,
+          "intersectionPairs": 0,
+          "worstPair": null
+        },
+        "front_join/actualIris": {
+          "distanceLowerBoundM": 0.00025,
+          "exactMinimumWithinReachM": null,
+          "testedPairs": 0,
+          "intersectionPairs": 0,
+          "worstPair": null
+        },
+        "inward_wall/actualCornea": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 543,
+          "intersectionPairs": 11,
+          "worstPair": [
+            136,
+            216
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7427529096603394,
+                1.6947835683822632,
+                -0.041035328060388565
+              ],
+              [
+                0.731278657913208,
+                1.6893831491470337,
+                -0.04275453835725784
+              ],
+              [
+                0.7306870222091675,
+                1.689190149307251,
+                -0.04211050271987915
+              ]
+            ],
+            [
+              [
+                0.7325303508072638,
+                1.6902152996771038,
+                -0.0422556403696537
+              ],
+              [
+                0.7346836989849352,
+                1.6910396286547185,
+                -0.04092662070393562
+              ],
+              [
+                0.7345827613129758,
+                1.6889619839638472,
+                -0.03877327252626419
+              ]
+            ]
+          ]
+        },
+        "inward_wall/actualIris": {
+          "distanceLowerBoundM": 0.0,
+          "exactMinimumWithinReachM": 0.0,
+          "testedPairs": 474,
+          "intersectionPairs": 7,
+          "worstPair": [
+            138,
+            218
+          ],
+          "worstTrianglesM": [
+            [
+              [
+                0.7427529096603394,
+                1.6947835683822632,
+                -0.041035328060388565
+              ],
+              [
+                0.7309169173240662,
+                1.6890627145767212,
+                -0.04168514162302017
+              ],
+              [
+                0.7312707304954529,
+                1.688920259475708,
+                -0.041082821786403656
+              ]
+            ],
+            [
+              [
+                0.730023718449428,
+                1.6898199583664537,
+                -0.042962208729982375
+              ],
+              [
+                0.7323200628265285,
+                1.6904087647125126,
+                -0.04198647324442863
+              ],
+              [
+                0.7322023017435813,
+                1.6880451285541058,
+                -0.03954713080525398
+              ]
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Body18 stopped before assembling native tissue, constructing its inward wall, fit searching, source conservation, normals/skinUV or export. These gates are pending and not passes.",
+    "The retained prior body17 inward wall has actual surface intersections at all five measured shifts, including8mm. This does not prove every real-valued shift fails.",
+    "Cornea and opaque sclera/iris are separate open-backed actual surfaces; both were checked. No closed eyeball volume is invented.",
+    "The opaque donor shares one mesh for iris and sclera; testing every triangle of that mesh includes both, without an inferred texture-only exclusion.",
+    "Enlarging surgery by face-normal sign creates a branched source boundary. This classifier is not a sufficient connected-sheet segmentation.",
+    "No attempt to repair the branch or relax8mm was made. No appearance, anatomy, rig motion or game-ready acceptance is claimed."
+  ]
+}

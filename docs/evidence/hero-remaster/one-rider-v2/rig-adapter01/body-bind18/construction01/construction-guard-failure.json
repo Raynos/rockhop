@@ -1,0 +1,8 @@
+{
+  "status": "REJECTED before export at CPU construction guard",
+  "exception": "AssertionError",
+  "detail": "Non-simple boundary",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind18/run_trial.py\", line 8, in <module>\n    exec(compile((base/'build_graft.py').read_text(),str(base/'build_graft.py'),'exec'),context)\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind18/build_graft.py\", line 212, in <module>\n    after,loops,directed,weld=topology(positions,output)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind18/build_graft.py\", line 197, in topology\n    assert all(len(n)==2 for n in adj.values()), 'Non-simple boundary'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Non-simple boundary\n",
+  "candidateExported": false,
+  "GPUWorkPerformed": false
+}

@@ -1256,3 +1256,13 @@ Neutral/back hip311/443→2/15, upper legs152/148→0. All six sampled seat nega
 counts0, exact inverse-skin roundtrip<1e-12m; source/contact/skeleton unchanged.
 Limits: No GLB/GPU or art pass. Source21.456cm/posed15.196cm displacement may
 change silhouette; normal-fold counts and seat vertices do not prove anatomy.
+
+## Round119 — retire normal-sign eye sheet segmentation
+
+Finding: Five source boundary branches are caused by a discontinuous normal-sign
+classifier. Use physical connected-sheet segmentation before further surgery.
+Validation: Parent frozen audit rerun, five degree4 vertices with exact source
+face witnesses; current11/native/eye hashes unchanged. Actual prior wall at−8mm
+has11 cornea/7 opaque near-zero triangle pairs. No GLB/GPU/native assembly.
+Limits: Five discrete shifts do not cover all placements. Construction stopped
+before conservation/material/appearance checks; this is procedural evidence.
