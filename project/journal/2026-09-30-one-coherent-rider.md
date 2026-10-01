@@ -1629,3 +1629,15 @@ Limits: Gray rest fixture/CPU poses are not a new whole-character game clip
 or body/face grade; source interfaces, moving contacts/Garage/device open.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/silhouette02/
 Ask:239,241,242,245,247
+
+## Round152 — sparse cage radius measurement rejected
+
+Finding: Sparse native vertex sampling fails the unchanged3x radius guard
+on forearm.L. Reject before model export; next actual triangle-plane
+section measurements, not a guard relaxation or point-sample sweep.
+Validation: Exact3.3197x failure reproduced in read-only instrumentation;
+section profiles retained. Original fit01/source untouched, no output NPZ.
+Limits: No model, gray movie, pose/contact or appearance evidence generated.
+Ship150 retained34 passed; next153. All rider quality checkpoints remain open.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/cage03/
+Ask:239,241,242,245

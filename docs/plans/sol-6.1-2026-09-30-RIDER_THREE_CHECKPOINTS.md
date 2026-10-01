@@ -1330,3 +1330,13 @@ panels coherently, protecting head/hood/gloves and native fields. Do not merely
 sweep projection distances or normal thresholds. Retain every original source
 and previous failures. Native template fit still requires genuine interface
 construction and actual physics motion; ship150passed, next153.
+
+## Reject sparse point-section estimator — round152
+
+The low-frequency cage does not export: forearm.L radius3.3197x breaches
+unchanged [.35,3]guard. Native point sampling can miss angular coverage;
+parent rejects it as reliable correspondence. One setup/measurement failure,
+not a generated asset. Instrumented rerun preserves the exact failure; no
+geometry/weights/UV mutation or relaxed guard. Replace vertex-quantile bins
+with actual triangle-plane section measurements before the next coherent cage.
+Original151failed projection/nativefit01/source34 preserved. Shipnext153.

@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round151, 2026-10-01
+## Current evidence — round152, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -1016,3 +1016,13 @@ panels coherently, protecting head/hood/gloves and native fields. Do not merely
 sweep projection distances or normal thresholds. Retain every original source
 and previous failures. Native template fit still requires genuine interface
 construction and actual physics motion; ship150passed, next153.
+
+## Reject sparse point-section estimator — round152
+
+The low-frequency cage does not export: forearm.L radius3.3197x breaches
+unchanged [.35,3]guard. Native point sampling can miss angular coverage;
+parent rejects it as reliable correspondence. One setup/measurement failure,
+not a generated asset. Instrumented rerun preserves the exact failure; no
+geometry/weights/UV mutation or relaxed guard. Replace vertex-quantile bins
+with actual triangle-plane section measurements before the next coherent cage.
+Original151failed projection/nativefit01/source34 preserved. Shipnext153.
