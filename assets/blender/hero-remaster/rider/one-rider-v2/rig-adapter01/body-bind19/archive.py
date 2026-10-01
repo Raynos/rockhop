@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,shutil
 base=Path('docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind19')
 private=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind19')
-for folder in ['arap-cpu']:
+for folder in ['arap-cpu','morph01/cpu','morph01/cpu02']:
     root=base/folder; target=private/folder;target.mkdir(parents=True,exist_ok=True); rows=[]
     for p in sorted(root.glob('*.f64')):
         q=target/p.name;old=p.read_bytes();sha=hashlib.sha256(old).hexdigest()

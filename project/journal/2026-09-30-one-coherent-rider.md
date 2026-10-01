@@ -1266,3 +1266,12 @@ face witnesses; current11/native/eye hashes unchanged. Actual prior wall at−8m
 has11 cornea/7 opaque near-zero triangle pairs. No GLB/GPU/native assembly.
 Limits: Five discrete shifts do not cover all placements. Construction stopped
 before conservation/material/appearance checks; this is procedural evidence.
+
+## Round120 — hip corrective improves played posterior silhouette
+
+Finding: Local hip morphs reduce the collapsed rear strip while preserving
+existing physics-driven posing. Retain private refinement candidate.
+Validation: Six keys7.11nm, contacts16.73nm; four264-frame matched actual clips,
+384 candidate frames reviewed; low/high clear/hash exact, crash/restart5ms.
+Limits: Groin/thigh/sleeve folds remain. Art-only frozen renderer overlay after
+three inline bundle overages; no full-body/face/phone/realLOD acceptance.

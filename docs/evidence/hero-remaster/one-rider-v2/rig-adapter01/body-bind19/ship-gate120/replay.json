@@ -1,0 +1,96 @@
+{
+  "build": "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body19-overlay",
+  "recordingFile": "docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json",
+  "expected": {
+    "hash": "368f1ca5bd9e830a",
+    "runTime": 40.083333333333336,
+    "faults": 0,
+    "finishTime": 40.083333333333336,
+    "tick": 4810
+  },
+  "hipReviewDriver": true,
+  "reviewOverlay": {
+    "kind": "fixed current11 build plus exact new morph GLB and harness-installed driver",
+    "sourceBuild": "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body11-build",
+    "candidateSHA256": "a43e64471671877cf4a9c9b98e04a8c2172298f61e923241618d273f1b9bbd91",
+    "releaseBuild": false,
+    "productionBundleGate": "Full current-source inline build exceeds701KiB by279B; gate remains open. Overlay is for matched art evidence only.",
+    "changes": [
+      {
+        "oldURL": "models/19a1cfc5069d2cd3/rider-street-mustard-lod-b7f4f22790124c66.glb",
+        "newURL": "models/19a1cfc5069d2cd3/rider-street-mustard-lod-a43e64471671877c.glb",
+        "oldBytes": 14007264,
+        "newBytes": 18247948
+      },
+      {
+        "oldURL": "models/19a1cfc5069d2cd3/rider-street-mustard-b7f4f22790124c66.glb",
+        "newURL": "models/19a1cfc5069d2cd3/rider-street-mustard-a43e64471671877c.glb",
+        "oldBytes": 14007264,
+        "newBytes": 18247948
+      }
+    ]
+  },
+  "runs": [
+    {
+      "tier": "low",
+      "result": {
+        "hash": "368f1ca5bd9e830a",
+        "runTime": 40.083333333333336,
+        "faults": 0,
+        "finishTime": 40.083333333333336,
+        "tick": 4810
+      },
+      "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+      "crashRestart": {
+        "crashed": true,
+        "crashTicks": 103,
+        "restartPhase": "riding",
+        "restartTick": 0,
+        "restartMs": 5
+      },
+      "hipCorrective": {
+        "nearestRad": 0.0065069003809509265,
+        "strength": 1,
+        "weights": [
+          0.9969929653766966,
+          0.00008839875041344924,
+          0.00006037847950092629,
+          0.0009199843325809856,
+          0.001877131201781076,
+          0.00006114185902703083
+        ]
+      }
+    },
+    {
+      "tier": "high",
+      "result": {
+        "hash": "368f1ca5bd9e830a",
+        "runTime": 40.083333333333336,
+        "faults": 0,
+        "finishTime": 40.083333333333336,
+        "tick": 4810
+      },
+      "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+      "crashRestart": {
+        "crashed": true,
+        "crashTicks": 103,
+        "restartPhase": "riding",
+        "restartTick": 0,
+        "restartMs": 5
+      },
+      "hipCorrective": {
+        "nearestRad": 0.0065069003809509265,
+        "strength": 1,
+        "weights": [
+          0.9969929653766966,
+          0.00008839875041344924,
+          0.00006037847950092629,
+          0.0009199843325809856,
+          0.001877131201781076,
+          0.00006114185902703083
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { decodeJSON, expandFrames } from '../../src/core/replay';
+import { installPrivateHipReviewDriver } from './new-rider-hip-review-install.mjs';
 
 const arg = (key: string, fallback = '') => process.argv.find(a => a.startsWith(`--${key}=`))?.slice(key.length + 3) ?? fallback;
 const build = path.resolve(arg('build'));
@@ -15,6 +16,7 @@ const out = path.resolve(arg('out'));
 const angle = arg('angle', 'side');
 const surface = arg('surface', 'textured');
 const cameraVersion = arg('camera-version', 'orbit02');
+const hipReviewDriver = arg('hip-review-driver', '0') === '1';
 assert(['orbit01', 'orbit02'].includes(cameraVersion));
 // rig.dir=(-sin(yaw),-sin(pitch),-cos(yaw)); yaw0 is the true side.
 const angles: Record<string, number> = cameraVersion === 'orbit01' ? { side: Math.PI / 2, 'rear-three-quarter': 2.3 } : { side: 0, 'rear-three-quarter': -.8 };
@@ -29,7 +31,7 @@ assert(model);
 fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
 assert(!fs.existsSync(path.join(out, 'report.json')) && fs.readdirSync(path.join(out, 'frames')).length === 0);
 const report: any = { build, sourceSHA256: model.sha256, angle, cameraVersion, surface, frames, fps,
-  scope: 'Actual recorded seated riding/maximum lean/landing-recovery; camera only, no pose injection', samples: [], errors: [], loaded: [] };
+  scope: 'Actual recorded seated riding/maximum lean/landing-recovery; camera only, no pose injection', hipReviewDriver, reviewOverlay: hipReviewDriver ? JSON.parse(fs.readFileSync(path.join(build, 'hip-overlay.json'), 'utf8')) : null, samples: [], errors: [], loaded: [] };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
@@ -46,6 +48,7 @@ try {
     await t.loadTrack(header.trackId, header.seed); await r.whenReady();
     t.setQuality('high'); await r.whenReady(); t.skipCountdown(); t.render(true);
   }, recording.header);
+  if (hipReviewDriver) await installPrivateHipReviewDriver(page);
   await page.evaluate(surface => {
     if (surface === 'gray') (window as any).__render.debug.rider.scene.traverse((o: any) => {
       if (!o.isMesh) return;
@@ -81,7 +84,7 @@ try {
       const bones: Record<string, unknown> = {};
       d.rider.scene.traverse((o: any) => { if (o.isBone) bones[o.name] = { position: o.getWorldPosition(new T.Vector3()).toArray(), quaternion: o.getWorldQuaternion(new T.Quaternion()).toArray() }; });
       return { i, tick: t.getState().tick, state: structuredClone(t.getState()), hash: t.hashState(), phase: t.phase(),
-        debug: structuredClone(d.rider.debug), bones, orbit, camera: { position: d.rig.camera.position.toArray(), quaternion: d.rig.camera.quaternion.toArray(), fov: d.rig.camera.fov, zoom: d.rig.camera.zoom, view: structuredClone(d.rig.camera.view) },
+        debug: structuredClone(d.rider.debug), hipCorrective: structuredClone(d.rider.scene.userData.privateHipCorrectiveDiagnostic ?? null), bones, orbit, camera: { position: d.rig.camera.position.toArray(), quaternion: d.rig.camera.quaternion.toArray(), fov: d.rig.camera.fov, zoom: d.rig.camera.zoom, view: structuredClone(d.rig.camera.view) },
         anchor: { initial: first.toArray(), final: final.toArray(), projected: projected.toArray() } };
     }, { input: inputs.slice(i * steps, (i + 1) * steps), yaw, i });
     report.samples.push(sample);
@@ -90,7 +93,8 @@ try {
   await Promise.all(responses);
   assert(report.loaded.some((m: any) => m.sha256 === model.sha256 && m.status === 200));
   assert.deepEqual(report.errors, []);
-  const ff = spawnSync('ffmpeg', ['-v', 'error', '-y', '-framerate', String(fps), '-i', path.join(out, 'frames/%04d.png'), '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', '-an', '-movflags', '+faststart', path.join(out, 'played.mp4')], { encoding: 'utf8' });
+  if (hipReviewDriver) assert(report.samples.every((s: any) => s.hipCorrective && s.hipCorrective.weights.every(Number.isFinite)));
+  const ff = spawnSync('ffmpeg', ['-v', 'error', '-y', '-framerate', String(fps), '-i', path.join(out, 'frames/%04d.png'), '-c:v', 'libx264', '-threads', '2', '-crf', '18', '-pix_fmt', 'yuv420p', '-an', '-movflags', '+faststart', path.join(out, 'played.mp4')], { encoding: 'utf8' });
   assert.equal(ff.status, 0, ff.stderr);
 } catch (error) { report.failure = error instanceof Error ? error.message : String(error); process.exitCode = 1; }
 finally {

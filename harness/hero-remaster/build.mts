@@ -8,6 +8,7 @@ import crypto from 'node:crypto';
 import { build, type Plugin } from 'vite';
 import { readModelCatalog, type ModelAsset } from '../../src/boot/model-catalog';
 import { patchNewRiderSource } from './new-rider-private-adapter.mjs';
+import { patchPrivateHipCorrective } from './new-rider-hip-corrective.mjs';
 
 const arg = (name: string, fallback = '') => process.argv.find(a => a.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const root = process.cwd();
@@ -15,6 +16,8 @@ const out = path.resolve(arg('out', 'harness/out/hero-remaster/baseline-build'))
 const mappingFile = arg('models');
 const newRiderAdapter = arg('new-rider-adapter', '0');
 const newRiderSeam = arg('new-rider-seam', '0');
+const hipCorrective = arg('new-rider-hip-corrective', '0');
+if (!['0','1'].includes(hipCorrective) || (hipCorrective === '1' && newRiderAdapter !== '1')) throw new Error('invalid private hip corrective flag');
 if (!['0','1'].includes(newRiderSeam) || (newRiderSeam === '1' && newRiderAdapter !== '1')) throw new Error('invalid private NEW seam flag');
 if (!['0', '1'].includes(newRiderAdapter)) throw new Error('invalid private rider adapter flag');
 const mapping: Record<string, string> = mappingFile ? JSON.parse(fs.readFileSync(mappingFile, 'utf8')) : {};
@@ -39,6 +42,7 @@ const manifest = {
   releaseBuild: false,
   newRiderAdapter: newRiderAdapter === '1',
   newRiderSeam: newRiderSeam === '1',
+  newRiderHipCorrective: hipCorrective === '1',
   models: assets.map(a => ({ logical: a.logical, url: a.url, bytes: a.bytes.length, sha256: a.sha256 })),
 };
 const plugin: Plugin = {
@@ -75,7 +79,9 @@ const adapterPlugin: Plugin = {
   enforce: 'pre',
   transform(code, id) {
     if (newRiderAdapter === '1' && id.toLowerCase().endsWith('/src/render/hero/gltfrider.ts')) {
-      return { code: patchNewRiderSource(code, true, newRiderSeam === '1'), map: null };
+      let candidate = patchNewRiderSource(code, true, newRiderSeam === '1');
+      if (hipCorrective === '1') candidate = patchPrivateHipCorrective(candidate);
+      return { code: candidate, map: null };
     }
     return null;
   },

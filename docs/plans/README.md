@@ -37,6 +37,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round118 retains local ARAP
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round119 stops normal-sign eye sheet clipping:5 degree4 branches, parent source/topology audit confirms procedural classifier error. Current11/native/eyes exact; no export/GPU. Connectivity segmentation next. Hip19 private continuous morph prototype under CPU/moving checks. Gallery115 retained; ship next120.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round120 private hip corrective improves posterior silhouette in four264-frame actual clips;384 ordered candidate frames reviewed. Physics/bones/cameras exact11; low/high ship gate exact finish/hash,5ms restart. Tight groin/thigh and sleeve folds remain. Art-only overlay; inline production bundle gate open. Native eye20 CPU export awaits motion judgment; gallery115 retained.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
