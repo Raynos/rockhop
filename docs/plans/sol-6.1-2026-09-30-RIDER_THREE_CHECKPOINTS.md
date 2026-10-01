@@ -1399,3 +1399,40 @@ C19 motion comparison before detail/PBR bake. Independent hoodie-repair02
 remains a separately evaluated direction. No new appearance grades, complete
 rigged export, sitting/Garage/contact/device pass or gallery publish. Required
 retained34ship153passed; next156. All three quality checkpoints stay open.
+
+## Full motion exposes transition failures — round155
+
+All480 actual mappedC19/body34 riding states now have CPU joint histories verified
+against the recorded in-engine world bone positions/quaternions and bike-frame
+positions. Maximum errors5.83e-14m/4.50e-14, prior four-key matrix delta8.13e-14.
+All five primitive matrix histories are byte-identical with their source19order;
+all states use the preserved physics driver, including both maximum lean targets.
+This is a reliable full-motion construction probe, not new moving art acceptance.
+
+One new shoulder annulus fixes the307 protected seam exactly through480 states,
+but surrounding geometry fails:24.25cm native displacement,185 strict rest
+crossings and405/323/315/337 crossings in four actual witnesses. Native worst
+strain15.49x, transition5.47x. Reject this whole construction. Stop the fixed
+radial/downward annulus mechanism; rebuild an anatomical upper yoke between the
+fixed hood boundary and separate chest/left/right arm interfaces. Preserve source
+head/hood fields and lower native garment; do not repeat annulus parameter sweeps.
+
+One18cm anatomical clean-native cuff transition preserves source contact geometry,
+changes200 native weight vectors and uses296 ordered cuff/ankle triangles after
+228 native quad removals. Every new physical bridge edge has two faces; skin
+aliases match. Full480 cuff seam collapse/normal-opposition flags fall to zero,
+with1.000x stretch. Ankles remain1.120/1.033x with no collapse or normal opposition.
+However each upstream sleeve introduces one collapsed triangle at frame39:
+quads1248/1820, area ratios.187/.169 and worst2.34/2.39x stretch. Parent reproduces
+those literal failures independently. Retain regional progress, not a moving pass.
+Correct those specific wrist deformation defects without changing glove/sole pads
+or hiding them via a shorter rest edge or a weight-radius sweep. Whole garment
+strain/folds also remain; no new appearance grade from numerical probes.
+
+Original source arrays and native rest positions are exact; canonical weights
+stay at most4 influences. Head/hood remain protected, freshC19 retained, no complete
+GLB/PBR bake, new gallery or player promotion. Both construction attempts and
+setup fixes remain in evidence/failure history; no counter reset. Parent owns
+acceptance. Next anatomy-based upper yoke and literal wrist repair, then complete
+matched neutral/neck/actual-motion render before high-detail bake. Requiredship156
+next; retained34ship153passed. All three visual checkpoints remain open.

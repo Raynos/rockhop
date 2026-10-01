@@ -342,7 +342,7 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 
 | 244 | "Show the sitting animation again; ChatGPT iOS cannot load local files. Make a ChatGPT site with images and videos and a clickable link." | **done — private mobile gallery published** | https://rockhop-rider-review.raynos.chatgpt.site — 21videos retaining front/side/rear sitting action, old gameplay/hip evidence, new hip correction, retained eye22skin/rejected optics24 and matched rejected sleeve25 comparisons, plus nine/all24 frame boards and closeup links. Local headless WebKit phone/desktop playback and image loading pass; Sites deployment succeeded. |
 
-| 245 | "Continue the autonomous rider work after publishing the phone gallery." | **in flight — literal interfaces and explicit cuff skin transition** | Continue the three checkpoints, protect the approved white rider and hood/neck join, compare actual moving outputs before accepting private candidates. |
+| 245 | "Continue the autonomous rider work after publishing the phone gallery." | **in flight — anatomical yoke and full-motion wrist repair** | Continue the three checkpoints, protect the approved white rider and hood/neck join, compare actual moving outputs before accepting private candidates. |
 
 | 246 | "The review website still has deformed hips/butt/legs; didn’t game development fix them with a new rig/skeleton?" | **done — new C19 skeleton confirmed and shown on live gallery** | C19 reduced hip strain but independent collision/support gates failed. Actual mapped body34 clips now lead the live gallery, with matched earlier rider links and explicit unfinished clothing/leg/sitting labels. No accepted repair or production promotion. |
 

@@ -107,6 +107,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round153 coherent triangle-
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round154 literal interfaces preserve307hood seam/source skin. Diagnostic shirt cut pinches; native20collar is wrong interface, fit60vertex shoulder transition. Cuff forearm/hand mismatch collapses blind bridges; ankle overlap requires strip trim. Parent296triangle topology checks pass, four C19 CPU probes only. No sewn export or motion pass; C19 kept, ship153passed/next156. Gallery34riding/11sitting unchanged.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round155 full480 actualC19 transforms match played bones~1e-14. Shoulder annulus rejected:185rest crossings despite exact307seam; switch to anatomical upper yoke. Cuff seam failures cleared but literal39sleeve collapse remains; ankles stable/source contact attrs exact. Parent reproduces failure; no moving appearance/export/publish. Next yoke/wrist repair, requiredship156; C19 retained.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

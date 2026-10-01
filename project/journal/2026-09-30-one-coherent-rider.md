@@ -1670,3 +1670,17 @@ Limits: Unbuilt proposal only; no complete asset, textured grade, moving art,
 sitting/Garage/contact/device pass. Retained34ship153passed; next156.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-boundary-review154.json
 Ask:239,241,242,245,247
+
+## Round155 — full actual motion rejects new transition assumptions
+
+Finding: Four favorable pose samples miss cuff collapse at39. Retain regional
+seam/ankle progress, reject the shoulder annulus, and build an anatomical upper
+yoke with explicit chest/arm boundaries while preserving the preferred hood.
+Validation: All480 actual C19 world bones/quaternions reproduced at~1e-14;
+five primitive matrix histories byte-identical. Parent verifies source attributes
+and independently reproduces both frame39 area failures. Shoulder185rest crossings
+and severe strain fail; cuff seams have zero collapses/flags, ankles stable.
+Limits: No new rendered appearance/character pass or complete rigged export.
+Source pads/head/hood and physical driver unchanged; ship153passed/next156.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-transition-review155.json
+Ask:239,241,242,245,247

@@ -1,0 +1,53 @@
+{
+  "status": "Source conservation only; does not approve flawed shoulder geometry",
+  "sourceGLBUnchangedSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "checks": {
+    "protectedHoodPositions": true,
+    "protectedHoodNormals": true,
+    "protectedHoodUV": true,
+    "protectedHoodWeights": true,
+    "protectedHoodTriangles": true,
+    "protectedBoundaryPositions": true,
+    "protectedBoundaryWeights": true,
+    "protectedBoundaryNormals": true,
+    "retainedNativeTopologyUVAndWeights": true
+  },
+  "protectedHeadPolicy": "Head geometry is referenced unchanged from original sourceGLB; it was not reconstructed or included in the new garment NPZ. Attribute hashes pin every original head primitive.",
+  "protectedHeadPrimitives": [
+    {
+      "sourceMesh": 1,
+      "primitive": 0,
+      "attributeHashes": {
+        "POSITION": "a4aac05d643625bcda2f4171cf4c9b1175412a106ebacbc05ffb2fbe214caba2",
+        "NORMAL": "a9b77c4c9fb0c7f872562b34499e1399f94e8f7fbd2e17fbfe450761bab9eb40",
+        "TEXCOORD_0": "76d3d414f26f52b86ee230248f9d4a76b7cc4617d106366a635ce94c95fa8ff3",
+        "JOINTS_0": "e5d200f6fd7ad29bd1a9339a9e88824d1e898f66165af5bf417baa48dc897df0",
+        "WEIGHTS_0": "0545db38c26ceeb00a6c3a73e3c73e9d899896026c0b3e38d98ba9629a3d7963"
+      },
+      "indicesSHA256": "43c6a11fa474deece639ab5e8fcd4a299c2ae958e28a53f52e4df7f33845dee5"
+    },
+    {
+      "sourceMesh": 1,
+      "primitive": 1,
+      "attributeHashes": {
+        "POSITION": "aabc8435cfff7e1bf7fda2364c563c22192c3efe55f3eeb0178cd0714d52fa04",
+        "NORMAL": "9fbf015504484d0203d6692be94854fccab0d5818d71030ea067e8867fc555ce",
+        "TEXCOORD_0": "ec9e4f068ec9f28b5672135f323a398f6931a73607d2f1df9d89199fda560939",
+        "JOINTS_0": "c62076882b3801917bc7b7a06c564c9916c58d80776d00c84038fb31b47bb753",
+        "WEIGHTS_0": "6fe1f706d87efd0e44302844ad6f0f96a624800eeffa383afbb5f76d4ad05c1b"
+      },
+      "indicesSHA256": "9a422e7ee6d135e1771a8b793e8075241f5622b5d770c122e4751e07065e23b4"
+    }
+  ],
+  "nativeOriginalVertexNamespace": {
+    "start": 0,
+    "count": 2136,
+    "removedQuadIDsStored": 200
+  },
+  "newSourceBoundaryAndTransitionNamespace": {
+    "start": 2136,
+    "count": 1228,
+    "sourceBoundaryVertexIDsField": "protectedHoodVertexIDs; -1 for new/non-source vertices"
+  },
+  "triangleUVContract": "Kept native triangles retain exact original per-corner UVs. New transition uses a new unbaked chart. Original hood UVs are separately exact; no new texture appearance claimed."
+}

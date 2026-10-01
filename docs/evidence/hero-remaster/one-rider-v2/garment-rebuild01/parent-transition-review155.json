@@ -1,0 +1,75 @@
+{
+  "sourceSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "cuffArtifactSHA256": "5e6bcbcdac4090d0f2f1bd1624d46e8fafd2bc1169e6b1240fc37785ba18ffe0",
+  "shoulderArtifactSHA256": "e8dddcdeecbb308b844bbd08ffc8e5308e0bdf0fd21ba6156fda71245d67dd78",
+  "sourceChecks": [
+    "primitive0:POSITION",
+    "primitive0:NORMAL",
+    "primitive0:TEXCOORD_0",
+    "primitive0:JOINTS_0",
+    "primitive0:WEIGHTS_0",
+    "primitive1:POSITION",
+    "primitive1:NORMAL",
+    "primitive1:TEXCOORD_0",
+    "primitive1:JOINTS_0",
+    "primitive1:WEIGHTS_0",
+    "hood:POSITION",
+    "hood:NORMAL",
+    "hood:TEXCOORD_0",
+    "hood:indices"
+  ],
+  "nativeCuffRestPositionsExact": true,
+  "nativeMaximumSkinInfluences": 4,
+  "matrixFrames": 480,
+  "allPrimitiveMatrixBytesEqual": true,
+  "independentlyReproducedCuffFailures": [
+    {
+      "frame": 39,
+      "nativeQuad": 1248,
+      "vertices": [
+        1217,
+        1228,
+        984
+      ],
+      "areaRatio": 0.18702680700730367
+    },
+    {
+      "frame": 39,
+      "nativeQuad": 1820,
+      "vertices": [
+        1819,
+        1808,
+        1562
+      ],
+      "areaRatio": 0.16926714661282785
+    }
+  ],
+  "shoulderCrossingWitnesses": [
+    {
+      "sample": "rest",
+      "strictNoncoplanarCrossings": 185
+    },
+    {
+      "sample": 114,
+      "strictNoncoplanarCrossings": 405
+    },
+    {
+      "sample": 186,
+      "strictNoncoplanarCrossings": 323
+    },
+    {
+      "sample": 304,
+      "strictNoncoplanarCrossings": 315
+    },
+    {
+      "sample": 426,
+      "strictNoncoplanarCrossings": 337
+    }
+  ],
+  "parentDecision": "Retain cuff/ankle regional progress, reject whole transition candidate. Stop annular shoulder construction; build anatomical upper yoke. Correct literal wrist failures before moving appearance review.",
+  "limits": [
+    "Numerical rejection only; no new full-body/face grade or accepted moving character.",
+    "Source attributes and source34 retained; no model was promoted or published.",
+    "Existing C19 physical posing/lean, contact sockets and preferred head/hood remain protected."
+  ]
+}

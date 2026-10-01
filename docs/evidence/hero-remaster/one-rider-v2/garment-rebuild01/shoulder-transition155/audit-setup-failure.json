@@ -1,0 +1,218 @@
+{
+  "kind": "Auditor pair-filter implementation error, not new geometry attempt",
+  "incorrectFilter": "Allowed only j>i, which omitted all lower-index native garment triangles against transition",
+  "invalidCollisionResults": [
+    {
+      "sample": "rest",
+      "broadPhasePairs": 5897,
+      "strictNoncoplanarCrossings": 1,
+      "transitionVsHood": 1,
+      "transitionVsNativeOrTransition": 0,
+      "literalTrianglePairs": [
+        [
+          3862,
+          10035
+        ]
+      ]
+    },
+    {
+      "sample": 114,
+      "broadPhasePairs": 5341,
+      "strictNoncoplanarCrossings": 23,
+      "transitionVsHood": 2,
+      "transitionVsNativeOrTransition": 21,
+      "literalTrianglePairs": [
+        [
+          3862,
+          10035
+        ],
+        [
+          4071,
+          9955
+        ],
+        [
+          5316,
+          5797
+        ],
+        [
+          5316,
+          5323
+        ],
+        [
+          5317,
+          5803
+        ],
+        [
+          5318,
+          5797
+        ],
+        [
+          5318,
+          5323
+        ],
+        [
+          5319,
+          5797
+        ],
+        [
+          5319,
+          5323
+        ],
+        [
+          5787,
+          5796
+        ],
+        [
+          5788,
+          5793
+        ],
+        [
+          5788,
+          5796
+        ],
+        [
+          5788,
+          5794
+        ],
+        [
+          5788,
+          5795
+        ],
+        [
+          5788,
+          5792
+        ],
+        [
+          5793,
+          5803
+        ],
+        [
+          5793,
+          5802
+        ],
+        [
+          5794,
+          5801
+        ],
+        [
+          5794,
+          5802
+        ],
+        [
+          5794,
+          5799
+        ],
+        [
+          5794,
+          5800
+        ],
+        [
+          5795,
+          5798
+        ],
+        [
+          5795,
+          5799
+        ]
+      ]
+    },
+    {
+      "sample": 186,
+      "broadPhasePairs": 3130,
+      "strictNoncoplanarCrossings": 2,
+      "transitionVsHood": 2,
+      "transitionVsNativeOrTransition": 0,
+      "literalTrianglePairs": [
+        [
+          3862,
+          10035
+        ],
+        [
+          4071,
+          9955
+        ]
+      ]
+    },
+    {
+      "sample": 304,
+      "broadPhasePairs": 5366,
+      "strictNoncoplanarCrossings": 5,
+      "transitionVsHood": 5,
+      "transitionVsNativeOrTransition": 0,
+      "literalTrianglePairs": [
+        [
+          3862,
+          10035
+        ],
+        [
+          4057,
+          9757
+        ],
+        [
+          4057,
+          9958
+        ],
+        [
+          4057,
+          9775
+        ],
+        [
+          4071,
+          9955
+        ]
+      ]
+    },
+    {
+      "sample": 426,
+      "broadPhasePairs": 6502,
+      "strictNoncoplanarCrossings": 10,
+      "transitionVsHood": 8,
+      "transitionVsNativeOrTransition": 2,
+      "literalTrianglePairs": [
+        [
+          3862,
+          10035
+        ],
+        [
+          4054,
+          9958
+        ],
+        [
+          4054,
+          9775
+        ],
+        [
+          4054,
+          9757
+        ],
+        [
+          4057,
+          9958
+        ],
+        [
+          4057,
+          4058
+        ],
+        [
+          4057,
+          9775
+        ],
+        [
+          4057,
+          9757
+        ],
+        [
+          4071,
+          9955
+        ],
+        [
+          5014,
+          5608
+        ]
+      ]
+    }
+  ],
+  "strainResultsUnaffected": true,
+  "correctedFilter": "Allow every native garment triangle j<transitionStart plus j>i to deduplicate transition and hood pairs",
+  "otherSetupIssue": "Optional source cleanup invoked unavailable python; corrected to python3, no geometry effect"
+}
