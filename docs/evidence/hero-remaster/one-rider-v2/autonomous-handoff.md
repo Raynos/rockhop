@@ -286,3 +286,10 @@ All binary geometry/UV/image bytes exact, onlymaterial JSON response changes.
 Faintcheeklines/coarsehair/skin/approximateeyes remain, uniformroughness
 controlledloss ofMRvariation disclosed. No checkpoint1/neckmotion/rigpass.
 Parent owns next completebust+NEWdonorhood+protectedbody privateassembly.
+
+Round66: Actual complete WHITE fit private GLB9full/4face/4neck views,
+body40386protected/sourcehashesexact. Face7.5/fullbody6.5 diagnostic: hard
+rectangular garmentseam and exactrayNEWbustbase exposedrearZ1.407. Next
+exact garmentvertexweld/cornerUVpreservation +localizedbustbase containment
+belowZ1.52, leavefaceexact. Newassemblyfailure1, old15retired. Round66
+productionexactclear/crash/restart2ms both. No rig/motion/playerpromotion.

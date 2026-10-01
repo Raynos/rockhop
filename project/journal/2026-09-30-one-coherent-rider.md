@@ -737,3 +737,14 @@ image bytes exact, only material JSON changes. Four actualviews frozen.
 Limits: Uniformroughness loses native MR variation; faint cheeklines/coarse
 detail/approximate eyes remain. Target photo lighting uncertain, so score
 does not accept wholecharacter/neckjoin/motion, rig or gameplay checkpoint.
+
+## Round66 — complete white fit reveals specific join defects
+
+Finding: White head/body/donorhood fit preserves improved anatomy, but
+rectangular garment seam and exposed rear bust-base need targeted fitting.
+Validation: Actual GLB9full/4face/4neck views,40386body triangles protected,
+all sources exact. Rear ray450hitsNEWskin atZ1.407 while470hitsdonorhood.
+Silent production Low/High exact40.083333333s, crash103ticks/restart2ms both.
+Limits: Fullbody6.5/10 and face7.5 diagnostic only; no motion/rig acceptance.
+First NEWassembly failure. Next exact garmentweld and lowerbust containment,
+no sourceface change or revival of retired15neck repairs.
