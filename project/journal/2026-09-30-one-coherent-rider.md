@@ -1324,3 +1324,14 @@ fold465/208/255/258→12/6/27/51; original bones/debug/contacts and protected
 surfaces exact. Source deltas roundtrip below1e-12m.
 Limits: Up23.27cm posed motion, unchanged shoulder extremes and new fold
 flags require actual motion review; no art or fullcollision acceptance.
+
+## Round126 — reject flattened sleeve correction in actual motion
+
+Finding: Lower geometric fold counts do not produce natural sleeve volume.
+Played25 creates deep accordion folds and sparse support switches. Stop ARAP.
+Validation: Eight40sec clips;480 matched records each paired view/surface;
+144 candidate/144 baseline ordered frames reviewed; all3840 frames archived.
+Parent CPU verifier passes exact protected rig/contact; low/high third-round
+ship finish/hash exact, crash103ticks/restart3/4ms, errors0.
+Limits: Release bundle/LOD, wholecollision, visiblecontacts and phone open.
+Anatomical ROI retained; pose/feature audit and deliberate weights are next.

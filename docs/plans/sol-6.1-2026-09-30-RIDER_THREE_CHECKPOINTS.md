@@ -1000,3 +1000,13 @@ shoulder maxima remain and4/2/4/4 new geometric fold flags exist. No appearance
 score/pass. Next append-only four-key morph and continuous arm-rotation driver,
 no physics/bone target edit. Eye22 material progress below7 retained;24 optics
 diagnosis underway. Current11/gallery122 retained. Required ship next126.
+
+Round126: actual sleeve25 ARAP appearance rejected. Eight40sec PBR/gray side/rear
+clips, all480 paired state/hash/debug/bones/camera/anchor records exact; all3840
+source/movie frames archived. Parent reviews144 candidate/144 baseline ordered
+frames: underarm sheet reduced but upper sleeve becomes flattened deepaccordion.
+Sparse support repeatedly0↔1 across83ms. Stop elbowARAP sweeps; retain anatomical
+ROI, audit arm feature/pose jumps before anatomical weights. Required low/high
+ship passes exact finish/hash,crash103ticks/restart3/4ms with corrective active.
+Eye24 optical test recorded separately; pending judgement. Current11/gallery122
+retained, normal assets unchanged. Next required ship129.

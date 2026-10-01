@@ -2331,5 +2331,145 @@
     "next": "One append-only private4key morph export from exact11 with continuous actual upperArm/forearm rotation mapping and no bone target edits; actual motion evidence must judge silhouette and interpolation.",
     "appearanceScore": null,
     "limits": "CPU feasibility only; full clothing collision, moving appearance, interpolation and shoulder defects unresolved. Normal assets/current11 unchanged."
+  },
+  "sleeveCorrectivePlayed126": {
+    "round": 126,
+    "status": "Reject sleeve ARAP appearance and sparse support interpolation; retain anatomical ROI evidence",
+    "candidateSHA256": "0fd9f63bdba68de60fa97ff43682842f8ffa30b6da5895221d837c70985d8c98",
+    "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "orderedCandidateFramesReviewed": 144,
+    "matchedBaselineFramesReviewed": 144,
+    "reviewedGrayKeys": [
+      114,
+      186,
+      304,
+      426
+    ],
+    "reviewedTexturedKeys": [
+      304,
+      426
+    ],
+    "views": [
+      "side",
+      "rear-three-quarter"
+    ],
+    "finding": "Correction reduces stretched underarm sheet but produces stronger deep flattened accordion folds beneath upper sleeve, especially304/426. Thin crushed sleeve volume and repeated support changes do not resemble natural clothing. No fullbody or face score from crop.",
+    "matchedPlayback": {
+      "rows": [
+        {
+          "angle": "side",
+          "surface": "textured",
+          "frames": 480,
+          "stateHashDebugBonesCameraAnchorExact": true,
+          "sourceCandidateBytesActuallyLoaded": true,
+          "correctiveActiveFrames": 356,
+          "strengthRange": [
+            0,
+            1
+          ]
+        },
+        {
+          "angle": "side",
+          "surface": "gray",
+          "frames": 480,
+          "stateHashDebugBonesCameraAnchorExact": true,
+          "sourceCandidateBytesActuallyLoaded": true,
+          "correctiveActiveFrames": 356,
+          "strengthRange": [
+            0,
+            1
+          ]
+        },
+        {
+          "angle": "rear-three-quarter",
+          "surface": "textured",
+          "frames": 480,
+          "stateHashDebugBonesCameraAnchorExact": true,
+          "sourceCandidateBytesActuallyLoaded": true,
+          "correctiveActiveFrames": 356,
+          "strengthRange": [
+            0,
+            1
+          ]
+        },
+        {
+          "angle": "rear-three-quarter",
+          "surface": "gray",
+          "frames": 480,
+          "stateHashDebugBonesCameraAnchorExact": true,
+          "sourceCandidateBytesActuallyLoaded": true,
+          "correctiveActiveFrames": 356,
+          "strengthRange": [
+            0,
+            1
+          ]
+        }
+      ],
+      "limits": "Diagnostic frozen-renderer overlay, no release bundle or appearance acceptance. Surface morph is expected to change pixels."
+    },
+    "interpolationLimit": "Strength repeatedly changes0\u21941 across83ms samples; retained bone rotations/support metrics require audit, not fade-radius sweep. Source behavior is exact.",
+    "parentCPUVerification": "Actual exported four-key verifier independently rerun exit0; keypositions\u226410.35nm, protected runtime normals/positions exact against corrected source baseline.",
+    "gate": [
+      {
+        "sleeveCorrective": {
+          "nearestRad": 0.07074598248412037,
+          "strength": 1,
+          "weights": [
+            0.010680929029492147,
+            0.9853842806985047,
+            0.0021346050953051877,
+            0.0018001851766978774
+          ]
+        },
+        "tier": "low",
+        "result": {
+          "hash": "368f1ca5bd9e830a",
+          "runTime": 40.083333333333336,
+          "faults": 0,
+          "finishTime": 40.083333333333336,
+          "tick": 4810
+        },
+        "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+        "crashRestart": {
+          "crashed": true,
+          "crashTicks": 103,
+          "restartPhase": "riding",
+          "restartTick": 0,
+          "restartMs": 3
+        },
+        "hipCorrective": null
+      },
+      {
+        "sleeveCorrective": {
+          "nearestRad": 0.07074598248412037,
+          "strength": 1,
+          "weights": [
+            0.010680929029492147,
+            0.9853842806985047,
+            0.0021346050953051877,
+            0.0018001851766978774
+          ]
+        },
+        "tier": "high",
+        "result": {
+          "hash": "368f1ca5bd9e830a",
+          "runTime": 40.083333333333336,
+          "faults": 0,
+          "finishTime": 40.083333333333336,
+          "tick": 4810
+        },
+        "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+        "crashRestart": {
+          "crashed": true,
+          "crashTicks": 103,
+          "restartPhase": "riding",
+          "restartTick": 0,
+          "restartMs": 4
+        },
+        "hipCorrective": null
+      }
+    ],
+    "next": "Stop this elbow ARAP mechanism; audit existing arm feature/pose discontinuities, then one anatomical sleeve weight construction independent of old corrupt weights before new sculpting. Do not repeat ARAP parameter sweep.",
+    "limits": "Eight actual40sec diagnostic clips recorded, all3840 source and decoded frames retained; explicit144 candidate/144 baseline ordered-window review. Release bundle/actualLOD, full collision, visiblecontacts and physical phone remain open. Normal assets unchanged."
   }
 }

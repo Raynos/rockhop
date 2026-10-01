@@ -8,11 +8,14 @@ import { webkit } from 'playwright';
 import { decodeJSON, expandFrames } from '../../src/core/replay';
 import { createSimFor } from '../lib/sim';
 import { installPrivateHipReviewDriver } from './new-rider-hip-review-install.mjs';
+import { installPrivateSleeveReviewDriver } from './new-rider-sleeve-review-install.mjs';
 
 const arg = (name: string, fallback = '') => process.argv.find(a => a.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const build = path.resolve(arg('build'));
 const out = path.resolve(arg('out'));
 const hipReviewDriver = arg('hip-review-driver', '0') === '1';
+const sleeveReviewDriver = arg('sleeve-review-driver', '0') === '1';
+assert(!(hipReviewDriver && sleeveReviewDriver), 'Independent corrective trials must stay separate');
 const recordingFile = arg('recording', 'harness/inputs/b1-first-ride/bot-3.json');
 const rec = decodeJSON(fs.readFileSync(recordingFile, 'utf8'));
 const inputs = expandFrames(rec);
@@ -22,7 +25,7 @@ const expected = { hash: node.hash(), runTime: node.runTime(), faults: node.faul
 assert.notEqual(expected.finishTime, null, 'recorded bot clears the track in Node');
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
-const report: any = { build, recordingFile, expected, hipReviewDriver, reviewOverlay: hipReviewDriver ? JSON.parse(fs.readFileSync(path.join(build, 'hip-overlay.json'), 'utf8')) : null, runs: [], errors: [] };
+const report: any = { build, recordingFile, expected, hipReviewDriver, sleeveReviewDriver, sleeveReviewOverlay: sleeveReviewDriver ? JSON.parse(fs.readFileSync(path.join(build, 'sleeve-overlay.json'), 'utf8')) : null, reviewOverlay: hipReviewDriver ? JSON.parse(fs.readFileSync(path.join(build, 'hip-overlay.json'), 'utf8')) : null, runs: [], errors: [] };
 try {
   for (const tier of ['low', 'high']) {
     const page = await browser.newPage({ viewport: { width: 874, height: 330 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true });
@@ -36,6 +39,7 @@ try {
       t.setQuality(tier); await r.whenReady(); t.skipCountdown();
     }, { header: rec.header, tier });
     if (hipReviewDriver) await installPrivateHipReviewDriver(page);
+    if (sleeveReviewDriver) await installPrivateSleeveReviewDriver(page);
     const result = await page.evaluate(inputs => {
       const t = (window as any).__rockhop;
       for (let i = 0; i < inputs.length; i++) {
@@ -63,7 +67,9 @@ try {
     const clockBytes = Buffer.alloc(8); clockBytes.writeDoubleLE(result.finishTime!);
     const hipCorrective = hipReviewDriver ? await page.evaluate(() => structuredClone((window as any).__render.debug.rider.scene.userData.privateHipCorrectiveDiagnostic)) : null;
     if (hipReviewDriver) assert(hipCorrective?.weights.every(Number.isFinite));
-    report.runs.push({ tier, result, finishTimeFloat64LE: clockBytes.toString('hex'), crashRestart, hipCorrective });
+    const sleeveCorrective = sleeveReviewDriver ? await page.evaluate(() => structuredClone((window as any).__render.debug.rider.scene.userData.privateSleeveCorrectiveDiagnostic)) : null;
+    if (sleeveReviewDriver) assert(sleeveCorrective?.weights.every(Number.isFinite));
+    report.runs.push({ sleeveCorrective, tier, result, finishTimeFloat64LE: clockBytes.toString('hex'), crashRestart, hipCorrective });
     await page.close();
   }
   assert.deepEqual(report.errors, []);
