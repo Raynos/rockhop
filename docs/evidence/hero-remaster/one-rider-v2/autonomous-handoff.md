@@ -16,7 +16,11 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round159, 2026-10-01
+## Current evidence — round160, 2026-10-01
+
+- Round160 actual WebGL12families/1,164frames/48.5s, front/side/back PBR+gray.
+  Source SHA and19matrices verified, overhead framing fixed. Partial moving
+  review still rejects shoulder cloth; whole-pose/contact/Garage/mobile open.
 
 - Retained34ship159 passes exact finish/hash,103crash ticks,1/3ms restart,
   errors0 under canonical lock. Next162. Harness strict types/lint pass;

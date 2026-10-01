@@ -1746,3 +1746,19 @@ and targeted lint pass after explicit result types fix round158 implicit-any.
 Limits: No new garment/cosmetic/appearance/contact/Garage/device/trueLOD pass.
 No new asset or repair attempt; independent construction ownership preserved.
 Next mandatory162, continuous gray/PBR exported pose coverage next.
+
+## Round160 — actual WebGL basic-pose motion
+
+Finding: Exported pose tests need moving evidence. Six matched views now cover
+12families; source remains unaccepted. Construction ownership preserved.
+
+Validation: 1,164frames/24fps/48.5s, exact browser source SHA and19matrices,
+front/side/back PBR+gray. First framing clips hands; frozen failure. Wider optics
+preserve all1,164poses. Ordered overhead236–247/sit1012–1023 side-gray windows
+retain protruding/folded upper cloth. Shared lock61.556GB/43.51s. Types/lint pass;
+FFprobe confirms size/rate/frame count. RGB witness conversion failure retained.
+
+Limits: Partial review is not full-pose acceptance. No supported seat,
+continuous crossing/contact, actual Garage/Blender equivalence/mobile/LOD pass.
+No cosmetic edit, asset promotion, deploy or gallery change. Independent
+construction candidate next through this gate; mandatory ship162.

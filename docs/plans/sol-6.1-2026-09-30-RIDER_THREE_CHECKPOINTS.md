@@ -1601,3 +1601,18 @@ Basic-pose harness strict typecheck and targeted lint now pass after explicit
 row types; round158 type-inference failure is recorded. No new art attempt.
 Next mandatory162. Continuous gray/PBR pose gate and owned construction remain
 next; all appearance/deployment gates stay open.
+
+## Exported moving basic-pose evidence — round160
+
+The same V5 export now has1,164actual stock WebGL frames/24fps/48.5seconds,
+matched front/side/back original-PBR and neutral-gray panels. Browser source SHA
+and19world matrices are pinned. See
+[moving gate](../evidence/hero-remaster/one-rider-v2/basic-pose-gate160/README.md).
+First capture clipped overhead hands; rejected source/movie retained. Wider
+optics preserve every matrix. Parent ordered overhead/sit windows still show
+protruding/folded shoulder cloth. Lower stress crouch is not accepted sitting.
+
+Whole-movie/unilateral/halfstep appearance, continuous crossings/contact,
+actual Garage/physics/Blender equivalence/mobile/LOD remain open. Shared lock,
+61.556GB/43.51seconds, strict harness types/lint pass. Task-3 construction owner
+retained; cosmetics paused. No source promotion or gallery change. Ship162next.
