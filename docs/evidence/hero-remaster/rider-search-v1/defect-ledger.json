@@ -1191,15 +1191,16 @@
     "evidence": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/skin-response05/README.md"
   },
   "newWhiteCharacterAssembly": {
-    "failedAttempts": 3,
+    "failedAttempts": 4,
     "sourceFamily": "ProtectedNEW H21-4body/newnativehands +NEWdonor01hood +NEWH21buzzbust",
-    "fullBodyDiagnosticScore": 6.8,
+    "fullBodyDiagnosticScore": 6.9,
     "faceDiagnosticScore": 7.5,
-    "failure": "Lower-hood conformance retains the white face and body but its zipper bridge duplicates13faces and creates28 nonmanifoldedges. Actual fullbody6.8/face7.5 diagnostic; chest/back horizontal crease remains. Reject fit03, replace zipper with hood-boundary edge subdivision onto exact body rim. Third newassemblyfailure; no appearance/motion/rig pass.",
-    "next": "Exact sourcebody boundary seed assignment before hood subdivision",
-    "evidence": "../one-rider-v2/parent-assembly/donor-fit03/README.md",
+    "failure": "Native albedo strip at donor/body join; controlled flatbase eliminates, normalremoval doesnot",
+    "next": "Localized sourcealbedo continuity field/bake, keep mesh/source data untouched",
+    "evidence": "../one-rider-v2/parent-assembly/donor-fit04-correction01/README.md",
     "oldH21_4NeckRepairRetiredFailures": 15,
     "boundarySubdivisionSetupFailures": 1,
-    "productionRound69": "Queued canonical lock, no pass claimed"
+    "productionRound69": "Queued canonical lock, no pass claimed",
+    "topologyPassed": true
   }
 }

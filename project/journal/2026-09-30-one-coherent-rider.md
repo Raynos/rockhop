@@ -767,3 +767,8 @@ Limits: Private static assembly, not appearance/rig accepted.
 Finding: Boundary subdivision first setup stops before export: float32 target arithmetic is not exact enough for seam correspondence; explicitly snap boundary seeds to exact body target coordinates. This is our construction script failure, not generator anatomy. Third-round production check is queued under canonical lock behind another asset job; no pass claimed.
 Validation: BoundedCPU exits1 on dictionary lookup, no export; original source files read only.
 Limits: Productionbaseline pending canonical GPU lock; newrider stillunaccepted.
+
+## Round70 — shared rim and albedo cause
+Finding: Exact boundary subdivision fixes topology:307sharedrimedges,0bridgefaces,0duplicates/0nonmanifold, only237originalhoodneckboundaryedges. Actual matchedgray shows smootherjoin; flat-albedoCPUshaderprobe removes chest/back stripe while normal removal doesnot. Native albedo mismatch is the remaining seam cause. Face7.5/body6.9 diagnostic; no appearance/neckmotionpass.
+Validation: Actual38CPUimages; meshvalidate false(no repair needed), originalbody/sourceSHA unchanged. Flatbase removes stripe, no-normal doesnot.
+Limits: Textured seam stillvisible, fourthnewassemblyfailure, productionround69 queued.

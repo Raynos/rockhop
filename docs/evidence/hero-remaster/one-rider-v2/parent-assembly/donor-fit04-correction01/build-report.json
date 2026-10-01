@@ -1,0 +1,78 @@
+{
+  "status": "Private static fitting, UNACCEPTED",
+  "bodyProtectedTriangles": 40386,
+  "bodyTriangleUVsAndMaterialAssignmentsPreserved": true,
+  "hoodSourceTrianglesRetained": 4118,
+  "hoodFit": {
+    "method": "65mmgeodesic lower NEWhood skirt band, monotonebody-seam correspondence; outsidebandexact",
+    "bandM": 0.065,
+    "boundaryTargets": 285,
+    "maximumBoundaryDisplacement": 0.028016943622218064,
+    "movedPhysicalVertices": 946,
+    "removedNewLocalZeroAreaTriangles": 104,
+    "remainingHoodTriangles": 3992,
+    "boundarySplitEdges": 77,
+    "completeRimEdges": 307,
+    "hoodTrianglesAfterSubdivision": 4118
+  },
+  "bodySeamVertices": 307,
+  "hoodLowerSeamVertices": 307,
+  "newBridgeTriangles": 0,
+  "exactCoordinateGarmentWeld": true,
+  "garmentUsedVertexCount": 22600,
+  "baseFit": [
+    {
+      "object": "textured",
+      "movedLowerBustVertices": 19103,
+      "maximumWorldDisplacement": 0.04820943229090733,
+      "faceAboveZ1_52Exact": true
+    }
+  ],
+  "bridgeAlbedo": "No bridge. Hood attachment edges subdivided with linear original corner UV; body corners exact",
+  "clothPBR": "Nonmetal, roughness.75/specular.25 coherent response, original maps retained unused",
+  "skippedZeroAreaBridgeTriangles": 0,
+  "headAdapter": [
+    [
+      0.20022821426391602,
+      0.0,
+      0.0,
+      0.003047697711735964
+    ],
+    [
+      0.0,
+      -0.20022821426391602,
+      -1.750450628890121e-08,
+      0.002625364111736417
+    ],
+    [
+      0.0,
+      1.750450628890121e-08,
+      -0.20022821426391602,
+      1.595431923866272
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "sizing": "Initialuniform65mmIPDfit; only lowerhiddenbustbase tapered belowZ1.52, faceexact",
+  "sources": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/wholehood01-anatomical-trial02/anatomical-source-hood.glb": "494b37ec6447f799d1adae8871ebff6b33fb950c8ad2ea33a60ebc1441658463",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/skin-response05/model.glb": "9c2d05595d580d4da484cce9bad4cb88c67711f276f7c7b80f149636e259660e"
+  },
+  "sourcesAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/wholehood01-anatomical-trial02/anatomical-source-hood.glb": "494b37ec6447f799d1adae8871ebff6b33fb950c8ad2ea33a60ebc1441658463",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/skin-response05/model.glb": "9c2d05595d580d4da484cce9bad4cb88c67711f276f7c7b80f149636e259660e"
+  },
+  "outputGLBSHA256": "dda1370ac3cfcbb6c8665b5b15840d58951ef230e8327a9badd6b90e2fb71305",
+  "limitations": [
+    "Corner-color transition carries original endtexels but no microfabric detail; actual match needs review",
+    "Ambiguous donor innerfold preserved unchanged; actual assembled visibility must be inspected",
+    "No weights,19bonecontract,neckmotion or gameplay qualification",
+    "No playerassetpromotion"
+  ]
+}
