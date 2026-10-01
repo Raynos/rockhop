@@ -1,0 +1,13 @@
+21:23:02 | INFO: Data are loaded, start creating Blender stuff
+21:23:02 | INFO: Blender create Mesh node geometry_0
+21:23:03 | INFO: glTF import finished in 0.27s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_generated_h21_buzz.py", line 33, in <module>
+    rawTriangles=sum(len(o.data.polygons) for o in meshes);assert rawTriangles==len(faces)
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_generated_h21_buzz.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

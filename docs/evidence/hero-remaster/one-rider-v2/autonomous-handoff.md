@@ -149,3 +149,10 @@ frozen; no authoredhood. Neckfamily14/15. ParentreservesONEremainingold
 lineage attempt for exactislandcleanup/Ccurvedhood; noparallelattempt16.
 B preparesfundamentallyNEWgarment/sourcefallback readonly ifneeded.
 Round45 productionbyte-identicalclear/crash/1msrestartpasseslow/high.
+
+Round46: fresh actualH21 buzz source succeeds138.002s, raw985183 retained before
+cleanup/reducer, painted99999. CPU renderguard fails honestly beforePNG: exact
+readonly sourceindices intact, Blender excludes8 repeated-index zero-area faces
+only; original orderedvertices within2micrometers. Independentpaintedface render
+next, rawdiagnostics labelvalidation exclusions. Maxanonymous49.8GiB; noeviction,
+lockreleased. No newface/body/neckmotion or rig acceptance.

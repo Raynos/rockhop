@@ -542,3 +542,12 @@ Validation: Parentactualprofilewitness reviewed;16reimportviews/sourceproof
 frozen,41,742protectedpolygons/weights exact. Freshproductionlow/high clear
 byteidentical40.083333333s, crashandrestartpasses1mswithoutaudio/errors.
 Limits: No authoredhood or neckmotion; failure14/15, independentfaceunaccepted.
+
+## Round46 — retain native generated geometry before face review
+
+Finding: Fresh actualH21 buzz generation succeeds; retain985183 nativefaces
+beforecleanup while reporting eight zero-area Blender importer exclusions.
+Validation: ExactGLB indices matchNPZ;985175 importedtriangles, allotherfaces
+retained; sourcevertices within2micrometers. Modelexit0 138.002s, actualCPU
+paint88.104s and maxanonymous49.8GiB undercanonical lockwithout eviction.
+Limits: FirstCPUguard failed beforePNG; noface score, assembly or rig pass.

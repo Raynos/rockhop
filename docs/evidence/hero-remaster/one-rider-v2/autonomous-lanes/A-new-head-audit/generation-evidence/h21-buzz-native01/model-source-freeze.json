@@ -1,0 +1,761 @@
+{
+  "status": "Actual model completed exit0; appearance unaccepted",
+  "frozenUTC": "2026-10-01T02:20:47.364741+00:00",
+  "inputsSHA256": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/raw-shape.npz": "6e45cdea192ce5d96221701003f1cde99aa01a3fe049edcf2def5f28bf976a7b",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/raw-shape.glb": "64674b71f3c98ca4571ac0d663c8f50e133c40f4f8a285a92f8469f072347182",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/shape.glb": "31dd5a4b53f4eef277e3c7f968684444897050b65c26b99e6a795265ff90c55e",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/shape.obj": "0c93009681425afce899f7bfadc7feea983473b9a462176b876cf774f748b866",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/model.glb": "2cd1859e05f6aac4d05112027dfaefcc15c7a83f8301ec8e1045fbc8bc326420",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/generation.json": "755fac18cf148a386dcca66967dd10888610af198d90f5498ed2e2873431dfde",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/raw-shape-settings.json": "200acbb1de79276ae81cb079d8d3f90929e929755c24152c865664dea4004ba9",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/start-settings.json": "109ef6334d5b3277f58bbaf43304ba0a2dbb7a17137e74031aa0c2698c2fe939",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/h21-buzz-native01-model-process.json": "f48a4a7b9e133ba82a303cddfc8b3482f1e8a00df116664ddaf0545fdffab692"
+  },
+  "generation": {
+    "version": "Hunyuan3D-2.1",
+    "device": "mps",
+    "seed": 42,
+    "shape_steps": 24,
+    "paint_steps": 15,
+    "octree": 320,
+    "paint_views": 6,
+    "paint_view_size": 512,
+    "render_size": 1024,
+    "texture_size": 1024,
+    "torch": "2.14.0",
+    "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+    "cpu_components": [
+      "texture rendering/baking",
+      "custom_rasterizer",
+      "mesh_inpaint_processor",
+      "marching cubes",
+      "Blender export"
+    ],
+    "source_commit": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+    "weights_revision": "0b94677654c57bb9a6b6845cd7b704ccf551d327",
+    "shape_seconds": 26.09,
+    "raw_faces": 985183,
+    "raw_shape_sha256": "6e45cdea192ce5d96221701003f1cde99aa01a3fe049edcf2def5f28bf976a7b",
+    "faces": 99999,
+    "paint_seconds": 88.104,
+    "wall_seconds": 138.002,
+    "peak_rss_gb": 23.07
+  },
+  "completeWorkerReceipt": {
+    "command": [
+      "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+      "-u",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/hunyuan21-head-preserve.py",
+      "--image",
+      "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/head/buzz-bust-reference.png",
+      "--out",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01",
+      "--seed",
+      "42",
+      "--shape-steps",
+      "24",
+      "--octree",
+      "320",
+      "--target-faces",
+      "100000"
+    ],
+    "canonicalLock": "/Users/raynos/projects/localai/.model.lock",
+    "lockMode": "lockf -k",
+    "timeLimitSeconds": 1800,
+    "terminationGraceReservedSeconds": 6,
+    "anonymousLimitBytes": 70000000000.0,
+    "preemptiveStopBytes": 65000000000.0,
+    "preemptiveStopGiB": 60.5359673500061,
+    "pollIntervalSeconds": 1,
+    "lockInheritedByCompleteWorkerGroup": true,
+    "noEviction": true,
+    "samples": [
+      {
+        "stage": "memory-gate",
+        "elapsedSeconds": 0.026312584,
+        "anonymousGiB": 19.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 0.054081834,
+        "anonymousGiB": 19.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 1.091531834,
+        "anonymousGiB": 20.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 2.119569584,
+        "anonymousGiB": 20.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 3.149666667,
+        "anonymousGiB": 20.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 4.185774,
+        "anonymousGiB": 20.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 5.227030459,
+        "anonymousGiB": 21.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 6.25839025,
+        "anonymousGiB": 28.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 7.294667875,
+        "anonymousGiB": 31.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 8.333007334,
+        "anonymousGiB": 34.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 9.362953084,
+        "anonymousGiB": 38.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 10.401951334,
+        "anonymousGiB": 40.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 11.437977917,
+        "anonymousGiB": 40.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 12.475445209,
+        "anonymousGiB": 40.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 13.506664167,
+        "anonymousGiB": 40.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 14.547980542,
+        "anonymousGiB": 39.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 15.585260709,
+        "anonymousGiB": 21.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 16.622121459,
+        "anonymousGiB": 25.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 17.659060167,
+        "anonymousGiB": 22.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 18.69826575,
+        "anonymousGiB": 22.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 19.730679334,
+        "anonymousGiB": 22.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 20.763668917,
+        "anonymousGiB": 22.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 21.801760625,
+        "anonymousGiB": 22.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 22.841971584,
+        "anonymousGiB": 22.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 23.883356709,
+        "anonymousGiB": 22.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 24.91758875,
+        "anonymousGiB": 22.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 25.960871209,
+        "anonymousGiB": 21.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 27.006690209,
+        "anonymousGiB": 21.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 28.045253084,
+        "anonymousGiB": 20.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 29.084481667,
+        "anonymousGiB": 20.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 30.117290834,
+        "anonymousGiB": 20.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 31.150729292,
+        "anonymousGiB": 20.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 32.190814292,
+        "anonymousGiB": 20.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 33.234962042,
+        "anonymousGiB": 20.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 34.270144375,
+        "anonymousGiB": 20.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 35.306711959,
+        "anonymousGiB": 21.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 36.341973042,
+        "anonymousGiB": 21.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 37.378911459,
+        "anonymousGiB": 20.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 38.418683459,
+        "anonymousGiB": 27.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 39.454580125,
+        "anonymousGiB": 28.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 40.502046667,
+        "anonymousGiB": 27.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 41.534121625,
+        "anonymousGiB": 27.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 42.576026834,
+        "anonymousGiB": 49.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 43.609924875,
+        "anonymousGiB": 49.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 44.64289,
+        "anonymousGiB": 49.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 45.680473917,
+        "anonymousGiB": 49.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 46.718510542,
+        "anonymousGiB": 49.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 47.749938625,
+        "anonymousGiB": 49.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 48.787825667,
+        "anonymousGiB": 49.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 49.816764875,
+        "anonymousGiB": 20.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 50.853235459,
+        "anonymousGiB": 20.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 51.891613584,
+        "anonymousGiB": 21.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 52.925941459,
+        "anonymousGiB": 27.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 53.961487209,
+        "anonymousGiB": 30.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 54.993707,
+        "anonymousGiB": 21.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 56.024381792,
+        "anonymousGiB": 26.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 57.060878667,
+        "anonymousGiB": 27.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 58.091173917,
+        "anonymousGiB": 27.9
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 59.124488042,
+        "anonymousGiB": 25.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 60.158420875,
+        "anonymousGiB": 28.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 61.191477959,
+        "anonymousGiB": 28.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 62.228732584,
+        "anonymousGiB": 28.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 63.257351542,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 64.283848667,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 65.317016792,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 66.34942658400001,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 67.385588334,
+        "anonymousGiB": 28.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 68.424737084,
+        "anonymousGiB": 28.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 69.459555875,
+        "anonymousGiB": 28.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 70.49133900000001,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 71.52900233400001,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 72.56378475000001,
+        "anonymousGiB": 28.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 73.59359916700001,
+        "anonymousGiB": 25.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 74.62776625000001,
+        "anonymousGiB": 24.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 75.66181558400001,
+        "anonymousGiB": 25.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 76.697842084,
+        "anonymousGiB": 25.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 77.75763141700001,
+        "anonymousGiB": 25.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 78.809871584,
+        "anonymousGiB": 26.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 79.84532325,
+        "anonymousGiB": 28.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 80.884354625,
+        "anonymousGiB": 24.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 81.93160300000001,
+        "anonymousGiB": 24.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 82.981844584,
+        "anonymousGiB": 24.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 84.02496008400001,
+        "anonymousGiB": 25.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 85.07518212500001,
+        "anonymousGiB": 25.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 86.12919304200001,
+        "anonymousGiB": 24.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 87.171033875,
+        "anonymousGiB": 25.7
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 88.21021133400001,
+        "anonymousGiB": 26.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 89.26457,
+        "anonymousGiB": 24.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 90.319083375,
+        "anonymousGiB": 24.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 91.350111334,
+        "anonymousGiB": 25.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 92.38590216700001,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 93.41885225,
+        "anonymousGiB": 24.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 94.455948667,
+        "anonymousGiB": 26.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 95.4957035,
+        "anonymousGiB": 23.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 96.53488066700001,
+        "anonymousGiB": 24.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 97.56601387500001,
+        "anonymousGiB": 26.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 98.60703845900001,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 99.64864062500001,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 100.686077667,
+        "anonymousGiB": 25.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 101.726056959,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 102.760139792,
+        "anonymousGiB": 24.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 103.794551459,
+        "anonymousGiB": 26.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 104.833300209,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 105.86865812500001,
+        "anonymousGiB": 24.1
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 106.903962625,
+        "anonymousGiB": 26.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 107.93877237500001,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 108.97525541700001,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 110.00632045900001,
+        "anonymousGiB": 25.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 111.044883917,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 112.083993917,
+        "anonymousGiB": 24.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 113.11656141700001,
+        "anonymousGiB": 26.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 114.16539516700001,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 115.202205667,
+        "anonymousGiB": 24.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 116.240102792,
+        "anonymousGiB": 26.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 117.280563459,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 118.340236125,
+        "anonymousGiB": 23.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 119.376010917,
+        "anonymousGiB": 25.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 120.410472084,
+        "anonymousGiB": 23.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 121.44393537500001,
+        "anonymousGiB": 24.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 122.47531429200001,
+        "anonymousGiB": 26.2
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 123.52108966700001,
+        "anonymousGiB": 36.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 124.56665845900001,
+        "anonymousGiB": 39.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 125.60367045900001,
+        "anonymousGiB": 49.6
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 126.645531625,
+        "anonymousGiB": 49.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 127.688983875,
+        "anonymousGiB": 38.4
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 128.72954404200001,
+        "anonymousGiB": 37.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 129.760969834,
+        "anonymousGiB": 36.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 130.80291175000002,
+        "anonymousGiB": 36.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 131.83627025,
+        "anonymousGiB": 36.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 132.869459959,
+        "anonymousGiB": 36.8
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 133.91521500000002,
+        "anonymousGiB": 37.5
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 134.957095125,
+        "anonymousGiB": 45.3
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 135.999658,
+        "anonymousGiB": 45.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 137.036379917,
+        "anonymousGiB": 45.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 138.066186084,
+        "anonymousGiB": 45.0
+      },
+      {
+        "stage": "worker",
+        "elapsedSeconds": 139.104533042,
+        "anonymousGiB": 21.3
+      }
+    ],
+    "exitCode": 0,
+    "wallSeconds": 140.11434316700002,
+    "logSHA256": "2b3f6a284cc0bd126f5eceb46b0945f98cb64d731190937634284e297a2d6686"
+  },
+  "parentOwnsGPUJob": true,
+  "CPUFirstDeadlineUTC": "2026-10-01T02:50:00Z"
+}

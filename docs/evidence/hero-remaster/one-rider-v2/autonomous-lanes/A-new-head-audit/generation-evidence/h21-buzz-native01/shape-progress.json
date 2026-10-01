@@ -1,0 +1,27 @@
+{
+  "version": "Hunyuan3D-2.1",
+  "device": "mps",
+  "seed": 42,
+  "shape_steps": 24,
+  "paint_steps": 15,
+  "octree": 320,
+  "paint_views": 6,
+  "paint_view_size": 512,
+  "render_size": 1024,
+  "texture_size": 1024,
+  "torch": "2.14.0",
+  "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+  "cpu_components": [
+    "texture rendering/baking",
+    "custom_rasterizer",
+    "mesh_inpaint_processor",
+    "marching cubes",
+    "Blender export"
+  ],
+  "source_commit": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+  "weights_revision": "0b94677654c57bb9a6b6845cd7b704ccf551d327",
+  "shape_seconds": 26.09,
+  "raw_faces": 985183,
+  "raw_shape_sha256": "6e45cdea192ce5d96221701003f1cde99aa01a3fe049edcf2def5f28bf976a7b",
+  "faces": 99999
+}

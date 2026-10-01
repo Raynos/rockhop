@@ -1,0 +1,37 @@
+{
+  "status": "UNACCEPTED exact raw index containment/importer forensic",
+  "inputsSHA256": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/raw-shape.npz": "6e45cdea192ce5d96221701003f1cde99aa01a3fe049edcf2def5f28bf976a7b",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/raw-shape.glb": "64674b71f3c98ca4571ac0d663c8f50e133c40f4f8a285a92f8469f072347182"
+  },
+  "sourceNPZVertices": 492617,
+  "sourceNPZTriangles": 985183,
+  "rawGLBIndexTriangles": 985183,
+  "rawGLBIndicesEqualNativeNPZ": true,
+  "rawGLBIndexSHA256": "e8f5b33290bd8488a157b2d0112c2c7271dccdf87d256fe074325205cc065045",
+  "nativeNPZFaceIndexSHA256": "e8f5b33290bd8488a157b2d0112c2c7271dccdf87d256fe074325205cc065045",
+  "BlenderImportedVertices": 492617,
+  "BlenderImportedTriangles": 985175,
+  "triangleCountDifference": 8,
+  "missingTriangleOccurrences": 8,
+  "sourceMissingFaceIDs": [
+    773691,
+    773693,
+    947932,
+    947936,
+    947951,
+    949185,
+    980318,
+    980354
+  ],
+  "missingFaceRepeatedVertexIndexCount": 8,
+  "missingFaceZeroAreaCount": 8,
+  "sourceTotalRepeatedVertexIndexTriangles": 8,
+  "sourceTotalExactlyZeroAreaTriangles": 8,
+  "sourceDuplicateUnorderedTriangleOccurrences": 0,
+  "limits": [
+    "GLB index byte preservation proved separately from Blender importer/render validation.",
+    "No original source repair or reduction; no appearance/motion acceptance.",
+    "Missing source face IDs include every occurrence of missing repeated index signatures; occurrence count reported separately."
+  ]
+}
