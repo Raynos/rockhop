@@ -432,3 +432,14 @@ Historical neck6 failures retained; laneA setup1 makes family total7.
 
 Limits: No new geometry/material output or appearance approval yet.
 Parallel volumetric/pattern lanes continue separately; no GPU workload.
+
+## Round35 — independent visual bar and modular assembly audit
+
+Finding: Both body and face must independently reach minimum7/10, target8.
+Primary game/Blender documentation supports separate clothing on a shared rig;
+continuous native skin beneath the hoodie avoids welding skin to cloth.
+Validation: Read runtime multi-SkinnedMesh traversal and compatible-material
+merge; viewed actual C front body/face/rear neck against approved references.
+Parent diagnostic scores5/10 body,3/10 face reject that assembly.
+Limits: Research is an architectural hypothesis, not accepted geometry or
+new-rider motion; camera/light mismatch prevents final score acceptance.

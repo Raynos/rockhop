@@ -72,3 +72,14 @@ clean full textured character/face/neck/turntable; same-body stand-to-sit clip
 and nine samples; same-body nine-angle bike/Garage views plus matched maximum
 lean, landing/recovery, visible hand/grip and foot/peg contacts in motion.
 All later checks remain unpassed; static assets are never game-ready.
+
+## Ask239 visual bar and architecture review
+
+Minimum7/10 independently for body and face; target8 each, with matched actual
+reference comparisons. Current C diagnostic5/10 body and3/10 face is rejected.
+Continuous native head/neck/clavicle beneath separate hoodie is the next
+construction hypothesis; no skin-to-cloth weld required. Hidden base coverage
+and visible cloth joins must pass neck motion, rear/profile and nine angles.
+Primary-source audit/rubric: assembly-audit/. Active goal has crossed eight
+hours; parent reviewed at29,292active seconds and autonomously continues the
+existing bounded first-lane batch through02:17UTC. No appearance gate passed.

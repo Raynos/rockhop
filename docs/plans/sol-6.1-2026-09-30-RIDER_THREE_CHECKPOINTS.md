@@ -110,6 +110,25 @@ another chat. No recurring job is created by this plan.
 
 ## Checkpoint 1 — complete neutral model
 
+### Matched visual quality and modular assembly — ask239
+
+The parent must compare actual Blender/exported/in-game output against the
+approved mockups, with full-body and face-closeup scores independently at
+least7/10 and target8/10. Follow the [matched visual rubric](../evidence/hero-remaster/one-rider-v2/assembly-audit/visual-rubric.md).
+A low face cannot be averaged into a body pass. Below7 in either, autonomously
+generate a new component or sculpt/retopologize/edit, preserving source assets,
+comparison IDs and five/fifteen failure counts. Unmatched diagnostic views
+cannot accept a gate. Missing nine-angle, gray or moving evidence is unpassed.
+
+The [primary-source assembly audit](../evidence/hero-remaster/one-rider-v2/assembly-audit/README.md)
+selects continuous NEW head/neck/clavicle skin under a separate garment as the
+next architecture to test. Exposed skin joins need continuous topology and
+matched UVs/normals/weights; skin need not be welded to clothing. A concealed
+bust base must remain covered during all views and neck rotation/bending.
+Preserve the hoodie silhouette and explicitly repair cloth-to-cloth seams.
+Later bind both surfaces through the existing measured19-bone rig adapter.
+This is a hypothesis until actual geometry, textures and motion pass.
+
 ### Current execution — one coherent new rider (ask232)
 
 The task-2 comparison findings and latest request supersede the earlier P3
@@ -230,7 +249,8 @@ knees, legs and shoes before any riding fit or skinning.
    reduced outputs so decimation cannot hide defects or manufacture a winner.
 6. Shortlist at most two whole bodies. Use local generation and Blender
    cleanup/retopology within the correction budget, preserving each variant.
-   Parent judges whole geometry/orbits; the user chooses visual direction.
+   Parent judges whole geometry/orbits and visual direction autonomously under
+   asks233–238; no checkpoint approval question.
 
 Working exports: 55k faces/2048 textures; review copies: 20k/1024. These are
 offline comparison budgets, not production limits. Preserve native Hunyuan

@@ -23,7 +23,12 @@
       "trellis-run.json",
       "pixal/01..05/result.json"
     ],
-    "method": "Conservatively charge observed active goal wall time, including inference and independent preparation. Input-choice idle time is not chargeable on later resumption."
+    "method": "Conservatively charge observed active goal wall time, including inference and independent preparation. Input-choice idle time is not chargeable on later resumption.",
+    "autonomousEightHourReview": {
+      "observedActiveSeconds": 29292,
+      "nextBatchDeadlineUTC": "2026-10-01T02:17:00Z",
+      "decision": "Continue bounded architecture/face refinement; no quality gate passed and no human hold"
+    }
   },
   "candidates": [
     {
@@ -994,5 +999,14 @@
       "fifteenFailureLastResort": 15,
       "next": "One native ensure_lookup_table correction, then first explicit panel trial"
     }
+  },
+  "visualQualityPolicy": {
+    "authorityAsk": 239,
+    "fullBodyMinimum": 7,
+    "faceCloseupMinimum": 7,
+    "targetEach": 8,
+    "independentScores": true,
+    "belowThreshold": "Autonomous new generation or sculpt/edit; preserve comparison and source lineage",
+    "rubric": "../one-rider-v2/assembly-audit/visual-rubric.md"
   }
 }
