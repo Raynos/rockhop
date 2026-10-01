@@ -1,0 +1,393 @@
+{
+  "status": "FAILED first explicit seam-landmark panel, no accepted rider",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "recipeSHA256": "578a9acba8278dd9a31cfd738fd3381aa0451782c5fd03d25e3c62b0716528c0",
+  "deadlineUTC": "2026-10-01T02:17:00Z",
+  "settings": {
+    "landmarkIDs": [
+      11791,
+      5144,
+      5237,
+      14112,
+      3282,
+      14048,
+      14019,
+      13615
+    ],
+    "pathCost": "source edge length * (1 + 4 * squared distance to explicit landmark segment / segment length squared)",
+    "headScale": 0.42,
+    "headOffset": [
+      0,
+      0,
+      1.59338
+    ],
+    "neckTrimZ": 1.49,
+    "foldAuthorship": "Eight explicit cloth crease controls, piecewise straight interpolation by source seam arc length",
+    "sharedSourceCoordinates": "No source vertex displacement outside the replaced panel"
+  },
+  "limits": [
+    "Unrigged static character; parent appearance judgment required.",
+    "Neck deformation, texture/normal continuity in motion, contacts and gameplay remain unmeasured."
+  ],
+  "explicitSeam": {
+    "landmarks": [
+      {
+        "label": "front throat centre",
+        "physicalTargetWorldM": [
+          0,
+          -0.095,
+          1.47
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 11791,
+        "actualWorldM": [
+          0.0007730997167527676,
+          -0.08861711621284485,
+          1.4603595733642578
+        ],
+        "distanceFromTargetM": 0.011587806046009064,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "left front quarter",
+        "physicalTargetWorldM": [
+          -0.068,
+          -0.077,
+          1.478
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 5144,
+        "actualWorldM": [
+          -0.07049869000911713,
+          -0.07054251432418823,
+          1.479196310043335
+        ],
+        "distanceFromTargetM": 0.007026635110378265,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "left below ear seam",
+        "physicalTargetWorldM": [
+          -0.12,
+          -0.015,
+          1.515
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 5237,
+        "actualWorldM": [
+          -0.12977929413318634,
+          -0.020122677087783813,
+          1.516160249710083
+        ],
+        "distanceFromTargetM": 0.011100571602582932,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "left rear quarter",
+        "physicalTargetWorldM": [
+          -0.09,
+          0.1,
+          1.535
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 14112,
+        "actualWorldM": [
+          -0.08009906858205795,
+          0.0923723578453064,
+          1.536839246749878
+        ],
+        "distanceFromTargetM": 0.012632989324629307,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "rear nape centre",
+        "physicalTargetWorldM": [
+          0,
+          0.135,
+          1.542
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 3282,
+        "actualWorldM": [
+          -0.005172704812139273,
+          0.14131027460098267,
+          1.5456031560897827
+        ],
+        "distanceFromTargetM": 0.008919568732380867,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "right rear quarter",
+        "physicalTargetWorldM": [
+          0.09,
+          0.1,
+          1.535
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 14048,
+        "actualWorldM": [
+          0.08592265844345093,
+          0.09311739355325699,
+          1.5331766605377197
+        ],
+        "distanceFromTargetM": 0.008204844780266285,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "right below ear seam",
+        "physicalTargetWorldM": [
+          0.12,
+          -0.015,
+          1.515
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 14019,
+        "actualWorldM": [
+          0.1131603792309761,
+          -0.017644956707954407,
+          1.5124359130859375
+        ],
+        "distanceFromTargetM": 0.007768567651510239,
+        "incidentMaterialIndices": [
+          0
+        ]
+      },
+      {
+        "label": "right front quarter",
+        "physicalTargetWorldM": [
+          0.068,
+          -0.077,
+          1.478
+        ],
+        "bodySourceVertexIndexAfterFixedMask": 13615,
+        "actualWorldM": [
+          0.07179141789674759,
+          -0.07607460021972656,
+          1.4793113470077515
+        ],
+        "distanceFromTargetM": 0.0041171228513121605,
+        "incidentMaterialIndices": [
+          0
+        ]
+      }
+    ],
+    "orderedSourceVertexIDs": [
+      11791,
+      11792,
+      15610,
+      15609,
+      11111,
+      11107,
+      5229,
+      5149,
+      5147,
+      5145,
+      5144,
+      5142,
+      5155,
+      5159,
+      5162,
+      5164,
+      5168,
+      5175,
+      5237,
+      5244,
+      5247,
+      5259,
+      15585,
+      15580,
+      11827,
+      11823,
+      11818,
+      11815,
+      11803,
+      11801,
+      11805,
+      11808,
+      11828,
+      11825,
+      14112,
+      14110,
+      14099,
+      14080,
+      14081,
+      14082,
+      15618,
+      12672,
+      12671,
+      3314,
+      3276,
+      3275,
+      3282,
+      3283,
+      3304,
+      13746,
+      13737,
+      13739,
+      14034,
+      14035,
+      14037,
+      14041,
+      14046,
+      14048,
+      14052,
+      15007,
+      15008,
+      15011,
+      15012,
+      14007,
+      13968,
+      13962,
+      13961,
+      13955,
+      13952,
+      14018,
+      14019,
+      13956,
+      15466,
+      15463,
+      15462,
+      15457,
+      15452,
+      15453,
+      15454,
+      13636,
+      13619,
+      13615,
+      13614,
+      13646,
+      11796,
+      11797,
+      11795,
+      11790
+    ],
+    "segmentSourceVertexIDs": [
+      [
+        11791,
+        11792,
+        15610,
+        15609,
+        11111,
+        11107,
+        5229,
+        5149,
+        5147,
+        5145,
+        5144
+      ],
+      [
+        5144,
+        5142,
+        5155,
+        5159,
+        5162,
+        5164,
+        5168,
+        5175,
+        5237
+      ],
+      [
+        5237,
+        5244,
+        5247,
+        5259,
+        15585,
+        15580,
+        11827,
+        11823,
+        11818,
+        11815,
+        11803,
+        11801,
+        11805,
+        11808,
+        11828,
+        11825,
+        14112
+      ],
+      [
+        14112,
+        14110,
+        14099,
+        14080,
+        14081,
+        14082,
+        15618,
+        12672,
+        12671,
+        3314,
+        3276,
+        3275,
+        3282
+      ],
+      [
+        3282,
+        3283,
+        3304,
+        13746,
+        13737,
+        13739,
+        14034,
+        14035,
+        14037,
+        14041,
+        14046,
+        14048
+      ],
+      [
+        14048,
+        14052,
+        15007,
+        15008,
+        15011,
+        15012,
+        14007,
+        13968,
+        13962,
+        13961,
+        13955,
+        13952,
+        14018,
+        14019
+      ],
+      [
+        14019,
+        13956,
+        15466,
+        15463,
+        15462,
+        15457,
+        15452,
+        15453,
+        15454,
+        13636,
+        13619,
+        13615
+      ],
+      [
+        13615,
+        13614,
+        13646,
+        11796,
+        11797,
+        11795,
+        11790,
+        11791
+      ]
+    ],
+    "closedSimpleCircuit": true,
+    "allDegreeTwo": true,
+    "oldRimIntersectionCount": 0
+  },
+  "failure": "AssertionError('Seam must contain a small local panel')",
+  "wallSeconds": 0.603295374661684
+}

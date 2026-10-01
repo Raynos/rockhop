@@ -17,8 +17,10 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
 - Neck join remains unresolved: source-mask cuts2, elliptical loft2 and native
   collar trials2 are six failed neck-join attempts across three mechanisms.
   All six remain in the historical ledger. LaneA adds one setup failure from
-  stale BMesh lookup indices; total neck-family failures7. The concrete native
-  lookup refresh is next. No counter is reset by this policy.
+  stale BMesh lookup indices; then total neck-family failures7. The concrete native
+  lookup refresh passed, but the first panel cut failed its area guard:88edge
+  circuit reaches all42,505retained faces. Neck-family total8 before other
+  frozen lane verdicts. No counter is reset by this policy.
 - Actual head/body masters remain ignored under LocalAI runtime; exact source
   hashes and evidence are in head-cleanup/mpfb-v8-palette, glove-cleanup/
   glove-material/isolated-correction01 and neck-native/trial02.
@@ -83,3 +85,7 @@ and visible cloth joins must pass neck motion, rear/profile and nine angles.
 Primary-source audit/rubric: assembly-audit/. Active goal has crossed eight
 hours; parent reviewed at29,292active seconds and autonomously continues the
 existing bounded first-lane batch through02:17UTC. No appearance gate passed.
+
+Round36 silent production baseline again clears byte-identically at40.083333333s
+low/high, crash103ticks, instant restart1/2ms, no errors or audio. Existing
+production only; new rider appearance, neck motion and contacts remain unpassed.

@@ -1,0 +1,24 @@
+00:00.324  blend            | Read blend: "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend"
+Info: Saved as "failed-source-prefix.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+20:47:05 | INFO: Starting glTF 2.0 export
+20:47:05 | INFO: Extracting primitive: Neutral anatomical hands sewn into NEW H21-4 body
+20:47:05 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:47:05 | INFO: Primitives created: 2
+20:47:05 | INFO: Finished glTF 2.0 export in 0.22469401359558105 s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-manual-panel/forensic_trial01.py:45: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gray=bpy.data.materials.new('Gray diagnostic only');gray.use_nodes=True;bs=gray.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.42,.42,.42,1);bs.inputs['Roughness'].default_value=.65
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-manual-panel/forensic_trial01.py:50: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  red=bpy.data.materials.new('Exact selected seam diagnostic red');red.diffuse_color=(.65,.015,.01,1);red.use_nodes=True;red.node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value=(.65,.015,.01,1)
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-manual-panel/forensic_trial01.py:58: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Common gray studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world
+00:03.851  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-manual-panel/trial01/failed-seam-front.png'
+00:05.694  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-manual-panel/trial01/failed-seam-profile.png'
+00:07.731  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-manual-panel/trial01/failed-seam-rear.png'
+00:09.794  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-manual-panel/trial01/failed-seam-three-quarter.png'
+
+EXACT_FORENSIC_FROZEN {"floodFaces": 42505, "postMaskSourceFaces": 42505, "floodIncludesSeamBothSides": 88}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

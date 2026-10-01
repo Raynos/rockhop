@@ -443,3 +443,14 @@ merge; viewed actual C front body/face/rear neck against approved references.
 Parent diagnostic scores5/10 body,3/10 face reject that assembly.
 Limits: Research is an architectural hypothesis, not accepted geometry or
 new-rider motion; camera/light mismatch prevents final score acceptance.
+
+## Round36 — a closed source seam does not isolate the collar
+
+Finding: A corrected native setup produces a simple88edge seam, but flood
+traversal reaches all42,505retained faces. The area guard stops before cloth
+removal or head assembly; this source-cut approach is retired early.
+Validation: Actual failed-prefix four-view board reviewed, source hashes
+unchanged, six recipes AST parsed by builder, forensic render exits0. Fresh
+silent low/high production clear is byte-identical40.083333333s; crash/restart
+passes1/2ms with no errors/audio.
+Limits: No new rider geometry, neck deformation or contact acceptance.
