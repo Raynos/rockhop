@@ -1374,3 +1374,13 @@ Validation: Parent independently reruns both read-only27audits exit0 and
 reviews actual/reference control board; source22 and saved-source hashes exact.
 Limits: Reference lights/pose differ and manual annuli are diagnostics. No
 new model or appearance pass. One iris-only append treatment next; lids open.
+
+## Round131 — keep anatomical arm weights for a bounded moving trial
+
+Finding: A connected anatomy-derived weight field improves the original
+elbow without sparse morph support, but residual cloth risks need playback.
+Validation: Parent CPU verifier independently passes; source geometry/
+materials/19bones/debug/contacts/seat and protected surfaces exact.
+Historicalfolds52/4/37/61, originalelbow1.62–2.02x; deterministic repeat exact.
+Limits: Newfolds42/0/29/45,44.55cm motion, worsened extreme gradients and
+pinned shoulderdefects. No artpass; same recorded40sec moving review next.

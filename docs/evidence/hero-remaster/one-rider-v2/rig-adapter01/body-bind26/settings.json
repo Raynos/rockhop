@@ -1,0 +1,185 @@
+{
+  "singleConstruction": true,
+  "noParameterSweep": true,
+  "selectionUsesOriginalWeights": false,
+  "geometrySourceM": {
+    "yOpen": [
+      0.95,
+      1.51
+    ],
+    "signedLateralZAbove": 0.18,
+    "shaftDistanceBelow": 0.14
+  },
+  "coreProtected": "Every physical vertex with absZ<=.18 m; all outside geometry selection exact",
+  "hoodProtection": "Entire donor hood/glove/head primitives byte-exact; every exact shared body position and first source graph boundary ring pinned",
+  "blend": "four graph rings smoothstep,60mm cuff taper,40mm lateral taper",
+  "anatomicalTarget": "chestFraction=1-smoothstep(shoulder-to-elbow projection/0.4); distal mass split upperArm/forearm using averaged shaft direction and +/-65mm elbow smoothstep; preserve each source weight sum",
+  "unionInfluencesAtMost": 4,
+  "noPruning": true,
+  "provenance": [
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "material": 1,
+      "materialName": "Baked black leather micrograin",
+      "sourcePositionCount": 4021,
+      "sourceBoundsM": [
+        [
+          0.6192934513092041,
+          0.7016922831535339,
+          -0.44792798161506653
+        ],
+        [
+          0.7178106307983398,
+          0.9134999513626099,
+          0.45693686604499817
+        ]
+      ],
+      "bodyPhysicalAliases": 127,
+      "allSourceAccessorBytesRemainExact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "material": 2,
+      "materialName": "Material.001",
+      "sourcePositionCount": 3112,
+      "sourceBoundsM": [
+        [
+          0.46625596284866333,
+          1.3533841371536255,
+          -0.1928500235080719
+        ],
+        [
+          0.7503086924552917,
+          1.598873496055603,
+          0.1928499937057495
+        ]
+      ],
+      "bodyPhysicalAliases": 307,
+      "allSourceAccessorBytesRemainExact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 3,
+      "materialName": "Material.002",
+      "sourcePositionCount": 61099,
+      "sourceBoundsM": [
+        [
+          0.5498769283294678,
+          1.4228605031967163,
+          -0.1487756222486496
+        ],
+        [
+          0.7834973931312561,
+          1.8225715160369873,
+          0.14736221730709076
+        ]
+      ],
+      "bodyPhysicalAliases": 0,
+      "allSourceAccessorBytesRemainExact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "material": 4,
+      "materialName": "Anatomically reconstructed cheek skin",
+      "sourcePositionCount": 294,
+      "sourceBoundsM": [
+        [
+          0.7400612831115723,
+          1.6432043313980103,
+          -0.04461422562599182
+        ],
+        [
+          0.7528945803642273,
+          1.677214503288269,
+          0.050621338188648224
+        ]
+      ],
+      "bodyPhysicalAliases": 0,
+      "allSourceAccessorBytesRemainExact": true
+    }
+  ],
+  "sides": [
+    {
+      "side": "L",
+      "connectedComponents": 1,
+      "selectedPhysicalVertices": 2168,
+      "sharedProtectedWithinGeometricSelection": 40,
+      "pinnedBoundaryPhysicalVertices": 162,
+      "bindShoulder": [
+        0.6296998666220951,
+        1.4616000397745246,
+        0.20807497900850733
+      ],
+      "bindElbow": [
+        0.6246249255670303,
+        1.1418750291353164,
+        0.28927488172942784
+      ],
+      "bindWrist": [
+        0.6731139011303027,
+        0.8818126979229218,
+        0.36165167125133413
+      ],
+      "longitudinalBlendDirection": [
+        0.08108919936684328,
+        -0.9632116915306095,
+        0.25621822543446476
+      ],
+      "sourceBoundsM": [
+        [
+          0.5171477794647217,
+          0.9505231380462646,
+          0.18022732436656952
+        ],
+        [
+          0.732751727104187,
+          1.4789073467254639,
+          0.39611610770225525
+        ]
+      ]
+    },
+    {
+      "side": "R",
+      "connectedComponents": 1,
+      "selectedPhysicalVertices": 2131,
+      "sharedProtectedWithinGeometricSelection": 44,
+      "pinnedBoundaryPhysicalVertices": 193,
+      "bindShoulder": [
+        0.6296999859634478,
+        1.461600073834663,
+        -0.20807500381600014
+      ],
+      "bindElbow": [
+        0.6246250383675829,
+        1.141874985852439,
+        -0.2892749071193171
+      ],
+      "bindWrist": [
+        0.6776548984585268,
+        0.8825655839752198,
+        -0.35889107037838797
+      ],
+      "longitudinalBlendDirection": [
+        0.08968997077421177,
+        -0.963654789163113,
+        -0.2516449015289548
+      ],
+      "sourceBoundsM": [
+        [
+          0.51604163646698,
+          0.9502732157707214,
+          -0.39161190390586853
+        ],
+        [
+          0.7374223470687866,
+          1.4803931713104248,
+          -0.18000590801239014
+        ]
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round130, 2026-10-01
+## Current evidence — round131, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -727,3 +727,12 @@ annulus albedo trial preserving pupils/limbus/sclera/alpha,22geometry/rig/skin
 and baselinecornea. Onefixedbrown intent/linear-fibrecurve, no sweep. Native
 lidfit/small radialgazemismatch remain open.26weights frozen for motion.
 Current11protected, gallery12921videos retained; next required ship132.
+
+Round131: parent independently verifies ONE26anatomical sleeve weight field,
+only39,865skinbytes changed on3,739exportverts; allgeometry/material/rig and
+protectedjoin/core/cuff/boundary untouched. Fouractualposes originalelbow
+stretch1.62–2.02x/normaldots.94–.98; historicalfolds52/4/37/61 but newfolds
+42/0/29/45 and44.55cm motion. Pinnedshoulderextrema unchanged. Retain ONLY
+for same40sec PBR/gray side/rear movingtrial; no sparsecorrectivedriver or
+composition. No artacceptance. One28iris-only append treatment underway.
+Current11/gallery129protected; requiredship132next.

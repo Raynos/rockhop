@@ -1,0 +1,1961 @@
+{
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind26/rider.glb",
+  "sourceSHA256": "8206374713758e50a75598111317140b24a4cf3330cffee5a5d92d6829c09e13",
+  "sourceUnchanged": true,
+  "primitives": [
+    {
+      "mesh": "Protected_body_NEW_hood_joined_garment",
+      "index": {
+        "file": "mesh0-triangles.f64",
+        "values": 101904,
+        "sha256": "a0d72f839d6012d09d6282c2bdab2e45551ea097804a0c0eceb2c0783d7c615f"
+      },
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "count": 22240,
+          "file": "mesh0-position.f64",
+          "values": 66720,
+          "sha256": "bcc30786ee31b905afb75dce9b87f69ee6870f5f3e7125182fec4ee77a1f3705"
+        },
+        "normal": {
+          "itemSize": 3,
+          "count": 22240,
+          "file": "mesh0-normal.f64",
+          "values": 66720,
+          "sha256": "3b1a080c9a9831323089fe71a4ff8ca2a9d70f72b5af90674684751c0328b778"
+        },
+        "uv": {
+          "itemSize": 2,
+          "count": 22240,
+          "file": "mesh0-uv.f64",
+          "values": 44480,
+          "sha256": "656005fbf8d6addda0a517f1c58b7755268eabb6450ab230657374d1a18fee8f"
+        },
+        "skinIndex": {
+          "itemSize": 4,
+          "count": 22240,
+          "file": "mesh0-skinIndex.f64",
+          "values": 88960,
+          "sha256": "78b574d5c98c44ee9e6ec40949614830e7a7dc4f4549118e6bc7e2db992f2740"
+        },
+        "skinWeight": {
+          "itemSize": 4,
+          "count": 22240,
+          "file": "mesh0-skinWeight.f64",
+          "values": 88960,
+          "sha256": "767d3efd0d9566e15075a8c4b5102cf076ab53a783ea5f1eb8507c1f536e140a"
+        }
+      },
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "inverseBindOriginPositions": [
+        {
+          "name": "pelvis",
+          "sourceWorld": [
+            0.6347749953279879,
+            0.9391750995786616,
+            -2.9643985598619796e-9
+          ]
+        },
+        {
+          "name": "spine",
+          "sourceWorld": [
+            0.6347749062308311,
+            1.0555998012061791,
+            -2.9644159077198934e-9
+          ]
+        },
+        {
+          "name": "chest",
+          "sourceWorld": [
+            0.6297000188665245,
+            1.2585999049210375,
+            -3.952533017609812e-9
+          ]
+        },
+        {
+          "name": "neck",
+          "sourceWorld": [
+            0.6297000165221994,
+            1.5123499486033811,
+            -3.95254255687075e-9
+          ]
+        },
+        {
+          "name": "head",
+          "sourceWorld": [
+            0.6297000165221994,
+            1.568175136843617,
+            -3.95254255687075e-9
+          ]
+        },
+        {
+          "name": "shoulderL",
+          "sourceWorld": [
+            0.6296999342622918,
+            1.4616001581796196,
+            0.07104999369342664
+          ]
+        },
+        {
+          "name": "upperArmL",
+          "sourceWorld": [
+            0.6296998666220951,
+            1.4616000397745244,
+            0.20807497900850727
+          ]
+        },
+        {
+          "name": "forearmL",
+          "sourceWorld": [
+            0.6246249255670303,
+            1.1418750291353166,
+            0.2892748817294278
+          ]
+        },
+        {
+          "name": "handL",
+          "sourceWorld": [
+            0.6731139011303027,
+            0.8818126979229219,
+            0.36165167125133413
+          ]
+        },
+        {
+          "name": "shoulderR",
+          "sourceWorld": [
+            0.6297000224289,
+            1.4616001581796223,
+            -0.07105001316106045
+          ]
+        },
+        {
+          "name": "upperArmR",
+          "sourceWorld": [
+            0.6296999859634478,
+            1.4616000738346633,
+            -0.20807500381600014
+          ]
+        },
+        {
+          "name": "forearmR",
+          "sourceWorld": [
+            0.624625038367583,
+            1.1418749858524393,
+            -0.2892749071193172
+          ]
+        },
+        {
+          "name": "handR",
+          "sourceWorld": [
+            0.6776548984585267,
+            0.8825655839752199,
+            -0.35889107037838797
+          ]
+        },
+        {
+          "name": "thighL",
+          "sourceWorld": [
+            0.6347749634609564,
+            0.9591750249086094,
+            0.10657500757184278
+          ]
+        },
+        {
+          "name": "shinL",
+          "sourceWorld": [
+            0.6499999753730187,
+            0.5074999689560517,
+            0.1471750089391959
+          ]
+        },
+        {
+          "name": "footL",
+          "sourceWorld": [
+            0.6043250285645299,
+            0.1167249648527368,
+            0.1827000097929218
+          ]
+        },
+        {
+          "name": "thighR",
+          "sourceWorld": [
+            0.6347749547064839,
+            0.9591750936379978,
+            -0.10657499378196847
+          ]
+        },
+        {
+          "name": "shinR",
+          "sourceWorld": [
+            0.6500000145484315,
+            0.5075000020950543,
+            -0.14717501152563736
+          ]
+        },
+        {
+          "name": "footR",
+          "sourceWorld": [
+            0.6043250430635566,
+            0.11672498609534104,
+            -0.18270001645966363
+          ]
+        }
+      ]
+    },
+    {
+      "mesh": "Protected_body_NEW_hood_joined_garment_2",
+      "index": {
+        "file": "mesh1-triangles.f64",
+        "values": 12354,
+        "sha256": "74256883aeeb9ebaa3e9958be7a413b31afa3f7b5c44de9231061c53f1823344"
+      },
+      "attributes": {
+        "position": {
+          "itemSize": 3,
+          "count": 3112,
+          "file": "mesh1-position.f64",
+          "values": 9336,
+          "sha256": "1396a97011ee6c6b48bb98c27215104f398d91e7275b9bee9fe34f035be9b1ec"
+        },
+        "normal": {
+          "itemSize": 3,
+          "count": 3112,
+          "file": "mesh1-normal.f64",
+          "values": 9336,
+          "sha256": "f3cc07ad0af0a45ec322bb4cb1d161f63bf4fa998b0c2d728a2bc1a17a554216"
+        },
+        "uv": {
+          "itemSize": 2,
+          "count": 3112,
+          "file": "mesh1-uv.f64",
+          "values": 6224,
+          "sha256": "e21967260555f5333d1742e2fc0ad81a35ccbc022ad6f98e22422c5b142d6123"
+        },
+        "skinIndex": {
+          "itemSize": 4,
+          "count": 3112,
+          "file": "mesh1-skinIndex.f64",
+          "values": 12448,
+          "sha256": "2ee7709a0b7cefaf332469ef64a958c14923c0e6a7e3cef8b40031791ac3b393"
+        },
+        "skinWeight": {
+          "itemSize": 4,
+          "count": 3112,
+          "file": "mesh1-skinWeight.f64",
+          "values": 12448,
+          "sha256": "df12beb12c0d34289ba22836cf473266e70dac6674da1289e23bbe522daeece0"
+        }
+      },
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "inverseBindOriginPositions": [
+        {
+          "name": "pelvis",
+          "sourceWorld": [
+            0.6347749953279879,
+            0.9391750995786616,
+            -2.9643985598619796e-9
+          ]
+        },
+        {
+          "name": "spine",
+          "sourceWorld": [
+            0.6347749062308311,
+            1.0555998012061791,
+            -2.9644159077198934e-9
+          ]
+        },
+        {
+          "name": "chest",
+          "sourceWorld": [
+            0.6297000188665245,
+            1.2585999049210375,
+            -3.952533017609812e-9
+          ]
+        },
+        {
+          "name": "neck",
+          "sourceWorld": [
+            0.6297000165221994,
+            1.5123499486033811,
+            -3.95254255687075e-9
+          ]
+        },
+        {
+          "name": "head",
+          "sourceWorld": [
+            0.6297000165221994,
+            1.568175136843617,
+            -3.95254255687075e-9
+          ]
+        },
+        {
+          "name": "shoulderL",
+          "sourceWorld": [
+            0.6296999342622918,
+            1.4616001581796196,
+            0.07104999369342664
+          ]
+        },
+        {
+          "name": "upperArmL",
+          "sourceWorld": [
+            0.6296998666220951,
+            1.4616000397745244,
+            0.20807497900850727
+          ]
+        },
+        {
+          "name": "forearmL",
+          "sourceWorld": [
+            0.6246249255670303,
+            1.1418750291353166,
+            0.2892748817294278
+          ]
+        },
+        {
+          "name": "handL",
+          "sourceWorld": [
+            0.6731139011303027,
+            0.8818126979229219,
+            0.36165167125133413
+          ]
+        },
+        {
+          "name": "shoulderR",
+          "sourceWorld": [
+            0.6297000224289,
+            1.4616001581796223,
+            -0.07105001316106045
+          ]
+        },
+        {
+          "name": "upperArmR",
+          "sourceWorld": [
+            0.6296999859634478,
+            1.4616000738346633,
+            -0.20807500381600014
+          ]
+        },
+        {
+          "name": "forearmR",
+          "sourceWorld": [
+            0.624625038367583,
+            1.1418749858524393,
+            -0.2892749071193172
+          ]
+        },
+        {
+          "name": "handR",
+          "sourceWorld": [
+            0.6776548984585267,
+            0.8825655839752199,
+            -0.35889107037838797
+          ]
+        },
+        {
+          "name": "thighL",
+          "sourceWorld": [
+            0.6347749634609564,
+            0.9591750249086094,
+            0.10657500757184278
+          ]
+        },
+        {
+          "name": "shinL",
+          "sourceWorld": [
+            0.6499999753730187,
+            0.5074999689560517,
+            0.1471750089391959
+          ]
+        },
+        {
+          "name": "footL",
+          "sourceWorld": [
+            0.6043250285645299,
+            0.1167249648527368,
+            0.1827000097929218
+          ]
+        },
+        {
+          "name": "thighR",
+          "sourceWorld": [
+            0.6347749547064839,
+            0.9591750936379978,
+            -0.10657499378196847
+          ]
+        },
+        {
+          "name": "shinR",
+          "sourceWorld": [
+            0.6500000145484315,
+            0.5075000020950543,
+            -0.14717501152563736
+          ]
+        },
+        {
+          "name": "footR",
+          "sourceWorld": [
+            0.6043250430635566,
+            0.11672498609534104,
+            -0.18270001645966363
+          ]
+        }
+      ]
+    }
+  ],
+  "history": [],
+  "bodyworkSource": {
+    "positions": {
+      "file": "bike-bodywork-source-positions.f64",
+      "values": 3663,
+      "sha256": "0b01cdcd9875787d9d65acaa1b04c49003c9012d5663ebaba4e1a3c5fed2d08c"
+    },
+    "triangles": {
+      "file": "bike-bodywork-triangles.f64",
+      "values": 3228,
+      "sha256": "cf9dbac933c157daaf8d1e98bd7433d006cadcce8abacaf689129ad4ed1c8a26"
+    },
+    "source": "/public/models/bike-rookie.glb",
+    "sourceSHA256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+  },
+  "rows": [
+    {
+      "i": 114,
+      "tick": 1150,
+      "lean": 0.6412462777295135,
+      "bodyworkBikeFrame": {
+        "file": "sample114-bike-bodywork-positions.f64",
+        "values": 3663,
+        "sha256": "9d534b060cf5533feef25b42db48388cafcdfd385a0f0bb833fd66b8bad6e2dc"
+      },
+      "bonePoints": [
+        {
+          "name": "pelvis",
+          "bikeFramePosition": [
+            -0.2817189904543085,
+            0.844148736437603,
+            0
+          ]
+        },
+        {
+          "name": "spine",
+          "bikeFramePosition": [
+            -0.19196382564227576,
+            0.9183023226697031,
+            -6.979635349528028e-15
+          ]
+        },
+        {
+          "name": "chest",
+          "bikeFramePosition": [
+            -0.0354162545515635,
+            1.0476380424476943,
+            2.6976317437310558e-14
+          ]
+        },
+        {
+          "name": "neck",
+          "bikeFramePosition": [
+            0.1602067966824734,
+            1.209257166617455,
+            2.5977460094071025e-14
+          ]
+        },
+        {
+          "name": "head",
+          "bikeFramePosition": [
+            0.18357816063240762,
+            1.259954406022544,
+            2.3837885096053466e-14
+          ]
+        },
+        {
+          "name": "shoulderL",
+          "bikeFramePosition": [
+            0.12108217465156201,
+            1.176933427286464,
+            0.0710499893068655
+          ]
+        },
+        {
+          "name": "upperArmL",
+          "bikeFramePosition": [
+            0.12108205633344937,
+            1.1769333223995062,
+            0.2080749730057162
+          ]
+        },
+        {
+          "name": "forearmL",
+          "bikeFramePosition": [
+            -0.03168224779672357,
+            0.8871571666765377,
+            0.1688802443149226
+          ]
+        },
+        {
+          "name": "handL",
+          "bikeFramePosition": [
+            0.18537748415027977,
+            0.8168387334946559,
+            0.3210723485210841
+          ]
+        },
+        {
+          "name": "shoulderR",
+          "bikeFramePosition": [
+            0.12108222904976174,
+            1.176933361443119,
+            -0.07104998930683586
+          ]
+        },
+        {
+          "name": "upperArmR",
+          "bikeFramePosition": [
+            0.12108213098807141,
+            1.1769332564026058,
+            -0.20807495788102148
+          ]
+        },
+        {
+          "name": "forearmR",
+          "bikeFramePosition": [
+            -0.03114904450748668,
+            0.8868182140241956,
+            -0.1693158130973159
+          ]
+        },
+        {
+          "name": "handR",
+          "bikeFramePosition": [
+            0.18556279743408766,
+            0.8167873421019891,
+            -0.3210775697280307
+          ]
+        },
+        {
+          "name": "thighL",
+          "bikeFramePosition": [
+            -0.2663005292261005,
+            0.856887127471559,
+            0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinL",
+          "bikeFramePosition": [
+            0.006274843601516977,
+            0.49658531177976784,
+            0.1487146917038093
+          ]
+        },
+        {
+          "name": "footL",
+          "bikeFramePosition": [
+            -0.17250040419644108,
+            0.14670977625227977,
+            0.18970833803448187
+          ]
+        },
+        {
+          "name": "thighR",
+          "bikeFramePosition": [
+            -0.26630050523785087,
+            0.8568870984362746,
+            -0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinR",
+          "bikeFramePosition": [
+            0.004323087112226176,
+            0.49498390369885215,
+            -0.14755624339288523
+          ]
+        },
+        {
+          "name": "footR",
+          "bikeFramePosition": [
+            -0.18110453882732713,
+            0.14680291657041522,
+            -0.16854601658222798
+          ]
+        }
+      ],
+      "debug": {
+        "armStretch": [
+          0.634,
+          0.634
+        ],
+        "legStretch": [
+          0.85,
+          0.846
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          6.601128962735625e-8,
+          6.446350553359343e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 1.7258873009017308e-13,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000012267878954498466,
+          0.0000014110192463867684
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.6412462777295135,
+          "lean": 0.6412462777295135,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "playedDebug": {
+        "armStretch": [
+          0.634,
+          0.634
+        ],
+        "legStretch": [
+          0.85,
+          0.846
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          6.601128962735625e-8,
+          6.446350553359343e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 1.7258873009017308e-13,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000012267878954498466,
+          0.0000014110192463867684
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.6412462777295135,
+          "lean": 0.6412462777295135,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "contacts": [
+        {
+          "kind": "hand",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.5830922457560504e-8
+        },
+        {
+          "kind": "hand",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.591778166661178e-8
+        },
+        {
+          "kind": "sole",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.3215168274010725e-8
+        },
+        {
+          "kind": "sole",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.3223905409924772e-8
+        }
+      ],
+      "dump": [
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment",
+          "jointTransforms": {
+            "file": "sample114-mesh0-joint-transforms.f64",
+            "values": 304,
+            "sha256": "5da95980baf0df370f39313f44d62b74aefc791d3a1d30f964bd9f0b57d68216"
+          },
+          "skinMatrices": {
+            "file": "sample114-mesh0-skin-matrices.f64",
+            "values": 355840,
+            "sha256": "9a56ec5bfbad80247ccfec916529fc5417c6e18624ac5e279c0a5983b397b2b4"
+          },
+          "positions": {
+            "file": "sample114-mesh0-positions.f64",
+            "values": 66720,
+            "sha256": "5a83555f6b1fb536572832d1406a303a6de591c4bd3b38950c6ec94dba87b284"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample114-mesh0-normals.f64",
+            "values": 66720,
+            "sha256": "ca915194f3d75596896193c2520b0aaaf0a094a269e0606182b2388338a1850a"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample114-mesh0-skin-determinants.f64",
+            "values": 22240,
+            "sha256": "166d357b037a8bcf83d8443c16e1ff636d4eb282f24b5370397fc485d53d83cf"
+          }
+        },
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment_2",
+          "jointTransforms": {
+            "file": "sample114-mesh1-joint-transforms.f64",
+            "values": 304,
+            "sha256": "5da95980baf0df370f39313f44d62b74aefc791d3a1d30f964bd9f0b57d68216"
+          },
+          "skinMatrices": {
+            "file": "sample114-mesh1-skin-matrices.f64",
+            "values": 49792,
+            "sha256": "1f214f72e63b7074b2b1fbc8b53e714738098dae68a576869f191c14bcce6bf7"
+          },
+          "positions": {
+            "file": "sample114-mesh1-positions.f64",
+            "values": 9336,
+            "sha256": "f0a5c7e2755d6838a7511eb8cb5dd43fa7132691eafb21e4c4c9829ba0b5572d"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample114-mesh1-normals.f64",
+            "values": 9336,
+            "sha256": "e2ec5e427280915198718df919b97bee05915fd1dcfa92d3330b2c451438d394"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample114-mesh1-skin-determinants.f64",
+            "values": 3112,
+            "sha256": "f5ba0a10c4f148b5cceacf4cd7fb967746b435b69be9be48c86c15f70051d9e7"
+          }
+        }
+      ]
+    },
+    {
+      "i": 186,
+      "tick": 1870,
+      "lean": 0.07883448698707964,
+      "bodyworkBikeFrame": {
+        "file": "sample186-bike-bodywork-positions.f64",
+        "values": 3663,
+        "sha256": "518a7dea40b2c0827d64e0a4e47fb865d6030d2a2e4441aa3ca868d0d115dcb6"
+      },
+      "bonePoints": [
+        {
+          "name": "pelvis",
+          "bikeFramePosition": [
+            -0.34421438482559097,
+            0.711940567400486,
+            0
+          ]
+        },
+        {
+          "name": "spine",
+          "bikeFramePosition": [
+            -0.2908692297499442,
+            0.8154250529437608,
+            -6.981068422572224e-15
+          ]
+        },
+        {
+          "name": "chest",
+          "bikeFramePosition": [
+            -0.1978265579173808,
+            0.9959186337941865,
+            2.669456642348217e-14
+          ]
+        },
+        {
+          "name": "neck",
+          "bikeFramePosition": [
+            -0.08155980160009335,
+            1.2214649982989236,
+            2.5690669610659402e-14
+          ]
+        },
+        {
+          "name": "head",
+          "bikeFramePosition": [
+            -0.07449480863661506,
+            1.2768411361615293,
+            2.399957746323183e-14
+          ]
+        },
+        {
+          "name": "shoulderL",
+          "bikeFramePosition": [
+            -0.10481319737786521,
+            1.1763557993925424,
+            0.07104998930686515
+          ]
+        },
+        {
+          "name": "upperArmL",
+          "bikeFramePosition": [
+            -0.10481326497492205,
+            1.17635565645873,
+            0.20807497300571584
+          ]
+        },
+        {
+          "name": "forearmL",
+          "bikeFramePosition": [
+            -0.07336435845815004,
+            0.8491360519948774,
+            0.23603349015714106
+          ]
+        },
+        {
+          "name": "handL",
+          "bikeFramePosition": [
+            0.18537746902171648,
+            0.8168387627010993,
+            0.32107234508598953
+          ]
+        },
+        {
+          "name": "shoulderR",
+          "bikeFramePosition": [
+            -0.10481312137693521,
+            1.1763557602148662,
+            -0.07104998930683613
+          ]
+        },
+        {
+          "name": "upperArmR",
+          "bikeFramePosition": [
+            -0.10481317012485647,
+            1.1763556250234881,
+            -0.2080749578810216
+          ]
+        },
+        {
+          "name": "forearmR",
+          "bikeFramePosition": [
+            -0.07262124485791333,
+            0.8492306320822429,
+            -0.2362930541941323
+          ]
+        },
+        {
+          "name": "handR",
+          "bikeFramePosition": [
+            0.1855628080128895,
+            0.8167873437885014,
+            -0.3210775640946875
+          ]
+        },
+        {
+          "name": "thighL",
+          "bikeFramePosition": [
+            -0.33505057409172423,
+            0.7297175225992589,
+            0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinL",
+          "bikeFramePosition": [
+            0.03966950085003873,
+            0.47758432305447585,
+            0.15021209976775854
+          ]
+        },
+        {
+          "name": "footL",
+          "bikeFramePosition": [
+            -0.1725002391254975,
+            0.14670945922147283,
+            0.18970826584531097
+          ]
+        },
+        {
+          "name": "thighR",
+          "bikeFramePosition": [
+            -0.33505054061507167,
+            0.7297175053423999,
+            -0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinR",
+          "bikeFramePosition": [
+            0.037992861938164424,
+            0.4749456698218033,
+            -0.14924162079738423
+          ]
+        },
+        {
+          "name": "footR",
+          "bikeFramePosition": [
+            -0.18110434958774135,
+            0.14680257332160096,
+            -0.1685459491980187
+          ]
+        }
+      ],
+      "debug": {
+        "armStretch": [
+          0.787,
+          0.788
+        ],
+        "legStretch": [
+          0.72,
+          0.714
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          8.665192613753009e-8,
+          5.806887068229583e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 2.4071894049113443e-14,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000014722535530736263,
+          0.0000016827131039919037
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.07883448698707964,
+          "lean": 0.07883448698707964,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "playedDebug": {
+        "armStretch": [
+          0.787,
+          0.788
+        ],
+        "legStretch": [
+          0.72,
+          0.714
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          8.665192613753009e-8,
+          5.806887068229583e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 2.4071894049113443e-14,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000014722535530736263,
+          0.0000016827131039919037
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.07883448698707964,
+          "lean": 0.07883448698707964,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "contacts": [
+        {
+          "kind": "hand",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.574979377195997e-8
+        },
+        {
+          "kind": "hand",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.613993849110921e-8
+        },
+        {
+          "kind": "sole",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.2520781080389721e-8
+        },
+        {
+          "kind": "sole",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.3545367244103379e-8
+        }
+      ],
+      "dump": [
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment",
+          "jointTransforms": {
+            "file": "sample186-mesh0-joint-transforms.f64",
+            "values": 304,
+            "sha256": "569fa9297399f7e542d2684839c7ced49a60084c1a54535b3dab6c83a9b9d99d"
+          },
+          "skinMatrices": {
+            "file": "sample186-mesh0-skin-matrices.f64",
+            "values": 355840,
+            "sha256": "571da2a80c84f03743bd0a80540b6240042ebd68d1f199ee5f84603f0d8b7429"
+          },
+          "positions": {
+            "file": "sample186-mesh0-positions.f64",
+            "values": 66720,
+            "sha256": "5b2211938bea7015f47b3b99f7de8307c7f8741245acd95b1595cf7368dbe00e"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample186-mesh0-normals.f64",
+            "values": 66720,
+            "sha256": "79b3449a00663fb5d15c0e80fb0845d0ad1a12c23fac9d7352ce1a5d9de84f57"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample186-mesh0-skin-determinants.f64",
+            "values": 22240,
+            "sha256": "b2b53cffdf3ab6445fa8a7363e4d97d97c66bf0ff536ecfa4a28cadcead32fa2"
+          }
+        },
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment_2",
+          "jointTransforms": {
+            "file": "sample186-mesh1-joint-transforms.f64",
+            "values": 304,
+            "sha256": "569fa9297399f7e542d2684839c7ced49a60084c1a54535b3dab6c83a9b9d99d"
+          },
+          "skinMatrices": {
+            "file": "sample186-mesh1-skin-matrices.f64",
+            "values": 49792,
+            "sha256": "6de0720a41b4e5dd5504038d624246b2851907c9e95ff54ff76dab0699771ce6"
+          },
+          "positions": {
+            "file": "sample186-mesh1-positions.f64",
+            "values": 9336,
+            "sha256": "dbfb6d2712573dc2a11df5d450ca6bfe998f72e5e2bcf1670f5410a00f7cc96d"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample186-mesh1-normals.f64",
+            "values": 9336,
+            "sha256": "f25ebec6c45f59b42621a440967b12ceccb38010ebed5756dcb6f38809eecf8d"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample186-mesh1-skin-determinants.f64",
+            "values": 3112,
+            "sha256": "70f395bfa087eac9fac7f1fc339578e5025fa3f2923f00ba67ab2667d088b625"
+          }
+        }
+      ]
+    },
+    {
+      "i": 304,
+      "tick": 3050,
+      "lean": -0.5986156848571763,
+      "bodyworkBikeFrame": {
+        "file": "sample304-bike-bodywork-positions.f64",
+        "values": 3663,
+        "sha256": "93119800774229330829605b43890e352ce29684138a3dd80285d134054bb768"
+      },
+      "bonePoints": [
+        {
+          "name": "pelvis",
+          "bikeFramePosition": [
+            -0.6238956859756399,
+            0.7092316030140822,
+            5.293955920339377e-23
+          ]
+        },
+        {
+          "name": "spine",
+          "bikeFramePosition": [
+            -0.5339709273060862,
+            0.7831794342037881,
+            -6.9638956976682236e-15
+          ]
+        },
+        {
+          "name": "chest",
+          "bikeFramePosition": [
+            -0.37712755739158865,
+            0.9121562838024886,
+            2.6998811311355253e-14
+          ]
+        },
+        {
+          "name": "neck",
+          "bikeFramePosition": [
+            -0.18113487318225907,
+            1.0733269610300766,
+            2.5977926650318062e-14
+          ]
+        },
+        {
+          "name": "head",
+          "bikeFramePosition": [
+            -0.1575646462675877,
+            1.1239320510777304,
+            2.3836793431392157e-14
+          ]
+        },
+        {
+          "name": "shoulderL",
+          "bikeFramePosition": [
+            -0.2203334216121675,
+            1.0410929111140632,
+            0.07104998930686549
+          ]
+        },
+        {
+          "name": "upperArmL",
+          "bikeFramePosition": [
+            -0.2203335401698041,
+            1.0410928064979004,
+            0.2080749730057162
+          ]
+        },
+        {
+          "name": "forearmL",
+          "bikeFramePosition": [
+            -0.07436629858557353,
+            0.7504167055912561,
+            0.2632505849486169
+          ]
+        },
+        {
+          "name": "handL",
+          "bikeFramePosition": [
+            0.18537744235823084,
+            0.8168387712115717,
+            0.3210723373137798
+          ]
+        },
+        {
+          "name": "shoulderR",
+          "bikeFramePosition": [
+            -0.22033336736529918,
+            1.041092845146764,
+            -0.07104998930683587
+          ]
+        },
+        {
+          "name": "upperArmR",
+          "bikeFramePosition": [
+            -0.22033346566763612,
+            1.0410927403315426,
+            -0.20807495788102137
+          ]
+        },
+        {
+          "name": "forearmR",
+          "bikeFramePosition": [
+            -0.07369994842866845,
+            0.7507817401099146,
+            -0.26340554832383134
+          ]
+        },
+        {
+          "name": "handR",
+          "bikeFramePosition": [
+            0.1855628242465741,
+            0.816787345183478,
+            -0.3210775674525169
+          ]
+        },
+        {
+          "name": "thighL",
+          "bikeFramePosition": [
+            -0.6084480912558661,
+            0.7219346487154823,
+            0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinL",
+          "bikeFramePosition": [
+            -0.19526019181938636,
+            0.5387244186873872,
+            0.1465781328286726
+          ]
+        },
+        {
+          "name": "footL",
+          "bikeFramePosition": [
+            -0.1725000699610746,
+            0.14670941477583455,
+            0.18970810864957016
+          ]
+        },
+        {
+          "name": "thighR",
+          "bikeFramePosition": [
+            -0.6084480673341659,
+            0.7219346196253227,
+            -0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinR",
+          "bikeFramePosition": [
+            -0.19427487314567315,
+            0.5410231165363797,
+            -0.14685030166587487
+          ]
+        },
+        {
+          "name": "footR",
+          "bikeFramePosition": [
+            -0.18110414843579292,
+            0.1468025187773918,
+            -0.16854574257590166
+          ]
+        }
+      ],
+      "debug": {
+        "armStretch": [
+          0.79,
+          0.791
+        ],
+        "legStretch": [
+          0.856,
+          0.847
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          9.494602615559692e-8,
+          5.242017133964587e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 4.2016209568115595e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000015266130213181158,
+          0.0000018041423271049208
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.5986156848571763,
+          "lean": 0.5986156848571763,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "playedDebug": {
+        "armStretch": [
+          0.79,
+          0.791
+        ],
+        "legStretch": [
+          0.856,
+          0.847
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          9.494602615559692e-8,
+          5.242017133964587e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 4.2016209568115595e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000015266130213181158,
+          0.0000018041423271049208
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.5986156848571763,
+          "lean": 0.5986156848571763,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "contacts": [
+        {
+          "kind": "hand",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.62792914567844e-8
+        },
+        {
+          "kind": "hand",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.6294357649579924e-8
+        },
+        {
+          "kind": "sole",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.4083433486290807e-8
+        },
+        {
+          "kind": "sole",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.3783075539504766e-8
+        }
+      ],
+      "dump": [
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment",
+          "jointTransforms": {
+            "file": "sample304-mesh0-joint-transforms.f64",
+            "values": 304,
+            "sha256": "3d39273c0d313e50f15fa5761d3cb6cccadc40ceb83343ecdc4c8108fcc0ef52"
+          },
+          "skinMatrices": {
+            "file": "sample304-mesh0-skin-matrices.f64",
+            "values": 355840,
+            "sha256": "1d29abe9edaca347ca4d6a98aab42118fc66d867085304b401d4a45dbcb83eb0"
+          },
+          "positions": {
+            "file": "sample304-mesh0-positions.f64",
+            "values": 66720,
+            "sha256": "d99fb841a17f0a78a2e8b27dbf4246c3e258142b31a1d4b9a17f3e1769eb6aaa"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample304-mesh0-normals.f64",
+            "values": 66720,
+            "sha256": "b800b06f5c9d62a1c19884fefde86211da0cf849d310ee652b2ca7835b9f73bc"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample304-mesh0-skin-determinants.f64",
+            "values": 22240,
+            "sha256": "493622d64e62c01e7b9746c79b08d64bbba9e7dd1824bbebef36a1917ddd06c1"
+          }
+        },
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment_2",
+          "jointTransforms": {
+            "file": "sample304-mesh1-joint-transforms.f64",
+            "values": 304,
+            "sha256": "3d39273c0d313e50f15fa5761d3cb6cccadc40ceb83343ecdc4c8108fcc0ef52"
+          },
+          "skinMatrices": {
+            "file": "sample304-mesh1-skin-matrices.f64",
+            "values": 49792,
+            "sha256": "8cabe77aa9ce65bdfef1b68aac7e04ffde760e16e05b6e0b4c29febd30b8cd2b"
+          },
+          "positions": {
+            "file": "sample304-mesh1-positions.f64",
+            "values": 9336,
+            "sha256": "63abd1cbb6b84c0b08a746645bbfe1ada556a91f2eca97eb9f685090bce25e9e"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample304-mesh1-normals.f64",
+            "values": 9336,
+            "sha256": "c3706b8b96b0672af0565203e35c85e0a3c41e25f38ff698d943a62a69613984"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample304-mesh1-skin-determinants.f64",
+            "values": 3112,
+            "sha256": "820da89b1bf92c147417640738061bb246016c96c8f52f68e5eca9ceda639da6"
+          }
+        }
+      ]
+    },
+    {
+      "i": 426,
+      "tick": 4270,
+      "lean": -1,
+      "bodyworkBikeFrame": {
+        "file": "sample426-bike-bodywork-positions.f64",
+        "values": 3663,
+        "sha256": "7080058e83e32c0391522f1f7d68eea27805c4956579ecc909c927461b526ea0"
+      },
+      "bonePoints": [
+        {
+          "name": "pelvis",
+          "bikeFramePosition": [
+            -0.6802170205191373,
+            0.7082431356595151,
+            0
+          ]
+        },
+        {
+          "name": "spine",
+          "bikeFramePosition": [
+            -0.5891706765908111,
+            0.7808055722422012,
+            -6.958949657467019e-15
+          ]
+        },
+        {
+          "name": "chest",
+          "bikeFramePosition": [
+            -0.4303710825495841,
+            0.9073660688777636,
+            2.705859761191936e-14
+          ]
+        },
+        {
+          "name": "neck",
+          "bikeFramePosition": [
+            -0.2319338823501198,
+            1.0655172527892631,
+            2.6034485978940942e-14
+          ]
+        },
+        {
+          "name": "head",
+          "bikeFramePosition": [
+            -0.20704372687526984,
+            1.1154863521567364,
+            2.3943038099150285e-14
+          ]
+        },
+        {
+          "name": "shoulderL",
+          "bikeFramePosition": [
+            -0.2716213326661432,
+            1.033887101702291,
+            0.07104998930686555
+          ]
+        },
+        {
+          "name": "upperArmL",
+          "bikeFramePosition": [
+            -0.27162145280914274,
+            1.0338869989105035,
+            0.20807497300571615
+          ]
+        },
+        {
+          "name": "forearmL",
+          "bikeFramePosition": [
+            -0.08017390897146015,
+            0.772200430237163,
+            0.26899587044885526
+          ]
+        },
+        {
+          "name": "handL",
+          "bikeFramePosition": [
+            0.18537742891328435,
+            0.8168387764824132,
+            0.32107233555998943
+          ]
+        },
+        {
+          "name": "shoulderR",
+          "bikeFramePosition": [
+            -0.27162127943796577,
+            1.033887034915324,
+            -0.0710499893068358
+          ]
+        },
+        {
+          "name": "upperArmR",
+          "bikeFramePosition": [
+            -0.27162137933584063,
+            1.0338869316203727,
+            -0.2080749578810212
+          ]
+        },
+        {
+          "name": "forearmR",
+          "bikeFramePosition": [
+            -0.07950249865058368,
+            0.7727237419914559,
+            -0.2691279032082349
+          ]
+        },
+        {
+          "name": "handR",
+          "bikeFramePosition": [
+            0.18556280532322944,
+            0.816787344328219,
+            -0.32107756066620297
+          ]
+        },
+        {
+          "name": "thighL",
+          "bikeFramePosition": [
+            -0.6645767555232283,
+            0.720708193347491,
+            0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinL",
+          "bikeFramePosition": [
+            -0.25442068158309894,
+            0.5306691991586092,
+            0.1459152482794579
+          ]
+        },
+        {
+          "name": "footL",
+          "bikeFramePosition": [
+            -0.1725000529791032,
+            0.146709508780404,
+            0.18970816300838572
+          ]
+        },
+        {
+          "name": "thighR",
+          "bikeFramePosition": [
+            -0.6645767320496816,
+            0.7207081638945283,
+            -0.10657499152263171
+          ]
+        },
+        {
+          "name": "shinR",
+          "bikeFramePosition": [
+            -0.25265898740423154,
+            0.5346913514793386,
+            -0.14672501782515776
+          ]
+        },
+        {
+          "name": "footR",
+          "bikeFramePosition": [
+            -0.18110413408243176,
+            0.1468026056106595,
+            -0.16854576760561277
+          ]
+        }
+      ],
+      "debug": {
+        "armStretch": [
+          0.858,
+          0.859
+        ],
+        "legStretch": [
+          0.896,
+          0.887
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          1.0151540995248281e-7,
+          6.032257165375851e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 5.699387806633921e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000014156704856226343,
+          0.000001719038044093128
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 1,
+          "lean": 1,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "playedDebug": {
+        "armStretch": [
+          0.858,
+          0.859
+        ],
+        "legStretch": [
+          0.896,
+          0.887
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          1.0151541005772611e-7,
+          6.032257194764062e-8
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0.000001,
+          0.000001
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 5.6993865191962e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "stand_to_sit_probe"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          0.0000014156704856987692,
+          0.0000017190380439720237
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 1,
+          "lean": 1,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      },
+      "contacts": [
+        {
+          "kind": "hand",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.5281467398547262e-8
+        },
+        {
+          "kind": "hand",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.5361124872640865e-8
+        },
+        {
+          "kind": "sole",
+          "side": "L",
+          "maximumCPUvsActualPlayedSurfaceM": 1.4315646807379136e-8
+        },
+        {
+          "kind": "sole",
+          "side": "R",
+          "maximumCPUvsActualPlayedSurfaceM": 1.4760012777564374e-8
+        }
+      ],
+      "dump": [
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment",
+          "jointTransforms": {
+            "file": "sample426-mesh0-joint-transforms.f64",
+            "values": 304,
+            "sha256": "706625b9105c3cbd44583e88ef210f44ded43b0f65fac06c9e49d5215f750130"
+          },
+          "skinMatrices": {
+            "file": "sample426-mesh0-skin-matrices.f64",
+            "values": 355840,
+            "sha256": "f1c7666a18d8ec6718d512080df86d7a06d6d61f5b0478bd1f15380ae6ac4314"
+          },
+          "positions": {
+            "file": "sample426-mesh0-positions.f64",
+            "values": 66720,
+            "sha256": "0e0155f86208954eef644d658d487922e2ff61c70e99e8c816b19db2f1767c3d"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample426-mesh0-normals.f64",
+            "values": 66720,
+            "sha256": "181658a0cf13f23ab4ee81d983b7e865c6654939d9e24afd2b84a1944b78db92"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample426-mesh0-skin-determinants.f64",
+            "values": 22240,
+            "sha256": "8541484a3454a0ad8773d5761ceaa34645612dad85e0e76c0b56ed7eb18418a9"
+          }
+        },
+        {
+          "mesh": "Protected_body_NEW_hood_joined_garment_2",
+          "jointTransforms": {
+            "file": "sample426-mesh1-joint-transforms.f64",
+            "values": 304,
+            "sha256": "706625b9105c3cbd44583e88ef210f44ded43b0f65fac06c9e49d5215f750130"
+          },
+          "skinMatrices": {
+            "file": "sample426-mesh1-skin-matrices.f64",
+            "values": 49792,
+            "sha256": "9e391a4c377b6902933fad1f3e17ffc1cfea9532fe1142dfcbe3e5cfe3233863"
+          },
+          "positions": {
+            "file": "sample426-mesh1-positions.f64",
+            "values": 9336,
+            "sha256": "d5c17ce00ec43ae66edd7cd959b03b7c5d2bac2f29ed0e41e3ee0f62877d741d"
+          },
+          "gpuRuleSkinnedNormals": {
+            "file": "sample426-mesh1-normals.f64",
+            "values": 9336,
+            "sha256": "5577a5db61dbb4e1e20f3a02bc48d2a6ea637b04789ae8c58ec35db110569f0c"
+          },
+          "skinLinearDeterminants": {
+            "file": "sample426-mesh1-skin-determinants.f64",
+            "values": 3112,
+            "sha256": "27172ec59661f229cd4e9d36c6fd2bf2f73d48e6558d83b9a29c8bf572ad14ad"
+          }
+        }
+      ]
+    }
+  ],
+  "limits": "CPU actual Three.js recorded-state reconstruction using source11 private rig adapter and anatomical sleeve weight changes only. No GPU/material rendering or moving art acceptance."
+}
