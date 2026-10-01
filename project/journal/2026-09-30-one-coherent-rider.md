@@ -1436,3 +1436,17 @@ canonical lock batch33.35seconds, peak37.47GB anonymous memory.
 Limits: Fifth native-graft appearance failure triggers autonomous topology/
 eye-fit approach switch; no more material sweep or failed promotion.
 Fullbody/phone/Garage/actualLOD and deformation gates stay open.
+
+## Round138 — torso selection contamination, not solely frozen boundary
+
+Finding: Projected rejected26torso fans include fullychanged source torso
+vertices receiving strong arm weights; witnessedstretch16.13/14.67x vs
+baseline0.992/1x. Most regressionflags occur inside changedsurface, not
+mixedboundaries. Use source-surface branch/geodesic segmentation next.
+Validation: Read-only actualThree fourstate buffers repeat byte-exact;
+recordedcamera anchors1e-12; complete33968triangles/17196physicalvertices
+onegraph. CPU rerun/archive pass. Requiredship138unchanged11low/highbyte
+finish/hash exact,crash103ticks/restarts1/2ms/errors0 undercanonical lock.
+Limits: Overlays have no depth test; flags not collision/quality proof.
+Sourceimage width assertion corrected before results; no asset changed.
+Actualheadhoodjoin/current11/gallery129preserved; eyematerial tuning stopped.

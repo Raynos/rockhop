@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round137, 2026-10-01
+## Current evidence — round138, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -798,3 +798,13 @@ switch: localizedsource-preserving eyelid/sockettopology andeye-fit work,
 no morecoat/color/transmission/roughness tweaks or analyticringrepeat.
 Current22pigmentprogress/NEWheadidentity/neckhoodjoin/body11 protected.
 Connectedgarmentaudit next; requiredship138. No normalasset promotion.
+
+Round138: complete33968tri connectedgarment + actualcamera projected26
+witnesses diagnose torso contamination by Euclidean shaft/lateralROI.
+Fullychanged torso triangles27805/6340carry newarmweights and stretch16.13/
+14.67x vsbaseline.992/1x; most1071–1406regressionflags fullychanged, only
+57–150mixedinterfaces. Do not treatfrozenboundary assolecause orwidensameROI.
+Nextsource-surface geodesic/branchsegmentation before continuousweights or
+limitedretopo; protectactualheadneckhoodjoin/aliases/contactcontracts.
+No newasset. Ship138unchanged11bytefinish/hash/crash103restart1/2ms/errors0.
+29face6.8rejectionandfivefailureeyeapproachswitchstand. Shipnext141.

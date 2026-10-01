@@ -1,0 +1,95 @@
+{
+  "round": 138,
+  "status": "Retain read-only causal diagnosis; no new rider candidate",
+  "parentViewsReviewed": [
+    "projected-side-key304.jpg",
+    "projected-side-key426.jpg"
+  ],
+  "finding": "Projected ranked torso triangles coincide with rejected moving jagged fans. Example27805 is fully changed, not shared-hood or graph-boundary protected; source spine/chest dominates but candidate introduces0.64-0.67upperArm.R. Candidate stretch16.13x vs baseline0.992x. Example6340 was spine1, now substantial arm mass; stretch14.67x vs1.000x. This is torso inclusion by Euclidean shaft/lateral ROI, not solely frozen-boundary conflict.",
+  "completeConnectedGarment": {
+    "exportVertices": 22240,
+    "physicalVertices": 17196,
+    "triangles": 33968,
+    "components": 1,
+    "componentVertexCounts": [
+      17196
+    ],
+    "sharedOtherPrimitivePhysicalAliases": 434,
+    "changedPhysicalVertices": 3004,
+    "changedPinnedInterfaceEdges": 828,
+    "mixedChangedPinnedTriangles": 828,
+    "junctionL1JumpBeforeAfterP50P90P99": [
+      [
+        0.020221009850502014,
+        0.20833753943443312,
+        0.4652514559775592
+      ],
+      [
+        0.05145416265440872,
+        0.2201167826307938,
+        0.44877754546701915
+      ]
+    ],
+    "junctionL1GradientPerMetreBeforeAfterP50P90P99": [
+      [
+        1.802330172375146,
+        17.508641773614897,
+        24.207420199571786
+      ],
+      [
+        4.468636458528234,
+        17.964219969474563,
+        24.841432388874512
+      ]
+    ]
+  },
+  "flaggedRows": [
+    {
+      "sample": 114,
+      "allBodyTriangles": 33968,
+      "newArmGeometryNormalOpposition": 535,
+      "newArmStretchRegressionTriangles": 902,
+      "flaggedUnion": 1071,
+      "mixedChangedPinnedTrianglesFlagged": 57,
+      "fullyChangedTrianglesFlagged": 1014,
+      "completelyPinnedTrianglesFlagged": 0
+    },
+    {
+      "sample": 186,
+      "allBodyTriangles": 33968,
+      "newArmGeometryNormalOpposition": 374,
+      "newArmStretchRegressionTriangles": 993,
+      "flaggedUnion": 1076,
+      "mixedChangedPinnedTrianglesFlagged": 65,
+      "fullyChangedTrianglesFlagged": 1011,
+      "completelyPinnedTrianglesFlagged": 0
+    },
+    {
+      "sample": 304,
+      "allBodyTriangles": 33968,
+      "newArmGeometryNormalOpposition": 449,
+      "newArmStretchRegressionTriangles": 1286,
+      "flaggedUnion": 1373,
+      "mixedChangedPinnedTrianglesFlagged": 142,
+      "fullyChangedTrianglesFlagged": 1231,
+      "completelyPinnedTrianglesFlagged": 0
+    },
+    {
+      "sample": 426,
+      "allBodyTriangles": 33968,
+      "newArmGeometryNormalOpposition": 471,
+      "newArmStretchRegressionTriangles": 1308,
+      "flaggedUnion": 1406,
+      "mixedChangedPinnedTrianglesFlagged": 150,
+      "fullyChangedTrianglesFlagged": 1256,
+      "completelyPinnedTrianglesFlagged": 0
+    }
+  ],
+  "correctedHypothesis": "Most flagged triangles are wholly changed, not interfaces:1011-1256perstate compared57-150mixed vertices. Merely widening frozen boundary will not solve semantic torso contamination.",
+  "next": "Build source-surface geodesic/branch segmentation from cuff and torso landmarks before one continuous topology-aware weight solve or limited garment retopology. Require zero substantial arm-weight transfer on witnessed torso triangles while improving elbow. Preserve actual NEWhood/head/neck geometry, shared alias continuity and grip/sole contracts; do not freeze every old shoulder weight or reuse Euclidean selection.",
+  "limits": [
+    "Projection has no depth test; correspondence supports localized diagnosis, not a full visibility/collision certificate.",
+    "Flags are geometric normal opposition/stretch, not proven intersections.",
+    "No new asset or fullbody/face grade. One setup assertion initially assumed2560imagewidth from face captures; actual sleeve1280x720 now read from retainedimage, corrected before diagnostic evidence."
+  ]
+}
