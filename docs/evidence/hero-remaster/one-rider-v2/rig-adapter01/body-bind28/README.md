@@ -19,3 +19,17 @@ The GLB appends one PNG buffer view, image, texture and cloned opaque eye materi
 `independent-conservation.json` records per-eye original/new median colour and luminance controls; these are CPU atlas values, not actual lit appearance. `build-report.json` records exact proposal/input hashes and appended indices. Repeated construction reproduces GLB, original/corrected PNGs and mask NPZ byte-for-byte; Python recipes compile and the independent verifier passes using two BLAS threads.
 
 The parent owns rendered motion and closeup comparison against22. Unresolved eyelid fit, asymmetric radial pitch, tone mapping and actual mip/lighting effects remain. This candidate has no appearance grade or acceptance, and is not game-ready. No GPU, browser, model generation, shared-file edit or commit was performed by this builder.
+
+## Parent moving judgment — round134: below minimum
+
+Parent independently verified CPU conservation, then actual engine loads exact
+28source.72paired state/hash/debug/bones/effectivecamera/focus records match22.
+All72gray frames pixel-identical. The textured change reaches up to1599pixels
+and36channel levels, but the face still reads as flat dark disks with exposed
+lid rings. Parent reviewed all72ordered PBR movieframes and actual closeup.
+Face6.8/10, unchanged from22 and below7. No full-body score fromface crop.
+
+Reject albedo-only treatment as sufficient refinement; source22retained.
+Do not tune another colour/curve. Inspect actual prepared eye normals/material
+response and hidden cornea before one different mechanism; no full-transmission
+repeat or unproved gaze surgery. All144source/movieframes preserved privately.

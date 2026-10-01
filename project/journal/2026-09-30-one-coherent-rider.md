@@ -1405,3 +1405,13 @@ changed,8841pupil pixels and all alpha/sclera/outside mask exact; original
 BIN/accessors/19rig/headhoodneck and materialfactors exact; repeat exact.
 Limits: No appearance pass, optimizedLOD or promotion. Same72-frame actual
 face motion and pixel-identical gray control next; no settings sweep.
+
+## Round134 — iris albedo alone does not improve the face gate
+
+Finding: Corrected iris pixels reach the actual renderer but the visual
+change remains too subtle; flat dark eyes/lid rings still fail the minimum.
+Validation: Parent72ordered PBR frames/closeup reviewed, face6.8 below7;
+72paired records exact,72gray controls pixel-identical, sourceSHA actually
+loaded. CPU conservation and actual replay pass; all144frames archived.
+Limits: No full-body score or promotion. Stop albedo-only tuning and inspect
+actual prepared normals/material/cornea response before a different mechanism.

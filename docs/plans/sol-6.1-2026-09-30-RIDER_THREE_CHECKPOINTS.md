@@ -1078,3 +1078,12 @@ fixedbrown/linearcurve. Deterministic repeat exact. Retain ONLY for same72
 frame actualface motion/graycontrol versus22, no shader/colour sweep.26sleeve
 rejection and fulljunctionaudit next preserved. Current11/gallery12921videos
 protected; appearance/actualLOD/contact/Garage open. Nextrequiredship135.
+
+Round134: iris28actual72PBRframes reviewed plus matchedcloseup; face6.8
+unchanged22 andbelow7. Actualdelta≤1599pixels/36channellevels but flatdark
+disks/exposedlidrings remain. All72graycontrols pixel-identical; pairedstate/
+hash/bones/camera/focus exact; originalheadhoodneck preserved. Reject albedo-
+only as sufficientrefinement, stopcolour/curvesweep. Inspect actualprepared
+eye normals/materialresponse/hiddencornea before different mechanism; no
+fulltransmissionrepeat or unprovedgazesurgery.26sleeve rejected; wholejunction
+audit remainsnext. Current11/gallery129protected, no promotion. Shipnext135.
