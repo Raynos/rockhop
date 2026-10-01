@@ -72,6 +72,19 @@ on reaching it, freeze evidence and select the next action autonomously under
 the five/fifteen policy. Track active work separately from idle time. No time
 allowance authorizes advancing an unpassed checkpoint.
 
+### Current last-resort construction decision
+
+The reduced H21-4 hood cut/strip/lining repair lineage is retired at fifteen
+failures. The final actual assembly remains below target: diagnostic full
+character5/10, face3/10, with exposed folded lining, incompatible UV chart
+interpolation and225 cloth vertices penetrating skin by up to14.94mm.
+No sixteenth repair is permitted. Parent selected a genuinely NEW authored
+whole hood from four garment panels and a new neck binding, with its own
+coherent UV atlas. The old hood is silhouette/material reference only;
+body/clothing/hands outside the declared whole-hood region remain protected.
+Fresh actual Hunyuan2.1 buzz-bust generation is complete but its appearance
+remains unaccepted pending actual renders. No rig or gameplay gate is passed.
+
 ### Three parallel Blender approaches
 
 Whenever Blender work benefits from alternative mechanisms, the parent may

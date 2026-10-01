@@ -1,0 +1,471 @@
+{
+  "status": "UNACCEPTED frozen C modular hood trial04; actual appearance/deformation review pending",
+  "actualStartUTC": "2026-10-01 01:56:30 UTC",
+  "originalDeadlineUTC": "2026-10-01 02:26:30 UTC",
+  "deadlineUTC": "2026-10-01 02:43:00 UTC",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "recipeSHA256": "63d7aa433f29e08fd259ef387af73e187ae7578a6c7b6144587df1caf8f238c8",
+  "mechanism": "Continuous original native skin bust unchanged under separate authored curved hood panels and rolled lining; actual original cloth barycentric UV/PBR transfer",
+  "authorizedExactPinchCorrection": [
+    19285,
+    19904
+  ],
+  "authorizedExactIslandCorrection": [
+    26265,
+    26268,
+    26649,
+    26650
+  ],
+  "boundedContinuationUTC": "2026-10-01 02:43:00 UTC",
+  "priorFailures": "C trial01 appearance rejected5/10 body3/10 face; six historical neck failures retained. No history reset.",
+  "verifiedOriginalClothReference": {
+    "triangleCount": 4410,
+    "worldZBand": [
+      1.32,
+      1.49
+    ],
+    "maxAbsX": 0.27,
+    "actualImage": "textured",
+    "warmTexelRule": "R>.035,R>1.12G,B<.85G",
+    "actualRGBMin": [
+      0.18039216101169586,
+      0.10196079313755035,
+      0.0
+    ],
+    "actualRGBMax": [
+      0.8980392813682556,
+      0.6784313917160034,
+      0.3960784673690796
+    ],
+    "darkOldNapeHairExcluded": true
+  },
+  "actualLocal3DSkinClothClearance": {
+    "sampleBasis": "All actual authored control panel vertices against unchanged full native skin triangles; not a projected2D contour",
+    "sampleCount": 441,
+    "minimumDistanceM": 9.479030268266797e-05,
+    "minimumSignedSurfaceDistanceM": -0.01588262472068891,
+    "signedInsideSamplesBeyond0_5mm": 29,
+    "insideWitnesses": [
+      {
+        "controlVertex": 38,
+        "cloth": [
+          0.026496130973100662,
+          0.0842367634177208,
+          1.5635665655136108
+        ],
+        "skin": [
+          0.027384229004383087,
+          0.08576375991106033,
+          1.5635242462158203
+        ],
+        "distanceM": 0.0017669826047495008,
+        "signedDistanceM": -0.0017669826370365627
+      },
+      {
+        "controlVertex": 39,
+        "cloth": [
+          0.012317127548158169,
+          0.08922779560089111,
+          1.5671558380126953
+        ],
+        "skin": [
+          0.013181809335947037,
+          0.09216748923063278,
+          1.566838264465332
+        ],
+        "distanceM": 0.0030806371942162514,
+        "signedDistanceM": -0.003080637354287319
+      },
+      {
+        "controlVertex": 40,
+        "cloth": [
+          -0.002213734434917569,
+          0.08913714438676834,
+          1.5693668127059937
+        ],
+        "skin": [
+          -0.0023667430505156517,
+          0.09399383515119553,
+          1.5685231685638428
+        ],
+        "distanceM": 0.004931794013828039,
+        "signedDistanceM": -0.004931794274398271
+      },
+      {
+        "controlVertex": 55,
+        "cloth": [
+          -0.04014819860458374,
+          0.07546768337488174,
+          1.5482414960861206
+        ],
+        "skin": [
+          -0.040651604533195496,
+          0.07598569244146347,
+          1.5483078956604004
+        ],
+        "distanceM": 0.0007253687945194542,
+        "signedDistanceM": -0.0007253687713273393
+      },
+      {
+        "controlVertex": 56,
+        "cloth": [
+          -0.03351804241538048,
+          0.06155527010560036,
+          1.5416055917739868
+        ],
+        "skin": [
+          -0.044914498925209045,
+          0.07244646549224854,
+          1.5435447692871094
+        ],
+        "distanceM": 0.015882624313235283,
+        "signedDistanceM": -0.01588262472068891
+      },
+      {
+        "controlVertex": 57,
+        "cloth": [
+          -0.03186783567070961,
+          0.07009373605251312,
+          1.5327030420303345
+        ],
+        "skin": [
+          -0.040034275501966476,
+          0.07918760925531387,
+          1.5353721380233765
+        ],
+        "distanceM": 0.012510529719293118,
+        "signedDistanceM": -0.012510529020801187
+      },
+      {
+        "controlVertex": 58,
+        "cloth": [
+          -0.029925398528575897,
+          0.08601993322372437,
+          1.5311709642410278
+        ],
+        "skin": [
+          -0.03043210506439209,
+          0.08705072849988937,
+          1.5313923358917236
+        ],
+        "distanceM": 0.0011697417357936502,
+        "signedDistanceM": -0.001169741812191205
+      },
+      {
+        "controlVertex": 102,
+        "cloth": [
+          0.031218716874718666,
+          0.0774424746632576,
+          1.5591866970062256
+        ],
+        "skin": [
+          0.03410515561699867,
+          0.08121342211961746,
+          1.559034824371338
+        ],
+        "distanceM": 0.00475127762183547,
+        "signedDistanceM": -0.0047512780511169694
+      },
+      {
+        "controlVertex": 103,
+        "cloth": [
+          0.01813364028930664,
+          0.08298961073160172,
+          1.5629719495773315
+        ],
+        "skin": [
+          0.02089289389550686,
+          0.08904266357421875,
+          1.5627394914627075
+        ],
+        "distanceM": 0.006656348239630461,
+        "signedDistanceM": -0.00665634761662659
+      },
+      {
+        "controlVertex": 104,
+        "cloth": [
+          0.004960441961884499,
+          0.08385579288005829,
+          1.5656975507736206
+        ],
+        "skin": [
+          0.00542166642844677,
+          0.09322317689657211,
+          1.5644408464431763
+        ],
+        "distanceM": 0.009462553076446056,
+        "signedDistanceM": -0.009462552923650946
+      },
+      {
+        "controlVertex": 120,
+        "cloth": [
+          -0.03103499859571457,
+          0.06636780500411987,
+          1.5451133251190186
+        ],
+        "skin": [
+          -0.0406363271176815,
+          0.07624764740467072,
+          1.5463790893554688
+        ],
+        "distanceM": 0.013834700919687748,
+        "signedDistanceM": -0.013834701792802662
+      },
+      {
+        "controlVertex": 121,
+        "cloth": [
+          -0.03226296603679657,
+          0.07557748258113861,
+          1.5341211557388306
+        ],
+        "skin": [
+          -0.03733526170253754,
+          0.08144925534725189,
+          1.535630702972412
+        ],
+        "distanceM": 0.007904722355306149,
+        "signedDistanceM": -0.00790472186054103
+      },
+      {
+        "controlVertex": 161,
+        "cloth": [
+          0.06130335479974747,
+          0.03785916417837143,
+          1.5477200746536255
+        ],
+        "skin": [
+          0.06239047646522522,
+          0.03795650973916054,
+          1.5476772785186768
+        ],
+        "distanceM": 0.0010923100635409355,
+        "signedDistanceM": -0.0010923100958279974
+      },
+      {
+        "controlVertex": 165,
+        "cloth": [
+          0.04985206574201584,
+          0.05891319736838341,
+          1.5517277717590332
+        ],
+        "skin": [
+          0.05303284525871277,
+          0.06095533072948456,
+          1.5519663095474243
+        ],
+        "distanceM": 0.0037874223198741674,
+        "signedDistanceM": -0.0037874219606237602
+      },
+      {
+        "controlVertex": 166,
+        "cloth": [
+          0.03925091028213501,
+          0.06404056400060654,
+          1.5518532991409302
+        ],
+        "skin": [
+          0.045926034450531006,
+          0.07026585191488266,
+          1.5521997213363647
+        ],
+        "distanceM": 0.009134084917604923,
+        "signedDistanceM": -0.00913408422456996
+      },
+      {
+        "controlVertex": 167,
+        "cloth": [
+          0.028658762574195862,
+          0.07090339064598083,
+          1.5559247732162476
+        ],
+        "skin": [
+          0.03607141599059105,
+          0.07965517789125443,
+          1.556016206741333
+        ],
+        "distanceM": 0.011469506658613682,
+        "signedDistanceM": -0.011469505976549499
+      },
+      {
+        "controlVertex": 168,
+        "cloth": [
+          0.018155278638005257,
+          0.07385989278554916,
+          1.5592182874679565
+        ],
+        "skin": [
+          0.02526073344051838,
+          0.08686220645904541,
+          1.5591932535171509
+        ],
+        "distanceM": 0.014817161485552788,
+        "signedDistanceM": -0.01481716075912587
+      },
+      {
+        "controlVertex": 169,
+        "cloth": [
+          0.004907859023660421,
+          0.08483804762363434,
+          1.558012843132019
+        ],
+        "skin": [
+          0.0050641377456486225,
+          0.09242231398820877,
+          1.5572575330734253
+        ],
+        "distanceM": 0.007623386103659868,
+        "signedDistanceM": -0.007623385448368936
+      },
+      {
+        "controlVertex": 184,
+        "cloth": [
+          -0.029192859306931496,
+          0.0756424143910408,
+          1.550063967704773
+        ],
+        "skin": [
+          -0.03397039696574211,
+          0.0815882608294487,
+          1.5506458282470703
+        ],
+        "distanceM": 0.007649608887732029,
+        "signedDistanceM": -0.00764960861124564
+      },
+      {
+        "controlVertex": 185,
+        "cloth": [
+          -0.03319649398326874,
+          0.08301049470901489,
+          1.5391192436218262
+        ],
+        "skin": [
+          -0.033545177429914474,
+          0.08350059390068054,
+          1.5392189025878906
+        ],
+        "distanceM": 0.0006096796132624149,
+        "signedDistanceM": -0.0006096796514611924
+      }
+    ],
+    "limitations": "Control vertices only, not dense continuous triangle/selfcollision or final neck-motion acceptance"
+  },
+  "sourceProtection": {
+    "removedOldRejectedHeadFaces": 13657,
+    "removedExactTwoVertexStarHoodStripFaces": 767,
+    "sourceMaskFile": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/trial04/source-region-mask.npz",
+    "sourceMaskSHA256": "6697efbd2b0253c4365e7b3c606f718da268044a9ed17d11c69ec8f0fa42063f",
+    "protectedSourcePolygons": 41738,
+    "protectedPositionAllUVsMaterialSHA256": "8887cdf09549af8bb32a1d6065100979b69cea497711240c6c6dd340a53ad2bb",
+    "protectedExact": true,
+    "sourceNativeMaterialsAndFaceAssignmentsPreserved": true,
+    "allOriginalHandsFeetLegsOutsideMask": true
+  },
+  "headProof": [
+    {
+      "name": "UNACCEPTED native evaluated young-adult male head",
+      "vertices": 69549,
+      "faces": 69440,
+      "sourceCoordinatesSHA256": "90075204954c2d3e23b14e3b192d53e669e2dd2c9f0d29651b08afd6b827d661",
+      "sourceCoordinatesUnchanged": true,
+      "nativeUVsUnchanged": true,
+      "continuousEntireBustNotTrimmed": true,
+      "canonicalMatrix": [
+        [
+          0.41999998688697815,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.41999998688697815,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.41999998688697815,
+          1.5933799743652344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NEW native CC0 eye surfaces fitted to baked male source",
+      "vertices": 4164,
+      "faces": 4080,
+      "sourceCoordinatesSHA256": "9f3a69cba8774758b348a6a720afc1441a25bd1ccd0a8e8e3367f993a10adc27",
+      "sourceCoordinatesUnchanged": true,
+      "nativeUVsUnchanged": true,
+      "continuousEntireBustNotTrimmed": true,
+      "canonicalMatrix": [
+        [
+          0.41999998688697815,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.41999998688697815,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.41999998688697815,
+          1.5933799743652344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "cloth": {
+    "sourceBaseBoundaryVertices": 142,
+    "originalHoodOpeningVertices": 111,
+    "authoredControlVertices": 448,
+    "authoredControlQuads": 384,
+    "cleanOpeningFourierModes": 6,
+    "actualPBRTransfer": "New face corners use original actual cloth triangle barycentricUV0/UV1; exact original native body PBR textures/material, no color substitute",
+    "sourceTangentHermiteConstruction": true,
+    "thicknessM": 0.002,
+    "sewn": {
+      "sourceGarmentToActualOuterPanel": 270,
+      "actualRolledNecklineThickness": 256
+    },
+    "liningHem": "One open hidden cloth lining hem beneath sourcehood; no exposed separate skin join. Hidden boundary requires moving proof.",
+    "skinClothWeld": false
+  },
+  "topology": {
+    "boundaryEdges": 128,
+    "nonmanifoldEdges": 0,
+    "degenerateFaces": 0,
+    "openHiddenLiningHemVertices": 128
+  },
+  "outputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/trial04/character.blend": "4c2ddf4e072ea6105f05ec2f3324f559b26d8f3a873219ac2f4ef869b7c67a2d",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/trial04/character.glb": "e08c38e99fb121a8014ef45bfe6a63a4811872e52cc57424a305bf14b128900e"
+  },
+  "inputsAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "finishedUTC": "2026-10-01T02:24:00.694763+00:00"
+}

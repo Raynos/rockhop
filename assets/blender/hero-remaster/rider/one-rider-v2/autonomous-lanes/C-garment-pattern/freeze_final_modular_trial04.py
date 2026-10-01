@@ -1,0 +1,10 @@
+"""Freeze parent-rejected final repair and retire the exhausted source lineage."""
+from pathlib import Path
+import hashlib,json,datetime
+P=Path('/Users/raynos/projects/games/rockhop');R=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern');O=P/'docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/C-garment-pattern/trial04';A=P/'assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/C-garment-pattern'
+assert not (O/'freeze-manifest.json').exists();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+for prior in [O.parent/'freeze-manifest.json',O.parent/'trial02/freeze-manifest.json',O.parent/'trial03/freeze-manifest.json']:
+ d=json.loads(prior.read_text());assert all(sha(Path(p))==m['sha256'] for p,m in d['files'].items()),'Earlier frozen trial changed'
+files=[p for root in [O,R/'trial04'] for p in root.rglob('*') if p.is_file()]+[p for p in A.glob('*trial04.py') if p.is_file()]
+report={'status':'PARENT REJECTED; global neck-family failure15; exhausted old reducedH21hood cut/strip/lining repair lineage RETIRED','attempt16Forbidden':True,'originalStartUTC':'2026-10-01 01:56:30 UTC','actualFinalConstructionStartUTC':'2026-10-01 02:23:52 UTC','originalDeadlineUTC':'2026-10-01 02:26:30 UTC','parentAuthorizedOneContinuationDeadlineUTC':'2026-10-01 02:43:00 UTC','finishedUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'trial01Trial02Trial03ByteIdentical':True,'finalMeshSkinPenetration':'225actualvertices>0.5mminside,max14.94mm','UVCompatibility':'FAILED, actual face atlas interpolation crosses unrelatedcontent','protected41738SourcePolygonsExact':True,'originalNativeWeightMismatch':0,'noCorrectionAfterFinalConstruction':True,'freshSourceAuditOnlyAfterCheckpoint':True,'liveJobs':[],'files':{str(p):{'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(files)}}
+(O/'freeze-manifest.json').write_text(json.dumps(report,indent=2)+'\n');print('LINEAGE_RETIRED_FROZEN',report['finishedUTC'],len(files))

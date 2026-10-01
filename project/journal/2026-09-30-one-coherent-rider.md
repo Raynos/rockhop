@@ -551,3 +551,12 @@ Validation: ExactGLB indices matchNPZ;985175 importedtriangles, allotherfaces
 retained; sourcevertices within2micrometers. Modelexit0 138.002s, actualCPU
 paint88.104s and maxanonymous49.8GiB undercanonical lockwithout eviction.
 Limits: FirstCPUguard failed beforePNG; noface score, assembly or rig pass.
+
+## Round47 — retire failed hood repair and rebuild the component
+
+Finding: Finaloldhood assembly body5/10 face3/10 rejected; invoke15failure
+safety with a fundamentallyNEW wholehood panel/binding construction lineage.
+Validation: Parentactualfront/rear/profilePBRgray comparison;225actualcloth
+vertices penetrate unchangedskin, worst14.94mm; UVinterpolationcrossescharts.
+All41738protectedsourcepolygons/UVs/materials and originalweights preserved.
+Limits: Static rejection only; no neckmotion, finalrig or newgameplay pass.

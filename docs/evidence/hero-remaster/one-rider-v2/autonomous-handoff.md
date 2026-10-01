@@ -156,3 +156,10 @@ readonly sourceindices intact, Blender excludes8 repeated-index zero-area faces
 only; original orderedvertices within2micrometers. Independentpaintedface render
 next, rawdiagnostics labelvalidation exclusions. Maxanonymous49.8GiB; noeviction,
 lockreleased. No newface/body/neckmotion or rig acceptance.
+
+Round47: Ctrial04 actualPBR/gray/fullface comparison rejected: fullcharacter5/10,
+face3/10 diagnostic;225clothverticesinside skin,worst14.94mm and incompatible
+UVchart interpolation. Protected41738sourcepolygons/weights exact doesnotpass
+appearance. Neckrepair family15/15 RETIRED, noattempt16. Parentselects NEW
+wholehood fourpatternpanels+neckbinding/coherentUVatlas in independent Blineage;
+oldhood silhouette/materialreference only. FreshH21face render underwayCPU.
