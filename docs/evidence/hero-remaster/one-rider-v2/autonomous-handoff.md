@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round106, 2026-10-01
+## Current evidence — round107, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -484,3 +484,11 @@ Current11 both-tier ship gate passes byte-exact clear/crash103/restart2ms.
 
 Round106: small aperture/angular tunnel rejected after3 construction guards.
 No exported candidate; source11 current. Larger ordered local retopology next.
+
+Round107: moving surface probe now reads the final presented geometry. All480
+states/hashes/rider debug objects exactly match body09; both maximum leans and
+landing/recovery recorded. Parent reviewed480 ordered frames. Wrists remain
+connected and accessible sole views track pegs, but far-side occlusion and
+4.785/4.854mm thumb-pad gaps keep contact gate open. Dark elbow sleeve patches
+need matched gray diagnosis. Original/stale captures preserved as diagnostics.
+No art/player camera/physics changes. Body11 and face6.8 remain current.

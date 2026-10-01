@@ -805,3 +805,11 @@ No candidate exported; body11 remains current and face6.8. Switch autonomously
 to36×18mm orbital retopology using ordered actual boundaries and deliberate
 lid rings. Source body/head/rig unchanged; five/fifteen limits retained.
 Prepared played/conservation recipes unexecuted until valid geometry exists.
+
+Round107: moving surface probe now reads the final presented geometry. All480
+states/hashes/rider debug objects exactly match body09; both maximum leans and
+landing/recovery recorded. Parent reviewed480 ordered frames. Wrists remain
+connected and accessible sole views track pegs, but far-side occlusion and
+4.785/4.854mm thumb-pad gaps keep contact gate open. Dark elbow sleeve patches
+need matched gray diagnosis. Original/stale captures preserved as diagnostics.
+No art/player camera/physics changes. Body11 and face6.8 remain current.

@@ -1129,3 +1129,13 @@ Validation: Parent inspected frozen failure counts/recipes; source body11 and
 donor unchanged, no candidate exported. Recipe syntax checks pass. No GPU job.
 Limits: No new face score or accepted asset. Prepared capture/conservation
 recipes are unexecuted. Prior failures and five/fifteen safety limits persist.
+
+## Round107 — final presented contacts need thumb refinement
+
+Finding: Capture contact surfaces after final camera presentation. Retain
+framed04 diagnostics; thumb-pad gaps keep contact gate open.
+Validation: Parent reviewed480 ordered actual frames; all480 states/hashes/debug
+objects match body09, both maximum leans and landing/recovery recorded. Final
+midpoint drift0/NDCerror1.04e-15. Target lint and harness typecheck pass.
+Limits: Far-side occlusion, conservative envelope bounds, thumb gaps4.785/4.854mm
+and irregular elbow patches remain. No art changes or asset promotion.
