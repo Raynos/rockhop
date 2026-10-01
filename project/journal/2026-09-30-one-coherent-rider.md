@@ -662,3 +662,13 @@ receipt frozen, source SHA exact, no derivative emitted. Round57 receipt
 actually reports Low3ms/High2ms restart; earlier prose1/2ms corrected here.
 Limits: Third local cheek attempt, including one API setup failure. Face6/10
 remains unaccepted; no new rig or gameplay pass.
+
+## Round59 — retain real cloth bag and reject crumpled rim
+
+Finding: Actual gravity hood bag improves the back silhouette, but its front
+rim crumples like paper with a neck gap and left lower notch. Reject form.
+Validation: Parent actual front/profile/rear/quarter/full views;48frame CPU
+simulation moves978vertices,40386protected source triangles stay exact.
+Seven new material charts have zero degenerate UV triangles. No bake ran.
+Limits: Cloth-bag appearance failure1; native gray head is sizing-only.
+Finished character remains white, face/body gates and neck motion unpassed.

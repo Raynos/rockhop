@@ -1,0 +1,102 @@
+{
+  "status": "UNACCEPTED actual CPU cloth drape measured; requires parent appearance review",
+  "oldLineageFailuresRetired": 15,
+  "priorNEWWholehoodAppearanceFailures": 1,
+  "threads": 2,
+  "device": "CPU",
+  "simulationSnapshots": [
+    {
+      "frame": 1,
+      "timeSeconds": 0.041666666666666664,
+      "displacementMean": 2.8979176299566394e-08,
+      "displacementMax": 5.965373318909249e-08,
+      "verticesMovedOver1mm": 0,
+      "pinMaximumDisplacement": 5.063731766704836e-08
+    },
+    {
+      "frame": 12,
+      "timeSeconds": 0.5,
+      "displacementMean": 0.054598147299384836,
+      "displacementMax": 0.2129495950378671,
+      "verticesMovedOver1mm": 977,
+      "pinMaximumDisplacement": 5.063731766704836e-08
+    },
+    {
+      "frame": 24,
+      "timeSeconds": 1.0,
+      "displacementMean": 0.05442119550853493,
+      "displacementMax": 0.21156218268969093,
+      "verticesMovedOver1mm": 977,
+      "pinMaximumDisplacement": 5.063731766704836e-08
+    },
+    {
+      "frame": 36,
+      "timeSeconds": 1.5,
+      "displacementMean": 0.054213400221826705,
+      "displacementMax": 0.21995903589260982,
+      "verticesMovedOver1mm": 978,
+      "pinMaximumDisplacement": 5.063731766704836e-08
+    },
+    {
+      "frame": 48,
+      "timeSeconds": 2.0,
+      "displacementMean": 0.05461861147745091,
+      "displacementMax": 0.21864359427551128,
+      "verticesMovedOver1mm": 978,
+      "pinMaximumDisplacement": 5.063731766704836e-08
+    }
+  ],
+  "sources": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a"
+  },
+  "actualClothVertices": 1029,
+  "actualClothQuadFaces": 960,
+  "pinnedVertices": 49,
+  "rearCenterSharedVertices": 21,
+  "flatRestKeyUsed": "Actual flat sewing rest pattern",
+  "rearSewing": "Shared rear-center topology before gravity; no sewing-spring solver falsely claimed",
+  "settings": {
+    "U": 24,
+    "V": 20,
+    "frames": 48,
+    "quality": 8,
+    "mass": 0.25,
+    "tension": 15,
+    "compression": 15,
+    "shear": 6,
+    "bending": 0.35,
+    "collisionDistance": 0.004,
+    "selfDistance": 0.002,
+    "selfCollision": true,
+    "restPanelWidth": 0.29,
+    "restPanelHeightFront": 0.19,
+    "restPanelHeightRear": 0.235,
+    "neckTipDegrees": 5,
+    "pinnedNeckRadiusX": 0.11,
+    "pinnedNeckRadiusY": 0.09,
+    "pinnedNeckCenterY": 0.017,
+    "pinnedNeckZ": 1.52,
+    "pinnedNeckZVariation": 0.025,
+    "liningOffset": 0.0015
+  },
+  "initialCollisionCorrections": 54,
+  "initialCollisionMaxCorrection": 0.023223708917173305,
+  "evaluatedFrames": 48,
+  "finalFrame": 48,
+  "actualMovedVertices": 978,
+  "maxActualSimulationDeformation": 0.21864359427551128,
+  "protectedOriginalTriangles": 40386,
+  "nativeSizingSkinUnchanged": true,
+  "liningSimulation": "Not separately simulated; two lining panels offset from actual measured exterior drape",
+  "newGarmentRigWeights": "Unassigned, parent19boneadapter pending",
+  "noBakes": true,
+  "GLBSHA": "0936ab6229bed227f0cb5bcb49ab20632dd860185d5880a7048d8c62b24c2137",
+  "elapsedSeconds": 7.599371416959912,
+  "peakRSSBytes": 885702656,
+  "recipeSHA": "6d3bad516dcd52bc844419a734a13f61519f9007d56f56fdf8ff57fb3e4bce17",
+  "sourcesAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a"
+  }
+}

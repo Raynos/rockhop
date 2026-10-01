@@ -242,3 +242,9 @@ integer-index mismatch before cap output. Four analytic helper tests pass.
 Source exact, no derivative emitted; unchanged-selection API correction next
 within04:01:29UTC batch cap. Third local attempt includes API setup failure.
 Round57 original receipt is Low3ms/High2ms restart; prior1/2ms prose corrected.
+
+Round59: Real cloth hood bag48frame simulation improves back silhouette but
+parent rejects paper-crumpled front rim/dark center-neck opening/lower-left
+notch.40386sourcebody triangles exact,7nondegenerate newUVcharts; no bake.
+Firstcloth-bag appearance failure; next fleece stiffness/stable binding
+with actual WHITE bust landmarks. Nativegrayhead sizingcontrol only.
