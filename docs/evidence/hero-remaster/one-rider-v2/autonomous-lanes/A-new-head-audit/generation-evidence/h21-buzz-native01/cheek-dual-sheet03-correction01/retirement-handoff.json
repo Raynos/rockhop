@@ -1,0 +1,64 @@
+{
+  "status": "Builder retired; no live job, no accepted face",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/model.glb",
+  "sourceSHA256": "2cd1859e05f6aac4d05112027dfaefcc15c7a83f8301ec8e1045fbc8bc326420",
+  "sourceSHA256MatchesFrozen": true,
+  "runtimeGeometry": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03-correction01/geometry.glb",
+    "SHA256": "03d0ca533bca48916ad152e5d999d9072b8c7a27f1630fe10b2c38169fd00c62",
+    "originalBinaryPrefixSHA256": "a448f20dce3204d233c61a77f41254856fe3b65707b151b8bce950df9369f275",
+    "sourceAttributesImagesCopiedByteForByte": true,
+    "sourceNodeTransformsUnchanged": true,
+    "outsideTriangleIndicesByteIdentical": true
+  },
+  "runtimeRejectedPBR": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03-correction01/model.glb",
+    "SHA256": "e7516da678dc524f3f6ff0e30d424a5b5f53682790bbbcfde413c82f4873cbd7",
+    "originalBinaryPrefixSHA256": "a448f20dce3204d233c61a77f41254856fe3b65707b151b8bce950df9369f275",
+    "sourceAttributesImagesCopiedByteForByte": true,
+    "sourceNodeTransformsUnchanged": true,
+    "outsideTriangleIndicesByteIdentical": true
+  },
+  "runtimeAtlas": {
+    "method": "Actual Cycles CPU emission bake of coherent patch UVs, fitted linear colors from unaffected SAME anatomical cheek samples. No cross-chart nearest-color transfer.",
+    "atlas": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03-correction01/cheek-skin-albedo.png",
+    "SHA256": "084c907a3a4911ea71671692194310a94b53874c47107bf7e3f32d0bd9a596e8",
+    "size": [
+      1024,
+      1024
+    ],
+    "CPUThreads": 2,
+    "sourceAtlasChanged": false
+  },
+  "actualReceipt": {
+    "startedUTC": "2026-10-01T03:36:19.731174+00:00",
+    "hardDeadlineUTC": "2026-10-01T04:01:29.797205+00:00",
+    "CPUThreads": 2,
+    "GPUJob": false,
+    "command": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--factory-startup",
+      "--threads",
+      "2",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-dual-sheet03-correction01/repair.py"
+    ],
+    "recipeSHA256": "3f0be3f59c209868089bd1e965b433b9d55c4642ac20ba0fe826f68db698931a",
+    "exitCode": 0,
+    "completedUTC": "2026-10-01T03:36:46.186274+00:00",
+    "logSHA256": "3ea9f655b9dbc4bf5e5b1b73fd2eb5e448ac0f2c94998bd8fc7600013527c23f"
+  },
+  "geometryOutsideExact": true,
+  "defectID": "H21-cheekOpenings",
+  "priorPerimeterFailures": 2,
+  "dualSheetAPISetupFailures": 1,
+  "dualSheetGeometryTrial": "Promising, parent review still required",
+  "dualSheetTextureFailures": 1,
+  "hardDeadlineUTC": "2026-10-01T04:01:29.797205+00:00",
+  "activeJobs": [],
+  "responseCount": "Lifetime count not exposed by agent API; conservative retirement after this frozen trial, no reuse.",
+  "nextMethod": "Keep geometry.glb. Transport only original same-cheek surrounding albedo through analytic physical-surface projection into exterior-only coherent islands; inpaint missing interior pixels, preserve boundary color continuity, explicitly distinguish sRGB and linear samples. Keep inner material separate/hidden; validate texel colors against original cheek shader before an actual PBR render. No nearest cross-chart color transfer."
+}

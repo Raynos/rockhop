@@ -255,3 +255,9 @@ jagged albedo patches. Keep geometry, validate source sRGB/linear transport
 before next bake. Fourth failed local attempt includes setup and texture.
 Round60 production exact40.083333333s replay, crash103ticks/restart2ms both.
 No accepted whole rider; A conservatively retires after frozen handoff.
+
+Round61: Parent actual CPU shader witness proves double-sRGB encoding causes
+pale cheek color; source image shader and decoded-color PNG byte-identical,
+wrong assignment differs by65/255 maximum. Apply proven conversion and
+isolate inner/exterior UV islands without geometry changes. A retired,
+parent owns texture04 because replacement spawn reached thread limit.

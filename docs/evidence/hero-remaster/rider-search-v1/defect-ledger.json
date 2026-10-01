@@ -1096,14 +1096,16 @@
         19
       ],
       "actualBoundaryEdges": 111,
-      "next": "Diagnose source sRGB pixels versus linear vertex colors; preserve repaired geometry and outside buffers, validate texel/bake correspondence before rerender",
+      "next": "Apply proven sRGB decode before linear-color fit/bake; separate inner/exterior UV islands; unchanged repaired geometry then actual PBR views",
       "evidence": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/gray-diagnostic03/cheek-surface-forensic.json",
       "lastFailure": "Dual-sheet geometry closes both cheeks, but PBR bake produces pale jagged patches; parent rejects actual8gray/PBRviews",
       "setupFailedAttempts": 1,
       "geometryClosed": true,
       "physicalBoundaryEdges": 0,
       "physicalFaceComponents": 1,
-      "textureFailedAttempts": 1
+      "textureFailedAttempts": 1,
+      "doubleEncodingProven": true,
+      "proof": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/probe.json"
     },
     "NEW-donor01WholeHood": {
       "setupFailedAttempts": 1,

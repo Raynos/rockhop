@@ -1,0 +1,42 @@
+{
+  "status": "Read-only diagnosis hypothesis, not a corrected render",
+  "atlasSHA256": "084c907a3a4911ea71671692194310a94b53874c47107bf7e3f32d0bd9a596e8",
+  "atlasAlphaCoveredPixels": 1048576,
+  "atlasEncodedRGBMedian": [
+    0.8784313725490196,
+    0.7294117647058823,
+    0.6549019607843137
+  ],
+  "fittedExteriorColorIntercepts": [
+    [
+      0.7657169764998971,
+      0.5018126666570764,
+      0.39501121861887156
+    ],
+    [
+      0.7831413508971095,
+      0.5286980949558437,
+      0.42904644876294573
+    ]
+  ],
+  "sRGBEncodingOfFittedIntercepts": [
+    [
+      0.8889469217654985,
+      0.7365496011940827,
+      0.6614288323426798
+    ],
+    [
+      0.8978382685412191,
+      0.7539512559271369,
+      0.686530905331132
+    ]
+  ],
+  "colorSpaceHypothesis": "Image pixel samples appear already encoded; assigning them directly to linear FLOAT_COLOR and baking to an sRGB PNG likely encodes twice. Prove source texel/actual shader interpretation, linearize before transport and validate resulting base-color pixels before rerender.",
+  "atlasOverlapActual": "The four baked source patches share two side-based UV rectangles: inner and exterior use overlapping UV footprints on each cheek. All four bake stages wrote the same atlas. This can overwrite exterior samples and must be avoided or intentionally reconciled.",
+  "materialActual": "New patch copies source KHR_materials_specular specularColorFactor [2,2,2]; no source normal or occlusion texture. Patch roughness is fitted median ~0.38.",
+  "proposedNextMethod": "Keep geometry.glb. Transport only original same-cheek surrounding albedo through analytic physical-surface projection into exterior-only coherent islands; inpaint missing interior pixels, preserve boundary color continuity, explicitly distinguish sRGB and linear samples. Keep inner material separate/hidden; validate texel colors against original cheek shader before an actual PBR render. No nearest cross-chart color transfer.",
+  "limits": [
+    "Cause remains a hypothesis until source-texel/shader and corrected actual render validate it.",
+    "No next repair, model generation, rig or asset promotion performed."
+  ]
+}

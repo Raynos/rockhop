@@ -684,3 +684,13 @@ clear40.083333333s, crash103ticks and restart2ms both; zero errors.
 Limits: Fourth local failed attempt includes one API setup and one texture
 failure. Color-space double encoding is a hypothesis awaiting rerender.
 No full-body, neck-motion, rig or new-rider gameplay acceptance.
+
+## Round61 — prove and correct double-encoded cheek color
+
+Finding: The pale patch bake assigned encoded image samples as linear color.
+Actual source-image shader and decoded-color bake match byte-for-byte.
+Validation: Three actual16x16 CPU emission bakes; source shaderRGB200/135/110,
+wrong direct assignmentRGB229/192/175, corrected decodeRGB200/135/110.
+Original source SHA exact. Retired A texture/geometry handoff frozen.
+Limits: Controlled color witness only; full repaired face rerender pending,
+no appearance, neck-motion, rig or new-rider gameplay acceptance.
