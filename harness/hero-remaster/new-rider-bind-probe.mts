@@ -3,8 +3,9 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import * as THREE from 'three';
 import { loadRigAt } from '../../src/render/hero/gltfTestUtils';
+const stage=process.argv.find(x=>x.startsWith('--stage='))?.slice(8)??'body-bind01'; assert(/^body-bind[0-9]+$/.test(stage));
 const base='/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2';
-const g=await loadRigAt(new URL('file://'+base+'/rig-adapter01/body-bind01/rider.glb'));
+const g=await loadRigAt(new URL('file://'+base+`/rig-adapter01/${stage}/rider.glb`));
 const source=await loadRigAt(new URL('file://'+base+'/parent-assembly/donor-fit05/rider.glb'));
 g.scene.updateMatrixWorld(true);source.scene.updateMatrixWorld(true);
 const collect=(root:THREE.Object3D)=>{const out:THREE.Mesh[]=[];root.traverse(o=>{if((o as THREE.Mesh).isMesh)out.push(o as THREE.Mesh);});return out;};
@@ -29,5 +30,5 @@ for(let i=0;i<24;i++){
  for(const mesh of actual){const a=mesh as THREE.SkinnedMesh;a.skeleton.update();const p=a.geometry.getAttribute('position');for(let k=0;k<p.count;k+=Math.max(1,Math.floor(p.count/128))){const v=new THREE.Vector3().fromBufferAttribute(p,k);a.applyBoneTransform(k,v);a.localToWorld(v);finite=finite&&v.toArray().every(Number.isFinite);}}
  assert(finite);samples.push({sample:i,timeSeconds:(i/23)*clip.duration,finite});
 }
-fs.writeFileSync('docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind01/production-decoder-validation.json',JSON.stringify({bones:rigBones,rows,clip:{name:clip.name,duration:clip.duration,tracks:clip.tracks.length},samples,limits:'CPU decoder/skin integrity only, textures omitted; no render or ridingcontact acceptance'},null,2)+'\n');
+fs.writeFileSync(`docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/${stage}/production-decoder-validation.json`,JSON.stringify({bones:rigBones,rows,clip:{name:clip.name,duration:clip.duration,tracks:clip.tracks.length},samples,limits:'CPU decoder/skin integrity only, textures omitted; no render or ridingcontact acceptance'},null,2)+'\n');
 console.log(JSON.stringify({restErrorM:Math.max(...rows.map(r=>r.restShapeMaxErrorM)),bones:rigBones.length,samples:samples.length}));

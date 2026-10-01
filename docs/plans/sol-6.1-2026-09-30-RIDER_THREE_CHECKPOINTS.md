@@ -551,3 +551,22 @@ to moving hidden joints toward clothing boundaries; preserve proportions,
 physics and explicit world20mm pelvis/hip offset. Actual moving anatomy
 and all contacts must decide. Round81 baseline passes exactfinishbytes,
 crash103ticks, restart3msLOW/4msHIGH and zero errors.
+
+### Planted motion foundation and explicit scale proxy
+
+Body-bind03 corrects our controls: foot bones3.332e-8m drift, literal
+sole surface2.263e-7m drift,256 facepair shapeerror1.824e-7m; zero
+IK shortfall. Parent reviews48decoded frames/fullendpoint/9samples against
+the generated target. This is a foundation, not checkpoint2 closure: rig
+closeups, seat/clothing contact and NEW-rig UniMate comparison remain.
+
+Uniformscale audit04 preserves wholecharacter proportions. Smallest sampled
+proxy exceeding10mm strictmargin is1.015 with elbowZ1.125: minimum12.452mm,
+height1.822572m, approximateIPD65.975mm, armratio1.2055. It is not yet applied.
+Keep world pelvis-to-hip offset20mm exact (`hipZ-.02/scale` in authoring).
+Real playing and renderedCOM/contact validation remain authoritative.
+
+Native grip02 DQS heldpose is retained forbakedcontacttesting after parent
+198decodedframes: morecoherent palm/thumbwrap, wrist0, overlapdiagnostic0.
+LBS adds4overlaps. Closingsequence rejected12.04mmintermediatepenetration;
+movehandle only afterthumbclearance, preserve finalshape. No playerpromotion.

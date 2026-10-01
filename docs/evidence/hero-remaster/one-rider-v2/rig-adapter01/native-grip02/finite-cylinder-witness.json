@@ -1,0 +1,93 @@
+{
+  "status": "Exact finite-length verification of worst frozen penetration triangles",
+  "witnesses": [
+    {
+      "mode": "DQS",
+      "phase": "worst",
+      "frame": 5,
+      "sourceLocalTriangleVertices": [
+        862,
+        782,
+        779
+      ],
+      "sourceCompleteTriangleVertices": [
+        20155,
+        20140,
+        20224
+      ],
+      "radialTrianglePenetrationM": 0.012037569983500692,
+      "triangleAxialBoundsM": [
+        0.06261267635914247,
+        0.06721076445326112
+      ],
+      "entireWorstTriangleWithinFinite160mmCylinder": true
+    },
+    {
+      "mode": "DQS",
+      "phase": "wrapped",
+      "frame": 16,
+      "sourceLocalTriangleVertices": [
+        1266,
+        1245,
+        1240
+      ],
+      "sourceCompleteTriangleVertices": [
+        21142,
+        21396,
+        21205
+      ],
+      "radialTrianglePenetrationM": 0.0004295559299854236,
+      "triangleAxialBoundsM": [
+        0.014657250179814544,
+        0.023989554311006238
+      ],
+      "entireWorstTriangleWithinFinite160mmCylinder": true
+    },
+    {
+      "mode": "LBS",
+      "phase": "worst",
+      "frame": 27,
+      "sourceLocalTriangleVertices": [
+        862,
+        782,
+        779
+      ],
+      "sourceCompleteTriangleVertices": [
+        20155,
+        20140,
+        20224
+      ],
+      "radialTrianglePenetrationM": 0.01203755867761834,
+      "triangleAxialBoundsM": [
+        0.06261266717497387,
+        0.06721075828243445
+      ],
+      "entireWorstTriangleWithinFinite160mmCylinder": true
+    },
+    {
+      "mode": "LBS",
+      "phase": "wrapped",
+      "frame": 16,
+      "sourceLocalTriangleVertices": [
+        733,
+        704,
+        632
+      ],
+      "sourceCompleteTriangleVertices": [
+        22570,
+        22547,
+        22503
+      ],
+      "radialTrianglePenetrationM": 0.00038075093187125986,
+      "triangleAxialBoundsM": [
+        -0.04890994610655226,
+        -0.04386944512085941
+      ],
+      "entireWorstTriangleWithinFinite160mmCylinder": true
+    }
+  ],
+  "allHandVerticesGloballyWithinAxialRange": false,
+  "globalMaximumAxialOverrunM": 0.00058410648355699,
+  "limit": "Some open thumb vertices extend0.584mmpastoneendcap; do notclaim globalfullcylindercoverage. Worst/closed penetration triangles independentlytested.",
+  "recipeSHA256": "ac8d2df40553a205f28fecfcd5a22e1e64d8e97b81d72c02c639b79f3c06a5d1"
+}

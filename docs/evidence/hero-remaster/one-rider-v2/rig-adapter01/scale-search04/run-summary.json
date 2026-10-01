@@ -1,0 +1,1574 @@
+{
+  "status": "Unit-calibration hypothesis audit only; no asset scale or runtime change applied",
+  "sourcesUnchanged": true,
+  "summary": {
+    "candidateCount": 30,
+    "profilesPerCandidate": 1007,
+    "totalEvaluatedLimbTargets": 120840,
+    "triangleFeasible": 30,
+    "allLimbsSafe": 28,
+    "firstSafePerElbow": [
+      {
+        "elbowZ": 1.145,
+        "smallestSampledSafeScale": {
+          "id": "elbowZ1.145-scale1.005",
+          "scale": 1.005,
+          "sourceJointVectorsScale": 1.005,
+          "elbowZ": 1.145,
+          "sourcePelvisHeadZ": 0.9250995024875621,
+          "worldHipAbovePelvisM": 0.020000000000000018,
+          "lengths": [
+            {
+              "side": "R",
+              "upperArm": 0.30722440698941855,
+              "forearm": 0.2900980155649745,
+              "upperArmToForearmRatio": 1.0590365686958938,
+              "thigh": 0.4492810882398678,
+              "shin": 0.3911438825739193
+            },
+            {
+              "side": "L",
+              "upperArm": 0.30722440698941855,
+              "forearm": 0.2906932710296369,
+              "upperArmToForearmRatio": 1.056867969118199,
+              "thigh": 0.4492810882398678,
+              "shin": 0.3911438825739193
+            }
+          ],
+          "dimensions": {
+            "heightM": 1.804615196585655,
+            "sourceAABBBlenderXYZ": [
+              0.8959499184787273,
+              0.3594934920966625,
+              1.804615196585655
+            ],
+            "shoulderHalfM": 0.20602499999999996,
+            "hipHalfM": 0.10552499999999998,
+            "shoulderToAnatomicalHipM": 0.49747499999999995,
+            "manualIPDEstimateM": 0.065325,
+            "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+            "headSourceAABBBlenderXYZ": [
+              0.2932202352583408,
+              0.23131877247244118,
+              0.3957729738950729
+            ],
+            "hands": [
+              {
+                "nativeSide": "L",
+                "indexToLittleMCPDistanceM": 0.06652172909809223,
+                "wristToMiddleDistalTailM": 0.18690835708881057,
+                "maximumWristToFingerBoneEndpointM": 0.18690835708881057
+              },
+              {
+                "nativeSide": "R",
+                "indexToLittleMCPDistanceM": 0.06652174655771609,
+                "wristToMiddleDistalTailM": 0.18690839661396644,
+                "maximumWristToFingerBoneEndpointM": 0.18690839661396644
+              }
+            ],
+            "feet": [
+              {
+                "nativeSide": "L",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.1870128797739744,
+                  0.314791785031557,
+                  0.12058059632778166
+                ]
+              },
+              {
+                "nativeSide": "R",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.17999841213226317,
+                  0.3074279051274061,
+                  0.12048235595226287
+                ]
+              }
+            ],
+            "uniformSizeIncreasePercent": 0.49999999999998934,
+            "relativeAspectRatiosUnchanged": true
+          },
+          "contacts": [
+            {
+              "side": "R",
+              "targetWrist": [
+                0.25250544647826517,
+                0.8293257947229729,
+                -0.32999999564629173
+              ],
+              "targetAnkle": [
+                -0.18069871837077664,
+                0.1456626571534318,
+                -0.1688568952322006
+              ],
+              "targetWristToContact": [
+                0.017494553521734832,
+                -0.04932579472297283,
+                -4.353708260993499e-9
+              ],
+              "targetAnkleToSole": [
+                0.040698718370776626,
+                -0.11466265715343178,
+                -0.031143104767799412
+              ]
+            },
+            {
+              "side": "L",
+              "targetWrist": [
+                0.25250539186887994,
+                0.8293257651698757,
+                0.3300000409833339
+              ],
+              "targetAnkle": [
+                -0.17217959445472808,
+                0.14557032883195206,
+                0.1898104142040014
+              ],
+              "targetWristToContact": [
+                0.017494608131120075,
+                -0.04932576516987565,
+                -4.098333391155613e-8
+              ],
+              "targetAnkleToSole": [
+                0.03217959445472807,
+                -0.11457032883195206,
+                0.010189585795998587
+              ]
+            }
+          ],
+          "minimumTriangleMarginM": 0.006299789354368146,
+          "minimumSafeMarginM": 0.002895012860156587,
+          "minimumHandSafeMarginM": 0.003313177241596188,
+          "minimumFootSafeMarginM": 0.002895012860156587,
+          "worstShortfallM": 0,
+          "allTriangleFeasible": true,
+          "allSafe": true,
+          "minimumTriangleFrame": {
+            "profile": "lean-0000",
+            "index": 0,
+            "lean": -1,
+            "hips": [
+              -0.66,
+              0.725
+            ],
+            "torsoRadians": 0.6981317007977318,
+            "side": "R",
+            "limb": "hand",
+            "triangleMarginM": 0.006299789354368146,
+            "safeMarginM": 0.003313177241596188,
+            "distanceM": 0.5910226332000249,
+            "segmentLengthsM": [
+              0.30722440698941855,
+              0.2900980155649745
+            ]
+          },
+          "minimumSafeFrame": {
+            "profile": "lean-1000",
+            "index": 1000,
+            "lean": 1,
+            "hips": [
+              -0.14,
+              0.974
+            ],
+            "torsoRadians": 0.8377580409572781,
+            "side": "L",
+            "limb": "foot",
+            "triangleMarginM": 0.007097137714225488,
+            "safeMarginM": 0.002895012860156587,
+            "distanceM": 0.8333278330995616,
+            "segmentLengthsM": [
+              0.4492810882398678,
+              0.3911438825739193
+            ]
+          }
+        }
+      },
+      {
+        "elbowZ": 1.125,
+        "smallestSampledSafeScale": {
+          "id": "elbowZ1.125-scale1.005",
+          "scale": 1.005,
+          "sourceJointVectorsScale": 1.005,
+          "elbowZ": 1.125,
+          "sourcePelvisHeadZ": 0.9250995024875621,
+          "worldHipAbovePelvisM": 0.020000000000000018,
+          "lengths": [
+            {
+              "side": "R",
+              "upperArm": 0.3266636515592147,
+              "forearm": 0.2709821298182427,
+              "upperArmToForearmRatio": 1.2054804196067082,
+              "thigh": 0.4492810882398678,
+              "shin": 0.3911438825739193
+            },
+            {
+              "side": "L",
+              "upperArm": 0.3266636515592147,
+              "forearm": 0.27156410442848805,
+              "upperArmToForearmRatio": 1.2028970185388996,
+              "thigh": 0.4492810882398678,
+              "shin": 0.3911438825739193
+            }
+          ],
+          "dimensions": {
+            "heightM": 1.804615196585655,
+            "sourceAABBBlenderXYZ": [
+              0.8959499184787273,
+              0.3594934920966625,
+              1.804615196585655
+            ],
+            "shoulderHalfM": 0.20602499999999996,
+            "hipHalfM": 0.10552499999999998,
+            "shoulderToAnatomicalHipM": 0.49747499999999995,
+            "manualIPDEstimateM": 0.065325,
+            "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+            "headSourceAABBBlenderXYZ": [
+              0.2932202352583408,
+              0.23131877247244118,
+              0.3957729738950729
+            ],
+            "hands": [
+              {
+                "nativeSide": "L",
+                "indexToLittleMCPDistanceM": 0.06652172909809223,
+                "wristToMiddleDistalTailM": 0.18690835708881057,
+                "maximumWristToFingerBoneEndpointM": 0.18690835708881057
+              },
+              {
+                "nativeSide": "R",
+                "indexToLittleMCPDistanceM": 0.06652174655771609,
+                "wristToMiddleDistalTailM": 0.18690839661396644,
+                "maximumWristToFingerBoneEndpointM": 0.18690839661396644
+              }
+            ],
+            "feet": [
+              {
+                "nativeSide": "L",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.1870128797739744,
+                  0.314791785031557,
+                  0.12058059632778166
+                ]
+              },
+              {
+                "nativeSide": "R",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.17999841213226317,
+                  0.3074279051274061,
+                  0.12048235595226287
+                ]
+              }
+            ],
+            "uniformSizeIncreasePercent": 0.49999999999998934,
+            "relativeAspectRatiosUnchanged": true
+          },
+          "contacts": [
+            {
+              "side": "R",
+              "targetWrist": [
+                0.25250544647826517,
+                0.8293257947229729,
+                -0.32999999564629173
+              ],
+              "targetAnkle": [
+                -0.18069871837077664,
+                0.1456626571534318,
+                -0.1688568952322006
+              ],
+              "targetWristToContact": [
+                0.017494553521734832,
+                -0.04932579472297283,
+                -4.353708260993499e-9
+              ],
+              "targetAnkleToSole": [
+                0.040698718370776626,
+                -0.11466265715343178,
+                -0.031143104767799412
+              ]
+            },
+            {
+              "side": "L",
+              "targetWrist": [
+                0.25250539186887994,
+                0.8293257651698757,
+                0.3300000409833339
+              ],
+              "targetAnkle": [
+                -0.17217959445472808,
+                0.14557032883195206,
+                0.1898104142040014
+              ],
+              "targetWristToContact": [
+                0.017494608131120075,
+                -0.04932576516987565,
+                -4.098333391155613e-8
+              ],
+              "targetAnkleToSole": [
+                0.03217959445472807,
+                -0.11457032883195206,
+                0.010189585795998587
+              ]
+            }
+          ],
+          "minimumTriangleMarginM": 0.006623148177432481,
+          "minimumSafeMarginM": 0.002895012860156587,
+          "minimumHandSafeMarginM": 0.003634919270545156,
+          "minimumFootSafeMarginM": 0.002895012860156587,
+          "worstShortfallM": 0,
+          "allTriangleFeasible": true,
+          "allSafe": true,
+          "minimumTriangleFrame": {
+            "profile": "lean-0000",
+            "index": 0,
+            "lean": -1,
+            "hips": [
+              -0.66,
+              0.725
+            ],
+            "torsoRadians": 0.6981317007977318,
+            "side": "R",
+            "limb": "hand",
+            "triangleMarginM": 0.006623148177432481,
+            "safeMarginM": 0.003634919270545156,
+            "distanceM": 0.5910226332000249,
+            "segmentLengthsM": [
+              0.3266636515592147,
+              0.2709821298182427
+            ]
+          },
+          "minimumSafeFrame": {
+            "profile": "lean-1000",
+            "index": 1000,
+            "lean": 1,
+            "hips": [
+              -0.14,
+              0.974
+            ],
+            "torsoRadians": 0.8377580409572781,
+            "side": "L",
+            "limb": "foot",
+            "triangleMarginM": 0.007097137714225488,
+            "safeMarginM": 0.002895012860156587,
+            "distanceM": 0.8333278330995616,
+            "segmentLengthsM": [
+              0.4492810882398678,
+              0.3911438825739193
+            ]
+          }
+        }
+      }
+    ],
+    "selectionProxy": {
+      "targetMinimumStrictMarginM": 0.01,
+      "policy": "Smallest sampled whole-source scale reaching10mm strict padding, elbowZ1.125 ratio hypothesis preferred; not anatomy/appearance acceptance",
+      "selected": {
+        "id": "elbowZ1.125-scale1.015",
+        "scale": 1.015,
+        "sourceJointVectorsScale": 1.015,
+        "elbowZ": 1.125,
+        "sourcePelvisHeadZ": 0.925295566502463,
+        "worldHipAbovePelvisM": 0.019999999999999973,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.32991403615184345,
+            "forearm": 0.2736784694184244,
+            "upperArmToForearmRatio": 1.2054804196067066,
+            "thigh": 0.45375154682931923,
+            "shin": 0.3950358615050031
+          },
+          {
+            "side": "L",
+            "upperArm": 0.32991403615184345,
+            "forearm": 0.27426623482081147,
+            "upperArmToForearmRatio": 1.202897018538898,
+            "thigh": 0.45375154682931923,
+            "shin": 0.3950358615050031
+          }
+        ],
+        "dimensions": {
+          "heightM": 1.8225715667009352,
+          "sourceAABBBlenderXYZ": [
+            0.9048648430407047,
+            0.3630705417692661,
+            1.8225715667009352
+          ],
+          "shoulderHalfM": 0.20807499999999995,
+          "hipHalfM": 0.10657499999999999,
+          "shoulderToAnatomicalHipM": 0.5024249999999999,
+          "manualIPDEstimateM": 0.06597499999999999,
+          "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+          "headSourceAABBBlenderXYZ": [
+            0.2961378495395183,
+            0.23362045180052515,
+            0.39971101343631743
+          ],
+          "hands": [
+            {
+              "nativeSide": "L",
+              "indexToLittleMCPDistanceM": 0.06718363685031206,
+              "wristToMiddleDistalTailM": 0.18876814173646045,
+              "maximumWristToFingerBoneEndpointM": 0.18876814173646045
+            },
+            {
+              "nativeSide": "R",
+              "indexToLittleMCPDistanceM": 0.06718365448366351,
+              "wristToMiddleDistalTailM": 0.18876818165490145,
+              "maximumWristToFingerBoneEndpointM": 0.18876818165490145
+            }
+          ],
+          "feet": [
+            {
+              "nativeSide": "L",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.1888737044483423,
+                0.31792404159903526,
+                0.12178040325641631
+              ]
+            },
+            {
+              "nativeSide": "R",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.1817894411087036,
+                0.31048688925802703,
+                0.1216811853647232
+              ]
+            }
+          ],
+          "uniformSizeIncreasePercent": 1.4999999999999902,
+          "relativeAspectRatiosUnchanged": true
+        },
+        "contacts": [
+          {
+            "side": "R",
+            "targetWrist": [
+              0.2523313713188449,
+              0.8298165986505648,
+              -0.3299999956029713
+            ],
+            "targetAnkle": [
+              -0.18110368074262514,
+              0.14680357911515746,
+              -0.16854701359272006
+            ],
+            "targetWristToContact": [
+              0.017668628681155117,
+              -0.04981659865056471,
+              -4.397028740132212e-9
+            ],
+            "targetAnkleToSole": [
+              0.04110368074262513,
+              -0.11580357911515746,
+              -0.03145298640727995
+            ]
+          },
+          {
+            "side": "L",
+            "targetWrist": [
+              0.25233131616608273,
+              0.8298165688034067,
+              0.3300000413911283
+            ],
+            "targetAnkle": [
+              -0.17249978942442684,
+              0.14671033210391177,
+              0.1897090252906084
+            ],
+            "targetWristToContact": [
+              0.017668683833917287,
+              -0.049816568803406736,
+              -4.139112832785634e-8
+            ],
+            "targetAnkleToSole": [
+              0.03249978942442684,
+              -0.11571033210391177,
+              0.010290974709391595
+            ]
+          }
+        ],
+        "minimumTriangleMarginM": 0.015530290532382307,
+        "minimumSafeMarginM": 0.012452312175290858,
+        "minimumHandSafeMarginM": 0.012512328004530948,
+        "minimumFootSafeMarginM": 0.012452312175290858,
+        "worstShortfallM": 0,
+        "allTriangleFeasible": true,
+        "allSafe": true,
+        "minimumTriangleFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.015530290532382307,
+          "safeMarginM": 0.012512328004530948,
+          "distanceM": 0.5880622150378855,
+          "segmentLengthsM": [
+            0.32991403615184345,
+            0.2736784694184244
+          ]
+        },
+        "minimumSafeFrame": {
+          "profile": "lean-1000",
+          "index": 1000,
+          "lean": 1,
+          "hips": [
+            -0.14,
+            0.974
+          ],
+          "torsoRadians": 0.8377580409572781,
+          "side": "L",
+          "limb": "foot",
+          "triangleMarginM": 0.016696249216962444,
+          "safeMarginM": 0.012452312175290858,
+          "distanceM": 0.8320911591173599,
+          "segmentLengthsM": [
+            0.45375154682931923,
+            0.3950358615050031
+          ]
+        }
+      }
+    },
+    "first10mmMarginPerElbow": [
+      {
+        "elbowZ": 1.145,
+        "smallestSampledScale": {
+          "id": "elbowZ1.145-scale1.015",
+          "scale": 1.015,
+          "sourceJointVectorsScale": 1.015,
+          "elbowZ": 1.145,
+          "sourcePelvisHeadZ": 0.925295566502463,
+          "worldHipAbovePelvisM": 0.019999999999999973,
+          "lengths": [
+            {
+              "side": "R",
+              "upperArm": 0.3102813662629451,
+              "forearm": 0.29298456298353137,
+              "upperArmToForearmRatio": 1.059036568695894,
+              "thigh": 0.45375154682931923,
+              "shin": 0.3950358615050031
+            },
+            {
+              "side": "L",
+              "upperArm": 0.3102813662629451,
+              "forearm": 0.2935857413881407,
+              "upperArmToForearmRatio": 1.0568679691181992,
+              "thigh": 0.45375154682931923,
+              "shin": 0.3950358615050031
+            }
+          ],
+          "dimensions": {
+            "heightM": 1.8225715667009352,
+            "sourceAABBBlenderXYZ": [
+              0.9048648430407047,
+              0.3630705417692661,
+              1.8225715667009352
+            ],
+            "shoulderHalfM": 0.20807499999999995,
+            "hipHalfM": 0.10657499999999999,
+            "shoulderToAnatomicalHipM": 0.5024249999999999,
+            "manualIPDEstimateM": 0.06597499999999999,
+            "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+            "headSourceAABBBlenderXYZ": [
+              0.2961378495395183,
+              0.23362045180052515,
+              0.39971101343631743
+            ],
+            "hands": [
+              {
+                "nativeSide": "L",
+                "indexToLittleMCPDistanceM": 0.06718363685031206,
+                "wristToMiddleDistalTailM": 0.18876814173646045,
+                "maximumWristToFingerBoneEndpointM": 0.18876814173646045
+              },
+              {
+                "nativeSide": "R",
+                "indexToLittleMCPDistanceM": 0.06718365448366351,
+                "wristToMiddleDistalTailM": 0.18876818165490145,
+                "maximumWristToFingerBoneEndpointM": 0.18876818165490145
+              }
+            ],
+            "feet": [
+              {
+                "nativeSide": "L",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.1888737044483423,
+                  0.31792404159903526,
+                  0.12178040325641631
+                ]
+              },
+              {
+                "nativeSide": "R",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.1817894411087036,
+                  0.31048688925802703,
+                  0.1216811853647232
+                ]
+              }
+            ],
+            "uniformSizeIncreasePercent": 1.4999999999999902,
+            "relativeAspectRatiosUnchanged": true
+          },
+          "contacts": [
+            {
+              "side": "R",
+              "targetWrist": [
+                0.2523313713188449,
+                0.8298165986505648,
+                -0.3299999956029713
+              ],
+              "targetAnkle": [
+                -0.18110368074262514,
+                0.14680357911515746,
+                -0.16854701359272006
+              ],
+              "targetWristToContact": [
+                0.017668628681155117,
+                -0.04981659865056471,
+                -4.397028740132212e-9
+              ],
+              "targetAnkleToSole": [
+                0.04110368074262513,
+                -0.11580357911515746,
+                -0.03145298640727995
+              ]
+            },
+            {
+              "side": "L",
+              "targetWrist": [
+                0.25233131616608273,
+                0.8298165688034067,
+                0.3300000413911283
+              ],
+              "targetAnkle": [
+                -0.17249978942442684,
+                0.14671033210391177,
+                0.1897090252906084
+              ],
+              "targetWristToContact": [
+                0.017668683833917287,
+                -0.049816568803406736,
+                -4.139112832785634e-8
+              ],
+              "targetAnkleToSole": [
+                0.03249978942442684,
+                -0.11571033210391177,
+                0.010290974709391595
+              ]
+            }
+          ],
+          "minimumTriangleMarginM": 0.015203714208591013,
+          "minimumSafeMarginM": 0.012187384562358683,
+          "minimumHandSafeMarginM": 0.012187384562358683,
+          "minimumFootSafeMarginM": 0.012452312175290858,
+          "worstShortfallM": 0,
+          "allTriangleFeasible": true,
+          "allSafe": true,
+          "minimumTriangleFrame": {
+            "profile": "lean-0000",
+            "index": 0,
+            "lean": -1,
+            "hips": [
+              -0.66,
+              0.725
+            ],
+            "torsoRadians": 0.6981317007977318,
+            "side": "R",
+            "limb": "hand",
+            "triangleMarginM": 0.015203714208591013,
+            "safeMarginM": 0.012187384562358683,
+            "distanceM": 0.5880622150378855,
+            "segmentLengthsM": [
+              0.3102813662629451,
+              0.29298456298353137
+            ]
+          },
+          "minimumSafeFrame": {
+            "profile": "lean-0000",
+            "index": 0,
+            "lean": -1,
+            "hips": [
+              -0.66,
+              0.725
+            ],
+            "torsoRadians": 0.6981317007977318,
+            "side": "R",
+            "limb": "hand",
+            "triangleMarginM": 0.015203714208591013,
+            "safeMarginM": 0.012187384562358683,
+            "distanceM": 0.5880622150378855,
+            "segmentLengthsM": [
+              0.3102813662629451,
+              0.29298456298353137
+            ]
+          }
+        }
+      },
+      {
+        "elbowZ": 1.125,
+        "smallestSampledScale": {
+          "id": "elbowZ1.125-scale1.015",
+          "scale": 1.015,
+          "sourceJointVectorsScale": 1.015,
+          "elbowZ": 1.125,
+          "sourcePelvisHeadZ": 0.925295566502463,
+          "worldHipAbovePelvisM": 0.019999999999999973,
+          "lengths": [
+            {
+              "side": "R",
+              "upperArm": 0.32991403615184345,
+              "forearm": 0.2736784694184244,
+              "upperArmToForearmRatio": 1.2054804196067066,
+              "thigh": 0.45375154682931923,
+              "shin": 0.3950358615050031
+            },
+            {
+              "side": "L",
+              "upperArm": 0.32991403615184345,
+              "forearm": 0.27426623482081147,
+              "upperArmToForearmRatio": 1.202897018538898,
+              "thigh": 0.45375154682931923,
+              "shin": 0.3950358615050031
+            }
+          ],
+          "dimensions": {
+            "heightM": 1.8225715667009352,
+            "sourceAABBBlenderXYZ": [
+              0.9048648430407047,
+              0.3630705417692661,
+              1.8225715667009352
+            ],
+            "shoulderHalfM": 0.20807499999999995,
+            "hipHalfM": 0.10657499999999999,
+            "shoulderToAnatomicalHipM": 0.5024249999999999,
+            "manualIPDEstimateM": 0.06597499999999999,
+            "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+            "headSourceAABBBlenderXYZ": [
+              0.2961378495395183,
+              0.23362045180052515,
+              0.39971101343631743
+            ],
+            "hands": [
+              {
+                "nativeSide": "L",
+                "indexToLittleMCPDistanceM": 0.06718363685031206,
+                "wristToMiddleDistalTailM": 0.18876814173646045,
+                "maximumWristToFingerBoneEndpointM": 0.18876814173646045
+              },
+              {
+                "nativeSide": "R",
+                "indexToLittleMCPDistanceM": 0.06718365448366351,
+                "wristToMiddleDistalTailM": 0.18876818165490145,
+                "maximumWristToFingerBoneEndpointM": 0.18876818165490145
+              }
+            ],
+            "feet": [
+              {
+                "nativeSide": "L",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.1888737044483423,
+                  0.31792404159903526,
+                  0.12178040325641631
+                ]
+              },
+              {
+                "nativeSide": "R",
+                "footRegionEnvelopeBlenderXYZ": [
+                  0.1817894411087036,
+                  0.31048688925802703,
+                  0.1216811853647232
+                ]
+              }
+            ],
+            "uniformSizeIncreasePercent": 1.4999999999999902,
+            "relativeAspectRatiosUnchanged": true
+          },
+          "contacts": [
+            {
+              "side": "R",
+              "targetWrist": [
+                0.2523313713188449,
+                0.8298165986505648,
+                -0.3299999956029713
+              ],
+              "targetAnkle": [
+                -0.18110368074262514,
+                0.14680357911515746,
+                -0.16854701359272006
+              ],
+              "targetWristToContact": [
+                0.017668628681155117,
+                -0.04981659865056471,
+                -4.397028740132212e-9
+              ],
+              "targetAnkleToSole": [
+                0.04110368074262513,
+                -0.11580357911515746,
+                -0.03145298640727995
+              ]
+            },
+            {
+              "side": "L",
+              "targetWrist": [
+                0.25233131616608273,
+                0.8298165688034067,
+                0.3300000413911283
+              ],
+              "targetAnkle": [
+                -0.17249978942442684,
+                0.14671033210391177,
+                0.1897090252906084
+              ],
+              "targetWristToContact": [
+                0.017668683833917287,
+                -0.049816568803406736,
+                -4.139112832785634e-8
+              ],
+              "targetAnkleToSole": [
+                0.03249978942442684,
+                -0.11571033210391177,
+                0.010290974709391595
+              ]
+            }
+          ],
+          "minimumTriangleMarginM": 0.015530290532382307,
+          "minimumSafeMarginM": 0.012452312175290858,
+          "minimumHandSafeMarginM": 0.012512328004530948,
+          "minimumFootSafeMarginM": 0.012452312175290858,
+          "worstShortfallM": 0,
+          "allTriangleFeasible": true,
+          "allSafe": true,
+          "minimumTriangleFrame": {
+            "profile": "lean-0000",
+            "index": 0,
+            "lean": -1,
+            "hips": [
+              -0.66,
+              0.725
+            ],
+            "torsoRadians": 0.6981317007977318,
+            "side": "R",
+            "limb": "hand",
+            "triangleMarginM": 0.015530290532382307,
+            "safeMarginM": 0.012512328004530948,
+            "distanceM": 0.5880622150378855,
+            "segmentLengthsM": [
+              0.32991403615184345,
+              0.2736784694184244
+            ]
+          },
+          "minimumSafeFrame": {
+            "profile": "lean-1000",
+            "index": 1000,
+            "lean": 1,
+            "hips": [
+              -0.14,
+              0.974
+            ],
+            "torsoRadians": 0.8377580409572781,
+            "side": "L",
+            "limb": "foot",
+            "triangleMarginM": 0.016696249216962444,
+            "safeMarginM": 0.012452312175290858,
+            "distanceM": 0.8320911591173599,
+            "segmentLengthsM": [
+              0.45375154682931923,
+              0.3950358615050031
+            ]
+          }
+        }
+      }
+    ],
+    "scale104PerElbow": [
+      {
+        "id": "elbowZ1.145-scale1.040",
+        "scale": 1.04,
+        "sourceJointVectorsScale": 1.04,
+        "elbowZ": 1.145,
+        "sourcePelvisHeadZ": 0.9257692307692307,
+        "worldHipAbovePelvisM": 0.020000000000000046,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.3179237644467616,
+            "forearm": 0.3002009315299237,
+            "upperArmToForearmRatio": 1.0590365686958947,
+            "thigh": 0.46492769330294786,
+            "shin": 0.40476580883271257
+          },
+          {
+            "side": "L",
+            "upperArm": 0.3179237644467616,
+            "forearm": 0.3008169172844003,
+            "upperArmToForearmRatio": 1.0568679691181997,
+            "thigh": 0.46492769330294786,
+            "shin": 0.40476580883271257
+          }
+        ],
+        "dimensions": {
+          "heightM": 1.8674624919891358,
+          "sourceAABBBlenderXYZ": [
+            0.9271521544456482,
+            0.37201316595077516,
+            1.8674624919891358
+          ],
+          "shoulderHalfM": 0.2132,
+          "hipHalfM": 0.1092,
+          "shoulderToAnatomicalHipM": 0.5148,
+          "manualIPDEstimateM": 0.06760000000000001,
+          "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+          "headSourceAABBBlenderXYZ": [
+            0.3034318852424622,
+            0.23937465012073517,
+            0.40955611228942873
+          ],
+          "hands": [
+            {
+              "nativeSide": "L",
+              "indexToLittleMCPDistanceM": 0.06883840623086163,
+              "wristToMiddleDistalTailM": 0.1934176033555851,
+              "maximumWristToFingerBoneEndpointM": 0.1934176033555851
+            },
+            {
+              "nativeSide": "R",
+              "indexToLittleMCPDistanceM": 0.06883842429853207,
+              "wristToMiddleDistalTailM": 0.19341764425723895,
+              "maximumWristToFingerBoneEndpointM": 0.19341764425723895
+            }
+          ],
+          "feet": [
+            {
+              "nativeSide": "L",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.1935257661342621,
+                0.32575468301773075,
+                0.12477992057800294
+              ]
+            },
+            {
+              "nativeSide": "R",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.18626701354980468,
+                0.3181343495845795,
+                0.12467825889587403
+              ]
+            }
+          ],
+          "uniformSizeIncreasePercent": 4.0000000000000036,
+          "relativeAspectRatiosUnchanged": true
+        },
+        "contacts": [
+          {
+            "side": "R",
+            "targetWrist": [
+              0.2518961834202943,
+              0.8310436084695442,
+              -0.32999999549467
+            ],
+            "targetAnkle": [
+              -0.18211608667224646,
+              0.14965588401947172,
+              -0.16777230949401853
+            ],
+            "targetWristToContact": [
+              0.018103816579705737,
+              -0.05104360846954412,
+              -4.5053299934901454e-9
+            ],
+            "targetAnkleToSole": [
+              0.04211608667224645,
+              -0.11865588401947172,
+              -0.03222769050598148
+            ]
+          },
+          {
+            "side": "L",
+            "targetWrist": [
+              0.25189612690908963,
+              0.8310435778872346,
+              0.33000004241061426
+            ],
+            "targetAnkle": [
+              -0.17330027684867383,
+              0.1495603402838111,
+              0.18945555300712585
+            ],
+            "targetWristToContact": [
+              0.01810387309091036,
+              -0.05104357788723457,
+              -4.241061421595119e-8
+            ],
+            "targetAnkleToSole": [
+              0.03330027684867382,
+              -0.1185603402838111,
+              0.010544446992874143
+            ]
+          }
+        ],
+        "minimumTriangleMarginM": 0.03732518873619928,
+        "minimumSafeMarginM": 0.03423456525631585,
+        "minimumHandSafeMarginM": 0.03423456525631585,
+        "minimumFootSafeMarginM": 0.03633923564669794,
+        "worstShortfallM": 0,
+        "allTriangleFeasible": true,
+        "allSafe": true,
+        "minimumTriangleFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.03732518873619928,
+          "safeMarginM": 0.03423456525631585,
+          "distanceM": 0.580799507240486,
+          "segmentLengthsM": [
+            0.3179237644467616,
+            0.3002009315299237
+          ]
+        },
+        "minimumSafeFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.03732518873619928,
+          "safeMarginM": 0.03423456525631585,
+          "distanceM": 0.580799507240486,
+          "segmentLengthsM": [
+            0.3179237644467616,
+            0.3002009315299237
+          ]
+        }
+      },
+      {
+        "id": "elbowZ1.125-scale1.040",
+        "scale": 1.04,
+        "sourceJointVectorsScale": 1.04,
+        "elbowZ": 1.125,
+        "sourcePelvisHeadZ": 0.9257692307692307,
+        "worldHipAbovePelvisM": 0.020000000000000046,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.33803999763341624,
+            "forearm": 0.28041931841887796,
+            "upperArmToForearmRatio": 1.2054804196067086,
+            "thigh": 0.46492769330294786,
+            "shin": 0.40476580883271257
+          },
+          {
+            "side": "L",
+            "upperArm": 0.33803999763341624,
+            "forearm": 0.2810215608016195,
+            "upperArmToForearmRatio": 1.2028970185388999,
+            "thigh": 0.46492769330294786,
+            "shin": 0.40476580883271257
+          }
+        ],
+        "dimensions": {
+          "heightM": 1.8674624919891358,
+          "sourceAABBBlenderXYZ": [
+            0.9271521544456482,
+            0.37201316595077516,
+            1.8674624919891358
+          ],
+          "shoulderHalfM": 0.2132,
+          "hipHalfM": 0.1092,
+          "shoulderToAnatomicalHipM": 0.5148,
+          "manualIPDEstimateM": 0.06760000000000001,
+          "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+          "headSourceAABBBlenderXYZ": [
+            0.3034318852424622,
+            0.23937465012073517,
+            0.40955611228942873
+          ],
+          "hands": [
+            {
+              "nativeSide": "L",
+              "indexToLittleMCPDistanceM": 0.06883840623086163,
+              "wristToMiddleDistalTailM": 0.1934176033555851,
+              "maximumWristToFingerBoneEndpointM": 0.1934176033555851
+            },
+            {
+              "nativeSide": "R",
+              "indexToLittleMCPDistanceM": 0.06883842429853207,
+              "wristToMiddleDistalTailM": 0.19341764425723895,
+              "maximumWristToFingerBoneEndpointM": 0.19341764425723895
+            }
+          ],
+          "feet": [
+            {
+              "nativeSide": "L",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.1935257661342621,
+                0.32575468301773075,
+                0.12477992057800294
+              ]
+            },
+            {
+              "nativeSide": "R",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.18626701354980468,
+                0.3181343495845795,
+                0.12467825889587403
+              ]
+            }
+          ],
+          "uniformSizeIncreasePercent": 4.0000000000000036,
+          "relativeAspectRatiosUnchanged": true
+        },
+        "contacts": [
+          {
+            "side": "R",
+            "targetWrist": [
+              0.2518961834202943,
+              0.8310436084695442,
+              -0.32999999549467
+            ],
+            "targetAnkle": [
+              -0.18211608667224646,
+              0.14965588401947172,
+              -0.16777230949401853
+            ],
+            "targetWristToContact": [
+              0.018103816579705737,
+              -0.05104360846954412,
+              -4.5053299934901454e-9
+            ],
+            "targetAnkleToSole": [
+              0.04211608667224645,
+              -0.11865588401947172,
+              -0.03222769050598148
+            ]
+          },
+          {
+            "side": "L",
+            "targetWrist": [
+              0.25189612690908963,
+              0.8310435778872346,
+              0.33000004241061426
+            ],
+            "targetAnkle": [
+              -0.17330027684867383,
+              0.1495603402838111,
+              0.18945555300712585
+            ],
+            "targetWristToContact": [
+              0.01810387309091036,
+              -0.05104357788723457,
+              -4.241061421595119e-8
+            ],
+            "targetAnkleToSole": [
+              0.03330027684867382,
+              -0.1185603402838111,
+              0.010544446992874143
+            ]
+          }
+        ],
+        "minimumTriangleMarginM": 0.03765980881180819,
+        "minimumSafeMarginM": 0.03456751223154675,
+        "minimumHandSafeMarginM": 0.03456751223154675,
+        "minimumFootSafeMarginM": 0.03633923564669794,
+        "worstShortfallM": 0,
+        "allTriangleFeasible": true,
+        "allSafe": true,
+        "minimumTriangleFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.03765980881180819,
+          "safeMarginM": 0.03456751223154675,
+          "distanceM": 0.580799507240486,
+          "segmentLengthsM": [
+            0.33803999763341624,
+            0.28041931841887796
+          ]
+        },
+        "minimumSafeFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.03765980881180819,
+          "safeMarginM": 0.03456751223154675,
+          "distanceM": 0.580799507240486,
+          "segmentLengthsM": [
+            0.33803999763341624,
+            0.28041931841887796
+          ]
+        }
+      }
+    ],
+    "strongestMarginsWithinBound": [
+      {
+        "id": "elbowZ1.125-scale1.070",
+        "scale": 1.07,
+        "sourceJointVectorsScale": 1.07,
+        "elbowZ": 1.125,
+        "sourcePelvisHeadZ": 0.9263084112149532,
+        "worldHipAbovePelvisM": 0.020000000000000004,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.347791151411303,
+            "forearm": 0.2885083372194227,
+            "upperArmToForearmRatio": 1.205480419606707,
+            "thigh": 0.47833906907130214,
+            "shin": 0.41644174562596387
+          },
+          {
+            "side": "L",
+            "upperArm": 0.347791151411303,
+            "forearm": 0.28912795197858954,
+            "upperArmToForearmRatio": 1.2028970185388979,
+            "thigh": 0.47833906907130214,
+            "shin": 0.41644174562596387
+          }
+        ],
+        "dimensions": {
+          "heightM": 1.9213316023349762,
+          "sourceAABBBlenderXYZ": [
+            0.9538969281315804,
+            0.38274431496858596,
+            1.9213316023349762
+          ],
+          "shoulderHalfM": 0.21935,
+          "hipHalfM": 0.11235,
+          "shoulderToAnatomicalHipM": 0.5296500000000001,
+          "manualIPDEstimateM": 0.06955,
+          "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+          "headSourceAABBBlenderXYZ": [
+            0.31218472808599473,
+            0.24627968810498715,
+            0.4213702309131623
+          ],
+          "hands": [
+            {
+              "nativeSide": "L",
+              "indexToLittleMCPDistanceM": 0.07082412948752109,
+              "wristToMiddleDistalTailM": 0.19899695729853467,
+              "maximumWristToFingerBoneEndpointM": 0.19899695729853467
+            },
+            {
+              "nativeSide": "R",
+              "indexToLittleMCPDistanceM": 0.07082414807637435,
+              "wristToMiddleDistalTailM": 0.19899699938004392,
+              "maximumWristToFingerBoneEndpointM": 0.19899699938004392
+            }
+          ],
+          "feet": [
+            {
+              "nativeSide": "L",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.1991082401573658,
+                0.3351514527201653,
+                0.12837934136390686
+              ]
+            },
+            {
+              "nativeSide": "R",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.191640100479126,
+                0.32731130197644237,
+                0.128274747133255
+              ]
+            }
+          ],
+          "uniformSizeIncreasePercent": 7.000000000000006,
+          "relativeAspectRatiosUnchanged": true
+        },
+        "contacts": [
+          {
+            "side": "R",
+            "targetWrist": [
+              0.25137395794203354,
+              0.8325160202523195,
+              -0.32999999536470864
+            ],
+            "targetAnkle": [
+              -0.18333097378779203,
+              0.15307864990464878,
+              -0.16684266457557678
+            ],
+            "targetWristToContact": [
+              0.01862604205796648,
+              -0.05251602025231945,
+              -4.635291392742368e-9
+            ],
+            "targetAnkleToSole": [
+              0.04333097378779202,
+              -0.12207864990464878,
+              -0.033157335424423215
+            ]
+          },
+          {
+            "side": "L",
+            "targetWrist": [
+              0.2513738998006981,
+              0.8325159887878277,
+              0.3300000436339974
+            ],
+            "targetAnkle": [
+              -0.1742608617577702,
+              0.15298035009969027,
+              0.18915138626694677
+            ],
+            "targetWristToContact": [
+              0.018626100199301953,
+              -0.052515988787827754,
+              -4.3633997385054535e-8
+            ],
+            "targetAnkleToSole": [
+              0.034260861757770183,
+              -0.12198035009969027,
+              0.01084861373305325
+            ]
+          }
+        ],
+        "minimumTriangleMarginM": 0.06394580587653331,
+        "minimumSafeMarginM": 0.060764308433379655,
+        "minimumHandSafeMarginM": 0.060764308433379655,
+        "minimumFootSafeMarginM": 0.0649915011569886,
+        "worstShortfallM": 0,
+        "allTriangleFeasible": true,
+        "allSafe": true,
+        "minimumTriangleFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.06394580587653331,
+          "safeMarginM": 0.060764308433379655,
+          "distanceM": 0.5723536827541924,
+          "segmentLengthsM": [
+            0.347791151411303,
+            0.2885083372194227
+          ]
+        },
+        "minimumSafeFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.06394580587653331,
+          "safeMarginM": 0.060764308433379655,
+          "distanceM": 0.5723536827541924,
+          "segmentLengthsM": [
+            0.347791151411303,
+            0.2885083372194227
+          ]
+        }
+      },
+      {
+        "id": "elbowZ1.145-scale1.070",
+        "scale": 1.07,
+        "sourceJointVectorsScale": 1.07,
+        "elbowZ": 1.145,
+        "sourcePelvisHeadZ": 0.9263084112149532,
+        "worldHipAbovePelvisM": 0.020000000000000004,
+        "lengths": [
+          {
+            "side": "R",
+            "upperArm": 0.32709464226734114,
+            "forearm": 0.3088605737855947,
+            "upperArmToForearmRatio": 1.0590365686958938,
+            "thigh": 0.47833906907130214,
+            "shin": 0.41644174562596387
+          },
+          {
+            "side": "L",
+            "upperArm": 0.32709464226734114,
+            "forearm": 0.30949432835991203,
+            "upperArmToForearmRatio": 1.0568679691181986,
+            "thigh": 0.47833906907130214,
+            "shin": 0.41644174562596387
+          }
+        ],
+        "dimensions": {
+          "heightM": 1.9213316023349762,
+          "sourceAABBBlenderXYZ": [
+            0.9538969281315804,
+            0.38274431496858596,
+            1.9213316023349762
+          ],
+          "shoulderHalfM": 0.21935,
+          "hipHalfM": 0.11235,
+          "shoulderToAnatomicalHipM": 0.5296500000000001,
+          "manualIPDEstimateM": 0.06955,
+          "manualIPDStatus": "Approximate65mm source calibration from image eye witnesses; uncertainty inherited, not actual measured pupil anatomy",
+          "headSourceAABBBlenderXYZ": [
+            0.31218472808599473,
+            0.24627968810498715,
+            0.4213702309131623
+          ],
+          "hands": [
+            {
+              "nativeSide": "L",
+              "indexToLittleMCPDistanceM": 0.07082412948752109,
+              "wristToMiddleDistalTailM": 0.19899695729853467,
+              "maximumWristToFingerBoneEndpointM": 0.19899695729853467
+            },
+            {
+              "nativeSide": "R",
+              "indexToLittleMCPDistanceM": 0.07082414807637435,
+              "wristToMiddleDistalTailM": 0.19899699938004392,
+              "maximumWristToFingerBoneEndpointM": 0.19899699938004392
+            }
+          ],
+          "feet": [
+            {
+              "nativeSide": "L",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.1991082401573658,
+                0.3351514527201653,
+                0.12837934136390686
+              ]
+            },
+            {
+              "nativeSide": "R",
+              "footRegionEnvelopeBlenderXYZ": [
+                0.191640100479126,
+                0.32731130197644237,
+                0.128274747133255
+              ]
+            }
+          ],
+          "uniformSizeIncreasePercent": 7.000000000000006,
+          "relativeAspectRatiosUnchanged": true
+        },
+        "contacts": [
+          {
+            "side": "R",
+            "targetWrist": [
+              0.25137395794203354,
+              0.8325160202523195,
+              -0.32999999536470864
+            ],
+            "targetAnkle": [
+              -0.18333097378779203,
+              0.15307864990464878,
+              -0.16684266457557678
+            ],
+            "targetWristToContact": [
+              0.01862604205796648,
+              -0.05251602025231945,
+              -4.635291392742368e-9
+            ],
+            "targetAnkleToSole": [
+              0.04333097378779202,
+              -0.12207864990464878,
+              -0.033157335424423215
+            ]
+          },
+          {
+            "side": "L",
+            "targetWrist": [
+              0.2513738998006981,
+              0.8325159887878277,
+              0.3300000436339974
+            ],
+            "targetAnkle": [
+              -0.1742608617577702,
+              0.15298035009969027,
+              0.18915138626694677
+            ],
+            "targetWristToContact": [
+              0.018626100199301953,
+              -0.052515988787827754,
+              -4.3633997385054535e-8
+            ],
+            "targetAnkleToSole": [
+              0.034260861757770183,
+              -0.12198035009969027,
+              0.01084861373305325
+            ]
+          }
+        ],
+        "minimumTriangleMarginM": 0.0636015332987434,
+        "minimumSafeMarginM": 0.060421757218478755,
+        "minimumHandSafeMarginM": 0.060421757218478755,
+        "minimumFootSafeMarginM": 0.0649915011569886,
+        "worstShortfallM": 0,
+        "allTriangleFeasible": true,
+        "allSafe": true,
+        "minimumTriangleFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.0636015332987434,
+          "safeMarginM": 0.060421757218478755,
+          "distanceM": 0.5723536827541924,
+          "segmentLengthsM": [
+            0.32709464226734114,
+            0.3088605737855947
+          ]
+        },
+        "minimumSafeFrame": {
+          "profile": "lean-0000",
+          "index": 0,
+          "lean": -1,
+          "hips": [
+            -0.66,
+            0.725
+          ],
+          "torsoRadians": 0.6981317007977318,
+          "side": "R",
+          "limb": "hand",
+          "triangleMarginM": 0.0636015332987434,
+          "safeMarginM": 0.060421757218478755,
+          "distanceM": 0.5723536827541924,
+          "segmentLengthsM": [
+            0.32709464226734114,
+            0.3088605737855947
+          ]
+        }
+      }
+    ]
+  }
+}

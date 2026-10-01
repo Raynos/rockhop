@@ -848,3 +848,14 @@ Validation: CPU2 sitting probe exit0, parent48decodedframes/fullendpoint
 inspection;19joint finite normalized skin.509184reach checks, lint and
 typecheckpass. Productionexactreplay/crash103/restart3/4ms zeroerrors.
 Limits: No accepted sitting, grip or riding asset; corrections remain.
+
+## Round82 — planted motion and coherent held grip foundation
+
+Finding: Parent-pose evaluation and reachable lapcontrols retain planted
+soles and rigid face. Uniform metre-scale proxy improves reach padding
+without proportion edits; DQS grip improves heldshape but entry stillfails.
+Validation: CPU2motion/surface audits exit0; parent48body/198handdecoded
+frames. Solemaxdrift2.263e-7m/facepair1.824e-7m;19skin decode1.979microns.
+Scale120840limbchecks independentlyverified, lint/typecheckpass.
+Limits: Scale notapplied; heldgrip onlycandidate, entrypenetrates12.04mm;
+UniMate/rigcloseups/seatcontact/playedriding stillopen.
