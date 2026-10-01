@@ -16,7 +16,11 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round158, 2026-10-01
+## Current evidence — round159, 2026-10-01
+
+- Retained34ship159 passes exact finish/hash,103crash ticks,1/3ms restart,
+  errors0 under canonical lock. Next162. Harness strict types/lint pass;
+  moving appearance/Garage/surface contact/mobile gates remain unaccepted.
 
 - Round158 executable named19bone fixture covers12 bilateral families/1,164
   stock Three.js samples. V5 remains unaccepted: overhead260, elbow103,

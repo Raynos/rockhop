@@ -34,7 +34,13 @@ const rest=garment.map(m=>{
   }
   return {mesh:m,points,areas,positions:new Float64Array(points.length),previous:new Float64Array(points.length)};
 });
-const rows=[];let maximumMatrixError=0;
+interface MeshStats {
+  mesh: string; vertices: number; triangles: number; quarterAreaFaces: number;
+  minimumAreaRatio: number; maximumStoredFrameVertexMotionM: number;
+  neutralEndpointMaximumComponentErrorM: number | null;
+}
+const rows: {family:string;frame:number;timeSeconds:number;stats:MeshStats[]}[]=[];
+let maximumMatrixError=0;
 let previousFamily='';
 for(const frame of fixture.frames) {
   const parity=player.apply(frame);maximumMatrixError=Math.max(maximumMatrixError,parity.maximumWorldMatrixError);

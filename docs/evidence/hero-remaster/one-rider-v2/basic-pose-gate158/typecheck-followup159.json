@@ -1,0 +1,10 @@
+{
+  "firstCheck": "FAILED TS7034/TS7005/TS7006 inferred rows/stats any",
+  "fix": "Explicit MeshStats and result-row types in CPU harness",
+  "checks": {
+    "pnpm exec tsc -p tsconfig.harness.json --noEmit": "PASS",
+    "targeted oxlint protocol.ts run.mts": "PASS"
+  },
+  "runtimeChange": false,
+  "characterRepairAttempt": false
+}

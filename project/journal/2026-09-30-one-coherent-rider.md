@@ -1731,3 +1731,18 @@ Limits: CPU fixture checks do not accept appearance, continuous collision,
 rendering, cuff joins, support, actual Garage/physics or mobile. Gray/PBR moving
 review, unilateral/halfsteps and task-3 construction candidate next. Cosmetics
 paused, player assets unchanged, source/control failures retained. Ship159next.
+
+## Round159 — retained runtime guard and harness types
+
+Finding: Structural experiments must preserve riding and restart behavior.
+The retained34 C19 driver still passes the mandatory third-round functional
+ship gate; this does not qualify the current garment or basic-pose animation.
+
+Validation: Cold-load both tiers, byte-exact40.083333333333336 and state hash
+368f1ca5bd9e830a,103crash ticks,1/3ms restart,0errors. Canonical shared lock;
+anonymous memory below70GB and batch below30minutes. Harness strict typecheck
+and targeted lint pass after explicit result types fix round158 implicit-any.
+
+Limits: No new garment/cosmetic/appearance/contact/Garage/device/trueLOD pass.
+No new asset or repair attempt; independent construction ownership preserved.
+Next mandatory162, continuous gray/PBR exported pose coverage next.

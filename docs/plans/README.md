@@ -115,6 +115,8 @@ Checkpoint1 historical WHITE static minimum; current structural gate OPEN. Ask24
 
 Checkpoint1 historical static minimum; structural basic-pose gate OPEN. Ask248 construction→rig/weights→deformation, cosmetics paused. Round158 named19bone CPU fixture12families/1,164samples; V5 broad arms/sit cloth collapse remains. Moving gray/PBR, unilateral/halfsteps, surfaces/Garage/device unmeasured. Task3 owns construction; parent integration/harness. Mandatory159next.
 
+Checkpoint1 historical static minimum; structural gate OPEN. Ask248 construction→rig/weights→deformation, cosmetics paused. Round158 named19bone CPU gate12families/1,164samples retains cloth failures. Round159 retained34 coldload/clear/crash/restart exact,1/3ms; strict harness types/lint pass. Moving gray/PBR, unilateral/halfsteps, actual surfaces/Garage/device open. Task3 owns construction; parent integration/harness. Mandatory162next.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

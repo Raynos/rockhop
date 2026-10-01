@@ -1590,3 +1590,14 @@ compression separate from arbitrary physics drivers. Eight representative poses
 and continuous transitions must have matched Blender/Garage/on-bike evidence;
 no deployment until repository release and rider appearance/contact/device gates.
 Next mandatory coldboot/clear/crash/restart round159.
+
+## Retained runtime ship check — round159
+
+Retained C19/adapter34 cold-load/clear/crash/restart passes both logical tiers:
+byte-identical40.083333333333336/hash368f1ca5bd9e830a,103crash ticks,1/3ms
+restart,0page errors. Shared GPU lock, anonymous/time limits honored. This is
+functional physics coverage, not new garment, trueLOD, contacts or mobile art.
+Basic-pose harness strict typecheck and targeted lint now pass after explicit
+row types; round158 type-inference failure is recorded. No new art attempt.
+Next mandatory162. Continuous gray/PBR pose gate and owned construction remain
+next; all appearance/deployment gates stay open.
