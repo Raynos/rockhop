@@ -642,3 +642,13 @@ Validation: ParentactualPBRfront/profile,8PBRgrayinspectionviews;5461faces
 13components/595boundaryedges. Source5hashes intact,currentbody untouched.
 Limits: No integration orhoodacceptance; newsemanticfailure1/setup1, old15
 retired. Furthercolor-threshold tweakingstopped.
+
+## Round57 — reconcile existing inner and outer cheek walls
+
+Finding: Exactfan correction resolvespinch buttwo-loopguard iswrong for
+fournativeopposite-facingperimeters. Switch todual-sheetlocal closure.
+Validation: Fourcleanloops36/35/40/40, oppositeadjacentnormal signs;
+99485retainedfaces formonecomponent/sourcebytesexact. No patch/bake ran.
+Freshsilentproductionlow/high exactclear/crash/1and2msrestartpasses.
+Limits: Secondlocalrepairfailure, face6/10; analyticthickness/closure and
+actualPBR/grayappearance required inrenewedboundedbatch, no rigacceptance.

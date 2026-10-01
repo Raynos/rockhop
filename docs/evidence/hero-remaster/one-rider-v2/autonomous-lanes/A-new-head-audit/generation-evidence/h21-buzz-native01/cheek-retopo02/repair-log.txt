@@ -1,0 +1,13 @@
+22:17:22 | INFO: Data are loaded, start creating Blender stuff
+22:17:22 | INFO: Blender create Mesh node textured
+22:17:22 | INFO: glTF import finished in 0.09s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-retopo02/repair.py", line 64, in <module>
+    (O/'unsafe-prefix.json').open('x').write(json.dumps({'reason':'Region removal does not leave exactly one perimeter per cheek','regions':regions,'perimeterCounts':[len(v) for v in loops]},indent=2)+'\n');raise RuntimeError('Unsafe local perimeter count; no patch constructed')
+                                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Unsafe local perimeter count; no patch constructed
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-retopo02/repair.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

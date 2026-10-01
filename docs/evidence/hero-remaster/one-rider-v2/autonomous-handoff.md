@@ -228,3 +228,11 @@ neckskin/skin-hair fragments; parentactualfront/profile REJECTED.5461faces
 13components (largest5439,22floatfaces),595boundaryedges. Newdonor setup1
 +semantic1; colorclassifierstopped. Next explicitanatomical3D exclusion and
 truepolygonclipping, no thresholdchurn/oldrimrepair. Body/source5hashesexact.
+
+Round57: Exactfan29076 removal fixesdegree4 but fourperimeters36/35/40/40
+remain onEXISTINGexterior/innercavity sheets withoppositenormals. Two-loop
+assumption rejectedbeforepatch/bake, secondlocalfailure. Parentselects new
+dual-sheetreconciliation: orientation-matchedcaps ofexistingboundaries with
+analyticpositive thickness/nonintersection, ONEphysicalskincomponent. Source
+99485outsidefaces exact. RenewONE30minCPUbatch aftercheckpoint; no moremask
+expansion. Round57productionexactclear/crash/1and2msrestartpasseslow/high.
