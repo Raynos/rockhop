@@ -717,3 +717,13 @@ byte-identical40.083333333s, crash103ticks/restart1ms both, zero errors.
 Limits: Donor isolation failure1 plus earlier setup/semantic failures.
 Gray fold is not proven skin or lining; no quiet recolor/cut. No binding
 or whole-character acceptance; parent fitting follows independently.
+
+## Round64 — stop cloth stiffness churn after worse hood
+
+Finding: Higher fleece stiffness/stabilized binding worsens the bag into
+angular paper-like crumpling. Stop this alternative and select donor01.
+Validation: Parent actual front/profile/rear;48frames CPU simulation,
+40386bodytriangles/UV/material exact. New WHITEbust measured65mm provisional
+IPD/eyeZ1.670/crown1.796, no warping; source bytes exact. No bake ran.
+Limits: Cloth-bag appearance failure2, no accepted hood or rig mapping.
+Sizing measurement is provisional and does not qualify anatomy or contacts.

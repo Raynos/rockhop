@@ -1,0 +1,86 @@
+{
+  "lineage": "NEW actual fleece hoodbag/stable binding correction; old15retired; prior cape1 and clothbag1 appearance failures preserved",
+  "previousOldLineageFailures": 15,
+  "newLineagePriorFailures": 1,
+  "bodySource": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend",
+  "sizingSkinSource": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/model.glb",
+  "sizingSkinPurpose": "Original NEW WHITE H21 buzz source only as unaccepted measured neutral sizing/collision; exact face repair remains parent/A owned",
+  "skinAdapter": {
+    "scale": 0.2002282143246857,
+    "translation": [
+      0.0030476976323250858,
+      0.00262536417545427,
+      1.595431884660573
+    ],
+    "rotationDegrees": [
+      180,
+      0,
+      0
+    ]
+  },
+  "wholeHoodMask": {
+    "centralHalfWidth": 0.19,
+    "frontFloorZ": 1.445,
+    "rearFloorZ": 1.335,
+    "rearTransitionY": [
+      0.03,
+      0.12
+    ],
+    "description": "Whole originalhood plus sourcehead replacement, full central yoke; preservealltrianglegeometryoutside mask. No retiredcollar-loop/semanticmask inputs."
+  },
+  "threads": 2,
+  "bake": false,
+  "cloth": {
+    "U": 24,
+    "V": 20,
+    "frames": 48,
+    "quality": 8,
+    "mass": 0.4,
+    "tension": 25,
+    "compression": 25,
+    "shear": 15,
+    "bending": 8.0,
+    "collisionDistance": 0.004,
+    "selfDistance": 0.002,
+    "selfCollision": true,
+    "restPanelWidth": 0.29,
+    "restPanelHeightFront": 0.19,
+    "restPanelHeightRear": 0.235,
+    "neckTipDegrees": 5,
+    "pinnedNeckRadiusX": 0.083,
+    "pinnedNeckRadiusY": 0.076,
+    "pinnedNeckCenterY": 0.004,
+    "pinnedNeckZ": 1.526,
+    "pinnedNeckZVariation": 0.01,
+    "liningOffset": 0.0015,
+    "bendingDamping": 8.0,
+    "rimBindingRows": 2,
+    "rimBindingPins": [
+      0.75,
+      0.25
+    ],
+    "rolledBindingRadius": 0.0035
+  },
+  "deadlineUTC": "2026-10-01T04:08:21+00:00",
+  "startUTC": "2026-10-01T03:38:21+00:00",
+  "noBakes": true,
+  "landmarkMeasurement": {
+    "method": "Manual iris centers on immutable actual orthographic X180 render, camera calibrated .7m across 640px; 3D projected scale estimate not accepted rig mapping",
+    "image": "docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/painted-orientation-witness01/actual-painted-X180.png",
+    "leftIrisPixel": [
+      278,
+      229
+    ],
+    "rightIrisPixel": [
+      361,
+      229
+    ],
+    "uncertaintyPixels": 2,
+    "displayIPD": 0.09078125,
+    "targetIPD": 0.065,
+    "displayEyeHeight": 1.59953125,
+    "targetEyeHeight": 1.67,
+    "uniformFactorVsDisplay": 0.7160068846815836,
+    "noAnatomyWarps": true
+  }
+}

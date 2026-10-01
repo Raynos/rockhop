@@ -1,0 +1,143 @@
+{
+  "status": "UNACCEPTED actual CPU cloth drape measured; requires parent appearance review",
+  "oldLineageFailuresRetired": 15,
+  "priorNEWWholehoodAppearanceFailures": 2,
+  "threads": 2,
+  "device": "CPU",
+  "simulationSnapshots": [
+    {
+      "frame": 1,
+      "timeSeconds": 0.041666666666666664,
+      "displacementMean": 3.026097323117657e-08,
+      "displacementMax": 5.980770018497906e-08,
+      "verticesMovedOver1mm": 0,
+      "pinMaximumDisplacement": 5.899247966060266e-08
+    },
+    {
+      "frame": 12,
+      "timeSeconds": 0.5,
+      "displacementMean": 0.049146078319639186,
+      "displacementMax": 0.17282562026774417,
+      "verticesMovedOver1mm": 980,
+      "pinMaximumDisplacement": 5.899247966060266e-08
+    },
+    {
+      "frame": 24,
+      "timeSeconds": 1.0,
+      "displacementMean": 0.05374931124033092,
+      "displacementMax": 0.17051879607352102,
+      "verticesMovedOver1mm": 980,
+      "pinMaximumDisplacement": 5.899247966060266e-08
+    },
+    {
+      "frame": 36,
+      "timeSeconds": 1.5,
+      "displacementMean": 0.057773293116491466,
+      "displacementMax": 0.1704317511838073,
+      "verticesMovedOver1mm": 980,
+      "pinMaximumDisplacement": 5.899247966060266e-08
+    },
+    {
+      "frame": 48,
+      "timeSeconds": 2.0,
+      "displacementMean": 0.06411302480463987,
+      "displacementMax": 0.17259678301278286,
+      "verticesMovedOver1mm": 980,
+      "pinMaximumDisplacement": 5.899247966060266e-08
+    }
+  ],
+  "sources": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/model.glb": "2cd1859e05f6aac4d05112027dfaefcc15c7a83f8301ec8e1045fbc8bc326420"
+  },
+  "actualClothVertices": 1029,
+  "actualClothQuadFaces": 960,
+  "pinnedVertices": 49,
+  "rearCenterSharedVertices": 21,
+  "flatRestKeyUsed": "Actual flat sewing rest pattern",
+  "rearSewing": "Shared rear-center topology before gravity; no sewing-spring solver falsely claimed",
+  "settings": {
+    "U": 24,
+    "V": 20,
+    "frames": 48,
+    "quality": 8,
+    "mass": 0.4,
+    "tension": 25,
+    "compression": 25,
+    "shear": 15,
+    "bending": 8.0,
+    "collisionDistance": 0.004,
+    "selfDistance": 0.002,
+    "selfCollision": true,
+    "restPanelWidth": 0.29,
+    "restPanelHeightFront": 0.19,
+    "restPanelHeightRear": 0.235,
+    "neckTipDegrees": 5,
+    "pinnedNeckRadiusX": 0.083,
+    "pinnedNeckRadiusY": 0.076,
+    "pinnedNeckCenterY": 0.004,
+    "pinnedNeckZ": 1.526,
+    "pinnedNeckZVariation": 0.01,
+    "liningOffset": 0.0015,
+    "bendingDamping": 8.0,
+    "rimBindingRows": 2,
+    "rimBindingPins": [
+      0.75,
+      0.25
+    ],
+    "rolledBindingRadius": 0.0035
+  },
+  "initialCollisionCorrections": 12,
+  "initialCollisionMaxCorrection": 0.01261033511809996,
+  "partialFrontRimPins": {
+    "25": 0.75,
+    "50": 0.25,
+    "549": 0.75,
+    "573": 0.25
+  },
+  "reinforcedRimVertices": 174,
+  "reinforcedBendingMaximum": 80.0,
+  "whiteSizingMeasurement": {
+    "method": "Manual iris centers on immutable actual orthographic X180 render, camera calibrated .7m across 640px; 3D projected scale estimate not accepted rig mapping",
+    "image": "docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/painted-orientation-witness01/actual-painted-X180.png",
+    "leftIrisPixel": [
+      278,
+      229
+    ],
+    "rightIrisPixel": [
+      361,
+      229
+    ],
+    "uncertaintyPixels": 2,
+    "displayIPD": 0.09078125,
+    "targetIPD": 0.065,
+    "displayEyeHeight": 1.59953125,
+    "targetEyeHeight": 1.67,
+    "uniformFactorVsDisplay": 0.7160068846815836,
+    "noAnatomyWarps": true
+  },
+  "evaluatedFrames": 48,
+  "rolledBinding": {
+    "radius": 0.0035,
+    "rows": 6,
+    "freeEdges": 88,
+    "endpointsTopologicallySewn": true,
+    "simulation": "Derived from measured fleece exterior; not independent cloth layer"
+  },
+  "finalFrame": 48,
+  "actualMovedVertices": 980,
+  "maxActualSimulationDeformation": 0.17259678301278286,
+  "protectedOriginalTriangles": 40386,
+  "nativeSizingSkinUnchanged": true,
+  "liningSimulation": "Not separately simulated; two lining panels offset from actual measured exterior drape",
+  "newGarmentRigWeights": "Unassigned, parent19boneadapter pending",
+  "noBakes": true,
+  "GLBSHA": "459d5717b2e08b9a6e2dda0a217262dd0eef4d4d0af65e6db3adfbd3cf98901c",
+  "elapsedSeconds": 53.98526041721925,
+  "peakRSSBytes": 1361281024,
+  "recipeSHA": "c06f115aebb623c6d357a54db0258f887fd0e59be5e4caa45b54be6071e0c155",
+  "sourcesAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/generation/h21-buzz-native01/model.glb": "2cd1859e05f6aac4d05112027dfaefcc15c7a83f8301ec8e1045fbc8bc326420"
+  }
+}

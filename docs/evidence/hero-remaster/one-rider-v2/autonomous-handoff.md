@@ -273,3 +273,9 @@ improves. Inner grayfold located source29081 inside original rearhood,
 notlowerfrontneck witness; identityunproven. No quietrecolor/cut. Parent
 private wholecharacter fitting/coverage next, C retired. Productionexact
 clear40.083333333s/crash103ticks/restart1ms both, sourcebody unchanged.
+
+Round64: Cloth-bag stiffness/binding worsens angularcrumple; parent rejects
+actual front/profile/rear and stops parameterchurn afterfailure2. B retires,
+NEWdonor01 naturalhood primary. FrozenWHITEbust transform yieldsprovisional
+IPD65mm/eyeZ1.670/crown1.796; exacttransform/sourceproof inBtrial02README.
+40386bodytriangles/UV/material exact, no bake or rig mapping acceptance.
