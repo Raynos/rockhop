@@ -16,7 +16,13 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round161, 2026-10-01
+## Current evidence — round162, 2026-10-01
+
+- Round162 publishes version6 at the existing review website, structural-gate
+  section.29movies locally play at390/1200px, older23preserved. Two new riding
+  copies reduced for hosting; full masters retained, no detailed grading from
+  reduced copies. Audience unchanged; no player promotion. Ship162passes both
+  tiers exactfinish/hash,103crash ticks,2/2ms restart,0errors. Next165.
 
 - Round161 expands28families/5,404CPU samples with unilateral grips and analytic
   halfsteps. All1,164baseline controls exact; new halfsteps retain extra collapse

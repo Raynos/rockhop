@@ -1635,3 +1635,16 @@ empty holes from those pixels or patch them blindly. Finite rays do not exclude
 other holes, certify every pixel or excuse construction/crossing/strain failures.
 Preserve construction-first order; defer cosmetic repainting. Source/image and
 10raw receipts verified; task-3 ownership unchanged. Ship162next.
+
+## Moving review website publication — round162
+
+Existing review website version6 now includes structural-gate movies and actual
+physics riding A/B; all23older movies retained. No player asset promotion.
+Archive256MiB failure recovered by reducing only two new phone riding copies,
+clearly marked low-bandwidth/not detail grading; full-quality masters retained.
+Silent390/1200px local playback29movies/4images/noerrors/nooverflow passes.
+Hosted deployment succeeded, audiencecustom/revision1 preserved; hosted media
+playback remains unmeasured. Source/encoding/publication receipts retained in
+gallery162. Construction/rig/deformation gates remain open, cosmetics paused.
+Retained34ship162passes exactfinish/hash,crash103,restart2/2ms,0errors;
+canonical lock honored. Next mandatory165. Task3 ownership remains separate.

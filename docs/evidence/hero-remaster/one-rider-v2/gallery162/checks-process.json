@@ -1,0 +1,35 @@
+{
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/basic-pose-gate/check_gallery162.mts",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/gallery162",
+        "http://127.0.0.1:52642/"
+      ],
+      "status": 0,
+      "seconds": 17.18119283299893
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=harness/out/hero-remaster/new-rider-body34-overlay",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/gallery162/ship-gate162.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 11.102751917205751
+    }
+  ],
+  "seconds": 28.667678833007812,
+  "peakAnonymousBytes": 58564034560,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "memoryLimitBytes": 70000000000,
+  "timeLimitSeconds": 1700,
+  "limits": "Headless390/1200 playback and unchanged retained34 ship gate; no physical iPhone or new candidate acceptance."
+}

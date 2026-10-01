@@ -1780,3 +1780,20 @@ Limits: CPU coverage and morph isolation do not accept motion, joints/contact,
 hands, continuous collisions, Garage/Blender/device/LOD or appearance. No new
 art repair attempt. Task-3 files unchanged; source/head protected, cosmetics
 paused. Render expanded fixture next and retain mandatory ship162.
+
+## Round162 — moving review delivery
+
+Finding: structural failures must be visible on the user's existing phone review
+site. Version6 retains all23older movies and adds six structural/matched riding
+movies.256MiB archive rejection recovered by reducing two new delivery copies
+only, with explicit quality limits and intact full-resolution masters.
+
+Validation: exact pushed source93a9f6d saved/deployed successfully; custom
+audience/revision1 retained. Silent390/1200px local29movie playback,4images,
+noerrors/nooverflow. Retained34ship162 exactfinish/hash/crash103/restart2/2ms,
+0errors under canonical lock and58.565GB/28.67s bounds.
+
+Limits: hosted media playback not independently measured. Reduced riding copies
+are unsuitable for fine appearance grading. New geometry/contact/Garage/mobile
+acceptance remains open; cosmetic work paused. Task3 construction ownership
+preserved. No character repair attempt, threshold relaxation or player promotion.

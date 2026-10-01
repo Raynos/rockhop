@@ -1,0 +1,108 @@
+{
+  "failedArchiveBytes": 282771635,
+  "limitBytes": 268435456,
+  "mechanism": "Reduce only two new gameplay phone encodes; preserve all23old comparisons, source movies and four new pose videos exact.",
+  "rows": [
+    {
+      "movie": "physical157-side.mp4",
+      "beforeSHA256": "771a53150d5799182e1482e84b6194ea5e688e76a1c24bffc230e690072d90fb",
+      "retainedFullerReview": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/gallery162-before-reduction/physical157-side.mp4",
+      "afterSHA256": "e32e0ccbc1a9b07d02ad73b5f1cd7dd8c4f494ef8b05231f7488f41d8b800139",
+      "bytes": 765467,
+      "ffmpeg": [
+        "ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/rider-review-site/dist/media/physical157-side.mp4",
+        "-vf",
+        "scale=960:-2",
+        "-c:v",
+        "libx264",
+        "-threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-b:v",
+        "150k",
+        "-maxrate",
+        "170k",
+        "-bufsize",
+        "300k",
+        "-pix_fmt",
+        "yuv420p",
+        "-an",
+        "-movflags",
+        "+faststart",
+        "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/rider-review-site/dist/media/physical157-side-reduced.mp4"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 290,
+            "r_frame_rate": "12/1",
+            "nb_frames": "480"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      },
+      "limits": "Low-bandwidth phone comparison, reduced spatial detail. Original source and fuller encode retained; not appearance-grade evidence."
+    },
+    {
+      "movie": "physical157-rear-three-quarter.mp4",
+      "beforeSHA256": "8cdd4da6f77bb8acd4e14af55f004605f75fa127bd648ae285ca1e081af72065",
+      "retainedFullerReview": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/gallery162-before-reduction/physical157-rear-three-quarter.mp4",
+      "afterSHA256": "96b4adc8265006e828926822559d91ed904598743d752715e02860e21ae406e3",
+      "bytes": 771995,
+      "ffmpeg": [
+        "ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/rider-review-site/dist/media/physical157-rear-three-quarter.mp4",
+        "-vf",
+        "scale=960:-2",
+        "-c:v",
+        "libx264",
+        "-threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-b:v",
+        "150k",
+        "-maxrate",
+        "170k",
+        "-bufsize",
+        "300k",
+        "-pix_fmt",
+        "yuv420p",
+        "-an",
+        "-movflags",
+        "+faststart",
+        "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/rider-review-site/dist/media/physical157-rear-three-quarter-reduced.mp4"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 290,
+            "r_frame_rate": "12/1",
+            "nb_frames": "480"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      },
+      "limits": "Low-bandwidth phone comparison, reduced spatial detail. Original source and fuller encode retained; not appearance-grade evidence."
+    }
+  ],
+  "oldMediaPreservedExact": true
+}
