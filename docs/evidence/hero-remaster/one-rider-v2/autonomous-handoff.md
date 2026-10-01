@@ -113,3 +113,10 @@ B intrinsictrial02 freezes another honest gate failure:194neckloop plus43/23
 actual posteriorclothperforations on same bodycomponent. No volume ran.
 Neckfamily11/15; next explicit three-loop lining+two clothcaps addresses actual
 openings rather than requiring an unjustified singleboundary. Skin unchanged.
+
+Browregistration correction passes: actualCC0brow124vertices/96polygons fitted
+without changing native skin/eyes/UVs. Parentactualmatchedsource/brow16views
+shows improvement3→4/10face, still below7; no faceacceptance. Headfamily now
+explicitly includes10historicalgeneration/geometry/texture failures plus
+nativepaletteappearance, browsetup and browappearance =13/15. No counters
+reset. NEWdonor/generation architecture next, no repeatedpalette patches.

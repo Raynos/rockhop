@@ -494,3 +494,13 @@ single-contour assumption before explicit lining/two-cap construction.
 Validation: Actualgrayrear witness and exact loop indices reviewed; source
 44,595trianglepositions/UV/materials preserved,16GLBreimportviews frozen.
 Limits: No volume execution or neck-motion pass; body/face remain unaccepted.
+
+## Round41 — brows improve readability but face remains below target
+
+Finding: Registered nativeCC0brows fit successfully on unchangedskin/eyes.
+Actualmatchedbefore/after improves diagnosticface3→4/10, still below7.
+Validation: 16actualGLBsource/browPBR/grayviews, front/threequarter reviewed;
+originalhead/eyegeometry+UVhashes unchanged and allsourcehashes retained.
+Limits: No exacttargetidentity/skin/eye/hair quality or body/rig acceptance.
+Executedrecipe retained its oldreportdirectory; byte-identical canonicalcopy
+and pathnote preserve exactprovenance. Switch to NEWdonor/generation next.
