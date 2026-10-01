@@ -1202,3 +1202,14 @@ physical bones/debug/lean/contact errors exact. Hip stretch4.606x→7.537x;
 seat overlap3.415→18.248mm. Deterministic rebuild exact; recipe lint passes.
 Limits: One anatomical weight trial, no moving art score. Historical waist
 correction retained; protected head/hood, contacts and player assets unchanged.
+
+## Round114 — retain native eyelid anatomy as a different graft mechanism
+
+Finding: Use real lid/canthus/fold topology after analytic rings failed in motion.
+Freeze and prove the donor before full rider surgery. Current rider unchanged.
+Validation: Parent reran standalone validator:168 exact native quads/eye,
+finite/unit normals, two simple32-edge loops, Euler0, no degenerate triangles.
+CC0 source header retained. Ship114 both tiers byte-identical40.083333333333336s,
+crash103/restart2/3ms; errors0. Actual source wire projections inspected.
+Limits: Unjoined/untextured source donor, not accepted art. Eye failures remain6;
+graft, clearance, texture continuity and moving appearance still need proof.

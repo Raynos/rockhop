@@ -25,6 +25,8 @@ Checkpoint 1 WHITE minimum; target8/later gates open. Round112 reproduces curren
 
 Checkpoint 1 WHITE minimum; target8/later gates open. Round113 rejects anatomical weights15: all6 thigh folds worsen, hip stretch4.606x→7.537x and seat overlap3.415→18.248mm. One failed trial; keep11 and switch early to localized hip-flexion correctives with unchanged physics/contacts. Actual hip camera correction and native CC0 eyelid donor pending. Phone gallery current11 live; ship111 passes, next114.
 
+Checkpoint 1 WHITE minimum; target8/later gates open. Round114 retains a fundamentally different real CC0 eyelid donor:168 native quads/eye,8.647mm relief, standalone checks pass. Current11 unchanged; full graft/skin bake next, analytic rings retired/eye failures6. Hip15 rejected, actual closeup baseline and local correctives next. Phone gallery current11 live. Ship114 exact replay/crash/restart passes; next117.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

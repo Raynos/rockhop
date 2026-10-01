@@ -873,3 +873,14 @@ Switch early to localized hip-flexion correctives driven by existing bones.
 Current11/head/hood join unchanged. Actual hip camera baseline being corrected;
 first orbit labels used wrong yaw and obscured hips behind forks, preserved.
 New native CC0 eyelid anatomy donor investigation continues, no graft yet.
+
+Round114: real CC0 hm08 eyelid donor frozen and independently validated.
+168 original quads/eye, two simple32-edge loops, actual lid/fold/canthus anatomy
+and8.647mm relief. Uniform fitting preserves exact raw geometry/UV provenance;
+current11 unchanged. Retain source mechanism, not an appearance pass. Next
+outer-boundary-only graft with clean inward aperture/wall and compatible skin
+bake, preserving white identity and approved head/neck/hood join. Analytic
+rings stay retired; total eye repair failures6 unchanged by source extraction.
+Ship114 both tiers byte-identical40.083333333333336s,crash103/restart2/3ms,
+errors0. Current hip camera now reveals actual lower-body/hem folds; review
+and targeted correctives next. Body15 rejected, no normal player promotion.
