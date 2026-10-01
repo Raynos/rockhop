@@ -1,0 +1,34 @@
+{
+  "round": 150,
+  "status": "Keep construction evidence; reject incomplete fit01 as a finished rider",
+  "reviewMethod": "Parent inspected every ordered source frame in six paired 12-frame boards extracted from the verified 72-frame turntables, plus nine-angle comparison. No continuous human playback claim.",
+  "observedDefects": [
+    "New shirt sleeves and jeans are too narrow compared with the retained hoodie and denim silhouette.",
+    "Missing pocket, drawstring, folds and cloth volume: gray template is a construction base, not selected appearance.",
+    "Rear hood-source patch has a visible cut edge and unstitched back/shoulder transition. This is caused by temporary fixture cutting, not generator output.",
+    "Cuffs and shoe/pant interfaces visibly fail; source shoe patches and native jeans are not stitched.",
+    "Front hem/crotch transition and rear garment hem need fitting."
+  ],
+  "preservedSources": [
+    "Full source34 GLB SHA unchanged; original source geometry remains untouched.",
+    "Fixture head, hood and gloves copied from source34; no substituted visible head or base body.",
+    "Source shoe/neck patches retained as temporary interface guides, not accepted join."
+  ],
+  "fullBodyScore": null,
+  "faceScore": null,
+  "whyNoScore": "Neutral-gray untextured rest fixture is neither matched mockup appearance nor seated/riding motion. Cannot close either quality gate.",
+  "next": "Fit the clean garment to the retained generated silhouette using reviewed semantic correspondence. Preserve raw sources, exact hood/head/glove geometry and source shoe/sole probes; build continuous interface topology before PBR/detail bake. Then test actual physics motion on the existing C19 adapter.",
+  "ship150": "Retained mapped34 overlay only, not the new garment. Both tiers byte-identical finish/hash; crash103ticks, restart3ms, errors0.",
+  "setupFailures": [
+    {
+      "count": 1,
+      "cause": "Factory-empty Blender scene has no World; initial render setup accessed scene.world.use_nodes and failed before producing frames/report.",
+      "fix": "Construct an explicit World; rerun once successfully, 146 verified CPU frames."
+    }
+  ],
+  "limits": [
+    "No new complete GLB or accepted sewn character, sitting clip, Garage animation, contact or device gate.",
+    "Existing fresh-rig gallery and earlier sitting clips unchanged.",
+    "No exhausted weight/DQ/ARAP method repeated; prior failures remain in ledger."
+  ]
+}

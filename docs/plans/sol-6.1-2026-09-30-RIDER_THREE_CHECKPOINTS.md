@@ -1291,3 +1291,25 @@ Do not call isolated plain garment a coherent rider or game-ready.
 Newcompletegeometry/actualmoving/fullbodyface grades stillrequired.
 Native template/rig fit has not replaced original11or fresh34gallery.
 Requiredship next150;147retained34passed.
+
+## Matched gray garment fit review — round150
+
+The new C19 skeleton/adapter34 is retained; no restart to the old rig.
+The live gallery leads with34 riding footage; older standing-to-sitting
+clips use11 and must not be mistaken for the fresh rig (ask247).
+
+Matched CPU gray rest turntables contain72frames each plus one elevated
+view. All146 frame hashes and73 camera pairs verify. Parent inspected all
+ordered movie-frame samples, not continuous human playback. The native fit
+is too narrow in sleeves/jeans; missing garment volume/detail and temporary
+cut rearhood/cuff/shoe/hem interfaces prevent acceptance. These cut edges
+are fixture artifacts, not generator defects. Original source34 untouched;
+NEW head/hood/gloves retained. No body/face score from untextured rest evidence.
+
+Fit selected silhouette via semantic correspondence, then construct actual
+continuous source interfaces before detail/PBR bake. Preserve the fresh
+physics rig and actual contacts. No generic weight/DQ/ARAP sweep. One empty-
+World render setup failure corrected;146frames CPU2threads/93.46seconds.
+Required ship150 on retained34 passes both tiers bytefinish/hash/crash103/
+restart3ms/errors0; not a new-garment integration test. Next required153.
+All three visual checkpoints/target8/device/moving contact gates remain open.

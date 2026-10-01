@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round149, 2026-10-01
+## Current evidence — round150, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -33,11 +33,18 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: recess donor and fit thin natural lids against the
-  surrounding source face. Trial13 failed actual appearance5.5 vs11 6.8;
-  no promotion. Larger method2 failures; totaleye5. Small tunnel approachSTOP3.
-  Explicit private3Dfocus retains all72 head views.
-  Keep body09 rest shape, clothing, rig and contacts fixed during face work.
+- Fresh C19 skeleton with explicit14 child-axis/contact adapter34 is retained.
+  Latest gallery riding clips use34; studio sitting films still use11. The
+  new joints improve hips but do not close cloth/collision/seat quality.
+- Clean quad garment fit01 is an unaccepted Blender construction master.
+  Matched gray rest review150 finds narrow sleeves/jeans, missing volume
+  and temporary unstitched rearhood/cuff/shoe/hem interfaces. Preserve the
+  preferred generated silhouette, protected NEW head/hood/gloves and source
+  shoe/sole patches. Shape correspondence and genuine interface topology
+  precede original detail/PBR bake, then actual34physics motion.
+- Required retained34ship150 passes bytefinish/hash both tiers,103crash
+  ticks,3ms restart/errors0. Next153. New garment is not tested in-game yet.
+  Gray rest fixture supplies no fullbody/face score or visual stage pass.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
   P3 automated repairs and fixed finger-curl approaches remain stopped at2.
@@ -970,3 +977,25 @@ Do not call isolated plain garment a coherent rider or game-ready.
 Newcompletegeometry/actualmoving/fullbodyface grades stillrequired.
 Native template/rig fit has not replaced original11or fresh34gallery.
 Requiredship next150;147retained34passed.
+
+## Matched gray garment fit review — round150
+
+The new C19 skeleton/adapter34 is retained; no restart to the old rig.
+The live gallery leads with34 riding footage; older standing-to-sitting
+clips use11 and must not be mistaken for the fresh rig (ask247).
+
+Matched CPU gray rest turntables contain72frames each plus one elevated
+view. All146 frame hashes and73 camera pairs verify. Parent inspected all
+ordered movie-frame samples, not continuous human playback. The native fit
+is too narrow in sleeves/jeans; missing garment volume/detail and temporary
+cut rearhood/cuff/shoe/hem interfaces prevent acceptance. These cut edges
+are fixture artifacts, not generator defects. Original source34 untouched;
+NEW head/hood/gloves retained. No body/face score from untextured rest evidence.
+
+Fit selected silhouette via semantic correspondence, then construct actual
+continuous source interfaces before detail/PBR bake. Preserve the fresh
+physics rig and actual contacts. No generic weight/DQ/ARAP sweep. One empty-
+World render setup failure corrected;146frames CPU2threads/93.46seconds.
+Required ship150 on retained34 passes both tiers bytefinish/hash/crash103/
+restart3ms/errors0; not a new-garment integration test. Next required153.
+All three visual checkpoints/target8/device/moving contact gates remain open.

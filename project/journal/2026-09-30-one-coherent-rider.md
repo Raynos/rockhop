@@ -1603,3 +1603,16 @@ Limits: New topology counts incomparable to oldregional ROIs; no art
 score, skin/hood/cuff/shoe stitch, material bake, complete GLB or motion/
 contact/Garage/device pass. Next match silhouette and preserve/stitch
 source contact/join patches before textured actual gameplay review.
+
+## Round150 — matched gray garment silhouette review
+
+Finding: Clean garment fit is too narrow and its temporary cut interfaces
+are unstitched. Keep fresh C19 architecture, fit selected silhouette and
+construct continuous hood/cuff/shoe interfaces before detail/PBR bake.
+Validation: 146 CPU frame hashes/73 camera pairs;72frame silent turntables and
+all ordered samples inspected. Retained34ship150 both tiers exact finish/hash,
+103crash ticks/3ms restart/errors0. One empty-World setup failure corrected.
+Limits: Gray rest fixture cannot score mockup appearance or riding deformation;
+no complete garment GLB, stitching/contact/phone acceptance or promotion.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/gray-fixture01/
+Ask:239,241,242,245,247
