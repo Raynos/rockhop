@@ -1,0 +1,54 @@
+{
+  "sourceSHA256": "cc20ab813669b628c8e5d21596b655188d7188770adc374377cebf40769232ff",
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body22-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind29/played01/textured",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--center-focus=1",
+        "--surface=textured",
+        "--eye-coat29=1",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 18.182204958982766
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body22-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind29/played01/gray",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--center-focus=1",
+        "--surface=gray",
+        "--eye-coat29=0",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 15.139711000025272
+    }
+  ],
+  "wallSeconds": 33.35322304116562,
+  "peakAnonymousBytes": 37473533952,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limits": "Source22 bytes/build frozen; one post-load opaque-eye reflective coating in PBR only. Gray control unmodified. No production eye shader or appearance acceptance.",
+  "metadataCorrection": "Copied24recipe originally mislabeled the material in this limits string; command eye-coat29 and recorded runtime properties prove actual opaque coat. No capture rerun implied."
+}

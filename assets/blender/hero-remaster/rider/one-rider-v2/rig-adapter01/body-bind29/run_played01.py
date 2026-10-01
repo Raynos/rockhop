@@ -49,6 +49,6 @@ finally:
         'sourceSHA256': hashlib.sha256(master.read_bytes()).hexdigest(),
         'commands': rows, 'wallSeconds': time.monotonic() - start, 'peakAnonymousBytes': peak,
         'lock': 'lockf -k /Users/raynos/projects/localai/.model.lock',
-        'limits': 'Source22 bytes/build frozen; one post-load native-cornea material restoration in PBR only. Gray control unmodified. No production eye shader or appearance acceptance.'}, indent=2) + '\n')
+        'limits': 'Source22 bytes/build frozen; one post-load opaque-eye reflective coating in PBR only. Gray control unmodified. No production eye shader or appearance acceptance.'}, indent=2) + '\n')
     if (build / 'hero-review.json').exists():
         (out / 'build-manifest.json').write_bytes((build / 'hero-review.json').read_bytes())

@@ -71,6 +71,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round135 adopts independent
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round136 freezes opaque-eye coat29 CPU hypothesis: original22 material/geometry/rig conserved, one reflective layer, no transmission/pigment changes. One72frame actual trial next; no parameter sweep.26sleeve/28face6.8rejections and135fresh-rig limits stand. Body11/headhoodjoin/gallery129protected; connected garment audit next. Shipnext138.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round137 rejects opaque-eye coat29: face6.8below7, all72gray controls identical22/statebonescamera exact. Fifth nativegraft appearance failure switches to localized topology/eye-fit reconstruction, no more material tuning. Source22progress/headhoodjoin/body11/gallery129protected. Connected garment audit next; requiredship138.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

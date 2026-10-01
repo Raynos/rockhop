@@ -1425,3 +1425,14 @@ Validation: CPU verification passes exact552vertex/1060triangle fingerprint,
 all other materials,19bones/binds/clips/source and undo/foreign guard.
 Limits: Unaccepted until matched72-frame actual motion; no anatomy,
 full-body, device or performance pass. No parameter sweep or promotion.
+
+## Round137 — coat fails face gate, switch approach
+
+Finding: All72ordered actual textured frames show flat dark eyes/exposed
+lid rims despite reflective coating. Face6.8below7; retain22progress.
+Validation: Correct runtime material and original source loaded;72paired
+state/bones/camera/focus exact,72gray pixel-identical, no errors. Bounded
+canonical lock batch33.35seconds, peak37.47GB anonymous memory.
+Limits: Fifth native-graft appearance failure triggers autonomous topology/
+eye-fit approach switch; no more material sweep or failed promotion.
+Fullbody/phone/Garage/actualLOD and deformation gates stay open.

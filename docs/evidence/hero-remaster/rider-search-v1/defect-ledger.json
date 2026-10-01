@@ -2641,5 +2641,37 @@
     "mechanism": "clearcoat1 roughness.08 on existing opaque eye, base roughness.35 unchanged; no transmission/newmesh/pigment change",
     "next": "Matched72-frame PBR/gray; no parameter sweep. If native appearance fails5, switch representation, not more material tweaks.",
     "limits": "No rendered highlight or appearance score yet; cannot repair exposed lid geometry."
+  },
+  "opaqueEyeCoatPlayed137": {
+    "round": 137,
+    "status": "Reject opaque-eye coat as sufficient face refinement; stop existing native-graft appearance tuning",
+    "faceCloseupScore": 6.8,
+    "minimum": 7,
+    "target": 8,
+    "fullBodyScore": null,
+    "orderedTexturedMovieFramesReviewed": 72,
+    "grayPixelIdenticalControlFrames": 72,
+    "finding": "The reflective layer reaches the opaque eye material but makes no convincing improvement in frontal motion. Eyes remain flat dark disks with exposed lid rims; face below minimum. Headhoodneck/source geometry preserved.",
+    "conservation": "72paired state/hash/debug/bones/effectiveCamera/focus exact; all72gray controls pixel-identical; source22SHA loaded, no errors",
+    "effect": {
+      "maximumChangedTexturedPixels": 3721,
+      "maximumChannelDelta": 51
+    },
+    "failureAccounting": {
+      "priorAnalyticAppearanceFailures": 6,
+      "nativeConstructionStops": 2,
+      "nativeAppearanceTrialsBelowMinimum": [
+        20,
+        22,
+        24,
+        28,
+        29
+      ],
+      "nativeAppearanceBelowMinimumCount": 5,
+      "sumOfPreviouslyRecordedCategories": 13,
+      "note": "22retains useful pigment progress but failed wholeface minimum. Historical counts remain separate; this records no count reset."
+    },
+    "next": "Switch away from existing native-graft material tuning: source-preserving localized eyelid/socket topology and eye-fit reconstruction, separately validated against retained22. No roughness/coat/color/transmission sweep or parameterized analytic-ring repeat. Preserve overall NEW head identity and protected neck/hood join.",
+    "limits": "Face crop does not grade fullbody; no actualLOD/Garage/phone/performance acceptance. This trial stays private."
   }
 }
