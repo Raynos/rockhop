@@ -1587,3 +1587,19 @@ CC0header/officialpage agree. CPU only; no new GPU/generation workload.
 Limits: No source fitting, material bake or rig/motion acceptance. Preserve
 source hood/neck/gloves/shoes and fresh contract; stitch real seam rather
 than overlap. Old failures retained; source topology alone is not success.
+
+## Round149 — native quad garment fit to fresh anatomical landmarks
+
+Finding: Fit clean native quad top/jeans to explicit19freshC19landmarks,
+with anatomical MHCLOskin correspondence. Preserve generated source/
+approved headhood; this is a new unaccepted geometry master.
+
+Validation: Blender5.2.1CPUtwo threads,2136v/2060quads/nativeUV. Four
+actual34joint matrix probes recorded; shirt38/28/49/47normal flags,
+jeans47/55/62/61 remain. Fullnative19role truncation control preserves
+exactrest/UV/Top4arrays; maxdisplacement1.618mm/p99<=.199mm.
+
+Limits: New topology counts incomparable to oldregional ROIs; no art
+score, skin/hood/cuff/shoe stitch, material bake, complete GLB or motion/
+contact/Garage/device pass. Next match silhouette and preserve/stitch
+source contact/join patches before textured actual gameplay review.

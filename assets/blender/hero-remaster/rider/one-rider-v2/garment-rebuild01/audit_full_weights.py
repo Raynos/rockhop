@@ -1,0 +1,8 @@
+"""Quantify glTFfour-lane truncation against full native anatomical roles."""
+from pathlib import Path
+import json,hashlib,numpy as np
+run=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01');data=np.load(run/'fullskin-instrument01.npz');frozen=np.load(run/'fit01.npz');assert all(np.array_equal(data[k],frozen[k]) for k in ['positions','weights','quads','uvLoops']);P=data['positions'];W=data['weights'];full=data['fullWeights'];root=Path('docs/evidence/hero-remaster/one-rider-v2');m=json.loads((root/'rig-adapter01/body-bind34/candidate-cpu/pose-manifest.json').read_text());rows=[]
+for r in m['rows']:
+ rec=r['dump'][0]['jointTransforms'];raw=(run.parent/'rig-adapter01/body-bind34/candidate-cpu'/rec['file']).read_bytes();assert hashlib.sha256(raw).hexdigest()==rec['sha256'];M=np.frombuffer(raw,dtype='<f8').reshape(-1,4,4).transpose(0,2,1)
+ a=np.einsum('vj,jab,vb->va',W,M[:,:3,:],np.c_[P,np.ones(len(P))]);b=np.einsum('vj,jab,vb->va',full,M[:,:3,:],np.c_[P,np.ones(len(P))]);error=np.linalg.norm(a-b,axis=1);i=int(np.argmax(error));rows.append({'sample':r['i'],'maximumTop4DisplacementM':float(error.max()),'p90p99Top4DisplacementM':np.quantile(error,[.9,.99]).tolist(),'worstVertex':i,'sourceGamePosition':P[i].tolist(),'top4Weights':W[i].tolist(),'fullWeights':full[i].tolist()})
+(root/'garment-rebuild01/fullskin-instrument01/truncation-audit.json').write_text(json.dumps({'status':'Read-only full-native-role control, actualC19fourposes','frozenFitGeometryUVTop4WeightsExact':True,'rows':rows,'limits':'Not full motion, normals, rendered appearance or glTFshader parity. Full-field displacement is scoped to the same fitted rest geometry.'},indent=2)+'\n');print(json.dumps(rows,indent=2))

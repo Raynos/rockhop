@@ -95,6 +95,8 @@ Checkpoint1WHITE minimum, target8/later gates open. Round147 freshbind/original-
 
 Checkpoint1WHITE minimum;target8/later gates open. Round148 retires fused-source weight repairs and selects native02separate CC0quad sweatshirt/jeans topology:2060quads/two components/no nonmanifold/degenerate faces. Generated shape/PBR remain fit/bake target; NEWhead/hood/gloves/shoes/freshC19contract protected. No native thumbnail appearancepass. Fit/stitch/bake/motion next; ship150next.
 
+Checkpoint1WHITE minimum; target8/later gates open. Round149 BlenderCPUclean garment2136v/2060quads/nativeUV fits19freshC19landmarks with anatomical correspondence. Fouractual-pose probes still show folds; no appearancepass. Fullnative-role truncation<=1.618mm/p99.199mm, fitgeometry exact. Nextselectedsilhouette/protected source stitching/PBRbake andactualmotion. Gallery14623clips live; ship150next.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
