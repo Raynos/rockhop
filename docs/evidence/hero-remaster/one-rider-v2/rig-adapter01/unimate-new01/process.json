@@ -1,0 +1,67 @@
+{
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limitSeconds": 1800,
+  "records": [
+    {
+      "label": "preprocess",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/raynos/projects/localai/bin/unimate/blender_preprocess.py",
+        "--",
+        "--char_path",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/unimate-new01/input/RockhopWhiteRider.glb",
+        "--output_dir",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/unimate-new01/preprocessed",
+        "--face_r",
+        "thigh.R",
+        "--face_l",
+        "thigh.L",
+        "--formats",
+        "glb",
+        "--keep_intermediate"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 3.0327488747425377,
+      "anonymousPeakBytes": 27555348480,
+      "failure": null
+    },
+    {
+      "label": "inference",
+      "command": [
+        "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+        "/Users/raynos/projects/localai/bin/unimate/inference_entry.py",
+        "--exp-dir",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/unimate-new01/experiment",
+        "--output-dir",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/unimate-new01/sample",
+        "--test-cases-json",
+        "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/unimate-new01/experiment/sitting-cases.json",
+        "--seed",
+        "42",
+        "--batch-size",
+        "1",
+        "--num-repetitions",
+        "1",
+        "--cfg-scale",
+        "3.0",
+        "--only-save-motion",
+        "--motion-edit",
+        "--keep-joints",
+        "foot.L,foot.R",
+        "--gt-start-frame",
+        "0"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 16.158304499927908,
+      "anonymousPeakBytes": 28811476992,
+      "failure": null
+    }
+  ]
+}

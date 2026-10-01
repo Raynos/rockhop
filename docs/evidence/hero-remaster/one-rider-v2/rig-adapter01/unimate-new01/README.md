@@ -21,3 +21,32 @@ Canonical +Z/diameter2 exports are review-only and require explicit restored
 metre/bind transforms. Model inference cannot create the character weights.
 No normal player asset replacement, accepted sitting/contact or game-ready
 claim follows from finite sampling alone.
+
+## Executed outcome — raw motion rejected
+
+Actual preprocessing3.033s and MPS sampling16.158s undercanonical lock;
+peak anonymous28.812GB, no deadline or package/runtime changes. Preprocessing
+produces58frames/19joints; official model emits57finite frames for raw and
+GT. Intended60frame setup is not claimed achieved. Original19source intact.
+
+Official NumPy decoder and actual Blender exports are retained. Metres per
+canonical unit1.1164957 is measured from this same source thigh. Raw foot
+start-to-frame drift is599.754/284.053mm and raw-versus-GT maximum
+1081.541/685.836mm. Masked local foot rotations remainGT, but altered parents
+move the feet. Feature masking is not decoded contact protection.
+
+Parent inspected all116decoded sampled frames acrossfour actualclips. Raw
+character starts folded with legs airborne and fails the standing-to-sitting
+sequence: motion1/10, rejected. This does not reject the preserved character
+identity. Original planted Blender animation stays selected. CanonicalGT
+export also is review-only: decoded foot drift0.465mm is worse than original
+Blender sole0.2245µm. No decodedclip silently replaces the stronger source.
+
+An initial camera showed rear; source preserved and front corrected before
+fullsequence. Reference and actual profile cameras are opposite hemispheres
+in the3-column board; no image mirroring. Front/profile actualclips retain
+properworld geometry. Improve camera match in future rather than retouching.
+
+Switch early to authored anticipation/contact polish on the same rig; optional
+future neural use must be bounded additive detail with protected decoded
+body. No repeated failed foot-only technique or new body generation needed.

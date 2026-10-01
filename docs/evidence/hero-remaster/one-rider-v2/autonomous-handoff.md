@@ -334,3 +334,8 @@ Round83: body-bind04 now applies scale1.015 and sourcehipoffset.02/scale,
 48decoded frames preserve plantedsole/rigidface. Decoder resterror2.018µm,
 triangles intact. Fixture18mm needs actual-bike triangle inspection. Next
 use actualNEW rig for UniMate; checkpoint2/3 stillopen.
+
+Round85: actualNEWrig UniMate50stepseed42 succeeded technically but raw
+motion1/10 rejected after116playeddecodedframes. Footfeaturepinning leaves
+599.754/284.053mmdrift via ancestors. Preserve sameWHITEcharacter and original
+Blenderplantedclip; switch to authoredanticipation/realgrip fitting.

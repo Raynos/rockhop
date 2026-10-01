@@ -593,3 +593,14 @@ seed42/50steps/MPS and only foot-feature pinning. Measure decoded contact and
 canonical restoration; don't reuse historicalidle or call finiteoutputpass.
 Round84 production baseline passes exact finishbytes/crash103ticks/restart
 1msLOW2msHIGH/errors0. It is not new-rider gameplay evidence.
+
+### Actual NEW-rig UniMate motion rejected, source retained
+
+Installed50stepseed42/MPS producesreal57frame19joint motion frombody-bind04,
+pre58frames, peak28.812GB, runtime19.191s undercanonical sharedlock. Parent
+reviews116decodedframes fromfouractualclips: raw startsfolded/legsairborne,
+motion1/10. Decodedfeetdrift599.754/284.053mm despitefootfeaturepinning.
+Rejectrawmotion, keep stronger originalplantedBlenderclip and sameWHITE
+character. CanonicalGTdecodealsofootdrifts0.465mm; do notpromote it. Switch
+early to authoredanticipation/contactpolish; future neuraladditives must
+protect decoded body. No generator/bodyreplacement or physics edits.

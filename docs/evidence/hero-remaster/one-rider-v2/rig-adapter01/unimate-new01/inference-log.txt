@@ -1,0 +1,86 @@
+[10/01/26 01:42:03] INFO     Using config:
+                             [/Users/raynos/projects/localai/runtime/rockhop-rid
+                             er-search-v1/one-rider-v2/rig-adapter01/unimate-new
+                             01/experiment/config.json] (sample.py)
+                    INFO     Using checkpoint:
+                             [/Users/raynos/projects/localai/runtime/rockhop-rid
+                             er-search-v1/one-rider-v2/rig-adapter01/unimate-new
+                             01/experiment/checkpoints/checkpoint_step_100000.pt
+                             ] (sample.py)
+                    INFO     Set random seed to [42] (sample.py)
+                    INFO     Inference scope from
+                             /Users/raynos/projects/localai/runtime/rockhop-ride
+                             r-search-v1/one-rider-v2/rig-adapter01/unimate-new0
+                             1/experiment/sitting-cases.json: 1 object types, 3
+                             pinned clip stems (sample.py)
+[10/01/26 01:42:03] INFO     Initializing Mixture Dataset with datasets:
+                             ['objaverse'] (dataset.py)
+                    INFO     Objaverse: no captions.json in
+                             /Users/raynos/projects/localai/runtime/rockhop-ride
+                             r-search-v1/one-rider-v2/rig-adapter01/unimate-new0
+                             1/preprocessed (caption-free dataset) (dataset.py)
+                    INFO     Objaverse Dataset has 1 object types (dataset.py)
+                    INFO     Pre-encoding joint names: 19 unique / 19 total (0
+                             cached, 19 to encode, chunk_size=256) (dataset.py)
+                    INFO     Text cache incomplete; loading t5 encoder
+                             (dataset.py)
+[10/01/26 01:42:03] INFO     Creating T5 text encoder: google/flan-t5-base
+                             (pool=False) (factory.py)
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s]Loading weights: 100%|██████████| 111/111 [00:00<00:00, 40929.03it/s]
+Encoding joint names:   0%|          | 0/1 [00:00<?, ?it/s]Encoding joint names: 100%|██████████| 1/1 [00:00<00:00,  1.68it/s]Encoding joint names: 100%|██████████| 1/1 [00:00<00:00,  1.68it/s]
+[10/01/26 01:42:04] INFO     Skipping caption pre-encoding (inference mode).
+                             (dataset.py)
+                    INFO     Objaverse dataset has 1 object types (dataset.py)
+Loading Objaverse motions:   0%|          | 0/1 [00:00<?, ?it/s]Loading Objaverse motions: 100%|██████████| 1/1 [00:00<00:00, 365.90it/s]
+                    INFO     Objaverse loaded 1/1 valid motions across 1 object
+                             type (dataset.py)
+                    INFO     Clip split: 1 train / 0 eval (ratio=0.000, seed=42)
+                             (dataset.py)
+                    INFO     Using prebuilt max_joints=71 | max_depth=19
+                             (skipping data scan). (dataset.py)
+                    INFO     MotionDataset loaded 1 train + 0 eval clips from 1
+                             object types | max_joints=71 | max_depth=19
+                             (dataset.py)
+                    INFO     Loading saved dataset stats from
+                             /Users/raynos/projects/localai/runtime/rockhop-ride
+                             r-search-v1/one-rider-v2/rig-adapter01/unimate-new0
+                             1/experiment/dataset_stats.npy (dataset.py)
+[10/01/26 01:42:04] INFO     Creating model and diffusion... (sample.py)
+                    INFO     Loading checkpoints from
+                             [/Users/raynos/projects/localai/runtime/rockhop-rid
+                             er-search-v1/one-rider-v2/rig-adapter01/unimate-new
+                             01/experiment/checkpoints/checkpoint_step_100000.pt
+                             ]... (sample.py)
+                    INFO     Loading EMA weights into model parameters.
+                             (sample.py)
+                    INFO     Loaded 1 test cases from
+                             /Users/raynos/projects/localai/runtime/rockhop-ride
+                             r-search-v1/one-rider-v2/rig-adapter01/unimate-new0
+                             1/experiment/sitting-cases.json (sample.py)
+[10/01/26 01:42:04] INFO     Creating T5 text encoder: google/flan-t5-base
+                             (pool=False) (factory.py)
+[10/01/26 01:42:04] INFO     T5 autocast dtype: float32 (t5.py)
+Loading weights:   0%|          | 0/111 [00:00<?, ?it/s]Loading weights: 100%|██████████| 111/111 [00:00<00:00, 17897.50it/s]
+[10/01/26 01:42:06] INFO     Using cfg_scale=3.0 (sample.py)
+                    INFO     Motion editing: keep_joints=['foot.L', 'foot.R'].
+                             (sample.py)
+                    INFO     Starting sampling: 1 test cases × 1 reps in chunks
+                             of 1. (sample.py)
+                    INFO     --- rep #0 --- (sample.py)
+                    INFO     motion_edit:
+                             RockhopWhiteRider-stand_to_sit_probe-000.npz →
+                             valid_length=57 (sample + GT will be saved at this
+                             length). (sample.py)
+[10/01/26 01:42:16] INFO     rep#0 chunk[0:1] 10.17s for batch=1
+                             (10.167s/motion). (sample.py)
+[10/01/26 01:42:16] INFO     Saved motion features at
+                             [/Users/raynos/projects/localai/runtime/rockhop-rid
+                             er-search-v1/one-rider-v2/rig-adapter01/unimate-new
+                             01/sample/motion_edit/motions/RockhopWhiteRider-sta
+                             nd_to_sit_probe-000-rep_0-0.npy] (visualization.py)
+                    INFO     Saved motion features at
+                             [/Users/raynos/projects/localai/runtime/rockhop-rid
+                             er-search-v1/one-rider-v2/rig-adapter01/unimate-new
+                             01/sample/motion_edit/motions/RockhopWhiteRider-sta
+                             nd_to_sit_probe-000-gt_rep_0-0.npy]
+                             (visualization.py)

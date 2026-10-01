@@ -881,3 +881,15 @@ compile passes. Ship baseline exactfinishbytes/crash103/restart1msLOW2msHIGH,
 zero errors.
 Limits: Neural sampling and actual decoded motion/contact not yet evaluated;
 canonical exports review-only, no new-rider player promotion.
+
+### Round85 — reject actual neural motion without discarding the rider
+
+Finding: Foot-feature pinning does not constrain decoded ancestor motion.
+ActualNEW nineteen-joint UniMate clip begins folded and fails sitting; retain
+originalplantedBlenderclip/whitecharacter and switchapproach early.
+Validation: Actual50stepseed42/MPS run passes undercanonical lock, peak28.812GB;
+58pre/57model frames finite. Officialdecoded foot drift599.754/284.053mm.
+Parent inspected116decodedframes acrossfouractualclips; motion1/10 reject.
+Limits: Canonical exports review-only, GTdecodefootdrift0.465mm, opposite
+profilehemisphere inreferenceboard. Original appearance preserved; no
+new-rider player/physics changes or sitting/riding checkpoint closure.
