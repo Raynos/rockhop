@@ -674,3 +674,15 @@ Provisionalenginebody6.5/face6.5 (camera/lightunmatched): shoulder/hem triangula
 flaring andcoarseface need autonomous gray/PBR posed audit and targetedweight/
 face refinement before7minimum. No human hold. Thumbgap/actualsurface/Pro/
 Garage/fullLOD stillopen; staticcheckpoint1minimum neverimplies playerready.
+
+### Played gray/PBR audit identifies authored garment weight defects
+
+Round92: sameWHITE body05 produces matched40s PBR/gray actualreplays;
+480state/tick/contact diagnostics exact. Parent ordered1second samples and
+four defectframes confirms shoulder holes/hem flaring persist withoutmaps.
+CPU source-vs-conditioned isolates authored waist discontinuity atZ.80
+(maxedge22.280times) and abrupt shoulder chest switch atZ1.43 (13.234times
+before generic conditioning). Keep rest shape, face and textures. Next
+bounded localized weight correction, then same replay/gray and contact gates.
+Armpit blending may still need deliberate refinement. Body below7, no
+checkpoint2/3 closure, no regeneration or player promotion basedonthisaudit.

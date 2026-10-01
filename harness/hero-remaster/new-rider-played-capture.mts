@@ -20,12 +20,13 @@ const recording = decodeJSON(fs.readFileSync(arg('recording', 'harness/inputs/b1
 const inputs = expandFrames(recording), fps = Number(arg('fps', '12')), ticksPerFrame = recording.header.physicsHz / fps;
 assert(Number.isInteger(ticksPerFrame));
 const frames = Math.min(Math.floor(inputs.length / ticksPerFrame), Math.round(Number(arg('seconds', '40')) * fps));
+const surface = arg('surface', 'textured'); assert(['textured', 'gray'].includes(surface));
 const focus = arg('focus', 'body'); assert(['body', 'hands', 'feet', 'face'].includes(focus));
 assert(frames > 0 && frames * ticksPerFrame <= inputs.length);
 fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
 assert.equal(fs.readdirSync(path.join(out, 'frames')).length, 0, 'fresh capture directory');
 const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json'), 'utf8'));
-const report: any = { build, mode, tier, frames, fps, focus, camera: 'actual runtime bone midpoint; read-only focus/orbit camera, no pose injection', ui: 'HUD hidden only for geometry inspection', samples: [], errors: [], loaded: [] };
+const report: any = { build, mode, tier, frames, fps, focus, surface, camera: 'actual runtime bone midpoint; read-only focus/orbit camera, no pose injection', ui: 'HUD hidden only for geometry inspection', samples: [], errors: [], loaded: [] };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
@@ -51,6 +52,20 @@ try {
       t.setQuality(tier); await r.whenReady(); t.skipCountdown();
     }, { header: recording.header, tier });
   }
+  report.surfaceDiagnostic = await page.evaluate(surface => {
+    const r = (window as any).__render, meshes: any[] = [];
+    if (surface === 'gray') r.debug.rider.scene.traverse((o: any) => {
+      if (!o.isMesh) return;
+      const materials = Array.isArray(o.material) ? o.material : [o.material];
+      for (const m of materials) {
+        meshes.push({ mesh: o.name, material: m.name, originalColor: m.color?.toArray(), originalMap: !!m.map, originalNormalMap: !!m.normalMap });
+        m.color?.setRGB(.48, .48, .48); m.metalness = 0; m.roughness = .72;
+        for (const key of ['map','normalMap','bumpMap','roughnessMap','metalnessMap','aoMap','emissiveMap']) m[key] = null;
+        m.emissive?.setRGB(0, 0, 0); m.needsUpdate = true;
+      }
+    });
+    r.invalidate(); return { surface, meshes, scope: 'Read-only geometry/rig/input; temporary neutral materials on rider only, same lights/camera and unchanged bike' };
+  }, surface);
   await page.addStyleTag({ content: '.hud, .hud-top, .hud-bottom, .run-hud, .touch-controls, .countdown { visibility: hidden !important; }' });
   // Cover every UI element above the canvas; scene materials and geometry stay intact.
   await page.evaluate(() => { for (const o of document.querySelectorAll<HTMLElement>('body > *')) if (o.tagName !== 'CANVAS' && !o.querySelector('canvas')) o.style.visibility = 'hidden'; });

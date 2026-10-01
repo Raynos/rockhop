@@ -961,3 +961,13 @@ Limits: PRIVATE correction, not player promotion; sourceGLB unchanged.
 Visible hem/shoulder defects and coarseface remain below7; provisional6.5/
 6.5 with camera/lightunmatched. Gray/PBR posed audit/targeted refinement,
 Garage/Pro/surfaces/realLOD remain open. Asks239/240.
+
+## Round92 — identify garment skin defects before repaint
+
+Finding: Actual neutral-gray replay retains shoulder holes and broken hem;
+authored thigh/pelvis and shoulder branch discontinuities stretch skin.
+Validation: Four actual-state CPU skin audits;480matched PBR/gray physics,
+tick and contact records exact. Lint/harness tsc pass. GPU180.763s/41.068GB
+under canonical lock; parent ordered1second samples and four defects judged.
+Limits: Body below7; source unchanged, no player/physics/bike edit. Armpit
+blend, face8, actual surfaces/Garage/Pro/realLOD remain open. Ask239/240.

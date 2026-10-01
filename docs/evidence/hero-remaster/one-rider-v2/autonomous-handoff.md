@@ -352,3 +352,12 @@ Face actualengine detail also below bar (provisional6.5, unmatchedlighting).
 Author sameNEW Garage idle/sit/stance clips only after garmentquality; then
 realLOD/Pro/maxlean/landing/visible surfaces. Originalbenchclip and actual
 UniMate rejection retained. Five/fifteen policy unchanged; notgame-ready.
+
+## Round92 continuation
+
+Matched actual40s gray/PBR confirms geometric garment distortion. CPU locates
+Z.80 thigh/pelvis discontinuity (22.280times edge stretch) andZ1.43 abrupt
+upperarm-to-chest switch (13.234times without conditioner). Correct local
+weights on sameWHITE body05, protect all rest geometry/PBR/morphs/binds,
+then sameactual replay. Armpit transition also open. Round93 shipgate due.
+No source model generation needed for a proven authoring bug.
