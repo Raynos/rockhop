@@ -1,0 +1,427 @@
+{
+  "status": "Read-only seam feasibility evidence; no mesh edits, appearance or rig acceptance",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb",
+  "sourceSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "cage": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/cage04/fit04.npz",
+  "cageSHA256": "9667f6a19ad0272eff603643f38809c5fe91b9126e0c8c653d60a53f141c48b7",
+  "fixtureRecipeSHA256": "87234013ea8bc1d8549195bb93f7498b6cfe38dc55c149497aef75701cb1cbf9",
+  "exactWeldRule": "No epsilon/rounding; np.unique float32 POSITION, duplicate UV/normals remain source aliases",
+  "sourceBodyVertices": 22240,
+  "sourceHoodVertices": 3112,
+  "sharedExactPositions": 307,
+  "bodySharedAccessorVertices": 354,
+  "materialSeamEdges": 307,
+  "protectedInterfaceAttributes": {
+    "dense19WeightMaxDelta": 0.0,
+    "weightAliasMaxSpread": 0.0,
+    "normalDotQuantiles": [
+      0.9999998211860657,
+      1.0,
+      1.0000001192092896,
+      1.000000238418579
+    ],
+    "note": "Material/UV aliases preserved; skin equality permits watertight moving aliases. New transition must copy protected seam weights; smooth normals require respecting actual hood boundary normals."
+  },
+  "materialSeamComponents": [
+    {
+      "vertices": 307,
+      "edges": 307,
+      "degreeHistogram": {
+        "2": 307
+      },
+      "boundsGame": [
+        [
+          0.5014488101005554,
+          1.355025053024292,
+          -0.1928500235080719
+        ],
+        [
+          0.7503086924552917,
+          1.4818871021270752,
+          0.1928499937057495
+        ]
+      ],
+      "edgeIncidenceHistogram": {
+        "2": 307
+      }
+    }
+  ],
+  "topologySummary": [
+    {
+      "label": "originalBody0ExactWeld",
+      "faces": 33968,
+      "uniqueVertices": 17196,
+      "boundaryEdges": 434,
+      "nonmanifoldEdges": 0,
+      "sameDirectionSharedEdges": 0
+    },
+    {
+      "label": "protectedHood2ExactWeld",
+      "faces": 4118,
+      "uniqueVertices": 2331,
+      "boundaryEdges": 544,
+      "nonmanifoldEdges": 0,
+      "sameDirectionSharedEdges": 0
+    },
+    {
+      "label": "body0AndHood2ExactWeld",
+      "faces": 38086,
+      "uniqueVertices": 19220,
+      "boundaryEdges": 364,
+      "nonmanifoldEdges": 0,
+      "sameDirectionSharedEdges": 0
+    },
+    {
+      "label": "temporaryGrayNeckPatch0ExactWeld",
+      "faces": 465,
+      "uniqueVertices": 463,
+      "boundaryEdges": 463,
+      "nonmanifoldEdges": 0,
+      "sameDirectionSharedEdges": 0
+    },
+    {
+      "label": "temporaryGrayNeckPlusHoodExactWeld",
+      "faces": 4583,
+      "uniqueVertices": 2487,
+      "boundaryEdges": 393,
+      "nonmanifoldEdges": 0,
+      "sameDirectionSharedEdges": 0
+    }
+  ],
+  "temporaryGrayBodyPatch": {
+    "neckTouchFaces": 465,
+    "shoeFaces": 5949,
+    "totalFaces": 6414,
+    "rule": "Keep every triangle touching ANY body vertex exactly shared with hood, plus all-shoe triangles. This is a one-face incident-star patch, not a designed neck ring."
+  },
+  "cageCollar": {
+    "vertices": 20,
+    "edges": 20,
+    "degreeHistogram": {
+      "2": 20
+    },
+    "boundsGame": [
+      [
+        0.5813134084970993,
+        1.495641713284449,
+        -0.07850447231745548
+      ],
+      [
+        0.699414623215701,
+        1.52404435543571,
+        0.07072139264334949
+      ]
+    ]
+  },
+  "limits": [
+    "Exact weld topology audit only; no rest/moving visual or deformation approval.",
+    "Material aliases are not holes when exact-weld incidence is two; gray incident-star cut boundaries are artificial.",
+    "Preserve original POSITION/UV/NORMAL/JOINTS/WEIGHTS for protected vertices, plus all source bytes."
+  ],
+  "nativeFaceShellTests": [
+    {
+      "faceShellsFromCollar": 1,
+      "removedQuads": 20,
+      "components": [
+        {
+          "vertices": 20,
+          "edges": 20,
+          "degreeHistogram": {
+            "2": 20
+          },
+          "boundsGame": [
+            [
+              0.5717274229487211,
+              1.494360227017405,
+              -0.09031149898623232
+            ],
+            [
+              0.7092871416132631,
+              1.5268547112345132,
+              0.08253396754001047
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.039605525177217236,
+            0.08701085623728796,
+            0.15433431908859974,
+            0.16431319981007303
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.039605525177217236,
+            0.12297382734367458,
+            0.21075722511165482,
+            0.21624482704532194
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 2,
+      "removedQuads": 40,
+      "components": [
+        {
+          "vertices": 20,
+          "edges": 20,
+          "degreeHistogram": {
+            "2": 20
+          },
+          "boundsGame": [
+            [
+              0.5696584646297228,
+              1.4861669878230674,
+              -0.09699022803501706
+            ],
+            [
+              0.7098880263892757,
+              1.5270111698417572,
+              0.08919618412349417
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.03126500845472667,
+            0.08509114176838452,
+            0.15406778097925636,
+            0.15821467631099714
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.03126500845472667,
+            0.11678457019872067,
+            0.2054537636412538,
+            0.21123947980877253
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 3,
+      "removedQuads": 60,
+      "components": [
+        {
+          "vertices": 20,
+          "edges": 20,
+          "degreeHistogram": {
+            "2": 20
+          },
+          "boundsGame": [
+            [
+              0.5650139474956927,
+              1.4738438598604537,
+              -0.10857970900330449
+            ],
+            [
+              0.7154325804863418,
+              1.5292516640867233,
+              0.1007640715681402
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.019505418978638465,
+            0.08561377732252645,
+            0.15042702266840158,
+            0.15066661347271165
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.019505418978638465,
+            0.1072411117028844,
+            0.19318805235162725,
+            0.20094880814629537
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 4,
+      "removedQuads": 80,
+      "components": [
+        {
+          "vertices": 28,
+          "edges": 28,
+          "degreeHistogram": {
+            "2": 28
+          },
+          "boundsGame": [
+            [
+              0.5462872385361484,
+              1.4557087077358355,
+              -0.1285513058482163
+            ],
+            [
+              0.7317072451414043,
+              1.5371311780143497,
+              0.12074538754993962
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.003806082304531118,
+            0.08552515411695051,
+            0.13558139790539803,
+            0.1378794713999701
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.003806082304531118,
+            0.09345726321891157,
+            0.17683924814926644,
+            0.1830198243759026
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 5,
+      "removedQuads": 104,
+      "components": [
+        {
+          "vertices": 36,
+          "edges": 36,
+          "degreeHistogram": {
+            "2": 36
+          },
+          "boundsGame": [
+            [
+              0.5340769692433304,
+              1.4361209509718567,
+              -0.1572748508674483
+            ],
+            [
+              0.7507342541161317,
+              1.5434144917213424,
+              0.14957166991500667
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.003806082304531118,
+            0.07210151454888308,
+            0.11736000970795812,
+            0.1378794713999701
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.003806082304531118,
+            0.07413826768003276,
+            0.1608331892943704,
+            0.16785532444676346
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 6,
+      "removedQuads": 132,
+      "components": [
+        {
+          "vertices": 44,
+          "edges": 44,
+          "degreeHistogram": {
+            "2": 44
+          },
+          "boundsGame": [
+            [
+              0.5236330709181464,
+              1.4154144405968991,
+              -0.19554451603413608
+            ],
+            [
+              0.7692169336109133,
+              1.5453874878899307,
+              0.18799987359989284
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.009498973881464059,
+            0.06195889256046093,
+            0.11009736073295148,
+            0.1129970339287053
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.009498973881464059,
+            0.06337700315229575,
+            0.14190950237071603,
+            0.1497232898982997
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 7,
+      "removedQuads": 164,
+      "components": [
+        {
+          "vertices": 52,
+          "edges": 52,
+          "degreeHistogram": {
+            "2": 52
+          },
+          "boundsGame": [
+            [
+              0.5192849633708607,
+              1.3954061385891678,
+              -0.23521173558919256
+            ],
+            [
+              0.7810627914900856,
+              1.5301528705345597,
+              0.2278687955724907
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.019161653093809645,
+            0.05698569835199184,
+            0.08103453779726633,
+            0.11011263726377993
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.019161653093809645,
+            0.05720316620810603,
+            0.12136717755587374,
+            0.12757407467481954
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    },
+    {
+      "faceShellsFromCollar": 8,
+      "removedQuads": 200,
+      "components": [
+        {
+          "vertices": 60,
+          "edges": 60,
+          "degreeHistogram": {
+            "2": 60
+          },
+          "boundsGame": [
+            [
+              0.5096424603105637,
+              1.3699234146624912,
+              -0.25025074150970616
+            ],
+            [
+              0.7869882850711328,
+              1.5134203667176334,
+              0.24295276450978848
+            ]
+          ],
+          "nativeToSourceRingDistanceQuantilesM": [
+            0.014992251908945209,
+            0.05430537887238914,
+            0.09716888557492692,
+            0.0999219240604187
+          ],
+          "sourceToNativeRingDistanceQuantilesM": [
+            0.014992251908945209,
+            0.059629307144184344,
+            0.09516510629517594,
+            0.10329723880192887
+          ],
+          "touchesOtherOriginalOpenings": false
+        }
+      ]
+    }
+  ]
+}

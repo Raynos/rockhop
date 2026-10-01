@@ -1655,3 +1655,18 @@ Limits: Rear hem/cut hood/cuff/shoe interfaces and severe shirt stretch remain;
 no complete rigged asset, fullbody/face grade, gameplay/contact/device pass.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/cage04/
 Ask:239,241,242,245,247
+
+## Round154 — protected interface topology and cuff skin audit
+
+Finding: Preserve C19 and the preferred307-point hood join. Diagnostic cuts
+are misleading: the shirt patch pinches, native collar is a different opening,
+and ankles overlap shoes. Blind cuff bridging collapses due to incompatible
+forearm/hand endpoint weights. Fit real transitions before detail baking.
+Validation: Both CPU audits rerun; source and cage hashes unchanged. Parent
+independently checks296 proposal triangles for edge incidence, opposite winding,
+complete ring coverage and nonzero rest area. Four actual C19 samples retain
+cuff2.587x/four collapses and ankle1.098x/no collapses. Protected skin exact.
+Limits: Unbuilt proposal only; no complete asset, textured grade, moving art,
+sitting/Garage/contact/device pass. Retained34ship153passed; next156.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-boundary-review154.json
+Ask:239,241,242,245,247

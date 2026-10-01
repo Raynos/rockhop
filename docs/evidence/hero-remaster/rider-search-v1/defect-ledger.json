@@ -4851,5 +4851,71 @@
       "NEW source head/hood/gloves/shoes preserved; source34 byte-identical. Native master is garment only and unbound.",
       "Latest gallery34riding/earlier11sitting unchanged; no promotion or new Site publish."
     ]
+  },
+  "cleanGarmentBoundary154": {
+    "status": "Read-only unbuilt literal sewing feasibility; blind cuff bridge rejected",
+    "parentReview": {
+      "sourceSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "fit04SHA256": "9667f6a19ad0272eff603643f38809c5fe91b9126e0c8c653d60a53f141c48b7",
+      "proposalSHA256": "7b2058aa603919de0da6a55767aa64d36a4283c9e7531d74d79659051809b90d",
+      "sewingTopologyChecks": [
+        {
+          "seam": "cuff.L",
+          "triangles": 85,
+          "edgeIncidenceErrors": 0,
+          "windingErrors": 0,
+          "missingRingEdges": 0,
+          "minimumRestTriangleAreaM2": 3.844638032726788e-06
+        },
+        {
+          "seam": "cuff.R",
+          "triangles": 82,
+          "edgeIncidenceErrors": 0,
+          "windingErrors": 0,
+          "missingRingEdges": 0,
+          "minimumRestTriangleAreaM2": 6.805846851146405e-07
+        },
+        {
+          "seam": "ankle.L",
+          "triangles": 63,
+          "edgeIncidenceErrors": 0,
+          "windingErrors": 0,
+          "missingRingEdges": 0,
+          "minimumRestTriangleAreaM2": 3.762816629395923e-05
+        },
+        {
+          "seam": "ankle.R",
+          "triangles": 66,
+          "edgeIncidenceErrors": 0,
+          "windingErrors": 0,
+          "missingRingEdges": 0,
+          "minimumRestTriangleAreaM2": 6.569749114414309e-05
+        }
+      ],
+      "protectedHoodEndpointCount": 307,
+      "protectedHoodWeightDelta": 0,
+      "nativeTransitionShellQuads": 200,
+      "nativeTransitionRingVertices": 60,
+      "sourceAndFitUnchanged": true,
+      "judgment": "Retain literal topology evidence. Reject blind bridge construction: cuff CPU collapses and shoulder transition still needs anatomical fitting.",
+      "limits": [
+        "No model was sewn or reweighted.",
+        "Topological ordering does not prove absence of geometric intersections.",
+        "Four recorded-state CPU samples are diagnostics, not moving appearance acceptance.",
+        "No new full-body/face grade, sitting, Garage or visible contact pass."
+      ]
+    },
+    "protectedHood": "307 ordered exact endpoint aliases, canonical19 weight delta0; original source unchanged. Temporary465-face incident-star patch has a degree4 pinch; do not sew it. Native20collar is a different opening. Literal200-quad shell leaves60vertex transition region needing bounded anatomical fitting.",
+    "cuffFinding": "65/62 source loops exact; native97.5%forearm vs source100%hand. Four actual C19 CPU samples max2.587x and up to4collapsed bridge triangles; broader deliberate skin transition required.",
+    "ankleFinding": "Native original rings78mm below retained shoe boundary. Three native quad strips removed only in proposal, max bridge stretch1.098x/no area collapse in four actual samples.",
+    "contactProtection": "Two1668vertex hand and56/58sole ROIs retained; this is source membership, not a future moving contact pass.",
+    "attemptAccounting": "No construction attempt or new skin export; no failed lineage resets. Previous free snap/cage measurement/source weight failures preserved.",
+    "next": "Fit protected307-to-native60 shoulder region, broaden explicit cuff skin transition, construct monotone ankle joins; inspect actual C19 full motion before PBR bake.",
+    "ship": "Retained34ship153passed; next156.",
+    "limits": [
+      "No complete sewn/textured rig, no new fullbody/face score or moving appearance acceptance.",
+      "C19 retained, gallery34 riding and earlier11 sitting unchanged.",
+      "No source geometry edits, GPU job or production promotion."
+    ]
   }
 }

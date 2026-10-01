@@ -1,0 +1,51 @@
+{
+  "sourceSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "fit04SHA256": "9667f6a19ad0272eff603643f38809c5fe91b9126e0c8c653d60a53f141c48b7",
+  "proposalSHA256": "7b2058aa603919de0da6a55767aa64d36a4283c9e7531d74d79659051809b90d",
+  "sewingTopologyChecks": [
+    {
+      "seam": "cuff.L",
+      "triangles": 85,
+      "edgeIncidenceErrors": 0,
+      "windingErrors": 0,
+      "missingRingEdges": 0,
+      "minimumRestTriangleAreaM2": 3.844638032726788e-06
+    },
+    {
+      "seam": "cuff.R",
+      "triangles": 82,
+      "edgeIncidenceErrors": 0,
+      "windingErrors": 0,
+      "missingRingEdges": 0,
+      "minimumRestTriangleAreaM2": 6.805846851146405e-07
+    },
+    {
+      "seam": "ankle.L",
+      "triangles": 63,
+      "edgeIncidenceErrors": 0,
+      "windingErrors": 0,
+      "missingRingEdges": 0,
+      "minimumRestTriangleAreaM2": 3.762816629395923e-05
+    },
+    {
+      "seam": "ankle.R",
+      "triangles": 66,
+      "edgeIncidenceErrors": 0,
+      "windingErrors": 0,
+      "missingRingEdges": 0,
+      "minimumRestTriangleAreaM2": 6.569749114414309e-05
+    }
+  ],
+  "protectedHoodEndpointCount": 307,
+  "protectedHoodWeightDelta": 0,
+  "nativeTransitionShellQuads": 200,
+  "nativeTransitionRingVertices": 60,
+  "sourceAndFitUnchanged": true,
+  "judgment": "Retain literal topology evidence. Reject blind bridge construction: cuff CPU collapses and shoulder transition still needs anatomical fitting.",
+  "limits": [
+    "No model was sewn or reweighted.",
+    "Topological ordering does not prove absence of geometric intersections.",
+    "Four recorded-state CPU samples are diagnostics, not moving appearance acceptance.",
+    "No new full-body/face grade, sitting, Garage or visible contact pass."
+  ]
+}

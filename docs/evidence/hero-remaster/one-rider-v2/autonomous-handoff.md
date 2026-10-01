@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round153, 2026-10-01
+## Current evidence — round154, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -42,10 +42,16 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   All72gray samples inspected: fuller sleeves/jeans, peaked rear hem and cut
   hood/cuff/shoe interfaces remain. Fouractual C19 matrices retain folds and
   severe shirt strain7.37/8.21x; no moving/appearance acceptance.
-- Next literal boundary audit and continuous source garment/hood/glove/shoe
-  transitions, protecting preferred NEW head/neck/hood and C19 behavior.
-  Rig/pose/contacts and coherent shape before detail/PBR bake. Independent
-  task hoodie-repair02 is active; inspect frozen receipts before adoption.
+- Literal154 audits preserve the preferred307-endpoint hood interface;
+  temporary465-face diagnostic patch has a pinched artificial boundary.
+  Native20collar is the wrong attachment; fitted60-vertex shoulder transition
+  is required. Source cuff loops65/62 have exact original skin aliases, but
+  native forearm/source hand weights cause up to2.587x stretch and four CPU
+  collapses in a blind bridge. Ankles overlap shoes78mm: trim native strips,
+  do not bridge backward. All296 proposal triangles pass independent topology
+  checks; unbuilt and unaccepted. Explicit cuff skin mapping and fitted joins
+  next, protecting NEW head/neck/hood, glove/sole probes and C19. Rig/shape/motion
+  before detail/PBR bake. Independent hoodie-repair02 remains separately owned.
 - Required retained34ship153 passes bytefinish/hash both tiers,103crash
   ticks,2/4ms restart/errors0. Next156. New garment is not tested in-game yet.
   Gray rest fixture supplies no fullbody/face score or visual stage pass.
@@ -1051,3 +1057,41 @@ Independent hoodie-repair02 active; evaluate finalized source receipts before
 adoption, no silent replacement. Ship153retained34both tiers bytefinish/hash/
 crash103/restart2/4ms/errors0, not a new-garment test. Next156.
 All three quality/moving-contact/Garage/device/LOD gates remain open.
+
+## Literal protected interfaces — round154
+
+Fresh C19 and explicit adapter34 remain the current rig direction. The latest
+phone gallery riding films use34; older standing-to-sitting films use11.
+No return to the old skeleton or silently substituted garment candidate.
+
+Read-only literal audits distinguish real openings from material aliases.
+The preferred hood/body seam has307 ordered physical endpoints, exact19weight
+identity and matching normals. The temporary465-face diagnostic shirt patch
+has a degree4 pinch at its artificial outer boundary; discard that patch in
+new construction, preserving the untouched source. The native20collar is a
+different anatomical opening. A literal200-quad removal identifies a clean
+60-vertex shoulder transition loop, still up to10.3cm from protected endpoints.
+Fit that transition deliberately; do not stretch a simple collar bridge or
+cut the protected hood. Fixed307 endpoints preserve original weights/normals.
+
+Source glove cuff loops are65/62vertices with exact body/glove weights. Native
+cuffs have20vertices and a forearm-to-hand weighting mismatch. Removing three
+native quad strips gives literal ordered sewing proposals, but four recorded
+C19 sample matrices reveal up to2.587x cuff stretch and four collapsed faces.
+Reject blind endpoint bridging as a moving solution. Build a broader explicit
+forearm/hand transition while retaining protected glove contact vertices.
+
+Native ankles overlap retained source shoes vertically by78mm. Trim exactly
+three native quad strips before constructing ordered ankle connections.
+Proposed ankle bridges reach1.098x stretch with no area collapse in four CPU
+samples. Independent parent checks all296 proposed triangles: edge incidence,
+winding and ring coverage pass; source and fit hashes unchanged. This is
+unbuilt feasibility evidence, not rendered or moving acceptance. Both1668hand
+ROIs and56/58sole ROIs remain untouched. Preserve all failed approach history.
+
+Next bounded construction: fitted shoulder transition, explicit cuff skin
+mapping and ordered ankle joins, then neutral/neck bend and complete actual
+C19 motion comparison before detail/PBR bake. Independent hoodie-repair02
+remains a separately evaluated direction. No new appearance grades, complete
+rigged export, sitting/Garage/contact/device pass or gallery publish. Required
+retained34ship153passed; next156. All three quality checkpoints stay open.
