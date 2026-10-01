@@ -19,6 +19,8 @@ Checkpoint 1 WHITE minimum; target8/later gates open. Round109 diagnoses posed s
 
 Checkpoint 1 WHITE minimum; target8/later gates open. Round110 rejects recessed14 face5.8 vs current11 6.8; stop analytic lid rings early after3 larger failures/totaleye6. Preserve approved head/hood join; anatomical eyelid donor next. Sleeve weight/hips audit and current multi-angle sitting clips pending. Ship gate108 passes; next111.
 
+Checkpoint 1 WHITE minimum; target8/later gates open. Round111 delivers current11 standing-to-sitting videos from3 angles and private phone gallery; no art acceptance. Preserve head/hood join. Local silent WebKit phone/desktop plays5 videos/4 images; Sites publish succeeds. Ship111 byte-identical replay,crash/restart pass. Current hip/upper-leg audit next; analytic eye rings retired, anatomical eyelid graft next. Next ship114.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

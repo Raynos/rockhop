@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round110, 2026-10-01
+## Current evidence — round111, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -522,3 +522,14 @@ Stop ring-parameter fitting early after3 larger-method failures,totaleye6; next
 anatomical donor lid/socket surface and texture continuity. Preserve approved
 head/body/hood join. Private replay byte-identical;49.53s/43.642GB anonymous.
 Sitting videos/current hip and thigh audit in progress; current11 unchanged.
+
+Round111: current11 standing-to-sitting action delivered as front/side/rear
+three-quarter movies,24 samples each, normal/half-speed. Parent reviewed all72
+actual decoded frames. No art acceptance: hip/thigh/sleeve/face gates remain.
+Preserve approved head/neck/hood join. fixture02 corrects bench root placement.
+Private phone gallery https://rockhop-rider-review.raynos.chatgpt.site deployed
+successfully. Local silent WebKit390/1200:5 videos play,4 images decode, no
+overflow/errors. Physical iPhone review pending, not a blocker to delivery.
+Ship111 both tiers byte-identical40.083333333333336s,crash103/restart2ms/errors0.
+No player asset change/game deploy. Next current hip diagnosis/targeted weights;
+anatomical eyelid graft follows, with five/fifteen autonomous policy retained.

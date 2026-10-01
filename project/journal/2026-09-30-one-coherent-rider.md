@@ -1170,3 +1170,14 @@ exact. Independent conservation and136 visibility rays pass. Replay both tiers
 byte-identical40.083333333333336s; crash103/restart2/3ms; errors0. Syntax passes.
 Limits: Face5.8 vs6.8 diagnostic;153 hidden overlaps. Current11 retained.
 Larger-method failures3/totaleye6, no quality gate or asset promotion.
+
+## Round111 — deliver current sitting motion through a private phone gallery
+
+Finding: Host actual current rider motion because local clips do not load in
+ChatGPT iOS. Preserve the model and label open deformation/appearance gates.
+Validation: Parent reviewed72 ordered sitting frames. Private Sites deployment
+succeeded with exact pushed source. Local silent WebKit390/1200 plays5 videos
+and decodes4 images without overflow/errors. CPU Blender96.77s/2threads;
+ship gate both tiers byte-identical40.083333333333336s/crash103/restart2ms.
+Limits: No physical iPhone test or character quality pass. Hip/thigh, sleeves
+and face remain open. Initial misplaced fixture retained; corrected02 used.
