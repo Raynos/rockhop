@@ -1285,3 +1285,12 @@ Validation: Parent export verifier0,144 ordered candidate frames reviewed;
 build passes, low/high replay exact, crash/restart3/4ms, no page errors.
 Limits: Geometry progress does not accept appearance. Diagnose material/atlas
 before another surgical alteration; no fullbody/Garage/bench/device pass.
+
+## Round122 — publish retained and new moving comparisons
+
+Finding: The private gallery now presents15 actual videos with both current11
+and new trial evidence. Hip improvement and eye rejection stay visibly labeled.
+Validation: All15 play at390/1200 in silent local WebKit;4images decode, no
+overflow/errors. Exact Sites source/packaging/native deployment succeeded.
+Limits: Physical iPhone still unverified. These are work-in-progress comparisons,
+not accepted player assets or completed rider quality gates.

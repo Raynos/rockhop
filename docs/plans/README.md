@@ -41,6 +41,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round120 private hip correc
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round121 native eye20 connected anatomy/export passes parent CPU and actual replay, but144ordered candidate frames/closeup reject textured face6.3/10: dark mottled ring/flat eye response. Retain geometry, diagnose atlas/material next. Hip19 retained private improvement with folds; current11 gallery115 preserved. Sleeve21 CPU lane active; next ship123.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round122 existing private gallery now15 actual videos: old9 retained plus4hip19/2eye20 comparisons. Local390/1200 silent playback/images pass; exact Sites source and native deployment succeeded, owner-private unchanged. Hip19 improvement and eye20 rejection labels explicit. Current11 master/normalassets untouched; sleeve21 failed CPU lane awaits parent checkpoint; eye22 local pigment diagnosis active.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

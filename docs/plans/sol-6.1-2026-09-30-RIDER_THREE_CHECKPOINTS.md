@@ -962,3 +962,12 @@ chart padding/mips and eye material separately before changing surgery. Prior
 analytic appearance6, native construction2, native appearance1 kept separate.
 19hip stays separate refinement candidate, current11 master/gallery preserved.
 Normal player assets unchanged; next ship123. Sleeve21 bounded CPU lane underway.
+
+Round122: existing owner-private phone gallery updated and native deployment
+succeeded at https://rockhop-rider-review.raynos.chatgpt.site. Retains all9
+prior videos/images; adds4 hip19 moving comparisons and2 eye20 clips with actual
+before/after closeup links. Label hip as refinement and eye6.3 as rejected;
+no silent candidate replacement. Local silent WebKit390/1200 playback all15
+movies/images passes, no overflow/errors. Exact Sites source pushed before
+packaging/upload; audience unchanged. Actual physical iPhone remains unverified.
+Normal player assets and current11 master unchanged. No automation.
