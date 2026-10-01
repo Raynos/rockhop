@@ -633,3 +633,12 @@ facefan beforebuilding anatomicalpatch ratherthan blindlywideningcut.
 Validation: Parentactualgrayprefixview; immutableoriginalsource,99486
 outsidefaces retained; fullincidentfaceIDs/perimeterdegreetrace frozen.
 Limits: No patch/bake, failure1innewcheekrepair; face6/10stillunaccepted.
+
+## Round56 — skin and cloth color cannot define the hood
+
+Finding: Correctmateriallookup stillretainsoldneckskin/floatingfragments;
+materialthreshold cannotseparateskin/tancloth. Switch toanatomicalsourcecuts.
+Validation: ParentactualPBRfront/profile,8PBRgrayinspectionviews;5461faces
+13components/595boundaryedges. Source5hashes intact,currentbody untouched.
+Limits: No integration orhoodacceptance; newsemanticfailure1/setup1, old15
+retired. Furthercolor-threshold tweakingstopped.

@@ -222,3 +222,9 @@ physicalvertex9438 with explicitincidentfacefan.513sourcefacesselected;
 viewconfirmslocalonly, notacceptedrepair. Newcheekrepair failure1; exact
 fanselectioncorrectionnext within03:26:30cap, no blindwidening/globalremesh.
 Cdonor01socketcorrection/extraction and Bactualclothhoodbag CPUunderway.
+
+Round56: Donor01actualBaseColorlookupfixed, butwarmmaterialmask retainsold
+neckskin/skin-hair fragments; parentactualfront/profile REJECTED.5461faces
+13components (largest5439,22floatfaces),595boundaryedges. Newdonor setup1
++semantic1; colorclassifierstopped. Next explicitanatomical3D exclusion and
+truepolygonclipping, no thresholdchurn/oldrimrepair. Body/source5hashesexact.

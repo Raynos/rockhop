@@ -1,0 +1,70 @@
+{
+  "status": "FAILED unsafe source-only cloth separation; unaccepted, no integration",
+  "actualStartUTC": "2026-10-01 03:00:58 UTC",
+  "deadlineUTC": "2026-10-01 03:30:58 UTC",
+  "freezeUTC": "2026-10-01T03:17:43.417479+00:00",
+  "newDonor01Failures": {
+    "materialImageSetup": 1,
+    "unsafeSemanticSeparation": 1,
+    "acceptedAppearance": 0
+  },
+  "oldH21_4ReducedHoodLineageRetired": 15,
+  "visibleFailure": "PBR and gray front/profile show OLD donor neck/skin retained inside hood; floating old-head/skin/hair fragments remain above opening. Color hue cannot distinguish all ochre fabric from flesh/hair. This is our classification failure, not generator blame.",
+  "sourceMask": "absX<.19m,centroidZ abovefront1.445/rear1.335 smoothly alongY.03\u2192.12, topZ1.625; initialsinglemask no widening",
+  "nativePBRImageSocketProvenance": {
+    "node": "Image Texture",
+    "linkedSocket": "Color",
+    "materialSocket": "Principled Base Color"
+  },
+  "selectedSourceTriangles": 5461,
+  "coordinateExactWeldedDiagnosticTopology": {
+    "method": "Read-only count with float32 position equality to exclude UV split artifacts; no derivative/source welding",
+    "components": 13,
+    "largestComponentTriangles": 5439,
+    "componentTriangleCountsDescending": [
+      5439,
+      5,
+      3,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "boundaryEdges": 595,
+    "nonmanifoldEdges": 0
+  },
+  "sourceAfterSHA256": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/working-display2.glb": "783b58fec94aa9657dc44bed14d4767af610bfa29b336f916d5107118a01d5cb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/raw-shape.glb": "42b23ca04f82728299caca26e958996e8ffaeb8fc491d2e77b1983ef4880e0c2",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/01/raw-shape.npz": "e4580ff1b95af69c0cfe4273f34913950ae284ab32d4d38254cfbd5f55e6055d",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a"
+  },
+  "allSourcesUnchanged": true,
+  "protectedBodyScope": "Entire source body/gloves/legs/shoes/clothes/materials/UVs/weights byte-identical; receiver not loaded or altered. No body cut or assembly exists.",
+  "retainedHighResolutionRaw": "158114vertices316248triangles, untouched. 55k reduced source inspection explicitly labeled; no reliable rawUV transfer asserted.",
+  "master": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/wholehood01-trial01/donor-mask-inspection.blend",
+  "masterSHA256": "1b15e090b684754b5099ff39d117f747dd3d3556e7a80bcadf35bfd3473278d6",
+  "exactFaceIDsBinary": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/wholehood01-trial01/exact-selected-and-removed-source-faceIDs.npz",
+    "sha256": "5891bd1194f7a32886d12bb04d8f091bcb4e140c1e300abde1c314b465bd749e",
+    "selected": 5461,
+    "removed": 49539
+  },
+  "actualEvidenceBoard": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/C-garment-pattern/wholehood01-trial01/unsafe-wholehood-mask-board.jpg",
+  "specificNextAlternative": "After parent checkpoint: anatomical source labeling in front/profile/rear, explicit skin-vs-cloth seed sets and connected cloth growth with reviewed true cloth/skin boundary. Keep own native sourceUV/PBR. No blind hue threshold widening and no integration until source-only cloth is clean. Entire donor01 source lineage remains distinct from retired old H21-04 cut/strip repair.",
+  "GPU": false,
+  "CPUThreads": 2,
+  "noRigOrClearanceClaim": true,
+  "recipes": {
+    "inspect_wholehood01_mask_corrected01.py": "b405dfc3a4101dd405984fe06c94ae62bce87286756a1bdeaff967818ab6d0b1",
+    "render_wholehood01_inspection.py": "aedcc031ca7cb090e71a574551bd58b9574ce6351895f85a6822891275b1555e",
+    "freeze_unsafe_wholehood01_mask.py": "d0a912b216fa49a4e98698074cc3e92807a7932fdb8dc56a8d6cb448e8e071c2"
+  }
+}
