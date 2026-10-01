@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — autonomous execution of all three visual checkpoints; full character unaccepted**.
+Status: **active — white rider minimum appearance checkpoint passed; target8 refinement, sitting rig and riding checkpoints remain open**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
