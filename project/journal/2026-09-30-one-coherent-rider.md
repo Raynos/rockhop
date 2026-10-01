@@ -914,3 +914,13 @@ hashes/otherbodypositions/UVs preserved. Strictfloat/einsum audit finite.
 Silentbaseline exactfinishbytes/crash103/restart1msLOW2msHIGH/errors0.
 Limits: Statichelddiagnostic;55rod crossingpairs/nonzero depth, thumbgap,
 otherhand/complete19rig/playedcontacts/face target8 remain open.
+
+### Round88 — independently fit the opposite native hand
+
+Finding: Use the opposite hand's own nativeweights/pivots and actualgrip,
+not a mirrored deformation. Both helddeltas are available for19rig transfer.
+Validation: Six actualPBR/gray views inspected; wrist0/selfoverlap0, fourpad
+witnesses0.037–0.199mm; conservativewholetriangleLP depth≤0.615mm runtime.
+Source hashes exact, independentCPUsolver6.420s.
+Limits: Thumbpadgap4.715mm and49crossingpairs retained; staticonly. Fullrig,
+playedlean/landing/contacts, Garage/LOD and target8quality remain open.

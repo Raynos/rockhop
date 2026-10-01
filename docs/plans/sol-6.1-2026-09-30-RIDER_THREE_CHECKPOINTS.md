@@ -624,3 +624,13 @@ independentotherhand/full19rig movingcomparison, notclosing or playerpass.
 Explicitvirtualmarker androtation preserve physicaltarget whilealigningrod;
 source/intactbody/head/UVs unchanged. Round87 silentbaseline exactfinishbytes,
 crash103/restart1msLOW2msHIGH/errors0; no newrider gameplay claim.
+
+### Both native heldshapes available for full-rig transfer
+
+NativeR/runtimeL independently solved from its ownsourceweights/pivots/
+cuff, notmirroredothermorph. Parent sixPBR/gray views retaincandidate:
+wrist0/selfoverlap0, fourpadwitnesses0.037–0.199mm, thumbgap4.715mm.
+Conservativewholetriangle depth≤0.615mm runtime;49crossingpairs remain.
+Next transfer BOTH helddeltas and measuredvirtualmarkers to thesame
+19bone source, preservebind/footphysics adaptation, thenactual playedtests.
+No closing/player/bike/physics change or static-to-game-ready promotion.
