@@ -613,3 +613,14 @@ identical. Recipe17→16mm taper matchesvertices within0.139mm, circumradii
 realpolygon/taper/axis at1.015scale, with explicitvirtualsocket alignment
 that preserves physicaltargets. Neithermarkercoincidence nor18mmfixture
 is a visiblecontactpass. No bike/player/physics edits; lint/typecheckpass.
+
+### Real-grip native heldshape retained for whole-rig testing
+
+NativeL/runtimeR DQS against actual44triangle taperedgrip: wrist0, hand
+selfoverlap0, fourpadwitnesses0.035–0.109mm, thumbpadgap4.715mm visible.
+55crossingpairs remain; conservativewholetriangle LP depth≤0.595mm runtime,
+notzero intersection. Parent sixPBR/gray closeups retainheldcandidate for
+independentotherhand/full19rig movingcomparison, notclosing or playerpass.
+Explicitvirtualmarker androtation preserve physicaltarget whilealigningrod;
+source/intactbody/head/UVs unchanged. Round87 silentbaseline exactfinishbytes,
+crash103/restart1msLOW2msHIGH/errors0; no newrider gameplay claim.

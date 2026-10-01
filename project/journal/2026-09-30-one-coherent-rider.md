@@ -903,3 +903,14 @@ actualsurfaces identical; source hashes unchanged. Recipe/decodedtapererror
 0.139mm, lint and complete harness typecheck pass.
 Limits: Circumradius is notpolygonface clearance; nativefitting, explicit
 socket/rodaxis mapping and played thumb/finger/wrist contact remain open.
+
+### Round87 — fit a native held hand to the actual rubber grip
+
+Finding: Actual rod/taper fitting preserves the wrist and native skin, with
+fourpad contacts; thumbpad still4.715mm away. Retain only for whole-rig proof.
+Validation: Six actualPBR/gray closeups inspected; wrist0/selfoverlap0.
+Wholetriangle conservativeLP bound0.595mm runtime, notvertexonly. Source
+hashes/otherbodypositions/UVs preserved. Strictfloat/einsum audit finite.
+Silentbaseline exactfinishbytes/crash103/restart1msLOW2msHIGH/errors0.
+Limits: Statichelddiagnostic;55rod crossingpairs/nonzero depth, thumbgap,
+otherhand/complete19rig/playedcontacts/face target8 remain open.
