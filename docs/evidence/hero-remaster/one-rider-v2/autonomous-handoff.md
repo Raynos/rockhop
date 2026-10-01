@@ -267,3 +267,9 @@ has pale cheek response/faint facets/noisyeye texture. Positions/normals/
 indices allfiveprimitives exact,4disjoint UVquadrants. Fifth local failed
 attempt; stop unconstrained polynomialcolor+uniformroughness method and
 use source-boundary transport/coherentPBR response, keep closed geometry.
+
+Round63: NEWdonor01 trueclip4096triangles/3313native exact, naturalhood form
+improves. Inner grayfold located source29081 inside original rearhood,
+notlowerfrontneck witness; identityunproven. No quietrecolor/cut. Parent
+private wholecharacter fitting/coverage next, C retired. Productionexact
+clear40.083333333s/crash103ticks/restart1ms both, sourcebody unchanged.

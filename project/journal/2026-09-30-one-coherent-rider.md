@@ -705,3 +705,15 @@ UV quadrants prevent inner/outer overwrite, outside buffers unchanged.
 Limits: Fifth local failed attempt; switch from unconstrained color fit
 to boundary-constrained texture/roughness or coherent material response.
 No fullbody, neck-motion or rig acceptance; eye texture remains noisy.
+
+## Round63 — trace the donor inner fold before fitting
+
+Finding: True anatomical clipping preserves natural cowl/back folds; one
+ambiguous inner fold needs source attribution and assembled coverage.
+Validation: Actual8PBR/gray views;4096triangles,3313native triangles exact,
+one component/no nonmanifold edges. Pixel350,246 maps source29081 inside
+original rearhood fold. All sources/body exact. Production replay Low/High
+byte-identical40.083333333s, crash103ticks/restart1ms both, zero errors.
+Limits: Donor isolation failure1 plus earlier setup/semantic failures.
+Gray fold is not proven skin or lining; no quiet recolor/cut. No binding
+or whole-character acceptance; parent fitting follows independently.

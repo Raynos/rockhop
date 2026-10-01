@@ -1,0 +1,107 @@
+{
+  "status": "UNACCEPTED source-only anatomical clipped hood; inspect before any new binding",
+  "actualStartUTC": "2026-10-01 03:38:33 UTC",
+  "deadlineUTC": "2026-10-01 04:08:33 UTC",
+  "finishedUTC": "2026-10-01T03:42:31.978719+00:00",
+  "CPUThreads": 2,
+  "GPU": false,
+  "oldH21_4LineageRetiredFailures": 15,
+  "newDonorFailuresRetained": {
+    "imageLookupSetup": 1,
+    "colorMaskSeparation": 1
+  },
+  "colorThresholdStopped": true,
+  "sourceArrays": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/wholehood01-trial01/donor-source.npz",
+  "sourceArraysSHA256": "b626eefc01f2c86f3f62722666526a175a2c99239139784626d0b342f831199b",
+  "receiverBodyUnchanged": true,
+  "receiverProtectedTriangles": 40386,
+  "measuredRearClothWitness": {
+    "region": "Y>.120,absX<.190,Z>1.330, original source geometric witness",
+    "count": 998,
+    "minXYZ": [
+      -0.18841098248958588,
+      0.12006229162216187,
+      1.3300422430038452
+    ],
+    "maxXYZ": [
+      0.18908259272575378,
+      0.1810285747051239,
+      1.5770225524902344
+    ],
+    "topZ": 1.5770225524902344
+  },
+  "measuredLowerCentralNeckWitness": {
+    "region": "absX<.045,-.075<Y<.095,1.490<Z<1.525; explicit candidate skin witness requiring visual confirmation",
+    "count": 32,
+    "minXYZ": [
+      -0.04394569993019104,
+      -0.06843435019254684,
+      1.490838885307312
+    ],
+    "maxXYZ": [
+      0.04045427590608597,
+      -0.0396348237991333,
+      1.5248855352401733
+    ]
+  },
+  "declaredRemovalVolume": {
+    "type": "Z-varying anatomical ellipse; retain outside ellipse and below source rearclothtop+8mm",
+    "levelsZ": [
+      1.445,
+      1.49,
+      1.515,
+      1.55,
+      1.5850225524902344
+    ],
+    "radiusX": [
+      0.077,
+      0.082,
+      0.098,
+      0.125,
+      0.137
+    ],
+    "radiusY": [
+      0.095,
+      0.108,
+      0.127,
+      0.147,
+      0.154
+    ],
+    "centerY": [
+      0.022,
+      0.02,
+      0.012,
+      0.01,
+      0.008
+    ],
+    "topZ": 1.5850225524902344,
+    "wholeYokeFloor": "front1.445m\u2192rear1.335m alongY.03\u2192.12;absX<=.19m",
+    "colorIgnored": true,
+    "edgeRoots": "36 bisections on real source edges; UV barylinear on same original triangle, never different chart corners"
+  },
+  "actualClippingCounts": {
+    "left yoke side": 1428,
+    "receiver matching whole yoke floor": 366,
+    "outside measured anatomical neck/jaw volume": 474,
+    "measured top above rear cloth": 346,
+    "right yoke side": 1414
+  },
+  "retainedTriangles": 4096,
+  "exactUncutSourceTriangles": 3313,
+  "exactUncutPositionMaxDelta": 0.0,
+  "exactUncutUV": true,
+  "looseComponentsBeforeRemoval": [
+    4096
+  ],
+  "removedLooseTriangleCount": 0,
+  "boundaryEdges": 522,
+  "nonmanifoldEdges": 0,
+  "geometrySHA256": "f3d2cc5a65b97b663296c0578ee5eb5108db6dd63ec228cda720e7dc2dfdbe1a",
+  "recipeSHA256": "182922abd038b96156d8d72df26cc9e4e9522f56672c5c1b8cbd60beac9e7d18",
+  "limitations": [
+    "Anatomical ellipse is explicitly authored against source witnesses; visual exclusion must pass, not inferred from scalar counts.",
+    "Largest component filtering removes disconnected source remnants; no global remesh or reducer.",
+    "No neck binding, body assembly, rig, sourceUV remapping or raw detail transfer yet. Retained raw316248triangle source untouched.",
+    "Native sizing head is not final WHITE identity; no head yet assembled."
+  ]
+}
