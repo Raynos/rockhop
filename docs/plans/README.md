@@ -83,6 +83,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round141 harmonic33CPUrejec
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round142 adapts freshC19rig34 explicitly:19names/14childaxes/4sockets, freshweights/binds/BINexact. ActualCPUphysical states preserve contacts<=2.19um andhoodbodyaliases; hipstrain improves2.47-2.68x, arms/elbow stilldeficient. Unacceptedprivate motion/runtimevolume skin or jointretopo next; not DQexport.11baseline/22faceprogress separate, gallery129live. Shipnext144.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round143 freezes exact34freshC19overlay with guarded14axis branch and exact11recorded-camera motionharness. Syntax/lint/typechecks pass;4x480PBR/gray clips plusrequiredcandidate ship144 next. CPUhip/contact gains retained, arm/face quality stillopen; no recentering orpromotion.11baseline/22faceprogress/gallery129protected.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

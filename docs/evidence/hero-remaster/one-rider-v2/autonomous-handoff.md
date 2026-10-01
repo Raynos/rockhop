@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round142, 2026-10-01
+## Current evidence — round143, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -842,3 +842,11 @@ Armmoreopposition/elbowstillfolded despite lowermaxstrain; wholebodyunaccepted.
 Nextmatchedprivate motion andruntimevolume-preserving skin/targetedjoint
 retopo assessment; no DQexport/weightanchorsweep.11baseline/22faceprogress
 separate, no composition/promotion. Ship141passed; next144.
+
+Round143: private34overlay freezes11renderer/physics/materials/bike + exact
+mappedC19GLB andoneguarded14childaxis constructorbranch, fallbackexpression
+unchanged. Newmotionharness uses exactrecorded11effectivecamera trajectory,
+state/hash guards, live restaxes/bikeframebones for CPUbrowserparity. No
+candidate recentering orposeinjection. Scopedlint/typechecks/bundle syntax
+pass; actualGPUmotion stillunaccepted. Next4x480PBR/gray side/rear clips,
+requiredcandidate ship144 incanonicalboundedbatch. Current11/22separate.

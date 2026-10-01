@@ -1163,3 +1163,11 @@ Armmoreopposition/elbowstillfolded despite lowermaxstrain; wholebodyunaccepted.
 Nextmatchedprivate motion andruntimevolume-preserving skin/targetedjoint
 retopo assessment; no DQexport/weightanchorsweep.11baseline/22faceprogress
 separate, no composition/promotion. Ship141passed; next144.
+
+Round143: private34overlay freezes11renderer/physics/materials/bike + exact
+mappedC19GLB andoneguarded14childaxis constructorbranch, fallbackexpression
+unchanged. Newmotionharness uses exactrecorded11effectivecamera trajectory,
+state/hash guards, live restaxes/bikeframebones for CPUbrowserparity. No
+candidate recentering orposeinjection. Scopedlint/typechecks/bundle syntax
+pass; actualGPUmotion stillunaccepted. Next4x480PBR/gray side/rear clips,
+requiredcandidate ship144 incanonicalboundedbatch. Current11/22separate.

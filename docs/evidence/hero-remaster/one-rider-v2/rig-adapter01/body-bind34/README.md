@@ -25,3 +25,16 @@ Next private matched moving comparison and bounded runtime volume-preserving
 skin or targeted elbow/shoulder topology assessment. Blender DQexport alone
 changes no runtime skin law and is not an alternative. No old weight-anchor
 sweep or unmeasured hand/foot/hood promotion. Source files untouched.
+
+## Frozen moving-test setup — round143
+
+The private overlay retains11renderer/physics/materials/bike and swaps
+exactmapped34GLB plus one guarded constructor rest-axis expression. Its
+14child map matches the separately measured CPUadapter. Legacyfallback
+retains the original axis expression. This is a private art overlay; the
+original filename is retained, so it is not a releasecache/bundle proof.
+
+Camera trajectories come from retained11side/rear480frame recordings.
+The new chest is not recentered. Actual state/hash/effectivecamera must
+match byte-exact; live axes and bikeframebones are recorded for independent
+CPU/browser parity. Actual PBR/gray motion is still pending parent review.

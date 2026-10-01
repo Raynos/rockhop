@@ -1494,3 +1494,15 @@ pass. OnlyC19JSONmapping changes; originalBIN/source files exact.
 Limits: No moving/face/Garage/device acceptance, no native stage/additive
 clip contract. Sourceanchor uniqueness corrected before CPUrun. Keep11/22
 separate; private motion and genuinely different skin/topology next.
+
+## Round143 — freeze explicit rig overlay and exact moving cameras
+
+Finding: PrivateC19comparison uses frozen11renderer with one source-bound
+anatomical-axis branch. Reference cameras must remain byte-exact despite
+newchestpositions, so newcapture follows original11camera trajectory.
+Validation: Exactmapped34SHA, one14axis constructorbranch/source fallback
+unchanged; syntax/scopedlint/projectharness typechecks pass. Guards record
+actualstate/hash/camera/restaxes/bikeframebones; no pose injection.
+Limits: CPU syntax/overlay receipts are not browser/appearance acceptance.
+Four480frame clips andrequiredship144 next, under canonicalGPUlock/bounds.
+No production/cache/bundle/actualLOD/performance pass.
