@@ -20,6 +20,11 @@ A1/original has stronger legs and overall pose. A2/current has useful face,
 hair, hoodie and denim details but worse knees, feet and hands. Neither is a
 finished target. Preserve both and the rejected fresh Blender bodies as
 [comparison controls](../evidence/hero-remaster/rider-selection/README.md).
+Ask240 clarifies the finished rider should be white, matching the approved
+reference face. The current native assembly is the user's best-so-far progress
+comparison; preserve its improved proportions and clothing while fixing the
+face identity, neck construction and remaining anatomy.
+
 Separate **geometry/materials**, **rig/bind/weights**, and **runtime physical
 pose**. Better texture or zero socket error cannot excuse visible bad anatomy.
 

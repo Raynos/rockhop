@@ -560,3 +560,13 @@ Validation: Parentactualfront/rear/profilePBRgray comparison;225actualcloth
 vertices penetrate unchangedskin, worst14.94mm; UVinterpolationcrossescharts.
 All41738protectedsourcepolygons/UVs/materials and originalweights preserved.
 Limits: Static rejection only; no neckmotion, finalrig or newgameplay pass.
+
+## Round48 — display painted source before matching diagnostics
+
+Finding: A secondcoordinateguard blocksactualfacePNG; replace numerical
+prerequisite with explicitlylabelledpaintedorientation witnesses, sourceintact.
+Validation: Failedrecipe/process frozen; freshsilentproductionlow/high clears
+byteidentically40.083333333s, crash103ticks/restart1and2ms, noerrors.
+Limits: Noactualfreshfaceappearancejudgmentyet; no newrig/gameplaypass.
+Userdirection: Ask240 preservesbest-sofarbody/clothingprogress and requires
+a WHITEfinishedrider matchingapprovedbuzzreference; nofaceacceptanceimplied.

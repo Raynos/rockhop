@@ -163,3 +163,14 @@ UVchart interpolation. Protected41738sourcepolygons/weights exact doesnotpass
 appearance. Neckrepair family15/15 RETIRED, noattempt16. Parentselects NEW
 wholehood fourpatternpanels+neckbinding/coherentUVatlas in independent Blineage;
 oldhood silhouette/materialreference only. FreshH21face render underwayCPU.
+
+Round48: SecondCPUdisplayguard freezes beforePNG (no exact Xrotation coordinate
+match). Sourcegeneration remains successful. Directlabelledpaintedfourorientation
+witnesses next; do not blockdisplay with another acceptanceassertion. Freshsilent
+productionclear byteidentical40.083333333s/hash368f1ca5bd9e830a, crash103ticks,
+restart1/2mslow/high, noerrors. Newrider motion stillunpassed.
+
+Ask240 HUMAN: currentnativeassembly is bestyet/feelsprogress; finishedrider must
+be WHITE. Preserve improvedbody/clothing and best-sofarcomparison; approved
+whitebuzzreference is freshH21input. This is directionfeedback, notclosedneck
+acceptance or rig/motionproof. No skinidentity/colorpromotion performedyet.

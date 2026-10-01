@@ -1,0 +1,16 @@
+21:33:17 | INFO: Data are loaded, start creating Blender stuff
+21:33:17 | INFO: Blender create Mesh node tmp4x8p0obp.ply
+21:33:17 | INFO: glTF import finished in 0.02s
+21:33:17 | INFO: Data are loaded, start creating Blender stuff
+21:33:17 | INFO: Blender create Mesh node textured
+21:33:17 | INFO: glTF import finished in 0.08s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_h21_buzz02.py", line 42, in <module>
+    chosen=min(frameTests,key=lambda row:row['RMSNearestSourceVertexDistanceM']);assert chosen['maximumNearestSourceVertexDistanceM']<5e-6,'No exact frozen reducer-to-painted export frame found; stop'
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No exact frozen reducer-to-painted export frame found; stop
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/render_h21_buzz02.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
