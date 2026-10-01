@@ -1020,3 +1020,12 @@ full-transmission optics, retain renderer finding and22skin progress. Next audit
 actualiris texture/lid aperture/gaze; no IOR/roughness sweep or face recut. Sleeve
 25 rejection retained; arm support audit underway. Current11/gallery122 retained;
 normal assets unchanged. Next required ship129.
+
+Round128: parent independently reproduces allfour480-frame sleeve support
+audits.52 full↔zero switches follow actual retained arm changes crossing sparse
+four-key support; reconstruction nearest error2.33e-7rad. Not quaternion sign,
+camera/world-prefix or significant scale artifact.12fps cannot establish an
+instantaneous IK discontinuity, so physics stays protected. Stop sparse ARAP
+repair; bounded anatomical sleeve weights26 underway after hood/cuff/core
+selection proof. Eye27 read-only iris/lid/gaze audit underway after optical24
+rejection. Current11/gallery122 retained; no normal asset changes. Ship next129.

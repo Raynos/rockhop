@@ -1345,3 +1345,12 @@ hash verified;72 PBR moving frames reviewed;72 matched records and gray
 pixel-identical controls; source22 bytes/rig/join/seven other materials exact.
 Limits: Face6.6 below7; no mobile/performance/release acceptance. Inspect
 actual iris/lid/gaze before a different mechanism, no shader parameter sweep.
+
+## Round128 — sparse sleeve support follows real arm travel
+
+Finding: 52 strength switches are compact support failures during retained
+arm movement, not a quaternion/world-prefix bug. Stop sparse ARAP repair.
+Validation: Parent reproducible CPU audit passes all4×480 rows; nearest
+reconstruction error2.33e-7rad and camera-relative features agree.
+Limits: 12fps cannot prove instantaneous IK discontinuity. Preserve physics;
+geometry-selected anatomical arm weights and iris/lid audit are next.

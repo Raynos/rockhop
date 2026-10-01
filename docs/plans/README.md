@@ -53,6 +53,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round126 rejects sleeve25 m
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round127 proves native cornea alpha discard, rejects one physical thin-film treatment: cloudy iris, face6.6 below7.72 moving PBR frames reviewed,72 gray controls pixel-identical22, source bytes/rig/join exact; live geometry hash verified. Retain22skin progress and audit iris/lid/gaze next, no parameter sweep. Sleeve25 rejected; support audit underway. Current11/gallery122 retained, no player promotion. Ship next129.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round128 reproduces52 sleeve support switches across4×480 actual rows; retained arm travel crosses sparse neighborhoods, no quaternion/world-prefix bug.12fps cannot prove IK discontinuity. Stop sparse ARAP;26 anatomical weights after protected selection proof.27 iris/lid/gaze audit underway; eye22skin retained. Current11/gallery122 retained, no player promotion. Ship next129.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

@@ -1,0 +1,3889 @@
+{
+  "scope": "Read-only audit of four existing actual 480-frame candidate reports; no new repair or fade parameter sweep",
+  "candidateSHA256": "0fd9f63bdba68de60fa97ff43682842f8ffa30b6da5895221d837c70985d8c98",
+  "method": "Reconstruct rigid bone-world transforms from reported positions/quaternions, apply actual loaded inverse bind and identity mesh bind, reproduce Three column-normalized skin quaternion decomposition; compare chest-relative arm directions and elbow positions independently. Retained per-bone nonuniform scale is tiny and not fully recorded in reports, so reconstruction is bounded correspondence, not an exact full-matrix capture.",
+  "sourceRigProvenanceSHA256": "916dcdaf437660c88278690d830f27885db00e367e1bf9967c19a17af2b9ceb4",
+  "maximumSourceBoneLocalScaleDeviationFromUnity": 1.823902130126953e-05,
+  "crossCameraMaximumRelativeFeatureAngleRad": 4.2146848510894035e-08,
+  "crossCameraMaximumChestLocalJointDifferenceM": 0.0,
+  "crossCameraMaximumNearestDifferenceRad": 0.0,
+  "keyCorrespondence": [
+    {
+      "sample": 114,
+      "maximumMetadataVsStoredBaselineFeatureAngleRad": 0.0,
+      "maximumMetadataVsActualPlayedFeatureAngleRad": 1.931411236050088e-07,
+      "actualDriver": {
+        "nearestRad": 4.2146848510894035e-08,
+        "strength": 1,
+        "weights": [
+          0.9999999999967075,
+          2.6694410265767712e-12,
+          3.457937775069418e-13,
+          2.771998078359242e-13
+        ]
+      },
+      "debugExactAgainstBaselineKey": true
+    },
+    {
+      "sample": 186,
+      "maximumMetadataVsStoredBaselineFeatureAngleRad": 0.0,
+      "maximumMetadataVsActualPlayedFeatureAngleRad": 1.3978528260658475e-07,
+      "actualDriver": {
+        "nearestRad": 0,
+        "strength": 1,
+        "weights": [
+          2.6647074794492983e-12,
+          0.9999999999965645,
+          4.192782672039101e-13,
+          3.5141128821201424e-13
+        ]
+      },
+      "debugExactAgainstBaselineKey": true
+    },
+    {
+      "sample": 304,
+      "maximumMetadataVsStoredBaselineFeatureAngleRad": 0.0,
+      "maximumMetadataVsActualPlayedFeatureAngleRad": 1.032382731180714e-07,
+      "actualDriver": {
+        "nearestRad": 0,
+        "strength": 1,
+        "weights": [
+          3.4518060372449763e-13,
+          4.1927826216443403e-13,
+          0.9999999999865145,
+          1.2721195893867016e-11
+        ]
+      },
+      "debugExactAgainstBaselineKey": true
+    },
+    {
+      "sample": 426,
+      "maximumMetadataVsStoredBaselineFeatureAngleRad": 0.0,
+      "maximumMetadataVsActualPlayedFeatureAngleRad": 1.032382731180714e-07,
+      "actualDriver": {
+        "nearestRad": 0,
+        "strength": 1,
+        "weights": [
+          2.767082678150159e-13,
+          3.514112845694449e-13,
+          1.272119693333303e-11,
+          0.9999999999866507
+        ]
+      },
+      "debugExactAgainstBaselineKey": false,
+      "debugDifferenceDetails": {
+        "gripErrMaximumDifferenceM": 2.938821328774768e-16,
+        "comResidualDifferenceM": 1.2874377219725896e-15,
+        "soleErrMaximumDifferenceM": 1.212419045837295e-16,
+        "note": "Only floating-point residuals differ from isolated CPU key reconstruction; actual candidate versus matched baseline report remains exactly equal."
+      }
+    }
+  ],
+  "reports": [
+    {
+      "angle": "side",
+      "surface": "textured",
+      "sourceReportSHA256": "6965f93336535ef9eb3731e34d7a201805de1f0e8b25e59afe78c00496f16140",
+      "samples": 480,
+      "baselineActualBoneRecordExact": true,
+      "maximumReconstructionErrors": {
+        "nearestRad": 2.3261698767303812e-07,
+        "strength": 5.98080275193702e-07,
+        "weights": 9.035208606844591e-07
+      },
+      "fullZeroSwitchCount": 52,
+      "minimumFeatureTravelAtFullZeroSwitchRad": 0.34868092417693725,
+      "minimumMaximumElbowTravelAtFullZeroSwitchM": 0.00505986242009587,
+      "minimumMaximumAxisAngleAtFullZeroSwitchRad": 0.19154144409289242,
+      "all480DerivedRowsExactAgainstPrimary": true,
+      "derivedRowsReference": {
+        "file": "feature-support-rows.json",
+        "sha256": "9ada0c01250c935a4bd1258b769dbd307a46e65487018ec112de3590eba8a0e6"
+      }
+    },
+    {
+      "angle": "side",
+      "surface": "gray",
+      "sourceReportSHA256": "2802faaa5cbe3d7618ffcd85c8dda64aa6d7a77c44fb46a51c75fffad938e3c1",
+      "samples": 480,
+      "baselineActualBoneRecordExact": true,
+      "maximumReconstructionErrors": {
+        "nearestRad": 2.3261698767303812e-07,
+        "strength": 5.98080275193702e-07,
+        "weights": 9.035208606844591e-07
+      },
+      "fullZeroSwitchCount": 52,
+      "minimumFeatureTravelAtFullZeroSwitchRad": 0.34868092417693725,
+      "minimumMaximumElbowTravelAtFullZeroSwitchM": 0.00505986242009587,
+      "minimumMaximumAxisAngleAtFullZeroSwitchRad": 0.19154144409289242,
+      "all480DerivedRowsExactAgainstPrimary": true,
+      "derivedRowsReference": {
+        "file": "feature-support-rows.json",
+        "sha256": "9ada0c01250c935a4bd1258b769dbd307a46e65487018ec112de3590eba8a0e6"
+      }
+    },
+    {
+      "angle": "rear-three-quarter",
+      "surface": "textured",
+      "sourceReportSHA256": "cb9f62580b96a533e114e6bf4c65111711fbb1ef3cf374b2447053a9a0397935",
+      "samples": 480,
+      "baselineActualBoneRecordExact": true,
+      "maximumReconstructionErrors": {
+        "nearestRad": 2.3261698767303812e-07,
+        "strength": 5.98080275193702e-07,
+        "weights": 9.035208606844591e-07
+      },
+      "fullZeroSwitchCount": 52,
+      "minimumFeatureTravelAtFullZeroSwitchRad": 0.34868092417693725,
+      "minimumMaximumElbowTravelAtFullZeroSwitchM": 0.00505986242009587,
+      "minimumMaximumAxisAngleAtFullZeroSwitchRad": 0.19154144409289242,
+      "all480DerivedRowsExactAgainstPrimary": true,
+      "derivedRowsReference": {
+        "file": "feature-support-rows.json",
+        "sha256": "9ada0c01250c935a4bd1258b769dbd307a46e65487018ec112de3590eba8a0e6"
+      }
+    },
+    {
+      "angle": "rear-three-quarter",
+      "surface": "gray",
+      "sourceReportSHA256": "50bd903322dd1b9be81ba98013c554f105ff67445f3695fd1edcbf8af4d9524b",
+      "samples": 480,
+      "baselineActualBoneRecordExact": true,
+      "maximumReconstructionErrors": {
+        "nearestRad": 2.3261698767303812e-07,
+        "strength": 5.98080275193702e-07,
+        "weights": 9.035208606844591e-07
+      },
+      "fullZeroSwitchCount": 52,
+      "minimumFeatureTravelAtFullZeroSwitchRad": 0.34868092417693725,
+      "minimumMaximumElbowTravelAtFullZeroSwitchM": 0.00505986242009587,
+      "minimumMaximumAxisAngleAtFullZeroSwitchRad": 0.19154144409289242,
+      "all480DerivedRowsExactAgainstPrimary": true,
+      "derivedRowsReference": {
+        "file": "feature-support-rows.json",
+        "sha256": "9ada0c01250c935a4bd1258b769dbd307a46e65487018ec112de3590eba8a0e6"
+      }
+    }
+  ],
+  "finding": "All52 full/zero switches per480 frames are independently reproduced from retained actual bone orientations. Each switch crosses a substantial chest-relative arm-pose change: combined four-feature travel at least0.349rad, at least one arm-axis change0.192rad, and at least one elbow moving5.06mm. Quaternion sign is removed by absolute-dot geodesic angles; camera/world transforms cancel in chest-relative features. Tiny decomposition/scale differences are below1e-6rad and do not explain jumps. The four-key compact support crosses full and zero within one recorded interval when actual arm rotations/IK directions move substantially. This audit does not isolate why the upstream arm solver produced those changes.",
+  "specificAlternative": "Retain the connected source-space full sleeve geometry selection, but author anatomically smooth shoulder-upperArm-forearm-cuff skin weights independently of corrupted existing weight eligibility. Keep source shoulder/cuff/hood and grip contacts exact; validate those weights in actual motion before local source sculpt or small corrective shapes. Avoid using large ARAP deformations to carry a bad underlying bind/weight field.",
+  "limits": [
+    "No new model, morphology, rig weights, physics, fade radii, browser or GPU workload.",
+    "Parent owns visual verdict. Upstream IK pole/roll instability is a hypothesis requiring its own evidence; this audit establishes resulting actual bone-pose changes only.",
+    "No interpolation or collision acceptance.",
+    "The observed pose changes may be continuous over10 physics substeps per video frame. A solver discontinuity requires finer pose evidence, not these12fps reports."
+  ],
+  "setupIssues": [
+    {
+      "issue": "First audit reconstructed mesh.bindMatrix from node world transform",
+      "resolution": "Checked actual Three GLTFLoader mesh.bind(skeleton,identity), then recorded loaded bindMatrix and inverse binds via CPU load. Identity matches driver.",
+      "runtimeDefect": false
+    }
+  ],
+  "fullZeroSwitches": [
+    {
+      "i": 1,
+      "tick": 20,
+      "independentFeatures": [
+        [
+          0.1339639849536523,
+          0.018558926912872843,
+          0.19725679856562514,
+          0.9709783583514212
+        ],
+        [
+          -0.18983410092056505,
+          0.02971310767550952,
+          0.6072048206532792,
+          0.7709620296326943
+        ],
+        [
+          -0.133353279974044,
+          -0.01867616380922081,
+          0.19827584761430309,
+          0.970852610790312
+        ],
+        [
+          0.18856969358858935,
+          -0.021126839993094775,
+          0.6029048724639868,
+          0.7749198939574308
+        ]
+      ],
+      "independentDistancesRad": [
+        0.6656982848758984,
+        0.5176831300362441,
+        2.0251215099173137,
+        2.1629829343774967
+      ],
+      "driverNearestRad": 0.517683156975237,
+      "reconstructedNearestRad": 0.5176831300362441,
+      "nearestDifferenceRad": 2.6938992925273908e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.5289052596674805,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.08180928728311473,
+          "wristTravelChestLocalM": 0.11700812421420118,
+          "upperDirectionAngleRad": 0.24861115697943398,
+          "foreDirectionAngleRad": 0.27139963755103635,
+          "actualUpperRotationAngleRad": 0.2505327754161121,
+          "actualForeRotationAngleRad": 0.27771235331026484
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.08181328724479757,
+          "wristTravelChestLocalM": 0.11700167766471435,
+          "upperDirectionAngleRad": 0.24862342138525545,
+          "foreDirectionAngleRad": 0.27103259237130456,
+          "actualUpperRotationAngleRad": 0.25055418220461345,
+          "actualForeRotationAngleRad": 0.2776194239778055
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.3976624054964967,
+        "crouch": 0.3433462923625356,
+        "torsoPitch": -0.08869304702568545,
+        "armExtend": -0.2099745721142888
+      }
+    },
+    {
+      "i": 9,
+      "tick": 100,
+      "independentFeatures": [
+        [
+          0.09494939909057866,
+          0.032553103234122,
+          0.3094211264673215,
+          0.9456127503253436
+        ],
+        [
+          -0.1997782009809998,
+          0.051587132539527396,
+          0.7277911026597734,
+          0.6540241196304735
+        ],
+        [
+          -0.09443131681503084,
+          -0.03268595970874028,
+          0.31044926152521285,
+          0.9453230191109006
+        ],
+        [
+          0.19676681400230955,
+          -0.042853719187324786,
+          0.7247805480657363,
+          0.6588926595468533
+        ]
+      ],
+      "independentDistancesRad": [
+        0.5404525867438414,
+        0.14725128847022173,
+        1.4426514547417526,
+        1.5942524637209763
+      ],
+      "driverNearestRad": 0.14725134804098072,
+      "reconstructedNearestRad": 0.14725128847022173,
+      "nearestDifferenceRad": 5.9570758992322226e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 7.041439653576731e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 1.156129726418975,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.1317034449199299,
+          "wristTravelChestLocalM": 0.2552992875991936,
+          "upperDirectionAngleRad": 0.40190462188746223,
+          "foreDirectionAngleRad": 0.7091233762254878,
+          "actualUpperRotationAngleRad": 0.4026993216022589,
+          "actualForeRotationAngleRad": 0.7115340961146823
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.13153178388261236,
+          "wristTravelChestLocalM": 0.2553080175973246,
+          "upperDirectionAngleRad": 0.4013737078207144,
+          "foreDirectionAngleRad": 0.7097588614745998,
+          "actualUpperRotationAngleRad": 0.4021479230576374,
+          "actualForeRotationAngleRad": 0.7116638620312375
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.7808120927395117,
+        "crouch": -0.14497532923514375,
+        "torsoPitch": 0.3334429597447815,
+        "armExtend": 0.24637515138129792
+      }
+    },
+    {
+      "i": 10,
+      "tick": 110,
+      "independentFeatures": [
+        [
+          0.12546287410334997,
+          0.01317152425161628,
+          0.2094191323779757,
+          0.9696541678168934
+        ],
+        [
+          -0.18553945031305455,
+          0.02828805059075442,
+          0.6584819242824591,
+          0.7288185329453241
+        ],
+        [
+          -0.12491583714500945,
+          -0.013281004003135217,
+          0.21044694840284434,
+          0.9695007635226291
+        ],
+        [
+          0.18383010449943354,
+          -0.01979013349033129,
+          0.6545187393237263,
+          0.7330893964382804
+        ]
+      ],
+      "independentDistancesRad": [
+        0.5276715578838004,
+        0.3655051412528717,
+        1.868221002786041,
+        2.0172348502332547
+      ],
+      "driverNearestRad": 0.3655051753886731,
+      "reconstructedNearestRad": 0.3655051412528717,
+      "nearestDifferenceRad": 3.413580140776418e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.42944161683999016,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.07138185879237666,
+          "wristTravelChestLocalM": 0.10148223852954813,
+          "upperDirectionAngleRad": 0.2167891886557356,
+          "foreDirectionAngleRad": 0.21014261653129407,
+          "actualUpperRotationAngleRad": 0.21814578615925148,
+          "actualForeRotationAngleRad": 0.21122423259850948
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.0714004583387478,
+          "wristTravelChestLocalM": 0.10148022864460016,
+          "upperDirectionAngleRad": 0.21684593892942153,
+          "foreDirectionAngleRad": 0.2099477492838493,
+          "actualUpperRotationAngleRad": 0.2181988571564577,
+          "actualForeRotationAngleRad": 0.21120155085149958
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.3358981580124575,
+        "crouch": 0.3400374886677053,
+        "torsoPitch": -0.09994162692271535,
+        "armExtend": -0.24637515138129792
+      }
+    },
+    {
+      "i": 14,
+      "tick": 150,
+      "independentFeatures": [
+        [
+          -0.020882954542648494,
+          0.0707399900039165,
+          0.681314064919004,
+          0.7282656802069962
+        ],
+        [
+          -0.20887924969512275,
+          0.06576905943686118,
+          0.906081935949712,
+          0.3620212911048402
+        ],
+        [
+          0.021364943838214925,
+          -0.07082778159726001,
+          0.6821662048714092,
+          0.7274450037357735
+        ],
+        [
+          0.20215691204302833,
+          -0.05837520176382134,
+          0.9054947656460544,
+          0.36851614363533336
+        ]
+      ],
+      "independentDistancesRad": [
+        1.9005497051445126,
+        1.700943212713593,
+        0.24991703276290952,
+        0.05267337963478729
+      ],
+      "driverNearestRad": 0.05267350018894368,
+      "reconstructedNearestRad": 0.05267337963478729,
+      "nearestDifferenceRad": 1.2055415638673184e-07,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 2.1715486853146615e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 1.8759686366654322,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.3084404914750301,
+          "wristTravelChestLocalM": 0.45765338741639644,
+          "upperDirectionAngleRad": 0.9728207469950403,
+          "foreDirectionAngleRad": 0.9020240523032832,
+          "actualUpperRotationAngleRad": 0.9728501131850621,
+          "actualForeRotationAngleRad": 0.9021563465743593
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.30843616041177063,
+          "wristTravelChestLocalM": 0.45768527034688805,
+          "upperDirectionAngleRad": 0.972806091548852,
+          "foreDirectionAngleRad": 0.9013622854073179,
+          "actualUpperRotationAngleRad": 0.972837228780856,
+          "actualForeRotationAngleRad": 0.9014003230317233
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -1.1309774484748196,
+        "crouch": 0.008325551303243566,
+        "torsoPitch": 0.19754122008676955,
+        "armExtend": 0.8569500362838098
+      }
+    },
+    {
+      "i": 15,
+      "tick": 160,
+      "independentFeatures": [
+        [
+          0.13053585281656632,
+          0.008678310477725283,
+          0.2729785252176998,
+          0.9530833136859933
+        ],
+        [
+          -0.2087646854947024,
+          -0.00987897616004231,
+          0.7979598705258331,
+          0.56531385703052
+        ],
+        [
+          -0.13001989015762477,
+          -0.008705077490240245,
+          0.27400139579397703,
+          0.9528600552506337
+        ],
+        [
+          0.20502329849938816,
+          0.018121906096867646,
+          0.7955395363847694,
+          0.5698718186053364
+        ]
+      ],
+      "independentDistancesRad": [
+        0.3960713682509798,
+        0.507930139848214,
+        1.3706787797041937,
+        1.570970436742886
+      ],
+      "driverNearestRad": 0.39607146413922,
+      "reconstructedNearestRad": 0.3960713682509798,
+      "nearestDifferenceRad": 9.588824018136322e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.5701323518782433,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.31472143598448354,
+          "wristTravelChestLocalM": 0.3618331873472575,
+          "upperDirectionAngleRad": 0.9944187529631989,
+          "foreDirectionAngleRad": 0.47548773824529933,
+          "actualUpperRotationAngleRad": 0.9983829219080522,
+          "actualForeRotationAngleRad": 0.4859246844978421
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.31480227702444635,
+          "wristTravelChestLocalM": 0.3618277870322939,
+          "upperDirectionAngleRad": 0.9946977587634075,
+          "foreDirectionAngleRad": 0.4736930380438284,
+          "actualUpperRotationAngleRad": 0.9986479011972283,
+          "actualForeRotationAngleRad": 0.4848985814735061
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 1.2307696467023408,
+        "crouch": 0.27507331190902723,
+        "torsoPitch": 0.18528691649869905,
+        "armExtend": -0.8041393343264994
+      }
+    },
+    {
+      "i": 24,
+      "tick": 250,
+      "independentFeatures": [
+        [
+          0.15153496006022948,
+          0.05950317431494077,
+          0.3978172890481383,
+          0.9029052733594929
+        ],
+        [
+          -0.30755589839347924,
+          -0.056502130053062004,
+          0.8142121057197312,
+          0.48915797607959755
+        ],
+        [
+          -0.15090087024593077,
+          -0.059469224102778336,
+          0.39873622810597276,
+          0.9026083088136604
+        ],
+        [
+          0.30140156033456206,
+          0.06539223615021068,
+          0.8136722649678869,
+          0.49276607036320524
+        ]
+      ],
+      "independentDistancesRad": [
+        0.7461506599423127,
+        0.9014564758606958,
+        1.0319195730389263,
+        1.2481466086989783
+      ],
+      "driverNearestRad": 0.7461507076218078,
+      "reconstructedNearestRad": 0.7461506599423127,
+      "nearestDifferenceRad": 4.7679495129848704e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.223789795881597,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.2399223712657357,
+          "wristTravelChestLocalM": 0.26270210771295505,
+          "upperDirectionAngleRad": 0.7442875128513713,
+          "foreDirectionAngleRad": 0.354593782668137,
+          "actualUpperRotationAngleRad": 0.751790252290512,
+          "actualForeRotationAngleRad": 0.428896027562995
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.24002405251741823,
+          "wristTravelChestLocalM": 0.2626996719755457,
+          "upperDirectionAngleRad": 0.7446185200902151,
+          "foreDirectionAngleRad": 0.3536839949574254,
+          "actualUpperRotationAngleRad": 0.7521174709675235,
+          "actualForeRotationAngleRad": 0.42759835010441777
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.875793960370072,
+        "crouch": 0.42141485523745525,
+        "torsoPitch": 0.16135408530236311,
+        "armExtend": -0.5533824298209437
+      }
+    },
+    {
+      "i": 27,
+      "tick": 280,
+      "independentFeatures": [
+        [
+          0.05815674293462072,
+          -0.022298529388029904,
+          0.12935698619058655,
+          0.9896400047300311
+        ],
+        [
+          -0.044795011807594945,
+          0.06061502347490008,
+          0.5207967392437333,
+          0.85034697755645
+        ],
+        [
+          -0.05787606220030367,
+          0.022051079644857266,
+          0.1305898167836713,
+          0.9895000813860958
+        ],
+        [
+          0.046199493942086535,
+          -0.05419672995283138,
+          0.5142164126052208,
+          0.8546986616517733
+        ]
+      ],
+      "independentDistancesRad": [
+        1.223970010755705,
+        0.9586485743677922,
+        2.4507894636672587,
+        2.5552617794441335
+      ],
+      "driverNearestRad": 0.9586487027520286,
+      "reconstructedNearestRad": 0.9586485743677922,
+      "nearestDifferenceRad": 1.2838423646410746e-07,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.0289816292082328,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.1296556249204834,
+          "wristTravelChestLocalM": 0.23717737592208454,
+          "upperDirectionAngleRad": 0.39557205307741755,
+          "foreDirectionAngleRad": 0.6062822913723289,
+          "actualUpperRotationAngleRad": 0.3969362681367477,
+          "actualForeRotationAngleRad": 0.6100617299486233
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.12955605311308072,
+          "wristTravelChestLocalM": 0.23717406523384732,
+          "upperDirectionAngleRad": 0.3952643192839456,
+          "foreDirectionAngleRad": 0.6065843486421505,
+          "actualUpperRotationAngleRad": 0.3966109512371124,
+          "actualForeRotationAngleRad": 0.609728791926917
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.848288160609903,
+        "crouch": 0.16344323423757876,
+        "torsoPitch": -0.2520715109443427,
+        "armExtend": -0.2556602207188588
+      }
+    },
+    {
+      "i": 46,
+      "tick": 470,
+      "independentFeatures": [
+        [
+          0.0893849602302645,
+          0.016551197239727193,
+          0.2892220096484267,
+          0.9529359977928692
+        ],
+        [
+          -0.15136196320304865,
+          0.049019459208610984,
+          0.7113999402471654,
+          0.6845412870897883
+        ],
+        [
+          -0.08891711499115589,
+          -0.01668624894353418,
+          0.2902930542049989,
+          0.9526516983862349
+        ],
+        [
+          0.14949039992938865,
+          -0.04095687141824939,
+          0.7074207858251991,
+          0.6895875483178611
+        ]
+      ],
+      "independentDistancesRad": [
+        0.5993152985054365,
+        0.13187006524925912,
+        1.5697067140630314,
+        1.7079801627046176
+      ],
+      "driverNearestRad": 0.13187013212874307,
+      "reconstructedNearestRad": 0.13187006524925912,
+      "nearestDifferenceRad": 6.687948395089904e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 5.225560650856664e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.3712223204172511,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.050881149282433494,
+          "wristTravelChestLocalM": 0.07402040582212864,
+          "upperDirectionAngleRad": 0.15437865493091957,
+          "foreDirectionAngleRad": 0.19154144409289242,
+          "actualUpperRotationAngleRad": 0.16046893993943345,
+          "actualForeRotationAngleRad": 0.20847721733452063
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.05083231941362298,
+          "wristTravelChestLocalM": 0.07400212009294554,
+          "upperDirectionAngleRad": 0.15423023203555047,
+          "foreDirectionAngleRad": 0.1914260952079679,
+          "actualUpperRotationAngleRad": 0.16029764239343391,
+          "actualForeRotationAngleRad": 0.20711744317671293
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.40454734103552376,
+        "crouch": -0.056649779114954876,
+        "torsoPitch": -0.013002447425781744,
+        "armExtend": 0.18219880530745414
+      }
+    },
+    {
+      "i": 51,
+      "tick": 520,
+      "independentFeatures": [
+        [
+          -0.0029017813938260056,
+          0.06459194562104748,
+          0.6459072317139198,
+          0.7606729311900686
+        ],
+        [
+          -0.24341965804107013,
+          0.04757756198467096,
+          0.9170460766811951,
+          0.3122654942807336
+        ],
+        [
+          0.0033519875203189796,
+          -0.06466848231546836,
+          0.6467231272041678,
+          0.7599710180749919
+        ],
+        [
+          0.23553452075945913,
+          -0.040294957568173015,
+          0.9174350722352161,
+          0.3181394256579256
+        ]
+      ],
+      "independentDistancesRad": [
+        1.833113544102568,
+        1.695879693884891,
+        0.15488890923770304,
+        0.2820844612390641
+      ],
+      "driverNearestRad": 0.1548889308778721,
+      "reconstructedNearestRad": 0.15488890923770304,
+      "nearestDifferenceRad": 2.1640169045600288e-08,
+      "driverStrength": 0.9982365899880795,
+      "reconstructedStrength": 0.9982366054697129,
+      "strengthDifference": 1.5481633419689445e-08,
+      "maximumWeightDifference": 8.51529829981601e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 0.9982365899880795,
+      "actualFeatureTravelRad": 0.6379288209999892,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.00495834727491015,
+          "wristTravelChestLocalM": 0.1205533774331316,
+          "upperDirectionAngleRad": 0.015029344473401556,
+          "foreDirectionAngleRad": 0.44561971044718074,
+          "actualUpperRotationAngleRad": 0.04163896749199796,
+          "actualForeRotationAngleRad": 0.448622244587655
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.00505986242009587,
+          "wristTravelChestLocalM": 0.12058012826551284,
+          "upperDirectionAngleRad": 0.015337056860636524,
+          "foreDirectionAngleRad": 0.4470996667390619,
+          "actualUpperRotationAngleRad": 0.041971676979243415,
+          "actualForeRotationAngleRad": 0.44966190314326215
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.12934523757219052,
+        "crouch": 0.03702986131395229,
+        "torsoPitch": 0.12823005004024107,
+        "armExtend": 0.0
+      }
+    },
+    {
+      "i": 79,
+      "tick": 800,
+      "independentFeatures": [
+        [
+          0.05865363279418766,
+          0.05238967703273604,
+          0.5253201553417399,
+          0.8472625375243382
+        ],
+        [
+          -0.26344220028426507,
+          0.014958609770356665,
+          0.8927922642415808,
+          0.36509782252639517
+        ],
+        [
+          -0.05816858615231077,
+          -0.05244554805731812,
+          0.5262158781944101,
+          0.8467365172295893
+        ],
+        [
+          0.25612633576555055,
+          -0.007138583750644273,
+          0.8929354060463552,
+          0.37015496940900067
+        ]
+      ],
+      "independentDistancesRad": [
+        1.35769710754433,
+        1.3032251672746982,
+        0.39862052580025426,
+        0.6637807364617344
+      ],
+      "driverNearestRad": 0.3986205561263987,
+      "reconstructedNearestRad": 0.39862052580025426,
+      "nearestDifferenceRad": 3.032614442899373e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.7091907913810338,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.15261961319336137,
+          "wristTravelChestLocalM": 0.15305808409302635,
+          "upperDirectionAngleRad": 0.46683147460632274,
+          "foreDirectionAngleRad": 0.1400314558616548,
+          "actualUpperRotationAngleRad": 0.4700874819157304,
+          "actualForeRotationAngleRad": 0.17426734121791368
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.15274810686204235,
+          "wristTravelChestLocalM": 0.1530541397646408,
+          "upperDirectionAngleRad": 0.4672319042516917,
+          "foreDirectionAngleRad": 0.14079980869258799,
+          "actualUpperRotationAngleRad": 0.47048582307834774,
+          "actualForeRotationAngleRad": 0.17390601915522064
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.706571071013746,
+        "crouch": 0.24112228357584534,
+        "torsoPitch": 0.11584526363370845,
+        "armExtend": -0.19614532498323578
+      }
+    },
+    {
+      "i": 84,
+      "tick": 850,
+      "independentFeatures": [
+        [
+          0.1277795474208393,
+          0.02717579883131254,
+          0.3189135391629455,
+          0.9387374594408013
+        ],
+        [
+          -0.2012054277634028,
+          -0.0008094231749397329,
+          0.758381743188343,
+          0.619978106283827
+        ],
+        [
+          -0.1272294404543578,
+          -0.02721112364095429,
+          0.3199062642428799,
+          0.9384733381029173
+        ],
+        [
+          0.19806246624554216,
+          0.009146103651381958,
+          0.7553479725785771,
+          0.6246095168776767
+        ]
+      ],
+      "independentDistancesRad": [
+        0.4441878010140137,
+        0.35690928136043465,
+        1.3654929772084892,
+        1.5338420172792477
+      ],
+      "driverNearestRad": 0.35690938561583685,
+      "reconstructedNearestRad": 0.35690928136043465,
+      "nearestDifferenceRad": 1.0425540220015961e-07,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.5185939764851413,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.28325374775491946,
+          "wristTravelChestLocalM": 0.36088325634769897,
+          "upperDirectionAngleRad": 0.8873996334589193,
+          "foreDirectionAngleRad": 0.5861314146788767,
+          "actualUpperRotationAngleRad": 0.8908360655278846,
+          "actualForeRotationAngleRad": 0.599608855719558
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.2833394598666621,
+          "wristTravelChestLocalM": 0.36088938956976313,
+          "upperDirectionAngleRad": 0.8876874735947731,
+          "foreDirectionAngleRad": 0.5848199596951609,
+          "actualUpperRotationAngleRad": 0.8911103379932758,
+          "actualForeRotationAngleRad": 0.5991079097587984
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 1.0474458266047726,
+        "crouch": 0.2062888393960279,
+        "torsoPitch": 0.1311876820326624,
+        "armExtend": -0.720824436199329
+      }
+    },
+    {
+      "i": 90,
+      "tick": 910,
+      "independentFeatures": [
+        [
+          0.14343911762098016,
+          0.0021013520161611288,
+          0.2310450950192615,
+          0.9623091852015958
+        ],
+        [
+          -0.22771661673225874,
+          -0.025641049866689136,
+          0.80434987326007,
+          0.5481869757776603
+        ],
+        [
+          -0.14288631385517206,
+          -0.0021013593959897797,
+          0.23209009451159202,
+          0.9621399449306586
+        ],
+        [
+          0.22355755269053487,
+          0.03399707010583437,
+          0.8023255631214039,
+          0.5523947054608325
+        ]
+      ],
+      "independentDistancesRad": [
+        0.33936957284133196,
+        0.61252586760628,
+        1.4640148554232786,
+        1.6786325657272918
+      ],
+      "driverNearestRad": 0.339369720632557,
+      "reconstructedNearestRad": 0.33936957284133196,
+      "nearestDifferenceRad": 1.4779122503583153e-07,
+      "driverStrength": 0.008174900019127795,
+      "reconstructedStrength": 0.008175123154272379,
+      "strengthDifference": 2.2313514458360828e-07,
+      "maximumWeightDifference": 1.6023708197202696e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -0.9918250999808722,
+      "actualFeatureTravelRad": 1.6103463985932187,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.3295328006581338,
+          "wristTravelChestLocalM": 0.36342677097635945,
+          "upperDirectionAngleRad": 1.0458629071409888,
+          "foreDirectionAngleRad": 0.4232619799717032,
+          "actualUpperRotationAngleRad": 1.050352077113842,
+          "actualForeRotationAngleRad": 0.44004754829398063
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.3296022093567414,
+          "wristTravelChestLocalM": 0.363419658327786,
+          "upperDirectionAngleRad": 1.0461059660344991,
+          "foreDirectionAngleRad": 0.42130167619760034,
+          "actualUpperRotationAngleRad": 1.0505793335281872,
+          "actualForeRotationAngleRad": 0.43888171445700014
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 1.293055310881232,
+        "crouch": 0.23076344735277607,
+        "torsoPitch": 0.06666648783709095,
+        "armExtend": -0.8999754401407922
+      }
+    },
+    {
+      "i": 93,
+      "tick": 940,
+      "independentFeatures": [
+        [
+          0.0717852005989907,
+          0.03436008028614521,
+          0.3167673665069767,
+          0.9451585609694954
+        ],
+        [
+          -0.18691995036917838,
+          0.07496533578428044,
+          0.7330619372104246,
+          0.6496624714403887
+        ],
+        [
+          -0.07131667605809486,
+          -0.03452974300765752,
+          0.3178144919563577,
+          0.944836270084067
+        ],
+        [
+          0.1838652550695324,
+          -0.06623170364791893,
+          0.7300715168645039,
+          0.6548301380306747
+        ]
+      ],
+      "independentDistancesRad": [
+        0.6313067154611061,
+        0.13584604687098448,
+        1.40910290712591,
+        1.5546303054028368
+      ],
+      "driverNearestRad": 0.13584610858232044,
+      "reconstructedNearestRad": 0.13584604687098448,
+      "nearestDifferenceRad": 6.171133595800349e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 5.563837746080935e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.6119697537394132,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.03483387241805849,
+          "wristTravelChestLocalM": 0.10852971615150894,
+          "upperDirectionAngleRad": 0.10563374548594874,
+          "foreDirectionAngleRad": 0.41631832201728064,
+          "actualUpperRotationAngleRad": 0.10897749561501188,
+          "actualForeRotationAngleRad": 0.41856112321166866
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.03472684294460651,
+          "wristTravelChestLocalM": 0.10856814364013906,
+          "upperDirectionAngleRad": 0.1053089019539671,
+          "foreDirectionAngleRad": 0.41718727474928013,
+          "actualUpperRotationAngleRad": 0.10871827542505019,
+          "actualForeRotationAngleRad": 0.4190677841692697
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.09845252851379872,
+        "crouch": -0.05872296177270254,
+        "torsoPitch": -0.16171834228436946,
+        "armExtend": -0.07452461386194925
+      }
+    },
+    {
+      "i": 94,
+      "tick": 950,
+      "independentFeatures": [
+        [
+          0.11811909468477981,
+          0.014291115171508419,
+          0.1898348084230565,
+          0.9745801090772294
+        ],
+        [
+          -0.1632022568562982,
+          0.04204719174827512,
+          0.5930815218351717,
+          0.7873063987297267
+        ],
+        [
+          -0.1175437890794142,
+          -0.014436417449101943,
+          0.19089871896383015,
+          0.9744396988003198
+        ],
+        [
+          0.16239784270174748,
+          -0.03376720950278744,
+          0.5883387746223511,
+          0.7914191067469144
+        ]
+      ],
+      "independentDistancesRad": [
+        0.7673643737222068,
+        0.5611001099304808,
+        2.0848285031739144,
+        2.214644929343976
+      ],
+      "driverNearestRad": 0.5611001508025768,
+      "reconstructedNearestRad": 0.5611001099304808,
+      "nearestDifferenceRad": 4.087209604097808e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.6923368626011792,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.09170574131874165,
+          "wristTravelChestLocalM": 0.16060062900572497,
+          "upperDirectionAngleRad": 0.27887122515282436,
+          "foreDirectionAngleRad": 0.3983493413345369,
+          "actualUpperRotationAngleRad": 0.2797066551077847,
+          "actualForeRotationAngleRad": 0.4016058031136363
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.09170125617797222,
+          "wristTravelChestLocalM": 0.16060618190023176,
+          "upperDirectionAngleRad": 0.27885755017454367,
+          "foreDirectionAngleRad": 0.3983824237458508,
+          "actualUpperRotationAngleRad": 0.2796892162281091,
+          "actualForeRotationAngleRad": 0.4019716775635692
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.4919629838585432,
+        "crouch": 0.2934887076804175,
+        "torsoPitch": -0.14726080653831042,
+        "armExtend": -0.2708557094948467
+      }
+    },
+    {
+      "i": 100,
+      "tick": 1010,
+      "independentFeatures": [
+        [
+          0.0004527314210466087,
+          0.06435187016514148,
+          0.6181890741885508,
+          0.783390643545359
+        ],
+        [
+          -0.21822658095661707,
+          0.06319817040974189,
+          0.8954500072991106,
+          0.3828216752599952
+        ],
+        [
+          2.108824230896006e-06,
+          -0.06445139404159259,
+          0.6190626148737763,
+          0.7826924662134489
+        ],
+        [
+          0.2115535945430426,
+          -0.05555209488818876,
+          0.8949070445568837,
+          0.38897355050429266
+        ]
+      ],
+      "independentDistancesRad": [
+        1.6573312083729876,
+        1.4728997940247706,
+        0.10261462591479559,
+        0.2680334898371412
+      ],
+      "driverNearestRad": 0.1026145575529873,
+      "reconstructedNearestRad": 0.10261462591479559,
+      "nearestDifferenceRad": 6.836180828362348e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 2.2603368898810317e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.9926116088214673,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.09305442845837686,
+          "wristTravelChestLocalM": 0.22962466186700817,
+          "upperDirectionAngleRad": 0.2829998924119014,
+          "foreDirectionAngleRad": 0.6399412950213881,
+          "actualUpperRotationAngleRad": 0.28715937182722123,
+          "actualForeRotationAngleRad": 0.6399790698712409
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.09287034865175632,
+          "wristTravelChestLocalM": 0.22967858866251661,
+          "upperDirectionAngleRad": 0.2824363629286076,
+          "foreDirectionAngleRad": 0.6411382693982368,
+          "actualUpperRotationAngleRad": 0.28666496259621266,
+          "actualForeRotationAngleRad": 0.6411452869761044
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.3033770100782416,
+        "crouch": 0.0,
+        "torsoPitch": 0.2824598042672223,
+        "armExtend": 0.27552566112342514
+      }
+    },
+    {
+      "i": 115,
+      "tick": 1160,
+      "independentFeatures": [
+        [
+          -0.10587210800764399,
+          0.06142410421549692,
+          0.5574925100314296,
+          0.821109175095613
+        ],
+        [
+          0.12664642873532053,
+          0.04476005197514461,
+          0.20186915587028395,
+          0.9701577519888148
+        ],
+        [
+          0.10554527453995702,
+          -0.06110583320165133,
+          0.5561702517873269,
+          0.8220711180900584
+        ],
+        [
+          -0.12200677135662116,
+          -0.043697289113386543,
+          0.19551799169901554,
+          0.9720995883083471
+        ]
+      ],
+      "independentDistancesRad": [
+        2.5859516293039833,
+        2.155443254249663,
+        2.9903046490178764,
+        2.9210917521810784
+      ],
+      "driverNearestRad": 2.15544317254159,
+      "reconstructedNearestRad": 2.155443254249663,
+      "nearestDifferenceRad": 8.170807319629603e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 2.585951628451847,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.3047178085144084,
+          "wristTravelChestLocalM": 0.194648220474613,
+          "upperDirectionAngleRad": 0.9600779028516458,
+          "foreDirectionAngleRad": 1.5504386443868954,
+          "actualUpperRotationAngleRad": 0.9718391571156131,
+          "actualForeRotationAngleRad": 1.5516647620929942
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.3031627973135181,
+          "wristTravelChestLocalM": 0.19471628029091284,
+          "upperDirectionAngleRad": 0.9547677717570685,
+          "foreDirectionAngleRad": 1.5478786667085158,
+          "actualUpperRotationAngleRad": 0.966476816003864,
+          "actualForeRotationAngleRad": 1.549494585329354
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.4569442187071713,
+        "crouch": -0.3681028767177467,
+        "torsoPitch": -0.5099977149053473,
+        "armExtend": 0.06344664373814521
+      }
+    },
+    {
+      "i": 129,
+      "tick": 1300,
+      "independentFeatures": [
+        [
+          0.01910426498829338,
+          0.057923126750467256,
+          0.47011137340664305,
+          0.880497152204609
+        ],
+        [
+          -0.13408224996154394,
+          0.09578557813929013,
+          0.7493146740299885,
+          0.6413849020277169
+        ],
+        [
+          -0.018586880314032488,
+          -0.05811476825833996,
+          0.47126037089840517,
+          0.8798811649371573
+        ],
+        [
+          0.13143196493960466,
+          -0.08771295134787314,
+          0.745499333650801,
+          0.6475050735586341
+        ]
+      ],
+      "independentDistancesRad": [
+        1.0892249856841663,
+        0.6236278051351978,
+        1.1082056779895708,
+        1.1743069827040413
+      ],
+      "driverNearestRad": 0.6236277484479166,
+      "reconstructedNearestRad": 0.6236278051351978,
+      "nearestDifferenceRad": 5.6687281202449924e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.5785162625237676,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.1265477607782226,
+          "wristTravelChestLocalM": 0.13786621248440767,
+          "upperDirectionAngleRad": 0.385969111169854,
+          "foreDirectionAngleRad": 0.10450741746336613,
+          "actualUpperRotationAngleRad": 0.3862243567536372,
+          "actualForeRotationAngleRad": 0.13480984476480837
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1266801008097943,
+          "wristTravelChestLocalM": 0.13787778140846596,
+          "upperDirectionAngleRad": 0.386377915554186,
+          "foreDirectionAngleRad": 0.10385496505508766,
+          "actualUpperRotationAngleRad": 0.38663085488063886,
+          "actualForeRotationAngleRad": 0.13362144734259093
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.3257739126288967,
+        "crouch": -0.018525022610308417,
+        "torsoPitch": -0.17122518220748217,
+        "armExtend": 0.437041806834626
+      }
+    },
+    {
+      "i": 145,
+      "tick": 1460,
+      "independentFeatures": [
+        [
+          0.022907607775519066,
+          0.05487422572557766,
+          0.40450619832726536,
+          0.9126000199275938
+        ],
+        [
+          -0.10885985213856765,
+          0.10247605539449958,
+          0.6772977215115946,
+          0.720358235254068
+        ],
+        [
+          -0.02224354071807709,
+          -0.05507841605358137,
+          0.4057405687295054,
+          0.9120560201371456
+        ],
+        [
+          0.10720247737665307,
+          -0.09458677616261707,
+          0.6725220854106007,
+          0.7261370499116873
+        ]
+      ],
+      "independentDistancesRad": [
+        1.0353304402248722,
+        0.47377255212945213,
+        1.479606527767412,
+        1.5455402050418978
+      ],
+      "driverNearestRad": 0.4737725072353473,
+      "reconstructedNearestRad": 0.47377255212945213,
+      "nearestDifferenceRad": 4.489410482255707e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.34868092417693725,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.0720403850184237,
+          "wristTravelChestLocalM": 0.06628757046752695,
+          "upperDirectionAngleRad": 0.21879713737676165,
+          "foreDirectionAngleRad": 0.10058950486023824,
+          "actualUpperRotationAngleRad": 0.21973150288417403,
+          "actualForeRotationAngleRad": 0.11107691535610983
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.07220373184691203,
+          "wristTravelChestLocalM": 0.06628748124773379,
+          "upperDirectionAngleRad": 0.2192952815605073,
+          "foreDirectionAngleRad": 0.10167307601460883,
+          "actualUpperRotationAngleRad": 0.2202325159466104,
+          "actualForeRotationAngleRad": 0.11160648467216916
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.1581998403913227,
+        "crouch": -0.004334070115794564,
+        "torsoPitch": -0.1360210567615303,
+        "armExtend": 0.21284903082572468
+      }
+    },
+    {
+      "i": 156,
+      "tick": 1570,
+      "independentFeatures": [
+        [
+          0.04770427530447336,
+          0.0518413895279431,
+          0.5167048324702201,
+          0.8532601529143434
+        ],
+        [
+          -0.25216527736183875,
+          0.03468475691756989,
+          0.8839420813204889,
+          0.392244869184287
+        ],
+        [
+          -0.0472365248201963,
+          -0.05192348064114051,
+          0.517609632344196,
+          0.8527326259652123
+        ],
+        [
+          0.24519787117861447,
+          -0.026714245660602272,
+          0.8838094494593679,
+          0.3975490033877452
+        ]
+      ],
+      "independentDistancesRad": [
+        1.3071661630357054,
+        1.2125884634736424,
+        0.4118993890090724,
+        0.6633339787146454
+      ],
+      "driverNearestRad": 0.4118994182456219,
+      "reconstructedNearestRad": 0.4118993890090724,
+      "nearestDifferenceRad": 2.923654945918841e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.6652884555397522,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.14726953547216742,
+          "wristTravelChestLocalM": 0.1496919916822315,
+          "upperDirectionAngleRad": 0.450179173851216,
+          "foreDirectionAngleRad": 0.08994680409158481,
+          "actualUpperRotationAngleRad": 0.45157458977028453,
+          "actualForeRotationAngleRad": 0.13172458073732704
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1473848194681091,
+          "wristTravelChestLocalM": 0.14969520926349444,
+          "upperDirectionAngleRad": 0.45053774476103,
+          "foreDirectionAngleRad": 0.09006452132515229,
+          "actualUpperRotationAngleRad": 0.4519298933977027,
+          "actualForeRotationAngleRad": 0.13075591776770848
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7019442179009499,
+        "crouch": 0.5634784108144641,
+        "torsoPitch": 0.02517929723569995,
+        "armExtend": -0.20689633028161525
+      }
+    },
+    {
+      "i": 168,
+      "tick": 1690,
+      "independentFeatures": [
+        [
+          0.05855155197445584,
+          0.04907404271673768,
+          0.47703832277440783,
+          0.8755557621861662
+        ],
+        [
+          -0.2787916697390963,
+          0.02708723959397885,
+          0.8775365691715348,
+          0.3891928263752009
+        ],
+        [
+          -0.05807066172281688,
+          -0.04915773197816423,
+          0.4779543520204571,
+          0.87508339775049
+        ],
+        [
+          0.2712571336008751,
+          -0.018901188681208034,
+          0.8779321167761689,
+          0.39407805174862226
+        ]
+      ],
+      "independentDistancesRad": [
+        1.201859834008807,
+        1.1563050579987861,
+        0.5523573557792658,
+        0.8111606743292944
+      ],
+      "driverNearestRad": 0.5523573619241414,
+      "reconstructedNearestRad": 0.5523573557792658,
+      "nearestDifferenceRad": 6.1448756083493095e-09,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.8136219505090608,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.1774399021927632,
+          "wristTravelChestLocalM": 0.18068659727758324,
+          "upperDirectionAngleRad": 0.5445394768090652,
+          "foreDirectionAngleRad": 0.11021958104748328,
+          "actualUpperRotationAngleRad": 0.5455318988502953,
+          "actualForeRotationAngleRad": 0.18315977382578089
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1775575026994708,
+          "wristTravelChestLocalM": 0.18069593990131544,
+          "upperDirectionAngleRad": 0.5449096798882257,
+          "foreDirectionAngleRad": 0.1104572227782079,
+          "actualUpperRotationAngleRad": 0.5458971333501597,
+          "actualForeRotationAngleRad": 0.18117510870616205
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.760215273991002,
+        "crouch": 0.11349180703765449,
+        "torsoPitch": 0.18618977154781927,
+        "armExtend": -0.3188808043819582
+      }
+    },
+    {
+      "i": 171,
+      "tick": 1720,
+      "independentFeatures": [
+        [
+          0.002902335136994283,
+          0.06247852628792175,
+          0.5047810869465218,
+          0.8609785505253486
+        ],
+        [
+          -0.11671423107810405,
+          0.10200458249510683,
+          0.7469703207571358,
+          0.6465355313684065
+        ],
+        [
+          -0.0016883423926513064,
+          -0.062459078173043796,
+          0.5058821266729924,
+          0.8603367288257252
+        ],
+        [
+          0.11346533037510932,
+          -0.09463812943604344,
+          0.7429597445800578,
+          0.652824678756287
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2183340905465527,
+        0.7492172658989581,
+        1.090615920241703,
+        1.124977164409846
+      ],
+      "driverNearestRad": 0.7492171884482479,
+      "reconstructedNearestRad": 0.7492172658989581,
+      "nearestDifferenceRad": 7.745071017861704e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -0.9956920292669799,
+      "actualFeatureTravelRad": 0.7121294995344526,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.15218967406483033,
+          "wristTravelChestLocalM": 0.17813053611444812,
+          "upperDirectionAngleRad": 0.46549207285571537,
+          "foreDirectionAngleRad": 0.1678107478536972,
+          "actualUpperRotationAngleRad": 0.4655195322061524,
+          "actualForeRotationAngleRad": 0.1913927963168756
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.15236870341671527,
+          "wristTravelChestLocalM": 0.17815190978587186,
+          "upperDirectionAngleRad": 0.46604987376103835,
+          "foreDirectionAngleRad": 0.16754101813511757,
+          "actualUpperRotationAngleRad": 0.4660765243457913,
+          "actualForeRotationAngleRad": 0.19121048486727882
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.3262791256728225,
+        "crouch": -0.0008865424277767117,
+        "torsoPitch": -0.1190424814392201,
+        "armExtend": 0.5383777442696289
+      }
+    },
+    {
+      "i": 172,
+      "tick": 1730,
+      "independentFeatures": [
+        [
+          0.00231009794644604,
+          0.0638444637178079,
+          0.6066809033432571,
+          0.7923741726095527
+        ],
+        [
+          -0.2188541614284783,
+          0.06490292883733129,
+          0.8914932274946781,
+          0.39131865683212236
+        ],
+        [
+          -0.0018576800301520688,
+          -0.06394858290655346,
+          0.6075613060055345,
+          0.7916921037966709
+        ],
+        [
+          0.21223030001622206,
+          -0.057181373992245495,
+          0.8909163267580719,
+          0.39743765415381566
+        ]
+      ],
+      "independentDistancesRad": [
+        1.611414759430577,
+        1.42443326992233,
+        0.13612810769469422,
+        0.3114415458236433
+      ],
+      "driverNearestRad": 0.13612805774636486,
+      "reconstructedNearestRad": 0.13612810769469422,
+      "nearestDifferenceRad": 4.9948329361448884e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.475962945196585e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.9547978824082958,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.07929895475097343,
+          "wristTravelChestLocalM": 0.21608900517729596,
+          "upperDirectionAngleRad": 0.24094476737924334,
+          "foreDirectionAngleRad": 0.6276762359827586,
+          "actualUpperRotationAngleRad": 0.2458566220814092,
+          "actualForeRotationAngleRad": 0.6281394015624094
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.07914412648101195,
+          "wristTravelChestLocalM": 0.21613865308288488,
+          "upperDirectionAngleRad": 0.24047209637531144,
+          "foreDirectionAngleRad": 0.6292082385027152,
+          "actualUpperRotationAngleRad": 0.24553539916312084,
+          "actualForeRotationAngleRad": 0.6295607718970914
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.2263389783606039,
+        "crouch": 0.008297575654152197,
+        "torsoPitch": 0.09832837215787549,
+        "armExtend": 0.2626247979236326
+      }
+    },
+    {
+      "i": 186,
+      "tick": 1870,
+      "independentFeatures": [
+        [
+          0.07616202824334807,
+          0.03127929926857185,
+          0.2871521786516266,
+          0.9543398646115286
+        ],
+        [
+          -0.18266076587440874,
+          0.07680570519329484,
+          0.7092044559308994,
+          0.6765833045144495
+        ],
+        [
+          -0.07569030240203299,
+          -0.03145807014945546,
+          0.28821030250072444,
+          0.9540525087631193
+        ],
+        [
+          0.17999619583398546,
+          -0.06803685277097123,
+          0.7059507798524102,
+          0.6816200206684725
+        ]
+      ],
+      "independentDistancesRad": [
+        0.6125975618667931,
+        1.8848643661548972e-07,
+        1.5443610396297136,
+        1.68691094380597
+      ],
+      "driverNearestRad": 0,
+      "reconstructedNearestRad": 1.8848643661548972e-07,
+      "nearestDifferenceRad": 1.8848643661548972e-07,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.220135104063047e-13,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.4463927504221201,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.03316980195532442,
+          "wristTravelChestLocalM": 0.08751467498745906,
+          "upperDirectionAngleRad": 0.10058308594888607,
+          "foreDirectionAngleRad": 0.2984180897444071,
+          "actualUpperRotationAngleRad": 0.10213896347276923,
+          "actualForeRotationAngleRad": 0.29841879380177083
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.03311623787105535,
+          "wristTravelChestLocalM": 0.08754489965352959,
+          "upperDirectionAngleRad": 0.1004205452988922,
+          "foreDirectionAngleRad": 0.29894412144089727,
+          "actualUpperRotationAngleRad": 0.10200551460541316,
+          "actualForeRotationAngleRad": 0.2989568846747719
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.12333723801915634,
+        "crouch": -0.036313265482459764,
+        "torsoPitch": -0.13036985172985632,
+        "armExtend": -0.1418081850492088
+      }
+    },
+    {
+      "i": 189,
+      "tick": 1900,
+      "independentFeatures": [
+        [
+          0.0013202365585326392,
+          0.06717154359321023,
+          0.5376378534320756,
+          0.8404949608794126
+        ],
+        [
+          -0.12816868364881184,
+          0.09747419399247664,
+          0.766786734714951,
+          0.6213772392857909
+        ],
+        [
+          -0.0008632758333577716,
+          -0.067402501988369,
+          0.5388501445842265,
+          0.8397003508169456
+        ],
+        [
+          0.12546420820408996,
+          -0.08946471596869514,
+          0.7628965247841865,
+          0.6278882779034599
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2894174186406226,
+        0.8622571661118147,
+        0.9623273785270567,
+        0.9832391536843496
+      ],
+      "driverNearestRad": 0.8622571377803755,
+      "reconstructedNearestRad": 0.8622571661118147,
+      "nearestDifferenceRad": 2.833143919467318e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.805757749570809,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.17133847493019488,
+          "wristTravelChestLocalM": 0.20406783262794348,
+          "upperDirectionAngleRad": 0.5253635487254699,
+          "foreDirectionAngleRad": 0.20011601648185834,
+          "actualUpperRotationAngleRad": 0.5253760062513789,
+          "actualForeRotationAngleRad": 0.22050514987720188
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.17152400706564,
+          "wristTravelChestLocalM": 0.20409374661581497,
+          "upperDirectionAngleRad": 0.5259460153820185,
+          "foreDirectionAngleRad": 0.1988289197662884,
+          "actualUpperRotationAngleRad": 0.5259577517244964,
+          "actualForeRotationAngleRad": 0.21902399741424566
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.32609667640889106,
+        "crouch": -0.0045013102489873304,
+        "torsoPitch": -0.09314860381286352,
+        "armExtend": 0.6051170251430792
+      }
+    },
+    {
+      "i": 192,
+      "tick": 1930,
+      "independentFeatures": [
+        [
+          0.06756444176060575,
+          0.033483438583768343,
+          0.29592791036783567,
+          0.9522292672542212
+        ],
+        [
+          -0.16650084593339426,
+          0.0834513285596084,
+          0.6979782552200329,
+          0.6914764633052229
+        ],
+        [
+          -0.06709957853105199,
+          -0.033675246821640685,
+          0.29700994687905946,
+          0.9519184396613795
+        ],
+        [
+          0.16418225201257744,
+          -0.07482428060096895,
+          0.694378136467792,
+          0.6966236564689305
+        ]
+      ],
+      "independentDistancesRad": [
+        0.6807879466707023,
+        0.0807304762419022,
+        1.5675671567709808,
+        1.6985107661794339
+      ],
+      "driverNearestRad": 0.0807304319566634,
+      "reconstructedNearestRad": 0.0807304762419022,
+      "nearestDifferenceRad": 4.428523879551616e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.770943158785343e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.5793996471417601,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.03695911368345452,
+          "wristTravelChestLocalM": 0.11135741362002531,
+          "upperDirectionAngleRad": 0.11208510335764091,
+          "foreDirectionAngleRad": 0.39272859586609477,
+          "actualUpperRotationAngleRad": 0.11532659474042022,
+          "actualForeRotationAngleRad": 0.392800646347145
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.03687319724522168,
+          "wristTravelChestLocalM": 0.11139707232996715,
+          "upperDirectionAngleRad": 0.11182430004502619,
+          "foreDirectionAngleRad": 0.39349335642881417,
+          "actualUpperRotationAngleRad": 0.1151201231618388,
+          "actualForeRotationAngleRad": 0.39352094996694037
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.10949448917694532,
+        "crouch": -0.04615716685687647,
+        "torsoPitch": -0.20377323628205518,
+        "armExtend": -0.15576723889736982
+      }
+    },
+    {
+      "i": 195,
+      "tick": 1960,
+      "independentFeatures": [
+        [
+          0.0011385740336288426,
+          0.06724215207751315,
+          0.5385884182591689,
+          0.8398807726994595
+        ],
+        [
+          -0.1284389477650374,
+          0.09743205551859123,
+          0.7675893204969485,
+          0.6203362526190657
+        ],
+        [
+          -0.0006816102084021836,
+          -0.06747265781245136,
+          0.5397993344617654,
+          0.839085010216416
+        ],
+        [
+          0.12571942734189798,
+          -0.0894225897375312,
+          0.763711464978534,
+          0.6268516764704389
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2920306743021697,
+        0.8661288277663937,
+        0.957804318015249,
+        0.9782994251674482
+      ],
+      "driverNearestRad": 0.8661287480426925,
+      "reconstructedNearestRad": 0.8661288277663937,
+      "nearestDifferenceRad": 7.972370119624372e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.8194624810003647,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.17393450966188112,
+          "wristTravelChestLocalM": 0.20754592389951496,
+          "upperDirectionAngleRad": 0.5335163688449754,
+          "foreDirectionAngleRad": 0.2055170065888521,
+          "actualUpperRotationAngleRad": 0.533529353986536,
+          "actualForeRotationAngleRad": 0.22611731202405544
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.17412063181394635,
+          "wristTravelChestLocalM": 0.20757232152141677,
+          "upperDirectionAngleRad": 0.5341013357044908,
+          "foreDirectionAngleRad": 0.20421980530278727,
+          "actualUpperRotationAngleRad": 0.5341135745420905,
+          "actualForeRotationAngleRad": 0.2246304135158056
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.33877915442336876,
+        "crouch": -0.004387225014076772,
+        "torsoPitch": -0.08991799132526049,
+        "armExtend": 0.6152393215048736
+      }
+    },
+    {
+      "i": 196,
+      "tick": 1970,
+      "independentFeatures": [
+        [
+          -0.030349278049838883,
+          0.07480975934350259,
+          0.6943265971565202,
+          0.715117471265993
+        ],
+        [
+          -0.19420535183234935,
+          0.07442481378357432,
+          0.8957042902665607,
+          0.39301278962780656
+        ],
+        [
+          0.030876537038307422,
+          -0.0748997665786592,
+          0.6952152651960604,
+          0.7142215338852196
+        ],
+        [
+          0.18798930669964714,
+          -0.06695934009657434,
+          0.8946293874105562,
+          0.39976834106996295
+        ]
+      ],
+      "independentDistancesRad": [
+        1.9217655338499413,
+        1.6911218516135202,
+        0.34114623092114843,
+        0.06961716783544751
+      ],
+      "driverNearestRad": 0.06961703234348912,
+      "reconstructedNearestRad": 0.06961716783544751,
+      "nearestDifferenceRad": 1.354919583890224e-07,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.3246050878379378e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.9568160725342053,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.13218665246283093,
+          "wristTravelChestLocalM": 0.24772455865609463,
+          "upperDirectionAngleRad": 0.4033994714575403,
+          "foreDirectionAngleRad": 0.5416218988988004,
+          "actualUpperRotationAngleRad": 0.4050134220120938,
+          "actualForeRotationAngleRad": 0.5418181257549646
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.13206685012360847,
+          "wristTravelChestLocalM": 0.24777391109830801,
+          "upperDirectionAngleRad": 0.4030289088308713,
+          "foreDirectionAngleRad": 0.5420576647654711,
+          "actualUpperRotationAngleRad": 0.404650614850117,
+          "actualForeRotationAngleRad": 0.5423579177768791
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.6193778528949823,
+        "crouch": 0.021353763984639507,
+        "torsoPitch": 0.10101872083708058,
+        "armExtend": 0.16696640367816418
+      }
+    },
+    {
+      "i": 225,
+      "tick": 2260,
+      "independentFeatures": [
+        [
+          0.05575518965737324,
+          0.049873088378604664,
+          0.48635749992917426,
+          0.8705517883184744
+        ],
+        [
+          -0.2795755299605078,
+          0.026626427895267597,
+          0.8814477367341378,
+          0.37970836676468606
+        ],
+        [
+          -0.055276282031487316,
+          -0.049955184527232716,
+          0.487267344189751,
+          0.8700687027297859
+        ],
+        [
+          0.27190459115938614,
+          -0.01850987589822196,
+          0.8819315855087223,
+          0.38460623536644684
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2430343569722646,
+        1.196562319670536,
+        0.5181611721476785,
+        0.7810591832879741
+      ],
+      "driverNearestRad": 0.5181611848040419,
+      "reconstructedNearestRad": 0.5181611721476785,
+      "nearestDifferenceRad": 1.2656363401752913e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.7849375306176305,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.17053673960974305,
+          "wristTravelChestLocalM": 0.17255544657811495,
+          "upperDirectionAngleRad": 0.5228475198695144,
+          "foreDirectionAngleRad": 0.11493167804153497,
+          "actualUpperRotationAngleRad": 0.5238953914167428,
+          "actualForeRotationAngleRad": 0.1836810898400514
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.17065799999481496,
+          "wristTravelChestLocalM": 0.1725631427189461,
+          "upperDirectionAngleRad": 0.5232281065451232,
+          "foreDirectionAngleRad": 0.11551622734444059,
+          "actualUpperRotationAngleRad": 0.5242712953808355,
+          "actualForeRotationAngleRad": 0.18182791244214708
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7506303005066538,
+        "crouch": 0.11859064798307228,
+        "torsoPitch": 0.197368467059141,
+        "armExtend": -0.2970852724577918
+      }
+    },
+    {
+      "i": 228,
+      "tick": 2290,
+      "independentFeatures": [
+        [
+          0.00344195641386379,
+          0.06317312802517391,
+          0.6187818629978138,
+          0.7830110566630046
+        ],
+        [
+          -0.23107410784595228,
+          0.05555197182241123,
+          0.9038112597905763,
+          0.3558706812672416
+        ],
+        [
+          -0.0029913065786523127,
+          -0.06326339086029353,
+          0.6196348315427019,
+          0.782330793846732
+        ],
+        [
+          0.22389343699217285,
+          -0.04800316081717374,
+          0.9036774719892127,
+          0.3618486590310629
+        ]
+      ],
+      "independentDistancesRad": [
+        1.6886979299869973,
+        1.5304583038747326,
+        0.016700419288953147,
+        0.2848104295208358
+      ],
+      "driverNearestRad": 0.016700424030770652,
+      "reconstructedNearestRad": 0.016700419288953147,
+      "nearestDifferenceRad": 4.741817504622103e-09,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.3850631752632125e-10,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.6311710527180241,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.04410429999568595,
+          "wristTravelChestLocalM": 0.13700288446030381,
+          "upperDirectionAngleRad": 0.13378390294540954,
+          "foreDirectionAngleRad": 0.42366293925167464,
+          "actualUpperRotationAngleRad": 0.13782563984130405,
+          "actualForeRotationAngleRad": 0.42421355490263785
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.043978114361632535,
+          "wristTravelChestLocalM": 0.13703671498729839,
+          "upperDirectionAngleRad": 0.13340059266078816,
+          "foreDirectionAngleRad": 0.4244927547377867,
+          "actualUpperRotationAngleRad": 0.1374815554296215,
+          "actualForeRotationAngleRad": 0.4248795909202436
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.16745670209483848,
+        "crouch": 0.009003750179105893,
+        "torsoPitch": 0.1764944653744609,
+        "armExtend": 0.07373802847892785
+      }
+    },
+    {
+      "i": 240,
+      "tick": 2410,
+      "independentFeatures": [
+        [
+          0.09372385143555553,
+          0.04498512169705241,
+          0.4131935081031851,
+          0.9046896171391436
+        ],
+        [
+          -0.29064858354685474,
+          0.00623389734877222,
+          0.8497995297900832,
+          0.43968772847852516
+        ],
+        [
+          -0.09319568064112257,
+          -0.04504982290203749,
+          0.41414251276936603,
+          0.9043069488195965
+        ],
+        [
+          0.28376864662387796,
+          0.0023743140365848066,
+          0.8498474029287854,
+          0.4441048407316758
+        ]
+      ],
+      "independentDistancesRad": [
+        0.9228325543274085,
+        0.9477467645850547,
+        0.8200051619112997,
+        1.0609041883398305
+      ],
+      "driverNearestRad": 0.8200051367960047,
+      "reconstructedNearestRad": 0.8200051619112997,
+      "nearestDifferenceRad": 2.5115294954858314e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.0670689053417588,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.22670134661266814,
+          "wristTravelChestLocalM": 0.23891219571248232,
+          "upperDirectionAngleRad": 0.701444581408836,
+          "foreDirectionAngleRad": 0.19154966172069882,
+          "actualUpperRotationAngleRad": 0.7034239847489111,
+          "actualForeRotationAngleRad": 0.27356441119876396
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.22681073223885698,
+          "wristTravelChestLocalM": 0.23892463893682905,
+          "upperDirectionAngleRad": 0.7017977773443453,
+          "foreDirectionAngleRad": 0.19069617191276741,
+          "actualUpperRotationAngleRad": 0.7037679169526687,
+          "actualForeRotationAngleRad": 0.27148470353016857
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.8479717945240741,
+        "crouch": 0.0646128767017007,
+        "torsoPitch": 0.1608479418473793,
+        "armExtend": -0.4819289767178526
+      }
+    },
+    {
+      "i": 243,
+      "tick": 2440,
+      "independentFeatures": [
+        [
+          -0.032384303643703025,
+          0.07433165486438766,
+          0.7066830029747517,
+          0.7028692590156589
+        ],
+        [
+          -0.2055999053079687,
+          0.06848762878059289,
+          0.9078583481921798,
+          0.35893083353082533
+        ],
+        [
+          0.032892464172078605,
+          -0.07441340936954381,
+          0.7075309397614638,
+          0.7019834040680373
+        ],
+        [
+          0.19885098152355288,
+          -0.06115589514164844,
+          0.907228282799888,
+          0.36558868489671564
+        ]
+      ],
+      "independentDistancesRad": [
+        2.000397929804767,
+        1.7911403881013837,
+        0.3551908630894413,
+        0.10494951105256171
+      ],
+      "driverNearestRad": 0.10494946511886769,
+      "reconstructedNearestRad": 0.10494951105256171,
+      "nearestDifferenceRad": 4.593369402894343e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.8768962495308017e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.6836883550379838,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.08127577338753181,
+          "wristTravelChestLocalM": 0.17133257774285862,
+          "upperDirectionAngleRad": 0.24698154526217442,
+          "foreDirectionAngleRad": 0.41413585057802094,
+          "actualUpperRotationAngleRad": 0.24877375597814536,
+          "actualForeRotationAngleRad": 0.41424794408894267
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.08116900212077922,
+          "wristTravelChestLocalM": 0.1713676674657798,
+          "upperDirectionAngleRad": 0.24665547650256558,
+          "foreDirectionAngleRad": 0.4148702906709573,
+          "actualUpperRotationAngleRad": 0.24851857092201846,
+          "actualForeRotationAngleRad": 0.4149440179021637
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.2893073779013122,
+        "crouch": 0.04168878887076399,
+        "torsoPitch": 0.183187076873213,
+        "armExtend": 0.0
+      }
+    },
+    {
+      "i": 252,
+      "tick": 2530,
+      "independentFeatures": [
+        [
+          0.16964168162142795,
+          0.05475924549760948,
+          0.3425933434121029,
+          0.9224168937844232
+        ],
+        [
+          -0.3067992011593456,
+          -0.05535379691816028,
+          0.7712948883811649,
+          0.5549003536598414
+        ],
+        [
+          -0.16897982555040048,
+          -0.05472882049662269,
+          0.3435093353782792,
+          0.922199496460488
+        ],
+        [
+          0.30153380805059604,
+          0.06457567545157025,
+          0.7701906450626282,
+          0.5583132767546303
+        ]
+      ],
+      "independentDistancesRad": [
+        0.4903421681666661,
+        0.7222289627386278,
+        1.2785917391018669,
+        1.4788088709421783
+      ],
+      "driverNearestRad": 0.4903421905470354,
+      "reconstructedNearestRad": 0.4903421681666661,
+      "nearestDifferenceRad": 2.2380369280039503e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.5295806432665902,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.2936143523741759,
+          "wristTravelChestLocalM": 0.3369173428807375,
+          "upperDirectionAngleRad": 0.9223170927773464,
+          "foreDirectionAngleRad": 0.46960977048581426,
+          "actualUpperRotationAngleRad": 0.9302757231243163,
+          "actualForeRotationAngleRad": 0.5520367991867235
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.29375074812485513,
+          "wristTravelChestLocalM": 0.33692472179917626,
+          "upperDirectionAngleRad": 0.9227789555756931,
+          "foreDirectionAngleRad": 0.4681661794955265,
+          "actualUpperRotationAngleRad": 0.9307209662707864,
+          "actualForeRotationAngleRad": 0.550652171999894
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 1.1250221153926123,
+        "crouch": 0.05904721090012907,
+        "torsoPitch": 0.006540926965865612,
+        "armExtend": -0.7014045414606583
+      }
+    },
+    {
+      "i": 254,
+      "tick": 2550,
+      "independentFeatures": [
+        [
+          -0.023181568119841334,
+          0.07220785851677254,
+          0.6811493209728644,
+          0.7282061813841824
+        ],
+        [
+          -0.19628989660575097,
+          0.07184772328923622,
+          0.8963218890434228,
+          0.39104379853193844
+        ],
+        [
+          0.0236847873770135,
+          -0.0723018383703125,
+          0.6820349771392072,
+          0.7273511978225512
+        ],
+        [
+          0.19007770067691718,
+          -0.06436830936171756,
+          0.8952996824862298,
+          0.3977004739692257
+        ]
+      ],
+      "independentDistancesRad": [
+        1.871955862539533,
+        1.6489339607100684,
+        0.2876445441111322,
+        0.0499207221904469
+      ],
+      "driverNearestRad": 0.049920665804079334,
+      "reconstructedNearestRad": 0.0499207221904469,
+      "nearestDifferenceRad": 5.6386367568161955e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 4.487356841664791e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.7656977169408387,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.1261620249879549,
+          "wristTravelChestLocalM": 0.1979472982352105,
+          "upperDirectionAngleRad": 0.3847778712630017,
+          "foreDirectionAngleRad": 0.379420330481007,
+          "actualUpperRotationAngleRad": 0.3852928604343467,
+          "actualForeRotationAngleRad": 0.38038026782178935
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1261501576698118,
+          "wristTravelChestLocalM": 0.19798426856388068,
+          "upperDirectionAngleRad": 0.38474129617068037,
+          "foreDirectionAngleRad": 0.3793151211398321,
+          "actualUpperRotationAngleRad": 0.38526211922827985,
+          "actualForeRotationAngleRad": 0.38042916443392766
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.6306138497130566,
+        "crouch": 0.0,
+        "torsoPitch": 0.201124440481314,
+        "armExtend": 0.15598767987291196
+      }
+    },
+    {
+      "i": 255,
+      "tick": 2560,
+      "independentFeatures": [
+        [
+          0.10178560142966742,
+          0.047177301306383895,
+          0.41787435478823115,
+          0.9015514501088483
+        ],
+        [
+          -0.30632109921829626,
+          -0.00989187995660269,
+          0.8541851333507675,
+          0.42004439390039516
+        ],
+        [
+          -0.1012371353544242,
+          -0.047223024985429254,
+          0.41881931095022934,
+          0.9011722438644184
+        ],
+        [
+          0.29902266958054996,
+          0.018465900014119834,
+          0.8545848150955013,
+          0.42418067780343033
+        ]
+      ],
+      "independentDistancesRad": [
+        0.9612964441547633,
+        1.0262747007993618,
+        0.8159317552030846,
+        1.064610144931634
+      ],
+      "driverNearestRad": 0.8159317148892163,
+      "reconstructedNearestRad": 0.8159317552030846,
+      "nearestDifferenceRad": 4.031386824365768e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.0510391549511595,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.22015067048134793,
+          "wristTravelChestLocalM": 0.2284807630655973,
+          "upperDirectionAngleRad": 0.6803421513185752,
+          "foreDirectionAngleRad": 0.20168224422460596,
+          "actualUpperRotationAngleRad": 0.6833354171982835,
+          "actualForeRotationAngleRad": 0.2928689658297175
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.22026947663897656,
+          "wristTravelChestLocalM": 0.22848673832023605,
+          "upperDirectionAngleRad": 0.680724296244132,
+          "foreDirectionAngleRad": 0.20166373392799877,
+          "actualUpperRotationAngleRad": 0.6837085774832606,
+          "actualForeRotationAngleRad": 0.2906997191372162
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.8564325859131565,
+        "crouch": 0.0739348673554489,
+        "torsoPitch": 0.18570225370875285,
+        "armExtend": -0.481305736653986
+      }
+    },
+    {
+      "i": 262,
+      "tick": 2630,
+      "independentFeatures": [
+        [
+          0.0059098481501264535,
+          0.0523469111591924,
+          0.40395530026916326,
+          0.9132606363855744
+        ],
+        [
+          -0.08459947937988835,
+          0.11244508483819582,
+          0.671989359493574,
+          0.7270690006538575
+        ],
+        [
+          -0.003674054620316369,
+          -0.052185705929440544,
+          0.4050247061071929,
+          0.9128078334797939
+        ],
+        [
+          0.08125632633778315,
+          -0.10581130103628496,
+          0.6671366749149259,
+          0.7328915574534564
+        ]
+      ],
+      "independentDistancesRad": [
+        1.1086120621844069,
+        0.5363379381922966,
+        1.5221033609147119,
+        1.5785105238629369
+      ],
+      "driverNearestRad": 0.5363378937539406,
+      "reconstructedNearestRad": 0.5363379381922966,
+      "nearestDifferenceRad": 4.443835599499124e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -0.9999497551221253,
+      "actualFeatureTravelRad": 0.4014992690429932,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.0767796944678035,
+          "wristTravelChestLocalM": 0.06798720924041957,
+          "upperDirectionAngleRad": 0.2332546747716648,
+          "foreDirectionAngleRad": 0.13931406482067335,
+          "actualUpperRotationAngleRad": 0.23454543198203281,
+          "actualForeRotationAngleRad": 0.15671166124041783
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.0772777288628189,
+          "wristTravelChestLocalM": 0.06798695565145292,
+          "upperDirectionAngleRad": 0.23477469878883958,
+          "foreDirectionAngleRad": 0.14357025200400353,
+          "actualUpperRotationAngleRad": 0.23609845580767028,
+          "actualForeRotationAngleRad": 0.1609008184480228
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.16405640133633084,
+        "crouch": -0.0024489401878087977,
+        "torsoPitch": -0.14005994556410054,
+        "armExtend": 0.2170785310305854
+      }
+    },
+    {
+      "i": 272,
+      "tick": 2730,
+      "independentFeatures": [
+        [
+          0.17035483195011322,
+          0.058424158111839285,
+          0.3544243026154259,
+          0.9175779327641552
+        ],
+        [
+          -0.3494704539334921,
+          -0.07214379572301771,
+          0.7920096173176251,
+          0.49536495701914923
+        ],
+        [
+          -0.16967834445459837,
+          -0.05838915771506012,
+          0.35534842224157165,
+          0.9173480607135431
+        ],
+        [
+          0.34289422103135275,
+          0.08147592510647898,
+          0.7921504415320909,
+          0.4982799462068073
+        ]
+      ],
+      "independentDistancesRad": [
+        0.6516994281909351,
+        0.9207447572288141,
+        1.2090816771911863,
+        1.43020046349509
+      ],
+      "driverNearestRad": 0.6516994440253782,
+      "reconstructedNearestRad": 0.6516994281909351,
+      "nearestDifferenceRad": 1.5834443090056993e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.1821636823891313,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.21771427328154014,
+          "wristTravelChestLocalM": 0.2389171527600334,
+          "upperDirectionAngleRad": 0.6725137127941889,
+          "foreDirectionAngleRad": 0.380095640477395,
+          "actualUpperRotationAngleRad": 0.6777492127882889,
+          "actualForeRotationAngleRad": 0.4900718538511812
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.21773586031732967,
+          "wristTravelChestLocalM": 0.23892227451198245,
+          "upperDirectionAngleRad": 0.6725831561581828,
+          "foreDirectionAngleRad": 0.3792859378490265,
+          "actualUpperRotationAngleRad": 0.6778141334352596,
+          "actualForeRotationAngleRad": 0.48843067382552385
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7297836499936436,
+        "crouch": 0.08690454630810712,
+        "torsoPitch": -0.07546686118545765,
+        "armExtend": -0.6832223923329575
+      }
+    },
+    {
+      "i": 280,
+      "tick": 2810,
+      "independentFeatures": [
+        [
+          -0.030817666190672922,
+          0.07555715348036846,
+          0.6920610506867293,
+          0.7172118864958144
+        ],
+        [
+          -0.18713476144514146,
+          0.07748123385548482,
+          0.8888015373451827,
+          0.41110712311019576
+        ],
+        [
+          0.0313709688755379,
+          -0.07564605103172924,
+          0.6929731521639033,
+          0.7162972481136157
+        ],
+        [
+          0.1812031189828615,
+          -0.06997869013312046,
+          0.8874672374186359,
+          0.4179357786869539
+        ]
+      ],
+      "independentDistancesRad": [
+        1.8977942924849083,
+        1.6538108165213574,
+        0.36560004344001173,
+        0.11986776131757326
+      ],
+      "driverNearestRad": 0.11986763218366078,
+      "reconstructedNearestRad": 0.11986776131757326,
+      "nearestDifferenceRad": 1.2913391247981743e-07,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.3259351061556401e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 2.10331814516757,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.14348323562966384,
+          "wristTravelChestLocalM": 0.21412601752945842,
+          "upperDirectionAngleRad": 0.4384134144847219,
+          "foreDirectionAngleRad": 1.4177622692302712,
+          "actualUpperRotationAngleRad": 0.45596014068581353,
+          "actualForeRotationAngleRad": 1.4190077764608895
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.14170743154284568,
+          "wristTravelChestLocalM": 0.2141680509138879,
+          "upperDirectionAngleRad": 0.43290059409461884,
+          "foreDirectionAngleRad": 1.4129259833265648,
+          "actualUpperRotationAngleRad": 0.4508969391389506,
+          "actualForeRotationAngleRad": 1.4139152426095758
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.5862611995069172,
+        "crouch": 0.011409826252591165,
+        "torsoPitch": 0.06217815967946155,
+        "armExtend": 0.11204668945446472
+      }
+    },
+    {
+      "i": 294,
+      "tick": 2950,
+      "independentFeatures": [
+        [
+          -0.001849328869978017,
+          0.06469356829167593,
+          0.6297302316697937,
+          0.7741131425867467
+        ],
+        [
+          -0.23443610524742692,
+          0.055975491461232305,
+          0.9072280125016011,
+          0.3447372771321456
+        ],
+        [
+          0.0022995157793993313,
+          -0.06478270244995715,
+          0.630570970115269,
+          0.7734197859754748
+        ],
+        [
+          0.22702400315934862,
+          -0.04848295644993311,
+          0.9072502111193129,
+          0.35072290964141517
+        ]
+      ],
+      "independentDistancesRad": [
+        1.740902842366949,
+        1.5840333641992617,
+        0.04040878681301664,
+        0.2584275028205643
+      ],
+      "driverNearestRad": 0.04040876720412518,
+      "reconstructedNearestRad": 0.04040878681301664,
+      "nearestDifferenceRad": 1.9608891461964095e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 4.1876643597227314e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.5750420585845446,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.04381803385204331,
+          "wristTravelChestLocalM": 0.1261414959712016,
+          "upperDirectionAngleRad": 0.13291427156656743,
+          "foreDirectionAngleRad": 0.38246231013817544,
+          "actualUpperRotationAngleRad": 0.13545078195501403,
+          "actualForeRotationAngleRad": 0.38319885632579276
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.04371164756275544,
+          "wristTravelChestLocalM": 0.12616979871186318,
+          "upperDirectionAngleRad": 0.13259111770594598,
+          "foreDirectionAngleRad": 0.3831509760385897,
+          "actualUpperRotationAngleRad": 0.13515156452305988,
+          "actualForeRotationAngleRad": 0.3836914652124201
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.19087350115219276,
+        "crouch": 0.03672198175573923,
+        "torsoPitch": 0.14761913831510926,
+        "armExtend": 0.03687527944803837
+      }
+    },
+    {
+      "i": 309,
+      "tick": 3100,
+      "independentFeatures": [
+        [
+          0.06413230320285061,
+          0.048474869222384746,
+          0.4685859679457606,
+          0.8797524796123651
+        ],
+        [
+          -0.28723057579079286,
+          0.020746441938540208,
+          0.8765877903541069,
+          0.3855671501566036
+        ],
+        [
+          -0.06364205561355502,
+          -0.048553362899576936,
+          0.4695054413942139,
+          0.8792934096248234
+        ],
+        [
+          0.27953760239388775,
+          -0.012528395042050635,
+          0.8771386569821942,
+          0.3902941769909202
+        ]
+      ],
+      "independentDistancesRad": [
+        1.1816215860364545,
+        1.1571587847455893,
+        0.5878498406786871,
+        0.848914679765566
+      ],
+      "driverNearestRad": 0.5878498471470236,
+      "reconstructedNearestRad": 0.5878498406786871,
+      "nearestDifferenceRad": 6.468336533060892e-09,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.8905158555267826,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.19299846521380865,
+          "wristTravelChestLocalM": 0.19647159140957926,
+          "upperDirectionAngleRad": 0.5936760132280893,
+          "foreDirectionAngleRad": 0.12605775354056523,
+          "actualUpperRotationAngleRad": 0.5948848208611958,
+          "actualForeRotationAngleRad": 0.20694805193965846
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.19312761143403076,
+          "wristTravelChestLocalM": 0.19648122219849834,
+          "upperDirectionAngleRad": 0.5940854948802031,
+          "foreDirectionAngleRad": 0.1264265844415728,
+          "actualUpperRotationAngleRad": 0.5952884304655555,
+          "actualForeRotationAngleRad": 0.20477963571869037
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7754037283793206,
+        "crouch": 0.11099580559762863,
+        "torsoPitch": 0.189070337904781,
+        "armExtend": -0.3448269687961606
+      }
+    },
+    {
+      "i": 324,
+      "tick": 3250,
+      "independentFeatures": [
+        [
+          0.054478522699738526,
+          0.050838051823221396,
+          0.5056980878588779,
+          0.8594864902877463
+        ],
+        [
+          -0.25733249373797906,
+          0.029018143467834212,
+          0.882059132652794,
+          0.393585596179629
+        ],
+        [
+          -0.05400332715332592,
+          -0.050914927342844966,
+          0.5066075456927024,
+          0.8589761961063067
+        ],
+        [
+          0.25033207206104374,
+          -0.021004130052391323,
+          0.8819748558176889,
+          0.39876438397095315
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2685128786756703,
+        1.1901084511401747,
+        0.45570724237174115,
+        0.7081374793516406
+      ],
+      "driverNearestRad": 0.4557072602507138,
+      "reconstructedNearestRad": 0.45570724237174115,
+      "nearestDifferenceRad": 1.7878972635720913e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.7076272136151444,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.1558064929613452,
+          "wristTravelChestLocalM": 0.15900179592701735,
+          "upperDirectionAngleRad": 0.4767663602176076,
+          "foreDirectionAngleRad": 0.10165081839929312,
+          "actualUpperRotationAngleRad": 0.4784068092714237,
+          "actualForeRotationAngleRad": 0.14655787839537732
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1559197244088318,
+          "wristTravelChestLocalM": 0.15900470201883812,
+          "upperDirectionAngleRad": 0.47711966028894354,
+          "foreDirectionAngleRad": 0.10169010185464038,
+          "actualUpperRotationAngleRad": 0.47875630447933193,
+          "actualForeRotationAngleRad": 0.14552103050850654
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7187112836794858,
+        "crouch": 0.5188974819386786,
+        "torsoPitch": 0.027605547776388073,
+        "armExtend": -0.23737869572704096
+      }
+    },
+    {
+      "i": 362,
+      "tick": 3630,
+      "independentFeatures": [
+        [
+          0.04593297040659958,
+          0.05151359810148057,
+          0.5041268969448813,
+          0.8608673435651922
+        ],
+        [
+          -0.26620663808551753,
+          0.036264770189952,
+          0.8834700822797039,
+          0.3837961776763407
+        ],
+        [
+          -0.045467356028219115,
+          -0.05160286587020749,
+          0.505029707929613,
+          0.8603574012457348
+        ],
+        [
+          0.25877196793841445,
+          -0.028213659253227667,
+          0.8837186312671232,
+          0.38895043230749266
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2914371605173058,
+        1.211945817301417,
+        0.4476198843084094,
+        0.7069344212549965
+      ],
+      "driverNearestRad": 0.44761992668548256,
+      "reconstructedNearestRad": 0.4476198843084094,
+      "nearestDifferenceRad": 4.237707318388573e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.5503897326777376,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.12093707122056956,
+          "wristTravelChestLocalM": 0.12375001036758845,
+          "upperDirectionAngleRad": 0.36865535325813636,
+          "foreDirectionAngleRad": 0.07230338261193177,
+          "actualUpperRotationAngleRad": 0.3691738852311249,
+          "actualForeRotationAngleRad": 0.12361506511542228
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.12100127627206539,
+          "wristTravelChestLocalM": 0.12375728903451312,
+          "upperDirectionAngleRad": 0.3688533883596732,
+          "foreDirectionAngleRad": 0.07224817083151382,
+          "actualUpperRotationAngleRad": 0.3693688495480329,
+          "actualForeRotationAngleRad": 0.12216979351791978
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.47360447630429214,
+        "crouch": 0.2015062276808296,
+        "torsoPitch": -0.06363362134644734,
+        "armExtend": -0.2451514388470203
+      }
+    },
+    {
+      "i": 364,
+      "tick": 3650,
+      "independentFeatures": [
+        [
+          -0.006868678528593044,
+          0.0660955899780639,
+          0.6490071718576577,
+          0.7578745840296053
+        ],
+        [
+          -0.2283637858949608,
+          0.05651942386328644,
+          0.9102217485183755,
+          0.3408106579055799
+        ],
+        [
+          0.007324151713006571,
+          -0.066180865662785,
+          0.6498424740097747,
+          0.7571467551239089
+        ],
+        [
+          0.22106496842002807,
+          -0.04911479549595149,
+          0.9101441163517033,
+          0.3469231962138308
+        ]
+      ],
+      "independentDistancesRad": [
+        1.8090054961552202,
+        1.6446500542113547,
+        0.11318684340875432,
+        0.19958912556377384
+      ],
+      "driverNearestRad": 0.1131867889648487,
+      "reconstructedNearestRad": 0.11318684340875432,
+      "nearestDifferenceRad": 5.444390561992751e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 3.9373614957316505e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.4875769906029572,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.08847150028572533,
+          "wristTravelChestLocalM": 0.11822818366837168,
+          "upperDirectionAngleRad": 0.2689752701636502,
+          "foreDirectionAngleRad": 0.2132133393157748,
+          "actualUpperRotationAngleRad": 0.2691257966759756,
+          "actualForeRotationAngleRad": 0.21550432910946812
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.08847605083903316,
+          "wristTravelChestLocalM": 0.1182515658400474,
+          "upperDirectionAngleRad": 0.2689892385580182,
+          "foreDirectionAngleRad": 0.2130109906150781,
+          "actualUpperRotationAngleRad": 0.2691422256543833,
+          "actualForeRotationAngleRad": 0.21545990558101766
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.368957669003872,
+        "crouch": 0.024717740052569253,
+        "torsoPitch": 0.13044389298580988,
+        "armExtend": 0.12062589135871282
+      }
+    },
+    {
+      "i": 373,
+      "tick": 3740,
+      "independentFeatures": [
+        [
+          -0.10427753451477614,
+          0.05885419569258716,
+          0.5415752074378037,
+          0.8320809300384178
+        ],
+        [
+          0.12997897573382064,
+          0.043366900694386604,
+          0.18960638165190277,
+          0.9722521266771408
+        ],
+        [
+          0.10392994606657616,
+          -0.05853485470724791,
+          0.5402262767619538,
+          0.8330232931862813
+        ],
+        [
+          -0.12527577207433488,
+          -0.0424371123876742,
+          0.18325235107089438,
+          0.9741271211963892
+        ]
+      ],
+      "independentDistancesRad": [
+        2.5909178071806496,
+        2.1650269593005262,
+        3.0303739738630076,
+        2.965724961453248
+      ],
+      "driverNearestRad": 2.165026886865154,
+      "reconstructedNearestRad": 2.1650269593005262,
+      "nearestDifferenceRad": 7.24353723668969e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 2.5241743931163407,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.3090313084260325,
+          "wristTravelChestLocalM": 0.1831275058985169,
+          "upperDirectionAngleRad": 0.9748470743254719,
+          "foreDirectionAngleRad": 1.490279352660554,
+          "actualUpperRotationAngleRad": 0.984814583474379,
+          "actualForeRotationAngleRad": 1.4915326731958993
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.30746412005196744,
+          "wristTravelChestLocalM": 0.18319527079598688,
+          "upperDirectionAngleRad": 0.9694746698060578,
+          "foreDirectionAngleRad": 1.4875595172954137,
+          "actualUpperRotationAngleRad": 0.979398168002297,
+          "actualForeRotationAngleRad": 1.4891964469297532
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.4900640937883146,
+        "crouch": -0.3426363370259237,
+        "torsoPitch": -0.5118517005791734,
+        "armExtend": 0.014492332575377274
+      }
+    },
+    {
+      "i": 388,
+      "tick": 3890,
+      "independentFeatures": [
+        [
+          0.06847475889119187,
+          0.0517847412446166,
+          0.5101120394728793,
+          0.8558126285314098
+        ],
+        [
+          -0.2672414221332753,
+          0.007688338331146183,
+          0.8877976050302139,
+          0.374617570667083
+        ],
+        [
+          -0.06797762756857836,
+          -0.0518328484310263,
+          0.5110167731845133,
+          0.8553094501393994
+        ],
+        [
+          0.2600259766863204,
+          0.0002208340602301711,
+          0.8878849266795783,
+          0.37953497817176585
+        ]
+      ],
+      "independentDistancesRad": [
+        1.292743689633374,
+        1.2552303202977606,
+        0.46333717936330004,
+        0.7238140422035403
+      ],
+      "driverNearestRad": 0.4633371912907693,
+      "reconstructedNearestRad": 0.46333717936330004,
+      "nearestDifferenceRad": 1.192746923450727e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.7647506080305959,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.16430174722676255,
+          "wristTravelChestLocalM": 0.16625267568127144,
+          "upperDirectionAngleRad": 0.503309198984067,
+          "foreDirectionAngleRad": 0.14933071935769437,
+          "actualUpperRotationAngleRad": 0.5070610027769535,
+          "actualForeRotationAngleRad": 0.18763096231509876
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.16442659101158355,
+          "wristTravelChestLocalM": 0.16624809962854675,
+          "upperDirectionAngleRad": 0.5037000237056037,
+          "foreDirectionAngleRad": 0.14986688626028666,
+          "actualUpperRotationAngleRad": 0.5074494899711244,
+          "actualForeRotationAngleRad": 0.18714231922278599
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7281238802288803,
+        "crouch": 0.22060060874335358,
+        "torsoPitch": 0.12149913801736884,
+        "armExtend": -0.2364017283214661
+      }
+    },
+    {
+      "i": 404,
+      "tick": 4050,
+      "independentFeatures": [
+        [
+          0.1703678057724107,
+          0.05407669297841385,
+          0.3378510422267938,
+          0.9240709904001326
+        ],
+        [
+          -0.30966666502966295,
+          -0.054917080901102935,
+          0.7695087137474481,
+          0.5558300192158179
+        ],
+        [
+          -0.16970479873681638,
+          -0.05404911974728599,
+          0.33876828911959994,
+          0.9238587663854358
+        ],
+        [
+          0.30437980715324336,
+          0.0641790908548579,
+          0.7684541199542961,
+          0.5592067979018734
+        ]
+      ],
+      "independentDistancesRad": [
+        0.47791751518598363,
+        0.7203294158137532,
+        1.2930869596606118,
+        1.4940826375428244
+      ],
+      "driverNearestRad": 0.47791751548211536,
+      "reconstructedNearestRad": 0.47791751518598363,
+      "nearestDifferenceRad": 2.961317302485611e-10,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.1922698174410917,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.21614465548216077,
+          "wristTravelChestLocalM": 0.24980324628302508,
+          "upperDirectionAngleRad": 0.6674760167859108,
+          "foreDirectionAngleRad": 0.4325400115365051,
+          "actualUpperRotationAngleRad": 0.6718025129836295,
+          "actualForeRotationAngleRad": 0.5097255134408566
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.21618296217540856,
+          "wristTravelChestLocalM": 0.24981201256829905,
+          "upperDirectionAngleRad": 0.6675990381212755,
+          "foreDirectionAngleRad": 0.4315698926002003,
+          "actualUpperRotationAngleRad": 0.6719199533525694,
+          "actualForeRotationAngleRad": 0.5088144543898773
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.6179886768328713,
+        "crouch": 0.14718636719166067,
+        "torsoPitch": -0.017792305903109373,
+        "armExtend": -0.7138177499971807
+      }
+    },
+    {
+      "i": 408,
+      "tick": 4090,
+      "independentFeatures": [
+        [
+          -0.0003327556002955768,
+          0.06781420101486385,
+          0.5461270969228527,
+          0.8349528833539313
+        ],
+        [
+          -0.130431867049045,
+          0.09709163744976147,
+          0.7736619740503445,
+          0.6123788793744838
+        ],
+        [
+          0.0007900436417738509,
+          -0.06804135058666054,
+          0.547328025792763,
+          0.8341473386777566
+        ],
+        [
+          0.12759896792207495,
+          -0.0890844372274997,
+          0.7698756074818579,
+          0.6189297338418325
+        ]
+      ],
+      "independentDistancesRad": [
+        1.3133971774754305,
+        0.8970645207895347,
+        0.9232709841344682,
+        0.9401374396549643
+      ],
+      "driverNearestRad": 0.8970644438221741,
+      "reconstructedNearestRad": 0.8970645207895347,
+      "nearestDifferenceRad": 7.696736059603637e-08,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.7960074556094434,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.17374673374348526,
+          "wristTravelChestLocalM": 0.19213394802792974,
+          "upperDirectionAngleRad": 0.53292635645726,
+          "foreDirectionAngleRad": 0.1481704655058061,
+          "actualUpperRotationAngleRad": 0.5334901684056802,
+          "actualForeRotationAngleRad": 0.17934171862911447
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.17395559543788258,
+          "wristTravelChestLocalM": 0.19214807082814875,
+          "upperDirectionAngleRad": 0.5335827272814765,
+          "foreDirectionAngleRad": 0.14688408390204652,
+          "actualUpperRotationAngleRad": 0.534143099460725,
+          "actualForeRotationAngleRad": 0.17760571636443923
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.3380966401178609,
+        "crouch": 0.0,
+        "torsoPitch": -0.16194755278760492,
+        "armExtend": 0.5880936639197034
+      }
+    },
+    {
+      "i": 409,
+      "tick": 4100,
+      "independentFeatures": [
+        [
+          -0.03585043979958025,
+          0.07619714037287693,
+          0.7114364489913655,
+          0.6976868357735648
+        ],
+        [
+          -0.19522479125357697,
+          0.07312287427963052,
+          0.9005451933373191,
+          0.38152153398482425
+        ],
+        [
+          0.03639794353198922,
+          -0.07627542150295218,
+          0.7123127961053706,
+          0.696755143709566
+        ],
+        [
+          0.18886168096458186,
+          -0.0657457771702323,
+          0.8995567329297696,
+          0.38833805181598385
+        ]
+      ],
+      "independentDistancesRad": [
+        1.9973248455992305,
+        1.7695570806895011,
+        0.3939425368687041,
+        0.11516134705322938
+      ],
+      "driverNearestRad": 0.11516119260965522,
+      "reconstructedNearestRad": 0.11516134705322938,
+      "nearestDifferenceRad": 1.544435741518413e-07,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.5033085165594429e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.9893295747234423,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.14246576765038216,
+          "wristTravelChestLocalM": 0.2586244478165886,
+          "upperDirectionAngleRad": 0.4352543252129544,
+          "foreDirectionAngleRad": 0.5461123360658207,
+          "actualUpperRotationAngleRad": 0.4367615231312978,
+          "actualForeRotationAngleRad": 0.5463701082956935
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.14236166782699072,
+          "wristTravelChestLocalM": 0.2586752844734413,
+          "upperDirectionAngleRad": 0.43493125429680657,
+          "foreDirectionAngleRad": 0.5464412476281275,
+          "actualUpperRotationAngleRad": 0.43644468933330594,
+          "actualForeRotationAngleRad": 0.5468163355638435
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.6068986066473152,
+        "crouch": 0.034557924654809266,
+        "torsoPitch": 0.10766454732417935,
+        "armExtend": 0.14436148462629161
+      }
+    },
+    {
+      "i": 427,
+      "tick": 4280,
+      "independentFeatures": [
+        [
+          0.0785831135099511,
+          0.051622818140471566,
+          0.4949512382559072,
+          0.8638188760771915
+        ],
+        [
+          -0.273678925112023,
+          -0.000875668700911339,
+          0.8827016913453084,
+          0.38201675781303884
+        ],
+        [
+          -0.07807178593700875,
+          -0.05166188945562494,
+          0.49586329029566373,
+          0.8633397029881339
+        ],
+        [
+          0.2664887304963762,
+          0.008878805601281889,
+          0.8827934459472748,
+          0.38675658381217065
+        ]
+      ],
+      "independentDistancesRad": [
+        1.2316036203771312,
+        1.2161250481514427,
+        0.5302075374881053,
+        0.7873191143412926
+      ],
+      "driverNearestRad": 0.5302075418141131,
+      "reconstructedNearestRad": 0.5302075374881053,
+      "nearestDifferenceRad": 4.3260077742246494e-09,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 0.7873192002741698,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.16761531143235195,
+          "wristTravelChestLocalM": 0.17128229540244114,
+          "upperDirectionAngleRad": 0.513686530188238,
+          "foreDirectionAngleRad": 0.16261045724874507,
+          "actualUpperRotationAngleRad": 0.5179175731289217,
+          "actualForeRotationAngleRad": 0.20408095903735596
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1677210515366271,
+          "wristTravelChestLocalM": 0.17127696002569692,
+          "upperDirectionAngleRad": 0.5140180126226009,
+          "foreDirectionAngleRad": 0.16289919839221256,
+          "actualUpperRotationAngleRad": 0.5182469539041789,
+          "actualForeRotationAngleRad": 0.2034795939053959
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7507989274321838,
+        "crouch": 0.21102164011943056,
+        "torsoPitch": 0.12962284391101475,
+        "armExtend": -0.2782869485628743
+      }
+    },
+    {
+      "i": 435,
+      "tick": 4360,
+      "independentFeatures": [
+        [
+          -0.0009311859905055779,
+          0.06497072651437419,
+          0.6146187410268762,
+          0.786143587881618
+        ],
+        [
+          -0.2148319781354576,
+          0.06682582212384061,
+          0.890997752811753,
+          0.3943406334025011
+        ],
+        [
+          0.0013868573617971322,
+          -0.06507578451677697,
+          0.6155012842045143,
+          0.7854434340159563
+        ],
+        [
+          0.20830881506186977,
+          -0.059119533420694106,
+          0.8903274763887561,
+          0.40053626942246856
+        ]
+      ],
+      "independentDistancesRad": [
+        1.635161282090967,
+        1.4402782932390095,
+        0.14115614017333733,
+        0.28185948345229
+      ],
+      "driverNearestRad": 0.14115607134211555,
+      "reconstructedNearestRad": 0.14115614017333733,
+      "nearestDifferenceRad": 6.883122177780976e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 2.1733455568551108e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.8187024266775934,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.06637996955005432,
+          "wristTravelChestLocalM": 0.18599474602742874,
+          "upperDirectionAngleRad": 0.20154468299615635,
+          "foreDirectionAngleRad": 0.5404562463056095,
+          "actualUpperRotationAngleRad": 0.20550802782374855,
+          "actualForeRotationAngleRad": 0.5407685105705881
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.06620493208187,
+          "wristTravelChestLocalM": 0.1860370281404351,
+          "upperDirectionAngleRad": 0.2010114691207142,
+          "foreDirectionAngleRad": 0.5416151394738771,
+          "actualUpperRotationAngleRad": 0.20504581323400226,
+          "actualForeRotationAngleRad": 0.5418170697607273
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.2544246572020856,
+        "crouch": 0.00841103677224305,
+        "torsoPitch": 0.08806020402288636,
+        "armExtend": 0.1843041558014583
+      }
+    },
+    {
+      "i": 443,
+      "tick": 4440,
+      "independentFeatures": [
+        [
+          0.16971915152872882,
+          0.054556140753533086,
+          0.3365274747330435,
+          0.924644956651065
+        ],
+        [
+          -0.37049298163626765,
+          -0.07098816030393007,
+          0.7897255691682805,
+          0.4837656013574828
+        ],
+        [
+          -0.16903317603758375,
+          -0.05453594280856153,
+          0.33746747230822416,
+          0.9244291868361398
+        ],
+        [
+          0.3634764801256669,
+          0.08046690792825374,
+          0.7904379331693838,
+          0.48643375595329974
+        ]
+      ],
+      "independentDistancesRad": [
+        0.6561455165411569,
+        0.9563463169719317,
+        1.255182193509563,
+        1.4833901573377053
+      ],
+      "driverNearestRad": 0.6561455089350828,
+      "reconstructedNearestRad": 0.6561455165411569,
+      "nearestDifferenceRad": 7.606074103883032e-09,
+      "driverStrength": 0,
+      "reconstructedStrength": 0.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 0.0,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": -1,
+      "actualFeatureTravelRad": 1.2380828180922079,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.22960309063193401,
+          "wristTravelChestLocalM": 0.24948811583686392,
+          "upperDirectionAngleRad": 0.7108182325364956,
+          "foreDirectionAngleRad": 0.3684632677763507,
+          "actualUpperRotationAngleRad": 0.7156973641326863,
+          "actualForeRotationAngleRad": 0.5052827678720421
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.22962077037207007,
+          "wristTravelChestLocalM": 0.2494966690516838,
+          "upperDirectionAngleRad": 0.7108755308117328,
+          "foreDirectionAngleRad": 0.36769281539245297,
+          "actualUpperRotationAngleRad": 0.7157447437763425,
+          "actualForeRotationAngleRad": 0.5030160023609445
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": 0.7699613927092404,
+        "crouch": 0.2054315403600726,
+        "torsoPitch": -0.0865121828559281,
+        "armExtend": -0.7311644569939274
+      }
+    },
+    {
+      "i": 461,
+      "tick": 4620,
+      "independentFeatures": [
+        [
+          -0.02526512519971904,
+          0.07249627949657626,
+          0.6858366645912138,
+          0.7236947093976823
+        ],
+        [
+          -0.20566549890328426,
+          0.06929775008949428,
+          0.9030867430491776,
+          0.370585832058143
+        ],
+        [
+          0.0257572761971106,
+          -0.07258679150735171,
+          0.6866967309166268,
+          0.7228522118455417
+        ],
+        [
+          0.19904188566270295,
+          -0.0618676145116,
+          0.9023889997452683,
+          0.3771588778820059
+        ]
+      ],
+      "independentDistancesRad": [
+        1.9106794851775295,
+        1.7011025492890226,
+        0.2773640426937553,
+        0.020163715145656406
+      ],
+      "driverNearestRad": 0.020163804759583195,
+      "reconstructedNearestRad": 0.020163715145656406,
+      "nearestDifferenceRad": 8.961392678960567e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 5.189068141842057e-08,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 0.5733076232911137,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.10984650904179391,
+          "wristTravelChestLocalM": 0.14673634452188178,
+          "upperDirectionAngleRad": 0.3345122423949237,
+          "foreDirectionAngleRad": 0.2269829940817145,
+          "actualUpperRotationAngleRad": 0.33455031695406146,
+          "actualForeRotationAngleRad": 0.22899789349140356
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.1098786890233449,
+          "wristTravelChestLocalM": 0.14675936550689705,
+          "upperDirectionAngleRad": 0.33461122532448245,
+          "foreDirectionAngleRad": 0.22657785744814704,
+          "actualUpperRotationAngleRad": 0.334650220494467,
+          "actualForeRotationAngleRad": 0.22875074808379967
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -0.599996165405897,
+        "crouch": 0.026063942742908058,
+        "torsoPitch": 0.12864642864695253,
+        "armExtend": 0.07543883310045052
+      }
+    },
+    {
+      "i": 467,
+      "tick": 4680,
+      "independentFeatures": [
+        [
+          -0.024676009982371537,
+          0.07349981844380836,
+          0.6763581596213771,
+          0.7324810653755229
+        ],
+        [
+          -0.188091523445584,
+          0.07693425569859236,
+          0.8866390217018953,
+          0.41542020208883584
+        ],
+        [
+          0.02519958594150626,
+          -0.07359936694246341,
+          0.6772731982353346,
+          0.7316072231779336
+        ],
+        [
+          0.18222733187289356,
+          -0.06937412718865399,
+          0.8853013736026631,
+          0.42216336635541546
+        ]
+      ],
+      "independentDistancesRad": [
+        1.8345537518382233,
+        1.592619925100906,
+        0.3233433046786768,
+        0.13012361379514706
+      ],
+      "driverNearestRad": 0.13012351767623842,
+      "reconstructedNearestRad": 0.13012361379514706,
+      "nearestDifferenceRad": 9.611890863792105e-08,
+      "driverStrength": 1,
+      "reconstructedStrength": 1.0,
+      "strengthDifference": 0.0,
+      "maximumWeightDifference": 1.0569526354142766e-07,
+      "commonWorldPoseRemoved": true,
+      "deltaTimeS": 0.08333333333333333,
+      "deltaDriverStrength": 1,
+      "actualFeatureTravelRad": 1.9766747168716745,
+      "armPoseTravel": {
+        "L": {
+          "elbowTravelChestLocalM": 0.3260178322019159,
+          "wristTravelChestLocalM": 0.49551405450029445,
+          "upperDirectionAngleRad": 1.0335868905024195,
+          "foreDirectionAngleRad": 0.9407741864505982,
+          "actualUpperRotationAngleRad": 1.0339349465933774,
+          "actualForeRotationAngleRad": 0.9408285008113053
+        },
+        "R": {
+          "elbowTravelChestLocalM": 0.3260333014445536,
+          "wristTravelChestLocalM": 0.49555920681192805,
+          "upperDirectionAngleRad": 1.033641035891306,
+          "foreDirectionAngleRad": 0.9400233464273139,
+          "actualUpperRotationAngleRad": 1.0339956253508484,
+          "actualForeRotationAngleRad": 0.9401681542602811
+        }
+      },
+      "physicsPoseChanges": {
+        "lean": -1.3217535500473514,
+        "crouch": 0.0,
+        "torsoPitch": 0.28304463232832394,
+        "armExtend": 0.9945386543736182
+      }
+    }
+  ],
+  "sampleCadenceS": 0.08333333333333333,
+  "reproduction": {
+    "recipe": "assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind25/feature_support_audit.py",
+    "openBLASThreads": 2,
+    "ompThreads": 2,
+    "inputReports": 4,
+    "poseFramesPerReport": 480,
+    "physicsHz": 120,
+    "videoFps": 12,
+    "uniformWorldScaleApproximation": true,
+    "noParametersSwept": true
+  }
+}
