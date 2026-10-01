@@ -924,3 +924,15 @@ witnesses0.037–0.199mm; conservativewholetriangleLP depth≤0.615mm runtime.
 Source hashes exact, independentCPUsolver6.420s.
 Limits: Thumbpadgap4.715mm and49crossingpairs retained; staticonly. Fullrig,
 playedlean/landing/contacts, Garage/LOD and target8quality remain open.
+
+## Round 89 — same-character private contact mapping
+
+Finding: Transfer independent held morphs and virtual grip markers to the
+same NEW WHITE nineteen-bone source. Adapt hand rotation and sole offsets
+in an opt-in private build, preserving physics inputs and original binds.
+Validation: Actual production-class CPU skin/morph sampling finite across
+101 COM profiles; grip0.224µm/sole2.295µm residual; historical no-metadata
+snapshots byte-identical. Base/export parity measured, lint/harness tsc pass.
+Limits: Synthetic profiles are not played lean/contact evidence. One setup
+failure corrected; normals differ <=0.000099317. Thumb gap and moving art,
+Garage and LOD remain open; no player/bike/physics change. Asks239/240.

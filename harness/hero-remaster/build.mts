@@ -7,11 +7,14 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { build, type Plugin } from 'vite';
 import { readModelCatalog, type ModelAsset } from '../../src/boot/model-catalog';
+import { patchNewRiderSource } from './new-rider-private-adapter.mjs';
 
 const arg = (name: string, fallback = '') => process.argv.find(a => a.startsWith(`--${name}=`))?.slice(name.length + 3) ?? fallback;
 const root = process.cwd();
 const out = path.resolve(arg('out', 'harness/out/hero-remaster/baseline-build'));
 const mappingFile = arg('models');
+const newRiderAdapter = arg('new-rider-adapter', '0');
+if (!['0', '1'].includes(newRiderAdapter)) throw new Error('invalid private rider adapter flag');
 const mapping: Record<string, string> = mappingFile ? JSON.parse(fs.readFileSync(mappingFile, 'utf8')) : {};
 const sourceRoot = path.join(out, '.inputs');
 fs.mkdirSync(path.join(sourceRoot, 'models'), { recursive: true });
@@ -32,6 +35,7 @@ const manifest = {
   kind: 'private actual-game hero review',
   mapping,
   releaseBuild: false,
+  newRiderAdapter: newRiderAdapter === '1',
   models: assets.map(a => ({ logical: a.logical, url: a.url, bytes: a.bytes.length, sha256: a.sha256 })),
 };
 const plugin: Plugin = {
@@ -63,7 +67,17 @@ const plugin: Plugin = {
     this.emitFile({ type: 'asset', fileName: 'hero-review.json', source: JSON.stringify(manifest, null, 2) + '\n' });
   },
 };
-await build({ root, configFile: path.join(root, 'vite.config.ts'), logLevel: 'warn', plugins: [plugin], build: { outDir: out, emptyOutDir: false } });
+const adapterPlugin: Plugin = {
+  name: 'rockhop:private-new-rider-adapter',
+  enforce: 'pre',
+  transform(code, id) {
+    if (newRiderAdapter === '1' && id.toLowerCase().endsWith('/src/render/hero/gltfrider.ts')) {
+      return { code: patchNewRiderSource(code), map: null };
+    }
+    return null;
+  },
+};
+await build({ root, configFile: path.join(root, 'vite.config.ts'), logLevel: 'warn', plugins: [adapterPlugin, plugin], build: { outDir: out, emptyOutDir: false } });
 // The published manifest is truthful about the exact candidate bytes/URLs.
 for (const a of assets) {
   const actual = fs.readFileSync(path.join(out, a.url));

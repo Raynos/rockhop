@@ -1,0 +1,11 @@
+00:00.384  blend            | Read blend: "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind04/rider.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind05/build.py", line 12, in <module>
+    rotation=Matrix(d['nativeToRuntimeProperRotation'].tolist());assert abs(rotation.determinant()-1)<1e-7;target=rotation@rig.data.bones['hand.'+sd].matrix_local.to_3x3();q=target.to_quaternion();virtual=Vector(d['nativeVirtualPhysicsMarker']);socket=bpy.data.objects['gripSocket.'+sd];desired=rig.matrix_world@virtual;socket.matrix_world=Matrix.Translation(desired);bpy.context.view_layer.update();actual=socket.matrix_world.translation;assert (actual-desired).length<1e-6
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/body-bind05/build.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

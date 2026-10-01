@@ -634,3 +634,17 @@ Conservativewholetriangle depth≤0.615mm runtime;49crossingpairs remain.
 Next transfer BOTH helddeltas and measuredvirtualmarkers to thesame
 19bone source, preservebind/footphysics adaptation, thenactual playedtests.
 No closing/player/bike/physics change or static-to-game-ready promotion.
+
+### Same nineteen-bone contact adapter, private CPU foundation
+
+Body-bind05 preserves original WHITE body positions/UVs/weights/binds/images/
+clip, adds two independent held morphs and actual-surface virtual markers.
+Private opt-in renderer overlay maps new hand rotations and sole offsets
+without changing physics chain inputs; source q0/inverse binds stay intact.
+Actual GltfRider/prepareHero across101synthetic COM profiles: grip0.224µm,
+sole2.295µm residual, finite skin, all debugcontacts. Historical asset without
+metadata stays byte-identical between classes. Exported normals differ <=
+0.000099317 componentunits; all other measured base/export source bytes exact.
+One float32 determinant setup failure corrected; untouchedsource retained.
+This is unaccepted CPU evidence. Next actualplayed leaning/landing/contact,
+Garage blending and LOD; thumbgap4.715mm stillopen. Checkpoint2/3 stayopen.
