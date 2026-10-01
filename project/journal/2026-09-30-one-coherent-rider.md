@@ -355,3 +355,14 @@ failed recipe, master and three maps are hashed. Parent reviewed cause.
 
 Limits: Maps unaccepted; no grip, final rig or whole character approval.
 Existing material deadline and stage ceiling remain unchanged.
+
+Finding: Native shared-index neck is closed, but jagged collar protrusions
+and reset material indices fail appearance. Reject first join; topology
+counts cannot approve a coherent character.
+
+Validation: Parent reviewed actual four gray reimport views. All189676
+exported triangles correspond; corner error0, UV error2.98e-8. Protected
+source corners preserved; intended material assignments failed.
+
+Limits: No clean neck join, texture continuity or bend/rotation acceptance.
+Prior graph-cut and ellipse failures remain stopped.

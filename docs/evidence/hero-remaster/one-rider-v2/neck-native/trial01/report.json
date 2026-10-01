@@ -1,0 +1,113 @@
+{
+  "status": "UNACCEPTED frozen first native BMesh trial; independent export/visual checks pending",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-native-male/head.blend": "d72826e070df64a49dd52a446c18229329a4a5c962d001f9f5abed0ce8e006e4",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "recipeSHA256": "6a07761f813d18108d8f4f2bd2d2780f1aba44db154216d8fbdef40f30b0274d",
+  "settings": {
+    "headUniformScale": 0.42,
+    "headWorldZOffset": 1.59338,
+    "headWorldYOffset": 0,
+    "newNeckCutWorldZ": 1.49,
+    "sourceMatchToleranceM": 2e-06,
+    "localFairBandRadiusM": 0.035,
+    "maximumDisplacementM": 0.012,
+    "fairingIterations": 8,
+    "fairingLambda": 0.5,
+    "fairing": "Actual mesh adjacency Laplacian with tapered local displacement clamp",
+    "bridge": "Actual two boundary circuits, arclength zipper and one shared-index inner-facing ring; no ellipse"
+  },
+  "limits": [
+    "Appearance, texture seam, normal continuity, neck rotation/bending and full rig remain unaccepted/unmeasured.",
+    "Neutral static geometry feasibility only; no historical head donor, global remesh, rig, physics or contacts."
+  ],
+  "body": {
+    "removedHistoricalHeadTriangles": 13657,
+    "sourceDeletedTriangleOrdinalSHA256": "1f13d24a72726d8c5fd7841cadfc103fc6e06ed85785da587c1792dca6ff66e4",
+    "retainedMaskDeleteCount": 13657,
+    "actualBoundaryVertices": 111,
+    "localFairBandVertices": 783,
+    "maximumDisplacementM": 0.012000050935394461,
+    "outsideBandRetainedFaces": 40859,
+    "outsideBandCornerMaterialUVSHA256": "c759fa9da92610e3e16729277f07118d53fa7c9c12245d922ea587ac29918e90",
+    "outsideBandExactPreservation": true,
+    "topologyBeforeJoin": {
+      "vertices": 23010,
+      "faces": 42505,
+      "boundaryEdges": 111,
+      "nonmanifoldEdges": 111,
+      "inconsistentWindingEdges": 0,
+      "componentVertexCounts": [
+        23010
+      ]
+    },
+    "fairingOriginalBoundaryBounds": [
+      [
+        -0.09931520372629166,
+        -0.07322391867637634,
+        1.4941885471343994
+      ],
+      [
+        0.076560378074646,
+        0.12749046087265015,
+        1.6026160717010498
+      ]
+    ],
+    "fairingNewBoundaryBounds": [
+      [
+        -0.09298285096883774,
+        -0.06557407975196838,
+        1.4925720691680908
+      ],
+      [
+        0.07683238387107849,
+        0.1279393583536148,
+        1.594069480895996
+      ]
+    ]
+  },
+  "head": {
+    "neckBoundaryVertices": 200,
+    "neckTrimWorldZ": 1.49,
+    "unchangedFaceAboveWorldZ": 1.53,
+    "unchangedHeadFaceCount": 63620,
+    "unchangedHeadFaceCornerUVSHA256": "c471acdd430765887f979317c517c93df1e0e360b004ffc6f716780269dcdb99",
+    "faceUVAndGeometryPreserved": true,
+    "crownWorldZ": 1.7609626054763794,
+    "eyesRetainedObjects": [
+      "NEW native CC0 eye surfaces fitted to baked male source"
+    ]
+  },
+  "join": {
+    "sharedActualBodyBoundaryVertices": 111,
+    "sharedNewHeadBoundaryVertices": 200,
+    "sharedInsideFacingRingVertices": 111,
+    "newInsideFacingFaces": 422,
+    "noEllipticalCap": true,
+    "headAndBodySingleMesh": true,
+    "topologyAfterJoin": {
+      "vertices": 90752,
+      "faces": 110457,
+      "boundaryEdges": 0,
+      "nonmanifoldEdges": 0,
+      "inconsistentWindingEdges": 0,
+      "componentVertexCounts": [
+        90752
+      ]
+    },
+    "skinMaterialIndex": 2,
+    "liningMaterialIndex": 3
+  },
+  "outputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/neck-native/trial01/body-head.blend": "1b0ded12aa5b1558035e326155b8264f8441e20065cee4c7d3ed0929fc15f55c",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/neck-native/trial01/body-head.glb": "65d100e1dec91b2c3d1cd486d09e8866f1f5c631a4dbe2fa9325f1bb074fcb7c"
+  },
+  "inputsAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-native-male/head.blend": "d72826e070df64a49dd52a446c18229329a4a5c962d001f9f5abed0ce8e006e4",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "wallSeconds": 4.378646540921181
+}

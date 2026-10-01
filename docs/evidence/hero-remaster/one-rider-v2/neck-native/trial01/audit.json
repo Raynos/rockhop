@@ -1,0 +1,128 @@
+{
+  "status": "UNACCEPTED independent trial01 audit",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/neck-native/trial01/body-head.blend": "1b0ded12aa5b1558035e326155b8264f8441e20065cee4c7d3ed0929fc15f55c",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/neck-native/trial01/body-head.glb": "65d100e1dec91b2c3d1cd486d09e8866f1f5c631a4dbe2fa9325f1bb074fcb7c"
+  },
+  "recipeSHA256": "d2108c92056599628f98a1ace9c515813dd85232c796038afe2fa6f560ab8073",
+  "bodyBlendTopology": {
+    "vertices": 90752,
+    "faces": 110457,
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0
+  },
+  "preExportMaterialAssignments": [
+    {
+      "object": "UNACCEPTED NEW native head and neutral hand body shared collar",
+      "vertices": 90752,
+      "faces": 110457,
+      "materialFaceCounts": {
+        "0": 110457
+      },
+      "slots": [
+        "Material",
+        "Neutral anatomical glove unbaked provisional",
+        "Neutral gray native anatomical inspection",
+        "UNACCEPTED native collar inside-facing"
+      ]
+    },
+    {
+      "object": "NEW native CC0 eye surfaces fitted to baked male source",
+      "vertices": 4164,
+      "faces": 4080,
+      "materialFaceCounts": {
+        "0": 4080
+      },
+      "slots": [
+        "Neutral gray native anatomical inspection"
+      ]
+    }
+  ],
+  "reimportMaterialAssignments": [
+    {
+      "object": "NEW native CC0 eye surfaces fitted to baked male source",
+      "vertices": 4187,
+      "faces": 8160,
+      "materialFaceCounts": {
+        "0": 8160
+      },
+      "slots": [
+        "Neutral gray native anatomical inspection"
+      ]
+    },
+    {
+      "object": "UNACCEPTED NEW native head and neutral hand body shared collar",
+      "vertices": 98019,
+      "faces": 181516,
+      "materialFaceCounts": {
+        "0": 181516
+      },
+      "slots": [
+        "Material"
+      ]
+    }
+  ],
+  "roundtripTriangles": {
+    "before": 189676,
+    "after": 189676,
+    "materialAndCornerUVMismatchCount": 1028,
+    "geometryAndCornerUVOnlyMismatchCount": 1028,
+    "comparisonPrecision": "World positions and face-corner UV rounded1e-5; triangle corner-order invariant"
+  },
+  "actualTrialMaterialProblem": "Four intended body slots populated after material.clear(), resetting stored polygon indices to0. Export has one body primitive: no accepted skin/glove/lining assignment.",
+  "visibleRiderContacts": "UNMEASURED",
+  "neckTurnAndBend": "UNMEASURED; no rig",
+  "textureAndNormalContinuity": "UNMEASURED/unaccepted; material assignment failed",
+  "views": [
+    {
+      "label": "front",
+      "yaw": 0,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/neck-native/trial01/gray-front.png",
+      "sha256": "be47ee69fb6bc842dc79c6a4bd674dd62bb0fd61303932e5ba35094ceedadbb4",
+      "wallSeconds": 1.5881994999945164
+    },
+    {
+      "label": "profile",
+      "yaw": 90,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/neck-native/trial01/gray-profile.png",
+      "sha256": "b071622961867e29af2a6e1a388202f5a81532113b85037793040223508648b4",
+      "wallSeconds": 1.3380798338912427
+    },
+    {
+      "label": "rear",
+      "yaw": 180,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/neck-native/trial01/gray-rear.png",
+      "sha256": "619669541accaf2db8314dd2428ab705c5805a2b98f6ceebafe0967f024b1765",
+      "wallSeconds": 1.4078977080062032
+    },
+    {
+      "label": "three-quarter",
+      "yaw": 45,
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/neck-native/trial01/gray-three-quarter.png",
+      "sha256": "fe745940ae602404f7ce80248cfc8ae7c4359a481812b995b63ad81f9d3c27a4",
+      "wallSeconds": 1.4463240830227733
+    }
+  ],
+  "inputsAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/neck-native/trial01/body-head.blend": "1b0ded12aa5b1558035e326155b8264f8441e20065cee4c7d3ed0929fc15f55c",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/neck-native/trial01/body-head.glb": "65d100e1dec91b2c3d1cd486d09e8866f1f5c631a4dbe2fa9325f1bb074fcb7c"
+  },
+  "CPUSettings": {
+    "threads": 4,
+    "cyclesDevice": "CPU",
+    "samples": 16,
+    "resolution": [
+      640,
+      640
+    ],
+    "orthoScale": 0.5,
+    "target": [
+      0,
+      0.015,
+      1.58
+    ],
+    "material": "Neutral gray only; no skin texture trial",
+    "denoising": true
+  },
+  "wallSeconds": 9.547834875062108
+}
