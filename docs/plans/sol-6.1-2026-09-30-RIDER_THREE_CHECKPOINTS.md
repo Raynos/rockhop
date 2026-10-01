@@ -742,3 +742,9 @@ Round97: handoff now leads with the actualWHITEbody09 source/rig/played
 status and openface/bench/Garage/surface/Pro/realLOD gates. Earlier native
 African-palette/no-rig/active-lane notes are explicitly historical, not
 current direction. No asset or gate change; round96 NEW shipgate retained.
+
+Round98: source/loadedheadalbedo1024² equal; capincrease alone cannotadd
+source detail. Actual72PBR/gray states/debug exact. Requestedface1.3m was
+clamped3m byorbit, so halfbodydiagnostic notfaceacceptance. Harness now
+records effectivecamera andexplicitprivate projectionzoom; realcloseup next.
+SameWHITE09body/rest/rig retained. Round99NEWshipgate due.

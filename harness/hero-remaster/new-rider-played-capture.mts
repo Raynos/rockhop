@@ -22,11 +22,14 @@ assert(Number.isInteger(ticksPerFrame));
 const frames = Math.min(Math.floor(inputs.length / ticksPerFrame), Math.round(Number(arg('seconds', '40')) * fps));
 const surface = arg('surface', 'textured'); assert(['textured', 'gray'].includes(surface));
 const focus = arg('focus', 'body'); assert(['body', 'hands', 'feet', 'face'].includes(focus));
+const detailZoom = Number(arg('detail-zoom', '1'));
+assert(Number.isFinite(detailZoom) && detailZoom >= 1 && detailZoom <= 4);
+assert(detailZoom === 1 || focus !== 'body', 'detail zoom is only for explicit closeup diagnostics');
 assert(frames > 0 && frames * ticksPerFrame <= inputs.length);
 fs.mkdirSync(path.join(out, 'frames'), { recursive: true });
 assert.equal(fs.readdirSync(path.join(out, 'frames')).length, 0, 'fresh capture directory');
 const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json'), 'utf8'));
-const report: any = { build, mode, tier, frames, fps, focus, surface, camera: 'actual runtime bone midpoint; read-only focus/orbit camera, no pose injection', ui: 'HUD hidden only for geometry inspection', samples: [], errors: [], loaded: [] };
+const report: any = { build, mode, tier, frames, fps, focus, surface, detailZoom, camera: 'actual runtime bone midpoint; read-only focus/orbit camera, no pose injection', ui: 'HUD hidden only for geometry inspection', samples: [], errors: [], loaded: [] };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
@@ -52,6 +55,24 @@ try {
       t.setQuality(tier); await r.whenReady(); t.skipCountdown();
     }, { header: recording.header, tier });
   }
+  report.loadedMaterials = await page.evaluate(() => {
+    const rows: any[] = [];
+    (window as any).__render.debug.rider.scene.traverse((o: any) => {
+      if (!o.isMesh) return;
+      for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
+        const maps: any[] = [];
+        for (const key of ['map', 'normalMap', 'roughnessMap', 'metalnessMap', 'aoMap']) {
+          const t = m[key]; if (!t) continue;
+          maps.push({ key, name: t.name, width: t.image?.width, height: t.image?.height,
+            channel: t.channel, colorSpace: t.colorSpace, anisotropy: t.anisotropy,
+            minFilter: t.minFilter, magFilter: t.magFilter, generateMipmaps: t.generateMipmaps });
+        }
+        rows.push({ mesh: o.name, material: m.name, type: m.type, roughness: m.roughness,
+          metalness: m.metalness, color: m.color?.toArray(), maps });
+      }
+    });
+    return rows;
+  });
   report.surfaceDiagnostic = await page.evaluate(surface => {
     const r = (window as any).__render, meshes: any[] = [];
     if (surface === 'gray') r.debug.rider.scene.traverse((o: any) => {
@@ -71,7 +92,7 @@ try {
   await page.evaluate(() => { for (const o of document.querySelectorAll<HTMLElement>('body > *')) if (o.tagName !== 'CANVAS' && !o.querySelector('canvas')) o.style.visibility = 'hidden'; });
   await page.waitForTimeout(500);
   for (let i = 0; i < frames; i++) {
-    const sample = await page.evaluate(({ input, yaw, i, focus }) => {
+    const sample = await page.evaluate(({ input, yaw, i, focus, detailZoom }) => {
       const t = (window as any).__rockhop, r = (window as any).__render, d = r.debug;
       for (const frame of input) { t.setInput(frame); t.step(1); }
       t.render(true);
@@ -85,11 +106,16 @@ try {
       if (found !== expected) throw new Error(`expected actual focus bones, got ${found}`);
       midpoint.multiplyScalar(1 / found); if (focus === 'body') midpoint.y += .12; if (focus === 'face') midpoint.y += .04;
       r.setCameraOverride({ mode: 'orbit', x: midpoint.x, y: midpoint.y, yaw, pitch: 0.12, dist: focus === 'body' ? 5.2 : focus === 'hands' ? 2.0 : focus === 'feet' ? 2.0 : 1.3, screenX: 0.5, screenY: 0.5 });
+      // Orbit intentionally clamps distance to >=3m. Zoom the real camera projection
+      // for private closeups; record the effective camera rather than claiming requested distance.
+      d.rig.camera.zoom = detailZoom; d.rig.camera.updateProjectionMatrix(); r.invalidate();
       t.render(true);
+      const effectiveCamera = { position: d.rig.camera.position.toArray(), quaternion: d.rig.camera.quaternion.toArray(),
+        fov: d.rig.camera.fov, zoom: d.rig.camera.zoom, distance: d.rig.distance };
       const positions: Record<string, number[]> = {};
       d.rider.scene.traverse((o: any) => { if (o.isBone && /^(forearm|hand)[.]?[LR]$/.test(o.name)) positions[o.name] = o.getWorldPosition(new d.THREE.Vector3()).toArray(); });
-      return { i, inputLast: input.at(-1), state: structuredClone(t.getState()), phase: t.phase(), tick: t.getState().tick, physicsTime: t.getState().time, stageTime: r.stageTime, hash: t.hashState(), positions, privateClothRim: structuredClone(d.rider.scene.userData.rockhopPrivateClothRim ?? null), heroDoc: r.debugInfo().heroDoc, debug: structuredClone(d.rider.debug) };
-    }, { input: mode === 'ride' ? inputs.slice(i * ticksPerFrame, (i + 1) * ticksPerFrame) : [], yaw: 0.4 + 1.35 * Math.sin(i * Math.PI * 2 / Math.max(1, frames - 1)), i, focus });
+      return { i, effectiveCamera, inputLast: input.at(-1), state: structuredClone(t.getState()), phase: t.phase(), tick: t.getState().tick, physicsTime: t.getState().time, stageTime: r.stageTime, hash: t.hashState(), positions, privateClothRim: structuredClone(d.rider.scene.userData.rockhopPrivateClothRim ?? null), heroDoc: r.debugInfo().heroDoc, debug: structuredClone(d.rider.debug) };
+    }, { input: mode === 'ride' ? inputs.slice(i * ticksPerFrame, (i + 1) * ticksPerFrame) : [], yaw: 0.4 + 1.35 * Math.sin(i * Math.PI * 2 / Math.max(1, frames - 1)), i, focus, detailZoom });
     report.samples.push(sample);
     await page.screenshot({ path: path.join(out, 'frames', `${String(i).padStart(4, '0')}.png`) });
   }

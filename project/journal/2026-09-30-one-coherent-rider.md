@@ -1028,3 +1028,14 @@ Validation: Source09 SHA, round96 played/replay results and remaining gates
 checked against committed reports; no source asset or executable changes.
 Limits: Appearance refinement, sitting/Garage and actual surface contacts
 remain open; this documentation checkpoint accepts no new visual gate.
+
+## Round98 — face source detail and clamped review camera
+
+Finding: Head maps already1024² and remain1024² in the engine. Raising the
+loader cap cannot add detail. The requested1.3m camera is actually clamped
+3m; add explicit private projection zoom and measured camera reporting.
+Validation: Actual72paired PBR/gray states/debug equal; source09SHA exact.
+Source image/UV read-only audit, tsc/lint pass before camera correction;
+updated correction is checked before committing. GPU32.339s/34.128GB lock.
+Limits: Existing capture is half-body diagnostic; no new face gate or asset
+acceptance. Actual detail capture follows; normal player rendering untouched.

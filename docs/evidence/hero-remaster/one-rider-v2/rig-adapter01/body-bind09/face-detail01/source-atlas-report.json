@@ -1,0 +1,128 @@
+{
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind09/rider.glb",
+  "sourceSHA256": "974cb07434cb498b15306e1e752691c97b1429a98a74c31391cfc4f800cea363",
+  "images": [
+    {
+      "index": 0,
+      "name": "join-albedo-0",
+      "size": [
+        2048,
+        2048
+      ],
+      "encodedSHA256": "2404c7f40126bba31e3172f7336eb8fd0c3c9aed39850a5a66708fef61965780"
+    },
+    {
+      "index": 1,
+      "name": "normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "encodedSHA256": "5d9ceaa9e6687786f52f4b30a53043fe2310797e235975ba4d48e7b8034de632"
+    },
+    {
+      "index": 2,
+      "name": "basecolor",
+      "size": [
+        2048,
+        2048
+      ],
+      "encodedSHA256": "1076b8c8e48db7fa65ee3271a00c33bb409dcf3998fd9246b2dca184aa51b1d3"
+    },
+    {
+      "index": 3,
+      "name": "roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "encodedSHA256": "668e116f5cf8318db018e1a66493b5cb85df5e2f248429f25aacc653e1baa5ee"
+    },
+    {
+      "index": 4,
+      "name": "join-albedo-2",
+      "size": [
+        2048,
+        2048
+      ],
+      "encodedSHA256": "f45c21c60840245e867c0bc9240244902d7e2cf00bdfda26a5849aa174242419"
+    },
+    {
+      "index": 5,
+      "name": "textured",
+      "size": [
+        1024,
+        1024
+      ],
+      "encodedSHA256": "b1326545a1a30593a5c16b5754943d69ee3f277f50ca65a2f017268f621005ad"
+    },
+    {
+      "index": 6,
+      "name": "CPU baked coherent cheek skin",
+      "size": [
+        1024,
+        1024
+      ],
+      "encodedSHA256": "fd0c9dd496cd419c8c8378d4fe1ca842f10907bf65e937a9708a82c4bea905f9"
+    }
+  ],
+  "regions": [
+    {
+      "material": "Material.002",
+      "region": "whole-material",
+      "triangles": 99468,
+      "image": 5,
+      "surfaceAreaM2": 0.49083906412124634,
+      "summedUVArea": 0.6448014974594116,
+      "aggregateTexelsPerMeter": 1173.6630056297988,
+      "triangleDensityP10MedianP90": [
+        1068.4555364580976,
+        1138.058559782262,
+        1364.4840379135128
+      ]
+    },
+    {
+      "material": "Material.002",
+      "region": "front-face-spatial-window",
+      "triangles": 20090,
+      "image": 5,
+      "surfaceAreaM2": 0.06430008262395859,
+      "summedUVArea": 0.07627465575933456,
+      "aggregateTexelsPerMeter": 1115.2810402952246,
+      "triangleDensityP10MedianP90": [
+        1030.1301560082327,
+        1113.9014156858634,
+        1184.5685685817289
+      ]
+    },
+    {
+      "material": "Anatomically reconstructed cheek skin",
+      "region": "whole-material",
+      "triangles": 429,
+      "image": 6,
+      "surfaceAreaM2": 0.002220069756731391,
+      "summedUVArea": 0.5876902341842651,
+      "aggregateTexelsPerMeter": 16660.609424682738,
+      "triangleDensityP10MedianP90": [
+        12493.587517256767,
+        17600.364841330767,
+        18662.71209580322
+      ]
+    },
+    {
+      "material": "Anatomically reconstructed cheek skin",
+      "region": "front-face-spatial-window",
+      "triangles": 429,
+      "image": 6,
+      "surfaceAreaM2": 0.002220069756731391,
+      "summedUVArea": 0.5876902341842651,
+      "aggregateTexelsPerMeter": 16660.609424682738,
+      "triangleDensityP10MedianP90": [
+        12493.587517256767,
+        17600.364841330767,
+        18662.71209580322
+      ]
+    }
+  ],
+  "limits": "Read-only source audit. Spatial face window is a declared diagnostic region, not semantic facial topology. UV area sums may include overlap; density is not a quality score. Source head maps already1024; increasing the loader cap alone cannot add detail."
+}
