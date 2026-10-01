@@ -1460,3 +1460,13 @@ branches;6340excluded/elbow3789retained,6403/27413/27805still included.
 Source unchanged. No shader/GPU or appearance claim.
 Limits: Add explicit reviewed torso/cuff/elbow landmarks before a new
 continuous field; no distance-threshold sweep or prior-weight labeling.
+
+## Round140 — explicit source-panel constraints retain sleeve mask
+
+Finding: Reviewed torso landmarks exclude all four witnessed torso fans;
+connected1609/1563sleeve regions retain originalelbow3789. Use one harmonic
+surface-weight solve next, without source-weight eligibility or tuning.
+Validation: Deterministic completegraph audit passes sourceSHA, fourtorso
+exclusions andconnectedbranches. Originalmesh/skin/source unchanged.
+Limits: Selection hypothesis only; whole shoulder/garment semantics and
+moving appearance unproven. Protectedheadhoodjoin/contacts remain required.

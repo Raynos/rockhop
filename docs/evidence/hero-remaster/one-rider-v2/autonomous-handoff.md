@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round139, 2026-10-01
+## Current evidence — round140, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -816,3 +816,10 @@ Nextexplicit parent-reviewed torso/cuff/elbowpanel landmarks constrain
 surfacepartition before onecontinuousskin solve; no thresholdsweep orold
 weighteligibility. Current11/join/gallery129and29face rejectionpreserved.
 Shipnext141.
+
+Round140: explicitreviewedtorso landmarks constrain sourcegeodesicmask;
+6340/6403/27413/27805excluded, elbow3789retained,1609/1563connectedbranches.
+No oldweighteligibility orthresholdsweep. RetainCPU maskhypothesis only.
+Nextoneharmonic surfaceweights withfixedtorso/hood/cuff andexplicitarm
+anchors; measureallgeometryselected folds,torso witnesses/outside/contacts
+beforemotion. No newGLB/appearancepass. Requiredship141next.

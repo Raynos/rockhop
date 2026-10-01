@@ -77,6 +77,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round138 actual-camera/whol
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round139 rejects unconstrained geodesic sleeve mask before export: three reviewed torso panels still selected, elbow retained. Explicit source-panel landmarks next before continuous solve; no threshold sweep. Current11/join/gallery129protected, eye topology/fit switch remains. Ship138passes; next141.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round140 retains constrained source-surface sleeve mask: fourreviewedtorso patches excluded, elbow retained,1609/1563connectedregions. One harmonic surface-weight CPUsolve next; no newasset or appearancepass. Body11/headhoodjoin/gallery129protected; eye localized topology/fit switch stands. Requiredship141next.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
