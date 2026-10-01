@@ -971,3 +971,14 @@ tick and contact records exact. Lint/harness tsc pass. GPU180.763s/41.068GB
 under canonical lock; parent ordered1second samples and four defects judged.
 Limits: Body below7; source unchanged, no player/physics/bike edit. Armpit
 blend, face8, actual surfaces/Garage/Pro/realLOD remain open. Ask239/240.
+
+## Round93 — finish hip blend and reject shoulder height patch
+
+Finding: Actual played hem improves; shoulder hole persists and raw hood-seam
+skin worsens. Retain waist correction, switch shoulder method autonomously.
+Validation: ProtectedGLB byte parity; actual480PBR/gray records exact, all
+socketcontacts grip.190µm/sole1.840µm. NEWcandidate coldclear exact40.0833s,
+crash103/restart1/2ms, zeroerrors. Lint/harness tsc pass. GPUcanonical lock,
+188.799s/34.182GB. Parent ordered samples cover40s +fourdefects.
+Limits: One setup/onepartialappearance failure retained. Body6.7/face6.5
+unmatched; no player/physics/bike edit, actualsurfaces/Garage/Pro/LOD open.

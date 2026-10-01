@@ -1,0 +1,25 @@
+{
+  "status": "Partial improvement only; retain completed waist blend, reject height-only shoulder refinement",
+  "actualPlayed": {
+    "frames": 480,
+    "maxGripM": 1.8940650378745106e-07,
+    "maxSoleM": 1.8396878910140118e-06,
+    "allHandSocketContacts": true,
+    "allFootSocketContacts": true,
+    "leanExtrema": [
+      -1,
+      1
+    ]
+  },
+  "waist": "Broken/flared hem visibly reduced; actual CPU maximum waist edge22.280 to4.804times at4210",
+  "shoulder": "Hole persists in actualPBR/gray. Unconditioned source worsens near protected hood seam to118.286times; runtime smoothing hides that discontinuity",
+  "next": "Reset shoulder to originalbody05 weights then use constrained connected-surface smoothing, preserving hood/cuff/head and rest geometry",
+  "sourceParity": "All bytes outside original-body JOINTS/WEIGHTS accessors exact; face/hood/glove/material/UV/morph/bind/socket/clip unchanged",
+  "provisionalUnmatchedQuality": {
+    "body": 6.7,
+    "face": 6.5,
+    "appearancePass": false
+  },
+  "coverage": "40seconds at1second intervals and four defect frames, both materials; not all480frames visually judged",
+  "failures": "One protected-hood setup failure, then partial shoulder appearance failure; switch early to topology-aware method, history retained"
+}

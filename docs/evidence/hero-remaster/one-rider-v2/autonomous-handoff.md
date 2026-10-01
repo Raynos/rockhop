@@ -361,3 +361,13 @@ upperarm-to-chest switch (13.234times without conditioner). Correct local
 weights on sameWHITE body05, protect all rest geometry/PBR/morphs/binds,
 then sameactual replay. Armpit transition also open. Round93 shipgate due.
 No source model generation needed for a proven authoring bug.
+
+## Round93 continuation
+
+Body06 completeswaistblend, actualhem cleaner; retainthisportion. Reject
+height-only shoulder patch: rawprotectedhood seam worsens118.286times;
+conditioner masksit butvisiblehole persists. Nextbody07 resetshoulder05,
+then constrained connected-surface smoothing with hood/cuff anchors. Source
+rest geometry/PBR/morphs/binds/face allbyteexact. One setup/onepartialfailure
+retained, earlyswitch permitted. Actual480allcontacts/physicsexact; shipgate
+round93 passedNEWcandidate. Body6.7/face6.5 diagnostic, noappearancepass.

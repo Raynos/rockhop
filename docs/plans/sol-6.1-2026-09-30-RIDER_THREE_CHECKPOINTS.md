@@ -686,3 +686,16 @@ before generic conditioning). Keep rest shape, face and textures. Next
 bounded localized weight correction, then same replay/gray and contact gates.
 Armpit blending may still need deliberate refinement. Body below7, no
 checkpoint2/3 closure, no regeneration or player promotion basedonthisaudit.
+
+### Local waist fix improves played silhouette; switch shoulder method early
+
+Round93: protected sourceWHITE body06 changes only original-body skinbytes.
+Actual480PBR/gray states/contact diagnostics matched. Waistmaxstretch22.280
+→4.804, cleanerhem; allsocketcontacts retained. Shoulderhole persists;
+height-only taper worsens unconditioned protected-hood seam to118.286times.
+Retain waist, reset shoulder05 and switch early to constrained adjacency
+smoothing with frozenhood/cuffs, rather than repeating heightband edits.
+One setup +one partial appearancefailure retained. Body6.7/face6.5 diagnostic
+(unmatchedengine light), no minimumappearance pass. Round93 silent NEWcandidate
+coldclear exact40.083333333333336/hash368f1ca5bd9e830a, crash103/restart1/2ms.
+No physics/bike/player edits; actual surfaces/Garage/Pro/realLOD still open.

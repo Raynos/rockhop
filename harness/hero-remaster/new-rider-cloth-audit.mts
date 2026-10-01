@@ -12,10 +12,11 @@ import { GltfBike } from '../../src/render/hero/gltfBike';
 import { FrameBuilder } from '../../src/render/frame';
 import type { PhysicsState } from '../../src/core/types';
 import type { MaterialLibrary } from '../../src/render/materials/library';
-const out=path.resolve('docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/cloth-audit01');fs.mkdirSync(out,{recursive:true});
+const arg=(name:string,fallback:string)=>process.argv.find(a=>a.startsWith('--'+name+'='))?.slice(name.length+3)??fallback;
+const out=path.resolve(arg('out','docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/cloth-audit01'));fs.mkdirSync(out,{recursive:true});
 const captured=JSON.parse(fs.readFileSync('docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played03/hands/report.json','utf8')) as {samples:{i:number;tick:number;state:PhysicsState}[]};
 (globalThis as unknown as {document:unknown}).document={createElement:()=>({width:128,height:64,getContext:()=>({createRadialGradient:()=>({addColorStop(){}}),scale(){},fillRect(){}})})};
-const source='/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind05/rider.glb',results=[];
+const source=arg('source','/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind05/rider.glb'),results=[];
 for(const variant of ['conditioned','source-weights']){
  const bundle=path.resolve('harness/out/hero-remaster/cloth-audit-'+variant);
  await build({configFile:false,publicDir:false,logLevel:'error',build:{ssr:'src/render/hero/gltfRider.ts',outDir:bundle,emptyOutDir:true,minify:false,rollupOptions:{external:['three',/^three\//],output:{entryFileNames:'rider.mjs'}}},plugins:[{name:'cloth-audit',enforce:'pre',transform(code,id){if(!id.toLowerCase().endsWith('/src/render/hero/gltfrider.ts'))return null;let s=patchNewRiderSource(code);if(variant==='source-weights'){const a='this.releaseSleeveGeometry.push(conditionSleeveSkin(mesh));';assert.equal(s.split(a).length,2);s=s.replace(a,'this.releaseSleeveGeometry.push(() => {});');}return{code:s,map:null};}}]});
@@ -46,4 +47,4 @@ for(const variant of ['conditioned','source-weights']){
  }
  results.push({variant,rows});
 }
-fs.writeFileSync(out+'/report.json',JSON.stringify({source,results,scope:'Actual recorded body05 states and actual production skin decoder, CPU-only. Source-weights variant bypasses only generic sleeve conditioner. Triangle stretch ranks diagnostics; no automatic repair or topology/collision acceptance.'},null,2)+'\n');console.log(JSON.stringify(results.map(r=>({variant:r.variant,rows:r.rows.map(({worst:_worst,regions,...r})=>({...r,regions:regions.map(({worst:_worst,...region})=>region)}))}))));
+fs.writeFileSync(out+'/report.json',JSON.stringify({source,results,scope:'Actual recorded states and actual candidate production skin decoder, CPU-only. Source-weights variant bypasses only generic sleeve conditioner. Triangle stretch ranks diagnostics; no automatic repair or topology/collision acceptance.'},null,2)+'\n');console.log(JSON.stringify(results.map(r=>({variant:r.variant,rows:r.rows.map(({worst:_worst,regions,...r})=>({...r,regions:regions.map(({worst:_worst,...region})=>region)}))}))));
