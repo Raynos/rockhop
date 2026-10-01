@@ -215,3 +215,10 @@ BSDF BaseColor socket-link lookup correction next; source5hashes unchanged.
 Newdonorfamilysetup1, noappearanceverdict; old15retired. Round54silent
 productionlow/high exact40.083333333s clear, crash103ticks/restart1and2ms,
 zeroerrors. Awhitefacepatch and Bactualclothhoodbag continueCPU inownpaths.
+
+Round55: Localcheekselection prefix stopsbeforepatch atONEdegree4pinch,
+physicalvertex9438 with explicitincidentfacefan.513sourcefacesselected;
+99486unchangedoutsidefaces andoriginalsource intact. Parentactualprefix
+viewconfirmslocalonly, notacceptedrepair. Newcheekrepair failure1; exact
+fanselectioncorrectionnext within03:26:30cap, no blindwidening/globalremesh.
+Cdonor01socketcorrection/extraction and Bactualclothhoodbag CPUunderway.

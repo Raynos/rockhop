@@ -625,3 +625,11 @@ Validation: Failedrecipe/sourceproof frozen;5sourcehashes intact,no mesh
 change. Freshsilentlow/high productionexactclear/crash/1and2msrestartpasses.
 Limits: Newdonor setupfailure1, nohoodappearancechange/acceptance; old15
 retiredand independentnewface/clothconstruction stillunderway.
+
+## Round55 — stop unsafe cheek perimeter before filling
+
+Finding: Localized513faceprefix hasoneexactdegree4pinch; correctincident
+facefan beforebuilding anatomicalpatch ratherthan blindlywideningcut.
+Validation: Parentactualgrayprefixview; immutableoriginalsource,99486
+outsidefaces retained; fullincidentfaceIDs/perimeterdegreetrace frozen.
+Limits: No patch/bake, failure1innewcheekrepair; face6/10stillunaccepted.

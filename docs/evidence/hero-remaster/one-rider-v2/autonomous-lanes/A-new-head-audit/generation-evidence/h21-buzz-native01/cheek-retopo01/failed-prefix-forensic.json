@@ -1,0 +1,108 @@
+{
+  "status": "REJECTED exact failed selection, no correction/no patch",
+  "sourceSHA256": "2cd1859e05f6aac4d05112027dfaefcc15c7a83f8301ec8e1045fbc8bc326420",
+  "recipeSHA256": "596021245afd09f9ced3d709e300dd091c6068c7fbfb59db94155ed41fed676a",
+  "originalSelectionFaceIDsUnchanged": true,
+  "removedSourceFaces": 513,
+  "retainedSourceFaces": 99486,
+  "runtimePrefix": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-retopo01/failed-prefix.glb",
+  "runtimePrefixSHA256": "ef0eef1e45a89883d275e3732e23e49172c8511505514f2e9751ca09d48fe84d",
+  "pinches": [
+    {
+      "physicalVertex": 9438,
+      "sourceVertexIndices": [
+        9482
+      ],
+      "retainedBoundaryNeighbors": [
+        9461,
+        9459,
+        9446,
+        9434
+      ],
+      "incidentFaces": [
+        {
+          "sourceFace": 29076,
+          "removed": false,
+          "sourceVertices": [
+            9505,
+            9482,
+            9503
+          ]
+        },
+        {
+          "sourceFace": 29530,
+          "removed": false,
+          "sourceVertices": [
+            9490,
+            9473,
+            9482
+          ]
+        },
+        {
+          "sourceFace": 29531,
+          "removed": true,
+          "sourceVertices": [
+            9490,
+            9482,
+            9505
+          ]
+        },
+        {
+          "sourceFace": 29535,
+          "removed": true,
+          "sourceVertices": [
+            9482,
+            9494,
+            9503
+          ]
+        },
+        {
+          "sourceFace": 30011,
+          "removed": true,
+          "sourceVertices": [
+            9482,
+            9483,
+            9494
+          ]
+        },
+        {
+          "sourceFace": 30469,
+          "removed": false,
+          "sourceVertices": [
+            9482,
+            9473,
+            9478
+          ]
+        },
+        {
+          "sourceFace": 30471,
+          "removed": true,
+          "sourceVertices": [
+            9478,
+            9483,
+            9482
+          ]
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-retopo01/rejected-prefix-front.png",
+      "SHA256": "ada444ab2910df12a9b4a2993b1e26d7b0250ffe222de946bbce734ccf02f37f"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-retopo01/rejected-prefix-profile.png",
+      "SHA256": "8676ac99440ddd914300c2b929663d8c96989729906ac2d5ee1bd7da078ff642"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-retopo01/rejected-prefix-three-quarter.png",
+      "SHA256": "513b755275b332b201a4a0baf7dd320390b85c986e7be47b1cceb30119b94f04"
+    }
+  ],
+  "proposedAlternative": "Within identical protected region, deliberately choose one incident bridging face to remove the exact degree-four pinch; inspect resulting single perimeter before reconstruction. No widening or executed correction.",
+  "limitations": [
+    "Failed prefix is open and unaccepted; not an improved face.",
+    "No patch, UV change, texture bake, rig or production modification."
+  ]
+}
