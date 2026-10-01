@@ -1039,3 +1039,14 @@ Source image/UV read-only audit, tsc/lint pass before camera correction;
 updated correction is checked before committing. GPU32.339s/34.128GB lock.
 Limits: Existing capture is half-body diagnostic; no new face gate or asset
 acceptance. Actual detail capture follows; normal player rendering untouched.
+
+## Round99 — actual face detail exposes material outlines
+
+Finding: Correct zoom exposes coarse eyes/hair and dashed cheek outlines;
+face6.5 diagnostic remains below bar. Retain WHITE body09 and test UV margin
+as a separate material mechanism, not stopped geometry/polycolor repairs.
+Validation: 72paired cameras/state/debug exact; fullfront18/profile0 parent
+review. NEWcoldclear byteexactboth/crash103/restart1msLOW3msHIGH/errors0.
+GPU46.489s/51.217GB canonical lock. PIL setup corrected with bundledPython.
+Limits: Mockup lighting/camera unmatched; no strict appearance pass. Source
+geometry/UV/rig unchanged, realLOD/Pro/surface and later motion gates open.

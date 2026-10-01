@@ -1,0 +1,62 @@
+{
+  "privateOverlaySHA256": "b13b9e3e197974b072c515554471597a35af8e54d84169f3ceffa49a40cf0f3f",
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body09-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind09/face-closeup02/replay.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 14.145177624999999
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body09-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind09/face-closeup02/textured",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--surface=textured",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 16.153979792
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body09-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind09/face-closeup02/gray",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=6",
+        "--fps=12",
+        "--focus=face",
+        "--detail-zoom=3",
+        "--surface=gray",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 16.180589083
+    }
+  ],
+  "wallSeconds": 46.489276124999996,
+  "peakAnonymousBytes": 51216990208,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limits": "Both tier names use FULL; diagnostic face camera/PBR-gray capture, not real LOD. Face maps read-only, physics/pose/assets unchanged."
+}

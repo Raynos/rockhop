@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round96, 2026-10-01
+## Current evidence — round99, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -27,14 +27,14 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   separate unpassed gate. NEW coldboot/clear/crash/restart passes both tiers:
   exact40.083333333333336 finish/hash368f1ca5bd9e830a;103 crash ticks;2ms restart.
 - In-engine full-body diagnostic7.0 remains provisional because camera/light
-  are unmatched to the mockup. Face closeup is not regraded (prior6.5).
+  are unmatched to the mockup. Actual projectionzoom3 face regrade stays diagnostic6.5.
   Coarse eyes/cheeks/buzz/PBR, cowl creases and waist silhouette remain.
 - Checkpoints2/3 remain OPEN. Blender planted bench foundation is preserved;
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: measure source and loaded face texture density and
-  review actual face PBR/gray motion before regeneration or atlas changes.
+- Next bounded action: cheek UV-margin hypothesis; source/loaded1024² equal
+  and actualzoom3 PBR/gray closeups expose dashed patch outlines.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
@@ -449,3 +449,7 @@ Garageclips/benchmotion/Pro/surface/fullLOD. No sourceplayer/bike/physicsedit.
 One bake accessor-width setup failure retained; original08Blender source is
 master,09CPU GLB skin bake reproduciblevia new-rider-bake-skin.mts. No09blend
 master claimed. All losslesscaptured09PNG/movies private with hashes.
+
+Round99: actualface72pairedcamera/state/debug exact with measuredzoom3/3m.
+Face6.5diagnostic/strictmatchedgateopen; nextUVmargin hypothesis protects
+mesh/UV/rig/sourcecolors. NEWcoldclear exactboth/crash103/restart1/3ms.

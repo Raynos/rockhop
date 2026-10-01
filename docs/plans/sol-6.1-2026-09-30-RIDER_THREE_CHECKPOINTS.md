@@ -748,3 +748,9 @@ source detail. Actual72PBR/gray states/debug exact. Requestedface1.3m was
 clamped3m byorbit, so halfbodydiagnostic notfaceacceptance. Harness now
 records effectivecamera andexplicitprivate projectionzoom; realcloseup next.
 SameWHITE09body/rest/rig retained. Round99NEWshipgate due.
+
+Round99: actualzoom3/3m face72pairedcamera/state/debug exact; coarseeyes/hair
+andcheek outlines keepdiagnostic6.5/strictmatchedgateopen. NextUVmargin
+hypothesis protectsoccupiedtexels/geometry/UV/rig. NEWcoldclear exactboth,
+crash103/restart1msLOW3msHIGH/errors0. Body09WHITE retained. OnePIL evidence
+setupfailure corrected usingbundledPython/archivedoriginals, notassetrepair.
