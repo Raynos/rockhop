@@ -588,3 +588,13 @@ Validation: ParentactualfourPBRfront/rear comparisons;32validmatchedPBRgray
 views,20sourcefiles hashunchanged. TwelvewrongRAWviews frozen/excluded.
 Limits: Noextraction/assembly; rawdisplaycorrection needed beforecausality
 or highressourcechoice. Hoodappearance cannotpassface/body/motion gates.
+
+## Round51 — local cheek openings predate the reducer
+
+Finding: Freshface defects are actualrawgeometryholes, not paint or reducer
+origin; targetedanatomicalretopology replaces globalheadremesh/generation.
+Validation: Parentactualraw/paintedgray views,52CPUmatchedrenders; unchanged
+sourcehashes,111physicalboundaryedges/fourcircuits37/38/17/19, cheekrays
+missfrontandhitbackhead. Freshsilentproductionexactclear/crash/restartpasses.
+Limits: Innercircuitspossiblyislands; classifybeforepatch. Face6/10 below7;
+no acceptedface/wholecharacter, neckmotion or gameplay replacement.

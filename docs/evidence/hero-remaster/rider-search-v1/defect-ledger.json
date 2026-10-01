@@ -1081,6 +1081,20 @@
       "failedAttempts": 1,
       "failure": "12RAWviews upside-down afterextraX180; originaldata untouched,validPBR/reducedgray32",
       "next": "RemoveextraX180, inspectonefrontbeforecontinuing"
+    },
+    "H21-freshCheekOpenings": {
+      "source": "ActualH21buzz-native01 raw985183 beforecleanup/reducer",
+      "sourceDefectPresent": true,
+      "repairFailedAttempts": 0,
+      "actualCircuits": [
+        37,
+        38,
+        17,
+        19
+      ],
+      "actualBoundaryEdges": 111,
+      "next": "Targetedcheekretopology, classifyinnercircuits/facesfirst; preserveoriginalsource/faceoutsidepatch",
+      "evidence": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/gray-diagnostic03/cheek-surface-forensic.json"
     }
   },
   "visualQualityPolicy": {
@@ -1100,7 +1114,9 @@
     "status": "Actualpaintedfrontdiagnostic6/10, X180display; WHITE matchesapprovedtarget, visiblecheekdefects/soft eyes; rawgeometrycause pending",
     "evidence": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/README.md",
     "faceAccepted": false,
-    "historicalFaceComparisonsIntact": true
+    "historicalFaceComparisonsIntact": true,
+    "geometryDiagnosis": "Actualopencheekholes inraw,reduced,painted; notsourcepaint/FaceReducerorigin",
+    "next": "Localizedanatomicalretopology/bake withsourcepreservation; no globalremesh"
   },
   "cleanWholeHoodDonorComparison": {
     "selectedInspectionCandidate": "NEW H21-01 hoodonly",

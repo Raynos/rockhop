@@ -1,0 +1,15 @@
+{
+  "status": "Actual board composition exit 0",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/compose_gray_diagnostic03.py"
+  ],
+  "sharedPixelOnlyPythonSHA256": "612bb6e55a95ea6eaf3c9693cf17fbf1a738408ad3bbfce988f712d7321d2c42",
+  "GPUJob": false,
+  "initialSystemPythonAttempt": {
+    "exitCode": 1,
+    "error": "ModuleNotFoundError: No module named PIL",
+    "producedBoards": 0
+  },
+  "correction": "Use already installed Pillow in retained Unimate Python; no dependency install or asset modification."
+}

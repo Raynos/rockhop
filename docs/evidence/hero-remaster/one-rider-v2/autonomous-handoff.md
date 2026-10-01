@@ -187,3 +187,11 @@ persistGRAY,03darkrearband/unevenjunction. Alloldfaces/hairrejected, source
 20files unchanged.12RAWviewswrongupside-down display areoursetupfailure
 not sourcecause; correctoneactualfrontbeforemoreviews/extraction. Authored
 newhoodtrial01preview stiffcapeform rejectedpendingitsfrozenfinding; no bake.
+
+Round51: Parentactualraw/paintedgray confirms SAMEbilateralcheekholes already
+in985183nativefaces beforecleanup/reducer/paint. Exactforensic111physical
+boundaryedges in FOURcircuits37/38/17/19; innerislandspossible, simpletwo-hole
+fillnotassumed. Freshface6/10 promisingidentitybutgeometryrejected; targeted
+cheekretopology next, preserveUV/PBR/geometryoutsideregion.52actualmatched
+renders/hashessourceunchanged. Freshproductionlow/high byte-identicalclear
+40.083333333s, crash103ticks/restart1and2ms, zeroerrors; no newrigclaim.

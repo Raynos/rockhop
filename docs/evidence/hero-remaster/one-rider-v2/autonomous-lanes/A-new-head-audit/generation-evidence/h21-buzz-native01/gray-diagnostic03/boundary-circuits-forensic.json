@@ -1,0 +1,244 @@
+{
+  "status": "UNACCEPTED read-only guard; no mesh repair",
+  "inputSHA256": "222e5555471c2620a6623875dcad3cd233af5a8f55d3f56b1019f1ea1936d110",
+  "recipeSHA256": "ddbd4aca8d470ae47f106ccb35ed51aba1f5c18a8abf96ea067adca55330d0b5",
+  "variants": [
+    {
+      "variant": "raw",
+      "components": [
+        {
+          "vertices": 37,
+          "degreeCounts": {
+            "2": 37
+          },
+          "bounds": [
+            [
+              -0.0605217,
+              -0.1320892,
+              1.5297022
+            ],
+            [
+              -0.0534827,
+              -0.1271451,
+              1.5525792
+            ]
+          ]
+        },
+        {
+          "vertices": 38,
+          "degreeCounts": {
+            "2": 38
+          },
+          "bounds": [
+            [
+              0.0450641,
+              -0.1324369,
+              1.5297022
+            ],
+            [
+              0.0521032,
+              -0.1284645,
+              1.5543389
+            ]
+          ]
+        },
+        {
+          "vertices": 17,
+          "degreeCounts": {
+            "2": 17
+          },
+          "bounds": [
+            [
+              0.0450641,
+              -0.1280583,
+              1.5437803
+            ],
+            [
+              0.0521032,
+              -0.1249051,
+              1.5508194
+            ]
+          ]
+        },
+        {
+          "vertices": 19,
+          "degreeCounts": {
+            "2": 19
+          },
+          "bounds": [
+            [
+              -0.0605217,
+              -0.1279261,
+              1.5437803
+            ],
+            [
+              -0.0534827,
+              -0.1234441,
+              1.5508194
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "reduced",
+      "components": [
+        {
+          "vertices": 37,
+          "degreeCounts": {
+            "2": 37
+          },
+          "bounds": [
+            [
+              -0.0605217,
+              -0.1320892,
+              1.5297022
+            ],
+            [
+              -0.0534827,
+              -0.1271451,
+              1.5525792
+            ]
+          ]
+        },
+        {
+          "vertices": 38,
+          "degreeCounts": {
+            "2": 38
+          },
+          "bounds": [
+            [
+              0.0450641,
+              -0.1324369,
+              1.5297022
+            ],
+            [
+              0.0521032,
+              -0.1284645,
+              1.5543389
+            ]
+          ]
+        },
+        {
+          "vertices": 17,
+          "degreeCounts": {
+            "2": 17
+          },
+          "bounds": [
+            [
+              0.0450641,
+              -0.1280583,
+              1.5437803
+            ],
+            [
+              0.0521032,
+              -0.1249051,
+              1.5508194
+            ]
+          ]
+        },
+        {
+          "vertices": 19,
+          "degreeCounts": {
+            "2": 19
+          },
+          "bounds": [
+            [
+              -0.0605217,
+              -0.1279261,
+              1.5437803
+            ],
+            [
+              -0.0534827,
+              -0.1234441,
+              1.5508194
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "painted",
+      "components": [
+        {
+          "vertices": 17,
+          "degreeCounts": {
+            "2": 17
+          },
+          "bounds": [
+            [
+              0.0450642,
+              -0.1353916,
+              1.5530066
+            ],
+            [
+              0.0521032,
+              -0.1322386,
+              1.5600457
+            ]
+          ]
+        },
+        {
+          "vertices": 19,
+          "degreeCounts": {
+            "2": 19
+          },
+          "bounds": [
+            [
+              -0.0605216,
+              -0.1352596,
+              1.5530066
+            ],
+            [
+              -0.0534826,
+              -0.1307775,
+              1.5600457
+            ]
+          ]
+        },
+        {
+          "vertices": 38,
+          "degreeCounts": {
+            "2": 38
+          },
+          "bounds": [
+            [
+              0.0450642,
+              -0.1397703,
+              1.5389285
+            ],
+            [
+              0.0521032,
+              -0.1357979,
+              1.5635653
+            ]
+          ]
+        },
+        {
+          "vertices": 37,
+          "degreeCounts": {
+            "2": 37
+          },
+          "bounds": [
+            [
+              -0.0605216,
+              -0.1394224,
+              1.5389285
+            ],
+            [
+              -0.0534826,
+              -0.1344786,
+              1.5618055
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "finding": "Four degree-two circuits: 37/19 left, 38/17 right, preserved across raw/reduced/painted. Inner circuits may bound isolated front islands; do not assume two plain holes.",
+  "limits": [
+    "Supersedes README provisional two-circuit patch proposal.",
+    "Coincidence rounding diagnostic, not closed-volume acceptance.",
+    "No source indices or geometry modified."
+  ]
+}
