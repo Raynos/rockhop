@@ -1,0 +1,236 @@
+{
+  "round": 118,
+  "status": "Retain CPU local corrective authoring basis; visual/rig-driver acceptance unproven",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "comparisonBaselineThenHypothesis": [
+    {
+      "sample": 258,
+      "region": "upper-leg",
+      "folds": [
+        152,
+        0
+      ],
+      "quarterArea": [
+        2,
+        0
+      ],
+      "maxEdgeStretch": [
+        4.023281903614387,
+        3.2717037332087844
+      ]
+    },
+    {
+      "sample": 258,
+      "region": "hip-seat",
+      "folds": [
+        311,
+        2
+      ],
+      "quarterArea": [
+        31,
+        7
+      ],
+      "maxEdgeStretch": [
+        3.756712687716763,
+        2.943717653311152
+      ]
+    },
+    {
+      "sample": 35,
+      "region": "upper-leg",
+      "folds": [
+        128,
+        1
+      ],
+      "quarterArea": [
+        6,
+        0
+      ],
+      "maxEdgeStretch": [
+        3.0347550619997756,
+        2.3949827181687033
+      ]
+    },
+    {
+      "sample": 35,
+      "region": "hip-seat",
+      "folds": [
+        229,
+        2
+      ],
+      "quarterArea": [
+        26,
+        0
+      ],
+      "maxEdgeStretch": [
+        2.8526151861960782,
+        2.3257478819308033
+      ]
+    },
+    {
+      "sample": 75,
+      "region": "upper-leg",
+      "folds": [
+        148,
+        0
+      ],
+      "quarterArea": [
+        1,
+        0
+      ],
+      "maxEdgeStretch": [
+        4.929716648594169,
+        3.7114695646460083
+      ]
+    },
+    {
+      "sample": 75,
+      "region": "hip-seat",
+      "folds": [
+        443,
+        15
+      ],
+      "quarterArea": [
+        23,
+        8
+      ],
+      "maxEdgeStretch": [
+        4.605878210358926,
+        3.466111518962849
+      ]
+    },
+    {
+      "sample": 90,
+      "region": "upper-leg",
+      "folds": [
+        155,
+        0
+      ],
+      "quarterArea": [
+        2,
+        0
+      ],
+      "maxEdgeStretch": [
+        4.275805143513313,
+        3.23077112153132
+      ]
+    },
+    {
+      "sample": 90,
+      "region": "hip-seat",
+      "folds": [
+        326,
+        2
+      ],
+      "quarterArea": [
+        28,
+        6
+      ],
+      "maxEdgeStretch": [
+        3.9965068637563563,
+        3.0974211585881015
+      ]
+    },
+    {
+      "sample": 96,
+      "region": "upper-leg",
+      "folds": [
+        151,
+        0
+      ],
+      "quarterArea": [
+        3,
+        0
+      ],
+      "maxEdgeStretch": [
+        3.8337235318931797,
+        2.9373097913450827
+      ]
+    },
+    {
+      "sample": 96,
+      "region": "hip-seat",
+      "folds": [
+        294,
+        3
+      ],
+      "quarterArea": [
+        31,
+        8
+      ],
+      "maxEdgeStretch": [
+        3.5923525741358024,
+        2.8252661513697617
+      ]
+    },
+    {
+      "sample": 102,
+      "region": "upper-leg",
+      "folds": [
+        148,
+        0
+      ],
+      "quarterArea": [
+        2,
+        0
+      ],
+      "maxEdgeStretch": [
+        4.927480342576297,
+        3.709626428447678
+      ]
+    },
+    {
+      "sample": 102,
+      "region": "hip-seat",
+      "folds": [
+        441,
+        14
+      ],
+      "quarterArea": [
+        20,
+        5
+      ],
+      "maxEdgeStretch": [
+        4.599705090576494,
+        3.466219052404249
+      ]
+    }
+  ],
+  "settings": {
+    "method": "Local/global ARAP with exact position aliases",
+    "freePhysicalVertices": 1694,
+    "iterations": 15,
+    "activeY": [
+      0.72,
+      0.959175
+    ],
+    "absZBelow": 0.235,
+    "legWeightAbove": 0.99999,
+    "seatUpwardVertexClearanceM": 0.001,
+    "hardBoundary": true,
+    "softProximity": ".005+.08*(1-sin(pi*t)^2)^2 times graph degree",
+    "noParameterSweep": true,
+    "exported": false
+  },
+  "maximumPosedDisplacementM": 0.15195750577279485,
+  "maximumSourceCorrectiveDisplacementM": 0.21455862484978566,
+  "sampledSeatNegativeVertices": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "correctiveSourceRoundtripMaximumM": 1.1102230246251565e-16,
+  "independentReproduction": "Parent repeats all6 local/global solves;86 source and corrective buffers reproduce exact frozen SHA",
+  "next": "Append measured pose-space corrective targets privately, with explicit continuous relative thigh/pelvis rig driver and exact contact/physics checks; judge actual matched motion and target silhouette before selection",
+  "limits": [
+    "Hip normal-fold indicators use ARAP transported normals and are not equivalent to a visual judgment or global self-intersection proof",
+    "Source corrective displacement up to21.46cm and posed15.20cm: may change anatomy substantially, must inspect matched silhouette",
+    "Seat constraint covers local vertices projected onto48 actual seat triangles, not whole-body collision",
+    "No dynamic driver/export/fullbody or face art score yet; current11 remains unchanged"
+  ],
+  "GPUWorkPerformed": false,
+  "candidateExported": false
+}

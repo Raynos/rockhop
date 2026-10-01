@@ -916,3 +916,14 @@ actual triangle/visibility testing by surface category, preserving native lids
 and head/hood/body. Ship117 low/high40.083333333333336s/hash368f1ca5bd9e830a
 exact,crash103/restart2/4ms,errors0; next120. Hip16 DQ rejected; constrained
 hip corrective next. Current11 remains private selection, gallery unchanged.
+
+Round118: local hip corrective authoring basis retained CPU, unaccepted art.
+Six actual poses;1694 physical vertices, hard source-edge boundary and actual
+seat projection. Neutral hip fold indicators311→2, back443→15; upper-leg
+152/148→0, all six sampled seat negative counts0. Parent repeats all6 solves,
+86 frozen buffers exact; source-space delta roundtrip<1e-12m. Posed changes
+up15.196cm/source21.456cm require silhouette review; transported-normal metric
+is not art or whole-collision proof. No GLB/GPU/physics change. Next append-only
+private morph targets plus explicit continuous rig driver, actual moving PBR/
+gray and mockup comparison. Current11 unchanged; eye18 geometry lane ongoing.
+Ship next120; target8/full-body/face/animation/Garage/contact gates stay open.

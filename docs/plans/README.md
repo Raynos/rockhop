@@ -33,6 +33,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round116 rejects localized 
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round117 native graft stopped pre-export at conservative inward-wall front-ray test; parent verifies one corneal hit, no actual intersection proved. Keep8mm fit bound, actual triangle/visibility test next. Eye appearance failures6/native stop1 separate. Hip16 DQ rejected; constrained hip corrective next. Current11 unchanged/gallery live; ship117 exact/crash/restart passes,next120.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round118 retains local ARAP hip corrective basis CPU:6 poses,1694 physical vertices, hip/thigh fold indicators lower and sampled seat overlap0.86 buffers reproduce; no GLB/GPU/art pass. Up15.2cm posed changes need silhouette review; private continuous rig driver next. Current11 unchanged/gallery live; eye18 geometric graft ongoing. Ship next120.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

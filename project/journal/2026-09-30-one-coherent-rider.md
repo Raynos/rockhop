@@ -1246,3 +1246,13 @@ one cornea hit,9.178mm behind front. No GLB/GPU. Ship117 both tiers exact
 40.083333333333336s/hash368f1ca5bd9e830a; crash103/restart2/4ms,errors0.
 Limits: Actual triangle intersection, completed join/conservation/materials
 and moving face quality unmeasured. Keep8mm fit bound; no appearance pass.
+
+## Round118 — retain local hip corrective basis for moving inspection
+
+Finding: Constrained local ARAP reduces hip/upper-leg fold indicators while
+removing sampled seat overlap; proceed to a measured private rig driver.
+Validation: Six poses,1694 physical vertices; parent repeats86 buffers exact.
+Neutral/back hip311/443→2/15, upper legs152/148→0. All six sampled seat negative
+counts0, exact inverse-skin roundtrip<1e-12m; source/contact/skeleton unchanged.
+Limits: No GLB/GPU or art pass. Source21.456cm/posed15.196cm displacement may
+change silhouette; normal-fold counts and seat vertices do not prove anatomy.
