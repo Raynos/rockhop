@@ -279,3 +279,10 @@ actual front/profile/rear and stops parameterchurn afterfailure2. B retires,
 NEWdonor01 naturalhood primary. FrozenWHITEbust transform yieldsprovisional
 IPD65mm/eyeZ1.670/crown1.796; exacttransform/sourceproof inBtrial02README.
 40386bodytriangles/UV/material exact, no bake or rig mapping acceptance.
+
+Round65: Actual WHITEhead coherent shading removes palecheek bands and
+noisy specular highlights; parent diagnostic7.5/10, carry intofullbodyfit.
+All binary geometry/UV/image bytes exact, onlymaterial JSON response changes.
+Faintcheeklines/coarsehair/skin/approximateeyes remain, uniformroughness
+controlledloss ofMRvariation disclosed. No checkpoint1/neckmotion/rigpass.
+Parent owns next completebust+NEWdonorhood+protectedbody privateassembly.

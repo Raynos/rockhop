@@ -1,9 +1,11 @@
 # One coherent rider — approval package
 
-Status: reference mockups and read-only donor review complete; direction
-approved in asks233–234, autonomous execution delegated. New bust reference
-and bounded generation recipe ready; two fresh Pixal sampling batches stopped; preserved NEW Pixal bust
-cleanup alternative selected. No cleaned character or assembly yet.
+Status: autonomous rider execution continues. The preserved H21-4 body,
+new native hands/gloves, NEW donor01 hood and NEW actual Hunyuan2.1 white
+buzz-bust are the current fitting components. The head now has closed cheeks
+and coherent shading, diagnostic7.5/10. Full character/neck join, sitting
+and riding/contact gates remain open. Previous Pixal/TRELLIS sources and all
+failed comparisons remain preserved. See [current handoff](autonomous-handoff.md).
 Ask232 supersedes the preceding P3-only head-preservation proposal.
 
 ## Hair target

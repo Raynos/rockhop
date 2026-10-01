@@ -727,3 +727,13 @@ Validation: Parent actual front/profile/rear;48frames CPU simulation,
 IPD/eyeZ1.670/crown1.796, no warping; source bytes exact. No bake ran.
 Limits: Cloth-bag appearance failure2, no accepted hood or rig mapping.
 Sizing measurement is provisional and does not qualify anatomy or contacts.
+
+## Round65 — coherent white head shading improves actual face
+
+Finding: Coherent nonmetal skin roughness/specular removes pale patch bands
+and noisy highlights; parent face diagnostic7.5/10, ready for full-body fit.
+Validation: Actual CPU GLB reimport front/quarter; all binary geometry/UV/
+image bytes exact, only material JSON changes. Four actualviews frozen.
+Limits: Uniformroughness loses native MR variation; faint cheeklines/coarse
+detail/approximate eyes remain. Target photo lighting uncertain, so score
+does not accept wholecharacter/neckjoin/motion, rig or gameplay checkpoint.
