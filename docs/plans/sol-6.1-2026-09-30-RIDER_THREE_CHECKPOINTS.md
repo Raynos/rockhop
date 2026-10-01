@@ -497,3 +497,18 @@ material conversion and texture downsampling also require engine review.
 Evidence: `docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/`.
 This audit is not a rig or moving contact pass. Round78 production baseline
 is queued under the canonical shared GPU lock; no result is inferred.
+
+### First nineteen-bone skin probe
+
+A real new-character19bone skin and standing-to-sitting clip now export.
+Parent inspected all48 decoded front/profile frames: white face/neck
+remain intact and no obvious wrist opening appears. This is an unaccepted
+weighting and joint-estimate probe, not checkpoint2. Synthetic profile
+checks find up to58mm arm reach and42mm leg reach shortfall at extremes.
+Revise estimated joints within the actual clothing envelope and repeat
+reach before accepting skin; preserve physics and appearance. Native
+finger articulation setup stopped safely before deformation because its
+first cylinder-placement search found no clear placement. Expand the
+geometric placement search, not the retired fixed-curl technique.
+Round78 production baseline passes exact finish bytes, crash103ticks,
+restart1msLOW/2msHIGH, zero errors.

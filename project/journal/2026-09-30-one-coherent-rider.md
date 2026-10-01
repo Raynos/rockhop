@@ -818,3 +818,13 @@ unchanged; parent inspects actual dorsal/palm witnesses. Runtime extractor
 records real19bone binds, sockets, clips and material preparation.
 Limits: No final skin or contact pass; third-round production baseline is
 queued under the shared lock.
+
+## Round79 — new skin probe exposes extreme reach limits
+
+Finding: A real new nineteen-bone skin holds the character through sitting,
+but provisional joint estimates miss extreme arm/leg reach. First native
+handle placement stops before deformation rather than penetrating the hand.
+Validation: CPU2 bind exits0,19joints/fiveprimitives/four-or-fewer finite
+normalized weights. Parent inspects both actual24frame decoded clips.
+Round78 exact production replay, crash103ticks, restart1/2ms, zeroerrors.
+Limits: Synthetic reach is not played contact; skin/probe unaccepted.

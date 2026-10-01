@@ -1,0 +1,761 @@
+{
+  "schema": "rockhop.private-contact-metadata.v1",
+  "status": "Provisional authoring target; must rederive with actual exported NEW bindWorldQuaternion",
+  "sourceHashes": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/cuff-runtime-frames.json",
+      "sha256": "fe35843f72eb923017d896802fe5e9f4af3f024cd07e51d6fb778c4b25ef22c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/surface-witness.json",
+      "sha256": "e850849e7e328809762294918048078b3755f3436629bda632d0d6e5c0a01fff"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/report.json",
+      "sha256": "bc1b0850c83d56656010bb6061f823e8652289f958080ec17c5893a5013dc7ca"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/runtime-audit/production-runtime-contract.json",
+      "sha256": "5f664ab010b29b4548db45b414c5e0e27fe3b3cc9a89523494a04f31dce4c09a"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/render/hero/gltfRider.ts",
+      "sha256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-contact-adapter.mts",
+      "sha256": "c9c12b87abaec035d0a4896914abbca3c17badd017acc29507833278b75675c2"
+    }
+  ],
+  "coordinateRotation": [
+    [
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      0,
+      0
+    ]
+  ],
+  "nativeToRuntimeSideMapping": {
+    "L": "R",
+    "R": "L"
+  },
+  "hands": [
+    {
+      "nativeSide": "L",
+      "runtimeSide": "R",
+      "sourceSurfaceTriangleVertices": [
+        21414,
+        21417,
+        21507
+      ],
+      "actualSurfaceNormalRuntime": [
+        -0.8650588989257812,
+        -0.4937034845352173,
+        -0.08905022591352463
+      ],
+      "canonicalFrameNormalVersusLocalTriangleNormalAngleRad": 0.2016075375759803,
+      "actualSurfaceNormalAfterRotation": [
+        0.9797459357416639,
+        -0.1999799628184376,
+        -0.010290182553233988
+      ],
+      "adapter": {
+        "input": {
+          "side": "R",
+          "sourceJoint": [
+            0.02724618837237358,
+            0.8695228099822998,
+            -0.35358726978302
+          ],
+          "sourceContact": [
+            0.026234852150082588,
+            0.8194310665130615,
+            -0.3677894175052643
+          ],
+          "sourceLongAxis": [
+            0.3155636787414551,
+            -0.9086838960647583,
+            -0.2733370363712311
+          ],
+          "sourceNormalAxis": [
+            -0.9478278160095215,
+            -0.3155636787414551,
+            -0.04519097879528999
+          ],
+          "bindWorldQuaternion": [
+            0.6907756437543898,
+            0.21313024437783165,
+            -0.6907756216352212,
+            0.015282325792494236
+          ],
+          "targetLongAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetNormalAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetContact": [
+            0.27,
+            0.78,
+            -0.33
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1.0000000000000002,
+          "rawNormalLongAxisDot": -3.1163507279927116e-8,
+          "rawNormalProjectionAngleRad": 2.9802322387695312e-8,
+          "quaternion": [
+            0.6907756437543898,
+            0.21313024437783165,
+            -0.6907756216352212,
+            0.015282325792494236
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            0.7071067811865475,
+            0,
+            0.7071067811865476,
+            0
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0.1615120772756856,
+          -0.9769042683138496,
+          -0.13989960487533604,
+          1.5640614081657844e-8
+        ],
+        "sourceBindWorldQuaternion": [
+          0.6907756437543898,
+          0.21313024437783165,
+          -0.6907756216352212,
+          0.015282325792494236
+        ],
+        "targetRestWorldQuaternion": [
+          0.7071067811865475,
+          1.3877787807814454e-17,
+          0.7071067811865476,
+          1.3877787807814454e-17
+        ],
+        "sourceWorldOffset": [
+          -0.0010113362222909927,
+          -0.05009174346923828,
+          -0.014202147722244263
+        ],
+        "socketLocalPosition": [
+          -4.332048043204084e-9,
+          0.04908039275917705,
+          0.017407515942024745
+        ],
+        "targetWorldOffset": [
+          0.01740751594202474,
+          -0.04908039275917705,
+          -4.332048038771378e-9
+        ],
+        "targetJoint": [
+          0.2525924840579753,
+          0.8290803927591771,
+          -0.32999999566795196
+        ],
+        "socketLocalQuaternion": [
+          -0.7071067811865475,
+          -1.3877787807814454e-17,
+          -0.7071067811865476,
+          1.3877787807814454e-17
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          -0.16151207727568556,
+          0.9769042683138496,
+          0.13989960487533604,
+          1.5640614081657844e-8
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          -0.9478276977881859,
+          -0.3155636797259386,
+          -0.045190921028160996,
+          0,
+          -0.3155636709734757,
+          0.9086838988996356,
+          0.2733370473285698,
+          0,
+          -0.045190982145691616,
+          0.2733370372239775,
+          -0.9608562011114496,
+          0,
+          0.5368280299739436,
+          0.14420541978619206,
+          -0.9061880335913823,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 7.850462293418876e-17,
+          "normalAxisError": 9.464685661706605e-16,
+          "longAxisError": 2.0136202767909308e-16,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1.0000000000000009,
+          "offsetLengthErrorM": 1.3877787807814457e-17
+        }
+      }
+    },
+    {
+      "nativeSide": "R",
+      "runtimeSide": "L",
+      "sourceSurfaceTriangleVertices": [
+        1165,
+        1057,
+        1177
+      ],
+      "actualSurfaceNormalRuntime": [
+        -0.855158805847168,
+        -0.5064705610275269,
+        0.11041249334812164
+      ],
+      "canonicalFrameNormalVersusLocalTriangleNormalAngleRad": 0.20160778251538383,
+      "actualSurfaceNormalAfterRotation": [
+        0.9797458456088513,
+        -0.19998027382566613,
+        0.010290732998659222
+      ],
+      "adapter": {
+        "input": {
+          "side": "L",
+          "sourceJoint": [
+            0.02277236431837082,
+            0.8687809705734253,
+            0.3563070595264435
+          ],
+          "sourceContact": [
+            0.022712867707014084,
+            0.8194918632507324,
+            0.37311437726020813
+          ],
+          "sourceLongAxis": [
+            0.3326553702354431,
+            -0.8862689137458801,
+            0.32228541374206543
+          ],
+          "sourceNormalAxis": [
+            -0.9413341879844666,
+            -0.3326554596424103,
+            0.0568370558321476
+          ],
+          "bindWorldQuaternion": [
+            0.686707531478148,
+            0.0037752481786140525,
+            -0.6867075122734212,
+            0.23843511968589556
+          ],
+          "targetLongAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetNormalAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetContact": [
+            0.27,
+            0.78,
+            0.33
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 7.410439849253603e-8,
+          "rawNormalProjectionAngleRad": 7.300048299977716e-8,
+          "quaternion": [
+            0.686707531478148,
+            0.0037752481786140525,
+            -0.6867075122734212,
+            0.23843511968589556
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            0.7071067811865475,
+            0,
+            0.7071067811865476,
+            0
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0.17126859359068297,
+          -0.9711510908203534,
+          0.16592958641516267,
+          1.3579792512707911e-8
+        ],
+        "sourceBindWorldQuaternion": [
+          0.686707531478148,
+          0.0037752481786140525,
+          -0.6867075122734212,
+          0.23843511968589556
+        ],
+        "targetRestWorldQuaternion": [
+          0.7071067811865475,
+          -1.3877787807814454e-17,
+          0.7071067811865476,
+          -1.3877787807814454e-17
+        ],
+        "sourceWorldOffset": [
+          -0.00005949661135673523,
+          -0.04928910732269287,
+          0.01680731773376465
+        ],
+        "socketLocalPosition": [
+          -4.077943676142337e-8,
+          0.0490803633531101,
+          0.01740757027972147
+        ],
+        "targetWorldOffset": [
+          0.01740757027972147,
+          -0.04908036335311009,
+          -4.0779436758917186e-8
+        ],
+        "targetJoint": [
+          0.25259242972027857,
+          0.8290803633531101,
+          0.3300000407794368
+        ],
+        "socketLocalQuaternion": [
+          -0.7071067811865475,
+          1.3877787807814454e-17,
+          -0.7071067811865476,
+          -1.3877787807814454e-17
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          -0.17126859359068297,
+          0.9711510908203534,
+          -0.16592958641516267,
+          1.3579792512707911e-8
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          -0.9413341376989388,
+          -0.3326553584711404,
+          0.05683708017687783,
+          0,
+          -0.33265536748429786,
+          0.8862688824031251,
+          -0.3222853930413267,
+          0,
+          0.05683702742475659,
+          -0.3222854023444946,
+          -0.9449347447041858,
+          0,
+          0.5427820525648072,
+          0.18151473656312478,
+          0.9453880629808571,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 1.3597399555105182e-16,
+          "normalAxisError": 1.3702331389155335e-16,
+          "longAxisError": 8.01435107103171e-17,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1.0000000000000002,
+          "offsetLengthErrorM": 6.938893903907228e-18
+        }
+      }
+    }
+  ],
+  "feet": [
+    {
+      "nativeSide": "L",
+      "runtimeSide": "R",
+      "sourceSurfaceWitnessVertexCount": 57,
+      "sourceJointStatus": "Parent estimate, not measured",
+      "adapter": {
+        "input": {
+          "side": "R",
+          "sourceJoint": [
+            -0.045,
+            0.115,
+            -0.18
+          ],
+          "sourceContact": [
+            -0.004503762815147638,
+            0.0009078038274310529,
+            -0.21098816394805908
+          ],
+          "sourceLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "sourceNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "bindWorldQuaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ],
+          "targetLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetContact": [
+            -0.14,
+            0.031,
+            -0.2
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "sourceBindWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "targetRestWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "sourceWorldOffset": [
+          0.04049623718485236,
+          -0.11409219617256895,
+          -0.03098816394805909
+        ],
+        "socketLocalPosition": [
+          0.030988163948059082,
+          0.04049623718485236,
+          0.11409219617256894
+        ],
+        "targetWorldOffset": [
+          0.04049623718485236,
+          -0.11409219617256894,
+          -0.030988163948059075
+        ],
+        "targetJoint": [
+          -0.18049623718485236,
+          0.14509219617256894,
+          -0.16901183605194092
+        ],
+        "socketLocalQuaternion": [
+          0.5,
+          0.5,
+          -0.5,
+          -0.5
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.13549623718485238,
+          0.030092196172568933,
+          0.010988163948059071,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 1.3877787807814457e-17,
+          "normalAxisError": 0,
+          "longAxisError": 0,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1,
+          "offsetLengthErrorM": 1.3877787807814457e-17
+        }
+      },
+      "legacyPhysicalAnkle": [
+        -0.13,
+        0.11,
+        -0.2
+      ],
+      "adaptedAnkleMinusLegacyPhysicalAnkle": [
+        -0.050496237184852355,
+        0.03509219617256894,
+        0.03098816394805909
+      ]
+    },
+    {
+      "nativeSide": "R",
+      "runtimeSide": "L",
+      "sourceSurfaceWitnessVertexCount": 55,
+      "sourceJointStatus": "Parent estimate, not measured",
+      "adapter": {
+        "input": {
+          "side": "L",
+          "sourceJoint": [
+            -0.045,
+            0.115,
+            0.18
+          ],
+          "sourceContact": [
+            -0.012980503030121326,
+            0.0009996728040277958,
+            0.19013889133930206
+          ],
+          "sourceLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "sourceNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "bindWorldQuaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ],
+          "targetLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetContact": [
+            -0.14,
+            0.031,
+            0.2
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "sourceBindWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "targetRestWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "sourceWorldOffset": [
+          0.03201949696987867,
+          -0.11400032719597221,
+          0.01013889133930207
+        ],
+        "socketLocalPosition": [
+          -0.010138891339302063,
+          0.03201949696987868,
+          0.11400032719597221
+        ],
+        "targetWorldOffset": [
+          0.03201949696987867,
+          -0.1140003271959722,
+          0.01013889133930207
+        ],
+        "targetJoint": [
+          -0.17201949696987867,
+          0.1450003271959722,
+          0.18986110866069794
+        ],
+        "socketLocalQuaternion": [
+          0.5,
+          0.5,
+          -0.5,
+          -0.5
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.1270194969698787,
+          0.03000032719597219,
+          0.009861108660697948,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 1.3877787807814457e-17,
+          "normalAxisError": 0,
+          "longAxisError": 0,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1,
+          "offsetLengthErrorM": 1.3877787807814457e-17
+        }
+      },
+      "legacyPhysicalAnkle": [
+        -0.13,
+        0.11,
+        0.2
+      ],
+      "adaptedAnkleMinusLegacyPhysicalAnkle": [
+        -0.04201949696987867,
+        0.035000327195972195,
+        -0.01013889133930207
+      ]
+    }
+  ],
+  "physicsMutation": false,
+  "renderIntegrationApplied": false
+}

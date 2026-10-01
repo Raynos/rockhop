@@ -1,0 +1,1503 @@
+{
+  "schema": "rockhop.private-new-rider-contact-adapter.v1",
+  "status": "Mathematical prototype only, not applied to runtime or assets",
+  "sources": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/cuff-runtime-frames.json",
+      "sha256": "fe35843f72eb923017d896802fe5e9f4af3f024cd07e51d6fb778c4b25ef22c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/surface-witness.json",
+      "sha256": "e850849e7e328809762294918048078b3755f3436629bda632d0d6e5c0a01fff"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/report.json",
+      "sha256": "bc1b0850c83d56656010bb6061f823e8652289f958080ec17c5893a5013dc7ca"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/runtime-audit/production-runtime-contract.json",
+      "sha256": "5f664ab010b29b4548db45b414c5e0e27fe3b3cc9a89523494a04f31dce4c09a"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/render/hero/gltfRider.ts",
+      "sha256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-contact-adapter.mts",
+      "sha256": "c9c12b87abaec035d0a4896914abbca3c17badd017acc29507833278b75675c2"
+    }
+  ],
+  "sourceHashesAfter": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/cuff-runtime-frames.json",
+      "sha256": "fe35843f72eb923017d896802fe5e9f4af3f024cd07e51d6fb778c4b25ef22c2"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/surface-witness.json",
+      "sha256": "e850849e7e328809762294918048078b3755f3436629bda632d0d6e5c0a01fff"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/report.json",
+      "sha256": "bc1b0850c83d56656010bb6061f823e8652289f958080ec17c5893a5013dc7ca"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/runtime-audit/production-runtime-contract.json",
+      "sha256": "5f664ab010b29b4548db45b414c5e0e27fe3b3cc9a89523494a04f31dce4c09a"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/core/riderGeometry.ts",
+      "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/render/hero/gltfRider.ts",
+      "sha256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-contact-adapter.mts",
+      "sha256": "c9c12b87abaec035d0a4896914abbca3c17badd017acc29507833278b75675c2"
+    }
+  ],
+  "sourcesUnchanged": true,
+  "coordinateRotation": [
+    [
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      0,
+      0
+    ]
+  ],
+  "coordinateRotationDeterminant": 1,
+  "explicitNativeToRuntimeSideMapping": {
+    "L": "R",
+    "R": "L"
+  },
+  "authoringChoices": {
+    "hand": {
+      "targetPalmFacingAxis": [
+        1,
+        0,
+        0
+      ],
+      "targetFingerLongAxis": [
+        0,
+        -1,
+        0
+      ],
+      "targetSocketQuaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "sourceBindBasis": "NEW bone local +Y=fingerLongAxis, +Z=projected palmFacingAxis; mathematical prototype, parent must use actual exported bind quaternion",
+      "targetEvidence": "Declared rear-side palm approach/fingers downward hypothesis; not measured grip articulation or accepted fit",
+      "contactEvidence": "Actual negative-canonical palm surface witness; socket on grip axis is an authoring hypothesis, not cylinder surface fit"
+    },
+    "foot": {
+      "targetSoleNormalAxis": [
+        0,
+        -1,
+        0
+      ],
+      "targetToeAxis": [
+        1,
+        0,
+        0
+      ],
+      "sourceSoleNormalBlender": [
+        0,
+        0,
+        -1
+      ],
+      "sourceToeAxisBlender": [
+        0,
+        -1,
+        0
+      ],
+      "sourceJointEstimatesBlender": {
+        "L": [
+          0.18,
+          0.045,
+          0.115
+        ],
+        "R": [
+          -0.18,
+          0.045,
+          0.115
+        ]
+      },
+      "sourceContactEvidence": "Actual bottom2mm vertex centroid; selected diagnostic point is not accepted peg socket",
+      "jointEvidence": "Explicit parent authoring estimate; ankle hidden under shoe, not a measured joint centre",
+      "axisEvidence": "Bottom plane and reference-front authoring axes; local sole normal/toe direction still need surface/correspondence refinement"
+    }
+  },
+  "hands": [
+    {
+      "nativeSide": "L",
+      "runtimeSide": "R",
+      "sourceSurfaceTriangleVertices": [
+        21414,
+        21417,
+        21507
+      ],
+      "actualSurfaceNormalRuntime": [
+        -0.8650588989257812,
+        -0.4937034845352173,
+        -0.08905022591352463
+      ],
+      "canonicalFrameNormalVersusLocalTriangleNormalAngleRad": 0.2016075375759803,
+      "actualSurfaceNormalAfterRotation": [
+        0.9797459357416639,
+        -0.1999799628184376,
+        -0.010290182553233988
+      ],
+      "adapter": {
+        "input": {
+          "side": "R",
+          "sourceJoint": [
+            0.02724618837237358,
+            0.8695228099822998,
+            -0.35358726978302
+          ],
+          "sourceContact": [
+            0.026234852150082588,
+            0.8194310665130615,
+            -0.3677894175052643
+          ],
+          "sourceLongAxis": [
+            0.3155636787414551,
+            -0.9086838960647583,
+            -0.2733370363712311
+          ],
+          "sourceNormalAxis": [
+            -0.9478278160095215,
+            -0.3155636787414551,
+            -0.04519097879528999
+          ],
+          "bindWorldQuaternion": [
+            0.6907756437543898,
+            0.21313024437783165,
+            -0.6907756216352212,
+            0.015282325792494236
+          ],
+          "targetLongAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetNormalAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetContact": [
+            0.27,
+            0.78,
+            -0.33
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1.0000000000000002,
+          "rawNormalLongAxisDot": -3.1163507279927116e-8,
+          "rawNormalProjectionAngleRad": 2.9802322387695312e-8,
+          "quaternion": [
+            0.6907756437543898,
+            0.21313024437783165,
+            -0.6907756216352212,
+            0.015282325792494236
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            0.7071067811865475,
+            0,
+            0.7071067811865476,
+            0
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0.1615120772756856,
+          -0.9769042683138496,
+          -0.13989960487533604,
+          1.5640614081657844e-8
+        ],
+        "sourceBindWorldQuaternion": [
+          0.6907756437543898,
+          0.21313024437783165,
+          -0.6907756216352212,
+          0.015282325792494236
+        ],
+        "targetRestWorldQuaternion": [
+          0.7071067811865475,
+          1.3877787807814454e-17,
+          0.7071067811865476,
+          1.3877787807814454e-17
+        ],
+        "sourceWorldOffset": [
+          -0.0010113362222909927,
+          -0.05009174346923828,
+          -0.014202147722244263
+        ],
+        "socketLocalPosition": [
+          -4.332048043204084e-9,
+          0.04908039275917705,
+          0.017407515942024745
+        ],
+        "targetWorldOffset": [
+          0.01740751594202474,
+          -0.04908039275917705,
+          -4.332048038771378e-9
+        ],
+        "targetJoint": [
+          0.2525924840579753,
+          0.8290803927591771,
+          -0.32999999566795196
+        ],
+        "socketLocalQuaternion": [
+          -0.7071067811865475,
+          -1.3877787807814454e-17,
+          -0.7071067811865476,
+          1.3877787807814454e-17
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          -0.16151207727568556,
+          0.9769042683138496,
+          0.13989960487533604,
+          1.5640614081657844e-8
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          -0.9478276977881859,
+          -0.3155636797259386,
+          -0.045190921028160996,
+          0,
+          -0.3155636709734757,
+          0.9086838988996356,
+          0.2733370473285698,
+          0,
+          -0.045190982145691616,
+          0.2733370372239775,
+          -0.9608562011114496,
+          0,
+          0.5368280299739436,
+          0.14420541978619206,
+          -0.9061880335913823,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 7.850462293418876e-17,
+          "normalAxisError": 9.464685661706605e-16,
+          "longAxisError": 2.0136202767909308e-16,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1.0000000000000009,
+          "offsetLengthErrorM": 1.3877787807814457e-17
+        }
+      }
+    },
+    {
+      "nativeSide": "R",
+      "runtimeSide": "L",
+      "sourceSurfaceTriangleVertices": [
+        1165,
+        1057,
+        1177
+      ],
+      "actualSurfaceNormalRuntime": [
+        -0.855158805847168,
+        -0.5064705610275269,
+        0.11041249334812164
+      ],
+      "canonicalFrameNormalVersusLocalTriangleNormalAngleRad": 0.20160778251538383,
+      "actualSurfaceNormalAfterRotation": [
+        0.9797458456088513,
+        -0.19998027382566613,
+        0.010290732998659222
+      ],
+      "adapter": {
+        "input": {
+          "side": "L",
+          "sourceJoint": [
+            0.02277236431837082,
+            0.8687809705734253,
+            0.3563070595264435
+          ],
+          "sourceContact": [
+            0.022712867707014084,
+            0.8194918632507324,
+            0.37311437726020813
+          ],
+          "sourceLongAxis": [
+            0.3326553702354431,
+            -0.8862689137458801,
+            0.32228541374206543
+          ],
+          "sourceNormalAxis": [
+            -0.9413341879844666,
+            -0.3326554596424103,
+            0.0568370558321476
+          ],
+          "bindWorldQuaternion": [
+            0.686707531478148,
+            0.0037752481786140525,
+            -0.6867075122734212,
+            0.23843511968589556
+          ],
+          "targetLongAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetNormalAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetContact": [
+            0.27,
+            0.78,
+            0.33
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 7.410439849253603e-8,
+          "rawNormalProjectionAngleRad": 7.300048299977716e-8,
+          "quaternion": [
+            0.686707531478148,
+            0.0037752481786140525,
+            -0.6867075122734212,
+            0.23843511968589556
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            0.7071067811865475,
+            0,
+            0.7071067811865476,
+            0
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0.17126859359068297,
+          -0.9711510908203534,
+          0.16592958641516267,
+          1.3579792512707911e-8
+        ],
+        "sourceBindWorldQuaternion": [
+          0.686707531478148,
+          0.0037752481786140525,
+          -0.6867075122734212,
+          0.23843511968589556
+        ],
+        "targetRestWorldQuaternion": [
+          0.7071067811865475,
+          -1.3877787807814454e-17,
+          0.7071067811865476,
+          -1.3877787807814454e-17
+        ],
+        "sourceWorldOffset": [
+          -0.00005949661135673523,
+          -0.04928910732269287,
+          0.01680731773376465
+        ],
+        "socketLocalPosition": [
+          -4.077943676142337e-8,
+          0.0490803633531101,
+          0.01740757027972147
+        ],
+        "targetWorldOffset": [
+          0.01740757027972147,
+          -0.04908036335311009,
+          -4.0779436758917186e-8
+        ],
+        "targetJoint": [
+          0.25259242972027857,
+          0.8290803633531101,
+          0.3300000407794368
+        ],
+        "socketLocalQuaternion": [
+          -0.7071067811865475,
+          1.3877787807814454e-17,
+          -0.7071067811865476,
+          -1.3877787807814454e-17
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          -0.17126859359068297,
+          0.9711510908203534,
+          -0.16592958641516267,
+          1.3579792512707911e-8
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          -0.9413341376989388,
+          -0.3326553584711404,
+          0.05683708017687783,
+          0,
+          -0.33265536748429786,
+          0.8862688824031251,
+          -0.3222853930413267,
+          0,
+          0.05683702742475659,
+          -0.3222854023444946,
+          -0.9449347447041858,
+          0,
+          0.5427820525648072,
+          0.18151473656312478,
+          0.9453880629808571,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 1.3597399555105182e-16,
+          "normalAxisError": 1.3702331389155335e-16,
+          "longAxisError": 8.01435107103171e-17,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1.0000000000000002,
+          "offsetLengthErrorM": 6.938893903907228e-18
+        }
+      }
+    }
+  ],
+  "feet": [
+    {
+      "nativeSide": "L",
+      "runtimeSide": "R",
+      "sourceSurfaceWitnessVertexCount": 57,
+      "sourceJointStatus": "Parent estimate, not measured",
+      "adapter": {
+        "input": {
+          "side": "R",
+          "sourceJoint": [
+            -0.045,
+            0.115,
+            -0.18
+          ],
+          "sourceContact": [
+            -0.004503762815147638,
+            0.0009078038274310529,
+            -0.21098816394805908
+          ],
+          "sourceLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "sourceNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "bindWorldQuaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ],
+          "targetLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetContact": [
+            -0.14,
+            0.031,
+            -0.2
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "sourceBindWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "targetRestWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "sourceWorldOffset": [
+          0.04049623718485236,
+          -0.11409219617256895,
+          -0.03098816394805909
+        ],
+        "socketLocalPosition": [
+          0.030988163948059082,
+          0.04049623718485236,
+          0.11409219617256894
+        ],
+        "targetWorldOffset": [
+          0.04049623718485236,
+          -0.11409219617256894,
+          -0.030988163948059075
+        ],
+        "targetJoint": [
+          -0.18049623718485236,
+          0.14509219617256894,
+          -0.16901183605194092
+        ],
+        "socketLocalQuaternion": [
+          0.5,
+          0.5,
+          -0.5,
+          -0.5
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.13549623718485238,
+          0.030092196172568933,
+          0.010988163948059071,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 1.3877787807814457e-17,
+          "normalAxisError": 0,
+          "longAxisError": 0,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1,
+          "offsetLengthErrorM": 1.3877787807814457e-17
+        }
+      },
+      "legacyPhysicalAnkle": [
+        -0.13,
+        0.11,
+        -0.2
+      ],
+      "adaptedAnkleMinusLegacyPhysicalAnkle": [
+        -0.050496237184852355,
+        0.03509219617256894,
+        0.03098816394805909
+      ]
+    },
+    {
+      "nativeSide": "R",
+      "runtimeSide": "L",
+      "sourceSurfaceWitnessVertexCount": 55,
+      "sourceJointStatus": "Parent estimate, not measured",
+      "adapter": {
+        "input": {
+          "side": "L",
+          "sourceJoint": [
+            -0.045,
+            0.115,
+            0.18
+          ],
+          "sourceContact": [
+            -0.012980503030121326,
+            0.0009996728040277958,
+            0.19013889133930206
+          ],
+          "sourceLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "sourceNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "bindWorldQuaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ],
+          "targetLongAxis": [
+            1,
+            0,
+            0
+          ],
+          "targetNormalAxis": [
+            0,
+            -1,
+            0
+          ],
+          "targetContact": [
+            -0.14,
+            0.031,
+            0.2
+          ],
+          "targetSocketWorldQuaternion": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "sourceFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "targetFrame": {
+          "determinant": 1,
+          "rawNormalLongAxisDot": 0,
+          "rawNormalProjectionAngleRad": 0,
+          "quaternion": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        "deltaWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "sourceBindWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "targetRestWorldQuaternion": [
+          -0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "sourceWorldOffset": [
+          0.03201949696987867,
+          -0.11400032719597221,
+          0.01013889133930207
+        ],
+        "socketLocalPosition": [
+          -0.010138891339302063,
+          0.03201949696987868,
+          0.11400032719597221
+        ],
+        "targetWorldOffset": [
+          0.03201949696987867,
+          -0.1140003271959722,
+          0.01013889133930207
+        ],
+        "targetJoint": [
+          -0.17201949696987867,
+          0.1450003271959722,
+          0.18986110866069794
+        ],
+        "socketLocalQuaternion": [
+          0.5,
+          0.5,
+          -0.5,
+          -0.5
+        ],
+        "sourceBindSocketWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "targetSocketRestWorldQuaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "rigidSourceWorldToRidingWorldMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.1270194969698787,
+          0.03000032719597219,
+          0.009861108660697948,
+          1
+        ],
+        "checks": {
+          "pointErrorM": 1.3877787807814457e-17,
+          "normalAxisError": 0,
+          "longAxisError": 0,
+          "socketAngleErrorRad": 0,
+          "quaternionUnitError": 0,
+          "rotationDeterminant": 1,
+          "offsetLengthErrorM": 1.3877787807814457e-17
+        }
+      },
+      "legacyPhysicalAnkle": [
+        -0.13,
+        0.11,
+        0.2
+      ],
+      "adaptedAnkleMinusLegacyPhysicalAnkle": [
+        -0.04201949696987867,
+        0.035000327195972195,
+        -0.01013889133930207
+      ]
+    }
+  ],
+  "reachDiagnostics": [
+    {
+      "input": {
+        "name": "declared-seated-profile",
+        "lean": 0,
+        "hipX": -0.34,
+        "hipY": 0.732,
+        "torsoDegrees": 65
+      },
+      "physicalPose": {
+        "hips": {
+          "x": -0.34,
+          "y": 0.732,
+          "z": 0
+        },
+        "shoulders": {
+          "x": -0.12023850389483634,
+          "y": 1.203280049259058,
+          "z": 0
+        },
+        "head": {
+          "x": -0.10106424049035156,
+          "y": 1.4224428828392452,
+          "z": 0
+        },
+        "elbow": {
+          "x": -0.005300866912402155,
+          "y": 0.9090066750882764,
+          "z": 0.26091680330732975
+        },
+        "wrist": {
+          "x": 0.24500000000000002,
+          "y": 0.8350000000000001,
+          "z": 0.33
+        },
+        "grip": {
+          "x": 0.27,
+          "y": 0.78,
+          "z": 0.33
+        },
+        "knee": {
+          "x": 0.05091037218253386,
+          "y": 0.4966523277430502,
+          "z": 0.14831426998041003
+        },
+        "ankle": {
+          "x": -0.13,
+          "y": 0.11,
+          "z": 0.2
+        },
+        "com": {
+          "x": -0.1587341171195792,
+          "y": 0.8198353592885336,
+          "z": 0
+        },
+        "torsoAngle": 1.1344640137963142,
+        "headAngle": 1.4835298641951802,
+        "armReach": 0.90234040775145,
+        "legReach": 0.7479163498044147,
+        "residual": 0
+      },
+      "limbs": [
+        {
+          "side": "R",
+          "estimatedShoulder": [
+            -0.13714323436446435,
+            1.167027737777592,
+            -0.205
+          ],
+          "estimatedHip": [
+            -0.34,
+            0.732,
+            -0.105
+          ],
+          "hand": {
+            "distanceM": 0.5307799328688291,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.26963396001815204
+            ],
+            "sumM": 0.5369352881106251,
+            "minReachM": 0.002332631925678952,
+            "maxReachM": 0.5369352881106251,
+            "shortfallM": 0,
+            "reachRatio": 0.988536132047764,
+            "additiveSafe": true
+          },
+          "foot": {
+            "distanceM": 0.6115551779688155,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0,
+            "reachRatio": 0.7726800904516212,
+            "additiveSafe": true
+          }
+        },
+        {
+          "side": "L",
+          "estimatedShoulder": [
+            -0.13714323436446435,
+            1.167027737777592,
+            0.205
+          ],
+          "estimatedHip": [
+            -0.34,
+            0.732,
+            0.105
+          ],
+          "hand": {
+            "distanceM": 0.530779922316997,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.2702130392323266
+            ],
+            "sumM": 0.5375143673247997,
+            "minReachM": 0.002911711139853501,
+            "maxReachM": 0.5375143673247997,
+            "shortfallM": 0,
+            "reachRatio": 0.9874711348808778,
+            "additiveSafe": true
+          },
+          "foot": {
+            "distanceM": 0.6164312395015449,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0,
+            "reachRatio": 0.778840835715312,
+            "additiveSafe": true
+          }
+        }
+      ],
+      "physicalPoseUnchanged": true,
+      "status": "Synthetic profile inputs with explicitly estimated NEW roots; not authored animation, live engine frames or joint-fit acceptance"
+    },
+    {
+      "input": {
+        "name": "maximum-back-profile",
+        "lean": -1,
+        "hipX": -0.66,
+        "hipY": 0.725,
+        "torsoDegrees": 40
+      },
+      "physicalPose": {
+        "hips": {
+          "x": -0.66,
+          "y": 0.725,
+          "z": 0
+        },
+        "shoulders": {
+          "x": -0.26165688957813144,
+          "y": 1.0592495570370004,
+          "z": 0
+        },
+        "head": {
+          "x": -0.17217482810145546,
+          "y": 1.2602295577183726,
+          "z": 0
+        },
+        "elbow": {
+          "x": -0.018077255898149236,
+          "y": 0.8624246082473174,
+          "z": 0.27579438874451484
+        },
+        "wrist": {
+          "x": 0.24500000000000002,
+          "y": 0.8350000000000001,
+          "z": 0.33
+        },
+        "grip": {
+          "x": 0.27,
+          "y": 0.78,
+          "z": 0.33
+        },
+        "knee": {
+          "x": -0.2528642101878243,
+          "y": 0.5186750009888828,
+          "z": 0.14718779097917986
+        },
+        "ankle": {
+          "x": -0.13,
+          "y": 0.11,
+          "z": 0.2
+        },
+        "com": {
+          "x": -0.37228581706383956,
+          "y": 0.7728925016461332,
+          "z": 0
+        },
+        "torsoAngle": 0.6981317007977318,
+        "headAngle": 1.1519173063162575,
+        "armReach": 0.960867575137152,
+        "legReach": 0.9205429475412298,
+        "residual": 0
+      },
+      "limbs": [
+        {
+          "side": "R",
+          "estimatedShoulder": [
+            -0.29229866730289067,
+            1.0335380526495388,
+            -0.205
+          ],
+          "estimatedHip": [
+            -0.66,
+            0.725,
+            -0.105
+          ],
+          "hand": {
+            "distanceM": 0.5952598595875594,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.26963396001815204
+            ],
+            "sumM": 0.5369352881106251,
+            "minReachM": 0.002332631925678952,
+            "maxReachM": 0.5369352881106251,
+            "shortfallM": 0.05832457147693432,
+            "reachRatio": 1.108624954940413,
+            "additiveSafe": false
+          },
+          "foot": {
+            "distanceM": 0.7551916542498203,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0,
+            "reachRatio": 0.9541601097257254,
+            "additiveSafe": true
+          }
+        },
+        {
+          "side": "L",
+          "estimatedShoulder": [
+            -0.29229866730289067,
+            1.0335380526495388,
+            0.205
+          ],
+          "estimatedHip": [
+            -0.66,
+            0.725,
+            0.105
+          ],
+          "hand": {
+            "distanceM": 0.5952598294210761,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.2702130392323266
+            ],
+            "sumM": 0.5375143673247997,
+            "minReachM": 0.002911711139853501,
+            "maxReachM": 0.5375143673247997,
+            "shortfallM": 0.057745462096276456,
+            "reachRatio": 1.10743054624507,
+            "additiveSafe": false
+          },
+          "foot": {
+            "distanceM": 0.7627096430185162,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0,
+            "reachRatio": 0.9636588441835121,
+            "additiveSafe": true
+          }
+        }
+      ],
+      "physicalPoseUnchanged": true,
+      "status": "Synthetic profile inputs with explicitly estimated NEW roots; not authored animation, live engine frames or joint-fit acceptance"
+    },
+    {
+      "input": {
+        "name": "maximum-forward-profile",
+        "lean": 1,
+        "hipX": -0.14,
+        "hipY": 0.974,
+        "torsoDegrees": 48
+      },
+      "physicalPose": {
+        "hips": {
+          "x": -0.14,
+          "y": 0.974,
+          "z": 0
+        },
+        "shoulders": {
+          "x": 0.20794791530660628,
+          "y": 1.360435309248245,
+          "z": 0
+        },
+        "head": {
+          "x": 0.2802985775890946,
+          "y": 1.568198110700491,
+          "z": 0
+        },
+        "elbow": {
+          "x": 0.11300792071477916,
+          "y": 1.0580941504505539,
+          "z": 0.25445470867943154
+        },
+        "wrist": {
+          "x": 0.24500000000000002,
+          "y": 0.8350000000000001,
+          "z": 0.33
+        },
+        "grip": {
+          "x": 0.27,
+          "y": 0.78,
+          "z": 0.33
+        },
+        "knee": {
+          "x": -0.043500568709539375,
+          "y": 0.5278540574960796,
+          "z": 0.14693555785189327
+        },
+        "ankle": {
+          "x": -0.13,
+          "y": 0.11,
+          "z": 0.2
+        },
+        "com": {
+          "x": 0.012968651236083827,
+          "y": 0.9733380033155353,
+          "z": 0
+        },
+        "torsoAngle": 0.8377580409572781,
+        "headAngle": 1.2356931104119853,
+        "armReach": 0.9156545282609317,
+        "legReach": 0.9786871599241398,
+        "residual": 0
+      },
+      "limbs": [
+        {
+          "side": "R",
+          "estimatedShoulder": [
+            0.18118269105225188,
+            1.3307095162291491,
+            -0.205
+          ],
+          "estimatedHip": [
+            -0.14,
+            0.974,
+            -0.105
+          ],
+          "hand": {
+            "distanceM": 0.5218775095435333,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.26963396001815204
+            ],
+            "sumM": 0.5369352881106251,
+            "minReachM": 0.002332631925678952,
+            "maxReachM": 0.5369352881106251,
+            "shortfallM": 0,
+            "reachRatio": 0.9719560645379124,
+            "additiveSafe": true
+          },
+          "foot": {
+            "distanceM": 0.8323614645254112,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0.04088878970682008,
+            "reachRatio": 1.0516616568173904,
+            "additiveSafe": false
+          }
+        },
+        {
+          "side": "L",
+          "estimatedShoulder": [
+            0.18118269105225188,
+            1.3307095162291491,
+            0.205
+          ],
+          "estimatedHip": [
+            -0.14,
+            0.974,
+            0.105
+          ],
+          "hand": {
+            "distanceM": 0.5218775411786076,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.2702130392323266
+            ],
+            "sumM": 0.5375143673247997,
+            "minReachM": 0.002911711139853501,
+            "maxReachM": 0.5375143673247997,
+            "shortfallM": 0,
+            "reachRatio": 0.9709090080251876,
+            "additiveSafe": true
+          },
+          "foot": {
+            "distanceM": 0.8339467090039459,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0.04247403418535478,
+            "reachRatio": 1.0536645616920255,
+            "additiveSafe": false
+          }
+        }
+      ],
+      "physicalPoseUnchanged": true,
+      "status": "Synthetic profile inputs with explicitly estimated NEW roots; not authored animation, live engine frames or joint-fit acceptance"
+    },
+    {
+      "input": {
+        "name": "landing-recovery-diagnostic",
+        "lean": 0,
+        "hipX": -0.4,
+        "hipY": 0.7,
+        "torsoDegrees": 40
+      },
+      "physicalPose": {
+        "hips": {
+          "x": -0.4,
+          "y": 0.7,
+          "z": 0
+        },
+        "shoulders": {
+          "x": -0.0016568895781314263,
+          "y": 1.0342495570370005,
+          "z": 0
+        },
+        "head": {
+          "x": 0.08782517189854455,
+          "y": 1.2352295577183727,
+          "z": 0
+        },
+        "elbow": {
+          "x": 0.026506991734671387,
+          "y": 0.7158578636105409,
+          "z": 0.22528153612794666
+        },
+        "wrist": {
+          "x": 0.24500000000000002,
+          "y": 0.8350000000000001,
+          "z": 0.33
+        },
+        "grip": {
+          "x": 0.27,
+          "y": 0.78,
+          "z": 0.33
+        },
+        "knee": {
+          "x": 0.01545259595631776,
+          "y": 0.5113477539275147,
+          "z": 0.14839067190025398
+        },
+        "ankle": {
+          "x": -0.13,
+          "y": 0.11,
+          "z": 0.2
+        },
+        "com": {
+          "x": -0.14548872010333957,
+          "y": 0.7471715566682728,
+          "z": 0
+        },
+        "torsoAngle": 0.6981317007977318,
+        "headAngle": 1.1519173063162575,
+        "armReach": 0.5746237847356399,
+        "legReach": 0.7394419498324897,
+        "residual": 0
+      },
+      "limbs": [
+        {
+          "side": "R",
+          "estimatedShoulder": [
+            -0.03229866730289066,
+            1.0085380526495387,
+            -0.205
+          ],
+          "estimatedHip": [
+            -0.4,
+            0.7,
+            -0.105
+          ],
+          "hand": {
+            "distanceM": 0.3591559810639836,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.26963396001815204
+            ],
+            "sumM": 0.5369352881106251,
+            "minReachM": 0.002332631925678952,
+            "maxReachM": 0.5369352881106251,
+            "shortfallM": 0,
+            "reachRatio": 0.6688999382547316,
+            "additiveSafe": true
+          },
+          "foot": {
+            "distanceM": 0.6001683828671183,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0,
+            "reachRatio": 0.7582932449369518,
+            "additiveSafe": true
+          }
+        },
+        {
+          "side": "L",
+          "estimatedShoulder": [
+            -0.03229866730289066,
+            1.0085380526495387,
+            0.205
+          ],
+          "estimatedHip": [
+            -0.4,
+            0.7,
+            0.105
+          ],
+          "hand": {
+            "distanceM": 0.35915596835572594,
+            "segmentLengthsM": [
+              0.2673013280924731,
+              0.2702130392323266
+            ],
+            "sumM": 0.5375143673247997,
+            "minReachM": 0.002911711139853501,
+            "maxReachM": 0.5375143673247997,
+            "shortfallM": 0,
+            "reachRatio": 0.6681792900592395,
+            "additiveSafe": true
+          },
+          "foot": {
+            "distanceM": 0.6059712487713982,
+            "segmentLengthsM": [
+              0.40227478171021364,
+              0.38919789310837744
+            ],
+            "sumM": 0.7914726748185911,
+            "minReachM": 0.0130768886018362,
+            "maxReachM": 0.7914726748185911,
+            "shortfallM": 0,
+            "reachRatio": 0.7656249774008804,
+            "additiveSafe": true
+          }
+        }
+      ],
+      "physicalPoseUnchanged": true,
+      "status": "Synthetic profile inputs with explicitly estimated NEW roots; not authored animation, live engine frames or joint-fit acceptance"
+    }
+  ],
+  "checks": {
+    "maximumNumericalError": 9.464685661706605e-16,
+    "arbitraryNewBindQuaternionTest": {
+      "pointErrorM": 7.850462293418876e-17,
+      "normalAxisError": 9.464685661706605e-16,
+      "longAxisError": 2.0136202767909308e-16,
+      "socketAngleErrorRad": 0,
+      "quaternionUnitError": 1.1102230246251565e-16,
+      "rotationDeterminant": 1.0000000000000009,
+      "offsetLengthErrorM": 6.938893903907228e-18
+    },
+    "invalidFramesRejected": [
+      {
+        "longAxis": [
+          0,
+          0,
+          0
+        ],
+        "normalAxis": [
+          1,
+          0,
+          0
+        ],
+        "rejected": true
+      },
+      {
+        "longAxis": [
+          1,
+          0,
+          0
+        ],
+        "normalAxis": [
+          1,
+          0,
+          0
+        ],
+        "rejected": true
+      }
+    ],
+    "properRotationsOnly": true,
+    "quaternionsUnit": true,
+    "sourceBindPreserved": true,
+    "physicalPoseAndCOMUnchanged": true
+  },
+  "minimalRuntimeProposal": {
+    "preserve": [
+      "source inverse binds",
+      "source skeleton restLocalP/restLocalQ",
+      "q0/d0 for source swing reference",
+      "RIDER_PROFILE",
+      "riderRigFromCOM and existing chain elbow/knee/COM authority"
+    ],
+    "explicitNewMetadata": [
+      "per-side source bind quaternion",
+      "target riding hand/foot world quaternion",
+      "bone-local socket position and quaternion",
+      "target socket world quaternion",
+      "native-to-runtime side mapping",
+      "contact witness provenance"
+    ],
+    "renderOnlyChanges": [
+      "solveArm wristTarget = physical grip − metadata rotated NEW wrist-to-socket offset",
+      "solveLeg ankleTarget = physical sole target − metadata rotated NEW ankle-to-sole offset",
+      "setWorld(hand/foot, targetRestWorldQ) instead of source q0",
+      "gripRestQ angular diagnostic must use metadata target socket world Q",
+      "Garage still authors matching seated clip contacts; no automatic IK correction"
+    ],
+    "requirement": "Explicit render metadata adapter proposal; no implementation or player asset promotion is included here"
+  },
+  "limits": [
+    "Palm approach/finger direction are declared hypotheses, not accepted articulation",
+    "Actual source palm triangle normal differs from canonical plane; projection diagnostic is explicit",
+    "Surface witness placed at grip axis does not prove cylindrical surface fit; refine true contact radius and finger wrap",
+    "Bottom2mm vertex centroid is not accepted sole contact point; ankle/root centres estimated under clothes",
+    "Estimated NEW arm lengths may not reach physical maximum-lean poses; expose shortfalls and fit actual new roots/lengths",
+    "No pose deformation, cuff continuity in motion, Garage clip, standing-to-chair clip, surface collision, engine rendering or playback evidence",
+    "Historical production geometry and rest quaternions are never donors; no GPU or player assets touched"
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "status": "Mathematical prototype only, not applied to runtime or assets",
+  "sourcesUnchanged": true,
+  "checks": {
+    "maximumNumericalError": 9.464685661706605e-16,
+    "arbitraryNewBindQuaternionTest": {
+      "pointErrorM": 7.850462293418876e-17,
+      "normalAxisError": 9.464685661706605e-16,
+      "longAxisError": 2.0136202767909308e-16,
+      "socketAngleErrorRad": 0,
+      "quaternionUnitError": 1.1102230246251565e-16,
+      "rotationDeterminant": 1.0000000000000009,
+      "offsetLengthErrorM": 6.938893903907228e-18
+    },
+    "invalidFramesRejected": [
+      {
+        "longAxis": [
+          0,
+          0,
+          0
+        ],
+        "normalAxis": [
+          1,
+          0,
+          0
+        ],
+        "rejected": true
+      },
+      {
+        "longAxis": [
+          1,
+          0,
+          0
+        ],
+        "normalAxis": [
+          1,
+          0,
+          0
+        ],
+        "rejected": true
+      }
+    ],
+    "properRotationsOnly": true,
+    "quaternionsUnit": true,
+    "sourceBindPreserved": true,
+    "physicalPoseAndCOMUnchanged": true
+  },
+  "hands": [
+    {
+      "nativeSide": "L",
+      "runtimeSide": "R",
+      "targetWrist": [
+        0.2525924840579753,
+        0.8290803927591771,
+        -0.32999999566795196
+      ],
+      "targetOffset": [
+        0.01740751594202474,
+        -0.04908039275917705,
+        -4.332048038771378e-9
+      ]
+    },
+    {
+      "nativeSide": "R",
+      "runtimeSide": "L",
+      "targetWrist": [
+        0.25259242972027857,
+        0.8290803633531101,
+        0.3300000407794368
+      ],
+      "targetOffset": [
+        0.01740757027972147,
+        -0.04908036335311009,
+        -4.0779436758917186e-8
+      ]
+    }
+  ],
+  "feet": [
+    {
+      "runtimeSide": "R",
+      "targetAnkle": [
+        -0.18049623718485236,
+        0.14509219617256894,
+        -0.16901183605194092
+      ],
+      "ankleDifference": [
+        -0.050496237184852355,
+        0.03509219617256894,
+        0.03098816394805909
+      ]
+    },
+    {
+      "runtimeSide": "L",
+      "targetAnkle": [
+        -0.17201949696987867,
+        0.1450003271959722,
+        0.18986110866069794
+      ],
+      "ankleDifference": [
+        -0.04201949696987867,
+        0.035000327195972195,
+        -0.01013889133930207
+      ]
+    }
+  ],
+  "reach": [
+    {
+      "name": "declared-seated-profile",
+      "limbs": [
+        {
+          "side": "R",
+          "armShortfall": 0,
+          "legShortfall": 0,
+          "armReach": 0.988536132047764,
+          "legReach": 0.7726800904516212
+        },
+        {
+          "side": "L",
+          "armShortfall": 0,
+          "legShortfall": 0,
+          "armReach": 0.9874711348808778,
+          "legReach": 0.778840835715312
+        }
+      ]
+    },
+    {
+      "name": "maximum-back-profile",
+      "limbs": [
+        {
+          "side": "R",
+          "armShortfall": 0.05832457147693432,
+          "legShortfall": 0,
+          "armReach": 1.108624954940413,
+          "legReach": 0.9541601097257254
+        },
+        {
+          "side": "L",
+          "armShortfall": 0.057745462096276456,
+          "legShortfall": 0,
+          "armReach": 1.10743054624507,
+          "legReach": 0.9636588441835121
+        }
+      ]
+    },
+    {
+      "name": "maximum-forward-profile",
+      "limbs": [
+        {
+          "side": "R",
+          "armShortfall": 0,
+          "legShortfall": 0.04088878970682008,
+          "armReach": 0.9719560645379124,
+          "legReach": 1.0516616568173904
+        },
+        {
+          "side": "L",
+          "armShortfall": 0,
+          "legShortfall": 0.04247403418535478,
+          "armReach": 0.9709090080251876,
+          "legReach": 1.0536645616920255
+        }
+      ]
+    },
+    {
+      "name": "landing-recovery-diagnostic",
+      "limbs": [
+        {
+          "side": "R",
+          "armShortfall": 0,
+          "legShortfall": 0,
+          "armReach": 0.6688999382547316,
+          "legReach": 0.7582932449369518
+        },
+        {
+          "side": "L",
+          "armShortfall": 0,
+          "legShortfall": 0,
+          "armReach": 0.6681792900592395,
+          "legReach": 0.7656249774008804
+        }
+      ]
+    }
+  ]
+}
