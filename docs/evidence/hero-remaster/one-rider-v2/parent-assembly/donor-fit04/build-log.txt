@@ -1,0 +1,14 @@
+00:00.410  blend            | Read blend: "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend"
+23:45:32 | INFO: Data are loaded, start creating Blender stuff
+23:45:32 | INFO: Blender create Mesh node NEW donor01 anatomical true-clipped wholehood
+23:45:32 | INFO: glTF import finished in 0.01s
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/parent-assembly/donor-fit04/build.py", line 56, in <module>
+    pa,pb=tuple(hv[a]),tuple(hv[b]);ia,ib=ringIndex[pa],ringIndex[pb];walk=[ia];k=ia
+                                                        ~~~~~~~~~^^^^
+KeyError: (np.float32(-0.19), np.float32(-0.0026433459), np.float32(1.4528338))
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/parent-assembly/donor-fit04/build.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
