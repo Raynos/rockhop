@@ -1,0 +1,150 @@
+{
+  "sourceSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+  "fixtureSHA256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+  "families": [
+    "neutral",
+    "horizontal",
+    "overhead",
+    "forward",
+    "elbow",
+    "forearm_twist",
+    "wrist_flex",
+    "wrist_deviation",
+    "grip",
+    "squat",
+    "sit",
+    "lean",
+    "horizontal.L",
+    "horizontal.R",
+    "overhead.L",
+    "overhead.R",
+    "forward.L",
+    "forward.R",
+    "elbow.L",
+    "elbow.R",
+    "forearm_twist.L",
+    "forearm_twist.R",
+    "wrist_flex.L",
+    "wrist_flex.R",
+    "wrist_deviation.L",
+    "wrist_deviation.R",
+    "grip.L",
+    "grip.R"
+  ],
+  "frames": 5404,
+  "fps": 48,
+  "baselineBrowserMatrixControlsExact": 1164,
+  "maximumWorldMatrixError": 1.4432899320127035e-15,
+  "loaded": [
+    "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9"
+  ],
+  "errors": [],
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1440,
+        "height": 960,
+        "r_frame_rate": "48/1",
+        "nb_frames": "5404"
+      }
+    ],
+    "format": {
+      "duration": "112.583333"
+    }
+  },
+  "regionalClips": [
+    {
+      "family": "overhead.L",
+      "fullTransitionFrames": 193,
+      "orderedReviewedFrameIndices": [
+        2744,
+        2745,
+        2746,
+        2747,
+        2748,
+        2749,
+        2750,
+        2751,
+        2752,
+        2753,
+        2754,
+        2755
+      ],
+      "movieSHA256": "9d4960616f070a12137e61be9ec8218cae9800de6aa73b1f78fc63b479cd2c39"
+    },
+    {
+      "family": "overhead.R",
+      "fullTransitionFrames": 193,
+      "orderedReviewedFrameIndices": [
+        2937,
+        2938,
+        2939,
+        2940,
+        2941,
+        2942,
+        2943,
+        2944,
+        2945,
+        2946,
+        2947,
+        2948
+      ],
+      "movieSHA256": "cf07f6d09b6e5a5886e2c0e74ce36cf49ae63eec462099b1713abbdcada21fb8"
+    },
+    {
+      "family": "wrist_flex.L",
+      "fullTransitionFrames": 193,
+      "orderedReviewedFrameIndices": [
+        4288,
+        4289,
+        4290,
+        4291,
+        4292,
+        4293,
+        4294,
+        4295,
+        4296,
+        4297,
+        4298,
+        4299
+      ],
+      "movieSHA256": "3b2723c031adc7c9b08894a61fa89c09473d97c462dca12ca1f4671c65199f90"
+    },
+    {
+      "family": "wrist_flex.R",
+      "fullTransitionFrames": 193,
+      "orderedReviewedFrameIndices": [
+        4481,
+        4482,
+        4483,
+        4484,
+        4485,
+        4486,
+        4487,
+        4488,
+        4489,
+        4490,
+        4491,
+        4492
+      ],
+      "movieSHA256": "0c054e46cd84c8c4a7f5c84c5fa68d172f626956f672770d97d4f767b3e3eef1"
+    }
+  ],
+  "limits": "Same unaccepted V5 export, no source/cosmetic/pose repair. Authored finite stress fixtures, not Garage/physics/mobile/contact acceptance. Parent moving-window review pending.",
+  "parentReview": {
+    "scope": "Ordered front-gray frames42\u201353 for left/right overhead and wrist flex; full six-view overhead.L frame48. Regional moving-window review only.",
+    "findings": [
+      "Raised sleeves retain broad flattened underarm webs and visibly unnatural shoulder transitions.",
+      "Side/rear gray overhead view reveals thin folded underarm construction; textured material cannot clear it.",
+      "Full-body wrist views lack resolution to accept literal cuff shading or natural fingers. Numerical zero gaps remain only a surface boundary finding."
+    ],
+    "decision": "REJECT appearance; same unaccepted baseline, not a new repaired candidate."
+  },
+  "checks": {
+    "strictHarnessTypes": "PASS",
+    "targetedOxlint": "PASS",
+    "setupLimits": "Initial ESLint executable unavailable; use repository oxlint. Initial system Python lacked Pillow; use installed Unimate Python. Neither changed geometry/thresholds."
+  }
+}

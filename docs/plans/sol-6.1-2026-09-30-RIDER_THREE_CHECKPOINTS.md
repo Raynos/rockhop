@@ -1666,3 +1666,15 @@ No construction/weights/source change or GPU workload. Task3 construction
 remains separate; its latest fresh weights still report14.22mm saddle gap,
 pending parent audit. Prior structural failures and cosmetics pause retained.
 Next moving unilateral/halfstep gate and task3 candidate inspection; ship165.
+
+## Expanded exported moving evidence — round164
+
+All28families/5,404samples now recorded in stock WebGL at48fps with matched
+front/side/back gray/PBR. Source response and all1,164baseline browser controls
+exact; raw frames hashed and frozen. Four full193frame regional movies retain
+both unilateral overhead/wrist transitions. Partial ordered-window review
+still rejects broad thin underarm webs/flattened shoulders; fullbody wrist
+resolution cannot clear literal shading or finger anatomy. No source repair.
+World/local parity<=1.45e-15m, stricttypes/oxlint pass, canonical lock,
+144.36s/15.841GB. Fullmovie/continuous surfaces/actual Garage/contact/device
+gates open. Task3 construction remains separate; cosmetics paused. Ship165next.

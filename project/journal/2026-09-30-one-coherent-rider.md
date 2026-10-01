@@ -1815,3 +1815,22 @@ collision or hand/grip contact pass. A narrow intact boundary does not accept
 arm anatomy or sleeve/body deformation. Broader cloth/hips/support failures
 remain. Cosmetic work paused; task3 remains construction owner. No new art
 repair attempt. Next moving expanded gate/candidate inspection; ship165.
+
+## Round164 — unilateral/intermediate moving gate
+
+Finding: the expanded CPU fixture now has matching exported moving evidence,
+28families/5,404frames/48fps. Partial ordered-window review still rejects broad
+thin underarm webs and flattened shoulders. Fullbody wrist resolution cannot
+accept natural fingers/cuff shading. No character repair occurred.
+
+Validation: source response pinned, all1,164old browser matrix controls exact,
+world/local parity<=1.45e-15m. Raw frames/report hashed and frozen; four regional
+movies retain all193transition frames. Parent inspected front-gray frames42–53
+for overhead/wrist L/R and six-view overhead.L48. Stricttypes/oxlint pass;
+canonical lock144.36s/15.841GB. Wrong initial ESLint/Pillow runtimes corrected
+using installed repository/Unimate tools; no source/threshold change.
+
+Limits: partial moving review only, no full-film/continuous collision/physical
+Garage/contact/device acceptance. Same unaccepted V5, no repaired candidate,
+player promotion or site replacement. Task3 construction ownership retained;
+cosmetics paused. Next ship165 and actual saddle-surface specialist audit.

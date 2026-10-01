@@ -16,7 +16,13 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round163, 2026-10-01
+## Current evidence — round164, 2026-10-01
+
+- Round164 records28families/5,404WebGL frames at48fps,gray/PBR3views.
+  Old1,164browser matrix controls exact. Regional full transitions retained;
+  partial moving-window review rejects thin underarm webs/flattened shoulders.
+  Fullbody wrist resolution does not accept fingers/cuff shading. No repair.
+  Canonical lock144.36s/15.841GB,types/oxlint pass. Ship165next.
 
 - Round163 literal cuff127edges/65+62vertices:0surface/alias/midpoint gaps
   across5,404stock Three.js samples,0regional collapse,1.167xmaxstretch.

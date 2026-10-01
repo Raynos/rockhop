@@ -14,7 +14,7 @@ const sha=(p:string)=>crypto.createHash('sha256').update(fs.readFileSync(p)).dig
 const fixture:PoseFixture=JSON.parse(fs.readFileSync(fixturePath,'utf8'));
 const sourceHash=sha(source),fixtureHash=sha(fixturePath);
 fs.mkdirSync(path.join(out,'frames'),{recursive:true});
-const report:{sourceSHA256:string;fixtureSHA256:string;frames:unknown[];errors:string[];loaded:string[];failure?:string;limits:string[]}={sourceSHA256:sourceHash,fixtureSHA256:fixtureHash,frames:[],errors:[],loaded:[],limits:['Authored studio stress fixture; not actual Garage/gameplay/Blender equivalence.','No continuous collision/contact/device acceptance.','Bilateral stored24fps controls; unilateral and unseen halfsteps remain open.']};
+const report:{sourceSHA256:string;fixtureSHA256:string;fps:number;families:string[];frames:unknown[];errors:string[];loaded:string[];failure?:string;limits:string[]}={sourceSHA256:sourceHash,fixtureSHA256:fixtureHash,fps:fixture.fps,families:fixture.families,frames:[],errors:[],loaded:[],limits:['Authored studio stress fixture; not actual Garage/gameplay/Blender equivalence.','No continuous collision/contact/device acceptance.',`Stored ${fixture.fps}fps / ${fixture.families.length} families; finite samples, not continuous-time certification.`]};
 const server=await createServer({configFile:false,root:process.cwd(),server:{host:'127.0.0.1',port:0},logLevel:'warn',plugins:[{name:'frozen-pose-fixture',configureServer(vite){vite.middlewares.use((req,res,next)=>{
  const file=req.url==='/fixture-source.glb'?source:req.url==='/pose-fixture.json'?fixturePath:null;
  if(!file)return next();res.setHeader('Content-Type',file===source?'model/gltf-binary':'application/json');res.end(fs.readFileSync(file));
