@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-01",
+  "source": "/Users/raynos/Documents/Codex/2026-10-01/task-3/baseline/rider.glb",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "modeling": "All CPU NumPy/SciPy; no inference/model/GPU jobs. Blender Cycles CPU two threads. No other agent/source/production files changed.",
+  "variants": {
+    "A": {
+      "sha256": "6fd9be18a8ea7c86c0cfebda35ee1a16be471a574e845c9988a308481a47f5c5",
+      "bytes": 14119156,
+      "skinJoints": 19,
+      "sourceGeometryNormalUVColorIndicesMorphsImagesMaterialsExact": true,
+      "originalBinaryPrefixExact": true,
+      "standingCoordinatesRetained": true,
+      "sourceAttributesChecked": 40,
+      "legLengthsM": [
+        {
+          "thigh": 0.4537516030478544,
+          "shin": 0.39503585949070646
+        },
+        {
+          "thigh": 0.45375164154888015,
+          "shin": 0.3950358744788668
+        }
+      ],
+      "freshSkeleton": false,
+      "freshWeights": false,
+      "newHipCentres": [
+        [
+          0.6347749634609564,
+          0.9591750249086093,
+          0.1065750075718428
+        ],
+        [
+          0.6347749547064839,
+          0.9591750936379978,
+          -0.10657499378196844
+        ]
+      ],
+      "standToSitKeyCount": 25,
+      "controlSeconds": 2,
+      "restAxes": "C joints use explicit world-aligned coordinate bases with local translations from the new parent hierarchy; Blender importer reconstructs display tails. Local quaternions are solved from world poses, not copied between rigs."
+    },
+    "B": {
+      "sha256": "b79522d45cab48fa09c148d40d03d5ebbf3d28eefc5d2227ef43526b4562e8e0",
+      "bytes": 16298764,
+      "skinJoints": 19,
+      "sourceGeometryNormalUVColorIndicesMorphsImagesMaterialsExact": true,
+      "originalBinaryPrefixExact": true,
+      "standingCoordinatesRetained": true,
+      "sourceAttributesChecked": 30,
+      "legLengthsM": [
+        {
+          "thigh": 0.4537516030478544,
+          "shin": 0.39503585949070646
+        },
+        {
+          "thigh": 0.45375164154888015,
+          "shin": 0.3950358744788668
+        }
+      ],
+      "freshSkeleton": false,
+      "freshWeights": true,
+      "newHipCentres": [
+        [
+          0.6347749634609564,
+          0.9591750249086093,
+          0.1065750075718428
+        ],
+        [
+          0.6347749547064839,
+          0.9591750936379978,
+          -0.10657499378196844
+        ]
+      ],
+      "standToSitKeyCount": 25,
+      "controlSeconds": 2,
+      "restAxes": "C joints use explicit world-aligned coordinate bases with local translations from the new parent hierarchy; Blender importer reconstructs display tails. Local quaternions are solved from world poses, not copied between rigs."
+    },
+    "C19": {
+      "sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+      "bytes": 16294212,
+      "skinJoints": 19,
+      "sourceGeometryNormalUVColorIndicesMorphsImagesMaterialsExact": true,
+      "originalBinaryPrefixExact": true,
+      "standingCoordinatesRetained": true,
+      "sourceAttributesChecked": 30,
+      "legLengthsM": [
+        {
+          "thigh": 0.4095973632727633,
+          "shin": 0.39242826967996713
+        },
+        {
+          "thigh": 0.4095973632727633,
+          "shin": 0.392428247725937
+        }
+      ],
+      "freshSkeleton": true,
+      "freshWeights": true,
+      "newHipCentres": [
+        [
+          0.638,
+          0.913,
+          0.11
+        ],
+        [
+          0.638,
+          0.913,
+          -0.11
+        ]
+      ],
+      "standToSitKeyCount": 25,
+      "controlSeconds": 2,
+      "restAxes": "C joints use explicit world-aligned coordinate bases with local translations from the new parent hierarchy; Blender importer reconstructs display tails. Local quaternions are solved from world poses, not copied between rigs."
+    },
+    "C": {
+      "sha256": "22ee891f8778717734a0455c2393cd2b38ca72ccb4cbd7d6cd85c29de328393a",
+      "bytes": 16317900,
+      "skinJoints": 23,
+      "sourceGeometryNormalUVColorIndicesMorphsImagesMaterialsExact": true,
+      "originalBinaryPrefixExact": true,
+      "standingCoordinatesRetained": true,
+      "sourceAttributesChecked": 30,
+      "legLengthsM": [
+        {
+          "thigh": 0.4095973632727633,
+          "shin": 0.39242826967996713
+        },
+        {
+          "thigh": 0.4095973632727633,
+          "shin": 0.392428247725937
+        }
+      ],
+      "freshSkeleton": true,
+      "freshWeights": true,
+      "newHipCentres": [
+        [
+          0.638,
+          0.913,
+          0.11
+        ],
+        [
+          0.638,
+          0.913,
+          -0.11
+        ]
+      ],
+      "standToSitKeyCount": 25,
+      "controlSeconds": 2,
+      "restAxes": "C joints use explicit world-aligned coordinate bases with local translations from the new parent hierarchy; Blender importer reconstructs display tails. Local quaternions are solved from world poses, not copied between rigs."
+    }
+  },
+  "contactBasis": "One static retained contact endpoint supplies wrist/ankle transforms for all variants; closed-grip source morphs retained. All animation trajectories newly authored, rigid two-bone IK with explicit forward/outward knee and backward/outward elbow poles. Same pelvis translation/torso rotation controls; changed anatomical centres change elbow/knee paths by design.",
+  "limits": "Diagnostic offline control only. No normal gameplay/Garage adapter, broad riding-state sweep, dynamic cloth solver or production promotion. C19 is a failed overall sitting fix despite improved endpoint contour/stretch."
+}

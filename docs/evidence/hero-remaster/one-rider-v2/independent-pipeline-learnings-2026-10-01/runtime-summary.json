@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-01T16:06:25.253Z",
+  "engine": {
+    "revision": "186",
+    "three_root": "/Users/raynos/projects/games/rockhop/node_modules/three",
+    "node": "v24.18.1"
+  },
+  "method": "Actual GLTFLoader + AnimationMixer + SkinnedMesh.getVertexPosition in Node, CPU only. Texture references removed only in memory; no material/render assertion.",
+  "tolerance_m": 2e-05,
+  "failures": [],
+  "total_vertex_comparisons": 29045120,
+  "variants": [
+    {
+      "id": "A",
+      "sha256": "6fd9be18a8ea7c86c0cfebda35ee1a16be471a574e845c9988a308481a47f5c5",
+      "joint_counts": [
+        19
+      ],
+      "clips": 5,
+      "sampled_poses": 80,
+      "parity": {
+        "primitive_arrays": 400,
+        "vertex_comparisons": 7261280,
+        "max_m": 3.109639311497178e-06,
+        "failed_arrays": 0
+      },
+      "true_endpoint_samples": 5,
+      "holdout_samples": 20,
+      "conditioning_changed_vertices": 3222,
+      "conditioning_hip_roi_changed_vertices": 0
+    },
+    {
+      "id": "B",
+      "sha256": "b79522d45cab48fa09c148d40d03d5ebbf3d28eefc5d2227ef43526b4562e8e0",
+      "joint_counts": [
+        19
+      ],
+      "clips": 5,
+      "sampled_poses": 80,
+      "parity": {
+        "primitive_arrays": 400,
+        "vertex_comparisons": 7261280,
+        "max_m": 3.109639311497178e-06,
+        "failed_arrays": 0
+      },
+      "true_endpoint_samples": 5,
+      "holdout_samples": 20,
+      "conditioning_changed_vertices": 3259,
+      "conditioning_hip_roi_changed_vertices": 0
+    },
+    {
+      "id": "C19",
+      "sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+      "joint_counts": [
+        19
+      ],
+      "clips": 5,
+      "sampled_poses": 80,
+      "parity": {
+        "primitive_arrays": 400,
+        "vertex_comparisons": 7261280,
+        "max_m": 1.3093005818995915e-06,
+        "failed_arrays": 0
+      },
+      "true_endpoint_samples": 5,
+      "holdout_samples": 20,
+      "conditioning_changed_vertices": 0,
+      "conditioning_hip_roi_changed_vertices": 0
+    },
+    {
+      "id": "C",
+      "sha256": "22ee891f8778717734a0455c2393cd2b38ca72ccb4cbd7d6cd85c29de328393a",
+      "joint_counts": [
+        23
+      ],
+      "clips": 5,
+      "sampled_poses": 80,
+      "parity": {
+        "primitive_arrays": 400,
+        "vertex_comparisons": 7261280,
+        "max_m": 1.3093005818995915e-06,
+        "failed_arrays": 0
+      },
+      "true_endpoint_samples": 5,
+      "holdout_samples": 20,
+      "conditioning_changed_vertices": 0,
+      "conditioning_hip_roi_changed_vertices": 0
+    }
+  ],
+  "production_compatible": false,
+  "compatibility_note": "C19/C prefixed bones need an isolated named driver adapter; C additionally has 23 bones with half-angle helpers. GLTFLoader handles both. Gameplay driver/contact compatibility not asserted.",
+  "skinning": "Installed Three.js r186 CPU/shader weighted matrix LBS, four influences; Blender preserve volume/DQ is not transferred by standard glTF.",
+  "conditioning_note": "Actual installed sleeve conditioning changes zero hip ROI vertices in baseline/A/B/C19/C. Fresh names skip the conditioning function.",
+  "conditioning_cuff_witness_gaps": [
+    {
+      "variant": "baseline",
+      "matches": 3,
+      "max_before_m": 0,
+      "max_after_m": 0
+    },
+    {
+      "variant": "A",
+      "matches": 3,
+      "max_before_m": 0,
+      "max_after_m": 0
+    },
+    {
+      "variant": "B",
+      "matches": 3,
+      "max_before_m": 0,
+      "max_after_m": 0
+    },
+    {
+      "variant": "C19",
+      "matches": 3,
+      "max_before_m": 0,
+      "max_after_m": 0
+    },
+    {
+      "variant": "C",
+      "matches": 3,
+      "max_before_m": 0,
+      "max_after_m": 0
+    }
+  ],
+  "visual_acceptance_asserted": false
+}

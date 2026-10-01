@@ -1087,3 +1087,18 @@ only as sufficientrefinement, stopcolour/curvesweep. Inspect actualprepared
 eye normals/materialresponse/hiddencornea before different mechanism; no
 fulltransmissionrepeat or unprovedgazesurgery.26sleeve rejected; wholejunction
 audit remainsnext. Current11/gallery129protected, no promotion. Shipnext135.
+
+Round135: retain the delivered independent pipeline/fresh-rig report with29
+parent-rehashed exact receipts; no historicalsolver rerun implied. Weights-
+only seatedstretch8.427→3.478x, freshC19→2.459x but crossing268, early
+holdoutregressions and16.4mm saddlehover remain. Failedgarment01followup
+retained separately, no override ofC19progress. Source11standardconditioning
+counts differ from our privatebaked-skin bypass; do not silently transfer
+thosecounts. Requiredunchanged11ship135bytefinish/hash/crash/restartpass.
+Use connectedjunction/representation audit before new garment construction;
+no heightband/DQ/helper/ARAPsweep. Eye preparednormals/materialaudit next
+after28face6.8below7. Current11/gallery129protected. Nextrequiredship138.
+
+Round135 encoding note: repository CSV uses LF instead of delivered CRLF;
+records and original source checksum preserved. Parent verifier checks this
+one encoding equivalence and28other exact source/copied hashes.
