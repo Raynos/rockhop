@@ -1160,3 +1160,13 @@ weights and texture diagnosis. Reconstructed contacts match within16.3nm;
 465/208/255/258 opposing faces across four recorded poses. Recipe lint passes.
 Limits: No repair yet; no full collision certificate or art pass. Source11 exact.
 Current hip/butt/thigh and multi-angle sitting review remain open.
+
+## Round110 — recessed eyes do not fix analytic lid anatomy
+
+Finding: Reject14 and stop parameter-only lid rings early. Preserve current11;
+use anatomical donor eyelid/socket topology with continuous skin blending.
+Validation: 144 played PBR/gray frames reviewed; paired72 state/bones/camera/focus
+exact. Independent conservation and136 visibility rays pass. Replay both tiers
+byte-identical40.083333333333336s; crash103/restart2/3ms; errors0. Syntax passes.
+Limits: Face5.8 vs6.8 diagnostic;153 hidden overlaps. Current11 retained.
+Larger-method failures3/totaleye6, no quality gate or asset promotion.

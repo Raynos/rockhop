@@ -834,3 +834,12 @@ Next targeted sleeve weights/corrective deformation, protecting hood/join and
 wrists. Human ask241 approves current head/body/hood join; preserve it. Ask242
 opens current hip/butt/thigh seated audit; ask243 requests multi-angle sitting
 videos. Current11 unchanged; no repair/gameplay gate pass.
+
+Round110: REJECT recessed eye14 after144 actual PBR/gray frames. Face5.8 versus
+current11 6.8; exposed sclera reduced but flat lower-lid bands persist. Independent
+source conservation passes;136 aperture rays pass/0 visible lid intersections,
+153 hidden transition pairs disclosed. State/bones/camera/focus72 exact.
+Stop ring-parameter fitting early after3 larger-method failures,totaleye6; next
+anatomical donor lid/socket surface and texture continuity. Preserve approved
+head/body/hood join. Private replay byte-identical;49.53s/43.642GB anonymous.
+Sitting videos/current hip and thigh audit in progress; current11 unchanged.
