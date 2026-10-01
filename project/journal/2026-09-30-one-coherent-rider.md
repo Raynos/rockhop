@@ -1181,3 +1181,14 @@ and decodes4 images without overflow/errors. CPU Blender96.77s/2threads;
 ship gate both tiers byte-identical40.083333333333336s/crash103/restart2ms.
 Limits: No physical iPhone test or character quality pass. Hip/thigh, sleeves
 and face remain open. Initial misplaced fixture retained; corrected02 used.
+
+## Round112 — locate current hip folds in the pelvis/thigh weight blend
+
+Finding: Correct anatomical skin support before textures; the current waist
+correction does not establish seated hip or thigh quality. Source remains11.
+Validation: Parent reran CPU analyzer against SHA-bound frozen buffers.
+Six recorded states match actual played contacts within16.722nm. Backward lean
+443 hip local fold indicators;4.930x upper-leg stretch; no source reversed or
+degenerate faces. oxlint passes. Existing body06/08 weights verified exact.
+Limits: Local fold indicators are not complete collision tests or appearance
+acceptance. No GPU, source/candidate edits or player asset promotion.
