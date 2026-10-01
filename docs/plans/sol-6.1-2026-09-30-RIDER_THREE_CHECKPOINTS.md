@@ -1129,3 +1129,11 @@ Nextsource-surface geodesic/branchsegmentation before continuousweights or
 limitedretopo; protectactualheadneckhoodjoin/aliases/contactcontracts.
 No newasset. Ship138unchanged11bytefinish/hash/crash103restart1/2ms/errors0.
 29face6.8rejectionandfivefailureeyeapproachswitchstand. Shipnext141.
+
+Round139: read-only sourcegeodesic Voronoi arm mask failssemantic gate:
+6340torso excluded but6403/27413/27805torso stillincluded, elbow3789retained.
+No weights/export ornewasset. Nearestgeodesic seeds alone insufficient.
+Nextexplicit parent-reviewed torso/cuff/elbowpanel landmarks constrain
+surfacepartition before onecontinuousskin solve; no thresholdsweep orold
+weighteligibility. Current11/join/gallery129and29face rejectionpreserved.
+Shipnext141.

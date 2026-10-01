@@ -1,0 +1,21 @@
+{
+  "round": 139,
+  "status": "Reject unconstrained geodesic Voronoi as sufficient sleeve segmentation; no candidate generated",
+  "finding": "Source-surface paths keep original elbow3789inside and exclude torso6340, but still include three confirmed torso regression triangles6403/27413/27805. Surface-distance nearest-seed alone cannot resolve adjoining hoodie panels. Do not generate weights from this mask.",
+  "branches": [
+    {
+      "side": "L",
+      "vertices": 1753,
+      "components": 1,
+      "excludedOld26Vertices": 431
+    },
+    {
+      "side": "R",
+      "vertices": 1700,
+      "components": 1,
+      "excludedOld26Vertices": 448
+    }
+  ],
+  "next": "Add explicit parent-reviewed source torso panel landmarks6340/6403/27413/27805 as semantic constraints, retain actual cuff/elbow arm landmarks, then test connected source-surface partition before continuous weights. Fixed anatomical annotations, not a distance-threshold sweep or trust in old weight labels.",
+  "limits": "Read-only selection gate failed before skin/export. No appearance judgment, repair success, new asset or source change."
+}

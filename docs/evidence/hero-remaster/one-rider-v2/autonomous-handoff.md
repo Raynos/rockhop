@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round138, 2026-10-01
+## Current evidence — round139, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -808,3 +808,11 @@ Nextsource-surface geodesic/branchsegmentation before continuousweights or
 limitedretopo; protectactualheadneckhoodjoin/aliases/contactcontracts.
 No newasset. Ship138unchanged11bytefinish/hash/crash103restart1/2ms/errors0.
 29face6.8rejectionandfivefailureeyeapproachswitchstand. Shipnext141.
+
+Round139: read-only sourcegeodesic Voronoi arm mask failssemantic gate:
+6340torso excluded but6403/27413/27805torso stillincluded, elbow3789retained.
+No weights/export ornewasset. Nearestgeodesic seeds alone insufficient.
+Nextexplicit parent-reviewed torso/cuff/elbowpanel landmarks constrain
+surfacepartition before onecontinuousskin solve; no thresholdsweep orold
+weighteligibility. Current11/join/gallery129and29face rejectionpreserved.
+Shipnext141.

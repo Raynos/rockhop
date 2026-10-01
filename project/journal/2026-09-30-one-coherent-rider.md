@@ -1450,3 +1450,13 @@ finish/hash exact,crash103ticks/restarts1/2ms/errors0 undercanonical lock.
 Limits: Overlays have no depth test; flags not collision/quality proof.
 Sourceimage width assertion corrected before results; no asset changed.
 Actualheadhoodjoin/current11/gallery129preserved; eyematerial tuning stopped.
+
+## Round139 — unconstrained geodesic branch fails semantic gate
+
+Finding: Surface-distance Voronoi regions exclude one witnessed torso fan
+but include three others; reject before generating weights or an asset.
+Validation: Complete source graph,744/775arm seeds,1753/1700connected
+branches;6340excluded/elbow3789retained,6403/27413/27805still included.
+Source unchanged. No shader/GPU or appearance claim.
+Limits: Add explicit reviewed torso/cuff/elbow landmarks before a new
+continuous field; no distance-threshold sweep or prior-weight labeling.
