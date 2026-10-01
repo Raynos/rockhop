@@ -1,0 +1,19 @@
+23:58:39 | INFO: Data are loaded, start creating Blender stuff
+23:58:39 | INFO: Blender create Mesh node Protected body NEW hood joined garment
+23:58:39 | INFO: Blender create Mesh node textured
+23:58:39 | INFO: glTF import finished in 0.17s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/parent-assembly/donor-fit05-motion01/neck_motion.py:7: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Neutral studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/parent-assembly/donor-fit05-motion01/neck_motion.py", line 39, in <module>
+    frame=row['frame'];scene.frame_set(frame);bpy.context.view_layer.update();view('neck-motion-'+str(frame).zfill(4),(0,0,1.565),.52,row['cameraYaw'],size=(512,512))
+                                                                              ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/parent-assembly/donor-fit05-motion01/neck_motion.py", line 12, in view
+    target=Vector(target);a=math.radians(yaw);camera.location=target+Vector((4*math.sin(a),-4*math.cos(a),elevation));camera.rotation_euler=(target-camera.location).to_track_quat('-Z','Y').to_euler();data.ortho_scale=scale;scene.render.resolution_x=size[0];scene.render.resolution_y=size[1];scene.render.resolution_percentage=100;path=O/(name+'.png');scene.render.filepath=str(path);t=time.monotonic();bpy.ops.render.render(write_still=True);rows.append({'path':str(path),'SHA256':sha(path),'cameraMatrix':[list(r) for r in camera.matrix_world],'target':list(target),'scale':scale,'yawDegrees':yaw,'size':list(size),'wallSeconds':time.monotonic()-t});(O/'neck-motion-progress.json').write_text(json.dumps(rows,indent=2)+'\n')
+                                                                                                                                                                                                        ^^^^^^^^^^^^^^^^
+AttributeError: 'Armature' object has no attribute 'ortho_scale'
+
+Error: script failed, file: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/parent-assembly/donor-fit05-motion01/neck_motion.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

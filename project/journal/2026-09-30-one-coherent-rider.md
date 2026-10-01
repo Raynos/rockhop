@@ -777,3 +777,8 @@ Limits: Textured seam stillvisible, fourthnewassemblyfailure, productionround69 
 Finding: Local65mmalbedo continuity bake removes the large horizontal donor/bodystripe inactual GLB. Body7.4/whiteface7.5 diagnostic; source04geometry/UV/materialassignment unchanged, sourceimages retained. Native fine detail/filtering loss disclosed. Best-so-far private candidate, actualturntable/neckmotion next; no checkpoint1/rigpass. Round69production passes byteidentical40.083333333s/crash103ticks/restart1ms both.
 Validation: CPU2actual17views; sourcegeometry/UV/material assignments exact;9angle unretouchedgrid; productionround69exactmatch.
 Limits: Diagnostic scores, coarsefine detail, local textureattenuation/filtering loss. No neckmotion/rig/gameplayqualification.
+
+## Round72 — actual orbit, camera-variable setup failure
+Finding: Actual2s/24frame CPU turntable encoded and decoded all24frames for ordered inspection; whitebody/clothing continuity held through360degrees, coarseglove/shoedetails persist. Neckfixture firstsetup exits before rendering because armature data reused camera data variable. Correct our script; no anatomical failure/no neckpass. Round72production queued sharedGPUlock.
+Validation: 24renderedframes, silentH2642s12fpsclip, all24decodedinspection; neckscript exits1 before render.
+Limits: No neckmotion/rig pass;productionround72 queued canonical lock.

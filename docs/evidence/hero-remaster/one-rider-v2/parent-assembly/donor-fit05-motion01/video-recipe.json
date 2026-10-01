@@ -1,0 +1,40 @@
+{
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-threads",
+    "2",
+    "-framerate",
+    "12",
+    "-i",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05-motion01/turntable-%04d.png",
+    "-c:v",
+    "libx264",
+    "-threads",
+    "2",
+    "-crf",
+    "18",
+    "-pix_fmt",
+    "yuv420p",
+    "-movflags",
+    "+faststart",
+    "docs/evidence/hero-remaster/one-rider-v2/parent-assembly/donor-fit05-motion01/actual-turntable.mp4"
+  ],
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 384,
+        "height": 480,
+        "r_frame_rate": "12/1",
+        "duration": "2.000000",
+        "nb_frames": "24"
+      }
+    ]
+  },
+  "SHA256": "43fc15b26f79543fc632123c0b2b4b079f7cd5533c958564667e64da1a1b179f",
+  "silent": true
+}
