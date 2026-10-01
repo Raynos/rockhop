@@ -127,6 +127,8 @@ Checkpoint 1 historical minimum; structural gate OPEN. Ask248 construction→rig
 
 Checkpoint 1 historical minimum; structural gate OPEN. Ask248 construction→rig/weights→deformation, cosmetics paused. Round164 actual WebGL28families/5,404frames48fps;1,164old browser controls exact. Partial moving review still rejects underarm/shoulder construction. Fullmovie/contact/Garage/device gates open; no repair/promotion. Existing review version6 retains old comparisons. Task3 construction/parent integration. Ship165next.
 
+Checkpoint 1 historical minimum; structural gate OPEN. Ask248 construction→rig/weights→deformation, cosmetics paused. Round16428families/5,404moving frames reject underarm/shoulder construction. Retained34ship165passes exactfinish/hash,1/2ms restart. Task3 awaits valid rest mesh;14.22mm support report is finite retainedC19/V7 endpoint. Parent actual replay contact audit in flight. Existing review version6 live; no promotion. Nextship168.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

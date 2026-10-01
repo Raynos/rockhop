@@ -16,7 +16,13 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round164, 2026-10-01
+## Current evidence — round165, 2026-10-01
+
+- Round165 retained34ship both tiers exactfinish/hash/float64bytes,103crash
+  ticks,1/2ms restart,0errors under shared lock. Next168. Functional only,
+  no art/contact/mobile pass.14.22mm task3saddle report is retainedC19/V7
+  finite authored endpoint vertical clearance. New weights await valid rest
+  construction;436strict rest crossings rejected. Actual replay audit in flight.
 
 - Round164 records28families/5,404WebGL frames at48fps,gray/PBR3views.
   Old1,164browser matrix controls exact. Regional full transitions retained;
@@ -28,8 +34,8 @@ acceptance. Basic-pose gate implementation and matched actual V5 control underwa
   across5,404stock Three.js samples,0regional collapse,1.167xmaxstretch.
   Parent independently recomputes all aliases and incident geometry,20hashes.
  46rest folded incident pairs persist; rendered joins/thickness/collisions/
-  visible grip unmeasured. No source change or acceptance. Task3 latest
-  weights still report14.22mm saddle hover, pending independent inspection.
+  visible grip unmeasured. No source change or acceptance. Task3 retained
+  C19/V7 authored endpoint reports14.22mm saddle hover; actual replay audit open.
 
 - Round162 publishes version6 at the existing review website, structural-gate
   section.29movies locally play at390/1200px, older23preserved. Two new riding

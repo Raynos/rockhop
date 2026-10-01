@@ -1834,3 +1834,20 @@ Limits: partial moving review only, no full-film/continuous collision/physical
 Garage/contact/device acceptance. Same unaccepted V5, no repaired candidate,
 player promotion or site replacement. Task3 construction ownership retained;
 cosmetics paused. Next ship165 and actual saddle-surface specialist audit.
+
+## Round165 — retained runtime gate
+
+Finding: preserve byte-identical physics while structural repair remains open.
+Retained34 cold-load/clear/crash/restart passes both logical tiers. No source
+or art change. Clarify task3's14.22mm report: retainedC19/V7 authored endpoint
+vertical surface clearance, not fresh repaired weights or actual full replay.
+
+Validation: exact40.083333333333336 finish/float64LEabaaaaaaaa0a4440/
+hash368f1ca5bd9e830a,103crash ticks,1/2ms restart and0errors. Canonical shared
+lock/resource limits honored. Task3 current weight STATUS awaits valid rest
+shape,436strict crossings rejected, no new weights generated.
+
+Limits: logical tier coverage is not device performance, trueLOD or appearance.
+Current garment/sitting/Garage/visible contacts still fail or unmeasured. Parent
+actual replay triangle-surface audit in flight, task3 construction ownership
+retained. Cosmetics paused; no player promotion. Next required ship168.

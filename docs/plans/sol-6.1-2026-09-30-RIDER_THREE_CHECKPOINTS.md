@@ -1663,8 +1663,8 @@ thickness, collisions, normals/materials and actual visible grip contact remain
 unmeasured. This protects a literal join contract for future repairs; it does
 not clear hands/cuffs or the character. Do not move sockets to disguise folds.
 No construction/weights/source change or GPU workload. Task3 construction
-remains separate; its latest fresh weights still report14.22mm saddle gap,
-pending parent audit. Prior structural failures and cosmetics pause retained.
+remains separate; its retained C19/V7 endpoint report still shows14.22mm vertical saddle gap,
+pending actual replay surface audit. No new valid construction weights yet. Prior structural failures and cosmetics pause retained.
 Next moving unilateral/halfstep gate and task3 candidate inspection; ship165.
 
 ## Expanded exported moving evidence — round164
@@ -1678,3 +1678,16 @@ resolution cannot clear literal shading or finger anatomy. No source repair.
 World/local parity<=1.45e-15m, stricttypes/oxlint pass, canonical lock,
 144.36s/15.841GB. Fullmovie/continuous surfaces/actual Garage/contact/device
 gates open. Task3 construction remains separate; cosmetics paused. Ship165next.
+
+## Retained runtime gate and support scope — round165
+
+Retained34passes both silent cold-load/clear/crash/restart tiers,bytefinish/
+hash exact,103crash ticks,1/2ms restart,0errors under canonical shared lock.
+No art or game source changed; no actual mobile/LOD/contact/Garage acceptance.
+Next mandatory168. Keep basic-pose structural failures open and cosmetics paused.
+
+Clarify the task3support report:14.2194mm is a finite C19/V7 authored endpoint
+vertical triangle projection gap. It is not a new valid weighted construction
+candidate or full actual gameplay contact measurement. New weight solver waits
+for a rest-clear mesh; current shape436strict crossings rejected. Task3 owns
+construction and parent owns actual replay surface audit, currently in flight.
