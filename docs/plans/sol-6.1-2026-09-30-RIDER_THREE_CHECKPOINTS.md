@@ -1313,3 +1313,20 @@ World render setup failure corrected;146frames CPU2threads/93.46seconds.
 Required ship150 on retained34 passes both tiers bytefinish/hash/crash103/
 restart3ms/errors0; not a new-garment integration test. Next required153.
 All three visual checkpoints/target8/device/moving contact gates remain open.
+
+## Reject free surface projection — round151
+
+One atlas/geodesic/normal-constrained source projection fits the clean garment
+but breaks coherent geometry:105 rest normal oppositions and20.42x edge change.
+Four actual C19 matrices worsen shirt maxstretch to12.71/12.64/15.75/15.44x,
+jeans10.76/10.53/13.09/12.92x. Exact native topology/UV/weights and original34
+conservation verified. All72 gray ordered samples show pinched underarms,
+false shirt/crotch continuity and temporary cut cuff/back/shoe interfaces.
+Reject before texture bake; no fullbody/face score or actual game clip claimed.
+
+Stop independent nearest-surface vertex snapping after this measured failure.
+Next use low-frequency source cross-section/cage fitting to move connected
+panels coherently, protecting head/hood/gloves and native fields. Do not merely
+sweep projection distances or normal thresholds. Retain every original source
+and previous failures. Native template fit still requires genuine interface
+construction and actual physics motion; ship150passed, next153.

@@ -99,6 +99,8 @@ Checkpoint1WHITE minimum; target8/later gates open. Round149 BlenderCPUclean gar
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round150 matched gray rest films reject narrow clean fit and temporary unstitched hood/cuff/shoe interfaces; retain C19 rig and selected silhouette.146frame hashes/73camera pairs verified. Retained34ship150 passes bytefinish/hash/crash103/restart3ms/errors0. Fit/stitch before PBR bake and actual motion; next ship153. Gallery23clips: fresh34 riding, older11 sitting.
 
+Checkpoint1 WHITE minimum; target8/later gates open. Round151 source-surface garment projection rejected:105rest normal oppositions/20.42xedge change and worse actual C19 pose strain. Native fields/source exact,73frame/camera receipts/all72samples reviewed. Stop free vertex snapping; smooth cross-section/cage transfer next, no bake/promotion. C19 kept; ship150passed, next153. Gallery34riding/11sitting remains.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

@@ -1616,3 +1616,16 @@ Limits: Gray rest fixture cannot score mockup appearance or riding deformation;
 no complete garment GLB, stitching/contact/phone acceptance or promotion.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/gray-fixture01/
 Ask:239,241,242,245,247
+
+## Round151 — stop independent garment surface snapping
+
+Finding: Source projection makes fuller legs but pinches underarms and
+breaks topology correspondence. Reject it before texture bake; switch to
+smooth panel cage transfer rather than a projection threshold sweep.
+Validation: Native UV/weights/quads exact; source34 conserved;73camera/frame
+receipts, all72ordered samples inspected; four actual C19 matrices worsen
+shirt/jeans strain. Rest105normal oppositions/20.42x edge change.
+Limits: Gray rest fixture/CPU poses are not a new whole-character game clip
+or body/face grade; source interfaces, moving contacts/Garage/device open.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/silhouette02/
+Ask:239,241,242,245,247
