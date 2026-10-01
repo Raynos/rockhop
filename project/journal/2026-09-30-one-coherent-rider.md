@@ -579,3 +579,12 @@ Validation: ParentviewedfouractualpaintedorientationPNGs; CPUexit0, original
 GLBgeometry/PBR/UVhash unchanged2cd1859e. No recoloring/cleanupperformed.
 Limits: Frontalstaticdiagnostic only; fullface/body/neckmotion stillunaccepted;
 raw-versus-reducedsurface inspection precedes blaming or repairing defects.
+
+## Round50 — choose natural wholehood donor for source inspection
+
+Finding: NEW H21-01 hood has the strongest natural cowl/backfold; retain
+02alternative, reject05rearholes and all oldgeneratedface/hair donors.
+Validation: ParentactualfourPBRfront/rear comparisons;32validmatchedPBRgray
+views,20sourcefiles hashunchanged. TwelvewrongRAWviews frozen/excluded.
+Limits: Noextraction/assembly; rawdisplaycorrection needed beforecausality
+or highressourcechoice. Hoodappearance cannotpassface/body/motion gates.

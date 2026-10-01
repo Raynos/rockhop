@@ -180,3 +180,10 @@ H21face matchesapprovedtarget/ask240 withoutrecoloring; parentfrontaldiagnostic
 6/10, below7,target8. Blackcheekdefects/soft eyes require actualraw/reducedgray
 diagnosis, no reducer/generatorblameyet. Preservebest-sofarbody/clothingcontrol
 and freshsource. Next matched4viewPBRgray; no geometryfixuntilsourceinspection.
+
+Round50: FourNEWpreservedH21hoodsources compared in32validPBR/gray views;
+parentselects01hoodONLY for furtherrawinspection,02secondary.05rearholes
+persistGRAY,03darkrearband/unevenjunction. Alloldfaces/hairrejected, source
+20files unchanged.12RAWviewswrongupside-down display areoursetupfailure
+not sourcecause; correctoneactualfrontbeforemoreviews/extraction. Authored
+newhoodtrial01preview stiffcapeform rejectedpendingitsfrozenfinding; no bake.

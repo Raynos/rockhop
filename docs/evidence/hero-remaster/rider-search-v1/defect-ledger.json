@@ -1076,6 +1076,11 @@
       "status": "Selected; executionafterretirementcheckpoint47",
       "supersedesRetiredRepairFamily": true,
       "oldFailuresRetained": 15
+    },
+    "C-wholeHoodRawDisplay": {
+      "failedAttempts": 1,
+      "failure": "12RAWviews upside-down afterextraX180; originaldata untouched,validPBR/reducedgray32",
+      "next": "RemoveextraX180, inspectonefrontbeforecontinuing"
     }
   },
   "visualQualityPolicy": {
@@ -1096,5 +1101,14 @@
     "evidence": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/README.md",
     "faceAccepted": false,
     "historicalFaceComparisonsIntact": true
+  },
+  "cleanWholeHoodDonorComparison": {
+    "selectedInspectionCandidate": "NEW H21-01 hoodonly",
+    "secondary": "H21-02",
+    "rejected": "H21-05 actualholes",
+    "sourceDataUnchanged": true,
+    "headHairExcluded": true,
+    "evidence": "../one-rider-v2/autonomous-lanes/C-garment-pattern/whole-hood-donor-comparison/README.md",
+    "accepted": false
   }
 }

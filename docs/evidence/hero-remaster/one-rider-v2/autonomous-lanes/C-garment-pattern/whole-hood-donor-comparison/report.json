@@ -1,0 +1,33 @@
+{
+  "status": "UNACCEPTED comparison-only; parent alone selects donor",
+  "actualStartUTC": "2026-10-01 02:36:10 UTC",
+  "renderFinishedUTC": "2026-10-01T02:42:38.004414+00:00",
+  "freezeUTC": "2026-10-01T02:44:56.422448+00:00",
+  "deadlineUTC": "2026-10-01 02:56:10 UTC",
+  "actualValidViews": 32,
+  "failedRawViews": 12,
+  "sourceCount": 20,
+  "allSourcesUnchanged": true,
+  "boardPaths": {
+    "PBR": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/C-garment-pattern/whole-hood-donor-comparison/wholehood-pbr-board.jpg",
+    "gray": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/C-garment-pattern/whole-hood-donor-comparison/wholehood-gray-board.jpg",
+    "torso": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/C-garment-pattern/whole-hood-donor-comparison/wholehood-torso-board.jpg"
+  },
+  "sourcePreservationScope": "All20 source files byte-identical. No extraction, cuts, topology/UV/material alteration or geometry export. Rigid/uniform display transforms only; gray is scene material override.",
+  "parentPreliminaryObservations": {
+    "01": "Broad cowl and coherent backfold; original head/hair BAD and ineligible.",
+    "02": "Plausible hood albeit flatter folds.",
+    "03": "Dark rear neck band/material contamination.",
+    "05": "Actual large rear holes; rejected as donor by parent."
+  },
+  "limitations": [
+    "Parent still/profile/gray review pending; source states are not accepted character assets.",
+    "Higher-resolution316k\u2013344k NPZ/GLB retained untouched; raw render orientation failed, so this round cannot infer pre/post reduction defects.",
+    "No neck bending, motion, hood isolation topology or clearance/contact evidence; no rig/production changes.",
+    "No numeric quality claim; mockup lighting differs."
+  ],
+  "recipeSHA256": {
+    "freeze_whole_hood_donors.py": "61a809f8e2b43539456c7d5fd77154bd1e5fbe8e46edeb114ada0b9a358a3ec0",
+    "compare_whole_hood_donors.py": "75f79dc12d6fb166746cecfd1a34e612eeeaa5f370ef60c3f872c6765917ab07"
+  }
+}
