@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round140, 2026-10-01
+## Current evidence — round141, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -823,3 +823,12 @@ No oldweighteligibility orthresholdsweep. RetainCPU maskhypothesis only.
 Nextoneharmonic surfaceweights withfixedtorso/hood/cuff andexplicitarm
 anchors; measureallgeometryselected folds,torso witnesses/outside/contacts
 beforemotion. No newGLB/appearancepass. Requiredship141next.
+
+Round141: constrainedharmonic sleeve33 CPUrejected beforemotion. Torso
+landmarks/outside/normals/contacts andalloriginalnon-skin bytes exact, but
+elbow3789normaldot negative atall4keys; geometryfolds328/112/331/360 vs
+473/213/265/253, severe keysadd203/230newflags. No anchor/regularization
+sweep. Keep32semanticfinding; nextfreshC19restbind/names/gameplayadapter
+audit orlimitedelbow/shoulderretopo, preservebehavior/join rather thanbad
+historicalpositions. Ship141unchanged11bytefinish/hash/crashrestartpass,
+noerrors. Current11/gallery129preserved; requiredshipnext144.

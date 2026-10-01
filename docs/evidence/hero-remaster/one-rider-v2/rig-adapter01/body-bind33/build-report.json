@@ -1,0 +1,58 @@
+{
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/guarded-correction01/rider.glb",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind33/rider.glb",
+  "candidateSHA256": "cce6f7c95179d1c625b6985f51f2779e70de81cf62f6dcf9dc40f9fb87d029ad",
+  "candidateBytes": 14007264,
+  "allNonSkinBytesExact": true,
+  "originalJSONNodesBonesBindsTexturesMaterialsTopologyUVNormalsMorphsExact": true,
+  "protectedSharedAliasesExact": true,
+  "sourceUnchanged": true,
+  "changedExportVertices": 3095,
+  "changedPhysicalVertices": 2603,
+  "changedBytes": 52660,
+  "weightFieldSHA256": "c881223c8255d6f0bee7cf13fd681d658e88a7b2a7d7169cae2e55649afad5bc",
+  "branchFieldSHA256": "2e0dd62b8925840738099ada20f56ec25f2fb307f9f3a6b32e92d9618d7d1df5",
+  "settings": {
+    "method": "Inverse source-edge-length harmonic Dirichlet skin field over explicit source-surface branch32; no direct shaft/lateral field or sparse corrective driver",
+    "coreProtection": "absZ<=.18 and outside selected sourcebranch byte exact",
+    "hoodProtection": "All exact shared primitive aliases and one graphboundary ring exact; all hood/head/glove non-skin bytes exact",
+    "anchors": "upper Y(1.29,1.37)/signedZ>.29,elbow Y(1.12,1.17)/signedZ>.29,fore Y(1.00,1.06)/signedZ>.315 inside branch; upper1,elbow upper.5 fore.5,fore1",
+    "pruning": "Stable largest4 influence selection per solved vertex, renormalized to original source weight mass; no pruning on pinned boundary/outside",
+    "maximumDiscardedProbability": 2.220446049250313e-16,
+    "maximumLinearSolveResidual": 4.547473508864641e-13,
+    "sides": [
+      {
+        "side": "L",
+        "selectedPhysicalVertices": 1599,
+        "components": 1,
+        "boundaryPinned": 120,
+        "anchors": {
+          "upperArm": 15,
+          "elbow": 135,
+          "forearm": 148
+        },
+        "freeSolved": 1181
+      },
+      {
+        "side": "R",
+        "selectedPhysicalVertices": 1552,
+        "components": 1,
+        "boundaryPinned": 108,
+        "anchors": {
+          "upperArm": 16,
+          "elbow": 106,
+          "forearm": 161
+        },
+        "freeSolved": 1161
+      }
+    ],
+    "oneConstructionNoSweep": true
+  },
+  "limits": [
+    "CPU construction only, no actual-pose or visual quality yet.",
+    "Top4 projection may introduce small influence discontinuities, requiring measured normals/stretch/contacts.",
+    "Fixed boundary protects original join but some historical shoulder defects remain.",
+    "No new joint positions, physics, geometry, atlas, optimized LOD or player asset promotion."
+  ]
+}

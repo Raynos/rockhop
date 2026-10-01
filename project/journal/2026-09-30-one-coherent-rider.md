@@ -1470,3 +1470,14 @@ Validation: Deterministic completegraph audit passes sourceSHA, fourtorso
 exclusions andconnectedbranches. Originalmesh/skin/source unchanged.
 Limits: Selection hypothesis only; whole shoulder/garment semantics and
 moving appearance unproven. Protectedheadhoodjoin/contacts remain required.
+
+## Round141 — harmonic sleeve fails deformation gate
+
+Finding: Source-panel protection passes but elbow normals oppose surface
+at all4keys. Severe lean gains203/230newgeometryflags; reject beforemotion.
+Validation: Independent CPU verifier repeats exact; outside/normal/contact
+and all non-skin conservation pass, original torso witnesses exact. Only
+skin lanes change; residual4.55e-13/top4loss2.22e-16. Requiredship141
+unchanged11low/high finish/hash exact,crash103ticks/restartpass/errors0.
+Limits: No art score or moving trial; stop anchor/regularization sweeps.
+Audit freshC19bind/mapping or targetedretopo next. Current11/join preserved.

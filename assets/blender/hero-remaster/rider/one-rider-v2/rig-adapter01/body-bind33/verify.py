@@ -1,0 +1,36 @@
+"""Read-only bounded skin-byte/protected-surface and four actual-pose verifier."""
+from pathlib import Path
+import json,numpy as np
+from common import SOURCE,RUN,OUT,load,accessor,sha
+np.seterr(all='raise')
+BASE=OUT.parent/'body-bind25/morph01/baseline-normal01';PRIVATE=RUN.parent/'body-bind25/morph01/baseline-normal01'
+def read(folder,rec,lanes):
+ p=folder/rec['file']
+ if not p.exists():p=(PRIVATE if folder==BASE else RUN/'candidate-cpu')/rec['file']
+ raw=p.read_bytes();assert sha(raw)==rec['sha256'];return np.frombuffer(raw,dtype='<f8').reshape(-1,lanes).copy()
+def unit(a):return a/np.maximum(np.linalg.norm(a,axis=-1,keepdims=True),1e-30)
+report=json.loads((OUT/'build-report.json').read_text());raw,j,b,p,start=load();candidate=(RUN/'rider.glb').read_bytes();assert sha(raw)==report['sourceSHA256'];assert sha(candidate)==report['candidateSHA256'];assert len(candidate)==len(raw);assert candidate[:start]==raw[:start];cb=candidate[start:]
+rest=accessor(j,b,p['attributes']['POSITION'])[0];tri=accessor(j,b,p['indices'])[0].reshape(-1,3);si,siat,sistride=accessor(j,b,p['attributes']['JOINTS_0']);sw,swat,swstride=accessor(j,b,p['attributes']['WEIGHTS_0']);ci=accessor(j,cb,p['attributes']['JOINTS_0'])[0];cw=accessor(j,cb,p['attributes']['WEIGHTS_0'])[0];W=np.zeros((len(rest),19));C=W.copy()
+for lane in range(4):np.add.at(W,(np.arange(len(rest)),si[:,lane]),sw[:,lane]);np.add.at(C,(np.arange(len(rest)),ci[:,lane]),cw[:,lane])
+changed=np.flatnonzero(np.max(abs(C-W),axis=1)>1e-7);allowed=set()
+for v in changed:allowed.update(range(start+siat+v*sistride,start+siat+v*sistride+4));allowed.update(range(start+swat+v*swstride,start+swat+v*swstride+16))
+assert all(i in allowed for i,(a,c) in enumerate(zip(raw,candidate)) if a!=c)
+assert sha((RUN/'weight-field.npz').read_bytes())==report['weightFieldSHA256'];field=np.load(RUN/'weight-field.npz');inv=field['inverse'];u=field['unique'];pinned=field['shared']|field['boundary']|~field['selected'];assert np.array_equal(W[pinned[inv]],C[pinned[inv]]);assert np.array_equal(W[(np.abs(rest[:,2])<=.18)],C[(np.abs(rest[:,2])<=.18)]);assert np.array_equal(rest,field['rest']);assert np.array_equal(tri,field['triangles']);assert np.max(abs(C-C[np.unique(rest,axis=0,return_index=True)[1]][inv]))<1e-7
+A=json.loads((BASE/'pose-manifest.json').read_text());B=json.loads((OUT/'candidate-cpu/pose-manifest.json').read_text());assert A['sourceSHA256']==report['sourceSHA256'];assert B['sourceSHA256']==report['candidateSHA256'];rows=[]
+for mi,primitive in enumerate(A['primitives']):
+ a=primitive['attributes'];r=read(BASE,a['position'],3);n=read(BASE,a['normal'],3);ids=read(BASE,primitive['index'],3).astype(int);skin=read(BASE,a['skinIndex'],4).astype(int);weights=read(BASE,a['skinWeight'],4);armIds=[i for i,name in enumerate(primitive['bones']) if name.startswith(('upperArm','forearm'))];arm=np.where(np.isin(skin,armIds),weights,0).sum(1);historical=(arm[ids].mean(1)>.3)&(r[ids,1].mean(1)>.9)&(np.abs(r[ids,2]).mean(1)>.13);geometric=np.any(field['selected'][inv[ids]],axis=1) if mi==0 else np.zeros(len(ids),bool);sourceQ=r[ids];sourceCross=np.cross(sourceQ[:,1]-sourceQ[:,0],sourceQ[:,2]-sourceQ[:,0]);area=np.linalg.norm(sourceCross,axis=1)/2;sourceDot=np.einsum('ti,ti->t',unit(sourceCross),unit(n[ids].mean(1)));sourceEdge=np.linalg.norm(sourceQ-np.roll(sourceQ,-1,axis=1),axis=2)
+ for ar,br in zip(A['rows'],B['rows']):
+  assert ar['i']==br['i'];assert ar['debug']==br['debug'];assert ar['contacts']==br['contacts'];assert ar['bonePoints']==br['bonePoints'];assert ar['bodyworkBikeFrame']==br['bodyworkBikeFrame'];assert np.array_equal(read(BASE,ar['dump'][mi]['jointTransforms'],16),read(OUT/'candidate-cpu',br['dump'][mi]['jointTransforms'],16));ap=read(BASE,ar['dump'][mi]['positions'],3);bp=read(OUT/'candidate-cpu',br['dump'][mi]['positions'],3);an=read(BASE,ar['dump'][mi]['gpuRuleSkinnedNormals'],3);bn=read(OUT/'candidate-cpu',br['dump'][mi]['gpuRuleSkinnedNormals'],3)
+  if mi==0:
+   outside=np.ones(len(r),bool);outside[changed]=False;assert np.array_equal(ap[outside],bp[outside]);assert np.array_equal(an[outside],bn[outside]);assert np.max(np.linalg.norm(bp-bp[np.unique(rest,axis=0,return_index=True)[1]][inv],axis=1))<1e-7
+  else:assert np.array_equal(ap,bp);assert np.array_equal(an,bn)
+  row={'sample':ar['i'],'mesh':primitive['mesh'],'maximumPosedDisplacementM':float(np.linalg.norm(bp-ap,axis=1).max()),'sourceNonPositiveAreaTriangles':int((area<=0).sum()),'scopes':{}}
+  for scope,roi in [('historical',historical),('geometrySelected',geometric)]:
+   results=[];folds=[]
+   for key,P,N in [('baseline',ap,an),('candidate',bp,bn)]:
+    Q=P[ids];cross=np.cross(Q[:,1]-Q[:,0],Q[:,2]-Q[:,0]);dot=np.einsum('ti,ti->t',unit(cross),unit(N[ids].mean(1)));ratio=np.linalg.norm(cross,axis=1)/np.maximum(2*area,1e-30);stretch=(np.linalg.norm(Q-np.roll(Q,-1,axis=1),axis=2)/np.maximum(sourceEdge,1e-30)).max(1);fold=roi&(sourceDot>.2)&(dot<-.2);folds.append(fold);results.append({'folds':int(fold.sum()),'areaBelowQuarter':int((roi&(ratio<.25)).sum()),'maximumEdgeStretch':float(stretch[roi].max()) if roi.any() else None,'minimumNormalDot':float(dot[roi].min()) if roi.any() else None,'witnesses':{str(t):{'normalDot':float(dot[t]),'areaRatio':float(ratio[t]),'maximumEdgeStretch':float(stretch[t])} for t in [3789,26534,26090]} if mi==0 else None})
+   row['scopes'][scope]={'triangles':int(roi.sum()),'baseline':results[0],'candidate':results[1],'newFoldsNotPresentAtBaseline':int((folds[1]&~folds[0]).sum()),'newFoldTriangleIds':np.flatnonzero(folds[1]&~folds[0]).tolist()}
+  rows.append(row)
+# Source graph continuity is a measured weight gradient, not an appearance guarantee.
+edges=np.unique(np.sort(np.concatenate([inv[tri][:,[0,1]],inv[tri][:,[1,2]],inv[tri][:,[2,0]]]),1),axis=0);sourceU=W[np.unique(rest,axis=0,return_index=True)[1]];candidateU=C[np.unique(rest,axis=0,return_index=True)[1]];roiEdge=np.any(field['selected'][edges],axis=1);before=np.sum(abs(sourceU[edges[:,0]]-sourceU[edges[:,1]]),axis=1);after=np.sum(abs(candidateU[edges[:,0]]-candidateU[edges[:,1]]),axis=1)
+summary={'sourceSHA256':report['sourceSHA256'],'candidateSHA256':report['candidateSHA256'],'allNonSkinBytesExact':True,'protectedHoodHeadGlovesSourceBytesExact':True,'hoodJoinAliasesGraphBoundaryAndCoreWeightsExact':True,'outsideChangedSleevePosedPositionsNormalsExact':True,'actualBonesDebugContactAndSeatBuffersExact':True,'maximumCPUvsRetainedPlayedContactErrorM':max(c['maximumCPUvsActualPlayedSurfaceM'] for r in B['rows'] for c in r['contacts']),'maximumEncodedSourceWeightSumChange':float(np.abs(C.sum(1)-W.sum(1)).max()),'geometryROIUsesNoOldWeightEligibility':True,'maximumTouchedEdgeL1WeightGradientBeforeAfter':[float(before[roiEdge].max()),float(after[roiEdge].max())],'touchedEdgeL1WeightGradientP50P90P99BeforeAfter':[np.quantile(before[roiEdge],[.5,.9,.99]).tolist(),np.quantile(after[roiEdge],[.5,.9,.99]).tolist()],'rows':rows,'limits':['Four actual recorded-state CPU samples only; no moving visual score or garment collision certificate.','Shoulder extrema containing donor-hood aliases remain pinned; their defects are not fixed by this candidate.','Fold flags are transported-normal opposition; area and edge stretch measured independently.','Corrected source11 baseline from25 includes original grip normal morphs.']};print(json.dumps(summary,indent=2))

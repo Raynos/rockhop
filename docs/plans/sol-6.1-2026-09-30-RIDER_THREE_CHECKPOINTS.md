@@ -1144,3 +1144,12 @@ No oldweighteligibility orthresholdsweep. RetainCPU maskhypothesis only.
 Nextoneharmonic surfaceweights withfixedtorso/hood/cuff andexplicitarm
 anchors; measureallgeometryselected folds,torso witnesses/outside/contacts
 beforemotion. No newGLB/appearancepass. Requiredship141next.
+
+Round141: constrainedharmonic sleeve33 CPUrejected beforemotion. Torso
+landmarks/outside/normals/contacts andalloriginalnon-skin bytes exact, but
+elbow3789normaldot negative atall4keys; geometryfolds328/112/331/360 vs
+473/213/265/253, severe keysadd203/230newflags. No anchor/regularization
+sweep. Keep32semanticfinding; nextfreshC19restbind/names/gameplayadapter
+audit orlimitedelbow/shoulderretopo, preservebehavior/join rather thanbad
+historicalpositions. Ship141unchanged11bytefinish/hash/crashrestartpass,
+noerrors. Current11/gallery129preserved; requiredshipnext144.
