@@ -17,9 +17,9 @@ const out=path.resolve(arg('out','docs/evidence/hero-remaster/one-rider-v2/rig-a
 const captured=JSON.parse(fs.readFileSync('docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played03/hands/report.json','utf8')) as {samples:{i:number;tick:number;state:PhysicsState}[]};
 (globalThis as unknown as {document:unknown}).document={createElement:()=>({width:128,height:64,getContext:()=>({createRadialGradient:()=>({addColorStop(){}}),scale(){},fillRect(){}})})};
 const source=arg('source','/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind05/rider.glb'),results=[];
-for(const variant of ['conditioned','source-weights']){
+for(const variant of (arg('seam','0')==='1'?['conditioned','source-weights','conditioned-with-shared-rim']:['conditioned','source-weights'])){
  const bundle=path.resolve('harness/out/hero-remaster/cloth-audit-'+variant);
- await build({configFile:false,publicDir:false,logLevel:'error',build:{ssr:'src/render/hero/gltfRider.ts',outDir:bundle,emptyOutDir:true,minify:false,rollupOptions:{external:['three',/^three\//],output:{entryFileNames:'rider.mjs'}}},plugins:[{name:'cloth-audit',enforce:'pre',transform(code,id){if(!id.toLowerCase().endsWith('/src/render/hero/gltfrider.ts'))return null;let s=patchNewRiderSource(code);if(variant==='source-weights'){const a='this.releaseSleeveGeometry.push(conditionSleeveSkin(mesh));';assert.equal(s.split(a).length,2);s=s.replace(a,'this.releaseSleeveGeometry.push(() => {});');}return{code:s,map:null};}}]});
+ await build({configFile:false,publicDir:false,logLevel:'error',build:{ssr:'src/render/hero/gltfRider.ts',outDir:bundle,emptyOutDir:true,minify:false,rollupOptions:{external:['three',/^three\//],output:{entryFileNames:'rider.mjs'}}},plugins:[{name:'cloth-audit',enforce:'pre',transform(code,id){if(!id.toLowerCase().endsWith('/src/render/hero/gltfrider.ts'))return null;let s=patchNewRiderSource(code,true,variant==='conditioned-with-shared-rim');if(variant==='source-weights'){const a='this.releaseSleeveGeometry.push(conditionSleeveSkin(mesh));';assert.equal(s.split(a).length,2);s=s.replace(a,'this.releaseSleeveGeometry.push(() => {});');}return{code:s,map:null};}}]});
  const {GltfRider}=await import(pathToFileURL(bundle+'/rider.mjs').href),lib={complete(){}} as unknown as MaterialLibrary;
  const bg=await loadRigAt(pathToFileURL(path.resolve('public/models/bike-rookie.glb')),true);await prepareHero(bg);const bike=new GltfBike(bg,lib),g=await loadRigAt(pathToFileURL(source),true);await prepareHero(g);const rider=new GltfRider(g,lib);rider.attach(bike);bike.root.updateMatrixWorld(true);
  const meshes:THREE.SkinnedMesh[]=[];rider.scene.traverse((o:THREE.Object3D)=>{const m=o as THREE.SkinnedMesh;if(m.isSkinnedMesh&&m.name.startsWith('Protected'))meshes.push(m);});assert.equal(meshes.length,3);
@@ -35,6 +35,7 @@ for(const variant of ['conditioned','source-weights']){
  }
  const sharedJoin=[...joinGroups.values()].filter(group=>new Set(group.map(v=>v.mesh)).size>1);
  assert(sharedJoin.length>250,'Expected actual shared body/hood rim vertices');
+ for(const group of sharedJoin) for(const e of group) for(const p of meshes[e.mesh]!.geometry.morphAttributes.position??[]) assert.equal(Math.hypot(p.getX(e.vertex),p.getY(e.vertex),p.getZ(e.vertex)),0,'Frozen shared rim morph must be zero');
  const rows=[];
  for(const sample of captured.samples.filter(s=>[49,120,420,468].includes(s.i))){
   const before=JSON.stringify(sample.state),f=new FrameBuilder().build(sample.state,1);bike.update(f);rider.update(f);bike.root.updateMatrixWorld(true);assert.equal(JSON.stringify(sample.state),before);

@@ -711,3 +711,15 @@ weights withbind/joint/transform checks. No proximitybridging or sourceface
 regeneration. Geometry/PBR/morphs untouched, physics/socketcontacts pass.
 One setup+one partial appearancefailure retained, earlymechanismswitch.
 Normalplayer unchanged; body/face belowbar, checkpoints2/3 stillopen.
+
+### Shared-rim feasibility retained; five build failures force asset-bake route
+
+Round95: sameWHITE08 restores05shoulders/keeps06waist. Exact307sharedrim
+hood-authorityweights yield0gap atfouractualstates;101syntheticleans retain
+contacts/physicalinputs andold no-metadata snapshots byteexact. Onlysource
+body skinbytes change, allgeometry/PBR/morphs/binds/clips protected.
+Five runtimehelper builds failunchanged701KiB budget (397→32bytes over);
+none reachnewplayedcapture. Stopinjectionmethod underfive-failurepolicy.
+Nextbake verifiedconditioned+reconciled weights intoasset, explicitNEW
+metadata preventsrepeatconditioning. No budgetwaiver, no humanhold, no
+movingappearance/checkpoint2/3pass. Preserveallfailedreceipts andcomparison.

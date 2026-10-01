@@ -88,7 +88,7 @@ try {
       t.render(true);
       const positions: Record<string, number[]> = {};
       d.rider.scene.traverse((o: any) => { if (o.isBone && /^(forearm|hand)[.]?[LR]$/.test(o.name)) positions[o.name] = o.getWorldPosition(new d.THREE.Vector3()).toArray(); });
-      return { i, inputLast: input.at(-1), state: structuredClone(t.getState()), phase: t.phase(), tick: t.getState().tick, physicsTime: t.getState().time, stageTime: r.stageTime, hash: t.hashState(), positions, heroDoc: r.debugInfo().heroDoc, debug: structuredClone(d.rider.debug) };
+      return { i, inputLast: input.at(-1), state: structuredClone(t.getState()), phase: t.phase(), tick: t.getState().tick, physicsTime: t.getState().time, stageTime: r.stageTime, hash: t.hashState(), positions, privateClothRim: structuredClone(d.rider.scene.userData.rockhopPrivateClothRim ?? null), heroDoc: r.debugInfo().heroDoc, debug: structuredClone(d.rider.debug) };
     }, { input: mode === 'ride' ? inputs.slice(i * ticksPerFrame, (i + 1) * ticksPerFrame) : [], yaw: 0.4 + 1.35 * Math.sin(i * Math.PI * 2 / Math.max(1, frames - 1)), i, focus });
     report.samples.push(sample);
     await page.screenshot({ path: path.join(out, 'frames', `${String(i).padStart(4, '0')}.png`) });

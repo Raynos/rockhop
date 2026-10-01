@@ -381,3 +381,12 @@ Next05shoulders+06waist andexplicitprivate postcondition seamreconciliation
 withbind/transform/jointordercompatibilitychecks. No globalplayerrender edit.
 Face/bodyrest/PBR/morph/bind unchanged; all480contacts/physics pass. One
 normalization setup+onepartialappearancefailure recorded; autonomousswitch.
+
+## Round95 continuation
+
+08WHITErest same05geometry/face/PBR/morph/bind,05shoulders+06waist. Hood-
+authority shared307rimweight CPUfix0gap at4actualstates;101syntheticcontacts
+pass, historicalno-metadata byteexact. Five helperinjectionbuilds fail701KiB
+397/220/89/67/32bytes over; STOPcompression/injectionmethod. Next09bakeactual
+conditioned+reconciled weights intoGLB, explicitNEWskipreconditioning. No
+new08playedpass. Round96shipgate due; no budgetwaiver/playerpromotion.

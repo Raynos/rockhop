@@ -994,3 +994,14 @@ originalPNG/movie hashes, wholedecodedboards retainedunder canonical lock.
 Limits: Source-onlysmoothing rejected, one setup+onepartialfailure retained.
 SameWHITEface/bodyrest/PBR, no player/bike/physics edit. Next explicitshared
 rimweight reconciliation; appearance/surface/Garage/Pro/LOD gates open.
+
+## Round95 — retain CPUrim fix and stop runtime injection afterfive failures
+
+Finding: Exact307sharedrim hood-authority skin weights remove68.379mmgap on
+CPU; five privatebuilds exceedunchanged701KiB, so switch toasset-bakedweights.
+Validation: Fouractualstates0gap,101syntheticleans allcontacts/unchangedinputs,
+historicalno-metadata snapshots byteexact; protectedGLBbyteparity andlint/
+harness tsc pass. Allfivefailedbuildreceipts retained, canonicalGPUlock.
+Limits: No newplayedappearancepass; runtimeinjectionstopped, no budgetwaiver,
+player/bike/physics edit. Nextbakeweights +explicitNEWskipreconditioning.
+Face8/surface/Garage/Pro/LOD/checkpoints2/3 open. Asks239/240.

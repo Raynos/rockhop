@@ -1,6 +1,7 @@
 /** Private build overlay only; production GltfRider/physics remain untouched. */
 import assert from 'node:assert/strict';
-export function patchNewRiderSource(source:string, orthogonalElbowPole = true){
+import fs from 'node:fs';
+export function patchNewRiderSource(source:string, orthogonalElbowPole = true, reconcileClothRim = false){
  const replace=(a:string,b:string)=>{assert.equal(source.split(a).length-1,1,'Private adapter source anchor changed: '+a);source=source.replace(a,b);};
  replace('  private readonly q0 = new Map<string, THREE.Quaternion>();',`  private readonly q0 = new Map<string, THREE.Quaternion>();
   private readonly newRiderHandTargetQ = new Map<string, THREE.Quaternion>();
@@ -49,5 +50,10 @@ export function patchNewRiderSource(source:string, orthogonalElbowPole = true){
             if (pole.lengthSq() < 1e-12) { pole.set(1, 0, 0); pole.addScaledVector(dir, -dir.x); }
           }
         }`);
+ if (reconcileClothRim) {
+  replace('    holder.remove(this.scene);', '    if (newAdapter !== null) reconcilePrivateNewRiderClothRim(this.scene);\n    holder.remove(this.scene);');
+  const helper = fs.readFileSync(new URL('./new-rider-shared-rim.mts', import.meta.url), 'utf8').replace("import type * as THREE from 'three';\n", '').replace('export function', 'function');
+  source += '\n' + helper;
+ }
  return source;
 }
