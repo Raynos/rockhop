@@ -34,7 +34,7 @@ try {
       imageCount: document.images.length,
       images: [...document.images].map(i => ({src:i.getAttribute('src'), complete:i.complete, width:i.naturalWidth}))
     }));
-    if (errors.length || layout.pageWidth > width || movies.length !== 5 ||
+    if (errors.length || layout.pageWidth > width || movies.length !== 9 ||
         movies.some(v => v.error || !(v.currentTime > 0) || !v.width) ||
         layout.images.some(i => !i.complete || !i.width)) {
       throw new Error(JSON.stringify({ width, errors, movies, layout }));

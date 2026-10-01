@@ -1213,3 +1213,15 @@ CC0 source header retained. Ship114 both tiers byte-identical40.083333333333336s
 crash103/restart2/3ms; errors0. Actual source wire projections inspected.
 Limits: Unjoined/untextured source donor, not accepted art. Eye failures remain6;
 graft, clearance, texture continuity and moving appearance still need proof.
+
+## Round115 — current hip failure visible in matched actual gameplay
+
+Finding: Close actual side/rear movie sequences show collapsing buttocks and
+an opening groin/hoodie rim with and without textures. Keep this diagnostic
+baseline available on the phone gallery before local corrective work.
+Validation: 264 state/hash/debug samples exact versus prior contact playback,
+matched surface-pair bones/camera exact. Parent reviewed384 ordered decoded
+frames. Local silent WebKit390/1200:9 movies advance,4 images decode,no errors
+or horizontal overflow. All original/decoded frames privately retained.
+Limits: Current rider unchanged and art unaccepted. Initial wrong-yaw clips
+preserved as setup evidence; no physical iPhone playback verification.

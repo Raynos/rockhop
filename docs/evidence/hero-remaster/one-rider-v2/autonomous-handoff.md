@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round114, 2026-10-01
+## Current evidence — round115, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -563,3 +563,14 @@ rings stay retired; total eye repair failures6 unchanged by source extraction.
 Ship114 both tiers byte-identical40.083333333333336s,crash103/restart2/3ms,
 errors0. Current hip camera now reveals actual lower-body/hem folds; review
 and targeted correctives next. Body15 rejected, no normal player promotion.
+
+Round115: actual current11 hip motion frozen and published in the existing
+phone gallery. Corrected orbit02 side/rear cameras show maximum lean and
+landing/recovery in matched textured/gray clips. Each264 states/hash/debug
+exact versus prior contact playback; pair bones/camera exact. Parent reviewed
+384 ordered movie frames across both surfaces/angles; buttocks collapse and
+groin/hoodie rim opens. Geometry/skin failure remains, not an appearance pass.
+Initial wrong-yaw footage retained as setup evidence. Current11 unchanged;
+local hip-flexion corrective authoring next, native eyelid graft17 CPU ongoing.
+Gallery local WebKit390/1200:9 videos play,4 images decode,no overflow/errors;
+physical iPhone still unverified. Existing private URL retained. Ship next117.
