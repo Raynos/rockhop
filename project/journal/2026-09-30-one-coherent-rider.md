@@ -366,3 +366,13 @@ source corners preserved; intended material assignments failed.
 
 Limits: No clean neck join, texture continuity or bend/rotation acceptance.
 Prior graph-cut and ellipse failures remain stopped.
+
+Finding: Same native head/UV rendered under three installed skin atlases
+shows African palette as strongest dark-stubble basis. Head experiments
+stop at original90-minute deadline; no eyebrow construction occurred.
+
+Validation: Parent inspected all six matched front/profile renders. Last
+render completed00:31:11UTC, before00:31:54deadline. Geometry/UV fixed.
+
+Limits: Weak brows/exact identity and full appearance remain unaccepted.
+Native CC0 diffuse provenance replaces failed Pixal transfer explicitly.
