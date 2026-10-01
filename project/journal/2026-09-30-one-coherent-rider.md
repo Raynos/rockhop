@@ -1150,3 +1150,13 @@ Ship gate both tiers byte-identical40.083333333333336s; crash103/restart1/2ms;
 errors0. CPU recipe syntax passes; locked46.48s/35.604GB anonymous.
 Limits: Face diagnostic5.5 vs6.8, unmatched gameplay lighting; no fullbody
 regrade or checkpoint pass. Larger-method failures2; totaleye5 preserved.
+
+## Round109 — ordinary sleeve faces fold under mixed torso weights
+
+Finding: Local sleeve deformation is a geometry defect; protect the approved
+hood/join and correct elbow skin support rather than repainting dark patches.
+Validation: Parent inspected actual moving patches and CPU source/posed normals,
+weights and texture diagnosis. Reconstructed contacts match within16.3nm;
+465/208/255/258 opposing faces across four recorded poses. Recipe lint passes.
+Limits: No repair yet; no full collision certificate or art pass. Source11 exact.
+Current hip/butt/thigh and multi-angle sitting review remain open.

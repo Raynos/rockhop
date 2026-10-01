@@ -15,6 +15,8 @@ Checkpoint 1 has WHITE static minimum; target8 and later gates open. Round107 re
 
 Checkpoint 1 has WHITE static minimum; target8 and later gates open. Round108 rejects orbital13 face5.5 vs current11 6.8 after144 played PBR/gray frames. Source conservation and ship gate pass; anatomy appearance fails. Keep11; recess donor and shape thin lids next. Larger method2 failures,totaleye5; contact thumb gaps remain open.
 
+Checkpoint 1 WHITE minimum; target8/later gates open. Round109 diagnoses posed sleeve folding under torso/elbow weights; no art edit. Preserve head/body/hood join approved ask241. Current hips/thighs audit and multi-angle sitting clips underway asks242/243. Body11 face6.8 remains current; orbital13 rejected. Ship gate108 passes.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

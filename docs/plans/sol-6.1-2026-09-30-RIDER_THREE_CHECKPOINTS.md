@@ -823,3 +823,14 @@ Ship gate both tiers byte-identical40.083333333333336s, crash103/restart1/2ms;
 locked46.48s/35.604GB anonymous. Larger-method failures2, totaleye5. Keep11;
 next recess donor and fit thin natural lids to surrounding face, avoid repeating
 outward-only clearance inflation. No appearance/checkpoint/game-ready claim.
+
+Round109: dark sleeve patches include a measured geometry defect. Actual CPU
+adapter reconstruction matches played contact points within16.3nm. Four poses
+show465/208/255/258 sleeve faces opposing skinned normals,90/21/19/11 faces below
+quarter area; ordinary mustard albedo, significant spine weights at elbow.
+Source topology has no new reversed/degenerate/nonmanifold faces; identical
+position aliases remain coincident. Hood overlap shows no flips/collapses.
+Next targeted sleeve weights/corrective deformation, protecting hood/join and
+wrists. Human ask241 approves current head/body/hood join; preserve it. Ask242
+opens current hip/butt/thigh seated audit; ask243 requests multi-angle sitting
+videos. Current11 unchanged; no repair/gameplay gate pass.
