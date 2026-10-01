@@ -485,3 +485,12 @@ Validation: ActualCPUlauncher exits1, error log/source hashes retained and
 two recipes ASTparse. Fresh silent production low/high clear/crash/restart
 passes byte-identically; inspect report for measured restart latency.
 Limits: No brows, new face, neck motion or contact pass generated.
+
+## Round40 — intrinsic panel exposes real posterior garment holes
+
+Finding: B intrinsic mapping still produces3loops;194neckopening and43/23
+posteriorclothperforations belong to the same bodycomponent. Freeze failed
+single-contour assumption before explicit lining/two-cap construction.
+Validation: Actualgrayrear witness and exact loop indices reviewed; source
+44,595trianglepositions/UV/materials preserved,16GLBreimportviews frozen.
+Limits: No volume execution or neck-motion pass; body/face remain unaccepted.

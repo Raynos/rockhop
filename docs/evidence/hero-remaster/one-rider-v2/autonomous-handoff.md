@@ -108,3 +108,8 @@ default_setTrue correction next. No brows generated or appearance gain claimed.
 A now audits NEW bust donors/generatorcommands; B/C next modular garment trials
 are independently bounded30minutes. Round39 silent production baseline passes
 byte-identicalclear and crash/restart; no new-rider claim.
+
+B intrinsictrial02 freezes another honest gate failure:194neckloop plus43/23
+actual posteriorclothperforations on same bodycomponent. No volume ran.
+Neckfamily11/15; next explicit three-loop lining+two clothcaps addresses actual
+openings rather than requiring an unjustified singleboundary. Skin unchanged.

@@ -1,0 +1,27 @@
+{
+  "status": "FAILED geometry gate, one lane B attempt",
+  "method": "40 mm intrinsic surface-distance local garment clipping + 1.5 mm implicit annulus marching cubes",
+  "priorNeckFailures": 6,
+  "thisMethodAttempt": 2,
+  "priorLaneBFailures": 1,
+  "threads": 2,
+  "intrinsicGraphEdges": 68940,
+  "sourceDistanceNonfiniteVertices": 6748,
+  "clipTopology": {
+    "boundaryEdges": 260,
+    "nonmanifoldEdges": 0
+  },
+  "clipBoundaryLoopLengths": [
+    194,
+    43,
+    23
+  ],
+  "preservedFullTriangles": 44595,
+  "removedOriginalHeadTriangles": 13657,
+  "clippedTriangles": 397,
+  "error": "Local clip requires exactly one outer cloth contour, got 3",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/B-local-volume/reconstruct_volume_trial02.py\", line 57, in <module>\n    if len(ls)!=1:raise ValueError('Local clip requires exactly one outer cloth contour, got '+str(len(ls)))\nValueError: Local clip requires exactly one outer cloth contour, got 3\n",
+  "elapsedSeconds": 0.1951762498356402,
+  "peakRSSBytes": 108331008,
+  "recipeSHA256": "ec434add1c0815ba0b996784f84ac7b70282a922b368b5dcf24cf4909db4a7ad"
+}
