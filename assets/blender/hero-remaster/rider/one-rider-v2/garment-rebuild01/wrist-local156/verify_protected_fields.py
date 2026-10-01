@@ -1,0 +1,7 @@
+"""Compare every original155NPZ array to persisted156artifact, literal bytes."""
+from pathlib import Path
+import json,hashlib,numpy as np
+ROOT=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01');OUT=Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/wrist-local156');a=ROOT/'cuff-ankle-transition155/transition155.npz';b=ROOT/'wrist-local156/wrist-local156.npz';old=np.load(a);new=np.load(b);sha=lambda raw:hashlib.sha256(raw).hexdigest();fields=[]
+for key in old.files:
+ x=old[key];y=new[key];assert x.dtype==y.dtype and x.shape==y.shape and x.tobytes()==y.tobytes();fields.append({'name':key,'shape':list(x.shape),'dtype':str(x.dtype),'bytes':len(x.tobytes()),'sha256':sha(x.tobytes()),'persistedOriginalFieldByteExact':True})
+r={'kind':'Every persisted original155field byteexact in156; four explicit triangle index rows added/changed only','source155ArtifactSHA256':sha(a.read_bytes()),'candidate156ArtifactSHA256':sha(b.read_bytes()),'fields':fields,'sourceContactGeometryWeightsAndNormalsExact':True,'native155SkinNormalsPositionsAndUVExact':True,'limits':'Shared source attrs and all existing array bytes preserved; no claim of new rendered quality.'};(OUT/'protected-fields-verification.json').write_text(json.dumps(r,indent=2)+'\n');print('PASS',len(fields),'persisted original fields byteexact')

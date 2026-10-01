@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round155, 2026-10-01
+## Current evidence — round156, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -52,17 +52,17 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   checks; unbuilt and unaccepted. Explicit cuff skin mapping and fitted joins
   next, protecting NEW head/neck/hood, glove/sole probes and C19. Rig/shape/motion
   before detail/PBR bake. Independent hoodie-repair02 remains separately owned.
-- Full480 C19 histories now match actual played bones/quaternions at~1e-14;
-  all5 primitive matrices byte-identical. Shoulder155 annulus is REJECTED:
-  185rest crossings/24.25cm displacement, although protected307seam stays exact.
-  Next upper yoke with separate chest/arm interfaces, no annulus parameter sweep.
-- Cuff155 fixes seam collapse/normal flips across480, ankles stable, source pads
-  exact. BUT each native sleeve collapses one triangle at39 (quads1248/1820,
-  .187/.169area). Parent reproduces failures. Fix literal wrist deformation,
-  retain regional progress; no complete moving/appearance pass or source change.
-- Required retained34ship153 passes bytefinish/hash both tiers,103crash
-  ticks,2/4ms restart/errors0. Next156. New garment is not tested in-game yet.
-  Gray rest fixture supplies no fullbody/face score or visual stage pass.
+- Full480 C19 histories reproduce actual bones/quaternions at~1e-14. Shoulder155
+  annulus and156whole-yoke deformation are rejected; build routed anatomical panels
+  around actual307hood and chest/arm boundaries. Protected source join unchanged.
+- Wrist156 changes only two quad diagonals. Right clears, left.2495877 remains below
+  unchanged.25guard;37original fields exact. Whole garment still folds severely.
+- Independent v5/v6 keep C19 rest/inverse binds and source head/UV/contact/image bytes.
+  V6 improves authored sleeve/chest motion but hips/support fail;49clip compression
+  targets do not drive arbitrary game physics. Actual34neck/head already align.
+  New external v7 reports upper-cloth progress; hips/saddle fail, audit separately.
+- Required retained34ship156 passes bytefinish/hash,103crash ticks,4/3ms restart,
+  errors0, canonical shared lock. Next159; no new garment in-game test or art pass.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
   P3 automated repairs and fixed finger-curl approaches remain stopped at2.
@@ -1140,3 +1140,37 @@ setup fixes remain in evidence/failure history; no counter reset. Parent owns
 acceptance. Next anatomy-based upper yoke and literal wrist repair, then complete
 matched neutral/neck/actual-motion render before high-detail bake. Requiredship156
 next; retained34ship153passed. All three visual checkpoints remain open.
+
+## Preserve the new rig; garment repairs remain unaccepted — round156
+
+C19 and explicit physical adapter34 stay retained. Latest gallery riding uses34;
+older studio sitting uses11. Independent authored v5/v6 preserve C19 rest bones
+and inverse binds, but need our names/sockets/child-axis adapter. V6 adds49 morphs
+for one authored two-second clip, not arbitrary physics. Current actual34 already
+matches neck/head world quaternions exactly in480frames. No runtime neck bug is
+inferred from the other clip's correction. All embedded image bytes, source head,
+UVs and base contact ROIs are exact in v5/v6; hood/body geometry/weights change.
+
+Parent inspects all49unique v6 motion frames from front/side/rear;85total includes
+holds. Sleeves/chest improve, seated hips/crotch/support remain wrong. Finite105
+snapshot gates fail hips105, shoulder72, cuff70. No target score or actual physical
+pass. A newer external v7 reports111upper-cloth/cuff/collar crossing snapshots
+clear, hips/saddle still fail; audit separately without silently replacing34.
+
+One four-boundary native yoke attempt fails at rest:568strict crossings/137normal
+reversals,21cm displacement. Protected307hood endpoints/source and lower native
+fields exact. Reject before motion. H21 source cuts have one fused lower boundary;
+do not inherit it. Stop deforming the small crewneck onto the broad hood boundary.
+Construct new torso/left/right shoulder panels around the actual fixed interfaces.
+
+One two-quad diagonal repair changes four triangle rows only; all37original155
+NPZ fields byte-exact. Parent independently reproduces frame39 area ratios:
+left.2495877 still fails unchanged.25guard, right.2509766 clears. Regional progress
+retained; whole garment remains8.70x stretch with folds/collapses. No weight/size
+or threshold sweep; use explicit repaired triangle indices in any future export.
+
+Retained34ship156 passes both tiers bytefinish/hash/crash103/restart4/3ms/errors0,
+under canonical shared lock. Next159. No complete native garment GLB, new texture
+bake, player promotion, gallery publish, face/fullbody score or later visual gate.
+Next audit frozen external receipts and test reusable shape/weights under actual
+physical driver, alongside new routed native panels. Preserve all failure lineages.

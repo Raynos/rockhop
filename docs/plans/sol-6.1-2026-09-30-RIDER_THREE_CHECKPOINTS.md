@@ -1436,3 +1436,37 @@ setup fixes remain in evidence/failure history; no counter reset. Parent owns
 acceptance. Next anatomy-based upper yoke and literal wrist repair, then complete
 matched neutral/neck/actual-motion render before high-detail bake. Requiredship156
 next; retained34ship153passed. All three visual checkpoints remain open.
+
+## Preserve the new rig; garment repairs remain unaccepted — round156
+
+C19 and explicit physical adapter34 stay retained. Latest gallery riding uses34;
+older studio sitting uses11. Independent authored v5/v6 preserve C19 rest bones
+and inverse binds, but need our names/sockets/child-axis adapter. V6 adds49 morphs
+for one authored two-second clip, not arbitrary physics. Current actual34 already
+matches neck/head world quaternions exactly in480frames. No runtime neck bug is
+inferred from the other clip's correction. All embedded image bytes, source head,
+UVs and base contact ROIs are exact in v5/v6; hood/body geometry/weights change.
+
+Parent inspects all49unique v6 motion frames from front/side/rear;85total includes
+holds. Sleeves/chest improve, seated hips/crotch/support remain wrong. Finite105
+snapshot gates fail hips105, shoulder72, cuff70. No target score or actual physical
+pass. A newer external v7 reports111upper-cloth/cuff/collar crossing snapshots
+clear, hips/saddle still fail; audit separately without silently replacing34.
+
+One four-boundary native yoke attempt fails at rest:568strict crossings/137normal
+reversals,21cm displacement. Protected307hood endpoints/source and lower native
+fields exact. Reject before motion. H21 source cuts have one fused lower boundary;
+do not inherit it. Stop deforming the small crewneck onto the broad hood boundary.
+Construct new torso/left/right shoulder panels around the actual fixed interfaces.
+
+One two-quad diagonal repair changes four triangle rows only; all37original155
+NPZ fields byte-exact. Parent independently reproduces frame39 area ratios:
+left.2495877 still fails unchanged.25guard, right.2509766 clears. Regional progress
+retained; whole garment remains8.70x stretch with folds/collapses. No weight/size
+or threshold sweep; use explicit repaired triangle indices in any future export.
+
+Retained34ship156 passes both tiers bytefinish/hash/crash103/restart4/3ms/errors0,
+under canonical shared lock. Next159. No complete native garment GLB, new texture
+bake, player promotion, gallery publish, face/fullbody score or later visual gate.
+Next audit frozen external receipts and test reusable shape/weights under actual
+physical driver, alongside new routed native panels. Preserve all failure lineages.

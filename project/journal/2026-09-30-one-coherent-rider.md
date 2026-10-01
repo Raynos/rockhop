@@ -1684,3 +1684,17 @@ Limits: No new rendered appearance/character pass or complete rigged export.
 Source pads/head/hood and physical driver unchanged; ship153passed/next156.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-transition-review155.json
 Ask:239,241,242,245,247
+
+## Round156 — preserve the new rig and separate authored cloth progress
+
+Finding: C19 remains the physical rig. Independent v6 authored cloth improves
+sleeves/chest but fails hips/support. Native upper-yoke deformation fails at rest;
+local wrist topology repair improves both sides but left remains under the guard.
+Validation: Parent independently verifies37NPZfields/four changed triangle rows,
+frame39 .249588/.250977 against unchanged.25, exact embedded v5/v6 source images,
+C19 binds and contact base attrs.49unique ordered film samples/85frame inventory.
+Yoke568crossings/137reversals; retained34ship156 bytefinish/crash/restart4/3ms pass.
+Limits: Ordered frames are not continuous playback or target grades. No new
+export, physical integration or art pass; external v7 separate, hips still fail.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-review156.json
+Ask:239,241,242,245,247
