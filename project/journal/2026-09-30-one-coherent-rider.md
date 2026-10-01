@@ -948,3 +948,16 @@ Three40s contact/body clips captured, both actual lean extrema reached.
 Limits: Socket measurements, full candidate under both tier labels, actual
 LOD/Garage/surface and full40s appearance verdict remainopen. GPUlock,
 peak46.956GB; no physics/bike/player changes. Asks239/240.
+
+## Round91 — preserve contact through degenerate elbow geometry
+
+Finding: Reproject the private NEW-rig fallback pole perpendicular to its
+reach axis; same source character resolves five recorded hovering frames.
+Validation: CPU reproduces baseline and480Node hashes; real40s/480samples
+all socketcontacts, grip.190µm/sole1.840µm, lean±1. Exact renderedclear both
+ tiers, crash103/restart1msboth/errors0; lint/harness tsc pass. Parent40second
+samples andfivebefore/after cases inspected; canonical GPUlock36.221GB.
+Limits: PRIVATE correction, not player promotion; sourceGLB unchanged.
+Visible hem/shoulder defects and coarseface remain below7; provisional6.5/
+6.5 with camera/lightunmatched. Gray/PBR posed audit/targeted refinement,
+Garage/Pro/surfaces/realLOD remain open. Asks239/240.

@@ -339,3 +339,16 @@ Round85: actualNEWrig UniMate50stepseed42 succeeded technically but raw
 motion1/10 rejected after116playeddecodedframes. Footfeaturepinning leaves
 599.754/284.053mmdrift via ancestors. Preserve sameWHITEcharacter and original
 Blenderplantedclip; switch to authoredanticipation/realgrip fitting.
+
+## Round91 current continuation
+
+WHITE body05 unchanged, explicit private contact mapping. Actual40s played
+socket gate passes after NEW-only orthogonal elbow fallback; sourcephysics/
+bikes/player assets untouched. Keep both native morphs and mapping. Main
+commits89–91 retain recipes/evidence; no push/deploy/schedule/questions.
+Next: grayscale/PBR posed garment audit at frames49/120/420/468 (shoulder/
+hem triangular flaring) and targeted weights before new body generation.
+Face actualengine detail also below bar (provisional6.5, unmatchedlighting).
+Author sameNEW Garage idle/sit/stance clips only after garmentquality; then
+realLOD/Pro/maxlean/landing/visible surfaces. Originalbenchclip and actual
+UniMate rejection retained. Five/fifteen policy unchanged; notgame-ready.

@@ -660,3 +660,17 @@ retain WHITE anatomy/source. Reproduce suspected nonorthogonal degenerate
 elbowpole fallback, then scoped privatefix without physics changes. This is
 one actualadapter failure; CPU numerical pass never supersedes playedproof.
 No checkpoint2/3 closure; complete40s moving visual review stillpending.
+
+### Private pole correction passes actual recorded contacts, art still below bar
+
+Actual recordedstate CPU reproduces5badframes exactly and480physics hashes.
+Nonorthogonal fallback pole (directiondot.788–.870) caused wrists to miss;
+project again only for explicitNEW mapping. Newactual40s/480frames nowall
+hand/foot socketcontacts, grip<=.190µm/sole<=1.840µm, leanboth±1 andlandings.
+Recordedclear/hash/finishbytes unchanged, crash103/restart1msboth/errors0.
+SameWHITE body05 source; no player/physics/bike edits. Parent1second samples
+throughall40s plusfivebefore/after times retainfix, notartacceptance.
+Provisionalenginebody6.5/face6.5 (camera/lightunmatched): shoulder/hem triangular
+flaring andcoarseface need autonomous gray/PBR posed audit and targetedweight/
+face refinement before7minimum. No human hold. Thumbgap/actualsurface/Pro/
+Garage/fullLOD stillopen; staticcheckpoint1minimum neverimplies playerready.

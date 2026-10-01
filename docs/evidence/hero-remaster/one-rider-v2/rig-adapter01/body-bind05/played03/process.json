@@ -1,0 +1,53 @@
+{
+  "privateOverlaySHA256": "549e65f61b501a504d6fe75c25d29660c92dae8993825986651cd78dc957405a",
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/build.mts",
+        "--out=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body05-pole01-build",
+        "--models=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played03/mapping-full-diagnostic.json",
+        "--new-rider-adapter=1"
+      ],
+      "status": 0,
+      "seconds": 3.022697042
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body05-pole01-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played03/replay.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 12.127484
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/new-rider-played-capture.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/new-rider-body05-pole01-build",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind05/played03/hands",
+        "--mode=ride",
+        "--tier=high",
+        "--seconds=40",
+        "--fps=12",
+        "--focus=hands",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 85.79921875000001
+    }
+  ],
+  "wallSeconds": 100.966362292,
+  "peakAnonymousBytes": 36220747776,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "limits": "Both tier modelnames explicitly use the SAME FULL candidate for contact diagnostics; real LOD gate remains unmeasured. Private build only, physics and bikes unchanged."
+}
