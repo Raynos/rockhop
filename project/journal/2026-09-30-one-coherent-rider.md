@@ -757,3 +757,8 @@ Validation: Actual17GLB views,22885used garment vertices,40386body triangle
 positions/cornerUV/material assignments intact. Face aboveZ1.52 exact.
 Limits: Fullbody6.8/face7.5 diagnostic, newassemblyfailure2. Cloth shader
 response deliberately changed; no gray/turntable/neckmotion or rig pass.
+
+## Round68 — explicit zipper topology failure
+Finding: Lower-hood conformance retains the white face and body but its zipper bridge duplicates13faces and creates28 nonmanifoldedges. Actual fullbody6.8/face7.5 diagnostic; chest/back horizontal crease remains. Reject fit03, replace zipper with hood-boundary edge subdivision onto exact body rim. Third newassemblyfailure; no appearance/motion/rig pass.
+Validation: Actual17CPU views; diagnostic copy identifies13duplicatefaces/28nonmanifoldedges. Source body40386triangle positions/cornerUV/material assignments exact.
+Limits: Private static assembly, not appearance/rig accepted.

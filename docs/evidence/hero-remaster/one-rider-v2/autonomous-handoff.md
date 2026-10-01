@@ -299,3 +299,5 @@ skin exposure, but NEWdonorhood lower skirt stillrectangular. Fullbody6.8/
 face7.5 diagnostic, failure2. Faceabove1.52 and40386body triangle positions/
 cornerUV/material assignments exact; cloth response deliberately changes.
 Parentnext NEWhoodlowergeodesicband-to-bodyseam conformance, no rig yet.
+
+Round68: Lower-hood conformance retains the white face and body but its zipper bridge duplicates13faces and creates28 nonmanifoldedges. Actual fullbody6.8/face7.5 diagnostic; chest/back horizontal crease remains. Reject fit03, replace zipper with hood-boundary edge subdivision onto exact body rim. Third newassemblyfailure; no appearance/motion/rig pass.
