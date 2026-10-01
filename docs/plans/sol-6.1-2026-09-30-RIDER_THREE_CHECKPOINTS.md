@@ -699,3 +699,15 @@ One setup +one partial appearancefailure retained. Body6.7/face6.5 diagnostic
 (unmatchedengine light), no minimumappearance pass. Round93 silent NEWcandidate
 coldclear exact40.083333333333336/hash368f1ca5bd9e830a, crash103/restart1/2ms.
 No physics/bike/player edits; actual surfaces/Garage/Pro/realLOD still open.
+
+### Runtime material splitting reopens the shared source hood rim
+
+Round94: source-only connected-edge smoothing doesnotresolveactualshoulder
+hole; rejectbody07appearance. Crucial source05 control measures307exact
+body/hoodrim pairs: runtimeconditioner separatesupto68.379mm; bypassonly
+conditioner keepsall307pairs exactly joinedatfouractualrecordedstates.
+Nextsource05shoulders+06waist andexplicit private postcondition sharedrim
+weights withbind/joint/transform checks. No proximitybridging or sourceface
+regeneration. Geometry/PBR/morphs untouched, physics/socketcontacts pass.
+One setup+one partial appearancefailure retained, earlymechanismswitch.
+Normalplayer unchanged; body/face belowbar, checkpoints2/3 stillopen.

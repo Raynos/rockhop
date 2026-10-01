@@ -371,3 +371,13 @@ then constrained connected-surface smoothing with hood/cuff anchors. Source
 rest geometry/PBR/morphs/binds/face allbyteexact. One setup/onepartialfailure
 retained, earlyswitch permitted. Actual480allcontacts/physicsexact; shipgate
 round93 passedNEWcandidate. Body6.7/face6.5 diagnostic, noappearancepass.
+
+## Round94 continuation
+
+Rejectsource-only07smoothing; actualshoulderhole persists. Provenruntime
+cause:307body05 sharedhoodrim pairs separateupto68.379mm afterpermaterial
+conditioner; bypassonlyconditioner sourceweights exact0gap atfouractualstates.
+Next05shoulders+06waist andexplicitprivate postcondition seamreconciliation
+withbind/transform/jointordercompatibilitychecks. No globalplayerrender edit.
+Face/bodyrest/PBR/morph/bind unchanged; all480contacts/physics pass. One
+normalization setup+onepartialappearancefailure recorded; autonomousswitch.

@@ -24,9 +24,22 @@ for(const variant of ['conditioned','source-weights']){
  const bg=await loadRigAt(pathToFileURL(path.resolve('public/models/bike-rookie.glb')),true);await prepareHero(bg);const bike=new GltfBike(bg,lib),g=await loadRigAt(pathToFileURL(source),true);await prepareHero(g);const rider=new GltfRider(g,lib);rider.attach(bike);bike.root.updateMatrixWorld(true);
  const meshes:THREE.SkinnedMesh[]=[];rider.scene.traverse((o:THREE.Object3D)=>{const m=o as THREE.SkinnedMesh;if(m.isSkinnedMesh&&m.name.startsWith('Protected'))meshes.push(m);});assert.equal(meshes.length,3);
  const rests=meshes.map(m=>Array.from({length:m.geometry.getAttribute('position').count},(_,i)=>{const v=m.getVertexPosition(i,new THREE.Vector3());m.localToWorld(v);return bike.frame.worldToLocal(v);}));
+ const joinGroups=new Map<string,{mesh:number;vertex:number}[]>();
+ for(const [mi,m] of meshes.entries()) {
+  if(m.name.endsWith('_1'))continue;
+  const position=m.geometry.getAttribute('position');
+  for(let vertex=0;vertex<position.count;vertex++) {
+   const key=[position.getX(vertex),position.getY(vertex),position.getZ(vertex)].map(c=>Math.round(c*1e6)).join(',');
+   const group=joinGroups.get(key)??[];group.push({mesh:mi,vertex});joinGroups.set(key,group);
+  }
+ }
+ const sharedJoin=[...joinGroups.values()].filter(group=>new Set(group.map(v=>v.mesh)).size>1);
+ assert(sharedJoin.length>250,'Expected actual shared body/hood rim vertices');
  const rows=[];
  for(const sample of captured.samples.filter(s=>[49,120,420,468].includes(s.i))){
   const before=JSON.stringify(sample.state),f=new FrameBuilder().build(sample.state,1);bike.update(f);rider.update(f);bike.root.updateMatrixWorld(true);assert.equal(JSON.stringify(sample.state),before);
+  const actualPosed=meshes.map(m=>Array.from({length:m.geometry.getAttribute('position').count},(_,i)=>bike.frame.worldToLocal(m.localToWorld(m.getVertexPosition(i,new THREE.Vector3())))));
+  const seamSeparations=sharedJoin.map(group=>Math.max(...group.flatMap(a=>group.map(b=>actualPosed[a.mesh]![a.vertex]!.distanceTo(actualPosed[b.mesh]![b.vertex]!)))));
   const faces: {region:string;mesh:string;triangle:number;indices:number[];stretch:number;areaRatio:number;restEdgesM:number[];posedEdgesM:number[];sourceNativePositions:number[][];weights:{bone:string;weight:number}[][]}[]=[];
   for(const [mi,m] of meshes.entries()){
    if (m.name.endsWith('_1')) continue; // Verified native glove material primitive.
@@ -43,7 +56,7 @@ for(const variant of ['conditioned','source-weights']){
     faces.push({region:height>1.3?'shoulder':height>.93?'midbody':'waist',mesh:m.name,triangle:t,indices:ids,stretch,areaRatio:pa/ra,restEdgesM:re,posedEdgesM:pe,sourceNativePositions:rv.map(v=>[-v.z/1.015,-v.x/1.015,v.y/1.015]),weights:ws});
    }
   }
-  faces.sort((a,b)=>b.stretch-a.stretch);rows.push({i:sample.i,tick:sample.tick,garmentTriangles:faces.length,stretchedOver4:faces.filter(t=>t.stretch>4).length,areaCollapsedBelowQuarter:faces.filter(t=>t.areaRatio<.25).length,maxEdgeStretch:faces[0]!.stretch,regions:['waist','midbody','shoulder'].map(region=>{const fs=faces.filter(f=>f.region===region);return{region,triangles:fs.length,stretchedOver4:fs.filter(f=>f.stretch>4).length,maxEdgeStretch:fs[0]?.stretch,worst:fs.slice(0,12)};}),worst:faces.slice(0,40)});
+  faces.sort((a,b)=>b.stretch-a.stretch);rows.push({i:sample.i,tick:sample.tick,sharedBodyHoodRimVertices:sharedJoin.length,maxBodyHoodSeparationM:Math.max(...seamSeparations),bodyHoodPairsOver1mm:seamSeparations.filter(d=>d>.001).length,garmentTriangles:faces.length,stretchedOver4:faces.filter(t=>t.stretch>4).length,areaCollapsedBelowQuarter:faces.filter(t=>t.areaRatio<.25).length,maxEdgeStretch:faces[0]!.stretch,regions:['waist','midbody','shoulder'].map(region=>{const fs=faces.filter(f=>f.region===region);return{region,triangles:fs.length,stretchedOver4:fs.filter(f=>f.stretch>4).length,maxEdgeStretch:fs[0]?.stretch,worst:fs.slice(0,12)};}),worst:faces.slice(0,40)});
  }
  results.push({variant,rows});
 }

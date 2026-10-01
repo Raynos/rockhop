@@ -1316,11 +1316,11 @@
       "shoulderSourceDiscontinuityZ": 1.43,
       "sourceShoulderMaxStretch": 13.233526982304312,
       "sourceUnchanged": true,
-      "next": "Retain completedwaistblend, resetshoulder05; constrained adjacency smoothing with frozenhood/cuffs",
-      "repairAttempts": 2,
-      "setupFailures": 1,
-      "partialAppearanceFailures": 1,
-      "latestRound": 93,
+      "next": "Reset05shoulders plus06waist, explicitly reconcile same sharedrim weights after privateconditioning; preserve all geometry/PBR",
+      "repairAttempts": 4,
+      "setupFailures": 2,
+      "partialAppearanceFailures": 2,
+      "latestRound": 94,
       "waistStretchAfter": 4.803675696403647,
       "shoulderHeightPatchRejected": true,
       "playedContacts": {
@@ -1333,6 +1333,14 @@
           -1,
           1
         ]
+      },
+      "sourceSmoothingRejected": true,
+      "runtimeSeamControl": {
+        "source": "body05",
+        "sharedPairs": 307,
+        "maxConditionedGapM": 0.06837862214488334,
+        "maxSourceGapM": 0,
+        "actualStateCount": 4
       }
     }
   }

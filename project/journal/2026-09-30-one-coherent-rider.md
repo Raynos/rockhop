@@ -982,3 +982,15 @@ crash103/restart1/2ms, zeroerrors. Lint/harness tsc pass. GPUcanonical lock,
 188.799s/34.182GB. Parent ordered samples cover40s +fourdefects.
 Limits: One setup/onepartialappearance failure retained. Body6.7/face6.5
 unmatched; no player/physics/bike edit, actualsurfaces/Garage/Pro/LOD open.
+
+## Round94 — diagnose runtime seam opening after material split
+
+Finding: OriginalWHITEbody05 shared307hood/bodyrim pairs separate68.379mm
+underper-material conditioner; bypassedsourceweights keepallpairs exact.
+Validation: Four actualstate CPUcontrol audits; actualbody07 full40sPBR/gray
+replay keeps480allcontacts andexactphysics, coldclear/crash/restart1/2ms.
+Lint/harness tsc pass. Parent fullresolution4210 rejects shoulderhole;
+originalPNG/movie hashes, wholedecodedboards retainedunder canonical lock.
+Limits: Source-onlysmoothing rejected, one setup+onepartialfailure retained.
+SameWHITEface/bodyrest/PBR, no player/bike/physics edit. Next explicitshared
+rimweight reconciliation; appearance/surface/Garage/Pro/LOD gates open.
