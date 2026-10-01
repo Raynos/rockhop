@@ -737,3 +737,8 @@ both/errors0. Retainbakedcorrection, nofinalartpass: body7.0provisional,
 facecloseupnotregraded(prior6.5), camer/lightunmatched, target8open. Next
 facePBR/UVdensityaudit, thenGarage/Pro/realLOD/actualcontactsurfaces. Same
 FULLunderbothLODnames remainsdiagnostic. OneCPU accessor-setupfailretained.
+
+Round97: handoff now leads with the actualWHITEbody09 source/rig/played
+status and openface/bench/Garage/surface/Pro/realLOD gates. Earlier native
+African-palette/no-rig/active-lane notes are explicitly historical, not
+current direction. No asset or gate change; round96 NEW shipgate retained.

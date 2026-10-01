@@ -1018,3 +1018,13 @@ andmatchedbefore/after actual49/420; original frames/movies retained exactly.
 Limits: Private correctiononly; body7.0diagnostic, facecloseupnotregraded,
 prior6.5. Cowl/armpit/waist, face/PBR detail andtarget8open. Garage/Pro/actual
 surfaces/fullLOD andcheckpoints2/3open; oneaccessorsetup failure preserved.
+
+## Round97 — current white rider collaboration handoff
+
+Finding: The handoff header still described round37 native palette, no rig
+and live lanes despite round96 WHITE rider moving evidence. Replace the
+current summary and label earlier notes historical without erasing failures.
+Validation: Source09 SHA, round96 played/replay results and remaining gates
+checked against committed reports; no source asset or executable changes.
+Limits: Appearance refinement, sitting/Garage and actual surface contacts
+remain open; this documentation checkpoint accepts no new visual gate.

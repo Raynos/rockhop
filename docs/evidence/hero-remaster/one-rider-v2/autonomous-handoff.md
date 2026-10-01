@@ -7,7 +7,50 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence
+## Current evidence — round96, 2026-10-01
+
+- The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
+  NEW donor01 hood and NEW native anatomical gloves. Historical production
+  supplies comparison evidence only. Keep this improved body/clothing.
+- Static matched model appearance reaches body7.2/face7.5 minimum; target8
+  remains open. Actual turntable and neck yaw/bend fixtures are retained.
+- Current runtime master is LocalAI `one-rider-v2/rig-adapter01/body-bind09/rider.glb`,
+  SHA256 `974cb07434cb498b15306e1e752691c97b1429a98a74c31391cfc4f800cea363`.
+  Body08 Blender source plus the reproducible CPU skin bake produce body09;
+  do not claim a body09 Blender master.
+- The explicit NEW rig adapter preserves physics COM/lean, arm/leg IK and
+  grip/sole behavior. Baking the production conditioning once closes the
+  shared307-point body/hood opening in actual played evidence. Existing
+  normal player rider files, physics and bikes remain unchanged.
+- Actual40s PBR/gray replays contain480 matching states each, lean−1/+1 and
+  landings/recovery. All socket tests pass; visible palm/sole contact is a
+  separate unpassed gate. NEW coldboot/clear/crash/restart passes both tiers:
+  exact40.083333333333336 finish/hash368f1ca5bd9e830a;103 crash ticks;2ms restart.
+- In-engine full-body diagnostic7.0 remains provisional because camera/light
+  are unmatched to the mockup. Face closeup is not regraded (prior6.5).
+  Coarse eyes/cheeks/buzz/PBR, cowl creases and waist silhouette remain.
+- Checkpoints2/3 remain OPEN. Blender planted bench foundation is preserved;
+  actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
+  blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
+  Both logical tiers currently use FULL geometry for private diagnostics.
+- Next bounded action: measure source and loaded face texture density and
+  review actual face PBR/gray motion before regeneration or atlas changes.
+  Keep body09 rest shape, clothing, rig and contacts fixed during face work.
+- Five failed runtime-helper injections stopped that approach; the CPU skin
+  bake is its different mechanism. Old neck lineage remains retired at15;
+  P3 automated repairs and fixed finger-curl approaches remain stopped at2.
+- No Blender lanes are currently running. Prior lane descriptions below are
+  historical. No routine human approval hold, schedule or outbound message.
+
+Actual evidence: [body09 README](rig-adapter01/body-bind09/README.md),
+[before/after](rig-adapter01/body-bind09/played01/actual-before-after.jpg),
+[played white rider](rig-adapter01/body-bind09/played01/textured/played.mp4).
+The chronological notes below preserve failures and decisions; older present-
+tense statements do not override this current summary or the active plan.
+
+## Historical evidence — rounds37–96
+
+### Round37 evidence
 
 - Whole character UNACCEPTED; full rig and moving contacts have not started.
 - NEW native adult-male head geometry/UV mapping is usable; African native atlas
@@ -27,7 +70,7 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
 - Last silent production baseline round33 passes low/high exact40.083333333s
   clear, crash and2ms restart. This tests existing production, not new rider.
 
-## Active parallel Blender lanes — first batch ends02:17UTC
+### Historical parallel Blender lanes — round37 batch
 
 A: explicit seam-landmark local quad-panel retopology using native bpy/bmesh,
 keeping the broad source hood and protected native head/UVs. EnvironmentA has
@@ -78,7 +121,7 @@ All later checks remain unpassed; static assets are never game-ready.
 ## Ask239 visual bar and architecture review
 
 Minimum7/10 independently for body and face; target8 each, with matched actual
-reference comparisons. Current C diagnostic5/10 body and3/10 face is rejected.
+reference comparisons. Historical C diagnostic5/10 body and3/10 face was rejected.
 Continuous native head/neck/clavicle beneath separate hoodie is the next
 construction hypothesis; no skin-to-cloth weld required. Hidden base coverage
 and visible cloth joins must pass neck motion, rear/profile and nine angles.
