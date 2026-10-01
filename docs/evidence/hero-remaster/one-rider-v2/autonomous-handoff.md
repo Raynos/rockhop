@@ -120,3 +120,10 @@ shows improvement3→4/10face, still below7; no faceacceptance. Headfamily now
 explicitly includes10historicalgeneration/geometry/texture failures plus
 nativepaletteappearance, browsetup and browappearance =13/15. No counters
 reset. NEWdonor/generation architecture next, no repeatedpalette patches.
+
+C modulartrial02 frozen beforeconstruction:761facegarmentstrip leavesone
+degree4leftnapepinch, exact sourcefaces19285/19904. Actual16witnessviews
+showunchangedskinunder originalopenhood; no constructedcloth. Neckfamily12/15.
+Next exacttwo-trianglecorrection bounded within existing02:26:30deadline.
+Round42 silentproduction low/highclear remainsbyteidentical40.083333333s,
+crash103ticks, restart2msboth, zeroerrors/audio. Newriderunaccepted.

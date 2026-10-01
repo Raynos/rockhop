@@ -1,0 +1,16 @@
+{
+  "status": "FAILED C modular hood trial02",
+  "actualStartUTC": "2026-10-01 01:56:30 UTC",
+  "deadlineUTC": "2026-10-01 02:26:30 UTC",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "recipeSHA256": "f4480a4589628fa221e72e3a927c000870c4331e77bd562d886e49c1c6e30ad2",
+  "mechanism": "Continuous original native skin bust unchanged under separate authored curved hood panels and rolled lining; actual original cloth barycentric UV/PBR transfer",
+  "priorFailures": "C trial01 appearance rejected5/10 body3/10 face; six historical neck failures retained. No history reset.",
+  "failure": "AssertionError('True collar boundary branches: freeze rather than silently widen')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/C-garment-pattern/build_modular_trial02.py\", line 79, in <module>\n    rs=loops(b);assert len(rs)==1,'Whole-star cloth extraction yielded multiple boundaries; stop'\n  File \"/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/C-garment-pattern/build_modular_trial02.py\", line 31, in loops\n    assert all(len(n)==2 for n in adj.values()),'True collar boundary branches: freeze rather than silently widen'\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: True collar boundary branches: freeze rather than silently widen\n",
+  "finishedUTC": "2026-10-01T02:01:00.347269+00:00"
+}

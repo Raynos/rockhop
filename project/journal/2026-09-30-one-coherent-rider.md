@@ -504,3 +504,12 @@ originalhead/eyegeometry+UVhashes unchanged and allsourcehashes retained.
 Limits: No exacttargetidentity/skin/eye/hair quality or body/rig acceptance.
 Executedrecipe retained its oldreportdirectory; byte-identical canonicalcopy
 and pathnote preserve exactprovenance. Switch to NEWdonor/generation next.
+
+## Round42 — localize one branched garment-mask vertex
+
+Finding: C modularstrip fails beforeconstruction atoneleftnapedegree4pinch;
+exact remaining sourcefaces19285/19904 permit a narrow correction.
+Validation: Parentreviewed actualeightviewPBRgrayneckboard;16GLBwitnessviews
+frozen,41,744sourcepolygons retained and all sourcehashes unchanged. Fresh
+silentproductionclear/crash/restart passeslow/highbyteidentically,2msrestart.
+Limits: Failedmaskonly, no constructedhood/neckmotion or newrideracceptance.
