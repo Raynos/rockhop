@@ -1,0 +1,15 @@
+00:00.407  blend            | Read blend: "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/parent-assembly/donor-fit05/rider.blend"
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/native-landmarks/surface_witness.py:28: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gray=bpy.data.materials.new('Diagnostic actual neutral geometry');gray.use_nodes=True;bs=gray.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.36,.36,.36,1);bs.inputs['Roughness'].default_value=.7
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/native-landmarks/surface_witness.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;n=m.node_tree.nodes;n.clear();out=n.new('ShaderNodeOutputMaterial');s=n.new('ShaderNodeEmission');s.inputs[0].default_value=(*color,1);s.inputs[1].default_value=.8;m.node_tree.links.new(s.outputs[0],out.inputs[0]);return m
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-adapter01/native-landmarks/surface_witness.py:48: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Neutral diagnostic studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world
+00:02.755  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/actual-native-L-front.png'
+00:04.713  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/actual-native-L-rear.png'
+00:06.878  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/actual-native-R-front.png'
+00:09.244  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/native-landmarks/actual-native-R-rear.png'
+ACTUAL_NATIVE_SURFACE_WITNESSES_FROZEN
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -807,3 +807,14 @@ Limits: Target8notreached, exactphotocamera/lightunknown, no19bonerig/sitting/ga
 Finding: Round75 productionbaseline completes after canonical lock: exact40.083333333s/4810ticks/hash368f1ca5bd9e830a, crash103ticks, restart2msboth/zeroerrors. MinimumWHITEappearance stage handed off toexplicit19boneadaptation, runtime derivesrestdirections/segmentlengths frombind; axis/originadapter required, oldbones notblindlycopied. No gameplaycode/assetschanged; finaltarget8polish/sitting/riding open.
 Validation: Productionexactclear/crash/restart2msboth; source runtimeORDER parsed19bones, SHIFT.65/garageblend.25verifiedread-only.
 Limits: Read-onlycontractprep, newsourceunrigged; final19bone/rest/socketweights andcheckpoint2/3notqualified.
+
+## Round78 — explicit new-rider rig audit
+
+Finding: Exact native glove correspondence permits weight transfer, but
+transported proximal bones and standing palm orientation are unsuitable for
+the riding contract. Proper rotation and semantic side remap are explicit.
+Validation: Three isolated CPU2 measurement runs exit0 with source hashes
+unchanged; parent inspects actual dorsal/palm witnesses. Runtime extractor
+records real19bone binds, sockets, clips and material preparation.
+Limits: No final skin or contact pass; third-round production baseline is
+queued under the shared lock.

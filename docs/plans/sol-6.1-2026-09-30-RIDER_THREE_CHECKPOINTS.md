@@ -475,3 +475,25 @@ socket/weight adapter and actual standing-to-sitting checkpoint. This is
 not playerasset promotion or a sitting/riding pass.
 No human approval hold applies; the existing five/fifteen switch/retirement
 policy and sharedGPUlock rules continue.
+
+### Rig audit — 2026-10-01
+
+The complete white rider retains exact native glove vertices (1,668 per side,
+zero position error) but has no skin weights. Frozen native weights and
+measured wrists are available. Native proximal shoulders transported with
+the hand patches are unsuitable: document new body joint estimates rather
+than transplanting that skeleton. Use the proper rotation
+`(X,Y,Z) → (-Y,Z,-X)` with the rear-axle file shift +0.65 m; explicitly remap
+native L/R labels into runtime sides.
+
+The game holds riding hands at their captured bind-world orientations.
+Standing palms face backwards and fingers point down. A validated contact
+orientation adapter and native finger articulation are required; numerical
+socket contact alone cannot accept visibly wrong grips. Installed UniMate
+can edit motion after a bound input exists; it does not create these weights.
+Keep standing-to-sitting separate from the seated Garage clip. Runtime
+material conversion and texture downsampling also require engine review.
+
+Evidence: `docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/`.
+This audit is not a rig or moving contact pass. Round78 production baseline
+is queued under the canonical shared GPU lock; no result is inferred.
