@@ -1712,3 +1712,22 @@ Limits: No new whole-motion art, target score, sitting/Garage/contact/mobile/LOD
 pass; source/control copies unaccepted. Pose gate executable implementation next.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/parent-review157.json
 Ask:239,241,242,245,248
+
+## Round158 — exported basic-pose gate foundation
+
+Finding: Structural failures need repeatable exported motion coverage before
+cosmetic work. Reuse inspected independent arm controls read-only, add lower-body
+stress fixtures, and preserve explicit19bone/rest compatibility. V5 remains
+unaccepted across broad arms and sitting despite improved source weights.
+
+Validation: Twelve families/1,164 actual stock Three.js samples over25,352 garment
+vertices; neutral endpoints, finite positions,1.333e-15world/local matrix parity,
+source hashes unchanged and fixed limb lengths. Overhead260/elbow103/squat256/
+sit255 quarter-area witnesses. Bad initial knee pole retained; transverse pole
+reduces sampled sit surface step104.41→15.38mm. Explicit sanitized-bone mapping
+fixes loader setup without changing skeleton/source. All probes reproducible.
+
+Limits: CPU fixture checks do not accept appearance, continuous collision,
+rendering, cuff joins, support, actual Garage/physics or mobile. Gray/PBR moving
+review, unilateral/halfsteps and task-3 construction candidate next. Cosmetics
+paused, player assets unchanged, source/control failures retained. Ship159next.

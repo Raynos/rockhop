@@ -1,0 +1,124 @@
+{
+  "fixtureSHA256": "2d4df420136e25d3673e9224f2155d09fa74c9654e6adb5a0f67be0198fd5ad7",
+  "families": [
+    {
+      "family": "neutral",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 0.0,
+      "maximumAdjacentJointMotionM": 0.0,
+      "maximumLimbLengthErrorM": 0.0,
+      "firstStepMaximumRotationDegrees": 0.0,
+      "lastStepMaximumRotationDegrees": 0.0
+    },
+    {
+      "family": "horizontal",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 3.335936699808808,
+      "maximumAdjacentJointMotionM": 0.03438948993300169,
+      "maximumLimbLengthErrorM": 4.996003610813204e-16,
+      "firstStepMaximumRotationDegrees": 0.23797862042413323,
+      "lastStepMaximumRotationDegrees": 0.23797862042412893
+    },
+    {
+      "family": "overhead",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 7.120010789512995,
+      "maximumAdjacentJointMotionM": 0.07260857169556507,
+      "maximumLimbLengthErrorM": 8.881784197001252e-16,
+      "firstStepMaximumRotationDegrees": 0.5027149180918129,
+      "lastStepMaximumRotationDegrees": 0.5027149180918088
+    },
+    {
+      "family": "forward",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 3.921863539226968,
+      "maximumAdjacentJointMotionM": 0.04077306417541692,
+      "maximumLimbLengthErrorM": 7.771561172376096e-16,
+      "firstStepMaximumRotationDegrees": 0.2810873702195459,
+      "lastStepMaximumRotationDegrees": 0.28108737021956426
+    },
+    {
+      "family": "elbow",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 8.656301543184506,
+      "maximumAdjacentJointMotionM": 0.041346607900182485,
+      "maximumLimbLengthErrorM": 6.661338147750939e-16,
+      "firstStepMaximumRotationDegrees": 0.3171452273257473,
+      "lastStepMaximumRotationDegrees": 0.3171452273258673
+    },
+    {
+      "family": "forearm_twist",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 6.492226157388444,
+      "maximumAdjacentJointMotionM": 0.04098157458743687,
+      "maximumLimbLengthErrorM": 4.996003610813204e-16,
+      "firstStepMaximumRotationDegrees": 0.3171452273257473,
+      "lastStepMaximumRotationDegrees": 0.3171452273258673
+    },
+    {
+      "family": "wrist_flex",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 3.9487659683875482,
+      "maximumAdjacentJointMotionM": 0.04098157458743687,
+      "maximumLimbLengthErrorM": 4.996003610813204e-16,
+      "firstStepMaximumRotationDegrees": 0.3171452273257473,
+      "lastStepMaximumRotationDegrees": 0.3171452273258673
+    },
+    {
+      "family": "wrist_deviation",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 3.9487659683875482,
+      "maximumAdjacentJointMotionM": 0.04098157458743687,
+      "maximumLimbLengthErrorM": 6.106226635438361e-16,
+      "firstStepMaximumRotationDegrees": 0.3171452273257473,
+      "lastStepMaximumRotationDegrees": 0.3171452273258673
+    },
+    {
+      "family": "grip",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 3.9487659683875482,
+      "maximumAdjacentJointMotionM": 0.04098157458743687,
+      "maximumLimbLengthErrorM": 4.996003610813204e-16,
+      "firstStepMaximumRotationDegrees": 0.3171452273257473,
+      "lastStepMaximumRotationDegrees": 0.3171452273258673
+    },
+    {
+      "family": "squat",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 2.202040021407808,
+      "maximumAdjacentJointMotionM": 0.014600352604183207,
+      "maximumLimbLengthErrorM": 6.106226635438361e-16,
+      "firstStepMaximumRotationDegrees": 0.7807808748034075,
+      "lastStepMaximumRotationDegrees": 0.7807808748034075
+    },
+    {
+      "family": "sit",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 2.5207479674910567,
+      "maximumAdjacentJointMotionM": 0.014872109132132166,
+      "maximumLimbLengthErrorM": 4.996003610813204e-16,
+      "firstStepMaximumRotationDegrees": 0.8834593505763785,
+      "lastStepMaximumRotationDegrees": 0.8834593505763785
+    },
+    {
+      "family": "lean",
+      "frames": 97,
+      "maximumAdjacentBoneRotationDegrees": 1.513749828481591,
+      "maximumAdjacentJointMotionM": 0.021642972635799576,
+      "maximumLimbLengthErrorM": 3.3306690738754696e-16,
+      "firstStepMaximumRotationDegrees": 0.013573976303033182,
+      "lastStepMaximumRotationDegrees": 0.013573972573031058
+    }
+  ],
+  "checks": [
+    "19 unique declared bones",
+    "proper rigid matrices",
+    "exact neutral endpoints",
+    "fixed physical limb lengths"
+  ],
+  "limits": [
+    "Adjacent frame numbers do not establish visually convincing transitions.",
+    "Bilateral fixtures only; unilateral and unseen halfsteps remain unmeasured.",
+    "No contact, collision, textures, rendering, anatomical or gameplay acceptance."
+  ]
+}

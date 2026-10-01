@@ -16,7 +16,13 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round157, 2026-10-01
+## Current evidence — round158, 2026-10-01
+
+- Round158 executable named19bone fixture covers12 bilateral families/1,164
+  stock Three.js samples. V5 remains unaccepted: overhead260, elbow103,
+  squat256, sit255 collapsed-face witnesses. Gray/PBR moving review and
+  unilateral/halfstep/contact/device gates remain open. Parent owns integration
+  harness; task-3 owns construction. No duplicate garment trial or cosmetics.
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production

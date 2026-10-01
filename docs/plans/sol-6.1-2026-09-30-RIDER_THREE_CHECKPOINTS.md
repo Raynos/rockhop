@@ -1564,3 +1564,29 @@ hoodie-repair02 construction owner migrates into owned shared-repo paths. Inspec
 its frozen/migrated artifacts before duplication. Parent owns integration and
 reusable exported basic-pose fixture next. All prior failed lineages remain.
 Next requiredship159; all later visual/visible-contact/device gates remain open.
+
+## Exported basic-pose gate foundation — round158 / ask248
+
+The parent-owned `harness/hero-remaster/basic-pose-gate/` reuses inspected task-3
+arm controls read-only and adds authored planted-foot squat/sit/lean controls.
+Twelve bilateral families,1,164 samples, exact neutral endpoints and explicit
+19bone mapping run through stock Three.js on mappedV5. 25,352 body/hood vertices
+remain finite; world/local parity1.333e-15 and limb lengths preserved. See
+[basic-pose evidence](../evidence/hero-remaster/one-rider-v2/basic-pose-gate158/README.md).
+
+V5 is still unaccepted: collapse witnesses include overhead260,elbow103,
+squat256,sit255 faces. Gray/PBR moving review, unilateral and unseen halfsteps,
+cuff/glove surfaces, self-crossings, contacts and anatomy remain open. A poor
+fixture knee-pole was corrected and both probes retained; sampled continuity
+numbers cannot accept animation. Cosmetics stay paused. Do not duplicate the
+independent construction owner's garment work.
+
+Next integration input from task-3: one reproducible candidate GLB plus source,
+19bone/rest mapping, materials and corrective-driver declaration, immutable hash,
+protected head/hood/glove/sole inventory, resting crossings and remaining-defect
+list. Test that candidate through the same named fixture before actual Garage,
+physics maximum lean/landing and contact/mobile qualification. Keep clip-specific
+compression separate from arbitrary physics drivers. Eight representative poses
+and continuous transitions must have matched Blender/Garage/on-bike evidence;
+no deployment until repository release and rider appearance/contact/device gates.
+Next mandatory coldboot/clear/crash/restart round159.

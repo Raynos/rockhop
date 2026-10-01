@@ -1,0 +1,19 @@
+{
+  "boneNames": {
+    "failure": "Missing mapped bone: shoulder.L",
+    "cause": "GLTFLoader PropertyBinding removes periods.",
+    "fix": "Explicit declared19name lookup accepts sanitized equivalents; rejects unknown/duplicate bones.",
+    "assetChanged": false
+  },
+  "lowerPole": {
+    "firstFixtureSHA256": "fd1363faf747f04d4cc063f1007b2b15c124c3eca4be85bb3990e20410681610",
+    "secondFixtureSHA256": "312e46fb7a379260fb994a77fa6110b5d634f0be811c5724cc565852fc25ee86",
+    "firstCPURun": "v5-cpu.json",
+    "failure": "Rest upper-leg vector used as knee pole becomes nearly parallel to moving hip/foot ray; sit maximum adjacent surface motion104.410mm.",
+    "alternative": "Source knee-plane transverse pole, normalized before IK.",
+    "thirdFixtureSHA256": "2d4df420136e25d3673e9224f2155d09fa74c9654e6adb5a0f67be0198fd5ad7",
+    "maximumSitAdjacentSurfaceMotionM": 0.015379686299651297,
+    "artAcceptance": false
+  },
+  "sourcePreservation": "All three fixtures and both CPU probes retained; no source or independent owner files mutated."
+}
