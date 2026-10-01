@@ -748,3 +748,12 @@ Silent production Low/High exact40.083333333s, crash103ticks/restart2ms both.
 Limits: Fullbody6.5/10 and face7.5 diagnostic only; no motion/rig acceptance.
 First NEWassembly failure. Next exact garmentweld and lowerbust containment,
 no sourceface change or revival of retired15neck repairs.
+
+## Round67 — contain bust and weld garment before skirt fitting
+
+Finding: Weld/colortransport/basefit hide exposed skin, but donorhood skirt
+still creates a rectangular shoulder plate. Fit that NEW lower band next.
+Validation: Actual17GLB views,22885used garment vertices,40386body triangle
+positions/cornerUV/material assignments intact. Face aboveZ1.52 exact.
+Limits: Fullbody6.8/face7.5 diagnostic, newassemblyfailure2. Cloth shader
+response deliberately changed; no gray/turntable/neckmotion or rig pass.

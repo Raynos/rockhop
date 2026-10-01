@@ -293,3 +293,9 @@ rectangular garmentseam and exactrayNEWbustbase exposedrearZ1.407. Next
 exact garmentvertexweld/cornerUVpreservation +localizedbustbase containment
 belowZ1.52, leavefaceexact. Newassemblyfailure1, old15retired. Round66
 productionexactclear/crash/restart2ms both. No rig/motion/playerpromotion.
+
+Round67: Exact garmentweld/sourceendpoint color/basecontainment removesrear
+skin exposure, but NEWdonorhood lower skirt stillrectangular. Fullbody6.8/
+face7.5 diagnostic, failure2. Faceabove1.52 and40386body triangle positions/
+cornerUV/material assignments exact; cloth response deliberately changes.
+Parentnext NEWhoodlowergeodesicband-to-bodyseam conformance, no rig yet.
