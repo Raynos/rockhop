@@ -1050,3 +1050,15 @@ review. NEWcoldclear byteexactboth/crash103/restart1msLOW3msHIGH/errors0.
 GPU46.489s/51.217GB canonical lock. PIL setup corrected with bundledPython.
 Limits: Mockup lighting/camera unmatched; no strict appearance pass. Source
 geometry/UV/rig unchanged, realLOD/Pro/surface and later motion gates open.
+
+## Round100 — reject margin-only cheek correction
+
+Finding: Padding preserves occupied colors but actual cheek outlines remain.
+Keep WHITE09; switch early to joint surface-color baking with measured
+geometry correspondence instead of repeating gutter thresholds.
+Validation: 72paired actual camera/state/debug exact;72gray PNGpixel-identical.
+Parent front18/A-B reviewed;face6.5 unchanged. Sourcebinary/geometry/UV/rig and
+665739occupiedtexels exact;buildpasses;NEWbothclear byteexact/crash103/restart
+2msLOW3msHIGH/errors0. GPU51.500s/54.236GB under canonical lock.
+Limits: Rejected texture trial. UV duplicate/base-level probe is diagnostic;
+eyes/hair, target8 and later rig/gameplay gates remain open.

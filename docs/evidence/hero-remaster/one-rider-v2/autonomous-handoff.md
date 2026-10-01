@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round99, 2026-10-01
+## Current evidence — round100, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -33,8 +33,8 @@ goal replaces it. The goal API exposes status, not an objective-edit method.
   actual UniMate NEW-rig motion was evaluated and rejected1/10. Garage authored
   blending, real LOD, Pro and indexed surface-contact motion remain unmeasured.
   Both logical tiers currently use FULL geometry for private diagnostics.
-- Next bounded action: cheek UV-margin hypothesis; source/loaded1024² equal
-  and actualzoom3 PBR/gray closeups expose dashed patch outlines.
+- Next bounded action: joint geometry-mapped head/cheek boundary-color bake;
+  margin-only10 rejected, source09 retained and eyes/hair remain coarse.
   Keep body09 rest shape, clothing, rig and contacts fixed during face work.
 - Five failed runtime-helper injections stopped that approach; the CPU skin
   bake is its different mechanism. Old neck lineage remains retired at15;
@@ -453,3 +453,8 @@ master claimed. All losslesscaptured09PNG/movies private with hashes.
 Round99: actualface72pairedcamera/state/debug exact with measuredzoom3/3m.
 Face6.5diagnostic/strictmatchedgateopen; nextUVmargin hypothesis protects
 mesh/UV/rig/sourcecolors. NEWcoldclear exactboth/crash103/restart1/3ms.
+
+Round100: REJECT10padding-only; keep09WHITE.72grayPNGpixel-identical and
+camera/state/debug exact;actual cheek outlines persist.151sharedpoints0gap,
+localRGB contrast measured. Next joint color bake with geometric correspondence.
+One margin failure added;historical5 retained;no repeat padding/polyfit.

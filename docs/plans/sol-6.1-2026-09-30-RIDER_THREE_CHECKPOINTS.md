@@ -754,3 +754,10 @@ andcheek outlines keepdiagnostic6.5/strictmatchedgateopen. NextUVmargin
 hypothesis protectsoccupiedtexels/geometry/UV/rig. NEWcoldclear exactboth,
 crash103/restart1msLOW3msHIGH/errors0. Body09WHITE retained. OnePIL evidence
 setupfailure corrected usingbundledPython/archivedoriginals, notassetrepair.
+
+Round100: REJECT body10 margin-only correction; cheek outlines persist and
+face diagnostic6.5 stays open. Keep WHITE09body/rig.72paired camera/state/debug
+exact;72grayPNGpixel-identical. Source geometry and occupied665739texels exact.
+151shared positions have0gap but localRGB differs; next joint geometry-mapped
+boundary-color bake, no repeat padding/polyfit/remesh. Historical5+1 failures
+retained. NEWbothclear byteexact/crash103/restart2/3ms/errors0; budget passes.
