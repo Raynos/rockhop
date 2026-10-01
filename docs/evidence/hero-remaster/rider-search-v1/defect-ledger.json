@@ -984,7 +984,7 @@
   "autonomousDefects": {
     "neckJoin": {
       "historicalFailedAttempts": 6,
-      "currentFailedAttempts": 8,
+      "currentFailedAttempts": 9,
       "approaches": {
         "sourceGraphCut": 2,
         "ellipticalLoft": 2,
@@ -992,12 +992,20 @@
         "A-explicitLandmarkPanel": {
           "setupFailures": 1,
           "geometryFailures": 1
+        },
+        "C-garmentPatternWeld": {
+          "geometryFailures": 0,
+          "appearanceFailures": 1
         }
       },
-      "lastFailure": "A simple88edge circuit is nonseparating: traversal reaches all42505retained faces; area guard stops before removal/head join",
+      "lastFailure": "C closed welded hood still has jagged rear cloth seam and broad flat collar; parentbody5/10 face3/10",
       "fiveFailureSwitch": 5,
       "fifteenFailureLastResort": 15,
-      "next": "Retire nonseparating seam-cut approach early; test modular continuous skin beneath separate cloth after firsttrial checkpoints"
+      "next": "Modular continuous skin beneath separately constructed garment; face refined independently"
+    },
+    "evidenceCornerAudit": {
+      "failedAttempts": 1,
+      "failure": "C initial GLB audit usedUV0 instead of materialUV1; corrected true maxUVerror2.98e-8 with zero missing sourcecorners"
     }
   },
   "visualQualityPolicy": {

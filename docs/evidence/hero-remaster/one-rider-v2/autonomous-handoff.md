@@ -89,3 +89,9 @@ existing bounded first-lane batch through02:17UTC. No appearance gate passed.
 Round36 silent production baseline again clears byte-identically at40.083333333s
 low/high, crash103ticks, instant restart1/2ms, no errors or audio. Existing
 production only; new rider appearance, neck motion and contacts remain unpassed.
+
+C firsttrial frozen and rejected: body5/10,face3/10, neckfamily9/15 after
+A. Shared skin/cloth weld closes the mesh but leaves a jagged rear cloth seam
+and flat collar. Native weights/protected41,852source triangles survive actual
+reimport; initial UV0audit error frozen separately, correctedUV1maxerror2.98e-8.
+Separate garment architecture and better face follow; no full rig starts.

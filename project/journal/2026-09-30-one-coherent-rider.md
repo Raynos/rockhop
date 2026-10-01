@@ -454,3 +454,14 @@ unchanged, six recipes AST parsed by builder, forensic render exits0. Fresh
 silent low/high production clear is byte-identical40.083333333s; crash/restart
 passes1/2ms with no errors/audio.
 Limits: No new rider geometry, neck deformation or contact acceptance.
+
+## Round37 — closed hood assembly still fails appearance
+
+Finding: C firsttrial closes the mesh but parent rejects body5/10 and face3/10
+against approved mockups; rear cloth seam and flat collar are unacceptable.
+Validation: Parent reviewed front/back/body, face front/profile and gray neck
+views; builder froze actual36frame turntable and16reimportedPBR/grayviews.
+Protected41,852source triangles have zero position and native-weight changes;
+materialUV1corner maxerror2.98e-8, initialwrongUV0audit frozen.
+Limits: Scores are diagnostic due to reference lighting/camera differences;
+no neck-motion, final rig or new-rider contact acceptance.

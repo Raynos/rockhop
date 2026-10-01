@@ -1,0 +1,68 @@
+{
+  "status": "UNACCEPTED frozen C garment-pattern trial01; actual reimport and visual/motion review pending",
+  "startedUTC": "2026-10-01 01:40:49 UTC",
+  "deadlineUTC": "2026-10-01 02:17:00 UTC",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a"
+  },
+  "recipeSHA256": "df36d490cca1c79053c828a81be8d9bfac147bcf24e0611c11a5034dad5f4af8",
+  "mechanism": "Authored stitched cloth panels; native Catmull-Clark subdivision, limited shrinkwrap onto original saved cloth reference, native 2mm solidification, actual shared-index sewing of both lining and new neck",
+  "failureHistory": "Six prior neck failures retained; no history reset. This is first C pattern trial.",
+  "limits": [
+    "New hood solid-color PBR has no baked high resolution textile map.",
+    "Static appearance is not final rig/contact acceptance.",
+    "All source face anatomy/UV/eyes stay fixed outside lower neck trim."
+  ],
+  "sourceProtection": {
+    "removedNamedRegion": "Original upper hoodie/hood above 1.45m plus rejected H21 head; original retained in saved comparison object",
+    "removedFaceCount": 17728,
+    "removedSourceFaceIdsSHA256": "ec5204a90f0bafa01ee9ac7242dfed2dd2d8fe62db4b4813940f74aadb724645",
+    "protectedSourceFaces": 38434,
+    "protectedGeometryAllUVsMaterialSHA256": "524f55c87f2b80ba2d919baefb6f8f0084c52025f05083c977d447a2a57be855",
+    "exactPreserved": true,
+    "newFaceUVGeometryAbove1_53mSHA256": "c471acdd430765887f979317c517c93df1e0e360b004ffc6f716780269dcdb99",
+    "newFaceGeometryUVPreserved": true,
+    "bodyMaterialSlotsAppendedWithoutClearing": true,
+    "originalMaterialsFaceArrays": []
+  },
+  "cloth": {
+    "authoredPanels": 2,
+    "authoredSharedFrontRearSeams": true,
+    "controlVertices": 384,
+    "controlQuads": 320,
+    "subdivisionLevels": 1,
+    "lowerBoundaryShrinkwrapWeight": 0.12,
+    "thicknessM": 0.002,
+    "actualBoundaryCounts": [
+      128,
+      128,
+      128,
+      128
+    ],
+    "newSkinBoundaryVertices": 200,
+    "sewnActualSharedIndexFaces": {
+      "garmentToOuterPanel": 238,
+      "hoodRollToInnerLining": 256,
+      "innerLiningToActualSkinNeck": 328
+    },
+    "sourceGarmentBoundaryVertices": 110,
+    "newHoodTextures": "No high-resolution textile bake: deliberate solid-color PBR with authored native UVs"
+  },
+  "topology": {
+    "vertices": 91425,
+    "faces": 109346,
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "degenerateFaces": 0
+  },
+  "outputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/trial01/character.blend": "1dbae89a2782cf356ee2a89526ab637b87663f80251dd8abab44886ec7477f1c",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/autonomous-lanes/C-garment-pattern/trial01/character.glb": "7475a4ca5580be9adaa35e0564177ac3997afa3021de33f283708fb4004414c7"
+  },
+  "inputsAfter": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/bodyPBR.blend": "952c4ed7fb5f3d82ccdce4c606535e5c347076e1cbdd41f87bc7d31eaac3f1c5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v8-palette/african/head.blend": "2484a601f81fa1ba173929d310d4e03ca4aca4862ac66bd87a8590765a1a538a"
+  },
+  "finishedUTC": "2026-10-01 01:41:04 UTC"
+}

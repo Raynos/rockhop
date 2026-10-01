@@ -1,0 +1,81 @@
+{
+  "verdict": "REJECTED for appearance; no full rig or moving neck/contact acceptance",
+  "rubric": "../../../assembly-audit/visual-rubric.md",
+  "scoresAreSubjectiveDiagnostic": true,
+  "matchedAcceptanceScore": null,
+  "mismatches": [
+    "Imagegen reference light/camera not calibrated to actual",
+    "Fullbody blank-margin crop only, no retouching"
+  ],
+  "fullBody": {
+    "score": 5,
+    "criteria": [
+      {
+        "name": "Proportions/silhouette",
+        "points": 1.2
+      },
+      {
+        "name": "Anatomy",
+        "points": 1.1
+      },
+      {
+        "name": "Clothing construction/detail",
+        "points": 1.0
+      },
+      {
+        "name": "Neck/rear integration",
+        "points": 0.5
+      },
+      {
+        "name": "Texture/PBR/identity",
+        "points": 1.2
+      }
+    ]
+  },
+  "face": {
+    "score": 3,
+    "criteria": [
+      {
+        "name": "Identity/proportions/expression",
+        "points": 0.6
+      },
+      {
+        "name": "Facial anatomy",
+        "points": 1.0
+      },
+      {
+        "name": "Brows/hair/stubble",
+        "points": 0.2
+      },
+      {
+        "name": "Texture/material",
+        "points": 0.5
+      },
+      {
+        "name": "Profile/neck continuity",
+        "points": 0.7
+      }
+    ]
+  },
+  "visibleDefects": [
+    "Broad flat collar changes hoodie silhouette",
+    "Jagged cloth seam evident front and rear",
+    "Drawstrings meet replacement collar awkwardly",
+    "Missing eyebrow character, weak scalp detail",
+    "Flat reddish eyes and diffuse-only generic skin",
+    "Face identity differs substantially from approved target"
+  ],
+  "independentlyViewed": [
+    "full-body-target-comparison.jpg",
+    "face-target-comparison.jpg",
+    "pbr-full-front.png",
+    "pbr-full-rear.png",
+    "pbr-face-front.png",
+    "pbr-face-profile.png",
+    "pbr-neck-rear.png",
+    "gray-neck-three-quarter.png"
+  ],
+  "minimumRequiredEach": 7,
+  "targetEach": 8,
+  "next": "Separate garment over continuous skin; independently improve/replace face. Do not rig this assembly."
+}
