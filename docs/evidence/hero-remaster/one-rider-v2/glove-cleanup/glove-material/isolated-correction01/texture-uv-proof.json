@@ -1,0 +1,184 @@
+{
+  "status": "Read-only actual GLB material/UV/normal pixel proof; parent appearance judgment pending",
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            2.0,
+            2.0,
+            2.0
+          ]
+        }
+      },
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 1
+        },
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Baked black leather micrograin",
+      "normalTexture": {
+        "index": 2,
+        "texCoord": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3,
+          "texCoord": 1
+        },
+        "metallicFactor": 0,
+        "metallicRoughnessTexture": {
+          "index": 4,
+          "texCoord": 1
+        }
+      }
+    }
+  ],
+  "primitiveUVAttributes": [
+    [
+      "POSITION",
+      "NORMAL",
+      "TEXCOORD_0",
+      "TEXCOORD_1"
+    ],
+    [
+      "POSITION",
+      "NORMAL",
+      "TEXCOORD_0",
+      "TEXCOORD_1"
+    ]
+  ],
+  "textureRecords": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    }
+  ],
+  "imageRecords": [
+    {
+      "bufferView": 5,
+      "mimeType": "image/jpeg",
+      "name": "textured"
+    },
+    {
+      "bufferView": 6,
+      "mimeType": "image/png",
+      "name": "textured_metallic.jpg-textured_roughness"
+    },
+    {
+      "bufferView": 12,
+      "mimeType": "image/png",
+      "name": "normal"
+    },
+    {
+      "bufferView": 13,
+      "mimeType": "image/png",
+      "name": "basecolor"
+    },
+    {
+      "bufferView": 14,
+      "mimeType": "image/png",
+      "name": "roughness"
+    }
+  ],
+  "gloveBaseRoughNormalUseUVChannel": 1,
+  "actualNormalMapNonflatInNativeChartInterior": true,
+  "nativeChartPixelStats": {
+    "basecolor": {
+      "nativeChartInteriorPixels": 423568,
+      "meanRGB": [
+        30.779926717787934,
+        32.087124145355645,
+        34.55989829260001
+      ],
+      "standardDeviationRGB": [
+        1.0190523100840556,
+        0.9823233914651216,
+        0.9205879385558052
+      ],
+      "minimumRGB": [
+        27,
+        28,
+        31
+      ],
+      "maximumRGB": [
+        35,
+        36,
+        38
+      ]
+    },
+    "roughness": {
+      "nativeChartInteriorPixels": 423568,
+      "meanRGB": [
+        165.74912882937332,
+        165.74912882937332,
+        165.74912882937332
+      ],
+      "standardDeviationRGB": [
+        2.6027632763592776,
+        2.6027632763592776,
+        2.6027632763592776
+      ],
+      "minimumRGB": [
+        155,
+        155,
+        155
+      ],
+      "maximumRGB": [
+        177,
+        177,
+        177
+      ]
+    },
+    "normal": {
+      "nativeChartInteriorPixels": 423568,
+      "meanRGB": [
+        127.8998673176444,
+        127.86932440599857,
+        254.99974738412723
+      ],
+      "standardDeviationRGB": [
+        0.8119928084704596,
+        0.9493125887498428,
+        0.018243424082212148
+      ],
+      "minimumRGB": [
+        108,
+        102,
+        252
+      ],
+      "maximumRGB": [
+        147,
+        153,
+        255
+      ]
+    }
+  },
+  "bakeScope": "3527 copied glove/seam faces only,0bodyfaces; no highpoly raycasting or proceduralpreview substitution"
+}

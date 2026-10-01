@@ -376,3 +376,18 @@ render completed00:31:11UTC, before00:31:54deadline. Geometry/UV fixed.
 
 Limits: Weak brows/exact identity and full appearance remain unaccepted.
 Native CC0 diffuse provenance replaces failed Pixal transfer explicitly.
+
+Finding: Isolating glove/seam bake surfaces removes body atlas write
+contamination. Actual baked black micrograin material is coherent on the
+natural hands, with continuous wrists and unchanged native weights.
+
+Validation: Parent reviewed six hand and six wrist PBR/gray pairs; actual
+GLB retains2048base/roughness/normal maps. Normal pixels vary; source shape,
+original UV and native-weight combined hash remains identical.
+
+Limits: Approve material foundation only. Angular source cuffs remain;
+no collision, physical grip, final rig or whole character acceptance.
+
+Finding: Final glove freeze includes all30 paired renders before deadline.
+Validation: Reimport completed00:41:54UTC, originaldeadline00:42:10UTC.
+Limits: Material foundation only; unchanged shape is not a grip pass.

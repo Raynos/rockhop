@@ -939,8 +939,11 @@
     "failedSetupFixes": 1,
     "failure": "Body and glove material bake images alias; body UV can contaminate glove atlas",
     "evidence": "../one-rider-v2/glove-cleanup/glove-material/failed-bake-selection01.json",
-    "accepted": false,
-    "next": "One isolated glove+seam-only copied bake helper within original 12-minute deadline"
+    "accepted": "Material foundation only",
+    "next": "No further material experiment; full contact rig remains pending",
+    "correction": "Isolated actual3527glove/seam faces,0bodyfaces; shader-to-UV2048CPU maps",
+    "geometryWeightsOriginalUVHashUnchanged": true,
+    "evidenceCorrection": "../one-rider-v2/glove-cleanup/glove-material/isolated-correction01/parent-review.json"
   },
   "oneRiderV2NativeNeck": {
     "failedFixes": 1,

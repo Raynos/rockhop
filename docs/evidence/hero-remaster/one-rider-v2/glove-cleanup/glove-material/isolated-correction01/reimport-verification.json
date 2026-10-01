@@ -1,0 +1,319 @@
+{
+  "status": "Actual exportedPBR reimport evidence; parent review pending",
+  "materials": [
+    {
+      "name": "Material",
+      "nodes": [
+        "ShaderNodeBsdfPrincipled",
+        "ShaderNodeOutputMaterial",
+        "ShaderNodeTexImage",
+        "ShaderNodeUVMap",
+        "ShaderNodeSeparateColor",
+        "ShaderNodeTexImage",
+        "ShaderNodeUVMap"
+      ],
+      "images": [
+        {
+          "name": "textured",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "textured_metallic.jpg-textured_roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baked black leather micrograin",
+      "nodes": [
+        "ShaderNodeBsdfPrincipled",
+        "ShaderNodeOutputMaterial",
+        "ShaderNodeTexImage",
+        "ShaderNodeUVMap",
+        "ShaderNodeMath",
+        "ShaderNodeSeparateColor",
+        "ShaderNodeTexImage",
+        "ShaderNodeUVMap",
+        "ShaderNodeNormalMap",
+        "ShaderNodeTexImage",
+        "ShaderNodeUVMap"
+      ],
+      "images": [
+        {
+          "name": "basecolor",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "roughness",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "normal",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "scope": "hands",
+      "side": 1,
+      "view": "front",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands-1-front-pbr.png",
+      "sha256": "8f8390cf605f3afb477c6aaa340643aee3b9f8f6f5ed435ac1244784bc0e1e50"
+    },
+    {
+      "scope": "hands",
+      "side": 1,
+      "view": "front",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands-1-front-gray.png",
+      "sha256": "49e061317ad0a149c1a5b09b3c4efda7254cce3db4c76093184a82a53d2afa29"
+    },
+    {
+      "scope": "hands",
+      "side": 1,
+      "view": "profile",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands-1-profile-pbr.png",
+      "sha256": "f5eade48d481031b317569b812528f4227212281be6de5a59189965744d07596"
+    },
+    {
+      "scope": "hands",
+      "side": 1,
+      "view": "profile",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands-1-profile-gray.png",
+      "sha256": "5f1f2626b0008b67c1cc544a1512c6abed0d7db9b213e7c71b544b2f74fbea63"
+    },
+    {
+      "scope": "hands",
+      "side": 1,
+      "view": "back",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands-1-back-pbr.png",
+      "sha256": "c8c68e983f8124fe28f14a14b862883a5634c1116f7a3a32709c8c83287c69cc"
+    },
+    {
+      "scope": "hands",
+      "side": 1,
+      "view": "back",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands-1-back-gray.png",
+      "sha256": "93fb760f59ffeab82c5c6f193ba3e98f492dfdc199e1f8e4b6cf1a8e251b5a99"
+    },
+    {
+      "scope": "hands",
+      "side": -1,
+      "view": "front",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands--1-front-pbr.png",
+      "sha256": "99c70206263b271a7dbc7e8f2c6f66dc763d43819b5c6cd867d4ca6ae2be4854"
+    },
+    {
+      "scope": "hands",
+      "side": -1,
+      "view": "front",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands--1-front-gray.png",
+      "sha256": "3b06d0b960e144ce4cf02e3ffc263cc3c689cea804c50113909f01ba846f1fcc"
+    },
+    {
+      "scope": "hands",
+      "side": -1,
+      "view": "profile",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands--1-profile-pbr.png",
+      "sha256": "b559e1965a13bd256b8c7916e9ab6778cf30a550f06defc94e301e0a6f1a35ad"
+    },
+    {
+      "scope": "hands",
+      "side": -1,
+      "view": "profile",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands--1-profile-gray.png",
+      "sha256": "9373812fa7f391d7a6a749558a78c0949292eebd8b3637244340ffcf3ae46d1e"
+    },
+    {
+      "scope": "hands",
+      "side": -1,
+      "view": "back",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands--1-back-pbr.png",
+      "sha256": "6802880bdf67f9fc5a10c844dd8c77b5b4f86e77d42834f00fe77fc401f566bd"
+    },
+    {
+      "scope": "hands",
+      "side": -1,
+      "view": "back",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/hands--1-back-gray.png",
+      "sha256": "03696b22fb0eef6bfb2ac5dfaaccf5977b742edc4eff74084b08777709c92f9e"
+    },
+    {
+      "scope": "wrists",
+      "side": 1,
+      "view": "front",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists-1-front-pbr.png",
+      "sha256": "8240eb86abf1cab947809155e353d01e604317bb9b162f564c3b85aaf9208aa2"
+    },
+    {
+      "scope": "wrists",
+      "side": 1,
+      "view": "front",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists-1-front-gray.png",
+      "sha256": "940430022ed4b38c8224b1321f832f072d4f5289be2a8cf04792588236808dec"
+    },
+    {
+      "scope": "wrists",
+      "side": 1,
+      "view": "profile",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists-1-profile-pbr.png",
+      "sha256": "c0923a30875b9c170087ac922f531bf11ae9733b88a35d65baa3578e9fd52716"
+    },
+    {
+      "scope": "wrists",
+      "side": 1,
+      "view": "profile",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists-1-profile-gray.png",
+      "sha256": "5cf866df984e3500e160722cdca2cb48a654dc87dc15c73c1293d138673b5444"
+    },
+    {
+      "scope": "wrists",
+      "side": 1,
+      "view": "back",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists-1-back-pbr.png",
+      "sha256": "a60e4251406a42e9f25c8d201b8a7e0506bc2a82a27250193047047dabb3505d"
+    },
+    {
+      "scope": "wrists",
+      "side": 1,
+      "view": "back",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists-1-back-gray.png",
+      "sha256": "c482060b93672b00629f31a61f09c186f19bbe6cf4079a3a13d7ebb454aadcd5"
+    },
+    {
+      "scope": "wrists",
+      "side": -1,
+      "view": "front",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists--1-front-pbr.png",
+      "sha256": "5d71a7174dfd48a3251822b39ec2f120e3eeef5ee8773710f9e81c876d52118e"
+    },
+    {
+      "scope": "wrists",
+      "side": -1,
+      "view": "front",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists--1-front-gray.png",
+      "sha256": "b3f0c0fde4ae9a0a203c29ff014faeb6c98fe48c282f55f92f10df7a9ca82cbf"
+    },
+    {
+      "scope": "wrists",
+      "side": -1,
+      "view": "profile",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists--1-profile-pbr.png",
+      "sha256": "1fc0e230508571124a8a38dae3e186f8332301531f8e6223dd9c8ba62961e331"
+    },
+    {
+      "scope": "wrists",
+      "side": -1,
+      "view": "profile",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists--1-profile-gray.png",
+      "sha256": "c53a51e527fc67572c743fbe32b03cc0bf9d0bb096e1b6f72ac6cc30484d12cc"
+    },
+    {
+      "scope": "wrists",
+      "side": -1,
+      "view": "back",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists--1-back-pbr.png",
+      "sha256": "db99aa7be352ff897731a67de33bd73d2e06379cccf84adbeb2755d58a3f4fbb"
+    },
+    {
+      "scope": "wrists",
+      "side": -1,
+      "view": "back",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/wrists--1-back-gray.png",
+      "sha256": "19a0566001a759d89b42f43c2b44fb6b39cc6e53f57e3f594d095b4b6cbb7056"
+    },
+    {
+      "scope": "body",
+      "side": 0,
+      "view": "front",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/body-0-front-pbr.png",
+      "sha256": "3cf08b0f3dea2a9407b42ae477e0ed4a25e0b1f6f25ddd1312685a70f2182d63"
+    },
+    {
+      "scope": "body",
+      "side": 0,
+      "view": "front",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/body-0-front-gray.png",
+      "sha256": "6a4abfa7a46afe37978cd4d383657e34791311935336d18e5873b023ee8963d2"
+    },
+    {
+      "scope": "body",
+      "side": 0,
+      "view": "profile",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/body-0-profile-pbr.png",
+      "sha256": "299d98d4eaac7611426b8f2ec8022fcd746454d7f56a475e413c96305cf42102"
+    },
+    {
+      "scope": "body",
+      "side": 0,
+      "view": "profile",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/body-0-profile-gray.png",
+      "sha256": "f4b32f65cf923beafb66375b20d1b1fb8031a8b2d42fbdff178170a425ade1bd"
+    },
+    {
+      "scope": "body",
+      "side": 0,
+      "view": "back",
+      "mode": "pbr",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/body-0-back-pbr.png",
+      "sha256": "acad8bc107b1338d54839241854788771515480ad368cd8190dbca03f24635bc"
+    },
+    {
+      "scope": "body",
+      "side": 0,
+      "view": "back",
+      "mode": "gray",
+      "file": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/glove-material/isolated-correction01/body-0-back-gray.png",
+      "sha256": "194739bedac9575abffaa2e87d8acc00151191189c39bd097f21f8d933d0e270"
+    }
+  ],
+  "completedMatchedFrames": 30,
+  "deadlineUTC": "2026-10-01T00:42:10+00:00",
+  "finishedUTC": "2026-10-01T00:41:54.444707+00:00",
+  "unfinishedAppearanceFrames": 0,
+  "geometryAndNativeWeightsPreserved": true
+}
