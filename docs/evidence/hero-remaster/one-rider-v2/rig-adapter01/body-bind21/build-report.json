@@ -1,0 +1,89 @@
+{
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/guarded-correction01/rider.glb",
+  "sourceSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind21/rider.glb",
+  "candidateSHA256": "63cc2f703a5dd40d015e2f9ead489e991bedf59119c6b2ae09bd9f9aa058695a",
+  "changedExportVertices": 691,
+  "changedPhysicalVertices": 598,
+  "changedBytes": 7762,
+  "allNonSkinBytesExact": true,
+  "JSONAndNodesExact": true,
+  "protectedSharedAliasesExact": true,
+  "protectedSharedPhysicalVertices": 434,
+  "pinnedROIBoundaryExact": true,
+  "outsideROIWeightsExact": true,
+  "sourceWeightSumsPreservedBeforeFloat32": true,
+  "sourceUnchanged": true,
+  "sides": [
+    {
+      "side": "L",
+      "eligiblePhysicalVertices": 1436,
+      "torsoContaminatedChangedPhysicalVertices": 310,
+      "pinnedBoundaryPhysicalVertices": 137,
+      "bindShoulder": [
+        0.6296998858451843,
+        1.4616000652313232,
+        0.20807497203350067
+      ],
+      "bindElbow": [
+        0.6246249079704285,
+        1.1418750286102295,
+        0.2892748713493347
+      ],
+      "bindWrist": [
+        0.6731138825416565,
+        0.8818126916885376,
+        0.3616516590118408
+      ],
+      "blendDirection": [
+        0.08108913898468018,
+        -0.963211715221405,
+        0.25621822476387024
+      ]
+    },
+    {
+      "side": "R",
+      "eligiblePhysicalVertices": 1443,
+      "torsoContaminatedChangedPhysicalVertices": 288,
+      "pinnedBoundaryPhysicalVertices": 140,
+      "bindShoulder": [
+        0.6297000050544739,
+        1.4616000652313232,
+        -0.20807500183582306
+      ],
+      "bindElbow": [
+        0.624625027179718,
+        1.1418750286102295,
+        -0.2892749011516571
+      ],
+      "bindWrist": [
+        0.6776549220085144,
+        0.8825655579566956,
+        -0.3588910698890686
+      ],
+      "blendDirection": [
+        0.0896899625658989,
+        -0.9636548161506653,
+        -0.25164487957954407
+      ]
+    }
+  ],
+  "settings": {
+    "singleConstruction": true,
+    "parameterSweep": false,
+    "sourceM": {
+      "y": [
+        0.95,
+        1.38
+      ],
+      "lateralAbsZAbove": 0.18,
+      "sourceArmShaftDistanceBelow": 0.14,
+      "originalUpperForearmSumAbove": 0.3
+    },
+    "protection": "hood/other material exact-position aliases; hand/neck/head/leg influences excluded; first ROI graph ring pinned; outside ROI exact",
+    "redistribution": "torso mass removed only from contaminated eligible sleeves; native arm-chain longitudinal smooth upperArm/forearm transition +/-85mm around source elbow; preserve source weight sum",
+    "taper": "four source graph rings with cubic smoothstep; 60mm cuff/shoulder taper; 40mm lateral taper"
+  },
+  "limits": "CPU-only unaccepted sleeve weight experiment; no rendered art score, rig or physics changes.",
+  "weightFieldSHA256": "9f9d6a82bcbde4dae7c7735e2ca75a6f36c693a5c4b5a3f9b1be9032ec75b9dc"
+}

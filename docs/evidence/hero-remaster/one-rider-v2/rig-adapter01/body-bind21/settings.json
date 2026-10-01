@@ -1,0 +1,16 @@
+{
+  "singleConstruction": true,
+  "parameterSweep": false,
+  "sourceM": {
+    "y": [
+      0.95,
+      1.38
+    ],
+    "lateralAbsZAbove": 0.18,
+    "sourceArmShaftDistanceBelow": 0.14,
+    "originalUpperForearmSumAbove": 0.3
+  },
+  "protection": "hood/other material exact-position aliases; hand/neck/head/leg influences excluded; first ROI graph ring pinned; outside ROI exact",
+  "redistribution": "torso mass removed only from contaminated eligible sleeves; native arm-chain longitudinal smooth upperArm/forearm transition +/-85mm around source elbow; preserve source weight sum",
+  "taper": "four source graph rings with cubic smoothstep; 60mm cuff/shoulder taper; 40mm lateral taper"
+}

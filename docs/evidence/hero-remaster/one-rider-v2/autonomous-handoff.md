@@ -7,7 +7,7 @@ Existing goal is active again following the user's resumption. This file and
 RIDER_THREE_CHECKPOINTS define its autonomous execution contract; no narrower
 goal replaces it. The goal API exposes status, not an objective-edit method.
 
-## Current evidence — round122, 2026-10-01
+## Current evidence — round123, 2026-10-01
 
 - The private WHITE rider uses the NEW H21-4 body, NEW H21 buzz bust,
   NEW donor01 hood and NEW native anatomical gloves. Historical production
@@ -650,3 +650,14 @@ no silent candidate replacement. Local silent WebKit390/1200 playback all15
 movies/images passes, no overflow/errors. Exact Sites source pushed before
 packaging/upload; audience unchanged. Actual physical iPhone remains unverified.
 Normal player assets and current11 master unchanged. No automation.
+
+Round123: sleeve21 weight redistribution rejected by independent parent CPU
+verifier. Fewer aggregate folds still creates37–44 new folds; original elbow
+3789 stretches4.01→4.96,4.55→5.72,8.65→11.36,9.27→12.20x. Old corrupt-weight
+eligibility mask pins two bad spine-heavy neighbors; stop this mechanism,
+not a taper sweep. Hood, non-skin bytes, exterior, bones/debug/physics and
+palm/sole contacts exact; candidate not GPU-rendered or accepted. Required
+third-round ship on unchanged current11 passes exact finish/hash/crash/restart.
+Next anatomically connected sleeve mask or local elbow corrective. Eye22 CPU
+local skin-field diagnosis underway; dark pre-lighting pigment proved. Current11
+master and protected neck/hood join retained; fullquality/later gates open.

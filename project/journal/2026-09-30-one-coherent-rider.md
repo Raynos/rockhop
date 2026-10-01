@@ -1294,3 +1294,13 @@ Validation: All15 play at390/1200 in silent local WebKit;4images decode, no
 overflow/errors. Exact Sites source/packaging/native deployment succeeded.
 Limits: Physical iPhone still unverified. These are work-in-progress comparisons,
 not accepted player assets or completed rider quality gates.
+
+## Round123 — reject corrupt-weight sleeve boundary
+
+Finding: A mask derived from damaged weights leaves spine-heavy elbow neighbors
+pinned and worsens the measured witness. Stop this segmentation technique.
+Validation: Parent verifier reproduces all four archived CPU comparisons;
+37–44 new fold indicators, elbow stretch worse all four; hood/rig/contact exact.
+Unchanged current11 third-round silent boot/clear/crash/restart gate passes.
+Limits: No GPU art trial for failed candidate. Connected sleeve segmentation or
+local corrective geometry is next; full appearance/contact/device gates open.

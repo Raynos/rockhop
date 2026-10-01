@@ -1,0 +1,13 @@
+{
+  "failures": [
+    {
+      "stage": "pre-export floating-point conservation assertion",
+      "error": "Weight-sum mismatch up to 2.98e-8 in arithmetic before any candidate export.",
+      "correction": "Use the complementary forearm mass and add the sum residual explicitly before float32 serialization; verify preserved source sums below1e-12.",
+      "limit": "Numerical setup correction, not a second anatomical construction or a tuning sweep."
+    }
+  ],
+  "anatomicalConstructions": 1,
+  "cpuRejectedConstructions": 1,
+  "gpuWorkloads": 0
+}
