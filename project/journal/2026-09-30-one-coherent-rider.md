@@ -694,3 +694,14 @@ wrong direct assignmentRGB229/192/175, corrected decodeRGB200/135/110.
 Original source SHA exact. Retired A texture/geometry handoff frozen.
 Limits: Controlled color witness only; full repaired face rerender pending,
 no appearance, neck-motion, rig or new-rider gameplay acceptance.
+
+## Round62 — corrected color still needs continuous cheek response
+
+Finding: Correct sRGB conversion removes harsh white bandages, but pale
+cheek bands remain. Face diagnostic6.5/10; polynomial fit is unaccepted.
+Validation: Actual CPU gray/PBR exports; all five primitive positions,
+normals and triangle indices exactly match frozen closed geometry. Four
+UV quadrants prevent inner/outer overwrite, outside buffers unchanged.
+Limits: Fifth local failed attempt; switch from unconstrained color fit
+to boundary-constrained texture/roughness or coherent material response.
+No fullbody, neck-motion or rig acceptance; eye texture remains noisy.

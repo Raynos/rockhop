@@ -261,3 +261,9 @@ pale cheek color; source image shader and decoded-color PNG byte-identical,
 wrong assignment differs by65/255 maximum. Apply proven conversion and
 isolate inner/exterior UV islands without geometry changes. A retired,
 parent owns texture04 because replacement spawn reached thread limit.
+
+Round62: Proven sRGB decode reduces white bandages; actual face6.5/10 still
+has pale cheek response/faint facets/noisyeye texture. Positions/normals/
+indices allfiveprimitives exact,4disjoint UVquadrants. Fifth local failed
+attempt; stop unconstrained polynomialcolor+uniformroughness method and
+use source-boundary transport/coherentPBR response, keep closed geometry.

@@ -1,0 +1,41 @@
+22:47:57 | INFO: Data are loaded, start creating Blender stuff
+22:47:57 | INFO: Blender create Mesh node textured
+22:47:57 | INFO: glTF import finished in 0.10s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-texture04/repair.py:89: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  ids=[int(v) for v in triangle];a,b,c=p[ids];centrePoint=(a+b+c)/3;centrePoint[2]=float(features(centrePoint[None,:2])@coeff);centreID=len(vertices);vertices.append(centrePoint)
+22:47:58 | INFO: Data are loaded, start creating Blender stuff
+22:47:58 | INFO: Blender create Mesh node textured
+22:47:58 | INFO: glTF import finished in 0.09s
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-texture04/repair.py:174: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material=bpy.data.materials.new('Discarded diagnostic gray');material.use_nodes=True;bs=material.node_tree.nodes['Principled BSDF'];bs.inputs['Base Color'].default_value=(.42,.42,.42,1);bs.inputs['Roughness'].default_value=.65
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-texture04/repair.py:178: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Matched neutral studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.16,.16,.16,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world;target=Vector((0,0,1.5))
+00:04.737  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-front.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-front.png
+00:08.156  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-profile.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-profile.png
+00:11.430  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-three-quarter.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-three-quarter.png
+00:14.561  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-rear.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-gray-rear.png
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/autonomous-lanes/A-new-head-audit/cheek-texture04/repair.py:194: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  obj=bpy.data.objects.new('Isolated cheek bake '+str(k),mesh);scene.collection.objects.link(obj);mat=bpy.data.materials.new('CPU local skin reconstruction');mat.use_nodes=True;nodes=mat.node_tree.nodes;nodes.clear();output=nodes.new('ShaderNodeOutputMaterial');emission=nodes.new('ShaderNodeEmission');attr=nodes.new('ShaderNodeVertexColor');attr.layer_name='AnatomicalSkinFit';mat.node_tree.links.new(attr.outputs['Color'],emission.inputs['Color']);mat.node_tree.links.new(emission.outputs[0],output.inputs['Surface']);dest=nodes.new('ShaderNodeTexImage');dest.image=atlas;nodes.active=dest;obj.data.materials.append(mat)
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+Info: Baking map saved to internal image, save it externally or pack it
+22:48:11 | INFO: Data are loaded, start creating Blender stuff
+22:48:11 | INFO: Blender create Mesh node textured
+22:48:11 | INFO: glTF import finished in 0.09s
+00:18.101  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-front.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-front.png
+00:21.793  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-profile.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-profile.png
+00:25.168  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-three-quarter.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-three-quarter.png
+00:28.962  render           | Saved: '/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-rear.png'
+ACTUAL_FACE_VIEW /Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/actual-PBR-rear.png
+LOCAL_CHEEK_REPAIR_TRIAL_FROZEN
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

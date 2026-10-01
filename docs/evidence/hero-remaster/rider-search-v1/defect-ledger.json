@@ -1088,7 +1088,7 @@
     "H21-freshCheekOpenings": {
       "source": "ActualH21buzz-native01 raw985183 beforecleanup/reducer",
       "sourceDefectPresent": true,
-      "repairFailedAttempts": 4,
+      "repairFailedAttempts": 5,
       "actualCircuits": [
         37,
         38,
@@ -1096,16 +1096,17 @@
         19
       ],
       "actualBoundaryEdges": 111,
-      "next": "Apply proven sRGB decode before linear-color fit/bake; separate inner/exterior UV islands; unchanged repaired geometry then actual PBR views",
+      "next": "Source-boundary constrained color/roughness transport or coherent skin material response; keep exact closed geometry, no region expansion",
       "evidence": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/gray-diagnostic03/cheek-surface-forensic.json",
-      "lastFailure": "Dual-sheet geometry closes both cheeks, but PBR bake produces pale jagged patches; parent rejects actual8gray/PBRviews",
+      "lastFailure": "Correct linear/sRGB transfer reduces jaggedwhitebandages but broadpale cheekbands remain, face6.5 below7",
       "setupFailedAttempts": 1,
       "geometryClosed": true,
       "physicalBoundaryEdges": 0,
       "physicalFaceComponents": 1,
-      "textureFailedAttempts": 1,
+      "textureFailedAttempts": 2,
       "doubleEncodingProven": true,
-      "proof": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/probe.json"
+      "proof": "../one-rider-v2/autonomous-lanes/A-new-head-audit/generation-evidence/h21-buzz-native01/cheek-texture04/probe.json",
+      "retiredApproach": "Unconstrained polynomial-color fit plus uniform medianroughness forlocalpatch"
     },
     "NEW-donor01WholeHood": {
       "setupFailedAttempts": 1,
