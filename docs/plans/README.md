@@ -43,6 +43,8 @@ Checkpoint 1 NEWbust audit finds none>=7; N1~5,N6~4.5 diagnostic. Actualraw10.16
 
 Checkpoint 1 freshactualH21buzz generation completes138s/raw985183faces beforecleanup; actualrender reviewnext. Bprojectedcontainment gate failsbutisnotvalid3Dcoverage; 6skinbasepoints potentiallyexposedside/rear (neckfamily13/15 beforependingC). No face/body/neckmotion/rig acceptance.
 
+Checkpoint 1 freshH21buzzmodel complete138s, raw985183/painted99999faces; actualrender reviewactive. C main142rimvalid but4triangleisland remains (neck14/15); parentreservesone exactcleanup/curvedhood attempt, Bpreparescleanfallbackreadonly. Round45silentproductionclear/crash/1msrestartpass; no newrider acceptance.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

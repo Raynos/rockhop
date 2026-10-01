@@ -532,3 +532,13 @@ failure honestly; actual3Dbasecoverage has6potentialexposedpointsside/rear.
 Validation: Parentinspected actual3Dprofilewitness andBVHreport; sourcehashes
 unchanged, exactskin216edgebase/cameraocclusion recorded, no volumeexecuted.
 Limits: Staticvertexcoverage doesnotprove triangleclearance or neckmotion.
+
+## Round45 — isolate four disconnected nape triangles
+
+Finding: Exacttwofacecorrection fixespinch; main142edgegarmentrim valid,
+butfourdisconnectedoldnapetriangles stillstopsetup. Reservefinaloldlineage
+repair for explicitIDs26265/26268/26649/26650; no parallelattempt16.
+Validation: Parentactualprofilewitness reviewed;16reimportviews/sourceproof
+frozen,41,742protectedpolygons/weights exact. Freshproductionlow/high clear
+byteidentical40.083333333s, crashandrestartpasses1mswithoutaudio/errors.
+Limits: No authoredhood or neckmotion; failure14/15, independentfaceunaccepted.

@@ -142,3 +142,10 @@ beinginvalidfor nonplanarhood/neckjawcoverage. Actual3DBVHread-onlyaudit finds
 No implicitvolume wasconstructed. FreshH21buzzmodeljobnowcompletedexit0
 138s with985,183rawfacesretainedbeforecleanup, CPUpaintand23.07GBpeakRSS;
 actualrenderreviewnext. No appearanceacceptance fromsuccessfulgeneration.
+
+Ctrial03 exact2facecorrectionremovespinch; main142edgecircuit valid, butone
+disconnected4triangleoldnaperemnantstopssetup. ExactIDs26265/26268/26649/26650
+frozen; no authoredhood. Neckfamily14/15. ParentreservesONEremainingold
+lineage attempt for exactislandcleanup/Ccurvedhood; noparallelattempt16.
+B preparesfundamentallyNEWgarment/sourcefallback readonly ifneeded.
+Round45 productionbyte-identicalclear/crash/1msrestartpasseslow/high.
