@@ -859,3 +859,14 @@ frames. Solemaxdrift2.263e-7m/facepair1.824e-7m;19skin decode1.979microns.
 Scale120840limbchecks independentlyverified, lint/typecheckpass.
 Limits: Scale notapplied; heldgrip onlycandidate, entrypenetrates12.04mm;
 UniMate/rigcloseups/seatcontact/playedriding stillopen.
+
+### Round83 — preserve motion at explicit metre scale
+
+Finding: Apply1.015 uniform scale to the same NEW white nineteen-bone skin,
+keeping proportions and world20mm hip offset. Actual bike grip witnesses
+show the former18mm cylinder needs real-surface verification.
+Validation: Parent inspected48decoded frames; sole surface drift0.2245µm,
+facepair0.1852µm; decoder restshape2.018µm,19bones/fiveprimitives,24finite
+samples. Handlebar decoder/typecheck/lint pass.
+Limits: Private foundation only; seat/closeups/new-rig UniMate/riding
+contacts and target8 polish remain open. Neither bike nor physics edited.

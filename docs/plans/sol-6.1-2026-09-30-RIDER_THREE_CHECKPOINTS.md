@@ -570,3 +570,15 @@ Native grip02 DQS heldpose is retained forbakedcontacttesting after parent
 198decodedframes: morecoherent palm/thumbwrap, wrist0, overlapdiagnostic0.
 LBS adds4overlaps. Closingsequence rejected12.04mmintermediatepenetration;
 movehandle only afterthumbclearance, preserve finalshape. No playerpromotion.
+
+### Applied scale foundation; actual bike fixture audit
+
+Body-bind04 applies declared1.015 scale and elbowZ1.125, world hip/pelvis
+offset20mm exact. Parent inspected48actual decoded frames: planted sole
+surface max0.2245micrometres, facialshape0.1852micrometres, production
+decoder restshape2.018micrometres with unchangedtrianglecounts,19bones,
+fiveprimitives/24finite samples. Checkpoint2 remainsopen for seat/cloth/
+contact/closeup and actualNEWrig UniMate comparison. Actual unchanged
+Rookie/Pro handlebars expose mixed rod/bend/lever vertices near markers.
+Native18mm fixture is provisional; determine actual surface alignment
+before retainedDQS grip. No bike, physics, player or package changes.

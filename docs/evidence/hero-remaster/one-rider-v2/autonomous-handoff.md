@@ -329,3 +329,8 @@ Round80: Bestjointseed57 shoulder1.44/hip.945/pelvis.925 reaches87profiles withf
 Round81: bodybind02 sameWHITE/literalbench48decodedframes parentreject:footdrift43.5mm/laphandreachshort87mm. Correctour pose-parent evaluation/handtargets, notsourceface. Elbowsearch03beststrictarm+.190mmbutleg−1.884mmremains; noalllimbsafety. Nextuniformunitscaleaudit asalternative tohiddenjointnudging. Round81prodexactfinish/crash103/restart3msLOW4msHIGHzeroerrors. Nativegrip02workindependentpending.
 
 Round82: bodybind03 controlfoundationPASS footbones3.332e-8m/sole2.263e-7m/facepair1.824e-7m/zeroIKshortfall, parent48decoded+endpoint+9matchedsamples inspected. Checkpoint2notclosed: rigcloseups/seatcontact/UniMateNEWrig pending. Scaleproxy1.015/elbowZ1.125 gives12.452mmstrictmargin/height1.822572/IPDapprox65.975/ratio1.2055, unapplied. Nativegrip02 parent198decoded: retainDQSclosedheldcandidate0overlap/wrist0; rejectentry12.04mm. Bothfreshagentsretired; cannotspawnnew threadlimit. Parentownsnextscale/binding/UniMate/contactintegration. No playerpromotion.
+
+Round83: body-bind04 now applies scale1.015 and sourcehipoffset.02/scale,
+48decoded frames preserve plantedsole/rigidface. Decoder resterror2.018µm,
+triangles intact. Fixture18mm needs actual-bike triangle inspection. Next
+use actualNEW rig for UniMate; checkpoint2/3 stillopen.
