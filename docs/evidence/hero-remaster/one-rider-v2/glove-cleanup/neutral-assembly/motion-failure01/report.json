@@ -1,0 +1,3739 @@
+{
+  "status": "FAIL first temporary diagnostic deformation: two fingers form spikes; static geometry approval only",
+  "failureCount": 1,
+  "sourceFilesSHA256Before": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/temporary-wrist-diagnostic.blend": "c3a3b22620744f638f83623268e2b4606a5fd5e77dbead5949298a2b9e1bc3d5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054"
+  },
+  "sourceFilesSHA256After": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/temporary-wrist-diagnostic.blend": "c3a3b22620744f638f83623268e2b4606a5fd5e77dbead5949298a2b9e1bc3d5",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054"
+  },
+  "cleanPolygonMaterialCounts": {
+    "0": 52635,
+    "1": 3527
+  },
+  "diagnosticPolygonMaterialCounts": {
+    "0": 56162
+  },
+  "cleanSemanticGloveVertices": 3507,
+  "diagnosticMaterialGloveVertices": 0,
+  "hands": [
+    {
+      "side": "L",
+      "nativeVertices": 1668,
+      "semanticWristSourceVertices": 62,
+      "nativeWeightsMaximumAbsoluteError": 0.0,
+      "diagnosticDominantGroups": {
+        "diagnosticHand1": 1600,
+        "diagnosticRoot": 68
+      },
+      "wrongNativeFingerVertices": 128,
+      "wrongNativeDominantBones": {
+        "finger2-3.L": 32,
+        "finger3-3.L": 36,
+        "lowerarm02.L": 55,
+        "wrist.L": 5
+      },
+      "wrongVertexDetails": [
+        {
+          "vertex": 26404,
+          "nativeCageVertex": 26,
+          "rest": [
+            0.34890931844711304,
+            -0.0505722239613533,
+            0.6961729526519775
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26406,
+          "nativeCageVertex": 28,
+          "rest": [
+            0.36103007197380066,
+            -0.05416961759328842,
+            0.6975680589675903
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26407,
+          "nativeCageVertex": 29,
+          "rest": [
+            0.3554896414279938,
+            -0.050502926111221313,
+            0.6923867464065552
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26410,
+          "nativeCageVertex": 32,
+          "rest": [
+            0.35548073053359985,
+            -0.052146848291158676,
+            0.6926460266113281
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26412,
+          "nativeCageVertex": 34,
+          "rest": [
+            0.34965774416923523,
+            -0.05189329385757446,
+            0.6952976584434509
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26413,
+          "nativeCageVertex": 35,
+          "rest": [
+            0.3602157533168793,
+            -0.05457959696650505,
+            0.696461021900177
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26416,
+          "nativeCageVertex": 38,
+          "rest": [
+            0.34841233491897583,
+            -0.052815914154052734,
+            0.6995661854743958
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26433,
+          "nativeCageVertex": 55,
+          "rest": [
+            0.35486820340156555,
+            -0.045735616236925125,
+            0.6952809691429138
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26518,
+          "nativeCageVertex": 140,
+          "rest": [
+            0.3521570563316345,
+            -0.05001687631011009,
+            0.6930342316627502
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26519,
+          "nativeCageVertex": 141,
+          "rest": [
+            0.3520367741584778,
+            -0.051492199301719666,
+            0.692840039730072
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26520,
+          "nativeCageVertex": 142,
+          "rest": [
+            0.3509884774684906,
+            -0.04618114233016968,
+            0.6964762210845947
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26537,
+          "nativeCageVertex": 159,
+          "rest": [
+            0.3597870469093323,
+            -0.04822467640042305,
+            0.6966484785079956
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26538,
+          "nativeCageVertex": 160,
+          "rest": [
+            0.3584657609462738,
+            -0.05290209501981735,
+            0.6936818361282349
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26547,
+          "nativeCageVertex": 169,
+          "rest": [
+            0.3592475354671478,
+            -0.0520423948764801,
+            0.693675696849823
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26549,
+          "nativeCageVertex": 171,
+          "rest": [
+            0.3551064729690552,
+            -0.05309920758008957,
+            0.6931561231613159
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26550,
+          "nativeCageVertex": 172,
+          "rest": [
+            0.3506597876548767,
+            -0.0521090105175972,
+            0.6954376101493835
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26551,
+          "nativeCageVertex": 173,
+          "rest": [
+            0.35915693640708923,
+            -0.054009392857551575,
+            0.6963847875595093
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26553,
+          "nativeCageVertex": 175,
+          "rest": [
+            0.35873329639434814,
+            -0.05455038696527481,
+            0.6997458934783936
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26554,
+          "nativeCageVertex": 176,
+          "rest": [
+            0.34953412413597107,
+            -0.052492644637823105,
+            0.6992632746696472
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26556,
+          "nativeCageVertex": 178,
+          "rest": [
+            0.3524201214313507,
+            -0.05222011357545853,
+            0.6937412619590759
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26557,
+          "nativeCageVertex": 179,
+          "rest": [
+            0.35801324248313904,
+            -0.05374212935566902,
+            0.6943559646606445
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26558,
+          "nativeCageVertex": 180,
+          "rest": [
+            0.35406720638275146,
+            -0.055093832314014435,
+            0.6986479163169861
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26559,
+          "nativeCageVertex": 181,
+          "rest": [
+            0.35463249683380127,
+            -0.054113276302814484,
+            0.6953310370445251
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 26594,
+          "nativeCageVertex": 216,
+          "rest": [
+            0.39032992720603943,
+            -0.05794421583414078,
+            0.6982440948486328
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26596,
+          "nativeCageVertex": 218,
+          "rest": [
+            0.39172667264938354,
+            -0.05735708400607109,
+            0.694735050201416
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26598,
+          "nativeCageVertex": 220,
+          "rest": [
+            0.4033832550048828,
+            -0.057173825800418854,
+            0.6987401843070984
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26599,
+          "nativeCageVertex": 221,
+          "rest": [
+            0.39958545565605164,
+            -0.05603356659412384,
+            0.6915764808654785
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26602,
+          "nativeCageVertex": 224,
+          "rest": [
+            0.39927393198013306,
+            -0.05753408744931221,
+            0.6922939419746399
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26604,
+          "nativeCageVertex": 226,
+          "rest": [
+            0.39253461360931396,
+            -0.05812256038188934,
+            0.6946239471435547
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26605,
+          "nativeCageVertex": 227,
+          "rest": [
+            0.4023660123348236,
+            -0.0580461360514164,
+            0.6978474855422974
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26608,
+          "nativeCageVertex": 230,
+          "rest": [
+            0.3909696042537689,
+            -0.05814370512962341,
+            0.6978963613510132
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26623,
+          "nativeCageVertex": 245,
+          "rest": [
+            0.3898029029369354,
+            -0.055124446749687195,
+            0.6966311931610107
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26625,
+          "nativeCageVertex": 247,
+          "rest": [
+            0.39883944392204285,
+            -0.05074785277247429,
+            0.6929856538772583
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26698,
+          "nativeCageVertex": 320,
+          "rest": [
+            0.39668887853622437,
+            -0.0472075417637825,
+            0.6991468667984009
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26710,
+          "nativeCageVertex": 332,
+          "rest": [
+            0.39560046792030334,
+            -0.05635859817266464,
+            0.6913224458694458
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26711,
+          "nativeCageVertex": 333,
+          "rest": [
+            0.39624494314193726,
+            -0.05751531571149826,
+            0.6918889284133911
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26712,
+          "nativeCageVertex": 334,
+          "rest": [
+            0.3939724862575531,
+            -0.0515214279294014,
+            0.6924890279769897
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26722,
+          "nativeCageVertex": 344,
+          "rest": [
+            0.3923889398574829,
+            -0.04851509630680084,
+            0.6984572410583496
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26729,
+          "nativeCageVertex": 351,
+          "rest": [
+            0.4025631844997406,
+            -0.05141356587409973,
+            0.695624828338623
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26730,
+          "nativeCageVertex": 352,
+          "rest": [
+            0.40173447132110596,
+            -0.057534053921699524,
+            0.6942408680915833
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26739,
+          "nativeCageVertex": 361,
+          "rest": [
+            0.4025272727012634,
+            -0.05590537190437317,
+            0.6938279271125793
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26741,
+          "nativeCageVertex": 363,
+          "rest": [
+            0.3989686965942383,
+            -0.05810347571969032,
+            0.693138599395752
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26742,
+          "nativeCageVertex": 364,
+          "rest": [
+            0.393769234418869,
+            -0.057862572371959686,
+            0.6943520903587341
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26743,
+          "nativeCageVertex": 365,
+          "rest": [
+            0.40176689624786377,
+            -0.058071319013834,
+            0.697407603263855
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26746,
+          "nativeCageVertex": 368,
+          "rest": [
+            0.3922780752182007,
+            -0.058061618357896805,
+            0.6976719498634338
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26748,
+          "nativeCageVertex": 370,
+          "rest": [
+            0.3968604505062103,
+            -0.057823773473501205,
+            0.6927292346954346
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26749,
+          "nativeCageVertex": 371,
+          "rest": [
+            0.40100032091140747,
+            -0.057661689817905426,
+            0.6943424940109253
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26750,
+          "nativeCageVertex": 372,
+          "rest": [
+            0.39652618765830994,
+            -0.058860085904598236,
+            0.6991572380065918
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 26751,
+          "nativeCageVertex": 373,
+          "rest": [
+            0.39776811003685,
+            -0.058609358966350555,
+            0.695674479007721
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27428,
+          "nativeCageVertex": 1050,
+          "rest": [
+            0.3606489300727844,
+            -0.052885107696056366,
+            0.694927990436554
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27429,
+          "nativeCageVertex": 1051,
+          "rest": [
+            0.3507325351238251,
+            -0.05138944089412689,
+            0.6935350894927979
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27434,
+          "nativeCageVertex": 1056,
+          "rest": [
+            0.34892475605010986,
+            -0.047217823565006256,
+            0.6987314820289612
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27445,
+          "nativeCageVertex": 1067,
+          "rest": [
+            0.35028451681137085,
+            -0.0499279648065567,
+            0.6943275928497314
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27452,
+          "nativeCageVertex": 1074,
+          "rest": [
+            0.35998958349227905,
+            -0.05358337610960007,
+            0.6951767206192017
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27453,
+          "nativeCageVertex": 1075,
+          "rest": [
+            0.3617418706417084,
+            -0.050016678869724274,
+            0.6990910768508911
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27458,
+          "nativeCageVertex": 1080,
+          "rest": [
+            0.35140806436538696,
+            -0.05225268378853798,
+            0.6942177414894104
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27459,
+          "nativeCageVertex": 1081,
+          "rest": [
+            0.3590014576911926,
+            -0.05392559617757797,
+            0.6953346133232117
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27460,
+          "nativeCageVertex": 1082,
+          "rest": [
+            0.35498782992362976,
+            -0.05334854871034622,
+            0.6944766640663147
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.L"
+        },
+        {
+          "vertex": 27467,
+          "nativeCageVertex": 1089,
+          "rest": [
+            0.40357068181037903,
+            -0.05653703212738037,
+            0.6963980197906494
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27468,
+          "nativeCageVertex": 1090,
+          "rest": [
+            0.39393991231918335,
+            -0.05770156532526016,
+            0.6923775672912598
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27473,
+          "nativeCageVertex": 1095,
+          "rest": [
+            0.39128318428993225,
+            -0.05297820270061493,
+            0.6942444443702698
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27484,
+          "nativeCageVertex": 1106,
+          "rest": [
+            0.3936871886253357,
+            -0.05668128654360771,
+            0.691954493522644
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27485,
+          "nativeCageVertex": 1107,
+          "rest": [
+            0.3897644579410553,
+            -0.0508190356194973,
+            0.6994568109512329
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27491,
+          "nativeCageVertex": 1113,
+          "rest": [
+            0.4022829234600067,
+            -0.05769161880016327,
+            0.6957219243049622
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27492,
+          "nativeCageVertex": 1114,
+          "rest": [
+            0.403921514749527,
+            -0.05351527780294418,
+            0.6981785297393799
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27497,
+          "nativeCageVertex": 1119,
+          "rest": [
+            0.39483970403671265,
+            -0.058000437915325165,
+            0.6930314302444458
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27498,
+          "nativeCageVertex": 1120,
+          "rest": [
+            0.4015900492668152,
+            -0.05774933844804764,
+            0.6955025792121887
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27499,
+          "nativeCageVertex": 1121,
+          "rest": [
+            0.3985573351383209,
+            -0.05835525691509247,
+            0.6941599249839783
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.L"
+        },
+        {
+          "vertex": 27791,
+          "nativeCageVertex": 1413,
+          "rest": [
+            0.34012413024902344,
+            -0.038359202444553375,
+            0.883655846118927
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.868177592754364,
+            "diagnosticForearm1": 0.131822407245636
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27792,
+          "nativeCageVertex": 1414,
+          "rest": [
+            0.32961881160736084,
+            -0.03308914601802826,
+            0.8794829845428467
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9329569339752197,
+            "diagnosticForearm1": 0.06704308837652206
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27793,
+          "nativeCageVertex": 1415,
+          "rest": [
+            0.32658395171165466,
+            -0.028891906142234802,
+            0.8767357468605042
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9650210738182068,
+            "diagnosticForearm1": 0.03497891500592232
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27794,
+          "nativeCageVertex": 1416,
+          "rest": [
+            0.3288034498691559,
+            -0.016152191907167435,
+            0.875877857208252
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.973089337348938,
+            "diagnosticForearm1": 0.026910677552223206
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27795,
+          "nativeCageVertex": 1417,
+          "rest": [
+            0.33439406752586365,
+            -0.036312442272901535,
+            0.8816299438476562
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9018519520759583,
+            "diagnosticForearm1": 0.09814804047346115
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27796,
+          "nativeCageVertex": 1418,
+          "rest": [
+            0.3629392981529236,
+            -0.03706863895058632,
+            0.889887273311615
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7432422637939453,
+            "diagnosticForearm1": 0.2567577660083771
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27797,
+          "nativeCageVertex": 1419,
+          "rest": [
+            0.35787510871887207,
+            -0.03881630301475525,
+            0.8891171216964722
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7601373791694641,
+            "diagnosticForearm1": 0.23986263573169708
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27798,
+          "nativeCageVertex": 1420,
+          "rest": [
+            0.35184046626091003,
+            -0.03957744315266609,
+            0.887536346912384
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7936641573905945,
+            "diagnosticForearm1": 0.2063358724117279
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27799,
+          "nativeCageVertex": 1421,
+          "rest": [
+            0.3456222116947174,
+            -0.03930101543664932,
+            0.8855085968971252
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.8341072201728821,
+            "diagnosticForearm1": 0.16589275002479553
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27800,
+          "nativeCageVertex": 1422,
+          "rest": [
+            0.3670850694179535,
+            -0.03400453180074692,
+            0.890093982219696
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7386497855186462,
+            "diagnosticForearm1": 0.26135018467903137
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27801,
+          "nativeCageVertex": 1423,
+          "rest": [
+            0.37040355801582336,
+            -0.029332440346479416,
+            0.8897538185119629
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7461944818496704,
+            "diagnosticForearm1": 0.2538055181503296
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27802,
+          "nativeCageVertex": 1424,
+          "rest": [
+            0.36085039377212524,
+            -0.0027971193194389343,
+            0.880997896194458
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9115222096443176,
+            "diagnosticForearm1": 0.08847776055335999
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27803,
+          "nativeCageVertex": 1425,
+          "rest": [
+            0.3526589274406433,
+            -0.0020844340324401855,
+            0.8791098594665527
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9378422498703003,
+            "diagnosticForearm1": 0.06215773522853851
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27804,
+          "nativeCageVertex": 1426,
+          "rest": [
+            0.37250131368637085,
+            -0.024090632796287537,
+            0.8880413174629211
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7831317782402039,
+            "diagnosticForearm1": 0.21686823666095734
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27812,
+          "nativeCageVertex": 1434,
+          "rest": [
+            0.36848384141921997,
+            -0.04179637134075165,
+            0.8701890110969543
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9999703168869019,
+            "diagnosticForearm1": 2.9708473448408768e-05
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27816,
+          "nativeCageVertex": 1438,
+          "rest": [
+            0.37283769249916077,
+            -0.039008572697639465,
+            0.8707046508789062
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9995894432067871,
+            "diagnosticForearm1": 0.00041053773020394146
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27817,
+          "nativeCageVertex": 1439,
+          "rest": [
+            0.3766649067401886,
+            -0.03473428636789322,
+            0.8715607523918152
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9980052709579468,
+            "diagnosticForearm1": 0.00199475372210145
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27821,
+          "nativeCageVertex": 1443,
+          "rest": [
+            0.3790544867515564,
+            -0.03003251925110817,
+            0.872551679611206
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9947279691696167,
+            "diagnosticForearm1": 0.005272055976092815
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27943,
+          "nativeCageVertex": 1565,
+          "rest": [
+            0.32671818137168884,
+            -0.022415872663259506,
+            0.8756796717643738
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.974814236164093,
+            "diagnosticForearm1": 0.025185756385326385
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27946,
+          "nativeCageVertex": 1568,
+          "rest": [
+            0.3718039095401764,
+            -0.01615210250020027,
+            0.8851916193962097
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.8401418924331665,
+            "diagnosticForearm1": 0.1598580926656723
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27947,
+          "nativeCageVertex": 1569,
+          "rest": [
+            0.37750715017318726,
+            -0.020751889795064926,
+            0.8715711236000061
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9979788661003113,
+            "diagnosticForearm1": 0.0020211150404065847
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27979,
+          "nativeCageVertex": 1601,
+          "rest": [
+            0.36765214800834656,
+            -0.007216358557343483,
+            0.8828785419464111
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.881563663482666,
+            "diagnosticForearm1": 0.1184363141655922
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27980,
+          "nativeCageVertex": 1602,
+          "rest": [
+            0.3718319535255432,
+            -0.012346455827355385,
+            0.8708180785179138
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9994473457336426,
+            "diagnosticForearm1": 0.0005526409368030727
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27984,
+          "nativeCageVertex": 1606,
+          "rest": [
+            0.34899094700813293,
+            -0.042653802782297134,
+            0.8754021525382996
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9771403670310974,
+            "diagnosticForearm1": 0.022859632968902588
+          },
+          "nativeDominantBone": "wrist.L"
+        },
+        {
+          "vertex": 27985,
+          "nativeCageVertex": 1607,
+          "rest": [
+            0.3433186411857605,
+            -0.04218437150120735,
+            0.8738333582878113
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9882760643959045,
+            "diagnosticForearm1": 0.01172395795583725
+          },
+          "nativeDominantBone": "wrist.L"
+        },
+        {
+          "vertex": 27986,
+          "nativeCageVertex": 1608,
+          "rest": [
+            0.3699701726436615,
+            -0.03657318651676178,
+            0.8794057369232178
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9339814186096191,
+            "diagnosticForearm1": 0.06601855903863907
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27987,
+          "nativeCageVertex": 1609,
+          "rest": [
+            0.3659459352493286,
+            -0.03926205262541771,
+            0.8789939880371094
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9393266439437866,
+            "diagnosticForearm1": 0.060673367232084274
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27990,
+          "nativeCageVertex": 1612,
+          "rest": [
+            0.37356069684028625,
+            -0.03245314210653305,
+            0.8797999024391174
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9286827445030212,
+            "diagnosticForearm1": 0.07131726294755936
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27991,
+          "nativeCageVertex": 1613,
+          "rest": [
+            0.3759344518184662,
+            -0.028252366930246353,
+            0.8799165487289429
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9270811080932617,
+            "diagnosticForearm1": 0.07291889935731888
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27993,
+          "nativeCageVertex": 1615,
+          "rest": [
+            0.362442284822464,
+            -0.005663083866238594,
+            0.8740476965904236
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9869608283042908,
+            "diagnosticForearm1": 0.013039161451160908
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27994,
+          "nativeCageVertex": 1616,
+          "rest": [
+            0.33783167600631714,
+            -0.04046470671892166,
+            0.8720172643661499
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9966849088668823,
+            "diagnosticForearm1": 0.00331512070260942
+          },
+          "nativeDominantBone": "wrist.L"
+        },
+        {
+          "vertex": 27995,
+          "nativeCageVertex": 1617,
+          "rest": [
+            0.3329109251499176,
+            -0.03711814805865288,
+            0.8700551986694336
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9999974370002747,
+            "diagnosticForearm1": 2.5375202312716283e-06
+          },
+          "nativeDominantBone": "wrist.L"
+        },
+        {
+          "vertex": 27996,
+          "nativeCageVertex": 1618,
+          "rest": [
+            0.35376590490341187,
+            -0.00548209622502327,
+            0.8720769286155701
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9964882731437683,
+            "diagnosticForearm1": 0.0035117389634251595
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 27997,
+          "nativeCageVertex": 1619,
+          "rest": [
+            0.35509970784187317,
+            -0.04229366034269333,
+            0.876983106136322
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9625164866447449,
+            "diagnosticForearm1": 0.037483491003513336
+          },
+          "nativeDominantBone": "wrist.L"
+        },
+        {
+          "vertex": 27999,
+          "nativeCageVertex": 1621,
+          "rest": [
+            0.3453182280063629,
+            -0.007823817431926727,
+            0.8702705502510071
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9999392032623291,
+            "diagnosticForearm1": 6.081449828343466e-05
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28000,
+          "nativeCageVertex": 1622,
+          "rest": [
+            0.36097264289855957,
+            -0.0411202497780323,
+            0.878204345703125
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9490206241607666,
+            "diagnosticForearm1": 0.050979360938072205
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28002,
+          "nativeCageVertex": 1624,
+          "rest": [
+            0.3747633099555969,
+            -0.019348621368408203,
+            0.8780088424682617
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9513051509857178,
+            "diagnosticForearm1": 0.04869481921195984
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28003,
+          "nativeCageVertex": 1625,
+          "rest": [
+            0.37031251192092896,
+            -0.009705035015940666,
+            0.8756742477416992
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9748607277870178,
+            "diagnosticForearm1": 0.02513929270207882
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28024,
+          "nativeCageVertex": 1646,
+          "rest": [
+            0.3670573830604553,
+            -0.006146540865302086,
+            0.8849557042121887
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.8445797562599182,
+            "diagnosticForearm1": 0.15542027354240417
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28025,
+          "nativeCageVertex": 1647,
+          "rest": [
+            0.3606768250465393,
+            -0.0024101603776216507,
+            0.8817388415336609
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9001442790031433,
+            "diagnosticForearm1": 0.09985572844743729
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28026,
+          "nativeCageVertex": 1648,
+          "rest": [
+            0.32863950729370117,
+            -0.031851693987846375,
+            0.8823261260986328
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.8907291293144226,
+            "diagnosticForearm1": 0.10927087813615799
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28027,
+          "nativeCageVertex": 1649,
+          "rest": [
+            0.3508145809173584,
+            -0.038621172308921814,
+            0.8913474082946777
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7103166580200195,
+            "diagnosticForearm1": 0.2896833121776581
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28028,
+          "nativeCageVertex": 1650,
+          "rest": [
+            0.32574689388275146,
+            -0.02121836692094803,
+            0.8777633309364319
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9541078805923462,
+            "diagnosticForearm1": 0.045892100781202316
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28029,
+          "nativeCageVertex": 1651,
+          "rest": [
+            0.3324127197265625,
+            -0.011468514800071716,
+            0.87638258934021
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9684596061706543,
+            "diagnosticForearm1": 0.031540367752313614
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28030,
+          "nativeCageVertex": 1652,
+          "rest": [
+            0.34465664625167847,
+            -0.03821210563182831,
+            0.8893530368804932
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7549989223480225,
+            "diagnosticForearm1": 0.24500107765197754
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28031,
+          "nativeCageVertex": 1653,
+          "rest": [
+            0.33331871032714844,
+            -0.03505805879831314,
+            0.8848472237586975
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.8466048240661621,
+            "diagnosticForearm1": 0.15339520573616028
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28032,
+          "nativeCageVertex": 1654,
+          "rest": [
+            0.3526412844657898,
+            -0.002038015052676201,
+            0.8791924715042114
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9367744326591492,
+            "diagnosticForearm1": 0.06322555243968964
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28033,
+          "nativeCageVertex": 1655,
+          "rest": [
+            0.3253691792488098,
+            -0.027268528938293457,
+            0.8797507882118225
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9293525815010071,
+            "diagnosticForearm1": 0.07064744830131531
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28034,
+          "nativeCageVertex": 1656,
+          "rest": [
+            0.3374560475349426,
+            -0.007660247385501862,
+            0.8765771389007568
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9665854573249817,
+            "diagnosticForearm1": 0.033414531499147415
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28035,
+          "nativeCageVertex": 1657,
+          "rest": [
+            0.36198267340660095,
+            -0.03610439971089363,
+            0.8938328623771667
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.6520066261291504,
+            "diagnosticForearm1": 0.347993403673172
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28036,
+          "nativeCageVertex": 1658,
+          "rest": [
+            0.3662128150463104,
+            -0.0329216793179512,
+            0.8939999938011169
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.6480001211166382,
+            "diagnosticForearm1": 0.35199984908103943
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28037,
+          "nativeCageVertex": 1659,
+          "rest": [
+            0.3284482955932617,
+            -0.015665780752897263,
+            0.8766477108001709
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9658934473991394,
+            "diagnosticForearm1": 0.03410656750202179
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28038,
+          "nativeCageVertex": 1660,
+          "rest": [
+            0.34795093536376953,
+            -0.0032416824251413345,
+            0.878199577331543
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9490768909454346,
+            "diagnosticForearm1": 0.05092308670282364
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28039,
+          "nativeCageVertex": 1661,
+          "rest": [
+            0.3706730902194977,
+            -0.014200709760189056,
+            0.88884037733078
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7661221623420715,
+            "diagnosticForearm1": 0.23387783765792847
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28040,
+          "nativeCageVertex": 1662,
+          "rest": [
+            0.35686489939689636,
+            -0.03789276257157326,
+            0.8929144740104675
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.6738443970680237,
+            "diagnosticForearm1": 0.3261556029319763
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28041,
+          "nativeCageVertex": 1663,
+          "rest": [
+            0.3389454483985901,
+            -0.03712005168199539,
+            0.887255847454071
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.7994387745857239,
+            "diagnosticForearm1": 0.20056119561195374
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28042,
+          "nativeCageVertex": 1664,
+          "rest": [
+            0.3323265016078949,
+            -0.011564338579773903,
+            0.8763899207115173
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9683899283409119,
+            "diagnosticForearm1": 0.031610097736120224
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28043,
+          "nativeCageVertex": 1665,
+          "rest": [
+            0.3714052140712738,
+            -0.022212261334061623,
+            0.891842782497406
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.6989046931266785,
+            "diagnosticForearm1": 0.3010953366756439
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28044,
+          "nativeCageVertex": 1666,
+          "rest": [
+            0.3695453107357025,
+            -0.028024272993206978,
+            0.8933016657829285
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.6646755933761597,
+            "diagnosticForearm1": 0.33532440662384033
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        },
+        {
+          "vertex": 28045,
+          "nativeCageVertex": 1667,
+          "rest": [
+            0.34438055753707886,
+            -0.004154656082391739,
+            0.8774426579475403
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand1": 0.9576563835144043,
+            "diagnosticForearm1": 0.0423436276614666
+          },
+          "nativeDominantBone": "lowerarm02.L"
+        }
+      ]
+    },
+    {
+      "side": "R",
+      "nativeVertices": 1668,
+      "semanticWristSourceVertices": 65,
+      "nativeWeightsMaximumAbsoluteError": 0.0,
+      "diagnosticDominantGroups": {
+        "diagnosticHand-1": 1611,
+        "diagnosticRoot": 57
+      },
+      "wrongNativeFingerVertices": 115,
+      "wrongNativeDominantBones": {
+        "finger2-3.R": 31,
+        "finger3-3.R": 26,
+        "lowerarm02.R": 54,
+        "wrist.R": 4
+      },
+      "wrongVertexDetails": [
+        {
+          "vertex": 28094,
+          "nativeCageVertex": 26,
+          "rest": [
+            -0.3608570694923401,
+            -0.0497213713824749,
+            0.6959537863731384
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28096,
+          "nativeCageVertex": 28,
+          "rest": [
+            -0.3729061186313629,
+            -0.05321350693702698,
+            0.6980574131011963
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28097,
+          "nativeCageVertex": 29,
+          "rest": [
+            -0.3676266670227051,
+            -0.049689747393131256,
+            0.6925169229507446
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28100,
+          "nativeCageVertex": 32,
+          "rest": [
+            -0.3676125705242157,
+            -0.05132795497775078,
+            0.6928099393844604
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28102,
+          "nativeCageVertex": 34,
+          "rest": [
+            -0.36165717244148254,
+            -0.05105564743280411,
+            0.6951469779014587
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28103,
+          "nativeCageVertex": 35,
+          "rest": [
+            -0.3721531629562378,
+            -0.05365144461393356,
+            0.6969181299209595
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28106,
+          "nativeCageVertex": 38,
+          "rest": [
+            -0.3601940870285034,
+            -0.05189717561006546,
+            0.6993628740310669
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28123,
+          "nativeCageVertex": 55,
+          "rest": [
+            -0.36682966351509094,
+            -0.044867321848869324,
+            0.6952735781669617
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28208,
+          "nativeCageVertex": 140,
+          "rest": [
+            -0.3642622232437134,
+            -0.049211107194423676,
+            0.6929785013198853
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28209,
+          "nativeCageVertex": 141,
+          "rest": [
+            -0.36415988206863403,
+            -0.050690870732069016,
+            0.6928094625473022
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28210,
+          "nativeCageVertex": 142,
+          "rest": [
+            -0.36289486289024353,
+            -0.04531208425760269,
+            0.6962730884552002
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28227,
+          "nativeCageVertex": 159,
+          "rest": [
+            -0.37168261408805847,
+            -0.04729678854346275,
+            0.6969490051269531
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28228,
+          "nativeCageVertex": 160,
+          "rest": [
+            -0.3705429136753082,
+            -0.05204293131828308,
+            0.6940163373947144
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28237,
+          "nativeCageVertex": 169,
+          "rest": [
+            -0.3713195323944092,
+            -0.051178693771362305,
+            0.6940330862998962
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28239,
+          "nativeCageVertex": 171,
+          "rest": [
+            -0.36721694469451904,
+            -0.052271824330091476,
+            0.6933196783065796
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28240,
+          "nativeCageVertex": 172,
+          "rest": [
+            -0.3626515567302704,
+            -0.05126217007637024,
+            0.6953436732292175
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28241,
+          "nativeCageVertex": 173,
+          "rest": [
+            -0.3710969090461731,
+            -0.053089551627635956,
+            0.6967744827270508
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28244,
+          "nativeCageVertex": 176,
+          "rest": [
+            -0.3613285720348358,
+            -0.05157328397035599,
+            0.6991124153137207
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28246,
+          "nativeCageVertex": 178,
+          "rest": [
+            -0.3644990622997284,
+            -0.05139751359820366,
+            0.6937446594238281
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28247,
+          "nativeCageVertex": 179,
+          "rest": [
+            -0.3700599670410156,
+            -0.052871592342853546,
+            0.6946834325790405
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28248,
+          "nativeCageVertex": 180,
+          "rest": [
+            -0.3659009635448456,
+            -0.054158423095941544,
+            0.6987902522087097
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28249,
+          "nativeCageVertex": 181,
+          "rest": [
+            -0.36663463711738586,
+            -0.053243447095155716,
+            0.6954876184463501
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 28286,
+          "nativeCageVertex": 218,
+          "rest": [
+            -0.4037250876426697,
+            -0.056267958134412766,
+            0.696904182434082
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28289,
+          "nativeCageVertex": 221,
+          "rest": [
+            -0.4117319583892822,
+            -0.054961420595645905,
+            0.6941344738006592
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28292,
+          "nativeCageVertex": 224,
+          "rest": [
+            -0.41139090061187744,
+            -0.05644862726330757,
+            0.6948660612106323
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28294,
+          "nativeCageVertex": 226,
+          "rest": [
+            -0.40454164147377014,
+            -0.05703053995966911,
+            0.6968516707420349
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28313,
+          "nativeCageVertex": 245,
+          "rest": [
+            -0.4016929566860199,
+            -0.054008450359106064,
+            0.6986494660377502
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28315,
+          "nativeCageVertex": 247,
+          "rest": [
+            -0.41088590025901794,
+            -0.049652330577373505,
+            0.6953909397125244
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28400,
+          "nativeCageVertex": 332,
+          "rest": [
+            -0.40776753425598145,
+            -0.05531644821166992,
+            0.6936789155006409
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28401,
+          "nativeCageVertex": 333,
+          "rest": [
+            -0.40838730335235596,
+            -0.05645712465047836,
+            0.6943025588989258
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28402,
+          "nativeCageVertex": 334,
+          "rest": [
+            -0.406055748462677,
+            -0.050466328859329224,
+            0.694656491279602
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28419,
+          "nativeCageVertex": 351,
+          "rest": [
+            -0.41446927189826965,
+            -0.05023990571498871,
+            0.698235034942627
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28420,
+          "nativeCageVertex": 352,
+          "rest": [
+            -0.4137457609176636,
+            -0.0563928484916687,
+            0.6969387531280518
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28429,
+          "nativeCageVertex": 361,
+          "rest": [
+            -0.4145508408546448,
+            -0.054768189787864685,
+            0.696533739566803
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28431,
+          "nativeCageVertex": 363,
+          "rest": [
+            -0.4110446572303772,
+            -0.057002242654561996,
+            0.6957053542137146
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28432,
+          "nativeCageVertex": 364,
+          "rest": [
+            -0.40578749775886536,
+            -0.056768566370010376,
+            0.6966394186019897
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28436,
+          "nativeCageVertex": 368,
+          "rest": [
+            -0.4041250944137573,
+            -0.05690791457891464,
+            0.6998801231384277
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28438,
+          "nativeCageVertex": 370,
+          "rest": [
+            -0.40895938873291016,
+            -0.056744229048490524,
+            0.6951802968978882
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28439,
+          "nativeCageVertex": 371,
+          "rest": [
+            -0.4130079746246338,
+            -0.0565229170024395,
+            0.6970044374465942
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 28441,
+          "nativeCageVertex": 373,
+          "rest": [
+            -0.4097151756286621,
+            -0.05746282637119293,
+            0.6981849670410156
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29118,
+          "nativeCageVertex": 1050,
+          "rest": [
+            -0.37265753746032715,
+            -0.05198648199439049,
+            0.6953745484352112
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29119,
+          "nativeCageVertex": 1051,
+          "rest": [
+            -0.36282041668891907,
+            -0.05058182030916214,
+            0.6934328675270081
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29124,
+          "nativeCageVertex": 1056,
+          "rest": [
+            -0.3607209324836731,
+            -0.0463145412504673,
+            0.6984384059906006
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29135,
+          "nativeCageVertex": 1067,
+          "rest": [
+            -0.36232390999794006,
+            -0.04910702258348465,
+            0.6941698789596558
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29142,
+          "nativeCageVertex": 1074,
+          "rest": [
+            -0.3719896376132965,
+            -0.05268353223800659,
+            0.6956030130386353
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29143,
+          "nativeCageVertex": 1075,
+          "rest": [
+            -0.37351566553115845,
+            -0.049025487154722214,
+            0.6995278596878052
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29148,
+          "nativeCageVertex": 1080,
+          "rest": [
+            -0.3634635806083679,
+            -0.0514264777302742,
+            0.6941680312156677
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29149,
+          "nativeCageVertex": 1081,
+          "rest": [
+            -0.3709963262081146,
+            -0.05302853882312775,
+            0.695716142654419
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29150,
+          "nativeCageVertex": 1082,
+          "rest": [
+            -0.36703041195869446,
+            -0.05249442905187607,
+            0.69463711977005
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger2-3.R"
+        },
+        {
+          "vertex": 29157,
+          "nativeCageVertex": 1089,
+          "rest": [
+            -0.41546106338500977,
+            -0.055339839309453964,
+            0.6991676688194275
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29158,
+          "nativeCageVertex": 1090,
+          "rest": [
+            -0.4060607850551605,
+            -0.05664753168821335,
+            0.6946735978126526
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29163,
+          "nativeCageVertex": 1095,
+          "rest": [
+            -0.40328550338745117,
+            -0.051903050392866135,
+            0.6962988376617432
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29174,
+          "nativeCageVertex": 1106,
+          "rest": [
+            -0.4058253765106201,
+            -0.055637847632169724,
+            0.6942164897918701
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29181,
+          "nativeCageVertex": 1113,
+          "rest": [
+            -0.4142165184020996,
+            -0.056516215205192566,
+            0.6984494924545288
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29187,
+          "nativeCageVertex": 1119,
+          "rest": [
+            -0.4069265127182007,
+            -0.0569271557033062,
+            0.6953798532485962
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29188,
+          "nativeCageVertex": 1120,
+          "rest": [
+            -0.4135364294052124,
+            -0.05658278241753578,
+            0.6981954574584961
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29189,
+          "nativeCageVertex": 1121,
+          "rest": [
+            -0.4105815291404724,
+            -0.057235319167375565,
+            0.6967087984085083
+          ],
+          "diagnosticWeights": {
+            "diagnosticRoot": 1.0
+          },
+          "nativeDominantBone": "finger3-3.R"
+        },
+        {
+          "vertex": 29481,
+          "nativeCageVertex": 1413,
+          "rest": [
+            -0.3421775996685028,
+            -0.033673111349344254,
+            0.8824201822280884
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.8891894817352295,
+            "diagnosticForearm-1": 0.11081050336360931
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29482,
+          "nativeCageVertex": 1414,
+          "rest": [
+            -0.33187898993492126,
+            -0.028556330129504204,
+            0.8775926232337952
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9560128450393677,
+            "diagnosticForearm-1": 0.04398716986179352
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29483,
+          "nativeCageVertex": 1415,
+          "rest": [
+            -0.32897111773490906,
+            -0.024436011910438538,
+            0.8746023774147034
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9832510948181152,
+            "diagnosticForearm-1": 0.016748907044529915
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29484,
+          "nativeCageVertex": 1416,
+          "rest": [
+            -0.33116722106933594,
+            -0.01170328725129366,
+            0.8735938668251038
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9896665811538696,
+            "diagnosticForearm-1": 0.010333436541259289
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29485,
+          "nativeCageVertex": 1417,
+          "rest": [
+            -0.3365514278411865,
+            -0.03170456737279892,
+            0.880054235458374
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9251710176467896,
+            "diagnosticForearm-1": 0.07482897490262985
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29486,
+          "nativeCageVertex": 1418,
+          "rest": [
+            -0.3646272122859955,
+            -0.03211144357919693,
+            0.8898096680641174
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7449601888656616,
+            "diagnosticForearm-1": 0.255039781332016
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29487,
+          "nativeCageVertex": 1419,
+          "rest": [
+            -0.35961946845054626,
+            -0.033906206488609314,
+            0.8888123035430908
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7667266130447388,
+            "diagnosticForearm-1": 0.23327335715293884
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29488,
+          "nativeCageVertex": 1420,
+          "rest": [
+            -0.3536801338195801,
+            -0.03473755717277527,
+            0.8869339227676392
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.8059975504875183,
+            "diagnosticForearm-1": 0.1940024346113205
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29489,
+          "nativeCageVertex": 1421,
+          "rest": [
+            -0.3475755751132965,
+            -0.034542009234428406,
+            0.8845778703689575
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.8515899777412415,
+            "diagnosticForearm-1": 0.14841000735759735
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29490,
+          "nativeCageVertex": 1422,
+          "rest": [
+            -0.36874064803123474,
+            -0.02901795506477356,
+            0.8901687264442444
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7369834184646606,
+            "diagnosticForearm-1": 0.26301661133766174
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29491,
+          "nativeCageVertex": 1423,
+          "rest": [
+            -0.37204840779304504,
+            -0.024333367124199867,
+            0.8899045586585999
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7428591251373291,
+            "diagnosticForearm-1": 0.2571408748626709
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29492,
+          "nativeCageVertex": 1424,
+          "rest": [
+            -0.362832248210907,
+            0.001954447478055954,
+            0.8801032304763794
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9244862794876099,
+            "diagnosticForearm-1": 0.07551374286413193
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29493,
+          "nativeCageVertex": 1425,
+          "rest": [
+            -0.3547476828098297,
+            0.0025767702609300613,
+            0.8777741193771362
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9539862871170044,
+            "diagnosticForearm-1": 0.04601370170712471
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29494,
+          "nativeCageVertex": 1426,
+          "rest": [
+            -0.3742063045501709,
+            -0.01911529153585434,
+            0.8881942629814148
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7799079418182373,
+            "diagnosticForearm-1": 0.2200920283794403
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29502,
+          "nativeCageVertex": 1434,
+          "rest": [
+            -0.3712225556373596,
+            -0.0372125543653965,
+            0.8705328702926636
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9997648000717163,
+            "diagnosticForearm-1": 0.00023522460833191872
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29506,
+          "nativeCageVertex": 1438,
+          "rest": [
+            -0.3755289912223816,
+            -0.03438759967684746,
+            0.8712170720100403
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9987822771072388,
+            "diagnosticForearm-1": 0.001217694254592061
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29507,
+          "nativeCageVertex": 1439,
+          "rest": [
+            -0.37928396463394165,
+            -0.030072718858718872,
+            0.872182309627533
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9961274862289429,
+            "diagnosticForearm-1": 0.003872496075928211
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29511,
+          "nativeCageVertex": 1443,
+          "rest": [
+            -0.38159409165382385,
+            -0.025336604565382004,
+            0.8731977939605713
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9917812347412109,
+            "diagnosticForearm-1": 0.008218791335821152
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29633,
+          "nativeCageVertex": 1565,
+          "rest": [
+            -0.32912740111351013,
+            -0.017982592806220055,
+            0.8734186291694641
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9906307458877563,
+            "diagnosticForearm-1": 0.009369246661663055
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29636,
+          "nativeCageVertex": 1568,
+          "rest": [
+            -0.3736187815666199,
+            -0.011242136359214783,
+            0.8851454257965088
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.8410145044326782,
+            "diagnosticForearm-1": 0.15898551046848297
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29637,
+          "nativeCageVertex": 1569,
+          "rest": [
+            -0.3800528347492218,
+            -0.016088150441646576,
+            0.8719422221183777
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9969243407249451,
+            "diagnosticForearm-1": 0.0030756844207644463
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29669,
+          "nativeCageVertex": 1601,
+          "rest": [
+            -0.3695484399795532,
+            -0.0023823659867048264,
+            0.8824302554130554
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.8890240788459778,
+            "diagnosticForearm-1": 0.11097590625286102
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29670,
+          "nativeCageVertex": 1602,
+          "rest": [
+            -0.374381959438324,
+            -0.007735655643045902,
+            0.8707160353660583
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9995761513710022,
+            "diagnosticForearm-1": 0.0004238563124090433
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29674,
+          "nativeCageVertex": 1606,
+          "rest": [
+            -0.3514874577522278,
+            -0.03808288276195526,
+            0.87473464012146
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9823020696640015,
+            "diagnosticForearm-1": 0.01769794337451458
+          },
+          "nativeDominantBone": "wrist.R"
+        },
+        {
+          "vertex": 29675,
+          "nativeCageVertex": 1607,
+          "rest": [
+            -0.34590303897857666,
+            -0.037681445479393005,
+            0.8728612661361694
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9933945536613464,
+            "diagnosticForearm-1": 0.006605474278330803
+          },
+          "nativeDominantBone": "wrist.R"
+        },
+        {
+          "vertex": 29676,
+          "nativeCageVertex": 1608,
+          "rest": [
+            -0.37219610810279846,
+            -0.03178997337818146,
+            0.8797027468681335
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9300051331520081,
+            "diagnosticForearm-1": 0.06999488919973373
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29677,
+          "nativeCageVertex": 1609,
+          "rest": [
+            -0.36821284890174866,
+            -0.034511808305978775,
+            0.8791374564170837
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9374864101409912,
+            "diagnosticForearm-1": 0.062513567507267
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29680,
+          "nativeCageVertex": 1612,
+          "rest": [
+            -0.37573981285095215,
+            -0.027640361338853836,
+            0.8801975846290588
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9231600761413574,
+            "diagnosticForearm-1": 0.07683992385864258
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29681,
+          "nativeCageVertex": 1613,
+          "rest": [
+            -0.3780825734138489,
+            -0.023423373699188232,
+            0.8803499341011047
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9209980964660645,
+            "diagnosticForearm-1": 0.07900190353393555
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29683,
+          "nativeCageVertex": 1615,
+          "rest": [
+            -0.3648015260696411,
+            -0.0010452456772327423,
+            0.8733078837394714
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9912167191505432,
+            "diagnosticForearm-1": 0.008783271536231041
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29684,
+          "nativeCageVertex": 1616,
+          "rest": [
+            -0.3405102491378784,
+            -0.03603404760360718,
+            0.8707244396209717
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9995661973953247,
+            "diagnosticForearm-1": 0.0004338236467447132
+          },
+          "nativeDominantBone": "wrist.R"
+        },
+        {
+          "vertex": 29686,
+          "nativeCageVertex": 1618,
+          "rest": [
+            -0.35623976588249207,
+            -0.0009592324495315552,
+            0.8708819150924683
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9993581771850586,
+            "diagnosticForearm-1": 0.0006417940021492541
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29687,
+          "nativeCageVertex": 1619,
+          "rest": [
+            -0.35750287771224976,
+            -0.037651970982551575,
+            0.8766254186630249
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9661127328872681,
+            "diagnosticForearm-1": 0.033887267112731934
+          },
+          "nativeDominantBone": "wrist.R"
+        },
+        {
+          "vertex": 29690,
+          "nativeCageVertex": 1622,
+          "rest": [
+            -0.3632974922657013,
+            -0.0364169180393219,
+            0.8781276941299438
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9499219059944153,
+            "diagnosticForearm-1": 0.05007811635732651
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29692,
+          "nativeCageVertex": 1624,
+          "rest": [
+            -0.37696757912635803,
+            -0.014568621292710304,
+            0.8781964182853699
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.949114203453064,
+            "diagnosticForearm-1": 0.050885822623968124
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29693,
+          "nativeCageVertex": 1625,
+          "rest": [
+            -0.3725961148738861,
+            -0.005003482103347778,
+            0.8754292726516724
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9769176840782166,
+            "diagnosticForearm-1": 0.023082328960299492
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29714,
+          "nativeCageVertex": 1646,
+          "rest": [
+            -0.36261802911758423,
+            0.00235561840236187,
+            0.8808257579803467
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9140834808349609,
+            "diagnosticForearm-1": 0.08591654151678085
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29715,
+          "nativeCageVertex": 1647,
+          "rest": [
+            -0.3307454288005829,
+            -0.027266234159469604,
+            0.8803538680076599
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.920941948890686,
+            "diagnosticForearm-1": 0.07905806601047516
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29716,
+          "nativeCageVertex": 1648,
+          "rest": [
+            -0.3524506986141205,
+            -0.03370876982808113,
+            0.8906650543212891
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7258416414260864,
+            "diagnosticForearm-1": 0.27415838837623596
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29717,
+          "nativeCageVertex": 1649,
+          "rest": [
+            -0.37228795886039734,
+            -0.009222481399774551,
+            0.8886879682540894
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7693979144096375,
+            "diagnosticForearm-1": 0.23060208559036255
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29718,
+          "nativeCageVertex": 1650,
+          "rest": [
+            -0.3347209692001343,
+            -0.0069877635687589645,
+            0.8741881847381592
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9860628247261047,
+            "diagnosticForearm-1": 0.01393718272447586
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29719,
+          "nativeCageVertex": 1651,
+          "rest": [
+            -0.34640395641326904,
+            -0.03337953984737396,
+            0.8883426189422607
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.7767662405967712,
+            "diagnosticForearm-1": 0.22323375940322876
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29720,
+          "nativeCageVertex": 1652,
+          "rest": [
+            -0.3353021740913391,
+            -0.03039037063717842,
+            0.8831835985183716
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.8763773441314697,
+            "diagnosticForearm-1": 0.12362267822027206
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29721,
+          "nativeCageVertex": 1653,
+          "rest": [
+            -0.3547254502773285,
+            0.002624785527586937,
+            0.8778547048568726
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9530734419822693,
+            "diagnosticForearm-1": 0.046926554292440414
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29722,
+          "nativeCageVertex": 1654,
+          "rest": [
+            -0.3275913894176483,
+            -0.02275797538459301,
+            0.8775147795677185
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9568694829940796,
+            "diagnosticForearm-1": 0.0431305393576622
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29723,
+          "nativeCageVertex": 1655,
+          "rest": [
+            -0.339727520942688,
+            -0.00314495712518692,
+            0.8745664358139038
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9835047125816345,
+            "diagnosticForearm-1": 0.016495272517204285
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29724,
+          "nativeCageVertex": 1656,
+          "rest": [
+            -0.3280419111251831,
+            -0.016748150810599327,
+            0.8754228353500366
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9769706130027771,
+            "diagnosticForearm-1": 0.023029377683997154
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29725,
+          "nativeCageVertex": 1657,
+          "rest": [
+            -0.36345982551574707,
+            -0.031071458011865616,
+            0.8936785459518433
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.6556973457336426,
+            "diagnosticForearm-1": 0.34430262446403503
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29726,
+          "nativeCageVertex": 1658,
+          "rest": [
+            -0.36765897274017334,
+            -0.02785968780517578,
+            0.8939999938011169
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.6480001211166382,
+            "diagnosticForearm-1": 0.35199984908103943
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29727,
+          "nativeCageVertex": 1659,
+          "rest": [
+            -0.3307696580886841,
+            -0.011203217320144176,
+            0.8743336200714111
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9851033687591553,
+            "diagnosticForearm-1": 0.014896640554070473
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29728,
+          "nativeCageVertex": 1660,
+          "rest": [
+            -0.35009995102882385,
+            0.0013715866953134537,
+            0.8766430020332336
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9659398198127747,
+            "diagnosticForearm-1": 0.03406019136309624
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29729,
+          "nativeCageVertex": 1661,
+          "rest": [
+            -0.35840654373168945,
+            -0.03291033208370209,
+            0.8925312161445618
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.6828619241714478,
+            "diagnosticForearm-1": 0.31713807582855225
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29730,
+          "nativeCageVertex": 1662,
+          "rest": [
+            -0.34080520272254944,
+            -0.03236684203147888,
+            0.8859265446662903
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.826026976108551,
+            "diagnosticForearm-1": 0.17397305369377136
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29731,
+          "nativeCageVertex": 1663,
+          "rest": [
+            -0.3346349596977234,
+            -0.007083950564265251,
+            0.874193012714386
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.9860314726829529,
+            "diagnosticForearm-1": 0.01396854780614376
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29732,
+          "nativeCageVertex": 1664,
+          "rest": [
+            -0.3729024827480316,
+            -0.017165252938866615,
+            0.891892671585083
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.6977490782737732,
+            "diagnosticForearm-1": 0.3022509217262268
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29733,
+          "nativeCageVertex": 1665,
+          "rest": [
+            -0.3709983825683594,
+            -0.02295718528330326,
+            0.8933742046356201
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.6629515290260315,
+            "diagnosticForearm-1": 0.3370484411716461
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29734,
+          "nativeCageVertex": 1666,
+          "rest": [
+            -0.36883994936943054,
+            -0.0012733712792396545,
+            0.8844504952430725
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.853925883769989,
+            "diagnosticForearm-1": 0.14607413113117218
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        },
+        {
+          "vertex": 29735,
+          "nativeCageVertex": 1667,
+          "rest": [
+            -0.346578985452652,
+            0.0004208870232105255,
+            0.8757194876670837
+          ],
+          "diagnosticWeights": {
+            "diagnosticHand-1": 0.974471926689148,
+            "diagnosticForearm-1": 0.02552805095911026
+          },
+          "nativeDominantBone": "lowerarm02.R"
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "weightBoundaryEdgeCount": 166,
+      "maximumWeightBoundaryEdgeLengthM": 0.018905861317558212,
+      "mostStretchedEdges": [
+        {
+          "vertices": [
+            29730,
+            29743
+          ],
+          "restLengthM": 0.018905861317558212,
+          "posedLengthM": 0.018905861317558212,
+          "ratio": 1.0
+        },
+        {
+          "vertices": [
+            28032,
+            28061
+          ],
+          "restLengthM": 0.018786286114591516,
+          "posedLengthM": 0.018786283521176415,
+          "ratio": 0.9999998619516872
+        },
+        {
+          "vertices": [
+            28038,
+            28062
+          ],
+          "restLengthM": 0.018633084954717535,
+          "posedLengthM": 0.018633088919476654,
+          "ratio": 1.0000002127806065
+        },
+        {
+          "vertices": [
+            29728,
+            29753
+          ],
+          "restLengthM": 0.01829202200093755,
+          "posedLengthM": 0.018292020299452448,
+          "ratio": 0.9999999069821203
+        },
+        {
+          "vertices": [
+            29735,
+            29752
+          ],
+          "restLengthM": 0.017952360261524233,
+          "posedLengthM": 0.0179523585084989,
+          "ratio": 0.9999999023512615
+        },
+        {
+          "vertices": [
+            29721,
+            29754
+          ],
+          "restLengthM": 0.017934547192739864,
+          "posedLengthM": 0.017934544188998734,
+          "ratio": 0.999999832516478
+        },
+        {
+          "vertices": [
+            28045,
+            28063
+          ],
+          "restLengthM": 0.01767191270853492,
+          "posedLengthM": 0.017671916585361075,
+          "ratio": 1.0000002193778466
+        },
+        {
+          "vertices": [
+            29719,
+            29742
+          ],
+          "restLengthM": 0.01757265356044572,
+          "posedLengthM": 0.01757265356044572,
+          "ratio": 1.0
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "weightBoundaryEdgeCount": 166,
+      "maximumWeightBoundaryEdgeLengthM": 0.27332361152305534,
+      "mostStretchedEdges": [
+        {
+          "vertices": [
+            26727,
+            26729
+          ],
+          "restLengthM": 0.0072715747144444474,
+          "posedLengthM": 0.27332361152305534,
+          "ratio": 37.58795340163639
+        },
+        {
+          "vertices": [
+            27483,
+            27492
+          ],
+          "restLengthM": 0.0062181003641787035,
+          "posedLengthM": 0.27255657075640427,
+          "ratio": 43.83277123131543
+        },
+        {
+          "vertices": [
+            26598,
+            26622
+          ],
+          "restLengthM": 0.003936824870544257,
+          "posedLengthM": 0.2721750579710588,
+          "ratio": 69.135678350211
+        },
+        {
+          "vertices": [
+            26743,
+            26745
+          ],
+          "restLengthM": 0.003639255824054184,
+          "posedLengthM": 0.2720878910887464,
+          "ratio": 74.76470581989385
+        },
+        {
+          "vertices": [
+            26594,
+            26619
+          ],
+          "restLengthM": 0.0032072592321414494,
+          "posedLengthM": 0.27168851444867126,
+          "ratio": 84.71049415836212
+        },
+        {
+          "vertices": [
+            26605,
+            26607
+          ],
+          "restLengthM": 0.004117888803332122,
+          "posedLengthM": 0.27127348634941306,
+          "ratio": 65.87683623945925
+        },
+        {
+          "vertices": [
+            26745,
+            26750
+          ],
+          "restLengthM": 0.004296880582987476,
+          "posedLengthM": 0.27124887462619074,
+          "ratio": 63.12692880042771
+        },
+        {
+          "vertices": [
+            26746,
+            27342
+          ],
+          "restLengthM": 0.0035119263727245663,
+          "posedLengthM": 0.27095434549156977,
+          "ratio": 77.15262700150582
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "weightBoundaryEdgeCount": 166,
+      "maximumWeightBoundaryEdgeLengthM": 0.2808824806096645,
+      "mostStretchedEdges": [
+        {
+          "vertices": [
+            26727,
+            26729
+          ],
+          "restLengthM": 0.0072715747144444474,
+          "posedLengthM": 0.2808824806096645,
+          "ratio": 38.62746263910513
+        },
+        {
+          "vertices": [
+            27483,
+            27492
+          ],
+          "restLengthM": 0.0062181003641787035,
+          "posedLengthM": 0.28040547173821806,
+          "ratio": 45.09503792405487
+        },
+        {
+          "vertices": [
+            26598,
+            26622
+          ],
+          "restLengthM": 0.003936824870544257,
+          "posedLengthM": 0.2800551828057498,
+          "ratio": 71.13732310043876
+        },
+        {
+          "vertices": [
+            26743,
+            26745
+          ],
+          "restLengthM": 0.003639255824054184,
+          "posedLengthM": 0.2792841238030699,
+          "ratio": 76.74209709498886
+        },
+        {
+          "vertices": [
+            26605,
+            26607
+          ],
+          "restLengthM": 0.004117888803332122,
+          "posedLengthM": 0.27863602225713024,
+          "ratio": 67.66477570537188
+        },
+        {
+          "vertices": [
+            26745,
+            26750
+          ],
+          "restLengthM": 0.004296880582987476,
+          "posedLengthM": 0.2781563789689106,
+          "ratio": 64.73449135873305
+        },
+        {
+          "vertices": [
+            26597,
+            26598
+          ],
+          "restLengthM": 0.004964077884368423,
+          "posedLengthM": 0.27727386205403914,
+          "ratio": 55.85606602329056
+        },
+        {
+          "vertices": [
+            26622,
+            27492
+          ],
+          "restLengthM": 0.004677319134639667,
+          "posedLengthM": 0.2769219704032192,
+          "ratio": 59.20527602069488
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "weightBoundaryEdgeCount": 166,
+      "maximumWeightBoundaryEdgeLengthM": 0.03352222750158741,
+      "mostStretchedEdges": [
+        {
+          "vertices": [
+            26622,
+            27492
+          ],
+          "restLengthM": 0.004677319134639667,
+          "posedLengthM": 0.03352222750158741,
+          "ratio": 7.166974614437959
+        },
+        {
+          "vertices": [
+            26699,
+            27485
+          ],
+          "restLengthM": 0.004652118015241031,
+          "posedLengthM": 0.032690217758809,
+          "ratio": 7.026953669642727
+        },
+        {
+          "vertices": [
+            26597,
+            26598
+          ],
+          "restLengthM": 0.004964077884368423,
+          "posedLengthM": 0.032644746377350285,
+          "ratio": 6.576195446116305
+        },
+        {
+          "vertices": [
+            26698,
+            26727
+          ],
+          "restLengthM": 0.004770269836053118,
+          "posedLengthM": 0.03220070132514805,
+          "ratio": 6.750289277511951
+        },
+        {
+          "vertices": [
+            26605,
+            26607
+          ],
+          "restLengthM": 0.004117888803332122,
+          "posedLengthM": 0.03189557965817263,
+          "ratio": 7.745614605319914
+        },
+        {
+          "vertices": [
+            26619,
+            26623
+          ],
+          "restLengthM": 0.004741558662961288,
+          "posedLengthM": 0.0316317880159774,
+          "ratio": 6.67117930293034
+        },
+        {
+          "vertices": [
+            26743,
+            26745
+          ],
+          "restLengthM": 0.003639255824054184,
+          "posedLengthM": 0.03153249982587654,
+          "ratio": 8.66454609138988
+        },
+        {
+          "vertices": [
+            26626,
+            26698
+          ],
+          "restLengthM": 0.008018303511249023,
+          "posedLengthM": 0.030986118482476503,
+          "ratio": 3.8644232460152597
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "weightBoundaryEdgeCount": 166,
+      "maximumWeightBoundaryEdgeLengthM": 0.26853559078552164,
+      "mostStretchedEdges": [
+        {
+          "vertices": [
+            26622,
+            27492
+          ],
+          "restLengthM": 0.004677319134639667,
+          "posedLengthM": 0.26853559078552164,
+          "ratio": 57.41228747826487
+        },
+        {
+          "vertices": [
+            26743,
+            26745
+          ],
+          "restLengthM": 0.003639255824054184,
+          "posedLengthM": 0.26743941083589956,
+          "ratio": 73.48738966582684
+        },
+        {
+          "vertices": [
+            26605,
+            26607
+          ],
+          "restLengthM": 0.004117888803332122,
+          "posedLengthM": 0.2672509319192431,
+          "ratio": 64.89998751374452
+        },
+        {
+          "vertices": [
+            26698,
+            26727
+          ],
+          "restLengthM": 0.004770269836053118,
+          "posedLengthM": 0.26713577139256656,
+          "ratio": 56.00013847719619
+        },
+        {
+          "vertices": [
+            26597,
+            26598
+          ],
+          "restLengthM": 0.004964077884368423,
+          "posedLengthM": 0.2669069040852008,
+          "ratio": 53.7676705125184
+        },
+        {
+          "vertices": [
+            26619,
+            26623
+          ],
+          "restLengthM": 0.004741558662961288,
+          "posedLengthM": 0.266645626618695,
+          "ratio": 56.23585946570667
+        },
+        {
+          "vertices": [
+            26699,
+            27485
+          ],
+          "restLengthM": 0.004652118015241031,
+          "posedLengthM": 0.26623434352181036,
+          "ratio": 57.22863062578959
+        },
+        {
+          "vertices": [
+            26745,
+            26750
+          ],
+          "restLengthM": 0.004296880582987476,
+          "posedLengthM": 0.26623017413067424,
+          "ratio": 61.958941839052315
+        }
+      ]
+    }
+  ],
+  "cause": "mesh.materials.clear() reset polygon material indices to0 before semantic mask was built; empty glove mask then excluded distal nativefinger vertices atZ<=0.70 from spatial branch and assigned diagnosticRoot. Adjacent vertices follow hand; resulting edge stretching creates spikes. Native anatomy weights unchanged.",
+  "specificFixProposedOnly": "Capture immutable original native-hand vertex ranges plus actual seam/sourcewrist sets before any material changes. Set all nativehand vertices to their own diagnosticHand with totaldiagnostic weight1; derive cuff/seam blending from semantic sourcewrist sets/native anatomical influence and forearm connectivity. Assert no nativefinger vertex belongs to root/oppositehand and sums1. Preserve native groups. Use separate material_override for gray rendering or restore original polygon materialindices explicitly. Rerender matched36frames only after parent checkpoint authorisation.",
+  "noFixOrBakePerformed": true,
+  "recipeSHA256": "863ee8adde23fb0af578943c6d833860b626449738cdc45839acf208877a17e2"
+}

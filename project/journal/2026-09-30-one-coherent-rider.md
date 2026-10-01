@@ -323,3 +323,14 @@ and0UVconflicts do not imply visual quality. Original donors untouched.
 Limits: No accepted head texture/identity/full character. Native skin
 fallback changes colour/detail provenance and must be stated explicitly;
 head feasibility deadline remains00:31:54UTC.
+
+Finding: Clearing material slots broke the diagnostic mask, leaving125
+distal fingertips on root. Immutable semantic hand sets fix the spikes
+without changing native anatomy, source weights or clean geometry.
+
+Validation: Parent reviewed all36paired frames, fullframe10 and12wrist
+extremes; native edges maxerror.141micrometres, no root/oppositehand
+weights. Original native groups and failed evidence remain unchanged.
+
+Limits: Coarse cuff folds/seam stretch14.782mm remain disclosed. This
+temporary preview approves material work only; no collisions/grip/finalrig.

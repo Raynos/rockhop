@@ -1,0 +1,47 @@
+{
+  "status": "Media bytes and framecount verified only; parent moving appearance judgment pending",
+  "verifiedMotionFrames": 72,
+  "verifiedCloseupFrames": 12,
+  "video": {
+    "file": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/motion-correction01/semantic-seam-motion.mp4",
+    "sha256": "01f090743c79eadac51da4e3f353ca6f8eee3546926e5329474d61e12c387b7b",
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 960,
+        "height": 520,
+        "r_frame_rate": "12/1",
+        "duration": "3.000000",
+        "nb_frames": "36"
+      }
+    ],
+    "command": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-framerate",
+      "12",
+      "-i",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/motion-correction01/motion-combined/%04d.png",
+      "-c:v",
+      "libx264",
+      "-crf",
+      "20",
+      "-pix_fmt",
+      "yuv420p",
+      "-threads",
+      "4",
+      "-movflags",
+      "+faststart",
+      "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/glove-cleanup/neutral-assembly/motion-correction01/semantic-seam-motion.mp4"
+    ]
+  },
+  "boards": {
+    "all36-moving-filmstrip.jpg": "64a73af20278be3df48c9f61f1facdf57a205119044d116b00bf2f166e73ccf1",
+    "frame10-failed-vs-correction.jpg": "691deb124bb1655bad7787f7ce82d862298dcc6c68328312e10ce18bde7a6ccb",
+    "wrist-extrema-board.jpg": "e77aae0e0c960bfcf979d5df9458aa276b6289fd7a9166f4c46638b91e047b44"
+  },
+  "noBake": true
+}

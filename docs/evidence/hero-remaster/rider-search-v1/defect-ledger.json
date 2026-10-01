@@ -890,7 +890,12 @@
       "failure": "Two fingers stretch into long spikes during wrist/forearm motion",
       "technique": "Spatial temporary diagnostic weights",
       "next": "Semantic original hand sets/native total weights; no repeat spatial weighting",
-      "bakeAllowed": false
+      "bakeAllowed": true,
+      "cause": "Clearing mesh materials reset indices, excluded125distal fingertip vertices from hand mask",
+      "correction": "Immutable semantic hand ranges/source seam sets; scene material override retains indices",
+      "correctedTemporaryPreviewAccepted": true,
+      "evidence": "../one-rider-v2/glove-cleanup/neutral-assembly/motion-correction01/parent-review.json",
+      "finalRigContactAccepted": false
     }
   },
   "oneRiderV2ExplicitCollar": {

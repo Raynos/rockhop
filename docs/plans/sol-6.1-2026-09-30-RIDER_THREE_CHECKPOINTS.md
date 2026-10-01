@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — checkpoint 1; asks233–234 approved H21-4/new Pixal buzz-cut direction**.
+Status: **active — checkpoint 1; H21-4 clothing/body, clean native anatomical head/hands; full character unaccepted**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -77,6 +77,24 @@ and use targeted compact-scalp retopology if its face passes gray/PBR review.
 Retain its dense decoded source and native PBR; this is an explicit method
 change, not a fresh successful buzz generation. H21-4 old face/hair are
 rejected in ask235 and will be removed, not promoted.
+
+Current evaluated retopology uses a freshly instantiated CC0 native adult-male
+head and neutral hands. Preserved NEW Pixal remains the visual/detail donor
+and historical production stays comparison-only. Original head repairs,
+manual face warps, collar graph cuts and elliptical rim trials are stopped;
+all failures remain in the defect ledger. Reading Basis had skipped native
+male/age shapes; the corrected evaluated anatomy is approved only for
+texture/neck integration. The nearest Pixal colour transfer failed. A named
+native CC0 skin atlas is now a deliberate material fallback, with no claim of
+Pixal texture-bake success or exact reference likeness. Native UVs remain.
+
+Neutral hands are sewn with shared-index wrists and original source cloth,
+legs and feet preserved. Temporary movement initially stretched fingertips
+because clearing material slots broke a diagnostic mask; semantic mapping
+removes that defect across the recorded36frame sequence. This preview allows
+material work only; it does not accept a final19-bone rig or bike contact.
+Native Blender cloth fairing/continuous neck transition is under review;
+no full character, turntable, skin join or later visual gate is accepted.
 
 1. Freeze selected source hashes, hair reference and settings. Retain decoded
    high-resolution vertices/faces before any cleanup, native Metal remesh or
