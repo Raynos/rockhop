@@ -1,0 +1,64 @@
+{
+  "status": "TWO failed native collar trials; STOPPED; human choice required",
+  "frozenUTC": "2026-10-01T00:50:34.579418+00:00",
+  "deadlineUTC": "2026-10-01T00:56:00Z",
+  "correctionAttempts": 2,
+  "furtherFixesExecuted": 0,
+  "forensicReplay": "Exact failed prefix and settings; no altered selection or head join",
+  "nativeTextureStageExecuted": false,
+  "neckMotionOrRigStageExecuted": false,
+  "GPUWorkloads": 0,
+  "CPUThreads": 4,
+  "files": {
+    "trial02/report.json": {
+      "SHA256": "1c5dfcf8507b31826698a3054cdc2f2c226de2e262484b062ade546477daf0ef",
+      "createdUTC": "2026-10-01T00:41:54.019272+00:00",
+      "modifiedUTC": "2026-10-01T00:41:54.019372+00:00"
+    },
+    "trial02/forensic.json": {
+      "SHA256": "9394f2b72260eae0c034ad7a259211cd244ee0a2d14daf455d6c70e6be880ac8",
+      "createdUTC": "2026-10-01T00:44:56.405622+00:00",
+      "modifiedUTC": "2026-10-01T00:44:56.405708+00:00"
+    },
+    "baseline/gray-witness.json": {
+      "SHA256": "8d0a9568d877ac8fd98606dc1552e14e7eeecc7207dca3b05bd6cd0b23c9984b",
+      "createdUTC": "2026-10-01T00:46:32.816061+00:00",
+      "modifiedUTC": "2026-10-01T00:46:32.816158+00:00"
+    },
+    "trial02/gray-witness.json": {
+      "SHA256": "fc8a3e3bd57533934fedb900689457527bf208dbeb877cab6ffa4e9db2423030",
+      "createdUTC": "2026-10-01T00:46:37.537270+00:00",
+      "modifiedUTC": "2026-10-01T00:46:37.537345+00:00"
+    },
+    "choice-board.jpg": {
+      "SHA256": "1feeee58ae117f7ddde29f76713ebffbf2b6fa4b62db019bca04fcb386eb7971",
+      "createdUTC": "2026-10-01T00:47:58.196873+00:00",
+      "modifiedUTC": "2026-10-01T00:47:58.199440+00:00"
+    },
+    "manual-panel-choice.md": {
+      "SHA256": "8579f50374a221d7d18eae49cc33c5c218b77ba894f0009761dba4d6a42cbc9b",
+      "createdUTC": "2026-10-01T00:47:58.102564+00:00",
+      "modifiedUTC": "2026-10-01T00:47:58.103915+00:00"
+    }
+  },
+  "validation": {
+    "pythonSourceSyntax": "All owned Python sources parse without cache/source mutation",
+    "actualFailure": "RuntimeError: boundary branches; Blender process exits0 despite script exception, explicit failed report retained",
+    "forensicBoundary": "172 edges,170 vertices,2 degree4 branch vertices",
+    "sourceInputs": "Body, native head and mask SHA unchanged",
+    "board": "Pixel-only layout of actual matched gray renders"
+  },
+  "sourceRecipesSHA256": {
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/verify_outside_band.py": "6bc46624565e0351194d8ca87b3f76fcefae7343dab0ee70014a6fa70344a96c",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/render_failed_witnesses.py": "3b7b98d7f9741882948ec3da0c9652d827ca57b30597d90871009822092a17ec",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/compose_trial01.py": "3e8fb2121706fedb482f562678adb4fd20a5923fcc91e4592532be801c402546",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/audit_render_trial01.py": "d2108c92056599628f98a1ace9c515813dd85232c796038afe2fa6f560ab8073",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/export_corner_data.py": "47ab8b3830265a5db546006a41810e7b2c63515a8a6ef5fc821da4f87671ed63",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/forensic_trial02.py": "e0e2902097e69174da2f2dcf9358cfc03c49f01c9204007aab16a97577e8df1f",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/build_trial01.py": "6a07761f813d18108d8f4f2bd2d2780f1aba44db154216d8fbdef40f30b0274d",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/compose_choice.py": "78169db3e111b89240d3a399897fc69a03fcbffbdc359c42775a40b65592b5d8",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/build_trial02.py": "971bebf92fa09050713a9d84cc9e342565fff46970ce011940018dcf804e358f",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/probe.py": "598ac3081848b8865f497c2f6ac95b9572437ade30db515f5d2b9a8f9e525cf1",
+    "assets/blender/hero-remaster/rider/one-rider-v2/neck-native/verify_export_corners.py": "3b4d2bb7c8272238f492e4fafa5cfc62821efd0ad77997c740cf24c64bdf0e23"
+  }
+}

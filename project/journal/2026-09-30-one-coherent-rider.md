@@ -391,3 +391,20 @@ no collision, physical grip, final rig or whole character acceptance.
 Finding: Final glove freeze includes all30 paired renders before deadline.
 Validation: Reimport completed00:41:54UTC, originaldeadline00:42:10UTC.
 Limits: Material foundation only; unchanged shape is not a grip pass.
+
+Finding: Second native collar correction leaves two degree-four boundary
+vertices after585 fixed local deletions. Stop the technique and require
+a bounded user choice before any dependent refinement.
+
+Validation: Parent inspected exact failed-prefix profile/rear and matched
+source/trial01/trial02 board; source hashes unchanged. No second head join,
+material application or hidden boundary fill occurred. Original MODEL
+charge7.676hours; proposed60minute new allowance is not granted.
+
+Limits: No accepted neck/full character, turntable, final rig or contacts.
+Head90-minute and glove12-minute bounds preserved. HR25 records choice.
+
+Finding: Final neck evidence freezes both failures and HR25 choice.
+Validation: Parent independently hashes source masters, three glove maps
+and all30 actual reimport frames; all match retained proofs.
+Limits: No third collar fix or dependent refinement until user choice.

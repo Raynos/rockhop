@@ -1,0 +1,28 @@
+{
+  "status": "FAILED native collar trial02; no accepted join",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/glove-cleanup/neutral-assembly/body-neutral-hands.blend": "6ee8eb5cf158f452afa6369515cf59e223f2878d038289db068d48b4a3af8054",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-cleanup/mpfb-v6-native-male/head.blend": "d72826e070df64a49dd52a446c18229329a4a5c962d001f9f5abed0ce8e006e4",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/collar-trial1/collar-selection.npz": "8674df254bc7d526a3f3eb99518049270ea3cdf3bc148fa5ffc21bb424f8bca2"
+  },
+  "recipeSHA256": "971bebf92fa09050713a9d84cc9e342565fff46970ce011940018dcf804e358f",
+  "settings": {
+    "headUniformScale": 0.42,
+    "headWorldZOffset": 1.59338,
+    "headWorldYOffset": 0,
+    "newNeckCutWorldZ": 1.49,
+    "sourceMatchToleranceM": 2e-06,
+    "localFairBandRadiusM": 0.035,
+    "maximumDisplacementM": 0.012,
+    "faceAdjacencyRings": 4,
+    "fairingIterations": 0,
+    "fairingLambda": 0,
+    "fairing": "Fixed FOUR actual face-adjacency rings; every vertex within35mm; original outer boundary fixed",
+    "bridge": "Actual two boundary circuits, arclength zipper and one shared-index inner-facing ring; no ellipse"
+  },
+  "limits": [
+    "Appearance, texture seam, normal continuity, neck rotation/bending and full rig remain unaccepted/unmeasured.",
+    "Neutral static geometry feasibility only; no historical head donor, global remesh, rig, physics or contacts."
+  ],
+  "failure": "RuntimeError('Boundary branches; do not fake a circuit')"
+}

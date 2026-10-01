@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — checkpoint 1; H21-4 clothing/body, clean native anatomical head/hands; full character unaccepted**.
+Status: **active — checkpoint 1 awaiting bounded user choice after two native collar failures; full character unaccepted**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -93,8 +93,20 @@ legs and feet preserved. Temporary movement initially stretched fingertips
 because clearing material slots broke a diagnostic mask; semantic mapping
 removes that defect across the recorded36frame sequence. This preview allows
 material work only; it does not accept a final19-bone rig or bike contact.
-Native Blender cloth fairing/continuous neck transition is under review;
-no full character, turntable, skin join or later visual gate is accepted.
+Native skin palette experiments stopped at their original90-minute deadline.
+African native atlas is preferred for assembly comparison; brows and exact
+identity remain unaccepted. Isolated glove material bake completed all30
+matched PBR/gray views before its12-minute deadline; material foundation only.
+
+Native collar trial01 retains jagged protrusions and wrong face materials.
+Trial02 removes585 fixed local faces but leaves two branched boundary
+vertices; no second joined output exists. This technique is STOPPED at two
+failures. [Matched evidence and concrete alternative](../evidence/hero-remaster/one-rider-v2/neck-native/manual-panel-choice.md)
+requires a new human choice before dependent refinement. Proposed allowance
+is collar45minutes plus brows15minutes, total60minutes; it is not granted
+and does not silently reset the original model-stage ceiling. Original
+MODEL charge at this checkpoint is7.676hours, below8hours. No full character,
+turntable, skin join or later visual gate is accepted.
 
 1. Freeze selected source hashes, hair reference and settings. Retain decoded
    high-resolution vertices/faces before any cleanup, native Metal remesh or

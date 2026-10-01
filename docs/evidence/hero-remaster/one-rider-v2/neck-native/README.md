@@ -1,4 +1,4 @@
-# Native BMesh neck feasibility — first trial rejected by parent
+# Native BMesh neck feasibility — TWO failed trials; technique STOPPED
 
 This trial joins the NEW native v6 head to the NEW neutral anatomical-hand body. The body, native head and retained collar mask remain byte-identical. The old source head is removed in this derivative only. No historical production rider, graph-cut rerun, ellipse, global remesh, GPU, rig, physics edit or asset promotion is involved.
 
@@ -8,7 +8,7 @@ The first native join uses the actual collar topology. Eight adjacency-Laplacian
 
 ## Actual result and defects
 
-The parent reviewed the actual front/profile/rear views and **rejected trial01** for its tall thin jagged collar/nape protrusions and material-index reset. No correction has run. The one bounded proposed correction is in `next-correction-proposal.md`.
+The parent reviewed the actual front/profile/rear views and **rejected trial01** for its tall thin jagged collar/nape protrusions and material-index reset. After checkpoint `b0bce27c`, the parent authorized the fixed four-ring correction once. **Trial02 failed its boundary gate** and the technique is now stopped after two trials. No further correction or material trial followed.
 
 ![Actual gray trial board](trial01/gray-board.jpg)
 

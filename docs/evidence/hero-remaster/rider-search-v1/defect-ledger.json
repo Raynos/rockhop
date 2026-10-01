@@ -1,5 +1,5 @@
 {
-  "status": "Checkpoint1 unaccepted: collar graph cut stopped; fresh anatomical head and neutral hand review ongoing",
+  "status": "Checkpoint1 unaccepted: native collar stopped after two failures; new bounded human choice required",
   "date": "2026-09-30",
   "candidateIdsStable": true,
   "shortlist": [
@@ -14,8 +14,8 @@
     "stage1ActiveHourCeiling": 8
   },
   "stageAccounting": {
-    "observedGoalActiveWallSecondsThroughThisCheckpoint": 27038,
-    "conservativeChargedHoursUpperBound": 7.511,
+    "observedGoalActiveWallSecondsThroughThisCheckpoint": 27635,
+    "conservativeChargedHoursUpperBound": 7.676,
     "knownGenerationTimesSeparatelyRecorded": [
       "hunyuan-run.json",
       "trellis-run.json",
@@ -946,10 +946,15 @@
     "evidenceCorrection": "../one-rider-v2/glove-cleanup/glove-material/isolated-correction01/parent-review.json"
   },
   "oneRiderV2NativeNeck": {
-    "failedFixes": 1,
+    "failedFixes": 2,
     "appearanceAccepted": false,
     "failure": "Local adjacency fairing leaves jagged upright collar remnants; clearing material slots resets all faces to body atlas",
     "evidence": "../one-rider-v2/neck-native/trial01/parent-review.json",
-    "next": "Deliberate garment-band rim reconstruction and preserved face-material indices; no ellipse or global remesh"
+    "next": "Human choice required: authored manual collar45min+nativebrows15min new60minute allowance, different body/garment, or stop",
+    "stoppedTechnique": "Native collar adjacency fairing/fixed local-strip reconstruction",
+    "failure2": "Fixed585-face strip leaves172boundaryedges with two degree4 branchvertices; no joined output",
+    "evidence2": "../one-rider-v2/neck-native/trial02/forensic.json",
+    "comparison": "../one-rider-v2/neck-native/choice-board.jpg",
+    "newBudgetGranted": false
   }
 }
