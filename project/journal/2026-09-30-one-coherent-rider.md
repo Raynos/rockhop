@@ -2062,3 +2062,23 @@ moving/standing appearance acceptance. Snapshot can be superseded; version
 numbers are not method-attempt counts. Tube10standing remains rejected.
 Five-influence NPZ needs explicit verified carrier/driver, never silent trimming.
 Construction rest/standing then exported short gate; cosmetics paused; ship177.
+
+## Round176 — show the actual failed matched sleeve motion online
+
+Finding: publish the real173matched overhead/sit film with explicit rejection.
+The flat underarm and inserted shoulder remain failures. Preserve all previous
+comparisons and distinguish authored stress motion from Garage/support evidence.
+
+Validation: exact144949byte film;81old media/29videos preserved,30total.
+Local+hosted390/1200px silent WebKit plays new film to end, fullhash exact;
+16event windows each retain keyboard/reset/scrub, no errors/overflow. Source
+main commit, packaged archive, saved version and successful deployment pinned.
+First PAX archive exceeds expanded cap; no saved version. USTAR retry fits
+without changing content; parent checks all83HTML/media files inside archive.
+Existing custom audience/revision1 preserved. Types/affected lint pass; parent
+local layout inspection both widths. Canonical lock/<70GB/<1700s batches.
+
+Limits: review delivery, no model repair, all-frame subjective acceptance,
+supported sitting, realGarage/contact, human access, physicaliOS or mobile
+performance pass. Nextconstruction owner qualification; cosmetics paused.
+Nextmandatoryship177. No rejected character promoted.

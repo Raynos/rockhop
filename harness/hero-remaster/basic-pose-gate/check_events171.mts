@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {webkit} from 'playwright';
 const [out,url]=process.argv.slice(2);assert(out&&url);
+const expectedVideos=Number(process.argv.find(v=>v.startsWith('--expected-videos='))?.split('=')[1]??29);assert(Number.isInteger(expectedVideos)&&expectedVideos>=29);
 const hosted=process.argv.includes('--auth-stdin');
 const auth:unknown=hosted?JSON.parse(await readFile('/dev/stdin','utf8')):null;
 if(hosted)assert(auth&&typeof auth==='object'&&'token'in auth&&typeof auth.token==='string'&&auth.token.length>0);
@@ -14,7 +15,7 @@ try {
   if(hosted)await page.route(new URL(url).origin+'/**',route=>route.continue({headers:{...route.request().headers(),'OAI-Sites-Authorization':'Bearer '+(auth as {token:string}).token}}));
   page.on('pageerror',e=>errors.push(e.message));await page.goto(url,{waitUntil:'networkidle'});
   assert(await page.evaluate(()=>navigator.webdriver));
-  assert.equal(await page.locator('video').count(),29);
+  assert.equal(await page.locator('video').count(),expectedVideos);
   const groups=page.getByRole('group',{name:'Loop riding review moments'});assert.equal(await groups.count(),2);
   for(let index=0;index<2;index++) {
    const group=groups.nth(index),card=group.locator('..'),video=card.locator('video');

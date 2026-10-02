@@ -1,0 +1,36 @@
+{
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/basic-pose-gate/check_events171.mts",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/gallery176/hosted",
+        "https://rockhop-rider-review.raynos.chatgpt.site/#sleeve-rebuild173",
+        "--expected-videos=30",
+        "--auth-stdin"
+      ],
+      "status": 0
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/basic-pose-gate/check_gallery176.mts",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/gallery176/hosted",
+        "https://rockhop-rider-review.raynos.chatgpt.site/#sleeve-rebuild173",
+        "--expected-videos=30",
+        "--auth-stdin"
+      ],
+      "status": 1
+    }
+  ],
+  "seconds": 83.537667042,
+  "peakAnonymousBytes": 51817955328,
+  "memoryLimitBytes": 70000000000,
+  "timeLimitSeconds": 1700,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+  "credentialHandling": "Non-echo stdin; same-origin header only; no credentials persisted"
+}

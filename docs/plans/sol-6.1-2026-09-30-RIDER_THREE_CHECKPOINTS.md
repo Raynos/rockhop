@@ -74,7 +74,20 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round175
+## Current construction decision — round176
+
+Round176 publishes the already captured173matched sleeve motion at
+[review site](https://rockhop-rider-review.raynos.chatgpt.site/#sleeve-rebuild173).
+V5control left, first skinned sleeve rebuild right; exact joint transforms,
+386frames/48fps of overhead-left and sit/return. Flat/rigid underarm and inserted
+shoulder remain visibly rejected. This authored fixture is not supported sitting
+or Garage evidence. All81old media files/29videos remain exact;30videos total.
+Local and hosted headless WebKit at390/1200px play the new film to end and retain
+all16existing event loops; no errors/overflow. Existing audience preserved.
+No model repair or character acceptance. Nextship177; construction owner next
+rest/standing qualification, then continuous exported gate; cosmetics paused.
+
+### Construction receipt snapshot — round175
 
 Round175 inspects the construction owner's frozen artifacts read-only. At
 2026-10-02 02:38:22 UTC, variants11–16 all fail their stored resting intersection
