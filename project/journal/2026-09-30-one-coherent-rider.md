@@ -2125,3 +2125,23 @@ bake, target-matched score, moving basic poses, Garage/contact/mobile pass.
 Immutable raw reports/master manifest private; compact tracked summaries preserve
 hashes/settings. Main player assets unchanged, no cosmetic polishing. Goal active,
 owner remains rider integration; independent task3 QA separate; ship180next.
+
+## Round179 — pin matched identity and adaptation baseline
+
+Finding: matched NEW C19 neutral control and source19bone/cuff contract now
+provide explicit donor/reference inputs for the next construction approach.
+No original character identity, physics, rig or weights changed.
+
+Validation: original control BIN/full JSON exact except skins/animations;
+exact178camera/light/gray settings, two4s films played and48ordered frames
+reviewed. CPUrender34.27s/36.195GBanonymous. Independent specialist reproduces
+C19/mapped34arrays/restbind, central1423zero-arm vertices, selected397/1371
+lateralarmwitnesses and65L/62Rcuffaliases/equal weights; parent21pinned source/
+output hashes+recipeverified. Current shared owner-scoped conditioning corrected
+in audit prose; no scene-wide bypass. One reviewer schema setup failure retained.
+
+Limits: geometric lateral band is not semantic bad-weight proof. Binds/pivots
+and cuff/socket numbers never clear anatomy or actual movement/new-shelljoins.
+No stage2 repair/fulltargetscore/Garage/contact/mobile or playerpromotion.
+Sculpt179 separate pending parent verdict, family6failures before incorporation;
+cosmetics paused, next mandatoryship180.

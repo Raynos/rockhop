@@ -74,7 +74,34 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round178
+## Current source contract — round179
+
+Round179 pins a matched NEW C19 neutral comparison and source rig contract before
+judging the next shell. Original control BIN and all mesh/accessor/PBR JSON exact;
+only skin/animation references removed. Identical178camera/light/gray settings.
+Two4second films played to end and48ordered frames inspected; no neutral art or
+pose pass. Render34.27s/36.195GBanonymous,2CPUthreads,4samples. One control-review
+schema setup failure recorded; corrected checks leave geometry/media unchanged.
+
+Independent specialist reproduces rawC19/mapped34binary and19rest/bind equality,
+5.94e-8bind residual, external joint centerswithin2.78e-17m, central1423vertices
+withzeroarm influence and lateral1371vertexband with397positive armweights
+(max.280119). Geometric band is not semantic torso proof or automatic badweight
+classification. Actual sewn-source cuff aliases65L/62R have exactly equal canonical
+weights across body/glove rows; sockets remain separate from surface seams.
+Parent verifies21pinned inputs/privateoutputs plus recipe; selected observations
+are specialist-reproduced, not blanket parent retest. Current conditioning uses
+strict owning-container metadata guard, not removed scene-wide private bypass.
+
+This establishes preserved identity, bases, explicit child directions and donor
+contracts for eventual adaptation. Numerical rest/bind agreement never accepts
+anatomical pivots, broad movement or new-shell donor joins. No stage2 repair,
+sourceweights/rig change, ordinary playerpromotion or cosmetic refinement. The
+continuous-sculpt prototype remains a separate unaccepted construction trial
+awaiting parent's played judgment; family failures6before its incorporation.
+Three checkpoints and actual basic-pose/Garage/riding/contact/mobile stay open.
+
+### Rejected construction and method switch — round178
 
 Round178 freezes and rejects the first new drafted-raglan prototype. Parent
 verified30 builder/master/compact-report hashes and exact protected original BIN,

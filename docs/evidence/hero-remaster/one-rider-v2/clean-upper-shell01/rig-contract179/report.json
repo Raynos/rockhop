@@ -1,0 +1,1526 @@
+{
+  "status": "CURRENT_FAILED_SOURCE_BASELINE_CONTRACT_ONLY; NOT CONTINUOUS_SHELL179 WEIGHTS OR STAGE2 PASS",
+  "sourceHashes": {
+    "rawC19": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+    "mapped34": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7"
+  },
+  "sourceBINExact": true,
+  "canonicalJointOrder": [
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "shoulder.L",
+    "upperArm.L",
+    "forearm.L",
+    "hand.L",
+    "shoulder.R",
+    "upperArm.R",
+    "forearm.R",
+    "hand.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ],
+  "rawC19JointNames": [
+    "fresh.pelvis",
+    "fresh.spine",
+    "fresh.chest",
+    "fresh.neck",
+    "fresh.head",
+    "fresh.shoulder.L",
+    "fresh.upperArm.L",
+    "fresh.forearm.L",
+    "fresh.hand.L",
+    "fresh.shoulder.R",
+    "fresh.upperArm.R",
+    "fresh.forearm.R",
+    "fresh.hand.R",
+    "fresh.thigh.L",
+    "fresh.shin.L",
+    "fresh.foot.L",
+    "fresh.thigh.R",
+    "fresh.shin.R",
+    "fresh.foot.R"
+  ],
+  "sameRestAndInverseBindsExact": true,
+  "restInverseBindResidual": 5.940526248693345e-08,
+  "meshAttachments": [
+    {
+      "node": 0,
+      "mesh": 0,
+      "skin": 0,
+      "parent": 2,
+      "worldColumnMajor": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "node": 1,
+      "mesh": 1,
+      "skin": 0,
+      "parent": 2,
+      "worldColumnMajor": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "rawPrimitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "vertexCount": 22240,
+      "triangleCount": 33968,
+      "attributesC19Mapped34Exact": true,
+      "attributeHashes": {
+        "POSITION": "75b54dc913bd142aea62f6ce5d1f072533dd71bf971e01b2969d4a42073428d4",
+        "NORMAL": "c1bee39d879a966d0bb8a39e571b09087ae7885a9568dfe496fb7d972752cdac",
+        "TEXCOORD_0": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62",
+        "TEXCOORD_1": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62",
+        "TEXCOORD_2": "ef6b79ef1b4ed649e7344ce3d681b95fa4dd99d3e3edb3875e15c412d9f1d03c",
+        "COLOR_0": "eba5be2e1dbe598736dc48a934369baa33cbfadfd6a119fc0608f95cc7c87361",
+        "COLOR_1": "f3d92413f6ab235d1a80f439cc2169f888e3d3e70d9520ab47aa9059551b33a2",
+        "COLOR_2": "cdccdb4f547a9c8865c76a920a067c407393aacbcff7683be3cf7cc0698a1546",
+        "JOINTS_0": "941356441023fba9dab38f9affdc2413fc91409025345751dde9c1166f300476",
+        "WEIGHTS_0": "cbab5b193c91be5e18d011cccea70de14e0ff2ab44db87a0266a1aec249de4c6"
+      },
+      "normalizedAccessorFlags": {
+        "POSITION": false,
+        "NORMAL": false,
+        "TEXCOORD_0": false,
+        "TEXCOORD_1": false,
+        "TEXCOORD_2": false,
+        "COLOR_0": true,
+        "COLOR_1": true,
+        "COLOR_2": true,
+        "JOINTS_0": false,
+        "WEIGHTS_0": false
+      }
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "vertexCount": 4021,
+      "triangleCount": 6883,
+      "attributesC19Mapped34Exact": true,
+      "attributeHashes": {
+        "POSITION": "7fac8c021bb940f380d158632511e074e28c6a4c508e3ebce0c900c6e756ac75",
+        "NORMAL": "6dadeec227ac3d8b9b602d5e1dc60c3155d12b2c67b9ab942dd161563cfc1b93",
+        "TEXCOORD_0": "77402229ff462a4a3bb9f782901d21f9d1905a19804ac2c417d5be194b022f90",
+        "TEXCOORD_1": "1b58a4c6097cea990822c61d2750457ed6a1cc6af57f2236f070dfc5d8aa1b91",
+        "TEXCOORD_2": "948e95d3f978078718b69a096da1b4287be798acf68bee60cc506ebf7f1d6f4b",
+        "COLOR_0": "7da947d24983d8b4328ee51e48ec306b6e4d41638da6a374b2a9c9ea10393a16",
+        "COLOR_1": "5385850ea5763a8f60b7b03266e0a5d8bfd4ed1cd8b8dc831a7bed9e8df009b1",
+        "COLOR_2": "7e2200c10f523ae75b61b8843edb61e81b5aca87f45c82872fa2990c47f60deb",
+        "JOINTS_0": "a96dd640198ca07fb2aa8531b04ba398a9b35d3d79d73f83fe8debe6213e7199",
+        "WEIGHTS_0": "991d98da84c941788616c5620a63cf031265e10ee0672bf7962daaf53232e2cb"
+      },
+      "normalizedAccessorFlags": {
+        "POSITION": false,
+        "NORMAL": false,
+        "TEXCOORD_0": false,
+        "TEXCOORD_1": false,
+        "TEXCOORD_2": false,
+        "COLOR_0": true,
+        "COLOR_1": true,
+        "COLOR_2": true,
+        "JOINTS_0": false,
+        "WEIGHTS_0": false
+      }
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "vertexCount": 3112,
+      "triangleCount": 4118,
+      "attributesC19Mapped34Exact": true,
+      "attributeHashes": {
+        "POSITION": "a75960a2f27a17da054e0aae6eafe9c612d1bc8549da711fd5516dfbb1ee05f6",
+        "NORMAL": "a263baa8cf7a3c453fa67a1eb02320e503f0e0bb8337521f70d518ca6969c11e",
+        "TEXCOORD_0": "a343300d194f41928c86b26c8b5d5dd693ac6ffee520767c538c40bc94218c0f",
+        "TEXCOORD_1": "a343300d194f41928c86b26c8b5d5dd693ac6ffee520767c538c40bc94218c0f",
+        "TEXCOORD_2": "7a5486124a243b4490c5d3124a87ed285401bd3aa777a4ecc4cd3adad5aeade9",
+        "COLOR_0": "72e30c78debf786137cf0a6e68bc6d9b52f0bd5726b6c8e7a039363e339642bd",
+        "COLOR_1": "4814c82ec6cab677b67916f73f88a15e09c48deac0a3c970efe7194aae55582b",
+        "COLOR_2": "525120c94274b1e81cf81779076d1532508d243a2c7fc765c42d49ab8f5489b8",
+        "JOINTS_0": "187e0262126356e18e360e8e8ebb11c9646b1d47c58e7230e93aab4e434583b9",
+        "WEIGHTS_0": "a2cb0d4ef5bb53f0cab92dcafcb1f587a03a9eeb8559632e44ad0102208eec44"
+      },
+      "normalizedAccessorFlags": {
+        "POSITION": false,
+        "NORMAL": false,
+        "TEXCOORD_0": false,
+        "TEXCOORD_1": false,
+        "TEXCOORD_2": false,
+        "COLOR_0": true,
+        "COLOR_1": true,
+        "COLOR_2": true,
+        "JOINTS_0": false,
+        "WEIGHTS_0": false
+      }
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "vertexCount": 61099,
+      "triangleCount": 99485,
+      "attributesC19Mapped34Exact": true,
+      "attributeHashes": {
+        "POSITION": "a4aac05d643625bcda2f4171cf4c9b1175412a106ebacbc05ffb2fbe214caba2",
+        "NORMAL": "a9b77c4c9fb0c7f872562b34499e1399f94e8f7fbd2e17fbfe450761bab9eb40",
+        "TEXCOORD_0": "76d3d414f26f52b86ee230248f9d4a76b7cc4617d106366a635ce94c95fa8ff3",
+        "JOINTS_0": "e5d200f6fd7ad29bd1a9339a9e88824d1e898f66165af5bf417baa48dc897df0",
+        "WEIGHTS_0": "0545db38c26ceeb00a6c3a73e3c73e9d899896026c0b3e38d98ba9629a3d7963"
+      },
+      "normalizedAccessorFlags": {
+        "POSITION": false,
+        "NORMAL": false,
+        "TEXCOORD_0": false,
+        "JOINTS_0": false,
+        "WEIGHTS_0": false
+      }
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "vertexCount": 294,
+      "triangleCount": 429,
+      "attributesC19Mapped34Exact": true,
+      "attributeHashes": {
+        "POSITION": "aabc8435cfff7e1bf7fda2364c563c22192c3efe55f3eeb0178cd0714d52fa04",
+        "NORMAL": "9fbf015504484d0203d6692be94854fccab0d5818d71030ea067e8867fc555ce",
+        "TEXCOORD_0": "ec9e4f068ec9f28b5672135f323a398f6931a73607d2f1df9d89199fda560939",
+        "JOINTS_0": "c62076882b3801917bc7b7a06c564c9916c58d80776d00c84038fb31b47bb753",
+        "WEIGHTS_0": "6fe1f706d87efd0e44302844ad6f0f96a624800eeffa383afbb5f76d4ad05c1b"
+      },
+      "normalizedAccessorFlags": {
+        "POSITION": false,
+        "NORMAL": false,
+        "TEXCOORD_0": false,
+        "JOINTS_0": false,
+        "WEIGHTS_0": false
+      }
+    }
+  ],
+  "externalHandoffRestMaximumCentreDifferenceM": 2.7755575615628914e-17,
+  "externalHandoffReadBeforeDuplication": true,
+  "externalOldShellDiagnosis": {
+    "status": "READ-ONLY DIAGNOSIS COMPLETE; no original edits, new construction, renders or rigging. Original builder owns repair.",
+    "counts": {
+      "vertices": 903,
+      "triangles": 1650,
+      "boundaryEdges": 248,
+      "nonmanifoldEdges": 13,
+      "zeroAreaBelow1e-12": 25,
+      "zeroAreaPanels": {
+        "back torso": 25
+      }
+    },
+    "warning": "Prior shell178 diagnostic, not a finding about continuous-sculpt179 or this source rig."
+  },
+  "coordinateAndBases": {
+    "units": "existing source/game coordinate units metres; raw model no unit scale reset",
+    "axes": "Y-up, transverse named L is +Z, anterior +X is source/game convention estimate, not measured anatomy",
+    "jointWorldLinearDeterminants": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "sourceMeshWorldScaleIdentity": true,
+    "adapterRequired": "World-aligned source axes require explicit child directions; keep captured rest/binds and private19 contact adapter, no blind +Y or copied quaternions across different bases."
+  },
+  "headNeckSpineShoulderAxes": [
+    {
+      "bone": "pelvis",
+      "child": "spine",
+      "originM": [
+        0.645,
+        0.918,
+        0.0
+      ],
+      "childOriginM": [
+        0.637,
+        1.065,
+        0.0
+      ],
+      "lengthM": 0.14721752613055272,
+      "explicitChildDirection": [
+        -0.05434135602105958,
+        0.9985224168869683,
+        0.0
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": 0.9985224168869683
+    },
+    {
+      "bone": "spine",
+      "child": "chest",
+      "originM": [
+        0.637,
+        1.065,
+        0.0
+      ],
+      "childOriginM": [
+        0.63,
+        1.265,
+        0.0
+      ],
+      "lengthM": 0.2001224625073357,
+      "explicitChildDirection": [
+        -0.03497858217561866,
+        0.999388062160532,
+        0.0
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": 0.999388062160532
+    },
+    {
+      "bone": "chest",
+      "child": "neck",
+      "originM": [
+        0.63,
+        1.265,
+        0.0
+      ],
+      "childOriginM": [
+        0.6297000165221996,
+        1.5123499486033813,
+        -3.952542556870738e-09
+      ],
+      "lengthM": 0.24735013051175536,
+      "explicitChildDirection": [
+        -0.0012127888397701965,
+        0.9999992645713445,
+        -1.5979545063077672e-08
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": 0.9999992645713445
+    },
+    {
+      "bone": "neck",
+      "child": "head",
+      "originM": [
+        0.6297000165221996,
+        1.5123499486033813,
+        -3.952542556870738e-09
+      ],
+      "childOriginM": [
+        0.6297000165221996,
+        1.568175136843617,
+        -3.952542556870738e-09
+      ],
+      "lengthM": 0.055825188240235635,
+      "explicitChildDirection": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": 1.0
+    },
+    {
+      "bone": "shoulder.L",
+      "child": "upperArm.L",
+      "originM": [
+        0.6296999342622916,
+        1.4616001581796196,
+        0.07104999369342667
+      ],
+      "childOriginM": [
+        0.6296998666220951,
+        1.4616000397745246,
+        0.20807497900850735
+      ],
+      "lengthM": 0.13702498531514853,
+      "explicitChildDirection": [
+        -4.936340361529752e-07,
+        -8.641131746132132e-07,
+        0.9999999999995047
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": -8.641131746132132e-07
+    },
+    {
+      "bone": "upperArm.L",
+      "child": "forearm.L",
+      "originM": [
+        0.6296998666220951,
+        1.4616000397745246,
+        0.20807497900850735
+      ],
+      "childOriginM": [
+        0.6246249255670303,
+        1.1418750291353164,
+        0.28927488172942784
+      ],
+      "lengthM": 0.32991402161296685,
+      "explicitChildDirection": [
+        -0.015382617053537568,
+        -0.9691161626779485,
+        0.24612443667574335
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": -0.9691161626779485
+    },
+    {
+      "bone": "forearm.L",
+      "child": "hand.L",
+      "originM": [
+        0.6246249255670303,
+        1.1418750291353164,
+        0.28927488172942784
+      ],
+      "childOriginM": [
+        0.6731139011303027,
+        0.8818126979229218,
+        0.36165167125133413
+      ],
+      "lengthM": 0.274266287626276,
+      "explicitChildDirection": [
+        0.17679524517189293,
+        -0.9482110742198246,
+        0.26389240233757505
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": -0.9482110742198246
+    },
+    {
+      "bone": "shoulder.R",
+      "child": "upperArm.R",
+      "originM": [
+        0.6297000224289001,
+        1.461600158179622,
+        -0.07105001316106047
+      ],
+      "childOriginM": [
+        0.6296999859634478,
+        1.461600073834663,
+        -0.20807500381600014
+      ],
+      "lengthM": 0.13702499065497048,
+      "explicitChildDirection": [
+        -2.661226404766256e-07,
+        -6.155443515371799e-07,
+        -0.9999999999997752
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": -6.155443515371799e-07
+    },
+    {
+      "bone": "upperArm.R",
+      "child": "forearm.R",
+      "originM": [
+        0.6296999859634478,
+        1.461600073834663,
+        -0.20807500381600014
+      ],
+      "childOriginM": [
+        0.6246250383675829,
+        1.141874985852439,
+        -0.2892749071193171
+      ],
+      "lengthM": 0.3299140968112907,
+      "explicitChildDirection": [
+        -0.015382633373098196,
+        -0.9691161762181543,
+        -0.24612438234114897
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": -0.9691161762181543
+    },
+    {
+      "bone": "forearm.R",
+      "child": "hand.R",
+      "originM": [
+        0.6246250383675829,
+        1.141874985852439,
+        -0.2892749071193171
+      ],
+      "childOriginM": [
+        0.6776548984585268,
+        0.8825655839752198,
+        -0.35889107037838797
+      ],
+      "lengthM": 0.2736785379785925,
+      "explicitChildDirection": [
+        0.19376696646593447,
+        -0.9474962990978227,
+        -0.2543720226410898
+      ],
+      "bonePlusYBasis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "basisDirectionDot": -0.9474962990978227
+    }
+  ],
+  "torsoWitnesses": [
+    {
+      "region": "central_core",
+      "definition": {
+        "Ymin": 0.9680000000000001,
+        "Ymax": 1.4316001581796196,
+        "Zmid": -1.2403746391109749e-08,
+        "ZabsMin": 0,
+        "ZabsMax": 0.09363374613551419,
+        "X": "all source X; geometric diagnostic only, not certified semantic torso segmentation"
+      },
+      "vertices": 1423,
+      "positiveArmInfluenceVertices": 0,
+      "maxArmInfluence": 0.0,
+      "meanArmInfluence": 0.0,
+      "literalWitnesses": [
+        {
+          "vertexID": 13085,
+          "P": [
+            0.8081193566322327,
+            1.0542793273925781,
+            -0.09358735382556915
+          ],
+          "canonicalWeights19": [
+            0.015180453658103943,
+            0.9848195314407349,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            19410,
+            19976,
+            19977
+          ]
+        },
+        {
+          "vertexID": 10392,
+          "P": [
+            0.509492039680481,
+            1.355025053024292,
+            0.04047185182571411
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.0,
+            0.6990270614624023,
+            0.30097290873527527,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            15583,
+            15752
+          ]
+        },
+        {
+          "vertexID": 10456,
+          "P": [
+            0.7968781590461731,
+            1.1082866191864014,
+            0.037468791007995605
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.8797470331192017,
+            0.12025298178195953,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            15411,
+            15728,
+            15729,
+            16161,
+            16162,
+            16164
+          ]
+        },
+        {
+          "vertexID": 10457,
+          "P": [
+            0.8070461750030518,
+            1.0629754066467285,
+            0.03729880973696709
+          ],
+          "canonicalWeights19": [
+            0.0005638403818011284,
+            0.9994361400604248,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            15721,
+            15900
+          ]
+        },
+        {
+          "vertexID": 10458,
+          "P": [
+            0.8070461750030518,
+            1.0629754066467285,
+            0.03729880973696709
+          ],
+          "canonicalWeights19": [
+            0.0005638403818011284,
+            0.9994361400604248,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            15543,
+            15544,
+            15723,
+            16152,
+            16155
+          ]
+        },
+        {
+          "vertexID": 10460,
+          "P": [
+            0.7766901254653931,
+            1.2392038106918335,
+            0.037147197872400284
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.04561677947640419,
+            0.9543831944465637,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            15736,
+            15737,
+            16036,
+            16172,
+            16441
+          ]
+        },
+        {
+          "vertexID": 10465,
+          "P": [
+            0.7846887111663818,
+            1.1954749822616577,
+            0.03645530343055725
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.2785133421421051,
+            0.7214866280555725,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            15562,
+            15734,
+            15916,
+            16171,
+            16327
+          ]
+        },
+        {
+          "vertexID": 10466,
+          "P": [
+            0.7846887111663818,
+            1.1954749822616577,
+            0.03645530343055725
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.2785133421421051,
+            0.7214866280555725,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.0,
+          "incidentTriangleIDs": [
+            16325
+          ]
+        }
+      ]
+    },
+    {
+      "region": "lateral_upper_torso_band",
+      "definition": {
+        "Ymin": 1.1,
+        "Ymax": 1.4316001581796196,
+        "Zmid": -1.2403746391109749e-08,
+        "ZabsMin": 0.09363374613551419,
+        "ZabsMax": 0.18,
+        "X": "all source X; geometric diagnostic only, not certified semantic torso segmentation"
+      },
+      "vertices": 1371,
+      "positiveArmInfluenceVertices": 397,
+      "maxArmInfluence": 0.2801191210746765,
+      "meanArmInfluence": 0.025651954147393376,
+      "literalWitnesses": [
+        {
+          "vertexID": 16682,
+          "P": [
+            0.6827876567840576,
+            1.2833372354507446,
+            -0.17952443659305573
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.0,
+            0.7085981965065002,
+            0.011282703839242458,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2801191210746765,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2801191210746765,
+          "incidentTriangleIDs": [
+            25534,
+            25546
+          ]
+        },
+        {
+          "vertexID": 16683,
+          "P": [
+            0.6827876567840576,
+            1.2833372354507446,
+            -0.17952443659305573
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.0,
+            0.7085981965065002,
+            0.011282703839242458,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2801191210746765,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2801191210746765,
+          "incidentTriangleIDs": [
+            25024,
+            25032,
+            25554
+          ]
+        },
+        {
+          "vertexID": 16648,
+          "P": [
+            0.6861093044281006,
+            1.291799783706665,
+            -0.17941418290138245
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.0,
+            0.7003152966499329,
+            0.023654857650399208,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2760298550128937,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2760298550128937,
+          "incidentTriangleIDs": [
+            25032,
+            25034,
+            25037,
+            25554,
+            25559
+          ]
+        },
+        {
+          "vertexID": 16665,
+          "P": [
+            0.6423482298851013,
+            1.202246069908142,
+            -0.17943806946277618
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.17055433988571167,
+            0.5596457123756409,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2697999179363251,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2697999179363251,
+          "incidentTriangleIDs": [
+            25415,
+            25416,
+            25422
+          ]
+        },
+        {
+          "vertexID": 16664,
+          "P": [
+            0.6423482298851013,
+            1.202246069908142,
+            -0.17943806946277618
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.17055433988571167,
+            0.5596457123756409,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2697999179363251,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2697999179363251,
+          "incidentTriangleIDs": [
+            24990,
+            24991
+          ]
+        },
+        {
+          "vertexID": 16663,
+          "P": [
+            0.6423482298851013,
+            1.202246069908142,
+            -0.17943806946277618
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.17055433988571167,
+            0.5596457123756409,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2697999179363251,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2697999179363251,
+          "incidentTriangleIDs": [
+            24989
+          ]
+        },
+        {
+          "vertexID": 16654,
+          "P": [
+            0.6348210573196411,
+            1.1985816955566406,
+            -0.179420605301857
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.18830205500125885,
+            0.5426698327064514,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2690281271934509,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2690281271934509,
+          "incidentTriangleIDs": [
+            24978,
+            24979,
+            24989
+          ]
+        },
+        {
+          "vertexID": 16655,
+          "P": [
+            0.6348210573196411,
+            1.1985816955566406,
+            -0.179420605301857
+          ],
+          "canonicalWeights19": [
+            0.0,
+            0.18830205500125885,
+            0.5426698327064514,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.2690281271934509,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "armInfluence": 0.2690281271934509,
+          "incidentTriangleIDs": [
+            25414,
+            25416
+          ]
+        }
+      ]
+    }
+  ],
+  "actualCuffAliases": [
+    {
+      "side": "L",
+      "physicalAliasGroups": 65,
+      "bodyAliasRows": 70,
+      "gloveAliasRows": 66,
+      "maximumCanonicalAliasWeightDifference": 0,
+      "literalWitnesses": [
+        {
+          "position": [
+            0.6192934513092041,
+            0.9134999513626099,
+            0.36154693365097046
+          ],
+          "bodyVertexIDs": [
+            323
+          ],
+          "gloveVertexIDs": [
+            1501
+          ],
+          "weights19": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "position": [
+            0.6193526983261108,
+            0.9134999513626099,
+            0.36240315437316895
+          ],
+          "bodyVertexIDs": [
+            316
+          ],
+          "gloveVertexIDs": [
+            1486
+          ],
+          "weights19": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "position": [
+            0.6193922758102417,
+            0.9134999513626099,
+            0.3605276942253113
+          ],
+          "bodyVertexIDs": [
+            339
+          ],
+          "gloveVertexIDs": [
+            1521
+          ],
+          "weights19": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "cuffCentre": [
+        0.666642427444458,
+        0.9135007262229919,
+        0.354777991771698
+      ],
+      "gripSocketPosition": [
+        0.6667430324101171,
+        0.7941388206796854,
+        0.3911559370294306
+      ],
+      "socketToCuffCentreDistanceM": 0.12478232854640486,
+      "surfaceWarning": "Socket is a grip target attached to hand, not a cuff endpoint or sewn surface proof. Actual matching source position aliases are independently reproduced."
+    },
+    {
+      "side": "R",
+      "physicalAliasGroups": 62,
+      "bodyAliasRows": 71,
+      "gloveAliasRows": 63,
+      "maximumCanonicalAliasWeightDifference": 0,
+      "literalWitnesses": [
+        {
+          "position": [
+            0.6213535666465759,
+            0.9134999513626099,
+            -0.36717310547828674
+          ],
+          "bodyVertexIDs": [
+            21998
+          ],
+          "gloveVertexIDs": [
+            2807
+          ],
+          "weights19": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "position": [
+            0.6214667558670044,
+            0.9134999513626099,
+            -0.3588992953300476
+          ],
+          "bodyVertexIDs": [
+            21915
+          ],
+          "gloveVertexIDs": [
+            2622
+          ],
+          "weights19": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "position": [
+            0.6216211915016174,
+            0.9134999513626099,
+            -0.37063002586364746
+          ],
+          "bodyVertexIDs": [
+            22034
+          ],
+          "gloveVertexIDs": [
+            2839
+          ],
+          "weights19": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "cuffCentre": [
+        0.6714560389518738,
+        0.9135006666183472,
+        -0.3528289794921875
+      ],
+      "gripSocketPosition": [
+        0.669579809091219,
+        0.7938029372642919,
+        -0.3837616604019379
+      ],
+      "socketToCuffCentreDistanceM": 0.12364423722629019,
+      "surfaceWarning": "Socket is a grip target attached to hand, not a cuff endpoint or sewn surface proof. Actual matching source position aliases are independently reproduced."
+    }
+  ],
+  "limits": [
+    "Legal binds/rest agreement and length measurements do not certify natural/anatomical skeleton, pivot positions or moving volume.",
+    "Lateral torso band is geometric; weights near shoulders are not forbidden simply because near torso.",
+    "Raw source attrs C19\u2194mapped34 exact. Actual GLTFLoader normalized float32 weights differ up to5.96e-8 as pinned167 evidence; no fresh loader/animation run in this selected audit.",
+    "Pinned163 cuff moving QA is mapped static V5; this audit reproduces current34 static cuff positions/weights only. No inferred fullmotion clearance from socket agreement.",
+    "External .2/.2 head-neck diagnostic fractions belong to external diagnostic, not an approved physics posing override.",
+    "No source changes, skeleton fitting, new weights, paint, LOD, Blender render, GPU, browser or stage2/appearance/gameplay acceptance."
+  ],
+  "pinnedInputs": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-foundation167/prepare.py",
+      "SHA256": "f8d816c3cca89caa4c6a7a744469d92e7cf105ab9c6db9600366f007cca8ae28",
+      "bytes": 12328,
+      "role": "existing immutable raw GLB reader recipe"
+    },
+    {
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/deliverables/C19.glb",
+      "SHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+      "bytes": 16294212,
+      "role": "actual raw new C19 source"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb",
+      "SHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "bytes": 16297888,
+      "role": "actual mapped source34 source"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell-handoff.json",
+      "SHA256": "d3908554a4078851fe50d8066e831678b689ddf6059cd208f9f30bc3c68a453a",
+      "bytes": 18136,
+      "role": "external task3 handoff read before duplication"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell-source-maps.npz",
+      "SHA256": "10de6558539b2cc30e84cb9a66dbe2e0a91153201fe849d7e0531bb85efe601c",
+      "bytes": 12934,
+      "role": "external literal source maps"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell178-readonly-diagnosis.json",
+      "SHA256": "bcf6be214ee786a19f7fac5620c0e263182ed5c80111ab8bb49cafaa518951b9",
+      "bytes": 24450,
+      "role": "external existing shell diagnosis; not repeated"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-foundation167/raw-foundation.json",
+      "SHA256": "b0696c99845b3e5a3051f3766edb53894f42205ff47941cbd8751fc8ae11e877",
+      "bytes": 335416,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-foundation167/actual-three-foundation.json",
+      "SHA256": "05342de194fddc54c2ef6e50cfc424cffcf5d7045cf456fbf233a23ec948ecc4",
+      "bytes": 2075240,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-foundation167/source34-core-comparison.json",
+      "SHA256": "1842261b1b1a8854da1111a479e9b73f340f7539b2714f422596573b0fa00a47",
+      "bytes": 512,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-foundation167/freeze.json",
+      "SHA256": "14f40a733d0eefa1009addafbcfb8148416264ac286173dc71e2b6703e02361d",
+      "bytes": 6302,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/basic-pose-seams163/raw-topology.json",
+      "SHA256": "2fc7aa20aed78488fe9de84c9baeb9be61ec0384a0073445e9d5f9376007fc44",
+      "bytes": 78633,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/basic-pose-seams163/actual-three-seams.json",
+      "SHA256": "d7339be943ff571f20feddda4c089ad26ea7753a7a5715540aaf37d6ca79c748",
+      "bytes": 3995093,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/basic-pose-seams163/incident-edge-coverage.json",
+      "SHA256": "31faaf4f76461df01358610d8126f4452d91179c341ca9aadf77faec0031f2d5",
+      "bytes": 60068,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind34/mapping-report.json",
+      "SHA256": "cd9c22326a4360b5f03839120ab4a39463dd033ecbf9b1c8fdcb4c7ae82ce683",
+      "bytes": 14770,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind34/rest-axis-verification.json",
+      "SHA256": "0e3693b361f682ebb00e7034c35b3b27beee3d9739382404fbfd6c1ff80c8d20",
+      "bytes": 4574,
+      "role": "existing source/adapter evidence; pinned not rerun"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-fresh-c19-adapter.mts",
+      "SHA256": "73a532e10139baa970d9f763b3cd2f49ccbaf417da571f44bfaf0d23cd938733",
+      "bytes": 2104,
+      "role": "current runtime contract dependency read-only"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/new-rider-private-adapter.mts",
+      "SHA256": "96c95b7fc02814dfd7055a493e4b3dc8a53aeb5ac1430c71fe3c30235132c9d7",
+      "bytes": 5181,
+      "role": "current runtime contract dependency read-only"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/render/hero/gltfRider.ts",
+      "SHA256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+      "bytes": 49488,
+      "role": "current runtime contract dependency read-only"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/render/hero/gltfTestUtils.ts",
+      "SHA256": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a",
+      "bytes": 3361,
+      "role": "current runtime contract dependency read-only"
+    }
+  ],
+  "recipeSHA256": "c5f3e4a2a5bb097d6ce8028cfafedbaa234df5c6717a3a287f8a631ea83a4281",
+  "privateOutputHashes": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/rig-contract179/lateral_upper_torso_band.npz",
+      "SHA256": "7c9b191150059e1693115502343bb873f8ac945f4df68b555d95b4d22e4db85e"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/rig-contract179/central_core.npz",
+      "SHA256": "b9cb62c703d0684e8574567d082ba3d4e5f1050bd93a752633bc394cd5fe75bc"
+    }
+  ],
+  "privateHashesNote": "Full selected ROI IDs/weights retained; compressed archive bytes may differ across runtimes, source input hashes remain asserted."
+}
