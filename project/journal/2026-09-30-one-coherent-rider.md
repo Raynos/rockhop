@@ -2105,3 +2105,23 @@ Task3paths untouched/no messages/interrupts. New explicit family has0trials,
 linked predecessor count>=15. Three isolated CPU approaches may prototype;
 parent selects one. Cosmetics paused, no appearance/pose/contact/mobile pass.
 Review8live with failed matched motion. Goal active; nextmandatoryship180.
+
+## Round178 — reject drafted-panel construction and switch method
+
+Finding: played gray/PBR neutral orbit shows cardboard torso/shoulders and box
+sleeves; donor cuff/hood/hem unsewn. Reject frozen first shell, stop approach at
+five lane/setup failures and choose continuous anatomical sculpt-retopology.
+
+Validation: parent30hashes/protected source BIN and head/hood/glove/PBR prefix
+exact;13nonmanifold/248boundary edges/26boundary components independently counted.
+Authored1650 vs exported1634triangles, recorded25degenerate/8thin crossings.
+Both silent4second films played to end;48ordered decoded orbit frames inspected.
+Canonical playback12.27s/35.750GBanonymous. External task3 neck/seam diagnosis
+read-only pinned; no geometry mutation or independent collision rerun claim.
+
+Limits: five disclosed failures include one geometry/four setup, retrospective
+registration limits. Three separate dispatch/inspection errors retained. No rig,
+bake, target-matched score, moving basic poses, Garage/contact/mobile pass.
+Immutable raw reports/master manifest private; compact tracked summaries preserve
+hashes/settings. Main player assets unchanged, no cosmetic polishing. Goal active,
+owner remains rider integration; independent task3 QA separate; ship180next.

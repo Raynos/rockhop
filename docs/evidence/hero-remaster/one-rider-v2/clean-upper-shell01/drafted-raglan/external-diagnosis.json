@@ -1,0 +1,23 @@
+{
+  "status": "READ_ONLY_EXTERNAL_DIAGNOSIS_REFERENCED_NO_OWNER_EDITS",
+  "files": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell178-readonly-diagnosis.json",
+      "sha256": "bcf6be214ee786a19f7fac5620c0e263182ed5c80111ab8bb49cafaa518951b9",
+      "bytes": 24450
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell178-seam-precision.json",
+      "sha256": "1c57476a8d642f38416c2ee602c6ca4a4b5eb1f9927bbc750f043a44d386a565",
+      "bytes": 14165
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell-handoff.json",
+      "sha256": "d3908554a4078851fe50d8066e831678b689ddf6059cd208f9f30bc3c68a453a",
+      "bytes": 18136
+    }
+  ],
+  "findings": "Task3 attributes all13 nonmanifold edges/25 degenerate faces to a collinear back-neck tessellation parent. Intended seam points differ119.209nm, causing cracks/thin crossing slivers. These are procedural failures, not new generator failures. Virtual corrections are attribution only; source unchanged.",
+  "nextTopologyPolicy": "Reject zero-area parents before subdivision; create shared seam indices from one authoritative registry. Explicitly sew declared donor boundaries; never broad proximity-weld garment layers.",
+  "limits": "Parent verified report/source hashes and inspected diagnosis, did not rerun virtual corrections or certify garment anatomy."
+}

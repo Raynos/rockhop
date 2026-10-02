@@ -74,7 +74,37 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round177
+## Current construction decision — round178
+
+Round178 freezes and rejects the first new drafted-raglan prototype. Parent
+verified30 builder/master/compact-report hashes and exact protected original BIN,
+head/hood/glove/accessor/PBR prefixes; skins/animations are removed, not rig-ready.
+Both silent4s/24frame PBR and gray films played to end; parent inspects all48ordered
+orbit frames. Flat cardboard torso/shoulders, box sleeves and unsewn cuff/hood/hem
+joins fail visibly. Literal authored903vertices/1650triangles has13nonmanifold edges,
+248boundary edges/26boundary components; audit also records25degenerate faces and
+8strict thin crossings. Export retains1634triangles; no favorable count conceals loss.
+
+Independent task3 diagnosis is inspected read-only and hash-pinned: collinear
+back-neck tessellation causes the degenerate/nonmanifold fan; independently made
+seam points differ119nm. Keep authoritative shared seam indices and reject
+zero-area parent triangles before subdivision. No broad proximity weld across
+layers. These are construction procedure defects, not generator failure claims.
+The separate team owns independent QA/export copies; this rider parent remains
+sole integration/construction selection owner in clean-upper-shell01/OWNERSHIP.md.
+
+Five drafted-lane/evidence failures are disclosed (one geometry and four setup),
+including parent default-Python/PIL error. Three separate failed dispatch/read
+inspection administrative errors are preserved, not asset trials. No perfect
+preregistration claim. Stop the drafted planar-panel approach now and choose
+continuous anatomical sculpt-retopology before further rigging. Source/raw reports
+remain immutable private masters; tracked summaries omit large vertex ID arrays.
+Liked head/hood/gloves and existing physics remain. Cosmetics paused. All three
+visual checkpoints,7minimum/8target, full moving pose/neck/Garage/riding/contact/
+mobile gates stay open. No new player asset, accepted appearance or whole-body
+pose claim. Playback12.27s/35.750GBanonymous under canonical lock; ship180next.
+
+### Last-resort architecture decision — round177
 
 Round177 invokes the fifteen-failure last-resort safeguard. Parent verifies
 58 source/receipt hashes and reconstructs15 distinct failed frozen outputs of

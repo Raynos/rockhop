@@ -1,0 +1,22 @@
+{
+  "status": "FAILED_NEUTRAL_PROTOTYPE_NOT_RIGGED",
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "assemblySHA256": "629930598ae5e8299ad4207c6a292f6fb35f04b0d5840a6289ef4dc94bed532f",
+  "sourceBINPrefixExact": true,
+  "protectedHeadAllMeshAttributesMorphsPrimitiveIndicesExact": true,
+  "protectedHeadOriginalPBRMaterialsImagesTexturesSamplersExact": true,
+  "sourceHoodAndGlovesPrimitiveExact": true,
+  "sourcePrimitive0OriginalAttributesRetainedExact": "Indices only filtered; unused vertex rows retained.",
+  "semanticMask": "primitive0 all triangle vertices glTFY<=.965 (lower) or maxY<=.955 and minabsZ>=.28 (cuff); primitive1 gloves entire; primitive2 hood entire.",
+  "sourcePrimitive0RetainedTriangles": 19553,
+  "sourcePrimitive0DeletedTriangles": 14415,
+  "skinAndAnimationExportDifference": "All mesh skin bindings and authored animations removed for explicitly neutral/unrigged assembly; original protected geometry/PBR byte exact in assembled GLB. Render import may transform data.",
+  "seams": "Separate protected identity references, no donor-shell physical welding; measurements pending.",
+  "limits": "Not accepted; shell nonmanifold defects frozen, no pose or appearance score.",
+  "immutableRawReport": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/drafted-raglan/raw-assembly.json",
+    "bytes": 211104,
+    "sha256": "cc94a5c6c5e0e39b70263598808881c7b6ff1dd0270f401a739aa0322b14469b"
+  },
+  "integrationCompaction": "Only raw vertex/triangle ID lists moved to private master; source geometry and measured results unchanged. Reproduce builder recipes then run compact_shell178.py."
+}

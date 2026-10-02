@@ -1,0 +1,67 @@
+{
+  "status": "REJECTED_CONSTRUCTION_SWITCH_METHOD",
+  "actualFilmsPlayedToEnd": [
+    "FAILED-neutral-pbr-turntable.mp4",
+    "FAILED-neutral-gray-turntable.mp4"
+  ],
+  "orderedFilmFramesInspected": {
+    "pbr": 24,
+    "gray": 24
+  },
+  "visibleFailures": [
+    "Rigid planar cardboard chest, back and rectangular shoulder silhouette across orbit",
+    "Box-section tapering sleeves, no anatomical roundness or natural shoulder transition",
+    "Open unsewn donor hood/cuff/hem boundaries; no actual glove-hand-cuff join"
+  ],
+  "geometryFailures": {
+    "authoredNonmanifoldEdges": 13,
+    "boundaryEdges": 248,
+    "boundaryComponents": 26,
+    "recordedDegenerateFaces": 25,
+    "recordedStrictCrossings": 8,
+    "exportedTriangles": 1634,
+    "authoredTriangles": 1650
+  },
+  "score": "No target-matched 7/8 score: low-resolution unbaked neutral reference only, not full motion.",
+  "decision": "Stop drafted flat-panel approach; choose materially different continuous sculpt-retopology shell. Neck/edge registry diagnosis retained for future topology, not threshold weld or texture patch.",
+  "failureAccounting": {
+    "builderFailures": 4,
+    "parentEvidenceSetupFailures": 1,
+    "approachFailures": 5,
+    "separateAdministrativeErrors": 3,
+    "administrativeLimits": "Two unavailable-agent dispatches and one V8 read-only inspection syntax error did not create/render an asset. Preserved separately, not hidden or asserted garment trials."
+  },
+  "cpuPlayback": {
+    "commands": [
+      {
+        "command": [
+          "pnpm",
+          "exec",
+          "tsx",
+          "harness/hero-remaster/basic-pose-gate/play_tube173.mts",
+          "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/drafted-raglan/FAILED-neutral-pbr-turntable.mp4",
+          "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/drafted-raglan/parent-playback/pbr.json"
+        ],
+        "status": 0
+      },
+      {
+        "command": [
+          "pnpm",
+          "exec",
+          "tsx",
+          "harness/hero-remaster/basic-pose-gate/play_tube173.mts",
+          "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/drafted-raglan/FAILED-neutral-gray-turntable.mp4",
+          "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/drafted-raglan/parent-playback/gray.json"
+        ],
+        "status": 0
+      }
+    ],
+    "seconds": 12.268551,
+    "peakAnonymousBytes": 35750281216,
+    "memoryLimitBytes": 70000000000,
+    "timeLimitSeconds": 60,
+    "lock": "lockf -k /Users/raynos/projects/localai/.model.lock",
+    "limits": "Neutral orbit decoder only; not animated anatomy/pose/contact acceptance."
+  },
+  "limits": "Source head/hood/glove bytes retained; anatomy/hood/cuff/hem joins unaccepted. No rigging, moving basic-pose, Garage, riding, landing, saddle/grip/sole or mobile pass."
+}

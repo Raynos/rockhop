@@ -1,31 +1,6 @@
 {
-  "familyId": "clean-drafted-upper-hoodie-shell01",
-  "status": "DRAFTED_PANEL_REJECTED_FIVE_FAILURE_SWITCH_CONTINUOUS_SCULPT",
-  "predecessor": {
-    "familyId": "retained-v7-cap-rmf-tube-natural-upper-garment",
-    "failureCountLowerBound": 15,
-    "status": "RETIRED_FOR_REPAIR_AND_INTEGRATION",
-    "decision": "../construction-bounds177/parent-decision.json"
-  },
-  "defectId": "natural-continuous-shoulder-underarm-construction",
-  "approaches": [
-    {
-      "id": "drafted-raglan-gusset",
-      "failedAttempts": 5,
-      "status": "STOPPED_SWITCH_METHOD",
-      "decision": "Planar/cardboard silhouette plus topology and unsewn donors; next method continuous sculpt-retopo, not another panel tweak"
-    },
-    {
-      "id": "continuous-sculpt-retopo",
-      "failedAttempts": 0,
-      "status": "SELECTED_NEXT_NEUTRAL_PROTOTYPE_NOT_STARTED"
-    },
-    {
-      "id": "anatomical-quad-cage",
-      "failedAttempts": 0,
-      "status": "UNSTARTED"
-    }
-  ],
+  "lane": "drafted-raglan",
+  "family": "clean-drafted-upper-hoodie-shell01",
   "attempts": [
     {
       "id": "A-setup01",
@@ -92,33 +67,9 @@
       "countedFailure": true,
       "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
       "registrationLimit": "Unexpected setup failure recorded retrospectively immediately after failed run; geometry/evidence stages had been predeclared. No claim of perfect pre-registration."
-    },
-    {
-      "id": "parent-evidence-setup178",
-      "stage": "evidence-review",
-      "recordedBeforeRun": false,
-      "countedFailure": true,
-      "status": "FAILED_WRONG_PYTHON_PIL_MISSING_THEN_FIXED_KNOWN_VENV",
-      "method": "Decode actual films into ordered frames; default python lacks PIL; rerun installed Unimate venv succeeded, source untouched",
-      "registrationLimit": "Unexpected setup failure recorded retrospectively; no perfect preregistration claim"
     }
   ],
-  "failureCount": 5,
-  "policy": "Record setup/geometry/art/motion failures and parent verdicts; five approach switch/fifteen family retirement, no cosmetic/static shortcut",
+  "failedAttemptCount": 4,
   "geometryOutputFailures": 1,
-  "administrativeErrors": [
-    {
-      "id": "parent-dispatch178-1",
-      "failure": "New sculpt agent refused: thread limit reached; no worker created"
-    },
-    {
-      "id": "parent-dispatch178-2",
-      "failure": "Followup construction agent refused: thread limit reached; no worker started"
-    },
-    {
-      "id": "parent-inspection178",
-      "failure": "V8 syntax error in read-only metadata expression; no nested tool ran"
-    }
-  ],
-  "countingLimits": "Five lane/evidence failures incl setup; three separate orchestration/inspection errors disclosed. Same geometry counted once, gray/PBR views not separate failures. Historical predecessor >=15 remains linked."
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
 }
