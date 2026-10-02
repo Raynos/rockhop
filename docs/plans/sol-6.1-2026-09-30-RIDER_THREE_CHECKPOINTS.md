@@ -74,7 +74,35 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round180
+## Current source and construction contract — round181
+
+Round181 replaces guessed donor rings with actual indexed source contracts.
+Parent independently verifies13pinned source/private hashes plus recipe, exact
+Float32 quotient/primitive row maps, one307hood-body and65L/62Rcuff closed cycles.
+Every ringedge has onefaceperside/oppositewinding. Sourcehood237upperopening is
+separate and protected, not an inferred neck attachment. Sourceprofiles at eight
+heights include literal barycentrics and combinedp0/p2; clipping-window widths
+are not anatomical breadth, and high p0alone omits hood-owned posterior surface.
+
+The gold/denim interface remains23fragments, not a semantic hem. Choose explicit
+newdesign lowerpairedcut Y=.940+.20*(X-.640), sourcep0exacttriangle splitting and
+lowercomponents seededlegs/feet<.8; removeoldcufffragments. Newhem must shareactual
+orderedcutedge nodes/ancestry with lowerdonor, not blanket mask or overlapping
+meshes. Protect hood/glove/headsource and immutable originalshape; derivedcut
+attributes explicitly differ. Single bounded source-guided quadcage authorized
+by parent machinecontract aftercommit; no humancheckpointhold. Intentional local
+triangle/poles allowed for oddrings, fullbody sourceprofile guides silhouette.
+
+Read-only independent sculpt179diagnosis pinned: height-proximity130cuffselection
+included4interiornodes causingall8degeneratefaces. Parent verifiesfour exact
+positioncollapsepairs; virtualface removal stayscausal/unaccepted and technique
+retired. Newcage needs finalboundaryconnectivity/injectiveFloat32 mapping. Family
+11failures unchanged, one administrativepacketparseerrordisclosed separately.
+No newgeometry/rig/weights/bake/pose/appearanceacceptance yet. Construction first,
+liked head/physics preserved, independentQAownership separate, threecheckpoints
+and fullmoving/Garage/riding/contact/mobile remainopen. Nextmandatoryship183.
+
+### Rejected sculpt construction — round180
 
 Round180 rejects the first continuous sculpt in played matched before/after
 neutral PBR/gray films. Parent inspects48ordered actual orbit frames and verifies

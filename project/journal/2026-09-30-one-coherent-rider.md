@@ -2167,3 +2167,24 @@ five sculpt failures, family11inclneutralbaseline1, two geometryoutputs only.
 No new rig/weights/morph/game/Garage/contact/mobile/7or8score. Likedhead/physics
 preserved, independentQAownerpaths untouched. Nextguidedquadcage notstarted,
 three checkpoints open/cosmetics paused; mandatoryship183next.
+
+## Round181 — replace guessed joins with literal source loops
+
+Finding: actual307hood and65L/62Rcuff cycles give authoritative sewn donor
+references. Explicitly redesign lowerwardrobe seam with a paired sourcecut,
+Y=.940+.20*(X-.640), exactsplit/lowercomponentmask and sharedfinalFloat32nodes.
+Single source-guided quadcage authorized aftercommit, no humanhold.
+
+Validation: 13pinned source/private hashes+recipe; parent independent source
+positionquotient/rowmap equality and onefaceperside/oppositewinding on all434
+pairededges. Sourceprofiles8heights/combinedhoodbody/barycentrics retained.
+Read-only external sculptcausepacket5hashes, fourcollapsedpositionpairs verified;
+interior-vs-rimselectioncause independent, no source artifactrepaired.
+
+Limits: exactloops/numericprofile are not anatomy/appearance or motionpass.
+Clippedprofile widths not anatomicalbreadth; p0upper excludesposteriorhood.
+Oldsemanticgold-denim23fragments remainunaccepted; newdesigncut isn'tsourcehem.
+Derivedcutfields notallsourcebyteexact. Family11unchanged,5administrativeerrors
+including read-onlypacketparse and journalformatrefusal retained. No newcagegeometry yet, no rig/weights/
+cosmetics or playerpromotion. Rootsoleintegration, task3independentQA separate;
+three visual/moving/Garage/contact/mobile gates open; nextship183.

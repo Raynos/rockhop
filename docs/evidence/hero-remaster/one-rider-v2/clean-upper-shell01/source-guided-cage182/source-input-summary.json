@@ -1,0 +1,66 @@
+{
+  "status": "READ_ONLY_RECEIPT_REFERENCE_NO_GEOMETRY_GO",
+  "sourceHashes": {
+    "rawC19": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+    "mapped34": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7"
+  },
+  "sourceBoundaryReportSHA256": "a2eba6ebe51226d90ae23d938534e1232866bcbe311793c7f6df8ad3ebee98b8",
+  "interfaceSummary": [
+    {
+      "label": "hood_body",
+      "sharedGroups": 307,
+      "pairedBoundaryEdges": 307,
+      "cycles": [
+        {
+          "vertices": 307,
+          "simpleCycle": true,
+          "degreeHistogram": {
+            "2": 307
+          }
+        }
+      ]
+    },
+    {
+      "label": "cuff_body_glove",
+      "sharedGroups": 127,
+      "pairedBoundaryEdges": 127,
+      "cycles": [
+        {
+          "vertices": 65,
+          "simpleCycle": true,
+          "degreeHistogram": {
+            "2": 65
+          }
+        },
+        {
+          "vertices": 62,
+          "simpleCycle": true,
+          "degreeHistogram": {
+            "2": 62
+          }
+        }
+      ]
+    }
+  ],
+  "privateInputs": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/source-boundaries181/cuff_body_glove-aliases.json",
+      "SHA256": "ed0f7a302ac9e8270bd05253234401d4c64c5d19a65c7e3b9135282f807a6a23"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/source-boundaries181/source-boundary-profiles.npz",
+      "SHA256": "ddca134c8d71c4d22066b513f418f7be5223eb7ef8ee34360429161d8f976ed7"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/source-boundaries181/hood_body-aliases.json",
+      "SHA256": "351804cd5269b6f30c13e035b70702caf2782269ce2b4592bd207f60e43e91f8"
+    }
+  ],
+  "limits": [
+    "All graphIDs are exact-position quotient IDs, private CSR/row mappings include original primitive rows. Material numbers not used for semantics.",
+    "A boundary cycle is indexed topology evidence, not anatomy, selfintersection, visible join or motion acceptance.",
+    "Allsourcefloat32 positions retained; crosssection points are float64 analytic interpolants with literal source triangle/barycentric provenance.",
+    "No source weights, head/hood/glove/lower identity, physics, rig, paint or LOD changed.",
+    "If hoodbody graph is not one completepaired degree2cycle, do not force a falsejoin; parent can select continuous torso+hood reconstruction preserving sourcehood silhouette rather than overlapping shells."
+  ]
+}
