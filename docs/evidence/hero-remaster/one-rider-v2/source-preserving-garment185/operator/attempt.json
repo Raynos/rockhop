@@ -1,0 +1,48 @@
+{
+  "trialID": "H185-POSITIONS-FIXED-LOCAL-HOOD-FLIP-01",
+  "status": "LITERAL_EXPORT_GATE_CLEAR_PENDING_PARENT",
+  "registeredUTC": "2026-10-02T05:26:04Z",
+  "parentCommit": "3bd520e1",
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "candidateSHA256": "61b142704e656ea1b9a45d8bed4c467436ed1f76f3c435498f5b74df2b9993b5",
+  "bounds": {
+    "acceptedFlips": 32,
+    "candidateTests": 128,
+    "operatorMinutes": 12,
+    "totalMinutesExcludingCoplanarWait": 15,
+    "CPUThreads": 2,
+    "anonymousGB": 70
+  },
+  "geometryStages": [
+    "hashverified independent coplanar-source receipt",
+    "one bounded internal candidate pass",
+    "one final frozen GLB and ancestry NPZ",
+    "literal reparsed export audit"
+  ],
+  "renderAuthorized": false,
+  "setups": [
+    {
+      "id": "H185-SETUP-01",
+      "stage": "code/source parser and exact-input verification",
+      "registeredBeforeRun": true
+    },
+    {
+      "id": "H185-SETUP-02",
+      "stage": "correct int/list registry indexing; source-only preparation retry",
+      "registeredBeforeRun": true
+    }
+  ],
+  "setupFailures": [
+    {
+      "id": "H185-EXEC-ERROR-1",
+      "type": "TypeError",
+      "error": "unsupported operand type(s) for +: 'int' and 'list'"
+    }
+  ],
+  "geometryFailures": [],
+  "failureUTC": "2026-10-02T05:31:20.759335+00:00",
+  "operatorStartedUTC": "2026-10-02T05:31:56.692738+00:00",
+  "pid": 81839,
+  "acceptedFlips": 4,
+  "candidateTests": 70
+}

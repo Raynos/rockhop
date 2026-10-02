@@ -74,6 +74,30 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Local hood rest repair — round185
+
+Oneboundedpositions-fixed sourcehood pass clears11measuredrest intersections
+with4accepted diagonalflips/70internaltests/33.11sCPU2threads. Onlyeight original
+hoodface slots changeindices. Parentverifies theactualexport: originalBINprefix
+andallpositions/attributes/normals/UV/PBR/19skin/morph/nodefields exact; onlyhood
+indexbuffer/referenceappend. Wholecloth22600nodes/44969tris,0degenerates/nonmanifold/
+winding,237openingedges preserved. Independent21802hoodself/body/glovepairs find
+0strictcrossings;all11oldpairs retestedregardlessadjacency also clear.
+
+Threeoriginalcoplanarcases areexactpointcontacts/0area byindependent rational
+clipping. Candidateadjacent/foldchecks retainedseparately;parentstrictpredicates
+still exclude coplanar/end and>=2shared. No freshheadcollision or allbodycontact
+claim. Originalnormals unchanged; changednoncoplanar interpolationmustbe reviewed.
+Sourcefamily1geometry output/0failedgeometry and2disclosedmetadata/parserfailures;
+olderexhausted methodsstayretired. No scalar count or unplayedstillacceptsart.
+
+Afterthis findingcommit authorizeoneexact179matchedneutralCPUgray/PBRrender and
+playedreview,thenexplicit19bone compatiblehandoff andshortactualoverhead/reach/sit
+motion. No newweights/rig/physics ornormal-player assetpromotionyet. Hips/legs,
+allthreevisualcheckpoints/fullbodyandface>=7target8/continuousposes/actualGarage/
+riding/maxlean/landing/saddlegripsole/mobile stillopen;cosmeticspause persists.
+Nextmandatoryordinaryship186.
+
 ## Source construction diagnosis and bounded local correction — round184
 
 Original C19 has one continuous22600physical-node cloth/body surface with no

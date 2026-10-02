@@ -1,6 +1,6 @@
 {
   "familyId": "source-preserving-whole-garment01",
-  "status": "SOURCE_DIAGNOSIS_FROZEN_ONE_LOCAL_OPERATOR_AUTHORIZED_AFTER_COMMIT",
+  "status": "ONE_LOCAL_HOOD_OUTPUT_LITERAL_PASS_APPEARANCE_AND_POSE_PENDING",
   "predecessorFamilies": [
     {
       "family": "retained-v7-cap-rmf-tube-natural-upper-garment",
@@ -14,16 +14,17 @@
       "status": "RETIRED"
     }
   ],
-  "geometryAttempts": 0,
+  "geometryAttempts": 1,
   "geometryFailures": 0,
-  "disclosedFailures": 1,
+  "disclosedFailures": 2,
   "diagnosticMetadataFailures": 1,
   "approaches": [
     {
       "id": "local-hood-edge-flips",
-      "geometryAttempts": 0,
-      "failures": 0,
-      "status": "CONTRACT_FROZEN_GO_AFTER_COMMIT184"
+      "geometryAttempts": 1,
+      "failures": 1,
+      "status": "REST_GATE_PASS_RENDER_PENDING",
+      "failureClass": "One parser setup, no failedgeometry"
     }
   ],
   "attempts": [
@@ -43,6 +44,22 @@
       "id": "source184-orbit-review",
       "status": "BOTH_SOURCE_FILMS_PLAYED_END_48FRAMES_REVIEWED",
       "failedGeometry": false
+    },
+    {
+      "id": "H185-setup01",
+      "status": "FAILED_INT_PLUS_LIST_THEN_FIXED_INDEX_CAST",
+      "countedFailure": true,
+      "evidence": "../source-preserving-garment185/operator/attempt.json"
+    },
+    {
+      "id": "H185-local-flips01",
+      "status": "ONE_OUTPUT_LITERAL_REST_PASS",
+      "sourcePairs": 11,
+      "finalPairs": 0,
+      "internalCandidateTests": 70,
+      "acceptedFlips": 4,
+      "geometryFailure": false,
+      "limits": "No renderedappearance or movingpose pass"
     }
   ],
   "policy": "Five failures of one repair approach switches method;15family failures including setup/evidence invokes architecture fallback. Diagnostic metadata failure counted transparently, not a geometric trial. Older counts retained. No routine human checkpoints.",

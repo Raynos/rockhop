@@ -2241,3 +2241,21 @@ positions/seams/head preserved. Geometry0, diagnosticmetadata failure1
 transparent; oldfamiliesretired. No >=7score, rig, movingcontact/mobile or
 playerpromotion. Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment184/
 Ask: 248. Ship186next.
+
+## Round185 — local source hood correction clears resting intersections
+
+Finding: Four sourcehood edgeflips remove11measuredrestcrossings without
+replacingthewholegarment or changinglikedhead/body fields.
+
+Validation: ActualGLBsourceBIN/JSON/attrs/19skin/morphs preserved;8hoodslots
+changeindices only. Parent22600node/44969tris topology0failures,21802hood
+strictpairs0hits andall11oldpairsclear regardlessadjacency. Threecoplanar
+sourcecases exactpointcontacts/0area independentlyclassified. Frozenfiles
+verified;70internaltests/4flips/33.11sCPU2threads,ONE finaloutput.
+
+Limits: Appearance/posedynamics/contact/mobile unaccepted; oldnormals
+locallyinterpolate differently. Sourcefamily2metadata/parser failures
+transparent,1geometry/0failedgeometry. Actualhipsremainopen. Aftercommit
+matchedneutralplayedreview thenexplicit19bonehandoff andshortarm/sit motion.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment185/
+Ask: 248. Nextmandatoryship186.
