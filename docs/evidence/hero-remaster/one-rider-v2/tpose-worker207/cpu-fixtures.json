@@ -1,0 +1,83 @@
+{
+  "status": "CPU_PRESERVATION_BLOCK_FIXTURES_PASS",
+  "fixtures": [
+    {
+      "fixture": "valid",
+      "validForDisplay": true,
+      "rejectedAfterSaving": false,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "e7c40142e60e624d4f2e46a223a77340fa38d53cea7361f337e403dbc546be00",
+      "nonfiniteVertexRowIDs": [],
+      "invalidFaceRowIDs": []
+    },
+    {
+      "fixture": "nonfinite_vertices",
+      "validForDisplay": false,
+      "rejectedAfterSaving": true,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "35537d616ba8bbc30ba591c33f12830e98fd07ca14b2d19ea46119b1456772e9",
+      "nonfiniteVertexRowIDs": [
+        1,
+        2
+      ],
+      "invalidFaceRowIDs": []
+    },
+    {
+      "fixture": "negative_face",
+      "validForDisplay": false,
+      "rejectedAfterSaving": true,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "4908b775828a88484153f68cc2affb18b57956955a932e196837de10fe8c1504",
+      "nonfiniteVertexRowIDs": [],
+      "invalidFaceRowIDs": [
+        0
+      ]
+    },
+    {
+      "fixture": "out_of_range_face",
+      "validForDisplay": false,
+      "rejectedAfterSaving": true,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "ab1c25f04258f5195c8aa3a81f7dd16f699ce8cd3cc97c5a00ba61eeeee579b2",
+      "nonfiniteVertexRowIDs": [],
+      "invalidFaceRowIDs": [
+        0
+      ]
+    },
+    {
+      "fixture": "noninteger_face",
+      "validForDisplay": false,
+      "rejectedAfterSaving": true,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "1cef893cdc077df733ce8ec5ddd6c6557bd621acb5c4c42a9371b81436e0e67b",
+      "nonfiniteVertexRowIDs": [],
+      "invalidFaceRowIDs": [
+        0
+      ]
+    },
+    {
+      "fixture": "nonfinite_face",
+      "validForDisplay": false,
+      "rejectedAfterSaving": true,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "184d71539d1babbceb39b15592f320ee56275d8caac21ab5acb5a3ae31bf32c5",
+      "nonfiniteVertexRowIDs": [],
+      "invalidFaceRowIDs": [
+        0
+      ]
+    },
+    {
+      "fixture": "empty_faces",
+      "validForDisplay": false,
+      "rejectedAfterSaving": true,
+      "dtypeAndValuesRetained": true,
+      "nativeNPZSHA256": "d55e5f59710c4e8d149f1c3aa9f5f0515b0269f2c6688d28f8243cf857cd2dc2",
+      "nonfiniteVertexRowIDs": [],
+      "invalidFaceRowIDs": []
+    }
+  ],
+  "samplingExecuted": false,
+  "GPUUsed": false,
+  "wholeWorkerExecuted": false,
+  "limits": "AST-selected actual save/diagnostic/refusal block only; no model, display exporter or GPU pass."
+}

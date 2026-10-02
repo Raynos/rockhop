@@ -2648,3 +2648,16 @@ workload, zero candidates; ONE same-settings diagnostic rerun next. No texture,
 rig, player or moving acceptance. Cosmetics paused; ordinaryship207due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-source206/
 Ask: 248.
+
+## Round207 — admit preservation-only diagnostic rerun
+
+Finding: Raw preservation now precedes validation; invalid geometry retains
+exact arrays and element diagnostics. Sampling/controller behavior unchanged.
+
+Validation: Parent97pins/sevenCPUfixtures, preservation-only diff/inference
+AST reviewed. Ship207bothtiers byteidentical/crash103/restart2-1ms/noerrors.
+
+Limits: Actual rerun pending, no geometry verdict. Freeze scan race ownership
+corrected with snapshot retained; no recipe mutation. Cosmetics paused,next210.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/
+Ask: 248.

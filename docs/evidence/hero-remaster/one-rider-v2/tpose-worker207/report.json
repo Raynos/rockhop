@@ -1,0 +1,68 @@
+{
+  "status": "DIAGNOSTIC_PRESERVATION_CORRECTION_READY_UNEXECUTED",
+  "GPUUsed": false,
+  "modelWorkloadsRun": 0,
+  "accepted": false,
+  "reference": "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png",
+  "referenceSHA256": "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024",
+  "output": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape207-01",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/run_bounded.py",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png",
+    "--image-sha256",
+    "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024",
+    "--out",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape207-01",
+    "--seed",
+    "42"
+  ],
+  "source206": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01/start-settings.json": {
+      "bytes": 894,
+      "sha256": "930cd5b0207eb7fdd5410b5f6672c28cbf18e7ce8ba783744d191a9b71d594ee"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01-process.json": {
+      "bytes": 5659,
+      "sha256": "bddc2b9002d49963502994ff53d247e89e8aa21a4237083b9a1d3fb20f0845e6"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01-process.log": {
+      "bytes": 4702,
+      "sha256": "3fa2a72302b4cbea0221aa4d7f7c931480679c7b13e663f716982e8c92e619fa"
+    }
+  },
+  "unchangedInferenceAST": true,
+  "inferenceASTSHA256": "84d287fcd6652ecc0c5e59240329648ca7689506c8cf2447ee2d0ce485ed0970",
+  "controllerByteIdenticalTo203": true,
+  "controllerWorkerResolution": "Path(__file__).with_name(shape_only_worker.py) resolves the207 sibling",
+  "parameters": {
+    "version": "Hunyuan3D-2.1",
+    "seed": 42,
+    "shapeSteps": 30,
+    "octree": 380,
+    "numChunks": 200000,
+    "guidanceScale": 5.0,
+    "device": "mps",
+    "flashVDM": "mc",
+    "outputType": "mesh"
+  },
+  "changes": [
+    "New207 freeze/recipe paths",
+    "Save untouched numeric native NPZ before finite/index/shape validation",
+    "Record all invalid element/row IDs and values before refusing display export",
+    "Retain a generation receipt on validation rejection"
+  ],
+  "fixtures": {
+    "count": 7,
+    "preservedExactDtypeValues": true,
+    "GPUUsed": false
+  },
+  "limits": [
+    "Not a geometry repair or model-setting change",
+    "Same-settings actual diagnostic rerun not executed here",
+    "Non-real/object decoder values refuse as unsupported API arrays; no silent coercion",
+    "No reference, liked head, production rider, current comparisons or installed environment changed"
+  ]
+}

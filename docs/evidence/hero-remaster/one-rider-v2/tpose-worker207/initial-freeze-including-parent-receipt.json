@@ -1,0 +1,402 @@
+{
+  "status": "DIAGNOSTIC_RECIPE_FROZEN_NO_MODEL_RUN",
+  "computationalInputs": {
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/__init__.py": {
+      "bytes": 1181,
+      "sha256": "d233d923a912621c986201e482b1c7b9a5fc014974e6bb952ceb7b36f3c4020f"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/data/dit_asl.py": {
+      "bytes": 15137,
+      "sha256": "ff5c8c9b57fec20998783100fb5fb4f5e4c57943afcafb0d9f6a985803e0eb87"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/data/utils.py": {
+      "bytes": 5340,
+      "sha256": "a2c24c5243f0cacfd323ab969bd9ab26928e54393ce439eaf6ab4de73eb951fb"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/__init__.py": {
+      "bytes": 1665,
+      "sha256": "2f56106c91dfc126f3e20551e8a7a48f049be7b33eda814ae1c184bc979328fe"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/__init__.py": {
+      "bytes": 1360,
+      "sha256": "f1c91751fa8db7ecf531189aae33a59b5b9e3e10aa0d524edf33f6857eea8cfd"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/attention_blocks.py": {
+      "bytes": 27004,
+      "sha256": "1cbd34f21102a33eed2106e445ec6a96b896b80e187564f40e2029779bb2cba8"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/attention_processors.py": {
+      "bytes": 3913,
+      "sha256": "9a461ddde9a2bf5ca0cd3961c3c1b86f9c81772066fe5b815bc497e0b5a8f053"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/model.py": {
+      "bytes": 12434,
+      "sha256": "b81a4586cc1148def7fe157c18071fb7dc50753cfbf1930932bbcbecbcb35829"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/surface_extractors.py": {
+      "bytes": 7074,
+      "sha256": "203d1551ccef37e86f9809b9ac0fac68e8e4a2f633ca72a85408535595ae68e5"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/volume_decoders.py": {
+      "bytes": 18300,
+      "sha256": "95ffab6bd0a11034bc2b7415fef1379e27c4d2238638f831a0456019d90484eb"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/conditioner.py": {
+      "bytes": 9737,
+      "sha256": "137434197ff42e337cfb83fb67c317cce42c5b73c256bec5744af1497dc98cde"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/denoisers/__init__.py": {
+      "bytes": 961,
+      "sha256": "8ab24870a628fb94a3d903d7d149d3eb3d20b32cadf8f6680c6e457562384a41"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/denoisers/hunyuan3ddit.py": {
+      "bytes": 14981,
+      "sha256": "0e47af4644344c0900adb216164b3be26b2d97085017711a72f27fda66f2b755"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/denoisers/hunyuandit.py": {
+      "bytes": 23996,
+      "sha256": "cb4d9f3504dea0ed3eba94963a8efd7bf92221b26613a7c8bba58e4ef7b6cd25"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/denoisers/moe_layers.py": {
+      "bytes": 7833,
+      "sha256": "a8d756a5fbe6941ad0dd68e4d1b0ea4fc6a84418f4c2e2b0a28cb4f2144ec240"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/diffusion/flow_matching_sit.py": {
+      "bytes": 14990,
+      "sha256": "32925fd014a147825a002edcd07e84b1e616b1da3ab0081ab76401f5c5bc8e3a"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/diffusion/transport/__init__.py": {
+      "bytes": 3462,
+      "sha256": "3a84f703c88bc0ad9b4be89cd2cb880e59763ef59548fc2d32ac35eab0a8ed42"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/diffusion/transport/integrators.py": {
+      "bytes": 4810,
+      "sha256": "7edc1ed10518ccb0527ccf59deccbdfc4ddc14221c8299cac859a1e242094e2a"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/diffusion/transport/path.py": {
+      "bytes": 8325,
+      "sha256": "16321f9f76ab0385ec7433e8500453a5bebc46029a87966926f961d641a64187"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/diffusion/transport/transport.py": {
+      "bytes": 18017,
+      "sha256": "749ab441b9a301d50c323ebed7b2465a6dded439fe41fa8a1c0d30847b9ac90f"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/diffusion/transport/utils.py": {
+      "bytes": 2025,
+      "sha256": "28aa55be314c180a57358215adb8cb0abf9d9a6e1992fb841f90578fde782ee0"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/pipelines.py": {
+      "bytes": 32244,
+      "sha256": "80d3d66be03e2ebe2f988cefcf488f2e5fa52656e8547c72dd44aaae4ad45714"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/postprocessors.py": {
+      "bytes": 7060,
+      "sha256": "3899ef49fbc7453553d264d16c14305a9ee9c6f8a3341a8850b960f018640a17"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/preprocessors.py": {
+      "bytes": 5992,
+      "sha256": "284dc24fabbf974bd6793ebd58e95b7700550d90371cacb96ad0889ec558de1e"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/rembg.py": {
+      "bytes": 1220,
+      "sha256": "e372426c19bc51447129b72862e330777e7ce4a9e07212c1abdff5d1947292dc"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/schedulers.py": {
+      "bytes": 18997,
+      "sha256": "d3b25b84dac26f0e862cfc866da08df2d6592f01a0aaeda965782ab0fc1d8bba"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/surface_loaders.py": {
+      "bytes": 9266,
+      "sha256": "c4a821fffd9ea9f121ac07a034faaa9e52350859cc667db955ae91c17ee1c001"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/__init__.py": {
+      "bytes": 181,
+      "sha256": "0be86a4b0a9c7885550f80fd6f9900855246f6fb0d8df6000e07414258d6590f"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/ema.py": {
+      "bytes": 2982,
+      "sha256": "cadb5b3a3ac8fb23a8fb3554fac3ac45c147f99d765cfa1f0af0db5f8ac9476c"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/misc.py": {
+      "bytes": 3573,
+      "sha256": "12d3378fa71c2569897ac27f8dbf3dcd3857b25f8d008c564e6b8e1df73ea3d0"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/trainings/__init__.py": {
+      "bytes": 24,
+      "sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/trainings/callback.py": {
+      "bytes": 8408,
+      "sha256": "e829e12bc17212dd8e343b4a2b263ae46d15755dd7aca0ca8f633a1740ff7e1d"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/trainings/lr_scheduler.py": {
+      "bytes": 2268,
+      "sha256": "48462dc6c67b5ecfcdf15d780ffffa728b13b53b6d094e38b7402d45aa47e201"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/trainings/mesh.py": {
+      "bytes": 3928,
+      "sha256": "c913ae260f7c535e38a501a2c17031e027884545cd8842fbe2953d8f64aa5656"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/trainings/mesh_log_callback.py": {
+      "bytes": 12817,
+      "sha256": "adfa2c81b7167bf617173907cc1dd6f022cc88406a9bc0d2176ed61271f096e5"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/trainings/peft.py": {
+      "bytes": 3683,
+      "sha256": "d9975eb27fc688f82265a6d116c80dd3de0dbadf0c6141539f73bcb5448a02cf"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/utils.py": {
+      "bytes": 4634,
+      "sha256": "09fda07cb7e7aafbbc2d0a0a808d312d6687bcb1a939c33cdf9f88dc07d42ca0"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/visualizers/__init__.py": {
+      "bytes": 24,
+      "sha256": "8b084a9f378124b2b1a51563bf3c22444eb7ff33692017da28b2136ae56987ed"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/visualizers/color_util.py": {
+      "bytes": 2215,
+      "sha256": "4805fade6c1ea57fa8ef661365cdf4bdad923ca9d58dcc9a448b3bc99e037f73"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/visualizers/html_util.py": {
+      "bytes": 1809,
+      "sha256": "1ad73fe86a126c76f88d7a91bf3743788601801a3b53bf9f6439df7726ec6af8"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/utils/visualizers/pythreejs_viewer.py": {
+      "bytes": 24165,
+      "sha256": "3cb87aac8493e2a22c8a240b4a5d6a4f4869355ef4433f7a25313c406643de24"
+    },
+    "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/config.yaml": {
+      "bytes": 2078,
+      "sha256": "a9e9b66f0163a9b827d730633ac88f47fcc8e3071dcbb9ee12d88ef7537c5c6e"
+    },
+    "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/model.fp16.ckpt": {
+      "bytes": 7366389768,
+      "sha256": "6b519fc7242f78e9b5f47ea4d55668fe3d944a2d27332f4ca68d29a6ff603f5e"
+    },
+    "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/config.yaml": {
+      "bytes": 409,
+      "sha256": "2f778706feb2a7c25b41f88733b3986cef3dff85f95e747fef902173e548ad8e"
+    },
+    "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/model.fp16.ckpt": {
+      "bytes": 655648152,
+      "sha256": "5cbe97f25e6e7abd4bccc80ab07524ec0c86d24118486a9ba49bb5dfb070288a"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/pyvenv.cfg": {
+      "bytes": 175,
+      "sha256": "4d63ec85ee1091fb8627276945f6ab62727965fb17475cba8365ad74e66d2475"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/lib/python3.11/site-packages/torch-2.14.0.dist-info/METADATA": {
+      "bytes": 38915,
+      "sha256": "c348a2722c6ce952cbf3f5596a296359d61d32182ae7196b7c4fe2502b82e49f"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/lib/python3.11/site-packages/numpy-2.4.6.dist-info/METADATA": {
+      "bytes": 6608,
+      "sha256": "b082c52ccbe3b880bae177c35171b52ed6c947f3ad71e3762f2723f60a411de0"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/lib/python3.11/site-packages/trimesh-5.1.0.dist-info/METADATA": {
+      "bytes": 13280,
+      "sha256": "2cd6e0a54cdb5160998e55a496a50c1cd24f8cca1679734ee0efd57cbc253d7d"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/lib/python3.11/site-packages/pillow-12.3.0.dist-info/METADATA": {
+      "bytes": 9093,
+      "sha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8"
+    },
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/lib/python3.11/site-packages/torchvision-0.29.0.dist-info/METADATA": {
+      "bytes": 5675,
+      "sha256": "256149eea9516f6996e0a2dbbf339571ca795698078de6bc405fe1a42ad334c7"
+    }
+  },
+  "inputPins": {
+    "/Users/raynos/projects/localai/bin/img2mesh/rockhop_hunyuan21_runner.py": {
+      "bytes": 5800,
+      "sha256": "dfcb588ef1279e70d54993acc9e547f41e95ad1fc59f08dfb5923d07f3f45241"
+    },
+    "/Users/raynos/projects/localai/bin/img2mesh/rockhop-hunyuan21.sh": {
+      "bytes": 1031,
+      "sha256": "1bc95ae16ba694fa69d52933f9399723c6ed93a503a6d3dee41eaac567b88487"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/generation.json": {
+      "bytes": 2472,
+      "sha256": "8b7c55a3a1422af2ac006ffb1a41e9b9ab3879692d7da10de2dd5c6c80ebc668"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/start-settings.json": {
+      "bytes": 856,
+      "sha256": "b822307131449013fa2e5689346d9a519e4c598e2d22b3e4d8752dba089d404c"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/hunyuan21/04/raw-shape.npz": {
+      "bytes": 2563742,
+      "sha256": "4a10d00eb42b08910e015efe117f6b28f07be2c7d76e311613a38ac5303d0247"
+    },
+    "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/v7-export.json": {
+      "bytes": 222,
+      "sha256": "1c33f0b035e8a5035e5a6486020ac22a09970e49bf22156015ad522b9f8bcbaf"
+    },
+    "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/README.md": {
+      "bytes": 4311,
+      "sha256": "883458d0027b58453cd5f0f6e85e316d24fc46a0bcdaf973070c613b013511b2"
+    },
+    "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/results/v7-export-motion-manifest-gate.json": {
+      "bytes": 958271,
+      "sha256": "f9196713f021b38b3439461635f8e6386b0b326f6f8be97f53754c20e24ff007"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/independent-pipeline-learnings-2026-10-01/README.md": {
+      "bytes": 43183,
+      "sha256": "cd8b7c4d54fdc4907efa8dd3fac1de10f44c07416c1a44204751d29304edfa16"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-readiness203/freeze.json": {
+      "bytes": 13954,
+      "sha256": "fab7b301ee2eeef94c2d53859221c40a54f6408493b0643e3c5bd5c08b863628"
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-readiness203/shape_only_worker.py": {
+      "bytes": 5866,
+      "sha256": "70184ff6134e4ad1b04e85c038f096fa9cb7c55d3826bfa4a02cd2b182622645"
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-readiness203/run_bounded.py": {
+      "bytes": 4926,
+      "sha256": "f9ee56b51f907c7f1e175dc018635e0c4648370f96ee9143008fb9eebb450130"
+    },
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png": {
+      "bytes": 1486102,
+      "sha256": "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01/start-settings.json": {
+      "bytes": 894,
+      "sha256": "930cd5b0207eb7fdd5410b5f6672c28cbf18e7ce8ba783744d191a9b71d594ee"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01-process.json": {
+      "bytes": 5659,
+      "sha256": "bddc2b9002d49963502994ff53d247e89e8aa21a4237083b9a1d3fb20f0845e6"
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01-process.log": {
+      "bytes": 4702,
+      "sha256": "3fa2a72302b4cbea0221aa4d7f7c931480679c7b13e663f716982e8c92e619fa"
+    }
+  },
+  "ownedFiles": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/shape_only_worker.py": {
+      "bytes": 8916,
+      "sha256": "76d26918ce9bc3c659994914cf8966c3b23af5d3b515eff69407026c37a076b8"
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/run_bounded.py": {
+      "bytes": 4926,
+      "sha256": "f9ee56b51f907c7f1e175dc018635e0c4648370f96ee9143008fb9eebb450130"
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/freeze.py": {
+      "bytes": 6561,
+      "sha256": "e62851886cbbb150a9019030b4fda40564c23b19d1c63978e8674753449275bf"
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/verify.py": {
+      "bytes": 4518,
+      "sha256": "0bb476a73199680c331675e3f4e17e14468675eee9d1c26b097a7bcee9cfa0f0"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/report.json": {
+      "bytes": 2981,
+      "sha256": "dfc53f2c70865b4b9b5e667908fd133e37f986ac5acc47308c45dc64d89a30b9"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures.json": {
+      "bytes": 2535,
+      "sha256": "e23ebb4d4f67893d5e3bfd55c76c5cd624a507e7a4df474d1624aff8c7d084fc"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/README.md": {
+      "bytes": 1627,
+      "sha256": "31d0c3a6e2ec14d257d298234ff1020a35a55dabd1cb90b6fc6f55f2dd0288b5"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/parent-cpu-review207.json": {
+      "bytes": 340,
+      "sha256": "ce706c25ee997b6cc722d74c6926b4f9eb93248c188b5924300549b8023bb8bd"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/preflight.json": {
+      "bytes": 892,
+      "sha256": "3166629e452bd711336329b90bbb921aefb8350a1fbfe69cd68140cc892670e1"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/preservation-only.diff": {
+      "bytes": 4710,
+      "sha256": "b6c05a39f2dbbc1dceabb6e270a358bda28549d0516186b06dd778751e4710f5"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/valid/native-diagnostics.json": {
+      "bytes": 685,
+      "sha256": "5b672e0e27a9da1092441ee84a9de0c3fe4cffbc66e477144c817e5a4e929bd3"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/valid/native-decoded.npz": {
+      "bytes": 411,
+      "sha256": "e7c40142e60e624d4f2e46a223a77340fa38d53cea7361f337e403dbc546be00"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/nonfinite_vertices/native-diagnostics.json": {
+      "bytes": 788,
+      "sha256": "67311df98228c7228d785a5b2e82b97959660995765ca165021593d53c2e1e81"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/nonfinite_vertices/generation.json": {
+      "bytes": 1213,
+      "sha256": "9b15a56b0a93f7b839e8716b1e7947b46baefa969bf0c7534fa60444bdc40883"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/nonfinite_vertices/native-decoded.npz": {
+      "bytes": 417,
+      "sha256": "35537d616ba8bbc30ba591c33f12830e98fd07ca14b2d19ea46119b1456772e9"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/noninteger_face/native-diagnostics.json": {
+      "bytes": 746,
+      "sha256": "16917ed0dbc27197e0aacb18af02f31b922bfe2a6f26e9df6be6d3a774b1b858"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/noninteger_face/generation.json": {
+      "bytes": 1158,
+      "sha256": "c3f376255a2911c717bb3dacced7b75f9033745d10a21133a432aab9865cf500"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/noninteger_face/native-decoded.npz": {
+      "bytes": 411,
+      "sha256": "1cef893cdc077df733ce8ec5ddd6c6557bd621acb5c4c42a9371b81436e0e67b"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/nonfinite_face/native-diagnostics.json": {
+      "bytes": 746,
+      "sha256": "5563bbf6bc29645767f3a7390fd411c6d854d8d84210f1361c12cdfbeffe0e29"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/nonfinite_face/generation.json": {
+      "bytes": 1160,
+      "sha256": "1773b801b705caadc756f66c7536d99e0d6eb6ac79eda5656b47fd7d91f19d76"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/nonfinite_face/native-decoded.npz": {
+      "bytes": 411,
+      "sha256": "184d71539d1babbceb39b15592f320ee56275d8caac21ab5acb5a3ae31bf32c5"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/empty_faces/native-diagnostics.json": {
+      "bytes": 688,
+      "sha256": "1c83afdfcaa26ff8876aa5c1b726f3587fd626f43bf02fed8ba61a604dfc9d9b"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/empty_faces/generation.json": {
+      "bytes": 1083,
+      "sha256": "d8c25fdca5fc615e614d75c137dd775e412e8cc19d0ad02791d42f13e0fc68f9"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/empty_faces/native-decoded.npz": {
+      "bytes": 403,
+      "sha256": "d55e5f59710c4e8d149f1c3aa9f5f0515b0269f2c6688d28f8243cf857cd2dc2"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/out_of_range_face/native-diagnostics.json": {
+      "bytes": 738,
+      "sha256": "745dfe302f2d9330f7e61b1baccf093b7817ed57f1ead45417655c8cef8fc594"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/out_of_range_face/generation.json": {
+      "bytes": 1151,
+      "sha256": "3f7a3aa43c69a29753e9fb470ebc8fe84e9468664f737b0de54aaf3333d5dffd"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/out_of_range_face/native-decoded.npz": {
+      "bytes": 411,
+      "sha256": "ab1c25f04258f5195c8aa3a81f7dd16f699ce8cd3cc97c5a00ba61eeeee579b2"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/negative_face/native-diagnostics.json": {
+      "bytes": 740,
+      "sha256": "765c3de5265643142935cd56a0767874534f5ce0c1959f3c42dfa9934299777a"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/negative_face/generation.json": {
+      "bytes": 1153,
+      "sha256": "0e1a28f4627f3c98c33036b2b4764bf4b066b0419c4aba955131402509e8c215"
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/cpu-fixtures/negative_face/native-decoded.npz": {
+      "bytes": 411,
+      "sha256": "4908b775828a88484153f68cc2affb18b57956955a932e196837de10fe8c1504"
+    }
+  },
+  "GPUUsed": false,
+  "modelWorkloadsRun": 0,
+  "referenceSHA256": "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024",
+  "samplingChanges": false,
+  "preservationDiagnosticsOnly": true
+}

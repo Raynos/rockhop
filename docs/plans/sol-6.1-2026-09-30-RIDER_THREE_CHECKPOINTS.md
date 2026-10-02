@@ -74,6 +74,20 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Preserve diagnostics before validation; one rerun admitted — round207
+
+Sibling worker207 changes only preservation/diagnostics ordering and its frozen
+path: raw native arrays saved BEFORE checks; exact invalid vertex/face elements
+recorded; invalid display refused. Inference AST and controller unchanged.
+Parent independently reviewed seven saved CPU fixtures and97 frozen pins.
+Initial freeze scan included a concurrently arriving parent receipt; metadata
+ownership corrected with snapshot retained, no source/inference mutation.
+ONE same-settings diagnostic rerun uses fresh tpose-shape207-01. No result yet.
+
+Ordinary ship207 passes both tiers byte-identical40.083333333333336s/hash
+368f1ca5bd9e830a, crash103ticks, restart2/1ms/noerrors,20models unchanged.
+Next ship210. Cosmetics paused; no basic pose, character or moving acceptance.
+
 ## First source trial exposes preservation-order failure — round206
 
 Actual2.1 sampling/extraction ran under the shared lock, but the worker failed its

@@ -1,0 +1,24 @@
+{
+  "status": "CPU_ONLY_PREFLIGHT_NO_MODEL",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/shape_only_worker.py",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png",
+    "--image-sha256",
+    "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024",
+    "--out",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape207-01",
+    "--seed",
+    "42"
+  ],
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "lockMethod": "lockf -k",
+  "anonymousBytes": 42786783232,
+  "limitBytes": 70000000000,
+  "timeoutSeconds": 1800,
+  "terminateAtSeconds": 1790,
+  "memoryPollSeconds": 1,
+  "eviction": false
+}
