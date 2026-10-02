@@ -1,0 +1,88 @@
+{
+  "status": "READ_ONLY_DOCUMENTED_LINEAGE_NO_ARBITRARY_FIT",
+  "nativeGLBPositionFloat32Exact": true,
+  "nativeGLBIndicesExact": true,
+  "nativeCounts": {
+    "vertices": 172223,
+    "triangles": 344456
+  },
+  "reducedCounts": {
+    "vertices": 27468,
+    "triangles": 55000
+  },
+  "paintCounts": {
+    "vertices": 38363,
+    "triangles": 55000
+  },
+  "paintDisplayBINExact": true,
+  "source185Body11PositionIndexExact": true,
+  "nativeToCurrentRestMatrix": [
+    [
+      0.0,
+      0.0,
+      -0.9188475781679153,
+      0.49437153398990635
+    ],
+    [
+      0.0,
+      -0.9188475781679153,
+      0.0,
+      0.9081238180398941
+    ],
+    [
+      -0.9188475781679153,
+      0.0,
+      0.0,
+      -0.006490739283617585
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "lineage": [
+    "raw-shape.npz native vertices/triangles equal raw-shape.glb after required Float32 encoding",
+    "shape.glb reduced in same native axes",
+    "paint mesh local coordinates (native X,native Z,-native Y), six-decimal export rounding",
+    "working-display2 only node X+90\u2192X\u221290; BIN unchanged",
+    "Blender imported display point(native X,native Z,-native Y)",
+    "neutral assembly canonical = sourceDisplayTransform.scale*import point+translation",
+    "bind04 proper Blender Z+90 followed by scale1.015 and X+.65, export Blender(X,Z,-Y)",
+    "C19/source185 body attributes exactly body11; use source185 identity-world rest positions, do not reapply body11 outer rig transform"
+  ],
+  "paintReducedSpatialDistanceM": {
+    "quantiles": [
+      0,
+      0.5,
+      0.95,
+      1
+    ],
+    "values": [
+      0.0006252559209453697,
+      0.04897739163737639,
+      0.14146839050741164,
+      0.2278170209967508
+    ],
+    "notIndexCorrespondence": true
+  },
+  "sourceRestUnderarmDocumentedTransformMatch": {
+    "selection": "1.05<=Y<=1.38 and .12<absZ<.35; purely geometric underarm neighbourhood, not a torso ownership mask",
+    "rows": 4732,
+    "nearestPaintVertexDistanceQuantilesM": [
+      2.816800199433576e-09,
+      8.713056548132831e-08,
+      1.582402394043751e-07,
+      0.009670056405184977
+    ],
+    "matchingToleranceM": 2e-06,
+    "allWithinTolerance": false,
+    "spatialCorrespondenceUsedOnlyAfterLiteralRecipeTransform": true
+  },
+  "limits": [
+    "No nearest-vertex contact/surface or skin quality claim",
+    "Native/deleted fragments and remesh face ancestry differ; exact native\u2192reduced face map not saved",
+    "Only preservation/numeric transform verification; parent visual motion judgment remains required"
+  ]
+}

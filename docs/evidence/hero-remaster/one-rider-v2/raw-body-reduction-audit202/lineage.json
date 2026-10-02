@@ -1,0 +1,226 @@
+{
+  "status": "READ_ONLY_DOCUMENTED_LINEAGE_NO_ARBITRARY_FIT",
+  "nativeGLBPositionFloat32Exact": true,
+  "nativeGLBIndicesExact": true,
+  "nativeCounts": {
+    "vertices": 172223,
+    "triangles": 344456
+  },
+  "reducedCounts": {
+    "vertices": 27468,
+    "triangles": 55000
+  },
+  "paintCounts": {
+    "vertices": 38363,
+    "triangles": 55000
+  },
+  "paintDisplayBINExact": true,
+  "source185Body11PositionIndexExact": true,
+  "nativeToCurrentRestMatrix": [
+    [
+      0.0,
+      0.0,
+      0.9188475781679153,
+      0.8056288637946223
+    ],
+    [
+      0.0,
+      0.9188475781679153,
+      0.0,
+      0.918876830616588
+    ],
+    [
+      -0.9188475781679153,
+      0.0,
+      0.0,
+      -0.006490739283617585
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "paintToCurrentRestMatrix": [
+    [
+      0.0,
+      0.0,
+      -0.9188475781679153,
+      0.49437153398990635
+    ],
+    [
+      0.0,
+      -0.9188475781679153,
+      0.0,
+      0.9081238180398941
+    ],
+    [
+      -0.9188475781679153,
+      0.0,
+      0.0,
+      -0.006490739283617585
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "paintFlipAboutReducedCentre": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      -0.01170271635055542
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      -0.33874751068651676
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "reducedBoundingCentre": [
+    -0.007063940167427063,
+    -0.00585135817527771,
+    -0.16937375534325838
+  ],
+  "lineage": [
+    "raw-shape.npz native vertices/triangles equal raw-shape.glb after required Float32 encoding",
+    "shape.glb reduced in same native axes",
+    "Observed painted geometry is X180 about reduced bbox centre within rounding. Mechanism inferred from current pinned CPU get_mesh in-place NumPy views and two inpaint calls; generation did not record historical source-file hashes",
+    "paint mesh local coordinates (paintOBJ X,paintOBJ Z,-paintOBJ Y), six-decimal OBJ rounding; paintOBJ already has bbox-centred X180",
+    "working-display2 only node X+90\u2192X\u221290; BIN unchanged",
+    "Blender imported working-display point(paintOBJ X,paintOBJ Z,-paintOBJ Y)",
+    "neutral assembly canonical = sourceDisplayTransform.scale*import point+translation",
+    "bind04 proper Blender Z+90 followed by scale1.015 and X+.65, export Blender(X,Z,-Y)",
+    "C19/source185 body attributes exactly body11; use source185 identity-world rest positions, do not reapply body11 outer rig transform"
+  ],
+  "paintReducedSpatialDistanceM": {
+    "quantiles": [
+      0,
+      0.5,
+      0.95,
+      1
+    ],
+    "values": [
+      9.313225746154785e-09,
+      4.923623329153591e-07,
+      6.967413586321501e-07,
+      8.703337771068527e-07
+    ],
+    "indexMapRecoveredAfterExactSourceDerivedFlip": true,
+    "all55000IndexedFaceIncidencesMatchByRecoveredPositionMap": true,
+    "preservedNativeRawIDsVsReduced": "No raw\u2192reduced index map saved"
+  },
+  "sourceRestUnderarmDocumentedTransformMatch": {
+    "selection": "1.05<=Y<=1.38 and .12<absZ<.35; purely geometric underarm neighbourhood, not a torso ownership mask",
+    "rows": 4732,
+    "nearestPaintVertexDistanceQuantilesM": [
+      2.816800199433576e-09,
+      8.713056548132831e-08,
+      1.582402393584753e-07,
+      0.009670056405184977
+    ],
+    "matchingToleranceM": 2e-06,
+    "allWithinTolerance": false,
+    "mismatchedRows": [
+      4346,
+      4551,
+      4630,
+      5119,
+      5247,
+      5248,
+      5277,
+      5376,
+      5428,
+      5436,
+      5442,
+      5465,
+      5467,
+      5471,
+      5472,
+      5639,
+      5691,
+      5770,
+      5795,
+      6028,
+      6029,
+      6039,
+      6040,
+      6043,
+      6044,
+      6314,
+      6491,
+      6492,
+      6607,
+      6608,
+      7008,
+      7009,
+      7187,
+      7321,
+      7346,
+      7347,
+      7371,
+      7416,
+      7522,
+      7523,
+      7723,
+      7795,
+      14141,
+      14346,
+      14397,
+      14559,
+      14928,
+      14983,
+      15145,
+      15165,
+      15318,
+      15468,
+      15549,
+      15678,
+      15815,
+      15888,
+      16044,
+      16074,
+      16185,
+      16397,
+      16398,
+      16417,
+      16446,
+      16447,
+      16458,
+      16496,
+      16623,
+      16624,
+      16872,
+      17006,
+      17167,
+      17336,
+      17512,
+      17513,
+      17562
+    ],
+    "mismatchExplanation": "75 rows in Y1.355..1.374 and absZ<=.193 are collar boundary edits; low underarm rows belowY1.35 all match within2microns",
+    "spatialCorrespondenceUsedOnlyAfterLiteralRecipeTransform": true
+  },
+  "limits": [
+    "No nearest-vertex contact/surface or skin quality claim",
+    "Native/deleted fragments and remesh face ancestry differ; exact native\u2192reduced face map not saved",
+    "Only preservation/numeric transform verification; parent visual motion judgment remains required"
+  ]
+}

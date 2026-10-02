@@ -16,6 +16,37 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Native body construction verified; change the reconstruction pose — round203
+
+The untouched H21-4 saved344456-face source already contains the fused low
+underarm web. Parent independently verified26 input,11 owned and10 private pins,
+the recorded source-derived coordinate transform, all55000 painted/reduced face
+incidences and ascending-edge union-find against the separate path solver.
+Raw left/right connection heights are1.189948355/1.190575006m. Reduction shifts
+these by only+0.206/−0.021mm. Every frozen section segment was checked against
+its literal source face and edge interpolation; native connection paths use
+ordinary two-face edges. Higher resolution alone will not create an armhole.
+Historical painter implementation causality and per-cleanup ancestry remain
+unproved; this finding is about the retained raw geometry, not generator blame.
+
+Next use a distinctly new structural reconstruction reference: the SAME liked
+white buzz-cut character, mustard hoodie, jeans, gloves and shoes, with arms
+horizontal in a true T-pose and visible clearance beneath both sleeves. Show
+this reference before an expensive3D job. Keep original candidates and current
+head untouched. Clear arms are a hypothesis to test, not a guaranteed topology
+fix. This is construction work, not cosmetic polish. A project-owned actual
+Hunyuan3D2.1 shape-only worker is needed: the installed launcher also paints.
+Preserve decoded native vertices/faces before export processing, cleanup or
+reduction, with reproducible settings and shared GPU lock. Compare raw rest
+construction first; do not rig every generated candidate or replace comparisons.
+
+The61-face authored-repair alternative remains available but unsealed, with
+194 panel self-folds unresolved. No qualified replacement has been produced.
+Garment→rig/weights→deformation priority, continuous exported gray/PBR basic
+poses, three visual checkpoints, body/face≥7 target8, actual Garage/lean/landing/
+contacts and mobile gates remain OPEN. Cosmetics PAUSED. The5/15 autonomous
+switch/fallback policy stays in force. Next ordinary ship gate204.
+
 ## Bounded panel authoring stopped; retain measured smaller alternative — round202
 
 The author could not define a credible literal1235-face front/back/medial-return

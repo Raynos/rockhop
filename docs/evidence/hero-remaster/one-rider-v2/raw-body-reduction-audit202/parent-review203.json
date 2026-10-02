@@ -1,0 +1,57 @@
+{
+  "status": "PARENT_VERIFIED_STATIC_CONSTRUCTION_ONLY",
+  "pins": {
+    "inputPins": 26,
+    "ownedFiles": 11,
+    "privateOutputs": 10
+  },
+  "nativeNPZ_GLBFacesPositionsExact": true,
+  "source185Body11Exact": true,
+  "documentedTransformExact": true,
+  "paintReduced55000FaceIncidencesExact": true,
+  "paintReducedMaxDistanceM": 8.703337771068527e-07,
+  "independentAscendingEdgeUnionFind": {
+    "native": {
+      "firstConnectionsM": {
+        "positiveZ": 1.1899483553197894,
+        "negativeZ": 1.19057500601019
+      },
+      "triangles": 344456,
+      "physicalVertices": 172223,
+      "sectionSegmentsVerified": 12222
+    },
+    "reduced": {
+      "firstConnectionsM": {
+        "positiveZ": 1.1901541718985804,
+        "negativeZ": 1.1905537288040005
+      },
+      "triangles": 55000,
+      "physicalVertices": 27468,
+      "sectionSegmentsVerified": 4885
+    },
+    "paint": {
+      "firstConnectionsM": {
+        "positiveZ": 1.1901539802120382,
+        "negativeZ": 1.1905536740364169
+      },
+      "triangles": 55000,
+      "physicalVertices": 27468,
+      "sectionSegmentsVerified": 4885
+    },
+    "current": {
+      "firstConnectionsM": {
+        "positiveZ": 1.1901540756225586,
+        "negativeZ": 1.1905536651611328
+      },
+      "triangles": 33968,
+      "physicalVertices": 17196,
+      "sectionSegmentsVerified": 4925
+    }
+  },
+  "limitations": [
+    "No motion, appearance, ownership, contacts or topology suitability pass.",
+    "Section seed membership uses frozen literal waist contours; every section face/interpolation checked independently.",
+    "Current Float32 section arithmetic checked within 0.2microns; Float64 within 2e-14m. Initial 1e-14 assertion rejected Float32 operation-order rounding; no source changed.",
+    "Historical modified painter code hashes and intermediate cleanup ancestry absent; implementation causality remains inference."
+  ]
+}

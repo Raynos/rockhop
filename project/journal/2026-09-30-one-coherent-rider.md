@@ -2586,3 +2586,21 @@ Highraw causality audit awaiting parent; no new generation or silentcomparison
 replacement. Cosmeticspause,3visual/basicposes/gameplaycontacts/mobileOPEN.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/authored-panel202/
 Ask: 248.
+
+## Round203 — verify the web in the native H21 body
+
+Finding: The full-resolution retained344456-face source already has low fused
+underarms. Returning to raw alone cannot fix construction. Next change structural
+reconstruction pose while preserving liked head and original comparisons.
+
+Validation: Parent26inputs/11files/10outputs; native NPZ/GLB exact, recorded
+transform and55000paint/reduced face incidences, independent union-find and
+26917literal section segments verified. Raw connections1.189948/1.190575m;
+reduction shifts+0.206/−0.021mm. Native path edges each have two incident faces.
+
+Limits: Static construction finding only. Current Float32 interpolation check
+initially overstrict; corrected0.2micron operation-order tolerance, no source
+change. Historical painter code causality/cleanup ancestry unresolved. No new
+model, rig, appearance/motion/contact/mobile pass. Cosmetics paused; ship204next.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/raw-body-reduction-audit202/
+Ask: 248.
