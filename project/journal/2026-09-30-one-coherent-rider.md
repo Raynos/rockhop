@@ -1950,3 +1950,27 @@ Limits: no viable new garment, full continuous candidate/appearance, actual
 Garage/contact/mobile or all-checkpoint pass. Task3 replaces piercing sleeve
 boundary; revised waist rest-clear still fails finite sitting controls. Keep
 cosmetics paused. Next mandatoryship171.
+
+## Round171 — expose physics failures through direct moving review loops
+
+Finding: the hosted review now jumps to forward/back maximum lean, saddle
+crossing and landing/recovery in both matched source34/V5views. Reviewers can
+return to each full clip and scrub freely. All81media/29videos remain byte-exact.
+The site update preserves custom access policy revision1 and publishes version7.
+
+Validation: 16windows each at390/1200px locally and authenticated hosted headless
+WebKit, muted playback/no page errors/no overflow. Keyboard, full reset and native
+scrub escape pass; strict harness types and oxlint pass. Local27.53s/32.515GB;
+hosted resource receipt records its actual run. Shared canonical lock and<70GB/
+1700s bounds honored. Mandatory ship171 retained control both tiers: exact
+40.083333333333336s finish, abaaaaaaaa0a4440/hash368f1ca5bd9e830a, crash103ticks,
+restart2/2ms,0errors;11.12s/29.063GB. Credentials only ephemeral stdin/header,
+never source or evidence. Source/archive/publication IDs recorded sans secrets.
+
+Limits: browser seek loops have timing overshoot, not exact frame certification.
+No new model/material/pose, full continuous basic-pose or actual Garage/contact/
+mobile pass. Source34/V5 remain structurally rejected. Task3 owns sleeve tube
+construction/rest-export validation; UV/normal seams require repair before
+moving gate. Revised waist rest success still fails finite sitting intersections.
+Construction first; cosmetics paused; liked head/identity/physics/C19contract
+preserved. Next mandatoryship174. No player promotion or Rockhop release.

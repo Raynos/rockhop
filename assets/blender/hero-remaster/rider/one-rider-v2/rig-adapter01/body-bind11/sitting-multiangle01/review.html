@@ -7,7 +7,11 @@
 <style>
 :root{color-scheme:dark;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#111314;color:#eee}
 *{box-sizing:border-box}body{margin:0}main{max-width:1200px;margin:auto;padding:24px}header{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid #363b3e;padding-bottom:16px}h1{font-size:1.65rem;letter-spacing:-.03em;margin:0}h2{font-size:1.25rem;margin:28px 0 12px}h3{font-size:1rem;margin:0}p{margin:12px 0;color:#b9bfc3}.tag{color:#e4b965;font-size:.9rem}.videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:#1c2022;border:1px solid #373c3f;border-radius:12px;overflow:hidden}.label{padding:14px 16px}.card video{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;background:#252525}.links{display:flex;gap:16px;flex-wrap:wrap;padding:0 16px 16px}a{color:#f0c374;text-underline-offset:4px}details{border:1px solid #373c3f;border-radius:12px;margin:16px 0;padding:14px 16px}summary{cursor:pointer;color:#f0c374}details img{width:100%;height:auto;display:block;margin-top:16px}.boards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.boards img{width:100%;height:auto;display:block}.boards a{display:block}.gameplay{display:grid;grid-template-columns:1fr 1fr;gap:16px}.gameplay video{aspect-ratio:16/10}.note{border-left:3px solid #d9a553;padding-left:14px;max-width:80ch}footer{margin-top:32px;border-top:1px solid #363b3e;padding-top:16px;color:#aab1b6;font-size:.875rem}@media(max-width:700px){main{padding:16px}header{display:block}.tag{display:block;margin-top:4px}.videos,.boards,.gameplay{grid-template-columns:1fr}.card video{max-height:65vh}.boards{gap:24px}h1{font-size:1.5rem}}a:focus-visible,summary:focus-visible{outline:2px solid #f0c374;outline-offset:5px}
-</style></head>
+</style><style>.review-controls{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px}
+.review-controls button{font:inherit;min-height:44px;padding:8px 12px;border-radius:6px;border:1px solid #716044;background:#25292c;color:#f0c374;cursor:pointer}
+.review-controls button[aria-pressed="true"]{background:#e4b965;color:#171a1c}
+.review-controls button:focus-visible{outline:2px solid #f0c374;outline-offset:3px}
+.review-status{margin:0;padding:0 16px 16px;font-size:.875rem;color:#c6cdd1}</style></head>
 <body><main>
 <header><h1>Rockhop · Rider review</h1><span class="tag">Current white rider · Work in progress</span></header>
 <section id="structural-gate"><h2>Latest structural tests: cloth still fails</h2>
@@ -24,6 +28,11 @@ Those phone copies have reduced detail to meet the hosting size limit; full-qual
 recordings remain in the repository evidence and are used for appearance review.
 The new CPU gate also covers unilateral arms and intermediate frames; these
 videos cover the earlier bilateral 24fps fixture. No 8/10 appearance pass.</p>
+<p class="note">The riding A/B shows source34 with the C19 rig on the left and
+the V5 clothing control on the right. Both still intersect the saddle in the
+mid-ride pose. The sleeve and hip folds remain unacceptable. Tap a moment below
+either riding video to loop it, or choose Full clip. These phone copies show broad
+movement; fine surface detail is judged from the original recordings.</p>
 <section class="gameplay"><article class="card"><div class="label"><h3>12 basic pose families · front / side / back · textured + gray</h3><p>1 October · unaccepted structural evidence</p></div><video controls muted playsinline loop preload="metadata" poster="media/structural160-six-view.jpg" src="media/structural160-six-view.mp4"></video><div class="links"><a href="media/structural160-six-view.mp4">Open video full size</a></div></article><article class="card"><div class="label"><h3>Front close view · same exported motion</h3><p>1 October · unaccepted structural evidence</p></div><video controls muted playsinline loop preload="metadata" src="media/structural160-front.mp4"></video><div class="links"><a href="media/structural160-front.mp4">Open video full size</a></div></article><article class="card"><div class="label"><h3>Side close view · same exported motion</h3><p>1 October · unaccepted structural evidence</p></div><video controls muted playsinline loop preload="metadata" src="media/structural160-side.mp4"></video><div class="links"><a href="media/structural160-side.mp4">Open video full size</a></div></article><article class="card"><div class="label"><h3>Back close view · same exported motion</h3><p>1 October · unaccepted structural evidence</p></div><video controls muted playsinline loop preload="metadata" src="media/structural160-back.mp4"></video><div class="links"><a href="media/structural160-back.mp4">Open video full size</a></div></article><article class="card"><div class="label"><h3>Low-bandwidth riding A/B · side</h3><p>1 October · unaccepted structural evidence</p></div><video controls muted playsinline loop preload="metadata" poster="media/physical157-side.jpg" src="media/physical157-side.mp4"></video><div class="links"><a href="media/physical157-side.mp4">Open video full size</a></div></article><article class="card"><div class="label"><h3>Low-bandwidth riding A/B · rear-three-quarter</h3><p>1 October · unaccepted structural evidence</p></div><video controls muted playsinline loop preload="metadata" poster="media/physical157-rear-three-quarter.jpg" src="media/physical157-rear-three-quarter.mp4"></video><div class="links"><a href="media/physical157-rear-three-quarter.mp4">Open video full size</a></div></article></section>
 <p>Every earlier comparison remains below. No candidate has been promoted into
 the normal game. Surface contacts, actual Garage, Blender matching and mobile
@@ -55,4 +64,87 @@ performance remain open.</p></section><section id="fresh-rig34"><h2>Latest: the 
 </section>
 <details><summary>Appearance target and earlier static comparison</summary><p>Target on the left, actual earlier white assembly on the right. This is the appearance reference; the current motion clips above are the deformation evidence.</p><a href="media/target-comparison.png"><img loading="lazy" src="media/target-comparison.png" alt="Target and actual white rider assembly comparison"></a></details>
 <footer>1 October 2026 · Sitting clips: 24 actual samples over two seconds. Half-speed links replay the same samples more slowly. No generated poses or retouched video frames.</footer>
-</main></body></html>
+</main><script id="rider-review-events">
+(() => {
+  const events = [
+    ['Maximum forward lean', 29 / 12, 42 / 12],
+    ['Saddle crossing', 174 / 12, 199 / 12],
+    ['Maximum back lean', 420 / 12, 433 / 12],
+    ['Landing and recovery', 440 / 12, 453 / 12]
+  ];
+  const videos = document.querySelectorAll('#structural-gate video');
+  for (const video of videos) {
+    if (!/physical157-(side|rear-three-quarter)\.mp4$/.test(video.getAttribute('src') || '')) continue;
+    const card = video.closest('.card');
+    const controls = document.createElement('div');
+    controls.className = 'review-controls';
+    controls.setAttribute('role', 'group');
+    controls.setAttribute('aria-label', 'Loop riding review moments');
+    const status = document.createElement('p');
+    status.className = 'review-status';
+    status.setAttribute('role', 'status');
+    status.textContent = 'Full clip · structural repair still in progress';
+    let range = null;
+    let generation = 0;
+    const reset = () => {
+      range = null;
+      for (const button of controls.children) button.setAttribute('aria-pressed', 'false');
+      status.textContent = 'Full clip · structural repair still in progress';
+      delete video.dataset.reviewStart;
+      delete video.dataset.reviewEnd;
+      video.dataset.reviewEvent = 'Full clip';
+    };
+    const checkLoop = () => {
+      if (range && !video.paused && video.currentTime >= range[1]) {
+        video.currentTime = range[0];
+        video.dataset.reviewLoops = String(Number(video.dataset.reviewLoops || 0) + 1);
+      }
+    };
+    if ('requestVideoFrameCallback' in video) {
+      const frame = () => { checkLoop(); video.requestVideoFrameCallback(frame); };
+      video.requestVideoFrameCallback(frame);
+    } else video.addEventListener('timeupdate', checkLoop);
+    video.addEventListener('seeking', () => {
+      if (range && (video.currentTime < range[0] - .05 || video.currentTime > range[1] + .35)) reset();
+    });
+    for (const [label, start, end] of [...events, ['Full clip', 0, null]]) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = label;
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', async () => {
+        const ticket = ++generation;
+        video.muted = true;
+        reset();
+        try {
+          if (video.readyState < 1) await new Promise((resolve, reject) => {
+            const timer = setTimeout(() => { cleanup(); reject(new Error('Video is still loading')); }, 10000);
+            const done = () => { cleanup(); resolve(); };
+            const failed = () => { cleanup(); reject(new Error('Video could not load')); };
+            const cleanup = () => { clearTimeout(timer); video.removeEventListener('loadedmetadata', done); video.removeEventListener('error', failed); };
+            video.addEventListener('loadedmetadata', done, {once:true});
+            video.addEventListener('error', failed, {once:true});
+            video.load();
+          });
+          if (ticket !== generation) return;
+          if (end !== null) {
+            range = [start, Math.min(end, video.duration)];
+            video.dataset.reviewStart = String(range[0]);
+            video.dataset.reviewEnd = String(range[1]);
+          }
+          video.dataset.reviewEvent = label;
+          video.dataset.reviewLoops = '0';
+          video.currentTime = start;
+          button.setAttribute('aria-pressed', 'true');
+          status.textContent = end === null ? 'Full clip · structural repair still in progress' : label + ' · looped original recording';
+          await video.play();
+        } catch (error) {
+          if (ticket === generation) status.textContent = 'Tap the video play control to continue.';
+        }
+      });
+      controls.append(button);
+    }
+    card.append(controls, status);
+  }
+})();
+</script></body></html>

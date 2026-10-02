@@ -16,7 +16,15 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round170, 2026-10-01
+## Current evidence — round171, 2026-10-01
+
+- Round171 review version7 is live with timed lean/saddle/landing loops in both
+  existing riding views.81media/29videos unchanged; local+hosted silent WebKit
+  390/1200px16windows each, keyboard/full-reset/native-scrub pass. Existing
+  custom audience revision1 preserved. These controls expose known failures;
+  no new rider or physical mobile acceptance. Ship171exact replay/crash/
+  restart2/2ms pass; nextship174. Task3 tube sleeve join remains under rest/
+  export verification; separated waist still fails finite sitting controls.
 
 - Round170 strict JSON-only construction handoff preserves source BIN/non-node
   JSON,19rest/bind and protected head/glove/PBR contract. Fifteen fail-closed

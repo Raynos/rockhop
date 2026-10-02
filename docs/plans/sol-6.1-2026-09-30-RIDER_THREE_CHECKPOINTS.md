@@ -74,7 +74,36 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round169
+## Current construction decision — round171
+
+Construction→rig/weights→deformation remains the execution order; cosmetics
+remain paused. Task3 owns reconstruction of the22piercing sleeve boundary edges.
+Its tube replacement is still under rest/export verification; UV/normal defects
+at the retained sleeve join are construction delivery failures, not an invitation
+to polish the face. Do not integrate until frozen source/receipts can be inspected.
+The separated waist's neutral improvement still fails three finite sitting tests.
+No new garment or hip/contact success is accepted.
+
+The strict compatible-C19handoff170 is ready for a viable source: preserve liked
+head/gloves/PBR, explicit19rest/bind/axes/socket mapping and source provenance.
+Changed anatomy requires a deliberate new adapter. Start with construction/rest
+checks, then same full continuous exported gray/PBR fixture, unilateral/halfstep
+controls and authoritative168physics inputs; only then residual correctives.
+
+Round171 publishes direct maximum lean, saddle-crossing and landing/recovery
+loops in both existing matched riding views. All81media/29videos unchanged.
+Silent local and hosted WebKit390/1200px controls pass16windows each, keyboard,
+full reset and native scrub escape. This makes moving failures easier to review;
+it does not pass character quality, complete pose motion or physical iOS.
+Review version7 preserves the existing custom audience policy revision1.
+See [delivery evidence](../evidence/hero-remaster/one-rider-v2/gallery171/README.md).
+
+Mandatory ship171 retained functional control passed both tiers: exact40.0833s
+finish/hash, crash103ticks, restart2/2ms, no errors. Next mandatoryship174.
+Actual Garage, contact, lower-LOD/mobile and all three visual checkpoints remain
+open. No player asset promotion or normal Rockhop release.
+
+### Round169 retained construction failure
 
 Parent has inspected task3's frozen construction and corrected referenced-vertex
 diagnostics before duplicating any repair. Same geometry passes tested neutral
@@ -94,7 +123,7 @@ No extra generator run or cosmetic patch is justified by this garment failure.
 
 All three visual checkpoints remain open. Actual Garage, lean, landing/recovery,
 saddle/palm/sole contact and physical mobile gates follow convincing basic motion.
-Ship168functional control passed; next mandatory171. No player asset promotion.
+Ship168/171functional controls passed; next mandatory174. No player asset promotion.
 
 ## Scope and invariants
 
