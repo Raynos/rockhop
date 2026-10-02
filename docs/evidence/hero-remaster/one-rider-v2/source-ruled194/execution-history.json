@@ -1,0 +1,67 @@
+{
+  "geometryAttempts": 1,
+  "indexedConstructions": 1,
+  "geometryRetunes": 0,
+  "GLBExports": 0,
+  "motionTrials": 0,
+  "status": "FROZEN_STATIC_REJECTION_NO_GLB",
+  "setupFailures": [
+    {
+      "stage": "zipper_before_clipping",
+      "recipe": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/setup-failed-build.py",
+      "recipeSHA256": "498ead4f13e2da3f8750cc2cfe03e8781595028cf0b7363c523cd6ac0ffb00e0",
+      "exitReceipt": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/setup-exit.json"
+    },
+    {
+      "stage": "resuming_running_attempt_status_guard_before_clipping",
+      "exitReceipt": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/build-construction-exit.json"
+    },
+    {
+      "stage": "verifier_mutable_metadata_guard_after_rejection_report",
+      "recipe": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/setup-failed-verify.py",
+      "recipeSHA256": "feaac92beb4c8483abd0c84a084539d40c2628c6be44e849c58ecebeb2670810",
+      "exitReceipt": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/verify-construction-exit-1.json"
+    }
+  ],
+  "actualConstructionExit": {
+    "batch": "build",
+    "terminalExitCode": 0,
+    "timeout": false,
+    "elapsedSeconds": 2.7944502090103924,
+    "CPUThreads": 2,
+    "GPU": false,
+    "logSHA256": "3515d24904be14575b417b9fd957d171befe5bd190b96a3ee390fe08a7f04c0a",
+    "command": [
+      "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-ruled194/build.py"
+    ]
+  },
+  "finalStaticVerificationExit": {
+    "batch": "verify",
+    "terminalExitCode": 0,
+    "timeout": false,
+    "elapsedSeconds": 4.449476458132267,
+    "CPUThreads": 2,
+    "GPU": false,
+    "logSHA256": "d1eb01be77bbf27324c11a4fcf3ed1d512dd2db2fd1adb5070e9ae4533100190",
+    "command": [
+      "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-ruled194/verify.py"
+    ]
+  },
+  "literalFinalCheckExit": {
+    "batch": "final_checks",
+    "terminalExitCode": 0,
+    "timeout": false,
+    "elapsedSeconds": 0.32254579244181514,
+    "CPUThreads": 2,
+    "GPU": false,
+    "logSHA256": "7697f33a9e43496427b1fde3e152785a219807cdb30bbfe415e6a97bde050e07",
+    "command": [
+      "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-ruled194/final_checks.py"
+    ]
+  },
+  "strictCrossings127Remain": true,
+  "rejectedBoundaryNormalAliases18Remain": true
+}

@@ -16,6 +16,62 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Actual panels are sealed but penetrate clothing — round194
+
+ONE full indexed construction is frozen and REJECTED:47 source faces were
+replaced by1369 clipped source-aware triangles/4107 appended corners. All
+original rows/retained indices remain exact. Its actual49 cut edges sew with
+opposite incidence and no subdivisions. Whole Float32 geometry retains237
+original openings, two components, no slivers/duplicate physical faces/
+overincident edges/winding or vertex-link pinches. The actual resealed low
+routes separate; whole-p0 attachment remainsY1.301290512. These facts do not
+accept its extrinsic shape, skin, appearance or poses.
+
+The ruled embedding crosses clothing127 times:42 retained/central panel,
+55 retained/lateral panel and30 central/lateral panel pairs. Parent independently
+checks ALL127 open-interior witnesses in the retained dump, all original
+accessor/morph rows and49 actual opposed cut edges;37 frozen files/9 input
+pins verified. Twelve distinct retained source faces are involved, all outside
+the alternative168-face cut. Merely expanding to that cut would not erase them.
+The alternative remains unbuilt; it needs its own sound extrinsic surface.
+
+There are also18 rejected boundary-normal aliases at six original vertices
+(3486/5437/8638/9294/10649/11167): their removed source chart lacks a retained
+boundary normal donor. Source-chart fallback exists only to retain a complete
+finite failed dump, not an accepted shading join. Source UV/chart/skin/morph
+provenance and canonical aliases otherwise pass; all4107 newcorner dense19
+transfers discard0 mass. The cap stays in the source convex hull and measured
+maximum barycentric displacement is136.253mm. No GLB/export/render/motion.
+Setup zipper/status/verifier-bookkeeping corrections are disclosed separately;
+they did not generate another full indexed candidate or alter this frozen one.
+
+Next diagnose and change the actual extrinsic embedding. Do not repeat the
+same straight-chord ruled panels, repair only normals, delete protected crossed
+faces or promote clean topology into art acceptance. Require a collision-free
+high seam and separate panel interiors with retained source boundaries protected;
+register its specific construction and source-field policy before the next trial.
+Keep192/194 failed meshes and all preserved candidates intact. This is the
+second failed local construction lineage output, first full ruled-panel output.
+Five failures switch mechanism;15 unresolved trigger architecture fallback.
+
+Parallel read-only stage2 inventory is frozen (parent5files/9sourcepins verified).
+The left below1.30 rooted component has1692 physical nodes;512 have named
+central influences. Old actual rows2030/2172 map to source physical2962/3096;
+spine/chest total rises0.358350→0.612699 across6.915mm. Thirty-seven nodes have
+zero noncentral mass, so deletion/renormalization alone cannot construct anatomy.
+The65 cuff nodes and1690 additional left glove nodes are exactly hand.L=1,
+central=0; all source aliases/morphs match. Preserve those fields. The central
+component includes the unchanged right arm, so it is NOT a torso ownership mask.
+Future adaptation may use reviewed source-left region plus qualified newcap,
+explicit anatomical landmarks/19bone adapter and held-out stockThree motion;
+geometric labels alone do not certify weights. No fields were changed by audit.
+
+Construction remains first, then rig/weights, then corrective deformation.
+Liked head/identity/hood/rig/physics and all player assets stay protected.
+Cosmetics PAUSED. All three visual checkpoints, continuous basic poses,
+Garage/riding/lean/landing and saddle/grip/sole/mobile remain OPEN. Ship195 due.
+No routine human checkpoint or approval/recommendation question dependency.
+
 ## Physical cut selected; one local panel reseal next — round193
 
 Keep192's rejected actual mesh and all earlier moving failures. Two different

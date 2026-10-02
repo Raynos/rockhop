@@ -2418,3 +2418,25 @@ hips, basic poses, all three visual checkpoints, contacts/mobile remain OPEN.
 Cosmetics paused; one bounded actual reseal next, ordinary ship195 due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/physical-cut193/
 Ask: 248.
+
+## Round194 — sound cut topology does not make a sound surface
+
+Finding: One full source-aware ruled-panel mesh sews cleanly but penetrates
+retained clothing and its opposite panel; reject before GLB/motion.
+
+Validation: Parent37files/9pins, all127 strict witnesses (97retained/new,
+30panel/panel),49 opposed unsplit source cut edges, all original accessor/
+morph rows and retained faces exact. New1369triangles/4107corners; source
+skin transfer discards0mass. Separate read-only audit5files/9pins verified:
+512left sleeve nodes have central influences; all65cuff/1690glove nodes
+remain purehand.L. No geometry/field adaptation in that audit.
+
+Limits: Eighteen normal aliases at six boundary vertices also fail. Clean
+Float32 topology/highattachment cannot accept penetrating clothing. No GLB,
+render, rig/animation/art pass. Preserve failed dump and all disclosed setup
+exits. Twelve crossed retained faces all lie outside alternative168cut;
+larger mask alone is not a remedy. Next change extrinsic panel construction,
+then anatomical fields; all3visual/basic poses/contacts/mobile OPEN,
+cosmetics PAUSED. Ordinary ship195 due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-ruled194/
+Ask: 248.
