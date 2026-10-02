@@ -17,6 +17,10 @@ fs.mkdirSync(path.join(out,'frames'),{recursive:true});
 const report:{sourceSHA256:string;fixtureSHA256:string;fps:number;families:string[];frames:unknown[];errors:string[];loaded:string[];failure?:string;limits:string[]}={sourceSHA256:sourceHash,fixtureSHA256:fixtureHash,fps:fixture.fps,families:fixture.families,frames:[],errors:[],loaded:[],limits:['Authored studio stress fixture; not actual Garage/gameplay/Blender equivalence.','No continuous collision/contact/device acceptance.',`Stored ${fixture.fps}fps / ${fixture.families.length} families; finite samples, not continuous-time certification.`]};
 const server=await createServer({configFile:false,root:process.cwd(),server:{host:'127.0.0.1',port:0},logLevel:'warn',plugins:[{name:'frozen-pose-fixture',configureServer(vite){vite.middlewares.use((req,res,next)=>{
  const file=req.url==='/fixture-source.glb'?source:req.url==='/pose-fixture.json'?fixturePath:null;
+ if(req.url==='/fixture-source-meta.json') {
+  res.setHeader('Content-Type','application/json');
+  res.end(JSON.stringify({sourceSHA256:sourceHash}));return;
+ }
  if(!file)return next();res.setHeader('Content-Type',file===source?'model/gltf-binary':'application/json');res.end(fs.readFileSync(file));
 });}}]});
 await server.listen();const browser=await webkit.launch({headless:true});
@@ -28,6 +32,7 @@ try{
  await page.goto(server.resolvedUrls!.local[0]+'harness/hero-remaster/basic-pose-gate/studio.html');
  await page.waitForFunction(()=>window.__basicPoseGate?.ready,null,{timeout:120000});
  assert(await page.evaluate(()=>navigator.webdriver),'Headless automation required');
+ assert.equal(await page.evaluate(()=>window.__basicPoseGate!.sourceSHA256),sourceHash,'Displayed candidate identity mismatch');
  for(let i=0;i<fixture.frames.length;i++){
   const rec=await page.evaluate(index=>window.__basicPoseGate!.render(index),i);
   assert.equal(rec.family,fixture.frames[i]!.family);assert.equal(rec.frame,fixture.frames[i]!.frame);

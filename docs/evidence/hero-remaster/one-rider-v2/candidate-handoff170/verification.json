@@ -1,0 +1,202 @@
+{
+  "status": "DIAGNOSTIC_ADAPTER_CONTROLS_PASS_NO_ART_ACCEPTANCE",
+  "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/construction01/armhole-chart-outward.glb",
+  "sourceSHA256": "edc58db7720db56bf7b51610df4e3a4840e74b9c5219e6debb50713d81aceb6c",
+  "reference": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb",
+  "referenceSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+  "recipeSHA256": "d90018cc9c94706f564b8440349267fd4b47a1e2bffacb7b087ed01af6f7fd90",
+  "positiveCandidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification04/positive/rider.glb",
+  "positiveCandidateSHA256": "ef1b24d66e6002aede2c0c3d1a0aa4e844ed77c150dcd8321be5ab04b3572f63",
+  "positiveBINExact": true,
+  "positiveNonNodeJSONExact": true,
+  "currentContactMetadataCopiedExact": true,
+  "negativeControls": [
+    {
+      "control": "garment_primitive_material",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "per-primitive resolved PBR binding changed: primitive0",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "rest_translation",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "changed rest hierarchy/local transform: pelvis",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "rest_hierarchy",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "changed rest hierarchy/local transform: thigh.L",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "inverse_bind",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "protected/rig accessor mismatch: 19 inverseBindMatrices",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "protected_head_position",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "protected/rig accessor mismatch: primitive3/POSITION",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "protected_glove_uv",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "protected/rig accessor mismatch: primitive1/TEXCOORD_0",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "protected_glove_weight",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "protected/rig accessor mismatch: primitive1/WEIGHTS_0",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "protected_normalized_flag",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "protected/rig accessor mismatch: primitive1/COLOR_0",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "protected_morph",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "protected/rig accessor mismatch: primitive1/morph0/POSITION",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "embedded_texture",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "embedded texture content/metadata changed",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "reference_axis_flag",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "reference explicit child-axis flag missing",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "reference_conditioning_flag",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "reference sleeve conditioning bypass missing",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "reference_contact_version",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "unsupported contact metadata",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "reference_name_contract",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "reference canonical19names not current contract",
+      "mappedAssetAbsent": true
+    },
+    {
+      "control": "reuse_output_directory",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "fresh output directory required",
+      "existingOutputUnchanged": true
+    }
+  ],
+  "losslessImageRelocationPositive": {
+    "status": "DIAGNOSTIC_HANDOFF_VALIDATED_UNACCEPTED",
+    "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification04/relocation-positive/rider.glb",
+    "sourceBINExact": true,
+    "resolvedTextureGraphExact": true,
+    "rawImageEncodingReferencesEqual": false
+  },
+  "fixtureRestCompatibility": {
+    "fixture": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json",
+    "sha256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+    "maximumCentreDifferenceM": 2.7755575615628914e-17,
+    "protocolRestToleranceM": 1e-05,
+    "status": "REST_NAMES_AND_CENTRES_COMPATIBLE_ONLY",
+    "all5404motionSamples": "NOT_RUN"
+  },
+  "sourceInputsUnchanged": true,
+  "setupErrorsPreserved": [
+    "outward-diagnostic01 was initially rejected because protected indices had uint32 encoding versus uint16 reference. Values were exact; final guard explicitly permits only lossless unsigned index encoding differences and reports them. Vertex attributes retain strict component/normalized/dense-byte equality.",
+    "Optional private smoke recipe truncating redirect was blocked by dcg. create-new writing succeeded; no existing file was truncated. Smoke source is embedded in final mapper."
+  ],
+  "limits": [
+    "C19-compatible rest only; any hierarchy/rest/bind/anatomy change needs a new explicit adapter.",
+    "Protected arrays/morphs/textures are exact donor guardrails; garment anatomy, intersections, normals appearance and deformation are not accepted.",
+    "Contact/socket and rest-axis metadata copied from explicitly supplied mapped reference, not regenerated from ancestry. Historical declaredUniformScale is inert provenance; no1.015 scaling applied.",
+    "Static/fixture rest compatibility is not5404-frame, gameplay, Garage blend, grip/sole surface or appearance acceptance."
+  ],
+  "fiveFrameCPUProtocolSmoke": {
+    "status": "FIVE_CPU_PROTOCOL_FRAMES_ONLY_NO_ART_ACCEPTANCE",
+    "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification04/positive/rider.glb",
+    "sourceSHA256": "ef1b24d66e6002aede2c0c3d1a0aa4e844ed77c150dcd8321be5ab04b3572f63",
+    "fixture": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json",
+    "fixtureSHA256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+    "scriptSHA256": "621a46be24e03d16ff0fcaa513cfa9f7ca207a31f8237e88c57de65ed81016ab",
+    "protocolSHA256": "031ec5faf7abb90d13749bcb0a40b64c857588fedbb551705ed0109e01eb1c9d",
+    "loaderHelperSHA256": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a",
+    "bones": 19,
+    "meshes": 5,
+    "rows": [
+      {
+        "family": "neutral",
+        "frame": 0,
+        "timeSeconds": 0,
+        "closedGrip": 0,
+        "gripSide": null,
+        "maximumWorldMatrixError": 0,
+        "finiteStockThreeSurfaceVertices": 15
+      },
+      {
+        "family": "sit",
+        "frame": 96,
+        "timeSeconds": 2,
+        "closedGrip": 0,
+        "gripSide": null,
+        "maximumWorldMatrixError": 1.3322676295501878e-15,
+        "finiteStockThreeSurfaceVertices": 15
+      },
+      {
+        "family": "lean",
+        "frame": 96,
+        "timeSeconds": 2,
+        "closedGrip": 0,
+        "gripSide": null,
+        "maximumWorldMatrixError": 4.163336342344337e-17,
+        "finiteStockThreeSurfaceVertices": 15
+      },
+      {
+        "family": "overhead.L",
+        "frame": 96,
+        "timeSeconds": 2,
+        "closedGrip": 0,
+        "gripSide": "L",
+        "maximumWorldMatrixError": 4.440892098500626e-16,
+        "finiteStockThreeSurfaceVertices": 15
+      },
+      {
+        "family": "grip.R",
+        "frame": 96,
+        "timeSeconds": 2,
+        "closedGrip": 1,
+        "gripSide": "R",
+        "maximumWorldMatrixError": 4.440892098500626e-16,
+        "finiteStockThreeSurfaceVertices": 15
+      }
+    ],
+    "limits": [
+      "Images omitted in memory by existing CPU loader; no disk asset changed.",
+      "Only five named fixture frames and15 surface vertices/frame; not all5404 samples, garment deformation quality, intersections, actual gameplay, grip/sole contact, or rendered acceptance."
+    ],
+    "command": [
+      "/Users/raynos/projects/games/rockhop/node_modules/.bin/tsx",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification04/cpu-fixture-smoke.mts",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification04/positive/rider.glb",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification04/cpu-smoke.json"
+    ]
+  },
+  "previousFrozenVerificationPreserved": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/verification03"
+}

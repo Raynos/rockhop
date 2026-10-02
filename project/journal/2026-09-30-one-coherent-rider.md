@@ -1930,3 +1930,23 @@ search or continuous appearance/contact/device gate. Keep the liked head and
 intact central core/explicit C19child axes. Task3 owns construction/material
 response pivot; parent Three gate/acceptance. Stop same static annulus tuning;
 cosmetics paused, all three checkpoints open, next mandatoryship171.
+
+## Round170 — preserve source identity through the construction handoff
+
+Finding: new C19garment exports can enter the existing Three gate without
+resetting bind/identity or repeating hard-codedV5video labels. The mapper is
+strictly compatible-rest wiring, not new anatomy or character acceptance.
+
+Validation: exact source BIN/all non-node JSON; current19rest/bind and C19
+metadata, protected head/glove arrays/normalized flags/morphs/textures. Four
+socket reconstruction errors0; historical1.015not applied. Fifteen corruption/
+reuse controls reject, including per-primitive garment material swap. Parent
+source/hash/BIN/JSON checks and on-disk absent failed outputs. Five CPU fixture
+frames≤1.34e-15world error,15vertices/frame only. Three-frame silent headless
+identity smoke3.65s/23.770GBcanonical lock; actual SHA header inspected.
+Strict harness types/oxlint pass. No foreign-owner,physics or player file edits.
+
+Limits: no viable new garment, full continuous candidate/appearance, actual
+Garage/contact/mobile or all-checkpoint pass. Task3 replaces piercing sleeve
+boundary; revised waist rest-clear still fails finite sitting controls. Keep
+cosmetics paused. Next mandatoryship171.

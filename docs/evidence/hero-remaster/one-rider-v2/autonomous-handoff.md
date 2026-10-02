@@ -16,7 +16,14 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round169, 2026-10-01
+## Current evidence — round170, 2026-10-01
+
+- Round170 strict JSON-only construction handoff preserves source BIN/non-node
+  JSON,19rest/bind and protected head/glove/PBR contract. Fifteen fail-closed
+  controls,5CPU frames only; source art remains rejected. Studio displays actual
+  SHA;3frame silent identity smoke3.65s/23.770GB,types/lint pass.
+  Current source remains with task3 sleeve-construction pivot; separated waist
+  rest improvement still fails finite sitting tests. Nextship171, cosmetics paused.
 
 - Round169 read-only task3 construction review:15hashes/samegeometry retained.
   Fresh fabric weights both fail actual304with1,556crossings,388collapsed new

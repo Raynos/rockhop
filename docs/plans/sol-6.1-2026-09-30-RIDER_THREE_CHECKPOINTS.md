@@ -1781,3 +1781,24 @@ Ship168passes retained cold-load/clear/crash/restart,bytefinish/hash exact,
 Next inspect task3's construction pivot and gate one coherent candidate;
 actual Garage/support/grip/sole/mobile and all three visual checkpoints remain
 open. Next mandatory ship171.
+
+## Preserve identity through construction handoff — round170
+
+Generic JSON-only handoff for C19-derived construction exports preserves source
+BIN/non-node JSON, exact19rest/bind, protected head/glove data and resolved PBR
+binding per primitive. Current mapped C19contact metadata copied exactly,
+four socket reconstruction errors0; no historical1.015scale applied. Changed
+anatomy still needs a new explicit adapter; this is not blind old-bone fitting.
+Fifteen corruption/reuse controls reject; lossless image/index encoding changes
+are explicit. Five CPU protocol frames only, not full motion or art acceptance.
+
+Moving studio labels now show actual candidate SHA. Silent3frame identity smoke
+and strict type/lint checks pass;3.65s/23.770GBcanonical lock. No new accepted
+garment, physics change or source promotion. Use this handoff only after the
+construction owner supplies a rest-valid, potentially viable source.
+
+Task3 reports22pinned sleeve boundary edges pierce existing mesh, so replacing
+the conflicting proximal sleeve join is the next method. Its separated waist
+clears a rest check but fails3finite sitting controls; do not declare hip/support
+success. Keep construction first, cosmetics paused, three checkpoints open.
+Next mandatoryship171 and eventual actual Garage/grip/sole/saddle/mobile gates.

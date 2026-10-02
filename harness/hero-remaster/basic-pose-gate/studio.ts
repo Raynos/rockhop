@@ -3,6 +3,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { createFixturePlayer, type PoseFixture } from './protocol';
 const fixture: PoseFixture = await fetch('/pose-fixture.json').then(r=>r.json());
+const metadata: {sourceSHA256:string} = await fetch('/fixture-source-meta.json').then(r=>r.json());
+if(!/^[a-f0-9]{64}$/.test(metadata.sourceSHA256))throw new Error('Missing candidate identity');
 const source = await new GLTFLoader().loadAsync('/fixture-source.glb');
 const scene = new THREE.Scene(); scene.background = new THREE.Color('#25272b');
 scene.add(source.scene);
@@ -27,8 +29,8 @@ const labels=document.getElementById('labels')!;
 for(let row=0;row<2;row++)for(let col=0;col<3;col++){
  const label=document.createElement('span');label.className='label';label.style.left=`${col*480+8}px`;label.style.top=`${row*480+445}px`;label.textContent=`${row?'NEUTRAL GRAY':'TEXTURED PBR'} / ${views[col]!.name}`;labels.append(label);
 }
-declare global { interface Window { __basicPoseGate?: {ready:boolean;render:(index:number)=>{family:string;frame:number;matrixError:number;trianglesPerView:number;callsPerView:number;jointMatrices:number[][]};}; } }
-window.__basicPoseGate={ready:true,render(index){
+declare global { interface Window { __basicPoseGate?: {ready:boolean;sourceSHA256:string;render:(index:number)=>{family:string;frame:number;matrixError:number;trianglesPerView:number;callsPerView:number;jointMatrices:number[][]};}; } }
+window.__basicPoseGate={ready:true,sourceSHA256:metadata.sourceSHA256,render(index){
  const frame=fixture.frames[index];if(!frame)throw new Error('Missing fixture frame');
  const parity=player.apply(frame);let triangles=0,calls=0;
  for(let row=0;row<2;row++){
@@ -38,7 +40,7 @@ window.__basicPoseGate={ready:true,render(index){
    renderer.render(scene,views[col]!.camera);triangles=renderer.info.render.triangles;calls=renderer.info.render.calls;
   }
  }
- document.getElementById('title')!.textContent=`UNACCEPTED V5 / ${frame.family} / ${frame.timeSeconds.toFixed(2)}s — authored stress, not gameplay`;
+ document.getElementById('title')!.textContent=`UNACCEPTED ${metadata.sourceSHA256.slice(0,12)} / ${frame.family} / ${frame.timeSeconds.toFixed(2)}s — authored stress, not gameplay`;
  return {family:frame.family,frame:frame.frame,matrixError:parity.maximumWorldMatrixError,trianglesPerView:triangles,callsPerView:calls,jointMatrices:fixture.jointNames.map(n=>player.bones.get(n)!.matrixWorld.toArray())};
 }};
 window.__basicPoseGate.render(0);
