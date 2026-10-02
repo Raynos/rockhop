@@ -2206,3 +2206,20 @@ Storage/setup/evidence failures included transparently; administrative optional
 receipt-read error separate. Three visual/Garage/game/contact/mobile gates open.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/source-guided-cage182/
 Ask: 248. Next mandatoryship183.
+
+## Round183 — ordinary gameplay remains exact during construction reset
+
+Finding: Keep actual physics regression separate from unaccepted rider art.
+The ordinary no-substitution build passes the required third-round gate.
+
+Validation: Both quality tiers coldboot/clear/crash/restart, exact finish
+40.083333333333336s/float64abaaaaaaaa0a4440/hash368f1ca5bd9e830a,103crash
+ticks,2/2msrestart,0errors. Canonical lock15.38s/41.056GBanonymous. Root
+clarifies frozenQ182 counts461nonzero winding+25self flags,120nonzero over-
+incidence+20self; five external QA file hashes pinned read-only.
+
+Limits: Ordinary ship is not new rider or phone acceptance. Q182retired,
+source rest diagnosis only; no texture/rig/new asset promotion. Active morph
+size mismatch independently reported, not repaired. Three visual/contact/mobile
+gates open. Evidence: docs/evidence/hero-remaster/one-rider-v2/ship183/
+Ask: 248. Next mandatoryship186.

@@ -74,7 +74,25 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current decision — round182, family retired at the last-resort bound
+## Gameplay regression and source-preserving diagnosis — round183
+
+Fresh ordinary gameplay cold build/boot, recorded clear, crash and restart pass
+in both quality tiers. Finish40.083333333333336s/float64abaaaaaaaa0a4440 and
+hash368f1ca5bd9e830a are exact; crash103ticks, restart2/2ms, zero errors. No
+private overlays or candidate substitutions;20public assets. Canonical lock
+batch15.38s/41.056GBanonymous. This does not accept new art or a physical phone.
+Next mandatoryship186. Source-preserving original C19 rest audit is underway;
+no construction repair, new weights, texture polish or asset promotion yet.
+
+Count definitions for rejectedQ182 now separate461nonzero donor winding defects
+from25collapsed self-edge flags, and120nonzero overincidence edges from20selfedges.
+Earlier totals486/140 include collapsed edges, not486nonzero winding failures.
+Independent audit also reports four22240-row morph accessors against22559base
+rows. Frozen geometry remains rejected; the family retirement stands. Read-only
+external QA evidence hashes pinned without modifying its paths or messaging back.
+Three appearance/sit/Garage/riding/contact/mobile gates remain open.
+
+## Earlier decision — round182, family retired at the last-resort bound
 
 The actual exported GLB fails construction: 170 degenerate triangles, 140
 nonmanifold edges and 486 winding conflicts. Parent independently checks
