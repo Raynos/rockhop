@@ -2223,3 +2223,21 @@ source rest diagnosis only; no texture/rig/new asset promotion. Active morph
 size mismatch independently reported, not repaired. Three visual/contact/mobile
 gates open. Evidence: docs/evidence/hero-remaster/one-rider-v2/ship183/
 Ask: 248. Next mandatoryship186.
+
+## Round184 — original source is a better construction foundation
+
+Finding: Preserve the preferred C19 whole garment instead of inventing
+a replacement torso. Original bodyrest is clean; remaining11strict source
+pairs are localizedhood defects, not four proved source shoulder inserts.
+
+Validation: Parent7input/private hashes, directsource topology0degenerates/
+nonmanifold/winding and11literal witnesses reproducedwithin2.50e-16m.
+Independent sourcebodyself/glove0, hoodbody2/hoodself9;3coplanar candidates
+unclassified. Both sourcefilms play toend;48gray/PBRorderedframes reviewed.
+
+Limits: Static orbit is not rig or pose approval. Body-only fairing cannot
+solve immutablehood witnesses; select bounded local interior edge correction,
+positions/seams/head preserved. Geometry0, diagnosticmetadata failure1
+transparent; oldfamiliesretired. No >=7score, rig, movingcontact/mobile or
+playerpromotion. Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment184/
+Ask: 248. Ship186next.

@@ -1,0 +1,50 @@
+{
+  "familyId": "source-preserving-whole-garment01",
+  "status": "SOURCE_DIAGNOSIS_FROZEN_ONE_LOCAL_OPERATOR_AUTHORIZED_AFTER_COMMIT",
+  "predecessorFamilies": [
+    {
+      "family": "retained-v7-cap-rmf-tube-natural-upper-garment",
+      "failuresLowerBound": 15,
+      "status": "RETIRED"
+    },
+    {
+      "family": "clean-drafted-upper-hoodie-shell01",
+      "failures": 15,
+      "failedGeometryOutputs": 3,
+      "status": "RETIRED"
+    }
+  ],
+  "geometryAttempts": 0,
+  "geometryFailures": 0,
+  "disclosedFailures": 1,
+  "diagnosticMetadataFailures": 1,
+  "approaches": [
+    {
+      "id": "local-hood-edge-flips",
+      "geometryAttempts": 0,
+      "failures": 0,
+      "status": "CONTRACT_FROZEN_GO_AFTER_COMMIT184"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "source184-rest-audit",
+      "status": "COMPLETED_SOURCE_DIAGNOSTIC",
+      "failedGeometry": false,
+      "limits": "Postprocessing KeyError sourcecompactreport schema disclosed separately; no geometry."
+    },
+    {
+      "id": "source184-metadata",
+      "status": "FAILED_COMPACT_REPORT_KEY_THEN_READ_SOURCE_ALIASES",
+      "countedFailure": true,
+      "failure": "KeyError orderedCyclePhysicalIDs; no source/model/render/geometry change."
+    },
+    {
+      "id": "source184-orbit-review",
+      "status": "BOTH_SOURCE_FILMS_PLAYED_END_48FRAMES_REVIEWED",
+      "failedGeometry": false
+    }
+  ],
+  "policy": "Five failures of one repair approach switches method;15family failures including setup/evidence invokes architecture fallback. Diagnostic metadata failure counted transparently, not a geometric trial. Older counts retained. No routine human checkpoints.",
+  "contract": "operator-contract.json"
+}

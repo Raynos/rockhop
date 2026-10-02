@@ -1,0 +1,1305 @@
+{
+  "status": "COMPLETED_READ_ONLY_ORIGINAL_C19_REST_DIAGNOSTIC_UNACCEPTED_ART",
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "seconds": 2.135895333252847,
+  "sourceOnlyEvidence": "All tested faces come directly from raw original C19 mesh0 p0/p1/p2. No V7/tube/cage/inserted candidate faces were loaded. C19 assembly history is not reconstructed; user-described4shoulder inserts cannot be assigned to original source without literal matching evidence.",
+  "scope": "Original bodyp0self, bodyp0vsoriginalglovesp1 andhoodp2; separate hoodp2self also reported. Head/cheek/gloveself/glovehood contacts not exhaustively tested.",
+  "physicalReferencedVertices": 22600,
+  "facesByPrimitive": {
+    "0": 33968,
+    "1": 6883,
+    "2": 4118
+  },
+  "topology": {
+    "sourceAreaBelow1e12Faces": 0,
+    "sourceDegenerateWitnesses": [],
+    "combinedPhysicalNonmanifoldEdges": 0,
+    "combinedPhysicalWrongWindingEdges": 0,
+    "combinedPhysicalBoundaryEdges": 237,
+    "componentPhysicalVertexCountsDescending": [
+      22600
+    ],
+    "nonmanifoldWitnesses": [],
+    "wrongWindingWitnesses": []
+  },
+  "strictCrossings": {
+    "conservativeBroadphase": "Triangle centre-radius sphere test from cKDTree radius_i+maxradius, then exact radius_i+radius_j and all3AABB axes with1e-12margin. Every retained pair tested; no selfBVH overlap inference.",
+    "fixedNarrowPhase": {
+      "determinantM3": 1e-12,
+      "strictBarycentricAndSegmentParameter": 1e-07
+    },
+    "candidateCounts": {
+      "0:0 AABB_allShared": 216590,
+      "0:0 excluded2plusShared": 50735,
+      "0:1 AABB_allShared": 873,
+      "0:1 excluded2plusShared": 127,
+      "0:0 strictCandidates": 165855,
+      "0:1 strictCandidates": 746,
+      "0:2 AABB_allShared": 2444,
+      "0:2 excluded2plusShared": 307,
+      "0:2 strictCandidates": 2137,
+      "2:2 AABB_allShared": 25585,
+      "2:2 excluded2plusShared": 5905,
+      "2:2 strictCandidates": 19680
+    },
+    "strictCountsPrimitiveSharedClass": {
+      "0:2 shared1": 1,
+      "0:2 shared0": 1,
+      "2:2 shared1": 5,
+      "2:2 shared0": 4
+    },
+    "regionPairCounts": {
+      "lateral_underarm_window / source_hood": 2,
+      "source_hood / source_hood": 9
+    },
+    "totalStrictPairs": 11,
+    "coplanarCandidatesUnclassified": 3,
+    "literalWitnesses": [
+      {
+        "pairID": 0,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 0,
+          "sourceFace": 7449,
+          "sourceVertexIDs": [
+            4630,
+            4567,
+            4551
+          ],
+          "exactPositionPhysicalIDs": [
+            1913,
+            1842,
+            1801
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5220074653625488,
+              1.3556768894195557,
+              0.1892797201871872
+            ],
+            [
+              0.5210474133491516,
+              1.3530657291412354,
+              0.19028136134147644
+            ],
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ]
+          ],
+          "geometricRegion": "lateral_underarm_window",
+          "areaM2": 7.321699775772581e-06
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4105,
+          "sourceVertexIDs": [
+            59,
+            49,
+            66
+          ],
+          "exactPositionPhysicalIDs": [
+            1801,
+            1684,
+            1898
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ],
+            [
+              0.5193374156951904,
+              1.3731340169906616,
+              0.19284996390342712
+            ],
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.508136799702164e-06
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "B",
+          "edgeVertexLanes": [
+            1,
+            2
+          ],
+          "edgeParameter": 0.8343096574438432,
+          "oppositeTriangleBarycentric": [
+            0.5226280985738646,
+            0.018421927138483896,
+            0.4589499742876515
+          ],
+          "intersectionPositionM": [
+            0.521389571227654,
+            1.3589856958008202,
+            0.18981534270161246
+          ],
+          "determinantM3": -1.6572187082050375e-08
+        }
+      },
+      {
+        "pairID": 1,
+        "physicalSharedVertices": 0,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 0,
+          "sourceFace": 7449,
+          "sourceVertexIDs": [
+            4630,
+            4567,
+            4551
+          ],
+          "exactPositionPhysicalIDs": [
+            1913,
+            1842,
+            1801
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5220074653625488,
+              1.3556768894195557,
+              0.1892797201871872
+            ],
+            [
+              0.5210474133491516,
+              1.3530657291412354,
+              0.19028136134147644
+            ],
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ]
+          ],
+          "geometricRegion": "lateral_underarm_window",
+          "areaM2": 7.321699775772581e-06
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4106,
+          "sourceVertexIDs": [
+            49,
+            50,
+            66
+          ],
+          "exactPositionPhysicalIDs": [
+            1684,
+            1682,
+            1898
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5193374156951904,
+              1.3731340169906616,
+              0.19284996390342712
+            ],
+            [
+              0.5192857980728149,
+              1.3825616836547852,
+              0.19284996390342712
+            ],
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.045621426095117e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.5299321581894187,
+          "oppositeTriangleBarycentric": [
+            0.14740416546463186,
+            0.016657508863290135,
+            0.835938325672078
+          ],
+          "intersectionPositionM": [
+            0.521392717449834,
+            1.3591151180946794,
+            0.1898094187726587
+          ],
+          "determinantM3": 1.8327567792784346e-08
+        }
+      },
+      {
+        "pairID": 2,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4,
+          "sourceVertexIDs": [
+            66,
+            65,
+            59
+          ],
+          "exactPositionPhysicalIDs": [
+            1898,
+            1913,
+            1801
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ],
+            [
+              0.5220074653625488,
+              1.3556768894195557,
+              0.1892797201871872
+            ],
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 7.068265077666716e-07
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4106,
+          "sourceVertexIDs": [
+            49,
+            50,
+            66
+          ],
+          "exactPositionPhysicalIDs": [
+            1684,
+            1682,
+            1898
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5193374156951904,
+              1.3731340169906616,
+              0.19284996390342712
+            ],
+            [
+              0.5192857980728149,
+              1.3825616836547852,
+              0.19284996390342712
+            ],
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.045621426095117e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            1,
+            2
+          ],
+          "edgeParameter": 0.47006784181058126,
+          "oppositeTriangleBarycentric": [
+            0.14740416546463186,
+            0.016657508863290135,
+            0.835938325672078
+          ],
+          "intersectionPositionM": [
+            0.521392717449834,
+            1.3591151180946794,
+            0.1898094187726587
+          ],
+          "determinantM3": -1.8327567792784346e-08
+        }
+      },
+      {
+        "pairID": 3,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 28,
+          "sourceVertexIDs": [
+            70,
+            63,
+            7
+          ],
+          "exactPositionPhysicalIDs": [
+            10418,
+            10322,
+            10281
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.6432874202728271,
+              1.480930209159851,
+              0.18328483402729034
+            ],
+            [
+              0.6418718695640564,
+              1.4786381721496582,
+              0.18982958793640137
+            ],
+            [
+              0.6411975026130676,
+              1.4775967597961426,
+              0.1928499937057495
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 9.438418948816658e-08
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 67,
+          "sourceVertexIDs": [
+            128,
+            134,
+            63
+          ],
+          "exactPositionPhysicalIDs": [
+            10379,
+            9734,
+            10322
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.64274662733078,
+              1.4905601739883423,
+              0.16966724395751953
+            ],
+            [
+              0.6327503323554993,
+              1.4948824644088745,
+              0.1679459661245346
+            ],
+            [
+              0.6418718695640564,
+              1.4786381721496582,
+              0.18982958793640137
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.00012327668259364766
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.3194162270665287,
+          "oppositeTriangleBarycentric": [
+            0.000831744858522554,
+            0.0008267150954036268,
+            0.9983415400460738
+          ],
+          "intersectionPositionM": [
+            0.6418650562268278,
+            1.4786615176150157,
+            0.1897947264899672
+          ],
+          "determinantM3": 3.599860252487118e-07
+        }
+      },
+      {
+        "pairID": 4,
+        "physicalSharedVertices": 0,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 29,
+          "sourceVertexIDs": [
+            70,
+            7,
+            4
+          ],
+          "exactPositionPhysicalIDs": [
+            10418,
+            10281,
+            11111
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.6432874202728271,
+              1.480930209159851,
+              0.18328483402729034
+            ],
+            [
+              0.6411975026130676,
+              1.4775967597961426,
+              0.1928499937057495
+            ],
+            [
+              0.6526829600334167,
+              1.4746263027191162,
+              0.1928499937057495
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 6.0943206542531114e-05
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 67,
+          "sourceVertexIDs": [
+            128,
+            134,
+            63
+          ],
+          "exactPositionPhysicalIDs": [
+            10379,
+            9734,
+            10322
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.64274662733078,
+              1.4905601739883423,
+              0.16966724395751953
+            ],
+            [
+              0.6327503323554993,
+              1.4948824644088745,
+              0.1679459661245346
+            ],
+            [
+              0.6418718695640564,
+              1.4786381721496582,
+              0.18982958793640137
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.00012327668259364766
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            0,
+            1
+          ],
+          "edgeParameter": 0.6805837729334722,
+          "oppositeTriangleBarycentric": [
+            0.0008317448585223319,
+            0.0008267150954036268,
+            0.998341540046074
+          ],
+          "intersectionPositionM": [
+            0.6418650562268278,
+            1.4786615176150157,
+            0.1897947264899672
+          ],
+          "determinantM3": -3.599860252487118e-07
+        }
+      },
+      {
+        "pairID": 5,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 29,
+          "sourceVertexIDs": [
+            70,
+            7,
+            4
+          ],
+          "exactPositionPhysicalIDs": [
+            10418,
+            10281,
+            11111
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.6432874202728271,
+              1.480930209159851,
+              0.18328483402729034
+            ],
+            [
+              0.6411975026130676,
+              1.4775967597961426,
+              0.1928499937057495
+            ],
+            [
+              0.6526829600334167,
+              1.4746263027191162,
+              0.1928499937057495
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 6.0943206542531114e-05
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 68,
+          "sourceVertexIDs": [
+            63,
+            70,
+            128
+          ],
+          "exactPositionPhysicalIDs": [
+            10322,
+            10418,
+            10379
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.6418718695640564,
+              1.4786381721496582,
+              0.18982958793640137
+            ],
+            [
+              0.6432874202728271,
+              1.480930209159851,
+              0.18328483402729034
+            ],
+            [
+              0.64274662733078,
+              1.4905601739883423,
+              0.16966724395751953
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.0939346128045148e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "B",
+          "edgeVertexLanes": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.9981256738266641,
+          "oppositeTriangleBarycentric": [
+            0.3197224804590197,
+            0.6795972789596167,
+            0.0006802405813635588
+          ],
+          "intersectionPositionM": [
+            0.6418735091454338,
+            1.478660517869743,
+            0.18979179712736594
+          ],
+          "determinantM3": 4.375009215282378e-07
+        }
+      },
+      {
+        "pairID": 6,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3813,
+          "sourceVertexIDs": [
+            2982,
+            3025,
+            2993
+          ],
+          "exactPositionPhysicalIDs": [
+            1661,
+            1516,
+            1024
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5190086960792542,
+              1.3708866834640503,
+              -0.16772149503231049
+            ],
+            [
+              0.5166527628898621,
+              1.3533841371536255,
+              -0.18413124978542328
+            ],
+            [
+              0.5090149641036987,
+              1.365209937095642,
+              -0.17451710999011993
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.0001102952155233529
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3828,
+          "sourceVertexIDs": [
+            2996,
+            2993,
+            3009
+          ],
+          "exactPositionPhysicalIDs": [
+            1234,
+            1024,
+            1086
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5123351812362671,
+              1.355025053024292,
+              -0.1752338409423828
+            ],
+            [
+              0.5090149641036987,
+              1.365209937095642,
+              -0.17451710999011993
+            ],
+            [
+              0.5102139711380005,
+              1.3655240535736084,
+              -0.17736628651618958
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 1.6619625101504584e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "B",
+          "edgeVertexLanes": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.291658200413271,
+          "oppositeTriangleBarycentric": [
+            0.003137085180463406,
+            0.23387944822777038,
+            0.7629834665917662
+          ],
+          "intersectionPositionM": [
+            0.5108326394579594,
+            1.3624619339672568,
+            -0.17674434127765384
+          ],
+          "determinantM3": 1.8434714334888615e-06
+        }
+      },
+      {
+        "pairID": 7,
+        "physicalSharedVertices": 0,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3813,
+          "sourceVertexIDs": [
+            2982,
+            3025,
+            2993
+          ],
+          "exactPositionPhysicalIDs": [
+            1661,
+            1516,
+            1024
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5190086960792542,
+              1.3708866834640503,
+              -0.16772149503231049
+            ],
+            [
+              0.5166527628898621,
+              1.3533841371536255,
+              -0.18413124978542328
+            ],
+            [
+              0.5090149641036987,
+              1.365209937095642,
+              -0.17451710999011993
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.0001102952155233529
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3846,
+          "sourceVertexIDs": [
+            2995,
+            3009,
+            3003
+          ],
+          "exactPositionPhysicalIDs": [
+            1234,
+            1086,
+            1513
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5123351812362671,
+              1.355025053024292,
+              -0.1752338409423828
+            ],
+            [
+              0.5102139711380005,
+              1.3655240535736084,
+              -0.17736628651618958
+            ],
+            [
+              0.5166341066360474,
+              1.3563352823257446,
+              -0.1764785647392273
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.5202690918445436e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "B",
+          "edgeVertexLanes": [
+            0,
+            1
+          ],
+          "edgeParameter": 0.7083417995867289,
+          "oppositeTriangleBarycentric": [
+            0.003137085180463406,
+            0.23387944822777038,
+            0.7629834665917662
+          ],
+          "intersectionPositionM": [
+            0.5108326394579594,
+            1.3624619339672568,
+            -0.17674434127765384
+          ],
+          "determinantM3": -1.8434714334888615e-06
+        }
+      },
+      {
+        "pairID": 8,
+        "physicalSharedVertices": 0,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3813,
+          "sourceVertexIDs": [
+            2982,
+            3025,
+            2993
+          ],
+          "exactPositionPhysicalIDs": [
+            1661,
+            1516,
+            1024
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5190086960792542,
+              1.3708866834640503,
+              -0.16772149503231049
+            ],
+            [
+              0.5166527628898621,
+              1.3533841371536255,
+              -0.18413124978542328
+            ],
+            [
+              0.5090149641036987,
+              1.365209937095642,
+              -0.17451710999011993
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.0001102952155233529
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3847,
+          "sourceVertexIDs": [
+            3003,
+            3009,
+            3018
+          ],
+          "exactPositionPhysicalIDs": [
+            1513,
+            1086,
+            1681
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5166341066360474,
+              1.3563352823257446,
+              -0.1764785647392273
+            ],
+            [
+              0.5102139711380005,
+              1.3655240535736084,
+              -0.17736628651618958
+            ],
+            [
+              0.5192607641220093,
+              1.3556748628616333,
+              -0.18069061636924744
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.6468600041732774e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            0,
+            1
+          ],
+          "edgeParameter": 0.744729466081725,
+          "oppositeTriangleBarycentric": [
+            0.003372152796561001,
+            0.2208233815186942,
+            0.7758044656847448
+          ],
+          "intersectionPositionM": [
+            0.517254163212994,
+            1.357852021495217,
+            -0.17994232292812823
+          ],
+          "determinantM3": -9.331632520347837e-07
+        }
+      },
+      {
+        "pairID": 9,
+        "physicalSharedVertices": 0,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3830,
+          "sourceVertexIDs": [
+            3025,
+            2982,
+            3038
+          ],
+          "exactPositionPhysicalIDs": [
+            1516,
+            1661,
+            1496
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5166527628898621,
+              1.3533841371536255,
+              -0.18413124978542328
+            ],
+            [
+              0.5190086960792542,
+              1.3708866834640503,
+              -0.16772149503231049
+            ],
+            [
+              0.5163945555686951,
+              1.3632208108901978,
+              -0.18637321889400482
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.00010128116933405398
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3847,
+          "sourceVertexIDs": [
+            3003,
+            3009,
+            3018
+          ],
+          "exactPositionPhysicalIDs": [
+            1513,
+            1086,
+            1681
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5166341066360474,
+              1.3563352823257446,
+              -0.1764785647392273
+            ],
+            [
+              0.5102139711380005,
+              1.3655240535736084,
+              -0.17736628651618958
+            ],
+            [
+              0.5192607641220093,
+              1.3556748628616333,
+              -0.18069061636924744
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.6468600041732774e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            0,
+            1
+          ],
+          "edgeParameter": 0.2552705339182751,
+          "oppositeTriangleBarycentric": [
+            0.003372152796561001,
+            0.2208233815186942,
+            0.7758044656847448
+          ],
+          "intersectionPositionM": [
+            0.517254163212994,
+            1.357852021495217,
+            -0.17994232292812823
+          ],
+          "determinantM3": 9.331632520347837e-07
+        }
+      },
+      {
+        "pairID": 10,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3830,
+          "sourceVertexIDs": [
+            3025,
+            2982,
+            3038
+          ],
+          "exactPositionPhysicalIDs": [
+            1516,
+            1661,
+            1496
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5166527628898621,
+              1.3533841371536255,
+              -0.18413124978542328
+            ],
+            [
+              0.5190086960792542,
+              1.3708866834640503,
+              -0.16772149503231049
+            ],
+            [
+              0.5163945555686951,
+              1.3632208108901978,
+              -0.18637321889400482
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 0.00010128116933405398
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 3848,
+          "sourceVertexIDs": [
+            3009,
+            3025,
+            3018
+          ],
+          "exactPositionPhysicalIDs": [
+            1086,
+            1516,
+            1681
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5102139711380005,
+              1.3655240535736084,
+              -0.17736628651618958
+            ],
+            [
+              0.5166527628898621,
+              1.3533841371536255,
+              -0.18413124978542328
+            ],
+            [
+              0.5192607641220093,
+              1.3556748628616333,
+              -0.18069061636924744
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 3.327133998482837e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "B",
+          "edgeVertexLanes": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.2219565344410616,
+          "oppositeTriangleBarycentric": [
+            0.743500339359467,
+            0.2548587197872785,
+            0.0016409408532544814
+          ],
+          "intersectionPositionM": [
+            0.517252769303473,
+            1.3578609550991123,
+            -0.17995275963572374
+          ],
+          "determinantM3": -1.9176614828962702e-06
+        }
+      }
+    ],
+    "firstWitnessByRegionPair": [
+      {
+        "pairID": 0,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 0,
+          "sourceFace": 7449,
+          "sourceVertexIDs": [
+            4630,
+            4567,
+            4551
+          ],
+          "exactPositionPhysicalIDs": [
+            1913,
+            1842,
+            1801
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5220074653625488,
+              1.3556768894195557,
+              0.1892797201871872
+            ],
+            [
+              0.5210474133491516,
+              1.3530657291412354,
+              0.19028136134147644
+            ],
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ]
+          ],
+          "geometricRegion": "lateral_underarm_window",
+          "areaM2": 7.321699775772581e-06
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4105,
+          "sourceVertexIDs": [
+            59,
+            49,
+            66
+          ],
+          "exactPositionPhysicalIDs": [
+            1801,
+            1684,
+            1898
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ],
+            [
+              0.5193374156951904,
+              1.3731340169906616,
+              0.19284996390342712
+            ],
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.508136799702164e-06
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "B",
+          "edgeVertexLanes": [
+            1,
+            2
+          ],
+          "edgeParameter": 0.8343096574438432,
+          "oppositeTriangleBarycentric": [
+            0.5226280985738646,
+            0.018421927138483896,
+            0.4589499742876515
+          ],
+          "intersectionPositionM": [
+            0.521389571227654,
+            1.3589856958008202,
+            0.18981534270161246
+          ],
+          "determinantM3": -1.6572187082050375e-08
+        }
+      },
+      {
+        "pairID": 2,
+        "physicalSharedVertices": 1,
+        "A": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4,
+          "sourceVertexIDs": [
+            66,
+            65,
+            59
+          ],
+          "exactPositionPhysicalIDs": [
+            1898,
+            1913,
+            1801
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ],
+            [
+              0.5220074653625488,
+              1.3556768894195557,
+              0.1892797201871872
+            ],
+            [
+              0.520699679851532,
+              1.362991213798523,
+              0.19040657579898834
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 7.068265077666716e-07
+        },
+        "B": {
+          "sourceMesh": 0,
+          "sourcePrimitive": 2,
+          "sourceFace": 4106,
+          "sourceVertexIDs": [
+            49,
+            50,
+            66
+          ],
+          "exactPositionPhysicalIDs": [
+            1684,
+            1682,
+            1898
+          ],
+          "sourceFloat32Positions": [
+            [
+              0.5193374156951904,
+              1.3731340169906616,
+              0.19284996390342712
+            ],
+            [
+              0.5192857980728149,
+              1.3825616836547852,
+              0.19284996390342712
+            ],
+            [
+              0.5217971205711365,
+              1.3561758995056152,
+              0.18921267986297607
+            ]
+          ],
+          "geometricRegion": "source_hood",
+          "areaM2": 2.045621426095117e-05
+        },
+        "strictInteriorWitness": {
+          "edgeOwner": "A",
+          "edgeVertexLanes": [
+            1,
+            2
+          ],
+          "edgeParameter": 0.47006784181058126,
+          "oppositeTriangleBarycentric": [
+            0.14740416546463186,
+            0.016657508863290135,
+            0.835938325672078
+          ],
+          "intersectionPositionM": [
+            0.521392717449834,
+            1.3591151180946794,
+            0.1898094187726587
+          ],
+          "determinantM3": -1.8327567792784346e-08
+        }
+      }
+    ]
+  },
+  "memory": [
+    {
+      "elapsedSeconds": 0.004335958044975996,
+      "anonymousGB": 41.250914304
+    },
+    {
+      "elapsedSeconds": 0.21886616619303823,
+      "anonymousGB": 41.37402368
+    },
+    {
+      "elapsedSeconds": 2.118383999913931,
+      "anonymousGB": 41.35059456
+    }
+  ],
+  "inputHashes": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-foundation167/prepare.py",
+      "SHA256": "f8d816c3cca89caa4c6a7a744469d92e7cf105ab9c6db9600366f007cca8ae28",
+      "bytes": 12328
+    },
+    {
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/deliverables/C19.glb",
+      "SHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+      "bytes": 16294212
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/source-boundaries181/report.json",
+      "SHA256": "d81b142308e0aa549607bf3b62811d4c242eeecd3f9584e1b23049fedc223c27",
+      "bytes": 58243
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/uv-lower01/inherited-neck-rest-crossings.json",
+      "SHA256": "4a9ae9e7d7572c1a3af7032de763cdca61be0cc8ae02b0fea2ee3329d4ae0da7",
+      "bytes": 42918
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell-handoff.json",
+      "SHA256": "d3908554a4078851fe50d8066e831678b689ddf6059cd208f9f30bc3c68a453a",
+      "bytes": 18136
+    }
+  ],
+  "privateOutputs": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment184/source-audit/strict-source-rest-pairs.npz",
+      "SHA256": "ee4d8c79562f060d680a9e4b41a3865a0ca595d966a0339198a864aecaac777c",
+      "bytes": 69344
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment184/source-audit/all-strict-witnesses.json",
+      "SHA256": "9fdf62b42873b9b53c185e9906581570b0b73a2a21cd387c3a24b5975bb517af",
+      "bytes": 12852
+    }
+  ],
+  "recipeSHA256": "456c19387315283275a58c4a595bc98aebab05c35625051bb790b25865d14793",
+  "limits": [
+    "Geometric region windows are explicitly diagnostic, not certified garment ownership/anatomy. All original indices, sourcefloat32positions/UV/PBR/head/neck/hood/gloves/lower stay untouched.",
+    "Strict tests exclude coplanar overlap and endpoint/tangent-only contacts; >=2shared physical vertices are excluded. Source folds and thickness can still be wrong without counted strict pairs.",
+    "No render or moving pose; strict rest crossing is not perceived damage severity, anatomical acceptance, motion clearance, physical support, weights or rig readiness.",
+    "No repair, source reshaping, new export, GPU, nativeBlender, browser or other model workload."
+  ]
+}

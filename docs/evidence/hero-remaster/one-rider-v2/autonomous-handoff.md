@@ -16,6 +16,34 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Source construction diagnosis and bounded local correction — round184
+
+Original C19 has one continuous22600physical-node cloth/body surface with no
+rest degenerates, nonmanifold edges or winding conflicts. Independent conservative
+checks find zero body self/body-glove strict crossings;11hood-related pairs
+remain (2body-hood,9hoodself), and3coplanar candidates stay unclassified. Head/cheek
+and glove self/hood contacts were not exhaustively tested. Parent verifies7input/
+private hashes, direct source topology and all11literal witness coordinates/
+intersection points within2.50e-16m. Both exact source neutral films play to end,
+48orderedgray/PBRorbitframes inspected: original silhouette is promising and
+far better than the rejected replacements. No >=7/10target or pose pass claimed.
+
+Keep the whole source body, liked head, actualhood/cuffjoins and texture topology.
+Do not invent a chest construction edit or attribute later shoulder inserts to
+this source without evidence. Crossings involve bodyface7449 and13hoodfaces;
+body-only fairing cannot solve them under exactlocks. Select bounded localhood
+interior diagonal-edge correction with all source positions fixed,307pairedseam
+and237hoodopening edges untouched. Operator/scope and exact output contract
+must be frozen before ONEtrial. Max32accepted flips/128tests/12minCPU2threads;
+no globalremesh, fairing, weights or paint mixed into it. Test all changedhood/
+body and adjacent/coplanar overlap, not an adjacency-exclusion shortcut.
+
+Source family has0geometry attempts and1disclosed diagnostic metadata error;
+older retired families remain linked. Cosmetics paused. Rig/weights/continuous
+basicposes, anatomy and hips/seat, actualGarage/riding/maxlean/landing/grip/sole/
+mobile and allthree visualcheckpoints remain open. Ordinary ship183passed;
+next mandatory186. No humancheckpointhold or playerpromotion.
+
 ## Gameplay regression and source-preserving diagnosis — round183
 
 Fresh ordinary gameplay cold build/boot, recorded clear, crash and restart pass

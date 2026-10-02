@@ -1,0 +1,60 @@
+{
+  "stage": "planning-only; no geometry Go185 received",
+  "architecture": "source-preserving local hood connectivity correction",
+  "source": {
+    "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/deliverables/C19.glb",
+    "sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+    "primitive": "mesh0 primitive2 hood",
+    "auditReportSha256": "1bf07c78bbb8d34b3f345aee5ae98e0b9dd5c4d1fe8a1ed8943e036528628a9e",
+    "strictPairNpzSha256": "ee4d8c79562f060d680a9e4b41a3865a0ca595d966a0339198a864aecaac777c"
+  },
+  "candidateRegistry": {
+    "path": "hood185-candidates.json",
+    "sha256": "61b142704e656ea1b9a45d8bed4c467436ed1f76f3c435498f5b74df2b9993b5",
+    "frozenSourceFaceSlots": 28,
+    "initialAdmissibleEdges": 23,
+    "regionExpansion": false
+  },
+  "requiredBeforeOperator": [
+    "Parent committed audit184 and explicit geometry Go185",
+    "Reverify immutable C19 hash, hood face-slot indices and candidate registry",
+    "Preregister one bounded operator trial and resource/start clock",
+    "Freeze independent owner's three inherited coplanar candidate IDs and predicates; the pair NPZ currently contains only the eleven strict pairs"
+  ],
+  "operation": {
+    "mandatoryFirstTest": "p2 edge49-66 ->59-50; face slots4105/4106",
+    "positionsFixed": true,
+    "maxAcceptedFlips": 32,
+    "maxCandidateTests": 128,
+    "maxMinutes": 12,
+    "maxCpuThreads": 2,
+    "maxAnonymousBytes": 70000000000,
+    "acceptedFaceAncestry": "Each changed original face slot records old/new source index triplet, physical quotient IDs, oriented quad perimeter and operator sequence",
+    "failurePolicy": "Freeze one partial or rejected final result; no fairing, vertex movement or expanded halo"
+  },
+  "outputProtocol": {
+    "finalOutputs": "One final GLB plus lossless index/ancestry NPZ and audit/trial JSON only after explicit stage authorization; no per-candidate GLB",
+    "bin": "Copy complete original BIN chunk byte-for-byte as prefix; append only new hood index buffer, with alignment padding; leave original index buffer present",
+    "jsonAllowedChanges": [
+      "buffers[0].byteLength",
+      "one appended index bufferView",
+      "one appended index accessor with source index component type and unchanged triangle count",
+      "mesh0 primitive2 indices reference"
+    ],
+    "jsonComparison": "Recursive original JSON comparison permitting only listed changes; GLB JSON serialization bytes are not claimed exact",
+    "exactOriginalArrays": "All POSITION, NORMAL, TANGENT, TEXCOORD, COLOR, JOINTS, WEIGHTS, morph targets, inverse-bind arrays and all untouched indices/accessor bytes",
+    "exactOriginalFields": "All images/textures/material/PBR/sampler, node/skin/mesh transforms and non-index primitive fields",
+    "boundaryLocks": "307 paired hood/body cycle,237 hood opening,65L/62R cuff cycles: original positions/alias indices/attributes and oriented physical edges unchanged",
+    "normalsMorphBookkeeping": "No normal/tangent/morph recomputation. Original vertex arrays and morph rows retain byte correspondence. Face ancestry changes local interpolation only; original normals may no longer equal new geometric face normals and require later independent quality judgment",
+    "noExportImplicitPermission": true
+  },
+  "finalGate": {
+    "sourceRestCounts": {"p0Faces":33968,"gloveFaces":6883,"hoodFaces":4118,"strictPairs":11,"unclassifiedCoplanarCandidates":3},
+    "goal": "Eleven strict source witness pairs become zero, no new hood/body/glove pairs and no adjacent/coplanar-overlap shortcut",
+    "topology": "Literal source Float32 positions; area>1e-12m2, noncollapsed edges, no duplicate faces or newly overincident physical edges, manifold/winding/component/boundary unchanged",
+    "oldWitnessTracking": "Retest original eleven face-slot pairs regardless of resulting shared-node class",
+    "fullExportAudit": "Reparse final GLB, byte-compare original BIN prefix and protected arrays/fields, validate all source face counts, full body-self rest count and whole hood versus unchanged body/gloves",
+    "render": "No render until stable audited export and parent authorization; matched neutral source settings only",
+    "claims": "No rig/animation readiness, game-ready or appearance score; parent judges silhouette"
+  }
+}
