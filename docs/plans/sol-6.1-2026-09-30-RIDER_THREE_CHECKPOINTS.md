@@ -74,7 +74,23 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round171
+## Current construction decision — round172
+
+Round172 delivers a real skinned frozen06 protocol source, not a static Blender
+snapshot. Original19bind/nodes/head/gloves/cheek/PBR/images/animations are exact;
+all94,952rows retain literal dense influences with no truncation/renormalization.
+New garment auxiliary and grip-normal fields have explicit authored definitions,
+not a lossless-all-fields claim. Protected glove material usesUV1 and stays
+untouched; only changed garment materials consumeUV0. Parent independent raw/
+array audit passes; float64→float32 rounding is explicit. No moving/quality pass.
+See [export evidence](../evidence/hero-remaster/one-rider-v2/candidate-export172/README.md).
+
+Next: strict handoff170 mapping of frozen06, short continuous exported Three
+transition, then judge gray/PBR seam and volume behavior against the target.
+Do not silently substitute latest07UV/construction, import a static snapshot or
+copy V7's topology-specific morphs/material adapter. If short motion fails, retain
+evidence and change construction/rig strategy within existing autonomous bounds.
+Full5404fixture/actualGarage/physics/contact/mobile only follow a viable source.
 
 Construction→rig/weights→deformation remains the execution order; cosmetics
 remain paused. Task3 owns reconstruction of the22piercing sleeve boundary edges.

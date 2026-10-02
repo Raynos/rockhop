@@ -1974,3 +1974,27 @@ construction/rest-export validation; UV/normal seams require repair before
 moving gate. Revised waist rest success still fails finite sitting intersections.
 Construction first; cosmetics paused; liked head/identity/physics/C19contract
 preserved. Next mandatoryship174. No player promotion or Rockhop release.
+
+## Round172 — distinguish a skinned protocol source from static previews
+
+Finding: frozen task3tube06 can enter runtime testing as a real nineteen-bone
+source without dropping dense influences. Its missing new-fabric auxiliary and
+grip-normal fields need declared authored definitions. Protected glove material
+usesUV1; a blanket characterUV0assumption was rejected before output.
+
+Validation: all94952dense rows pack literal≤4influences, no truncation or
+renormalization. Independent parent parser verifies original sourceBINprefix,
+nodes/skins19bind/head/glove/cheek/PBR/images/animation JSON exact.29538changed
+cloth rows read back exact float32positions/normals/UV/dense weights and indices.
+Old auxiliary/morph rows exact; new garment UV1duplicate/constants, unusedCOLOR2
+and zero gripPOSITION/NORMAL verified as explicit new definitions. Source
+5021e33d17205fa7c40f4aa5b7075f1a19e4127b742d13cc0e30ceb9612dc191.
+Tiny-fifth/negative/nonfinite controls reject. Two setup guard failures retained;
+no rejected asset emitted. CPU2threads, no GPU or construction-source edits.
+
+Limits: newly authored extensions are not original information. Float64→float32
+rounding is documented. No strict runtime mapping, stockThreepose parity, moving
+basic pose/art/contact/Garage/mobile pass. Latest07construction remains separate;
+no V7topology-specific correctives/materialadapter imported. Parent next maps
+frozen06and judges a short gray/PBRcontinuous transition before full5404gate.
+Cosmetics paused; task3owns construction; next mandatoryship174. No promotion.

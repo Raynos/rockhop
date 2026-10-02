@@ -1,0 +1,119 @@
+{
+  "status": "UNACCEPTED_EXPLICIT_EXTENSION_SKINNED_SOURCE_NO_MOTION_PASS",
+  "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/deliverables/C19.glb",
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "npz": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/tube03-four-bind/four-cap-carrier06-envelope.npz",
+  "npzSHA256": "ece32f56441f144925d83344e544331463f20c6e9f39221111b003702df35406",
+  "output": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-export172/source06/rider.glb",
+  "outputSHA256": "5021e33d17205fa7c40f4aa5b7075f1a19e4127b742d13cc0e30ceb9612dc191",
+  "recipeSHA256": "b27821c76602c201baa02af2052afcd549d83d95bbe0c6426d3c00377710320e",
+  "sourceBINPrefixExact": true,
+  "sourceNodes19BindProtectedPrimitivesPBRImagesAnimationsExact": true,
+  "allLiteralDenseInfluencesRetainedFloat32CastOnly": true,
+  "rows": [
+    {
+      "primitive": 0,
+      "originalRows": 22240,
+      "newRows": 4186,
+      "attributes": [
+        {
+          "semantic": "POSITION",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "NORMAL",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "TEXCOORD_0",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "TEXCOORD_1",
+          "policy": "Original rows exact; new rows duplicate authored UV0."
+        },
+        {
+          "semantic": "TEXCOORD_2",
+          "policy": "Original rows exact; extend proven constant."
+        },
+        {
+          "semantic": "COLOR_0",
+          "policy": "Original rows exact; extend proven constant."
+        },
+        {
+          "semantic": "COLOR_1",
+          "policy": "Original rows exact; extend proven constant."
+        },
+        {
+          "semantic": "COLOR_2",
+          "policy": "Original rows exact; new rows explicitly unused zero (not source-exact)."
+        },
+        {
+          "semantic": "JOINTS_0",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "WEIGHTS_0",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        }
+      ],
+      "morphPolicy": "Original POSITION/NORMAL deltas exact; new fabric POSITION/NORMAL deliberately zero: grip closure leaves authored garment surface unchanged."
+    },
+    {
+      "primitive": 2,
+      "originalRows": 3112,
+      "newRows": 0,
+      "attributes": [
+        {
+          "semantic": "POSITION",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "NORMAL",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "TEXCOORD_0",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "JOINTS_0",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        },
+        {
+          "semantic": "WEIGHTS_0",
+          "policy": "Authoritative NPZ; explicit float32 rounding for floats; all influences retained."
+        }
+      ],
+      "morphPolicy": "Original POSITION/NORMAL deltas exact; new fabric POSITION/NORMAL deliberately zero: grip closure leaves authored garment surface unchanged."
+    }
+  ],
+  "consumerAudit": {
+    "sourceRgPattern": "color_2|COLOR_2",
+    "sourceRgNoMatches": true,
+    "changedGarmentMaterialTextureBindings": [
+      {
+        "path": "garment0/pbrMetallicRoughness/baseColorTexture",
+        "texCoord": 0
+      },
+      {
+        "path": "garment2/pbrMetallicRoughness/baseColorTexture",
+        "texCoord": 0
+      }
+    ],
+    "protectedGloveMaterialUsesUV1AndIsUntouched": true,
+    "GLTFLoaderSHA256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+    "colorShaderChunkSHA256": "d68ccbbf5a015dad9211c49eb20e9d1ebc8b69fa1249122f776c1261cf91a56a"
+  },
+  "setupFailures": [
+    "Initial all-material UV0-only assertion rejected before output: protected glove material consumes UV1. Final proof is scoped to changed garment materials0/2; glove primitive/material remains exact.",
+    "Second setup run rejected before output because duplicate-UV check looked up a newly appended accessor on the immutable source. Final check explicitly reads the untouched source primitive."
+  ],
+  "limits": [
+    "Auxiliary/morph extensions deliberately newly authored, not lossless original information.",
+    "Float64 NPZ casts to standard float32; exact original protected source references remain untouched.",
+    "No V7 topology-specific49 correctives or responding-surface adapter copied.",
+    "Source still fresh.* names; needs strict candidate-handoff170 mapping before continuous runtime gate.",
+    "No stock Three.js motion, appearance, intersection, contact, gameplay or mobile acceptance."
+  ]
+}

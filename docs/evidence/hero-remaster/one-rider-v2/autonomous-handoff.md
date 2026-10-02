@@ -16,7 +16,14 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round171, 2026-10-01
+## Current evidence — round172, 2026-10-01
+
+- Round172 real skinned frozen06 source5021e33d1720 ready for strict handoff170.
+  Original19bind/head/gloves/cheek/PBR/images/clips preserved, all94,952dense rows
+  retained. Explicit new garment auxiliary/morph policy, no lossless-all-fields
+  claim; original gloveUV1 unchanged. Parent raw/array audit passes29538changed
+  garment rows. No Three/motion/art pass. Next short continuous gray/PBR gate;
+  latest07not silently substituted. Cosmetics paused, nextship174.
 
 - Round171 review version7 is live with timed lean/saddle/landing loops in both
   existing riding views.81media/29videos unchanged; local+hosted silent WebKit
