@@ -191,6 +191,8 @@ Round195: chord clearance isolates folded panels; ONE complete source-star scala
 
 Round196: ONE scalar source-star mesh REJECTED44crossings/9normal reversals. Parent21files/14pins/1725pairs/all44witnesses and source conservation verified. NoGLB/motion. Switch to collision-aware local3D dependency/source preflight; third local failed output. All3visual/poses/contact/mobile OPEN, cosmetics paused,nextship198.
 
+Round197: dormant anatomical field proposal verified6files/18pins/1328node source aliases/91edge closed elbow ring. No weights executed; construction196 remains rejected44crossings. Updated future domain needed if construction changes. Isolated CCD tool admission pending, cosmetics paused,allgatesOPEN,ship198due.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

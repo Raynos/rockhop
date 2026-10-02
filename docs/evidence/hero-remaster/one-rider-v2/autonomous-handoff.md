@@ -16,6 +16,45 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Conditional anatomical field design retained; construction first — round197
+
+The separate stage2 specialist supplies a specific future source-left field
+reconstruction, not a new rig or weight pass. Parent6 recipe/evidence pins and
+18 source pins verified;1,328 editable physical nodes/1,644 rows and every
+source alias/protected guard are checked independently. The actual named-bone
+elbow bisector intersects91 source edges in one closed degree2 ring. Source
+retained graph has7/1,629/36-node components; only1,629 contains editable nodes.
+
+The dormant algorithm replaces hard nearest-capsule switching with a source
+graph longitudinal station anchored to actual cuff, elbow ring and high
+mixed-ownership guards. Reconstruct upperArm/forearm distribution, retain named
+hand mass, and fade through source-length guard distances. Exact proposed
+blend widths, truncation/discarded-mass receipts, four-lane Float32 canonical
+aliases and all28/5,404 stockThree/halfstep/full-body parity requirements are
+in anatomical-field-design196/proposal.json. These widths/ownership assumptions
+are unmeasured hypotheses. The proposal names a future executable; only the
+read-only analyze.py exists. No station solve, target weights or new fields ran.
+
+Construction196 still fails44 crossings. Consequently this proposal is NOT
+registered for execution and cannot compensate for defective garment geometry.
+If the next construction changes ancestry/domain/guards, issue a new explicit
+scope contract before any weight work; do not reuse the old mask silently.
+Preserve head/hood/cuff/glove/right/torso/hips,19 joints/binds/axes, physics lean,
+COM/IK and actual grip/sole behavior. Bone-defined stations are not anatomical
+ownership or contact proof. Parent alone judges exported moving evidence.
+
+Parent setup correction is retained: BLAS dot emitted floating-point warnings
+with an otherwise finite correct source-plane result. Elementwise reduction
+and all-finite assertion recheck every anchor; the final report exactly matches
+the first and exits0 without warnings. Zero character/field changes.
+
+Current construction work is isolated CPU IPC/continuous-collision admission
+(ipc-admission197 paths), not a sculpt or game physics replacement. It must
+verify source preconditions and actual triangle coverage before a bounded
+source-local3D trial can be registered. No retired global family or scalar-lift
+retry. Cosmetics PAUSED; all three visual/basic-pose/gameplay/contact/mobile
+gates OPEN. Five/15 autonomy bounds unchanged; ordinary ship198 now due.
+
 ## Reject the source-star lift; require collision-aware construction — round196
 
 ONE actual168-face/46-interior scalar sculpt is frozen and REJECTED before

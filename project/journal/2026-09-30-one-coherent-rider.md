@@ -2477,3 +2477,21 @@ global family. Cosmetics paused; threevisual/basicposes/contact/mobile OPEN.
 Ordinary ship198 due after195pass.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-star196/
 Ask: 248.
+
+## Round197 — preserve a specific anatomical field proposal conditionally
+
+Finding: Source graph elbow/cuff/high anchors support one future arm-field
+reconstruction. Keep it dormant until actual garment construction passes.
+
+Validation: Parent6files/18pins,1328physical edits/1644row aliases, literal
+source edges/guards and91edge closed elbow ring verified. Elementwise plane
+reduction removes platform BLAS warnings; exact first/final report equality.
+Zero geometry/station/weights/rig/exports/GPU. Finite source values checked.
+
+Limits: Guard widths, ownership, four-lane truncation, anatomy and moving
+results remain untested. Failed196 construction prevents execution. Any future
+construction-domain change needs explicit revised ancestry/scope. Current
+CPU CCD tool admission is separate from a candidate; no game physics change.
+Cosmetics paused; threevisual/basicposes/contact/mobile OPEN,ship198due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/anatomical-field-design196/
+Ask: 248.

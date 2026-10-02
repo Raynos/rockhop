@@ -1,0 +1,53 @@
+{
+  "status": "DORMANT_UNREGISTERED_AFTER_STATIC_SOURCE_STAR196_FAILURE",
+  "geometryWeightAttempts": 0,
+  "executionPrecondition": "Parent accepts static allfive construction clearance and registers exactly one weight trial; current196 has44 strict crossings and9 normal reversals, so execution forbidden.",
+  "futureExecutable": "assets/blender/hero-remaster/rider/one-rider-v2/anatomical-field-design196/reconstruct.py",
+  "readOnlyExecutable": "assets/blender/hero-remaster/rider/one-rider-v2/anatomical-field-design196/analyze.py",
+  "sourceScopeFile": "source-anchors-and-scope.json",
+  "source185SHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "domain": "Only proposedEditablePhysicalIDs and proposedEditableP0Rows from frozen source scope. Actual construction must retain each literal row/face correspondence. All released source-star ancestry and clones excluded. No source mask regeneration from candidate positions.",
+  "graph": "retainedOriginalGraphEdges on remainingSourceLeftIDs, original source185 Euclidean edge lengths. Insert auxiliary node on every frozen elbowPlaneCrossings edge using literal sourceFractionFromFirst; replace that solver edge by two edges, without changing any mesh. Conductance=1/source edge length; reject zero lengths or unanchored graph components. The7/36-node separated fragments have zero editable nodes and remain entirely source-protected. Only the1629-node main component contains edits; all1328 edits have finite cuff/high distances and the91-edge elbow anchor. Never evaluate alpha on unedited disconnected fragments.",
+  "longitudinalStation": {
+    "unknown": "One scalar s per source graph/auxiliary node; solve sum_j((s_i-s_j)/length_ij)=0 in Float64 using scipy.sparse.linalg.spsolve, sorted lexicographic edges and sorted physical IDs.",
+    "cuffAnchor": "s=0.571176070196656m at all fixedCuffIDs (mean literal65 centroid projected onto named forearm segment).",
+    "elbowAnchor": "s=0.32991402161296685m at all91 auxiliary elbow crossings.",
+    "highAnchor": "At highMixedOwnershipSeedIDs, s=clip(dot(P_source-upperArmCentre,unitUpperDirection),0,upperLength). This projects a station along a declared segment, never chooses ownership by nearest bone.",
+    "incompatibleAnchors": "If same node receives disagreeing anchors, reject; no priority/fallback."
+  },
+  "settings": {
+    "CPUThreads": 2,
+    "anonymousGBMaximum": 70,
+    "secondsMaximum": 890,
+    "upperLengthM": 0.32991402161296685,
+    "forearmLengthM": 0.274266287626276,
+    "elbowBlendHalfWidthM": 0.027426628762627598,
+    "highGuardFadeWidthM": 0.08247850540324171,
+    "cuffGuardFadeWidthM": 0.027426628762627598,
+    "sparseSolveRelativeResidualReporting": true,
+    "hypothesis": "All blend/fade widths unmeasured proposed parameters; parent must register these exact values, no tuning or user-bar claim."
+  },
+  "reconstruction": [
+    "Smooth(x)=t*t*(3-2*t), t=clip(x,0,1). Elbow e=Smooth((s-(upperLength-elbowBlendHalfWidth))/(2*elbowBlendHalfWidth)).",
+    "h=source canonical stockThree-normalized hand.L mass, fixed at every editable source node. Target W(hand.L)=h; W(upperArm.L)=(1-h)*(1-e); W(forearm.L)=(1-h)*e; every other target joint=0. Shoulder.L source zero remains zero; shoulder not nearest-bone guessed.",
+    "dH and dC are source-length shortest-path distances on the unsplit original retained graph to fixedHighTwoRingIDs and fixedCuffTwoRingIDs respectively, scipy.sparse.csgraph.dijkstra undirected. alpha=Smooth(dH/highGuardFadeWidth)*Smooth(dC/cuffGuardFadeWidth).",
+    "At editable node dense W=(1-alpha)*fullSourceNormalized19 + alpha*Target. At every protected node preserve raw JOINTS_0/WEIGHTS_0 bytes, not a normalized re-export. Thus high mixed source ownership fades through the proximal transition, rather than blanket central deletion.",
+    "Four lanes: if h>0 reserve hand.L lane and choose at most3 remaining positive named joints by descending dense mass then ascending canonical joint ordinal. If h=0 choose at most4. Scale selected non-hand mass to1-h once in Float64. Preserve h; reject zero selected non-hand total when h<1. Record discarded mass and before/after denseL1 on every node. Cast weights to Float32 once, order lanes by canonical joint ordinal, pad with ordinal0/zero. Actual loader normalization error in h must be measured; any mismatch is disclosed, not hand-contact acceptance.",
+    "Copy that one exact Float32 four-lane vector to every literal allEditableAliasGroups row. All external rows/otherprimitive arrays/morphs unchanged. If any new alias touches a protected row, reject scope conflict rather than splitting ownership."
+  ],
+  "cpuParity": {
+    "referenceRecipe": "assets/blender/hero-remaster/rider/one-rider-v2/source-rig188/actual-three/evaluate.mts",
+    "independentMath": "Use actual Float32(raw/sum(abs(raw))) loader weights and raw restWorld*inverseBind matrices; apply source morph positions first, matrix skinning second. Compare all vertices to actual SkinnedMesh.getVertexPosition, fixture actual world matrices and per-alias equality. Existing recipe witness-only scope must explicitly expand to full edit and guard edges; no existing188 run claimed for proposal.",
+    "baselineFixture": {
+      "sha256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+      "bytes": 20057272
+    },
+    "requiredSamples": 5404,
+    "requiredFamilies": 28,
+    "allGatesOpen": true
+  },
+  "fullMotionGate": "All28/5404 actual stockThree samples and halfsteps, gray/PBR clips, independently heldout asymmetric shoulder/forward/elbow/twist, allfive surface intersections/strain/guard aliases, production COM/lean/IK/grips/soles/sockets and gameplay/Garage blends; mobile iOS Safari/desktop; parent alone judges.",
+  "ambiguityAlternative": "If bone-defined elbow plane lacks single closed manifold ring or review finds non-elbow cloth, do not fit. Alternative is an explicitly reviewed surface elbow loop with named source IDs, new settings/pins and one new parent registration; not automatic nearest-capsule fallback.",
+  "protectedRules": "All78 boundary,130 cuff guards,214 high guards; cuff65/all1690 left glove interior; all released46 ancestry/clones/high cap/seam; all other p0/source external rows; allfive head/hood/torso/right/hip arrays;19 joints/hierarchy/binds/bases/physicsCOM/leanIK/grip/sole/socket/170 adapter exact.",
+  "failureMeaning": "A guard discontinuity or anatomical failure rejects this exact bounded field hypothesis, not all anatomical reweighting. No silent expansion, joint movement, changed user gates, DQ or normal-only rescue."
+}
