@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN_CPU_RENDER_COMPLETE",
+  "startedUTC": "2026-10-02T05:48:52.091107+00:00",
+  "pid": 42983,
+  "argv": [
+    "/usr/bin/lockf",
+    "-k",
+    "/Users/raynos/projects/localai/.model.lock",
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-preserving-garment186/render/render.py"
+  ],
+  "envOverrides": {
+    "BLENDER_USER_CONFIG": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/render/blender-config",
+    "BLENDER_USER_SCRIPTS": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/render/blender-scripts",
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "CYCLES_DEVICE": "CPU"
+  },
+  "memory": [
+    {
+      "seconds": 0.004657542000000001,
+      "anonymousGB": 42.751541248
+    },
+    {
+      "seconds": 10.017369208,
+      "anonymousGB": 44.030672896
+    },
+    {
+      "seconds": 20.029950875,
+      "anonymousGB": 43.890753536
+    },
+    {
+      "seconds": 30.032589750000003,
+      "anonymousGB": 43.81089792
+    }
+  ],
+  "exitCode": 0,
+  "seconds": 40.039473707999996,
+  "stopReason": null,
+  "logSHA256": "45a2a0f94e24b0b9c8e0f28256bfec6000a345d7e47278537745b7a67026198e"
+}

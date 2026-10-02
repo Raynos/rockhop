@@ -2259,3 +2259,21 @@ transparent,1geometry/0failedgeometry. Actualhipsremainopen. Aftercommit
 matchedneutralplayedreview thenexplicit19bonehandoff andshortarm/sit motion.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment185/
 Ask: 248. Nextmandatoryship186.
+
+## Round186 — source silhouette survives local hood repair
+
+Finding: The local hood correction preserves the source character through
+matched standing orbits. Proceed to exported motion diagnosis.
+
+Validation: Parent verified68 frozen hashes, JSON-only static derivation,
+four muted films played to end and all48 correctly proportioned decoded
+frames. No obvious new hood normal defect at400×450/four samples.
+Ordinary ship both tiers: exact40.083333333333336s/float64abaaaaaaaa0a4440,
+hash368f1ca5bd9e830a, crash103ticks/restart2–3ms, zero errors.
+
+Limits: Initial distorted contact sheets rejected before judgment; source
+films unchanged. Thin glove fingers/neck/arms/hips remain unresolved. No
+target7/8, continuous pose, new-rider, Garage/contact or mobile acceptance.
+Cosmetics paused; next explicit19bone mapping/short overhead/reach/sit.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment186/
+Ask: 248. Next ordinary ship189.

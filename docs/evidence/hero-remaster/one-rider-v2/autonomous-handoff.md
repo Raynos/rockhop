@@ -16,6 +16,30 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Matched neutral source review and gameplay regression — round186
+
+The repaired source preserves the liked standing silhouette and head through
+both full gray/textured orbits. Parent played both actual films and matched
+before/after compositions to completion, then inspected all48 decoded frames
+at the correct aspect ratio. No obvious new hood normal defect is visible at
+400×450/four samples. This is a local connectivity repair; no broad appearance
+improvement or full-body/face7/8 score is claimed. Thin glove fingers and all
+neck/arm/hip motion remain unaccepted.68 frozen hashes and the JSON-only static
+view were independently verified; original geometry/material/BIN exact.
+
+Ordinary ship186 passed both tiers: exact recorded finish40.083333333333336s,
+float64abaaaaaaaa0a4440 and hash368f1ca5bd9e830a; crash103ticks, restart2/3ms,
+zero errors.14.28s batch/46.076GB anonymous under the canonical shared lock.
+No candidate substitutions/private overlays; normal20-asset catalog unchanged.
+This regression does not accept new art or physical phone performance.
+
+Next: ONE JSON-only19bone handoff using the frozen185 source and explicit
+mappedV5 metadata, then matched continuous exported overhead/reach/sit clips.
+No bone positions, weights, physics or cosmetics changed before diagnosis.
+Full28-family pose gate, actual Garage/riding/max lean/landing/recovery,
+saddle/grip/sole, hips, mobile and all three visual checkpoints stay open.
+Cosmetic pause and five/15 failure bounds persist. Next ordinary ship189.
+
 ## Local hood rest repair — round185
 
 Oneboundedpositions-fixed sourcehood pass clears11measuredrest intersections

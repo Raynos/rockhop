@@ -1,0 +1,47 @@
+{
+  "status": "NEUTRAL_SOURCE_SILHOUETTE_PRESERVED_MOVING_GATE_OPEN",
+  "frozenFilesVerified": 68,
+  "freezeSHA256": "40187691ca09811099f9239d1e92d2d10169602690ea1057ee3e7ed729a36b8d",
+  "sourceSHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "neutralSHA256": "1f84a99288b640799bc626a14170f36ea5e9b7fda34419203d085a96ae166993",
+  "jsonOnlyNeutralDerivationExact": true,
+  "matchedRenderRecipeExceptPathsExact": true,
+  "films": [
+    {
+      "mode": "pbr",
+      "before": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/neutral-control179/CONTROL-neutral-pbr-turntable.mp4",
+      "beforeSHA256": "093ba6f6b04e1519bc35a802a71c5fc9cb40927f8da5a37f094265234ca6ced0",
+      "after": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment186/render/pbr-turntable.mp4",
+      "afterSHA256": "e7df5cc15f52eb64290a491b064434eaa33ba32cd42ca58a12a2f547046a2b37",
+      "comparison": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment186/matched-before-after-pbr.mp4",
+      "comparisonSHA256": "eca0b51e396fada7f2e7817a0f39e234ee4efcdd2eb5132c6fbd727c856878c1",
+      "decodedFrames": 24
+    },
+    {
+      "mode": "gray",
+      "before": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/neutral-control179/CONTROL-neutral-gray-turntable.mp4",
+      "beforeSHA256": "c76982f21a529c85ed27894caa294a2dfc5c68808ed87ac1db3b201d61fd4898",
+      "after": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment186/render/gray-turntable.mp4",
+      "afterSHA256": "26850cbe130f2cf05dbf7ce4df3744f5fdde63fcc3b534956bcf1d1dd4b45df6",
+      "comparison": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment186/matched-before-after-gray.mp4",
+      "comparisonSHA256": "283d13cff6079dac4f0d84095628e734eedceb17f87add2564a77e6e2b7a8d42",
+      "decodedFrames": 24
+    }
+  ],
+  "privateDecodedSheets": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/parent-review",
+  "limits": "Neutral standing appearance only. No moving pose, hip, grip/sole, neck motion, target7/8, game or mobile acceptance. Comparison composition does not alter source frames or geometry.",
+  "privateDecodedSheetsCorrectAspect": [
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/parent-review/pbr-aspect-correct-0.jpg",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/parent-review/pbr-aspect-correct-12.jpg",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/parent-review/gray-aspect-correct-0.jpg",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment186/parent-review/gray-aspect-correct-12.jpg"
+  ],
+  "compositionCorrection": "Initial private sheets scaled400x450 to200x300; rejected before judging. Corrected200x225 sheets preserve source aspect. Original films and matched comparisons unchanged.",
+  "parentVisualJudgment": {
+    "all48DecodedFramesInspected": true,
+    "sheets": "Corrected200x225 preserves400x450 aspect; initial stretched sheets rejected before judgment.",
+    "finding": "Source silhouette/head/clothes preserved through full front/profile/rear/three-quarter orbit. No obvious new hood normal defect visible at400x450,4samples. The8index-slot correction is local, not an overall appearance improvement.",
+    "remaining": "Glove fingers remain thin; broader anatomy/neck/arm/hip motion unresolved. Face resolution insufficient to judge target7/8. No basic pose or contact pass."
+  },
+  "matchedComparisonsPlayedToEnd": true
+}
