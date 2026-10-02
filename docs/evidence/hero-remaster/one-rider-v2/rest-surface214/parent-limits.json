@@ -1,0 +1,8 @@
+{
+  "status": "PARENT_LIMITED_NATIVE_BVH_SCREEN_NOT_FULL_COLLISION_CLEARANCE",
+  "actualSource": "2ff3cfb0dd9ddff6b6cbb6695f2426961296409ececd730e123ef39babbd6b74",
+  "actualReportedPairs": 0,
+  "coverage": "Actual self-BVH controls detect nonadjacent/sharedvertex transverse crossing, miss sharededge and nonadjacent positivecoplanar overlap. It is not a complete AABB broadphase. Zero returnedpairs cannot clear coplanaroverlap or adjacentfolds.",
+  "sourceReportTerminologyCorrection": "No application-level adjacentexclusions does not imply full nativeBVH coverage. Coplanar count0 is zero returnedcandidates only, not classifiedglobalclearance.",
+  "limits": "No repair/anatomy/pose/characterpass"
+}

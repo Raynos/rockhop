@@ -221,6 +221,8 @@ Round210: literal1alias/2degenerate cleanup,14pins/sourceancestry/GLB/topology v
 
 Round211: selectivehoodsafe neckcut/16pins/+nativeZfront verified; explicit sole/neckanchors, likedheadidentity. ONE25mm local cavity-aware necktrial admitted, noassembly/posepass. Newbodyarmspan risk underaudit. CosmeticsPAUSED/all3visual/basicposes/contact/mobileOPEN,nextship213.
 
+Round212: parent30pins/proposed310+275mmarmmath; raw/referencearmsshort, ONEliteral260mmprotectedtrial admitted beforebind. Newpalmdemand provisional/legsopen. CPUrestBVH0missescoplanarcontrols,nofullclearance. Neworiented19bone/FK/contact/Garageadapter required, cosmeticsPAUSED/all3checkpointsOPEN,ship213due.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

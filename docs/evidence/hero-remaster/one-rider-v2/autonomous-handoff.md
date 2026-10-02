@@ -2524,3 +2524,29 @@ under measured rig/proportion audit before binding; no blind oldarmdown pivots.
 
 Garment first, cosmetics paused. Actual neck clips, full basic poses, three visual
 checkpoints, physics/Garage/grip/sole/saddle/mobile remain open. Nextship213.
+
+## Measure new anatomy before binding; one arm trial — round212
+
+Parent verifies30 frozen source/recipe/evidence pins and recomputes310mm upper
+arm+275mm forearm targets. Native span1.393m against likedhead height1.823m is
+visibly short; target204 alsohas shortarms and cannot override natural anatomy.
+Actual profile201lean samples plus literalNEWpalms reduce provisional maximum
+wrist demand609mm→561mm; proposed585mm reach leaves24mm hypothesis margin.
+No livephysics/contact pass. ONE protected260mmmaximum longitudinal sleeve edit
+is admitted, preserving torso/head/hood/pants/shoes and rigid distal handshape,
+sourceindices and actualcuffcontinuity. Freeze ownership first; invalidprotected
+support/discontinuousfield muststop. Averagefoldstretch1.93/1.54 is not peak:
+quinticlocal derivatives≈2.76/2.22 andY-gate shear demand actualshape inspection.
+Legreach remains short/unqualified; actualsole witness required before separate
+leg/anatomical edit. No COMtarget or physicalpelvisheight changes.
+
+One neworiented19bone rig with freshinversebind/weights/contactadapter follows
+soundconstruction. Foot targetrotation, actualsurface cuff joins, perpendicular
+IKpoles, newhierarchicalFKfixture and freshGarageclips are explicit obligations;
+oldC19centres/trackscannotbe copied. All fullbody/face, basicposes, chair,bike,
+Garage, landing, actualsupport/grip/sole andmobile gates remain open.
+
+Parent read-only clean210 CPUrestBVH returns0pairs, but actualcontrols prove it
+MISSES positivecoplanar overlaps. Nativeoverlap is not completeAABBbroadphase;
+zero returnedcoplanarpairs cannot clearfolds. Keep thiscoverage limitation and
+originalinvalidnativequalification. Cosmetics paused. Ship213due next.

@@ -2719,3 +2719,18 @@ Limits: Unqualified finite body, no assembly/pose pass. Armspan proportion risk
 under explicit anatomy audit; no oldpivot copying or cosmetic polish. Ship213due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/head-join211/
 Ask: 248.
+
+## Round212 — admit one protected arm proportion trial before binding
+
+Finding: Newbody and204reference arms are short; natural reach needs explicit
+restanatomy correction. NativeBVHzero cannot clear coplanarcontrols.
+
+Validation: Parent30pins and310+275mm targetlengths; literalpalms/profile201lean
+samples give561mm provisionaldemand,585mm proposedreach. CPUselfBVH controls
+prove missingpositivecoplanarcoverage; exactsource/zerogeometry change retained.
+
+Limits: ONE260mmarmtrial admitted, foldpeak≈2.76/2.22 plusYshear require actual
+inspection. No livephysics/closedgrip, legs/bind/pose/art/mobile pass. Cosmetics
+paused; new19bone/FK/Garage/contactmapping mandatory. Ship213due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-rig-adapter212/
+Ask: 248.

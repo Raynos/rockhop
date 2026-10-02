@@ -1,0 +1,29 @@
+{
+  "status": "FULL_FINITE_REST_TRANSVERSE_AUDIT_NO_ANATOMY_ACCEPTANCE",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/finite-cleanup210/clean-native.glb",
+  "sourceSHA256": "2ff3cfb0dd9ddff6b6cbb6695f2426961296409ececd730e123ef39babbd6b74",
+  "vertices": 147254,
+  "faces": 294504,
+  "bvhCandidatePairs": 0,
+  "strictTransversePairs": 0,
+  "strictPairsBySharedPhysicalVertices": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+  },
+  "strictFirst20": [],
+  "coplanarUnclassifiedPairs": 0,
+  "coplanarFirst20": [],
+  "pairOutput": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rest-surface214/pairs.npz",
+  "pairOutputSHA256": "d8a40e233300c299fe8e277536f9abc1371170cbf5f68fc9a43ebb8293493d0e",
+  "seconds": 0.24359495798125863,
+  "method": "CPU Blender BVHTree broadphase, float64 six-edge strict interior Moller-Trumbore, determinant threshold relative to edge magnitudes; no adjacent-pair exclusions",
+  "controls": "Crossing/separated fixtures plus scale invariance 1e-8/1/1e8",
+  "limits": [
+    "Coplanar positive-area overlap remains UNCLASSIFIED, not cleared",
+    "Endpoint/tangent-only contact excluded; no thickness/depth/art/rig/motion pass",
+    "Finite diagnostic subset of invalid native generation; no native completion proof",
+    "Raw rest coordinates retained; no repair, sampling or GPU"
+  ]
+}
