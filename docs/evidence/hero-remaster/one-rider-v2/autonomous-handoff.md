@@ -16,6 +16,34 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Reject incomplete local shell; repair step acceptance once — round199
+
+One freeXYZ trial stopped after one accepted update. Final actual Float32 target
+error127.981mm and first sleeve/torso attachment1.192316m reject the registered
+2mm/high1.30–1.32 construction proxies. No GLB or moving candidate was exported.
+Parent verifies26 frozen files/15 input pins, source fields/morphs/incidence,
+46 independently recomputed normal groups and actual allfive144883faces.
+Final source-to-dump continuous step1 and endpoint clear; zero strict/coplanar
+crossings do not pass the still-low fused web, anatomy, weights or appearance.
+
+The next proposed native conservative cap0.1506872177 rechecks unsafe because
+one EE stencil reports impact0.9999961853 at its boundary. Parent independently
+reproduces that exact event; halfcap checks clear. The solver threw on false
+recheck instead of trying a smaller prefix.199 is incomplete implementation
+failure, NOT proof the small repair domain is infeasible. Preserve the dump,
+trace and numerical witness; no resume or retuning of199.
+
+Register ONE200 fresh-source trial changing only this acceptance rule: a false
+CCD recheck rejects that prefix and halves it within the same30halving budget;
+accept only continuous-clear plus finite/area/Armijo. Log every query. Exact
+source46/168domain, elastic/contact energies, coefficients, targets, source
+fields,200iteration/1200second/70GB bounds unchanged. No tolerance bypass.
+If this fifth local construction output fails, switch domain/retopology or
+construction mechanism autonomously; no additional46vertex lift tuning.
+Weights remain dormant and cosmetics PAUSED. All three visual checkpoints,
+continuous gray/PBR basic poses and actual gameplay contacts/mobile OPEN.
+Ordinary ship198 still current; next mandated ship201. Public assets unchanged.
+
 ## True-triangle CCD admitted; one local3D shell trial registered — round198
 
 IPC1.6.0 is installed in a separate ARM64 CPU environment with pinned NumPy/

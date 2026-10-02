@@ -2514,3 +2514,21 @@ sweep. Construction first, weights dormant, cosmetics paused; all3visual/
 basicposes/contact/mobile OPEN. Next ordinary ship201.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/ipc-admission197/
 Ask: 248.
+
+## Round199 — reject the incomplete collision-aware shell
+
+Finding: One update leaves target error127.981mm and attachment1.192316m;
+reject the final indexed dump. Stop arose from conservative cap/recheck
+boundary disagreement, not demonstrated domain infeasibility. Register ONE200
+fresh-source acceptance-rule fix, without changing objective/domain/parameters.
+
+Validation: Parent26files/15inputs/46source-normal groups verified; original
+fields/morphs/physical incidence literal. Full default144883faces/72527vertices
+source/final clear and continuous source-to-final step1. Parent EE witness
+reproduces conservativeTOI0.9999961853; halfprefix has no event. No GLB/render.
+
+Limits: Local construction failed outputs4. If200 fails, fifth local attempt
+forces different mechanism/domain/retopology. Construction/skin/art/motion/
+contact/mobile unresolved; cosmetics paused, public assets unchanged.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/local-shell199/
+Ask: 248.
