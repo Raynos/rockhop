@@ -74,7 +74,26 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round174
+## Current construction decision — round175
+
+Round175 inspects the construction owner's frozen artifacts read-only. At
+2026-10-02 02:38:22 UTC, variants11–16 all fail their stored resting intersection
+gates; variant17 changes the cubic sleeve path to a quarter-circle plus straight
+section, with its literal rest/UV/normal gate pending. Variant numbering is not
+a same-method failure count. The existing five-attempt strategy switch and
+fifteen-attempt last-resort policy still apply through the owner's method ledger.
+
+Parent verifies36 source/receipt hashes and the stored candidate identities.
+Tube10's local/mapped BIN is identical; its rejected standing silhouette remains
+rejected. No newer qualified export exists in this snapshot. These are receipt
+and lineage checks, not newly recomputed collisions or appearance acceptance.
+Keep sole construction ownership separate. Inspect the owner's next literal
+rest and matched standing qualification before a verified four-weight carrier
+export and short continuous Three gate. Five-influence NPZs are not silently
+truncated into stock-four assets. No routine human hold; cosmetics stay paused.
+See [construction snapshot](../evidence/hero-remaster/one-rider-v2/construction-receipt175/README.md).
+
+### Authored skin integration contract — round174
 
 Round174 fixes an integration defect without accepting the garment. The real
 ordinary and private constructors now honor numeric

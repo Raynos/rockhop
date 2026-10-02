@@ -2045,3 +2045,20 @@ Single D304input lacks preceding motion history; separately assigned archived
 affines isolate seam behavior. No moving art, anatomical ordinary pose adapter,
 nonlinear sleeve driver, rendered Garage/contact or physical mobile acceptance.
 No rejected asset promoted; construction owner retains ownership. Nextship177.
+
+## Round175 — no newer construction export qualifies yet
+
+Finding: construction remains the limiting layer. At the frozen02:38:22UTC
+snapshot, variants11–16 fail stored rest intersections;17 changes cubic path
+to quarter-circle+straight and awaits literal rest/UV/normal qualification.
+No newer qualified GLB exists. Do not duplicate the construction owner's work.
+
+Validation: parent independently checks36source/receipt hashes and all six
+failed candidateSHA links; local/mapped tube10BIN exact. Counts retained in
+construction-receipt175. Pure CPU receipt audit; no source/GPU changes.
+
+Limits: stored owner collision results, not parent collision recomputation or
+moving/standing appearance acceptance. Snapshot can be superseded; version
+numbers are not method-attempt counts. Tube10standing remains rejected.
+Five-influence NPZ needs explicit verified carrier/driver, never silent trimming.
+Construction rest/standing then exported short gate; cosmetics paused; ship177.
