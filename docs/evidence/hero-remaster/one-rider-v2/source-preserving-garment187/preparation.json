@@ -1,0 +1,532 @@
+{
+  "status": "ONE_UNMODIFIED_MAPPING_AND_MATCHED_BASELINE_VERIFIED",
+  "mapperCommand": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/candidate-handoff170/map_candidate.py",
+    "--source",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb",
+    "--reference",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb",
+    "--output-dir",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/hood-fixed185-187",
+    "--fixture",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json"
+  ],
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb": {
+      "sha256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+      "bytes": 16319060
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb": {
+      "sha256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "bytes": 16297888
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb": {
+      "sha256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+      "bytes": 19605020
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json": {
+      "sha256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+      "bytes": 20057272
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/candidate-handoff170/map_candidate.py": {
+      "sha256": "d90018cc9c94706f564b8440349267fd4b47a1e2bffacb7b087ed01af6f7fd90",
+      "bytes": 29236
+    },
+    "/Users/raynos/projects/games/rockhop/harness/hero-remaster/basic-pose-gate/capture.mts": {
+      "sha256": "9f47ee7e015cc03b8e85aa9570ee30f309d7f3170b89b6db35bf1f04c119b5c5",
+      "bytes": 4191
+    },
+    "/Users/raynos/projects/games/rockhop/harness/hero-remaster/basic-pose-gate/protocol.ts": {
+      "sha256": "031ec5faf7abb90d13749bcb0a40b64c857588fedbb551705ed0109e01eb1c9d",
+      "bytes": 4440
+    },
+    "/Users/raynos/projects/games/rockhop/harness/hero-remaster/basic-pose-gate/studio.ts": {
+      "sha256": "d14447b716a8f368308a3e2b90a1e827f5f25629aa687f1082186f0780452acc",
+      "bytes": 3567
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/hood-fixed185-187/mapping-report.json": {
+      "sha256": "2dd994d13051fc07648767dc2394565b1de9bf18aa047f2fd8799facd576b07f",
+      "bytes": 28918
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/hood-fixed185-187/rider.glb": {
+      "sha256": "4eb597a9ff926fb5ce30854272d8391347c2e220829486136b1509e02faa947c",
+      "bytes": 16322768
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment187/fixture-three-families.json": {
+      "sha256": "96bc65ea7bdad44f73fbf2202051eeea188d23a0d1ce449baa3bd46c6e3d9f1b",
+      "bytes": 2303952
+    }
+  },
+  "sourceBINExact": true,
+  "allGeometryAttributesMorphUVNormalWeightsExactBaseline": true,
+  "resolvedPBRSamplerImagesExactBaseline": true,
+  "actualArrays": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "POSITION",
+      "sha256": "75b54dc913bd142aea62f6ce5d1f072533dd71bf971e01b2969d4a42073428d4",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "NORMAL",
+      "sha256": "c1bee39d879a966d0bb8a39e571b09087ae7885a9568dfe496fb7d972752cdac",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "TEXCOORD_0",
+      "sha256": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "TEXCOORD_1",
+      "sha256": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "TEXCOORD_2",
+      "sha256": "ef6b79ef1b4ed649e7344ce3d681b95fa4dd99d3e3edb3875e15c412d9f1d03c",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "COLOR_0",
+      "sha256": "eba5be2e1dbe598736dc48a934369baa33cbfadfd6a119fc0608f95cc7c87361",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "COLOR_1",
+      "sha256": "f3d92413f6ab235d1a80f439cc2169f888e3d3e70d9520ab47aa9059551b33a2",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "COLOR_2",
+      "sha256": "cdccdb4f547a9c8865c76a920a067c407393aacbcff7683be3cf7cc0698a1546",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "JOINTS_0",
+      "sha256": "941356441023fba9dab38f9affdc2413fc91409025345751dde9c1166f300476",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "field": "WEIGHTS_0",
+      "sha256": "cbab5b193c91be5e18d011cccea70de14e0ff2ab44db87a0266a1aec249de4c6",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "target": 0,
+      "field": "POSITION",
+      "sha256": "d46f2b4704aa76e979feef9319dc6109038ff1fb3604bbcf800ee54bd0a9ebad",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "target": 0,
+      "field": "NORMAL",
+      "sha256": "0d44aeada4fa7d01602783479a187bb95126a37c77b97cc3076f158e9c884dc4",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "target": 1,
+      "field": "POSITION",
+      "sha256": "d46f2b4704aa76e979feef9319dc6109038ff1fb3604bbcf800ee54bd0a9ebad",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "target": 1,
+      "field": "NORMAL",
+      "sha256": "0d44aeada4fa7d01602783479a187bb95126a37c77b97cc3076f158e9c884dc4",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "POSITION",
+      "sha256": "7fac8c021bb940f380d158632511e074e28c6a4c508e3ebce0c900c6e756ac75",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "NORMAL",
+      "sha256": "6dadeec227ac3d8b9b602d5e1dc60c3155d12b2c67b9ab942dd161563cfc1b93",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "TEXCOORD_0",
+      "sha256": "77402229ff462a4a3bb9f782901d21f9d1905a19804ac2c417d5be194b022f90",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "TEXCOORD_1",
+      "sha256": "1b58a4c6097cea990822c61d2750457ed6a1cc6af57f2236f070dfc5d8aa1b91",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "TEXCOORD_2",
+      "sha256": "948e95d3f978078718b69a096da1b4287be798acf68bee60cc506ebf7f1d6f4b",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "COLOR_0",
+      "sha256": "7da947d24983d8b4328ee51e48ec306b6e4d41638da6a374b2a9c9ea10393a16",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "COLOR_1",
+      "sha256": "5385850ea5763a8f60b7b03266e0a5d8bfd4ed1cd8b8dc831a7bed9e8df009b1",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "COLOR_2",
+      "sha256": "7e2200c10f523ae75b61b8843edb61e81b5aca87f45c82872fa2990c47f60deb",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "JOINTS_0",
+      "sha256": "a96dd640198ca07fb2aa8531b04ba398a9b35d3d79d73f83fe8debe6213e7199",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "field": "WEIGHTS_0",
+      "sha256": "991d98da84c941788616c5620a63cf031265e10ee0672bf7962daaf53232e2cb",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "target": 0,
+      "field": "POSITION",
+      "sha256": "e7f1b6c7c9aecbc8ff7f6c1449187a57a2f01f51700ce9eb31b0181cfa494ea1",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "target": 0,
+      "field": "NORMAL",
+      "sha256": "e9cdaa151201bdafd8361b761d9bdf28eb28f98e3ebabeb8ce1f4526d05e1a5b",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "target": 1,
+      "field": "POSITION",
+      "sha256": "8998bf58127dec22e914d676b8d3fe269acd01561e561e7996e2378da40b6fec",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "target": 1,
+      "field": "NORMAL",
+      "sha256": "ec079ddf9014c71235df418d1e5af3f8b54c3aea026525b5fdd1d5e069527d5f",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "POSITION",
+      "sha256": "a75960a2f27a17da054e0aae6eafe9c612d1bc8549da711fd5516dfbb1ee05f6",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "NORMAL",
+      "sha256": "a263baa8cf7a3c453fa67a1eb02320e503f0e0bb8337521f70d518ca6969c11e",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "TEXCOORD_0",
+      "sha256": "a343300d194f41928c86b26c8b5d5dd693ac6ffee520767c538c40bc94218c0f",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "TEXCOORD_1",
+      "sha256": "a343300d194f41928c86b26c8b5d5dd693ac6ffee520767c538c40bc94218c0f",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "TEXCOORD_2",
+      "sha256": "7a5486124a243b4490c5d3124a87ed285401bd3aa777a4ecc4cd3adad5aeade9",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "COLOR_0",
+      "sha256": "72e30c78debf786137cf0a6e68bc6d9b52f0bd5726b6c8e7a039363e339642bd",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "COLOR_1",
+      "sha256": "4814c82ec6cab677b67916f73f88a15e09c48deac0a3c970efe7194aae55582b",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "COLOR_2",
+      "sha256": "525120c94274b1e81cf81779076d1532508d243a2c7fc765c42d49ab8f5489b8",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "JOINTS_0",
+      "sha256": "187e0262126356e18e360e8e8ebb11c9646b1d47c58e7230e93aab4e434583b9",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "field": "WEIGHTS_0",
+      "sha256": "a2cb0d4ef5bb53f0cab92dcafcb1f587a03a9eeb8559632e44ad0102208eec44",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "target": 0,
+      "field": "POSITION",
+      "sha256": "99b952f788808dd2ad7aca68f1fa14d31ea9480abd0bc47e3d480092baef9033",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "target": 0,
+      "field": "NORMAL",
+      "sha256": "e894158404b8316c8ceccf5356052b2fd4d8c387e847f99588848f7815b80471",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "target": 1,
+      "field": "POSITION",
+      "sha256": "99b952f788808dd2ad7aca68f1fa14d31ea9480abd0bc47e3d480092baef9033",
+      "exact": true
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "target": 1,
+      "field": "NORMAL",
+      "sha256": "e894158404b8316c8ceccf5356052b2fd4d8c387e847f99588848f7815b80471",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "field": "POSITION",
+      "sha256": "a4aac05d643625bcda2f4171cf4c9b1175412a106ebacbc05ffb2fbe214caba2",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "field": "NORMAL",
+      "sha256": "a9b77c4c9fb0c7f872562b34499e1399f94e8f7fbd2e17fbfe450761bab9eb40",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "field": "TEXCOORD_0",
+      "sha256": "76d3d414f26f52b86ee230248f9d4a76b7cc4617d106366a635ce94c95fa8ff3",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "field": "JOINTS_0",
+      "sha256": "e5d200f6fd7ad29bd1a9339a9e88824d1e898f66165af5bf417baa48dc897df0",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "field": "WEIGHTS_0",
+      "sha256": "0545db38c26ceeb00a6c3a73e3c73e9d899896026c0b3e38d98ba9629a3d7963",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "field": "POSITION",
+      "sha256": "aabc8435cfff7e1bf7fda2364c563c22192c3efe55f3eeb0178cd0714d52fa04",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "field": "NORMAL",
+      "sha256": "9fbf015504484d0203d6692be94854fccab0d5818d71030ea067e8867fc555ce",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "field": "TEXCOORD_0",
+      "sha256": "ec9e4f068ec9f28b5672135f323a398f6931a73607d2f1df9d89199fda560939",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "field": "JOINTS_0",
+      "sha256": "c62076882b3801917bc7b7a06c564c9916c58d80776d00c84038fb31b47bb753",
+      "exact": true
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "field": "WEIGHTS_0",
+      "sha256": "6fe1f706d87efd0e44302844ad6f0f96a624800eeffa383afbb5f76d4ad05c1b",
+      "exact": true
+    }
+  ],
+  "indexDifferences": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "changedFaceSlots": []
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "changedFaceSlots": []
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "changedFaceSlots": [
+        28,
+        29,
+        3813,
+        3829,
+        3847,
+        3848,
+        4105,
+        4106
+      ]
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "changedFaceSlots": []
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "changedFaceSlots": []
+    }
+  ],
+  "baselineJointRestMaximumDifference": 0.0,
+  "inverseBindsExact": true,
+  "adapterMetadataFieldsExact": [
+    "rockhopRiderContactAdapter",
+    "rockhopFreshC19RestAxes",
+    "rockhopRiderSkinConditioned",
+    "privateFreshC19AdapterUnaccepted"
+  ],
+  "socketWorldComparison": [
+    {
+      "name": "gripSocket.L",
+      "maxRestWorldDifference": 0.0,
+      "exactLocalJSON": true
+    },
+    {
+      "name": "soleSocket.L",
+      "maxRestWorldDifference": 0.0,
+      "exactLocalJSON": true
+    },
+    {
+      "name": "gripSocket.R",
+      "maxRestWorldDifference": 0.0,
+      "exactLocalJSON": true
+    },
+    {
+      "name": "soleSocket.R",
+      "maxRestWorldDifference": 0.0,
+      "exactLocalJSON": true
+    }
+  ],
+  "declaredMetadataDifferences": [
+    "candidateHandoffUnaccepted:true on candidate rig container",
+    "JSON source name/metadata provenance may differ; four adapter fields exact",
+    "Socket local matrix JSON may differ by floating-point reconstruction; world error<1e-12"
+  ],
+  "fixtureSubset": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment187/fixture-three-families.json",
+  "families": [
+    "overhead.L",
+    "forward",
+    "sit"
+  ],
+  "framesPerFamily": 193,
+  "framesPerAsset": 579,
+  "fps": 48,
+  "fixtureRowsExactlyCopied": true,
+  "sourceClipsPreservedExact185": true,
+  "sourceBaselineClipsUsed": false,
+  "referenceUsedForGeometryOrWeights": false,
+  "recipeSHA256": "dbda41293681d8f2da827845862b3593481f5c13586af8380e621b4d7ef23ba5",
+  "limits": [
+    "Matched authored fixtures via stockThree; no native source animation playback or Garage contact acceptance",
+    "Mapping metadata is compatibility; conditioning flag is not a new weight improvement",
+    "V7 compression/shape/weights not reused"
+  ]
+}

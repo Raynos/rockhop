@@ -74,6 +74,38 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Exported motion rejects the unchanged body field — round187
+
+The explicit 19-bone handoff works without changing source geometry, weights,
+rest binding, textures or physics. Parent verifies 1,187 frozen files, all five
+primitive fields/morphs/PBR and inverse binds against source34. Only eight hood
+face slots differ. All 579 captured joint-matrix histories are byte-identical
+between source and repaired rider; the exact overhead-left, forward-reaching
+and sitting fixture rows were copied unchanged. Both actual loaded GLB hashes
+are pinned. Six full 193-frame films and three matched before/after clips played
+silently to completion; no browser errors. No task3 V5/V7 corrective transplant.
+
+The basic-pose gate FAILS. Overhead/reaching pull long sheets and triangular
+webs between forearms and the side torso. Sitting still compresses/folds the
+hips and upper legs. Ordered moving samples agree with the unchanged baseline.
+The hood repair remains a bounded rest improvement, not a whole-character fix.
+This subset cannot accept the other 25 families, anatomy, continuous collisions,
+the requested standing-to-chair animation, Garage/gameplay or visible contacts.
+
+Task3's independent exact rest QA is pinned read-only: 21,846 hood/body/glove
+pairs plus 6,212 adjacent pairs have zero transverse/coplanar-area crossings;
+all 11 original witnesses become point/shared-edge contacts. This scoped rest
+result does not remove the moving failures or accept head collisions/support.
+
+Next isolate the literal inner-sleeve weight-gradient witness in actual Three.js,
+then choose one bounded local repair based on the earliest failed layer. Natural
+underarm construction remains unaccepted; do not equate clean topology with sound
+cloth or disguise construction failure with weight-only smoothing. Preserve the
+liked head/identity and exact existing rig/physics unless anatomical evidence
+justifies an explicit new adapter. Cosmetics stay paused. All three visual
+checkpoints, full-body/face7 target8, complete28-family gate, actual Garage,
+maximum lean/landing/recovery/saddle/grip/sole/mobile remain open. Ship189 next.
+
 ## Matched neutral source review and gameplay regression — round186
 
 The repaired source preserves the liked standing silhouette and head through

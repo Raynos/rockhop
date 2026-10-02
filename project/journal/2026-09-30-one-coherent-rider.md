@@ -2277,3 +2277,22 @@ target7/8, continuous pose, new-rider, Garage/contact or mobile acceptance.
 Cosmetics paused; next explicit19bone mapping/short overhead/reach/sit.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment186/
 Ask: 248. Next ordinary ship189.
+
+## Round187 — exported source motion exposes unchanged structural failures
+
+Finding: The handoff preserves rig behavior, but overhead/reach leave long
+underarm sheets and sitting still folds hips/upper legs. Reject basic poses.
+
+Validation: Parent verifies1,187 frozen hashes, all five primitive fields,
+PBR/morphs/binds and579 exact matched joint histories. Six source films
+and three complete matched193-frame/48fps films played silently to end.
+Actual loaded hashes pinned; no browser errors or V5/V7 transplant. External
+exact rest QA receipt/eight evidence hashes/candidate pinned read-only.
+
+Limits: Ordered samples locate failure; no continuous pose pass, other25
+families, head/neck/contact/Garage/physics/mobile acceptance. Source geometry
+and weights remain unchanged except8hoodindex slots. Local hood success
+does not fix underarms/hips. Next actualThree witness and bounded local
+construction/ownership diagnosis; cosmetics paused, ship189 next.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment187/
+Ask: 248.

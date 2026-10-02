@@ -1,6 +1,6 @@
 {
   "familyId": "source-preserving-whole-garment01",
-  "status": "ONE_LOCAL_HOOD_OUTPUT_LITERAL_PASS_APPEARANCE_AND_POSE_PENDING",
+  "status": "LOCAL_HOOD_REST_PASS_BROADER_SOURCE_POSES_FAIL",
   "predecessorFamilies": [
     {
       "family": "retained-v7-cap-rmf-tube-natural-upper-garment",
@@ -63,5 +63,12 @@
     }
   ],
   "policy": "Five failures of one repair approach switches method;15family failures including setup/evidence invokes architecture fallback. Diagnostic metadata failure counted transparently, not a geometric trial. Older counts retained. No routine human checkpoints.",
-  "contract": "operator-contract.json"
+  "contract": "operator-contract.json",
+  "movingReview187": {
+    "newGeometryAttempts": 0,
+    "mappedOutput": "JSON-only explicit19bone metadata handoff",
+    "executionFailures": 0,
+    "sourceBroaderBasicPoseAcceptance": "FAIL_OVERHEAD_REACH_SIT",
+    "limits": "Not three failed hood fixes. Sourcebody/weights unmodified; targetedhood repair never claimed to solve them."
+  }
 }

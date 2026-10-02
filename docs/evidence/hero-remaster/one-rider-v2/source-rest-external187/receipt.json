@@ -1,0 +1,94 @@
+{
+  "status": "PASS_BOUNDED_REST_GEOMETRY_AND_SOURCE_PRESERVATION",
+  "UTC": "2026-10-02T06:02:20.409821+00:00",
+  "integrationCandidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb",
+  "candidateSHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "changedScope": {
+    "mesh": 0,
+    "primitive": 2,
+    "hoodFaceSlots": [
+      28,
+      29,
+      3813,
+      3829,
+      3847,
+      3848,
+      4105,
+      4106
+    ],
+    "fourDiagonalFlipsPreserveExactFourCornersAndOrientedPerimeters": true
+  },
+  "protectedSource": {
+    "originalBINPrefixBytes": 16201016,
+    "allOriginalBytesExact": true,
+    "positionsNormalsUVWeightsJointsMorphsImagesMaterialsAndRigExact": true,
+    "jointCount": 19,
+    "onlyJSONChanges": "hood index reference, appended index accessor/view, buffer length"
+  },
+  "literalRestTopology": {
+    "triangles": 44969,
+    "referencedPhysicalVertices": 22600,
+    "degenerateFaces": 0,
+    "nonmanifoldEdges": 0,
+    "windingConflicts": 0,
+    "duplicateFaces": 0,
+    "sourceBoundaryEdgesExact": 237
+  },
+  "literalRestIntersections": {
+    "freshHoodBodyGloveZeroOneSharedPairs": 21846,
+    "adjacentSharedEdgePairs": 6212,
+    "transverseInteriorCrossings": 0,
+    "positiveAreaCoplanarOverlap": 0,
+    "original11SourceWitnessesCrossings": 11,
+    "sameCandidateWitnessesUnfilteredCrossings": 0,
+    "sameCandidateWitnessContacts": {
+      "point": 8,
+      "sharedEdge": 3
+    },
+    "original3CoplanarWitnesses": "exact point contact, overlap area exactly zero",
+    "method": "independent exact dyadic integer plane signs and rational intervals/polygon clipping",
+    "broaderThanParentBy44Pairs": "38 plane separated, 6 disjoint plane-cut intervals",
+    "unclassifiedNumericCases": 0
+  },
+  "evidence": [
+    {
+      "file": "identity-and-scope.json",
+      "sha256": "16bd82f7a61a2747e99ee03bf6815607bbc95070af8f646824c6aa2c9371be70"
+    },
+    {
+      "file": "literal-topology.json",
+      "sha256": "7a71a5e4325124989394828152695dba5a593a07d9a6fcc5bf5baf2a6c196a06"
+    },
+    {
+      "file": "four-flip-scope.json",
+      "sha256": "306d691cda43d17619660b2e7a0887497d5235ce49b03d992e2f7ee02f490216"
+    },
+    {
+      "file": "independent-rest.json",
+      "sha256": "fb7a988a2385dcb0aae3190e48b2bcfd2038204c4315ed91cd4001272dacad1c"
+    },
+    {
+      "file": "audit_identity.py",
+      "sha256": "22170677df0297e32ba5e5305dcbd3a9fc5cd9f39fe2711e47244327d05cf983"
+    },
+    {
+      "file": "audit_topology.py",
+      "sha256": "0e162fb71dbe619bcbafe21e017ee87a72d0fec8fc35fac5c5c3fbcea0ae3c43"
+    },
+    {
+      "file": "check_rest.py",
+      "sha256": "3b16db323b6d00e3152a4c766989ae1041451a1ecf9ae898297e8acb3ca08cfe"
+    },
+    {
+      "file": "refine_rest.py",
+      "sha256": "4d68d1631322c34b6b6b0af1ed7ef1cff4d8c83834f4f5a6f4efd6a8d9c4295a"
+    }
+  ],
+  "remainingGates": [
+    "Matched appearance and continuous moving fixture owned by integration owner",
+    "Head collision, body/glove pairs without a hood face, cloth thickness and riding support outside this rest gate"
+  ],
+  "promotionAuthorized": false,
+  "limits": "Changed diagonals alter attribute interpolation. Rest pass is no appearance, motion or support acceptance. No original edits, competing repairs, renders or model jobs."
+}

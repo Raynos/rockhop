@@ -1,0 +1,66 @@
+{
+  "status": "FAIL_BASIC_POSES_UNDERARM_SHEETS_AND_SEATED_HIPS",
+  "frozenFilesVerified": 1187,
+  "sourceSHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "candidateSHA256": "4eb597a9ff926fb5ce30854272d8391347c2e220829486136b1509e02faa947c",
+  "baselineSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "sourceBINAndNonNodeJSONExact": true,
+  "allFivePrimitiveAttributesMorphsPBRAnd19BindsExactBaseline": true,
+  "changedIndices": [
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "slots": [
+        28,
+        29,
+        3813,
+        3829,
+        3847,
+        3848,
+        4105,
+        4106
+      ]
+    }
+  ],
+  "matched579WorldMatricesByteEqual": true,
+  "exact579FixtureRowsCopied": true,
+  "actualLoadedHashesVerified": true,
+  "sixSourceFilmsPlayedToEnd": true,
+  "comparisons": [
+    {
+      "family": "overhead.L",
+      "comparison": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment187/matched-before-after-overhead.L.mp4",
+      "sha256": "1add0e9fe68c357e8079d808d475b019284bc88d18eb3cb8433ca2b2f091186f",
+      "frames": 193,
+      "fps": 48,
+      "beforeLeftAfterRight": true
+    },
+    {
+      "family": "forward",
+      "comparison": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment187/matched-before-after-forward.mp4",
+      "sha256": "505a62c20dc0909c3a46eb75ae902fe10c2583ec4e84366a6ed562b3b7c27dd4",
+      "frames": 193,
+      "fps": 48,
+      "beforeLeftAfterRight": true
+    },
+    {
+      "family": "sit",
+      "comparison": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment187/matched-before-after-sit.mp4",
+      "sha256": "1a67d5a1fe8df6823e467ca389da911a20de10d502284909095ce4c436540362",
+      "frames": 193,
+      "fps": 48,
+      "beforeLeftAfterRight": true
+    }
+  ],
+  "diagnosticSheets": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment187/parent-review",
+  "limits": "Authored finite stress only. No actual Garage/physics/contact/mobile or continuous-time collision pass. Nine-frame sheets locate failures; they cannot pass anatomy or motion.",
+  "matchedComparisonMoviesPlayedToEnd": 3,
+  "parentVisualJudgment": {
+    "overhead.L": "Long hanging cloth sheet at inner arm/armpit and lateral torso. Fail.",
+    "forward": "Bilateral triangular underarm webs pulled from side torso toward forearms. Fail.",
+    "sit": "Hip/upper-leg volume compresses and folds unnaturally. Fail. This authored stress is not the requested accepted standing-to-chair animation or bike support.",
+    "diagnosticReview": "All six full source movies and three complete matched clips played to end; three six-view endpoint frames and three nine-frame ordered transition sheets inspected. This rejects visible failures, does not award a continuous gate pass.",
+    "hoodLocalRepair": "Rest correction preserved; eight hood index changes cannot repair unchanged body/weight failures.",
+    "remaining": "Head/neck motion, broader28families, actualGarage/physicsmaxlean/landing/saddlegripsole/mobile remain open; no7/8 score."
+  }
+}
