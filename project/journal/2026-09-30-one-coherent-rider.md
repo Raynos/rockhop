@@ -2633,3 +2633,18 @@ Limits: MPS/native-output route unexecuted. One registered seed42 shape trial;
 no texture, cleanup, reduction, rig or player promotion. Cosmetics paused.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-readiness203/
 Ask: 248.
+
+## Round206 — preserve the failed shape worker before retry
+
+Finding: Actual decoder completed but combined finite/index assertion preceded
+raw save, losing diagnostic geometry. Freeze and correct preservation ordering.
+
+Validation: Actual2.1 MPS under canonical lock53.423s/peak63.298GB, exit1,
+no resource stop. Source/settings/reference pinned; no retained raw or GLB.
+Nine historical/team pins verified before launch after parent205 key omission.
+
+Limits: No anatomical or generator-cause verdict without arrays. One model
+workload, zero candidates; ONE same-settings diagnostic rerun next. No texture,
+rig, player or moving acceptance. Cosmetics paused; ordinaryship207due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-source206/
+Ask: 248.

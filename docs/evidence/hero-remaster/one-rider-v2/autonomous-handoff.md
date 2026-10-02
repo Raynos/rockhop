@@ -16,6 +16,27 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## First source trial exposes preservation-order failure — round206
+
+Actual2.1 sampling/extraction ran under the shared lock, but the worker failed its
+combined finite/index assertion BEFORE saving decoded arrays. No geometry was
+retained, so no anatomical, construction or generator-fault claim is possible.
+Freeze job53.423s/peak63.298GB, exit1 with no memory/time stop. One actual workload,
+zero inspectable candidates. No texture/cleanup/reduction or player changes.
+
+Correct only raw-preservation/diagnostics ordering in a frozen sibling worker:
+save untouched decoder arrays BEFORE validation, record exact nonfinite rows and
+invalid indices, refuse invalid display export. ONE same-settings diagnostic
+rerun uses same204reference/seed42/30steps/octree380/chunks200000/guidance5/source.
+Do not retune sampling or repeat blind retries. Then judge retained geometry;
+invalid referenced surfaces require an explicit different approach, not hiding
+loss through processing. Cosmetic polish remains paused; all moving gates OPEN.
+
+Parent205 checked51 computational+5 owned pins but looked for a wrong optional
+historical key. The9 actual inputPins were independently verified before206
+launch in parent-input-extension206.json; original frozen files unchanged.
+Ordinary ship204 current; mandatory next207.
+
 ## Actual shape-only pipeline admitted for one trial — round205
 
 Parent reviewed the actual2.1 local source API, the proposed worker/controller,
