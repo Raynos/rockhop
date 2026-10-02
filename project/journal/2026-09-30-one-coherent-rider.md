@@ -2082,3 +2082,26 @@ Limits: review delivery, no model repair, all-frame subjective acceptance,
 supported sitting, realGarage/contact, human access, physicaliOS or mobile
 performance pass. Nextconstruction owner qualification; cosmetics paused.
 Nextmandatoryship177. No rejected character promoted.
+
+## Round177 — invoke last-resort safety for the exhausted tube/cap family
+
+Finding: conservative15distinct failed outputs meet the retirement threshold.
+Freeze retained-V7 cap/transported-RMF tube family; no further parent repair or
+integration trials. Select fundamentally new continuous upper hoodie shell,
+drafted raglan/gusset or regular sculpt/quad surface over sound anatomy. Keep
+liked head/hood/cuffs/detail/physics; old damaged shoulder roots are not fixed.
+
+Validation: parent58source/receipt hashes and15distinct source identities;
+11rest,3explicit standing silhouette,1parent173motion rejection. No duplicated
+test/setup/texture/lowerbody/pending derivative counts. New18rest0plusnormal/
+UV19–21 retain architecture, not clean fallback. Fresh ordinary ship177passes
+both tiers exact40.083333333333336s/float64abaaaaaaaa0a4440/hash368f1ca5bd9e830a,
+crash103ticks/restart2/2ms/no errors. Canonical lock,12.23s/33.222GBanonymous.
+
+Limits: receipt/source consistency and parent family classification, not
+independent collision/standing replay. Conservative lower bound, exact
+historical approach counts missing; no fabricated five-switch compliance.
+Task3paths untouched/no messages/interrupts. New explicit family has0trials,
+linked predecessor count>=15. Three isolated CPU approaches may prototype;
+parent selects one. Cosmetics paused, no appearance/pose/contact/mobile pass.
+Review8live with failed matched motion. Goal active; nextmandatoryship180.

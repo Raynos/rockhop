@@ -16,7 +16,50 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round176, 2026-10-01
+## Current evidence — round177, 2026-10-01
+
+Round177 invokes the fifteen-failure last-resort safeguard. Parent verifies
+58 source/receipt hashes and reconstructs15 distinct failed frozen outputs of
+the retained-V7 torso-cap/transported-RMF-tube family:11 rest,3 explicit standing
+silhouette and1 matched moving rejection. Each source/output counts once;
+unrelated setup/texture/lower-body families and pending derivatives are excluded.
+This is a conservative floor, not the exact chronological fifteenth event.
+Original per-approach counters are missing; no five-switch compliance is invented.
+
+**Retire `retained-v7-cap-rmf-tube-natural-upper-garment` from this parent's repair
+and integration trials.** Preserve every failed source and last verified player
+rider. Pending18 rest-zero and19–21 normal/UV derivatives retain the same source
+architecture and cannot reset its count or qualify a new fallback. The independent
+construction owner's paths remain read-only; no other chat is interrupted or
+messaged. This supersedes the earlier next-action instruction to test its next
+tube/cap derivative. No routine human approval or recommendation question.
+
+Select explicit new family `clean-drafted-upper-hoodie-shell01`: one continuous
+torso/shoulder/proximal-sleeve shell over sound anatomy, with deliberate raglan
+panels/gusset or regular sculpted/retopologized flow. Damaged shoulder/underarm
+geometry, old concave caps and separately swept source sleeve strips are not
+immutable donor constraints. Preserve liked head, hood silhouette, viable cuff
+boundaries, lower-body/hand identity and detail through declared joins/baking.
+Use explicit anatomy/rig mapping and new weights after construction; residual
+correctives must work in Three.js. Physics/lean/COM/IK/contact behavior remains.
+
+Track predecessor count>=15 and every new setup/geometry/art/motion attempt
+before experiments. Up to three isolated CPU Blender specialists may compare
+materially different clean construction methods in separate owned namespaces;
+parent alone selects one viable direction before substantial rig/refinement.
+Neutral gray/PBR front/side/back and a played turntable diagnose construction;
+then the same short continuous overhead-left/sit gate, full basic-pose/neck gate,
+actual Garage/riding/landing and saddle/grip/sole/mobile checks. No static-only
+quality pass or cosmetic work. Existing7/8body and face thresholds still apply.
+
+Mandatoryship177 passes a fresh ordinary build with no model replacement/private
+overlay: both tiers exact finish/hash, crash103ticks, restart2/2ms, zero errors.
+12.23s/33.222GBanonymous under canonical lock/bounds. Nextmandatoryship180.
+Review8 remains live with the rejected matched clip; no new character accepted.
+See [failure accounting](construction-bounds177/README.md)
+and [new construction specification](clean-upper-shell01/SPEC.md).
+
+### Published review — round176
 
 Round176 publishes the already captured173matched sleeve motion at
 [review site](https://rockhop-rider-review.raynos.chatgpt.site/#sleeve-rebuild173).
