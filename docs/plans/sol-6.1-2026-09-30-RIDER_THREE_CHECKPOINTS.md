@@ -74,6 +74,28 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Current construction decision — round169
+
+Parent has inspected task3's frozen construction and corrected referenced-vertex
+diagnostics before duplicating any repair. Same geometry passes tested neutral
+crossings, but both fresh added-fabric weight sets fail actual source34frame304:
+1,556crossings,388collapsed new-fabric faces,9.868×stretch. The posed shoulder
+join is visibly open/folded. Fifteen source/receipt hashes pinned in
+[construction review](../evidence/hero-remaster/one-rider-v2/construction-review169/README.md).
+This is a rejected diagnostic, not acceptance based on standing screenshots.
+
+Stop static added-fabric weight tuning of this failed annulus as a finished
+solution. Task3 keeps sole ownership of the construction/material-response pivot;
+parent integrates and judges. Inspect its next actual chest/shoulder/armhole and
+hoodie/pants construction, then local rig ownership and residual correctives.
+Do not reset intact central-core weights, child axes or liked head. Use the
+same continuous exported Three fixture and168authoritative riding inputs.
+No extra generator run or cosmetic patch is justified by this garment failure.
+
+All three visual checkpoints remain open. Actual Garage, lean, landing/recovery,
+saddle/palm/sole contact and physical mobile gates follow convincing basic motion.
+Ship168functional control passed; next mandatory171. No player asset promotion.
+
 ## Scope and invariants
 
 Improve the rider only. Keep existing bike geometry/materials/contact points,

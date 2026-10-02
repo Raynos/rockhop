@@ -16,7 +16,15 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round168, 2026-10-01
+## Current evidence — round169, 2026-10-01
+
+- Round169 read-only task3 construction review:15hashes/samegeometry retained.
+  Fresh fabric weights both fail actual304with1,556crossings,388collapsed new
+  faces,9.868×stretch despite neutral0crossings. Corrected referenced-vertex
+  diagnostic shows open/folded shoulder join; no moving pass or integration.
+  Retire static annulus tuning; task3 construction/material-response pivot
+  remains sole-owned. Parent owns continuous Three/integration judgment.
+  Preserve liked head/core/child axes; cosmetics paused, ship171next.
 
 - Round168 explicit-prefix extraction resolves finite maximum-forward/landing
   surfaces: all480bones and four original full-vertex dumps reproduced.

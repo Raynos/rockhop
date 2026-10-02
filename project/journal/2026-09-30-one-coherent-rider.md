@@ -1912,3 +1912,21 @@ and external bundle resolution failures retained as setup errors. No source,
 weights or physics changed. Task3 construction remains separate; its new
 rest-clear armhole still fails posed folds. Cosmetic work remains paused;
 construction pivot next and mandatoryship171.
+
+## Round169 — reject rest-only armhole success before integration
+
+Finding: task3's reconstructed armhole and two fresh added-fabric weight sets
+do not produce a convincing moving garment. Do not duplicate construction
+or integrate a render-only source because its neutral crossings are zero.
+
+Validation: read-only15source/receipt hashes, frozen geometry shared by both
+weight sets. Actual304each1,556crossings,388collapsed new faces,9.868×stretch;
+12finite poses each. Corrected referenced-vertex gray diagnostics inspected,
+posed shoulder open/folded. Existing actual/continuous films remain rejected.
+No GPU, new model/repair, physics/bone or foreign-owner file change.
+
+Limits: finite test receipt review is not an independent exhaustive intersection
+search or continuous appearance/contact/device gate. Keep the liked head and
+intact central core/explicit C19child axes. Task3 owns construction/material
+response pivot; parent Three gate/acceptance. Stop same static annulus tuning;
+cosmetics paused, all three checkpoints open, next mandatoryship171.
