@@ -16,7 +16,16 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round165, 2026-10-01
+## Current evidence — round166, 2026-10-01
+
+- Round166 actual saddle/hip-region triangle dumps show54crossing pairs at
+  frame186/tick1870,minimum bike-frameYgap−34.772mm,identical34/V5.
+  Parent53hashes/8minimum witnesses/interior zero-gap segment verified.
+  Matched25frame174–198clips retain actual timing; partial moving review
+  still rejects hips/support. Positive gaps may be valid stance clearance.
+  Maxback lean426measured; maxforward35/landing445–447 surfaces unmeasured
+  pending explicit outer prefix/direct dump. No asset/physics repair.
+  Rig foundation audit in flight; task3 construction remains separate.
 
 - Round165 retained34ship both tiers exactfinish/hash/float64bytes,103crash
   ticks,1/2ms restart,0errors under shared lock. Next168. Functional only,

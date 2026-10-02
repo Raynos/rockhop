@@ -1691,3 +1691,23 @@ vertical triangle projection gap. It is not a new valid weighted construction
 candidate or full actual gameplay contact measurement. New weight solver waits
 for a rest-clear mesh; current shape436strict crossings rejected. Task3 owns
 construction and parent owns actual replay surface audit, currently in flight.
+
+## Actual rider/saddle surface failure — round166
+
+Literal actual surface dumps, not sockets: source34 and V5 give identical four
+finite hip-region measurements. At frame186/tick1870,54rider/saddle triangle
+crossing pairs remain; minimum projected bike-frameYgap−34.772mm. Independent
+crossing witness rider18098/seat284 has an interior zero-gap segment. Parent
+checks53input hashes,8gap witnesses and both crossing endpoints below1e-12m.
+25consecutive actual174–198frame excerpts preserve matched side/rear gray/PBR;
+partial moving review still rejects hip/saddle silhouette. No visual gate pass.
+
+Other positive gaps55.241/8.121/10.859mm include airborne/standing states and
+are not automatically support defects. ROI can include clothing/upper thighs;
+no butt-only or force claim. Frame426 maximum back lean is finite measured.
+Maximum-forward lean35 and strongest recorded landing445–447 surfaces remain
+unmeasured: old final joint matrices omit the exact outer affine prefix; naive
+weighted-final-matrix reconstruction fails4.538µm. Preserve setup failure, not
+fit a correction. Next explicit-prefix/actual recorded surface extraction.
+Task3 construction owner retained, no geometry/physics change, cosmetics paused.
+Rig alignment/torso-arm ownership audit also in flight. Requiredship168next.

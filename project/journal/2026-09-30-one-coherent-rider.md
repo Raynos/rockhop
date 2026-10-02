@@ -1851,3 +1851,23 @@ Limits: logical tier coverage is not device performance, trueLOD or appearance.
 Current garment/sitting/Garage/visible contacts still fail or unmeasured. Parent
 actual replay triangle-surface audit in flight, task3 construction ownership
 retained. Cosmetics paused; no player promotion. Next required ship168.
+
+## Round166 — actual saddle crossing retained in both variants
+
+Finding: V5 does not fix the actual hip-region/saddle failure. Both source34/V5
+have identical finite surface measurements. Frame186/tick1870has54crossing
+pairs and−34.772mm minimum bike-frameYgap; separate interior crossing witness
+rider18098/seat284. Positive clearances are not automatic stance failures.
+
+Validation: specialist exact triangle projection plus independent plane checks;
+parent53input hashes/8minimum witnesses/both intersection endpoints verified
+below1e-12m. Four25frame174–198actual side/rear gray/PBR excerpts retain timing.
+Parent ordered side-gray181–192 still rejects hip/saddle silhouette. CPU only,
+no source/rig/physics/normal player change or construction duplication.
+
+Limits: rest ROI may contain folded clothing/upper thighs, not butt-only.
+Four actual dumps only. Maxforward35and landing445–447surface geometry needs
+explicit outer affine prefix; naive final-matrix LBS4.538µm mismatch retained,
+no fitted transform/tolerance sweep. Contact force, continuous surfaces, device
+and appearance gates open. Next direct extraction, task3 construction and rig
+diagnostic. Cosmetics paused; ship168next.

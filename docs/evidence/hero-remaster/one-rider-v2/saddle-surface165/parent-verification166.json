@@ -1,0 +1,227 @@
+{
+  "kind": "Parent166 independent finite surface verification and moving-window preservation",
+  "inputHashFiles": 53,
+  "reportSHA256": "00ad13d32083c189a480a7957cba85f773b0cf298c7dbca0326e2b1caebcedea",
+  "rows": [
+    {
+      "variant": "physical34",
+      "frame": 114,
+      "minimumGapMm": 55.24126256940909,
+      "crossingSegmentPlaneResidualM": null
+    },
+    {
+      "variant": "physical34",
+      "frame": 186,
+      "minimumGapMm": -34.771775505100464,
+      "crossingSegmentPlaneResidualM": 1.1102230246251565e-16
+    },
+    {
+      "variant": "physical34",
+      "frame": 304,
+      "minimumGapMm": 8.121295373702875,
+      "crossingSegmentPlaneResidualM": null
+    },
+    {
+      "variant": "physical34",
+      "frame": 426,
+      "minimumGapMm": 10.85892379067177,
+      "crossingSegmentPlaneResidualM": null
+    },
+    {
+      "variant": "physicalV5",
+      "frame": 114,
+      "minimumGapMm": 55.24126256940909,
+      "crossingSegmentPlaneResidualM": null
+    },
+    {
+      "variant": "physicalV5",
+      "frame": 186,
+      "minimumGapMm": -34.771775505100464,
+      "crossingSegmentPlaneResidualM": 1.1102230246251565e-16
+    },
+    {
+      "variant": "physicalV5",
+      "frame": 304,
+      "minimumGapMm": 8.121295373702875,
+      "crossingSegmentPlaneResidualM": null
+    },
+    {
+      "variant": "physicalV5",
+      "frame": 426,
+      "minimumGapMm": 10.85892379067177,
+      "crossingSegmentPlaneResidualM": null
+    }
+  ],
+  "movies": [
+    {
+      "source": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/side-gray-before-after.mp4",
+      "sourceSHA256": "5abf3d97614496f59461d78589c624a9d55324a83bd22e4facc95cad5254ec78",
+      "destination": "side-gray-frames174-198.mp4",
+      "sha256": "4736c875124d3f93ff98ea99470aaffd196d73a4e6e8c8969883cc221499cab3",
+      "ffmpeg": [
+        "ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/side-gray-before-after.mp4",
+        "-vf",
+        "trim=start_frame=174:end_frame=199,setpts=PTS-STARTPTS",
+        "-c:v",
+        "libx264",
+        "-threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-an",
+        "-movflags",
+        "+faststart",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/saddle-surface165/side-gray-frames174-198.mp4"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 580,
+            "r_frame_rate": "12/1",
+            "nb_frames": "25"
+          }
+        ]
+      },
+      "scope": "All25consecutive174\u2013198frames, same old actual playback/cameras/poses; timing-preserving excerpt, not new rendering."
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/side-textured-before-after.mp4",
+      "sourceSHA256": "43dd516534b216ce12d9551c1aa519a68bc84175e4f2e0c4d635abd161320f78",
+      "destination": "side-textured-frames174-198.mp4",
+      "sha256": "0f1b08ea769cc2becdda0a685b7da70c54e8bcee30cdfbd18e035c8e3fcc601b",
+      "ffmpeg": [
+        "ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/side-textured-before-after.mp4",
+        "-vf",
+        "trim=start_frame=174:end_frame=199,setpts=PTS-STARTPTS",
+        "-c:v",
+        "libx264",
+        "-threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-an",
+        "-movflags",
+        "+faststart",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/saddle-surface165/side-textured-frames174-198.mp4"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 580,
+            "r_frame_rate": "12/1",
+            "nb_frames": "25"
+          }
+        ]
+      },
+      "scope": "All25consecutive174\u2013198frames, same old actual playback/cameras/poses; timing-preserving excerpt, not new rendering."
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/rear-three-quarter-gray-before-after.mp4",
+      "sourceSHA256": "e2fe2d5790d5f467372e92fb4accbf868db4b271aa1aea380b4b4d4d296705a2",
+      "destination": "rear-three-quarter-gray-frames174-198.mp4",
+      "sha256": "0ac770348594497838c25998651b9201d36141c589520b11cf4bd7aa68d24951",
+      "ffmpeg": [
+        "ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/rear-three-quarter-gray-before-after.mp4",
+        "-vf",
+        "trim=start_frame=174:end_frame=199,setpts=PTS-STARTPTS",
+        "-c:v",
+        "libx264",
+        "-threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-an",
+        "-movflags",
+        "+faststart",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/saddle-surface165/rear-three-quarter-gray-frames174-198.mp4"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 580,
+            "r_frame_rate": "12/1",
+            "nb_frames": "25"
+          }
+        ]
+      },
+      "scope": "All25consecutive174\u2013198frames, same old actual playback/cameras/poses; timing-preserving excerpt, not new rendering."
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/rear-three-quarter-textured-before-after.mp4",
+      "sourceSHA256": "3389087a6ece1cffd0b2cd010a50815da0ad91ec7ba3fb2671be20d8e56c57cf",
+      "destination": "rear-three-quarter-textured-frames174-198.mp4",
+      "sha256": "9daee8a0143fa347a89f2b509992662c2286bf8d7b7d74d9045793a177e6a527",
+      "ffmpeg": [
+        "ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/matched/rear-three-quarter-textured-before-after.mp4",
+        "-vf",
+        "trim=start_frame=174:end_frame=199,setpts=PTS-STARTPTS",
+        "-c:v",
+        "libx264",
+        "-threads",
+        "2",
+        "-filter_threads",
+        "2",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-an",
+        "-movflags",
+        "+faststart",
+        "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/saddle-surface165/rear-three-quarter-textured-frames174-198.mp4"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 580,
+            "r_frame_rate": "12/1",
+            "nb_frames": "25"
+          }
+        ]
+      },
+      "scope": "All25consecutive174\u2013198frames, same old actual playback/cameras/poses; timing-preserving excerpt, not new rendering."
+    }
+  ],
+  "parentVisualReview": "Ordered actual side-gray181\u2013192 source moving window inspected. Hip/saddle silhouette remains unacceptable; individual triangle hidden-side visibility not accepted from these whole-body views. No fullmovie pass.",
+  "limits": "No anatomy/force/friction/device acceptance. Positive clearance is not automatically failed support. Extra maxforward/landing need explicit outer prefix or new authoritative dumps."
+}
