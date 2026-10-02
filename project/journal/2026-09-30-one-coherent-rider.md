@@ -2374,3 +2374,23 @@ Head/hood/outside/physics preserved, all threevisual/contact/mobile gates
 open, cosmetics paused. Ordinary ship192 due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-seam191/
 Ask: 248.
+
+## Round192 — reject a pinched physical ribbon before export
+
+Finding: The registered left source-panel cut fails actual construction.
+UV-derived face ownership did not yield a simple physical cut boundary.
+
+Validation: One retained dump,10 frozen files/10 input pins; parent checks
+69 removed faces,93 open edges,12 disconnected retained vertex fans and
+four new strict crossings. Other source arrays/morphs and protected outside
+positions exact. Ordinary ship192 both tiers same40.083333333333336s finish,
+same Float64 bytes/hash,103tick crash,1/2ms restart,zero errors.
+
+Limits: No reseal faces, GLB, UV/normals or moving art pass. Attachment
+remainsY1.190667. Whole-five-primitive component count includes the head;
+Float32 endpoint is1.309999942779541, not literal1.31. Those report precision
+corrections do not alter failure. Switch physical cut mechanism before
+new geometry; do not repeat69-face excision or endpoint pull. All three
+checkpoints/basic poses/contacts/mobile OPEN; cosmetics PAUSED. Next ship195.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/panel-surgery192/
+Ask: 248.

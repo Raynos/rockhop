@@ -74,6 +74,39 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Reject the physical sleeve cut before export — round192
+
+One actual left-side construction attempt removed the registered69 source
+ribbon faces and moved source row2409 upward22.861mm. It did not repair the
+garment: excision left93 new open edges and12 pinched boundary vertices;
+resealing generated0 faces. Moving the endpoint introduced4 strict crossings,
+and the remaining torso/sleeve attachment stayed atY1.190667, below1.30–1.32.
+
+Parent verifies the retained construction dump,10 frozen files/10 input pins,
+all removed indices, protected outside arrays, original attributes/morphs,
+all12 disconnected vertex fans and all4 crossing witnesses against the source.
+The retained NPZ is failed construction evidence, not an accepted character.
+No GLB, animation, normal/UV bake or art acceptance follows this preflight.
+Source/head/hood/cuffs/rig/weights remain protected; no production replacement.
+
+Switch the physical cutting mechanism. Do not retry the same69-face union
+with another triangulator, and do not repeat the source1571 upward pull.
+The next method must separate every low physical torso/sleeve connection,
+produce simple manifold cut boundaries and preserve the high shoulder join.
+UV chart ownership alone cannot establish a valid garment panel boundary.
+Preregister its literal scope, protected fields and failure criteria before
+another geometry trial. This is1 actual failed local construction attempt;
+syntax/verifier fixes are not additional generated assets or art attempts.
+
+Ordinary ship192 PASSED: both tiers finish40.083333333333336s with identical
+Float64 bytes/replay hash, crash after103ticks, restart1/2ms and0errors.
+The control has no candidate/review overlay; it does not qualify rider art.
+Next ordinary ship195. All three visual checkpoints, basic continuous poses,
+actual Garage/lean/landing, saddle/grip/sole and mobile remain OPEN.
+Order remains construction → rig/weights → deformation. Cosmetics PAUSED.
+Five failures switch approach;15 unresolved failures trigger architecture
+fallback autonomously. No routine human checkpoint or approval dependency.
+
 ## Exact seam endpoint release for one local construction trial — round191
 
 The registered contour-rooted continuation yields a45-node/44-edge source seam,
