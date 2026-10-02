@@ -1,0 +1,293 @@
+{
+  "status": "READONLY_EXTRINSIC_DIAGNOSIS_NO_NEW_GEOMETRY",
+  "geometryAttempts": 0,
+  "sourceStarXZProjectionSummary": {
+    "signedAreaCounts": {
+      "positive": 157,
+      "negative": 11,
+      "zero": 0
+    },
+    "absoluteAreaRangeM2": [
+      2.696535768009767e-07,
+      7.278968027124577e-05
+    ],
+    "positiveInteriorOverlapPairs": 55,
+    "overlapPairSharedCornerCounts": {
+      "2": 13,
+      "1": 20,
+      "0": 22
+    },
+    "fixedXZIsSingleValuedGraph": false
+  },
+  "sourceStarGraph": {
+    "sourceFaces": 168,
+    "sourceInteriorPhysicalIDs": [
+      1571,
+      1664,
+      1711,
+      1784,
+      1908,
+      2345,
+      2869,
+      3089,
+      3380,
+      3486,
+      3674,
+      3717,
+      3733,
+      4041,
+      4279,
+      4393,
+      4608,
+      4804,
+      4889,
+      5644,
+      6601,
+      7069,
+      7280,
+      7644,
+      7659,
+      8238,
+      8638,
+      8692,
+      9294,
+      9619,
+      10649,
+      11167,
+      11526,
+      12016,
+      12212,
+      12582,
+      12588,
+      12815,
+      12892,
+      12917,
+      12927,
+      12928,
+      13058,
+      13073,
+      13219,
+      13246
+    ],
+    "interiorCount": 46,
+    "interiorEquals45PathPlus4041": true,
+    "boundaryOnlySourceTriangles": [],
+    "nonperimeterBoundaryToBoundaryEdges": [],
+    "source4041NeighborPhysicalIDs": [
+      3674,
+      3717,
+      3951,
+      4279,
+      4393
+    ]
+  },
+  "parentNumericNormalDiagnosisReference": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/extrinsic-seam195/parent-normal-diagnosis.json",
+  "source185SHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "frozen194SHA256": "ee45bb5e0e9612c9b8a3e7ac433fc02824f5ebff319f8da0217692164dd69777",
+  "continuousExactChordIntersections": {
+    "source47_194": {
+      "endpointPhysicalIDs": [
+        1420,
+        13550
+      ],
+      "retainedSourceFacesChecked": 33921,
+      "AABBCandidates": 27,
+      "counts": {
+        "shared_endpoint_contact": 11
+      }
+    },
+    "sourceStar168": {
+      "endpointPhysicalIDs": [
+        1488,
+        13448
+      ],
+      "retainedSourceFacesChecked": 33800,
+      "AABBCandidates": 7,
+      "counts": {
+        "shared_endpoint_contact": 5
+      }
+    }
+  },
+  "actual127PairParameterSummary": {
+    "retained / central": {
+      "pairs": 42,
+      "referenceURange": [
+        0.8323431088633866,
+        1.0
+      ],
+      "radialRange": [
+        0.4705953028434485,
+        0.7951198357519615
+      ],
+      "radialBandCounts": {
+        "2": 23,
+        "1": 19
+      },
+      "sourceCorrespondenceDisplacementMRange": [
+        0.0,
+        0.04459605154352154
+      ],
+      "sourceDisplacementDotFaceNormalMRange": [
+        -0.001399992088527464,
+        0.0011921922781401037
+      ]
+    },
+    "retained / lateral": {
+      "pairs": 55,
+      "referenceURange": [
+        0.8496280180946767,
+        0.9602462422491558
+      ],
+      "radialRange": [
+        0.0,
+        0.7829521267948926
+      ],
+      "radialBandCounts": {
+        "2": 29,
+        "0": 7,
+        "1": 19
+      },
+      "sourceCorrespondenceDisplacementMRange": [
+        0.0,
+        0.03970855783994511
+      ],
+      "sourceDisplacementDotFaceNormalMRange": [
+        -0.0012828463139112917,
+        0.001184690079323548
+      ]
+    },
+    "central / lateral": {
+      "pairs": 30,
+      "referenceURange": [
+        0.8392489855257024,
+        0.9602462422491558
+      ],
+      "radialRange": [
+        -1.1102230246251565e-15,
+        1.0
+      ],
+      "radialBandCounts": {
+        "1": 15,
+        "0": 7,
+        "2": 38
+      },
+      "sourceCorrespondenceDisplacementMRange": [
+        2.220446049250313e-16,
+        0.058516981038947986
+      ],
+      "sourceDisplacementDotFaceNormalMRange": [
+        -0.0017376549965771064,
+        0.001653103498623046
+      ]
+    }
+  },
+  "arcOrdering": {
+    "source47_194": {
+      "interiorZSideCounts": {
+        "positive": 47
+      },
+      "interiorDeltaZRangeM": [
+        0.0003703090882745397,
+        0.01037031999422433
+      ],
+      "interiorDeltaXRangeM": [
+        -0.020800074755869646,
+        -8.410009537540564e-05
+      ]
+    },
+    "sourceStar168": {
+      "interiorZSideCounts": {
+        "positive": 76
+      },
+      "interiorDeltaZRangeM": [
+        0.0051516653217276165,
+        0.047222039293616846
+      ],
+      "interiorDeltaXRangeM": [
+        -0.018409583489969128,
+        0.01046717799774477
+      ]
+    }
+  },
+  "boundaryDirections": {
+    "central": {
+      "negative": 23
+    },
+    "lateral": {
+      "negative": 25,
+      "positive": 1
+    }
+  },
+  "centralLateralStationMidpointGapRange": [
+    0.0007372546659191181,
+    0.046803480721255286
+  ],
+  "centralLateralStrictlyPositiveStationGaps": 30,
+  "normalSigns": {
+    "opposed": 30,
+    "aligned": 67
+  },
+  "normalDotRange": [
+    -0.8894933230602184,
+    0.99976045350075
+  ],
+  "CPUThreads": 2,
+  "GPU": false,
+  "elapsedSeconds": 3.4808517079800367,
+  "anonymousGBSamplesSummary": {
+    "count": 297,
+    "minimum": 41.516089344,
+    "maximum": 41.866182656
+  },
+  "inputPins": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb": {
+      "sha256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+      "bytes": 16319060
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-preserving-garment185/operator.py": {
+      "sha256": "ae07c78b84af77d6dcf64a42de2f1ac35e931e3855670d6ff108eccea14621e8",
+      "bytes": 18281
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/construction.npz": {
+      "sha256": "ee45bb5e0e9612c9b8a3e7ac433fc02824f5ebff319f8da0217692164dd69777",
+      "bytes": 1904542
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/construction-provenance.json": {
+      "sha256": "ad228c973cf1a0ce786aa14691a4dc9273afae90c7b6a2e3895cc8e6e29dd7ab",
+      "bytes": 5670710
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-ruled194/rest-crossing-evidence.json": {
+      "sha256": "c251e239d483912c585113431593692c0f862fe57297e9543f3f86d47694422b",
+      "bytes": 154890
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-ruled194/parent-review.json": {
+      "sha256": "3fade526efdd7f057278cf84b2696ac7aa7338bfb68ad809406f7ca1133b2cbb",
+      "bytes": 1925
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/physical-cut193/parent-review.json": {
+      "sha256": "9b6557a3275419f364eeea10b59aa81a7a6431489653de12bdbe73200aa4e2a8",
+      "bytes": 6108
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/physical-cut193/parent-construction-contract.json": {
+      "sha256": "1426b8702d8d4bf5f79791714bebfb4daab4999b9e01f3cebe682c0ab7ced3c1",
+      "bytes": 12711
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-cut193/domain-source-comparison.json": {
+      "sha256": "5e9df9d9e316a2be21cc0aeb5d88a560b8132f2195465ca5b0e07c207bac7c94",
+      "bytes": 163548
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-seam191/next-construction-contract.json": {
+      "sha256": "03a8cdea26dde4f043e834f8f5590f489903130d1609fdd008a4773f0bd0cb37",
+      "bytes": 93821
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/extrinsic-seam195/parent-normal-diagnosis.json": {
+      "sha256": "41c84846ca05c28ffbdc8355cdbb836b4f409d5e413be4530ab10de5424befeb",
+      "bytes": 4054
+    }
+  },
+  "limits": [
+    "Exact source chord audit and frozen failed triangle diagnosis only; no cap or patch generated",
+    "All garment visual/basicpose/gameplay/contact/mobile gates remain OPEN",
+    "Normal-source numeric policy is independently owned by parent"
+  ]
+}

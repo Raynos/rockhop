@@ -2440,3 +2440,22 @@ then anatomical fields; all3visual/basic poses/contacts/mobile OPEN,
 cosmetics PAUSED. Ordinary ship195 due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-ruled194/
 Ask: 248.
+
+## Round195 — folded panels need a different local construction
+
+Finding: Both source chords are clear;194 panels fold through mismatched
+longitudinal stations. Register one complete source-star scalar sculpt196,
+preserving originalXZ/168-face incidence and78 boundary vertices, releasing
+all46 interior aliases. No195 candidate coordinates or geometry were built.
+
+Validation: Parent15files/11pins/source aliases/fans verified. Normal audit
+shows18 fallback normals match retained numeric values; separate UV/normal
+provenance. Ordinary ship195 bothtiers exact40.083333333333336s/hash368f1ca5bd9e830a,
+crash103ticks/restart1ms/noerrors, lock11.250s/peak44.346GB. Public catalog20.
+
+Limits: OriginalXZ55overlaps rules out graphsurface guarantee. Require actual
+Float32/allfive crossings/lowroutes/strain and played exported motion before
+rig or art judgments.194 still rejected127 realcrossings. Cosmetics paused;
+all3visual/basicposes/gameplay/contact/mobile OPEN. Next ordinary ship198.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/extrinsic-seam195/
+Ask: 248.

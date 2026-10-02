@@ -187,6 +187,8 @@ Round193: parent independently verifies47face physical separator/49edge disk/no 
 
 Round194: ONE full source-aware panel mesh REJECTED127crossings/18normal aliases. Parent37files/9pins/all127witnesses/49sewnedges checked. Change extrinsic embedding, not normal-only or same ruled retry. Read-only sleeve central-field leakage/cuff purity frozen. All3visual/pose/contact/mobile OPEN, cosmetics paused; ship195 due.
 
+Round195: chord clearance isolates folded panels; ONE complete source-star scalar sculpt196 registered, no candidate yet. Parent15files/11pins/46source aliases verified; corrected numeric-normal diagnosis,194 remains rejected127crossings. Ship195 bothtiers byteidentical/crash/restart1ms PASS; nextship198. Threevisual/basicposes/contact/mobile OPEN, cosmetics paused.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

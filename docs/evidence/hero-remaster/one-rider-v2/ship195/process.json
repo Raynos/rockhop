@@ -1,0 +1,33 @@
+{
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/build.mts",
+        "--out=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/conditioning195-control"
+      ],
+      "status": 0,
+      "seconds": 2.5542538329027593
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/conditioning195-control",
+        "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/ship195/ship-gate.json",
+        "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+      ],
+      "status": 0,
+      "seconds": 8.692917165812105
+    }
+  ],
+  "seconds": 11.250296500045806,
+  "peakAnonymousBytes": 44346392576,
+  "memoryLimitBytes": 70000000000,
+  "timeLimitSeconds": 1700,
+  "lock": "lockf -k /Users/raynos/projects/localai/.model.lock"
+}

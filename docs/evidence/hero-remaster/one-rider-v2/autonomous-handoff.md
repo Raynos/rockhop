@@ -16,6 +16,54 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Raise the complete source underarm star; one bounded sculpt — round195
+
+Parent15 frozen files/11 input pins and the exact source168-face disk,
+78 fixed boundary vertices and46 released interior vertices are verified.
+Both endpoint chords clear every retained triangle interior. Failed194
+panels cross through mismatched station correspondence near the far shoulder;
+changing normals or repeating independent-arc straight-chord panels cannot fix it.
+The12 crossed retained source faces remain outside the larger source star.
+
+Register ONE actual196 local source-topology scalar sculpt. Preserve all
+original X/Z coordinates and168-face physical incidence; release all45 original
+ordered seam vertices plus4041. Set their Y from the source path station and
+the literal high endpoints1488/13448;4041 uses its four path-neighbor stations.
+Exact46 IDs, source-row aliases, additional scope3823/3824 and Float64/Float32
+reduction policy live in extrinsic-seam195/parent-construction-contract.json.
+The high band is[1.302874565,1.318913937]m. Clone released source rows append-only,
+remap only their original face corners, preserve all original source fields/
+morph arrays and every face outside scope. No new reference chart or skin field.
+This is a complete local source-star release, not another single1571 pull.
+
+Original XZ has55 projected overlaps and11 negative projected face areas.
+The trial is a multilayer sculpt, never a certified graph surface. It can still
+cross, stretch or crease. Test actual Float32 triangles against allfive
+primitives, strict/coplanar/shared-corner cases, rooted low routes, vertex links,
+source conservation and actual strain. Keep complete failed indexed evidence.
+Only static clearance permits private GLB export and separate played stockThree
+motion; it does not qualify original weights, anatomy or appearance.
+
+Correction to194 shading diagnosis: all18 missing same-UV-chart normal donors
+have numerically exact retained source NORMAL donors. No numeric discontinuity
+was proved. Frozen194 records remain intact;127 real geometric crossings still
+reject that mesh. Track source-normal/crease groups independently of UV islands.
+Recompute normals only for released interior source-normal groups, retaining
+literal boundary values, and verify aliases. Do not claim shading success from
+chart bookkeeping or change protected hood/head/cuffs/right/lower garment.
+
+Construction→anatomical rig/weights→exported corrective deformation remains
+the order. Liked head/identity,19bone adapter, physics COM/lean/IK and contacts
+remain protected; cosmetics PAUSED. No routine human checkpoint dependency.
+Local construction lineage has2 failed outputs; read-only195 adds none. Five
+failures change approach autonomously;15 unresolved trigger architecture fallback.
+All three visual checkpoints/basic poses/Garage/landing/contact/mobile are OPEN.
+
+Ordinary ship195 PASSES both tiers: finish40.083333333333336s, exact Float64LE
+abaaaaaaaa0a4440, hash368f1ca5bd9e830a,103tick crash,1ms restart, no console errors.
+Shared lock11.250s, anonymous peak44.346GB;20 public models unchanged. This is
+ordinary physics regression, not new rider or mobile art acceptance. Nextship198.
+
 ## Actual panels are sealed but penetrate clothing — round194
 
 ONE full indexed construction is frozen and REJECTED:47 source faces were
