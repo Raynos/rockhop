@@ -74,6 +74,50 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## True-triangle CCD admitted; one local3D shell trial registered — round198
+
+IPC1.6.0 is installed in a separate ARM64 CPU environment with pinned NumPy/
+SciPy/wheel hashes and retained MIT notice. Existing unimate/Desktop pipelines
+are untouched. It provides contact derivatives/CCD, not a solver or game-ready
+cloth. Parent14 owned files/6 input pins/wheel verified, then independently
+checks the complete unfiltered144,883-face/72,527-physical-vertex source.
+The source is intersection-free; failed196 intersects. Native full-surface
+safe step exactly matches0.04752707481384277; static step1.0. This conservative
+prefix is not exact first impact. The original source meets the CCD start
+precondition, including no zero/nearzero contacts in default candidate preflight.
+
+All439 active stencils match the complete79,139 swept candidate set;61 collision
+events cover all44 frozen strict endpoint pairs, absent at source. The transit
+demo detects a middle crossing between clear endpoints and validates contact
+derivatives. A Python can_collide callback stalled under native parallel/GIL
+interaction; that failure is retained and stopped. Use the verified native
+static-obstacle filter or full default mesh, never the Python callback.
+No new garment coordinates, solver, GLB, rig, motion or player changes in198.
+
+Register ONE199 collision-aware source-local3D shell solve:46 interior vertices/
+138 XYZ DOFs, source168 incidence and78 literal boundary nodes. Exact target,
+source-relative membrane/dihedral residuals, true-triangle barrier, Gauss-Newton,
+CCD-capped line search and time/memory/stall bounds are in ipc-admission197/
+parent-construction-contract199.json. X/Z are free; highY is a soft target,
+not another prescribed scalar lift. Coefficients are unmeasured frozen
+hypotheses. Keep one actual final indexed dump and the entire solver trace.
+Starting clearance does not prove this small domain can reach the target.
+If insufficient, change scope/retopology through a new explicit contract;
+do not sweep coefficients or resurrect retired global families. No hidden
+field changes; the anatomical proposal remains dormant until construction clears.
+
+Old-normal dot signs are reported as turns, not invented3D inversion proofs.
+Require actual referenced topology/area/winding, adjacent folded faces/allfive
+crossings, Float32 final coordinates, low routes, source conservation and
+separate moving gray/PBR art tests. Neither CCD nor a clean final triangle
+count passes natural anatomy, cloth volume, the three visual checkpoints or
+actual Garage/lean/landings/saddle/grip/sole/mobile. Cosmetics remain PAUSED.
+
+Ordinary ship198 PASS: both tiers exact40.083333333333336s/hash368f1ca5bd9e830a/
+Float64LEabaaaaaaaa0a4440,103tick crash,1/2ms restart, noerrors,20 public models.
+Lockf11.236s/peak44.084GB. Ordinary regression only; next mandatoryship201.
+No routine human checkpoint dependency; five/15 autonomous bounds unchanged.
+
 ## Conditional anatomical field design retained; construction first — round197
 
 The separate stage2 specialist supplies a specific future source-left field

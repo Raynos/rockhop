@@ -2495,3 +2495,22 @@ CPU CCD tool admission is separate from a candidate; no game physics change.
 Cosmetics paused; threevisual/basicposes/contact/mobile OPEN,ship198due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/anatomical-field-design196/
 Ask: 248.
+
+## Round198 — admit collision infrastructure before the next local sculpt
+
+Finding: CPU IPC/tool/source CCD preconditions pass; register one bounded
+source-local freeXYZ shell solve199. No candidate geometry in this finding.
+
+Validation: Parent14files/6inputs/wheel verified; independent unfiltered allfive
+144883triangles/72527vertices reproduces safe step0.0475270748/static1/sourceclear/
+196intersects. Native filter439stencils exact,61events cover44frozenpairs.
+Pythoncallback deadlock preserved/stopped; native filter used. Ship198
+bothtiers byteidentical40.0833333333s/hash368f1ca5bd9e830a/crash103/restart1–2ms/
+noerrors; lock11.236s/44.084GB. Publiccatalog20 unchanged.
+
+Limits: Infrastructure notsolver/art/rig/gameplay pass. Exact local199 objective
+and source138DOFs/78border may be infeasible; keeptrace/finaldump, no parameter
+sweep. Construction first, weights dormant, cosmetics paused; all3visual/
+basicposes/contact/mobile OPEN. Next ordinary ship201.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/ipc-admission197/
+Ask: 248.

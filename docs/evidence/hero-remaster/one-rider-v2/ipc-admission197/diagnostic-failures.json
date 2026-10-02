@@ -1,0 +1,19 @@
+{
+  "installationAttempts": 1,
+  "sourceBuildAttempts": 0,
+  "geometryAttempts": 0,
+  "diagnosticRecipeCorrection": [
+    {
+      "error": "OverflowError: Python integer 90472 out of bounds for uint16",
+      "phase": "all-five index assembly",
+      "correction": "widen index array to int64 before adding primitive offset; no source values or input geometry modified"
+    },
+    {
+      "error": "Python can_collide callback stalled with native broad phase at CPU0% for >60 seconds",
+      "phase": "released-vertex filtered candidate build",
+      "termination": "SIGTERM; no geometry output",
+      "installedDocumentation": "Python-backed filters acquire the GIL on each call and may not be safe or performant for parallel broad-phase use.",
+      "correction": "deterministic active-first collision-vertex ordering and native make_static_obstacle_filter(46); coordinates and source faces preserved"
+    }
+  ]
+}
