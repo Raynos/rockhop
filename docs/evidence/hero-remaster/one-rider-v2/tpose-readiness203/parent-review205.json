@@ -1,0 +1,51 @@
+{
+  "status": "PARENT_READINESS_APPROVED_ONE_ACTUAL_TRIAL_NOT_MODEL_PASS",
+  "pins": {
+    "computationalInputs": 51,
+    "ownedFiles": 5
+  },
+  "syntax": "3files AST parsed, no model imports",
+  "sourceAPI": "_export returns latents2mesh arrays unless output_type=trimesh; official trimesh exporter reverses/implicitly processes. New worker saves untouched arrays then reversed process=False display copy.",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-readiness203/run_bounded.py",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png",
+    "--image-sha256",
+    "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024",
+    "--out",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01",
+    "--seed",
+    "42"
+  ],
+  "preflight": {
+    "status": "CPU_ONLY_PREFLIGHT_NO_MODEL",
+    "command": [
+      "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+      "-u",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-readiness203/shape_only_worker.py",
+      "--image",
+      "/Users/raynos/projects/games/rockhop/assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png",
+      "--image-sha256",
+      "ee2c96a4f70bc6aa7c360a5c563479ce15bbfb381ff6001955d9d5c633dab024",
+      "--out",
+      "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/tpose-shape206-01",
+      "--seed",
+      "42"
+    ],
+    "lock": "/Users/raynos/projects/localai/.model.lock",
+    "lockMethod": "lockf -k",
+    "anonymousBytes": 45009108992,
+    "limitBytes": 70000000000,
+    "timeoutSeconds": 1800,
+    "terminateAtSeconds": 1790,
+    "memoryPollSeconds": 1,
+    "eviction": false
+  },
+  "limits": [
+    "MPS worker/native-output route still unexecuted until actual trial.",
+    "Memory sampling 1second is a stop rule, not hard allocation cap.",
+    "No appearance, topology, rig, motion, contact or mobile pass."
+  ]
+}

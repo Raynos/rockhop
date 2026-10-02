@@ -207,6 +207,8 @@ Round203: raw344456-face H21 web confirmed before reduction; parent26inputs11fil
 
 Round204: same-character Tpose structural reference shown/saved, visible sleeve clearance; MOCKUP not newmesh. ONE raw-preserving actual2.1 shape-only trial next, original head/comparisons retained, cosmeticsPAUSED. Ordinary ship204 byteidentical/crash103/restart2ms PASS; next207. All3visual/basicposes/contact/mobileOPEN.
 
+Round205: actual2.1 shape-only worker/controller/source pins admitted, CPU-only preflight frozen204ref. ONE206raw-preserving trial registered with canonicalGPUlock/70GB/1790s, no cleanup/reduction/paint; MPS route unexecuted. All3visual/basicposes/contact/mobileOPEN, cosmeticsPAUSED; nextship207.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

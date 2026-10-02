@@ -16,6 +16,25 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Actual shape-only pipeline admitted for one trial — round205
+
+Parent reviewed the actual2.1 local source API, the proposed worker/controller,
+frozen computational/historical/team/recipe pins and syntax without loading a
+model. CPU-only preflight uses the frozen204 reference and fresh private output
+`tpose-shape206-01`. Installed runner has no shape-only flag; project-owned
+worker saves decoded mesh_v/mesh_f before the official Trimesh wrapper can reverse
+winding or merge vertices. Separate display copy reverses faces with process=False.
+No source environment or Desktop Comfy change. No texture/cleanup/reduction.
+
+Register ONE actual trial: seed42,30steps,octree380,chunks200000,guidance5,
+actual2.1 MPS, shared `lockf -k` through sampling/native/export, observed anonymous
+memory below70GB decimal, terminate owned batch1790s with grace within30minutes.
+No eviction, lock stealing, unrelated process kill or hidden installed launcher.
+This worker route remains unexecuted: readiness does not prove generation success.
+Inspect raw construction and gray multi-angle motion next, before rig or polish.
+Preserve liked head/comparisons;5/15 bounds and all visual/motion/contact gates OPEN.
+Ordinary ship204 current, next207.
+
 ## Show structural T-pose reference before the new source trial — round204
 
 [The new reference](../../assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png)

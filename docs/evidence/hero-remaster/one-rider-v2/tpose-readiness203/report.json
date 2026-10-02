@@ -1,0 +1,94 @@
+{
+  "status": "CPU_READINESS_ONLY_UNEXECUTED_MODEL_WORKER",
+  "modelWorkloadsRun": 0,
+  "GPUUsed": false,
+  "accepted": false,
+  "installedRunnerFlags": [
+    "--image",
+    "--out",
+    "--seed",
+    "--smoke",
+    "--resume-shape"
+  ],
+  "installedShapeOnlySupported": false,
+  "newWorkerNeeded": true,
+  "python": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+  "sourceRoot": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1",
+  "sourceHEAD": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+  "sourceDirty": " M hy3dpaint/DifferentiableRenderer/MeshRender.py\n M hy3dpaint/DifferentiableRenderer/mesh_utils.py\n M hy3dpaint/hunyuanpaintpbr/__init__.py\n M hy3dpaint/hunyuanpaintpbr/pipeline.py\n M hy3dpaint/hunyuanpaintpbr/unet/attn_processor.py\n M hy3dpaint/textureGenPipeline.py\n M hy3dpaint/utils/image_super_utils.py\n M hy3dpaint/utils/multiview_utils.py\n?? install-provenance.json\n?? runtime/\n",
+  "packagesMetadataOnly": [
+    {
+      "package": "torch",
+      "version": "2.14.0"
+    },
+    {
+      "package": "numpy",
+      "version": "2.4.6"
+    },
+    {
+      "package": "trimesh",
+      "version": "5.1.0"
+    },
+    {
+      "package": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "package": "torchvision",
+      "version": "0.29.0"
+    }
+  ],
+  "retained04": {
+    "version": "Hunyuan3D-2.1",
+    "runnerSHA256": "dfcb588ef1279e70d54993acc9e547f41e95ad1fc59f08dfb5923d07f3f45241",
+    "source_commit": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+    "weights_revision": "0b94677654c57bb9a6b6845cd7b704ccf551d327",
+    "seed": 42,
+    "shape_steps": 30,
+    "octree": 380,
+    "shape_seconds": 31.772,
+    "raw_faces": 344456,
+    "nativeSHA256": "4a10d00eb42b08910e015efe117f6b28f07be2c7d76e311613a38ac5303d0247",
+    "wall_seconds": 123.159,
+    "peak_rss_gb": 23.071
+  },
+  "nativeDefinitionDifference": "Source04 raw is before explicit cleanup/reducer but after official Trimesh default processing. Proposed worker saves Latent2MeshOutput first.",
+  "structuralHypothesis": "Horizontal T-pose exposes separate sleeves/underarms to image-conditioned reconstruction; no guarantee of topology or anatomy.",
+  "preserveLikedHead": "A newly reconstructed body must keep the approved existing new head; generated reference head is not a silent replacement.",
+  "teamInspection": {
+    "qaRows": 111,
+    "actualTransitionRows": 107,
+    "actualTransitionUpperCrossingsMaximum": 0,
+    "actualTransitionHipCrossingsRange": [
+      152,
+      270
+    ],
+    "actualTransitionMinimumSaddleVertexGapMM": 16.395713751171883,
+    "broaderUpperFailureRows": 3,
+    "conclusion": "V7 is finite baked motion evidence, not a qualified general armhole or rig. New T-pose source does not duplicate their repair job."
+  },
+  "bounds": {
+    "lock": "/Users/raynos/projects/localai/.model.lock",
+    "lockMethod": "lockf -k",
+    "anonymousLimitBytes": 70000000000,
+    "memoryPollSeconds": 1,
+    "terminateAtSeconds": 1790,
+    "batchLimitSeconds": 1800,
+    "includesSamplingAndNativeExports": true,
+    "queueOutsideBatch": true,
+    "eviction": false,
+    "killOnlyOwnedWorkerProcessGroup": true
+  },
+  "limits": [
+    "Model worker, MPS adaptation and new native-output route have not been run.",
+    "One-second anonymous-memory sampling is an observed stop rule, not a hard OS memory cap.",
+    "Package metadata pins are not complete environment file hashes.",
+    "No new T-pose reference exists in this readiness capture; parent freezes its exact SHA before generation.",
+    "No appearance, clothing, rig, continuous pose, contact, game or mobile acceptance."
+  ],
+  "syntaxChecks": {
+    "pythonFilesCompiledWithoutExecution": 3,
+    "passed": true
+  },
+  "elapsedSeconds": 0.045866457745432854
+}

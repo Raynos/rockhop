@@ -2619,3 +2619,17 @@ Limits: Gloves flat, alpha halo; no actual new mesh, skin, motion or contacts.
 Installed runner paints; shape-only worker required. Cosmetics paused; next207.
 Evidence: assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/
 Ask: 248.
+
+## Round205 — admit the actual shape-only worker
+
+Finding: Installed2.1 runner always paints. Project-owned worker preserves
+decoded native arrays before Trimesh processing, allowing raw construction first.
+
+Validation: Parent frozen pins/three syntax files, local source API reviewed,
+CPU-only preflight frozen204 reference and fresh206 path under70GB. No model
+import or GPU generation. Independent V7 narrower/broader failures inspected.
+
+Limits: MPS/native-output route unexecuted. One registered seed42 shape trial;
+no texture, cleanup, reduction, rig or player promotion. Cosmetics paused.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-readiness203/
+Ask: 248.
