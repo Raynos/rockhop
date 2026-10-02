@@ -2022,3 +2022,26 @@ Task3owns next rest-valid sleeve curve; same short moving gate before full
 qualification. Then lateral chest/shoulder ownership/anatomical pivot diagnosis,
 then residualcorrectives. Preserve liked head/physics/explicitadapter, no blind
 central-core reset, cosmetics paused. Next mandatoryship174. No promotion.
+
+## Round174 — preserve authored skin through the real constructors
+
+Finding: legacy per-mesh sleeve smoothing can reopen cross-mesh authored seams.
+Honor the strict numeric opt-out on the nearest declaring owner before caching,
+with sibling isolation. Ordinary and private constructors now share this rule;
+remove the private scene-wide bypass. The garment remains visually unaccepted.
+
+Validation: 16 cloth tests, root/harness typecheck and affected lint pass.
+Actual tube10 constructors preserve all95,184vertices and attribute/morph arrays;
+15,764aliases stay closed under archived D304 transforms. Full-vertex reference
+error64.44nm. Flag removal reproduces5,990/1,138changed weight rows,151split
+groups and18.65mm maximum gap. Parent independently verifies16source hashes
+and four result receipts. Fresh ordinary build has zero model replacements;
+both tiers replay exact40.083333333333336s/float64abaaaaaaaa0a4440 and
+368f1ca5bd9e830a; crash103ticks, restart2/3ms, no errors. Canonical GPU lock,
+16.85s and37.111GBanonymous; ten public rider assets have no opt-out.
+
+Limits: parent receipt/hash review is not an independent all-vertex rerun.
+Single D304input lacks preceding motion history; separately assigned archived
+affines isolate seam behavior. No moving art, anatomical ordinary pose adapter,
+nonlinear sleeve driver, rendered Garage/contact or physical mobile acceptance.
+No rejected asset promoted; construction owner retains ownership. Nextship177.

@@ -16,7 +16,38 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round173, 2026-10-01
+## Current evidence — round174, 2026-10-01
+
+Round174 fixes an integration defect without accepting the garment. The real
+ordinary and private constructors now honor numeric
+`rockhopRiderSkinConditioned: 1` on the nearest declaring rig container before
+the legacy cache. A flag on a sibling rig cannot skip conditioning; other
+explicit values retain legacy behavior. The private scene-wide bypass is gone.
+
+The canonical tube10 diagnostic retains all 95,184 vertices and source arrays.
+All 15,764 referenced seam-alias groups stay coincident under the separately
+assigned archived D304 transforms; all-vertex reference error is at most 64.44nm.
+Removing the flag reproduces 5,990/1,138 changed garment weight rows and an
+18.65mm seam gap. These are constructor/skin-contract checks, not moving art
+acceptance. The single recorded-input probe does not reconstruct prior motion
+history. The ordinary constructor still lacks this anatomy's aiming/contact
+adapter. No nonlinear sleeve/cap response driver is present in this GLB.
+
+Sixteen cloth regression tests, full typecheck and affected lint pass. A fresh
+ordinary current-source build, with zero asset replacements or private pose
+overlay, passes exact recorded finish/hash on both graphics tiers plus crash/
+restart (2/3ms), with no runtime errors. Ten public rider GLBs have no opt-out;
+their existing conditioning and asset selection are unchanged.
+
+Construction remains first: inspect the construction owner's next frozen source
+before repeating the matched short continuous gray/PBR gate. Then diagnose
+anatomical pivots and ownership, followed by residual correctives. A nonlinear
+responding-material approach needs explicit post-bone position/normal updates,
+continuous driver-aware validation and measured runtime cost; ordinary LBS cannot
+silently represent it. Cosmetic work stays paused. Basic-pose, appearance,
+Garage, riding/contact and mobile gates remain open. Next mandatory ship177.
+See [loader evidence](conditioning174/README.md).
+
 
 - Round173 strict mapping succeeds;386frame/48fps stockThree overhead.L+sit
   short film rendered, gray/PBR3views, actualSHAverified. Matched beforeV5world

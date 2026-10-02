@@ -3,11 +3,19 @@ import * as THREE from 'three';
 interface Entry { geometry: THREE.BufferGeometry; users: number; owned: boolean }
 const conditioned = new WeakMap<THREE.BufferGeometry, Map<string, Entry>>();
 
-/** Smooth chest/upper-arm/forearm sleeve transitions in a local spatial
- * neighborhood. UV-split vertices share a neighborhood, so smoothing cannot open seams.
+/** Smooth legacy chest/upper-arm/forearm transitions inside each mesh.
+ * Coincident vertices share that mesh's neighborhood; cross-mesh seams need
+ * authored weights and an explicit opt-out on their owning asset container.
  * Geometry and source GLB weights remain immutable; neck/head influence and other joint regions are unchanged.
  */
 export function conditionSleeveSkin(mesh: THREE.SkinnedMesh): () => void {
+  // Authored skin belongs to its nearest declaring asset container. Inspect
+  // ancestors only: a flag in another rig must not bypass this mesh or cache.
+  for (let owner: THREE.Object3D | null = mesh; owner; owner = owner.parent) {
+    if (!Object.prototype.hasOwnProperty.call(owner.userData, 'rockhopRiderSkinConditioned')) continue;
+    if (owner.userData.rockhopRiderSkinConditioned === 1) return () => {};
+    break;
+  }
   const source = mesh.geometry;
   const signature = mesh.skeleton.bones.map(b => b.name).join('\0');
   const entries = conditioned.get(source) ?? new Map<string, Entry>();

@@ -8,6 +8,51 @@ import { conditionSleeveSkin } from './sleeveSkin';
 const files = ['street-mustard', 'street-charcoal', 'street-openface', 'race-bluewhite', 'race-charcoalyellow']
   .flatMap(name => [`rider-${name}.glb`, `rider-${name}-lod.glb`]);
 
+it('retains declared authored skin through actual rider cloning, Garage and release', async () => {
+  const gltf = await loadRig('rider-street-charcoal.glb');
+  gltf.scene.userData.rockhopRiderSkinConditioned = 1;
+  const source = gltf.scene.getObjectByName('rider_body') as THREE.SkinnedMesh;
+  const weights = Array.from(source.geometry.getAttribute('skinWeight').array);
+  const rig = fixture(gltf, 'rookie');
+  const mesh = rig.nodes.get('rider_body') as THREE.SkinnedMesh;
+  expect(mesh.geometry).toBe(source.geometry);
+  for (const stage of [true, false, true, false]) {
+    rig.rider.setStage(stage);
+    expect(mesh.geometry).toBe(source.geometry);
+    expect(Array.from(mesh.geometry.getAttribute('skinWeight').array)).toEqual(weights);
+  }
+  let disposals = 0;
+  source.geometry.addEventListener('dispose', () => disposals++);
+  rig.rider.dispose();
+  rig.rider.dispose();
+  expect(disposals).toBe(0);
+});
+
+it('scopes conditioning opt-out to the owning branch and strict nearest declaration', async () => {
+  const gltf = await loadRig('rider-street-charcoal.glb');
+  const mesh = gltf.scene.getObjectByName('rider_body') as THREE.SkinnedMesh;
+  const source = mesh.geometry;
+  const scene = new THREE.Group(), authored = new THREE.Group(), legacy = new THREE.Group();
+  scene.add(authored, legacy);
+  authored.userData.rockhopRiderSkinConditioned = 1;
+  const flagged = mesh.clone() as THREE.SkinnedMesh;
+  const sibling = mesh.clone() as THREE.SkinnedMesh;
+  authored.add(flagged); legacy.add(sibling);
+  const releaseLegacy = conditionSleeveSkin(sibling);
+  expect(sibling.geometry).not.toBe(source);
+  const releaseAuthored = conditionSleeveSkin(flagged);
+  expect(flagged.geometry).toBe(source);
+  releaseAuthored(); releaseAuthored();
+  expect(sibling.geometry).not.toBe(source);
+  for (const declaration of [0, '1', false, null]) {
+    flagged.userData.rockhopRiderSkinConditioned = declaration;
+    const release = conditionSleeveSkin(flagged);
+    expect(flagged.geometry).toBe(sibling.geometry);
+    release(); flagged.geometry = source;
+  }
+  releaseLegacy();
+});
+
 function triangle(mesh: THREE.SkinnedMesh, index: number): THREE.Vector3[] {
   mesh.skeleton.update();
   return [0, 1, 2].map(k => {
