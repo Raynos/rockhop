@@ -1,0 +1,138 @@
+{
+  "status": "FROZEN_COMBINED_FLOAT32_GATE",
+  "sourceBINPrefixExact": true,
+  "protectedHeadMeshesExact": true,
+  "protectedHoodGlovePrimitivesExact": true,
+  "originalPBRImageDefinitionsPrefixExact": true,
+  "source0DerivedClipAttributes": "Original rows retained;319cutrows explicitly interpolated on sourceedge; joints nearestendpoint diagnosticonly; all skin/animations removed.",
+  "assemblySHA256": "e97ba0c3081bcee2bf161e415777a5995a551d50237faac212394ee102645dd7",
+  "bodydataSHA256": "019fc4e0c4c259aaaa4751e639a71203dfaf342938572d20ddfc0f5115688b00",
+  "shellDegenerateBelow1e12": 170,
+  "combinedDegenerateBelow1e12": 170,
+  "combinedNonmanifoldEdges": 140,
+  "combinedWrongWindingEdges": 486,
+  "combinedBoundaryEdges": 237,
+  "seamCoverage": {
+    "hoodIDs": {
+      "edges": 307,
+      "pairedOpposite": 0,
+      "failed": 307,
+      "firstWitnesses": [
+        {
+          "edgePositions": [
+            [
+              0.7503086924552917,
+              1.466675043106079,
+              0.0347680002450943
+            ],
+            [
+              0.7502729892730713,
+              1.466675043106079,
+              0.03554923087358475
+            ]
+          ],
+          "incidence": 2
+        },
+        {
+          "edgePositions": [
+            [
+              0.7502729892730713,
+              1.466675043106079,
+              0.03554923087358475
+            ],
+            [
+              0.7502772808074951,
+              1.466675043106079,
+              0.03974102810025215
+            ]
+          ],
+          "incidence": 2
+        },
+        {
+          "edgePositions": [
+            [
+              0.7502772808074951,
+              1.466675043106079,
+              0.03974102810025215
+            ],
+            [
+              0.748592734336853,
+              1.466675043106079,
+              0.04232446849346161
+            ]
+          ],
+          "incidence": 2
+        }
+      ]
+    },
+    "hemIDs": {
+      "edges": 156,
+      "pairedOpposite": 0,
+      "failed": 156,
+      "firstWitnesses": [
+        {
+          "edgePositions": [
+            [
+              0.8166114091873169,
+              0.9753223061561584,
+              -0.03879337012767792
+            ],
+            [
+              0.816520631313324,
+              0.975304126739502,
+              -0.03785892203450203
+            ]
+          ],
+          "incidence": 4
+        },
+        {
+          "edgePositions": [
+            [
+              0.816520631313324,
+              0.975304126739502,
+              -0.03785892203450203
+            ],
+            [
+              0.8144413828849792,
+              0.974888265132904,
+              -0.013226523995399475
+            ]
+          ],
+          "incidence": 2
+        },
+        {
+          "edgePositions": [
+            [
+              0.8144413828849792,
+              0.974888265132904,
+              -0.013226523995399475
+            ],
+            [
+              0.8143948912620544,
+              0.9748789668083191,
+              -0.012589290738105774
+            ]
+          ],
+          "incidence": 2
+        }
+      ]
+    },
+    "cuffLIDs": {
+      "edges": 65,
+      "pairedOpposite": 65,
+      "failed": 0,
+      "firstWitnesses": []
+    },
+    "cuffRIDs": {
+      "edges": 62,
+      "pairedOpposite": 62,
+      "failed": 0,
+      "firstWitnesses": []
+    }
+  },
+  "lowerCutPlane": "Y=.940+.20*(X-.640), explicitnewwardrobedesigncut; not semantic sourcehem",
+  "ghostSleeveComponentsRemoved": true,
+  "crossings": "NOT_RUN_YET: conservative source+shell triangle audit required; no BVH selfzero claim.",
+  "limits": "Physical topology failure stopsrender. No appearance/pose/rig/weight/game-ready acceptance.",
+  "gatePass": false
+}

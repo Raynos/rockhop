@@ -1,6 +1,6 @@
 {
   "familyId": "clean-drafted-upper-hoodie-shell01",
-  "status": "SOURCE_BOUNDARIES_VERIFIED_QUAD_CAGE_ONE_PROTOTYPE_AUTHORIZED",
+  "status": "RETIRED_FAMILY_AT15_SOURCE_TOPOLOGY_FALLBACK",
   "predecessor": {
     "familyId": "retained-v7-cap-rmf-tube-natural-upper-garment",
     "failureCountLowerBound": 15,
@@ -23,8 +23,9 @@
     },
     {
       "id": "anatomical-quad-cage",
-      "failedAttempts": 0,
-      "status": "BOUNDARY_PROFILE_CONTRACT_FROZEN_ONE_GEOMETRY_AUTHORIZED"
+      "failedAttempts": 3,
+      "status": "STOPPED_FAMILY_LAST_RESORT",
+      "decision": "Invalid shared topology; source whole-garment construction fallback instead of a fitted cage retry."
     }
   ],
   "attempts": [
@@ -187,11 +188,75 @@
       "status": "FAILED_NUMPY_INT64_JSON_THEN_FIXED_CAST",
       "failure": "Computed exported topology and conservative crossing audit, but JSON refused NumPy integer. Explicit Python integer conversion only; rerun same frozen input verified8nonmanifold/4winding/6boundaries/8degenerate and190427strict candidatepairs0interiorcrossings.",
       "registrationLimit": "Unexpected evidence-write setup error classified retrospectively, no preregistration fiction or geometry change."
+    },
+    {
+      "id": "Q182-design01",
+      "stage": "readonlysource/proposedtopology",
+      "recordedBeforeRun": true,
+      "status": "scaffold_written_no_mesh_instantiation",
+      "limits": "No output mesh instantiated; no Blender/model/render work before parentgo"
+    },
+    {
+      "id": "Q182-setup01",
+      "stage": "literal source loops/cut compiler",
+      "recordedBeforeRun": true,
+      "status": "sourcecutcompiled_one156rim_legseedcomponents"
+    },
+    {
+      "id": "Q182-geometry01",
+      "stage": "ONE source-profile indexed quad cage",
+      "recordedBeforeRun": true,
+      "status": "FAILED_COMBINED_FLOAT32_GEOMETRY",
+      "countedFailure": true,
+      "failure": "170degenerates/140nonmanifold/486wrongwinding; no secondoutput"
+    },
+    {
+      "id": "Q182-export01",
+      "stage": "original-prefix neutral assembly+float32sewing audit",
+      "recordedBeforeRun": true,
+      "status": "sourceprefixGLB/bodydata_frozen_rejected"
+    },
+    {
+      "id": "Q182-evidence01",
+      "stage": "matched CPU films if predecessor literal gate succeeds",
+      "recordedBeforeRun": true,
+      "status": "NOT_RUN_PREDECESSOR_LITERAL_GATE_FAILED"
+    },
+    {
+      "id": "Q182-export-setup02",
+      "stage": "receipt serialization",
+      "recordedBeforeRun": false,
+      "status": "FAILED_NUMPY_INT_JSON",
+      "countedFailure": true,
+      "failure": "GLB/bodydata already written; JSONreceipt serialization failed on numpy.int64. Geometry remains frozen."
+    },
+    {
+      "id": "Q182-export-setup03",
+      "stage": "same-export receipt repair",
+      "recordedBeforeRun": true,
+      "status": "receiptfixed_frozenGLBbyteequalityasserted",
+      "method": "Serialize numpy scalar; assert existing frozenGLB/bodydata equality, no topologychange"
+    },
+    {
+      "id": "Q182-source-read-setup01",
+      "recordedBeforeRun": false,
+      "stage": "parentcontractpathlookup",
+      "status": "FAILED_WRONG_INITIAL_CAT_PATH",
+      "countedFailure": true,
+      "failure": "Initial read tried source-boundaries181/parent-contract.json; exactsource-guided-cage182 parentcontract discovered/read before geometry."
+    },
+    {
+      "id": "Q183-filesystem-setup01",
+      "stage": "next construction setup",
+      "recordedBeforeRun": false,
+      "countedFailure": true,
+      "status": "FAILED_ENOSPC_NO_GEOMETRY",
+      "evidence": "source-guided-cage182/storage-setup-failure.json"
     }
   ],
-  "failureCount": 11,
+  "failureCount": 15,
   "policy": "Record setup/geometry/art/motion failures and parent verdicts; five approach switch/fifteen family retirement, no cosmetic/static shortcut",
-  "geometryOutputFailures": 2,
+  "geometryOutputFailures": 3,
   "administrativeErrors": [
     {
       "id": "parent-dispatch178-1",
@@ -212,9 +277,13 @@
     {
       "id": "parent-commit181",
       "failure": "Normal precommit refused newjournal Validation field missing a space; source/evidence unchanged. Corrected formatting and normalhook retry, no bypass."
+    },
+    {
+      "id": "parent-inspection182",
+      "failure": "Optional cat of absent builder attempts receipt failed; other proposal read succeeded. No geometry/model/render/write ran."
     }
   ],
-  "countingLimits": "Five lane/evidence failures incl setup; three separate orchestration/inspection errors disclosed. Same geometry counted once, gray/PBR views not separate failures. Historical predecessor >=15 remains linked. Neutral baseline review schema error adds one independent evidence failure, not a second geometry or an extra drafted/sculpt approach trial. Sculpt:four builder failures plus one parent evidence-write setup failure; same geometry counted once. Total11 includes neutral-baseline schema failure, approach counts5+5. Admin errors3 remain separate.",
+  "countingLimits": "15 disclosed failures includes setup/evidence failures and three failed geometry outputs. Paired gray/PBR views are never extra geometry attempts. Administrative orchestration mistakes remain separately disclosed. The directory failure and consequent write failure are one failed setup, not two.",
   "baselineEvidenceFailures": 1,
   "sourceBoundary181": {
     "parentPinnedHashes": 13,
@@ -226,5 +295,6 @@
     "analysisFailures": 0,
     "nextContract": "source-guided-cage182/parent-contract.json",
     "familyFailuresStill": 11
-  }
+  },
+  "retirementDecision": "source-guided-cage182/parent-decision.json"
 }

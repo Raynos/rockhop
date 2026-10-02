@@ -1,0 +1,18 @@
+{
+  "id": "Q183-filesystem-setup01",
+  "countedFailure": true,
+  "priorFamilyFailures": 14,
+  "newFamilyFailures": 15,
+  "command": "mkdir -p docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/source-guided-cage183 assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/source-guided-cage183",
+  "reportedResult": "Both owned paths: No space left on device; subsequent receipt write failed. No geometry or rendering started.",
+  "failureUTCPinned": false,
+  "firstParentDfAvailable": "6.2GiB",
+  "laterParentProbe": {
+    "writeProbeSucceeded": true,
+    "availableBytesAtWrite": 281743642624,
+    "filesDeleted": 0,
+    "limits": "Earlier builder ENOSPC is retained; this later small write succeeding does not disprove transient exhaustion."
+  },
+  "filesDeleted": 0,
+  "limits": "Transient storage failure is retained. Later available capacity does not disprove it; no external cleanup attribution claimed."
+}

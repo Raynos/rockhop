@@ -1,6 +1,8 @@
 # Clean upper hoodie shell — new last-resort architecture
 
-Status: construction specification; no accepted prototype or model. Parent
+Status: RETIRED at 15 disclosed failures in round182; three failed geometry
+outputs, remaining failures include setup/evidence. No accepted prototype.
+See source-guided-cage182/parent-decision.json. Do not run these methods again. Parent
 owns integration and judges; three bounded isolated CPU construction lanes
 may build different methods. Preserve rider-only scope and liked head identity.
 

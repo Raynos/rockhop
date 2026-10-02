@@ -2188,3 +2188,21 @@ Derivedcutfields notallsourcebyteexact. Family11unchanged,5administrativeerrors
 including read-onlypacketparse and journalformatrefusal retained. No newcagegeometry yet, no rig/weights/
 cosmetics or playerpromotion. Rootsoleintegration, task3independentQA separate;
 three visual/moving/Garage/contact/mobile gates open; nextship183.
+
+## Round182 — reject invalid cage and invoke construction fallback
+
+Finding: Replacing the whole upper garment again failed shared topology.
+Retire the family at15 disclosed failures, not15 geometry outputs; next
+inspect and preserve the complete preferred source garment before local repair.
+
+Validation: Parent20 frozen hashes plus original source hash, protected
+BIN/head/hood/glove/PBR/node transforms and actual GLB cloth arrays verified.
+170degenerates/140nonmanifold/486winding confirmed; cuff65/62 pairs exact,
+hood0/307 and hem0/156 fail. Builder strict crossings retained separately.
+Later storage write succeeds with281.7GB available; this task deleted no files.
+
+Limits: No geometry render, art score, rig/weights or moving acceptance.
+Storage/setup/evidence failures included transparently; administrative optional
+receipt-read error separate. Three visual/Garage/game/contact/mobile gates open.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/source-guided-cage182/
+Ask: 248. Next mandatoryship183.

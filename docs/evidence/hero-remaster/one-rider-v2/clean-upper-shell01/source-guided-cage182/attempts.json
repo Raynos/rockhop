@@ -2,8 +2,8 @@
   "family": "clean-drafted-upper-hoodie-shell01",
   "approach": "source-guided-anatomical-quad-cage",
   "priorFamilyFailures": 11,
-  "parentGeometryGo": false,
-  "status": "READ_ONLY_AND_TOPOLOGY_SCAFFOLD_ONLY_UNTIL_PARENT_SOURCE_CONTRACT_GO",
+  "parentGeometryGo": true,
+  "status": "RETIRED_FAMILY_AT15_NO_NEXT_CAGE",
   "attempts": [
     {
       "id": "Q182-design01",
@@ -11,6 +11,55 @@
       "recordedBeforeRun": true,
       "status": "scaffold_written_no_mesh_instantiation",
       "limits": "No output mesh instantiated; no Blender/model/render work before parentgo"
+    },
+    {
+      "id": "Q182-setup01",
+      "stage": "literal source loops/cut compiler",
+      "recordedBeforeRun": true,
+      "status": "sourcecutcompiled_one156rim_legseedcomponents"
+    },
+    {
+      "id": "Q182-geometry01",
+      "stage": "ONE source-profile indexed quad cage",
+      "recordedBeforeRun": true,
+      "status": "FAILED_COMBINED_FLOAT32_GEOMETRY",
+      "countedFailure": true,
+      "failure": "170degenerates/140nonmanifold/486wrongwinding; no secondoutput"
+    },
+    {
+      "id": "Q182-export01",
+      "stage": "original-prefix neutral assembly+float32sewing audit",
+      "recordedBeforeRun": true,
+      "status": "sourceprefixGLB/bodydata_frozen_rejected"
+    },
+    {
+      "id": "Q182-evidence01",
+      "stage": "matched CPU films if predecessor literal gate succeeds",
+      "recordedBeforeRun": true,
+      "status": "NOT_RUN_PREDECESSOR_LITERAL_GATE_FAILED"
+    },
+    {
+      "id": "Q182-export-setup02",
+      "stage": "receipt serialization",
+      "recordedBeforeRun": false,
+      "status": "FAILED_NUMPY_INT_JSON",
+      "countedFailure": true,
+      "failure": "GLB/bodydata already written; JSONreceipt serialization failed on numpy.int64. Geometry remains frozen."
+    },
+    {
+      "id": "Q182-export-setup03",
+      "stage": "same-export receipt repair",
+      "recordedBeforeRun": true,
+      "status": "receiptfixed_frozenGLBbyteequalityasserted",
+      "method": "Serialize numpy scalar; assert existing frozenGLB/bodydata equality, no topologychange"
+    },
+    {
+      "id": "Q182-source-read-setup01",
+      "recordedBeforeRun": false,
+      "stage": "parentcontractpathlookup",
+      "status": "FAILED_WRONG_INITIAL_CAT_PATH",
+      "countedFailure": true,
+      "failure": "Initial read tried source-boundaries181/parent-contract.json; exactsource-guided-cage182 parentcontract discovered/read before geometry."
     }
   ],
   "sourceC19SHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
@@ -19,6 +68,14 @@
     "parent-selected hem/lower attachment policy",
     "explicit parentGeometryGo"
   ],
-  "geometryAttempts": 0,
-  "currentApproachFailures": 0
+  "geometryAttempts": 1,
+  "currentApproachFailures": 3,
+  "parentContractSHA256": "3ff2e2aaeb72ee11a532744885bf8b48b1cb81a22e7cd159ae9b6aaebb689f2a",
+  "familyPriorFailures": 11,
+  "familyFailedAttemptsLowerBound": 15,
+  "crossAuditPreregisteredContext": "Parentmessage before run declaredboundedcrossaudit; initialexport/evidence stage preregistered. No geometrychanges.",
+  "firstBlenderHandle": 18226,
+  "firstStartUTCPinned": false,
+  "firstJobTimingLimit": "Tool job18226 finished; exactUTC start notclockpinned. Report doesnotinventit.",
+  "nextSetupFailure": "storage-setup-failure.json"
 }

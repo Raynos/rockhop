@@ -74,7 +74,34 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current source and construction contract — round181
+## Current decision — round182, family retired at the last-resort bound
+
+The actual exported GLB fails construction: 170 degenerate triangles, 140
+nonmanifold edges and 486 winding conflicts. Parent independently checks
+20 builder/master hashes, original source BIN/head/hood/glove/PBR identity,
+all four exported cloth arrays and final physical edge incidence. Exact cuffs
+pair 65/65 left and 62/62 right; hood 0/307 and hem 0/156 fail opposite winding.
+Builder's conservative crossing audit also fails. No rendering, rigging or
+cosmetic work follows an invalid export; there is no visual score or pose pass.
+
+The new construction family reaches 15 failed attempts: three geometry outputs
+plus disclosed setup/evidence failures, including a transient full-disk setup.
+A later parent write probe succeeds with about 281.7 GB available; no files were
+deleted by this task. Retire the whole replacement-surface family and preserve
+its frozen masters. Repeated source controls and zero-width transition strips
+are compiler mistakes; do not blame sound donor loops or retry a fitted cage.
+
+The autonomous fallback preserves the complete preferred C19 source garment
+and texture topology. First inspect actual rest crossings, source components,
+chest/shoulder/underarm regions and exact protected joins. Then one bounded
+localized construction repair may reshape or surgically replace the measured
+bad region, with explicit source ancestry and export checks. This is a new
+hypothesis, not acceptance or permission to repeat earlier contact projection.
+Commit the diagnosis before a geometry trial. Keep the liked head, three visual
+checkpoints and physics behavior; all rig, moving pose, Garage, riding/contact
+and mobile gates remain open. Cosmetics stay paused. Mandatory ship183 is next.
+
+## Earlier source and construction contract — round181
 
 Round181 replaces guessed donor rings with actual indexed source contracts.
 Parent independently verifies13pinned source/private hashes plus recipe, exact
