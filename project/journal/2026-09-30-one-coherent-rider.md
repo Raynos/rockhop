@@ -2705,3 +2705,17 @@ rig, PBR, art/pose/contact/mobile pass. Likedhead join and explicitnewrig next;
 cosmetics paused. Ship213due. No normal player asset changes.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/finite-cleanup210/
 Ask: 248.
+
+## Round211 — register selective neck sewing without hood clipping
+
+Finding: Native+Z faces forward; explicit sole/neck registration keeps likedhead
+unchanged. Separate inner/outer donor neck sheets require cavity-aware sewing.
+
+Validation: Parent16pins, literal231neckedges/15735headfaces, hoodprotectedsets,
+sole0/neckcentre3.13e-15m and actual nose orientation. ONElocal25mm trial admitted
+against24.07mm preflight; actual geometry/collision/motion remains unproved.
+
+Limits: Unqualified finite body, no assembly/pose pass. Armspan proportion risk
+under explicit anatomy audit; no oldpivot copying or cosmetic polish. Ship213due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/head-join211/
+Ask: 248.

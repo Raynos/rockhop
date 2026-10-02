@@ -2502,3 +2502,25 @@ Ordinaryship210 passes both tiers: byte-identical40.083333333333336s/hash
 Next selective hood-preserving neck construction with likedhead, then explicit
 new-T-pose rig/weights. Cosmetics paused; full-body/face, basic poses, chair,
 bike/Garage, contacts and mobile remain open. Next mandatoryship213.
+
+## Selective neck cut and explicit anatomical transform — round211
+
+Parent verifies16 frozen contract pins and literal hood/head cut ancestry. Native
+forward is+Z; map +nativeZ to+gameX with proper rotation, not the earlier proposed
+negative sign. Approved NEW head remains identity. Sole/outerneck anchors set
+scale.8805751158 and explicit translation; neck-centre error3.13e-15m, sole0.
+This is authored registration, not automatic proportion or anatomy acceptance.
+Selective231-edge neck cut preserves hood, removing only head-connected15735faces
+and splitting231neck triangles. No global planarhood cut. Donor outer318/inner306
+neck circuits require actual skin sewing and internal cavity closure, not overlap.
+
+Admit ONE local neck trial under explicit25mm maximum displacement (observed
+24.07mm, median8.18mm), both donor sheets moved coherently in1.55–1.58band, face
+above1.58 and mouth primitive exact. This supersedes provisional20mm trial cap
+explicitly. Stop cap/hood/body intersections or foldovers, no silent widening.
+Use cleaned210ancestry to remap original208IDs before construction. No assembled
+mesh, moving join or appearance score yet. New-body fingertip-span risk is now
+under measured rig/proportion audit before binding; no blind oldarmdown pivots.
+
+Garment first, cosmetics paused. Actual neck clips, full basic poses, three visual
+checkpoints, physics/Garage/grip/sole/saddle/mobile remain open. Nextship213.
