@@ -2459,3 +2459,21 @@ rig or art judgments.194 still rejected127 realcrossings. Cosmetics paused;
 all3visual/basicposes/gameplay/contact/mobile OPEN. Next ordinary ship198.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/extrinsic-seam195/
 Ask: 248.
+
+## Round196 — high attachment does not excuse folded clothing
+
+Finding: One complete source-star Y lift creates the high gap but still
+crosses fabric44 times and reverses9source normal groups; reject before export.
+
+Validation: Parent21files/14pins/literal source rows/cloned fields/formula/
+all44 witnesses verified. Independent1725pair relative audit matches44,
+10 changed/changed34 changed/retained. Whole237openings/2components exact,
+zero topology defects; attachmentY1.302874565. Staticedge ratio up to38.397.
+
+Limits: No GLB/render/adapter/moving art pass. Third failed local construction
+output; source and failed mesh remain untouched. Next admit actual-triangle
+CCD for a bounded source-local3D method, not another scalar lift or retired
+global family. Cosmetics paused; threevisual/basicposes/contact/mobile OPEN.
+Ordinary ship198 due after195pass.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-star196/
+Ask: 248.

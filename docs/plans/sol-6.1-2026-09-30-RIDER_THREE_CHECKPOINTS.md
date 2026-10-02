@@ -74,6 +74,48 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Reject the source-star lift; require collision-aware construction — round196
+
+ONE actual168-face/46-interior scalar sculpt is frozen and REJECTED before
+export. It creates the target high attachmentY1.302874565 but folds through
+fabric44 times:10 changed/changed and34 changed/retained, all p0. Six pairs
+share a corner and38 share none. Parent independently examines1725 changed
+versus allfive broadphase pairs with a relative-tolerance predicate and
+reproduces exactly44 crossings, including every retained witness; no extra.
+Nine source-normal groups reverse and37 faces turn over90degrees. Static
+source-edge ratios span0.0979–38.397, area ratios0.0470–82.127; these quantify
+damage, not user-defined pass thresholds. Zero positive coplanar overlaps
+cannot rescue this extrinsic construction.
+
+All original accessor/morph rows remain exact. Eighty-eight appended literal
+source aliases modify only the prescribed46 Ys and interior normals; original
+XZ/168-face physical incidence,78 fixed boundary vertices and every outside
+face index remain exact. Parent verifies21 frozen files/14 inputs, literal
+formula, original and cloned fields, and all44 witnesses. Whole referenced
+topology retains237 original openings/two head-included components; no
+zero/sliver/duplicate faces, winding, vertex-link pinches or Float32 collisions.
+Rooted low routes separate. These conservation/topology results are unaccepted
+construction evidence. No GLB, shader, adapter, render, animation or player edit.
+
+Do not repeat a Y-only lift, normal-only repair or independently stationed
+straight-chord panels. Next admit a bounded local collision-aware3D construction
+method using actual source triangles and continuous collision detection, starting
+from the clear original source and checking every proposed step. Probe the
+isolated CPU dependency/API and actual source collision preconditions before
+registering one sculpt; a library/tool admission is not a rider repair. Define
+the local freeXYZ domain and fixed source boundary explicitly. Retain all failed
+artifacts and the retired global cage/tube/ARAP/harmonic/projection family.
+Do not hide a stalled/infeasible target behind favorable topology or distance.
+
+This is the third failed local construction lineage output192/194/196 and
+the first full scalar source-star output. Five same-approach failures change
+mechanism autonomously;15 unresolved trigger architecture fallback. Construction
+still precedes anatomical fields/rig and exported corrective deformation.
+Liked head/identity/hood,19bone behavior and contacts remain protected. No routine
+human checkpoint. Cosmetics PAUSED; all three visual checkpoints, continuous
+basic poses, actual Garage/lean/landing/saddle/grip/sole/mobile remain OPEN.
+Ship195 ordinary regression passed; next mandatory ordinary ship198.
+
 ## Raise the complete source underarm star; one bounded sculpt — round195
 
 Parent15 frozen files/11 input pins and the exact source168-face disk,

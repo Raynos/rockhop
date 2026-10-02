@@ -6944,5 +6944,83 @@
       }
     ],
     "errors": []
+  },
+  "sourceStar196": {
+    "status": "FROZEN_STATIC_REJECTION_NO_GLB",
+    "dumpSHA256": "5b54029e8cd59fec2b53e7bdbbf3a3b33f3ff93303a30fedcfa539d2fb336f27",
+    "strictCrossings": 44,
+    "positiveCoplanarOverlaps": 0,
+    "firstAttachmentY_M": 1.3028745651245117,
+    "strainSummary": {
+      "measurementOnlyNoStretchGate": true,
+      "edgeRatioRange": [
+        0.0978945328177058,
+        38.39706968210151
+      ],
+      "areaRatioRange": [
+        0.047033251130697215,
+        82.12701737838418
+      ],
+      "maximumAngleChangeDegrees": 148.72143570149555,
+      "minimumCandidateTriangleAngleDegrees": 0.44720260356274116,
+      "faceNormalTurnDegreesRange": [
+        1.1963169905747109,
+        179.335700803966
+      ],
+      "facesTurningOver90Degrees": [
+        3128,
+        3549,
+        3815,
+        4100,
+        4408,
+        4410,
+        4412,
+        5065,
+        5069,
+        5070,
+        5484,
+        5492,
+        5493,
+        5894,
+        6396,
+        6399,
+        6404,
+        6406,
+        6916,
+        6917,
+        6918,
+        6923,
+        6928,
+        6930,
+        7395,
+        7418,
+        7796,
+        7797,
+        7798,
+        7799,
+        7805,
+        7806,
+        7874,
+        7875,
+        8264,
+        8266,
+        8312
+      ]
+    },
+    "GLBExported": false,
+    "rejectionReasons": [
+      "Changed source168 versus all5 strict crossings",
+      "Interior source-normal group failures"
+    ],
+    "parentPins": {
+      "frozenFiles": 21,
+      "inputPins": 14
+    },
+    "parentBroadphasePairs": 1725,
+    "parentStrictCrossings": 44,
+    "localConstructionFailedOutputs": 3,
+    "next": "Admit actual-triangle CCD and bounded collision-aware local3D construction; no Y-only or retired global family retry.",
+    "cosmetics": "PAUSED",
+    "nextShip": 198
   }
 }

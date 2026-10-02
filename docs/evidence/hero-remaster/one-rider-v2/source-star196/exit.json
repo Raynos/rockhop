@@ -1,0 +1,25 @@
+{
+  "phases": [
+    {
+      "recipe": "build.py",
+      "exitCode": 0,
+      "elapsedSeconds": 0.31979870796203613
+    },
+    {
+      "recipe": "verify.py",
+      "exitCode": 0,
+      "elapsedSeconds": 2.565842875279486
+    }
+  ],
+  "elapsedSeconds": 2.885842917021364,
+  "CPUThreads": 2,
+  "GPU": false,
+  "batchTimeoutSeconds": 1800,
+  "python": "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2"
+  }
+}
