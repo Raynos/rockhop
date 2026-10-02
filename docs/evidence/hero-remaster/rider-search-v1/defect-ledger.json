@@ -8095,5 +8095,39 @@
     "coverage": "Actual self-BVH controls detect nonadjacent/sharedvertex transverse crossing, miss sharededge and nonadjacent positivecoplanar overlap. It is not a complete AABB broadphase. Zero returnedpairs cannot clear coplanaroverlap or adjacentfolds.",
     "sourceReportTerminologyCorrection": "No application-level adjacentexclusions does not imply full nativeBVH coverage. Coplanar count0 is zero returnedcandidates only, not classifiedglobalclearance.",
     "limits": "No repair/anatomy/pose/characterpass"
+  },
+  "failedNeckPrefix213": {
+    "status": "PARENT_VERIFIED_FAILED_UNCAPPED_PREFIX_ONE_ATTEMPT",
+    "pins": {
+      "inputPins": 8,
+      "ownedFiles": 13,
+      "privateOutputs": 3
+    },
+    "retainedBodyFacesTransformExact": true,
+    "protectedHeadRetainedFacePositionUVNormalExact": true,
+    "mouthPositionUVExact": true,
+    "headOriginalBINPrefixExact": true,
+    "actualUnriggedGLB": true,
+    "independentTopology": [
+      {
+        "kind": "actualFloat64",
+        "boundaryEdges": 308,
+        "nonmanifoldEdges": 0,
+        "zeroAreas": 0
+      },
+      {
+        "kind": "serializedFloat32",
+        "boundaryEdges": 306,
+        "nonmanifoldEdges": 0,
+        "zeroAreas": 0
+      }
+    ],
+    "cause": "One inner cut UV alias differs6.938893903907228e-18m from opposite interpolation ordering; quantization hides it but doesnotdefineweld",
+    "nextAdmittedCorrection": "Compute XYZ once per canonical physical sorted source edge, reuse across UV aliases. Keep selectedcuts/commonfield25mm/protectedheadhood exact; per-corner UV remains separate. ONE newpath attempt afterthiscommit.",
+    "limitations": [
+      "Internal cap absent; not acceptedjoin",
+      "No texture/bodyartscore or neck-motion/basicpose/gameplay/contact/mobile proof",
+      "Do not force308boundarycap or blankettoleranceweld"
+    ]
   }
 }

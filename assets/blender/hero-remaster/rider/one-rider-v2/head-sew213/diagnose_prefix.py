@@ -1,0 +1,14 @@
+"""Read-only diagnose exact saved failed prefix, no cap or corrective mesh."""
+import os
+os.environ.setdefault('OPENBLAS_NUM_THREADS','2');os.environ.setdefault('OMP_NUM_THREADS','2')
+from pathlib import Path
+import hashlib,json,numpy as np
+from scipy.spatial import cKDTree
+B=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2');R=B/'head-sew213';E=Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/head-sew213');z=np.load(R/'precap-partial.npz');V=z['attributePositions'];F=z['attributeFaces'];used=np.unique(F);expected=np.load(B/'head-join211/literal-cut211.npz')['donorInnerBoundaryPositions'];rows=[];saved={}
+for kind,P in [('actualPrefixFloat64',V),('hypotheticalGLTFSerializationFloat32',V.astype(np.float32))]:
+ U,inv=np.unique(P[used],axis=0,return_inverse=True);mapping=np.full(len(P),-1,int);mapping[used]=inv;Q=mapping[F];de=np.concatenate([Q[:,[0,1]],Q[:,[1,2]],Q[:,[2,0]]]);UE,C=np.unique(np.sort(de,axis=1),axis=0,return_counts=True);BE=UE[C==1];bounds=U[np.unique(BE)];area=np.linalg.norm(np.cross(U[Q[:,1]].astype(float)-U[Q[:,0]],U[Q[:,2]].astype(float)-U[Q[:,0]]),axis=1)/2;row={'kind':kind,'usedPhysicalVertices':len(U),'faces':len(Q),'boundaryEdges':len(BE),'nonmanifoldEdges':int((C>2).sum()),'zeroAreaFaces':int((area==0).sum()),'minimumAreaM2':float(area.min()),'boundaryBounds':[bounds.min(0).tolist(),bounds.max(0).tolist()],'boundaryAreaNewZeroFaceIDs':np.flatnonzero(area==0).tolist(),'zeroFaceRoles':z['roles'][area==0].tolist()};rows.append(row);saved[kind+'_positions']=U;saved[kind+'_faces']=Q;saved[kind+'_boundaryEdges']=BE
+# Exact Float64 distinct points merged by the hypothetical Float32 cast.
+U64=saved['actualPrefixFloat64_positions'];U32,iv=np.unique(U64.astype(np.float32),axis=0,return_inverse=True);keys,c=np.unique(iv,return_counts=True);groups=[]
+for key in keys[c>1]:
+ ids=np.flatnonzero(iv==key);points=U64[ids];d=max(np.linalg.norm(a-b) for a in points for b in points);groups.append({'float64PhysicalIDs':ids.tolist(),'positionsFloat64':points.tolist(),'maximumSpreadM':float(d),'float32Position':U32[key].tolist(),'isNearNeckCut':bool(np.all(abs(points[:,1]-1.55)<1e-10))})
+np.savez_compressed(R/'prefix-quotient-diagnostics.npz',**saved);report={'status':'FAILED_PRECAP_BOUNDARY_ALIAS_DIAGNOSTIC_NO_CORRECTION','prefixSHA256':hashlib.sha256((R/'precap-partial.npz').read_bytes()).hexdigest(),'rows':rows,'castMergedExactFloat64Groups':groups,'limits':['Float32 comparison is diagnostic, not a definition of an anatomical weld','No cap, new geometry recipe, correction, final export, texture render or acceptance','Canonical source-edge cached XYZ must be computed once and reused across UV aliases before another construction']};(E/'prefix-diagnostic.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'rows':rows,'mergedGroups':len(groups),'neckGroups':[g for g in groups if g['isNearNeckCut']]},indent=2))

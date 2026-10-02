@@ -2734,3 +2734,18 @@ inspection. No livephysics/closedgrip, legs/bind/pose/art/mobile pass. Cosmetics
 paused; new19bone/FK/Garage/contactmapping mandatory. Ship213due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-rig-adapter212/
 Ask: 248.
+
+## Round213 — preserve failed neck prefix before exact cache correction
+
+Finding: Actualouterneck sewing stops on308vs306innerboundary;6.94e-18m UV-alias
+cut drift is bookkeeping precision, not independentgenerator failure. No forcedcap.
+
+Validation: Parent24pins, retainedbodytransform/faceUVnormals/mouth/PBRBINexact;
+Float64/32 topology reproduces308/306, zerodegenerate/nonmanifold. ActualNPZ/GLB
+saved. Ship213both tiers exactbytefinish, crash103ticks, restart1/2ms, noerrors.
+
+Limits: Internalcapmissing, nomovingjoin/rig/appearance/contacts/mobile pass.
+ONEphysicaledgeXYZcachefix admittedfreshpath, same25mm/protectedfacehood. Armtrial
+separate; cosmeticspaused, ship216due. No normalplayerpromotion.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/head-sew213/
+Ask: 248.

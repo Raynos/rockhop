@@ -2550,3 +2550,27 @@ Parent read-only clean210 CPUrestBVH returns0pairs, but actualcontrols prove it
 MISSES positivecoplanar overlaps. Nativeoverlap is not completeAABBbroadphase;
 zero returnedcoplanarpairs cannot clearfolds. Keep thiscoverage limitation and
 originalinvalidnativequalification. Cosmetics paused. Ship213due next.
+
+## Retain real uncapped neck prefix; correct exact alias cache — round213
+
+ONE actual outerneck sewing trial is retained, not accepted:174236used physical
+vertices/348222triangles. Innerneck boundary308 instead ofregistered306 stops
+capconstruction. Parent verifies24pins, retainedbodyfaces under explicittransform,
+protectedface position/UV/normals, complete mouth and originalPBR BINbytes exact.
+Independent Float64/Float32 topology reproduces308/306boundaries, zero newzeroarea/
+nonmanifold. One cutalias differs6.94e-18m dueoppositeinterpolationorder; Float32
+quantization hidesit but doesnotdefineweld. ActualpartialNPZ+faileduncappedGLB saved.
+
+Next ONE exactcanonical physical-source-edge XYZcache correction is admitted in
+freshpath. UV interpolation stayspercorner; no anatomy/25mmneckbound/hood/face
+rulewidening, blankettoleranceweld or wrong308loopcap. This is firstfailedconstructed
+neckprefix, not another generatorfailure. FullnativeIPC screens findnointersections;
+actualcontrols detect nonadjacentcoplanar overlap butmisssharededgefolds. Separate
+sharededge audit reports0candidates; no movingjoin or thickness/art acceptance.
+No rendersafterunexpectedboundary, no rig, acceptedcharacter or playerpromotion.
+
+Ship213both tiers pass bytefinish40.083333333333336s/hash368f1ca5bd9e830a,
+crash103ticks, restart1/2ms, noerrors and20existingplayermodels. Nextship216.
+Armproportion trial runs separately; sourcehead/hood protected. CosmeticsPAUSED;
+restanatomy, allbasicposes, threevisualcheckpoints, actualGarage/lean/landing/
+saddle/grip/sole/mobile remainOPEN. Correctcache then cap+actualrender, not polish.

@@ -1,0 +1,36 @@
+{
+  "status": "FAILED_UNCAPPED_PREFIX_REST_AUDIT_NO_ACCEPTANCE",
+  "prefixSHA256": "b2047b3224088b19e79a61a6ae3eda02e2e66dc9f2ccfa5a235971cc6374fe81",
+  "rows": [
+    {
+      "kind": "actualPrefixFloat64",
+      "fullNativeIPCAnyIntersection": false,
+      "boundaryEdges": 308,
+      "nonmanifoldEdges": 0,
+      "windingConflictManifoldEdges": 0,
+      "exactSharedEdgePositiveCoplanarFoldCount": 0,
+      "exactFoldWitnesses": [],
+      "nearSameSideCandidatesCheckedExactly": 0,
+      "seconds": 2.3030985835939646
+    },
+    {
+      "kind": "hypotheticalGLTFSerializationFloat32",
+      "fullNativeIPCAnyIntersection": false,
+      "boundaryEdges": 306,
+      "nonmanifoldEdges": 0,
+      "windingConflictManifoldEdges": 0,
+      "exactSharedEdgePositiveCoplanarFoldCount": 0,
+      "exactFoldWitnesses": [],
+      "nearSameSideCandidatesCheckedExactly": 0,
+      "seconds": 2.300061374902725
+    }
+  ],
+  "nativeThreads": 2,
+  "controls": "ipc-controls.json measures nonadjacent coplanar detection and sharededge fold omission",
+  "limits": [
+    "No cap: inner306-edge cavity boundary remains open even when serialization hides cut alias",
+    "Exact adjacent coplanar fold check covers edge-neighbor folds; no general near-coplanar thickness/visibility gate",
+    "Native IPC boolean detects intersections but does not identify face pairs",
+    "No art, rig, neck motion, contacts or source-native acceptance"
+  ]
+}

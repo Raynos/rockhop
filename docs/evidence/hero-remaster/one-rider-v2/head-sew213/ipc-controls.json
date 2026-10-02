@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "case": "nonadjacent_crossing",
+      "intersects": true
+    },
+    {
+      "case": "nonadjacent_separated",
+      "intersects": false
+    },
+    {
+      "case": "shared_vertex_crossing",
+      "intersects": true
+    },
+    {
+      "case": "shared_edge_positive_coplanar_fold",
+      "intersects": false
+    },
+    {
+      "case": "nonadjacent_positive_coplanar_overlap",
+      "intersects": true
+    }
+  ],
+  "nativeThreads": 2,
+  "limits": "Measured controls define coverage. False is not a general coplanar-clear claim. Separate exact planar area-overlap and adjacent-fold checks required."
+}

@@ -1,0 +1,16 @@
+"""Actual failed-prefix rest screens; no cap or acceptance."""
+import os
+os.environ.setdefault('OPENBLAS_NUM_THREADS','2');os.environ.setdefault('OMP_NUM_THREADS','2')
+from pathlib import Path
+import json,hashlib,time,numpy as np,ipctk
+from fractions import Fraction as Q
+ipctk.set_num_threads(2);B=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/head-sew213');E=Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/head-sew213');z=np.load(B/'prefix-quotient-diagnostics.npz');rows=[]
+def exact_coplanar(a,b,c,d):
+ x=[[Q(float(p[k]))-Q(float(a[k])) for k in range(3)] for p in [b,c,d]]
+ return x[0][0]*(x[1][1]*x[2][2]-x[1][2]*x[2][1])-x[0][1]*(x[1][0]*x[2][2]-x[1][2]*x[2][0])+x[0][2]*(x[1][0]*x[2][1]-x[1][1]*x[2][0])==0
+for key in ['actualPrefixFloat64','hypotheticalGLTFSerializationFloat32']:
+ s=time.monotonic();P=z[key+'_positions'].astype(float);F=z[key+'_faces'].astype(np.int32);D=np.concatenate([F[:,[0,1]],F[:,[1,2]],F[:,[2,0]]]);Eds,iv,c=np.unique(np.sort(D,axis=1),axis=0,return_inverse=True,return_counts=True);mesh=ipctk.CollisionMesh(P,Eds.astype(np.int32),F);intersects=bool(ipctk.has_intersections(mesh,P));face_ids=np.tile(np.arange(len(F)),3);order=np.argsort(iv,kind='stable');off=np.r_[0,np.cumsum(c)];two=np.flatnonzero(c==2);fa=face_ids[order[off[two]]];fb=face_ids[order[off[two]+1]];edges=Eds[two];A=P[edges[:,0]];B0=P[edges[:,1]];oa=np.array([next(int(x) for x in F[i] if x not in e) for i,e in zip(fa,edges)]);ob=np.array([next(int(x) for x in F[i] if x not in e) for i,e in zip(fb,edges)]);C=P[oa];D0=P[ob];n1=np.cross(B0-A,C-A);n2=np.cross(B0-A,D0-A);same_side=(n1*n2).sum(1)>0;triple=np.einsum('ij,ij->i',n1,D0-A);candidate=np.flatnonzero(same_side&(abs(triple)<=1e-12*np.linalg.norm(n1,axis=1)*np.maximum(np.linalg.norm(D0-A,axis=1),1e-20)));fold=[]
+ for k in candidate:
+  if exact_coplanar(A[k],B0[k],C[k],D0[k]):fold.append({'edge':edges[k].tolist(),'faces':[int(fa[k]),int(fb[k])]})
+ directed_sign=np.where(D[:,0]<D[:,1],1,-1);winding=np.bincount(iv,weights=directed_sign,minlength=len(Eds));row={'kind':key,'fullNativeIPCAnyIntersection':intersects,'boundaryEdges':int((c==1).sum()),'nonmanifoldEdges':int((c>2).sum()),'windingConflictManifoldEdges':int(((c==2)&(winding!=0)).sum()),'exactSharedEdgePositiveCoplanarFoldCount':len(fold),'exactFoldWitnesses':fold[:30],'nearSameSideCandidatesCheckedExactly':len(candidate),'seconds':time.monotonic()-s};rows.append(row)
+report={'status':'FAILED_UNCAPPED_PREFIX_REST_AUDIT_NO_ACCEPTANCE','prefixSHA256':hashlib.sha256((B/'precap-partial.npz').read_bytes()).hexdigest(),'rows':rows,'nativeThreads':ipctk.get_num_threads(),'controls':'ipc-controls.json measures nonadjacent coplanar detection and sharededge fold omission','limits':['No cap: inner306-edge cavity boundary remains open even when serialization hides cut alias','Exact adjacent coplanar fold check covers edge-neighbor folds; no general near-coplanar thickness/visibility gate','Native IPC boolean detects intersections but does not identify face pairs','No art, rig, neck motion, contacts or source-native acceptance']};(E/'prefix-rest-audit.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

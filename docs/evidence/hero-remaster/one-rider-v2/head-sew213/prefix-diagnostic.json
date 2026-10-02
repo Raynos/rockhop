@@ -1,0 +1,84 @@
+{
+  "status": "FAILED_PRECAP_BOUNDARY_ALIAS_DIAGNOSTIC_NO_CORRECTION",
+  "prefixSHA256": "b2047b3224088b19e79a61a6ae3eda02e2e66dc9f2ccfa5a235971cc6374fe81",
+  "rows": [
+    {
+      "kind": "actualPrefixFloat64",
+      "usedPhysicalVertices": 174236,
+      "faces": 348222,
+      "boundaryEdges": 308,
+      "nonmanifoldEdges": 0,
+      "zeroAreaFaces": 0,
+      "minimumAreaM2": 6.003988199577947e-15,
+      "boundaryBounds": [
+        [
+          0.5718542830007711,
+          1.55,
+          -0.05209737849545136
+        ],
+        [
+          0.7195994971790473,
+          1.5504052639007568,
+          0.05696082351465372
+        ]
+      ],
+      "boundaryAreaNewZeroFaceIDs": [],
+      "zeroFaceRoles": []
+    },
+    {
+      "kind": "hypotheticalGLTFSerializationFloat32",
+      "usedPhysicalVertices": 174235,
+      "faces": 348222,
+      "boundaryEdges": 306,
+      "nonmanifoldEdges": 0,
+      "zeroAreaFaces": 0,
+      "minimumAreaM2": 3.552713678800501e-15,
+      "boundaryBounds": [
+        [
+          0.571854293346405,
+          1.5499999523162842,
+          -0.0520973801612854
+        ],
+        [
+          0.7195994853973389,
+          1.5499999523162842,
+          0.0569608248770237
+        ]
+      ],
+      "boundaryAreaNewZeroFaceIDs": [],
+      "zeroFaceRoles": []
+    }
+  ],
+  "castMergedExactFloat64Groups": [
+    {
+      "float64PhysicalIDs": [
+        53158,
+        53159
+      ],
+      "positionsFloat64": [
+        [
+          0.5920344011907933,
+          1.55,
+          -0.038687473058304174
+        ],
+        [
+          0.5920344011907933,
+          1.55,
+          -0.03868747305830417
+        ]
+      ],
+      "maximumSpreadM": 6.938893903907228e-18,
+      "float32Position": [
+        0.5920343995094299,
+        1.5499999523162842,
+        -0.03868747130036354
+      ],
+      "isNearNeckCut": true
+    }
+  ],
+  "limits": [
+    "Float32 comparison is diagnostic, not a definition of an anatomical weld",
+    "No cap, new geometry recipe, correction, final export, texture render or acceptance",
+    "Canonical source-edge cached XYZ must be computed once and reused across UV aliases before another construction"
+  ]
+}
