@@ -16,6 +16,41 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Actual weight witness and infeasible tiny patch — round188
+
+Actual stock Three.js reproduces extreme source edge stretching over all5,404
+controlled frames. The left inner-sleeve edge grows6.915→177.690mm (25.695×),
+the right witness reaches21.824× and the hip witness2.120× in sitting. Spatial
+weight-gradient vectors explain the selected local edge contribution; this does
+not semantically classify the whole chest or prove every arm weight is wrong.
+Raw source/loaded rest fields and Float32 normalization are explicit.384nonzero
+glove-morph applications confirm morph-before-LBS. No source, rig or weights edit.
+
+Parent verifies20frozen hashes,14inputs,two lossless archives and independently
+reconstructs all21,616actual witness records within1.71e-15m. The proposed40mm
+patch has52physical nodes/28free/24fixed. An actual two-edge path of17.628mm,
+both edges>=2mm, has fixed endpoints304.141mm apart overhead. It necessarily
+requires17.254×strain; the frozen1.5×bar allows26.441mm. Reject this exact
+weights-only patch before a solver/export. No support/radius/cap/threshold
+relaxation; no global impossibility claim and no generated repair candidate.
+Earlier three diagnostic setup faults remain disclosed; not three art repairs.
+
+Next is a source-preserving neutral axilla construction audit. Measure actual
+arm/torso cross-section contours and source connectivity through the low armhole,
+with frozen source triangle/vertex IDs and matched played187 evidence. Do not
+infer a resting welded web from a posed weight failure alone. If the source
+attachment is too low, define ONE bounded local transition-strip construction
+edit while preserving outer sleeve/chest front/back/head/hood/cuffs/lower body;
+freeze exact boundaries and displacement bounds before geometry. If rest space
+is sound, choose a different broader semantic ownership mechanism explicitly,
+not a stealth enlargement of the disproven tiny patch or a retired field retry.
+
+Construction→rig/weights→deformation order and cosmetic pause remain. Head
+identity,19bone bind/socket/physics behavior preserved; changes in anatomy need
+an explicit adapter. All three visual checkpoints, complete28-family motions,
+full-body/face7 target8, hips, actual Garage/riding/lean/landing/saddle/grip/sole
+and mobile remain open. Mandatory ordinary ship189 is next. No human hold.
+
 ## Exported motion rejects the unchanged body field — round187
 
 The explicit 19-bone handoff works without changing source geometry, weights,

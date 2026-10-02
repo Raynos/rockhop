@@ -2296,3 +2296,21 @@ does not fix underarms/hips. Next actualThree witness and bounded local
 construction/ownership diagnosis; cosmetics paused, ship189 next.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment187/
 Ask: 248.
+
+## Round188 — rule out a tiny weight fix before generating a candidate
+
+Finding: Actual Three confirms the source witness stretch; the frozen40mm
+weights patch cannot satisfy its fixed-boundary1.5×strain condition.
+
+Validation: All5,404finite controls on6body+1glove vertices,384nonzero
+morph-before-LBS applications; parent reconstructs21,616records within
+1.71e-15m,20frozen hashes/14inputs/two lossless archives verified. Literal
+17.628mm two-edge path>=2mm requires304.141mm fixed span/17.254×strain.
+
+Limits: No solver/candidate/source/rig/weight/GPU changes; not global
+infeasibility, whole-garment or anatomy pass. Played187underarm/hip
+failures stand. Three diagnostic setup faults transparent, no art repairs.
+Next source resting axilla contour/connectivity audit before regional
+construction/ownership; cosmetics paused. Mandatory ship189 next.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-rig188/
+Ask: 248.

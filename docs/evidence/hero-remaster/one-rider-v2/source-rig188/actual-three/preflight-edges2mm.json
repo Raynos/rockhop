@@ -1,0 +1,103 @@
+{
+  "status": "PREFLIGHT_REJECTED_NECESSARY_BOUND_GT1_5",
+  "sourceSHA256": "4eb597a9ff926fb5ce30854272d8391347c2e220829486136b1509e02faa947c",
+  "fixtureSHA256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+  "constrainedEdgesMinimumRestLengthM": 0.002,
+  "pathEdgesWithinFrozenPatch": true,
+  "framesTested": 5404,
+  "fixedNodes": [
+    3413,
+    3516,
+    3600,
+    3638,
+    3837,
+    3967,
+    4119,
+    4137,
+    4149,
+    4277,
+    4279,
+    4384,
+    4387,
+    4492,
+    4993,
+    5162,
+    5556,
+    5701,
+    5734,
+    5801,
+    6031,
+    6099,
+    6270,
+    6420
+  ],
+  "physicalNodeCount": 52,
+  "worst": {
+    "family": "overhead",
+    "frame": 96,
+    "timeSeconds": 2.0,
+    "minimumNecessaryStrainBound": 17.25372627667736,
+    "fixedPhysicalEndpoints": [
+      3516,
+      4119
+    ],
+    "fixedEndpointBodyAliases": [
+      [
+        1545
+      ],
+      [
+        1767,
+        1768
+      ]
+    ],
+    "posedEndpointDistanceM": 0.30414095284848547,
+    "shortestConstrainedRestEdgePathM": 0.01762755175150811,
+    "allowed1_5PathLengthM": 0.026441327627262166,
+    "violationM": 0.2776996252212233,
+    "pathPhysicalIDs": [
+      3516,
+      3809,
+      4119
+    ],
+    "pathSourcePositionsM": [
+      [
+        0.544866681098938,
+        1.111234188079834,
+        0.26674237847328186
+      ],
+      [
+        0.5488701462745667,
+        1.1110936403274536,
+        0.256262868642807
+      ],
+      [
+        0.5532842874526978,
+        1.1073317527770996,
+        0.2535366714000702
+      ]
+    ],
+    "pathRestEdgeLengthsM": [
+      0.011219073641356924,
+      0.0064084781101511855
+    ],
+    "minimumPathEdgeM": 0.0064084781101511855,
+    "pathBodyAttributeAliases": [
+      [
+        1545
+      ],
+      [
+        1721
+      ],
+      [
+        1767,
+        1768
+      ]
+    ]
+  },
+  "limits": [
+    "A necessary triangle-inequality bound valid for EVERY weight solution or extra-support field inside this exact patch while boundary and geometry stay fixed.",
+    "No solver/candidate/export.",
+    "This rejects the frozen40mm/256node1.5strain approach; no patch enlargement or relaxed threshold.",
+    "No global infeasibility claim about construction changes, changed boundaries or deformation representation."
+  ]
+}

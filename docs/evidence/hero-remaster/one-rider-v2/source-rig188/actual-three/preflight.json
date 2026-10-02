@@ -1,0 +1,53 @@
+{
+  "status": "PREFLIGHT_REJECTED_NO_SOLVER_OR_CANDIDATE",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/hood-fixed185-187/rider.glb",
+  "sourceSHA256": "4eb597a9ff926fb5ce30854272d8391347c2e220829486136b1509e02faa947c",
+  "fixtureSHA256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+  "radiusM": 0.04,
+  "physicalNodeCap": 256,
+  "nodesInsideRadius": 52,
+  "freeNodes": 28,
+  "fixedOuterRingNodes": 24,
+  "fixedProtectedAliasNodes": 0,
+  "fixedTotalNodes": 24,
+  "patchNodeCapSatisfied": true,
+  "strainLimit": 1.5,
+  "fixedEndpointNecessaryBoundSatisfied": false,
+  "worstFixedEndpointBound": {
+    "family": "overhead",
+    "frame": 96,
+    "timeSeconds": 2.0,
+    "minimumNecessaryStrainBound": 17.25372627667736,
+    "fixedPhysicalEndpoints": [
+      3516,
+      4119
+    ],
+    "fixedEndpointBodyAliases": [
+      [
+        1545
+      ],
+      [
+        1767,
+        1768
+      ]
+    ],
+    "posedEndpointDistanceM": 0.30414095284848547,
+    "shortestPatchRestEdgePathM": 0.01762755175150811,
+    "allowed1_5PathLengthM": 0.026441327627262166,
+    "violationM": 0.2776996252212233
+  },
+  "testedFrames": 5404,
+  "existingJointSupportOnly": true,
+  "protectedRules": [
+    "Geometry/indices/head/hood/gloves/alllowerbody unchanged.",
+    "Body exact-position aliases share one existing support field; no newjoint supports.",
+    "Outer ring and any glove/hood alias held exact.",
+    "No40mm patch growth, node cropping, threshold relaxation or solver."
+  ],
+  "constructionLimit": "A tiny elbow-region patch cannot repair the whole deep underarm web or move a sewn armhole. Root played187construction fails still take priority.",
+  "limits": [
+    "Fixed endpoint triangle inequality is a necessary condition, not sufficiency, collision proof or visible garment acceptance.",
+    "Every edge on shortest path is subject to proposed1.5limit, including edges<2mm: this is a stronger fullpatch proposal bound. A>=2mm-only bar cannot use shortedges as fixed constrained lengths; report this limitation, never mislabel as infeasibility of a looser specification.",
+    "CPU independent frozen fixture positions; actualThree witness verification separate report."
+  ]
+}

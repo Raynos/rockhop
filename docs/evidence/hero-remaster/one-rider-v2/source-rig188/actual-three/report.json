@@ -1,0 +1,962 @@
+{
+  "status": "ACTUAL_STOCK_THREE_WITNESSES_ONLY_NO_ART_ACCEPTANCE",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/hood-fixed185-187/rider.glb",
+  "sourceSHA256": "4eb597a9ff926fb5ce30854272d8391347c2e220829486136b1509e02faa947c",
+  "fixture": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json",
+  "fixtureSHA256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+  "recipeSHA256": "4c371089aa13e48bd8014344707cae024eec3176a63633d49363e4e56597a419",
+  "loaderSHA256": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a",
+  "protocolSHA256": "031ec5faf7abb90d13749bcb0a40b64c857588fedbb551705ed0109e01eb1c9d",
+  "bones": 19,
+  "meshes": 5,
+  "frames": 5404,
+  "witnesses": [
+    {
+      "label": "left_inner_elbow_edge",
+      "field": 0,
+      "ids": [
+        2030,
+        2172
+      ],
+      "sourceMorphPositionDeltas": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "label": "right_lateral_edge",
+      "field": 0,
+      "ids": [
+        18709,
+        19053
+      ],
+      "sourceMorphPositionDeltas": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "label": "hip_edge",
+      "field": 0,
+      "ids": [
+        12346,
+        12359
+      ],
+      "sourceMorphPositionDeltas": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "label": "nonzero_grip_morph_witness",
+      "field": 1,
+      "ids": [
+        3372,
+        3372
+      ],
+      "sourceMorphPositionDeltas": [
+        [
+          [
+            -0.06834542751312256,
+            0.06490641832351685,
+            0.02167847752571106
+          ],
+          [
+            -0.06834542751312256,
+            0.06490641832351685,
+            0.02167847752571106
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  ],
+  "changedNormalizationLanes": [
+    {
+      "vertices": 22240,
+      "lanes": 58,
+      "maximumChange": 5.960464477539063e-8
+    },
+    {
+      "vertices": 4021,
+      "lanes": 0,
+      "maximumChange": 0
+    }
+  ],
+  "maximumActualVsIndependentAffineErrorM": 1.6174619737278591e-15,
+  "maximumWorldFixtureError": 1.4432899320127035e-15,
+  "nonzeroMorphBeforeLBSApplications": 384,
+  "rawDocumentRestVsLoaderMaxError": 0,
+  "trajectoriesUncompressedSHA256": "c3610331813186833b6df14bfe5bea54a9727ff4dcb6d8091dac79e2c57edf1a",
+  "trajectoriesGzipSHA256": "56ef516746b403f0bd9b0388e6971e65e4ad1b5a052465a41cfc6835737304a6",
+  "rows": [
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "neutral",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "horizontal",
+      "samples": 193,
+      "maximumRatio": 16.218340850925962,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "overhead",
+      "samples": 193,
+      "maximumRatio": 25.69498330481107,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "forward",
+      "samples": 193,
+      "maximumRatio": 17.35384086886892,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "elbow",
+      "samples": 193,
+      "maximumRatio": 17.46595229533254,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "forearm_twist",
+      "samples": 193,
+      "maximumRatio": 14.902321427893678,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "wrist_flex",
+      "samples": 193,
+      "maximumRatio": 12.78335412236677,
+      "worstFrame": 120
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "wrist_deviation",
+      "samples": 193,
+      "maximumRatio": 12.783354122366786,
+      "worstFrame": 100
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "grip",
+      "samples": 193,
+      "maximumRatio": 12.783354122366735,
+      "worstFrame": 144
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "squat",
+      "samples": 193,
+      "maximumRatio": 0.9999961713808543,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "sit",
+      "samples": 193,
+      "maximumRatio": 0.9999966127100818,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "lean",
+      "samples": 193,
+      "maximumRatio": 0.9999969891458081,
+      "worstFrame": 48
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "horizontal.L",
+      "samples": 193,
+      "maximumRatio": 16.218340850925962,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "horizontal.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "overhead.L",
+      "samples": 193,
+      "maximumRatio": 25.69498330481107,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "overhead.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "forward.L",
+      "samples": 193,
+      "maximumRatio": 17.35384086886892,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "forward.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "elbow.L",
+      "samples": 193,
+      "maximumRatio": 17.46595229533254,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "elbow.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "forearm_twist.L",
+      "samples": 193,
+      "maximumRatio": 14.902321427893678,
+      "worstFrame": 96
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "forearm_twist.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "wrist_flex.L",
+      "samples": 193,
+      "maximumRatio": 12.78335412236677,
+      "worstFrame": 120
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "wrist_flex.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "wrist_deviation.L",
+      "samples": 193,
+      "maximumRatio": 12.783354122366786,
+      "worstFrame": 100
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "wrist_deviation.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "grip.L",
+      "samples": 193,
+      "maximumRatio": 12.783354122366735,
+      "worstFrame": 144
+    },
+    {
+      "witness": "left_inner_elbow_edge",
+      "family": "grip.R",
+      "samples": 193,
+      "maximumRatio": 0.9999957883359635,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "neutral",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "horizontal",
+      "samples": 193,
+      "maximumRatio": 13.749642443265117,
+      "worstFrame": 96
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "overhead",
+      "samples": 193,
+      "maximumRatio": 21.8237328852838,
+      "worstFrame": 96
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "forward",
+      "samples": 193,
+      "maximumRatio": 14.81798907956092,
+      "worstFrame": 96
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "elbow",
+      "samples": 193,
+      "maximumRatio": 11.398947907077895,
+      "worstFrame": 52
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "forearm_twist",
+      "samples": 193,
+      "maximumRatio": 11.376725802689519,
+      "worstFrame": 144
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "wrist_flex",
+      "samples": 193,
+      "maximumRatio": 11.376725802689576,
+      "worstFrame": 117
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "wrist_deviation",
+      "samples": 193,
+      "maximumRatio": 11.376725802689554,
+      "worstFrame": 97
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "grip",
+      "samples": 193,
+      "maximumRatio": 11.376725802689519,
+      "worstFrame": 144
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "squat",
+      "samples": 193,
+      "maximumRatio": 1.0000006038692963,
+      "worstFrame": 172
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "sit",
+      "samples": 193,
+      "maximumRatio": 1.0000006038692835,
+      "worstFrame": 31
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "lean",
+      "samples": 193,
+      "maximumRatio": 1.0000006038692888,
+      "worstFrame": 55
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "horizontal.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "horizontal.R",
+      "samples": 193,
+      "maximumRatio": 13.749642443265117,
+      "worstFrame": 96
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "overhead.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "overhead.R",
+      "samples": 193,
+      "maximumRatio": 21.8237328852838,
+      "worstFrame": 96
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "forward.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "forward.R",
+      "samples": 193,
+      "maximumRatio": 14.81798907956092,
+      "worstFrame": 96
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "elbow.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "elbow.R",
+      "samples": 193,
+      "maximumRatio": 11.398947907077895,
+      "worstFrame": 52
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "forearm_twist.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "forearm_twist.R",
+      "samples": 193,
+      "maximumRatio": 11.376725802689519,
+      "worstFrame": 144
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "wrist_flex.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "wrist_flex.R",
+      "samples": 193,
+      "maximumRatio": 11.376725802689576,
+      "worstFrame": 117
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "wrist_deviation.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "wrist_deviation.R",
+      "samples": 193,
+      "maximumRatio": 11.376725802689554,
+      "worstFrame": 97
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "grip.L",
+      "samples": 193,
+      "maximumRatio": 1.000000603869239,
+      "worstFrame": 192
+    },
+    {
+      "witness": "right_lateral_edge",
+      "family": "grip.R",
+      "samples": 193,
+      "maximumRatio": 11.376725802689519,
+      "worstFrame": 144
+    },
+    {
+      "witness": "hip_edge",
+      "family": "neutral",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "horizontal",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "overhead",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "forward",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "elbow",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "forearm_twist",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "wrist_flex",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "wrist_deviation",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "grip",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "squat",
+      "samples": 193,
+      "maximumRatio": 2.0606119529235194,
+      "worstFrame": 96
+    },
+    {
+      "witness": "hip_edge",
+      "family": "sit",
+      "samples": 193,
+      "maximumRatio": 2.1195589674544437,
+      "worstFrame": 96
+    },
+    {
+      "witness": "hip_edge",
+      "family": "lean",
+      "samples": 193,
+      "maximumRatio": 1.389089315074396,
+      "worstFrame": 144
+    },
+    {
+      "witness": "hip_edge",
+      "family": "horizontal.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "horizontal.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "overhead.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "overhead.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "forward.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "forward.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "elbow.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "elbow.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "forearm_twist.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "forearm_twist.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "wrist_flex.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "wrist_flex.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "wrist_deviation.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "wrist_deviation.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "grip.L",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "hip_edge",
+      "family": "grip.R",
+      "samples": 193,
+      "maximumRatio": 1.0000000029599778,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "neutral",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "horizontal",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "overhead",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "forward",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "elbow",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "forearm_twist",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "wrist_flex",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "wrist_deviation",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "grip",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "squat",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "sit",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "lean",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "horizontal.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "horizontal.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "overhead.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "overhead.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "forward.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "forward.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "elbow.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "elbow.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "forearm_twist.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "forearm_twist.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "wrist_flex.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "wrist_flex.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "wrist_deviation.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "wrist_deviation.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "grip.L",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    },
+    {
+      "witness": "nonzero_grip_morph_witness",
+      "family": "grip.R",
+      "samples": 193,
+      "maximumRatio": null,
+      "worstFrame": 192
+    }
+  ],
+  "limits": [
+    "All5404 controlled fixture frames, only6body+1glove vertices, no full garment or intersections acceptance.",
+    "No renderer/GPU, textures omitted only in loader memory, source unchanged.",
+    "No bone/weight/geometry changes or production physics/controller test.",
+    "Explicit child-axis gameplay adaptation is outside this named-world fixture gate.",
+    "Known deep underarm construction web remains failed; this does not prescribe weights-only repair."
+  ]
+}
