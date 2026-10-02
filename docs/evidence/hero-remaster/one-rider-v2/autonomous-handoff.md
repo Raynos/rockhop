@@ -16,6 +16,46 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Bounded panel authoring stopped; retain measured smaller alternative — round202
+
+The author could not define a credible literal1235-face front/back/medial-return
+layout that preserves151 folded boundaries and creates a sound high saddle.
+Freeze that bounded DESIGN obstruction: zero geometry candidates, no solver,
+weights/export/GPU. It is not a mathematical infeasibility proof and not another
+failed generated model. Do not invent a cap/loft merely to satisfy output count.
+The existing source/likedhead remain unchanged; cosmetics PAUSED.
+
+A directed read-only alternative retains the real upper source connection:
+47 original cut faces +12 actual194 collided retained faces +two enclosed island
+faces8350/8351 =61-face disk,58vertices/118edges/Euler1, one53-edge boundary.
+Parent verifies6files/9inputs +extension3files/12inputs, literal61 incidence,
+all53 degree2 edges and exact49-node high path with82 retained supporting faces.
+The path maximumY is1.301290512m; front1420/rear13550 remain boundary. This is an
+UNSEALED source cut, not a candidate or art success.194's30 panel/panel folds
+remain unresolved; removing its12 retained crossing faces does not validate or
+permit automatic reuse of independent-arclength ruled sheets.
+
+Parent initially overrequired all original incident faces on each retained path
+edge; a cut edge correctly has one removed and one retained face. Correct the
+read-only review to require retained support, verify all82 supporting faces,
+retain the setup disclosure. No source geometry changed.
+
+Keep this61-face repair alternative and its exact high path as evidence, not a
+silent replacement of the current comparison. Independent high-resolution
+H21-4/raw-before-reduction audit is frozen for parent review next; do not blame
+reducer/generator without literal lineage. If native construction is already
+fused, consider a new reconstruction reference with clearly separated horizontal
+T-pose arms, same liked character/clothes, preserving all original candidates.
+That is a structural hypothesis to test, not hair/eye/texture polish or guaranteed
+anatomy. No expensive new model job or new body has been produced by202.
+
+The three visual checkpoints and garment→rig/weights→deformation priority remain.
+New source/layout may require explicit19bone/rest/bind/socket adaptation; preserve
+existing physicsCOM/lean/IK/grip/sole/Garage behavior. Continuous gray/PBR/exported
+basicposes, fullbody+face separate≥7/target8 and actual gameplay contacts/mobile
+still OPEN. Five/15 autonomous switch/fallback bounds unchanged, no human gates.
+Ordinary ship201 current/next204; normal player assets unchanged.
+
 ## Different local panel topology registered; actual high join required — round201
 
 Parent48pins and independent source graphs verify a1235-face local annulus,

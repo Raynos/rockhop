@@ -2569,3 +2569,20 @@ pass. Larger1235domain releases70old boundary nodes explicitly; no old source-
 star or retired tube/cage reuse. Cosmeticspause/weightsdormant; nextship204.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/local-retopology-design200/
 Ask: 248.
+
+## Round202 — retain a real high-path alternative after authoring failure
+
+Finding: Bounded1235panel authoring produced no credible layout and zero
+candidates. Freeze design failure without an infeasibility claim; preserve
+measured61face source disk retaining existing high connection as alternative.
+
+Validation: Parent6files/9inputs+3extensionfiles/12inputs;61faces/58nodes/
+118edges/Euler1/53degree2boundary/49node path and82supportfaces verified.
+PathmaxY1.301290512. Initial all-incident-face assertion corrected for cut
+halfedges; setup disclosed, no geometry edits. No solver/weights/export/GPU.
+
+Limits: 61cut unsealed,194self-folds still unresolved; not surface/art/skin pass.
+Highraw causality audit awaiting parent; no new generation or silentcomparison
+replacement. Cosmeticspause,3visual/basicposes/gameplaycontacts/mobileOPEN.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/authored-panel202/
+Ask: 248.
