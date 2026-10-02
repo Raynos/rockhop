@@ -16,7 +16,16 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round172, 2026-10-01
+## Current evidence — round173, 2026-10-01
+
+- Round173 strict mapping succeeds;386frame/48fps stockThree overhead.L+sit
+  short film rendered, gray/PBR3views, actualSHAverified. Matched beforeV5world
+  joint matrices exact386frames; muted local film playback to end. Parent partial
+  ordered inspection REJECTS flat/rigid underarm and insert-like shoulder. No
+  basicpose/anatomy/art/contact/mobile pass.14.29s/35.545GBcanonical lock.
+  Task3next resting sleeve curve/source then same short gate; after construction,
+  inspect lateral torso/shoulder ownership/anatomical pivots, then correctives.
+  Preserve liked head, no blind core reset or silent07replacement. Nextship174.
 
 - Round172 real skinned frozen06 source5021e33d1720 ready for strict handoff170.
   Original19bind/head/gloves/cheek/PBR/images/clips preserved, all94,952dense rows

@@ -1998,3 +1998,27 @@ basic pose/art/contact/Garage/mobile pass. Latest07construction remains separate
 no V7topology-specific correctives/materialadapter imported. Parent next maps
 frozen06and judges a short gray/PBRcontinuous transition before full5404gate.
 Cosmetics paused; task3owns construction; next mandatoryship174. No promotion.
+
+## Round173 — the real skinned sleeve still fails moving appearance
+
+Finding: protocol-safe export is not a natural garment. Overhead arm transition
+retains a flat/rigid underarm section and insert-like shoulder silhouette. Neutral,
+return and sitting neighborhoods remain recessed/squared. Frozen06is rejected;
+no latest07silent substitution or optimistic rest/matrix-only pass.
+
+Validation: strict170handoff sourceBIN/non-node JSON and19rest/bind/head/glove/
+PBR metadata preserve.386frames/48fps overhead.L+sit, three gray/PBRviews,
+exact loaded candidate80387f59dd90 and no captureerrors. BeforeV5matched world
+joint matrices exact all386frames. Matched side-gray H26448fps386decoded frames,
+144949bytes; silent headless playback ended8.042s,no errors. Parent inspected
+four13frame ordered neighborhoods and full six-view peak frames.14.29s/35.545GB
+canonical lock,<70GB/1700sbounds. Types/oxlint pass. Decoder __name setup failure
+receipt retained; browser initialization fixed, model/movie unchanged.
+
+Limits: partial visual rejection, no all-frame/full5404subjective acceptance or
+new triangle/collapse measurement. Rest/bind protocol is not anatomical shoulder
+approval. No face/body score, realGarage/riding/landing/contact/mobile pass.
+Task3owns next rest-valid sleeve curve; same short moving gate before full
+qualification. Then lateral chest/shoulder ownership/anatomical pivot diagnosis,
+then residualcorrectives. Preserve liked head/physics/explicitadapter, no blind
+central-core reset, cosmetics paused. Next mandatoryship174. No promotion.

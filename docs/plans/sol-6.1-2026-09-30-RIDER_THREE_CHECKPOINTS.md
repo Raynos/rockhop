@@ -74,7 +74,17 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current construction decision — round172
+## Current construction decision — round173
+
+Round173strict handoff and short stockThree capture succeeded as protocol, but
+frozen06moving appearance is REJECTED.386frames/48fps of complete overhead.L
+and sit transitions, matched gray/PBR front/side/back; beforeV5world-joint matrices
+are exact across386frames. Matched side-gray film played silently to end. Parent
+ordered neighborhoods show flat/rigid underarm cap and insert-like shoulder
+silhouette; no clean rest count or bind/matrix check can override those failures.
+Known06UV defects remain; latest07/next sleeve curve are separate, not silently
+substituted. Scope is partial visual rejection, not all-frame/full5404acceptance.
+See [moving evidence](../evidence/hero-remaster/one-rider-v2/tube-motion173/README.md).
 
 Round172 delivers a real skinned frozen06 protocol source, not a static Blender
 snapshot. Original19bind/nodes/head/gloves/cheek/PBR/images/animations are exact;
@@ -85,12 +95,15 @@ untouched; only changed garment materials consumeUV0. Parent independent raw/
 array audit passes; float64→float32 rounding is explicit. No moving/quality pass.
 See [export evidence](../evidence/hero-remaster/one-rider-v2/candidate-export172/README.md).
 
-Next: strict handoff170 mapping of frozen06, short continuous exported Three
-transition, then judge gray/PBR seam and volume behavior against the target.
-Do not silently substitute latest07UV/construction, import a static snapshot or
-copy V7's topology-specific morphs/material adapter. If short motion fails, retain
-evidence and change construction/rig strategy within existing autonomous bounds.
-Full5404fixture/actualGarage/physics/contact/mobile only follow a viable source.
+Next: inspect task3next rest-valid sleeve curve/source, then the same short
+continuous Three transition. Preserve head/identity/physics and explicit adapter.
+After sound resting construction, inspect lateral chest/shoulder vertex ownership
+and anatomical pivots; current19bind compatibility is not anatomical approval.
+Do not blindly reset intact central-core weights or mandate old bone positions
+if anatomy changes. Residual correctives follow construction and rig diagnosis.
+Keep failure lineage/autonomous bounds. Full5404fixture/actualGarage/physics/
+contact/mobile only follow a viable source. No latest07silent substitution,
+static-snapshot runtime shortcut or V7topology-specific morph/material copying.
 
 Construction→rig/weights→deformation remains the execution order; cosmetics
 remain paused. Task3 owns reconstruction of the22piercing sleeve boundary edges.

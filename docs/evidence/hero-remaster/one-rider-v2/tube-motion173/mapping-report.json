@@ -1,0 +1,1023 @@
+{
+  "status": "DIAGNOSTIC_HANDOFF_VALIDATED_UNACCEPTED",
+  "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-export172/source06/rider.glb",
+  "sourceSHA256": "5021e33d17205fa7c40f4aa5b7075f1a19e4127b742d13cc0e30ceb9612dc191",
+  "reference": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb",
+  "referenceSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+  "recipeSHA256": "d90018cc9c94706f564b8440349267fd4b47a1e2bffacb7b087ed01af6f7fd90",
+  "outputDirectory": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/source06-protocol173",
+  "checks": [
+    {
+      "label": "19 inverseBindMatrices",
+      "sourceAccessor": 112,
+      "referenceAccessor": 112,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "MAT4",
+        "count": 19,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "MAT4",
+        "count": 19,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        19,
+        16
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "be7b66ea323760c9012de2c7b7c3cd9f27009aee77eed5ff5d1e88909244a0ac",
+      "referenceDenseSHA256": "be7b66ea323760c9012de2c7b7c3cd9f27009aee77eed5ff5d1e88909244a0ac"
+    },
+    {
+      "label": "primitive1/indices",
+      "sourceAccessor": 25,
+      "referenceAccessor": 25,
+      "sourceSignature": {
+        "componentType": 5123,
+        "type": "SCALAR",
+        "count": 20649,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5123,
+        "type": "SCALAR",
+        "count": 20649,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        20649,
+        1
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "20dfff64c207ed8ced2f50a8c462e0b54ea33b4ca59b74fc1571d7ed1468b0a9",
+      "referenceDenseSHA256": "20dfff64c207ed8ced2f50a8c462e0b54ea33b4ca59b74fc1571d7ed1468b0a9"
+    },
+    {
+      "label": "primitive1/POSITION",
+      "sourceAccessor": 15,
+      "referenceAccessor": 15,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "7fac8c021bb940f380d158632511e074e28c6a4c508e3ebce0c900c6e756ac75",
+      "referenceDenseSHA256": "7fac8c021bb940f380d158632511e074e28c6a4c508e3ebce0c900c6e756ac75"
+    },
+    {
+      "label": "primitive1/NORMAL",
+      "sourceAccessor": 16,
+      "referenceAccessor": 16,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "6dadeec227ac3d8b9b602d5e1dc60c3155d12b2c67b9ab942dd161563cfc1b93",
+      "referenceDenseSHA256": "6dadeec227ac3d8b9b602d5e1dc60c3155d12b2c67b9ab942dd161563cfc1b93"
+    },
+    {
+      "label": "primitive1/TEXCOORD_0",
+      "sourceAccessor": 17,
+      "referenceAccessor": 17,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        2
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "77402229ff462a4a3bb9f782901d21f9d1905a19804ac2c417d5be194b022f90",
+      "referenceDenseSHA256": "77402229ff462a4a3bb9f782901d21f9d1905a19804ac2c417d5be194b022f90"
+    },
+    {
+      "label": "primitive1/TEXCOORD_1",
+      "sourceAccessor": 18,
+      "referenceAccessor": 18,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        2
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "1b58a4c6097cea990822c61d2750457ed6a1cc6af57f2236f070dfc5d8aa1b91",
+      "referenceDenseSHA256": "1b58a4c6097cea990822c61d2750457ed6a1cc6af57f2236f070dfc5d8aa1b91"
+    },
+    {
+      "label": "primitive1/TEXCOORD_2",
+      "sourceAccessor": 19,
+      "referenceAccessor": 19,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        2
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "948e95d3f978078718b69a096da1b4287be798acf68bee60cc506ebf7f1d6f4b",
+      "referenceDenseSHA256": "948e95d3f978078718b69a096da1b4287be798acf68bee60cc506ebf7f1d6f4b"
+    },
+    {
+      "label": "primitive1/COLOR_0",
+      "sourceAccessor": 20,
+      "referenceAccessor": 20,
+      "sourceSignature": {
+        "componentType": 5121,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": true,
+        "normalizedPresent": true
+      },
+      "referenceSignature": {
+        "componentType": 5121,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": true,
+        "normalizedPresent": true
+      },
+      "shape": [
+        4021,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "7da947d24983d8b4328ee51e48ec306b6e4d41638da6a374b2a9c9ea10393a16",
+      "referenceDenseSHA256": "7da947d24983d8b4328ee51e48ec306b6e4d41638da6a374b2a9c9ea10393a16"
+    },
+    {
+      "label": "primitive1/COLOR_1",
+      "sourceAccessor": 21,
+      "referenceAccessor": 21,
+      "sourceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": true,
+        "normalizedPresent": true
+      },
+      "referenceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": true,
+        "normalizedPresent": true
+      },
+      "shape": [
+        4021,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "5385850ea5763a8f60b7b03266e0a5d8bfd4ed1cd8b8dc831a7bed9e8df009b1",
+      "referenceDenseSHA256": "5385850ea5763a8f60b7b03266e0a5d8bfd4ed1cd8b8dc831a7bed9e8df009b1"
+    },
+    {
+      "label": "primitive1/COLOR_2",
+      "sourceAccessor": 22,
+      "referenceAccessor": 22,
+      "sourceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": true,
+        "normalizedPresent": true
+      },
+      "referenceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": true,
+        "normalizedPresent": true
+      },
+      "shape": [
+        4021,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "7e2200c10f523ae75b61b8843edb61e81b5aca87f45c82872fa2990c47f60deb",
+      "referenceDenseSHA256": "7e2200c10f523ae75b61b8843edb61e81b5aca87f45c82872fa2990c47f60deb"
+    },
+    {
+      "label": "primitive1/JOINTS_0",
+      "sourceAccessor": 115,
+      "referenceAccessor": 438,
+      "sourceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "a96dd640198ca07fb2aa8531b04ba398a9b35d3d79d73f83fe8debe6213e7199",
+      "referenceDenseSHA256": "a96dd640198ca07fb2aa8531b04ba398a9b35d3d79d73f83fe8debe6213e7199"
+    },
+    {
+      "label": "primitive1/WEIGHTS_0",
+      "sourceAccessor": 116,
+      "referenceAccessor": 439,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC4",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "991d98da84c941788616c5620a63cf031265e10ee0672bf7962daaf53232e2cb",
+      "referenceDenseSHA256": "991d98da84c941788616c5620a63cf031265e10ee0672bf7962daaf53232e2cb"
+    },
+    {
+      "label": "primitive1/morph0/POSITION",
+      "sourceAccessor": 26,
+      "referenceAccessor": 26,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "e7f1b6c7c9aecbc8ff7f6c1449187a57a2f01f51700ce9eb31b0181cfa494ea1",
+      "referenceDenseSHA256": "e7f1b6c7c9aecbc8ff7f6c1449187a57a2f01f51700ce9eb31b0181cfa494ea1"
+    },
+    {
+      "label": "primitive1/morph0/NORMAL",
+      "sourceAccessor": 27,
+      "referenceAccessor": 27,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "e9cdaa151201bdafd8361b761d9bdf28eb28f98e3ebabeb8ce1f4526d05e1a5b",
+      "referenceDenseSHA256": "e9cdaa151201bdafd8361b761d9bdf28eb28f98e3ebabeb8ce1f4526d05e1a5b"
+    },
+    {
+      "label": "primitive1/morph1/POSITION",
+      "sourceAccessor": 28,
+      "referenceAccessor": 28,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "8998bf58127dec22e914d676b8d3fe269acd01561e561e7996e2378da40b6fec",
+      "referenceDenseSHA256": "8998bf58127dec22e914d676b8d3fe269acd01561e561e7996e2378da40b6fec"
+    },
+    {
+      "label": "primitive1/morph1/NORMAL",
+      "sourceAccessor": 29,
+      "referenceAccessor": 29,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 4021,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        4021,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "ec079ddf9014c71235df418d1e5af3f8b54c3aea026525b5fdd1d5e069527d5f",
+      "referenceDenseSHA256": "ec079ddf9014c71235df418d1e5af3f8b54c3aea026525b5fdd1d5e069527d5f"
+    },
+    {
+      "label": "primitive3/indices",
+      "sourceAccessor": 51,
+      "referenceAccessor": 51,
+      "sourceSignature": {
+        "componentType": 5123,
+        "type": "SCALAR",
+        "count": 298455,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5123,
+        "type": "SCALAR",
+        "count": 298455,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        298455,
+        1
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "43c6a11fa474deece639ab5e8fcd4a299c2ae958e28a53f52e4df7f33845dee5",
+      "referenceDenseSHA256": "43c6a11fa474deece639ab5e8fcd4a299c2ae958e28a53f52e4df7f33845dee5"
+    },
+    {
+      "label": "primitive3/POSITION",
+      "sourceAccessor": 46,
+      "referenceAccessor": 46,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        61099,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "a4aac05d643625bcda2f4171cf4c9b1175412a106ebacbc05ffb2fbe214caba2",
+      "referenceDenseSHA256": "a4aac05d643625bcda2f4171cf4c9b1175412a106ebacbc05ffb2fbe214caba2"
+    },
+    {
+      "label": "primitive3/NORMAL",
+      "sourceAccessor": 47,
+      "referenceAccessor": 47,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC3",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        61099,
+        3
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "a9b77c4c9fb0c7f872562b34499e1399f94e8f7fbd2e17fbfe450761bab9eb40",
+      "referenceDenseSHA256": "a9b77c4c9fb0c7f872562b34499e1399f94e8f7fbd2e17fbfe450761bab9eb40"
+    },
+    {
+      "label": "primitive3/TEXCOORD_0",
+      "sourceAccessor": 48,
+      "referenceAccessor": 48,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC2",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        61099,
+        2
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "76d3d414f26f52b86ee230248f9d4a76b7cc4617d106366a635ce94c95fa8ff3",
+      "referenceDenseSHA256": "76d3d414f26f52b86ee230248f9d4a76b7cc4617d106366a635ce94c95fa8ff3"
+    },
+    {
+      "label": "primitive3/JOINTS_0",
+      "sourceAccessor": 119,
+      "referenceAccessor": 445,
+      "sourceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5123,
+        "type": "VEC4",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        61099,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "e5d200f6fd7ad29bd1a9339a9e88824d1e898f66165af5bf417baa48dc897df0",
+      "referenceDenseSHA256": "e5d200f6fd7ad29bd1a9339a9e88824d1e898f66165af5bf417baa48dc897df0"
+    },
+    {
+      "label": "primitive3/WEIGHTS_0",
+      "sourceAccessor": 120,
+      "referenceAccessor": 446,
+      "sourceSignature": {
+        "componentType": 5126,
+        "type": "VEC4",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "referenceSignature": {
+        "componentType": 5126,
+        "type": "VEC4",
+        "count": 61099,
+        "normalized": null,
+        "normalizedPresent": false
+      },
+      "shape": [
+        61099,
+        4
+      ],
+      "exact": true,
+      "losslessIndexEncodingDifference": false,
+      "sourceDenseSHA256": "0545db38c26ceeb00a6c3a73e3c73e9d899896026c0b3e38d98ba9629a3d7963",
+      "referenceDenseSHA256": "0545db38c26ceeb00a6c3a73e3c73e9d899896026c0b3e38d98ba9629a3d7963"
+    }
+  ],
+  "restHierarchy": [
+    {
+      "name": "pelvis",
+      "sourceNode": 3,
+      "referenceNode": 3,
+      "exactRestWorld": true
+    },
+    {
+      "name": "spine",
+      "sourceNode": 4,
+      "referenceNode": 4,
+      "exactRestWorld": true
+    },
+    {
+      "name": "chest",
+      "sourceNode": 5,
+      "referenceNode": 5,
+      "exactRestWorld": true
+    },
+    {
+      "name": "neck",
+      "sourceNode": 6,
+      "referenceNode": 6,
+      "exactRestWorld": true
+    },
+    {
+      "name": "head",
+      "sourceNode": 7,
+      "referenceNode": 7,
+      "exactRestWorld": true
+    },
+    {
+      "name": "shoulder.L",
+      "sourceNode": 8,
+      "referenceNode": 8,
+      "exactRestWorld": true
+    },
+    {
+      "name": "upperArm.L",
+      "sourceNode": 9,
+      "referenceNode": 9,
+      "exactRestWorld": true
+    },
+    {
+      "name": "forearm.L",
+      "sourceNode": 10,
+      "referenceNode": 10,
+      "exactRestWorld": true
+    },
+    {
+      "name": "hand.L",
+      "sourceNode": 11,
+      "referenceNode": 11,
+      "exactRestWorld": true
+    },
+    {
+      "name": "shoulder.R",
+      "sourceNode": 12,
+      "referenceNode": 12,
+      "exactRestWorld": true
+    },
+    {
+      "name": "upperArm.R",
+      "sourceNode": 13,
+      "referenceNode": 13,
+      "exactRestWorld": true
+    },
+    {
+      "name": "forearm.R",
+      "sourceNode": 14,
+      "referenceNode": 14,
+      "exactRestWorld": true
+    },
+    {
+      "name": "hand.R",
+      "sourceNode": 15,
+      "referenceNode": 15,
+      "exactRestWorld": true
+    },
+    {
+      "name": "thigh.L",
+      "sourceNode": 16,
+      "referenceNode": 16,
+      "exactRestWorld": true
+    },
+    {
+      "name": "shin.L",
+      "sourceNode": 17,
+      "referenceNode": 17,
+      "exactRestWorld": true
+    },
+    {
+      "name": "foot.L",
+      "sourceNode": 18,
+      "referenceNode": 18,
+      "exactRestWorld": true
+    },
+    {
+      "name": "thigh.R",
+      "sourceNode": 19,
+      "referenceNode": 19,
+      "exactRestWorld": true
+    },
+    {
+      "name": "shin.R",
+      "sourceNode": 20,
+      "referenceNode": 20,
+      "exactRestWorld": true
+    },
+    {
+      "name": "foot.R",
+      "sourceNode": 21,
+      "referenceNode": 21,
+      "exactRestWorld": true
+    }
+  ],
+  "currentContactMetadataSHA256": "509ac629acacfbe18e111b27f3a68bc9b809f8fc37ae5f30cf7f3027f5e5966b",
+  "declaredUniformScaleMetadataOnly": 1.015,
+  "appliedScale": 1.0,
+  "textureComparison": {
+    "resolvedEmbeddedImageBytesAndSemanticPBRBindingsExact": true,
+    "rawImageEncodingReferencesEqual": true,
+    "rawTextureEncodingReferencesEqual": true,
+    "imageRelocations": [
+      {
+        "sourceImage": 0,
+        "sourceBufferView": 11,
+        "referenceImageMatches": [
+          0
+        ]
+      },
+      {
+        "sourceImage": 1,
+        "sourceBufferView": 29,
+        "referenceImageMatches": [
+          1
+        ]
+      },
+      {
+        "sourceImage": 2,
+        "sourceBufferView": 30,
+        "referenceImageMatches": [
+          2
+        ]
+      },
+      {
+        "sourceImage": 3,
+        "sourceBufferView": 31,
+        "referenceImageMatches": [
+          3
+        ]
+      },
+      {
+        "sourceImage": 4,
+        "sourceBufferView": 49,
+        "referenceImageMatches": [
+          4
+        ]
+      },
+      {
+        "sourceImage": 5,
+        "sourceBufferView": 125,
+        "referenceImageMatches": [
+          5
+        ]
+      },
+      {
+        "sourceImage": 6,
+        "sourceBufferView": 126,
+        "referenceImageMatches": [
+          6
+        ]
+      }
+    ],
+    "sourceBINPreservedRegardlessOfEmbeddingIDs": true
+  },
+  "allFivePrimitiveResolvedPBRBindings": [
+    {
+      "ordinal": 0,
+      "mesh": 0,
+      "primitive": 0,
+      "sourceMaterialIndex": 0,
+      "referenceMaterialIndex": 0,
+      "resolvedBindingSHA256": "531e54c33833718c0a2db6eea969f280399d7a038a3162e1b2f65c37b8ecbb99",
+      "exactSemanticBinding": true
+    },
+    {
+      "ordinal": 1,
+      "mesh": 0,
+      "primitive": 1,
+      "sourceMaterialIndex": 1,
+      "referenceMaterialIndex": 1,
+      "resolvedBindingSHA256": "d94e0ee26bb1611cf5f146883fb0f5749a2f9d308eb183a67cc6e85a82668a3b",
+      "exactSemanticBinding": true
+    },
+    {
+      "ordinal": 2,
+      "mesh": 0,
+      "primitive": 2,
+      "sourceMaterialIndex": 2,
+      "referenceMaterialIndex": 2,
+      "resolvedBindingSHA256": "68bcefeeac8250ec22607ec18398a76e3688671553b1adcac6b22ae1e1ebd68d",
+      "exactSemanticBinding": true
+    },
+    {
+      "ordinal": 3,
+      "mesh": 1,
+      "primitive": 0,
+      "sourceMaterialIndex": 3,
+      "referenceMaterialIndex": 3,
+      "resolvedBindingSHA256": "9a1437a5dc0deb5282766e8a44871a5715e5f7d269196ee74d334c486957f4e5",
+      "exactSemanticBinding": true
+    },
+    {
+      "ordinal": 4,
+      "mesh": 1,
+      "primitive": 1,
+      "sourceMaterialIndex": 4,
+      "referenceMaterialIndex": 4,
+      "resolvedBindingSHA256": "87bf8419e1d4db5362d152806d31327b3e9295108af24ccc8096573af8836616",
+      "exactSemanticBinding": true
+    }
+  ],
+  "protectedPrimitiveOrdinals": {
+    "1": "gloves (mesh0 primitive1)",
+    "3": "main head (mesh1 primitive0)"
+  },
+  "sockets": [
+    {
+      "name": "gripSocket.L",
+      "sourceParent": 11,
+      "referenceParent": 11,
+      "referenceRestWorldColumnMajor": [
+        1.0000000988978006,
+        4.011866222564109e-08,
+        -2.236143894635001e-07,
+        0.0,
+        -7.742360708107299e-08,
+        0.9999998679617381,
+        1.98811136664645e-07,
+        0.0,
+        1.3978451858520646e-07,
+        -2.0618156126861464e-07,
+        0.9999998299265518,
+        0.0,
+        0.6667430324101171,
+        0.7941388206796854,
+        0.3911559370294306,
+        1.0
+      ],
+      "newLocalColumnMajor": [
+        1.0000000988978006,
+        4.011866222564109e-08,
+        -2.236143894635001e-07,
+        0.0,
+        -7.742360708107299e-08,
+        0.9999998679617381,
+        1.98811136664645e-07,
+        0.0,
+        1.3978451858520646e-07,
+        -2.0618156126861464e-07,
+        0.9999998299265518,
+        0.0,
+        -0.006370868720185552,
+        -0.08767387724323639,
+        0.02950426577809645,
+        1.0
+      ],
+      "reconstructionMaxError": 0.0
+    },
+    {
+      "name": "soleSocket.L",
+      "sourceParent": 18,
+      "referenceParent": 18,
+      "referenceRestWorldColumnMajor": [
+        -1.4580832130841786e-06,
+        -2.6161727520249043e-06,
+        -1.0149990360570278,
+        0.0,
+        5.370134066318144e-07,
+        1.0149998768853108,
+        7.768349783885441e-07,
+        0.0,
+        1.015001346284429,
+        -2.1268850569633457e-09,
+        1.344454122226394e-06,
+        0.0,
+        0.6368240361927665,
+        0.0010146311542833658,
+        0.19299166018661043,
+        1.0
+      ],
+      "newLocalColumnMajor": [
+        -1.4580832130841786e-06,
+        -2.6161727520249043e-06,
+        -1.0149990360570278,
+        0.0,
+        5.370134066318144e-07,
+        1.0149998768853108,
+        7.768349783885441e-07,
+        0.0,
+        1.015001346284429,
+        -2.1268850569633457e-09,
+        1.344454122226394e-06,
+        0.0,
+        0.03249900762823654,
+        -0.1157103336984535,
+        0.010291650393688567,
+        1.0
+      ],
+      "reconstructionMaxError": 0.0
+    },
+    {
+      "name": "gripSocket.R",
+      "sourceParent": 15,
+      "referenceParent": 15,
+      "referenceRestWorldColumnMajor": [
+        1.0000004264840445,
+        1.659719353064304e-07,
+        6.30029278747557e-08,
+        0.0,
+        -2.7440444860804547e-07,
+        1.0000001545976114,
+        2.392154730967988e-07,
+        0.0,
+        -6.320731682496472e-08,
+        -2.1023633323125068e-07,
+        0.9999998242679717,
+        0.0,
+        0.669579809091219,
+        0.7938029372642919,
+        -0.3837616604019379,
+        1.0
+      ],
+      "newLocalColumnMajor": [
+        1.0000004264840445,
+        1.659719353064304e-07,
+        6.30029278747557e-08,
+        0.0,
+        -2.7440444860804547e-07,
+        1.0000001545976114,
+        2.392154730967988e-07,
+        0.0,
+        -6.320731682496472e-08,
+        -2.1023633323125068e-07,
+        0.9999998242679717,
+        0.0,
+        -0.00807508936730783,
+        -0.08876264671092793,
+        -0.02487059002354991,
+        1.0
+      ],
+      "reconstructionMaxError": 0.0
+    },
+    {
+      "name": "soleSocket.R",
+      "sourceParent": 21,
+      "referenceParent": 21,
+      "referenceRestWorldColumnMajor": [
+        2.1363631789521006e-06,
+        2.5962459035781796e-06,
+        -1.014998794061216,
+        0.0,
+        5.325837170722103e-07,
+        1.0149996423492917,
+        -7.96761145400966e-07,
+        0.0,
+        1.015001157329954,
+        -3.7476703851346826e-08,
+        -6.661725784180395e-07,
+        0.0,
+        0.6454282213392101,
+        0.0009213958346237922,
+        -0.21415370237241316,
+        1.0
+      ],
+      "newLocalColumnMajor": [
+        2.1363631789521006e-06,
+        2.5962459035781796e-06,
+        -1.014998794061216,
+        0.0,
+        5.325837170722103e-07,
+        1.0149996423492917,
+        -7.96761145400966e-07,
+        0.0,
+        1.015001157329954,
+        -3.7476703851346826e-08,
+        -6.661725784180395e-07,
+        0.0,
+        0.04110317827565346,
+        -0.11580359026071725,
+        -0.031453685912749524,
+        1.0
+      ],
+      "reconstructionMaxError": 0.0
+    }
+  ],
+  "sourceBINExact": true,
+  "sourceAllGeometryUVNormalSkinMorphMaterialAnimationJSONExact": true,
+  "basicFixtureRestCompatibility": {
+    "fixture": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/basic-pose-gate158/fixture-v4-asymmetric-halfsteps.json",
+    "sha256": "78732965343f6eba40ae68ca99ffa949f6718910eb7b930b67d4a48d0083afab",
+    "maximumCentreDifferenceM": 2.7755575615628914e-17,
+    "protocolRestToleranceM": 1e-05,
+    "status": "REST_NAMES_AND_CENTRES_COMPATIBLE_ONLY",
+    "all5404motionSamples": "NOT_RUN"
+  },
+  "candidate": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/candidate-handoff170/source06-protocol173/rider.glb",
+  "candidateSHA256": "80387f59dd90aec0176101fff88bb94c7c8756a89f61f66afb233db452fd0932",
+  "candidateBytes": 20672000,
+  "sourceBIN_SHA256": "9762e237a55a45bac34cd72ee02d5c8b647338961703632cb835532284666d98",
+  "referenceBIN_SHA256": "268bd735e68713ad9a24ac208ebd68ce832ca11e46c0aa8df83c5ea0c9ccddf7",
+  "limits": [
+    "C19-compatible rest only; any hierarchy/rest/bind/anatomy change needs a new explicit adapter.",
+    "Protected arrays/morphs/textures are exact donor guardrails; garment anatomy, intersections, normals appearance and deformation are not accepted.",
+    "Contact/socket and rest-axis metadata copied from explicitly supplied mapped reference, not regenerated from ancestry. Historical declaredUniformScale is inert provenance; no1.015 scaling applied.",
+    "Static/fixture rest compatibility is not5404-frame, gameplay, Garage blend, grip/sole surface or appearance acceptance."
+  ]
+}
