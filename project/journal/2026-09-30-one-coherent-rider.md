@@ -2550,3 +2550,22 @@ Cosmetics paused; independent later tube/shell/embedding failures checked
 before new source retopology. Ordinary ship201 due next.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/local-shell200/
 Ask: 248.
+
+## Round201 — require a real high join in the new local topology
+
+Finding: Different1235face source annulus offers larger fabric budget, but
+wholecloth retains no central/left join after removal. Separate caps rejected;
+register ONE202 authoredlocalpanel with actual high saddle/newincidence.
+Builder owns deterministic controls/recipe, parent judges; no human gate.
+
+Validation: Parent48pins,151boundary edges/89-62rings/Euler0/693nodes exact.
+Wholep0/glove/hood19000+3058 retained nodes with127/307seams remain separate.
+Independent199receipt e40d4813 corroborates corrected rule,200still rejected.
+Ship201both tiers exact40.0833333333/hash368f1ca5bd9e830a/crash103/restart1–2ms/
+noerrors; lock11.246s/44.503GB,20models unchanged. No new geometry.
+
+Limits: Source topology not feasible surface or art/rig/pose/contact/mobile
+pass. Larger1235domain releases70old boundary nodes explicitly; no old source-
+star or retired tube/cage reuse. Cosmeticspause/weightsdormant; nextship204.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/local-retopology-design200/
+Ask: 248.
