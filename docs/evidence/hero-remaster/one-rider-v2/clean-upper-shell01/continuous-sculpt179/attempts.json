@@ -1,0 +1,83 @@
+{
+  "family": "clean-drafted-upper-hoodie-shell01",
+  "retired": "drafted-raglan approach stopped at5; no frozen files edited",
+  "attempts": [
+    {
+      "id": "S179-setup01",
+      "recordedBeforeRun": true,
+      "stage": "readonly source maps inventory",
+      "status": "completed_sourceMapsSHAverified",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-geometry01",
+      "recordedBeforeRun": true,
+      "stage": "ONE implicit sculpt and voxel quad remesh",
+      "status": "FAILED_LITERAL_TOPOLOGY_DEGENERATE8_EXPORTED_NONMANIFOLD8",
+      "method": "Union rounded anatomical ellipsoids/capsules over C19rest landmarks; voxel remesh .009m then smoothing; explicit hem/neck/cuff cuts; no source caps/tubes/panels",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-evidence01",
+      "recordedBeforeRun": true,
+      "stage": "literal audit/neutral donor assembly/CPU played evidence",
+      "status": "completed_matched54CPUimages2clips_literalrejection",
+      "settings": "CPU2threads4samples400x45054images+silent24frame4sclips",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-setup02",
+      "stage": "neutral material assembly",
+      "recordedBeforeRun": false,
+      "status": "FAILED_KEYERROR_MATERIALS",
+      "cause": "Shell export contained empty material slot and omitted materials. Source geometry untouched.",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-setup03",
+      "stage": "dependent neutral render",
+      "recordedBeforeRun": false,
+      "status": "FAILED_MISSING_ASSEMBLY",
+      "cause": "Render started after failed assembly; no output.",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-setup04",
+      "stage": "evidence setup repair",
+      "recordedBeforeRun": true,
+      "status": "completed_plainMaterialAssembly_renderSucceeded",
+      "method": "Add declared plain warm material only in JSON assembly; frozen shell geometry unchanged; render only after successful assembly",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-audit-setup01",
+      "recordedBeforeRun": false,
+      "stage": "strictcrossing broadphase",
+      "status": "FAILED_NO_SELF_BVH_PAIRS",
+      "failure": "Self-BVH overlap returnedzero pairs; crossingzero output invalid, topology counts usable.",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-audit-setup02",
+      "recordedBeforeRun": true,
+      "stage": "evidence checker correction",
+      "status": "completed_twoBVHs12498pairs_strict0zero1sharedCandidates",
+      "method": "Two independent identical BVH trees; no geometry edits. Freeze if still invalid.",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    }
+  ],
+  "sourceReceipts": {
+    "continuous-shell178-readonly-diagnosis.json": "bcf6be214ee786a19f7fac5620c0e263182ed5c80111ab8bb49cafaa518951b9",
+    "continuous-shell178-seam-precision.json": "1c57476a8d642f38416c2ee602c6ca4a4b5eb1f9927bbc750f043a44d386a565",
+    "continuous-shell-handoff.json": "d3908554a4078851fe50d8066e831678b689ddf6059cd208f9f30bc3c68a453a"
+  },
+  "registrationLimit": "All three stages predeclared; unexpected setup failures recorded honestly after failure.",
+  "approach": "continuous-sculpt-retopo",
+  "predecessorApproachFailedAttempts": 5,
+  "currentApproachFailedAttempts": 4,
+  "familyFailedAttemptsLowerBound": 9
+}

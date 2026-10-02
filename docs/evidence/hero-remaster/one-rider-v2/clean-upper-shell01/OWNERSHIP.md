@@ -11,8 +11,8 @@ Independent task3 foundation-repair paths are read-only to this parent. Its team
 owns QA/export contracts on their copies. Incoming coordination relay is retained
 through external-diagnosis.json; no outbound task messages or duplicate repairs.
 
-Drafted-panel approach stopped at five disclosed lane/setup failures. Next method
-is continuous sculpt-retopology, preserving head/hood/glove/lower-body identity
+Drafted-panel approach stopped at five disclosed lane/setup failures. Continuous sculpt is now also stopped at five failures. Next method
+is source-profile-guided anatomical quad cage, preserving head/hood/glove/lower-body identity
 and physics. Use shared authoritative seam indices and literal donor boundaries,
 not broad welds, rectangular cuff rings or horizontal masks presented as sewn.
 First viable neutral gray/PBR full orbit and rest/donor topology, then one selected

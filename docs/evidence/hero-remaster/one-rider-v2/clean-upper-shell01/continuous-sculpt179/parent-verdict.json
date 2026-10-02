@@ -1,0 +1,38 @@
+{
+  "status": "REJECTED_APPEARANCE_CONSTRUCTION_STOP_SCULPT_SWITCH_QUAD_CAGE",
+  "orderedNeutralFramesInspected": {
+    "pbr": 24,
+    "gray": 24
+  },
+  "actualOrbitsAndMatchedComparisonsPlayedToEnd": true,
+  "matchedMovies": [
+    {
+      "movie": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/REJECTED-matched-neutral-pbr.mp4",
+      "sha256": "a43050ffd2fb12620be95d792be73f9c63e5cd375e72395e8069dda98a58b221"
+    },
+    {
+      "movie": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/REJECTED-matched-neutral-gray.mp4",
+      "sha256": "6e010b6c213efea786481d35aa46b870f5e9d1b6f4529210e3c0aeb5861c849b"
+    }
+  ],
+  "visibleFailures": [
+    "Egg-shaped protruding torso/stomach remains unnatural in profile",
+    "Oversized rounded shoulder pads and segmented sausage elbows",
+    "Narrow floating hem leaves a visible waist gap and old garment strip",
+    "Missing deliberate hoodie construction: not cured by a texture bake"
+  ],
+  "actualTopology": {
+    "vertices": 18996,
+    "triangles": 37604,
+    "nonmanifoldEdges": 8,
+    "wrongWindingEdges": 4,
+    "boundaryComponents": 6,
+    "degenerateFaces": 8
+  },
+  "methodDecision": "Five sculpt approach/output/setup failures: stop primitive-union/voxel sculpt. Next materially different anatomical quad cage with source-profile-guided silhouette and authoritative physical seam indices, exact donor joining before binding.",
+  "geometryOutputFailuresThisApproach": 1,
+  "approachFailures": 5,
+  "familyFailuresIncludingNeutralBaselineEvidence": 11,
+  "predecessorRetiredFamilyFailureLowerBound": 15,
+  "limits": "The same face/head/hood/glove/PBR donor preserved; no target7/8score from unmatched unbaked reference. Strict zero transverse shell counts exclude coplanar/endpoints and do not prove donor seams. No new rigging, weights, animation, actual Garage/contact/mobile or production asset."
+}

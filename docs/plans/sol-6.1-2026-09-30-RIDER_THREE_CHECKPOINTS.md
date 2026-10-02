@@ -74,7 +74,38 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
-## Current source contract — round179
+## Current construction decision — round180
+
+Round180 rejects the first continuous sculpt in played matched before/after
+neutral PBR/gray films. Parent inspects48ordered actual orbit frames and verifies
+28frozen builder/master files plus original protected BIN/head/hood/glove/PBR
+prefixes. It remains an egg-shaped torso, padded shoulders/segmented arms and
+pinched floating waist/old garment strip. No texture polish or rigging follows.
+
+Parent independently reproduces actual exported18996physical vertices/37604tris,
+8nonmanifold edges,4wrong winding,6boundary components and8degenerate faces.
+A separate conservative sphere/AABB/strict intersection audit tests190427zero/
+one-shared candidates and finds0strict transverse crossings. Its coplanar/end/
+donor-shell exclusions remain: crossing0 is not anatomical/topology/join success.
+Source-derived cuff interpolation is precleanup ancestry, not final sewn nodes;
+actual glove-cuff/hood/hem topology remains unattached. No target score claimed.
+
+Four builder failures plus one parent NumPy-JSON evidence setup error stop this
+primitive-union/voxel approach at5. New-family total11 (two failed geometry
+outputs, setup/evidence failures including neutral-control1); original retired
+cap/tube>=15 remains linked. No repeated views or failed-source cosmetics count
+as new geometry. Select source-profile-guided anatomical quad cage next, with
+actual donor boundary inventories, shared indexed seams and measured preferred
+hoodie proportions BEFORE first geometry. No flat panels or ovoid primitive
+salvage; see clean-upper-shell01/NEXT_QUAD_CAGE.md. Independent QA stays separate.
+
+Mandatoryship180passes fresh ordinary no-replacement build: both tiers exact
+finish/hash, crash103ticks/restart1/3ms, zero errors;12.23s/35.346GBanonymous
+canonical lock. New matched comparison playback11.75s/36.566GBanonymous. No
+prototype promotion; liked head and physics preserved. Cosmetics paused, all
+three appearance/sit/Garage/riding/contacts/mobile checkpoints open. Ship183next.
+
+### Preserved source contract — round179
 
 Round179 pins a matched NEW C19 neutral comparison and source rig contract before
 judging the next shell. Original control BIN and all mesh/accessor/PBR JSON exact;

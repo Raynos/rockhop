@@ -1,0 +1,53 @@
+{
+  "status": "REJECTED_EXPORTED_TOPOLOGY_DONOR_JOIN_OPEN",
+  "builderFilesVerified": [
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/build.py",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/audit.py",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/render.py",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/assemble.py",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/setup.py",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/assembly.json",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/gray-front.png",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/gray-back.png",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/attempts.json",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/pbr-side.png",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/source-maps-summary.json",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/literal-audit.json",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/README.md",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/UNACCEPTED-neutral-pbr-turntable.mp4",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/construction.json",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/pbr-front.png",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/pbr-back.png",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/gray-side.png",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/UNACCEPTED-neutral-gray-turntable.mp4",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/cuff-correspondence-private.json",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/shell01.glb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/sculpt-shell01.npz",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/exported-private-boundaries.json",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/neutral-render01.blend",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/sculpt-shell01.blend",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/neutral-assembly01.glb",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/retained-source-triangleIDs.json",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/authored-private-boundaries.json"
+  ],
+  "protectedOriginalBINHeadHoodGlovePBRPrefixesExact": true,
+  "assemblyUnrigged": true,
+  "actualExportExactPositionTopology": {
+    "vertices": 18996,
+    "triangles": 37604,
+    "nonmanifoldEdges": 8,
+    "wrongWindingEdges": 4,
+    "boundaryComponents": 6,
+    "degenerateFaces": 8
+  },
+  "independentStrictCrossingAudit": {
+    "method": "Conservative centre/radius cKDTree pairs, exact AABB filter, zero/one-shared strict transverse edge-triangle predicates",
+    "spherePairs": 2376277,
+    "aabbPairs": 246640,
+    "nonTwoSharedPairsTested": 190427,
+    "witnesses": [],
+    "strictCrossings": 0,
+    "limits": "Coplanar/endpoint contacts excluded; shell self-only, donor-shell/cuff sewing and anatomical shape not certified. Independent checker does not rely on Blender BVH zero-candidate result."
+  },
+  "limits": "Neutral export and byte contracts only. New cuff correspondence precleanup IDs not final sewn topology. Hood/hem/glove-cuff joins, deliberate retopology, rig/weights/pose/game/contact/mobile all open."
+}

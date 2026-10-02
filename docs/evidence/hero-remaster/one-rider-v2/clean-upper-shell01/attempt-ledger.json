@@ -1,6 +1,6 @@
 {
   "familyId": "clean-drafted-upper-hoodie-shell01",
-  "status": "DRAFTED_PANEL_REJECTED_FIVE_FAILURE_SWITCH_CONTINUOUS_SCULPT",
+  "status": "TWO_REJECTED_APPROACHES_SOURCE_GUIDED_QUAD_CAGE_SELECTED",
   "predecessor": {
     "familyId": "retained-v7-cap-rmf-tube-natural-upper-garment",
     "failureCountLowerBound": 15,
@@ -17,13 +17,14 @@
     },
     {
       "id": "continuous-sculpt-retopo",
-      "failedAttempts": 0,
-      "status": "SELECTED_NEXT_NEUTRAL_PROTOTYPE_NOT_STARTED"
+      "failedAttempts": 5,
+      "status": "STOPPED_SWITCH_METHOD",
+      "decision": "Primitive union/voxel sculpt fails natural hoodie silhouette, hem and exported topology; no cosmetic salvage"
     },
     {
       "id": "anatomical-quad-cage",
       "failedAttempts": 0,
-      "status": "UNSTARTED"
+      "status": "SELECTED_SOURCE_PROFILE_AND_BOUNDARY_CONTRACT_BEFORE_FIRST_GEOMETRY"
     }
   ],
   "attempts": [
@@ -110,11 +111,87 @@
       "status": "FAILED_PLAYBACK_RECEIPT_KEY_THEN_FIXED_SCHEMA",
       "failure": "Reviewer incorrectly expected flat playedToEnd; actual persisted receipt uses video.ended. No rendering or geometry changed. Known correct nested schema/end/mute/hash then checked successfully.",
       "registrationLimit": "Unexpected script setup error recorded retrospectively; preserve failure, no perfect registration claim."
+    },
+    {
+      "id": "S179-setup01",
+      "recordedBeforeRun": true,
+      "stage": "readonly source maps inventory",
+      "status": "completed_sourceMapsSHAverified",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-geometry01",
+      "recordedBeforeRun": true,
+      "stage": "ONE implicit sculpt and voxel quad remesh",
+      "status": "FAILED_LITERAL_TOPOLOGY_DEGENERATE8_EXPORTED_NONMANIFOLD8",
+      "method": "Union rounded anatomical ellipsoids/capsules over C19rest landmarks; voxel remesh .009m then smoothing; explicit hem/neck/cuff cuts; no source caps/tubes/panels",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-evidence01",
+      "recordedBeforeRun": true,
+      "stage": "literal audit/neutral donor assembly/CPU played evidence",
+      "status": "completed_matched54CPUimages2clips_literalrejection",
+      "settings": "CPU2threads4samples400x45054images+silent24frame4sclips",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-setup02",
+      "stage": "neutral material assembly",
+      "recordedBeforeRun": false,
+      "status": "FAILED_KEYERROR_MATERIALS",
+      "cause": "Shell export contained empty material slot and omitted materials. Source geometry untouched.",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-setup03",
+      "stage": "dependent neutral render",
+      "recordedBeforeRun": false,
+      "status": "FAILED_MISSING_ASSEMBLY",
+      "cause": "Render started after failed assembly; no output.",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-setup04",
+      "stage": "evidence setup repair",
+      "recordedBeforeRun": true,
+      "status": "completed_plainMaterialAssembly_renderSucceeded",
+      "method": "Add declared plain warm material only in JSON assembly; frozen shell geometry unchanged; render only after successful assembly",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-audit-setup01",
+      "recordedBeforeRun": false,
+      "stage": "strictcrossing broadphase",
+      "status": "FAILED_NO_SELF_BVH_PAIRS",
+      "failure": "Self-BVH overlap returnedzero pairs; crossingzero output invalid, topology counts usable.",
+      "countedFailure": true,
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "S179-audit-setup02",
+      "recordedBeforeRun": true,
+      "stage": "evidence checker correction",
+      "status": "completed_twoBVHs12498pairs_strict0zero1sharedCandidates",
+      "method": "Two independent identical BVH trees; no geometry edits. Freeze if still invalid.",
+      "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+    },
+    {
+      "id": "parent-sculpt-audit180",
+      "stage": "exported evidence write",
+      "recordedBeforeRun": false,
+      "countedFailure": true,
+      "status": "FAILED_NUMPY_INT64_JSON_THEN_FIXED_CAST",
+      "failure": "Computed exported topology and conservative crossing audit, but JSON refused NumPy integer. Explicit Python integer conversion only; rerun same frozen input verified8nonmanifold/4winding/6boundaries/8degenerate and190427strict candidatepairs0interiorcrossings.",
+      "registrationLimit": "Unexpected evidence-write setup error classified retrospectively, no preregistration fiction or geometry change."
     }
   ],
-  "failureCount": 6,
+  "failureCount": 11,
   "policy": "Record setup/geometry/art/motion failures and parent verdicts; five approach switch/fifteen family retirement, no cosmetic/static shortcut",
-  "geometryOutputFailures": 1,
+  "geometryOutputFailures": 2,
   "administrativeErrors": [
     {
       "id": "parent-dispatch178-1",
@@ -129,6 +206,6 @@
       "failure": "V8 syntax error in read-only metadata expression; no nested tool ran"
     }
   ],
-  "countingLimits": "Five lane/evidence failures incl setup; three separate orchestration/inspection errors disclosed. Same geometry counted once, gray/PBR views not separate failures. Historical predecessor >=15 remains linked. Neutral baseline review schema error adds one independent evidence failure, not a second geometry or an extra drafted/sculpt approach trial.",
+  "countingLimits": "Five lane/evidence failures incl setup; three separate orchestration/inspection errors disclosed. Same geometry counted once, gray/PBR views not separate failures. Historical predecessor >=15 remains linked. Neutral baseline review schema error adds one independent evidence failure, not a second geometry or an extra drafted/sculpt approach trial. Sculpt:four builder failures plus one parent evidence-write setup failure; same geometry counted once. Total11 includes neutral-baseline schema failure, approach counts5+5. Admin errors3 remain separate.",
   "baselineEvidenceFailures": 1
 }

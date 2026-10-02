@@ -2145,3 +2145,25 @@ and cuff/socket numbers never clear anatomy or actual movement/new-shelljoins.
 No stage2 repair/fulltargetscore/Garage/contact/mobile or playerpromotion.
 Sculpt179 separate pending parent verdict, family6failures before incorporation;
 cosmetics paused, next mandatoryship180.
+
+## Round180 — reject sculpt appearance/export and select guided quad cage
+
+Finding: primitive/voxel sculpt remains egg-shaped with padded shoulders and
+floating waist; topology/donor joins fail. Played matched gray/PBR before/after
+retained, no rigging/polish. Stop approach at5 and select measured-source-guided
+continuous anatomical quad cage with actual indexed seam/donor contracts.
+
+Validation: parent28frozen hashes/protectedBIN/head/hood/glove/PBR exact,
+48ordered orbitframes inspected; actual export18996verts/37604tris has8
+nonmanifold/4winding/6boundaries/8degenerate. Independent conservative190427
+strict pairtests0interiorcrossings, narrow predicates remain explicit. Both
+matched4sfilms played,11.75s/36.566GBanonymouscanonical lock. Fresh ordinary
+ship180both tiers bytefinish/hash exact/crash103/restart1/3ms/errors0,
+12.23s/35.346GBanonymous, zero rejectedmodelreplacements/privateoverlays.
+
+Limits: cross0does not clear coplanar/end/donorjoins or anatomy. Cuff mapping
+precleanup ancestry only. One parentJSONserialization setup failure retained;
+five sculpt failures, family11inclneutralbaseline1, two geometryoutputs only.
+No new rig/weights/morph/game/Garage/contact/mobile/7or8score. Likedhead/physics
+preserved, independentQAownerpaths untouched. Nextguidedquadcage notstarted,
+three checkpoints open/cosmetics paused; mandatoryship183next.
