@@ -183,6 +183,8 @@ Round191: exact source seam/retained endpoint obstruction verified,10frozen file
 
 Round192: one actual local sleeve cut REJECTED;93 open edges/12 pinches/4 new crossings and low attachment. Parent frozen dump+10files/10pins verified. Switch physical cut before next trial; liked head/hood/rig/source protected. Ordinary ship192 PASS, next195. All3visual/basic poses/contacts/mobile OPEN; cosmetics paused.
 
+Round193: parent independently verifies47face physical separator/49edge disk/no pinches/high attachment/no moves and SciPy maxflow46. Select ONE source-aware panel reseal; preserve wider168face alternative. Independent65pins refreshed, no better source. All3visual/basic poses/contacts/mobile OPEN, cosmetics paused; next ship195.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

@@ -1,0 +1,427 @@
+{
+  "status": "PARENT_PREREGISTERED_ONE_ACTUAL_LOCAL_CONSTRUCTION194_NO_GEOMETRY",
+  "domain": "physicalMincut47",
+  "exactRemovedSourceFaceIDs": [
+    6396,
+    6399,
+    6400,
+    6402,
+    6405,
+    6880,
+    6882,
+    6893,
+    6904,
+    6907,
+    6908,
+    6912,
+    6913,
+    6914,
+    6916,
+    6917,
+    6918,
+    6923,
+    6931,
+    6935,
+    6936,
+    6939,
+    7336,
+    7337,
+    7357,
+    7781,
+    7789,
+    7791,
+    7792,
+    7793,
+    7800,
+    7807,
+    7824,
+    7830,
+    7832,
+    8293,
+    8297,
+    8298,
+    8299,
+    8300,
+    8304,
+    8313,
+    8317,
+    8334,
+    8339,
+    8348,
+    8362
+  ],
+  "fixedOrientedBoundaryPhysicalIDs": [
+    1420,
+    1610,
+    2114,
+    2047,
+    2565,
+    3067,
+    3318,
+    3486,
+    3733,
+    4111,
+    5353,
+    6038,
+    6709,
+    7380,
+    8638,
+    9294,
+    9619,
+    10649,
+    11668,
+    13179,
+    13609,
+    13918,
+    13920,
+    13550,
+    13250,
+    13201,
+    13166,
+    12874,
+    12539,
+    11526,
+    11167,
+    11007,
+    9809,
+    9407,
+    9035,
+    7881,
+    7205,
+    6302,
+    5437,
+    5088,
+    4125,
+    3760,
+    3380,
+    3089,
+    2869,
+    2577,
+    1916,
+    1633,
+    1453
+  ],
+  "highSeamEndpointPhysicalIDs": [
+    1420,
+    13550
+  ],
+  "highSeamEndpointPositionsM": [
+    [
+      0.5301761627197266,
+      1.3050650358200073,
+      0.19315092265605927
+    ],
+    [
+      0.706367015838623,
+      1.301290512084961,
+      0.18080991506576538
+    ]
+  ],
+  "highSeam": "Straight shared chord between1420and13550, allY1.301290512--1.305065036. Shared stations=sorted exact union of both normalizedarc stations, common endpoints collapse byphysicalID only. No bulge/tuning/parameterloop.",
+  "radialLevels": [
+    0,
+    0.3333333333333333,
+    0.6666666666666666,
+    1
+  ],
+  "arcCorrespondence": {
+    "central": {
+      "physicalIDs": [
+        1420,
+        1610,
+        2114,
+        2047,
+        2565,
+        3067,
+        3318,
+        3486,
+        3733,
+        4111,
+        5353,
+        6038,
+        6709,
+        7380,
+        8638,
+        9294,
+        9619,
+        10649,
+        11668,
+        13179,
+        13609,
+        13918,
+        13920,
+        13550
+      ],
+      "normalizedSourceArcLengthStations": [
+        0.0,
+        0.03571591363998264,
+        0.13356621184122563,
+        0.1562489860020231,
+        0.207176632660168,
+        0.2513230753620572,
+        0.2801580770815804,
+        0.2901703641235188,
+        0.3092120111054493,
+        0.3296648639134735,
+        0.3869393096174316,
+        0.4225827641129864,
+        0.46439202862715256,
+        0.4955249230101474,
+        0.5579813106151976,
+        0.597432913870433,
+        0.6274547601388358,
+        0.6880410977415586,
+        0.7245769752442677,
+        0.7855327545667451,
+        0.8552267927207622,
+        0.9186819858881752,
+        0.9556038830236155,
+        1.0
+      ],
+      "sourceArcLengthM": 0.3559157187855775
+    },
+    "lateral": {
+      "physicalIDs": [
+        1420,
+        1453,
+        1633,
+        1916,
+        2577,
+        2869,
+        3089,
+        3380,
+        3760,
+        4125,
+        5088,
+        5437,
+        6302,
+        7205,
+        7881,
+        9035,
+        9407,
+        9809,
+        11007,
+        11167,
+        11526,
+        12539,
+        12874,
+        13166,
+        13201,
+        13250,
+        13550
+      ],
+      "normalizedSourceArcLengthStations": [
+        0.0,
+        0.037887734004806536,
+        0.0916602487077144,
+        0.14907564582497856,
+        0.21727039092517778,
+        0.24911937750044816,
+        0.2802763603126538,
+        0.30036145122163227,
+        0.3236252601029578,
+        0.3428827414422861,
+        0.38831903644154625,
+        0.40783227087890717,
+        0.4570141051697078,
+        0.49964557835739143,
+        0.5328033646428764,
+        0.5883811394929959,
+        0.6094099714972839,
+        0.6494194966107161,
+        0.7096383986473119,
+        0.7447573165201815,
+        0.7898571410311535,
+        0.8267863111485205,
+        0.844343825330989,
+        0.8964429711705334,
+        0.9353737139306071,
+        0.9602462422491558,
+        1.0
+      ],
+      "sourceArcLengthM": 0.3648686894391238
+    }
+  },
+  "geometryRule": "Each panel ring point at sourcearc stationu andr is(1-r)*literal piecewise-linear sourceboundaryarc(u)+r*highchord(u). Ringr1/3,2/3 retains eacharc station list; sharedr1 uses union stations. Deterministic parameter zipper triangles, then clip each against original47reference triangles. Collapse exact common endpoints only; never discard small area/failed intersections.",
+  "sourceReference": "Existing47source triangulation embedded in a convexlens: centralarc(u,-sin(pi*u)), lateralarc(u,+sin(pi*u)); endpoints(0,0)/(1,0). Parameter-only source reference; no new3Dmesh. Existingtriangle IDs define barycentric cell locator.",
+  "referenceChecks": {
+    "all49VerticesOnPerimeter": true,
+    "noOriginalInteriorVertices": true,
+    "minimumSignedTriangleArea": 0.003456953121542453,
+    "triangleAreaSum": 1.2707541110504605,
+    "convexLensSignedArea": 1.270754111050461,
+    "areaResidual": -4.440892098500626e-16,
+    "noncollapsedConsistentSourceTriangulation": true
+  },
+  "sourceProvenance": "Clip new parameter triangles at original47source-reference triangle edges, including chart boundaries. Every resulting corner records one exactsourceface/chart and barycentric coordinates for TEXCOORD_0/1/2,COLOR_0/1/2,sourcejointfield and both morph POSITION/NORMAL fields. No nearestrow/SVD/globalharmonicfit.",
+  "sharedPhysicalFieldRule": "NEW corners only: exact dense19 barycentric source-joint interpolation at canonical lowestID containing originalsourceface; select largest4positive lanes, ties ascending originaljointordinal; Float32 renormalize by absolute lane sum as stockThree. Record discarded positive weightmass for EVERYnewcorner and keep dense19 reference. This is explicit transfer reduction, not weightfitting/artacceptance; no originalweight changed. Allphysical UVchart aliases share identicalFloat32 JOINTS_0/WEIGHTS_0 and same canonical interpolated morphs. No claim of moving accuracy from interpolation/reduction.",
+  "normalRule": "Every original NORMAL row remains exact. Appended NORMAL rows on original fixedboundaryphysical vertices copy canonical matched retainedsourcechart corner normal; preserve and record any genuine source hard-normal alias explicitly. Interior/sharedseam physical normals are normalized area-weighted sum of incident candidate faces across both panels, cached identically across all UVchart aliases. Reject undefined/zero normal; originaloutside aliases untouched. Changedgeometry shading/PBR remains a played-film gate.",
+  "protection": "Delete exactly47originalindices, keepall otheroriginalsource face rows/order and arrays exact; originalBIN prefix/rig19binds/head/hood/right/cuffs/lowerbody/PBR/morphmetadata exact. Appendnewaccessors only afterstaticgates. No originalposition moved, including1571.",
+  "maximumBoundaryToProposedChordCorrespondenceDistanceM": 0.14028843262636662,
+  "sourceRemovedTriangleAreaSumM2": 0.0030593593164743743,
+  "trialLimit": "ONE194generatedconstruction only, CPU2, finite/area/winding/manifold/rootseparation/fullcrossing/singlechartprovenance/exportlegality first; rejectbeforemotion onfailure. No cropping/newcost/operatorvariant. Source2030/2172andhips remain failed.",
+  "geometricAndArtAcceptance": false,
+  "geometryGenerated": false,
+  "geometryPreflight": "ONE194only. Preserve exactboundarycoordinates and originaloutsideindices. Test all actualFloat32newtriangles for nonzero/noncollapsed area, duplicatephysical corners/faces, winding/manifold/rootseparation/fullcrossing. Reject collapsed/sliver/fold/crossing construction rather than delete triangles, perturb boundary or retry parameters. Record actual newcorner displacement against its canonical source barycentric position; use140mm proposed rejection bar and retain honest boundary-to-chord envelope140.288433mm (not a proof actualnewcorner displacement exceeds140mm).",
+  "unsupported191OwnersResolvedByLiteralRoots": [
+    {
+      "removedDirectedPhysicalEdge": [
+        7881,
+        7205
+      ],
+      "retainedDirectedPhysicalEdge": [
+        7205,
+        7881
+      ],
+      "removedSourceFace": 7781,
+      "retainedSourceFace": 7338,
+      "belowTargetRootLabels": [
+        "positiveZ_lateral"
+      ],
+      "retained191ContinuationOwner": null,
+      "retainedSourceChart": 9,
+      "removedSourceChart": 9,
+      "retainedSourceNormal": [
+        0.10854529911059614,
+        -0.48499857855506456,
+        -0.8677524398355548
+      ],
+      "retainedSourceCornerRows": [
+        4892,
+        4727
+      ],
+      "retainedCornerUVs": [
+        [
+          0.27916499972343445,
+          0.8497830033302307
+        ],
+        [
+          0.27402999997138977,
+          0.852342963218689
+        ]
+      ],
+      "positionsM": [
+        [
+          0.6256352663040161,
+          1.1683506965637207,
+          0.18547673523426056
+        ],
+        [
+          0.6149536371231079,
+          1.162928581237793,
+          0.1871710866689682
+        ]
+      ]
+    },
+    {
+      "removedDirectedPhysicalEdge": [
+        7205,
+        6302
+      ],
+      "retainedDirectedPhysicalEdge": [
+        6302,
+        7205
+      ],
+      "removedSourceFace": 7336,
+      "retainedSourceFace": 6866,
+      "belowTargetRootLabels": [
+        "positiveZ_lateral"
+      ],
+      "retained191ContinuationOwner": null,
+      "retainedSourceChart": 9,
+      "removedSourceChart": 9,
+      "retainedSourceNormal": [
+        -0.3803210614693115,
+        -0.5057711165638931,
+        -0.7743070888559456
+      ],
+      "retainedSourceCornerRows": [
+        4727,
+        4400
+      ],
+      "retainedCornerUVs": [
+        [
+          0.27402999997138977,
+          0.852342963218689
+        ],
+        [
+          0.26665300130844116,
+          0.8522170186042786
+        ]
+      ],
+      "positionsM": [
+        [
+          0.6149536371231079,
+          1.162928581237793,
+          0.1871710866689682
+        ],
+        [
+          0.6005755066871643,
+          1.1665929555892944,
+          0.19183973968029022
+        ]
+      ]
+    },
+    {
+      "removedDirectedPhysicalEdge": [
+        1453,
+        1420
+      ],
+      "retainedDirectedPhysicalEdge": [
+        1420,
+        1453
+      ],
+      "removedSourceFace": 6939,
+      "retainedSourceFace": 6411,
+      "belowTargetRootLabels": [
+        "positiveZ_lateral"
+      ],
+      "retained191ContinuationOwner": null,
+      "retainedSourceChart": 5,
+      "removedSourceChart": 5,
+      "retainedSourceNormal": [
+        -0.9838079227893259,
+        -0.08365086684325346,
+        -0.15850710877851434
+      ],
+      "retainedSourceCornerRows": [
+        3945,
+        4296
+      ],
+      "retainedCornerUVs": [
+        [
+          0.66736900806427,
+          0.5751140117645264
+        ],
+        [
+          0.667149007320404,
+          0.5823819637298584
+        ]
+      ],
+      "positionsM": [
+        [
+          0.5305455327033997,
+          1.2920293807983398,
+          0.19773781299591064
+        ],
+        [
+          0.5301761627197266,
+          1.3050650358200073,
+          0.19315092265605927
+        ]
+      ]
+    }
+  ],
+  "parentProposalPin": {
+    "sha256": "5f76b23a36dbf6af254e5a97d5c4f7a51412e895c37e3d4acce623b19f8ba83c",
+    "freezeSHA256": "2d7196b4ca6b7295bb8cbc06a7bc3916992443b42dbb17908481f6c69f8c4464"
+  },
+  "parentBoundaryDisplacementClarification": {
+    "existingSourceRowsMaximumDisplacementM": 0,
+    "newCornerSourceBarycentricDisplacement": "Measure every newcorner. Original190140mm vertex-pull allowance does not apply to added retopology corners; no originalposition moves. The prescribed ruled surface remains in the original47-source-vertex convex hull, so candidate/source barycentric distance is bounded by its exact measured187.2804602707573mm diameter. Require this bound with only Float32 rounding tolerance2e-7m. Preserve original140mm proposal/rejection history; this explicit pretrial correction changes no cut, station, cap geometry, scope, UV chart or field rule.",
+    "maximumNewCornerCorrespondenceDistanceM": 0.1872804602707573,
+    "float32BoundToleranceM": 2e-07,
+    "noGeometryGenerated": true
+  },
+  "parentParameterDomainClarification": "Reference r0 boundary uses literal piecewise-linear interpolation of the convex-lens boundary vertices, not analytic sin(pi*u) at newly sampled stations; rlevels interpolate that boundary to v0. Existing boundary edges cannot be subdivided or remapped outside the47face cut. Only newly appended corners may split source-reference interior triangle/chart edges."
+}

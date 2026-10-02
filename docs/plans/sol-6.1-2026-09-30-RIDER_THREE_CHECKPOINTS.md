@@ -74,6 +74,67 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Physical cut selected; one local panel reseal next — round193
+
+Keep192's rejected actual mesh and all earlier moving failures. Two different
+read-only cut domains now clear their combinatorial prerequisites; neither is
+a repaired asset. The new physical separator removes47 original faces inside
+the existing1233-face area, giving one49-edge oriented disk boundary with no
+retained vertex-link pinches. All exact1.13 contour roots separate below1.30,
+while the unchanged-source high attachment remainsY1.301290512. Source fields
+and positions have not changed. Parent independently checks the literal cut,
+source incidence/links/Euler, outside protection, root memberships, union-find
+attachment and SciPy maxflow46 (same optimum as the builder's integral flow).
+
+Independent QA's wider regular-neighborhood cut remains a distinct alternative:
+168 complete-star faces, one78-edge disk, no retained pinches, unsealed high
+attachmentY1.302874565 and explicitly additional3823/3824. Parent reconstructs
+the exact source stars, fill winding and sublevel attachment independently.
+Do not silently substitute it or erase the failed69-face trial. Its two added
+faces would need explicit registration before use; no scope change occurred.
+
+Select the47-face domain for ONE next left-only source-aware ruled-panel trial:
+it stays within the current scope, both23/26-edge arcs have full below-target
+root labels, and the removed area touches five sourceUV charts rather than14.
+Source endpoints1420/13550 define the shared high seam. Use the frozen literal
+construction contract, not a single SVD ear fan, nearest-row transfer, repeated
+1571 pull, global cage/ARAP/harmonic fit or weight optimization. Preserve exact
+retained source corners/faces, liked head/hood/cuffs/lowerbody/right, original
+rig/binds/animations/PBR. New corners need explicit source triangle/edge/chart
+and skin/morph ancestry, shared physical seam fields and declared normals.
+Use193's explicit parent-construction-contract.json: r0 parameter edges are
+the literal piecewise lens boundary, not a newly sampled analytic sine curve.
+Original vertex displacement stays0. Added retopology corners must stay in
+the source47-vertex convex hull; measure their barycentric correspondence
+displacement against its187.280460mm diameter (+Float32 rounding tolerance).
+The old140mm original-vertex-pull proposal does not govern newly added corners.
+This correction precedes any geometry and changes no cut/stations/cap/scope.
+Keep the frozen original proposal and its140.288433mm envelope unchanged.
+
+Actual resealing must recheck Float32 injectivity, physical topology and vertex
+links, original boundary conservation, every changed-local rest crossing class,
+UV/chart continuity, field counts/finite values and ALL low attachment paths.
+Reject before GLB/motion if geometry fails. If clear, use the same explicit
+19bone/socket adapter and play matched neutral plus overhead/reach/sit films
+in stockThree gray/PBR. A clean mask, legal skin or numbers cannot pass art.
+The right arm, below-scope source weight witness and hips still need their
+own work; this one local trial cannot pass the whole rider or basic-pose gate.
+
+Read-only independent ownership refresh verifies65 source/mesh pins and three
+frozen files: no newer broadly qualified mesh or rig is available. C19/body11
+share neutral geometry but different weights; V7 is still the finite baked clip.
+Tube/embedding/sculpt/cage failures remain frozen. Latest V7 projected-triangle
+saddle estimate14.219mm differs from older16.396mm nearest-vertex estimate;
+neither proves support. Audit motion reports were read, not replayed anew.
+
+Parent remains sole integration owner; task3 paths stay read-only. No GPU,
+render, source geometry, weights or production asset changed in193. Cosmetics
+remain PAUSED; construction → rig/weights → deformation is still the priority.
+All three visual checkpoints, continuous basic poses, Garage/riding/lean/
+landing, actual saddle/grip/sole and mobile remain OPEN. Next ordinary ship195.
+Five failed attempts change approach;15 unresolved trigger architecture fallback.
+No routine human checkpoint or permission/recommendation question dependency.
+
 ## Reject the physical sleeve cut before export — round192
 
 One actual left-side construction attempt removed the registered69 source

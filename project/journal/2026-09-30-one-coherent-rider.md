@@ -2394,3 +2394,27 @@ new geometry; do not repeat69-face excision or endpoint pull. All three
 checkpoints/basic poses/contacts/mobile OPEN; cosmetics PAUSED. Next ship195.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/panel-surgery192/
 Ask: 248.
+
+## Round193 — select a physical cut before local panel construction
+
+Finding: A literal physical separator avoids the failed UV-ribbon pinches.
+Select the47face domain for one new source-aware panel construction trial;
+retain the distinct168face regular-neighborhood alternative.
+
+Validation: Parent reconstructs49edge disk boundary/links/Euler, no outside
+faces or position moves, source roots andY1.301290512 unsealed attachment.
+Independent SciPy maxflow46 agrees. Wider168face domain independently has
+78edge simple boundary/zero retained pinches/Y1.302874565. Independent
+handoff freeze three files/65 source and mesh receipts verified.
+
+Limits: Both are unchanged-source graph diagnostics, not resealed meshes.
+No geometry/UV/normals/rig/weight/motion or art pass. External motion reports
+read, not replayed. Parent corrects fill-winding label and audit-freeze schema
+assumptions before reports. Explicit pretrial contract uses piecewise lens
+boundary and distinguishes new retopology ancestry displacement from the old
+140mm original-vertex pull; source rows stay fixed and cap stays in source
+convex hull. No generated assets. Right arm, low weight witness,
+hips, basic poses, all three visual checkpoints, contacts/mobile remain OPEN.
+Cosmetics paused; one bounded actual reseal next, ordinary ship195 due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/physical-cut193/
+Ask: 248.
