@@ -1,0 +1,76 @@
+{
+  "status": "EXACT_BOUNDARY_ENDPOINT_FAN_OBSTRUCTION_TO_REGISTERED_PANEL_CUT",
+  "lowEndpointPhysicalID": 1571,
+  "sourceRowAliases": [
+    2409
+  ],
+  "positionM": [
+    0.5321268439292908,
+    1.2871384620666504,
+    0.22953636944293976
+  ],
+  "originalBoundaryArcPhysicalIDs": [
+    1488,
+    1571,
+    1543
+  ],
+  "sourceIncidentFanFaceIDs": [
+    3549,
+    3552,
+    3555,
+    4103,
+    4412,
+    4689,
+    4691
+  ],
+  "proofCondition": "For the registered panel continuation, retaining both rooted source panel paths and one exact physical endpoint1571 forces a central/lateral connection below1.30. Splitting only patch-side alias rows cannot remove a retained common physical point/outside fan. This is not a proof that every arbitrary annulus topology fails.",
+  "proposedReleasedFaceContract": {
+    "baseScopeSHA256": "d6d2ebaec7314cd48bf0e9c663850b355be5a42cf8fc4c5e68956c5c981b9c27",
+    "addExactOriginalFaceIDs": [
+      4689,
+      4691
+    ],
+    "releaseOldBoundaryArcPhysicalIDs": [
+      1488,
+      1571,
+      1543
+    ],
+    "releaseOnlyPhysicalVertex": 1571,
+    "targetEndpointPositionM": [
+      0.5321268439292908,
+      1.31,
+      0.22953636944293976
+    ],
+    "endpointDisplacementM": 0.022861537933349663,
+    "unionFaces": 1233,
+    "boundaryDegree2OrientedValid": true,
+    "boundaryCycles": [
+      {
+        "nodes": 89
+      },
+      {
+        "nodes": 62
+      }
+    ],
+    "EulerCharacteristic": 0,
+    "overincidentEdges": 0,
+    "protectedRule": "All source outside union faces and all new union boundary nodes exact; expanded fan is explicitly listed, no coordinate ROI retune. No rig/weights optimized. Newly introduced corners require one-chart triangle barycentric provenance."
+  },
+  "seconds": 0.411098625,
+  "anonymousGBSamples": [
+    42.610819072
+  ],
+  "geometryGenerated": false,
+  "rootedBelowTargetPaths": [
+    {
+      "rootClass": "central_Z0_straddling",
+      "found": true,
+      "maximumY_M": 1.294029712677002
+    },
+    {
+      "rootClass": "positiveZ_lateral",
+      "found": true,
+      "maximumY_M": 1.2871384620666504
+    }
+  ]
+}

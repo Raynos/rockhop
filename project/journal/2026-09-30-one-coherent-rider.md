@@ -2355,3 +2355,22 @@ failed. Cosmetics paused; full exported poses/gameplay/mobile open. Ship192next.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-fan190/
 Evidence: docs/evidence/hero-remaster/one-rider-v2/armhole-design190/
 Ask: 248.
+
+## Round191 — define the literal boundary change before construction
+
+Finding: A ribbon-only panel cut retains a low common endpoint. The next
+left-only prototype needs one specifically released source endpoint fan.
+
+Validation: Parent10frozen files/4rawpins,45node source seam,26literal
+rooted edges excluding69ribbon faces; fixed1571low connection independently
+verified. New1233face annulus adds only4689/4691, replaces1571 with1380
+on fixed89node cycle, Euler0; proposed interior rise22.862mm.
+
+Limits: Contour-rooted panel continuation is geometric heuristic, not
+anatomical fact. Bound applies to retainedpaths, not all possiblecuts.
+No solver/geometry/GPU/rig/weights change or moving/PBR pass. Next ONE
+left-only unaccepted surgery with new declaredcontract; right unchanged.
+Head/hood/outside/physics preserved, all threevisual/contact/mobile gates
+open, cosmetics paused. Ordinary ship192 due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-seam191/
+Ask: 248.

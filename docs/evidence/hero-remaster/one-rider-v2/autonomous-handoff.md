@@ -16,6 +16,48 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Exact seam endpoint release for one local construction trial — round191
+
+The registered contour-rooted continuation yields a45-node/44-edge source seam,
+69 prospective ribbon faces and432/730 retained source panel fans. Twenty-six
+UV charts and204 seams touch the original strip; charts are continuity, not
+anatomy. Normal/chart-aware dual-graph continuation remains a geometric heuristic.
+Parent verifies10frozen files/4raw input pins, actualsource edges/fans/boundaries.
+
+Removing the69-face ribbon while keeping both specified source panel paths
+still connects central/lateral roots at fixed1571 belowY1.30. Parent checks
+both exact1.13m contour roots and all26 path edges, excludes all69ribbon faces,
+and reconstructs maximaY1.294030/1.287138. This obstruction belongs to that
+retained-panel contract, not every possible retopology or garment style.
+
+Authorize ONE explicitly unaccepted LEFT-only stage1 prototype with a distinct
+literal boundary contract: add sourcefaces4689/4691 to the original1231-face
+scope. Replace1488→1571→1543 with fixed1488→1380→1543;1571 is now interior.
+The1233-face union has Euler0 and oriented89/62cycles; parent independently
+reconstructs exact fan, perimeter changes and new interior membership. Proposed
+1571Y1.31 displacement is22.862mm. Keep the original189/190/191 rejections.
+No coordinate-mask/radius retune, inferred bilateral permission or right repair.
+This is a declared two-face boundary change, not unchanged original cycles.
+
+The operator must excise/reseal the actual source panel ribbon, preserve upper
+join and create sealed separated channels without a hidden low bridge, tears,
+coincident sheets or lost fabric volume. Freeze exact operators and provenance
+before exporting onecandidate. Protected head/hood/cuffs/lowerbody/right/outside
+faces/rig/rest/binds/PBR stay exact. Retained/split corners copy originalfields;
+new interior corners may use single-source-triangle/chart barycentric UV and
+skin ancestry explicitly. This is construction provenance, not weight fitting.
+Do not turn190's proposed existing-corners-only restriction into a user hold.
+
+Reject before films if topology, complete rest crossing classes, normals/UV,
+sealing or declared source conservation fail. Otherwise map through the same
+explicit19bone/socket adapter and play matched actualstockThree gray/PBR neutral
+and moving evidence. Numerical geometry clearance alone cannot accept the art.
+No source or candidate geometry was generated in191. Stage2 is still required
+for below-scope witness2030/2172 and hip fields; no arm/sit pass promised here.
+All three visual checkpoints, neckmotion, actual Garage/lean/landing, saddle/
+grip/sole and mobile remain OPEN. Cosmetics paused. Ordinary ship192 is now due.
+Five failed trials switch approach;15 unresolved trigger architecture fallback.
+
 ## Local construction needs a new seam, not an upward pull — round190
 
 Two separate read-only specialists froze their results; parent independently

@@ -179,6 +179,8 @@ Round189: parent confirms low resting sleeve connection with independent raw sec
 
 Round190: independent source fan/armhole certificates verified; 20mm fan contract remains rejected, old-vertex raise requires5.769–6.669x edge stretch. Next bounded left-only source-chart seam inventory/cut-resew; exact boundary and identity/rig protected. No geometry/source edits or anatomy pass; reject open-p0 volume criterion. All3checkpoints/arms/hips/contacts/mobile OPEN, cosmetics paused. Ship192 next.
 
+Round191: exact source seam/retained endpoint obstruction verified,10frozen files/4inputs/26edges excluding69ribbon faces. Next ONE left-only construction prototype with explicit2face endpoint fan release, source/PBR/head/rig/outside protected. No geometry or anatomical pass; all3visual/arms/hips/contacts/mobile OPEN, cosmetics paused. Ship192 due.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
