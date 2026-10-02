@@ -1733,3 +1733,29 @@ shoulder-upperarm137.025mm distances alone do not clear pivots. Visible neck/
 shoulder arc, full torso, hips/seat, Garage/device and8/10 gates remain open.
 No source/rig/weights repair. Task3 construction separate; cosmetics paused.
 Next explicit-prefix actual maxforward/landing contact extraction; ship168.
+
+## Explicit-prefix maximum lean and landing audit — round168
+
+The missing finite forward/landing surface measurements are now resolved.
+Exact direct Three.js surfaces reproduce all four original full-vertex dumps;
+all480recorded bone states match below5.84e-14m. Explicit outer-prefix LBS
+parity is below4.88e-13m; preserve the failed naive affine reconstruction and
+initial bundle resolution as setup evidence. No fitted correction or asset edit.
+
+Both34/V5retain54saddle crossing pairs at186,minimum−34.772mm. Finite35maximum
+forward,426maximum back and445–447landing/recovery have0projected crossings;
+positive gaps25.464/10.859/16.578/66.956/131.096mm are not automatic stance
+failures. No all-motion contact, force, butt-only anatomy or browser shader pass.
+Independent literal minimum/crossing witnesses and retained inputs are verified.
+Twelve matched13frame actual gray/PBR excerpts preserve timing; ordered side-gray
+event review still rejects broad underarm webs and angular hips/upper legs.
+
+Keep construction→rig/weights→deformation. Task3's rest-clear armhole fails
+posed folds; ownership stays separate, no repeated weight-only tuning as a
+finished solution. Current exact19bone foundation/core audit167does not clear
+outer chest/axilla, anatomical pivots or moving seams. Cosmetics remain paused.
+Ship168passes retained cold-load/clear/crash/restart,bytefinish/hash exact,
+103crash ticks,1/3ms restart,no errors. No source or normal player promotion.
+Next inspect task3's construction pivot and gate one coherent candidate;
+actual Garage/support/grip/sole/mobile and all three visual checkpoints remain
+open. Next mandatory ship171.

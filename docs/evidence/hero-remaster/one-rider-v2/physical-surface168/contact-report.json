@@ -1,0 +1,1714 @@
+{
+  "status": "FINITE_ACTUAL_STATE_CPU_CONTACT_UNACCEPTED",
+  "sources": {
+    "source34": {
+      "sourceSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "playedReportSHA256": "c48eeea275705588833198eea544afa6fc491f7ef39f2e27abff515c487a5af2",
+      "compiledRuntimeSHA256": "b29c09240322701d04f1489b938a9ccf55b0faaedbef5b8821aeaca37d59f6ff"
+    },
+    "physicalV5": {
+      "sourceSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+      "playedReportSHA256": "0dd5c1d5896e03203d5a6849611d6b3c77610886a0138145e773d189352f4bab",
+      "compiledRuntimeSHA256": "b29c09240322701d04f1489b938a9ccf55b0faaedbef5b8821aeaca37d59f6ff"
+    }
+  },
+  "proofs": [
+    {
+      "variant": "source34",
+      "snapshots": 8,
+      "oldLiteralAllVertexDifferenceM": 0,
+      "correctedHipSurfaceParityM": 4.874989301129062e-13,
+      "naiveFinalMatrixHipDifferenceM": 2.422402096369236e-05,
+      "all480WorldBonePositionErrorM": 5.832207320642851e-14,
+      "all480WorldQuaternionError": 4.499178807293447e-14,
+      "all480BikeBonePositionErrorM": 5.754667984829636e-14,
+      "rawPositionIndicesAndExplicitLoaderWeightsExact": true,
+      "hipMorphDeltasExactlyZero": true,
+      "hipRegionTriangles": 6776,
+      "reportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "prefixFile": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/body0-outer-prefixes.f64",
+      "prefixSHA256": "f47e4b903235840549e2b3897c94e6082eb664f6f571a693787930ba1ad4930c"
+    },
+    {
+      "variant": "physicalV5",
+      "snapshots": 8,
+      "oldLiteralAllVertexDifferenceM": 0,
+      "correctedHipSurfaceParityM": 4.874989301129062e-13,
+      "naiveFinalMatrixHipDifferenceM": 2.422402096369236e-05,
+      "all480WorldBonePositionErrorM": 5.832207320642851e-14,
+      "all480WorldQuaternionError": 4.499178807293447e-14,
+      "all480BikeBonePositionErrorM": 5.754667984829636e-14,
+      "rawPositionIndicesAndExplicitLoaderWeightsExact": true,
+      "hipMorphDeltasExactlyZero": true,
+      "hipRegionTriangles": 6776,
+      "reportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "prefixFile": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/body0-outer-prefixes.f64",
+      "prefixSHA256": "f47e4b903235840549e2b3897c94e6082eb664f6f571a693787930ba1ad4930c"
+    }
+  ],
+  "rows": [
+    {
+      "pairs": 2560,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 25.46363420177167,
+      "minimumWitness": {
+        "riderTriangleID": 16092,
+        "riderVertexIDs": [
+          10773,
+          10723,
+          10637
+        ],
+        "seatTriangleID": 269,
+        "riderTriangleM": [
+          [
+            -0.06457841506569295,
+            0.6680479613619137,
+            0.024771148984197792
+          ],
+          [
+            -0.05608293688434429,
+            0.6581068703875164,
+            0.02760357670312541
+          ],
+          [
+            -0.0628511683513544,
+            0.6493074265600125,
+            0.03179621797133242
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.04990231990813854,
+            0.62890625,
+            0.02783203125
+          ],
+          [
+            -0.14023435115813854,
+            0.59375,
+            0.0546875
+          ],
+          [
+            -0.04990231990813854,
+            0.62646484375,
+            0.0400390625
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.06249566641526754,
+            0.031575999130497814
+          ],
+          [
+            -0.0628511683513544,
+            0.03179621797133242
+          ],
+          [
+            -0.0628774093818435,
+            0.031689490282723096
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.025764562415170444,
+          0.025463634201771668,
+          0.025735654894306847
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 35,
+      "tick": 360,
+      "phase": "riding",
+      "lean": 1,
+      "grounded": [
+        true,
+        true
+      ],
+      "physicalPose": true,
+      "stateSHA256": "191d920db826d0a2343e2e36e70a19e8750efe01b8e64a3ac10dd6f4ff3250dc",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 1.1629586182948515e-14,
+      "naiveFinalMatrixErrorM": 9.403070649616208e-07,
+      "snapshotSource": {
+        "file": "sample35-body.f64",
+        "bytes": 533760,
+        "sha256": "6e62710c148d73d4dd4ea25125acceb27536cd8c02690ecbb71471d34eac5e51"
+      }
+    },
+    {
+      "pairs": 4424,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 55.24126256940887,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 293,
+        "riderTriangleM": [
+          [
+            -0.22813906425525943,
+            0.6675553784811044,
+            0.04537101774404394
+          ],
+          [
+            -0.20704874578733268,
+            0.6502813733894257,
+            0.046622212986726794
+          ],
+          [
+            -0.20451157334125014,
+            0.6371307985440069,
+            0.05586881942910234
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511581421,
+            0.59765625,
+            0.03759765625
+          ],
+          [
+            -0.2798827886581421,
+            0.5668945312500071,
+            0.06201171875
+          ],
+          [
+            -0.14023435115812788,
+            0.59375,
+            0.0546875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.2063532527729417,
+            0.04915690478405588
+          ],
+          [
+            -0.20451157334125014,
+            0.05586881942910234
+          ],
+          [
+            -0.21587249869752356,
+            0.050821108617024734
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.0635849238432834,
+          0.05524126256940887,
+          0.0707653024025372
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 114,
+      "tick": 1150,
+      "phase": "riding",
+      "lean": 0.6412462777295135,
+      "grounded": [
+        true,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "af05636ca38c2197b6b2b7d3bed99b593853ede1b4f6bcc2775c4618c13e6a9c",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 4.471423231677818e-14,
+      "naiveFinalMatrixErrorM": 4.537819914607333e-06,
+      "snapshotSource": {
+        "file": "sample114-body.f64",
+        "bytes": 533760,
+        "sha256": "be7ccb0a6ee5f3b8396c54d29c8ef1009e2aa2effc2a3e406816ae4730bc8351"
+      }
+    },
+    {
+      "pairs": 4401,
+      "negativePairs": 152,
+      "crossingPairs": 54,
+      "minimumBikeFrameYGapMm": -34.771775505100464,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 293,
+        "riderTriangleM": [
+          [
+            -0.228854562572252,
+            0.5667264521038824,
+            0.047535785064062724
+          ],
+          [
+            -0.20275482704764158,
+            0.5588112501278655,
+            0.048490592762642205
+          ],
+          [
+            -0.1952030898374062,
+            0.5479319871103101,
+            0.057950375782879426
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.14023435115811367,
+            0.59765625,
+            0.03759765625
+          ],
+          [
+            -0.2798827886581705,
+            0.5668945312500018,
+            0.06201171875
+          ],
+          [
+            -0.1402343511581421,
+            0.59375,
+            0.0546875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.2027287556508351,
+            0.048523251441030764
+          ],
+          [
+            -0.19549417623606544,
+            0.05758574257401637
+          ],
+          [
+            -0.19625273590311962,
+            0.057625527171938785
+          ],
+          [
+            -0.21738479078785758,
+            0.051085495346103585
+          ]
+        ],
+        "gapAtVerticesM": [
+          -0.025116309181076324,
+          -0.034771775505100466,
+          -0.03445901560075748,
+          -0.020341028215495993
+        ]
+      },
+      "crossingWitness": {
+        "riderTriangleID": 18098,
+        "riderVertexIDs": [
+          12022,
+          12211,
+          12029
+        ],
+        "seatTriangleID": 284,
+        "riderTriangleM": [
+          [
+            -0.26355818483534676,
+            0.5782314654905161,
+            -0.05696192630222776
+          ],
+          [
+            -0.25460838462419133,
+            0.5692848683263332,
+            -0.06605788296475337
+          ],
+          [
+            -0.23566474155859396,
+            0.5658529300413946,
+            -0.057451688188047544
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511581421,
+            0.5849609375,
+            -0.06005859375
+          ],
+          [
+            -0.2798827886581705,
+            0.55712890625,
+            -0.06787109375
+          ],
+          [
+            -0.2798827886581705,
+            0.5668945312500018,
+            -0.06201171875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.2588785787767676,
+            -0.06171795357683359
+          ],
+          [
+            -0.25460838462419133,
+            -0.06605788296475337
+          ],
+          [
+            -0.24461642213071927,
+            -0.061518482854511274
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.003941675115914034,
+          0.0064533254912579885,
+          -0.00398229579868159
+        ]
+      },
+      "variant": "source34",
+      "frame": 186,
+      "tick": 1870,
+      "phase": "riding",
+      "lean": 0.07883448698707964,
+      "grounded": [
+        false,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "69d02e4d11ca86808d10f3efc7c6f8deaacbf3655a526d42fb7b9b7517cfb160",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 1.0297318553398327e-13,
+      "naiveFinalMatrixErrorM": 9.149837145505657e-06,
+      "snapshotSource": {
+        "file": "sample186-body.f64",
+        "bytes": 533760,
+        "sha256": "e211b1a95a307d32f25305ae5ff1dc245b101b4253fcad1cc38630c56d74fb54"
+      }
+    },
+    {
+      "pairs": 1802,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 8.121295373702875,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 342,
+        "riderTriangleM": [
+          [
+            -0.49876459962757735,
+            0.5761754132162267,
+            0.047320499756026924
+          ],
+          [
+            -0.47217306987141683,
+            0.5700957076481146,
+            0.048148750897008895
+          ],
+          [
+            -0.4638302682291737,
+            0.5598050457737642,
+            0.057602561368584715
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.4297851324081421,
+            0.556640625,
+            0.06005859375
+          ],
+          [
+            -0.5401366949081421,
+            0.54541015625,
+            0.04736328125
+          ],
+          [
+            -0.5401366949081989,
+            0.5410156250000071,
+            0.0517578125
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.46526492893973576,
+            0.05597684724636533
+          ],
+          [
+            -0.46392940813392086,
+            0.057490219027265754
+          ],
+          [
+            -0.4643089670672556,
+            0.05746166813405032
+          ],
+          [
+            -0.4719776083909769,
+            0.05520459208825794
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.0085448188804651,
+          0.008121295373702875,
+          0.008277071535444214,
+          0.011276221512633966
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 304,
+      "tick": 3050,
+      "phase": "riding",
+      "lean": -0.5986156848571763,
+      "grounded": [
+        true,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "01e85c2151f6ca8409874501960ada18e09df4a80addb2ef31b56d927bf281a7",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 2.233768725545815e-13,
+      "naiveFinalMatrixErrorM": 1.5794441769800827e-05,
+      "snapshotSource": {
+        "file": "sample304-body.f64",
+        "bytes": 533760,
+        "sha256": "ceaebd380565f28bc12eb017977897f24554a41481091b75d4a60d38933c7cd4"
+      }
+    },
+    {
+      "pairs": 673,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 10.85892379067177,
+      "minimumWitness": {
+        "riderTriangleID": 15832,
+        "riderVertexIDs": [
+          10613,
+          10464,
+          10357
+        ],
+        "seatTriangleID": 340,
+        "riderTriangleM": [
+          [
+            -0.5557904443244297,
+            0.5777976087560575,
+            0.03450800044136198
+          ],
+          [
+            -0.5244428129993821,
+            0.566039036167794,
+            0.04030584738853779
+          ],
+          [
+            -0.5257880711628218,
+            0.5582605509925145,
+            0.04642668068557871
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.42978513240808525,
+            0.5605468749999716,
+            0.04150390625
+          ],
+          [
+            -0.5401366949080852,
+            0.5473632812499858,
+            0.03271484375
+          ],
+          [
+            -0.5401366949081421,
+            0.5454101562499858,
+            0.04736328125
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.5401366949081035,
+            0.037403212597081834
+          ],
+          [
+            -0.5244428129993821,
+            0.04030584738853779
+          ],
+          [
+            -0.5257880711628218,
+            0.04642668068557871
+          ],
+          [
+            -0.5401366949081163,
+            0.040726576315715725
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.025187683955865348,
+          0.017646295249040378,
+          0.01085892379067177,
+          0.02130909132091563
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 426,
+      "tick": 4270,
+      "phase": "riding",
+      "lean": -1,
+      "grounded": [
+        false,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "a9a38933f78df2f84d3d4f2478c66f733070c0c6fd84d4177a90ea6d05802985",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 3.0475622025960547e-13,
+      "naiveFinalMatrixErrorM": 2.274108326327795e-05,
+      "snapshotSource": {
+        "file": "sample426-body.f64",
+        "bytes": 533760,
+        "sha256": "0b52979125e1519180e75f1a135bcc2d6074eab0b31539a7a3cd8cbe6ce464d8"
+      }
+    },
+    {
+      "pairs": 4264,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 16.577856163671576,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 293,
+        "riderTriangleM": [
+          [
+            -0.18964256823232972,
+            0.6336571644890512,
+            0.04591409423249413
+          ],
+          [
+            -0.16735923111912143,
+            0.6179498190094677,
+            0.04713493804260116
+          ],
+          [
+            -0.16383653272407628,
+            0.6050644718730922,
+            0.05643187402605447
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511581421,
+            0.5976562500000142,
+            0.03759765625
+          ],
+          [
+            -0.2798827886582558,
+            0.56689453125,
+            0.06201171875
+          ],
+          [
+            -0.14023435115825578,
+            0.5937500000000142,
+            0.0546875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.18824298308504567,
+            0.04599077371973156
+          ],
+          [
+            -0.16735923111912143,
+            0.04713493804260116
+          ],
+          [
+            -0.16402470982435155,
+            0.05593524608388614
+          ],
+          [
+            -0.16493757066206607,
+            0.05598312340054949
+          ],
+          [
+            -0.18909077467026153,
+            0.04613898903183211
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.045589686163995946,
+          0.027364668816742932,
+          0.016577856163671578,
+          0.01728502420232758,
+          0.04615161496757192
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 445,
+      "tick": 4460,
+      "phase": "riding",
+      "lean": 0.5179946808418718,
+      "grounded": [
+        false,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "c564285d5d390913748f8581c1316c0bd5f660cc97476140211ea363ae30ba60",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 3.8480330033507926e-13,
+      "naiveFinalMatrixErrorM": 2.359361603221366e-05,
+      "snapshotSource": {
+        "file": "sample445-body.f64",
+        "bytes": 533760,
+        "sha256": "84a219301d4bc458a7f011208ae40feb031b8d73a33ceae6b077b9ba664fdfe0"
+      }
+    },
+    {
+      "pairs": 2623,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 66.95583247969871,
+      "minimumWitness": {
+        "riderTriangleID": 16092,
+        "riderVertexIDs": [
+          10773,
+          10723,
+          10637
+        ],
+        "seatTriangleID": 267,
+        "riderTriangleM": [
+          [
+            -0.090556810074645,
+            0.700525934304558,
+            0.02473735789140606
+          ],
+          [
+            -0.08321653042128219,
+            0.6897205736827345,
+            0.027607995458994745
+          ],
+          [
+            -0.09093052879040897,
+            0.681688243577959,
+            0.031705959821151194
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.0499023199080284,
+            0.6298828124999858,
+            0.0
+          ],
+          [
+            -0.1402343511581421,
+            0.5976562499999929,
+            0.03759765625
+          ],
+          [
+            -0.0499023199080284,
+            0.6289062499999929,
+            0.02783203125
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.090556810074645,
+            0.02473735789140606
+          ],
+          [
+            -0.08321653042128219,
+            0.027607995458994745
+          ],
+          [
+            -0.09093052879040897,
+            0.031705959821151194
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.08542114199809836,
+          0.07220500915348682,
+          0.06695583247969872
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 446,
+      "tick": 4470,
+      "phase": "riding",
+      "lean": 1,
+      "grounded": [
+        true,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "637f52793755c4e0eb2884db68bde11456cc6b89de3981ac7123a01cd9206a00",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 3.708144902248023e-13,
+      "naiveFinalMatrixErrorM": 2.41041393984065e-05,
+      "snapshotSource": {
+        "file": "sample446-body.f64",
+        "bytes": 533760,
+        "sha256": "db63c1652e6f017cab9ed4598d285abb135bcfc9413847d4b1939cef75671f3f"
+      }
+    },
+    {
+      "pairs": 4438,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 131.09634662499624,
+      "minimumWitness": {
+        "riderTriangleID": 16095,
+        "riderVertexIDs": [
+          10803,
+          10773,
+          10637
+        ],
+        "seatTriangleID": 291,
+        "riderTriangleM": [
+          [
+            -0.22915964366779917,
+            0.7439964861916195,
+            0.023038319371194788
+          ],
+          [
+            -0.2190606289891548,
+            0.7330406814938257,
+            0.025146877724179097
+          ],
+          [
+            -0.22034822744160465,
+            0.7142394690069693,
+            0.032128105210797786
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511580284,
+            0.59912109375,
+            0.0
+          ],
+          [
+            -0.2798827886580284,
+            0.5717773437500071,
+            0.04296875
+          ],
+          [
+            -0.1402343511580284,
+            0.59765625,
+            0.03759765625
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.22078893784289066,
+            0.024786026672265316
+          ],
+          [
+            -0.2190606289891548,
+            0.025146877724179097
+          ],
+          [
+            -0.22034822744160465,
+            0.032128105210797786
+          ],
+          [
+            -0.225931569310534,
+            0.02636837481615556
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.15156745060742272,
+          0.14938888180193377,
+          0.13109634662499625,
+          0.1507537434768551
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "source34",
+      "frame": 447,
+      "tick": 4480,
+      "phase": "riding",
+      "lean": 0.44481582108155165,
+      "grounded": [
+        true,
+        true
+      ],
+      "physicalPose": true,
+      "stateSHA256": "80619a33e2a55109d1f8a5b9d23fdffd19986bf3ef6df4e3da649e7ff8204f96",
+      "sourceReportSHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "surfaceParityM": 4.874989301129062e-13,
+      "naiveFinalMatrixErrorM": 2.422402096369236e-05,
+      "snapshotSource": {
+        "file": "sample447-body.f64",
+        "bytes": 533760,
+        "sha256": "e60fc7c410bc1c6883055c74051c8a64a1545d6d3718c5727c81eb25cfe6cb1d"
+      }
+    },
+    {
+      "pairs": 2560,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 25.46363420177167,
+      "minimumWitness": {
+        "riderTriangleID": 16092,
+        "riderVertexIDs": [
+          10773,
+          10723,
+          10637
+        ],
+        "seatTriangleID": 269,
+        "riderTriangleM": [
+          [
+            -0.06457841506569295,
+            0.6680479613619137,
+            0.024771148984197792
+          ],
+          [
+            -0.05608293688434429,
+            0.6581068703875164,
+            0.02760357670312541
+          ],
+          [
+            -0.0628511683513544,
+            0.6493074265600125,
+            0.03179621797133242
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.04990231990813854,
+            0.62890625,
+            0.02783203125
+          ],
+          [
+            -0.14023435115813854,
+            0.59375,
+            0.0546875
+          ],
+          [
+            -0.04990231990813854,
+            0.62646484375,
+            0.0400390625
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.06249566641526754,
+            0.031575999130497814
+          ],
+          [
+            -0.0628511683513544,
+            0.03179621797133242
+          ],
+          [
+            -0.0628774093818435,
+            0.031689490282723096
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.025764562415170444,
+          0.025463634201771668,
+          0.025735654894306847
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 35,
+      "tick": 360,
+      "phase": "riding",
+      "lean": 1,
+      "grounded": [
+        true,
+        true
+      ],
+      "physicalPose": true,
+      "stateSHA256": "191d920db826d0a2343e2e36e70a19e8750efe01b8e64a3ac10dd6f4ff3250dc",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 1.3246348462558899e-14,
+      "naiveFinalMatrixErrorM": 9.403070649616208e-07,
+      "snapshotSource": {
+        "file": "sample35-body.f64",
+        "bytes": 533760,
+        "sha256": "869603d1f45af79a54d1e7bde7571a31a0bdc26cc260dfc815a98d1ddfdb493f"
+      }
+    },
+    {
+      "pairs": 4424,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 55.24126256940887,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 293,
+        "riderTriangleM": [
+          [
+            -0.22813906425525943,
+            0.6675553784811044,
+            0.04537101774404394
+          ],
+          [
+            -0.20704874578733268,
+            0.6502813733894257,
+            0.046622212986726794
+          ],
+          [
+            -0.20451157334125014,
+            0.6371307985440069,
+            0.05586881942910234
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511581421,
+            0.59765625,
+            0.03759765625
+          ],
+          [
+            -0.2798827886581421,
+            0.5668945312500071,
+            0.06201171875
+          ],
+          [
+            -0.14023435115812788,
+            0.59375,
+            0.0546875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.2063532527729417,
+            0.04915690478405588
+          ],
+          [
+            -0.20451157334125014,
+            0.05586881942910234
+          ],
+          [
+            -0.21587249869752356,
+            0.050821108617024734
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.0635849238432834,
+          0.05524126256940887,
+          0.0707653024025372
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 114,
+      "tick": 1150,
+      "phase": "riding",
+      "lean": 0.6412462777295135,
+      "grounded": [
+        true,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "af05636ca38c2197b6b2b7d3bed99b593853ede1b4f6bcc2775c4618c13e6a9c",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 4.471423231677818e-14,
+      "naiveFinalMatrixErrorM": 4.537819914607333e-06,
+      "snapshotSource": {
+        "file": "sample114-body.f64",
+        "bytes": 533760,
+        "sha256": "17f3dc591bfadf50efc6b51e5015b38dedd3150d1da9aa8621f2f21fdac622b9"
+      }
+    },
+    {
+      "pairs": 4401,
+      "negativePairs": 152,
+      "crossingPairs": 54,
+      "minimumBikeFrameYGapMm": -34.771775505100464,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 293,
+        "riderTriangleM": [
+          [
+            -0.228854562572252,
+            0.5667264521038824,
+            0.047535785064062724
+          ],
+          [
+            -0.20275482704764158,
+            0.5588112501278655,
+            0.048490592762642205
+          ],
+          [
+            -0.1952030898374062,
+            0.5479319871103101,
+            0.057950375782879426
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.14023435115811367,
+            0.59765625,
+            0.03759765625
+          ],
+          [
+            -0.2798827886581705,
+            0.5668945312500018,
+            0.06201171875
+          ],
+          [
+            -0.1402343511581421,
+            0.59375,
+            0.0546875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.2027287556508351,
+            0.048523251441030764
+          ],
+          [
+            -0.19549417623606544,
+            0.05758574257401637
+          ],
+          [
+            -0.19625273590311962,
+            0.057625527171938785
+          ],
+          [
+            -0.21738479078785758,
+            0.051085495346103585
+          ]
+        ],
+        "gapAtVerticesM": [
+          -0.025116309181076324,
+          -0.034771775505100466,
+          -0.03445901560075748,
+          -0.020341028215495993
+        ]
+      },
+      "crossingWitness": {
+        "riderTriangleID": 18098,
+        "riderVertexIDs": [
+          12022,
+          12211,
+          12029
+        ],
+        "seatTriangleID": 284,
+        "riderTriangleM": [
+          [
+            -0.26355818483534676,
+            0.5782314654905161,
+            -0.05696192630222776
+          ],
+          [
+            -0.25460838462419133,
+            0.5692848683263332,
+            -0.06605788296475337
+          ],
+          [
+            -0.23566474155859396,
+            0.5658529300413946,
+            -0.057451688188047544
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511581421,
+            0.5849609375,
+            -0.06005859375
+          ],
+          [
+            -0.2798827886581705,
+            0.55712890625,
+            -0.06787109375
+          ],
+          [
+            -0.2798827886581705,
+            0.5668945312500018,
+            -0.06201171875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.2588785787767676,
+            -0.06171795357683359
+          ],
+          [
+            -0.25460838462419133,
+            -0.06605788296475337
+          ],
+          [
+            -0.24461642213071927,
+            -0.061518482854511274
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.003941675115914034,
+          0.0064533254912579885,
+          -0.00398229579868159
+        ]
+      },
+      "variant": "physicalV5",
+      "frame": 186,
+      "tick": 1870,
+      "phase": "riding",
+      "lean": 0.07883448698707964,
+      "grounded": [
+        false,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "69d02e4d11ca86808d10f3efc7c6f8deaacbf3655a526d42fb7b9b7517cfb160",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 1.0322298571452393e-13,
+      "naiveFinalMatrixErrorM": 9.149837145505657e-06,
+      "snapshotSource": {
+        "file": "sample186-body.f64",
+        "bytes": 533760,
+        "sha256": "020a894816fae25096ef194ccbf6263a6d4abfe8b25f0f58d548930efa7dd19c"
+      }
+    },
+    {
+      "pairs": 1802,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 8.121295373702875,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 342,
+        "riderTriangleM": [
+          [
+            -0.49876459962757735,
+            0.5761754132162267,
+            0.047320499756026924
+          ],
+          [
+            -0.47217306987141683,
+            0.5700957076481146,
+            0.048148750897008895
+          ],
+          [
+            -0.4638302682291737,
+            0.5598050457737642,
+            0.057602561368584715
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.4297851324081421,
+            0.556640625,
+            0.06005859375
+          ],
+          [
+            -0.5401366949081421,
+            0.54541015625,
+            0.04736328125
+          ],
+          [
+            -0.5401366949081989,
+            0.5410156250000071,
+            0.0517578125
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.46526492893973576,
+            0.05597684724636533
+          ],
+          [
+            -0.46392940813392086,
+            0.057490219027265754
+          ],
+          [
+            -0.4643089670672556,
+            0.05746166813405032
+          ],
+          [
+            -0.4719776083909769,
+            0.05520459208825794
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.0085448188804651,
+          0.008121295373702875,
+          0.008277071535444214,
+          0.011276221512633966
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 304,
+      "tick": 3050,
+      "phase": "riding",
+      "lean": -0.5986156848571763,
+      "grounded": [
+        true,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "01e85c2151f6ca8409874501960ada18e09df4a80addb2ef31b56d927bf281a7",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 2.1371793224034263e-13,
+      "naiveFinalMatrixErrorM": 1.5794441769800827e-05,
+      "snapshotSource": {
+        "file": "sample304-body.f64",
+        "bytes": 533760,
+        "sha256": "907f2edd4b82b6bf62b0fbbf9a6196258dff24998fed7acde6fe6cbcf27c8c8a"
+      }
+    },
+    {
+      "pairs": 673,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 10.85892379067177,
+      "minimumWitness": {
+        "riderTriangleID": 15832,
+        "riderVertexIDs": [
+          10613,
+          10464,
+          10357
+        ],
+        "seatTriangleID": 340,
+        "riderTriangleM": [
+          [
+            -0.5557904443244297,
+            0.5777976087560575,
+            0.03450800044136198
+          ],
+          [
+            -0.5244428129993821,
+            0.566039036167794,
+            0.04030584738853779
+          ],
+          [
+            -0.5257880711628218,
+            0.5582605509925145,
+            0.04642668068557871
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.42978513240808525,
+            0.5605468749999716,
+            0.04150390625
+          ],
+          [
+            -0.5401366949080852,
+            0.5473632812499858,
+            0.03271484375
+          ],
+          [
+            -0.5401366949081421,
+            0.5454101562499858,
+            0.04736328125
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.5401366949081035,
+            0.037403212597081834
+          ],
+          [
+            -0.5244428129993821,
+            0.04030584738853779
+          ],
+          [
+            -0.5257880711628218,
+            0.04642668068557871
+          ],
+          [
+            -0.5401366949081163,
+            0.040726576315715725
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.025187683955865348,
+          0.017646295249040378,
+          0.01085892379067177,
+          0.02130909132091563
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 426,
+      "tick": 4270,
+      "phase": "riding",
+      "lean": -1,
+      "grounded": [
+        false,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "a9a38933f78df2f84d3d4f2478c66f733070c0c6fd84d4177a90ea6d05802985",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 3.079758670310184e-13,
+      "naiveFinalMatrixErrorM": 2.274108326327795e-05,
+      "snapshotSource": {
+        "file": "sample426-body.f64",
+        "bytes": 533760,
+        "sha256": "b4752d530587b350cbcf62b586c0d48f1eed40fa4fa97a2ac7c5e52ddcaab15e"
+      }
+    },
+    {
+      "pairs": 4264,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 16.577856163671576,
+      "minimumWitness": {
+        "riderTriangleID": 15652,
+        "riderVertexIDs": [
+          10362,
+          10333,
+          10107
+        ],
+        "seatTriangleID": 293,
+        "riderTriangleM": [
+          [
+            -0.18964256823232972,
+            0.6336571644890512,
+            0.04591409423249413
+          ],
+          [
+            -0.16735923111912143,
+            0.6179498190094677,
+            0.04713493804260116
+          ],
+          [
+            -0.16383653272407628,
+            0.6050644718730922,
+            0.05643187402605447
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511581421,
+            0.5976562500000142,
+            0.03759765625
+          ],
+          [
+            -0.2798827886582558,
+            0.56689453125,
+            0.06201171875
+          ],
+          [
+            -0.14023435115825578,
+            0.5937500000000142,
+            0.0546875
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.18824298308504567,
+            0.04599077371973156
+          ],
+          [
+            -0.16735923111912143,
+            0.04713493804260116
+          ],
+          [
+            -0.16402470982435155,
+            0.05593524608388614
+          ],
+          [
+            -0.16493757066206607,
+            0.05598312340054949
+          ],
+          [
+            -0.18909077467026153,
+            0.04613898903183211
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.045589686163995946,
+          0.027364668816742932,
+          0.016577856163671578,
+          0.01728502420232758,
+          0.04615161496757192
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 445,
+      "tick": 4460,
+      "phase": "riding",
+      "lean": 0.5179946808418718,
+      "grounded": [
+        false,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "c564285d5d390913748f8581c1316c0bd5f660cc97476140211ea363ae30ba60",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 4.34187408249187e-13,
+      "naiveFinalMatrixErrorM": 2.359361603221366e-05,
+      "snapshotSource": {
+        "file": "sample445-body.f64",
+        "bytes": 533760,
+        "sha256": "4fc4d60ed6a1dc2a7e660f24e103e45b469c5b2513c702b4c73bef9a24819f16"
+      }
+    },
+    {
+      "pairs": 2623,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 66.95583247969871,
+      "minimumWitness": {
+        "riderTriangleID": 16092,
+        "riderVertexIDs": [
+          10773,
+          10723,
+          10637
+        ],
+        "seatTriangleID": 267,
+        "riderTriangleM": [
+          [
+            -0.090556810074645,
+            0.700525934304558,
+            0.02473735789140606
+          ],
+          [
+            -0.08321653042128219,
+            0.6897205736827345,
+            0.027607995458994745
+          ],
+          [
+            -0.09093052879040897,
+            0.681688243577959,
+            0.031705959821151194
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.0499023199080284,
+            0.6298828124999858,
+            0.0
+          ],
+          [
+            -0.1402343511581421,
+            0.5976562499999929,
+            0.03759765625
+          ],
+          [
+            -0.0499023199080284,
+            0.6289062499999929,
+            0.02783203125
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.090556810074645,
+            0.02473735789140606
+          ],
+          [
+            -0.08321653042128219,
+            0.027607995458994745
+          ],
+          [
+            -0.09093052879040897,
+            0.031705959821151194
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.08542114199809836,
+          0.07220500915348682,
+          0.06695583247969872
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 446,
+      "tick": 4470,
+      "phase": "riding",
+      "lean": 1,
+      "grounded": [
+        true,
+        false
+      ],
+      "physicalPose": true,
+      "stateSHA256": "637f52793755c4e0eb2884db68bde11456cc6b89de3981ac7123a01cd9206a00",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 3.708144902248023e-13,
+      "naiveFinalMatrixErrorM": 2.41041393984065e-05,
+      "snapshotSource": {
+        "file": "sample446-body.f64",
+        "bytes": 533760,
+        "sha256": "bb57d81953d0aa047b53af2530df2e386c1ae96cb70ce76f0b056e6a7da25eac"
+      }
+    },
+    {
+      "pairs": 4438,
+      "negativePairs": 0,
+      "crossingPairs": 0,
+      "minimumBikeFrameYGapMm": 131.09634662499624,
+      "minimumWitness": {
+        "riderTriangleID": 16095,
+        "riderVertexIDs": [
+          10803,
+          10773,
+          10637
+        ],
+        "seatTriangleID": 291,
+        "riderTriangleM": [
+          [
+            -0.22915964366779917,
+            0.7439964861916195,
+            0.023038319371194788
+          ],
+          [
+            -0.2190606289891548,
+            0.7330406814938257,
+            0.025146877724179097
+          ],
+          [
+            -0.22034822744160465,
+            0.7142394690069693,
+            0.032128105210797786
+          ]
+        ],
+        "seatTriangleM": [
+          [
+            -0.1402343511580284,
+            0.59912109375,
+            0.0
+          ],
+          [
+            -0.2798827886580284,
+            0.5717773437500071,
+            0.04296875
+          ],
+          [
+            -0.1402343511580284,
+            0.59765625,
+            0.03759765625
+          ]
+        ],
+        "overlapPolygonXZ": [
+          [
+            -0.22078893784289066,
+            0.024786026672265316
+          ],
+          [
+            -0.2190606289891548,
+            0.025146877724179097
+          ],
+          [
+            -0.22034822744160465,
+            0.032128105210797786
+          ],
+          [
+            -0.225931569310534,
+            0.02636837481615556
+          ]
+        ],
+        "gapAtVerticesM": [
+          0.15156745060742272,
+          0.14938888180193377,
+          0.13109634662499625,
+          0.1507537434768551
+        ]
+      },
+      "crossingWitness": null,
+      "variant": "physicalV5",
+      "frame": 447,
+      "tick": 4480,
+      "phase": "riding",
+      "lean": 0.44481582108155165,
+      "grounded": [
+        true,
+        true
+      ],
+      "physicalPose": true,
+      "stateSHA256": "80619a33e2a55109d1f8a5b9d23fdffd19986bf3ef6df4e3da649e7ff8204f96",
+      "sourceReportSHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "surfaceParityM": 4.874989301129062e-13,
+      "naiveFinalMatrixErrorM": 2.422402096369236e-05,
+      "snapshotSource": {
+        "file": "sample447-body.f64",
+        "bytes": 533760,
+        "sha256": "567b718882e633061e6df361aead252edc19e1e93c9e8536e54923aa29b5e450"
+      }
+    }
+  ],
+  "snapshotFiles": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample35-body.f64",
+      "sha256": "6e62710c148d73d4dd4ea25125acceb27536cd8c02690ecbb71471d34eac5e51"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample114-body.f64",
+      "sha256": "be7ccb0a6ee5f3b8396c54d29c8ef1009e2aa2effc2a3e406816ae4730bc8351"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample186-body.f64",
+      "sha256": "e211b1a95a307d32f25305ae5ff1dc245b101b4253fcad1cc38630c56d74fb54"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample304-body.f64",
+      "sha256": "ceaebd380565f28bc12eb017977897f24554a41481091b75d4a60d38933c7cd4"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample426-body.f64",
+      "sha256": "0b52979125e1519180e75f1a135bcc2d6074eab0b31539a7a3cd8cbe6ce464d8"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample445-body.f64",
+      "sha256": "84a219301d4bc458a7f011208ae40feb031b8d73a33ceae6b077b9ba664fdfe0"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample446-body.f64",
+      "sha256": "db63c1652e6f017cab9ed4598d285abb135bcfc9413847d4b1939cef75671f3f"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample447-body.f64",
+      "sha256": "e60fc7c410bc1c6883055c74051c8a64a1545d6d3718c5727c81eb25cfe6cb1d"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample35-body.f64",
+      "sha256": "869603d1f45af79a54d1e7bde7571a31a0bdc26cc260dfc815a98d1ddfdb493f"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample114-body.f64",
+      "sha256": "17f3dc591bfadf50efc6b51e5015b38dedd3150d1da9aa8621f2f21fdac622b9"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample186-body.f64",
+      "sha256": "020a894816fae25096ef194ccbf6263a6d4abfe8b25f0f58d548930efa7dd19c"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample304-body.f64",
+      "sha256": "907f2edd4b82b6bf62b0fbbf9a6196258dff24998fed7acde6fe6cbcf27c8c8a"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample426-body.f64",
+      "sha256": "b4752d530587b350cbcf62b586c0d48f1eed40fa4fa97a2ac7c5e52ddcaab15e"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample445-body.f64",
+      "sha256": "4fc4d60ed6a1dc2a7e660f24e103e45b469c5b2513c702b4c73bef9a24819f16"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample446-body.f64",
+      "sha256": "bb57d81953d0aa047b53af2530df2e386c1ae96cb70ce76f0b056e6a7da25eac"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample447-body.f64",
+      "sha256": "567b718882e633061e6df361aead252edc19e1e93c9e8536e54923aa29b5e450"
+    }
+  ],
+  "method": "Actual getVertexPosition on frozen riding states, compared with exact recorded bone transforms and old literal dumps. Independent Cartesian LBS includes explicit outer translation once; no fitted prefix. Projected saddle triangles unchanged from166.",
+  "limits": [
+    "No new browser pixels, GPU float-shader surface parity, continuous collision, force or anatomy/device pass.",
+    "Finite8surface snapshots each; all480bone/prefix frames verified, not all480contact surfaces.",
+    "Rest-defined region may include upper thighs/folded clothes; no butt-only claim.",
+    "Positive gaps can be valid stance clearance; do not require universal seat contact."
+  ]
+}

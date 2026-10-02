@@ -1891,3 +1891,24 @@ Do not infer normal player honors the private adapter/sleeve bypass from GLB
 markers alone. Future integration must explicitly preserve these tested controls.
 Task3 construction remains separate and first; cosmetics paused. Next actual
 maxforward/landing prefix/surface extraction and mandatoryship168.
+
+## Round168 — actual maximum-lean and landing surfaces
+
+Finding: completing the finite physical contact audit confirms34/V5retain
+the same frame186saddle penetration. New maximum-forward/back and strongest
+landing samples do not justify a universal seat-height correction.
+
+Validation: 480recorded bone poses below5.84e-14m,original four full-vertex
+dumps exactly reproduced. Eight direct surfaces each; explicit outer-prefix
+LBS below4.88e-13m versus naive affine24.224µm failure. Independent literal
+triangle witnesses verified. Twelve timing-preserving13frame gray/PBR event
+excerpts; every ordered side-gray frame inspected, broad underarm/hip volume
+still rejected. Ship168both tiers bytefinish/hash exact,103crash ticks,
+1/3ms restart,no errors, canonical shared lock29.564GBpeak/14.16s.
+
+Limits: no continuous surface/force, anatomical butt-only, shader, full-film,
+actual Garage/LOD/device or visual checkpoint acceptance. Initial TS inference
+and external bundle resolution failures retained as setup errors. No source,
+weights or physics changed. Task3 construction remains separate; its new
+rest-clear armhole still fails posed folds. Cosmetic work remains paused;
+construction pivot next and mandatoryship171.

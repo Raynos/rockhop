@@ -16,7 +16,15 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round167, 2026-10-01
+## Current evidence — round168, 2026-10-01
+
+- Round168 explicit-prefix extraction resolves finite maximum-forward/landing
+  surfaces: all480bones and four original full-vertex dumps reproduced.
+  Same54saddle crossings at186in34/V5; finite forward/back/landing0crossings,
+  positive clearances are not automatic stance failures. Twelve matched event
+  excerpts retained; partial moving review rejects underarm/hip volume.
+  Ship168 passes bytefinish/hash,103crash ticks,1/3ms restart,no errors.
+  No character repair or promotion; task3 construction pivot next, ship171.
 
 - Round167 exact19joint/rest/bind retention;1,423central core vertices0arm
   influence and actual0unilateral motion. Parent24hashes/all5,404CPU rows

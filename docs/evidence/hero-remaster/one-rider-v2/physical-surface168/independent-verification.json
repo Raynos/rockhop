@@ -1,0 +1,2949 @@
+{
+  "status": "INDEPENDENT_FINITE_NUMERICAL_WITNESSES_VERIFIED_UNACCEPTED_ART",
+  "frozenUTC": "2026-10-02T00:44:39.221290+00:00",
+  "recipe": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/physical-surface168/independent_verify.py",
+    "SHA256": "8141cbec0a9068b99945005ecf73bddc8dd9537cc395e7089cd1bc40eaf53bde"
+  },
+  "method": "Literal exported source triangle topology equals extracted indices (compressed bike indices independently CPU-decoded with stock GLTFLoader/MeshoptDecoder); witness coordinates equal hashed private snapshot positions. Independent XZ barycentric solves + direct affine plane solves; separate overlap reconstruction by triangle vertex containment and 9 edge intersections. Crossing segment checked with direct 3D triangle-edge/other-plane intersection. No extractor clip/height code imported.",
+  "inputHashes": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/physical-surface168/contact-report.json",
+      "SHA256": "975bfa675f8e6987cdd85aca79ed3b18dc253c733da595e65cc66c3affb1155e",
+      "bytes": 47467,
+      "role": "frozen contact claims"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/public/models/bike-rookie.glb",
+      "SHA256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+      "bytes": 2283036,
+      "role": "source GLB topology"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/src/render/hero/gltfTestUtils.ts",
+      "SHA256": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a",
+      "bytes": 3361,
+      "role": "compressed topology decoder helper"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/pnpm-lock.yaml",
+      "SHA256": "d57cf7f375b0b79c77bc5a805df9074a1bad4eee31dcbdcce357f8fe00656668",
+      "bytes": 89652,
+      "role": "decoder dependency lock"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/physical-surface168/source34/report.json",
+      "SHA256": "380ee8d10cac247143b5acd8ba5838940679c2aae97fc84dd5e718ff018dc94c",
+      "bytes": 27779,
+      "role": "frozen surface extraction report"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/body-triangles.f64",
+      "SHA256": "a0d72f839d6012d09d6282c2bdab2e45551ea097804a0c0eceb2c0783d7c615f",
+      "bytes": 815232,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/bike-triangles.f64",
+      "SHA256": "cf9dbac933c157daaf8d1e98bd7433d006cadcce8abacaf689129ad4ed1c8a26",
+      "bytes": 25824,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb",
+      "SHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "bytes": 16297888,
+      "role": "source GLB topology"
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/physical-surface168/physicalV5/report.json",
+      "SHA256": "a18c327c7ada05ee59fa56f1ab89abd714a4d68efcb6849f91a1e92e30d39a0b",
+      "bytes": 28092,
+      "role": "frozen surface extraction report"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/body-triangles.f64",
+      "SHA256": "35da4963b1447730ac885120a711123643b818ddba5fb6b03c5213a580308864",
+      "bytes": 815232,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/bike-triangles.f64",
+      "SHA256": "cf9dbac933c157daaf8d1e98bd7433d006cadcce8abacaf689129ad4ed1c8a26",
+      "bytes": 25824,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb",
+      "SHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+      "bytes": 19605020,
+      "role": "source GLB topology"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample35-body.f64",
+      "SHA256": "6e62710c148d73d4dd4ea25125acceb27536cd8c02690ecbb71471d34eac5e51",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample35-bike.f64",
+      "SHA256": "4300035dbd7e01c509ae1177d6d05436a1946cfa362b64976d340ec4dc01646c",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample114-body.f64",
+      "SHA256": "be7ccb0a6ee5f3b8396c54d29c8ef1009e2aa2effc2a3e406816ae4730bc8351",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample114-bike.f64",
+      "SHA256": "9d534b060cf5533feef25b42db48388cafcdfd385a0f0bb833fd66b8bad6e2dc",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample186-body.f64",
+      "SHA256": "e211b1a95a307d32f25305ae5ff1dc245b101b4253fcad1cc38630c56d74fb54",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample186-bike.f64",
+      "SHA256": "518a7dea40b2c0827d64e0a4e47fb865d6030d2a2e4441aa3ca868d0d115dcb6",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample304-body.f64",
+      "SHA256": "ceaebd380565f28bc12eb017977897f24554a41481091b75d4a60d38933c7cd4",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample304-bike.f64",
+      "SHA256": "93119800774229330829605b43890e352ce29684138a3dd80285d134054bb768",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample426-body.f64",
+      "SHA256": "0b52979125e1519180e75f1a135bcc2d6074eab0b31539a7a3cd8cbe6ce464d8",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample426-bike.f64",
+      "SHA256": "7080058e83e32c0391522f1f7d68eea27805c4956579ecc909c927461b526ea0",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample445-body.f64",
+      "SHA256": "84a219301d4bc458a7f011208ae40feb031b8d73a33ceae6b077b9ba664fdfe0",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample445-bike.f64",
+      "SHA256": "32c4d096dd0c39f1593e1cb047d28f0f912c32296509a63796967fd4d59733c0",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample446-body.f64",
+      "SHA256": "db63c1652e6f017cab9ed4598d285abb135bcfc9413847d4b1939cef75671f3f",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample446-bike.f64",
+      "SHA256": "d3e60c96e2b45cf3302affe9b8493237142ff4e2f1da017e0903391b3f5e1397",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample447-body.f64",
+      "SHA256": "e60fc7c410bc1c6883055c74051c8a64a1545d6d3718c5727c81eb25cfe6cb1d",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/source34-run02/sample447-bike.f64",
+      "SHA256": "6d55c357247bf142363e1c5fa43303ace578b098fc59b9e7f21e04ed0f82ed0a",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample35-body.f64",
+      "SHA256": "869603d1f45af79a54d1e7bde7571a31a0bdc26cc260dfc815a98d1ddfdb493f",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample35-bike.f64",
+      "SHA256": "4300035dbd7e01c509ae1177d6d05436a1946cfa362b64976d340ec4dc01646c",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample114-body.f64",
+      "SHA256": "17f3dc591bfadf50efc6b51e5015b38dedd3150d1da9aa8621f2f21fdac622b9",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample114-bike.f64",
+      "SHA256": "9d534b060cf5533feef25b42db48388cafcdfd385a0f0bb833fd66b8bad6e2dc",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample186-body.f64",
+      "SHA256": "020a894816fae25096ef194ccbf6263a6d4abfe8b25f0f58d548930efa7dd19c",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample186-bike.f64",
+      "SHA256": "518a7dea40b2c0827d64e0a4e47fb865d6030d2a2e4441aa3ca868d0d115dcb6",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample304-body.f64",
+      "SHA256": "907f2edd4b82b6bf62b0fbbf9a6196258dff24998fed7acde6fe6cbcf27c8c8a",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample304-bike.f64",
+      "SHA256": "93119800774229330829605b43890e352ce29684138a3dd80285d134054bb768",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample426-body.f64",
+      "SHA256": "b4752d530587b350cbcf62b586c0d48f1eed40fa4fa97a2ac7c5e52ddcaab15e",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample426-bike.f64",
+      "SHA256": "7080058e83e32c0391522f1f7d68eea27805c4956579ecc909c927461b526ea0",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample445-body.f64",
+      "SHA256": "4fc4d60ed6a1dc2a7e660f24e103e45b469c5b2513c702b4c73bef9a24819f16",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample445-bike.f64",
+      "SHA256": "32c4d096dd0c39f1593e1cb047d28f0f912c32296509a63796967fd4d59733c0",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample446-body.f64",
+      "SHA256": "bb57d81953d0aa047b53af2530df2e386c1ae96cb70ce76f0b056e6a7da25eac",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample446-bike.f64",
+      "SHA256": "d3e60c96e2b45cf3302affe9b8493237142ff4e2f1da017e0903391b3f5e1397",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample447-body.f64",
+      "SHA256": "567b718882e633061e6df361aead252edc19e1e93c9e8536e54923aa29b5e450",
+      "bytes": 533760,
+      "role": "private literal snapshot/index array"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01/sample447-bike.f64",
+      "SHA256": "6d55c357247bf142363e1c5fa43303ace578b098fc59b9e7f21e04ed0f82ed0a",
+      "bytes": 29304,
+      "role": "private literal snapshot/index array"
+    }
+  ],
+  "fixedNumericalVerificationTolerances": {
+    "barycentricInclusion": 1e-09,
+    "metreResidual": 1e-12,
+    "note": "Fixed numerical tolerances only; scalar residuals retained and no contact/overlap thresholds changed or fitted."
+  },
+  "summary": {
+    "minimumWitnesses": 16,
+    "minimumWitnessPolygonVertices": 60,
+    "crossingWitnessesAtFrame186": 2,
+    "minimumBarycentricScalarIncludingRounding": -1.6318297919329103e-15,
+    "maximumBarycentricScalarIncludingRounding": 1.0,
+    "maximumIndependentRecordedGapResidualM": 2.220446049250313e-16,
+    "maximumIndependentRecordedRowMinimumResidualM": 1.1102230246251565e-16,
+    "maximumBarycentricVsDirectPlaneHeightResidualM": 1.1102230246251565e-16,
+    "maximumIndependentOverlapPointsetDifferenceM": 9.813077866773595e-18,
+    "maximumZeroGapEndpointResidualM": 0.0,
+    "maximumIndependentEndpointTwoMethodDifferenceM": 5.551115123125783e-17
+  },
+  "minimumWitnesses": [
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 16092,
+      "riderVertexIDs": [
+        10773,
+        10723,
+        10637
+      ],
+      "seatTriangleID": 269,
+      "seatVertexIDs": [
+        269,
+        295,
+        272
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.06249566641526754,
+            0.031575999130497814
+          ],
+          "riderBarycentric": [
+            -2.220446049250313e-16,
+            0.052525085440658835,
+            0.9474749145593413
+          ],
+          "seatBarycentric": [
+            0.8605882505589176,
+            0.13941174944108217,
+            1.7763568394002506e-16
+          ],
+          "riderHeightM": 0.6497696180988823,
+          "seatHeightM": 0.624005055683712,
+          "independentGapM": 0.025764562415170333,
+          "recordedGapM": 0.025764562415170444,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 9.813077866773595e-18,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.0628511683513544,
+            0.03179621797133242
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seatBarycentric": [
+            0.8472705261346499,
+            0.14334725195516806,
+            0.009382221910181983
+          ],
+          "riderHeightM": 0.6493074265600125,
+          "seatHeightM": 0.6238437923582407,
+          "independentGapM": 0.02546363420177178,
+          "recordedGapM": 0.025463634201771668,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.0628774093818435,
+            0.031689490282723096
+          ],
+          "riderBarycentric": [
+            0.015192404345747756,
+            2.55242176918495e-16,
+            0.984807595654252
+          ],
+          "seatBarycentric": [
+            0.8563622527451473,
+            0.14363774725485276,
+            -3.552713678800501e-17
+          ],
+          "riderHeightM": 0.6495921403423786,
+          "seatHeightM": 0.6238564854480717,
+          "independentGapM": 0.025735654894306847,
+          "recordedGapM": 0.025735654894306847,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.062495666415267534,
+          0.03157599913049781
+        ],
+        [
+          -0.0628511683513544,
+          0.03179621797133242
+        ],
+        [
+          -0.0628774093818435,
+          0.031689490282723096
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 9.813077866773595e-18,
+      "independentMinimumGapM": 0.02546363420177178,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": 0.025463634201771668,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 1.8897624113713967,
+      "projectedSeatTriangleConditionNumber": 8.065199698868154,
+      "variant": "source34",
+      "frame": 35,
+      "recordedRowMinimumGapMm": 25.46363420177167,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 293,
+      "seatVertexIDs": [
+        293,
+        311,
+        295
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.2063532527729417,
+            0.04915690478405588
+          ],
+          "riderBarycentric": [
+            -4.440892098500626e-16,
+            0.7258786979715022,
+            0.27412130202849816
+          ],
+          "seatBarycentric": [
+            0.5265331800450712,
+            0.4734668199549287,
+            1.0150610510857098e-16
+          ],
+          "riderHeightM": 0.6466765206903762,
+          "seatHeightM": 0.5830915968470929,
+          "independentGapM": 0.06358492384328329,
+          "recordedGapM": 0.0635849238432834,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.8609792490763984e-17,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.20451157334125014,
+            0.05586881942910234
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seatBarycentric": [
+            0.12813830158801254,
+            0.46027884975880157,
+            0.4115828486531859
+          ],
+          "riderHeightM": 0.6371307985440069,
+          "seatHeightM": 0.5818895359745979,
+          "independentGapM": 0.05524126256940898,
+          "recordedGapM": 0.05524126256940887,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.21587249869752356,
+            0.050821108617024734
+          ],
+          "riderBarycentric": [
+            0.4808350322774757,
+            9.87025480121545e-16,
+            0.5191649677225233
+          ],
+          "seatBarycentric": [
+            0.4583673910466668,
+            0.5416326089533331,
+            1.0150610510857098e-16
+          ],
+          "riderHeightM": 0.6517600024200898,
+          "seatHeightM": 0.5809947000175526,
+          "independentGapM": 0.0707653024025372,
+          "recordedGapM": 0.0707653024025372,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 6.938893903907228e-18,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.21587249869752356,
+          0.050821108617024734
+        ],
+        [
+          -0.2063532527729417,
+          0.04915690478405588
+        ],
+        [
+          -0.20451157334125014,
+          0.05586881942910234
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.05524126256940898,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": 0.05524126256940887,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 5.63376234515629,
+      "projectedSeatTriangleConditionNumber": 8.424860110694961,
+      "variant": "source34",
+      "frame": 114,
+      "recordedRowMinimumGapMm": 55.24126256940887,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 293,
+      "seatVertexIDs": [
+        293,
+        311,
+        295
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.2027287556508351,
+            0.048523251441030764
+          ],
+          "riderBarycentric": [
+            3.3306690738754696e-16,
+            0.9965476292301108,
+            0.0034523707698889496
+          ],
+          "seatBarycentric": [
+            0.55248762097538,
+            0.4475123790246202,
+            -1.0150610510861525e-16
+          ],
+          "riderHeightM": 0.5587736908782258,
+          "seatHeightM": 0.5838900000593021,
+          "independentGapM": -0.025116309181076324,
+          "recordedGapM": -0.025116309181076324,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.19549417623606544,
+            0.05758574257401637
+          ],
+          "riderBarycentric": [
+            2.220446049250313e-16,
+            0.03854562076984166,
+            0.9614543792301581
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.3957067194390349,
+            0.6042932805609653
+          ],
+          "riderHeightM": 0.5483513350568402,
+          "seatHeightM": 0.5831231105619408,
+          "independentGapM": -0.03477177550510058,
+          "recordedGapM": -0.034771775505100466,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 6.938893903907228e-18,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.19625273590311962,
+            0.057625527171938785
+          ],
+          "riderBarycentric": [
+            0.031191682871772874,
+            2.6586069798922996e-16,
+            0.9688083171282269
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.40113864320870846,
+            0.5988613567912917
+          ],
+          "riderHeightM": 0.5485182181021342,
+          "seatHeightM": 0.5829772337028918,
+          "independentGapM": -0.03445901560075759,
+          "recordedGapM": -0.03445901560075748,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.21738479078785758,
+            0.051085495346103585
+          ],
+          "riderBarycentric": [
+            0.6591598865592121,
+            1.3293034899461498e-16,
+            0.3408401134407878
+          ],
+          "seatBarycentric": [
+            0.44753811062359716,
+            0.5524618893764028,
+            0.0
+          ],
+          "riderHeightM": 0.5603205445234144,
+          "seatHeightM": 0.5806615727389104,
+          "independentGapM": -0.020341028215495993,
+          "recordedGapM": -0.020341028215495993,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.7755575615628914e-17,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.21738479078785758,
+          0.051085495346103585
+        ],
+        [
+          -0.2027287556508351,
+          0.048523251441030764
+        ],
+        [
+          -0.19549417623606544,
+          0.05758574257401637
+        ],
+        [
+          -0.19625273590311962,
+          0.057625527171938785
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": -0.03477177550510058,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": -0.034771775505100466,
+      "minRecordedVertexResidualM": -1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 7.896280217084108,
+      "projectedSeatTriangleConditionNumber": 8.424860110701962,
+      "variant": "source34",
+      "frame": 186,
+      "recordedRowMinimumGapMm": -34.771775505100464,
+      "rowMinimumResidualM": -1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 342,
+      "seatVertexIDs": [
+        328,
+        352,
+        355
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.46526492893973576,
+            0.05597684724636533
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.17196390038781925,
+            0.8280360996121807
+          ],
+          "seatBarycentric": [
+            0.6784839677136998,
+            0.32151603228630093,
+            -7.894919286211586e-16
+          ],
+          "riderHeightM": 0.5615746681272498,
+          "seatHeightM": 0.5530298492467847,
+          "independentGapM": 0.0085448188804651,
+          "recordedGapM": 0.0085448188804651,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 5.551115123125783e-17,
+          "seatXZReconstructionResidualM": 5.594315114139762e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.46392940813392086,
+            0.057490219027265754
+          ],
+          "riderBarycentric": [
+            1.1102230246251565e-15,
+            0.011883286814001867,
+            0.988116713185997
+          ],
+          "seatBarycentric": [
+            0.6905863863435446,
+            -5.659189930832656e-16,
+            0.30941361365645587
+          ],
+          "riderHeightM": 0.559927332660323,
+          "seatHeightM": 0.55180603728662,
+          "independentGapM": 0.008121295373702986,
+          "recordedGapM": 0.008121295373702875,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 5.594315114139762e-17
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.4643089670672556,
+            0.05746166813405032
+          ],
+          "riderBarycentric": [
+            0.013702819516498987,
+            -7.828312963792177e-16,
+            0.9862971804835018
+          ],
+          "seatBarycentric": [
+            0.6871468434432386,
+            1.8863966436108854e-16,
+            0.31285315655676116
+          ],
+          "riderHeightM": 0.560029365964247,
+          "seatHeightM": 0.5517522944288028,
+          "independentGapM": 0.008277071535444214,
+          "recordedGapM": 0.008277071535444214,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.4719776083909769,
+            0.05520459208825794
+          ],
+          "riderBarycentric": [
+            0.2332187231204741,
+            3.9141564818960884e-16,
+            0.7667812768795255
+          ],
+          "seatBarycentric": [
+            0.6176540229520102,
+            0.3823459770479902,
+            -3.947459643105793e-16
+          ],
+          "riderHeightM": 0.5636229219657083,
+          "seatHeightM": 0.5523467004530744,
+          "independentGapM": 0.011276221512633855,
+          "recordedGapM": 0.011276221512633966,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 5.551115123125783e-17,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.4719776083909769,
+          0.05520459208825794
+        ],
+        [
+          -0.46526492893973576,
+          0.05597684724636533
+        ],
+        [
+          -0.46392940813392086,
+          0.057490219027265754
+        ],
+        [
+          -0.4643089670672556,
+          0.05746166813405032
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.008121295373702986,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": 0.008121295373702875,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 8.197350603378714,
+      "projectedSeatTriangleConditionNumber": 50.67692398652788,
+      "variant": "source34",
+      "frame": 304,
+      "recordedRowMinimumGapMm": 8.121295373702875,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15832,
+      "riderVertexIDs": [
+        10613,
+        10464,
+        10357
+      ],
+      "seatTriangleID": 340,
+      "seatVertexIDs": [
+        326,
+        349,
+        351
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.5401366949081035,
+            0.037403212597081834
+          ],
+          "riderBarycentric": [
+            0.500640120013837,
+            0.4993598799861631,
+            -6.808558277920563e-17
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.6799406867058803,
+            0.3200593132941199
+          ],
+          "riderHeightM": 0.5719258493595736,
+          "seatHeightM": 0.5467381654037082,
+          "independentGapM": 0.025187683955865348,
+          "recordedGapM": 0.025187683955865348,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.5244428129993821,
+            0.04030584738853779
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.1422171245534266,
+            0.42490063512111614,
+            0.43288224032545725
+          ],
+          "riderHeightM": 0.566039036167794,
+          "seatHeightM": 0.5483927409187536,
+          "independentGapM": 0.01764629524904049,
+          "recordedGapM": 0.017646295249040378,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.5257880711628218,
+            0.04642668068557871
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.1067652659234366e-16,
+            0.9999999999999999
+          ],
+          "seatBarycentric": [
+            0.13002646650619232,
+            0.011928011928683264,
+            0.8580455215651244
+          ],
+          "riderHeightM": 0.5582605509925145,
+          "seatHeightM": 0.5474016272018426,
+          "independentGapM": 0.010858923790671882,
+          "recordedGapM": 0.01085892379067177,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.5401366949081163,
+            0.040726576315715725
+          ],
+          "riderBarycentric": [
+            0.4782496260547666,
+            -1.1067652659234366e-16,
+            0.5217503739452335
+          ],
+          "seatBarycentric": [
+            0.0,
+            0.45306572351380653,
+            0.5469342764861934
+          ],
+          "riderHeightM": 0.5676041415621392,
+          "seatHeightM": 0.5462950502412237,
+          "independentGapM": 0.02130909132091552,
+          "recordedGapM": 0.02130909132091563,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.5401366949081163,
+          0.040726576315715725
+        ],
+        [
+          -0.5401366949081035,
+          0.037403212597081834
+        ],
+        [
+          -0.5244428129993821,
+          0.04030584738853779
+        ],
+        [
+          -0.5257880711628218,
+          0.04642668068557871
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.010858923790671882,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.01085892379067177,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 10.21134546612456,
+      "projectedSeatTriangleConditionNumber": 15.069333278807749,
+      "variant": "source34",
+      "frame": 426,
+      "recordedRowMinimumGapMm": 10.85892379067177,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 293,
+      "seatVertexIDs": [
+        293,
+        311,
+        295
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.18824298308504567,
+            0.04599077371973156
+          ],
+          "riderBarycentric": [
+            0.9371914026981866,
+            0.06280859730181311,
+            3.3494505256438e-16
+          ],
+          "seatBarycentric": [
+            0.6562179084397953,
+            0.34378209156020445,
+            2.030122102174076e-16
+          ],
+          "riderHeightM": 0.6326706081521436,
+          "seatHeightM": 0.5870809219881475,
+          "independentGapM": 0.04558968616399606,
+          "recordedGapM": 0.045589686163995946,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.16735923111912143,
+            0.04713493804260116
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.5251771551031903,
+            0.19423690265725574,
+            0.280585942239554
+          ],
+          "riderHeightM": 0.6179498190094677,
+          "seatHeightM": 0.5905851501927246,
+          "independentGapM": 0.027364668816743043,
+          "recordedGapM": 0.027364668816742932,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.16402470982435155,
+            0.05593524608388614
+          ],
+          "riderBarycentric": [
+            5.551115123125783e-16,
+            0.0534184534616805,
+            0.9465815465383189
+          ],
+          "seatBarycentric": [
+            0.0,
+            0.17035893198658789,
+            0.8296410680134122
+          ],
+          "riderHeightM": 0.6057527871894343,
+          "seatHeightM": 0.5891749310257627,
+          "independentGapM": 0.016577856163671578,
+          "recordedGapM": 0.016577856163671578,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.16493757066206607,
+            0.05598312340054949
+          ],
+          "riderBarycentric": [
+            0.042665908044560164,
+            0.0,
+            0.9573340919554398
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.17689578162169053,
+            0.8231042183783096
+          ],
+          "riderHeightM": 0.606284405066991,
+          "seatHeightM": 0.5889993808646635,
+          "independentGapM": 0.01728502420232747,
+          "recordedGapM": 0.01728502420232758,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.7755575615628914e-17,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 4,
+          "XZ": [
+            -0.18909077467026153,
+            0.04613898903183211
+          ],
+          "riderBarycentric": [
+            0.978617654699742,
+            2.2867985099329675e-16,
+            0.021382345300257736
+          ],
+          "seatBarycentric": [
+            0.6501470092561565,
+            0.3498529907438432,
+            2.030122102174076e-16
+          ],
+          "riderHeightM": 0.6330457856624726,
+          "seatHeightM": 0.5868941706949007,
+          "independentGapM": 0.04615161496757192,
+          "recordedGapM": 0.04615161496757192,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 6.938893903907228e-18,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.18909077467026153,
+          0.04613898903183211
+        ],
+        [
+          -0.18824298308504567,
+          0.04599077371973156
+        ],
+        [
+          -0.16735923111912143,
+          0.04713493804260116
+        ],
+        [
+          -0.16402470982435155,
+          0.05593524608388614
+        ],
+        [
+          -0.16493757066206607,
+          0.05598312340054949
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.016577856163671578,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.016577856163671578,
+      "minRecordedVertexResidualM": 0.0,
+      "projectedRiderTriangleConditionNumber": 6.119616015102052,
+      "projectedSeatTriangleConditionNumber": 8.42486011071274,
+      "variant": "source34",
+      "frame": 445,
+      "recordedRowMinimumGapMm": 16.577856163671576,
+      "rowMinimumResidualM": 3.469446951953614e-18
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 16092,
+      "riderVertexIDs": [
+        10773,
+        10723,
+        10637
+      ],
+      "seatTriangleID": 267,
+      "seatVertexIDs": [
+        267,
+        293,
+        269
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.090556810074645,
+            0.02473735789140606
+          ],
+          "riderBarycentric": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.26910552482945405,
+            0.4500561938439243,
+            0.2808382813266217
+          ],
+          "riderHeightM": 0.700525934304558,
+          "seatHeightM": 0.6151047923064596,
+          "independentGapM": 0.08542114199809836,
+          "recordedGapM": 0.08542114199809836,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.08321653042128219,
+            0.027607995458994745
+          ],
+          "riderBarycentric": [
+            1.1102230246251565e-16,
+            1.0,
+            -6.095512977957541e-17
+          ],
+          "seatBarycentric": [
+            0.1374521330599554,
+            0.36879731422193446,
+            0.4937505527181102
+          ],
+          "riderHeightM": 0.6897205736827345,
+          "seatHeightM": 0.6175155645292478,
+          "independentGapM": 0.07220500915348671,
+          "recordedGapM": 0.07220500915348682,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 1.3877787807814457e-17,
+          "seatXZReconstructionResidualM": 3.469446951953614e-18
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.09093052879040897,
+            0.031705959821151194
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seatBarycentric": [
+            0.020176517665474458,
+            0.4541933610324846,
+            0.5256301213020409
+          ],
+          "riderHeightM": 0.681688243577959,
+          "seatHeightM": 0.6147324110982604,
+          "independentGapM": 0.06695583247969861,
+          "recordedGapM": 0.06695583247969872,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.090556810074645,
+          0.02473735789140606
+        ],
+        [
+          -0.08321653042128219,
+          0.027607995458994745
+        ],
+        [
+          -0.09093052879040897,
+          0.031705959821151194
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.06695583247969861,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.06695583247969872,
+      "minRecordedVertexResidualM": -1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 1.4156244610211919,
+      "projectedSeatTriangleConditionNumber": 3.856689394537925,
+      "variant": "source34",
+      "frame": 446,
+      "recordedRowMinimumGapMm": 66.95583247969871,
+      "rowMinimumResidualM": -1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 16095,
+      "riderVertexIDs": [
+        10803,
+        10773,
+        10637
+      ],
+      "seatTriangleID": 291,
+      "seatVertexIDs": [
+        292,
+        309,
+        293
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.22078893784289066,
+            0.024786026672265316
+          ],
+          "riderBarycentric": [
+            0.1711363839672989,
+            0.8288636160327015,
+            -4.48631466866005e-16
+          ],
+          "seatBarycentric": [
+            0.42316156108182534,
+            0.5768384389181745,
+            9.227827737144159e-17
+          ],
+          "riderHeightM": 0.7349156182932581,
+          "seatHeightM": 0.5833481676858352,
+          "independentGapM": 0.15156745060742294,
+          "recordedGapM": 0.15156745060742272,
+          "gapResidualM": 2.220446049250313e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.2190606289891548,
+            0.025146877724179097
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.4117958401303987,
+            0.5644622971963177,
+            0.023741862673283542
+          ],
+          "riderHeightM": 0.7330406814938257,
+          "seatHeightM": 0.5836517996918917,
+          "independentGapM": 0.149388881801934,
+          "recordedGapM": 0.14938888180193377,
+          "gapResidualM": 2.220446049250313e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.22034822744160465,
+            0.032128105210797786
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.7177155704556952e-16,
+            0.9999999999999999
+          ],
+          "seatBarycentric": [
+            0.22743050567642542,
+            0.5736825826180565,
+            0.19888691170551814
+          ],
+          "riderHeightM": 0.7142394690069693,
+          "seatHeightM": 0.583143122381973,
+          "independentGapM": 0.13109634662499636,
+          "recordedGapM": 0.13109634662499625,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.225931569310534,
+            0.02636837481615556
+          ],
+          "riderBarycentric": [
+            0.6336486355429687,
+            -1.6318297919329103e-15,
+            0.3663513644570329
+          ],
+          "seatBarycentric": [
+            0.38633600427856163,
+            0.6136639957214386,
+            -1.8455655474288318e-16
+          ],
+          "riderHeightM": 0.7330949623438515,
+          "seatHeightM": 0.5823412188669963,
+          "independentGapM": 0.15075374347685522,
+          "recordedGapM": 0.1507537434768551,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.797157557069881e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.225931569310534,
+          0.02636837481615556
+        ],
+        [
+          -0.22078893784289066,
+          0.024786026672265316
+        ],
+        [
+          -0.2190606289891548,
+          0.025146877724179097
+        ],
+        [
+          -0.22034822744160465,
+          0.032128105210797786
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.13109634662499636,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.13109634662499625,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 3.3434487284060195,
+      "projectedSeatTriangleConditionNumber": 4.090708398118388,
+      "variant": "source34",
+      "frame": 447,
+      "recordedRowMinimumGapMm": 131.09634662499624,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 16092,
+      "riderVertexIDs": [
+        10773,
+        10723,
+        10637
+      ],
+      "seatTriangleID": 269,
+      "seatVertexIDs": [
+        269,
+        295,
+        272
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.06249566641526754,
+            0.031575999130497814
+          ],
+          "riderBarycentric": [
+            -2.220446049250313e-16,
+            0.052525085440658835,
+            0.9474749145593413
+          ],
+          "seatBarycentric": [
+            0.8605882505589176,
+            0.13941174944108217,
+            1.7763568394002506e-16
+          ],
+          "riderHeightM": 0.6497696180988823,
+          "seatHeightM": 0.624005055683712,
+          "independentGapM": 0.025764562415170333,
+          "recordedGapM": 0.025764562415170444,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 9.813077866773595e-18,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.0628511683513544,
+            0.03179621797133242
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seatBarycentric": [
+            0.8472705261346499,
+            0.14334725195516806,
+            0.009382221910181983
+          ],
+          "riderHeightM": 0.6493074265600125,
+          "seatHeightM": 0.6238437923582407,
+          "independentGapM": 0.02546363420177178,
+          "recordedGapM": 0.025463634201771668,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.0628774093818435,
+            0.031689490282723096
+          ],
+          "riderBarycentric": [
+            0.015192404345747756,
+            2.55242176918495e-16,
+            0.984807595654252
+          ],
+          "seatBarycentric": [
+            0.8563622527451473,
+            0.14363774725485276,
+            -3.552713678800501e-17
+          ],
+          "riderHeightM": 0.6495921403423786,
+          "seatHeightM": 0.6238564854480717,
+          "independentGapM": 0.025735654894306847,
+          "recordedGapM": 0.025735654894306847,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.062495666415267534,
+          0.03157599913049781
+        ],
+        [
+          -0.0628511683513544,
+          0.03179621797133242
+        ],
+        [
+          -0.0628774093818435,
+          0.031689490282723096
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 9.813077866773595e-18,
+      "independentMinimumGapM": 0.02546363420177178,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": 0.025463634201771668,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 1.8897624113713967,
+      "projectedSeatTriangleConditionNumber": 8.065199698868154,
+      "variant": "physicalV5",
+      "frame": 35,
+      "recordedRowMinimumGapMm": 25.46363420177167,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 293,
+      "seatVertexIDs": [
+        293,
+        311,
+        295
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.2063532527729417,
+            0.04915690478405588
+          ],
+          "riderBarycentric": [
+            -4.440892098500626e-16,
+            0.7258786979715022,
+            0.27412130202849816
+          ],
+          "seatBarycentric": [
+            0.5265331800450712,
+            0.4734668199549287,
+            1.0150610510857098e-16
+          ],
+          "riderHeightM": 0.6466765206903762,
+          "seatHeightM": 0.5830915968470929,
+          "independentGapM": 0.06358492384328329,
+          "recordedGapM": 0.0635849238432834,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.8609792490763984e-17,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.20451157334125014,
+            0.05586881942910234
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seatBarycentric": [
+            0.12813830158801254,
+            0.46027884975880157,
+            0.4115828486531859
+          ],
+          "riderHeightM": 0.6371307985440069,
+          "seatHeightM": 0.5818895359745979,
+          "independentGapM": 0.05524126256940898,
+          "recordedGapM": 0.05524126256940887,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.21587249869752356,
+            0.050821108617024734
+          ],
+          "riderBarycentric": [
+            0.4808350322774757,
+            9.87025480121545e-16,
+            0.5191649677225233
+          ],
+          "seatBarycentric": [
+            0.4583673910466668,
+            0.5416326089533331,
+            1.0150610510857098e-16
+          ],
+          "riderHeightM": 0.6517600024200898,
+          "seatHeightM": 0.5809947000175526,
+          "independentGapM": 0.0707653024025372,
+          "recordedGapM": 0.0707653024025372,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 6.938893903907228e-18,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.21587249869752356,
+          0.050821108617024734
+        ],
+        [
+          -0.2063532527729417,
+          0.04915690478405588
+        ],
+        [
+          -0.20451157334125014,
+          0.05586881942910234
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.05524126256940898,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": 0.05524126256940887,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 5.63376234515629,
+      "projectedSeatTriangleConditionNumber": 8.424860110694961,
+      "variant": "physicalV5",
+      "frame": 114,
+      "recordedRowMinimumGapMm": 55.24126256940887,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 293,
+      "seatVertexIDs": [
+        293,
+        311,
+        295
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.2027287556508351,
+            0.048523251441030764
+          ],
+          "riderBarycentric": [
+            3.3306690738754696e-16,
+            0.9965476292301108,
+            0.0034523707698889496
+          ],
+          "seatBarycentric": [
+            0.55248762097538,
+            0.4475123790246202,
+            -1.0150610510861525e-16
+          ],
+          "riderHeightM": 0.5587736908782258,
+          "seatHeightM": 0.5838900000593021,
+          "independentGapM": -0.025116309181076324,
+          "recordedGapM": -0.025116309181076324,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.19549417623606544,
+            0.05758574257401637
+          ],
+          "riderBarycentric": [
+            2.220446049250313e-16,
+            0.03854562076984166,
+            0.9614543792301581
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.3957067194390349,
+            0.6042932805609653
+          ],
+          "riderHeightM": 0.5483513350568402,
+          "seatHeightM": 0.5831231105619408,
+          "independentGapM": -0.03477177550510058,
+          "recordedGapM": -0.034771775505100466,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 6.938893903907228e-18,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.19625273590311962,
+            0.057625527171938785
+          ],
+          "riderBarycentric": [
+            0.031191682871772874,
+            2.6586069798922996e-16,
+            0.9688083171282269
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.40113864320870846,
+            0.5988613567912917
+          ],
+          "riderHeightM": 0.5485182181021342,
+          "seatHeightM": 0.5829772337028918,
+          "independentGapM": -0.03445901560075759,
+          "recordedGapM": -0.03445901560075748,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.21738479078785758,
+            0.051085495346103585
+          ],
+          "riderBarycentric": [
+            0.6591598865592121,
+            1.3293034899461498e-16,
+            0.3408401134407878
+          ],
+          "seatBarycentric": [
+            0.44753811062359716,
+            0.5524618893764028,
+            0.0
+          ],
+          "riderHeightM": 0.5603205445234144,
+          "seatHeightM": 0.5806615727389104,
+          "independentGapM": -0.020341028215495993,
+          "recordedGapM": -0.020341028215495993,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.7755575615628914e-17,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.21738479078785758,
+          0.051085495346103585
+        ],
+        [
+          -0.2027287556508351,
+          0.048523251441030764
+        ],
+        [
+          -0.19549417623606544,
+          0.05758574257401637
+        ],
+        [
+          -0.19625273590311962,
+          0.057625527171938785
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": -0.03477177550510058,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": -0.034771775505100466,
+      "minRecordedVertexResidualM": -1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 7.896280217084108,
+      "projectedSeatTriangleConditionNumber": 8.424860110701962,
+      "variant": "physicalV5",
+      "frame": 186,
+      "recordedRowMinimumGapMm": -34.771775505100464,
+      "rowMinimumResidualM": -1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 342,
+      "seatVertexIDs": [
+        328,
+        352,
+        355
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.46526492893973576,
+            0.05597684724636533
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.17196390038781925,
+            0.8280360996121807
+          ],
+          "seatBarycentric": [
+            0.6784839677136998,
+            0.32151603228630093,
+            -7.894919286211586e-16
+          ],
+          "riderHeightM": 0.5615746681272498,
+          "seatHeightM": 0.5530298492467847,
+          "independentGapM": 0.0085448188804651,
+          "recordedGapM": 0.0085448188804651,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 5.551115123125783e-17,
+          "seatXZReconstructionResidualM": 5.594315114139762e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.46392940813392086,
+            0.057490219027265754
+          ],
+          "riderBarycentric": [
+            1.1102230246251565e-15,
+            0.011883286814001867,
+            0.988116713185997
+          ],
+          "seatBarycentric": [
+            0.6905863863435446,
+            -5.659189930832656e-16,
+            0.30941361365645587
+          ],
+          "riderHeightM": 0.559927332660323,
+          "seatHeightM": 0.55180603728662,
+          "independentGapM": 0.008121295373702986,
+          "recordedGapM": 0.008121295373702875,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 5.594315114139762e-17
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.4643089670672556,
+            0.05746166813405032
+          ],
+          "riderBarycentric": [
+            0.013702819516498987,
+            -7.828312963792177e-16,
+            0.9862971804835018
+          ],
+          "seatBarycentric": [
+            0.6871468434432386,
+            1.8863966436108854e-16,
+            0.31285315655676116
+          ],
+          "riderHeightM": 0.560029365964247,
+          "seatHeightM": 0.5517522944288028,
+          "independentGapM": 0.008277071535444214,
+          "recordedGapM": 0.008277071535444214,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.4719776083909769,
+            0.05520459208825794
+          ],
+          "riderBarycentric": [
+            0.2332187231204741,
+            3.9141564818960884e-16,
+            0.7667812768795255
+          ],
+          "seatBarycentric": [
+            0.6176540229520102,
+            0.3823459770479902,
+            -3.947459643105793e-16
+          ],
+          "riderHeightM": 0.5636229219657083,
+          "seatHeightM": 0.5523467004530744,
+          "independentGapM": 0.011276221512633855,
+          "recordedGapM": 0.011276221512633966,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 5.551115123125783e-17,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.4719776083909769,
+          0.05520459208825794
+        ],
+        [
+          -0.46526492893973576,
+          0.05597684724636533
+        ],
+        [
+          -0.46392940813392086,
+          0.057490219027265754
+        ],
+        [
+          -0.4643089670672556,
+          0.05746166813405032
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.008121295373702986,
+      "minimumPolygonVertexID": 1,
+      "recordedMinimumGapM": 0.008121295373702875,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 8.197350603378714,
+      "projectedSeatTriangleConditionNumber": 50.67692398652788,
+      "variant": "physicalV5",
+      "frame": 304,
+      "recordedRowMinimumGapMm": 8.121295373702875,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15832,
+      "riderVertexIDs": [
+        10613,
+        10464,
+        10357
+      ],
+      "seatTriangleID": 340,
+      "seatVertexIDs": [
+        326,
+        349,
+        351
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.5401366949081035,
+            0.037403212597081834
+          ],
+          "riderBarycentric": [
+            0.500640120013837,
+            0.4993598799861631,
+            -6.808558277920563e-17
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.6799406867058803,
+            0.3200593132941199
+          ],
+          "riderHeightM": 0.5719258493595736,
+          "seatHeightM": 0.5467381654037082,
+          "independentGapM": 0.025187683955865348,
+          "recordedGapM": 0.025187683955865348,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.5244428129993821,
+            0.04030584738853779
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.1422171245534266,
+            0.42490063512111614,
+            0.43288224032545725
+          ],
+          "riderHeightM": 0.566039036167794,
+          "seatHeightM": 0.5483927409187536,
+          "independentGapM": 0.01764629524904049,
+          "recordedGapM": 0.017646295249040378,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.5257880711628218,
+            0.04642668068557871
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.1067652659234366e-16,
+            0.9999999999999999
+          ],
+          "seatBarycentric": [
+            0.13002646650619232,
+            0.011928011928683264,
+            0.8580455215651244
+          ],
+          "riderHeightM": 0.5582605509925145,
+          "seatHeightM": 0.5474016272018426,
+          "independentGapM": 0.010858923790671882,
+          "recordedGapM": 0.01085892379067177,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.5401366949081163,
+            0.040726576315715725
+          ],
+          "riderBarycentric": [
+            0.4782496260547666,
+            -1.1067652659234366e-16,
+            0.5217503739452335
+          ],
+          "seatBarycentric": [
+            0.0,
+            0.45306572351380653,
+            0.5469342764861934
+          ],
+          "riderHeightM": 0.5676041415621392,
+          "seatHeightM": 0.5462950502412237,
+          "independentGapM": 0.02130909132091552,
+          "recordedGapM": 0.02130909132091563,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.5401366949081163,
+          0.040726576315715725
+        ],
+        [
+          -0.5401366949081035,
+          0.037403212597081834
+        ],
+        [
+          -0.5244428129993821,
+          0.04030584738853779
+        ],
+        [
+          -0.5257880711628218,
+          0.04642668068557871
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.010858923790671882,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.01085892379067177,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 10.21134546612456,
+      "projectedSeatTriangleConditionNumber": 15.069333278807749,
+      "variant": "physicalV5",
+      "frame": 426,
+      "recordedRowMinimumGapMm": 10.85892379067177,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 15652,
+      "riderVertexIDs": [
+        10362,
+        10333,
+        10107
+      ],
+      "seatTriangleID": 293,
+      "seatVertexIDs": [
+        293,
+        311,
+        295
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.18824298308504567,
+            0.04599077371973156
+          ],
+          "riderBarycentric": [
+            0.9371914026981866,
+            0.06280859730181311,
+            3.3494505256438e-16
+          ],
+          "seatBarycentric": [
+            0.6562179084397953,
+            0.34378209156020445,
+            2.030122102174076e-16
+          ],
+          "riderHeightM": 0.6326706081521436,
+          "seatHeightM": 0.5870809219881475,
+          "independentGapM": 0.04558968616399606,
+          "recordedGapM": 0.045589686163995946,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.16735923111912143,
+            0.04713493804260116
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.5251771551031903,
+            0.19423690265725574,
+            0.280585942239554
+          ],
+          "riderHeightM": 0.6179498190094677,
+          "seatHeightM": 0.5905851501927246,
+          "independentGapM": 0.027364668816743043,
+          "recordedGapM": 0.027364668816742932,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.16402470982435155,
+            0.05593524608388614
+          ],
+          "riderBarycentric": [
+            5.551115123125783e-16,
+            0.0534184534616805,
+            0.9465815465383189
+          ],
+          "seatBarycentric": [
+            0.0,
+            0.17035893198658789,
+            0.8296410680134122
+          ],
+          "riderHeightM": 0.6057527871894343,
+          "seatHeightM": 0.5891749310257627,
+          "independentGapM": 0.016577856163671578,
+          "recordedGapM": 0.016577856163671578,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.16493757066206607,
+            0.05598312340054949
+          ],
+          "riderBarycentric": [
+            0.042665908044560164,
+            0.0,
+            0.9573340919554398
+          ],
+          "seatBarycentric": [
+            -2.220446049250313e-16,
+            0.17689578162169053,
+            0.8231042183783096
+          ],
+          "riderHeightM": 0.606284405066991,
+          "seatHeightM": 0.5889993808646635,
+          "independentGapM": 0.01728502420232747,
+          "recordedGapM": 0.01728502420232758,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.7755575615628914e-17,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        },
+        {
+          "polygonVertex": 4,
+          "XZ": [
+            -0.18909077467026153,
+            0.04613898903183211
+          ],
+          "riderBarycentric": [
+            0.978617654699742,
+            2.2867985099329675e-16,
+            0.021382345300257736
+          ],
+          "seatBarycentric": [
+            0.6501470092561565,
+            0.3498529907438432,
+            2.030122102174076e-16
+          ],
+          "riderHeightM": 0.6330457856624726,
+          "seatHeightM": 0.5868941706949007,
+          "independentGapM": 0.04615161496757192,
+          "recordedGapM": 0.04615161496757192,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 6.938893903907228e-18,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.18909077467026153,
+          0.04613898903183211
+        ],
+        [
+          -0.18824298308504567,
+          0.04599077371973156
+        ],
+        [
+          -0.16735923111912143,
+          0.04713493804260116
+        ],
+        [
+          -0.16402470982435155,
+          0.05593524608388614
+        ],
+        [
+          -0.16493757066206607,
+          0.05598312340054949
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.016577856163671578,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.016577856163671578,
+      "minRecordedVertexResidualM": 0.0,
+      "projectedRiderTriangleConditionNumber": 6.119616015102052,
+      "projectedSeatTriangleConditionNumber": 8.42486011071274,
+      "variant": "physicalV5",
+      "frame": 445,
+      "recordedRowMinimumGapMm": 16.577856163671576,
+      "rowMinimumResidualM": 3.469446951953614e-18
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 16092,
+      "riderVertexIDs": [
+        10773,
+        10723,
+        10637
+      ],
+      "seatTriangleID": 267,
+      "seatVertexIDs": [
+        267,
+        293,
+        269
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.090556810074645,
+            0.02473735789140606
+          ],
+          "riderBarycentric": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.26910552482945405,
+            0.4500561938439243,
+            0.2808382813266217
+          ],
+          "riderHeightM": 0.700525934304558,
+          "seatHeightM": 0.6151047923064596,
+          "independentGapM": 0.08542114199809836,
+          "recordedGapM": 0.08542114199809836,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.08321653042128219,
+            0.027607995458994745
+          ],
+          "riderBarycentric": [
+            1.1102230246251565e-16,
+            1.0,
+            -6.095512977957541e-17
+          ],
+          "seatBarycentric": [
+            0.1374521330599554,
+            0.36879731422193446,
+            0.4937505527181102
+          ],
+          "riderHeightM": 0.6897205736827345,
+          "seatHeightM": 0.6175155645292478,
+          "independentGapM": 0.07220500915348671,
+          "recordedGapM": 0.07220500915348682,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 1.3877787807814457e-17,
+          "seatXZReconstructionResidualM": 3.469446951953614e-18
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.09093052879040897,
+            0.031705959821151194
+          ],
+          "riderBarycentric": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "seatBarycentric": [
+            0.020176517665474458,
+            0.4541933610324846,
+            0.5256301213020409
+          ],
+          "riderHeightM": 0.681688243577959,
+          "seatHeightM": 0.6147324110982604,
+          "independentGapM": 0.06695583247969861,
+          "recordedGapM": 0.06695583247969872,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.090556810074645,
+          0.02473735789140606
+        ],
+        [
+          -0.08321653042128219,
+          0.027607995458994745
+        ],
+        [
+          -0.09093052879040897,
+          0.031705959821151194
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.06695583247969861,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.06695583247969872,
+      "minRecordedVertexResidualM": -1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 1.4156244610211919,
+      "projectedSeatTriangleConditionNumber": 3.856689394537925,
+      "variant": "physicalV5",
+      "frame": 446,
+      "recordedRowMinimumGapMm": 66.95583247969871,
+      "rowMinimumResidualM": -1.1102230246251565e-16
+    },
+    {
+      "label": "minimumWitness",
+      "riderTriangleID": 16095,
+      "riderVertexIDs": [
+        10803,
+        10773,
+        10637
+      ],
+      "seatTriangleID": 291,
+      "seatVertexIDs": [
+        292,
+        309,
+        293
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.22078893784289066,
+            0.024786026672265316
+          ],
+          "riderBarycentric": [
+            0.1711363839672989,
+            0.8288636160327015,
+            -4.48631466866005e-16
+          ],
+          "seatBarycentric": [
+            0.42316156108182534,
+            0.5768384389181745,
+            9.227827737144159e-17
+          ],
+          "riderHeightM": 0.7349156182932581,
+          "seatHeightM": 0.5833481676858352,
+          "independentGapM": 0.15156745060742294,
+          "recordedGapM": 0.15156745060742272,
+          "gapResidualM": 2.220446049250313e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.2190606289891548,
+            0.025146877724179097
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.4117958401303987,
+            0.5644622971963177,
+            0.023741862673283542
+          ],
+          "riderHeightM": 0.7330406814938257,
+          "seatHeightM": 0.5836517996918917,
+          "independentGapM": 0.149388881801934,
+          "recordedGapM": 0.14938888180193377,
+          "gapResidualM": 2.220446049250313e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.22034822744160465,
+            0.032128105210797786
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.7177155704556952e-16,
+            0.9999999999999999
+          ],
+          "seatBarycentric": [
+            0.22743050567642542,
+            0.5736825826180565,
+            0.19888691170551814
+          ],
+          "riderHeightM": 0.7142394690069693,
+          "seatHeightM": 0.583143122381973,
+          "independentGapM": 0.13109634662499636,
+          "recordedGapM": 0.13109634662499625,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.7755575615628914e-17
+        },
+        {
+          "polygonVertex": 3,
+          "XZ": [
+            -0.225931569310534,
+            0.02636837481615556
+          ],
+          "riderBarycentric": [
+            0.6336486355429687,
+            -1.6318297919329103e-15,
+            0.3663513644570329
+          ],
+          "seatBarycentric": [
+            0.38633600427856163,
+            0.6136639957214386,
+            -1.8455655474288318e-16
+          ],
+          "riderHeightM": 0.7330949623438515,
+          "seatHeightM": 0.5823412188669963,
+          "independentGapM": 0.15075374347685522,
+          "recordedGapM": 0.1507537434768551,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": 0.0,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 2.797157557069881e-17
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.225931569310534,
+          0.02636837481615556
+        ],
+        [
+          -0.22078893784289066,
+          0.024786026672265316
+        ],
+        [
+          -0.2190606289891548,
+          0.025146877724179097
+        ],
+        [
+          -0.22034822744160465,
+          0.032128105210797786
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": 0.13109634662499636,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": 0.13109634662499625,
+      "minRecordedVertexResidualM": 1.1102230246251565e-16,
+      "projectedRiderTriangleConditionNumber": 3.3434487284060195,
+      "projectedSeatTriangleConditionNumber": 4.090708398118388,
+      "variant": "physicalV5",
+      "frame": 447,
+      "recordedRowMinimumGapMm": 131.09634662499624,
+      "rowMinimumResidualM": 1.1102230246251565e-16
+    }
+  ],
+  "frame186Crossings": [
+    {
+      "label": "crossingWitness",
+      "riderTriangleID": 18098,
+      "riderVertexIDs": [
+        12022,
+        12211,
+        12029
+      ],
+      "seatTriangleID": 284,
+      "seatVertexIDs": [
+        288,
+        304,
+        305
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.2588785787767676,
+            -0.06171795357683359
+          ],
+          "riderBarycentric": [
+            0.4771273158984849,
+            0.5228726841015152,
+            -1.5821099235987235e-16
+          ],
+          "seatBarycentric": [
+            0.1504077686612041,
+            1.9875321279998757e-16,
+            0.8495922313387957
+          ],
+          "riderHeightM": 0.5735535342177047,
+          "seatHeightM": 0.5696118591017908,
+          "independentGapM": 0.003941675115913923,
+          "recordedGapM": 0.003941675115914034,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.25460838462419133,
+            -0.06605788296475337
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.18098594217335262,
+            0.7508740067090264,
+            0.06814005111762103
+          ],
+          "riderHeightM": 0.5692848683263332,
+          "seatHeightM": 0.5628315428350751,
+          "independentGapM": 0.0064533254912580995,
+          "recordedGapM": 0.0064533254912579885,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.24461642213071927,
+            -0.061518482854511274
+          ],
+          "riderBarycentric": [
+            -6.661338147750939e-16,
+            0.4725427174238748,
+            0.5274572825761258
+          ],
+          "seatBarycentric": [
+            0.2525367784902288,
+            2.9812981919998136e-16,
+            0.7474632215097708
+          ],
+          "riderHeightM": 0.5674746674845904,
+          "seatHeightM": 0.571456963283272,
+          "independentGapM": -0.00398229579868159,
+          "recordedGapM": -0.00398229579868159,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.7755575615628914e-17,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.25460838462419133,
+          -0.06605788296475337
+        ],
+        [
+          -0.24461642213071927,
+          -0.061518482854511274
+        ],
+        [
+          -0.2588785787767676,
+          -0.06171795357683359
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": -0.00398229579868159,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": -0.00398229579868159,
+      "minRecordedVertexResidualM": 0.0,
+      "projectedRiderTriangleConditionNumber": 3.487816354767955,
+      "projectedSeatTriangleConditionNumber": 47.72496735286456,
+      "variant": "source34",
+      "frame": 186,
+      "independentZeroGapEndpoints": [
+        {
+          "overlapEdgePolygonVertexIDs": [
+            1,
+            2
+          ],
+          "edgeParameter": 0.6183939903491261,
+          "positionM": [
+            -0.24842941506643434,
+            0.5681654510044746,
+            -0.0632507452167895
+          ],
+          "riderBarycentric": [
+            -2.220446049250313e-16,
+            0.6738235862890436,
+            0.3261764137109567
+          ],
+          "seatBarycentric": [
+            0.22523254935616288,
+            0.2865380334507956,
+            0.4882294171930416
+          ],
+          "riderHeightM": 0.5681654510044746,
+          "seatHeightM": 0.5681654510044746,
+          "zeroGapResidualM": 0.0
+        },
+        {
+          "overlapEdgePolygonVertexIDs": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.502563151935152,
+          "positionM": [
+            -0.2517840565281502,
+            0.5705296819101782,
+            -0.06161872948944035
+          ],
+          "riderBarycentric": [
+            0.23978660775230232,
+            0.4978367041141806,
+            0.26237668813351717
+          ],
+          "seatBarycentric": [
+            0.20121050140653796,
+            -2.9812981919998136e-16,
+            0.7987894985934624
+          ],
+          "riderHeightM": 0.5705296819101782,
+          "seatHeightM": 0.5705296819101782,
+          "zeroGapResidualM": 0.0
+        }
+      ],
+      "direct3DTrianglePlaneIntersectionEndpointsM": [
+        [
+          -0.24842941506643432,
+          0.5681654510044746,
+          -0.06325074521678949
+        ],
+        [
+          -0.25178405652815017,
+          0.5705296819101782,
+          -0.06161872948944035
+        ]
+      ],
+      "maximumTwoMethodEndpointDifferenceM": 5.551115123125783e-17
+    },
+    {
+      "label": "crossingWitness",
+      "riderTriangleID": 18098,
+      "riderVertexIDs": [
+        12022,
+        12211,
+        12029
+      ],
+      "seatTriangleID": 284,
+      "seatVertexIDs": [
+        288,
+        304,
+        305
+      ],
+      "points": [
+        {
+          "polygonVertex": 0,
+          "XZ": [
+            -0.2588785787767676,
+            -0.06171795357683359
+          ],
+          "riderBarycentric": [
+            0.4771273158984849,
+            0.5228726841015152,
+            -1.5821099235987235e-16
+          ],
+          "seatBarycentric": [
+            0.1504077686612041,
+            1.9875321279998757e-16,
+            0.8495922313387957
+          ],
+          "riderHeightM": 0.5735535342177047,
+          "seatHeightM": 0.5696118591017908,
+          "independentGapM": 0.003941675115913923,
+          "recordedGapM": 0.003941675115914034,
+          "gapResidualM": -1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 1,
+          "XZ": [
+            -0.25460838462419133,
+            -0.06605788296475337
+          ],
+          "riderBarycentric": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "seatBarycentric": [
+            0.18098594217335262,
+            0.7508740067090264,
+            0.06814005111762103
+          ],
+          "riderHeightM": 0.5692848683263332,
+          "seatHeightM": 0.5628315428350751,
+          "independentGapM": 0.0064533254912580995,
+          "recordedGapM": 0.0064533254912579885,
+          "gapResidualM": 1.1102230246251565e-16,
+          "riderHeightPlaneResidualM": 0.0,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 0.0,
+          "seatXZReconstructionResidualM": 0.0
+        },
+        {
+          "polygonVertex": 2,
+          "XZ": [
+            -0.24461642213071927,
+            -0.061518482854511274
+          ],
+          "riderBarycentric": [
+            -6.661338147750939e-16,
+            0.4725427174238748,
+            0.5274572825761258
+          ],
+          "seatBarycentric": [
+            0.2525367784902288,
+            2.9812981919998136e-16,
+            0.7474632215097708
+          ],
+          "riderHeightM": 0.5674746674845904,
+          "seatHeightM": 0.571456963283272,
+          "independentGapM": -0.00398229579868159,
+          "recordedGapM": -0.00398229579868159,
+          "gapResidualM": 0.0,
+          "riderHeightPlaneResidualM": -1.1102230246251565e-16,
+          "seatHeightPlaneResidualM": -1.1102230246251565e-16,
+          "riderXZReconstructionResidualM": 2.7755575615628914e-17,
+          "seatXZReconstructionResidualM": 6.938893903907228e-18
+        }
+      ],
+      "independentlyDerivedOverlapPolygonXZ": [
+        [
+          -0.25460838462419133,
+          -0.06605788296475337
+        ],
+        [
+          -0.24461642213071927,
+          -0.061518482854511274
+        ],
+        [
+          -0.2588785787767676,
+          -0.06171795357683359
+        ]
+      ],
+      "maximumPolygonPointsetDifferenceM": 0.0,
+      "independentMinimumGapM": -0.00398229579868159,
+      "minimumPolygonVertexID": 2,
+      "recordedMinimumGapM": -0.00398229579868159,
+      "minRecordedVertexResidualM": 0.0,
+      "projectedRiderTriangleConditionNumber": 3.487816354767955,
+      "projectedSeatTriangleConditionNumber": 47.72496735286456,
+      "variant": "physicalV5",
+      "frame": 186,
+      "independentZeroGapEndpoints": [
+        {
+          "overlapEdgePolygonVertexIDs": [
+            1,
+            2
+          ],
+          "edgeParameter": 0.6183939903491261,
+          "positionM": [
+            -0.24842941506643434,
+            0.5681654510044746,
+            -0.0632507452167895
+          ],
+          "riderBarycentric": [
+            -2.220446049250313e-16,
+            0.6738235862890436,
+            0.3261764137109567
+          ],
+          "seatBarycentric": [
+            0.22523254935616288,
+            0.2865380334507956,
+            0.4882294171930416
+          ],
+          "riderHeightM": 0.5681654510044746,
+          "seatHeightM": 0.5681654510044746,
+          "zeroGapResidualM": 0.0
+        },
+        {
+          "overlapEdgePolygonVertexIDs": [
+            2,
+            0
+          ],
+          "edgeParameter": 0.502563151935152,
+          "positionM": [
+            -0.2517840565281502,
+            0.5705296819101782,
+            -0.06161872948944035
+          ],
+          "riderBarycentric": [
+            0.23978660775230232,
+            0.4978367041141806,
+            0.26237668813351717
+          ],
+          "seatBarycentric": [
+            0.20121050140653796,
+            -2.9812981919998136e-16,
+            0.7987894985934624
+          ],
+          "riderHeightM": 0.5705296819101782,
+          "seatHeightM": 0.5705296819101782,
+          "zeroGapResidualM": 0.0
+        }
+      ],
+      "direct3DTrianglePlaneIntersectionEndpointsM": [
+        [
+          -0.24842941506643432,
+          0.5681654510044746,
+          -0.06325074521678949
+        ],
+        [
+          -0.25178405652815017,
+          0.5705296819101782,
+          -0.06161872948944035
+        ]
+      ],
+      "maximumTwoMethodEndpointDifferenceM": 5.551115123125783e-17
+    }
+  ],
+  "limits": [
+    "This verifies all16 nominated minimumWitness polygons and their recorded row minima; it does not independently exhaust all triangle pairs to prove global-minimum search completeness.",
+    "Snapshot source extraction/played state mapping is authenticated via hashes, not re-executed by this verifier. No new playback, render or GPU surface calculation.",
+    "XZ-projected gap and transverse triangle intersection are finite geometric statements; no force/physical collision solver, continuous-time, butt-only anatomy, visible quality or contact acceptance.",
+    "Positive gaps may be legitimate riding stance clearance. No threshold fitting or source changes."
+  ]
+}

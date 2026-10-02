@@ -1,0 +1,1349 @@
+{
+  "prefixOutput": {
+    "file": "body0-outer-prefixes.f64",
+    "bytes": 61440,
+    "sha256": "f47e4b903235840549e2b3897c94e6082eb664f6f571a693787930ba1ad4930c"
+  },
+  "attrs": {
+    "position": {
+      "itemSize": 3,
+      "count": 22240,
+      "file": "body-position.f64",
+      "bytes": 533760,
+      "sha256": "59885f80cad99d81be45968d48c8ccac09192e0544cc5b34cb718b43349f352f"
+    },
+    "skinIndex": {
+      "itemSize": 4,
+      "count": 22240,
+      "file": "body-skinIndex.f64",
+      "bytes": 711680,
+      "sha256": "a90132f6791cbcd9d0a3f0b4930d8ea48168028b0e0afdaf90e4b9205a39fc28"
+    },
+    "skinWeight": {
+      "itemSize": 4,
+      "count": 22240,
+      "file": "body-skinWeight.f64",
+      "bytes": 711680,
+      "sha256": "6b60007a2724b2b6236ba6e06b2f651c668d1170611fb3f9880619f4816aadf5"
+    }
+  },
+  "bodyTriangles": {
+    "file": "body-triangles.f64",
+    "bytes": 815232,
+    "sha256": "35da4963b1447730ac885120a711123643b818ddba5fb6b03c5213a580308864"
+  },
+  "bikeTriangles": {
+    "file": "bike-triangles.f64",
+    "bytes": 25824,
+    "sha256": "cf9dbac933c157daaf8d1e98bd7433d006cadcce8abacaf689129ad4ed1c8a26"
+  },
+  "snapshots": [
+    {
+      "i": 35,
+      "tick": 360,
+      "phase": "riding",
+      "lean": 1,
+      "grounded": [
+        true,
+        true
+      ],
+      "positions": {
+        "file": "sample35-body.f64",
+        "bytes": 533760,
+        "sha256": "869603d1f45af79a54d1e7bde7571a31a0bdc26cc260dfc815a98d1ddfdb493f"
+      },
+      "bikePositions": {
+        "file": "sample35-bike.f64",
+        "bytes": 29304,
+        "sha256": "4300035dbd7e01c509ae1177d6d05436a1946cfa362b64976d340ec4dc01646c"
+      },
+      "outerPrefix": [
+        0.9931376023186763,
+        -0.11695171166216703,
+        0,
+        0,
+        0.11695171166216703,
+        0.9931376023186763,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -21.034312930601534,
+        2.2135998438210263,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": null,
+      "debug": {
+        "armStretch": [
+          0.853,
+          0.854
+        ],
+        "legStretch": [
+          0.893,
+          0.891
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          3.109120064723846e-15,
+          3.109120064723846e-15
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 2.3676424592620715e-13,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          4.110168743517361e-15,
+          6.341404989338363e-16
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 1,
+          "lean": 1,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 114,
+      "tick": 1150,
+      "phase": "riding",
+      "lean": 0.6412462777295135,
+      "grounded": [
+        true,
+        false
+      ],
+      "positions": {
+        "file": "sample114-body.f64",
+        "bytes": 533760,
+        "sha256": "17f3dc591bfadf50efc6b51e5015b38dedd3150d1da9aa8621f2f21fdac622b9"
+      },
+      "bikePositions": {
+        "file": "sample114-bike.f64",
+        "bytes": 29304,
+        "sha256": "9d534b060cf5533feef25b42db48388cafcdfd385a0f0bb833fd66b8bad6e2dc"
+      },
+      "outerPrefix": [
+        0.876082106876432,
+        -0.4821619458345423,
+        0,
+        0,
+        0.4821619458345423,
+        0.876082106876432,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -101.50931307882517,
+        54.2338479969663,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": 0,
+      "debug": {
+        "armStretch": [
+          0.651,
+          0.652
+        ],
+        "legStretch": [
+          0.891,
+          0.886
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          9.136265349348076e-15,
+          9.136265349348076e-15
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 1.7258873009017308e-13,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          5.9379419877482605e-15,
+          5.9380068559948224e-15
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.6412462777295135,
+          "lean": 0.6412462777295135,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 186,
+      "tick": 1870,
+      "phase": "riding",
+      "lean": 0.07883448698707964,
+      "grounded": [
+        false,
+        false
+      ],
+      "positions": {
+        "file": "sample186-body.f64",
+        "bytes": 533760,
+        "sha256": "020a894816fae25096ef194ccbf6263a6d4abfe8b25f0f58d548930efa7dd19c"
+      },
+      "bikePositions": {
+        "file": "sample186-bike.f64",
+        "bytes": 29304,
+        "sha256": "518a7dea40b2c0827d64e0a4e47fb865d6030d2a2e4441aa3ca868d0d115dcb6"
+      },
+      "outerPrefix": [
+        0.9961092574743343,
+        -0.0881268811086054,
+        0,
+        0,
+        0.0881268811086054,
+        0.9961092574743343,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -204.6783923696804,
+        16.472955144796963,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": 0,
+      "debug": {
+        "armStretch": [
+          0.802,
+          0.803
+        ],
+        "legStretch": [
+          0.745,
+          0.739
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          1.843513548142346e-14,
+          1.821992346762818e-14
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 2.4071894049113443e-14,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          1.495325035473493e-14,
+          1.3707798518001698e-14
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.07883448698707964,
+          "lean": 0.07883448698707964,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 304,
+      "tick": 3050,
+      "phase": "riding",
+      "lean": -0.5986156848571763,
+      "grounded": [
+        true,
+        false
+      ],
+      "positions": {
+        "file": "sample304-body.f64",
+        "bytes": 533760,
+        "sha256": "907f2edd4b82b6bf62b0fbbf9a6196258dff24998fed7acde6fe6cbcf27c8c8a"
+      },
+      "bikePositions": {
+        "file": "sample304-bike.f64",
+        "bytes": 29304,
+        "sha256": "93119800774229330829605b43890e352ce29684138a3dd80285d134054bb768"
+      },
+      "outerPrefix": [
+        0.9835414671148508,
+        -0.18068254610107448,
+        0,
+        0,
+        0.18068254610107448,
+        0.9835414671148508,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -353.3156792312148,
+        63.30688211329439,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": 0,
+      "debug": {
+        "armStretch": [
+          0.778,
+          0.779
+        ],
+        "legStretch": [
+          0.914,
+          0.904
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          3.9499763101303233e-14,
+          2.888719452961835e-14
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 4.2016209568115595e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          1.488056111354677e-14,
+          1.488056111354677e-14
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 0.5986156848571763,
+          "lean": 0.5986156848571763,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 426,
+      "tick": 4270,
+      "phase": "riding",
+      "lean": -1,
+      "grounded": [
+        false,
+        false
+      ],
+      "positions": {
+        "file": "sample426-body.f64",
+        "bytes": 533760,
+        "sha256": "b4752d530587b350cbcf62b586c0d48f1eed40fa4fa97a2ac7c5e52ddcaab15e"
+      },
+      "bikePositions": {
+        "file": "sample426-bike.f64",
+        "bytes": 29304,
+        "sha256": "7080058e83e32c0391522f1f7d68eea27805c4956579ecc909c927461b526ea0"
+      },
+      "outerPrefix": [
+        0.9795839448779292,
+        -0.20103555640083925,
+        0,
+        0,
+        0.20103555640083925,
+        0.9795839448779292,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -508.7094214786419,
+        104.07926918676456,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": 0,
+      "debug": {
+        "armStretch": [
+          0.843,
+          0.845
+        ],
+        "legStretch": [
+          0.958,
+          0.949
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          1.3278138575025414e-13,
+          1.824147446297963e-14
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 5.699387806633921e-9,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          1.2761271465530966e-13,
+          1.0575925472418772e-13
+        ],
+        "stance": {
+          "on": true,
+          "pose": "back",
+          "blend": 1,
+          "lean": 1,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 445,
+      "tick": 4460,
+      "phase": "riding",
+      "lean": 0.5179946808418718,
+      "grounded": [
+        false,
+        false
+      ],
+      "positions": {
+        "file": "sample445-body.f64",
+        "bytes": 533760,
+        "sha256": "4fc4d60ed6a1dc2a7e660f24e103e45b469c5b2513c702b4c73bef9a24819f16"
+      },
+      "bikePositions": {
+        "file": "sample445-bike.f64",
+        "bytes": 29304,
+        "sha256": "32c4d096dd0c39f1593e1cb047d28f0f912c32296509a63796967fd4d59733c0"
+      },
+      "outerPrefix": [
+        0.9744383020069379,
+        -0.224655281669129,
+        0,
+        0,
+        0.224655281669129,
+        0.9744383020069379,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -527.7802639292538,
+        122.61908073274351,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": null,
+      "debug": {
+        "armStretch": [
+          0.793,
+          0.794
+        ],
+        "legStretch": [
+          0.839,
+          0.834
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          1.3189927302951925e-13,
+          1.3189917957975468e-13
+        ],
+        "gripAngleErr": [
+          2.9802322387695312e-8,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 3.604664221290148e-14,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          1.48805352283452e-14,
+          1.48805352283452e-14
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.5179946808418718,
+          "lean": 0.5179946808418718,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 446,
+      "tick": 4470,
+      "phase": "riding",
+      "lean": 1,
+      "grounded": [
+        true,
+        false
+      ],
+      "positions": {
+        "file": "sample446-body.f64",
+        "bytes": 533760,
+        "sha256": "bb57d81953d0aa047b53af2530df2e386c1ae96cb70ce76f0b056e6a7da25eac"
+      },
+      "bikePositions": {
+        "file": "sample446-bike.f64",
+        "bytes": 29304,
+        "sha256": "d3e60c96e2b45cf3302affe9b8493237142ff4e2f1da017e0903391b3f5e1397"
+      },
+      "outerPrefix": [
+        0.9931979835752905,
+        -0.11643781783414246,
+        0,
+        0,
+        0.11643781783414246,
+        0.9931979835752905,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -539.200465004022,
+        64.38391698002751,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": null,
+      "debug": {
+        "armStretch": [
+          0.912,
+          0.913
+        ],
+        "legStretch": [
+          0.941,
+          0.939
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          9.566721649005186e-14,
+          9.566721649005186e-14
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 3.854718170296285e-13,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          1.2761271767370784e-13,
+          1.2761271465530966e-13
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 1,
+          "lean": 1,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    },
+    {
+      "i": 447,
+      "tick": 4480,
+      "phase": "riding",
+      "lean": 0.44481582108155165,
+      "grounded": [
+        true,
+        true
+      ],
+      "positions": {
+        "file": "sample447-body.f64",
+        "bytes": 533760,
+        "sha256": "567b718882e633061e6df361aead252edc19e1e93c9e8536e54923aa29b5e450"
+      },
+      "bikePositions": {
+        "file": "sample447-bike.f64",
+        "bytes": 29304,
+        "sha256": "6d55c357247bf142363e1c5fa43303ace578b098fc59b9e7f21e04ed0f82ed0a"
+      },
+      "outerPrefix": [
+        0.9954103992416695,
+        0.09569815610313988,
+        0,
+        0,
+        -0.09569815610313988,
+        0.9954103992416695,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -541.8821800438996,
+        -50.68663065177626,
+        0,
+        1
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "morphInfluences": [
+        1,
+        1
+      ],
+      "literalFourPositionMaxDifferenceM": null,
+      "debug": {
+        "armStretch": [
+          0.931,
+          0.932
+        ],
+        "legStretch": [
+          0.99,
+          0.987
+        ],
+        "handOnGrip": [
+          true,
+          true
+        ],
+        "footOnPeg": [
+          true,
+          true
+        ],
+        "wristErr": [
+          0,
+          0
+        ],
+        "gripErr": [
+          1.3203069133213725e-13,
+          1.9169359715472333e-14
+        ],
+        "gripAngleErr": [
+          0,
+          0
+        ],
+        "ankleErr": [
+          0,
+          0
+        ],
+        "armLen": [
+          0.604,
+          0.604
+        ],
+        "additiveWeight": 0,
+        "physicalPose": true,
+        "comResidual": 1.740883368962823e-12,
+        "ragdollResidual": -1,
+        "ragdollBlend": 0,
+        "ragdollDetail": [],
+        "bones": 19,
+        "clips": [
+          "rigid_length_stand_to_sit",
+          "bind_restore",
+          "hip_flexion_sweep",
+          "hip_abduction_sweep",
+          "knee_bend_sweep",
+          "foundation_stand_to_sit"
+        ],
+        "stageClip": null,
+        "stageBlend": 0,
+        "soleErr": [
+          1.0003822954195659e-13,
+          1.8866136674534217e-14
+        ],
+        "stance": {
+          "on": true,
+          "pose": "forward",
+          "blend": 0.44481582108155165,
+          "lean": 0.44481582108155165,
+          "land": 0,
+          "extend": 0,
+          "dy": 0,
+          "lag": 0,
+          "limit": 1
+        }
+      }
+    }
+  ],
+  "maximumLiteralPositionDifferenceM": 0,
+  "compiledRuntimeSHA256": "b29c09240322701d04f1489b938a9ccf55b0faaedbef5b8821aeaca37d59f6ff",
+  "kind": "All480 frozen actual riding states reconstructed with explicit outer prefixes; selected actual Three CPU surfaces",
+  "captureDependencySHA256": {
+    "src/render/hero/gltfRider.ts": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+    "src/render/frame.ts": "c3460d6c2a0e0d4ccb5cd6bab24054e18ebbd9bc6e2ef0d0315b813285cd6d6a",
+    "harness/hero-remaster/new-rider-fresh-c19-adapter.mts": "73a532e10139baa970d9f763b3cd2f49ccbaf417da571f44bfaf0d23cd938733",
+    "harness/hero-remaster/new-rider-private-adapter.mts": "b13b9e3e197974b072c515554471597a35af8e54d84169f3ceffa49a40cf0f3f",
+    "harness/hero-remaster/physical-surface-dump168.mts": "dbe26819f4d3783ad3eb803a8f30e231fa60132ab311c6c383a8871b9ff4fc93"
+  },
+  "sourceSHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9",
+  "sourceUnchanged": true,
+  "playedReportSHA256": "0dd5c1d5896e03203d5a6849611d6b3c77610886a0138145e773d189352f4bab",
+  "source": "docs/evidence/hero-remaster/one-rider-v2/garment-rebuild01/physical-v5-control157/played/candidate/side/textured/report.json",
+  "frames": 480,
+  "fps": 12,
+  "matrixOrder": "frame,bone,column-major4x4Float64LE",
+  "matricesPrivateDirectory": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-surface168/physicalV5-run01",
+  "outputs": [
+    {
+      "mesh": "Protected_body_NEW_hood_joined_garment",
+      "file": "body0-joint-matrices.f64",
+      "bytes": 1167360,
+      "sha256": "3ada6f5e61b3c7a414a821aab74f9871fcbb8784d0046837fc0f790d31fbd7ab",
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "sourceBindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_body_NEW_hood_joined_garment_1",
+      "file": "mesh1-joint-matrices.f64",
+      "bytes": 1167360,
+      "sha256": "3ada6f5e61b3c7a414a821aab74f9871fcbb8784d0046837fc0f790d31fbd7ab",
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "sourceBindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_body_NEW_hood_joined_garment_2",
+      "file": "mesh2-joint-matrices.f64",
+      "bytes": 1167360,
+      "sha256": "3ada6f5e61b3c7a414a821aab74f9871fcbb8784d0046837fc0f790d31fbd7ab",
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "sourceBindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "textured_1",
+      "file": "mesh3-joint-matrices.f64",
+      "bytes": 1167360,
+      "sha256": "3ada6f5e61b3c7a414a821aab74f9871fcbb8784d0046837fc0f790d31fbd7ab",
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "sourceBindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "textured_2",
+      "file": "mesh4-joint-matrices.f64",
+      "bytes": 1167360,
+      "sha256": "3ada6f5e61b3c7a414a821aab74f9871fcbb8784d0046837fc0f790d31fbd7ab",
+      "bones": [
+        "pelvis",
+        "spine",
+        "chest",
+        "neck",
+        "head",
+        "shoulderL",
+        "upperArmL",
+        "forearmL",
+        "handL",
+        "shoulderR",
+        "upperArmR",
+        "forearmR",
+        "handR",
+        "thighL",
+        "shinL",
+        "footL",
+        "thighR",
+        "shinR",
+        "footR"
+      ],
+      "sourceBindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "maximumWorldPositionErrorM": 5.832207320642851e-14,
+  "maximumQuaternionComponentError": 4.499178807293447e-14,
+  "maximumBikeFramePositionErrorM": 5.754667984829636e-14,
+  "maximumFourKeyMatrixDelta": 8.132383655379272e-14,
+  "leanRange": [
+    -1,
+    1
+  ],
+  "physicalPoseEveryFrame": true,
+  "limits": [
+    "No geometry or rendering changed; exact currentC19 motion reconstruction only.",
+    "Grip/peg booleans are socket diagnostics, not visible surface contact acceptance.",
+    "New CPU surfaces and prefixes; no new browser pixels/physics or GPU shader parity. No sitting/Garage/device/appearance acceptance."
+  ]
+}
