@@ -16,6 +16,35 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## New body gray orbit inspected; moving anatomy still open — round209
+
+Parent verifies91 frozen render pins, source/imported positions and loops unchanged,
+CPU2/95.13s/50.283GB, actual silent960px72frame six-second camera orbit. Inspect
+all decoded orbit frames plus eight full-angle views/one upper-front diagnostic.
+The new T-pose BODY shows visible sleeve clearance and a more credible resting
+chest silhouette; hood/back preserved. It is a bounded construction direction,
+not a finished character or basic-pose pass. Generated FACE is provisional and
+will not replace the liked existing head. Hands blunt/flat, pants/knees chunky;
+actual elbow/wrist/hip/sitting deformation still untested. No appearance scores.
+
+Continue ONE new-body structural trial: analyze the literal duplicate/degenerate
+and tiny component before targeted cleanup; preserve raw, native ancestry and
+high-resolution shape. Join the liked NEW head/neck to this NEW body without
+clipping the hood or overlapping sheets. Freeze explicit neck seam/topology,
+normal/texture transfer and rotation/bend tests. Measure new anatomical rest joints
+and world-aligned child directions for the19bone rig adapter instead of carrying
+old arm-down joint positions into a T-pose. Bind cancellation/ownership/actual
+cuff seams precede full continuous exported gray/PBR basic-pose fixture; targeted
+correctives only after those construction/rig gates. No cosmetics or player swap.
+
+Dense-only256 remains a frozen conditional extraction protocol, not an admitted
+job or silent replacement. Independent61-face/53-edge two-return-panel handoff
+SHA8632ffdb inspected read-only; exact curve/donor prerequisites are not a surface
+pass. Keep that old-source fallback separate while testing this new body.
+Explicit user anonymous70GB/sharedlock policy remains; no380 repeat under this
+baseline and no outgoing thread messages. Three visual/gameplay/mobile gates
+remain OPEN. Ordinary ship207 current; next210.
+
 ## Retained invalid native; isolate finite surface for inspection — round208
 
 Actual207 saved raw arrays before watchdog killed its own batch54.706s. Observed

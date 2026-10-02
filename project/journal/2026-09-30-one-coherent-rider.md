@@ -2675,3 +2675,18 @@ Limits: Native invalid, field completeness/art/rig/motion unproved. Gray inspect
 next; dense-only256 conditional, no job admitted. Cosmetics paused,nextship210.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-source208/
 Ask: 248.
+
+## Round209 — inspect actual gray source orbit before rigging
+
+Finding: New T-pose body has visible sleeve clearance and credible resting chest
+silhouette; continue one structural trial, preserve likedhead. No pose/art pass.
+
+Validation: Parent91renderpins/sourcegeometry unchanged,72 decoded orbitframes
+plus eight-angle/detail diagnostics reviewed. CPU2/95.13s/50.283GB, silent960px.
+Independent source-return-panel fallback inspected read-only, not a surface pass.
+
+Limits: Generated face provisional, hands/knees rough, nativeinvalid/2degenerates/
+smallcomponent. No neckjoin/rig/PBR/basicposes/contacts/mobile. Cosmeticspause;
+explicit rigmapping and structural cleanup next, ordinaryship210due.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-inspection206/
+Ask: 248.

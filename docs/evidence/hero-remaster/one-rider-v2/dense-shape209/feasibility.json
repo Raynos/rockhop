@@ -1,0 +1,37 @@
+{
+  "status": "UNEXECUTED_CONDITIONAL_RECIPE",
+  "torchImported": false,
+  "gpuJobs": 0,
+  "modelExecutions": 0,
+  "unadmittedMatched380": {
+    "resolution": 380,
+    "denseQueries": 55306341,
+    "chunkQueries": 4096,
+    "chunkCount": 13503,
+    "float32CoordinateBytes": 663676092,
+    "float32ScalarGridBytes": 221225364,
+    "vanillaTransientCPUBytesEstimate": 1991028276,
+    "interpretation": "Coordinate/grid payload only; excludes model, attention, tensors, allocator and process memory"
+  },
+  "explicitDenseOnly256Proxy": {
+    "resolution": 256,
+    "denseQueries": 16974593,
+    "chunkQueries": 4096,
+    "chunkCount": 4145,
+    "float32CoordinateBytes": 203695116,
+    "float32ScalarGridBytes": 67898372,
+    "vanillaTransientCPUBytesEstimate": 611085348,
+    "interpretation": "Coordinate/grid payload only; excludes model, attention, tensors, allocator and process memory"
+  },
+  "timeEstimate": "Not established: query count alone cannot predict MPS throughput.",
+  "runtimeAdmission": "Do not repeat Flash380: diagnostic207 observed 82.017GB anonymous memory. Dense-only256 is a separately registered new proxy; sample once, retain latents, restore ordinary attention and profile eight chunks before full admission. Forecast dense time with 1.5 safety factor below 80% of remaining 1800 seconds; require baseline-aware memory headroom.",
+  "reportedDiagnostic207": {
+    "observedAnonymousBytes": 82017000000,
+    "preJumpAnonymousBytes": 56970000000,
+    "baselineAnonymousBytes": 44520000000,
+    "nativeNPZSHA256": "8c337ad381a5c498a3655764d391cd14137fa7aa05ed5d7f3b94c8385a07ac53",
+    "verification": "Parent-supplied receipt; not independently inspected in this recipe"
+  },
+  "memoryLimitBytes": 70000000000,
+  "batchSeconds": 1800
+}
