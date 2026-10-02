@@ -7641,5 +7641,103 @@
     "acceptedRider": false,
     "next": "Same-character horizontal T-pose structural reference, then bounded actual2.1 shape-only generation preserving raw decoder arrays. No texture polish or comparison replacement.",
     "cosmetics": "PAUSED"
+  },
+  "tposeReference204": {
+    "status": "MOCKUP_NOT_GEOMETRY",
+    "reference": "assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png",
+    "newSourceAttempts": 0,
+    "next": "ONE actual2.1 raw decoder shape-only trial after worker checks",
+    "cosmetics": "PAUSED",
+    "ship": {
+      "build": "/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/ordinary-ship204",
+      "recordingFile": "docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json",
+      "expected": {
+        "hash": "368f1ca5bd9e830a",
+        "runTime": 40.083333333333336,
+        "faults": 0,
+        "finishTime": 40.083333333333336,
+        "tick": 4810
+      },
+      "hipReviewDriver": false,
+      "sleeveReviewDriver": false,
+      "sleeveReviewOverlay": null,
+      "reviewOverlay": null,
+      "runs": [
+        {
+          "sleeveCorrective": null,
+          "tier": "low",
+          "result": {
+            "hash": "368f1ca5bd9e830a",
+            "runTime": 40.083333333333336,
+            "faults": 0,
+            "finishTime": 40.083333333333336,
+            "tick": 4810
+          },
+          "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+          "crashRestart": {
+            "crashed": true,
+            "crashTicks": 103,
+            "restartPhase": "riding",
+            "restartTick": 0,
+            "restartMs": 2
+          },
+          "hipCorrective": null
+        },
+        {
+          "sleeveCorrective": null,
+          "tier": "high",
+          "result": {
+            "hash": "368f1ca5bd9e830a",
+            "runTime": 40.083333333333336,
+            "faults": 0,
+            "finishTime": 40.083333333333336,
+            "tick": 4810
+          },
+          "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+          "crashRestart": {
+            "crashed": true,
+            "crashTicks": 103,
+            "restartPhase": "riding",
+            "restartTick": 0,
+            "restartMs": 2
+          },
+          "hipCorrective": null
+        }
+      ],
+      "errors": []
+    },
+    "process": {
+      "commands": [
+        {
+          "command": [
+            "pnpm",
+            "exec",
+            "tsx",
+            "harness/hero-remaster/build.mts",
+            "--out=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/ordinary-ship204"
+          ],
+          "status": 0,
+          "seconds": 3.5866770423017442
+        },
+        {
+          "command": [
+            "pnpm",
+            "exec",
+            "tsx",
+            "harness/hero-remaster/replay.mts",
+            "--build=/Users/raynos/projects/games/rockhop/harness/out/hero-remaster/ordinary-ship204",
+            "--out=/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/ship204/ship-gate.json",
+            "--recording=docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/recordings/b1-first-ride-bot-3.json"
+          ],
+          "status": 0,
+          "seconds": 12.275586999952793
+        }
+      ],
+      "seconds": 15.866855749860406,
+      "peakAnonymousBytes": 48209117184,
+      "memoryLimitBytes": 70000000000,
+      "timeLimitSeconds": 1700,
+      "lock": "lockf -k /Users/raynos/projects/localai/.model.lock"
+    }
   }
 }

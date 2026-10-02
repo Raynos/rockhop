@@ -2604,3 +2604,18 @@ change. Historical painter code causality/cleanup ancestry unresolved. No new
 model, rig, appearance/motion/contact/mobile pass. Cosmetics paused; ship204next.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/raw-body-reduction-audit202/
 Ask: 248.
+
+## Round204 — expose sleeve clearance in the reconstruction reference
+
+Finding: Same-character T-pose reference shows the intended shoulder/sleeve gap
+before a bounded new source trial. Mockup only; actual liked head preserved.
+
+Validation: Built-in imagegen two preserved refs, RGBA copied byte-for-byte.
+Parent frontal appearance inspection; no body/face score or nine-angle gate.
+Ordinary ship204 low/high exactfinish/hash, crash103/restart2ms/noerrors;20models
+unchanged under canonical GPU lock and memory/time bounds.
+
+Limits: Gloves flat, alpha halo; no actual new mesh, skin, motion or contacts.
+Installed runner paints; shape-only worker required. Cosmetics paused; next207.
+Evidence: assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/
+Ask: 248.

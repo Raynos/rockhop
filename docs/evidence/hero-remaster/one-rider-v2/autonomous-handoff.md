@@ -16,6 +16,28 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Show structural T-pose reference before the new source trial — round204
+
+[The new reference](../../assets/design/hero-remaster/one-rider-v2/tpose-construction-target204/reference.png)
+keeps the liked white buzz-cut identity, mustard hoodie, gloves, jeans and shoes,
+while putting both sleeves horizontally away from the torso. Parent sees a
+credible frontal construction target with background clearance under each arm.
+It is a MOCKUP, not geometry, nine-angle acceptance or a body/face score. Gloves
+look flat; their construction and grip gate remains separate. RGBA saved verbatim,
+small alpha halo disclosed. Original comparisons/head unchanged; cosmetics paused.
+
+Execute ONE bounded actual Hunyuan3D2.1 shape-only trial with native decoder
+arrays retained before processing, cleanup or reduction. Inspect actual chest,
+shoulder join, underarm clearance, back and hands before textures/rigging. Preserve
+source candidate and reproducible settings; do not promote automatically.
+The installed runner always paints, so a separate project-owned shape worker is
+required. The worker/environment and GPU lock contract must be checked first.
+
+Ordinary ship204 passed low/high byte-identical40.083333333333336s/hash
+368f1ca5bd9e830a, crash103ticks and restart2/2ms, no harness errors.20 public
+models, no replacements or private corrective overlays. This does not qualify
+new rider appearance, contacts or mobile. Next ordinary ship207.
+
 ## Native body construction verified; change the reconstruction pose — round203
 
 The untouched H21-4 saved344456-face source already contains the fused low
