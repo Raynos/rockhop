@@ -1,0 +1,97 @@
+{
+  "status": "UNACCEPTED_LITERAL_TOPOLOGY_CLEANUP",
+  "sourceRows": 147255,
+  "sourceFaces": 294506,
+  "removedFaceRows": [
+    68199,
+    68209
+  ],
+  "removedNativeFaceIDs": [
+    111091,
+    111105
+  ],
+  "mergedRows": [
+    34564,
+    34565
+  ],
+  "mergedNativeVertexIDs": [
+    56458,
+    56459
+  ],
+  "mergedRepresentativeRow": 34564,
+  "allDistinctPositionsExact": true,
+  "allNondegenerateIncidencesAndMultiplicityExact": true,
+  "allSourceFields": [
+    "POSITION only; no UV, texture, NORMAL, skin or morph field exists in source GLB"
+  ],
+  "displayOnlyWindingReversal": true,
+  "audit": {
+    "vertices": 147254,
+    "faces": 294504,
+    "edges": 441756,
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "windingConflictEdges": 0,
+    "vertexLinkFailures": [],
+    "zeroAreaFaces": 0,
+    "minimumAreaNativeUnitsSquared": 7.742959950613002e-15,
+    "duplicateUnorderedFaceIncidences": 0,
+    "components": [
+      {
+        "vertices": 147248,
+        "faces": 294496,
+        "bounds": [
+          [
+            -0.7929491996765137,
+            -1.0002132654190063,
+            -0.7524345517158508
+          ],
+          [
+            0.7885696887969971,
+            0.993078887462616,
+            -0.2758879065513611
+          ]
+        ],
+        "signedVolumeNativeUnitsCubed": -0.14046669899096745
+      },
+      {
+        "vertices": 6,
+        "faces": 8,
+        "bounds": [
+          [
+            0.10329489409923553,
+            0.728992760181427,
+            -0.5540595650672913
+          ],
+          [
+            0.10340241342782974,
+            0.7290317416191101,
+            -0.5540167689323425
+          ]
+        ],
+        "signedVolumeNativeUnitsCubed": 2.989493985951978e-14
+      }
+    ]
+  },
+  "limits": [
+    "This remains the finite diagnostic subset of a partly nonfinite decoded mesh.",
+    "The six-vertex native component is retained exactly; no semantic provenance justifies deletion.",
+    "No smoothing, remeshing, decimation, sculpt, texture, field reconstruction, rig, collision or visual acceptance.",
+    "Self-intersections and anatomically meaningful topology are not established by manifold tests.",
+    "Coordinates retain native orientation and arbitrary native units; no body/head alignment is performed."
+  ],
+  "exportedGLBPositionsIndicesExact": true,
+  "elapsedSeconds": 2.3766958750784397,
+  "peakRSSBytes": 310902784,
+  "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+  "outputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/finite-cleanup210/ancestry.npz": {
+      "sha256": "2e27039502c33d580127d141a8460429a3daaa321c5de101ce8231227ac979ee",
+      "bytes": 3582013
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/finite-cleanup210/clean-native.glb": {
+      "sha256": "2ff3cfb0dd9ddff6b6cbb6695f2426961296409ececd730e123ef39babbd6b74",
+      "bytes": 5301868
+    }
+  }
+}

@@ -74,6 +74,25 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Literal finite cleanup verified; anatomy remains open — round210
+
+One exact coincident position alias and its two collapsed triangles are removed.
+Parent checks all14 frozen pins, every retained source face/position and actual
+GLB read-back. Recomputed topology has zero boundary/nonmanifold/winding-conflict
+edges, zero degenerate/duplicate physical triangles and single-cycle vertex links.
+147254rows/294504faces remain. No distinct position or retained incidence changes.
+The tiny six-row/eight-face component remains literal, including its opposite
+orientation; this is not blanket cleanup, anatomical or self-intersection success.
+The partly invalid original native mesh remains preserved, with this finite
+subset explicitly unqualified. No textures, rig, art score or player promotion.
+
+Ordinaryship210 passes both tiers: byte-identical40.083333333333336s/hash
+368f1ca5bd9e830a, crash103ticks, restart1/3ms, zero errors. Canonical lock,
+13.27s/49.461GB anonymous peak; existing20player models unchanged.
+Next selective hood-preserving neck construction with likedhead, then explicit
+new-T-pose rig/weights. Cosmetics paused; full-body/face, basic poses, chair,
+bike/Garage, contacts and mobile remain open. Next mandatoryship213.
+
 ## New body gray orbit inspected; moving anatomy still open — round209
 
 Parent verifies91 frozen render pins, source/imported positions and loops unchanged,

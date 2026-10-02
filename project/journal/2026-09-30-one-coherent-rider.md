@@ -2690,3 +2690,18 @@ smallcomponent. No neckjoin/rig/PBR/basicposes/contacts/mobile. Cosmeticspause;
 explicit rigmapping and structural cleanup next, ordinaryship210due.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-inspection206/
 Ask: 248.
+
+## Round210 — preserve finite shape through literal alias cleanup
+
+Finding: One exact duplicate and two collapsed triangles can be removed without
+changing any distinct position or remaining source-face incidence. No anatomy pass.
+
+Validation: Parent14pins, actualGLB/ancestry, independently recomputed topology:
+zero open/nonmanifold/winding/degenerate/duplicate faces, single-cycle vertexlinks.
+Ordinaryship210both tiers bytefinish40.083333333333336s, restart1/3ms, no errors.
+
+Limits: Invalidnative finite subset, tiny opposite component retained, no collision,
+rig, PBR, art/pose/contact/mobile pass. Likedhead join and explicitnewrig next;
+cosmetics paused. Ship213due. No normal player asset changes.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/finite-cleanup210/
+Ask: 248.
