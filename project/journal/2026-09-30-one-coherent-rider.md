@@ -2334,3 +2334,24 @@ no ROI threshold retuning. All visual/contact/mobile gates open, cosmetics
 paused. Next ordinary ship192.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-axilla189/
 Ask: 248.
+
+## Round190 — change the local construction mechanism before generating
+
+Finding: Both finite right fan sectors fail the registered extent cap.
+Raising the old left armhole with original path edges requires5.769–6.669×
+stretch. A source-panel cut/resew is the next explicit local operation.
+
+Validation: Parent10fan outputs/9inputs and9design files/3raw inputs; raw
+halfedges, annulus topology, single-face deletion and literal22.239mm path
+certificate independently reconstructed. Sources and189evidence unchanged.
+
+Limits: No solver, geometry output, source/rig/weight/GPU change or anatomy
+pass.1.5×construction bar is proposed, not user authority. Parent rejects
+open-p0 signed volume requirement; use sectional/validated regional measures.
+One parent freeze-schema fault and specialist environment probe disclosed,
+not art failures. Next bounded LEFT-only literal seam inventory before one
+cut/resew candidate; right rejected. Below-scope skin witness and hips remain
+failed. Cosmetics paused; full exported poses/gameplay/mobile open. Ship192next.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-fan190/
+Evidence: docs/evidence/hero-remaster/one-rider-v2/armhole-design190/
+Ask: 248.

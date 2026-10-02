@@ -1,0 +1,196 @@
+{
+  "status": "READONLY_NECESSARY_BOUND_TEST_NO_GEOMETRY",
+  "sourceSHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "scopeSHA256": "d6d2ebaec7314cd48bf0e9c663850b355be5a42cf8fc4c5e68956c5c981b9c27",
+  "cycles": [
+    {
+      "nodes": 89,
+      "rangesM": [
+        [
+          0.530125617980957,
+          0.7299575209617615
+        ],
+        [
+          1.1605441570281982,
+          1.3497072458267212
+        ],
+        [
+          0.1500285267829895,
+          0.288581520318985
+        ]
+      ]
+    },
+    {
+      "nodes": 62,
+      "rangesM": [
+        [
+          0.5443172454833984,
+          0.6907852292060852
+        ],
+        [
+          1.1600075960159302,
+          1.2723311185836792
+        ],
+        [
+          0.18547673523426056,
+          0.30973711609840393
+        ]
+      ]
+    }
+  ],
+  "outsideWitness": null,
+  "fixedBoundaryPathBounds": [
+    {
+      "targetY_M": 1.3,
+      "criticalPhysicalID": 8238,
+      "criticalPositionM": [
+        0.6319100260734558,
+        1.1901540756225586,
+        0.18109658360481262
+      ],
+      "verticalDisplacementM": 0.10984592437744145,
+      "remainingHorizontalDisplacementRadiusM": 0.08679788532945613,
+      "fixedBoundaryPhysicalID": 8160,
+      "fixedBoundaryPositionM": [
+        0.6302102208137512,
+        1.1716971397399902,
+        0.17464718222618103
+      ],
+      "shortestOriginalInScopePathLengthM": 0.022238994965069946,
+      "minimumPossibleMovedEndpointDistanceM": 0.1283028602600098,
+      "necessaryMaximumEdgeRatio": 5.769274216821888,
+      "pathPhysicalIDs": [
+        8238,
+        8355,
+        8412,
+        8160
+      ],
+      "pathEdges": [
+        {
+          "physicalIDs": [
+            8238,
+            8355
+          ],
+          "lengthM": 0.0031432076281471444,
+          "sourceIncidentFaces": [
+            8267,
+            8268
+          ]
+        },
+        {
+          "physicalIDs": [
+            8355,
+            8412
+          ],
+          "lengthM": 0.004481100632957654,
+          "sourceIncidentFaces": [
+            8254,
+            8256
+          ]
+        },
+        {
+          "physicalIDs": [
+            8412,
+            8160
+          ],
+          "lengthM": 0.014614686703965145,
+          "sourceIncidentFaces": [
+            8727,
+            8728
+          ]
+        }
+      ],
+      "maximumTargetYAt1_5RatioM": 1.2050556321875951,
+      "requiredPathLengthAt1_5RatioM": 0.08553524017333987
+    },
+    {
+      "targetY_M": 1.32,
+      "criticalPhysicalID": 8238,
+      "criticalPositionM": [
+        0.6319100260734558,
+        1.1901540756225586,
+        0.18109658360481262
+      ],
+      "verticalDisplacementM": 0.12984592437744147,
+      "remainingHorizontalDisplacementRadiusM": 0.052345352444775395,
+      "fixedBoundaryPhysicalID": 8160,
+      "fixedBoundaryPositionM": [
+        0.6302102208137512,
+        1.1716971397399902,
+        0.17464718222618103
+      ],
+      "shortestOriginalInScopePathLengthM": 0.022238994965069946,
+      "minimumPossibleMovedEndpointDistanceM": 0.14830286026000983,
+      "necessaryMaximumEdgeRatio": 6.668595433064499,
+      "pathPhysicalIDs": [
+        8238,
+        8355,
+        8412,
+        8160
+      ],
+      "pathEdges": [
+        {
+          "physicalIDs": [
+            8238,
+            8355
+          ],
+          "lengthM": 0.0031432076281471444,
+          "sourceIncidentFaces": [
+            8267,
+            8268
+          ]
+        },
+        {
+          "physicalIDs": [
+            8355,
+            8412
+          ],
+          "lengthM": 0.004481100632957654,
+          "sourceIncidentFaces": [
+            8254,
+            8256
+          ]
+        },
+        {
+          "physicalIDs": [
+            8412,
+            8160
+          ],
+          "lengthM": 0.014614686703965145,
+          "sourceIncidentFaces": [
+            8727,
+            8728
+          ]
+        }
+      ],
+      "maximumTargetYAt1_5RatioM": 1.2050556321875951,
+      "requiredPathLengthAt1_5RatioM": 0.09886857350667322
+    }
+  ],
+  "boundAssumptions": "Only the critical source vertex moves to the stated Y, displacement <=140mm, fixed boundary and original patch edges. Endpoint distance is minimized over the full allowed horizontal disk. Triangle inequality forces at least this ratio somewhere on the shortest literal source path. Not an area/folding proof, and not applicable after explicit path-edge removal.",
+  "inputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb": {
+      "sha256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+      "bytes": 16319060
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/positiveZ_lateral-proposed-strip.json": {
+      "sha256": "d6d2ebaec7314cd48bf0e9c663850b355be5a42cf8fc4c5e68956c5c981b9c27",
+      "bytes": 48858
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-axilla189/report.json": {
+      "sha256": "efc370f2464e88192e25b4d03abfb04d7113abbf661058f3d9430d57e3f9d4fa",
+      "bytes": 81578
+    }
+  },
+  "runtimeSeconds": 0.126939625,
+  "anonymousGBSamples": [
+    43.31413504,
+    43.412078592
+  ],
+  "geometryGenerated": false,
+  "solverRun": false,
+  "cpuThreadLimits": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2"
+  }
+}

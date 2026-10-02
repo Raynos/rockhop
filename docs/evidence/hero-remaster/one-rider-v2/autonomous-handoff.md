@@ -16,6 +16,55 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Local construction needs a new seam, not an upward pull — round190
+
+Two separate read-only specialists froze their results; parent independently
+verified both. The right point-pinch has exactly two minimal original halfedge
+fan sectors: faces32104/32105 and32311/32312. Either forms an oriented connected
+annulus (Euler0, two cycles90/72), but adds a vertex24.858/42.148mm from the
+pinch. Both fail the registered20mm cap. Keep189 and190 rejections unchanged;
+no scope was selected, expanded or promoted. Parent verifies10outputs/9inputs,
+actual raw halfedges, component/Euler/cycles and removal-of-one-face witnesses.
+
+For the valid left strip, the literal source path8238→8355→8412→8160 is only
+22.239mm long and ends at fixedY1.171697. Pulling its old crotch toY1.30/1.32,
+even with the full140mm displacement allowance, necessarily stretches at least
+one old edge5.769×/6.669×. Parent independently reconstructs this certificate
+and verifies9frozen files/3raw inputs. The proposed1.5× construction bar is a
+hypothetical engineering criterion, not a user bar or preregistered189 gate.
+This proves a bound on that particular original-connectivity displacement,
+not impossibility of all sculpting, retopology or an oversized garment fit.
+
+Next bounded step is LEFT-ONLY literal chart/halfedge seam inventory for local
+bridge excision and source-panel resew. Preserve the exact89/62 outer cycles,
+protected outside fields, head/hood/cuffs/lowerbody/19-bone rig. Freeze the actual
+chest/sleeve panel ownership, longitudinal source seam paths, removed bridge
+faces and resealed rims before ONE geometry output. Do not invent a seam from
+nearest-bone weights or silently turn an ROI into semantic ownership. The new
+operation must genuinely separate channels below the armhole, leave no open
+seams or hidden low bridge, and preserve auditable texture chart ancestry.
+Local retopology is a distinct construction operation; retired whole-shell,
+cage, tube and weight-fitting families remain retired. If this exact source
+boundary cannot support it, declare a specific new released inner arc contract
+with literal source faces and evidence, rather than endlessly retuning masks.
+The right side remains untouched and rejected; this diagnostic cannot deliver
+an accepted bilateral character. No cosmetic or human-review hold.
+
+Correct the specialist's proposed volume gate: p0 is OPEN at hood/cuffs. Do not
+use its signed volume as a closed-body certificate. Use separately measured
+cross-section channel areas, or an explicitly validated regional closure.
+Preserve the frozen proposal and this correction. No geometry/solver/export,
+GPU, source fields or rig changes occurred. A parent freeze-schema setup fault
+and specialist environment probe are disclosed, not art attempts.
+
+Stage2 still needs an independent adequate semantic ownership contract: the
+worst source witness2030/2172 sits below this strip and remains unchanged by
+stage1. Subsequent actual continuous stockThree gray/PBR and exported poses,
+neck/head motion, hips, Garage, physics lean/landings, saddle/grip/sole, real LOD
+and mobile gates remain open. Ship189 is the current ordinary regression pass;
+next192. Five failed trials switch mechanism;15 trigger the architecture
+fallback. Never promote a numerical certificate into visual acceptance.
+
 ## Low resting sleeve attachment confirmed — round189
 
 Parent independently verifies25frozen files/six source inputs, reconstructs all

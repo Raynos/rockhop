@@ -1,0 +1,76 @@
+{
+  "status": "READONLY_HALFEDGE_SCOPE_CLOSURE_FINDING_NO_GEOMETRY_AUTHORIZATION",
+  "sourceSHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "baselineRight": {
+    "faces": 1216,
+    "invalidBoundaryNodes": [
+      {
+        "physicalID": 7392,
+        "in": 2,
+        "out": 2
+      }
+    ],
+    "validAnnulus": false
+  },
+  "unchangedLeft": {
+    "faces": 1231,
+    "boundaryCycleLengths": [
+      89,
+      62
+    ],
+    "validAnnulus": true
+  },
+  "alternatives": [
+    {
+      "alternative": 0,
+      "addedSourceFaceIDs": [
+        32104,
+        32105
+      ],
+      "addedFaces": 2,
+      "maxDistanceM": 0.02485841552954331,
+      "boundaryCycleLengths": [
+        90,
+        72
+      ],
+      "annulusTopologyValid": true,
+      "withinFrozenLimits": false,
+      "feasibleScope": false,
+      "raw": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-fan190/alternative-0.json",
+        "sha256": "64499d8ef4f3bd7a3cada6a903c141d6fde2b638a2c940b156c70ff1137a26d4",
+        "bytes": 82396
+      }
+    },
+    {
+      "alternative": 1,
+      "addedSourceFaceIDs": [
+        32311,
+        32312
+      ],
+      "addedFaces": 2,
+      "maxDistanceM": 0.0421482196574501,
+      "boundaryCycleLengths": [
+        90,
+        72
+      ],
+      "annulusTopologyValid": true,
+      "withinFrozenLimits": false,
+      "feasibleScope": false,
+      "raw": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-fan190/alternative-1.json",
+        "sha256": "d2dbe201153d9f610a592d9daf3e4fec772d486b8f16d1aaad287bdf6a8e0d68",
+        "bytes": 82399
+      }
+    }
+  ],
+  "feasibleAlternatives": [],
+  "all189ChosenFacesPreserved": true,
+  "outsideProtection": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-fan190/outside-protection.json",
+    "sha256": "54b51bebfb6c5f591d261385bcdbb1ff4a0a9ad45d3c6cba4a9b73cade3a8f52",
+    "bytes": 586940
+  },
+  "limits": "No source edit/solver/export/render/GPU. Topology feasibility never implies semantic-mask/anatomy/geometry acceptance. Parent sole judge.",
+  "elapsedSeconds": 0.13748383335769176
+}
