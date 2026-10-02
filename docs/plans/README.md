@@ -197,6 +197,8 @@ Round198: CPU IPC actualtriangle/source admission PASS; parent14files/6inputs/wh
 
 Round199: clear but incomplete local shell rejected at127.981mm/root1.192316; conservativeCCDcap/recheck cause independently reproduced. ONE200 acceptance-rule fix registered, fresh185/unchanged domain/objective; fifth failure switches mechanism. Threevisual/basicposes/contact/mobile OPEN; cosmetics paused. Nextship201.
 
+Round200:54updates/166proposals independentlyCCDverified, but target122.592mm/root1.195004FAIL. Fifth local failure retires46vertex lift; distinct authoredlocalpanel topology/domain research, no new geometry. Threevisual/basicposes/contact/mobile OPEN; weights dormant/cosmetics paused. Ship201 due.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

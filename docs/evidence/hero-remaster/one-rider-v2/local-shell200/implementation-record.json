@@ -1,0 +1,10 @@
+{
+  "solverImplementationChanges": [
+    "Only registered acceptance-rule change plus proposal logging; exact diff retained."
+  ],
+  "readOnlyAuditCorrection": [
+    "Restored the registered native static-obstacle filter before auditing local contact energy. Initial read-only audit retained default full-surface filter after CCD checks, thereby including constant protected static-static barrier energy. Accepted-step CCD checks were correct. The solver, trace and indexed dump were not modified."
+  ],
+  "solverRetries": 0,
+  "coefficientsRetuned": false
+}

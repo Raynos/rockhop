@@ -119,6 +119,23 @@ ccd = ipctk.TightInclusionCCD(tolerance=1e-8, max_iterations=1000000, conservati
 assert not ipctk.has_intersections(mesh, whole)
 final_clear = not ipctk.has_intersections(mesh, final)
 source_final_step = ipctk.compute_collision_free_stepsize(mesh, whole, final, narrow_phase_ccd=ccd)
+body_node = next(i for i, n in enumerate(g.j['nodes']) if n.get('mesh') == 0)
+body_world = W[body_node]
+free_rest_world = np.sum(U[inside].astype(float)[:, None, :] * body_world[:3, :3][None], axis=2) + body_world[:3, 3]
+whole_lookup = {tuple(v): i for i, v in enumerate(whole)}
+free_global = np.array([whole_lookup[tuple(v)] for v in free_rest_world])
+previous = whole.copy()
+trace_checks = []
+for index, free in enumerate(trace['acceptedFreeXYZ'][1:], 1):
+    next_state = whole.copy()
+    next_state[free_global] = np.sum(free[:, None, :] * body_world[:3, :3][None], axis=2) + body_world[:3, 3]
+    prefix_clear = ipctk.is_step_collision_free(mesh, previous, next_state, narrow_phase_ccd=ccd)
+    endpoint_clear = not ipctk.has_intersections(mesh, next_state)
+    assert prefix_clear and endpoint_clear, index
+    trace_checks.append({'acceptedUpdate': index, 'fullDefaultContinuousClear': bool(prefix_clear), 'fullDefaultEndpointClear': endpoint_clear})
+    previous = next_state
+cast_clear = ipctk.is_step_collision_free(mesh, previous, final, narrow_phase_ccd=ccd)
+assert cast_clear
 diagnostic_result = None
 if args.round == 199:
     diagnostic = json.loads((E / 'ccd-stop-diagnostic.json').read_text())
@@ -147,6 +164,8 @@ report = {
     'allFiveTriangles': len(T), 'wholePhysicalVertices': len(whole),
     'fullDefaultSourceClear': True, 'fullDefaultActualFloat32FinalClear': final_clear,
     'fullDefaultSourceToFinalCCDStep': source_final_step, 'pythonCallbackOrFilterUsed': False,
+    'independentlyCheckedAcceptedSegments': trace_checks,
+    'finalFloat64ToFloat32CastContinuousClear': bool(cast_clear),
     'CCDStopWitness': diagnostic_result,
     'limits': 'Static numerical review only. Original bad weights preserved. No export, anatomy, appearance, played pose, gameplay contacts or mobile acceptance. Incomplete199 solve does not prove domain infeasibility.'
 }

@@ -2532,3 +2532,21 @@ forces different mechanism/domain/retopology. Construction/skin/art/motion/
 contact/mobile unresolved; cosmetics paused, public assets unchanged.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/local-shell199/
 Ask: 248.
+
+## Round200 — retire the fifth failed source-star construction
+
+Finding: Corrected acceptance reaches54 updates but remains122.592mm from
+high seam target, first attachment1.195004m. Reject/freeze; fifth local failure
+retires46vertex lifting. Switch to distinct source-panel topology/domain.
+
+Validation: Parent frozen pins, source fields/morphs/incidence/normals and all54
+accepted allfive continuous segments plus finalFloat32cast clear.166proposals
+record1CCDreject/111Armijo rejects/54accepts. Zero strict/coplanar endpoint
+crosses; registered energy-stall stop. No retuning/export/motion/promotion.
+
+Limits: A stationary objective does not prove global infeasibility. Rest anatomy,
+chest/shoulder/web, ownership, cloth volume, contacts and mobile remain open.
+Cosmetics paused; independent later tube/shell/embedding failures checked
+before new source retopology. Ordinary ship201 due next.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/local-shell200/
+Ask: 248.

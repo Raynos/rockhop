@@ -16,6 +16,35 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Stop local source-star lifting after fifth failure — round200
+
+The acceptance-only numerical fix ran54 accepted updates and stopped at the
+registered five small energy reductions. All166 proposed steps are logged:
+1 unsafe CCDprefix halved,111 clear but Armijo-rejected,54 accepted. Parent
+independently checks every accepted segment against allfive unfiltered source
+triangles plus final Float64-to-Float32 casting; no CCD bypass or retuning.
+Source conservation, topology and normals clear, yet actual target error is
+122.591925mm and the first attachment stays1.195004m. This is REJECTED, no GLB.
+A stationary result of this frozen objective is not proof of global infeasibility.
+
+This is local construction failure5 (192/194/196/199/200). End this approach;
+no more46-vertex/168face lift, elasticity coefficient sweep or target relaxation.
+Next investigate an authored local cloth-panel retopology with a different
+source boundary/domain, subject to explicit new parent construction contract.
+Do not repeat the independent team's rejected whole sleeve-tube/shoulder arch,
+whole-shell or hidden-cage embedding. A clean annulus is only a topological
+precondition, not a natural surface or appearance proof. Inspect their artifacts
+before duplication. The current readonly boundary specialist owns new isolated
+local-retopology-design200 paths; no geometry or weights generated there.
+
+Keep structural order: garment rest construction first (including chest and
+shoulder inserts), then explicit anatomical rig/ownership/cuff-hand joins,
+then volume/deformation and Three.js correctives. Preserve liked head/identity,
+hood and physics COM/lean/IK/grip/sole/Garage behavior. Cosmetic refinement
+remains PAUSED; conditional anatomical weights dormant. All3visual checkpoints,
+continuous gray/PBR/exported basic poses and actual gameplay/mobile OPEN.
+Ordinary ship201 due next; no rejected asset reaches players.
+
 ## Reject incomplete local shell; repair step acceptance once — round199
 
 One freeXYZ trial stopped after one accepted update. Final actual Float32 target

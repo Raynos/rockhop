@@ -1,0 +1,39 @@
+--- registered199/solve.py
++++ registered200/solve.py acceptance-only
+@@ -147,18 +147,26 @@
+         if not np.isfinite(p).all() or slope>=0:p=-gradient;slope=-gn*gn;fallback=True
+         proposed=full(x+p)
+         cap=ipctk.compute_collision_free_stepsize(collision_mesh,current,proposed,narrow_phase_ccd=ccd)
+-        alpha=float(cap);accepted=False;halvings=0
++        alpha=float(cap);accepted=False;halvings=0;proposals=[]
+         for halvings in range(31):
+             trial=x+alpha*p
+-            if alpha<=0:break
+-            # Each Armijo trial remains inside the CCD-capped segment, and is
+-            # independently checked as a continuous source-to-trial step.
+-            if not ipctk.is_step_collision_free(collision_mesh,current,full(trial),narrow_phase_ccd=ccd):raise ValueError('CCD capped trial is not clear')
+-            try:newvalue,newterms=energy(trial)
+-            except ValueError:newvalue=float('inf');newterms={}
+-            if np.isfinite(newvalue) and newvalue<=value+1e-4*alpha*slope:accepted=True;break
+-            alpha*=.5
+-        record={'iteration':iteration,'energyBefore':value,'termsBefore':terms,'gradientNorm':gn,'CCDcap':float(cap),'alpha':alpha,'halvings':halvings,'accepted':accepted,'gradientFallback':fallback,'elapsedSeconds':time.monotonic()-start,'anonymousGB':mem[-1]}
++            proposal={'proposalIndex':halvings,'alpha':alpha,'continuousClear':None,'finiteEnergy':None,'areaValid':None,'ArmijoPass':False,'trialEnergy':None}
++            if alpha<=0:
++                proposal['rejection']='nonpositive_CCD_cap';proposals.append(proposal);break
++            clear=bool(ipctk.is_step_collision_free(collision_mesh,current,full(trial),narrow_phase_ccd=ccd))
++            proposal['continuousClear']=clear
++            if not clear:
++                proposal['rejection']='continuous_CCD_recheck';proposals.append(proposal);alpha*=.5;continue
++            try:
++                newvalue,newterms=energy(trial);proposal['areaValid']=True
++            except ValueError:
++                newvalue=float('inf');newterms={};proposal['areaValid']=False
++            finite=bool(np.isfinite(newvalue));armijo=finite and newvalue<=value+1e-4*alpha*slope
++            proposal.update(finiteEnergy=finite,ArmijoPass=bool(armijo),trialEnergy=newvalue if finite else None)
++            proposals.append(proposal)
++            if armijo:accepted=True;break
++            proposal['rejection']='finite_area_or_Armijo';alpha*=.5
++        record={'iteration':iteration,'energyBefore':value,'termsBefore':terms,'gradientNorm':gn,'CCDcap':float(cap),'alpha':alpha,'halvings':halvings,'accepted':accepted,'gradientFallback':fallback,'lineSearchProposals':proposals,'elapsedSeconds':time.monotonic()-start,'anonymousGB':mem[-1]}
+         if not accepted:trace.append(record);stop='failed_line_search';break
+         reduction=(value-newvalue)/max(abs(value),1e-30);stalls=stalls+1 if reduction<1e-8 else 0
+         x=trial;iterates.append(x.reshape(46,3).copy());record.update(energyAfter=newvalue,termsAfter=newterms,relativeReduction=reduction,**metrics(x));trace.append(record)

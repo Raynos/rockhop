@@ -1,0 +1,200 @@
+{
+  "status": "FROZEN_STATIC_REJECTION_NO_GLB",
+  "attemptCount": 1,
+  "geometryGenerated": true,
+  "GLBExported": false,
+  "accepted": false,
+  "sourceSHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "dumpSHA256": "4927ec2ae166697e918699578f9f643daf69ffce5362705da8b062a703c7acc2",
+  "sourceFaces": 168,
+  "newAccessorRows": 88,
+  "interiorPhysicalIDs": 46,
+  "allOriginalRowsUnchanged": true,
+  "conservation": {
+    "POSITION": true,
+    "NORMAL": true,
+    "TEXCOORD_0": true,
+    "TEXCOORD_1": true,
+    "TEXCOORD_2": true,
+    "COLOR_0": true,
+    "COLOR_1": true,
+    "COLOR_2": true,
+    "JOINTS_0": true,
+    "WEIGHTS_0": true,
+    "morph_0_POSITION": true,
+    "morph_0_NORMAL": true,
+    "morph_1_POSITION": true,
+    "morph_1_NORMAL": true,
+    "outsideFaceIndicesExact": true,
+    "originalFaceOrderAndCount": true,
+    "exact168FaceMask": true,
+    "exactSourcePhysicalPositions": true,
+    "boundaryXYZExact": true,
+    "outsidePhysicalXYZExact": true,
+    "oneCloneEachInteriorSourceRow": true,
+    "rowPhysicalMappingExact": true,
+    "onlyInteriorCornersRemapped": true,
+    "physicalIncidenceExact": true,
+    "finalOneCastFloat32Exact": true,
+    "targetAndSourceStationsExact": true,
+    "pathEndpointStationsExact": true
+  },
+  "finite": true,
+  "countsLegal": true,
+  "indicesLegal": true,
+  "skin": {
+    "jointRangeLegal": true,
+    "nonnegativeWeights": true,
+    "maximumCloneWeightSumError": 5.960464477539063e-08,
+    "sourceWeightsLiteral": true,
+    "qualification": "source weights known bad; no motion/skin acceptance"
+  },
+  "fieldFailures": [],
+  "normalGroupCount": 46,
+  "normalGroupFailures": [],
+  "sourceNormalTurnGroupsNotInversionCertificate": [],
+  "maximumTargetErrorM": 0.12259192519541151,
+  "targetProxyWithin2mm": false,
+  "sourceTopology": {
+    "components": [
+      22600,
+      49927
+    ],
+    "zeroSliverFaces": [],
+    "minimumAreaM2": 4.367538778046721e-11,
+    "nonmanifoldEdges": [],
+    "windingEdges": [],
+    "duplicatePhysicalFaces": [],
+    "boundaryEdgeCount": 237
+  },
+  "candidateTopology": {
+    "components": [
+      22600,
+      49927
+    ],
+    "zeroSliverFaces": [],
+    "minimumAreaM2": 4.367538778046721e-11,
+    "nonmanifoldEdges": [],
+    "windingEdges": [],
+    "duplicatePhysicalFaces": [],
+    "boundaryEdgeCount": 237
+  },
+  "original237OpeningEdgesExpected": true,
+  "all5PrimitiveCount": 5,
+  "boundaryExact": true,
+  "componentsExact": true,
+  "physicalFloat32Collisions": 0,
+  "strictCrossings": 0,
+  "positiveCoplanarOverlaps": 0,
+  "broadphasePairs": 1462,
+  "sharedClasses": {
+    "1": 1084,
+    "2": 291,
+    "0": 87
+  },
+  "rootedLowRoutesSeparated": false,
+  "firstAttachmentY_M": 1.1950042247772217,
+  "strainSummary": {
+    "measurementOnlyNoStretchGate": true,
+    "edgeRatioRange": [
+      0.10373291726217196,
+      2.972607605946986
+    ],
+    "areaRatioRange": [
+      0.07885847426656471,
+      3.2305722995590433
+    ],
+    "maximumAngleChangeDegrees": 111.73238392998964,
+    "minimumCandidateTriangleAngleDegrees": 3.046773829669746,
+    "faceNormalTurnDegreesRange": [
+      0.056423725512205175,
+      137.02971155850219
+    ],
+    "facesTurningOver90Degrees": [
+      6916,
+      7805,
+      8266
+    ]
+  },
+  "rejectionReasons": [
+    "Maximum actual Float32 soft targetY error exceeds2mm",
+    "Rooted low routes or high attachment failed"
+  ],
+  "elapsedSeconds": 2.4470073748379946,
+  "CPUThreads": 2,
+  "GPU": false,
+  "anonymousGBSamples": [
+    41.782984704,
+    42.210721792,
+    42.21108224,
+    42.211278848
+  ],
+  "inputPins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-preserving-garment185/operator.py": {
+      "sha256": "ae07c78b84af77d6dcf64a42de2f1ac35e931e3855670d6ff108eccea14621e8",
+      "bytes": 18281
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-preserving-garment185/coplanar-source/audit.py": {
+      "sha256": "3343705d734ae47a8aea78084abe063422553b9e2dd9fc570697721cc6a50cbb",
+      "bytes": 10760
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/source-ruled194/verify.py": {
+      "sha256": "c48bf600ce21be438a0f2c860e4aa54f80eba76c428c346ae214d23d183d54a4",
+      "bytes": 17836
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb": {
+      "sha256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+      "bytes": 16319060
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/local-shell199/parent-construction-contract200.json": {
+      "sha256": "d602e9772b60594bc5c8ed0c4a0d952aa59468746c9da7ab5916ab6a9591d7ce",
+      "bytes": 7240
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/extrinsic-seam195/source-interior-aliases.json": {
+      "sha256": "98fd910ac6f53843958371845d3ba72d7f1e7c65161e62c55f10caea38f4b7a5",
+      "bytes": 10089
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/extrinsic-seam195/source-star-graph.json": {
+      "sha256": "b82d16a24720c6e65b3f215c9b2777c8ec0f6057edd05af45431f21d57d8d658",
+      "bytes": 774
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/physical-cut193/parent-review.json": {
+      "sha256": "9b6557a3275419f364eeea10b59aa81a7a6431489653de12bdbe73200aa4e2a8",
+      "bytes": 6108
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-seam191/next-construction-contract.json": {
+      "sha256": "03a8cdea26dde4f043e834f8f5590f489903130d1609fdd008a4773f0bd0cb37",
+      "bytes": 93821
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/physical-cut193/literal-separator.json": {
+      "sha256": "5c72f63ffd4e7d38eec0197a962e1bfb20ed0e7be0d987ea451751dfa0787dcb",
+      "bytes": 454256
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-star196/construction.npz": {
+      "sha256": "5b54029e8cd59fec2b53e7bdbbf3a3b33f3ff93303a30fedcfa539d2fb336f27",
+      "bytes": 1806590
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/ipc-admission197/report.json": {
+      "sha256": "b84659ad6bbe7b0536cbca1bdd123d07fffd628ad427fe8cf8349598b82384f8",
+      "bytes": 4451
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/ipc-admission197/provenance.json": {
+      "sha256": "dc4ee01ac8e8bc26cf2d9825a212f5419d0a89f3e7f1870f94546e01badcc95c",
+      "bytes": 5846
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/local-shell200/construction.npz": {
+      "sha256": "4927ec2ae166697e918699578f9f643daf69ffce5362705da8b062a703c7acc2",
+      "bytes": 1808530
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/local-shell200/construction-provenance.json": {
+      "sha256": "630dfb0950061f2bc52d48ea1b529aff90b475ad67905b9024f47f4a498417af",
+      "bytes": 79538
+    }
+  },
+  "limits": [
+    "Static final Float32 construction only; no art, skin, rig, played motion or mobile acceptance",
+    "Source weights preserved literally and known bad",
+    "FreeXYZ shell solve; contact is native triangle CCD/barrier, no heightfield guarantee or anatomy/skin acceptance",
+    "Unchanged triangle pairs inherited from byte-exact protected geometry; actual changed local168 checked against allfive, including shared0/1/2"
+  ]
+}
