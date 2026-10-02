@@ -1871,3 +1871,23 @@ explicit outer affine prefix; naive final-matrix LBS4.538µm mismatch retained,
 no fitted transform/tolerance sweep. Contact force, continuous surfaces, device
 and appearance gates open. Next direct extraction, task3 construction and rig
 diagnostic. Cosmetics paused; ship168next.
+
+## Round167 — rig foundation and central ownership
+
+Finding: preserve exact19joint rest/bind and explicit anatomical child axes.
+Central1,423vertex torso ROI has0arm influence/actual0unilateral motion;
+outer chest/shoulders/axilla remain separate failures. Old bind04metadata is
+provenance, not a current binding or scale to reapply.
+
+Validation: five attached loaded primitives, loader192weight-lane changes
+predicted exactly; prepareHero adds none. Parent24hashes/all5,404core CPU rows,
+3,088unilateral contributing matrices exact, actual0motion. Independent delta
+<=3.61e-16m. Initial scalar/batched BLAS exact-zero assertion exposed2.48e-16m
+roundoff; retain it, verify unchanged contributing inputs instead. No physical
+threshold relaxed or source/geometry/weights changed. CPU2threads only.
+
+Limits: no anatomical pivot or lateral shoulder/neck/contact/Garage/device pass.
+Do not infer normal player honors the private adapter/sleeve bypass from GLB
+markers alone. Future integration must explicitly preserve these tested controls.
+Task3 construction remains separate and first; cosmetics paused. Next actual
+maxforward/landing prefix/surface extraction and mandatoryship168.

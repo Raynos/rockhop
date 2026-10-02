@@ -1711,3 +1711,25 @@ weighted-final-matrix reconstruction fails4.538µm. Preserve setup failure, not
 fit a correction. Next explicit-prefix/actual recorded surface extraction.
 Task3 construction owner retained, no geometry/physics change, cosmetics paused.
 Rig alignment/torso-arm ownership audit also in flight. Requiredship168next.
+
+## Rig foundation and bounded torso ownership — round167
+
+V5/C19/source34retain exact19joint rest hierarchy/inverse binds; five loaded
+primitives use correct attached binding/order. Conservative central-core ROI
+1,423vertices has0arm influence and0actual displacement in3,088unilateral
+samples. Parent24hashes/all5,404independent CPU samples verified. This excludes
+outer chest/shoulders/axilla; those visible failures still require construction
+and targeted ownership review. Do not reweight the intact core globally.
+
+Loader normalization192lanes/max5.96e-8 is explicit and retained; prepareHero
+adds no weight changes. Sourcechild axes are essential: naive+Y points opposite
+several limbs. Preserve freshC19adapter and existing conditioned-sleeve bypass.
+Ancestral bind04contact matrices/1.015scale are provenance, not live C19binding;
+do not apply again. Eventual real-player integration must preserve these behaviors
+and prove actual moving contacts, rather than copy a flagged GLB alone.
+
+Pivot/surface evidence is not anatomical validation: head-neck55.825mm and
+shoulder-upperarm137.025mm distances alone do not clear pivots. Visible neck/
+shoulder arc, full torso, hips/seat, Garage/device and8/10 gates remain open.
+No source/rig/weights repair. Task3 construction separate; cosmetics paused.
+Next explicit-prefix actual maxforward/landing contact extraction; ship168.

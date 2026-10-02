@@ -16,7 +16,15 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
-## Current evidence — round166, 2026-10-01
+## Current evidence — round167, 2026-10-01
+
+- Round167 exact19joint/rest/bind retention;1,423central core vertices0arm
+  influence and actual0unilateral motion. Parent24hashes/all5,404CPU rows
+  verified; only central core, not lateral chest/axilla or anatomy pass.
+  Loader192normalized lanes explicit; preserve child axes/sleeve bypass.
+  Old bind04metadata/1.015scale is provenance, never reapply as live bind.
+  Future real-player integration must preserve tested adapter behavior.
+  No source/weights repair; maxforward/landing extraction andship168next.
 
 - Round166 actual saddle/hip-region triangle dumps show54crossing pairs at
   frame186/tick1870,minimum bike-frameYgap−34.772mm,identical34/V5.

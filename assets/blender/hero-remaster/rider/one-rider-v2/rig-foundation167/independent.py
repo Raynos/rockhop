@@ -1,0 +1,12 @@
+"""Independent NumPy surface evaluation, raw exported rest and inverse binds retained."""
+from pathlib import Path
+import json,hashlib,numpy as np
+B=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2');S=B/'rig-foundation167';O=Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-foundation167');x=json.loads((S/'raw-input.json').read_text());f=json.loads(Path(x['fixture']).read_text());core=np.load(S/'raw-core.npz');rest=core['rest'];ib=core['inverseBind'];P=core['positions'].astype(float);J=core['joints'];W=core['weights'].astype(float);WW=np.zeros((len(P),19))
+for k in range(4):np.add.at(WW,(np.arange(len(P)),J[:,k]),W[:,k])
+D=np.array([z['deformationWorldColumnMajor']for z in f['frames']]).reshape(-1,19,4,4).transpose(0,1,3,2);M=D@rest@ib;P4=np.c_[P,np.ones(len(P))];neutral=next(i for i,z in enumerate(f['frames'])if z['family']=='neutral');baseline=np.einsum('vj,jab,vb->va',WW,M[neutral,:,:3,:],P4,optimize=True);rows=[]
+for begin in range(0,len(D),32):
+ poses=np.einsum('vj,fjab,vb->fva',WW,M[begin:begin+32,:,:3,:],P4,optimize=True);dist=np.linalg.norm(poses-baseline[None,:,:],axis=2)
+ for k,z in enumerate(dist):
+  frame=f['frames'][begin+k];i=int(np.argmax(z));rows.append({'family':frame['family'],'frame':frame['frame'],'maximumCoreMotionVsNeutralM':float(z[i]),'witnessVertexID':int(core['vertexIDs'][i])})
+actual=json.loads((O/'actual-three-foundation.json').read_text());max_error=max(abs(a['maximumCoreMotionVsNeutralM']-b['maximumCoreMotionVsNeutralM'])for a,b in zip(rows,actual['rows']));assert len(rows)==5404 and max_error<1e-8
+report={'sourceSHA256':x['sourceSHA256'],'fixtureSHA256':x['fixtureSHA256'],'method':'NumPy independent affine sum W*(fixtureD*rawRest*rawInverseBind)*rawP; source core grip morph deltas explicitly zero in actual Three check; actual Float32 normalization retained','vertices':len(P),'samples':len(rows),'rawRestInverseBindIdentityResidual':float(abs(rest@ib-np.eye(4)).max()),'maximumPerFrameMotionDifferenceFromActualThreeM':max_error,'families':[{'family':name,'maximumCoreMotionVsNeutralM':max(z['maximumCoreMotionVsNeutralM']for z in rows if z['family']==name)}for name in f['families']],'limits':['Diagnostic core only, not whole torso anatomy or visible quality.','Finite controlled motion, not actual gameplay or moving appearance acceptance.']};(O/'independent-affine.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'maxError':max_error,'residual':report['rawRestInverseBindIdentityResidual']}))
