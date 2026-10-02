@@ -175,6 +175,8 @@ Round187: explicit19bone handoff/source preservation verified;579matched actual 
 
 Round188: actualThree5404finite source witnesses verified; parent21,616records within1.71e-15m,20frozenfiles/14inputs. Tiny40mm52node patch is analytically infeasible withfixedboundary17.254×necessary vs1.5bar; no solver/candidate/boundschange. Next neutral axilla connectivity audit before localconstruction or explicitlydifferent semanticownership. Likedhead/rig/physics preserved; construction/arm/hips/all3visual/Garage/contacts/mobile OPEN, cosmetics paused. Ship189 next.
 
+Round189: parent confirms low resting sleeve connection with independent raw sections/union-find;25frozen files/6inputs. Bilateral transition-strip scope rejected for right point-pinch; next explicitly capped source halfedge-fan closure audit, no shape/weight changes. Ordinaryship189 exactfinish/restarts1-2ms passed; next192. Construction/rig/deformation/all3checkpoints/contacts/mobile OPEN; cosmetics paused, no human hold.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

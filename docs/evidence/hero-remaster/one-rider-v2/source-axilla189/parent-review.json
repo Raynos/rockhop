@@ -1,0 +1,46 @@
+{
+  "status": "READONLY_SOURCE_ATTACHMENT_CONFIRMED_NO_BILATERAL_GEOMETRY_AUTHORIZATION",
+  "frozenFilesVerified": 25,
+  "inputPinsVerified": 6,
+  "parentMethod": "Raw GLB plane graph plus independent source-Y union-find; exact original edge paths and directed scope boundary counts",
+  "firstSourceConnectionY_M": {
+    "positiveZ_lateral": 1.1901540756225586,
+    "negativeZ_lateral": 1.1905536651611328
+  },
+  "scope": [
+    {
+      "side": "positiveZ_lateral",
+      "faces": 1231,
+      "boundaryNodes": 151,
+      "invalidBoundaryNodes": [],
+      "valid": true
+    },
+    {
+      "side": "negativeZ_lateral",
+      "faces": 1216,
+      "boundaryNodes": 161,
+      "invalidBoundaryNodes": [
+        {
+          "physicalID": 7392,
+          "out": 2,
+          "in": 2,
+          "sourceRows": [
+            21088,
+            21089
+          ],
+          "positionM": [
+            0.6180603504180908,
+            1.338479995727539,
+            -0.2964881956577301
+          ]
+        }
+      ],
+      "valid": false
+    }
+  ],
+  "sourceUnchanged": true,
+  "wholeAnatomyOrConstructionAccepted": false,
+  "ship189": "PASS_REPLAY_CLEAR_CRASH_RESTART_NO_CANDIDATE",
+  "next": "Explicit minimal halfedge fan closure audit of invalid right boundary before any geometry; no ROI retuning or source edits",
+  "cosmetics": "PAUSED"
+}

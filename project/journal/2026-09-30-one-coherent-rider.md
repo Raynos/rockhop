@@ -2314,3 +2314,23 @@ Next source resting axilla contour/connectivity audit before regional
 construction/ownership; cosmetics paused. Mandatory ship189 next.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/source-rig188/
 Ask: 248.
+
+## Round189 — distinguish source construction from posed weight failure
+
+Finding: The untouched source sleeve/torso surface first connects at about
+Y1.190m. The proposed right transition-strip scope has a real point-pinch,
+so bilateral geometry is rejected before export.
+
+Validation: Parent25frozen hashes/six input pins, independent raw section
+graphs/source-Y union-find and directed boundary degrees. Left1231faces
+valid151node boundary; right1216faces invalid atphysical7392. Ordinary
+ship189 bothtiers exact recorded40.083333333333336s/hash/Float64, crash
+103ticks, restart1/2ms, zeroerrors;14.269s peak49.999GB shared-lock batch.
+
+Limits: No shape/weight/rig edit or art acceptance; anatomy contextual,
+not inferred from rig positions alone. Existing underarm/hip motionFAIL
+stands. Next explicitly bounded original halfedge-fan closure scope audit;
+no ROI threshold retuning. All visual/contact/mobile gates open, cosmetics
+paused. Next ordinary ship192.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/source-axilla189/
+Ask: 248.

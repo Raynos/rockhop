@@ -1,0 +1,4060 @@
+{
+  "status": "FROZEN_READONLY_P0_SOURCE_REST_ATTACHMENT_DIAGNOSTIC",
+  "source185SHA256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+  "source34SHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "p0GeometryAndAttributesExact185Vs34": true,
+  "sourcePrimitive": 0,
+  "method": "Literal triangle-plane intersections keyed by exact Float32 physical source edges/vertices. No p1/p2 or weight ownership in classification. First attachment is minimax-height path in original p0edge graph, then adjacent critical-Y interval sections.",
+  "sourceP0Arrays": [
+    {
+      "semantic": "POSITION",
+      "shape": [
+        22240,
+        3
+      ],
+      "sha256": "75b54dc913bd142aea62f6ce5d1f072533dd71bf971e01b2969d4a42073428d4"
+    },
+    {
+      "semantic": "NORMAL",
+      "shape": [
+        22240,
+        3
+      ],
+      "sha256": "c1bee39d879a966d0bb8a39e571b09087ae7885a9568dfe496fb7d972752cdac"
+    },
+    {
+      "semantic": "TEXCOORD_0",
+      "shape": [
+        22240,
+        2
+      ],
+      "sha256": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62"
+    },
+    {
+      "semantic": "TEXCOORD_1",
+      "shape": [
+        22240,
+        2
+      ],
+      "sha256": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62"
+    },
+    {
+      "semantic": "TEXCOORD_2",
+      "shape": [
+        22240,
+        2
+      ],
+      "sha256": "ef6b79ef1b4ed649e7344ce3d681b95fa4dd99d3e3edb3875e15c412d9f1d03c"
+    },
+    {
+      "semantic": "COLOR_0",
+      "shape": [
+        22240,
+        4
+      ],
+      "sha256": "eba5be2e1dbe598736dc48a934369baa33cbfadfd6a119fc0608f95cc7c87361"
+    },
+    {
+      "semantic": "COLOR_1",
+      "shape": [
+        22240,
+        4
+      ],
+      "sha256": "f3d92413f6ab235d1a80f439cc2169f888e3d3e70d9520ab47aa9059551b33a2"
+    },
+    {
+      "semantic": "COLOR_2",
+      "shape": [
+        22240,
+        4
+      ],
+      "sha256": "cdccdb4f547a9c8865c76a920a067c407393aacbcff7683be3cf7cc0698a1546"
+    },
+    {
+      "semantic": "JOINTS_0",
+      "shape": [
+        22240,
+        4
+      ],
+      "sha256": "941356441023fba9dab38f9affdc2413fc91409025345751dde9c1166f300476"
+    },
+    {
+      "semantic": "WEIGHTS_0",
+      "shape": [
+        22240,
+        4
+      ],
+      "sha256": "cbab5b193c91be5e18d011cccea70de14e0ff2ab44db87a0266a1aec249de4c6"
+    }
+  ],
+  "sourceP0IndicesSHA256": "645942d1fbf49c847def727df446270dd794908718966e8f8ad63c8f2865123a",
+  "sections": [
+    {
+      "label": "fixed-00",
+      "heightY_M": 0.94,
+      "contourCount": 3,
+      "closedContourCount": 3,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [
+        {
+          "lateralClass": "negativeZ_lateral",
+          "gapM": 0.11132704756817745,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 0,
+            "oppositeSegmentIndex": 139,
+            "pointXZ": [
+              0.6657312164278145,
+              -0.30876351035992206
+            ],
+            "nearestXZ": [
+              0.6608122428964814,
+              -0.19754518804005747
+            ],
+            "segmentParameter": 0.22145857575709868
+          }
+        },
+        {
+          "lateralClass": "positiveZ_lateral",
+          "gapM": 0.113259676446573,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 59,
+            "oppositeSegmentIndex": 1,
+            "pointXZ": [
+              0.6635810567121586,
+              0.3093874206382721
+            ],
+            "nearestXZ": [
+              0.6638895762088569,
+              0.19612816439622116
+            ],
+            "segmentParameter": 0.0
+          }
+        }
+      ],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "negativeZ_lateral",
+          "nodeCount": 66,
+          "segmentCount": 66,
+          "boundsM": [
+            [
+              0.6164828367179037,
+              0.94,
+              -0.3938244548697585
+            ],
+            [
+              0.7139201924391257,
+              0.94,
+              -0.3085713642196665
+            ]
+          ],
+          "centroidM": [
+            0.668232700541868,
+            0.9399999999999992,
+            -0.34915708465947
+          ],
+          "areaXZ_M2": 0.006599213605554474,
+          "nodeDegrees": {
+            "2": 66
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 140,
+          "segmentCount": 140,
+          "boundsM": [
+            [
+              0.5039306188539683,
+              0.94,
+              -0.19798462732227987
+            ],
+            [
+              0.7888414797136549,
+              0.94,
+              0.19612816439622116
+            ]
+          ],
+          "centroidM": [
+            0.6470860182615862,
+            0.9399999999999985,
+            0.000817272055923343
+          ],
+          "areaXZ_M2": 0.09179659632452193,
+          "nodeDegrees": {
+            "2": 140
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "positiveZ_lateral",
+          "nodeCount": 66,
+          "segmentCount": 66,
+          "boundsM": [
+            [
+              0.6140925993467244,
+              0.94,
+              0.3093874206382721
+            ],
+            [
+              0.7129891454103887,
+              0.94,
+              0.3951562293920642
+            ]
+          ],
+          "centroidM": [
+            0.662907891357842,
+            0.9399999999999992,
+            0.3527628175186825
+          ],
+          "areaXZ_M2": 0.006751127214693203,
+          "nodeDegrees": {
+            "2": 66
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-01",
+      "heightY_M": 1.0,
+      "contourCount": 3,
+      "closedContourCount": 3,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [
+        {
+          "lateralClass": "negativeZ_lateral",
+          "gapM": 0.06881392880421022,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 2,
+            "oppositeSegmentIndex": 154,
+            "pointXZ": [
+              0.6364826615679923,
+              -0.27275782439835944
+            ],
+            "nearestXZ": [
+              0.6464426415058944,
+              -0.204668503671042
+            ],
+            "segmentParameter": 1.0
+          }
+        },
+        {
+          "lateralClass": "positiveZ_lateral",
+          "gapM": 0.0758866729840341,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 77,
+            "oppositeSegmentIndex": 3,
+            "pointXZ": [
+              0.662015977922952,
+              0.27377169420256026
+            ],
+            "nearestXZ": [
+              0.6679401161322777,
+              0.19811661028176522
+            ],
+            "segmentParameter": 0.5124203042923613
+          }
+        }
+      ],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "negativeZ_lateral",
+          "nodeCount": 78,
+          "segmentCount": 78,
+          "boundsM": [
+            [
+              0.5837357140358214,
+              1.0,
+              -0.3909469853296473
+            ],
+            [
+              0.7056701516074859,
+              1.0,
+              -0.272524486175285
+            ]
+          ],
+          "centroidM": [
+            0.6401117173090816,
+            1.0,
+            -0.32995861026684364
+          ],
+          "areaXZ_M2": 0.01028881134361849,
+          "nodeDegrees": {
+            "2": 78
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 158,
+          "segmentCount": 158,
+          "boundsM": [
+            [
+              0.5028028877493284,
+              1.0,
+              -0.204668503671042
+            ],
+            [
+              0.8205783747279863,
+              1.0,
+              0.19857475346945308
+            ]
+          ],
+          "centroidM": [
+            0.6678737397400626,
+            1.0,
+            -0.006503652869171267
+          ],
+          "areaXZ_M2": 0.09757812690311082,
+          "nodeDegrees": {
+            "2": 158
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "positiveZ_lateral",
+          "nodeCount": 78,
+          "segmentCount": 78,
+          "boundsM": [
+            [
+              0.5839443605491528,
+              1.0,
+              0.27346660253262617
+            ],
+            [
+              0.7061674427099293,
+              1.0,
+              0.3895494354200658
+            ]
+          ],
+          "centroidM": [
+            0.6437907788415865,
+            1.0,
+            0.3287136209344694
+          ],
+          "areaXZ_M2": 0.010490031158075813,
+          "nodeDegrees": {
+            "2": 78
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-02",
+      "heightY_M": 1.08,
+      "contourCount": 3,
+      "closedContourCount": 3,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [
+        {
+          "lateralClass": "negativeZ_lateral",
+          "gapM": 0.03395517939229264,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 0,
+            "oppositeSegmentIndex": 193,
+            "pointXZ": [
+              0.6235135393208652,
+              -0.2313798292392851
+            ],
+            "nearestXZ": [
+              0.6242851608999704,
+              -0.19743341841720505
+            ],
+            "segmentParameter": 0.25233108427067485
+          }
+        },
+        {
+          "lateralClass": "positiveZ_lateral",
+          "gapM": 0.03125277572410296,
+          "witness": {
+            "reverse": true,
+            "pointSegmentIndex": 5,
+            "oppositeSegmentIndex": 74,
+            "pointXZ": [
+              0.6272469809506772,
+              0.20050451928921934
+            ],
+            "nearestXZ": [
+              0.62058918556249,
+              0.23103990451734627
+            ],
+            "segmentParameter": 1.0
+          }
+        }
+      ],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "negativeZ_lateral",
+          "nodeCount": 83,
+          "segmentCount": 83,
+          "boundsM": [
+            [
+              0.5547161192826894,
+              1.08,
+              -0.36129170404611627
+            ],
+            [
+              0.6832096413722389,
+              1.08,
+              -0.23117040761374893
+            ]
+          ],
+          "centroidM": [
+            0.6168946080324594,
+            1.0799999999999987,
+            -0.30303612925342843
+          ],
+          "areaXZ_M2": 0.012945607457202551,
+          "nodeDegrees": {
+            "2": 83
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 194,
+          "segmentCount": 194,
+          "boundsM": [
+            [
+              0.4855600714700798,
+              1.08,
+              -0.1977626237718248
+            ],
+            [
+              0.8081970811333277,
+              1.08,
+              0.20079388241629928
+            ]
+          ],
+          "centroidM": [
+            0.6683420528970835,
+            1.080000000000004,
+            -0.009131250125232868
+          ],
+          "areaXZ_M2": 0.09749050274667512,
+          "nodeDegrees": {
+            "2": 194
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "positiveZ_lateral",
+          "nodeCount": 78,
+          "segmentCount": 78,
+          "boundsM": [
+            [
+              0.5645755786742853,
+              1.08,
+              0.23038631988508093
+            ],
+            [
+              0.6870622055202918,
+              1.08,
+              0.3660289152348157
+            ]
+          ],
+          "centroidM": [
+            0.6249522656550243,
+            1.0799999999999987,
+            0.2999597196132098
+          ],
+          "areaXZ_M2": 0.012890416548434883,
+          "nodeDegrees": {
+            "2": 78
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-03",
+      "heightY_M": 1.13,
+      "contourCount": 3,
+      "closedContourCount": 3,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [
+        {
+          "lateralClass": "negativeZ_lateral",
+          "gapM": 0.02015234718724458,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 5,
+            "oppositeSegmentIndex": 203,
+            "pointXZ": [
+              0.6011058383805031,
+              -0.20802258940647564
+            ],
+            "nearestXZ": [
+              0.5955177273460734,
+              -0.18866051017354898
+            ],
+            "segmentParameter": 0.5701750145284255
+          }
+        },
+        {
+          "lateralClass": "positiveZ_lateral",
+          "gapM": 0.013194687501909271,
+          "witness": {
+            "reverse": true,
+            "pointSegmentIndex": 3,
+            "oppositeSegmentIndex": 83,
+            "pointXZ": [
+              0.6010930895604719,
+              0.19857818854797618
+            ],
+            "nearestXZ": [
+              0.6033860072844147,
+              0.2115721220011023
+            ],
+            "segmentParameter": 0.6221648814323446
+          }
+        }
+      ],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "negativeZ_lateral",
+          "nodeCount": 92,
+          "segmentCount": 92,
+          "boundsM": [
+            [
+              0.536221379867835,
+              1.13,
+              -0.35278597912256937
+            ],
+            [
+              0.6846599511025129,
+              1.13,
+              -0.20378131957332443
+            ]
+          ],
+          "centroidM": [
+            0.6175762082025625,
+            1.1299999999999988,
+            -0.27770016984990825
+          ],
+          "areaXZ_M2": 0.01618667851861382,
+          "nodeDegrees": {
+            "2": 92
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 211,
+          "segmentCount": 211,
+          "boundsM": [
+            [
+              0.4847615912865351,
+              1.13,
+              -0.1912490305618179
+            ],
+            [
+              0.8029702155016785,
+              1.13,
+              0.20006513702156012
+            ]
+          ],
+          "centroidM": [
+            0.6517181278605324,
+            1.129999999999997,
+            0.004450450751771744
+          ],
+          "areaXZ_M2": 0.09323418843914755,
+          "nodeDegrees": {
+            "2": 211
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "positiveZ_lateral",
+          "nodeCount": 90,
+          "segmentCount": 90,
+          "boundsM": [
+            [
+              0.5444948627795151,
+              1.13,
+              0.2055669877640542
+            ],
+            [
+              0.6807672416783186,
+              1.13,
+              0.35041485565394515
+            ]
+          ],
+          "centroidM": [
+            0.6162708970601435,
+            1.129999999999999,
+            0.2723344296748939
+          ],
+          "areaXZ_M2": 0.015500740091454135,
+          "nodeDegrees": {
+            "2": 90
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-04",
+      "heightY_M": 1.18,
+      "contourCount": 3,
+      "closedContourCount": 3,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [
+        {
+          "lateralClass": "negativeZ_lateral",
+          "gapM": 0.009483305173358745,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 0,
+            "oppositeSegmentIndex": 188,
+            "pointXZ": [
+              0.6138199250598828,
+              -0.18266372622443355
+            ],
+            "nearestXZ": [
+              0.6140999923699668,
+              -0.173184557520751
+            ],
+            "segmentParameter": 0.11571861175349794
+          }
+        },
+        {
+          "lateralClass": "positiveZ_lateral",
+          "gapM": 0.00646959600869856,
+          "witness": {
+            "reverse": false,
+            "pointSegmentIndex": 101,
+            "oppositeSegmentIndex": 36,
+            "pointXZ": [
+              0.6243583418898516,
+              0.1819260537665585
+            ],
+            "nearestXZ": [
+              0.6246503378287878,
+              0.17546305052600436
+            ],
+            "segmentParameter": 0.5157827224523654
+          }
+        }
+      ],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "negativeZ_lateral",
+          "nodeCount": 108,
+          "segmentCount": 108,
+          "boundsM": [
+            [
+              0.5322952807266683,
+              1.18,
+              -0.3444135786251264
+            ],
+            [
+              0.6890351880296031,
+              1.18,
+              -0.18266372622443355
+            ]
+          ],
+          "centroidM": [
+            0.6162834244035211,
+            1.1800000000000033,
+            -0.259177339302988
+          ],
+          "areaXZ_M2": 0.018532979153378162,
+          "nodeDegrees": {
+            "2": 108
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 222,
+          "segmentCount": 222,
+          "boundsM": [
+            [
+              0.4865255776178515,
+              1.18,
+              -0.1855100526110126
+            ],
+            [
+              0.7905401421431208,
+              1.18,
+              0.19401324696227723
+            ]
+          ],
+          "centroidM": [
+            0.625998913866809,
+            1.180000000000005,
+            -0.004040359272241473
+          ],
+          "areaXZ_M2": 0.092003930722064,
+          "nodeDegrees": {
+            "2": 222
+          }
+        },
+        {
+          "closed": true,
+          "geometricClass": "positiveZ_lateral",
+          "nodeCount": 104,
+          "segmentCount": 104,
+          "boundsM": [
+            [
+              0.5437200574743839,
+              1.18,
+              0.18189407115672518
+            ],
+            [
+              0.6930662015825433,
+              1.18,
+              0.34180539683012634
+            ]
+          ],
+          "centroidM": [
+            0.6221752468543453,
+            1.180000000000003,
+            0.2613622378588281
+          ],
+          "areaXZ_M2": 0.018101110052169175,
+          "nodeDegrees": {
+            "2": 104
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-05",
+      "heightY_M": 1.25,
+      "contourCount": 1,
+      "closedContourCount": 1,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 375,
+          "segmentCount": 375,
+          "boundsM": [
+            [
+              0.4928828639527049,
+              1.25,
+              -0.3278645611910619
+            ],
+            [
+              0.7900714552184257,
+              1.25,
+              0.31186417698734376
+            ]
+          ],
+          "centroidM": [
+            0.627065360578713,
+            1.25,
+            -0.013720165299803723
+          ],
+          "areaXZ_M2": 0.12865259454266567,
+          "nodeDegrees": {
+            "2": 375
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-06",
+      "heightY_M": 1.32,
+      "contourCount": 1,
+      "closedContourCount": 1,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [],
+      "contours": [
+        {
+          "closed": true,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 375,
+          "segmentCount": 375,
+          "boundsM": [
+            [
+              0.49856256994056103,
+              1.32,
+              -0.3029895524255012
+            ],
+            [
+              0.7860292480987432,
+              1.32,
+              0.2954811678957207
+            ]
+          ],
+          "centroidM": [
+            0.6269159788116029,
+            1.319999999999994,
+            -0.017154042709872086
+          ],
+          "areaXZ_M2": 0.12456725092202321,
+          "nodeDegrees": {
+            "2": 375
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-07",
+      "heightY_M": 1.38,
+      "contourCount": 1,
+      "closedContourCount": 0,
+      "openContourCount": 1,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [],
+      "contours": [
+        {
+          "closed": false,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 251,
+          "segmentCount": 250,
+          "boundsM": [
+            [
+              0.5172218657807225,
+              1.38,
+              -0.28043439629590405
+            ],
+            [
+              0.7723058172209507,
+              1.38,
+              0.2776513527988171
+            ]
+          ],
+          "centroidM": [
+            0.670066679291218,
+            1.3799999999999966,
+            -0.01382106883683365
+          ],
+          "areaXZ_M2": null,
+          "nodeDegrees": {
+            "2": 249,
+            "1": 2
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-08",
+      "heightY_M": 1.43,
+      "contourCount": 1,
+      "closedContourCount": 0,
+      "openContourCount": 1,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [],
+      "contours": [
+        {
+          "closed": false,
+          "geometricClass": "central_Z0_straddling",
+          "nodeCount": 170,
+          "segmentCount": 169,
+          "boundsM": [
+            [
+              0.5285496916343315,
+              1.43,
+              -0.2545438364102719
+            ],
+            [
+              0.7597218658109085,
+              1.43,
+              0.2534715939131724
+            ]
+          ],
+          "centroidM": [
+            0.6718124666068988,
+            1.430000000000005,
+            6.706461570071428e-05
+          ],
+          "areaXZ_M2": null,
+          "nodeDegrees": {
+            "2": 168,
+            "1": 2
+          }
+        }
+      ]
+    },
+    {
+      "label": "fixed-09",
+      "heightY_M": 1.49,
+      "contourCount": 0,
+      "closedContourCount": 0,
+      "openContourCount": 0,
+      "coplanarFaces": [],
+      "pointOnlyTouchFaces": [],
+      "vertexCases": [],
+      "armTorsoGapCandidates": [],
+      "contours": []
+    }
+  ],
+  "firstConnections": [
+    {
+      "geometricSide": "positiveZ_lateral",
+      "firstSublevelSurfaceConnectionY_M": 1.1901540756225586,
+      "criticalPhysicalVertexIDs": [
+        8238
+      ],
+      "criticalSourceRowAliases": [
+        [
+          5169,
+          5170,
+          5171
+        ]
+      ],
+      "criticalPositionM": [
+        [
+          0.6319100260734558,
+          1.1901540756225586,
+          0.18109658360481262
+        ]
+      ],
+      "pathPhysicalIDs": [
+        10536,
+        10249,
+        11013,
+        11475,
+        11495,
+        11952,
+        13594,
+        13505,
+        12858,
+        13065,
+        13160,
+        12744,
+        12346,
+        12537,
+        13209,
+        13431,
+        13692,
+        12835,
+        12552,
+        11478,
+        10450,
+        8890,
+        8728,
+        9293,
+        8355,
+        8238,
+        7659,
+        6938,
+        6411,
+        6038,
+        5353,
+        5088,
+        4430,
+        4052,
+        3544,
+        3245,
+        2831,
+        2500,
+        2403,
+        2332,
+        2246,
+        2270,
+        2351,
+        2721,
+        3200,
+        3159,
+        2637,
+        2386,
+        2242,
+        2230,
+        2417,
+        2735,
+        3433,
+        4019,
+        4187,
+        4169,
+        4156,
+        4117,
+        4232,
+        4479,
+        4758,
+        4906,
+        4984,
+        5269,
+        5245,
+        4991,
+        5134,
+        5443,
+        5902,
+        6099,
+        6091,
+        6153,
+        6289,
+        6486,
+        7058,
+        7288
+      ],
+      "pathSourceEdges": [
+        {
+          "physicalEdge": [
+            10536,
+            10249
+          ],
+          "sourceRowAliases": [
+            [
+              3940
+            ],
+            [
+              4070
+            ]
+          ],
+          "sourceFaces": [
+            6249,
+            6250
+          ]
+        },
+        {
+          "physicalEdge": [
+            10249,
+            11013
+          ],
+          "sourceRowAliases": [
+            [
+              4070
+            ],
+            [
+              4361
+            ]
+          ],
+          "sourceFaces": [
+            6729,
+            6732
+          ]
+        },
+        {
+          "physicalEdge": [
+            11013,
+            11475
+          ],
+          "sourceRowAliases": [
+            [
+              4361
+            ],
+            [
+              4353,
+              4354,
+              4355
+            ]
+          ],
+          "sourceFaces": [
+            6738,
+            6739
+          ]
+        },
+        {
+          "physicalEdge": [
+            11475,
+            11495
+          ],
+          "sourceRowAliases": [
+            [
+              4353,
+              4354,
+              4355
+            ],
+            [
+              3986
+            ]
+          ],
+          "sourceFaces": [
+            6745,
+            6746
+          ]
+        },
+        {
+          "physicalEdge": [
+            11495,
+            11952
+          ],
+          "sourceRowAliases": [
+            [
+              3986
+            ],
+            [
+              3820
+            ]
+          ],
+          "sourceFaces": [
+            6256,
+            6257
+          ]
+        },
+        {
+          "physicalEdge": [
+            11952,
+            13594
+          ],
+          "sourceRowAliases": [
+            [
+              3820
+            ],
+            [
+              4149
+            ]
+          ],
+          "sourceFaces": [
+            6261,
+            6262
+          ]
+        },
+        {
+          "physicalEdge": [
+            13594,
+            13505
+          ],
+          "sourceRowAliases": [
+            [
+              4149
+            ],
+            [
+              4061,
+              4062
+            ]
+          ],
+          "sourceFaces": [
+            6266,
+            6760
+          ]
+        },
+        {
+          "physicalEdge": [
+            13505,
+            12858
+          ],
+          "sourceRowAliases": [
+            [
+              4061,
+              4062
+            ],
+            [
+              4016
+            ]
+          ],
+          "sourceFaces": [
+            6274,
+            6763
+          ]
+        },
+        {
+          "physicalEdge": [
+            12858,
+            13065
+          ],
+          "sourceRowAliases": [
+            [
+              4016
+            ],
+            [
+              4643,
+              4644
+            ]
+          ],
+          "sourceFaces": [
+            6768,
+            6769
+          ]
+        },
+        {
+          "physicalEdge": [
+            13065,
+            13160
+          ],
+          "sourceRowAliases": [
+            [
+              4643,
+              4644
+            ],
+            [
+              4733
+            ]
+          ],
+          "sourceFaces": [
+            7276,
+            7718
+          ]
+        },
+        {
+          "physicalEdge": [
+            13160,
+            12744
+          ],
+          "sourceRowAliases": [
+            [
+              4733
+            ],
+            [
+              4399
+            ]
+          ],
+          "sourceFaces": [
+            7295,
+            7725
+          ]
+        },
+        {
+          "physicalEdge": [
+            12744,
+            12346
+          ],
+          "sourceRowAliases": [
+            [
+              4399
+            ],
+            [
+              4379
+            ]
+          ],
+          "sourceFaces": [
+            6813,
+            7300
+          ]
+        },
+        {
+          "physicalEdge": [
+            12346,
+            12537
+          ],
+          "sourceRowAliases": [
+            [
+              4379
+            ],
+            [
+              4711
+            ]
+          ],
+          "sourceFaces": [
+            7308,
+            7309
+          ]
+        },
+        {
+          "physicalEdge": [
+            12537,
+            13209
+          ],
+          "sourceRowAliases": [
+            [
+              4711
+            ],
+            [
+              5339
+            ]
+          ],
+          "sourceFaces": [
+            7315,
+            7763
+          ]
+        },
+        {
+          "physicalEdge": [
+            13209,
+            13431
+          ],
+          "sourceRowAliases": [
+            [
+              5339
+            ],
+            [
+              5670
+            ]
+          ],
+          "sourceFaces": [
+            8226,
+            8691
+          ]
+        },
+        {
+          "physicalEdge": [
+            13431,
+            13692
+          ],
+          "sourceRowAliases": [
+            [
+              5670
+            ],
+            [
+              5917
+            ]
+          ],
+          "sourceFaces": [
+            8692,
+            9058
+          ]
+        },
+        {
+          "physicalEdge": [
+            13692,
+            12835
+          ],
+          "sourceRowAliases": [
+            [
+              5917
+            ],
+            [
+              6105
+            ]
+          ],
+          "sourceFaces": [
+            9060,
+            9392
+          ]
+        },
+        {
+          "physicalEdge": [
+            12835,
+            12552
+          ],
+          "sourceRowAliases": [
+            [
+              6105
+            ],
+            [
+              6203,
+              6204
+            ]
+          ],
+          "sourceFaces": [
+            9397,
+            9398
+          ]
+        },
+        {
+          "physicalEdge": [
+            12552,
+            11478
+          ],
+          "sourceRowAliases": [
+            [
+              6203,
+              6204
+            ],
+            [
+              6209,
+              6210
+            ]
+          ],
+          "sourceFaces": [
+            9402,
+            9403
+          ]
+        },
+        {
+          "physicalEdge": [
+            11478,
+            10450
+          ],
+          "sourceRowAliases": [
+            [
+              6209,
+              6210
+            ],
+            [
+              6172,
+              6173
+            ]
+          ],
+          "sourceFaces": [
+            9405,
+            9407
+          ]
+        },
+        {
+          "physicalEdge": [
+            10450,
+            8890
+          ],
+          "sourceRowAliases": [
+            [
+              6172,
+              6173
+            ],
+            [
+              5841,
+              5842
+            ]
+          ],
+          "sourceFaces": [
+            9076,
+            9416
+          ]
+        },
+        {
+          "physicalEdge": [
+            8890,
+            8728
+          ],
+          "sourceRowAliases": [
+            [
+              5841,
+              5842
+            ],
+            [
+              5728
+            ]
+          ],
+          "sourceFaces": [
+            8709,
+            9077
+          ]
+        },
+        {
+          "physicalEdge": [
+            8728,
+            9293
+          ],
+          "sourceRowAliases": [
+            [
+              5728
+            ],
+            [
+              5553
+            ]
+          ],
+          "sourceFaces": [
+            8717,
+            8719
+          ]
+        },
+        {
+          "physicalEdge": [
+            9293,
+            8355
+          ],
+          "sourceRowAliases": [
+            [
+              5553
+            ],
+            [
+              5379
+            ]
+          ],
+          "sourceFaces": [
+            8255,
+            8256
+          ]
+        },
+        {
+          "physicalEdge": [
+            8355,
+            8238
+          ],
+          "sourceRowAliases": [
+            [
+              5379
+            ],
+            [
+              5169,
+              5170,
+              5171
+            ]
+          ],
+          "sourceFaces": [
+            8267,
+            8268
+          ]
+        },
+        {
+          "physicalEdge": [
+            8238,
+            7659
+          ],
+          "sourceRowAliases": [
+            [
+              5169,
+              5170,
+              5171
+            ],
+            [
+              5095,
+              5096
+            ]
+          ],
+          "sourceFaces": [
+            7796,
+            7797
+          ]
+        },
+        {
+          "physicalEdge": [
+            7659,
+            6938
+          ],
+          "sourceRowAliases": [
+            [
+              5095,
+              5096
+            ],
+            [
+              5047
+            ]
+          ],
+          "sourceFaces": [
+            7788,
+            7795
+          ]
+        },
+        {
+          "physicalEdge": [
+            6938,
+            6411
+          ],
+          "sourceRowAliases": [
+            [
+              5047
+            ],
+            [
+              4910
+            ]
+          ],
+          "sourceFaces": [
+            7786,
+            7794
+          ]
+        },
+        {
+          "physicalEdge": [
+            6411,
+            6038
+          ],
+          "sourceRowAliases": [
+            [
+              4910
+            ],
+            [
+              4668,
+              4669
+            ]
+          ],
+          "sourceFaces": [
+            7346,
+            7352
+          ]
+        },
+        {
+          "physicalEdge": [
+            6038,
+            5353
+          ],
+          "sourceRowAliases": [
+            [
+              4668,
+              4669
+            ],
+            [
+              4439,
+              4440
+            ]
+          ],
+          "sourceFaces": [
+            7357,
+            7358
+          ]
+        },
+        {
+          "physicalEdge": [
+            5353,
+            5088
+          ],
+          "sourceRowAliases": [
+            [
+              4439,
+              4440
+            ],
+            [
+              4125
+            ]
+          ],
+          "sourceFaces": [
+            6893,
+            6904
+          ]
+        },
+        {
+          "physicalEdge": [
+            5088,
+            4430
+          ],
+          "sourceRowAliases": [
+            [
+              4125
+            ],
+            [
+              4050
+            ]
+          ],
+          "sourceFaces": [
+            6384,
+            6903
+          ]
+        },
+        {
+          "physicalEdge": [
+            4430,
+            4052
+          ],
+          "sourceRowAliases": [
+            [
+              4050
+            ],
+            [
+              3819
+            ]
+          ],
+          "sourceFaces": [
+            6383,
+            6386
+          ]
+        },
+        {
+          "physicalEdge": [
+            4052,
+            3544
+          ],
+          "sourceRowAliases": [
+            [
+              3819
+            ],
+            [
+              3381,
+              3382
+            ]
+          ],
+          "sourceFaces": [
+            5883,
+            5885
+          ]
+        },
+        {
+          "physicalEdge": [
+            3544,
+            3245
+          ],
+          "sourceRowAliases": [
+            [
+              3381,
+              3382
+            ],
+            [
+              2596
+            ]
+          ],
+          "sourceFaces": [
+            4392,
+            4678
+          ]
+        },
+        {
+          "physicalEdge": [
+            3245,
+            2831
+          ],
+          "sourceRowAliases": [
+            [
+              2596
+            ],
+            [
+              2195
+            ]
+          ],
+          "sourceFaces": [
+            4089,
+            4090
+          ]
+        },
+        {
+          "physicalEdge": [
+            2831,
+            2500
+          ],
+          "sourceRowAliases": [
+            [
+              2195
+            ],
+            [
+              1703
+            ]
+          ],
+          "sourceFaces": [
+            2916,
+            2919
+          ]
+        },
+        {
+          "physicalEdge": [
+            2500,
+            2403
+          ],
+          "sourceRowAliases": [
+            [
+              1703
+            ],
+            [
+              1618
+            ]
+          ],
+          "sourceFaces": [
+            2623,
+            2627
+          ]
+        },
+        {
+          "physicalEdge": [
+            2403,
+            2332
+          ],
+          "sourceRowAliases": [
+            [
+              1618
+            ],
+            [
+              1506
+            ]
+          ],
+          "sourceFaces": [
+            2500,
+            2505
+          ]
+        },
+        {
+          "physicalEdge": [
+            2332,
+            2246
+          ],
+          "sourceRowAliases": [
+            [
+              1506
+            ],
+            [
+              1470
+            ]
+          ],
+          "sourceFaces": [
+            2358,
+            2499
+          ]
+        },
+        {
+          "physicalEdge": [
+            2246,
+            2270
+          ],
+          "sourceRowAliases": [
+            [
+              1470
+            ],
+            [
+              1486
+            ]
+          ],
+          "sourceFaces": [
+            2253,
+            2495
+          ]
+        },
+        {
+          "physicalEdge": [
+            2270,
+            2351
+          ],
+          "sourceRowAliases": [
+            [
+              1486
+            ],
+            [
+              1628
+            ]
+          ],
+          "sourceFaces": [
+            2490,
+            2620
+          ]
+        },
+        {
+          "physicalEdge": [
+            2351,
+            2721
+          ],
+          "sourceRowAliases": [
+            [
+              1628
+            ],
+            [
+              1554
+            ]
+          ],
+          "sourceFaces": [
+            2491,
+            2619
+          ]
+        },
+        {
+          "physicalEdge": [
+            2721,
+            3200
+          ],
+          "sourceRowAliases": [
+            [
+              1554
+            ],
+            [
+              1467
+            ]
+          ],
+          "sourceFaces": [
+            2354,
+            2488
+          ]
+        },
+        {
+          "physicalEdge": [
+            3200,
+            3159
+          ],
+          "sourceRowAliases": [
+            [
+              1467
+            ],
+            [
+              1353
+            ]
+          ],
+          "sourceFaces": [
+            2138,
+            2246
+          ]
+        },
+        {
+          "physicalEdge": [
+            3159,
+            2637
+          ],
+          "sourceRowAliases": [
+            [
+              1353
+            ],
+            [
+              1217
+            ]
+          ],
+          "sourceFaces": [
+            1939,
+            2136
+          ]
+        },
+        {
+          "physicalEdge": [
+            2637,
+            2386
+          ],
+          "sourceRowAliases": [
+            [
+              1217
+            ],
+            [
+              1247
+            ]
+          ],
+          "sourceFaces": [
+            1843,
+            2047
+          ]
+        },
+        {
+          "physicalEdge": [
+            2386,
+            2242
+          ],
+          "sourceRowAliases": [
+            [
+              1247
+            ],
+            [
+              1294
+            ]
+          ],
+          "sourceFaces": [
+            1842,
+            2135
+          ]
+        },
+        {
+          "physicalEdge": [
+            2242,
+            2230
+          ],
+          "sourceRowAliases": [
+            [
+              1294
+            ],
+            [
+              1310
+            ]
+          ],
+          "sourceFaces": [
+            1934,
+            2236
+          ]
+        },
+        {
+          "physicalEdge": [
+            2230,
+            2417
+          ],
+          "sourceRowAliases": [
+            [
+              1310
+            ],
+            [
+              1309
+            ]
+          ],
+          "sourceFaces": [
+            1931,
+            2132
+          ]
+        },
+        {
+          "physicalEdge": [
+            2417,
+            2735
+          ],
+          "sourceRowAliases": [
+            [
+              1309
+            ],
+            [
+              1303
+            ]
+          ],
+          "sourceFaces": [
+            1929,
+            2227
+          ]
+        },
+        {
+          "physicalEdge": [
+            2735,
+            3433
+          ],
+          "sourceRowAliases": [
+            [
+              1303
+            ],
+            [
+              1225
+            ]
+          ],
+          "sourceFaces": [
+            1926,
+            2040
+          ]
+        },
+        {
+          "physicalEdge": [
+            3433,
+            4019
+          ],
+          "sourceRowAliases": [
+            [
+              1225
+            ],
+            [
+              1261
+            ]
+          ],
+          "sourceFaces": [
+            1736,
+            2038
+          ]
+        },
+        {
+          "physicalEdge": [
+            4019,
+            4187
+          ],
+          "sourceRowAliases": [
+            [
+              1261
+            ],
+            [
+              1218
+            ]
+          ],
+          "sourceFaces": [
+            1735,
+            2035
+          ]
+        },
+        {
+          "physicalEdge": [
+            4187,
+            4169
+          ],
+          "sourceRowAliases": [
+            [
+              1218
+            ],
+            [
+              1136
+            ]
+          ],
+          "sourceFaces": [
+            1642,
+            1828
+          ]
+        },
+        {
+          "physicalEdge": [
+            4169,
+            4156
+          ],
+          "sourceRowAliases": [
+            [
+              1136
+            ],
+            [
+              1107
+            ]
+          ],
+          "sourceFaces": [
+            1534,
+            1826
+          ]
+        },
+        {
+          "physicalEdge": [
+            4156,
+            4117
+          ],
+          "sourceRowAliases": [
+            [
+              1107
+            ],
+            [
+              923
+            ]
+          ],
+          "sourceFaces": [
+            1428,
+            1639
+          ]
+        },
+        {
+          "physicalEdge": [
+            4117,
+            4232
+          ],
+          "sourceRowAliases": [
+            [
+              923
+            ],
+            [
+              850
+            ]
+          ],
+          "sourceFaces": [
+            1311,
+            1530
+          ]
+        },
+        {
+          "physicalEdge": [
+            4232,
+            4479
+          ],
+          "sourceRowAliases": [
+            [
+              850
+            ],
+            [
+              734
+            ]
+          ],
+          "sourceFaces": [
+            1208,
+            1209
+          ]
+        },
+        {
+          "physicalEdge": [
+            4479,
+            4758
+          ],
+          "sourceRowAliases": [
+            [
+              734
+            ],
+            [
+              643
+            ]
+          ],
+          "sourceFaces": [
+            1081,
+            1083
+          ]
+        },
+        {
+          "physicalEdge": [
+            4758,
+            4906
+          ],
+          "sourceRowAliases": [
+            [
+              643
+            ],
+            [
+              629
+            ]
+          ],
+          "sourceFaces": [
+            831,
+            1079
+          ]
+        },
+        {
+          "physicalEdge": [
+            4906,
+            4984
+          ],
+          "sourceRowAliases": [
+            [
+              629
+            ],
+            [
+              542
+            ]
+          ],
+          "sourceFaces": [
+            829,
+            955
+          ]
+        },
+        {
+          "physicalEdge": [
+            4984,
+            5269
+          ],
+          "sourceRowAliases": [
+            [
+              542
+            ],
+            [
+              487
+            ]
+          ],
+          "sourceFaces": [
+            744,
+            825
+          ]
+        },
+        {
+          "physicalEdge": [
+            5269,
+            5245
+          ],
+          "sourceRowAliases": [
+            [
+              487
+            ],
+            [
+              645
+            ]
+          ],
+          "sourceFaces": [
+            823,
+            824
+          ]
+        },
+        {
+          "physicalEdge": [
+            5245,
+            4991
+          ],
+          "sourceRowAliases": [
+            [
+              645
+            ],
+            [
+              626
+            ]
+          ],
+          "sourceFaces": [
+            821,
+            1070
+          ]
+        },
+        {
+          "physicalEdge": [
+            4991,
+            5134
+          ],
+          "sourceRowAliases": [
+            [
+              626
+            ],
+            [
+              654
+            ]
+          ],
+          "sourceFaces": [
+            818,
+            1066
+          ]
+        },
+        {
+          "physicalEdge": [
+            5134,
+            5443
+          ],
+          "sourceRowAliases": [
+            [
+              654
+            ],
+            [
+              513
+            ]
+          ],
+          "sourceFaces": [
+            816,
+            943
+          ]
+        },
+        {
+          "physicalEdge": [
+            5443,
+            5902
+          ],
+          "sourceRowAliases": [
+            [
+              513
+            ],
+            [
+              651
+            ]
+          ],
+          "sourceFaces": [
+            814,
+            944
+          ]
+        },
+        {
+          "physicalEdge": [
+            5902,
+            6099
+          ],
+          "sourceRowAliases": [
+            [
+              651
+            ],
+            [
+              650
+            ]
+          ],
+          "sourceFaces": [
+            942,
+            1061
+          ]
+        },
+        {
+          "physicalEdge": [
+            6099,
+            6091
+          ],
+          "sourceRowAliases": [
+            [
+              650
+            ],
+            [
+              574
+            ]
+          ],
+          "sourceFaces": [
+            940,
+            941
+          ]
+        },
+        {
+          "physicalEdge": [
+            6091,
+            6153
+          ],
+          "sourceRowAliases": [
+            [
+              574
+            ],
+            [
+              516
+            ]
+          ],
+          "sourceFaces": [
+            649,
+            939
+          ]
+        },
+        {
+          "physicalEdge": [
+            6153,
+            6289
+          ],
+          "sourceRowAliases": [
+            [
+              516
+            ],
+            [
+              517
+            ]
+          ],
+          "sourceFaces": [
+            580,
+            936
+          ]
+        },
+        {
+          "physicalEdge": [
+            6289,
+            6486
+          ],
+          "sourceRowAliases": [
+            [
+              517
+            ],
+            [
+              475
+            ]
+          ],
+          "sourceFaces": [
+            577,
+            811
+          ]
+        },
+        {
+          "physicalEdge": [
+            6486,
+            7058
+          ],
+          "sourceRowAliases": [
+            [
+              475
+            ],
+            [
+              463,
+              464,
+              465
+            ]
+          ],
+          "sourceFaces": [
+            647,
+            730
+          ]
+        },
+        {
+          "physicalEdge": [
+            7058,
+            7288
+          ],
+          "sourceRowAliases": [
+            [
+              463,
+              464,
+              465
+            ],
+            [
+              402
+            ]
+          ],
+          "sourceFaces": [
+            575,
+            645
+          ]
+        }
+      ],
+      "criticalSourceFaces": [
+        7796,
+        7797,
+        8265,
+        8267,
+        8268
+      ],
+      "beforeY": 1.1901016235351562,
+      "afterY": 1.1901600360870361,
+      "contoursBefore": 3,
+      "contoursAfter": 2
+    },
+    {
+      "geometricSide": "negativeZ_lateral",
+      "firstSublevelSurfaceConnectionY_M": 1.1905536651611328,
+      "criticalPhysicalVertexIDs": [
+        6726
+      ],
+      "criticalSourceRowAliases": [
+        [
+          16357,
+          16358
+        ]
+      ],
+      "criticalPositionM": [
+        [
+          0.607485294342041,
+          1.1905536651611328,
+          -0.1745617687702179
+        ]
+      ],
+      "pathPhysicalIDs": [
+        9261,
+        9467,
+        9596,
+        9019,
+        9130,
+        8496,
+        9687,
+        9197,
+        9692,
+        9462,
+        9299,
+        9759,
+        9450,
+        10055,
+        9632,
+        9256,
+        9760,
+        10206,
+        9967,
+        10307,
+        10033,
+        10011,
+        8751,
+        7763,
+        7007,
+        6953,
+        7138,
+        6726,
+        6449,
+        5570,
+        4179,
+        3707,
+        3337,
+        2785,
+        2611,
+        2601,
+        1670,
+        1585,
+        1576,
+        1647,
+        1994,
+        2073,
+        2123,
+        1786,
+        1777,
+        1803,
+        1765,
+        1894,
+        1976,
+        2572,
+        2983,
+        3207,
+        3322,
+        3663,
+        4033,
+        4223,
+        4272,
+        4391,
+        4710,
+        5251,
+        5582,
+        5816,
+        6172,
+        6238,
+        6245,
+        6430,
+        6779,
+        7048,
+        7223,
+        7348
+      ],
+      "pathSourceEdges": [
+        {
+          "physicalEdge": [
+            9261,
+            9467
+          ],
+          "sourceRowAliases": [
+            [
+              18096
+            ],
+            [
+              17832
+            ]
+          ],
+          "sourceFaces": [
+            26817,
+            27326
+          ]
+        },
+        {
+          "physicalEdge": [
+            9467,
+            9596
+          ],
+          "sourceRowAliases": [
+            [
+              17832
+            ],
+            [
+              17622,
+              17623
+            ]
+          ],
+          "sourceFaces": [
+            26358,
+            26359
+          ]
+        },
+        {
+          "physicalEdge": [
+            9596,
+            9019
+          ],
+          "sourceRowAliases": [
+            [
+              17622,
+              17623
+            ],
+            [
+              17703,
+              17704
+            ]
+          ],
+          "sourceFaces": [
+            26364,
+            26365
+          ]
+        },
+        {
+          "physicalEdge": [
+            9019,
+            9130
+          ],
+          "sourceRowAliases": [
+            [
+              17703,
+              17704
+            ],
+            [
+              17820
+            ]
+          ],
+          "sourceFaces": [
+            26823,
+            26824
+          ]
+        },
+        {
+          "physicalEdge": [
+            9130,
+            8496
+          ],
+          "sourceRowAliases": [
+            [
+              17820
+            ],
+            [
+              17991
+            ]
+          ],
+          "sourceFaces": [
+            26829,
+            26830
+          ]
+        },
+        {
+          "physicalEdge": [
+            8496,
+            9687
+          ],
+          "sourceRowAliases": [
+            [
+              17991
+            ],
+            [
+              18323
+            ]
+          ],
+          "sourceFaces": [
+            27329,
+            27330
+          ]
+        },
+        {
+          "physicalEdge": [
+            9687,
+            9197
+          ],
+          "sourceRowAliases": [
+            [
+              18323
+            ],
+            [
+              18551,
+              18552
+            ]
+          ],
+          "sourceFaces": [
+            27759,
+            27760
+          ]
+        },
+        {
+          "physicalEdge": [
+            9197,
+            9692
+          ],
+          "sourceRowAliases": [
+            [
+              18551,
+              18552
+            ],
+            [
+              18598
+            ]
+          ],
+          "sourceFaces": [
+            28108,
+            28109
+          ]
+        },
+        {
+          "physicalEdge": [
+            9692,
+            9462
+          ],
+          "sourceRowAliases": [
+            [
+              18598
+            ],
+            [
+              18624
+            ]
+          ],
+          "sourceFaces": [
+            28113,
+            28115
+          ]
+        },
+        {
+          "physicalEdge": [
+            9462,
+            9299
+          ],
+          "sourceRowAliases": [
+            [
+              18624
+            ],
+            [
+              18556
+            ]
+          ],
+          "sourceFaces": [
+            28116,
+            28118
+          ]
+        },
+        {
+          "physicalEdge": [
+            9299,
+            9759
+          ],
+          "sourceRowAliases": [
+            [
+              18556
+            ],
+            [
+              18189,
+              18190
+            ]
+          ],
+          "sourceFaces": [
+            27774,
+            27775
+          ]
+        },
+        {
+          "physicalEdge": [
+            9759,
+            9450
+          ],
+          "sourceRowAliases": [
+            [
+              18189,
+              18190
+            ],
+            [
+              18015,
+              18016,
+              18017
+            ]
+          ],
+          "sourceFaces": [
+            26857,
+            27354
+          ]
+        },
+        {
+          "physicalEdge": [
+            9450,
+            10055
+          ],
+          "sourceRowAliases": [
+            [
+              18015,
+              18016,
+              18017
+            ],
+            [
+              17564,
+              17565
+            ]
+          ],
+          "sourceFaces": [
+            26864,
+            26865
+          ]
+        },
+        {
+          "physicalEdge": [
+            10055,
+            9632
+          ],
+          "sourceRowAliases": [
+            [
+              17564,
+              17565
+            ],
+            [
+              17824,
+              17825,
+              17826
+            ]
+          ],
+          "sourceFaces": [
+            26876,
+            26877
+          ]
+        },
+        {
+          "physicalEdge": [
+            9632,
+            9256
+          ],
+          "sourceRowAliases": [
+            [
+              17824,
+              17825,
+              17826
+            ],
+            [
+              17909
+            ]
+          ],
+          "sourceFaces": [
+            26885,
+            26893
+          ]
+        },
+        {
+          "physicalEdge": [
+            9256,
+            9760
+          ],
+          "sourceRowAliases": [
+            [
+              17909
+            ],
+            [
+              18006
+            ]
+          ],
+          "sourceFaces": [
+            26896,
+            26906
+          ]
+        },
+        {
+          "physicalEdge": [
+            9760,
+            10206
+          ],
+          "sourceRowAliases": [
+            [
+              18006
+            ],
+            [
+              17992
+            ]
+          ],
+          "sourceFaces": [
+            26910,
+            27362
+          ]
+        },
+        {
+          "physicalEdge": [
+            10206,
+            9967
+          ],
+          "sourceRowAliases": [
+            [
+              17992
+            ],
+            [
+              17836
+            ]
+          ],
+          "sourceFaces": [
+            26928,
+            26930
+          ]
+        },
+        {
+          "physicalEdge": [
+            9967,
+            10307
+          ],
+          "sourceRowAliases": [
+            [
+              17836
+            ],
+            [
+              17618
+            ]
+          ],
+          "sourceFaces": [
+            26942,
+            26943
+          ]
+        },
+        {
+          "physicalEdge": [
+            10307,
+            10033
+          ],
+          "sourceRowAliases": [
+            [
+              17618
+            ],
+            [
+              17253,
+              17254
+            ]
+          ],
+          "sourceFaces": [
+            26430,
+            26432
+          ]
+        },
+        {
+          "physicalEdge": [
+            10033,
+            10011
+          ],
+          "sourceRowAliases": [
+            [
+              17253,
+              17254
+            ],
+            [
+              16555
+            ]
+          ],
+          "sourceFaces": [
+            24932,
+            25935
+          ]
+        },
+        {
+          "physicalEdge": [
+            10011,
+            8751
+          ],
+          "sourceRowAliases": [
+            [
+              16555
+            ],
+            [
+              16451
+            ]
+          ],
+          "sourceFaces": [
+            24937,
+            24938
+          ]
+        },
+        {
+          "physicalEdge": [
+            8751,
+            7763
+          ],
+          "sourceRowAliases": [
+            [
+              16451
+            ],
+            [
+              16425
+            ]
+          ],
+          "sourceFaces": [
+            24941,
+            24942
+          ]
+        },
+        {
+          "physicalEdge": [
+            7763,
+            7007
+          ],
+          "sourceRowAliases": [
+            [
+              16425
+            ],
+            [
+              16289
+            ]
+          ],
+          "sourceFaces": [
+            24944,
+            24945
+          ]
+        },
+        {
+          "physicalEdge": [
+            7007,
+            6953
+          ],
+          "sourceRowAliases": [
+            [
+              16289
+            ],
+            [
+              16257
+            ]
+          ],
+          "sourceFaces": [
+            24574,
+            24575
+          ]
+        },
+        {
+          "physicalEdge": [
+            6953,
+            7138
+          ],
+          "sourceRowAliases": [
+            [
+              16257
+            ],
+            [
+              16240
+            ]
+          ],
+          "sourceFaces": [
+            24584,
+            24585
+          ]
+        },
+        {
+          "physicalEdge": [
+            7138,
+            6726
+          ],
+          "sourceRowAliases": [
+            [
+              16240
+            ],
+            [
+              16357,
+              16358
+            ]
+          ],
+          "sourceFaces": [
+            24605,
+            24606
+          ]
+        },
+        {
+          "physicalEdge": [
+            6726,
+            6449
+          ],
+          "sourceRowAliases": [
+            [
+              16357,
+              16358
+            ],
+            [
+              16621
+            ]
+          ],
+          "sourceFaces": [
+            24961,
+            24968
+          ]
+        },
+        {
+          "physicalEdge": [
+            6449,
+            5570
+          ],
+          "sourceRowAliases": [
+            [
+              16621
+            ],
+            [
+              16986
+            ]
+          ],
+          "sourceFaces": [
+            25403,
+            25972
+          ]
+        },
+        {
+          "physicalEdge": [
+            5570,
+            4179
+          ],
+          "sourceRowAliases": [
+            [
+              16986
+            ],
+            [
+              17460
+            ]
+          ],
+          "sourceFaces": [
+            25977,
+            25983
+          ]
+        },
+        {
+          "physicalEdge": [
+            4179,
+            3707
+          ],
+          "sourceRowAliases": [
+            [
+              17460
+            ],
+            [
+              18115,
+              18116
+            ]
+          ],
+          "sourceFaces": [
+            26984,
+            26986
+          ]
+        },
+        {
+          "physicalEdge": [
+            3707,
+            3337
+          ],
+          "sourceRowAliases": [
+            [
+              18115,
+              18116
+            ],
+            [
+              18449,
+              18450
+            ]
+          ],
+          "sourceFaces": [
+            27408,
+            27805
+          ]
+        },
+        {
+          "physicalEdge": [
+            3337,
+            2785
+          ],
+          "sourceRowAliases": [
+            [
+              18449,
+              18450
+            ],
+            [
+              18863
+            ]
+          ],
+          "sourceFaces": [
+            28147,
+            28512
+          ]
+        },
+        {
+          "physicalEdge": [
+            2785,
+            2611
+          ],
+          "sourceRowAliases": [
+            [
+              18863
+            ],
+            [
+              19217
+            ]
+          ],
+          "sourceFaces": [
+            28511,
+            28863
+          ]
+        },
+        {
+          "physicalEdge": [
+            2611,
+            2601
+          ],
+          "sourceRowAliases": [
+            [
+              19217
+            ],
+            [
+              19331
+            ]
+          ],
+          "sourceFaces": [
+            29177,
+            29447
+          ]
+        },
+        {
+          "physicalEdge": [
+            2601,
+            1670
+          ],
+          "sourceRowAliases": [
+            [
+              19331
+            ],
+            [
+              20033
+            ]
+          ],
+          "sourceFaces": [
+            29993,
+            29995
+          ]
+        },
+        {
+          "physicalEdge": [
+            1670,
+            1585
+          ],
+          "sourceRowAliases": [
+            [
+              20033
+            ],
+            [
+              20174
+            ]
+          ],
+          "sourceFaces": [
+            30527,
+            30529
+          ]
+        },
+        {
+          "physicalEdge": [
+            1585,
+            1576
+          ],
+          "sourceRowAliases": [
+            [
+              20174
+            ],
+            [
+              20359
+            ]
+          ],
+          "sourceFaces": [
+            30719,
+            30721
+          ]
+        },
+        {
+          "physicalEdge": [
+            1576,
+            1647
+          ],
+          "sourceRowAliases": [
+            [
+              20359
+            ],
+            [
+              20478
+            ]
+          ],
+          "sourceFaces": [
+            31149,
+            31150
+          ]
+        },
+        {
+          "physicalEdge": [
+            1647,
+            1994
+          ],
+          "sourceRowAliases": [
+            [
+              20478
+            ],
+            [
+              20645
+            ]
+          ],
+          "sourceFaces": [
+            31147,
+            31323
+          ]
+        },
+        {
+          "physicalEdge": [
+            1994,
+            2073
+          ],
+          "sourceRowAliases": [
+            [
+              20645
+            ],
+            [
+              20713
+            ]
+          ],
+          "sourceFaces": [
+            31319,
+            31447
+          ]
+        },
+        {
+          "physicalEdge": [
+            2073,
+            2123
+          ],
+          "sourceRowAliases": [
+            [
+              20713
+            ],
+            [
+              20785
+            ]
+          ],
+          "sourceFaces": [
+            31445,
+            31605
+          ]
+        },
+        {
+          "physicalEdge": [
+            2123,
+            1786
+          ],
+          "sourceRowAliases": [
+            [
+              20785
+            ],
+            [
+              20981
+            ]
+          ],
+          "sourceFaces": [
+            31749,
+            31752
+          ]
+        },
+        {
+          "physicalEdge": [
+            1786,
+            1777
+          ],
+          "sourceRowAliases": [
+            [
+              20981
+            ],
+            [
+              21070
+            ]
+          ],
+          "sourceFaces": [
+            31921,
+            32069
+          ]
+        },
+        {
+          "physicalEdge": [
+            1777,
+            1803
+          ],
+          "sourceRowAliases": [
+            [
+              21070
+            ],
+            [
+              21036
+            ]
+          ],
+          "sourceFaces": [
+            31919,
+            32165
+          ]
+        },
+        {
+          "physicalEdge": [
+            1803,
+            1765
+          ],
+          "sourceRowAliases": [
+            [
+              21036
+            ],
+            [
+              20879
+            ]
+          ],
+          "sourceFaces": [
+            31918,
+            32064
+          ]
+        },
+        {
+          "physicalEdge": [
+            1765,
+            1894
+          ],
+          "sourceRowAliases": [
+            [
+              20879
+            ],
+            [
+              20970
+            ]
+          ],
+          "sourceFaces": [
+            31746,
+            31914
+          ]
+        },
+        {
+          "physicalEdge": [
+            1894,
+            1976
+          ],
+          "sourceRowAliases": [
+            [
+              20970
+            ],
+            [
+              21116
+            ]
+          ],
+          "sourceFaces": [
+            32058,
+            32059
+          ]
+        },
+        {
+          "physicalEdge": [
+            1976,
+            2572
+          ],
+          "sourceRowAliases": [
+            [
+              21116
+            ],
+            [
+              21081
+            ]
+          ],
+          "sourceFaces": [
+            32054,
+            32156
+          ]
+        },
+        {
+          "physicalEdge": [
+            2572,
+            2983
+          ],
+          "sourceRowAliases": [
+            [
+              21081
+            ],
+            [
+              21074
+            ]
+          ],
+          "sourceFaces": [
+            32050,
+            32153
+          ]
+        },
+        {
+          "physicalEdge": [
+            2983,
+            3207
+          ],
+          "sourceRowAliases": [
+            [
+              21074
+            ],
+            [
+              21155
+            ]
+          ],
+          "sourceFaces": [
+            32148,
+            32151
+          ]
+        },
+        {
+          "physicalEdge": [
+            3207,
+            3322
+          ],
+          "sourceRowAliases": [
+            [
+              21155
+            ],
+            [
+              21170
+            ]
+          ],
+          "sourceFaces": [
+            32146,
+            32258
+          ]
+        },
+        {
+          "physicalEdge": [
+            3322,
+            3663
+          ],
+          "sourceRowAliases": [
+            [
+              21170
+            ],
+            [
+              21361
+            ]
+          ],
+          "sourceFaces": [
+            32464,
+            32466
+          ]
+        },
+        {
+          "physicalEdge": [
+            3663,
+            4033
+          ],
+          "sourceRowAliases": [
+            [
+              21361
+            ],
+            [
+              21354
+            ]
+          ],
+          "sourceFaces": [
+            32463,
+            32683
+          ]
+        },
+        {
+          "physicalEdge": [
+            4033,
+            4223
+          ],
+          "sourceRowAliases": [
+            [
+              21354
+            ],
+            [
+              21374
+            ]
+          ],
+          "sourceFaces": [
+            32349,
+            32578
+          ]
+        },
+        {
+          "physicalEdge": [
+            4223,
+            4272
+          ],
+          "sourceRowAliases": [
+            [
+              21374
+            ],
+            [
+              21478
+            ]
+          ],
+          "sourceFaces": [
+            32574,
+            32779
+          ]
+        },
+        {
+          "physicalEdge": [
+            4272,
+            4391
+          ],
+          "sourceRowAliases": [
+            [
+              21478
+            ],
+            [
+              21473
+            ]
+          ],
+          "sourceFaces": [
+            32573,
+            32775
+          ]
+        },
+        {
+          "physicalEdge": [
+            4391,
+            4710
+          ],
+          "sourceRowAliases": [
+            [
+              21473
+            ],
+            [
+              21469
+            ]
+          ],
+          "sourceFaces": [
+            32568,
+            32770
+          ]
+        },
+        {
+          "physicalEdge": [
+            4710,
+            5251
+          ],
+          "sourceRowAliases": [
+            [
+              21469
+            ],
+            [
+              21466
+            ]
+          ],
+          "sourceFaces": [
+            32565,
+            32766
+          ]
+        },
+        {
+          "physicalEdge": [
+            5251,
+            5582
+          ],
+          "sourceRowAliases": [
+            [
+              21466
+            ],
+            [
+              21434
+            ]
+          ],
+          "sourceFaces": [
+            32563,
+            32673
+          ]
+        },
+        {
+          "physicalEdge": [
+            5582,
+            5816
+          ],
+          "sourceRowAliases": [
+            [
+              21434
+            ],
+            [
+              21544
+            ]
+          ],
+          "sourceFaces": [
+            32669,
+            32671
+          ]
+        },
+        {
+          "physicalEdge": [
+            5816,
+            6172
+          ],
+          "sourceRowAliases": [
+            [
+              21544
+            ],
+            [
+              21648
+            ]
+          ],
+          "sourceFaces": [
+            32760,
+            32857
+          ]
+        },
+        {
+          "physicalEdge": [
+            6172,
+            6238
+          ],
+          "sourceRowAliases": [
+            [
+              21648
+            ],
+            [
+              21707
+            ]
+          ],
+          "sourceFaces": [
+            32952,
+            33041
+          ]
+        },
+        {
+          "physicalEdge": [
+            6238,
+            6245
+          ],
+          "sourceRowAliases": [
+            [
+              21707
+            ],
+            [
+              21666
+            ]
+          ],
+          "sourceFaces": [
+            32950,
+            33039
+          ]
+        },
+        {
+          "physicalEdge": [
+            6245,
+            6430
+          ],
+          "sourceRowAliases": [
+            [
+              21666
+            ],
+            [
+              21650
+            ]
+          ],
+          "sourceFaces": [
+            32948,
+            33038
+          ]
+        },
+        {
+          "physicalEdge": [
+            6430,
+            6779
+          ],
+          "sourceRowAliases": [
+            [
+              21650
+            ],
+            [
+              21651
+            ]
+          ],
+          "sourceFaces": [
+            32851,
+            33036
+          ]
+        },
+        {
+          "physicalEdge": [
+            6779,
+            7048
+          ],
+          "sourceRowAliases": [
+            [
+              21651
+            ],
+            [
+              21714,
+              21715
+            ]
+          ],
+          "sourceFaces": [
+            32945,
+            33034
+          ]
+        },
+        {
+          "physicalEdge": [
+            7048,
+            7223
+          ],
+          "sourceRowAliases": [
+            [
+              21714,
+              21715
+            ],
+            [
+              21778
+            ]
+          ],
+          "sourceFaces": [
+            33035,
+            33216
+          ]
+        },
+        {
+          "physicalEdge": [
+            7223,
+            7348
+          ],
+          "sourceRowAliases": [
+            [
+              21778
+            ],
+            [
+              21889
+            ]
+          ],
+          "sourceFaces": [
+            33124,
+            33324
+          ]
+        }
+      ],
+      "criticalSourceFaces": [
+        24604,
+        24605,
+        24606,
+        24616,
+        24960,
+        24961,
+        24968,
+        24976
+      ],
+      "beforeY": 1.190523386001587,
+      "afterY": 1.190586805343628,
+      "contoursBefore": 2,
+      "contoursAfter": 1
+    }
+  ],
+  "rigCentresContextOnly": [
+    {
+      "name": "fresh.pelvis",
+      "restCentreM": [
+        0.645,
+        0.918,
+        0.0
+      ]
+    },
+    {
+      "name": "fresh.spine",
+      "restCentreM": [
+        0.637,
+        1.065,
+        0.0
+      ]
+    },
+    {
+      "name": "fresh.chest",
+      "restCentreM": [
+        0.63,
+        1.265,
+        0.0
+      ]
+    },
+    {
+      "name": "fresh.neck",
+      "restCentreM": [
+        0.6297000165221996,
+        1.5123499486033813,
+        -3.952542556870738e-09
+      ]
+    },
+    {
+      "name": "fresh.head",
+      "restCentreM": [
+        0.6297000165221996,
+        1.568175136843617,
+        -3.952542556870738e-09
+      ]
+    },
+    {
+      "name": "fresh.shoulder.L",
+      "restCentreM": [
+        0.6296999342622916,
+        1.4616001581796196,
+        0.07104999369342667
+      ]
+    },
+    {
+      "name": "fresh.upperArm.L",
+      "restCentreM": [
+        0.6296998666220951,
+        1.4616000397745246,
+        0.20807497900850735
+      ]
+    },
+    {
+      "name": "fresh.forearm.L",
+      "restCentreM": [
+        0.6246249255670303,
+        1.1418750291353164,
+        0.28927488172942784
+      ]
+    },
+    {
+      "name": "fresh.hand.L",
+      "restCentreM": [
+        0.6731139011303027,
+        0.8818126979229218,
+        0.36165167125133413
+      ]
+    },
+    {
+      "name": "fresh.shoulder.R",
+      "restCentreM": [
+        0.6297000224289001,
+        1.461600158179622,
+        -0.07105001316106047
+      ]
+    },
+    {
+      "name": "fresh.upperArm.R",
+      "restCentreM": [
+        0.6296999859634478,
+        1.461600073834663,
+        -0.20807500381600014
+      ]
+    },
+    {
+      "name": "fresh.forearm.R",
+      "restCentreM": [
+        0.6246250383675829,
+        1.141874985852439,
+        -0.2892749071193171
+      ]
+    },
+    {
+      "name": "fresh.hand.R",
+      "restCentreM": [
+        0.6776548984585268,
+        0.8825655839752198,
+        -0.35889107037838797
+      ]
+    },
+    {
+      "name": "fresh.thigh.L",
+      "restCentreM": [
+        0.638,
+        0.913,
+        0.11
+      ]
+    },
+    {
+      "name": "fresh.shin.L",
+      "restCentreM": [
+        0.647,
+        0.505,
+        0.145
+      ]
+    },
+    {
+      "name": "fresh.foot.L",
+      "restCentreM": [
+        0.60432502856453,
+        0.11672496485273687,
+        0.18270000979292186
+      ]
+    },
+    {
+      "name": "fresh.thigh.R",
+      "restCentreM": [
+        0.638,
+        0.913,
+        -0.11
+      ]
+    },
+    {
+      "name": "fresh.shin.R",
+      "restCentreM": [
+        0.647,
+        0.505,
+        -0.145
+      ]
+    },
+    {
+      "name": "fresh.foot.R",
+      "restCentreM": [
+        0.6043250430635566,
+        0.11672498609534104,
+        -0.18270001645966363
+      ]
+    }
+  ],
+  "seconds": 0.3696155003271997,
+  "memoryAnonymousGB": [
+    45.20828928,
+    45.36164352
+  ],
+  "inputs": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/rig-foundation167/prepare.py": {
+      "sha256": "f8d816c3cca89caa4c6a7a744469d92e7cf105ab9c6db9600366f007cca8ae28",
+      "bytes": 12328
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-preserving-garment185/operator/rider.glb": {
+      "sha256": "ffb9ec5acaca7c5e60b732d88e9313b7c337f3058a32dec2fda0170f634281c5",
+      "bytes": 16319060
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb": {
+      "sha256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "bytes": 16297888
+    },
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell-handoff.json": {
+      "sha256": "d3908554a4078851fe50d8066e831678b689ddf6059cd208f9f30bc3c68a453a",
+      "bytes": 18136
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/source-boundaries181/report.json": {
+      "sha256": "d81b142308e0aa549607bf3b62811d4c242eeecd3f9584e1b23049fedc223c27",
+      "bytes": 58243
+    },
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/source-rig188/read-only/report.json": {
+      "sha256": "9fcb8133751ade9477ab79e0343c9028cc4a054f748eeecc6c5869d0ca1979f7",
+      "bytes": 64494
+    }
+  },
+  "recipeSHA256": "77090ebd8d1d0fcd8f8ca2e05f1738e09b9a3c23ffaf96d03f463b062a6e94ec",
+  "privateOutputs": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-00.json",
+      "sha256": "14eee3fa828268c298a5913b79b56379137b998c2bd944b42cb7a88042507903",
+      "bytes": 467499
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-01.json",
+      "sha256": "abe80a935e62661c06b40d9bd4c335670d819bba982203d3c98fd238d6d6b2e2",
+      "bytes": 538772
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-02.json",
+      "sha256": "cbb069b0e0e939b5136048511ea5f6d64e04f2c4730822ba3392e8481b6cc954",
+      "bytes": 609796
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-03.json",
+      "sha256": "6b8c8f5d44a4e059c7eb59771384524d308056a9cce39d4b9c47fdad38ade323",
+      "bytes": 674567
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-04.json",
+      "sha256": "b315b027eda940790ae589b2b1996f5347afc4bbb1269cba93f4aa1744cbfa42",
+      "bytes": 744506
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-05.json",
+      "sha256": "f39dc810e2a0f3d2ce30e4ca79e553225de7a957699f1980cda70d4b0391a3bd",
+      "bytes": 641891
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-06.json",
+      "sha256": "d82a0255dd571d88a8c803285ea4177dd70d88dc7213daddd043997507a18a7a",
+      "bytes": 641626
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-07.json",
+      "sha256": "f0dc2b45674564d0023113f2a6b203368d49328a67cec30e3c11c9f99ffdad32",
+      "bytes": 412338
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-08.json",
+      "sha256": "b039a60d7b6d836a753d9d7012bbf27d3f697a56c2272f6e440f524007d1d708",
+      "bytes": 279318
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-fixed-09.json",
+      "sha256": "30c76c25d66060bb0a73bea50ba98d546aca64976d90dd8eb32ca63df8d15389",
+      "bytes": 291
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-negativeZ_lateral-after.json",
+      "sha256": "5e23ce4b3c43e4a17add7584c20a5a9ab01a32018fa2afb6902fa4ade6586a83",
+      "bytes": 785474
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-negativeZ_lateral-before.json",
+      "sha256": "c129de7e03284dcf76b9fb0140618207373142d144a148f92c7a90b372c65453",
+      "bytes": 786649
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-positiveZ_lateral-after.json",
+      "sha256": "abefe160ccd4e58072d490c44adba99d5989aea0c60728910e5668a29778b837",
+      "bytes": 784519
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/source-axilla189/section-positiveZ_lateral-before.json",
+      "sha256": "27cdcd5fcf35df3cf0465205d09523f32f5266c91122d7218c515027bfbca2ba",
+      "bytes": 787380
+    }
+  ],
+  "limits": [
+    "Geometric central/lateral labels are contour geometry, not certified garment/skin semantics.",
+    "Section minima are exact polygonal rest-contour separation; no moving support, thickness or anatomical validation.",
+    "Minimax source-edge attachment is topology of p0sublevel surface, not a material seam or weight-derived axilla.",
+    "No repair, solver, geometry export, render, weights or pose changes."
+  ]
+}

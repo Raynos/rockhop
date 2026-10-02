@@ -74,6 +74,40 @@ integrates and judges. All GPU/model/Metal/export workloads remain serialized un
 `lockf -k /Users/raynos/projects/localai/.model.lock`, anonymous memory below70GB,
 batches at most30minutes. No routine human checkpoint or outbound message hold.
 
+## Low resting sleeve attachment confirmed — round189
+
+Parent independently verifies25frozen files/six source inputs, reconstructs all
+fixed and adaptive p0section graphs, and confirms first sleeve/torso sublevel
+connections with source-Y union-find: L1.190154m/R1.190554m, roughly271mm below
+upperArm origins and48mm above forearm origins. Rig centers are context, not
+independent anatomy. This establishes low rest connectivity separately from
+the played187 skin-gradient and sitting failures. No geometry/weights edit.
+
+The proposed local transition-strip ROI preserves source chest/head/hood/cuffs
+and lowerbody outside its exact boundary. Left1231faces/151boundary nodes has
+two valid cycles. Right1216faces/161boundary nodes has a literal point-pinch at
+physical7392 (source rows21088/21089), directed in/outdegree2 rather than1.
+This exact bilateral scope is REJECTED for geometry. Do not silently enlarge,
+crop or retune the coordinate ROI, relax winding/topology gates, or export it.
+
+Next bounded read-only step: explicitly preregister a minimal original source
+halfedge-fan closure policy at that one point-pinch, cap added faces and physical
+extent, retain complete original scope and every rejected alternative. A new
+scope has distinct identity; original189 rejection remains. Preserve untouched
+source meshes and exact exterior/cuff/hood boundaries. If finite fan closure
+cannot yield a valid annular strip within protection/cap, choose a different
+local source construction mechanism autonomously, without repeating retired
+whole-shell/cage/weight families. Parent remains sole integration judge. No
+cosmetics until convincing continuous exported basic poses.
+
+Ordinary ship189 passed both tiers: byte-identical40.083333333333336s finish,
+replay368f1ca5bd9e830a, crash103ticks, restart1/2ms, zero errors. No candidate,
+overlay or public catalog changes.14.269s canonical-lock batch, peak49.999GB.
+This is an ordinary gameplay regression, not candidate art/contacts/mobile
+acceptance. Next ordinary ship192. All three visual checkpoints, broader arms,
+hips,7/8body/face, actual Garage/lean/landing/saddle/grip/sole and mobile remain
+OPEN. Head identity and existing physics contract preserved. No human hold.
+
 ## Actual weight witness and infeasible tiny patch — round188
 
 Actual stock Three.js reproduces extreme source edge stretching over all5,404
