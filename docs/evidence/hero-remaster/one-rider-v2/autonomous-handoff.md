@@ -16,6 +16,34 @@ section is authoritative over old eye/texture next-action notes. V7 finite
 upper-cloth crossing progress is not broad motion, hip/support or production
 acceptance. Basic-pose gate implementation and matched actual V5 control underway.
 
+## Retained invalid native; isolate finite surface for inspection — round208
+
+Actual207 saved raw arrays before watchdog killed its own batch54.706s. Observed
+anonymous memory jumped56.966→82.017GB between one-second samples. No further380
+GPU repeat under this baseline. Future model work requires conservative headroom
+and smaller/explicitly admitted extraction workload; do not evict another job.
+First206 observed peak was67.110GB; earlier63.298GB prose was incorrect.
+
+Native254431vertices/508842faces include107176 nonfinite rows; indices all valid.
+No triangle mixes finite and nonfinite vertices. Literal isolation keeps ALL
+294506finite faces/147255source rows unchanged, with winding reversed only for
+a separate private display. ActualGLB/source ancestry exact. Zero open/nonmanifold
+edges; main147249-node surface plus6-node component,2zero-area triangles and1
+position alias retained. This is an UNACCEPTED diagnostic surface, no repair or
+native-output pass. Render gray multi-angle/turntable before a source choice.
+Keep liked head/comparisons untouched; no textures/rig/player promotion.
+
+Independent CPU extraction audit reproduces NaN-grid missing surfaces under
+ordinary Trimesh cleanup; actual NaN rows support this mechanism, but source207
+latents/grid were not retained, so full causality remains unproved. Conditional
+dense-only256 protocol is available if this finite surface is visually unsound.
+It changes decoding resolution explicitly, preserves future latents/raw arrays,
+uses an actual ordinary attention instance and profiles time/memory before full
+querying. It is not same-resolution or same-latent207 and is not yet admitted.
+
+Three visual checkpoints/basic poses and structural garment→rig→deformation order
+remain OPEN, cosmetics paused; ordinary ship207 current, next210.
+
 ## Preserve diagnostics before validation; one rerun admitted — round207
 
 Sibling worker207 changes only preservation/diagnostics ordering and its frozen

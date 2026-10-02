@@ -213,6 +213,8 @@ Round206: actual2.1 sampled/decoded then failed combined finite/index assertion 
 
 Round207: preservation-only worker admitted,97pins/sevenCPUfixtures/inference unchanged; ONE diagnostic rerun next. No geometry verdict. Ship207byteexact/crash103/restart2-1msPASS,next210. CosmeticsPAUSED/all3visual/basicposes/contact/mobileOPEN.
 
+Round208: native207 saved then watchdog82.017GB stop; no380repeat.107176NaNrows/no mixedfaces; literal294506finitefaces diagnosticGLB ancestry exact,2degenerates/6nodecomponent retained. Grayturntable inspection next; no native/art/rig pass. Dense-only256 conditional, cosmeticsPAUSED/allgatesOPEN,nextship210.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

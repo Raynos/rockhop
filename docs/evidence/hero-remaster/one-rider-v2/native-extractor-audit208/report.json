@@ -1,0 +1,142 @@
+{
+  "status": "SYNTHETIC_MECHANISM_CONFIRMED_ACTUAL_207_CAUSE_UNASSESSED",
+  "scope": "CPU source audit and synthetic scalar fields; no model execution",
+  "python": "3.11.15 (main, Jun 23 2026, 15:46:51) [Clang 22.1.3 ]",
+  "numpy": "2.4.6",
+  "skimage": "0.26.0",
+  "trimesh": "5.1.0",
+  "torchImported": false,
+  "cases": [
+    {
+      "name": "finite",
+      "gridShape": [
+        12,
+        12,
+        12
+      ],
+      "nonfiniteGrid": 0,
+      "vertices": 192,
+      "faces": 380,
+      "nonfiniteVertices": 0,
+      "facesUsingNonfiniteVertices": 0,
+      "nonfiniteNormals": 0,
+      "nonfiniteValues": 0,
+      "defaultTrimeshVertices": 192,
+      "defaultTrimeshFaces": 380,
+      "defaultTrimeshNonfiniteVertices": 0,
+      "arrays": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/native-extractor-audit208/finite.npz",
+        "sha256": "268c6bc4ab20c8df118cb6d21cddfb82b1fb45a443adce8d18acdebf8065b2a6",
+        "bytes": 5607
+      }
+    },
+    {
+      "name": "nan_exterior",
+      "gridShape": [
+        12,
+        12,
+        12
+      ],
+      "nonfiniteGrid": 1448,
+      "vertices": 504,
+      "faces": 1032,
+      "nonfiniteVertices": 312,
+      "facesUsingNonfiniteVertices": 804,
+      "nonfiniteNormals": 472,
+      "nonfiniteValues": 0,
+      "defaultTrimeshVertices": 192,
+      "defaultTrimeshFaces": 228,
+      "defaultTrimeshNonfiniteVertices": 0,
+      "arrays": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/native-extractor-audit208/nan_exterior.npz",
+        "sha256": "80fab059afcf61a6de064156de890f357276c73493c3a373fa6a69406454cd6f",
+        "bytes": 6298
+      }
+    },
+    {
+      "name": "nan_one",
+      "gridShape": [
+        12,
+        12,
+        12
+      ],
+      "nonfiniteGrid": 1,
+      "vertices": 198,
+      "faces": 392,
+      "nonfiniteVertices": 6,
+      "facesUsingNonfiniteVertices": 13,
+      "nonfiniteNormals": 7,
+      "nonfiniteValues": 0,
+      "defaultTrimeshVertices": 192,
+      "defaultTrimeshFaces": 379,
+      "defaultTrimeshNonfiniteVertices": 0,
+      "arrays": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/native-extractor-audit208/nan_one.npz",
+        "sha256": "a4718c7c68b88c1f69b273e395e6d083bc5b2c8066a0350688ca6cf11a50a169",
+        "bytes": 5700
+      }
+    },
+    {
+      "name": "inf_exterior",
+      "gridShape": [
+        12,
+        12,
+        12
+      ],
+      "nonfiniteGrid": 1448,
+      "vertices": 192,
+      "faces": 380,
+      "nonfiniteVertices": 0,
+      "facesUsingNonfiniteVertices": 0,
+      "nonfiniteNormals": 160,
+      "nonfiniteValues": 192,
+      "defaultTrimeshVertices": 192,
+      "defaultTrimeshFaces": 380,
+      "defaultTrimeshNonfiniteVertices": 0,
+      "arrays": {
+        "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/native-extractor-audit208/inf_exterior.npz",
+        "sha256": "0665c3d7ca08b646d5b4b4520347dcd38ffd0a357ac9765c62203be7164e893a",
+        "bytes": 3630
+      }
+    }
+  ],
+  "sources": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/volume_decoders.py",
+      "sha256": "95ffab6bd0a11034bc2b7415fef1379e27c4d2238638f831a0456019d90484eb",
+      "bytes": 18300
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/surface_extractors.py",
+      "sha256": "203d1551ccef37e86f9809b9ac0fac68e8e4a2f633ca72a85408535595ae68e5",
+      "bytes": 7074
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/model.py",
+      "sha256": "b81a4586cc1148def7fe157c18071fb7dc50753cfbf1930932bbcbecbcb35829",
+      "bytes": 12434
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/pipelines.py",
+      "sha256": "80d3d66be03e2ebe2f988cefcf488f2e5fa52656e8547c72dd44aaae4ad45714",
+      "bytes": 32244
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/attention_blocks.py",
+      "sha256": "1cbd34f21102a33eed2106e445ec6a96b896b80e187564f40e2029779bb2cba8",
+      "bytes": 27004
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/attention_processors.py",
+      "sha256": "9a461ddde9a2bf5ca0cd3961c3c1b86f9c81772066fe5b815bc497e0b5a8f053",
+      "bytes": 3913
+    }
+  ],
+  "limitations": [
+    "No native207 grid, arrays or diagnostic report were inspected.",
+    "Synthetic array units are grid cells, not rider metres.",
+    "An exterior NaN sentinel is demonstrated; infinity did not make nonfinite vertex positions in this fixture.",
+    "Default Trimesh cleanup counts do not establish retained anatomy or surface completeness.",
+    "Dense same-latent decoding is a proposed alternative, not an executed repair."
+  ]
+}

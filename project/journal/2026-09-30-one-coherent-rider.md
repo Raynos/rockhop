@@ -2661,3 +2661,17 @@ Limits: Actual rerun pending, no geometry verdict. Freeze scan race ownership
 corrected with snapshot retained; no recipe mutation. Cosmetics paused,next210.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/
 Ask: 248.
+
+## Round208 — inspect the literal finite native component
+
+Finding: Retained raw has107176nonfinite rows but no mixed faces; preserve every
+finite source face/row in explicit diagnostic display rather than automatic repair.
+
+Validation: ActualGLB294506faces/147255rows source ancestry exact;0open/nonmanifold,
+147249+6components,2zero-area triangles/1alias retained. Watchdog54.706s killed
+own job after observed82.017GB jump. No380repeat. First206peak correction67.110GB.
+
+Limits: Native invalid, field completeness/art/rig/motion unproved. Gray inspection
+next; dense-only256 conditional, no job admitted. Cosmetics paused,nextship210.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/tpose-source208/
+Ask: 248.
