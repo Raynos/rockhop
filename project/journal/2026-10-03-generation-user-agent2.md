@@ -203,3 +203,16 @@ Ask:276.
 
 Limits: Hoodie Library delivery confirmed once; root judgment pending. No extra experiments,
 acceptance or player promotion. Jeans is the next separate planned unit.
+
+Finding: Cheap isolated jeans probe had already finished before root pause
+arrived. Preserve raw only; no next jeans appearance preview or cheap inference.
+Existing hoodie neutral-vs-colour diagnostic is the new priority.
+
+Validation: Guard24681/owned24685 exits0 in85.234s; e2322faa
+all dtype/shape/C-byte sidecar pins match. 208060vertices/417644faces;
+boundary3904/overused4359/winding80051 retained; own lease ended.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-jeans01/receipt.json
+Ask:276.
+
+Limits: UNACCEPTED settings-specific raw checkpoint, no denim PBR/fit/rig
+or family verdict. No followup preview; conditional quality run not yet qualified.
