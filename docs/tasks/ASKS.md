@@ -403,3 +403,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 274 | "You are agent 1 for doing blender and model work" | **done — role registered; retained for assignments** | Agent 1 owns assigned Blender/model construction and export verification; follow the active rider baseline, preserve existing integration ownership and unaccepted assets. No concrete model edit assigned in this ask. |
 
 | 275 | "You are agent 3 for doing blender and model work" | **done — role registered; retained for assignments** | Agent 3 handles assigned Blender/model construction and export verification under the active rider baseline. Existing integration ownership remains intact; no concrete model edit assigned in this ask. |
+
+| 276 | "You are agent 2 for Dojng model and blender work" | **done — agent2 role registered; specific assignment pending** | Native local session01a101fe-a358-7731-987d-4168614e9ece, Codex:gpt-6.1-sol resolved from own runtime. Effective danger-full-access/never/network enabled. Preserve parallel agent1/agent3 and earlier R2 ownership; no inference or source takeover until lane assignment. |
