@@ -1302,3 +1302,20 @@ Ask:284–286.
 
 Limits: Pervertex display derivative, not map bake/fullCUDA/fit/art pass.
 Matched neutral/PBR moving review pending; original6,322,984faces retained.
+
+Finding: Unaccepted matched TRELLIS gray/PBR orbit recipe preserves every
+native triangle/index with bulk loading and labels outside rendered panels.
+
+Validation: Syntax/whitespace pass. Raw/material hashes and actual selected
+interpolation threshold required; bulkmesh vertices/indices read back exact.
+Both views share camera/light/derived normals and explicit uniform display
+scale. Native sampledbaseColorSRGB/metallic/roughness use official8-bit
+opaque convention.48angles/8fps/6s, CPU4threads8samples, labels outside512²
+pixels, encoder checks both panels unchanged and onevideo/noaudio. Current
+runtime24 player/dependency hashes match and otherdifferencesfromc74783ad0;
+original coldboot/clear/crash/restart gate applies. No new neural seed.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-orbit-recipe01/
+Ask:284–286.
+
+Limits: Checkpoint, render/encode pending; pervertex material display not UV
+bake/maplevel/finalart/fit/rig/mobile. No cleanup/reduction/winding repair.
