@@ -662,3 +662,18 @@ pointcontact does not provecollision/loadbearing/currentwedgeartpass.
 Partialridingwindow, not clear/restart/stranger or arbitraryToeFKtest.
 CPUreadbackp50/p950ms quantizedsharedWebKit meansnozero/mobilecostclaim.
 All M0–M5/playerpromotion/phone remainopen; rootalonejudges clips.
+
+## Round39: normal source third-round ship gate
+
+Finding: Fresh ordinarysource build excludes all newrider/candidate/
+seam/hip mappings. Requiredthirdround coldboot/clear/crash/restart passes
+in independent low/high headlessWebKit mobileviewports.
+
+Validation: Both4810ticks/0faults/40.083333333333336s/hash368f1ca5bd9e830a,
+Float64LEabaaaaaaaa0a4440; bothcrash103/restarttick0/restart1/2ms,0errors.
+Ordinary20model manifest/runtime/dependency/build/recipe hashes pinned.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate39/source.json
+
+Limits: No player code or model promotion/deployment. Source37/38 private
+constructed09 supports remainunaccepted; headlessviewport is not actual
+phone sustained pacing, stranger attempts, art or wearable collision gate.
