@@ -204,3 +204,24 @@ Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/construction04-a
 Limits: UNACCEPTED. Agent1/root notified of frozen default-weight defect.
 This zeroed bind check does not repair04, certify moving appearance/contact
 or admit production assets. No candidate LOD provided.
+
+### Round 18 — actual bike target source/runtime binding proposals
+
+Finding: Independently decoded Rookie/Pro full and bike LOD target geometry
+matches the actual live game instances exactly. Colored source triangle
+proposals identify grip shells, peg platforms/teeth and saddle shell for
+parent review. No current rider patch or contact acceptance is inferred.
+
+Validation: Four played films cover 192 captured live poses driven by the
+first 480 recorded input ticks. Exact source/runtime positions, indices and
+triangle ordinals match; live/source transform residual is zero. Physics
+hashes match across quality tiers for each bike. Silent complete playback
+passes. Fresh normal-player low/high gate clears at 4810 ticks, identical
+finish bytes, crashes at 103 ticks and restarts at tick 0 in 1 ms. Scoped
+lint passes.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/bike-target-bindings04/
+
+Limits: UNACCEPTED. All proposed target selections await parent review;
+all five rider contacts remain unmeasured. No closed volume, current rider
+LOD ancestry, supported anatomy or physical device acceptance is claimed.
+Construction04 default-weight defect remains frozen; Agent1 owns05 repair.
