@@ -870,3 +870,5 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 **Current iOS Release compile retained:** The [clean-source unsigned simulator Release build](../evidence/store-release/native/20260930-200644/README.md#release-configuration-compile) from59492376 passes; strict actual release web/shell IP audit has zero hits in198 files. Debug/native played proofs remain separate. No signed-device, phone, TestFlight or store approval is claimed; existing human/device gates remain.
 
 **Commit and push inventory (ask273):** Original frozen work and generator stop receipt are checkpointed. Stale-index attempt was refused; refreshed private index empty, no work lost. Temporary files and active R2 work remain local; final release/live verification pending. Experimental rider checkpoints remain unaccepted; M0–M5 stay open. Temporary downloads/guards and ignored local masters remain local.
+
+**Agent 1 model role (ask274):** Assigned Blender/model construction and export verification. Existing integration ownership remains; a concrete work assignment is pending. Rider M0–M5 remain open.
