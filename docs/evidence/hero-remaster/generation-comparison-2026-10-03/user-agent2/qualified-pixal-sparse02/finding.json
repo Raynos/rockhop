@@ -1,0 +1,64 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "3b6d132f6757b2fae0ca70616b380a0b8e0e9bab",
+  "status": "All15 fixed forward controls and actual Pixal wrapper pass",
+  "guardExitCode": 0,
+  "elapsedSeconds": 1.568,
+  "sentinelDiagnosis": {
+    "signedIndices": [
+      [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "originalUnsignedMask": [
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "correctSignedMask": [
+      [
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false,
+        false
+      ]
+    ],
+    "maskDifferences": 6,
+    "originalMaxError": 0.5,
+    "protectedMaxError": 0.0,
+    "threshold": 1e-05
+  },
+  "expectedAndActualArchivesFinite": 16,
+  "runtimeFilesUnchanged": true,
+  "nativeNearestHashmapPreserved": true,
+  "nativeTrilinearFloat32Preserved": true,
+  "limits": [
+    "Synthetic forward only; no learned conditioning, seed, backward or CUDA proof.",
+    "Owned process-local nearest signed sentinel and trilinear float32 promotion explicitly required.",
+    "NumPy emitted floating-point warnings during CPU reference loops; all16 persisted expected/actual arrays independently inspected finite and fixed errors pass."
+  ]
+}

@@ -1415,3 +1415,17 @@ Ask:284–286.
 
 Limits: Unaccepted checkpoint, execution pending. Process-local forward
 adapter only; no shared library edit, learned seed, backward or CUDA pass.
+
+Finding: Actual Pixal int32 nearest sentinel is misclassified by unsigned
+comparison; owned signed-1 handling passes all15fixed sparse controls.
+
+Validation: Future65/96guard0/1.568s; rawindices0,-1/-1/-1 and2,-1/-1/-1,
+originalmaskalltrue, signedmask6correctmissing; originalerror0.5→0.
+All15fixed controls pass; actual Pixal SparseConv3d error0, repeatbytes/
+coords/features exact. All16persisted CPUexpected/MPSactual arrays finite
+despite NumPy warnings. Native nearest hashmaps/float32 trilinear retained.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/
+Ask:284–286.
+
+Limits: Synthetic forward only, no learned conditioning/seed/backward/CUDA
+pass. Owned process-local adapters explicit; no installed file edited.

@@ -1,0 +1,50 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_control.py",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control",
+    "--contract",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_contract.json",
+    "--signed-nearest"
+  ],
+  "controllerPID": 91074,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 120.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.7,
+      "freeGiB": 34.4
+    },
+    {
+      "seconds": 0.031,
+      "anonymousGiB": 37.8,
+      "wiredGiB": 7.7,
+      "freeGiB": 34.4
+    },
+    {
+      "seconds": 1.064,
+      "anonymousGiB": 38.1,
+      "wiredGiB": 7.6,
+      "freeGiB": 34.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 91078,
+  "exitCode": 0,
+  "elapsedSeconds": 1.568
+}

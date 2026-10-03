@@ -1,0 +1,577 @@
+{
+  "accepted": false,
+  "control": "synthetic forward only",
+  "torch": "2.12.0",
+  "flexGemm": {
+    "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/__init__.py",
+    "SHA256": "6ae240bfd4fcaac89e49b01523df5953d6cc2e48cfae37df9037dd186f7c5f20"
+  },
+  "backend": "metal",
+  "algorithm": "masked_implicit_gemm_splitk",
+  "protectedTrilinear": true,
+  "adapter": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_sparse_sampling.py",
+    "SHA256": "0d1be1240c127a12f049f493a4a11ff1d89d8d0db8a5e01cbca1194faf5e5db5"
+  },
+  "compiledExtension": {
+    "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/_C.cpython-310-darwin.so",
+    "SHA256": "d356d7138a6cae80ee2331adfe53632038bef2ee31201abedeabefd4b565f03a"
+  },
+  "metallib": {
+    "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/flex_gemm.metallib",
+    "SHA256": "758edfc5f4f16db3230fdfc1abafb592aef508860df2763a59ec9b66c5bfedbb"
+  },
+  "ops": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/ops/spconv/submanifold_conv3d.py",
+      "SHA256": "7a80514f2ba4a59c932ec69276c4b1c5df3e6295451dedd5d19735d53589d77b"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/ops/grid_sample/grid_sample.py",
+      "SHA256": "665b41c9b3e908686d4d7f8f4152d342d59f7448f12d42d13c969e8b36499ea2"
+    }
+  ],
+  "limits": [
+    "Synthetic forward controls and actual Pixal wrapper only.",
+    "No learned conditioning, model generation, backward or CUDA parity.",
+    "Trilinear half/bfloat uses owned float32 adapter; optional nearest uses signed sentinel. Native files unchanged."
+  ],
+  "cases": [
+    {
+      "kind": "conv",
+      "case": "dense-tail-channels-float32",
+      "rows": 240,
+      "channels": [
+        7,
+        5
+      ],
+      "shape": [
+        2,
+        7,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        3,
+        3
+      ],
+      "dilation": [
+        1,
+        1,
+        1
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/dense-tail-channels-float32.npz",
+        "SHA256": "3b0cfcf9336904492bd08a5c57a3cc0e5db0821323b12b9ce86522f50469302d"
+      },
+      "maxCPUFloat64Error": 0.0,
+      "threshold": 1e-05,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "dense-tail-channels-float16",
+      "rows": 240,
+      "channels": [
+        7,
+        5
+      ],
+      "shape": [
+        2,
+        7,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        3,
+        3
+      ],
+      "dilation": [
+        1,
+        1,
+        1
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/dense-tail-channels-float16.npz",
+        "SHA256": "3b0cfcf9336904492bd08a5c57a3cc0e5db0821323b12b9ce86522f50469302d"
+      },
+      "maxCPUFloat64Error": 0.0,
+      "threshold": 0.001,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "dense-tail-channels-bfloat16",
+      "rows": 240,
+      "channels": [
+        7,
+        5
+      ],
+      "shape": [
+        2,
+        7,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        3,
+        3
+      ],
+      "dilation": [
+        1,
+        1,
+        1
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/dense-tail-channels-bfloat16.npz",
+        "SHA256": "f000296bfacdbc3b68755b7399891886ca430f98e9610a9e215b5e6cbfebddf2"
+      },
+      "maxCPUFloat64Error": 0.000244140625,
+      "threshold": 0.01,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "holes-dilation-float32",
+      "rows": 180,
+      "channels": [
+        32,
+        32
+      ],
+      "shape": [
+        2,
+        32,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        3,
+        3
+      ],
+      "dilation": [
+        2,
+        1,
+        2
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/holes-dilation-float32.npz",
+        "SHA256": "4a0d664525da7430f2f147a46d4311fcdce276b76f641bf944bb6fcc64e2e2e2"
+      },
+      "maxCPUFloat64Error": 0.0,
+      "threshold": 1e-05,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "holes-dilation-float16",
+      "rows": 180,
+      "channels": [
+        32,
+        32
+      ],
+      "shape": [
+        2,
+        32,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        3,
+        3
+      ],
+      "dilation": [
+        2,
+        1,
+        2
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/holes-dilation-float16.npz",
+        "SHA256": "4a0d664525da7430f2f147a46d4311fcdce276b76f641bf944bb6fcc64e2e2e2"
+      },
+      "maxCPUFloat64Error": 0.0,
+      "threshold": 0.001,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "holes-dilation-bfloat16",
+      "rows": 180,
+      "channels": [
+        32,
+        32
+      ],
+      "shape": [
+        2,
+        32,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        3,
+        3
+      ],
+      "dilation": [
+        2,
+        1,
+        2
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/holes-dilation-bfloat16.npz",
+        "SHA256": "cc043f465973bd2fbbae7efa4950ded84d0e4cc4235ff9b53468c082a1808f58"
+      },
+      "maxCPUFloat64Error": 0.000244140625,
+      "threshold": 0.01,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "anisotropic-axis-float32",
+      "rows": 180,
+      "channels": [
+        64,
+        64
+      ],
+      "shape": [
+        2,
+        64,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        1,
+        3
+      ],
+      "dilation": [
+        1,
+        2,
+        1
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/anisotropic-axis-float32.npz",
+        "SHA256": "01f3d32a4722f49560e609bcdfd2f9fec9445e65a315389e888ac812003a01f0"
+      },
+      "maxCPUFloat64Error": 0.0,
+      "threshold": 1e-05,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "anisotropic-axis-float16",
+      "rows": 180,
+      "channels": [
+        64,
+        64
+      ],
+      "shape": [
+        2,
+        64,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        1,
+        3
+      ],
+      "dilation": [
+        1,
+        2,
+        1
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/anisotropic-axis-float16.npz",
+        "SHA256": "ba1d9dc6604ef907d164a092347d0605740ffd201f2419f1812d8030af603236"
+      },
+      "maxCPUFloat64Error": 6.103515625e-05,
+      "threshold": 0.001,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "conv",
+      "case": "anisotropic-axis-bfloat16",
+      "rows": 180,
+      "channels": [
+        64,
+        64
+      ],
+      "shape": [
+        2,
+        64,
+        4,
+        5,
+        6
+      ],
+      "kernel": [
+        3,
+        1,
+        3
+      ],
+      "dilation": [
+        1,
+        2,
+        1
+      ],
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/anisotropic-axis-bfloat16.npz",
+        "SHA256": "7a538fb7b165c000438f2201c57ad1b970dea183883608ed20ac1f534093e7a4"
+      },
+      "maxCPUFloat64Error": 0.000244140625,
+      "threshold": 0.01,
+      "finite": true,
+      "neighborMapExact": true,
+      "cacheSameObject": true,
+      "repeatByteIdentical": true,
+      "inputsUnchanged": true
+    },
+    {
+      "kind": "grid",
+      "case": "grid-nearest-float32",
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/grid-nearest-float32.npz",
+        "SHA256": "2f36ea2514a69120423ad02e35f82ef752c044df5ee7a85a0a8dc0dad1f20a32"
+      },
+      "resultShape": [
+        2,
+        11,
+        7
+      ],
+      "threshold": 1e-05,
+      "float32Promotion": false,
+      "outputDtypePreserved": true,
+      "inputsUnchanged": true,
+      "maxCPUFloat64Error": 0.0,
+      "finite": true
+    },
+    {
+      "kind": "grid",
+      "case": "grid-trilinear-float32",
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/grid-trilinear-float32.npz",
+        "SHA256": "fb132738bdb000d1793ed7dd901ac0f2d5a5d5f2c61d2e2b1683f0fad6a2e70e"
+      },
+      "resultShape": [
+        2,
+        11,
+        7
+      ],
+      "threshold": 1e-05,
+      "float32Promotion": false,
+      "outputDtypePreserved": true,
+      "inputsUnchanged": true,
+      "maxCPUFloat64Error": 2.384185791015625e-07,
+      "finite": true
+    },
+    {
+      "kind": "grid",
+      "case": "grid-nearest-float16",
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/grid-nearest-float16.npz",
+        "SHA256": "2f36ea2514a69120423ad02e35f82ef752c044df5ee7a85a0a8dc0dad1f20a32"
+      },
+      "resultShape": [
+        2,
+        11,
+        7
+      ],
+      "threshold": 0.002,
+      "float32Promotion": false,
+      "outputDtypePreserved": true,
+      "inputsUnchanged": true,
+      "maxCPUFloat64Error": 0.0,
+      "finite": true
+    },
+    {
+      "kind": "grid",
+      "case": "grid-trilinear-float16",
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/grid-trilinear-float16.npz",
+        "SHA256": "04555897577f84a0726abec25b495276192e380eaff2d1520e44305521a93375"
+      },
+      "resultShape": [
+        2,
+        11,
+        7
+      ],
+      "threshold": 0.002,
+      "float32Promotion": true,
+      "outputDtypePreserved": true,
+      "inputsUnchanged": true,
+      "maxCPUFloat64Error": 0.0002790178571427937,
+      "finite": true
+    },
+    {
+      "kind": "grid",
+      "case": "grid-nearest-bfloat16",
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/grid-nearest-bfloat16.npz",
+        "SHA256": "2f36ea2514a69120423ad02e35f82ef752c044df5ee7a85a0a8dc0dad1f20a32"
+      },
+      "resultShape": [
+        2,
+        11,
+        7
+      ],
+      "threshold": 0.02,
+      "float32Promotion": false,
+      "outputDtypePreserved": true,
+      "inputsUnchanged": true,
+      "maxCPUFloat64Error": 0.0,
+      "finite": true
+    },
+    {
+      "kind": "grid",
+      "case": "grid-trilinear-bfloat16",
+      "archive": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/control/grid-trilinear-bfloat16.npz",
+        "SHA256": "b524d7a4d97d59d24b3094289b368381f292d86c45932f6530a828a5b7f48ed7"
+      },
+      "resultShape": [
+        2,
+        11,
+        7
+      ],
+      "threshold": 0.02,
+      "float32Promotion": true,
+      "outputDtypePreserved": true,
+      "inputsUnchanged": true,
+      "maxCPUFloat64Error": 0.0078125,
+      "finite": true
+    }
+  ],
+  "elapsedSeconds": 0.5338620413094759,
+  "status": "All synthetic forward contracts pass; learned/model proof pending",
+  "model": "Pixal3D",
+  "signedNearestProtection": true,
+  "sentinelProbe": {
+    "signedIndices": [
+      [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        2,
+        -1,
+        -1,
+        -1
+      ]
+    ],
+    "originalUnsignedMask": [
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "correctSignedMask": [
+      [
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false,
+        false
+      ]
+    ],
+    "maskDifferences": 6,
+    "originalMaxError": 0.5,
+    "protectedMaxError": 0.0,
+    "threshold": 1e-05
+  },
+  "contractSHA256": "1eb01523e887f2647e6234bc9fae09f273e354fe49b94f07aeadf4d0cfb8d4f3",
+  "wrapperSHA256": "c6abb1d430d3a1318d02e92d49304af58aaa684dcda1cc80368b467b9fd84e94",
+  "actualSparseModule": {
+    "class": "pixal3d.modules.sparse.conv.conv.SparseConv3d",
+    "maxCPUFloat64Error": 0.0,
+    "threshold": 1e-05,
+    "finite": true,
+    "repeatByteIdentical": true,
+    "coordinatesUnchanged": true,
+    "featuresUnchanged": true
+  },
+  "sparseBackend": {
+    "conv": "flex_gemm",
+    "attention": "naive",
+    "algorithm": "masked_implicit_gemm_splitk",
+    "hashmapRatio": 2.0
+  },
+  "actualSourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_control.py": "c6abb1d430d3a1318d02e92d49304af58aaa684dcda1cc80368b467b9fd84e94",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_sparse_operator_control.py": "79b0ee554e375da15607a61b5cd441eb6d5016f7b6bf70f6222803fd3b3eda25",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_sparse_sampling.py": "0d1be1240c127a12f049f493a4a11ff1d89d8d0db8a5e01cbca1194faf5e5db5",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/config.py": "7f85d100fc568f6f8b61313d5bd59dea1b8f285eedd546bab6a94e21dae316ea",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/conv/config.py": "ba8e0033ca14880e2bd53456bf2fe20494c2c6d42eeed7813d33d19005fe51e1",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/conv/conv_flex_gemm.py": "b0ae09f1addfbc51a43ec27fbcf76a810ef2d3e9a9fd3d6084cae69a9c6a7dcc",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/__init__.py": "6ae240bfd4fcaac89e49b01523df5953d6cc2e48cfae37df9037dd186f7c5f20",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/ops/spconv/submanifold_conv3d.py": "7a80514f2ba4a59c932ec69276c4b1c5df3e6295451dedd5d19735d53589d77b",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/ops/grid_sample/grid_sample.py": "665b41c9b3e908686d4d7f8f4152d342d59f7448f12d42d13c969e8b36499ea2",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/__init__.py": "0636856ba271d2d0f1604687c41db077e1ae1136bb916ed98a864a8cf67358cb",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/__init__.py": "900b27e106f76f093729da2f34062b278f2c9c16b67fca82dfa52f166519cd6d",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/ext.mm": "2d423b923e2bb77ba960c1d2b5886c2a962840634f8ccde9bc8c1d4943b8165a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/grid_sample/weighted_sum.metal": "c836099a709176e7af0cf3e803d8c6be100bb19087253d7568eb4399e6586a44",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/_C.cpython-310-darwin.so": "d356d7138a6cae80ee2331adfe53632038bef2ee31201abedeabefd4b565f03a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/flex_gemm.metallib": "758edfc5f4f16db3230fdfc1abafb592aef508860df2763a59ec9b66c5bfedbb",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_sampling.py": "2dc0f9a68009b3f70b1e3bcbdd308d0a5bde6d72dbb78ddff9a33c9e290f372f",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/conv/conv.py": "17d957e742b10a4972493bb1a7aa9ad3f744a6e3b0e85408d4ee9af7cd228bab",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/version.py": "f707e1fd4e33a15695a96f5a83150a7a5425ad00d2eba4cd0100c830ebe9bf02"
+  }
+}
