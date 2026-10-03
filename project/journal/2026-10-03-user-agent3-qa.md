@@ -128,3 +128,16 @@ SyntheticFK/explicitstagedgeometry, not actualsupportedriding; remaininglocal/
 heldout/globalfit defects unaccepted. Nextnew anatomy captures bike-free,
 separateactualbike contactviews perhuman; no redo solely presentation.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/corrective01-garage/
+
+Finding: Prepared separate bike-free anatomy and actual-bike input fixtures
+without another candidate capture or source construction.
+Validation: Three awaited presentation/evidence checks and scoped type-aware
+lint pass. Fresh production Game plays16recordings twice byte-identically;
+12cases/no missing and eight lean/landing windows retain exact input copies.
+Twelfth-round ordinary low/high clear4810ticks/40.083333333333336s identical
+finish bytes, crash103ticks, one-tick restart1/3ms, zero errors; shared gate
+covers the recorded Agent2 interval at35ca6c0e.
+Limits: All five visible relations remain unmeasured. Standing saddle clearance
+is intentional; seated support requires reviewed pelvis/live-saddle surfaces.
+No new candidate/movie, construction, art/device/contact or gate acceptance.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-README.md

@@ -1,0 +1,1361 @@
+{
+  "schema": "rockhop.agent3.split-fixtures.v1",
+  "status": "PREPARED_NO_NEW_CANDIDATE_CAPTURE",
+  "gameInputMatrix": {
+    "path": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/manifest.json",
+    "sha256": "31cf21dc9070b87d23d972d7ea3c8c8844dc2c5a4fa47a76c3ae480f00f11a81",
+    "method": "Actual production Game + createBikePhysicsV2 + FrameBuilder; two independent whole input plays, no teleport or pose injection",
+    "repeat": "Every per-tick state/phase/run-clock/finish-byte trace and event/sample object matches exactly",
+    "sourceFiles": [
+      {
+        "file": "harness/hero-remaster/prepare-gameplay-matrix.mts",
+        "sha256": "5f63ecc6ecff314236538ccad749462afa341e8b77f281465e4e9aa03a012073"
+      },
+      {
+        "file": "src/game/game.ts",
+        "sha256": "8d1c9dd089731507fbb6811c3b2d5600075237124741c2e1631d67fe6188576d"
+      },
+      {
+        "file": "src/game/routeGoal.ts",
+        "sha256": "664a789a8d1a0bf3731d11f9949ad2220fff48fccb52fdc95569c47541327491"
+      },
+      {
+        "file": "src/render/frame.ts",
+        "sha256": "c3460d6c2a0e0d4ccb5cd6bab24054e18ebbd9bc6e2ef0d0315b813285cd6d6a"
+      },
+      {
+        "file": "src/core/riderGeometry.ts",
+        "sha256": "c613269c62a3f7f5e8e0c004bd7775e9f593ee92dfc24b111ede825ea9516011"
+      },
+      {
+        "file": "src/core/replay.ts",
+        "sha256": "1d36586edf1f8e5929ec02d9a545ca1bea89ea107e0af116e95f89e28c41639c"
+      },
+      {
+        "file": "src/core/hash.ts",
+        "sha256": "f758f4dfb8bcb640f4b6ce2db7700643fc17f13a4fe7fe27d4de8e12ae7ae2a0"
+      },
+      {
+        "file": "src/physics/bike.ts",
+        "sha256": "34510352158b4312877cc96060430fd5c8722f6fa6399489fb3c0af207919f16"
+      },
+      {
+        "file": "src/physics/collision.ts",
+        "sha256": "50dc3d78a86d991164e6f391af29b491437c47245a8d75835891141669dfaf2c"
+      },
+      {
+        "file": "src/physics/controllers/index.ts",
+        "sha256": "06ac4aaae67417e16257f2c948c94dc21ea24ee3f3a7c43d4a28600312504e0c"
+      },
+      {
+        "file": "src/physics/dmath.ts",
+        "sha256": "b0f5e4536ba39ad4d1e53e4da9a9b89412f75594e206815e7ccc08f726f2893e"
+      },
+      {
+        "file": "src/physics/index.ts",
+        "sha256": "36c7ae2948508ceba4657b3d64f088ff50e65ea1a450c2018332c25b49f786cb"
+      },
+      {
+        "file": "src/physics/testTracks.ts",
+        "sha256": "9c8fab04235d957675225c6e914e94213dfb11fd1d1fad4d645de4a40a55c668"
+      },
+      {
+        "file": "src/physics/tools/trackSweep.ts",
+        "sha256": "86ddd48ad83bfb0fc18f05150ed85e881585873dd8ad0139fc44ab06cd39d6a9"
+      },
+      {
+        "file": "src/physics/tuning.ts",
+        "sha256": "745b4b6edcad08df9cdaffbc16d740bb3887adc5f3de8d67a69462dbc863d6a0"
+      },
+      {
+        "file": "src/physics/v2/bike.ts",
+        "sha256": "519dd15990b427bdbc66810d14c29866b443a31b9a87a68d84114144dd8c21a9"
+      },
+      {
+        "file": "src/physics/v2/engine.ts",
+        "sha256": "087797ef768af3f5f292df8d4583bf2d553d98d68311f8b3522c135bbd32beaa"
+      },
+      {
+        "file": "src/physics/v2/rider.ts",
+        "sha256": "9414b044a9175f00a8af3d25d080550fedf6668404ab9a0731de4eec0fc62489"
+      },
+      {
+        "file": "src/physics/v2/tuning.ts",
+        "sha256": "9e972b943eb3a49c17caaef20c64e62dc6a15dd43fd23b0778b5b879fa85ef3a"
+      },
+      {
+        "file": "src/physics/v2/tyre.ts",
+        "sha256": "335b249e98295f708da1d3899527d09bd00b2a6b391de39b5e1fbfc7251b9498"
+      },
+      {
+        "file": "src/physics/webLegacy.ts",
+        "sha256": "1132989d889056249eea451ff32fe569737ab7582a56f58945cc98539f7dcced"
+      },
+      {
+        "file": "src/tracks/author.ts",
+        "sha256": "71f398b332c412e31e7e34fbe5e8670539abb0e858815e9ac19fe1d402b9e1b3"
+      },
+      {
+        "file": "src/tracks/compile.ts",
+        "sha256": "9d3d1cac3cf06757e45be212e6a172f13307212bcb95607cedac43c39af48d32"
+      },
+      {
+        "file": "src/tracks/courses/beginner.ts",
+        "sha256": "929d70d78610f750708f1f14cd1686c45184b7c00ee98281752828f1513589a8"
+      },
+      {
+        "file": "src/tracks/courses/eager.ts",
+        "sha256": "42518daa215ece1e23267174a5e5bb90f5bbf4d2a8ff5f87b898e0df15d4c62d"
+      },
+      {
+        "file": "src/tracks/courses/easy.ts",
+        "sha256": "b97617f649c0f1bbfa5b118219fb421b306f0ccbfd1d8a1a695308c04d0c5cd8"
+      },
+      {
+        "file": "src/tracks/courses/extreme.ts",
+        "sha256": "4ed2cfeba8606fbb4f1e2f6c598ce47045ae5742f1231416a3a7519a346fc054"
+      },
+      {
+        "file": "src/tracks/courses/hard.ts",
+        "sha256": "222fbb7daf8c182b0fbfc22afe7ddf1df7eb1dbb57bfb6031627d54e9e24d156"
+      },
+      {
+        "file": "src/tracks/courses/index.ts",
+        "sha256": "f474cfc5392a4e62e23f54eb9c2309cd968ac331981ee52dae4592d86418e8a0"
+      },
+      {
+        "file": "src/tracks/courses/lab-reference.ts",
+        "sha256": "9e66e129293e285f3acd16c2c8b23c41c1ad73209c1d2c13b0ab6194aa4c79ee"
+      },
+      {
+        "file": "src/tracks/courses/lab.ts",
+        "sha256": "658057886dd4413adfc350b0eda838835484d40b831329af0433e2e776f89b71"
+      },
+      {
+        "file": "src/tracks/courses/medium.ts",
+        "sha256": "0e8b8df08ad803d629a9ec0a222505ea055c5a8f3f593534363cf258be526f5e"
+      },
+      {
+        "file": "src/tracks/courses/playground-kit.ts",
+        "sha256": "e8e1b7ff6cd322992f0d45f1b2a8add1b7b67aabbd90535cc87172547fe96a5f"
+      },
+      {
+        "file": "src/tracks/courses/playgrounds.ts",
+        "sha256": "6be09eb6a794f107649f4c57b4ca903f937eaad63d4b72145ac3f7ad56747dba"
+      },
+      {
+        "file": "src/tracks/courses/retired.ts",
+        "sha256": "b52f273c570858a09402ca3aa5d5549f016e8512744e5c42ad6d5461626970cb"
+      },
+      {
+        "file": "src/tracks/courses/test-tracks.ts",
+        "sha256": "a8be2d0767ff39552b4aa6a4e11f4b9fbc85ab0b4b7d3a71cd1c3408dcb61f20"
+      },
+      {
+        "file": "src/tracks/describe.ts",
+        "sha256": "2fcd0a06b5ef8604e03450d5efd6b35c5973d65ab780ee5ab4f9c51f25b39d38"
+      },
+      {
+        "file": "src/tracks/geometry.ts",
+        "sha256": "2698b394fb49145642576251ad56900e37ecc281f7a6cd30210fd643515e0be9"
+      },
+      {
+        "file": "src/tracks/index.ts",
+        "sha256": "093fa71f76ab088ed755b90c2e1daa4b5e7d145b46c0a1341af96904faab20e0"
+      },
+      {
+        "file": "src/tracks/kinds.ts",
+        "sha256": "ad003037d4e3c8e2363e759f445accc1f49ae94901af6826ef611580e53dadf0"
+      },
+      {
+        "file": "src/tracks/rockhop/alpine.ts",
+        "sha256": "1ef7ef1fa9670032300e19505370ab8f0744263d397e5095e5ef2f1755c09a0b"
+      },
+      {
+        "file": "src/tracks/rockhop/builder.ts",
+        "sha256": "7cf01c93e8f8e571153eb775b9adfa91fb34fe5e3fd54a7fa33d67cfa73b148f"
+      },
+      {
+        "file": "src/tracks/rockhop/coast.ts",
+        "sha256": "1cc77f4c6bc31a63ad3d848dce9ca5d02c7f56354ac13f1a524c8102cf892a31"
+      },
+      {
+        "file": "src/tracks/rockhop/index.ts",
+        "sha256": "621e9f93a3629fe1754895bfc9ecbbabdcecd488bfe5e68687c943385e047065"
+      },
+      {
+        "file": "src/tracks/rockhop/originality.ts",
+        "sha256": "8bd82f165180225a1c4aa6d73f0d3cfb70836fbbe3974c46b379bcdac6219dec"
+      },
+      {
+        "file": "src/tracks/rockhop/playgrounds.ts",
+        "sha256": "41d6dc3f45279dc1dc408df145b2655529f3464e9875e08f9c3b993db82358e5"
+      },
+      {
+        "file": "src/tracks/rockhop/quarry.ts",
+        "sha256": "125b03b8c4d7f84df828d34bb1c26dee7d43f8954b6ab671bb01e8b09fbca899"
+      },
+      {
+        "file": "src/tracks/rockhop/snowline.ts",
+        "sha256": "733b1e3383f9569fa085bc933e011fdca4db85c79f5935823fccfe4918f63508"
+      },
+      {
+        "file": "src/tracks/rockhop/zones.ts",
+        "sha256": "66e4f4f3ec0d12db8d40b51c52ed7253c9b3f52abc549fd54a43d4c12994e22b"
+      },
+      {
+        "file": "src/tracks/segments.ts",
+        "sha256": "0a6de0f115d45386c10b2f08fc6c905817dd9a41389035079d936a0a172a2dcd"
+      },
+      {
+        "file": "src/tracks/validate.ts",
+        "sha256": "ea83aa5745c70ae945675541b3350fd988082760d4dd8df5df63f339ef8a672f"
+      }
+    ]
+  },
+  "anatomy": {
+    "presentation": "bike-free",
+    "implementation": "harness/hero-remaster/user-agent3-2026-10-03/presentation.mjs#bikeFreeAnatomyPresentation",
+    "driver": {
+      "path": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/driver.json",
+      "sha256": "8c40c42af362a8d3d8ae44d27a0b07570f600b26adc66d325239413f66c7625b",
+      "completeJointOrder": [
+        "pelvis",
+        "spine",
+        "chest",
+        "shoulder.R",
+        "upperArm.R",
+        "forearm.R",
+        "hand.R",
+        "index_01.R",
+        "index_02.R",
+        "index_03.R",
+        "middle_01.R",
+        "middle_02.R",
+        "middle_03.R",
+        "pinky_01.R",
+        "pinky_02.R",
+        "pinky_03.R",
+        "ring_01.R",
+        "ring_02.R",
+        "ring_03.R",
+        "thumb_01.R",
+        "thumb_02.R",
+        "thumb_03.R",
+        "shoulder.L",
+        "upperArm.L",
+        "forearm.L",
+        "hand.L",
+        "index_01.L",
+        "index_02.L",
+        "index_03.L",
+        "middle_01.L",
+        "middle_02.L",
+        "middle_03.L",
+        "pinky_01.L",
+        "pinky_02.L",
+        "pinky_03.L",
+        "ring_01.L",
+        "ring_02.L",
+        "ring_03.L",
+        "thumb_01.L",
+        "thumb_02.L",
+        "thumb_03.L",
+        "neck",
+        "head",
+        "thigh.R",
+        "shin.R",
+        "foot.R",
+        "ball.R",
+        "thigh.L",
+        "shin.L",
+        "foot.L",
+        "ball.L"
+      ]
+    },
+    "allowedPoseInjection": true,
+    "pairedCameraAndControllerRequired": true,
+    "sourceFrames": [
+      0,
+      24,
+      48,
+      72,
+      96,
+      112,
+      120,
+      144,
+      168,
+      192,
+      216,
+      240
+    ],
+    "labels": [
+      "native rest",
+      "true A",
+      "true T",
+      "neutral",
+      "forward reach",
+      "elbow transition witness",
+      "bent elbows",
+      "overhead",
+      "asymmetric",
+      "squat stress",
+      "forward FK stress",
+      "hip/knee flexion FK stress"
+    ],
+    "continuous": {
+      "start": 0,
+      "end": 528,
+      "sourceHz": 48,
+      "videoStep": 4,
+      "videoFPS": 12
+    },
+    "presentationChecks": [
+      "Bike-only branches hidden; rider ancestors/visibility/transforms intact.",
+      "No visible bike or bike reflection; apply visibility after live-bike update before draw, then assert.",
+      "Entire body/hands/feet framed; same camera/materials for negative-control pairs."
+    ]
+  },
+  "actualBike": {
+    "presentation": "live visible bike",
+    "driver": "recorded-game-input",
+    "allowedPoseInjection": false,
+    "cases": [
+      {
+        "id": "rookie-maximum-forward-lean",
+        "bike": "rookie",
+        "kind": "maximum-forward-lean",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/riding-poses-lean-transitions-rookie.json",
+        "sourcePath": "harness/inputs/riding-poses/lean-transitions-rookie.json",
+        "sourceSHA256": "8cabf8c22d7c5cb8dcf2c2fa6b8a3d2df2ec9f47a8df0f5f5bd4c5d0c0e7a678",
+        "header": {
+          "version": 1,
+          "trackId": "flat-test",
+          "seed": 1,
+          "physicsHz": 120,
+          "note": "Riding poses ask73: actual input only. Neutral2s; half forward0.75s; full forward0.75s; neutral0.5s; half back0.75s; full back0.75s; forward0.5s; back0.25s; neutral0.75s. Quantized lean64/127. No synthetic posing or state edits.",
+          "bike": "rookie",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 283,
+          "centerInputTick": 343,
+          "endInputTick": 463
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 283,
+            "physicsTick": 283,
+            "stateHash": "5d98bb23ddc1e29c",
+            "phase": "riding",
+            "lean": 0.5590455860404282,
+            "commandedLean": 0.5039370078740157,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": 0.0020891650581888084,
+              "relY": 0.741482670385725,
+              "relAngle": -0.2900424498725424,
+              "relUp": -0.07950756477842982
+            }
+          },
+          {
+            "inputTick": 343,
+            "physicsTick": 343,
+            "stateHash": "fbd6ee8d84dcbb78",
+            "phase": "riding",
+            "lean": 1,
+            "commandedLean": 1,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": 0.07914878775064883,
+              "relY": 0.7449210200764209,
+              "relAngle": -0.2676463370258128,
+              "relUp": 0.054689605882105266
+            }
+          },
+          {
+            "inputTick": 463,
+            "physicsTick": 463,
+            "stateHash": "21bd9c5397ec4251",
+            "phase": "riding",
+            "lean": -0.07384588237369594,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.10244135755187683,
+              "relY": 0.607824269468314,
+              "relAngle": -0.020623144188519994,
+              "relUp": -0.022659336843031185
+            }
+          }
+        ],
+        "detail": {
+          "observedLean": 1,
+          "commandedLean": 1
+        },
+        "wholeRecordingTraceSHA256": "cb023f936de4e80ec2b09f4a5931bc936f9c5821e9786b04d04311e215e2860b",
+        "final": {
+          "hash": "728c5a329ccc5858",
+          "phase": "riding",
+          "faults": 0,
+          "runTime": 7,
+          "finishTimeFloat64LE": null
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "rookie-maximum-backward-lean",
+        "bike": "rookie",
+        "kind": "maximum-backward-lean",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/riding-poses-lean-transitions-rookie.json",
+        "sourcePath": "harness/inputs/riding-poses/lean-transitions-rookie.json",
+        "sourceSHA256": "8cabf8c22d7c5cb8dcf2c2fa6b8a3d2df2ec9f47a8df0f5f5bd4c5d0c0e7a678",
+        "header": {
+          "version": 1,
+          "trackId": "flat-test",
+          "seed": 1,
+          "physicsHz": 120,
+          "note": "Riding poses ask73: actual input only. Neutral2s; half forward0.75s; full forward0.75s; neutral0.5s; half back0.75s; full back0.75s; forward0.5s; back0.25s; neutral0.75s. Quantized lean64/127. No synthetic posing or state edits.",
+          "bike": "rookie",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 523,
+          "centerInputTick": 583,
+          "endInputTick": 703
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 523,
+            "physicsTick": 523,
+            "stateHash": "bf20e6ac57637596",
+            "phase": "riding",
+            "lean": -0.5723617948060908,
+            "commandedLean": -0.5039370078740157,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.2581623659569786,
+              "relY": 0.5533423871928371,
+              "relAngle": -0.47271327752946624,
+              "relUp": -0.0006210415131513685
+            }
+          },
+          {
+            "inputTick": 583,
+            "physicsTick": 583,
+            "stateHash": "3f3e3a837188e757",
+            "phase": "riding",
+            "lean": -1,
+            "commandedLean": -1,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.3073794916017301,
+              "relY": 0.5526987817629058,
+              "relAngle": -0.47589687786567625,
+              "relUp": -0.013264983881912537
+            }
+          },
+          {
+            "inputTick": 703,
+            "physicsTick": 703,
+            "stateHash": "29068d65ced63fa3",
+            "phase": "riding",
+            "lean": 1,
+            "commandedLean": 1,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": 0.08154502614921588,
+              "relY": 0.7561128501400842,
+              "relAngle": -0.3172990572125572,
+              "relUp": -0.0001177290790641411
+            }
+          }
+        ],
+        "detail": {
+          "observedLean": -1,
+          "commandedLean": -1
+        },
+        "wholeRecordingTraceSHA256": "cb023f936de4e80ec2b09f4a5931bc936f9c5821e9786b04d04311e215e2860b",
+        "final": {
+          "hash": "728c5a329ccc5858",
+          "phase": "riding",
+          "faults": 0,
+          "runTime": 7,
+          "finishTimeFloat64LE": null
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "rookie-front-landing-recovery",
+        "bike": "rookie",
+        "kind": "front-landing-recovery",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/e2-rear-wheel-first-bot-3.json",
+        "sourcePath": "harness/inputs/e2-rear-wheel-first/bot-3.json",
+        "sourceSHA256": "c00fb3ba95e8c88aacc3d69789e50a327e1615bc331bd1492f3935ad6765ffb8",
+        "header": {
+          "version": 1,
+          "trackId": "e2-rear-wheel-first",
+          "seed": 2125781358,
+          "physicsHz": 120,
+          "note": "qualification clear: stranger control transfer from stranger-e2-rear-wheel-first-20260922-160522.json on rookie; replaces stale skill-3 recording restamped-from=unstamped src=a415fcb8 restamped-from=a4be385f",
+          "bike": "rookie",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 4483,
+          "centerInputTick": 4543,
+          "endInputTick": 4663
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 4483,
+            "physicsTick": 4483,
+            "stateHash": "5374cd93914d446e",
+            "phase": "riding",
+            "lean": 0.00009405288824613268,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.0937296904537163,
+              "relY": 0.6097699828061737,
+              "relAngle": 0.0014299178725646657,
+              "relUp": -0.00006170668728377581
+            }
+          },
+          {
+            "inputTick": 4543,
+            "physicsTick": 4543,
+            "stateHash": "6d8fc8af82cec00d",
+            "phase": "riding",
+            "lean": 0.03639367650011163,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.0910758820778669,
+              "relY": 0.6092155452173086,
+              "relAngle": -0.01197404049323729,
+              "relUp": -0.06773037573534949
+            }
+          },
+          {
+            "inputTick": 4663,
+            "physicsTick": 4663,
+            "stateHash": "0dd998b62cd16372",
+            "phase": "riding",
+            "lean": -0.011150174736381474,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.09420712337935028,
+              "relY": 0.6098236115937516,
+              "relAngle": 0.002990842482614109,
+              "relUp": -0.00023602066112786424
+            }
+          }
+        ],
+        "detail": {
+          "event": {
+            "type": "land",
+            "impulse": 62.196691659871114,
+            "wheel": "front",
+            "surface": "wood",
+            "tick": 4542
+          },
+          "sample": {
+            "inputTick": 4543,
+            "physicsTick": 4543,
+            "stateHash": "6d8fc8af82cec00d",
+            "phase": "riding",
+            "lean": 0.03639367650011163,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.0910758820778669,
+              "relY": 0.6092155452173086,
+              "relAngle": -0.01197404049323729,
+              "relUp": -0.06773037573534949
+            }
+          },
+          "precedingAirborneTicks": 171,
+          "oppositeWheelGrounded": false,
+          "recovery": {
+            "sample": {
+              "inputTick": 4663,
+              "physicsTick": 4663,
+              "stateHash": "0dd998b62cd16372",
+              "phase": "riding",
+              "lean": -0.011150174736381474,
+              "commandedLean": 0,
+              "grounded": {
+                "rear": false,
+                "front": false
+              },
+              "riderBody": {
+                "relX": -0.09420712337935028,
+                "relY": 0.6098236115937516,
+                "relAngle": 0.002990842482614109,
+                "relUp": -0.00023602066112786424
+              }
+            },
+            "uninterruptedRiding": true
+          }
+        },
+        "wholeRecordingTraceSHA256": "df6cace1258fcd1c00ebe9cbc46d27652fb1ccef876caf6406f1a1c58f9ec498",
+        "final": {
+          "hash": "403301f5169c5d7c",
+          "phase": "finished",
+          "faults": 0,
+          "runTime": 45.86666666666667,
+          "finishTimeFloat64LE": "efeeeeeeeeee4640"
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "rookie-rear-landing-recovery",
+        "bike": "rookie",
+        "kind": "rear-landing-recovery",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/e2-rear-wheel-first-bot-3.json",
+        "sourcePath": "harness/inputs/e2-rear-wheel-first/bot-3.json",
+        "sourceSHA256": "c00fb3ba95e8c88aacc3d69789e50a327e1615bc331bd1492f3935ad6765ffb8",
+        "header": {
+          "version": 1,
+          "trackId": "e2-rear-wheel-first",
+          "seed": 2125781358,
+          "physicsHz": 120,
+          "note": "qualification clear: stranger control transfer from stranger-e2-rear-wheel-first-20260922-160522.json on rookie; replaces stale skill-3 recording restamped-from=unstamped src=a415fcb8 restamped-from=a4be385f",
+          "bike": "rookie",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 2560,
+          "centerInputTick": 2620,
+          "endInputTick": 2740
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 2560,
+            "physicsTick": 2560,
+            "stateHash": "3ee7ed573375aa03",
+            "phase": "riding",
+            "lean": -0.009502644828372231,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.09413723281906108,
+              "relY": 0.6099212264502667,
+              "relAngle": 0.0030102011574640875,
+              "relUp": 0.00022589555586317173
+            }
+          },
+          {
+            "inputTick": 2620,
+            "physicsTick": 2620,
+            "stateHash": "37aebdeefe5880d7",
+            "phase": "riding",
+            "lean": -0.07292734883787841,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": true,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.10226402847949195,
+              "relY": 0.6097208119072379,
+              "relAngle": -0.002246564898362613,
+              "relUp": 0.015689985528934372
+            }
+          },
+          {
+            "inputTick": 2740,
+            "physicsTick": 2740,
+            "stateHash": "922d26640f49093c",
+            "phase": "riding",
+            "lean": -0.05798917976827405,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.09938011454386575,
+              "relY": 0.6052883804657542,
+              "relAngle": -0.04101808062670481,
+              "relUp": -0.010940715242642078
+            }
+          }
+        ],
+        "detail": {
+          "event": {
+            "type": "land",
+            "impulse": 100.37456498054276,
+            "wheel": "rear",
+            "surface": "dirt",
+            "tick": 2619
+          },
+          "sample": {
+            "inputTick": 2620,
+            "physicsTick": 2620,
+            "stateHash": "37aebdeefe5880d7",
+            "phase": "riding",
+            "lean": -0.07292734883787841,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": true,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.10226402847949195,
+              "relY": 0.6097208119072379,
+              "relAngle": -0.002246564898362613,
+              "relUp": 0.015689985528934372
+            }
+          },
+          "precedingAirborneTicks": 114,
+          "oppositeWheelGrounded": false,
+          "recovery": {
+            "sample": {
+              "inputTick": 2740,
+              "physicsTick": 2740,
+              "stateHash": "922d26640f49093c",
+              "phase": "riding",
+              "lean": -0.05798917976827405,
+              "commandedLean": 0,
+              "grounded": {
+                "rear": true,
+                "front": true
+              },
+              "riderBody": {
+                "relX": -0.09938011454386575,
+                "relY": 0.6052883804657542,
+                "relAngle": -0.04101808062670481,
+                "relUp": -0.010940715242642078
+              }
+            },
+            "uninterruptedRiding": true
+          }
+        },
+        "wholeRecordingTraceSHA256": "df6cace1258fcd1c00ebe9cbc46d27652fb1ccef876caf6406f1a1c58f9ec498",
+        "final": {
+          "hash": "403301f5169c5d7c",
+          "phase": "finished",
+          "faults": 0,
+          "runTime": 45.86666666666667,
+          "finishTimeFloat64LE": "efeeeeeeeeee4640"
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "pro-maximum-forward-lean",
+        "bike": "pro",
+        "kind": "maximum-forward-lean",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/riding-poses-lean-transitions-pro.json",
+        "sourcePath": "harness/inputs/riding-poses/lean-transitions-pro.json",
+        "sourceSHA256": "7c3e2f5b7b6559c0a438fb59995c307b191a29172775ebc2747b562e1917d3f0",
+        "header": {
+          "version": 1,
+          "trackId": "flat-test",
+          "seed": 1,
+          "physicsHz": 120,
+          "note": "Riding poses ask73: actual input only. Neutral2s; half forward0.75s; full forward0.75s; neutral0.5s; half back0.75s; full back0.75s; forward0.5s; back0.25s; neutral0.75s. Quantized lean64/127. No synthetic posing or state edits.",
+          "bike": "pro",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 281,
+          "centerInputTick": 341,
+          "endInputTick": 461
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 281,
+            "physicsTick": 281,
+            "stateHash": "bb3b88d9eff3c4d0",
+            "phase": "riding",
+            "lean": 0.5523756931635303,
+            "commandedLean": 0.5039370078740157,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": 0.0013838854447024013,
+              "relY": 0.7422707298840766,
+              "relAngle": -0.2909494238968818,
+              "relUp": -0.08890352409102961
+            }
+          },
+          {
+            "inputTick": 341,
+            "physicsTick": 341,
+            "stateHash": "cdd1ef7888178210",
+            "phase": "riding",
+            "lean": 1,
+            "commandedLean": 1,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": 0.0785388581646308,
+              "relY": 0.7454221715325137,
+              "relAngle": -0.2670377158848663,
+              "relUp": 0.05603880167273946
+            }
+          },
+          {
+            "inputTick": 461,
+            "physicsTick": 461,
+            "stateHash": "bb7ea96838a641ee",
+            "phase": "riding",
+            "lean": -0.07152113240513444,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.10199254894622131,
+              "relY": 0.6076875888865865,
+              "relAngle": -0.021491441168479043,
+              "relUp": -0.021414603778913705
+            }
+          }
+        ],
+        "detail": {
+          "observedLean": 1,
+          "commandedLean": 1
+        },
+        "wholeRecordingTraceSHA256": "95c5d1d30adfca7c177126c9bc3c7d404711ccfcf63e833a2ec65a6daa9fffbd",
+        "final": {
+          "hash": "d87d05bfdb4defa9",
+          "phase": "riding",
+          "faults": 0,
+          "runTime": 7,
+          "finishTimeFloat64LE": null
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "pro-maximum-backward-lean",
+        "bike": "pro",
+        "kind": "maximum-backward-lean",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/riding-poses-lean-transitions-pro.json",
+        "sourcePath": "harness/inputs/riding-poses/lean-transitions-pro.json",
+        "sourceSHA256": "7c3e2f5b7b6559c0a438fb59995c307b191a29172775ebc2747b562e1917d3f0",
+        "header": {
+          "version": 1,
+          "trackId": "flat-test",
+          "seed": 1,
+          "physicsHz": 120,
+          "note": "Riding poses ask73: actual input only. Neutral2s; half forward0.75s; full forward0.75s; neutral0.5s; half back0.75s; full back0.75s; forward0.5s; back0.25s; neutral0.75s. Quantized lean64/127. No synthetic posing or state edits.",
+          "bike": "pro",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 522,
+          "centerInputTick": 582,
+          "endInputTick": 702
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 522,
+            "physicsTick": 522,
+            "stateHash": "2cc63e554c6b52ed",
+            "phase": "riding",
+            "lean": -0.5615707250761777,
+            "commandedLean": -0.5039370078740157,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.25742907059547177,
+              "relY": 0.5530703919983426,
+              "relAngle": -0.4742630552789564,
+              "relUp": 0.0033707303755638393
+            }
+          },
+          {
+            "inputTick": 582,
+            "physicsTick": 582,
+            "stateHash": "9e302ac80b9a4725",
+            "phase": "riding",
+            "lean": -1,
+            "commandedLean": -1,
+            "grounded": {
+              "rear": true,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.3081660337738257,
+              "relY": 0.5528298704179935,
+              "relAngle": -0.47515266069165296,
+              "relUp": -0.01900800935027605
+            }
+          },
+          {
+            "inputTick": 702,
+            "physicsTick": 702,
+            "stateHash": "289077ca4b7196dd",
+            "phase": "riding",
+            "lean": 1,
+            "commandedLean": 1,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": 0.08075638296956386,
+              "relY": 0.7572783493647959,
+              "relAngle": -0.3158659935277063,
+              "relUp": -0.005734478433566642
+            }
+          }
+        ],
+        "detail": {
+          "observedLean": -1,
+          "commandedLean": -1
+        },
+        "wholeRecordingTraceSHA256": "95c5d1d30adfca7c177126c9bc3c7d404711ccfcf63e833a2ec65a6daa9fffbd",
+        "final": {
+          "hash": "d87d05bfdb4defa9",
+          "phase": "riding",
+          "faults": 0,
+          "runTime": 7,
+          "finishTimeFloat64LE": null
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "pro-front-landing-recovery",
+        "bike": "pro",
+        "kind": "front-landing-recovery",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/c1-low-tide-bot-3-pro.json",
+        "sourcePath": "harness/inputs/c1-low-tide/bot-3-pro.json",
+        "sourceSHA256": "4402c1b564c39fda687232d8b637098320126780eb2cc7ddc6c5c8604b8021ed",
+        "header": {
+          "version": 1,
+          "trackId": "c1-low-tide",
+          "seed": 341352973,
+          "physicsHz": 120,
+          "note": "Pro early restamp bike=pro physics=v2 src=fd8fe7c2 historical=a415fcb8",
+          "bike": "pro",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 1168,
+          "centerInputTick": 1228,
+          "endInputTick": 1348
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 1168,
+            "physicsTick": 1168,
+            "stateHash": "3a440f602e0931c7",
+            "phase": "riding",
+            "lean": 0.009738447348456834,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.09327577019147122,
+              "relY": 0.610273385932752,
+              "relAngle": -0.006283321324599925,
+              "relUp": -0.006628684294478305
+            }
+          },
+          {
+            "inputTick": 1228,
+            "physicsTick": 1228,
+            "stateHash": "205c39747ccc18c4",
+            "phase": "riding",
+            "lean": 0.027161871618252113,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.09227635246192258,
+              "relY": 0.6100300591009441,
+              "relAngle": -0.0008599088434075308,
+              "relUp": -0.0256110729773128
+            }
+          },
+          {
+            "inputTick": 1348,
+            "physicsTick": 1348,
+            "stateHash": "06011fc96bf1cc38",
+            "phase": "riding",
+            "lean": 0.07541998639724054,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.08429873934106885,
+              "relY": 0.6065198262143917,
+              "relAngle": -0.016254707170966734,
+              "relUp": -0.07894727880299625
+            }
+          }
+        ],
+        "detail": {
+          "event": {
+            "type": "land",
+            "impulse": 17.85531790056939,
+            "wheel": "front",
+            "surface": "dirt",
+            "tick": 1227
+          },
+          "sample": {
+            "inputTick": 1228,
+            "physicsTick": 1228,
+            "stateHash": "205c39747ccc18c4",
+            "phase": "riding",
+            "lean": 0.027161871618252113,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": false,
+              "front": true
+            },
+            "riderBody": {
+              "relX": -0.09227635246192258,
+              "relY": 0.6100300591009441,
+              "relAngle": -0.0008599088434075308,
+              "relUp": -0.0256110729773128
+            }
+          },
+          "precedingAirborneTicks": 21,
+          "oppositeWheelGrounded": false,
+          "recovery": {
+            "sample": {
+              "inputTick": 1348,
+              "physicsTick": 1348,
+              "stateHash": "06011fc96bf1cc38",
+              "phase": "riding",
+              "lean": 0.07541998639724054,
+              "commandedLean": 0,
+              "grounded": {
+                "rear": false,
+                "front": true
+              },
+              "riderBody": {
+                "relX": -0.08429873934106885,
+                "relY": 0.6065198262143917,
+                "relAngle": -0.016254707170966734,
+                "relUp": -0.07894727880299625
+              }
+            },
+            "uninterruptedRiding": true
+          }
+        },
+        "wholeRecordingTraceSHA256": "d5a21f2e46ca017d70880d67c46ba2a47af7aefa92944199987c5cd5fab45b2c",
+        "final": {
+          "hash": "7ebdd3902741b09d",
+          "phase": "finished",
+          "faults": 0,
+          "runTime": 28.15,
+          "finishTimeFloat64LE": "6666666666263c40"
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      },
+      {
+        "id": "pro-rear-landing-recovery",
+        "bike": "pro",
+        "kind": "rear-landing-recovery",
+        "recording": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-inputs/recordings/e2-rear-wheel-first-bot-3-pro.json",
+        "sourcePath": "harness/inputs/e2-rear-wheel-first/bot-3-pro.json",
+        "sourceSHA256": "6325d033ed2488b5c46d4e1c4ce6371bd0bb4f505f406585ad1df992a05e2a53",
+        "header": {
+          "version": 1,
+          "trackId": "e2-rear-wheel-first",
+          "seed": 2125781358,
+          "physicsHz": 120,
+          "note": "bot skill=3 outcome=finished bike=pro physics=v2 src=a415fcb8 restamped-from=a4be385f",
+          "bike": "pro",
+          "physics": "v2"
+        },
+        "replayFromInputTick": 1,
+        "window": {
+          "startInputTick": 4728,
+          "centerInputTick": 4788,
+          "endInputTick": 4908
+        },
+        "matchedSamples": [
+          {
+            "inputTick": 4728,
+            "physicsTick": 65,
+            "stateHash": "13c6442ba7958f2d",
+            "phase": "riding",
+            "lean": 0.9685731422562187,
+            "commandedLean": 1,
+            "grounded": {
+              "rear": false,
+              "front": false
+            },
+            "riderBody": {
+              "relX": 0.07700318994470823,
+              "relY": 0.7658807647016213,
+              "relAngle": -0.2724105792460618,
+              "relUp": -0.07628548502115959
+            }
+          },
+          {
+            "inputTick": 4788,
+            "physicsTick": 125,
+            "stateHash": "c6cb0d514ae64dfe",
+            "phase": "riding",
+            "lean": -0.8780184127578373,
+            "commandedLean": -0.49606299212598426,
+            "grounded": {
+              "rear": true,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.299453721640468,
+              "relY": 0.5628458161528161,
+              "relAngle": -0.5221915338510138,
+              "relUp": -0.0319705646509873
+            }
+          },
+          {
+            "inputTick": 4908,
+            "physicsTick": 245,
+            "stateHash": "4150928803336b12",
+            "phase": "riding",
+            "lean": -0.7880919587941879,
+            "commandedLean": 0,
+            "grounded": {
+              "rear": true,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.2870829026072491,
+              "relY": 0.5674293304225482,
+              "relAngle": -0.5116533009380813,
+              "relUp": 0.9986737753176941
+            }
+          }
+        ],
+        "detail": {
+          "event": {
+            "type": "land",
+            "impulse": 69.82849182223282,
+            "wheel": "rear",
+            "surface": "dirt",
+            "tick": 124
+          },
+          "sample": {
+            "inputTick": 4788,
+            "physicsTick": 125,
+            "stateHash": "c6cb0d514ae64dfe",
+            "phase": "riding",
+            "lean": -0.8780184127578373,
+            "commandedLean": -0.49606299212598426,
+            "grounded": {
+              "rear": true,
+              "front": false
+            },
+            "riderBody": {
+              "relX": -0.299453721640468,
+              "relY": 0.5628458161528161,
+              "relAngle": -0.5221915338510138,
+              "relUp": -0.0319705646509873
+            }
+          },
+          "precedingAirborneTicks": 71,
+          "oppositeWheelGrounded": false,
+          "recovery": {
+            "sample": {
+              "inputTick": 4908,
+              "physicsTick": 245,
+              "stateHash": "4150928803336b12",
+              "phase": "riding",
+              "lean": -0.7880919587941879,
+              "commandedLean": 0,
+              "grounded": {
+                "rear": true,
+                "front": false
+              },
+              "riderBody": {
+                "relX": -0.2870829026072491,
+                "relY": 0.5674293304225482,
+                "relAngle": -0.5116533009380813,
+                "relUp": 0.9986737753176941
+              }
+            },
+            "uninterruptedRiding": true
+          }
+        },
+        "wholeRecordingTraceSHA256": "24fefd1c93415edbc4ae5009ca47405597ba2f6dae9ba72ac608da0c4bc9c06c",
+        "final": {
+          "hash": "5c141c1728d6f927",
+          "phase": "riding",
+          "faults": 16,
+          "runTime": 41.641666666666666,
+          "finishTimeFloat64LE": null
+        },
+        "status": "input window prepared; contact evidence unmeasured",
+        "poseInjection": false,
+        "bikeVisible": true,
+        "requiredVisibleContacts": [
+          "hand.L",
+          "hand.R",
+          "foot.L",
+          "foot.R",
+          "saddle"
+        ]
+      }
+    ],
+    "supportClassification": "Measure all five relations. Forward/standing intentionally clears saddle while grips/pegs support; low seated/back requires intended saddle/foot support. A measured saddle gap is not automatically a failure.",
+    "seatedReadiness": "Neutral grounded input window requires owner runtime pose plus actual visible saddle support; do not infer seated from anatomy crouch or socket debug flags.",
+    "contacts": {
+      "hand.L": {
+        "status": "unmeasured",
+        "reason": "Requires new-candidate reviewed visible surface patch and live-bike target binding; no socket/bone guess."
+      },
+      "hand.R": {
+        "status": "unmeasured",
+        "reason": "Requires new-candidate reviewed visible surface patch and live-bike target binding; no socket/bone guess."
+      },
+      "foot.L": {
+        "status": "unmeasured",
+        "reason": "Requires new-candidate reviewed visible surface patch and live-bike target binding; no socket/bone guess."
+      },
+      "foot.R": {
+        "status": "unmeasured",
+        "reason": "Requires new-candidate reviewed visible surface patch and live-bike target binding; no socket/bone guess."
+      },
+      "saddle": {
+        "status": "unmeasured",
+        "reason": "Requires new-candidate reviewed visible surface patch and live-bike target binding; no socket/bone guess."
+      }
+    },
+    "existingFourContactProbe": "harness/hero-remaster/surface-contacts.mts#prepareSurfaceContacts",
+    "extraSaddleRequirement": "Existing probe has hand/foot only. Separate parent-reviewed pelvis/seat patches and live saddle target are mandatory; keep unmeasured until supplied.",
+    "candidateReadiness": [
+      "Owner-pinned new textured candidate/rig/controller and exact consumed GLB hashes.",
+      "Reviewed candidate surface patches/runtime geometry hashes, live-bike target bindings for full and LOD separately.",
+      "Actual production update retained; no authored pose injection, body/bike teleport or fitted socket as surrogate.",
+      "Replay every recording prefix from input1; state/hash/finish-byte and effective-camera equality between baseline/candidate.",
+      "All five visible contacts sampled through motion; root judges gaps/penetration/coverage and played choreography."
+    ]
+  },
+  "preservation": {
+    "historicalPacket": "683cff0a",
+    "redoHistoricalCapture": false,
+    "sourceConstruction": false,
+    "canonicalControls": "unchanged; full/raw/four and prior played packets remain pinned"
+  },
+  "limits": [
+    "Input/mode preparation only: no new rider/body/cloth geometry, movie, contact measurement, supported motion or art/device acceptance.",
+    "Dense collision pair counts and socket booleans are not acceptance. Do not manufacture contact mappings from bones/skin weights."
+  ]
+}
