@@ -6,6 +6,8 @@
 
 # What we are building — the plans and where each stands
 
+**Desktop task visibility (ask265):** Four other Rockhop tasks identified through the supported inventory; first two histories readable, two host histories unavailable. Later durable handoffs freeze construction, stop replacement generation and freeze checker613b8138. No foreign task messages, interruption or job launch by this audit owner.
+
 **Rider review website (ask264):** [Private picture packet](https://rockhop-rider-baseline-review.raynos.chatgpt.site): eight retained pictures/two silent diagnostic clips, enlarged sources and local feedback download. [Delivery](../evidence/hero-remaster/rider-baseline-review-site-2026-10-03/README.md) records WebKit1200/390 media/layout checks and third-round identical clear/crash/restart. Historical packet; all current-candidate and phone gates remain open.
 
 **Small commit scope (ask266; originally262):** AGENTS.md now requires separate commits for plan writing, archive/link maintenance, target inventory and review-gallery work; verify and commit each finished unit before the next, staging only owned paths/hunks. Current rider gate states remain unchanged.
