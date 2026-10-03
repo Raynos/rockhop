@@ -367,3 +367,16 @@ Ask:276; expanded qualified comparison.
 Limits: Static inventory is not operator/conditioning/extraction parity.
 Large weights require fresh digest verification before trust. TRELLIS naive
 aliases MPS SDPA; Pixal naive uses chunked float32; runtime tests pending.
+
+Finding: Actual installed TRELLIS sparse naive/SDPA attention agrees with
+independent CPU float32 math on four bounded synthetic controls.
+
+Validation: Guard exited0 in4.969s; 256 and16384token normalized/rotated
+inputs, float32 and bfloat16, all finite/pass. Maxfloat32error4.47e-6;
+bfloat16error0.0078125 against quantized CPU reference. No model weights.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-attention01/receipt.json
+Ask:276; expanded qualified comparison.
+
+Limits: One-batch synthetic operator checks cannot establish CUDA/model
+parity or all realistic learned activations; extraction/conditioning still
+need separate qualification. Shared source untouched.
