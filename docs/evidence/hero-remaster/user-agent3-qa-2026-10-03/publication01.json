@@ -1,0 +1,83 @@
+{
+  "status": "PUSH_VERIFIED_NO_RIDER_ACCEPTANCE",
+  "pushedAndRemoteSHA": "296da2fea6e4c825b710c78f41d921fb2e2734a4",
+  "ciRun": "https://github.com/Raynos/rockhop/actions/runs/37141837970",
+  "ciConclusion": "success",
+  "jobs": {
+    "build-and-deploy": "success",
+    "store": "success"
+  },
+  "typecheck": "pass",
+  "releaseFilteredTests": {
+    "passed": 1584,
+    "skipped": 11
+  },
+  "trackedReleaseCodeLint": {
+    "paths": 799,
+    "errors": 0
+  },
+  "localFullTreeLintLimit": "Historical authoring scripts excluded from release sparse checkout still produce local full-tree lint errors; exact cloud release lint passed.",
+  "ordinaryGate": {
+    "build": "/Users/raynos/projects/games/rockhop/harness/out/user-agent3-2026-10-03/publication-2026-10-03-build",
+    "recordingFile": "harness/inputs/b1-first-ride/bot-3.json",
+    "expected": {
+      "hash": "368f1ca5bd9e830a",
+      "runTime": 40.083333333333336,
+      "faults": 0,
+      "finishTime": 40.083333333333336,
+      "tick": 4810
+    },
+    "hipReviewDriver": false,
+    "sleeveReviewDriver": false,
+    "sleeveReviewOverlay": null,
+    "reviewOverlay": null,
+    "runs": [
+      {
+        "sleeveCorrective": null,
+        "tier": "low",
+        "result": {
+          "hash": "368f1ca5bd9e830a",
+          "runTime": 40.083333333333336,
+          "faults": 0,
+          "finishTime": 40.083333333333336,
+          "tick": 4810
+        },
+        "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+        "crashRestart": {
+          "crashed": true,
+          "crashTicks": 103,
+          "restartPhase": "riding",
+          "restartTick": 0,
+          "restartMs": 1
+        },
+        "hipCorrective": null
+      },
+      {
+        "sleeveCorrective": null,
+        "tier": "high",
+        "result": {
+          "hash": "368f1ca5bd9e830a",
+          "runTime": 40.083333333333336,
+          "faults": 0,
+          "finishTime": 40.083333333333336,
+          "tick": 4810
+        },
+        "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+        "crashRestart": {
+          "crashed": true,
+          "crashTicks": 103,
+          "restartPhase": "riding",
+          "restartTick": 0,
+          "restartMs": 2
+        },
+        "hipCorrective": null
+      }
+    ],
+    "errors": []
+  },
+  "gateReportSHA256": "bd69c68e4203f59ea506ae5ffdda957a847803fc29fb0bd330e62b4c4e0c56b0",
+  "normalPlayerPathsSincePriorLive": "unchanged src/public/scripts/workflows/package/lock; 20 shipped models, no replacements",
+  "deployment": "No deployment event for this SHA; push deploy steps skipped. No manual dispatch.",
+  "liveSHAAtVerification": "5a95196ab622f728d5e84f7780074509e25c2c58",
+  "scope": "Single normal fast-forward push of completed source/evidence checkpoints; active edits/shared index untouched. Later commits intentionally remain for next coordinated publication."
+}

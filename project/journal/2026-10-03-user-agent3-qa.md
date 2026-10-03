@@ -149,3 +149,13 @@ all six user.library-file-id/version metadata values match bridge receipts.
 Limits: Delivery only, no remote download verification or rider acceptance;
 no duplicate upload/capture. Riding-named films remain synthetic Garage FK.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/corrective01-garage/library-receipts.json
+
+Finding: One coordinated source/evidence push to296da2fe has exact remote SHA
+and final successful web/store CI; current rider acceptance stays open.
+Validation: Typecheck/1584tests/799release-code lint paths and fresh ordinary
+low/high gate pass;4810identicalticks/finishbytes, crash103, restart1/2ms.
+CI37141837970 both jobs success. Active edits and shared index untouched.
+Limits: Historical authoring lint errors stay outside release checkout; cloud
+release lint passes. No deploy event/manual dispatch; live remains5a95196a.
+Later unpushed checkpoints intentionally excluded from the frozen publication.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/publication01.json
