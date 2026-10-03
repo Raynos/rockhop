@@ -45,3 +45,12 @@ find full/four max306/304cloth-body and107/107nonadjacent selfpairs. No audio.
 Limits: Local nearest-normal is not global penetration; synthetic FK is not
 bike support. Root alone judges; native Library upload capability unavailable.
 Evidence: [played review](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/review/README.md). Ask274.
+
+Finding: A single explicitly scoped authored-skin metadata derivative preserves
+new own-bind weights without changing the legacy conditioning of shipped files.
+Validation: BIN/skins unchanged; actualGltfRider four meshes/four stage switches
+preserved; ten shipped signatures unchanged;26 existing regressions and syntax/
+lint pass. Sixth-round ordinary Metal4810tick clear/crash/restart1tick passes.
+Limits: Diagnostic UNACCEPTED; source-four loss and garment contact retained
+separately. No global loader/player edit; independentQA and root judgment open.
+Evidence: [authored01](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/authored01/README.md). Ask274.
