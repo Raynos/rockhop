@@ -325,3 +325,18 @@ Ask:276.
 Limits: Proposal is not run qualification or art/fit/rig acceptance. Rich image
 adds visible information, not guaranteed PBR/unseen geometry. Reference/root
 approval and frozen target are needed; no second run or integration delay.
+
+Finding: Exact b7 donor raw positions match actual GLTFLoader rest-world within
+1.975micrometres; glove misregistration is donor arm-down versus canonical
+true_A, not a hidden mesh transform. Boots reside in material0 foot regions.
+
+Validation: All90766vertices across five primitives checked, independent full
+skin/world formula error0; source SHA unchanged. Leather4021vertices are
+hand/forearm weighted only. Original material UV0/UV1 registrations and atlas
+pixel witnesses recorded; Node syntax passes. No browser/audio/asset edit.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/donor-rest01/registration.json
+Ask:276; bounded Agent1 material/coordinate support.
+
+Limits: Joint-weight groups are region hints, not sewn boundaries or accepted
+style. Images omitted only in loader memory; no old donor anatomy/weights/rig
+adopted, global transform fix, generated asset, PBR bake or fit acceptance.
