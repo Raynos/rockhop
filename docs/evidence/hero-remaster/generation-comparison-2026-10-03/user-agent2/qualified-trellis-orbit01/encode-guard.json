@@ -1,0 +1,54 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/encode_trellis_orbit.py",
+    "--orbit",
+    "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-orbit01/orbit.json",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis-encode01/encode"
+  ],
+  "controllerPID": 10376,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 39.6,
+      "wiredGiB": 7.3,
+      "freeGiB": 16.4
+    },
+    {
+      "seconds": 0.039,
+      "anonymousGiB": 39.6,
+      "wiredGiB": 7.3,
+      "freeGiB": 16.3
+    },
+    {
+      "seconds": 1.07,
+      "anonymousGiB": 40.3,
+      "wiredGiB": 7.3,
+      "freeGiB": 15.6
+    },
+    {
+      "seconds": 2.117,
+      "anonymousGiB": 40.4,
+      "wiredGiB": 7.3,
+      "freeGiB": 15.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 10380,
+  "exitCode": 0,
+  "elapsedSeconds": 2.153
+}

@@ -1334,3 +1334,18 @@ Ask:284–286.
 Limits: Frozen render checkpoint; silent matched encoding/root judgment
 pending. Native pervertex material display is not UVbake/map-level/fit/rig/
 mobile/finalart pass. Original full raw arrays remain unchanged.
+
+Finding: One qualified TRELLIS seed now has a frozen6second silent matched
+neutral/nativePBR movie and raw/material/version handoff for root.
+
+Validation: Future96encodeguard0/2.153s;48frames8fps1024x576, onevideo/
+noaudio; unchanged512²panels beneath labels.48distinct frames eachcolumn,
+all48material pairs differ technically. Original6,322,984faceindices/
+vertices exact; native trilinear control max2.4118e-7. MovieSHA
+7354ac90919c85c9a3f4be039ae4f7a1dd4eee750b0c8719dcb919d7dcad9664; raw/material/reference pins rechecked.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-orbit01/handoff.json
+Ask:284–286.
+
+Limits: Root played judgment pending. Pervertex PBR derivative, no UVbake/
+maplevel/fit/rig/opening/mobile/finalart/CUDApass. No new neural seed,
+sourceintegration or Library upload claimed by this local builder.
