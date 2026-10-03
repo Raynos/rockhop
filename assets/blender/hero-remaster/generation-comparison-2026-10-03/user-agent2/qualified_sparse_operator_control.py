@@ -73,6 +73,7 @@ def grid_oracle(coords, feats, points, shape, mode):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--out', required=True)
+    parser.add_argument('--protected-trilinear', action='store_true')
     args = parser.parse_args()
     assert os.environ.get('ROCKHOP_GENERATION_CONTROLLER_PID'), 'Bounded controller required'
     import torch
@@ -80,6 +81,7 @@ def main():
     from flex_gemm import kernels
     from flex_gemm.ops import spconv
     from flex_gemm.ops.grid_sample import grid_sample_3d
+    from qualified_sparse_sampling import sample_with_float32_trilinear
 
     assert torch.backends.mps.is_available()
     assert kernels._BACKEND == 'metal'
@@ -89,6 +91,8 @@ def main():
     report = {'accepted': False, 'control': 'synthetic forward only',
               'torch': torch.__version__, 'flexGemm': pin(flex_gemm.__file__),
               'backend': kernels._BACKEND, 'algorithm': spconv.ALGORITHM,
+              'protectedTrilinear': args.protected_trilinear,
+              'adapter': pin(Path(__file__).with_name('qualified_sparse_sampling.py')),
               'compiledExtension': pin(kernels.metal._C.__file__),
               'metallib': pin(Path(kernels.metal.__file__).parent / 'flex_gemm.metallib'),
               'ops': [pin(Path(flex_gemm.__file__).parent / p) for p in
@@ -161,8 +165,13 @@ def main():
         c = torch.from_numpy(coords).to('mps').contiguous()
         q = torch.from_numpy(queries).to('mps').contiguous()
         for mode in ('nearest', 'trilinear'):
+            assert args.protected_trilinear or dtype == torch.float32 or mode == 'nearest', 'Known unsafe native low-precision weighted-sum route is disabled'
             expected = grid_oracle(coords, f.float().cpu().numpy(), queries, shape, mode)
-            actual = grid_sample_3d(f, c, shape, q, mode=mode)
+            before = [t.cpu().clone() for t in (f, c, q)]
+            if args.protected_trilinear:
+                actual = sample_with_float32_trilinear(grid_sample_3d, f, c, shape, q, mode)
+            else:
+                actual = grid_sample_3d(f, c, shape, q, mode=mode)
             torch.mps.synchronize()
             values = actual.float().cpu().numpy()
             key = f'grid-{mode}-{str(dtype).split(".")[-1]}'
@@ -170,11 +179,15 @@ def main():
             np.savez_compressed(archive, coords=coords, features=f.float().cpu().numpy(), queries=queries, expected=expected, actual=values)
             record = {'kind': 'grid', 'case': key, 'archive': pin(archive),
                       'resultShape': list(values.shape), 'threshold': tolerance,
+                      'float32Promotion': args.protected_trilinear and mode == 'trilinear' and dtype != torch.float32,
+                      'outputDtypePreserved': actual.dtype == dtype,
+                      'inputsUnchanged': all(torch.equal(t.cpu(), original) for t, original in zip((f,c,q), before)),
                       'maxCPUFloat64Error': float(np.max(np.abs(values-expected))),
                       'finite': bool(np.isfinite(values).all())}
             report['cases'].append(record)
             save()
             assert values.shape == expected.shape and record['finite'] and record['maxCPUFloat64Error'] <= tolerance, record
+            assert record['outputDtypePreserved'] and record['inputsUnchanged'], record
     report['status'] = 'All synthetic forward contracts pass; learned/model proof pending'
     save()
     print(json.dumps({'status': report['status'], 'cases': len(report['cases'])}))

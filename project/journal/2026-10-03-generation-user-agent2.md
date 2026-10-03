@@ -1146,3 +1146,15 @@ Ask:284–286.
 Limits: Synthetic forward only; no learned/fullmodel/CUDA or quality
 finding. No sharedpatch/threshold widening or unsafe lowprecision rerun.
 Owned float32 trilinear promotion must be separately qualified.
+
+Finding: Unaccepted owned trilinear adapter freezes float32 feature
+promotion around the installed float-only native weighted-sum kernel.
+
+Validation: Syntax and whitespace pass. Native coordinate/hashmap/query,
+weights and missing-support semantics retained; output casts once to real
+input dtype. Known unsafe native lowprecision route disabled in controls.
+The recipe checks unchanged inputs/output dtype with original error limits.
+Ask:284–286.
+
+Limits: Recipe checkpoint only; fresh bounded numerical control pending.
+No shared runtime edits, dense fallback, zero filling or learned parity.
