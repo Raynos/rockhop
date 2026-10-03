@@ -63,3 +63,13 @@ raw/imported head height agrees sub-µm. Node syntax/scoped lint pass.
 Limits: Read-only geometry report drops textures only in memory; no graft,
 new-bind transfer or appearance approval. Cloud6fd9 remains distinct.
 Evidence: [head donor](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/head-donor01/README.md). Ask274.
+
+Finding: Reviewed-pose defects include true body/garment contacts and a separate
+coincident boxer/trouser layer selection error. Shirt hem is57.2% thigh-weighted,
+a specific scallop suspect rather than a reason to sweep global weights.
+Validation: Exactframes0/112/144/240 triangle/vertex/seam witnesses saved;
+restboxer/jeans295pairs, seatedjeans/body845; source hash unchanged. Recipe
+syntax passes; ninth-round ordinary silent Metal4810tick clear/restart passes.
+Limits: Local normal dots not global penetration; source control UNACCEPTED;
+bounded rest-fit mechanism has not run or passed. No recoloring/masking fix.
+Evidence: [fit witnesses](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/fit-witness01/README.md). Ask274.
