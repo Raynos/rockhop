@@ -1,0 +1,117 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "model": "pixal",
+  "source": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/utils/mesh_extract.py",
+  "sourceSHA256": "40fdc42ecf476a79b939ef85dca6ac251803235065e203126a4967a839d11541",
+  "recipeSHA256": "a1876cc4108b74b4215f82bcbb4baef673f0b22633f84631d2fc8beb92575e9d",
+  "torch": "2.12.0",
+  "cases": [
+    {
+      "name": "cube",
+      "resolution": 2,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 8,
+        "faces": 12,
+        "vertexDtype": "float32",
+        "faceDtype": "int64",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            0.5,
+            0.5,
+            0.5
+          ],
+          [
+            1.5,
+            1.5,
+            1.5
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 0.5,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 18,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 6,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          12
+        ]
+      },
+      "CPUAndMPSFaceArraysIdentical": true,
+      "maxCPUAndMPSVertexError": 0.0,
+      "fixtureSHA256": "84344a84c2793b93f73ded69afe2ae9eee655bfd8b2af3bee07980cd931e4ec4",
+      "archivePath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/pixal-extraction01/control/cube.npz",
+      "passClosedConnectivityAndDeviceAgreement": true
+    },
+    {
+      "name": "sphere",
+      "resolution": 16,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 4096,
+        "faces": 1068,
+        "vertexDtype": "float32",
+        "faceDtype": "int64",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            -0.9955849647521973,
+            -0.9955849647521973,
+            -0.9955849647521973
+          ],
+          [
+            0.9955849647521973,
+            0.9955849647521973,
+            0.9955849647521973
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 0.0017399657876096173,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 1602,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 366,
+        "unusedVertices": 3560,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          1068
+        ]
+      },
+      "CPUAndMPSFaceArraysIdentical": true,
+      "maxCPUAndMPSVertexError": 0.0,
+      "fixtureSHA256": "a5534e14a9aa69ea629f6fcf78672e157ebebcfc59483af58484cafd5faf558d",
+      "archivePath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/pixal-extraction01/control/sphere.npz",
+      "passClosedConnectivityAndDeviceAgreement": true
+    }
+  ],
+  "limits": [
+    "CPU/MPS analytic extraction agreement is not CUDA equivalence.",
+    "Closed analytic controls do not establish learned garment topology or material/fit quality.",
+    "Native orientation and coordinate mapping reported; no shared extractor edits.",
+    "Closed connectivity/device controls PASS, native orientation FAIL: cube6/sphere366 inconsistent directed edges."
+  ],
+  "allClosedConnectivityAndDeviceControlsPass": true,
+  "allNativeOrientationsConsistent": false,
+  "reportFormattingRevision": "Separate orientation flag added after execution; recipe executed SHA retained above, current recipeSHA256 below",
+  "currentRecipeSHA256": "a70a4479554ca915716bbd117dff78aa8fc5da732ca5da579aca685d21d6f9fc"
+}

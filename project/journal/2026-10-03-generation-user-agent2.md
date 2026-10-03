@@ -391,3 +391,16 @@ Ask:276; expanded qualified comparison.
 
 Limits: Operator-only, one-batch controls do not qualify conditioning,
 extraction, full learned activations or CUDA parity; source untouched.
+
+Finding: Pixal actual MPS learned-split extraction matches CPU arrays on
+closed cube/sphere, but native winding fails with6/366 inconsistent edges.
+
+Validation: Guard exit0 in0.896s; finite arrays, no boundary/overused/zero
+area edges/triangles; CPU/MPS vertexerror0 and identical faces. Nonuniform
+learned-split weights exercised. Orientation flag explicitly fails.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/pixal-extraction01/receipt.json
+Ask:284–286.
+
+Limits: No CUDA equivalence, conditioning or learned garment proof. No
+shared decoder edits. Raw output remains immutable; any derived normal
+preview must be marked and cannot repair holes or garment fit.
