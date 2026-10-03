@@ -1429,3 +1429,17 @@ Ask:284–286.
 
 Limits: Synthetic forward only, no learned conditioning/seed/backward/CUDA
 pass. Owned process-local adapters explicit; no installed file edited.
+
+Finding: Root requests corrected upright TRELLIS moving display; frozen
+raw geometry/material bytes retained after completed Pixal sparse boundary.
+
+Validation: Source syntax/whitespace pass; nativebboxYdepth0.397741 versus
+Zheight0.814099 diagnoses prior90degreeX display tipping. Owned identity
+XYZ axis recipe records uniformscale, neutral light and48fullorbit views.
+Raw arrays/readback/material shader values require exact identity; historical
+movie retained. Runtime24 player/dependency pins unchanged, playerdiff0.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-upright-recipe01/
+Ask:284–286 root review follow-up.
+
+Limits: Unaccepted recipe; render/encode/root moving judgment pending.
+No new seed, recolor, cleanup, openings usability or model winner claim.
