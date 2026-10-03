@@ -75,3 +75,24 @@ require a mechanism change. Retain partial arrays/checkpoints and exact settings
 Next: freeze qualified fitting contract, then one cheap probe and raw topology
 audit before quality runs. Played Blender/engine fit, art, rig, device and release
 checks remain open; nothing enters normal player assets.
+
+## Exact decoded-array preservation preparation
+
+[`native-save-check.json`](native-save-check.json) records an executed synthetic
+NumPy check in the installed TRELLIS environment. New `native_save.py` preserves
+decoded vertex/face/attribute/coordinate dtypes and bytes, saves before geometry
+validation, retains optional FDG fields and voxel/layout metadata separately,
+refuses overwrites and independently reloads each array to verify bytes.
+The test retains an intentionally invalid NaN sample rather than dropping it.
+
+The fixture exposes 0.0000813901424407959 maximum attribute error from the older
+float16 conversion. New save keeps float32 attributes and int64 face indices
+byte-identical. This is a synthetic storage result, not neural inference or fit.
+Ignored test archives stay in `.tmp`; the small measured receipt is committed.
+
+TRELLIS's actual nested model source is additionally pinned at
+`75fbf0183001ed9876c8dbb35de6b68552ee08bd`; the earlier inventory's d58628f4 is
+the Mac wrapper. The real pipeline module hash is in this new receipt. Any
+eventual worker must call this saver at decode time before display processing,
+and pin its qualified image/contract/config/module hashes. No such worker has
+been launched; no model lease is held.
