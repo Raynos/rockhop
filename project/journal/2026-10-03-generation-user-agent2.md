@@ -1665,3 +1665,16 @@ Ask:284–286.
 
 Limits: Explicit1024 lower-memory alternative;1536 didnotcomplete.
 Native material/movingrootreview pending; no fit/rig/mobile acceptance.
+
+Finding: Native Pixal float32 trilinear material recipe reuses measured
+eight-corner oracle on actual raw1024 vertices.
+
+Validation: Source syntax passes; frozenraw fa99516e identity/2,823,607
+vertices and actualPixalMetal extension/metallib require exactpins.
+131072vertex chunks,257independent CPU witnesses≤1e-5, originalattrs/
+coords preserved. Torch2.12native float32route; no nearest/recolor/bake.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_vertex_material.py
+Ask:284–286.
+
+Limits: Unaccepted pervertexdisplay derivative; not UVbake/maplevelpass.
+Actualrun/matchedmovie/rootplayedjudgment pending.
