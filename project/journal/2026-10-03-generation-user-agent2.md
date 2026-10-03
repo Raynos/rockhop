@@ -503,3 +503,17 @@ Ask:284–286.
 Limits: Worker execution pending; shape only, paint/root played review
 separate. Owned process compatibility shims explicitly recorded, no shared
 runtime/source/weights changes or CUDA/fit/rig acceptance.
+
+Finding: Hunyuan2.1 proper30step seed42 completed sampling but guard stopped
+owned decode before raw mesh at memory bound with200000query chunks.
+
+Validation: Guard74/child−15 in49.282s; actual3.05B DiT/327.7M VAE/304.4M
+SingleImageEncoder imported from intended2.1 source onMPSfloat16. Actual
+processor/features/noise preserved. Log reports requested384→effective380
+FlashVDM hierarchy95/190/380. No native mesh saved.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-hoodie01/
+Ask:284–286.
+
+Limits: Specific resource-bound decode failure, no model-family quality
+verdict or asset acceptance. No foreign process stopped or bounds raised.
+Batch-chunk remediation requires source/behavior evidence before retry.
