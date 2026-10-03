@@ -1,0 +1,735 @@
+{
+  "accepted": false,
+  "lastVerified": "2026-10-03",
+  "modelRuns": 0,
+  "recipe": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_inventory.py",
+    "exists": true,
+    "bytes": 6756,
+    "resolvedPath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_inventory.py",
+    "symlink": false,
+    "sha256": "28da60a11361a353732841c68c27a2ed916c9af3977db3759be43236a0a1e870"
+  },
+  "publicUpstreamSnapshots": [
+    {
+      "model": "Hunyuan3D-2.1",
+      "url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hunyuan3D-2.1/main/gradio_app.py",
+      "sha256": "b51de60c14fda360aab5c6dc505d6f42991a062c478c580321a28277ecbf5b7d",
+      "witnesses": [
+        {
+          "line": 225,
+          "text": "guidance_scale=7.5,"
+        },
+        {
+          "line": 261,
+          "text": "'guidance_scale': guidance_scale,"
+        },
+        {
+          "line": 305,
+          "text": "guidance_scale=guidance_scale,"
+        },
+        {
+          "line": 334,
+          "text": "guidance_scale=7.5,"
+        },
+        {
+          "line": 350,
+          "text": "guidance_scale=guidance_scale,"
+        },
+        {
+          "line": 416,
+          "text": "guidance_scale=7.5,"
+        },
+        {
+          "line": 432,
+          "text": "guidance_scale=guidance_scale,"
+        },
+        {
+          "line": 560,
+          "text": "value=5 if 'turbo' in args.subfolder else 30,"
+        },
+        {
+          "line": 562,
+          "text": "octree_resolution = gr.Slider(maximum=512,"
+        },
+        {
+          "line": 567,
+          "text": "cfg_scale = gr.Number(value=5.0, label='Guidance Scale', min_width=100)"
+        },
+        {
+          "line": 668,
+          "text": "return gr.update(value=30)"
+        },
+        {
+          "line": 678,
+          "text": "return gr.update(value=384)"
+        }
+      ]
+    },
+    {
+      "model": "TRELLIS.2",
+      "url": "https://raw.githubusercontent.com/microsoft/TRELLIS.2/main/app.py",
+      "sha256": "b87c4422630b6439e777b1ada1246a045cde77a2957fd82fbe7908bb2112d912",
+      "witnesses": [
+        {
+          "line": 396,
+          "text": "\"1536\": \"1536_cascade\","
+        },
+        {
+          "line": 528,
+          "text": "resolution = gr.Radio([\"512\", \"1024\", \"1536\"], label=\"Resolution\", value=\"1024\")"
+        },
+        {
+          "line": 541,
+          "text": "ss_sampling_steps = gr.Slider(1, 50, label=\"Sampling Steps\", value=12, step=1)"
+        },
+        {
+          "line": 547,
+          "text": "shape_slat_sampling_steps = gr.Slider(1, 50, label=\"Sampling Steps\", value=12, step=1)"
+        },
+        {
+          "line": 553,
+          "text": "tex_slat_sampling_steps = gr.Slider(1, 50, label=\"Sampling Steps\", value=12, step=1)"
+        }
+      ]
+    },
+    {
+      "model": "Pixal3D",
+      "url": "https://raw.githubusercontent.com/TencentARC/Pixal3D/master/inference.py",
+      "sha256": "77b6d00b4ab7fc9db31ec56671be67a98fc275d829fe70798603b9f02de37185",
+      "witnesses": [
+        {
+          "line": 167,
+          "text": "ss_sampling_steps: int = 12,"
+        },
+        {
+          "line": 171,
+          "text": "shape_slat_sampling_steps: int = 12,"
+        },
+        {
+          "line": 175,
+          "text": "tex_slat_sampling_steps: int = 12,"
+        },
+        {
+          "line": 244,
+          "text": "pipeline_type = f\"{resolution if resolution > 0 else (1024 if low_vram else 1536)}_cascade\""
+        },
+        {
+          "line": 245,
+          "text": "print(f\"[Inference] Using pipeline_type={pipeline_type}\")"
+        },
+        {
+          "line": 255,
+          "text": "pipeline_type=pipeline_type,"
+        }
+      ]
+    }
+  ],
+  "repositories": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac",
+      "head": "d58628f4f5b9c3de8274cb110074154f4b31cef2",
+      "origin": "https://github.com/shivampkumar/trellis-mac.git",
+      "existingChangesPreserved": []
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2",
+      "head": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+      "origin": "https://github.com/microsoft/TRELLIS.2.git",
+      "existingChangesPreserved": [
+        "M trellis2/models/sc_vaes/fdg_vae.py",
+        " M trellis2/modules/image_feature_extractor.py",
+        " M trellis2/modules/sparse/attention/full_attn.py",
+        " M trellis2/modules/sparse/config.py",
+        " M trellis2/pipelines/base.py",
+        " M trellis2/pipelines/rembg/BiRefNet.py",
+        " M trellis2/pipelines/trellis2_image_to_3d.py",
+        " M trellis2/representations/mesh/base.py",
+        "?? trellis2/modules/sparse/conv/conv_none.py"
+      ]
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac",
+      "head": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+      "origin": "https://github.com/pawel-mazurkiewicz/Pixal3D-mac.git",
+      "existingChangesPreserved": [
+        "M extern/mtlgemm/setup.py",
+        " M generate_mps.py",
+        " M pixal3d/pipelines/rembg/BiRefNet.py",
+        " M pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py",
+        "?? extern/o_voxel/third_party/"
+      ]
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1",
+      "head": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+      "origin": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1.git",
+      "existingChangesPreserved": [
+        "M hy3dpaint/DifferentiableRenderer/MeshRender.py",
+        " M hy3dpaint/DifferentiableRenderer/mesh_utils.py",
+        " M hy3dpaint/hunyuanpaintpbr/__init__.py",
+        " M hy3dpaint/hunyuanpaintpbr/pipeline.py",
+        " M hy3dpaint/hunyuanpaintpbr/unet/attn_processor.py",
+        " M hy3dpaint/textureGenPipeline.py",
+        " M hy3dpaint/utils/image_super_utils.py",
+        " M hy3dpaint/utils/multiview_utils.py",
+        "?? install-provenance.json",
+        "?? runtime/"
+      ]
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/NAF",
+      "head": "37f2dfc180f2de53d98bd601109c0da0dd6b0f43",
+      "origin": "https://github.com/valeoai/NAF.git",
+      "existingChangesPreserved": [
+        "M hubconf.py"
+      ]
+    }
+  ],
+  "trellis": {
+    "config": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-view/pipeline.json",
+      "exists": true,
+      "bytes": 5122,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/trellis-view/pipeline.json",
+      "symlink": false,
+      "sha256": "8d7ce55f476486f8efe4005bbbdbfb889aeda5c7d3b8e779a3e3d0df5161ae07"
+    },
+    "defaultPipeline": "1024_cascade",
+    "samplers": {
+      "sparse_structure_sampler": {
+        "steps": 12,
+        "guidance_strength": 7.5,
+        "guidance_rescale": 0.7,
+        "guidance_interval": [
+          0.6,
+          1.0
+        ],
+        "rescale_t": 5.0
+      },
+      "shape_slat_sampler": {
+        "steps": 12,
+        "guidance_strength": 7.5,
+        "guidance_rescale": 0.5,
+        "guidance_interval": [
+          0.6,
+          1.0
+        ],
+        "rescale_t": 3.0
+      },
+      "tex_slat_sampler": {
+        "steps": 12,
+        "guidance_strength": 1.0,
+        "guidance_rescale": 0.0,
+        "guidance_interval": [
+          0.6,
+          0.9
+        ],
+        "rescale_t": 3.0
+      }
+    },
+    "imageConditioner": {
+      "name": "DinoV3FeatureExtractor",
+      "args": {
+        "model_name": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m"
+      }
+    },
+    "backgroundModel": {
+      "name": "BiRefNet",
+      "args": {
+        "model_name": "/Users/raynos/projects/weights/manual/ZhengPeng7/BiRefNet"
+      }
+    },
+    "checkpoints": [
+      {
+        "role": "sparse_structure_decoder",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.json",
+          "exists": true,
+          "bytes": 245,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.json",
+          "symlink": false,
+          "sha256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5"
+        },
+        "modelClass": "SparseStructureDecoder",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+          "exists": true,
+          "bytes": 147591972,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "sparse_structure_flow_model",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+          "exists": true,
+          "bytes": 467,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+          "symlink": false,
+          "sha256": "6cdfb636854f60ffcadd8c49244169cd449f34c5ccdb55b5ff7c04678f9c399e"
+        },
+        "modelClass": "SparseStructureFlowModel",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+          "exists": true,
+          "bytes": 2584426920,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "shape_slat_decoder",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+          "exists": true,
+          "bytes": 678,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+          "symlink": false,
+          "sha256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209"
+        },
+        "modelClass": "FlexiDualGridVaeDecoder",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+          "exists": true,
+          "bytes": 948490494,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "shape_slat_flow_model_512",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+          "exists": true,
+          "bytes": 458,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+          "symlink": false,
+          "sha256": "ddbd7a1d34ce9a8e7af2f6ef9ae686d9ab49f69e62dacb98d8409b511cdbd5e2"
+        },
+        "modelClass": "SLatFlowModel",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+          "exists": true,
+          "bytes": 2584574424,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "shape_slat_flow_model_1024",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+          "exists": true,
+          "bytes": 458,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+          "symlink": false,
+          "sha256": "7ebd6d367393f52fee9e92c2b3d727a9026a338549c6a6fa84c7ea122140ffdd"
+        },
+        "modelClass": "SLatFlowModel",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+          "exists": true,
+          "bytes": 2584574424,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "tex_slat_decoder",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+          "exists": true,
+          "bytes": 705,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+          "symlink": false,
+          "sha256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1"
+        },
+        "modelClass": "SparseUnetVaeDecoder",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+          "exists": true,
+          "bytes": 948458812,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "tex_slat_flow_model_512",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+          "exists": true,
+          "bytes": 458,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+          "symlink": false,
+          "sha256": "3093796257a62f838d2e5578ac4580ca3b7d88d10b87d348065d3fdfcc4c2077"
+        },
+        "modelClass": "SLatFlowModel",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.safetensors",
+          "exists": true,
+          "bytes": 2584672728,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "tex_slat_flow_model_1024",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+          "exists": true,
+          "bytes": 458,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+          "symlink": false,
+          "sha256": "31f4fdad9974930e5e9324ac9dfb6ef7de6b30cea51854ba515ef827a8d353b2"
+        },
+        "modelClass": "SLatFlowModel",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+          "exists": true,
+          "bytes": 2584672728,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+          "symlink": false
+        }
+      }
+    ]
+  },
+  "pixal": {
+    "config": {
+      "path": "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json",
+      "exists": true,
+      "bytes": 4944,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json",
+      "symlink": false,
+      "sha256": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7"
+    },
+    "defaultPipeline": "1024_cascade",
+    "samplers": {
+      "sparse_structure_sampler": {
+        "steps": 12,
+        "guidance_strength": 7.5,
+        "guidance_rescale": 0.7,
+        "guidance_interval": [
+          0.6,
+          1.0
+        ],
+        "rescale_t": 5.0
+      },
+      "shape_slat_sampler": {
+        "steps": 12,
+        "guidance_strength": 7.5,
+        "guidance_rescale": 0.5,
+        "guidance_interval": [
+          0.6,
+          1.0
+        ],
+        "rescale_t": 3.0
+      },
+      "tex_slat_sampler": {
+        "steps": 12,
+        "guidance_strength": 1.0,
+        "guidance_rescale": 0.0,
+        "guidance_interval": [
+          0.6,
+          0.9
+        ],
+        "rescale_t": 3.0
+      }
+    },
+    "imageConditioner": {
+      "name": "DinoV3FeatureExtractor",
+      "args": {
+        "model_name": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m"
+      }
+    },
+    "backgroundModel": {
+      "name": "BiRefNet",
+      "args": {
+        "model_name": "/Users/raynos/projects/weights/manual/ZhengPeng7/BiRefNet"
+      }
+    },
+    "checkpoints": [
+      {
+        "role": "sparse_structure_decoder",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.json",
+          "exists": true,
+          "bytes": 245,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.json",
+          "symlink": false,
+          "sha256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5"
+        },
+        "modelClass": "SparseStructureDecoder",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+          "exists": true,
+          "bytes": 147591972,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+          "symlink": true
+        }
+      },
+      {
+        "role": "sparse_structure_flow_model",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+          "exists": true,
+          "bytes": 503,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+          "symlink": false,
+          "sha256": "2b3ef4c63b72a3de8adf745bd9d9d36b7960bdd7ba3740a6fa4d18fea6c475dd"
+        },
+        "modelClass": "SparseStructureFlowModel",
+        "projectionArgs": {
+          "image_attn_mode": "proj"
+        },
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+          "exists": true,
+          "bytes": 5359822584,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "shape_slat_decoder",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+          "exists": true,
+          "bytes": 678,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+          "symlink": false,
+          "sha256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209"
+        },
+        "modelClass": "FlexiDualGridVaeDecoder",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+          "exists": true,
+          "bytes": 948490494,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+          "symlink": true
+        }
+      },
+      {
+        "role": "shape_slat_flow_model_512",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+          "exists": true,
+          "bytes": 535,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+          "symlink": false,
+          "sha256": "2f7b736e8535aae96e7c41e8d123c24a14ee809fc25bea76eeac72643d21b997"
+        },
+        "modelClass": "ElasticSLatFlowModel",
+        "projectionArgs": {
+          "image_attn_mode": "proj",
+          "proj_in_channels": 2048
+        },
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+          "exists": true,
+          "bytes": 5546764048,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "shape_slat_flow_model_1024",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+          "exists": true,
+          "bytes": 535,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+          "symlink": false,
+          "sha256": "f47fca56311959a643e8cfd2750229a2c53cbab0027406d8426cd564ce4fb5bc"
+        },
+        "modelClass": "ElasticSLatFlowModel",
+        "projectionArgs": {
+          "image_attn_mode": "proj",
+          "proj_in_channels": 2048
+        },
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+          "exists": true,
+          "bytes": 5546764048,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+          "symlink": false
+        }
+      },
+      {
+        "role": "tex_slat_decoder",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+          "exists": true,
+          "bytes": 705,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+          "symlink": false,
+          "sha256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1"
+        },
+        "modelClass": "SparseUnetVaeDecoder",
+        "projectionArgs": {},
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+          "exists": true,
+          "bytes": 948458812,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+          "symlink": true
+        }
+      },
+      {
+        "role": "tex_slat_flow_model_1024",
+        "config": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+          "exists": true,
+          "bytes": 535,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+          "symlink": false,
+          "sha256": "f18455729d08d2ce7ef809f947ffa47f6f468b3bcf8a86473e8c326e80128ac2"
+        },
+        "modelClass": "ElasticSLatFlowModel",
+        "projectionArgs": {
+          "image_attn_mode": "proj",
+          "proj_in_channels": 2048
+        },
+        "weights": {
+          "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+          "exists": true,
+          "bytes": 5546960656,
+          "resolvedPath": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+          "symlink": false
+        }
+      }
+    ]
+  },
+  "hunyuanShapeWeights": [
+    {
+      "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/model.fp16.ckpt",
+      "exists": true,
+      "bytes": 7366389768,
+      "resolvedPath": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/model.fp16.ckpt",
+      "symlink": false
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/model.fp16.ckpt",
+      "exists": true,
+      "bytes": 655648152,
+      "resolvedPath": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/model.fp16.ckpt",
+      "symlink": false
+    }
+  ],
+  "pixalAdditionalConditioning": {
+    "path": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+    "exists": true,
+    "bytes": 2664431,
+    "resolvedPath": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+    "symlink": false,
+    "sha256": "c096c1ab2217a5c3ac136365f721685e2201379cb69d509cfb0261183847c98f"
+  },
+  "backendSources": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/modules/sparse/attention/full_attn.py",
+      "exists": true,
+      "bytes": 11159,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/modules/sparse/attention/full_attn.py",
+      "symlink": false,
+      "sha256": "c37d4abbf277e70be8a57852bcfe2bf415f08a5e792abbe5687db7a8c458ecec"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/stubs/o_voxel_override_convert.py",
+      "exists": true,
+      "bytes": 6297,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/trellis-mac/stubs/o_voxel_override_convert.py",
+      "symlink": false,
+      "sha256": "6de4b7149e7300ac056f2d83eec8d149560cac521cdded4fd812dadffd7bfa5c"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/attention/full_attn.py",
+      "exists": true,
+      "bytes": 14735,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/attention/full_attn.py",
+      "symlink": false,
+      "sha256": "3149b7acc483b6692286fbaf92f56aae59f8236fbfb3819d1d022dfa3875ba68"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/utils/mesh_extract.py",
+      "exists": true,
+      "bytes": 7975,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/utils/mesh_extract.py",
+      "symlink": false,
+      "sha256": "40fdc42ecf476a79b939ef85dca6ac251803235065e203126a4967a839d11541"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/sc_vaes/fdg_vae.py",
+      "exists": true,
+      "bytes": 5350,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/sc_vaes/fdg_vae.py",
+      "symlink": false,
+      "sha256": "c55fa7c263147ddfee2a8f32ce4791db5ab85789caf2e94125dfaa27e2ef1db0"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py",
+      "exists": true,
+      "bytes": 71783,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py",
+      "symlink": false,
+      "sha256": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py",
+      "exists": true,
+      "bytes": 133212,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py",
+      "symlink": false,
+      "sha256": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/surface_extractors.py",
+      "exists": true,
+      "bytes": 7074,
+      "resolvedPath": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/surface_extractors.py",
+      "symlink": false,
+      "sha256": "203d1551ccef37e86f9809b9ac0fac68e8e4a2f633ca72a85408535595ae68e5"
+    }
+  ],
+  "qualifiedTargets": {
+    "hunyuan": {
+      "steps": 30,
+      "guidance": 5,
+      "octree": 384,
+      "finalistOctree": 512,
+      "extractor": "mc"
+    },
+    "trellis": {
+      "pipeline": "1024_cascade",
+      "stepsEach": 12,
+      "finalist": "1536_cascade"
+    },
+    "pixal": {
+      "pipeline": "1536_cascade",
+      "stepsEach": 12,
+      "lowerMemory": "1024_cascade"
+    }
+  },
+  "observations": [
+    "Pixal projected ElasticSLatFlowModel checkpoints differ from TRELLIS SLatFlowModel; shared class name is not model identity.",
+    "Local Pixal view defaults1024; official standard inference defaults1536, low_vram1024.",
+    "TRELLIS local sparse naive aliases MPS SDPA; Pixal naive is explicit chunked float32 matmul/softmax.",
+    "TRELLIS derived orientation controls are not CUDA equivalence or complete garment topology validation.",
+    "Requested1536 cascade can reduce actual resolution under token limit; report returned resolution."
+  ],
+  "limits": [
+    "Static identity/settings/presence audit only; backend fixtures and inference pending.",
+    "Large weight digests not rehashed by this inventory; published provenance does not replace fresh verification.",
+    "No runtime/shared source/checkpoint edits, downloads of weights, cleanup or model promotion."
+  ]
+}

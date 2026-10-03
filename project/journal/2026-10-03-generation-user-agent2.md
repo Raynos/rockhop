@@ -353,3 +353,17 @@ Ask:276; root new qualified-quality request needs parent ledger row.
 Limits: No inference or preprocessing yet. Reference is appearance only,
 not canonical projection/fit/art acceptance or best-quality backend proof.
 Immediate accepted-material integration remains independent.
+
+Finding: Installed quality inventory distinguishes Hunyuan30/384, TRELLIS
+1024cascade/12each and Pixal1536cascade/12each official settings. Pixal
+projected ElasticSLat checkpoints are independent of TRELLIS SLat weights.
+
+Validation: Fresh public official source snapshots; installed Git identity,
+config/backend hashes, eight TRELLIS/seven Pixal checkpoint presence and
+shape weights checked. No neural imports or inference.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-inventory01.json
+Ask:276; expanded qualified comparison.
+
+Limits: Static inventory is not operator/conditioning/extraction parity.
+Large weights require fresh digest verification before trust. TRELLIS naive
+aliases MPS SDPA; Pixal naive uses chunked float32; runtime tests pending.
