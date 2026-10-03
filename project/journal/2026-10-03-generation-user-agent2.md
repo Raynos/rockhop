@@ -426,3 +426,15 @@ Ask:286.
 
 Limits: Source checkpoint only; runtime/import/preprocessing verification
 and downstream conditioning remain pending. No shared source change.
+
+Finding: Hunyuan preprocessing inspection wrapper required registration
+in sys.modules before inspect.getfile could prove the imported class path.
+
+Validation: First guard exit1 after pixels/tensors saved; traceback pins
+inspection failure, not preprocessing or neural inference. One-line owned
+wrapper correction, AST syntax passes; fresh retry still required.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-preprocess01/
+Ask:286.
+
+Limits: Failed metadata receipt remains unadmitted. Shared runtime/source
+untouched; zero model weights or neural runs.

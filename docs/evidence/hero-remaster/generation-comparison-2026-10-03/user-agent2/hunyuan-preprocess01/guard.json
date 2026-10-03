@@ -1,0 +1,50 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_preprocess_control.py",
+    "--model",
+    "hunyuan",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+    "--image-sha256",
+    "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+    "--source-sha256",
+    "284dc24fabbf974bd6793ebd58e95b7700550d90371cacb96ad0889ec558de1e",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/hunyuan-preprocess01/control"
+  ],
+  "controllerPID": 91812,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 78,
+  "limitSeconds": 120.0,
+  "guardSHA256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 35.9,
+      "wiredGiB": 7.0,
+      "freeGiB": 42.6
+    },
+    {
+      "seconds": 0.033,
+      "anonymousGiB": 36.0,
+      "wiredGiB": 7.0,
+      "freeGiB": 42.6
+    },
+    {
+      "seconds": 1.062,
+      "anonymousGiB": 35.7,
+      "wiredGiB": 6.5,
+      "freeGiB": 43.2
+    }
+  ],
+  "ownedChildPID": 91815,
+  "exitCode": 1,
+  "elapsedSeconds": 1.408
+}
