@@ -1,0 +1,73 @@
+{
+  "status": "REJECTED_EXPLICIT_1MM_BODY_COLLIDER_RESPONSE",
+  "priorDefaultBodyRadiusM": 0.01,
+  "explicitBodyRadiusM": 0.001,
+  "sameOFFAsPrior26": true,
+  "repeat463ONFrameHashesExact": true,
+  "timingMs": {
+    "off": {
+      "p50": 1,
+      "p95": 1,
+      "max": 4,
+      "sum": 239
+    },
+    "on": {
+      "p50": 7,
+      "p95": 10,
+      "max": 19,
+      "sum": 3266
+    },
+    "on-repeat": {
+      "p50": 7,
+      "p95": 10,
+      "max": 18,
+      "sum": 3177
+    }
+  },
+  "minimumLocalNormalProxyM": {
+    "off": -0.03703304155943435,
+    "on": -0.03702121234729363,
+    "on-repeat": -0.03702121234729363
+  },
+  "memory": {
+    "off": {
+      "initialWasmMemoriesBytes": [
+        851968,
+        1638400
+      ],
+      "finalWasmMemoriesBytes": [
+        851968,
+        2031616
+      ],
+      "jsHeapBytes": null
+    },
+    "on": {
+      "initialWasmMemoriesBytes": [
+        851968,
+        1835008
+      ],
+      "finalWasmMemoriesBytes": [
+        851968,
+        9109504
+      ],
+      "jsHeapBytes": null
+    },
+    "on-repeat": {
+      "initialWasmMemoriesBytes": [
+        851968,
+        1835008
+      ],
+      "finalWasmMemoriesBytes": [
+        851968,
+        9109504
+      ],
+      "jsHeapBytes": null
+    }
+  },
+  "limits": [
+    "Reduced timing is not an accepted optimization because explicit1mm body shell loses the26 response.",
+    "Actual exportedWASMmemory byteLength only. First851968B module is Meshopt; second Rapier grows. No physical-phone, JSheap, renderer/native/GPU memory pass.",
+    "Memory observed after463ticks includes allocated solver state; capture retains JSparticle recording arrays separately.",
+    "Thin open regional body mesh1mm is not a proven closed-volume or continuous-collision collider. No new fitted garment/partner/device/deployment."
+  ]
+}

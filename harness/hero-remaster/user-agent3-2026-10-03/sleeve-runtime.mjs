@@ -32,13 +32,14 @@ export function sleeveClearance(cloth,body,handoff){
   return{samples:samples.length,minUnsignedM,minLocalNormalM,witness,finite:cloth.every(p=>p.toArray().every(Number.isFinite)),
     limits:'Vertex/centroid nearest local face normal and unsigned distance only; open regional collider, not signed-volume or complete triangle intersection proof.'};
 }
-export async function createSleeveRuntime(debug,handoff,collision,initialTargets){
+export async function createSleeveRuntime(debug,handoff,collision,initialTargets,options={}){
   await ready;if(RAPIER.version()!=='0.21.0')throw new Error('Wrong solver version');
   const pattern=handoff.pattern,body=handoff.nativeConsumedColliders.body,world=new RAPIER.World({x:0,y:-9.81,z:0});world.timestep=1/120;
   world.integrationParameters.numSolverIterations=2;world.integrationParameters.numInternalPgsIterations=1;world.integrationParameters.softBodiesMaxExtraSubsteps=2;
   const flat=points=>new Float32Array(points.flatMap(p=>p.toArray())),bodyIds=new Map(body.relevantArmVertices.map((v,i)=>[v.bodyVertexID,i])),bodyIndices=new Uint32Array(body.relevantArmTriangles.flatMap(t=>t.bodyVertexIDs.map(id=>bodyIds.get(id))));
   const colliderTemplate=()=>RAPIER.ColliderDesc.ball(.001).setFriction(.3).setContactSkin(.001);
-  let bodyDesc=new RAPIER.SoftBodyDesc(flat(initialTargets.body)).setSurface(bodyIndices).setPinnedParticles(Array.from(bodyIds.values())).setGravityScale(0).setShapeMatching(false).setSelfContacts(false).setOriented(false).setCanSleep(false);
+  const bodyParticleRadiusM=options.bodyParticleRadiusM??.01;
+  let bodyDesc=new RAPIER.SoftBodyDesc(flat(initialTargets.body)).setSurface(bodyIndices).setPinnedParticles(Array.from(bodyIds.values())).setGravityScale(0).setShapeMatching(false).setSelfContacts(false).setParticleRadius(bodyParticleRadiusM).setOriented(false).setCanSleep(false);
   bodyDesc=collision?bodyDesc.setSurfaceCollider(colliderTemplate()):bodyDesc.setNoSurfaceCollider();const bodySoft=world.createSoftBody(bodyDesc);
   const hardPins=pattern.sewnAnchorWeights.flatMap((w,i)=>w===1?[i]:[]),halfPins=pattern.sewnAnchorWeights.flatMap((w,i)=>w>0&&w<1?[{id:i,weight:w}]:[]);
   const clothTriangles=new Uint32Array(pattern.triangleVertexIDs.flat());
@@ -74,7 +75,7 @@ export async function createSleeveRuntime(debug,handoff,collision,initialTargets
   return{step,mesh,clothSoft,bodySoft,world,initialEdges,dispose(){debug.scene.remove(mesh);geometry.dispose();mesh.material.dispose();world.free();},
     contract:{rapier:RAPIER.version(),collision,particles:clothSoft.numParticles(),edges:clothSoft.numEdges(),structuralInputEdges:pattern.edgeRestConstraints.length,
       bodyParticles:bodySoft.numParticles(),bodyTriangles:bodyIndices.length/3,clothTriangles:clothTriangles.length/3,hardPins,halfPins,dt:world.timestep,restLengthMaximumErrorM,checkedStructuralEdges,
-      solverIterations:2,internalPgs:1,additionalPgs:3,maxExtraSubsteps:2,softnessHz:30,softnessDamping:1,particleMassKg:handoff.nativeConsumedColliders.cloth.massPerVertexKg,
+      solverIterations:2,internalPgs:1,additionalPgs:3,maxExtraSubsteps:2,softnessHz:30,softnessDamping:1,particleMassKg:handoff.nativeConsumedColliders.cloth.massPerVertexKg,bodyParticleRadiusM:bodySoft.particleRadius(),clothParticleRadiusM:clothSoft.particleRadius(),dihedrals:clothSoft.numDihedrals(),
       halfAnchorSpringHz:8,halfAnchorAccelerationCapMPerS2:100,radiusM:.001,colliderSkinM:.001,
       bodyColliderMeshes:bodySoft.numMeshes(),clothColliderMeshes:clothSoft.numMeshes(),selfContacts:collision,
       interGarment:'Single active band; no partner. Shared Rapier world can consume partner deformable surfaces, but assembled inter-garment proof remains open.',

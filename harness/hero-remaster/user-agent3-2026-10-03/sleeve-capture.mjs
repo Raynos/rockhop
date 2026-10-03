@@ -8,12 +8,13 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { decodeJSON, expandFrames } from '../../../src/core/replay.ts';
-const [buildArg,handoffFile,fixtureFile,outArg]=process.argv.slice(2);assert(outArg&&!fs.existsSync(outArg));
+const [buildArg,handoffFile,fixtureFile,outArg,bodyRadiusArg]=process.argv.slice(2);assert(outArg&&!fs.existsSync(outArg));
+const bodyParticleRadiusM=Number(bodyRadiusArg??.01);assert(Number.isFinite(bodyParticleRadiusM)&&bodyParticleRadiusM>0);
 const build=path.resolve(buildArg),out=path.resolve(outArg),sha=b=>crypto.createHash('sha256').update(b).digest('hex');fs.mkdirSync(out,{recursive:true});
 const handoffBytes=fs.readFileSync(handoffFile),handoff=JSON.parse(handoffBytes);assert.equal(sha(handoffBytes),'7a3514711c0cc04bb0505ba6deca4de58d2591f9d007e46abe9153d3e2aab60a');
 const fixtures=JSON.parse(fs.readFileSync(fixtureFile)),fixture=fixtures.cases.find(c=>c.bike==='rookie'&&c.kind==='maximum-forward-lean'),recordingBytes=fs.readFileSync(path.join(path.dirname(fixtureFile),fixture.recording));assert.equal(sha(recordingBytes),fixture.sourceSHA256);
 const rec=decodeJSON(recordingBytes.toString()),inputs=expandFrames(rec).slice(0,fixture.window.endInputTick),manifest=JSON.parse(fs.readFileSync(path.join(build,'hero-review.json')));
-const report={status:'UNACCEPTED_LIVE_SLEEVE_PENDING',handoffSHA256:sha(handoffBytes),recordingSHA256:sha(recordingBytes),fixture:fixture.id,
+const report={status:'UNACCEPTED_LIVE_SLEEVE_PENDING',bodyParticleRadiusM,handoffSHA256:sha(handoffBytes),recordingSHA256:sha(recordingBytes),fixture:fixture.id,
   candidate:manifest.models.find(m=>m.logical==='models/rider-street-mustard.glb'),moduleSHA256:sha(fs.readFileSync(path.join(build,'agent3-cloth/solver.js'))),moduleBytes:fs.statSync(path.join(build,'agent3-cloth/solver.js')).size,
   sourceSHA256:sha(fs.readFileSync(new URL('sleeve-runtime.mjs',import.meta.url))),captureSHA256:sha(fs.readFileSync(new URL(import.meta.url))),errors:[],runs:[],
   limits:['Single local sleeve band, no complete garment/footwear acceptance. Oldhoodie hidden only to expose mechanism; body/bind/physics unchanged.',
@@ -23,23 +24,22 @@ const report={status:'UNACCEPTED_LIVE_SLEEVE_PENDING',handoffSHA256:sha(handoffB
 const server=await preview({configFile:false,root:process.cwd(),build:{outDir:build},preview:{host:'127.0.0.1',port:0},logLevel:'warn'}),browser=await webkit.launch({headless:true});
 try{
   for(const [name,collision,film]of [['off',false,true],['on',true,true],['on-repeat',true,false]]){
-    const context=await browser.newContext({viewport:{width:960,height:640}});await context.addInitScript(()=>{localStorage.setItem('rockhop.onboarded','1');window.__agent3AudioCount=0;for(const k of ['AudioContext','webkitAudioContext'])window[k]=class{constructor(){window.__agent3AudioCount++;throw new Error('Silent live cloth');}};});
+    const context=await browser.newContext({viewport:{width:960,height:640}});await context.addInitScript(()=>{localStorage.setItem('rockhop.onboarded','1');window.__agent3AudioCount=0;for(const k of ['AudioContext','webkitAudioContext'])window[k]=class{constructor(){window.__agent3AudioCount++;throw new Error('Silent live cloth');}};
+      window.__agent3WasmMemories=[];const instantiate=WebAssembly.instantiate.bind(WebAssembly);WebAssembly.instantiate=async(...args)=>{const result=await instantiate(...args),instance=result.instance??result;for(const value of Object.values(instance.exports??{}))if(value instanceof WebAssembly.Memory&&!window.__agent3WasmMemories.includes(value))window.__agent3WasmMemories.push(value);return result;};});
     const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
     await page.goto(server.resolvedUrls.local[0]+'?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120');await page.waitForFunction(()=>window.__rockhop?.ready,null,{timeout:120000});
     await page.addStyleTag({content:'#ui,#ui *,.hud,.touch-controls{visibility:hidden!important} #agent3-label{position:fixed;z-index:99999;top:8px;left:10px;color:white;background:#101820e8;padding:8px;font:14px monospace;white-space:pre;visibility:visible!important}'});
-    const init=await page.evaluate(async({handoff,header,collision,name})=>{
+    const init=await page.evaluate(async({handoff,header,collision,name,bodyParticleRadiusM})=>{
       const t=window.__rockhop,r=window.__render;t.setBike(header.bike??'rookie');await r.whenReady();await t.loadTrack(header.trackId,header.seed);t.setQuality('high');await r.whenReady();t.skipCountdown();t.render(true);
       const m=await import('/agent3-cloth/solver.js'),d=r.debug,targets=m.liveSleeveTargets(d,handoff),clearance=m.sleeveClearance(targets.cloth,targets.body,handoff);
       if(clearance.minUnsignedM<.002||clearance.minLocalNormalM<.002)throw new Error('Invalid actual spawn rest; STOP before solver');
-      const solver=await m.createSleeveRuntime(d,handoff,collision,targets);
-      const hidden=[];for(const entry of d.rider.sleeveGeometry)if(Object.hasOwn(entry.mesh.morphTargetDictionary??{},'corrective.cloth.f112')){entry.mesh.visible=false;hidden.push(entry.mesh.name);}
-      // Source keys may use another dictionary name; select the exact two owner
-      // hoodie primitives from source node association rather than hide body.
-      for(const entry of d.rider.sleeveGeometry){const sourceName=entry.mesh.name;if(sourceName.includes('hood')||sourceName.includes('Hood')||sourceName.includes('sweat')){entry.mesh.visible=false;if(!hidden.includes(sourceName))hidden.push(sourceName);}}
+      const solver=await m.createSleeveRuntime(d,handoff,collision,targets,{bodyParticleRadiusM});
+      const hidden=[];for(const entry of d.rider.sleeveGeometry)if(['Clean_native_hoodie_sewn_neckline_and_fitted_pocket','Clean_native_hoodie_sewn_neckline_and_fitted_pocket_1'].includes(entry.mesh.name)){entry.mesh.visible=false;hidden.push(entry.mesh.name);}if(hidden.length!==2)throw new Error('Exact source hoodie visibility mismatch');
       window.__agent3Sleeve={m,handoff,solver,name,previous:0,targets,times:[],framePositions:[],trace:[],samples:[],maximumBodyResidualM:targets.skinTemplate.sourceBodyMaximumResidualM};
       const label=document.createElement('div');label.id='agent3-label';document.body.append(label);
-      return{contract:solver.contract,initialClearance:clearance,initialPositions:targets.cloth.map(p=>p.toArray()),bodyTemplate:targets.skinTemplate,hidden,physicalPose:d.rider.debug.physicalPose};
-    },{handoff,header:rec.header,collision,name});assert(init.physicalPose);
+      return{contract:solver.contract,initialClearance:clearance,initialPositions:targets.cloth.map(p=>p.toArray()),bodyTemplate:targets.skinTemplate,hidden,physicalPose:d.rider.debug.physicalPose,
+        wasmMemoryBytes:window.__agent3WasmMemories.map(m=>m.buffer.byteLength),jsHeapBytes:performance.memory?.usedJSHeapSize??null};
+    },{handoff,header:rec.header,collision,name,bodyParticleRadiusM});assert(init.physicalPose);
     const folder=path.join(out,name);fs.mkdirSync(folder);let previous=0,filmFrame=0;const ticks=[0,...Array.from({length:Math.floor(inputs.length/10)},(_,i)=>(i+1)*10),inputs.length];
     for(const tick of ticks){
       const sample=await page.evaluate(({input,tick})=>{
@@ -52,11 +52,13 @@ try{
       },{input:inputs.slice(previous,tick),tick});previous=tick;assert(sample.webdriver&&sample.audioContexts===0&&sample.physicalPose&&sample.clearance.finite);
       await page.evaluate(sample=>window.__agent3Sleeve.samples.push(sample),sample);if(film)await page.screenshot({path:path.join(folder,String(filmFrame++).padStart(4,'0')+'.png')});
     }
-    const result=await page.evaluate(()=>{const a=window.__agent3Sleeve,positions=a.framePositions.flat();return{times:a.times,positions,trace:a.trace,samples:a.samples,maximumBodyResidualM:a.maximumBodyResidualM};});
+    const result=await page.evaluate(()=>{const a=window.__agent3Sleeve,positions=a.framePositions.flat();return{times:a.times,positions,trace:a.trace,samples:a.samples,maximumBodyResidualM:a.maximumBodyResidualM,
+      wasmMemoryBytes:window.__agent3WasmMemories.map(m=>m.buffer.byteLength),jsHeapBytes:performance.memory?.usedJSHeapSize??null};});
     const stream=new Float32Array(result.positions),streamBytes=Buffer.from(stream.buffer);fs.writeFileSync(path.join(folder,'positions.f32'),streamBytes);
     const frameHashes=Array.from({length:inputs.length},(_,i)=>sha(streamBytes.subarray(i*288*12,(i+1)*288*12))),traceBytes=Buffer.from(result.trace.map(t=>JSON.stringify(t)).join('\n')+'\n');fs.writeFileSync(path.join(folder,'tick-trace.ndjson'),traceBytes);
     const sorted=result.times.slice().sort((a,b)=>a-b),quantile=p=>sorted[Math.floor((sorted.length-1)*p)];
-    const receipt={name,collision,init,inputTicks:inputs.length,frameHashes,positionsSHA256:sha(streamBytes),traceSHA256:sha(traceBytes),timingMs:{p50:quantile(.5),p95:quantile(.95),max:sorted.at(-1),sum:result.times.reduce((s,v)=>s+v,0)},samples:result.samples,maximumBodyResidualM:result.maximumBodyResidualM};
+    const receipt={name,collision,init,inputTicks:inputs.length,frameHashes,positionsSHA256:sha(streamBytes),traceSHA256:sha(traceBytes),timingMs:{p50:quantile(.5),p95:quantile(.95),max:sorted.at(-1),sum:result.times.reduce((s,v)=>s+v,0)},samples:result.samples,maximumBodyResidualM:result.maximumBodyResidualM,
+      wasmMemoryBytes:result.wasmMemoryBytes,jsHeapBytes:result.jsHeapBytes,memoryLimit:'WASM memory is actual exported-memory byteLength; JS heap unavailable in WebKit. Renderer/native browser memory and private recording allocations are not this measurement.'};
     if(film){const movie=path.join(folder,'played.mp4'),ff=spawnSync('ffmpeg',['-v','error','-y','-framerate','12','-i',path.join(folder,'%04d.png'),'-c:v','libx264','-threads','2','-crf','18','-pix_fmt','yuv420p','-an','-movflags','+faststart',movie],{encoding:'utf8'});assert.equal(ff.status,0,ff.stderr);receipt.clip={sha256:sha(fs.readFileSync(movie)),frames:filmFrame,fps:12};}
     report.runs.push(receipt);await context.close();console.log(JSON.stringify({run:name,timingMs:receipt.timingMs,minClearanceM:Math.min(...receipt.samples.map(s=>s.clearance.minLocalNormalM))}));
   }

@@ -408,3 +408,27 @@ Single band has no inter-garment partner. No physical phone/memory/deploy or
 wearable qualification. Root separately accepted native34cba750 as useful
 mechanism proof, with cuff gape/retraction, pin folds and.346mm floor still
 open. Engine moving review and bounded cost reduction are next.
+
+### Round 27 — explicit1mm body shell loses collision response
+
+Finding: Actual Rapier particleRadius getter reveals the previous body
+default10mm. Changing only body radius to explicit1mm reduces cost but
+loses the exterior response: ON local proxy−37.021mm versus OFF−37.033mm.
+This thin open regional collider is rejected, not a successful optimization.
+Factory-generated768dihedrals and actual radius are now reported. The
+body/self mechanism remains explicit, but1mm safety is not established.
+
+Validation: OFF particle bytes equal26 exactly; all463ON frame hashes
+repeat, all1389ordinary physics ticks independently match. Both48frame
+silent films play. ON p50/p95=7/10ms versus OFF1/1ms. Actual exported Rapier
+WASM memory grows1,835,008→9,109,504B ON and1,638,400→2,031,616B OFF;
+Meshopt851,968B is separate, JSheap unavailable. Scoped lint passes. Fresh
+third-round low/high cold boot/clear4810ticks exact finish bytes, crash103,
+restarttick0 and zeroerrors; loaded-host restart latency recorded in packet.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/sleeve27/
+
+Limits: Rejected1mm shell. Timing reduction cannot weaken collision. No
+closed-volume/continuous safety, active inter-garment partner, physical
+iPhone, renderer/native/GPU memory or deployed-phone pass. Sourcebody and
+ordinary Game remain unchanged. A bounded closed body representation or
+verified continuous deformable-mesh route is required before promotion.
