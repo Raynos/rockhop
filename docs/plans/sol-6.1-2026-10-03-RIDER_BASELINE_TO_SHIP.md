@@ -216,9 +216,13 @@ await their owners' checkpoints. The latter stops generation owner
 `01a10155-2684-71e3-bd8e-00de4280a64c` without a generated candidate.
 Checker `01a0ff6e-fdea-7217-8306-2d2cf26c603c` is frozen after checkpoint `613b8138`;
 QA `01a10103-4be7-732e-ba8c-2e3153b17015` retains completed diagnostic evidence.
-Replacement construction/generation IDs are unassigned: root decides them after
-consolidation and an explicit freeze. Do not automatically restart a stopped or
-archived original worker. This plan creates no worker, job or automation.
+Verified native local successors: **Build canonical rider foundation**,
+`01a1016e-c8da-77d0-9437-a5f980a6e427`, owns construction/reference freeze;
+**Generate fitted rider garments**, `01a10170-5861-7dc3-971a-3273daead862`,
+owns generation-comparison assets/evidence/journal. Preparation checkpoint and
+canonical reference agreement precede inference; no candidate reported at registration.
+Root retains prompts, supervision and acceptance. Do not automatically restart
+a stopped or archived original worker. This plan creates no job or automation.
 
 One round, one hypothesis, one visible defect, one acceptance check and one commit.
 Commit stable rejected checkpoints explicitly unaccepted. A second correction with
