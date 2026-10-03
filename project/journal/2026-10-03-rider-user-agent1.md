@@ -92,3 +92,13 @@ reference pins fixed. Material-name collision corrected; recipe syntax passes.
 Limits: Disjoint hood/flat mustard-indigo are experimental appearance/layout
 guides only, no wearable fit/PBR/motion pass; M0–M5 open. Sent exact Agent2 pins.
 Evidence: [garment inputs](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/garment-input03/README.md). Ask274.
+
+Finding: Isolated wardrobe appearance donors need their own metric bounds;
+normalizing to full body height would destroy registration.
+Validation: Four trueA yup/zup OBJ preserve4362hoodie/886jeansvertices and
+original indices/groups; serialized error<5e-11m, all pins/counts/syntax pass.
+Twelfth-round ordinary silentMetal4810byte-identical ticks/40.0833s clear,
+crash103/restart1tick/frame3.595ms/errors0 passes.
+Limits: Hood remains disjoint static guide; no wearable fit/rig/PBR pass or
+experimental normalplayer promotion. Exact amendment handedAgent2; M0–M5 open.
+Evidence: [metric registration](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/garment-geometry02/README.md). Ask274.

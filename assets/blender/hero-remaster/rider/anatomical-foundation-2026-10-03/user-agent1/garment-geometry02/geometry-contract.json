@@ -1,0 +1,137 @@
+{
+  "status": "EXPERIMENTAL isolated metric guide, no wearable fit/rig/topology acceptance",
+  "inputContractSHA256": "321c6b8ac64579f13743a37f80e27daa7b6b939457522828bff80345d9f737c6",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/conditioned.blend": "db1a91baf9e6de2d90af04ae51a46fe657115d1ecd6625126429439aa88f1c5c",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/fitting01/contract.json": "f586d85a1504dd31b4ae650e6e54d302054674a69880cd3fcb904af51ab8eab0",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "/Users/raynos/projects/games/rockhop/.tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a"
+  },
+  "pose": "true_A/action off",
+  "metres": true,
+  "coordinates": "Centered X0 once; yup [+Xforward,+Yup,+Zleft], zup [+Xforward,+Zup,-Yleft]",
+  "registration": "Use per-garment exact bounds; NEVER scale isolated model to full 1.822571874m body height. Generation coordinates are uncalibrated; orthographic framing is pinned separately.",
+  "hood": "Exact b7 primitive2 raw geometry only; static/disjoint lower patch retained, not attached or sewn",
+  "OBJ": "Geometry only, original polygon indices; no materials/UV/weights exported or invented",
+  "garments": [
+    {
+      "garment": "hoodie",
+      "vertices": 4362,
+      "faces": 5322,
+      "parts": [
+        {
+          "name": "Separate fitted sweatshirt control, hood not constructed",
+          "vertices": 1250,
+          "faces": 1204
+        },
+        {
+          "name": "Exact b7 static hood guide, DISJOINT NOT fitted",
+          "vertices": 3112,
+          "faces": 4118
+        }
+      ],
+      "polygonIndicesSHA256": "f8f4b9f15946188233dd59505fe431b75aec419af15e26c61930faeec3a17837",
+      "files": [
+        {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-geometry02/hoodie-true_A-zup.obj",
+          "sha256": "c50ac55785de6b0d1bd941456b931f82018dd376b0d952a31d6da4e5855b7494",
+          "axes": "zup",
+          "minM": [
+            -0.1837440371513367,
+            -0.6115361452102661,
+            0.9355179667472839
+          ],
+          "maxM": [
+            0.16477228701114655,
+            0.6115372180938721,
+            1.598873496055603
+          ],
+          "extentM": [
+            0.34851632416248324,
+            1.2230733633041382,
+            0.6633555293083191
+          ],
+          "serializedMaxResidualM": 4.9987791683747673e-11
+        },
+        {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-geometry02/hoodie-true_A-yup.obj",
+          "sha256": "e344796e988b08f172ffbe1cd5b54558486233a6050c7962c02f621b341319b6",
+          "axes": "yup",
+          "minM": [
+            -0.1837440371513367,
+            0.9355179667472839,
+            -0.6115372180938721
+          ],
+          "maxM": [
+            0.16477228701114655,
+            1.598873496055603,
+            0.6115361452102661
+          ],
+          "extentM": [
+            0.34851632416248324,
+            0.6633555293083191,
+            1.2230733633041382
+          ],
+          "serializedMaxResidualM": 4.9987791683747673e-11
+        }
+      ]
+    },
+    {
+      "garment": "jeans",
+      "vertices": 886,
+      "faces": 856,
+      "parts": [
+        {
+          "name": "Separate fitted native trousers control",
+          "vertices": 886,
+          "faces": 856
+        }
+      ],
+      "polygonIndicesSHA256": "e3cbf36e553c89367f3739394bda4c24671fe35466eb6a87a49628f5c44dc4a2",
+      "files": [
+        {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-geometry02/jeans-true_A-zup.obj",
+          "sha256": "9523b08ab1f00a0ab7504e4b9c8a63a3e08261f6d9a81a5d3a6e7fadb6c38419",
+          "axes": "zup",
+          "minM": [
+            -0.10947377979755402,
+            -0.26488441228866577,
+            0.068407341837883
+          ],
+          "maxM": [
+            0.14620064198970795,
+            0.2651858627796173,
+            1.0562175512313843
+          ],
+          "extentM": [
+            0.25567442178726196,
+            0.5300703048706055,
+            0.9878101944923401
+          ],
+          "serializedMaxResidualM": 4.999695102370083e-11
+        },
+        {
+          "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-geometry02/jeans-true_A-yup.obj",
+          "sha256": "b4753dd8a4714d1cca4dfcb69f8cf43af3578d1f88b247d06f004439e4987901",
+          "axes": "yup",
+          "minM": [
+            -0.10947377979755402,
+            0.068407341837883,
+            -0.2651858627796173
+          ],
+          "maxM": [
+            0.14620064198970795,
+            1.0562175512313843,
+            0.26488441228866577
+          ],
+          "extentM": [
+            0.25567442178726196,
+            0.9878101944923401,
+            0.5300703048706055
+          ],
+          "serializedMaxResidualM": 4.999695102370083e-11
+        }
+      ]
+    }
+  ]
+}
