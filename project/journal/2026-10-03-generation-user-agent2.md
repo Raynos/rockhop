@@ -774,3 +774,19 @@ Ask:284–286.
 
 Limits: Wrapper failure is not model/backend quality failure. Retain first
 load attempt; actual PBR and end-to-end preservation still pending.
+
+Finding: Documented-quality PBR captures actual finite conditioning/noise
+but owned diffusion crosses guard; no texture output.
+
+Validation: Guard74/child−15 in29.566s; peak60.1anonymous/108.3combinedGiB
+at1s sample interval, guard bounds unchanged. Actual8views selected;
+1.962B UNet/83.65M VAE/340.39M text/1.136B DINO loadedMPSfloat16.
+Nine tensor captures finite: actual DINO pixels/features,3VAEimage/latent
+pairs and actual initial noise.17model input PNGs/hash pins preserved.
+No painted OBJ, shared edits, foreign eviction or new shape generation.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint02/
+Ask:284–286.
+
+Limits: Specific resource failure, not texture/style/model-family verdict.
+Same input/quality frozen. Large attention hypothesis requires actual
+operator/source evidence before any batching or retry; no raised limits.
