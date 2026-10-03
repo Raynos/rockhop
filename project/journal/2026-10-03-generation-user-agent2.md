@@ -216,3 +216,15 @@ Ask:276.
 
 Limits: UNACCEPTED settings-specific raw checkpoint, no denim PBR/fit/rig
 or family verdict. No followup preview; conditional quality run not yet qualified.
+
+Finding: Root rejects displayed hoodie for wholesale appearance transfer:
+hood flap, orange/red shift and contour stripes; readable sleeve separation.
+Existing-bytes material isolation and documented mechanism replace cheap probes.
+
+Validation: Exact cc2a3885 movie/Library pin recorded with bridge-relayed root
+six-view review. Jeans raw completion predated pause; no followup preview.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hoodie-decision.json
+Ask:276.
+
+Limits: No family verdict or automatic quality run. One wardrobe quality run
+requires validated expected mechanism first; no body benchmark or blind sweep.

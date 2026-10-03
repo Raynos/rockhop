@@ -249,7 +249,7 @@ reference findings, not model-family judgments. No body integration or escalatio
 | --- | --- | --- | --- |
 | Hunyuan body | [Gray control orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-body01/native-vs-control-orbit.mp4), SHA8fe4f466 | libfile_bd5eee76ac5c8191a6dfef80daa77462 | Root rejected replacement |
 | TRELLIS body | [Gray control orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-body01/native-vs-control-orbit.mp4), SHAed98dcf7 | libfile_835ec3d228ac8191aff302f3bb998233 | Root rejected replacement |
-| TRELLIS isolated hoodie | [Sampled appearance orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/native-vs-guide-appearance-orbit.mp4), SHAcc2a3885 | libfile_08d8bfb102808191a1f807bd7d8c6149 | Unaccepted, root review pending |
+| TRELLIS isolated hoodie | [Sampled appearance orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/native-vs-guide-appearance-orbit.mp4), SHAcc2a3885 | libfile_08d8bfb102808191a1f807bd7d8c6149 | Root rejected wholesale appearance transfer |
 
 ## Frozen wardrobe input and first actual appearance donor
 
@@ -288,8 +288,16 @@ clamp and alpha-inactive policy. CPU92.179s exit0; silent72frame/12fps six-secon
 H2641024×576 full-decodes exit0,437543bytes. Incorrect first sampling SHA refused
 pre-output in0.595s; corrected fresh retry recorded. Raw arrays remain unchanged.
 [Library delivery](trellis-hoodie01/library-delivery.json) records one confirmed
-bridge save. Root alone judges this clip; no actual rig/motion, fit, topology
-or player pass.
+bridge save. Root rejects this displayed donor for wholesale appearance transfer;
+[exact decision](hoodie-decision.json) records the hood flap, orange/red shift
+and contour stripes. This does not reject the model family. No rig/motion, fit,
+topology or player pass.
 
-Next planned unit is the isolated jeans appearance donor on the frozen input03
-pin. No additional body benchmark, body replacement or model/environment install.
+The cheap isolated jeans probe completed before root paused further inference;
+[raw-only receipt](trellis-jeans01/receipt.json) preserves e2322faa/208060vertices/
+417644faces. No jeans appearance sampling or movie follows.
+
+Current task: ONE neutral-lit versus colour-only comparison on existing hoodie
+raw bytes, plus installed inference/decoder settings comparison. Only after
+validating a specific expected improvement may ONE wardrobe quality run proceed
+under unchanged fresh guards. No blind sweep, body benchmark or environment install.
