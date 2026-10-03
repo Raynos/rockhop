@@ -340,3 +340,16 @@ Ask:276; bounded Agent1 material/coordinate support.
 Limits: Joint-weight groups are region hints, not sewn boundaries or accepted
 style. Images omitted only in loader memory; no old donor anatomy/weights/rig
 adopted, global transform fix, generated asset, PBR bake or fit acceptance.
+
+Finding: Root-approved richer hoodie reference4cd76825 is independently admitted
+with genuine alpha, visible hood/cuff/seam/fleece information and immutable
+original bytes; camera/pose remain approximate and uncalibrated.
+
+Validation: SHA/1394368bytes match delivered pins; readable RGBA1254square,
+alpha0..255 and nonzero/partial footprint measured. Pixels inspected locally.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-reference01.json
+Ask:276; root new qualified-quality request needs parent ledger row.
+
+Limits: No inference or preprocessing yet. Reference is appearance only,
+not canonical projection/fit/art acceptance or best-quality backend proof.
+Immediate accepted-material integration remains independent.
