@@ -267,3 +267,11 @@ Limits: 04 importeddefaults[1,1,1] move rest50.691mm; this controlledfilm is not
 uncontrolledrest proof. Newzero-rest successor and exactcontactsurface map next.
 Hood/fold/pocket/fullfit/engine/mobile judgment remains root's; no promotion.
 Evidence: [played sewnhood](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance04/review/movies.json). Ask274.
+
+### Round30 — zero-rest successor, 2026-10-03
+
+Finding: New appearance05 corrects the sewn hoodie default coefficients to zero without modifying any04 binary geometry, morph, UV, skin, material or protected normal bytes. Native05 is a separate saved master;04 remains immutable and unaccepted.
+
+Validation: Actual GLTFLoader admits eight meshes/51bones, both hoodie primitives default0, maximum file-world rest closure0.000853819mm. All529 recorded frames/1309804 garment vertex evaluations are exactly equal to04 after controller injection. Third-round shipped-control gate passes cold boot2336ms, clear40.083333333s, deterministic4810ticks, crash103/restart1tick, frame2.325ms and zero errors. See appearance05 and ship-round30 owned evidence.
+
+Limits: Controlled04 movies remain04 captures. No05 rendered capture or art/contact/device acceptance; source data stays outside normal player paths. LOD/contact map follows as a separate finding.
