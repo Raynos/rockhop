@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "ask": 258,
+  "cli_version": "codex-cli 0.159.3",
+  "schema_command": "codex app-server generate-ts --out /tmp/rockhop-codex-protocol-0.159.3 --experimental",
+  "static_generation_only": true,
+  "active_transport_started": false,
+  "official_documentation": "https://learn.chatgpt.com/docs/app-server",
+  "thread_model_semantics": "Current configured model when loaded, otherwise the latest persisted model. Null when unavailable. This is not per-turn execution telemetry.",
+  "turn_has_execution_model_field": false,
+  "reroute_fields": [
+    "threadId",
+    "turnId",
+    "fromModel",
+    "toModel",
+    "reason"
+  ],
+  "available_current_session_metadata_reader": null,
+  "supported_desktop_thread_read_send_exposed": false,
+  "active_cloud_executed_model_detected": false,
+  "adapter_added": false,
+  "resolver_default_model": null,
+  "declaration_source": "user-provided",
+  "synthetic_test_models": [
+    "Astra-6",
+    "gpt-6.1-sol",
+    "gpt-6-luna",
+    "gpt-6-sol"
+  ],
+  "tests": {
+    "total": 63,
+    "passed": 63,
+    "failed": 0,
+    "new_cases": [
+      "Sol session",
+      "Luna session",
+      "model change invalidates old evidence",
+      "absent cloud route has no default"
+    ]
+  },
+  "protocol_sha256": {
+    "protocol/Thread.ts": "1f9dc096a3c6735956ce38cbb7527e35b13e9ed663254ee13dba7414eab6d28c",
+    "protocol/Turn.ts": "a304905165c888f74ea402b6083175a27d100eab164657dd62a38e0965e28536",
+    "protocol/ThreadReadResponse.ts": "09d84ab28738dd7f906f7adf4dc741e745d5ee826029653f4d7741c4953a7b42",
+    "protocol/TurnStartedNotification.ts": "95135229129526d7d9e1db077962210ca5b564adc5fe414ff07e9a65ba43adcf",
+    "protocol/ModelReroutedNotification.ts": "6beb04909e0acdbe0486fa58d8d823aa964f8e70dd9e2133dc4b43761e22edf6",
+    "protocol/ThreadTokenUsage.ts": "27cae6c3e6c44696225e9a0903e0531c6eff126c6de3da2176bc5cdd904def4e",
+    "protocol/ThreadTokenUsageUpdatedNotification.ts": "53ce4421d686b8a7f9a86c5ad54de2a7dceecfb95df74fa5f441947e136f063d"
+  },
+  "resolver_sha256": "7aa1cc7780978e553fe31bef9e3ae3663f5b5bbe5c4c3c5f73e406d02030fd5c",
+  "message_checker_sha256": "9c965ee2096246a441c42c79d4ff172ab3521a9de101808fa0a992c6de81e17b",
+  "test_sha256": "12861b39c833b2eca535cb530cebc693234ce2eec9830fb0a0204afe489a625e",
+  "limits": [
+    "A static protocol schema does not prove a private cloud backend lacks additional fields.",
+    "Thread settings and model catalog are not per-turn execution proof.",
+    "Reroute notifications alone are not a full execution trace.",
+    "No denied private session, raw Desktop pipe or native UI was accessed."
+  ],
+  "publication_audit": {
+    "remote_main_observed": "65acf5cefc3331299bfcfbb4ac1c3b3b4846ea2a",
+    "local_main_observed": "11d848233ba13e175eb92dadca7110c406041547",
+    "unique_ignored_sources_present": [
+      "assets/art/raw/",
+      "assets/audio/candidates/",
+      "assets/blender/hero-art/masters/",
+      "assets/blender/hero-remaster/"
+    ],
+    "active_foreign_path": "harness/rider-contact-diagnostic/surfaces.mjs",
+    "new_cloud_library_checkpoint": "libfile_37cf2d6217388191b14b3ad349a7f670",
+    "cleanup_authorized_now": false,
+    "files_deleted": 0
+  }
+}

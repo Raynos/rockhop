@@ -1,5 +1,7 @@
 # What we are building — the plans and where each stands
 
+**Generic cloud model metadata (ask258):** [Protocol audit](../evidence/cloud-model-metadata-2026-10-03/README.md) distinguishes configured/persisted Thread.model from actual per-turn execution; no supported active-cloud execution metadata reader is exposed here.63hook tests verify separate Sol/Luna sessions, model changes and no default. Current explicit labels retain user-provided provenance. Cleanup remains conditional; source masters and unpublished/active work are preserved.
+
 **Independent rider review (ask257):** [Audit](../evidence/hero-remaster/independent-audit-2026-10-03/README.md) withholds acceptance: played arms-out webs and unsupported seated choreography persist; sourceA/body11 and C19 binds independently differ. Rechecked 157 original / 17 aligned frames and silently played all three clips; grip point alignment is not surface contact. Continuous physics-driven motion, actual LOD, phone and stranger gates stay open. No builder or player assets changed.
 
 **Cloud commit attribution (ask256):** Checker repair verified (59hook tests); user explicitly supplied `codex:Astra-6`. Preserve desktop metadata verification and require reviewed, session-bound cloud declaration with recorded user provenance. This does not establish the historical author model or accept rider assets.

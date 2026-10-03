@@ -59,6 +59,19 @@ Use the user's statement only for its authorized scope; a prior declaration does
 not establish another session's model. Validation proves syntax/session/provenance
 consistency; truthful user authorization remains the committing parent's duty.
 
+Cloud declarations accept different explicit model labels for different sessions;
+the example's Astra-6 label is never a default. A new authorized model requires
+updated declaration bytes and newly resolved trailers. Tests cover Sol and Luna
+sessions, cross-session rejection, model changes, and an absent cloud route.
+
+The inspected Codex CLI 0.159.3 app-server `Thread.model` field is configured or
+latest persisted model, explicitly not per-turn execution telemetry. Its `Turn`
+type has no executed-model field. A model picker, `model/list`, config, thread
+setting or assistant self-report cannot establish the actual execution model.
+Use an authoritative matching runtime record if exposed; otherwise preserve the
+explicit user-provided provenance above. See
+`docs/evidence/cloud-model-metadata-2026-10-03/` for the bounded protocol audit.
+
 Human coauthors can use Co-authored-by; AI assistance uses Assisted-by.
 A genuinely human commit can set SKIP_ATTRIB=1 to skip only the
 attribution requirement.

@@ -182,6 +182,47 @@ void test('cloud declaration works through an ordinary commit with both hooks', 
   assert.match(f.git('log', '-1', '--format=%B'), /Attribution-source: user-provided/);
   assert.match(f.git('log', '-1', '--format=%B'), /Assisted-by: codex:Astra-6\n/);
 });
+for (const [session, tool, model] of [
+  ['fixture-sol-session', 'Codex', 'gpt-6.1-sol'],
+  ['fixture-luna-session', 'codex', 'gpt-6-luna'],
+]) {
+  void test(`cloud declaration preserves ${model} for its own session`, (t) => {
+    const declaration = { ...cloudDeclaration, session, tool, model,
+      authorization: `Fixture user explicitly authorized ${tool}:${model}.` };
+    const f = cloudFixture(t, declaration);
+    const ownEnv = { ...f.cloudEnv, CODEX_THREAD_ID: session };
+    const result = f.resolveCloud({ CODEX_THREAD_ID: session });
+    assert.equal(result.status, 0, result.stderr);
+    assert.ok(result.stdout.endsWith(`Assisted-by: ${tool}:${model}\n`));
+    assert.ok(!result.stdout.includes('Astra-6'));
+    assert.equal(f.message(cloudMessage(result.stdout), ownEnv).status, 0);
+    assert.notEqual(f.resolveCloud().status, 0, 'another active session cannot borrow the label');
+    assert.notEqual(f.message(cloudMessage(result.stdout), f.cloudEnv).status, 0);
+  });
+}
+void test('a new authorized cloud model invalidates the previous model and evidence', (t) => {
+  const f = cloudFixture(t);
+  const previous = cloudMessage(f.resolveCloud().stdout);
+  const next = { ...cloudDeclaration, model: 'gpt-6-sol',
+    authorization: 'Fixture user explicitly authorized codex:gpt-6-sol.' };
+  f.write(cloudPath, JSON.stringify(next) + '\n');
+  f.git('add', cloudPath);
+  const result = f.resolveCloud();
+  assert.equal(result.status, 0, result.stderr);
+  assert.ok(result.stdout.endsWith('Assisted-by: codex:gpt-6-sol\n'));
+  assert.equal(f.message(cloudMessage(result.stdout), f.cloudEnv).status, 0);
+  assert.notEqual(f.message(previous, f.cloudEnv).status, 0);
+  assert.notEqual(f.message(cloudMessage(result.stdout.replace('gpt-6-sol', 'Astra-6')), f.cloudEnv).status, 0);
+});
+void test('a declaration on disk is not a default when the cloud route is absent', (t) => {
+  const f = cloudFixture(t);
+  const desktopEnv = { ...f.cloudEnv };
+  delete desktopEnv.CODEX_CLOUD_ATTRIBUTION_FILE;
+  const result = f.run(process.execPath, ['.githooks/resolve-attribution.mjs'], { env: desktopEnv });
+  assert.notEqual(result.status, 0, 'missing local metadata must remain unresolved');
+  assert.equal(result.stdout, '');
+  assert.notEqual(f.message(cloudMessage('Assisted-by: codex:Astra-6'), desktopEnv).status, 0);
+});
 const rejectedCloudDeclarations = [
   ['wrong schema', { ...cloudDeclaration, schemaVersion: 2 }],
   ['non-cloud context', { ...cloudDeclaration, execution: 'desktop' }],
