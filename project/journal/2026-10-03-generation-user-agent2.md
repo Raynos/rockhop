@@ -1158,3 +1158,17 @@ Ask:284–286.
 
 Limits: Recipe checkpoint only; fresh bounded numerical control pending.
 No shared runtime edits, dense fallback, zero filling or learned parity.
+
+Finding: Owned float32 feature promotion qualifies native trilinear
+sampling without changing voxel/hashmap/interpolation semantics.
+
+Validation: Bounded guard0/0.884s, all15cases pass original fixed limits.
+Nine conv cases retain exact neighbor maps/cache/input/output checks;
+trilinearf32 max2.3842e-7, protectedf16 max0.00027902≤0.002, protectedbf16
+max0.0078125≤0.02. Three nearest cases exact; outputs keep input dtype and
+all inputs unchanged. Installed extension/metallib/ops pins captured.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-sparse-operator02/
+Ask:284–286.
+
+Limits: Synthetic forward only, no learned/fullmodel/CUDA evidence. Known
+unsafe native lowprecision trilinear stays disabled; no shared install edit.
