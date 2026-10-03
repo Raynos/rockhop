@@ -19,7 +19,7 @@ Library downloads. All match. The six pose OBJs and liked generated head are
 included. `control.glb` e2f314aa and `boxer-reference.glb` 6cf0cdc0 are distinct.
 The stock gray head is a fitting control; the body11 generated identity/PBR stays.
 
-Agent 1 confirms a new qualified fitting contract will follow the native/full,
+At startup Agent 1 said a new fitting contract would follow the native/full,
 conditioned-four and exported-engine diagnostic. Historical references remain
 unqualified for inference. Keep measured 265 mm arms; do not impose 330 mm.
 Metres; Blender +X forward/+Z up/−Y left, glTF +X forward/+Y up/+Z left.
@@ -72,7 +72,7 @@ stop own child at65 anonymous/78 combined,1s polling,1790s maximum. Never nest
 Pixal's already-locking launcher under this controller, evict, remove the lock,
 use legacy run-locked.sh or kill a foreign process. Two same-technique failures
 require a mechanism change. Retain partial arrays/checkpoints and exact settings.
-Next: freeze qualified fitting contract, then one cheap probe and raw topology
+Next: freeze stable experimental fitting contract, then one cheap probe and raw topology
 audit before quality runs. Played Blender/engine fit, art, rig, device and release
 checks remain open; nothing enters normal player assets.
 
@@ -111,5 +111,16 @@ Calibrated source image and cropped conditioning image remain distinct evidence.
 checks and an actual unguarded invocation rejected before input reads, model
 imports or output creation. This does not test MPS or model execution. The
 contract JSON's hash is pinned, not treated as self-certifying acceptance:
-Agent 1 supplies the actually qualified source/pose/camera contract before any
-launch. Historical alpha inputs remain unqualified; no model job was started.
+Agent 1 supplies the stable experimental source/pose/camera contract before any
+launch. Historical alpha inputs await its explicit stability freeze; no model
+job was started.
+
+## Updated generation start condition
+
+Root's latest direction permits a stable EXPERIMENTAL/UNACCEPTED fitting
+contract while deformation repair and visual review continue. Final visual
+acceptance or complete rider qualification is not required for the already
+authorized bounded donor comparison. Agent 1 decides input stability and pins
+the body/proportions/true pose/metres/axes/cameras. The earlier overly strict
+visual-qualification interpretation is superseded. Do not launch on changing
+or unpinned inputs; all generated outputs remain unaccepted donors.
