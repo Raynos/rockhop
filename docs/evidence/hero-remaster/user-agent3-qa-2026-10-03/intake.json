@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "status": "PREPARED_NO_CANDIDATE_ACCEPTANCE",
+  "recordedAtUTC": "2026-10-03T13:51:58.740Z",
+  "repositorySHA": "b92c9f681e37e0622d518b4adfee581e223a0bbb",
+  "ownAttribution": "Assisted-by: Codex:gpt-6.1-sol",
+  "suppliedContext": {
+    "filesystem": "unrestricted / danger-full-access",
+    "network": "enabled",
+    "approval": "never"
+  },
+  "pins": {
+    "fixture": {
+      "path": "docs/evidence/hero-remaster/rider-contact-diagnostic-2026-10-03/aligned01/engine-fixture.json",
+      "bytes": 148730,
+      "sha256": "66dcd6d48e3c4a1bbf965fc67dcefde8b60d3c1eb4a215178ab0e0440cd8f8f9"
+    },
+    "baselineManifest": {
+      "path": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/control01/export-manifest.json",
+      "bytes": 292335,
+      "sha256": "85b0c2aea5b6ae5b08f735ef9f7cfab072fa89de8a6ce7e7b5199901181c0ed4"
+    },
+    "bike": {
+      "path": "public/models/bike-rookie.glb",
+      "bytes": 2283036,
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7"
+    },
+    "control": {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/control.glb",
+      "bytes": 1131276,
+      "sha256": "e2f314aa59a955503187892be5cd0ba7a949b21da81739161a5f704fc1bb1743"
+    }
+  },
+  "bikeFrameWorldColumnMajor": [
+    0.9997125654550434,
+    0.02397470482186566,
+    0,
+    0,
+    -0.02397470482186566,
+    0.9997125654550434,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.6621710745346546,
+    0.28329729310433005,
+    0,
+    1
+  ],
+  "historicalBikeContactMarksWorldM": {
+    "attach_chassis_com": [
+      0.5921550723081759,
+      0.4916785695390017,
+      0
+    ],
+    "attach_frame_origin": [
+      0.6621710745346546,
+      0.28329729310433005,
+      0
+    ],
+    "attach_grip_L": [
+      0.9133932386518913,
+      1.0695462368308843,
+      0.33000001311302185
+    ],
+    "attach_grip_R": [
+      0.9133932386518913,
+      1.0695462368308843,
+      -0.33000001311302185
+    ],
+    "attach_peg_L": [
+      0.5217318355862317,
+      0.2999350856344243,
+      0.20000000298023224
+    ],
+    "attach_peg_R": [
+      0.5217318355862317,
+      0.2999350856344243,
+      -0.20000000298023224
+    ]
+  },
+  "baselineCoordinateContract": {
+    "units": "metres",
+    "axes": "+Xforward,+Yup,+Zgame-left",
+    "fileNonboneRootX": 0.65,
+    "ordinaryRuntimeWrapperX": -0.65,
+    "rootContract": "Root is explicit, not donor inverse-bind offset; normal wrapper cancels x0.65",
+    "runtimeConditioningOptout": false
+  },
+  "baselineSkinJointOrders": [
+    {
+      "jointOrder": [
+        {
+          "nodeIndex": 50,
+          "name": "pelvis"
+        },
+        {
+          "nodeIndex": 41,
+          "name": "spine"
+        },
+        {
+          "nodeIndex": 40,
+          "name": "chest"
+        },
+        {
+          "nodeIndex": 1,
+          "name": "neck"
+        },
+        {
+          "nodeIndex": 0,
+          "name": "head"
+        },
+        {
+          "nodeIndex": 20,
+          "name": "shoulder.L"
+        },
+        {
+          "nodeIndex": 19,
+          "name": "upperArm.L"
+        },
+        {
+          "nodeIndex": 18,
+          "name": "forearm.L"
+        },
+        {
+          "nodeIndex": 17,
+          "name": "hand.L"
+        },
+        {
+          "nodeIndex": 4,
+          "name": "index_01.L"
+        },
+        {
+          "nodeIndex": 3,
+          "name": "index_02.L"
+        },
+        {
+          "nodeIndex": 2,
+          "name": "index_03.L"
+        },
+        {
+          "nodeIndex": 7,
+          "name": "middle_01.L"
+        },
+        {
+          "nodeIndex": 6,
+          "name": "middle_02.L"
+        },
+        {
+          "nodeIndex": 5,
+          "name": "middle_03.L"
+        },
+        {
+          "nodeIndex": 10,
+          "name": "pinky_01.L"
+        },
+        {
+          "nodeIndex": 9,
+          "name": "pinky_02.L"
+        },
+        {
+          "nodeIndex": 8,
+          "name": "pinky_03.L"
+        },
+        {
+          "nodeIndex": 13,
+          "name": "ring_01.L"
+        },
+        {
+          "nodeIndex": 12,
+          "name": "ring_02.L"
+        },
+        {
+          "nodeIndex": 11,
+          "name": "ring_03.L"
+        },
+        {
+          "nodeIndex": 16,
+          "name": "thumb_01.L"
+        },
+        {
+          "nodeIndex": 15,
+          "name": "thumb_02.L"
+        },
+        {
+          "nodeIndex": 14,
+          "name": "thumb_03.L"
+        },
+        {
+          "nodeIndex": 39,
+          "name": "shoulder.R"
+        },
+        {
+          "nodeIndex": 38,
+          "name": "upperArm.R"
+        },
+        {
+          "nodeIndex": 37,
+          "name": "forearm.R"
+        },
+        {
+          "nodeIndex": 36,
+          "name": "hand.R"
+        },
+        {
+          "nodeIndex": 23,
+          "name": "index_01.R"
+        },
+        {
+          "nodeIndex": 22,
+          "name": "index_02.R"
+        },
+        {
+          "nodeIndex": 21,
+          "name": "index_03.R"
+        },
+        {
+          "nodeIndex": 26,
+          "name": "middle_01.R"
+        },
+        {
+          "nodeIndex": 25,
+          "name": "middle_02.R"
+        },
+        {
+          "nodeIndex": 24,
+          "name": "middle_03.R"
+        },
+        {
+          "nodeIndex": 29,
+          "name": "pinky_01.R"
+        },
+        {
+          "nodeIndex": 28,
+          "name": "pinky_02.R"
+        },
+        {
+          "nodeIndex": 27,
+          "name": "pinky_03.R"
+        },
+        {
+          "nodeIndex": 32,
+          "name": "ring_01.R"
+        },
+        {
+          "nodeIndex": 31,
+          "name": "ring_02.R"
+        },
+        {
+          "nodeIndex": 30,
+          "name": "ring_03.R"
+        },
+        {
+          "nodeIndex": 35,
+          "name": "thumb_01.R"
+        },
+        {
+          "nodeIndex": 34,
+          "name": "thumb_02.R"
+        },
+        {
+          "nodeIndex": 33,
+          "name": "thumb_03.R"
+        },
+        {
+          "nodeIndex": 45,
+          "name": "thigh.L"
+        },
+        {
+          "nodeIndex": 44,
+          "name": "shin.L"
+        },
+        {
+          "nodeIndex": 43,
+          "name": "foot.L"
+        },
+        {
+          "nodeIndex": 42,
+          "name": "ball.L"
+        },
+        {
+          "nodeIndex": 49,
+          "name": "thigh.R"
+        },
+        {
+          "nodeIndex": 48,
+          "name": "shin.R"
+        },
+        {
+          "nodeIndex": 47,
+          "name": "foot.R"
+        },
+        {
+          "nodeIndex": 46,
+          "name": "ball.R"
+        }
+      ],
+      "originalAccessor": 6
+    }
+  ],
+  "baselineActionOffPoses": [
+    "T",
+    "A",
+    "neutral"
+  ],
+  "gates": {
+    "M0": "OPEN",
+    "M1": "OPEN",
+    "M2": "OPEN",
+    "M3": "OPEN",
+    "M4": "OPEN",
+    "M5": "OPEN"
+  },
+  "limits": [
+    "Historical fixture reused; no current candidate or runtime capture measured.",
+    "Socket marks do not establish palm, sole or saddle surface support.",
+    "Native/conditioned/export vertex correspondence and time-matched samples pending Agent 1.",
+    "Finite time samples cannot certify continuous parity.",
+    "Root alone judges appearance, likeness and gates; physical iOS and stranger observations absent."
+  ]
+}
