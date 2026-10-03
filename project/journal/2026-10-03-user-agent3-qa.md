@@ -768,3 +768,18 @@ Limits: Vertexdepth sampled/not fulltri maximum;19poses not swept or
 everytick. No consumedsolid response/pressure/loadbearing/phone or wedge
 artpass. Rootrejects darkinterface seatingproof; no offsetheight/width/
 lateral/hidingpolish or playerpromotion. Await frozenwearablehand-off.
+
+## Round45: normal source remains deterministic after whole-solid failure
+
+Finding: Requiredthirdround freshnormal gate after43/44 passes both
+tiers; allcandidate mappings/reviewadapters excluded. Wholepegmount
+overlap remainsfailed androot's wedge/darkinterface verdict preserved.
+
+Validation: Low/high4810ticks/0faults/40.083333333333336s/hash368f1ca5bd9e830a
+andFloat64LEabaaaaaaaa0a4440 exact; bothcrash103/restarttick0/3and3ms,
+zero pageerrors. Runtime/dependencies/recipes/20model inventory pinned.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate45/source.json
+
+Limits: No player source/promotion/deploy, whole-solid/loadbearing/art/
+phone/strangerpass. Await qualified newwearable; no sourceparameter
+or cosmeticworkaround. Existingasks278/279/288 andrider gatesopen.
