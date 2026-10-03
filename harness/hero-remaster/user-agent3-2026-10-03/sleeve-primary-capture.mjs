@@ -1,0 +1,68 @@
+/** Matched fitted-skinning controls and consumed bounded response on real riding. */
+/* oxlint-disable eslint/no-undef, typescript/no-extraneous-class -- silent headless page. */
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import { preview } from 'vite';
+import { webkit } from 'playwright';
+import { decodeJSON, expandFrames } from '../../../src/core/replay.ts';
+const [buildArg,handoffFile,fixtureFile,outArg]=process.argv.slice(2);assert(outArg&&!fs.existsSync(outArg));
+const build=path.resolve(buildArg),out=path.resolve(outArg),sha=b=>crypto.createHash('sha256').update(b).digest('hex');fs.mkdirSync(out,{recursive:true});
+const handoffBytes=fs.readFileSync(handoffFile),originalHandoff=JSON.parse(handoffBytes);assert.equal(sha(handoffBytes),'7a3514711c0cc04bb0505ba6deca4de58d2591f9d007e46abe9153d3e2aab60a');
+const handoff=originalHandoff;
+const fixtures=JSON.parse(fs.readFileSync(fixtureFile)),fixture=fixtures.cases.find(c=>c.bike==='rookie'&&c.kind==='maximum-backward-lean'),recordingBytes=fs.readFileSync(path.join(path.dirname(fixtureFile),fixture.recording));assert.equal(sha(recordingBytes),fixture.sourceSHA256);
+const rec=decodeJSON(recordingBytes.toString()),inputs=expandFrames(rec).slice(0,fixture.window.endInputTick),manifest=JSON.parse(fs.readFileSync(path.join(build,'hero-review.json')));
+const report={status:'UNACCEPTED_PRIMARY_SKINNING_PENDING',handoffSHA256:sha(handoffBytes),recordingSHA256:sha(recordingBytes),fixture:fixture.id,
+  candidate:manifest.models.find(m=>m.logical==='models/rider-street-mustard.glb'),moduleSHA256:sha(fs.readFileSync(path.join(build,'agent3-primary/solver.js'))),moduleBytes:fs.statSync(path.join(build,'agent3-primary/solver.js')).size,
+  sourceSHA256:sha(fs.readFileSync(new URL('sleeve-primary-runtime.mjs',import.meta.url))),captureSHA256:sha(fs.readFileSync(new URL(import.meta.url))),errors:[],runs:[],
+  limits:['Single local sleeve band, no complete garment/footwear acceptance. Oldhoodie hidden only to expose mechanism; body/bind/physics unchanged.',
+    'Actual physical-body pose and real bike input. Fitted canonical skinning is primary; bounded collision corrections affect garment vertices only.',
+    'No inter-garment partner in this local test. Assembled layers, real iPhone, load/memory and arbitrary-pose safety remain open.',
+    'Independent full surface/self checks are separate; vertex correction alone does not establish swept or layered garment safety.']};
+const server=await preview({configFile:false,root:process.cwd(),build:{outDir:build},preview:{host:'127.0.0.1',port:0},logLevel:'warn'}),browser=await webkit.launch({headless:true});
+try{
+  for(const [name,collision,film]of [['off',false,true],['on',true,true],['on-repeat',true,false]]){
+    const context=await browser.newContext({viewport:{width:960,height:640}});await context.addInitScript(()=>{localStorage.setItem('rockhop.onboarded','1');window.__agent3AudioCount=0;for(const k of ['AudioContext','webkitAudioContext'])window[k]=class{constructor(){window.__agent3AudioCount++;throw new Error('Silent live cloth');}};
+      window.__agent3WasmMemories=[];const instantiate=WebAssembly.instantiate.bind(WebAssembly);WebAssembly.instantiate=async(...args)=>{const result=await instantiate(...args),instance=result.instance??result;for(const value of Object.values(instance.exports??{}))if(value instanceof WebAssembly.Memory&&!window.__agent3WasmMemories.includes(value))window.__agent3WasmMemories.push(value);return result;};});
+    const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+    await page.goto(server.resolvedUrls.local[0]+'?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120');await page.waitForFunction(()=>window.__rockhop?.ready,null,{timeout:120000});
+    await page.addStyleTag({content:'#ui,#ui *,.hud,.touch-controls{visibility:hidden!important} #agent3-label{position:fixed;z-index:99999;top:8px;left:10px;color:white;background:#101820e8;padding:8px;font:14px monospace;white-space:pre;visibility:visible!important}'});
+    const init=await page.evaluate(async({handoff,header,collision,name})=>{
+      const t=window.__rockhop,r=window.__render;t.setBike(header.bike??'rookie');await r.whenReady();await t.loadTrack(header.trackId,header.seed);t.setQuality('high');await r.whenReady();t.skipCountdown();t.render(true);
+      const m=await import('/agent3-primary/solver.js'),d=r.debug,targets=m.liveSleeveTargets(d,handoff),clearance=m.sleeveClearance(targets.cloth,targets.body,handoff);
+      if(clearance.minUnsignedM<.002||clearance.minLocalNormalM<.002)throw new Error('Invalid actual spawn rest; STOP before solver');
+      const solver=m.createPrimarySleeve(d,handoff,collision,targets);
+      const hidden=[];for(const entry of d.rider.sleeveGeometry)if(['Clean_native_hoodie_sewn_neckline_and_fitted_pocket','Clean_native_hoodie_sewn_neckline_and_fitted_pocket_1'].includes(entry.mesh.name)){entry.mesh.visible=false;hidden.push(entry.mesh.name);}if(hidden.length!==2)throw new Error('Exact source hoodie visibility mismatch');
+      window.__agent3Sleeve={m,handoff,solver,name,previous:0,targets,times:[],diagnostics:[],framePositions:[],trace:[],samples:[],maximumBodyResidualM:targets.skinTemplate.sourceBodyMaximumResidualM};
+      const label=document.createElement('div');label.id='agent3-label';document.body.append(label);
+      return{contract:solver.contract,initialClearance:clearance,initialPositions:targets.cloth.map(p=>p.toArray()),bodyTemplate:targets.skinTemplate,hidden,physicalPose:d.rider.debug.physicalPose,
+        wasmMemoryBytes:window.__agent3WasmMemories.map(m=>m.buffer.byteLength),jsHeapBytes:performance.memory?.usedJSHeapSize??null};
+    },{handoff,header:rec.header,collision,name});assert(init.physicalPose);
+    const folder=path.join(out,name);fs.mkdirSync(folder);let previous=0,filmFrame=0;const ticks=[0,...Array.from({length:Math.floor(inputs.length/10)},(_,i)=>(i+1)*10),inputs.length];
+    for(const tick of ticks){
+      const sample=await page.evaluate(({input,tick})=>{
+        const t=window.__rockhop,r=window.__render,d=r.debug,T=d.THREE,a=window.__agent3Sleeve;
+        for(const frame of input){t.setInput(frame);t.step(1);t.render(true);if(!d.rider.debug.physicalPose)throw new Error('Physical pose branch lost');const skinStart=performance.now(),targets=a.m.liveSleeveTargets(d,a.handoff),skinTargetsMs=performance.now()-skinStart,row=a.solver.step(targets);a.targets=targets;a.times.push(skinTargetsMs+row.totalMs);const{positions:_unused,...diagnostic}=row;a.diagnostics.push({...diagnostic,inputTick:a.previous+1,skinTargetsMs});a.framePositions.push(row.positions);a.maximumBodyResidualM=Math.max(a.maximumBodyResidualM,targets.skinTemplate.sourceBodyMaximumResidualM);a.previous++;a.trace.push({inputTick:a.previous,stateHash:t.hashState(),tick:t.getState().tick,phase:t.phase(),runTime:t.runTime(),finishTime:t.getState().finishTime,physicalPose:d.rider.debug.physicalPose});}
+        const ua=d.rider.scene.getObjectByName('upperArmL'),hd=d.rider.scene.getObjectByName('handL'),target=ua.getWorldPosition(new T.Vector3()).add(hd.getWorldPosition(new T.Vector3())).multiplyScalar(.5);
+        r.setCameraOverride({mode:'orbit',yaw:.55+tick/703*Math.PI*2,pitch:.12,dist:1.85,x:target.x,y:target.y,screenX:.5,screenY:.5});document.getElementById('agent3-label').textContent=`UNACCEPTED FITTED SKINNING | body response ${a.name}\nActual riding input tick ${tick} | canonical51bind at120Hz\n288skin vertices /562sourcebody vertices / boundedbodycorrection`;
+        r.invalidate();t.render(true);const p=a.solver.getPositions(),cloth=Array.from({length:p.length/3},(_,i)=>new T.Vector3(p[i*3],p[i*3+1],p[i*3+2]));
+        return{inputTick:tick,bodyPositionsWorldM:a.targets.body.map(p=>p.toArray()),clearance:a.m.sleeveClearance(cloth,a.targets.body,a.handoff),physicalPose:d.rider.debug.physicalPose,stateHash:t.hashState(),audioContexts:window.__agent3AudioCount,webdriver:navigator.webdriver};
+      },{input:inputs.slice(previous,tick),tick});previous=tick;assert(sample.webdriver&&sample.audioContexts===0&&sample.physicalPose&&sample.clearance.finite);
+      await page.evaluate(sample=>window.__agent3Sleeve.samples.push(sample),sample);if(film)await page.screenshot({path:path.join(folder,String(filmFrame++).padStart(4,'0')+'.png')});
+    }
+    const result=await page.evaluate(()=>{const a=window.__agent3Sleeve,positions=a.framePositions.flat();return{times:a.times,diagnostics:a.diagnostics,positions,trace:a.trace,samples:a.samples,maximumBodyResidualM:a.maximumBodyResidualM,
+      wasmMemoryBytes:window.__agent3WasmMemories.map(m=>m.buffer.byteLength),jsHeapBytes:performance.memory?.usedJSHeapSize??null};});
+    const stream=new Float32Array(result.positions),streamBytes=Buffer.from(stream.buffer);fs.writeFileSync(path.join(folder,'positions.f32'),streamBytes);
+    const frameHashes=Array.from({length:inputs.length},(_,i)=>sha(streamBytes.subarray(i*288*12,(i+1)*288*12))),traceBytes=Buffer.from(result.trace.map(t=>JSON.stringify(t)).join('\n')+'\n');fs.writeFileSync(path.join(folder,'tick-trace.ndjson'),traceBytes);
+    const sorted=result.times.slice().sort((a,b)=>a-b),quantile=p=>sorted[Math.floor((sorted.length-1)*p)];
+    const receipt={name,collision,init,inputTicks:inputs.length,frameHashes,positionsSHA256:sha(streamBytes),traceSHA256:sha(traceBytes),timingMs:{p50:quantile(.5),p95:quantile(.95),max:sorted.at(-1),sum:result.times.reduce((s,v)=>s+v,0)},diagnostics:result.diagnostics,samples:result.samples,maximumBodyResidualM:result.maximumBodyResidualM,
+      wasmMemoryBytes:result.wasmMemoryBytes,jsHeapBytes:result.jsHeapBytes,memoryLimit:'WASM memory is actual exported-memory byteLength; JS heap unavailable in WebKit. Renderer/native browser memory and private recording allocations are not this measurement.'};
+    if(film){const movie=path.join(folder,'played.mp4'),ff=spawnSync('ffmpeg',['-v','error','-y','-framerate','12','-i',path.join(folder,'%04d.png'),'-c:v','libx264','-threads','2','-crf','18','-pix_fmt','yuv420p','-an','-movflags','+faststart',movie],{encoding:'utf8'});assert.equal(ff.status,0,ff.stderr);receipt.clip={sha256:sha(fs.readFileSync(movie)),frames:filmFrame,fps:12};}
+    report.runs.push(receipt);await context.close();console.log(JSON.stringify({run:name,timingMs:receipt.timingMs,minClearanceM:Math.min(...receipt.samples.map(s=>s.clearance.minLocalNormalM))}));
+  }
+  const [off,on,repeat]=report.runs;assert.deepEqual(on.frameHashes,repeat.frameHashes);assert.equal(on.traceSHA256,off.traceSHA256);assert.equal(on.traceSHA256,repeat.traceSHA256);assert.deepEqual(on.init.initialPositions,off.init.initialPositions);
+  report.consumedResponseActive=on.positionsSHA256!==off.positionsSHA256;report.repeatAllFrameHashesExact=true;report.allPairedPhysicsTracesExact=true;assert.deepEqual(report.errors,[]);report.status=report.consumedResponseActive?'UNACCEPTED_ACTUAL_PRIMARY_RESPONSE_CAPTURED':'UNACCEPTED_PRIMARY_RESPONSE_INACTIVE_ON_THIS_MOTION';
+}catch(e){report.failure=String(e);process.exitCode=1;}
+finally{fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');await browser.close();await new Promise(resolve=>server.httpServer.close(resolve));console.log(JSON.stringify({status:report.status,runs:report.runs.length,failure:report.failure}));}

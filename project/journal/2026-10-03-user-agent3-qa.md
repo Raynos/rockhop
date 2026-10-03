@@ -500,3 +500,27 @@ this unit; mathematical convexification may add concavity space. Parts
 overlap intentionally. Moving cost/strain/contacts, self/intergarment,
 all-angle art and physical phone/release remain open. Primary architecture
 from93fe8d0d unchanged; fullcloth controls preserved, no player promotion.
+
+## Round31: consumed primary skinning response remains unsafe
+
+Finding: Real neutral/forward/backward input exposes skinned sleeve
+collisions. Checked convex solids now consume bounded corrections on
+actual garment positions: eight of703ticks/atmost18vertices/11.1712mm,
+no20mmcap orhardanchorchanges. Bothpasses use samepattern/material/orbit;
+fullcloth controls and byte-exact canonical skinning helpers retained.
+
+Validation: All703ONrepeat garment framehashes exact; independent
+production Game verifies2109physics/phase/clock/finish ticks.72frame6s
+paired films silently played, matched orbit/material/input. Actual target
+skin+sourceancestry+hull+correction+normal cost ONp50/p952/2ms versus OFF
+1/1ms;366375Bmodule/noRapierworld, MeshoptWASM851968B both. Six collision
+math/contact cases/scopedlint pass. Sourcebody residual≤9.203e-8m.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/primary31/
+
+Limits: UNACCEPTED. At all72capturedticks OFFmax50body/22self versus
+ON16body/33self: incomplete bodyresponse and worse selfcontact reject
+safety. No consumed self/intergarment partner response, allheldout or
+physicalphone pass. Timer is quantized desktop CPU, excludesrenderer/GPU/
+nativebrowser memory. Capture's unused-name lint repair is documented
+with exact executedsource SHA. No ordinary gameplay/51bind/playerassets
+changed. Primary93fe8d0d/openM0–M5 maintained; round30normalgate remains.
