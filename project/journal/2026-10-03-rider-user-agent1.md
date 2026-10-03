@@ -123,3 +123,13 @@ recalculation3components9.99784e-5 explicitlyrecorded; syntax/scopedoxlint pass.
 Limits: Cardinalrig-angle prototype not playerintegration; targetrays not signed
 clearance; partiallocalwitness improvement only, movingreview next.
 Evidence: [corrective checkpoint](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/README.md). Ask274.
+
+Finding: Local corrective evidence must play identical before/after bends
+with matched camera/light and full raisedhands, not stand-in pose stills.
+Validation: Two native paired133frame12fps11.083s1024×768 silentmovies pinned;
+532sourceframes and all529geometricbounds minborder.19725m verify. Full decode
+and Python syntax pass; round15ordinarysilentMetal4810identicalticks clear
+40.0833s/crash103/restart1tick/frame4.365ms/coldboot2272ms/errors0 passes.
+Limits: Selected rays improve butcontacts/held72regression remain; nativecontrol
+colors/head, no completefit/art/playerqualification. Root/QA ownjudgments open.
+Evidence: [played corrective](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/review/README.md). Ask274.
