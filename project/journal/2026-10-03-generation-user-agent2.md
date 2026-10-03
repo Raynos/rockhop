@@ -997,3 +997,21 @@ Limits: Post-sampling VAE decode boundary implicated, exact inneroperator
 unobserved. Final sampled hash exists but no final tensor archive in this
 recipe, so decode-only replay unavailable. Need archive before decoder
 allocation and qualified independent batch slicing; no family rejection.
+
+Finding: Same learned MPS VAE batch2 versus official batch1 slicing
+returns finite full768images with unchanged actual conditioning latents.
+
+Validation: Guard0/5.181s; published VAE config/weight pins rechecked,
+actual833? parameter count83653863 asserted. Two real paint05 viewlatents
+[2,4,96,96] decoded packed and sliced, no spatialcrop/tiling. Both outputs
+finite, latentbytes unchanged, maxfloaterror0.00415039/mean0.0000699741.
+Original float32-denormalization pixel proxy maxdifference1≤fixed2threshold;
+output arrays archived SHA5e2ba411. Official public slicing invokes
+independent per-batch decoder; no attention processor/weight changes.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/vae-slicing-control01/
+Ask:284–286.
+
+Limits: Numeric derivative, not byte-identical output/CUDA or full16final
+samples. Pixel proxy promotes tofloat32 before denormalization, unlike
+installed processor; exact installed postprocess check still required.
+Source/control retained before correcting that precision-contract mismatch.

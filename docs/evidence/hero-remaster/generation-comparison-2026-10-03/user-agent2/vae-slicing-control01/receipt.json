@@ -1,0 +1,39 @@
+{
+  "accepted": false,
+  "newShapeOrSamplerRuns": 0,
+  "torch": "2.14.0",
+  "recipeSHA256": "dc3a3a85d7edcb0bc2a8e581c6377aaea909b4c24483f14a483bcec9d9ce5f12",
+  "vaeSourceSHA256": "091d72ea9ae2f45f465e70f05142e04850d1153052dca520291ceb707bda8c98",
+  "weightSHA256": "1b4889b6b1d4ce7ae320a02dedaeff1780ad77d415ea0d744b476155c6377ddc",
+  "latentArchiveSHA256": "15bc15c3b47bd9d95fbc5fe3700e8973e11e4b61307db689b44ed032c9f3cbc8",
+  "inputShape": [
+    2,
+    4,
+    96,
+    96
+  ],
+  "inputDtype": "torch.float16",
+  "outputPixelMaxDifferenceThreshold": 2,
+  "phase": "decode controls passed",
+  "limits": [
+    "Two real encoded conditioning latents, not final sampled16-view PBR latents.",
+    "Packed-vs-sliced same learned MPS VAE, not independent CUDA equivalence.",
+    "Native official batch slicing only; no spatial tiling or trained attention replacement."
+  ],
+  "packedFinite": true,
+  "outputShape": [
+    2,
+    3,
+    768,
+    768
+  ],
+  "slicedFinite": true,
+  "maxFloatError": 0.004150390625,
+  "meanFloatError": 6.99741140124388e-05,
+  "outputsByteIdentical": false,
+  "maxPixelDifference": 1,
+  "pixelsByteIdentical": false,
+  "inputBytesUnchanged": true,
+  "elapsedSeconds": 1.525984541978687,
+  "outputArchiveSHA256": "5e2ba411a5017ecd22008ba354d7c46b70740a4128e3a1b97977345dc846e55e"
+}
