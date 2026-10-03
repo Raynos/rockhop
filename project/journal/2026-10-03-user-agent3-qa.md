@@ -432,3 +432,28 @@ closed-volume/continuous safety, active inter-garment partner, physical
 iPhone, renderer/native/GPU memory or deployed-phone pass. Sourcebody and
 ordinary Game remain unchanged. A bounded closed body representation or
 verified continuous deformable-mesh route is required before promotion.
+
+### Round 28 — source boundary caps do not qualify a solid collider
+
+Finding: The exact source arm region has two32/26vertex boundary loops.
+Collider-only means/caps add2vertices/58faces, preserving every562source
+vertex/1066face field. Every closed edge has two opposite faces, Euler2,
+positive rest volume. Actual cap positions follow current posed boundary
+means. This closure does not restore1mm response; ON positions exactly
+equal27. Watertight edges alone are not a valid collision-volume proof.
+
+Validation: Independent SAT finite triangle checks at actual spawn find
+zero garment/body and zero nonadjacent garment self contacts, but30capped
+body self pairs, including original posing and caps. That volume fails
+preflight and stays rejected; no further simulation on it. The bounded
+diagnostic preceded that complete body-self check. Three463tick traces
+still match ordinary Game and repeatedONparticlehashesexact. ON7/11ms
+p50/p95; two48frame films play silently. Contact-predicate crossing,
+coplanar-separation/nesting and degenerate tests plus scoped lint pass.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/sleeve28/
+
+Limits: Rejected cappedvolume. No body/wardrobe/bind/player mutation,1mm
+safety, wearable/fold, mobile or deployment pass. Root's26played judgment
+confirms consumed coverage response but smoothstifftube/widecuff and
+default10mm thickness dependence. Next representation must pass its own
+geometry gate before solving, with original source controls retained.

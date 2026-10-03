@@ -13,10 +13,12 @@ export function liveSleeveTargets(debug,handoff){
     for(const[name,w]of weights){const matrix=palette.get(name.replaceAll('.',''));if(!matrix)throw new Error('Missing collider skin joint '+name);result.addScaledVector(input.clone().applyMatrix4(matrix),w);total+=w;}
     if(Math.abs(total-1)>2e-6)throw new Error('Collider weight sum');return result.multiplyScalar(1/total).applyMatrix4(bodyMesh.bindMatrixInverse).applyMatrix4(bodyMesh.matrixWorld);};
   const pattern=handoff.pattern,body=handoff.nativeConsumedColliders.body;
-  const bodyPositions=body.relevantArmVertices.map(v=>skin(v.restNativeM,v.weights)),attribute=bodyMesh.geometry.attributes._source_id;
+  const currentBodyPositions=new Map();for(const v of body.relevantArmVertices){const p=v.generatedFromNativeIDs?
+    v.generatedFromNativeIDs.reduce((sum,id)=>sum.add(currentBodyPositions.get(id)),new Vector3()).multiplyScalar(1/v.generatedFromNativeIDs.length):skin(v.restNativeM,v.weights);currentBodyPositions.set(v.bodyVertexID,p);}
+  const bodyPositions=body.relevantArmVertices.map(v=>currentBodyPositions.get(v.bodyVertexID)),attribute=bodyMesh.geometry.attributes._source_id;
   if(!attribute)throw new Error('Canonical body ancestry missing');const rows=new Map();for(let i=0;i<attribute.count;i++){const id=attribute.getX(i);if(!rows.has(id))rows.set(id,[]);rows.get(id).push(i);}
   let sourceBodyMaximumResidualM=0,matchedNativeBodyVertices=0;
-  for(let i=0;i<body.relevantArmVertices.length;i++){const sourceID=body.relevantArmVertices[i].bodyVertexID,indices=rows.get(sourceID);if(!indices)throw new Error('Collider native body vertex is not visible body '+sourceID);matchedNativeBodyVertices++;
+  for(let i=0;i<body.relevantArmVertices.length;i++){if(body.relevantArmVertices[i].generatedFromNativeIDs)continue;const sourceID=body.relevantArmVertices[i].bodyVertexID,indices=rows.get(sourceID);if(!indices)throw new Error('Collider native body vertex is not visible body '+sourceID);matchedNativeBodyVertices++;
     for(const row of indices)sourceBodyMaximumResidualM=Math.max(sourceBodyMaximumResidualM,bodyMesh.getVertexPosition(row,new Vector3()).applyMatrix4(bodyMesh.matrixWorld).distanceTo(bodyPositions[i]));}
   return{cloth:pattern.verticesNativeM.map((p,i)=>skin(p,pattern.weights[i])),body:bodyPositions,
     skinTemplate:{mesh:bodyMesh.name,bind:bodyMesh.bindMatrix.toArray(),bindInverse:bodyMesh.bindMatrixInverse.toArray(),world:bodyMesh.matrixWorld.toArray(),jointCount:palette.size,matchedNativeBodyVertices,sourceBodyMaximumResidualM}};
@@ -39,7 +41,8 @@ export async function createSleeveRuntime(debug,handoff,collision,initialTargets
   const flat=points=>new Float32Array(points.flatMap(p=>p.toArray())),bodyIds=new Map(body.relevantArmVertices.map((v,i)=>[v.bodyVertexID,i])),bodyIndices=new Uint32Array(body.relevantArmTriangles.flatMap(t=>t.bodyVertexIDs.map(id=>bodyIds.get(id))));
   const colliderTemplate=()=>RAPIER.ColliderDesc.ball(.001).setFriction(.3).setContactSkin(.001);
   const bodyParticleRadiusM=options.bodyParticleRadiusM??.01;
-  let bodyDesc=new RAPIER.SoftBodyDesc(flat(initialTargets.body)).setSurface(bodyIndices).setPinnedParticles(Array.from(bodyIds.values())).setGravityScale(0).setShapeMatching(false).setSelfContacts(false).setParticleRadius(bodyParticleRadiusM).setOriented(false).setCanSleep(false);
+  const solidBody=Boolean(handoff.engineColliderClosure?.everyEdgeTwoOppositeFaces);
+  let bodyDesc=new RAPIER.SoftBodyDesc(flat(initialTargets.body)).setSurface(bodyIndices).setPinnedParticles(Array.from(bodyIds.values())).setGravityScale(0).setShapeMatching(false).setSelfContacts(false).setParticleRadius(bodyParticleRadiusM).setOriented(solidBody).setCanSleep(false);
   bodyDesc=collision?bodyDesc.setSurfaceCollider(colliderTemplate()):bodyDesc.setNoSurfaceCollider();const bodySoft=world.createSoftBody(bodyDesc);
   const hardPins=pattern.sewnAnchorWeights.flatMap((w,i)=>w===1?[i]:[]),halfPins=pattern.sewnAnchorWeights.flatMap((w,i)=>w>0&&w<1?[{id:i,weight:w}]:[]);
   const clothTriangles=new Uint32Array(pattern.triangleVertexIDs.flat());
@@ -74,7 +77,7 @@ export async function createSleeveRuntime(debug,handoff,collision,initialTargets
   };
   return{step,mesh,clothSoft,bodySoft,world,initialEdges,dispose(){debug.scene.remove(mesh);geometry.dispose();mesh.material.dispose();world.free();},
     contract:{rapier:RAPIER.version(),collision,particles:clothSoft.numParticles(),edges:clothSoft.numEdges(),structuralInputEdges:pattern.edgeRestConstraints.length,
-      bodyParticles:bodySoft.numParticles(),bodyTriangles:bodyIndices.length/3,clothTriangles:clothTriangles.length/3,hardPins,halfPins,dt:world.timestep,restLengthMaximumErrorM,checkedStructuralEdges,
+      bodyParticles:bodySoft.numParticles(),bodyTriangles:bodyIndices.length/3,clothTriangles:clothTriangles.length/3,hardPins,halfPins,dt:world.timestep,restLengthMaximumErrorM,checkedStructuralEdges,solidBody,colliderClosure:handoff.engineColliderClosure??null,
       solverIterations:2,internalPgs:1,additionalPgs:3,maxExtraSubsteps:2,softnessHz:30,softnessDamping:1,particleMassKg:handoff.nativeConsumedColliders.cloth.massPerVertexKg,bodyParticleRadiusM:bodySoft.particleRadius(),clothParticleRadiusM:clothSoft.particleRadius(),dihedrals:clothSoft.numDihedrals(),
       halfAnchorSpringHz:8,halfAnchorAccelerationCapMPerS2:100,radiusM:.001,colliderSkinM:.001,
       bodyColliderMeshes:bodySoft.numMeshes(),clothColliderMeshes:clothSoft.numMeshes(),selfContacts:collision,

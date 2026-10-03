@@ -8,13 +8,15 @@ import { spawnSync } from 'node:child_process';
 import { preview } from 'vite';
 import { webkit } from 'playwright';
 import { decodeJSON, expandFrames } from '../../../src/core/replay.ts';
-const [buildArg,handoffFile,fixtureFile,outArg,bodyRadiusArg]=process.argv.slice(2);assert(outArg&&!fs.existsSync(outArg));
+import { closeArmCollider } from './closed-arm-collider.mjs';
+const [buildArg,handoffFile,fixtureFile,outArg,bodyRadiusArg,closureArg]=process.argv.slice(2);assert(outArg&&!fs.existsSync(outArg));
 const bodyParticleRadiusM=Number(bodyRadiusArg??.01);assert(Number.isFinite(bodyParticleRadiusM)&&bodyParticleRadiusM>0);
 const build=path.resolve(buildArg),out=path.resolve(outArg),sha=b=>crypto.createHash('sha256').update(b).digest('hex');fs.mkdirSync(out,{recursive:true});
-const handoffBytes=fs.readFileSync(handoffFile),handoff=JSON.parse(handoffBytes);assert.equal(sha(handoffBytes),'7a3514711c0cc04bb0505ba6deca4de58d2591f9d007e46abe9153d3e2aab60a');
+const handoffBytes=fs.readFileSync(handoffFile),originalHandoff=JSON.parse(handoffBytes);assert.equal(sha(handoffBytes),'7a3514711c0cc04bb0505ba6deca4de58d2591f9d007e46abe9153d3e2aab60a');
+const handoff=closureArg==='closed'?closeArmCollider(originalHandoff):originalHandoff;
 const fixtures=JSON.parse(fs.readFileSync(fixtureFile)),fixture=fixtures.cases.find(c=>c.bike==='rookie'&&c.kind==='maximum-forward-lean'),recordingBytes=fs.readFileSync(path.join(path.dirname(fixtureFile),fixture.recording));assert.equal(sha(recordingBytes),fixture.sourceSHA256);
 const rec=decodeJSON(recordingBytes.toString()),inputs=expandFrames(rec).slice(0,fixture.window.endInputTick),manifest=JSON.parse(fs.readFileSync(path.join(build,'hero-review.json')));
-const report={status:'UNACCEPTED_LIVE_SLEEVE_PENDING',bodyParticleRadiusM,handoffSHA256:sha(handoffBytes),recordingSHA256:sha(recordingBytes),fixture:fixture.id,
+const report={status:'UNACCEPTED_LIVE_SLEEVE_PENDING',bodyParticleRadiusM,colliderClosure:handoff.engineColliderClosure??null,handoffSHA256:sha(handoffBytes),recordingSHA256:sha(recordingBytes),fixture:fixture.id,
   candidate:manifest.models.find(m=>m.logical==='models/rider-street-mustard.glb'),moduleSHA256:sha(fs.readFileSync(path.join(build,'agent3-cloth/solver.js'))),moduleBytes:fs.statSync(path.join(build,'agent3-cloth/solver.js')).size,
   sourceSHA256:sha(fs.readFileSync(new URL('sleeve-runtime.mjs',import.meta.url))),captureSHA256:sha(fs.readFileSync(new URL(import.meta.url))),errors:[],runs:[],
   limits:['Single local sleeve band, no complete garment/footwear acceptance. Oldhoodie hidden only to expose mechanism; body/bind/physics unchanged.',
