@@ -1,0 +1,1495 @@
+{
+  "status": "REJECTED directed attachment experiment",
+  "sourceMasterSHA256": "db1a91baf9e6de2d90af04ae51a46fe657115d1ecd6625126429439aa88f1c5c",
+  "driverSHA256": "8c40c42af362a8d3d8ae44d27a0b07570f600b26adc66d325239413f66c7625b",
+  "masterSHA256": "08da2411d04f6dbc2009f693e80309b4d51a961a8b84de0c30b9bb9aca090d4e",
+  "GLBSHA256": "3554860e5be895ce75e953dcf5e759b575272da3ae3d7f100fc75f7dfa67fd1f",
+  "recipeSHA256": "536768fa8169211d1f0c4c8903fbdc40dd1bd0d1992e77dcec5b5aeaf72366fb",
+  "bodySignatureUnchanged": "2d27921f3a1a4a21d3ee8cca1280339a874ff09c0c75f5385dffb9e96fa3704b",
+  "mechanism": "15mm pattern refinement; nearest native-body triangle barycentric top4 own-bind weights; 4mm local exterior rest correction; pelvis shirt-hem anchor with25mm transition",
+  "patterns": [
+    {
+      "region": "cloth",
+      "originalVertices": 1250,
+      "vertices": 16103,
+      "originalTriangles": 2408,
+      "triangles": 32026,
+      "originalOpeningCount": 4,
+      "openingCount": 4,
+      "openingVertexCounts": [
+        104,
+        40,
+        20,
+        20
+      ],
+      "refinement": [
+        {
+          "pass": 0,
+          "vertices": 1250,
+          "longEdges": 3224,
+          "maxEdgeM": 0.07565353810787201
+        },
+        {
+          "pass": 1,
+          "vertices": 4474,
+          "longEdges": 8372,
+          "maxEdgeM": 0.03782682120800018
+        },
+        {
+          "pass": 2,
+          "vertices": 12846,
+          "longEdges": 3225,
+          "maxEdgeM": 0.023027095943689346
+        },
+        {
+          "pass": 3,
+          "vertices": 16071,
+          "longEdges": 32,
+          "maxEdgeM": 0.017139675095677376
+        },
+        {
+          "pass": 4,
+          "vertices": 16103,
+          "longEdges": 0,
+          "maxEdgeM": 0.014997495338320732
+        }
+      ],
+      "maxRestCorrectionM": 0.005523761734366417,
+      "correctedVertices": 62,
+      "hemAnchorTransitionVertices": 479,
+      "hemHeightLocalM": 0.943431556224823,
+      "maximumDiscardedBodyTriangleWeight": 0.020980609580874443,
+      "originalPatternMaxAncestryResidualM": 4.460403317807504e-07,
+      "weightsSHA256": "fb53ab61a432333c0b7d6fa8727a47de78c50ae9a96a67957805a23da5d3c5c9"
+    },
+    {
+      "region": "jeans",
+      "originalVertices": 886,
+      "vertices": 15921,
+      "originalTriangles": 1712,
+      "triangles": 31681,
+      "originalOpeningCount": 3,
+      "openingCount": 3,
+      "openingVertexCounts": [
+        91,
+        32,
+        40
+      ],
+      "refinement": [
+        {
+          "pass": 0,
+          "vertices": 886,
+          "longEdges": 2451,
+          "maxEdgeM": 0.08766388148069382
+        },
+        {
+          "pass": 1,
+          "vertices": 3337,
+          "longEdges": 6975,
+          "maxEdgeM": 0.04383199289441109
+        },
+        {
+          "pass": 2,
+          "vertices": 10312,
+          "longEdges": 5466,
+          "maxEdgeM": 0.02691882662475109
+        },
+        {
+          "pass": 3,
+          "vertices": 15778,
+          "longEdges": 143,
+          "maxEdgeM": 0.019544292241334915
+        },
+        {
+          "pass": 4,
+          "vertices": 15921,
+          "longEdges": 0,
+          "maxEdgeM": 0.014999790117144585
+        }
+      ],
+      "maxRestCorrectionM": 0.006777292117476463,
+      "correctedVertices": 1426,
+      "hemAnchorTransitionVertices": 0,
+      "hemHeightLocalM": null,
+      "maximumDiscardedBodyTriangleWeight": 0.006237789522856474,
+      "originalPatternMaxAncestryResidualM": 4.588009119288472e-07,
+      "weightsSHA256": "067e8a3603fa247e7dc9eab6cc7c65811cbc3f032103de7e6eecb480e57d0e7b"
+    }
+  ],
+  "review": [
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 0,
+      "timeS": 0.0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 112,
+      "timeS": 2.3333333333333335,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 79,
+      "nonadjacentSelfPairs": 654,
+      "firstBodyPairs": [
+        [
+          14104,
+          19880
+        ],
+        [
+          14099,
+          19880
+        ],
+        [
+          14108,
+          19880
+        ],
+        [
+          14085,
+          19880
+        ],
+        [
+          14085,
+          15947
+        ],
+        [
+          14085,
+          15946
+        ],
+        [
+          14085,
+          15431
+        ],
+        [
+          14097,
+          19880
+        ],
+        [
+          14096,
+          19880
+        ],
+        [
+          14096,
+          15431
+        ],
+        [
+          14086,
+          15947
+        ],
+        [
+          14098,
+          19880
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7162,
+          7471
+        ],
+        [
+          7162,
+          15707
+        ],
+        [
+          7162,
+          15710
+        ],
+        [
+          7162,
+          15711
+        ],
+        [
+          7162,
+          15602
+        ],
+        [
+          7162,
+          15708
+        ],
+        [
+          7162,
+          15709
+        ],
+        [
+          7171,
+          7471
+        ],
+        [
+          7171,
+          15707
+        ],
+        [
+          7171,
+          15710
+        ],
+        [
+          7171,
+          15711
+        ],
+        [
+          7171,
+          15603
+        ]
+      ]
+    },
+    {
+      "frame": 112,
+      "timeS": 2.3333333333333335,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 144,
+      "timeS": 3.0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 319,
+      "nonadjacentSelfPairs": 116,
+      "firstBodyPairs": [
+        [
+          7635,
+          19877
+        ],
+        [
+          7630,
+          19877
+        ],
+        [
+          7628,
+          19877
+        ],
+        [
+          7634,
+          19877
+        ],
+        [
+          23541,
+          6638
+        ],
+        [
+          23535,
+          6638
+        ],
+        [
+          23540,
+          6638
+        ],
+        [
+          23539,
+          6638
+        ],
+        [
+          15512,
+          15811
+        ],
+        [
+          15512,
+          15810
+        ],
+        [
+          15519,
+          15810
+        ],
+        [
+          15519,
+          20802
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7632,
+          7643
+        ],
+        [
+          7632,
+          7642
+        ],
+        [
+          7634,
+          13280
+        ],
+        [
+          23533,
+          23537
+        ],
+        [
+          23541,
+          29230
+        ],
+        [
+          7108,
+          7111
+        ],
+        [
+          7108,
+          7114
+        ],
+        [
+          7109,
+          7111
+        ],
+        [
+          7109,
+          7112
+        ],
+        [
+          7112,
+          7113
+        ],
+        [
+          13278,
+          15728
+        ],
+        [
+          13278,
+          15723
+        ]
+      ]
+    },
+    {
+      "frame": 144,
+      "timeS": 3.0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 240,
+      "timeS": 5.0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 490,
+      "nonadjacentSelfPairs": 806,
+      "firstBodyPairs": [
+        [
+          14084,
+          15947
+        ],
+        [
+          14097,
+          19881
+        ],
+        [
+          14097,
+          19880
+        ],
+        [
+          14097,
+          15431
+        ],
+        [
+          14089,
+          15431
+        ],
+        [
+          14089,
+          15946
+        ],
+        [
+          14098,
+          15431
+        ],
+        [
+          14085,
+          20045
+        ],
+        [
+          14085,
+          15947
+        ],
+        [
+          14085,
+          19881
+        ],
+        [
+          14086,
+          15947
+        ],
+        [
+          14096,
+          15431
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7378,
+          14112
+        ],
+        [
+          7378,
+          14114
+        ],
+        [
+          7376,
+          14101
+        ],
+        [
+          7375,
+          14111
+        ],
+        [
+          7375,
+          14101
+        ],
+        [
+          7375,
+          14114
+        ],
+        [
+          7379,
+          14112
+        ],
+        [
+          7374,
+          14112
+        ],
+        [
+          7374,
+          14099
+        ],
+        [
+          14092,
+          14099
+        ],
+        [
+          14094,
+          14108
+        ],
+        [
+          14094,
+          14099
+        ]
+      ]
+    },
+    {
+      "frame": 240,
+      "timeS": 5.0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 1425,
+      "nonadjacentSelfPairs": 729,
+      "firstBodyPairs": [
+        [
+          7135,
+          21925
+        ],
+        [
+          7149,
+          21925
+        ],
+        [
+          7136,
+          21925
+        ],
+        [
+          10029,
+          21925
+        ],
+        [
+          10034,
+          21925
+        ],
+        [
+          10033,
+          21925
+        ],
+        [
+          10336,
+          21925
+        ],
+        [
+          10056,
+          21925
+        ],
+        [
+          7142,
+          21925
+        ],
+        [
+          7141,
+          21925
+        ],
+        [
+          7145,
+          21925
+        ],
+        [
+          7145,
+          21970
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7138,
+          10031
+        ],
+        [
+          7134,
+          7138
+        ],
+        [
+          7154,
+          10338
+        ],
+        [
+          7153,
+          10338
+        ],
+        [
+          7153,
+          10335
+        ],
+        [
+          7135,
+          10031
+        ],
+        [
+          7135,
+          10054
+        ],
+        [
+          7149,
+          10054
+        ],
+        [
+          7150,
+          10337
+        ],
+        [
+          7150,
+          10054
+        ],
+        [
+          7150,
+          10338
+        ],
+        [
+          7151,
+          10335
+        ]
+      ]
+    },
+    {
+      "frame": 24,
+      "timeS": 0.5,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 24,
+      "timeS": 0.5,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 48,
+      "timeS": 1.0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 2,
+      "firstBodyPairs": [],
+      "firstSelfPairs": [
+        [
+          7108,
+          7114
+        ],
+        [
+          7108,
+          7115
+        ]
+      ]
+    },
+    {
+      "frame": 48,
+      "timeS": 1.0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 72,
+      "timeS": 1.5,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 391,
+      "nonadjacentSelfPairs": 386,
+      "firstBodyPairs": [
+        [
+          15607,
+          15438
+        ],
+        [
+          15603,
+          15438
+        ],
+        [
+          7182,
+          15438
+        ],
+        [
+          7182,
+          15457
+        ],
+        [
+          7182,
+          15488
+        ],
+        [
+          7182,
+          15505
+        ],
+        [
+          7183,
+          15505
+        ],
+        [
+          15602,
+          15438
+        ],
+        [
+          7178,
+          15457
+        ],
+        [
+          7178,
+          15489
+        ],
+        [
+          7178,
+          15488
+        ],
+        [
+          7178,
+          15918
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          8203,
+          15708
+        ],
+        [
+          8203,
+          15709
+        ],
+        [
+          7563,
+          8203
+        ],
+        [
+          7563,
+          8208
+        ],
+        [
+          7142,
+          8210
+        ],
+        [
+          7564,
+          8208
+        ],
+        [
+          7564,
+          8210
+        ],
+        [
+          7147,
+          8210
+        ],
+        [
+          7052,
+          8210
+        ],
+        [
+          7059,
+          8210
+        ],
+        [
+          7059,
+          8207
+        ],
+        [
+          7059,
+          8211
+        ]
+      ]
+    },
+    {
+      "frame": 72,
+      "timeS": 1.5,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 96,
+      "timeS": 2.0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 79,
+      "nonadjacentSelfPairs": 654,
+      "firstBodyPairs": [
+        [
+          14108,
+          19880
+        ],
+        [
+          14104,
+          19880
+        ],
+        [
+          14099,
+          19880
+        ],
+        [
+          14091,
+          19880
+        ],
+        [
+          7452,
+          15432
+        ],
+        [
+          7452,
+          15947
+        ],
+        [
+          7450,
+          15432
+        ],
+        [
+          7450,
+          15947
+        ],
+        [
+          14096,
+          19880
+        ],
+        [
+          14096,
+          15431
+        ],
+        [
+          14100,
+          19880
+        ],
+        [
+          14098,
+          19880
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          13260,
+          14116
+        ],
+        [
+          13260,
+          13263
+        ],
+        [
+          7378,
+          14114
+        ],
+        [
+          7379,
+          14114
+        ],
+        [
+          7379,
+          14125
+        ],
+        [
+          7379,
+          14113
+        ],
+        [
+          14094,
+          14108
+        ],
+        [
+          14094,
+          14099
+        ],
+        [
+          7374,
+          14114
+        ],
+        [
+          7374,
+          14125
+        ],
+        [
+          7374,
+          14112
+        ],
+        [
+          7374,
+          14113
+        ]
+      ]
+    },
+    {
+      "frame": 96,
+      "timeS": 2.0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 120,
+      "timeS": 2.5,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 162,
+      "nonadjacentSelfPairs": 839,
+      "firstBodyPairs": [
+        [
+          10333,
+          19146
+        ],
+        [
+          10334,
+          19147
+        ],
+        [
+          10344,
+          18976
+        ],
+        [
+          10335,
+          19146
+        ],
+        [
+          10335,
+          19147
+        ],
+        [
+          10336,
+          19147
+        ],
+        [
+          9984,
+          19149
+        ],
+        [
+          10048,
+          18976
+        ],
+        [
+          9982,
+          19147
+        ],
+        [
+          9982,
+          19149
+        ],
+        [
+          9981,
+          19149
+        ],
+        [
+          9980,
+          19147
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7171,
+          7471
+        ],
+        [
+          7171,
+          15707
+        ],
+        [
+          7171,
+          15708
+        ],
+        [
+          7171,
+          15710
+        ],
+        [
+          7171,
+          15603
+        ],
+        [
+          7171,
+          15602
+        ],
+        [
+          7171,
+          15711
+        ],
+        [
+          7171,
+          15709
+        ],
+        [
+          7162,
+          7471
+        ],
+        [
+          7162,
+          15707
+        ],
+        [
+          7162,
+          15708
+        ],
+        [
+          7162,
+          15710
+        ]
+      ]
+    },
+    {
+      "frame": 120,
+      "timeS": 2.5,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 168,
+      "timeS": 3.5,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 167,
+      "nonadjacentSelfPairs": 109,
+      "firstBodyPairs": [
+        [
+          31684,
+          2167
+        ],
+        [
+          31686,
+          2167
+        ],
+        [
+          31683,
+          2167
+        ],
+        [
+          31683,
+          6637
+        ],
+        [
+          23528,
+          6637
+        ],
+        [
+          23528,
+          6638
+        ],
+        [
+          31690,
+          6637
+        ],
+        [
+          23529,
+          6637
+        ],
+        [
+          23273,
+          6638
+        ],
+        [
+          23277,
+          6638
+        ],
+        [
+          23274,
+          6638
+        ],
+        [
+          29242,
+          6638
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          26125,
+          26183
+        ],
+        [
+          26125,
+          26184
+        ],
+        [
+          26490,
+          26551
+        ],
+        [
+          26476,
+          26551
+        ],
+        [
+          26476,
+          26552
+        ],
+        [
+          26476,
+          26548
+        ],
+        [
+          26476,
+          26559
+        ],
+        [
+          26477,
+          26548
+        ],
+        [
+          26512,
+          26548
+        ],
+        [
+          26513,
+          26548
+        ],
+        [
+          26513,
+          26549
+        ],
+        [
+          26513,
+          26562
+        ]
+      ]
+    },
+    {
+      "frame": 168,
+      "timeS": 3.5,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0,
+      "firstBodyPairs": [],
+      "firstSelfPairs": []
+    },
+    {
+      "frame": 192,
+      "timeS": 4.0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 292,
+      "nonadjacentSelfPairs": 710,
+      "firstBodyPairs": [
+        [
+          14097,
+          19881
+        ],
+        [
+          14097,
+          19880
+        ],
+        [
+          14097,
+          15431
+        ],
+        [
+          14085,
+          19881
+        ],
+        [
+          14085,
+          20045
+        ],
+        [
+          14085,
+          15947
+        ],
+        [
+          14096,
+          15431
+        ],
+        [
+          14089,
+          15431
+        ],
+        [
+          14089,
+          15946
+        ],
+        [
+          14098,
+          15431
+        ],
+        [
+          14086,
+          15947
+        ],
+        [
+          14090,
+          15947
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7378,
+          14112
+        ],
+        [
+          7378,
+          14114
+        ],
+        [
+          7379,
+          14112
+        ],
+        [
+          7374,
+          14099
+        ],
+        [
+          7374,
+          14112
+        ],
+        [
+          14092,
+          14099
+        ],
+        [
+          14094,
+          14099
+        ],
+        [
+          14094,
+          14108
+        ],
+        [
+          7375,
+          14114
+        ],
+        [
+          7375,
+          14111
+        ],
+        [
+          7375,
+          14101
+        ],
+        [
+          7376,
+          14101
+        ]
+      ]
+    },
+    {
+      "frame": 192,
+      "timeS": 4.0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 636,
+      "nonadjacentSelfPairs": 846,
+      "firstBodyPairs": [
+        [
+          9823,
+          21855
+        ],
+        [
+          9823,
+          21938
+        ],
+        [
+          9812,
+          21855
+        ],
+        [
+          9812,
+          21938
+        ],
+        [
+          9813,
+          21855
+        ],
+        [
+          9813,
+          21938
+        ],
+        [
+          9813,
+          21854
+        ],
+        [
+          9813,
+          21936
+        ],
+        [
+          9814,
+          21855
+        ],
+        [
+          9814,
+          21938
+        ],
+        [
+          10333,
+          21930
+        ],
+        [
+          10333,
+          21931
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7141,
+          10335
+        ],
+        [
+          7145,
+          10335
+        ],
+        [
+          7144,
+          10335
+        ],
+        [
+          10021,
+          10341
+        ],
+        [
+          10021,
+          10335
+        ],
+        [
+          9993,
+          10339
+        ],
+        [
+          9993,
+          10328
+        ],
+        [
+          10022,
+          10341
+        ],
+        [
+          10022,
+          10342
+        ],
+        [
+          10022,
+          10339
+        ],
+        [
+          9812,
+          9817
+        ],
+        [
+          9813,
+          9820
+        ]
+      ]
+    },
+    {
+      "frame": 216,
+      "timeS": 4.5,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 135,
+      "nonadjacentSelfPairs": 703,
+      "firstBodyPairs": [
+        [
+          5087,
+          21597
+        ],
+        [
+          5093,
+          21597
+        ],
+        [
+          5086,
+          21597
+        ],
+        [
+          5092,
+          21597
+        ],
+        [
+          5084,
+          21573
+        ],
+        [
+          5081,
+          21573
+        ],
+        [
+          5085,
+          21573
+        ],
+        [
+          5085,
+          21597
+        ],
+        [
+          5067,
+          21574
+        ],
+        [
+          5073,
+          21574
+        ],
+        [
+          5072,
+          21572
+        ],
+        [
+          5072,
+          21574
+        ]
+      ],
+      "firstSelfPairs": [
+        [
+          7102,
+          15612
+        ],
+        [
+          7102,
+          15611
+        ],
+        [
+          7102,
+          15586
+        ],
+        [
+          7102,
+          15591
+        ],
+        [
+          7102,
+          7106
+        ],
+        [
+          7102,
+          15605
+        ],
+        [
+          7102,
+          15608
+        ],
+        [
+          7102,
+          15606
+        ],
+        [
+          7102,
+          7144
+        ],
+        [
+          7103,
+          15612
+        ],
+        [
+          7103,
+          15608
+        ],
+        [
+          7105,
+          15612
+        ]
+      ]
+    },
+    {
+      "frame": 216,
+      "timeS": 4.5,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 67,
+      "firstBodyPairs": [],
+      "firstSelfPairs": [
+        [
+          14015,
+          29944
+        ],
+        [
+          14015,
+          29943
+        ],
+        [
+          14017,
+          29939
+        ],
+        [
+          14017,
+          29944
+        ],
+        [
+          14017,
+          29943
+        ],
+        [
+          14017,
+          29937
+        ],
+        [
+          14017,
+          29938
+        ],
+        [
+          14022,
+          29929
+        ],
+        [
+          14022,
+          29938
+        ],
+        [
+          14019,
+          29944
+        ],
+        [
+          14019,
+          29943
+        ],
+        [
+          14019,
+          29937
+        ]
+      ]
+    }
+  ],
+  "failures": [
+    "cloth frame112: body79 self654",
+    "cloth frame144: body319 self116",
+    "cloth frame240: body490 self806",
+    "jeans frame240: body1425 self729",
+    "cloth frame48: body0 self2",
+    "cloth frame72: body391 self386",
+    "cloth frame96: body79 self654",
+    "cloth frame120: body162 self839",
+    "cloth frame168: body167 self109",
+    "cloth frame192: body292 self710",
+    "jeans frame192: body636 self846",
+    "cloth frame216: body135 self703",
+    "jeans frame216: body0 self67"
+  ],
+  "limits": [
+    "One fixed directed construction experiment; no parameter or body-donor escalation.",
+    "Local rest normal is not certified complete-body signed distance; sampled triangle contacts reject before visual acceptance.",
+    "New garment topology/weights/rest correction; original UVs interpolate, source ancestry explicitly stored before projection.",
+    "Body/51bones/binds untouched, original openings retained; exact head/hood not integrated.",
+    "No final art/device/bike-supported motion acceptance; root alone judges M0\u2013M5."
+  ]
+}

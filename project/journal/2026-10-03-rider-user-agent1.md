@@ -102,3 +102,14 @@ crash103/restart1tick/frame3.595ms/errors0 passes.
 Limits: Hood remains disjoint static guide; no wearable fit/rig/PBR pass or
 experimental normalplayer promotion. Exact amendment handedAgent2; M0–M5 open.
 Evidence: [metric registration](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/garment-geometry02/README.md). Ask274.
+
+Finding: Nativepattern refinement/bodyweight attachment can clear rest yet
+still intersect/self-fold at the reviewed bends; stop this directed method.
+Validation: Shirt16103/jeans15921verts retain4/3openings; frame0body/self0/0,
+reviewed112/144/240shirtbody79/319/490 and crouchjeans1425 reject. ActualGLTF
+body attribute/indexbytes,51jointorder/hierarchy/binds unchanged; weighterror
+4.47e-8. Utilityerrors fixed before one completed trial, parameters unchanged.
+Python/Node syntax and scopedoxlint pass; root/Agent3 have exact source/report.
+Limits: Refined contactcounts incomparable to coarse totals; localrestnormal
+not complete signedclearance; no costlyfilm/artpass/playerpromotion. M0–M5 open.
+Evidence: [rejected attachment](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/attachment01/README.md). Ask274.
