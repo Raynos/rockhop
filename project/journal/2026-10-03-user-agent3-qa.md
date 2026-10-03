@@ -641,3 +641,24 @@ Current09 wedge and435nonunit raw native weights preserved/unaccepted.
 Rigid footmarker versus actual normalizedweights skinned arch must still
 be measured in real riding. No consumed IK/collision/mobile/player change.
 Root owns asks278/279/288 and plan status; all M0–M5/phone remainopen.
+
+## Round38: constructed rubber arch target is actually consumed
+
+Finding: PrivatelegIK now consumes constructed09 soleoffset. Every703
+actual Rookie inputticks measured7skinnedarchtriangles perfoot: maximum
+peg reference→finitearch10.405mmOFF→1.114µmON, centroid57.181mm→1.378µm.
+Skinnedcentroid vsrigidmarker≤2.851nm in thiswindow; ONrepeat exact.
+
+Validation: Actual466row primitive positions/weights0difference; 2109
+independentproductionGame ticks hash/phase/clock/finish exact.19paired
+OFF/ONorbitfilm frames12fps1.584s silentlyplayed/all19decoded/0errors.
+19sampled nativeleglengths.448054–.455510m, grip≤.204µm. Scopedlint
+passes. Source/code/input/film/rawgziphashes pinned; originalsource37
+JSON/BIN/geometry/body/head/51bind remainexact. No physics/pelvischange.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/constructed38/outcome.json
+
+Limits: Peg is existingaxis+11mm referencepoint, not entirepegsolid;
+pointcontact does not provecollision/loadbearing/currentwedgeartpass.
+Partialridingwindow, not clear/restart/stranger or arbitraryToeFKtest.
+CPUreadbackp50/p950ms quantizedsharedWebKit meansnozero/mobilecostclaim.
+All M0–M5/playerpromotion/phone remainopen; rootalonejudges clips.

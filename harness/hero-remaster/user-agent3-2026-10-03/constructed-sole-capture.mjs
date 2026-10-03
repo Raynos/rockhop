@@ -1,0 +1,54 @@
+/** Private legacy-ankle versus consumed geometry-marker target on actual riding. */
+/* oxlint-disable eslint/no-undef, typescript/no-extraneous-class -- headless page and silent AudioContext trap. */
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import { preview } from 'vite';
+import { webkit } from 'playwright';
+import { decodeJSON, expandFrames } from '../../../src/core/replay.ts';
+const [buildArg,fixtureFile,sourceReceipt,inventoryFile,outArg]=process.argv.slice(2);assert(outArg&&!fs.existsSync(outArg));
+const build=path.resolve(buildArg),out=path.resolve(outArg),sha=b=>crypto.createHash('sha256').update(b).digest('hex');fs.mkdirSync(out,{recursive:true});
+const inventoryBytes=fs.readFileSync(inventoryFile);assert.equal(sha(inventoryBytes),'a987b49de0a7672e80794abec674b43d731eb0189be727e82ad40c758f119c78');assert(fs.readFileSync(path.join(build,'agent3-constructed/inventory.json')).equals(inventoryBytes));const source=JSON.parse(fs.readFileSync(sourceReceipt)),fixtures=JSON.parse(fs.readFileSync(fixtureFile)),manifest=JSON.parse(fs.readFileSync(path.join(build,'hero-review.json')));
+const candidate=manifest.models.find(m=>m.logical==='models/rider-street-mustard.glb');assert.equal(candidate.sha256,source.derivativeSHA256);
+const fixture=fixtures.cases.find(c=>c.bike==='rookie'&&c.kind==='maximum-backward-lean');const cases=['off','on','on-repeat'].map(name=>({...fixture,id:name,fixtureId:fixture.id}));
+const report={status:'UNACCEPTED_CONSTRUCTED09_SOLE_TARGET_PENDING',candidate,sourceReceiptSHA256:sha(fs.readFileSync(sourceReceipt)),captureSHA256:sha(fs.readFileSync(new URL(import.meta.url))),
+  inventorySHA256:sha(inventoryBytes),runtimeSHA256:sha(fs.readFileSync('harness/hero-remaster/user-agent3-2026-10-03/constructed-sole-runtime.mjs')),physicsSourceSHA256:sha(fs.readFileSync('src/physics/v2/engine.ts')),engineSourceSHA256:sha(fs.readFileSync('src/render/hero/gltfRider.ts')),errors:[],loaded:[],cases:[],
+  limits:['Current09 constructed wedge boots remain unaccepted. Arch region is a geometric proposal, not accepted load bearing.',
+    'Normal actual recorded inputs, rider.update and live bike; no pose/physics injection or garment registration.',
+    'OFFlegacy ankle target versus ONconsumed constructed09 arch marker offset, with actual skinned seven-triangle surface measurement every input tick.',
+    'Full candidate only, no candidateLOD, closed-volume collision proof or physical iPhone result.']};
+const server=await preview({configFile:false,root:process.cwd(),build:{outDir:build},preview:{host:'127.0.0.1',port:0},logLevel:'warn'}),browser=await webkit.launch({headless:true}),context=await browser.newContext({viewport:{width:960,height:640}});
+await context.addInitScript(()=>{localStorage.setItem('rockhop.onboarded','1');window.__agent3AudioCount=0;for(const k of ['AudioContext','webkitAudioContext'])window[k]=class{constructor(){window.__agent3AudioCount++;throw new Error('Silent socket control');}};});
+const page=await context.newPage(),responses=[];page.on('pageerror',e=>report.errors.push(e.message));page.on('response',r=>{if(r.url().endsWith('.glb'))responses.push(r.body().then(b=>report.loaded.push({sha256:sha(b),status:r.status()})));});
+try{
+  await page.goto(server.resolvedUrls.local[0]+'?harness=1&audio=0&sw=0&outfit=street-mustard&physics=v2&hz=120');await page.waitForFunction(()=>window.__rockhop?.ready,null,{timeout:120000});
+  await page.addStyleTag({content:'#ui,#ui *,.hud,.touch-controls{visibility:hidden!important} #agent3-label{position:fixed;z-index:99999;top:8px;left:10px;color:white;background:#101820e8;padding:8px;font:14px monospace;white-space:pre;visibility:visible!important}'});
+  for(const c of cases){
+    await page.evaluate(()=>{window.__agent3SoleControl?.restore();window.__agent3SoleControl=null;});
+    const bytes=fs.readFileSync(path.join(path.dirname(fixtureFile),c.recording));assert.equal(sha(bytes),c.sourceSHA256);const recording=decodeJSON(bytes.toString()),inputs=expandFrames(recording);
+    await page.evaluate(async header=>{const t=window.__rockhop,r=window.__render;t.setBike(header.bike??'rookie');await r.whenReady();await t.loadTrack(header.trackId,header.seed);t.setQuality('high');await r.whenReady();t.skipCountdown();t.render(true);},recording.header);
+    const init=await page.evaluate(async collision=>{const d=window.__render.debug,m=await import('/agent3-constructed/solver.js');window.__agent3SoleModule=m;window.__agent3SoleControl=m.installConstructedSoleTarget(d,collision);const inventory=await fetch('/agent3-constructed/inventory.json').then(r=>r.json());window.__agent3Arch=m.makeConstructedSoleMeasurement(d,inventory);return{collision,contract:{offsets:window.__agent3SoleControl.offsets},actualArch:window.__agent3Arch.contract};},c.id!=='off');
+    const folder=path.join(out,c.id);fs.mkdirSync(folder);const samples=[],trace=[];let previous=0,frame=0;
+    const ticks=[...new Set([...Array.from({length:19},(_,i)=>c.window.startInputTick+i*10),...c.matchedSamples.map(s=>s.inputTick)])].sort((a,b)=>a-b);
+    for(const tick of ticks){
+      const sample=await page.evaluate(({inputs,start,tick,id})=>{
+        const t=window.__rockhop,r=window.__render,d=r.debug,T=d.THREE,a=d.rider,trace=[];
+        for(let i=0;i<inputs.length;i++){t.setInput(inputs[i]);t.step(1);t.render(true);trace.push({inputTick:start+i,stateHash:t.hashState(),tick:t.getState().tick,phase:t.phase(),runTime:t.runTime(),finishTime:t.getState().finishTime,physicalPose:a.debug.physicalPose,arch:window.__agent3Arch.sample()});}
+        const p=a.scene.getObjectByName('pelvis').getWorldPosition(new T.Vector3());p.y-=.5;r.setCameraOverride({mode:'orbit',yaw:.6+(tick-523)/180*Math.PI*2,pitch:.15,dist:1.9,x:p.x,y:p.y,screenX:.5,screenY:.5});
+        let label=document.getElementById('agent3-label');if(!label){label=document.createElement('div');label.id='agent3-label';document.body.append(label);}label.textContent=`UNACCEPTED09 BOOT | CONSTRUCTED ARCH TARGET\n${id} | input tick ${tick}\nActual riderBody COM/angle | Current skinned rubber arch measured; load-bearing proposal`;
+        r.invalidate();t.render(true);
+        const points=Object.fromEntries(['gripSocketL','gripSocketR','soleSocketL','soleSocketR'].map(name=>{const o=a.scene.getObjectByName(name);if(!o)throw new Error('Missing runtime '+name);return[name,{world:o.getWorldPosition(new T.Vector3()).toArray(),quaternion:o.getWorldQuaternion(new T.Quaternion()).toArray()}];}));
+        return{inputTick:tick,stateHash:t.hashState(),phase:t.phase(),trace,debug:structuredClone(a.debug),points,arch:window.__agent3Arch.sample(),controlCalls:window.__agent3SoleControl.calls,boneLengths:[...['L','R'].map(side=>{const point=name=>a.scene.getObjectByName(name+side).getWorldPosition(new T.Vector3());return{side,thigh:point('thigh').distanceTo(point('shin')),shin:point('shin').distanceTo(point('foot'))};})],poseInjection:false,audioContexts:window.__agent3AudioCount,webdriver:navigator.webdriver};
+      },{inputs:inputs.slice(previous,tick),start:previous+1,tick,id:c.id});previous=tick;
+      assert(sample.webdriver&&sample.audioContexts===0&&sample.phase==='riding'&&sample.debug.physicalPose&&sample.debug.stance.on);const witness=c.matchedSamples.find(s=>s.inputTick===tick);if(witness)assert.equal(sample.stateHash,witness.stateHash);
+      trace.push(...sample.trace);delete sample.trace;samples.push(sample);await page.screenshot({path:path.join(folder,String(frame++).padStart(4,'0')+'.png')});
+    }
+    assert.equal(trace.length,c.window.endInputTick);assert(trace.every(t=>t.physicalPose));fs.writeFileSync(path.join(folder,'tick-trace.ndjson'),trace.map(t=>JSON.stringify(t)).join('\n')+'\n');
+    const movie=path.join(folder,'played.mp4'),ff=spawnSync('ffmpeg',['-v','error','-y','-framerate','12','-i',path.join(folder,'%04d.png'),'-c:v','libx264','-threads','2','-crf','18','-pix_fmt','yuv420p','-an','-movflags','+faststart',movie],{encoding:'utf8'});assert.equal(ff.status,0,ff.stderr);
+    report.cases.push({id:c.id,fixtureId:c.fixtureId,init,recordingSHA256:sha(bytes),everyInputTickCount:trace.length,everyInputTraceSHA256:sha(fs.readFileSync(path.join(folder,'tick-trace.ndjson'))),samples,clip:{sha256:sha(fs.readFileSync(movie)),frames:frame,fps:12}});
+  }
+  await Promise.all(responses);assert(report.loaded.some(r=>r.status===200&&r.sha256===candidate.sha256));assert.deepEqual(report.errors,[]);report.status='UNACCEPTED_ACTUAL_SOLE_TARGET_COMPARISON_CAPTURED';
+}catch(e){report.failure=String(e);process.exitCode=1;}
+finally{fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');await context.close();await browser.close();await new Promise(resolve=>server.httpServer.close(resolve));console.log(JSON.stringify({status:report.status,cases:report.cases.length,failure:report.failure}));}
