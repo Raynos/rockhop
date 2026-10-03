@@ -213,3 +213,15 @@ Limits: Root rejects01 barefeet/boot separation, rectangular hood flap, angular
 mottled hoodie texture and untreated knee/hem;02 needs own judgment. Preserve
 face/movement, repair hood attachment and coherent UV/materials next.
 Evidence: [boot02 played review](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance02/review/movies.json). Ask274; existing278.
+
+Finding: Protected appearance reuse must preserve normal and specular fields,
+not just image/UV/position data; native smooth recalculation had lost them.
+Validation: Restore exact source head/cheek custom normals and KHRspecfactor.25.
+Native custom-normal residual≤.03525deg is explicit; separate finalGLB normal
+accessors restore raw source vectors exactly (43712head/294cheek), UVerror0,
+imagebytesidentical, position59.6nm/0.164ambiguoushead mappings recorded.
+Original51joints/body/clothing/likedcorrectives compare exactly; immutable02
+and initial03quantized export retained with separate controller/finalGLB pins.
+Limits: Source fidelity is not runtime highlight/art acceptance; root hoodflap,
+mottledtexture/knee/hem still open. Hood/UV construction follows immediately.
+Evidence: [protected shading](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance03/README.md). Ask274.

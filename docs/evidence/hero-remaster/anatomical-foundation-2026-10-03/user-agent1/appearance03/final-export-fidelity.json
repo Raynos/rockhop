@@ -1,0 +1,42 @@
+{
+  "status": "Protected source positions/UV/image bytes/specular within float bounds; native normalized normal directions verified",
+  "donorSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "inputCandidateSHA256": "010501c350e43967f98d90b9a4f2562f1171f177a30d520292c404bfb1e19efe",
+  "candidateSHA256": "010501c350e43967f98d90b9a4f2562f1171f177a30d520292c404bfb1e19efe",
+  "recipeSHA256": "efda9751903294fa9ef73bdd4e6ec2434d31c3337c004528e834b91a96810589",
+  "rows": [
+    {
+      "name": "Protected textured head",
+      "candidateVertices": 43712,
+      "maxPositionErrorM": 5.960464477539063e-8,
+      "maxUVError": 0,
+      "maxNativeRawNormalVectorError": 0,
+      "maxNativeUnitNormalError": 0,
+      "maxNativeNormalAngleDegrees": 0.000002091309789151873,
+      "rawSourceNormalRestoredToNewExport": false,
+      "ambiguousPositionUVCandidateRows": 164,
+      "expectedSpecularFactor": 0.25,
+      "actualSpecularFactor": 0.25,
+      "baseColorImageSHA256": "f8430cee239e977cdb939352dd10331689b4ef88ac78295e27a1fb00d87e8583"
+    },
+    {
+      "name": "Protected coherent cheek",
+      "candidateVertices": 294,
+      "maxPositionErrorM": 0,
+      "maxUVError": 0,
+      "maxNativeRawNormalVectorError": 0,
+      "maxNativeUnitNormalError": 0,
+      "maxNativeNormalAngleDegrees": 0.0000017075472925031877,
+      "rawSourceNormalRestoredToNewExport": false,
+      "ambiguousPositionUVCandidateRows": 0,
+      "expectedSpecularFactor": 0.25,
+      "actualSpecularFactor": 0.25,
+      "baseColorImageSHA256": "cf47650f3610fb50a6d486a14392031c5b88af5ee379779464e0777cabfec32a"
+    }
+  ],
+  "limits": [
+    "Position+UV duplicate candidates resolve by source-normal agreement; ambiguity count is explicit, not a unique source-ID claim.",
+    "Blender custom-normal storage/export quantizes/normalizes vectors; native residual is measured. Optional derivative overwrites only protected NORMAL accessor components with raw source values, leaving input frozen.",
+    "This read-only export proof is not actual Garage appearance/art/mobile or complete fit acceptance."
+  ]
+}
