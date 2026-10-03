@@ -53,3 +53,15 @@ Displacement/parity, signed complete-surface contact and visual judgment are
 separate outcomes. Authored Garage overrides do not establish physics-driven
 riding. Device, LOD/loading, replay/retry and stranger qualification stay open.
 The full candidate sweep waits for Agent 1's exact ready package.
+
+## Comparator preparation
+
+`compare.mjs` reports full→conditioned, full→export and conditioned→export
+independently. Each export row uses its explicit source ID; split rows and
+unexported native vertices remain visible in coverage counts. Worst witnesses
+retain both IDs and XYZ values. Three targeted Node checks pass for reordered/
+split rows, conditioning loss despite exact export agreement, and invalid or
+nonfinite evidence rejection; scoped oxlint passes. These are comparator checks,
+not candidate parity measurements.
+
+Run `node --test harness/hero-remaster/user-agent3-2026-10-03/compare.test.mjs`.

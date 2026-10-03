@@ -7,3 +7,11 @@ succeeded; production version GET succeeded. Intake reproduction checks the
 unchanged bike/control hashes and records all six gates OPEN.
 Limits: No ready candidate or new capture; native trajectory parity, support,
 likeness and physical-device acceptance remain unmeasured.
+
+Finding: Added independent three-way sampled comparison with explicit source
+IDs, split-row coverage and per-vertex witnesses. Export agreement cannot hide
+the deformation introduced by source conditioning.
+Validation: Three targeted checks cover reordered/split vertices, conditioning
+loss despite exact export agreement, and invalid/nonfinite evidence rejection.
+Limits: Candidate binary samples remain pending; no continuous parity, contact
+or visual acceptance follows from the comparator checks.
