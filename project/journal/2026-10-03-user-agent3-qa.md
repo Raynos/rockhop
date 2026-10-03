@@ -67,3 +67,15 @@ lint pass. Sixth-round ordinary WebKit low/high clear4810identicalticks/40.0833s
 crash and one-tick restart1/2ms, zero errors.
 Limits: Source four-weight loss remains7.811mm/4.820mm body/cloth; images omitted
 in Node. No clearance, contact, continuous, visual or device acceptance.
+
+Finding: Focused delivered-pose rays separate skin protrusion through intact
+sleeve/knee surfaces from extra opaque boxer/trouser layer interference.
+Validation: Same raw candidate/51-joint driver at112/144/240; concrete native
+source IDs, posed bounds, normals and joined-edge adjacency preserved.
+120 visibility-only captures retain geometry/material/colors; exact paired
+cameras, residual2.665e-15, fixed physics, zero audio/errors. Both wider-camera
+15-frame films play silently to end in WebKit; scoped type-aware lint passes.
+Limits: Directional witnesses and short separated FK windows, not global
+signed clearance, real support or art/device acceptance. Agent1 owns native
+fit repair; all previous controls intact. No production/source changes.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/focus/
