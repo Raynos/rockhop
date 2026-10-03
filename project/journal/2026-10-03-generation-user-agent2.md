@@ -228,3 +228,16 @@ Ask:276.
 
 Limits: No family verdict or automatic quality run. One wardrobe quality run
 requires validated expected mechanism first; no body benchmark or blind sweep.
+
+Finding: ONE existing-byte neutral-lit versus unlit-colour comparison holds
+geometry/normals/matrix/camera fixed. Lit neutral retains contours; emission
+colour is nearly uniform, implicating surface/normal/lighting response collectively.
+
+Validation: CPUguard64001/owned64004 exits0 in17.310s;96frame
+hashes/recipe pins match; raw68bbd4f3 unchanged, zero model runs. Silent six-second
+H26448frames/8fps/640x384 full-decodes0, SHA586e4777/133272bytes; AST pass.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/neutral-colour01/receipt.json
+Ask:276.
+
+Limits: This pair does not distinguish bad geometry from inconsistent normals.
+No repair/quality run, art/fit/rig or family verdict. Root judges actual clip.

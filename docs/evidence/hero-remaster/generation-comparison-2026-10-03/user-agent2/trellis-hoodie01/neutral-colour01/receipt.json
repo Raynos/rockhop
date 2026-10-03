@@ -1,0 +1,47 @@
+{
+  "accepted": false,
+  "purpose": "ONE requested existing-byte material isolation diagnostic",
+  "movie": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/neutral-vs-colour-diagnostic.mp4",
+    "sha256": "586e47773d21a85d8bb94e4e754d22111692f24afdb0fe4d98c036d4df33ed22",
+    "bytes": 133272,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 640,
+          "height": 384,
+          "avg_frame_rate": "8/1",
+          "nb_frames": "48"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "133272"
+      }
+    },
+    "fullSilentDecode": "exit0"
+  },
+  "framesVerified": 96,
+  "orbitSHA256": "67ea9e2182725f9404c04a8473740d495f3ba84cc770a1e63a42069e3d7da2e4",
+  "recipeSHA256": "4477d50a1c5ebfdb6e9736f304ec14180bbf67445d79bb3fd3f38dd36a51d3ca",
+  "encoderSHA256": "d1c6be69492e8bbce308b6a630bffb5f6aa60b6955e05f3e7d3577563a45cd4c",
+  "CPUBlenderGuard": {
+    "controllerPID": 64001,
+    "ownedChildPID": 64004,
+    "exitCode": 0,
+    "elapsedSeconds": 17.31
+  },
+  "rawArchiveUnchanged": true,
+  "modelRuns": 0,
+  "ownedLeaseEnded": true,
+  "mechanismObservation": "Neutral-lit view retains contours; unlit sampled-colour view has nearly uniform colour. Sampled colour alone is not the main dense-contour mechanism.",
+  "limits": [
+    "Lighting/geometry/normal response implicated collectively; this pair does not isolate geometry from normals",
+    "No normal repair, geometry smoothing, cleanup, new mesh or quality inference",
+    "No art, texture transfer, fit, rig or model-family acceptance"
+  ]
+}
