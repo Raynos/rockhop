@@ -1,0 +1,34 @@
+{
+  "accepted": false,
+  "model": "Pixal3D",
+  "sourceCheckpoint": "e0c976450e3236a0c45458171839240e15d029dd",
+  "guardExitCode": 1,
+  "elapsedSeconds": 2.389,
+  "convolutionCasesPassed": 9,
+  "firstFailedCase": {
+    "kind": "grid",
+    "case": "grid-nearest-float32",
+    "archive": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse01/control/grid-nearest-float32.npz",
+      "SHA256": "9e003e8f25a50793572d77eeb965c5c95000ad49ba01c542ec2e591dc93f971f"
+    },
+    "resultShape": [
+      2,
+      11,
+      7
+    ],
+    "threshold": 1e-05,
+    "float32Promotion": false,
+    "outputDtypePreserved": true,
+    "inputsUnchanged": true,
+    "maxCPUFloat64Error": 0.09375,
+    "finite": true
+  },
+  "observation": "Six out-of-range queries returned feature row0 instead of zeros; exact archived expected/actual inspected.",
+  "candidate": "Signed int32 sentinel comparison to unsigned0xffffffff in installed Python wrapper; not isolated yet.",
+  "limits": [
+    "Original fixed thresholds unchanged; no generation/learned/CUDA parity.",
+    "Actual Pixal module wrapper not reached because shared control stopped at first failed nearest case.",
+    "No shared source/runtime/library edited."
+  ]
+}

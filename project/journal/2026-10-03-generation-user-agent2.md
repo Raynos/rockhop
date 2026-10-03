@@ -1388,3 +1388,17 @@ Ask:284–286.
 
 Limits: Checkpoint only, execution pending. No learned DINO/NAF/MoGe, seed,
 backward or CUDA parity inferred from TRELLIS or synthetic controls.
+
+Finding: Actual Pixal nearest sampling fails fixed sparse forward control;
+out-of-range queries return first voxel values instead of zeros.
+
+Validation: Explicit65/96guard worker1/2.389s. All9asymmetric convolution
+cases pass existing thresholds; nearestfloat32 maxerror0.09375>1e-5.
+Six unsupported queries inspected from frozen NPZ; no threshold widening.
+Current runtime24 player/dependency pins match, otherplayerdiff0 retains
+actual coldboot/clear/crash/restart gate identity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse01/
+Ask:284–286.
+
+Limits: Sentinel comparison candidate unisolated. Later grid cases and
+actual Pixal wrapper not reached. No shared edit, learned seed or CUDA pass.
