@@ -17,3 +17,14 @@ Python/Node syntax and scoped lint pass. Native source hash remains unchanged.
 Limits: UNACCEPTED checkpoint before moving art/clearance review; synthetic FK
 riding is not support; finite samples are not continuous-time certification.
 Evidence: [diagnostic02](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/README.md). Ask274.
+
+Finding: Experimental fitting geometry/proportions and true action-off inputs
+are stable enough for the authorized bounded donor comparison without waiting
+for whole-rider acceptance. Native gray head is still a fitting control.
+Validation: Six OBJ files have13847vertices, shared topology and zero serialized
+axis residual; nine calibrated views rendered; exact contract/image pins sent
+Agent2. Fresh silent Metal third-round gate4810identical ticks/40.0833s clear,
+crash103, one-tick restart/2.25ms/errors0 passes. Recipe syntax passes.
+Limits: Inputs UNACCEPTED; garment crossings/runtime-conditioning differences,
+likeness, bike support, device and all M0–M5 remain open.
+Evidence: [fitting01](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/fitting01/README.md). Ask274.
