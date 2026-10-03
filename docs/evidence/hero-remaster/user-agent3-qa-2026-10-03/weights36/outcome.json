@@ -1,0 +1,110 @@
+{
+  "status": "UNACCEPTED_DIRECT_BODY_WEIGHT_TRANSFER_INDEPENDENTLY_FAILED",
+  "sourceOwnerCheckpoint": "a030c89d8375f386d6e2e87f64ff1744837b51c7",
+  "newSourceSHA256": "a24745cf7f0f58833c9c8e7a4ac93b36f61cc299279b78794bd9279a2d1bfdd6",
+  "baselineSourceSHA256": "d4658eafe3632c340811d2c5267fc0c2df8ce99b8a7ea22f32a221e48588d7fe",
+  "sourceFields": "IndependentactualGLTFLoader300rows/288native/528tri: position/normal/uv/index/material and51hierarchy/inversebind BYTEEXACT. Actual300row weights match currentnative control with0error; external51actualbody references map without inversebind change.",
+  "all703NewSkinFramesRepeatByteExact": true,
+  "all2109GameTraceTicksExact": true,
+  "contacts703Ticks": [
+    {
+      "name": "baseline",
+      "actualRows": 300,
+      "maximumActualWeightDifference": 0,
+      "maximumPaletteGeometryResidualM": 1.4184233133509427e-07,
+      "maximumBodyPairs": 52,
+      "maximumSelfPairs": 22,
+      "bodyContactFrames": 7,
+      "selfContactFrames": 16
+    },
+    {
+      "name": "body-weights",
+      "actualRows": 300,
+      "maximumActualWeightDifference": 0,
+      "maximumPaletteGeometryResidualM": 1.486428118621081e-07,
+      "maximumBodyPairs": 86,
+      "maximumSelfPairs": 55,
+      "bodyContactFrames": 6,
+      "selfContactFrames": 582
+    }
+  ],
+  "spawnContacts": "Baselinebody0/self0; newbody0/self25. All704states selfcontactframes16baseline/583new, matchingnativeowner704scope; no collision solver initialized on invalidposedspawn.",
+  "selectedWindows": [
+    430,
+    490,
+    670
+  ],
+  "timingMs": {
+    "baseline": {
+      "renderSubmission": {
+        "p50": 4,
+        "p95": 5,
+        "max": 10
+      },
+      "cpuSkinReadback": {
+        "p50": 0,
+        "p95": 1,
+        "max": 1
+      }
+    },
+    "body-weights": {
+      "renderSubmission": {
+        "p50": 3,
+        "p95": 6,
+        "max": 7
+      },
+      "cpuSkinReadback": {
+        "p50": 0,
+        "p95": 1,
+        "max": 1
+      }
+    },
+    "body-weights-repeat": {
+      "renderSubmission": {
+        "p50": 3,
+        "p95": 4,
+        "max": 6
+      },
+      "cpuSkinReadback": {
+        "p50": 0,
+        "p95": 1,
+        "max": 1
+      }
+    }
+  },
+  "timingLimits": "Quantized shareddesktopWebKit CPU render-submission andskinreadback; no actualGPU/mobile/fps/memory/performancegate claim.",
+  "archiveReceipts": [
+    {
+      "file": "report.json.gz",
+      "format": "gzip; decompress to exact original report.json",
+      "decompressedSHA256": "414f5bede3789122f031175d2e777afdfb036a4048af59f327cab5efaf9ca6c4",
+      "compressedSHA256": "05efeee12ccd465c3dbaa85bdf01ea429131bc79b3c9b6b0d845de27fa4faace",
+      "decompressedBytes": 11666845,
+      "compressedBytes": 3168690
+    },
+    {
+      "file": "audit.json.gz",
+      "format": "gzip; decompress to exact original audit.json",
+      "decompressedSHA256": "a5d28752d74bc5887b980c007ae74b1c4b9a788f7dd2f6bae71e2f47f8f61c52",
+      "compressedSHA256": "8c49dc6dcd48f37de1a6f6859f81e73a66b4d09b102eeda0fabbea4bedb96649",
+      "decompressedBytes": 1308268,
+      "compressedBytes": 14032
+    }
+  ],
+  "playedFilm": {
+    "file": "matched.mp4",
+    "sha256": "25559d480089b3568b623cad42a4b3b1de702d4793dc125f493240ff8f219f31",
+    "frames": 72,
+    "fps": 12,
+    "durationS": 6,
+    "pairedSameCameraMaterialActualInput": true
+  },
+  "limits": [
+    "Directnearestbody weighttransfer is failed, not acceptedsourcefittedskinning or activecollision. Source-owner rawandcontrol exports retained; stale01unused.",
+    "No extra projectiondistance/gap/body/posechange, fullclothrestart, newworker or playerpromotion.",
+    "Native triangle/restoffset attachment table is ancestry only; coupleddeformation andconsumedcollision remain open.",
+    "AllM0\u2013M5/physicalphone/sewnfullgarment/layers/heldout gameplay andcheckeddeployment remain open.",
+    "Native source rest differs from realGame spawn; newfield alreadyselfintersects at0. Source/sourcequantization measured\u2264.149\u00b5m, not anexcusefor55selfpairs.",
+    "JSONreceipts compressedlosslessly to preserve exactcapturedbytes/hashes withoutlargeprettytextdiff; decompressed hashes directlymatch audit/physics proof."
+  ]
+}

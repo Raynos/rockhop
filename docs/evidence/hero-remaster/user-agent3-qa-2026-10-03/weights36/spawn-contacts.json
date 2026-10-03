@@ -1,0 +1,73 @@
+{
+  "status": "UNACCEPTED_ACTUAL_POSE_ZERO_CONTACT_AUDIT",
+  "rows": [
+    {
+      "name": "baseline",
+      "inputTick": 0,
+      "body": {
+        "pairs": 0,
+        "witnesses": [],
+        "epsilonM": 1e-9,
+        "limits": "Finite triangle contacts at this pose, not swept/continuous or volume penetration. Same-mesh faces sharing a vertex are excluded."
+      },
+      "self": {
+        "pairs": 0,
+        "witnesses": [],
+        "epsilonM": 1e-9,
+        "limits": "Finite triangle contacts at this pose, not swept/continuous or volume penetration. Same-mesh faces sharing a vertex are excluded."
+      }
+    },
+    {
+      "name": "body-weights",
+      "inputTick": 0,
+      "body": {
+        "pairs": 0,
+        "witnesses": [],
+        "epsilonM": 1e-9,
+        "limits": "Finite triangle contacts at this pose, not swept/continuous or volume penetration. Same-mesh faces sharing a vertex are excluded."
+      },
+      "self": {
+        "pairs": 25,
+        "witnesses": [
+          {
+            "triangleA": 144,
+            "triangleB": 338
+          },
+          {
+            "triangleA": 144,
+            "triangleB": 341
+          },
+          {
+            "triangleA": 145,
+            "triangleB": 338
+          },
+          {
+            "triangleA": 145,
+            "triangleB": 339
+          },
+          {
+            "triangleA": 146,
+            "triangleB": 340
+          },
+          {
+            "triangleA": 147,
+            "triangleB": 340
+          },
+          {
+            "triangleA": 147,
+            "triangleB": 341
+          },
+          {
+            "triangleA": 148,
+            "triangleB": 294
+          }
+        ],
+        "epsilonM": 1e-9,
+        "limits": "Finite triangle contacts at this pose, not swept/continuous or volume penetration. Same-mesh faces sharing a vertex are excluded."
+      }
+    }
+  ],
+  "limits": [
+    "Native rest differs from actual physical spawn. No collision solver or pushout initialized; this is the exact skinned moving-control initial frame."
+  ]
+}

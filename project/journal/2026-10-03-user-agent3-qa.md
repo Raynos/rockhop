@@ -596,3 +596,27 @@ Sourceweight/attachmentscontrol is Agent1owned, onebounded SAMErest
 comparison; Agent3 independently testsactualGLTF/window/selffolds. No
 projectiondistanceincrease/fullclothrestart/newworker. AllM0–M5/phone/
 checkedrelease remainopen; freshnormal33gate retained.
+
+## Round36: actual source-weight transfer independently fails
+
+Finding: Rootrequested oneSAMErest weighting/attachmentcontrol after
+primary31rejection. Nativeowner a030c89d source02actualGLTF skinweight
+transfer is independentlyFAILED: all703steppedticks baseline max52body/
+22self/16selfframes vsnew86body/55self/582selfframes; sourceposedspawn
+self0→25pairs (704states16vs583, agreesowner scope). Rest/UV/normals/
+indices/material/51bind exact; observedfolds are not geometrypromotion.
+
+Validation: IndependentactualLoader300→288/528triangle mapping, native
+weightvalues0error, bodybindcomponent0difference; mapgeometry≤.149µm
+residual.703newframehashes repeatbyteexact; independentGame2109ticks
+exact.72frame6s matchedorbit/material film played silently. Scopedlint/
+contactpredicate case pass. Freshnormal36build/lowhighgate clears4810
+ticks40.083333333333336s/abaaaaaaaa0a4440,crash103/restarttick0,1/4ms.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/weights36/outcome.json
+
+Limits: No projection/gap/body/bind/posechange/fullclothrestart/newworker
+or playerpromotion. Attachmenttables are ancestry, not activecollision;
+coupleddeformation/consumedcollision still required. DesktopCPUrender
+submission baseline4/5,new3/6ms p50/p95/readback0/1ms is quantized and
+not GPU/mobile/fps/memorygate. JSONreceipts losslessgzip exactrawhashes.
+AllM0–M5/phone/checkeddeployment remainopen; parentjudges movingwindow.
