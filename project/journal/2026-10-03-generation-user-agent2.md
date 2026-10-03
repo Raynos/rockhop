@@ -417,3 +417,12 @@ Ask:284–286.
 Limits: Analytic exact-zero grid alignment does not establish garment
 quality failure or CUDA parity. No shared extraction fix or native cleanup.
 Output must be audited before any derivative/export; painting separate.
+
+Finding: Weight-free actual preprocessing recipe is checkpointed unaccepted
+before input-contract experiments.
+
+Validation: AST syntax passes; no execution or outputs yet.
+Ask:286.
+
+Limits: Source checkpoint only; runtime/import/preprocessing verification
+and downstream conditioning remain pending. No shared source change.
