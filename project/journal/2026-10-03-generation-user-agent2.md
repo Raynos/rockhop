@@ -1349,3 +1349,16 @@ Ask:284–286.
 Limits: Root played judgment pending. Pervertex PBR derivative, no UVbake/
 maplevel/fit/rig/opening/mobile/finalart/CUDApass. No new neural seed,
 sourceintegration or Library upload claimed by this local builder.
+
+Finding: Human explicitly keeps generated Hunyuan hoodie as visual source;
+root's unfinished game-ready gates must not be misread as look rejection.
+
+Validation: Bridge relay preserved in root-review metadata, visualSourceKept
+true/lookRejectedfalse. Fit/topology/rig/mobile remain incomplete, no endless
+generation direction. Current runtime24 player/dependency pins match and
+otherdifferencesfromc74783ad0 retain coldboot/clear/crash/restart gate applicability.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-pbr-root-review01/review.json
+Ask:284–286.
+
+Limits: Visual-source choice is not a fitted/rigged/mobile asset gate;
+qualified one-by-one family comparison stays bounded and independent.
