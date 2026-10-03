@@ -180,3 +180,13 @@ clear40.083333333s, crash103/restart1tick, errors0, frame2.970ms/coldboot2691ms.
 Limits: Source checkpoint before moving review; neckline/hood/accessory fit
 open, boot min−64.5mm recorded. No whole-rider art/device/player acceptance.
 Evidence: [appearance assembly](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance01/README.md). Ask274; existing277–279.
+
+Finding: The first recognizable textured assembly now plays continuous native
+front/rear motion with exact controller and complete head/hand/foot framing.
+Validation: Two133-frame12fps silent512×768 films fully decode; all PTS=i/12
+within1µs, every visible evaluated vertex framed, exact master/driver/movie
+hashes pinned. Rear container duration rounds0.333ms below expected11.083333s;
+frame timestamps and counts are exact. Original source/assembly unchanged.
+Limits: Native bike-free FK film, not supported riding/export/device acceptance;
+neckline/hood/accessory fit unaccepted, bounded boot registration repair next.
+Evidence: [played appearance](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance01/review/movies.json). Ask274.

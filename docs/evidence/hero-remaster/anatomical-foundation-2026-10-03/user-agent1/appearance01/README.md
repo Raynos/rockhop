@@ -1,6 +1,6 @@
 # Appearance01: recognizable textured own-bind assembly
 
-Status: **UNACCEPTED source checkpoint; moving review pending.** Root alone
+Status: **UNACCEPTED source checkpoint; native played review delivered; root judgment pending.** Root alone
 judges. This is the immediate appearance assembly on the liked movement
 foundation, not a production player asset or whole-rider fit pass.
 
@@ -32,3 +32,15 @@ ticks, clear40.083333333s, crash103/restart1tick, errors0; CPU frame submission
 2.970ms and cold boot2691ms. This checks shipped controls, not candidate art
 or iOS presentation. Native bike-free motion review is next; actual supported
 bike/contact capture remains a separate later stage. All M0–M5 stay open.
+
+Two continuous native PBR films now replay the same529-frame FK driver at
+133samples/12fps, front/rear three-quarters, 512×768, no audio. Every evaluated
+visible vertex participates in the framing check; minimum normalized borders
+are0.10653(front)/0.09914(rear). All133 presentation timestamps equal i/12
+within1µs and both movies fully decode. Expected duration is11.083333s; the
+rear H264 stream reports11.083000s (0.333ms packet/container rounding), recorded
+separately from exact frame timing. No still image substitutes for played judgment.
+
+The film makes neckline/accessory and remaining garment faults reviewable.
+It does not certify them. The protected textured face is present now; bounded
+boot registration repair follows without mutating this first checkpoint.
