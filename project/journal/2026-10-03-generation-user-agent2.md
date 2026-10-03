@@ -1652,3 +1652,16 @@ Ask:284–286.
 
 Limits: Unaccepted recipe pending; no native mesh or moving judgmentyet.
 No seed replay, replacement sampling math, installed edit or assetpromotion.
+
+Finding: Original Pixal decode-only recovery preserves raw1024 output
+after48actualsteps, with no sampler reruns in this unit.
+
+Validation: Guard0/50.127s, peak48.1anon/54.2combined GiB; four actual
+final feature/coord archives restoredexactly. Two originaldecoderloads
+have no missing/unexpected keys.2,823,607vertices/6,597,482triangles,
+finite inrange nativearrays hashrechecked, no cleanup/recolor/reduction.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-decode01/
+Ask:284–286.
+
+Limits: Explicit1024 lower-memory alternative;1536 didnotcomplete.
+Native material/movingrootreview pending; no fit/rig/mobile acceptance.

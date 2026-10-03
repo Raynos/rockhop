@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "accepted": false,
+  "definition": "decoded arrays, copied to CPU without dtype conversion",
+  "archiveSHA256": "fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982",
+  "arrays": {
+    "vertices": {
+      "dtype": "float32",
+      "shape": [
+        2823607,
+        3
+      ],
+      "sha256CBytes": "886cf9a3e0350d44118fd40be48214f039012694ae3705d49bd7d7675dbb9855"
+    },
+    "faces": {
+      "dtype": "int32",
+      "shape": [
+        6597482,
+        3
+      ],
+      "sha256CBytes": "7f2619b3d98f0a23bd76bf6f98970e4e4fb3faf4049578982ecb5d0bcfb54b4d"
+    },
+    "attrs": {
+      "dtype": "float32",
+      "shape": [
+        2823607,
+        6
+      ],
+      "sha256CBytes": "0e0cd24b93a1469bcfbd51882ca29cd44d0973a7c39a969de109b8a3492a972e"
+    },
+    "coords": {
+      "dtype": "int32",
+      "shape": [
+        2823607,
+        3
+      ],
+      "sha256CBytes": "063acc417ca6a5a746baed414a5c0ae9dcb221cf010ac4aad0095ef7a1ffa076"
+    },
+    "origin": {
+      "dtype": "float32",
+      "shape": [
+        3
+      ],
+      "sha256CBytes": "818c911499648394ddb4bc094311347f94cddc517d136c77803e68eb7229ac6b"
+    },
+    "fdg_coords": {
+      "dtype": "int32",
+      "shape": [
+        2823607,
+        3
+      ],
+      "sha256CBytes": "063acc417ca6a5a746baed414a5c0ae9dcb221cf010ac4aad0095ef7a1ffa076"
+    },
+    "fdg_dual_vertices": {
+      "dtype": "float32",
+      "shape": [
+        2823607,
+        3
+      ],
+      "sha256CBytes": "d5eb3d80d14899bff7f48feca5f837f3ee3c59b7aab2cdc22174dd36c41e0330"
+    },
+    "fdg_intersected": {
+      "dtype": "bool",
+      "shape": [
+        2823607,
+        3
+      ],
+      "sha256CBytes": "2628482543f97213d5268151e1672205e40baa16d3e0ce3ed3919be23ac3d67a"
+    },
+    "fdg_split_weight": {
+      "dtype": "float32",
+      "shape": [
+        2823607,
+        1
+      ],
+      "sha256CBytes": "4db235d80712ce319d8aee5d7e5cf20376777bf55565ded86259d42fd53d30e1"
+    }
+  },
+  "voxelSize": 0.0009765625,
+  "layout": {
+    "base_color": [
+      0,
+      3,
+      null
+    ],
+    "metallic": [
+      3,
+      4,
+      null
+    ],
+    "roughness": [
+      4,
+      5,
+      null
+    ],
+    "alpha": [
+      5,
+      6,
+      null
+    ]
+  },
+  "cleanup": false,
+  "reduction": false,
+  "exportRotation": false
+}

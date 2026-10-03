@@ -1,0 +1,153 @@
+{
+  "accepted": false,
+  "torch": "2.12.0",
+  "recipeSHA256": "bcc38c504a3b432772a8d38c6869a4e56f798df5b5addf2a732bc2060c803be9",
+  "decodeInputReceiptSHA256": "c9f0d86e9748eb592c390ff7f81676e8c7deb41594f457e2750d46a36bac94c2",
+  "resolution": 1024,
+  "samplingCalls": 0,
+  "actualSamplingStepsAlreadyPersisted": 48,
+  "checkpointLoads": [
+    {
+      "module": "FlexiDualGridVaeDecoder",
+      "missingKeys": [],
+      "unexpectedKeys": []
+    },
+    {
+      "module": "SparseUnetVaeDecoder",
+      "missingKeys": [],
+      "unexpectedKeys": []
+    }
+  ],
+  "restoredInputs": {
+    "actual-final-shape-latent": {
+      "CBytesSHA256": "0ebb23a8c41a06a3c4966db49212106ffa8586a85094bda03bc72c47591f8ac8",
+      "byteIdentical": true
+    },
+    "actual-final-shape-latent-coords": {
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "byteIdentical": true
+    },
+    "actual-final-texture-latent": {
+      "CBytesSHA256": "578e5024384e67595ac7c9680a2f6a947b106fd5553bcb3a9f6b3833914c40cf",
+      "byteIdentical": true
+    },
+    "actual-final-texture-latent-coords": {
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "byteIdentical": true
+    }
+  },
+  "status": "Raw1024 mesh persisted before moving review",
+  "elapsedSeconds": 39.984781791921705,
+  "loadedModels": [
+    "shape_slat_decoder",
+    "tex_slat_decoder"
+  ],
+  "native": {
+    "schemaVersion": 1,
+    "accepted": false,
+    "definition": "decoded arrays, copied to CPU without dtype conversion",
+    "archiveSHA256": "fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982",
+    "arrays": {
+      "vertices": {
+        "dtype": "float32",
+        "shape": [
+          2823607,
+          3
+        ],
+        "sha256CBytes": "886cf9a3e0350d44118fd40be48214f039012694ae3705d49bd7d7675dbb9855"
+      },
+      "faces": {
+        "dtype": "int32",
+        "shape": [
+          6597482,
+          3
+        ],
+        "sha256CBytes": "7f2619b3d98f0a23bd76bf6f98970e4e4fb3faf4049578982ecb5d0bcfb54b4d"
+      },
+      "attrs": {
+        "dtype": "float32",
+        "shape": [
+          2823607,
+          6
+        ],
+        "sha256CBytes": "0e0cd24b93a1469bcfbd51882ca29cd44d0973a7c39a969de109b8a3492a972e"
+      },
+      "coords": {
+        "dtype": "int32",
+        "shape": [
+          2823607,
+          3
+        ],
+        "sha256CBytes": "063acc417ca6a5a746baed414a5c0ae9dcb221cf010ac4aad0095ef7a1ffa076"
+      },
+      "origin": {
+        "dtype": "float32",
+        "shape": [
+          3
+        ],
+        "sha256CBytes": "818c911499648394ddb4bc094311347f94cddc517d136c77803e68eb7229ac6b"
+      },
+      "fdg_coords": {
+        "dtype": "int32",
+        "shape": [
+          2823607,
+          3
+        ],
+        "sha256CBytes": "063acc417ca6a5a746baed414a5c0ae9dcb221cf010ac4aad0095ef7a1ffa076"
+      },
+      "fdg_dual_vertices": {
+        "dtype": "float32",
+        "shape": [
+          2823607,
+          3
+        ],
+        "sha256CBytes": "d5eb3d80d14899bff7f48feca5f837f3ee3c59b7aab2cdc22174dd36c41e0330"
+      },
+      "fdg_intersected": {
+        "dtype": "bool",
+        "shape": [
+          2823607,
+          3
+        ],
+        "sha256CBytes": "2628482543f97213d5268151e1672205e40baa16d3e0ce3ed3919be23ac3d67a"
+      },
+      "fdg_split_weight": {
+        "dtype": "float32",
+        "shape": [
+          2823607,
+          1
+        ],
+        "sha256CBytes": "4db235d80712ce319d8aee5d7e5cf20376777bf55565ded86259d42fd53d30e1"
+      }
+    },
+    "voxelSize": 0.0009765625,
+    "layout": {
+      "base_color": [
+        0,
+        3,
+        null
+      ],
+      "metallic": [
+        3,
+        4,
+        null
+      ],
+      "roughness": [
+        4,
+        5,
+        null
+      ],
+      "alpha": [
+        5,
+        6,
+        null
+      ]
+    },
+    "cleanup": false,
+    "reduction": false,
+    "exportRotation": false
+  },
+  "vertices": 2823607,
+  "triangles": 6597482,
+  "validNative": true
+}
