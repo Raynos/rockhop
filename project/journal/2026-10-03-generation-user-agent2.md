@@ -269,3 +269,17 @@ Ask:276.
 Limits: No CUDA parity or Mac-only regression claim; no garment arrays read,
 new inference, extra film or actual garment repair. Not a normals-only cause
 proof for every contour; conditional quality run remains unqualified.
+
+Finding: Narrow owned DERIVED orientation adapter resolves actual extractor
+control conflicts: cube6to0, analytic sphere366to0. It leaves vertices and
+per-row triangle vertex sets identical; installed/shared decoder stays untouched.
+
+Validation: CPUguard27835/owned27838 exits0 in0.893s; cube
+volume1, sphere1068faces/outward normals/volume4.126385 versusanalytic4.188790
+(within1.49percent). Max radiuserror3.58e-7; source/adapter pins and AST pass.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/orientation-controls01/receipt.json
+Ask:276.
+
+Limits: Zero neural runs/garment changes, no CUDA equivalence or Mac-only bug
+claim. Nonmanifold/open components can retain conflicts; no broad mesh repair
+or generator/fit/art verdict. Supports textured-rider lane independently.
