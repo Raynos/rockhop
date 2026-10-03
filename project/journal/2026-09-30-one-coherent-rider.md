@@ -2760,3 +2760,14 @@ Limits: No render/rig/newleg/composedcharacter/pose/art/contact/mobile pass.
 Userrequestedexit stopsnewjobs; explicitnextworkqueuedinplan, no playerpromotion.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/arm-proportion216/
 Ask: 248,249.
+
+## Round215 — freeze head-sew216 for user-requested exit
+
+Finding: Actualneck physicallysewn/capped withlikedhead exact; no movingacceptance.
+
+Validation: Parent25pins/actualGLB/sourceprotection. Closedserializedtopology/304captriangles, protectedheadUVnormals/PBRexact.
+
+Limits: No render/rig/newleg/composedcharacter/pose/art/contact/mobile pass.
+Userrequestedexit stopsnewjobs; explicitnextworkqueuedinplan, no playerpromotion.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/head-sew216/
+Ask: 248,249.

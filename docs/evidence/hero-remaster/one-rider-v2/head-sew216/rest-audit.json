@@ -1,0 +1,54 @@
+{
+  "status": "REST_GATE_CLEAR_WITHIN_MEASURED_COVERAGE_NO_ART_RIG_ACCEPTANCE",
+  "candidateSHA256": "7bee73c2d09ea24afbf3bce480e937d1d0b313462d5adead079165e54bc1a861",
+  "constructionSHA256": "afdef76fd25d25fd2e6c82a6648401b4c1a0315c659c231bd3531da1f5b20a4e",
+  "vertices": 174235,
+  "faces": 348526,
+  "boundaryEdges": 0,
+  "nonmanifoldEdges": 0,
+  "windingConflictEdges": 0,
+  "zeroAreaFaces": 0,
+  "minimumAreaM2": 3.552713678800501e-15,
+  "fullNativeIPCAnyIntersection": false,
+  "sameSideNearCoplanarEdgeCandidates": 0,
+  "exactAdjacentPositiveCoplanarFolds": 0,
+  "foldWitnesses": [],
+  "components": [
+    {
+      "vertices": 174229,
+      "faces": 348518,
+      "roles": [
+        "body-cut",
+        "body-retained",
+        "head-cut",
+        "head-neck-field",
+        "head-retained",
+        "internal-cap",
+        "mouth-exact"
+      ]
+    },
+    {
+      "vertices": 6,
+      "faces": 8,
+      "roles": [
+        "body-retained"
+      ]
+    }
+  ],
+  "trueBodyHeadSharedPhysicalVertices": 549,
+  "internalCapTriangles": 304,
+  "capAreaM2": 0.012731498397618604,
+  "capConsistentPlanarWinding": true,
+  "exportedPositionsUVIndicesRoundtripExact": true,
+  "protectedHeadGeometryUVNormalsRowsExact": 38041,
+  "headPBRSourceBINPrefixExact": true,
+  "nativeThreads": 2,
+  "seconds": 2.665889957919717,
+  "limits": [
+    "Measured IPC controls detect nonadjacent coplanar overlap but not sharededge folds; separate adjacent fold check included",
+    "Static gate only; no near-coplanar thickness/appearance, neck rotation, bend, rig, gameplay/contact/mobile pass",
+    "Six-vertex inherited disconnected native component remains exactly; body source is still finite subset of invalid native output",
+    "Body unpainted, native arms short, source anatomy unresolved",
+    "OutputGLB unrigged; source head bind weights saved but not promoted into a new rig"
+  ]
+}

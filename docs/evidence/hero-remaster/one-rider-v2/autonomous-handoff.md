@@ -2591,3 +2591,20 @@ remainsprovisional; likedheadjoin216 isSEPARATE andneeds exactancestrycompositio
 Next matchedgray A/Bbeforebinding, actualsole/leganatomy andfresh19boneadapter.
 All threevisual/basicpose/Garage/lean/landing/contact/mobile gates remainopen.
 Allownedjobsfinished; no newrender launchedafterexitrequest. Cosmetics paused.
+
+## Frozen capped head join; visual and motion gates open — round215
+
+Userrequested sessionexit stops newexperiments. Cachecorrection builds oneactual
+closed head/body surface and304earclipped innercaptriangles. Parent25pins verified;
+headretained position/UV/normals and PBRBINexact, serialized physical open/
+nonmanifoldedges0. Builderreports549shared outerneck vertices,0zeroarea/winding/
+IPC intersections/adjacentfold candidates withinmeasured staticcoverage.
+
+Candidate7bee73c2d09ea24afbf3bce480e937d1d0b313462d5adead079165e54bc1a861
+is private/unrigged/bodygray, not rendered or visuallyaccepted. It stilluses
+short-arm210body; arm216candidate isSEPARATE, notcomposed. Next owner mustcompose
+via sourceancestry, inspectmatchedgray/textured views+neckmotion, resolvelegs,
+thenfresh19bone rig/FK/Garagecontactmapping. No acceptedcharacter or playerasset.
+All threevisual/basicposes/lean/landing/grip/sole/saddle/mobile remainopen.
+All specialistjobsfinished; no furthertrial orrenderlaunch afterexitrequest.
+Next mandatoryship216. Cosmeticspause and autonomous5/15bounds remain.
