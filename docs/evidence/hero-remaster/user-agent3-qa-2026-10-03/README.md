@@ -166,3 +166,31 @@ supported Library route. `library-receipts.json` records its confirmed Library
 and File identities alongside rechecked local SHA256 values. This QA lane did
 not invoke the uploader; original bytes and unaccepted labels are preserved.
 Root received the exact identities for played visual review. No gate closes.
+
+## Authored01 independent normal-path result
+
+Derivative `2df79a776266fdbadd34309cec5892582d38adcfe154d097ddd79e082e46d022`
+changes only node56 `Foundation file frame, game x0.65`'s integer declaration.
+BIN SHA `780b46c88edbffd7d43be266fc8d0045de320addaac7ef56eb7410323230c532`
+is identical; every other JSON field, complete51-joint skin and original driver
+remain exact. The admission proof independently checks nearest ownership for
+all four skinned meshes. `authored01-summary.json` pins both full local reports.
+
+The tagged normal conditioning path adds **zero displacement** in every region
+across all529 shared samples; matrix residual remains2.45e-15. Full-native→four
+loss stays body7.811008 mm, sweatshirt4.819998 mm and jeans/boxers0.947606 mm.
+The previous raw/default clips and source-full/four movie remain retained.
+
+`controls.mjs` independently executes production `prepareHero`, `GltfRider`
+cloning and Garage/riding toggles. All tagged geometry, skin attributes, complete
+bone orders and inverse binds remain authored. All ten shipped full/LOD controls
+have identical source/default-riding/Garage signatures before and after the
+tagged sibling; source files remain immutable. Node omits image references in
+memory, so this proves geometry/cloning/scope rather than material rendering.
+The fresh sixth-round ordinary WebKit low/high gate passes4810identical ticks,
+40.0833s clear, crash and one-tick restart at1/2ms, with zero errors.
+
+Reproduce `controls.mjs` with original GLB, tagged GLB, owner node56 and fresh
+report path under `pnpm exec tsx`. No loader source or player asset changed.
+Metadata handling does not repair the existing clothing contact/self witnesses,
+restore discarded weights, certify continuous parity or accept any rider gate.

@@ -56,3 +56,14 @@ Validation: Incoming receipt supplies five exact Library/File identities;
 local movie SHA256 values rechecked against the frozen capture summary.
 Limits: Upload tool receipts belong to bridge. This records delivery only;
 neither this lane nor the Library save accepts rider gates or visuals.
+
+Finding: One explicit own-container declaration preserves the intended four-
+weight source through normal cloning and removes the extra runtime displacement.
+Validation: Exact BIN/all-other-JSON proof; all529 samples/all51 joints give
+zero raw→tagged-runtime displacement. Actual preparation/cloning/stage toggles
+preserve tagged geometry, weights and binds; ten shipped full/LOD controls keep
+identical before/after signatures. Six targeted checks and scoped type-aware
+lint pass. Sixth-round ordinary WebKit low/high clear4810identicalticks/40.0833s,
+crash and one-tick restart1/2ms, zero errors.
+Limits: Source four-weight loss remains7.811mm/4.820mm body/cloth; images omitted
+in Node. No clearance, contact, continuous, visual or device acceptance.
