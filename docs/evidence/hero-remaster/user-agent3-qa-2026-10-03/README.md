@@ -142,3 +142,19 @@ of installed skill/plugin caches found no Library SKILL.md, and tool metadata
 has Page-specific uploads but no direct Library uploader. No Library URL/file ID
 is invented. Root/bridge has the exact local packet for a supported upload by
 its Library-capable lane. Clips remain unaccepted; root judges played shape.
+
+## Metadata-only derivative admission
+
+Agent 1 owns the proposed experimental nearest-container declaration. QA changes
+no asset or loader. `metadata.mjs` admits exactly one explicitly named node's
+integer declaration while requiring identical BIN bytes and every other JSON
+field, including complete skin orders, hierarchy, accessors and inverse binds.
+Every skinned mesh must resolve to that owner through the nearest declaration.
+Three targeted checks reject changed binary data, reordered joints, unrelated
+extras and a closer declaration that masks the proposed ancestor.
+
+`measure.mjs` accepts an explicitly pinned original GLB and owner-node index as
+its last two arguments when measuring a derivative. The immutable driver still
+must name the original hash; derivative provenance is checked rather than
+silently rewriting the driver. These preparation checks are not a candidate
+pass. Actual derivative pins and retained shipped-control checks follow.

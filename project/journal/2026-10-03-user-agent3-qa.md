@@ -42,3 +42,10 @@ passes. Earlier boot-race attempts remain preserved locally.
 Limits: Native orthographic/engine perspective projections differ. Synthetic
 FK/staged riding geometry is not physics motion/contact or art acceptance.
 Library skill/uploader absent from this session; exact local packet sent root.
+
+Finding: Prepared strict admission for one owning-container metadata derivative;
+the immutable native driver and complete binary/rig contract remain pinned.
+Validation: Three Node checks reject BIN changes, rig-order changes, unrelated
+extras and nearer scope declarations; scoped type-aware lint passes.
+Limits: Agent 1 derivative and production-control receipts are pending. No
+asset tag or loader is changed by QA; no deformation/contact acceptance.

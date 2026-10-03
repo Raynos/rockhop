@@ -8,14 +8,20 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import { compareThreeWays, compareMappedPositions } from './compare.mjs';
 import { conditionSleeveSkin } from '../../../src/render/hero/sleeveSkin.ts';
+import { verifyMetadataDerivative } from './metadata.mjs';
 
-const [glbFile, driverFile, outputFile] = process.argv.slice(2);
+const [glbFile, driverFile, outputFile, originalFile, ownerNodeArg] = process.argv.slice(2);
 assert(outputFile, 'Usage: measure.mjs candidate.glb driver.json new-report.json');
 assert(!fs.existsSync(outputFile), 'Refuse to overwrite a measurement');
 const hash = b => crypto.createHash('sha256').update(b).digest('hex');
 const bytes = fs.readFileSync(glbFile), driverBytes = fs.readFileSync(driverFile);
 const driver = JSON.parse(driverBytes);
-assert.equal(hash(bytes), driver.conditionedGLBSHA256);
+let metadataDerivative = null;
+if (originalFile) {
+  const original = fs.readFileSync(originalFile);
+  assert.equal(hash(original), driver.conditionedGLBSHA256);
+  metadataDerivative = verifyMetadataDerivative(original, bytes, Number(ownerNodeArg));
+} else assert.equal(hash(bytes), driver.conditionedGLBSHA256);
 const json = JSON.parse(bytes.subarray(20, 20 + bytes.readUInt32LE(12)));
 const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 const gltf = await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength), '');
@@ -136,6 +142,7 @@ const summary = driver.meshRows.map(({ region }) => ({ region,
       witnesses: ranked.slice(0, 3) }];
   })) }));
 const report = { status: 'SAMPLED_THREE_WAY_MEASURED_UNACCEPTED',
+  metadataDerivative,
   glbSHA256: hash(bytes), driverSHA256: hash(driverBytes), inputPins: driver.pins,
   fileWorldMetres: true, gameplayWrapperApplied: false, runtimeConditioningApplied: true,
   runtimeConditioningSourceSHA256: hash(fs.readFileSync('src/render/hero/sleeveSkin.ts')),
