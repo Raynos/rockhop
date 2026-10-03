@@ -396,3 +396,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 270 | "Change all the settings to approve." | **done — all configured MCP approval policies updated** | Six user MCP servers, four installed plugin MCP servers, six explicit plugin tool overrides and apps default set to approve. Dotfiles installer merge parses/idempotence passes; runtime/private state not committed. |
 
 | 271 | "Do you think these changes auto apply?" | **done — runtime reload not confirmed** | Fresh CLI reads saved config; documented live reload exists, but local daemon proxy handshake did not acknowledge. Running desktop chats may retain policy; relaunch after active work settles is the reliable fallback. No daemon/app restart or foreign chat interruption performed. |
+
+| 273 | "Commit and push in small commits the 100+ files; tell me what is uncommitted." | **in flight — parent inventory and checkpointing** | Inspect exact paths and active ownership; preserve unaccepted experimental source/evidence, commit coherent units on main, push and verify release/deploy results, then report remaining paths. |
