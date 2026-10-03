@@ -53,3 +53,15 @@ visually inspected. Exact contract/input/scale/axes pinned in input-admission01.
 Limits: No inference/lease. Separate true geometric alpha render requested from
 Agent1; no final-art/wearable acceptance requirement added. Stable geometry is
 already admitted for experimental comparison; all M0–M5 remain OPEN.
+
+Finding: First actual cheap Hunyuan2.1 body probe completed on pinned geometric
+alpha9166f93e/amendmentca00fddc with frozen experimental fitting contractf586d85a.
+Native5892vertices/11740triangles persist, but11components and thin geometry
+need moving donor review. No construction/anatomy acceptance from clean counts.
+
+Validation: Guarded controller48209/owned48213 exits0 in28.163s; raw SHA0261bc0a
+matches audit/receipt. Finite/index/repeated/zeroarea/duplicate/boundary/overused/
+winding witnesses0. Max observed anon56.9/combined64.6GiB; canonical lease released.
+
+Limits: No paint/PBR/rig/wearable fit or visual/played/device acceptance. Raw,
+display and log masters stay local and pinned; no player assets. All M0–M5 OPEN.

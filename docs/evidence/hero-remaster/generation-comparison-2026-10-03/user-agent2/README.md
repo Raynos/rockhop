@@ -1,6 +1,6 @@
 # Agent 2 installed generation comparison
 
-Verified 2026-10-03. Unaccepted preparation; no inference or generated candidate.
+Verified 2026-10-03. Unaccepted preparation and first cheap native donor result.
 Owner: `01a101fe-a358-7731-987d-4168614e9ece` (human-created Agent 2).
 Construction/fitting: Agent 1 `01a101fe-74be-7693-960d-f1ba7246dfb8`.
 Root alone judges art and M0–M5; all six remain OPEN.
@@ -72,8 +72,8 @@ stop own child at65 anonymous/78 combined,1s polling,1790s maximum. Never nest
 Pixal's already-locking launcher under this controller, evict, remove the lock,
 use legacy run-locked.sh or kill a foreign process. Two same-technique failures
 require a mechanism change. Retain partial arrays/checkpoints and exact settings.
-Next: freeze stable experimental fitting contract, then one cheap probe and raw topology
-audit before quality runs. Played Blender/engine fit, art, rig, device and release
+Stable experimental inputs and the first cheap native result are now recorded
+below. Played Blender/engine fit, art, rig, device and release
 checks remain open; nothing enters normal player assets.
 
 ## Exact decoded-array preservation preparation
@@ -154,3 +154,33 @@ Agent1 was asked for a separate pinned transparent front render from the same
 geometry/camera without overwriting the frozen contract. TRELLIS's installed
 BiRefNet is another explicit conditioning route. This is an input defect, not
 a final visual-acceptance prerequisite. No model job or lease started yet.
+
+## First actual Hunyuan cheap body probe
+
+Agent1 supplied a geometric-alpha derivative, image SHA
+`9166f93e6f574c4988fbff09fd27645d1e7dc6a61e4764e306accb9bdf62c6e1`,
+amendment SHA `ca00fddc098103bcb041d5bac5cabb667c4cba96c0c9243d06f43439d8693fc6`.
+Fresh bytes, RGBA512square and alpha0..255 verify; same frozen body/pose/camera.
+[`hunyuan-body01-launch.json`](hunyuan-body01-launch.json) pins its ancestry and
+actual command. [Receipt](hunyuan-body01/receipt.json), [settings](hunyuan-body01/generation.json),
+[native audit](hunyuan-body01/native-audit.json) and [guard](hunyuan-body01/guard.json)
+record actual execution, not inherited timings.
+
+Hunyuan2.1 shape only,seed42,8steps,octree192,chunks32768,guidance5 completed
+exit0 in28.163s guarded wall/21.681s worker time. Controller48209 owned48213;
+lockf-k shared lease released afterward. Max observed anonymous56.9GiB and
+anonymous+wired64.6GiB stay below stop bounds. No foreign process was evicted.
+
+Native archive SHA `0261bc0ae4c80625fae19b7e9312df0a511e3cc8004fd6e6aeee8abf3050133f`:
+5892float32 vertices/11740int32 triangles. Zero invalid/nonfinite indices,
+repeated/zero-area/duplicate triangles, boundary/overused/winding edges.
+However it has11vertex-connected face components, with major components
+2820/2476/2440/2376/1044triangles, and native depth only0.1631 versus longest
+extent1.7455. These are construction concerns, not an anatomy/fit pass.
+Actual moving donor shape review remains pending; root alone judges.
+
+Raw NPZ, separate reversed-winding display GLB and full owned worker log remain
+preserved local masters under `.tmp/generation-comparison-2026-10-03/user-agent2/hunyuan-body01/`;
+all bytes/sizes pinned in receipt. No cleanup, reduction, paint, rig, native-array
+rotation or player asset edit. No PBR/combined fitting or device evidence exists.
+This is an explicitly unaccepted checkpoint before any next experiment.
