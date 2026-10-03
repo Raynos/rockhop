@@ -168,3 +168,15 @@ Validation: Ten stages explicitly map construction, UV/PBR, own rig, bounded
 collision, supported gameplay, exact engine, mobile and release to open gates.
 Limits: Execution/status ordering is not milestone acceptance or a new plan;
 root alone judges and no player asset is promoted. Ask274; existing277–279.
+
+Finding: The recognizable protected rider can be assembled onto clean native
+clothing and own bind without adopting the fused appearance-donor body.
+Validation: Appearance01 packs protected head/cheek/hood/leather PBR, transfers
+wardrobe colour into original garment UVs, and registers bounded accessories.
+All51 native rest joints/hierarchy and original body/pattern basis, UV, weights,
+topology and local shape keys compare exactly. Frozen master/GLB and controller
+are pinned; round21 shipped-control silent replay passes4810identicalticks,
+clear40.083333333s, crash103/restart1tick, errors0, frame2.970ms/coldboot2691ms.
+Limits: Source checkpoint before moving review; neckline/hood/accessory fit
+open, boot min−64.5mm recorded. No whole-rider art/device/player acceptance.
+Evidence: [appearance assembly](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance01/README.md). Ask274; existing277–279.
