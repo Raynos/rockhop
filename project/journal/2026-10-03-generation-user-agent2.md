@@ -42,3 +42,14 @@ edges and3winding edges as expected; one out-of-range index rejects correctly.
 
 Limits: No inference or donor assessed; self-intersection/anatomy/fit unmeasured.
 Agent1 is exporting stable experimental fitting inputs; all rider gates OPEN.
+
+Finding: Agent1 stable experimental fitting01 contract received and all16rows
+(15unique input files) match; all9rendered RGBA images are fully opaque alpha255.
+Direct raw Hunyuan would consume the studio backdrop as part of the object.
+
+Validation: Fresh SHA256/Pillow reads of six OBJs/nine images pass. Primary image
+visually inspected. Exact contract/input/scale/axes pinned in input-admission01.
+
+Limits: No inference/lease. Separate true geometric alpha render requested from
+Agent1; no final-art/wearable acceptance requirement added. Stable geometry is
+already admitted for experimental comparison; all M0–M5 remain OPEN.

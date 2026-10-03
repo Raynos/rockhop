@@ -137,3 +137,20 @@ audit cannot certify self-intersection, anatomy, wearable clearance or motion.
 analytic tetrahedron fixtures: closed has0boundary/winding defects; removing
 one face gives3boundary edges; reversing one face gives3same-direction edges;
 one invalid index is rejected. No model loaded or generated mesh assessed yet.
+
+## Experimental fitting01 input admission
+
+Agent 1 supplied stable experimental contract SHA
+`f586d85a1504dd31b4ae650e6e54d302054674a69880cd3fcb904af51ab8eab0`,
+primary image SHA `231a0d85444179eb6b308685a38e4051fd60d78435c2330f1f8be752e85c015c`.
+[`input-admission01.json`](input-admission01.json) verifies all16 pin rows
+(15unique files:6OBJs/9images; primary image also repeated in contract).
+The stable experimental geometry/pose/axes contract permits bounded comparison.
+
+Fresh Pillow inspection finds all9RGBA images have alpha255/255: the gray studio
+background is opaque. The inherited raw Hunyuan worker performs no background
+removal, so direct use risks the already-documented background-plane failure.
+Agent1 was asked for a separate pinned transparent front render from the same
+geometry/camera without overwriting the frozen contract. TRELLIS's installed
+BiRefNet is another explicit conditioning route. This is an input defect, not
+a final visual-acceptance prerequisite. No model job or lease started yet.
