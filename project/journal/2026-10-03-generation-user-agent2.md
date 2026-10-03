@@ -1543,3 +1543,17 @@ Ask:284–286 root material review follow-up.
 
 Limits: Unaccepted control pending execution; fixed region only, not whole
 mesh intersection proof. Relief includes genuine folds; root judges bands.
+
+Finding: One existing-byte TRELLIS ray control locates raw winding/normal
+field inconsistencies independently of the tan PBR and renderer.
+
+Validation: Guard0/5.202s;26,130visible fixed rays, no render/inference.
+Native triangle cross products match Blender face normals≤1.49e-7.
+Face/averaged normals oppose on1,795front/777back rays; nearby second
+surface within2voxels only27front/23back. Raw central depth relief persists.
+Original NPZ and both historical/upright movie hashes rechecked unchanged.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/
+Ask:284–286 root contour-band follow-up.
+
+Limits: Fixed region only; exact played-film band causality unresolved.
+No new capture loop, model winner, normal fix, recolor or garment acceptance.

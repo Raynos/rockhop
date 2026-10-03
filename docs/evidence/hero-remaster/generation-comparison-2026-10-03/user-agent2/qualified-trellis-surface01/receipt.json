@@ -1,0 +1,78 @@
+{
+  "accepted": false,
+  "nativeSHA256": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+  "recipeSHA256": "c3955bd20eb57b6f09e2323629eb2a03be6651fb85c42c8dca85c61203795219",
+  "rawVertices": 3152811,
+  "rawFaces": 6322984,
+  "loadedArraysByteIdentical": true,
+  "controls": {
+    "front": {
+      "hitRays": 13065,
+      "totalRays": 13065,
+      "region": {
+        "x": [
+          -0.13,
+          0.13
+        ],
+        "z": [
+          -0.18,
+          0.22
+        ],
+        "rows": 201,
+        "columns": 65
+      },
+      "faceVsAveragedNormalDegrees": {
+        "median": 0.41684067249298096,
+        "p95": 173.72897338867188,
+        "max": 179.96572875976562
+      },
+      "centreStripDepthPeakToPeak": 0.04905825853347778,
+      "centreStripReliefPeakToPeak": 0.003944346981663849,
+      "centreStripReliefRMS": 0.0008039415745318885,
+      "centreStripReliefExtrema": 34,
+      "secondHitWithinQuarterVoxel": 20,
+      "secondHitWithinTwoVoxels": 27,
+      "secondHitMeasuredRays": 561,
+      "rayAdvanceEpsilon": 1e-06
+    },
+    "back": {
+      "hitRays": 13065,
+      "totalRays": 13065,
+      "region": {
+        "x": [
+          -0.13,
+          0.13
+        ],
+        "z": [
+          -0.18,
+          0.22
+        ],
+        "rows": 201,
+        "columns": 65
+      },
+      "faceVsAveragedNormalDegrees": {
+        "median": 0.13988231122493744,
+        "p95": 122.17948150634766,
+        "max": 179.97201538085938
+      },
+      "centreStripDepthPeakToPeak": 0.05790150165557861,
+      "centreStripReliefPeakToPeak": 0.035098685372260324,
+      "centreStripReliefRMS": 0.004876468896118548,
+      "centreStripReliefExtrema": 24,
+      "secondHitWithinQuarterVoxel": 21,
+      "secondHitWithinTwoVoxels": 23,
+      "secondHitMeasuredRays": 2556,
+      "rayAdvanceEpsilon": 1e-06
+    }
+  },
+  "archiveSHA256": "cf3588863f7ec8c8e417d081e81fe7d8ed0ae7d056e3ade4343698ae4329e0b3",
+  "elapsedSeconds": 4.045739790890366,
+  "renderOrInferenceCalls": 0,
+  "geometryChanges": false,
+  "limits": [
+    "Fixed central ray rectangle only, not whole-mesh watertightness or intersection certification.",
+    "Second-hit proximity can also represent legitimate thickness; not by itself proof of overlap.",
+    "Relief includes genuine folds and does not identify the exact bands root sees in the played film.",
+    "Normal discrepancy is measured, not a renderer-bug verdict. Root owns played interpretation."
+  ]
+}

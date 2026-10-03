@@ -1,0 +1,26 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "7abbb22b57f0cf20e007ffd72a47868684e1661a",
+  "status": "Existing-byte control finds native face/averaged-normal inconsistencies; exact film-band causality unresolved",
+  "guardExitCode": 0,
+  "elapsedSeconds": 5.202,
+  "renderOrInferenceCalls": 0,
+  "rootReview": "Root sees wavy bands in both neutral and PBR chest/back/waist; retains Hunyuan visual source",
+  "diagnosis": [
+    "Actual native triangle cross products match Blender face normals within1.49e-7: face orientation issue exists in raw geometry, not texture or axis transform.",
+    "Of13,065fixed visible rays per side, native face normals oppose averaged normals for1,795front and777back rays.",
+    "Raw visible face normals point with the inward ray for1,962front and12,174back rays; averaged normals do so for1,305front and12,552back. This is a winding/normal-field concern, not proof of a renderer defect.",
+    "Nearby second surfaces occur in27front/23back rays within2voxels; only10front/5back coincide with opposing normals. Nearby overlap alone does not explain the measured normal opposition.",
+    "Centre raw depth relief after fixed31row trend is0.003944front/0.035099back nativeunits; genuine folds included. Physical relief survives removing material and lighting numerically."
+  ],
+  "preserved": {
+    "nativeSHA256": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+    "historicalHorizontalMovieSHA256": "7354ac90919c85c9a3f4be039ae4f7a1dd4eee750b0c8719dcb919d7dcad9664",
+    "uprightMovieSHA256": "42ca2a6d03df1a914b4bf65922c878fbb05d081c1174ed06075029d8569dec30"
+  },
+  "limits": [
+    "One fixed central region only; no whole-mesh orientation/intersection certification.",
+    "Cannot isolate exact root-visible bands without changing shading/rendering; no new capture loop performed.",
+    "No geometry edits, recolor, inference, selected-model change or final-art acceptance."
+  ]
+}
