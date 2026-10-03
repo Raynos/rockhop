@@ -381,3 +381,30 @@ diagnostic geometry proposals, not approved contact points, fit or support.
 Current sole IK targets ankle origins without subtracting sole offset; this
 gap remains open. No collision-response/seat-support/mobile acceptance or
 normal-player asset promotion. Root judges played evidence.
+
+### Round 26 — consumed live sleeve response exceeds the timing budget
+
+Finding: A private Rapier0.21 world consumes actual live canonical arm
+colliders and self contacts to move sleeve geometry. It retains288particles,
+528triangles and552native rest edges (max99.6nm length error),24hard pins,
+24half-weight bounded spring anchors and persistent120Hz history. Actual
+spawn local preflight is8.0115mm normal/8.9563mm unsigned. All562weighted
+arm vertices match the visible sourcebody within.000091mm. The normal Game,
+physical-body51pose and live bike remain unchanged.
+
+Validation: Matched463inputtick OFF/ON start positions are exact. OFF
+local-normal proxy reaches−37.033mm; ON stays≥7.921mm. Maximum paired
+particle difference398.540mm. Repeated ON hashes match every463frame;
+independent production Game verifies all1389physics trace ticks. Both
+48frame12fps films play silently without errors/audio; scoped lint passes.
+ON solver+geometry p50/p95=11/15ms versus OFF1/1ms: FAIL120Hz performance.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/sleeve26/
+
+Limits: Unaccepted local mechanism/cost checkpoint. Body collider is an
+open1066triangle region; local samples are not complete triangle/self
+intersection or volume safety. Body soft radius remains the first Rapier
+default; cloth radius/skin are explicit1mm, so no native-gap parity claim.
+Single band has no inter-garment partner. No physical phone/memory/deploy or
+wearable qualification. Root separately accepted native34cba750 as useful
+mechanism proof, with cuff gape/retraction, pin folds and.346mm floor still
+open. Engine moving review and bounded cost reduction are next.

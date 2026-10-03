@@ -1,0 +1,44 @@
+{
+  "status": "UNACCEPTED_CONSUMED_LIVE_COLLISION_RESPONSE_COST_FAILS_120HZ",
+  "maximumOnOffParticleDifferenceM": 0.39854013213917927,
+  "initialExact": true,
+  "repeatAll463ParticleFrameHashesExact": true,
+  "solverCostMs": {
+    "off": {
+      "p50": 1,
+      "p95": 1,
+      "max": 5,
+      "sum": 303
+    },
+    "on": {
+      "p50": 11,
+      "p95": 15,
+      "max": 23,
+      "sum": 5003
+    },
+    "on-repeat": {
+      "p50": 11,
+      "p95": 15,
+      "max": 23,
+      "sum": 5098
+    }
+  },
+  "localNormalProxyMinimumM": {
+    "off": -0.03703304155943435,
+    "on": 0.00792056900094258,
+    "on-repeat": 0.00792056900094258
+  },
+  "bodyRenderedAncestryMaximumResidualM": 9.079902317974184e-08,
+  "nativeRootReview": {
+    "decision": "Useful actual native collision mechanism proof, not garment acceptance",
+    "open": "cuff gape/hang .5..1.375s, cuff retreat by2s, broad pin folds, measured.346mm floor below1mm",
+    "layout": "Sequential49front then49rear; frontskin/OFF/ON, rearON/OFF/skin"
+  },
+  "limits": [
+    "No active inter-garment partner; explicit self/body response is enabled and consumed by new soft world.",
+    "Body soft-particle radius remains Rapier default in this first unit; cloth radius1mm and collider skin1mm are explicit. No reproduced Blender gap claim.",
+    "All solver/native/source limits remain. WebKit timing is on shared Mac, not physical iPhone. WASM/JS memory unmeasured.",
+    "Full triangle/self contact preflight and continuous collision safety remain unmeasured;816sample local distances are finite proxies.",
+    "No normal player promotion or deployment; performance is not adequate for120Hz."
+  ]
+}
