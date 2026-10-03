@@ -948,3 +948,18 @@ Limits: Actual operator replay plus synthetic inactive1GiB, not full
 model/workspace allocation trace. Does not establish that paint04's19.2GB
 driver-minus-active difference is entirely reclaimable. Next real recipe
 must record before/after release and keep active counts/quality/guard fixed.
+
+Finding: Paint can release only unused process-local MPS cache at verified
+conditioning/operator boundaries while asserting active allocations fixed.
+
+Validation: AST passes; b83699e5 actual fullQKV replay proves activebytes
+and nativeoutputs identical after1GiB cache release. Recipe synchronizes
+before measuring, records before/after driver+active bytes and each reason,
+and asserts activeallocationunchanged. Applied only to owned value-column
+mode, after components/conditioning captures and before attention; native
+math/quality/9input-noise pins and sharedguardlimits unchanged.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint before paint05. MPSGraph/framework
+allocations may remain unreclaimable; actualdriver release must be measured.
+No fullpipeline memory/texture success, foreigncache eviction or guard raise.

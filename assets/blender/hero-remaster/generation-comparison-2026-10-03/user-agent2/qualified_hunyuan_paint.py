@@ -89,6 +89,23 @@ def main():
     torch.Tensor.to = safe_to
     torch.set_num_threads(4)
     assert torch.backends.mps.is_available()
+    def release_inactive_cache(reason):
+        if not args.value_columns:
+            return
+        torch.mps.synchronize()
+        before = {'allocatedBytes': torch.mps.current_allocated_memory(),
+                  'driverBytes': torch.mps.driver_allocated_memory()}
+        if before['driverBytes'] - before['allocatedBytes'] < 1024 ** 3:
+            return
+        torch.mps.empty_cache()
+        after = {'allocatedBytes': torch.mps.current_allocated_memory(),
+                 'driverBytes': torch.mps.driver_allocated_memory()}
+        assert before['allocatedBytes'] == after['allocatedBytes'], 'Cache release changed active tensor allocation'
+        report.setdefault('inactiveCacheReleases', []).append({
+            'reason': reason, 'before': before, 'after': after,
+            'driverReleasedBytes': before['driverBytes'] - after['driverBytes'],
+            'activeAllocationUnchanged': True, 'elapsedSeconds': time.monotonic() - started})
+        save()
     from paint_geometry_getter import preserve_getter_state
     import textureGenPipeline as paint_module
     assert sha(inspect.getfile(paint_module.Hunyuan3DPaintPipeline)) == '174951ccd0cc79bad985756b009fcb832026b3410cda1f00897ea3eb2c444610'
@@ -143,6 +160,7 @@ def main():
                   actualConfig={'resolution': config.resolution, 'render': painter.render.default_resolution,
                                 'texture': painter.render.texture_size, 'maxViews': config.max_selected_view_num})
     save()
+    release_inactive_cache('loaded verified components')
     captures = {}
     def capture(name, value):
         number = captures.get(name, 0)
@@ -174,6 +192,7 @@ def main():
             assert identical, 'Actual prior condition/noise differs; stop before interpreting attention retry'
         save()
         assert all(np.isfinite(v).all() for v in arrays.values()), 'Invalid actual conditioning/noise'
+        release_inactive_cache('captured ' + label)
     for name in ('prepare_latents', 'encode_images'):
         original = getattr(pipeline, name)
         def wrapped(*positional, _name=name, _original=original, **keywords):
@@ -262,6 +281,7 @@ def main():
                 report['mpsBeforeAttention'] = {'allocatedBytes': torch.mps.current_allocated_memory(),
                                               'driverBytes': torch.mps.driver_allocated_memory()}
                 save()  # Persist the stopping layer before its allocation, not only on success.
+                release_inactive_cache('before attention ' + descriptor)
                 first = route not in validated_routes
                 if first:
                     capture('actual-first-' + ('value-column' if split else 'native') + '-attention-inputs',
