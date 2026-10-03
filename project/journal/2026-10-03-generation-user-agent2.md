@@ -874,3 +874,23 @@ Limits: Mismatched CPU/MPS weight/input precision; cause not established.
 No MPS qualification, full learned activations, long-token execution or
 model retry. Correct control to compare identical quantized weights/inputs
 and independent actual QKV before interpreting adapter/backend accuracy.
+
+Finding: Matched-input V-column controls preserve installed reference
+processor output order and full eight-view token layout within thresholds.
+
+Validation: Guard0/2.636s, peak45.4combinedGiB, no model runs. Identical
+quantized CPU/MPS projection state bytes verified; random fixture weights,
+not loaded learned weights. Whole processor maxCPU/MPS errors2.38e-7/
+0.001953125; actualMPS QKV independentCPU error0.00024414.768view RMS1/4
+selected errors3.05e-5/0.0004883. Full[3,5,73728,64]Q/[3,5,9216,128]V
+retains allkeys/views,0.1048s, selectedCPU error6.10e-5, allfinite.
+No threshold widening. Agent3 fresh runtime24 low/high normal gates pass
+4810ticks/exactfinish bytes/hash, crash103, restarttick0 in1/2ms; current
+package/lock/physics/GltfRider SHA pins match, other player sources unchanged.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/value-column-control02/
+Ask:284–286.
+
+Limits: Synthetic activation/random projection controls, not learned
+full-UNet or CUDA parity. Prior entry's projection fixture names installed
+processor structure, not loaded trained coefficients. Actual bounded paint
+must capture real layer/QKV/stride and validate both native/split routes.

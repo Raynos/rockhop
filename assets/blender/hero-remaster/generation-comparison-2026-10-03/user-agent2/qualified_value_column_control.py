@@ -52,7 +52,7 @@ def main():
               'prefillDisableEnv': os.environ.get('PYTORCH_MPS_DISABLE_PREFILL_ATTENTION'),
               'recipeSHA256': sha(__file__), 'adapterSHA256': sha(Path(__file__).with_name('value_column_attention.py')),
               'processorSHA256': sha(SOURCE), 'cases': [],
-              'limits': ['Synthetic activations, no full learned UNet or CUDA parity.',
+              'limits': ['Random projection weights and synthetic activations, no learned checkpoint/UNet or CUDA parity.',
                          'Complete Q/K retained; only independent V columns decomposed.',
                          'No original unequal-width large MPS call: dense fallback exceeds the fixed guard.',
                          'No blind stock slicing, trained processor replacement, key or view truncation.']}
@@ -72,15 +72,22 @@ def main():
     attn.eval()
     q = torch.randn(2, 37, 320)
     context = torch.randn(2, 19, 320)
-    owner.F = types.SimpleNamespace(scaled_dot_product_attention=independent_attention)
-    with torch.inference_mode():
-        expected = attn(q, encoder_hidden_states=context)
     for device, dtype in [('cpu', torch.float32), ('mps', torch.float16)]:
+        # Baseline uses the identical quantized inputs/projection weights and
+        # independent FP64 attention, including normal per-layer dtype casts.
+        baseline = copy.deepcopy(attn).to(device='cpu', dtype=dtype)
+        owner.F = types.SimpleNamespace(scaled_dot_product_attention=independent_attention)
+        with torch.inference_mode():
+            expected = baseline(q.to(dtype=dtype), encoder_hidden_states=context.to(dtype=dtype)).float()
         local = copy.deepcopy(attn).to(device=device, dtype=dtype)
         descriptors = []
         def split_sdpa(query, key, value, **kwargs):
-            descriptors.append({'query': tensor_info(query), 'key': tensor_info(key), 'value': tensor_info(value)})
-            return value_column_attention(query, key, value, **kwargs)
+            descriptor = {'query': tensor_info(query), 'key': tensor_info(key), 'value': tensor_info(value)}
+            independent = independent_attention(query.cpu(), key.cpu(), value.cpu(), **kwargs)
+            result = value_column_attention(query, key, value, **kwargs)
+            descriptor['actualQKVIndependentCPUError'] = float((result.cpu().float() - independent.float()).abs().max())
+            descriptors.append(descriptor)
+            return result
         owner.F = types.SimpleNamespace(scaled_dot_product_attention=split_sdpa)
         report['phase'] = 'full installed reference processor ' + device
         save()
@@ -90,13 +97,18 @@ def main():
         material_difference = float((result[:, 0] - result[:, 1]).abs().max())
         entry = {'name': 'installedRefProcessor-' + device, 'QKV': descriptors,
                  'maxIndependentCPUError': error, 'finite': bool(torch.isfinite(result).all()),
-                 'materialOutputDifference': material_difference, 'outputShape': list(result.shape)}
+                 'materialOutputDifference': material_difference, 'outputShape': list(result.shape),
+                 'baselineDtype': str(dtype), 'projectionWeightsQuantizationMatched': True,
+                 'cpuAndMPSWeightCBytesIdentical': all(torch.equal(value.cpu(), baseline.state_dict()[key])
+                                                      for key, value in local.state_dict().items())}
         report['cases'].append(entry)
         save()
         assert entry['finite'] and error <= (.000002 if device == 'cpu' else .002)
+        assert entry['cpuAndMPSWeightCBytesIdentical']
+        assert all(d['actualQKVIndependentCPUError'] <= .002 for d in descriptors)
         assert result.shape == (2, 2, 37, 320) and material_difference > .01
-        del local, result
-    del attn, expected, q, context
+        del local, result, baseline, expected
+    del attn, q, context
     torch.mps.empty_cache()
     # Transposed head layout matches the actual processor's Q/K reshape.
     for name, batch, heads, nq, nk, amplitude in [('view768', 1, 1, 9216, 9216, 1.),
