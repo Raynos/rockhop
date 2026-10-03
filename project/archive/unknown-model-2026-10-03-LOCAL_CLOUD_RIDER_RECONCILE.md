@@ -1,3 +1,10 @@
+**Retired: 2026-10-03 by ask259; superseded, not completed.**
+Successor: [RIDER_BASELINE_TO_SHIP](../../docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md).
+Provenance revision: `ca14debb882f2dba49249297e8629e4e32368783` (original content before retirement).
+Unpassed appearance, construction, motion, contact and device gates remain open.
+
+---
+
 # Local and cloud rider reconciliation
 
 Created: 2026-10-03. Writer model provenance unavailable in this delegated

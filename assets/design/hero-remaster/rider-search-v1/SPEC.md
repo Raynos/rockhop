@@ -2,7 +2,7 @@
 
 Status: active — asks 218–220, 225–228; rider only. Bike art is out of this session.
 
-Execution authority: [RIDER_THREE_CHECKPOINTS](../../../../docs/plans/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
+Execution authority: [RIDER_THREE_CHECKPOINTS](../../../../project/archive/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
 Its bounds, two-failed-fix rule, explicit rig mapping, physical lean/landing/
 contact matrix and additional Pixal3D/Hunyuan3D 2.1 lanes govern this specification.
 

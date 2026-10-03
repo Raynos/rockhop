@@ -16,7 +16,7 @@ crash/one-tick restart pass. Node/browser finish-time bytes are identical.
 
 Limits: host WebKit is not a sustained physical-phone performance pass or a
 stranger judgment. The other four rider geometries are existing assets; Race
-remaster and final visual acceptance remain open. [Plan](../../docs/plans/sol-6.1-2026-09-30-HERO_REMASTER.md)
+remaster and final visual acceptance remain open. [Plan](../archive/sol-6.1-2026-09-30-HERO_REMASTER.md)
 and asks195–197/201–203 retain those distinctions.
 
 ## Main integration and production plan

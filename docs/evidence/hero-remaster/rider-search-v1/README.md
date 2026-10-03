@@ -1,7 +1,7 @@
 # Rider search checkpoint 1
 
 Status: unaccepted raw body search, 2026-09-30. Authority:
-[RIDER_THREE_CHECKPOINTS](../../../plans/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
+[RIDER_THREE_CHECKPOINTS](../../../../project/archive/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
 
 Five frozen input PNGs passed through Hunyuan3D and TRELLIS.2 unchanged.
 All ten native archives, painted working GLBs and reduced GLBs generated

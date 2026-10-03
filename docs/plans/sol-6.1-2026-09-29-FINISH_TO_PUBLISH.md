@@ -8,6 +8,8 @@ The [twelve-course execution plan](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md)
 and [retired session record](../../project/archive/sol-6-2026-09-28-REMASTER_CURRENT_ROUND.md) preserve earlier findings. The parent owns status and final judgment.
 No estimate or passing bot result declares the game finished. Archive this plan only after all six gates and verified public launch.
 
+Current rider execution: [one baseline rider to ship](sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md); retired hero/rider methods do not close presentation or device gates.
+
 ## Product and decisions
 
 - One landscape game, released on **iOS and Android together**, with desktop and iOS Safari web play.

@@ -1,6 +1,6 @@
 # Hero remaster — round 1 concept choice
 
-Ask 191 · 2026-09-30 · [implementation plan](../../../../docs/plans/sol-6.1-2026-09-30-HERO_REMASTER.md).
+Ask 191 · 2026-09-30 · [implementation plan](../../../../project/archive/sol-6.1-2026-09-30-HERO_REMASTER.md).
 
 The rider and bike must read as one complete, convincing hero in the existing dusk Garage. Keep five outfits and two bike classes, human-scale anatomy, a lightweight trials-machine silhouette and grounded mechanical/contact detail. The tools contribute different things: Hunyuan3D/TRELLIS generate static candidates, Blender produces the final mesh/material/rig, and UniMate supplies offline motion candidates. They are one workflow, not three rival product features.
 

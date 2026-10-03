@@ -1,7 +1,7 @@
 # Frozen rider search inputs
 
 Status: unaccepted checkpoint-1 references, 2026-09-30.
-Authority: [three-checkpoint plan](../../../../../docs/plans/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
+Authority: [three-checkpoint plan](../../../../../project/archive/sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md).
 
 refs/01–05.png are the five identical inputs for both installed local engines.
 They are native transparent imagegen outputs, not recut/repainted images.

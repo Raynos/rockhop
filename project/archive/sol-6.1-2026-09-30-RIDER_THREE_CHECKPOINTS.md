@@ -1,3 +1,10 @@
+**Retired: 2026-10-03 by ask259; superseded, not completed.**
+Successor: [RIDER_BASELINE_TO_SHIP](../../docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md).
+Provenance revision: `ca14debb882f2dba49249297e8629e4e32368783` (original content before retirement).
+Unpassed appearance, construction, motion, contact and device gates remain open.
+
+---
+
 # Rider remaster — three visual checkpoints
 
 Status: **paused at the user-requested exit checkpoint — unfinished structural repair; three visual checkpoints and continuous exported poses remain open**.
@@ -5,8 +12,8 @@ Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
 release obligations. Its previous rider execution method is superseded here.
-Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
-Bar: [mission §3–4](../mission.md): a readable person, credible contacts,
+Release authority: [FINISH_TO_PUBLISH](../../docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
+Bar: [mission §3–4](../../docs/mission.md): a readable person, credible contacts,
 physics-driven weight shift and bounded phone cost.
 
 ## Exit checkpoint and exact resume order — round216
@@ -101,7 +108,7 @@ remain independent failures. Record fixture coverage and unmeasured checks plain
 
 Independent findings establish a rest chest bulge, four shoulder-insert crossings
 and major underarm stretch with both tested weight sets. C19 helps hips but still
-fails broader arms. See [consolidated findings](../evidence/hero-remaster/one-rider-v2/independent-pipeline-learnings-2026-10-01/README.md).
+fails broader arms. See [consolidated findings](../../docs/evidence/hero-remaster/one-rider-v2/independent-pipeline-learnings-2026-10-01/README.md).
 Task-3 owns `/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02`.
 Inspect its frozen artifacts/receipts read-only before duplicating work; keep our
 source/evidence/temporary paths separate, with this parent as sole integration
@@ -1343,8 +1350,8 @@ Mandatoryship177 passes a fresh ordinary build with no model replacement/private
 overlay: both tiers exact finish/hash, crash103ticks, restart2/2ms, zero errors.
 12.23s/33.222GBanonymous under canonical lock/bounds. Nextmandatoryship180.
 Review8 remains live with the rejected matched clip; no new character accepted.
-See [failure accounting](../evidence/hero-remaster/one-rider-v2/construction-bounds177/README.md)
-and [new construction specification](../evidence/hero-remaster/one-rider-v2/clean-upper-shell01/SPEC.md).
+See [failure accounting](../../docs/evidence/hero-remaster/one-rider-v2/construction-bounds177/README.md)
+and [new construction specification](../../docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/SPEC.md).
 
 ### Rejected motion review delivery — round176
 
@@ -1376,7 +1383,7 @@ Keep sole construction ownership separate. Inspect the owner's next literal
 rest and matched standing qualification before a verified four-weight carrier
 export and short continuous Three gate. Five-influence NPZs are not silently
 truncated into stock-four assets. No routine human hold; cosmetics stay paused.
-See [construction snapshot](../evidence/hero-remaster/one-rider-v2/construction-receipt175/README.md).
+See [construction snapshot](../../docs/evidence/hero-remaster/one-rider-v2/construction-receipt175/README.md).
 
 ### Authored skin integration contract — round174
 
@@ -1408,7 +1415,7 @@ responding-material approach needs explicit post-bone position/normal updates,
 continuous driver-aware validation and measured runtime cost; ordinary LBS cannot
 silently represent it. Cosmetic work stays paused. Basic-pose, appearance,
 Garage, riding/contact and mobile gates remain open. Next mandatory ship177.
-See [loader evidence](../evidence/hero-remaster/one-rider-v2/conditioning174/README.md).
+See [loader evidence](../../docs/evidence/hero-remaster/one-rider-v2/conditioning174/README.md).
 
 ### Previous moving construction rejection
 
@@ -1421,7 +1428,7 @@ ordered neighborhoods show flat/rigid underarm cap and insert-like shoulder
 silhouette; no clean rest count or bind/matrix check can override those failures.
 Known06UV defects remain; latest07/next sleeve curve are separate, not silently
 substituted. Scope is partial visual rejection, not all-frame/full5404acceptance.
-See [moving evidence](../evidence/hero-remaster/one-rider-v2/tube-motion173/README.md).
+See [moving evidence](../../docs/evidence/hero-remaster/one-rider-v2/tube-motion173/README.md).
 
 Round172 delivers a real skinned frozen06 protocol source, not a static Blender
 snapshot. Original19bind/nodes/head/gloves/cheek/PBR/images/animations are exact;
@@ -1430,7 +1437,7 @@ New garment auxiliary and grip-normal fields have explicit authored definitions,
 not a lossless-all-fields claim. Protected glove material usesUV1 and stays
 untouched; only changed garment materials consumeUV0. Parent independent raw/
 array audit passes; float64→float32 rounding is explicit. No moving/quality pass.
-See [export evidence](../evidence/hero-remaster/one-rider-v2/candidate-export172/README.md).
+See [export evidence](../../docs/evidence/hero-remaster/one-rider-v2/candidate-export172/README.md).
 
 Next: inspect task3next rest-valid sleeve curve/source, then the same short
 continuous Three transition. Preserve head/identity/physics and explicit adapter.
@@ -1462,7 +1469,7 @@ Silent local and hosted WebKit390/1200px controls pass16windows each, keyboard,
 full reset and native scrub escape. This makes moving failures easier to review;
 it does not pass character quality, complete pose motion or physical iOS.
 Review version7 preserves the existing custom audience policy revision1.
-See [delivery evidence](../evidence/hero-remaster/one-rider-v2/gallery171/README.md).
+See [delivery evidence](../../docs/evidence/hero-remaster/one-rider-v2/gallery171/README.md).
 
 Mandatory ship171 retained functional control passed both tiers: exact40.0833s
 finish/hash, crash103ticks, restart2/2ms, no errors. Next mandatoryship174.
@@ -1476,7 +1483,7 @@ diagnostics before duplicating any repair. Same geometry passes tested neutral
 crossings, but both fresh added-fabric weight sets fail actual source34frame304:
 1,556crossings,388collapsed new-fabric faces,9.868×stretch. The posed shoulder
 join is visibly open/folded. Fifteen source/receipt hashes pinned in
-[construction review](../evidence/hero-remaster/one-rider-v2/construction-review169/README.md).
+[construction review](../../docs/evidence/hero-remaster/one-rider-v2/construction-review169/README.md).
 This is a rejected diagnostic, not acceptance based on standing screenshots.
 
 Stop static added-fabric weight tuning of this failed annulus as a finished
@@ -1501,7 +1508,7 @@ Source checkpoints can land as unaccepted; promotion needs all gates below.
 A1/original has stronger legs and overall pose. A2/current has useful face,
 hair, hoodie and denim details but worse knees, feet and hands. Neither is a
 finished target. Preserve both and the rejected fresh Blender bodies as
-[comparison controls](../evidence/hero-remaster/rider-selection/README.md).
+[comparison controls](../../docs/evidence/hero-remaster/rider-selection/README.md).
 Ask240 clarifies the finished rider should be white, matching the approved
 reference face. The current native assembly is the user's best-so-far progress
 comparison; preserve its improved proportions and clothing while fixing the
@@ -1620,13 +1627,13 @@ another chat. No recurring job is created by this plan.
 
 The parent must compare actual Blender/exported/in-game output against the
 approved mockups, with full-body and face-closeup scores independently at
-least7/10 and target8/10. Follow the [matched visual rubric](../evidence/hero-remaster/one-rider-v2/assembly-audit/visual-rubric.md).
+least7/10 and target8/10. Follow the [matched visual rubric](../../docs/evidence/hero-remaster/one-rider-v2/assembly-audit/visual-rubric.md).
 A low face cannot be averaged into a body pass. Below7 in either, autonomously
 generate a new component or sculpt/retopologize/edit, preserving source assets,
 comparison IDs and five/fifteen failure counts. Unmatched diagnostic views
 cannot accept a gate. Missing nine-angle, gray or moving evidence is unpassed.
 
-The [primary-source assembly audit](../evidence/hero-remaster/one-rider-v2/assembly-audit/README.md)
+The [primary-source assembly audit](../../docs/evidence/hero-remaster/one-rider-v2/assembly-audit/README.md)
 selects continuous NEW head/neck/clavicle skin under a separate garment as the
 next architecture to test. Exposed skin joins need continuous topology and
 matched UVs/normals/weights; skin need not be welded to clothing. A concealed
@@ -1644,7 +1651,7 @@ with direction approved in asks233–234. Autonomous execution and visual
 decisions are authorized; preserve failure bounds and report actual evidence.
 Historical production A1/A2 are comparison-only, never a head/body donor.
 
-[Approval package](../evidence/hero-remaster/one-rider-v2/README.md) provides three
+[Approval package](../../docs/evidence/hero-remaster/one-rider-v2/README.md) provides three
 same-identity hairstyle mockups (buzz, short crop, swept back), matched PBR/gray
 front/profile/rear/three-quarter donor renders and the proposed join method.
 Compact hair is a testable hypothesis; it does not establish clean topology.
@@ -1688,7 +1695,7 @@ Native collar trial01 retains jagged protrusions and wrong face materials.
 Trial02 removes585 fixed local faces but leaves two branched boundary vertices;
 no second joined output exists. Those failures remain frozen. Asks237–238 remove
 the approval hold and authorize autonomous approach changes and bounded batches.
-The [manual collar-panel alternative](../evidence/hero-remaster/one-rider-v2/neck-native/manual-panel-choice.md)
+The [manual collar-panel alternative](../../docs/evidence/hero-remaster/one-rider-v2/neck-native/manual-panel-choice.md)
 is available for autonomous selection alongside materially different Blender
 lanes. Earlier two-failure stop labels and90/12-minute trial deadlines describe
 completed experiments, not current permission requirements. Original MODEL
@@ -1909,21 +1916,21 @@ updating asks/index before the next experiment. No scheduling or deployment.
 - [x] Five front references and five nine-angle targets generated locally.
 - [x] Freeze/hash inputs and inspect board consistency limitations.
 - [x] Ten Hunyuan/TRELLIS bodies and five additive Pixal3D bodies compared.
-  [Fifteen-body gallery](../evidence/hero-remaster/rider-search-v1/review/README.md):
+  [Fifteen-body gallery](../../docs/evidence/hero-remaster/rider-search-v1/review/README.md):
   45 boards/15 full orbits; P3 preliminary recommendation, unaccepted.
-- Current defects/counts: [ledger](../evidence/hero-remaster/rider-search-v1/defect-ledger.json).
+- Current defects/counts: [ledger](../../docs/evidence/hero-remaster/rider-search-v1/defect-ledger.json).
   T1 export correction 1 partly improves tearing but fails body quality;
   P3 repair 1 failed its face-budget check before baking; repair 2 completes
-  export but loses major body surfaces. [Baseline and both failures](../evidence/hero-remaster/rider-search-v1/variants/pixal03-repair2/README.md)
+  export but loses major body surfaces. [Baseline and both failures](../../docs/evidence/hero-remaster/rider-search-v1/variants/pixal03-repair2/README.md)
   are preserved. This historical P3 route was superseded by ask232's H21-4/new
   head direction. No automated P3 repair is resumed; its failures remain
   comparison evidence, not an outstanding human choice. Current refinement
   follows the autonomous policy and keeps source history intact.
-- [Matched gameplay inputs](../evidence/hero-remaster/rider-search-v1/gameplay-inputs/README.md)
+- [Matched gameplay inputs](../../docs/evidence/hero-remaster/rider-search-v1/gameplay-inputs/README.md)
   are prepared and independently repeated for12 cases across both bikes.
   Visible contact/rig/capture acceptance remains unmeasured. This preparation
   does not advance either later visual gate.
-- [x] Additive Hunyuan3D 2.1 five-design comparison (ask228): [twenty-body gallery](../evidence/hero-remaster/rider-search-v1/hunyuan21/README.md); H21-4 strongest new option, unaccepted. Explicit scene-axis display derivative and one failed setup fix recorded.
+- [x] Additive Hunyuan3D 2.1 five-design comparison (ask228): [twenty-body gallery](../../docs/evidence/hero-remaster/rider-search-v1/hunyuan21/README.md); H21-4 strongest new option, unaccepted. Explicit scene-axis display derivative and one failed setup fix recorded.
 - [x] Ask232 three compact-hair concepts and five-donor matched PBR/gray review.
 - [x] Ask232 direction approved in asks233–234 before substantial work.
 - [ ] Actual coherent new head/body with hood-preserving join and complete review.
@@ -2989,7 +2996,7 @@ arm controls read-only and adds authored planted-foot squat/sit/lean controls.
 Twelve bilateral families,1,164 samples, exact neutral endpoints and explicit
 19bone mapping run through stock Three.js on mappedV5. 25,352 body/hood vertices
 remain finite; world/local parity1.333e-15 and limb lengths preserved. See
-[basic-pose evidence](../evidence/hero-remaster/one-rider-v2/basic-pose-gate158/README.md).
+[basic-pose evidence](../../docs/evidence/hero-remaster/one-rider-v2/basic-pose-gate158/README.md).
 
 V5 is still unaccepted: collapse witnesses include overhead260,elbow103,
 squat256,sit255 faces. Gray/PBR moving review, unilateral and unseen halfsteps,
@@ -3024,7 +3031,7 @@ next; all appearance/deployment gates stay open.
 The same V5 export now has1,164actual stock WebGL frames/24fps/48.5seconds,
 matched front/side/back original-PBR and neutral-gray panels. Browser source SHA
 and19world matrices are pinned. See
-[moving gate](../evidence/hero-remaster/one-rider-v2/basic-pose-gate160/README.md).
+[moving gate](../../docs/evidence/hero-remaster/one-rider-v2/basic-pose-gate160/README.md).
 First capture clipped overhead hands; rejected source/movie retained. Wider
 optics preserve every matrix. Parent ordered overhead/sit windows still show
 protruding/folded shoulder cloth. Lower stress crouch is not accepted sitting.

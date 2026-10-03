@@ -33,3 +33,5 @@ Contents
 - `PWA_OFFLINE.md` — offline PWA plan, closed 2026-09-21 at tag `pwa-offline-complete`: origin-down headless gate proved an offline B1 finish, and the user confirmed the PWA works offline on the actual phone.
 - `WORLD_MAP.md` — painted continent level select, closed 2026-09-21 on the user's acceptance (ask 71), pinned to the last framing fix `411697e`; actual iPhone gesture performance remains unmeasured by the user's closure choice.
 - `HERO_ART_INTEGRATION.md` — catalog rider, bike and garage, closed 2026-09-21 on the user's acceptance (ask 71), pinned to `v0.3.0`; the measured phone-high gap moved to `docs/plans/sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md`, and actual iPhone garage fps remains unmeasured.
+
+- `sol-6.1-2026-09-30-HERO_REMASTER.md`, `sol-6.1-2026-09-30-RIDER_THREE_CHECKPOINTS.md` and `unknown-model-2026-10-03-LOCAL_CLOUD_RIDER_RECONCILE.md` — user-retired by ask259 on 2026-10-03; successor `docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md`. Superseded methods, not passed product gates; source/failure evidence and original provenance retained.
