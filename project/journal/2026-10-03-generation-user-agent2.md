@@ -164,3 +164,16 @@ Ask:276.
 
 Limits: UNACCEPTED source checkpoint; moving gray/PBR review pending. No
 opening/fit/rig or bodyreplacement pass. Foreign lock66629 preserved; no kills.
+
+Finding: Actual hoodie appearance sampling supports every219372 native vertex;
+132820 have partial sparse support, retained explicitly. Native base colour
+range is narrow and roughness .971–.975; no detailed target PBR is claimed.
+
+Validation: CPU derivation0.39s; all native sidecar/array hashes match and native
+archive68bbd4f3 unchanged. Derived2ce0b688 has0unsupported vertices, all six
+channels preserved; no model/GPU/dense volume or geometry mutation.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/sampling.json
+Ask:276.
+
+Limits: Derived per-vertex sampling, not exact UV texture bake or appearance
+acceptance. Sparse-support witness retained; gray/PBR moving review pending.
