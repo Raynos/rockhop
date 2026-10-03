@@ -36,3 +36,12 @@ Validation: Transparent-film512square input has alpha0..255,229651zero and
 30762opaque pixels; source/frozen contract unchanged; exact receipt sentAgent2.
 Limits: Experimental donor input only; no wearable/art/motion acceptance.
 Evidence: [alpha amendment](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/fitting01-alpha/README.md). Ask274.
+
+Finding: Full-native and normalized-four controls retain garment contact/self
+witnesses; eliminating export mismatch cannot declare construction accepted.
+Validation: Read-only native clip133frames/12fps/11.0833s, eight simultaneously
+played instances; source/driver/export/frame hashes pinned.46surface samples
+find full/four max306/304cloth-body and107/107nonadjacent selfpairs. No audio.
+Limits: Local nearest-normal is not global penetration; synthetic FK is not
+bike support. Root alone judges; native Library upload capability unavailable.
+Evidence: [played review](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/review/README.md). Ask274.
