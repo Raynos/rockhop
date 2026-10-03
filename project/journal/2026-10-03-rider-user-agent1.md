@@ -403,3 +403,11 @@ Finding: Correct anatomical arm rotation and torsohem exclusion reduce registere
 Validation: Exactsource02b644e217…/PBR/canonicalbody/51bind remaincontrols; prior03wrongframe recipe+diagnosis frozen exact. Recovery uses immutable registration stream, unchangedsource topology+eightcaps; alltopologicalcounts0 stillfailmechanically. Source/candidate/recipe pins and syntax/diff/hooks pass.
 
 Limits: Neither Boolean operand is qualified by manifold-edge counts. Structuralquad cage may support explicit donor-shape/PBR reconstruction with real openings/bodyclearance, never another plainshirt substitute. No garmentweight/game/mobile/movingart acceptance or playerpromotion; no further generated-volume Boolean sweep. M0–M5/root sole judgment retained.
+
+### Round47 — selected-donor sewn topology rejects pointwise fitting, 2026-10-03
+
+Finding: Clean sewn topology reconstructs selected high-poly exterior and actualPBR/newUV, with new20-column12-ring sharedneck hood/one subdivision:5870v/11552tri and four40cuff/40neck/72hem openings. Pointwise donor rays/nearestfallback plus static8mm body adjustment collapses/folds surface:4204body/16381self,417of1937coverage misses. Rejectfit; next connected deformation/seed qualification, no Boolean sweep/plainshirt substitute.
+
+Validation: Native/sourcecorrespondence/texture pins fixed;724donor fallbackvertices/maxfit47.763mm explicit. Independent counts exact/localnormalgap min−45.665mm. All18existingmesh fields inclheadnormals/16nodegraphs/14sourceimages/51bind+pose exact. First reportindex-table error repaired before any native save by explicitlookup/index initialization; no failed artifact overwritten. Syntax/diff/hooks pass.
+
+Limits: Actual topology openings and benchmarktriangle count alone accept no wear/UV/movingart/rig/game/mobile gate. Staticnormal adjustment is notwholefabricclearance/livecollision. Unrigged05withheldfrom Agent3skin/game handoff and Library; allcontrols/highpoly/body/head/bind retained, M0–M5/root sole judgment/no playerpromotion.
