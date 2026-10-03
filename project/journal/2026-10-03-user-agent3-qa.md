@@ -159,3 +159,16 @@ Limits: Historical authoring lint errors stay outside release checkout; cloud
 release lint passes. No deploy event/manual dispatch; live remains5a95196a.
 Later unpushed checkpoints intentionally excluded from the frozen publication.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/publication01.json
+
+Finding: Protected position/UV/image data survives appearance02, while cheek
+normals and source specular factors drift through the assembly export.
+Validation: All294 cheek normals differ, max87.6558degrees; exact cheek
+triangle winding/UV/positions. Head750rows differ>0.1degree, max24.6123.
+Complete51joint rest/hierarchy/inverse binds exact; eight GLTFLoader rest
+binds close within2µm. Garment basis/targets and seven non-boot meshes exact;
+all eight embedded images unchanged. Scoped type-aware lint passes. Shared
+ordinary gate compiled input Git objects remain identical to296da2fe.
+Limits: 161 head rows have ambiguous source position/UV matches. Source specular
+drift is not Garage highlight judgment; renderer flattens that extension.
+Native master preservation builder-reported; no new capture/contact or art pass.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/appearance02-fidelity-README.md

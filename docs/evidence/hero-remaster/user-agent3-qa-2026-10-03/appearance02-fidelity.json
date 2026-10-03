@@ -1,0 +1,1004 @@
+{
+  "status": "UNACCEPTED_APPEARANCE02_PROTECTED_NORMAL_MATERIAL_FIDELITY_DRIFT",
+  "pins": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb": {
+      "sha256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+      "bytes": 14007264
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/prototype.glb": {
+      "sha256": "4092f9aa62c01598888712e7cb879439d9bc8093a82effb2b60a9ec1be85193e",
+      "bytes": 1183032
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance01/rider.glb": {
+      "sha256": "63f90fb9b5c0e1c7d984f4132643475e27d169bfd4f04be6855dd4cb1d5eb891",
+      "bytes": 7409776
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance02/rider.glb": {
+      "sha256": "5de43580964163bcd5755864543a9a9ab11e32d68af69488e42294e590b8459f",
+      "bytes": 7409800
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance01/rider.blend": {
+      "sha256": "249bac21d30d468d15b0b59290d676ecfa3a9e3078ca62e55401cb2a6fa5c4a8",
+      "bytes": 8722527
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance02/rider.blend": {
+      "sha256": "5a4aa0bc6083cb83d3aa1d6b5464c062555f2ac4401c566b4384b7fcb01cb04b",
+      "bytes": 8721089
+    }
+  },
+  "decoderPins": {
+    "harness/hero-remaster/user-agent3-2026-10-03/appearance.mjs": "2d3145066ebc8fe9dc66d884ab93d7dac525a6f021fe4531c8fcf994e7293565",
+    "harness/hero-remaster/user-agent3-2026-10-03/metadata.mjs": "d74cea968f26891a5f8d5f90237c6afc19e91c1f1c06a64020e1166693c63e83",
+    "src/render/hero/gltfTestUtils.ts": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a"
+  },
+  "skin": {
+    "completeJointCount": 51,
+    "exactNamedHierarchyRestAndInverseBinds": true,
+    "rigSHA256": "f756c56198181eb916cf2c69fee746a0f94b48056dff5466d99a551377ab9a63",
+    "scopes": [
+      {
+        "mesh": "Canonical body with hidden head interface",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Separate fitted native trousers control",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Separate fitted sweatshirt control, hood not constructed",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Protected coherent cheek patch",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Protected mustard hood on own rig",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Protected textured head above hidden neck interface",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Registered black leather gloves on own finger bind",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      },
+      {
+        "mesh": "Registered boots from bounded foot accessory regions",
+        "owner": 60,
+        "ownerName": "Foundation file frame, game x0.65"
+      }
+    ]
+  },
+  "appearance01To02": {
+    "meshes": [
+      {
+        "mesh": "base.002",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "male_casualsuit02.004",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "male_casualsuit02.003",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "Protected coherent cheek patch",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "Protected mustard hood on own rig",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "Protected textured head above hidden neck interface",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "Registered black leather gloves on own finger bind",
+        "changedAttributes": [],
+        "unchangedIndexAndTargets": true
+      },
+      {
+        "mesh": "Registered boots from bounded foot accessory regions",
+        "changedAttributes": [
+          "POSITION",
+          "NORMAL",
+          "JOINTS_0",
+          "WEIGHTS_0"
+        ],
+        "unchangedIndexAndTargets": true
+      }
+    ],
+    "allEmbeddedImagesUnchanged": true,
+    "leatherMetallicFactor": 0
+  },
+  "garments": [
+    {
+      "mesh": "male_casualsuit02.004",
+      "signature": {
+        "attrs": {
+          "_SOURCE_ID": "cc0c805a42ef8a4f3c9f89ec030e36025aa83cc94ab361966b2908c1f1dd8b99",
+          "POSITION": "467cbf389562f40304089eb359b377a3c10a4587b1da64202d7ee877789535fb",
+          "NORMAL": "5e71aa14bc5645214f43d4f9c743ba479a04042147351e357cfe755a1316b94a",
+          "TEXCOORD_0": "f5cbaf306ececcbeb9c74f37ee10b7572aa251e45e2c687fa5dcb61993c65bdd",
+          "JOINTS_0": "921bedd67fc1fe3eaf2882bbed263f009c36d3c29e1b08ab6562ae7780d07a83",
+          "WEIGHTS_0": "e4a78f4d1aec17b95822f6df855d9a227171ad54aa79726dd1079e2e08d99f46"
+        },
+        "index": "48f9aa344413ed4526ed927269d7484777f486942a8ea6502cf03b706a1a8013",
+        "targets": [
+          {
+            "POSITION": "1c83f36b3b98d9924ad3ff3845931c5042e40bca1eeae8f07606ff4783d3f175",
+            "NORMAL": "548816696b6c362da04f21db735adc87d853e1d5f9e0eb63818c5b880301541d"
+          }
+        ]
+      }
+    },
+    {
+      "mesh": "male_casualsuit02.003",
+      "signature": {
+        "attrs": {
+          "_SOURCE_ID": "d51c8a181ee217058e233bb4bd6a023570578bcbbfc51c2f7b29e6b954a02324",
+          "POSITION": "4ccbff79dd26affbaa8b4dff839ee37c3989697f5dee207c9f2349814f9dda7e",
+          "NORMAL": "1e929637eed2fa442e4d608922a93eda7c93b8f27da2560b4f4c125cabb58ca0",
+          "TEXCOORD_0": "2a9357108efb39add5472920fb5eb2a644c88ea99cc7bf279ec2143108b8f550",
+          "JOINTS_0": "21aa2616a021b165a4698bd9149c9dabcb9345eb62ca2e62b9f524c00cb8c59f",
+          "WEIGHTS_0": "10f3dfa1d2ec91c203893b895ab206e80570e68a1f214a17dfbb02c7d72df6e8"
+        },
+        "index": "c38737768c452a841fefcdd981a0106a03cf0c2ee76b53e5382bb67c32db37d2",
+        "targets": [
+          {
+            "POSITION": "a372ef36aa785933529b54f883e99e458f5a525411fe5dec4a7dca9eb5342a16",
+            "NORMAL": "9896cea5ee8e307cc8271b1e85bba8acfd66f19bae11863e896f185a1ff912a7"
+          },
+          {
+            "POSITION": "e77263974da31105d2a3beea293c6859d7159c321613fe9b9c0b3b81a5556bee",
+            "NORMAL": "b1a66fdd6f02ae4609bdb5e4f4cca903e36de1977f3be113a32c256faf299068"
+          },
+          {
+            "POSITION": "c0b855121b75de576e4f1ba26ef7111800fb4d3973ca218fa57f46d0cc83334c",
+            "NORMAL": "549aacb7890b7459d3a9d49d4ca35febf5ef06e2bd337b5082d79a105343b84e"
+          }
+        ]
+      }
+    }
+  ],
+  "protectedParts": [
+    {
+      "mesh": "Protected textured head above hidden neck interface",
+      "vertices": 43707,
+      "sourceTriangles": 71826,
+      "sourceUsedIDsSHA256": "0a8df1638e1f55a480d1e447eea4aa78f4c51d57bf4642fca95e8d47d120d17b",
+      "maxPositionM": 5.960464477539063e-08,
+      "maxUVDifference": 0,
+      "ambiguousSourceMatches": 161,
+      "normalsChangedOverPointOneDegrees": 750,
+      "maximumNormalAngleDegrees": 24.612267007406043,
+      "oppositeHemisphereNormals": 0,
+      "triangleWinding": "Not certified: duplicate source-position/UV matches remain",
+      "witnesses": [
+        {
+          "sourceID": 53186,
+          "candidateRow": 37164,
+          "angleDegrees": 24.612267007406043,
+          "matches": 2,
+          "sourcePosition": [
+            0.6417941451072693,
+            1.6919320821762085,
+            -0.08744408935308456
+          ],
+          "sourceNormal": [
+            0.4973914325237274,
+            -0.8359857797622681,
+            0.23179616034030914
+          ],
+          "candidateNormal": [
+            0.09090172499418259,
+            -0.9601181745529175,
+            0.2644050419330597
+          ]
+        },
+        {
+          "sourceID": 53603,
+          "candidateRow": 37580,
+          "angleDegrees": 24.206600272350272,
+          "matches": 2,
+          "sourcePosition": [
+            0.7566096782684326,
+            1.6255552768707275,
+            0.019537873566150665
+          ],
+          "sourceNormal": [
+            0.7086048126220703,
+            -0.5917041301727295,
+            0.3844028115272522
+          ],
+          "candidateNormal": [
+            0.45488664507865906,
+            -0.8683745265007019,
+            0.19749420881271362
+          ]
+        },
+        {
+          "sourceID": 37066,
+          "candidateRow": 28528,
+          "angleDegrees": 23.079750609829325,
+          "matches": 2,
+          "sourcePosition": [
+            0.6609776020050049,
+            1.6365737915039062,
+            -0.06384138017892838
+          ],
+          "sourceNormal": [
+            -0.3589072823524475,
+            -0.931618869304657,
+            0.057201087474823
+          ],
+          "candidateNormal": [
+            -0.32119396328926086,
+            -0.8364842534065247,
+            0.44399163126945496
+          ]
+        },
+        {
+          "sourceID": 45787,
+          "candidateRow": 34435,
+          "angleDegrees": 22.87238890665295,
+          "matches": 2,
+          "sourcePosition": [
+            0.6558881998062134,
+            1.6599786281585693,
+            0.07822932302951813
+          ],
+          "sourceNormal": [
+            0.721899151802063,
+            0.59429931640625,
+            0.3544997572898865
+          ],
+          "candidateNormal": [
+            0.8906528353691101,
+            0.2370140552520752,
+            0.3880230188369751
+          ]
+        },
+        {
+          "sourceID": 46790,
+          "candidateRow": 35388,
+          "angleDegrees": 22.86996401049753,
+          "matches": 2,
+          "sourcePosition": [
+            0.744091808795929,
+            1.6864537000656128,
+            -0.03063148446381092
+          ],
+          "sourceNormal": [
+            -0.8765020370483398,
+            0.45850107073783875,
+            0.1467001587152481
+          ],
+          "candidateNormal": [
+            -0.6205175518989563,
+            0.7457210421562195,
+            0.24260684847831726
+          ]
+        }
+      ],
+      "comparisonFrame": "Decoded primitive attribute frame; historical donor root/game adapter is deliberately not reapplied."
+    },
+    {
+      "mesh": "Protected coherent cheek patch",
+      "vertices": 294,
+      "sourceTriangles": 429,
+      "sourceUsedIDsSHA256": "54714f80643dd241fee5787bf3ccf69b6011da0f103d7f04148c09d5ed94aaa2",
+      "maxPositionM": 0,
+      "maxUVDifference": 0,
+      "ambiguousSourceMatches": 0,
+      "normalsChangedOverPointOneDegrees": 294,
+      "maximumNormalAngleDegrees": 87.6557548700978,
+      "oppositeHemisphereNormals": 0,
+      "triangleWinding": "Exact source triangle multiset including orientation",
+      "witnesses": [
+        {
+          "sourceID": 288,
+          "candidateRow": 288,
+          "angleDegrees": 87.6557548700978,
+          "matches": 1,
+          "sourcePosition": [
+            0.7448925375938416,
+            1.671400785446167,
+            -0.0359199084341526
+          ],
+          "sourceNormal": [
+            -0.9072927236557007,
+            -0.22009821236133575,
+            0.3582969307899475
+          ],
+          "candidateNormal": [
+            -0.20429247617721558,
+            0.9608646035194397,
+            0.1870931088924408
+          ]
+        },
+        {
+          "sourceID": 173,
+          "candidateRow": 173,
+          "angleDegrees": 74.59949345357907,
+          "matches": 1,
+          "sourcePosition": [
+            0.7460078597068787,
+            1.6745153665542603,
+            -0.03768585994839668
+          ],
+          "sourceNormal": [
+            0.879240870475769,
+            0.35151633620262146,
+            -0.321514755487442
+          ],
+          "candidateNormal": [
+            0.019399767741560936,
+            0.9605884552001953,
+            0.27729666233062744
+          ]
+        },
+        {
+          "sourceID": 249,
+          "candidateRow": 249,
+          "angleDegrees": 51.14326978180604,
+          "matches": 1,
+          "sourcePosition": [
+            0.7445897459983826,
+            1.6716346740722656,
+            -0.03736962750554085
+          ],
+          "sourceNormal": [
+            -0.8871198892593384,
+            -0.32600730657577515,
+            0.326707124710083
+          ],
+          "candidateNormal": [
+            -0.7602606415748596,
+            0.5261727571487427,
+            0.38098031282424927
+          ]
+        },
+        {
+          "sourceID": 264,
+          "candidateRow": 264,
+          "angleDegrees": 43.88839965635863,
+          "matches": 1,
+          "sourcePosition": [
+            0.7467235326766968,
+            1.6466593742370605,
+            -0.035239897668361664
+          ],
+          "sourceNormal": [
+            -0.8802117705345154,
+            0.10550139099359512,
+            0.46270594000816345
+          ],
+          "candidateNormal": [
+            -0.6706053614616394,
+            -0.6107048988342285,
+            0.4211033582687378
+          ]
+        },
+        {
+          "sourceID": 95,
+          "candidateRow": 95,
+          "angleDegrees": 41.20082010983736,
+          "matches": 1,
+          "sourcePosition": [
+            0.7483074069023132,
+            1.667352557182312,
+            0.03496985882520676
+          ],
+          "sourceNormal": [
+            -0.9185698628425598,
+            -0.2582915425300598,
+            -0.29919037222862244
+          ],
+          "candidateNormal": [
+            -0.841808557510376,
+            0.4411045014858246,
+            -0.3111031651496887
+          ]
+        }
+      ],
+      "comparisonFrame": "Decoded primitive attribute frame; historical donor root/game adapter is deliberately not reapplied."
+    }
+  ],
+  "materialFidelity": [
+    {
+      "donorMaterial": 1,
+      "candidateMaterial": 6,
+      "original": {
+        "doubleSided": true,
+        "normalTexture": {
+          "index": {
+            "mime": "image/png",
+            "bytes": 432873,
+            "sha256": "5d9ceaa9e6687786f52f4b30a53043fe2310797e235975ba4d48e7b8034de632"
+          },
+          "texCoord": 1,
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 524967,
+              "sha256": "1076b8c8e48db7fa65ee3271a00c33bb409dcf3998fd9246b2dca184aa51b1d3"
+            },
+            "texCoord": 1,
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 445076,
+              "sha256": "668e116f5cf8318db018e1a66493b5cb85df5e2f248429f25aacc653e1baa5ee"
+            },
+            "texCoord": 1,
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          }
+        }
+      },
+      "current": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5
+          }
+        },
+        "normalTexture": {
+          "index": {
+            "mime": "image/png",
+            "bytes": 432873,
+            "sha256": "5d9ceaa9e6687786f52f4b30a53043fe2310797e235975ba4d48e7b8034de632"
+          },
+          "texCoord": 1,
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 524967,
+              "sha256": "1076b8c8e48db7fa65ee3271a00c33bb409dcf3998fd9246b2dca184aa51b1d3"
+            },
+            "texCoord": 1,
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "metallicRoughnessTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 445076,
+              "sha256": "668e116f5cf8318db018e1a66493b5cb85df5e2f248429f25aacc653e1baa5ee"
+            },
+            "texCoord": 1,
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          }
+        }
+      },
+      "sameBaseColorImageBytes": true,
+      "originalSpecularFactor": 1,
+      "currentSpecularFactor": 0.5
+    },
+    {
+      "donorMaterial": 2,
+      "candidateMaterial": 4,
+      "original": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.25
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 428230,
+              "sha256": "f45c21c60840245e867c0bc9240244902d7e2cf00bdfda26a5849aa174242419"
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.75
+        }
+      },
+      "current": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 428230,
+              "sha256": "f45c21c60840245e867c0bc9240244902d7e2cf00bdfda26a5849aa174242419"
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.75
+        }
+      },
+      "sameBaseColorImageBytes": true,
+      "originalSpecularFactor": 0.25,
+      "currentSpecularFactor": 0.5
+    },
+    {
+      "donorMaterial": 3,
+      "candidateMaterial": 5,
+      "original": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.25
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 979892,
+              "sha256": "f8430cee239e977cdb939352dd10331689b4ef88ac78295e27a1fb00d87e8583"
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6200000047683716
+        }
+      },
+      "current": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 979892,
+              "sha256": "f8430cee239e977cdb939352dd10331689b4ef88ac78295e27a1fb00d87e8583"
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6200000047683716
+        }
+      },
+      "sameBaseColorImageBytes": true,
+      "originalSpecularFactor": 0.25,
+      "currentSpecularFactor": 0.5
+    },
+    {
+      "donorMaterial": 4,
+      "candidateMaterial": 3,
+      "original": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.25
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 74376,
+              "sha256": "cf47650f3610fb50a6d486a14392031c5b88af5ee379779464e0777cabfec32a"
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6200000047683716
+        }
+      },
+      "current": {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": {
+              "mime": "image/png",
+              "bytes": 74376,
+              "sha256": "cf47650f3610fb50a6d486a14392031c5b88af5ee379779464e0777cabfec32a"
+            },
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.6200000047683716
+        }
+      },
+      "sameBaseColorImageBytes": true,
+      "originalSpecularFactor": 0.25,
+      "currentSpecularFactor": 0.5
+    }
+  ],
+  "actualRestClosure": [
+    {
+      "mesh": "Canonical_body_with_hidden_head_interface",
+      "vertices": 9981,
+      "maxResidualM": 8.538186009195215e-07,
+      "worldBoundsM": [
+        [
+          0.5494710365404235,
+          -4.1751083871604116e-07,
+          -0.5923276701058345
+        ],
+        [
+          1.0435742348015438,
+          1.5391524197304929,
+          0.592328065386368
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Separate_fitted_native_trousers_control",
+      "vertices": 950,
+      "maxResidualM": 7.350152558409714e-07,
+      "worldBoundsM": [
+        [
+          0.5405261600908009,
+          0.06840692539418534,
+          -0.2651855982067295
+        ],
+        [
+          0.7962006812652419,
+          1.0562175138136225,
+          0.2648843183406849
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Separate_fitted_sweatshirt_control,_hood_not_constructed",
+      "vertices": 1364,
+      "maxResidualM": 6.591046348551792e-07,
+      "worldBoundsM": [
+        [
+          0.5264759214457321,
+          0.9355178768164524,
+          -0.546009793395569
+        ],
+        [
+          0.9048805773101153,
+          1.5783933970946555,
+          0.5460100014128363
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_coherent_cheek_patch",
+      "vertices": 294,
+      "maxResidualM": 3.084875092538255e-07,
+      "worldBoundsM": [
+        [
+          0.7400613120712748,
+          1.6432040261119525,
+          -0.044614249738579095
+        ],
+        [
+          0.7528946000044893,
+          1.6772141980930102,
+          0.050621322932504924
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_mustard_hood_on_own_rig",
+      "vertices": 3112,
+      "maxResidualM": 5.236281536716854e-07,
+      "worldBoundsM": [
+        [
+          0.4662559511656432,
+          1.3533838902606035,
+          -0.19285004918093177
+        ],
+        [
+          0.7503087505513719,
+          1.5988731662294822,
+          0.19285012634912688
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_textured_head_above_hidden_neck_interface",
+      "vertices": 43707,
+      "maxResidualM": 3.975224410720797e-07,
+      "worldBoundsM": [
+        [
+          0.5537758775036093,
+          1.525046148813784,
+          -0.11365056029418563
+        ],
+        [
+          0.7834973660788831,
+          1.8225712000582512,
+          0.11418883396595136
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Registered_black_leather_gloves_on_own_finger_bind",
+      "vertices": 4021,
+      "maxResidualM": 8.376264687624367e-07,
+      "worldBoundsM": [
+        [
+          0.8062545375386386,
+          0.999375647238227,
+          -0.5649057834859778
+        ],
+        [
+          1.0334108612423945,
+          1.1732906316223042,
+          0.6103909451963393
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Registered_boots_from_bounded_foot_accessory_regions",
+      "vertices": 2484,
+      "maxResidualM": 7.555348751672383e-07,
+      "worldBoundsM": [
+        [
+          0.6002981535458918,
+          -4.6852246744357365e-07,
+          -0.2655305903291989
+        ],
+        [
+          0.8812934043926374,
+          0.14499994044789255,
+          0.26553072339638323
+        ]
+      ],
+      "bindMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "canonicalSkin": {
+    "doubleSided": true,
+    "name": "Canonical skin paired with protected head",
+    "pbrMetallicRoughness": {
+      "baseColorFactor": [
+        0.46000000834465027,
+        0.24500000476837158,
+        0.1550000011920929,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6499999761581421
+    }
+  },
+  "limits": [
+    "Decoded geometry/material inspection only; no new capture, rendered highlight, skin-color match, whole-rider acceptance or supported contact claim.",
+    "Production prepareHero flattens physical/specular extensions; source GLB specular drift is not a measured Garage highlight difference.",
+    "Body preservation in the hidden native master remains builder evidence; exported visible body intentionally has a head-interface cut.",
+    "Actual GLTFLoader rest-bind check omits images in memory; source PNG bytes and material descriptors inspected separately, not rendered.",
+    "Current receipt does not certify ambiguous head-row ancestry, unsampled deformation, dynamic accessory fit, moving native/render parity or mobile LOD."
+  ],
+  "ordinarySharedGateCarryForward": {
+    "buildSHA": "296da2fea6e4c825b710c78f41d921fb2e2734a4",
+    "verifiedCurrentHEAD": "31dfa1689e27e9c3ecc5b7163a426a8130a42e60",
+    "publicationReceipt": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/publication01.json",
+    "identicalCompiledInputGitObjects": {
+      "src": "9a9b9af7ad1512600c62c567486f31ab5cf13abe",
+      "public": "2596104e07607d7c1b76d0510ea8a8d040dc81e4",
+      "scripts": "88ece724a5b6167bc6013c6bdf872ee574f3cbdf",
+      "vite.config.ts": "9aa9e2293abb8a855068122d33a8f2a97ecc975b",
+      "package.json": "8bef71c8a6ff3eb55a4021309703a4b0909beaeb",
+      "pnpm-lock.yaml": "cd112d0d99e63865b8b62ad6fdf5c88bc1c2ecae",
+      "index.html": "52e2100e93ddb3c1401c235abf96d8c5201ee5cc",
+      "harness/hero-remaster/build.mts": "4af4c3ea7601d743c9fc430b6157df551b7976f6",
+      "harness/hero-remaster/replay.mts": "6523d4971f9e59aa40fc011ce3b219938d8e74ef",
+      "harness/inputs/b1-first-ride/bot-3.json": "e0e382144dccc39890854e3df18e285a39472950"
+    },
+    "scope": "Same-turn fresh ordinary low/high boot/clear/crash/restart receipt; source verification does not select or render a candidate. No duplicate publication/gate job."
+  }
+}
