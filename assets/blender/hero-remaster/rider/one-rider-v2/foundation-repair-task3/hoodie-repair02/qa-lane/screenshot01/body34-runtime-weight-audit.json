@@ -1,0 +1,111 @@
+{
+  "source_sha256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "receipts": [
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/candidate-cpu/mesh0-skinIndex.f64",
+      "sha256": "e74f676fdda6bfb9cc8d65585eadda6d23ab51200a53bab95232a20dc4504288"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/candidate-cpu/mesh0-skinWeight.f64",
+      "sha256": "6cee3020749b8c930d0e2100a74881930cca122ea627b5aa41f5ec4f4b810b86"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/candidate-cpu/mesh1-skinIndex.f64",
+      "sha256": "93d95fd91edac3f337d15c09d8ffc504f176d4e7e2df1b001bc9f5ff24be2efa"
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/candidate-cpu/mesh1-skinWeight.f64",
+      "sha256": "c9d907d433cfab5142fba69eaa995bca5fbcee634358d30cfc47d865a7963253"
+    }
+  ],
+  "rows": [
+    {
+      "primitive": 0,
+      "runtime_measured": true,
+      "raw_body34_vs_C19_GLB_weight_max": 0.0,
+      "raw_body34_vs_C19_bind_weight_max": 2.9791685229874076e-08,
+      "runtime_vs_raw_changed_vertices": 0,
+      "runtime_vs_raw_max_weight_difference": 5.960464477539063e-08,
+      "runtime_vs_raw_L1_max": 6.146728992462158e-08,
+      "regions_changed": {
+        "upper": 0,
+        "hip": 0
+      },
+      "changed_rest_bbox_m": null,
+      "witness_vertices": [],
+      "max_position_change_mm": 5.370243753888687e-05,
+      "runtime_dense_closed_reconstruction_vs_actual_max_m": 1.604598103919308e-05
+    },
+    {
+      "primitive": 1,
+      "runtime_measured": false,
+      "raw_body34_vs_C19_GLB_weight_max": 0.0,
+      "raw_body34_vs_C19_bind_weight_max": 0.0,
+      "runtime_vs_raw_changed_vertices": 0,
+      "runtime_vs_raw_max_weight_difference": 0.0,
+      "runtime_vs_raw_L1_max": 0.0,
+      "regions_changed": {
+        "upper": 0,
+        "hip": 0
+      },
+      "changed_rest_bbox_m": null,
+      "witness_vertices": [],
+      "max_position_change_mm": 0.0
+    },
+    {
+      "primitive": 2,
+      "runtime_measured": true,
+      "raw_body34_vs_C19_GLB_weight_max": 0.0,
+      "raw_body34_vs_C19_bind_weight_max": 2.9795226175188816e-08,
+      "runtime_vs_raw_changed_vertices": 0,
+      "runtime_vs_raw_max_weight_difference": 2.9802322387695312e-08,
+      "runtime_vs_raw_L1_max": 3.166496753692627e-08,
+      "regions_changed": {
+        "upper": 0,
+        "hip": 0
+      },
+      "changed_rest_bbox_m": null,
+      "witness_vertices": [],
+      "max_position_change_mm": 3.5190987166725005e-05,
+      "runtime_dense_closed_reconstruction_vs_actual_max_m": 1.4724485799914656e-05
+    },
+    {
+      "primitive": 3,
+      "runtime_measured": false,
+      "raw_body34_vs_C19_GLB_weight_max": 0.0,
+      "raw_body34_vs_C19_bind_weight_max": 0.0,
+      "runtime_vs_raw_changed_vertices": 0,
+      "runtime_vs_raw_max_weight_difference": 0.0,
+      "runtime_vs_raw_L1_max": 0.0,
+      "regions_changed": {
+        "upper": 0,
+        "hip": 0
+      },
+      "changed_rest_bbox_m": null,
+      "witness_vertices": [],
+      "max_position_change_mm": 0.0
+    },
+    {
+      "primitive": 4,
+      "runtime_measured": false,
+      "raw_body34_vs_C19_GLB_weight_max": 0.0,
+      "raw_body34_vs_C19_bind_weight_max": 0.0,
+      "runtime_vs_raw_changed_vertices": 0,
+      "runtime_vs_raw_max_weight_difference": 0.0,
+      "runtime_vs_raw_L1_max": 0.0,
+      "regions_changed": {
+        "upper": 0,
+        "hip": 0
+      },
+      "changed_rest_bbox_m": null,
+      "witness_vertices": [],
+      "max_position_change_mm": 0.0
+    }
+  ],
+  "limits": [
+    "Runtime weights and actualpositions measured only garment primitives0/2; glove/head primitives1/3/4 reconstructed from raw weights+closed hand morphs+sameD, not runtime readback.",
+    "Dense reconstruction incorporates exact recorded complete jointTransforms; minor errors from float weightsums vs Three outeraffine homogeneous handling remain explicitly measured.",
+    "Raw weights no-op control isolates runtime conditioning at identical restmesh,bind andjointD; source metadata/names may activate conditioning.",
+    "No exact screenshot source attribution yet."
+  ]
+}

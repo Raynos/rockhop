@@ -1,0 +1,14 @@
+Sculpt179 bounded actual-export QA — REJECTED before rigging.
+
+Frozen shell SHA92cafa51ec1d4127741c173958e1eb7136f341db9fa1e7d147fc76ec02f859c3.
+Owned copies only; original source/build files untouched; no render/rig/build or broad selfcollision rerun.
+
+19000 actual exported vertices exactly match quantized authored positions under Blender(X,Z,-Y);37604 actual/authored triangle multiset and per-face ancestry match. Exact-position topology:8nonmanifold occurrence-count edges,4zero-length self-edge direction flags,8collapsed triangles,394boundaryedges/6components. All failures sit at cuff height .913499951m. Raw coincident pairs963/18771,10588/18804,12217/18827,1852/18721 collapse adjacent faces1696,21494,37393,37394,37427,37560,37565,37582. Edge incident lists include repeated edge occurrences within collapsed faces; unique face lists are provided separately.
+
+READ-ONLY virtual removal of these8zero-area faces alone yields0nonmanifold/0winding/0collapsed triangles,400boundaryedges/four simple degree2 loops:hem104,neck170,cuffs63each. No distinct near-coordinate pairs<=.2micrometers; coalescence adds nothing. This differs from draft178 precision seam mismatch/collinear back-ear cause. No repaired asset produced or accepted.
+
+Next original-builder targets: prevent cuff angular/correspondence mapping from collapsing distinct cut samples without consistent triangle remeshing; reject collapsed physical triangles; retain explicit ordered source-edge ancestry and qualify real donor cuff/neck/hem sewing. Hem remains open/unattached; normals/UV numerical finite checks are not standing appearance approval. No support, skinning, motion or runtime certificate.
+
+Evidence: independent-export-topology.json (all8edge+4self-edge,8face and ordered-loop witnesses), freeze-manifest.json, qualification_sculpt179.py. Parent's strict selfcross0 audit remains separate and was not duplicated.
+
+Additional independent causal proof: private cuff correspondence selects130rows, only126are actual raw-index cut boundaries. Interior963/10588/12217/1852 lie119–417nm above plane before mapping; their targets equal or differ1–4nm from corresponding real cut vertices, then quantize identically. Select ordered topological cut-loop eligibility, not height nearness.
