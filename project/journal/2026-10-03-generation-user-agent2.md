@@ -1289,3 +1289,16 @@ Ask:284–286.
 
 Limits: Checkpoint only, execution pending. Pervertex PBR display derivative
 is not a UV bake/map-level pass or fullCUDA proof; raw geometry unchanged.
+
+Finding: Actual native trilinear interpolation at all3,152,811raw TRELLIS
+vertices completes, preserving original geometry and full voxel attributes.
+
+Validation: Future96profileguard0/7.537s;25finite131072vertex
+chunks archived.257independent sorted-coordinate CPU witnesses maxerror
+2.411764195e-7≤fixed1e-5. OriginalrawarchiveSHAc9e0f72e unchanged; sixchannel
+PBR vertex values and exactoutput pins preserved. No new neural seed.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-material01/
+Ask:284–286.
+
+Limits: Pervertex display derivative, not map bake/fullCUDA/fit/art pass.
+Matched neutral/PBR moving review pending; original6,322,984faces retained.

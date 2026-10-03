@@ -1,0 +1,84 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_trellis_vertex_material.py",
+    "--native",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis01/model/native.npz",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis-material01/material"
+  ],
+  "controllerPID": 50842,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 35.7,
+      "wiredGiB": 6.4,
+      "freeGiB": 29.5
+    },
+    {
+      "seconds": 0.032,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 6.4,
+      "freeGiB": 29.5
+    },
+    {
+      "seconds": 1.061,
+      "anonymousGiB": 36.3,
+      "wiredGiB": 7.5,
+      "freeGiB": 27.9
+    },
+    {
+      "seconds": 2.096,
+      "anonymousGiB": 36.2,
+      "wiredGiB": 7.5,
+      "freeGiB": 27.7
+    },
+    {
+      "seconds": 3.13,
+      "anonymousGiB": 36.2,
+      "wiredGiB": 7.5,
+      "freeGiB": 27.7
+    },
+    {
+      "seconds": 4.16,
+      "anonymousGiB": 36.2,
+      "wiredGiB": 7.5,
+      "freeGiB": 27.7
+    },
+    {
+      "seconds": 5.19,
+      "anonymousGiB": 36.5,
+      "wiredGiB": 7.2,
+      "freeGiB": 27.7
+    },
+    {
+      "seconds": 6.222,
+      "anonymousGiB": 37.4,
+      "wiredGiB": 6.3,
+      "freeGiB": 27.6
+    },
+    {
+      "seconds": 7.257,
+      "anonymousGiB": 37.4,
+      "wiredGiB": 6.8,
+      "freeGiB": 27.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 50848,
+  "exitCode": 0,
+  "elapsedSeconds": 7.537
+}
