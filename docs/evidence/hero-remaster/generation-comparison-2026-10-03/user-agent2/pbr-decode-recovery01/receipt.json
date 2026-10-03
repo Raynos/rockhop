@@ -1,0 +1,89 @@
+{
+  "request": 289,
+  "PBR06WasResume": false,
+  "PBR06ReranSamplingSteps": 15,
+  "all15SampledLatentCBytesMatch05": true,
+  "all11PersistedInputQKVCBytesMatch05": true,
+  "PBR05PersistedNPZNames": [
+    "actual-VAE-image-input-00.npz",
+    "actual-VAE-image-input-01.npz",
+    "actual-VAE-image-input-02.npz",
+    "actual-dino-features-00.npz",
+    "actual-dino-model-input-00.npz",
+    "actual-encode_images-00.npz",
+    "actual-encode_images-01.npz",
+    "actual-encode_images-02.npz",
+    "actual-first-native-attention-inputs-00.npz",
+    "actual-first-value-column-attention-inputs-00.npz",
+    "actual-prepare_latents-00.npz"
+  ],
+  "PBR05SampledLatentsPersisted": false,
+  "PBR05DecodeOutputReturned": false,
+  "finalSampledCBytesSHA256": "8126c6f8e8e8a69bb5175ac06c5227e542e8a12ff4ff4401a560dff12636f24d",
+  "PBR06FinalLatentArchive": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/actual-sampled-paint-latent-step15.npz",
+    "bytes": 841456,
+    "SHA256": "35658fdff3cc03f43ee99c40e19db8e03b3b78229d69e3a0b16357575b95b964"
+  },
+  "PBR06DecodeInputArchive": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/actual-final-VAE-decode-input-00.npz",
+    "bytes": 820192,
+    "SHA256": "6abca368ef8e90fa05c8027e066802586d3d7dc4f448d5063f14ba0fd99aba39"
+  },
+  "PBR06DecodedImagesArchive": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/actual-final-VAE-decoded-images-00.npz",
+    "bytes": 43769056,
+    "SHA256": "ce97973e132d8c75a6d3df8789272a27c9e2bf40bb0a6a33ba0ada9913aa08a7"
+  },
+  "preDecodeInactiveCacheRelease": {
+    "reason": "captured actual-final-VAE-decode-input-00",
+    "before": {
+      "allocatedBytes": 7792054784,
+      "driverBytes": 21063483392
+    },
+    "after": {
+      "allocatedBytes": 7792054784,
+      "driverBytes": 12700024832
+    },
+    "driverReleasedBytes": 8363458560,
+    "activeAllocationUnchanged": true,
+    "elapsedSeconds": 305.05568500002846
+  },
+  "VAERepresentativeControl": {
+    "inputShape": [
+      2,
+      4,
+      96,
+      96
+    ],
+    "outputShape": [
+      2,
+      3,
+      768,
+      768
+    ],
+    "maxFloatError": 0.004150390625,
+    "meanFloatError": 6.99741140124388e-05,
+    "maxPixelDifference": 1,
+    "outputPixelMaxDifferenceThreshold": 2,
+    "outputsByteIdentical": false,
+    "pixelsByteIdentical": false,
+    "inputBytesUnchanged": true,
+    "limits": [
+      "Two real encoded conditioning latents, not final sampled16-view PBR latents.",
+      "Packed-vs-sliced same learned MPS VAE, not independent CUDA equivalence.",
+      "Native official batch slicing only; no spatial tiling or trained attention replacement."
+    ]
+  },
+  "successResource": {
+    "elapsedSeconds": 387.846,
+    "peakAnonymousGiB": 60.3,
+    "peakCombinedGiB": 71.6,
+    "limitsUnchanged": true
+  },
+  "PBR05FindingCommit": "a7c96d1522b7ed51e5da6252005d4fcb80192a83",
+  "durableArchiveRecipeCommit": "3aef4ff04fe2d14dd05fc71dddc21ed1e7eff177",
+  "finalSlicingRecipeCommit": "6df2c84d7c769874b58d9e988aaf8b22e8851503",
+  "PBR06OutputCommit": "7b937ddfd04bd36bae8be0c79b03f2a6c03ef1d6",
+  "causalLimit": "Successful bundle includes durable pre-decode capture/cache boundary plus final batch slicing. No isolated full16 packed-vs-sliced or CUDA equivalence claim."
+}

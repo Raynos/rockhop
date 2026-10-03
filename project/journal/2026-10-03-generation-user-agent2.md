@@ -1234,3 +1234,16 @@ Ask:289–290.
 Limits: Requests logged, not yet landed. Anonymous/admission/foreign-job
 protections must remain; root keeps generated hoodie as visual source,
 with fit/rig/topology/mobile still open, no endless generation authorized.
+
+Finding: PBR06 reran15steps rather than resuming05; exact archives,
+final-only slicing and cache-boundary recovery are now explicitly documented.
+
+Validation: 11input/QKV array records and all15sampled hashes match05;
+05has no sampled latent NPZ/no returned decoded images.06durably archives
+steps/input/images/views before later allocations; predecodeinactivecache
+8,363,458,560B released withactive7,792,054,784B unchanged. Representative
+VAE batch2 exactPIL delta1≤2;06guard0/387.846s,60.3/71.6GiB peaks. Ask289done.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/pbr-decode-recovery01/
+
+Limits: Successful recipe bundle, no isolated full16 packed/sliced or CUDA
+byte-equivalence proof. Hoodie retained as visual source; game-ready gates open.
