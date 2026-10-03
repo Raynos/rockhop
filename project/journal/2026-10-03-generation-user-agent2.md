@@ -654,3 +654,19 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint; actual rendering/encoding pending.
 Averaged display normals only, not vertex smoothing. Six zero-area
 triangles and detached component retained; no garment fit or rig verdict.
+
+Finding: Immutable finite-cell derivative now has a silent full-orbit
+neutral-clay clip, with original vertices/triangle indices verified.
+
+Validation: Guard exit0 in34.195s; Blender5.2.1CPU4threads/8samples.
+460831vertices/921722triangles imported with byte-identical coordinates
+and officially reversed indices. All48frames recorded/pinned; encoder
+retains every source pixel inside labels. ffprobe48frames/8fps/6s,
+512x576, single video stream/noaudio. Framing inspected technically;
+all geometry/components retained. No texture, rig or ordinary asset edit.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-orbit01/finite-cell-shape.mp4
+Ask:284–286.
+
+Limits: Root alone judges played clip. Experimental finite-cell derivative,
+not original invalid raw;6zero-area triangles and104face detached component
+retained. Averaged display normals only; real PBR/fit/rig review pending.
