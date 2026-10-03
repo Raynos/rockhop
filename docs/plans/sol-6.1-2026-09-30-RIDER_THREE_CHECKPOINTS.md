@@ -21,6 +21,13 @@ Resume in this order:
 1. Read the frozen head-sew216 and arm-proportion216 receipts. They are separate
    candidates. Compose the liked head/closed neck and arm construction through
    source ancestry, preserving the hood, face, UVs, normals and protected torso.
+   Inspect the independent ask250 reconciliation before consuming cloud fields:
+   its sourceA/body11 bind is distinct from C19/body34. Shared appearance does
+   not prove shared inverse binds, joint hierarchy or weights. Transfer through
+   an explicit reviewed adapter and validate source/rest/bind parity anew; do
+   not silently replace the preserved candidate comparison or duplicate cloud
+   cuff/hip/contact experiments. Ask250 retains its own evidence/plan ownership.
+
 2. Render matched gray/textured full-body views, close face/neck views and a
    turntable. Judge actual arm/leg anatomy and rear clothing. Neither frozen
    candidate has rendered appearance approval; the body still needs PBR work.

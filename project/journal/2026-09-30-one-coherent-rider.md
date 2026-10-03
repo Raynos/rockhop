@@ -2819,3 +2819,22 @@ will be rerun. Final checked CI/manual deployment/live SHA are still pending.
 
 Limits: This fixes test input availability, not art or visible runtime contact.
 All rider gates remain open; no private candidate or native feature promoted.
+
+## Round219 — record the requested exit and checked release
+
+Finding: All235 backlog commits survived seven chronological fast-forward pushes.
+The sparse peg-fixture omission is fixed. Checked manual5085dfbb publication is
+successful and the production version matches its full SHA. Freeze this receipt,
+commit inventory, candidate/owner/branch evidence and exact autonomous resume queue.
+The three rider checkpoints remain open, not marked complete by this exit.
+
+Validation: Manualworkflow37088678962 PASS; production/versionSHA exact. Parent
+ship219 both tiers: byte-identical finish/hash, crash103, restart1/2ms,0errors.
+All owned subagents have reported/are idle. Arm/head remain separate/unrigged.
+Independent cloud sourceA/body11 vs C19 binds require explicit parity/adapter.
+Finalreceipt-only commit is pushed and live/workflow verified before sign-off.
+
+Limits: Full local Blender research lint still has queued errors; release lint
+passes. No new rider or native OTA/save-retry feature accepted. Foreign task3 and
+ask250 files/index hunks remain intact. Legacy raw histories stay local because
+rewritten equivalents already on main and the old141MB trailer was purged.

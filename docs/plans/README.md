@@ -237,6 +237,8 @@ Round217: requested exit; complete branch audit and14-commit native source prese
 
 Round218: requested exit checkpoint;235backlog commits pushed in seven size-bounded fast-forward batches. Sparse CI peg-fixture omission fixed by retaining exactly four source JSON files; no contact test weakened or player change. Final checked publication remains pending. Rider structural/visual/moving/contact/mobile gates remain OPEN/paused; autonomous resume queue and native integration queue retained.
 
+Round219: user-requested exit checkpoint; backlog235commits preserved/pushed in seven batches, CI source-fixture omission corrected. Checked5085dfbb manualworkflow37088678962 PASS/liveSHA exact; finalreceipt-only publication verification follows. Ship219 both tiers byte-exact/crash/restart1–2ms PASS. Owned agents idle. Rider remains paused/unaccepted with exact resume queue; native adaptation queued; cloud bind parity explicit; foreign paths preserved.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

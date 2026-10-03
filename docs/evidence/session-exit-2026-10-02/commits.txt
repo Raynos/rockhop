@@ -1,0 +1,235 @@
+4625229c4c346046d1caececbdbe9f3f5466add2 Docs: native wrappers need separate game and store update paths
+ea4ad76c9b3b117fff67aae9efbffa0e4f722b22 Native shells stage signed updates and recover failed boots
+069b1683f2700bdaeaa37fe2b1bb134c1ddd6332 Native asset sweeps restore dropped obstacle meshes
+d41ff571ce7b98f0d4417470ce14a4c64395b3b1 Quick native restart taps survive between rendered frames
+859cce51a508498990d7a7b3b8b5665ef3c730c5 Native update failures recover the healthy game and saved preferences
+8a70e3b38032515ca507274666527cffdbe19abd Native save failures now warn players and retry durable progress
+157f9ed3b85613d130f8ed17e530e3727aa78744 Graphics loss now freezes rides until recovery and explicit resume
+617ca7ecf2a2e5a05c338443d89d8a631a23ea6c Native save faults recover and obsolete WebViews explain failed startup
+a64f48f6d28a67feb3cb57787e941e3f1edb0fab Native save faults preserve progress and repository release checks pass
+2829cd2ac332f74b713881ea4e450358a26e8653 Native update retries distinguish transfers from failed startup
+628a6cc2af718262d725c40755ce71f14fcf8c17 Installed OTA failures preserve saves and quarantine failed versions
+71512d94efc0cc7f0689526de698dcfbb7310814 Docs: identify iOS simulator cutout in gameplay clip
+60f7327b7219c68caa1cdc7a469525a29f34f7ee Docs: clarify remaining mobile store build gates
+a0a4559da32165e68ad04d27ebeefbf63752566c Docs: record mobile branch push request
+5b645eeb700de612b96b8608d5295aa30f74b7aa feat(audio): remaster the score and every sound family
+0a93f6d27b67a7ccffc4aeb3f1236752adf5820d design(hero): choose original P3 with its head and face frozen
+93561b0f683dc7cc82035ce88de6c04ed5e0d252 design(hero): freeze P3 head records before local body repairs
+ff888a0d11b17c6e90b7daafaccf8d44e4e13b5f design(hero): propose one rider from matched hair and body evidence
+68cd8802287095b46f7f5bd02096042e057dbd64 design(hero): freeze the approved buzz-cut bust generation recipe
+d3f5e043e067e4dc792cc6189a23b1c69b7f5ae5 design(hero): stop the bust decode at its memory overshoot
+77263391a5ae2ee7ec12ad5c30cfcdf76fa66a38 design(hero): stop failed sampling and preserve the new bust source
+20a808733134b5c2220760f6edf3acf0a9492243 design(hero): inspect the dense face before targeted cleanup
+f4a15660a8637d8152878c82d2fab0a668097ba0 design(hero): reject radial cleanup that damages facial anatomy
+ec3090330898eaba69fba20d6d5cb25bcb75e878 design(hero): isolate glove and sole defects before body cleanup
+b5e6597824a8b6d25238db57f0ead2e5bbdaf455 test(hero): measure posed contact surfaces instead of bone origins
+95a3e3124a048a579021b6c06bbc181adf3e2e61 design(hero): stop duplicate-face glove construction after two failures
+12c79fe1361232de28765f3d957c00beef0c5a20 design(hero): stop scalp scaffold repair at the failed stitch gate
+fd94618cf0d424de22adc64d725eb3e786d72047 design(hero): reject collar colour seeds that retain old hair
+fc9b113f3e38836570a9e16ee6313bdb5cc89896 design(hero): constrain authored face rings before fitting geometry
+6eae9c144f3c0736d808d7291366170c3d0c913b design(hero): reject slab palms despite continuous sewn wrists
+be6d7b2db41dac9cb960b5f6881b1ea3d926be46 test(hero): capture private contact probes with exact prefix replay
+da9f15b7dc35d5cd87d6ac82e7dba0f936b91e25 design(hero): reject facial seams despite a clean cage topology
+77adb12eb76acf474306107b7db88d4c1abff4c6 design(rider): stop collar graph cuts after two visible failures
+f41e77a3540f9c8d25712ffacb403c3c892fa3ff design(rider): separate sound neutral hands from failed grip posing
+b16ca42da069cd23944c77656a209b3234b53ec1 test(rider): measure actual grips before fitting new hands
+118bfcdb21e896690a639f60ff6e4a03b31d4bfc design(rider): reject scarred anatomical head before baking
+e4d738e7b94aa21ddabdaf345ca314a49a17d0f4 design(rider): reject synthetic collar rim before neck assembly
+9806fb594dcf0e874519c71e8d9e992e1141dff8 design(rider): stop facial warps after second anatomy failure
+5312be88fdf4ac37e541f52cbc7f75ea18027990 design(rider): stop elliptical collars after second cloth failure
+cd18e14ae03465bc46595d26966e559c9cf587ec design(rider): approve evaluated native male head geometry
+a854adba49daba1a80575c42357f3abd4eca7dfe design(rider): catch stretched fingers in moving wrist review
+7e0c61f13b4e9dd89b2c2b815a7c379e1be83919 test(rider): measure exact triangle contacts without fake penetration
+a86f2e01caa0d284e2c519faf777b6521fb129fd design(rider): reject patchy face transfer before native atlas trial
+14ecc81f6a9bd2c0fe48a1c91efad3c31bb0eb3d design(rider): preserve semantic hands in the moving diagnostic
+0e0fde2b9113f6f8e6cb719a37de6a0fa65d71cc design(rider): retain clean native skin mapping before palette review
+79ac1deca90356656d8fdb7a1e988041e549c908 design(rider): reject shared body and glove bake target
+b0bce27cc6fb83261cdd347fbd01b2fd82637229 design(rider): reject jagged native neck join despite closed topology
+64c9f39e8e719a0c59845c7666b6e11eab10761a design(rider): freeze darker native palette at head deadline
+81db6e520920802efcfb073f18585c342b3b9924 design(rider): preserve isolated glove bake with natural hand shape
+8843862c67abd8c73cd74342755223617c718c21 design(rider): stop native collar after second boundary failure
+839b13be2fa523873f309828e0e712ad06918868 docs(rider): make visual checkpoints autonomous with fallback limits
+e2e15bb6b254eed6656e29688bfeaa80a3a30db6 design(rider): preserve isolated panel setup before lookup correction
+0568fd478f13039b981cb4695b1d0919d771f47f docs(rider): require independent face and body visual gates
+d0d5c9ee148b817ae5cf60e2744de579b5b484f3 design(rider): freeze a nonseparating collar cut
+1a26122be58cc4db5245b50427c687ba651ec928 design(rider): reject a closed but visibly poor hood assembly
+1534e38e52145887f79d4afdffa6e596fec9ca2b design(rider): freeze a folded hood panel before volume repair
+179aee2c8f31e6e5f6cd469e975df09b2291ef6a design(rider): freeze isolated brow registration failure
+4dce720d7187b87820302444ce7ea02e84f06e46 design(rider): identify three real garment openings
+325c36c90681522b6e4a9e41b6ae7bd5f86f2637 design(rider): retain brows while rejecting the weak face
+b20973d484be9322ee017b2823e80121711ca3b1 design(rider): localize a branched neckline cut
+aa2d5a6b6f147954e65ef128ac18ff8561f77758 design(rider): choose fresh buzz generation after bust audit
+ec19a6102a6c68b28dde57e3b3d602e7b2f713ac design(rider): distinguish projected fit from skin coverage
+8ea39bccca5874eaebe4a285494757618fb72b27 design(rider): isolate a four-triangle nape remnant
+abce67178c845d1dcd755298693b8406a9b1b90b design(rider): preserve native bust before judging appearance
+a439e095727b80e62d9a2fc85352d400919fadff design(rider): retire hood repair and rebuild the garment
+62a53465b18232ac105ea6063c71863828c027f5 design(rider): show painted source before coordinate diagnostics
+534111c9543945d4513269292a14b2e2ad6de123 design(rider): retain improved face with visible defects
+9c97967515eef9bc3970a6a7708cdb333d9cd7c7 design(rider): inspect a natural whole hood donor
+2c7487529ccf2fb2371448d5d439f98f67d2fdcf design(rider): identify cheek holes before local repair
+0d76e83bf0f4b62f24c75f1988474724b8caba48 design(rider): reject stiff hood before texture baking
+89ed692df8dbaafdc830cd3d885beb87e9bbeb35 design(rider): retain raw hood shape for donor construction
+3c8a33c2f62a48a39608e965c65508b119ccbc81 design(rider): trace material provenance instead of names
+55611699998e02ca4fbb4e9a5b96db95e2e89e19 design(rider): stop unsafe cheek perimeter before filling
+97a374e5f233d51a56c74cc964bde9566a1584e6 design(rider): separate garment by anatomy instead of color
+46d09ca5d84e64199f6c7a16482923e339aeced2 design(rider): reconcile existing cheek wall boundaries
+8f44550c341cfe07e69c26ff298f285eb848424f design(rider): consume native Blender tessellation indices
+d46822c5c95db4c1c847ee867a5e4ee07571ef6e design(rider): reject crumpled rim of actual cloth hood bag
+9bca6c43e13b85cbbe6aac89202fe72eb90245c7 design(rider): keep closed cheeks and reject pale texture patches
+5a77eed0dc2068f60cde21afbb8f061e9e7e343c design(rider): prove double encoding in cheek texture bake
+ef952ae0b17347dc49f0f28f696a6fc6c1addca4 design(rider): preserve cheek geometry and refine skin continuity
+e88e2d6dd8a9ecd54ff3e74013977fd4feb9fed2 design(rider): trace inner hood fold before character fitting
+0d8bcf9224eea588f46505f23961b125c95ac9d9 design(rider): stop cloth stiffness churn after worse hood
+cb16a54e1029a5126b217dca26cec3f37c96946a design(rider): carry coherent white head into full-body fitting
+5189834d87db91f70789ab7876a98b5957e24468 design(rider): isolate join defects in complete white rider fit
+8ac16c2f35920220fd9957bb82f3ee046275fac9 design(rider): fit donor hood skirt after welded character join
+60f4e6e302c7bed6b69495eecbacfda5b65901b8 design(rider): replace invalid zipper after lower hood fitting
+d9477bb11a82fab204d473bba2549eb76758b201 design(rider): snap hood targets after subdivision setup failure
+a81c0639e0e6fb186405de52a51b97d37783eb78 design(rider): isolate albedo seam after continuous garment join
+5cc9f6ea2c458bba763ac867fd42e0f6d2d74819 design(rider): preserve coherent white rider for motion inspection
+e4084430ff59ebf92cc0c5ca61b16a44f1a0e112 design(rider): preserve actual orbit and correct neck fixture setup
+278baa0c8d78409e67ae4d8878c445f3f4ff349d design(rider): keep jaw rigid after neck motion exposes bad weights
+9597f56319cda5f0718d4b6ee84d36a8f019e0b6 design(rider): preserve white face shape through neck motion
+5a6f499ff864f77dfa3032363cc5801fd78babb1 design(rider): correct drift in white rider reference board
+b18e9b3676af3254d5243eadea9e23041505dec1 design(rider): carry coherent white character into rig adaptation
+a2a8066ef91f1a8e89efcf700ab95d0717f63122 design(rider): preserve baseline at white rider rig handoff
+6ae8d416025819f8d6a08c14c30c07c9e9c586c5 design(rider): measure explicit new-character rig adaptation
+731187b7669b0e1805056e304e8ae2ec4ae33c6f design(rider): expose reach limits in new nineteen-bone skin
+fe449dbec96f733e9f2eaadcdeec466fb03fee1e design(rider): reject distal grip and shortlist reachable joints
+35dfd0f45f2ab6f14e5e89f2b971a4da525e2c89 design(rider): isolate seated control drift from character shape
+22be91fd820b394d1e60ba7a1af76a10b407904e design(rider): retain planted motion and coherent held grip
+cdf40102239104e2ed2a7ac3e5c6b6924ea4e738 design(rider): preserve planted motion at explicit metre scale
+37bc2cb81408451658a0dc51ac7df7fdefc930dd design(rider): freeze new character input before neural sitting
+af87b2eb87fad8f97e85207b803dcfce774d4ff3 design(rider): reject neural foot drift and retain planted motion
+0e6da4dc017d2d89694e71a6491a9b3972b1bc29 design(rider): recover real grip surfaces before native hand fitting
+fc8b363ecbf93924cd1eb8580285e2cc7e01456b design(rider): retain actual-grip hand fit for full-rig testing
+60d0b1d039d51587c99fe71a540d5f56fa0a8fb1 design(rider): fit opposite hand independently for rig transfer
+c2aa01965122abec6c241b96fe2b61f724ca8481 design(rider): preserve physics through explicit private rig mapping
+f5d2bd34e5da96fd13b42eccb1ecfa6ef0c404e2 design(rider): reject hand hover exposed by longer played replay
+09ebdcdddc2e9bf6b911fe27bf2027229e6deb53 design(rider): correct new rig elbow fallback without changing physics
+7df2b3d400d5c91f5b17bc5aa16ff6944f492fd2 design(rider): isolate garment distortion in authored skin weights
+4acdc4959a02c6f1f8a3ba5bfffca8c71b7d184a design(rider): improve waist skin and reject shoulder height patch
+15cb6f3ebc954c06ef2a2ae12ca9a2d346782e88 design(rider): trace shoulder opening to per-material skin conditioning
+83a40620d3e9c3afa10699a7d942611bf769e068 design(rider): retain seam weight fix and stop runtime injection
+9a1567b424a461a1b5795e138ff3e452a36bee6c design(rider): bake skin once to close the played hood opening
+c757460663e7df67380739930f325088a3588ef9 docs(rider): lead the handoff with current white rider evidence
+5e1c03fa2ef481a8e126c910bd4d45d393770ee8 design(rider): separate source face detail from clamped review zoom
+28d472a9da2c85ffbb639caf131a5b83dae009d8 design(rider): expose cheek outlines in actual face closeups
+02da8b32e1ac08d14d8fd87cbf00808ca468f33e design(rider): reject margin-only repair of played cheek outlines
+03e5812a706186c7bc576a8c003b62ce957875fd design(rider): bake one physical color field across the cheek join
+812536d65343f90583ad6a95fdc89550a5dd773e design(rider): retain the played shared-color cheek correction
+6386bc5878047869bbd0793c6035b9a55772f872 design(rider): centre the skinned face in moving diagnostics
+a7a55b30e4ee8e49618426f8a64f9de0edd94e92 design(rider): measure fused eye surfaces before anatomical fitting
+9201dc6080c03e3463e3e0a8cf28ebbf97ab2558 design(rider): expose both face sheets before fitting new eyes
+f7bf6073f3468af26bba09815d00855d628d66a9 design(rider): reject the angular tunnel through folded eye sheets
+dd6272601fd2c3243e2a7210f8f569476a15b919 design(rider): measure contacts after final camera presentation
+8a0f9eae39f748f83a6d6357f0347fd40477d4bb design(rider): reject raised eyelid bands in actual motion
+8bd7c28e1dca264b4d0e72c359e1ceaad696d0fd design(rider): locate sleeve folding in actual recorded poses
+ce064ab15ca45ec5049a7fcf3940d39f0ed131ff design(rider): stop analytic lid rings after moving regressions
+0496a5c4595c16eab333bca6a91d76de7f71958a design(rider): host current sitting motion for phone review
+0bb18196a5c71af974c0db2f1a15220724a08175 design(rider): locate seated hip folds in the weight transition
+20e31529d113c9937df6b6f3e170e76591dd4f99 design(rider): reject hip weights that worsen stretch and overlap
+ef9a4c394a5df25b8142175ed4a538692175c1cc design(rider): retain native eyelid anatomy for a new graft
+60dc0a92278832f59b1955556e1bcf436c2d407a design(rider): expose hip collapse in matched moving views
+5cc9bcfd2b3e3af45c15f5a7729c316c04cf0813 design(rider): reject hip volume field that worsens seat clearance
+c041eae8dac339ab8b9ff93d096bbe10e251ab47 design(rider): separate eye wall clearance from proved collision
+eb7821f442975283287d509e66d53cf152b30576 design(rider): retain constrained hip corrective targets for review
+6d964dd60c2feacff622641255b029bb9325e75b design(rider): retire eye cut classifier that branches the surface
+0e9a7465a7d84959c6f35543033c4cd05582b33b design(rider): retain played hip correction with remaining folds
+1731689f53cfe76b66efcd9c500f4acfe66b584e design(rider): reject eye texture while retaining native graft geometry
+31484c6cd283544686accf9670bf055e376cd848 design(rider): publish new motion trials beside retained comparisons
+df6a1f86acc63ed0c30ba489f47095c8cc0078e8 design(rider): reject sleeve mask that worsens the original elbow
+01ddd6b000ad87ef18a2ba7994bd6a88b1d1baf0 design(rider): repair eye pigment while keeping appearance gate open
+8c938fa87dd7aebbadf8fe172cf5535e5268c58c design(rider): retain connected elbow correction for motion testing
+713193cdb3e6a46469d4f75f3223277ee4bd24c6 design(rider): reject sleeve correction that flattens in motion
+26a8cd7d08ec0099e97388cab19780fca6fac632 design(rider): prove cornea discard and reject cloudy optical trial
+da04ccce7d902fb1f0d69c3184c760a99ecc8544 design(rider): trace sleeve support switches to retained arm travel
+50d018764d05ce6641afeed00f943704fbcaee20 design(rider): publish matched face and sleeve review evidence
+dfe8c3f9c37c6fac93bbe4d54af170d583fa60de design(rider): diagnose dark iris before isolated texture correction
+a8d6cc13c5f7963df4a16cb8869ef69e76023e4f design(rider): retain anatomical sleeve weights for moving review
+438bd8d0d2e885eaaa24267c1b5a8038484239ea design(rider): reject anatomical sleeve spikes in matched motion
+e2a5c73603eb5fe181eb7531db58a329d8651877 design(rider): retain isolated iris albedo for actual face review
+f8f016d478541802558a47770dfd1bbf197bb8d0 design(rider): reject iris-only refinement below the face minimum
+051120b004104df0e0352b0f3c920fc6be22f8f7 docs(rider): preserve fresh rig gains and remaining garment gates
+251101b4ef8a6e6671a9ef59edac6f6da42ed51a design(rider): isolate reflective eye coat for moving review
+bc89988e5d0be81304df06671e0ec9250f9430ff design(rider): stop eye material tuning after matched motion failure
+88c9126394b1952c998ad1bb723b46443b7c58c0 design(rider): trace rejected sleeve fans to torso weight transfer
+dfb3ddf45d97826641895ce67a20149808741708 design(rider): reject ambiguous surface mask before changing skin
+e0dea796c2cde6d503aaf7c8674d35353f7e4b3b design(rider): constrain sleeve mask with reviewed torso landmarks
+663c0394e0a1ff1dff1847c7f5809252f9b062a0 design(rider): reject harmonic skin before expensive moving trial
+fe4e04f941a9d6471eae071cb76e09ddcb989937 design(rider): map fresh rig axes and contacts explicitly
+edb5e3886cc107b25c07ad46875d89ad7cbd1b94 design(rider): hold cameras fixed for fresh rig moving comparison
+09b78c96969b9b79b7e1c217ae70bef037e5e01d design(rider): retain fresh rig gains but reject clothing folds
+05c89dca6c8e878a1bd9740d837b139013d83002 design(rider): reject dual quaternion rescue before GPU work
+6847cafd0190122813f5c2e07871b637e4907a19 design(rider): show new skeleton before earlier gallery evidence
+9e781b37b995a193a1075d4881c41461da8413a2 design(rider): separate fresh joints from skin weight gains
+be6bfaf46cd445bd20aca0a711ea6b04242e15a7 design(rider): rebuild garment deformation from clean quad topology
+bb1c430c2559092538f5282e0fd1b4e8ec46dd79 design(rider): fit clean garment topology to fresh anatomy
+ab1a3245afc90a587dafad1242ada9ffe224cbd7 design(rider): inspect clean garment silhouette before detail baking
+ab3f30daaf473ed0d88f1ba944f662fe913f8954 design(rider): reject incoherent garment surface projection
+68b8652669e9c00f053612845e44c6dd68496399 design(rider): reject unreliable sparse cage section measurements
+b6441dcb9b84f91973d4446d3b7e75dbfc8fdc11 design(rider): fit coherent garment volume from actual sections
+c5d6fd0e9e738ad07c91290982da4052056a94a9 design(rider): map protected seams before garment construction
+87918e4f98974f43dcb0d09a9ccb3c698af0bede design(rider): expose seam failures across full recorded motion
+d5ba01f794fd458b59d728b3f0582b0d9e166523 design(rider): retain new rig and reject incomplete cloth repairs
+2105867708354615f4a67a7e13b47f110ffeaf99 design(rider): put structural pose failures before cosmetic refinement
+a6cfc4a168442e42070f9c168d5e7d388de7302f test(rider): probe exported basic poses before cosmetic work
+aefd54822c374f507f2b4474d734178409ebcad8 docs(rider): record runtime guard during structural repair
+8d83b3078b41183f74a74dfc6fdbda67492559c1 test(rider): record matched exported basic-pose motion
+0f716e7dc0b7570cbc9515e417cb4401a2db3d07 test(rider): add unilateral and halfstep pose failures
+e289c2667c76d792d41eb423e4b8c239a11b0a62 design(rider): publish moving structural comparison evidence
+d3975502a1e1ed254719153d7a38c8c1de7e76be docs(rider): verify actual cuff boundary and retain fold failures
+8decff59d339a9071fbdd6da981320ef52aed084 test(rider): record unilateral and intermediate moving failures
+c4dc365b668367a2ae7aa0a4f365681d5606bf46 docs(rider): preserve replay and clarify support evidence scope
+3f9f7edfc83d09ac07f48f1f0bb814ce1d683c98 docs(rider): retain actual saddle crossings in both variants
+738344415f76aa16b2f4ff81a56cc2214634b456 docs(rider): preserve rig foundation and bound torso weight evidence
+c499397aa77ac1edcd777f0d51d80edc2cfd93f7 test(rider): measure actual lean and landing surfaces without pose edits
+c6d8ce36de4b6e182b8ff413b3884ece2f1af8cb docs(rider): reject rest-only armhole success before integration
+14b64677853c26db89f480c3d8c4768ecafc29ab test(rider): preserve identity and binding in construction handoffs
+3ffc294dc526cf647439046e271844feba5de16a test(rider): expose lean and landing failures in moving review
+d7e27fc4fe785955d648fd6c02416dfc4f639756 test(rider): retain binding in an explicit skinned garment export
+d446b201d53c2f5134ca38f72b58abadeccdedea test(rider): reject sleeve volume loss in matched moving exports
+2d1d357ec89cee9bd2d13e3acc1bbee44bbf76cf fix(rider): preserve authored skin in the owning rig container
+113ae93ab48da161e5a273c632f91efd4402f61c docs(rider): retain failed construction gates before motion testing
+4b8d67120ae39132b3ad81bfb83644437aef5837 design(rider): publish matched failed sleeve motion for review
+cf28df1f8ff883529003f088422f006aa91c0287 docs(rider): retire sleeve construction after fifteen failed outputs
+9fbb7a25d5549832795f344d7b1e1991d997c14d design(rider): reject flat-panel shell and switch construction method
+be8b526bb03babe3a170a15e535202a68228c9e3 design(rider): pin matched neutral and nineteen-bone donor contracts
+e0b45f7581e7d16ba725fa1fe2c19b0d82f7d8f4 design(rider): reject voxel sculpt and require guided quad topology
+ca560af908c02468f569f2ac3387674e617c38fd design(rider): bind new construction to actual donor seam cycles
+952c7f22a5461f1d5477c46d62a25e202f3853e8 design(rider): reject invalid cage and retire replacement surfaces
+8b8059d5843c806cafa3dd6ed68989470c397154 design(rider): preserve exact gameplay during garment reset
+3bd520e1addc3e6dbcf3057809fdd07cf5a01f23 design(rider): preserve clean source body and isolate hood defects
+7cf63a79f3e7b8d2bc379d770f2e9b1a93a18ac5 design(rider): clear local hood intersections with four edge flips
+74ec6d911f9a87784d62c2f20dd2f321e9696c9c design(rider): preserve source silhouette through the hood repair
+44e0579a5efe4cbe7dca9c2979f9130757da6491 design(rider): reject source underarm and seated deformation
+8b9e0e4024e30fe2f0f65fffaae21053f32db74f design(rider): reject an infeasible local weight patch
+a6efddbe5a06690b649d5cc7fbb8bc3efc3ce718 design(rider): confirm low source armhole and reject pinched scope
+fb1fa8abcbe0635492944da5e01ba1eb8768616c design(rider): reject armhole transport and define local resew
+9665932762c5151a93e8d5008769596774ba7de2 design(rider): define the source fan release before garment surgery
+3d0dc6b1fc429a28979ee80cbd1d5463cf2b6a30 design(rider): reject pinched sleeve construction before export
+e3c86274fc0de39ecfc583591d333871df5f7d82 design(rider): select a clean physical cut for local panel repair
+6aff08283d367474d25c7d5344ecc630fc24afa4 design(rider): reject penetrating panels despite clean sewing
+2003acffaa30747eb55bf971f6a7879f0b792429 design(rider): replace folded panels with a bounded source sculpt
+b95a92d03f7b59d87e455ba771880103fbeca75f design(rider): reject the folded source-star lift
+a481fe5e209209998ee767c53c63df5068b459b9 design(rider): retain a conditional anatomical arm field design
+a134d6a158bf48b17bc18087a86db89193e2ecd1 design(rider): admit true triangle CCD for a local shell trial
+0f6af11865a2e2276bfccf8f8eb33e59b104fd0c design(rider): reject a shell stopped at the CCD tolerance boundary
+f934d9022f38ec70537118fb7611c6cf2a2d27d7 design(rider): retire the fifth failed local seam lift
+9416e3649ea624b2e45a05d97f41962a4ed61280 design(rider): require a high join in the new local panel topology
+02101d1e4b27a8cc7aad2fd927b2823a511361c4 design(rider): preserve the high path after bounded panel design fails
+fb34624dc9df4a7c59d80f095ea55780fd6af0a7 design(rider): trace fused underarms to the native body source
+8e4510d799da12e9d68cb8103b4eb81e40358729 design(rider): expose sleeve clearance before reconstruction
+4d7271d7173396eb9fb1bcade526396c140264d1 design(rider): preserve decoded shape before native export processing
+1671c182563940db650eadce53b5207aaa851c77 design(rider): retain the failed source trial without a geometry verdict
+411decd07ffb62d881fdd43cb2a6d3a5bd6e091d design(rider): save native geometry before rejecting invalid output
+3e40db2867f581fc2dd4bb8c0b830f10fddbb164 design(rider): isolate finite native faces for inspection
+c37d52fd4971bddc9fdeb474d2ce90328ddea942 design(rider): inspect the new body orbit before structural integration
+12fede4b5421a71f32067c3cf092c63c6605b6c5 design(rider): preserve finite shape through literal alias cleanup
+ecd50633d537a974e2f038ca27c9ffb9d055f798 design(rider): register a selective neck join without hood clipping
+e201366dce3fd757e2305c299266e6ab4d38669a design(rider): measure new anatomy before binding
+e45b9bec31d97e595aab15e250a6994288d57ac5 design(rider): preserve the failed neck prefix before cache correction
+ee4c3fdfba29f7ddc9cc6f4d9734fc0c070ba0de design(rider): freeze the protected arm proportion trial
+57c1fbceda4635ea32e1344174fbb988f9bf2bc5 design(rider): freeze the capped head join without claiming motion
+28b949845626b0dc7d931435fef4ec2134343fa6 feat(rider): preserve an actual-bind hierarchical pose fixture
+dc993bb9f346f9d23c2f09ea96d249293f8a2aa3 design(repo): preserve native research and delivered audio ancestry
