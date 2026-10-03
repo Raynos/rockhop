@@ -172,3 +172,16 @@ Limits: 161 head rows have ambiguous source position/UV matches. Source specular
 drift is not Garage highlight judgment; renderer flattens that extension.
 Native master preservation builder-reported; no new capture/contact or art pass.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/appearance02-fidelity-README.md
+
+Finding: Authoritative appearance03 restores exact raw protected normals and
+source specular factors while preserving the bound movement foundation.
+Validation: 43712 head/294 cheek raw normal residual0, UV0, position≤59.6nm;
+source image bytes/specular exact. Quantized03→final03 differs in143086bytes
+only in two protected NORMAL accessors; all other JSON/BIN exact. All51rest
+joint/bind tables exact; eight actual loader closures<0.000854mm. Prior skin
+profiles/controller configs and all non-protected geometry/targets retained.
+Scoped lint passes;02known drift reproduced with the updated verifier.
+Limits: 161 head rows ambiguous under our different matcher; five head split
+rows/reindexing explicit. Native normal residual is builder evidence; no new
+capture, moving parity, whole-rider/skin/hood/contact/device acceptance.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/appearance03-fidelity-README.md

@@ -8,7 +8,8 @@ import { Vector3 } from 'three';
 import { loadRigAt } from '../../../src/render/hero/gltfTestUtils.ts';
 import { readGlbChunks } from './metadata.mjs';
 
-const [donorFile, foundationFile, previousFile, candidateFile, outputFile] = process.argv.slice(2);
+const [donorFile, foundationFile, previousFile, candidateFile, outputFile, mode = '02'] = process.argv.slice(2);
+assert(['02', '03'].includes(mode));
 assert(outputFile && !fs.existsSync(outputFile), 'Need donor/foundation/appearance01/appearance02/fresh-report');
 const sha = b => crypto.createHash('sha256').update(b).digest('hex');
 const pins = new Map();
@@ -19,10 +20,10 @@ function load(file, expected) {
 }
 const donor = load(donorFile, 'b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754');
 const foundation = load(foundationFile, '4092f9aa62c01598888712e7cb879439d9bc8093a82effb2b60a9ec1be85193e');
-const previous = load(previousFile, '63f90fb9b5c0e1c7d984f4132643475e27d169bfd4f04be6855dd4cb1d5eb891');
-const candidate = load(candidateFile, '5de43580964163bcd5755864543a9a9ab11e32d68af69488e42294e590b8459f');
-for (const [file, expected] of [[path.join(path.dirname(previousFile), 'rider.blend'), '249bac21d30d468d15b0b59290d676ecfa3a9e3078ca62e55401cb2a6fa5c4a8'],
-  [path.join(path.dirname(candidateFile), 'rider.blend'), '5a4aa0bc6083cb83d3aa1d6b5464c062555f2ac4401c566b4384b7fcb01cb04b']]) {
+const previous = load(previousFile, mode === '02' ? '63f90fb9b5c0e1c7d984f4132643475e27d169bfd4f04be6855dd4cb1d5eb891' : '5de43580964163bcd5755864543a9a9ab11e32d68af69488e42294e590b8459f');
+const candidate = load(candidateFile, mode === '02' ? '5de43580964163bcd5755864543a9a9ab11e32d68af69488e42294e590b8459f' : '010501c350e43967f98d90b9a4f2562f1171f177a30d520292c404bfb1e19efe');
+for (const [file, expected] of [[path.join(path.dirname(previousFile), 'rider.blend'), mode === '02' ? '249bac21d30d468d15b0b59290d676ecfa3a9e3078ca62e55401cb2a6fa5c4a8' : '5a4aa0bc6083cb83d3aa1d6b5464c062555f2ac4401c566b4384b7fcb01cb04b'],
+  [path.join(path.dirname(candidateFile), 'rider.blend'), mode === '02' ? '5a4aa0bc6083cb83d3aa1d6b5464c062555f2ac4401c566b4384b7fcb01cb04b' : 'f69109c0f3237065a975fb58e99021dc9b00f69f1bbc7e6f419f53218328324e']]) {
   const bytes = fs.readFileSync(file); assert.equal(sha(bytes), expected); pins.set(file, { sha256: expected, bytes: bytes.length });
 }
 function acc(g, index) {
@@ -83,10 +84,14 @@ const changes = candidate.json.meshes.map((m, i) => {
   const old = previous.json.meshes[i]; assert.equal(m.name, old.name); assert.equal(m.primitives.length, 1);
   const before = primitiveSignature(previous, old.primitives[0]), after = primitiveSignature(candidate, m.primitives[0]);
   const changed = Object.keys(after.attrs).filter(k => after.attrs[k] !== before.attrs[k]);
-  assert.equal(after.index, before.index); assert.deepEqual(after.targets, before.targets);
-  if (i !== 7) assert.deepEqual(after, before, 'Unexpected non-boot change');
-  else assert(changed.every(k => ['POSITION', 'NORMAL', 'JOINTS_0', 'WEIGHTS_0'].includes(k)));
-  return { mesh: m.name, changedAttributes: changed, unchangedIndexAndTargets: true };
+  if (!(mode === '03' && i === 5)) assert.equal(after.index, before.index);
+  assert.deepEqual(after.targets, before.targets);
+  if (mode === '02') {
+    if (i !== 7) assert.deepEqual(after, before, 'Unexpected non-boot change');
+    else assert(changed.every(k => ['POSITION', 'NORMAL', 'JOINTS_0', 'WEIGHTS_0'].includes(k)));
+  } else if (![3, 5].includes(i)) assert.deepEqual(after, before, 'Unexpected non-protected change');
+  else if (i === 3) assert.deepEqual(changed, ['NORMAL']);
+  return { mesh: m.name, changedAttributes: changed, unchangedIndex: after.index === before.index, unchangedTargets: true };
 });
 const garments = [1, 2].map(i => {
   const before = primitiveSignature(foundation, foundation.json.meshes[i].primitives[0]);
@@ -123,6 +128,10 @@ function compareProtectedPart(donorPrimitive, candidateMesh) {
   const a = donor.json.meshes[1].primitives[donorPrimitive], b = candidate.json.meshes[candidateMesh].primitives[0];
   const dp = acc(donor, a.attributes.POSITION), du = acc(donor, a.attributes.TEXCOORD_0), dn = acc(donor, a.attributes.NORMAL);
   const cp = acc(candidate, b.attributes.POSITION), cu = acc(candidate, b.attributes.TEXCOORD_0), cn = acc(candidate, b.attributes.NORMAL);
+  const oldPrimitive = previous.json.meshes[candidateMesh].primitives[0];
+  const oldPosition = acc(previous, oldPrimitive.attributes.POSITION), oldUV = acc(previous, oldPrimitive.attributes.TEXCOORD_0);
+  const oldJoints = acc(previous, oldPrimitive.attributes.JOINTS_0), oldWeights = acc(previous, oldPrimitive.attributes.WEIGHTS_0);
+  const currentJoints = acc(candidate, b.attributes.JOINTS_0), currentWeights = acc(candidate, b.attributes.WEIGHTS_0);
   const sourceIndex = acc(donor, a.indices).flat(), sourceUsed = new Set(), sourceTriangles = [];
   for (let i = 0; i < sourceIndex.length; i += 3) {
     const t = sourceIndex.slice(i, i + 3);
@@ -130,26 +139,41 @@ function compareProtectedPart(donorPrimitive, candidateMesh) {
   }
   const buckets = new Map(), key = p => p.map(x => Math.floor(x / 1e-5)).join(',');
   for (const id of sourceUsed) { const k = key(dp[id]), ids = buckets.get(k) ?? []; ids.push(id); buckets.set(k, ids); }
-  assert.equal(cp.length, sourceUsed.size);
-  let ambiguous = 0, maxPositionM = 0, maxUVDifference = 0, changedOverPointOneDegrees = 0, flipped = 0, maxAngleDegrees = 0;
+  const oldBuckets = new Map();
+  for (let i = 0; i < oldPosition.length; i++) { const k = key(oldPosition[i]), ids = oldBuckets.get(k) ?? []; ids.push(i); oldBuckets.set(k, ids); }
+  const skinProfile = (joints, weights) => JSON.stringify(joints.map((j, k) => [j, weights[k]]).filter(([, w]) => w > 0).sort((a, b) => a[0] - b[0]));
+  assert.equal(cp.length, sourceUsed.size + (mode === '03' && candidateMesh === 5 ? 5 : 0));
+  let ambiguous = 0, maxPositionM = 0, maxUVDifference = 0, changedOverPointOneDegrees = 0, flipped = 0, maxAngleDegrees = 0, maxRawNormalDifference = 0;
   const mapping = [], witnesses = [];
   for (let i = 0; i < cp.length; i++) {
     const q = cp[i].map(x => Math.floor(x / 1e-5)), hits = [];
+    if (mode === '03') {
+      let preservedSkin = false;
+      for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <= 1; z++)
+        for (const id of oldBuckets.get([q[0] + x, q[1] + y, q[2] + z].join(',')) ?? []) {
+          if (Math.hypot(...cp[i].map((v, k) => v - oldPosition[id][k])) < 1e-6 &&
+            Math.hypot(...cu[i].map((v, k) => v - oldUV[id][k])) < 1e-7 &&
+            skinProfile(currentJoints[i], currentWeights[i]) === skinProfile(oldJoints[id], oldWeights[id])) preservedSkin = true;
+        }
+      assert(preservedSkin, 'Protected position/UV row lost its previous semantic skin profile');
+    }
     for (let x = -1; x <= 1; x++) for (let y = -1; y <= 1; y++) for (let z = -1; z <= 1; z++)
       for (const id of buckets.get([q[0] + x, q[1] + y, q[2] + z].join(',')) ?? []) {
         const positionM = Math.hypot(...cp[i].map((v, k) => v - dp[id][k]));
         const uvDifference = Math.hypot(...cu[i].map((v, k) => v - du[id][k]));
         if (positionM < 1e-6 && uvDifference < 1e-7) {
           const dot = dn[id].reduce((sum, v, k) => sum + v * cn[i][k], 0) / (Math.hypot(...dn[id]) * Math.hypot(...cn[i]));
-          hits.push({ id, positionM, uvDifference, angleDegrees: Math.acos(Math.max(-1, Math.min(1, dot))) * 180 / Math.PI, dot });
+          const rawNormalDifference = Math.hypot(...dn[id].map((v, k) => v - cn[i][k]));
+          hits.push({ id, positionM, uvDifference, rawNormalDifference, angleDegrees: rawNormalDifference === 0 ? 0 : Math.acos(Math.max(-1, Math.min(1, dot))) * 180 / Math.PI, dot });
         }
       }
     assert(hits.length, 'Missing protected source position/UV row');
     if (hits.length > 1) ambiguous++;
     // Minimum over indistinguishable position/UV rows is conservative, not an ancestry proof.
-    hits.sort((a, b) => a.angleDegrees - b.angleDegrees); const h = hits[0]; mapping.push(h.id);
+    hits.sort((a, b) => a.angleDegrees - b.angleDegrees || a.rawNormalDifference - b.rawNormalDifference); const h = hits[0]; mapping.push(h.id);
     maxPositionM = Math.max(maxPositionM, h.positionM); maxUVDifference = Math.max(maxUVDifference, h.uvDifference);
     maxAngleDegrees = Math.max(maxAngleDegrees, h.angleDegrees); if (h.angleDegrees > .1) changedOverPointOneDegrees++;
+    maxRawNormalDifference = Math.max(maxRawNormalDifference, h.rawNormalDifference);
     if (h.dot < 0) flipped++;
     witnesses.push({ sourceID: h.id, candidateRow: i, angleDegrees: h.angleDegrees, matches: hits.length,
       sourcePosition: dp[h.id], sourceNormal: dn[h.id], candidateNormal: cn[i] });
@@ -167,10 +191,40 @@ function compareProtectedPart(donorPrimitive, candidateMesh) {
   return { mesh: candidate.json.meshes[candidateMesh].name, vertices: cp.length, sourceTriangles: sourceTriangles.length,
     sourceUsedIDsSHA256: sha(Buffer.from(Uint32Array.from([...sourceUsed].sort((a, b) => a - b)).buffer)),
     maxPositionM, maxUVDifference, ambiguousSourceMatches: ambiguous, normalsChangedOverPointOneDegrees: changedOverPointOneDegrees,
-    maximumNormalAngleDegrees: maxAngleDegrees, oppositeHemisphereNormals: flipped, triangleWinding, witnesses: witnesses.slice(0, 5),
+    maximumNormalAngleDegrees: maxAngleDegrees, maximumRawNormalVectorDifference: maxRawNormalDifference, oppositeHemisphereNormals: flipped, triangleWinding, witnesses: witnesses.slice(0, 5),
+    unchangedPreviousSemanticSkinProfiles: mode === '03' ? true : 'Not separately compared to historical donor rig',
+    sourceMatchTolerance: { positionM: 1e-6, uv: 1e-7 },
     comparisonFrame: 'Decoded primitive attribute frame; historical donor root/game adapter is deliberately not reapplied.' };
 }
 const protectedParts = [compareProtectedPart(0, 5), compareProtectedPart(1, 3)];
+let normalOnlyDerivative = null;
+let controller = null;
+if (mode === '03') {
+  assert(protectedParts.every(p => p.maximumRawNormalVectorDifference === 0));
+  assert(materialFidelity.every(m => m.originalSpecularFactor === m.currentSpecularFactor && m.sameBaseColorImageBytes));
+  const quantizedFile = path.join(path.dirname(candidateFile), 'rider.glb');
+  const quantized = load(quantizedFile, '2814920cf95b1eb8417d8b3968eec36fbf6624a905383e6db0a5727feadb0421');
+  assert.deepEqual(quantized.json, candidate.json); assert.equal(quantized.bin.length, candidate.bin.length);
+  const permitted = new Uint8Array(candidate.bin.length); const ranges = [];
+  for (const i of [3, 5]) {
+    const a = candidate.json.accessors[candidate.json.meshes[i].primitives[0].attributes.NORMAL], v = candidate.json.bufferViews[a.bufferView];
+    assert(a.componentType === 5126 && a.type === 'VEC3' && !a.sparse);
+    for (let row = 0; row < a.count; row++) {
+      const start = (v.byteOffset ?? 0) + (a.byteOffset ?? 0) + row * (v.byteStride ?? 12);
+      permitted.fill(1, start, start + 12);
+    }
+    ranges.push({ mesh: candidate.json.meshes[i].name, rows: a.count, accessor: candidate.json.meshes[i].primitives[0].attributes.NORMAL });
+  }
+  let changedBytes = 0;
+  for (let i = 0; i < candidate.bin.length; i++) if (candidate.bin[i] !== quantized.bin[i]) { assert(permitted[i] === 1); changedBytes++; }
+  normalOnlyDerivative = { exactOtherJSONAndBinary: true, changedBytes, permittedProtectedNormalAccessors: ranges, quantizedSHA256: pins.get(quantizedFile).sha256 };
+  const controllerFile = path.join(path.dirname(candidateFile), 'source-normals-controller.json');
+  const controllerBytes = fs.readFileSync(controllerFile); assert.equal(sha(controllerBytes), '51f5f84afac0232953d1df3cee69c7bff5c09b8b0bffa26345bff0cb05825ff1');
+  const config = JSON.parse(controllerBytes), oldConfig = JSON.parse(fs.readFileSync(path.join(path.dirname(previousFile), 'corrective-driver.json')));
+  assert.equal(config.candidateGLBSHA256, pins.get(candidateFile).sha256); assert.equal(config.candidateMasterSHA256, pins.get(path.join(path.dirname(candidateFile), 'rider.blend')).sha256);
+  assert.equal(config.poseDriverSHA256, '8c40c42af362a8d3d8ae44d27a0b07570f600b26adc66d325239413f66c7625b');
+  assert.deepEqual(config.configs, oldConfig.configs); controller = { file: controllerFile, sha256: sha(controllerBytes), exactPriorConfigs: true };
+}
 const loaded = await loadRigAt(pathToFileURL(path.resolve(candidateFile)), true);
 loaded.scene.updateMatrixWorld(true); const actualRestClosure = [], point = new Vector3();
 loaded.scene.traverse(mesh => {
@@ -187,11 +241,11 @@ loaded.scene.traverse(mesh => {
   actualRestClosure.push({ mesh: mesh.name, vertices: p.count, maxResidualM, worldBoundsM: [min, max], bindMatrix: mesh.bindMatrix.toArray() });
 });
 assert.equal(actualRestClosure.length, 8);
-const report = { status: 'UNACCEPTED_APPEARANCE02_PROTECTED_NORMAL_MATERIAL_FIDELITY_DRIFT', pins: Object.fromEntries(pins),
+const report = { status: mode === '02' ? 'UNACCEPTED_APPEARANCE02_PROTECTED_NORMAL_MATERIAL_FIDELITY_DRIFT' : 'UNACCEPTED_APPEARANCE03_PROTECTED_NORMAL_MATERIAL_FIELDS_RESTORED', pins: Object.fromEntries(pins),
   decoderPins: Object.fromEntries(['harness/hero-remaster/user-agent3-2026-10-03/appearance.mjs',
     'harness/hero-remaster/user-agent3-2026-10-03/metadata.mjs', 'src/render/hero/gltfTestUtils.ts'].map(file => [file, sha(fs.readFileSync(file))])),
   skin: { completeJointCount: 51, exactNamedHierarchyRestAndInverseBinds: true, rigSHA256: sha(Buffer.from(JSON.stringify(actualRig))), scopes },
-  appearance01To02: { meshes: changes, allEmbeddedImagesUnchanged: true, leatherMetallicFactor: candidate.json.materials[6].pbrMetallicRoughness.metallicFactor },
+  previousToCandidate: { meshes: changes, allEmbeddedImagesUnchanged: true, leatherMetallicFactor: candidate.json.materials[6].pbrMetallicRoughness.metallicFactor }, normalOnlyDerivative, controller,
   garments, protectedParts, materialFidelity, actualRestClosure,
   canonicalSkin: candidate.json.materials[0],
   limits: ['Decoded geometry/material inspection only; no new capture, rendered highlight, skin-color match, whole-rider acceptance or supported contact claim.',
