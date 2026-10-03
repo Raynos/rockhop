@@ -158,3 +158,11 @@ its last two arguments when measuring a derivative. The immutable driver still
 must name the original hash; derivative provenance is checked rather than
 silently rewriting the driver. These preparation checks are not a candidate
 pass. Actual derivative pins and retained shipped-control checks follow.
+
+## Library delivery receipt
+
+Bridge01a10191 subsequently saved all five native/Garage films through its
+supported Library route. `library-receipts.json` records its confirmed Library
+and File identities alongside rechecked local SHA256 values. This QA lane did
+not invoke the uploader; original bytes and unaccepted labels are preserved.
+Root received the exact identities for played visual review. No gate closes.

@@ -49,3 +49,10 @@ Validation: Three Node checks reject BIN changes, rig-order changes, unrelated
 extras and nearer scope declarations; scoped type-aware lint passes.
 Limits: Agent 1 derivative and production-control receipts are pending. No
 asset tag or loader is changed by QA; no deformation/contact acceptance.
+
+Finding: Bridge reports successful supported Library saves for the native
+full/four film and four paired actual Garage films; local originals retained.
+Validation: Incoming receipt supplies five exact Library/File identities;
+local movie SHA256 values rechecked against the frozen capture summary.
+Limits: Upload tool receipts belong to bridge. This records delivery only;
+neither this lane nor the Library save accepts rider gates or visuals.
