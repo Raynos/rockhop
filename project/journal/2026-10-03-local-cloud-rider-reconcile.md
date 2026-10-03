@@ -62,3 +62,8 @@ source edit, generation or deployment. Latest cloud flow remains supplied eviden
 not a Mac materialized export. Active session attribution unavailable; checkpoint
 awaits a parent commit with accurate provenance. Word runtime loader unsupported.
 Evidence: docs/evidence/hero-remaster/next-agent-handoff-2026-10-03/DELIVERY.md.
+
+Validation supplement: supporting38payload ZIP exact archive verification and
+Librarycreate pass (libfile_e8a5e57cf3c8819181dd8dab12b4bcc9). Actual retained
+H21buzz3,569,344byte model.glb freshly hashes to2cd1859e…; small byte proof separately
+saved as libfile_c7281ba8f214819182da57fb4f8ae195. No source bytes modified.

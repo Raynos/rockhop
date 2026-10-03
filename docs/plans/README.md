@@ -1,5 +1,9 @@
 # What we are building — the plans and where each stands
 
+**Local/cloud rider reconciliation (ask250):** [Bounded joint plan](unknown-model-2026-10-03-LOCAL_CLOUD_RIDER_RECONCILE.md). Exact preferred appearance lineage and portable Mac parity verified; original owner technically acknowledges bind distinction; reconciliation is committed and future pose/support integration remains queued. Ask251Mac69interval contact proof passes in its narrow scope. Cloud hip-volume owner retains fixes; local216 candidates stay separate/unaccepted. Writer-model rename deferred until actual runtime provenance is available.
+
+**Next-agent rider handoff (ask252):** [Distilled goal and attempt catalogue](../evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md). Preferred generated WHITE appearance and sourceA/body11/C19 boundary pinned; historical scores scoped, cloud/fallback scores N/R. Current next finding is choreography/saddle support, not more hip weights. Standalone editable HTML and Markdown Library copies delivered; documented commit attribution remains unavailable in this lane.
+
 Commit cadence: small, frequent main commits are explicit in `AGENTS.md` and
 `docs/git/COMMITS.md` (ask 213). Ask 214 rejects the current remastered rider:
 stop the skin/head patch loop, show matched actual-game before/after and restart
@@ -68,6 +72,8 @@ Checkpoint1 WHITE minimum; target8/later gates open. Round132 rejects26moving sl
 Checkpoint1 WHITE minimum; target8/later gates open. Round133 parent verifies one28iris-only albedo append:58063RGB pixels, pupil/sclera/alpha/outside mask and complete originalBIN/rig/headhoodneck exact; fixed settings/repeat exact. Actual72face motion/graycontrol versus22next; no optics/colour sweep.26sleeve rejected/fulljunctionaudit next. Current11/gallery12921videos retained, no promotion. Ship next135.
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round134 iris28actualface6.8 unchanged22/below7: corrected atlas reaches renderer but darkflat disks/lidrings remain. All72PBRframes reviewed,72paired records exact/graycontrols pixel-identical, sourceSHA loaded. Stop albedo-only tuning; inspect actualprepared normals/material/cornea before different mechanism.26sleeve rejected/fulljunctionaudit next. Current11/gallery12921videos retained, no promotion. Shipnext135.
+
+Checkpoint1 WHITE minimum; target8/later gates open. Round135 adopts independent fresh-rig/pipeline report,29receipt hashes exact. Weightsonly8.427→3.478x/C19→2.459x but crossings/holdouts/saddlehover and gameplayadapter open; conditioning scope differs from our baked-skin private trials. Requiredunchanged11ship135bytefinish/hash/crashrestartpass.26sleeve/28face6.8rejections stand. Connectedjunction/representation and eyeprepared-material audits next; no repeated band/DQ/ARAPsweeps. Current11/gallery129protected. Shipnext138.
 
 Checkpoint1 WHITE minimum; target8/later gates open. Round135 adopts independent fresh-rig/pipeline report,29receipt checks pass; onlyrepoCSV LF-normalized, records/source exact. Weightsonly8.427→3.478x/C19→2.459x but crossings/holdouts/saddlehover and gameplayadapter open; conditioning scope differs from our baked-skin private trials. Requiredunchanged11ship135bytefinish/hash/crashrestartpass.26sleeve/28face6.8rejections stand. Connectedjunction/representation and eyeprepared-material audits next; no repeated band/DQ/ARAPsweeps. Current11/gallery129protected. Shipnext138.
 
@@ -160,6 +166,8 @@ Checkpoint1 historical minimum; structural gateOPEN. Round178first clean drafted
 Structural gateOPEN. Round179preserved NEW C19neutral control byteexact and camera/lightmatched; two4s filmsplayed/48framesreviewed. Specialist19bind/cuffcontract reproduced, parent21pinnedhashes+recipe. No anatomy/new-shell/weights or playerpass; sourceframe/sockets separatefromseams. One evidence-review setupfail retained, cleanfamily6before sculpt incorporation. Continuous-sculpt pending parent judgment; cosmetics paused, all3checkpoints/contacts/mobile open; ship180next.
 
 Structural gateOPEN. Round180continuous sculpt rejected in played matchedgray/PBR orbit:eggtorso,padded shoulders,floatinghem; parent28hashes and actualexport8nonmanifold/4winding/6boundaries/8degenerate. Independent190427strictpairs0transverse is not sewn/anatomy pass. Five sculpt failures switch to sourceprofileguided anatomicalquadcage; sharedfamily11, sourcegeometryoutputs2. Likedhead/physics preserved, oneintegrationowner independentQAseparate; cosmetics paused, all3checkpoints/pose/Garage/contact/mobile open. Ship180passboth exact/restart1/3ms; next183.
+
+Structural gateOPEN. Round181parent13pinnedhashes+recipe and actual434pairedseamedges verified:307hood+65L62Rcuffs, separatehood237opening preserved. Sourceprofiles8heights/combinedp0p2, clippedwidthnotanatomy. Select deliberate newpairedlowerdesigncut, authorizeONEsourceguidedquadcage withsharedFloat32seams; no geometry/rig/artpassyet. Retiredsculptinteriorcuffcollapsecause pinned, family11unchanged,4adminerrorsdisclosed; rootintegration/task3QA separate; all3checkpoints/Garage/contact/mobile open, cosmetics paused. Ship183next.
 
 Structural gateOPEN. Round181parent13pinnedhashes+recipe and actual434pairedseamedges verified:307hood+65L62Rcuffs, separatehood237opening preserved. Sourceprofiles8heights/combinedp0p2, clippedwidthnotanatomy. Select deliberate newpairedlowerdesigncut, authorizeONEsourceguidedquadcage withsharedFloat32seams; no geometry/rig/artpassyet. Retiredsculptinteriorcuffcollapsecause pinned, family11unchanged,5adminerrorsdisclosed; rootintegration/task3QA separate; all3checkpoints/Garage/contact/mobile open, cosmetics paused. Ship183next.
 
@@ -292,6 +300,8 @@ Round244: user-authorized takeover archives 17-foundation-delivery-evidence with
 Round245: user-authorized takeover archives 18-cloud-reconciliation with 26byte-exact source pins. Historical source/evidence only, unaccepted; no player/model/physics changes. All three rider visual/pose/contact/mobile checkpoints remain OPEN/paused; local-input/lint limitations stay queued.
 
 Round246: user-authorized takeover archives 19-literal-worker-patch with 1byte-exact source pins. Historical source/evidence only, unaccepted; no player/model/physics changes. All three rider visual/pose/contact/mobile checkpoints remain OPEN/paused; local-input/lint limitations stay queued.
+
+Round247: direct human all-files takeover complete:1004original status files preserved in27small main checkpoints plus latehandbook/sharedstatus. Foundation integrity and nine mandatory ordinary ship repeats pass; all art/rig/moving/contact/mobile gates remain OPEN/paused. No ignoredmasters forced or unfinishedplayerpromotion. Final main push/checkedworkflow/liveSHA verification follows. Reconciliation and native adaptation remain explicit queued work.
 
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
@@ -720,9 +730,9 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **C1 authored harbor integration (2026-09-30):** [Matched actual full ride and fault](../evidence/course-remaster/coast-authored-integration/README.md#selected-v2--bounded-harbor-integration) selects full Blender harbor geometry, 52 placements, grounded piers and owned PBR water for normal C1. Exact replays/camera, 2/2 browser lifecycle cases, 28 focused tests, typecheck/scoped lint, 11/11 offline checks and 14/14 partial host round checks pass. Player JS 697.52 KiB retains the 700 KiB cap. Repetitive warehouse fronts, ground/shore materials, cached 12.5-second startup, human/audio/device checks and C2/C3 rollout remain open. Accepted whole courses: **0/12**.
 
-**Cached startup attribution audit (2026-09-30):** [Current normal-app source/evidence audit](../evidence/course-remaster/cached-startup-audit/README.md) distinguishes the real 12,479 ms offline navigation-to-menu measurement from the ~197 ms harness hook that skips loading. The current report lacks phase rows; cached pack traversal, 14 hero documents, shader/first-draw warmup and pre-entry delay are hypotheses. One frozen normal cached-offline phase trace is next; no speed fix or phone pass is claimed.
-
 **C1 second fault window (2026-09-30):** [Causeway loop and retry](../evidence/course-remaster/coast-authored-integration/README.md#causeway-faultretry-follow-up) now matches the selected harbor against its immutable baseline: 55 frames, exact `60b50763097b18a8`, both camera checks pass. Steps and correction remain readable. A fresh main-player-source build passes the required 14/14 partial round gate; no additional course or device acceptance.
+
+**Cached startup attribution audit (2026-09-30):** [Current normal-app source/evidence audit](../evidence/course-remaster/cached-startup-audit/README.md) distinguishes the real 12,479 ms offline navigation-to-menu measurement from the ~197 ms harness hook that skips loading. The current report lacks phase rows; cached pack traversal, 14 hero documents, shader/first-draw warmup and pre-entry delay are hypotheses. One frozen normal cached-offline phase trace is next; no speed fix or phone pass is claimed.
 
 **Cached normal boot phase trace (2026-09-30):** [Frozen measured trace](../evidence/course-remaster/cached-startup-audit/README.md#first-measured-phase-trace) passes 11/11 offline checks and records 5,827 ms first-frame work versus 269 ms cached pack reading. Page-clock loader removal is 13,696 ms; host observation is later. The suite ignores a requested Metal backend and hard-codes SwiftShader, so hardware attribution is invalid. Save/verify the actual renderer and repeat the same frozen normal flow on explicit hardware before choosing a product optimization.
 
@@ -742,9 +752,9 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Frozen Snowline baseline compiles (2026-09-30):** Canonicalizing the snapshot restores normal config transforms and the unchanged 700 KiB baseline build passes. Post-build provenance now reads the actual `#loader[data-entry]`, rather than assuming a module script element. Candidate compilation/moving judgment remain next; no normal player code changed.
 
-**Remaster schedule estimate (2026-09-30):** The earlier5–10-day larger-scope art estimate is superseded by the [focused remaining-work schedule](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md#remaining-work-and-schedule--focused-scope). Twelve bounded biome treatments are landed; unbriefed learning/earning, S1 route anticipation and phone/audio evidence determine measured tuning. No calendar promise or inferred course approval.
-
 **C1 whole-scene V3 comparison checkpoint (2026-09-30):** [The private whole-app pair](../../prototypes/coast-surface-frontage-v3/README.md) freezes current rider, source, camera, physics and one 68-file bank for distinct warehouse frontages plus authored quay/terrain maps. Both source trees typecheck; patched modules lint; normal source/assets and 700 KiB gate are unchanged. Ground replacement waits for current mounted owners and restores borrowed materials on retirement. Parent build/moving/failure/performance/device checks are next; no course signoff.
+
+**Remaster schedule estimate (2026-09-30):** The earlier5–10-day larger-scope art estimate is superseded by the [focused remaining-work schedule](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md#remaining-work-and-schedule--focused-scope). Twelve bounded biome treatments are landed; unbriefed learning/earning, S1 route anticipation and phone/audio evidence determine measured tuning. No calendar promise or inferred course approval.
 
 **Resident course decoder reuse (2026-09-30):** [Reuse of already-loaded GLTF/Meshopt modules](../evidence/course-remaster/resident-decoder/README.md) removes redundant async wrappers while preserving demand-driven course documents. All20 loader ownership/failure tests, app typecheck/scoped lint, fresh build and required14/14 host partial boot/clear/crash/restart gate pass. Player JS697.30KiB versus prior697.51KiB stays under unchanged700KiB. No art/device acceptance or isolated startup improvement is claimed.
 
@@ -796,9 +806,9 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Earned normal-game Pro handoff qualified:** [One empty-save recorded career](../evidence/course-remaster/earned-pro-handoff/README.md) earns C1 Diamond and seven Gold through actual finishes, reaches1840, explicitly buys/equips Pro and launches D3. Parent reviewed the moving result/Garage/map flow; repeat D2 pays0 and nine exact Node/browser endpoints match. Input headers for D1/D2 are explicitly qualified at normal authored seeds. Known inputs/manual clock prove integration, not human earnability.
 
-**D3 Pro landing instruction retained:** [Matched moving clean/fault/retry proof](../../prototypes/d3-pro-landing-lesson-v1/README.md) retains the short ore-cart instruction before the first demonstrated passive-GO fault. Physics, camera and exact full Pro outcome remain unchanged; one copy correction fixes phone-width overflow. Parent accepts this bounded cue; human learning and complete-course approval remain open.
-
 **Learner launch bikes aligned:** Stranger and reflex defaults now select Rookie for current courses1–8 and Pro9–12, matching G10. Explicit diagnostic choices and legacy defaults stay supported. Three focused tests, harness typecheck and scoped lint pass; no learner sessions or broad sweeps are fabricated.
+
+**D3 Pro landing instruction retained:** [Matched moving clean/fault/retry proof](../../prototypes/d3-pro-landing-lesson-v1/README.md) retains the short ore-cart instruction before the first demonstrated passive-GO fault. Physics, camera and exact full Pro outcome remain unchanged; one copy correction fixes phone-width overflow. Parent accepts this bounded cue; human learning and complete-course approval remain open.
 
 **Map Scrap action made actionable:** The underfunded Pro quick action launches the unlocked first-eight course with the lowest earned medal rather than opening an unaffordable purchase. Funded Buy Pro, owned Equip Pro and equipped Pro play retain their paths. Ten focused map tests and scoped checks pass; human earning pace remains open.
 
@@ -806,9 +816,9 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Replay goals made truthful:** Results now name the required upper route when a fast Gold has no Diamond proof, preserving unmet clock/no-bail goals; final repeated Diamond recommends replay/splits. Four route plus ten finish/opening checks pass. [Final build evidence](../evidence/course-remaster/result-goals/README.md) records716,915 B emitted player gzip under the explicit701 KiB allowance for focused career fixes; full filtered CPU suite1,553 passes, typecheck/lint pass. Physical-phone/player approval remains open.
 
-**Result regression fits CI checkout:** The measured lower-route result fixture now lives inside its focused test; CI excludes the large evidence tree, so tests must not read that external report at runtime. Four route checks pass and provenance remains documented. No player behavior changed.
-
 **Committed lint blocker cleared:** Three clean, frozen V7 export scripts now use the explicit native UTF-16 string ordering and remove unused bindings; full repository lint and syntax checks pass. No active hero search path or generated model was changed.
+
+**Result regression fits CI checkout:** The measured lower-route result fixture now lives inside its focused test; CI excludes the large evidence tree, so tests must not read that external report at runtime. Four route checks pass and provenance remains documented. No player behavior changed.
 
 **Focused remaster plan reconciled:** [Current deliverables and remaining work](sol-6.1-2026-09-29-TWELVE_COURSE_REMASTER.md#remaining-work-and-schedule--focused-scope) incorporate the completed recovery/reward, map earning, Pro teaching and result-goal fixes. Keep Rookie1–8 / purchased-equipped Pro9–12 and price1,840; tune from HR-21/24 rather than bot clock surplus. S1 optional landing anticipation remains a gameplay issue, not a closed art gate. Whole-course count0/12.
 

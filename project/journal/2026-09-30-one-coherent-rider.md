@@ -3189,3 +3189,19 @@ Python/JSON syntax and NPZ CRC reviewed; no file over100MB. Required third-round
 Limits: Historical invalid/rejected diagnostics and known script lint remain
 labeled; ignored pinned GLBs/poses are local prerequisites. No fresh-checkout
 self-contained bundle, new model generation or visual/rig/game-ready pass.
+
+## Round247 — complete the explicit all-files takeover checkpoint
+
+Finding: Original1004status files are preserved through27small source/evidence
+commits. Include the late editable handbook and all reviewed shared status hunks;
+parent takes archival ownership by direct human instruction, not player approval.
+Historical byte pins remain intact; stale live journal pointers are refreshed.
+
+Validation: Foundation937files/232ASTs/JSON/121NPZ CRC/no-pickle/raw-float checks;
+none over100MB. Late handbook JSON/Python parse and recorded1440/390silentdocQA.
+Nine mandatory third-round ordinary replays pass exactfinish/crash/restart;
+source/player paths unchanged. Final main push/CI/live identity checked next.
+
+Limits: Private ignoredGLBs/poses are retained local prerequisites; old absolute
+paths and full local research lint need queued portability work. No new art or
+rig/Garage/gameplay/device pass. Three rider gates remain open under paused plan.
