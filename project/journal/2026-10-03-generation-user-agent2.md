@@ -1247,3 +1247,17 @@ Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agen
 
 Limits: Successful recipe bundle, no isolated full16 packed/sliced or CUDA
 byte-equivalence proof. Hoodie retained as visual source; game-ready gates open.
+
+Finding: Explicit future owned Rockhop96GiB combined-stop profile freezes
+human290's single-threshold override while leaving the original guard intact.
+
+Validation: Actual sysctl137438953472bytes=128GiB; syntax/whitespace pass.
+Source copy changes78to96only for combined stop plus explicit host identity
+preflight. Existing55/68admission,65anonymousstop,1790max,1spolls, canonical
+lease/offline/ownedgroup control preserved. Six CPU boundary/ownership probe
+recipe frozen; no running controller/globaldefault/OS/foreign job altered.
+Ask:290.
+
+Limits: Checkpoint; bounded probes pending. Original guard has no separate
+pressure/swap predicates, so none claimed removed/validated. Sampled bound
+can overshoot before termination;96is not a hard allocation ceiling.
