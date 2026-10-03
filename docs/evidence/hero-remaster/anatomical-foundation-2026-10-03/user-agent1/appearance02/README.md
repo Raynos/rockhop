@@ -23,3 +23,21 @@ Rest boot bounds are nowz0..145mm; this does not certify complete triangle
 clearance or moving ankle/sole fit. The same continuous whole-rider native
 front/rear played check follows, then actual exported-engine qualification.
 All M0–M5 remain open; root alone judges and no player asset is promoted.
+
+The same native133-frame12fps front/rear PBR motion now completes with every
+visible evaluated vertex framed, full silent decode and i/12 presentation
+timestamps within1µs. Exact files and counts are in `review/movies.json`;
+newer02 still requires its own root judgment. The source, driver, camera and
+local correctives remain pinned; only the documented accessory repair differs.
+
+Root played both already-saved appearance01 Library films: protected recognizable
+head and denim are progress; bare feet/boot separation, rectangular hood flap,
+angular/mottled hoodie texture, untreated knee and hem remain unaccepted.
+Boot02 addresses the bounded registration fault, without claiming the other
+faults fixed. Next concrete appearance work repairs hood ownership/attachment
+and coherent garment UV/material transfer while preserving the good face and
+movement. No new owner, audit or duplicate Library save is required.
+
+Round24 ordinary silent Metal replay passes4810identicalticks, clear40.083333333s,
+crash103/restart1tick/errors0, CPU submission4.905ms and coldboot2725ms.
+These are shipped-control release checks, not candidate or device acceptance.

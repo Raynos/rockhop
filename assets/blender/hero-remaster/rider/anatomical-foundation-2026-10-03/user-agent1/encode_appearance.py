@@ -29,6 +29,6 @@ for view in render['views']:
         'ffprobe': probe, 'expectedDisplayDurationS': render['framesPerFilm'] / 12,
         'streamDurationDifferenceS': float(s['duration']) - render['framesPerFilm'] / 12, 'completeDecode': True, 'presentationTimestampsVerified': True,
         'minimumWholeRiderNormalizedBorder': view['minimumNormalizedBorder']})
-report = {'status': 'UNACCEPTED played recognizable textured native appearance01; root judges',
+report = {'status': 'UNACCEPTED played recognizable textured native candidate; root judges',
     'nativeReviewSHA256': sha(render_path), 'pins': render['pins'], 'encoderSHA256': sha(__file__), 'movies': movies, 'limits': render['limits']}
 receipt.write_text(json.dumps(report, indent=2) + '\n'); print('APPEARANCE_MOVIES', sha(receipt), [(m['view'], m['sha256']) for m in movies], flush=True)

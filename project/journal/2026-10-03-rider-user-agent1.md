@@ -202,3 +202,14 @@ rear border typo corrected to authoritative0.10653; media unchanged.
 Limits: Native moving ankle/sole and full triangle clearance pending; protected
 identity, cloth construction/correctives and appearance01 remain unchanged.
 Evidence: [accessory registration](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance02/README.md). Ask274.
+
+Finding: Bounded boot02 repair now has matched continuous native evidence;
+root's played01 verdict identifies the next hood/texture construction faults.
+Validation: Two133frame12fps silent PBR films, exact PTS/full decode and all
+visible evaluated vertices framed. Source01 films confirmed once in Library;
+root played rest/overhead/crouch. Round24 ordinary4810byte-identicalticks clear
+40.083333333s/crash103/restart1tick/errors0/frame4.905ms/coldboot2725ms passes.
+Limits: Root rejects01 barefeet/boot separation, rectangular hood flap, angular
+mottled hoodie texture and untreated knee/hem;02 needs own judgment. Preserve
+face/movement, repair hood attachment and coherent UV/materials next.
+Evidence: [boot02 played review](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance02/review/movies.json). Ask274; existing278.

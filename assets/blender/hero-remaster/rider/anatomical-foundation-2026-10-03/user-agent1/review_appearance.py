@@ -77,12 +77,12 @@ for label, yaw in [('front3q', -45), ('rear3q', -135)]:
         'orthoHorizontalM': 2.1, 'orthoVerticalM': 3.15, 'targetBlenderM': list(target), 'folder': str(folder),
         'minimumNormalizedBorder': minimum_border, 'frames': frames})
 assert pins == {str(p): sha(p) for p in [source, dp, ep]}
-report = {'status': 'UNACCEPTED textured whole-rider continuous bike-free synthetic FK review; root judges',
+report = {'status': f'UNACCEPTED {source.parent.name} textured whole-rider continuous bike-free synthetic FK review; root judges',
     'pins': pins, 'recipeSHA256': sha(__file__), 'framesPerFilm': len(indices), 'fps': 12, 'driverFrameIndices': indices,
     'visibleObjects': [o.name for o in visible], 'views': views, 'lights': lights,
     'render': {'engine': 'CyclesCPU', 'threads': 2, 'samples': 4, 'resolution': [512, 768]},
     'limits': ['Bike-free pose sweep includes reach/bends/stress; no actual bicycle or seated/contact qualification.',
-        'Appearance01 preserves clothing patterns and local correctives; neckline/hood/glove/boot and full fit remain unaccepted.',
+        'Candidate preserves clothing patterns and local correctives; neckline/hood/glove/boot and full fit remain unaccepted.',
         'Native played film is not export/actual-engine/mobile or production release acceptance; no audio.']}
 (out / 'native-review.json').write_text(json.dumps(report, indent=2) + '\n')
 print('APPEARANCE_REVIEW_READY', sha(out / 'native-review.json'), flush=True)
