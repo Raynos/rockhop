@@ -145,3 +145,10 @@ should stay local while exact source/image/movie/Library pins remain tracked.
 Validation: Owned ignore rules match only those caches, authoritative03/02
 inputs and all recipes/receipts remain tracked; local files preserved.
 Limits: Exclusion is housekeeping, no source/candidate/acceptance change. Ask274.
+
+Finding: Latest human direction prioritizes recognizable textured rider while
+qualifying one local cloth collision bend on the liked clean movement foundation.
+Validation: Parent rows277–279 and own274 status recorded before sourcework;
+protected head/wardrobe, bike-free/actual-supported-bike split and bounded
+collision qualification constraints retained with truthful native attribution.
+Limits: Positive movement feedback does not close M0–M5 or accept appearance.
