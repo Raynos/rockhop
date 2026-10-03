@@ -1172,3 +1172,18 @@ Ask:284–286.
 
 Limits: Synthetic forward only, no learned/fullmodel/CUDA evidence. Known
 unsafe native lowprecision trilinear stays disabled; no shared install edit.
+
+Finding: Root played12PBR angles and reference, retaining the frozen
+Hunyuan output as useful highpoly shape/material donor, without final pass.
+
+Validation: Bridge relayed root judgment and root's single Library delivery
+libfile_6fa1206de1a48191a09cbf0b784ef08f. Movie d6fbdeb8 exactSHA56492812
+retained. Coherent mustard/matte/hood/cuffs/hem with no hard projection seam;
+soft folds/thick hood rim/weak fabric detail/tiny speck remain. Current
+runtime24 player/dependency hashes match and otherdifferencesfromc74783ad0;
+original coldboot/clear/crash/restart gate applies. No duplicate delivery.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-pbr-root-review01/
+Ask:284–286.
+
+Limits: Root explicitly withholds map-level PBR, fit, rig, opening and
+finalart pass. One qualified TRELLIS1024cascade/12/42 unit follows; no sweep.
