@@ -1,0 +1,43 @@
+V7 hoodie foundation repair — independently qualified transition, partial character result
+
+SOURCE AND EXACT DELIVERABLE
+Preferred fresh C19 source SHA256186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e.
+V7 rigged GLB SHA25676b4e730b81513ebddb975a964093f5a3d8afb2724f5b8dc7d0a99536a711190,28,380,344 bytes. All final QA uses this hash, ordinary19-joint linear skinning, original2 grip targets plus49 sparse POSITION/NORMAL corrective targets,51 targets on each of3 body primitives. This is a baked two-second clip, not runtime cloth or a general pose corrective driver. Two clips: hoodie_compression_stand_to_sit and bind_restore. Five original source sweep clips are not included in this candidate.
+
+WHAT CHANGED
+Root integrated gentle chest garment reshaping and UV-safe local shoulder topology, seam-consistent strain-aware anatomical weights, coherent neck/head orientation, then bounded offline differential cage and local literal-triangle separating correctives. A final two-face diagonal change fixed an observed between-key collision. V6 remains intact; V7 has the same49 authored vertex poses and rebuilt normals/bounds for the final topology. Source head/glove POSITION arrays, UVs, colours, image/material JSON and original binary prefix are exact. This does not mean the entire standing torso mesh is unchanged: its garment envelope was deliberately repaired.
+
+VISIBLE FILES
+foundation-v7-before-after-normal-speed.mp4:1152×878,24fps,85 frames,3.542seconds including holds around the two-second motion. Root's matched front/side/rear before-after rendering uses the same source and candidate cameras and shader-style CPU normal emulation. This is not an actual WebGL/GPU/PBR equivalence certificate.
+foundation-v7-inspected-before-after.png: root's inspected before/after board.
+rider-compression-v7.glb: exact final portable clip asset.
+hoodie-compression-preview-driver.mjs: isolated stock Three.js preview/seek and bind-restore driver,19-joint check. No production gameplay adapter or physics driver.
+
+INDEPENDENT ACTUAL-EXPORT GEOMETRY
+111 finite snapshots:49keys,48halfkeys,4off-grid times,6 extra quarter/±.01second probes around the previously failing1.125–1.1667second interval, and4 independently solved holdouts. Every snapshot uses actual final V7 triangle indices. The first107 snapshots decode actual glTF linear translation/scale, quaternion SLERP, morph-before-skin and ordinary weighted matrices; installed stock Three.js agrees independently. The4 solver holdouts are evaluated separately against final topology.
+
+All111 have0 strict nonadjacent upper-cloth crossings and0 separately classified one-shared-source-vertex upper-cloth crossings. Both categories are also0 for cuff/elbow cloth, cuff/glove and collar/head. All exact source seam alias groups remain geometrically coincident. No hip/saddle triangle crossings were observed. New POSITION min/max bounds pass158 checks, and stock loader warnings are gone.
+
+The matched source C19 control is evaluated at the same107 actual times, with the same region masks and predicates. Upper-cloth nonadjacent crossing sum14923, one-corner sum1832; cuff/elbow sums15339 and1998. Source cuff/glove no-shared-vertex count is0 but one-corner sum433(max9). These are sums across sampled frames, not unique defects or severity/volume measures. Source and candidate have intentionally different head posture as part of the repair, while retaining grip/sole targets.
+
+CAREFUL TRIANGLE CLASSIFICATION
+Old no-shared-source-vertex counts remain separately comparable. An additional category checks pairs sharing one source vertex, because a star fold can penetrate beyond its sewn corner. Pairs sharing two source vertices/edges remain excluded; tangent/coplanar/thickness effects are unresolved. An earlier25mid-sit/2endpoint cuff candidate count was dismissed using all-shared-alias adjacency exclusion. That dismissal was too broad to prove good construction: the strengthened one-corner category reveals source folds and V7 removes them in this clip. Exact seam positions alone are insufficient.
+
+ACTUAL STOCK RUNTIME AND RESTORE
+Installed Three.js r186 GLTFLoader/AnimationMixer/SkinnedMesh CPU validation:535 independent primitive-array reference comparisons across both clips, including all49 independently authored corrective keys, halfkeys and off-grid times. Maximum vertex discrepancy1.188µm;0failures. Raw export versus independently authored49keys:245 primitive comparisons, maximum1.181µm. Unit/orthogonal rest axes, inverse binds and bind skin identity pass. Actual mixer endpoint→stop only that action→bind_restore→stop restore→endpoint restores all51 morph weights to zero; maximum rest drift0.036µm and repeated endpoint difference0. No arbitrary multi-action crossfade or physics-driven pose guarantee.
+
+REMAINING FOUNDATION FAILURES
+This is a materially improved authored transition, not a fully qualified character. Upper-cloth meaningful-edge max remains about3.0×, p99 up to1.85×, and a tiny number of compressed faces remain. Generic plain-skinning32-probe qualification still exposes raised-arm, overhead, forward reach, elbow/twist/wrist and lean failures outside this baked correction clip. A free horizontal T-pose still has excessive underarm strain; no arbitrary-pose runtime corrective system has been supplied. Those failures require further foundation repair, not materials/micro-polish.
+
+Hip garment crossings remain152–270 in actual sampled transition frames, with268 nonadjacent pairs at seated endpoint and up to2 additional one-corner hip crossings. End hip max meaningful-edge strain2.459×;36 hip faces below quarter area. Seated skin remains16.396mm above the actual saddle. No saddle penetration is not the same as support; contact area/force/equilibrium and full bike/whole-body collisions are unqualified. Head/chest posture still requires visual judgment; coherent neck/head rotations eliminate this measured collar regression but do not prove anatomical alignment. No volume or continuous collision certificate exists between every possible time.
+
+REPRODUCTION AND EVIDENCE
+Owned qa-lane/scripts/pose_suite.py: practical32-pose foundation suite (neutral, horizontal/overhead/forward arms, bilateral45/90degree elbow flex, forearm twist, wrist turn, squat/sit/lean).
+geometry_gate.py: CPU BVH plus float64 strict segment/triangle narrow phase, combined cloth materials, explicit no-shared/one-corner categories, actual cuff/glove, head/collar, source aliases and48 real upward saddle triangles.
+export_parity.py plus existing read-only runtime/validate.mjs: independent raw glTF versus installed stock decoder and authored keys.
+clip_geometry_fixture.py, mixer_restore.mjs and bounds_integrity.py: exact between-key fixtures, actual action restoration and metadata/source preservation.
+qa-lane/results/v7-export-motion-manifest-gate.json: full111 candidate rows/witnesses.
+qa-lane/results/source-clip-matched-export-motion-manifest-gate.json: matched107 source rows.
+qa-lane/runtime/v7/{validation,authored-export-crosscheck,rest-bind,mixer-restore,bounds-integrity}.json: exact runtime evidence.
+
+All work was isolated CPU-only on owned copies. No regeneration, GPU/model jobs, installs, production changes, original-owner messages or source edits. Library copies preserve the root's frozen assets. Further foundation repair remains active under the integration owner.

@@ -1,0 +1,62 @@
+Screenshot and bounded foundation QA — 1 October 2026
+
+The screenshot is physical-v5-control157, SIDE original frame0304, tick3050. The recorded candidate SHA is2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9. Full1280x720 RGB comparison gives MSE7.074 and mean absolute channel difference1.682/255, consistent with JPEG compression. The next frame has MSE422.447. Original body34 at the same camera/time gives MSE367.513 and visibly different underarm deformation. Byte-identical screenshot pixels are not claimed.
+
+Identified source original:
+/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/played/original/side/textured/0304.png
+
+Source attribution and hash receipts:
+qa-lane/screenshot01/physical-v5-source-identification.json
+Actual cloth positions/normals0/2,19D,W0..4 and exact candidate triangles, protectedother1/3/4 reconstructed:
+qa-lane/screenshot01/physical-v5-actual-sample304.npz
+
+Practical cause separation
+
+There are zero open edges in the identified candidate's complete five-primitive exact-weld lateral upper region. Original exact seam aliases remain coincident: conservative maximum gap~1.1e-10mm. Materials are DoubleSided and OPAQUE, and body material has no normalTexture. Default backface culling or seam separation therefore does not explain the sampled jagged features.
+
+Finite pixel rays distinguish surface appearance from missing coverage:
+635,404 hits front-facing body face6355, original atlasRGBA44,52,65,255. Its source restheight is1.137–1.151m, within upper shirt region.
+562,557 hits front-facing body face5837, atlasRGBA25,40,69,255. Its restheight.980–.992m is waist/hip border; do not assume this is an incorrectly colored shirt face.
+622,581 hits front-facing thigh face5815, atlasRGBA98,93,90,255, restheight.786–.823m.
+615,481 hits front-facing body face6308, atlasRGBA177,116,36,255.
+These rays have opaque rider coverage. They are not transparent pixels or missing triangles. Texture sampling is nearest-texel provenance, not a full lighting/shader comparison.
+
+The black triangle near823,397 in the gray comparison also has coverage: body face8276 is geometrically back-facing with yellow/brown atlasRGBA168,110,36,255. Its geometric normal dot interpolated LBS vertex normal is-.97265. Raw shader normal dot viewing direction is+.79697; Three's DoubleSide reversal makes the effective value-.79697. Same face/UV at820,397 and825,396, and in matched physicalV5 and plainV7. This is a folded face with inconsistent skin-normal orientation, rather than an empty rider ray. It is a deformation problem; a generic switch to DoubleSide is already active.
+
+Literal crossings remain substantial in the exact identified geometry:
+upper:169 nonadjacent +11 one-shared-corner crossings,55 faces below quarter restarea,maximum meaningful edge stretch6.686x.
+hip:251+2 crossings,53 faces below quarterarea.
+cuff/elbow:0+0 crossings but3.401x maximum stretch and15 compressedfaces.
+No generic character or gameplay acceptance follows from coincident seams or sampled ray coverage.
+
+The body34 reference, physicalV5 candidate and C19 source have identical inverse-bind arrays, and recorded19 complete jointD are identical at frame304. This supports matched world-deformation comparisons without copying rotations between different bases. CurrentV7 plain skinning in the sameD gives169+22 uppercrossings,max6.685x. V7's49 baked2-second corrective targets belong to another authored motion; they cannot be claimed to correct this gameplay pose automatically.
+
+Runtime conditioning is ruled out for these freezes
+
+Body34 raw weights and C19 raw weights are exactly equal. Runtime measured garment weights differ only by float normalization, maximum5.96e-8,zero vertices changed above1e-7. The identified physicalV5 runtime dump similarly shows no changed vertices above1e-7. No evidence supports substantive extra sleeve-conditioning damage here. Exact measured cloth arrays are retained; dense reconstruction error14–16micrometers is consistent with float weight sums and outer affine handling at worldx~359m, not a visible geometry gap. Protected other primitives are explicitly reconstructed rather than falsely labeled runtime-readback.
+
+Independent rounded-sleeve bounded tests
+
+Exact V7 topology, same literal predicate and separate one-corner category:
+Single90 elbow: upper0+0, cuff/elbow0+0 crossings versus skincontrol74+2 and96+2. Maximum meaningful edge stretches1.580x/1.547x. Still14upper and11cuff quarterarea faces.
+Bilateral elbow endpoint: upper105+11 crossings,max5.466x,34 compressedfaces; cuff0+0,max3.000x,6 compressedfaces.
+Forwardhalf:upper21+2,max4.230x. Forwardfull:129+15,max7.398x.
+Tcontrol:0+0 crossings,max7.114x.
+All these finite probes preserve exact alias coincidence, collar/head crossing counts0 and cuff/glove crossing counts0 under the bounded predicates. Single90 gains are real; broad shoulder/garment acceptance fails.
+
+Reproduction and evidence
+
+Owned migratedqa-lane/scripts/physical_v5_snapshot.py, pixel_ray_audit.py, paired_pixel_ray_audit.py, body34_runtime_weights.py and geometry_gate.py reproduce extraction, camera rays, conditioning ablation and literal gates. Read-only original artifacts remain untouched. No GPU, render, productionpromotion or foreignsharedplan edit was performed by this QA lane.
+qa-lane/results/physical-v5-manifest-gate.json
+qa-lane/results/body34-weight-ablation-manifest-gate.json
+qa-lane/results/body34-matched-v7-manifest-gate.json
+qa-lane/results/rounded-bounded-manifest-gate.json
+qa-lane/screenshot01/screenshot-pixel-ray-audit.json
+qa-lane/screenshot01/paired-fold-pixel-rays.json
+
+Primary references: glTF2.0 image UV origin is upper-left, and opaque/double-sided material behavior is specified by Khronos:
+https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#images
+https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#double-sided
+Stock installedThree shader normal_fragment_begin.glsl.js lines2–16 independently confirms DoubleSide fragmentnormal reversal.
+
+Limits: finite probes and finite rays; no CCD, complete-body collision certificate, shaderreadback, GPU/PBR equivalence, thickness/contactforce certificate or full character acceptance. Coplanar/tangent contacts remain unclassified. Atlas colors, exposed valid denim, fold orientation and literal crossings require separate construction/material judgment. Root owns integration and next construction experiments; hips/saddle support and broadarm strain remain unresolved.

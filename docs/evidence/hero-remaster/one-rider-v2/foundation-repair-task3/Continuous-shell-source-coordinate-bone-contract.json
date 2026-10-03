@@ -1,0 +1,2217 @@
+{
+  "status": "READONLY PRECONSTRUCTION CONTRACT; construction ownership pending parent relay. No shell built here.",
+  "source": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/deliverables/C19.glb",
+    "SHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e"
+  },
+  "mappedReference": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/garment-rebuild01/physical-v5-control157/rider.glb",
+    "SHA256": "2100384b8f2183e98e6e0c78d8b717718b1cc57dd8298e76fab53c1d491c77e9"
+  },
+  "architecture": "Parent cf28df1f clean continuous hoodie torso/shoulder/proximal sleeve. Old tube/cap and source23 salvage retired; defective old topology reference only. Do not duplicate original shell edits.",
+  "coordinates": {
+    "glTF": "X forward, Y height/up, Z lateral; source metre units",
+    "BlenderFromSourceRowMajor": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "meaning": "Source(x,y,z) -> Blender(x,-z,y); proper rotation determinant+1",
+    "sceneTransforms": "Use exact node local/world transforms below. Historical declaredUniformScale1.015 is inert metadata; applied scale1.0."
+  },
+  "bones": [
+    {
+      "slot": 0,
+      "sourceNode": 3,
+      "sourceName": "fresh.pelvis",
+      "canonicalName": "pelvis",
+      "parentSlot": null,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.645
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.918
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.645
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.918
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6449999809265137
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.9179999828338623
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.645,
+        0.918,
+        0.0
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 1,
+      "sourceNode": 4,
+      "sourceName": "fresh.spine",
+      "canonicalName": "spine",
+      "parentSlot": 0,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.008000000000000007
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.1469999999999999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.637
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.065
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6370000243186951
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.065000057220459
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.637,
+        1.065,
+        0.0
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 2,
+      "sourceNode": 5,
+      "sourceName": "fresh.chest",
+      "canonicalName": "chest",
+      "parentSlot": 1,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.007000000000000006
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.19999999999999996
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.63
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.265
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6299999952316284
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.2649999856948853
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.63,
+        1.265,
+        0.0
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 3,
+      "sourceNode": 6,
+      "sourceName": "fresh.neck",
+      "canonicalName": "neck",
+      "parentSlot": 2,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0002999834778003585
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.24734994860338144
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -3.952542556870738e-09
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6297000165221996
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.5123499486033813
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -3.952542556870738e-09
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6297000050544739
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.5123499631881714
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.952542737550857e-09
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6297000165221996,
+        1.5123499486033813,
+        -3.952542556870738e-09
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 4,
+      "sourceNode": 7,
+      "sourceName": "fresh.head",
+      "canonicalName": "head",
+      "parentSlot": 3,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.055825188240235635
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6297000165221996
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.568175136843617
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -3.952542556870738e-09
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6297000050544739
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.5681750774383545
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.952542737550857e-09
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6297000165221996,
+        1.568175136843617,
+        -3.952542556870738e-09
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 5,
+      "sourceNode": 8,
+      "sourceName": "fresh.shoulder.L",
+      "canonicalName": "shoulder.L",
+      "parentSlot": 2,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0003000657377083549
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.19660015817961973
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.07104999369342667
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6296999342622916
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.4616001581796196
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.07104999369342667
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6296999454498291
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.4616001844406128
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.0710499957203865
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6296999342622916,
+        1.4616001581796196,
+        0.07104999369342667
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 6,
+      "sourceNode": 9,
+      "sourceName": "fresh.upperArm.L",
+      "canonicalName": "upperArm.L",
+      "parentSlot": 5,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -6.764019655491893e-08
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.1840509506200192e-07
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.13702498531508067
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6296998666220951
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.4616000397745246
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.20807497900850735
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6296998858451843
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.4616000652313232
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.20807497203350067
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6296998666220951,
+        1.4616000397745246,
+        0.20807497900850735
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 7,
+      "sourceNode": 10,
+      "sourceName": "fresh.forearm.L",
+      "canonicalName": "forearm.L",
+      "parentSlot": 6,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0050749410550647855
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.3197250106392082
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.08119990272092051
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6246249255670303
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.1418750291353164
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.28927488172942784
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6246249079704285
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.1418750286102295
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.2892748713493347
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6246249255670303,
+        1.1418750291353164,
+        0.28927488172942784
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 8,
+      "sourceNode": 11,
+      "sourceName": "fresh.hand.L",
+      "canonicalName": "hand.L",
+      "parentSlot": 7,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.04848897556327236
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.2600623312123945
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.07237678952190629
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6731139011303027
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.8818126979229218
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.36165167125133413
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6731138825416565
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.8818126916885376
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.3616516590118408
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6731139011303027,
+        0.8818126979229218,
+        0.36165167125133413
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 9,
+      "sourceNode": 12,
+      "sourceName": "fresh.shoulder.R",
+      "canonicalName": "shoulder.R",
+      "parentSlot": 2,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0002999775710998964
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.19660015817962218
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.07105001316106047
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6297000224289001
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.461600158179622
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.07105001316106047
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6297000050544739
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.4616001844406128
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0710500106215477
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6297000224289001,
+        1.461600158179622,
+        -0.07105001316106047
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 10,
+      "sourceNode": 13,
+      "sourceName": "fresh.upperArm.R",
+      "canonicalName": "upperArm.R",
+      "parentSlot": 9,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -3.6465452324385694e-08
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -8.434495901710193e-08
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.13702499065493967
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6296999859634478
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.461600073834663
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.20807500381600014
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6297000050544739
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.4616000652313232
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.20807500183582306
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6296999859634478,
+        1.461600073834663,
+        -0.20807500381600014
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 11,
+      "sourceNode": 14,
+      "sourceName": "fresh.forearm.R",
+      "canonicalName": "forearm.R",
+      "parentSlot": 10,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.005074947595864909
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.319725087982224
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.08119990330331694
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6246250383675829
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.141874985852439
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.2892749071193171
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.624625027179718
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -1.1418750286102295
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2892749011516571
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6246250383675829,
+        1.141874985852439,
+        -0.2892749071193171
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 12,
+      "sourceNode": 15,
+      "sourceName": "fresh.hand.R",
+      "canonicalName": "hand.R",
+      "parentSlot": 11,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0530298600909439
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.2593094018772193
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.06961616325907088
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6776548984585268
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.8825655839752198
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.35889107037838797
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6776549220085144
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.8825655579566956
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.3588910698890686
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6776548984585268,
+        0.8825655839752198,
+        -0.35889107037838797
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 13,
+      "sourceNode": 16,
+      "sourceName": "fresh.thigh.L",
+      "canonicalName": "thigh.L",
+      "parentSlot": 0,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.007000000000000006
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0050000000000000044
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.638
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.913
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6380000114440918
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.9129999876022339
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.10999999940395355
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.638,
+        0.913,
+        0.11
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 14,
+      "sourceNode": 17,
+      "sourceName": "fresh.shin.L",
+      "canonicalName": "shin.L",
+      "parentSlot": 13,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.009000000000000008
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.40800000000000003
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.03499999999999999
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.647
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.505
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.145
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6470000147819519
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5049999952316284
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.14499999582767487
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.647,
+        0.505,
+        0.145
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 15,
+      "sourceNode": 18,
+      "sourceName": "fresh.foot.L",
+      "canonicalName": "foot.L",
+      "parentSlot": 14,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.042674971435470055
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.38827503514726314
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.037700009792921874
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.60432502856453
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.11672496485273687
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.18270000979292186
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6043250560760498
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.11672496795654297
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.1827000081539154
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.60432502856453,
+        0.11672496485273687,
+        0.18270000979292186
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 16,
+      "sourceNode": 19,
+      "sourceName": "fresh.thigh.R",
+      "canonicalName": "thigh.R",
+      "parentSlot": 0,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.007000000000000006
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0050000000000000044
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.638
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.913
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.11
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6380000114440918
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.9129999876022339
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.10999999940395355
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.638,
+        0.913,
+        -0.11
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 17,
+      "sourceNode": 20,
+      "sourceName": "fresh.shin.R",
+      "canonicalName": "shin.R",
+      "parentSlot": 16,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.009000000000000008
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.40800000000000003
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.03499999999999999
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.647
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.505
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.145
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6470000147819519
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5049999952316284
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.14499999582767487
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.647,
+        0.505,
+        -0.145
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    },
+    {
+      "slot": 18,
+      "sourceNode": 21,
+      "sourceName": "fresh.foot.R",
+      "canonicalName": "foot.R",
+      "parentSlot": 17,
+      "localMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.04267495693644341
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.38827501390465896
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.03770001645966364
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.6043250430635566
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.11672498609534104
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.18270001645966363
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseBindMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.6043250560760498
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.11672498285770416
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1827000230550766
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "restCentreM": [
+        0.6043250430635566,
+        0.11672498609534104,
+        -0.18270001645966363
+      ],
+      "referenceWorldMatrixMaximumError": 0.0,
+      "referenceInverseBindMaximumError": 0.0
+    }
+  ],
+  "meshNodes": [
+    {
+      "node": 0,
+      "mesh": 0,
+      "skin": 0,
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 1,
+      "mesh": 1,
+      "skin": 0,
+      "worldMatrixRowMajor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "primitives": [
+    {
+      "flatPrimitive": 0,
+      "mesh": 0,
+      "primitive": 0,
+      "meshName": "Protected body NEW hood joined garment",
+      "vertices": 22240,
+      "triangles": 33968,
+      "protected170": false,
+      "attributes": {
+        "POSITION": {
+          "count": 22240,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "75b54dc913bd142aea62f6ce5d1f072533dd71bf971e01b2969d4a42073428d4"
+        },
+        "NORMAL": {
+          "count": 22240,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "c1bee39d879a966d0bb8a39e571b09087ae7885a9568dfe496fb7d972752cdac"
+        },
+        "TEXCOORD_0": {
+          "count": 22240,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62"
+        },
+        "TEXCOORD_1": {
+          "count": 22240,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "2ea2a0d2e21f3eae804bef1b3a81063083b9bac1cd3c1c8f16d962c4b84b4a62"
+        },
+        "TEXCOORD_2": {
+          "count": 22240,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "ef6b79ef1b4ed649e7344ce3d681b95fa4dd99d3e3edb3875e15c412d9f1d03c"
+        },
+        "COLOR_0": {
+          "count": 22240,
+          "componentType": 5121,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "eba5be2e1dbe598736dc48a934369baa33cbfadfd6a119fc0608f95cc7c87361"
+        },
+        "COLOR_1": {
+          "count": 22240,
+          "componentType": 5123,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "f3d92413f6ab235d1a80f439cc2169f888e3d3e70d9520ab47aa9059551b33a2"
+        },
+        "COLOR_2": {
+          "count": 22240,
+          "componentType": 5123,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "cdccdb4f547a9c8865c76a920a067c407393aacbcff7683be3cf7cc0698a1546"
+        },
+        "JOINTS_0": {
+          "count": 22240,
+          "componentType": 5123,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "941356441023fba9dab38f9affdc2413fc91409025345751dde9c1166f300476"
+        },
+        "WEIGHTS_0": {
+          "count": 22240,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "cbab5b193c91be5e18d011cccea70de14e0ff2ab44db87a0266a1aec249de4c6"
+        }
+      },
+      "material": 0,
+      "morphTargetCount": 2,
+      "semanticCaution": "Primitive namespace alone is not a semantic garment mask; resolve component/source-face inventory before deletion."
+    },
+    {
+      "flatPrimitive": 1,
+      "mesh": 0,
+      "primitive": 1,
+      "meshName": "Protected body NEW hood joined garment",
+      "vertices": 4021,
+      "triangles": 6883,
+      "protected170": true,
+      "attributes": {
+        "POSITION": {
+          "count": 4021,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "7fac8c021bb940f380d158632511e074e28c6a4c508e3ebce0c900c6e756ac75"
+        },
+        "NORMAL": {
+          "count": 4021,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "6dadeec227ac3d8b9b602d5e1dc60c3155d12b2c67b9ab942dd161563cfc1b93"
+        },
+        "TEXCOORD_0": {
+          "count": 4021,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "77402229ff462a4a3bb9f782901d21f9d1905a19804ac2c417d5be194b022f90"
+        },
+        "TEXCOORD_1": {
+          "count": 4021,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "1b58a4c6097cea990822c61d2750457ed6a1cc6af57f2236f070dfc5d8aa1b91"
+        },
+        "TEXCOORD_2": {
+          "count": 4021,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "948e95d3f978078718b69a096da1b4287be798acf68bee60cc506ebf7f1d6f4b"
+        },
+        "COLOR_0": {
+          "count": 4021,
+          "componentType": 5121,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "7da947d24983d8b4328ee51e48ec306b6e4d41638da6a374b2a9c9ea10393a16"
+        },
+        "COLOR_1": {
+          "count": 4021,
+          "componentType": 5123,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "5385850ea5763a8f60b7b03266e0a5d8bfd4ed1cd8b8dc831a7bed9e8df009b1"
+        },
+        "COLOR_2": {
+          "count": 4021,
+          "componentType": 5123,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "7e2200c10f523ae75b61b8843edb61e81b5aca87f45c82872fa2990c47f60deb"
+        },
+        "JOINTS_0": {
+          "count": 4021,
+          "componentType": 5123,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "a96dd640198ca07fb2aa8531b04ba398a9b35d3d79d73f83fe8debe6213e7199"
+        },
+        "WEIGHTS_0": {
+          "count": 4021,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "991d98da84c941788616c5620a63cf031265e10ee0672bf7962daaf53232e2cb"
+        }
+      },
+      "material": 1,
+      "morphTargetCount": 2,
+      "semanticCaution": "Primitive namespace alone is not a semantic garment mask; resolve component/source-face inventory before deletion."
+    },
+    {
+      "flatPrimitive": 2,
+      "mesh": 0,
+      "primitive": 2,
+      "meshName": "Protected body NEW hood joined garment",
+      "vertices": 3112,
+      "triangles": 4118,
+      "protected170": false,
+      "attributes": {
+        "POSITION": {
+          "count": 3112,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "a75960a2f27a17da054e0aae6eafe9c612d1bc8549da711fd5516dfbb1ee05f6"
+        },
+        "NORMAL": {
+          "count": 3112,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "a263baa8cf7a3c453fa67a1eb02320e503f0e0bb8337521f70d518ca6969c11e"
+        },
+        "TEXCOORD_0": {
+          "count": 3112,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "a343300d194f41928c86b26c8b5d5dd693ac6ffee520767c538c40bc94218c0f"
+        },
+        "TEXCOORD_1": {
+          "count": 3112,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "a343300d194f41928c86b26c8b5d5dd693ac6ffee520767c538c40bc94218c0f"
+        },
+        "TEXCOORD_2": {
+          "count": 3112,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "7a5486124a243b4490c5d3124a87ed285401bd3aa777a4ecc4cd3adad5aeade9"
+        },
+        "COLOR_0": {
+          "count": 3112,
+          "componentType": 5121,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "72e30c78debf786137cf0a6e68bc6d9b52f0bd5726b6c8e7a039363e339642bd"
+        },
+        "COLOR_1": {
+          "count": 3112,
+          "componentType": 5123,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "4814c82ec6cab677b67916f73f88a15e09c48deac0a3c970efe7194aae55582b"
+        },
+        "COLOR_2": {
+          "count": 3112,
+          "componentType": 5123,
+          "normalized": true,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "525120c94274b1e81cf81779076d1532508d243a2c7fc765c42d49ab8f5489b8"
+        },
+        "JOINTS_0": {
+          "count": 3112,
+          "componentType": 5123,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "187e0262126356e18e360e8e8ebb11c9646b1d47c58e7230e93aab4e434583b9"
+        },
+        "WEIGHTS_0": {
+          "count": 3112,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "a2cb0d4ef5bb53f0cab92dcafcb1f587a03a9eeb8559632e44ad0102208eec44"
+        }
+      },
+      "material": 2,
+      "morphTargetCount": 2,
+      "semanticCaution": "Primitive namespace alone is not a semantic garment mask; resolve component/source-face inventory before deletion."
+    },
+    {
+      "flatPrimitive": 3,
+      "mesh": 1,
+      "primitive": 0,
+      "meshName": "textured",
+      "vertices": 61099,
+      "triangles": 99485,
+      "protected170": true,
+      "attributes": {
+        "POSITION": {
+          "count": 61099,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "a4aac05d643625bcda2f4171cf4c9b1175412a106ebacbc05ffb2fbe214caba2"
+        },
+        "NORMAL": {
+          "count": 61099,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "a9b77c4c9fb0c7f872562b34499e1399f94e8f7fbd2e17fbfe450761bab9eb40"
+        },
+        "TEXCOORD_0": {
+          "count": 61099,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "76d3d414f26f52b86ee230248f9d4a76b7cc4617d106366a635ce94c95fa8ff3"
+        },
+        "JOINTS_0": {
+          "count": 61099,
+          "componentType": 5123,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "e5d200f6fd7ad29bd1a9339a9e88824d1e898f66165af5bf417baa48dc897df0"
+        },
+        "WEIGHTS_0": {
+          "count": 61099,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "0545db38c26ceeb00a6c3a73e3c73e9d899896026c0b3e38d98ba9629a3d7963"
+        }
+      },
+      "material": 3,
+      "morphTargetCount": 0,
+      "semanticCaution": "Primitive namespace alone is not a semantic garment mask; resolve component/source-face inventory before deletion."
+    },
+    {
+      "flatPrimitive": 4,
+      "mesh": 1,
+      "primitive": 1,
+      "meshName": "textured",
+      "vertices": 294,
+      "triangles": 429,
+      "protected170": false,
+      "attributes": {
+        "POSITION": {
+          "count": 294,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "aabc8435cfff7e1bf7fda2364c563c22192c3efe55f3eeb0178cd0714d52fa04"
+        },
+        "NORMAL": {
+          "count": 294,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC3",
+          "decodedStoredArraySHA256": "9fbf015504484d0203d6692be94854fccab0d5818d71030ea067e8867fc555ce"
+        },
+        "TEXCOORD_0": {
+          "count": 294,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC2",
+          "decodedStoredArraySHA256": "ec9e4f068ec9f28b5672135f323a398f6931a73607d2f1df9d89199fda560939"
+        },
+        "JOINTS_0": {
+          "count": 294,
+          "componentType": 5123,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "c62076882b3801917bc7b7a06c564c9916c58d80776d00c84038fb31b47bb753"
+        },
+        "WEIGHTS_0": {
+          "count": 294,
+          "componentType": 5126,
+          "normalized": false,
+          "type": "VEC4",
+          "decodedStoredArraySHA256": "6fe1f706d87efd0e44302844ad6f0f96a624800eeffa383afbb5f76d4ad05c1b"
+        }
+      },
+      "material": 4,
+      "morphTargetCount": 0,
+      "semanticCaution": "Primitive namespace alone is not a semantic garment mask; resolve component/source-face inventory before deletion."
+    }
+  ],
+  "runtimeContract": {
+    "orderedSlots": 19,
+    "conditionerFlag": "Owning container numeric rockhopRiderSkinConditioned:1; verified actual loader conditioning174 commit2d1d357e",
+    "axesFlag": "WORLD_ALIGNED_EXPLICIT_CHILD_DIRECTIONS",
+    "anatomy": "Exact170 adapter permits C19 rest/hierarchy/inversebind only. Changed joints or namespaces require explicit reviewed adapter, not silent relabeling. Ordinary constructor still needs anatomy/contact control.",
+    "influences": "Stock Three shader four per vertex. Require actual-positive count<=4 and no lost mass; no implicit JOINTS_1, truncation, or DQ.",
+    "materialAdapter": "Any nonlinear postbone deformation requires explicit runtime P+N driver and parity/performance proof; cannot be encoded by stock-four GLB alone.",
+    "sewing": "One physical cloth identity across seam/UV aliases; exact P and matched W on shared groups. Preserve intended hard N differences; keep shader flags. New shell joins are rebuilt actual sewn edges, not overlapping donor sheets.",
+    "protected": "Head and glove all attrs/morphs/indices/PBR/image semantics protected under170; preserve liked identity. Hood/cuffs need explicit component masks and viable matched rebuilt joins; old shoulder boundaries retired."
+  },
+  "authoritativeControls": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/inputs/source34-authoritative168-matrices.npz",
+    "SHA256": "743d6fde07c5865db412b5a6a221dc1d1bdf70dcb3de2fb95a96cbdb478449a0",
+    "frames": 480,
+    "meaning": "Matrices D already contain prefix, boneworld, inversebind and bind. Do not multiply prefix twice. Different bone bases compare endpoint/world displacement rather than copied local quaternions."
+  },
+  "nextGate": "One owner neutral manifold/winding/intentional openings/literal triangles + inspected front/side/back continuous gray/PBR turntable. Only selected shell gets bind and bounded sit/overhead transition, then continuous holdouts and parent5404fixture/contact/Garage. No failed tube/embedding broad renders."
+}
