@@ -1,0 +1,56 @@
+Fresh rider rig comparison — independent, unaccepted
+Last verified: 2026-10-01
+
+The new rig improves the seated silhouette and reduces hip edge stretch, but does NOT solve sitting. Fresh weights produce most of the measured stretch improvement; relocating joints adds a smaller benefit. Actual triangle crossings persist, early transition samples regress, and the fresh rig's endpoint remains 16.4 mm above the sampled saddle top. This is a completed causal comparison, not an accepted riding asset. No source or production asset was edited or promoted.
+
+Open fresh-rig-before-after.mp4 (front/side/back, forward and reverse) and fresh-rig-hip-motion.mp4 first. C19.glb is the fresh 19-joint candidate; C.glb is the rejected 23-joint helper ablation. Both have editable packed-texture Blender masters in the package. Gray seated, standing-bind, and skeleton sheets separate geometry from material appearance. CPU Cycles renders use identical lights, cameras, bike, contact targets, and newly authored pelvis/torso controls. The rendered vertices are the same LBS calculations independently verified by Three.js, not Blender Preserve Volume.
+
+CONTROLLED EXPERIMENT
+A: exact current joint hierarchy/rest bind and current weights; new mechanically authored control.
+B: the same A joints with independently computed anatomical weight fields.
+C19: new armature hierarchy/rest bind, new hip/pelvis/lumbar/knee centres, freshly computed weights on the SAME mesh.
+C23 (file C.glb): C19 plus four half-rotation hip/knee helper joints, an additional LBS technique trial.
+
+The fresh fields use geometric segment distances, longitudinal joint bands, explicit lateral ownership, rigid hand/head primitives, four-influence truncation/normalization, and one weight vector across every exact-position exporter alias. They do not copy old weight buffers. Cuff aliases initially separated by up to 16.6 mm; independent review caught 127 cross-material groups, and the final bind unifies them before freeze. Final aliases have zero weight difference and zero measured cuff gap. Old source contact/conditioning metadata was removed from fresh GLBs to prevent accidental application of the legacy 19-bone adapter.
+
+Fresh C19 chosen centres in metres: pelvis(.645,.918,0); hips(.638,.913,±.110); knees(.647,.505,±.145); original ankles retained. These are inferred under clothing, not medically measured anatomy. Current hip is(.634775,.959175,±.106575). The fresh rest coordinate bases are explicitly world aligned; local pose transforms are derived from world poses and parent inverses, rather than copying quaternions between different bind bases. Blender reconstructs bone display tails from glTF joints; terminal tails are not anatomical measurements.
+
+The two-second control holds the same static wrist and ankle contact transforms for all variants, uses retained closed-grip morphs, fixed-length two-bone IK, forward/outward knee poles and backward/outward elbow poles. Pelvis translation and torso rotation are shared; changed joint centres intentionally change solved knee/elbow paths. Source static contact orientations are reused, but no old temporal animation channels or neural motion are reused. Head stays rigid. Separate hip flexion0–120°, abduction0–45°, and knee0–135° sweeps precede the combined control. The endpoint/holdout tests are evaluation samples, not fitted corrective keys.
+
+RESULTS — CENTRAL HIP ROI, SELECTOR FIXED BEFORE COMPARISON
+Every corner .69<source y<1.08 and |source z|<.245: 6,776 triangles. Rest has zero strict nonadjacent triangle crossings. Triangle-pair counts are not penetration depth or volume.
+
+                       A        B        C19       C23
+Seated max edge ratio  8.427x   3.478x   2.459x    5.496x
+Seated p99 edge ratio  3.299x   2.175x   2.048x    2.147x
+Seated area<25% faces  38       38       33        54
+Seated crossing pairs 356      278      268       293
+Crossings summed over
+all25control keys     5,462    6,396    5,581     6,151
+
+C19 seated crossings improve24.7%, but the sum over the whole control worsens2.18%. At unkeyed0.274/.742/1.226/1.774s: A131/164/228/339; C19176/208/244/267. The first three holdouts regress. Helper bones raise the minimum skin-matrix determinant proxy, yet worsen visible folds/crossings: preserving a local rotational-volume proxy does not guarantee cloth integrity. Whole-shell signed volume is invalid here: the connected body/garment shell has434 boundary edges. No closed anatomical volume certificate is claimed.
+
+CONTACT / SUPPORT
+All retained hand and sole probe vertices use the same rigid contact transforms across variants; their actual positions and nearest-bike distances are equal, including throughout the control. Nearest sampled sole-to-peg distances are0.177mm and0.611mm; nearest hand-to-handlebar distances are0.0034mm and0.0243mm. Whole-hand/sole maximum distance does not mean every point should touch a rod. These unsigned probes neither certify penetration nor all palm pads.
+The48verified actual saddle-top triangles have no negative projected hip-vertex clearance across the25keys. Endpoint minimum clearance: A8.60mm, B2.37mm, C19/C2316.40mm. Positive clearance alone is NOT saddle support. The C19 endpoint still hovers and is not a supported seated-pose pass. Whole rider-to-bike triangle collision and arbitrary riding dynamics remain untested.
+
+RUNTIME / BLENDER
+Actual installed Three.js0.186 GLTFLoader, AnimationMixer and SkinnedMesh.getVertexPosition pass29,045,120 vertex comparisons: all authored keys, true clamped terminal times, and80 unkeyed pose samples total. Maximum error0.00311mm. Independent runtime review caught an initial15mm A/B export error caused by dropping original uniform1.015 bind scale. Corrected final tracks retain decomposed bind scales. Rendering references were unchanged and final movies were regenerated after the cuff fix.
+Blender LBS import differs by at most0.034mm; actual Blender LBS roundtrip at most0.041mm. Blender Preserve Volume changes the garment by as much as65mm, but its on/off GLB exports are byte-identical and skin identically in standard runtime. DQ cannot be sold as an exported fix. Exact parent-authored GLBs remain texture-authoritative; Blender roundtrip warns about multiple material image nodes.
+Stock Three.js handles19 or23joints. Production GltfRider hardcodes core19 names and contact/conditioning rules; fresh names/hierarchy require an isolated driver. Included fresh-rig-preview-driver.mjs plays/scrubs the tested clips without applying production reconditioning. It is an offline clip adapter, not a gameplay physics/contact driver. Garage/full riding and neural retargeting are not passed. UniMate maps/conditioning must be regenerated from the fresh hierarchy, rest axes, scale and joint count, with explicit parent-row/leaf handling before inference.
+
+CAUSAL CONCLUSION AND NEXT TECHNIQUE
+The current inverse binds, axes, hierarchy, indices, normalization and rest pose are sound at micrometre scale. The original low pelvis/thigh transition creates substantial shear under hip flexion; moving that field fixes much of the stretch without changing joints. Anatomy placement influences shape but cannot explain away remaining cloth crossings. Extra helpers and DQ alone are not universal remedies.
+The next technique should address garment deformation and contact together: a collision-constrained volumetric deformation cage or physically meaningful cloth layer, validated against all hinge sweeps, continuous stand-to-seat transitions, actual saddle support and held-out riding states. Keep the accepted standing surfaces/textures frozen and first prove that technique in an isolated adapter. Further height-band tweaks or six-pose surface corrections are not justified as the next fix. This task establishes why the fresh-rig-only hypothesis fails; it does not abandon the user's appearance/Garage/riding goal.
+
+PRIMARY SOURCES / PRACTICAL CONCEPTS
+A joint is the pivot; a bone's direction and roll define local bend/twist axes. An inverse bind removes the original skeleton placement; weights then blend each posed joint's effect. LBS averages rotation matrices and can shrink/shear a bend. IK selects joint angles reaching a contact; its pole chooses the bend plane. glTF stores the baked joint animation, not Blender's authoring IK constraints.
+Khronos normative skins: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#skins
+Khronos skin tutorial: https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_020_Skins.html
+Three.js SkinnedMesh: https://threejs.org/docs/pages/SkinnedMesh.html
+Kavan et al. DQ paper: https://users.cs.utah.edu/~ladislav/kavan07skinning/kavan07skinning.html
+Installed official Blender5.2.1 RNA and io_scene_gltf2 exporter are the Blender primary source; manual/API retrieval failed. Detailed measured audit and source symbols are in audit/README.md and blender/README.md. No unrecognized software, services, security changes, model inference or GPU rendering were used.
+
+SOURCE AND PROVENANCE
+Body11 SHA256 b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754.
+Every source POSITION/NORMAL/UV/COLOR/index/morph/image/material buffer is exact; the complete original binary prefix is retained. A also retains source weight/index buffers. Standing appearance is preserved by rest/bind cancellation. provenance.json contains final hashes, joint centres, lengths and parity assertions. No original/older agent was contacted or steered; all workers owned this isolated task-3 workspace.
