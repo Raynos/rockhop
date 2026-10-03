@@ -1,0 +1,1925 @@
+{
+  "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/C19-source.glb",
+  "source_sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "topology_path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/v7-bind.npz",
+  "topology_sha256": "619396fa895215b4c8a7210341e0acb037bb5a4ddba9a16cdf088684ec8b5def",
+  "methods": "Combined clothing primitives0+2, original exact source aliases exclude adjacent faces; CPU Blender BVH + strict six-edge float64 crossing predicate. Edge ratios exclude rest edges shorter2mm. Cuff vertices AND edge midpoints queried against actual glove triangles.",
+  "limits": [
+    "Finite pose/frame samples; no CCD or full-body certification.",
+    "Coplanar contacts unclassified.",
+    "Region masks fixed from source anatomy estimates.",
+    "Cuff crossing might be intended insertion; visual review mandatory.",
+    "No GPU, PBR or gray appearance claims from numeric gates."
+  ],
+  "rows": [
+    {
+      "variant": "v7",
+      "probe": "rounded-elbow-1",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/rounded-elbow-1.npz",
+      "sha256": "41456fe68890f9ccf7b73bb4ec581fa5ac939187adebc07294deb27166fd583e",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 105,
+          "one_shared_source_vertex_strict_transverse_crossings": 11,
+          "one_corner_witness_source_combined_faces": [
+            [
+              7916,
+              8389
+            ],
+            [
+              8273,
+              8717
+            ],
+            [
+              8276,
+              8288
+            ],
+            [
+              8348,
+              8352
+            ],
+            [
+              24600,
+              24956
+            ],
+            [
+              24610,
+              24956
+            ],
+            [
+              24982,
+              24984
+            ],
+            [
+              24984,
+              25427
+            ],
+            [
+              25483,
+              25486
+            ],
+            [
+              26052,
+              26061
+            ]
+          ],
+          "crossing_faces": 79,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7916,
+              8390
+            ],
+            [
+              7916,
+              8401
+            ],
+            [
+              7919,
+              8401
+            ],
+            [
+              7919,
+              8409
+            ],
+            [
+              7924,
+              8409
+            ]
+          ],
+          "edge_ge_2mm_max": 5.4662277481958625,
+          "edge_ge_2mm_p99": 3.036431418191967,
+          "area_below_quarter": 34,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.372223926870991,
+          "edge_ge_2mm_p99": 1.0960763047387492,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.999973648997544,
+          "edge_ge_2mm_p99": 1.5985653558143622,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 15.604081563651562,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 45.872658491134644,
+        "nearest_witness_collar_vertex": 26433,
+        "nearest_witness_head_face_restricted": 2340,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.6296998666220952,
+            1.4616000397745246,
+            0.20807497900850733
+          ],
+          [
+            0.9189530915428332,
+            1.3172272897075357,
+            0.27389551203497847
+          ],
+          [
+            0.9895790213967443,
+            1.581958019849201,
+            0.286208719546849
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.6296999859634478,
+            1.461600073834663,
+            -0.20807500381600014
+          ],
+          [
+            0.9189532765832135,
+            1.3172272870193134,
+            -0.27389554443681546
+          ],
+          [
+            0.9861895289763922,
+            1.582302653369456,
+            -0.2845856645745114
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942815128943e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942815128943e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.3000737072285098,
+        "front_chest_max_minus_shoulder_forward_mm": 132.45365660434626,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v7",
+      "probe": "rounded-single-elbow-90",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/rounded-single-elbow-90.npz",
+      "sha256": "1d46238ad2c1ca4bcd57e423488e2e2b705ecd9d668762920955b55ee9ee835d",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.5799501613279914,
+          "edge_ge_2mm_p99": 1.2633548674993396,
+          "area_below_quarter": 14,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.1994946751581754,
+          "edge_ge_2mm_p99": 1.0170743077025046,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.5472382747204771,
+          "edge_ge_2mm_p99": 1.3682679048913928,
+          "area_below_quarter": 11,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 15.604081563651562,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 46.37422040104866,
+        "nearest_witness_collar_vertex": 26433,
+        "nearest_witness_head_face_restricted": 2340,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.6296998666220951,
+            1.4616000397745246,
+            0.20807497900850733
+          ],
+          [
+            0.6246249255670303,
+            1.1418750291353164,
+            0.28927488172942784
+          ],
+          [
+            0.8945708752997936,
+            1.1885886621258057,
+            0.2762742185153656
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.6296999859634478,
+            1.461600073834663,
+            -0.20807500381600014
+          ],
+          [
+            0.6246250383675829,
+            1.141874985852439,
+            -0.2892749071193171
+          ],
+          [
+            0.6776548984585268,
+            0.8825655839752198,
+            -0.35889107037838797
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.3000737072286208,
+        "front_chest_max_minus_shoulder_forward_mm": 130.90991028559773,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v7",
+      "probe": "rounded-forward-0.5",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/shape-lane/volume-lane/rounded-forward-0.5.npz",
+      "sha256": "8663086e644a7e3112f25a2d614e8a16a1f208c4529e314693a271a22a20fa57",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 21,
+          "one_shared_source_vertex_strict_transverse_crossings": 2,
+          "one_corner_witness_source_combined_faces": [
+            [
+              24982,
+              24984
+            ],
+            [
+              24993,
+              24996
+            ]
+          ],
+          "crossing_faces": 22,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              24956,
+              25003
+            ],
+            [
+              24957,
+              24984
+            ],
+            [
+              24963,
+              24984
+            ],
+            [
+              24963,
+              25003
+            ],
+            [
+              24980,
+              25003
+            ]
+          ],
+          "edge_ge_2mm_max": 4.230232473079096,
+          "edge_ge_2mm_p99": 2.348295528133357,
+          "area_below_quarter": 19,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0954921940842852,
+          "edge_ge_2mm_p99": 1.0333432959735225,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.038843146788081,
+          "edge_ge_2mm_p99": 1.190000924084348,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 15.604081563651562,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 46.06937617063522,
+        "nearest_witness_collar_vertex": 26433,
+        "nearest_witness_head_face_restricted": 2340,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.629699866622095,
+            1.4616000397745248,
+            0.20807497900850733
+          ],
+          [
+            0.8571957610619643,
+            1.236551380496389,
+            0.28833692906554614
+          ],
+          [
+            1.0806848527915687,
+            1.08971544473405,
+            0.3492781333117194
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.6296999859634479,
+            1.4616000738346628,
+            -0.20807500381600014
+          ],
+          [
+            0.8571959309070988,
+            1.2365513577027436,
+            -0.28833696041051554
+          ],
+          [
+            1.0830021202959672,
+            1.092936998454047,
+            -0.3456642907283026
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.3000737072286208,
+        "front_chest_max_minus_shoulder_forward_mm": 132.74825484124764,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v7",
+      "probe": "rounded-forward-1",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/shape-lane/volume-lane/rounded-forward-1.npz",
+      "sha256": "dd89646ee456b3188dfec9fc0fbbc0e816d5b589d9057c4554537ba6478247eb",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 129,
+          "one_shared_source_vertex_strict_transverse_crossings": 15,
+          "one_corner_witness_source_combined_faces": [
+            [
+              6956,
+              38074
+            ],
+            [
+              7916,
+              8389
+            ],
+            [
+              7923,
+              7924
+            ],
+            [
+              7938,
+              7940
+            ],
+            [
+              8273,
+              8728
+            ],
+            [
+              8276,
+              8288
+            ],
+            [
+              8361,
+              8362
+            ],
+            [
+              24600,
+              24956
+            ],
+            [
+              24978,
+              24981
+            ],
+            [
+              24982,
+              24984
+            ]
+          ],
+          "crossing_faces": 108,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6956,
+              38075
+            ],
+            [
+              7918,
+              7924
+            ],
+            [
+              7918,
+              7925
+            ],
+            [
+              7918,
+              8389
+            ],
+            [
+              7922,
+              7924
+            ]
+          ],
+          "edge_ge_2mm_max": 7.397693537487629,
+          "edge_ge_2mm_p99": 3.8989073978628386,
+          "area_below_quarter": 41,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.213642603943859,
+          "edge_ge_2mm_p99": 1.0837178975285433,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 3.0874646950952664,
+          "edge_ge_2mm_p99": 1.5334836427642191,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00016858739115832577,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 14.44302685558796,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 45.53638771176338,
+        "nearest_witness_collar_vertex": 26443,
+        "nearest_witness_head_face_restricted": 648,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.6296998666220953,
+            1.4616000397745246,
+            0.20807497900850733
+          ],
+          [
+            0.9579765876987393,
+            1.4616000397745248,
+            0.2409026511161717
+          ],
+          [
+            1.226939440699542,
+            1.5132005981084418,
+            0.255679748720092
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.629699985963448,
+            1.461600073834663,
+            -0.20807500381600014
+          ],
+          [
+            0.9579767818652208,
+            1.4616000738346633,
+            -0.24090268340617743
+          ],
+          [
+            1.2258534521748756,
+            1.5166084772927935,
+            -0.2516779886408327
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942804026712e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942804026712e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.30007370722839877,
+        "front_chest_max_minus_shoulder_forward_mm": 132.27328619873458,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v7",
+      "probe": "skin-single-elbow-90",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/shape-lane/volume-lane/skin-single-elbow-90.npz",
+      "sha256": "d77a3b52e8cc801d390cf56d6d72bb773417cba78fcb1ca23f5bfe72e26ef24d",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 74,
+          "one_shared_source_vertex_strict_transverse_crossings": 2,
+          "one_corner_witness_source_combined_faces": [
+            [
+              1560,
+              1659
+            ],
+            [
+              2737,
+              3097
+            ]
+          ],
+          "crossing_faces": 74,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1104,
+              1672
+            ],
+            [
+              1104,
+              1759
+            ],
+            [
+              1106,
+              1672
+            ],
+            [
+              1107,
+              1757
+            ],
+            [
+              1220,
+              1759
+            ]
+          ],
+          "edge_ge_2mm_max": 2.076179664537998,
+          "edge_ge_2mm_p99": 1.4584821305800972,
+          "area_below_quarter": 63,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.085003479602076,
+          "edge_ge_2mm_p99": 1.015330341275086,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 96,
+          "one_shared_source_vertex_strict_transverse_crossings": 2,
+          "one_corner_witness_source_combined_faces": [
+            [
+              1560,
+              1659
+            ],
+            [
+              2737,
+              3097
+            ]
+          ],
+          "crossing_faces": 95,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1104,
+              1672
+            ],
+            [
+              1104,
+              1759
+            ],
+            [
+              1106,
+              1672
+            ],
+            [
+              1107,
+              1757
+            ],
+            [
+              1220,
+              1759
+            ]
+          ],
+          "edge_ge_2mm_max": 2.076179664537998,
+          "edge_ge_2mm_p99": 1.5992143925493265,
+          "area_below_quarter": 47,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 15.604081563651562,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 46.37422040104866,
+        "nearest_witness_collar_vertex": 26433,
+        "nearest_witness_head_face_restricted": 2340,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.6296998666220951,
+            1.4616000397745246,
+            0.20807497900850733
+          ],
+          [
+            0.6246249255670303,
+            1.1418750291353164,
+            0.28927488172942784
+          ],
+          [
+            0.8945708752997936,
+            1.1885886621258057,
+            0.2762742185153656
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.6296999859634478,
+            1.461600073834663,
+            -0.20807500381600014
+          ],
+          [
+            0.6246250383675829,
+            1.141874985852439,
+            -0.2892749071193171
+          ],
+          [
+            0.6776548984585268,
+            0.8825655839752198,
+            -0.35889107037838797
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.3000737072286208,
+        "front_chest_max_minus_shoulder_forward_mm": 130.90991028559773,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v7",
+      "probe": "skin-elbow-1",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/shape-lane/volume-lane/skin-elbow-1.npz",
+      "sha256": "b12b5a7da95df1dfa6dd9319b44b4da1a1ae0cedc4de7f3e58e4fc7b0a6885be",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 259,
+          "one_shared_source_vertex_strict_transverse_crossings": 9,
+          "one_corner_witness_source_combined_faces": [
+            [
+              2137,
+              2243
+            ],
+            [
+              7919,
+              7925
+            ],
+            [
+              8273,
+              8717
+            ],
+            [
+              8275,
+              8277
+            ],
+            [
+              24600,
+              24956
+            ],
+            [
+              24610,
+              24956
+            ],
+            [
+              25587,
+              25590
+            ],
+            [
+              31598,
+              31603
+            ],
+            [
+              32608,
+              32708
+            ]
+          ],
+          "crossing_faces": 225,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              852,
+              1261
+            ],
+            [
+              852,
+              1356
+            ],
+            [
+              852,
+              1462
+            ],
+            [
+              853,
+              1260
+            ],
+            [
+              854,
+              1260
+            ]
+          ],
+          "edge_ge_2mm_max": 5.569426216886107,
+          "edge_ge_2mm_p99": 3.107848956143913,
+          "area_below_quarter": 84,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.2232450543823363,
+          "edge_ge_2mm_p99": 1.0906490029393272,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 150,
+          "one_shared_source_vertex_strict_transverse_crossings": 3,
+          "one_corner_witness_source_combined_faces": [
+            [
+              2137,
+              2243
+            ],
+            [
+              31598,
+              31603
+            ],
+            [
+              32608,
+              32708
+            ]
+          ],
+          "crossing_faces": 149,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              852,
+              1261
+            ],
+            [
+              852,
+              1356
+            ],
+            [
+              852,
+              1462
+            ],
+            [
+              853,
+              1260
+            ],
+            [
+              854,
+              1260
+            ]
+          ],
+          "edge_ge_2mm_max": 3.3955177326757178,
+          "edge_ge_2mm_p99": 1.9526600397387235,
+          "area_below_quarter": 53,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 15.604081563651562,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 45.88015377521515,
+        "nearest_witness_collar_vertex": 26433,
+        "nearest_witness_head_face_restricted": 2340,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.6296998666220952,
+            1.4616000397745246,
+            0.20807497900850733
+          ],
+          [
+            0.9189530915428332,
+            1.3172272897075357,
+            0.27389551203497847
+          ],
+          [
+            0.9895790213967443,
+            1.581958019849201,
+            0.286208719546849
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.6296999859634478,
+            1.461600073834663,
+            -0.20807500381600014
+          ],
+          [
+            0.9189532765832135,
+            1.3172272870193134,
+            -0.27389554443681546
+          ],
+          [
+            0.9861895289763922,
+            1.582302653369456,
+            -0.2845856645745114
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942815128943e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942815128943e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.3000737072285098,
+        "front_chest_max_minus_shoulder_forward_mm": 132.91087114115408,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v7",
+      "probe": "T-control",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v5-horizontal-1.npz",
+      "sha256": "6e972080da9817ae8fb6c5fbff466e9a0ab2b5571724f2e810a021e21f45eb74",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 7.114191116035854,
+          "edge_ge_2mm_p99": 3.629259834724665,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.2149838170928227,
+          "edge_ge_2mm_p99": 1.0798926126516157,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "one_shared_source_vertex_strict_transverse_crossings": 0,
+          "one_corner_witness_source_combined_faces": [],
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.8805381628256366,
+          "edge_ge_2mm_p99": 1.555896316757626,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "one_shared_source_vertex_strict_cuff_glove_crossings": 0,
+        "one_corner_witness_combined_cloth_faces": [],
+        "one_corner_witness_glove_faces": [],
+        "one_corner_witness_triangle_positions_m": [],
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "collar_head": {
+        "cloth_primitives": [
+          0,
+          2
+        ],
+        "head_primitives": [
+          3,
+          4
+        ],
+        "collar_triangles": 4650,
+        "head_triangles": 79147,
+        "nonshared_collar_vertices_queried": 3597,
+        "nearest_nonshared_collar_to_head_surface_min_mm": 15.604081563651562,
+        "nearest_nonshared_collar_to_head_surface_p50_mm": 46.510521322488785,
+        "nearest_witness_collar_vertex": 26433,
+        "nearest_witness_head_face_restricted": 2340,
+        "bvh_pairs": 0,
+        "strict_nonadjacent_transverse_crossings": 0,
+        "one_shared_source_vertex_strict_transverse_crossings": 0,
+        "one_corner_cloth_face_witnesses": [],
+        "one_corner_head_face_witnesses": [],
+        "cloth_face_witnesses": [],
+        "head_restricted_face_witnesses": [],
+        "witness_triangle_positions_m": [],
+        "gate": "FINITE_GEOMETRY_ONLY_CLEAR",
+        "limits": "Primitive/material-defined region. Intended tucked collar/hood layering requires witness review. Not head shape/appearance/anatomy acceptance; tangent/copanar contact and thickness unresolved."
+      },
+      "alignment": {
+        "joint_centres_m": [
+          [
+            0.645,
+            0.918,
+            0.0
+          ],
+          [
+            0.637,
+            1.065,
+            0.0
+          ],
+          [
+            0.63,
+            1.265,
+            0.0
+          ],
+          [
+            0.6297000165221996,
+            1.5123499486033813,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6297000165221996,
+            1.568175136843617,
+            -3.952542556870738e-09
+          ],
+          [
+            0.6296999342622916,
+            1.4616001581796196,
+            0.07104999369342667
+          ],
+          [
+            0.6296998666220951,
+            1.4616000397745246,
+            0.20807497900850722
+          ],
+          [
+            0.629699866622095,
+            1.4616000397745244,
+            0.5379890006214741
+          ],
+          [
+            0.6824041373767618,
+            1.4671043989517503,
+            0.8070874183101814
+          ],
+          [
+            0.6297000224289001,
+            1.461600158179622,
+            -0.07105001316106047
+          ],
+          [
+            0.6296999859634478,
+            1.4616000738346633,
+            -0.2080750038160003
+          ],
+          [
+            0.6296999859634477,
+            1.461600073834663,
+            -0.5379891006272909
+          ],
+          [
+            0.6868928105226553,
+            1.464560213807873,
+            -0.8056085329194521
+          ],
+          [
+            0.638,
+            0.913,
+            0.11
+          ],
+          [
+            0.647,
+            0.505,
+            0.145
+          ],
+          [
+            0.60432502856453,
+            0.11672496485273684,
+            0.18270000979292186
+          ],
+          [
+            0.638,
+            0.913,
+            -0.11
+          ],
+          [
+            0.647,
+            0.505,
+            -0.145
+          ],
+          [
+            0.6043250430635566,
+            0.11672498609534103,
+            -0.18270001645966363
+          ]
+        ],
+        "head_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "neck_minus_shoulder_forward_mm": 9.022942826231173e-05,
+        "chest_joint_minus_shoulder_forward_mm": 0.3000737072286208,
+        "front_chest_max_minus_shoulder_forward_mm": 130.92271962698476,
+        "torso_lean_degrees": -2.4752218118645355,
+        "head_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "neck_local_up_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "gate": "MATCHED_SIDE_PROFILE_VISUAL_REVIEW_REQUIRED",
+        "limits": "Estimated C19 pivots and garment-selector extent, not clinical anatomy or head appearance qualification."
+      },
+      "seams": {
+        "exact_source_alias_groups": 15806,
+        "cross_primitive_alias_groups": 585,
+        "all_alias_bbox_diagonal_max_mm": 0.0,
+        "cross_primitive_alias_bbox_diagonal_max_mm": 0.0,
+        "groups_over_0_05mm": 0,
+        "gate": "FINITE_ALIAS_GEOMETRY_CLEAR",
+        "note": "Bounding-box diagonal conservatively bounds pairwise distance; exact0 means all alias points coincide. Does not certify neighbouring triangles or intended inserted cuffs."
+      },
+      "seat": {
+        "seat_triangles": 48,
+        "projected_hip_vertices": 0,
+        "projected_skin_vertex_min_vertical_gap_mm": null,
+        "strict_hip_saddle_triangle_crossings": 0,
+        "hip_face_witnesses": [],
+        "seat_face_witnesses": [],
+        "gate": "NOT_OVER_SADDLE",
+        "limits": "Actual48 upward saddle faces, fixed source hip garment region. Vertex vertical gap is not triangle clearance, area or rider support force. Neutral/arm poses are not expected seated."
+      },
+      "nonfinite": 0
+    }
+  ]
+}

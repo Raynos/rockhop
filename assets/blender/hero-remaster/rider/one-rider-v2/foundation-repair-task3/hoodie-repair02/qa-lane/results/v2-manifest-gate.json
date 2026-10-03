@@ -1,0 +1,2308 @@
+{
+  "source": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/C19-source.glb",
+  "source_sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "methods": "Combined clothing primitives0+2, original exact source aliases exclude adjacent faces; CPU Blender BVH + strict six-edge float64 crossing predicate. Edge ratios exclude rest edges shorter2mm. Cuff vertices AND edge midpoints queried against actual glove triangles.",
+  "limits": [
+    "Finite pose/frame samples; no CCD or full-body certification.",
+    "Coplanar contacts unclassified.",
+    "Region masks fixed from source anatomy estimates.",
+    "Cuff crossing might be intended insertion; visual review mandatory.",
+    "No GPU, PBR or gray appearance claims from numeric gates."
+  ],
+  "rows": [
+    {
+      "variant": "v2-shape",
+      "probe": "raise",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-shape-raise-0.5.npz",
+      "sha256": "b474f72f34919749dfba30a8f79a0dba3d1658c2251fa01d61cb4dc4ec85f414",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 8.742394347560246,
+          "edge_ge_2mm_p99": 5.217359356791464,
+          "area_below_quarter": 2,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.1317826952281829,
+          "edge_ge_2mm_p99": 1.0000000000000167,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 8.742394347560246,
+          "edge_ge_2mm_p99": 6.297585724811315,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00014600097131278744,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-shape",
+      "probe": "raise",
+      "fraction": 1.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-shape-raise-1.npz",
+      "sha256": "a7a613cd4fa5c9b83df2ba1aaa5ef2b8739a8ba3d40760672db5f8cd15a548e9",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 6,
+          "crossing_faces": 9,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              2613,
+              2900
+            ],
+            [
+              2904,
+              2908
+            ],
+            [
+              2904,
+              3315
+            ],
+            [
+              37745,
+              37781
+            ],
+            [
+              37781,
+              37800
+            ]
+          ],
+          "edge_ge_2mm_max": 15.720694451148951,
+          "edge_ge_2mm_p99": 9.133016249991394,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.3278954315549363,
+          "edge_ge_2mm_p99": 1.0000000000000158,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 3,
+          "crossing_faces": 5,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              2613,
+              2900
+            ],
+            [
+              2904,
+              2908
+            ],
+            [
+              2904,
+              3315
+            ]
+          ],
+          "edge_ge_2mm_max": 15.720694451148951,
+          "edge_ge_2mm_p99": 11.110399066125664,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-shape",
+      "probe": "rest",
+      "fraction": 0.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-shape-rest-0.npz",
+      "sha256": "1faf9f5e017532e40ac1e4efab7736442c207d2e30ffcadc6ed92f7494ba8e24",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 2,
+          "crossing_faces": 3,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26527,
+              37873
+            ],
+            [
+              26527,
+              37989
+            ]
+          ],
+          "edge_ge_2mm_max": 1.000000000000096,
+          "edge_ge_2mm_p99": 1.0000000000000222,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000153,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000486,
+          "edge_ge_2mm_p99": 1.0000000000000129,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 5.9604644775390625e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-shape",
+      "probe": "sit",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-shape-sit-0.5.npz",
+      "sha256": "b7fdb5524ee4b80d795c14571a1239e9181e30ce14a1d022eed3c99bfd074c4f",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 140,
+          "crossing_faces": 124,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1563,
+              1757
+            ],
+            [
+              1564,
+              1572
+            ],
+            [
+              1564,
+              1757
+            ],
+            [
+              1565,
+              1572
+            ],
+            [
+              1567,
+              1572
+            ]
+          ],
+          "edge_ge_2mm_max": 6.087578098361104,
+          "edge_ge_2mm_p99": 3.209383958876679,
+          "area_below_quarter": 72,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 238,
+          "crossing_faces": 237,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6691,
+              6720
+            ],
+            [
+              6691,
+              6721
+            ],
+            [
+              6691,
+              6727
+            ],
+            [
+              6691,
+              7250
+            ],
+            [
+              6720,
+              7229
+            ]
+          ],
+          "edge_ge_2mm_max": 2.3149613233871515,
+          "edge_ge_2mm_p99": 1.9169538040440026,
+          "area_below_quarter": 31,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 146,
+          "crossing_faces": 131,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1369,
+              1375
+            ],
+            [
+              1377,
+              33025
+            ],
+            [
+              1563,
+              1757
+            ],
+            [
+              1564,
+              1572
+            ],
+            [
+              1564,
+              1757
+            ]
+          ],
+          "edge_ge_2mm_max": 8.021609548639363,
+          "edge_ge_2mm_p99": 4.683137733182051,
+          "area_below_quarter": 77,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 22,
+        "witness_combined_cloth_faces": [
+          33526,
+          33526,
+          33526,
+          1374,
+          1374,
+          1374,
+          33527,
+          33527,
+          33527,
+          33527
+        ],
+        "witness_glove_faces": [
+          6829,
+          6831,
+          6832,
+          6829,
+          6831,
+          6832,
+          6829,
+          6831,
+          6832,
+          6835
+        ],
+        "witness_triangle_positions_m": [
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ]
+            ],
+            [
+              [
+                0.15196542590257422,
+                0.8458533815538511,
+                0.2834282822077372
+              ],
+              [
+                0.16323107211389076,
+                0.8436074054431123,
+                0.29448737811887715
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ]
+            ],
+            [
+              [
+                0.15091064002025922,
+                0.842909038071267,
+                0.2835188676404204
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15001121733576928,
+                0.8399017509961878,
+                0.28432569623724263
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ]
+            ],
+            [
+              [
+                0.15001121733576928,
+                0.8399017509961878,
+                0.28432569623724263
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ],
+            [
+              [
+                0.15196542590257422,
+                0.8458533815538511,
+                0.2834282822077372
+              ],
+              [
+                0.16323107211389076,
+                0.8436074054431123,
+                0.29448737811887715
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ],
+            [
+              [
+                0.15091064002025922,
+                0.842909038071267,
+                0.2835188676404204
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15001121733576928,
+                0.8399017509961878,
+                0.28432569623724263
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ],
+            [
+              [
+                0.15001121733576928,
+                0.8399017509961878,
+                0.28432569623724263
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ],
+              [
+                0.14373116794309043,
+                0.8444612403929098,
+                0.2832227521935379
+              ]
+            ],
+            [
+              [
+                0.15196542590257422,
+                0.8458533815538511,
+                0.2834282822077372
+              ],
+              [
+                0.16323107211389076,
+                0.8436074054431123,
+                0.29448737811887715
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ],
+              [
+                0.14373116794309043,
+                0.8444612403929098,
+                0.2832227521935379
+              ]
+            ],
+            [
+              [
+                0.15091064002025922,
+                0.842909038071267,
+                0.2835188676404204
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15001121733576928,
+                0.8399017509961878,
+                0.28432569623724263
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ],
+              [
+                0.14373116794309043,
+                0.8444612403929098,
+                0.2832227521935379
+              ]
+            ],
+            [
+              [
+                0.15001121733576928,
+                0.8399017509961878,
+                0.28432569623724263
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15306110374190499,
+                0.8456360682736854,
+                0.28406055825085136
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ],
+              [
+                0.14373116794309043,
+                0.8444612403929098,
+                0.2832227521935379
+              ]
+            ],
+            [
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ],
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ]
+            ]
+          ]
+        ],
+        "gate": "FAIL",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-shape",
+      "probe": "sit",
+      "fraction": 0.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-shape-sit-0.npz",
+      "sha256": "813f343509bd455cd478964e7d320ce1221028d7323c32d33f9dc14a28a4e01c",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 150,
+          "crossing_faces": 124,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1848,
+              1954
+            ],
+            [
+              1848,
+              1955
+            ],
+            [
+              1848,
+              2150
+            ],
+            [
+              1849,
+              2150
+            ],
+            [
+              1947,
+              1955
+            ]
+          ],
+          "edge_ge_2mm_max": 4.097370312425423,
+          "edge_ge_2mm_p99": 2.4080118082438413,
+          "area_below_quarter": 90,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 156,
+          "crossing_faces": 156,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              8629,
+              8640
+            ],
+            [
+              8629,
+              8643
+            ],
+            [
+              8630,
+              8637
+            ],
+            [
+              8630,
+              8639
+            ],
+            [
+              8630,
+              8640
+            ]
+          ],
+          "edge_ge_2mm_max": 2.0766538536133625,
+          "edge_ge_2mm_p99": 1.7522484977400457,
+          "area_below_quarter": 53,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 164,
+          "crossing_faces": 128,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1275,
+              1369
+            ],
+            [
+              1275,
+              1374
+            ],
+            [
+              1275,
+              32313
+            ],
+            [
+              1275,
+              33526
+            ],
+            [
+              1275,
+              33527
+            ]
+          ],
+          "edge_ge_2mm_max": 12.7504303935414,
+          "edge_ge_2mm_p99": 4.468785715308,
+          "area_below_quarter": 93,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 23,
+        "witness_combined_cloth_faces": [
+          33529,
+          33529,
+          33526,
+          33526,
+          1374,
+          1275,
+          1275,
+          33447,
+          33447,
+          33447
+        ],
+        "witness_glove_faces": [
+          6833,
+          6834,
+          6833,
+          6834,
+          6833,
+          6833,
+          6834,
+          6828,
+          6830,
+          6829
+        ],
+        "witness_triangle_positions_m": [
+          [
+            [
+              [
+                0.15920065871587238,
+                0.8559385557212765,
+                0.28045737602805065
+              ],
+              [
+                0.14554283592963158,
+                0.8266587694935387,
+                0.2858404630020587
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15920065871587238,
+                0.8559385557212765,
+                0.28045737602805065
+              ],
+              [
+                0.14554283592963158,
+                0.8266587694935387,
+                0.2858404630020587
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.1666499362343784,
+                0.8523287823545209,
+                0.28231809007444286
+              ],
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.1666499362343784,
+                0.8523287823545209,
+                0.28231809007444286
+              ],
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.14622230362564037,
+                0.8285640390606692,
+                0.28576948428289395
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.14690355703126967,
+                0.8304488145522823,
+                0.2857357825874523
+              ],
+              [
+                0.1666499362343784,
+                0.8523287823545209,
+                0.28231809007444286
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.14554283592963158,
+                0.8266587694935387,
+                0.2858404630020587
+              ],
+              [
+                0.14302437858390427,
+                0.8188016244037315,
+                0.28727181255456
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.14554283592963158,
+                0.8266587694935387,
+                0.2858404630020587
+              ],
+              [
+                0.14302437858390427,
+                0.8188016244037315,
+                0.28727181255456
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ]
+            ],
+            [
+              [
+                0.1485351443630527,
+                0.8361199913709815,
+                0.2839550739261078
+              ],
+              [
+                0.15933286264664892,
+                0.8276349523433645,
+                0.28966950139085457
+              ],
+              [
+                0.1477198809501753,
+                0.8332960844743936,
+                0.2848303960725232
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15082788201502256,
+                0.8448641843932285,
+                0.2861067884585909
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ],
+              [
+                0.14302437858390427,
+                0.8188016244037315,
+                0.28727181255456
+              ]
+            ],
+            [
+              [
+                0.1544505531123056,
+                0.8523280334457665,
+                0.2838941121528149
+              ],
+              [
+                0.16323107211389076,
+                0.8436074054431123,
+                0.29448737811887715
+              ],
+              [
+                0.15196542590257422,
+                0.8458533815538511,
+                0.2834282822077372
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15082788201502256,
+                0.8448641843932285,
+                0.2861067884585909
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ],
+              [
+                0.14302437858390427,
+                0.8188016244037315,
+                0.28727181255456
+              ]
+            ],
+            [
+              [
+                0.15196542590257422,
+                0.8458533815538511,
+                0.2834282822077372
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ],
+              [
+                0.15091064002025922,
+                0.842909038071267,
+                0.2835188676404204
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                0.15082788201502256,
+                0.8448641843932285,
+                0.2861067884585909
+              ],
+              [
+                0.155873661270372,
+                0.8474227963025283,
+                0.2833488871721751
+              ],
+              [
+                0.14302437858390427,
+                0.8188016244037315,
+                0.28727181255456
+              ]
+            ],
+            [
+              [
+                0.15196542590257422,
+                0.8458533815538511,
+                0.2834282822077372
+              ],
+              [
+                0.16323107211389076,
+                0.8436074054431123,
+                0.29448737811887715
+              ],
+              [
+                0.16097684602624318,
+                0.8355869711763636,
+                0.29091398741887753
+              ]
+            ]
+          ]
+        ],
+        "gate": "FAIL",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-shape",
+      "probe": "sit",
+      "fraction": 1.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-shape-sit-1.npz",
+      "sha256": "74709c28aa8a07a3fd89bdd86cf736f0be95e9224bc365b7b51ee85e076dd6dd",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 123,
+          "crossing_faces": 102,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1848,
+              2150
+            ],
+            [
+              1849,
+              2150
+            ],
+            [
+              1947,
+              2146
+            ],
+            [
+              1947,
+              2150
+            ],
+            [
+              1949,
+              1954
+            ]
+          ],
+          "edge_ge_2mm_max": 9.08477548161949,
+          "edge_ge_2mm_p99": 4.937578585100634,
+          "area_below_quarter": 71,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 268,
+          "crossing_faces": 261,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6227,
+              6246
+            ],
+            [
+              6227,
+              6721
+            ],
+            [
+              6227,
+              6727
+            ],
+            [
+              6246,
+              6694
+            ],
+            [
+              6669,
+              6752
+            ]
+          ],
+          "edge_ge_2mm_max": 2.459325326517009,
+          "edge_ge_2mm_p99": 2.0477784234525194,
+          "area_below_quarter": 33,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 110,
+          "crossing_faces": 87,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1848,
+              2150
+            ],
+            [
+              1849,
+              2150
+            ],
+            [
+              1947,
+              2146
+            ],
+            [
+              1947,
+              2150
+            ],
+            [
+              1949,
+              1954
+            ]
+          ],
+          "edge_ge_2mm_max": 9.08477548161949,
+          "edge_ge_2mm_p99": 6.398801736201981,
+          "area_below_quarter": 90,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-weights",
+      "probe": "raise",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-weights-raise-0.5.npz",
+      "sha256": "7ae7926628e51c327f8195d36057e1eb851053ddd87c37f9df35411a0fb3660d",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 12.990332940221947,
+          "edge_ge_2mm_p99": 2.8169950975382787,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.068438617941718,
+          "edge_ge_2mm_p99": 1.1441348918708887,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00014600097131278744,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-weights",
+      "probe": "raise",
+      "fraction": 1.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-weights-raise-1.npz",
+      "sha256": "9ace4458f6610cd37ef6c8ef63833e66063957ad1f31f6018181f52177fe740f",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 24.475466885424176,
+          "edge_ge_2mm_p99": 4.869924915864937,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 3.134897102169682,
+          "edge_ge_2mm_p99": 1.3364110801145104,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-weights",
+      "probe": "rest",
+      "fraction": 0.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-weights-rest-0.npz",
+      "sha256": "8580b6d3c8969b860488d0bdb88325aa264470da1d5cb5e42618793edddbd184",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 2,
+          "crossing_faces": 3,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26527,
+              37873
+            ],
+            [
+              26527,
+              37989
+            ]
+          ],
+          "edge_ge_2mm_max": 1.000000000000091,
+          "edge_ge_2mm_p99": 1.0000000000000164,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000437,
+          "edge_ge_2mm_p99": 1.0000000000000062,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 5.9604644775390625e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-weights",
+      "probe": "sit",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-weights-sit-0.5.npz",
+      "sha256": "40dafb1454e4f8064e6777ead01243effd917f026dfae74f631e9dabac54b41a",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 8,
+          "crossing_faces": 11,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              6897,
+              7361
+            ],
+            [
+              8402,
+              34042
+            ],
+            [
+              8404,
+              34042
+            ]
+          ],
+          "edge_ge_2mm_max": 7.886816471969466,
+          "edge_ge_2mm_p99": 1.9285482481762402,
+          "area_below_quarter": 16,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 238,
+          "crossing_faces": 237,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6691,
+              6720
+            ],
+            [
+              6691,
+              6721
+            ],
+            [
+              6691,
+              6727
+            ],
+            [
+              6691,
+              7250
+            ],
+            [
+              6720,
+              7229
+            ]
+          ],
+          "edge_ge_2mm_max": 2.3149613233871515,
+          "edge_ge_2mm_p99": 1.9169538040440026,
+          "area_below_quarter": 31,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9304007011397162,
+          "edge_ge_2mm_p99": 1.67869626776914,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-weights",
+      "probe": "sit",
+      "fraction": 0.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-weights-sit-0.npz",
+      "sha256": "49194c7095d7dbf946021e04107a8eb44bc95e2935e44403f9770f512ed65523",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 12,
+          "crossing_faces": 13,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26526,
+              37833
+            ],
+            [
+              26526,
+              37873
+            ],
+            [
+              26526,
+              37989
+            ],
+            [
+              26526,
+              37990
+            ],
+            [
+              26527,
+              37833
+            ]
+          ],
+          "edge_ge_2mm_max": 5.716093963947995,
+          "edge_ge_2mm_p99": 1.6526610792640377,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 156,
+          "crossing_faces": 156,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              8629,
+              8640
+            ],
+            [
+              8629,
+              8643
+            ],
+            [
+              8630,
+              8637
+            ],
+            [
+              8630,
+              8639
+            ],
+            [
+              8630,
+              8640
+            ]
+          ],
+          "edge_ge_2mm_max": 2.0766538536133625,
+          "edge_ge_2mm_p99": 1.7522484977400457,
+          "area_below_quarter": 53,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.613193366368822,
+          "edge_ge_2mm_p99": 2.158407084571918,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-weights",
+      "probe": "sit",
+      "fraction": 1.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-weights-sit-1.npz",
+      "sha256": "7942b32aa8051a0926ef834d96d7ca0035ef0a7df60a9ab7fb5f5d20e1f000be",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 20,
+          "crossing_faces": 26,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              7466,
+              33997
+            ],
+            [
+              7466,
+              37885
+            ],
+            [
+              7467,
+              33997
+            ]
+          ],
+          "edge_ge_2mm_max": 12.577266861854559,
+          "edge_ge_2mm_p99": 2.684627308092486,
+          "area_below_quarter": 20,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 268,
+          "crossing_faces": 261,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6227,
+              6246
+            ],
+            [
+              6227,
+              6721
+            ],
+            [
+              6227,
+              6727
+            ],
+            [
+              6246,
+              6694
+            ],
+            [
+              6669,
+              6752
+            ]
+          ],
+          "edge_ge_2mm_max": 2.459325326517009,
+          "edge_ge_2mm_p99": 2.0477784234525194,
+          "area_below_quarter": 33,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9948343386633878,
+          "edge_ge_2mm_p99": 1.5390376640773276,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-posture",
+      "probe": "raise",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-posture-raise-0.5.npz",
+      "sha256": "7ae7926628e51c327f8195d36057e1eb851053ddd87c37f9df35411a0fb3660d",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 12.990332940221947,
+          "edge_ge_2mm_p99": 2.8169950975382787,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.068438617941718,
+          "edge_ge_2mm_p99": 1.1441348918708887,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00014600097131278744,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-posture",
+      "probe": "raise",
+      "fraction": 1.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-posture-raise-1.npz",
+      "sha256": "9ace4458f6610cd37ef6c8ef63833e66063957ad1f31f6018181f52177fe740f",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 24.475466885424176,
+          "edge_ge_2mm_p99": 4.869924915864937,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 3.134897102169682,
+          "edge_ge_2mm_p99": 1.3364110801145104,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-posture",
+      "probe": "rest",
+      "fraction": 0.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-posture-rest-0.npz",
+      "sha256": "8580b6d3c8969b860488d0bdb88325aa264470da1d5cb5e42618793edddbd184",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 2,
+          "crossing_faces": 3,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26527,
+              37873
+            ],
+            [
+              26527,
+              37989
+            ]
+          ],
+          "edge_ge_2mm_max": 1.000000000000091,
+          "edge_ge_2mm_p99": 1.0000000000000164,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000437,
+          "edge_ge_2mm_p99": 1.0000000000000062,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 5.9604644775390625e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-posture",
+      "probe": "sit",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-posture-sit-0.5.npz",
+      "sha256": "6930995a541c31d8dc70c88dba54c690761a4bbb6f8ffffe6653733646a09c6c",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 7,
+          "crossing_faces": 10,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              6897,
+              7361
+            ],
+            [
+              8402,
+              34042
+            ],
+            [
+              8404,
+              34042
+            ]
+          ],
+          "edge_ge_2mm_max": 7.886816471969466,
+          "edge_ge_2mm_p99": 1.9130412919102366,
+          "area_below_quarter": 15,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 238,
+          "crossing_faces": 237,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6691,
+              6720
+            ],
+            [
+              6691,
+              6721
+            ],
+            [
+              6691,
+              6727
+            ],
+            [
+              6691,
+              7250
+            ],
+            [
+              6720,
+              7229
+            ]
+          ],
+          "edge_ge_2mm_max": 2.3149613233871515,
+          "edge_ge_2mm_p99": 1.9169538040440026,
+          "area_below_quarter": 31,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9304007011397162,
+          "edge_ge_2mm_p99": 1.67869626776914,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-posture",
+      "probe": "sit",
+      "fraction": 0.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-posture-sit-0.npz",
+      "sha256": "af670c42a74878bbeaecc4dcc8eb597695f815217d889fc7e1953e92f93b9c20",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 5,
+          "crossing_faces": 7,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              34023,
+              34047
+            ],
+            [
+              34043,
+              34047
+            ],
+            [
+              34045,
+              34047
+            ],
+            [
+              37745,
+              37798
+            ],
+            [
+              37798,
+              37801
+            ]
+          ],
+          "edge_ge_2mm_max": 5.716093963947995,
+          "edge_ge_2mm_p99": 1.6254352287151776,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 156,
+          "crossing_faces": 156,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              8629,
+              8640
+            ],
+            [
+              8629,
+              8643
+            ],
+            [
+              8630,
+              8637
+            ],
+            [
+              8630,
+              8639
+            ],
+            [
+              8630,
+              8640
+            ]
+          ],
+          "edge_ge_2mm_max": 2.0766538536133625,
+          "edge_ge_2mm_p99": 1.7522484977400457,
+          "area_below_quarter": 53,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.613193366368822,
+          "edge_ge_2mm_p99": 2.158407084571918,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-posture",
+      "probe": "sit",
+      "fraction": 1.0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/poses/v2-posture-sit-1.npz",
+      "sha256": "fbded9621b5f05ad02ee90d127d095e649f92cb85dd7d77f25d8665047d032b0",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 15,
+          "crossing_faces": 21,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              24610,
+              24963
+            ],
+            [
+              24963,
+              24981
+            ],
+            [
+              25089,
+              37877
+            ]
+          ],
+          "edge_ge_2mm_max": 12.577266861854559,
+          "edge_ge_2mm_p99": 2.684627308092486,
+          "area_below_quarter": 24,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 268,
+          "crossing_faces": 261,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6227,
+              6246
+            ],
+            [
+              6227,
+              6721
+            ],
+            [
+              6227,
+              6727
+            ],
+            [
+              6246,
+              6694
+            ],
+            [
+              6669,
+              6752
+            ]
+          ],
+          "edge_ge_2mm_max": 2.459325326517009,
+          "edge_ge_2mm_p99": 2.0477784234525194,
+          "area_below_quarter": 33,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9948343386633878,
+          "edge_ge_2mm_p99": 1.5390376640773276,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    }
+  ]
+}

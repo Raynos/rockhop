@@ -1,0 +1,39 @@
+{
+  "engine_revision": "186",
+  "source": "hoodie-repair02/deliverables/rider-compression-v7.glb",
+  "method": "Actual stock AnimationMixer endpoint -> stop only that action -> bind_restore endpoint -> stop only restore -> endpoint again, all vertices. No global reset between transitions.",
+  "restore_vs_initial_max_component_m": 3.585767949232377e-8,
+  "repeat_endpoint_max_component_m": 0,
+  "restored_morph_influences": [
+    {
+      "name": "Protected_body_NEW_hood_joined_garment",
+      "count": 51,
+      "max_abs": 0
+    },
+    {
+      "name": "Protected_body_NEW_hood_joined_garment_1",
+      "count": 51,
+      "max_abs": 0
+    },
+    {
+      "name": "Protected_body_NEW_hood_joined_garment_2",
+      "count": 51,
+      "max_abs": 0
+    },
+    {
+      "name": "textured_1",
+      "count": 0,
+      "max_abs": 0
+    },
+    {
+      "name": "textured_2",
+      "count": 0,
+      "max_abs": 0
+    }
+  ],
+  "pass": true,
+  "limits": [
+    "CPU only, no GPU/PBR parity.",
+    "No crossfade/multiple simultaneous action or arbitrary physics-driver guarantee."
+  ]
+}

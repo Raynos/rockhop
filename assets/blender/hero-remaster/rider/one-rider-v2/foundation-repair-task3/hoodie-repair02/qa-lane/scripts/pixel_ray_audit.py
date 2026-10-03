@@ -1,0 +1,30 @@
+from pathlib import Path
+import sys,json,io,hashlib
+import numpy as np
+from PIL import Image
+from scipy.spatial.transform import Rotation
+ROOT=Path('/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3');Q=ROOT/'hoodie-repair02/qa-lane';OUT=Q/'screenshot01';sys.path.insert(0,str(ROOT/'scripts'));from glb import GLB
+meta=json.loads((OUT/'physical-v5-source-identification.json').read_text());g=GLB(meta['source']);data=np.load(OUT/'physical-v5-actual-sample304.npz');pr=[p for m in g.j['meshes']for p in m['primitives']];P=[data[f'p{i}']for i in range(5)];O=np.r_[0,np.cumsum([len(p)for p in P])];T=[g.array(p['indices']).astype(int).reshape(-1,3)for p in pr];FO=np.r_[0,np.cumsum([len(t)for t in T])];tri=np.concatenate([t+O[i]for i,t in enumerate(T)]);pos=np.concatenate(P);tr=pos[tri];e1=tr[:,1]-tr[:,0];e2=tr[:,2]-tr[:,0];uvs=[g.array(p['attributes']['TEXCOORD_0']).astype(float)for p in pr];texture_images={}
+N=[]
+for i,p in enumerate(pr):
+ if i in [0,2]:N.append(data[f'actual_normals{i}'])
+ else:
+  n=g.array(p['attributes']['NORMAL']).astype(float);N.append(np.einsum('vj,jab,vb->va',data[f'W{i}'],data['matrices'][:,:3,:3],n,optimize=False))
+norm=np.concatenate(N)
+registration=json.loads((OUT/'body34-reference-literal-diagnostic.json').read_text());btw=np.array(registration['bike_frame_to_world_affine']);wtb=np.linalg.inv(btw);camera=registration['camera'];cr=Rotation.from_quat(camera['quaternion']).as_matrix();origin=(wtb@np.r_[camera['position'],1])[:3];W,H=1280,720;near=.1;top=near*np.tan(np.radians(camera['fov'])/2)/camera['zoom'];height=2*top;width=height*W/H;left=-width/2;view=camera['view'];left+=view['offsetX']*width/view['fullWidth'];top-=view['offsetY']*height/view['fullHeight'];width*=view['width']/view['fullWidth'];height*=view['height']/view['fullHeight'];user=Image.open('/Users/raynos/Documents/Codex/2026-10-01/task-3/screenshot-defects01/user-defects.jpeg').convert('RGB')
+def trace(px,py):
+ v=np.array([left+(px+.5)*width/W,top-(py+.5)*height/H,-near]);direction=wtb[:3,:3]@cr@v;direction/=np.linalg.norm(direction);pvec=np.cross(np.repeat(direction[None],len(tr),0),e2);det=np.einsum('ij,ij->i',e1,pvec);iv=np.divide(1,det,out=np.zeros_like(det),where=abs(det)>1e-14);tv=origin-tr[:,0];u=np.einsum('ij,ij->i',tv,pvec)*iv;q=np.cross(tv,e1);v=np.einsum('j,ij->i',direction,q)*iv;t=np.einsum('ij,ij->i',e2,q)*iv;hits=np.flatnonzero((abs(det)>1e-14)&(u>=-1e-9)&(v>=-1e-9)&(u+v<=1+1e-9)&(t>0));hits=hits[np.argsort(t[hits])];result={'pixel':[px,py],'screenshot_rgb':list(user.getpixel((px,py))),'ray_origin_bike':origin.tolist(),'ray_direction_bike':direction.tolist(),'coverage':'ACTUAL_RIDER_TRIANGLE_HIT'if len(hits)else'NO_RIDER_TRIANGLE_HIT','hits':[]}
+ for fi in hits[:4]:
+  pi=int(np.searchsorted(FO,fi,side='right')-1);face=int(fi-FO[pi]);ids=T[pi][face];bc=np.array([1-u[fi]-v[fi],u[fi],v[fi]]);uv=bc@uvs[pi][ids];mat=g.j['materials'][pr[pi]['material']];tex=mat.get('pbrMetallicRoughness',{}).get('baseColorTexture');info={'primitive':pi,'face':face,'all_primitives_combined_face':int(fi),'vertices':ids.tolist(),'barycentric':bc.tolist(),'distance_m':float(t[fi]),'position_bike_m':(origin+direction*t[fi]).tolist(),'uv':uv.tolist(),'material':mat.get('name'),'doubleSided':mat.get('doubleSided',False),'alphaMode':mat.get('alphaMode','OPAQUE'),'geometric_frontface':bool(det[fi]>0)}
+  gn=np.cross(e1[fi],e2[fi]);gn/=np.linalg.norm(gn);sn=bc@norm[tri[fi]];sn/=max(np.linalg.norm(sn),1e-15);info['face_dot_shader_normal']=float(gn@sn);info['shader_normal_dot_view']=float(sn@-direction)
+  if tex:
+   ti=g.j['textures'][tex['index']];ii=ti['source'];im=g.j['images'][ii];bv=g.j['bufferViews'][im['bufferView']];raw=bytes(g.bin[bv.get('byteOffset',0):bv.get('byteOffset',0)+bv['byteLength']]);h=hashlib.sha256(raw).hexdigest()
+   if ii not in texture_images:texture_images[ii]=Image.open(io.BytesIO(raw)).convert('RGBA')
+   image=texture_images[ii];ext=tex.get('extensions',{}).get('KHR_texture_transform',{});uv=uv*np.array(ext.get('scale',[1,1]));theta=ext.get('rotation',0);uv=np.array([[np.cos(theta),-np.sin(theta)],[np.sin(theta),np.cos(theta)]])@uv+ext.get('offset',[0,0]);sampler=g.j.get('samplers',[])[ti['sampler']]if 'sampler'in ti else{}
+   for axis,key in [(0,'wrapS'),(1,'wrapT')]:
+    wrap=sampler.get(key,10497);uv[axis]=uv[axis]%1 if wrap==10497 else 1-abs(uv[axis]%2-1)if wrap==33648 else np.clip(uv[axis],0,1)
+   xy=np.minimum(np.floor(uv*np.array(image.size)).astype(int),np.array(image.size)-1);info.update({'baseColor_texture_index':tex['index'],'image_index':ii,'image_sha256':h,'image_size':image.size,'sampled_texel_xy':xy.tolist(),'original_atlas_rgba_nearest':list(image.getpixel(tuple(xy))),'baseColorFactor':mat.get('pbrMetallicRoughness',{}).get('baseColorFactor',[1,1,1,1]),'uv_origin':'upper-left per glTF2.0 section3.8.3; nearest texel diagnostic, not full filtered BRDF'})
+  result['hits'].append(info)
+ return result
+pixels=[(635,404),(615,481),(562,557),(622,581),(700,300),(765,360),(650,435),(620,413)]
+rows=[trace(x,y)for x,y in pixels];out={'source_sha256':meta['source_sha256'],'source':'Identified physicalV5 screenshot sample304. All5 rider triangle rays, actual cloth0/2, reconstructed protected1/3/4.','registration_max_error_m':registration['world_bone_fit_max_m'],'rows':rows,'primary_uv_source':'https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#images','limits':['Nearest texel samples omit linear/mipmap filtering, vertexcolors, light, BRDF and normalmapping.','Hits establish rider coverage and source surface/UV provenance at finite rays, not GPU pixel equivalence.','No scene bike/background occlusion raycast; a closest riderhit might be behind another scene object.','No inferential claim that every dark sliver is geometric hole.']};(OUT/'screenshot-pixel-ray-audit.json').write_text(json.dumps(out,indent=2));print([(r['pixel'],r['screenshot_rgb'],[(h['primitive'],h['face'],h.get('original_atlas_rgba_nearest'),h['geometric_frontface'])for h in r['hits'][:1]])for r in rows])

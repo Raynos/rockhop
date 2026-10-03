@@ -1,0 +1,11 @@
+from pathlib import Path
+import sys,json,hashlib
+import numpy as np
+ROOT=Path('/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3');Q=ROOT/'hoodie-repair02/qa-lane';OUT=Q/'screenshot01';sys.path.insert(0,str(ROOT/'hoodie-repair02/scripts'));import base
+ref=np.load(OUT/'body34-reference-sample304.npz');D=ref['joint_transforms0'];b=np.load(ROOT/'hoodie-repair02/v7-bind.npz');p=[b[f'p{i}']for i in range(5)];w=[b[f'W{i}']for i in range(5)];v=base.deform(p,w,D,closed=True)
+from glb import GLB
+a=base.G;g=GLB('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb');assert np.array_equal(a.array(a.j['skins'][0]['inverseBindMatrices']),g.array(g.j['skins'][0]['inverseBindMatrices']));names0=[a.j['nodes'][n]['name']for n in a.j['skins'][0]['joints']];names1=[g.j['nodes'][n]['name']for n in g.j['skins'][0]['joints']]
+np.savez_compressed(OUT/'v7-plain-body34-sample304.npz',**{f'p{i}':p for i,p in enumerate(v)},matrices=D)
+rows=[{'variant':'v7','probe':'plain-V7-same-body34-runtime-D','fraction':1,'path':str(OUT/'v7-plain-body34-sample304.npz')}]
+manifest={'topology_path':str(ROOT/'hoodie-repair02/v7-bind.npz'),'rows':rows,'names_by_identical_inverse_bind_slot':list(zip(names0,names1)),'source_C19_sha256':hashlib.sha256(a.raw).hexdigest(),'body34_sha256':hashlib.sha256(g.raw).hexdigest(),'v7_bind_sha256':hashlib.sha256((ROOT/'hoodie-repair02/v7-bind.npz').read_bytes()).hexdigest(),'comparison':'Exact same19 complete bone deformations in same inverse-bind basis. V7 fresh weights/rest/topology, original2 closure morphs held1, no49-specific ridecorrective morphs or standalonecage.','limits':['This is one recorded body34 reference pose, not screenshot-identical source identification or complete gameplay repair.','V7 2second49target corrective clip applies only its own motion; it is not claimed for this different gameplay pose.']}
+(Q/'body34-matched-v7-manifest.json').write_text(json.dumps(manifest,indent=2));print(json.dumps({'snapshot':str(OUT/'v7-plain-body34-sample304.npz'),'same_inverse_bind_arrays':True,'max_joint_R_det_error':float(abs(np.linalg.det(D[:,:3,:3])-1).max())}))

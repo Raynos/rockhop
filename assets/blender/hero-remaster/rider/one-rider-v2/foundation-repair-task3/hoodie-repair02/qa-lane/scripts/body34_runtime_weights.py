@@ -1,0 +1,22 @@
+from pathlib import Path
+import sys,json,hashlib
+import numpy as np
+ROOT=Path('/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3');Q=ROOT/'hoodie-repair02/qa-lane';OUT=Q/'screenshot01';sys.path.insert(0,str(ROOT/'hoodie-repair02/scripts'));import base
+from glb import GLB
+B=Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/candidate-cpu');report=Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/rig-adapter01/body-bind34/candidate-cpu/pose-manifest.json');j=json.loads(report.read_text());g=GLB(j['source']);pr=[p for m in g.j['meshes']for p in m['primitives']];N=19
+def dense(ix,weight):
+ w=np.zeros((len(ix),N));np.add.at(w,(np.arange(len(ix))[:,None],ix.astype(int)),weight);return w
+sourceW=[dense(g.array(p['attributes']['JOINTS_0']),g.array(p['attributes']['WEIGHTS_0']))for p in pr];sourceC19W=[dense(base.G.array(p['attributes']['JOINTS_0']),base.G.array(p['attributes']['WEIGHTS_0']))for p in base.PR];runtimeW=[w.copy()for w in sourceW];receipt=[]
+for mi,pi in [(0,0),(1,2)]:
+ attrs=j['primitives'][mi]['attributes'];a=[]
+ for k in ['skinIndex','skinWeight']:
+  f=B/attrs[k]['file'];assert hashlib.sha256(f.read_bytes()).hexdigest()==attrs[k]['sha256'];a.append(np.fromfile(f,dtype='<f8').reshape(-1,4));receipt.append({'path':str(f),'sha256':attrs[k]['sha256']})
+ runtimeW[pi]=dense(*a)
+D=np.load(OUT/'body34-reference-sample304.npz')['joint_transforms0'];runtimeP=base.deform(base.POS,runtimeW,D,closed=True);rawP=base.deform(base.POS,sourceW,D,closed=True);refs=np.load(OUT/'body34-reference-sample304.npz');rows=[]
+for pi,w in enumerate(runtimeW):
+ diff=w-sourceW[pi];changed=np.any(abs(diff)>1e-7,axis=1);indices=np.flatnonzero(changed);p=base.POS[pi];counts={name:int((changed&mask).sum())for name,mask in [('upper',(p[:,1]>1.08)&(p[:,1]<1.49)&(abs(p[:,2])<.405)),('hip',(p[:,1]>.69)&(p[:,1]<1.08)&(abs(p[:,2])<.245))]};row={'primitive':pi,'runtime_measured':pi in [0,2],'raw_body34_vs_C19_GLB_weight_max':float(abs(sourceW[pi]-sourceC19W[pi]).max()),'raw_body34_vs_C19_bind_weight_max':float(abs(sourceW[pi]-base.W[pi]).max()),'runtime_vs_raw_changed_vertices':len(indices),'runtime_vs_raw_max_weight_difference':float(abs(diff).max()),'runtime_vs_raw_L1_max':float(abs(diff).sum(1).max()),'regions_changed':counts,'changed_rest_bbox_m':[p[changed].min(0).tolist(),p[changed].max(0).tolist()]if changed.any()else None,'witness_vertices':[{'vertex':int(v),'rest':p[v].tolist(),'raw':sourceW[pi][v].tolist(),'runtime':w[v].tolist()}for v in indices[:8]],'max_position_change_mm':float(np.linalg.norm(runtimeP[pi]-rawP[pi],axis=1).max()*1000)}
+ if pi in [0,2]:row['runtime_dense_closed_reconstruction_vs_actual_max_m']=float(np.linalg.norm(runtimeP[pi]-refs[f'positions{pi}'],axis=1).max());runtimeP[pi]=refs[f'positions{pi}'].copy()
+ rows.append(row)
+np.savez_compressed(OUT/'body34-actual-cloth-reconstructed-other-sample304.npz',**{f'p{i}':p for i,p in enumerate(runtimeP)},**{f'W{i}':w for i,w in enumerate(runtimeW)},matrices=D)
+np.savez_compressed(OUT/'body34-raw-weight-control-sample304.npz',**{f'p{i}':p for i,p in enumerate(rawP)},matrices=D)
+meta={'source_sha256':j['sourceSHA256'],'receipts':receipt,'rows':rows,'limits':['Runtime weights and actualpositions measured only garment primitives0/2; glove/head primitives1/3/4 reconstructed from raw weights+closed hand morphs+sameD, not runtime readback.','Dense reconstruction incorporates exact recorded complete jointTransforms; minor errors from float weightsums vs Three outeraffine homogeneous handling remain explicitly measured.','Raw weights no-op control isolates runtime conditioning at identical restmesh,bind andjointD; source metadata/names may activate conditioning.','No exact screenshot source attribution yet.']};(OUT/'body34-runtime-weight-audit.json').write_text(json.dumps(meta,indent=2));print([{k:v for k,v in r.items()if k not in ['witness_vertices','changed_rest_bbox_m']}for r in rows]);(Q/'body34-weight-ablation-manifest.json').write_text(json.dumps({'rows':[{'variant':'source','probe':'body34-rawweights-no-conditioning','fraction':1,'path':str(OUT/'body34-raw-weight-control-sample304.npz')},{'variant':'source','probe':'body34-measured-runtime-weights','fraction':1,'path':str(OUT/'body34-actual-cloth-reconstructed-other-sample304.npz')}],'limits':meta['limits']},indent=2))

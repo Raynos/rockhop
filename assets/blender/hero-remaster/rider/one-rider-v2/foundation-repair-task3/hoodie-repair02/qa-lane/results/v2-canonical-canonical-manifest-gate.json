@@ -1,0 +1,2709 @@
+{
+  "source": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/C19-source.glb",
+  "source_sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "methods": "Combined clothing primitives0+2, original exact source aliases exclude adjacent faces; CPU Blender BVH + strict six-edge float64 crossing predicate. Edge ratios exclude rest edges shorter2mm. Cuff vertices AND edge midpoints queried against actual glove triangles.",
+  "limits": [
+    "Finite pose/frame samples; no CCD or full-body certification.",
+    "Coplanar contacts unclassified.",
+    "Region masks fixed from source anatomy estimates.",
+    "Cuff crossing might be intended insertion; visual review mandatory.",
+    "No GPU, PBR or gray appearance claims from numeric gates."
+  ],
+  "rows": [
+    {
+      "variant": "v2-canonical",
+      "probe": "neutral",
+      "fraction": 0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-neutral-0.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "8580b6d3c8969b860488d0bdb88325aa264470da1d5cb5e42618793edddbd184",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 2,
+          "crossing_faces": 3,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26527,
+              37873
+            ],
+            [
+              26527,
+              37989
+            ]
+          ],
+          "edge_ge_2mm_max": 1.000000000000091,
+          "edge_ge_2mm_p99": 1.0000000000000164,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000437,
+          "edge_ge_2mm_p99": 1.0000000000000062,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 5.9604644775390625e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "horizontal",
+      "fraction": 0.25,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-horizontal-0.25.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "811689670fd42597965b9553f1c8a673e8ed49f605bb1c9485a98b3dba2e9bf0",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 6.664257178154849,
+          "edge_ge_2mm_p99": 1.7744447171195221,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.5257249241136932,
+          "edge_ge_2mm_p99": 1.0593326071325722,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00011920928955078125,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "horizontal",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-horizontal-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "57ea014aee62df36bef355c598837a50deee33d9ee79d3bcb9a8855dab157ff2",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 12.990332940221947,
+          "edge_ge_2mm_p99": 2.816995097538267,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.068438617941718,
+          "edge_ge_2mm_p99": 1.1441348918708887,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00014600097131278744,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "horizontal",
+      "fraction": 0.75,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-horizontal-0.75.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "8a2dcce895c12694f370f829f6f2c92768b4e5282526b239588660e34efb1a28",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 18.988122581543983,
+          "edge_ge_2mm_p99": 3.9118628610398107,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.627424713640456,
+          "edge_ge_2mm_p99": 1.2372870809238339,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00011920928955078125,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "horizontal",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-horizontal-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "e08f9f01b5b6a5059c1a1549593e6eded13340efee7cb8d6c98d8364440efe57",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 24.475466885424176,
+          "edge_ge_2mm_p99": 4.869924915864948,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 3.1348971021697176,
+          "edge_ge_2mm_p99": 1.3364110801145228,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "overhead",
+      "fraction": 0.25,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-overhead-0.25.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "9a3ace46929911fcd03803b6bb9e46750f9185a5321d58ebc5c6f39876d73667",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 13.672248825218162,
+          "edge_ge_2mm_p99": 2.9405616721942494,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.1238569998349943,
+          "edge_ge_2mm_p99": 1.1546022031528271,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "overhead",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-overhead-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "6c47a60c8897159248ed658e85acc8245940c9d84eab2c4d09b097e1079c6d34",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 25.60068992371101,
+          "edge_ge_2mm_p99": 5.0897257796105775,
+          "area_below_quarter": 1,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 3.23224001566175,
+          "edge_ge_2mm_p99": 1.355556856397563,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00011920928955078125,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "overhead",
+      "fraction": 0.75,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-overhead-0.75.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "d72fd6879e254f1a73b337c5decead2c3cbd247f2dac5713b4ef3bcaf827fbd7",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 34.454903342382124,
+          "edge_ge_2mm_p99": 6.678970628637708,
+          "area_below_quarter": 2,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 4.003913838816187,
+          "edge_ge_2mm_p99": 1.4638575451317013,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "overhead",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-overhead-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "7b5945bedc66060ac4adc576e462bfe6ae98fdc0ab2af4ef4e2d29d017c0e6c3",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 40,
+          "crossing_faces": 41,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              4450,
+              6453
+            ],
+            [
+              4450,
+              6454
+            ],
+            [
+              4450,
+              6456
+            ],
+            [
+              4451,
+              6456
+            ],
+            [
+              4452,
+              6456
+            ]
+          ],
+          "edge_ge_2mm_max": 39.157301195585234,
+          "edge_ge_2mm_p99": 7.462742491221423,
+          "area_below_quarter": 142,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.0000000000000149,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 4.318469418178957,
+          "edge_ge_2mm_p99": 1.4720371168961788,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00024755667027420714,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "forward",
+      "fraction": 0.25,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-forward-0.25.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "e6d22c2fba31a90a91f11d4bc6437bd0c7ff3ef2de3fc1fefd4c1fcca7ff6edc",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 7.31228175793028,
+          "edge_ge_2mm_p99": 1.8277291682893455,
+          "area_below_quarter": 23,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.5310023656571579,
+          "edge_ge_2mm_p99": 1.0113858175415635,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 8.429369557916289e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "forward",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-forward-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "3e191ee136389055ab5645c65fa5f3eed7c9a73ad2d02ec3ae5a0720f7926812",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 77,
+          "crossing_faces": 78,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7918,
+              7925
+            ],
+            [
+              7918,
+              8389
+            ],
+            [
+              7922,
+              7925
+            ],
+            [
+              7923,
+              7925
+            ],
+            [
+              7925,
+              7928
+            ]
+          ],
+          "edge_ge_2mm_max": 14.210730435754499,
+          "edge_ge_2mm_p99": 3.0040866270639537,
+          "area_below_quarter": 32,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.2132959549316533,
+          "edge_ge_2mm_p99": 1.0586055444587894,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "forward",
+      "fraction": 0.75,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-forward-0.75.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "da3ae6db8cefe98df8d7b3e3f9ad770634acea245e80722922535297dbe7cf07",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 102,
+          "crossing_faces": 102,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7933,
+              7945
+            ],
+            [
+              7934,
+              7945
+            ],
+            [
+              7936,
+              7945
+            ],
+            [
+              7938,
+              7942
+            ],
+            [
+              7938,
+              7943
+            ]
+          ],
+          "edge_ge_2mm_max": 20.59325971108068,
+          "edge_ge_2mm_p99": 4.1425263042870055,
+          "area_below_quarter": 30,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.8774429002678747,
+          "edge_ge_2mm_p99": 1.1501716523178502,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00016858739115832577,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "forward",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-forward-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "4b62614d4ee2a14206342026a329f7bb7117fb2033445b6d6ee29b2cde50bac2",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 133,
+          "crossing_faces": 120,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6452,
+              33996
+            ],
+            [
+              6452,
+              37883
+            ],
+            [
+              6452,
+              37884
+            ],
+            [
+              7466,
+              33996
+            ],
+            [
+              7467,
+              33995
+            ]
+          ],
+          "edge_ge_2mm_max": 26.200243995879127,
+          "edge_ge_2mm_p99": 5.158591868304498,
+          "area_below_quarter": 34,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 3.4609482545654306,
+          "edge_ge_2mm_p99": 1.2447942315640692,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00016858739115832577,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "elbow",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-elbow-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "2e35bcaebe4b7a9b5cb8d84c7adf533414baf3e99ce40041643501208c70e11a",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 94,
+          "crossing_faces": 90,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7933,
+              7941
+            ],
+            [
+              7933,
+              7945
+            ],
+            [
+              7934,
+              7941
+            ],
+            [
+              7936,
+              7941
+            ],
+            [
+              7938,
+              7942
+            ]
+          ],
+          "edge_ge_2mm_max": 19.372836129543487,
+          "edge_ge_2mm_p99": 3.9186303398259357,
+          "area_below_quarter": 25,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.008751446701449,
+          "edge_ge_2mm_p99": 1.0000000000000158,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.893117604413467,
+          "edge_ge_2mm_p99": 1.6807658250229827,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.0001712013073529306,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "elbow",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-elbow-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "2cae55726028c8033ab2ef1ae1d3ecf90fdc870fd57d1b6063fefbdb032a4972",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 222,
+          "crossing_faces": 221,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              701,
+              1038
+            ],
+            [
+              704,
+              924
+            ],
+            [
+              704,
+              1032
+            ],
+            [
+              704,
+              1033
+            ],
+            [
+              705,
+              1033
+            ]
+          ],
+          "edge_ge_2mm_max": 19.383160761452675,
+          "edge_ge_2mm_p99": 4.00068658722479,
+          "area_below_quarter": 111,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0133177065713201,
+          "edge_ge_2mm_p99": 1.0000000000000158,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 197,
+          "crossing_faces": 201,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              701,
+              1038
+            ],
+            [
+              704,
+              924
+            ],
+            [
+              704,
+              1032
+            ],
+            [
+              704,
+              1033
+            ],
+            [
+              705,
+              1033
+            ]
+          ],
+          "edge_ge_2mm_max": 3.433773288177022,
+          "edge_ge_2mm_p99": 1.9925042212342146,
+          "area_below_quarter": 68,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00013328003944934608,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "twist",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-twist-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "a1769746480816a11e39a07d70fff60514d29150a9fb6cc1563d341dbde4d5e6",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 90,
+          "crossing_faces": 87,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7933,
+              7941
+            ],
+            [
+              7933,
+              7945
+            ],
+            [
+              7934,
+              7941
+            ],
+            [
+              7936,
+              7941
+            ],
+            [
+              7938,
+              7942
+            ]
+          ],
+          "edge_ge_2mm_max": 19.363243557283266,
+          "edge_ge_2mm_p99": 3.9230951082231087,
+          "area_below_quarter": 25,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0033111589632429,
+          "edge_ge_2mm_p99": 1.0000000000000153,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.749238855294732,
+          "edge_ge_2mm_p99": 1.337614914195284,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "twist",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-twist-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "c12b00a20f29203f8cdbbadfa1cd760d48749bbc9302d832c5c114d6d2194287",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 92,
+          "crossing_faces": 91,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7933,
+              7941
+            ],
+            [
+              7933,
+              7945
+            ],
+            [
+              7934,
+              7941
+            ],
+            [
+              7936,
+              7941
+            ],
+            [
+              7938,
+              7942
+            ]
+          ],
+          "edge_ge_2mm_max": 19.360530831124308,
+          "edge_ge_2mm_p99": 3.9233316639014197,
+          "area_below_quarter": 26,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0031519276397147,
+          "edge_ge_2mm_p99": 1.0000000000000153,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.7508733871923354,
+          "edge_ge_2mm_p99": 1.6175929897288075,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "wrist",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-wrist-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "8d999f55af6c4f77c079aad31241d37e0cca4bb1e50797dfd1dbfda7dabad1e7",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 94,
+          "crossing_faces": 90,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7933,
+              7941
+            ],
+            [
+              7933,
+              7945
+            ],
+            [
+              7934,
+              7941
+            ],
+            [
+              7936,
+              7941
+            ],
+            [
+              7938,
+              7942
+            ]
+          ],
+          "edge_ge_2mm_max": 19.371204791461512,
+          "edge_ge_2mm_p99": 3.917866307246473,
+          "area_below_quarter": 25,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.7496519981182495,
+          "edge_ge_2mm_p99": 1.5238217636016957,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "wrist",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-wrist-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "413e46ec3bf7a872d0f6cddb4ab7cd916527582e5a89c6f22b34b94129ee0307",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 94,
+          "crossing_faces": 90,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7933,
+              7941
+            ],
+            [
+              7933,
+              7945
+            ],
+            [
+              7934,
+              7941
+            ],
+            [
+              7936,
+              7941
+            ],
+            [
+              7938,
+              7942
+            ]
+          ],
+          "edge_ge_2mm_max": 19.371204791461512,
+          "edge_ge_2mm_p99": 3.917866307246473,
+          "area_below_quarter": 25,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000446,
+          "edge_ge_2mm_p99": 1.000000000000015,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 9,
+          "crossing_faces": 14,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              581,
+              812
+            ],
+            [
+              1189,
+              1405
+            ],
+            [
+              32209,
+              32330
+            ],
+            [
+              32210,
+              32330
+            ],
+            [
+              32660,
+              32945
+            ]
+          ],
+          "edge_ge_2mm_max": 2.7496519981182495,
+          "edge_ge_2mm_p99": 1.9137971270041978,
+          "area_below_quarter": 16,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 0.00012287812012345967,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "squat",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-squat-0.5.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "9145eee9f1046d73a014f8c44ed4bc48b0e0e2cfaa0abac50f46a6e29f9ef3f7",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 2,
+          "crossing_faces": 3,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26527,
+              37873
+            ],
+            [
+              26527,
+              37989
+            ]
+          ],
+          "edge_ge_2mm_max": 1.0000000000001887,
+          "edge_ge_2mm_p99": 1.0000000000000342,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.814379718647402,
+          "edge_ge_2mm_p99": 1.5804856031020444,
+          "area_below_quarter": 92,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000673,
+          "edge_ge_2mm_p99": 1.0000000000000249,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 8.429369557916289e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "squat",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-squat-1.npz",
+      "closed_glove_morph": false,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "213fe2ef4e4492a9514cda9b45909447688b6bc245a60a0d4bf02516a2500ac3",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 2,
+          "crossing_faces": 3,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              26527,
+              37873
+            ],
+            [
+              26527,
+              37989
+            ]
+          ],
+          "edge_ge_2mm_max": 1.000000000000147,
+          "edge_ge_2mm_p99": 1.0000000000000318,
+          "area_below_quarter": 0,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 202,
+          "crossing_faces": 203,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6691,
+              7246
+            ],
+            [
+              6691,
+              7248
+            ],
+            [
+              7222,
+              7248
+            ],
+            [
+              7224,
+              7248
+            ],
+            [
+              7224,
+              7689
+            ]
+          ],
+          "edge_ge_2mm_max": 2.222923134866686,
+          "edge_ge_2mm_p99": 1.8881266253509135,
+          "area_below_quarter": 61,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.0000000000000466,
+          "edge_ge_2mm_p99": 1.0000000000000226,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.664001972467304e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "af670c42a74878bbeaecc4dcc8eb597695f815217d889fc7e1953e92f93b9c20",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 5,
+          "crossing_faces": 7,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              34023,
+              34047
+            ],
+            [
+              34043,
+              34047
+            ],
+            [
+              34045,
+              34047
+            ],
+            [
+              37745,
+              37798
+            ],
+            [
+              37798,
+              37801
+            ]
+          ],
+          "edge_ge_2mm_max": 5.716093963947995,
+          "edge_ge_2mm_p99": 1.6254352287151776,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 156,
+          "crossing_faces": 156,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              8629,
+              8640
+            ],
+            [
+              8629,
+              8643
+            ],
+            [
+              8630,
+              8637
+            ],
+            [
+              8630,
+              8639
+            ],
+            [
+              8630,
+              8640
+            ]
+          ],
+          "edge_ge_2mm_max": 2.0766538536133625,
+          "edge_ge_2mm_p99": 1.7522484977400457,
+          "area_below_quarter": 53,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.613193366368822,
+          "edge_ge_2mm_p99": 2.158407084571918,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.125,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.125.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "05d7b0ef65d29b270d3ea323518f3d96c1274221fa691a37392207c34bf24726",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 4,
+          "crossing_faces": 6,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              34023,
+              34047
+            ],
+            [
+              34045,
+              34047
+            ],
+            [
+              37745,
+              37798
+            ],
+            [
+              37798,
+              37801
+            ]
+          ],
+          "edge_ge_2mm_max": 5.774623102662872,
+          "edge_ge_2mm_p99": 1.6372840811180833,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 169,
+          "crossing_faces": 168,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              8161,
+              8175
+            ],
+            [
+              8161,
+              8180
+            ],
+            [
+              8161,
+              8181
+            ],
+            [
+              8161,
+              8182
+            ],
+            [
+              8170,
+              9002
+            ]
+          ],
+          "edge_ge_2mm_max": 2.1065475135089535,
+          "edge_ge_2mm_p99": 1.7699693647876702,
+          "area_below_quarter": 38,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.5427649268968855,
+          "edge_ge_2mm_p99": 2.097831625283644,
+          "area_below_quarter": 3,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.25,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.25.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "6d704b85e19b9b37e8ed573c9356bf07b7c694663887c42748fc1649da36e763",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 4,
+          "crossing_faces": 6,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              34023,
+              34047
+            ],
+            [
+              34045,
+              34047
+            ],
+            [
+              37745,
+              37798
+            ],
+            [
+              37798,
+              37801
+            ]
+          ],
+          "edge_ge_2mm_max": 6.055461469862617,
+          "edge_ge_2mm_p99": 1.6842428435513972,
+          "area_below_quarter": 9,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 187,
+          "crossing_faces": 186,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7673,
+              7682
+            ],
+            [
+              7673,
+              7685
+            ],
+            [
+              7673,
+              7686
+            ],
+            [
+              7673,
+              7687
+            ],
+            [
+              7673,
+              7688
+            ]
+          ],
+          "edge_ge_2mm_max": 2.1722583170724614,
+          "edge_ge_2mm_p99": 1.8204714027073963,
+          "area_below_quarter": 32,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.362912441551974,
+          "edge_ge_2mm_p99": 1.9560752656721172,
+          "area_below_quarter": 4,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.375,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.375.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "6a88098b0e088b214fe908291905653dedf4c8416dbbf9b5ef6c5694b47014a9",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 5,
+          "crossing_faces": 8,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              8402,
+              34042
+            ],
+            [
+              34023,
+              34047
+            ],
+            [
+              34045,
+              34047
+            ],
+            [
+              37745,
+              37798
+            ],
+            [
+              37798,
+              37801
+            ]
+          ],
+          "edge_ge_2mm_max": 6.739166067129065,
+          "edge_ge_2mm_p99": 1.7605247872330956,
+          "area_below_quarter": 10,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 208,
+          "crossing_faces": 209,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              7230,
+              7246
+            ],
+            [
+              7230,
+              7248
+            ],
+            [
+              7230,
+              7680
+            ],
+            [
+              7230,
+              7681
+            ],
+            [
+              7230,
+              7684
+            ]
+          ],
+          "edge_ge_2mm_max": 2.2460075963119803,
+          "edge_ge_2mm_p99": 1.865826518721856,
+          "area_below_quarter": 32,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.1305267906590295,
+          "edge_ge_2mm_p99": 1.7804589146225407,
+          "area_below_quarter": 4,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.5.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "6930995a541c31d8dc70c88dba54c690761a4bbb6f8ffffe6653733646a09c6c",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 7,
+          "crossing_faces": 10,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              6897,
+              7361
+            ],
+            [
+              8402,
+              34042
+            ],
+            [
+              8404,
+              34042
+            ]
+          ],
+          "edge_ge_2mm_max": 7.886816471969466,
+          "edge_ge_2mm_p99": 1.9130412919102366,
+          "area_below_quarter": 15,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 238,
+          "crossing_faces": 237,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6691,
+              6720
+            ],
+            [
+              6691,
+              6721
+            ],
+            [
+              6691,
+              6727
+            ],
+            [
+              6691,
+              7250
+            ],
+            [
+              6720,
+              7229
+            ]
+          ],
+          "edge_ge_2mm_max": 2.3149613233871515,
+          "edge_ge_2mm_p99": 1.9169538040440026,
+          "area_below_quarter": 31,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9304007011397162,
+          "edge_ge_2mm_p99": 1.67869626776914,
+          "area_below_quarter": 6,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.625,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.625.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "36de78efac039e0ad54e2e56a4386a25ed09af5d2feff3e94f2d263328028a60",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 7,
+          "crossing_faces": 10,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              6897,
+              7361
+            ],
+            [
+              25396,
+              25981
+            ],
+            [
+              25397,
+              25981
+            ]
+          ],
+          "edge_ge_2mm_max": 9.367988826462796,
+          "edge_ge_2mm_p99": 2.1408078862985103,
+          "area_below_quarter": 20,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 240,
+          "crossing_faces": 240,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6690,
+              6720
+            ],
+            [
+              6690,
+              6721
+            ],
+            [
+              6690,
+              6727
+            ],
+            [
+              6691,
+              6727
+            ],
+            [
+              6691,
+              7250
+            ]
+          ],
+          "edge_ge_2mm_max": 2.3736731850587924,
+          "edge_ge_2mm_p99": 1.9615162131586195,
+          "area_below_quarter": 32,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.8986889458889928,
+          "edge_ge_2mm_p99": 1.6276093036911112,
+          "area_below_quarter": 5,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.75,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.75.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "aaa2eabd496666ffd91b9a25ca2aa91cb4cb385f9cdfc76e4ab4ce3f8f3d5f57",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 14,
+          "crossing_faces": 17,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              6897,
+              7361
+            ],
+            [
+              7466,
+              33997
+            ],
+            [
+              7466,
+              37885
+            ]
+          ],
+          "edge_ge_2mm_max": 10.894782175884647,
+          "edge_ge_2mm_p99": 2.3778587356223913,
+          "area_below_quarter": 22,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 266,
+          "crossing_faces": 258,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6670,
+              6752
+            ],
+            [
+              6670,
+              6755
+            ],
+            [
+              6690,
+              6727
+            ],
+            [
+              6690,
+              7250
+            ],
+            [
+              6691,
+              7250
+            ]
+          ],
+          "edge_ge_2mm_max": 2.4190773506374255,
+          "edge_ge_2mm_p99": 2.0000020698858862,
+          "area_below_quarter": 29,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.949481040658896,
+          "edge_ge_2mm_p99": 1.5856487546649425,
+          "area_below_quarter": 3,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 0.875,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-0.875.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "4e85e3d18986fbd1bd6e0cc740ae5337aaf8423fe23d4b53181a57766b86c610",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 12,
+          "crossing_faces": 19,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              24610,
+              24963
+            ],
+            [
+              24963,
+              24981
+            ],
+            [
+              25089,
+              37877
+            ]
+          ],
+          "edge_ge_2mm_max": 12.095650586222341,
+          "edge_ge_2mm_p99": 2.5915533630044743,
+          "area_below_quarter": 24,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 265,
+          "crossing_faces": 261,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6227,
+              6721
+            ],
+            [
+              6227,
+              6727
+            ],
+            [
+              6669,
+              6751
+            ],
+            [
+              6670,
+              6751
+            ],
+            [
+              6670,
+              6752
+            ]
+          ],
+          "edge_ge_2mm_max": 2.4486140512134766,
+          "edge_ge_2mm_p99": 2.0403045893405625,
+          "area_below_quarter": 31,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9828009615926894,
+          "edge_ge_2mm_p99": 1.5535922770404116,
+          "area_below_quarter": 2,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "sit",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-sit-1.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "fbded9621b5f05ad02ee90d127d095e649f92cb85dd7d77f25d8665047d032b0",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 15,
+          "crossing_faces": 21,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              24610,
+              24963
+            ],
+            [
+              24963,
+              24981
+            ],
+            [
+              25089,
+              37877
+            ]
+          ],
+          "edge_ge_2mm_max": 12.577266861854559,
+          "edge_ge_2mm_p99": 2.684627308092486,
+          "area_below_quarter": 24,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 268,
+          "crossing_faces": 261,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6227,
+              6246
+            ],
+            [
+              6227,
+              6721
+            ],
+            [
+              6227,
+              6727
+            ],
+            [
+              6246,
+              6694
+            ],
+            [
+              6669,
+              6752
+            ]
+          ],
+          "edge_ge_2mm_max": 2.459325326517009,
+          "edge_ge_2mm_p99": 2.0477784234525194,
+          "area_below_quarter": 33,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 1.9948343386633878,
+          "edge_ge_2mm_p99": 1.5390376640773276,
+          "area_below_quarter": 0,
+          "gate": "NUMERIC_ONLY_CLEAR"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "lean",
+      "fraction": 0.5,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-lean-0.5.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "d3b3741e11bb7c8aa52a4b35e6fdb3f97e49633806142db2cb2518ebec32d885",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 8,
+          "crossing_faces": 11,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6886,
+              7354
+            ],
+            [
+              6887,
+              7354
+            ],
+            [
+              6892,
+              7354
+            ],
+            [
+              6897,
+              7354
+            ],
+            [
+              25396,
+              25981
+            ]
+          ],
+          "edge_ge_2mm_max": 11.304119185252416,
+          "edge_ge_2mm_p99": 2.458020189646777,
+          "area_below_quarter": 70,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 279,
+          "crossing_faces": 274,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6227,
+              6247
+            ],
+            [
+              6227,
+              6717
+            ],
+            [
+              6227,
+              6725
+            ],
+            [
+              6227,
+              6726
+            ],
+            [
+              6230,
+              6246
+            ]
+          ],
+          "edge_ge_2mm_max": 2.533981620226581,
+          "edge_ge_2mm_p99": 2.08291239409999,
+          "area_below_quarter": 34,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 0,
+          "crossing_faces": 0,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [],
+          "edge_ge_2mm_max": 2.1078998821155333,
+          "edge_ge_2mm_p99": 1.6818852535062334,
+          "area_below_quarter": 44,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    },
+    {
+      "variant": "v2-canonical",
+      "probe": "lean",
+      "fraction": 1,
+      "path": "/Users/raynos/Documents/Codex/2026-10-01/task-3/hoodie-repair02/qa-lane/poses/v2-canonical-lean-1.npz",
+      "closed_glove_morph": true,
+      "source_relative_rest": "v2-canonical",
+      "head_neck_posture": "root_natural",
+      "sha256": "b73a596157c92cc75f505f53426cf1d96d7963259ca6df5bb6b6bb72b625e441",
+      "regions": {
+        "shoulder_underarm": {
+          "triangles": 10911,
+          "strict_transverse_crossings": 182,
+          "crossing_faces": 177,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1545,
+              1857
+            ],
+            [
+              1545,
+              1858
+            ],
+            [
+              1545,
+              1959
+            ],
+            [
+              1545,
+              2053
+            ],
+            [
+              1548,
+              1857
+            ]
+          ],
+          "edge_ge_2mm_max": 10.495863317361858,
+          "edge_ge_2mm_p99": 2.3364222048377337,
+          "area_below_quarter": 97,
+          "gate": "FAIL"
+        },
+        "hip": {
+          "triangles": 6776,
+          "strict_transverse_crossings": 296,
+          "crossing_faces": 293,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              6191,
+              6266
+            ],
+            [
+              6195,
+              6262
+            ],
+            [
+              6195,
+              6266
+            ],
+            [
+              6202,
+              6257
+            ],
+            [
+              6202,
+              6258
+            ]
+          ],
+          "edge_ge_2mm_max": 2.5991985831630093,
+          "edge_ge_2mm_p99": 2.11834755396693,
+          "area_below_quarter": 35,
+          "gate": "FAIL"
+        },
+        "cuff_elbow": {
+          "triangles": 5296,
+          "strict_transverse_crossings": 190,
+          "crossing_faces": 185,
+          "unclassified_parallel_candidates": 0,
+          "witness_source_combined_faces": [
+            [
+              1545,
+              1857
+            ],
+            [
+              1545,
+              1858
+            ],
+            [
+              1545,
+              1959
+            ],
+            [
+              1545,
+              2053
+            ],
+            [
+              1548,
+              1857
+            ]
+          ],
+          "edge_ge_2mm_max": 2.195083654413688,
+          "edge_ge_2mm_p99": 1.7837457169576367,
+          "area_below_quarter": 70,
+          "gate": "FAIL"
+        }
+      },
+      "cuff": {
+        "sample_basis": "complete-cloth exact-weld boundary vertices and edge midpoints",
+        "boundary_edges": 127,
+        "samples": 254,
+        "nearest_glove_surface_min_mm": 0.0,
+        "nearest_glove_surface_p50_mm": 0.0,
+        "nearest_glove_surface_max_mm": 6.143906006172983e-05,
+        "strict_cuff_glove_crossings": 0,
+        "witness_combined_cloth_faces": [],
+        "witness_glove_faces": [],
+        "witness_triangle_positions_m": [],
+        "gate": "VISUAL_REVIEW_REQUIRED",
+        "note": "Overlap is not seam equality. Intended insertion may penetrate glove interior; crossing counts require garment construction review."
+      },
+      "nonfinite": 0
+    }
+  ]
+}

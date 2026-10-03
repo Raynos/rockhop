@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "variant": "source",
+      "probe": "body34-rawweights-no-conditioning",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/screenshot01/body34-raw-weight-control-sample304.npz"
+    },
+    {
+      "variant": "source",
+      "probe": "body34-measured-runtime-weights",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/screenshot01/body34-actual-cloth-reconstructed-other-sample304.npz"
+    }
+  ],
+  "limits": [
+    "Runtime weights and actualpositions measured only garment primitives0/2; glove/head primitives1/3/4 reconstructed from raw weights+closed hand morphs+sameD, not runtime readback.",
+    "Dense reconstruction incorporates exact recorded complete jointTransforms; minor errors from float weightsums vs Three outeraffine homogeneous handling remain explicitly measured.",
+    "Raw weights no-op control isolates runtime conditioning at identical restmesh,bind andjointD; source metadata/names may activate conditioning.",
+    "No exact screenshot source attribution yet."
+  ]
+}
