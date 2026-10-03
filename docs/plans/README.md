@@ -867,4 +867,4 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Current iOS Release compile retained:** The [clean-source unsigned simulator Release build](../evidence/store-release/native/20260930-200644/README.md#release-configuration-compile) from59492376 passes; strict actual release web/shell IP audit has zero hits in198 files. Debug/native played proofs remain separate. No signed-device, phone, TestFlight or store approval is claimed; existing human/device gates remain.
 
-**Commit and push inventory (ask273):** Checkpointed 3/3 inherited foundation units (references); publication verification pending. Experimental rider checkpoints remain unaccepted; M0–M5 stay open. Temporary downloads/guards and ignored local masters remain local.
+**Commit and push inventory (ask273):** Three inherited foundation units and their review/handoff are checkpointed; generation/audit handoffs and publication verification are pending. Experimental rider checkpoints remain unaccepted; M0–M5 stay open. Temporary downloads/guards and ignored local masters remain local.
