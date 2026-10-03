@@ -1,0 +1,50 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "cases": [
+    {
+      "case": "anonymous-admission55",
+      "syntheticMemory": true,
+      "result": 75,
+      "status": "refused headroom; no child launched",
+      "onlyOwnedGroupTerminated": true
+    },
+    {
+      "case": "combined-admission68",
+      "syntheticMemory": true,
+      "result": 75,
+      "status": "refused headroom; no child launched",
+      "onlyOwnedGroupTerminated": true
+    },
+    {
+      "case": "combined95-allowed",
+      "syntheticMemory": true,
+      "result": 0,
+      "status": "worker returned; review pending",
+      "onlyOwnedGroupTerminated": true
+    },
+    {
+      "case": "combined96-stopped",
+      "syntheticMemory": true,
+      "result": 74,
+      "status": "stopped owned child at memory bound",
+      "onlyOwnedGroupTerminated": true
+    },
+    {
+      "case": "anonymous65-stopped",
+      "syntheticMemory": true,
+      "result": 74,
+      "status": "stopped owned child at memory bound",
+      "onlyOwnedGroupTerminated": true
+    },
+    {
+      "case": "time-bound-retained",
+      "syntheticMemory": true,
+      "result": 74,
+      "status": "stopped owned child at time bound",
+      "onlyOwnedGroupTerminated": true
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "limits": "Synthetic thresholds, real CPU children; no high-memory stress or hard allocation ceiling proof."
+}

@@ -1261,3 +1261,18 @@ Ask:290.
 Limits: Checkpoint; bounded probes pending. Original guard has no separate
 pressure/swap predicates, so none claimed removed/validated. Sampled bound
 can overshoot before termination;96is not a hard allocation ceiling.
+
+Finding: Future owned96GiB combined-stop profile passes bounded CPU
+boundary/ownership probes on the physically verified128GiB host; ask290done.
+
+Validation: Outer futureguard0/0.201s; six syntheticmemory cases prove55/68
+admission refusals,95combined allowed,96combined/65anonymous stop and time
+termination; >1790rejected before launch. Only probe-owned groups signaled.
+OriginalguardSHAa06adaf3 unchanged; futureprofileSHA cf8acd15 fixed. Current
+runtime24 player/dependency hashes match and otherdifferencesfromc74783ad0;
+original coldboot/clear/crash/restart gate applies. No live/global/OS edits.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/guard96-control01/
+Ask:290.
+
+Limits: Reactive1spoll can overshoot96; no hardcap/highmemorystress proof.
+Original has no separate pressure/swap predicate; none removed or invented.

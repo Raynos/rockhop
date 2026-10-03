@@ -1,0 +1,25 @@
+{
+  "request": 290,
+  "hostPhysicalBytes": 137438953472,
+  "hostPhysicalGiB": 128,
+  "futureOwnedProfilePath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+  "futureOwnedProfileSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "recipeCheckpoint": "a00672ffa91627adb019266e0ad611a9039576a2",
+  "originalGuardSHA256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+  "originalUnchanged": true,
+  "scope": "Future explicitly invoked owned Rockhop job only; existing invocations and shared localai/Wildshard defaults unchanged",
+  "admission": "anonymous<55 and anonymous+wired<68GiB",
+  "stop": "anonymous>=65 or anonymous+wired>=96GiB, or max1790seconds",
+  "pollSeconds": 1,
+  "canonicalLock": "/Users/raynos/projects/localai/.model.lock",
+  "freshLsofAdmission": "Only exit1+empty stdout+empty stderr; occupied/ambiguous means no launch",
+  "syntheticBoundaryOwnershipCases": 6,
+  "timeAbove1790Rejected": true,
+  "probeGuardExit": 0,
+  "probeElapsedSeconds": 0.201,
+  "pressureSwapLimitAudit": "Pinned original has no separate pressure/swap predicates; none altered or claimed validated",
+  "limits": [
+    "Reactive sampled threshold can overshoot before owned termination; not a hard allocation ceiling.",
+    "CPU synthetic boundaries only, no high-memory stress; all real model jobs remain bounded."
+  ]
+}

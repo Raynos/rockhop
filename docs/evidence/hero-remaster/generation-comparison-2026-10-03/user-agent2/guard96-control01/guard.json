@@ -1,0 +1,40 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "python3",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_guard96_control.py",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/guard96-control01/control"
+  ],
+  "controllerPID": 25562,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 35.5,
+      "wiredGiB": 6.3,
+      "freeGiB": 32.6
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 35.5,
+      "wiredGiB": 6.3,
+      "freeGiB": 32.6
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 25567,
+  "exitCode": 0,
+  "elapsedSeconds": 0.201
+}
