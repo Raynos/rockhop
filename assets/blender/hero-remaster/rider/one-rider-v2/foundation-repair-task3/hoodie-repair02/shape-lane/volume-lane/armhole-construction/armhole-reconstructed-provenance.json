@@ -1,0 +1,68 @@
+{
+  "status": "UNACCEPTED source topology reconstruction; rest/pose/render gates pending",
+  "sourceV7SHA256": "619396fa895215b4c8a7210341e0acb037bb5a4ddba9a16cdf088684ec8b5def",
+  "candidateSHA256": "f0dc4a52c341108afebca475ea94e1d0e21f287bd8022a4abb923eab78df0c12",
+  "method": "Cut actual cuff-connected sleeve off torso on original sewn mesh; fill lower old torso opening while leaving higher anatomical opening; sew detached source sleeve to new opening with additional locally sampled fabric. Source outer material retained; no external body panel or garment generation.",
+  "rows": [
+    {
+      "side": "L",
+      "sourceLoopVertices": 92,
+      "oldBottomY": 1.189773678779602,
+      "newOpeningBottomY": 1.3130003667220995,
+      "newOpeningTopY": 1.4569754131928623,
+      "newBodyClosureFaces": 23300,
+      "newInsertFaces": 23300,
+      "newOpeningInsideSourceCut": true,
+      "sourceSleeveMarginMaxShiftM": 0.002,
+      "surgeryGeodesicMarginM": 0.08,
+      "insertRestCorridorMinM": 0.001604643576425313,
+      "insertRestCorridorMaxM": 0.16530339481866924,
+      "armRayMissingChartNodes": 0,
+      "construction": "Same nonoverlapping constrained source-boundary chart for torso closure and new insert; harmonic chest-to-arm attachment and source-surface clearance corridor, no twisted radial rows."
+    },
+    {
+      "side": "R",
+      "sourceLoopVertices": 104,
+      "oldBottomY": 1.1905536651611328,
+      "newOpeningBottomY": 1.3130001029558247,
+      "newOpeningTopY": 1.4569032167103795,
+      "newBodyClosureFaces": 17444,
+      "newInsertFaces": 17444,
+      "newOpeningInsideSourceCut": true,
+      "sourceSleeveMarginMaxShiftM": 0.002,
+      "surgeryGeodesicMarginM": 0.08,
+      "insertRestCorridorMinM": 0.0016673204307878497,
+      "insertRestCorridorMaxM": 0.1662869028339387,
+      "armRayMissingChartNodes": 0,
+      "construction": "Same nonoverlapping constrained source-boundary chart for torso closure and new insert; harmonic chest-to-arm attachment and source-surface clearance corridor, no twisted radial rows."
+    }
+  ],
+  "vertexCountsBefore": [
+    22240,
+    4021,
+    3112,
+    61099,
+    294
+  ],
+  "vertexCountsAfter": [
+    63394,
+    4021,
+    3124,
+    61099,
+    294
+  ],
+  "sourceImagesUnchanged": true,
+  "UVDonor": {
+    "primitive": 0,
+    "sourceFace": 28904,
+    "sourcePixelCentre": [
+      139,
+      713
+    ],
+    "hoodieClothSafeFraction": 1.0,
+    "uvHalfExtent": 0.009,
+    "sourceAtlasSHA256": "2404c7f40126bba31e3172f7336eb8fd0c3c9aed39850a5a66708fef61965780"
+  },
+  "weightsChanged": "Source body/sleeve weights normalized only within declared80mm source-geodesic construction margin; new body opening chest-rigid, added insert harmonic chart attachment from chest to source-arm boundary. All new/source rows keep19-bone contract, head/glove original.",
+  "compatibilityCost": "New vertex/face counts and local UV islands require regenerated GLB buffers, morph arrays and exact alias metadata; old frozenV7 morph offsets cannot be copied blindly. No runtime export yet."
+}
