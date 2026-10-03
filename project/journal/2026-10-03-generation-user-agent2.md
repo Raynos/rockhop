@@ -1530,3 +1530,16 @@ Ask:284–286.
 
 Limits: Failed unaccepted harness unit; no Pixal output/quality proof.
 Original receipt/log/source retained before correction and same-seed retry.
+
+Finding: Root contour-band follow-up receives one frozen-byte geometric
+control recipe, independent of material/shading/rendering.
+
+Validation: Source syntax passes; raw NPZ identity and mesh readback required.
+One fixed front/back central rectangle measures physical depth relief,
+face-versus-averaged normals and second-hit proximity. No capture loop,
+inference, recolor, cleanup or player change.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_trellis_surface_control.py
+Ask:284–286 root material review follow-up.
+
+Limits: Unaccepted control pending execution; fixed region only, not whole
+mesh intersection proof. Relief includes genuine folds; root judges bands.
