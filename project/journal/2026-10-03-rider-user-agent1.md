@@ -387,3 +387,11 @@ Finding: Controlled temporary solver1048.576 scale resolves QuadriFlow absolute1
 Validation: Operator completes6.001s; all16existing native meshes/51bind exact. Vertex reprojectionmax6.920e−8donorunits; centroidp95.005896/max.031074 and source4097samplep95.010449/max.078544 are explicit reconstruction loss. UVfinite;8three-edge cyclic holes/24boundaryedges,0nonboundarynonmanifold edges. Original source/pin/texture lineage recorded; syntax/diff/hooks pass.
 
 Limits: Boundary holes are remesh defects, not garment openings. Repair before physical pose/units registration and real neck/cuff/hem cavity/innerclearance; wearable skin/actualgame/collision/mobile/played art remains unaccepted. Trianglebenchmark alone accepts nothing. No new plain shirt, fullcloth default, Libraryduplicate or normal-player promotion; M0–M5/root sole judgment retained.
+
+### Round45 — reject selected-source registration/cavity fragments, 2026-10-03
+
+Finding: First actual native-rest registration plus consumed3mm-body Boolean cavity fails:522v/1008tri fragments,417bodypairs/12selfpairs/1904coverage misses. Exact preBoolean10458tri recovery finds2297selfpairs; arm rotation lacks torso display→anatomical frame, and low-height sleeveblend admits torsohem. Preserve failed master/stream/recipe and source02donor before source correction; no wearable handoff.
+
+Validation: Capped8tri holes, explicit torso+arm anchors/metres/file+.65frame. Recoveredregistered volume+.008235m³, bodycutter+.079493m³/1742selfpairs; alltopologicalboundary/nonmanifold/contiguity checks0 despite mechanical failure. Source02pin unchanged. Silent ship45 cold6562ms/clear40.083333333s/4810identicalticks/crash103/restart1tick/frame2.095ms/errors0; syntax/diff/hooks pass.
+
+Limits: Static consumed cavity cut is not live collision response. BVH/normalcoverage are witnesses, not signedthickness guarantees; zero topological counts alone do not certifyfabric. Surface02/PBR/canonicalbody/head/51bind and allcontrols retained. New fullgarment construction continues, no plainshirt/fullcloth/default/playerpromotion/M0–M5closure.
