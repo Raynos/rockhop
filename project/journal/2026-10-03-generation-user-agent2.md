@@ -1443,3 +1443,16 @@ Ask:284–286 root review follow-up.
 
 Limits: Unaccepted recipe; render/encode/root moving judgment pending.
 No new seed, recolor, cleanup, openings usability or model winner claim.
+
+Finding: Corrected upright48angle TRELLIS neutral/nativePBR render preserves
+all3,152,811vertices/6,322,984indices and exact display material values.
+
+Validation: Explicit65/96renderguard0/123.724s;96PNG render hashes
+verified. NativeXYZ→BlenderXYZ identity+uniformscale; installed renderer
+look-at uses up[0,0,1] atline32, confirming Z convention. Mesh arrays and
+shader attribute readbacks exact; source NPZs/historical film unchanged.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-upright01/
+Ask:284–286 root review correction.
+
+Limits: Frozen render checkpoint; silent encoding/root played judgment
+pending. No new seed, cleanup, recolor, opening usability or winner claim.
