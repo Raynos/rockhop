@@ -1,0 +1,55 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "59ac27e6d23e9b288eb0d887ca37f8bfdda5e99a",
+  "status": "All3shape-stage samplers complete; anonymous cap stops texture conditioning capture",
+  "guardExitCode": -15,
+  "elapsedSeconds": 186.579,
+  "phase": "conditioning-tex_1024",
+  "lastSample": {
+    "seconds": 186.347,
+    "anonymousGiB": 65.7,
+    "wiredGiB": 14.4,
+    "freeGiB": 3.3
+  },
+  "captures": 128,
+  "captureHashesAndFiniteFlagsRechecked": true,
+  "actualStepsPersisted": 36,
+  "samplersCompleted": 3,
+  "attentionChecks": 6,
+  "maxAttentionError": 4.76837158203125e-07,
+  "NAFChecks": 3,
+  "inputMatches": 10,
+  "nativeMeshProduced": false,
+  "savedContinuation": {
+    "HRshapeNormalizedFinal": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-01/model/sampler03-shape_slat_flow_model_1024-final-sampled.npz",
+      "archiveSHA256": "6b20e871f7d16fa648243efa528ce7b69d90347811cdb56e0369aceaf4d2af89",
+      "CBytesSHA256": "1ff79a37c14801616962174488391d0c49bdc0b852792cf4369dfa7a81c4e80b",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "HRshapeCoordinates": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-01/model/sampler03-shape_slat_flow_model_1024-final-sampled-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    }
+  },
+  "next": "Use actual saved HRshape bytes, verify CPUseed42 noise-prefix byte replay, retain only3needed loaded models for texture/decode; no sampler rerun",
+  "limits": [
+    "No texture sampler/decode/native mesh yet.",
+    "Reactive65GiB anonymous cap overshoots to65.7GiB;96combined not reached.",
+    "No RNGstate archive exists; any continuation must verify reconstructed originalnoise-prefix before sampling."
+  ]
+}

@@ -1596,3 +1596,17 @@ Ask:284–286.
 
 Limits: Unaccepted recipe, actual run pending. Lowerresolutionexplicit,
 not maximum1536success, style sweep or installed/backend alteration.
+
+Finding: Pixal1024 saves actual completed HRshape after36steps, then
+texture conditioning capture hits retained anonymous-memory cap.
+
+Validation: Guard−15/186.579s; last65.7anon/80.1combined GiB;128finite
+captures/NPZhashes rechecked. Three12step samplers complete,6actual
+attention/3actualNAF checks;10real conditioning inputmatches. Actual
+HRshape7977×32float32 andcoords available for verified continuation.
+Runtime24 frozenplayerpins/playerdiff0 retain round69 shipgateidentity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-01/
+Ask:284–286.
+
+Limits: No texture/decode/mesh. RNGstate absent; continuation mustverify
+original3noiseprefixbytes. Free unneeded models only, no numeric shortcut.
