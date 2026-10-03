@@ -840,3 +840,20 @@ Ask:284–286.
 Limits: Setup documentation publication, not completed texture quality,
 full learned/CUDA parity or ordinary asset promotion. Live guarded paint03
 continues independently; no new clone, branch, worktree or foreign rewrite.
+
+Finding: All-key query-tiled PBR retry preserves actual condition/noise
+bytes but stops at the unchanged memory bound without painted output.
+
+Validation: Paint03 guard74/child−15 in1365.378s, last combined78.7GiB;
+all9prior DINO/VAE/initial-noise Cbyte captures identical. First actual
+attention Q/K/V[24,5,9216,64] selected independentCPU maxerror0.0004883.
+Eight views768/15steps/seed42, same frozen mesh/UV/reference/weights;
+no texture OBJ/maps, new shape or shared installation edit. Guard/log/
+progress and capture archive pins retained immediately after owned stop.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint03/
+Ask:284–286.
+
+Limits: Exact stopping layer and subsequent call count unobserved because
+current counters only flush after first check/completion. Whole-machine
+memory sample cannot establish one operator's allocation. No family/style
+rejection, raised bound, key/view reduction or texture acceptance.
