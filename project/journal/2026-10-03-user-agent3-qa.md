@@ -697,3 +697,23 @@ Limits: Everytickmetrics vs19sample fulltrianglecoordinates explicit.
 Point/archproposals do not closecollision/art/loadbearing/phone; rear
 landing/ToeFK/crashrestartprivateoffset remainopen. No normalplayer
 promotion, garmentcorrection, sourcebind/weights/body/physicschange.
+
+## Round41: actual wider boot contact remains a limited qualification
+
+Finding: Full18016body/1898upper/328sole surfaces have0upper/body and
+0sole/body finitecontacts at19actualframes perOFF/ON. UpperSelfmax29/31
+remains; loaderRestupper168/sole2. Upper/solemax288/289/rest289 is source
+intentional assembly overlap, not discardedbodypenetration or artpass.
+
+Validation: Four2µm-neighbor upperrows uniquelydisambiguated by actual
+normalizedweights (selected≤2.317e-8/alternate≥2.010e-5), all2226boot
+triangles uniquelynativeverified. ConservativeBVH agreeswithfiniteSAT
+crossing/coplanar/epsilon/UVadjacency/80dispersedtriangles,2tests pass,
+scopedlintpass. IndependentGame1406ticks exact. ExactfullF64/report/
+restsource archives byte-preserved; new movies byteexact to played38.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/boot41/archives.json
+
+Limits: Contactincludes touching/no depth;19samples not swept/enclosure.
+Rootrejectswedgeart/darkinterface seatinginconclusive. No repeatcosmetic
+movie, sourcecleanup/weight/bind/physics/playerchange or loadbearing/
+wholepegsolid/phonepass. Existingqualification/newfrozenwearable continue.

@@ -1,0 +1,5353 @@
+{
+  "status": "UNACCEPTED_ACTUAL_BOOT_BODY_COMPONENT_FINITE_CONTACT_AUDIT",
+  "reportSHA256": "4fc0bd5b0667bea7d4ef8cdfacf411ac134778356cac6d093660e6371538a5cf",
+  "candidateSHA256": "3ffd591d6872513646cab2384f8fe6b21f828ab57bdb5842cc1659fcd32face2",
+  "auditCodeSHA256": "e78f192f28c2d14f617f88ac48e7222b86ec52ab469998431e50296441ccb7b5",
+  "predicateSHA256": "491da7b01cf887ae33f5db8dbd53e2b908a5fcbb60defb449d3880a6d0711b73",
+  "broadphaseSHA256": "23b25e33c17d457b3944735a210ea93f0c8151cbd0e8e6ab08473d6f973d6d6c",
+  "canonicalRestReceiptSHA256": "9fdb220eeb4a745b6f9fc08ac9ea6f0af9de231430c87d5d03f3b31e25fc1246",
+  "canonicalRestContacts": {
+    "upperBody": {
+      "pairs": 0,
+      "witnesses": [],
+      "candidates": 1596,
+      "epsilonM": 1e-9,
+      "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+    },
+    "soleBody": {
+      "pairs": 0,
+      "witnesses": [],
+      "candidates": 0,
+      "epsilonM": 1e-9,
+      "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+    },
+    "upperSelf": {
+      "pairs": 168,
+      "witnesses": [
+        {
+          "triangleA": 22,
+          "triangleB": 25
+        },
+        {
+          "triangleA": 29,
+          "triangleB": 1883
+        },
+        {
+          "triangleA": 30,
+          "triangleB": 1883
+        },
+        {
+          "triangleA": 31,
+          "triangleB": 1883
+        },
+        {
+          "triangleA": 32,
+          "triangleB": 1707
+        },
+        {
+          "triangleA": 32,
+          "triangleB": 1883
+        },
+        {
+          "triangleA": 33,
+          "triangleB": 1707
+        },
+        {
+          "triangleA": 37,
+          "triangleB": 1449
+        },
+        {
+          "triangleA": 38,
+          "triangleB": 1452
+        },
+        {
+          "triangleA": 38,
+          "triangleB": 1448
+        },
+        {
+          "triangleA": 38,
+          "triangleB": 1450
+        },
+        {
+          "triangleA": 38,
+          "triangleB": 1449
+        }
+      ],
+      "candidates": 9192,
+      "epsilonM": 1e-9,
+      "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+    },
+    "soleSelf": {
+      "pairs": 2,
+      "witnesses": [
+        {
+          "triangleA": 241,
+          "triangleB": 264
+        },
+        {
+          "triangleA": 250,
+          "triangleB": 280
+        }
+      ],
+      "candidates": 451,
+      "epsilonM": 1e-9,
+      "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+    },
+    "upperSole": {
+      "pairs": 289,
+      "witnesses": [
+        {
+          "triangleA": 0,
+          "triangleB": 205
+        },
+        {
+          "triangleA": 0,
+          "triangleB": 206
+        },
+        {
+          "triangleA": 1,
+          "triangleB": 203
+        },
+        {
+          "triangleA": 1,
+          "triangleB": 206
+        },
+        {
+          "triangleA": 49,
+          "triangleB": 203
+        },
+        {
+          "triangleA": 49,
+          "triangleB": 206
+        },
+        {
+          "triangleA": 50,
+          "triangleB": 206
+        },
+        {
+          "triangleA": 55,
+          "triangleB": 202
+        },
+        {
+          "triangleA": 55,
+          "triangleB": 205
+        },
+        {
+          "triangleA": 56,
+          "triangleB": 206
+        },
+        {
+          "triangleA": 57,
+          "triangleB": 202
+        },
+        {
+          "triangleA": 60,
+          "triangleB": 206
+        }
+      ],
+      "candidates": 1574,
+      "epsilonM": 1e-9,
+      "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+    }
+  },
+  "results": [
+    {
+      "id": "off",
+      "frames": 19,
+      "positionsSHA256": "8746d66aad5cba77eda866ef8d25e0324149410cba6aeb4cb3d8ab0063b8b140",
+      "maxima": {
+        "upperBody": 0,
+        "soleBody": 0,
+        "upperSelf": 29,
+        "soleSelf": 0,
+        "upperSole": 288
+      },
+      "rows": [
+        {
+          "inputTick": 523,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1387,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 200,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 29,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12388,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2326,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 533,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1374,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 188,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 28,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12389,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2326,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 543,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1356,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 140,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 29,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 907,
+                "triangleB": 1104
+              }
+            ],
+            "candidates": 12404,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2276,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 553,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1352,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 106,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 29,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 907,
+                "triangleB": 1104
+              }
+            ],
+            "candidates": 12436,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2058,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 563,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1350,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 88,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 29,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 907,
+                "triangleB": 1104
+              }
+            ],
+            "candidates": 12418,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2058,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 573,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1430,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 54,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 18,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              }
+            ],
+            "candidates": 12364,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2025,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 583,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1459,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 188,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 21,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12335,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2323,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 593,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1390,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 262,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 23,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12282,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2380,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 603,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 300,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 23,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 277,
+                "triangleB": 1435
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              }
+            ],
+            "candidates": 12263,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 393,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2394,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 613,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1381,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 276,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 22,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12264,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 393,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2394,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 623,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1392,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 240,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 23,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12290,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2371,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 633,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1407,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 222,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 22,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12303,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2369,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 643,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1421,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 210,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 21,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12310,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2369,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 653,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1407,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 222,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 22,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12310,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2369,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 663,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1323,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 418,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 25,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 276,
+                "triangleB": 1434
+              },
+              {
+                "triangleA": 277,
+                "triangleB": 1435
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              }
+            ],
+            "candidates": 12281,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 421,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2516,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 673,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 2012,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 493,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 29,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 33,
+                "triangleB": 1708
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 276,
+                "triangleB": 1434
+              },
+              {
+                "triangleA": 277,
+                "triangleB": 1435
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              }
+            ],
+            "candidates": 10308,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 412,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2501,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 683,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 3678,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 591,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 13,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              },
+              {
+                "triangleA": 1159,
+                "triangleB": 1170
+              },
+              {
+                "triangleA": 1681,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 1682,
+                "triangleB": 1688
+              }
+            ],
+            "candidates": 5673,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 410,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2260,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 693,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 6017,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1566,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 13,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1709
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              },
+              {
+                "triangleA": 1159,
+                "triangleB": 1170
+              },
+              {
+                "triangleA": 1681,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 1682,
+                "triangleB": 1688
+              }
+            ],
+            "candidates": 5190,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 424,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 3739,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 703,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 6603,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 2492,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 11,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              },
+              {
+                "triangleA": 1159,
+                "triangleB": 1170
+              },
+              {
+                "triangleA": 1681,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 1682,
+                "triangleB": 1684
+              }
+            ],
+            "candidates": 4921,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 434,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 4682,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        }
+      ]
+    },
+    {
+      "id": "on",
+      "frames": 19,
+      "positionsSHA256": "c5bcc620d39bad2cddc5ee37b164dd04d8c19b0ca9b0bf1060806a29ba04184d",
+      "maxima": {
+        "upperBody": 0,
+        "soleBody": 0,
+        "upperSelf": 31,
+        "soleSelf": 0,
+        "upperSole": 289
+      },
+      "rows": [
+        {
+          "inputTick": 523,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1246,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 200,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 22,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12301,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2306,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 533,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1235,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 188,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 21,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12301,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2306,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 543,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1208,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 148,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 18,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              }
+            ],
+            "candidates": 12305,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2259,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 553,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1217,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 106,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 18,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              }
+            ],
+            "candidates": 12303,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2041,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 563,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1217,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 88,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 18,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              }
+            ],
+            "candidates": 12282,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2041,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 573,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1288,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 54,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 22,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              }
+            ],
+            "candidates": 12318,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2005,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 583,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1380,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 188,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 24,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 907,
+                "triangleB": 1408
+              }
+            ],
+            "candidates": 12347,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2326,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 593,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1305,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 264,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 27,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12274,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2394,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 603,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1281,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 300,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 29,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12274,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 393,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2410,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 613,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1289,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 276,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 28,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12272,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 393,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2410,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 623,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1309,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 240,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 27,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12276,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2381,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 633,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1333,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 222,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 27,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12283,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2369,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 643,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1347,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 210,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 25,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              },
+              {
+                "triangleA": 681,
+                "triangleB": 1133
+              },
+              {
+                "triangleA": 907,
+                "triangleB": 1408
+              }
+            ],
+            "candidates": 12287,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2369,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 653,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1333,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 222,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 27,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 670,
+                "triangleB": 1111
+              }
+            ],
+            "candidates": 12283,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 362,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2369,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 663,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1208,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 418,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 28,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 277,
+                "triangleB": 1435
+              },
+              {
+                "triangleA": 281,
+                "triangleB": 1687
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              }
+            ],
+            "candidates": 12275,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 421,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2522,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 673,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 2307,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 493,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 31,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 32,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 248,
+                "triangleB": 1010
+              },
+              {
+                "triangleA": 248,
+                "triangleB": 1013
+              },
+              {
+                "triangleA": 248,
+                "triangleB": 1011
+              },
+              {
+                "triangleA": 248,
+                "triangleB": 741
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 276,
+                "triangleB": 1434
+              }
+            ],
+            "candidates": 10166,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 412,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2501,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 683,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 3950,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 591,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 13,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 282,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              },
+              {
+                "triangleA": 1159,
+                "triangleB": 1170
+              },
+              {
+                "triangleA": 1681,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 1682,
+                "triangleB": 1688
+              }
+            ],
+            "candidates": 5727,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 410,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 2260,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 693,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 6277,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 1566,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 13,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 31,
+                "triangleB": 1709
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              },
+              {
+                "triangleA": 1159,
+                "triangleB": 1170
+              },
+              {
+                "triangleA": 1681,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 1682,
+                "triangleB": 1688
+              }
+            ],
+            "candidates": 5224,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 424,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 288,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 3739,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        },
+        {
+          "inputTick": 703,
+          "upperBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 7004,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleBody": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 2492,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSelf": {
+            "pairs": 12,
+            "witnesses": [
+              {
+                "triangleA": 29,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 30,
+                "triangleB": 1883
+              },
+              {
+                "triangleA": 42,
+                "triangleB": 1150
+              },
+              {
+                "triangleA": 271,
+                "triangleB": 1135
+              },
+              {
+                "triangleA": 273,
+                "triangleB": 276
+              },
+              {
+                "triangleA": 283,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 284,
+                "triangleB": 1860
+              },
+              {
+                "triangleA": 959,
+                "triangleB": 963
+              },
+              {
+                "triangleA": 1159,
+                "triangleB": 1170
+              },
+              {
+                "triangleA": 1164,
+                "triangleB": 1461
+              },
+              {
+                "triangleA": 1681,
+                "triangleB": 1688
+              },
+              {
+                "triangleA": 1682,
+                "triangleB": 1684
+              }
+            ],
+            "candidates": 4982,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "soleSelf": {
+            "pairs": 0,
+            "witnesses": [],
+            "candidates": 434,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          },
+          "upperSole": {
+            "pairs": 289,
+            "witnesses": [
+              {
+                "triangleA": 0,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 0,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 1,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 203
+              },
+              {
+                "triangleA": 49,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 50,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 55,
+                "triangleB": 205
+              },
+              {
+                "triangleA": 56,
+                "triangleB": 206
+              },
+              {
+                "triangleA": 57,
+                "triangleB": 202
+              },
+              {
+                "triangleA": 60,
+                "triangleB": 206
+              }
+            ],
+            "candidates": 4682,
+            "epsilonM": 1e-9,
+            "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "19 actual backwards-lean sampled frames percontrol, not every tick, continuous/swept collision or enclosed body volume test.",
+    "Finite contact includes coplanar touching and does not report depth. Self/component pairs sharing native09 vertex IDs are excluded as intended adjacency; body pairs are never excluded.",
+    "Actual CPU GLTF skin readback in engine world metres, not GPU surface validation or physical phone cost. Current wedge shape and peg load-bearing semantics remain unaccepted.",
+    "Read-only audit is not consumed collision response or wearable art acceptance. Root alone judges the played comparison."
+  ]
+}

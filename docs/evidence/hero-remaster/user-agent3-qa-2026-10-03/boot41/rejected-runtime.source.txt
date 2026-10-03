@@ -1,0 +1,26 @@
+/** Exact current source09 mesh rows sampled from the actual engine skeleton. */
+export function makeBootSurfaces(debug, native) {
+  const T = debug.THREE, meshes = [];
+  debug.rider.scene.traverse(o => { if (o.isSkinnedMesh) meshes.push(o); });
+  const specs = [['body', 9981, 18016], ['upper', 1158, 1898], ['sole', 466, 328]];
+  const parts = specs.map(([name, rows, triangles]) => {
+    const matches = meshes.filter(m => m.geometry.attributes.position.count === rows && m.geometry.index.count === triangles * 3);
+    if (matches.length !== 1) throw new Error('Actual mesh ambiguous: ' + name);
+    const mesh = matches[0], faces = Array.from({ length: triangles }, (_, i) => [0, 1, 2].map(k => mesh.geometry.index.getX(i * 3 + k)));
+    const nativeIDs = name === 'body' ? null : Array.from({ length: rows }, (_, i) => {
+      const p = new T.Vector3().fromBufferAttribute(mesh.geometry.attributes.position, i), xyz = [p.x - .65, -p.z, p.y];
+      const found = native.vertices.filter(v => Math.hypot(...xyz.map((x, k) => x - v.restNativeM[k])) < 2e-6);
+      if (found.length !== 1) throw new Error('Current boot row native ancestry ambiguous'); return found[0].nativeVertexID;
+    });
+    return { name, mesh, faces, nativeIDs, rows, triangles };
+  });
+  const contract = parts.map(({ name, mesh, faces, nativeIDs, rows, triangles }) => ({ name, meshName: mesh.name, rows, triangles, faces, nativeIDs,
+    jointOrder: mesh.skeleton.bones.map(b => b.name), bindMatrix: mesh.bindMatrix.toArray(), inverseBinds: mesh.skeleton.boneInverses.map(m => m.toArray()) }));
+  return { contract, sample() {
+    debug.rider.scene.updateMatrixWorld(true);
+    return parts.flatMap(({ mesh, rows }) => {
+      mesh.skeleton.update();
+      return Array.from({ length: rows }, (_, i) => mesh.getVertexPosition(i, new T.Vector3()).applyMatrix4(mesh.matrixWorld).toArray()).flat();
+    });
+  } };
+}
