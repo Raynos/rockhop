@@ -1577,9 +1577,22 @@ Finding: Proper Pixal1536 route hits retained65GiB anonymous guard during
 Validation: Owned child stopped−15/110.292s; lastsample73.2anon/79.3
 combined GiB, combined96limit not reached.81finite captures/NPZhashes
 rechecked,24actual steps persisted. Four actual dense/sparse learned
-attention checks max4.77e-7;5projection/4bilinear/2NAF checks recorded.
+attention checks max4.77e-7;5projection/5bilinear/2NAF checks recorded.
 Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal02/
 Ask:284–286.
 
 Limits: No1536 mesh or HRshape/texture sampling. Reactive guard overshoots.
 Documented1024lowerVRAM alternative authorized; resolution mustbeexplicit.
+
+Finding: Explicit Pixal1024 documented lower-memory route checkpoint follows
+1536 anonymous-memory stop; same12steps/42/originalguidance retained.
+
+Validation: Source syntax and recursive lexical names pass;17canonical
+records/41source pins retained, original1536worker/evidence preserved.
+Only requested pipeline/effective-resolution assertions change to1024;
+standard64grid matches previously passed actual conditioner control.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024_contract.json
+Ask:284–286.
+
+Limits: Unaccepted recipe, actual run pending. Lowerresolutionexplicit,
+not maximum1536success, style sweep or installed/backend alteration.

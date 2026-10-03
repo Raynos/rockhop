@@ -1,0 +1,227 @@
+{
+  "accepted": false,
+  "source": "/Users/raynos/ml/img2mesh/Pixal3D-mac",
+  "revision": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+  "referenceSHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+  "preprocessingSHA256": "6e3f33a467d63819288ac9eafbc98ffe2a8ea89f3d36d371ac161eae57a6c5f7",
+  "sourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_control.py": "c6abb1d430d3a1318d02e92d49304af58aaa684dcda1cc80368b467b9fd84e94",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_sparse_operator_control.py": "79b0ee554e375da15607a61b5cd441eb6d5016f7b6bf70f6222803fd3b3eda25",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_sparse_sampling.py": "0d1be1240c127a12f049f493a4a11ff1d89d8d0db8a5e01cbca1194faf5e5db5",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/config.py": "7f85d100fc568f6f8b61313d5bd59dea1b8f285eedd546bab6a94e21dae316ea",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/conv/config.py": "ba8e0033ca14880e2bd53456bf2fe20494c2c6d42eeed7813d33d19005fe51e1",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/conv/conv_flex_gemm.py": "b0ae09f1addfbc51a43ec27fbcf76a810ef2d3e9a9fd3d6084cae69a9c6a7dcc",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/__init__.py": "6ae240bfd4fcaac89e49b01523df5953d6cc2e48cfae37df9037dd186f7c5f20",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/ops/spconv/submanifold_conv3d.py": "7a80514f2ba4a59c932ec69276c4b1c5df3e6295451dedd5d19735d53589d77b",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/ops/grid_sample/grid_sample.py": "665b41c9b3e908686d4d7f8f4152d342d59f7448f12d42d13c969e8b36499ea2",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/__init__.py": "0636856ba271d2d0f1604687c41db077e1ae1136bb916ed98a864a8cf67358cb",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/__init__.py": "900b27e106f76f093729da2f34062b278f2c9c16b67fca82dfa52f166519cd6d",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/ext.mm": "2d423b923e2bb77ba960c1d2b5886c2a962840634f8ccde9bc8c1d4943b8165a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/grid_sample/weighted_sum.metal": "c836099a709176e7af0cf3e803d8c6be100bb19087253d7568eb4399e6586a44",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/_C.cpython-310-darwin.so": "d356d7138a6cae80ee2331adfe53632038bef2ee31201abedeabefd4b565f03a",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/extern/mtlgemm/flex_gemm/kernels/metal/flex_gemm.metallib": "758edfc5f4f16db3230fdfc1abafb592aef508860df2763a59ec9b66c5bfedbb",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_sampling.py": "2dc0f9a68009b3f70b1e3bcbdd308d0a5bde6d72dbb78ddff9a33c9e290f372f",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/conv/conv.py": "17d957e742b10a4972493bb1a7aa9ad3f744a6e3b0e85408d4ee9af7cd228bab",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/version.py": "f707e1fd4e33a15695a96f5a83150a7a5425ad00d2eba4cd0100c830ebe9bf02",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_conditioning.py": "fd980dab4db3ebc86e80d8d1636061c2d269b46f6493f5bc3d45c71335948143",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/pixal3d_image_to_3d.py": "6b1c06c7d0dc4b696389416d352ba5dd3522531e595b3f94ae8c9d516c37ec6d",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/moge/model/v2.py": "e736ed59fdb8ad89ec0c29ddfeeccd6a4246c387b3f423b922708366b69758fd",
+    "/Users/raynos/ml/img2mesh/NAF/hubconf.py": "9fe50a74b152f9dcc8db0e0df4f5937d487d0f83bdb63e79390fbfa2c39711fb",
+    "/Users/raynos/ml/img2mesh/NAF/src/model/naf.py": "64e32ef854b06f909302e8e2bdccdac564094cf5674e2d27b17c5962f670458c",
+    "/Users/raynos/ml/img2mesh/NAF/src/layers/attentions.py": "cfa8c83f4ec4f70fadf42d06aa9050f912a795a65e71c7cdde07d13b9c3c81a1",
+    "/Users/raynos/ml/img2mesh/NAF/src/layers/rope.py": "ed36ee1f9d09822ecc6c999b16a3607ab82813c47bbe6189c08b7e3fdd9b5422",
+    "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/config.json": "135ecd23e34a70b6fbed8b083fdecb319b7e3a54e3d849258bbe4ddcf1783bb5",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/native_save.py": "bfa4332302e1b8abd4ce14fbc2e2bc508051707f575bcc289db30e909c8b6501",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/receipt.json": "85a5eb4e6b654efcc2c3f00d71dbad72592372388f5a2df0b58bc150ec639370",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/receipt.json": "5d73f4e2677f759660adbf5cc757c5ffc7819248b35f0861b0c835a9a1ecc642",
+    "/Users/raynos/ml/img2mesh/pixal-view/pipeline.json": "70d7edfa4ed25c19675b9b0127dce7c7551ff69a7f072b9872c66aa7f3107cc7",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/sparse/attention/full_attn.py": "3149b7acc483b6692286fbaf92f56aae59f8236fbfb3819d1d022dfa3875ba68",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/modules/attention/full_attn.py": "5395b69a7a35d30b2681bb1e8279129173ac60c4d6911643adf07a1d14b2a7ea",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/representations/mesh/base.py": "a80a6d19a97badee735917292abee655bb99515eebc18036f9a30b9dc9787b92",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/base.py": "0ac016d7a4a0e57a8359eac848829b920b2ba98d7bb75a0dc3621a9b816b6e22",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/__init__.py": "f1d5473a485aad90085a45063daadb01e046017034a9cc95a8636924504126c1",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/sparse_structure_flow.py": "bcb8b7b0b506ac49b6742f239b341ddba9b006966b582a1caa799a15b827731c",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/structured_latent_flow.py": "c8012c96be3cf63cca452e7155fb7039e571da41bda666658b51d97e62fd41b3",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/sc_vaes/fdg_vae.py": "c55fa7c263147ddfee2a8f32ce4791db5ab85789caf2e94125dfaa27e2ef1db0",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024.py": "f0c2f4f74e553343bffb40f77f170221b36c6f1126a04135acba522a8442da5b"
+  },
+  "weights": [
+    {
+      "role": "sparse_structure_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "bytes": 245,
+      "expectedSHA256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "bytes": 147591972,
+      "expectedSHA256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_flow_model.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+      "bytes": 503,
+      "expectedSHA256": "2b3ef4c63b72a3de8adf745bd9d9d36b7960bdd7ba3740a6fa4d18fea6c475dd",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_flow_model.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+      "bytes": 5359822584,
+      "expectedSHA256": "6d0147bb347eb61fa81c304cc68c7fd69d447e91870357a549b47e1d0fd77242",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "bytes": 678,
+      "expectedSHA256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948490494,
+      "expectedSHA256": "e3b718d3e43e4f8780e9a24ac6fff231811a67e3b058e336e10fe654c911d581",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_512.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "2f7b736e8535aae96e7c41e8d123c24a14ee809fc25bea76eeac72643d21b997",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_512.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+      "bytes": 5546764048,
+      "expectedSHA256": "63569838c1da93f010e2fa805b202ecf802cc758830230abac202a81b70e5b45",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_1024.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "f47fca56311959a643e8cfd2750229a2c53cbab0027406d8426cd564ce4fb5bc",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_1024.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 5546764048,
+      "expectedSHA256": "3e6d1df0e62bc5bc863320d1d63d6b996235eef4abb8b851e878c88f316369f1",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+      "bytes": 705,
+      "expectedSHA256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948458812,
+      "expectedSHA256": "97ea69addea2ecd9312910f5f548234665eef51c088386180b7cd5b258645e3c",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_flow_model_1024.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "f18455729d08d2ce7ef809f947ffa47f6f468b3bcf8a86473e8c326e80128ac2",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_flow_model_1024.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 5546960656,
+      "expectedSHA256": "65df179ad02f9e92bc18335d7861fadd95f268e6249217352468dd83cb79d1d0",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+      "bytes": 2664431,
+      "expectedSHA256": "c096c1ab2217a5c3ac136365f721685e2201379cb69d509cfb0261183847c98f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "bytes": 1212559808,
+      "expectedSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/Ruicheng/moge-2-vitl/model.pt",
+      "bytes": 1305030700,
+      "expectedSHA256": "3eefd4abb2102f38f12b2d1992e5ff15e4923e5431c67dd494afe157e0111cd5"
+    }
+  ],
+  "sparseControl": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-sparse02/receipt.json",
+  "conditioningControl": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/receipt.json",
+  "samplerParams": {
+    "sparse_structure": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.7,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 5.0
+    },
+    "shape_slat": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.5,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 3.0
+    },
+    "tex_slat": {
+      "steps": 12,
+      "guidance_strength": 1.0,
+      "guidance_rescale": 0.0,
+      "guidance_interval": [
+        0.6,
+        0.9
+      ],
+      "rescale_t": 3.0
+    }
+  },
+  "quality": {
+    "pipeline": "1024_cascade",
+    "stepsPerStage": 12,
+    "seed": 42,
+    "effectiveResolutionRequired": 1024,
+    "reason": "1536attempt02 stopped at65GiB anonymous guard during96grid conditioning",
+    "documentedLowerMemoryAlternative": true,
+    "higherResolutionAttemptEvidence": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal02/finding.json"
+  },
+  "limits": [
+    "One documented-quality seed, serial under explicitly owned65/96 controller.",
+    "No cleanup/export/recolor before immutable raw arrays; learned controls before style judgment.",
+    "Actual estimated camera reused from qualified MoGe receipt; no calibrated geometry or multiview."
+  ]
+}
