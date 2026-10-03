@@ -1115,3 +1115,17 @@ Ask:284–286.
 Limits: Successful execution and preserved coordinates do not establish
 material acceptance, fit/openings, rig, physical units or CUDA/full16 parity.
 Root moving PBR judgment and remaining family seeds stay open.
+
+Finding: Unaccepted TRELLIS sparse-operator recipe freezes independent
+NCWHD cross-correlation and center-based sparse sampling CPU oracles.
+
+Validation: Syntax and whitespace pass; closed-form directional kernel,
+center/midpoint, missing support and separated batch checks pass without
+importing Torch/models. Recipe captures installed Metal extension/library,
+all actual inputs/outputs and exact neighbor maps before asserting fixed
+float32/float16/bfloat16 limits. Existing masked split-K algorithm retained.
+Ask:284–286.
+
+Limits: Checkpoint only; native Metal execution and learned weights/model
+proof pending. Sparse trilinear renormalizes existing centers, and nearest
+uses native truncation toward zero; neither is assumed dense PyTorch grid.
