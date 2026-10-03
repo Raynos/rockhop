@@ -1002,7 +1002,7 @@ Finding: Same learned MPS VAE batch2 versus official batch1 slicing
 returns finite full768images with unchanged actual conditioning latents.
 
 Validation: Guard0/5.181s; published VAE config/weight pins rechecked,
-actual833? parameter count83653863 asserted. Two real paint05 viewlatents
+actual parameter count83653863 asserted. Two real paint05 viewlatents
 [2,4,96,96] decoded packed and sliced, no spatialcrop/tiling. Both outputs
 finite, latentbytes unchanged, maxfloaterror0.00415039/mean0.0000699741.
 Original float32-denormalization pixel proxy maxdifference1≤fixed2threshold;
@@ -1015,3 +1015,18 @@ Limits: Numeric derivative, not byte-identical output/CUDA or full16final
 samples. Pixel proxy promotes tofloat32 before denormalization, unlike
 installed processor; exact installed postprocess check still required.
 Source/control retained before correcting that precision-contract mismatch.
+
+Finding: Paint now persists every sampled latent before VAE allocation
+and actual returned PBR view pixels before upscale/bake.
+
+Validation: AST passes; existing compressed f16 archive format preserves
+actualcondition/noise Cbytes across all completed retries. Each finite
+step saves array+archive/CbyteSHA before returning to pipeline; prior15
+step hashes required when present. Decoder input separately captured;
+returned albedo/MR8view PNGs saved with exactsizes/modes/digests. No model,
+GPU work, quality change or shared runtime edit while foreignlease occupied.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint; real sampled/PBR output persistence
+pending next run. Current exactpixel VAE slicing control still waits for
+lease, so original decoder remains selected by this checkpoint.

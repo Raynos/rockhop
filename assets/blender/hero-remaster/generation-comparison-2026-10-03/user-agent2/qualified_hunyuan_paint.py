@@ -224,6 +224,18 @@ def main():
         report['actualPaintInputPNGs'] = rows
         save()
         result = original_forward(images, controls, **keywords)
+        decoded_dir = out / 'actual-returned-pbr-views'
+        decoded_dir.mkdir()
+        report['actualReturnedPBRViews'] = {}
+        for family, views in result.items():
+            assert family in ('albedo', 'mr') and len(views) == 8
+            rows = []
+            for index, image in enumerate(views):
+                path = decoded_dir / f'{family}-{index:02d}.png'
+                image.save(path)
+                rows.append({'index': index, 'path': str(path), 'SHA256': sha(path),
+                             'size': list(image.size), 'mode': image.mode})
+            report['actualReturnedPBRViews'][family] = rows
         report.update(stage='multiview images returned; upscale and bake',
                       multiviewElapsedSeconds=time.monotonic() - started)
         save()
@@ -308,13 +320,30 @@ def main():
             result = original_scheduler_step(*positional, **keywords)
             latent = (result[0] if isinstance(result, tuple) else result.prev_sample).detach().cpu().numpy()
             assert np.isfinite(latent).all(), 'Nonfinite real sampled paint latent'
-            report['actualDiffusionSteps'].append({'step': len(report['actualDiffusionSteps']) + 1,
+            step = len(report['actualDiffusionSteps']) + 1
+            archive = out / f'actual-sampled-paint-latent-step{step:02d}.npz'
+            np.savez_compressed(archive, latent=latent)
+            entry = {'step': step,
                 'elapsedSeconds': time.monotonic() - started, 'shape': list(latent.shape),
                 'dtype': str(latent.dtype), 'allFinite': True,
-                'CBytesSHA256': hashlib.sha256(latent.tobytes()).hexdigest()})
+                'CBytesSHA256': hashlib.sha256(latent.tobytes()).hexdigest(),
+                'archive': str(archive), 'archiveSHA256': sha(archive)}
+            if prior and prior.get('actualDiffusionSteps'):
+                expected_step = prior['actualDiffusionSteps'][step - 1]
+                entry['priorSampledCBytesIdentical'] = all(entry[key] == expected_step[key]
+                    for key in ('step', 'shape', 'dtype', 'CBytesSHA256'))
+                assert entry['priorSampledCBytesIdentical'], 'Actual prior sampled paint latent differs'
+            report['actualDiffusionSteps'].append(entry)
             save()
             return result
         pipeline.scheduler.step = scheduler_step
+        original_vae_decode = pipeline.vae.decode
+        def vae_decode(*positional, **keywords):
+            capture('actual-final-VAE-decode-input', positional[0] if positional else keywords['z'])
+            report['stage'] = 'VAE decode requested; sampled/input archives saved'
+            save()
+            return original_vae_decode(*positional, **keywords)
+        pipeline.vae.decode = vae_decode
         save()
     if args.query_tiling:
         from query_tiled_attention import query_tiled_attention
