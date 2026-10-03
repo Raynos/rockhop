@@ -822,3 +822,21 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint, actual retry pending. Float32
 attention changes roundoff; no byte-identical neural/CUDA output claim.
 No view/key truncation, sampler sweep or raised guard bounds.
+
+Finding: Existing setup notes now publish the independently verified PBR
+pins, real conditioning/resource failure and geometry-preservation controls.
+
+Validation: Active localai8d6d5d0/weights6ddb1cd, scoped published
+localai94fe373/weightsddd6416. Exactly one owned descendant per remote;
+normal hooks pass, nonforced push and remote SHA checks pass. Owned docs
+and journal bytes match active commits; README changes only existing pointer.
+Foreign active histories and all weight/runtime/source/symlink bytes remain
+untouched. Existing round gate receipt independently read: low/high clear
+4810ticks, identical finish bytes/hash, crash103, restarttick0 in2ms.
+Player-source identity to296da2fe checked at34cba750, zero differences.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/scoped-publication03/
+Ask:284–286.
+
+Limits: Setup documentation publication, not completed texture quality,
+full learned/CUDA parity or ordinary asset promotion. Live guarded paint03
+continues independently; no new clone, branch, worktree or foreign rewrite.

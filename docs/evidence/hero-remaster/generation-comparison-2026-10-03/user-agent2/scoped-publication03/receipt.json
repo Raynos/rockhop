@@ -1,0 +1,111 @@
+{
+  "accepted": false,
+  "method": "Existing authorized isolated ordinary main clones; one owned descendant each, normal hooks, nonforced fast-forward pushes",
+  "records": [
+    {
+      "repo": "localai",
+      "activeMainCommit": "8d6d5d0aaa7191c2932a8b4bc451cc05f9cf17fc",
+      "previousPublishedMain": "a3a772fe8f189b93d5e79489443726b7e8a7fdaf",
+      "publishedMain": "94fe373563d175de9e70eefcb722b7fa644490ad",
+      "remoteMainVerified": "94fe373563d175de9e70eefcb722b7fa644490ad",
+      "publishedOwnedCommitCount": 1,
+      "ownedPaths": [
+        "README.md",
+        "docs/rockhop-qualified-3d-2026-10-03.md",
+        "project/journal/2026-10-03-session-01-rockhop-agent2-quality.md"
+      ],
+      "normalHooksPassed": true,
+      "filePins": {
+        "README.md": {
+          "publishedSHA256": "1f2b38f615eb9292a177ff0354ac38003fc67abf0e340397c060a7a34503bd94",
+          "activeSHA256": "609180ae92a2ad4ccb3ede48a5931a1f0472d885aca3eb896eb4a52edd7b2200",
+          "identicalFullFile": false
+        },
+        "docs/rockhop-qualified-3d-2026-10-03.md": {
+          "publishedSHA256": "c8fde164f26f617e6d7f2c8e556558fb7d00e86f87ce0c2000bdc155046e5739",
+          "activeSHA256": "c8fde164f26f617e6d7f2c8e556558fb7d00e86f87ce0c2000bdc155046e5739",
+          "identicalFullFile": true
+        },
+        "project/journal/2026-10-03-session-01-rockhop-agent2-quality.md": {
+          "publishedSHA256": "461ce6363bd9a8f837766b75e80e1dbac4ef2e6de0851640f16741d992b95d2d",
+          "activeSHA256": "461ce6363bd9a8f837766b75e80e1dbac4ef2e6de0851640f16741d992b95d2d",
+          "identicalFullFile": true
+        }
+      }
+    },
+    {
+      "repo": "weights",
+      "activeMainCommit": "6ddb1cd61bf4e0e7eec172bfb23f19acb3fe6630",
+      "previousPublishedMain": "b4401a7093920039017b34eaaa390bec87dc5d79",
+      "publishedMain": "ddd641609f7f4bfb3ab429a091c1a6a90774c30a",
+      "remoteMainVerified": "ddd641609f7f4bfb3ab429a091c1a6a90774c30a",
+      "publishedOwnedCommitCount": 1,
+      "ownedPaths": [
+        "README.md",
+        "ROCKHOP-QUALITY-2026-10-03.md"
+      ],
+      "normalHooksPassed": true,
+      "filePins": {
+        "README.md": {
+          "publishedSHA256": "f9aefe8b6aa7c702445b5aeea8dca7e4e855f56d6a4613be66a5b78aedbfed7b",
+          "activeSHA256": "809b89a09b6fc719713381efd59af09ea6cc2372b756c3bc11b3cf1acaf128b5",
+          "identicalFullFile": false
+        },
+        "ROCKHOP-QUALITY-2026-10-03.md": {
+          "publishedSHA256": "bb1201450cbc21a39412f1a963d773dfab78511d9fd0eb541aab00f4f4ef1b0f",
+          "activeSHA256": "bb1201450cbc21a39412f1a963d773dfab78511d9fd0eb541aab00f4f4ef1b0f",
+          "identicalFullFile": true
+        }
+      }
+    }
+  ],
+  "foreignActiveHistoryPublished": false,
+  "runtimeOrWeightsChanged": false,
+  "newClonesBranchesWorktrees": false,
+  "assetAcceptance": false,
+  "ordinaryShipGate": {
+    "source": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/construction05-anatomy/ordinary-gate.json",
+    "gateBase": "296da2fea6e4c825b710c78f41d921fb2e2734a4",
+    "checkedRockhopHEAD": "34cba750c6cc29dfd79576897413baa972477379",
+    "playerSourceDifferences": [],
+    "sourceSHA256": "b9f8bc03a91c1ef17af26520db24e3076f41ba46dc5cd879f1dea203cbc90eea",
+    "actualRuns": [
+      {
+        "quality": "low",
+        "clear": {
+          "hash": "368f1ca5bd9e830a",
+          "runTime": 40.083333333333336,
+          "faults": 0,
+          "finishTime": 40.083333333333336,
+          "tick": 4810
+        },
+        "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+        "crashRestart": {
+          "crashed": true,
+          "crashTicks": 103,
+          "restartPhase": "riding",
+          "restartTick": 0,
+          "restartMs": 2
+        }
+      },
+      {
+        "quality": "high",
+        "clear": {
+          "hash": "368f1ca5bd9e830a",
+          "runTime": 40.083333333333336,
+          "faults": 0,
+          "finishTime": 40.083333333333336,
+          "tick": 4810
+        },
+        "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+        "crashRestart": {
+          "crashed": true,
+          "crashTicks": 103,
+          "restartPhase": "riding",
+          "restartTick": 0,
+          "restartMs": 2
+        }
+      }
+    ]
+  }
+}
