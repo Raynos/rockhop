@@ -1,0 +1,52 @@
+UV diagnostic and lower garment construction audit — 1 October 2026
+
+The corrected UV diagnostic preserves geometry, skinning and all 51 morph targets. The lower mesh still needs construction and support work: it is one fused clothed surface, and its seated endpoint remains clear of the saddle.
+
+UV verification
+
+Corrected candidate SHA: 0caae700ef1ac4dc1101f6cbfb64eba5f0430e0393254bd97309971870e5f45b
+Parent V7 SHA: 76b4e730b81513ebddb975a964093f5a3d8afb2724f5b8dc7d0a99536a711190
+
+The first UV candidate, SHA 4219b8cd…, omitted normalized=true from primitive 0 COLOR_0, COLOR_1 and COLOR_2. Those old vertices therefore decoded with different colors, confounding its appearance comparison. Root fixed the export and superseded the affected board. The rejected proof remains in uv-ablation-static-proof-rejected4219.json.
+
+The corrected file passes exact comparisons of the old non-UV attributes and normalization flags, all 69 duplicated non-UV rows, every POSITION/NORMAL morph row and clone, and triangles after mapping clones back to their source vertices. Skin, node, animation and material JSON remain identical. Every embedded image byte and the original BIN prefix remain identical. Existing vertex indices and socket references remain unchanged.
+
+The 69 appended vertices are UV seam duplicates. Their matching geometry, weights and complete morph vectors preserve the parent motion algebra for arbitrary supported skin and morph coefficients. This establishes preservation, not acceptance of the existing geometry or new UV continuity.
+
+Stock Three.js r186 loaded both files through GLTFLoader, AnimationMixer and SkinnedMesh at 0, 0.731 and 2 seconds: 5 meshes, 19 bones, 30 primitive reference arrays, zero failures, maximum position error 9.18e-8 m. This bounded check does not duplicate the original owner's full qualification fixture. Position parity alone does not certify material rendering; decoded color attributes and flags were checked separately.
+
+Lower topology
+
+The original preferred cloth primitives 0 and 2 form one connected component with 19,220 vertices after exact welding. The bounded waist region contains zero open boundary edges and zero nonmanifold edges. There is no encoded independent hoodie hem contacting a separate jeans waist. The source has a connected surface through torso, hoodie, waist and jeans.
+
+The audit freezes 97 texture-informed gold/denim adjacency candidates. Of those pairs, 65 share original indexed edges, rather than only coincident seam aliases. Their interface fragments into 23 components; the largest contains 18 vertices. This is not a usable ordered hem cut line or a garment pattern.
+
+Exact locating witnesses are now frozen in lower-seam-support-witnesses.json, including original face triangles, all raw vertex aliases, rest positions and weights. The posterior shared indexed edge is primitive 0 faces 16408/16405, vertices 10712/11181, at y=0.919944–0.920567 m. The positive lateral clue is faces 5836/6271; the negative lateral clue is faces 26904/26902. The highest texture-interface point, vertex aliases 17849/17850 at [0.634496, 1.057833, -0.196738] m, is lateral. It does not establish the anterior hem height. The proposed front height near 1.058 m therefore needs a real ridge landmark, rather than reuse of this color maximum. Baked shadows, belt colors, denim patches and folds can confuse color segmentation. Neither a flat height cut nor a color threshold provides a reliable anatomical hem.
+
+The current C19 estimated pelvis centre is [0.645, 0.918, 0] m; thigh centres are [0.638, 0.913, ±0.110] m, with shin centres [0.647, 0.505, ±0.145] m. These are the current frozen skeleton estimates, not clinical anatomy or the older body11 pivot at y=0.959175. The seven exact pelvis/thigh/shin/foot centres are included in the witness file.
+Practical loop and cap proposal
+
+1. Review the preferred standing mesh in matched gray and textured front, back and side views. Mark the hoodie hem ridge or overhang and the jeans waist independently, using original face and vertex IDs. Use the 97 adjacency candidates as locating clues. Choose front, rear and lateral landmarks on the actual hem; preserve its varying height.
+2. Connect the landmarks with ordered geodesic arcs constrained to the intended garment seam. Review a line overlay before cutting. Require one simple closed cycle with degree two, consistent winding and no repeated vertices. Verify that removing the cycle's adjacency separates torso and jeans as intended. An invalid cycle stays a diagnostic.
+3. Duplicate vertices along the accepted cycle to create distinct hoodie and jeans physical weld groups. Preserve external positions, UVs and colors where possible. Fold the hoodie edge inward into a finished rim. Cap the jeans waist and provide a plausible inner pelvis or body surface beneath the clothes. Keep caps inside the original standing silhouette; do not enlarge the garments to conceal failures.
+4. Fit pants and pelvis support to the actual saddle faces while retaining sensible thigh and shin lengths and the established wrist and sole trajectories. Treat hoodie sliding, pants contact and anatomical support as separate constraints. A broad weight band or whole-body vertical translation does not resolve the fused construction.
+5. Give caps and rims explicit region labels, source ancestry, rest areas, orientations, normals and thickness assumptions. UV seam duplicates remain one physical weld. A separated hoodie/jeans pair must have distinct physical groups even when both vertices descend from the same source vertex. Original alias exclusions must not hide crossings between newly separated garments. Retain the enhanced one-shared-corner crossing category.
+6. Freeze a portable rigged GLB and matched motion keys before judging the result. Root schedules gray and textured moving views from front, side and back, including endpoints and interpolation holdouts. The original owner's runtime fixture covers the broader stock Three.js checks. This lane supplies independent literal triangle, seam and contact witnesses. A UV-only or normals-only film remains an appearance ablation.
+
+Saddle support
+
+At the identical two-second endpoint, 4,235 projected hip/saddle triangle pairs were checked. The minimum vertical triangle-surface gap is 14.219434 mm for raw C19 and plain V7, and 14.219450 mm for the actual V7 export. No projected pair lies entirely within 3 mm of the saddle. This refines the earlier 16.3957 mm projected vertex metric; support still fails. The upper-body corrective clip has not changed the lower-body result.
+
+The minimum witness is primitive 0 face 16094, source vertices [10638, 10556, 10804], against bike bodywork face 294, source vertices [294, 310, 312]. The source hip triangle is effectively rigidly owned by left thigh slot 13 (two vertices weight 1, the third weight 0.98206 with 0.01794 on right thigh slot 16). Thus this support witness is in the clothed thigh surface, rather than a separate anatomical pelvis support surface.
+
+The minimum witness is hip combined face 16094 against bike bodywork face 294, at xz=[-0.202965753, 0.057977608] m. The cloth height is 0.595905718 m and the saddle height is 0.581686269 m. The selected 48 upward saddle faces include sloped areas. This finite vertical gap is not Euclidean closest distance, cloth thickness, contact pressure or rider support force.
+
+Required candidate data
+
+Supply the frozen GLB, positions, weights, triangle indices, complete world joint deformations and rest/inverse-bind basis. Include source vertex and face ancestry, physical garment/weld IDs, cap/rim/body labels, and actual hand, sole and saddle face anchors in the bike frame. Preserve existing socket indices or provide an exact mapping. Comparisons must match world deformations and end effectors; copying quaternions between different bases is insufficient.
+
+Evidence
+
+Owned qa-lane/uv-lower01 contains uv-ablation-static-proof.json, stock-three-validation.json, hoodie-jeans-topology.json, lower-seam-support-witnesses.json and saddle-triangle-surface-gap.json. The reproducible scripts are uv_ablation_qualify.py, lower_connection_audit.py and saddle_surface_audit.py.
+
+No production promotion, GPU use, child rendering or foreign source edits occurred. These are finite checks. Standing anatomy, broad arm motion, lower-body collision, saddle support and whole-character acceptance remain unresolved.

@@ -1,0 +1,1358 @@
+{
+  "engine": {
+    "Three_revision": "186",
+    "Node": "v24.18.1"
+  },
+  "method": "Stock GLTFLoader and SkinnedMesh.getVertexPosition; archived19 worldD304 reconstructed as absolute bone matrices including mesh bind prefixes. Original conditioner imported directly read-only. Images/materials stripped only in memory.",
+  "conditioning_sha256": "8131a62a2b924d06e84ce8dd8a79ae2eaada892377adf1430f91b993af2bc641",
+  "variants": [
+    {
+      "id": "local",
+      "sha256": "b6fbfa9537af7950a492fdc7720c3869e8f6f9341d27b0be7576ac9d89f39e44",
+      "bone_counts": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "vertex_counts": [
+        26658,
+        4021,
+        3112,
+        61099,
+        294
+      ],
+      "morph_counts": [
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "stages": [
+        {
+          "id": "authored-bypass",
+          "cases": [
+            {
+              "case": "rest-open",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 7.762615802172348e-08,
+                  "rms_m": 2.843000474399225e-09,
+                  "worst_vertex": 21455
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 4.403765608179841e-08,
+                  "rms_m": 8.928386573396087e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            },
+            {
+              "case": "rest-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 7.762615802172348e-08,
+                  "rms_m": 2.843000474399225e-09,
+                  "worst_vertex": 21455
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 4.403765608179841e-08,
+                  "rms_m": 8.928386573396087e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            },
+            {
+              "case": "D304-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 6.4435537181303e-08,
+                  "rms_m": 1.924613355435962e-09,
+                  "worst_vertex": 13796
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 2.2887833992611187e-16,
+                  "rms_m": 7.908816384088018e-17,
+                  "worst_vertex": 2645
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 3.2116705923269345e-08,
+                  "rms_m": 6.428375253246499e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 1.5700924586837752e-16,
+                  "rms_m": 7.905486991527023e-17,
+                  "worst_vertex": 2275
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 1.1102230246251565e-16,
+                  "rms_m": 7.903686376130673e-17,
+                  "worst_vertex": 0
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "production-conditioner",
+          "cases": [
+            {
+              "case": "rest-open",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 7.762615802172348e-08,
+                  "rms_m": 2.843000474399225e-09,
+                  "worst_vertex": 21455
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 4.403765608179841e-08,
+                  "rms_m": 8.928386573396087e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            },
+            {
+              "case": "rest-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 7.762615802172348e-08,
+                  "rms_m": 2.843000474399225e-09,
+                  "worst_vertex": 21455
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 4.403765608179841e-08,
+                  "rms_m": 8.928386573396087e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            },
+            {
+              "case": "D304-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 6.4435537181303e-08,
+                  "rms_m": 1.924613355435962e-09,
+                  "worst_vertex": 13796
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 2.2887833992611187e-16,
+                  "rms_m": 7.908816384088018e-17,
+                  "worst_vertex": 2645
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 3.2116705923269345e-08,
+                  "rms_m": 6.428375253246499e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 1.5700924586837752e-16,
+                  "rms_m": 7.905486991527023e-17,
+                  "worst_vertex": 2275
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 1.1102230246251565e-16,
+                  "rms_m": 7.903686376130673e-17,
+                  "worst_vertex": 0
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              },
+              "delta_from_bypass": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ]
+            }
+          ],
+          "weight_delta_from_bypass": [
+            {
+              "primitive": 0,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            },
+            {
+              "primitive": 1,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            },
+            {
+              "primitive": 2,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            },
+            {
+              "primitive": 3,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            },
+            {
+              "primitive": 4,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            }
+          ]
+        }
+      ],
+      "explicit_authored_geometry_restore": [
+        {
+          "primitive": 0,
+          "vertices": 26658,
+          "max_m": 7.762615802172348e-08,
+          "rms_m": 2.843000474399225e-09,
+          "worst_vertex": 21455
+        },
+        {
+          "primitive": 1,
+          "vertices": 4021,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 2,
+          "vertices": 3112,
+          "max_m": 4.403765608179841e-08,
+          "rms_m": 8.928386573396087e-10,
+          "worst_vertex": 2444
+        },
+        {
+          "primitive": 3,
+          "vertices": 61099,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 4,
+          "vertices": 294,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        }
+      ],
+      "explicit_authored_restore_D304_delta": [
+        {
+          "primitive": 0,
+          "vertices": 26658,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 1,
+          "vertices": 4021,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 2,
+          "vertices": 3112,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 3,
+          "vertices": 61099,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 4,
+          "vertices": 294,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        }
+      ],
+      "original_geometry_weights_immutable": true,
+      "restore_method": "Release conditioner resources, explicitly restore original geometry, then restore bone worlds and morph coefficients; release alone is lifecycle cleanup."
+    },
+    {
+      "id": "mapped",
+      "sha256": "b077a27ceba5040e4c0388a3501b3815984ee21a13da58640d2d03b319fb4dee",
+      "bone_counts": [
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "vertex_counts": [
+        26658,
+        4021,
+        3112,
+        61099,
+        294
+      ],
+      "morph_counts": [
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "stages": [
+        {
+          "id": "authored-bypass",
+          "cases": [
+            {
+              "case": "rest-open",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 7.762615802172348e-08,
+                  "rms_m": 2.843000474399225e-09,
+                  "worst_vertex": 21455
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 4.403765608179841e-08,
+                  "rms_m": 8.928386573396087e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            },
+            {
+              "case": "rest-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 7.762615802172348e-08,
+                  "rms_m": 2.843000474399225e-09,
+                  "worst_vertex": 21455
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 4.403765608179841e-08,
+                  "rms_m": 8.928386573396087e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            },
+            {
+              "case": "D304-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 6.4435537181303e-08,
+                  "rms_m": 1.924613355435962e-09,
+                  "worst_vertex": 13796
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 2.2887833992611187e-16,
+                  "rms_m": 7.908816384088018e-17,
+                  "worst_vertex": 2645
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 3.2116705923269345e-08,
+                  "rms_m": 6.428375253246499e-10,
+                  "worst_vertex": 2444
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 1.5700924586837752e-16,
+                  "rms_m": 7.905486991527023e-17,
+                  "worst_vertex": 2275
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 1.1102230246251565e-16,
+                  "rms_m": 7.903686376130673e-17,
+                  "worst_vertex": 0
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0,
+                "worst_gap": null,
+                "worst_weight_spread": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "production-conditioner",
+          "cases": [
+            {
+              "case": "rest-open",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 1.1600312079163557e-07,
+                  "rms_m": 1.7154069442492696e-08,
+                  "worst_vertex": 19143
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 8.827361194560084e-08,
+                  "rms_m": 1.861079536343733e-08,
+                  "worst_vertex": 273
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 8.659709943601298e-08,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0.14210787415504456,
+                "worst_gap": {
+                  "physical_weld": 1272,
+                  "vertices": [
+                    [
+                      0,
+                      14559
+                    ],
+                    [
+                      2,
+                      2747
+                    ]
+                  ],
+                  "positions": [
+                    [
+                      0.5131323796539254,
+                      1.35502501845175,
+                      -0.13292839767531633
+                    ],
+                    [
+                      0.5131324100121727,
+                      1.3550250991633321,
+                      -0.13292840561729166
+                    ]
+                  ]
+                },
+                "worst_weight_spread": {
+                  "physical_weld": 2132,
+                  "vertices": [
+                    [
+                      0,
+                      24276
+                    ],
+                    [
+                      2,
+                      2967
+                    ]
+                  ],
+                  "joint": 2
+                }
+              }
+            },
+            {
+              "case": "rest-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 1.1600312079163557e-07,
+                  "rms_m": 1.7154069442492696e-08,
+                  "worst_vertex": 19143
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 8.827361194560084e-08,
+                  "rms_m": 1.861079536343733e-08,
+                  "worst_vertex": 273
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 8.659709943601298e-08,
+                "groups_gap_over1um": 0,
+                "max_weight_spread": 0.14210787415504456,
+                "worst_gap": {
+                  "physical_weld": 1272,
+                  "vertices": [
+                    [
+                      0,
+                      14559
+                    ],
+                    [
+                      2,
+                      2747
+                    ]
+                  ],
+                  "positions": [
+                    [
+                      0.5131323796539254,
+                      1.35502501845175,
+                      -0.13292839767531633
+                    ],
+                    [
+                      0.5131324100121727,
+                      1.3550250991633321,
+                      -0.13292840561729166
+                    ]
+                  ]
+                },
+                "worst_weight_spread": {
+                  "physical_weld": 2132,
+                  "vertices": [
+                    [
+                      0,
+                      24276
+                    ],
+                    [
+                      2,
+                      2967
+                    ]
+                  ],
+                  "joint": 2
+                }
+              }
+            },
+            {
+              "case": "D304-closed",
+              "bone_world_assignment_disagreement": 0,
+              "parity": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 0.07495153117410762,
+                  "rms_m": 0.010902329388351369,
+                  "worst_vertex": 1291
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 2.2887833992611187e-16,
+                  "rms_m": 7.908816384088018e-17,
+                  "worst_vertex": 2645
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 0.012351842348332044,
+                  "rms_m": 0.001433509013763513,
+                  "worst_vertex": 49
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 1.5700924586837752e-16,
+                  "rms_m": 7.905486991527023e-17,
+                  "worst_vertex": 2275
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 1.1102230246251565e-16,
+                  "rms_m": 7.903686376130673e-17,
+                  "worst_vertex": 0
+                }
+              ],
+              "seams": {
+                "referenced_alias_groups": 15764,
+                "max_pair_gap_m": 0.01865145050826159,
+                "groups_gap_over1um": 151,
+                "max_weight_spread": 0.14210787415504456,
+                "worst_gap": {
+                  "physical_weld": 2132,
+                  "vertices": [
+                    [
+                      0,
+                      24276
+                    ],
+                    [
+                      2,
+                      2967
+                    ]
+                  ],
+                  "positions": [
+                    [
+                      -0.29607412984237164,
+                      1.05823233119881,
+                      -0.16433823744413611
+                    ],
+                    [
+                      -0.2946919661495488,
+                      1.0396533154401826,
+                      -0.1652250311230987
+                    ]
+                  ]
+                },
+                "worst_weight_spread": {
+                  "physical_weld": 2132,
+                  "vertices": [
+                    [
+                      0,
+                      24276
+                    ],
+                    [
+                      2,
+                      2967
+                    ]
+                  ],
+                  "joint": 2
+                }
+              },
+              "delta_from_bypass": [
+                {
+                  "primitive": 0,
+                  "vertices": 26658,
+                  "max_m": 0.07495153117410774,
+                  "rms_m": 0.010902329377276108,
+                  "worst_vertex": 1291
+                },
+                {
+                  "primitive": 1,
+                  "vertices": 4021,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 2,
+                  "vertices": 3112,
+                  "max_m": 0.012351842348332044,
+                  "rms_m": 0.0014335090006989612,
+                  "worst_vertex": 49
+                },
+                {
+                  "primitive": 3,
+                  "vertices": 61099,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                },
+                {
+                  "primitive": 4,
+                  "vertices": 294,
+                  "max_m": 0,
+                  "rms_m": 0,
+                  "worst_vertex": -1
+                }
+              ]
+            }
+          ],
+          "weight_delta_from_bypass": [
+            {
+              "primitive": 0,
+              "max_weight_change": 0.6177513003349304,
+              "changed_vertices_above1e_minus12": 5990
+            },
+            {
+              "primitive": 1,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            },
+            {
+              "primitive": 2,
+              "max_weight_change": 0.1329340524971485,
+              "changed_vertices_above1e_minus12": 1138
+            },
+            {
+              "primitive": 3,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            },
+            {
+              "primitive": 4,
+              "max_weight_change": 0,
+              "changed_vertices_above1e_minus12": 0
+            }
+          ]
+        }
+      ],
+      "explicit_authored_geometry_restore": [
+        {
+          "primitive": 0,
+          "vertices": 26658,
+          "max_m": 7.762615802172348e-08,
+          "rms_m": 2.843000474399225e-09,
+          "worst_vertex": 21455
+        },
+        {
+          "primitive": 1,
+          "vertices": 4021,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 2,
+          "vertices": 3112,
+          "max_m": 4.403765608179841e-08,
+          "rms_m": 8.928386573396087e-10,
+          "worst_vertex": 2444
+        },
+        {
+          "primitive": 3,
+          "vertices": 61099,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 4,
+          "vertices": 294,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        }
+      ],
+      "explicit_authored_restore_D304_delta": [
+        {
+          "primitive": 0,
+          "vertices": 26658,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 1,
+          "vertices": 4021,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 2,
+          "vertices": 3112,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 3,
+          "vertices": 61099,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        },
+        {
+          "primitive": 4,
+          "vertices": 294,
+          "max_m": 0,
+          "rms_m": 0,
+          "worst_vertex": -1
+        }
+      ],
+      "original_geometry_weights_immutable": true,
+      "restore_method": "Release conditioner resources, explicitly restore original geometry, then restore bone worlds and morph coefficients; release alone is lifecycle cleanup."
+    }
+  ],
+  "limits": [
+    "LBS export diagnostic only; nonlinear responding_surface is not included.",
+    "CPU stock vertex/skin parity is not GPU/shader/material appearance parity.",
+    "No standing/motion-quality,continuous collision or saddle support acceptance."
+  ],
+  "status": "BOUNDED_STOCK_LBS_EXPORT_PARITY_PASS",
+  "independent_rest_binds": [
+    {
+      "variant": "local",
+      "sha256": "b6fbfa9537af7950a492fdc7720c3869e8f6f9341d27b0be7576ac9d89f39e44",
+      "nineteen_joints": true,
+      "bones": [
+        {
+          "slot": 0,
+          "name": "fresh.pelvis",
+          "rest_inverse_bind_identity_error": 1.907348634588857e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 1,
+          "name": "fresh.spine",
+          "rest_inverse_bind_identity_error": 5.7220459037665705e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 2,
+          "name": "fresh.chest",
+          "rest_inverse_bind_identity_error": 1.4305114648394124e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 3,
+          "name": "fresh.neck",
+          "rest_inverse_bind_identity_error": 1.4584790042349027e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 4,
+          "name": "fresh.head",
+          "rest_inverse_bind_identity_error": 5.940526248693345e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 5,
+          "name": "fresh.shoulder.L",
+          "rest_inverse_bind_identity_error": 2.6260993157833923e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 6,
+          "name": "fresh.upperArm.L",
+          "rest_inverse_bind_identity_error": 2.5456798669054592e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 7,
+          "name": "fresh.forearm.L",
+          "rest_inverse_bind_identity_error": 1.7596601842306825e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 8,
+          "name": "fresh.hand.L",
+          "rest_inverse_bind_identity_error": 1.8588646177875034e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 9,
+          "name": "fresh.shoulder.R",
+          "rest_inverse_bind_identity_error": 2.626099071534327e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 10,
+          "name": "fresh.upperArm.R",
+          "rest_inverse_bind_identity_error": 1.9091026093320806e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 11,
+          "name": "fresh.forearm.R",
+          "rest_inverse_bind_identity_error": 4.2757790419400976e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 12,
+          "name": "fresh.hand.R",
+          "rest_inverse_bind_identity_error": 2.6018524224014072e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 13,
+          "name": "fresh.thigh.L",
+          "rest_inverse_bind_identity_error": 1.239776614703203e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 14,
+          "name": "fresh.shin.L",
+          "rest_inverse_bind_identity_error": 1.478195188475695e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 15,
+          "name": "fresh.foot.L",
+          "rest_inverse_bind_identity_error": 2.7511519840039966e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 16,
+          "name": "fresh.thigh.R",
+          "rest_inverse_bind_identity_error": 1.239776614703203e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 17,
+          "name": "fresh.shin.R",
+          "rest_inverse_bind_identity_error": 1.478195188475695e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 18,
+          "name": "fresh.foot.R",
+          "rest_inverse_bind_identity_error": 1.3012493194075603e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        }
+      ],
+      "max_inverse_bind_identity_error": 5.940526248693345e-08
+    },
+    {
+      "variant": "mapped",
+      "sha256": "b077a27ceba5040e4c0388a3501b3815984ee21a13da58640d2d03b319fb4dee",
+      "nineteen_joints": true,
+      "bones": [
+        {
+          "slot": 0,
+          "name": "pelvis",
+          "rest_inverse_bind_identity_error": 1.907348634588857e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 1,
+          "name": "spine",
+          "rest_inverse_bind_identity_error": 5.7220459037665705e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 2,
+          "name": "chest",
+          "rest_inverse_bind_identity_error": 1.4305114648394124e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 3,
+          "name": "neck",
+          "rest_inverse_bind_identity_error": 1.4584790042349027e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 4,
+          "name": "head",
+          "rest_inverse_bind_identity_error": 5.940526248693345e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 5,
+          "name": "shoulder.L",
+          "rest_inverse_bind_identity_error": 2.6260993157833923e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 6,
+          "name": "upperArm.L",
+          "rest_inverse_bind_identity_error": 2.5456798669054592e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 7,
+          "name": "forearm.L",
+          "rest_inverse_bind_identity_error": 1.7596601842306825e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 8,
+          "name": "hand.L",
+          "rest_inverse_bind_identity_error": 1.8588646177875034e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 9,
+          "name": "shoulder.R",
+          "rest_inverse_bind_identity_error": 2.626099071534327e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 10,
+          "name": "upperArm.R",
+          "rest_inverse_bind_identity_error": 1.9091026093320806e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 11,
+          "name": "forearm.R",
+          "rest_inverse_bind_identity_error": 4.2757790419400976e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 12,
+          "name": "hand.R",
+          "rest_inverse_bind_identity_error": 2.6018524224014072e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 13,
+          "name": "thigh.L",
+          "rest_inverse_bind_identity_error": 1.239776614703203e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 14,
+          "name": "shin.L",
+          "rest_inverse_bind_identity_error": 1.478195188475695e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 15,
+          "name": "foot.L",
+          "rest_inverse_bind_identity_error": 2.7511519840039966e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 16,
+          "name": "thigh.R",
+          "rest_inverse_bind_identity_error": 1.239776614703203e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 17,
+          "name": "shin.R",
+          "rest_inverse_bind_identity_error": 1.478195188475695e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        },
+        {
+          "slot": 18,
+          "name": "foot.R",
+          "rest_inverse_bind_identity_error": 1.3012493194075603e-08,
+          "rest_basis_orthogonality_error": 0.0,
+          "rest_basis_determinant": 1.0
+        }
+      ],
+      "max_inverse_bind_identity_error": 5.940526248693345e-08
+    }
+  ],
+  "raw_attribute_contract_path": "raw-contract.json",
+  "authored_skinning_compatibility": "PASS at rest/open+closed and archived304closed,all95184 vertices",
+  "current_unconditional_production_conditioning_compatible": false,
+  "required_integration_cost": "Mapped canonical names activate conditioner. Integration owner must explicitly honor rockhopRiderSkinConditioned metadata or use a verified path that preserves authored weights and physical aliases; local fresh names are not a production adapter substitute.",
+  "driver_distinction": "This GLB includes standard4-influence LBS and original2grip morphs. It does not encode RespondingSleeve.deform harmonic cap/cubic rotation-minimizing material response; LBS parity does not qualify that different method."
+}

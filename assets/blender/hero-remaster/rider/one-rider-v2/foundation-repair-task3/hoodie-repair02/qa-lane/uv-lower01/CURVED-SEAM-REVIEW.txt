@@ -1,0 +1,21 @@
+Independent curved lower seam review — 1 October 2026
+
+The magenta texture-clue proposal passes independent rest topology and source-reference checks. It is a valid construction input for an experimental garment split; it does not establish posed garment quality or saddle support.
+
+Source C19 SHA256: 186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e
+Magenta proposal NPZ SHA256: 9508b07ee343eeff9ef34597b8ea0f3f8ea80ce40eaa2de3880d630fc7217cf3
+Cyan geometry proposal NPZ SHA256: 8ea07b7b5c5cd244b98f36ca1cbce25f60595e867515cf65006f64897f9d0b22
+
+All six existing CPU front/side/back gray and textured overlays were inspected. Magenta follows the lower gold rib-band boundary against jeans. Cyan follows the top of that band. The side sleeve/glove obscures a short section, but the complete source-edge cycle is independently verified. The proposed magenta curve stays between y=0.911242 and 0.916891 m; the isolated lateral texture clue at y=1.057833 m is not used. Existing atlas and geometry defects outside the seam remain.
+
+Magenta has 71 unique vertices and 71 unique source edges. All vertices have degree two, the supplied order exactly closes the edge set, and each edge has exactly two source incident faces. Shirt face orientation follows the ordered cycle on all 71 edges, while pants orientation opposes it on all 71. Removing exactly those dual-face adjacencies gives two components: 20,173 shirt faces and 17,913 pants faces. The recomputed partition equals the root shirt mask, and its entire boundary equals the supplied cut. All 11,105 upper torso seed faces stay in the shirt; all 5,341 left-leg and 5,617 right-leg seed faces remain in the same pants component.
+
+The complete 19,220 welded points, 25,352 raw vertex aliases and 38,086 source cloth face references match unchanged source primitives 0 and 2 exactly. No source attributes, indices or sockets were modified by the proposal. Actual split/export preservation must be checked separately.
+
+The 71 welded seam vertices represent 134 raw source vertex instances; 54 seam vertices have multiple UV aliases. Of the raw instances, 33 are used by both shirt and pants faces, 54 only by shirt, and 47 only by pants. The independent proof records every edge, adjacent source face, raw alias and per-side face ownership. Preserve every original attribute row. Shared instances need duplication or an explicit per-side remap. New UV seam aliases within one garment share its physical weld group; shirt/pants duplicates must have distinct garment groups even if they descend from the same original vertex. Common ancestry must not suppress cross-garment collision checks.
+
+Cyan is also a valid rest graph cut: 77 edges and two face components (19,447 shirt / 18,639 pants), but its visible location is the upper rib-band. Magenta is the reviewed lower-hem construction input.
+
+Next gates require the frozen split mesh and export: source row/index/socket preservation, cap/rim ancestry and normals, independent garment weld IDs, new rest boundaries and intersections, deformation/stretch/volume and continuous pose checks, moving gray/textured evidence, and actual saddle support. The previous endpoint remains approximately 14.22 mm clear of the saddle. This review does not pass any of those gates.
+
+Evidence: seam-proposal-independent-proof.json and scripts/seam_proposal_qualify.py in the owned QA lane. Parent proposals and source meshes were read-only; no child rendering or production promotion occurred.

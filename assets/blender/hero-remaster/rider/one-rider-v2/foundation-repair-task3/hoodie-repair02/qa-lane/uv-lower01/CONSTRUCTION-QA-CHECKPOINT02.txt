@@ -1,0 +1,43 @@
+Independent construction QA checkpoint — 2 October 2026
+
+Construction02 passes the new lower rest construction and source-attribute contracts. The armhole export preserves the 19-bone and original grip contracts, but its actual pose remains visually rejected. Neither finding establishes a whole-character pass or saddle support.
+
+Upper armhole export
+
+GLB SHA256 edc58db7720db56bf7b51610df4e3a4840e74b9c5219e6debb50713d81aceb6c, geometry NPZ SHA256 10a1c2094726e7ab929b453e07e5f9c072dd06b0673a8557f4f41c6c5e33c2d7.
+
+Source 19 joint slots, skin JSON, inverse-bind arrays, nodes, materials and embedded images are exact. Original target counts are [2,2,2,0,0]. All original grip morph rows follow exact vertex ancestry, including clones; new fabric has zero grip deltas. Normalization flags and mapped color rows are preserved. Exported positions, normals, UVs and indices match the frozen candidate after float32 conversion. Dense exported weights differ only by float32 roundoff. Old source index prefixes remain intact.
+
+Actual stock Three.js GLTFLoader and SkinnedMesh were checked at rest and manual original grip coefficients [0,0], [1,0] and [1,1] on source and candidate: 30 primitive reference arrays, zero failures. Candidate maximum position error is 1.44716e-7 m; resetting grips gives exactly zero rest error. The file is render-only and has no authored animation clips. This is a bounded loader and morph proof, not a motion/render certificate. Root's actual-pose visual rejection remains.
+
+Inherited rest defects and crop correction
+
+Preferred original body11, C19 and V7 all have literal intersections in primitive 2 pairs [28,67], [29,67] and [29,68]. Exact alias counts are 1,0,1. Original body11 affected positions, indices, UVs and normals match C19. V7 changes one affected coordinate by only 0.238 micrometres; all three crossings persist. Source face 28 is a 0.09438 mm² sliver with two corner normals opposed to its geometric normal. UV and normal shading can compound the visible defect but cannot remove literal geometry intersections.
+
+The former upper mask required all corners y<1.49 m, excluding faces 67 and 68 whose highest corners reach 1.494882 and 1.490560 m. It never certified the whole upper rest mesh. The expanded source float64 test records five crossings with zero shared exact aliases and six with one shared alias. Full-upper armhole construction adds no new rest crossings and resolves its frozen input defects; broader motion still fails. All reported clears remain bounded to their explicit geometry and predicates. Coplanar/tangent contacts and thickness are unclassified.
+
+Rejected lower construction01
+
+L0 SHA80cc6123… / L1 SHA2501632d… introduced four hoodie-rim/pants-lining interior crossings: primitive 0 pairs [34018,34183], [34019,34183], [34020,34185], [34021,34185]. L1 additionally had 242 same-physical-weld weight conflicts, maximum coefficient spread 0.473752; 180 included original-to-original alias conflicts. All 33 redirected shirt clones changed normals, affecting 50 original outer faces despite preserved unused prefix normals. These failures remain frozen in the construction01 reports. No broad pose work was performed on that freeze.
+
+Lower construction02
+
+L0 SHA256 9e63a95531be0f88ad29f3f20d53ce70b4af139b1c9bdf6df887f91ee7d6072b.
+L1 SHA256 567ee4b59480757a2cb64df816692aa953d89bdb2d0eeb7e5dc8b90a0eaf09f5.
+
+The inward hoodie rim was removed. The source zero-thickness open hem is retained, with separate pants waist lining and a hidden cap. These provide neither anatomical body mass nor saddle support.
+
+Both variants have identical rest geometry/topology. Full cloth rest crossings equal the unchanged source baseline of five zero-shared-weld and six one-shared-weld pairs, with zero crossings involving the 213 new lower faces. Physical topology has two garment components, 435 boundary edges (364 retained source edges plus 71 open hoodie hem edges), zero nonmanifold, incoherent winding, degenerate or mixed-garment triangles. No physical weld ID is shared across garments. All 213 new UV triangles have positive nonzero area; UV density and rendered continuity remain unaccepted.
+
+Every old source POSITION, UV and NORMAL row is exact. Original outer triangles retain exact used corner POSITION, UV and NORMAL values after the clone remap. All 134 seam aliases remain, with exactly 33 shared raw instances duplicated. All separated-shirt clone normals now match their parents. L0 retains original full-precision weights; L1 is a declared controlled ownership ablation using a raw-index graph followed by exact physical-weld reconciliation. Both have zero within-weld weight spread and at most four influences. The L1 field is not anatomical ground truth.
+
+The reviewed 71-edge cycle and source ring order match exactly. Every source curve edge has one face for each declared construction row 0/1/2. All 213 actual triangles independently match the declared lining/cap ring construction. The top UV ring has exact source pants-ring ancestry and physical welds. New faces are explicitly new geometry with complete edge/ring provenance, rather than falsely labelled original faces.
+
+Remaining gates
+
+Root owns the next bounded motion comparison using identical authoritative deformations at samples 304, 250 and 350, including all-cloth intersections, strain/area and gaps measured only on referenced vertices. It also owns serialized matched-camera gray/textured moving evidence. Final lower GLB export still requires actual normalized skin-weight, source image, socket, 19-bind and original grip checks. The original owner's wider runtime fixture remains separate. The earlier seated cloth surface remains approximately 14.22 mm above the selected saddle patch; no body-support intervention has been accepted.
+
+Evidence in owned qa-lane/uv-lower01:
+armhole-export-preservation.json; armhole-stock-grips.json; armhole-chart-outward-independent-rest.json; inherited-neck-rest-crossings.json; lower-L0-L1-independent-rest.json; lower-L0-L1-clone-weld-contract.json; lower02-L0-L1-independent-rest.json; lower02-L0-L1-clone-weld-contract.json; lower02-edge-ring-source-contract.json.
+
+No production promotion, GPU use, child rendering, foreign-lane edits or broad pose runs occurred. These checks qualify concrete rest/export contracts, with the stated limits.

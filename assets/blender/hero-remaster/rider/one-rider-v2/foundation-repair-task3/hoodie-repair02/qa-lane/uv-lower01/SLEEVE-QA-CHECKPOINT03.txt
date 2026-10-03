@@ -1,0 +1,18 @@
+Independent sleeve construction QA checkpoint03 (2026-10-02 UTC)
+Owner: foundation-repair-task3/hoodie-repair02/qa-lane. Source construction snapshots read-only. No rendering, foreign edits or broad motion suite.
+
+Latest geometry: source-sleeve-tube-rest10-rmf.npz
+SHA256 53d96e2c9b9e214779f6320485578471d4c4524837b2296080e27a2943732c91
+Parent UV07 SHA256 46ff0c7c99fc31461a2f6de4aa8d030371e6e461e86ef6e979743ce4d88a8cca
+Independent full-cloth0+2 rest:41350 triangles,strict zero-shared0 and one-shared-corner0, both dense float64 and float32 POSITION. Physical edges:364 boundary,0nonmanifold,0incoherent winding,0degenerate weld triangles. Actual boundary physical edge AND coordinate sets exact to independently source-verified parent. Minimum triangle double-area5.120761613600997e-10m2; no area below1e-12. Sewn physical P spread2.22e-16m and W agree. Root/end rings and all original P/W/n prefixes protected; exact UV/topology/face ancestry/physical IDs carried from07. P/n changes confined declared tube interior. Largest interior rest move36.581mm left/36.870mm right. This is a bounded rest geometry/source contract PASS, not standing image or movement acceptance.
+Proof: sleeve-tube10-independent-rest.json; scripts/tube10_rest_qualify.py and tube10_boundary_supplement.py.
+
+UV07 independent proof:232 new chart seam/root clone instances; exact mapped P/W/n, source ancestry and physical IDs on every row and used triangle corner. Source UV prefixes and retained clipped source UV corners exact. New tube charts have consistent positive signed UV area, left cap positive, right cap negative; no zero UV area at1e-14. Seven atlas samples on each of7562 new faces are opaque gold cloth in the original atlas bytes. This is finite sampling, not proof of every filtered/mipped fragment or chart overlap/standing shading.
+Proof: sleeve-tube07-UV-chart-invariants.json; scripts/tube07_uvchart_invariants.py.
+
+Carried independent provenance: envelope06 dense+float32 rest0+0;1748 source sleeve ray hits verified,1622 moved rows match25mm clamp/taper/collar rule to rounding precision. These donor ray labels describe the pre-RMF donor shape, not the current10 spatial envelope. Normal04 normalized source-bary seam normals/20mm physical-graph blend verified; original normal prefixes exact. Used old source normals versus new triangle geometry can still differ substantially; shader appearance must be reviewed.
+Proofs: sleeve-tube06-independent-rest.json, sleeve-tube06-ray-source-contract.json, tube-four-weight-normal04-contracts.json.
+
+Runtime remains blocked: dense10 still has845 newcap rows with5 influences at1e-8. Root's explicit forearm-to-upperarm carrier rule independently passed on parentUV03 (no top4 truncation;1128 bitwise changes,1124 above1e-12). It must be applied to every free cap clone in final07/10 map with physical-weld consistency, then final exported stock4 bind/attrs/closure/socket/19inverse-bind proof. Five-weight material adapter and stock4 ownership ablation are distinct responses.
+
+Acceptance pending: root neutral front/side/back PBR+gray standing appearance; original preferred standing identity; exact304 and withheld posed literal crossings/stretch/cuff/seams; continuous runtime/export interpolation; garment thickness/volume; actual saddle support/body mass. No full-character certificate, no production promotion. Tangent/coplanar contact and thickness are unclassified by strict transverse predicate. Failed09 and prior failed freezes were not rerun or overwritten.

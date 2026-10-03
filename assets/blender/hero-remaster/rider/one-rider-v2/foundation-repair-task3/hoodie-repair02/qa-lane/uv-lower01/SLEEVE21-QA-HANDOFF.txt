@@ -1,0 +1,29 @@
+Independent sleeve21 rest and source-contract QA — 2026-10-02 UTC
+
+Frozen candidate: sleeve-tube03/source-sleeve-tube-rest21-uvchart.npz
+SHA256: 64af529f13f546d59f58679d96afad13fe99b4dbc4152517cacb319b273bf150
+
+Declared rest geometry, source ancestry, UV and normal contracts PASS. Standing appearance remains REJECTED by the construction owner after reviewing root front PBR/gray images: oversized underarm arches and pipe-like sleeves versus the preferred source. There is no accepted rider or new posed proof.
+
+All 41,614 cloth triangles pass the strict transverse intersection check with zero nonadjacent and zero one-shared-corner crossings, in both float64 and float32 POSITION. The 364 boundary edges retain exactly the source coordinate set. Nonmanifold, incoherent winding and alias-degenerate counts are zero. Minimum triangle double-area is 5.120761613600997e-10 m²; none fall below 1e-12. Sewn physical P disagreement is at most 2.22e-16 m and W spread at most 1.11e-16. Original source attributes, protected head/glove/cheek primitives, retained face parent/UV ancestry and clipped source-edge P/W pass. Source face removals stay within the declared cut, clip and cancellation inventory. Coplanar/tangent contact and thickness remain unclassified.
+
+Normal19 preserves every non-normal field from geometry18. All 222 retained clipped normals match normalized source-edge barycentric normals within 1.11e-16. The 737 changed used normals remain within the true 20 mm sewn physical-edge graph (maximum 19.852 mm). Each new source-seam normal matches an actual referenced source control; maximum best angle is 8.54e-7 degrees. Final21 clipped normal ancestry also passes. These results do not certify normals against new triangle geometry or shaded appearance.
+
+UV19→20→21 introduces 206 endpoint copies, then 234 root/longitudinal chart copies (206 root and 28 seam). Every mapped P/W/N, physical ID and source ancestry row and used triangle corner remains exact. Retained source UV corners remain untouched. Tube/left-cap UV areas are consistently positive and right-cap areas consistently negative, with no zero at 1e-14. Seven samples on each of 7,826 new faces are opaque gold in the original atlas. Finite samples do not certify chart overlap, mipmaps, filtering or PBR output.
+
+Dense weights remain incompatible with stock four-influence skinning: 1,044 rows have exactly five positive influences; 1,043 exceed 1e-12, 1,001 exceed 1e-10 and 859 exceed 1e-8. All counts include UV copies and are unchanged when restricted to referenced rows. An explicit material adapter or declared carrier ownership ablation needs final export proof; truncation is not allowed. Harmonic cap geometry gradients are not skin weights.
+
+The prior tube10 stock export proof is preserved and is not a21 export proof. Its mapped canonical asset showed that unconditional production conditioning opens an 18.651 mm sewn gap. Integration must explicitly preserve authored weights. The nonlinear responding surface is separate from standard LBS; owner-reported neutral identity does not qualify its posed response.
+
+Evidence in this directory:
+- sleeve-tube21-independent-rest.json
+- sleeve-tube19-normal-graph-contract.json
+- sleeve-tube20-endpoint-UV-invariants.json
+- sleeve-tube21-UV-chart-invariants.json
+Reproducible scripts in qa-lane/scripts:
+- tube_rest_source_contracts.py (announced path, hash, label)
+- tube19_normal_graph_contract.py
+- tube20_endpoint_invariants.py
+- tube21_uvchart_invariants.py
+
+Remaining gates: preferred standing silhouette/shading; actual304 driver response and holdouts; continuous exported collision/stretch/volume; contacts, body mass and saddle support. QA performed no rendering or broad pose runs. Failed11/12/13/14 were not rerun or overwritten.
