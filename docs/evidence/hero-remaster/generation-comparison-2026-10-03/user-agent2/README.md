@@ -1,6 +1,7 @@
 # Agent 2 installed generation comparison
 
-Verified 2026-10-03. Two bounded unaccepted native body donor results.
+Verified 2026-10-03. Root rejected two body candidates; isolated wardrobe
+appearance work remains experimental and unaccepted.
 Owner: `01a101fe-a358-7731-987d-4168614e9ece` (human-created Agent 2).
 Construction/fitting: Agent 1 `01a101fe-74be-7693-960d-f1ba7246dfb8`.
 Root alone judges art and M0–M5; all six remain OPEN.
@@ -33,8 +34,9 @@ OBJ already centered; GLB root +0.65/runtime wrapper −0.65 must not be doubled
 | TRELLIS.2 Mac | `d58628f4f5b9c3de8274cb110074154f4b31cef2`, clean tracked source | 512 pipeline,seed42,8 steps,512 texture,20k display target | Existing runner saves before simplification but casts attributes to float16; preserve exact decoded tensors separately before comparison |
 | Pixal3D Mac | `0be9e69a729432323dfb60a418801e5e9e7a1437`, local patches recorded | 1024 cascade,seed42,2 steps,16384 token cap,512 texture,20k display target | Save mesh checkpoint before postprocessing; dtype conversion and native export modifications must be separately labeled |
 
-These settings are proposed, not executed results or a same-reference speed
-ranking. Python metadata reads succeed for all three dedicated environments.
+These are inventory-time proposals, not a same-reference speed ranking.
+Actual individual executions and decisions are recorded below; Pixal stays
+inventory-only. Python metadata reads succeed for all three dedicated environments.
 All TRELLIS/Pixal configured checkpoint/config pairs are present. Inventory
 lists observed weight file sizes/resolved symlinks; it does not rehash multi-GB
 weights, load torch, verify native kernels or establish a clean-machine install.
@@ -202,9 +204,9 @@ recovered anatomical/camera registration, wearable fitting or generated PBR.
 
 Root classifies this thin11-component cheap donor as a failure. The paired clip
 makes its large missing regions visible. This does not reject every possible
-Hunyuan setting or authorize a fused-surface salvage loop. Next mechanism is
-the installed TRELLIS512/8step/seed42 probe, on the same pinned alpha reference,
-after fresh resource inspection; preserve its exact raw decode before display.
+Hunyuan setting or authorize a fused-surface salvage loop. The subsequent single installed TRELLIS512/8step/seed42 probe used the same
+pinned alpha reference after fresh resource inspection; its raw result is
+recorded below.
 
 ## Single planned TRELLIS body comparison
 
@@ -227,10 +229,67 @@ and six-channel attributes, int32faces/coordinates and origin are independently
 reloaded byte-identical. Finite/index/repeated/zero-area/duplicate triangle
 witnesses0, but7884boundary/14875overused/129837same-direction two-face edges;
 201unused vertices. No topology/anatomy/fit acceptance. Static raw-display GLB
-and exact attributes remain local pinned masters; moving review pending.
+and exact attributes remain local pinned masters. Root subsequently rejected
+this candidate after reviewing the exact donor film, as recorded below.
 
 Root limits this to ONE planned body comparison. The canonical clean base already
 exists; no repeated body replacement or Pixal body benchmark follows. After a
 matched donor orbit, prioritize SEPARATE hoodie/jeans appearance donors around
 Agent1's stable body/garment inputs, with actual neck/hem/cuff/armhole openings
 and fit owned by integration. Any body escalation needs a visible advantage.
+
+## Root body replacement decision and moving catalogue
+
+[Root decision](body-donor-decision.json) rejects both cheap body candidates:
+Hunyuan missing torso/head and disconnected slivers; TRELLIS rough bands/angular
+anatomy with no advantage over the clean canonical body. These are settings/
+reference findings, not model-family judgments. No body integration or escalation.
+
+| Donor | Exact silent film | Library v0 | Status |
+| --- | --- | --- | --- |
+| Hunyuan body | [Gray control orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-body01/native-vs-control-orbit.mp4), SHA8fe4f466 | libfile_bd5eee76ac5c8191a6dfef80daa77462 | Root rejected replacement |
+| TRELLIS body | [Gray control orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-body01/native-vs-control-orbit.mp4), SHAed98dcf7 | libfile_835ec3d228ac8191aff302f3bb998233 | Root rejected replacement |
+| TRELLIS isolated hoodie | [Sampled appearance orbit](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/native-vs-guide-appearance-orbit.mp4), SHAcc2a3885 | libfile_08d8bfb102808191a1f807bd7d8c6149 | Unaccepted, root review pending |
+
+## Frozen wardrobe input and first actual appearance donor
+
+[Approved storyboard provenance](wardrobe-reference.json) pins Library ZIP
+libfile_3254a01e3c108191afaf8b4280791275, SHA2b9b6c0b, and exact frame03d48e3913.
+Mustard hoodie/indigo jeans appearance only; concept pose/bike and quiff/beard
+are not fitting geometry or permission to change protected b7/body11 identity.
+Superseded local targets/03.png is excluded.
+
+[Input admission](wardrobe-input03-admission.json) independently verifies all
+Agent1 input03 source pins/eight genuine-alpha RGBA512 images; contract321c6b8a
+is frozen in byte-identical local copies. Front isolated hoodie360fd660 and
+jeans9d3540c7 avoid whole-body generation. The shirt is native hoodless control
+plus a disjoint static b7 hood guide, flat mustard; jeans flat indigo. Actual
+openings, sewn hood, fit and rig remain construction-owned and unaccepted.
+Separate geometry02 contract4a7fe0e1 supplies isolated metric OBJ/bounds;
+hoodie Z-extent0.663355529m must never be scaled to full1.8226m body height.
+
+[Hoodie receipt](trellis-hoodie01/receipt.json), [native array pins](trellis-hoodie01/native.json),
+[audit](trellis-hoodie01/raw-audit.json) and [settings](trellis-hoodie01/generation.json)
+record the first isolated TRELLIS512/8steps/seed42 appearance probe. Guard exits0
+in94.577s, peak anon58.0/combined66.0GiB; owned lease ends, any foreign holder
+is preserved. Native68bbd4f3 has219372vertices/448972faces and exact float32
+appearance channels. One connected surface, finite/index/repeated/zero-area/
+duplicate0; boundary5416/overused6171/winding120593 remain. No cleanup/reduction.
+
+[Spatial sampling](trellis-hoodie01/sampling.json) maps sparse voxel channels
+by coordinates, not equal-length vertex rows. All219372vertices supported,
+132820partial support witnesses; native archive unchanged. These are derived
+per-vertex channels, not a UV texture bake. Base colour range narrow, roughness
+.971–.975; flat guide conditioning cannot establish detailed storyboard PBR.
+
+[Orbit receipt](trellis-hoodie01/orbit-receipt.json) pins144source frames, the
+preview-only garment scale/centre matrix, matched camera/light, explicit shader
+clamp and alpha-inactive policy. CPU92.179s exit0; silent72frame/12fps six-second
+H2641024×576 full-decodes exit0,437543bytes. Incorrect first sampling SHA refused
+pre-output in0.595s; corrected fresh retry recorded. Raw arrays remain unchanged.
+[Library delivery](trellis-hoodie01/library-delivery.json) records one confirmed
+bridge save. Root alone judges this clip; no actual rig/motion, fit, topology
+or player pass.
+
+Next planned unit is the isolated jeans appearance donor on the frozen input03
+pin. No additional body benchmark, body replacement or model/environment install.

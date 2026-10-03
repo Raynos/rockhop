@@ -191,3 +191,15 @@ Ask:276.
 Limits: UNACCEPTED per-vertex appearance cameraorbit, not UVbake/rig/fit.
 Static disjoint hood/topology defects persist; source is flatappearanceguide.
 Shader preview clamp/alpha-inactive policy explicit; no raw mutation/promotion.
+
+Finding: Owned donor catalogue now links root body rejections, distinct Library
+films and the first unaccepted isolated hoodie raw/sampled/moving evidence.
+Historical inventory proposals remain distinct from actual runs and decisions.
+
+Validation: Catalogue links resolve to committed owned receipts/movies; exact
+body/wardrobe source and result SHA prefixes match recorded full pins.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/README.md
+Ask:276.
+
+Limits: Hoodie Library delivery confirmed once; root judgment pending. No extra experiments,
+acceptance or player promotion. Jeans is the next separate planned unit.
