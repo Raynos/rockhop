@@ -1100,3 +1100,18 @@ Ask:284–286.
 Limits: Root moving material judgment pending; no fit/rig/opening/physical
 units or production promotion. Highpoly garment detail/material candidate
 only; no Library upload claimed or duplicated by this local builder.
+
+Finding: Existing localai/weights setup notes publish successful bounded
+preserved-mesh PBR and moving evidence through scoped normal-hook main commits.
+
+Validation: One owned descendant each, nonforced push and exact remote
+main verification: localai b716d2e7, weights2d3b7780. Owned audit/journal
+bytes identical between active trees and publication clones; README edits
+replace only the existing owned pointer. No foreign active history,
+weights, runtime, new clone, branch or worktree published.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/scoped-publication04/receipt.json
+Ask:284–286.
+
+Limits: Successful execution and preserved coordinates do not establish
+material acceptance, fit/openings, rig, physical units or CUDA/full16 parity.
+Root moving PBR judgment and remaining family seeds stay open.
