@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "case": "contact",
+      "sha256": "9922cf008ed83cca68ae3d8357a4e7777c3ec0c0fa16324bf2391e1516488395",
+      "bytes": 28003409,
+      "samples": 70,
+      "positionsShape": [
+        70,
+        22240,
+        3
+      ],
+      "allPositionsFinite": true,
+      "allMatricesFinite": true,
+      "referenceComparisonScope": "0/1/2s only; 70 exported samples are not full-time geometric acceptance"
+    },
+    {
+      "case": "hip",
+      "sha256": "8889e55c1fb6e7de4468cce92bc08052daeaa7cd56f8c2dea49310d20e1e22fd",
+      "bytes": 28001892,
+      "samples": 70,
+      "positionsShape": [
+        70,
+        22240,
+        3
+      ],
+      "allPositionsFinite": true,
+      "allMatricesFinite": true,
+      "referenceComparisonScope": "0/1/2s only; 70 exported samples are not full-time geometric acceptance"
+    }
+  ],
+  "warning": "Original portable script emitted NumPy divide/overflow/invalid matmul warnings at line57. Preserved unchanged; actual output positions/matrices independently finite. No claim those warnings establish a clean evaluator."
+}

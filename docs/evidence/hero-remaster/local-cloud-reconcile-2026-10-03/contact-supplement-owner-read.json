@@ -1,0 +1,13 @@
+{
+  "threadId": "01a0f108-3101-75a0-89c0-87dbb4416e6a",
+  "title": "Assess 3D tool for bike and rider",
+  "status": {
+    "type": "active",
+    "activeFlags": []
+  },
+  "technicalAcknowledgement": "The CI fixture fix is pushed, and fresh push/deploy checks are running. The required final gameplay replay passed again on both tiers.\n\nThe cloud reconciliation also flags an important handoff issue: its corrections use the older body11 bind, while C19 has different binds and weights. They need an explicit adapter and fresh validation before transfer.",
+  "explicitReviewOrOwnershipAgreement": "NOT_OBSERVED",
+  "latestOwnerMessage": "The corrected release is live. Its checked deploy passed, and `/version.json` matches `5085dfbb`.\n\nI’m committing the final exit receipt and handoff, then verifying that final commit on production. The rider plan stays paused with its unfinished work preserved.",
+  "latestObservedLocalHEAD": "5d22ed326bff1da521a6f43a74fd54630d7d4cb9",
+  "scope": "One supported read after Mac verifier; no additional owner messages sent"
+}

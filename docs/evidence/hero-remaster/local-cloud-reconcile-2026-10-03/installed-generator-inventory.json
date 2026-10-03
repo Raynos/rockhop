@@ -1,0 +1,356 @@
+[
+  {
+    "generator": "Hunyuan3D-2.1",
+    "source": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1",
+    "gitHEAD": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+    "sourceDirtyPaths": [
+      " M hy3dpaint/DifferentiableRenderer/MeshRender.py",
+      " M hy3dpaint/DifferentiableRenderer/mesh_utils.py",
+      " M hy3dpaint/hunyuanpaintpbr/__init__.py",
+      " M hy3dpaint/hunyuanpaintpbr/pipeline.py",
+      " M hy3dpaint/hunyuanpaintpbr/unet/attn_processor.py",
+      " M hy3dpaint/textureGenPipeline.py",
+      " M hy3dpaint/utils/image_super_utils.py",
+      " M hy3dpaint/utils/multiview_utils.py",
+      "?? install-provenance.json",
+      "?? runtime/"
+    ],
+    "environmentPython": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "pythonExists": true,
+    "modelViewExists": true,
+    "weightRoot": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1",
+    "weightFiles": [
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/LICENSE",
+        "bytes": 17915,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/Notice.txt",
+        "bytes": 16644,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/model_index.json",
+        "bytes": 617,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/model.fp16.ckpt",
+        "bytes": 7366389768,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/config.yaml",
+        "bytes": 2078,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/model.fp16.ckpt",
+        "bytes": 655648152,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/config.yaml",
+        "bytes": 409,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/tokenizer/tokenizer_config.json",
+        "bytes": 807,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/tokenizer/special_tokens_map.json",
+        "bytes": 460,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/tokenizer/merges.txt",
+        "bytes": 524619,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/tokenizer/vocab.json",
+        "bytes": 1059962,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/scheduler/scheduler_config.json",
+        "bytes": 387,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/text_encoder/config.json",
+        "bytes": 613,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/text_encoder/pytorch_model.bin",
+        "bytes": 1361671895,
+        "symlink": true
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/unet/config.json",
+        "bytes": 911,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/unet/model.py",
+        "bytes": 25514,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/unet/attn_processor.py",
+        "bytes": 35104,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/unet/modules.py",
+        "bytes": 45181,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/unet/diffusion_pytorch_model.bin",
+        "bytes": 3925293863,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/image_encoder/model.safetensors",
+        "bytes": 1264217240,
+        "symlink": true
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/image_encoder/config.json",
+        "bytes": 554,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/feature_extractor/preprocessor_config.json",
+        "bytes": 342,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/vae/config.json",
+        "bytes": 553,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-paintpbr-v2-1/vae/diffusion_pytorch_model.bin",
+        "bytes": 334707217,
+        "symlink": true
+      }
+    ],
+    "apparentWeightBytes": 14909660805,
+    "scope": "Installed-path/current-source inventory only; no imports/inference or renewed weight hash validation"
+  },
+  {
+    "generator": "trellis-mac",
+    "source": "/Users/raynos/ml/img2mesh/trellis-mac",
+    "gitHEAD": "d58628f4f5b9c3de8274cb110074154f4b31cef2",
+    "sourceDirtyPaths": [],
+    "environmentPython": "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+    "pythonExists": true,
+    "modelViewExists": true,
+    "weightRoot": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B",
+    "weightFiles": [
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/texturing_pipeline.json",
+        "bytes": 2965,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/pipeline.json",
+        "bytes": 4186,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+        "bytes": 2584574424,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+        "bytes": 2584574424,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+        "bytes": 458,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+        "bytes": 678,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_enc_next_dc_f16c32_fp16.safetensors",
+        "bytes": 708797208,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_enc_next_dc_f16c32_fp16.json",
+        "bytes": 676,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+        "bytes": 948490494,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+        "bytes": 2584426920,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_enc_next_dc_f16c32_fp16.json",
+        "bytes": 653,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+        "bytes": 458,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+        "bytes": 2584672728,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+        "bytes": 705,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.safetensors",
+        "bytes": 2584672728,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+        "bytes": 458,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_enc_next_dc_f16c32_fp16.safetensors",
+        "bytes": 708797208,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+        "bytes": 948458812,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+        "bytes": 467,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+        "bytes": 458,
+        "symlink": false
+      }
+    ],
+    "apparentWeightBytes": 16237477108,
+    "scope": "Installed-path/current-source inventory only; no imports/inference or renewed weight hash validation"
+  },
+  {
+    "generator": "Pixal3D-mac",
+    "source": "/Users/raynos/ml/img2mesh/Pixal3D-mac",
+    "gitHEAD": "0be9e69a729432323dfb60a418801e5e9e7a1437",
+    "sourceDirtyPaths": [
+      " M extern/mtlgemm/setup.py",
+      " M generate_mps.py",
+      " M pixal3d/pipelines/rembg/BiRefNet.py",
+      " M pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py",
+      "?? extern/o_voxel/third_party/"
+    ],
+    "environmentPython": "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+    "pythonExists": true,
+    "modelViewExists": true,
+    "weightRoot": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D",
+    "weightFiles": [
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/pipeline.json",
+        "bytes": 4068,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+        "bytes": 5546764048,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.json",
+        "bytes": 245,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+        "bytes": 5546764048,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+        "bytes": 678,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+        "bytes": 147591972,
+        "symlink": true
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+        "bytes": 948490494,
+        "symlink": true
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+        "bytes": 5359822584,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+        "bytes": 535,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+        "bytes": 5546960656,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+        "bytes": 705,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+        "bytes": 535,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+        "bytes": 948458812,
+        "symlink": true
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+        "bytes": 503,
+        "symlink": false
+      },
+      {
+        "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+        "bytes": 535,
+        "symlink": false
+      }
+    ],
+    "apparentWeightBytes": 24044860418,
+    "scope": "Installed-path/current-source inventory only; no imports/inference or renewed weight hash validation"
+  }
+]
