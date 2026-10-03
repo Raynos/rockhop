@@ -1,0 +1,74 @@
+{
+  "sourceSHA256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "coordinateAdapter": "glTFXforward,Yup,Zlateral(namedL+) metres; BlenderXforward,Ylateral=-glTFZ,Zup=glTFY; preserve head/source units and existing19rest references",
+  "sourceProfileSections": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/source-boundaries181/source-boundary-profiles.npz",
+    "SHA256": "ddca134c8d71c4d22066b513f418f7be5223eb7ef8ee34360429161d8f976ed7",
+    "heights": [
+      0.94,
+      0.98,
+      1.08,
+      1.18,
+      1.28,
+      1.37,
+      1.43,
+      1.49
+    ],
+    "limits": "Zclip widths are reference exclusions, not anatomical widths; p2 owns upper posterior hood. Actual source segments/barycentrics retained, no invented source ellipse."
+  },
+  "orderedCuffCycles": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/source-boundaries181/source-boundary-profiles.npz",
+    "keys": [
+      "cuff_body_gloveCycle0PhysicalIDs",
+      "cuff_body_gloveCycle1PhysicalIDs"
+    ],
+    "nodeCounts": [
+      65,
+      62
+    ],
+    "positionsKeys": [
+      "cuff_body_gloveCycle0Float32Positions",
+      "cuff_body_gloveCycle1Float32Positions"
+    ],
+    "policy": "Use every exact original node once in boundary order; source final rim connectivity only, no height-proximity node classification/interior projection. Final injective Float32 mapping required."
+  },
+  "hoodBodyBoundary": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/source-boundaries181/source-boundary-profiles.npz",
+    "IDs": "hood_bodyCycle0PhysicalIDs",
+    "positions": "hood_bodyCycle0Float32Positions",
+    "nodes": 307,
+    "policy": "Curved one-face-per-primitive opposite-winding actual source loop, Y1.35503\u20131.48189; new upper cage ends at this curve. Preserve separate237upperhoodopening and actual sourcehood geometry; no invented collar ellipse or overlapping shell."
+  },
+  "lowerBoundaryContract": {
+    "type": "INTENTIONAL_NEW_PAIRED_WARDROBE_CUT_NOT_ORIGINAL_SEMANTIC_HEM",
+    "coordinate": "glTF",
+    "plane": "Y = .940 + .20*(X-.640)",
+    "parameters": {
+      "yOrigin": 0.94,
+      "xOrigin": 0.64,
+      "slopeYX": 0.2
+    },
+    "clipRule": "Split sourcep0 triangles against signedphi=Y-.940-.20*(X-.640), retain phi<=0 lower-side parts only in components with any anatomical leg/foot seedY<.8; remove old isolated sleeve/cuff parts. Keep protectedgloveprimitive1 andhoodprimitive2 entire separately.",
+    "edgeRegistry": "Cutvertex keyed by original physicalsourceedge+canonical parameter, sourceattributes via declared triangle/edge barycentrics; newhem nodes share same exactfloat32 positions with retained lowercut rim. Use actualorderedcutedge connectivity, not ellipse/distance/heightmask. Handle source-endpointFloat32 coincidence only on its actualparentedge with declared reuse, never unrelatedlayerweld.",
+    "attachment": "Physically paired newupper\u2194retainedlower topology, everyedge onefaceperside/oppositewinding, no visiblewaistgap/goldstrip presentedasfinishedhem. This explicitly redesigns garmentinterface; do notclaim originalgold/denimsemantic segmentation.",
+    "limits": "Sourcebelowcut originals unchanged, newcutedge rows are explicit derived geometry/attrs. Retained fragmentmasks notcompileduntil trial; cutoff doesnotprove anatomy/textures/newbinds."
+  },
+  "retainedDonorTriangleMasks": {
+    "sourceBody0": "Compiled by declaredsplit/component rule at firsttrial; ancestryoriginalface/edge+parameters recorded, no sourceindexsemantics guessed",
+    "sourceGloves1": "all sourceprimitive1unchanged exactattr/index references",
+    "sourceHood2": "all sourceprimitive2unchanged exactattr/index references; neckseam307pairednewmesh",
+    "sourceHeadOtherMeshes": "all untouched sourceNEWhead/cheek geometry/PBR; historicalproductioncomparisononly"
+  },
+  "parentGeometryGo": true,
+  "authoritativeCheckpoint": "round181commitrequiredbefore first mesh",
+  "bounds": {
+    "oneGeometryPrototype": true,
+    "CPUthreads": 2,
+    "minutes": 12,
+    "noGPU": true,
+    "geometryThenExportAuditThenRender": "Faildependent predecessor stopsnextstage; no repetitivecosmeticrefinement",
+    "failurePolicy": "Family11prior; every setup/geometry/art/motion failure retained; five approach switch/fifteenfamilyretirement. New Ctruearchitecture, no renamecounterreset."
+  },
+  "exportContract": "Record physicalweldgroups separateUValiases. Check finalFloat32 degeneracy/edgeincidence/winding/hood/cuff/hem sew completeness before anyrig. Quad-dominant, declaredlocaltriangles/poles allowed for oddboundaries, no collapsed nodes.",
+  "appearanceScope": "Unrigged/plain/unbaked firstdiagnostic with exact179matchedcamera/lightgray/pbr; no targetscore/pose/gameacceptance. Preserve sourcelikedhead/hoodsilhouette, physics,19rigmapping; rigging/newweights laterafteroneviableconstruction."
+}

@@ -1,0 +1,3 @@
+import numpy as np,json,hashlib
+from pathlib import Path
+S=Path('/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/source-embedding23/continuous-shell-source-maps.npz');E=Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179');a=np.load(S);rep={'sourceMapsSHA256':hashlib.sha256(S.read_bytes()).hexdigest(),'arrays':{k:{'shape':list(a[k].shape),'dtype':str(a[k].dtype)} for k in a.files}};(E/'source-maps-summary.json').write_text(json.dumps(rep,indent=2));print(json.dumps(rep))
