@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "source": "Cloud integration owner erratum relayed by parent; local paths/values checked",
+  "immutable_archive_sha256": "f5ee9f3a400cd0d3fe1715ea20b3d5b1189e03ca36721a6c9e2829b8747bcc76",
+  "selected_candidate_sha256": "06ef24b9df88d9085d9dab7ac9e38e9eb5372e1bbb296960015f54aaa1e10d1d",
+  "candidate_label_corrections": [
+    {
+      "member": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/diagnostic-consistent-bind-v3-poses.json",
+      "original_field": "candidateLabel",
+      "original_value": "new left-sleeve and collar repair, Library version 3",
+      "correct_display_value": "Unaccepted reconstructed arm foundation V3, neutral-pocket consistent bind with 24-vertex local refinement",
+      "authority": [
+        "candidatePath",
+        "candidateSHA256"
+      ],
+      "candidate_path": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/neutral-pocket-consistent-bind-v3-refined.glb",
+      "candidate_sha256": "06ef24b9df88d9085d9dab7ac9e38e9eb5372e1bbb296960015f54aaa1e10d1d",
+      "note": "Inherited descriptive text references an older left/collar repair and its Library version; this immutable foundation ZIP is Library version0."
+    },
+    {
+      "member": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/diagnostic-consistent-bind-v3-motion-poses.json",
+      "original_field": "candidateLabel",
+      "original_value": "new left-sleeve and collar repair, Library version 3",
+      "correct_display_value": "Unaccepted reconstructed arm foundation V3, neutral-pocket consistent bind with 24-vertex local refinement",
+      "authority": [
+        "candidatePath",
+        "candidateSHA256"
+      ],
+      "candidate_path": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/neutral-pocket-consistent-bind-v3-refined.glb",
+      "candidate_sha256": "06ef24b9df88d9085d9dab7ac9e38e9eb5372e1bbb296960015f54aaa1e10d1d",
+      "note": "Inherited descriptive text references an older left/collar repair and its Library version; this immutable foundation ZIP is Library version0."
+    }
+  ],
+  "metric_semantic_corrections": [
+    {
+      "member": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/neutral-pocket-consistent-bind-v3-renders/render-report-first.json",
+      "original_field": "surfaceVsSourceExactLBS",
+      "correct_display_field": "surfaceVsCandidateExactLBS",
+      "correct_meaning": "Actual Blender evaluated candidate surface compared with exact LBS of the candidate, not an original-source surface comparison",
+      "observations": 5,
+      "numeric_values_unchanged": true
+    },
+    {
+      "member": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/neutral-pocket-consistent-bind-v3-motion/render-report-motion.json",
+      "original_field": "surfaceVsSourceExactLBS",
+      "correct_display_field": "surfaceVsCandidateExactLBS",
+      "correct_meaning": "Actual Blender evaluated candidate surface compared with exact LBS of the candidate, not an original-source surface comparison",
+      "observations": 48,
+      "numeric_values_unchanged": true
+    }
+  ],
+  "original_archive_or_payload_rewritten": false,
+  "asset_test_results_changed": false
+}

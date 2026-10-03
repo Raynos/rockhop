@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "action": "Reconcile only parent-owned shared status index entries after explicit ownership handoff",
+  "proof": "Both index blobs matched the exact ca14debb ancestor, predating already committed QA512460b9 and baseline-plan work; no new staged forward hunks",
+  "paths": [
+    {
+      "path": "docs/plans/README.md",
+      "old_index": "61826a27762cd6c406f51c724404cc67a27863b6",
+      "stale_ancestor": "ca14debb882f2dba49249297e8629e4e32368783",
+      "committed_head": "a5b091ca57af538ff05bd605e9219784fac0a8b1",
+      "new_index": "64aa106af0b4c7bc09d1059d6ed9a5f97dc72237"
+    },
+    {
+      "path": "docs/tasks/ASKS.md",
+      "old_index": "86cf640b1882393710f646ec4a56688494b49e82",
+      "stale_ancestor": "ca14debb882f2dba49249297e8629e4e32368783",
+      "committed_head": "a5b091ca57af538ff05bd605e9219784fac0a8b1",
+      "new_index": "172c01cea8b93faa6729bf5755e0b002acf3f2ee"
+    }
+  ],
+  "foreign_index_entries_unchanged": true,
+  "all_worktree_bytes_unchanged": true,
+  "reset_stash_blanket_add_used": false,
+  "root_handoff": "Parent explicitly delegated shared status/index ownership after QA stopped its review-rejected broader operation."
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "status": "UNACCEPTED_DIAGNOSTIC_ARCHIVE_NO_PROMOTION",
+  "library_file_id": "libfile_37cf2d6217388191b14b3ad349a7f670",
+  "library_version": 0,
+  "file_id": "file_000000006c1081fd9fb4da07b007aecf",
+  "archive_path": "assets/blender/hero-remaster/rider/cloud-arm-foundation-2026-10-03/rockhop-arm-foundation-checkpoint-20261003-0952.zip",
+  "archive_bytes": 23992407,
+  "archive_sha256": "f5ee9f3a400cd0d3fe1715ea20b3d5b1189e03ca36721a6c9e2829b8747bcc76",
+  "archive_entries": 76,
+  "payload_pins_verified": 75,
+  "zip_crc_pass": true,
+  "exact_member_set_pass": true,
+  "extracted_locally": true,
+  "expanded_payload_bytes": 34700945,
+  "selected_asset_member": "docs/evidence/approved-rider-build/generated-integration/support-pose-review-v1/arm-foundation-v1/neutral-pocket-consistent-bind-v3-refined.glb",
+  "selected_asset_sha256": "06ef24b9df88d9085d9dab7ac9e38e9eb5372e1bbb296960015f54aaa1e10d1d",
+  "manifest_sha256": "40237ec603c0f7d2c0b996c2010837aebf7816992251dfc8e7ba3924e290b0b0",
+  "imported_cloud_author_model": "not supplied; preserved original material has no model attribution",
+  "commit_attribution_source": "current session user-provided declaration; not cloud asset-author detection",
+  "gpu_generation_started": false,
+  "files_deleted": 0,
+  "source_restoration": {
+    "method": "Unmodified imported restore_exact_source.py in isolated replay tree",
+    "source_bytes": 14119156,
+    "source_sha256": "6fd9be18a8ea7c86c0cfebda35ee1a16be471a574e845c9988a308481a47f5c5",
+    "source_overwritten": false,
+    "production_or_other_owner_sources_touched": false
+  },
+  "local_preservation_recheck": {
+    "method": "Unmodified imported verify_foundation_preservation.py in isolated replay tree",
+    "numpy_version": "2.5.2",
+    "protected_primitives_attributes_indices_morphs_exact": true,
+    "nodes_skins_animations_images_textures_materials_samplers_scenes_exact": true,
+    "source_binary_unchanged_candidate_prefix": true,
+    "report_matches_original_cloud_bytes": true
+  },
+  "local_movie_verification": {
+    "type": "Imported cloud Blender movie played by existing Mac headless WebKit harness; not new actual-engine integration",
+    "seconds": 4,
+    "frames": 48,
+    "fps": 12,
+    "width": 512,
+    "height": 512,
+    "audio_streams": 0,
+    "muted": true,
+    "ended": true,
+    "browser_errors": [],
+    "decoded_frames": 48,
+    "filmstrip_pixels_inspected": true,
+    "forward_fold_failure_retained": true,
+    "new_likeness_score": null
+  },
+  "archive_git_policy": {
+    "bytes_below_100_mib_gate": true,
+    "force_add_used": false,
+    "scoped_gitignore_override_added": false,
+    "lfs_filter": "assets/blender/hero-remaster/rider/cloud-arm-foundation-2026-10-03/rockhop-arm-foundation-checkpoint-20261003-0952.zip: filter: unspecified",
+    "immutable_archive_retained_in_library": true,
+    "expanded_logs_remain_in_ignored_scratch": true
+  },
+  "ordinary_game_third_round_gate": {
+    "pass": true,
+    "backend": "metal",
+    "renderer": "Google Inc. (Apple) / ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Max, Unspecified Version)",
+    "input_sha256": "4613c186ae237ff8f7c764b663fc03d09eaf78f597317c7a8742965fa542a58f",
+    "input_ticks": 4810,
+    "mismatched_tick": null,
+    "cold_boot_ms": 3701.6394170000003,
+    "clear": {
+      "cleared": true,
+      "time": 40.083333333333336,
+      "faults": 0
+    },
+    "restart": {
+      "crashTick": 103,
+      "crashToRestartTicks": 1,
+      "restartStateTick": 0,
+      "restartPhase": "riding",
+      "faultsBefore": 1,
+      "faultsAfter": 1,
+      "commandMs": 0.23000001907348633,
+      "frameMs": 3.7049999237060547,
+      "movesAfterTicks": 1,
+      "glError": 0,
+      "heroDoc": "bike rider"
+    },
+    "errors": [],
+    "warnings": [
+      "[render] track budget: 11 calls / 177888 tris (cap 20 / 80k)"
+    ],
+    "candidate_foundation_in_player": false,
+    "report": "ordinary-third-round-gate.json",
+    "compiled_source_hashes_emitted": 0,
+    "source_proof": {
+      "method": "Frozen build version SHA plus unchanged committed src/public tree objects; current working src/public have no diff",
+      "build_sha": "ca14debb882f2dba49249297e8629e4e32368783",
+      "compared_head": "a5b091ca57af538ff05bd605e9219784fac0a8b1",
+      "src_tree": "9a9b9af7ad1512600c62c567486f31ab5cf13abe",
+      "public_tree": "2596104e07607d7c1b76d0510ea8a8d040dc81e4",
+      "trees_match": true,
+      "working_source_public_clean": true,
+      "limit": "No source-map content hashes emitted by this build; zero entries are not evidence of compiled-source parity."
+    }
+  },
+  "library_identity_metadata_persisted_on_archive_copy": true
+}
