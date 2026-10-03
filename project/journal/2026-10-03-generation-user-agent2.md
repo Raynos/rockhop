@@ -702,3 +702,34 @@ Ask:284–286.
 Limits: 21public checks plus1local pin is not22published checks. Matching
 weights do not establish attention/UV/bake/geometry or PBR quality; actual
 garment preservation and painted moving evidence pending.
+
+Finding: Root-useful high-poly hoodie candidate has one frozen artifact
+handoff with original-invalid/derived distinction, pins and transforms.
+
+Validation: Eight existing artifacts hashed from local files; original
+raw0d2d531e... rejected, finite-cell derivative318c7536... separate.
+Native semanticY-up, unknownphysicalscale, no bodyfit transform; display
+GLB keeps nativecoordinates, film uses explicitX/−Z/Y rotation only.
+Root moving review says useful hood/sleeve/cuff/hem detail reference,
+with soft wrinkles/lumpyhem/speck and through-openings/bodyfit unresolved.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/frozen-garment-handoff01/handoff.json
+Ask:284–286.
+
+Limits: Optional retopology/detail reference only, no wholesale production
+geometry promotion or Agent1 pattern replacement. No human asset/PBR/rig
+acceptance. Original field, raw, latents and appearance input retained.
+
+Finding: Actual installed UV wrap and copied CPU getter preserve every
+triangle of the full frozen garment before real painting.
+
+Validation: Guard exit0 in180.051s. xatlas wraps460831→716971
+vertices, retaining921722triangles with BYTE-identical triangle coordinates
+and finite UVs. Both actual CPU uv_inpaint calls preserve vertex/UV state;
+export indices identical, maximum coordinate roundoff1.192e−7. Wrapped
+archivef1d1fa95... frozen; no remesh or six-degenerate/component removal.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-garment-uv01/
+Ask:284–286.
+
+Limits: Cheap32square constant-map inpaint on actual geometry qualifies
+preservation, not learned paint, high-resolution raster/bake quality or
+CUDA parity. Actual PBR with this frozen UV state remains pending.
