@@ -374,4 +374,11 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 
 | 260 | "Preserve immutable cloud arm-foundation checkpoint, verify75archiveentrypins, commit/push source/evidence safely; no promotion." | **done — immutable diagnostic checkpoint reconciled** | [Reconciliation](../evidence/hero-remaster/cloud-arm-foundation-2026-10-03/README.md): exact Libraryv0 ZIP23,992,407bytes/SHA and75payload pins/CRC pass. Imported recipes restore sourceA and reproduce byte-identical protection report; silent WebKit movie4s/48frames/error0. Ordinary game third-round gate4810identical ticks/40.0833sclear/1tickrestart passes. Separate inherited label/LBS-meaning corrections preserve archive bytes. Forward folding remains failed; active cloud work excluded. Checkpoint remains unaccepted; publication result follows separately. |
 
-| 262 | "How did you touch44files; make small commits, commit early and often; update AGENTS.md with those instructions." | **done — small commit scopes explicit** | AGENTS.md separates plan writing, archive/link maintenance, target inventory and review gallery into finished, verified commits; owned paths/hunks only. |
+
+| 266 | "How did you touch44files; make small commits, commit early and often; update AGENTS.md with those instructions." | **done — small commit scopes explicit** | AGENTS.md separates plan writing, archive/link maintenance, target inventory and review gallery into finished, verified commits; owned paths/hunks only. Originally262 in86fd6343; renumbered266 after a concurrent registration reused262. |
+
+| 263 | "Audit other branches here; merge any that are not merged into main." | **done — all local/fetched branches contained in main** | [Audit](../evidence/branch-audit-2026-10-03/README.md): seven non-main local branches; four already ancestors, three verified rewritten tips aligned after the approved video purge. Original tips preserved in local archival refs; no game tree change or outstanding merge. |
+
+| 264 | "Brainstorm how to build this plan; ask questions and send review images, using a ChatGPT website when there are many." | **in flight — decisions and phone review site** | Three focused questions pending; prepare private picture/clip website and concrete first construction proof, keeping source and game publication separate. |
+
+| 265 | "Can you see the other4agents working here in Codex desktop?" | **in flight — desktop task visibility check** | Inspect supported task inventory/status and report actual titles; no messages or interruption. |

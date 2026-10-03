@@ -1,6 +1,8 @@
+**Branch audit (ask263):** [Verified refs](../evidence/branch-audit-2026-10-03/README.md): every local/fetched branch is contained in main. Three pre-purge pointers aligned to verified rewritten ancestors; original tips preserved locally. No outstanding merge or game asset change. Native adaptation remains queued.
+
 # What we are building — the plans and where each stands
 
-**Small commit scope (ask262):** AGENTS.md now requires separate commits for plan writing, archive/link maintenance, target inventory and review-gallery work; verify and commit each finished unit before the next, staging only owned paths/hunks. Current rider gate states remain unchanged.
+**Small commit scope (ask266; originally262):** AGENTS.md now requires separate commits for plan writing, archive/link maintenance, target inventory and review-gallery work; verify and commit each finished unit before the next, staging only owned paths/hunks. Current rider gate states remain unchanged.
 
 **Cloud arm-foundation checkpoint (ask260):** [Immutable reconciliation](../evidence/hero-remaster/cloud-arm-foundation-2026-10-03/README.md) preserves the exact Libraryv0 archive and all75payload pins, complete recipes/15pose images/48-frame motion. Existing recipes restore sourceA exactly and verify protected source data; silent WebKit playback passes. Separate metadata corrections retain original bytes. Forward folds remain failed; no player promotion or acceptance. Active forward work and the separate anatomical builder remain their owners' work.
 
