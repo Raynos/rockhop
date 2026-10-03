@@ -857,3 +857,20 @@ Limits: Exact stopping layer and subsequent call count unobserved because
 current counters only flush after first check/completion. Whole-machine
 memory sample cannot establish one operator's allocation. No family/style
 rejection, raised bound, key/view reduction or texture acceptance.
+
+Finding: First V-column control reaches the actual installed reference
+processor and exposes a mismatched-precision whole-processor comparison.
+
+Validation: Guard exit1 in1.762s, no model runs. CPU split completeQ/K
+through trained-projection fixture matches independentFP64 attention to
+2.38e-7. MPSfloat16 output finite and material order retained, but error
+0.00217175 against CPUfloat32 weights/inputs exceeds fixed0.002threshold;
+the control correctly rejects. ActualQ/K64/V128 and strides recorded.
+Source and original rejected receipt preserved before changing the control.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/value-column-control01/
+Ask:284–286.
+
+Limits: Mismatched CPU/MPS weight/input precision; cause not established.
+No MPS qualification, full learned activations, long-token execution or
+model retry. Correct control to compare identical quantized weights/inputs
+and independent actual QKV before interpreting adapter/backend accuracy.

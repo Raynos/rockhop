@@ -1,0 +1,147 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "torch": "2.14.0",
+  "torchGitVersion": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "prefillDisableEnv": null,
+  "recipeSHA256": "729bb7679d431d9e72785b4cb893d5b8e12dfe9768f59f1f96c5a86036e0fd77",
+  "adapterSHA256": "11396c1295a0f29179860d65f4f8f3db9c502b9eb6c080921ea55ef1dea36904",
+  "processorSHA256": "6df282d094627733623ddeaa28a493a11252ea58e7b99e4d52240e17f4f71d0f",
+  "cases": [
+    {
+      "name": "installedRefProcessor-cpu",
+      "QKV": [
+        {
+          "query": {
+            "shape": [
+              2,
+              5,
+              37,
+              64
+            ],
+            "stride": [
+              11840,
+              64,
+              320,
+              1
+            ],
+            "dtype": "torch.float32",
+            "device": "cpu"
+          },
+          "key": {
+            "shape": [
+              2,
+              5,
+              19,
+              64
+            ],
+            "stride": [
+              6080,
+              64,
+              320,
+              1
+            ],
+            "dtype": "torch.float32",
+            "device": "cpu"
+          },
+          "value": {
+            "shape": [
+              2,
+              5,
+              19,
+              128
+            ],
+            "stride": [
+              12160,
+              128,
+              640,
+              1
+            ],
+            "dtype": "torch.float32",
+            "device": "cpu"
+          }
+        }
+      ],
+      "maxIndependentCPUError": 2.384185791015625e-07,
+      "finite": true,
+      "materialOutputDifference": 0.3584124445915222,
+      "outputShape": [
+        2,
+        2,
+        37,
+        320
+      ]
+    },
+    {
+      "name": "installedRefProcessor-mps",
+      "QKV": [
+        {
+          "query": {
+            "shape": [
+              2,
+              5,
+              37,
+              64
+            ],
+            "stride": [
+              11840,
+              64,
+              320,
+              1
+            ],
+            "dtype": "torch.float16",
+            "device": "mps:0"
+          },
+          "key": {
+            "shape": [
+              2,
+              5,
+              19,
+              64
+            ],
+            "stride": [
+              6080,
+              64,
+              320,
+              1
+            ],
+            "dtype": "torch.float16",
+            "device": "mps:0"
+          },
+          "value": {
+            "shape": [
+              2,
+              5,
+              19,
+              128
+            ],
+            "stride": [
+              12160,
+              128,
+              640,
+              1
+            ],
+            "dtype": "torch.float16",
+            "device": "mps:0"
+          }
+        }
+      ],
+      "maxIndependentCPUError": 0.002171754837036133,
+      "finite": true,
+      "materialOutputDifference": 0.3583984375,
+      "outputShape": [
+        2,
+        2,
+        37,
+        320
+      ]
+    }
+  ],
+  "limits": [
+    "Synthetic activations, no full learned UNet or CUDA parity.",
+    "Complete Q/K retained; only independent V columns decomposed.",
+    "No original unequal-width large MPS call: dense fallback exceeds the fixed guard.",
+    "No blind stock slicing, trained processor replacement, key or view truncation."
+  ],
+  "phase": "full installed reference processor mps"
+}
