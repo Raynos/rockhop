@@ -1082,3 +1082,21 @@ pending, no rig/bodyfit/opening/player promotion or CUDA/full16byte proof.
 Representative VAE slicing exactPIL delta1≤2. Source bake loop resizes only
 first2 views; enhanced per-view bake sizes not independently captured, so
 configured render2048 refers control renders rather than all bake inputs.
+
+Finding: Six-second actual-material PBR orbit plays preserved GLB arrays
+and embedded pixels with unaccepted labels and no audio.
+
+Validation: Blender5.2.1 CPU4threads/8samples renderguard0/38.888s;
+encoder guard0/1.051s.48frames8fps/6s512x576, onevideo/noaudio stream.
+Loaded716971vertices/921722indices match nativeGLB exactly; triangles
+within5.96e-7 of frozen source. Actualembedded baseColor/MR imagepixels,
+UV basis and GLB normals used, no recolor/smoothing/cleanup. Labels outside
+512²render pixels, which remain byte-identical before encoding. Current
+runtime24 dependency/physics/GltfRider pins match; otherplayerdifferences
+fromc74783ad zero, original clear/crash/restart gate remains applicable.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-pbr-orbit01/
+Ask:284–286.
+
+Limits: Root moving material judgment pending; no fit/rig/opening/physical
+units or production promotion. Highpoly garment detail/material candidate
+only; no Library upload claimed or duplicated by this local builder.
