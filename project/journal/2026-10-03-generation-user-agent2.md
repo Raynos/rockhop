@@ -963,3 +963,19 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint before paint05. MPSGraph/framework
 allocations may remain unreclaimable; actualdriver release must be measured.
 No fullpipeline memory/texture success, foreigncache eviction or guard raise.
+
+Finding: Existing neutral orbit recipe can play the completed PBR GLB's
+actual geometry, UVs, normals and embedded material pixels for root review.
+
+Validation: Both ASTs pass. Optional completed-paint receipt pins GLB and
+rejects remesh/simplification. Native GLB triangle coordinates must match
+frozen shape within9e-7, loaded Blender indices/vertices match source;
+no component deletion or coordinate normalization. glTF UV basis conversion
+explicit; original basecolor and packed Groughness/Bmetallic image bytes
+extracted/hashed, no recolor. Original neutral mode and48frame/8fps/6s
+silent512pixel orbit preserved; PBR labels remain outside rendered pixels.
+Ask:284–286.
+
+Limits: Unaccepted recipe checkpoint; actual paint05 and PBR render pending.
+No image/fit/opening/motion/CUDA acceptance from code or stills. Blender
+actual-map render and source-array checks must pass before clip handoff.

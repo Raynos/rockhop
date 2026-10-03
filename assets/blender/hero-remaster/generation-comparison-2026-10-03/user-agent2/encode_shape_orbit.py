@@ -18,6 +18,7 @@ parser.add_argument('--movie', required=True)
 args = parser.parse_args()
 root, movie = Path(args.orbit), Path(args.movie)
 report = json.loads((root / 'orbit.json').read_text())
+pbr = bool(report.get('paintedGLBSHA256'))
 assert sorted(row['frame'] for row in report['rows']) == list(range(48))
 assert not movie.exists()
 labels = root / 'labeled'
@@ -32,8 +33,10 @@ for row in report['rows']:
     frame = Image.new('RGB', (512, 576), (20, 25, 33))
     frame.paste(original, (0, 32))
     draw = ImageDraw.Draw(frame)
-    draw.text((12, 8), 'Hunyuan30step: finite-cell DERIVATIVE, unaccepted', font=font, fill='white')
-    draw.text((12, 552), 'No cleanup, learned texture, fit or rig; root review', font=font, fill='white')
+    title = 'Mesh-preserving PBR: 8 views / 768 / 15 steps' if pbr else 'Hunyuan30step: finite-cell DERIVATIVE, unaccepted'
+    footer = 'No remesh, fit or rig; unaccepted / root review' if pbr else 'No cleanup, learned texture, fit or rig; root review'
+    draw.text((12, 8), title, font=font, fill='white')
+    draw.text((12, 552), footer, font=font, fill='white')
     assert frame.crop((0, 32, 512, 544)).tobytes() == original.tobytes()
     frame.save(labels / path.name)
 movie.parent.mkdir(parents=True, exist_ok=True)
