@@ -1,0 +1,76 @@
+{
+  "accepted": false,
+  "kind": "matched gray static geometry camera orbit; root review pending",
+  "movie": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-body01/native-vs-control-orbit.mp4",
+    "bytes": 409850,
+    "sha256": "ed98dcf79a3bc3ddd9d24cc6590e461c1c2e107f0eec03c021d16a12170de964",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1024,
+          "height": 576,
+          "avg_frame_rate": "12/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "409850"
+      }
+    }
+  },
+  "orbitSHA256": "8bc7ae0c57610680a157d7d4876eacf49e55f8da902e568759952301c59da15d",
+  "framesVerified": 144,
+  "referenceFramesReused": 72,
+  "recipeSHA256": "7378cabf3773e385274c37ed1902f4edcb0be47ae1bee323e7879db10da8cb82",
+  "encoderSHA256": "8eb0321c4925750b83abca8b2f2ab6d34a7fc261daf49dfe3d023c52b2e68066",
+  "recipeSyntax": "both AST pass",
+  "CPUBlenderGuard": {
+    "controllerPID": 27638,
+    "ownedChildPID": 27641,
+    "exitCode": 0,
+    "elapsedSeconds": 45.906
+  },
+  "displayMatrixRows": [
+    [
+      0.0,
+      -1.8222340853211076,
+      0.0,
+      0.0023661747638727224
+    ],
+    [
+      1.8222340853211076,
+      0.0,
+      0.0,
+      0.0004823259123796051
+    ],
+    [
+      0.0,
+      0.0,
+      1.8222340853211076,
+      0.9111100913891712
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "rigMotion": false,
+  "fitAcceptance": false,
+  "generatedPBR": false,
+  "modelLeaseInventoryAfterCompletion": "",
+  "modelLeaseHeldAfterCompletion": false,
+  "limits": [
+    "Static geometry camera orbit is not skeletal or physics-driven motion",
+    "Explicit raw Z up and uniform height registration is not recovered fitting",
+    "Native arrays unchanged; gray display is not generated PBR",
+    "Boundary, overused and winding defects remain; no wardrobe/player promotion"
+  ]
+}

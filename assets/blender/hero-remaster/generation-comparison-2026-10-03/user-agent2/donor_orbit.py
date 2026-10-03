@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import shutil
 import sys
 
 import bpy
@@ -68,6 +69,8 @@ def main():
     parser.add_argument('--contract', required=True)
     parser.add_argument('--contract-sha256', required=True)
     parser.add_argument('--out', required=True)
+    parser.add_argument('--native-up-axis', choices=['x', 'y', 'z'], default='x')
+    parser.add_argument('--reuse-reference-orbit')
     args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:])
     if sha(args.native) != args.native_sha256 or sha(args.contract) != args.contract_sha256:
         raise ValueError('Frozen donor/contract bytes changed')
@@ -92,7 +95,9 @@ def main():
                         faces[:, ::-1].tolist(), gray)
     # Explicit preview-only raw X->Blender Z, raw Y->Y, raw Z->-X.
     # This is not a recovered camera, anatomical registration or wearable fit.
-    rotation = np.array([[0, 0, -1], [0, 1, 0], [1, 0, 0]], dtype=float)
+    rotation = np.array({'x': [[0, 0, -1], [0, 1, 0], [1, 0, 0]],
+                         'y': [[0, 0, 1], [1, 0, 0], [0, 1, 0]],
+                         'z': [[0, -1, 0], [1, 0, 0], [0, 0, 1]]}[args.native_up_axis], dtype=float)
     transformed = vertices @ rotation.T
     low, high = transformed.min(axis=0), transformed.max(axis=0)
     scale = contract['scale']['restHeightM'] / (high[2] - low[2])
@@ -115,6 +120,7 @@ def main():
     scene.view_settings.view_transform = 'Standard'
     scene.render.threads_mode = 'FIXED'
     scene.render.threads = 4
+    scene.render.use_persistent_data = True
     for name, position, watts in [('Key', (3, -3, 4), 450),
                                    ('Fill', (2, 4, 3), 350), ('Rim', (-3, 0, 4), 400)]:
         data = bpy.data.lights.new(name, 'AREA')
@@ -132,6 +138,21 @@ def main():
     for family, objects in [('canonical', reference), ('donor', [donor])]:
         directory = output / family
         directory.mkdir()
+        if family == 'canonical' and args.reuse_reference_orbit:
+            previous = json.loads(Path(args.reuse_reference_orbit).read_text())
+            if (previous['contractSHA256'] != sha(args.contract) or
+                    previous['referenceOBJ'] != source or previous['framesPerFamily'] != 72):
+                raise ValueError('Reused canonical orbit does not match frozen source')
+            originals = [row for row in previous['rows'] if row['family'] == 'canonical']
+            if len(originals) != 72:
+                raise ValueError('Incomplete canonical frame family')
+            for row in originals:
+                if sha(row['path']) != row['sha256']:
+                    raise ValueError('Reused canonical frame bytes changed')
+                destination = directory / f"{row['frame']:03d}.png"
+                shutil.copyfile(row['path'], destination)
+                rows.append({**row, 'path': str(destination), 'reusedFrom': row['path']})
+            continue
         for obj in reference + [donor]:
             obj.hide_render = obj not in objects
         for frame in range(72):
@@ -147,7 +168,8 @@ def main():
               'nativeSHA256': sha(args.native), 'contractSHA256': sha(args.contract),
               'referenceOBJ': source, 'recipeSHA256': sha(__file__),
               'previewRawToBlenderMatrixRows': matrix.tolist(),
-              'previewAlignment': 'explicit longest raw X axis upward; uniform rest-height match only',
+              'previewAlignment': f'explicit raw {args.native_up_axis.upper()} axis upward; uniform rest-height match only',
+              'referenceFramesReusedFrom': args.reuse_reference_orbit,
               'framesPerFamily': 72, 'fps': 12, 'shader': 'matched gray studio, no generated PBR',
               'rows': rows, 'limits': ['No actual fitted garment, anatomy, skeleton, engine or device pass',
                                        'Raw decoder arrays untouched; separate display reverses winding only']}

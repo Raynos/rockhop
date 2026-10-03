@@ -88,3 +88,17 @@ repeated/zeroarea/duplicate0; max observed anon58.2/combined67.5GiB; lease ended
 Limits: Moving donor review pending; no body replacement/Pixal benchmark next.
 Foreign lockf83886 now holds shared lock and is preserved. Next priority separate
 hoodie/jeans appearance and real integration-owned openings/fit. All M0–M5 OPEN.
+
+Finding: Single TRELLIS donor now has a pinned six-second matched gray orbit.
+Explicit raw Z-up/height display matrix and72 byte-identical reused canonical
+frames expose the comparison without changing decoded arrays or player assets.
+
+Validation: CPU Blender27638/27641 exits0 in45.906s;144 source-frame hashes
+match. Labels preserve original pixels; silent H264 has72frames/12fps/1024x576.
+Movie SHAed98dcf7,409850bytes; both recipes AST pass; model lease released.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-body01/orbit-receipt.json
+Ask:276.
+
+Limits: UNACCEPTED static camera orbit, no rig/PBR/fit or anatomy pass. Native
+topology defects remain; root alone judges clip. Next work is separate wardrobe
+appearance with integration-owned openings, not additional body benchmarks.
