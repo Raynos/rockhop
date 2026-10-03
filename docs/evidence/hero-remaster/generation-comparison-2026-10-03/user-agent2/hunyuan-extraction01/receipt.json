@@ -1,0 +1,129 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "model": "hunyuan",
+  "source": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/surface_extractors.py",
+  "sourceSHA256": "203d1551ccef37e86f9809b9ac0fac68e8e4a2f633ca72a85408535595ae68e5",
+  "recipeSHA256": "a70a4479554ca915716bbd117dff78aa8fc5da732ca5da579aca685d21d6f9fc",
+  "torch": "2.14.0",
+  "cases": [
+    {
+      "name": "sphere",
+      "resolution": 384,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 482214,
+        "faces": 964424,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            -1.0005195140838623,
+            -1.0005195140838623,
+            -1.0005195140838623
+          ],
+          [
+            0.9942857027053833,
+            0.9942857027053833,
+            0.9942857027053833
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 48,
+        "minimumAreaNativeSquaredUnits": 0.0,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 1446636,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          964424
+        ]
+      },
+      "CPUAndMPSArraysIdentical": true,
+      "expectedNativeCentre": [
+        -0.003116883116883117,
+        -0.003116883116883117,
+        -0.003116883116883117
+      ],
+      "expectedNativeRadius": 0.9974025974025974,
+      "maxRadiusErrorWithinNativeMapping": 4.966935361783165e-06,
+      "mapping": "Installed MC divides grid positions by octree+1; preserve this native shrink/translation.",
+      "fixtureSHA256": "03e7c9ced2780b3d961b598fed16d1009a21884bd0854ba69058ea6296b62b6c",
+      "archivePath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/hunyuan-extraction01/control/sphere384.npz",
+      "passClosedConnectivityAndDeviceAgreement": false
+    },
+    {
+      "name": "sphere",
+      "resolution": 512,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 857838,
+        "faces": 1715672,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            -1.000389814376831,
+            -1.000389814376831,
+            -1.000389814376831
+          ],
+          [
+            0.9957113862037659,
+            0.9957113862037659,
+            0.9957113862037659
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 2.547001806689678e-10,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 2573508,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          1715672
+        ]
+      },
+      "CPUAndMPSArraysIdentical": true,
+      "expectedNativeCentre": [
+        -0.0023391812865497076,
+        -0.0023391812865497076,
+        -0.0023391812865497076
+      ],
+      "expectedNativeRadius": 0.9980506822612085,
+      "maxRadiusErrorWithinNativeMapping": 2.836171382081254e-06,
+      "mapping": "Installed MC divides grid positions by octree+1; preserve this native shrink/translation.",
+      "fixtureSHA256": "e1746eb93be7c3de0b3a0aa18d77b773be6dcac0f90393c093709e394e99fc47",
+      "archivePath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/hunyuan-extraction01/control/sphere512.npz",
+      "passClosedConnectivityAndDeviceAgreement": true
+    }
+  ],
+  "limits": [
+    "CPU/MPS analytic extraction agreement is not CUDA equivalence.",
+    "Closed analytic controls do not establish learned garment topology or material/fit quality.",
+    "Native orientation and coordinate mapping reported; no shared extractor edits.",
+    "Connectivity/device pass does not pass native orientation; check its separate flag."
+  ],
+  "allClosedConnectivityAndDeviceControlsPass": false,
+  "allNativeOrientationsConsistent": true
+}

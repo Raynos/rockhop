@@ -404,3 +404,16 @@ Ask:284–286.
 Limits: No CUDA equivalence, conditioning or learned garment proof. No
 shared decoder edits. Raw output remains immutable; any derived normal
 preview must be marked and cannot repair holes or garment fit.
+
+Finding: Hunyuan actual MC preserves CPU/MPS arrays and closed consistent
+winding at384/512; aligned radius1 grid at384 yields48zero-area triangles.
+
+Validation: Guard exit0 in12.314s; no boundary/overused edges, all finite;
+512zero-area count0. Native octree+1 mapping produces known slight scale
+and centre offsets; maxradiuserrors4.97e-6/2.84e-6 within that exact mapping.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-extraction01/receipt.json
+Ask:284–286.
+
+Limits: Analytic exact-zero grid alignment does not establish garment
+quality failure or CUDA parity. No shared extraction fix or native cleanup.
+Output must be audited before any derivative/export; painting separate.
