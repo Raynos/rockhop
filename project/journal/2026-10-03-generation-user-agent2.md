@@ -1743,3 +1743,16 @@ Ask:284–286.
 
 Limits: Localonlynotes, rootplayedPixal/game-readyjudgment open.
 No push/Libraryupload, driver/source edit, seed sweep or donortransfer.
+
+Finding: Owned Pixalrecipes nowrequireactual baselineinputname sets and
+persist decodednative mesh before laterinput/attentionqualification.
+
+Validation: Actualsavedfixture sets equal10allstage/3textureinputs; all
+three recipe syntax/recursivelexicalnames pass. Rawsave precedesqualification
+in allthree; workerdigests repinned. No running worker, newinference or
+changes tohistorical failure/raw/material/movie archives.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-harness-repair02/finding.json
+Ask:284–286.
+
+Limits: Fixture/source verification, not a freshseed/parity/artpass.
+Root alone judges frozenplayedcandidate; no garmentorplayerpromotion.

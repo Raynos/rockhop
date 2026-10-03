@@ -1,0 +1,79 @@
+{
+  "accepted": false,
+  "status": "Corrected baseline input-name set and persist-first order using actual saved fixtures; no new inference",
+  "actualAllStageInputNames": [
+    "shape_1024-actual-NAF-guide",
+    "shape_1024-actual-NAF-lowres-features",
+    "shape_1024-actual-normalized-pixels",
+    "shape_512-actual-NAF-guide",
+    "shape_512-actual-NAF-lowres-features",
+    "shape_512-actual-normalized-pixels",
+    "ss-actual-normalized-pixels",
+    "tex_1024-actual-NAF-guide",
+    "tex_1024-actual-NAF-lowres-features",
+    "tex_1024-actual-normalized-pixels"
+  ],
+  "actualTextureInputNames": [
+    "tex_1024-actual-normalized-pixels",
+    "tex_1024-actual-NAF-guide",
+    "tex_1024-actual-NAF-lowres-features"
+  ],
+  "realFixtureChecksPass": true,
+  "sourceChecks": [
+    {
+      "source": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal.py",
+      "workerSHA256": "fbc3769ce2d60ce0e20af9630a02aa0c2e7ef0256a32fc5157bd23c3d6a83075",
+      "syntax": true,
+      "lexicalGlobalsResolved": true,
+      "rawSavedBeforeInputQualification": true,
+      "requiredInputNames": [
+        "shape_1024-actual-NAF-guide",
+        "shape_1024-actual-NAF-lowres-features",
+        "shape_1024-actual-normalized-pixels",
+        "shape_512-actual-NAF-guide",
+        "shape_512-actual-NAF-lowres-features",
+        "shape_512-actual-normalized-pixels",
+        "ss-actual-normalized-pixels",
+        "tex_1024-actual-NAF-guide",
+        "tex_1024-actual-NAF-lowres-features",
+        "tex_1024-actual-normalized-pixels"
+      ]
+    },
+    {
+      "source": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024.py",
+      "workerSHA256": "68756b0c57b94697b3a2d50602e5c1b551a998c178e472f4c046053e8b1cb619",
+      "syntax": true,
+      "lexicalGlobalsResolved": true,
+      "rawSavedBeforeInputQualification": true,
+      "requiredInputNames": [
+        "shape_1024-actual-NAF-guide",
+        "shape_1024-actual-NAF-lowres-features",
+        "shape_1024-actual-normalized-pixels",
+        "shape_512-actual-NAF-guide",
+        "shape_512-actual-NAF-lowres-features",
+        "shape_512-actual-normalized-pixels",
+        "ss-actual-normalized-pixels",
+        "tex_1024-actual-NAF-guide",
+        "tex_1024-actual-NAF-lowres-features",
+        "tex_1024-actual-normalized-pixels"
+      ]
+    },
+    {
+      "source": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024_continue.py",
+      "workerSHA256": "464bb71cdf97b0d8bc887e0d60d8b44f410a72a9579954ab9404cc945ec2f07f",
+      "syntax": true,
+      "lexicalGlobalsResolved": true,
+      "rawSavedBeforeInputQualification": true,
+      "requiredInputNames": [
+        "tex_1024-actual-NAF-guide",
+        "tex_1024-actual-NAF-lowres-features",
+        "tex_1024-actual-normalized-pixels"
+      ]
+    }
+  ],
+  "limits": [
+    "Static fixture/source verification only, not a new model run.",
+    "Historical failed-run receipts and frozen raw/movie bytes unchanged.",
+    "Model selection and wearable gates remain with root."
+  ]
+}

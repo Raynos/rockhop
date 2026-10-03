@@ -312,10 +312,12 @@ def main():
     meshes,latent=pipe.run(image,camera_params=report['camera'],seed=42,pipeline_type='1536_cascade',preprocess_image=False,
                            sparse_structure_sampler_params={'steps':12},shape_slat_sampler_params={'steps':12},tex_slat_sampler_params={'steps':12},return_latent=True)
     assert len(meshes)==1 and latent[2]==1536 and sampler_calls==cond_calls==4
-    assert len(report['nafChecks'])==3 and len(report['inputMatches'])==14
-    assert {c['phase'] for c in report['attentionChecks']}=={c['label'] for c in report['sampleCalls']}
     phase('persist untouched raw arrays before display')
     native=save_native(meshes[0],out)
+    expected_inputs={label for label in conditioner_control['captures']
+                     if label.endswith(('-actual-normalized-pixels','-actual-NAF-guide','-actual-NAF-lowres-features'))}
+    assert len(report['nafChecks'])==3 and set(report['inputMatches'])==expected_inputs
+    assert {c['phase'] for c in report['attentionChecks']}=={c['label'] for c in report['sampleCalls']}
     with np.load(out/'native.npz',allow_pickle=False) as saved:
         vertices,faces=saved['vertices'],saved['faces']
         valid=bool(len(vertices) and len(faces) and np.isfinite(vertices).all() and np.isfinite(saved['attrs']).all() and faces.min()>=0 and faces.max()<len(vertices))

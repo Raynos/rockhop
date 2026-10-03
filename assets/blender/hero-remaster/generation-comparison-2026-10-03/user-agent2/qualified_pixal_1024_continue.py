@@ -350,11 +350,13 @@ def main():
         del cond
         meshes=pipe.decode_latent(shape,texture,1024)
     assert len(meshes)==1 and sampler_calls==cond_calls==4
-    assert len(report['nafChecks'])==1 and len(report['inputMatches'])==4
-    assert {c['phase'] for c in report['attentionChecks']}=={c['label'] for c in report['sampleCalls']}
-    report['totalActualStepsAcrossCheckpointAndContinuation']=48
     phase('persist untouched raw arrays before display')
     native=save_native(meshes[0],out)
+    expected_inputs={label for label in conditioner_control['captures']
+                     if label.endswith(('-actual-normalized-pixels','-actual-NAF-guide','-actual-NAF-lowres-features')) and label.startswith('tex_1024-')}
+    assert len(report['nafChecks'])==1 and set(report['inputMatches'])==expected_inputs
+    assert {c['phase'] for c in report['attentionChecks']}=={c['label'] for c in report['sampleCalls']}
+    report['totalActualStepsAcrossCheckpointAndContinuation']=48
     with np.load(out/'native.npz',allow_pickle=False) as saved:
         vertices,faces=saved['vertices'],saved['faces']
         valid=bool(len(vertices) and len(faces) and np.isfinite(vertices).all() and np.isfinite(saved['attrs']).all() and faces.min()>=0 and faces.max()<len(vertices))
