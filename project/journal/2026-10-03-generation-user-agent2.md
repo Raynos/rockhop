@@ -640,3 +640,17 @@ Ask:284–286.
 Limits: Setup correction is not geometry/PBR/asset acceptance. Active
 external checkout histories preserved; no new clone, reset, branch,
 worktree, force push, runtime alteration or credential access.
+
+Finding: Frozen finite-cell derivative has an explicit neutral-clay orbit
+recipe that verifies Blender vertex/index arrays before moving rendering.
+
+Validation: Both ASTs pass. Immutable derivative SHA mandatory; official
+global winding reversal only, rawXYZ→BlenderX/−Z/Y axis rotation separate.
+48frames/8fps/6seconds,512square source pixels retained inside576tall
+labels; encoder enforces a single video stream and no audio. CPU4threads/
+8samples, no modifiers, geometry cleanup, texture or player assets.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint; actual rendering/encoding pending.
+Averaged display normals only, not vertex smoothing. Six zero-area
+triangles and detached component retained; no garment fit or rig verdict.
