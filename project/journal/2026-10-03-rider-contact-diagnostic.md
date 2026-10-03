@@ -29,3 +29,22 @@ Library movie/still/QA/fixture saves confirmed. Source-level lint/type pass.
 
 Limits: No normal player, asset, rig or physics change. Full grip/sole/saddle
 surface contacts, dense motion and art/device acceptance remain open.
+
+## Exact STEP surface bounds
+
+Finding: Complete exported hand and foot-influence triangle regions meet or
+cross targets at all17aligned source observations. Broad hip intersections
+do not establish posterior support. Source/root/triangle provenance is explicit.
+
+Validation: All5base position/normal/index/skin arrays are byte-identical to
+raw11; captured bone and mesh matrix error0. Known finite distance controls
+pass. Scoped lint/syntax pass. Third-round ordinary Metal gate clears4810
+byte-identical ticks in40.0833s, crash103ticks/restart1tick/state0, error0.
+Three Library JSON uploads and xattrs confirmed; full reports retained.
+Evidence: docs/evidence/hero-remaster/rider-contact-diagnostic-2026-10-03/surfaces01/.
+Ask:255.
+
+Limits: Unsigned touching/crossing is not grip, sole or posterior support.
+WebKit strict gate fails only on unused-preload warning despite matching
+mechanics; retain the failure. No player edits or source promotion. Dense
+interpolation, physics rider driver, LOD, art, iOS and stranger remain open.
