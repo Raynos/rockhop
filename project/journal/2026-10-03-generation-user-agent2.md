@@ -102,3 +102,16 @@ Ask:276.
 Limits: UNACCEPTED static camera orbit, no rig/PBR/fit or anatomy pass. Native
 topology defects remain; root alone judges clip. Next work is separate wardrobe
 appearance with integration-owned openings, not additional body benchmarks.
+
+Finding: Future garment appearance displays must sample sparse voxel channels
+by coordinates, not pair equal-length voxel/vertex rows. CPU trilinear sampler
+keeps explicit missing-support witnesses and leaves raw donor archives untouched.
+
+Validation: Analytic linear gradient error9.54e-8; shuffled voxel rows produce
+byte-identical samples. Single-corner support1/8 retained; unsupported query
+reports0support; duplicate voxels reject. Both AST checks pass; zero model runs.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/native-attrs-preflight.json
+Ask:276.
+
+Limits: Preparation checkpoint only; not a UV bake, garment/fit/topology or
+actual appearance pass. No real donor consumed; no body benchmark escalation.
