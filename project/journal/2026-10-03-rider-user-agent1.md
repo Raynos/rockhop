@@ -331,3 +331,11 @@ Finding: Source08 worst upper contacts are plantar forefoot, not ankle collar: i
 Validation: Exactsource564 upper142/sole355 andsource612 upper142/sole357 counts reproduce continuousmotion receipt againstfullbody; frozen master/motion hashes unchanged. Evaluatedtriangle/nativepolygon/vertex ancestry avoids rest-ngon diagonal assumptions. All398nativeweights/674resttriangles recorded; Python syntax passes.
 
 Limits: Aggregateweights/centroids locate likely deformation mechanism, not causalproof or signedpenetration. Fourtoe vertices retain tinyopposite-sidebodyweightdust≤0.000081796; symmetrictestdoesnotqualifyunilateral motion. No sourcechange/collisionresponse/mobile/artacceptance; actual response cannot be an unuseddescriptor.
+
+### Round38 — targeted plantar flexion support, 2026-10-03
+
+Finding: One fixedfive nativeXplane cut plus actualbody-derived ownside top4 weights replaces longplantar transitions without rest-gap/material change. Native398→1174v; all769samples now upper/body0+sole/body0 and sampledfootenclosure0:529FK/96matchedflexion/144unilateral-opposed heldout. Root08playedcoveragegain preserved; wedgeinstep/blunttoe/weakheelankle/featurelesssurface artstillrejected, singleLibrarydecision recorded.
+
+Validation: All674oldsurface triangles float64 plane/barycentric/edge distance max20.324nm, original2µmguard retained; float32BVH sliver7.278µm anomalyexplicit. Native51bind/15othermeshes inclhiddencontrols/normals exact08; actualloader7nonbootattributes/indices/morphs/51bindexact05/defaults0/rest0.000854mm. Headrawnormals/PBR protected. Native769sample measurement50.60sCPU, protectedsource8/mastermotion pins unchanged; source9movingartreviewpending.
+
+Limits: Triangle/cappedray proxies are notsignedclearance/arbitrarymovement guarantees. Constructionintervention couples topology+localbodyrebinding, not isolatedindividualcauseproof. No livecollisionprojection/physicsresponse/mobile/art pass; Agent3 actualengine response required. Next believablebootshape retainscoverage and movingfit, exact08control; no rigidplacementonly donor salvage or duplicateLibrarydelivery.
