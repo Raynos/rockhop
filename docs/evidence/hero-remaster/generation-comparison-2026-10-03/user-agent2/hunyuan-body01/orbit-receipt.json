@@ -1,0 +1,72 @@
+{
+  "accepted": false,
+  "kind": "matched static geometry camera orbit; root rejected thin/11-component native donor",
+  "movie": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-body01/native-vs-control-orbit.mp4",
+    "bytes": 265351,
+    "sha256": "8fe4f4662d16454cb239b0c48ddeae18ca45e9db9bda2a8bbc591b21adcf7f0d",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1024,
+          "height": 576,
+          "avg_frame_rate": "12/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "265351"
+      }
+    }
+  },
+  "orbitSHA256": "8063333ea957a776ec5a808015c2597165877607e15101daebfdfe45740ffea1",
+  "framesVerified": 144,
+  "recipeSyntax": "AST pass",
+  "CPUBlenderGuard": {
+    "controllerPID": 81300,
+    "ownedChildPID": 81303,
+    "exitCode": 0,
+    "elapsedSeconds": 126.97
+  },
+  "displayMatrixRows": [
+    [
+      0.0,
+      0.0,
+      -1.0441325953599574,
+      -0.003998036759117686
+    ],
+    [
+      0.0,
+      1.0441325953599574,
+      0.0,
+      -0.08079966503731013
+    ],
+    [
+      1.0441325953599574,
+      0.0,
+      0.0,
+      0.9425589142305012
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "rigMotion": false,
+  "fitAcceptance": false,
+  "generatedPBR": false,
+  "ownedHeavyJobsAfterCompletion": [],
+  "modelLeaseHeldAfterCompletion": false,
+  "limits": [
+    "Camera orbit is not skeletal/physics-driven motion",
+    "Preview axis/height registration is explicit, not recovered fitting",
+    "Raw native arrays unchanged; no wardrobe/player promotion"
+  ]
+}

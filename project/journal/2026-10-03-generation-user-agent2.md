@@ -65,3 +65,14 @@ winding witnesses0. Max observed anon56.9/combined64.6GiB; canonical lease relea
 
 Limits: No paint/PBR/rig/wearable fit or visual/played/device acceptance. Raw,
 display and log masters stay local and pinned; no player assets. All M0–M5 OPEN.
+
+Finding: Matched six-second control/donor camera orbit exposes missing body
+regions of the first cheap Hunyuan result; root records the thin11-component
+donor as failure. Preview-only raw-axis/height transform is explicit and pinned.
+
+Validation: CPU Blender exits0 in126.97s;144frame hashes match. Silent H264
+movie has72frames at12fps/1024×576, SHA8fe4f466. Original arrays/source unchanged.
+
+Limits: Static geometry camera orbit, no rig/fit/PBR/anatomy pass. This failure
+is specific to the cheap settings/reference; switch installed-model mechanism
+next instead of blind same-approach escalation. All M0–M5 OPEN; lease released.

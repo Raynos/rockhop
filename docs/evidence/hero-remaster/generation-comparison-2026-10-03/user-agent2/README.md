@@ -184,3 +184,24 @@ preserved local masters under `.tmp/generation-comparison-2026-10-03/user-agent2
 all bytes/sizes pinned in receipt. No cleanup, reduction, paint, rig, native-array
 rotation or player asset edit. No PBR/combined fitting or device evidence exists.
 This is an explicitly unaccepted checkpoint before any next experiment.
+
+## Matched donor/control gray orbit
+
+[Six-second movie](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-body01/native-vs-control-orbit.mp4),
+[orbit receipt](hunyuan-body01/orbit-receipt.json) and [144 frame pins](hunyuan-body01/orbit.json)
+show the same camera/light/shader around the experimental control and first cheap
+Hunyuan donor. MP4 is H2641024×576,72frames at12fps with no audio stream.
+Movie SHA `8fe4f4662d16454cb239b0c48ddeae18ca45e9db9bda2a8bbc591b21adcf7f0d`.
+CPU Blender render exits0 in126.97s under bounded canonical lock; job ended.
+
+Raw X→Blender Z, raw Y→Y, raw Z→−X and uniform height1.822572m are explicitly
+preview-only; the exact matrix is pinned. Original reference OBJ coordinates
+are parsed without an importer forward-axis rotation. All native arrays remain
+immutable. These static meshes with an orbiting camera are not rig motion,
+recovered anatomical/camera registration, wearable fitting or generated PBR.
+
+Root classifies this thin11-component cheap donor as a failure. The paired clip
+makes its large missing regions visible. This does not reject every possible
+Hunyuan setting or authorize a fused-surface salvage loop. Next mechanism is
+the installed TRELLIS512/8step/seed42 probe, on the same pinned alpha reference,
+after fresh resource inspection; preserve its exact raw decode before display.
