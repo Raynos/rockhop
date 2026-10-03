@@ -1,0 +1,532 @@
+{
+  "status": "READ-ONLY SCULPT179 DIAGNOSIS COMPLETE; sole original builder owns repair",
+  "inputs": [
+    {
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/sculpt-shell01.npz",
+      "copy": "sculpt-shell01.npz",
+      "SHA256": "01f68e111e025e120755e701d3e596160e9776e059cb59acdb812832af2207ff"
+    },
+    {
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/shell01.glb",
+      "copy": "shell01.glb",
+      "SHA256": "92cafa51ec1d4127741c173958e1eb7136f341db9fa1e7d147fc76ec02f859c3"
+    },
+    {
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/clean-upper-shell01/continuous-sculpt179/cuff-correspondence-private.json",
+      "copy": "cuff-correspondence-private.json",
+      "SHA256": "50ce79f8dd3737df1d6620e828a27133161ed43a945ef09722dd970072038cea"
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/build.py",
+      "copy": "build.py",
+      "SHA256": "c24028a27d548dcaf82098243162018dc7fd573bc6a6d63c3e1476d3b7ebeb52"
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/clean-upper-shell01/continuous-sculpt179/setup.py",
+      "copy": "setup.py",
+      "SHA256": "de65caf5c2f78877f98298b190739ef534026dd889dd78bf2146baaf007ee650"
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/literal-audit.json",
+      "copy": "literal-audit.json",
+      "SHA256": "d22227707f32acb3925e0c27ef9412f22138cdacffcbc682fe310e1f77e95021"
+    },
+    {
+      "source": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/clean-upper-shell01/continuous-sculpt179/construction.json",
+      "copy": "construction.json",
+      "SHA256": "2e52ecacb244a792e85318f8fc946fbfcc900caff1b2f37ecbdb338d4f4cdeae"
+    }
+  ],
+  "primaryCause": {
+    "operation": "Cuff correspondence eligibility uses a height band, not the actual knife boundary.",
+    "knifeToleranceM": 1e-07,
+    "mappingHeightToleranceM": 1e-06,
+    "mappedRows": 130,
+    "trueTopologicalCuffBoundaryRows": 126,
+    "incorrectlySelectedInteriorRows": 4,
+    "mechanism": "The bisect creates a true cut vertex beside an existing vertex119\u2013417nm above the plane. The wider cuff-selection height tolerance admits both. Angular interpolation projects them to identical or1\u20134nm-separated donor targets; float32 storage makes four pairs exactly coincident. Eight incident triangles become zero area. Exact-position welding then exposes repeated/self edges and splits the apparent cuff boundaries. This is not an intended seam or a bone-weight problem.",
+    "minimalAction": "Traverse the actual cut boundary edges into ordered cuff loops and select those vertices only. Resolve near-knife sliver edges through an explicit topology decision before correspondence. Validate the final float32 geometry after assigning donor points. Do not enlarge a global proximity-weld epsilon or rig this failed mesh."
+  },
+  "fourCuffCollapseWitnesses": [
+    {
+      "interiorVertex": 963,
+      "trueCutBoundaryVertex": 18771,
+      "side": "L",
+      "rawBoundaryDegrees": [
+        0,
+        2
+      ],
+      "beforeHeightAboveCutM": [
+        1.1920928955078125e-07,
+        0.0
+      ],
+      "beforePositionGapM": 1.1920928955078125e-07,
+      "targetDoublePrecisionGapM": 0.0,
+      "storedFloat32GapM": 0.0,
+      "interiorBeforeBlenderM": [
+        0.6169780492782593,
+        -0.35548919439315796,
+        0.9135000705718994
+      ],
+      "boundaryBeforeBlenderM": [
+        0.6169780492782593,
+        -0.35548919439315796,
+        0.9134999513626099
+      ],
+      "interiorSourceRows": [
+        5,
+        2
+      ],
+      "boundarySourceRows": [
+        5,
+        2
+      ],
+      "interiorBarycentric": [
+        0.8139867749061238,
+        0.18601322509387613
+      ],
+      "boundaryBarycentric": [
+        0.8139867749061238,
+        0.18601322509387613
+      ],
+      "degenerateFaceIDs": [
+        1696,
+        37582
+      ],
+      "parentPolygonIDs": [
+        853,
+        18737
+      ]
+    },
+    {
+      "interiorVertex": 10588,
+      "trueCutBoundaryVertex": 18804,
+      "side": "R",
+      "rawBoundaryDegrees": [
+        0,
+        2
+      ],
+      "beforeHeightAboveCutM": [
+        1.7881393432617188e-07,
+        0.0
+      ],
+      "beforePositionGapM": 1.884864366154897e-07,
+      "targetDoublePrecisionGapM": 2.716046098791104e-09,
+      "storedFloat32GapM": 0.0,
+      "interiorBeforeBlenderM": [
+        0.6169780492782593,
+        0.35548919439315796,
+        0.9135001301765442
+      ],
+      "boundaryBeforeBlenderM": [
+        0.616978108882904,
+        0.35548919439315796,
+        0.9134999513626099
+      ],
+      "interiorSourceRows": [
+        3,
+        5
+      ],
+      "boundarySourceRows": [
+        3,
+        5
+      ],
+      "interiorBarycentric": [
+        0.9978521003247987,
+        0.002147899675201308
+      ],
+      "boundaryBarycentric": [
+        0.9978526759662636,
+        0.002147324033736401
+      ],
+      "degenerateFaceIDs": [
+        21494,
+        37427
+      ],
+      "parentPolygonIDs": [
+        10749,
+        18667
+      ]
+    },
+    {
+      "interiorVertex": 1852,
+      "trueCutBoundaryVertex": 18721,
+      "side": "L",
+      "rawBoundaryDegrees": [
+        0,
+        2
+      ],
+      "beforeHeightAboveCutM": [
+        4.172325134277344e-07,
+        0.0
+      ],
+      "beforePositionGapM": 4.2146848510894033e-07,
+      "targetDoublePrecisionGapM": 4.1128396882290895e-09,
+      "storedFloat32GapM": 0.0,
+      "interiorBeforeBlenderM": [
+        0.670499861240387,
+        -0.40200740098953247,
+        0.9135003685951233
+      ],
+      "boundaryBeforeBlenderM": [
+        0.670499861240387,
+        -0.4020073413848877,
+        0.9134999513626099
+      ],
+      "interiorSourceRows": [
+        32,
+        36
+      ],
+      "boundarySourceRows": [
+        32,
+        36
+      ],
+      "interiorBarycentric": [
+        0.8996640935251026,
+        0.10033590647489743
+      ],
+      "boundaryBarycentric": [
+        0.8996632121985392,
+        0.10033678780146084
+      ],
+      "degenerateFaceIDs": [
+        37560,
+        37565
+      ],
+      "parentPolygonIDs": [
+        18725,
+        18727
+      ]
+    },
+    {
+      "interiorVertex": 12217,
+      "trueCutBoundaryVertex": 18827,
+      "side": "R",
+      "rawBoundaryDegrees": [
+        0,
+        2
+      ],
+      "beforeHeightAboveCutM": [
+        3.5762786865234375e-07,
+        0.0
+      ],
+      "beforePositionGapM": 3.625608998714816e-07,
+      "targetDoublePrecisionGapM": 1.0115394462320703e-09,
+      "storedFloat32GapM": 0.0,
+      "interiorBeforeBlenderM": [
+        0.6704998016357422,
+        0.4020073711872101,
+        0.9135003089904785
+      ],
+      "boundaryBeforeBlenderM": [
+        0.6704998016357422,
+        0.4020073115825653,
+        0.9134999513626099
+      ],
+      "interiorSourceRows": [
+        31,
+        29
+      ],
+      "boundarySourceRows": [
+        31,
+        29
+      ],
+      "interiorBarycentric": [
+        0.16218245591562563,
+        0.8378175440843744
+      ],
+      "boundaryBarycentric": [
+        0.1621821725238921,
+        0.8378178274761079
+      ],
+      "degenerateFaceIDs": [
+        37393,
+        37394
+      ],
+      "parentPolygonIDs": [
+        18652,
+        18653
+      ]
+    }
+  ],
+  "degenerateFaces": [
+    {
+      "face": 1696,
+      "parentPolygon": 853,
+      "rawVertices": [
+        18715,
+        18771,
+        963
+      ],
+      "positionsBlenderM": [
+        [
+          0.6201766729354858,
+          -0.3554304540157318,
+          0.9134999513626099
+        ],
+        [
+          0.6201709508895874,
+          -0.35546764731407166,
+          0.9134999513626099
+        ],
+        [
+          0.6201709508895874,
+          -0.35546764731407166,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 21494,
+      "parentPolygon": 10749,
+      "rawVertices": [
+        18742,
+        18804,
+        10588
+      ],
+      "positionsBlenderM": [
+        [
+          0.6221601366996765,
+          0.3552585244178772,
+          0.9134999513626099
+        ],
+        [
+          0.6221655011177063,
+          0.3552361726760864,
+          0.9134999513626099
+        ],
+        [
+          0.6221655011177063,
+          0.3552361726760864,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 37393,
+      "parentPolygon": 18652,
+      "rawVertices": [
+        12217,
+        18828,
+        18827
+      ],
+      "positionsBlenderM": [
+        [
+          0.6706207394599915,
+          0.395465224981308,
+          0.9134999513626099
+        ],
+        [
+          0.6782599091529846,
+          0.3937084674835205,
+          0.9134999513626099
+        ],
+        [
+          0.6706207394599915,
+          0.395465224981308,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 37394,
+      "parentPolygon": 18653,
+      "rawVertices": [
+        12207,
+        12217,
+        18827
+      ],
+      "positionsBlenderM": [
+        [
+          0.6615116596221924,
+          0.4016697406768799,
+          0.9135013818740845
+        ],
+        [
+          0.6706207394599915,
+          0.395465224981308,
+          0.9134999513626099
+        ],
+        [
+          0.6706207394599915,
+          0.395465224981308,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 37427,
+      "parentPolygon": 18667,
+      "rawVertices": [
+        10588,
+        18804,
+        18803
+      ],
+      "positionsBlenderM": [
+        [
+          0.6221655011177063,
+          0.3552361726760864,
+          0.9134999513626099
+        ],
+        [
+          0.6221655011177063,
+          0.3552361726760864,
+          0.9134999513626099
+        ],
+        [
+          0.6221815943717957,
+          0.3551844358444214,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 37560,
+      "parentPolygon": 18725,
+      "rawVertices": [
+        1855,
+        1852,
+        18721
+      ],
+      "positionsBlenderM": [
+        [
+          0.679474949836731,
+          -0.4009586274623871,
+          0.9135043621063232
+        ],
+        [
+          0.6699067950248718,
+          -0.3947373032569885,
+          0.9134999513626099
+        ],
+        [
+          0.6699067950248718,
+          -0.3947373032569885,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 37565,
+      "parentPolygon": 18727,
+      "rawVertices": [
+        1852,
+        18720,
+        18721
+      ],
+      "positionsBlenderM": [
+        [
+          0.6699067950248718,
+          -0.3947373032569885,
+          0.9134999513626099
+        ],
+        [
+          0.6621708869934082,
+          -0.3953353762626648,
+          0.9134999513626099
+        ],
+        [
+          0.6699067950248718,
+          -0.3947373032569885,
+          0.9134999513626099
+        ]
+      ]
+    },
+    {
+      "face": 37582,
+      "parentPolygon": 18737,
+      "rawVertices": [
+        963,
+        18771,
+        18714
+      ],
+      "positionsBlenderM": [
+        [
+          0.6201709508895874,
+          -0.35546764731407166,
+          0.9134999513626099
+        ],
+        [
+          0.6201709508895874,
+          -0.35546764731407166,
+          0.9134999513626099
+        ],
+        [
+          0.6201685667037964,
+          -0.35548317432403564,
+          0.9134999513626099
+        ]
+      ]
+    }
+  ],
+  "authoredVsActualExport": {
+    "authoredRaw": {
+      "vertices": 19000,
+      "triangles": 37604,
+      "boundaryEdges": 400,
+      "boundaryCycles": 4,
+      "nonmanifoldEdges": 0,
+      "wrongWindingEdges": 0,
+      "degenerateFaces": 8
+    },
+    "actualExactPositionWeld": {
+      "vertices": 18996,
+      "triangles": 37604,
+      "boundaryEdges": 394,
+      "boundaryComponents": 6,
+      "reportedNonmanifoldEdges": 8,
+      "reportedWrongWindingEdges": 4,
+      "degenerateFaces": 8
+    },
+    "countInterpretation": "Independent QA confirms the four winding flags are zero-length self edges. The nonmanifold tally counts repeated edge occurrences in degenerate triangles, rather than a healthy seam with multiple distinct incident faces.",
+    "virtualIndependentQA": "Removing the eight zero-area triangles virtually gives0 nonmanifold/winding and400 boundary edges forming four degree-two loops: hem104, neck170, cuffs63 each. No actual source repair or export was made."
+  },
+  "hemAndIdentityJoinLimits": {
+    "newHemGLTF": {
+      "heightY": 0.949999988079071,
+      "Xrange": [
+        0.5472468733787537,
+        0.7227582335472107
+      ],
+      "lateralZRange": [
+        -0.09725914150476456,
+        0.09725906699895859
+      ],
+      "vertices": 104
+    },
+    "sourceRetainedWaistRootMeasurement": {
+      "mask": "All original triangle cornersY<=.95; whole crossing triangles discarded, no knife or correspondence.",
+      "nearWaistBoundaryEdges": 70,
+      "Yrange": [
+        0.925767,
+        0.949613
+      ],
+      "Xrange": [
+        0.503124,
+        0.788157
+      ],
+      "lateralZExtrema": [
+        -0.19685,
+        0.19685
+      ]
+    },
+    "ellipsoidCause": {
+      "torsoCentreHeightM": 1.215,
+      "verticalRadiusM": 0.315,
+      "lateralRadiusM": 0.183,
+      "cutHeightM": 0.95,
+      "theoreticalLateralRadiusAtCutM": 0.09893262555442947,
+      "observedNewHemWidthM": 0.19451820850372314,
+      "observedDonorWaistExtremaWidthM": 0.3937,
+      "interpretation": "The cut is near the ellipsoid tip, so it creates a roughly195mm-wide hem over a retained waist spanning roughly393mm. This is a design/coverage mismatch separate from the cuff degeneracy."
+    },
+    "requiredDesignDecision": "Define a free hoodie hem with deliberate overlap/coverage, or a true joined interface if that is the chosen design. Do not assume shirt and pants must be welded. The current source height mask and new104-node rim have no correspondence.",
+    "cuffs": "Although selected new rim points interpolate the original cuff polyline, new63-node topology is not physically sewn to the source65/62-alias glove rings. Require one explicit material edge parameterization/common split registry and physical weld contract, preserving protected glove geometry.",
+    "hood": "Protected source hood/collar remains a separate identity donor. New elliptical neckline170-node loop has no explicit source-edge sew; no qualified donor-shell contact or moving join."
+  },
+  "comparisonWith178": {
+    "178": "A collinear back-neck tessellation ear generated25zero-area children and13 authored nonmanifold edges. Independent float32 parent-edge interpolation split intended nodes119nm apart, making12 seam crossing slivers.",
+    "179": "Continuous remeshed surface avoids that panel registry mechanism. Its four pairs are exact coordinate collapses caused by incorrectly remapping interior vertices alongside true cuff-boundary vertices. The fix is correct boundary semantics and final float32 topology, not the178 coordinate split repair."
+  },
+  "scope": "Owned frozen copies and JSON diagnosis only. No original builder/source edits, build execution, rigging, renders, new weights or broad motion tests. Independent QA owns actual export and virtual verification. Neutral topology and joins remain unqualified."
+}

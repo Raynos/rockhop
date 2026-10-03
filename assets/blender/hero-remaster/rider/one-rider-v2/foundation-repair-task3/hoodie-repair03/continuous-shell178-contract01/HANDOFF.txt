@@ -1,0 +1,15 @@
+Frozen draft178 static QA — REJECTED, no rigging or motion qualification.
+
+Actual shell01 GLB SHA7dd903e0280bc5cb536c061f600ce25798e3be8352902dc3803f73d3ad1a8f2a.
+Assembly SHA629930598ae5e8299ad4207c6a292f6fb35f04b0d5840a6289ef4dc94bed532f.
+Original assets unchanged; all checks used owned copies.
+
+Actual export: 1634 triangles vs1650 authored. Export omits16 duplicated collinear-ear children, retains9 zero-area faces. Unlike authored13 nonmanifold edges, actual GLB has0 >2-incidence edges but9 winding conflicts, each touching a surviving zero-area face.
+Exact POSITION seams:252 boundary edges in26 components. Forty-five near-distinct vertex pairs differ59.6–119.2nm. Twelve strict stored crossings (8 no-shared,4 one-corner) are precision slivers; each extra one-corner pair has a second near-identical endpoint. The49.7mm intersection span is NOT penetration. Largest projected overlap area1.4901e-9m² (~30nm area/span). All12 disappear only in a read-only virtual coordinate-coalescing diagnostic, max119.2nm move. Removing9 zero-area exported faces virtually then gives85 edges/four degree2 openings and0 winding/nonmanifold. No repaired asset is produced or accepted.
+
+Protected assembly: source BIN prefix, material/image/texture/sampler prefixes, source head/glove/hood descriptors and world attributes, source primitive0 attributes pass exact checks. Retained19553 primitive0 triangles match declared source IDs. The purported cuff mask clause adds0 beyond y<=.965; it is no independent anatomical cuff proof. Shell copy matches standalone geometry/normals exactly. Unskinned/no animations; shell has POSITION/NORMAL only and plain unbaked warm material.
+
+Original construction owner repair targets: reject collinear center-back ear; canonical parent-edge/integerk/n split registry BEFORE quantization; regenerate normals and explicit loop/panel ancestry; verify actual donor hood/cuff/hem attachment and standing identity before rigging. No competing shell was built. Coplanar contact, thickness, standing images, poses/support and runtime acceptance remain unqualified.
+
+Evidence: independent-export-rest.json, freeze-manifest.json, future-shell-qa-contract.json.
+Reproduction scripts run only owned files with installed numerical Python; no original build/render recipe executed.

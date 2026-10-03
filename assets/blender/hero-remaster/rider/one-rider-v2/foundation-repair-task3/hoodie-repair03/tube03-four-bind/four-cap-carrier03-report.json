@@ -1,0 +1,87 @@
+{
+  "status": "UNACCEPTED explicit anatomical cap bind; position/normal/triangle/visual/runtime gates pending",
+  "sourceSHA256": "b5045bcc8e4b9469fda5302857e3c8ef90aa5f2a220e97823e53ec79ac410fd4",
+  "candidateSHA256": "cda75f404d54daf43234d2e6ee107cb52ff5d3bf14e42cd8bb46f9317e430f15",
+  "controlSHA256": "743d6fde07c5865db412b5a6a221dc1d1bdf70dcb3de2fb95a96cbdb478449a0",
+  "method": "Only free newly constructed torso caps exclude distal elbow deformation; forearm influence transfers to its upperArm parent. No source/old/sewn boundary row touched, no ranking/top4 truncation, no bone/helper changes. Anatomical carrier choice is an ablation, not measured truth.",
+  "rows": [
+    {
+      "side": "L",
+      "freeCapNodes": 632,
+      "changedRows": 532,
+      "distalForearmMassMax": 0.012718717764716819,
+      "fixedSourceBoundaryRows": 77
+    },
+    {
+      "side": "R",
+      "freeCapNodes": 702,
+      "changedRows": 596,
+      "distalForearmMassMax": 0.01911435159283937,
+      "fixedSourceBoundaryRows": 79
+    }
+  ],
+  "changedVertexRows": 1128,
+  "maxInfluences": 4,
+  "samePositionTopologyUVNormalsExact": true,
+  "sourceBoundaryWeightsExact": true,
+  "neutralPositionDeltaM": 0,
+  "archived480MaxPointDeltaM": 0.0032546419413628878,
+  "archived480P99PointDeltaM": 0.0010736140072590895,
+  "maxWitness": {
+    "frame": 286,
+    "vertex": 25050,
+    "deltaM": [
+      -0.00019002507533256267,
+      0.0032486246463589944,
+      5.4977670850438025e-05
+    ]
+  },
+  "recordedFrames": {
+    "35": {
+      "maxPointDeltaM": 0.0013213295136971948,
+      "p99PointDeltaM": 0.0007901776631919362
+    },
+    "114": {
+      "maxPointDeltaM": 0.0024387977049982195,
+      "p99PointDeltaM": 0.0014041771128907293
+    },
+    "186": {
+      "maxPointDeltaM": 0.0017281347644294129,
+      "p99PointDeltaM": 0.0010358248524872217
+    },
+    "250": {
+      "maxPointDeltaM": 0.0013579149159674696,
+      "p99PointDeltaM": 0.0008378291159505153
+    },
+    "304": {
+      "maxPointDeltaM": 0.001787667882259149,
+      "p99PointDeltaM": 0.0010844673781862074
+    },
+    "350": {
+      "maxPointDeltaM": 0.0018442303363465165,
+      "p99PointDeltaM": 0.0011167141030162056
+    },
+    "426": {
+      "maxPointDeltaM": 0.0014443711136190936,
+      "p99PointDeltaM": 0.0008886411307568018
+    },
+    "445": {
+      "maxPointDeltaM": 0.0018685936494852882,
+      "p99PointDeltaM": 0.0010931481657545877
+    },
+    "446": {
+      "maxPointDeltaM": 0.000850412349761199,
+      "p99PointDeltaM": 0.0005556110892390272
+    },
+    "447": {
+      "maxPointDeltaM": 0.0006896722515544373,
+      "p99PointDeltaM": 0.0004760545725701454
+    }
+  },
+  "limits": [
+    "Actual normals and literal triangle/collapse/seam gates remain needed; small point differences do not prove clean cloth",
+    "Geometry/weld/UV rest gate unchanged; no repeated expensive rest audit needed",
+    "If seam shading/standing shape still regresses, this bind is not promoted",
+    "No stockThree/mapper/Garage/mobile performance certificate yet"
+  ]
+}

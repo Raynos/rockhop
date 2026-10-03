@@ -1,0 +1,323 @@
+{
+  "sourceManifestSHA256": "6ea48d1dffc91517503dbc46d3c92c5dce518ebcc93aa37a75037ea591839775",
+  "sourceGLBSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "sample": 304,
+  "tick": 3050,
+  "primitive": 0,
+  "jointOrder": [
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "shoulder.L",
+    "upperArm.L",
+    "forearm.L",
+    "hand.L",
+    "shoulder.R",
+    "upperArm.R",
+    "forearm.R",
+    "hand.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ],
+  "space": "source34 bike-frame world deformation",
+  "sourceDebug": {
+    "armStretch": [
+      0.778,
+      0.779
+    ],
+    "legStretch": [
+      0.914,
+      0.904
+    ],
+    "handOnGrip": [
+      true,
+      true
+    ],
+    "footOnPeg": [
+      true,
+      true
+    ],
+    "wristErr": [
+      0,
+      0
+    ],
+    "gripErr": [
+      3.9499763101303233e-14,
+      2.888719452961835e-14
+    ],
+    "gripAngleErr": [
+      0,
+      0
+    ],
+    "ankleErr": [
+      0,
+      0
+    ],
+    "armLen": [
+      0.604,
+      0.604
+    ],
+    "additiveWeight": 0,
+    "physicalPose": true,
+    "comResidual": 4.2016209568115595e-09,
+    "ragdollResidual": -1,
+    "ragdollBlend": 0,
+    "ragdollDetail": [],
+    "bones": 19,
+    "clips": [
+      "rigid_length_stand_to_sit",
+      "bind_restore",
+      "hip_flexion_sweep",
+      "hip_abduction_sweep",
+      "knee_bend_sweep"
+    ],
+    "stageClip": null,
+    "stageBlend": 0,
+    "soleErr": [
+      1.488056111354677e-14,
+      1.488056111354677e-14
+    ],
+    "stance": {
+      "on": true,
+      "pose": "back",
+      "blend": 0.5986156848571763,
+      "lean": 0.5986156848571763,
+      "land": 0,
+      "extend": 0,
+      "dy": 0,
+      "lag": 0,
+      "limit": 1
+    }
+  },
+  "sourceContacts": [
+    {
+      "kind": "hand",
+      "side": "R",
+      "maximumCPUvsActualPlayedSurfaceM": 1.2786205199558125e-07
+    },
+    {
+      "kind": "hand",
+      "side": "L",
+      "maximumCPUvsActualPlayedSurfaceM": 2.4051389014239974e-07
+    },
+    {
+      "kind": "sole",
+      "side": "L",
+      "maximumCPUvsActualPlayedSurfaceM": 2.080288838983641e-06
+    },
+    {
+      "kind": "sole",
+      "side": "R",
+      "maximumCPUvsActualPlayedSurfaceM": 2.0910164529039886e-06
+    }
+  ],
+  "screenshotExactMeshIdentity": "unconfirmed; source34side304 is closest camera/time reference",
+  "sameGameWorldMatrices": true,
+  "primitiveMatricesDelta": 0.0,
+  "compression": {
+    "cage": {
+      "identityRestExact": false,
+      "maxCorrectionM": 0.05302462521972253,
+      "changedUniqueVertices": 3921,
+      "armTargetActivation": [
+        0.9961356354418135,
+        0.9964672636339802
+      ],
+      "method": "Rest-metric localrotation-preserving differential edit, exact LBS softattachment andfixed torso/sleeve outer/cuff boundaries,35mmanatomicalnormal target with60mm totalcap. Candidate only. No runtimephysics."
+    },
+    "localTriangleCorrective": {
+      "initialPairs": 168,
+      "finalPairs": 140,
+      "iterations": 12,
+      "pairHistory": [
+        168,
+        193,
+        133,
+        168,
+        128,
+        163,
+        136,
+        140,
+        130,
+        153,
+        130,
+        154
+      ],
+      "maxAdditionalCorrectionM": 0.004976697670141494,
+      "finalWitnesses": [
+        [
+          7795,
+          8273
+        ],
+        [
+          7795,
+          8274
+        ],
+        [
+          7796,
+          8274
+        ],
+        [
+          7797,
+          8274
+        ],
+        [
+          7798,
+          8274
+        ],
+        [
+          7799,
+          8274
+        ],
+        [
+          7803,
+          8273
+        ],
+        [
+          7803,
+          8275
+        ],
+        [
+          7803,
+          8276
+        ],
+        [
+          7803,
+          8287
+        ],
+        [
+          7804,
+          8273
+        ],
+        [
+          7804,
+          8287
+        ],
+        [
+          7805,
+          8274
+        ],
+        [
+          8263,
+          8287
+        ],
+        [
+          8264,
+          8287
+        ],
+        [
+          8264,
+          8291
+        ],
+        [
+          8288,
+          8735
+        ],
+        [
+          8291,
+          8735
+        ],
+        [
+          8294,
+          9095
+        ],
+        [
+          8294,
+          9096
+        ]
+      ],
+      "headExact": true,
+      "handsExact": true,
+      "limits": "Finite strictcrossingtargets only. Not CCD, thicknesscertificate or clothforce. Newcrosses/trianglequality require independentgate."
+    },
+    "qualifiedScope": "Eight initial upperclothprobes + six independent angles, all finite0cross. Tstilllargeedge strain. Fullcanonical/wholebody/continuousstockruntimepending.",
+    "clothingTopology": "shape-retop-uvsafe",
+    "headHandsHeldExactAgainstInput": true
+  },
+  "slide": {
+    "neutralIdentityExact": false,
+    "maxCorrectionM": 0.07302015752500167,
+    "freeVertices": 6739,
+    "changedVertices": 7318,
+    "maxTorsoAxialSlideM": 0.04573269013750636,
+    "headHandsExact": true,
+    "volumeMeta": {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.04185112244074,
+      "headExact": true,
+      "handsExact": true,
+      "sides": [
+        {
+          "side": 1,
+          "referenceCurveLengthM": 0.6041126690555668,
+          "posedCurveLengthM": 0.5754263961637547,
+          "curveArcRatio": 0.952515028468682,
+          "boneLengthRatios": [
+            0.9999998643947497,
+            1.0000000172242398
+          ],
+          "minTubeJacBeforeLimit": 0.14133185815166094,
+          "minTubeJacAfterLimit": 0.14133185815166094,
+          "jacLimitedPoints": 0,
+          "maxCorrectionM": 0.04185112244074,
+          "forearmRollDegrees": -7.807695266672846,
+          "handRollDegrees": 15.814415591308467
+        },
+        {
+          "side": -1,
+          "referenceCurveLengthM": 0.6035063572110052,
+          "posedCurveLengthM": 0.5750731642832463,
+          "curveArcRatio": 0.9528866720490605,
+          "boneLengthRatios": [
+            1.0000000492613978,
+            0.9999997211897012
+          ],
+          "minTubeJacBeforeLimit": 0.10663722063165304,
+          "minTubeJacAfterLimit": 0.10663722063165304,
+          "jacLimitedPoints": 0,
+          "maxCorrectionM": 0.04018869052269632,
+          "forearmRollDegrees": 6.981081267343919,
+          "handRollDegrees": -16.355449051607614
+        }
+      ],
+      "method": "Roundedbonefilletgarmentcentreline withrotation-minimizingradial frame +ONLYreplacementofarmnormalizedskincontribution; originaltorsoownershipunchanged. OptionalpositiveJacobianradiallimiter.",
+      "limits": "Analytic tubeJacobiansareNOT triangleselfcollision certificate. Arc ratio measuredratherthanexactisometryclaim. No actualbody/timing/GPU/CCD guarantees."
+    },
+    "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+    "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive."
+  },
+  "originalGripMorphsApplied": true,
+  "rows": [
+    {
+      "variant": "source",
+      "probe": "actualbody34frame304-reference",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/poses/game304-source.npz"
+    },
+    {
+      "variant": "v7-plain",
+      "probe": "actualbody34frame304-reference",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/poses/game304-v7-plain.npz"
+    },
+    {
+      "variant": "v7-cage",
+      "probe": "actualbody34frame304-reference",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/poses/game304-v7-cage.npz"
+    },
+    {
+      "variant": "volume-slide",
+      "probe": "actualbody34frame304-reference",
+      "fraction": 1,
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/poses/game304-volume-slide.npz"
+    }
+  ],
+  "productionApproved": false
+}

@@ -1,0 +1,20 @@
+{
+  "status": "Measured LBS averaged-P/W source-edge versus actual posed-edge interpolation; not motion acceptance",
+  "candidateSHA256": "23b36939d1f2de197638f0df6e546e35e5c900341609ee5a96e882a14a1a5f0e",
+  "controlSHA256": "743d6fde07c5865db412b5a6a221dc1d1bdf70dcb3de2fb95a96cbdb478449a0",
+  "results": [
+    {
+      "primitive": 0,
+      "sourceEdgeRows": 430,
+      "all480MaxPointDifferenceM": 0.002312834089562717,
+      "witnessFrame": 286,
+      "witnessVertex": 22459,
+      "frame304MaxM": 0.0016906143412299967
+    },
+    {
+      "primitive": 2,
+      "sourceEdgeRows": 0
+    }
+  ],
+  "method": "Same nineteen controls, exact explicit edge-parent/barycentric lineage. LBS of averaged position and weights is compared to barycentric interpolation of independently skinned original parents. No driver/free surface solve or posed triangle/render runs."
+}

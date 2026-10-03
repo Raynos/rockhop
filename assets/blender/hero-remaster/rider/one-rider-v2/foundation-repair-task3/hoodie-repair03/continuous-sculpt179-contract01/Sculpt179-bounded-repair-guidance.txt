@@ -1,0 +1,71 @@
+Sculpt179 independent bounded diagnosis — REJECTED BEFORE RIGGING
+Original remains sole builder. Own copies only; no original asset changes,
+builds, rendering, rigging or repeated broad self-collision audit.
+Exact requested shell SHA256:
+92cafa51ec1d4127741c173958e1eb7136f341db9fa1e7d147fc76ec02f859c3
+
+1. Causal cuff-selection bug: build.py selects every vertex within1e-6m
+of the cuff cut height, whereas the knife tolerance is1e-7m. It does not test
+whether a selected vertex belongs to the actual boundary. The130 selected
+vertices comprise126 rim vertices and FOUR interior vertices119-417nm above
+the cut plane. Each interior vertex and its adjacent real knife vertex map
+onto the same donor edge and targets0-4.113nm apart; float32 makes them exact
+duplicates. Raw topology proves each old interior vertex has boundary degree0,
+and each knife partner boundary degree2.
+
+Minimal authored witnesses (indices also map exactly to the GLB raw vertices):
+interior963 / rim18771; interior10588 / rim18804;
+interior1852 / rim18721; interior12217 / rim18827.
+All eight zero-area faces:
+1696,21494,37393,37394,37427,37560,37565,37582.
+They belong to authored polygons853,10749,18652,18653,18667,18725,18727,18737.
+The exact-position-welded export has8 nonmanifold edges,4 winding flags and
+6 boundary components. The four winding flags are zero-length selfedges,
+not nonzero-edge orientation reversals. Read-only virtual removal of the8
+degenerate faces gives0nonmanifold/0winding/0degenerate and4boundary components,
+with400boundary edges. This is causal evidence, NOT an asset repair.
+
+Repair: obtain cuff vertices from the real ordered cut-boundary edges and
+their connected cycles; preserve the four interior vertices. Resolve knife
+slivers explicitly before mapping, and verify injective ordered rim mapping
+after float32 conversion. Validate area, winding and boundary loops on the
+actual exported GLB. Do not use a larger coordinate-weld epsilon to conceal
+the collapsed cells. Record stable final vertex/edge IDs after cleanup.
+
+Comparison with178: its separately subdivided shared seams differed by119nm,
+and its collinear back-neck ear generated25zero-area children.179 has no
+near-distinct exported point pairs within2e-7m: these are exact collapses
+created by mapping INTERIOR points onto a boundary. No back-neck ear repeats.
+Authored and exported37,604 triangles match exactly; export did not introduce
+or omit these failures. The shared lesson is explicit topological boundary
+ownership and a post-mapping area gate; the immediate mechanism is different.
+
+2. Hem is a separate construction/fit issue. Existing front-gray evidence was
+inspected. The torso ellipsoid is centered at1.215m with vertical radius.315m;
+the.95m hem cut is near its lower tip. Its theoretical lateral half-width there
+is~.099m. Actual104-vertex hem extrema are X.547247-.722758m, lateral +/- .097259m
+at height.949999988m: about195mm wide. Retained donor waist boundary has70edges
+near the waist, height.925767-.949613m and lateral extrema about+/- .19685m.
+The assembly discards whole donor triangles crossingY=.95, then appends the
+shell independently. It creates neither a matched cut nor hem correspondence
+or connecting faces. The cut-height match alone cannot provide visual coverage.
+
+Repair: choose the intended waist silhouette/ease before clipping; define the
+new hem and retained lower donor boundaries explicitly. If the hoodie hem is
+free, establish deliberate overlap/coverage over the waist while retaining
+separate garment identities. If a physical join is intended, author real paired
+boundary splits and sewing. Do not assume shirt and pants should be fused.
+
+3. Donor sewing remains open. Cuff interpolation onto donor polylines is
+geometric correspondence, not shared topology. Hood and shell are still
+separate. Qualify actual neck/cuff joins and normals/material boundaries after
+topology repair; no rigging or moving/appearance pass follows from the virtual
+zero counts. Existing parent self-crossing0 result is not a donor-sewing test.
+
+Independent exact export report:
+foundation-repair-task3/hoodie-repair02/qa-lane/continuous-sculpt179/
+independent-export-topology.json
+SHA256fc34dda0658a4433d04820db58fe5069568f8a76bdf7fd61944e8d341c525e39
+Root minimal cuff before/target and boundary-membership witnesses:
+task-3/deliverables/continuous-sculpt179/root-cuff-collapse-attribution.json
+No competing garment, GPU work, software installation or production promotion.

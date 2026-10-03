@@ -1,0 +1,11 @@
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFont
+import json,hashlib
+R=Path('/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3');P=R/'hoodie-repair03/renders/game304';O=Path('/Users/raynos/Documents/Codex/2026-10-01/task-3/screenshot-defects01');O.mkdir(exist_ok=True)
+font='/System/Library/Fonts/Supplemental/Arial.ttf';f=ImageFont.truetype(font,22);small=ImageFont.truetype(font,18);big=ImageFont.truetype(font,28)
+board=Image.new('RGB',(1440,1060),(22,27,34));d=ImageDraw.Draw(board);d.text((24,18),'Screenshot defects | Exact recorded pose and camera',(235,241,245),font=big);d.text((24,54),'Partial appearance correction; garment construction still FAILS',(255,194,99),font=f)
+rows=[('v7-plain-pbr.png','BEFORE · ordinary skinning / original UVs'),('v7-plain-gray.png','SAME GEOMETRY · gray reveals folded surface'),('uv-only-pbr.png','UV-ONLY · 23 shirt faces / source images unchanged'),('uv-geometric-normal-pbr.png','UV + GEOMETRIC NORMAL diagnostic · folds remain')]
+for i,(name,title)in enumerate(rows):
+ x=16+(i%2)*712;y=96+(i//2)*456;im=Image.open(P/name).convert('RGB');im=im.crop((280,210,1160,680)).resize((696,372),Image.Resampling.LANCZOS);board.paste(im,(x,y+38));d.text((x+4,y+4),title,(231,238,244),font=small)
+d.text((24,1020),'Geometry held: 169 + 11 crossings remain. Source color normalization preserved. No acceptance claim.',(255,194,99),font=small)
+file=O/'screenshot-304-partial-fix-and-limit.png';board.save(file);(O/'screenshot-progress-board-provenance.json').write_text(json.dumps({'files':[{'path':str(P/n),'sha256':hashlib.sha256((P/n).read_bytes()).hexdigest()}for n,_ in rows],'meaning':'Controlled UV/normal appearance ablation with source vertex-color normalization preserved. Actual construction/strain/crossings remain unaccepted.','sourceImageBytesChanged':False,'sourceStateSample':304,'camera':'same exact body34 reference304, physicalV5 same camera+all19matrices','renderer':'CPU Cycles original material textures; separate from actual WebGL photometry','UVcandidateSHA256':hashlib.sha256((R/'hoodie-repair03/uv-normal-foundation01/rider-uv-ablation.glb').read_bytes()).hexdigest(),'supersedes':'Prior board version used an exporter that omitted normalized vertex-color flags; that appearance comparison was confounded.'},indent=2)+'\n');print(file)

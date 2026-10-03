@@ -3124,3 +3124,16 @@ Python/JSON syntax and NPZ CRC reviewed; no file over100MB. Ordinary player sour
 Limits: Historical invalid/rejected diagnostics and known script lint remain
 labeled; ignored pinned GLBs/poses are local prerequisites. No fresh-checkout
 self-contained bundle, new model generation or visual/rig/game-ready pass.
+
+## Round242 — preserve 15-third-construction-recipes
+
+Finding: User explicitly takes over all remaining paths for session exit.
+Preserve this coherent historical evidence/source family and byte-exact pins,
+not a new art experiment, accepted deformation or player runtime integration.
+
+Validation: Parent inventory and integrity audit; 69 explicit source pins.
+Python/JSON syntax and NPZ CRC reviewed; no file over100MB. Ordinary player source unchanged; next required third-round replay stays queued.
+
+Limits: Historical invalid/rejected diagnostics and known script lint remain
+labeled; ignored pinned GLBs/poses are local prerequisites. No fresh-checkout
+self-contained bundle, new model generation or visual/rig/game-ready pass.

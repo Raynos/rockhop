@@ -1,0 +1,42 @@
+Practical construction notes — primary sources and measured limits
+
+A bone rotates a weighted group of points. It does not tell a hoodie where its
+cloth surface ends, how two sewn edges stay together, or where the saddle must
+support it. Our completed rig ablation improved stretch but left crossings and
+support failures; the actual triangle evidence motivates the separate garment
+construction now underway.
+
+The sleeve driver transports a material cross-section along a responding curved
+centreline with only the rotation needed between successive tangents. Hanson and
+Ma describe parallel transport for stable tube/ribbon frames, including straight
+and inflected curves where Frenet frames can change direction abruptly. This
+supports our frame construction; it is NOT a collision, anatomical or garment
+volume theorem. A tube can still fold when the inside bend is too tight, as our
+literal rest failures demonstrated.
+Primary paper: Hanson & Ma, Parallel Transport Approach to Curve Framing,
+Indiana University Technical Report425,1995, sections2.2–3.
+https://scholarworks.iu.edu/dspace/bitstreams/23d6fd59-b151-4064-88a7-f7e058b2cc69/download
+
+Blender Surface Deform binds one mesh to a target surface; Blender Mesh Deform
+uses a closed mesh cage. These are examples of deformation driven by a surface
+or surrounding volume rather than only bone weights. They guide possible next
+techniques; neither modifier has been qualified/exported as our runtime fix.
+https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/surface_deform.html
+https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/mesh_deform.html
+Manual search excerpts retrieved2026-10-02; full fetch unavailable from browser
+service. No claims about unobserved modifier constraints or export behavior.
+
+The measured clipped-edge distinction is concrete: a new point halfway along an
+old mesh edge must remain halfway between its moving endpoints. Averaging both
+its rest position and weights does not guarantee that. On our430 new source-edge
+rows, stock LBS differs from the actual posed-parent interpolation by at most
+2.313mm across480 literal controls,1.691mm at304. The material driver explicitly
+uses the posed parents. Its freely responding cloth is therefore separate from
+the standard-four GLB. Actual stockFour export parity (77.63nm) verifies its own
+LBS wiring; it does not establish equivalence to the nonlinear material driver.
+Local measurement: clipped-edge-lbs-contract.json.
+
+A small skeletal change, four weights, an RMF tube, a smooth cap or preserved
+normal can each pass an isolated test while the whole rider still looks worse.
+Current standing remains rejected. Gates retain actual triangles, shaded/gray
+played-control views, source identity, seams, continuous motion and support.

@@ -1,0 +1,26 @@
+{
+  "scope": "Reusable bounded static shell QA handoff, not an alternate fixture or shell builder",
+  "frozen_source_sha256": "186d0f86ae62722689be3c194f7437f623799c837e7ba515358680db12a1382e",
+  "protected_source_flat_primitives": [
+    1,
+    3,
+    4
+  ],
+  "retained_source_hood_flat_primitive": 2,
+  "coordinate_convention": "glTF Y-up; source mesh-node world matrices exact; authored Blender XYZ mapped X,Z,-Y",
+  "rest_required": [
+    "Explicit physical garment/weld IDs and source/new panel/face ancestry. Raw index seam splits separate from physical seams.",
+    "No zero-area, nonmanifold or incoherent winding edges on actual exported surface. Intentional boundaries named and ordered; neck/hem/cuffs physically explained.",
+    "Strict nonadjacent and one-shared-corner transverse triangle gates on actual float32 POSITION; coplanar/tangent/thickness limits explicit.",
+    "Normals finite/unit and seam shading separate from positional closure. New UV/material identity and retained donor panel references explicit.",
+    "Head/glove geometry, all attrs including normalized color flags, original image bytes and original two grip morphs preserved."
+  ],
+  "after_rest_and_images": [
+    "Exactly <=4 nonzero joint influences with no unreported truncation, normalized weights and authoritative 19-joint mapping/rest inverse binds.",
+    "Owning-container runtime conditioner bypass metadata must be checked in actual stock runtime; parent-verified conditioner174 fix is current, old damage historical.",
+    "Independent stock loader rest and world end-effector matched pose parity, referenced-weld position/weight gaps, original grip closure.",
+    "Original owner continuous fixture: literal cloth triangles, strain/collapse, head/collar and cuff/glove actual face contacts, hips/saddle/sole/grip support. Finite pose coverage explicitly bounded."
+  ],
+  "current_export_qualified_for_rigging": false,
+  "current_static_failure_report": "independent-export-rest.json"
+}
