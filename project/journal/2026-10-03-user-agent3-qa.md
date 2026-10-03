@@ -185,3 +185,22 @@ Limits: 161 head rows ambiguous under our different matcher; five head split
 rows/reindexing explicit. Native normal residual is builder evidence; no new
 capture, moving parity, whole-rider/skin/hood/contact/device acceptance.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/appearance03-fidelity-README.md
+
+### Round 17 — construction04 default controller defect
+
+Finding: Frozen04 exports hoodie weights [1, 1, 1] on both retained runtime
+primitives. Actual GLTFLoader default rest deformation reaches 50.690770 mm.
+The six retained03 meshes/materials and complete51 hierarchy/rest/binds are
+exact. Original shirt primitive position/UV/skin/position morphs and
+source-ID triangle multiset remain exact; added seam has27 new UV rows.
+
+Validation: Independent sparse-accessor verifier plus actual GLTFLoader,
+prepareHero and GltfRider clone pass after explicit zeroing for bind closure:
+maximum residual0.000854 mm. Both cloth primitives remain separate, scoped
+conditioning skips runtime changes, and normal-only derivative changes only
+143086 protected-normal bytes. Scoped lint passes.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/construction04-admission.json
+
+Limits: UNACCEPTED. Agent1/root notified of frozen default-weight defect.
+This zeroed bind check does not repair04, certify moving appearance/contact
+or admit production assets. No candidate LOD provided.

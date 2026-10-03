@@ -1,0 +1,731 @@
+{
+  "status": "UNACCEPTED_CONSTRUCTION04_DEFAULT_HOODIE_MORPHS_NONZERO",
+  "pins": {
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance03/rider-source-normals.glb": {
+      "sha256": "010501c350e43967f98d90b9a4f2562f1171f177a30d520292c404bfb1e19efe",
+      "bytes": 7410004
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance04/rider-source-normals.glb": {
+      "sha256": "ac64e79a6a2e7595a01a2da9d714df78ee7058d9a22dcc5ecf24915f8085dfdd",
+      "bytes": 6738680
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance04/rider.blend": {
+      "sha256": "82a61f3a4f66ffcda399c4889e420acbee59a21f369b4e1c0cd2ca0f86a4934c",
+      "bytes": 8876317
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance04/source-normals-controller.json": {
+      "sha256": "27f4e3ff5c8760a036052edddba44509ae650e3890a18ea8ef502e771de75ec0",
+      "bytes": 6907
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance03/source-normals-controller.json": {
+      "sha256": "51f5f84afac0232953d1df3cee69c7bff5c09b8b0bffa26345bff0cb05825ff1",
+      "bytes": 6668
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance04/rider.glb": {
+      "sha256": "413428f04e93b0dd7523d6c9fb96c5e5b990c49c1d974f4cbbec0a12ed605e04",
+      "bytes": 6738680
+    }
+  },
+  "codePins": {
+    "construction04.mjs": "5704e7c4d2172e6404f808f722109de05f532512ed9f9d0e15487cdd1cc5c30f",
+    "fidelity-utils.mjs": "e0957f3201d9a804cca33807904c9a0c72a396c388bc2b2e7dfe4519bc691a0f",
+    "metadata.mjs": "d74cea968f26891a5f8d5f90237c6afc19e91c1f1c06a64020e1166693c63e83"
+  },
+  "engineCodePins": {
+    "src/render/hero/gltfTestUtils.ts": "f37c61cb88648f4a6fdb0b130e59b1abdbbd0213b38639c8af77f4dec25cf01a",
+    "src/render/hero/lod.ts": "cbe2c24627baa5c3af8e9d9f4b626641c1b9772627d23c54ad7113a3f1ee4a66",
+    "src/render/hero/GltfRider.ts": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+    "src/render/hero/sleeveSkin.ts": "35ee7f2165fae54a25fb5559c148738d016d73692515fc72513316389dc88916"
+  },
+  "complete51BindRestHierarchyExact": true,
+  "preserved": [
+    {
+      "mesh": "base.002",
+      "exactAttributesIndicesMorphsMaterials": true
+    },
+    {
+      "mesh": "male_casualsuit02.004",
+      "exactAttributesIndicesMorphsMaterials": true
+    },
+    {
+      "mesh": "Protected coherent cheek patch",
+      "exactAttributesIndicesMorphsMaterials": true
+    },
+    {
+      "mesh": "Protected textured head above hidden neck interface",
+      "exactAttributesIndicesMorphsMaterials": true
+    },
+    {
+      "mesh": "Registered black leather gloves on own finger bind",
+      "exactAttributesIndicesMorphsMaterials": true
+    },
+    {
+      "mesh": "Registered boots from bounded foot accessory regions",
+      "exactAttributesIndicesMorphsMaterials": true
+    }
+  ],
+  "cloth": {
+    "parts": [
+      {
+        "primitive": 0,
+        "vertices": 1364,
+        "originalRows": 1364,
+        "addedRows": 0,
+        "maxAddedDeltaM": 0,
+        "material": 5,
+        "exactOriginalPositionSkinAndPositionMorphs": true,
+        "exactOriginalUV": true,
+        "seamUVExceptions": []
+      },
+      {
+        "primitive": 1,
+        "vertices": 162,
+        "originalRows": 27,
+        "addedRows": 135,
+        "maxAddedDeltaM": 0,
+        "material": 5,
+        "exactOriginalPositionSkinAndPositionMorphs": true,
+        "exactOriginalUV": false,
+        "seamUVExceptions": [
+          {
+            "sourceID": 1191,
+            "row": 0,
+            "newUV": [
+              0.0625,
+              1
+            ]
+          },
+          {
+            "sourceID": 1192,
+            "row": 1,
+            "newUV": [
+              0.1875,
+              1
+            ]
+          },
+          {
+            "sourceID": 1193,
+            "row": 2,
+            "newUV": [
+              0.4375,
+              1
+            ]
+          },
+          {
+            "sourceID": 1194,
+            "row": 3,
+            "newUV": [
+              0.3125,
+              1
+            ]
+          },
+          {
+            "sourceID": 1195,
+            "row": 4,
+            "newUV": [
+              0,
+              0.1666666865348816
+            ]
+          },
+          {
+            "sourceID": 1195,
+            "row": 5,
+            "newUV": [
+              0,
+              0.3333333134651184
+            ]
+          },
+          {
+            "sourceID": 1195,
+            "row": 6,
+            "newUV": [
+              0,
+              0.5
+            ]
+          },
+          {
+            "sourceID": 1195,
+            "row": 7,
+            "newUV": [
+              0,
+              0.6666666269302368
+            ]
+          },
+          {
+            "sourceID": 1195,
+            "row": 8,
+            "newUV": [
+              0,
+              0.8333333134651184
+            ]
+          },
+          {
+            "sourceID": 1195,
+            "row": 9,
+            "newUV": [
+              0,
+              1
+            ]
+          },
+          {
+            "sourceID": 1196,
+            "row": 10,
+            "newUV": [
+              0.125,
+              1
+            ]
+          },
+          {
+            "sourceID": 1197,
+            "row": 11,
+            "newUV": [
+              0.25,
+              1
+            ]
+          },
+          {
+            "sourceID": 1198,
+            "row": 12,
+            "newUV": [
+              0.375,
+              1
+            ]
+          },
+          {
+            "sourceID": 1200,
+            "row": 13,
+            "newUV": [
+              0.9375,
+              1
+            ]
+          },
+          {
+            "sourceID": 1201,
+            "row": 14,
+            "newUV": [
+              0.8125,
+              1
+            ]
+          },
+          {
+            "sourceID": 1202,
+            "row": 15,
+            "newUV": [
+              0.5625,
+              1
+            ]
+          },
+          {
+            "sourceID": 1203,
+            "row": 16,
+            "newUV": [
+              0.6875,
+              1
+            ]
+          },
+          {
+            "sourceID": 1205,
+            "row": 17,
+            "newUV": [
+              1,
+              0
+            ]
+          },
+          {
+            "sourceID": 1205,
+            "row": 18,
+            "newUV": [
+              1,
+              0.1666666865348816
+            ]
+          },
+          {
+            "sourceID": 1205,
+            "row": 19,
+            "newUV": [
+              1,
+              0.3333333134651184
+            ]
+          },
+          {
+            "sourceID": 1205,
+            "row": 20,
+            "newUV": [
+              1,
+              0.5
+            ]
+          },
+          {
+            "sourceID": 1205,
+            "row": 21,
+            "newUV": [
+              1,
+              0.6666666269302368
+            ]
+          },
+          {
+            "sourceID": 1205,
+            "row": 22,
+            "newUV": [
+              1,
+              0.8333333134651184
+            ]
+          },
+          {
+            "sourceID": 1206,
+            "row": 23,
+            "newUV": [
+              0.875,
+              1
+            ]
+          },
+          {
+            "sourceID": 1207,
+            "row": 24,
+            "newUV": [
+              0.75,
+              1
+            ]
+          },
+          {
+            "sourceID": 1208,
+            "row": 25,
+            "newUV": [
+              0.5,
+              1
+            ]
+          },
+          {
+            "sourceID": 1209,
+            "row": 26,
+            "newUV": [
+              0.625,
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "cotton": {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.25
+        }
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": {
+            "mime": "image/png",
+            "bytes": 68538,
+            "sha256": "150340262f9eb74ee5e4f5e5a66405209b8238d2b3cd5c7086019b67e3ebb9ea"
+          },
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987
+          }
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8199999928474426
+      }
+    },
+    "originalSourceIDs": 1250,
+    "deliberateExceptions": [
+      "New sewn hood/pocket topology, neckline seam UVs and base normals; old hood/flap removed; new coherent mustard image.",
+      "Original shirt NORMAL deltas and topology ancestry are not certified by this attribute correspondence."
+    ]
+  },
+  "normalOnlyDerivative": {
+    "changedBytes": 143086,
+    "normalRanges": [
+      {
+        "mesh": "Protected coherent cheek patch",
+        "rows": 294
+      },
+      {
+        "mesh": "Protected textured head above hidden neck interface",
+        "rows": 43712
+      }
+    ],
+    "allOtherJSONAndBinaryExact": true
+  },
+  "defaultControllerDefect": {
+    "meshWeights": [
+      1,
+      1,
+      1
+    ],
+    "bothRuntimePartsDefaultWeights": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "maxDefaultRestResidualM": 0.05069076950140861,
+    "correctiveInfluencesExplicitlyZeroedForBindCheck": true
+  },
+  "controller": {
+    "sha256": "27f4e3ff5c8760a036052edddba44509ae650e3890a18ea8ef502e771de75ec0",
+    "originalConfigsExact": true,
+    "candidateMeshNames": {
+      "cloth": "Sewn clean hoodie with dropped hood",
+      "jeans": "Separate fitted native trousers control",
+      "body": "Canonical body with hidden head interface"
+    },
+    "requiredRuntimeClothParts": 2,
+    "automaticProductionCoupling": false
+  },
+  "embeddedImages": [
+    {
+      "mime": "image/png",
+      "bytes": 137664,
+      "sha256": "c6e81e3c24981a9ed04fc70b1a1020cad9271c22c2b71b1fbf24d390f9a4950d"
+    },
+    {
+      "mime": "image/png",
+      "bytes": 74376,
+      "sha256": "cf47650f3610fb50a6d486a14392031c5b88af5ee379779464e0777cabfec32a"
+    },
+    {
+      "mime": "image/png",
+      "bytes": 979892,
+      "sha256": "f8430cee239e977cdb939352dd10331689b4ef88ac78295e27a1fb00d87e8583"
+    },
+    {
+      "mime": "image/png",
+      "bytes": 432873,
+      "sha256": "5d9ceaa9e6687786f52f4b30a53043fe2310797e235975ba4d48e7b8034de632"
+    },
+    {
+      "mime": "image/png",
+      "bytes": 524967,
+      "sha256": "1076b8c8e48db7fa65ee3271a00c33bb409dcf3998fd9246b2dca184aa51b1d3"
+    },
+    {
+      "mime": "image/png",
+      "bytes": 445076,
+      "sha256": "668e116f5cf8318db018e1a66493b5cb85df5e2f248429f25aacc653e1baa5ee"
+    },
+    {
+      "mime": "image/png",
+      "bytes": 68538,
+      "sha256": "150340262f9eb74ee5e4f5e5a66405209b8238d2b3cd5c7086019b67e3ebb9ea"
+    }
+  ],
+  "closures": [
+    {
+      "mesh": "Canonical_body_with_hidden_head_interface",
+      "vertices": 9981,
+      "defaultWeights": [],
+      "defaultResidualM": 8.538186009195215e-7,
+      "zeroMorphResidualM": 8.538186009195215e-7
+    },
+    {
+      "mesh": "Separate_fitted_native_trousers_control",
+      "vertices": 950,
+      "defaultWeights": [
+        0
+      ],
+      "defaultResidualM": 7.350152558409714e-7,
+      "zeroMorphResidualM": 7.350152558409714e-7
+    },
+    {
+      "mesh": "Protected_coherent_cheek_patch",
+      "vertices": 294,
+      "defaultWeights": [],
+      "defaultResidualM": 3.084875092538255e-7,
+      "zeroMorphResidualM": 3.084875092538255e-7
+    },
+    {
+      "mesh": "Protected_textured_head_above_hidden_neck_interface",
+      "vertices": 43712,
+      "defaultWeights": [],
+      "defaultResidualM": 3.975224410720797e-7,
+      "zeroMorphResidualM": 3.975224410720797e-7
+    },
+    {
+      "mesh": "Registered_black_leather_gloves_on_own_finger_bind",
+      "vertices": 4021,
+      "defaultWeights": [],
+      "defaultResidualM": 8.376264687624367e-7,
+      "zeroMorphResidualM": 8.376264687624367e-7
+    },
+    {
+      "mesh": "Registered_boots_from_bounded_foot_accessory_regions",
+      "vertices": 2484,
+      "defaultWeights": [],
+      "defaultResidualM": 7.555348751672383e-7,
+      "zeroMorphResidualM": 7.555348751672383e-7
+    },
+    {
+      "mesh": "Clean_native_hoodie_sewn_neckline_and_fitted_pocket",
+      "vertices": 1364,
+      "defaultWeights": [
+        1,
+        1,
+        1
+      ],
+      "defaultResidualM": 0.05069076950140861,
+      "zeroMorphResidualM": 6.591046348551792e-7
+    },
+    {
+      "mesh": "Clean_native_hoodie_sewn_neckline_and_fitted_pocket_1",
+      "vertices": 162,
+      "defaultWeights": [
+        1,
+        1,
+        1
+      ],
+      "defaultResidualM": 3.7736795753424655e-7,
+      "zeroMorphResidualM": 3.7736795753424655e-7
+    }
+  ],
+  "runtime": [
+    {
+      "mesh": "Canonical_body_with_hidden_head_interface",
+      "vertices": 9981,
+      "bones": 51,
+      "targets": {},
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Canonical skin paired with protected head"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Separate_fitted_native_trousers_control",
+      "vertices": 950,
+      "bones": 51,
+      "targets": {
+        "Left knee authored volume f240": 0
+      },
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Transferred approved indigo-jeans PBR"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_coherent_cheek_patch",
+      "vertices": 294,
+      "bones": 51,
+      "targets": {},
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Appearance exact donor material 4"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Protected_textured_head_above_hidden_neck_interface",
+      "vertices": 43712,
+      "bones": 51,
+      "targets": {},
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Appearance exact donor material 3"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Clean_native_hoodie_sewn_neckline_and_fitted_pocket",
+      "vertices": 1364,
+      "bones": 51,
+      "targets": {
+        "Left underarm authored volume f112": 0,
+        "Left underarm authored volume f144": 1,
+        "Left underarm authored volume f240": 2
+      },
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Coherent approved mustard cotton PBR"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Clean_native_hoodie_sewn_neckline_and_fitted_pocket_1",
+      "vertices": 162,
+      "bones": 51,
+      "targets": {
+        "Left underarm authored volume f112": 0,
+        "Left underarm authored volume f144": 1,
+        "Left underarm authored volume f240": 2
+      },
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Coherent approved mustard cotton PBR"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "mesh": "Registered_black_leather_gloves_on_own_finger_bind",
+      "vertices": 6505,
+      "bones": 51,
+      "targets": {},
+      "conditionedOwner": "Foundation_file_frame,_game_x065",
+      "authoredEqualsRiding": true,
+      "materialNames": [
+        "Appearance exact donor material 1"
+      ],
+      "materialTypes": [
+        "MeshStandardMaterial"
+      ],
+      "matrixWorld": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.6499999761581421,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "limits": [
+    "Static source and actual decoder/prepareHero/clone admission only; no moving/native parity, appearance, support or device verdict.",
+    "Node loader omits texture references in memory; embedded image bytes and source descriptors checked independently.",
+    "Source physical specular factors flatten in normal prepareHero. Both separate hoodie primitives require explicit controller coefficients.",
+    "Only parent judges admission/played art; no normal player assets changed. No LOD candidate provided."
+  ]
+}
