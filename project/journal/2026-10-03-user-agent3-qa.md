@@ -478,3 +478,25 @@ original authorship. Cloth26 still thickness-dependent/costly,27/28failed.
 Footwear08fails added96ankle/toe samples despite original529pass. Body/head/
 51bind retained; fit, all-angle/held-out response, physical phone and exact
 checked deployment remain open. Convex proxy/primary correction is next.
+
+## Round30: source-enclosing convex arm qualification
+
+Finding: Fitted-skinning response needs valid solids; capped28selfcontacts
+fail. Two complete-face hulls enclose all1066actual arm faces at riding
+spawn. Opposite2edge topology/Euler2/positivevolume and0solidself/garment
+surface pairs qualify the mathematical volumes, min gap8.4625mm. Rapier
+0.21solid projectPoint still wrongly reports boundary source points
+outside by up to11.6194mm, so that query is not correction authority.
+
+Validation: Five analytic closed-volume/distance/bounded-response cases
+pass; source ancestor spawn is exact frozen26physicalPose/stance/tick0.
+Scoped lint passes. Fresh silent normal low/high gate clears4810ticks
+40.083333333333336s with identical abaaaaaaaa0a4440finishbytes; crash103,
+restarttick0 at22/4ms, zeroerrors.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/convex30/
+
+Limits: Unaccepted preflight checkpoint only. No rendered response in
+this unit; mathematical convexification may add concavity space. Parts
+overlap intentionally. Moving cost/strain/contacts, self/intergarment,
+all-angle art and physical phone/release remain open. Primary architecture
+from93fe8d0d unchanged; fullcloth controls preserved, no player promotion.

@@ -1,0 +1,9 @@
+import assert from 'node:assert/strict';import{test}from'node:test';import{Vector3}from'three';
+import{closedConvexVolume,convexPointDistance,projectOutsideVolume}from'./convex-arm-collider.mjs';
+const vertices=[];for(const x of[-1,1])for(const y of[-1,1])for(const z of[-1,1])vertices.push(new Vector3(x,y,z));
+const solid=closedConvexVolume(vertices,{name:'analyticCube',rows:vertices.map((_,i)=>i)});
+await test('closed solid encloses source and has opposite edges',()=>{assert.equal(solid.qualification.euler,2);assert.equal(solid.qualification.everyEdgeTwoOppositeFaces,true);assert(Math.abs(solid.qualification.positiveVolumeM3-8)<1e-12);for(const p of vertices)assert(convexPointDistance(p,solid).inside);});
+await test('inside and diagonal outside use signed surface distances',()=>{assert.equal(convexPointDistance(new Vector3(),solid).signedDistanceM,-1);const q=convexPointDistance(new Vector3(2,2,2),solid);assert(!q.inside);assert(Math.abs(q.signedDistanceM-Math.sqrt(3))<1e-12);});
+await test('near surface response changes position to requested clearance',()=>{const p=new Vector3(.99,.1,.2),q=projectOutsideVolume(p,solid,.002,.02);assert(Math.abs(q.deltaM-.012)<1e-12);assert(!q.capped);assert(Math.abs(convexPointDistance(q.point,solid).signedDistanceM-.002)<1e-12);assert.equal(p.x,.99);});
+await test('deep penetration reports bounded unresolved correction',()=>{const q=projectOutsideVolume(new Vector3(),solid,.002,.02);assert(q.capped);assert.equal(q.deltaM,.02);assert(convexPointDistance(q.point,solid).inside);});
+await test('well separated point remains byte-exact and invalid input stops',()=>{const p=new Vector3(1.1,.1,.2);assert.deepEqual(projectOutsideVolume(p,solid).point.toArray(),p.toArray());assert.throws(()=>closedConvexVolume([new Vector3(NaN,0,0)],{rows:[0]}),/Nonfinite/);});
