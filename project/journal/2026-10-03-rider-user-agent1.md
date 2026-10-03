@@ -347,3 +347,11 @@ Finding: One391vertex anatomicaldorsal-roof guide and toe/heel panel prototype f
 Validation: 769native samples with unchangedtests/measurement51.98s; solebody0 throughout. Native51bind/15nonbootfields exact09; actualloader7nonbootfields/51bindexact05/defaults0/rest0.000854mm/headrawnormalsPBRfixed. FinalJSONnumpyfloat32failure repaired by exactsavedmeshreconstruction and receipt-only recovery; no master/exportoverwrite. Ship39 cold2199ms/clear40.083333333s/4810identicalticks/crash103/restart1tick/frame3.19ms/errors0. Python syntax/diff pass.
 
 Limits: Resttrianglezero is notenclosure ormovingfit; thisfailedshapeisnotapprovedbootconstruction. Footwear09nativefitstillneeds actualgame/loadbearingsole/contact/mobile/artchecks. Afterthiscoherentunit, human/root directonebounded same-rest sleeveweight/attachment control, Agent3 independentlychecks actualwindow/selffolds; no widerprojection/fullclothrestart.
+
+### Round40 — reject direct nearest-body sleeve field, 2026-10-03
+
+Finding: Human/root boundedSAME-rest control tests frozen actualbodytri barycentricweights/attachmentancestry vswholelengthlinearband, no rest/gap/pin/projection/bodychange. Directfield fails:704actualpalette poses baseline52body/22self maxima(7/16contactframes), candidate86body/55self(6/583frames). At490body26→0 butself0→16;670body50→86/self22→47. Agent3 independentactualwindowcheck pending; no weighting/projection sweep.
+
+Validation: Baselineall703Float32playedOFFframes BYTEEXACT, fullaffineNativeREST→engineWORLD usedonce.252nativeweightschange/maxL1.909/recomputeddiagnosisfield1.11e−15; 17nativecontrolmeshes/51bind/restgeometryUVnormalsmaterialpins exact. Actualloader300rows/288native/528triangles allnonskinfields+indices byteexact/bindmaterialexact/weighterror0/rest.000600mm. Installedexport1e−4cutoff fixedinNEW8-byte skin-onlyderivative; rawsource/nativeleftintact. Failed01mutablegroup-removal bug caught, source02immutablegroupnames+field/sumchecks verified.
+
+Limits: BVHsamepredicate/relevant1066arm triangles are notsignedclearance/sweptcollision/fullgarment/arbitrarypose/mobileproof. Nearestattachments table isancestry, notactivecollision. Original fullcloth/primary31/body/head/bind/controls unchanged; rootjudgesmovinggamewindows/selffolds, Agent3 ownsindependentmotion. No assetpromotion or newLibrarydelivery.

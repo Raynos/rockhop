@@ -1,0 +1,233 @@
+{
+  "status": "REJECTED directnearest-body weighting as a garment-fit solution; independent actualgame/visible check pending",
+  "paletteComparisonSHA256": "0819258438dc6769587bc09ef2abaeb33e0406e90b72fee86c92ecbb87078f3c",
+  "authoritativeGLBSHA256": "a24745cf7f0f58833c9c8e7a4ac93b36f61cc299279b78794bd9279a2d1bfdd6",
+  "baselinePlayedAll703Float32FramesByteExact": true,
+  "summary": {
+    "baseline": {
+      "maxBody": 52,
+      "maxSelf": 22,
+      "bodyContactFrames": 7,
+      "selfContactFrames": 16
+    },
+    "bodyWeights": {
+      "maxBody": 86,
+      "maxSelf": 55,
+      "bodyContactFrames": 6,
+      "selfContactFrames": 583
+    }
+  },
+  "selectedTicks": [
+    {
+      "inputTick": 0,
+      "baseline": {
+        "bodyTrianglePairs": 0,
+        "selfTrianglePairs": 0,
+        "firstBodyPairs": [],
+        "firstSelfPairs": []
+      },
+      "bodyWeights": {
+        "bodyTrianglePairs": 0,
+        "selfTrianglePairs": 25,
+        "firstBodyPairs": [],
+        "firstSelfPairs": [
+          [
+            148,
+            294
+          ],
+          [
+            149,
+            343
+          ],
+          [
+            149,
+            342
+          ],
+          [
+            149,
+            340
+          ]
+        ]
+      }
+    },
+    {
+      "inputTick": 430,
+      "baseline": {
+        "bodyTrianglePairs": 0,
+        "selfTrianglePairs": 2,
+        "firstBodyPairs": [],
+        "firstSelfPairs": [
+          [
+            193,
+            291
+          ],
+          [
+            193,
+            288
+          ]
+        ]
+      },
+      "bodyWeights": {
+        "bodyTrianglePairs": 0,
+        "selfTrianglePairs": 35,
+        "firstBodyPairs": [],
+        "firstSelfPairs": [
+          [
+            148,
+            345
+          ],
+          [
+            148,
+            343
+          ],
+          [
+            148,
+            342
+          ],
+          [
+            149,
+            343
+          ]
+        ]
+      }
+    },
+    {
+      "inputTick": 490,
+      "baseline": {
+        "bodyTrianglePairs": 26,
+        "selfTrianglePairs": 0,
+        "firstBodyPairs": [
+          [
+            172,
+            943
+          ],
+          [
+            125,
+            943
+          ],
+          [
+            124,
+            943
+          ],
+          [
+            177,
+            366
+          ]
+        ],
+        "firstSelfPairs": []
+      },
+      "bodyWeights": {
+        "bodyTrianglePairs": 0,
+        "selfTrianglePairs": 16,
+        "firstBodyPairs": [],
+        "firstSelfPairs": [
+          [
+            280,
+            326
+          ],
+          [
+            233,
+            326
+          ],
+          [
+            233,
+            279
+          ],
+          [
+            229,
+            325
+          ]
+        ]
+      }
+    },
+    {
+      "inputTick": 670,
+      "baseline": {
+        "bodyTrianglePairs": 50,
+        "selfTrianglePairs": 22,
+        "firstBodyPairs": [
+          [
+            389,
+            615
+          ],
+          [
+            389,
+            621
+          ],
+          [
+            389,
+            616
+          ],
+          [
+            387,
+            622
+          ]
+        ],
+        "firstSelfPairs": [
+          [
+            149,
+            340
+          ],
+          [
+            149,
+            293
+          ],
+          [
+            146,
+            340
+          ],
+          [
+            147,
+            340
+          ]
+        ]
+      },
+      "bodyWeights": {
+        "bodyTrianglePairs": 86,
+        "selfTrianglePairs": 47,
+        "firstBodyPairs": [
+          [
+            341,
+            332
+          ],
+          [
+            341,
+            337
+          ],
+          [
+            343,
+            329
+          ],
+          [
+            343,
+            331
+          ]
+        ],
+        "firstSelfPairs": [
+          [
+            51,
+            389
+          ],
+          [
+            51,
+            391
+          ],
+          [
+            51,
+            388
+          ],
+          [
+            48,
+            389
+          ]
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "ExactnativeREST-to-engineWORLD affine palette applied directly, no axis/root shift added. Both controls share geometry/body/input; only skinweights differ.",
+    "Body check uses the same frozen1066 relevant native arm triangles, not every body or an accepted closed-volume collider.",
+    "BVH triangle-pair/adjacency-filtered self proxies are not signed penetration/clearance or swept physical response; predicate differs from Agent3 runtime checker.",
+    "No projection, body/bind replacement, physics/game mutation, cloth restart or moving-art acceptance. Agent3 independently checks actual consumed export and root judges visible windows/folds."
+  ]
+}

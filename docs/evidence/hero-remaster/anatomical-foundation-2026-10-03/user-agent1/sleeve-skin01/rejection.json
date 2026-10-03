@@ -1,0 +1,13 @@
+{
+  "status": "REJECTED stale Blender deform-group memberships; never use this source control",
+  "candidateGLBSHA256": "b0b6b25318c456580330cf31c419a995948edd82bb717e7cac9cd394f9d1481f",
+  "candidateMasterSHA256": "0437b03ecb36388eaf47840c3257df9e1197ad57d6a792e89898416c6804fb72",
+  "nativeRawWeightSumRange": [
+    0.9999999701976776,
+    1.2727272808551788
+  ],
+  "nonUnitWeightSums": 25,
+  "actualLoaderMaximumNormalizedVsUnnormalizedNativeError": 0.2142857313156128,
+  "cause": "Removal iterated mutable VertexGroupElement wrappers; membership deletion shifted their group identities. Source02 captures immutable group names first and verifies final names/weights/sum.",
+  "limits": "No original source overwrite or player promotion; failed01 retained as provenance, source02 authoritative export independently checked."
+}
