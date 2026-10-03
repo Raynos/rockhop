@@ -1610,3 +1610,17 @@ Ask:284–286.
 
 Limits: No texture/decode/mesh. RNGstate absent; continuation mustverify
 original3noiseprefixbytes. Free unneeded models only, no numeric shortcut.
+
+Finding: Actual saved Pixal1024 HRshape continuation recipe releases four
+unused CPU models and builds only texture conditioner.
+
+Validation: Source syntax/recursive names pass;42sourcepins/17canonical
+records frozen. Original7977×32float32 HRshape/coords restored exactly;
+originalMPS std/mean operation retained. Three actualCPU seed42 noises
+mustbyte-replay and textureconditioning mustnotconsume RNG. One12step
+texture sampler and originaldecoders required; previous36steps notrerun.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024_continue_contract.json
+Ask:284–286.
+
+Limits: Unaccepted continuation pending; no saved RNGstate originally,
+reconstruction scoped to verified noiseprefix, no fulltrajectoryCUDA proof.
