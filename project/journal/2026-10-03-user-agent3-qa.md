@@ -524,3 +524,27 @@ physicalphone pass. Timer is quantized desktop CPU, excludesrenderer/GPU/
 nativebrowser memory. Capture's unused-name lint repair is documented
 with exact executedsource SHA. No ordinary gameplay/51bind/playerassets
 changed. Primary93fe8d0d/openM0–M5 maintained; round30normalgate remains.
+
+## Round32: diagnose native skin fields before widening response
+
+Finding: Failed primary31 band skinning uses a wholelengthlinear upper/
+forearm ramp. At rest nearbybodyfield differs: ring3forearm0..230vs.273,
+ring7.867..1vs.636,ring9all1vs.818; maxL1difference.909. NativeIDs/closest
+triangles/barycentricweights freeze this lead withoutapplying atransfer.
+Actualbody regionalfinite selfcontacts reach47pairs in54of72samples;
+selectedspawn12,t43032,t4900,t67047. Selectedwitnesspairs do nottouch in
+nativerest; their posedminimumvertexgap≥3.529mm excludes duplicatepoints
+asthosewitnesses' immediateexplanation.
+
+Validation: Reproduced288nearestnativeweights and all72actualsamplebody
+selfchecks from pinned31receipt; counts independently match inlineaudit.
+Scopedlint passes. No runtime/sourcebody/garmentweights/posemutation, no
+newgameplaygate needed; exact2109tick31proof/normal30gate retained.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/diagnosis32/audit.json
+
+Limits: Diagnosticonly/UNACCEPTED. L1differences are not causalproof and
+nearestweighttransfer is not anacceptedfix. Finitebodycontact counts may
+include authoredinterfaces; no penetrationdepthorcontinuousvolumeclaim.
+Garmentfails at490whilebodyself0, so bodycounts cannot excusefit. Root/
+nativebuilder receiveactualfailureIDs; protectedbody/head/51bind retained,
+no broadcloth/gap sweep. AllM0–M5/phone/checkedrelease remainopen.
