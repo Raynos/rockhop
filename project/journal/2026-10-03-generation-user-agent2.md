@@ -1570,3 +1570,16 @@ Ask:284–286.
 
 Limits: Unaccepted repaired recipe; retry pending. No extra candidate,
 quality shortcut, new model winner, installed edit or player asset.
+
+Finding: Proper Pixal1536 route hits retained65GiB anonymous guard during
+96grid conditioning after two completed twelve-step samplers.
+
+Validation: Owned child stopped−15/110.292s; lastsample73.2anon/79.3
+combined GiB, combined96limit not reached.81finite captures/NPZhashes
+rechecked,24actual steps persisted. Four actual dense/sparse learned
+attention checks max4.77e-7;5projection/4bilinear/2NAF checks recorded.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal02/
+Ask:284–286.
+
+Limits: No1536 mesh or HRshape/texture sampling. Reactive guard overshoots.
+Documented1024lowerVRAM alternative authorized; resolution mustbeexplicit.

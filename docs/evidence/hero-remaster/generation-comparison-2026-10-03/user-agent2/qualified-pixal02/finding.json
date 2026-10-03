@@ -1,0 +1,64 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "c536fb9f5d81f985561ddccd265fc735b513ad0a",
+  "status": "1536 route stopped by retained anonymous memory cap during96grid conditioning",
+  "guardExitCode": -15,
+  "elapsedSeconds": 110.292,
+  "phase": "conditioning-shape_1024",
+  "anonymousGiBAtStop": 73.2,
+  "combinedGiBAtStop": 79.3,
+  "peakAnonymousGiB": 73.2,
+  "peakCombinedGiB": 81.4,
+  "stopLimitAnonymousGiB": 65,
+  "stopLimitCombinedGiB": 96,
+  "captures": 81,
+  "captureHashesAndFiniteFlagsRechecked": true,
+  "actualStepsPersisted": 24,
+  "completedStages": [
+    {
+      "label": "sampler01-sparse_structure_flow_model",
+      "steps": 12,
+      "params": {
+        "steps": 12,
+        "guidance_strength": 7.5,
+        "guidance_rescale": 0.7,
+        "guidance_interval": [
+          0.6,
+          1.0
+        ],
+        "rescale_t": 5.0,
+        "verbose": true,
+        "tqdm_desc": "Sampling sparse structure (proj)"
+      }
+    },
+    {
+      "label": "sampler02-shape_slat_flow_model_512",
+      "steps": 12,
+      "params": {
+        "steps": 12,
+        "guidance_strength": 7.5,
+        "guidance_rescale": 0.5,
+        "guidance_interval": [
+          0.6,
+          1.0
+        ],
+        "rescale_t": 3.0,
+        "verbose": true,
+        "tqdm_desc": "Sampling shape SLat (proj)"
+      }
+    }
+  ],
+  "learnedAttentionChecks": 4,
+  "maxAttentionError": 4.76837158203125e-07,
+  "projectionChecks": 5,
+  "bilinearChecks": 5,
+  "NAFChecks": 2,
+  "inputMatches": 7,
+  "nativeMeshProduced": false,
+  "next": "Authorized documented1024cascade alternative with same12each/42/originalguidance; explicitly lower resolution",
+  "limits": [
+    "1536 effective decode/HRshape/texture stages not reached.",
+    "Reactive1s guard can overshoot threshold; no hard allocation cap.",
+    "Selected learned checks do not prove fullmodel/CUDA/backward equivalence."
+  ]
+}
