@@ -151,3 +151,16 @@ Ask:276.
 
 Limits: Disjoint static hood/flat mustard and indigo guides, not joined garment
 or target PBR/fit/motion pass. Context/rear retained; first probe front only.
+
+Finding: First isolated mustard hoodie appearance probe completes on360fd660
+input/321c6b8a contract. Raw219372vertices/448972triangles are finite/index-valid
+and connected; boundary5416/overused6171/winding120593witnesses remain.
+
+Validation: Guard62764/owned62767 exits0 in94.577s; raw68bbd4f3
+sidecar dtypes/shapes/C-byte hashes match. All float32appearance channels retained.
+Peak observed anon58.0/combined66.0GiB; own lease ended.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/receipt.json
+Ask:276.
+
+Limits: UNACCEPTED source checkpoint; moving gray/PBR review pending. No
+opening/fit/rig or bodyreplacement pass. Foreign lock66629 preserved; no kills.
