@@ -73,3 +73,13 @@ syntax passes; ninth-round ordinary silent Metal4810tick clear/restart passes.
 Limits: Local normal dots not global penetration; source control UNACCEPTED;
 bounded rest-fit mechanism has not run or passed. No recoloring/masking fix.
 Evidence: [fit witnesses](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/fit-witness01/README.md). Ask274.
+
+Finding: The one bounded rest-displacement method fails its first fixed cap:
+shirt20.778mm/jeans44.308mm before rejected-export20mm clipping; remaining
+reviewed/held-out contacts reject it. No alternate offsets/parameters run.
+Validation: Native result/deltas/pins saved; actualGLTFLoader body/sourceIDs/
+UV/weights/51joint binds unchanged. Jeans export triangulation changes recorded.
+IndependentAgent3 arithmetic/source pin read agrees; syntax/scoped lint pass.
+Limits: One failed algorithm does not prove universal infeasibility; no expensive
+art pass/capture. Attachment/bend topology work next, M0–M5 open.
+Evidence: [rejected trial](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/rest-fit01/README.md). Ask274.
