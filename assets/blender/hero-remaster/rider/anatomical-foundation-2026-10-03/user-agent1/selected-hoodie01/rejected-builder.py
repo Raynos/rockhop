@@ -12,7 +12,6 @@ from mathutils.bvhtree import BVHTree
 ap=argparse.ArgumentParser(description=__doc__)
 for name in ['donor','body','out','evidence']:ap.add_argument('--'+name,required=True)
 ap.add_argument('--faces',type=int,default=6000)
-ap.add_argument('--normalize-solver',action='store_true')
 a=ap.parse_args(sys.argv[sys.argv.index('--')+1:])
 donor,bodyfile,out,evidence=[Path(getattr(a,n)).resolve() for n in ['donor','body','out','evidence']]
 out.mkdir(parents=True,exist_ok=True);evidence.mkdir(parents=True,exist_ok=True)
@@ -70,28 +69,9 @@ preflight={'status':'UNACCEPTED reconstruction input; topology preflight only',
  'No physical registration, openings, rig, UV bake or wearable acceptance.']}
 (evidence/'preflight.json').write_text(json.dumps(preflight,indent=2)+'\n')
 bm.to_mesh(surface.data);bm.free()
-surface.data.update()
 clean_vertices=[v.co.copy() for v in surface.data.vertices]
 surface.data.calc_loop_triangles();clean_triangles=[tuple(t.vertices) for t in surface.data.loop_triangles]
 tree=BVHTree.FromPolygons(clean_vertices,clean_triangles,all_triangles=True)
-points=np.empty(len(surface.data.vertices)*3,dtype=np.float64)
-surface.data.vertices.foreach_get('co',points);points=points.reshape(-1,3)
-edges=np.empty(len(surface.data.edges)*2,dtype=np.int32)
-surface.data.edges.foreach_get('vertices',edges);edges=edges.reshape(-1,2)
-linf=np.max(abs(points[edges[:,0]]-points[edges[:,1]]),axis=1)
-assert np.min(linf)>0
-solver_scale=max(1.,.001/float(np.min(linf))) if a.normalize_solver else 1.
-preflight['operatorAbsoluteToleranceAudit']={'officialSource':'https://github.com/blender/blender/blob/main/source/blender/editors/object/object_remesh.cc',
- 'criterion':'Operator also rejects edge endpoint coordinates within1e-4 in all three axes',
- 'minimumEdgeLInfinityDonorUnits':float(np.min(linf)),
- 'edgesBelowAbsoluteCoordinateTolerance':int(np.sum(linf<1e-4)),
- 'normalizationEnabled':a.normalize_solver,'temporarySolverUniformScale':solver_scale,
- 'minimumSolverEdgeLInfinity':float(np.min(linf)*solver_scale),
- 'inverseAppliedBeforeSourceProjection':True,'physicalUnitCalibration':False}
-(evidence/'preflight.json').write_text(json.dumps(preflight,indent=2)+'\n')
-if a.normalize_solver:
- for v in surface.data.vertices:v.co*=solver_scale
- surface.data.update()
 started=time.monotonic()
 print('QUADRIFLOW_START',len(clean_vertices),len(clean_triangles),a.faces,flush=True)
 result=bpy.ops.object.quadriflow_remesh(target_faces=a.faces,use_mesh_symmetry=False,
@@ -107,7 +87,6 @@ assert result=={'FINISHED'},result
 duration=time.monotonic()-started
 preprojection=[];distances=[]
 for v in surface.data.vertices:
- v.co/=solver_scale
  nearest,normal,index,distance=tree.find_nearest(v.co)
  assert nearest is not None
  preprojection.append(float(distance));v.co=nearest
@@ -167,7 +146,6 @@ report={'status':'UNACCEPTED selected-donor reconstructed surface/PBR; not fitte
  'pins':pins,'recipeSHA256':sha(__file__),'masterSHA256':sha(out/'surface.blend'),
  'donorGeometry':before_cleanup,'derivativeRemovedComponents':removed,'derivativeRemovedDegenerateFaces':len(degenerate),
  'surface':topology,'quadriflowTargetFaces':a.faces,'quadriflowElapsedSeconds':duration,
- 'solverNormalization':preflight['operatorAbsoluteToleranceAudit'],
  'maximumReprojectionDistanceDonorUnits':max(preprojection),'textures':textures,
  'axes':'Exact glTF XYZ imports as Blender X,-Z,Y; display-only scaffold is translated3,0,1, no metre/body fitting claim',
  'limits':['New atlas/PBR is selected-to-active emission bake from exact source, no new plain-shirt texture.',

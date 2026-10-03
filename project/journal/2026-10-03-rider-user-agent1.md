@@ -379,3 +379,11 @@ Finding: First selected-donor reconstruction derivative welds UV duplicates and 
 Validation: Donor800d7a97… and canonical09master61bef706… SHA unchanged. Derivative460752v/921568tri; weld collapses50faces, later area filter0. Native rejected-input/preflight/rejection pins recorded; no remesh/bake output or physical fitting claim. Python syntax/diff/hooks pass.
 
 Limits: Generated units/pose remain uncalibrated, real openings/inner clearance/rig and PBR transfer pending. Root selected this visual source; failure does not justify another plain shirt or indefinitely defer full-garment work. Controls/body/head/51bind untouched; no player promotion or M0–M5 closure.
+
+### Round44 — selected hoodie solver normalization and PBR surface, 2026-10-03
+
+Finding: Controlled temporary solver1048.576 scale resolves QuadriFlow absolute1e−4 edge guard (9470edges below threshold/min9.536743e−7→.001). Inverse before exact-donor reprojection yields5225v/5225polys/10450tri and selected-to-active2048px source base/rough/metal PBR bakes. Preserve01 failedrecipe and exactdonor/body; no physical fit claim.
+
+Validation: Operator completes6.001s; all16existing native meshes/51bind exact. Vertex reprojectionmax6.920e−8donorunits; centroidp95.005896/max.031074 and source4097samplep95.010449/max.078544 are explicit reconstruction loss. UVfinite;8three-edge cyclic holes/24boundaryedges,0nonboundarynonmanifold edges. Original source/pin/texture lineage recorded; syntax/diff/hooks pass.
+
+Limits: Boundary holes are remesh defects, not garment openings. Repair before physical pose/units registration and real neck/cuff/hem cavity/innerclearance; wearable skin/actualgame/collision/mobile/played art remains unaccepted. Trianglebenchmark alone accepts nothing. No new plain shirt, fullcloth default, Libraryduplicate or normal-player promotion; M0–M5/root sole judgment retained.
