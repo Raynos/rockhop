@@ -109,3 +109,36 @@ Correction5a95196a passes checked deploy37128184894; production GET verifies
 exact `5a95196ab622f728d5e84f7780074509e25c2c58`. Its push release/store check
 37128185417 remains separately watched. Later local checkpoints are not claimed
 published by that receipt.
+
+## Actual Garage motion packet
+
+`capture.mjs` consumed the same candidate/driver in an isolated actual-game
+build with no private adapter, seam repair or corrective plugin. Capture03
+passes1064frames/eight movies, complete51 joints, exact paired effective
+cameras, pose-matrix residual2.67e-15, fixed physics hash53ffa642f34ac573,
+zero AudioContexts/page errors and exact loaded candidate bytes. First attempts
+failed because ready preceded the loader's return-to-menu; waiting for loader
+completion before entering Garage fixed the harness sequence. No game fix.
+
+Four side-by-side11.083s/133-frame silent movies are in `delivery/`:
+PBR side/front-three-quarter/rear-three-quarter and gray side. **Left** is
+normal Garage authored geometry. **Right** is normal riding geometry explicitly
+shown on the Garage stage for diagnosis. The whole shared stress trajectory
+plays forward and backward at indices0,4,...528. No candidate physics riding.
+All four delivered movies were played to their ends in muted headless WebKit,
+with124–133decoded frames each and no errors; ffprobe verifies no audio stream.
+The native full/four film independently plays133frames to its11.084s end.
+
+`garage03-summary.json` pins every movie, candidate/driver/private build and
+local full report. Complete camera/bike/wrapper matrices remain in that report.
+Native comparison uses the same candidate, pose times and named angles, but
+its orthographic8panel projection differs from the Garage perspective view;
+do not claim pixel-matched native/engine camera registration or shared lights.
+`played-asymmetric-witness.png` is extracted from the played front-three-quarter
+movie at3.5s; it locates the known arm-weight witness, not an art judgment.
+
+The supplied skills and tools do not expose `openai-library:library`. A search
+of installed skill/plugin caches found no Library SKILL.md, and tool metadata
+has Page-specific uploads but no direct Library uploader. No Library URL/file ID
+is invented. Root/bridge has the exact local packet for a supported upload by
+its Library-capable lane. Clips remain unaccepted; root judges played shape.

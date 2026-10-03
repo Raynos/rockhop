@@ -31,3 +31,14 @@ ticks/40.0833333333s, crashes and restarts in one tick at1/3ms with0errors.
 Checked deploy37128184894 succeeds after test-promise correction; exact live
 SHA5a95196ab622f728d5e84f7780074509e25c2c58 verified independently by HTTPS.
 Limits: Later checkpoints not yet published; push/store check still watched.
+
+Finding: Actual Garage plays the complete candidate trajectory with authored
+versus normal riding geometry at exact paired cameras, explicitly staged.
+Validation: 1064frames/eight clips, all51 joints, matrix residual2.67e-15,
+exact loaded candidate, fixed physics,0AudioContexts/errors. Four combined
+11.083s/133-frame films pass no-audio probes and muted headless playback;
+native full/four film independently plays133frames. Scoped type-aware lint
+passes. Earlier boot-race attempts remain preserved locally.
+Limits: Native orthographic/engine perspective projections differ. Synthetic
+FK/staged riding geometry is not physics motion/contact or art acceptance.
+Library skill/uploader absent from this session; exact local packet sent root.
