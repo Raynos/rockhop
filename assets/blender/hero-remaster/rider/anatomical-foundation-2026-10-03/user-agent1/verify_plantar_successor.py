@@ -29,7 +29,7 @@ def capture(p):
     return bind,meshes
 before = capture(source); after = capture(candidate)
 assert before==after,'Nonfootwear native fields or bind changed'
-report = {'status':'UNACCEPTED09 native nonfootwear/51bind preservation verified','sourceSHA256':sha(source),
+report = {'status':'UNACCEPTED '+candidate.parent.name+' native nonfootwear/51bind preservation verified','sourceSHA256':sha(source),
     'candidateSHA256':sha(candidate),'verifierSHA256':sha(__file__),'all51NativeBindExact':True,
     'allNonFootwearMeshFieldsIncludingHiddenControlsExact':after[1],
     'limits':['Only the boot topology/weights are permitted to differ; hashes include normals, UVs, keys, weights, transforms and render visibility.',

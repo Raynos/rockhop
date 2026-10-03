@@ -1,0 +1,74 @@
+{
+  "status": "REJECTED10 loses coverage and moving upper fit; preserve qualified09control",
+  "motionSHA256": "833ce1bd51b1ccf4f1162bd1e3c6c00118e0181c5fa75f7018b2f9f6167ad4ee",
+  "streamsSHA256": "2b45ad8bcd06d36317acc6069e7e3adc345faf60e13583374b98e7fb1041f3d0",
+  "elapsedS": 51.97981570800766,
+  "phases": [
+    {
+      "phase": "original FK",
+      "measuredFrames": 529,
+      "contactFrames": 0,
+      "maximumUpperBodyTrianglePairs": 0,
+      "upperWorstMeasurementIndex": 0,
+      "maximumSoleBodyTrianglePairs": 0,
+      "sampledMaximumOutsideProxy": {
+        "L": 7,
+        "R": 8
+      }
+    },
+    {
+      "phase": "explicit ankle20deg/toe15deg",
+      "measuredFrames": 96,
+      "contactFrames": 39,
+      "maximumUpperBodyTrianglePairs": 421,
+      "upperWorstMeasurementIndex": 604,
+      "maximumSoleBodyTrianglePairs": 0,
+      "sampledMaximumOutsideProxy": {
+        "L": 73,
+        "R": 59
+      }
+    },
+    {
+      "phase": "held-out L-only ankle20deg/toe15deg",
+      "measuredFrames": 48,
+      "contactFrames": 20,
+      "maximumUpperBodyTrianglePairs": 220,
+      "upperWorstMeasurementIndex": 662,
+      "maximumSoleBodyTrianglePairs": 0,
+      "sampledMaximumOutsideProxy": {
+        "L": 73,
+        "R": 8
+      }
+    },
+    {
+      "phase": "held-out R-only ankle20deg/toe15deg",
+      "measuredFrames": 48,
+      "contactFrames": 18,
+      "maximumUpperBodyTrianglePairs": 201,
+      "upperWorstMeasurementIndex": 710,
+      "maximumSoleBodyTrianglePairs": 0,
+      "sampledMaximumOutsideProxy": {
+        "L": 7,
+        "R": 56
+      }
+    },
+    {
+      "phase": "held-out opposed ankle20deg/toe15deg",
+      "measuredFrames": 48,
+      "contactFrames": 38,
+      "maximumUpperBodyTrianglePairs": 220,
+      "upperWorstMeasurementIndex": 758,
+      "maximumSoleBodyTrianglePairs": 0,
+      "sampledMaximumOutsideProxy": {
+        "L": 73,
+        "R": 56
+      }
+    }
+  ],
+  "limits": [
+    "All529 original48Hz FK samples plus96 matched ankle/toe and144 unilateral/opposed held-out samples measured; renderer plays every fourth sample.",
+    "Virtual cuff closure and three-axis majority rays classify fixed below125mm foot witnesses; not complete signed clearance or anatomical collar-fit acceptance.",
+    "Current native successor retains old05 boot control; old/new share exact body/rig/pose/controller. No recoloring hides coverage failures.",
+    "Footwear-only synthetic bike-free test, not supported game peg contact or live collision response. Parent judges moving wearable form; all garments remain unaccepted."
+  ]
+}

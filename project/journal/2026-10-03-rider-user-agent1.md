@@ -339,3 +339,11 @@ Finding: One fixedfive nativeXplane cut plus actualbody-derived ownside top4 wei
 Validation: All674oldsurface triangles float64 plane/barycentric/edge distance max20.324nm, original2µmguard retained; float32BVH sliver7.278µm anomalyexplicit. Native51bind/15othermeshes inclhiddencontrols/normals exact08; actualloader7nonbootattributes/indices/morphs/51bindexact05/defaults0/rest0.000854mm. Headrawnormals/PBR protected. Native769sample measurement50.60sCPU, protectedsource8/mastermotion pins unchanged; source9movingartreviewpending.
 
 Limits: Triangle/cappedray proxies are notsignedclearance/arbitrarymovement guarantees. Constructionintervention couples topology+localbodyrebinding, not isolatedindividualcauseproof. No livecollisionprojection/physicsresponse/mobile/art pass; Agent3 actualengine response required. Next believablebootshape retainscoverage and movingfit, exact08control; no rigidplacementonly donor salvage or duplicateLibrarydelivery.
+
+### Round39 — reject dorsal guide coverage regression, 2026-10-03
+
+Finding: One391vertex anatomicaldorsal-roof guide and toe/heel panel prototype fails: resttriangle0 stillloses7L/8Rfootenclosure; addedmotion421upper/body and73L/59Routside. Preserve09 qualified769samplefit and08playedcoveragecontrol; no10movie/Library/artpromotion. Allupper panels now included inchecks, notjustslot0.
+
+Validation: 769native samples with unchangedtests/measurement51.98s; solebody0 throughout. Native51bind/15nonbootfields exact09; actualloader7nonbootfields/51bindexact05/defaults0/rest0.000854mm/headrawnormalsPBRfixed. FinalJSONnumpyfloat32failure repaired by exactsavedmeshreconstruction and receipt-only recovery; no master/exportoverwrite. Ship39 cold2199ms/clear40.083333333s/4810identicalticks/crash103/restart1tick/frame3.19ms/errors0. Python syntax/diff pass.
+
+Limits: Resttrianglezero is notenclosure ormovingfit; thisfailedshapeisnotapprovedbootconstruction. Footwear09nativefitstillneeds actualgame/loadbearingsole/contact/mobile/artchecks. Afterthiscoherentunit, human/root directonebounded same-rest sleeveweight/attachment control, Agent3 independentlychecks actualwindow/selffolds; no widerprojection/fullclothrestart.
