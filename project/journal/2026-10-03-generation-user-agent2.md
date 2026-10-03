@@ -1362,3 +1362,16 @@ Ask:284–286.
 
 Limits: Visual-source choice is not a fitted/rigged/mobile asset gate;
 qualified one-by-one family comparison stays bounded and independent.
+
+Finding: Localai/weights owned setup notes now record qualified TRELLIS,
+kept Hunyuan visual source, exact PBR rerun and future65/96GiB guard scope.
+
+Validation: Local normal-hook commits a948dee0/f67cf4e9 contain only the
+three/two named owned text paths; parent histories preserved. Exact file
+SHA256 receipts and clean owned diffs checked. No push/publication retry,
+weight byte, runtime controller or foreign index change.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/local-notes04/receipt.json
+Ask:284–286,289–290.
+
+Limits: Local note commits only. TRELLIS played judgment and proper Pixal
+qualification/seed pending; kept source is not a game-ready rig/fit pass.
