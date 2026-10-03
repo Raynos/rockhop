@@ -2,6 +2,8 @@
 
 # What we are building — the plans and where each stands
 
+**Rider review website (ask264):** [Private picture packet](https://rockhop-rider-baseline-review.raynos.chatgpt.site): eight retained pictures/two silent diagnostic clips, enlarged sources and local feedback download. [Delivery](../evidence/hero-remaster/rider-baseline-review-site-2026-10-03/README.md) records WebKit1200/390 media/layout checks and third-round identical clear/crash/restart. Historical packet; all current-candidate and phone gates remain open.
+
 **Small commit scope (ask266; originally262):** AGENTS.md now requires separate commits for plan writing, archive/link maintenance, target inventory and review-gallery work; verify and commit each finished unit before the next, staging only owned paths/hunks. Current rider gate states remain unchanged.
 
 **Cloud arm-foundation checkpoint (ask260):** [Immutable reconciliation](../evidence/hero-remaster/cloud-arm-foundation-2026-10-03/README.md) preserves the exact Libraryv0 archive and all75payload pins, complete recipes/15pose images/48-frame motion. Existing recipes restore sourceA exactly and verify protected source data; silent WebKit playback passes. Separate metadata corrections retain original bytes. Forward folds remain failed; no player promotion or acceptance. Active forward work and the separate anatomical builder remain their owners' work.
