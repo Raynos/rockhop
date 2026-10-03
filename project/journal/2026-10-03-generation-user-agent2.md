@@ -1203,3 +1203,20 @@ Ask:284–286.
 Limits: Checkpoint only; no new quality run yet, no CUDA/fullmodel/fit/art
 claim. Public cache release at phase boundaries preserves active storage;
 no shared runtime, weight, remesh, cleanup or silent cheaper fallback.
+
+Finding: One proper-quality TRELLIS1024cascade/12/42 completes and freezes
+finite raw geometry/material attrs before moving review or derived display.
+
+Validation: Guard0/242.513s, peak63.8anonymous/71.3combined GiB; old65/78
+bounds retained.17canonical pins rechecked,8loaded models/no missing learned
+parameters; only derived rope_phases buffer missing. Both actual DINO
+resolutions/pixels/cond/negcond, four noises and48sampled steps/finals,
+6learned QKV/selected CPU reference/output checks preserved:138finite
+captures. Effective1024,3,152,811rawvertices/6,322,984triangles, attrsfloat32
+[3152811,6], voxel1/1024; native archivec9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis01/
+Ask:284–286.
+
+Limits: Unaccepted checkpoint; raw finiteness is not topology/material/art
+quality, fit/rig/mobile or CUDA/fullmodel parity. Original arrays preserved
+before derived orientation/maps; matched neutral/PBR moving review pending.
