@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import sys
 import time
+import types
 
 SOURCE = Path('/Users/raynos/ml/img2mesh/Hunyuan3D-2.1')
 STORE = Path('/Users/raynos/projects/weights/manual')
@@ -25,12 +26,22 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ('mesh', 'wrapped', 'image', 'weights-receipt', 'weights-receipt-sha256', 'out'):
         parser.add_argument('--' + name, required=True)
+    parser.add_argument('--query-tiling', action='store_true')
+    parser.add_argument('--replay-progress')
+    parser.add_argument('--replay-progress-sha256')
     args = parser.parse_args()
     assert os.environ.get('ROCKHOP_GENERATION_CONTROLLER_PID') == str(os.getppid())
     assert sha(args.mesh) == '318c7536e5234c6a6e285f4d2111dad9fcdf3941e0329951a1f9a7ebf460612a'
     assert sha(args.wrapped) == 'f1d1fa95c9095c156dfc6840f93cf4db8f082f0dd835ffd53492d73e3774085f'
     assert sha(args.image) == '4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c'
     assert sha(args.weights_receipt) == args.weights_receipt_sha256
+    prior = None
+    if args.replay_progress:
+        assert args.replay_progress_sha256 and sha(args.replay_progress) == args.replay_progress_sha256
+        prior = json.loads(Path(args.replay_progress).read_text())
+        assert prior['inputMeshSHA256'] == sha(args.mesh) and prior['referenceSHA256'] == sha(args.image)
+        assert prior['seed'] == 42 and prior['viewResolution'] == 768 and prior['paintSteps'] == 15
+    assert not args.query_tiling or prior is not None
     assert subprocess.check_output(['git', '-C', str(SOURCE), 'rev-parse', 'HEAD'], text=True).strip() == '82920d643c0dc2f7bfd7255f45f62d386edfe60c'
     out = Path(args.out)
     assert not out.exists()
@@ -44,6 +55,7 @@ def main():
               'maxSelectedViews': 8, 'viewResolution': 768, 'renderSize': 2048, 'textureSize': 4096,
               'remesh': False, 'simplification': False, 'device': 'mps', 'rendererDevice': 'cpu',
               'UVReuse': 'Frozen actual installed xatlas result with identical triangle coordinates; no repeated unwrap',
+              'queryTiling': args.query_tiling, 'replayProgressSHA256': args.replay_progress_sha256,
               'limits': ['One reference/seed, no paint or garment fit acceptance before root played review.',
                          'Original six zero-area triangles and detached component retained.',
                          'Owned process/instance adapters, no shared installation edits or CUDA parity.']}
@@ -149,6 +161,14 @@ def main():
         report[label] = {'archiveSHA256': sha(out / (label + '.npz')), 'arrays': {
             key: {'shape': list(v.shape), 'dtype': str(v.dtype), 'finite': bool(np.isfinite(v).all()),
                   'CBytesSHA256': hashlib.sha256(v.tobytes()).hexdigest()} for key, v in arrays.items()}}
+        if prior and label in prior:
+            original_arrays, current_arrays = prior[label]['arrays'], report[label]['arrays']
+            identical = original_arrays.keys() == current_arrays.keys() and all(
+                all(original_arrays[key][field] == current_arrays[key][field]
+                    for field in ('shape', 'dtype', 'CBytesSHA256')) for key in current_arrays)
+            report[label]['priorCBytesIdentical'] = identical
+            save()
+            assert identical, 'Actual prior condition/noise differs; stop before interpreting attention retry'
         save()
         assert all(np.isfinite(v).all() for v in arrays.values()), 'Invalid actual conditioning/noise'
     for name in ('prepare_latents', 'encode_images'):
@@ -183,8 +203,60 @@ def main():
         save()
         return original_forward(images, controls, **keywords)
     multiview.forward_one = forward
+    if args.query_tiling:
+        from query_tiled_attention import query_tiled_attention
+        report['queryTilingAdapterSHA256'] = sha(inspect.getfile(query_tiled_attention))
+        processors = {}
+        for module in pipeline.unet.modules():
+            if hasattr(module, 'processor'):
+                owner = inspect.getmodule(type(module.processor))
+                if owner is not None and hasattr(owner, 'AttnCore'):
+                    processors[owner.__name__] = owner
+        assert processors, 'Actual custom processor module was not identified'
+        report['ownedAttentionModules'] = []
+        report['actualAttentionShapes'] = {}
+        first_large = [False]
+        for name, owner in processors.items():
+            source_sha = sha(inspect.getfile(owner))
+            assert source_sha == '6df282d094627733623ddeaa28a493a11252ea58e7b99e4d52240e17f4f71d0f'
+            original_sdpa = owner.F.scaled_dot_product_attention
+            def owned_sdpa(query, key, value, _original=original_sdpa, **keywords):
+                score_bytes = int(np.prod(query.shape[:-2])) * query.shape[-2] * key.shape[-2] * 4
+                if query.device.type != 'mps' or score_bytes <= 256 * 1024 ** 2:
+                    return _original(query, key, value, **keywords)
+                descriptor = str((tuple(query.shape), tuple(key.shape), tuple(value.shape)))
+                entry = report['actualAttentionShapes'].setdefault(descriptor, {
+                    'calls': 0, 'queryShape': list(query.shape), 'keyShape': list(key.shape),
+                    'valueShape': list(value.shape), 'estimatedFullFloat32ScoreGiB': score_bytes / 1024 ** 3,
+                    'queryTile': 128, 'allKeysRetained': True})
+                entry['calls'] += 1
+                if not first_large[0]:
+                    capture('actual-first-large-attention-inputs', {'query': query, 'key': key, 'value': value})
+                    selected = torch.tensor([0, query.shape[-2] // 2, query.shape[-2] - 1])
+                    qc = query.detach().cpu()[:, :, selected].float()
+                    kc, vc = key.detach().cpu().float(), value.detach().cpu().float()
+                    expected = (torch.softmax(qc @ kc.transpose(-1, -2) / query.shape[-1] ** .5, dim=-1) @ vc).to(query.dtype)
+                    output = query_tiled_attention(query, key, value, **keywords)
+                    actual = output.detach().cpu()[:, :, selected]
+                    error = float((actual.float() - expected.float()).abs().max())
+                    report['actualFirstLargeSelectedCPUError'] = error
+                    assert error <= .002, 'Actual attention differs from independent CPU reference'
+                    first_large[0] = True
+                    save()
+                else:
+                    output = query_tiled_attention(query, key, value, **keywords)
+                assert torch.isfinite(output).all(), 'Nonfinite actual tiled attention'
+                return output
+            # Only this custom UNet processor module changes; torch/VAE/DINO globals stay original.
+            owner.F = types.SimpleNamespace(scaled_dot_product_attention=owned_sdpa)
+            report['ownedAttentionModules'].append({'name': name, 'sourceSHA256': source_sha})
+        report['attentionDerivative'] = 'Query-tiled float32 SDPA math, no mask/dropout/causal; full keys/views retained, roundoff differs'
+        save()
     painter(mesh_path=str(input_obj), image_path=Image.open(args.image).convert('RGBA'),
             output_mesh_path=str(out / 'painted.obj'), use_remesh=False, save_glb=False)
+    if prior:
+        required = [key for key in prior if key.startswith('actual-')]
+        assert all(report.get(key, {}).get('priorCBytesIdentical') for key in required)
     report.update(stage='painted OBJ saved; preservation audit', elapsedSeconds=time.monotonic() - started)
     save()
     painted = original_load(out / 'painted.obj', process=False, maintain_order=True)

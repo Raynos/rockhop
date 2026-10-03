@@ -807,3 +807,18 @@ Limits: Known operator tensors, not actual fullbatch/model/CUDA proof.
 Retry must scope adapter to paintUNet processor only, preserve actual
 condition/noise bytes, record realattention shapes/outputs and derivative
 label. No full-model inference or shared source edit in this control.
+
+Finding: Same-quality PBR retry can scope proven all-key query tiling
+to imported custom UNet processors while requiring original input bytes.
+
+Validation: AST passes. Known768/8view-key controls02e253a0 pass. Adapter
+only replaces custom processor module'sF.SDPA field; VAE/DINO/globalTorch
+functions unchanged. All9prior capture shapes/dtypes/Cbyte hashes required
+to match,17conditioning PNGs saved, original768/8views/15steps retained.
+First actual large QKV captured and selected independentCPU output check
+required≤.002; all real tiled outputs finite and actual shapes reported.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint, actual retry pending. Float32
+attention changes roundoff; no byte-identical neural/CUDA output claim.
+No view/key truncation, sampler sweep or raised guard bounds.
