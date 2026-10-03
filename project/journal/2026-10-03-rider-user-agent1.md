@@ -113,3 +113,13 @@ Python/Node syntax and scopedoxlint pass; root/Agent3 have exact source/report.
 Limits: Refined contactcounts incomparable to coarse totals; localrestnormal
 not complete signedclearance; no costlyfilm/artpass/playerpromotion. M0–M5 open.
 Evidence: [rejected attachment](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/attachment01/README.md). Ask274.
+
+Finding: Local authored pose-volume can preserve rest shape and lift exact
+leftsleeve/kneewitnesses, but remaining contacts and held72regression forbidfitpass.
+Validation: 117/55 source vertices,3sleeve/1knee keys, maxposed12.047/15.614mm; original
+basispositions/UV/weights/topology/body51binds fixed.529actualGLTF/native4 parity
+.000443/.000225mm and restzero exact; full/fourloss separate. Shirtone normal
+recalculation3components9.99784e-5 explicitlyrecorded; syntax/scopedoxlint pass.
+Limits: Cardinalrig-angle prototype not playerintegration; targetrays not signed
+clearance; partiallocalwitness improvement only, movingreview next.
+Evidence: [corrective checkpoint](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/README.md). Ask274.

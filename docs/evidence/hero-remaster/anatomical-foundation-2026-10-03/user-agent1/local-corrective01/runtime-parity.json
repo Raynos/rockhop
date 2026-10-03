@@ -1,0 +1,5431 @@
+{
+  "status": "UNACCEPTED local corrective base/support/controller/native runtime parity; moving/art/fit gates open",
+  "candidateSHA256": "4092f9aa62c01598888712e7cb879439d9bc8093a82effb2b60a9ec1be85193e",
+  "originalSHA256": "7dd161b36f0e7b26e778f02465be3ded5c437406057c6ca691ddd9cdcb48630a",
+  "driverSHA256": "8c40c42af362a8d3d8ae44d27a0b07570f600b26adc66d325239413f66c7625b",
+  "expandedDriverSHA256": "ddced495c7ae0218c7ae83f5b47c1d007da137e8d7f05e37e08ae65a9c15d457",
+  "controllerImplementationSHA256": "684b8f89c9ac12fec10d63429d964c806953842ab73b3e5e84b525c347fbf378",
+  "verifierSHA256": "b6112c70e64cdec50f9e7cc2b67a843b61bd35e58e21955c3a0b08e907f2c107",
+  "frames": 529,
+  "conservation": [
+    {
+      "mesh": "Canonical_anatomical_body,_baked_adult_hm08",
+      "rows": 14517,
+      "baseAttributeHashes": {
+        "_source_id": "fcc0c694598f02ff2e911717c7d709771ae0bc41cbe1064109a5b11a22a03e01",
+        "position": "5fce74947c01b48f99c9c068fd5d1ac4e9605ce89c7f35395a778c54ecf859cd",
+        "normal": "a329370ee3f70cdcc79a92aa0f1f78270e8bff7ad1d7232730814e2cdf28faf7",
+        "uv": "f60fd8442a4fd04bb090f467838786d200fea99432d99a205eca74c846ef1ab6",
+        "skinIndex": "2afb3a0a6951fdea252c2ba07a437e748e6aebc0b462756b44ffcbfd6dcec4e1",
+        "skinWeight": "37bf8488f2bb171ecde0ad563d127751f327b198c8827db6986a2bf48e04404d"
+      },
+      "indicesSHA256": "2281abc3d271a4c5b6b04638d480bb420ab66132a23842df2ea655db160be835",
+      "normalRecalculation": [],
+      "all51JointOrderHierarchyBindsIdentical": true
+    },
+    {
+      "mesh": "Separate_fitted_native_trousers_control",
+      "rows": 950,
+      "baseAttributeHashes": {
+        "_source_id": "e059d67b0d94264048c8371227237000a345213ced34862615817965174d63c6",
+        "position": "62be5c3d002caede11440e83ba099af9889205d8a871687ee898870bc1c81e21",
+        "normal": "daa4e12974bf5a42dbe538d7e861adbfb0909146de7495b9b071463a184f8d66",
+        "uv": "ed88ca4d9a70193cc5a8ef40432d6177e11eadae7d6a869a05eb7e43f21973a8",
+        "skinIndex": "1d50cd230164316580df194d5b698d52945d928043bad4871d28bdb0a03f8a0d",
+        "skinWeight": "7a4dad727f7c3c05053224e6857c5eadbe16db8418dd8cf5e188af2207791754"
+      },
+      "indicesSHA256": "3ed31ce2169c818bcf08540f42f15eb4d61e936f3e597d33d94018fce3456485",
+      "normalRecalculation": [],
+      "all51JointOrderHierarchyBindsIdentical": true
+    },
+    {
+      "mesh": "Separate_fitted_sweatshirt_control,_hood_not_constructed",
+      "rows": 1364,
+      "baseAttributeHashes": {
+        "_source_id": "e57410c3ff1c9e203c9fd5cfbedd0fd66306c9760e6591d640fccbe6cff6a2b8",
+        "position": "082f4e6291ddd6ab491dd5e784572ebeba4b6ae8b35e498a4bc6ba267413d54a",
+        "normal": "4cf7fe2154babab32e902a066b33e64d2f611d00d1cb92d5d5660bf51e2538cf",
+        "uv": "bc2f080c6ab1d43e05a1af22f5602cc98873c4f48b86d24aaf67108f4853906f",
+        "skinIndex": "17a253908dc3dd95638c19bbb7a2a1a8a9b0758ae45be44bed7d566902468e66",
+        "skinWeight": "854a1888c0368517fed937e151e8262e5e2f6d97421ecc3ec1c1c2c8452d0abf"
+      },
+      "indicesSHA256": "c42b8096a551ad6e57dcdabea68953c8a07d600d90940987a9378d7ec9b45e47",
+      "normalRecalculation": [
+        {
+          "attribute": "normal",
+          "changedComponents": 3,
+          "maximumComponentDelta": 0.00009997840970754623,
+          "firstChangedComponents": [
+            {
+              "index": 1152,
+              "original": 0.9510489702224731,
+              "candidate": 0.9510477185249329
+            },
+            {
+              "index": 1153,
+              "original": -0.012599323876202106,
+              "candidate": -0.012699302285909653
+            },
+            {
+              "index": 1154,
+              "original": 0.3087834417819977,
+              "candidate": 0.30878305435180664
+            }
+          ]
+        }
+      ],
+      "all51JointOrderHierarchyBindsIdentical": true
+    }
+  ],
+  "exactRestZero": true,
+  "maximumCoefficientError": 7.771561172376096e-16,
+  "maximumJointWorldMatrixResidual": 1.1102230246251565e-15,
+  "regions": [
+    {
+      "region": "cloth",
+      "targets": [
+        {
+          "name": "Left underarm authored volume f112",
+          "index": 0,
+          "nativeSupportVertices": 117,
+          "maximumNativeDeltaErrorM": 7.586621444354888e-8
+        },
+        {
+          "name": "Left underarm authored volume f144",
+          "index": 1,
+          "nativeSupportVertices": 117,
+          "maximumNativeDeltaErrorM": 7.31062511844359e-8
+        },
+        {
+          "name": "Left underarm authored volume f240",
+          "index": 2,
+          "nativeSupportVertices": 117,
+          "maximumNativeDeltaErrorM": 7.188214441290323e-8
+        }
+      ],
+      "nativeFourVsLoadedMaximumM": 4.425038587751845e-7,
+      "nativeFullVsFourMaximumM": 0.004819998437698057,
+      "worst": {
+        "frame": 154,
+        "nativeID": 649,
+        "exportedRow": 704
+      }
+    },
+    {
+      "region": "jeans",
+      "targets": [
+        {
+          "name": "Left knee authored volume f240",
+          "index": 0,
+          "nativeSupportVertices": 55,
+          "maximumNativeDeltaErrorM": 5.375114194050721e-8
+        }
+      ],
+      "nativeFourVsLoadedMaximumM": 2.2442268926117814e-7,
+      "nativeFullVsFourMaximumM": 0.0009476055021171294,
+      "worst": {
+        "frame": 187,
+        "nativeID": 332,
+        "exportedRow": 337
+      }
+    }
+  ],
+  "frameMetrics": [
+    {
+      "frame": 0,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0963231153292684e-7
+    },
+    {
+      "frame": 0,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 1,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8893809393130834e-7
+    },
+    {
+      "frame": 1,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 2,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.959996581571349e-7
+    },
+    {
+      "frame": 2,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 3,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.064989451957929e-7
+    },
+    {
+      "frame": 3,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 4,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3837863745230603e-7
+    },
+    {
+      "frame": 4,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 5,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6936925027193194e-7
+    },
+    {
+      "frame": 5,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 6,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2844041295902696e-7
+    },
+    {
+      "frame": 6,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 7,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.788521002305608e-7
+    },
+    {
+      "frame": 7,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 8,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7087760166139893e-7
+    },
+    {
+      "frame": 8,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 9,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2093308415560145e-7
+    },
+    {
+      "frame": 9,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 10,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.46021650199783e-7
+    },
+    {
+      "frame": 10,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 11,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.659483389014277e-7
+    },
+    {
+      "frame": 11,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 12,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.302144856096804e-7
+    },
+    {
+      "frame": 12,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 13,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.878521081481676e-7
+    },
+    {
+      "frame": 13,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 14,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8354871178118445e-7
+    },
+    {
+      "frame": 14,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 15,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8528455045383614e-7
+    },
+    {
+      "frame": 15,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 16,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5425117850675654e-7
+    },
+    {
+      "frame": 16,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 17,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.210587176614949e-7
+    },
+    {
+      "frame": 17,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 18,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0938598441914524e-7
+    },
+    {
+      "frame": 18,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 19,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.487606045800086e-7
+    },
+    {
+      "frame": 19,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 20,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.120902220684764e-7
+    },
+    {
+      "frame": 20,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 21,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.545111137593065e-7
+    },
+    {
+      "frame": 21,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 22,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.800451989871529e-7
+    },
+    {
+      "frame": 22,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 23,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4347562928419213e-7
+    },
+    {
+      "frame": 23,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 24,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.274015074176281e-7
+    },
+    {
+      "frame": 24,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 25,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6493585729468985e-7
+    },
+    {
+      "frame": 25,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 26,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.8266278301032226e-7
+    },
+    {
+      "frame": 26,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 27,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7917096021665855e-7
+    },
+    {
+      "frame": 27,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 28,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.052586067227234e-7
+    },
+    {
+      "frame": 28,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 29,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0320574468374193e-7
+    },
+    {
+      "frame": 29,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 30,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.886913647286831e-7
+    },
+    {
+      "frame": 30,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 31,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.097306758609719e-7
+    },
+    {
+      "frame": 31,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 32,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.496614378633398e-7
+    },
+    {
+      "frame": 32,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 33,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.750325106000268e-7
+    },
+    {
+      "frame": 33,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 34,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5736065023657815e-7
+    },
+    {
+      "frame": 34,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 35,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7219059615084417e-7
+    },
+    {
+      "frame": 35,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 36,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3543153644421864e-7
+    },
+    {
+      "frame": 36,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 37,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1918768825973155e-7
+    },
+    {
+      "frame": 37,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 38,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2355330484982093e-7
+    },
+    {
+      "frame": 38,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 39,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6631767076276956e-7
+    },
+    {
+      "frame": 39,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 40,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4776361201211057e-7
+    },
+    {
+      "frame": 40,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 41,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.8924327540371473e-7
+    },
+    {
+      "frame": 41,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 42,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4953174055987024e-7
+    },
+    {
+      "frame": 42,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 43,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0472940847428887e-7
+    },
+    {
+      "frame": 43,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 44,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2548280778652784e-7
+    },
+    {
+      "frame": 44,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 45,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0086843364857143e-7
+    },
+    {
+      "frame": 45,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 46,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6474962845657787e-7
+    },
+    {
+      "frame": 46,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 47,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.079024863409734e-7
+    },
+    {
+      "frame": 47,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 48,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5365393597355063e-7
+    },
+    {
+      "frame": 48,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 49,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6164250087801923e-7
+    },
+    {
+      "frame": 49,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 50,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.195884298858242e-7
+    },
+    {
+      "frame": 50,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 51,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.813276167992444e-7
+    },
+    {
+      "frame": 51,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 52,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.271652503364747e-7
+    },
+    {
+      "frame": 52,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 53,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5986822896477125e-7
+    },
+    {
+      "frame": 53,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 54,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5711590451902333e-7
+    },
+    {
+      "frame": 54,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 55,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.087076073092704e-7
+    },
+    {
+      "frame": 55,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 56,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.296733012159014e-7
+    },
+    {
+      "frame": 56,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 57,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.124974468029892e-7
+    },
+    {
+      "frame": 57,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 58,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.09648272024604e-7
+    },
+    {
+      "frame": 58,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 59,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.702605719584332e-7
+    },
+    {
+      "frame": 59,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 60,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1013763220016446e-7
+    },
+    {
+      "frame": 60,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 61,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.838807681287502e-7
+    },
+    {
+      "frame": 61,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 62,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.988415674667093e-7
+    },
+    {
+      "frame": 62,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 63,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6208171135933105e-7
+    },
+    {
+      "frame": 63,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 64,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.253892957315032e-7
+    },
+    {
+      "frame": 64,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 65,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1232133021455497e-7
+    },
+    {
+      "frame": 65,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 66,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.194682493718043e-7
+    },
+    {
+      "frame": 66,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 67,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4925758183414693e-7
+    },
+    {
+      "frame": 67,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 68,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.89347564654708e-7
+    },
+    {
+      "frame": 68,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 69,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.793375454225828e-7
+    },
+    {
+      "frame": 69,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 70,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2369870845563294e-7
+    },
+    {
+      "frame": 70,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 71,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0384533493570795e-7
+    },
+    {
+      "frame": 71,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 72,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2343190585205136e-7
+    },
+    {
+      "frame": 72,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 73,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.378478727676523e-7
+    },
+    {
+      "frame": 73,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 74,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2010617688054345e-7
+    },
+    {
+      "frame": 74,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 75,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.063752116188453e-7
+    },
+    {
+      "frame": 75,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 76,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4951728189649703e-7
+    },
+    {
+      "frame": 76,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 77,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.50605790858019e-7
+    },
+    {
+      "frame": 77,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 78,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8664457892767055e-7
+    },
+    {
+      "frame": 78,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 79,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0165697925634866e-7
+    },
+    {
+      "frame": 79,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 80,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.8299987121030794e-7
+    },
+    {
+      "frame": 80,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 81,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.469595198137269e-7
+    },
+    {
+      "frame": 81,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 82,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5165596365279816e-7
+    },
+    {
+      "frame": 82,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 83,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.2464806134667046e-7
+    },
+    {
+      "frame": 83,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 84,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.385321757417231e-7
+    },
+    {
+      "frame": 84,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 85,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1964547604308823e-7
+    },
+    {
+      "frame": 85,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 86,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.447114123456157e-7
+    },
+    {
+      "frame": 86,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 87,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.253684828620781e-7
+    },
+    {
+      "frame": 87,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 88,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2238490195158704e-7
+    },
+    {
+      "frame": 88,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 89,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.224663507775951e-7
+    },
+    {
+      "frame": 89,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 90,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.163061493123086e-7
+    },
+    {
+      "frame": 90,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 91,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.124203134546775e-7
+    },
+    {
+      "frame": 91,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 92,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8664803461645544e-7
+    },
+    {
+      "frame": 92,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 93,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.676024910509547e-7
+    },
+    {
+      "frame": 93,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 94,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.198638556061935e-7
+    },
+    {
+      "frame": 94,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 95,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9454564959162937e-7
+    },
+    {
+      "frame": 95,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 96,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1368222563323263e-7
+    },
+    {
+      "frame": 96,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 97,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2653801454742734e-7
+    },
+    {
+      "frame": 97,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 98,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.660192102743509e-7
+    },
+    {
+      "frame": 98,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 99,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.965161178509033e-7
+    },
+    {
+      "frame": 99,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 100,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.593768419754263e-7
+    },
+    {
+      "frame": 100,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 101,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.173079715202296e-7
+    },
+    {
+      "frame": 101,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 102,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.270580838777119e-7
+    },
+    {
+      "frame": 102,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 103,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3238007633891284e-7
+    },
+    {
+      "frame": 103,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 104,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7533315617825705e-7
+    },
+    {
+      "frame": 104,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 105,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.29193537857598e-7
+    },
+    {
+      "frame": 105,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 106,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.221138801363498e-7
+    },
+    {
+      "frame": 106,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 107,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4579753485330844e-7
+    },
+    {
+      "frame": 107,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 108,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1763826020937836e-7
+    },
+    {
+      "frame": 108,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 109,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.356345022998085e-7
+    },
+    {
+      "frame": 109,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 110,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.039575119264954e-7
+    },
+    {
+      "frame": 110,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 111,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.439572905527095e-7
+    },
+    {
+      "frame": 111,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 112,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.220535629989815e-7
+    },
+    {
+      "frame": 112,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 113,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.726835831530304e-7
+    },
+    {
+      "frame": 113,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 114,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5090226310744926e-7
+    },
+    {
+      "frame": 114,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 115,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.495840307847464e-7
+    },
+    {
+      "frame": 115,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 116,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9815573057606625e-7
+    },
+    {
+      "frame": 116,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 117,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1156328408893176e-7
+    },
+    {
+      "frame": 117,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 118,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8487352517922493e-7
+    },
+    {
+      "frame": 118,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 119,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.336544405653763e-7
+    },
+    {
+      "frame": 119,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 120,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.557159157967174e-7
+    },
+    {
+      "frame": 120,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 121,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4938979977011695e-7
+    },
+    {
+      "frame": 121,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 122,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.463998573151466e-7
+    },
+    {
+      "frame": 122,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 123,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.372519897702385e-7
+    },
+    {
+      "frame": 123,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 124,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.35717404934019e-7
+    },
+    {
+      "frame": 124,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 125,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.452960677421351e-7
+    },
+    {
+      "frame": 125,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 126,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2141006084239467e-7
+    },
+    {
+      "frame": 126,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 127,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2097585387634595e-7
+    },
+    {
+      "frame": 127,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 128,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7973962622525015e-7
+    },
+    {
+      "frame": 128,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 129,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.163180119131052e-7
+    },
+    {
+      "frame": 129,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 130,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.961489379293083e-7
+    },
+    {
+      "frame": 130,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 131,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3293322311849175e-7
+    },
+    {
+      "frame": 131,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 132,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.945459800417613e-7
+    },
+    {
+      "frame": 132,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 133,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9356510825425064e-7
+    },
+    {
+      "frame": 133,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 134,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.042332030500104e-7
+    },
+    {
+      "frame": 134,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 135,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4758131502989174e-7
+    },
+    {
+      "frame": 135,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 136,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2637712454920053e-7
+    },
+    {
+      "frame": 136,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 137,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.677822391374788e-7
+    },
+    {
+      "frame": 137,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 138,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7503067693445967e-7
+    },
+    {
+      "frame": 138,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 139,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.679791303948262e-7
+    },
+    {
+      "frame": 139,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 140,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.774107920023493e-7
+    },
+    {
+      "frame": 140,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 141,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2229679600698436e-7
+    },
+    {
+      "frame": 141,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 142,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5139626571552154e-7
+    },
+    {
+      "frame": 142,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 143,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.228601865774675e-7
+    },
+    {
+      "frame": 143,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 144,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.655447185613944e-7
+    },
+    {
+      "frame": 144,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 145,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8268270417652045e-7
+    },
+    {
+      "frame": 145,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 146,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.9290436075105794e-7
+    },
+    {
+      "frame": 146,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 147,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6819019881488995e-7
+    },
+    {
+      "frame": 147,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 148,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.132313717808663e-7
+    },
+    {
+      "frame": 148,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 149,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.341121016971032e-7
+    },
+    {
+      "frame": 149,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 150,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.180663253976001e-7
+    },
+    {
+      "frame": 150,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 151,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2914905267019063e-7
+    },
+    {
+      "frame": 151,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 152,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2741590992406285e-7
+    },
+    {
+      "frame": 152,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 153,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.080589753235773e-7
+    },
+    {
+      "frame": 153,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 154,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.425038587751845e-7
+    },
+    {
+      "frame": 154,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 155,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.074146116385827e-7
+    },
+    {
+      "frame": 155,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 156,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3457057923868864e-7
+    },
+    {
+      "frame": 156,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 157,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.341616129914628e-7
+    },
+    {
+      "frame": 157,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 158,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4912237500398797e-7
+    },
+    {
+      "frame": 158,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 159,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.092489022600415e-7
+    },
+    {
+      "frame": 159,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 160,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.943758491287237e-7
+    },
+    {
+      "frame": 160,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 161,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.390905829373696e-7
+    },
+    {
+      "frame": 161,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 162,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6623740964796353e-7
+    },
+    {
+      "frame": 162,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 163,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.409596138043771e-7
+    },
+    {
+      "frame": 163,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 164,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.037800130298959e-7
+    },
+    {
+      "frame": 164,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 165,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9157634056904116e-7
+    },
+    {
+      "frame": 165,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 166,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.013213100121479e-7
+    },
+    {
+      "frame": 166,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 167,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7905350195232554e-7
+    },
+    {
+      "frame": 167,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 168,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.816363084037612e-7
+    },
+    {
+      "frame": 168,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 169,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1854722948323675e-7
+    },
+    {
+      "frame": 169,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.67356421799032e-7
+    },
+    {
+      "frame": 170,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9966905907474093e-7
+    },
+    {
+      "frame": 170,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5838049199290306e-7
+    },
+    {
+      "frame": 171,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.618000914928127e-7
+    },
+    {
+      "frame": 171,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.774743091081016e-7
+    },
+    {
+      "frame": 172,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.283395030800434e-7
+    },
+    {
+      "frame": 172,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8958635723399834e-7
+    },
+    {
+      "frame": 173,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5245839695583806e-7
+    },
+    {
+      "frame": 173,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5607484545379152e-7
+    },
+    {
+      "frame": 174,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.64142564026084e-7
+    },
+    {
+      "frame": 174,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8352373557007124e-7
+    },
+    {
+      "frame": 175,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.153878554772059e-7
+    },
+    {
+      "frame": 175,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.509456252094123e-7
+    },
+    {
+      "frame": 176,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5478810789540613e-7
+    },
+    {
+      "frame": 176,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6551774916974122e-7
+    },
+    {
+      "frame": 177,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.473271458262612e-7
+    },
+    {
+      "frame": 177,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5374657379039783e-7
+    },
+    {
+      "frame": 178,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.786168908726648e-7
+    },
+    {
+      "frame": 178,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.497670273017999e-7
+    },
+    {
+      "frame": 179,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6162940963710495e-7
+    },
+    {
+      "frame": 179,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4845504929018272e-7
+    },
+    {
+      "frame": 180,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.6213756885102973e-7
+    },
+    {
+      "frame": 180,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7808890362486602e-7
+    },
+    {
+      "frame": 181,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.638720684648995e-7
+    },
+    {
+      "frame": 181,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.815500719354646e-7
+    },
+    {
+      "frame": 182,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.454869820314033e-7
+    },
+    {
+      "frame": 182,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.962368998130727e-7
+    },
+    {
+      "frame": 183,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8091954286454565e-7
+    },
+    {
+      "frame": 183,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5435593386885297e-7
+    },
+    {
+      "frame": 184,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8071352729958974e-7
+    },
+    {
+      "frame": 184,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7729228768361052e-7
+    },
+    {
+      "frame": 185,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7027176540940585e-7
+    },
+    {
+      "frame": 185,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7642869676325433e-7
+    },
+    {
+      "frame": 186,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.379576694585026e-7
+    },
+    {
+      "frame": 186,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.0323611001398249e-7
+    },
+    {
+      "frame": 187,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.3964276868369993e-7
+    },
+    {
+      "frame": 187,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.2442268926117814e-7
+    },
+    {
+      "frame": 188,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4640074929721936e-7
+    },
+    {
+      "frame": 188,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6432954585677336e-7
+    },
+    {
+      "frame": 189,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4932310391751365e-7
+    },
+    {
+      "frame": 189,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7593357633393481e-7
+    },
+    {
+      "frame": 190,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3109283130061086e-7
+    },
+    {
+      "frame": 190,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6103700798591836e-7
+    },
+    {
+      "frame": 191,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8801630176509176e-7
+    },
+    {
+      "frame": 191,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.939308473928541e-7
+    },
+    {
+      "frame": 192,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.477164134185333e-7
+    },
+    {
+      "frame": 192,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.02108479631051e-7
+    },
+    {
+      "frame": 193,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9860761260279446e-7
+    },
+    {
+      "frame": 193,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9946865754372127e-7
+    },
+    {
+      "frame": 194,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.445673391208414e-7
+    },
+    {
+      "frame": 194,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4710577412189801e-7
+    },
+    {
+      "frame": 195,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7647392792645445e-7
+    },
+    {
+      "frame": 195,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.993733856804539e-7
+    },
+    {
+      "frame": 196,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0109748223563857e-7
+    },
+    {
+      "frame": 196,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8476111339433329e-7
+    },
+    {
+      "frame": 197,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8054783792764915e-7
+    },
+    {
+      "frame": 197,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.80975706323446e-7
+    },
+    {
+      "frame": 198,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3081621656216923e-7
+    },
+    {
+      "frame": 198,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5864638455238528e-7
+    },
+    {
+      "frame": 199,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7852313009261417e-7
+    },
+    {
+      "frame": 199,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8451028739656628e-7
+    },
+    {
+      "frame": 200,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.4048690602327927e-7
+    },
+    {
+      "frame": 200,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8876596361177906e-7
+    },
+    {
+      "frame": 201,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.721170018220714e-7
+    },
+    {
+      "frame": 201,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.1940543558261516e-7
+    },
+    {
+      "frame": 202,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.641797270499869e-7
+    },
+    {
+      "frame": 202,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8505143124410842e-7
+    },
+    {
+      "frame": 203,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.110125331195267e-7
+    },
+    {
+      "frame": 203,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.899878913805247e-7
+    },
+    {
+      "frame": 204,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.743739381339718e-7
+    },
+    {
+      "frame": 204,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.642204607335202e-7
+    },
+    {
+      "frame": 205,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.244609849455029e-7
+    },
+    {
+      "frame": 205,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9521150710326634e-7
+    },
+    {
+      "frame": 206,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8922863645366516e-7
+    },
+    {
+      "frame": 206,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6156883263967884e-7
+    },
+    {
+      "frame": 207,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7358932054352185e-7
+    },
+    {
+      "frame": 207,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7534848676799136e-7
+    },
+    {
+      "frame": 208,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.526545071925291e-7
+    },
+    {
+      "frame": 208,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8472808735194201e-7
+    },
+    {
+      "frame": 209,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.455637515083971e-7
+    },
+    {
+      "frame": 209,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8426057259622164e-7
+    },
+    {
+      "frame": 210,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2231380232555987e-7
+    },
+    {
+      "frame": 210,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.941123722327608e-7
+    },
+    {
+      "frame": 211,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0757247174275944e-7
+    },
+    {
+      "frame": 211,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6878671037204066e-7
+    },
+    {
+      "frame": 212,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7945562911891634e-7
+    },
+    {
+      "frame": 212,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.033744231423339e-7
+    },
+    {
+      "frame": 213,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.95882668307575e-7
+    },
+    {
+      "frame": 213,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4702707202251827e-7
+    },
+    {
+      "frame": 214,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6369928574716766e-7
+    },
+    {
+      "frame": 214,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5782781638976843e-7
+    },
+    {
+      "frame": 215,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.054664829494575e-7
+    },
+    {
+      "frame": 215,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.708040208015764e-7
+    },
+    {
+      "frame": 216,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8723360296425866e-7
+    },
+    {
+      "frame": 216,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.988540121257344e-7
+    },
+    {
+      "frame": 217,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1222150077487624e-7
+    },
+    {
+      "frame": 217,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.728968698495902e-7
+    },
+    {
+      "frame": 218,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7611184489535233e-7
+    },
+    {
+      "frame": 218,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5223075766160317e-7
+    },
+    {
+      "frame": 219,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6925437741249133e-7
+    },
+    {
+      "frame": 219,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6294695149164904e-7
+    },
+    {
+      "frame": 220,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.862048496519155e-7
+    },
+    {
+      "frame": 220,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8502434760881233e-7
+    },
+    {
+      "frame": 221,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7375154649224014e-7
+    },
+    {
+      "frame": 221,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5945407210519648e-7
+    },
+    {
+      "frame": 222,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9044728381647216e-7
+    },
+    {
+      "frame": 222,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7461441924344176e-7
+    },
+    {
+      "frame": 223,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7403363401267566e-7
+    },
+    {
+      "frame": 223,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.990522081465234e-7
+    },
+    {
+      "frame": 224,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8581720455801294e-7
+    },
+    {
+      "frame": 224,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6552380999617379e-7
+    },
+    {
+      "frame": 225,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.9938503814522245e-7
+    },
+    {
+      "frame": 225,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6968188532253358e-7
+    },
+    {
+      "frame": 226,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.159427790412039e-7
+    },
+    {
+      "frame": 226,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.3881179348273705e-7
+    },
+    {
+      "frame": 227,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4951719896849453e-7
+    },
+    {
+      "frame": 227,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9726764369593851e-7
+    },
+    {
+      "frame": 228,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.14480574954023e-7
+    },
+    {
+      "frame": 228,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8503140374855943e-7
+    },
+    {
+      "frame": 229,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.959213950911632e-7
+    },
+    {
+      "frame": 229,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.0166819886897473e-7
+    },
+    {
+      "frame": 230,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7238199642913303e-7
+    },
+    {
+      "frame": 230,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.485412282183064e-7
+    },
+    {
+      "frame": 231,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.261951245784207e-7
+    },
+    {
+      "frame": 231,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7633466291608674e-7
+    },
+    {
+      "frame": 232,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4098081752445223e-7
+    },
+    {
+      "frame": 232,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.227445013943645e-7
+    },
+    {
+      "frame": 233,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1116217269589244e-7
+    },
+    {
+      "frame": 233,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9111556543034712e-7
+    },
+    {
+      "frame": 234,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.6565027177180856e-7
+    },
+    {
+      "frame": 234,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.493662850424496e-7
+    },
+    {
+      "frame": 235,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.453908590334783e-7
+    },
+    {
+      "frame": 235,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.741286133021559e-7
+    },
+    {
+      "frame": 236,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.187993265572097e-7
+    },
+    {
+      "frame": 236,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7247895456759412e-7
+    },
+    {
+      "frame": 237,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.592141748490011e-7
+    },
+    {
+      "frame": 237,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.990934190160191e-7
+    },
+    {
+      "frame": 238,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1983705091659355e-7
+    },
+    {
+      "frame": 238,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.083516780459688e-7
+    },
+    {
+      "frame": 239,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9174241275101256e-7
+    },
+    {
+      "frame": 239,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.614158442920174e-7
+    },
+    {
+      "frame": 240,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.4832692637414956e-7
+    },
+    {
+      "frame": 240,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9073421386438584e-7
+    },
+    {
+      "frame": 241,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.751977782910332e-7
+    },
+    {
+      "frame": 241,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8668201125727886e-7
+    },
+    {
+      "frame": 242,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.433024001600568e-7
+    },
+    {
+      "frame": 242,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6574723148214206e-7
+    },
+    {
+      "frame": 243,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.212857553826731e-7
+    },
+    {
+      "frame": 243,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9056888426952736e-7
+    },
+    {
+      "frame": 244,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.470213893545918e-7
+    },
+    {
+      "frame": 244,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.511324484508038e-7
+    },
+    {
+      "frame": 245,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.308804420914378e-7
+    },
+    {
+      "frame": 245,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8495452192730638e-7
+    },
+    {
+      "frame": 246,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4801572057691e-7
+    },
+    {
+      "frame": 246,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4717198776736063e-7
+    },
+    {
+      "frame": 247,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.4328481839334437e-7
+    },
+    {
+      "frame": 247,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.0420190698903283e-7
+    },
+    {
+      "frame": 248,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.544797711121031e-7
+    },
+    {
+      "frame": 248,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9840598001453036e-7
+    },
+    {
+      "frame": 249,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3990821554120933e-7
+    },
+    {
+      "frame": 249,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.649468353936853e-7
+    },
+    {
+      "frame": 250,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8301176105974295e-7
+    },
+    {
+      "frame": 250,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4928395767785133e-7
+    },
+    {
+      "frame": 251,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.05975493474214e-7
+    },
+    {
+      "frame": 251,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.961176966693283e-7
+    },
+    {
+      "frame": 252,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7715518858159986e-7
+    },
+    {
+      "frame": 252,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7422813474148393e-7
+    },
+    {
+      "frame": 253,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.83445564359506e-7
+    },
+    {
+      "frame": 253,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9282946769277148e-7
+    },
+    {
+      "frame": 254,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2051040545642364e-7
+    },
+    {
+      "frame": 254,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7919526026801134e-7
+    },
+    {
+      "frame": 255,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2595352017846496e-7
+    },
+    {
+      "frame": 255,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7106063958174018e-7
+    },
+    {
+      "frame": 256,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.623537271654972e-7
+    },
+    {
+      "frame": 256,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7284686548556468e-7
+    },
+    {
+      "frame": 257,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.509791536667583e-7
+    },
+    {
+      "frame": 257,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6023252198885378e-7
+    },
+    {
+      "frame": 258,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.91382264463615e-7
+    },
+    {
+      "frame": 258,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9241156522301298e-7
+    },
+    {
+      "frame": 259,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5708761620700083e-7
+    },
+    {
+      "frame": 259,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8067855846334493e-7
+    },
+    {
+      "frame": 260,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4768509390225775e-7
+    },
+    {
+      "frame": 260,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6541250823507794e-7
+    },
+    {
+      "frame": 261,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.114678941401841e-7
+    },
+    {
+      "frame": 261,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.866222638828094e-7
+    },
+    {
+      "frame": 262,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.483450986112438e-7
+    },
+    {
+      "frame": 262,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9016449121618114e-7
+    },
+    {
+      "frame": 263,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.04519323025289e-7
+    },
+    {
+      "frame": 263,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6727926484256583e-7
+    },
+    {
+      "frame": 264,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0963231153292684e-7
+    },
+    {
+      "frame": 264,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 265,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.80322046879722e-7
+    },
+    {
+      "frame": 265,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.0041029451295774e-7
+    },
+    {
+      "frame": 266,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.828038271008146e-7
+    },
+    {
+      "frame": 266,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9354331944710702e-7
+    },
+    {
+      "frame": 267,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.114678941401841e-7
+    },
+    {
+      "frame": 267,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.866222638828094e-7
+    },
+    {
+      "frame": 268,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.489722149202072e-7
+    },
+    {
+      "frame": 268,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7810672108457888e-7
+    },
+    {
+      "frame": 269,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.570871595953195e-7
+    },
+    {
+      "frame": 269,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8067855846334493e-7
+    },
+    {
+      "frame": 270,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.91382264463615e-7
+    },
+    {
+      "frame": 270,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9241156522301298e-7
+    },
+    {
+      "frame": 271,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.591627171174428e-7
+    },
+    {
+      "frame": 271,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7128353941130873e-7
+    },
+    {
+      "frame": 272,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.16471010388351e-7
+    },
+    {
+      "frame": 272,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6464724361402812e-7
+    },
+    {
+      "frame": 273,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2595352017846496e-7
+    },
+    {
+      "frame": 273,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7106063958174018e-7
+    },
+    {
+      "frame": 274,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.753960916022829e-7
+    },
+    {
+      "frame": 274,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.793102528496513e-7
+    },
+    {
+      "frame": 275,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8848082939657144e-7
+    },
+    {
+      "frame": 275,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.936311497480916e-7
+    },
+    {
+      "frame": 276,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7715518858159986e-7
+    },
+    {
+      "frame": 276,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7422813474148393e-7
+    },
+    {
+      "frame": 277,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.104291621626954e-7
+    },
+    {
+      "frame": 277,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.774809752850793e-7
+    },
+    {
+      "frame": 278,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2248741990914395e-7
+    },
+    {
+      "frame": 278,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5138264707449797e-7
+    },
+    {
+      "frame": 279,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3990821554120933e-7
+    },
+    {
+      "frame": 279,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.649468353936853e-7
+    },
+    {
+      "frame": 280,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8803618625500066e-7
+    },
+    {
+      "frame": 280,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.793969059197217e-7
+    },
+    {
+      "frame": 281,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.930391727386366e-7
+    },
+    {
+      "frame": 281,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7327533624539793e-7
+    },
+    {
+      "frame": 282,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4801572057691e-7
+    },
+    {
+      "frame": 282,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4717198776736063e-7
+    },
+    {
+      "frame": 283,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.308804420914378e-7
+    },
+    {
+      "frame": 283,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8495452192730638e-7
+    },
+    {
+      "frame": 284,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.020768821260836e-7
+    },
+    {
+      "frame": 284,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5744646567535637e-7
+    },
+    {
+      "frame": 285,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.212857553826731e-7
+    },
+    {
+      "frame": 285,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9056888426952736e-7
+    },
+    {
+      "frame": 286,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.840868717066357e-7
+    },
+    {
+      "frame": 286,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6576817408691585e-7
+    },
+    {
+      "frame": 287,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7519942455588724e-7
+    },
+    {
+      "frame": 287,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8668201125727886e-7
+    },
+    {
+      "frame": 288,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.4832692637414956e-7
+    },
+    {
+      "frame": 288,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9073421386438584e-7
+    },
+    {
+      "frame": 289,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.373494065640405e-7
+    },
+    {
+      "frame": 289,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.614158442920174e-7
+    },
+    {
+      "frame": 290,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.116762537690296e-7
+    },
+    {
+      "frame": 290,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7643824117977796e-7
+    },
+    {
+      "frame": 291,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.592141748490011e-7
+    },
+    {
+      "frame": 291,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.990934190160191e-7
+    },
+    {
+      "frame": 292,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.864753628601534e-7
+    },
+    {
+      "frame": 292,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9901905534578156e-7
+    },
+    {
+      "frame": 293,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.548275652614044e-7
+    },
+    {
+      "frame": 293,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.741286133021559e-7
+    },
+    {
+      "frame": 294,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.6565027177180856e-7
+    },
+    {
+      "frame": 294,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.493662850424496e-7
+    },
+    {
+      "frame": 295,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.10032646233262e-7
+    },
+    {
+      "frame": 295,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7151617350956015e-7
+    },
+    {
+      "frame": 296,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3875334024725456e-7
+    },
+    {
+      "frame": 296,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6524279360183492e-7
+    },
+    {
+      "frame": 297,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.261951245784207e-7
+    },
+    {
+      "frame": 297,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7633466291608674e-7
+    },
+    {
+      "frame": 298,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4752001108371726e-7
+    },
+    {
+      "frame": 298,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.036081127421904e-7
+    },
+    {
+      "frame": 299,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.969206468633412e-7
+    },
+    {
+      "frame": 299,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9224542474271122e-7
+    },
+    {
+      "frame": 300,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.14480574954023e-7
+    },
+    {
+      "frame": 300,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8503140374855943e-7
+    },
+    {
+      "frame": 301,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4713754959117307e-7
+    },
+    {
+      "frame": 301,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4477142813400743e-7
+    },
+    {
+      "frame": 302,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9062319621351603e-7
+    },
+    {
+      "frame": 302,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.725558765208693e-7
+    },
+    {
+      "frame": 303,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.9938503814522245e-7
+    },
+    {
+      "frame": 303,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6968188532253358e-7
+    },
+    {
+      "frame": 304,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.914275175017707e-7
+    },
+    {
+      "frame": 304,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8354209572485211e-7
+    },
+    {
+      "frame": 305,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.086771841646169e-7
+    },
+    {
+      "frame": 305,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.714849395519882e-7
+    },
+    {
+      "frame": 306,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9044728381647216e-7
+    },
+    {
+      "frame": 306,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7461441924344176e-7
+    },
+    {
+      "frame": 307,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7375154649224014e-7
+    },
+    {
+      "frame": 307,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9548645432377028e-7
+    },
+    {
+      "frame": 308,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.681210657247666e-7
+    },
+    {
+      "frame": 308,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.931976775602119e-7
+    },
+    {
+      "frame": 309,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6925437741249133e-7
+    },
+    {
+      "frame": 309,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6294695149164904e-7
+    },
+    {
+      "frame": 310,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.948124391903259e-7
+    },
+    {
+      "frame": 310,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.907305840621636e-7
+    },
+    {
+      "frame": 311,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7721252613444693e-7
+    },
+    {
+      "frame": 311,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5847236843430937e-7
+    },
+    {
+      "frame": 312,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8723360296425866e-7
+    },
+    {
+      "frame": 312,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.988540121257344e-7
+    },
+    {
+      "frame": 313,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1801994327426666e-7
+    },
+    {
+      "frame": 313,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5388373106375086e-7
+    },
+    {
+      "frame": 314,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.349599907444735e-7
+    },
+    {
+      "frame": 314,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.611404452643564e-7
+    },
+    {
+      "frame": 315,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.95882668307575e-7
+    },
+    {
+      "frame": 315,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.4702707202251827e-7
+    },
+    {
+      "frame": 316,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.467218582180051e-7
+    },
+    {
+      "frame": 316,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.033744231423339e-7
+    },
+    {
+      "frame": 317,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0747872883653073e-7
+    },
+    {
+      "frame": 317,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.689616957624648e-7
+    },
+    {
+      "frame": 318,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2231380232555987e-7
+    },
+    {
+      "frame": 318,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.941123722327608e-7
+    },
+    {
+      "frame": 319,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.576554047173442e-7
+    },
+    {
+      "frame": 319,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9799720813627504e-7
+    },
+    {
+      "frame": 320,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.5266896637213557e-7
+    },
+    {
+      "frame": 320,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.71759282162168e-7
+    },
+    {
+      "frame": 321,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7358932054352185e-7
+    },
+    {
+      "frame": 321,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7534848676799136e-7
+    },
+    {
+      "frame": 322,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.021929022999953e-7
+    },
+    {
+      "frame": 322,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7042456069176798e-7
+    },
+    {
+      "frame": 323,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5546699827999813e-7
+    },
+    {
+      "frame": 323,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.964594040209428e-7
+    },
+    {
+      "frame": 324,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.743739381339718e-7
+    },
+    {
+      "frame": 324,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.642204607335202e-7
+    },
+    {
+      "frame": 325,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.853264700666278e-7
+    },
+    {
+      "frame": 325,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.620772864665426e-7
+    },
+    {
+      "frame": 326,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.6416070525226634e-7
+    },
+    {
+      "frame": 326,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6587158987442097e-7
+    },
+    {
+      "frame": 327,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.721170018220714e-7
+    },
+    {
+      "frame": 327,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.1940543558261516e-7
+    },
+    {
+      "frame": 328,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.4049699069500794e-7
+    },
+    {
+      "frame": 328,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8940539771666632e-7
+    },
+    {
+      "frame": 329,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.924729109041525e-7
+    },
+    {
+      "frame": 329,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7456082228472056e-7
+    },
+    {
+      "frame": 330,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3081621656216923e-7
+    },
+    {
+      "frame": 330,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5864638455238528e-7
+    },
+    {
+      "frame": 331,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9876714248872814e-7
+    },
+    {
+      "frame": 331,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.80975706323446e-7
+    },
+    {
+      "frame": 332,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3341076980176174e-7
+    },
+    {
+      "frame": 332,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8476111339433329e-7
+    },
+    {
+      "frame": 333,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.7647392792645445e-7
+    },
+    {
+      "frame": 333,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.993733856804539e-7
+    },
+    {
+      "frame": 334,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.137312345293502e-7
+    },
+    {
+      "frame": 334,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5784016772233753e-7
+    },
+    {
+      "frame": 335,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9664984329567354e-7
+    },
+    {
+      "frame": 335,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.0671719784849176e-7
+    },
+    {
+      "frame": 336,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.477164134185333e-7
+    },
+    {
+      "frame": 336,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.02108479631051e-7
+    },
+    {
+      "frame": 337,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.952380730912969e-7
+    },
+    {
+      "frame": 337,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7414831049353607e-7
+    },
+    {
+      "frame": 338,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.120030579996543e-7
+    },
+    {
+      "frame": 338,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7277173082750392e-7
+    },
+    {
+      "frame": 339,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4932310391751365e-7
+    },
+    {
+      "frame": 339,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7593357633393481e-7
+    },
+    {
+      "frame": 340,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8749917376496717e-7
+    },
+    {
+      "frame": 340,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6432954585677336e-7
+    },
+    {
+      "frame": 341,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.418983856720441e-7
+    },
+    {
+      "frame": 341,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.2442268926117814e-7
+    },
+    {
+      "frame": 342,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.379576694585026e-7
+    },
+    {
+      "frame": 342,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 2.0323611001398249e-7
+    },
+    {
+      "frame": 343,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.703037217793383e-7
+    },
+    {
+      "frame": 343,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.46535764758493e-7
+    },
+    {
+      "frame": 344,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.752228189380497e-7
+    },
+    {
+      "frame": 344,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8158404058423418e-7
+    },
+    {
+      "frame": 345,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8091954286454565e-7
+    },
+    {
+      "frame": 345,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5435593386885297e-7
+    },
+    {
+      "frame": 346,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8352720538432995e-7
+    },
+    {
+      "frame": 346,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5742703856824233e-7
+    },
+    {
+      "frame": 347,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9563731763132693e-7
+    },
+    {
+      "frame": 347,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.9166465489227486e-7
+    },
+    {
+      "frame": 348,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.6213756885102973e-7
+    },
+    {
+      "frame": 348,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7808890362486602e-7
+    },
+    {
+      "frame": 349,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.600134195355604e-7
+    },
+    {
+      "frame": 349,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.486214725120561e-7
+    },
+    {
+      "frame": 350,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.6564876746363256e-7
+    },
+    {
+      "frame": 350,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.7509083702489393e-7
+    },
+    {
+      "frame": 351,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.473271458262612e-7
+    },
+    {
+      "frame": 351,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.5374657379039783e-7
+    },
+    {
+      "frame": 352,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.574679314589711e-7
+    },
+    {
+      "frame": 352,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.581773290848058e-7
+    },
+    {
+      "frame": 353,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3782424503870584e-7
+    },
+    {
+      "frame": 353,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.6922419129690856e-7
+    },
+    {
+      "frame": 354,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.64142564026084e-7
+    },
+    {
+      "frame": 354,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8352373557007124e-7
+    },
+    {
+      "frame": 355,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.167767829470324e-7
+    },
+    {
+      "frame": 355,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.663454014032013e-7
+    },
+    {
+      "frame": 356,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.764507276893823e-7
+    },
+    {
+      "frame": 356,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.718344419718509e-7
+    },
+    {
+      "frame": 357,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.618000914928127e-7
+    },
+    {
+      "frame": 357,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.774743091081016e-7
+    },
+    {
+      "frame": 358,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.921259997435578e-7
+    },
+    {
+      "frame": 358,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.714974188577128e-7
+    },
+    {
+      "frame": 359,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.805351055616505e-7
+    },
+    {
+      "frame": 359,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.665798535757178e-7
+    },
+    {
+      "frame": 360,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.816363084037612e-7
+    },
+    {
+      "frame": 360,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 361,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2492318251533164e-7
+    },
+    {
+      "frame": 361,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 362,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4825760099617205e-7
+    },
+    {
+      "frame": 362,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 363,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9157634056904116e-7
+    },
+    {
+      "frame": 363,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 364,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0342256014373426e-7
+    },
+    {
+      "frame": 364,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 365,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4087602785143625e-7
+    },
+    {
+      "frame": 365,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 366,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6623740964796353e-7
+    },
+    {
+      "frame": 366,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 367,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4148156867995833e-7
+    },
+    {
+      "frame": 367,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 368,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3086748646929504e-7
+    },
+    {
+      "frame": 368,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 369,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.092489022600415e-7
+    },
+    {
+      "frame": 369,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 370,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5863942021007693e-7
+    },
+    {
+      "frame": 370,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 371,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.346355099256889e-7
+    },
+    {
+      "frame": 371,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 372,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3457057923868864e-7
+    },
+    {
+      "frame": 372,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 373,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4001831238250977e-7
+    },
+    {
+      "frame": 373,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 374,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.750774732271084e-7
+    },
+    {
+      "frame": 374,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 375,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.080589753235773e-7
+    },
+    {
+      "frame": 375,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 376,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2739640575315e-7
+    },
+    {
+      "frame": 376,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 377,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2896482993830524e-7
+    },
+    {
+      "frame": 377,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 378,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.180663253976001e-7
+    },
+    {
+      "frame": 378,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 379,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.289818841367933e-7
+    },
+    {
+      "frame": 379,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 380,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1317877384952815e-7
+    },
+    {
+      "frame": 380,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 381,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6819019881488995e-7
+    },
+    {
+      "frame": 381,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 382,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2107890586337275e-7
+    },
+    {
+      "frame": 382,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 383,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.55427200813948e-7
+    },
+    {
+      "frame": 383,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 384,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.655447185613944e-7
+    },
+    {
+      "frame": 384,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 385,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.993649510960229e-7
+    },
+    {
+      "frame": 385,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 386,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.788707940685274e-7
+    },
+    {
+      "frame": 386,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 387,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2229679600698436e-7
+    },
+    {
+      "frame": 387,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 388,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.804853062945943e-7
+    },
+    {
+      "frame": 388,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 389,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.679791329319418e-7
+    },
+    {
+      "frame": 389,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 390,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7503067693445967e-7
+    },
+    {
+      "frame": 390,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 391,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.634458404399839e-7
+    },
+    {
+      "frame": 391,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 392,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.261479957423308e-7
+    },
+    {
+      "frame": 392,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 393,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4758131502989174e-7
+    },
+    {
+      "frame": 393,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 394,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7615396074748154e-7
+    },
+    {
+      "frame": 394,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 395,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.868929408606199e-7
+    },
+    {
+      "frame": 395,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 396,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.945459800417613e-7
+    },
+    {
+      "frame": 396,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 397,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3280358267617765e-7
+    },
+    {
+      "frame": 397,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 398,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5880240945542687e-7
+    },
+    {
+      "frame": 398,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 399,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.163180119131052e-7
+    },
+    {
+      "frame": 399,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 400,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.966510590897577e-7
+    },
+    {
+      "frame": 400,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 401,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4666312721311706e-7
+    },
+    {
+      "frame": 401,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 402,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2141006084239467e-7
+    },
+    {
+      "frame": 402,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 403,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0596971323280446e-7
+    },
+    {
+      "frame": 403,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 404,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1828739039418185e-7
+    },
+    {
+      "frame": 404,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 405,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.372519897702385e-7
+    },
+    {
+      "frame": 405,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 406,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4645153080632086e-7
+    },
+    {
+      "frame": 406,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 407,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.493874904144837e-7
+    },
+    {
+      "frame": 407,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 408,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.557159157967174e-7
+    },
+    {
+      "frame": 408,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 409,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3385145682295834e-7
+    },
+    {
+      "frame": 409,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 410,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8245563458779353e-7
+    },
+    {
+      "frame": 410,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 411,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1156328408893176e-7
+    },
+    {
+      "frame": 411,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 412,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.965526229435703e-7
+    },
+    {
+      "frame": 412,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 413,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.493941907766518e-7
+    },
+    {
+      "frame": 413,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 414,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5090226310744926e-7
+    },
+    {
+      "frame": 414,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 415,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.102151092840402e-7
+    },
+    {
+      "frame": 415,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 416,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.816514353471542e-7
+    },
+    {
+      "frame": 416,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 417,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.439572905527095e-7
+    },
+    {
+      "frame": 417,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 418,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.433219797068754e-7
+    },
+    {
+      "frame": 418,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 419,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3755819143234146e-7
+    },
+    {
+      "frame": 419,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 420,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1763826020937836e-7
+    },
+    {
+      "frame": 420,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 421,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4563275429577675e-7
+    },
+    {
+      "frame": 421,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 422,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.226871010198398e-7
+    },
+    {
+      "frame": 422,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 423,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.29193537857598e-7
+    },
+    {
+      "frame": 423,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 424,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.756790318512383e-7
+    },
+    {
+      "frame": 424,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 425,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.195182160597527e-7
+    },
+    {
+      "frame": 425,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 426,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.270580838777119e-7
+    },
+    {
+      "frame": 426,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 427,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.18059819226248e-7
+    },
+    {
+      "frame": 427,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 428,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.325834778405434e-7
+    },
+    {
+      "frame": 428,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 429,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.965161178509033e-7
+    },
+    {
+      "frame": 429,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 430,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.980541446619952e-7
+    },
+    {
+      "frame": 430,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 431,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3976523338571635e-7
+    },
+    {
+      "frame": 431,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 432,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1368222563323263e-7
+    },
+    {
+      "frame": 432,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 433,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.9472991989677646e-7
+    },
+    {
+      "frame": 433,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 434,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1991227666408056e-7
+    },
+    {
+      "frame": 434,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 435,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.676024910509547e-7
+    },
+    {
+      "frame": 435,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 436,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8662783246509233e-7
+    },
+    {
+      "frame": 436,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 437,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.124203134546775e-7
+    },
+    {
+      "frame": 437,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 438,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.163061493123086e-7
+    },
+    {
+      "frame": 438,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 439,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2499957672183603e-7
+    },
+    {
+      "frame": 439,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 440,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2327892619256716e-7
+    },
+    {
+      "frame": 440,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 441,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.253684828620781e-7
+    },
+    {
+      "frame": 441,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 442,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0626945764344523e-7
+    },
+    {
+      "frame": 442,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 443,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.199541292574896e-7
+    },
+    {
+      "frame": 443,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 444,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.385321757417231e-7
+    },
+    {
+      "frame": 444,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 445,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.762285008866737e-7
+    },
+    {
+      "frame": 445,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 446,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.515248660557485e-7
+    },
+    {
+      "frame": 446,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 447,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.469595198137269e-7
+    },
+    {
+      "frame": 447,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 448,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.210454937688375e-7
+    },
+    {
+      "frame": 448,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 449,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.015079984983268e-7
+    },
+    {
+      "frame": 449,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 450,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8664457892767055e-7
+    },
+    {
+      "frame": 450,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 451,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.504830504052579e-7
+    },
+    {
+      "frame": 451,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 452,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4951210518001845e-7
+    },
+    {
+      "frame": 452,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 453,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.063752116188453e-7
+    },
+    {
+      "frame": 453,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 454,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4038475621445363e-7
+    },
+    {
+      "frame": 454,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 455,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.649068944320303e-7
+    },
+    {
+      "frame": 455,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 456,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2343190585205136e-7
+    },
+    {
+      "frame": 456,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 457,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8169469767748514e-7
+    },
+    {
+      "frame": 457,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 458,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.234496992860443e-7
+    },
+    {
+      "frame": 458,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 459,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.793375454225828e-7
+    },
+    {
+      "frame": 459,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 460,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.896245760360107e-7
+    },
+    {
+      "frame": 460,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 461,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6652911038904074e-7
+    },
+    {
+      "frame": 461,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 462,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.194682493718043e-7
+    },
+    {
+      "frame": 462,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 463,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1267974664938384e-7
+    },
+    {
+      "frame": 463,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 464,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.075896410170777e-7
+    },
+    {
+      "frame": 464,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 465,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6208171135933105e-7
+    },
+    {
+      "frame": 465,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 466,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.997160969943272e-7
+    },
+    {
+      "frame": 466,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 467,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4666670587077976e-7
+    },
+    {
+      "frame": 467,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 468,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.1013763220016446e-7
+    },
+    {
+      "frame": 468,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 469,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 4.182230240789188e-7
+    },
+    {
+      "frame": 469,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 470,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.100447655826798e-7
+    },
+    {
+      "frame": 470,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 471,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.124974468029892e-7
+    },
+    {
+      "frame": 471,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 472,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.294266773588803e-7
+    },
+    {
+      "frame": 472,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 473,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0845213911381366e-7
+    },
+    {
+      "frame": 473,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 474,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5711590451902333e-7
+    },
+    {
+      "frame": 474,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 475,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.587645309245334e-7
+    },
+    {
+      "frame": 475,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 476,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.288439956787095e-7
+    },
+    {
+      "frame": 476,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 477,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.813276167992444e-7
+    },
+    {
+      "frame": 477,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 478,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.196941607101674e-7
+    },
+    {
+      "frame": 478,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 479,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.648478920628769e-7
+    },
+    {
+      "frame": 479,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 480,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5365393597355063e-7
+    },
+    {
+      "frame": 480,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 481,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.079024863409734e-7
+    },
+    {
+      "frame": 481,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 482,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.648500460476082e-7
+    },
+    {
+      "frame": 482,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 483,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0086843364857143e-7
+    },
+    {
+      "frame": 483,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 484,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2548280778652784e-7
+    },
+    {
+      "frame": 484,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 485,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.047230392984793e-7
+    },
+    {
+      "frame": 485,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 486,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4953174055987024e-7
+    },
+    {
+      "frame": 486,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 487,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.238343562396078e-7
+    },
+    {
+      "frame": 487,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 488,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4793126906015333e-7
+    },
+    {
+      "frame": 488,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 489,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6631767076276956e-7
+    },
+    {
+      "frame": 489,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 490,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.801670261600728e-7
+    },
+    {
+      "frame": 490,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 491,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.194460732865907e-7
+    },
+    {
+      "frame": 491,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 492,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3543153644421864e-7
+    },
+    {
+      "frame": 492,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 493,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7230452005490696e-7
+    },
+    {
+      "frame": 493,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 494,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5789868605178563e-7
+    },
+    {
+      "frame": 494,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 495,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.750325106000268e-7
+    },
+    {
+      "frame": 495,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 496,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5032554555780585e-7
+    },
+    {
+      "frame": 496,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 497,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.288457537554317e-7
+    },
+    {
+      "frame": 497,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 498,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.886913647286831e-7
+    },
+    {
+      "frame": 498,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 499,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.072532690560668e-7
+    },
+    {
+      "frame": 499,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 500,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.052586067227234e-7
+    },
+    {
+      "frame": 500,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 501,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7917096021665855e-7
+    },
+    {
+      "frame": 501,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 502,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.82899904037149e-7
+    },
+    {
+      "frame": 502,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 503,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.649358575396817e-7
+    },
+    {
+      "frame": 503,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 504,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.274015074176281e-7
+    },
+    {
+      "frame": 504,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 505,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4347562928419213e-7
+    },
+    {
+      "frame": 505,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 506,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.8016586428123455e-7
+    },
+    {
+      "frame": 506,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 507,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.545111137593065e-7
+    },
+    {
+      "frame": 507,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 508,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.120902220684764e-7
+    },
+    {
+      "frame": 508,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 509,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.487606045800086e-7
+    },
+    {
+      "frame": 509,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 510,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0938598441914524e-7
+    },
+    {
+      "frame": 510,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 511,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2100792474982054e-7
+    },
+    {
+      "frame": 511,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 512,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.5425834544414657e-7
+    },
+    {
+      "frame": 512,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 513,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8528455045383614e-7
+    },
+    {
+      "frame": 513,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 514,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 2.8353575060323463e-7
+    },
+    {
+      "frame": 514,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 515,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.8787495182127013e-7
+    },
+    {
+      "frame": 515,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 516,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.302144856096804e-7
+    },
+    {
+      "frame": 516,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 517,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.6792388603352285e-7
+    },
+    {
+      "frame": 517,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 518,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.4822139385258816e-7
+    },
+    {
+      "frame": 518,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 519,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2093308415560145e-7
+    },
+    {
+      "frame": 519,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 520,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.708771829403728e-7
+    },
+    {
+      "frame": 520,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 521,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.7882343506348064e-7
+    },
+    {
+      "frame": 521,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 522,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2844041295902696e-7
+    },
+    {
+      "frame": 522,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 523,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.693698815492777e-7
+    },
+    {
+      "frame": 523,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 524,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.3837721380518406e-7
+    },
+    {
+      "frame": 524,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 525,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.064989451957929e-7
+    },
+    {
+      "frame": 525,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 526,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.959965460276385e-7
+    },
+    {
+      "frame": 526,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 527,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.2668030161184344e-7
+    },
+    {
+      "frame": 527,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    },
+    {
+      "frame": 528,
+      "region": "cloth",
+      "nativeFourVsLoadedMaximumM": 3.0963231153292684e-7
+    },
+    {
+      "frame": 528,
+      "region": "jeans",
+      "nativeFourVsLoadedMaximumM": 1.8150146354928985e-7
+    }
+  ],
+  "limits": [
+    "Body and garment base positions/UV/sourceIDs/weights/indices/51joint hierarchy/order/binds unchanged; tiny shirt base normal recalculation explicitly recorded; morphs deliberately alter only117shirt/55jeans source vertices.",
+    "ActualGLTFLoader and getVertexPosition apply morph then skin; exact same shared matrices and recorded controller.",
+    "Full/four source-weight loss remains separate; no legacy runtime conditioning or normalplayer integration claimed.",
+    "Native local rays improve but remaining local/global contacts and held-out regressions remain; not fit/art acceptance."
+  ]
+}
