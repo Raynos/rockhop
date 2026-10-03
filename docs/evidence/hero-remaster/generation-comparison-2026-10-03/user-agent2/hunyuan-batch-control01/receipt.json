@@ -1,0 +1,28 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "sourcePath": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/attention_processors.py",
+  "sourceSHA256": "9a461ddde9a2bf5ca0cd3961c3c1b86f9c81772066fe5b815bc497e0b5a8f053",
+  "recipeSHA256": "466fdb82baf3812466ee0556aee5b9ac67bdef0a24bee843d1f73ff62bb930b4",
+  "torch": "2.14.0",
+  "device": "mps",
+  "dtype": "float16",
+  "groups": 3,
+  "heads": 16,
+  "queriesPerGrid": 13824,
+  "latentKeys": 4096,
+  "channels": 64,
+  "seed": 42,
+  "method": "Actual coarse FlashVDM adaptive-KV processor, same inputs packed3groups versus serial1group; no neural weights.",
+  "allOutputsFinite": true,
+  "maxAbsoluteError": 0.0,
+  "meanAbsoluteError": 0.0,
+  "packedStd": 0.04441734030842781,
+  "serialStd": 0.04441734030842781,
+  "byteIdenticalOutputs": true,
+  "selectedOutputSHA256": "76888c15c8459a24da73488edabcdb0fee102d202840826a50bc5f177db7140c",
+  "limits": [
+    "Known synthetic operator inputs, not complete geometry-decoder/CUDA equivalence.",
+    "Supported query batching preserves grid groups mathematically; actual neural retry must retain sampler/decode settings and record any numerical change."
+  ]
+}

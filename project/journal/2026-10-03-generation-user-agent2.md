@@ -517,3 +517,16 @@ Ask:284–286.
 Limits: Specific resource-bound decode failure, no model-family quality
 verdict or asset acceptance. No foreign process stopped or bounds raised.
 Batch-chunk remediation requires source/behavior evidence before retry.
+
+Finding: Actual FlashVDM coarse attention produces byte-identical outputs
+for3packed versus3serial independent mini-grids, supporting smaller batches.
+
+Validation: Guard exit0 in1.458s, all finite;16heads/13824queries/4096keys/
+64channels/fp16, maxerror0 over complete outputs. Source unchanged. Installed
+num_chunks packs independent groups; pergrid adaptiveKV selection retained.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-batch-control01/
+Ask:284–285.
+
+Limits: Synthetic actual operator fixture, not fulldecoder/CUDA equivalence.
+Any same-seed retry must compare actual condition/noise bytes and preserve
+30steps/requested384(effective380); full output quality still unmeasured.
