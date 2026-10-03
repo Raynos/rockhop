@@ -332,3 +332,29 @@ region identities only for diagnostics; posterior jeans is clearance-only
 and cannot certify seated support. Engine anatomy retains native moving
 defects and does not establish collar appearance parity. Human rejected
 hoodie/jeans/footwear; sockets or contact distances cannot qualify fit.
+
+### Round 24 — latest stable runtime dependencies and consumed smoke
+
+Finding: Authorized latest-package work pins Three0.186.1 and direct Rapier
+JS compat0.21.0. The prior0.12 copy remains only a transitive types dependency.
+Actual0.21 exports include soft bodies, pinned particle kinematic targets and
+deformable colliders. Read-only Wildshard inspection confirms its SIMD0.21
+setup and custom WASM loader; no files there changed. Isolated25particle
+cloth/floor smoke starts identically and consumes collisions: OFF falls to
+y=-4.715231m, ON rests at y=.002996m after120ticks. Both repeat all frame
+hashes exactly. Ordinary game still uses custom v2, with no Rapier import.
+
+Validation: Typecheck and fresh normal build pass. Low/high cold boot and
+clear both4810ticks/40.083333333333336s, exact finish bytes abaaaaaaaa0a4440,
+state368f1ca5bd9e830a, crash103, restarttick0 in1/2ms, zero browser errors.
+Tracked release-code lint812paths and audit lint pass. Initial unconstrained
+tests hit eight shared-host timing limits; bounded two-worker suite passes
+135files/1592tests with one5.042us R5 timing failure. Its isolated rerun
+passes. No test limits were changed. Package/lock diff is only requested
+Three patch and direct Rapier package, with integrity pinned.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/runtime24/
+
+Limits: This is an unaccepted runtime checkpoint and floor smoke, not sleeve
+clearance, new wardrobe, mobile cost or a physical-device pass. Compat's
+base64 WASM load cost remains unmeasured. Private sleeve integration,
+consumed body/self/inter-garment response and phone build are still open.

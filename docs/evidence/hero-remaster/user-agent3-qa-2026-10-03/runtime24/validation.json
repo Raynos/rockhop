@@ -1,0 +1,29 @@
+{
+  "status": "UNACCEPTED_RUNTIME_CHECKPOINT_NORMAL_GAME_GATE_PASSED",
+  "validation": {
+    "typecheck": "pass",
+    "build": "pass",
+    "releaseCodeLint": {
+      "paths": 812,
+      "errors": 0
+    },
+    "auditLint": "pass",
+    "suiteInitial": "8 shared-host timing failures, 109 files pass",
+    "suiteBounded": "135 files,1592 tests pass; one R5 5.042us limit failure",
+    "isolatedR5": "8 tests pass, p50 4.791us; no test limits changed"
+  },
+  "logPins": {
+    ".tmp/user-agent3-round24-typecheck.log": "fcab4b6c3199b21b5adbde9c081e2ef2a35dbe6b086260c49069bce38f0d8c93",
+    ".tmp/user-agent3-round24-build.log": "526224eabd1ff094532cf6589504b843b26a856e228f787c5eee374be26b3a00",
+    ".tmp/user-agent3-round24-tests.log": "baa7c6751ece9ff6cf991fb33c7f7cf5cf5ab785d018dec7787e501a9bf57080",
+    ".tmp/user-agent3-round24-tests-bounded.log": "6af1fb808a3a8ee5e51de82852536d9675ae89526870a7a916277cc85d119967",
+    ".tmp/user-agent3-round24-r5.log": "eec8bfc64de5a1d7503965d030f7a830a2b6be3896b4d6bd18c399828ad70a86",
+    ".tmp/user-agent3-round24-lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "ordinaryGateSHA256": "0e8f201eafa8ff3c599d241bc3fcd6b1537790e46cf7b4f55f96ceea7db980d4",
+  "auditSHA256": "ee49e063a5f980b88916e95ee5e0dab1937079e920898946108f8e935c603ad7",
+  "limits": [
+    "No new garments/collision integration or physical-device pass. Dependency addition is not an ordinary physics migration.",
+    "Working build precedes this commit; future deployment must report the actual checked SHA. No push or deployment in this unit."
+  ]
+}
