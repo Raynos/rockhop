@@ -1,0 +1,35 @@
+{
+  "status": "NORMAL_ONLY_CLONE; standing visual review pending, no motion/runtime acceptance",
+  "parentSHA256": "897db06c6c855805f236219a3247a14a7f538a373c552f5441105a02c3c2e572",
+  "candidateSHA256": "9bf98e9d99dd7872bb19d72cc9f9329459fb3fbafabb755788d4d3781b140d28",
+  "method": "Retained clipped source normals use exact normalized source-edge barycentric normals. New UV/patch seam rows adopt closest actual referenced source normal; inherited >10degree hard seams retained explicitly, not averaged away. Only appended patch normals blend toward nearest source seam within20mm actual sewn geodesic distance. Original all5 normal prefixes preserved. Geometry/UV/W/tr untouched.",
+  "clippedRows": [
+    {
+      "primitive": 0,
+      "rows": 222,
+      "maxChangeDegrees": 65.86088395618293
+    },
+    {
+      "primitive": 2,
+      "rows": 0,
+      "maxChangeDegrees": 0.0
+    }
+  ],
+  "changes": [
+    {
+      "primitive": 0,
+      "changedRowsAbove1degree": 481,
+      "maxChangeDegrees": 176.22547377561457,
+      "originalPrefixExact": true
+    },
+    {
+      "primitive": 2,
+      "changedRowsAbove1degree": 0,
+      "maxChangeDegrees": 1.7075472925031877e-06,
+      "originalPrefixExact": true
+    }
+  ],
+  "inheritedHardSourceNormalGroups": [],
+  "geometryUVWeightsTrianglesExact": true,
+  "fiveInfluenceContractUnchanged": true
+}

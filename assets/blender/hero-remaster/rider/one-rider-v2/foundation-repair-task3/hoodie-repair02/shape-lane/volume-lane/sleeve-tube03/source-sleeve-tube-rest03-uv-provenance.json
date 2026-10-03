@@ -1,0 +1,52 @@
+{
+  "status": "UV_ONLY_REST_CLONE; root standing PBR and motion remain unaccepted",
+  "parentSHA256": "3126e186d4fdfdddcc2db0bc1c1c0009d14c46cc2225dcfd75c9fbfc9ca1ff2c",
+  "candidateSHA256": "b5045bcc8e4b9469fda5302857e3c8ef90aa5f2a220e97823e53ec79ac410fd4",
+  "method": "Every tube endpoint receives its own duplicated UV-island row, including oldprimitive0 endpoint rows. Retained clipped source sleeve rows/UV remain intact. Position/normal/denseweight/physicalWeld unchanged; only added tube UV interpolation changes. Source images unchanged.",
+  "rows": [
+    {
+      "side": "L",
+      "newEndpointCopies": 100,
+      "oldSourceClippedUVRowPreserved": true,
+      "samePhysicalWeldPositionWeightNormal": true
+    },
+    {
+      "side": "R",
+      "newEndpointCopies": 106,
+      "oldSourceClippedUVRowPreserved": true,
+      "samePhysicalWeldPositionWeightNormal": true
+    }
+  ],
+  "allTrianglePositionWeightNormalArraysExactToParent": {
+    "0": {
+      "p": true,
+      "W": true,
+      "n": true
+    },
+    "1": {
+      "p": true,
+      "W": true,
+      "n": true
+    },
+    "2": {
+      "p": true,
+      "W": true,
+      "n": true
+    },
+    "3": {
+      "p": true,
+      "W": true,
+      "n": true
+    },
+    "4": {
+      "p": true,
+      "W": true,
+      "n": true
+    }
+  },
+  "sourceOriginalPrefixUVExact": true,
+  "newFaceAtlasSampleOpaqueFraction": 1.0,
+  "newFaceAtlasSampleGoldClothFraction": 1.0,
+  "atlasSamplesPerNewFace": 7,
+  "runtimeCostUnchanged": "Newcaps still contain5 influences; explicit material Mesh adapter required, no stock4 runtime acceptance."
+}

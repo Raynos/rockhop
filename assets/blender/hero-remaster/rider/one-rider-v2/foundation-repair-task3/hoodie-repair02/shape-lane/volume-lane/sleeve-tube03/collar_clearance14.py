@@ -1,0 +1,8 @@
+from pathlib import Path
+import numpy as np,json,hashlib
+HERE=Path(__file__).resolve().parent;src=HERE/'source-sleeve-tube-rest13-natural.npz';f=dict(np.load(src));report=[]
+for side in ['L','R']:
+ rows=f['tubeRows'+side];n=f['openingCapNormals'+side];v=f['p0'][rows[1]]-f['p0'][rows[0]];dot=np.einsum('ij,ij->i',v,n);delta=np.maximum(0,.003-dot);assert delta.max()<.020,delta.max();f['p0'][rows[1]]+=delta[:,None]*n;f['tubeRestRows'+side]=f['p0'][rows].copy();f['collarClearanceDelta'+side]=delta;report.append({'side':side,'minimumOpeningNormalSeparationM':.003,'correctedPoints':int((delta>0).sum()),'maximumCorrectionM':float(delta.max()),'minimumBeforeM':float(dot.min())})
+for pi in range(5):
+ q=f[f'p{pi}'][f[f'tr{pi}']];f[f'restDoubleArea{pi}']=np.linalg.norm(np.cross(q[:,1]-q[:,0],q[:,2]-q[:,0]),axis=1)
+out=HERE/'source-sleeve-tube-rest14-clearance.npz';np.savez_compressed(out,**f);r={'status':'UNACCEPTED LOCAL DIFFERENTIAL CLEARANCE; literal gate pending','parentSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'candidateSHA256':hashlib.sha256(out.read_bytes()).hexdigest(),'method':'Outer-only harmonic cap yields smooth inherited opening but fourfirstrow/cap crosses remain. Correct only firsttube vertex localnormal component if below3mm, along actual pervertex cap-normal. Displacement<=20mmbound asserted; no globalheight or source/endpoint edits. Purelocal seam derivative/clearance, not complete collar extrusion. Exact13W/UV/topology/protectedsource.','rows':report};(HERE/'source-sleeve-tube-rest14-clearance-provenance.json').write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2))

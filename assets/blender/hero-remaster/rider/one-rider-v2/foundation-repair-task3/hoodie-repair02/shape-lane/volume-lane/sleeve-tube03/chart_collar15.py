@@ -1,0 +1,8 @@
+from pathlib import Path
+import numpy as np,json,hashlib
+HERE=Path(__file__).resolve().parent;src=HERE/'source-sleeve-tube-rest13-natural.npz';f=dict(np.load(src));report=[]
+for sg,side in [(1,'L'),(-1,'R')]:
+ rows=f['tubeRows'+side];slope=0 if sg==1 else .2;direction=np.array([0,-slope*sg,sg],dtype=float);direction/=np.linalg.norm(direction);f['p0'][rows[1]]=f['p0'][rows[0]]+.020*direction;f['tubeRestRows'+side]=f['p0'][rows].copy();a=f['p0'][rows[0]];b=f['p0'][rows[1]];chartA=np.c_[a[:,0],a[:,1]+slope*a[:,2]];chartB=np.c_[b[:,0],b[:,1]+slope*b[:,2]];assert abs(chartA-chartB).max()<1e-14;report.append({'side':side,'collarLengthM':.020,'registeredChartDepthDirection':direction.tolist(),'allFirstStripChartCornersOnRootPolygonBoundary':True,'maxChartDisplacementM':float(abs(chartA-chartB).max())})
+for pi in range(5):
+ q=f[f'p{pi}'][f[f'tr{pi}']];f[f'restDoubleArea{pi}']=np.linalg.norm(np.cross(q[:,1]-q[:,0],q[:,2]-q[:,0]),axis=1)
+out=HERE/'source-sleeve-tube-rest15-chartcollar.npz';np.savez_compressed(out,**f);r={'status':'UNACCEPTED REGISTERED-CHART RULED COLLAR; literal3D gate pending','candidateSHA256':hashlib.sha256(out.read_bytes()).hexdigest(),'parentSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'method':'Pervertexnormal clearance failed because firststrip sweeps across concave cap between vertices. Ruled collar now holds exact root(X,v) for all firstrowcorners using sourcechart-depth20mm extrusion. Cap is a nonoverlapping heightgraph over(X,v), so firststrip projection stayson holeboundary; actualfull3D/self/source gate stillrequired. No normals/W fitting,sourceboundary/endpoints unchanged.','rows':report};(HERE/'source-sleeve-tube-rest15-chartcollar-provenance.json').write_text(json.dumps(r,indent=2));print(json.dumps(r,indent=2))
