@@ -1,0 +1,31 @@
+{
+  "status": "EXACT_CAPTURE_VERIFIED_UNACCEPTED",
+  "repoSHA": "cb2e008e3b077f7e3036b29487c786e2ddd4d870",
+  "frames": 157,
+  "pairedArmsOutFrames": 140,
+  "distinctSTEPPoseKeys": 17,
+  "clip": "diagnostic_contact_observations_STEP",
+  "sourceTimes": "0..2s at 1/8s; held 1/4s per movie frame",
+  "sourceSHA256": "7adc07e7ee97278013af3f79d201e349fb0094f826aa7f25d02a550412e10cee",
+  "sourceBytes": 19445164,
+  "poseManifestSHA256": "aba49af57424d52427929ce419871aa12d007dceb853ef36593ddd00e821cbce",
+  "cloudPoseMatrixMaxError": 1.9184464516985855e-7,
+  "independentGLBWorldMatrixMaxError": 5.551115123125783e-16,
+  "independentMorphMaxError": 0,
+  "identicalPairedCamerasAndBoneMatrices": true,
+  "pairedMorphsAllZero": true,
+  "audioContexts": 0,
+  "errors": [],
+  "frozenPhysicsHash": "53ffa642f34ac573",
+  "captureReportSHA256": "0455dc176245689e5d10c77a56e699f39470fdeed75924378a8bce1b3865bbc5",
+  "captureReportTailFailure": "TypeError: Cannot read properties of undefined (reading 'every')",
+  "note": "Original final validation accessed optional raw-head morph weights; all157actual captures independently verified here. Capture code now handles absent weights.",
+  "browser": "Playwright WebKit headless on macOS",
+  "device": "1280x720 DPR1 desktop emulation; physical iOS untested",
+  "launchURL": "http://127.0.0.1:64232/?audio=0&sw=0&outfit=street-mustard&rider=gltf&bike=gltf&physics=v2&hz=120",
+  "visualLimits": [
+    "T/A underarm webs remain in raw and repaired.",
+    "STEP hands/feet/saddle do not align with current engine bike/wrapper contract.",
+    "No continuous interpolation, physics-driven riding, normals, art or physical-device acceptance."
+  ]
+}
