@@ -33,3 +33,12 @@ input reads, imports or directory creation; small receipt pins worker bytes.
 
 Limits: No MPS/model execution or qualified contract yet; no inference/lease.
 Root and integration partner alone qualify their respective fitting/art gates.
+
+Finding: Native decoder audit reports finite/index validity and explicit topology
+witnesses without cleanup or claiming wearable/fit acceptance from edge counts.
+
+Validation: Analytic closed/open/reversed tetrahedron controls produce0/3boundary
+edges and3winding edges as expected; one out-of-range index rejects correctly.
+
+Limits: No inference or donor assessed; self-intersection/anatomy/fit unmeasured.
+Agent1 is exporting stable experimental fitting inputs; all rider gates OPEN.

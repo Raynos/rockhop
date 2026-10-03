@@ -124,3 +124,16 @@ authorized bounded donor comparison. Agent 1 decides input stability and pins
 the body/proportions/true pose/metres/axes/cameras. The earlier overly strict
 visual-qualification interpretation is superseded. Do not launch on changing
 or unpinned inputs; all generated outputs remain unaccepted donors.
+
+## Native geometry audit preparation
+
+New `audit_native.py` reads preserved decoder archives without modifying them.
+It records finite/index admission, bounds, repeated/duplicate/zero-area triangles,
+boundary/overused edges, local winding disagreements and vertex-connected face
+components. Intentional garment openings are not automatically failures; this
+audit cannot certify self-intersection, anatomy, wearable clearance or motion.
+
+[`native-audit-fixtures.json`](native-audit-fixtures.json) records independent
+analytic tetrahedron fixtures: closed has0boundary/winding defects; removing
+one face gives3boundary edges; reversing one face gives3same-direction edges;
+one invalid index is rejected. No model loaded or generated mesh assessed yet.

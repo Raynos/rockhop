@@ -1,0 +1,139 @@
+{
+  "accepted": false,
+  "inferenceExecuted": false,
+  "auditSHA256": "10da89eb6197d7299a8cd740161a02dcf991798c5ae34d62ee1be8d280351b66",
+  "closedTetrahedron": {
+    "accepted": false,
+    "vertices": 4,
+    "faces": 4,
+    "vertexDtype": "float32",
+    "faceDtype": "int32",
+    "validGeometryArrays": true,
+    "limits": [
+      "No self-intersection, anatomy, garment opening, fit or motion test.",
+      "Boundary counts do not classify intentional clothing openings."
+    ],
+    "nonfiniteVertexElements": 0,
+    "invalidIndexElements": 0,
+    "boundsNative": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "repeatedIndexTriangles": 0,
+    "zeroAreaTriangles": 0,
+    "minimumAreaNativeSquaredUnits": 0.5,
+    "duplicateTrianglesIgnoringWinding": 0,
+    "uniqueEdges": 6,
+    "boundaryEdges": 0,
+    "overusedEdges": 0,
+    "equalDirectionTwoFaceEdges": 0,
+    "unusedVertices": 0,
+    "vertexConnectedFaceComponents": 1,
+    "componentTriangleCountsDescending": [
+      4
+    ]
+  },
+  "openedTetrahedron": {
+    "accepted": false,
+    "vertices": 4,
+    "faces": 3,
+    "vertexDtype": "float32",
+    "faceDtype": "int32",
+    "validGeometryArrays": true,
+    "limits": [
+      "No self-intersection, anatomy, garment opening, fit or motion test.",
+      "Boundary counts do not classify intentional clothing openings."
+    ],
+    "nonfiniteVertexElements": 0,
+    "invalidIndexElements": 0,
+    "boundsNative": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "repeatedIndexTriangles": 0,
+    "zeroAreaTriangles": 0,
+    "minimumAreaNativeSquaredUnits": 0.5,
+    "duplicateTrianglesIgnoringWinding": 0,
+    "uniqueEdges": 6,
+    "boundaryEdges": 3,
+    "overusedEdges": 0,
+    "equalDirectionTwoFaceEdges": 0,
+    "unusedVertices": 0,
+    "vertexConnectedFaceComponents": 1,
+    "componentTriangleCountsDescending": [
+      3
+    ]
+  },
+  "reversedFaceTetrahedron": {
+    "accepted": false,
+    "vertices": 4,
+    "faces": 4,
+    "vertexDtype": "float32",
+    "faceDtype": "int32",
+    "validGeometryArrays": true,
+    "limits": [
+      "No self-intersection, anatomy, garment opening, fit or motion test.",
+      "Boundary counts do not classify intentional clothing openings."
+    ],
+    "nonfiniteVertexElements": 0,
+    "invalidIndexElements": 0,
+    "boundsNative": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "repeatedIndexTriangles": 0,
+    "zeroAreaTriangles": 0,
+    "minimumAreaNativeSquaredUnits": 0.5,
+    "duplicateTrianglesIgnoringWinding": 0,
+    "uniqueEdges": 6,
+    "boundaryEdges": 0,
+    "overusedEdges": 0,
+    "equalDirectionTwoFaceEdges": 3,
+    "unusedVertices": 0,
+    "vertexConnectedFaceComponents": 1,
+    "componentTriangleCountsDescending": [
+      4
+    ]
+  },
+  "invalidIndex": {
+    "accepted": false,
+    "vertices": 4,
+    "faces": 4,
+    "vertexDtype": "float32",
+    "faceDtype": "int32",
+    "validGeometryArrays": false,
+    "limits": [
+      "No self-intersection, anatomy, garment opening, fit or motion test.",
+      "Boundary counts do not classify intentional clothing openings."
+    ],
+    "nonfiniteVertexElements": 0,
+    "invalidIndexElements": 1,
+    "error": "Nonfinite vertices or out-of-range indices; raw retained"
+  },
+  "limit": "Analytic fixtures only; no generated mesh, fit, self-intersection or art pass",
+  "syntax": "AST pass"
+}
