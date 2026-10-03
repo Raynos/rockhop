@@ -96,3 +96,20 @@ the Mac wrapper. The real pipeline module hash is in this new receipt. Any
 eventual worker must call this saver at decode time before display processing,
 and pin its qualified image/contract/config/module hashes. No such worker has
 been launched; no model lease is held.
+
+## Bounded TRELLIS worker preparation
+
+New `trellis_probe.py` consumes explicit image, fitting-contract and config
+hashes under the inherited reviewed bounded controller. It checks both source
+HEADs and actual pipeline-module bytes before any model import. One seed42,
+512-pipeline,8-step-per-stage probe saves the upstream conditioned image/hash,
+then the exact decoded arrays before finite/index checks and diagnostic geometry
+export. No rescale, rotation, cleanup, reduction or topology repair is applied.
+Calibrated source image and cropped conditioning image remain distinct evidence.
+
+[`trellis-probe-preflight.json`](trellis-probe-preflight.json) records AST/help
+checks and an actual unguarded invocation rejected before input reads, model
+imports or output creation. This does not test MPS or model execution. The
+contract JSON's hash is pinned, not treated as self-certifying acceptance:
+Agent 1 supplies the actually qualified source/pose/camera contract before any
+launch. Historical alpha inputs remain unqualified; no model job was started.

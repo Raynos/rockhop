@@ -23,3 +23,13 @@ rejects overwrite and retains NaN raw geometry. Legacy conversion produces
 
 Limits: NumPy storage check only; no pipeline import, GPU job, inference or fit.
 Helper not yet exercised on actual decoded model; all M0–M5 still open.
+
+Finding: One cheap TRELLIS worker pins fitting input/contract/config and both
+source identities, records upstream alpha cropping, and saves exact native
+arrays before diagnostic export. No canonical construction or rig edits.
+
+Validation: AST and help checks pass. An unguarded real invocation rejects before
+input reads, imports or directory creation; small receipt pins worker bytes.
+
+Limits: No MPS/model execution or qualified contract yet; no inference/lease.
+Root and integration partner alone qualify their respective fitting/art gates.
