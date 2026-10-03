@@ -1,0 +1,46 @@
+{
+  "variant": "chart-ownership",
+  "geometrySHA256": "619396fa895215b4c8a7210341e0acb037bb5a4ddba9a16cdf088684ec8b5def",
+  "chartLabelsSHA256": "fdfd725d071f56de9b8f7332350cca6aee30025392fbc78c5210b9c68a14a309",
+  "weightsSHA256": "4608317cc8c606a7dc07046b219292dce3d059cc4b7e774e6d92cd764af5bde5",
+  "method": "Whole source-sewn graph with normal-modulated conductance, semantic boundary geodesic soft confidence; cuff/leg/rigid anchors only. No pose training, height eligibility mask, nearest-position sheet weld, cage, helper or DQ.",
+  "withinRegionDistribution": "Original normalized torso and arm bone proportions",
+  "stats": [
+    {
+      "side": "L",
+      "opposingHintEdges": 21,
+      "hardOpposingHintEdges": 0,
+      "confidenceAtOpposingEdgesMax": 0.0,
+      "confidenceFrontierVertices": 912,
+      "softSeedVertices": 17747,
+      "fixedCuffCount": 65,
+      "maxOwnershipEdgeDifference": 0.3155595481110184,
+      "p99OwnershipEdgeDifference": 0.04213953021281993
+    },
+    {
+      "side": "R",
+      "opposingHintEdges": 49,
+      "hardOpposingHintEdges": 0,
+      "confidenceAtOpposingEdgesMax": 0.0,
+      "confidenceFrontierVertices": 896,
+      "softSeedVertices": 17735,
+      "fixedCuffCount": 62,
+      "maxOwnershipEdgeDifference": 0.20414915036406,
+      "p99OwnershipEdgeDifference": 0.044677241045655375
+    }
+  ],
+  "rigidPrimitiveWeightsExact": true,
+  "cuffAliasGroups": 127,
+  "bodyInsertAliasGroups": 307,
+  "allAliasWeightRowsExact": true,
+  "maxNonzeroInfluences": 4,
+  "maxWeightSumError": 2.220446049250313e-16,
+  "changedClothUniqueVertices": 10257,
+  "maxWeightEdgeDeltaL2": 1.0542190564688678,
+  "limits": [
+    "Normal chart seeds are authored anatomical hints, not scanned cloth segmentation.",
+    "Softness/geodesic length and normal conductance are authored assumptions; ambiguities remain.",
+    "Torso within-region distribution and all leg/head/glove rows remain controlled source components; this is a fresh sleeve-ownership/arm assignment comparison, not an entirely replaced full-body bind.",
+    "Only actual triangle/moving visual/holdout gates can qualify the field."
+  ]
+}

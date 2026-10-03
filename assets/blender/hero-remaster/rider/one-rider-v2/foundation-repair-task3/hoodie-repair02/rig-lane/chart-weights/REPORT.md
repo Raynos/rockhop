@@ -1,0 +1,33 @@
+The new chart weights reduce upper-cloth stretch across the actual riding sequence, but still fail crossings and compression. They are controlled structural ablations for the separate garment cage, not an accepted repair. Geometry, textures, head/hands, joint centres/count, motion, and lower-body ownership remain fixed.
+
+Three comparisons share the exact V7 rest SHA `619396fa895215b4c8a7210341e0acb037bb5a4ddba9a16cdf088684ec8b5def`: control frozen LS weights; `chart-ownership.npz` with fresh torso/sleeve ownership and original normalized within-region bone proportions; `chart-anatomical.npz` with that same ownership plus fresh upper-arm/forearm/cuff assignment. Torso within-region proportions remain a controlled source component; these are fresh sleeve-ownership/arm-assignment tests, not an entirely replaced full-body bind.
+
+Source chart hints were frozen from the shape lane. Opposing face normals are compared to estimated torso and arm-cylinder radial directions; true lower sleeve components are selected through exact cuff aliases. Ambiguous/conflicting bridge vertices remain soft. The solver uses the whole actual sewn graph, with no nearest-position cross-sheet connections or hard height eligibility mask. Normal agreement modulates conductance. Confidence fades by intrinsic distance from unknown/opposite seed frontiers. Exact cuff, rigid head/glove, and held leg rows are the only hard constraints. A pose-independent quadratic program bounds ownership changes to 8 per metre along every sewn rest edge. It converged in 182 iterations per side, maximum residual below 9.44e-7 ownership units. These authored normal/radius/softness assumptions do not establish scanned anatomical truth.
+
+The first unbounded field is explicitly rejected and preserved in `rejected-v1`: forward max strain 7.398→26.445×, crossings 129→267. Its short crease edges still concentrated gradients despite soft vertex seeds. The bounded field resolves that local strain regression, while exposing remaining garment failures.
+
+| Exact matched fixture | Control | Chart ownership | Fresh arm assignment |
+|---|---|---|---|
+| Forward endpoint: max edge≥2mm |7.398×|4.094×|4.094×|
+| Forward: nonadjacent / one-corner crossings |129 /20|202 /22|202 /22|
+| Forward: faces below25% rest area |41|86|86|
+| Actual source34 frame304: max edge |6.685×|4.141×|4.102×|
+| Frame304: nonadjacent / one-corner crossings |169 /22|163 /14|200 /22|
+| Frame304: compressed faces |55|61|72|
+| Clean bilateral elbow90°: max edge |2.201×|2.193×|2.155×|
+| Elbow90°: nonadjacent / one-corner crossings |149 /4|149 /4|149 /8|
+| Elbow90°: compressed faces |92|86|33|
+
+`finite-gates.json` contains 63 rows: 21 exact poses times three weights, including off-grid forward fractions, isolated elbow 45/75/105°, and actual source34 frames 250/350 withheld from the initial endpoint comparison. All weights were generated without pose fitting. Withheld forward max strain 6.675→3.763×, but maximum compressed faces 37→75. Fresh arm assignment introduces extra elbow and actual-frame crossings; ownership-only is the stronger input for the separate cage comparison. Literal strict transverse intersections use exact V7 triangles, source seam aliases and a sphere/AABB broadphase. Complete shared seam edges are excluded, while one-corner folds remain explicit. Tangent/coplanar contact, thickness and body support remain unclassified. No continuous collision acceptance is claimed.
+
+Across all 480 recorded source34 frames, maximum edge strain is 7.751× control, 4.574× chart ownership and 4.489× fresh arm; maximum compressed faces 79/81/85. `sequence480-strain.json` records every frame. This all-frame check measures strain and area only; it is not an all-frame intersection gate. The recording contains riding, lean and landing recovery, and does not cover stand/Garage transitions.
+
+Semantic limit: the near-opposed source sheets are physically joined by short sewn paths. Torso hint faces 7916/7925/7942 have armshare~.49–.53→.29–.34; inner-sleeve faces 6952/6953/6957/6962 have ~.59–.62→.36–.39. The field cannot make them rigid binary torso/sleeve classes and simultaneously obey low gradients on unchanged 2–3 mm crease edges. Use frozen face-normal chart hints independently of weight scalars for the cage. `face-role-diagnostics.json` records literal face IDs and values.
+
+Both candidates preserve all 127 sewn cuff aliases and 307 body-insert aliases through one exact-source welded field. Rigid head/glove primitive weights remain byte-exact in the dense arrays; max 4 influences and normalization error≤2.23e-16. Across all 63 finite poses, source alias gap≤roundoff, with no weight reconditioning. The standing shape remains the same V7 mesh.
+
+`source34-480-matrices.npz` supplies portable `D[frame,joint,row,column]`, ticks, sampleIndices and names (560 KB). SHA `0ff5f209c114c61d9ebabfd5f25950cdb79b6cf325198de94769b089a8bae344`. CPU replay used the preserved compiled actual body34 driver and recorded states: exact 0 difference against all four existing raw matrix controls, exact 0 across dump meshes, maximum recorded bone-centre error 5.75e-14 m. Source/report/driver hashes are in `source34-480-matrices-provenance.json`. No GPU, renderer, gameplay mutation or other-owner writes occurred.
+
+Diagnostic rigged GLBs are in `exports/`. Only skin index/weight BIN rows changed; all 561 non-skin accessors, all remaining BIN bytes, embedded textures and glTF JSON are exact. Stock installed Three.js 186 matches 12 endpoint/withheld poses per candidate, 1,089,192 vertices each: maximum 0.0902 micrometres ownership and 0.0804 micrometres fresh arm. `parity-chart-ownership.json` and `parity-chart-anatomical.json` record the comparisons. This validates CPU matrix skinning and serialization only, not GPU/PBR, clips, contact or gameplay integration. The frozen GLB retains unadapted fresh C19 names and intentionally unavailable old contact/conditioning metadata; the existing explicit body34/name/contact mapping and conditioning opt-out must be applied before any game adapter can use these weights. Never silently rerun the old conditioner.
+
+Reproduce using installed numpy/scipy Python: `build.py`, `evaluate.py`, `sequence.py`, `export.py`, `prepare_parity.py`; then installed Node `runtime.mjs chart-ownership` and `runtime.mjs chart-anatomical`. `capture480.mts` reproduces the read-only CPU matrix extraction using the preserved compiled driver. Large pose/reference/export directories are regenerable and ignored. Parent owns visual rendering, independent qualification, Library publication and integration; no production promotion or commit bypass.
