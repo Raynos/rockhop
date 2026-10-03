@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "accepted": false,
+  "purpose": "FINAL R1 inherited preparation byte audit; no inference",
+  "session": "01a10170-5861-7dc3-971a-3273daead862",
+  "verifiedAtUTC": "2026-10-03T11:47:13.409581+00:00",
+  "headAtVerification": "fa4197241a5880e4288cc32c4c0a9773b83ab071",
+  "preparedSources": [
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/run_bounded.py",
+      "sha256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+      "bytes": 4534,
+      "syntax": "ast.parse pass"
+    },
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/hunyuan_shape.py",
+      "sha256": "75ae0a5da0bd2d490572cfcb18e10cdf5ca7747c4aed7cfd131883e06808430a",
+      "bytes": 4278,
+      "syntax": "ast.parse pass"
+    },
+    {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/render_input.py",
+      "sha256": "be3b0185b1c2e23df72018dc8c09169fc6e6975c9b163e4e315c2cf9c7ec2be8",
+      "bytes": 3997,
+      "syntax": "ast.parse pass"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-000.png",
+      "sha256": "3523b4beb4666d962fc1e25fc5cdbfc72e95683cfac1f3458250997a18eedfad",
+      "bytes": 181438,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-045.png",
+      "sha256": "c591e63748119aabf7bc2c2e037bed2fd035e7ff44d81ed8e5851ea05c5a98ca",
+      "bytes": 180494,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-090.png",
+      "sha256": "8f85bc709001b9cd0b8596fbe3f57f5c4ffbec104dd0fa00ec111d58c4a4ad7d",
+      "bytes": 145727,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-135.png",
+      "sha256": "cdc2e1c8b6c863d051156bf6b8281508816ff49a1db750acab851484b7240a10",
+      "bytes": 180961,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-180.png",
+      "sha256": "b4a54a928a0cac6ceed8fc19e05203e3bdf19b7ccc58a856df03ac80e14ec352",
+      "bytes": 182594,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-225.png",
+      "sha256": "f7a044adf2a9cdcce96111c7cb1746f752379d2ec9e2d564bc27e24dbf7b23a6",
+      "bytes": 182177,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-270.png",
+      "sha256": "e98ce5e26dab4eac217ede88c411c3fcbd69d8af00048dfd2f15ec4e9bca6972",
+      "bytes": 146875,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/inputs/body-boxers-A/body-boxers-A-315.png",
+      "sha256": "3a0cb965ce68407c03f90849227b77141617100fb5942d9cfd95fa923f84a755",
+      "bytes": 181621,
+      "mode": "RGBA",
+      "size": [
+        480,
+        640
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "references": [
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/A-body-boxers-yup.obj",
+      "sha256": "693a4b0873d3c127b1ad285e000470d9aa139ec86809a66e88d03a5956c25ca9",
+      "bytes": 1073744
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/A-body-boxers-zup.obj",
+      "sha256": "8d43b1bdb2f0615970d0e1a66fa4dea65df07d4b36df7696fccc71367db2fdd5",
+      "bytes": 1073516
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/T-body-boxers-yup.obj",
+      "sha256": "1d43abd3828ea3ac6115fc19292e14f3db73bf5aceb601f9e4ee28f881f0dfa9",
+      "bytes": 1073746
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/T-body-boxers-zup.obj",
+      "sha256": "1cc0fed93b4d4717135fb7fe61fc70bda59923a7061bce2a1d68ea6766dff869",
+      "bytes": 1073518
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/neutral-body-boxers-yup.obj",
+      "sha256": "b4506f458af1f550feefcaf6712fdc64e3d4367520378dbbbb3106877c3ee640",
+      "bytes": 1073741
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/neutral-body-boxers-zup.obj",
+      "sha256": "3f9227183663cc10cfafa38fb372e165d6f4c7339ef02bb62418b7d8152efbc8",
+      "bytes": 1073515
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/control.glb",
+      "sha256": "e2f314aa59a955503187892be5cd0ba7a949b21da81739161a5f704fc1bb1743",
+      "bytes": 1131276
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/boxer-reference.glb",
+      "sha256": "6cf0cdc0e850777b73b7698ec44bd9870288cc04d3e188bb865d89a82fee9d6d",
+      "bytes": 967368
+    },
+    {
+      "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb",
+      "sha256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+      "bytes": 14007264
+    }
+  ],
+  "referenceContractSHA256": "7b15bf096b63d53d379eceb53bf9c7bad58da5b5ee66f1c2f9d3ae4e63a66a28",
+  "library": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/library/rockhop-separated-body-hoodie-handoff-20261003-1007.zip",
+      "sha256": "226d70fe8189077e3d58a9c0e4178048f5ec9c3ea6a258ed6752703493e4162d",
+      "bytes": 17078,
+      "crc": "pass"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/library/Rockhop-rider-concept-overview.png",
+      "sha256": "b6ea850c5c8b0da05b05cc22af38e17cb90b490e2f130585637f9398a2d4731e",
+      "bytes": 2069315
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/library/Rockhop-rider-ten-frames.zip",
+      "sha256": "2b9b6c0b945e7a795ae17bed466e0e80062176040f27e423046cb04a16419fff",
+      "bytes": 2894410,
+      "crc": "pass"
+    }
+  ],
+  "processObservation": {
+    "columns": "pid ppid elapsed rssKiB comm",
+    "relevantProcesses": [
+      "24743 24740       02:45   1280 lockf",
+      "30964 30875       00:23   1280 lockf",
+      "32774 32773       00:01  47392 /Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+      "53235     1 01-14:44:01 212304 /Applications/Blender.app/Contents/MacOS/Blender"
+    ],
+    "ownedJobsLaunchedThisSession": [],
+    "modelLeaseHeldByThisSession": false,
+    "canonicalLockLsofExit": 1,
+    "canonicalLockLsofStdout": "",
+    "canonicalLockLsofStderr": "",
+    "memoryGiBAnonWiredFree": "41.5 7.7 21.1"
+  },
+  "limits": [
+    "No model inference, candidate, topology/fit, appearance, rig, played motion, engine or device acceptance",
+    "Proportions unaccepted; successor must obtain foundation/root reference freeze",
+    "control.glb and boxer-reference.glb are distinct files",
+    "Previous guard/render results are inherited receipts, not newly executed heavy jobs"
+  ]
+}
