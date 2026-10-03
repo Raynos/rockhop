@@ -1,0 +1,270 @@
+{
+  "accepted": false,
+  "referenceSHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+  "preprocessingSHA256": "95364858c06d30f09c0bfbf5053d4eeccefbd7904f15d6196617c138df777f40",
+  "quality": {
+    "pipeline": "1024_cascade",
+    "seed": 42,
+    "stepsPerStage": 12,
+    "effectiveResolutionRequired": 1024
+  },
+  "sourcePins": {
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/pipelines/trellis2_image_to_3d.py": "48a47e42f0d4f116701502730226216364dbfc3fe394343b3646170fe27ccc58",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/pipelines/base.py": "1cdb6c440c573118bb53db8733c1534338fd546a618227421fc6163340a192f3",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/modules/image_feature_extractor.py": "710bda0470ff8262023f307a84040ec074432485d66bd29b4e902096e955b51b",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/modules/sparse/attention/full_attn.py": "c37d4abbf277e70be8a57852bcfe2bf415f08a5e792abbe5687db7a8c458ecec",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/modules/sparse/conv/conv_flex_gemm.py": "b0ae09f1addfbc51a43ec27fbcf76a810ef2d3e9a9fd3d6084cae69a9c6a7dcc",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/models/__init__.py": "f1d5473a485aad90085a45063daadb01e046017034a9cc95a8636924504126c1",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/representations/mesh/base.py": "df620089837b689c5b8d98b3fea7e50ab1216fdee85bd77bf9403850a37a011e",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/models/sc_vaes/fdg_vae.py": "b775638bf661132dc4cf23311a25fa3d4153c3217bc066b302404b316a70b52d",
+    "/Users/raynos/ml/img2mesh/trellis-view/pipeline.json": "8d7ce55f476486f8efe4005bbbdbfb889aeda5c7d3b8e779a3e3d0df5161ae07",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-sparse-operator02/receipt.json": "6e3927566ef92f1ce813e3a22c051c6c783a6b9adf8feade407e1997d4b8e5ff",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_sparse_sampling.py": "0d1be1240c127a12f049f493a4a11ff1d89d8d0db8a5e01cbca1194faf5e5db5",
+    "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/modules/sparse/conv/config.py": "ba8e0033ca14880e2bd53456bf2fe20494c2c6d42eeed7813d33d19005fe51e1"
+  },
+  "weights": [
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "bytes": 147591972,
+      "model": "microsoft/TRELLIS-image-large",
+      "revision": "25e0d31ffbebe4b5a97464dd851910efc3002d96",
+      "file": "ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "actualSHA256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+      "expectedSHA256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS-image-large/ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "bytes": 245,
+      "model": "microsoft/TRELLIS-image-large",
+      "revision": "25e0d31ffbebe4b5a97464dd851910efc3002d96",
+      "file": "ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "actualSHA256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5",
+      "expectedSHA256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+      "bytes": 2584426920,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+      "actualSHA256": "ca01377c485bec418076d38ee80166d32dc776d744f2553b835cba1e97a7abf6",
+      "expectedSHA256": "ca01377c485bec418076d38ee80166d32dc776d744f2553b835cba1e97a7abf6",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+      "bytes": 467,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+      "actualSHA256": "6cdfb636854f60ffcadd8c49244169cd449f34c5ccdb55b5ff7c04678f9c399e",
+      "expectedSHA256": "6cdfb636854f60ffcadd8c49244169cd449f34c5ccdb55b5ff7c04678f9c399e",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948490494,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+      "actualSHA256": "e3b718d3e43e4f8780e9a24ac6fff231811a67e3b058e336e10fe654c911d581",
+      "expectedSHA256": "e3b718d3e43e4f8780e9a24ac6fff231811a67e3b058e336e10fe654c911d581",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "bytes": 678,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "actualSHA256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209",
+      "expectedSHA256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+      "bytes": 2584574424,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+      "actualSHA256": "ec5e0917ef9b7e25ad51dffc7d19687a42019871f94239f2fa7f86264c55b70f",
+      "expectedSHA256": "ec5e0917ef9b7e25ad51dffc7d19687a42019871f94239f2fa7f86264c55b70f",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "bytes": 458,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "actualSHA256": "ddbd7a1d34ce9a8e7af2f6ef9ae686d9ab49f69e62dacb98d8409b511cdbd5e2",
+      "expectedSHA256": "ddbd7a1d34ce9a8e7af2f6ef9ae686d9ab49f69e62dacb98d8409b511cdbd5e2",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 2584574424,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+      "actualSHA256": "07cd0596f634c5adc1890023d16023afc5eed02fb84b22bb23aff5bf0030fbbd",
+      "expectedSHA256": "07cd0596f634c5adc1890023d16023afc5eed02fb84b22bb23aff5bf0030fbbd",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+      "bytes": 458,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+      "actualSHA256": "7ebd6d367393f52fee9e92c2b3d727a9026a338549c6a6fa84c7ea122140ffdd",
+      "expectedSHA256": "7ebd6d367393f52fee9e92c2b3d727a9026a338549c6a6fa84c7ea122140ffdd",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948458812,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+      "actualSHA256": "97ea69addea2ecd9312910f5f548234665eef51c088386180b7cd5b258645e3c",
+      "expectedSHA256": "97ea69addea2ecd9312910f5f548234665eef51c088386180b7cd5b258645e3c",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+      "bytes": 705,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/tex_dec_next_dc_f16c32_fp16.json",
+      "actualSHA256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1",
+      "expectedSHA256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.safetensors",
+      "bytes": 2584672728,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.safetensors",
+      "actualSHA256": "8371aa1c5d13be79dcd5ddfd2cf3835e902e204dc34427169a1c702828e1a94d",
+      "expectedSHA256": "8371aa1c5d13be79dcd5ddfd2cf3835e902e204dc34427169a1c702828e1a94d",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+      "bytes": 458,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_imgshape2tex_dit_1_3B_512_bf16.json",
+      "actualSHA256": "3093796257a62f838d2e5578ac4580ca3b7d88d10b87d348065d3fdfcc4c2077",
+      "expectedSHA256": "3093796257a62f838d2e5578ac4580ca3b7d88d10b87d348065d3fdfcc4c2077",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 2584672728,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+      "actualSHA256": "580401269059a339b8318ab9ced459a13ba63391721c83a6c383198c29e77686",
+      "expectedSHA256": "580401269059a339b8318ab9ced459a13ba63391721c83a6c383198c29e77686",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+      "bytes": 458,
+      "model": "microsoft/TRELLIS.2-4B",
+      "revision": "af44b45f2e35a493886929c6d786e563ec68364d",
+      "file": "ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+      "actualSHA256": "31f4fdad9974930e5e9324ac9dfb6ef7de6b30cea51854ba515ef827a8d353b2",
+      "expectedSHA256": "31f4fdad9974930e5e9324ac9dfb6ef7de6b30cea51854ba515ef827a8d353b2",
+      "method": "SHA256 of fetched public small config; Git blob SHA1 not compared",
+      "match": true
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "resolvedPath": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "bytes": 1212559808,
+      "model": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+      "revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
+      "file": "model.safetensors",
+      "actualSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+      "expectedSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+      "method": "Published LFS SHA256 plus byte length",
+      "match": true
+    }
+  ],
+  "sparseControls": "b20e7c31f1e929aca33a1fe3c9c31e44a31e4038",
+  "limits": [
+    "Unaccepted generation; root judges moving evidence",
+    "Only one serial seed; no cheap fallback",
+    "Installed fill_holes is a pinned no-op; no new remesh/cleanup"
+  ],
+  "output": "Raw geometry+attributes archived before display/baking",
+  "samplerParams": {
+    "sparse_structure": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.7,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 5.0
+    },
+    "shape_slat": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.5,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 3.0
+    },
+    "tex_slat": {
+      "steps": 12,
+      "guidance_strength": 1.0,
+      "guidance_rescale": 0.0,
+      "guidance_interval": [
+        0.6,
+        0.9
+      ],
+      "rescale_t": 3.0
+    }
+  }
+}

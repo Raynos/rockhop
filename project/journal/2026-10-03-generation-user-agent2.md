@@ -1187,3 +1187,19 @@ Ask:284–286.
 
 Limits: Root explicitly withholds map-level PBR, fit, rig, opening and
 finalart pass. One qualified TRELLIS1024cascade/12/42 unit follows; no sweep.
+
+Finding: Unaccepted one-seed TRELLIS1024cascade recipe freezes published
+weight pins, documented guidance and actual conditioning/noise/latent capture.
+
+Validation: Syntax/whitespace pass;17selected canonical published weight
+records and installed source/control digests bound the recipe. Requires
+all15numerical sparse controls, original maskedconv/SDPA,12steps per stage
+and effective1024. Captures actual DINO normalized pixels/features, all
+four sampler noises/steps/finals and actual learned large QKV before native
+SDPA, with selected independent CPU checks. Raw coords/geometry/attributes
+persist before any display/bake; lowprecision trilinear stays protected.
+Ask:284–286.
+
+Limits: Checkpoint only; no new quality run yet, no CUDA/fullmodel/fit/art
+claim. Public cache release at phase boundaries preserves active storage;
+no shared runtime, weight, remesh, cleanup or silent cheaper fallback.
