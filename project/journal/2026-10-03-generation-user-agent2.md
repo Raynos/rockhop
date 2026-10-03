@@ -1704,3 +1704,15 @@ Ask:284–286.
 
 Limits: Unacceptedrecipe, movingrootjudgment pending. Native1024output,
 not1536success, geometryfix, UVbake, wearableopening or modelwinner.
+
+Finding: Pixal48matched neutral/nativePBR angle pairs preserve allraw
+2,823,607vertices/6,597,482indices and exactmaterialdisplay values.
+
+Validation: Guard0/114.097s;96renderPNGs hashrechecked. NativeYup/front+Z
+usesdisplayonly X,-Z,Y/uniformscale, actualmesharrayreadbackbyteidentical.
+Materialshaderreadbackexact; no geometry/winding/attrs editing.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-orbit01/
+Ask:284–286.
+
+Limits: Unaccepted technicalrender; silentencoding/rootplayedjudgment
+pending. Explicit1024candidate, not1536 success or wearableart acceptance.
