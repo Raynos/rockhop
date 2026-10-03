@@ -20,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--out', required=True)
     parser.add_argument('--contract', required=True)
+    parser.add_argument('--signed-nearest', action='store_true')
     args = parser.parse_args()
     assert os.environ.get('ROCKHOP_GENERATION_CONTROLLER_PID') == str(os.getppid())
     contract_path = Path(args.contract).resolve()
@@ -46,6 +47,38 @@ def main():
     assert conv_config.FLEX_GEMM_ALGO == 'masked_implicit_gemm_splitk'
     assert conv_config.FLEX_GEMM_HASHMAP_RATIO == 2.0
     torch.set_num_threads(4)
+    sentinel_probe = None
+    if args.signed_nearest:
+        from qualified_pixal_sparse_sampling import sample_with_signed_nearest
+        from flex_gemm.ops import grid_sample as grid_module, utils
+        from qualified_sparse_operator_control import grid_oracle
+        native_grid = grid_module.grid_sample_3d
+        probe_coords = np.asarray([[0, 0, 0, 0], [0, 1, 1, 1], [1, 0, 0, 0]], np.int32)
+        probe_features = np.asarray([[0.25, 0.5], [0.75, 1.0], [1.25, 1.5]], np.float32)
+        probe_queries = np.asarray([[[0.5, 0.5, 0.5], [1.5, 0.5, 0.5], [-2, -2, -2], [3, 3, 3]]]*2, np.float32)
+        c = torch.from_numpy(probe_coords).to('mps')
+        f = torch.from_numpy(probe_features).to('mps')
+        q = torch.from_numpy(probe_queries).to('mps')
+        shape = (2, 2, 2, 2, 2)
+        keys, values = utils.init_hashmap(shape, 6, c.device)
+        indices = kernels.cuda.hashmap_build_grid_sample_3d_nearest_neighbor_map(keys, values, c, q, 2, 2, 2).int()
+        unsigned_valid = indices != 0xffffffff
+        signed_valid = indices != -1
+        original_values = native_grid(f, c, shape, q, mode='nearest')
+        protected_values = sample_with_signed_nearest(native_grid, f, c, shape, q, mode='nearest')
+        torch.mps.synchronize()
+        expected = grid_oracle(probe_coords, probe_features, probe_queries, shape, 'nearest')
+        sentinel_probe = {'signedIndices': indices.cpu().tolist(),
+                          'originalUnsignedMask': unsigned_valid.cpu().tolist(),
+                          'correctSignedMask': signed_valid.cpu().tolist(),
+                          'maskDifferences': int((unsigned_valid != signed_valid).sum().item()),
+                          'originalMaxError': float(np.max(abs(original_values.cpu().numpy()-expected))),
+                          'protectedMaxError': float(np.max(abs(protected_values.cpu().numpy()-expected))),
+                          'threshold': 1e-5}
+        assert sentinel_probe['maskDifferences'] > 0 and sentinel_probe['originalMaxError'] > 1e-5
+        assert sentinel_probe['protectedMaxError'] <= 1e-5
+        # Owned process-local forward substitution; installed files untouched.
+        grid_module.grid_sample_3d = lambda feats, coords, shape, grid, mode='trilinear': sample_with_signed_nearest(native_grid, feats, coords, shape, grid, mode)
     sys.argv = [sys.argv[0], '--out', args.out, '--protected-trilinear']
     original_control()
     out = Path(args.out).resolve()
@@ -73,7 +106,7 @@ def main():
                      'coordinatesUnchanged': torch.equal(actual.coords.cpu(), coordinates.cpu()),
                      'featuresUnchanged': torch.equal(features.cpu(), torch.from_numpy(fixture['features']))}
     np.savez_compressed(out / 'actual-pixal-conv-wrapper.npz', actual=got, expected=fixture['expected'], coords=fixture['coords'])
-    receipt.update(model='Pixal3D', contractSHA256=sha(contract_path),
+    receipt.update(model='Pixal3D', signedNearestProtection=args.signed_nearest, sentinelProbe=sentinel_probe, contractSHA256=sha(contract_path),
                    wrapperSHA256=sha(__file__), actualSparseModule=module_record,
                    sparseBackend={'conv': sparse_config.CONV, 'attention': sparse_config.ATTN,
                                   'algorithm': conv_config.FLEX_GEMM_ALGO,
@@ -81,7 +114,7 @@ def main():
                    actualSourcePins=contract['sourcePins'],
                    limits=['Synthetic forward controls and actual Pixal wrapper only.',
                            'No learned conditioning, model generation, backward or CUDA parity.',
-                           'Trilinear half/bfloat inputs use the owned float32 adapter, not unsafe native pointers.'])
+                           'Trilinear half/bfloat uses owned float32 adapter; optional nearest uses signed sentinel. Native files unchanged.'])
     receipt_path.write_text(json.dumps(receipt, indent=2) + '\n')
     assert module_error <= 1e-5 and all(module_record[k] for k in ('finite', 'repeatByteIdentical', 'coordinatesUnchanged', 'featuresUnchanged'))
     print(json.dumps({'cases': len(receipt['cases']), 'actualPixalWrapperError': module_error}))

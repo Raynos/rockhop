@@ -1402,3 +1402,16 @@ Ask:284–286.
 
 Limits: Sentinel comparison candidate unisolated. Later grid cases and
 actual Pixal wrapper not reached. No shared edit, learned seed or CUDA pass.
+
+Finding: Owned Pixal control now isolates signed sentinel handling before
+rerunning sparse suite, preserving native nearest hashmaps/interpolation.
+
+Validation: Source syntax/whitespace pass;18 source/library/control pins.
+Actual rawindices and unsigned/signed masks must expose the prior failure;
+unchanged independent CPU query oracle requires protectederror≤1e-5.
+All15original dtype controls plus actual Pixal wrapper remain required.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_control.py
+Ask:284–286.
+
+Limits: Unaccepted checkpoint, execution pending. Process-local forward
+adapter only; no shared library edit, learned seed, backward or CUDA pass.
