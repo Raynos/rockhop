@@ -744,3 +744,19 @@ foreign source/evidence and retain the original artifact distinction.
 
 Limits: Root-useful detail reference only; no geometry replacement,
 physical scale, bodyfit, rig, PBR or human asset acceptance.
+
+Finding: One documented-quality Hunyuan PBR worker reuses proven immutable
+UV geometry and protects actual CPU inpainting from alias mutation.
+
+Validation: AST passes. Mandatory shape/wrapped/image/weight receipt pins
+and fresh22file digests precede load. Actual installed pipeline hash pinned,
+no remesh/simplification; proven xatlas result reused without recomputation.
+Documented8maxviews/768view/2048render/4096texture/15UniPCsteps/seed42;
+actual views, loaded classes, input/features/noise and OBJ/GLB triangle
+errors captured. Instance copied getter, process-only frozen loader/UV
+reuse and existing MPS compatibility aliases explicit. No new shape seed.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint, actual neural painting pending.
+Require all921722triangles retained and coordinates≤9e−7 after six-decimal
+OBJ then GLB serialization. No texture/style/fit/CUDA or asset acceptance.
