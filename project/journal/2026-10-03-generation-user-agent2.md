@@ -380,3 +380,14 @@ Ask:276; expanded qualified comparison.
 Limits: One-batch synthetic operator checks cannot establish CUDA/model
 parity or all realistic learned activations; extraction/conditioning still
 need separate qualification. Shared source untouched.
+
+Finding: Actual installed Pixal sparse naive chunked-float32 attention
+passes the same four synthetic controls used for TRELLIS.
+
+Validation: Guard exit0 in5.366s; all finite at256/16384tokens, amplitudes
+1/4, float32/bfloat16; exact maxima retained in receipt. No neural weights.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/pixal-attention01/receipt.json
+Ask:276; expanded qualified comparison.
+
+Limits: Operator-only, one-batch controls do not qualify conditioning,
+extraction, full learned activations or CUDA parity; source untouched.
