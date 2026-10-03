@@ -1,5 +1,9 @@
 **Branch audit (ask263):** [Verified refs](../evidence/branch-audit-2026-10-03/README.md): every local/fetched branch is contained in main. Three pre-purge pointers aligned to verified rewritten ancestors; original tips preserved locally. No outstanding merge or game asset change. Native adaptation remains queued.
 
+**Local checker succession (ask267):** [Frozen handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md) preserves generic63-test attribution, green published arm-foundation checkpoint, exact local owners/model context and remaining frozen anatomy source work. Generation is ask262/local01a10155; small-commit policy is ask266. This lane freezes after checkpoint; root/relay creates the next LOCAL checker. No player promotion/deploy/cleanup or invented cloud model.
+
+**Separate anatomical foundation (ask261):** Builder01a1013b has frozen source/evidence/journal and stopped writes/jobs/leases for local succession. [Checker handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md) pins unchanged control/master; later builder evidence reports seven-endpoint raised parity7.645mm body/4.716mm cloth,49surface witnesses and true action-off fixtures. Source checkpoints remain uncommitted after ignored-master staging stopped; review each finished unit before new geometry. Hood/generated head/fabric, proportions, continuous contact and engine/device acceptance remain open; builder model unresolved.
+
 # What we are building — the plans and where each stands
 
 **Rider review website (ask264):** [Private picture packet](https://rockhop-rider-baseline-review.raynos.chatgpt.site): eight retained pictures/two silent diagnostic clips, enlarged sources and local feedback download. [Delivery](../evidence/hero-remaster/rider-baseline-review-site-2026-10-03/README.md) records WebKit1200/390 media/layout checks and third-round identical clear/crash/restart. Historical packet; all current-candidate and phone gates remain open.

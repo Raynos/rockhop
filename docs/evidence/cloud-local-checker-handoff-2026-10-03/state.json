@@ -1,0 +1,103 @@
+{
+  "status": "FROZEN_AFTER_HANDOFF_CHECKPOINT; root creates local successor",
+  "checkpoint_base_head": "c2b8ebefe4f53e22131bd1ef13962c8cbe78ce87",
+  "shared_index_before_checkpoint": {
+    "staged_paths": [],
+    "entry_sha256": "af8f2fc7b244748bbcfd61930b61ec2a37d966fe96e1b0bcad2c175ad69fc60a"
+  },
+  "player_worktree_clean": true,
+  "current_lane": {
+    "session": "01a0ff6e-fdea-7217-8306-2d2cf26c603c",
+    "model_provenance": "explicit user declaration codex:Astra-6; not auto-detected",
+    "declaration": "docs/evidence/cloud-commit-attribution-2026-10-03/user-declaration.json"
+  },
+  "native_generation_context": {
+    "session": "01a10155-2684-71e3-bd8e-00de4280a64c",
+    "model": "gpt-6.1-sol",
+    "context_timestamp": "2026-10-03T10:35:21.805Z",
+    "turn_id": "01a10155-27b2-7ab0-966c-500e0992fcf7",
+    "cwd": "/Users/raynos/projects/games/rockhop",
+    "source": "matching-local-session turn_context.model",
+    "note": "Native runtime-recorded context, not cloud per-request routing telemetry; do not copy raw session records into repository."
+  },
+  "foundation_builder": {
+    "session": "01a1013b-2fce-7613-a549-da881625200e",
+    "model": "unresolved",
+    "state": "frozen; source/evidence/journal remain uncommitted",
+    "process_state": "builder reports no inference/render/background test/lease remains"
+  },
+  "active_ask_ids": [
+    255,
+    256,
+    257,
+    258,
+    260,
+    259,
+    261,
+    262,
+    266,
+    263,
+    264,
+    265,
+    267
+  ],
+  "ask_number_resolution": "generation262; small-commit policy266 (formerly262); already resolved by planning owner in90b12250",
+  "foundation_local_pins": [
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/control.blend",
+      "bytes": 1061581,
+      "sha256": "72861d5b8df755385eb532f4f0a337486929b42d4a491f34655e2827234fcd29"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/control.glb",
+      "bytes": 1131276,
+      "sha256": "e2f314aa59a955503187892be5cd0ba7a949b21da81739161a5f704fc1bb1743"
+    },
+    {
+      "path": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/HANDOFF.md",
+      "bytes": 6488,
+      "sha256": "5053630dd5179f01788670b775a44716765ac7b8258904ffabdfc6978ad785bf"
+    },
+    {
+      "path": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/source-choice.json",
+      "bytes": 4039,
+      "sha256": "7744c6fb2cb016f9eb136a3f30b13aa8a4692393d8c638ff032fa46ac3f2b36d"
+    },
+    {
+      "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/reference-contract.json",
+      "bytes": 3913,
+      "sha256": "7b15bf096b63d53d379eceb53bf9c7bad58da5b5ee66f1c2f9d3ae4e63a66a28"
+    }
+  ],
+  "access_limits": {
+    "supported_desktop_thread_read_send": "not exposed in available tools",
+    "authoritative_cloud_executed_model_reader": "not exposed in available tools"
+  },
+  "remaining_worktree_owners": [
+    {
+      "session": "01a1013b-2fce-7613-a549-da881625200e",
+      "paths": [
+        "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/",
+        "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/",
+        "project/journal/2026-10-03-anatomical-foundation.md"
+      ]
+    },
+    {
+      "session": "01a10155-2684-71e3-bd8e-00de4280a64c",
+      "paths": [
+        "assets/blender/hero-remaster/generation-comparison-2026-10-03/",
+        "docs/evidence/hero-remaster/generation-comparison-2026-10-03/",
+        "project/journal/2026-10-03-generation-comparison.md"
+      ]
+    },
+    {
+      "session": "01a0ff6e-fdea-7217-8306-2d2cf26c603c",
+      "paths": [
+        "docs/evidence/hero-remaster/anatomical-foundation-parent-review-2026-10-03/"
+      ],
+      "note": "earlier22-file review snapshot; owner has since extended evidence, re-inventory before committing"
+    }
+  ],
+  "scratch": ".tmp/ and harness/out remain preserved; no deletion or ownership takeover",
+  "planning_owner_checkpoint": "c2b8ebefe4f53e22131bd1ef13962c8cbe78ce87; owned review-site source/evidence committed; preserved"
+}
