@@ -31,14 +31,16 @@ Latest human direction (2026-10-03): **properly fitted skinning plus lightweight
 The latest human direction requests the full pipeline in this order. Existing
 rig, native replay and engine diagnostics are useful infrastructure; they do not
 accept incomplete earlier asset stages. Root remains the sole M0–M5 judge.
-Agent 1 builds/integrates; Agent 2 supports appearance; Agent 3 verifies.
+Agent 1 constructs the wearable source; Agent 2 supplies qualified appearance
+donors; Agent 3 independently integrates, skins and verifies actual gameplay,
+collision response and mobile behavior.
 
 | Stage | Current execution/status | Acceptance relationship |
 | --- | --- | --- |
 | 1. Art direction | Protected buzz-cut identity and mustard hoodie/indigo jeans/black gloves/boots are frozen; coherent target coverage remains incomplete | M0 open |
 | 2. Assembled master body/identity | Clean anatomical foundation exists; integrate the exact liked head into one recognizable textured master now | Earliest incomplete asset foundation; M1 open |
-| 3. Fitted separate garment topology | Keep the clean sweatshirt/trouser patterns; complete neckline/hood/cuffs/ankles and qualify remaining underarm/knee/hem faults | M1 open; failed offset/attachment loops stay stopped |
-| 4. UV/PBR look development | Reuse approved head and wardrobe texture/detail sources on this construction; optional generation cannot block assembly | One frozen unaccepted appearance candidate, then played review |
+| 3. Fitted separate garment topology | Convert the selected completed Hunyuan hoodie into a clean wearable mesh around the same canonical body: preserve recognizable hood/sleeve/cuff silhouette, construct real neck/cuff/hem openings and inner clearance, then rig and test; retain trousers/footwear fit work | M1 open; 5k–15k triangles is a benchmark, not acceptance; blind decimation is not fitting; failed sleeve controls do not block full-garment construction |
+| 4. UV/PBR look development | Carry the selected Hunyuan hoodie PBR character into that construction with explicit geometry/pose/units/transforms/UV/texture lineage; preserve the exact protected head and high-poly donor | One frozen unaccepted wearable candidate, then played review; selected donor supersedes optional-only wording |
 | 5. Rig and weights | Carry forward the verified own 51-deform-joint bind, including 19 runtime roles; preserve explicit scoped conditioning | Infrastructure verified; whole-rider deformation acceptance open |
 | 6. Collision-aware deformation | Primary fitted skinning with lightweight consumed body/self/inter-garment corrections; qualify rest, thickness and held-out moving views with response off/on | Bounded beneficial secondary motion only; full-cloth tests remain controls, not the default |
 | 7. Actual gameplay animations/contacts | Separate bike-free standing/reach/stress from seated/riding/landing with actual hand/foot/saddle support | Synthetic floating crouch is not supported riding; M2/M3 open |
@@ -60,8 +62,8 @@ The root alone judges played evidence and closes M0–M5.
 
 | Existing lane | Next concrete asset or test | Frozen handoff and limits |
 | --- | --- | --- |
-| Agent 1 — finished character construction | Sew a rounded dropped hood into the native neckline with torso ownership, replace angular hoodie texture transfer with coherent mustard UV/PBR; qualify knee/rest/pins before one cloth comparison | One native master + exact exported GLB + controller, source/donor/recipe hashes, original51bind and protected head fidelity receipt; matched native front/rear continuous films. Construction remains unaccepted until root review; no normal player selection |
-| Agent 2 — local runtime/checkpoint audit and quality assets | Finish actual installed backend/input-contract audit and decode batching qualification; complete the same documented-quality Hunyuan hoodie attempt if guarded decode is safe, then offer one qualified appearance donor | Exact model/checkpoint/wrapper/runtime versions and hashes, original input/provenance, parameters/seed, sampling/decode/extraction receipts, output hash or explicit no-output status. No fused generated anatomy/rig replaces Agent1 construction; assembly continues independently |
+| Agent 1 — finished character construction | Build the selected generated hoodie into actual wearable topology and UV/PBR around the canonical body, retaining recognizable donor hood/sleeves/cuffs, real openings and inner clearance; then hand off the frozen candidate for independent rig/game tests | One native master + exact exported GLB + source/donor/recipe hashes, explicit fitting transforms and texture lineage, original51bind and protected head fidelity receipt. Preserve the exact donor and all sleeve controls; no new plain-shirt fallback or full-body cloth default; root alone accepts |
+| Agent 2 — local runtime/checkpoint audit and quality assets | Completed Hunyuan shape/PBR donor is selected for construction; preserve exact source/provenance and continue the bounded comparison/backend audit already underway | Exact model/checkpoint/wrapper/runtime versions and hashes, original input/provenance, parameters/seed, sampling/decode/extraction and texture receipts. No fused generated anatomy/rig replaces Agent1 construction; no duplicate generation setup or Library delivery |
 | Agent 3 — actual game integration and mobile QA | Verify current protected-head/own-bind candidate in Three.js; use prepared real-recorded-input Rookie/Pro lean/landing windows for visible palm/sole/saddle support, then current candidate desktop/WebKit/device budgets | Same Agent1 candidate/version/hash/controller, actual loader/stage matrices, materials/LOD, recorded input/camera/bike hashes and contact/every-frame/played receipts. Bike-free anatomical motion and actual supported riding stay separate; private evidence does not promote the player |
 | Root/dot — inputs, research, cloud support and visual acceptance | Supply the coherent high-quality wardrobe/identity reference bank and primary-source backend/input research; use bounded cloud Blender support for a specific construction problem and judge newly delivered clips | Original reference bytes + SHA/version/Library identity, explicit calibrated geometry versus experimental generated2D labels, primary-source links/configuration, exact supported pose/camera and deliverable pins. Research/support do not overwrite owner masters or substitute for played acceptance |
 
@@ -77,12 +79,16 @@ Current protected baseline is donor `b7f4f227…`, approved wardrobe storyboard
 `d48e3913…`, and Agent1 appearance03 raw-normal GLB `010501c3…` with explicit
 source-normals controller. Agent3 independently verifies43712head/294cheek
 source vectors, images/specular factors and51bind; hood/wardrobe and fit remain
-open. Agent2's latest high-quality Hunyuan run completed all30 sampling steps
-but the first guarded decode stopped on memory before an output. The same-seed
-batching repair fits its resource guard; its raw decoder arrays contain35160
-nonfinite vertex elements and are rejected before display/export. No qualified
-donor exists yet. This is not a style/input-quality or model-quality verdict;
-the decoder field/control cause remains under audit. Richer root-supplied input/backend reports do not block ongoing assembly.
+open. The completed [Hunyuan paint06 handoff](../evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/handoff.json)
+pins the selected shape/PBR GLB `800d7a97…`: 921722 triangles, 4096px textures,
+eight 768px paint views, 15 steps and seed42. Root played its 12-angle PBR orbit
+and selected its recognizable mustard hood/sleeve/cuff character as the visual
+source for actual wearable conversion. Native model units remain uncalibrated;
+the orbit's X,−Z,Y display transform is not body fitting. Six zero-area triangles
+and a detached104-face speck remain in the untouched high-poly donor. Selection
+is not opening/fit/rig/PBR-map/mobile or final visual acceptance. Historical
+nonfinite decoder output remains rejected, and every mechanical sleeve control
+remains frozen; their failures do not defer this full-garment construction.
 
 ## What exists and what is left
 

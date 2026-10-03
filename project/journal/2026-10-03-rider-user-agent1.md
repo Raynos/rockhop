@@ -363,3 +363,11 @@ Finding: Current09constructedrubberoutsole actualmesh0/primitive1 (466rows/328tr
 Validation: Allsole rows/triangles uniquely map to nativeboot vertex/triangle/polygon IDs, maxrestmapping53.644nm. Proposedarch areaweightfootL99.163%/R99.503%; parentlocalposition/quaternion/matrix worldclosure<1e−12m, axes/metres/file+.65-runtime−.65 explicit. Actualnormalizedloaderweight tables/sourceSHA fixed; no model/marker/body/bind/runtime mutation. Python/MJS syntax and diff pass.
 
 Limits: Archselection/loadbearingsemantics and rigidfoot-parent marker are PROPOSALS; smallballweights meanactualskinnedsurface mustbechecked in motion. Source9fit remains empiricalforfrozenmixedfield, notpureclosest-body intervention. Actualpeg/contact/collision/mobile/art acceptance remainsAgent3+root; no unuseddescriptor/playerpromotion.
+
+### Round42 — selected generated hoodie construction, 2026-10-03
+
+Finding: Human/root selects completed Hunyuan paint06 shape/PBR as actual wearable construction source, superseding optional-only/stale no-donor wording. Reconcile existing stage3/4 and owner lanes: Agent1 constructs around the same body, Agent2 supplies qualified donors, Agent3 independently skins/integrates/tests actual collision/game/mobile; no new plan or worker.
+
+Validation: Exact donor800d7a97… and paint06 handoff remain unchanged; 921722triangles/4096px PBR/8views768/15steps/seed42 pinned. All M0–M5/root sole judgment and ten-stage dependencies retained. Silent ship42 shipped control passes4810byteidenticalticks/clear40.083333333s/crash103/restart1tick/frame2.215ms/cold5527ms/errors0.
+
+Limits: Selection is not fitted/rigged/opening/map-level/mobile/art acceptance. 5k–15k triangles is benchmark, not permission for blind decimation. Preserve high-poly donor, failed sleeve controls and protected body/head/51bind. Full-body cloth is not default; lightweight corrections must be consumed. No normal-player promotion.
