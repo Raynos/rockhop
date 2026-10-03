@@ -88,3 +88,17 @@ nodes are body/cloth/jeans only. Contact counts explicitly builder-reported.
 Limits: No clearance rerun or new Garage film; rejection of this fixedtrial
 is not proof all restfits infeasible. No acceptance/source production edits.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/rest-fit01-rejection.json
+
+Finding: Rejected attachment01 retains exact loaded anatomical body and rig
+while its dense garment construction still fails builder moving checks.
+Validation: Original/driver/recipe/trial pins verified. Body allattribute
+semantic hashes and index identical; all3meshes retain all51jointorders,
+inversebinds, bindmatrices and meshworld exactly. Newgarments carry ancestry
+attributes without stale originalvertexIDs. Scoped type-aware lint passes.
+Ninth-round freshordinary build20shippedmodels/no replacements; silent low/high
+coldboot/clear4810ticks/40.0833333333s byteidenticalfinish, crash103ticks,
+one-tick restart2/2ms, zeroerrors.
+Limits: Native collisioncounts builder-reported; differenttopology makes
+coarse/dense paircounts incomparable. Ancestrypresence only, not interpolation
+proof. No candidatevisual/contact/deviceacceptance; playedbaseline unchanged.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/attachment01-rejection.json
