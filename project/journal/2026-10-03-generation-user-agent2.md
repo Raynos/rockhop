@@ -1517,3 +1517,16 @@ Ask:284–286.
 Limits: Checkpoint only, inference pending. Owned process-local signed
 nearest/float32 trilinear protection, no shared edit/recolor/cleanup.
 Not calibratedcamera/fullmodel/CUDA/backward/game-ready art proof.
+
+Finding: Pixal1536 attempt01 stops before sampling because owned observer
+omitted math import, not a checkpoint/backend or memory failure.
+
+Validation: Guard1/63.015s;17canonical records and10actual checkpoint loads
+verified, missing/unexpected keys0. One real DINO capture/input match;
+no sample/noise/native mesh. Peak53.9anon/60.1combined GiB. Runtime24
+player/dependency pins and playerdiff0 retain coldboot/clear/crash/restart.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal01/
+Ask:284–286.
+
+Limits: Failed unaccepted harness unit; no Pixal output/quality proof.
+Original receipt/log/source retained before correction and same-seed retry.

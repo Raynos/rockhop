@@ -1,0 +1,360 @@
+{
+  "accepted": false,
+  "model": "Pixal3D",
+  "quality": {
+    "pipeline": "1536_cascade",
+    "stepsPerStage": 12,
+    "seed": 42,
+    "effectiveResolutionRequired": 1536,
+    "documentedLowerMemoryAlternative": "1024_cascade; not a silent fallback"
+  },
+  "torch": "2.12.0",
+  "workerSHA256": "3ffb3fe444f405daaf4443c37bcf0caf314e51560f40cea6920cd26260e7e38f",
+  "contractSHA256": "ef881aa47f0c4b6ba7682b3d06b95a25ccbfacb4c9cde8220df905e461cd750b",
+  "phase": "conditioning-ss",
+  "weights": [
+    {
+      "role": "sparse_structure_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "bytes": 245,
+      "expectedSHA256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "bytes": 147591972,
+      "expectedSHA256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_flow_model.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+      "bytes": 503,
+      "expectedSHA256": "2b3ef4c63b72a3de8adf745bd9d9d36b7960bdd7ba3740a6fa4d18fea6c475dd",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_flow_model.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+      "bytes": 5359822584,
+      "expectedSHA256": "6d0147bb347eb61fa81c304cc68c7fd69d447e91870357a549b47e1d0fd77242",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "bytes": 678,
+      "expectedSHA256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948490494,
+      "expectedSHA256": "e3b718d3e43e4f8780e9a24ac6fff231811a67e3b058e336e10fe654c911d581",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_512.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "2f7b736e8535aae96e7c41e8d123c24a14ee809fc25bea76eeac72643d21b997",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_512.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+      "bytes": 5546764048,
+      "expectedSHA256": "63569838c1da93f010e2fa805b202ecf802cc758830230abac202a81b70e5b45",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_1024.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "f47fca56311959a643e8cfd2750229a2c53cbab0027406d8426cd564ce4fb5bc",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_1024.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 5546764048,
+      "expectedSHA256": "3e6d1df0e62bc5bc863320d1d63d6b996235eef4abb8b851e878c88f316369f1",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+      "bytes": 705,
+      "expectedSHA256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948458812,
+      "expectedSHA256": "97ea69addea2ecd9312910f5f548234665eef51c088386180b7cd5b258645e3c",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_flow_model_1024.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "f18455729d08d2ce7ef809f947ffa47f6f468b3bcf8a86473e8c326e80128ac2",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_flow_model_1024.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 5546960656,
+      "expectedSHA256": "65df179ad02f9e92bc18335d7861fadd95f268e6249217352468dd83cb79d1d0",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+      "bytes": 2664431,
+      "expectedSHA256": "c096c1ab2217a5c3ac136365f721685e2201379cb69d509cfb0261183847c98f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "bytes": 1212559808,
+      "expectedSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/Ruicheng/moge-2-vitl/model.pt",
+      "bytes": 1305030700,
+      "expectedSHA256": "3eefd4abb2102f38f12b2d1992e5ff15e4923e5431c67dd494afe157e0111cd5"
+    }
+  ],
+  "loadedModels": {
+    "sparse_structure_decoder": {
+      "class": "SparseStructureDecoder",
+      "parametersByDtype": {
+        "torch.float32": 121505,
+        "torch.float16": 73549696
+      }
+    },
+    "sparse_structure_flow_model": {
+      "class": "SparseStructureFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17499656,
+        "torch.bfloat16": 1321912320
+      }
+    },
+    "shape_slat_decoder": {
+      "class": "FlexiDualGridVaeDecoder",
+      "parametersByDtype": {
+        "torch.float32": 67783,
+        "torch.float16": 474163680
+      }
+    },
+    "shape_slat_flow_model_512": {
+      "class": "ElasticSLatFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17573408,
+        "torch.bfloat16": 1369098240
+      }
+    },
+    "shape_slat_flow_model_1024": {
+      "class": "ElasticSLatFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17573408,
+        "torch.bfloat16": 1369098240
+      }
+    },
+    "tex_slat_decoder": {
+      "class": "SparseUnetVaeDecoder",
+      "parametersByDtype": {
+        "torch.float32": 67718,
+        "torch.float16": 474148288
+      }
+    },
+    "tex_slat_flow_model_1024": {
+      "class": "ElasticSLatFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17622560,
+        "torch.bfloat16": 1369098240
+      }
+    }
+  },
+  "captures": {
+    "ss-actual-normalized-pixels": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal01/model/ss-actual-normalized-pixels.npz",
+      "archiveSHA256": "3b5206e222ca60d58c38ef886ab047b55197e99acdd58424658962521368a9b1",
+      "CBytesSHA256": "0fb9378cc11a627ae00df6b916d09929b2c259ead29df55f2e10e0be0903da57",
+      "shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    }
+  },
+  "sampleCalls": [],
+  "attentionChecks": [],
+  "projectionChecks": [],
+  "bilinearChecks": [],
+  "nafChecks": [],
+  "inputMatches": [
+    "ss-actual-normalized-pixels"
+  ],
+  "memory": [
+    {
+      "phase": "load actual Pixal pipeline",
+      "activeBytes": 0,
+      "driverBeforeBytes": 458752,
+      "driverAfterBytes": 458752
+    },
+    {
+      "phase": "ready for one documented-quality seed",
+      "activeBytes": 0,
+      "driverBeforeBytes": 458752,
+      "driverAfterBytes": 458752
+    },
+    {
+      "phase": "conditioning-ss",
+      "activeBytes": 0,
+      "driverBeforeBytes": 458752,
+      "driverAfterBytes": 458752
+    }
+  ],
+  "camera": {
+    "camera_angle_x": 0.6360271680200948,
+    "distance": 1.5188968181610107,
+    "mesh_scale": 1.0
+  },
+  "backend": {
+    "dense": "sdpa",
+    "sparse": "naive",
+    "conv": "flex_gemm",
+    "NAF": "installed PyTorch2048query"
+  },
+  "limits": [
+    "No full-model/CUDA/backward, topology-quality, fit, rig or art acceptance.",
+    "Camera estimate from real MoGe control, no calibrated reference geometry.",
+    "Raw output before cleanup/export/recolor; selected learned witnesses only."
+  ],
+  "elapsedSeconds": 61.10199458291754,
+  "checkpointLoads": [
+    {
+      "module": "SparseStructureDecoder",
+      "stateTensors": 74,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "SparseStructureFlowModel",
+      "stateTensors": 701,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "FlexiDualGridVaeDecoder",
+      "stateTensors": 292,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "ElasticSLatFlowModel",
+      "stateTensors": 700,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "ElasticSLatFlowModel",
+      "stateTensors": 700,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "SparseUnetVaeDecoder",
+      "stateTensors": 284,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "ElasticSLatFlowModel",
+      "stateTensors": 700,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "NAF",
+      "stateTensors": 37,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "NAF",
+      "stateTensors": 37,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "NAF",
+      "stateTensors": 37,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    }
+  ],
+  "samplerDefaults": {
+    "sparse_structure": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.7,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 5.0
+    },
+    "shape_slat": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.5,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 3.0
+    },
+    "tex_slat": {
+      "steps": 12,
+      "guidance_strength": 1.0,
+      "guidance_rescale": 0.0,
+      "guidance_interval": [
+        0.6,
+        0.9
+      ],
+      "rescale_t": 3.0
+    }
+  }
+}

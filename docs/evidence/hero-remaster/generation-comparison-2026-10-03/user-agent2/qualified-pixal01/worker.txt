@@ -1,0 +1,37 @@
+[SPARSE] Conv backend: flex_gemm; Attention backend: naive
+[ATTENTION] Using backend: sdpa
+Loading weights:   0%|          | 0/754 [00:00<?, ?it/s]Loading weights: 100%|██████████| 754/754 [00:00<00:00, 12596.91it/s]
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|██████████| 415/415 [00:00<00:00, 27509.07it/s]
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|██████████| 415/415 [00:00<00:00, 30593.83it/s]
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|██████████| 415/415 [00:00<00:00, 44125.95it/s]
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|██████████| 415/415 [00:00<00:00, 30227.77it/s]
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal.py", line 327, in <module>
+    if __name__=='__main__':main()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal.py", line 311, in main
+    meshes,latent=pipe.run(image,camera_params=report['camera'],seed=42,pipeline_type='1536_cascade',preprocess_image=False,
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/pixal3d_image_to_3d.py", line 682, in run
+    cond_ss = self.get_proj_cond_ss(
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal.py", line 242, in get_ss
+    cond_calls+=1;phase('conditioning-ss');return keep_cond('ss',original_ss(*a,**kw))
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/pixal3d_image_to_3d.py", line 220, in get_proj_cond_ss
+    z_global, z_proj = image_cond_model(
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py", line 549, in forward
+    z_proj_lr = self.proj_grid(
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py", line 218, in forward
+    image_points, depth, valid_mask = project_points_to_image_batch(
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal.py", line 144, in checked_projection
+    focal = resolution / (2 * math.tan(float(angle[0].cpu()) / 2))
+NameError: name 'math' is not defined. Did you mean: 'Path'?
