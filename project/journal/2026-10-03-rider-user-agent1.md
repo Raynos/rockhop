@@ -323,3 +323,11 @@ Finding: Complete08 upper/sole rest-fit and529 original FK samples have0bodytria
 Validation: All625nativeposes measured with immutable old05/new08/body/jeans streams and source/driver pins; measurement42.52sCPU. Matched157sample12fps1280x720 fullorbit source-material silentfilm complete13.083333s decode/PTS verified, border0.138269. Ship36 shippedcontrol cold2934.657ms/clear40.083333333s/4810byteidenticalticks/crash103/restart1tick/frame3.5ms/errors0.
 
 Limits: Cappedthree-axisrayproxy/triangleoverlap are not signed-clearance proof; syntheticbikefree ankle/toe test is notsupportedpeg/game/iOS acceptance. Nativebakedmesh normals recomputed, lowercalf/jeanscrop explicit; sourcePBR/UV preserved. Latesthuman primarypath is fittedskinning+lightweightconsumedcollisioncorrections; fullcloth controls retained, notdefault. Agent3 owns actualruntime and architectureledger reconciliation; root judgesmovingwear. No promotion.
+
+### Round37 — locate plantar footwear deformation mismatch, 2026-10-03
+
+Finding: Source08 worst upper contacts are plantar forefoot, not ankle collar: implicated25shoe vertices average92%ball influence vs100body vertices~30.6%ball/69.4%foot. Long0.196–0.214m edges cross completefoot/ball weight changes; outsole13vertices implicate331body vertices. Freeze native IDs/weights/edges and evaluated contact ancestry before a targeted fitted-skin intervention.
+
+Validation: Exactsource564 upper142/sole355 andsource612 upper142/sole357 counts reproduce continuousmotion receipt againstfullbody; frozen master/motion hashes unchanged. Evaluatedtriangle/nativepolygon/vertex ancestry avoids rest-ngon diagonal assumptions. All398nativeweights/674resttriangles recorded; Python syntax passes.
+
+Limits: Aggregateweights/centroids locate likely deformation mechanism, not causalproof or signedpenetration. Fourtoe vertices retain tinyopposite-sidebodyweightdust≤0.000081796; symmetrictestdoesnotqualifyunilateral motion. No sourcechange/collisionresponse/mobile/artacceptance; actual response cannot be an unuseddescriptor.
