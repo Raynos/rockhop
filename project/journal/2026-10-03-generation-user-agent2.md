@@ -453,3 +453,15 @@ Ask:286.
 Limits: DINO/NAF conditioning, actual noise/camera estimation and complete
 neural runs remain pending. Preprocessing validity is not quality/fit
 acceptance or calibrated camera/geometry input.
+
+Finding: Fresh33selected large-checkpoint/config digests match official
+published sources; verifier then wrongly routed NAF GitHub weights to HF.
+
+Validation: Guard exit1 in24.458s after33matches; uncredentialed NAF HF
+metadata401 retained. Official GitHub release asset publishes the expected
+c096c1ab SHA; owned verifier corrected to that exact source, parses.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-weights01/
+Ask:285.
+
+Limits: Complete selected-weight pass still pending fresh retry. No auth
+credential read, model download/copy or missing-backend conclusion.
