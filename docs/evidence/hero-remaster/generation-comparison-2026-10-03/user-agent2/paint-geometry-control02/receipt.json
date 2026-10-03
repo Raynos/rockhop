@@ -1,0 +1,62 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "recipeSHA256": "58b15fd4733cf5c50152315058e6374730ec2566c6434657a7f7ae28467d0333",
+  "adapterSHA256": "d69df59e3e879f63ad4e6080ed86b1f6e68a0e6c52056b320940e22bfd698b2a",
+  "sourceFiles": {
+    "DifferentiableRenderer/MeshRender.py": "4dcc03c8a7b3804a7d1306bb00bd8d53fce9e549160361e7c0a1f9abcdc7eb53",
+    "utils/uvwrap_utils.py": "52936fbcc1719c6a6b2e424d9177ac19e106489b4c958c23605ab7f44bcd233b",
+    "DifferentiableRenderer/mesh_utils.py": "b6cff3ed417c2f0da977167d1f2c0fa3ded717ccbf5bf5d6063f0980f13f8b47"
+  },
+  "rasterizerSource": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/lib/python3.11/site-packages/custom_rasterizer/__init__.py",
+  "device": "cpu",
+  "UVWrapTriangleCoordinatesIdentical": true,
+  "cases": [
+    {
+      "name": "actualInstalledGetter",
+      "inpaintCalls": 2,
+      "stateAfterEachInpaint": [
+        {
+          "positionsIdentical": false,
+          "UVIdentical": false
+        },
+        {
+          "positionsIdentical": false,
+          "UVIdentical": true
+        }
+      ],
+      "positionsUnchangedDuringInpaint": false,
+      "UVUnchangedDuringInpaint": true,
+      "indicesIdentical": true,
+      "maxExportTriangleCoordinateError": 0.8899999856948853,
+      "triangleCount": 4,
+      "finiteInpaintImages": true
+    },
+    {
+      "name": "ownedCopiedGetter",
+      "inpaintCalls": 2,
+      "stateAfterEachInpaint": [
+        {
+          "positionsIdentical": true,
+          "UVIdentical": true
+        },
+        {
+          "positionsIdentical": true,
+          "UVIdentical": true
+        }
+      ],
+      "positionsUnchangedDuringInpaint": true,
+      "UVUnchangedDuringInpaint": true,
+      "indicesIdentical": true,
+      "maxExportTriangleCoordinateError": 1.4901161193847656e-08,
+      "triangleCount": 4,
+      "finiteInpaintImages": true
+    }
+  ],
+  "limits": [
+    "Known asymmetric tetrahedron, not full garment UV/bake or CUDA parity.",
+    "Owned instance adapter only, no shared source edits or model weights.",
+    "No remesh, simplification, smoothing or triangle deletion."
+  ],
+  "ownedPreservationControlPass": true
+}

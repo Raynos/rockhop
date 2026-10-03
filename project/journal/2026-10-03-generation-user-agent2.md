@@ -670,3 +670,19 @@ Ask:284–286.
 Limits: Root alone judges played clip. Experimental finite-cell derivative,
 not original invalid raw;6zero-area triangles and104face detached component
 retained. Averaged display normals only; real PBR/fit/rig review pending.
+
+Finding: Installed CPU paint UV inpainting mutates renderer geometry
+through a NumPy view; owned-instance copied getter preserves state.
+
+Validation: Actual installed UV wrap retains tetra triangle coordinates.
+Two real uv_inpaint calls on asymmetric tetra change CPU vertex state
+and cause0.8899999857export triangle-coordinate error. Owned getter copies
+returned arrays and restores position/UV tensor state after each call;
+same two-inpaint control preserves state/indices with1.49e−8export error.
+Shared guard exits0, no model weights or shared installation edits.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/paint-geometry-control02/
+Ask:284–286.
+
+Limits: Known analytic geometry only; actual garment UV/paint/export
+preservation still pending. No CUDA parity or acceptance. Do not inspect
+CPU getter before rendering without copy protection; it changes data.
