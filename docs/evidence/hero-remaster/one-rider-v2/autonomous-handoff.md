@@ -2574,3 +2574,20 @@ crash103ticks, restart1/2ms, noerrors and20existingplayermodels. Nextship216.
 Armproportion trial runs separately; sourcehead/hood protected. CosmeticsPAUSED;
 restanatomy, allbasicposes, threevisualcheckpoints, actualGarage/lean/landing/
 saddle/grip/sole/mobile remainOPEN. Correctcache then cap+actualrender, not polish.
+
+## Frozen arm proportion candidate; visual inspection deferred — round214
+
+Userrequested sessionexit stops newexperiments. ONE boundedarmfield output is
+frozen. Parent26pins verifies119360protected sourcepositions, allnativeY/Z and
+allsourcefaces/ancestry exact; actualGLBroundtrip exact. Builderreports closed
+manifold/vertexlinks/winding,0newaliases/zeroareas,0IPCintersections andclearstraight
+constructionCCD. Nativecoplanarqualifiers0 atdeclaredtolerances, notartapproval.
+
+Candidateea9dbfa729fceba0ac77ffdaefe0884fb1a9c6406a3314041525e8eaf509cb09
+remainsprivate/unaccepted. Noactualrender, rig, legedit, newmodeljob orbodyPBR.
+Maximumdisplacement253.307mm; peakderivative2.756,Yshear.0439; sourcehandFloat32
+rigidityresidual46/38nm. Actualfoldshape quality isUNMEASURED. Sourcegeneratorhead
+remainsprovisional; likedheadjoin216 isSEPARATE andneeds exactancestrycomposition.
+Next matchedgray A/Bbeforebinding, actualsole/leganatomy andfresh19boneadapter.
+All threevisual/basicpose/Garage/lean/landing/contact/mobile gates remainopen.
+Allownedjobsfinished; no newrender launchedafterexitrequest. Cosmetics paused.

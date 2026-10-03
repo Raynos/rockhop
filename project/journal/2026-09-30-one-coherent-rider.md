@@ -2749,3 +2749,14 @@ ONEphysicaledgeXYZcachefix admittedfreshpath, same25mm/protectedfacehood. Armtri
 separate; cosmeticspaused, ship216due. No normalplayerpromotion.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/head-sew213/
 Ask: 248.
+
+## Round214 — freeze arm-proportion216 for user-requested exit
+
+Finding: Protectedarmproportion trial structurallyclear; visualquality remainsunmeasured.
+
+Validation: Parent26pins/actualGLB/sourceprotection. 119360protectedrows/YZ/sourceincidencesexact; builderrest/straightCCDclear.
+
+Limits: No render/rig/newleg/composedcharacter/pose/art/contact/mobile pass.
+Userrequestedexit stopsnewjobs; explicitnextworkqueuedinplan, no playerpromotion.
+Evidence: docs/evidence/hero-remaster/one-rider-v2/arm-proportion216/
+Ask: 248,249.

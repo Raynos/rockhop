@@ -1,0 +1,142 @@
+{
+  "status": "STRUCTURAL_PREREQUISITES_CLEAR_COLLISION_PENDING",
+  "failures": [],
+  "geometryAttempts": 1,
+  "protectedPositionsExact": true,
+  "hoodHeadChestPantsShoesTinyProtected": true,
+  "nativeYZExactEverywhere": true,
+  "sourceFacesIndicesAndMultiplicityExact": true,
+  "GLBRoundTripExact": true,
+  "maximumCanonicalDisplacementM": 0.2533068763312245,
+  "fieldDerivativeMaximum": 2.755542542010426,
+  "fieldYShearMaximum": 0.04388966895422292,
+  "fieldJacobianMinimumDeterminant": 1.0,
+  "fieldJacobianSingularValuesMinMax": [
+    0.9984248390798893,
+    2.755542542010426
+  ],
+  "triangleStretchSingularValuesPercentiles": [
+    [
+      0.9999999999999996,
+      0.594501672535958
+    ],
+    [
+      0.9999999999999999,
+      0.9998751562936877
+    ],
+    [
+      1.0,
+      0.9999999999999999
+    ],
+    [
+      2.612691465853042,
+      1.0000000000000002
+    ],
+    [
+      3.3091526395202986,
+      1.0000000000000728
+    ]
+  ],
+  "triangleAreaRatioPercentiles": [
+    0.9974293148622771,
+    1.0,
+    1.0,
+    2.6126181550452308,
+    2.754746624917202
+  ],
+  "Float32PositionAliases": 0,
+  "hands": [
+    {
+      "side": "leftRigidHand",
+      "vertices": 4802,
+      "exactFieldTranslationNative": [
+        -0.28766072512262775,
+        0.0,
+        0.0
+      ],
+      "maximumFloat64RigidTranslationResidualNative": 0.0,
+      "maximumFloat32RigidTranslationResidualM": 4.61828092957138e-08
+    },
+    {
+      "side": "rightRigidHand",
+      "vertices": 4679,
+      "exactFieldTranslationNative": [
+        0.2864628002930507,
+        0.0,
+        0.0
+      ],
+      "maximumFloat64RigidTranslationResidualNative": 0.0,
+      "maximumFloat32RigidTranslationResidualM": 3.7974864059352794e-08
+    }
+  ],
+  "topology": {
+    "vertices": 147254,
+    "faces": 294504,
+    "edges": 441756,
+    "boundaryEdges": 0,
+    "nonmanifoldEdges": 0,
+    "windingConflictEdges": 0,
+    "vertexLinkFailures": [],
+    "zeroAreaFaces": 0,
+    "minimumAreaNativeUnitsSquared": 7.742959950613002e-15,
+    "duplicateUnorderedFaceIncidences": 0,
+    "components": [
+      {
+        "vertices": 147248,
+        "faces": 294496,
+        "bounds": [
+          [
+            -1.080609917640686,
+            -1.0002132654190063,
+            -0.7524345517158508
+          ],
+          [
+            1.0750324726104736,
+            0.993078887462616,
+            -0.2758879065513611
+          ]
+        ],
+        "signedVolumeNativeUnitsCubed": -0.15055789421419827
+      },
+      {
+        "vertices": 6,
+        "faces": 8,
+        "bounds": [
+          [
+            0.10329489409923553,
+            0.728992760181427,
+            -0.5540595650672913
+          ],
+          [
+            0.10340241342782974,
+            0.7290317416191101,
+            -0.5540167689323425
+          ]
+        ],
+        "signedVolumeNativeUnitsCubed": 2.989493985951978e-14
+      }
+    ]
+  },
+  "elapsedSeconds": 3.1684128753840923,
+  "peakRSSBytes": 337772544,
+  "outputs": {
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/arm-proportion216/candidate-native.glb": {
+      "sha256": "ea9dbfa729fceba0ac77ffdaefe0884fb1a9c6406a3314041525e8eaf509cb09",
+      "bytes": 5301880
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/arm-proportion216/ownership.npz": {
+      "sha256": "f7113a4e3321d9cde6d6389b4d64b06e3b32c323d1845cf1c67636e29668e586",
+      "bytes": 440457
+    },
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/arm-proportion216/construction.npz": {
+      "sha256": "8292a5fece3cf926570935a269c36f43e41389f27e5f1efae0b3c0749696c139",
+      "bytes": 5498142
+    }
+  },
+  "limits": [
+    "No visual, rigging, contact or player acceptance.",
+    "Native generated head remains provisional; liked head donor is not joined by this operation.",
+    "Globalcollision, allcoplanar and continuousfield-to-outputmotion checks still pending.",
+    "AnalyticpositivefieldJacobian does not establish finite-trianglecollision freedom."
+  ]
+}
