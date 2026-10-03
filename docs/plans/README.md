@@ -8,7 +8,7 @@
 
 # What we are building — the plans and where each stands
 
-**Native rider owners (ask262):** Verified local tasks: Generate fitted rider garments (`01a10170-5861-7dc3-971a-3273daead862`) owns generation-comparison assets/evidence/journal; Build canonical rider foundation (`01a1016e-c8da-77d0-9437-a5f980a6e427`) owns canonical construction and the reference freeze. Generation preparation checkpoint is pending; no lease/job/candidate reported at registration. Prior generation remains stopped. Root retains prompts/supervision/acceptance; all rider gates remain open.
+**Rider succession and audit freeze (asks262/272):** R1 construction01a1016e and generation01a10170 are final-wrap-only; preparation remains unaccepted. [Audit handoff](../evidence/hero-remaster/independent-audit-2026-10-03/FINAL-HANDOFF.md) transfers execution of the single canonical plan to the future integrator. Manager01a10191 assigns two successors after stop receipts/duplicate checks; root chooses local/cloud placement and alone judges. All six gates stay open; this human-created Audit task creates no planning successor.
 
 **Desktop task visibility (ask265):** Four other Rockhop tasks identified through the supported inventory; first two histories readable, two host histories unavailable. Later durable handoffs freeze construction, stop replacement generation and freeze checker613b8138. No foreign task messages, interruption or job launch by this audit owner.
 
