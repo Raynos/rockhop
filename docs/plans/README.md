@@ -267,6 +267,8 @@ Round232: user-authorized takeover archives 10-armhole-03-clearance with 4byte-e
 
 Round233: user-authorized takeover archives 10-armhole-04-coarse with 3byte-exact source pins. Historical source/evidence only, unaccepted; no player/model/physics changes. All three rider visual/pose/contact/mobile checkpoints remain OPEN/paused; local-input/lint limitations stay queued.
 
+Round234: user-authorized takeover archives 10-armhole-05-modest with 4byte-exact source pins. Historical source/evidence only, unaccepted; no player/model/physics changes. All three rider visual/pose/contact/mobile checkpoints remain OPEN/paused; local-input/lint limitations stay queued.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.
