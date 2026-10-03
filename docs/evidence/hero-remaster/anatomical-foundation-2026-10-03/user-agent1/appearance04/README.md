@@ -32,3 +32,16 @@ than the hidden original shirt. Export has two hoodie primitives; apply the
 same three local sleeve key coefficients to both dictionaries. Rest geometry,
 pocket seam/inside, collar/fold shape and full motion clearance remain open.
 No supported-bike, mobile, M0–M5 or normal-player promotion is implied.
+
+Two matched front/rear native films now complete, 133frames at12fps, 512×768,
+no audio, full decode and exacti/12 presentation timestamps within1µs. Every
+visible evaluated head/hand/foot vertex is framed. The explicit new visible
+hoodie is driven by all three coefficients everyframe, includingrest0.
+
+Agent3 independently finds an unintended uncontrolled export default: both
+hoodie primitives import morph influences [1,1,1], displacing rest by50.691mm
+before controller injection.04 remains immutable/unaccepted. A new successor
+must declare all three restweights0 in native source and export. The controlled
+film does not hide this defect: its explicit perframe coefficients are pinned,
+so it shows intended controlled motion, not uncontrolled default admission.
+Corrected successor and candidate-specific palm/sole/pelvis binding map follow.

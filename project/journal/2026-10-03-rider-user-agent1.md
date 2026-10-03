@@ -257,3 +257,13 @@ reverified. Master/final GLB/controller and 512px subtle woven albedo pinned.
 Limits: Unaccepted source checkpoint before identical front/rear motion; hood
 fold/pocket seam/full fit and earlier knee/hem faults still need root review.
 Evidence: [sewn hood wardrobe](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance04/README.md). Ask274; existing278.
+
+Finding: Sewn04 hood/coherentwardrobe now play the matched full motion, while
+independent admission exposes unintended default morph values before injection.
+Validation: Two133frame12fps silent512×768 movies fully decode, exacti/12PTS
+within1µs; all visible vertices framed. Explicit visiblehoodie receives all3
+controllercoefficients everyframe/rest0. Source/master/driver/finalGLB pinned.
+Limits: 04 importeddefaults[1,1,1] move rest50.691mm; this controlledfilm is not
+uncontrolledrest proof. Newzero-rest successor and exactcontactsurface map next.
+Hood/fold/pocket/fullfit/engine/mobile judgment remains root's; no promotion.
+Evidence: [played sewnhood](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance04/review/movies.json). Ask274.

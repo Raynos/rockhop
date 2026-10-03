@@ -12,6 +12,7 @@ from bpy_extras.object_utils import world_to_camera_view
 ap = argparse.ArgumentParser(description=__doc__)
 for n in ['source', 'driver', 'expanded', 'out']:
     ap.add_argument('--' + n, required=True)
+ap.add_argument('--cloth-name', help='Explicit visible derivative; original stays hidden')
 a = ap.parse_args(sys.argv[sys.argv.index('--') + 1:])
 source, dp, ep, out = [Path(getattr(a, n)).resolve() for n in ['source', 'driver', 'expanded', 'out']]
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -23,8 +24,10 @@ if (out / 'native-review.json').exists():
 bpy.ops.wm.open_mainfile(filepath=str(source))
 rig = bpy.data.objects['Independent anatomical foundation rig']
 objects = {r['region']: bpy.data.objects[r['exportName']] for r in driver['meshRows']}
+if a.cloth_name:
+    objects['cloth'] = bpy.data.objects[a.cloth_name]
 visible = [o for o in bpy.data.objects if o.type == 'MESH' and not o.hide_render]
-assert len(visible) == 8, [o.name for o in visible]
+assert len(visible) in [7, 8], [o.name for o in visible]
 for o in list(bpy.data.objects):
     if o.type in ['LIGHT', 'CAMERA']:
         bpy.data.objects.remove(o, do_unlink=True)
@@ -80,6 +83,7 @@ assert pins == {str(p): sha(p) for p in [source, dp, ep]}
 report = {'status': f'UNACCEPTED {source.parent.name} textured whole-rider continuous bike-free synthetic FK review; root judges',
     'pins': pins, 'recipeSHA256': sha(__file__), 'framesPerFilm': len(indices), 'fps': 12, 'driverFrameIndices': indices,
     'visibleObjects': [o.name for o in visible], 'views': views, 'lights': lights,
+    'explicitVisibleClothName': objects['cloth'].name,
     'render': {'engine': 'CyclesCPU', 'threads': 2, 'samples': 4, 'resolution': [512, 768]},
     'limits': ['Bike-free pose sweep includes reach/bends/stress; no actual bicycle or seated/contact qualification.',
         'Candidate preserves clothing patterns and local correctives; neckline/hood/glove/boot and full fit remain unaccepted.',
