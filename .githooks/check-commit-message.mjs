@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
-import { codexModel } from './resolve-attribution.mjs';
+import { createHash } from 'node:crypto';
+import { attributionTrailers, placeholderModel, resolveAttribution } from './resolve-attribution.mjs';
 
 // Syntax is enforceable; truth and editorial quality remain the parent's review.
 const fail = (message) => {
@@ -37,12 +38,33 @@ if (!/^Validation: \S.*$/m.test(body)) {
 }
 const attributions = lines.filter((line) => /^Assisted-by:/i.test(line));
 const activeCodex = process.env.CODEX_THREAD_ID || process.env.CODEX_SESSION_ID;
+const explicitCloud = process.env.CODEX_CLOUD_ATTRIBUTION_FILE !== undefined;
+let expected;
+if (explicitCloud || (activeCodex && process.env.SKIP_ATTRIB !== '1')) {
+  try { expected = await resolveAttribution(); } catch (error) { fail(error.message); }
+}
 if (process.env.SKIP_ATTRIB !== '1' && attributions.length === 0) {
   fail('end AI commits with Assisted-by: tool:actual-model');
 }
-if (activeCodex && process.env.SKIP_ATTRIB !== '1' &&
-    !attributions.some((line) => line.startsWith('Assisted-by: Codex:'))) {
-  fail('the active Codex session requires its own Assisted-by: Codex:model trailer');
+if (expected && !attributions.includes(`Assisted-by: ${expected.tool}:${expected.model}`)) {
+  fail('the active Codex session requires its resolved tool/model trailer');
+}
+if (expected?.source === 'user-provided') {
+  for (const trailer of attributionTrailers(expected).filter(line => line.startsWith('Attribution-'))) {
+    const key = trailer.split(':', 1)[0];
+    const declared = lines.filter(line => line.toLowerCase().startsWith(key.toLowerCase() + ':'));
+    if (declared.length !== 1 || declared[0] !== trailer || !last.split('\n').includes(trailer)) {
+      fail('cloud attribution requires exact user-provided provenance trailers in the final block');
+    }
+  }
+  const split = expected.evidence.lastIndexOf('@');
+  const path = expected.evidence.slice(0, split);
+  let staged;
+  try { staged = execFileSync('git', ['show', ':' + path], { stdio: ['ignore', 'pipe', 'pipe'] }); }
+  catch { fail('stage the reviewed cloud attribution declaration in this commit index'); }
+  if (createHash('sha256').update(staged).digest('hex') !== expected.evidence.slice(split + 1)) {
+    fail('staged cloud attribution declaration does not match the reviewed bytes');
+  }
 }
 for (const attribution of attributions) {
   if (!hasTrailerBlock || !last.split('\n').includes(attribution) ||
@@ -51,15 +73,19 @@ for (const attribution of attributions) {
     fail('Assisted-by must be a well-formed final trailer, after a blank line');
   }
   const [, tool, model] = attribution.match(/^Assisted-by: ([^:]+):(\S+)$/);
-  if (/^codex\b/i.test(tool) && tool !== 'Codex') {
+  if (/^codex\b/i.test(tool) && tool !== (expected?.tool ?? 'Codex')) {
     fail('use the canonical tool name Codex so its session model can be verified');
   }
-  if (/^(unknown|actual-model|model|model_version|latest|default|auto|n\/a|null|undefined)$/i.test(model)) {
+  if (placeholderModel.test(model)) {
     fail('resolve the real session model; placeholders are forbidden');
   }
-  if (tool === 'Codex' && activeCodex) {
-    let actual;
-    try { actual = await codexModel(); } catch (error) { fail(error.message); }
-    if (model !== actual) fail('Codex trailer model does not match active session metadata');
+  if (expected && tool === expected.tool && model !== expected.model) {
+    fail('Codex trailer model does not match resolved session attribution');
+  }
+  if (!explicitCloud && tool === 'Codex' && activeCodex && !expected) {
+    // Preserve model validation even when the human-only bypass is present.
+    try {
+      if (model !== (await resolveAttribution()).model) fail('Codex trailer model does not match active session metadata');
+    } catch (error) { fail(error.message); }
   }
 }

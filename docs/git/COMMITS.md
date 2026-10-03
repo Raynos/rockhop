@@ -27,12 +27,38 @@ AI commits end with a separate trailer block:
 
     Assisted-by: tool:actual-model
 
-Resolve the real tool and model from the active session's runtime metadata,
-not a default config or another session. Unknown and other placeholders are
-forbidden. For Codex, run node .githooks/resolve-attribution.mjs: it reads
-only the matching local session and prints the latest recorded model.
-Do not copy session records into the repository. If resolution fails,
-investigate the active runtime; do not commit invented attribution.
+Desktop attribution comes from the active session's runtime metadata, never a
+default config or another session. For Codex, run
+`node .githooks/resolve-attribution.mjs`: the default route reads only the
+matching local session and prints its latest recorded model. Unknown and other
+placeholders are forbidden. Do not copy session records into the repository.
+If resolution fails, investigate the active runtime; do not invent attribution.
+
+Cloud/delegated sessions may lack a local session record. When the user explicitly
+supplies the tool/model label, set `CODEX_CLOUD_ATTRIBUTION_FILE` to a reviewed JSON
+file under `docs/evidence/`, then run the same resolver from the repository. This
+is an explicit user declaration, not automatic model detection or a fallback for
+failed desktop metadata. A missing, malformed or stale declaration fails closed.
+The checker preserves the supplied tool spelling (`Codex` or `codex`) in this
+route; the desktop route continues to require canonical `Codex`.
+
+The declaration contains exactly `schemaVersion: 1`, `execution: "cloud"`,
+`source: "user-provided"`, the active `session`, `tool`, `model`, and an
+`authorization` string recording the user's exact label. It must be inside the
+repository and at most 16 KiB. The resolver prints the Assisted-by trailer plus
+mandatory Attribution-source, Attribution-session and Attribution-evidence
+trailers. Keep all four together in the final trailer block. The evidence trailer
+pins the declaration's path and SHA256; those exact bytes must also be staged
+in the commit index. Changed or unstaged declarations invalidate the trailers.
+Keep Assisted-by last, after the provenance trailers. No cloud route reads local
+session metadata or silently substitutes a model. Human-bypass flags do not bypass an explicit cloud declaration.
+
+Example authorized declaration and exact user quotes:
+`docs/evidence/cloud-commit-attribution-2026-10-03/user-declaration.json`.
+Use the user's statement only for its authorized scope; a prior declaration does
+not establish another session's model. Validation proves syntax/session/provenance
+consistency; truthful user authorization remains the committing parent's duty.
+
 Human coauthors can use Co-authored-by; AI assistance uses Assisted-by.
 A genuinely human commit can set SKIP_ATTRIB=1 to skip only the
 attribution requirement.

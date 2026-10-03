@@ -1,8 +1,12 @@
 # What we are building — the plans and where each stands
 
+**Cloud commit attribution (ask256):** Checker repair verified (59hook tests); user explicitly supplied `codex:Astra-6`. Preserve desktop metadata verification and require reviewed, session-bound cloud declaration with recorded user provenance. This does not establish the historical author model or accept rider assets.
+
+**Repaired rider diagnostic (ask255):** Independent QA owner holds `harness/rider-contact-diagnostic/` and `docs/evidence/hero-remaster/rider-contact-diagnostic-2026-10-03/`. Exact repaired sourceA/body11 GLBv3 and pose-manifest bytes are pinned; private normal-game build passed, silent headless WebKit capture is in progress per owner. STEP observations, cloud dense-driver parity and arms-out generalization remain open. No source promotion or production change.
+
 **Local/cloud rider reconciliation (ask250):** [Bounded joint plan](unknown-model-2026-10-03-LOCAL_CLOUD_RIDER_RECONCILE.md). Exact preferred appearance lineage and portable Mac parity verified; original owner technically acknowledges bind distinction; reconciliation is committed and future pose/support integration remains queued. Ask251Mac69interval contact proof passes in its narrow scope. Cloud hip-volume owner retains fixes; local216 candidates stay separate/unaccepted. Writer-model rename deferred until actual runtime provenance is available.
 
-**Next-agent rider handoff (ask252):** [Distilled goal and attempt catalogue](../evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md). Preferred generated WHITE appearance and sourceA/body11/C19 boundary pinned; historical scores scoped, cloud/fallback scores N/R. Current next finding is choreography/saddle support, not more hip weights. Standalone editable HTML and Markdown Library copies delivered; documented commit attribution remains unavailable in this lane.
+**Next-agent rider handoff (ask252):** [Distilled goal and attempt catalogue](../evidence/hero-remaster/next-agent-handoff-2026-10-03/README.md). Preferred generated WHITE appearance and sourceA/body11/C19 boundary pinned; historical scores scoped, cloud/fallback scores N/R. Current next finding is choreography/saddle support, not more hip weights. Standalone editable HTML and Markdown Library copies delivered; parent-reviewed checkpoint cb2e008e is committed/pushed. Historical author attribution stays unknown; ask256 now supports explicitly user-provided cloud provenance.
 
 Commit cadence: small, frequent main commits are explicit in `AGENTS.md` and
 `docs/git/COMMITS.md` (ask 213). Ask 214 rejects the current remastered rider:

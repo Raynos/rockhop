@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, writeFileSync, cpSync, rmSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, cpSync, rmSync, symlinkSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,6 +10,7 @@ const source = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const env = { ...process.env, GIT_CONFIG_GLOBAL: '/dev/null', GIT_CONFIG_SYSTEM: '/dev/null' };
 for (const key of Object.keys(env)) {
   if (key === 'CODEX_THREAD_ID' || key === 'CODEX_SESSION_ID' ||
+      key === 'CODEX_CLOUD_ATTRIBUTION_FILE' ||
       (key.startsWith('GIT_') && !key.startsWith('GIT_CONFIG_')) ||
       key.startsWith('SKIP_')) delete env[key];
 }
@@ -121,6 +122,115 @@ void test('Codex resolver uses matching session and latest recorded model', (t) 
       sessionEnv).status, 0);
   }
   assert.notEqual(f.message(valid, { ...sessionEnv, CODEX_THREAD_ID: 'missing-session' }).status, 0);
+});
+
+const cloudPath = 'docs/evidence/cloud-attribution/user-declaration.json';
+const cloudDeclaration = {
+  schemaVersion: 1, execution: 'cloud', source: 'user-provided',
+  session: 'fixture-cloud-session', tool: 'codex', model: 'Astra-6',
+  authorization: 'The user explicitly authorized codex:Astra-6.',
+};
+function cloudFixture(t, declaration = cloudDeclaration) {
+  const f = fixture(t);
+  f.write(cloudPath, JSON.stringify(declaration) + '\n');
+  f.git('add', cloudPath);
+  const cloudEnv = {
+    ...env, CODEX_THREAD_ID: 'fixture-cloud-session',
+    CODEX_CLOUD_ATTRIBUTION_FILE: cloudPath, CODEX_HOME: join(f.root, 'absent-desktop-metadata'),
+  };
+  const resolveCloud = (extraEnv = {}) => f.run(process.execPath,
+    ['.githooks/resolve-attribution.mjs'], { env: { ...cloudEnv, ...extraEnv } });
+  return { ...f, cloudEnv, resolveCloud };
+}
+function cloudMessage(trailers) {
+  return valid.replace('Assisted-by: Codex:gpt-6.1-sol', trailers.trim());
+}
+void test('explicit cloud declaration records user provenance without desktop access', (t) => {
+  const f = cloudFixture(t);
+  const result = f.resolveCloud();
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /^Attribution-source: user-provided\n/);
+  assert.match(result.stdout, /Assisted-by: codex:Astra-6\n$/);
+  assert.match(result.stdout, /Attribution-session: fixture-cloud-session\n/);
+  assert.match(result.stdout, /Attribution-evidence: docs\/evidence\/cloud-attribution\/user-declaration.json@[a-f0-9]{64}\n/);
+  const message = cloudMessage(result.stdout);
+  assert.equal(f.message(message, f.cloudEnv).status, 0);
+  assert.notEqual(f.message(message.replace('codex:Astra-6', 'codex:gpt-imaginary'), f.cloudEnv).status, 0);
+  assert.notEqual(f.message(message.replace('codex:Astra-6', 'Codex:Astra-6'), f.cloudEnv).status, 0);
+  for (const field of ['Attribution-source', 'Attribution-session', 'Attribution-evidence']) {
+    assert.notEqual(f.message(message.replace(new RegExp('^' + field + ':.*\\n', 'm'), ''), f.cloudEnv).status, 0);
+  }
+  assert.notEqual(f.message(message.replace('user-provided\n', 'auto-detected\n'), f.cloudEnv).status, 0);
+  assert.notEqual(f.message(message.replace('Attribution-source: user-provided',
+    'Attribution-source: user-provided\nAttribution-source: user-provided'), f.cloudEnv).status, 0);
+  assert.notEqual(f.message(message.replace('Attribution-source: user-provided',
+    'Attribution-source: user-provided\nattribution-source: user-provided'), f.cloudEnv).status, 0);
+  assert.notEqual(f.message(cloudMessage('Assisted-by: codex:Astra-6'), { ...f.cloudEnv, SKIP_ATTRIB: '1' }).status, 0);
+  f.write(cloudPath, JSON.stringify({ ...cloudDeclaration, authorization: 'User authorized codex:Astra-6 again.' }) + '\n');
+  assert.notEqual(f.message(message, f.cloudEnv).status, 0, 'declaration hash must match the commit provenance');
+  assert.notEqual(f.message(cloudMessage(f.resolveCloud().stdout), f.cloudEnv).status, 0, 'reviewed declaration bytes must be staged');
+  f.git('add', cloudPath);
+  assert.equal(f.message(cloudMessage(f.resolveCloud().stdout), f.cloudEnv).status, 0);
+});
+void test('cloud declaration works through an ordinary commit with both hooks', (t) => {
+  const f = cloudFixture(t);
+  f.write('project/journal/cloud.md', journal);
+  f.git('add', cloudPath, 'project/journal/cloud.md');
+  f.write('.git/message', cloudMessage(f.resolveCloud().stdout));
+  const result = f.run('git', ['commit', '-qF', '.git/message'], { env: f.cloudEnv });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.match(f.git('log', '-1', '--format=%B'), /Attribution-source: user-provided/);
+  assert.match(f.git('log', '-1', '--format=%B'), /Assisted-by: codex:Astra-6\n/);
+});
+const rejectedCloudDeclarations = [
+  ['wrong schema', { ...cloudDeclaration, schemaVersion: 2 }],
+  ['non-cloud context', { ...cloudDeclaration, execution: 'desktop' }],
+  ['automatic provenance claim', { ...cloudDeclaration, source: 'auto-detected' }],
+  ['foreign session', { ...cloudDeclaration, session: 'foreign-session' }],
+  ['missing source', Object.fromEntries(Object.entries(cloudDeclaration).filter(([key]) => key !== 'source'))],
+  ['extra field', { ...cloudDeclaration, fallbackModel: 'Astra-6' }],
+  ['placeholder model', { ...cloudDeclaration, model: 'unknown' }],
+  ['empty model', { ...cloudDeclaration, model: '' }],
+  ['model with trailer injection', { ...cloudDeclaration, model: 'Astra-6\nSigned-off-by: someone' }],
+  ['unrelated tool', { ...cloudDeclaration, tool: 'Claude Code' }],
+  ['unrecorded authorization', { ...cloudDeclaration, authorization: 'I guessed this model.' }],
+  ['non-object declaration', []],
+];
+for (const [name, declaration] of rejectedCloudDeclarations) {
+  void test('cloud rejects ' + name, (t) => {
+    const f = cloudFixture(t, declaration);
+    assert.notEqual(f.resolveCloud().status, 0);
+    assert.notEqual(f.message(cloudMessage('Assisted-by: codex:Astra-6'), f.cloudEnv).status, 0);
+  });
+}
+void test('cloud rejects missing or malformed files and never falls back to desktop', (t) => {
+  const f = cloudFixture(t);
+  f.write('runtime/sessions/rollout-fixture-cloud-session.jsonl', [
+    { type: 'session_meta', payload: { id: 'fixture-cloud-session' } },
+    { type: 'turn_context', payload: { model: 'gpt-6.1-sol' } },
+  ].map(row => JSON.stringify(row)).join('\n') + '\n');
+  const desktopHome = { CODEX_HOME: join(f.root, 'runtime') };
+  for (const path of ['', 'docs/evidence/missing.json', '../foreign.json', '/tmp/foreign.json']) {
+    assert.notEqual(f.resolveCloud({ ...desktopHome, CODEX_CLOUD_ATTRIBUTION_FILE: path }).status, 0);
+  }
+  f.write(cloudPath, '{malformed JSON');
+  assert.notEqual(f.resolveCloud(desktopHome).status, 0);
+  assert.notEqual(f.message(valid, { ...f.cloudEnv, ...desktopHome }).status, 0);
+  f.write(cloudPath, ' '.repeat(16385));
+  assert.notEqual(f.resolveCloud(desktopHome).status, 0);
+  f.write(cloudPath, JSON.stringify(cloudDeclaration));
+  assert.notEqual(f.resolveCloud({ CODEX_THREAD_ID: '', CODEX_SESSION_ID: '' }).status, 0);
+});
+void test('cloud declaration cannot escape the repository through a symlink', (t) => {
+  const f = cloudFixture(t);
+  const outside = mkdtempSync(join(tmpdir(), 'rockhop-cloud-outside-'));
+  t.after(() => rmSync(outside, { recursive: true, force: true }));
+  writeFileSync(join(outside, 'user.json'), JSON.stringify(cloudDeclaration));
+  rmSync(join(f.root, cloudPath));
+  symlinkSync(join(outside, 'user.json'), join(f.root, cloudPath));
+  const result = f.resolveCloud();
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /must stay inside the repository/);
 });
 void test('small commit succeeds without a journal', (t) => {
   const f = fixture(t);
