@@ -177,3 +177,17 @@ Ask:276.
 
 Limits: Derived per-vertex sampling, not exact UV texture bake or appearance
 acceptance. Sparse-support witness retained; gray/PBR moving review pending.
+
+Finding: Isolated hoodie guide/native sampled-appearance comparison now has a
+pinned six-second orbit. Preview uses garmentZextent .663355529m/metriccentre,
+not fullbodyheight; native geometry and float32channels remain unchanged.
+
+Validation: CPUguard90828/owned90849 exits0 in92.179s;144framehashes
+match, recipes AST pass. Silent H26472frames/12fps/1024x576 full-decodes exit0,
+SHAcc2a3885/437543bytes. Invalid SHAlaunch refused0.595s preoutput; corrected freshretry.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/orbit-receipt.json
+Ask:276.
+
+Limits: UNACCEPTED per-vertex appearance cameraorbit, not UVbake/rig/fit.
+Static disjoint hood/topology defects persist; source is flatappearanceguide.
+Shader preview clamp/alpha-inactive policy explicit; no raw mutation/promotion.

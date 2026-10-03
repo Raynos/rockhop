@@ -1,0 +1,58 @@
+{
+  "accepted": false,
+  "purpose": "Isolated hoodie appearance comparison, root review pending",
+  "movie": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/native-vs-guide-appearance-orbit.mp4",
+    "sha256": "cc2a3885717709b58b0bc24a325336f3b6c856fa50e38660239519c4d87c0424",
+    "bytes": 437543,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1024,
+          "height": 576,
+          "avg_frame_rate": "12/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "437543"
+      }
+    },
+    "fullSilentFFmpegDecode": "exit0"
+  },
+  "framesVerified": 144,
+  "orbitSHA256": "99fd7dad608a3ccf63f855d4682e8f93cfb61455ff6bd6c84d4f798cfa8aa9b2",
+  "recipeSHA256": "3f776494f951c4efd635e6c2c46933726f7643a51fb94232ae3737ce17057356",
+  "helperSHA256": "7378cabf3773e385274c37ed1902f4edcb0be47ae1bee323e7879db10da8cb82",
+  "encoderSHA256": "8eb0321c4925750b83abca8b2f2ab6d34a7fc261daf49dfe3d023c52b2e68066",
+  "CPUBlenderGuard": {
+    "controllerPID": 90828,
+    "ownedChildPID": 90849,
+    "exitCode": 0,
+    "elapsedSeconds": 92.179
+  },
+  "rejectedInitialLaunch": {
+    "cause": "Agent2 passed invalid sampling hash; frozen-pin check refused before any output",
+    "exitCode": 1,
+    "elapsedSeconds": 0.595,
+    "guardLocalPath": ".tmp/generation-comparison-2026-10-03/user-agent2/hoodie-orbit-guard01/guard.json",
+    "guardSHA256": "025b6abfff1951168f8b03f2499523790874bc2ac2655f4c3202a07380c24aac"
+  },
+  "garmentHeightM": 0.6633555293083191,
+  "bodyHeightNotUsed": true,
+  "rawArchiveUnchanged": true,
+  "ownedLeaseEnded": true,
+  "sharedLeaseInventoryAfterCompletion": "",
+  "generatedAppearance": "derived native per-vertex channels, not UV bake",
+  "limits": [
+    "Static isolated garment camera orbit, not rig motion or wearable fit",
+    "Source hood remains disjoint guide; no sewn neck/cuff/hem construction",
+    "Flat input guides do not certify detailed storyboard PBR reconstruction",
+    "No body/face/hair/player asset promotion; root alone judges"
+  ]
+}
