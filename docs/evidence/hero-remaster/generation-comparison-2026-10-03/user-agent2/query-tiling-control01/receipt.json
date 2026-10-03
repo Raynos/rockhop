@@ -1,0 +1,105 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "torch": "2.14.0",
+  "recipeSHA256": "8b0b832d4044ba255a6d10915db7ad238ad54f1bf088e7023bb738799fdfe6bd",
+  "adapterSHA256": "891b213e2bbde81377645897ef2f629433e6b14aa76acf98a36d541ab6cbd6e2",
+  "installedPaintProcessorSHA256": "6df282d094627733623ddeaa28a493a11252ea58e7b99e4d52240e17f4f71d0f",
+  "cases": [
+    {
+      "name": "view768",
+      "batch": 2,
+      "heads": 5,
+      "queries": 9216,
+      "keys": 9216,
+      "channels": 64,
+      "inputDtype": "float16",
+      "queryKeyAmplitude": 1.0,
+      "outputs": {
+        "originalMPS": {
+          "allFinite": true,
+          "maxSelectedCPUError": 6.103515625e-05,
+          "meanSelectedCPUError": 5.474017598317005e-06,
+          "outputStd": 0.01735951006412506,
+          "selectedOutputsIdenticalToCPU": false
+        },
+        "ownedTiledFloat32": {
+          "allFinite": true,
+          "maxSelectedCPUError": 3.0517578125e-05,
+          "meanSelectedCPUError": 2.832913992278918e-08,
+          "outputStd": 0.017365099862217903,
+          "selectedOutputsIdenticalToCPU": false
+        }
+      },
+      "maxFullTiledVersusOriginalError": 6.103515625e-05,
+      "fullOutputsByteIdentical": false,
+      "fixtureSHA256": "3b3d47e1a332f124495d155e877ab6e95bca2f97c8d93695146050a4a0f847c6"
+    },
+    {
+      "name": "view768HighAmplitude",
+      "batch": 2,
+      "heads": 5,
+      "queries": 9216,
+      "keys": 9216,
+      "channels": 64,
+      "inputDtype": "float16",
+      "queryKeyAmplitude": 4.0,
+      "outputs": {
+        "originalMPS": {
+          "allFinite": true,
+          "maxSelectedCPUError": 0.0009765625,
+          "meanSelectedCPUError": 2.20193323912099e-05,
+          "outputStd": 0.8709748387336731,
+          "selectedOutputsIdenticalToCPU": false
+        },
+        "ownedTiledFloat32": {
+          "allFinite": true,
+          "maxSelectedCPUError": 0.00048828125,
+          "meanSelectedCPUError": 4.876743631143654e-08,
+          "outputStd": 0.8709819316864014,
+          "selectedOutputsIdenticalToCPU": false
+        }
+      },
+      "maxFullTiledVersusOriginalError": 0.001953125,
+      "fullOutputsByteIdentical": false,
+      "fixtureSHA256": "a4f392365f272e58d912ef9f6dd2977b2e9e2e3d63666ece146ac5e126ff3cea"
+    },
+    {
+      "name": "eightViewKeys768",
+      "batch": 1,
+      "heads": 1,
+      "queries": 9216,
+      "keys": 73728,
+      "channels": 64,
+      "inputDtype": "float16",
+      "queryKeyAmplitude": 1.0,
+      "outputs": {
+        "originalMPS": {
+          "allFinite": true,
+          "maxSelectedCPUError": 1.52587890625e-05,
+          "meanSelectedCPUError": 1.946435986610595e-06,
+          "outputStd": 0.00600768718868494,
+          "selectedOutputsIdenticalToCPU": false
+        },
+        "ownedTiledFloat32": {
+          "allFinite": true,
+          "maxSelectedCPUError": 7.62939453125e-06,
+          "meanSelectedCPUError": 1.4929383951312047e-08,
+          "outputStd": 0.006009731441736221,
+          "selectedOutputsIdenticalToCPU": false
+        }
+      },
+      "maxFullTiledVersusOriginalError": 1.52587890625e-05,
+      "fullOutputsByteIdentical": false,
+      "fixtureSHA256": "f1a17370d314ad8fc72cf891f8050f2a41f167566bdbed98ef4d007585caf7d1"
+    }
+  ],
+  "limits": [
+    "Synthetic known tensors, not full model activations or CUDA equivalence.",
+    "Long case uses one independent head/batch to avoid full paint memory allocation.",
+    "All key/value tokens retained; no view reduction, key truncation or model patch.",
+    "Owned float32 attention is a numerical derivative; report roundoff, not byte parity."
+  ],
+  "allOwnedControlsPass": true,
+  "elapsedSeconds": 0.9466815004125237
+}

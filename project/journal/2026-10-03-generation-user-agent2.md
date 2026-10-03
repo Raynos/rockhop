@@ -790,3 +790,20 @@ Ask:284–286.
 Limits: Specific resource failure, not texture/style/model-family verdict.
 Same input/quality frozen. Large attention hypothesis requires actual
 operator/source evidence before any batching or retry; no raised limits.
+
+Finding: Owned all-key query-tiled float32 attention passes known768view
+and8view-key controls with measured roundoff rather than byte parity.
+
+Validation: Guard exit0 in1.588s. Real processor's single SDPA callsite
+uses no mask/dropout/causal mode. Controls include2batch/5heads/9216tokens,
+RMS amplitudes1/4, and1head9216queries/73728keys. Selected independentCPU
+matmul/softmax maxerrors3.05e−5/4.88e−4/7.63e−6; alloutputsfinite.
+OriginalMPS errors6.10e−5/9.77e−4/1.53e−5. Maxwhole tiled-vs-original
+error1.95e−3, outputs notbyteidentical; no truncation/view reduction.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/query-tiling-control01/
+Ask:284–286.
+
+Limits: Known operator tensors, not actual fullbatch/model/CUDA proof.
+Retry must scope adapter to paintUNet processor only, preserve actual
+condition/noise bytes, record realattention shapes/outputs and derivative
+label. No full-model inference or shared source edit in this control.
