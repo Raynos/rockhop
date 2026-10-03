@@ -572,3 +572,27 @@ not be hidden byanalyticaldebug. No completefit/allheldout/phone/runtime
 performance/playerpromotion. Primary31projection rejectedbyrootvisible
 window/selffolds; nextbounded SAMErestweight/attachmentsource comparison
 Agent1owned/Agent3independentQA. No projectionincrease/fullclothrestart.
+
+## Round35: exact actual-game native pose input for weight control
+
+Finding: Nativeweight hypothesis needs observedreal engineposes. Full
+51joint native-point→WORLDaffine maps now freeze actualspawn+703Rookie
+leaninputticks;704frames4.596MB stream repeatsbyteexact. Nativejoint
+order/51bind association verified fromexactsourceGLTFskin, allunits/axes/
+offsetalreadyconsumed, no authored/syntheticpose replacement.
+
+Validation: Independentoffline normalizedweightapplication reproduces
+all703Float32garmentframes BYTEEXACT to root-played failedprimary31OFF
+control. All72bodyworldsamples match≤9.160e-16m. Capturedpalette vs
+canonicalenginebody/garmentskin≤2e-12m; actualbodyrendererresidual≤9.203e-8m.
+IndependentGame verifies1406ticks exact; silentwebdriver/AudioContext0.
+Scopedlint passes. Native51names and duplicatecapturehashes verified.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/palette35/handoff.json
+
+Limits: Input/matrixqualification only, not new art/wearableacceptance.
+Samephysicallyplayed31control/window remainsfailed/rootrejected; no new
+bone/physics/garmentcorrective injection or sourcebody/head/bind changes.
+Sourceweight/attachmentscontrol is Agent1owned, onebounded SAMErest
+comparison; Agent3 independently testsactualGLTF/window/selffolds. No
+projectiondistanceincrease/fullclothrestart/newworker. AllM0–M5/phone/
+checkedrelease remainopen; freshnormal33gate retained.
