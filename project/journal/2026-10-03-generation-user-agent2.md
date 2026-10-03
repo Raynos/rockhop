@@ -491,3 +491,15 @@ Ask:284–285; root scoped publication decision.
 Limits: Documentation-only publication, no asset acceptance. Active local
 history now differs from remote by preserved foreign commits and reviewed
 pointer context; future publication must retain that boundary.
+
+Finding: Documented-quality Hunyuan2.1 shape worker freezes30steps/384MC/
+guidance5/200000chunks/seed42 with real condition/noise/native persistence.
+
+Validation: AST syntax passes; verified DiT hash and processor pin are
+mandatory before inference. Native arrays precede audit/display; live
+classes/source/device/dtypes captured. Unaccepted source checkpoint.
+Ask:284–286.
+
+Limits: Worker execution pending; shape only, paint/root played review
+separate. Owned process compatibility shims explicitly recorded, no shared
+runtime/source/weights changes or CUDA/fit/rig acceptance.
