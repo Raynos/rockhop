@@ -283,3 +283,11 @@ Finding: Freeze current05 body/glove palms, body/boot soles and jeans posterior 
 Validation: Independent raw-accessor reader confirms every selected POSITION, joint index, sourceID and triangle; actual weights exactly equal float32 L1 normalization, max raw difference5.96e-8. Current51joint order/world/bind fields frozen. One134frame6fps silent512x768 gear/body orbit movie fully decodes, exact i/6 timestamps, whole-rider border≥0.06049. See contact-surfaces05 map, raw verification and movie receipt.
 
 Limits: Actual05 patch geometry overlays native05 full-weight motion with display-only3mm offset; map coordinates are unoffset. No fit/contact/closed-volume/art/device acceptance. Missing05LOD explicit. Agent3 owns bike target surfaces and independentbinding, root alone judges labels.
+
+### Round32 — reject dimensional profile and honor garment verdict, 2026-10-03
+
+Finding: One fixed90vertex hood profile increases volume but fails rest collision123body/16self pairs; newly scoped old05 control also fails121body/7self pairs. Preserve the source checkpoint without promotion or another rubber-shell cosmetic sequence. Human/root reject yellow top tearing/glued/plastic appearance; useful simple Garage mannequin remains baseline, new clean garment topology/weights now authorized.
+
+Validation: All51 native binds, all nonhood visible mesh fields, original1250shirt/45pocket basis, hoodie topology/UV/weights/materialnames exact. Morph deltas exact; mesh/Basis float roundoff0.000119mm. Rest contact IDs and source05 paired count are in appearance06/native-verification.json.
+
+Limits: 06 rejected at rest, no native film/engine derivative or art acceptance; previous04/05 controls retained. New construction must establish garment volume/ease/openings and valid thickness/pins before bounded body/selfcollision comparison. Current underarm/knee/hem/feet failures remain.
