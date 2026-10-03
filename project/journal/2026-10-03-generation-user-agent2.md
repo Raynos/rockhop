@@ -1639,3 +1639,16 @@ Ask:284–286.
 
 Limits: Own assertion error prevents mesh persistence after decode.
 Nextoriginaldecode-only preserves48steps; no new sampling or style sweep.
+
+Finding: Pixal decode-only recovery uses actual final shape/texture bytes
+after48persistedsteps; originalloader selects two originaldecoders.
+
+Validation: Source syntax passes,17canonical records/43sourcepins frozen.
+Four saved final feature/coord arrays require exactarchive/Cbytes/dtype.
+No samplers/conditioners; rawNPZ persists immediately before finalvalidity
+checks. Runtime24 playerpins/playerdiff0 retain round72 shipgateidentity.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_decode_contract.json
+Ask:284–286.
+
+Limits: Unaccepted recipe pending; no native mesh or moving judgmentyet.
+No seed replay, replacement sampling math, installed edit or assetpromotion.
