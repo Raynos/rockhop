@@ -465,3 +465,16 @@ Ask:285.
 
 Limits: Complete selected-weight pass still pending fresh retry. No auth
 credential read, model download/copy or missing-backend conclusion.
+
+Finding: Complete selected36checkpoint/config files match fresh official
+LFS/public-small-config/GitHub-release digests. No weight copies/downloads.
+
+Validation: Corrected guard exit0 in21.941s; all36match including shape/
+flow/decoders, Hunyuan config, NAF GitHub asset, DINO and MoGe. Public
+metadata revisions and actual/resolved paths/byte lengths retained.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-weights02/
+Ask:285.
+
+Limits: Selected files only; Hunyuan paint/BiRefNet dependencies separate.
+Published-byte identity is not loaded runtime/conditioning/inference or
+CUDA/art/fit acceptance. Earlier failed provenance route remains intact.
