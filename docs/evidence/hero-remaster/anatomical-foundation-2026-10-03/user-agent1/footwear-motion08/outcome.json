@@ -1,0 +1,139 @@
+{
+  "status": "REJECT movement-safe claim for source08; unaccepted experimental source retained",
+  "motionSHA256": "5a7aa1b3f3bcbd000b56a6b9064bbc5936a1227429faeea2b5160ec730167334",
+  "streamsSHA256": "9b26abbe3dbe9e8dfc7d365364b8f7403d2df2112e276aeb9b715a0034d8308c",
+  "phases": [
+    {
+      "phase": "original FK",
+      "measuredFrames": 529,
+      "contactFrames": 0,
+      "parts": {
+        "upper": {
+          "maxBodyTriangleContactPairs": 0,
+          "measurementIndex": 0,
+          "timeS": 0.0,
+          "firstPairs": []
+        },
+        "outsole": {
+          "maxBodyTriangleContactPairs": 0,
+          "measurementIndex": 0,
+          "timeS": 0.0,
+          "firstPairs": []
+        }
+      },
+      "sampledEnclosureProxy": {
+        "L": {
+          "maxOutside": 0,
+          "measurementIndex": 0,
+          "timeS": 0.0,
+          "firstOutsideBodyIDs": []
+        },
+        "R": {
+          "maxOutside": 0,
+          "measurementIndex": 0,
+          "timeS": 0.0,
+          "firstOutsideBodyIDs": []
+        }
+      }
+    },
+    {
+      "phase": "explicit ankle20deg/toe15deg",
+      "measuredFrames": 96,
+      "contactFrames": 42,
+      "parts": {
+        "upper": {
+          "maxBodyTriangleContactPairs": 142,
+          "measurementIndex": 564,
+          "timeS": 11.75,
+          "firstPairs": [
+            [
+              229,
+              25934
+            ],
+            [
+              229,
+              25935
+            ],
+            [
+              229,
+              26330
+            ],
+            [
+              229,
+              26305
+            ]
+          ]
+        },
+        "outsole": {
+          "maxBodyTriangleContactPairs": 357,
+          "measurementIndex": 612,
+          "timeS": 12.75,
+          "firstPairs": [
+            [
+              183,
+              24509
+            ],
+            [
+              183,
+              25600
+            ],
+            [
+              183,
+              25601
+            ],
+            [
+              183,
+              24519
+            ]
+          ]
+        }
+      },
+      "sampledEnclosureProxy": {
+        "L": {
+          "maxOutside": 20,
+          "measurementIndex": 564,
+          "timeS": 11.75,
+          "firstOutsideBodyIDs": [
+            5796,
+            5868,
+            5998,
+            6169,
+            6280,
+            6281,
+            6282,
+            6283,
+            6284,
+            6285,
+            6541,
+            6558
+          ]
+        },
+        "R": {
+          "maxOutside": 23,
+          "measurementIndex": 564,
+          "timeS": 11.75,
+          "firstOutsideBodyIDs": [
+            12393,
+            12465,
+            12595,
+            12766,
+            12862,
+            12877,
+            12878,
+            12879,
+            12880,
+            12881,
+            12882,
+            12883
+          ]
+        }
+      }
+    }
+  ],
+  "limits": [
+    "All529 original48Hz FK samples plus96 explicit ankle/toe samples measured; renderer plays every fourth sample.",
+    "Virtual cuff closure and three-axis majority rays classify fixed below125mm foot witnesses; not complete signed clearance or anatomical collar-fit acceptance.",
+    "Native source08 retains old05 boot control; old/new share exact body/rig/pose/controller. No recoloring hides coverage failures.",
+    "Footwear-only synthetic bike-free test, not supported game peg contact or live collision response. Parent judges moving wearable form; all garments remain unaccepted."
+  ]
+}

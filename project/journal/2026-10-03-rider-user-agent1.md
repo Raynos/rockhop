@@ -315,3 +315,11 @@ Finding: Whole-part07 inspection exposes230outsole/body trianglecontacts: the18m
 Validation: 08upper/body0 and sole/body0 trianglepairs, plantaraxisgap1.9999999mm. Native allothermeshfields includinghiddencontrols, upper/sole topology/UV/weights/materials and51bindexact07; actualGLTFLoader sevennonbootfields/51bind/defaults0 exact05, maxrest.000854mm, protectedheadrawnormal/PBRrestored.
 
 Limits: Restinterfacequalification isnotmovingwearable or arbitrarypose/livecollision guarantee. Matchedfoot/anklemotion,07/08freshsole map and actualengine response stillrequired; no promotion or art/deviceacceptance.
+
+### Round36 — footwear ankle/toe movement rejection, 2026-10-03
+
+Finding: Complete08 upper/sole rest-fit and529 original FK samples have0bodytrianglepairs/0sampledfootenclosurefailures, but42of96 addedankle20deg/toe15deg samples intersect. Uppermax142at11.75s/source564, outsolemax357at12.75s/source612; cappedproxy20L/23Routsideat564. Reject movement-safe claim and retain exact08 source before changing topology/weights again.
+
+Validation: All625nativeposes measured with immutable old05/new08/body/jeans streams and source/driver pins; measurement42.52sCPU. Matched157sample12fps1280x720 fullorbit source-material silentfilm complete13.083333s decode/PTS verified, border0.138269. Ship36 shippedcontrol cold2934.657ms/clear40.083333333s/4810byteidenticalticks/crash103/restart1tick/frame3.5ms/errors0.
+
+Limits: Cappedthree-axisrayproxy/triangleoverlap are not signed-clearance proof; syntheticbikefree ankle/toe test is notsupportedpeg/game/iOS acceptance. Nativebakedmesh normals recomputed, lowercalf/jeanscrop explicit; sourcePBR/UV preserved. Latesthuman primarypath is fittedskinning+lightweightconsumedcollisioncorrections; fullcloth controls retained, notdefault. Agent3 owns actualruntime and architectureledger reconciliation; root judgesmovingwear. No promotion.
