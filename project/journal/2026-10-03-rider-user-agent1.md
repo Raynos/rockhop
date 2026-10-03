@@ -133,3 +133,9 @@ and Python syntax pass; round15ordinarysilentMetal4810identicalticks clear
 Limits: Selected rays improve butcontacts/held72regression remain; nativecontrol
 colors/head, no completefit/art/playerqualification. Root/QA ownjudgments open.
 Evidence: [played corrective](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/review/README.md). Ask274.
+
+Finding: Matched native corrective films now have confirmed Library identities.
+Validation: Bridge once-only 2 uploads return exact movie hashes/bytes/v0 IDs;
+local SHA recheck agrees and movie/controller inputs stay unchanged.
+Limits: Delivery is not art/fit acceptance; root/independentGarage review open.
+Evidence: [Library receipt](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/review/library-receipt.json). Ask274.

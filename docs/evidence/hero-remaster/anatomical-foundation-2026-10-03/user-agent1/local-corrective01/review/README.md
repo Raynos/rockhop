@@ -30,4 +30,6 @@ Selected local rays improve, but local/global contacts and held-out72regression
 remain; no complete signed clearance, art/fit/rig/coupling acceptance. Synthetic
 FK sweep is not supportedbike/physics play. Root judges clips, Agent3's actual
 Garage controller review independently continues. SupportedLibrary delivery
-requested through bridge; no upload confirmation claimed here. All M0–M5 open.
+confirmed once through bridge: front`libfile_1407e2a6e55c81918e93b864f2c8289c`v0,
+rear`libfile_721058e3e054819198534213eabff2e3`v0; exact receipt hashes retained.
+All M0–M5 open.
