@@ -102,3 +102,16 @@ Limits: Native collisioncounts builder-reported; differenttopology makes
 coarse/dense paircounts incomparable. Ancestrypresence only, not interpolation
 proof. No candidatevisual/contact/deviceacceptance; playedbaseline unchanged.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/attachment01-rejection.json
+
+Finding: Scoped local corrective is admitted for independent moving replay;
+base/control conservation and native-stream parity pass, fit remains open.
+Validation: Decoded117shirt/55jeans source support and alltarget native deltas
+match within0.000076mm; all529 exactmatrix samples, coefficienterror7.77e-16,
+rawloaded/nativefour residual0.000443/0.000225mm. Wholetrajectory posedmotion
+max15.782/18.258mm below40mm. Body/allotherbaseattrs/index/51joint hierarchy/
+binds unchanged; exactlyone shirt normal vector/3components exception recorded.
+Restcontroller exactlyzero; scoped type-aware lint passes. No source edits.
+Limits: Native ringmask construction/contact evidence builder-reported;
+sourcefull-four loss4.820/.948mm remains; explicit diagnostic coupling only.
+No continuous/Garage, local/globalfit, art/contact/device acceptance yet.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/corrective01-admission.json
