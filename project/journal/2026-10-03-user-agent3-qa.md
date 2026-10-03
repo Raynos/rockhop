@@ -559,8 +559,8 @@ target changes. Independentnativebone declaredmassproxy improves
 25.645→14.868mm but still differs fromanalyticaldebug≤6.999nm.
 
 Validation: Paired703tick actualRookiebacklean follows sameinput/body
-branch; independentGame1406tickphysics/phase/clock/finish exact.38frame
-paired silentfilm played. Nativeleglengthdriftsubµm measured. Scopedlint/
+branch; independentGame1406tickphysics/phase/clock/finish exact.19frame
+paired silentfilm played (38recordedframes acrossbothpasses). Nativeleglengthdriftsubµm measured. Scopedlint/
 freshcurrentmainnormalbuild pass; low/high coldbootclear4810ticks,finish
 40.083333333333336s/abaaaaaaaa0a4440,crash103/restarttick0,1/2ms,zeroerrors.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/sole33/
