@@ -5,7 +5,6 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 ap=argparse.ArgumentParser(description=__doc__)
 for n in ['source','candidate','out']:ap.add_argument('--'+n,required=True)
-ap.add_argument('--garment-name',default='Selected Hunyuan sewn wearable, unrigged construction')
 a=ap.parse_args(sys.argv[sys.argv.index('--')+1:]);source,candidate,out=[Path(getattr(a,n)).resolve() for n in ['source','candidate','out']]
 sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
 digest=lambda v:hashlib.sha256(json.dumps(v,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -46,7 +45,7 @@ bpy.ops.wm.open_mainfile(filepath=str(candidate));current=state()
 for label,before,after in zip(['meshes','materials','images','bones'],original,current):
  differences=[n for n,r in before.items() if n not in after or r!=after[n]]
  assert not differences,(label,differences)
-garment=bpy.data.objects[a.garment_name];body=bpy.data.objects['Canonical anatomical body, baked adult hm08']
+garment=bpy.data.objects['Selected Hunyuan sewn wearable, unrigged construction'];body=bpy.data.objects['Canonical anatomical body, baked adult hm08']
 def tree(o):
  o.data.calc_loop_triangles();p=[v.co.copy() for v in o.data.vertices];f=[tuple(t.vertices) for t in o.data.loop_triangles]
  return BVHTree.FromPolygons(p,f,all_triangles=True),p,f

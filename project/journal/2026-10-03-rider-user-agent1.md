@@ -411,3 +411,11 @@ Finding: Clean sewn topology reconstructs selected high-poly exterior and actual
 Validation: Native/sourcecorrespondence/texture pins fixed;724donor fallbackvertices/maxfit47.763mm explicit. Independent counts exact/localnormalgap min−45.665mm. All18existingmesh fields inclheadnormals/16nodegraphs/14sourceimages/51bind+pose exact. First reportindex-table error repaired before any native save by explicitlookup/index initialization; no failed artifact overwritten. Syntax/diff/hooks pass.
 
 Limits: Actual topology openings and benchmarktriangle count alone accept no wear/UV/movingart/rig/game/mobile gate. Staticnormal adjustment is notwholefabricclearance/livecollision. Unrigged05withheldfrom Agent3skin/game handoff and Library; allcontrols/highpoly/body/head/bind retained, M0–M5/root sole judgment/no playerpromotion.
+
+### Round48 — connected field fails on unqualified sewn seed, 2026-10-03
+
+Finding: Source05actualdonor guide/PBR with40step/weight8 connected deformation reduces4204→817body and16381→2166self, stillfails748of1937coverage misses/2102unresolved bounded12mm constraints. Seedalready175body/258self/minvertex−1.524mm: qualify structural hood/neck/seed geometry first; no field/iteration/projection sweep over unqualifiedseed.
+
+Validation: Independent19originalmeshfields/17nodegraphs/17sourceimages/51bind+pose exact; candidatepaircounts reproduce/localvertex+centroidgap min−44.900mm. Exact versionedseed/target/field/final/edge arrays pinned; source05texture/atlas unchanged. Seed-code namespace collision fixed before native save; no failed native overwritten. Silent ship48 cold1756ms/4810identicalticks/clear40.083333333s/crash103/restart1tick/frame3.925ms/errors0; syntax/diff/hooks pass.
+
+Limits: Static connected sculpt is notcloth/skin/livecollision and numerical reduction is notwearable acceptance. Source06unrigged withholdsrig/game/Library/playerhand off. Rootsoleplayedjudge/M0–M5open; fullcloth remainscontrolonly, exactdonor/body/head/bind and allfailures retained. Phone/movingart stillunaccepted.
