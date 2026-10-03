@@ -1678,3 +1678,16 @@ Ask:284–286.
 
 Limits: Unaccepted pervertexdisplay derivative; not UVbake/maplevelpass.
 Actualrun/matchedmovie/rootplayedjudgment pending.
+
+Finding: Native Pixal trilinear material display derivative passes257
+independent CPU witnesses at all2,823,607raw vertices.
+
+Validation: Guard0/7.396s;22finitechunkhashes rechecked, maxerror
+1.9102922e-07≤1e-5. Nativeattrs/coords/geometry archive unchanged.
+ActualPixalTorch2.12Metal extension/metallib pins pass. Runtime24 frozen
+playerpins/playerdiff0 retain round75 shipgateidentity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-material01/
+Ask:284–286.
+
+Limits: Pervertexdisplay derivative, not UVbake/maplevel/appearance pass.
+Matchedplayedfilm/rootjudgment stillpending; no garmentpromotion.
