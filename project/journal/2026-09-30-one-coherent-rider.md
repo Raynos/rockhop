@@ -2803,3 +2803,19 @@ Limits: Signed OTA/quarantine, save-error retry and broader native lifecycle
 features are NOT shipped. Resume the queued native integration plan on current
 Rockhop architecture. No foreign worktree removed or reset; no main history
 rewrite, force-push, rejected rider promotion or foreign-path sweep.
+
+## Round218 — retain peg-source fixtures in release CI
+
+Finding: The first chronological push batch's unit gate fails because sparse
+checkout excludes four pinned peg geometry JSON files used by the surface-contact
+source test. Keep exactly those small files in the release checkout. Do not skip
+or weaken the real source-SHA/triangle test; bike meshes/runtime stay unchanged.
+The235commit backlog has now pushed through seven fast-forward batches after
+GitHub rejected the combined2GiB pack. No commits or source bytes were dropped.
+
+Validation: First CI failure is ENOENT for bike-rookie.glb.json; type/lint passed.
+Retained fixture files total751114bytes; local seventeen surface-contact tests
+will be rerun. Final checked CI/manual deployment/live SHA are still pending.
+
+Limits: This fixes test input availability, not art or visible runtime contact.
+All rider gates remain open; no private candidate or native feature promoted.

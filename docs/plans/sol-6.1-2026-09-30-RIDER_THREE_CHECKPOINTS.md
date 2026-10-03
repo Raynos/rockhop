@@ -37,6 +37,11 @@ Resume in this order:
    prove saddle, palm/grip and sole/peg contacts, maximum lean, landing/recovery
    and mobile performance. All three visual checkpoints remain OPEN.
 
+6. Reconcile research-script lint with its owners before claiming a clean full
+   local lint run. Release-scope checks exclude Blender masters; tracked local
+   research still has absolute imports/explicit-any findings. Preserve separate
+   foundation task-3 ownership and do not alter its files during this exit.
+
 Cosmetics remain paused. Five failed attempts switch approach autonomously;
 fifteen failed attempts invoke the architecture fallback. No routine human hold.
 Private masters remain in localai runtime; no unfinished mesh enters player paths.
