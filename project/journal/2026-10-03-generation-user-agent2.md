@@ -139,3 +139,15 @@ Ask:276.
 
 Limits: Specific settings/reference rejection, not whole model families. No
 body escalation or integration permitted; actual raw arrays/limits preserved.
+
+Finding: Agent1 garment-input03 is stable experimental appearance/layout input.
+Freeze exact byte copies of eight true-alpha views and321c6b8a contract before
+one isolated mustard hoodie probe; clean canonical body/identity stays frozen.
+
+Validation: All source/image SHA pins match. Eight RGBA512 views alpha0..255;
+front isolated hoodie360fd660/jeans9d3540c7. No model run in this intake finding.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/wardrobe-input03-admission.json
+Ask:276.
+
+Limits: Disjoint static hood/flat mustard and indigo guides, not joined garment
+or target PBR/fit/motion pass. Context/rear retained; first probe front only.
