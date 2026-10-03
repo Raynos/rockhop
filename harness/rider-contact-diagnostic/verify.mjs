@@ -6,13 +6,15 @@ import crypto from 'node:crypto';
 import { Matrix4, Quaternion, Vector3 } from 'three';
 
 const base = path.resolve(process.argv[2] ?? 'harness/out/rider-contact-diagnostic-2026-10-03');
-const report = JSON.parse(fs.readFileSync(path.join(base, 'capture06/report.json')));
+const capture = process.argv[3] ?? 'capture06';
+const destination = capture === 'capture06' ? base : path.join(base, capture);
+const report = JSON.parse(fs.readFileSync(path.join(base, capture, 'report.json')));
 const bytes = fs.readFileSync(path.join(base, 'source/Rockhop-supported-rider-contact-diagnostic.glb'));
 const jsonLength = bytes.readUInt32LE(12), gltf = JSON.parse(bytes.subarray(20, 20 + jsonLength));
 const binStart = 28 + jsonLength;
 const hash = b => crypto.createHash('sha256').update(b).digest('hex');
 assert.equal(hash(bytes), '7adc07e7ee97278013af3f79d201e349fb0094f826aa7f25d02a550412e10cee');
-assert.equal(report.samples.length, 157); assert.deepEqual(report.errors, []);
+assert([17, 157].includes(report.samples.length)); assert.deepEqual(report.errors, []);
 const pairs = new Map(report.samples.filter(s => s.variant === 'repaired' && s.pose !== 'STEP').map(s => [s.family + '/' + (s.frame ?? s.view), s]));
 for (const raw of report.samples.filter(s => s.variant === 'raw-body11')) {
   const repaired = pairs.get(raw.family + '/' + (raw.frame ?? raw.view));
@@ -65,12 +67,12 @@ assert(matrixMaxError < 1e-5); assert(morphMaxError < 1e-6);
 assert.equal(new Set(report.samples.filter(s => s.pose === 'STEP').map(s => JSON.stringify(s.bones))).size, 17);
 const fixture = report.samples[0].fixture;
 const bikeMarks = Object.fromEntries(fixture.bikeRuntimeNodes.filter(n => /^attach_(grip|peg|frame_origin|chassis_com)/.test(n.name)).map(n => [n.name, new Vector3().setFromMatrixPosition(new Matrix4().fromArray(n.world)).toArray()]));
-const qa = { status: 'EXACT_CAPTURE_VERIFIED_UNACCEPTED', repoSHA: report.repoSHA, frames: 157, pairedArmsOutFrames: 140, distinctSTEPPoseKeys: 17, clip: clip.name, sourceTimes: '0..2s at 1/8s; held 1/4s per movie frame', sourceSHA256: hash(bytes), sourceBytes: bytes.length,
+const qa = { status: 'EXACT_CAPTURE_VERIFIED_UNACCEPTED', repoSHA: report.repoSHA, frames: report.samples.length, pairedArmsOutFrames: report.samples.filter(s => s.pose !== 'STEP').length, distinctSTEPPoseKeys: 17, clip: clip.name, sourceTimes: '0..2s at 1/8s; held 1/4s per movie frame', sourceSHA256: hash(bytes), sourceBytes: bytes.length,
   poseManifestSHA256: hash(fs.readFileSync(path.join(base, 'source/diagnostic-poses.json'))), cloudPoseMatrixMaxError: Math.max(...report.samples.map(s => s.cloudPoseMatrixMaxError)), independentGLBWorldMatrixMaxError: matrixMaxError, independentMorphMaxError: morphMaxError,
   identicalPairedCamerasAndBoneMatrices: true, pairedMorphsAllZero: true, audioContexts: 0, errors: [], frozenPhysicsHash: report.samples[0].stateHash,
-  captureReportSHA256: hash(fs.readFileSync(path.join(base, 'capture06/report.json'))), captureReportTailFailure: report.failure,
-  note: 'Original final validation accessed optional raw-head morph weights; all157actual captures independently verified here. Capture code now handles absent weights.',
-  browser: report.browser, device: report.device, launchURL: report.launchURL, visualLimits: ['T/A underarm webs remain in raw and repaired.', 'STEP hands/feet/saddle do not align with current engine bike/wrapper contract.', 'No continuous interpolation, physics-driven riding, normals, art or physical-device acceptance.'] };
-fs.writeFileSync(path.join(base, 'verified-qa.json'), JSON.stringify(qa, null, 2) + '\n');
-fs.writeFileSync(path.join(base, 'engine-fixture.json'), JSON.stringify({ ...qa, bikeSHA256: hash(fs.readFileSync('public/models/bike-rookie.glb')), fixture, bikeRuntimeContactMarks: bikeMarks, riderContactsBySTEPTime: contactRows }, null, 2) + '\n');
+  captureReportSHA256: hash(fs.readFileSync(path.join(base, capture, 'report.json'))), captureReportTailFailure: report.failure,
+  note: report.failure ? 'Original final validation accessed optional raw-head morph weights; all157actual captures independently verified here. Capture code now handles absent weights.' : 'Capture and independent exact source checks pass.',
+  wrapperMode: report.wrapperMode, buildVersion: JSON.parse(fs.readFileSync(path.join(report.build, 'version.json'))), browser: report.browser, device: report.device, launchURL: report.launchURL, visualLimits: ['T/A underarm webs remain in raw and repaired.', report.wrapperMode === 'source-file' ? 'Diagnostic source-file wrapper corrects650mm displacement; surface grip/sole/saddle residuals remain unaccepted.' : 'STEP hands/feet/saddle do not align with current engine bike/wrapper contract.', 'No continuous interpolation, physics-driven riding, normals, art or physical-device acceptance.'] };
+fs.writeFileSync(path.join(destination, 'verified-qa.json'), JSON.stringify(qa, null, 2) + '\n');
+fs.writeFileSync(path.join(destination, 'engine-fixture.json'), JSON.stringify({ ...qa, bikeSHA256: hash(fs.readFileSync('public/models/bike-rookie.glb')), fixture, bikeRuntimeContactMarks: bikeMarks, riderContactsBySTEPTime: contactRows }, null, 2) + '\n');
 console.log(JSON.stringify(qa));

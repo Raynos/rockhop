@@ -1,0 +1,36 @@
+{
+  "status": "EXACT_CAPTURE_VERIFIED_UNACCEPTED",
+  "repoSHA": "60042670b31b84f2d853e562fc4ab7c8474c873d",
+  "frames": 17,
+  "pairedArmsOutFrames": 0,
+  "distinctSTEPPoseKeys": 17,
+  "clip": "diagnostic_contact_observations_STEP",
+  "sourceTimes": "0..2s at 1/8s; held 1/4s per movie frame",
+  "sourceSHA256": "7adc07e7ee97278013af3f79d201e349fb0094f826aa7f25d02a550412e10cee",
+  "sourceBytes": 19445164,
+  "poseManifestSHA256": "aba49af57424d52427929ce419871aa12d007dceb853ef36593ddd00e821cbce",
+  "cloudPoseMatrixMaxError": 0,
+  "independentGLBWorldMatrixMaxError": 5.551115123125783e-16,
+  "independentMorphMaxError": 0,
+  "identicalPairedCamerasAndBoneMatrices": true,
+  "pairedMorphsAllZero": true,
+  "audioContexts": 0,
+  "errors": [],
+  "frozenPhysicsHash": "53ffa642f34ac573",
+  "captureReportSHA256": "45617ec78f94259df450361a8156e30777abdaaccc642c9cfc7a4f077566c7e3",
+  "note": "Capture and independent exact source checks pass.",
+  "wrapperMode": "source-file",
+  "buildVersion": {
+    "build": "cb2e008e",
+    "sha": "cb2e008e3b077f7e3036b29487c786e2ddd4d870",
+    "time": "2026-10-03T09:10:44.804Z"
+  },
+  "browser": "Playwright WebKit headless on macOS",
+  "device": "1280x720 DPR1 desktop emulation; physical iOS untested",
+  "launchURL": "http://127.0.0.1:49972/?audio=0&sw=0&outfit=street-mustard&rider=gltf&bike=gltf&physics=v2&hz=120",
+  "visualLimits": [
+    "T/A underarm webs remain in raw and repaired.",
+    "Diagnostic source-file wrapper corrects650mm displacement; surface grip/sole/saddle residuals remain unaccepted.",
+    "No continuous interpolation, physics-driven riding, normals, art or physical-device acceptance."
+  ]
+}

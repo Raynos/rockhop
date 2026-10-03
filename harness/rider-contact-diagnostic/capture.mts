@@ -9,6 +9,9 @@ import { preview } from 'vite';
 import { webkit } from 'playwright';
 
 const arg = (key: string, fallback: string) => process.argv.find(x => x.startsWith(`--${key}=`))?.slice(key.length + 3) ?? fallback;
+const wrapperMode = arg('wrapper', 'ordinary');
+assert(['ordinary', 'source-file'].includes(wrapperMode));
+const stepOnly = arg('step-only', '0') === '1';
 const build = path.resolve(arg('build', 'harness/out/rider-contact-diagnostic-2026-10-03/build'));
 const out = path.resolve(arg('out', 'harness/out/rider-contact-diagnostic-2026-10-03/capture'));
 fs.mkdirSync(out, { recursive: true });
@@ -19,7 +22,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(build, 'hero-review.json')
 const report: any = { scope: 'Actual Rockhop Garage; isolated authored diagnostic pose override; NOT physics-driven riding or production promotion',
   repoSHA: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), build, manifest,
   browser: 'Playwright WebKit headless on macOS', device: '1280x720 DPR1 desktop emulation; physical iOS untested',
-  errors: [], loaded: [], samples: [], audioContexts: 0, limits: ['STEP only: no sparse-key linear interpolation acceptance.', 'T/A poses use cloud manifest aba49af5, all26localTRS, animations/morphsOFF.', 'No contact, clothing, normals, mobile or art pass asserted.'] };
+  wrapperMode, errors: [], loaded: [], samples: [], audioContexts: 0, limits: ['STEP only: no sparse-key linear interpolation acceptance.', 'T/A poses use cloud manifest aba49af5, all26localTRS, animations/morphsOFF.', 'No contact, clothing, normals, mobile or art pass asserted.'] };
 const server = await preview({ configFile: false, root: process.cwd(), build: { outDir: build }, preview: { host: '127.0.0.1', port: 0 }, logLevel: 'warn' });
 const browser = await webkit.launch({ headless: true });
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
@@ -45,13 +48,14 @@ try {
   await page.waitForTimeout(700);
   await page.addStyleTag({ content: '#ui,#ui *,.hud,.touch-controls{visibility:hidden!important} #diagnostic-label{position:fixed;z-index:99999;top:12px;left:16px;right:16px;background:#101820e8;color:white;padding:10px;font:16px monospace;white-space:pre-line;visibility:visible!important;pointer-events:none}' });
   await page.evaluate(() => { const label = document.createElement('div'); label.id = 'diagnostic-label'; document.body.append(label); });
-  for (const [variant, outfit] of [['repaired', 'street-mustard'], ['raw-body11', 'street-openface']] as const) {
+  for (const [variant, outfit] of (stepOnly ? [['repaired', 'street-mustard']] : [['repaired', 'street-mustard'], ['raw-body11', 'street-openface']]) as [string, string][]) {
     await page.evaluate(async outfit => { const r = (window as any).__render; await r.setRiderOutfit(outfit); await r.whenReady(); }, outfit);
-    await page.evaluate(poses => {
+    await page.evaluate(({ poses, wrapperMode }) => {
       const r = (window as any).__render, rider = r.debug.rider, T = r.debug.THREE;
       // Restore authored geometry explicitly. Garage already uses it; prevent any
       // runtime weight smoothing from confounding raw/repaired comparisons.
       for (const entry of rider.sleeveGeometry) entry.mesh.geometry = entry.authored;
+      if (wrapperMode === 'source-file') rider.scene.position.x += .65;
       const rest = new Map();
       rider.scene.traverse((o: any) => { if (o.isBone) rest.set(o, { p: o.position.clone(), q: o.quaternion.clone(), s: o.scale.clone() }); });
       // Clone is initially posed by the game. Restore exact source local TRS.
@@ -80,17 +84,17 @@ try {
         rider.scene.updateMatrixWorld(true); rider.scene.traverse((o: any) => { if (o.isSkinnedMesh) o.skeleton.update(); });
       } };
       rider.update = () => (window as any).__diag.apply();
-    }, poses);
+    }, { poses, wrapperMode });
     const jobs: any[] = [];
     if (variant === 'repaired') for (let i = 0; i <= 16; i++) jobs.push({ pose: 'STEP', time: i / 8, view: 'side', yaw: 0, zoom: 1, frame: i, family: 'step-contact' });
     const views = [['left', 0], ['front', Math.PI / 2], ['right', Math.PI], ['rear', -Math.PI / 2], ['front-three-quarter', Math.PI / 4], ['rear-three-quarter', -Math.PI / 4]];
-    for (const pose of ['T', 'A']) {
+    for (const pose of stepOnly ? [] : ['T', 'A']) {
       for (let i = 0; i < 24; i++) jobs.push({ pose, time: null, view: 'orbit', yaw: i / 24 * Math.PI * 2, zoom: 1, frame: i, family: pose + '-orbit' });
       for (const [view, yaw] of views) jobs.push({ pose, time: null, view, yaw, zoom: 1, family: pose + '-views' });
       for (const [view, yaw, anchor] of [['underarm-left', 0, 'upperArm.L'], ['underarm-right', Math.PI, 'upperArm.R'], ['cuff-left', 0, 'hand.L'], ['cuff-right', Math.PI, 'hand.R'], ['neck', Math.PI / 4, 'neck']]) jobs.push({ pose, time: null, view, yaw, zoom: 4, anchor, family: pose + '-closeups' });
     }
     for (const job of jobs) {
-      const sample = await page.evaluate(({ job, variant }) => {
+      const sample = await page.evaluate(({ job, variant, wrapperMode }) => {
         const t = (window as any).__rockhop, r = (window as any).__render, d = r.debug, T = d.THREE, diag = (window as any).__diag;
         diag.pose = job.pose; diag.time = job.time ?? 0;
         d.bike.root.visible = job.pose === 'STEP'; d.bike.frame.visible = true;
@@ -106,7 +110,7 @@ try {
         else anchor = new T.Vector3().fromArray(anchors[anchorKey]);
         r.setCameraOverride({ mode: 'orbit', yaw: job.yaw, pitch: .10, dist: job.pose === 'STEP' ? 5.3 : 5.9, x: anchor.x, y: anchor.y, screenX: .5, screenY: .5 });
         d.rig.camera.zoom = job.zoom; d.rig.camera.updateProjectionMatrix();
-        document.getElementById('diagnostic-label')!.textContent = `ROCKHOP ACTUAL GARAGE | DIAGNOSTIC / UNACCEPTED\n${variant} | ${job.pose}${job.time !== null ? ' source clip t=' + job.time.toFixed(3) + 's STEP' : ' explicit arms-out; corrective morphs zero'} | ${job.view}\nAuthored pose override; physics-driven riding, contact and mobile gates OPEN`;
+        document.getElementById('diagnostic-label')!.textContent = `ROCKHOP ACTUAL GARAGE | DIAGNOSTIC / UNACCEPTED\n${variant} wrapper=${wrapperMode} | ${job.pose}${job.time !== null ? ' source clip t=' + job.time.toFixed(3) + 's STEP' : ' explicit arms-out; corrective morphs zero'} | ${job.view}\nAuthored pose override; physics-driven riding, contact and mobile gates OPEN`;
         r.invalidate(); t.render(true);
         const bones: any = {}; diag.rider.scene.traverse((o: any) => { if (o.isBone) bones[o.name] = { local: o.matrix.toArray(), world: o.matrixWorld.toArray() }; });
         const meshes: any[] = []; diag.rider.scene.traverse((o: any) => { if (o.isSkinnedMesh) meshes.push({ name: o.name, vertices: o.geometry.attributes.position.count, matrix: o.matrixWorld.toArray(), morphNames: o.morphTargetDictionary, morphWeights: o.morphTargetInfluences }); });
@@ -124,8 +128,8 @@ try {
           const nodes: any[] = []; d.bike.root.traverse((o: any) => { if (o !== diag.rider.scene && !o.isBone) nodes.push({ name: o.name, parent: o.parent?.name, local: o.matrix.toArray(), world: o.matrixWorld.toArray() }); });
           fixture = { bikeFrameWorld: d.bike.frame.matrixWorld.toArray(), bikeRootWorld: d.bike.root.matrixWorld.toArray(), bikeFrameLocal: d.bike.frameLocal.toArray(), bikeSourceJSON: d.bike.source.parser.json, bikeRuntimeNodes: nodes, bikeDebug: d.bike.debug, riderWrapperLocal: diag.rider.scene.matrix.toArray(), riderWrapperWorld: diag.rider.scene.matrixWorld.toArray(), riderParentWorld: diag.rider.scene.parent.matrixWorld.toArray(), state: t.getState() };
         }
-        return { ...job, variant, fixture, cloudPoseMatrixMaxError: Math.max(0, ...matrixErrors), bones, meshes, sceneMatrix: diag.rider.scene.matrixWorld.toArray(), stateHash: t.hashState(), garage: r.debugInfo().garage, camera: { matrix: d.rig.camera.matrixWorld.toArray(), zoom: d.rig.camera.zoom, fov: d.rig.camera.fov }, webdriver: navigator.webdriver, audioContexts: (window as any).__diagnosticAudioCount };
-      }, { job, variant });
+        return { ...job, variant, wrapperMode, fixture, cloudPoseMatrixMaxError: Math.max(0, ...matrixErrors), bones, meshes, sceneMatrix: diag.rider.scene.matrixWorld.toArray(), stateHash: t.hashState(), garage: r.debugInfo().garage, camera: { matrix: d.rig.camera.matrixWorld.toArray(), zoom: d.rig.camera.zoom, fov: d.rig.camera.fov }, webdriver: navigator.webdriver, audioContexts: (window as any).__diagnosticAudioCount };
+      }, { job, variant, wrapperMode });
       assert(sample.cloudPoseMatrixMaxError < 1e-5, 'Shared cloud pose matrix mismatch'); assert.equal(sample.webdriver, true); assert.equal(sample.audioContexts, 0); assert.equal(sample.garage.on, true);
       assert(Object.values(sample.bones).every((b: any) => b.world.every(Number.isFinite)));
       const folder = path.join(out, variant, job.family); fs.mkdirSync(folder, { recursive: true });
@@ -139,7 +143,7 @@ try {
     }
   }
   await Promise.all(responses); assert.deepEqual(report.errors, []);
-  for (const outfit of ['street-mustard', 'street-openface']) {
+  for (const outfit of stepOnly ? ['street-mustard'] : ['street-mustard', 'street-openface']) {
     const expected = manifest.models.find((m: any) => m.logical === `models/rider-${outfit}.glb`);
     assert(report.loaded.some((m: any) => m.sha256 === expected.sha256 && m.status === 200), 'Exact source bytes not loaded');
   }

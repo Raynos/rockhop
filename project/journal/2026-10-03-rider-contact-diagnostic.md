@@ -15,3 +15,17 @@ Limits: Diagnostic pose override only, not physics-driven riding. Actual
 contact surfaces, dense interpolation, visual/normal/hood/cuff acceptance,
 physical mobile and stranger gates remain open. No production or deploy edit.
 Parent/cloud owner receives exact bike/wrapper contract; no guessed fix.
+
+## Source-file wrapper alignment
+
+Finding: A reversible diagnostic wrapper change from x=-0.65 to0 aligns the
+exact source-file trajectory with the unchanged actual engine bike frame.
+The original misaligned movie remains a negative control.
+
+Validation: 17 distinct source STEP poses, all local bone matrices/morphs
+identical to the negative control; world GLB parity5.56e-16/morph0. Physics
+hash unchanged. Muted4.25s movie played to completion17decoded/error0.
+Library movie/still/QA/fixture saves confirmed. Source-level lint/type pass.
+
+Limits: No normal player, asset, rig or physics change. Full grip/sole/saddle
+surface contacts, dense motion and art/device acceptance remain open.
