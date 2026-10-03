@@ -371,3 +371,11 @@ Finding: Human/root selects completed Hunyuan paint06 shape/PBR as actual wearab
 Validation: Exact donor800d7a97… and paint06 handoff remain unchanged; 921722triangles/4096px PBR/8views768/15steps/seed42 pinned. All M0–M5/root sole judgment and ten-stage dependencies retained. Silent ship42 shipped control passes4810byteidenticalticks/clear40.083333333s/crash103/restart1tick/frame2.215ms/cold5527ms/errors0.
 
 Limits: Selection is not fitted/rigged/opening/map-level/mobile/art acceptance. 5k–15k triangles is benchmark, not permission for blind decimation. Preserve high-poly donor, failed sleeve controls and protected body/head/51bind. Full-body cloth is not default; lightweight corrections must be consumed. No normal-player promotion.
+
+### Round43 — selected hoodie reconstruction operator rejection, 2026-10-03
+
+Finding: First selected-donor reconstruction derivative welds UV duplicates and removes only detached54v/104face speck, but QuadriFlow returnsCANCELLED. Explicit BMesh checks show0boundary/nonmanifold/noncontiguous witnesses, Euler−32; operator manifold/normal message is not an identified root cause. Freeze exact failed recipe/input before the next repair.
+
+Validation: Donor800d7a97… and canonical09master61bef706… SHA unchanged. Derivative460752v/921568tri; weld collapses50faces, later area filter0. Native rejected-input/preflight/rejection pins recorded; no remesh/bake output or physical fitting claim. Python syntax/diff/hooks pass.
+
+Limits: Generated units/pose remain uncalibrated, real openings/inner clearance/rig and PBR transfer pending. Root selected this visual source; failure does not justify another plain shirt or indefinitely defer full-garment work. Controls/body/head/51bind untouched; no player promotion or M0–M5 closure.
