@@ -1,0 +1,174 @@
+{
+  "accepted": false,
+  "productionPromotion": false,
+  "humanAssetAcceptance": false,
+  "model": "Hunyuan3D-2.1",
+  "purpose": "Optional high-poly shape/detail reference for Agent1 retopology/bake, independent of current rigged pattern/hood successor",
+  "rootVisualDecision": "Useful coherent hoodie candidate with attached hood/recessed entrance/sleeves/cuff/hem; soft inflated wrinkles, lumpy front hem and tiny detached speck remain. Through-openings/body-fit unproven. Not a controlled model-family comparison.",
+  "sourceDecisionRelayThread": "01a10191-f0f0-73fe-ba72-69a30631701f",
+  "pins": {
+    "reference": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+      "SHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+      "bytes": 1394368
+    },
+    "originalInvalidRaw": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-hoodie02/shape/native.npz",
+      "SHA256": "0d2d531e400480bc2df077a91c4db0702675947afaed6e34e6bbead563dd8164",
+      "bytes": 6319176
+    },
+    "finiteCellDerived": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-decode-replay01/decode/finite-cell-derived.npz",
+      "SHA256": "318c7536e5234c6a6e285f4d2111dad9fcdf3941e0329951a1f9a7ebf460612a",
+      "bytes": 6203813
+    },
+    "displayDerivativeGLB": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-decode-replay01/decode/finite-cell-display.glb",
+      "SHA256": "31b385319ada17dc721ac5bb04da1f8bbd8fc36015f5e9c84de0309a7c14a1c6",
+      "bytes": 16591408
+    },
+    "sampledLatents": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-hoodie02/shape/actual-sampled-latents.npz",
+      "SHA256": "d077285011d50187dbcfb5be30890d44d4f6be9def3ee51d1b1e4252793a0bb2",
+      "bytes": 483285
+    },
+    "actualSparseField": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-decode-replay01/decode/actual-field.npz",
+      "SHA256": "44054a59516676c64b54454d27be1052200a20a040afa6c60d5db28cc57f95f8",
+      "bytes": 3119972
+    },
+    "explicitEvaluatedMaskArchive": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-decode-replay01/decode/actual-pre-sentinel-field.npz",
+      "SHA256": "3ee8e76d67700efa67f9debe9c57165ce0c380da8a48f12b2f0c1c621198aa52",
+      "bytes": 3361766
+    },
+    "movingClip": {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-orbit01/finite-cell-shape.mp4",
+      "SHA256": "a7e52a844110caefbd2ddede6e8dcd9b35c7d95025da0800c6d5ab54a0a62dbb",
+      "bytes": 169074
+    }
+  },
+  "recipe": {
+    "seed": 42,
+    "steps": 30,
+    "guidance": 5,
+    "requestedOctree": 384,
+    "actualFlashVDM": [
+      95,
+      190,
+      380
+    ],
+    "queryChunks": 32768,
+    "image": "Generated RGBA appearance reference, approximate pose/camera, not calibrated Blender geometry",
+    "extraction": "Unchanged field, eight evaluated finite corners per cell; no filling/cleanup/component deletion",
+    "coordinateDivisor": 385
+  },
+  "arrays": {
+    "originalInvalidRaw": {
+      "vertices": 472551,
+      "triangles": 945034,
+      "NaNVertices": 11720,
+      "admitted": false
+    },
+    "finiteCellDerived": {
+      "accepted": false,
+      "vertices": 460831,
+      "faces": 921722,
+      "vertexDtype": "float32",
+      "faceDtype": "int32",
+      "validGeometryArrays": true,
+      "limits": [
+        "No self-intersection, anatomy, garment opening, fit or motion test.",
+        "Boundary counts do not classify intentional clothing openings."
+      ],
+      "nonfiniteVertexElements": 0,
+      "invalidIndexElements": 0,
+      "boundsNative": [
+        [
+          -0.9990937113761902,
+          -0.8586071133613586,
+          -0.368017315864563
+        ],
+        [
+          0.9711883068084717,
+          0.8439242839813232,
+          0.34577476978302
+        ]
+      ],
+      "repeatedIndexTriangles": 0,
+      "zeroAreaTriangles": 6,
+      "minimumAreaNativeSquaredUnits": 0.0,
+      "duplicateTrianglesIgnoringWinding": 0,
+      "uniqueEdges": 1382583,
+      "boundaryEdges": 0,
+      "overusedEdges": 0,
+      "equalDirectionTwoFaceEdges": 0,
+      "unusedVertices": 0,
+      "vertexConnectedFaceComponents": 2,
+      "componentTriangleCountsDescending": [
+        921618,
+        104
+      ]
+    }
+  },
+  "axesScale": {
+    "native": "XYZ; semantic Y-up, front at +Z in observed clip; no physical world scale or canonical-body registration recovered",
+    "displayGLB": "Native XYZ unchanged; official global face-winding reversal only",
+    "renderRawToBlenderMatrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "scale": 1,
+    "translation": [
+      0,
+      0,
+      0
+    ],
+    "nativeBounds": [
+      [
+        -0.9990937113761902,
+        -0.8586071133613586,
+        -0.368017315864563
+      ],
+      [
+        0.9711883068084717,
+        0.8439242839813232,
+        0.34577476978302
+      ]
+    ],
+    "fitOrRigTransform": null
+  },
+  "reviewEvidenceCommits": [
+    "19253134a6d2b86e2c85052410b0307e3455d176",
+    "dd103f8ede8e6bd95c0df950301ffcd2ba5818e1",
+    "8a2f0eefc542418ce893cd8c6bb3546ce0acac1e"
+  ],
+  "limits": [
+    "Invalid original raw is preserved, never a usable donor. Derived geometry is separate.",
+    "No trained PBR/UV/current-body-fit/skin/animation through-openings acceptance.",
+    "Do not interrupt or replace Agent1 native rigged pattern; optional retopology/detail use only.",
+    "No normal player assets, Library duplicate upload or user message delivery requested."
+  ]
+}

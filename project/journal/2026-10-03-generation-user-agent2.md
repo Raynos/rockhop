@@ -733,3 +733,14 @@ Ask:284–286.
 Limits: Cheap32square constant-map inpaint on actual geometry qualifies
 preservation, not learned paint, high-resolution raster/bake quality or
 CUDA parity. Actual PBR with this frozen UV state remains pending.
+
+Finding: Frozen optional high-poly handoff document is committed separately
+from the completed UV preservation finding after concurrentHEAD safe abort.
+
+Validation: Eight immutable input/original/derived/field/clip pins are
+recorded in handoff.json and passed to Agent1. Earlier handoff commit safely
+aborted at concurrentHEAD movement; fresh owned index retries preserve
+foreign source/evidence and retain the original artifact distinction.
+
+Limits: Root-useful detail reference only; no geometry replacement,
+physical scale, bodyfit, rig, PBR or human asset acceptance.
