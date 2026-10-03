@@ -1,0 +1,45 @@
+{
+  "status": "UNACCEPTED metric-only transport ablation; no collision or area barriers yet",
+  "sourceShapeSHA256": "10a1c2094726e7ab929b453e07e5f9c072dd06b0673a8557f4f41c6c5e33c2d7",
+  "authoritativeDPath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair03/inputs/source34-authoritative168-matrices.npz",
+  "authoritativeDSHA256": "743d6fde07c5865db412b5a6a221dc1d1bdf70dcb3de2fb95a96cbdb478449a0",
+  "sample": 304,
+  "DHash": "3324d53d27e14cf2f1677df29d6a37de15a0545193efe2e4fd8eebb7989f893f",
+  "candidatePath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/boundary-volume02/arap-material-actual304.npz",
+  "candidateSHA256": "8649dbd12cde726033fd75c4f626bb708eea77405d8be22dbbb7e3c49b91841d",
+  "neutralIdentityMaxErrorM": 1.3309833151343576e-14,
+  "heldPrimitivesExact": true,
+  "charts": [
+    {
+      "chart": "body-L",
+      "iterations": 12,
+      "maxFinalStepM": 0.0004693763356889493,
+      "maxOffsetM": 0.014629822054693375,
+      "boundaryDeltaM": 0.0
+    },
+    {
+      "chart": "insert-L",
+      "iterations": 12,
+      "maxFinalStepM": 0.0006714004268062179,
+      "maxOffsetM": 0.06280558727637324,
+      "boundaryDeltaM": 0.0
+    },
+    {
+      "chart": "body-R",
+      "iterations": 12,
+      "maxFinalStepM": 0.0006000418694925501,
+      "maxOffsetM": 0.01286204442826666,
+      "boundaryDeltaM": 0.0
+    },
+    {
+      "chart": "insert-R",
+      "iterations": 12,
+      "maxFinalStepM": 0.0007749774247902665,
+      "maxOffsetM": 0.06258071635655905,
+      "boundaryDeltaM": 0.0
+    }
+  ],
+  "method": "Positive inverse-rest-edge weighted vertex ARAP,12local/global iterations, Dirichlet original sewn boundaries and high opening. Only added chart interiors change. All matrices/weights/source geometry stay frozen.",
+  "primarySource": "https://doi.org/10.2312/SGP/SGP07/109-116",
+  "limits": "ARAP objective alone neither enforces volume nor guarantees nonintersection; full literal gate decides whether to continue. Retained upper self-crossings cannot be repaired by this interior-only response."
+}
