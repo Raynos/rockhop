@@ -2783,3 +2783,23 @@ PASS; release-scope lint PASS. Local full lint finds research-script errors in
 assets/blender (including separate task-3 ownership), not silently fixed. Release
 unit filter:135files/1584tests PASS,11tests skipped. Ordinaryship216 recorded.
 Limits: Visual appearance, grip closure, actual contacts and all three checkpoints OPEN.
+
+## Round217 — preserve branch research without regressing the player
+
+Finding: Audio runtime/asset/pipeline/harness are already identical on main.
+Four later main evidence documents are retained. Fourteen native commits have
+real pending features but obsolete packaging/storage; preserve their complete
+binary full-index patches on main and record branch ancestry without enabling
+those features. Legacy Blender/Astra tips each match a rewritten main ancestor
+except the intentionally purged141657181-byte trailer. Raw unrelated ancestry
+would restore that blob and fail GitHub push, so those archival refs stay local.
+
+Validation: Read-only complete branch/path audit, audio scoped tree comparison,
+legacy counterpart ancestor checks and gzip source pin. Main player tree must
+remain unchanged across the ancestry merge. Existing ship216/release tests apply
+to identical player code; final release CI and live-SHA check still required.
+
+Limits: Signed OTA/quarantine, save-error retry and broader native lifecycle
+features are NOT shipped. Resume the queued native integration plan on current
+Rockhop architecture. No foreign worktree removed or reset; no main history
+rewrite, force-push, rejected rider promotion or foreign-path sweep.
