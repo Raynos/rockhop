@@ -34,7 +34,7 @@ for(const mesh of candidate.meshes) {
 }
 const boots=candidate.meshes.filter(m=>m.name.startsWith('Complete_canonical_fitted_boot'));
 if(boots.length!==2||preserved.length!==7||maximumRest>2e-6)throw Error('Unexpected footwear/rest inventory');
-const report={status:'UNACCEPTED07 complete footwear actual-loader source preservation/rest; moving wear/engine response pending',
+const report={status:'UNACCEPTED '+path.basename(path.dirname(candidateFile))+' complete footwear actual-loader source preservation/rest; moving wear/engine response pending',
   parent05GLBSHA256:sha(fs.readFileSync(parentFile)),candidateGLBSHA256:sha(fs.readFileSync(candidateFile)),verifierSHA256:sha(fs.readFileSync(new URL(import.meta.url))),actualGLTFLoader:true,threeRevision:THREE.REVISION,
   all51JointNamesParentsInverseBindsExact:true,allCandidateMorphDefaultsZero:true,maximumRestClosureM:maximumRest,allSevenNonBootPrimitiveFieldsExact:preserved,
   newFootwearPrimitives:boots.map(m=>({name:m.name,rows:m.geometry.attributes.position.count,triangles:m.geometry.index.count/3,material:m.material.name,metalness:m.material.metalness,roughness:m.material.roughness})),

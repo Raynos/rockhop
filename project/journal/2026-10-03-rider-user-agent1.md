@@ -307,3 +307,11 @@ Finding: Old appearance boots have open ankle topology but fail actualfoot rest 
 Validation: New398nativevertices/494polygons form two135vertex uppers/55edge ankleboundaries and two64vertexclosedsoles, nooverusededges. Convexupper rest enclosure all1123vertices per foot below155mm succeeds, upper/bodytriangle0. Actualloader sevennonbootprimitive attributes/indices/morphs byteidentical05,51names/parents/inversebindsexact, defaults0, restclosure0.000854mm; rawprotectedheadnormals/UV/image/spec retained.
 
 Limits: Rest enclosure doesnotcertifymovingankle/collar/intergarment, upper-sole assemblyoverlap intentional. Newblackleather/rubber materials prototype; no art/fit/device/physicsresponse acceptance or playerpromotion. Matched movingfootwear and fresh07sole/contact/enginehandfoff follows. Parent accepted priornativecollisions asmechanismproof only; cuffcoverage/anchors and livegamecollisions remainopen.
+
+### Round35 — outsole interface qualification, 2026-10-03
+
+Finding: Whole-part07 inspection exposes230outsole/body trianglecontacts: the18mm sole topintrudes4mm into plantarbody even thoughupperenclosurepassed. Freeze07 rejection and new08 successor changingonly64topZ values by6mm to12mm sole/2mm plantarrestgap.
+
+Validation: 08upper/body0 and sole/body0 trianglepairs, plantaraxisgap1.9999999mm. Native allothermeshfields includinghiddencontrols, upper/sole topology/UV/weights/materials and51bindexact07; actualGLTFLoader sevennonbootfields/51bind/defaults0 exact05, maxrest.000854mm, protectedheadrawnormal/PBRrestored.
+
+Limits: Restinterfacequalification isnotmovingwearable or arbitrarypose/livecollision guarantee. Matchedfoot/anklemotion,07/08freshsole map and actualengine response stillrequired; no promotion or art/deviceacceptance.

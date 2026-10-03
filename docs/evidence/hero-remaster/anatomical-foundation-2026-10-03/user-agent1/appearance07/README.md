@@ -54,3 +54,8 @@ cuff gaping/hanging0.5–1.375s, retreat/exposed forearm by2s and pin folds
 remain. The0.346mm floor still misses1mm. The single Library receipt and
 precise sequential FRONT49/REAR49 layout are in
 ../cloth-sleeve01/library-root-review.json; no duplicate capture or delivery.
+
+Subsequent whole-part rest inspection finds230 outsole/body triangle pairs:
+the18mm slab top intrudes4mm into the plantar foot.07 is rejected at that
+interface.08 changes only64 sole-top Z values to provide12mm thickness
+and2mm rest plantar clearance; moving footwear comparison follows08.
