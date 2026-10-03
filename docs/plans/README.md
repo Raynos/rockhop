@@ -1,6 +1,6 @@
 **Branch audit (ask263):** [Verified refs](../evidence/branch-audit-2026-10-03/README.md): every local/fetched branch is contained in main. Three pre-purge pointers aligned to verified rewritten ancestors; original tips preserved locally. No outstanding merge or game asset change. Native adaptation remains queued.
 
-**MCP permission guidance (ask268):** Existing personal config already selects never/danger-full-access. Installed Codex App plugin explicitly prompts for five coordination/scheduling tools; per-tool plugin-scoped approve overrides address those prompts. Guidance only; no personal config change or rider/release gate closure.
+**MCP permissions (asks268–271):** Personal config and credential-free dotfiles now set configured MCP/app defaults and explicit plugin tool policies to approve. Parsing, fresh CLI loading and installer idempotence pass; existing never/danger-full-access retained. Live daemon reload did not acknowledge; loaded desktop chats may require relaunch after active work settles. Rider/release gates remain open.
 
 **Local checker succession (ask267):** [Frozen handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md) preserves generic63-test attribution, green published arm-foundation checkpoint, exact local owners/model context and remaining frozen anatomy source work. Generation is ask262/local01a10155; small-commit policy is ask266. This lane freezes after checkpoint; root/relay creates the next LOCAL checker. No player promotion/deploy/cleanup or invented cloud model.
 
