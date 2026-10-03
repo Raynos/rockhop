@@ -1319,3 +1319,18 @@ Ask:284–286.
 
 Limits: Checkpoint, render/encode pending; pervertex material display not UV
 bake/maplevel/finalart/fit/rig/mobile. No cleanup/reduction/winding repair.
+
+Finding: Full6,322,984triangle TRELLIS gray/PBR matched48angle render
+completes under explicit future96profile, preserving native array identity.
+
+Validation: Blender5.2.1CPU4threads8samples, guard0/141.838s. All96PNG
+frames share camera/light/derived normals/shape and measured uniform
+presentation scale. Rawvertices/faceindices loaded byte-identically;
+actual sampled baseColorSRGB/metallic/roughness drives PBR, no geometry
+cleanup/reduction/winding repair. Perframe hashes frozen before encoding.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-orbit01/
+Ask:284–286.
+
+Limits: Frozen render checkpoint; silent matched encoding/root judgment
+pending. Native pervertex material display is not UVbake/map-level/fit/rig/
+mobile/finalart pass. Original full raw arrays remain unchanged.
