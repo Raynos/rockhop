@@ -3,7 +3,7 @@
 - Never your own browser. Headless harness only.
 - All testing is silent. Under automation (`navigator.webdriver`) the game opens no AudioContext; never pass `?audible=1` in a run the user can hear.
 - Work only on `main`; no branches or worktrees. Retire subagents by 150 responses.
-- Commit early and often in small, coherent commits directly on `main`. Commit each finished finding immediately; do not wait for an entire plan, asset family or session to finish. Before starting the next experiment, commit stable source/evidence as an explicitly unaccepted checkpoint when moving art or device review is still pending. A checkpoint is not permission to promote unfinished work into normal player assets.
+- Commit early and often in small, coherent commits directly on `main`. Commit each finished finding immediately; do not wait for an entire plan, asset family or session to finish. Keep plan writing, archive/link maintenance, target inventory and review-gallery work in separate commits; do not bundle them into one large round. Finish, verify and commit each unit before starting the next. Stage only owned paths or hunks. Before starting the next experiment, commit stable source/evidence as an explicitly unaccepted checkpoint when moving art or device review is still pending. A checkpoint is not permission to promote unfinished work into normal player assets.
 - Builders own paths and verify; only the parent judges.
 - Evidence is played, never posed — judge clips, not stills.
 - The metric is attempts-to-clear and restart latency, from a bot and a stranger.

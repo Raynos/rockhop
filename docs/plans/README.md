@@ -1,5 +1,7 @@
 # What we are building — the plans and where each stands
 
+**Small commit scope (ask262):** AGENTS.md now requires separate commits for plan writing, archive/link maintenance, target inventory and review-gallery work; verify and commit each finished unit before the next, staging only owned paths/hunks. Current rider gate states remain unchanged.
+
 **Cloud arm-foundation checkpoint (ask260):** [Immutable reconciliation](../evidence/hero-remaster/cloud-arm-foundation-2026-10-03/README.md) preserves the exact Libraryv0 archive and all75payload pins, complete recipes/15pose images/48-frame motion. Existing recipes restore sourceA exactly and verify protected source data; silent WebKit playback passes. Separate metadata corrections retain original bytes. Forward folds remain failed; no player promotion or acceptance. Active forward work and the separate anatomical builder remain their owners' work.
 
 **Current rider authority (ask259):** [RIDER_BASELINE_TO_SHIP](sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md) replaces all three previous rider/hero execution plans, now archived as superseded rather than completed. One baseline face/body, all-angle standing, Garage and forward-standing/back-seated riding come first; outfits and hairstyle follow later. [Target inventory](../../assets/design/hero-remaster/rider-baseline-2026-10-03/SPEC.md): 86 required still slots, 14 partial concept references, 72 missing; continuous motion is additional. Accepted milestones **0/6**. Pictures guide feedback and played clips decide motion.
