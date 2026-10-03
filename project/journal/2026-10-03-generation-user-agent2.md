@@ -311,3 +311,17 @@ Ask:276.
 
 Limits: Catalogue maintenance only; no new experiment, inference, acceptance
 or source transfer. Recognizable textured-rider integration stays independent.
+
+Finding: ONE nonblocking wardrobe-quality proposal specifies richer approved
+hoodie input, pinned12-step baseline, bounded derived extraction and look-only
+mapping to clean canonical UVs. Immediate root-accepted fallback stays in use.
+
+Validation: All eleven installed primary source/config hashes rechecked;
+proposal references existing analytic sampling/orientation controls and reports
+remaining topology limits. No inference, asset generation or source transfer.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/wardrobe-quality-proposal.json
+Ask:276.
+
+Limits: Proposal is not run qualification or art/fit/rig acceptance. Rich image
+adds visible information, not guaranteed PBR/unseen geometry. Reference/root
+approval and frozen target are needed; no second run or integration delay.
