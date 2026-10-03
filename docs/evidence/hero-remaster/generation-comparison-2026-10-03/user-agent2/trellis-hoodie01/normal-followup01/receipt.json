@@ -1,0 +1,98 @@
+{
+  "accepted": false,
+  "kind": "ONE existing raw hoodie orientation/normals and geometry-sections follow-up",
+  "sourcePins": {
+    "normal_followup.py": "ef12e24f5ed3e91df5eff95b137c81be377e913647fba1561b189e55fbd8a14d",
+    "normal_orbit.py": "c8407eb7ead4f524474d408bb38c21101c56c6ace2cfeda4811b2bfb7747356a",
+    "encode_normals.py": "d056a7f9401816f40bfec42e2ad664ce9717a980946e2105d0771ac15f1ea4eb",
+    "orient_derived_preview.py": "90094e6b00ec658cb6ca9d44eb1ecd88b488ecd84ccc606181a825a9073a25f8",
+    "audit_native.py": "10da89eb6197d7299a8cd740161a02dcf991798c5ae34d62ee1be8d280351b66",
+    "donor_orbit.py": "7378cabf3773e385274c37ed1902f4edcb0be47ae1bee323e7879db10da8cb82"
+  },
+  "nativeSHA256": "68bbd4f380d9f701a0b96976efe8d065695ab2e445b738fde41fa0d624e47cae",
+  "nativeUnchanged": true,
+  "neuralRuns": 0,
+  "movie": {
+    "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/current-flat-recomputed-normals.mp4",
+    "sha256": "13f0b780f91cdd3ffe7b703fadfae84ad94e9b530c3ebff9e6f04e99d98e1ccc",
+    "bytes": 219492,
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 960,
+          "height": 384,
+          "avg_frame_rate": "8/1",
+          "nb_frames": "48"
+        }
+      ],
+      "format": {
+        "duration": "6.000000",
+        "size": "219492"
+      }
+    },
+    "fullDecodeExitCode": 0
+  },
+  "sections": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/normal-followup01/cross-sections.png",
+    "sha256": "1f33f2bc77df60cbac3aedf4e6fb2b34f89abd429004cfe0d1ec788b75d1dee0",
+    "bytes": 568163,
+    "numericArchiveSHA256": "e3d78d8a94385d40528b30441a52f4d17e626409c0ccdff870273c9fa66afffd",
+    "planes": [
+      {
+        "name": "cut20",
+        "worldZ": 1.0681890751520586,
+        "segments": 1912
+      },
+      {
+        "name": "cut40",
+        "worldZ": 1.2008601835568333,
+        "segments": 2355
+      },
+      {
+        "name": "cut60",
+        "worldZ": 1.3335313046771626,
+        "segments": 2738
+      },
+      {
+        "name": "cut80",
+        "worldZ": 1.466202400366383,
+        "segments": 1662
+      }
+    ]
+  },
+  "checks": {
+    "renderedFramePins": 144,
+    "sourcePixelsUnchangedByLabels": true,
+    "sameVerticesAndTriangleSets": true,
+    "maximumUsedNormalUnitError": 1.1920928955078125e-07,
+    "windingWitnessesBefore": 120593,
+    "windingWitnessesAfter": 2,
+    "boundaryEdgesUnchanged": 5416,
+    "overusedEdgesUnchanged": 6171,
+    "zeroUsedVertexNormals": 0,
+    "ast": "pass"
+  },
+  "guardSummary": {
+    "controllerPID": 52151,
+    "ownedChildPID": 52155,
+    "status": "worker returned; review pending",
+    "exitCode": 0,
+    "elapsedSeconds": 42.022
+  },
+  "memoryPeaksGiB": {
+    "anonymous": 37.9,
+    "combined": 44.699999999999996
+  },
+  "limits": [
+    "Unaccepted derived display only; root judges played film",
+    "Two orientation witnesses plus boundary and nonmanifold defects remain",
+    "Cross-sections show exact intersections at four planes, not complete self-intersection proof",
+    "No vertex movement, smoothing, remesh, cleanup or added/deleted triangles",
+    "No installed/shared decoder or player files changed",
+    "No new inference, generator-family judgment, fit/rig/art acceptance or qualified quality run"
+  ]
+}

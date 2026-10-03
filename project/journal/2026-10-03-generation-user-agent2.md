@@ -283,3 +283,19 @@ Ask:276.
 Limits: Zero neural runs/garment changes, no CUDA equivalence or Mac-only bug
 claim. Nonmanifold/open components can retain conflicts; no broad mesh repair
 or generator/fit/art verdict. Supports textured-rider lane independently.
+
+Finding: ONE existing hoodie derived orientation/smooth-normal follow-up reduces
+same-direction shared-edge witnesses120593to2; all219372vertices and448972
+triangle vertex sets stay identical. Exact four horizontal geometry cuts recorded.
+
+Validation: CPUguard52151/owned52155 exits0 in42.022s;144frame pins
+match, silent H26448frames/8fps/960x384 six-second film full-decodes0;
+SHA13f0b780/219492bytes. All used normals finite/unit within1.20e-7;
+raw68bbd4f3 unchanged and zero neural runs. Three recipes/helpers AST pass.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/normal-followup01/receipt.json
+Ask:276.
+
+Limits: UNACCEPTED derived display; root judges played film. Two winding
+witnesses,5416boundary/6171overused edges remain. No vertex movement,
+remesh, installed/shared decoder edit, fit/rig/art or generator-family verdict.
+Four cuts are not a full self-intersection proof; quality run remains unqualified.

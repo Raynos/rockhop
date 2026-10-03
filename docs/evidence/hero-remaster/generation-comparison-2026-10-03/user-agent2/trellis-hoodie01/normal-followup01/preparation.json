@@ -1,0 +1,168 @@
+{
+  "accepted": false,
+  "nativeSHA256": "68bbd4f380d9f701a0b96976efe8d065695ab2e445b738fde41fa0d624e47cae",
+  "previousOrbitSHA256": "99fd7dad608a3ccf63f855d4682e8f93cfb61455ff6bd6c84d4f798cfa8aa9b2",
+  "recipeSHA256": "ef12e24f5ed3e91df5eff95b137c81be377e913647fba1561b189e55fbd8a14d",
+  "verticesUnchanged": true,
+  "samePerRowTriangleVertexSets": true,
+  "flippedFaceRows": 220229,
+  "normalMethod": "owned derived orientation adapter plus explicit area-weighted smooth vertex normals",
+  "adapter": {
+    "accepted": false,
+    "adapter": "orientation of DERIVED display only",
+    "verticesUnchanged": true,
+    "samePerRowTriangleVertexSets": true,
+    "flippedRows": 220229,
+    "faceSetSHA256": "17de249a866a171c4fdf8ed8482eb6b7a053595ef4680fa14987327bedce00e9",
+    "derivedAudit": {
+      "accepted": false,
+      "vertices": 219372,
+      "faces": 448972,
+      "vertexDtype": "float32",
+      "faceDtype": "int32",
+      "validGeometryArrays": true,
+      "limits": [
+        "No self-intersection, anatomy, garment opening, fit or motion test.",
+        "Boundary counts do not classify intentional clothing openings."
+      ],
+      "nonfiniteVertexElements": 0,
+      "invalidIndexElements": 0,
+      "boundsNative": [
+        [
+          -0.3368014097213745,
+          -0.10022187232971191,
+          -0.1863381266593933
+        ],
+        [
+          0.33622533082962036,
+          0.09882956743240356,
+          0.20234990119934082
+        ]
+      ],
+      "repeatedIndexTriangles": 0,
+      "zeroAreaTriangles": 0,
+      "minimumAreaNativeSquaredUnits": 9.415330242420619e-09,
+      "duplicateTrianglesIgnoringWinding": 0,
+      "uniqueEdges": 672018,
+      "boundaryEdges": 5416,
+      "overusedEdges": 6171,
+      "equalDirectionTwoFaceEdges": 2,
+      "unusedVertices": 895,
+      "vertexConnectedFaceComponents": 1,
+      "componentTriangleCountsDescending": [
+        448972
+      ]
+    },
+    "manifoldSharedEdgeOrientationConsistent": false,
+    "limits": [
+      "Nonmanifold/boundary geometry is not repaired",
+      "No smoothing, remesh, added/deleted triangles or native mutation",
+      "Open components have no guaranteed global inside/outside interpretation"
+    ]
+  },
+  "zeroUsedVertexNormals": 0,
+  "derivedAudit": {
+    "accepted": false,
+    "vertices": 219372,
+    "faces": 448972,
+    "vertexDtype": "float32",
+    "faceDtype": "int32",
+    "validGeometryArrays": true,
+    "limits": [
+      "No self-intersection, anatomy, garment opening, fit or motion test.",
+      "Boundary counts do not classify intentional clothing openings."
+    ],
+    "nonfiniteVertexElements": 0,
+    "invalidIndexElements": 0,
+    "boundsNative": [
+      [
+        -0.3368014097213745,
+        -0.10022187232971191,
+        -0.1863381266593933
+      ],
+      [
+        0.33622533082962036,
+        0.09882956743240356,
+        0.20234990119934082
+      ]
+    ],
+    "repeatedIndexTriangles": 0,
+    "zeroAreaTriangles": 0,
+    "minimumAreaNativeSquaredUnits": 9.415330242420619e-09,
+    "duplicateTrianglesIgnoringWinding": 0,
+    "uniqueEdges": 672018,
+    "boundaryEdges": 5416,
+    "overusedEdges": 6171,
+    "equalDirectionTwoFaceEdges": 2,
+    "unusedVertices": 895,
+    "vertexConnectedFaceComponents": 1,
+    "componentTriangleCountsDescending": [
+      448972
+    ]
+  },
+  "derivedArchiveSHA256": "9eb0fc36c8319439d5cdf7f948e6f086ee6f462fbe1117a0c3422e12c8c4ae93",
+  "sectionsArchiveSHA256": "e3d78d8a94385d40528b30441a52f4d17e626409c0ccdff870273c9fa66afffd",
+  "sectionPlanes": [
+    {
+      "name": "cut20",
+      "worldZ": 1.0681890751520586,
+      "segments": 1912
+    },
+    {
+      "name": "cut40",
+      "worldZ": 1.2008601835568333,
+      "segments": 2355
+    },
+    {
+      "name": "cut60",
+      "worldZ": 1.3335313046771626,
+      "segments": 2738
+    },
+    {
+      "name": "cut80",
+      "worldZ": 1.466202400366383,
+      "segments": 1662
+    }
+  ],
+  "previewRawToBlenderMatrixRows": [
+    [
+      0.0,
+      -1.7066528469186883,
+      0.0,
+      -0.010673965628480137
+    ],
+    [
+      1.7066528469186883,
+      0.0,
+      0.0,
+      0.0004921197821339704
+    ],
+    [
+      0.0,
+      0.0,
+      1.7066528469186883,
+      1.2535324611000327
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "camera": {
+    "targetM": [
+      -0.009485875256359577,
+      5.364418029785156e-07,
+      1.267195701599121
+    ],
+    "orthoScaleM": 1.4432265758514404,
+    "radiusM": 5,
+    "riseM": 0.12
+  },
+  "limits": [
+    "No vertex movement, smoothing, remesh, added/deleted triangles or native mutation",
+    "Residual orientation/topology conflicts are measured, not assumed solved",
+    "No neural inference, art/fit/rig or texture-generator judgment"
+  ]
+}
