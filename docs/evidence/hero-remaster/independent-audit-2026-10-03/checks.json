@@ -1,0 +1,141 @@
+{
+  "status": "RIDER_UNACCEPTED",
+  "auditedHEAD": "65acf5cefc3331299bfcfbb4ac1c3b3b4846ea2a",
+  "playerTreeIdenticalToCaptureBuild": true,
+  "lineage": [
+    {
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb",
+      "sha256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+      "bytes": 14007264,
+      "equalsSourceA": {
+        "inverseBinds": true,
+        "jointLocals": true,
+        "jointWeights": true
+      }
+    },
+    {
+      "source": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind34/rider.glb",
+      "sha256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+      "bytes": 16297888,
+      "equalsSourceA": {
+        "inverseBinds": false,
+        "jointLocals": false,
+        "jointWeights": false
+      }
+    }
+  ],
+  "captures": [
+    {
+      "capture": "capture06",
+      "frames": 157,
+      "reportSHA256": "0455dc176245689e5d10c77a56e699f39470fdeed75924378a8bce1b3865bbc5",
+      "frozenPhysicsHash": "53ffa642f34ac573",
+      "endpointSocketResidualMM": {
+        "gripL": 650.0000772634781,
+        "gripR": 650.0001341048666,
+        "soleL": 656.3494016924451,
+        "soleR": 651.3325123409691
+      },
+      "wrapperLocal": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -0.65,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "capture": "aligned-step01",
+      "frames": 17,
+      "reportSHA256": "45617ec78f94259df450361a8156e30777abdaaccc642c9cfc7a4f077566c7e3",
+      "frozenPhysicsHash": "53ffa642f34ac573",
+      "endpointSocketResidualMM": {
+        "gripL": 0.00015907003327133947,
+        "gripR": 0.00016908778677821642,
+        "soleL": 91.07595015241152,
+        "soleR": 41.620449264704256
+      },
+      "wrapperLocal": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "playback": [
+    {
+      "status": "PLAYED_SILENT_HEADLESS",
+      "browser": "macOS Playwright WebKit",
+      "rows": [
+        {
+          "file": "Rockhop-actual-engine-STEP-contact-diagnostic.mp4",
+          "currentTime": 4.25,
+          "duration": 4.25,
+          "width": 1280,
+          "height": 720,
+          "muted": true,
+          "ended": true,
+          "decodedFrames": 17
+        },
+        {
+          "file": "Rockhop-actual-engine-raw-vs-repaired-T-A-orbits.mp4",
+          "currentTime": 6,
+          "duration": 6,
+          "width": 1920,
+          "height": 540,
+          "muted": true,
+          "ended": true,
+          "decodedFrames": 48
+        }
+      ],
+      "errors": []
+    },
+    {
+      "status": "PLAYED_SILENT_HEADLESS",
+      "browser": "macOS Playwright WebKit",
+      "rows": [
+        {
+          "file": "Rockhop-actual-engine-frame-aligned-STEP-diagnostic.mp4",
+          "currentTime": 4.25,
+          "duration": 4.25,
+          "width": 1280,
+          "height": 720,
+          "muted": true,
+          "ended": true,
+          "decodedFrames": 17
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "limits": [
+    "Independent recheck of retained actual-engine evidence, not new gameplay capture.",
+    "STEP keys do not certify continuous deformation or physics-driven motion.",
+    "Socket residuals do not certify palm/sole/saddle surface contact.",
+    "No new appearance score, physical phone, real LOD, performance or stranger qualification."
+  ]
+}
