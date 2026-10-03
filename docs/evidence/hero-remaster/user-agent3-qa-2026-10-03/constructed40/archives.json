@@ -1,0 +1,72 @@
+{
+  "report": {
+    "path": "report.json.gz",
+    "rawSHA256": "9e9cb9fe9163e1f92fa4b422f13a8d04b986ffd449167045f2de0ded20908c9b",
+    "rawBytes": 2500019,
+    "compressedSHA256": "4960e8c76021830c46b26023c0cc0857599fc5ea0085b7f1e4b0b8a25fd4707c",
+    "compressedBytes": 247075
+  },
+  "everyTickSurfaceArchives": [
+    {
+      "path": "rookie-maximum-forward-lean-off.surface.ndjson.gz",
+      "rawSHA256": "fa90dbab9a3aafeb104877eb89d0ec39a12c251d411e3960032b28f27e8161e2",
+      "rawBytes": 548900,
+      "compressedSHA256": "f4d435d7a12ce25b771b54071250ca32ffa5186c27403b0c810c2e9c3d85af47",
+      "compressedBytes": 123831
+    },
+    {
+      "path": "rookie-maximum-forward-lean-on.surface.ndjson.gz",
+      "rawSHA256": "cd1f3c17ebdef336be18e380ca951271d63da81bec99662b297f94c963e9cf81",
+      "rawBytes": 554035,
+      "compressedSHA256": "0925e205cae127913ea0250a3867c2e5f9f572fd028e7c4c0abb0015fbdccc44",
+      "compressedBytes": 129875
+    },
+    {
+      "path": "rookie-front-landing-recovery-off.surface.ndjson.gz",
+      "rawSHA256": "6d5caa308ff7f98c444c14abb1a62ad034948757ddb5ab947e0cebe89510d10f",
+      "rawBytes": 5521089,
+      "compressedSHA256": "be7aa4b3cd90e57c67ededc8f0d53077e4ceb58799cb1c65eeba41926d160641",
+      "compressedBytes": 1301127
+    },
+    {
+      "path": "rookie-front-landing-recovery-on.surface.ndjson.gz",
+      "rawSHA256": "37aaa7d59ad8d8737bfed94ce5dcf0aca3dd552f4aa0145372457abd0813a85c",
+      "rawBytes": 5600344,
+      "compressedSHA256": "ca6d967c80e398c45d026f88179f878e68587e57e419749729750f404cb52262",
+      "compressedBytes": 1353539
+    },
+    {
+      "path": "pro-maximum-forward-lean-off.surface.ndjson.gz",
+      "rawSHA256": "acef718a12a401186dd00bd8a9ad4d1bc2d660542f1d60984393da7131e4d374",
+      "rawBytes": 546492,
+      "compressedSHA256": "96ceb6bfea22267d5dec93f5206bc4039407812d3673cb9a7122df42bd46527c",
+      "compressedBytes": 122963
+    },
+    {
+      "path": "pro-maximum-forward-lean-on.surface.ndjson.gz",
+      "rawSHA256": "ffe5fe741753449837ef369437ad5368bdd57938e2b91446ec6f6caba8e22010",
+      "rawBytes": 551651,
+      "compressedSHA256": "21b40d9ad117ee82c4f20e8c63bd8e11e1cce491e6d2e454007ef12d0ac98fcd",
+      "compressedBytes": 128841
+    },
+    {
+      "path": "pro-front-landing-recovery-off.surface.ndjson.gz",
+      "rawSHA256": "73515bc67981ff9c2f29635ca6ae32279bad7bd248cfc3f807dde78540d8761f",
+      "rawBytes": 1590745,
+      "compressedSHA256": "05070a504865dd08c50b46c6945b42d541be0ec6ad5615cc45963865b7a2e886",
+      "compressedBytes": 375768
+    },
+    {
+      "path": "pro-front-landing-recovery-on.surface.ndjson.gz",
+      "rawSHA256": "031b8cdf11b386a0126fa49b967c4ab8181a9599f289853bb9a9d7d356f69baa",
+      "rawBytes": 1611708,
+      "compressedSHA256": "6945f331b88156e311d5284c44654b3048c542e565dc59e93019bf0b75120233",
+      "compressedBytes": 390292
+    }
+  ],
+  "physicsTraces": "PlainNDJSON removes only arch from each original captured row. Full raw surface/physics traces remain byteexact through gzip; original and reduced hashes pinned independently.",
+  "filmSHA256": "ba8cd48e2a169e6aa2b9840e912dfc3b5a69d6c3cc4c0039233b3b83a22148d5",
+  "limits": [
+    "Per-tick arch data preserves centers/normals/distances/areas; full triangle coordinates preserved at19 visual samples percase in capture report."
+  ]
+}

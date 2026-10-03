@@ -677,3 +677,23 @@ Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate39/source.js
 Limits: No player code or model promotion/deployment. Source37/38 private
 constructed09 supports remainunaccepted; headlessviewport is not actual
 phone sustained pacing, stranger attempts, art or wearable collision gate.
+
+## Round40: held-out constructed arch response remains near the peg point
+
+Finding: Same source37/offset38 passes actualRookie/Proforwardlean and
+frontlanding trajectories, with no new source/parameter change. Everytick
+finitearchreference max10.405mmOFF→1.121µmON; noONmeasurement above1mm.
+Current09 wedge/loadbearing remainunaccepted; no wholepegsolidclaim.
+
+Validation: 13870capturedticks independentlyproductionGame hash/phase/
+clock/finish exact; actual466row positions/weights0error in8controls.
+ONmaxcentroid2.853µm/markerres1.926µm/grip.206µm/sampledlegstretch.922.
+Four19pairedframeorbits/76filmframes/152sourceframes6.333s12fps silent
+movie fullyplayed. Executedsource andlosslessfullsurface/archivehashes
+pinned; scopedlintpasses. Normalshipgate39 retained separately.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/constructed40/archives.json
+
+Limits: Everytickmetrics vs19sample fulltrianglecoordinates explicit.
+Point/archproposals do not closecollision/art/loadbearing/phone; rear
+landing/ToeFK/crashrestartprivateoffset remainopen. No normalplayer
+promotion, garmentcorrection, sourcebind/weights/body/physicschange.
