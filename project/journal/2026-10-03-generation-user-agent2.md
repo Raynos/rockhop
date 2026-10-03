@@ -1730,3 +1730,16 @@ Ask:284–286.
 Limits: Root alone judgesplayedfilm. Explicit1024lowerVRAM alternative,
 not1536success/UVbake/openings/fit/rig/mobile/modelwinner or finalartpass.
 No Library upload or publication byAgent2.
+
+Finding: Existing localai/weights ownsetup notes/map refreshed locally
+for actualPixal1024 result and correctedfrozenTRELLIS review diagnosis.
+
+Validation: Localai aeb0acf73 only3ownpaths/normalhooks, weights146a1904
+only2ownpaths/normalhooks; exactownedfiledigests/currentdiffclean. Bothmain,
+foreignhistory preserved. Inputbaselinecounts/axis/savedcontinuation limits
+explicit; no runtime/checkpoint/store/symlink changes or publication.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/local-notes05/receipt.json
+Ask:284–286.
+
+Limits: Localonlynotes, rootplayedPixal/game-readyjudgment open.
+No push/Libraryupload, driver/source edit, seed sweep or donortransfer.
