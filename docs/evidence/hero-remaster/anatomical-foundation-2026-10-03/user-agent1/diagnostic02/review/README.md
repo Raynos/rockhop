@@ -24,10 +24,10 @@ presentation transforms only. Original full source and derived master remain
 byte-identical after read-only rendering.
 
 BlenderCyclesCPU4threads/4samples,1280×768,AgX; no audio. Frames are locally
-ignored and regenerable with review_motion.py. This native lane has no Library
-upload skill/API; playable Library delivery requires root's supported route
-or an existing writable Page destination through available Pages file upload.
-The local clip is saved and opened through supported Codex file panel.
+ignored and regenerable with review_motion.py. The authorized bridge saved
+the original movie to native Library: `libfile_c7997da574a881919563488628d18dbf`,
+File `file_00000000e35481f59fd068e3fe85ae01`; [receipt](library-receipt.json).
+The playable local clip is also opened through supported Codex file panel.
 
 Limits: finite46surface samples do not certify continuous clearance. Synthetic
 forward-standing/back-seated FK is deformation stress, not actual-bike support
