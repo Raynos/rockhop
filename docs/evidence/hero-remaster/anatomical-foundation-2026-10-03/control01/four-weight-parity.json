@@ -1,0 +1,157 @@
+{
+  "status": "MEASURED full native weights versus exported four-weight LBS; unaccepted",
+  "exportSHA256": "e2f314aa59a955503187892be5cd0ba7a949b21da81739161a5f704fc1bb1743",
+  "samplePositionsSHA256": "8b6d61e17b38db6629407c6066fced243b2be8b40d6626fec49a9d5d2dae8889",
+  "rows": [
+    {
+      "region": "body",
+      "mesh": "Canonical_anatomical_body,_baked_adult_hm08",
+      "nativeVertices": 13380,
+      "exportedRows": 14517,
+      "restMappingMaxM": 9.364491277185827e-07,
+      "poses": [
+        {
+          "pose": "native_A",
+          "clipTimeS": 0.0416666679084301,
+          "maxM": 9.364491277185827e-07,
+          "p99M": 8.683477226898901e-07,
+          "rmsM": 3.8129118625101843e-07,
+          "verticesAbove100um": 0,
+          "verticesAbove1mm": 0
+        },
+        {
+          "pose": "neutral",
+          "clipTimeS": 1.04166666790843,
+          "maxM": 0.0026547970156016506,
+          "p99M": 6.223729567061997e-05,
+          "rmsM": 8.124257038330266e-05,
+          "verticesAbove100um": 113,
+          "verticesAbove1mm": 28
+        },
+        {
+          "pose": "T",
+          "clipTimeS": 2.04166666790843,
+          "maxM": 0.0033782473984682116,
+          "p99M": 7.95272163110467e-05,
+          "rmsM": 0.00010337105845763551,
+          "verticesAbove100um": 123,
+          "verticesAbove1mm": 36
+        },
+        {
+          "pose": "forward",
+          "clipTimeS": 4.04166666790843,
+          "maxM": 0.002527521674158654,
+          "p99M": 6.600494374354758e-05,
+          "rmsM": 8.614148659893184e-05,
+          "verticesAbove100um": 119,
+          "verticesAbove1mm": 32
+        },
+        {
+          "pose": "bent_elbows",
+          "clipTimeS": 5.04166666790843,
+          "maxM": 9.364491277185827e-07,
+          "p99M": 8.683477226898901e-07,
+          "rmsM": 3.924578642996727e-07,
+          "verticesAbove100um": 0,
+          "verticesAbove1mm": 0
+        },
+        {
+          "pose": "raised",
+          "clipTimeS": 6.04166666790843,
+          "maxM": 0.007645304019703099,
+          "p99M": 0.0001794983488365902,
+          "rmsM": 0.0002339485221420528,
+          "verticesAbove100um": 178,
+          "verticesAbove1mm": 71
+        },
+        {
+          "pose": "asymmetric",
+          "clipTimeS": 7.04166666790843,
+          "maxM": 0.00700371673784302,
+          "p99M": 9.048888596497454e-07,
+          "rmsM": 0.00015217316683721312,
+          "verticesAbove100um": 88,
+          "verticesAbove1mm": 34
+        }
+      ]
+    },
+    {
+      "region": "cloth",
+      "mesh": "Separate_fitted_sweatshirt_control,_hood_not_constructed",
+      "nativeVertices": 1250,
+      "exportedRows": 1364,
+      "restMappingMaxM": 4.644759096801037e-07,
+      "poses": [
+        {
+          "pose": "native_A",
+          "clipTimeS": 0.0416666679084301,
+          "maxM": 4.644759096801037e-07,
+          "p99M": 4.4508345395070797e-07,
+          "rmsM": 2.7625513715169095e-07,
+          "verticesAbove100um": 0,
+          "verticesAbove1mm": 0
+        },
+        {
+          "pose": "neutral",
+          "clipTimeS": 1.04166666790843,
+          "maxM": 0.0016376647163547093,
+          "p99M": 0.00022322960022165634,
+          "rmsM": 8.27321341340659e-05,
+          "verticesAbove100um": 23,
+          "verticesAbove1mm": 2
+        },
+        {
+          "pose": "T",
+          "clipTimeS": 2.04166666790843,
+          "maxM": 0.002083808502099206,
+          "p99M": 0.0002836372548566046,
+          "rmsM": 0.00010525670528682399,
+          "verticesAbove100um": 23,
+          "verticesAbove1mm": 4
+        },
+        {
+          "pose": "forward",
+          "clipTimeS": 4.04166666790843,
+          "maxM": 0.0016010410189261424,
+          "p99M": 0.0002369750652202322,
+          "rmsM": 8.888682484232422e-05,
+          "verticesAbove100um": 23,
+          "verticesAbove1mm": 4
+        },
+        {
+          "pose": "bent_elbows",
+          "clipTimeS": 5.04166666790843,
+          "maxM": 5.529567560455173e-07,
+          "p99M": 4.762847568385789e-07,
+          "rmsM": 2.828439176201244e-07,
+          "verticesAbove100um": 0,
+          "verticesAbove1mm": 0
+        },
+        {
+          "pose": "raised",
+          "clipTimeS": 6.04166666790843,
+          "maxM": 0.004715924300715774,
+          "p99M": 0.0006422176312866612,
+          "rmsM": 0.00023822249277237405,
+          "verticesAbove100um": 69,
+          "verticesAbove1mm": 10
+        },
+        {
+          "pose": "asymmetric",
+          "clipTimeS": 7.04166666790843,
+          "maxM": 0.004306993410879506,
+          "p99M": 0.0001495319790842723,
+          "rmsM": 0.00015451841991044504,
+          "verticesAbove100um": 34,
+          "verticesAbove1mm": 5
+        }
+      ]
+    }
+  ],
+  "fourWeightExportWarning": true,
+  "limits": [
+    "Measures seven authored source endpoints; continuous interpolation parity not established.",
+    "UV/normal split rows mapped by measured rest position within3micrometres.",
+    "Source deformation quality, body/cloth collision, art and device gates independent."
+  ]
+}
