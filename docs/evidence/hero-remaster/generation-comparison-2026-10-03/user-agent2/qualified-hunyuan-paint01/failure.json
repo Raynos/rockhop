@@ -1,0 +1,9 @@
+{
+  "accepted": false,
+  "stage": "Owned component inspection after model load, before view selection or diffusion",
+  "exception": "AttributeError: HunyuanPaintPipeline has no attribute image_encoder",
+  "classification": "Owned wrapper assumption; actual registered image conditioning is DINO/VAE reference latents",
+  "paintSamplerRan": false,
+  "newShapeRuns": 0,
+  "fix": "Inspect actual UNet/VAE/text encoder/DINO; capture real inner DINO inputs rather than absent image_encoder"
+}

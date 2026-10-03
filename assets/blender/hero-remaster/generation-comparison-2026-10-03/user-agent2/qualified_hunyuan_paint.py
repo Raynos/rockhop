@@ -114,8 +114,8 @@ def main():
     multiview = painter.models['multiview_model']
     pipeline = multiview.pipeline
     components = {}
-    for name in ('unet', 'vae', 'image_encoder', 'text_encoder'):
-        component = getattr(pipeline, name)
+    for name, component in [('unet', pipeline.unet), ('vae', pipeline.vae),
+                            ('text_encoder', pipeline.text_encoder), ('dino', multiview.dino_v2)]:
         params = list(component.parameters())
         components[name] = {'class': type(component).__module__ + '.' + type(component).__name__,
                             'sourceSHA256': sha(inspect.getfile(type(component))),
@@ -123,6 +123,7 @@ def main():
                             'devices': sorted({str(p.device) for p in params}),
                             'dtypes': sorted({str(p.dtype) for p in params})}
     report.update(stage='paint', loadedComponents=components, actualScheduler=type(pipeline.scheduler).__name__,
+                  storedButUnregisteredComponents=['image_encoder'],
                   dinoClass=type(multiview.dino_v2).__name__, rendererSourceSHA256=sha(inspect.getfile(type(painter.render))),
                   actualConfig={'resolution': config.resolution, 'render': painter.render.default_resolution,
                                 'texture': painter.render.texture_size, 'maxViews': config.max_selected_view_num})
@@ -160,7 +161,7 @@ def main():
             return result
         setattr(pipeline, name, wrapped)
     multiview.dino_v2.register_forward_hook(lambda module, inputs, result: capture('actual-dino-features', result))
-    pipeline.image_encoder.register_forward_pre_hook(lambda module, inputs, keywords: capture('actual-image-encoder-input', inputs or keywords), with_kwargs=True)
+    multiview.dino_v2.dino_v2.register_forward_pre_hook(lambda module, inputs, keywords: capture('actual-dino-model-input', inputs or keywords), with_kwargs=True)
     original_selection = painter.view_processor.bake_view_selection
     def selection(*positional, **keywords):
         result = original_selection(*positional, **keywords)

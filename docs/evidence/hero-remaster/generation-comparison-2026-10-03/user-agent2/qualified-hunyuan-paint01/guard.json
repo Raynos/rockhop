@@ -1,0 +1,130 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_hunyuan_paint.py",
+    "--mesh",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-decode-replay01/decode/finite-cell-derived.npz",
+    "--wrapped",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-garment-uv01/control/wrapped.npz",
+    "--image",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+    "--weights-receipt",
+    "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-paint-weights01/receipt.json",
+    "--weights-receipt-sha256",
+    "98458b318ad8b9ce236c29e98308df0f88a69bdf2fa8757a5868fd7ce609cbfc",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint01/paint"
+  ],
+  "controllerPID": 31647,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 78,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 34.4,
+      "wiredGiB": 6.4,
+      "freeGiB": 25.1
+    },
+    {
+      "seconds": 0.025,
+      "anonymousGiB": 34.4,
+      "wiredGiB": 6.4,
+      "freeGiB": 25.1
+    },
+    {
+      "seconds": 1.06,
+      "anonymousGiB": 34.7,
+      "wiredGiB": 6.2,
+      "freeGiB": 25.1
+    },
+    {
+      "seconds": 2.1,
+      "anonymousGiB": 34.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 24.9
+    },
+    {
+      "seconds": 3.129,
+      "anonymousGiB": 34.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 24.8
+    },
+    {
+      "seconds": 4.167,
+      "anonymousGiB": 34.7,
+      "wiredGiB": 6.5,
+      "freeGiB": 24.9
+    },
+    {
+      "seconds": 5.197,
+      "anonymousGiB": 34.6,
+      "wiredGiB": 6.5,
+      "freeGiB": 24.9
+    },
+    {
+      "seconds": 6.239,
+      "anonymousGiB": 34.7,
+      "wiredGiB": 6.4,
+      "freeGiB": 24.8
+    },
+    {
+      "seconds": 7.27,
+      "anonymousGiB": 35.1,
+      "wiredGiB": 6.2,
+      "freeGiB": 24.7
+    },
+    {
+      "seconds": 8.307,
+      "anonymousGiB": 34.9,
+      "wiredGiB": 6.4,
+      "freeGiB": 24.7
+    },
+    {
+      "seconds": 9.345,
+      "anonymousGiB": 34.7,
+      "wiredGiB": 7.2,
+      "freeGiB": 24.1
+    },
+    {
+      "seconds": 10.393,
+      "anonymousGiB": 35.2,
+      "wiredGiB": 7.0,
+      "freeGiB": 23.8
+    },
+    {
+      "seconds": 11.43,
+      "anonymousGiB": 35.7,
+      "wiredGiB": 6.9,
+      "freeGiB": 23.4
+    },
+    {
+      "seconds": 12.462,
+      "anonymousGiB": 39.1,
+      "wiredGiB": 6.2,
+      "freeGiB": 20.6
+    },
+    {
+      "seconds": 13.495,
+      "anonymousGiB": 45.3,
+      "wiredGiB": 6.5,
+      "freeGiB": 14.2
+    },
+    {
+      "seconds": 14.536,
+      "anonymousGiB": 38.0,
+      "wiredGiB": 12.8,
+      "freeGiB": 15.2
+    }
+  ],
+  "ownedChildPID": 31650,
+  "exitCode": 1,
+  "elapsedSeconds": 15.357
+}

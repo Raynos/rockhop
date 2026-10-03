@@ -760,3 +760,17 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint, actual neural painting pending.
 Require all921722triangles retained and coordinates≤9e−7 after six-decimal
 OBJ then GLB serialization. No texture/style/fit/CUDA or asset acceptance.
+
+Finding: Owned PBR wrapper assumed an unregistered image_encoder; fixed
+inspection to actual DINO/VAE reference conditioning before inference.
+
+Validation: First guard exits1 in15.357s after model load, before view
+selection/diffusion. Actual custom pipeline constructor registers VAE/
+text/UNet/feature processor, not stored image_encoder. Fixed worker inspects
+actual UNet/VAE/text/DINO and hooks inner DINO normalized pixel input.
+AST passes; settings/input/shape/UV/weight pins unchanged, no sampler ran.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint01/
+Ask:284–286.
+
+Limits: Wrapper failure is not model/backend quality failure. Retain first
+load attempt; actual PBR and end-to-end preservation still pending.
