@@ -1501,3 +1501,19 @@ Ask:284–286.
 Limits: No flow seed/mesh/style/fulloutput/backward/CUDA pass. Standard
 projection16/32/64 measured;1536cascade96grid remains actual-seed capture.
 MoGe nativefloat32 retained despite unsupportedautocast warning.
+
+Finding: Unaccepted one Pixal1536cascade/12each/42 raw seed recipe follows
+actual sparse and four learned conditioner qualification.
+
+Validation: Source syntax/whitespace pass;17canonical checkpoint/conditioner
+records and41source/control pins frozen. Original JSON guidance/lowVRAM,
+actual7models/no missing learned parameters required. Real noises/48steps/
+final decode inputs archived; selected actual dense/sparse attention and
+96grid projection/NAF witnesses use fixed limits.14real DINO/NAF input byte
+matches required. Raw1536assert rejects any cheaper automaticfallback.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_contract.json
+Ask:284–286.
+
+Limits: Checkpoint only, inference pending. Owned process-local signed
+nearest/float32 trilinear protection, no shared edit/recolor/cleanup.
+Not calibratedcamera/fullmodel/CUDA/backward/game-ready art proof.
