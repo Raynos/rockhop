@@ -576,3 +576,18 @@ Ask:284–286.
 Limits: Owned extraction derivative only; no installed/shared edits, field
 filling or mesh cleanup. Actual hoodie field coverage/replay pending; no
 CUDA/quality/PBR/fit acceptance. Future launches require no-holder check.
+
+Finding: Owned decode-only replay checks original VAE tensors and captures
+explicit evaluated sites plus neural outputs before sentinel conversion.
+
+Validation: AST passes. Six actual installed MC controls pass, including
+deliberately invalid evaluated sample rejected before masking; dense/band
+geometry remains byte-identical, cut field remains open. Guard exit0.
+Replay requires immutable sampled/raw SHA pins, identical embedded and
+standalone VAE state/config and native mesh Cbytes before interpreting
+derivative. Only owned process tracing reads actual final scatter indices.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint. Actual saved-latent decode/field
+coverage pending; no new sampler or installed-source edit. Evaluated NaN
+or sentinel-valued neural samples abort rather than being hidden.

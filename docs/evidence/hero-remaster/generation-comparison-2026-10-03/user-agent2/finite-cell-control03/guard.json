@@ -1,0 +1,36 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_finite_cell_control.py",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/finite-cell-control03/control"
+  ],
+  "controllerPID": 74425,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 78,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 6.9,
+      "freeGiB": 36.3
+    },
+    {
+      "seconds": 0.029,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 6.9,
+      "freeGiB": 36.2
+    }
+  ],
+  "ownedChildPID": 74428,
+  "exitCode": 0,
+  "elapsedSeconds": 0.38
+}

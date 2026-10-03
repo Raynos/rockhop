@@ -45,6 +45,17 @@ def main():
     dense_v, dense_f, _, _ = measure.marching_cubes(field, 0, method='lewiner')
     band = field.copy()
     band[np.abs(field) > .18] = np.nan
+    evaluated = np.isfinite(band)
+    invalid = band.copy()
+    invalid[tuple(np.argwhere(evaluated)[0])] = np.nan
+    try:
+        extract(invalid, evaluated=evaluated)
+    except AssertionError as error:
+        assert str(error) == 'Nonfinite explicitly evaluated neural sample'
+        report['cases'].append({'name': 'invalidEvaluatedSampleRejected', 'pass': True,
+                                'message': str(error)})
+    else:
+        raise AssertionError('Invalid evaluated value was silently hidden')
     cut = band.copy()
     cut[:33] = np.nan
     constant = np.full(field.shape, np.nan, dtype=np.float32)
