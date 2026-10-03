@@ -1220,3 +1220,17 @@ Ask:284–286.
 Limits: Unaccepted checkpoint; raw finiteness is not topology/material/art
 quality, fit/rig/mobile or CUDA/fullmodel parity. Original arrays preserved
 before derived orientation/maps; matched neutral/PBR moving review pending.
+
+Finding: New root-relayed human decoder-explanation and future96GiB
+combined-stop requests gain permanent asks289/290 before implementation.
+
+Validation: Narrow two-row append preserves foreign working/staged ledger
+hunks. Active TRELLIS finishedguard0 under old65/78; no live guard edited.
+Current runtime24 player/dependency pins and otherdifferencesfromc74783ad0
+retain original coldboot/clear/crash/restart gate applicability.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/relay-asks01/ship-gate.json
+Ask:289–290.
+
+Limits: Requests logged, not yet landed. Anonymous/admission/foreign-job
+protections must remain; root keeps generated hoodie as visual source,
+with fit/rig/topology/mobile still open, no endless generation authorized.
