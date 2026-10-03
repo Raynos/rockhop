@@ -912,3 +912,21 @@ Limits: Unaccepted source checkpoint before actual paint04. Source-informed
 kernel routing, not GPU dispatch trace or learned/CUDA parity. Original
 quality/resource bounds retained; trained processor/projections unchanged,
 no newshape, key/view truncation or stock attention slicing.
+
+Finding: Narrow paint retry records a resource stop before first native
+attention, not a reference-column execution or completed diffusion step.
+
+Validation: Guard74/child−15 in28.1s, last53.7anonymous+24.6wired=78.3GiB.
+All9condition/noise captures identical. First layer SelfAttnProcessor2_0
+Q/K/V[24,5,9216,64], exactstrides/f16/source recorded before allocation.
+MPS active9208914176bytes versus driver28395487232bytes. First-native
+capture incompleteZIP; zero sampled steps/painted outputs. Native/split
+operator had not returned, no reference-column call reached. Original
+quality/guard unchanged; receipt/capture pins preserved before next control.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint04/
+Ask:284–286.
+
+Limits: Driver-minus-active difference suggests inactive cache; not GPU
+allocation/ownership trace or proved cause. Need active-tensor and output
+identity across process-local cache release before any real retry. No
+family/style rejection, shared edits, guard raise or quality reduction.

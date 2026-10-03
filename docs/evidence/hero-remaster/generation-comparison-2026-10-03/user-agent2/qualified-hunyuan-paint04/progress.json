@@ -1,0 +1,543 @@
+{
+  "accepted": false,
+  "stage": "paint",
+  "newShapeRuns": 0,
+  "recipeSHA256": "57ae8ba2d25997614b134a0e968ebaa8ad1037859c4847847e61ef8dca3dbbb8",
+  "inputMeshSHA256": "318c7536e5234c6a6e285f4d2111dad9fcdf3941e0329951a1f9a7ebf460612a",
+  "wrappedSHA256": "f1d1fa95c9095c156dfc6840f93cf4db8f082f0dd835ffd53492d73e3774085f",
+  "referenceSHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+  "weightsReceiptSHA256": "98458b318ad8b9ce236c29e98308df0f88a69bdf2fa8757a5868fd7ce609cbfc",
+  "seed": 42,
+  "scheduler": "UniPCMultistepScheduler trailing",
+  "paintSteps": 15,
+  "maxSelectedViews": 8,
+  "viewResolution": 768,
+  "renderSize": 2048,
+  "textureSize": 4096,
+  "remesh": false,
+  "simplification": false,
+  "device": "mps",
+  "rendererDevice": "cpu",
+  "UVReuse": "Frozen actual installed xatlas result with identical triangle coordinates; no repeated unwrap",
+  "queryTiling": false,
+  "valueColumns": true,
+  "replayProgressSHA256": "670c28cdd3614714971c520de34c2c109891edab0ade52176a7d9fd6780276cd",
+  "limits": [
+    "One reference/seed, no paint or garment fit acceptance before root played review.",
+    "Original six zero-area triangles and detached component retained.",
+    "Owned process/instance adapters, no shared installation edits or CUDA parity."
+  ],
+  "paintPipelineSourceSHA256": "174951ccd0cc79bad985756b009fcb832026b3410cda1f00897ea3eb2c444610",
+  "loadedComponents": {
+    "unet": {
+      "class": "diffusers_modules.local.modules.UNet2p5DConditionModel",
+      "sourceSHA256": "664983290a63849503c64714948d97444400bd95f24ad67e3a5dc557ba5a7a68",
+      "parameters": 1962246472,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ]
+    },
+    "vae": {
+      "class": "diffusers.models.autoencoders.autoencoder_kl.AutoencoderKL",
+      "sourceSHA256": "091d72ea9ae2f45f465e70f05142e04850d1153052dca520291ceb707bda8c98",
+      "parameters": 83653863,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ]
+    },
+    "text_encoder": {
+      "class": "transformers.models.clip.modeling_clip.CLIPTextModel",
+      "sourceSHA256": "8b6bb0ff5d0b0c8209a8846f5da3729a903cb7b5e3a68b71d31fba5e635c3acf",
+      "parameters": 340387840,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ]
+    },
+    "dino": {
+      "class": "hunyuanpaintpbr.unet.modules.Dino_v2",
+      "sourceSHA256": "664983290a63849503c64714948d97444400bd95f24ad67e3a5dc557ba5a7a68",
+      "parameters": 1136480768,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ]
+    }
+  },
+  "actualScheduler": "UniPCMultistepScheduler",
+  "storedButUnregisteredComponents": [
+    "image_encoder"
+  ],
+  "dinoClass": "Dino_v2",
+  "rendererSourceSHA256": "4dcc03c8a7b3804a7d1306bb00bd8d53fce9e549160361e7c0a1f9abcdc7eb53",
+  "actualConfig": {
+    "resolution": 768,
+    "render": [
+      2048,
+      2048
+    ],
+    "texture": [
+      4096,
+      4096
+    ],
+    "maxViews": 8
+  },
+  "valueColumnAdapterSHA256": "11396c1295a0f29179860d65f4f8f3db9c502b9eb6c080921ea55ef1dea36904",
+  "torchGitVersion": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "prefillDisableEnv": null,
+  "attentionSourceURL": "https://raw.githubusercontent.com/pytorch/pytorch/08187d9e0fba026dc8217405802ab5381dc88d90/aten/src/ATen/native/mps/operations/Attention.mm",
+  "attentionDerivative": "Complete Q/K, split independent V columns into head-width blocks and concatenate in original order; native SDPA retained for equal widths",
+  "actualAttentionShapes": {
+    "('unet.down_blocks.0.attentions.0.transformer_blocks.0.transformer.attn1', (24, 5, 9216, 64), (24, 5, 9216, 64), (24, 5, 9216, 64))": {
+      "name": "unet.down_blocks.0.attentions.0.transformer_blocks.0.transformer.attn1",
+      "processor": "SelfAttnProcessor2_0",
+      "calls": 1,
+      "query": {
+        "shape": [
+          24,
+          5,
+          9216,
+          64
+        ],
+        "stride": [
+          2949120,
+          64,
+          320,
+          1
+        ],
+        "dtype": "torch.float16",
+        "device": "mps:0"
+      },
+      "key": {
+        "shape": [
+          24,
+          5,
+          9216,
+          64
+        ],
+        "stride": [
+          2949120,
+          64,
+          320,
+          1
+        ],
+        "dtype": "torch.float16",
+        "device": "mps:0"
+      },
+      "value": {
+        "shape": [
+          24,
+          5,
+          9216,
+          64
+        ],
+        "stride": [
+          2949120,
+          64,
+          320,
+          1
+        ],
+        "dtype": "torch.float16",
+        "device": "mps:0"
+      },
+      "route": "original-nativeSDPA",
+      "allKeysViewsRetained": true,
+      "mask": null,
+      "dropout": 0,
+      "isCausal": false,
+      "scale": null,
+      "estimatedUnsplitFloat32ScoreGiB": 37.96875
+    }
+  },
+  "ownedAttentionModules": [
+    {
+      "name": "diffusers_modules.local.attn_processor",
+      "sourceSHA256": "6df282d094627733623ddeaa28a493a11252ea58e7b99e4d52240e17f4f71d0f"
+    }
+  ],
+  "actualDiffusionSteps": [],
+  "ownedFrozenGeometryLoaded": true,
+  "ownedProvenUVReused": true,
+  "actualSelectedViews": {
+    "elevations": [
+      0,
+      0,
+      0,
+      0,
+      90,
+      -90,
+      -20,
+      -20
+    ],
+    "azimuths": [
+      0,
+      90,
+      180,
+      270,
+      0,
+      180,
+      330,
+      150
+    ],
+    "weights": [
+      1,
+      0.1,
+      0.5,
+      0.1,
+      0.05,
+      0.05,
+      0.01,
+      0.01
+    ]
+  },
+  "actualPaintInputPNGs": [
+    {
+      "family": "style",
+      "index": 0,
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "SHA256": "2890e19573a620df4f7df5cec8174a6e290e5c88ce0e2b14becf94051526bbf4"
+    },
+    {
+      "family": "control",
+      "index": 0,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "facdc057e512e933132594f00f3dace27e159a5fc7d24f429e0af494ab4f028c"
+    },
+    {
+      "family": "control",
+      "index": 1,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "dedbec8aa3da3ff3de40193bdc6d598fff4473ef0e98bc4344725c527abf80fa"
+    },
+    {
+      "family": "control",
+      "index": 2,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "fded7affc18e7a66d9c6c20a7cc5e548dc6ba6970fc5b930637b88a8715b9dad"
+    },
+    {
+      "family": "control",
+      "index": 3,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "7cdd798cb1cfbd07a45fdb5f35995dc87e6e2946e25e3810bd6e93ccace88636"
+    },
+    {
+      "family": "control",
+      "index": 4,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "b5929cfbba14ba3eb60fe578b94abe1cd329587b0e457fc7ac0cfed73dcf15d4"
+    },
+    {
+      "family": "control",
+      "index": 5,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "94292da27b4e765f80deea668c89c5720c5a634b40ab71316599da8450c84973"
+    },
+    {
+      "family": "control",
+      "index": 6,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "219af6f248dbcc0dbe42c7263645e9a78b4afbf92ac97399bff4cec9b9361bf7"
+    },
+    {
+      "family": "control",
+      "index": 7,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "1397a3e9819fb9d956e7ef010e38f9dfdb5164f887b9770bc30d88c2b8c8b75a"
+    },
+    {
+      "family": "control",
+      "index": 8,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "e6ce57986bf7127a1e1eeff0a5e67e4a5eb2019aea875612029fe4e601051d23"
+    },
+    {
+      "family": "control",
+      "index": 9,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "15de0593f0c831297c92102cfbbca670156aedb89052c17609b71ffac3d7d4aa"
+    },
+    {
+      "family": "control",
+      "index": 10,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "942be2c7ced1683a2120e4e5be83cd101f961cd4fa1f9aafe75bad0f10c3521a"
+    },
+    {
+      "family": "control",
+      "index": 11,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "e4b2748b233727899ba4a4b30dad789afab30b2b49b9266c3c308fb9fb751025"
+    },
+    {
+      "family": "control",
+      "index": 12,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "d3fbee9b5e54a8ae0662a53ce75531f696e175d10954b1d27dde5e90f4596948"
+    },
+    {
+      "family": "control",
+      "index": 13,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "92a722a6a2b251b170e58bf1b04105b1d2591e7ce73bf0e13a3083ebd539eaa5"
+    },
+    {
+      "family": "control",
+      "index": 14,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "1d9efd1ad0dfb0ebe24cebbad27f489fe8c0809f0a5b70097d33139f5bf6d8e4"
+    },
+    {
+      "family": "control",
+      "index": 15,
+      "size": [
+        2048,
+        2048
+      ],
+      "mode": "RGB",
+      "SHA256": "8941874fce6ee1a8d7bc61e0487c156dd4c7ea9efeae24bcb552280a4ec70b4a"
+    }
+  ],
+  "actual-dino-model-input-00": {
+    "archiveSHA256": "62e6142450098e0da5093382f813fbef9b6b9fc432bf78f2af32df780b6bab15",
+    "arrays": {
+      "actual-dino-model-input-00.0": {
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "12371586e293b99e1c796dac32163ee56d30614e3f2c656dfda2d539719259ef"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-dino-features-00": {
+    "archiveSHA256": "b760c7e26930dc1961d9d3df73687ae286208a39213c742ca3d70202a171bc9e",
+    "arrays": {
+      "actual-dino-features-00": {
+        "shape": [
+          1,
+          257,
+          1536
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "d1815977e9f250561705c9168352c7baaa7366b76663ead7821e843c82748de5"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-VAE-image-input-00": {
+    "archiveSHA256": "b4b8b25cc1119ef64fb4dc6d03dee398748a6dd0ca468f8645f2558b4aa4704f",
+    "arrays": {
+      "actual-VAE-image-input-00": {
+        "shape": [
+          1,
+          1,
+          3,
+          768,
+          768
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "8be7c07b6dcd6265cd1410073e3a91f2758e2364b9ff20c4ff1605810ab3d31d"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-encode_images-00": {
+    "archiveSHA256": "84abca89cec0a7264a67b76beac5aacbfb6e92a4616a16f429f0ae8d4a4218cf",
+    "arrays": {
+      "actual-encode_images-00": {
+        "shape": [
+          1,
+          1,
+          4,
+          96,
+          96
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "2ef57565806f33002dc8e4d764634df6dfd220af55950e14cd133b4778b39ce4"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-VAE-image-input-01": {
+    "archiveSHA256": "97546673a77124b4f4e4e27d1558a8624629a2d3a5be91e180bb08e4517d0904",
+    "arrays": {
+      "actual-VAE-image-input-01": {
+        "shape": [
+          1,
+          8,
+          3,
+          768,
+          768
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "d5bfe1da6da58959aabc05464b64814c276e3e34cb2ec238c2f36885a3e8eb38"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-encode_images-01": {
+    "archiveSHA256": "15bc15c3b47bd9d95fbc5fe3700e8973e11e4b61307db689b44ed032c9f3cbc8",
+    "arrays": {
+      "actual-encode_images-01": {
+        "shape": [
+          1,
+          8,
+          4,
+          96,
+          96
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "9c0c91f997f3633c3ee9b593e0b2de49dd91fd26d8d5c3b705937222f69076b6"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-VAE-image-input-02": {
+    "archiveSHA256": "428d950796a6b2edda128be51fbff19045e8f971830b4254bed3fdbd734199d6",
+    "arrays": {
+      "actual-VAE-image-input-02": {
+        "shape": [
+          1,
+          8,
+          3,
+          768,
+          768
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "3221698b1abd4f61ec9c8588dfc61c38de1b9db5736c9427308a92db8869cf27"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-encode_images-02": {
+    "archiveSHA256": "09435dba5f4f16ea697cba10ee456ac30c01dc3121385f8585a65ea14d5f181d",
+    "arrays": {
+      "actual-encode_images-02": {
+        "shape": [
+          1,
+          8,
+          4,
+          96,
+          96
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "8cef49b67b975ddc5b01c516ab8b032528f658dc46ca9b5710025e8818cf6914"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "actual-prepare_latents-00": {
+    "archiveSHA256": "001efeb543a14130a25316629c1d6e71f405c711eed01cc059a255e742ddffc6",
+    "arrays": {
+      "actual-prepare_latents-00": {
+        "shape": [
+          16,
+          4,
+          96,
+          96
+        ],
+        "dtype": "float16",
+        "finite": true,
+        "CBytesSHA256": "a6b10a3fd4028bf888e3f7bab9034e8e565c6af63c7cf324a6d9288f71ae17da"
+      }
+    },
+    "priorCBytesIdentical": true
+  },
+  "lastAttentionCall": {
+    "descriptor": "('unet.down_blocks.0.attentions.0.transformer_blocks.0.transformer.attn1', (24, 5, 9216, 64), (24, 5, 9216, 64), (24, 5, 9216, 64))",
+    "call": 1,
+    "status": "before operator",
+    "elapsedSeconds": 27.1466580000706
+  },
+  "mpsBeforeAttention": {
+    "allocatedBytes": 9208914176,
+    "driverBytes": 28395487232
+  }
+}
