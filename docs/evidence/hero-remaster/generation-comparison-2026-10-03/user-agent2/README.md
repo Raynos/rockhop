@@ -331,3 +331,12 @@ ONE wardrobe quality run still requires a validated expected improvement under
 fresh guards. No blind sweep, body benchmark or environment install. This donor
 work supports Agent1's recognizable textured rider and does not block reuse of
 already-liked protected head/material/detail sources on clean fitted geometry.
+
+## Bounded donor result
+
+[Clear material fallback](appearance-fallback.json) closes this donor diagnosis
+with reuse of existing approved/liked source PBR/details on clean fitted geometry.
+The generated hoodie is not established as a usable wholesale donor; root's
+appearance rejection and measured remaining topology defects still apply.
+No further diagnostics or inference are scheduled. Agent1's protected-head,
+mustard/indigo textured rider proceeds independently; root owns acceptance.
