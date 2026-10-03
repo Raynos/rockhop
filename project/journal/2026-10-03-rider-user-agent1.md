@@ -54,3 +54,12 @@ lint pass. Sixth-round ordinary Metal4810tick clear/crash/restart1tick passes.
 Limits: Diagnostic UNACCEPTED; source-four loss and garment contact retained
 separately. No global loader/player edit; independentQA and root judgment open.
 Evidence: [authored01](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/authored01/README.md). Ask274.
+
+Finding: Exactb7 head raw runtime POSITION already matches imported-rest
+geometry; its declared1.015root is canceled by the authored bind. Scaling raw
+positions again would distort identity and future collar registration.
+Validation: ActualGLTFLoader preserves61393donor verts, raw/UV/bind hashes;
+raw/imported head height agrees sub-µm. Node syntax/scoped lint pass.
+Limits: Read-only geometry report drops textures only in memory; no graft,
+new-bind transfer or appearance approval. Cloud6fd9 remains distinct.
+Evidence: [head donor](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/head-donor01/README.md). Ask274.
