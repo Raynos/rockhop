@@ -748,3 +748,23 @@ Limits: Inputinventory only, not moving solids/convexity/assembly/boot
 clearance/loadbearing/response or rejectedwedgeart acceptance. Mustmatch
 actualrecordedchassis before evaluating frozenboot41surfaces; no film
 or sourceplayerchange. Normal42gate passed; all rider/device asksopen.
+
+## Round44: reference-point correction fails whole-peg solid clearance
+
+Finding: Existing-byte fullpeg audit shows ON rubber still encloses5peg
+mountvertices up to1.207mmdeep, despite0bootvertices insidepeg. OFF20boot
+rows4.912mmdeep/80pegverts5.387mmdeep; solecontact129OFF→32ON/upper188→0.
+Usefulpointplacement retained; whole-solid clearance claim rejected.
+
+Validation: Actualclosedpeg43 and2closedrubber components at19actual
+frames each: pairedopposite edges/Euler2/positivevolume/self0. Winding
+inside≈1 plusfiniteclosest-surface depth; originalGame703-input replay
+hash matches and independentchassis reference gap≤1.25e-16m. Frozen41
+F64surfaces/38playedbytes reused, no capture/pose/source/parameterchange.
+Tetrahedron query+2BVH/SAT tests pass/scopedlintpass; raw auditgzip exact.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/peg44/outcome.json
+
+Limits: Vertexdepth sampled/not fulltri maximum;19poses not swept or
+everytick. No consumedsolid response/pressure/loadbearing/phone or wedge
+artpass. Rootrejects darkinterface seatingproof; no offsetheight/width/
+lateral/hidingpolish or playerpromotion. Await frozenwearablehand-off.

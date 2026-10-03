@@ -1,0 +1,70 @@
+{
+  "status": "REJECTED_SOURCE09_WHOLE_PEG_CLEARANCE_CLAIM",
+  "captureReportSHA256": "4fc0bd5b0667bea7d4ef8cdfacf411ac134778356cac6d093660e6371538a5cf",
+  "inventorySHA256": "51cd86a29513833003e10fa279f2f9a927d391b6bd064163c8ce129283780c92",
+  "codeSHA256": "1ca146cfc2be75239b52af7dfe3dbe9d26b50b8ca15be416d855216b2b9e5232",
+  "querySHA256": "31eba41596d07d715083eb0f029cd44a2dd14e18a7fd40aa055086c0b28d8706",
+  "bikeDriverSHA256": "8f0af24d89ae958f9c98c5f5e98debbd07f65a1c79c9ede479e0ed88ac2cb899",
+  "limits": [
+    "Closed actual peg components query sampled boot vertices plus full finite triangle contacts. No new cosmetic capture, pose injection, boot source change or collider response.",
+    "19 actual frames percontrol, not swept/every-tick collision. Maximum vertex depth samples vertices; it is not a full triangle penetration-depth bound.",
+    "Peg compound components intentionally overlap; query reports union membership but does not estimate force, contact area or load bearing.",
+    "Root rejects wedge art and finds seating visually inconclusive. No player/garment/physical phone acceptance."
+  ],
+  "results": [
+    {
+      "id": "off",
+      "frames": 19,
+      "maximumReferenceFrameResidualM": 1.2412670766236366e-16,
+      "maximumUpperPegSurfacePairs": 188,
+      "maximumSolePegSurfacePairs": 129,
+      "maximumInsideBootRows": 20,
+      "maximumSampledVertexPenetrationM": 0.00491172068890483,
+      "maximumPegVerticesInsideSole": 80,
+      "maximumSampledPegVertexRubberDepthM": 0.005386027194793251
+    },
+    {
+      "id": "on",
+      "frames": 19,
+      "maximumReferenceFrameResidualM": 1.2412670766236366e-16,
+      "maximumUpperPegSurfacePairs": 0,
+      "maximumSolePegSurfacePairs": 32,
+      "maximumInsideBootRows": 0,
+      "maximumSampledVertexPenetrationM": 0,
+      "maximumPegVerticesInsideSole": 5,
+      "maximumSampledPegVertexRubberDepthM": 0.0012069105733132854
+    }
+  ],
+  "auditArchive": {
+    "path": "audit.json.gz",
+    "rawSHA256": "f1cb9165433ca81266a035f0ba76b4c04c3b776601b638c51287831e9b8a9c90",
+    "rawBytes": 1170590,
+    "compressedSHA256": "38de7d438402c4bb03e16ff2116935f0e1ca84129e9f412446566e5a8075afd8",
+    "compressedBytes": 67911
+  },
+  "deepestOnWitnesses": [
+    {
+      "inputTick": 683,
+      "vertexID": 306,
+      "pointFrameLocalM": [
+        -0.13999998569488525,
+        0.032207030802965164,
+        -0.15673828125
+      ],
+      "hits": [
+        {
+          "component": 1,
+          "boundary": false,
+          "winding": 0.9999999999999997,
+          "penetrationM": 0.0012069105733132854
+        }
+      ]
+    }
+  ],
+  "preservedPlayedEvidence": {
+    "pairedMovie": "../constructed38/matched.mp4",
+    "sha256": "445c666883cc9ebc4fb5fd7762f22da75d368fd0c0cefc6a1f1d7349260b39d5",
+    "statement": "Same frozen41 source rows and exact source38 played movie; no new capture or cosmetic film."
+  },
+  "materialInterpretation": "ON point placement improves legacy overlap, but actual peg mounts still overlap rigid skinned rubber. No consumed solid collision response, source modification or load-bearing acceptance."
+}
