@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "finding": "Private actual-bind hierarchical T-pose fixture utility; future rider unaccepted",
+  "frozenAtUTC": "2026-10-03T01:36:52.259663+00:00",
+  "sourceFiles": {
+    "harness/hero-remaster/basic-pose-tpose215/README.md": "e18a6b83734530955fe95c4a0d0a33ae2bbce0cb11e86779321a2bbea477651f",
+    "harness/hero-remaster/basic-pose-tpose215/fixture.test.ts": "eb8697ac897b4505c497444f336616b1852194e5432028972a89ca1c82650a49",
+    "harness/hero-remaster/basic-pose-tpose215/fixture.ts": "e3241f3d536879089dd6b5dbe5e899c9f3cf9df8832e8d4648a9da4c1b8ab4ba",
+    "harness/hero-remaster/basic-pose-tpose215/generate.mts": "89aea90d8d3203ed1ffeb2bab2d7079b5c0f8bf9050d281dbde074e51f7b83a8",
+    "harness/hero-remaster/basic-pose-tpose215/read-glb.ts": "692429603e9ce043296ac704334acb0c57475b6f35294c969a92c187c467f463"
+  },
+  "validation": [
+    {
+      "command": "OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 pnpm exec vitest run harness/hero-remaster/basic-pose-tpose215/fixture.test.ts --maxWorkers=1",
+      "exitCode": 0,
+      "testsPassed": 5,
+      "testDurationMilliseconds": 20,
+      "scope": "Synthetic actual GLB/Three deformation math only"
+    },
+    {
+      "command": "pnpm exec tsc --noEmit -p tsconfig.harness.json",
+      "exitCode": 0
+    },
+    {
+      "command": "pnpm exec oxlint harness/hero-remaster/basic-pose-tpose215",
+      "exitCode": 0
+    }
+  ],
+  "actualNewRiderBinding": "NOT_FINALIZED",
+  "visualAcceptance": "UNMEASURED",
+  "grip": "UNMEASURED",
+  "contacts": "UNMEASURED",
+  "normalPlayerEdits": false,
+  "GPUJobs": 0,
+  "browserJobs": 0,
+  "commitsByBuilder": 0,
+  "limitations": [
+    "Strict direct nineteen-role bone hierarchy; nonjoint intermediate parents need an explicit adapter.",
+    "Requires dense FLOAT embedded uncompressed GLB accessor data.",
+    "Existing live protocol centre-only guard must be strengthened to full rest/bind/source comparison before integration.",
+    "Grip request is not demonstrated finger closure.",
+    "Squat/sit mean ankle pivot correction is authored FK, not sole contacts or physical support.",
+    "Camera requests based on consumed geometry bounds are not rendered coverage.",
+    "No new source rig declaration, large fixture, screenshot or accepted motion created."
+  ]
+}

@@ -2771,3 +2771,15 @@ Limits: No render/rig/newleg/composedcharacter/pose/art/contact/mobile pass.
 Userrequestedexit stopsnewjobs; explicitnextworkqueuedinplan, no playerpromotion.
 Evidence: docs/evidence/hero-remaster/one-rider-v2/head-sew216/
 Ask: 248,249.
+
+## Round216 — freeze the actual-bind basic-pose utility
+
+Finding: Future anatomy must use its own hierarchy, axes and inverse binds rather
+than old independent world rotations. Preserve the reusable fixture and exact
+resume queue before the requested exit. It does not supply a finished new rig.
+
+Validation: Parent5source pins and5meaningful controls PASS; app/harness typecheck
+PASS; release-scope lint PASS. Local full lint finds research-script errors in
+assets/blender (including separate task-3 ownership), not silently fixed. Release
+unit filter:135files/1584tests PASS,11tests skipped. Ordinaryship216 recorded.
+Limits: Visual appearance, grip closure, actual contacts and all three checkpoints OPEN.

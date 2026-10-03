@@ -229,6 +229,8 @@ Round214: frozenarm-proportion216/parent26pins; userrequestedexit stopsnewjobs. 
 
 Round215: frozenhead-sew216/parent25pins; userrequestedexit stopsnewjobs. Actualclosedheadjoin/304cap/likedheadPBR exact; bodygray/shortarms, separatearmcandidate. No rig/composedcharacter/art/motion/contact/mobilepass. Threecheckpoints remainOPEN; resumeviaexplicitqueue, cosmeticspaused.
 
+Round216: user-requested exit checkpoint; new art trials stopped, reusable actual-bind T-pose fixture frozen (five source pins/controls pass). Arm/head candidates remain separate and unaccepted. Structural repair and all three visual/moving/contact/mobile checkpoints remain OPEN; exact autonomous resume order is in the rider plan.
+
 **UniMate feasibility (ask 190):** [Research assessment](../evidence/hero-art/unimate-feasibility/README.md) recommends an offline Garage idle trial on the existing rider rig; official weights are available, but preprocessing and CUDA execution remain untested. This is a presentation candidate, not a new release dependency or an accepted art change.
 
 **Git conventions (asks 180, 189):** [Canonical commit/journal policy](../git/COMMITS.md) and [cross-repository audit](../reviews/sol-6.1-2026-09-30-GIT_CONVENTIONS.md). Conventional subjects, real tool/model attribution and index-based pre-commit checks pass 43 fixtures; the follow-up repaired whole-repo lint and handles Unicode subject length. Journals are optional below 30 added/deleted non-journal text lines.

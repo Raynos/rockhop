@@ -1,6 +1,6 @@
 # Rider remaster — three visual checkpoints
 
-Status: **active — structural garment/rig/deformation repair first; cosmetics paused; continuous exported basic-pose gate, target8 and sitting/riding checkpoints remain open**.
+Status: **paused at the user-requested exit checkpoint — unfinished structural repair; three visual checkpoints and continuous exported poses remain open**.
 Created: 2026-09-30 · writer: Codex / gpt-6.1-sol · asks 218–220, 224–228.
 This new plan governs the rider-only session. The broader
 [HERO_REMASTER](sol-6.1-2026-09-30-HERO_REMASTER.md) retains family, rendering and
@@ -8,6 +8,42 @@ release obligations. Its previous rider execution method is superseded here.
 Release authority: [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md).
 Bar: [mission §3–4](../mission.md): a readable person, credible contacts,
 physics-driven weight shift and bounded phone cost.
+
+## Exit checkpoint and exact resume order — round216
+
+The user requested wrap-up, commits and push. Stop this session's new art trials;
+this is a reproducible checkpoint, not an accepted character or a closed plan.
+All specialist outputs are frozen. Independent cloud/task-3 work has separate
+ownership and is not stopped, swept into this commit or judged accepted here.
+
+Resume in this order:
+
+1. Read the frozen head-sew216 and arm-proportion216 receipts. They are separate
+   candidates. Compose the liked head/closed neck and arm construction through
+   source ancestry, preserving the hood, face, UVs, normals and protected torso.
+2. Render matched gray/textured full-body views, close face/neck views and a
+   turntable. Judge actual arm/leg anatomy and rear clothing. Neither frozen
+   candidate has rendered appearance approval; the body still needs PBR work.
+3. Finalize a new nineteen-bone anatomical bind and explicit adapter. Reuse the
+   parameterized basic-pose-tpose215 utility only with real GLB joint order,
+   source SHA, hierarchy, inverse binds, mesh bind and reviewed anatomical axes.
+   Strengthen the live guard beyond joint centres; sockets alone are insufficient.
+4. Judge continuous exported motion: neutral front/side/back, horizontal,
+   overhead/forward reach, elbow, forearm twist, wrist/grip, squat/sit/lean, both
+   sides, reverse and held-out halfsteps. Inspect actual cuff/hand surfaces and
+   clothing volume, not numerical summaries. Grip requests do not close fingers.
+5. Only after those gates, compare standing-to-sitting films, seated rider nine
+   angles and actual Garage/gameplay. Preserve physics lean/COM/IK behavior and
+   prove saddle, palm/grip and sole/peg contacts, maximum lean, landing/recovery
+   and mobile performance. All three visual checkpoints remain OPEN.
+
+Cosmetics remain paused. Five failed attempts switch approach autonomously;
+fifteen failed attempts invoke the architecture fallback. No routine human hold.
+Private masters remain in localai runtime; no unfinished mesh enters player paths.
+
+The reusable fixture's five meaningful controls and source pins pass; its 5,404
+requested samples are not rendered moving evidence or an accepted new rig.
+Ordinary player ship216 and release checks are separate from rider acceptance.
 
 ## Structural repair order and reusable basic-pose gate — ask248
 
