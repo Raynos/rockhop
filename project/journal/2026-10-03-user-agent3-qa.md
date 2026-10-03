@@ -311,3 +311,24 @@ Sampled local sided distances are not closed-volume penetration. No cloth
 fit/collision, candidateLOD, clear/restart or physical device claim. Future
 real garments/footwear may replace old topology/weights; protected mannequin
 body/head/bind and these controls stay intact.
+
+### Round 23 — actual05 pose path and contact authority limits
+
+Finding: Source05 has no grip/sole socket nodes. All 152 captured actual
+riding samples keep physicalPose false and stance off. Normal production
+guards the COM/angle physical-body path on both grip sockets, so this
+candidate uses the frame-derived solveChain fallback. The normal player
+control has both named grip and sole sockets. Future owner geometry/socket
+handoff must make the intended pose branch explicit.
+
+Validation: Frozen candidate and played receipt hashes match, all 152
+samples retain the reported branch flags, full51 skin stays present, and
+actual engine source predicate is pinned. Independent source-node negative
+control check and scoped lint pass. No new capture or pose injection.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/pose-path05.json
+
+Limits: UNACCEPTED infrastructure finding. Root approves broad palm/plantar
+region identities only for diagnostics; posterior jeans is clearance-only
+and cannot certify seated support. Engine anatomy retains native moving
+defects and does not establish collar appearance parity. Human rejected
+hoodie/jeans/footwear; sockets or contact distances cannot qualify fit.

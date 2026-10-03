@@ -1,0 +1,61 @@
+{
+  "status": "UNACCEPTED05_PHYSICAL_BODY_POSE_BRANCH_UNREACHED",
+  "candidateSHA256": "ecc3bb87b2b9ff934c20345e47b422665f676a23f26a84622b6ec42cc0d42181",
+  "receiptSHA256": "ff51c787aedb7c5244a7d9eafd1c7d9d7801c44204b234260e48562032adbd3a",
+  "candidateSockets": {
+    "grip": [
+      [],
+      []
+    ],
+    "sole": [
+      [],
+      []
+    ]
+  },
+  "negativeControl": {
+    "file": "public/models/rider-street-mustard.glb",
+    "sha256": "bbf2d63694fd22cfd32d719e3126710b2bb2bb0e5a3042e33286b57ef45b3e61",
+    "sockets": {
+      "grip": [
+        [
+          "gripSocket.L"
+        ],
+        [
+          "gripSocket.R"
+        ]
+      ],
+      "sole": [
+        [
+          "soleSocket.L"
+        ],
+        [
+          "soleSocket.R"
+        ]
+      ]
+    },
+    "limits": "Source-node presence only; no new control render or physical/contact qualification."
+  },
+  "playedSamples": 152,
+  "allPhysicalPoseFalse": true,
+  "allStanceOff": true,
+  "normalFallbackUsesFrameDerivedRiderFields": true,
+  "completeSkinJoints": 51,
+  "engineSource": {
+    "file": "src/render/hero/GltfRider.ts",
+    "sha256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+    "guard": "riderBody.present AND both grip sockets AND attached bike"
+  },
+  "checkCodeSHA256": "83baddf369a9a094474831ee521acda7abdcfb38931458aada350b3afb7bf930",
+  "rootReview": {
+    "broadPalmAndPlantarRegionIdentities": "Approved for diagnostic progress only",
+    "broadPosteriorJeans": "Clearance search only; not a seated support map",
+    "engineAnatomy": "Broad movement matches native04; foot/knee/hem and1.5s armpit defects retained. Tiny collar lip not discernible; appearance parity unproved."
+  },
+  "limits": [
+    "Existing05 films are actual recorded Game/live bike controls, not admission of authoritative COM/angle physical-body pose or seated support.",
+    "Sockets must be owner-authored from current geometry/contact/orientation and actual bind. Adding markers alone does not qualify rejected garment/footwear enclosure or fit.",
+    "The broad posterior patch projected values in the prior packet are geometric clearance/projection proxies, never load-bearing seat measurements.",
+    "Next inferior gluteal, peg-bearing and palmar-facing subsets require posed normals and actual rider/bike witnesses; no root indices or acceptance threshold invented.",
+    "Protected mannequin body/head/bind remains unchanged. Current wardrobe remains human-rejected; no source/player promotion."
+  ]
+}
