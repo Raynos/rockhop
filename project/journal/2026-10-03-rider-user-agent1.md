@@ -275,3 +275,11 @@ Finding: New appearance05 corrects the sewn hoodie default coefficients to zero 
 Validation: Actual GLTFLoader admits eight meshes/51bones, both hoodie primitives default0, maximum file-world rest closure0.000853819mm. All529 recorded frames/1309804 garment vertex evaluations are exactly equal to04 after controller injection. Third-round shipped-control gate passes cold boot2336ms, clear40.083333333s, deterministic4810ticks, crash103/restart1tick, frame2.325ms and zero errors. See appearance05 and ship-round30 owned evidence.
 
 Limits: Controlled04 movies remain04 captures. No05 rendered capture or art/contact/device acceptance; source data stays outside normal player paths. LOD/contact map follows as a separate finding.
+
+### Round31 — exact candidate contact proposals, 2026-10-03
+
+Finding: Freeze current05 body/glove palms, body/boot soles and jeans posterior seat triangles, exported rows and actual-loader transforms/binds. No historical candidate contact indices or nonexistentLOD ancestry are substituted. Anatomical masks are explicitly proposals pending parent played review.
+
+Validation: Independent raw-accessor reader confirms every selected POSITION, joint index, sourceID and triangle; actual weights exactly equal float32 L1 normalization, max raw difference5.96e-8. Current51joint order/world/bind fields frozen. One134frame6fps silent512x768 gear/body orbit movie fully decodes, exact i/6 timestamps, whole-rider border≥0.06049. See contact-surfaces05 map, raw verification and movie receipt.
+
+Limits: Actual05 patch geometry overlays native05 full-weight motion with display-only3mm offset; map coordinates are unoffset. No fit/contact/closed-volume/art/device acceptance. Missing05LOD explicit. Agent3 owns bike target surfaces and independentbinding, root alone judges labels.
