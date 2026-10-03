@@ -1,0 +1,95 @@
+{
+  "status": "REJECTION_RECEIPT_CHECKED_UNACCEPTED",
+  "builderReport": "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/rest-fit01/rest-fit.json",
+  "builderReportSHA256": "553980f40a9120a13ab2cdeddf9ad4e334a82cd279695f9ca4a7b6568e401d0d",
+  "checks": [
+    "Source master, immutable driver, failed trial master and GLB hashes verified against builder report.",
+    "Original diagnostic02 GLB bytes still match frozen QA baseline.",
+    "Both garment regions stop after first pass above the fixed20mm rest-displacement cap.",
+    "Reported clipped rest-delta maxima agree with independent float64 arithmetic within2nm.",
+    "Rejected diagnostic GLB has exactlybody/cloth/jeans; opaque boxer mesh is absent."
+  ],
+  "history": [
+    {
+      "region": "cloth",
+      "pass": 1,
+      "constraintsProjected": 436,
+      "worstRequestedStepM": 0.018986701989100574,
+      "maximumRestDisplacementM": 0.020777886733412743
+    },
+    {
+      "region": "jeans",
+      "pass": 1,
+      "constraintsProjected": 791,
+      "worstRequestedStepM": 0.03455224295174375,
+      "maximumRestDisplacementM": 0.044307757169008255
+    }
+  ],
+  "builderReportedReviewedContacts": [
+    {
+      "frame": 0,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 0,
+      "nonadjacentSelfPairs": 0
+    },
+    {
+      "frame": 0,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 62,
+      "nonadjacentSelfPairs": 0
+    },
+    {
+      "frame": 112,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 8,
+      "nonadjacentSelfPairs": 82
+    },
+    {
+      "frame": 112,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 62,
+      "nonadjacentSelfPairs": 0
+    },
+    {
+      "frame": 144,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 6,
+      "nonadjacentSelfPairs": 32
+    },
+    {
+      "frame": 144,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 62,
+      "nonadjacentSelfPairs": 0
+    },
+    {
+      "frame": 240,
+      "region": "cloth",
+      "bodyTriangleContactPairs": 116,
+      "nonadjacentSelfPairs": 121
+    },
+    {
+      "frame": 240,
+      "region": "jeans",
+      "bodyTriangleContactPairs": 578,
+      "nonadjacentSelfPairs": 259
+    }
+  ],
+  "builderReportedNonzeroBodyContactRows": 21,
+  "totalBuilderReviewRows": 24,
+  "meshNames": [
+    "base.001",
+    "male_casualsuit02.004",
+    "male_casualsuit02.003"
+  ],
+  "limits": [
+    "No Blender clearance algorithm rerun or new rendered candidate review. Contact/self counts remain explicitly builder-reported.",
+    "First-pass cap failure rejects this fixed trial; it does not prove all possible rest fits infeasible.",
+    "No art, garment, contact, device acceptance or production promotion. Original played witnesses remain QA baseline."
+  ],
+  "meshNodeNames": [
+    "Canonical anatomical body, baked adult hm08",
+    "Separate fitted native trousers control",
+    "Separate fitted sweatshirt control, hood not constructed"
+  ]
+}

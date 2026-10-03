@@ -79,3 +79,12 @@ Limits: Directional witnesses and short separated FK windows, not global
 signed clearance, real support or art/device acceptance. Agent1 owns native
 fit repair; all previous controls intact. No production/source changes.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/focus/
+
+Finding: Builder's single rest-fit trial rejection is consistent with its
+fixed cap and pinned bytes; original played diagnostic stays the QA baseline.
+Validation: Source/master/driver/trial hashes verified; both first-pass raw
+moves exceed20mm; clipped displacement arrays agree within2nm. Export mesh
+nodes are body/cloth/jeans only. Contact counts explicitly builder-reported.
+Limits: No clearance rerun or new Garage film; rejection of this fixedtrial
+is not proof all restfits infeasible. No acceptance/source production edits.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/rest-fit01-rejection.json
