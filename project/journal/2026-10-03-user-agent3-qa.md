@@ -285,3 +285,29 @@ Limits: UNACCEPTED moving-art packet for parent judgment. Authored anatomy
 is not supported riding, native pixel parity, continuous fit/contact, LOD
 or physical device approval. Recorded riding and current patch measurements
 continue separately; normal player assets remain unchanged.
+
+### Round 22 — rejected wardrobe actual riding/contact controls
+
+Finding: Eight whole-rider films join current05 source patches to the live
+Rookie/Pro grip/peg/saddle parts. Complete source attribute/index segments
+resolve independently through the normal glove/boot merge. Nearest shell
+clearance is separate from upward same-X/Z projected support. Backward-lean
+jeans can have a tiny shell gap while projected samples sit 53.6 mm below
+the proposed top; neither fact qualifies correct seated support or volume
+penetration. Human rejects hoodie, jeans and footwear fit; mannequin body
+proportions/movement remain a useful baseline.
+
+Validation: Eight films/152 captured whole-body frames play silently.
+All 15988 rendered browser ticks match independent productionGame hash,
+tick, phase, run clock and finish fields exactly. Nine owner patch source
+segments and current bike geometry match; live target matrix residual
+stays below 1.137e-13. Private morph coefficients remain finite/bounded.
+Scoped lint passes.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/construction05-riding-control/
+
+Limits: REJECTED wardrobe controls only. Automatic rider masks and detailed
+support subsets await parent review; contact acceptance remains unmeasured.
+Sampled local sided distances are not closed-volume penetration. No cloth
+fit/collision, candidateLOD, clear/restart or physical device claim. Future
+real garments/footwear may replace old topology/weights; protected mannequin
+body/head/bind and these controls stay intact.

@@ -1,0 +1,75 @@
+{
+  "status": "REJECTED_WARDROBE_CONTROL_EVERY_TICK_PHYSICS_VERIFIED",
+  "candidateSHA256": "ecc3bb87b2b9ff934c20345e47b422665f676a23f26a84622b6ec42cc0d42181",
+  "receiptSHA256": "ff51c787aedb7c5244a7d9eafd1c7d9d7801c44204b234260e48562032adbd3a",
+  "ticks": 15988,
+  "results": [
+    {
+      "id": "rookie-maximum-forward-lean",
+      "ticks": 463,
+      "traceSHA256": "4abda24b8cb1e9ce97bb4b9406709a143e2ce6c1d06ac82fe311335cc070cf16",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "21bd9c5397ec4251"
+    },
+    {
+      "id": "rookie-maximum-backward-lean",
+      "ticks": 703,
+      "traceSHA256": "cdc973b773d503cb236fffaa1891b92d9694c2df95254b03177f78edf6d0f7dc",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "29068d65ced63fa3"
+    },
+    {
+      "id": "rookie-front-landing-recovery",
+      "ticks": 4663,
+      "traceSHA256": "493612676104241b709f3367270a172fa8eca21b5e80955db55532d6c0902077",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "0dd998b62cd16372"
+    },
+    {
+      "id": "rookie-rear-landing-recovery",
+      "ticks": 2740,
+      "traceSHA256": "2ca60b5366ff0e4fe180ef953cd6524f70d8cb94c2e29b2fe7c23ff68a7be423",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "922d26640f49093c"
+    },
+    {
+      "id": "pro-maximum-forward-lean",
+      "ticks": 461,
+      "traceSHA256": "d20e3bfe3fe49ee0a208dd1fbf5b4c7903f2fccfcd8485801a345f79251f54cb",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "bb7ea96838a641ee"
+    },
+    {
+      "id": "pro-maximum-backward-lean",
+      "ticks": 702,
+      "traceSHA256": "c159c7fec097f57a1c78797e2d4230b2398319ce57d1b37011ecab3806c2e607",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "289077ca4b7196dd"
+    },
+    {
+      "id": "pro-front-landing-recovery",
+      "ticks": 1348,
+      "traceSHA256": "d10d5da54d3a516920a9bd787c63d0c90b3e21a8b9514bec29291d5e7697f45e",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "06011fc96bf1cc38"
+    },
+    {
+      "id": "pro-rear-landing-recovery",
+      "ticks": 4908,
+      "traceSHA256": "d473900f39389d131371f4256c3fcdda27def52a33b207651b289bc9048d2cb7",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "4150928803336b12"
+    }
+  ],
+  "codePins": {
+    "src/game/game.ts": "8d1c9dd089731507fbb6811c3b2d5600075237124741c2e1631d67fe6188576d",
+    "src/physics/v2/bike.ts": "519dd15990b427bdbc66810d14c29866b443a31b9a87a68d84114144dd8c21a9",
+    "src/core/replay.ts": "1d36586edf1f8e5929ec02d9a545ca1bea89ea107e0af116e95f89e28c41639c",
+    "src/core/hash.ts": "f758f4dfb8bcb640f4b6ce2db7700643fc17f13a4fe7fe27d4de8e12ae7ae2a0"
+  },
+  "checkCodeSHA256": "29bf0664a43e0596ea711a2bd90d63897a7db49c6401a751c9fdd050dc082adc",
+  "limits": [
+    "Partial input windows end while riding; no new recorded clear, attempts-to-clear, restart or finish-time claim.",
+    "Exact physics is a control. Human rejected hoodie, jeans and footwear fit; contact samples and numerical parity do not admit those assets."
+  ]
+}

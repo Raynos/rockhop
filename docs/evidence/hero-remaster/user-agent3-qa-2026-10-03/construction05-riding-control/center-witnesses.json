@@ -1,0 +1,3293 @@
+{
+  "status": "REJECTED_WARDROBE_CONTROL_RECORDED_INPUT_CONTACT_PROPOSALS",
+  "cases": [
+    {
+      "id": "rookie-maximum-forward-lean",
+      "inputTick": 343,
+      "stateHash": "fbd6ee8d84dcbb78",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00023557226877475237,
+          "minimumLocalFaceSidedDistanceM": -0.01360555001741982,
+          "maximumLocalFaceSidedDistanceM": 0.1065225337466918,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4606,
+            "world": [
+              0.8565913249107722,
+              1.0510216733736648,
+              0.2887923313399794
+            ],
+            "targetWorld": [
+              0.8564271415580162,
+              1.0508533680930399,
+              0.28877778991614034
+            ],
+            "targetTriangle": 14,
+            "opposingNormalAngleDeg": 83.32882032597448
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00020685182953333824,
+          "minimumLocalFaceSidedDistanceM": -0.01359834372734286,
+          "maximumLocalFaceSidedDistanceM": 0.11100858330750271,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13489,
+            "world": [
+              0.8565911970072043,
+              1.0510218808817793,
+              -0.2887923624094919
+            ],
+            "targetWorld": [
+              0.8564470102164576,
+              1.0508740978453452,
+              -0.2887797916936094
+            ],
+            "targetTriangle": 216,
+            "opposingNormalAngleDeg": 83.3009579853127
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953399706690702,
+          "minimumLocalFaceSidedDistanceM": 0.0001923235305565096,
+          "maximumLocalFaceSidedDistanceM": 0.13839668106905145,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              0.4345359717941979,
+              0.3249312091555505,
+              0.1988588523197764
+            ],
+            "targetWorld": [
+              0.4344130234498324,
+              0.314978568831206,
+              0.1988588523197764
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.7309200778920495
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953399706690732,
+          "maxSignedBikeUpSupportGapM": 0.03376557941443592,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953399706690732,
+            "sampleBikeFrame": [
+              -0.1446772333029503,
+              0.0359348445721559,
+              0.1988588523197764
+            ],
+            "targetBikeFrame": [
+              -0.1446772333029503,
+              0.025981444865465168,
+              0.1988588523197764
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4131117147262176,
+              0.5508169925799321,
+              0.03607129269385034
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953308427840646,
+          "minimumLocalFaceSidedDistanceM": 0.0005178713050026121,
+          "maximumLocalFaceSidedDistanceM": 0.13839616507055638,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              0.43453599105676266,
+              0.3249311176317789,
+              -0.19885810507916582
+            ],
+            "targetWorld": [
+              0.43441304383990975,
+              0.31497856857932044,
+              -0.19885810507916582
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.7309775415546027
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953308427840646,
+          "maxSignedBikeUpSupportGapM": 0.03376541427683727,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953308427840646,
+            "sampleBikeFrame": [
+              -0.1446772129113172,
+              0.03593475329330581,
+              -0.19885810507916582
+            ],
+            "targetBikeFrame": [
+              -0.1446772129113172,
+              0.025981444865465164,
+              -0.19885810507916582
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.44918322896948226,
+              0.13769772529222596,
+              0.4131190457382918
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 0.10637852884852285,
+          "minimumLocalFaceSidedDistanceM": 0.10497454600413836,
+          "maximumLocalFaceSidedDistanceM": 0.3885894801918465,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 796,
+            "world": [
+              0.4051672145316969,
+              0.9853008598808428,
+              0.059732247523718
+            ],
+            "targetWorld": [
+              0.42210225186796113,
+              0.8824452347462814,
+              0.03851159040444077
+            ],
+            "targetTriangle": 291,
+            "opposingNormalAngleDeg": 57.32597885766345
+          },
+          "supportProjectionSamples": 178,
+          "supportProjectionFraction": 0.4876712328767123,
+          "minSignedBikeUpSupportGapM": 0.11185002215171325,
+          "maxSignedBikeUpSupportGapM": 0.3954275023093179,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.11185002215171325,
+            "sampleBikeFrame": [
+              -0.17979848771597384,
+              0.6983248721203744,
+              -0.05546252483100668
+            ],
+            "targetBikeFrame": [
+              -0.17979848771597384,
+              0.5864748499686612,
+              -0.05546252483100668
+            ],
+            "targetTriangle": 286,
+            "targetRestNormal": [
+              -0.1707116315754598,
+              0.9544448815000895,
+              -0.24472945679489475
+            ],
+            "barycentric": [
+              0.71668758157189,
+              0.2150448434917004,
+              0.06826757493640956
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 9.636784975381837e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013902914895820241,
+          "maximumLocalFaceSidedDistanceM": 0.09905365283788832,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 6694,
+            "world": [
+              0.8502396520268004,
+              1.0662479835368937,
+              0.2986097569312177
+            ],
+            "targetWorld": [
+              0.8503321876522978,
+              1.0662227021477357,
+              0.2986189640937681
+            ],
+            "targetTriangle": 10,
+            "opposingNormalAngleDeg": 108.86692034072617
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 0.00020660889739237517,
+          "minimumLocalFaceSidedDistanceM": -0.01569893803049644,
+          "maximumLocalFaceSidedDistanceM": 0.08753942770172111,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 3093,
+            "world": [
+              0.8535389621271483,
+              1.0526474541810726,
+              -0.29788768260514226
+            ],
+            "targetWorld": [
+              0.8536829795811971,
+              1.0527950636572847,
+              -0.2979002385576508
+            ],
+            "targetTriangle": 216,
+            "opposingNormalAngleDeg": 85.1275004418199
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006849977603491811,
+          "minimumLocalFaceSidedDistanceM": 0.0007130933346670907,
+          "maximumLocalFaceSidedDistanceM": 0.14961420635217337,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              0.48354776294621177,
+              0.3248380538302269,
+              0.23315622518671694
+            ],
+            "targetWorld": [
+              0.48211720826459636,
+              0.31939452752592284,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.24884472048226
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614294751368597,
+          "maxSignedBikeUpSupportGapM": 0.045309762938514575,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614294751368597,
+            "sampleBikeFrame": [
+              -0.11712890072253818,
+              0.034595739616833765,
+              0.18219394215266624
+            ],
+            "targetBikeFrame": [
+              -0.11712890072253818,
+              0.025981444865465168,
+              0.18219394215266624
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.5766074561501295,
+              0.25151203170627684,
+              0.17188051214359362
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.007395217547410551,
+          "minimumLocalFaceSidedDistanceM": 7.296973108085708e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942673454984443,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              0.484211627883825,
+              0.325419249295792,
+              -0.2333181710750858
+            ],
+            "targetWorld": [
+              0.48211720826459636,
+              0.31939452752592284,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.4332834249126
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614191647487446,
+          "maxSignedBikeUpSupportGapM": 0.04502964267043286,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614191647487446,
+            "sampleBikeFrame": [
+              -0.14298801262091326,
+              0.03459563651295261,
+              -0.21528796861510183
+            ],
+            "targetBikeFrame": [
+              -0.14298801262091326,
+              0.025981444865465164,
+              -0.21528796861510183
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4675359196577965,
+              0.2805347856055737,
+              0.2519292947366298
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "rookie-maximum-backward-lean",
+      "inputTick": 583,
+      "stateHash": "3f3e3a837188e757",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00019769581917851719,
+          "minimumLocalFaceSidedDistanceM": -0.013037274796233443,
+          "maximumLocalFaceSidedDistanceM": 0.09503547185119388,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 2543,
+            "world": [
+              1.012337052964964,
+              1.073433430798893,
+              0.3129946842861158
+            ],
+            "targetWorld": [
+              1.012463130426342,
+              1.073585217452089,
+              0.3130068876694463
+            ],
+            "targetTriangle": 14,
+            "opposingNormalAngleDeg": 129.4304950586051
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.0002501627585182727,
+          "minimumLocalFaceSidedDistanceM": -0.012994035225544848,
+          "maximumLocalFaceSidedDistanceM": 0.0950442213145608,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 7556,
+            "world": [
+              1.012336739712328,
+              1.0734333769557338,
+              -0.312994625842246
+            ],
+            "targetWorld": [
+              1.0124963019042565,
+              1.0736254451410934,
+              -0.31300982863242105
+            ],
+            "targetTriangle": 216,
+            "opposingNormalAngleDeg": 129.37557367642492
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953806964645297,
+          "minimumLocalFaceSidedDistanceM": 0.00019223167589915713,
+          "maximumLocalFaceSidedDistanceM": 0.13839691912283936,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              0.6525057371415759,
+              0.3160445076273426,
+              0.19885894416546693
+            ],
+            "targetWorld": [
+              0.6531772319587891,
+              0.3061133763826214,
+              0.19885894416546696
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.7308976535946705
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953806964645262,
+          "maxSignedBikeUpSupportGapM": 0.03376601183991168,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953806964645262,
+            "sampleBikeFrame": [
+              -0.1446778096569954,
+              0.035935251830110426,
+              0.19885894416546693
+            ],
+            "targetBikeFrame": [
+              -0.1446778096569954,
+              0.025981444865465164,
+              0.19885894416546693
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4131108136484969,
+              0.550823254506109,
+              0.036065931845394084
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.00995376369702704,
+          "minimumLocalFaceSidedDistanceM": 0.0005172938534538656,
+          "maximumLocalFaceSidedDistanceM": 0.13839636643569156,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              0.6525057406917025,
+              0.31604446450097384,
+              -0.19885804746437233
+            ],
+            "targetWorld": [
+              0.6531772325900344,
+              0.3061133764253032,
+              -0.19885804746437233
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.730987618365956
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953763697027052,
+          "maxSignedBikeUpSupportGapM": 0.03376587585710655,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953763697027052,
+            "sampleBikeFrame": [
+              -0.14467780902430882,
+              0.035935208562492216,
+              -0.19885804746437233
+            ],
+            "targetBikeFrame": [
+              -0.14467780902430882,
+              0.025981444865465164,
+              -0.19885804746437233
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.44917675236785426,
+              0.13770363664788,
+              0.41311961098426575
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 7.528510476542307e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013736699261022075,
+          "maximumLocalFaceSidedDistanceM": 0.1326627132889645,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 914,
+            "world": [
+              0.25196011905348703,
+              0.7880462227517018,
+              0.011974468620420273
+            ],
+            "targetWorld": [
+              0.2519561274733002,
+              0.7881213935720004,
+              0.01197334520474233
+            ],
+            "targetTriangle": 348,
+            "opposingNormalAngleDeg": 123.37485647417378
+          },
+          "supportProjectionSamples": 32,
+          "supportProjectionFraction": 0.08767123287671233,
+          "minSignedBikeUpSupportGapM": -0.05358532908646385,
+          "maxSignedBikeUpSupportGapM": -0.0010723753623799182,
+          "supportWitness": {
+            "signedBikeUpGapM": -0.0010723753623799182,
+            "sampleBikeFrame": [
+              -0.521003715880167,
+              0.5491440562122316,
+              -0.002557018260575974
+            ],
+            "targetBikeFrame": [
+              -0.521003715880167,
+              0.5502164315746115,
+              -0.002557018260575974
+            ],
+            "targetTriangle": 337,
+            "targetRestNormal": [
+              -0.1271971127064214,
+              0.9912602576431461,
+              -0.034985656152111036
+            ],
+            "barycentric": [
+              0.06160909879599522,
+              0.8266179599588809,
+              0.11177294124512394
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 0.0001762344859426741,
+          "minimumLocalFaceSidedDistanceM": -0.01376987590402477,
+          "maximumLocalFaceSidedDistanceM": 0.10410547419183272,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 1740,
+            "world": [
+              1.0249908022261782,
+              1.0692382573304784,
+              0.30177584925575374
+            ],
+            "targetWorld": [
+              1.024932375241726,
+              1.0694043851305448,
+              0.30176903489089696
+            ],
+            "targetTriangle": 19,
+            "opposingNormalAngleDeg": 81.46530943982727
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 9.483599549658525e-05,
+          "minimumLocalFaceSidedDistanceM": -0.014744067774064546,
+          "maximumLocalFaceSidedDistanceM": 0.08672526204169657,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 2792,
+            "world": [
+              1.0326225383839478,
+              1.0729808517891453,
+              -0.310729281744636
+            ],
+            "targetWorld": [
+              1.0326934364709217,
+              1.0729183488648057,
+              -0.3107370735194195
+            ],
+            "targetTriangle": 210,
+            "opposingNormalAngleDeg": 104.55113203725462
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006850140037780749,
+          "minimumLocalFaceSidedDistanceM": 0.0007135623429453564,
+          "maximumLocalFaceSidedDistanceM": 0.14961445826830458,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              0.7013688466686707,
+              0.3198618441072395,
+              0.23315637074252543
+            ],
+            "targetWorld": [
+              0.7003776275640516,
+              0.3143211481265471,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.24887957800512
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614740733642268,
+          "maxSignedBikeUpSupportGapM": 0.04530968991828338,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614740733642268,
+            "sampleBikeFrame": [
+              -0.11712945668299513,
+              0.03459618559910743,
+              0.1821940674563151
+            ],
+            "targetBikeFrame": [
+              -0.11712945668299513,
+              0.025981444865465164,
+              0.1821940674563151
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.5766062268237924,
+              0.25151807206179855,
+              0.17187570111440909
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.007395498262483558,
+          "minimumLocalFaceSidedDistanceM": 7.241025302517245e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942693231874385,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              0.7019841525588687,
+              0.32049420838882625,
+              -0.23331811464586139
+            ],
+            "targetWorld": [
+              0.7003776275640516,
+              0.3143211481265471,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.43333482623369
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614648253028268,
+          "maxSignedBikeUpSupportGapM": 0.04502959252277028,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614648253028268,
+            "sampleBikeFrame": [
+              -0.14298860711131833,
+              0.03459609311849343,
+              -0.215287911201314
+            ],
+            "targetBikeFrame": [
+              -0.14298860711131833,
+              0.025981444865465164,
+              -0.215287911201314
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4675294606851197,
+              0.2805406813042986,
+              0.2519298580105817
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "rookie-front-landing-recovery",
+      "inputTick": 4543,
+      "stateHash": "6d8fc8af82cec00d",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 5.684341886080802e-14,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 7.390188978653274e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013575859517661059,
+          "maximumLocalFaceSidedDistanceM": 0.10882134077570234,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4877,
+            "world": [
+              509.07288812692997,
+              1.8715772431554092,
+              0.30660139139838655
+            ],
+            "targetWorld": [
+              509.07281872310574,
+              1.8716013884562592,
+              0.30659354264412153
+            ],
+            "targetTriangle": 22,
+            "opposingNormalAngleDeg": 101.39661934643844
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 5.684341886080802e-14,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 5.7311876861233214e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013570134153152823,
+          "maximumLocalFaceSidedDistanceM": 0.10685901110868277,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13758,
+            "world": [
+              509.0728990885747,
+              1.8715773688714008,
+              -0.306601455807493
+            ],
+            "targetWorld": [
+              509.07284526129826,
+              1.8715960941621523,
+              -0.30659540278931136
+            ],
+            "targetTriangle": 208,
+            "opposingNormalAngleDeg": 101.39473636089897
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953564586251596,
+          "minimumLocalFaceSidedDistanceM": 0.00019225845151532583,
+          "maximumLocalFaceSidedDistanceM": 0.13839682907537038,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              508.59631758273866,
+              1.156956443165577,
+              0.19885891825107452
+            ],
+            "targetWorld": [
+              508.59578467384483,
+              1.1470171546556505,
+              0.19885891825107452
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.730906856586737
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953564586254515,
+          "maxSignedBikeUpSupportGapM": 0.03376573705056174,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953564586254515,
+            "sampleBikeFrame": [
+              -0.1446772506847651,
+              0.03593500945171968,
+              0.19885891825107452
+            ],
+            "targetBikeFrame": [
+              -0.1446772506847651,
+              0.025981444865465164,
+              0.19885891825107452
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4131110678888593,
+              0.550817181428509,
+              0.03607175068263169
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953457708311365,
+          "minimumLocalFaceSidedDistanceM": 0.0005178441867237439,
+          "maximumLocalFaceSidedDistanceM": 0.13839628635293627,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              508.59631758535284,
+              1.156956335993963,
+              -0.1988580989440557
+            ],
+            "targetWorld": [
+              508.5957846821812,
+              1.1470171542086847,
+              -0.1988580989440557
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.7309747002653513
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953457708313351,
+          "maxSignedBikeUpSupportGapM": 0.03376555446270402,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953457708313351,
+            "sampleBikeFrame": [
+              -0.1446772423364564,
+              0.035934902573778515,
+              -0.1988580989440557
+            ],
+            "targetBikeFrame": [
+              -0.1446772423364564,
+              0.025981444865465164,
+              -0.1988580989440557
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.44918290927354,
+              0.1376979847979622,
+              0.4131191059284978
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 0.07522560637679836,
+          "minimumLocalFaceSidedDistanceM": 0.07378428578203146,
+          "maximumLocalFaceSidedDistanceM": 0.35284660421104774,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 796,
+            "world": [
+              508.5714597821777,
+              1.783680360433031,
+              0.05698509902878521
+            ],
+            "targetWorld": [
+              508.5802663268755,
+              1.7110407297913233,
+              0.03952598434678863
+            ],
+            "targetTriangle": 291,
+            "opposingNormalAngleDeg": 48.509078750173174
+          },
+          "supportProjectionSamples": 183,
+          "supportProjectionFraction": 0.5013698630136987,
+          "minSignedBikeUpSupportGapM": 0.07853192633987027,
+          "maxSignedBikeUpSupportGapM": 0.36212642040193976,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.07853192633987027,
+            "sampleBikeFrame": [
+              -0.2030538850996777,
+              0.6604291625694074,
+              0.05698509902878521
+            ],
+            "targetBikeFrame": [
+              -0.2030538850996777,
+              0.5818972362295372,
+              0.05698509902878521
+            ],
+            "targetTriangle": 293,
+            "targetRestNormal": [
+              -0.1731315752570682,
+              0.9601368799574809,
+              0.21945985827599562
+            ],
+            "barycentric": [
+              0.058346453421745444,
+              0.44984057871421307,
+              0.49181296786404144
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 5.684341886080802e-14,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 6.572041368626186e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013934472821367025,
+          "maximumLocalFaceSidedDistanceM": 0.0918634499763934,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 6694,
+            "world": [
+              509.04179256764417,
+              1.8757794709493727,
+              0.29865858413690205
+            ],
+            "targetWorld": [
+              509.04172863907286,
+              1.8757654842308775,
+              0.2986525275494654
+            ],
+            "targetTriangle": 13,
+            "opposingNormalAngleDeg": 98.42374370811024
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 5.684341886080802e-14,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 3.803184763455972e-05,
+          "minimumLocalFaceSidedDistanceM": -0.01569740034768574,
+          "maximumLocalFaceSidedDistanceM": 0.09422175629165247,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 2629,
+            "world": [
+              509.05222434670753,
+              1.8615106815197378,
+              -0.29506780162559754
+            ],
+            "targetWorld": [
+              509.0522369584272,
+              1.8615465546570145,
+              -0.2950684973145129
+            ],
+            "targetTriangle": 214,
+            "opposingNormalAngleDeg": 76.49867280694895
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006850059676800288,
+          "minimumLocalFaceSidedDistanceM": 0.0007130891009536892,
+          "maximumLocalFaceSidedDistanceM": 0.14961434931326195,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              508.6452839433363,
+              1.1548440336758976,
+              0.2331563002625285
+            ],
+            "targetWorld": [
+              508.64363031062857,
+              1.1494639151983392,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.24885760850704
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614461662403983,
+          "maxSignedBikeUpSupportGapM": 0.04530991257979622,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614461662403983,
+            "sampleBikeFrame": [
+              -0.11712891096561862,
+              0.03459590652786915,
+              0.1821940130630171
+            ],
+            "targetBikeFrame": [
+              -0.11712891096561862,
+              0.025981444865465164,
+              0.1821940130630171
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.5766067604643879,
+              0.251512142994493,
+              0.17188109654111916
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.00739533617770437,
+          "minimumLocalFaceSidedDistanceM": 7.294881286551316e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942685306380568,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              508.64597116847983,
+              1.1553973765029297,
+              -0.23331816546093254
+            ],
+            "targetWorld": [
+              508.64363031062857,
+              1.1494639151983392,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.43328744329311
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614341060859232,
+          "maxSignedBikeUpSupportGapM": 0.045029765382995635,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614341060859232,
+            "sampleBikeFrame": [
+              -0.1429880413050455,
+              0.034595785926324396,
+              -0.21528796254068316
+            ],
+            "targetBikeFrame": [
+              -0.1429880413050455,
+              0.025981444865465164,
+              -0.21528796254068316
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4675356080126887,
+              0.2805350376559059,
+              0.25192935433140545
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "rookie-rear-landing-recovery",
+      "inputTick": 2620,
+      "stateHash": "37aebdeefe5880d7",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 8.59822213836839e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013806528862413651,
+          "maximumLocalFaceSidedDistanceM": 0.10524275683128555,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4616,
+            "world": [
+              278.21813419021856,
+              1.5126824571009696,
+              0.28499164455615095
+            ],
+            "targetWorld": [
+              278.2181760615239,
+              1.5126073736513708,
+              0.2849901573501314
+            ],
+            "targetTriangle": 16,
+            "opposingNormalAngleDeg": 77.93775668959037
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00011199141701330435,
+          "minimumLocalFaceSidedDistanceM": -0.0138008078638714,
+          "maximumLocalFaceSidedDistanceM": 0.10960671190797018,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13499,
+            "world": [
+              278.21813139794386,
+              1.5126824516704418,
+              -0.28499169383055467
+            ],
+            "targetWorld": [
+              278.2181878506111,
+              1.5125857447037008,
+              -0.28498998022951066
+            ],
+            "targetTriangle": 215,
+            "opposingNormalAngleDeg": 77.01057509987926
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953649760758599,
+          "minimumLocalFaceSidedDistanceM": 0.00019223165985240986,
+          "maximumLocalFaceSidedDistanceM": 0.13839689645082215,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              278.4394106629179,
+              0.7015060508216362,
+              0.19885894531524256
+            ],
+            "targetWorld": [
+              278.44650431619203,
+              0.6945235565118401,
+              0.1988589453152426
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.7309010912016993
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953649760745975,
+          "maxSignedBikeUpSupportGapM": 0.033765820324134665,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953649760745975,
+            "sampleBikeFrame": [
+              -0.14467729047751732,
+              0.03593509462621114,
+              0.19885894531524256
+            ],
+            "targetBikeFrame": [
+              -0.14467729047751732,
+              0.025981444865465164,
+              0.19885894531524256
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4131108023683029,
+              0.5508176137656788,
+              0.036071583866018275
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953536940231695,
+          "minimumLocalFaceSidedDistanceM": 0.0005178030830660756,
+          "maximumLocalFaceSidedDistanceM": 0.13839634141699836,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              278.4394107469744,
+              0.7015059753889287,
+              -0.19885809430466925
+            ],
+            "targetWorld": [
+              278.44650431984485,
+              0.6945235602228251,
+              -0.19885809430466922
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.7309742625810802
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953536940230379,
+          "maxSignedBikeUpSupportGapM": 0.03376563041521763,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953536940230379,
+            "sampleBikeFrame": [
+              -0.1446772852703475,
+              0.03593498180569554,
+              -0.19885809430466925
+            ],
+            "targetBikeFrame": [
+              -0.1446772852703475,
+              0.025981444865465164,
+              -0.19885809430466925
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4491824428087708,
+              0.13769840574673878,
+              0.4131191514444905
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 0.05569204746147604,
+          "minimumLocalFaceSidedDistanceM": 0.05569204746147604,
+          "maximumLocalFaceSidedDistanceM": 0.32583014196902504,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 796,
+            "world": [
+              277.9606743638088,
+              1.0739031847288847,
+              0.05508494887343443
+            ],
+            "targetWorld": [
+              278.00512302903695,
+              1.0432445322976127,
+              0.04144796456665004
+            ],
+            "targetTriangle": 292,
+            "opposingNormalAngleDeg": 39.92832683634155
+          },
+          "supportProjectionSamples": 181,
+          "supportProjectionFraction": 0.4958904109589041,
+          "minSignedBikeUpSupportGapM": 0.058195722866828836,
+          "maxSignedBikeUpSupportGapM": 0.3273858238279723,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.058195722866828836,
+            "sampleBikeFrame": [
+              -0.21511550691661796,
+              0.6383523313417072,
+              0.05508494887343443
+            ],
+            "targetBikeFrame": [
+              -0.21511550691661796,
+              0.5801566084748784,
+              0.05508494887343443
+            ],
+            "targetTriangle": 293,
+            "targetRestNormal": [
+              -0.1731315752570682,
+              0.9601368799574809,
+              0.21945985827599562
+            ],
+            "barycentric": [
+              0.20654866844768996,
+              0.5362119125641909,
+              0.2572394189881192
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 0.00020860101326375562,
+          "minimumLocalFaceSidedDistanceM": -0.014208623328921014,
+          "maximumLocalFaceSidedDistanceM": 0.10128236474398628,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 6694,
+            "world": [
+              278.1970450252748,
+              1.5103866400897452,
+              0.29878530212185755
+            ],
+            "targetWorld": [
+              278.1971488234342,
+              1.5105665651928961,
+              0.2988044667272206
+            ],
+            "targetTriangle": 12,
+            "opposingNormalAngleDeg": 103.86132932010469
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 2.220446049250313e-16,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 2.141560426829346e-05,
+          "minimumLocalFaceSidedDistanceM": -0.015709489035936167,
+          "maximumLocalFaceSidedDistanceM": 0.0952423404301693,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 3093,
+            "world": [
+              278.2108878448475,
+              1.5082392332669265,
+              -0.2992454061080459
+            ],
+            "targetWorld": [
+              278.2108982751315,
+              1.5082205334321377,
+              -0.2992450143679802
+            ],
+            "targetTriangle": 214,
+            "opposingNormalAngleDeg": 83.28995246156764
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006850101708264502,
+          "minimumLocalFaceSidedDistanceM": 0.000713115401599811,
+          "maximumLocalFaceSidedDistanceM": 0.1496144153254859,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              278.47342562460705,
+              0.736792742250474,
+              0.2331563331208373
+            ],
+            "targetWorld": [
+              278.4763612440725,
+              0.7319903317380978,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.248864291219
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614549409770689,
+          "maxSignedBikeUpSupportGapM": 0.0453099636431773,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614549409770689,
+            "sampleBikeFrame": [
+              -0.11712894671026675,
+              0.03459599427523585,
+              0.18219404344226062
+            ],
+            "targetBikeFrame": [
+              -0.11712894671026675,
+              0.025981444865465164,
+              0.18219404344226062
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.5766064624203605,
+              0.2515125313501395,
+              0.17188100622949998
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.007395394403825263,
+          "minimumLocalFaceSidedDistanceM": 7.291101454413342e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942690696712635,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              278.47346622914284,
+              0.7376741064782878,
+              -0.23331816105203435
+            ],
+            "targetWorld": [
+              278.4763612440725,
+              0.7319903317380978,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.43329167851023
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614420460787642,
+          "maxSignedBikeUpSupportGapM": 0.04502980732476658,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614420460787642,
+            "sampleBikeFrame": [
+              -0.1429880838792883,
+              0.034595865326252806,
+              -0.21528795792960048
+            ],
+            "targetBikeFrame": [
+              -0.1429880838792883,
+              0.025981444865465164,
+              -0.21528795792960048
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.46753514545539826,
+              0.28053545497488575,
+              0.25192939956971605
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "pro-maximum-forward-lean",
+      "inputTick": 341,
+      "stateHash": "cdd1ef7888178210",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 1.1102230246251565e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00023700997278199351,
+          "minimumLocalFaceSidedDistanceM": -0.013607480856536737,
+          "maximumLocalFaceSidedDistanceM": 0.1065209954406625,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4606,
+            "world": [
+              0.8497815662855844,
+              1.0638530645798134,
+              0.28879140176342033
+            ],
+            "targetWorld": [
+              0.8496187722209887,
+              1.063681431896911,
+              0.2887767715928734
+            ],
+            "targetTriangle": 14,
+            "opposingNormalAngleDeg": 83.32658670262352
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 1.1102230246251565e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00020829016654443368,
+          "minimumLocalFaceSidedDistanceM": -0.013600274439328588,
+          "maximumLocalFaceSidedDistanceM": 0.11100716188290767,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13489,
+            "world": [
+              0.8497814355440815,
+              1.0638532700596977,
+              -0.2887914329406903
+            ],
+            "targetWorld": [
+              0.8496383476535319,
+              1.0637024376331263,
+              -0.2887787748147716
+            ],
+            "targetTriangle": 216,
+            "opposingNormalAngleDeg": 83.2987274107735
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.00995339931949302,
+          "minimumLocalFaceSidedDistanceM": 0.00019232368503419028,
+          "maximumLocalFaceSidedDistanceM": 0.13839668072941075,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              0.43795298664389903,
+              0.3319111537288722,
+              0.1988588521623783
+            ],
+            "targetWorld": [
+              0.4379696459833107,
+              0.32195776835103745,
+              0.1988588521623783
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.7309201164874013
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953399319492962,
+          "maxSignedBikeUpSupportGapM": 0.033765579048809446,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953399319492962,
+            "sampleBikeFrame": [
+              -0.14467723328978294,
+              0.035934844184958126,
+              0.1988588521623783
+            ],
+            "targetBikeFrame": [
+              -0.14467723328978294,
+              0.025981444865465164,
+              0.1988588521623783
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.41311171627041543,
+              0.5508169924368724,
+              0.03607129129271214
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953308073417804,
+          "minimumLocalFaceSidedDistanceM": 0.0005178713428257546,
+          "maximumLocalFaceSidedDistanceM": 0.13839616478781744,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              0.43795300721738706,
+              0.3319110625171037,
+              -0.19885810509885418
+            ],
+            "targetWorld": [
+              0.4379696664040771,
+              0.3219577683852164,
+              -0.19885810509885418
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.7309775514821326
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.00995330807341771,
+          "maxSignedBikeUpSupportGapM": 0.03376541394951277,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.00995330807341771,
+            "sampleBikeFrame": [
+              -0.14467721286898794,
+              0.035934752938882875,
+              -0.19885810509885418
+            ],
+            "targetBikeFrame": [
+              -0.14467721286898794,
+              0.025981444865465164,
+              -0.19885810509885418
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4491832294293777,
+              0.13769772502548874,
+              0.41311904554513357
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 0.10643297190545929,
+          "minimumLocalFaceSidedDistanceM": 0.10502847513431386,
+          "maximumLocalFaceSidedDistanceM": 0.3882151620973148,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 796,
+            "world": [
+              0.3994129857310412,
+              0.991874946227733,
+              0.05973811181255949
+            ],
+            "targetWorld": [
+              0.41779850566956855,
+              0.889214216805566,
+              0.038507831557063034
+            ],
+            "targetTriangle": 291,
+            "opposingNormalAngleDeg": 57.339587190674195
+          },
+          "supportProjectionSamples": 178,
+          "supportProjectionFraction": 0.4876712328767123,
+          "minSignedBikeUpSupportGapM": 0.11190539215823381,
+          "maxSignedBikeUpSupportGapM": 0.39551104651285374,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.11190539215823381,
+            "sampleBikeFrame": [
+              -0.17970907574465544,
+              0.6983947234751449,
+              -0.05546841711226572
+            ],
+            "targetBikeFrame": [
+              -0.17970907574465544,
+              0.5864893313169111,
+              -0.05546841711226572
+            ],
+            "targetTriangle": 286,
+            "targetRestNormal": [
+              -0.1707116315754598,
+              0.9544448815000895,
+              -0.24472945679489475
+            ],
+            "barycentric": [
+              0.7173278463175548,
+              0.21496025472561217,
+              0.06771189895683308
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 1.1102230246251565e-16,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 9.759382731817662e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013904611607129667,
+          "maximumLocalFaceSidedDistanceM": 0.0990542077246087,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 6694,
+            "world": [
+              0.8432174124370218,
+              1.0789881528912237,
+              0.29861011362893924
+            ],
+            "targetWorld": [
+              0.843311475176179,
+              1.0789638668095938,
+              0.29861943792365303
+            ],
+            "targetTriangle": 10,
+            "opposingNormalAngleDeg": 108.86744305660638
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 1.1102230246251565e-16,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 0.00020546341888428153,
+          "minimumLocalFaceSidedDistanceM": -0.01570052899513663,
+          "maximumLocalFaceSidedDistanceM": 0.08469128283150645,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 3093,
+            "world": [
+              0.8467069284931835,
+              1.065435236522688,
+              -0.297886940881393
+            ],
+            "targetWorld": [
+              0.8468480745092486,
+              1.0655840219721218,
+              -0.297899427221344
+            ],
+            "targetTriangle": 216,
+            "opposingNormalAngleDeg": 85.12508933257845
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006849977414676477,
+          "minimumLocalFaceSidedDistanceM": 0.0007130933682812796,
+          "maximumLocalFaceSidedDistanceM": 0.14961420603163098,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              0.4869612630975533,
+              0.3325054462783007,
+              0.2331562250084735
+            ],
+            "targetWorld": [
+              0.4856071999999888,
+              0.32704239086288023,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.24884468617357
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614294361935282,
+          "maxSignedBikeUpSupportGapM": 0.04530976257012537,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614294361935282,
+            "sampleBikeFrame": [
+              -0.11712890072590137,
+              0.034595739227400446,
+              0.1821939419843973
+            ],
+            "targetBikeFrame": [
+              -0.11712890072590137,
+              0.025981444865465164,
+              0.1821939419843973
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.5766074578009787,
+              0.25151203174281705,
+              0.17188051045620428
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.007395217261168698,
+          "minimumLocalFaceSidedDistanceM": 7.296975375204629e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942673427429548,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              0.4876169109399864,
+              0.33309589594526806,
+              -0.23331817109282016
+            ],
+            "targetWorld": [
+              0.4856071999999888,
+              0.32704239086288023,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.4332834209519
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614191292955542,
+          "maxSignedBikeUpSupportGapM": 0.04502964236359047,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614191292955542,
+            "sampleBikeFrame": [
+              -0.14298801258072785,
+              0.034595636158420706,
+              -0.21528796863460467
+            ],
+            "targetBikeFrame": [
+              -0.14298801258072785,
+              0.025981444865465164,
+              -0.21528796863460467
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.46753592009439976,
+              0.28053478536030857,
+              0.2519292945452916
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "pro-maximum-backward-lean",
+      "inputTick": 582,
+      "stateHash": "9e302ac80b9a4725",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00011639026926307191,
+          "minimumLocalFaceSidedDistanceM": -0.012951478860456089,
+          "maximumLocalFaceSidedDistanceM": 0.09488299078122468,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4606,
+            "world": [
+              1.0488613735564292,
+              1.081895302811124,
+              0.3008401002122291
+            ],
+            "targetWorld": [
+              1.0487749788615606,
+              1.08197270756145,
+              0.3008305526416136
+            ],
+            "targetTriangle": 20,
+            "opposingNormalAngleDeg": 103.91219704359993
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.0001213635510493771,
+          "minimumLocalFaceSidedDistanceM": -0.012908264947495519,
+          "maximumLocalFaceSidedDistanceM": 0.09489174488785909,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13489,
+            "world": [
+              1.0488609987998918,
+              1.081895214999411,
+              -0.3008400125507682
+            ],
+            "targetWorld": [
+              1.0487709140808348,
+              1.0819759270074416,
+              -0.3008300412582042
+            ],
+            "targetTriangle": 210,
+            "opposingNormalAngleDeg": 103.90792790366139
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953806965226769,
+          "minimumLocalFaceSidedDistanceM": 0.0001922316748387276,
+          "maximumLocalFaceSidedDistanceM": 0.13839691913321714,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              0.6593326172594953,
+              0.3258450811211214,
+              0.19885894416707695
+            ],
+            "targetWorld": [
+              0.6599243694191821,
+              0.3159088795087092,
+              0.19885894416707695
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.7308976533746456
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953806965226797,
+          "maxSignedBikeUpSupportGapM": 0.033766011837825904,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953806965226797,
+            "sampleBikeFrame": [
+              -0.14467780963154564,
+              0.03593525183069196,
+              0.19885894416707695
+            ],
+            "targetBikeFrame": [
+              -0.14467780963154564,
+              0.025981444865465164,
+              0.19885894416707695
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4131108136327014,
+              0.5508232542296047,
+              0.036065932137693935
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953763698631666,
+          "minimumLocalFaceSidedDistanceM": 0.0005172938772422347,
+          "maximumLocalFaceSidedDistanceM": 0.13839636644819878,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              0.6593326204622976,
+              0.32584503796860825,
+              -0.19885804746608834
+            ],
+            "targetWorld": [
+              0.6599243700497925,
+              0.3159088795462653,
+              -0.19885804746608834
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.7309876174575822
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953763698631712,
+          "maxSignedBikeUpSupportGapM": 0.033765875857131755,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953763698631712,
+            "sampleBikeFrame": [
+              -0.14467780899981786,
+              0.03593520856409688,
+              -0.19885804746608834
+            ],
+            "targetBikeFrame": [
+              -0.14467780899981786,
+              0.025981444865465164,
+              -0.19885804746608834
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.44917675263394174,
+              0.13770363639862798,
+              0.4131196109674303
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 7.625816378728293e-05,
+          "minimumLocalFaceSidedDistanceM": -0.01373237181290917,
+          "maximumLocalFaceSidedDistanceM": 0.1326824938707364,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 914,
+            "world": [
+              0.2626094703694162,
+              0.8010468756869003,
+              0.011974335741296721
+            ],
+            "targetWorld": [
+              0.26260603855281583,
+              0.8011230480918847,
+              0.011973197805485399
+            ],
+            "targetTriangle": 348,
+            "opposingNormalAngleDeg": 123.3740005904008
+          },
+          "supportProjectionSamples": 32,
+          "supportProjectionFraction": 0.08767123287671233,
+          "minSignedBikeUpSupportGapM": -0.05358036111288078,
+          "maxSignedBikeUpSupportGapM": -0.001076339102247581,
+          "supportWitness": {
+            "signedBikeUpGapM": -0.001076339102247581,
+            "sampleBikeFrame": [
+              -0.5209812950544408,
+              0.549142973226998,
+              -0.0025569121232525537
+            ],
+            "targetBikeFrame": [
+              -0.5209812950544408,
+              0.5502193123292456,
+              -0.0025569121232525537
+            ],
+            "targetTriangle": 337,
+            "targetRestNormal": [
+              -0.1271971127064214,
+              0.9912602576431461,
+              -0.034985656152111036
+            ],
+            "barycentric": [
+              0.061606541510838005,
+              0.826414783626636,
+              0.111978674862526
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 0.00011904515947984183,
+          "minimumLocalFaceSidedDistanceM": -0.01361254299100221,
+          "maximumLocalFaceSidedDistanceM": 0.10401612741057972,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 1740,
+            "world": [
+              1.0376734404015964,
+              1.076062920066037,
+              0.3017288849875024
+            ],
+            "targetWorld": [
+              1.0377000080132042,
+              1.0761789445125092,
+              0.30173094407221684
+            ],
+            "targetTriangle": 16,
+            "opposingNormalAngleDeg": 91.09728895335056
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 8.905572948219873e-05,
+          "minimumLocalFaceSidedDistanceM": -0.014832431188196455,
+          "maximumLocalFaceSidedDistanceM": 0.08656466102168549,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 2293,
+            "world": [
+              1.0534395493756912,
+              1.100600329968744,
+              -0.28339087394215123
+            ],
+            "targetWorld": [
+              1.0533560566056641,
+              1.1005707364236084,
+              -0.2833817032064596
+            ],
+            "targetTriangle": 206,
+            "opposingNormalAngleDeg": 47.3097804042158
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006850140041847509,
+          "minimumLocalFaceSidedDistanceM": 0.0007135623188581763,
+          "maximumLocalFaceSidedDistanceM": 0.1496144582776556,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              0.7082247956498567,
+              0.32927005157264594,
+              0.23315637074211434
+            ],
+            "targetWorld": [
+              0.7071891311536255,
+              0.32373749101106375,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.24887957755431
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614740732417137,
+          "maxSignedBikeUpSupportGapM": 0.04530968994080414,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614740732417137,
+            "sampleBikeFrame": [
+              -0.1171294566568587,
+              0.0345961855978823,
+              0.18219406745694192
+            ],
+            "targetBikeFrame": [
+              -0.1171294566568587,
+              0.025981444865465164,
+              0.18219406745694192
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.576606226817643,
+              0.2515180717778335,
+              0.17187570140452357
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 5.551115123125783e-17,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.007395498268240077,
+          "minimumLocalFaceSidedDistanceM": 7.24102771254694e-05,
+          "maximumLocalFaceSidedDistanceM": 0.1494269323305477,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              0.7088451579466476,
+              0.3298974561827488,
+              -0.2333181146471618
+            ],
+            "targetWorld": [
+              0.7071891311536255,
+              0.32373749101106375,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.43333482501205
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614648254570534,
+          "maxSignedBikeUpSupportGapM": 0.04502959254623179,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614648254570534,
+            "sampleBikeFrame": [
+              -0.14298860708694272,
+              0.0345960931200357,
+              -0.21528791120300986
+            ],
+            "targetBikeFrame": [
+              -0.14298860708694272,
+              0.025981444865465164,
+              -0.21528791120300986
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.46752946094995385,
+              0.28054068105610214,
+              0.251929857993944
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "pro-front-landing-recovery",
+      "inputTick": 1228,
+      "stateHash": "205c39747ccc18c4",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00010554178175615426,
+          "minimumLocalFaceSidedDistanceM": -0.013526556662757063,
+          "maximumLocalFaceSidedDistanceM": 0.10862736502262553,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4877,
+            "world": [
+              135.04937766896603,
+              1.1640035006959515,
+              0.3066330870044123
+            ],
+            "targetWorld": [
+              135.0492805337726,
+              1.1640432269923375,
+              0.30662187793368323
+            ],
+            "targetTriangle": 22,
+            "opposingNormalAngleDeg": 100.99844462041509
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 8.125313449299095e-05,
+          "minimumLocalFaceSidedDistanceM": -0.013520827267130024,
+          "maximumLocalFaceSidedDistanceM": 0.10716950226666613,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13758,
+            "world": [
+              135.04938050823444,
+              1.1640036139893288,
+              -0.3066331522257293
+            ],
+            "targetWorld": [
+              135.0493057218279,
+              1.1640341986533445,
+              -0.30662457064147264
+            ],
+            "targetTriangle": 208,
+            "opposingNormalAngleDeg": 101.00711191841327
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 2.842170943040401e-14,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953566164268821,
+          "minimumLocalFaceSidedDistanceM": 0.00019225785606136192,
+          "maximumLocalFaceSidedDistanceM": 0.13839683051713011,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              134.53526334972508,
+              0.4757695511949569,
+              0.19885891885068252
+            ],
+            "targetWorld": [
+              134.53420045528875,
+              0.4658728984879203,
+              0.19885891885068252
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.7309067623978605
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953566164268679,
+          "maxSignedBikeUpSupportGapM": 0.033765738577676174,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953566164268679,
+            "sampleBikeFrame": [
+              -0.14467725097770767,
+              0.03593501102973384,
+              0.19885891885068252
+            ],
+            "targetBikeFrame": [
+              -0.14467725097770767,
+              0.025981444865465164,
+              0.19885891885068252
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.41311106200623804,
+              0.5508171846112483,
+              0.03607175338251367
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 2.842170943040401e-14,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953459114947391,
+          "minimumLocalFaceSidedDistanceM": 0.0005178438056232775,
+          "maximumLocalFaceSidedDistanceM": 0.13839628751180377,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              134.53526334648097,
+              0.4757694438784345,
+              -0.198858098923127
+            ],
+            "targetWorld": [
+              134.53420046347594,
+              0.465872897608622,
+              -0.198858098923127
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.7309746850911405
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.00995345911494816,
+          "maxSignedBikeUpSupportGapM": 0.03376555580746299,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.00995345911494816,
+            "sampleBikeFrame": [
+              -0.14467724274342686,
+              0.035934903980413324,
+              -0.198858098923127
+            ],
+            "targetBikeFrame": [
+              -0.14467724274342686,
+              0.025981444865465164,
+              -0.198858098923127
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4491829048519193,
+              0.13769798901425598,
+              0.41311910613382463
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 0.07484813387602632,
+          "minimumLocalFaceSidedDistanceM": 0.07340277864891528,
+          "maximumLocalFaceSidedDistanceM": 0.3526472812068709,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 796,
+            "world": [
+              134.54383121330866,
+              1.1025391761599805,
+              0.05695753010297133
+            ],
+            "targetWorld": [
+              134.54871852553467,
+              1.0299124876458288,
+              0.039529924432728125
+            ],
+            "targetTriangle": 291,
+            "opposingNormalAngleDeg": 48.3787492056733
+          },
+          "supportProjectionSamples": 183,
+          "supportProjectionFraction": 0.5013698630136987,
+          "minSignedBikeUpSupportGapM": 0.07813839564060088,
+          "maxSignedBikeUpSupportGapM": 0.36175400504670097,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.07813839564060088,
+            "sampleBikeFrame": [
+              -0.2030881528910129,
+              0.6600357541817168,
+              0.05695753010297133
+            ],
+            "targetBikeFrame": [
+              -0.2030881528910129,
+              0.5818973585411159,
+              0.05695753010297133
+            ],
+            "targetTriangle": 293,
+            "targetRestNormal": [
+              -0.1731315752570682,
+              0.9601368799574809,
+              0.21945985827599562
+            ],
+            "barycentric": [
+              0.06006479491314673,
+              0.4500859648563616,
+              0.48984924023049164
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 5.687059059630845e-05,
+          "minimumLocalFaceSidedDistanceM": -0.01389352864812978,
+          "maximumLocalFaceSidedDistanceM": 0.09149935198778543,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 6694,
+            "world": [
+              135.01850798119375,
+              1.169593008510187,
+              0.2986634590205521
+            ],
+            "targetWorld": [
+              135.01845209378482,
+              1.1695838765140012,
+              0.29865821800508524
+            ],
+            "targetTriangle": 13,
+            "opposingNormalAngleDeg": 98.79026127176483
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 0.0001037848308206711,
+          "minimumLocalFaceSidedDistanceM": -0.0156699512898241,
+          "maximumLocalFaceSidedDistanceM": 0.09442643522292853,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 2629,
+            "world": [
+              135.02826928113498,
+              1.1548487739250541,
+              -0.2951310214672537
+            ],
+            "targetWorld": [
+              135.0283088754774,
+              1.1549446904252283,
+              -0.29513291992764573
+            ],
+            "targetTriangle": 214,
+            "opposingNormalAngleDeg": 76.93171496236707
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 2.842170943040401e-14,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006850060488325808,
+          "minimumLocalFaceSidedDistanceM": 0.00071308916907243,
+          "maximumLocalFaceSidedDistanceM": 0.14961435073899126,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              134.58404704866246,
+              0.47104541247579806,
+              0.23315630095303017
+            ],
+            "targetWorld": [
+              134.58210848346218,
+              0.46576127040363724,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.24885771370327
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.008614463269697836,
+          "maxSignedBikeUpSupportGapM": 0.045309913928452517,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614463269697836,
+            "sampleBikeFrame": [
+              -0.11712891118898483,
+              0.034595908135163,
+              0.18219401371384736
+            ],
+            "targetBikeFrame": [
+              -0.11712891118898483,
+              0.025981444865465164,
+              0.18219401371384736
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.5766067540792364,
+              0.2515121454213047,
+              0.17188110049945887
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 2.842170943040401e-14,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.007395337263804402,
+          "minimumLocalFaceSidedDistanceM": 7.294848891941871e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942685419763327,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              134.58476284091245,
+              0.47156126876413273,
+              -0.2333181654420259
+            ],
+            "targetWorld": [
+              134.58210848346218,
+              0.46576127040363724,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.43328750398572
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614342469059011,
+          "maxSignedBikeUpSupportGapM": 0.04502976646151424,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614342469059011,
+            "sampleBikeFrame": [
+              -0.14298804170661583,
+              0.034595787334524175,
+              -0.21528796252021334
+            ],
+            "targetBikeFrame": [
+              -0.14298804170661583,
+              0.025981444865465164,
+              -0.21528796252021334
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4675356036497389,
+              0.2805350418180309,
+              0.2519293545322302
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    },
+    {
+      "id": "pro-rear-landing-recovery",
+      "inputTick": 4788,
+      "stateHash": "c6cb0d514ae64dfe",
+      "measurements": [
+        {
+          "label": "body-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 4.440892098500626e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00020256398279240546,
+          "minimumLocalFaceSidedDistanceM": -0.012457937824152918,
+          "maximumLocalFaceSidedDistanceM": 0.1029185312791974,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 4613,
+            "world": [
+              2.6821459140284034,
+              1.3751046775376674,
+              0.30102284887639297
+            ],
+            "targetWorld": [
+              2.6823315215810117,
+              1.3750252658615507,
+              0.3010394557796506
+            ],
+            "targetTriangle": 21,
+            "opposingNormalAngleDeg": 73.55567761722993
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 673,
+          "targetMatrixResidual": 4.440892098500626e-16,
+          "patchTriangles": 394,
+          "minimumUnsignedGapM": 0.00019788335771995434,
+          "minimumLocalFaceSidedDistanceM": -0.012504208829482647,
+          "maximumLocalFaceSidedDistanceM": 0.10767271116070799,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 13494,
+            "world": [
+              2.6821459072479255,
+              1.3751046522755885,
+              -0.3010228908498026
+            ],
+            "targetWorld": [
+              2.682327424990929,
+              1.3750275497258329,
+              -0.3010391490495365
+            ],
+            "targetTriangle": 210,
+            "opposingNormalAngleDeg": 73.42913310946172
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953809114216183,
+          "minimumLocalFaceSidedDistanceM": 0.00019222799275606106,
+          "maximumLocalFaceSidedDistanceM": 0.13839692611125748,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4725,
+            "world": [
+              2.558861167365392,
+              0.535621572433291,
+              0.19885894821073336
+            ],
+            "targetWorld": [
+              2.5626306565970745,
+              0.5264091207067155,
+              0.19885894821073338
+            ],
+            "targetTriangle": 39,
+            "opposingNormalAngleDeg": 2.730897183941048
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953809114216283,
+          "maxSignedBikeUpSupportGapM": 0.033766012071528295,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953809114216283,
+            "sampleBikeFrame": [
+              -0.14467779232412026,
+              0.03593525397968145,
+              0.19885894821073336
+            ],
+            "targetBikeFrame": [
+              -0.14467779232412026,
+              0.025981444865465164,
+              0.19885894821073336
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.41311077396128426,
+              0.5508230661892481,
+              0.036066159849467594
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "body-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 1124,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 679,
+          "minimumUnsignedGapM": 0.009953763158530603,
+          "minimumLocalFaceSidedDistanceM": 0.0005173106232360192,
+          "maximumLocalFaceSidedDistanceM": 0.13839637224466164,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 9658,
+            "world": [
+              2.5588611852819767,
+              0.5356215301103829,
+              -0.19885804980697708
+            ],
+            "targetWorld": [
+              2.5626306571103252,
+              0.5264091209167242,
+              -0.19885804980697708
+            ],
+            "targetTriangle": 310,
+            "opposingNormalAngleDeg": 2.730987095660018
+          },
+          "supportProjectionSamples": 155,
+          "supportProjectionFraction": 0.13790035587188612,
+          "minSignedBikeUpSupportGapM": 0.009953763158530748,
+          "maxSignedBikeUpSupportGapM": 0.03376587410340626,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.009953763158530748,
+            "sampleBikeFrame": [
+              -0.14467779176956652,
+              0.03593520802399591,
+              -0.19885804980697708
+            ],
+            "targetBikeFrame": [
+              -0.14467779176956652,
+              0.025981444865465164,
+              -0.19885804980697708
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.4491769398358237,
+              0.13770347216268683,
+              0.4131195880014895
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "jeans-posterior-seat",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 365,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 219,
+          "minimumUnsignedGapM": 0.00019981290760790138,
+          "minimumLocalFaceSidedDistanceM": -0.013944141664391332,
+          "maximumLocalFaceSidedDistanceM": 0.13786184612083152,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 254,
+            "world": [
+              2.078819773690627,
+              0.9046077398681404,
+              -0.0023973111654289423
+            ],
+            "targetWorld": [
+              2.0787212435600217,
+              0.9047814296580576,
+              -0.0024043017511092626
+            ],
+            "targetTriangle": 337,
+            "opposingNormalAngleDeg": 55.640406800576486
+          },
+          "supportProjectionSamples": 41,
+          "supportProjectionFraction": 0.11232876712328767,
+          "minSignedBikeUpSupportGapM": -0.050587238665619205,
+          "maxSignedBikeUpSupportGapM": 0.018865565111007454,
+          "supportWitness": {
+            "signedBikeUpGapM": -0.00020157461783310016,
+            "sampleBikeFrame": [
+              -0.4492314306766687,
+              0.5592302116906219,
+              -0.0023973111654289423
+            ],
+            "targetBikeFrame": [
+              -0.4492314306766687,
+              0.559431786308455,
+              -0.0023973111654289423
+            ],
+            "targetTriangle": 337,
+            "targetRestNormal": [
+              -0.1271971127064214,
+              0.9912602576431461,
+              -0.034985656152111036
+            ],
+            "barycentric": [
+              0.057761097256452634,
+              0.1762213223625775,
+              0.7660175803809699
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 754,
+          "targetMatrixResidual": 4.440892098500626e-16,
+          "patchTriangles": 434,
+          "minimumUnsignedGapM": 0.001011977928033318,
+          "minimumLocalFaceSidedDistanceM": -0.013223742526985828,
+          "maximumLocalFaceSidedDistanceM": 0.10960582463195458,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 6694,
+            "world": [
+              2.6718962280331326,
+              1.3666277552797848,
+              0.30315715711132457
+            ],
+            "targetWorld": [
+              2.6717913866945406,
+              1.3676341355438408,
+              0.3031746609585374
+            ],
+            "targetTriangle": 16,
+            "opposingNormalAngleDeg": 111.00165895430882
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "glove-palm-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 954,
+          "targetMatrixResidual": 4.440892098500626e-16,
+          "patchTriangles": 566,
+          "minimumUnsignedGapM": 0.0003567460159025457,
+          "minimumLocalFaceSidedDistanceM": -0.014475906065891424,
+          "maximumLocalFaceSidedDistanceM": 0.09777881649821572,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 3066,
+            "world": [
+              2.6715662621216016,
+              1.3670085823550484,
+              -0.3151382201142839
+            ],
+            "targetWorld": [
+              2.6715223283370495,
+              1.3673625706962882,
+              -0.3151436787499715
+            ],
+            "targetTriangle": 215,
+            "opposingNormalAngleDeg": 117.42676288439893
+          },
+          "supportProjectionSamples": 0,
+          "supportProjectionFraction": 0,
+          "minSignedBikeUpSupportGapM": null,
+          "maxSignedBikeUpSupportGapM": null,
+          "supportWitness": null,
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-L",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 681,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 389,
+          "minimumUnsignedGapM": 0.006850142184430773,
+          "minimumLocalFaceSidedDistanceM": 0.0007135463580776567,
+          "maximumLocalFaceSidedDistanceM": 0.1496144640428332,
+          "witness": {
+            "sampleSource": "vertex",
+            "sampleOrdinal": 4284,
+            "world": [
+              2.604026281015416,
+              0.5546554349552095,
+              0.23315637340392684
+            ],
+            "targetWorld": [
+              2.6048331688410418,
+              0.5490849045054639,
+              0.237060546875
+            ],
+            "targetTriangle": 142,
+            "opposingNormalAngleDeg": 57.248879598212845
+          },
+          "supportProjectionSamples": 262,
+          "supportProjectionFraction": 0.38472834067547723,
+          "minSignedBikeUpSupportGapM": 0.00861474163915632,
+          "maxSignedBikeUpSupportGapM": 0.04530970651286814,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.00861474163915632,
+            "sampleBikeFrame": [
+              -0.11712943895432248,
+              0.034596186504621484,
+              0.18219407078502572
+            ],
+            "targetBikeFrame": [
+              -0.11712943895432248,
+              0.025981444865465164,
+              0.18219407078502572
+            ],
+            "targetTriangle": 39,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.57660619416655,
+              0.25151787944470794,
+              0.17187592638874205
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        },
+        {
+          "label": "boot-sole-R",
+          "status": "numerically-measured-unaccepted-proposal",
+          "sampleCount": 653,
+          "targetMatrixResidual": 0,
+          "patchTriangles": 373,
+          "minimumUnsignedGapM": 0.0073955002420804765,
+          "minimumLocalFaceSidedDistanceM": 7.242708803165262e-05,
+          "maximumLocalFaceSidedDistanceM": 0.14942693788310046,
+          "witness": {
+            "sampleSource": "triangle-centroid",
+            "sampleOrdinal": 10318,
+            "world": [
+              2.604410735608069,
+              0.5554495876318724,
+              -0.23331811682292106
+            ],
+            "targetWorld": [
+              2.6048331688410418,
+              0.5490849045054639,
+              -0.237060546875
+            ],
+            "targetTriangle": 428,
+            "opposingNormalAngleDeg": 76.43333370907776
+          },
+          "supportProjectionSamples": 253,
+          "supportProjectionFraction": 0.3874425727411945,
+          "minSignedBikeUpSupportGapM": 0.008614647716505053,
+          "maxSignedBikeUpSupportGapM": 0.04502960659263888,
+          "supportWitness": {
+            "signedBikeUpGapM": 0.008614647716505053,
+            "sampleBikeFrame": [
+              -0.1429885898900527,
+              0.03459609258197022,
+              -0.21528791353166957
+            ],
+            "targetBikeFrame": [
+              -0.1429885898900527,
+              0.025981444865465164,
+              -0.21528791353166957
+            ],
+            "targetTriangle": 310,
+            "targetRestNormal": [
+              0,
+              1,
+              0
+            ],
+            "barycentric": [
+              0.46752964778937445,
+              0.28054051706264604,
+              0.2519298351479795
+            ]
+          },
+          "limitations": "Vertex+centroid sampling only. Local face-sided distance is not closed-volume penetration. Support uses upward rest faces and exact same-X/Z bike-up projection; nearest underside/side/nose clearance never becomes support. No threshold or pass flag. Automatic rider masks await parent review."
+        }
+      ],
+      "allContactAcceptanceUnmeasured": true
+    }
+  ]
+}
