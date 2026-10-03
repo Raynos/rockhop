@@ -297,7 +297,37 @@ The cheap isolated jeans probe completed before root paused further inference;
 [raw-only receipt](trellis-jeans01/receipt.json) preserves e2322faa/208060vertices/
 417644faces. No jeans appearance sampling or movie follows.
 
-Current task: ONE neutral-lit versus colour-only comparison on existing hoodie
-raw bytes, plus installed inference/decoder settings comparison. Only after
-validating a specific expected improvement may ONE wardrobe quality run proceed
-under unchanged fresh guards. No blind sweep, body benchmark or environment install.
+## Existing-byte surface diagnosis and bounded orientation adapter
+
+[Neutral/colour receipt](trellis-hoodie01/neutral-colour01/receipt.json) pins
+[neutral-lit versus colour-only film](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/neutral-vs-colour-diagnostic.mp4),
+SHA586e4777,133272bytes; Library libfile_5939036140908191925d89ab3528875c v0.
+The two modes hold native geometry/normals/camera fixed. This isolates surface/
+normal/lighting response collectively; it does not prove every contour's cause.
+
+[Installed settings comparison](trellis-settings-review.json) establishes the
+Mac512/12-step default versus our explicit8-step probe. More steps alone do not
+address the measured decoder winding mechanism or supply unseen hood/PBR detail.
+[Cube witness](extractor-cube01/receipt.json) finds6same-direction shared edges
+in actual installed analytic extraction; [cube and sphere controls](orientation-controls01/receipt.json)
+validate the separately named owned DERIVED adapter:6to0 and366to0. Installed/
+shared decoder remains unchanged; no CUDA parity or Mac-only regression claim.
+
+[Normal follow-up receipt](trellis-hoodie01/normal-followup01/receipt.json) pins
+[three-mode played comparison](../../../../../assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-hoodie01/current-flat-recomputed-normals.mp4),
+SHA13f0b780,219492bytes; silent48frames/8fps/6s/960x384. Left current smooth,
+centre flat, right owned derived orientation plus area-weighted smooth normals.
+Vertices and each triangle's vertex set stay identical; raw68bbd4f3 unchanged.
+Winding witnesses120593to2;5416boundary/6171overused edges remain.
+[Four exact sections](trellis-hoodie01/normal-followup01/cross-sections.png) and
+[numeric segments](trellis-hoodie01/normal-followup01/cross-sections.npz) inspect
+geometry at four horizontal planes without fitting, cleanup or deformation.
+CPUguard42.022s exit0,144frame pins pass; zero neural runs. Library delivery
+and root played judgment of this new diagnostic remain pending.
+
+Both controls and follow-up are committed unaccepted checkpoints, edbf64cf and
+91f02f91. Only root judges whether display improved; no mesh/fit/art acceptance.
+ONE wardrobe quality run still requires a validated expected improvement under
+fresh guards. No blind sweep, body benchmark or environment install. This donor
+work supports Agent1's recognizable textured rider and does not block reuse of
+already-liked protected head/material/detail sources on clean fitted geometry.

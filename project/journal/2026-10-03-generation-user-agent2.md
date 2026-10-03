@@ -299,3 +299,15 @@ Limits: UNACCEPTED derived display; root judges played film. Two winding
 witnesses,5416boundary/6171overused edges remain. No vertex movement,
 remesh, installed/shared decoder edit, fit/rig/art or generator-family verdict.
 Four cuts are not a full self-intersection proof; quality run remains unqualified.
+
+Finding: Evidence catalogue now links completed neutral/colour, installed
+settings, analytic adapter controls and one normals/cross-section follow-up.
+Prior hoodie Library receipt now records root's rejected-transfer decision.
+
+Validation: All local targets exist and exact named film hashes/bytes match
+receipts; diagnostic13f0b780 remains awaiting Library/root played judgment.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/README.md
+Ask:276.
+
+Limits: Catalogue maintenance only; no new experiment, inference, acceptance
+or source transfer. Recognizable textured-rider integration stays independent.
