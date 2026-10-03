@@ -1456,3 +1456,17 @@ Ask:284–286 root review correction.
 
 Limits: Frozen render checkpoint; silent encoding/root played judgment
 pending. No new seed, cleanup, recolor, opening usability or winner claim.
+
+Finding: Upright corrected TRELLIS48angle silent movie and one frozen
+ready-artifact handoff now support root front/rear/side/three-quarter review.
+
+Validation: Encodeguard0/1.921s,48frames8fps6s1024x576, onevideo/
+noaudio. Gray/PBR512² panels unchanged before encoding;48distinct frames
+eachcolumn. Raw/material/reference/historical film hashes rechecked.
+Identity XYZ+uniformscale preserves original mesh/material, no new inference.
+MovieSHA256 42ca2a6d03df1a914b4bf65922c878fbb05d081c1174ed06075029d8569dec30.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-upright01/handoff.json
+Ask:284–286 root review correction.
+
+Limits: Root alone judges corrected moving clip. No cavity/opening usability,
+model winner, UVbake, fit/rig/mobile or final-art acceptance claimed.
