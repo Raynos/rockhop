@@ -161,3 +161,10 @@ Round18 silent ordinary Metal replay clears 4810 byte-identical ticks at
 40.083333333s; crash103 restarts in1tick, frame2.090ms/coldboot2190ms/errors0.
 Limits: Registration is neither textured assembly nor garment fit acceptance;
 raw image caches regenerate from the protected immutable donor. Ask274.
+
+Finding: Full-pipeline execution belongs in the existing canonical rider plan,
+with earliest unfinished assembly/appearance stages first and unchanged owners.
+Validation: Ten stages explicitly map construction, UV/PBR, own rig, bounded
+collision, supported gameplay, exact engine, mobile and release to open gates.
+Limits: Execution/status ordering is not milestone acceptance or a new plan;
+root alone judges and no player asset is promoted. Ask274; existing277–279.

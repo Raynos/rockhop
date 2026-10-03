@@ -24,6 +24,31 @@ work with both real bikes. A later hairstyle can replace the buzz cut after the
 baseline face, geometry, rig and runtime pass. No date or commit count substitutes
 for a passed milestone; current accepted milestones are **0/6**.
 
+## Ten-stage execution order and current status
+
+The latest human direction requests the full pipeline in this order. Existing
+rig, native replay and engine diagnostics are useful infrastructure; they do not
+accept incomplete earlier asset stages. Root remains the sole M0–M5 judge.
+Agent 1 builds/integrates; Agent 2 supports appearance; Agent 3 verifies.
+
+| Stage | Current execution/status | Acceptance relationship |
+| --- | --- | --- |
+| 1. Art direction | Protected buzz-cut identity and mustard hoodie/indigo jeans/black gloves/boots are frozen; coherent target coverage remains incomplete | M0 open |
+| 2. Assembled master body/identity | Clean anatomical foundation exists; integrate the exact liked head into one recognizable textured master now | Earliest incomplete asset foundation; M1 open |
+| 3. Fitted separate garment topology | Keep the clean sweatshirt/trouser patterns; complete neckline/hood/cuffs/ankles and qualify remaining underarm/knee/hem faults | M1 open; failed offset/attachment loops stay stopped |
+| 4. UV/PBR look development | Reuse approved head and wardrobe texture/detail sources on this construction; optional generation cannot block assembly | One frozen unaccepted appearance candidate, then played review |
+| 5. Rig and weights | Carry forward the verified own 51-deform-joint bind, including 19 runtime roles; preserve explicit scoped conditioning | Infrastructure verified; whole-rider deformation acceptance open |
+| 6. Collision-aware deformation | One bounded clean-pattern/body collision bend, after rest separation/thickness/pins validation; compare every frame with the frozen corrective control | Qualify bakeable deformation before considering runtime physics |
+| 7. Actual gameplay animations/contacts | Separate bike-free standing/reach/stress from seated/riding/landing with actual hand/foot/saddle support | Synthetic floating crouch is not supported riding; M2/M3 open |
+| 8. Exact engine integration | Reuse native/export parity and actual Garage infrastructure for the same newly frozen textured candidate | Private diagnostics do not promote normal player assets; M4 open |
+| 9. Mobile optimization | Qualify real LOD/PBR texture budgets, disposal/loading and pacing on desktop/WebKit/physical iPhone | Current source detail is an appearance prototype, not a phone budget pass |
+| 10. Visual QA and verified release | Root reviews played clips; bot/stranger attempts and retry, device report and checked deployment to the exact SHA complete shipping | M5 open; release authority remains FINISH_TO_PUBLISH |
+
+Stages 2–4 produce the immediate recognizable textured rider on the liked
+movement foundation. Stage 6's bounded fit experiment proceeds alongside that
+assembly. Later-stage diagnostics may expose faults, but accepted completion
+still follows the order above; all six milestones remain open.
+
 ## What exists and what is left
 
 The [independent audit](../evidence/hero-remaster/independent-audit-2026-10-03/README.md)
