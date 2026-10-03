@@ -610,3 +610,18 @@ Limits: Original sparse-NaN extraction also exists upstream; no Mac
 divergence claim. Derived finite extraction remains unaccepted; excluded
 crossing coverage, moving geometry and material/fit review pending. No
 triangle deletion, component removal, smoothing or geometry cleanup.
+
+Finding: Actual sparse field has no observed zero straddles in excluded
+partial cells; finite-cell extraction retains finite normals.
+
+Validation: Guard exit0 in3.921s. Explicit evaluated values unchanged
+before/after sentinel conversion, unknown prevalues all−10000. Known
+corners of incomplete cells neither straddle zero nor equal zero. Native
+MC35160NaN vertex/normal elements; derivative0nonfinite vertices/normals.
+Original field Cbytes unchanged. No new neural execution or shared edit.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-field-coverage01/
+Ask:284–286.
+
+Limits: Unknown cells may contain unobserved surfaces; this does not prove
+complete geometry. Retain6zero-area triangles and104face component, no
+cleanup. Actual fit/PBR/moving assessment remains root-only and pending.
