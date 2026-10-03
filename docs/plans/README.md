@@ -871,6 +871,6 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Commit and push inventory (ask273):** Original frozen work and generator stop receipt are checkpointed. Stale-index attempt was refused; refreshed private index empty, no work lost. Temporary files and active R2 work remain local; final release/live verification pending. Experimental rider checkpoints remain unaccepted; M0–M5 stay open. Temporary downloads/guards and ignored local masters remain local.
 
-**Agent 1 model role (ask274):** Sole construction/integration owner in new user-agent1 leaves; inherited pins rechecked and headless Blender startup passes. Three-way moving weight diagnostic underway; generation contract and M0–M5 remain open.
+**Agent 1 model role (ask274):** Sole construction/integration owner in user-agent1 leaves. Unaccepted 529-sample/51-joint diagnostic has <0.964µm normalized-four/export disagreement; full-native trimming changes body7.811mm and runtime conditioning changes28.100mm. Played shape/clearance, fitting contract and M0–M5 remain open.
 
 **Agent 2 model role (ask276):** Model/Blender assignment registered in native local session01a101fe-a358-7731-987d-4168614e9ece. Effective full access and own runtime attribution verified; specific lane assignment pending. M0–M5 remain open.
