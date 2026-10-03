@@ -141,3 +141,11 @@ Limits: All five visible relations remain unmeasured. Standing saddle clearance
 is intentional; seated support requires reviewed pelvis/live-saddle surfaces.
 No new candidate/movie, construction, art/device/contact or gate acceptance.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/split-fixtures01-README.md
+
+Finding: Six historical local-corrective comparison films have exact saved
+Library identities/version0; original played packet remains intact.
+Validation: All six local SHA256 values match committed playback evidence;
+all six user.library-file-id/version metadata values match bridge receipts.
+Limits: Delivery only, no remote download verification or rider acceptance;
+no duplicate upload/capture. Riding-named films remain synthetic Garage FK.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/corrective01-garage/library-receipts.json

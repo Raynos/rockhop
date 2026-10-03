@@ -35,6 +35,11 @@ pins videos, controls, effective cameras, old-pixel rays and loader behavior.
 The complete1596-frame source report and PNGs remain in ignored harness output
 with the report hash recorded in the committed summary.
 
+[`library-receipts.json`](library-receipts.json) records the six saved Library
+identities and version0 download links. All original movie hashes and local
+Library identity/version metadata were reverified after bridge delivery.
+This lane performed no upload or reupload; delivery does not accept the films.
+
 ## What the normal loader does
 
 All three actual cloned meshes retain the nearest owning-container integer
