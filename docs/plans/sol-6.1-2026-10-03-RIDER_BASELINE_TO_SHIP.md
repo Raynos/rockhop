@@ -49,6 +49,39 @@ movement foundation. Stage 6's bounded fit experiment proceeds alongside that
 assembly. Later-stage diagnostics may expose faults, but accepted completion
 still follows the order above; all six milestones remain open.
 
+## Four existing lanes and frozen handoffs
+
+Ask287 assigns the three existing agents and dot to four directions; no new
+plan or worker is created. Keep the ten-stage dependency order above. Early
+private rig/engine experiments support unfinished construction, not acceptance.
+The root alone judges played evidence and closes M0–M5.
+
+| Existing lane | Next concrete asset or test | Frozen handoff and limits |
+| --- | --- | --- |
+| Agent 1 — finished character construction | Sew a rounded dropped hood into the native neckline with torso ownership, replace angular hoodie texture transfer with coherent mustard UV/PBR; qualify knee/rest/pins before one cloth comparison | One native master + exact exported GLB + controller, source/donor/recipe hashes, original51bind and protected head fidelity receipt; matched native front/rear continuous films. Construction remains unaccepted until root review; no normal player selection |
+| Agent 2 — local runtime/checkpoint audit and quality assets | Finish actual installed backend/input-contract audit and decode batching qualification; complete the same documented-quality Hunyuan hoodie attempt if guarded decode is safe, then offer one qualified appearance donor | Exact model/checkpoint/wrapper/runtime versions and hashes, original input/provenance, parameters/seed, sampling/decode/extraction receipts, output hash or explicit no-output status. No fused generated anatomy/rig replaces Agent1 construction; assembly continues independently |
+| Agent 3 — actual game integration and mobile QA | Verify current protected-head/own-bind candidate in Three.js; use prepared real-recorded-input Rookie/Pro lean/landing windows for visible palm/sole/saddle support, then current candidate desktop/WebKit/device budgets | Same Agent1 candidate/version/hash/controller, actual loader/stage matrices, materials/LOD, recorded input/camera/bike hashes and contact/every-frame/played receipts. Bike-free anatomical motion and actual supported riding stay separate; private evidence does not promote the player |
+| Root/dot — inputs, research, cloud support and visual acceptance | Supply the coherent high-quality wardrobe/identity reference bank and primary-source backend/input research; use bounded cloud Blender support for a specific construction problem and judge newly delivered clips | Original reference bytes + SHA/version/Library identity, explicit calibrated geometry versus experimental generated2D labels, primary-source links/configuration, exact supported pose/camera and deliverable pins. Research/support do not overwrite owner masters or substitute for played acceptance |
+
+Common handoff contract: metres; native Blender +Xforward/+Zup/−Yleft and
+export glTF +Xforward/+Yup/+Zleft. Record native root +0.65X and runtime
+wrapper −0.65X explicitly; remove the offset once in centered references.
+State rest/trueA/trueT/bike-free pose and controller versions separately from
+actual bike/physics/hand/foot/saddle support. Include immutable source/version/
+SHA, geometry/UV/PBR/51-joint bind and protected head changes, evidence paths
+and unresolved limits. Never silently exchange bind-specific pose fields.
+
+Current protected baseline is donor `b7f4f227…`, approved wardrobe storyboard
+`d48e3913…`, and Agent1 appearance03 raw-normal GLB `010501c3…` with explicit
+source-normals controller. Agent3 independently verifies43712head/294cheek
+source vectors, images/specular factors and51bind; hood/wardrobe and fit remain
+open. Agent2's latest high-quality Hunyuan run completed all30 sampling steps
+but the first guarded decode stopped on memory before an output. The same-seed
+batching repair fits its resource guard; its raw decoder arrays contain35160
+nonfinite vertex elements and are rejected before display/export. No qualified
+donor exists yet. This is not a style/input-quality or model-quality verdict;
+the decoder field/control cause remains under audit. Richer root-supplied input/backend reports do not block ongoing assembly.
+
 ## What exists and what is left
 
 The [independent audit](../evidence/hero-remaster/independent-audit-2026-10-03/README.md)

@@ -235,3 +235,14 @@ cloth simulation, so no physics or baked-deformation improvement is claimed.
 Limits: Ask279 remains open. No gap/density/quality loop or foreignjob changed;
 hood/texture construction proceeds before further valid-rest physics setup.
 Evidence: [failed cloth preflight](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/cloth-knee01/README.md). Ask274; existing279.
+
+Finding: The full pipeline can divide across the four existing lanes while
+keeping one canonical source, dependency order and root acceptance authority.
+Validation: Ask287 reviewed exactly once and marked landed; four concrete
+next assets/tests and source/version/hash/units/axes/pose/evidence/limits
+handoffs added to existing plan. Hunyuan30samplingsteps/firstguardeddecode
+nooutput plus same-seed batching nonfinite raw rejection are accurately labeled. Round27 ordinarysilent4810identicalticks clear
+40.083333333s/crash103/restart1tick/errors0/frame2.410ms/coldboot2616ms passes.
+Limits: Reviewer attribution is native; original bridge writer model unresolved.
+No new plan/worker or closed gate; hood/UV construction continues in owned lane.
+Evidence: [coordination review](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/coordination01/review.json). Ask274/287.
