@@ -28,3 +28,11 @@ crash103, one-tick restart/2.25ms/errors0 passes. Recipe syntax passes.
 Limits: Inputs UNACCEPTED; garment crossings/runtime-conditioning differences,
 likeness, bike support, device and all M0–M5 remain open.
 Evidence: [fitting01](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/fitting01/README.md). Ask274.
+
+Finding: The calibrated fitting01 studio views were fully opaque RGBA, unsafe
+as raw background-free generation inputs. Preserve their pins and emit one
+geometric-alpha derivative with the same body/pose/camera/lights.
+Validation: Transparent-film512square input has alpha0..255,229651zero and
+30762opaque pixels; source/frozen contract unchanged; exact receipt sentAgent2.
+Limits: Experimental donor input only; no wearable/art/motion acceptance.
+Evidence: [alpha amendment](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/fitting01-alpha/README.md). Ask274.
