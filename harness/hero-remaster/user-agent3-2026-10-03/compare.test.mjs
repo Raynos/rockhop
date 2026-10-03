@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { compareMappedPositions, compareThreeWays } from './compare.mjs';
 
-test('reordered and split exported rows retain the actual native witness', () => {
+await test('reordered and split exported rows retain the actual native witness', () => {
   const native = new Float64Array([0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0]);
   const exported = new Float64Array([2, .002, 0, 0, 0, 0, 2, 0, 0]);
   const result = compareMappedPositions(native, exported, [2, 0, 2]);
@@ -15,14 +15,14 @@ test('reordered and split exported rows retain the actual native witness', () =>
   assert(compareMappedPositions(native, exported, [0, 1, 2]).maxM > 1);
 });
 
-test('export agreement does not hide deformation introduced by conditioning', () => {
+await test('export agreement does not hide deformation introduced by conditioning', () => {
   const result = compareThreeWays([0, 0, 0], [.01, 0, 0], [.01, 0, 0], [0]);
   assert.equal(result.conditionedToExport.maxM, 0);
   assert.equal(result.fullToConditioned.maxM, .01);
   assert.equal(result.fullToExport.maxM, .01);
 });
 
-test('invalid source identity and nonfinite samples fail closed', () => {
+await test('invalid source identity and nonfinite samples fail closed', () => {
   for (const id of [undefined, -1, .5, 1])
     assert.throws(() => compareMappedPositions([0, 0, 0], [0, 0, 0], [id]));
   assert.throws(() => compareMappedPositions([NaN, 0, 0], [0, 0, 0], [0]));
