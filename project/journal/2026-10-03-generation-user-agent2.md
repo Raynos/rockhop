@@ -1557,3 +1557,16 @@ Ask:284–286 root contour-band follow-up.
 
 Limits: Fixed region only; exact played-film band causality unresolved.
 No new capture loop, model winner, normal fix, recolor or garment acceptance.
+
+Finding: Pixal owned projection observer math import repaired and pinned
+before the same1536/12each/42 retry.
+
+Validation: Python syntax and recursive lexical global-name check pass,
+no unresolved globals. Worker digest repinned,17canonical records/41source
+pins retained. Runtime24 frozen player/dependency hashes and playerdiff0
+rechecked for round66 coldboot/clear/crash/restart gate identity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-repair01/
+Ask:284–286.
+
+Limits: Unaccepted repaired recipe; retry pending. No extra candidate,
+quality shortcut, new model winner, installed edit or player asset.
