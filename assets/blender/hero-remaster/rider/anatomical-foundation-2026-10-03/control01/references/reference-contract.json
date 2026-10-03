@@ -1,0 +1,89 @@
+{
+  "status": "UNACCEPTED canonical fitting reference; stock gray face is NOT approved identity",
+  "sourceGLBSHA256": "6cf0cdc0e850777b73b7698ec44bd9870288cc04d3e188bb865d89a82fee9d6d",
+  "independentPoseManifestSHA256": "85b0c2aea5b6ae5b08f735ef9f7cfab072fa89de8a6ce7e7b5199901181c0ed4",
+  "heightM": 1.822571873664856,
+  "pose": "True straight-arm45degree A; local TRS measured on independent exported bind; no action/morph/corrective",
+  "rootAdapter": "OBJ points subtract explicit file-root x0.65. OBJ is centred atx0; GLB retainsx0.65.",
+  "referenceOnly": "Proportion matching to approved original remains pending; generation must not silently define a new skeleton.",
+  "actualApprovedHeadDonor": {
+    "path": "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb",
+    "sha256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "mesh": "textured",
+    "vertices": 61393,
+    "instruction": "Preserve exact generated head/materials; do not replace with gray native fitting face."
+  },
+  "outputs": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/A-body-boxers-yup.obj",
+      "pose": "A",
+      "coordinate": "yup",
+      "bytes": 1073744,
+      "sha256": "693a4b0873d3c127b1ad285e000470d9aa139ec86809a66e88d03a5956c25ca9",
+      "vertices": 15024
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/A-body-boxers-zup.obj",
+      "pose": "A",
+      "coordinate": "zup",
+      "bytes": 1073516,
+      "sha256": "8d43b1bdb2f0615970d0e1a66fa4dea65df07d4b36df7696fccc71367db2fdd5",
+      "vertices": 15024
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/T-body-boxers-yup.obj",
+      "pose": "T",
+      "coordinate": "yup",
+      "bytes": 1073746,
+      "sha256": "1d43abd3828ea3ac6115fc19292e14f3db73bf5aceb601f9e4ee28f881f0dfa9",
+      "vertices": 15024
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/T-body-boxers-zup.obj",
+      "pose": "T",
+      "coordinate": "zup",
+      "bytes": 1073518,
+      "sha256": "1cc0fed93b4d4717135fb7fe61fc70bda59923a7061bce2a1d68ea6766dff869",
+      "vertices": 15024
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/neutral-body-boxers-yup.obj",
+      "pose": "neutral",
+      "coordinate": "yup",
+      "bytes": 1073741,
+      "sha256": "b4506f458af1f550feefcaf6712fdc64e3d4367520378dbbbb3106877c3ee640",
+      "vertices": 15024
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/control01/references/neutral-body-boxers-zup.obj",
+      "pose": "neutral",
+      "coordinate": "zup",
+      "bytes": 1073515,
+      "sha256": "3f9227183663cc10cfafa38fb372e165d6f4c7339ef02bb62418b7d8152efbc8",
+      "vertices": 15024
+    }
+  ],
+  "AWorldDirections": {
+    "upperArm.L": [
+      4.5835511247593885e-8,
+      -0.707106797138531,
+      0.7071067598471847
+    ],
+    "forearm.L": [
+      4.348371462903344e-8,
+      -0.7071068415006212,
+      0.7071067583794628
+    ],
+    "upperArm.R": [
+      1.819778723266552e-7,
+      -0.7071068759392041,
+      -0.7071068091387266
+    ],
+    "forearm.R": [
+      -3.3948894095914284e-7,
+      -0.7071069655840427,
+      -0.707106717928565
+    ]
+  },
+  "nativeRuntimeFourWeightParity": "Source/control01 full native weights differ up to7.65mm body and4.72mm garment in held-out raised stress; this OBJ matches exported LBS, not full-weight source."
+}
