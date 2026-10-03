@@ -457,3 +457,24 @@ safety, wearable/fold, mobile or deployment pass. Root's26played judgment
 confirms consumed coverage response but smoothstifftube/widecuff and
 default10mm thickness dependence. Next representation must pass its own
 geometry gate before solving, with original source controls retained.
+
+### Round 29 — primary fitted skinning with consumed collision corrections
+
+Finding: Latest direct human preference makes clean fitted skinning with
+lightweight consumed collision corrections the primary path. Secondary
+motion is bounded and useful only when visible benefit fits mobile cost.
+Full-body cloth is not default; completed26–28controls stay preserved.
+Reconcile the existing rider master/index/asks279and288, with all ten stages
+and root-only M0–M5 acceptance retained. No shrink/hide/bad-fit workaround.
+
+Validation: Narrow preference hunks and Ask288 coordination independently
+reviewed; native actual attribution resolved. Private-index versions stage
+only these additions while preserving foreign working/staged hunks. Earlier
+dependency and ordinary replay gates remain; no code change in this unit.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/architecture29.json
+
+Limits: Original bridge writer identity unresolved; reviewer claims no
+original authorship. Cloth26 still thickness-dependent/costly,27/28failed.
+Footwear08fails added96ankle/toe samples despite original529pass. Body/head/
+51bind retained; fit, all-angle/held-out response, physical phone and exact
+checked deployment remain open. Convex proxy/primary correction is next.

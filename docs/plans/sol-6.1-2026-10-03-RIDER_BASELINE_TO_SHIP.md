@@ -26,6 +26,8 @@ for a passed milestone; current accepted milestones are **0/6**.
 
 ## Ten-stage execution order and current status
 
+Latest human direction (2026-10-03): **properly fitted skinning plus lightweight consumed collision corrections is primary**. Secondary motion is bounded and used only when visibly beneficial within the mobile budget; full-body cloth is not the default. Preserve all completed cloth controls. Bad topology/ease, shrinking garments, hidden defects, unused boxes or intersection-only checks cannot satisfy collision. Compare the same garment/material/camera and actual poses with corrections off/on; all angles and held-out transitions remain required. M0–M5 and the ten-stage dependencies remain open.
+
 The latest human direction requests the full pipeline in this order. Existing
 rig, native replay and engine diagnostics are useful infrastructure; they do not
 accept incomplete earlier asset stages. Root remains the sole M0–M5 judge.
@@ -38,14 +40,14 @@ Agent 1 builds/integrates; Agent 2 supports appearance; Agent 3 verifies.
 | 3. Fitted separate garment topology | Keep the clean sweatshirt/trouser patterns; complete neckline/hood/cuffs/ankles and qualify remaining underarm/knee/hem faults | M1 open; failed offset/attachment loops stay stopped |
 | 4. UV/PBR look development | Reuse approved head and wardrobe texture/detail sources on this construction; optional generation cannot block assembly | One frozen unaccepted appearance candidate, then played review |
 | 5. Rig and weights | Carry forward the verified own 51-deform-joint bind, including 19 runtime roles; preserve explicit scoped conditioning | Infrastructure verified; whole-rider deformation acceptance open |
-| 6. Collision-aware deformation | One bounded clean-pattern/body collision bend, after rest separation/thickness/pins validation; compare every frame with the frozen corrective control | Qualify bakeable deformation before considering runtime physics |
+| 6. Collision-aware deformation | Primary fitted skinning with lightweight consumed body/self/inter-garment corrections; qualify rest, thickness and held-out moving views with response off/on | Bounded beneficial secondary motion only; full-cloth tests remain controls, not the default |
 | 7. Actual gameplay animations/contacts | Separate bike-free standing/reach/stress from seated/riding/landing with actual hand/foot/saddle support | Synthetic floating crouch is not supported riding; M2/M3 open |
 | 8. Exact engine integration | Reuse native/export parity and actual Garage infrastructure for the same newly frozen textured candidate | Private diagnostics do not promote normal player assets; M4 open |
 | 9. Mobile optimization | Qualify real LOD/PBR texture budgets, disposal/loading and pacing on desktop/WebKit/physical iPhone | Current source detail is an appearance prototype, not a phone budget pass |
 | 10. Visual QA and verified release | Root reviews played clips; bot/stranger attempts and retry, device report and checked deployment to the exact SHA complete shipping | M5 open; release authority remains FINISH_TO_PUBLISH |
 
 Stages 2–4 produce the immediate recognizable textured rider on the liked
-movement foundation. Stage 6's bounded fit experiment proceeds alongside that
+movement foundation. Stage 6's bounded skinning/collision comparison proceeds alongside that
 assembly. Later-stage diagnostics may expose faults, but accepted completion
 still follows the order above; all six milestones remain open.
 
@@ -345,3 +347,10 @@ and [LOCAL_CLOUD_RIDER_RECONCILE](../../project/archive/unknown-model-2026-10-03
 are retired by ask259, not successfully completed. Read their explicit provenance
 revision and the distilled attempt catalogue when reusing a method. Retiring these
 plans does not accept geometry, bind, motion, device behavior or publication.
+
+Current limits (asks279/288): full-cloth engine26 retains coverage but root sees a
+smooth stiff tube/wide cuff; implicit10mm body radius and11/15ms p50/p95 cost are
+provisional. Explicit1mm27 and capped28 fail response/volume qualification.
+Footwear08 passes original529poses but fails added96ankle/toe cases; it is
+unaccepted. Protected mannequin/head/51bind remain useful. Phone build and human
+device review, bot/stranger metrics and exact checked release remain open.
