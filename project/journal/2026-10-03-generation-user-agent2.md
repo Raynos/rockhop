@@ -625,3 +625,18 @@ Ask:284–286.
 Limits: Unknown cells may contain unobserved surfaces; this does not prove
 complete geometry. Retain6zero-area triangles and104face component, no
 cleanup. Actual fit/PBR/moving assessment remains root-only and pending.
+
+Finding: Existing localai/weights setup notes now record36matched digests
+and actual Hunyuan sparse-field replay, published only owned descendants.
+
+Validation: Normal hooks pass in active main and existing scoped main
+clones. One owned descendant per remote verified byls-remote:localai
+a3a772fe8f189b93d5e79489443726b7e8a7fdaf,weights
+b4401a7093920039017b34eaaa390bec87dc5d79. Two localai doc/journal paths
+and one weights doc; no foreign history/runtime/checkpoint publication.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/scoped-publication02/
+Ask:284–286.
+
+Limits: Setup correction is not geometry/PBR/asset acceptance. Active
+external checkout histories preserved; no new clone, reset, branch,
+worktree, force push, runtime alteration or credential access.
