@@ -139,3 +139,9 @@ Validation: Bridge once-only 2 uploads return exact movie hashes/bytes/v0 IDs;
 local SHA recheck agrees and movie/controller inputs stay unchanged.
 Limits: Delivery is not art/fit acceptance; root/independentGarage review open.
 Evidence: [Library receipt](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/local-corrective01/review/library-receipt.json). Ask274.
+
+Finding: Regenerable corrective review media and superseded input scratch
+should stay local while exact source/image/movie/Library pins remain tracked.
+Validation: Owned ignore rules match only those caches, authoritative03/02
+inputs and all recipes/receipts remain tracked; local files preserved.
+Limits: Exclusion is housekeeping, no source/candidate/acceptance change. Ask274.
