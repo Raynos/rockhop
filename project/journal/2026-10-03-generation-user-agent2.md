@@ -686,3 +686,19 @@ Ask:284–286.
 Limits: Known analytic geometry only; actual garment UV/paint/export
 preservation still pending. No CUDA parity or acceptance. Do not inspect
 CPU getter before rendering without copy protection; it changes data.
+
+Finding: Existing Hunyuan PBR/DINO route22selected files have fresh matching
+pins;21public digests, ESRGAN local installation pin separately labelled.
+
+Validation: Guard exit0 in13.439s. Pinned Hunyuan2.1/DINO revisions and
+public LFS/small-fileSHA256 match21files. Legacy ESRGAN release publishes
+no digest; existing canonical pin+release length match. Runtime view
+identical for all paint files except exact documented CUDA:0→active
+device substitution in private attn_processor copy. No downloads,
+credentials, source changes, symlink changes or new model load.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-paint-weights01/
+Ask:284–286.
+
+Limits: 21public checks plus1local pin is not22published checks. Matching
+weights do not establish attention/UV/bake/geometry or PBR quality; actual
+garment preservation and painted moving evidence pending.
