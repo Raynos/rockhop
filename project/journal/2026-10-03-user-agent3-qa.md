@@ -717,3 +717,17 @@ Limits: Contactincludes touching/no depth;19samples not swept/enclosure.
 Rootrejectswedgeart/darkinterface seatinginconclusive. No repeatcosmetic
 movie, sourcecleanup/weight/bind/physics/playerchange or loadbearing/
 wholepegsolid/phonepass. Existingqualification/newfrozenwearable continue.
+
+## Round42: required normal gate after wider support qualification
+
+Finding: Requiredthirdround freshnormal source excludes allcandidate
+mappings/reviewadapters; coldboot/clear/crash/instantrestart bothtiers pass.
+
+Validation: Low/high4810ticks/0faults/40.083333333333336s/hash368f1ca5bd9e830a
+andFloat64LEabaaaaaaaa0a4440 exact; bothcrash103/restarttick0/restart1/2ms,
+0pageerrors. Ordinary20modelinventory/runtime/dependency/recipe pinned.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate42/source.json
+
+Limits: No normalplayer sourcechange or private37–41 promotion/artpass.
+Headlessviewport not physicalphone/stranger/deploy; rootwedge rejection
+andexisting supportqualification/newwearablehandoff remaincurrent.
