@@ -1,0 +1,56 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_preprocess_control.py",
+    "--model",
+    "pixal",
+    "--image",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+    "--image-sha256",
+    "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+    "--source-sha256",
+    "6b1c06c7d0dc4b696389416d352ba5dd3522531e595b3f94ae8c9d516c37ec6d",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/pixal-preprocess01/control"
+  ],
+  "controllerPID": 95252,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 78,
+  "limitSeconds": 120.0,
+  "guardSHA256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 34.0,
+      "wiredGiB": 6.4,
+      "freeGiB": 45.3
+    },
+    {
+      "seconds": 0.026,
+      "anonymousGiB": 34.0,
+      "wiredGiB": 6.4,
+      "freeGiB": 45.2
+    },
+    {
+      "seconds": 1.054,
+      "anonymousGiB": 34.3,
+      "wiredGiB": 6.2,
+      "freeGiB": 45.2
+    },
+    {
+      "seconds": 2.085,
+      "anonymousGiB": 34.2,
+      "wiredGiB": 6.4,
+      "freeGiB": 45.2
+    }
+  ],
+  "ownedChildPID": 95255,
+  "exitCode": 0,
+  "elapsedSeconds": 2.909
+}

@@ -1,0 +1,37 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "model": "trellis",
+  "inputPath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+  "inputSHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+  "inputSize": [
+    1254,
+    1254
+  ],
+  "inputMode": "RGBA",
+  "sourcePath": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/pipelines/trellis2_image_to_3d.py",
+  "sourceSHA256": "48a47e42f0d4f116701502730226216364dbfc3fe394343b3646170fe27ccc58",
+  "importedSourcePath": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/pipelines/trellis2_image_to_3d.py",
+  "callSignature": "(self, input: PIL.Image.Image) -> PIL.Image.Image",
+  "recipeSHA256": "59e5a45dc6b814b5e652ca78c4366f99a3922edc3f65203e26f6e10cecdc045a",
+  "preprocessContract": "Long-edge cap1024; original nonopaque RGBA avoids matting; alpha>204 crop; square multiplier1.0; RGB alpha-composite black. Stage DINO512/1024 normalization happens later.",
+  "conditionedImagePath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/trellis-preprocess01/control/conditioned-input.png",
+  "conditionedImageSHA256": "95364858c06d30f09c0bfbf5053d4eeccefbd7904f15d6196617c138df777f40",
+  "conditionedSize": [
+    984,
+    984
+  ],
+  "conditionedMode": "RGB",
+  "RGBChannelMeans": [
+    96.1213067618481,
+    69.40095387996563,
+    26.287755510939256
+  ],
+  "processorTensors": null,
+  "backgroundRemovalCalled": false,
+  "limits": [
+    "No neural models constructed or weights loaded.",
+    "Actual downstream DINO/NAF tensors, FOV estimation and neural noise must be recorded during inference.",
+    "Generated appearance reference has approximate camera/pose; no calibrated multiview or topology input."
+  ]
+}

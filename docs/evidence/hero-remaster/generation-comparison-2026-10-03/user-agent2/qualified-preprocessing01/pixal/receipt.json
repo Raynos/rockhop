@@ -1,0 +1,37 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "model": "pixal",
+  "inputPath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+  "inputSHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+  "inputSize": [
+    1254,
+    1254
+  ],
+  "inputMode": "RGBA",
+  "sourcePath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/pixal3d_image_to_3d.py",
+  "sourceSHA256": "6b1c06c7d0dc4b696389416d352ba5dd3522531e595b3f94ae8c9d516c37ec6d",
+  "importedSourcePath": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/pixal3d_image_to_3d.py",
+  "callSignature": "(self, input: PIL.Image.Image, bg_color: tuple = (0, 0, 0)) -> PIL.Image.Image",
+  "recipeSHA256": "59e5a45dc6b814b5e652ca78c4366f99a3922edc3f65203e26f6e10cecdc045a",
+  "preprocessContract": "Long-edge cap1024; original nonopaque RGBA avoids matting; alpha>204 crop; square multiplier1.1; RGB alpha-composite black. Stage DINO512/1024 normalization happens later.",
+  "conditionedImagePath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/pixal-preprocess01/control/conditioned-input.png",
+  "conditionedImageSHA256": "6e3f33a467d63819288ac9eafbc98ffe2a8ea89f3d36d371ac161eae57a6c5f7",
+  "conditionedSize": [
+    1082,
+    1082
+  ],
+  "conditionedMode": "RGB",
+  "RGBChannelMeans": [
+    79.50216191006591,
+    57.401887208257456,
+    21.743000912256004
+  ],
+  "processorTensors": null,
+  "backgroundRemovalCalled": false,
+  "limits": [
+    "No neural models constructed or weights loaded.",
+    "Actual downstream DINO/NAF tensors, FOV estimation and neural noise must be recorded during inference.",
+    "Generated appearance reference has approximate camera/pose; no calibrated multiview or topology input."
+  ]
+}

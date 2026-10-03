@@ -438,3 +438,18 @@ Ask:286.
 
 Limits: Failed metadata receipt remains unadmitted. Shared runtime/source
 untouched; zero model weights or neural runs.
+
+Finding: Same immutable richer hoodie passes actual model-specific
+preprocessing without background removal: Hunyuan512white, TRELLIS984black,
+Pixal1082black with its own10percent margin.
+
+Validation: Three serial guards exit0; imported source paths/hashes match,
+conditioned pixels independently viewed, copied SHA pins verified. Hunyuan
+image/mask tensors finite,512square; RGBchannel order and actual transforms
+recorded. Original4cd76825 unchanged; no neural model constructed.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-preprocessing01/
+Ask:286.
+
+Limits: DINO/NAF conditioning, actual noise/camera estimation and complete
+neural runs remain pending. Preprocessing validity is not quality/fit
+acceptance or calibrated camera/geometry input.
