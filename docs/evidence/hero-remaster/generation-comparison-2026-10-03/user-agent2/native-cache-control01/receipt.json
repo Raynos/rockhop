@@ -1,0 +1,33 @@
+{
+  "accepted": false,
+  "newModelRuns": 0,
+  "torch": "2.14.0",
+  "torchGitVersion": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "recipeSHA256": "7968c87a3dff5f12d8587ab260d554fb995da6a62267868333569c51634451c7",
+  "actualQKVArchiveSHA256": "d4799a8b76df1ed746297a868aaf08311510bf9e2a770223533ceabeabc470a0",
+  "phase": "cache and actual native attention controls passed",
+  "limits": [
+    "Recorded learned QKV from paint03, not full UNet or texture quality.",
+    "One GiB synthetic inactive allocation, not the real convolution-workspace allocation trace.",
+    "Cache release is process-local, no foreign eviction or shared installation edit."
+  ],
+  "beforeNative": {
+    "allocatedBytes": 427819008,
+    "driverBytes": 1074216960
+  },
+  "nativeSelectedCPUError": 0.00048828125,
+  "beforeCacheRelease": {
+    "allocatedBytes": 427819008,
+    "driverBytes": 2148220928
+  },
+  "afterCacheRelease": {
+    "allocatedBytes": 427819008,
+    "driverBytes": 1074479104
+  },
+  "activeQKVBytesIdentical": true,
+  "nativeBeforeAfterByteIdentical": true,
+  "nativeBeforeAfterMaxError": 0.0,
+  "driverReleasedBytes": 1073741824,
+  "activeAllocationUnchanged": true,
+  "elapsedSeconds": 1.8158999579027295
+}

@@ -930,3 +930,21 @@ Limits: Driver-minus-active difference suggests inactive cache; not GPU
 allocation/ownership trace or proved cause. Need active-tensor and output
 identity across process-local cache release before any real retry. No
 family/style rejection, shared edits, guard raise or quality reduction.
+
+Finding: Native first-attention replay is finite and byte-identical across
+process-local inactive cache release, with active QKV unchanged.
+
+Validation: Guard0/2.664s, no newmodel; actual paint03 archive d4799a8b
+pinned, full[24,5,9216,64]Q/K/V and exactoriginal strides restored. Native
+selectedCPU error0.0004883. Added1GiB unused allocation then released
+1073741824driver bytes; active427819008bytes unchanged, every QKV byte
+identical, full native before/after outputs byte-identical/maxerror0.
+Agent3 runtime24 gate/currentpackage+lock+physics+GltfRider SHA pins match;
+low/high clear4810ticks/exactfinishbytes, crash103, restarttick0 in1/2ms.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/native-cache-control01/
+Ask:284–286.
+
+Limits: Actual operator replay plus synthetic inactive1GiB, not full
+model/workspace allocation trace. Does not establish that paint04's19.2GB
+driver-minus-active difference is entirely reclaimable. Next real recipe
+must record before/after release and keep active counts/quality/guard fixed.
