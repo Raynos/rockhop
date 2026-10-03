@@ -544,3 +544,17 @@ Limits: Unaccepted source checkpoint, not fulldecoder parity. Retain first
 resource stop and all raw sources. Public quality-input direction remains
 a later consistent-camera4/6view comparison after single-view baseline;
 older Pixal paper metrics do not establish current humanoid optimum.
+
+Finding: Same-seed32768query retry fits guard and matches actual condition/
+noise Cbytes, but raw Hunyuan mesh has11720nonfinite vertices; no display.
+
+Validation: Guard/worker exit1 in56.460s after472551v/945034f raw saved;
+peaks57.6anonymous/77.7combinedGiB. Sampler30/requested384/effective380
+unchanged, all3prior captures byte-identical. Sampled-final latents saved
+before decoder;35160nonfinite coordinates trigger admission failure.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-hoodie02/
+Ask:284–286.
+
+Limits: Raw invalid arrays immutable. No geometry/style/PBR/fit judgment,
+implicit NaN cleanup or production promotion. Sparse-field/extractor
+NaN hypothesis needs known control and actual field evidence before fix.

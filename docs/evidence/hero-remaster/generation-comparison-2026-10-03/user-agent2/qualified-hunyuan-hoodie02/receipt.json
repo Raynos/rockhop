@@ -1,0 +1,36 @@
+{
+  "accepted": false,
+  "status": "Native decoder arrays rejected before display/export",
+  "guardExitCode": 1,
+  "guardSeconds": 56.46,
+  "peakAnonymousGiB": 57.6,
+  "peakAnonymousPlusWiredGiB": 77.7,
+  "vertices": 472551,
+  "faces": 945034,
+  "nonfiniteVertexElements": 35160,
+  "allPriorConditionAndNoiseCBytesIdentical": true,
+  "nativeSHA256": "0d2d531e400480bc2df077a91c4db0702675947afaed6e34e6bbead563dd8164",
+  "sampledLatents": {
+    "archiveSHA256": "d077285011d50187dbcfb5be30890d44d4f6be9def3ee51d1b1e4252793a0bb2",
+    "arrays": {
+      "actual-sampled-latents": {
+        "shape": [
+          1,
+          4096,
+          64
+        ],
+        "dtype": "float16",
+        "sha256CBytes": "6595898a97dc5a7f4f23647828b4ddd7b83f4433a6dfe198003ac2ea586da60c",
+        "finite": true,
+        "std": 0.9718910845102445
+      }
+    }
+  },
+  "scratchPath": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-hoodie02",
+  "displayExported": false,
+  "limits": [
+    "Decode-batch repair fits guard; invalid raw output is not a style/input-quality verdict.",
+    "Sparse decoder deliberately emits NaN outside active field; actual cause requires field/control evidence.",
+    "Same initialseed42 asset and sampler/decode grid retained; no extra seed, shared patch or promotion."
+  ]
+}
