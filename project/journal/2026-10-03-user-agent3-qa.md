@@ -548,3 +548,27 @@ include authoredinterfaces; no penetrationdepthorcontinuousvolumeclaim.
 Garmentfails at490whilebodyself0, so bodycounts cannot excusefit. Root/
 nativebuilder receiveactualfailureIDs; protectedbody/head/51bind retained,
 no broadcloth/gap sweep. AllM0–M5/phone/checkedrelease remainopen.
+
+## Round33: private native sole offset mapping
+
+Finding: Legacyengine targets anklewhileonlymeasuringsolemarkers. A
+private rendererchain hook consumes exactfoot-child marker offset and
+targets pegupperpoint beforeunchangedlegIK; proposedBODYcentroid error
+93.001mm→1.309µm, grips≤.000204mm. No Gamebody/source/bind/scale/pelvis
+target changes. Independentnativebone declaredmassproxy improves
+25.645→14.868mm but still differs fromanalyticaldebug≤6.999nm.
+
+Validation: Paired703tick actualRookiebacklean follows sameinput/body
+branch; independentGame1406tickphysics/phase/clock/finish exact.38frame
+paired silentfilm played. Nativeleglengthdriftsubµm measured. Scopedlint/
+freshcurrentmainnormalbuild pass; low/high coldbootclear4810ticks,finish
+40.083333333333336s/abaaaaaaaa0a4440,crash103/restarttick0,1/2ms,zeroerrors.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/sole33/
+
+Limits: UNACCEPTEDmapping/proposalonly. BODY05hemisphere marker is not
+newconstructedbootloadbearing surface; Agent1 owns09/10outsoleancestry.
+Boneproxy uses declaredsegmentfractions, notbodyvolume mass;14.9mm must
+not be hidden byanalyticaldebug. No completefit/allheldout/phone/runtime
+performance/playerpromotion. Primary31projection rejectedbyrootvisible
+window/selffolds; nextbounded SAMErestweight/attachmentsource comparison
+Agent1owned/Agent3independentQA. No projectionincrease/fullclothrestart.

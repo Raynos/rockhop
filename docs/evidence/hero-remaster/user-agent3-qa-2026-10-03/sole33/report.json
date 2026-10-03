@@ -1,0 +1,5872 @@
+{
+  "status": "UNACCEPTED_ACTUAL_SOLE_TARGET_COMPARISON_CAPTURED",
+  "candidate": {
+    "logical": "models/rider-street-mustard.glb",
+    "url": "models/b1e5182f70fcdee7/rider-street-mustard-4234ae0abb06edaa.glb",
+    "bytes": 6739356,
+    "sha256": "4234ae0abb06edaaaeae369d4431e1bb4cffa5c69e316004af6925cd362c18ab"
+  },
+  "sourceReceiptSHA256": "0bf8638d1ebf5f0287412701b20650b1d02bce1e8fe115f96ed1757c8a010f92",
+  "captureSHA256": "63cc0031e4978c2594652e48893e8a729c3376d535a0c3e91f7358904610d8bb",
+  "physicsSourceSHA256": "087797ef768af3f5f292df8d4583bf2d553d98d68311f8b3522c135bbd32beaa",
+  "engineSourceSHA256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+  "errors": [],
+  "loaded": [
+    {
+      "sha256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+      "status": 200
+    },
+    {
+      "sha256": "369e586fe3268929a2955522b68f07408d2085f5f9746d7e56b7b8bc5f93c5aa",
+      "status": 200
+    },
+    {
+      "sha256": "37455064bf7b6012d67e99454cefced5a1aceac3747796f11cdcfe839436a2b7",
+      "status": 200
+    },
+    {
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+      "status": 200
+    },
+    {
+      "sha256": "def6821d99fe7d73442735f1010bdd7e68bd2057d6de25643d91e31429aad72a",
+      "status": 200
+    },
+    {
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86",
+      "status": 200
+    },
+    {
+      "sha256": "a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998",
+      "status": 200
+    },
+    {
+      "sha256": "2bbe14c984d760e593e1a6042185ef0cba1f100d59f0074c8b1ce5ccc2032b42",
+      "status": 200
+    },
+    {
+      "sha256": "fec85cbceaa7ad681f2f0d1cbc42d29d3a2a27f2583ac20329cb58892f966d56",
+      "status": 200
+    },
+    {
+      "sha256": "31229d98fde8964c0d0e42ba109f3bc1f392be9e9cd766b73dde71bbfc1e19bc",
+      "status": 200
+    },
+    {
+      "sha256": "0c14eb52f0aaed2622d7a67c5533a520bbbc96b67071fa32d711b82c00806663",
+      "status": 200
+    },
+    {
+      "sha256": "28a1e706cf13337ab0309dc76fb9f18191edf23eb71f216f3b43109057585321",
+      "status": 200
+    },
+    {
+      "sha256": "4a9801c2a4148f450874b87f65e604a29967924ace1d52341ab5176b7804c6b4",
+      "status": 200
+    },
+    {
+      "sha256": "4234ae0abb06edaaaeae369d4431e1bb4cffa5c69e316004af6925cd362c18ab",
+      "status": 200
+    }
+  ],
+  "cases": [
+    {
+      "id": "off",
+      "fixtureId": "rookie-maximum-backward-lean",
+      "init": {
+        "collision": false,
+        "contract": null
+      },
+      "recordingSHA256": "8cabf8c22d7c5cb8dcf2c2fa6b8a3d2df2ec9f47a8df0f5f5bd4c5d0c0e7a678",
+      "everyInputTickCount": 703,
+      "everyInputTraceSHA256": "3fb199c9b82cf90ac7e9d07562b10e0f18a23fb023a524b6edb9a5138b81c43b",
+      "samples": [
+        {
+          "inputTick": 523,
+          "stateHash": "bf20e6ac57637596",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.854,
+              0.854
+            ],
+            "legStretch": [
+              0.878,
+              0.878
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.810353245012308e-8,
+              2.0369076727829902e-7
+            ],
+            "gripAngleErr": [
+              0.0004476539823777524,
+              0.0006148864088834061
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.4949396735242824e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300069642865869,
+              0.093000410984241
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5723617948060908,
+              "lean": 0.5723617948060908,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9911907732418996,
+                1.064891787962169,
+                0.329999999992274
+              ],
+              "quaternion": [
+                0.28091330410406634,
+                -0.023244619716996623,
+                -0.7811634642480265,
+                0.5570736625486942
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9911906775966496,
+                1.0648916471861405,
+                -0.33000001757555936
+              ],
+              "quaternion": [
+                -0.27297244290533823,
+                -0.36847204614740325,
+                0.7839737367783032,
+                -0.41844892972884473
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7243381817375893,
+                0.3078020261098755,
+                0.20392671719527702
+              ],
+              "quaternion": [
+                0.7373729761745282,
+                0.4960958929723017,
+                0.38633854167704446,
+                -0.2468039977423358
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7243380005530011,
+                0.3078016241685631,
+                -0.20392601622567022
+              ],
+              "quaternion": [
+                0.7590439826671057,
+                0.500351833726664,
+                0.34180270747863994,
+                -0.2380571027721582
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.30937258954842267,
+              0.7517639730220953,
+              1.5316011384072098e-8
+            ],
+            "physicalCOM": [
+              -0.32316236357279277,
+              0.7633423806363263,
+              0
+            ],
+            "residualM": 0.01800603761310937,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540723546667,
+              "shin": 0.45550980956304243
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421917427635,
+              "shin": 0.4555100249945683
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 533,
+          "stateHash": "0227e94838af0154",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.856,
+              0.856
+            ],
+            "legStretch": [
+              0.878,
+              0.878
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.768762505785087e-8,
+              2.0290293610422622e-7
+            ],
+            "gripAngleErr": [
+              0.0004502525032463418,
+              0.0006139639930394221
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.196143203000177e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300069701873402,
+              0.09300041142555365
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5719614457142688,
+              "lean": 0.5719614457142688,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9915639935186251,
+                1.0699642087776513,
+                0.33000000006976415
+              ],
+              "quaternion": [
+                0.28088674685559345,
+                -0.023563350834304126,
+                -0.7817950606705797,
+                0.5561869349561925
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9915638975762333,
+                1.0699640682861473,
+                -0.33000001758927644
+              ],
+              "quaternion": [
+                -0.27339036364895636,
+                -0.36816207334882456,
+                0.7844480372142296,
+                -0.41755910256228473
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7229939839253277,
+                0.31348198095083807,
+                0.20392671823906303
+              ],
+              "quaternion": [
+                0.7379354104909961,
+                0.49525889420972685,
+                0.38661833605313994,
+                -0.24636546942429882
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7229938018488543,
+                0.31348157876882976,
+                -0.20392601626466803
+              ],
+              "quaternion": [
+                0.7596112320971726,
+                0.4994902415295758,
+                0.3420726056793833,
+                -0.23766911359057585
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3092654946887186,
+              0.7528140500500082,
+              1.5397026534389596e-8
+            ],
+            "physicalCOM": [
+              -0.3231351582873701,
+              0.76430086747953,
+              0
+            ],
+            "residualM": 0.01800873518599126,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407238920597,
+              "shin": 0.4555098069327283
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542192030695,
+              "shin": 0.45551002294886717
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 543,
+          "stateHash": "87d6f0c419992b48",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.857,
+              0.857
+            ],
+            "legStretch": [
+              0.876,
+              0.876
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.690003221404311e-8,
+              2.0187968439394266e-7
+            ],
+            "gripAngleErr": [
+              0.00045443707252035086,
+              0.0006120844861924005
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.705593494856314e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300069847481764,
+              0.09300041252660839
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.562068037257118,
+              "lean": 0.562068037257118,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9930219925525982,
+                1.0806299903414782,
+                0.33000000026602605
+              ],
+              "quaternion": [
+                0.2808198071590413,
+                -0.024348121677832374,
+                -0.7833461249142898,
+                0.5540002455593227
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9930218955115551,
+                1.0806298504749994,
+                -0.3300000175276385
+              ],
+              "quaternion": [
+                -0.2744180262943476,
+                -0.3673967199537532,
+                0.7856117331115045,
+                -0.415365541175553
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7202286167897765,
+                0.32566046773688756,
+                0.20392672058993963
+              ],
+              "quaternion": [
+                0.739316398667864,
+                0.49319500023059754,
+                0.3873052294339778,
+                -0.24528420675835974
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7202284324793772,
+                0.3256600651345225,
+                -0.2039260163558121
+              ],
+              "quaternion": [
+                0.761003958928862,
+                0.49736576100888336,
+                0.3427353734240436,
+                -0.236712355083502
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3084672253065645,
+              0.7544741265417504,
+              1.5533897247503592e-8
+            ],
+            "physicalCOM": [
+              -0.3224628625175625,
+              0.7658151736499502,
+              0
+            ],
+            "residualM": 0.01801380610677602,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724405759,
+              "shin": 0.4555098009726337
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421924593924,
+              "shin": 0.4555100182976825
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 553,
+          "stateHash": "aaf6946a4c84fec7",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.858,
+              0.858
+            ],
+            "legStretch": [
+              0.875,
+              0.875
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.632648335423708e-8,
+              2.0136963314863864e-7
+            ],
+            "gripAngleErr": [
+              0.00045708367680130397,
+              0.0006102010023676125
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.395999415898026e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0930006997033045,
+              0.09300041346100012
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5503009905930468,
+              "lean": 0.5503009905930468,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9950836196212535,
+                1.0869354385785872,
+                0.33000000043550504
+              ],
+              "quaternion": [
+                0.2807475583623592,
+                -0.025167501115602203,
+                -0.7849594634646039,
+                0.5517119394172346
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9950835213517748,
+                1.0869352993262151,
+                -0.3300000174360943
+              ],
+              "quaternion": [
+                -0.27548898812736805,
+                -0.36659435404159396,
+                0.7868205010548494,
+                -0.41307121382069645
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7178886303173533,
+                0.33357089237265575,
+                0.2039267224701411
+              ],
+              "quaternion": [
+                0.7407524838888601,
+                0.49103544324896636,
+                0.3880193643591205,
+                -0.24415293623041906
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7178884436496886,
+                0.3335704897098341,
+                -0.20392601642934974
+              ],
+              "quaternion": [
+                0.762452122784735,
+                0.4951428951487621,
+                0.34342468400884785,
+                -0.23571118279827385
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.30758806777663134,
+              0.755525192839727,
+              1.56243802232163e-8
+            ],
+            "physicalCOM": [
+              -0.3216632457090941,
+              0.7667733197290265,
+              0
+            ],
+            "residualM": 0.018017519039771113,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724713481,
+              "shin": 0.45550979617847276
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421927165795,
+              "shin": 0.45551001454731854
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 563,
+          "stateHash": "600ad5fd6dd77ffa",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.857,
+              0.857
+            ],
+            "legStretch": [
+              0.875,
+              0.875
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.621215162206997e-8,
+              2.014657933071533e-7
+            ],
+            "gripAngleErr": [
+              0.0004572903735596324,
+              0.0006097704725581944
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.360361617437954e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300070002408986,
+              0.0930004137032155
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5418927449889411,
+              "lean": 0.5418927449889411,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9964018429373538,
+                1.0864479308102688,
+                0.33000000049000744
+              ],
+              "quaternion": [
+                0.28072615230596076,
+                -0.0254051592529896,
+                -0.7854262348473143,
+                0.5510472328921886
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9964017442123242,
+                1.0864477917041975,
+                -0.33000001737807005
+              ],
+              "quaternion": [
+                -0.27579923051201566,
+                -0.3663610070694056,
+                0.7871699053438447,
+                -0.4124049814956953
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7179317271486285,
+                0.3335537850330833,
+                0.2039267230044725
+              ],
+              "quaternion": [
+                0.7411679053980534,
+                0.4904081829200943,
+                0.3882259134024131,
+                -0.24382437062533047
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7179315398016196,
+                0.33355338235868504,
+                -0.20392601645003114
+              ],
+              "quaternion": [
+                0.7628710136703205,
+                0.4944972626606233,
+                0.3436241026848057,
+                -0.23542037157423343
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3072117262241988,
+              0.755587998332298,
+              1.5634468996782863e-8
+            ],
+            "physicalCOM": [
+              -0.321293839583312,
+              0.7668283177812372,
+              0
+            ],
+            "residualM": 0.018018065877706182,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.448054072471544,
+              "shin": 0.4555097948183699
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542192717908,
+              "shin": 0.4555100134853069
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 573,
+          "stateHash": "ea0596c40adbb0e4",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.896,
+              0.896
+            ],
+            "legStretch": [
+              0.891,
+              0.891
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              8.105793138200057e-8,
+              1.9200700678814743e-7
+            ],
+            "gripAngleErr": [
+              0.0004536747473868688,
+              0.0005922844337728292
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.8560720060539235e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300068405881509,
+              0.09300040174777886
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.714983065928056,
+              "lean": 0.714983065928056,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0091516487899306,
+                1.078446519695605,
+                0.3299999974364896
+              ],
+              "quaternion": [
+                0.280638167763199,
+                -0.026359198307965546,
+                -0.7872946920507429,
+                0.5483744141742694
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.009151562215631,
+                1.0784463844579921,
+                -0.33000002086460606
+              ],
+              "quaternion": [
+                -0.2770428842480476,
+                -0.3654214643092972,
+                0.7885671057557248,
+                -0.4097270437472193
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7255698787005849,
+                0.32746272628692263,
+                0.20392669497969568
+              ],
+              "quaternion": [
+                0.7428305030907402,
+                0.4878861510916409,
+                0.3890524128476482,
+                -0.24250341001969947
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7255696885188943,
+                0.32746234210927727,
+                -0.20392601522013482
+              ],
+              "quaternion": [
+                0.7645473857068934,
+                0.4919014349858111,
+                0.3444222962225918,
+                -0.2342510473737894
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.32679019532727477,
+              0.7558930601639063,
+              1.544898563460642e-8
+            ],
+            "physicalCOM": [
+              -0.34076189106371396,
+              0.7672284541214516,
+              0
+            ],
+            "residualM": 0.017991649116315737,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407259750557,
+              "shin": 0.45550986422800177
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421937980294,
+              "shin": 0.45551006738783845
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 583,
+          "stateHash": "3f3e3a837188e757",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.949,
+              0.949
+            ],
+            "legStretch": [
+              0.919,
+              0.919
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.147332406946423e-8,
+              1.7406329860670681e-7
+            ],
+            "gripAngleErr": [
+              0.000451582888739804,
+              0.000571275050497219
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.998801995169606e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064556027723,
+              0.09300037331086566
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0160433548647845,
+                1.08638885768992,
+                0.3299999906845302
+              ],
+              "quaternion": [
+                0.28090499957046494,
+                -0.023344420712948604,
+                -0.7813613033558886,
+                0.5567961495219484
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0160432965704211,
+                1.0863887357435138,
+                -0.3300000274135954
+              ],
+              "quaternion": [
+                -0.27310330805994487,
+                -0.3683750764093991,
+                0.7841223164793245,
+                -0.4181704461888943
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7486529843362584,
+                0.3294887012422567,
+                0.2039266278863236
+              ],
+              "quaternion": [
+                0.7375491465121204,
+                0.4958339400958005,
+                0.38642615946488756,
+                -0.24666678838086412
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7486528020021428,
+                0.3294883533879379,
+                -0.20392601140854316
+              ],
+              "quaternion": [
+                0.759221667408813,
+                0.5000821781066095,
+                0.3418872238247789,
+                -0.23793568033703366
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3589565604323084,
+              0.7509220039074433,
+              1.524369738249709e-8
+            ],
+            "physicalCOM": [
+              -0.37237948921754443,
+              0.762698775206395,
+              0
+            ],
+            "residualM": 0.017856857489534965,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540727211831,
+              "shin": 0.4555100157044781
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542194915155,
+              "shin": 0.45551018398989707
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 593,
+          "stateHash": "3701804f932d5ac0",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.96,
+              0.96
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.141170787793802e-8,
+              1.6724692188944653e-7
+            ],
+            "gripAngleErr": [
+              0.00046411279714679067,
+              0.0005721462142939449
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.8492212338091075e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064252547303,
+              0.09300037108638581
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0106947172245055,
+                1.0848510123086796,
+                0.32999998947903875
+              ],
+              "quaternion": [
+                0.2810963936816008,
+                -0.020913977628425978,
+                -0.7765162990274941,
+                0.5635333856496796
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.01069466578664,
+                1.0848508951756206,
+                -0.33000002936113
+              ],
+              "quaternion": [
+                -0.269906982623548,
+                -0.37072339430781437,
+                0.7804761930844883,
+                -0.42493674880257065
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7564368548836072,
+                0.32343889615284527,
+                0.20392662276105206
+              ],
+              "quaternion": [
+                0.7332330473678178,
+                0.5021945121468298,
+                0.3842782627717484,
+                -0.24999979237663267
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7564366785648561,
+                0.3234385482164719,
+                -0.20392601105020136
+              ],
+              "quaternion": [
+                0.7548680144221421,
+                0.5066300471068887,
+                0.3398165085278163,
+                -0.2408837931768818
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3624953529428483,
+              0.753263581909288,
+              1.649075249228124e-8
+            ],
+            "physicalCOM": [
+              -0.3760513018846248,
+              0.7648258537174835,
+              0
+            ],
+            "residualM": 0.017817123254861202,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540728209154,
+              "shin": 0.4555100264747584
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421957570096,
+              "shin": 0.45551019223513395
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 603,
+          "stateHash": "42d1647076fa776c",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.959,
+              0.959
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.151923243287572e-8,
+              1.682787242642688e-7
+            ],
+            "gripAngleErr": [
+              0.00046303633518908087,
+              0.0005745979253671417
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.73508371765363e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064266640477,
+              0.09300037118208307
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0076934738640404,
+                1.0826468963060047,
+                0.32999998963289884
+              ],
+              "quaternion": [
+                0.2811433486040227,
+                -0.0202730169630655,
+                -0.7752294118374392,
+                0.5653023951734248
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0076934223771796,
+                1.082646778028031,
+                -0.3300000290500058
+              ],
+              "quaternion": [
+                -0.26906102385119757,
+                -0.371337823718194,
+                0.7795052993993794,
+                -0.42671514671546773
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.756910318670821,
+                0.3200832732106418,
+                0.20392662309511073
+              ],
+              "quaternion": [
+                0.7320861270458869,
+                0.5038649915430151,
+                0.38370725948734546,
+                -0.25087530365751326
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7569101439530663,
+                0.3200829242674996,
+                -0.20392601107590458
+              ],
+              "quaternion": [
+                0.7537109247227873,
+                0.508349845507498,
+                0.3392664052635342,
+                -0.2416579559580486
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3621410176179538,
+              0.7527840470642038,
+              1.623022457273096e-8
+            ],
+            "physicalCOM": [
+              -0.3756703109208993,
+              0.764386276255292,
+              0
+            ],
+            "residualM": 0.017822836460000664,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407280420245,
+              "shin": 0.4555100257851418
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542195616127,
+              "shin": 0.4555101917142846
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 613,
+          "stateHash": "b375acf34bd7ba3b",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.160697991738616e-8,
+              1.6915688358820655e-7
+            ],
+            "gripAngleErr": [
+              0.00046130810839787196,
+              0.0005744542866186807
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.69499042460287e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064278808978,
+              0.09300037127013422
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0075987096941688,
+                1.0834199048146742,
+                0.3299999897634951
+              ],
+              "quaternion": [
+                0.28112220711565494,
+                -0.02056411593260046,
+                -0.775814338963261,
+                0.5644993802551089
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0075986574503033,
+                1.083419785896349,
+                -0.3300000287943735
+              ],
+              "quaternion": [
+                -0.26944538191790085,
+                -0.3710590249428082,
+                0.7799467241461695,
+                -0.42590777853224143
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.75523689884614,
+                0.3213772643036662,
+                0.20392662331591124
+              ],
+              "quaternion": [
+                0.7326074620496623,
+                0.503106683387105,
+                0.3839668227176135,
+                -0.25047785977519144
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7552367234092061,
+                0.3213769155915132,
+                -0.2039260110943517
+              ],
+              "quaternion": [
+                0.7542368919723649,
+                0.5075691425018801,
+                0.3395164482944043,
+                -0.24130653277158504
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.361831808285916,
+              0.7523896546157139,
+              1.6025454451732563e-8
+            ],
+            "physicalCOM": [
+              -0.37533771496635543,
+              0.7640263440820896,
+              0
+            ],
+            "residualM": 0.01782756452793968,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407279036835,
+              "shin": 0.4555100253219072
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542195499893,
+              "shin": 0.4555101913624426
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 623,
+          "stateHash": "eeaae4bd870b77ad",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.157745651833784e-8,
+              1.6912235523762717e-7
+            ],
+            "gripAngleErr": [
+              0.0004607564851650891,
+              0.0005725901745628712
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.678310194477739e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064286453008,
+              0.09300037132931321
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0094450022581987,
+                1.0855058284020143,
+                0.3299999897677016
+              ],
+              "quaternion": [
+                0.2810697894544009,
+                -0.021268558374500396,
+                -0.7772265679917966,
+                0.5625533761898961
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0094449494091355,
+                1.0855057097617185,
+                -0.33000002880170337
+              ],
+              "quaternion": [
+                -0.27037442920476995,
+                -0.37038261587611626,
+                0.7810116222515071,
+                -0.4239518539652642
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7532669355382365,
+                0.3247376196433126,
+                0.20392662340420653
+              ],
+              "quaternion": [
+                0.7338659732992229,
+                0.5012691537148534,
+                0.3845933272093898,
+                -0.24951483394477503
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7532667583518506,
+                0.32473727176697825,
+                -0.20392601110005826
+              ],
+              "quaternion": [
+                0.7555065184560499,
+                0.5056773918110308,
+                0.3401201087727176,
+                -0.2404549291685653
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36180230415999703,
+              0.7524479306132599,
+              1.6039237558333058e-8
+            ],
+            "physicalCOM": [
+              -0.37531150588387346,
+              0.7640812226010942,
+              0
+            ],
+            "residualM": 0.017827843775702498,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407279173726,
+              "shin": 0.4555100251329799
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542195511423,
+              "shin": 0.4555101912151731
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 633,
+          "stateHash": "507daa0f931e28bc",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.92,
+              0.92
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.13852001660904e-8,
+              1.694176976508295e-7
+            ],
+            "gripAngleErr": [
+              0.00046028610119651825,
+              0.0005716220735402207
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.500477046803544e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064364487187,
+              0.0930003719047114
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0112991751195572,
+                1.087107699162161,
+                0.3299999898885301
+              ],
+              "quaternion": [
+                0.2810273407072834,
+                -0.021822280644647585,
+                -0.7783334022143213,
+                0.5610209925862648
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.011299121381386,
+                1.0871075803611825,
+                -0.33000002869634626
+              ],
+              "quaternion": [
+                -0.27110363225500145,
+                -0.3698492053864176,
+                0.7818453765366455,
+                -0.42241228202069975
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7521253719751522,
+                0.3273548407804965,
+                0.20392662467002284
+              ],
+              "quaternion": [
+                0.7348521494697997,
+                0.4998223203646507,
+                0.3850841748781253,
+                -0.24875662474356428
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7521251934159149,
+                0.3273544928647048,
+                -0.2039260111817826
+              ],
+              "quaternion": [
+                0.7565013376741915,
+                0.5041879118103754,
+                0.3405931930905438,
+                -0.23978435792652306
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36132667429417964,
+              0.7526109656086829,
+              1.6030073859453486e-8
+            ],
+            "physicalCOM": [
+              -0.3748489155379969,
+              0.7642358493991337,
+              0
+            ],
+            "residualM": 0.01783224414922963,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407279145193,
+              "shin": 0.4555100224818865
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542195507592,
+              "shin": 0.4555101891785431
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 643,
+          "stateHash": "301f88282290c172",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.956,
+              0.956
+            ],
+            "legStretch": [
+              0.92,
+              0.92
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.128406370600255e-8,
+              1.6955177276845278e-7
+            ],
+            "gripAngleErr": [
+              0.0004601889267264162,
+              0.0005714878114304686
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.402603119871512e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064405819465,
+              0.09300037220275671
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0123767318643824,
+                1.0873891275430478,
+                0.3299999899476533
+              ],
+              "quaternion": [
+                0.281016016413214,
+                -0.021967628391249532,
+                -0.7786234649463655,
+                0.5606183541072568
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0123766777992922,
+                1.0873890086211582,
+                -0.3300000286474539
+              ],
+              "quaternion": [
+                -0.271294886457178,
+                -0.36970893780634767,
+                0.7820637487821211,
+                -0.4220078455763558
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7524171607260173,
+                0.3279047725778758,
+                0.2039266254270154
+              ],
+              "quaternion": [
+                0.7351105653294752,
+                0.49944217969146626,
+                0.38521278343648413,
+                -0.2485574212821604
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7524169818138937,
+                0.3279044243948997,
+                -0.20392601122960746
+              ],
+              "quaternion": [
+                0.7567620085265303,
+                0.5037965728825038,
+                0.3407171670809075,
+                -0.23960816693586687
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36108230021403304,
+              0.7526836114030501,
+              1.6031380310928267e-8
+            ],
+            "physicalCOM": [
+              -0.3746120496559845,
+              0.7643026042686234,
+              0
+            ],
+            "residualM": 0.017834099785873317,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407279083415,
+              "shin": 0.4555100209042708
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542195501159,
+              "shin": 0.4555101879711035
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 653,
+          "stateHash": "25b3cdb088af13ab",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.956,
+              0.956
+            ],
+            "legStretch": [
+              0.92,
+              0.92
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.128187528405634e-8,
+              1.6961776459962889e-7
+            ],
+            "gripAngleErr": [
+              0.00046029446699893825,
+              0.0005720355736934795
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.399185709110264e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064409070949,
+              0.09300037222946951
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.012447705733059,
+                1.0865791035834291,
+                0.3299999899606969
+              ],
+              "quaternion": [
+                0.2810304642126739,
+                -0.02178202031707263,
+                -0.7782530222544912,
+                0.5611324909570647
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0124476517747636,
+                1.086578984531647,
+                -0.33000002862753414
+              ],
+              "quaternion": [
+                -0.27105064482700225,
+                -0.36988803975725026,
+                0.7817848537821342,
+                -0.4225242847724979
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7534915977403959,
+                0.3267520192029261,
+                0.20392662544538429
+              ],
+              "quaternion": [
+                0.7347805373387368,
+                0.49992759006168025,
+                0.3850485342803694,
+                -0.24881178894592218
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7534914192846319,
+                0.32675167077680994,
+                -0.20392601123139475
+              ],
+              "quaternion": [
+                0.7564290998621122,
+                0.5042962831293566,
+                0.3405588382932677,
+                -0.23983314883363238
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3610457108393036,
+              0.7526734522980373,
+              1.60182554503549e-8
+            ],
+            "physicalCOM": [
+              -0.3745743831323082,
+              0.764294574323834,
+              0
+            ],
+            "residualM": 0.017834669919856192,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407279026843,
+              "shin": 0.45551002086094916
+            },
+            {
+              "side": "R",
+              "thigh": 0.448054219549656,
+              "shin": 0.4555101879361331
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 663,
+          "stateHash": "f332cb27af27829a",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.873,
+              0.873
+            ],
+            "legStretch": [
+              0.91,
+              0.91
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.700374432319759e-8,
+              1.9934750752198083e-7
+            ],
+            "gripAngleErr": [
+              0.00048005986014912377,
+              0.000622632974820473
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.0555622645860292e-14,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300070211055521,
+              0.09300042078596626
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.6298832068340074,
+              "lean": 0.6298832068340074,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9819112661222439,
+                1.0826755241615713,
+                0.33000000068950874
+              ],
+              "quaternion": [
+                0.2812975734436449,
+                -0.018007384169903495,
+                -0.7706500419301946,
+                0.571529469753803
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9819111733138732,
+                1.0826753828183795,
+                -0.3300000169801065
+              ],
+              "quaternion": [
+                -0.26606070794672215,
+                -0.37349337100621255,
+                0.7760423039358535,
+                -0.43298114477852584
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7434470599149535,
+                0.3161703018933239,
+                0.20392664565431434
+              ],
+              "quaternion": [
+                0.7280031207482391,
+                0.5097464826446685,
+                0.38167368965110343,
+                -0.25395841851619816
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7434468828996809,
+                0.3161699447246591,
+                -0.2039260132876084
+              ],
+              "quaternion": [
+                0.7495910953670856,
+                0.5144053963261573,
+                0.3373085204843109,
+                -0.24438332130115675
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.31503665486596305,
+              0.7736849503679539,
+              1.4208834239835127e-8
+            ],
+            "physicalCOM": [
+              -0.3289053680941143,
+              0.7855937590934317,
+              0
+            ],
+            "residualM": 0.01828006925219141,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540730900459,
+              "shin": 0.45550996762591417
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542198311026,
+              "shin": 0.4555101427972654
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 673,
+          "stateHash": "718b2568afbd26de",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.795,
+              0.795
+            ],
+            "legStretch": [
+              0.914,
+              0.914
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.934043700954853e-8,
+              1.7102247613015573e-7
+            ],
+            "gripAngleErr": [
+              0.0005480138399230685,
+              0.0006089559168084928
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.7456228845164114e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300087786221545,
+              0.09300061053491132
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8058317255366971,
+                1.0236014898498995,
+                0.3300000058646211
+              ],
+              "quaternion": [
+                0.28141289994037394,
+                -0.016106366774494445,
+                -0.7667709432527188,
+                0.5767232269021269
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8058316083915029,
+                1.0236015429276302,
+                -0.32999999861189283
+              ],
+              "quaternion": [
+                -0.26353108335380027,
+                -0.3752825531320406,
+                0.7730992244191678,
+                -0.43821443901951074
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5777469837576779,
+                0.2539434465366597,
+                0.20392652932715025
+              ],
+              "quaternion": [
+                0.7245423125049035,
+                0.5146538828611199,
+                0.37994896057114264,
+                -0.25653196650062093
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5777467929182535,
+                0.2539431989173182,
+                -0.20392600927140386
+              ],
+              "quaternion": [
+                0.7460984714294542,
+                0.5194582412272042,
+                0.3356493359183643,
+                -0.24665686362188619
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.07203426950949156,
+              0.9369854181235638,
+              1.4638153356116845e-8
+            ],
+            "physicalCOM": [
+              0.04882657479270891,
+              0.9439398981194587,
+              0
+            ],
+            "residualM": 0.024227296301504563,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540740798316,
+              "shin": 0.4555100524221795
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542207653078,
+              "shin": 0.4555101687372715
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 683,
+          "stateHash": "bcf252b961dd2230",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.884,
+              0.884
+            ],
+            "legStretch": [
+              0.935,
+              0.935
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              8.796681071176873e-8,
+              1.57490975507893e-7
+            ],
+            "gripAngleErr": [
+              0.00066083037530959,
+              0.000531482713170679
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 1.0730126200268775e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300078069464375,
+              0.09300054268531219
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8733038068494252,
+                1.0659838193900546,
+                0.33000000042441474
+              ],
+              "quaternion": [
+                -0.2777299194141178,
+                0.048152277743567215,
+                0.8276406857062036,
+                -0.4853434932584037
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8733037011644706,
+                1.0659838686116143,
+                -0.330000018511011
+              ],
+              "quaternion": [
+                -0.30468142942771764,
+                -0.3427168949218437,
+                0.8181028894713666,
+                -0.3470186922423619
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.47645849985685285,
+                0.36819434942613516,
+                0.20392645433645154
+              ],
+              "quaternion": [
+                0.7785970982793536,
+                0.4285053212466793,
+                0.40676973188360654,
+                -0.2114432099321539
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.47645828402726637,
+                0.36819416999107873,
+                -0.20392600003933592
+              ],
+              "quaternion": [
+                0.8005610136772835,
+                0.4308153275392051,
+                0.3616320319927175,
+                -0.20669395337425894
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.05412240045591358,
+              0.9661093408853784,
+              1.6159216802320853e-8
+            ],
+            "physicalCOM": [
+              0.029112729775816804,
+              0.9717809156386656,
+              0
+            ],
+            "residualM": 0.025644695118275027,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407356871807,
+              "shin": 0.4555101740454435
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542203740482,
+              "shin": 0.45551026688882335
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 693,
+          "stateHash": "c9d717e1127ebc37",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.837,
+              0.837
+            ],
+            "legStretch": [
+              0.943,
+              0.943
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.32817426264225e-8,
+              1.6364188392943692e-7
+            ],
+            "gripAngleErr": [
+              0.0006484330962723482,
+              0.00048666254609103314
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.6079503409755432e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300073861592953,
+              0.09300051052229567
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9081992610224437,
+                1.1164702235596171,
+                0.3300000058511078
+              ],
+              "quaternion": [
+                -0.2741865106629166,
+                0.06537821860356559,
+                0.85629654375412,
+                -0.43278590571951836
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9081991566664499,
+                1.1164702990615403,
+                -0.33000000604719554
+              ],
+              "quaternion": [
+                -0.32546075128365726,
+                -0.3230494486055298,
+                0.8381511696563834,
+                -0.29532513501481833
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.42757952209094513,
+                0.4735075336075656,
+                0.20392642741197653
+              ],
+              "quaternion": [
+                0.803803902983907,
+                0.37911680747495313,
+                0.4191638958678084,
+                -0.1856648807207137
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.4275792950612107,
+                0.47350738675847015,
+                -0.20392599635445832
+              ],
+              "quaternion": [
+                0.8258691215893669,
+                0.38005258624694616,
+                0.37381793439907646,
+                -0.18373972751984444
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.03841965978501469,
+              0.9584037147054473,
+              1.458949121582731e-8
+            ],
+            "physicalCOM": [
+              0.014572228347829896,
+              0.9656741597788735,
+              0
+            ],
+            "residualM": 0.024931092188613595,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407385197293,
+              "shin": 0.45551022066416497
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805422063028727,
+              "shin": 0.4555103068833187
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 703,
+          "stateHash": "29068d65ced63fa3",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.832,
+              0.832
+            ],
+            "legStretch": [
+              0.947,
+              0.947
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.190579087694573e-8,
+              1.6392058038930607e-7
+            ],
+            "gripAngleErr": [
+              0.0006376542679311225,
+              0.00045089882298030725
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 3.797288418562426e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300071699833384,
+              0.09300049544893063
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9289383525921968,
+                1.132659937955235,
+                0.33000000614159597
+              ],
+              "quaternion": [
+                -0.270176420655164,
+                0.08035706536652529,
+                0.8788001458724278,
+                -0.3850424859413156
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9289382586607963,
+                1.132660026162538,
+                -0.3300000045376175
+              ],
+              "quaternion": [
+                -0.34273307672820574,
+                -0.30466324272173784,
+                0.8531231310573625,
+                -0.24878754737041828
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.38061813772312847,
+                0.5463653640399482,
+                0.20392641107616713
+              ],
+              "quaternion": [
+                0.8234356181640565,
+                0.3343412437378236,
+                0.4287395026343125,
+                -0.16233373743749616
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.38061790250427335,
+                0.5463652451058111,
+                -0.20392599399181627
+              ],
+              "quaternion": [
+                0.8455189096387221,
+                0.3340621844440593,
+                0.3833563314945531,
+                -0.1629051059147916
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.040439589537272516,
+              0.9585069566360775,
+              1.4239030462527558e-8
+            ],
+            "physicalCOM": [
+              0.016545028533401757,
+              0.9661128435835734,
+              0
+            ],
+            "residualM": 0.02507587609289039,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407381586915,
+              "shin": 0.45551024342148533
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542206141184,
+              "shin": 0.4555103251723209
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        }
+      ],
+      "clip": {
+        "sha256": "28a7a8d16f8b8c4cda49a8e80433127e1e499dd5b06f0e9238adbf948fa2612c",
+        "frames": 19,
+        "fps": 12
+      }
+    },
+    {
+      "id": "on",
+      "fixtureId": "rookie-maximum-backward-lean",
+      "init": {
+        "collision": true,
+        "contract": {
+          "offsets": [
+            [
+              0.08215712631885308,
+              -0.0671381821746353,
+              0.003926097730634626
+            ],
+            [
+              0.08215691404753145,
+              -0.06713838793552512,
+              -0.003926032518372202
+            ]
+          ],
+          "limits": [
+            "Targets the existing05 BODY-centroid sole marker, not a qualified new boot outsole support patch.",
+            "Only private renderer chain ankle target changes. No Game physics, source bind/weights/topology, pelvis target or pose clips mutate.",
+            "Sole target mismatch must not be hidden by limb scaling or physics displacement. Native bone segment lengths/reach, actual marker error and independent COM proxy are measured."
+          ]
+        }
+      },
+      "recordingSHA256": "8cabf8c22d7c5cb8dcf2c2fa6b8a3d2df2ec9f47a8df0f5f5bd4c5d0c0e7a678",
+      "everyInputTickCount": 703,
+      "everyInputTraceSHA256": "3fb199c9b82cf90ac7e9d07562b10e0f18a23fb023a524b6edb9a5138b81c43b",
+      "samples": [
+        {
+          "inputTick": 523,
+          "stateHash": "bf20e6ac57637596",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.854,
+              0.854
+            ],
+            "legStretch": [
+              0.828,
+              0.828
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.810353245012308e-8,
+              2.0369076727829902e-7
+            ],
+            "gripAngleErr": [
+              0.0004476539823777524,
+              0.0006148864088834061
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.4949396735242824e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.000001302942563697387,
+              8.919500778017435e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5723617948060908,
+              "lean": 0.5723617948060908,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9911907732418996,
+                1.064891787962169,
+                0.329999999992274
+              ],
+              "quaternion": [
+                0.28091330410406634,
+                -0.023244619716996623,
+                -0.7811634642480265,
+                0.5570736625486942
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9911906775966496,
+                1.0648916471861405,
+                -0.33000001757555936
+              ],
+              "quaternion": [
+                -0.27297244290533823,
+                -0.36847204614740325,
+                0.7839737367783032,
+                -0.41844892972884473
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6332041079773021,
+                0.2896855653543214,
+                0.20000068778596597
+              ],
+              "quaternion": [
+                0.7373729746473994,
+                0.4960958975457615,
+                0.3863385468132446,
+                -0.24680399424102434
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6332041169155058,
+                0.2896853407496786,
+                -0.19999999322608786
+              ],
+              "quaternion": [
+                0.7590439831523014,
+                0.5003518320430397,
+                0.34180270375934413,
+                -0.2380571051240178
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.31558234477204794,
+              0.7505513273685195,
+              1.640014200441839e-8
+            ],
+            "physicalCOM": [
+              -0.32316236357279277,
+              0.7633423806363263,
+              0
+            ],
+            "residualM": 0.014868346536174954,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724274487,
+              "shin": 0.45550962222094976
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421921808086,
+              "shin": 0.45550988464205605
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 533,
+          "stateHash": "0227e94838af0154",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.856,
+              0.856
+            ],
+            "legStretch": [
+              0.827,
+              0.827
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.768762505785087e-8,
+              2.0290293610422622e-7
+            ],
+            "gripAngleErr": [
+              0.0004502525032463418,
+              0.0006139639930394221
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.196143203000177e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000013040058155499814,
+              8.925240269082876e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5719614457142688,
+              "lean": 0.5719614457142688,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9915639935186251,
+                1.0699642087776513,
+                0.33000000006976415
+              ],
+              "quaternion": [
+                0.28088674685559345,
+                -0.023563350834304126,
+                -0.7817950606705797,
+                0.5561869349561925
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9915638975762333,
+                1.0699640682861473,
+                -0.33000001758927644
+              ],
+              "quaternion": [
+                -0.27339036364895636,
+                -0.36816207334882456,
+                0.7844480372142296,
+                -0.41755910256228473
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.631819032301751,
+                0.29557238132148744,
+                0.2000006882890359
+              ],
+              "quaternion": [
+                0.7379354089869085,
+                0.49525889875456114,
+                0.3866183409759267,
+                -0.2463654661956123
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6318190406976241,
+                0.2955721563202742,
+                -0.19999999326402018
+              ],
+              "quaternion": [
+                0.7596112326301938,
+                0.49949023975769263,
+                0.3420726017701161,
+                -0.23766911599384816
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3154872537007832,
+              0.751571307467849,
+              1.6467303263611316e-8
+            ],
+            "physicalCOM": [
+              -0.3231351582873701,
+              0.76430086747953,
+              0
+            ],
+            "residualM": 0.014850324665029953,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724665663,
+              "shin": 0.45550962069523876
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542192497627,
+              "shin": 0.4555098834729839
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 543,
+          "stateHash": "87d6f0c419992b48",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.857,
+              0.857
+            ],
+            "legStretch": [
+              0.826,
+              0.826
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.690003221404311e-8,
+              2.0187968439394266e-7
+            ],
+            "gripAngleErr": [
+              0.00045443707252035086,
+              0.0006120844861924005
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.705593494856314e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.00000130627853245518,
+              8.937399870300955e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.562068037257118,
+              "lean": 0.562068037257118,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9930219925525982,
+                1.0806299903414782,
+                0.33000000026602605
+              ],
+              "quaternion": [
+                0.2808198071590413,
+                -0.024348121677832374,
+                -0.7833461249142898,
+                0.5540002455593227
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9930218955115551,
+                1.0806298504749994,
+                -0.3300000175276385
+              ],
+              "quaternion": [
+                -0.2744180262943476,
+                -0.3673967199537532,
+                0.7856117331115045,
+                -0.415365541175553
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6289550024477376,
+                0.3082606716322338,
+                0.2000006893956807
+              ],
+              "quaternion": [
+                0.7393163972183893,
+                0.4931950047101212,
+                0.3873052338490031,
+                -0.24528420418105715
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6289550094634716,
+                0.30826044578787815,
+                -0.19999999335540206
+              ],
+              "quaternion": [
+                0.7610039595745616,
+                0.4973657590273244,
+                0.34273536906572166,
+                -0.23671235761385168
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.314717602266951,
+              0.7531597988294869,
+              1.6571681187450144e-8
+            ],
+            "physicalCOM": [
+              -0.3224628625175625,
+              0.7658151736499502,
+              0
+            ],
+            "residualM": 0.01483737066317324,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540725289192,
+              "shin": 0.455509617306372
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421929962136,
+              "shin": 0.455509880861763
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 553,
+          "stateHash": "aaf6946a4c84fec7",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.858,
+              0.858
+            ],
+            "legStretch": [
+              0.825,
+              0.825
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.632648335423708e-8,
+              2.0136963314863864e-7
+            ],
+            "gripAngleErr": [
+              0.00045708367680130397,
+              0.0006102010023676125
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.395999415898026e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000013080375760778565,
+              8.946758042134362e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5503009905930468,
+              "lean": 0.5503009905930468,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9950836196212535,
+                1.0869354385785872,
+                0.33000000043550504
+              ],
+              "quaternion": [
+                0.2807475583623592,
+                -0.025167501115602203,
+                -0.7849594634646039,
+                0.5517119394172346
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9950835213517748,
+                1.0869352993262151,
+                -0.3300000174360943
+              ],
+              "quaternion": [
+                -0.27548898812736805,
+                -0.36659435404159396,
+                0.7868205010548494,
+                -0.41307121382069645
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6265150196824698,
+                0.3167040945963703,
+                0.2000006902676287
+              ],
+              "quaternion": [
+                0.7407524824868486,
+                0.4910354476822434,
+                0.38801936834533596,
+                -0.24415293419156187
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6265150252553545,
+                0.316703868099251,
+                -0.19999999343094846
+              ],
+              "quaternion": [
+                0.7624521235215296,
+                0.4951428929928855,
+                0.34342467928701303,
+                -0.23571118544360176
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.31386217446996484,
+              0.7541515608462422,
+              1.6635610890994995e-8
+            ],
+            "physicalCOM": [
+              -0.3216632457090941,
+              0.7667733197290265,
+              0
+            ],
+            "residualM": 0.014837975258551628,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407256879487,
+              "shin": 0.4555096146155363
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542193311429,
+              "shin": 0.45550987877986115
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 563,
+          "stateHash": "600ad5fd6dd77ffa",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.857,
+              0.857
+            ],
+            "legStretch": [
+              0.825,
+              0.825
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.621215162206997e-8,
+              2.014657933071533e-7
+            ],
+            "gripAngleErr": [
+              0.0004572903735596324,
+              0.0006097704725581944
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.360361617437954e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000013085422850716215,
+              8.949405964500922e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5418927449889411,
+              "lean": 0.5418927449889411,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9964018429373538,
+                1.0864479308102688,
+                0.33000000049000744
+              ],
+              "quaternion": [
+                0.28072615230596076,
+                -0.0254051592529896,
+                -0.7854262348473143,
+                0.5510472328921886
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9964017442123242,
+                1.0864477917041975,
+                -0.33000001737807005
+              ],
+              "quaternion": [
+                -0.27579923051201566,
+                -0.3663610070694056,
+                0.7871699053438447,
+                -0.4124049814956953
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6265296903398515,
+                0.3168417158249569,
+                0.20000069051849642
+              ],
+              "quaternion": [
+                0.7411679040094621,
+                0.4904081873406921,
+                0.38822591726887656,
+                -0.24382436873707858
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6265296955000375,
+                0.31684148913887583,
+                -0.1999999934510309
+              ],
+              "quaternion": [
+                0.7628710144323967,
+                0.49449726045578896,
+                0.34362409786236453,
+                -0.23542037425258575
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.31349244265643755,
+              0.7541977893120826,
+              1.663814962540866e-8
+            ],
+            "physicalCOM": [
+              -0.321293839583312,
+              0.7668283177812372,
+              0
+            ],
+            "residualM": 0.014845606872777107,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540725716007,
+              "shin": 0.4555096138490805
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542193329697,
+              "shin": 0.4555098781882155
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 573,
+          "stateHash": "ea0596c40adbb0e4",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.896,
+              0.896
+            ],
+            "legStretch": [
+              0.838,
+              0.838
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              8.105793138200057e-8,
+              1.9200700678814743e-7
+            ],
+            "gripAngleErr": [
+              0.0004536747473868688,
+              0.0005922844337728292
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.8560720060539235e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000012813320306084609,
+              8.805967972041587e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.714983065928056,
+              "lean": 0.714983065928056,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0091516487899306,
+                1.078446519695605,
+                0.3299999974364896
+              ],
+              "quaternion": [
+                0.280638167763199,
+                -0.026359198307965546,
+                -0.7872946920507429,
+                0.5483744141742694
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.009151562215631,
+                1.0784463844579921,
+                -0.33000002086460606
+              ],
+              "quaternion": [
+                -0.2770428842480476,
+                -0.3654214643092972,
+                0.7885671057557248,
+                -0.4097270437472193
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6340563439872504,
+                0.3113724112700885,
+                0.20000067713259054
+              ],
+              "quaternion": [
+                0.7428305012614805,
+                0.4878861565807486,
+                0.389052421810093,
+                -0.24250340035256646
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6340563487660116,
+                0.3113721942304828,
+                -0.19999999234690563
+              ],
+              "quaternion": [
+                0.7645473851396031,
+                0.4919014351109828,
+                0.34442229677215747,
+                -0.23425104878837272
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3327422633508974,
+              0.7553153712523679,
+              1.6849493816254585e-8
+            ],
+            "physicalCOM": [
+              -0.34076189106371396,
+              0.7672284541214516,
+              0
+            ],
+            "residualM": 0.014360918219184794,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540725695367,
+              "shin": 0.45550965381185005
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542193575566,
+              "shin": 0.4555099087320778
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 583,
+          "stateHash": "3f3e3a837188e757",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.949,
+              0.949
+            ],
+            "legStretch": [
+              0.864,
+              0.864
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.147332406946423e-8,
+              1.7406329860670681e-7
+            ],
+            "gripAngleErr": [
+              0.000451582888739804,
+              0.000571275050497219
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.998801995169606e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000012137352840836176,
+              8.442503168050221e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0160433548647845,
+                1.08638885768992,
+                0.3299999906845302
+              ],
+              "quaternion": [
+                0.28090499957046494,
+                -0.023344420712948604,
+                -0.7813613033558886,
+                0.5567961495219484
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0160432965704211,
+                1.0863887357435138,
+                -0.3300000274135954
+              ],
+              "quaternion": [
+                -0.27310330805994487,
+                -0.3683750764093991,
+                0.7841223164793245,
+                -0.4181704461888943
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6575060597028841,
+                0.31143707094579837,
+                0.20000064456076333
+              ],
+              "quaternion": [
+                0.7375491438244021,
+                0.495833947066519,
+                0.38642617978347604,
+                -0.24666676226566614
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6575060700424767,
+                0.3114368776710926,
+                -0.19999998919708903
+              ],
+              "quaternion": [
+                0.7592216640867012,
+                0.500082182813732,
+                0.3418872358905264,
+                -0.23793567903063095
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36417600265786015,
+              0.7520222115697768,
+              1.760267242384428e-8
+            ],
+            "physicalCOM": [
+              -0.37237948921754443,
+              0.762698775206395,
+              0
+            ],
+            "residualM": 0.01346425648975791,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724314668,
+              "shin": 0.45550974567078983
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421930043726,
+              "shin": 0.4555099775095695
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 593,
+          "stateHash": "3701804f932d5ac0",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.96,
+              0.96
+            ],
+            "legStretch": [
+              0.865,
+              0.865
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.141170787793802e-8,
+              1.6724692188944653e-7
+            ],
+            "gripAngleErr": [
+              0.00046411279714679067,
+              0.0005721462142939449
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.8492212338091075e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.000001208694380748918,
+              8.415720802799151e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0106947172245055,
+                1.0848510123086796,
+                0.32999998947903875
+              ],
+              "quaternion": [
+                0.2810963936816008,
+                -0.020913977628425978,
+                -0.7765162990274941,
+                0.5635333856496796
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.01069466578664,
+                1.0848508951756206,
+                -0.33000002936113
+              ],
+              "quaternion": [
+                -0.269906982623548,
+                -0.37072339430781437,
+                0.7804761930844883,
+                -0.42493674880257065
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6656158158294017,
+                0.30381335450011754,
+                0.2000006421055025
+              ],
+              "quaternion": [
+                0.7332330445729207,
+                0.5021945191356909,
+                0.38427828426572924,
+                -0.24999976523892584
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.665615829528421,
+                0.3038131632066591,
+                -0.19999998891100992
+              ],
+              "quaternion": [
+                0.7548680108598029,
+                0.5066300521224386,
+                0.33981652159155257,
+                -0.2408837918788203
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36765833977458223,
+              0.754485667165684,
+              1.8927829568884252e-8
+            ],
+            "physicalCOM": [
+              -0.3760513018846248,
+              0.7648258537174835,
+              0
+            ],
+            "residualM": 0.013317705166693826,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407251536644,
+              "shin": 0.45550975233902496
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421937555256,
+              "shin": 0.4555099824245272
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 603,
+          "stateHash": "42d1647076fa776c",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.959,
+              0.959
+            ],
+            "legStretch": [
+              0.865,
+              0.865
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.151923243287572e-8,
+              1.682787242642688e-7
+            ],
+            "gripAngleErr": [
+              0.00046303633518908087,
+              0.0005745979253671417
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.73508371765363e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000012090530988488912,
+              8.417575342875116e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0076934738640404,
+                1.0826468963060047,
+                0.32999998963289884
+              ],
+              "quaternion": [
+                0.2811433486040227,
+                -0.0202730169630655,
+                -0.7752294118374392,
+                0.5653023951734248
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0076934223771796,
+                1.082646778028031,
+                -0.3300000290500058
+              ],
+              "quaternion": [
+                -0.26906102385119757,
+                -0.371337823718194,
+                0.7795052993993794,
+                -0.42671514671546773
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6661797169524485,
+                0.30004378849868935,
+                0.20000064227669295
+              ],
+              "quaternion": [
+                0.7320861242368495,
+                0.5038649985147017,
+                0.38370728102627877,
+                -0.2508752766518283
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6661797315387415,
+                0.3000435971372345,
+                -0.19999998892902912
+              ],
+              "quaternion": [
+                0.7537109211599259,
+                0.5083498505050097,
+                0.3392664183140739,
+                -0.24165795473236582
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.367307326683927,
+              0.7539993812504294,
+              1.8662256118066878e-8
+            ],
+            "physicalCOM": [
+              -0.3756703109208993,
+              0.764386276255292,
+              0
+            ],
+            "residualM": 0.01333518253306771,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724991197,
+              "shin": 0.4555097518905453
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421936157225,
+              "shin": 0.455509982099936
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 613,
+          "stateHash": "b375acf34bd7ba3b",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.865,
+              0.865
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.160697991738616e-8,
+              1.6915688358820655e-7
+            ],
+            "gripAngleErr": [
+              0.00046130810839787196,
+              0.0005744542866186807
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.69499042460287e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000012092611961189932,
+              8.418625649607064e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0075987096941688,
+                1.0834199048146742,
+                0.3299999897634951
+              ],
+              "quaternion": [
+                0.28112220711565494,
+                -0.02056411593260046,
+                -0.775814338963261,
+                0.5644993802551089
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0075986574503033,
+                1.083419785896349,
+                -0.3300000287943735
+              ],
+              "quaternion": [
+                -0.26944538191790085,
+                -0.3710590249428082,
+                0.7799467241461695,
+                -0.42590777853224143
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6644649918992648,
+                0.3015257164274332,
+                0.20000064238149282
+              ],
+              "quaternion": [
+                0.7326074592497782,
+                0.5031066903627445,
+                0.3839668441776704,
+                -0.25047783279700536
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6644650060893558,
+                0.30152552495938967,
+                -0.19999998894311782
+              ],
+              "quaternion": [
+                0.7542368884234316,
+                0.5075691474864461,
+                0.33951646128991975,
+                -0.24130653152736592
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36700058787832823,
+              0.7535996223302245,
+              1.8453748794246966e-8
+            ],
+            "physicalCOM": [
+              -0.37533771496635543,
+              0.7640263440820896,
+              0
+            ],
+            "residualM": 0.01335006421606556,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724856463,
+              "shin": 0.4555097516072692
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542193500256,
+              "shin": 0.45550998189394587
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 623,
+          "stateHash": "eeaae4bd870b77ad",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.865,
+              0.865
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.157745651833784e-8,
+              1.6912235523762717e-7
+            ],
+            "gripAngleErr": [
+              0.0004607564851650891,
+              0.0005725901745628712
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.678310194477739e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.000001209333152531604,
+              8.419021891083467e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0094450022581987,
+                1.0855058284020143,
+                0.3299999897677016
+              ],
+              "quaternion": [
+                0.2810697894544009,
+                -0.021268558374500396,
+                -0.7772265679917966,
+                0.5625533761898961
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0094449494091355,
+                1.0855057097617185,
+                -0.33000002880170337
+              ],
+              "quaternion": [
+                -0.27037442920476995,
+                -0.37038261587611626,
+                0.7810116222515071,
+                -0.4239518539652642
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6623966710173653,
+                0.3053412779169379,
+                0.20000064241862425
+              ],
+              "quaternion": [
+                0.7338659705181733,
+                0.5012691607048763,
+                0.3845933485504619,
+                -0.2495148069263181
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6623966842404592,
+                0.3053410863571063,
+                -0.1999999889486783
+              ],
+              "quaternion": [
+                0.7555065149239691,
+                0.5056773967902968,
+                0.3401201217101179,
+                -0.2404549278626785
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36697222195888923,
+              0.753655268139899,
+              1.8466102319134037e-8
+            ],
+            "physicalCOM": [
+              -0.37531150588387346,
+              0.7640812226010942,
+              0
+            ],
+            "residualM": 0.013350812065517127,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724874783,
+              "shin": 0.4555097514999227
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542193514907,
+              "shin": 0.45550998181278557
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 633,
+          "stateHash": "507daa0f931e28bc",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.865,
+              0.865
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.13852001660904e-8,
+              1.694176976508295e-7
+            ],
+            "gripAngleErr": [
+              0.00046028610119651825,
+              0.0005716220735402207
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.500477046803544e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.000001210595558741035,
+              8.425867205326779e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0112991751195572,
+                1.087107699162161,
+                0.3299999898885301
+              ],
+              "quaternion": [
+                0.2810273407072834,
+                -0.021822280644647585,
+                -0.7783334022143213,
+                0.5610209925862648
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.011299121381386,
+                1.0871075803611825,
+                -0.33000002869634626
+              ],
+              "quaternion": [
+                -0.27110363225500145,
+                -0.3698492053864176,
+                0.7818453765366455,
+                -0.42241228202069975
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6611793836623684,
+                0.3083167129944063,
+                0.20000064302547374
+              ],
+              "quaternion": [
+                0.7348521467143024,
+                0.49982232734872034,
+                0.3850841959362422,
+                -0.24875659797815086
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6611793961200233,
+                0.30831652094912537,
+                -0.19999998901574548
+              ],
+              "quaternion": [
+                0.7565013342006589,
+                0.5041879167140779,
+                0.34059320578468,
+                -0.23978435662093814
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3665104937541757,
+              0.7537884309335138,
+              1.8438496369489743e-8
+            ],
+            "physicalCOM": [
+              -0.3748489155379969,
+              0.7642358493991337,
+              0
+            ],
+            "residualM": 0.013367042696162052,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724918801,
+              "shin": 0.45550974984994874
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421935410056,
+              "shin": 0.4555099805902933
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 643,
+          "stateHash": "301f88282290c172",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.956,
+              0.956
+            ],
+            "legStretch": [
+              0.864,
+              0.864
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.128406370600255e-8,
+              1.6955177276845278e-7
+            ],
+            "gripAngleErr": [
+              0.0004601889267264162,
+              0.0005714878114304686
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.402603119871512e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000012113941361749319,
+              8.430198866306116e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0123767318643824,
+                1.0873891275430478,
+                0.3299999899476533
+              ],
+              "quaternion": [
+                0.281016016413214,
+                -0.021967628391249532,
+                -0.7786234649463655,
+                0.5606183541072568
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0123766777992922,
+                1.0873890086211582,
+                -0.3300000286474539
+              ],
+              "quaternion": [
+                -0.271294886457178,
+                -0.36970893780634767,
+                0.7820637487821211,
+                -0.4220078455763558
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6614515275171883,
+                0.3089607310476392,
+                0.20000064340184406
+              ],
+              "quaternion": [
+                0.7351105625834262,
+                0.4994421866707493,
+                0.38521280436065375,
+                -0.24855739467411014
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.661451539785879,
+                0.3089605387111373,
+                -0.19999998905300703
+              ],
+              "quaternion": [
+                0.7567620050822697,
+                0.5037965777450506,
+                0.34071717964892856,
+                -0.23960816564676607
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.366273991011981,
+              0.7538446115923348,
+              1.842925292016781e-8
+            ],
+            "physicalCOM": [
+              -0.3746120496559845,
+              0.7643026042686234,
+              0
+            ],
+            "residualM": 0.013375082533146706,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540724938243,
+              "shin": 0.45550974884160467
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542193550865,
+              "shin": 0.4555099798463413
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 653,
+          "stateHash": "25b3cdb088af13ab",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.956,
+              0.956
+            ],
+            "legStretch": [
+              0.864,
+              0.864
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.128187528405634e-8,
+              1.6961776459962889e-7
+            ],
+            "gripAngleErr": [
+              0.00046029446699893825,
+              0.0005720355736934795
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.399185709110264e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000012113936820593538,
+              8.430191393567133e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.012447705733059,
+                1.0865791035834291,
+                0.3299999899606969
+              ],
+              "quaternion": [
+                0.2810304642126739,
+                -0.02178202031707263,
+                -0.7782530222544912,
+                0.5611324909570647
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0124476517747636,
+                1.086578984531647,
+                -0.33000002862753414
+              ],
+              "quaternion": [
+                -0.27105064482700225,
+                -0.36988803975725026,
+                0.7817848537821342,
+                -0.4225242847724979
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6625510679225217,
+                0.3076878336598721,
+                0.2000006434050378
+              ],
+              "quaternion": [
+                0.7347805345887694,
+                0.49992759703475,
+                0.38504855522453646,
+                -0.24881176236419902
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6625510804383583,
+                0.3076876413410053,
+                -0.19999998905524877
+              ],
+              "quaternion": [
+                0.7564290964163813,
+                0.5042962879883409,
+                0.34055885086476695,
+                -0.23983314756255458
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.36623778903359744,
+              0.7538334147235602,
+              1.8415634299613626e-8
+            ],
+            "physicalCOM": [
+              -0.3745743831323082,
+              0.764294574323834,
+              0
+            ],
+            "residualM": 0.013376646117371752,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407249340473,
+              "shin": 0.4555097488262981
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421935471496,
+              "shin": 0.4555099798338014
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 663,
+          "stateHash": "f332cb27af27829a",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.873,
+              0.873
+            ],
+            "legStretch": [
+              0.861,
+              0.861
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.700374432319759e-8,
+              1.9934750752198083e-7
+            ],
+            "gripAngleErr": [
+              0.00048005986014912377,
+              0.000622632974820473
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.0555622645860292e-14,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0000011951111218195213,
+              8.340581599164496e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.6298832068340074,
+              "lean": 0.6298832068340074,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9819112661222439,
+                1.0826755241615713,
+                0.33000000068950874
+              ],
+              "quaternion": [
+                0.2812975734436449,
+                -0.018007384169903495,
+                -0.7706500419301946,
+                0.571529469753803
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9819111733138732,
+                1.0826753828183795,
+                -0.3300000169801065
+              ],
+              "quaternion": [
+                -0.26606070794672215,
+                -0.37349337100621255,
+                0.7760423039358535,
+                -0.43298114477852584
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6530511286288819,
+                0.29467152587480244,
+                0.20000064180817553
+              ],
+              "quaternion": [
+                0.7280031187868977,
+                0.5097464876499332,
+                0.38167370003251955,
+                -0.25395840806592695
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6530511324472786,
+                0.2946713424640679,
+                -0.19999999235194516
+              ],
+              "quaternion": [
+                0.7495910946274221,
+                0.5144053966433493,
+                0.3373085217350014,
+                -0.24438332255265813
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              -0.3209263814811355,
+              0.7731914041096412,
+              1.590910501210116e-8
+            ],
+            "physicalCOM": [
+              -0.3289053680941143,
+              0.7855937590934317,
+              0
+            ],
+            "residualM": 0.014747292514705912,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.44805407305262773,
+              "shin": 0.4555097387422043
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421980308613,
+              "shin": 0.45550996926848464
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 673,
+          "stateHash": "718b2568afbd26de",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.795,
+              0.795
+            ],
+            "legStretch": [
+              0.932,
+              0.932
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.934043700954853e-8,
+              1.7102247613015573e-7
+            ],
+            "gripAngleErr": [
+              0.0005480138399230685,
+              0.0006089559168084928
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.7456228845164114e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              6.514851769809627e-7,
+              5.225866161796231e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8058317255366971,
+                1.0236014898498995,
+                0.3300000058646211
+              ],
+              "quaternion": [
+                0.28141289994037394,
+                -0.016106366774494445,
+                -0.7667709432527188,
+                0.5767232269021269
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8058316083915029,
+                1.0236015429276302,
+                -0.32999999861189283
+              ],
+              "quaternion": [
+                -0.26353108335380027,
+                -0.3752825531320406,
+                0.7730992244191678,
+                -0.43821443901951074
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.4876497256277078,
+                0.23122489476802552,
+                0.20000037746077992
+              ],
+              "quaternion": [
+                0.7245422659287708,
+                0.5146540003843072,
+                0.3799489795459739,
+                -0.25653208596183
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.4876497207992874,
+                0.23122488484515658,
+                -0.19999999462096305
+              ],
+              "quaternion": [
+                0.7460984616928564,
+                0.5194582809470747,
+                0.33564931202170745,
+                -0.24665689345554445
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.05512869041770279,
+              0.9323950781940822,
+              1.0647590840268117e-8
+            ],
+            "physicalCOM": [
+              0.04882657479270891,
+              0.9439398981194587,
+              0
+            ],
+            "residualM": 0.013152928512702987,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540734538196,
+              "shin": 0.4555101205358247
+            },
+            {
+              "side": "R",
+              "thigh": 0.4480542200008794,
+              "shin": 0.4555102464372962
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 683,
+          "stateHash": "bcf252b961dd2230",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.884,
+              0.884
+            ],
+            "legStretch": [
+              0.953,
+              0.953
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              8.796681071176873e-8,
+              1.57490975507893e-7
+            ],
+            "gripAngleErr": [
+              0.00066083037530959,
+              0.000531482713170679
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 1.0730126200268775e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              5.041137444167864e-7,
+              4.3302762342105114e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8733038068494252,
+                1.0659838193900546,
+                0.33000000042441474
+              ],
+              "quaternion": [
+                -0.2777299194141178,
+                0.048152277743567215,
+                0.8276406857062036,
+                -0.4853434932584037
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8733037011644706,
+                1.0659838686116143,
+                -0.330000018511011
+              ],
+              "quaternion": [
+                -0.30468142942771764,
+                -0.3427168949218437,
+                0.8181028894713666,
+                -0.3470186922423619
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.38355611489586,
+                0.36652127041858945,
+                0.20000029116655127
+              ],
+              "quaternion": [
+                0.7785970617629675,
+                0.4285054266934798,
+                0.4067697599907566,
+                -0.21144329910001053
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.3835561354678031,
+                0.36652127676553853,
+                -0.19999998648341463
+              ],
+              "quaternion": [
+                0.8005610062286174,
+                0.43081535994972275,
+                0.36163202224202856,
+                -0.20669397495489825
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.03677885581091986,
+              0.9620482067829148,
+              1.1539317598240756e-8
+            ],
+            "physicalCOM": [
+              0.029112729775816804,
+              0.9717809156386656,
+              0
+            ],
+            "residualM": 0.01238931434975434,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540728489322,
+              "shin": 0.4555102491156561
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421954471897,
+              "shin": 0.4555103520651765
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 693,
+          "stateHash": "c9d717e1127ebc37",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.837,
+              0.837
+            ],
+            "legStretch": [
+              0.957,
+              0.957
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.32817426264225e-8,
+              1.6364188392943692e-7
+            ],
+            "gripAngleErr": [
+              0.0006484330962723482,
+              0.00048666254609103314
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.6079503409755432e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              4.738763092847197e-7,
+              4.1426729279869975e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9081992610224437,
+                1.1164702235596171,
+                0.3300000058511078
+              ],
+              "quaternion": [
+                -0.2741865106629166,
+                0.06537821860356559,
+                0.85629654375412,
+                -0.43278590571951836
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9081991566664499,
+                1.1164702990615403,
+                -0.33000000604719554
+              ],
+              "quaternion": [
+                -0.32546075128365726,
+                -0.3230494486055298,
+                0.8381511696563834,
+                -0.29532513501481833
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.33519147430803864,
+                0.4834119907422544,
+                0.20000027446769092
+              ],
+              "quaternion": [
+                0.8038038750880374,
+                0.3791168979885138,
+                0.4191639184399509,
+                -0.18566495452537904
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.335191501650709,
+                0.4834119967822633,
+                -0.19999998341088024
+              ],
+              "quaternion": [
+                0.8258691166087925,
+                0.3800526112920737,
+                0.37381792593584673,
+                -0.18373974611670807
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.021776969098096965,
+              0.9543471467416014,
+              1.0256827845389616e-8
+            ],
+            "physicalCOM": [
+              0.014572228347829896,
+              0.9656741597788735,
+              0
+            ],
+            "residualM": 0.013424213706031233,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540732531564,
+              "shin": 0.45551027744770434
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421986770366,
+              "shin": 0.45551037574050296
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 703,
+          "stateHash": "29068d65ced63fa3",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.832,
+              0.832
+            ],
+            "legStretch": [
+              0.961,
+              0.961
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              true,
+              true
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.190579087694573e-8,
+              1.6392058038930607e-7
+            ],
+            "gripAngleErr": [
+              0.0006376542679311225,
+              0.00045089882298030725
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 3.797288418562426e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              4.405277545866929e-7,
+              3.9384067492071274e-7
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9289383525921968,
+                1.132659937955235,
+                0.33000000614159597
+              ],
+              "quaternion": [
+                -0.270176420655164,
+                0.08035706536652529,
+                0.8788001458724278,
+                -0.3850424859413156
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9289382586607963,
+                1.132660026162538,
+                -0.3300000045376175
+              ],
+              "quaternion": [
+                -0.34273307672820574,
+                -0.30466324272173784,
+                0.8531231310573625,
+                -0.24878754737041828
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.2898765117436464,
+                0.5663555595472182,
+                0.20000025502371258
+              ],
+              "quaternion": [
+                0.8234355945378297,
+                0.33434132921609394,
+                0.4287395251540047,
+                -0.16233380074525677
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.2898765462896256,
+                0.566355563984092,
+                -0.1999999813835819
+              ],
+              "quaternion": [
+                0.8455189056282483,
+                0.3340622063797683,
+                0.38335632633151717,
+                -0.1629051207045017
+              ]
+            }
+          },
+          "nativeBoneMass": {
+            "measured": [
+              0.02363984964706632,
+              0.9545603011008541,
+              9.73610532559871e-9
+            ],
+            "physicalCOM": [
+              0.016545028533401757,
+              0.9661128435835734,
+              0
+            ],
+            "residualM": 0.013557201940298363,
+            "limits": "Existing segment fractions measured from native bones, not fitted body-volume mass. Analytical renderer debug residual is not this independent proxy."
+          },
+          "boneLengths": [
+            {
+              "side": "L",
+              "thigh": 0.4480540732207278,
+              "shin": 0.4555103022173466
+            },
+            {
+              "side": "R",
+              "thigh": 0.44805421984559163,
+              "shin": 0.45551039611291405
+            }
+          ],
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        }
+      ],
+      "clip": {
+        "sha256": "b7648f51bcde1dc25a94db0b20a79359519ae908ebb15c2175d30a39c6b204ff",
+        "frames": 19,
+        "fps": 12
+      }
+    }
+  ],
+  "limits": [
+    "Current05 wardrobe remains human rejected. Socket centroid positions are diagnostic proposals, not fit/contact acceptance.",
+    "Normal actual recorded inputs, rider.update and live bike; no pose/physics injection or garment registration.",
+    "OFFlegacy ankle target versus ONconsumed body-centroid sole marker offset. These marker proposals do not qualify complete boot load-bearing surfaces.",
+    "Full candidate only, no candidateLOD, closed-volume collision proof or physical iPhone result."
+  ]
+}
