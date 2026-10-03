@@ -1,0 +1,13 @@
+# Native rider cycle relay — 2026-10-03
+
+Root requested a second fresh local cycle after the human's MCP permission change, with unique root-created task names prefixed exactly `dot:Oct-3: ` today. Preserved this preference and the sole-owner contract in `docs/evidence/hero-remaster/native-cycle-relay-2026-10-03/HANDOFF-R2.md`.
+
+R1 native foundation/generation completed original and fresh coordination messages, then their original turns became interrupted/idle. No model lease, model candidate or construction experiment was confirmed. A scoped read-only process audit found no owned job; anonymous/wired/free memory snapshot was 42.7/9.2/25.3 GiB. No foreign job or canonical lock was changed.
+
+Verified exact source bytes/hashes. Clarified that e2f314aa control.glb and 6cf0cdc0 boxer-reference.glb are different preserved files; the generation contract's 6cf0 source pin does not replace the structural control pin.
+
+R2 creation is blocked by the supported codex_app transport closing. Inventory and root status messaging returned exact `Transport closed`; no new task, private API, native UI, security edit or duplicate creation was attempted. Root's later exact manager-title request was attempted once through the exposed supported title tool and also failed `Transport closed`; no rename receipt is claimed. User's configuration task owns settings. Actual relay attribution remains unresolved (`Expected one local record for the active Codex session`), so this coherent handoff remains uncommitted for an accurately attributed checkpoint. Foreign shared plan/ASKS/index edits remain untouched. Rider quality and shipping gates stay open.
+
+After root reported the Desktop restart at 11:36, a new supported inventory call still failed `Transport closed`. Local native logs preserve only the historical R1 contexts; they do not prove post-restart live status or effective permissions. No fresh cycle or model launch occurred.
+
+The supported connection later recovered. Manager title update returned success. Exactly one FINAL WRAP-only message was delivered to native Audit and each R1 owner; all three acknowledged and are wrapping durable handoffs/checkpoints, with no new experiment authorized. Root admitted new coordination manager `01a10191-f0f0-73fe-ba72-69a30631701f` and ordered this old relay to stop mutations/creations. Added compact `REGISTRY.json` with exact IDs, verified statuses/paths, pending freezes and push uncertainty. This relay attempted zero R2 worker creations, has no pending creation receipt and now freezes. New manager owns the final freeze checks and exactly two successor creations; canonical integrator may inherit plan execution after Audit stops.

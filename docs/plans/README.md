@@ -8,6 +8,8 @@
 
 # What we are building — the plans and where each stands
 
+**Frozen transition registry (ask272):** [Reviewed snapshot](../evidence/hero-remaster/native-cycle-relay-2026-10-03/REGISTRY-R2.md) preserves old-relay and paused-manager handoffs with exact pins; original writer models remain unresolved. Accurate native reviewer attribution claims no original authorship. Future manager updates successor IDs separately; root chooses placement and alone accepts. All rider gates remain open.
+
 **Rider succession and audit freeze (asks262/272):** R1 construction01a1016e and generation01a10170 are final-wrap-only; preparation remains unaccepted. [Audit handoff](../evidence/hero-remaster/independent-audit-2026-10-03/FINAL-HANDOFF.md) transfers execution of the single canonical plan to the future integrator. Manager01a10191 assigns two successors after stop receipts/duplicate checks; root chooses local/cloud placement and alone judges. All six gates stay open; this human-created Audit task creates no planning successor.
 
 **Desktop task visibility (ask265):** Four other Rockhop tasks identified through the supported inventory; first two histories readable, two host histories unavailable. Later durable handoffs freeze construction, stop replacement generation and freeze checker613b8138. No foreign task messages, interruption or job launch by this audit owner.

@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-10-03",
+  "status": "Old relay frozen; new manager owns transition; old R1 wrap-only turns active, final receipts pending.",
+  "naming": {
+    "prefix": "dot:Oct-3: ",
+    "scope": "Every root-created task; unique suffix after current inventory check. Never rename user-created Audit/Configure tasks."
+  },
+  "root": {
+    "threadId": "01a0f09b-0a5a-7358-81b2-7821a3d40009",
+    "role": "supervision/prompts/sole acceptance"
+  },
+  "oldRelay": {
+    "threadId": "01a1014e-fb0a-7496-9129-feb740192027",
+    "requestedAndAcknowledgedTitle": "dot:Oct-3: Codex desktop manager",
+    "renameReceipt": "Supported set_thread_title returned success after transport recovered.",
+    "liveReadLimitation": "Subsequent read of durable relay could not determine existence because durable host unavailable; do not replace this with a claim of verified readback.",
+    "coordinationMutationsStopped": true,
+    "r2WorkerCreationAttempts": 0,
+    "r2WorkerCreationSuccesses": 0,
+    "pendingCreationReceipts": [],
+    "resourceLease": "none; no generation/construction ever owned by relay"
+  },
+  "owners": [
+    {
+      "threadId": "01a10191-f0f0-73fe-ba72-69a30631701f",
+      "role": "current coordination manager",
+      "owns": [
+        "transition coordination",
+        "exactly two R2 successor creations after final old-owner freeze"
+      ],
+      "latestRequest": "Root/user admitted this manager; old relay stops coordination mutations and creation.",
+      "title": "dot:Oct-3: Codex desktop manager R2",
+      "hostId": "durable",
+      "lastVerifiedStatus": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "lastTurnStatus": "inProgress",
+      "lastUpdatedAt": 1791027706
+    },
+    {
+      "threadId": "01a10129-5694-74d0-bd32-b9911770b83e",
+      "role": "old audit/plan writer; FINAL WRAP in progress",
+      "owns": [
+        "docs/plans/sol-6.1-2026-10-03-RIDER_BASELINE_TO_SHIP.md",
+        "docs/plans/README.md",
+        "docs/tasks/ASKS.md",
+        "audit evidence/journals"
+      ],
+      "latestRequest": "Write durable final handoff, checkpoint owned shared docs, verify exact push/CI status, then freeze. No separate successor planning worker.",
+      "title": "Audit rider model remaster",
+      "hostId": "local",
+      "lastVerifiedStatus": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "lastTurnStatus": "inProgress",
+      "lastUpdatedAt": 1791027786
+    },
+    {
+      "threadId": "01a1016e-c8da-77d0-9437-a5f980a6e427",
+      "role": "old R1 native construction owner; FINAL WRAP in progress",
+      "owns": [
+        "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/",
+        "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/",
+        "project/journal/2026-10-03-anatomical-foundation.md"
+      ],
+      "latestRequest": "Verify pins/job/lease state, checkpoint coherent inherited owned unaccepted prep if safe, final handoff, stop writes; no experiment.",
+      "title": "Build canonical rider foundation",
+      "hostId": "local",
+      "lastVerifiedStatus": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "lastTurnStatus": "inProgress",
+      "lastUpdatedAt": 1791027796
+    },
+    {
+      "threadId": "01a10170-5861-7dc3-971a-3273daead862",
+      "role": "old R1 native generation owner; FINAL WRAP in progress",
+      "owns": [
+        "assets/blender/hero-remaster/generation-comparison-2026-10-03/",
+        "docs/evidence/hero-remaster/generation-comparison-2026-10-03/",
+        "project/journal/2026-10-03-generation-comparison.md"
+      ],
+      "latestRequest": "Verify prepared bytes/no job, checkpoint only owned inherited unaccepted prep if safe, final handoff, stop writes; no inference/lease.",
+      "title": "Generate fitted rider garments",
+      "hostId": "local",
+      "lastVerifiedStatus": {
+        "type": "active",
+        "activeFlags": []
+      },
+      "lastTurnStatus": "inProgress",
+      "lastUpdatedAt": 1791027782
+    }
+  ],
+  "wrapRequests": {
+    "sentBy": "old relay",
+    "count": 3,
+    "delivery": "Exactly one supported FINAL WRAP-only message to each R1 owner and Audit succeeded; all three acknowledged in current commentary. Do not duplicate starts.",
+    "newExperimentsAuthorized": false,
+    "finalFreezeReceiptsPending": true
+  },
+  "r2": {
+    "integrationTaskId": null,
+    "generationTaskId": null,
+    "creationOwner": "01a10191-f0f0-73fe-ba72-69a30631701f",
+    "lastSuccessfulInventory": "No R2 construction/generation or date-prefixed replacement worker existed at last list before old-owner wrap prompts.",
+    "requiresFreshDuplicateCheck": true,
+    "plannedTitles": [
+      "dot:Oct-3: Build rider foundation R2",
+      "dot:Oct-3: Generate fitted garments R2"
+    ],
+    "planExecution": "New canonical integrator may own canonical plan execution after old Audit freezes; root sole judge; no third planning/checker worker."
+  },
+  "repository": {
+    "head": "fa4197241a5880e4288cc32c4c0a9773b83ab071",
+    "localOriginMain": "b753ed2ac38f14c4e80991133ee216d2d37624ac",
+    "remotePushStatus": "UNVERIFIED; local tracking ref only. Audit wrap requested exact push/CI report.",
+    "relayAttribution": "unresolved; resolver error Expected one local record for the active Codex session",
+    "relayHandoffCommit": "not committed by relay; accurate reviewer checkpoint requested from wrapping Audit",
+    "foreignSharedEdits": "Preserved; relay made no index writes."
+  },
+  "handoff": "docs/evidence/hero-remaster/native-cycle-relay-2026-10-03/HANDOFF-R2.md",
+  "handoffJournal": "project/journal/2026-10-03-native-rider-cycle-relay.md"
+}
