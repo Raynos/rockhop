@@ -225,3 +225,22 @@ Limits: UNACCEPTED. All proposed target selections await parent review;
 all five rider contacts remain unmeasured. No closed volume, current rider
 LOD ancestry, supported anatomy or physical device acceptance is claimed.
 Construction04 default-weight defect remains frozen; Agent1 owns05 repair.
+
+### Round 19 — native-to-engine corrective metric correspondence
+
+Finding: The controller's native bone-local quaternion basis is recovered
+from inverse file-local rest rotation times current local rotation. A
+global Blender/glTF axis swizzle is incorrect here because the exported
+bone-local axes are retained. The private pure controller is now explicit.
+
+Validation: All 529 frozen source poses and both corrective regions compare
+against recorded native coefficients. Maximum basis angle residual is
+0.000001784 rad and maximum coefficient residual is 0.000001097; rest
+weights are exactly zero and every value is finite, nonnegative and bounded
+by a coefficient sum of one. Scoped lint passes.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/controller-frame04.json
+
+Limits: UNACCEPTED metric admission only. Quaternion extraction never
+reconstructs playback matrices. Actual physics-driven private installation,
+contact/art/device review and production coupling remain separate work.
+No normal game or asset paths changed.
