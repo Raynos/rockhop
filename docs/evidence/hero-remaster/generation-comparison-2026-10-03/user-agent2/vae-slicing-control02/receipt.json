@@ -1,0 +1,41 @@
+{
+  "accepted": false,
+  "newShapeOrSamplerRuns": 0,
+  "torch": "2.14.0",
+  "recipeSHA256": "82f5b076f30f3f46e8430b0d13e23a251b724b581704669cbfd51368aea7e10c",
+  "vaeSourceSHA256": "091d72ea9ae2f45f465e70f05142e04850d1153052dca520291ceb707bda8c98",
+  "weightSHA256": "1b4889b6b1d4ce7ae320a02dedaeff1780ad77d415ea0d744b476155c6377ddc",
+  "latentArchiveSHA256": "15bc15c3b47bd9d95fbc5fe3700e8973e11e4b61307db689b44ed032c9f3cbc8",
+  "inputShape": [
+    2,
+    4,
+    96,
+    96
+  ],
+  "inputDtype": "torch.float16",
+  "outputPixelMaxDifferenceThreshold": 2,
+  "phase": "decode controls passed",
+  "imageProcessorSHA256": "d7558c34e9dfd36ea2a8721fc670615ca868de551ba232992a7f5382924b98f8",
+  "pixelContract": "Installed postprocess on MPSfloat16, actual PILRGB byte arrays",
+  "limits": [
+    "Two real encoded conditioning latents, not final sampled16-view PBR latents.",
+    "Packed-vs-sliced same learned MPS VAE, not independent CUDA equivalence.",
+    "Native official batch slicing only; no spatial tiling or trained attention replacement."
+  ],
+  "packedFinite": true,
+  "outputShape": [
+    2,
+    3,
+    768,
+    768
+  ],
+  "slicedFinite": true,
+  "maxFloatError": 0.004150390625,
+  "meanFloatError": 6.99741140124388e-05,
+  "outputsByteIdentical": false,
+  "maxPixelDifference": 1,
+  "pixelsByteIdentical": false,
+  "inputBytesUnchanged": true,
+  "elapsedSeconds": 1.6034937920048833,
+  "outputArchiveSHA256": "e57b9e077ce1a7cdcfc579a44f24607449472b0a6ec88865843fd79688625976"
+}

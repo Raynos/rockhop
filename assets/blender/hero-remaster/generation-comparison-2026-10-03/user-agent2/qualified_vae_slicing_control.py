@@ -10,6 +10,7 @@ import time
 import numpy as np
 import torch
 from diffusers import AutoencoderKL
+from diffusers.image_processor import VaeImageProcessor
 
 
 ROOT = Path('/Users/raynos/ml/img2mesh/hunyuan21-view/hunyuan3d-paintpbr-v2-1/vae')
@@ -46,6 +47,8 @@ def main():
               'weightSHA256': sha(ROOT / 'diffusion_pytorch_model.bin'), 'latentArchiveSHA256': sha(args.latents),
               'inputShape': list(latent.shape), 'inputDtype': str(latent.dtype),
               'outputPixelMaxDifferenceThreshold': 2, 'phase': 'packed decode',
+              'imageProcessorSHA256': sha(inspect.getfile(VaeImageProcessor)),
+              'pixelContract': 'Installed postprocess on MPSfloat16, actual PILRGB byte arrays',
               'limits': ['Two real encoded conditioning latents, not final sampled16-view PBR latents.',
                          'Packed-vs-sliced same learned MPS VAE, not independent CUDA equivalence.',
                          'Native official batch slicing only; no spatial tiling or trained attention replacement.']}
@@ -65,8 +68,11 @@ def main():
         sliced = model.decode(latent, return_dict=False)[0].cpu().numpy().copy()
     assert packed.shape == sliced.shape == (2, 3, 768, 768)
     # Diffusers' denormalization/rounding is the final visible-image contract.
+    image_processor = VaeImageProcessor(vae_scale_factor=8)
     def pixels(values):
-        return np.rint(np.clip(values.astype(np.float32) / 2 + .5, 0, 1) * 255).astype(np.uint8)
+        images = image_processor.postprocess(torch.from_numpy(values).to('mps'), output_type='pil',
+                                             do_denormalize=[True] * len(values))
+        return np.stack([np.asarray(image) for image in images])
     packed_pixels, sliced_pixels = pixels(packed), pixels(sliced)
     difference = np.abs(packed.astype(np.float32) - sliced.astype(np.float32))
     pixel_difference = np.abs(packed_pixels.astype(np.int16) - sliced_pixels.astype(np.int16))

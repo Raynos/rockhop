@@ -1030,3 +1030,20 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint; real sampled/PBR output persistence
 pending next run. Current exactpixel VAE slicing control still waits for
 lease, so original decoder remains selected by this checkpoint.
+
+Finding: Official VAE independent-batch slicing passes the exact installed
+MPSfloat16 postprocess/PIL pixel contract at full768resolution.
+
+Validation: Guard0/5.323s, same real encoded latentarchive15bc15c3 and
+published learnedVAE pins. Packed/sliced[2,3,768,768] finite, inputbytes
+unchanged; maxfloaterror0.00415039, exactPILRGB maxdifference1≤fixed2.
+Outputarchive SHAe57b9e07 retains rawarrays and actualpixelbytes. No spatial
+crop/tiling, learned weights/projection or sampler change. Current runtime24
+package+lock+physics+GltfRider pins match; otherplayerdifferences from
+c74783ad zero; low/high clear/crash/instantrestart gate source pinned.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/vae-slicing-control02/
+Ask:284–286.
+
+Limits: Explicit measured numeric derivative, not byte/CUDA/full16final
+sample equivalence or texture acceptance. Adopt only at finaldecode so
+conditioning and15sampled-step hashes can remain identical to paint05.
