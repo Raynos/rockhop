@@ -1,6 +1,6 @@
 # Agent 2 installed generation comparison
 
-Verified 2026-10-03. Unaccepted preparation and first cheap native donor result.
+Verified 2026-10-03. Two bounded unaccepted native body donor results.
 Owner: `01a101fe-a358-7731-987d-4168614e9ece` (human-created Agent 2).
 Construction/fitting: Agent 1 `01a101fe-74be-7693-960d-f1ba7246dfb8`.
 Root alone judges art and M0–M5; all six remain OPEN.
@@ -205,3 +205,32 @@ makes its large missing regions visible. This does not reject every possible
 Hunyuan setting or authorize a fused-surface salvage loop. Next mechanism is
 the installed TRELLIS512/8step/seed42 probe, on the same pinned alpha reference,
 after fresh resource inspection; preserve its exact raw decode before display.
+
+## Single planned TRELLIS body comparison
+
+[Launch](trellis-body01-launch.json), [receipt](trellis-body01/receipt.json),
+[native dtype/byte pins](trellis-body01/native.json), [audit](trellis-body01/native-audit.json)
+and [settings](trellis-body01/generation.json) record actual execution of the
+installed512/8steps/seed42 mechanism on the SAME alpha9166 input/f586contract.
+Upstream geometric-alpha crop produced422square conditioning image,
+SHA `cb0e4e4ffb76fa0493c3036fee5cb3fb4d74fc984c5d734eb81fc18c0f5f4808`.
+No background remover, download, dtype loss, cleanup or reduction was applied.
+
+Controller61537/owned61540 exits0 in97.326s guarded wall;72.895s model load,
+94.225s worker overall. Max observed anon58.2/combined67.5GiB stay below stops.
+Owned model lease ended; a subsequent resource snapshot observes FOREIGN
+lockf83886 holding the canonical lock. Preserve it; do not launch over it.
+
+Native archive SHA `3861681a8e733949e60bb15dbaca2adee02228f564cc4b8c8f92b86822a6ea22`:
+281486vertices/572942triangles,1vertex-connected face component. Float32vertices
+and six-channel attributes, int32faces/coordinates and origin are independently
+reloaded byte-identical. Finite/index/repeated/zero-area/duplicate triangle
+witnesses0, but7884boundary/14875overused/129837same-direction two-face edges;
+201unused vertices. No topology/anatomy/fit acceptance. Static raw-display GLB
+and exact attributes remain local pinned masters; moving review pending.
+
+Root limits this to ONE planned body comparison. The canonical clean base already
+exists; no repeated body replacement or Pixal body benchmark follows. After a
+matched donor orbit, prioritize SEPARATE hoodie/jeans appearance donors around
+Agent1's stable body/garment inputs, with actual neck/hem/cuff/armhole openings
+and fit owned by integration. Any body escalation needs a visible advantage.

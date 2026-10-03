@@ -76,3 +76,15 @@ movie has72frames at12fps/1024×576, SHA8fe4f466. Original arrays/source unchang
 Limits: Static geometry camera orbit, no rig/fit/PBR/anatomy pass. This failure
 is specific to the cheap settings/reference; switch installed-model mechanism
 next instead of blind same-approach escalation. All M0–M5 OPEN; lease released.
+
+Finding: Single planned TRELLIS512/8step comparison completes on samealpha9166.
+Raw281486vertices/572942triangles form one component but boundary7884,
+overused14875 and winding129837edge witnesses preclude topology/fit acceptance.
+
+Validation: Guard61537/owned61540 exits0 in97.326s; raw SHA3861681a matches.
+Float32vertices/attrs and int32faces/coords reload byte-identical. Finite/index/
+repeated/zeroarea/duplicate0; max observed anon58.2/combined67.5GiB; lease ended.
+
+Limits: Moving donor review pending; no body replacement/Pixal benchmark next.
+Foreign lockf83886 now holds shared lock and is preserved. Next priority separate
+hoodie/jeans appearance and real integration-owned openings/fit. All M0–M5 OPEN.
