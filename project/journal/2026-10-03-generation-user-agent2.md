@@ -979,3 +979,21 @@ Ask:284–286.
 Limits: Unaccepted recipe checkpoint; actual paint05 and PBR render pending.
 No image/fit/opening/motion/CUDA acceptance from code or stills. Blender
 actual-map render and source-array checks must pass before clip handoff.
+
+Finding: Controlled full-key paint completes all15finite diffusion steps
+then hits the unchanged resource guard before decoded PBR images return.
+
+Validation: Paint05 guard74/child−15 in391.915s; last43.2anonymous+
+62.5wired=105.7GiB sampled after large allocation. All9original condition/
+noise Cbytes identical. Actual Self/Ref attention selectedCPU errors both
+0.0004883, genuine Ref Q/K64/V128 observed. Cache releases keep active
+counts fixed; one actual conditioning release13841285120driver bytes.
+Fifteen finite latent hashes saved; no decoded images, OBJ/maps or new
+shape. Fresh runtime24 gate/currentpackage+lock+physics+GltfRider pins match.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint05/
+Ask:284–286.
+
+Limits: Post-sampling VAE decode boundary implicated, exact inneroperator
+unobserved. Final sampled hash exists but no final tensor archive in this
+recipe, so decode-only replay unavailable. Need archive before decoder
+allocation and qualified independent batch slicing; no family rejection.
