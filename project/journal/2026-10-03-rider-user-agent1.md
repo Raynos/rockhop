@@ -152,3 +152,12 @@ Validation: Parent rows277–279 and own274 status recorded before sourcework;
 protected head/wardrobe, bike-free/actual-supported-bike split and bounded
 collision qualification constraints retained with truthful native attribution.
 Limits: Positive movement feedback does not close M0–M5 or accept appearance.
+
+Finding: The approved donor has seven explicit texture images and per-primitive
+material channels; material names are unsafe after Blender import collisions.
+Validation: Exact b7f4 donor SHA is checked before/after read-only extraction,
+seven raw image byte hashes recorded, primitive/accessor inventory pinned.
+Round18 silent ordinary Metal replay clears 4810 byte-identical ticks at
+40.083333333s; crash103 restarts in1tick, frame2.090ms/coldboot2190ms/errors0.
+Limits: Registration is neither textured assembly nor garment fit acceptance;
+raw image caches regenerate from the protected immutable donor. Ask274.

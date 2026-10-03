@@ -1,0 +1,497 @@
+{
+  "status": "READ-ONLY appearance donation registration, no geometry/admission or art acceptance",
+  "donorSHA256": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+  "recipeSHA256": "28d048bdf50b4f8dab591e475f7aea6a92113099cbce90c6f0f72ca60615cda9",
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.25
+        }
+      },
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.75
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Baked black leather micrograin",
+      "normalTexture": {
+        "index": 1,
+        "texCoord": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 1
+        },
+        "metallicFactor": 0,
+        "metallicRoughnessTexture": {
+          "index": 3,
+          "texCoord": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.25
+        }
+      },
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 4
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.75
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.25
+        }
+      },
+      "name": "Material.002",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 5
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6200000047683716
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.25
+        }
+      },
+      "name": "Anatomically reconstructed cheek skin",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.6200000047683716
+      }
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    }
+  ],
+  "images": [
+    {
+      "index": 0,
+      "name": "join-albedo-0",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-0.png",
+      "bytes": 3313845,
+      "sha256": "2404c7f40126bba31e3172f7336eb8fd0c3c9aed39850a5a66708fef61965780"
+    },
+    {
+      "index": 1,
+      "name": "normal",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-1.png",
+      "bytes": 432873,
+      "sha256": "5d9ceaa9e6687786f52f4b30a53043fe2310797e235975ba4d48e7b8034de632"
+    },
+    {
+      "index": 2,
+      "name": "basecolor",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-2.png",
+      "bytes": 524967,
+      "sha256": "1076b8c8e48db7fa65ee3271a00c33bb409dcf3998fd9246b2dca184aa51b1d3"
+    },
+    {
+      "index": 3,
+      "name": "roughness",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-3.png",
+      "bytes": 445076,
+      "sha256": "668e116f5cf8318db018e1a66493b5cb85df5e2f248429f25aacc653e1baa5ee"
+    },
+    {
+      "index": 4,
+      "name": "join-albedo-2",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-4.png",
+      "bytes": 428230,
+      "sha256": "f45c21c60840245e867c0bc9240244902d7e2cf00bdfda26a5849aa174242419"
+    },
+    {
+      "index": 5,
+      "name": "textured",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-5.png",
+      "bytes": 979892,
+      "sha256": "f8430cee239e977cdb939352dd10331689b4ef88ac78295e27a1fb00d87e8583"
+    },
+    {
+      "index": 6,
+      "name": "CPU baked coherent cheek skin",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance-reference01/donor-image-6.png",
+      "bytes": 74376,
+      "sha256": "cf47650f3610fb50a6d486a14392031c5b88af5ee379779464e0777cabfec32a"
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "material": 0,
+      "vertices": 22240,
+      "attributes": {
+        "POSITION": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": [
+            0.48184025287628174,
+            0,
+            -0.398544579744339
+          ],
+          "maximum": [
+            0.8293264508247375,
+            1.4818871021270752,
+            0.3995608687400818
+          ]
+        },
+        "NORMAL": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_0": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_1": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_2": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_1": {
+          "componentType": 5123,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_2": {
+          "componentType": 5123,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "JOINTS_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "WEIGHTS_0": {
+          "componentType": 5126,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "mesh": 0,
+      "primitive": 1,
+      "material": 1,
+      "vertices": 4021,
+      "attributes": {
+        "POSITION": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": [
+            0.6192934513092041,
+            0.7016922831535339,
+            -0.44792798161506653
+          ],
+          "maximum": [
+            0.7178106307983398,
+            0.9134999513626099,
+            0.45693686604499817
+          ]
+        },
+        "NORMAL": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_0": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_1": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_2": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_1": {
+          "componentType": 5123,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_2": {
+          "componentType": 5123,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "JOINTS_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "WEIGHTS_0": {
+          "componentType": 5126,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "mesh": 0,
+      "primitive": 2,
+      "material": 2,
+      "vertices": 3112,
+      "attributes": {
+        "POSITION": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": [
+            0.46625596284866333,
+            1.3533841371536255,
+            -0.1928500235080719
+          ],
+          "maximum": [
+            0.7503086924552917,
+            1.598873496055603,
+            0.1928499937057495
+          ]
+        },
+        "NORMAL": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_0": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_1": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_2": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_1": {
+          "componentType": 5123,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "COLOR_2": {
+          "componentType": 5123,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "JOINTS_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "WEIGHTS_0": {
+          "componentType": 5126,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 3,
+      "vertices": 61099,
+      "attributes": {
+        "POSITION": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": [
+            0.5498769283294678,
+            1.4228605031967163,
+            -0.1487756222486496
+          ],
+          "maximum": [
+            0.7834973931312561,
+            1.8225715160369873,
+            0.14736221730709076
+          ]
+        },
+        "NORMAL": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_0": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "JOINTS_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "WEIGHTS_0": {
+          "componentType": 5126,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    },
+    {
+      "mesh": 1,
+      "primitive": 1,
+      "material": 4,
+      "vertices": 294,
+      "attributes": {
+        "POSITION": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": [
+            0.7400612831115723,
+            1.6432043313980103,
+            -0.04461422562599182
+          ],
+          "maximum": [
+            0.7528945803642273,
+            1.677214503288269,
+            0.050621338188648224
+          ]
+        },
+        "NORMAL": {
+          "componentType": 5126,
+          "type": "VEC3",
+          "minimum": null,
+          "maximum": null
+        },
+        "TEXCOORD_0": {
+          "componentType": 5126,
+          "type": "VEC2",
+          "minimum": null,
+          "maximum": null
+        },
+        "JOINTS_0": {
+          "componentType": 5121,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        },
+        "WEIGHTS_0": {
+          "componentType": 5126,
+          "type": "VEC4",
+          "minimum": null,
+          "maximum": null
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Exact protected head UV/PBR bytes are preserved; old source anatomy/rig/binds not adopted.",
+    "Cloth texture/details may transfer to clean original patterns; Agent2 donors are optional support."
+  ]
+}
