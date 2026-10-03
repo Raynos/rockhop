@@ -1,0 +1,44 @@
+{
+  "accepted": false,
+  "source": "/Users/raynos/ml/img2mesh/Pixal3D-mac",
+  "referenceSHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+  "preprocessingSHA256": "6e3f33a467d63819288ac9eafbc98ffe2a8ea89f3d36d371ac161eae57a6c5f7",
+  "weights": [
+    {
+      "path": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+      "bytes": 2664431,
+      "expectedSHA256": "c096c1ab2217a5c3ac136365f721685e2201379cb69d509cfb0261183847c98f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "bytes": 1212559808,
+      "expectedSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/Ruicheng/moge-2-vitl/model.pt",
+      "bytes": 1305030700,
+      "expectedSHA256": "3eefd4abb2102f38f12b2d1992e5ff15e4923e5431c67dd494afe157e0111cd5"
+    }
+  ],
+  "sourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_conditioning.py": "fd980dab4db3ebc86e80d8d1636061c2d269b46f6493f5bc3d45c71335948143",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/generate_mps.py": "6ff627aba451d8f04af2c1bcba7e70a88f6ece1274778b879a6e8630859e4ab4",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/pipelines/pixal3d_image_to_3d.py": "6b1c06c7d0dc4b696389416d352ba5dd3522531e595b3f94ae8c9d516c37ec6d",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/trainers/flow_matching/mixins/image_conditioned_proj.py": "172cb9a2be191d8ada445f13098969032f7a1c1153d2046eceda90fd2c8dc94e",
+    "/Users/raynos/ml/img2mesh/Pixal3D-mac/.venv/lib/python3.10/site-packages/moge/model/v2.py": "e736ed59fdb8ad89ec0c29ddfeeccd6a4246c387b3f423b922708366b69758fd",
+    "/Users/raynos/ml/img2mesh/NAF/hubconf.py": "9fe50a74b152f9dcc8db0e0df4f5937d487d0f83bdb63e79390fbfa2c39711fb",
+    "/Users/raynos/ml/img2mesh/NAF/src/model/naf.py": "64e32ef854b06f909302e8e2bdccdac564094cf5674e2d27b17c5962f670458c",
+    "/Users/raynos/ml/img2mesh/NAF/src/layers/attentions.py": "cfa8c83f4ec4f70fadf42d06aa9050f912a795a65e71c7cdde07d13b9c3c81a1",
+    "/Users/raynos/ml/img2mesh/NAF/src/layers/rope.py": "ed36ee1f9d09822ecc6c999b16a3607ab82813c47bbe6189c08b7e3fdd9b5422",
+    "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/config.json": "135ecd23e34a70b6fbed8b083fdecb319b7e3a54e3d849258bbe4ddcf1783bb5"
+  },
+  "fixedThresholds": {
+    "projectionPixels": 0.001,
+    "bilinearFeature": 0.0005,
+    "NAFactualNeighborhood": 0.0005
+  },
+  "limits": [
+    "Selected learned forward controls; no full-output or CUDA parity.",
+    "Camera estimate only; no calibrated multiview."
+  ]
+}

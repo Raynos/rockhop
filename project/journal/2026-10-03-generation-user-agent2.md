@@ -1470,3 +1470,18 @@ Ask:284–286 root review correction.
 
 Limits: Root alone judges corrected moving clip. No cavity/opening usability,
 model winner, UVbake, fit/rig/mobile or final-art acceptance claimed.
+
+Finding: Unaccepted actual Pixal hoodie conditioner control records MoGe
+camera/DINO/NAF inputs before one proper-quality family seed.
+
+Validation: Syntax/whitespace pass;3canonical learned conditioner weight
+pins plus10source/config pins frozen. Four actual installed stage configs,
+257independent projection/bilinear witnesses and6actual NAF queries/allheads
+with81shifted neighbors require fixed thresholds. Full learned inputs
+archived; selected output witnesses explicitly scoped. Runtime24 pins/
+playerdiff0 retain coldboot/clear/crash/restart gate identity.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_conditioning_contract.json
+Ask:284–286.
+
+Limits: Checkpoint only; execution pending. No flow seed, calibratedcamera,
+mesh/style/fullmodel/backward/CUDA parity or final-art acceptance.
