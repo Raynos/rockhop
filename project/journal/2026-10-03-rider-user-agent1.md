@@ -83,3 +83,12 @@ IndependentAgent3 arithmetic/source pin read agrees; syntax/scoped lint pass.
 Limits: One failed algorithm does not prove universal infeasibility; no expensive
 art pass/capture. Attachment/bend topology work next, M0–M5 open.
 Evidence: [rejected trial](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/rest-fit01/README.md). Ask274.
+
+Finding: Separate garment conditioning inputs must show hood shape and true
+alpha without replacing immutable body geometry or protected identity.
+Validation: Eight512RGBA trueA front/rear context/isolated images alpha0..255;
+exact b7 static hood geometry, original body/driver, approved d48e39 storyboard
+reference pins fixed. Material-name collision corrected; recipe syntax passes.
+Limits: Disjoint hood/flat mustard-indigo are experimental appearance/layout
+guides only, no wearable fit/PBR/motion pass; M0–M5 open. Sent exact Agent2 pins.
+Evidence: [garment inputs](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/garment-input03/README.md). Ask274.

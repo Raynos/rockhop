@@ -1,0 +1,410 @@
+{
+  "status": "EXPERIMENTAL UNACCEPTED garment appearance/layout inputs; not wearable fit",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/conditioned.blend": "db1a91baf9e6de2d90af04ae51a46fe657115d1ecd6625126429439aa88f1c5c",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/fitting01/contract.json": "f586d85a1504dd31b4ae650e6e54d302054674a69880cd3fcb904af51ab8eab0",
+    "/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2/rig-adapter01/body-bind11/rider.glb": "b7f4f22790124c664f9907104e5b17b77775b4c5c995f715d62be640bbcc8754",
+    "/Users/raynos/projects/games/rockhop/.tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a"
+  },
+  "parentFittingContractSHA256": "f586d85a1504dd31b4ae650e6e54d302054674a69880cd3fcb904af51ab8eab0",
+  "primaryPose": "true_A/action off",
+  "camera": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/fitting01/true_A-yaw-000.png",
+    "sha256": "231a0d85444179eb6b308685a38e4051fd60d78435c2330f1f8be752e85c015c",
+    "bytes": 213618,
+    "yawDegrees": 0,
+    "elevated": false,
+    "cameraBlenderM": [
+      5.0,
+      0.0,
+      0.9200000166893005
+    ],
+    "cameraMatrixBlenderRows": [
+      [
+        -4.371138828673793e-08,
+        4.371138828673793e-08,
+        1.0,
+        5.0
+      ],
+      [
+        1.0,
+        1.910685676922942e-15,
+        4.371138828673793e-08,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        -4.371138828673793e-08,
+        0.9200000166893005
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "cameraMatrixGLTFColumnMajor": [
+      -4.371138828673793e-08,
+      0.0,
+      -1.0,
+      0.0,
+      4.371138828673793e-08,
+      1.0,
+      -1.910685676922942e-15,
+      0.0,
+      1.0,
+      -4.371138828673793e-08,
+      -4.371138828673793e-08,
+      0.0,
+      5.0,
+      0.9200000166893005,
+      0.0,
+      1.0
+    ],
+    "orthoHorizontalM": 2.2,
+    "orthoVerticalM": 2.2,
+    "resolution": [
+      512,
+      512
+    ],
+    "bodyRestHeightOccupancy": 0.8284417607567527
+  },
+  "axes": {
+    "blender": "+Xforward,+Zup,-Yleft",
+    "gltf": "+Xforward,+Yup,+Zleft",
+    "OBJ": "Centered X=0; file root+0.65 removed exactly ONCE; do not apply runtime wrapper again"
+  },
+  "scale": {
+    "metres": true,
+    "restHeightM": 1.822571873664856,
+    "upperArmM": 0.264937,
+    "forearmM": 0.273355,
+    "shoulderJointSpanM": 0.392147
+  },
+  "body": "Frozen original anatomy, explicit four-weight control; no rejected rest-fit used",
+  "hood": {
+    "donorMesh": 0,
+    "donorPrimitive": 2,
+    "vertices": 3112,
+    "triangles": 4118,
+    "material": "Material.001",
+    "originalMaterialName": "Material.001",
+    "appearanceOverride": "Same flat mustard as shirt; donor dark texture retained in memory only",
+    "rawPositionSHA256": "a75960a2f27a17da054e0aae6eafe9c612d1bc8549da711fd5516dfbb1ee05f6",
+    "positionConversion": "[rawX\u22120.65,\u2212rawZ,rawY], metres; no extra1.015",
+    "fit": "Static donor shell for appearance guide ONLY, not joined to native neckline"
+  },
+  "openings": {
+    "nativeShirt": "neck/two cuffs/hem; source boundaryIDs fit-witness01",
+    "nativeJeans": "waist/two ankles",
+    "donorHood": "original lower body graft and upper open rim; not native shirt collar"
+  },
+  "images": [
+    {
+      "name": "hoodie-context",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/hoodie-context.png",
+      "sha256": "1cec5f86c3ab0a76f6f7d12182932a93a0cc9519167d882d90d0a3891abfd690",
+      "bytes": 141363,
+      "visibleObjects": [
+        "Canonical anatomical body, baked adult hm08",
+        "Opaque boxer fitting garment",
+        "Separate fitted sweatshirt control, hood not constructed",
+        "Donor hood appearance guide, NOT joined or fitted"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          5.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "hoodie-only",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/hoodie-only.png",
+      "sha256": "360fd6602ddc9e1009207f91505ebebd33d979019e859a846244019893a0f317",
+      "bytes": 96142,
+      "visibleObjects": [
+        "Separate fitted sweatshirt control, hood not constructed",
+        "Donor hood appearance guide, NOT joined or fitted"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          5.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "jeans-context",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/jeans-context.png",
+      "sha256": "99e5908865ff22962c81e27bb473eb8c5eefb98b2380167c66fb8b6c012fa2ed",
+      "bytes": 138084,
+      "visibleObjects": [
+        "Canonical anatomical body, baked adult hm08",
+        "Separate fitted native trousers control"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          5.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "jeans-only",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/jeans-only.png",
+      "sha256": "9d3540c730f7d662d6241e48ac43a80cbd8ac30051687a5fb259a51ba69ace91",
+      "bytes": 95936,
+      "visibleObjects": [
+        "Separate fitted native trousers control"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          4.371138828673793e-08,
+          1.0,
+          5.0
+        ],
+        [
+          1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "hoodie-context-rear",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/hoodie-context-rear.png",
+      "sha256": "4b2d3ee206f899a1ef2f230e6ed02f7e640ed3e795e3f1a75d5501ca3ce95871",
+      "bytes": 144580,
+      "visibleObjects": [
+        "Canonical anatomical body, baked adult hm08",
+        "Opaque boxer fitting garment",
+        "Separate fitted sweatshirt control, hood not constructed",
+        "Donor hood appearance guide, NOT joined or fitted"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          -4.371138828673793e-08,
+          -1.0,
+          -5.0
+        ],
+        [
+          -1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "hoodie-only-rear",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/hoodie-only-rear.png",
+      "sha256": "1d12e18ada000902e5bedcfea350621b2a090afd93df6b1c6f5b73d8f9cc0266",
+      "bytes": 99209,
+      "visibleObjects": [
+        "Separate fitted sweatshirt control, hood not constructed",
+        "Donor hood appearance guide, NOT joined or fitted"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          -4.371138828673793e-08,
+          -1.0,
+          -5.0
+        ],
+        [
+          -1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "jeans-context-rear",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/jeans-context-rear.png",
+      "sha256": "695d496c6cfcc437331962b07c56800dbef8f7aaaddfdd88a35d6955c906a2f2",
+      "bytes": 137745,
+      "visibleObjects": [
+        "Canonical anatomical body, baked adult hm08",
+        "Separate fitted native trousers control"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          -4.371138828673793e-08,
+          -1.0,
+          -5.0
+        ],
+        [
+          -1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "jeans-only-rear",
+      "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/garment-input03/jeans-only-rear.png",
+      "sha256": "83123f0eb15f52385e46a7efbc3fc925e174d4fe8da38ec0a4886fd2b3cdf1da",
+      "bytes": 96717,
+      "visibleObjects": [
+        "Separate fitted native trousers control"
+      ],
+      "cameraMatrixBlenderRows": [
+        [
+          -4.371138828673793e-08,
+          -4.371138828673793e-08,
+          -1.0,
+          -5.0
+        ],
+        [
+          -1.0,
+          1.910685676922942e-15,
+          4.371138828673793e-08,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -4.371138828673793e-08,
+          0.9200000166893005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "approvedAppearanceReference": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png",
+    "sha256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a",
+    "libraryZIP": "libfile_3254a01e3c108191afaf8b4280791275",
+    "ZIPsha256": "2b9b6c0b945e7a795ae17bed466e0e80062176040f27e423046cb04a16419fff",
+    "use": "Clothing appearance only; protected b7 head/hair immutable"
+  },
+  "flatAppearanceGuides": "Shirt linearRGBA .56/.28/.028/1; denim .023/.045/.085/1; not target PBR proof",
+  "limits": [
+    "Layout/appearance donors only; source generated solids do not certify holes, fit, weights, rig or motion.",
+    "Native shirt is hoodless; donor hood is a disjoint static visual guide, not constructed hoodie.",
+    "Known underarm/knee/hem fit failures remain; native gray head not identity target.",
+    "Root alone judges; no normal player assets modified."
+  ]
+}
