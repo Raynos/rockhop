@@ -530,3 +530,17 @@ Ask:284–285.
 Limits: Synthetic actual operator fixture, not fulldecoder/CUDA equivalence.
 Any same-seed retry must compare actual condition/noise bytes and preserve
 30steps/requested384(effective380); full output quality still unmeasured.
+
+Finding: Same-seed Hunyuan worker supports measured32768query grouping
+while requiring original condition/noise bytes and saving sampled latents
+before geometry decode.30steps/requested384/effective380 remain fixed.
+
+Validation: AST passes; actual packed/serial attention control is byte
+identical. Prior-progress SHA and dtype/shape/Cbyte hashes mandatory for
+retry; no second reference or seed. Fresh neural execution pending.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint, not fulldecoder parity. Retain first
+resource stop and all raw sources. Public quality-input direction remains
+a later consistent-camera4/6view comparison after single-view baseline;
+older Pixal paper metrics do not establish current humanoid optimum.

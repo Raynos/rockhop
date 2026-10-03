@@ -27,6 +27,9 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ('image', 'image-sha256', 'pipeline-sha256', 'out'):
         parser.add_argument('--' + name, required=True)
+    parser.add_argument('--num-chunks', type=int, choices=[200000, 32768], default=200000)
+    parser.add_argument('--replay-progress')
+    parser.add_argument('--replay-progress-sha256')
     args = parser.parse_args()
     assert os.environ.get('ROCKHOP_GENERATION_CONTROLLER_PID') == str(os.getppid())
     image, output = Path(args.image), Path(args.out)
@@ -34,12 +37,21 @@ def main():
     assert subprocess.check_output(['git', '-C', str(SOURCE), 'rev-parse', 'HEAD'], text=True).strip() == HEAD
     pipeline_source = SOURCE / 'hy3dshape/hy3dshape/pipelines.py'
     assert sha(pipeline_source) == args.pipeline_sha256
+    replay = None
+    if args.replay_progress:
+        assert args.replay_progress_sha256 and sha(args.replay_progress) == args.replay_progress_sha256
+        replay = json.loads(Path(args.replay_progress).read_text())
+        assert replay['imageSHA256'] == args.image_sha256 and replay['seed'] == 42
+        assert replay['pipelineSHA256'] == args.pipeline_sha256 and replay['numInferenceSteps'] == 30
     output.mkdir(parents=True)
     settings = {'accepted': False, 'stage': 'verify/load', 'model': 'Hunyuan3D-2.1',
                 'sourceHEAD': HEAD, 'pipelineSHA256': sha(pipeline_source),
                 'recipeSHA256': sha(__file__), 'imagePath': str(image), 'imageSHA256': sha(image),
                 'seed': 42, 'numInferenceSteps': 30, 'guidanceScale': 5.0,
-                'octreeResolution': 384, 'numChunks': 200000, 'device': 'mps',
+                'octreeResolution': 384, 'numChunks': args.num_chunks, 'device': 'mps',
+                'effectiveFlashVDMResolutions': [95, 190, 380],
+                'replayProgressPath': args.replay_progress,
+                'replayProgressSHA256': args.replay_progress_sha256,
                 'dtype': 'torch.float16', 'extractor': 'mc', 'paint': False,
                 'cleanup': False, 'reduction': False,
                 'checkpointPath': str(WEIGHTS / 'hunyuan3d-dit-v2-1/model.fp16.ckpt'),
@@ -116,6 +128,14 @@ def main():
                   'sha256CBytes': hashlib.sha256(v.tobytes()).hexdigest(),
                   'finite': bool(np.isfinite(v).all()), 'std': float(v.astype(np.float64).std())}
             for key, v in arrays.items()}}
+        if replay and name in replay:
+            prior = replay[name]['arrays']
+            current = settings[name]['arrays']
+            assert prior.keys() == current.keys()
+            identical = all(all(prior[k][field] == current[k][field]
+                                for field in ('dtype', 'shape', 'sha256CBytes')) for k in prior)
+            settings[name]['priorAttemptCBytesIdentical'] = identical
+            assert identical, 'Preserve differing actual input/noise; stop before interpreting batch retry'
         save()
     for method_name, archive_name in [('prepare_image', 'actual-processor-tensors'),
                                       ('encode_cond', 'actual-conditioned-features'),
@@ -126,11 +146,17 @@ def main():
             persist_tensors(_name, result)
             return result
         setattr(pipe, method_name, capture)
+    original_export = pipe._export
+    def capture_export(*positional, **keywords):
+        sampled = positional[0] if positional else keywords['latents']
+        persist_tensors('actual-sampled-latents', sampled)
+        return original_export(*positional, **keywords)
+    pipe._export = capture_export
     settings['stage'] = 'shape inference'
     save()
     inference_start = time.monotonic()
     raw = pipe(image=original, num_inference_steps=30, octree_resolution=384,
-               num_chunks=200000, guidance_scale=5.0,
+               num_chunks=args.num_chunks, guidance_scale=5.0,
                generator=torch.Generator(device='cpu').manual_seed(42), output_type='mesh')[0]
     assert raw is not None, 'No surface; retain conditioning and guard'
     vertices, faces = np.asarray(raw.mesh_v).copy(), np.asarray(raw.mesh_f).copy()
