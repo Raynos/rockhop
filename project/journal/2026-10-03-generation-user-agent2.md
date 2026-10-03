@@ -591,3 +591,22 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint. Actual saved-latent decode/field
 coverage pending; no new sampler or installed-source edit. Evaluated NaN
 or sentinel-valued neural samples abort rather than being hidden.
+
+Finding: Actual saved-latent decode reproduces invalid native mesh byte
+identically; finite-cell derivative extracts observed finite neural field.
+
+Validation: Guard exit0 in20.756s, peak46.1anonymous/53.9combinedGiB.
+All410standalone/embedded VAE tensors and config identical. All109actual
+geometry-query batches finite, no sentinel-valued neural outputs. Explicit
+final evaluated mask matches1658504finite sites; actual field381cubed.
+Original native archive SHA0d2d531e... exactly reproduced includingNaNs.
+Owned derivative460831v/921722f finite,0boundary/overused/winding edges,
+6zero-area triangles,2components921618/104faces. Field Cbytes unchanged,
+requested385coordinate divisor retained. No new sampler or shared edits.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-decode-replay01/
+Ask:284–286.
+
+Limits: Original sparse-NaN extraction also exists upstream; no Mac
+divergence claim. Derived finite extraction remains unaccepted; excluded
+crossing coverage, moving geometry and material/fit review pending. No
+triangle deletion, component removal, smoothing or geometry cleanup.
