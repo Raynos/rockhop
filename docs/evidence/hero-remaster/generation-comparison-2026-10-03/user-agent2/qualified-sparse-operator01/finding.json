@@ -1,0 +1,20 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "668801e9869b4804f0cb7f86ab104d9dead47cd7",
+  "failure": "Native Metal trilinear float16 maxCPUFloat64Error32576.078125; fixed0.002 limit failed; no threshold widening.",
+  "observedPassing": "9 sparse convolution cases f32/f16/bf16, exact independent neighbor maps; float32 trilinear max2.384185791015625e-7; f32/f16 nearest exact.",
+  "sourceInformedCause": "ext.mm:1006 allocates output in input scalar_type but dispatches unsuffixed indice_weighted_sum_fwd. weighted_sum.metal:8 reads and writes float pointers. Low-precision input/output are misinterpreted; no additional native low-precision probe until protected route.",
+  "sourcePins": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/deps/mtlgemm/flex_gemm/kernels/metal/ext.mm",
+      "SHA256": "5048ce5d2c935e592f78246a07eb7a9f4a2957b80422f065481df0b45f708bb0"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/deps/mtlgemm/flex_gemm/kernels/metal/grid_sample/weighted_sum.metal",
+      "SHA256": "c836099a709176e7af0cf3e803d8c6be100bb19087253d7568eb4399e6586a44"
+    }
+  ],
+  "sharedFilesChanged": false,
+  "learnedModelOrCUDAProof": false,
+  "next": "Qualify owned narrowly scoped float32 feature promotion for trilinear only; preserve native hashmaps, coords, query convention, interpolation weights and output dtype."
+}

@@ -1129,3 +1129,20 @@ Ask:284–286.
 Limits: Checkpoint only; native Metal execution and learned weights/model
 proof pending. Sparse trilinear renormalizes existing centers, and nearest
 uses native truncation toward zero; neither is assumed dense PyTorch grid.
+
+Finding: Installed Metal sparse convolution passes; native float16
+trilinear sampling fails its fixed independent-coordinate control.
+
+Validation: Guard worker1/1.895s. Nine conv cases pass f32/f16/bf16,
+all neighbor maps exactly match independent CPU, cache reuse/output bytes
+and inputs preserved. f32 trilinear max2.3842e-7, nearestf32/f16 exact.
+Trilinearf16 max32576.078125 exceeds fixed0.002. Extension allocates native
+dtype but shader uses float pointers; source-informed type mismatch pinned.
+Current runtime24 dependency/physics/GltfRider hashes match; no otherplayer
+changes fromc74783ad, original coldboot/clear/crash/restart gate applies.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-sparse-operator01/
+Ask:284–286.
+
+Limits: Synthetic forward only; no learned/fullmodel/CUDA or quality
+finding. No sharedpatch/threshold widening or unsafe lowprecision rerun.
+Owned float32 trilinear promotion must be separately qualified.
