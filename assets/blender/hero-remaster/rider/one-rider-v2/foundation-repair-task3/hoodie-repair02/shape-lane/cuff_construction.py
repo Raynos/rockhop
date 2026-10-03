@@ -1,0 +1,10 @@
+from pathlib import Path
+import sys,numpy as np,json
+from scipy.spatial import cKDTree
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'hoodie-repair02/scripts'));from base import *
+OUT=Path(__file__).parent;d=np.load(OUT/'shape-rest-final.npz');p=np.concatenate([POS[i]for i in [0,1,2]]);q=np.concatenate([d[f'p{i}']for i in [0,1,2]]);off=np.r_[0,np.cumsum([len(POS[i])for i in [0,1,2]])];t=np.concatenate([TRI[i]+off[i]for i in [0,1,2]]);_,alias=np.unique(p,axis=0,return_inverse=True);select=((p[t][:,:,1]>.80)&(p[t][:,:,1]<1.045)&(abs(p[t][:,:,2])>.23)).all(1);ids=np.flatnonzero(select);t=t[select];aliases=alias[t];EPS=1e-9
+exec('def crossing'+(ROOT/'audit/self_intersections.py').read_text().split('def crossing')[1].split('def audit')[0])
+rows=[]
+for name,points in [('source',p),('candidate',q)]:
+ T=points[t];cent=T.mean(1);rad=np.linalg.norm(T-cent[:,None],axis=2).max(1);tree=cKDTree(cent);pairs=np.array([(a,b)for a,row in enumerate(tree.query_ball_point(cent,rad+rad.max()))for b in row if a<b],int).reshape(-1,2);lo=T.min(1);hi=T.max(1);pairs=pairs[((lo[pairs[:,0]]<=hi[pairs[:,1]])&(lo[pairs[:,1]]<=hi[pairs[:,0]])).all(1)];pairs=pairs[np.array([not set(aliases[a]).intersection(aliases[b])for a,b in pairs])];hit=crossing(T[pairs[:,0]],T[pairs[:,1]]);edges=np.sort(np.concatenate([alias[t[:,[0,1]]],alias[t[:,[1,2]]],alias[t[:,[0,2]]]]),axis=1);ue,count=np.unique(edges,axis=0,return_counts=True);rows.append({'name':name,'roiFaces':len(t),'strictCrossingPairs':int(hit.sum()),'witnessesCombinedFaces':ids[pairs[hit]].tolist()[:20],'positionsExactlySameAsSource':bool(np.array_equal(points[np.unique(t)],p[np.unique(t)]))})
+(OUT/'cuff-rest-construction.json').write_text(json.dumps({'rows':rows,'roi':'Both sides allfacecorners .80<sourcey<1.045m,absz>.23 acrossprimitive0,1,2 includingactualcuff+glove surfaces.','limits':'Sourcealias exclusions remove sewncontact. NoCCD, thickness, all glove fingerarea, wristturbocertification. PoseSuite musttestexactcuff actualsurfaces.','sharedCuffAliasPositions':127,'edits':'None cuffs/gloves unchanged.'},indent=2));print(rows,flush=True)
