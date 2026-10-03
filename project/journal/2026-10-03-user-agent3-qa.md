@@ -264,3 +264,24 @@ Limits: UNACCEPTED. Static native-default and source/loader admission does
 not establish moving appearance, supported contacts, LOD or device approval.
 Exact05 candidate is ready for independent played private engine review;
 normal assets and deployment remain unchanged.
+
+### Round 21 — actual05 whole-rider bike-free anatomical review
+
+Finding: Two complete actual-engine films present the frozen05 whole rider
+from front/rear three-quarter views, bike-free through visibility only.
+Exact complete51 authored matrices and explicit coefficients drive both
+hoodie primitives and jeans through the normal loader/stage/materials.
+
+Validation: Both 133-frame films play silently to completion. All 266
+captured poses retain every deformed rider vertex in frame and clear of
+labels; maximum matrix residual is 2.665e-15. Exact consumedGLB hash,
+controller, camera and normal merged gloves/boots layout are recorded.
+No errors or AudioContexts. Fresh normal low/high ordinary gate again
+clears at 4810 ticks with identical finish bytes, crashes at 103 ticks and
+restarts at tick 0 in 1 ms. Scoped lint passes.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/construction05-anatomy/
+
+Limits: UNACCEPTED moving-art packet for parent judgment. Authored anatomy
+is not supported riding, native pixel parity, continuous fit/contact, LOD
+or physical device approval. Recorded riding and current patch measurements
+continue separately; normal player assets remain unchanged.
