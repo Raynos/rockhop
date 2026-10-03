@@ -1716,3 +1716,17 @@ Ask:284–286.
 
 Limits: Unaccepted technicalrender; silentencoding/rootplayedjudgment
 pending. Explicit1024candidate, not1536 success or wearableart acceptance.
+
+Finding: One frozen Pixal1024 matchedneutral/nativePBR silentfilm supports
+root comparison after actual48steps and exactsavedlatentdecode.
+
+Validation: Encodeguard0/1.975s,48frames8fps6s1024×576onevideo/noaudio.
+48distinctframes eachpanel, unchanged512²pixels beforeencoding; allraw
+2.82mvertices/6.60mfaces/materialvalues preserved. Moviehashrechecked.
+Runtime24 frozenplayerpins/playerdiff0 retain round78shipgateidentity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-orbit01/handoff.json
+Ask:284–286.
+
+Limits: Root alone judgesplayedfilm. Explicit1024lowerVRAM alternative,
+not1536success/UVbake/openings/fit/rig/mobile/modelwinner or finalartpass.
+No Library upload or publication byAgent2.
