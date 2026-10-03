@@ -241,3 +241,17 @@ Ask:276.
 
 Limits: This pair does not distinguish bad geometry from inconsistent normals.
 No repair/quality run, art/fit/rig or family verdict. Root judges actual clip.
+
+Finding: Installed Mac baseline is512 with12steps/stage; cheap probes explicitly
+overrode8. Pure-Python FDG/disabled hole filling and raw unbaked smooth display
+remain distinct from documented export; baker-ring warning is not this path.
+
+Validation: Eleven primary local source/config files hashed; all three sampler
+defaults12 confirmed. Decoder supplies learned quad_lerp, sets512 at runtime;
+unused normal-alignment branch is not blamed. Existing-byte film586e4777 cited.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/trellis-settings-review.json
+Ask:276.
+
+Limits: Twelve steps may reduce flow error but is not validated to fix dense
+contours/normal response or unseen hood/PBR. Conditional quality run remains
+unqualified; no new inference, source install/edit, repair or family verdict.

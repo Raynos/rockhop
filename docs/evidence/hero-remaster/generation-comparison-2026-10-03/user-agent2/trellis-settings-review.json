@@ -1,0 +1,165 @@
+{
+  "accepted": false,
+  "scope": "Installed version recommendations and actual cheap-probe differences; no new inference",
+  "sourceVersions": {
+    "macWrapper": "d58628f4f5b9c3de8274cb110074154f4b31cef2",
+    "nestedModel": "75fbf0183001ed9876c8dbb35de6b68552ee08bd"
+  },
+  "primarySources": [
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/README.md",
+      "sha256": "8bbee4965cb803151d5d6d7d994189aa797ce77bbb7dec9f03ccaeeb401fd9ad"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/generate.py",
+      "sha256": "67cc6891d6c48b5b9c3b75a382a5a59a13711f92007614655c270a369603fdbc"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/README.md",
+      "sha256": "adc985d5a71fda0a5cb7287f58b6baa7de8db1568c4483ac210f3447b786552b"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-view/pipeline.json",
+      "sha256": "8d7ce55f476486f8efe4005bbbdbfb889aeda5c7d3b8e779a3e3d0df5161ae07"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/pipelines/trellis2_image_to_3d.py",
+      "sha256": "48a47e42f0d4f116701502730226216364dbfc3fe394343b3646170fe27ccc58"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/models/sc_vaes/fdg_vae.py",
+      "sha256": "b775638bf661132dc4cf23311a25fa3d4153c3217bc066b302404b316a70b52d"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/stubs/o_voxel_override_convert.py",
+      "sha256": "6de4b7149e7300ac056f2d83eec8d149560cac521cdded4fd812dadffd7bfa5c"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/backends/mesh_extract.py",
+      "sha256": "6de4b7149e7300ac056f2d83eec8d149560cac521cdded4fd812dadffd7bfa5c"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/representations/mesh/base.py",
+      "sha256": "df620089837b689c5b8d98b3fea7e50ab1216fdee85bd77bf9403850a37a011e"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/microsoft/TRELLIS.2-4B/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "sha256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209"
+    },
+    {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/.venv/lib/python3.11/site-packages/o_voxel/postprocess_cpu.py",
+      "sha256": "d07af511f7cbf905803ad88e72ed60cf0e55a5c455ad1bf435720b6dfda999f6"
+    }
+  ],
+  "documentedSamplerDefaults": {
+    "sparse_structure_sampler": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.7,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 5.0
+    },
+    "shape_slat_sampler": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.5,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 3.0
+    },
+    "tex_slat_sampler": {
+      "steps": 12,
+      "guidance_strength": 1.0,
+      "guidance_rescale": 0.0,
+      "guidance_interval": [
+        0.6,
+        0.9
+      ],
+      "rescale_t": 3.0
+    }
+  },
+  "actualProbeOverrides": {
+    "pipeline": "512",
+    "seed": 42,
+    "stepsEachStage": 8,
+    "guidanceAndSchedule": "no override; installed defaults retained",
+    "input": "single front isolated flat guide; rear/context retained, not conditioned"
+  },
+  "comparison": [
+    {
+      "item": "Sampler steps",
+      "documented": "12 for each stage; Mac generate.py leaves override unset",
+      "actual": "8 for all three stages",
+      "mechanism": "Fewer flow integration steps; does not change mesh extraction or normal handling"
+    },
+    {
+      "item": "Pipeline resolution",
+      "documented": "Mac CLI default512; installed upstream config default1024_cascade; supports512/1024/1536",
+      "actual": "Explicit512",
+      "mechanism": "Mac documented starting resolution, not unsupported mode; cascade not automatically justified"
+    },
+    {
+      "item": "Decoder resolution",
+      "documented": "Checkpoint config starts256, pipeline calls set_resolution(requested res)",
+      "actual": "512 path sets512 before decode",
+      "mechanism": "Do not misreport decoded resolution as256"
+    },
+    {
+      "item": "Shape extraction",
+      "documented": "Mac explicitly imports pure-Python o_voxel_override_convert to avoid native segfaults",
+      "actual": "Same pinned override selected by decoder source",
+      "mechanism": "Learned softplus quad_lerp is supplied; split_weight=None normal-alignment heuristic is not the active inference branch"
+    },
+    {
+      "item": "Hole filling",
+      "documented": "Mac mesh.fill_holes returns immediately; known small holes limitation",
+      "actual": "No hole filling, cleanup or reduction",
+      "mechanism": "Native boundaries retained; additional steps do not enable hole repair"
+    },
+    {
+      "item": "Display/export",
+      "documented": "Mac CLI pre-simplifies to about200k faces and bakes1024 texture; upstream example remeshes, targets1m faces and4096 texture",
+      "actual": "No simplify/remesh/UV bake; raw mesh smooth-shaded with reversed winding and CPU spatial per-vertex colours",
+      "mechanism": "Raw inspection is not the documented final export/render path; its face/normal response must be qualified"
+    },
+    {
+      "item": "Ring-artifact note",
+      "documented": "Mac README warns of texture-baker grid_sample fallback without mtlgemm",
+      "actual": "No o_voxel texture bake used in the diagnostic or appearance film",
+      "mechanism": "That specific bake fallback is not the path producing these films; this does not prove every renderer/decoder path correct"
+    }
+  ],
+  "existingByteDiagnostic": {
+    "movieSHA256": "586e47773d21a85d8bb94e4e754d22111692f24afdb0fe4d98c036d4df33ed22",
+    "observation": "Lit neutral retains contours; unlit sampled colour is nearly uniform",
+    "limits": "Surface, normal and lighting response implicated collectively; geometry versus normals not isolated"
+  },
+  "normalWitness": {
+    "sourceAudit": "trellis-hoodie01/raw-audit.json",
+    "sameDirectionTwoFaceEdges": 120593,
+    "overusedEdges": 6171,
+    "boundaryEdges": 5416,
+    "meaning": "Native connectivity/winding witnesses preclude assuming a coherent smooth normal field; not alone a visual-causality proof"
+  },
+  "inputVisibilityLimit": "The front-only isolated flat guide does not expose rear hood geometry or detailed denim/PBR. More integration steps do not supply those missing views/details.",
+  "conditionalQualityRun": {
+    "authorizedMaximum": 1,
+    "scope": "Wardrobe only; no body benchmark",
+    "candidateDocumentedBaseline": "512, seed42, installed12step defaults, unchanged source/input pins and guards",
+    "expectedImprovementIfChosen": "More flow integration steps can reduce sampling approximation error versus8; no validated dense-contour or hood-detail fix yet",
+    "qualifiedNow": false,
+    "reason": "Material isolation identifies surface/normal/lighting involvement; twelve steps alone does not alter decoder assembly/display normal handling or add unseen hood/PBR evidence",
+    "nextMechanismToValidate": "Native face/normal/rendering path; preserve raw arrays and label any derived display correction independently",
+    "guard": "Fresh canonical lock; start anon<55 and combined<68GiB; stop own child at65/78GiB or1790s; no foreign eviction"
+  },
+  "limits": [
+    "Installed-version analysis, not current remote HEAD or CUDA-equivalence test",
+    "No new software/weights, global environment/source edits, repair or quality run",
+    "No model-family rejection, art/fit/rig acceptance or player promotion"
+  ]
+}
