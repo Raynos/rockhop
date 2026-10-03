@@ -1063,3 +1063,22 @@ Ask:284–286.
 Limits: Unaccepted source checkpoint; actual full16finaldecode/paint06
 pending. Slicing is measured roundoff derivative, notbyte/CUDA equality.
 No quality/bounds reduction, newshape, foreigneviction or ordinary asset.
+
+Finding: Real mesh/reference PBR completes within unchanged bounds while
+preserving all prior neural captures/15sampled hashes and source triangles.
+
+Validation: Paint06 guard0/387.846s, peak60.3anonymous/71.6combinedGiB.
+All11conditioning/QKV capture archives and15sampled hashes match paint05;
+all15sampled arrays now persist.16finite[3,768,768] decoded images and
+8albedo/8MRPILviews saved. Actual4096 basecolor/roughness/metallic maps,
+716971UVvertices/921722triangles, finiteUV. OBJ triangle maxerror6.19e-7;
+GLB5.96e-7. GLBSHA800d7a97/42.329MB; source/output pins frozen, no remesh,
+reduction, newshape or shared source/weight edits. Sourcegeometry retained.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/
+Ask:284–286.
+
+Limits: Unaccepted experimental output; moving actual-material review
+pending, no rig/bodyfit/opening/player promotion or CUDA/full16byte proof.
+Representative VAE slicing exactPIL delta1≤2. Source bake loop resizes only
+first2 views; enhanced per-view bake sizes not independently captured, so
+configured render2048 refers control renders rather than all bake inputs.
