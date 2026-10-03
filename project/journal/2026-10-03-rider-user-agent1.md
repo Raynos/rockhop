@@ -291,3 +291,11 @@ Finding: One fixed90vertex hood profile increases volume but fails rest collisio
 Validation: All51 native binds, all nonhood visible mesh fields, original1250shirt/45pocket basis, hoodie topology/UV/weights/materialnames exact. Morph deltas exact; mesh/Basis float roundoff0.000119mm. Rest contact IDs and source05 paired count are in appearance06/native-verification.json.
 
 Limits: 06 rejected at rest, no native film/engine derivative or art acceptance; previous04/05 controls retained. New construction must establish garment volume/ease/openings and valid thickness/pins before bounded body/selfcollision comparison. Current underarm/knee/hem/feet failures remain.
+
+### Round33 — genuine valid-rest collision-off/on response, 2026-10-03
+
+Finding: A new clean eased sleeve band with two real openings replaces skin-tight topology for one local collision test. Validrest body/self0, unsigned20.692mm, localdot18.387mm, 24proximal hard/24half pins and freedistal opening. Native cloth/body/self response is consumed in49sequentialframes; matchedoff simulation differs only collision toggles and shares exact initialvertices/allbodyframes.
+
+Validation: ON0body/self triangles all49frames vs OFFfinal257body/443self, maxresponse277.036mm. Offline1thread costs6.84sON/5.26sOFF. Nativefront/rear98frame12fps1280x720 silent3column film fullydecoded with exactPTS. ActualGLTFLoader300rows/288nativevertices/528triangles/51bindexact, maxrestresidual0.000599mm. Ship33 controlgate clear40.083333333s/4810identicalticks/crash103/restart1tick/cold6071ms/frame6.5ms/errors0.
+
+Limits: MinimumONsampleclearance0.345837mm below1mm requested clothdistance; trianglezero doesnotcertifyfullthickness/signedvolume. Root judges movingfabric; notwholehoodie/jeans/shoewearability. Blenderphysicsdoesnotexportautomatically: Agent3 explicitlive response/arbitrarypose off-on/mobile costs required. Exact rest/constraints/nativecolliders/exportancestry handoff delivered. Human/root collision clarification and jeans/shoes rejection reviewed in existing278/279 with truthful native attribution; preserve mannequin/body/head/bind/controls.
