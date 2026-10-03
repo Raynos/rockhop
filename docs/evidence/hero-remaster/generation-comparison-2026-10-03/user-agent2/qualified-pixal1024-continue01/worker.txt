@@ -1,0 +1,11 @@
+[SPARSE] Conv backend: flex_gemm; Attention backend: naive
+[ATTENTION] Using backend: sdpa
+Loading weights:   0%|          | 0/754 [00:00<?, ?it/s]Loading weights: 100%|██████████| 754/754 [00:00<00:00, 29252.12it/s]
+Loading weights:   0%|          | 0/415 [00:00<?, ?it/s]Loading weights: 100%|██████████| 415/415 [00:00<00:00, 49909.28it/s]
+Sampling texture SLat (proj):   0%|          | 0/12 [00:00<?, ?it/s]Sampling texture SLat (proj):   8%|▊         | 1/12 [00:06<01:14,  6.78s/it]Sampling texture SLat (proj):  17%|█▋        | 2/12 [00:09<00:42,  4.23s/it]Sampling texture SLat (proj):  25%|██▌       | 3/12 [00:11<00:30,  3.42s/it]Sampling texture SLat (proj):  33%|███▎      | 4/12 [00:14<00:24,  3.04s/it]Sampling texture SLat (proj):  42%|████▏     | 5/12 [00:16<00:19,  2.84s/it]Sampling texture SLat (proj):  50%|█████     | 6/12 [00:19<00:16,  2.73s/it]Sampling texture SLat (proj):  58%|█████▊    | 7/12 [00:21<00:13,  2.68s/it]Sampling texture SLat (proj):  67%|██████▋   | 8/12 [00:24<00:10,  2.67s/it]Sampling texture SLat (proj):  75%|███████▌  | 9/12 [00:27<00:07,  2.66s/it]Sampling texture SLat (proj):  83%|████████▎ | 10/12 [00:29<00:05,  2.67s/it]Sampling texture SLat (proj):  92%|█████████▏| 11/12 [00:32<00:02,  2.69s/it]Sampling texture SLat (proj): 100%|██████████| 12/12 [00:35<00:00,  2.70s/it]Sampling texture SLat (proj): 100%|██████████| 12/12 [00:35<00:00,  2.93s/it]
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024_continue.py", line 367, in <module>
+    if __name__=='__main__':main()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_1024_continue.py", line 353, in main
+    assert len(report['nafChecks'])==1 and len(report['inputMatches'])==4
+AssertionError

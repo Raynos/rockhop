@@ -1,0 +1,1220 @@
+{
+  "accepted": false,
+  "model": "Pixal3D",
+  "quality": {
+    "pipeline": "1024_cascade",
+    "stepsPerStage": 12,
+    "seed": 42,
+    "effectiveResolutionRequired": 1024,
+    "reason": "1536attempt02 stopped at65GiB anonymous guard during96grid conditioning",
+    "documentedLowerMemoryAlternative": true,
+    "higherResolutionAttemptEvidence": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal02/finding.json"
+  },
+  "torch": "2.12.0",
+  "workerSHA256": "35332b88954d605da1efe4c460c9dfde5019f7a4609ffbd12253fd681abb97de",
+  "contractSHA256": "5c8b3b0f1a7297a42dbd48bb36873a60717d0de416889fee26f7c7f851eb8fb7",
+  "phase": "decode-1024",
+  "weights": [
+    {
+      "role": "sparse_structure_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.json",
+      "bytes": 245,
+      "expectedSHA256": "646781293f1cda74720de85d1cef50a957fb4aebd9a4bd014e454e32f2330ac5",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_dec_conv3d_16l8_fp16.safetensors",
+      "bytes": 147591972,
+      "expectedSHA256": "1c76d4a40519aa2d711cc263a8404105231ac26db31d946bed48b84fee79009a",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_flow_model.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.json",
+      "bytes": 503,
+      "expectedSHA256": "2b3ef4c63b72a3de8adf745bd9d9d36b7960bdd7ba3740a6fa4d18fea6c475dd",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "sparse_structure_flow_model.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/ss_flow_img_dit_1_3B_64_bf16.safetensors",
+      "bytes": 5359822584,
+      "expectedSHA256": "6d0147bb347eb61fa81c304cc68c7fd69d447e91870357a549b47e1d0fd77242",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.json",
+      "bytes": 678,
+      "expectedSHA256": "5f1b856dffce79466fb18f5f0eefc08f08c673b24b3c05b20359c0b6d318a209",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/shape_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948490494,
+      "expectedSHA256": "e3b718d3e43e4f8780e9a24ac6fff231811a67e3b058e336e10fe654c911d581",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_512.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "2f7b736e8535aae96e7c41e8d123c24a14ee809fc25bea76eeac72643d21b997",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_512.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_512_bf16.safetensors",
+      "bytes": 5546764048,
+      "expectedSHA256": "63569838c1da93f010e2fa805b202ecf802cc758830230abac202a81b70e5b45",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_1024.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "f47fca56311959a643e8cfd2750229a2c53cbab0027406d8426cd564ce4fb5bc",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "shape_slat_flow_model_1024.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_img2shape_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 5546764048,
+      "expectedSHA256": "3e6d1df0e62bc5bc863320d1d63d6b996235eef4abb8b851e878c88f316369f1",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_decoder.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.json",
+      "bytes": 705,
+      "expectedSHA256": "22074e4ab5b28e2b72d33a3fe61bf416134b89e12d0fc5c729f37da75da0c4d1",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_decoder.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/tex_dec_next_dc_f16c32_fp16.safetensors",
+      "bytes": 948458812,
+      "expectedSHA256": "97ea69addea2ecd9312910f5f548234665eef51c088386180b7cd5b258645e3c",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_flow_model_1024.json",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.json",
+      "bytes": 535,
+      "expectedSHA256": "f18455729d08d2ce7ef809f947ffa47f6f468b3bcf8a86473e8c326e80128ac2",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "role": "tex_slat_flow_model_1024.safetensors",
+      "path": "/Users/raynos/projects/weights/manual/TencentARC/Pixal3D/ckpts/slat_flow_imgshape2tex_dit_1_3B_1024_bf16.safetensors",
+      "bytes": 5546960656,
+      "expectedSHA256": "65df179ad02f9e92bc18335d7861fadd95f268e6249217352468dd83cb79d1d0",
+      "publishedModel": "TencentARC/Pixal3D",
+      "publishedRevision": "b0cb2e1b794cab9aa0ac38a95d794a4d9337437f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+      "bytes": 2664431,
+      "expectedSHA256": "c096c1ab2217a5c3ac136365f721685e2201379cb69d509cfb0261183847c98f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "bytes": 1212559808,
+      "expectedSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/Ruicheng/moge-2-vitl/model.pt",
+      "bytes": 1305030700,
+      "expectedSHA256": "3eefd4abb2102f38f12b2d1992e5ff15e4923e5431c67dd494afe157e0111cd5"
+    }
+  ],
+  "loadedModels": {
+    "sparse_structure_decoder": {
+      "class": "SparseStructureDecoder",
+      "parametersByDtype": {
+        "torch.float32": 121505,
+        "torch.float16": 73549696
+      }
+    },
+    "sparse_structure_flow_model": {
+      "class": "SparseStructureFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17499656,
+        "torch.bfloat16": 1321912320
+      }
+    },
+    "shape_slat_decoder": {
+      "class": "FlexiDualGridVaeDecoder",
+      "parametersByDtype": {
+        "torch.float32": 67783,
+        "torch.float16": 474163680
+      }
+    },
+    "shape_slat_flow_model_512": {
+      "class": "ElasticSLatFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17573408,
+        "torch.bfloat16": 1369098240
+      }
+    },
+    "shape_slat_flow_model_1024": {
+      "class": "ElasticSLatFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17573408,
+        "torch.bfloat16": 1369098240
+      }
+    },
+    "tex_slat_decoder": {
+      "class": "SparseUnetVaeDecoder",
+      "parametersByDtype": {
+        "torch.float32": 67718,
+        "torch.float16": 474148288
+      }
+    },
+    "tex_slat_flow_model_1024": {
+      "class": "ElasticSLatFlowModel",
+      "parametersByDtype": {
+        "torch.float32": 17622560,
+        "torch.bfloat16": 1369098240
+      }
+    }
+  },
+  "captures": {
+    "actual-reconstructed-CPU-RNG-before-texture": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-reconstructed-CPU-RNG-before-texture.npz",
+      "archiveSHA256": "d3e36b2c8942b69240b62ebc64f0280484a36e10070219431195aafbc3b41287",
+      "CBytesSHA256": "bf0d6b7427ba410a12a64b8783674891eb93d9f825556842a5b3cb96455d1155",
+      "shape": [
+        5056
+      ],
+      "dtype": "torch.uint8",
+      "storageDtype": "uint8",
+      "finite": true
+    },
+    "actual-resumed-denormalized-HRshape-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-resumed-denormalized-HRshape-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "actual-resumed-denormalized-HRshape": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-resumed-denormalized-HRshape.npz",
+      "archiveSHA256": "e3fb907a94ecf8972ef43c56f0498ba079f554326bf3d103cf8d0ce6056e926e",
+      "CBytesSHA256": "0ebb23a8c41a06a3c4966db49212106ffa8586a85094bda03bc72c47591f8ac8",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-actual-normalized-pixels": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-actual-normalized-pixels.npz",
+      "archiveSHA256": "b3c08c9d11b90a42fd394ac7fdba5998612b99440baf5b5f23c0ca9e139dc713",
+      "CBytesSHA256": "ae1cb36793e7fec4c5c778a30584b4bee21b695bb89c9fb1c9aaa95531a3d7a3",
+      "shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-actual-NAF-guide": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-actual-NAF-guide.npz",
+      "archiveSHA256": "77caa11e8f1c107724c83133b147fc2e110cd7bc7d742563a907ec63d04a215e",
+      "CBytesSHA256": "29bf3b7e99933a6fd9fe5a5dade26772fd3caeffccd898c6976b7ac57003a076",
+      "shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-actual-NAF-lowres-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-actual-NAF-lowres-features.npz",
+      "archiveSHA256": "a2684f2e8211f54dbea698bf28fdd427d88f1a9d7b7b1c7608e7b5920fdf1993",
+      "CBytesSHA256": "aab35dfd0368e26e910da568c546f7c1b9468c939cfa7520e7587b3a459a3338",
+      "shape": [
+        1,
+        1024,
+        64,
+        64
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-cond-global": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-cond-global.npz",
+      "archiveSHA256": "88de36353897cad4a01eb1019b5ed437b84a679c714cf01c7ded6a7743c1a45f",
+      "CBytesSHA256": "e030fb8693a09b0e36c8ff5865443bacfcb0c7aaf90318d8e35434382090f81a",
+      "shape": [
+        1,
+        5,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-cond-proj-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-cond-proj-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "tex_1024-cond-proj": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-cond-proj.npz",
+      "archiveSHA256": "50166cfb19026a372a62e355af31aa54beb70400871f87360b44bb929e844d20",
+      "CBytesSHA256": "53bb9df8de3e035583d7cd7dd74befd85d614372ead74351ebd7e41d5ac580a1",
+      "shape": [
+        7977,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-neg_cond-global": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-neg_cond-global.npz",
+      "archiveSHA256": "6438adb4935674c9a9fd7e6f4dbd530543a7e8b2f68a1a6c400846bb5b43f24f",
+      "CBytesSHA256": "cc61635da46b2c9974335ea37e0b5fd660a5c8a42a89b271fa7ec2ac4b8b26f6",
+      "shape": [
+        1,
+        5,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "tex_1024-neg_cond-proj-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-neg_cond-proj-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "tex_1024-neg_cond-proj": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/tex_1024-neg_cond-proj.npz",
+      "archiveSHA256": "35c2951e96cba1130e679ea9eec42631c9977b635f8692f07ad2820244cf2ab8",
+      "CBytesSHA256": "7e45c4c062064f2d2360035e7c25f418aa3fcace531b690c8170725f1c42c95f",
+      "shape": [
+        7977,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-initial-noise-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-initial-noise-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-initial-noise": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-initial-noise.npz",
+      "archiveSHA256": "6b1c49106ed17e4418b790a60676964a51efc1746ddefeea011798ea89319493",
+      "CBytesSHA256": "5a0d762e0bdbac76116aeb5cca1b0785a5a79b316a4bd395010ea8f1f3ae4137",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "learned-attention01-q": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention01-q.npz",
+      "archiveSHA256": "743a43db5f693b39944bd6a974dfe0b08ce3d2a1c3d148e2c93ca12c9f944a17",
+      "CBytesSHA256": "e2e446734de3c9131efde55caca06b9df34d75bf682a43dbff2dc1dafdbc04c2",
+      "shape": [
+        7977,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "storageDtype": "uint16",
+      "finite": true
+    },
+    "learned-attention01-k": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention01-k.npz",
+      "archiveSHA256": "49e58bd3934eaca184cc4a00f3b17aab469c13785b7fdd2047e006123154dc5d",
+      "CBytesSHA256": "cae5a4313424afea0b57b51e6e8e84f389226453bd01ddc966d64b09d7363ddd",
+      "shape": [
+        7977,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "storageDtype": "uint16",
+      "finite": true
+    },
+    "learned-attention01-v": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention01-v.npz",
+      "archiveSHA256": "7f5e754126c6d7b6fbe6e91bb8fb198f640bcb183be8c4fa213b8522d2c596d3",
+      "CBytesSHA256": "129b327059d8e0a5564dd402db6cd79260915548c4c5c6b7f96dfc6a50fade25",
+      "shape": [
+        7977,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "storageDtype": "uint16",
+      "finite": true
+    },
+    "learned-attention01-selected-CPU-reference": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention01-selected-CPU-reference.npz",
+      "archiveSHA256": "eebeb78d9c45febd001e6a6f483789e6ff93a7509a84034b9396d7f5c58bb36d",
+      "CBytesSHA256": "d865e73e2f2708995c1496b306dc198a25bee1e1fd804e9c7315c36a68e448e5",
+      "shape": [
+        3,
+        128
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "learned-attention01-selected-MPS-output": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention01-selected-MPS-output.npz",
+      "archiveSHA256": "95215c6b8f427911ddbac740a9d47ac1d9600b39ca90f4bb584c6d589c13df6d",
+      "CBytesSHA256": "74951267402f62dda69390cdacce6ee938753ce7e51aea75240b48edb1c69f0b",
+      "shape": [
+        3,
+        128
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "learned-attention02-q": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention02-q.npz",
+      "archiveSHA256": "83153907efb7423cfb643dadc35341928b598d07b753e0be5415a95a52f0d901",
+      "CBytesSHA256": "7312546ecd46c545f309812fa57e40496459af24a005994427e3fa3766628158",
+      "shape": [
+        7977,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "storageDtype": "uint16",
+      "finite": true
+    },
+    "learned-attention02-k": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention02-k.npz",
+      "archiveSHA256": "05b7fe607973f0ee45c307fdf96e352c832b67b4f3ae05ddd8a8ad6487ddcacf",
+      "CBytesSHA256": "2810220329694ca411b1afd4ea7a46a9fcee5ecde5c919e437cf3a9133d9a705",
+      "shape": [
+        5,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "storageDtype": "uint16",
+      "finite": true
+    },
+    "learned-attention02-v": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention02-v.npz",
+      "archiveSHA256": "c507680b593e5c4daae58a18684ea07c602e51f281becdac65047e5a09896802",
+      "CBytesSHA256": "bc38cf480878180a4324de0289a77811df679c9a1e762640f1f313039086551b",
+      "shape": [
+        5,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "storageDtype": "uint16",
+      "finite": true
+    },
+    "learned-attention02-selected-CPU-reference": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention02-selected-CPU-reference.npz",
+      "archiveSHA256": "78df415f219d32f62d94db4f73f1eb39daa9dbe027ccb54af2b3d0486a95371f",
+      "CBytesSHA256": "7de25c4d33a649727b865cea5e2e8de3d3900386793b55ba91f465e8a7d9bbcd",
+      "shape": [
+        3,
+        128
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "learned-attention02-selected-MPS-output": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/learned-attention02-selected-MPS-output.npz",
+      "archiveSHA256": "599fe0df9bce7a8a45df67c62e1278f3d648577f723d5a2b0c94d9e7b1ea1636",
+      "CBytesSHA256": "e38d3a073ed27a2f7b9a97e52b9bea1516c17cbb5d3721b787c1cbf569617159",
+      "shape": [
+        3,
+        128
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step01-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step01-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step01": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step01.npz",
+      "archiveSHA256": "ba8fb849b8ddd4304172c85fed57d9a7311a630cf07fcfe934434b5aae3701b7",
+      "CBytesSHA256": "3747ab94fcd3a03cf142b6079f05361b52e03002fafe539df3c21f23204aa530",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step02-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step02-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step02": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step02.npz",
+      "archiveSHA256": "f99d4ab7ca1331dde682d4cab4b9d4bc101f74aa65d57ffb3432a2be096247ed",
+      "CBytesSHA256": "f352bf336ae0a5cd4cdfe3712da5775ada7bb52e39e6c0f1fd7856d208c03f50",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step03-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step03-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step03": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step03.npz",
+      "archiveSHA256": "61bf01cf253160b19ae6386595b394c76e364bd6f2e0edd862c89ca11f69614c",
+      "CBytesSHA256": "b15bee4d7593116674d0509dd9344ad343990a528f5fe6d05a3e48602d82f72c",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step04-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step04-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step04": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step04.npz",
+      "archiveSHA256": "6ddd8da12bb5d05bc10aa4ec919587be2a36786e586a0a6668ec007be10647bc",
+      "CBytesSHA256": "ce0478f5f705e8a85f14e687c40d484d8c466bc68d26d505c8859ed931e49935",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step05-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step05-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step05": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step05.npz",
+      "archiveSHA256": "ecf84fd5aa6972db413e8da411d04fe6ab4cfe3a4c9e456728962a97df2a61da",
+      "CBytesSHA256": "26978279c2429dd0acf3e59a20f423642d030c1be71d4e7eb8a64926a613ef0f",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step06-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step06-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step06": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step06.npz",
+      "archiveSHA256": "c26c605636356148f730ea3510c8c7a37bdbbfcd62fd389dd568eb49d782708e",
+      "CBytesSHA256": "34d2f92330e0be86baacf83a3b7bd1faee85365bd9e67630a948982b211d152b",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step07-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step07-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step07": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step07.npz",
+      "archiveSHA256": "2dd8c16e493de8c9a9a5858c62bd11c3efe49fa8730cbfe1163eea1a29b5093b",
+      "CBytesSHA256": "bb4cdd4c4d9e9732d2cc80595d3e0f1ddc549e0d1e9abe91010032e6d68f817d",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step08-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step08-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step08": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step08.npz",
+      "archiveSHA256": "2f2dd5043fddac8f77745d97b2e70e01289e5c5b2e197fa1f77b793b74015058",
+      "CBytesSHA256": "fe713d2c803b012aec46e434b71dc9674ee3320dd59cc1ce0730ae890d5c2f57",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step09-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step09-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step09": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step09.npz",
+      "archiveSHA256": "e2bbbce4c91802cdc83790108b87c26221f4a0deb3cbf55bd52c1626f757fc4f",
+      "CBytesSHA256": "15cbd87363f052d0c7b7390b5f07dfb4160ad6d2d4748b52c329699d64e68e7c",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step10-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step10-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step10": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step10.npz",
+      "archiveSHA256": "21e742153382c0d217fa36bb9ff2e1e070f8884d5810ac10e9c10a826efe8255",
+      "CBytesSHA256": "eaccb62b04e4b94305d5d19286173e2357c9c311e0cfe58b92d3776f46dd1d2c",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step11-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step11-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step11": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step11.npz",
+      "archiveSHA256": "8b9e0226ec7f9e6f5c86e69215db813b98fadf769fb7ba9f7218852ad2311bb4",
+      "CBytesSHA256": "b60c17d9599e5bd13a6d98a02a9298a486c9b0a7e43e72048c388124ec0ae02d",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step12-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step12-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-step12": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-step12.npz",
+      "archiveSHA256": "9a6bcc817582f8bbeba494f37dc58048f4908d0261cc985d81c55ecb3428e184",
+      "CBytesSHA256": "d8a66ca3d74e15969bc9dfec17efce2a605fbfdbfc3437b93b7185075e626195",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-final-sampled-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-final-sampled-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "sampler04-tex_slat_flow_model_1024-final-sampled": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/sampler04-tex_slat_flow_model_1024-final-sampled.npz",
+      "archiveSHA256": "9a6bcc817582f8bbeba494f37dc58048f4908d0261cc985d81c55ecb3428e184",
+      "CBytesSHA256": "d8a66ca3d74e15969bc9dfec17efce2a605fbfdbfc3437b93b7185075e626195",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "actual-final-shape-latent-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-shape-latent-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "actual-final-shape-latent": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-shape-latent.npz",
+      "archiveSHA256": "e3fb907a94ecf8972ef43c56f0498ba079f554326bf3d103cf8d0ce6056e926e",
+      "CBytesSHA256": "0ebb23a8c41a06a3c4966db49212106ffa8586a85094bda03bc72c47591f8ac8",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "actual-final-texture-latent-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-texture-latent-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "actual-final-texture-latent": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-texture-latent.npz",
+      "archiveSHA256": "ce6affeafd9ac5c327eb9104520e7417c47bf273dfdc133df9dbce5bfca85eff",
+      "CBytesSHA256": "578e5024384e67595ac7c9680a2f6a947b106fd5553bcb3a9f6b3833914c40cf",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    }
+  },
+  "sampleCalls": [
+    {
+      "label": "sampler04-tex_slat_flow_model_1024",
+      "steps": 12,
+      "params": {
+        "steps": 12,
+        "guidance_strength": 1.0,
+        "guidance_rescale": 0.0,
+        "guidance_interval": [
+          0.6,
+          0.9
+        ],
+        "rescale_t": 3.0,
+        "verbose": true,
+        "tqdm_desc": "Sampling texture SLat (proj)"
+      }
+    }
+  ],
+  "attentionChecks": [
+    {
+      "phase": "sampler04-tex_slat_flow_model_1024",
+      "backend": "installed-sparse-naive-fp32",
+      "type": "self",
+      "qShape": [
+        7977,
+        12,
+        128
+      ],
+      "kShape": [
+        7977,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "head": 0,
+      "selectedQueries": [
+        0,
+        3988,
+        7976
+      ],
+      "allKeys": true,
+      "maxCPUError": 0.0,
+      "threshold": 0.03125
+    },
+    {
+      "phase": "sampler04-tex_slat_flow_model_1024",
+      "backend": "installed-sparse-naive-fp32",
+      "type": "cross",
+      "qShape": [
+        7977,
+        12,
+        128
+      ],
+      "kShape": [
+        5,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "head": 0,
+      "selectedQueries": [
+        0,
+        3988,
+        7976
+      ],
+      "allKeys": true,
+      "maxCPUError": 0.0,
+      "threshold": 0.03125
+    }
+  ],
+  "projectionChecks": [
+    {
+      "phase": "conditioning-tex_1024",
+      "resolution": 1024,
+      "selectedRows": 257,
+      "maxPixelError": 7.221272790047806e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "7c19e31b1282eab41f129555116da03b3f71ab76784af3365b069542e5a3cd0c"
+    },
+    {
+      "phase": "conditioning-tex_1024",
+      "resolution": 1024,
+      "selectedRows": 257,
+      "maxPixelError": 7.221272790047806e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "7c19e31b1282eab41f129555116da03b3f71ab76784af3365b069542e5a3cd0c"
+    }
+  ],
+  "bilinearChecks": [
+    {
+      "phase": "conditioning-tex_1024",
+      "featureMapShape": [
+        1,
+        1024,
+        64,
+        64
+      ],
+      "maxCPUFloat64Error": 3.031789674423635e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "4299257a828b5dcaa4dd9d4328309dee6c2e30b0ef135451396a9d230fde7f06"
+    },
+    {
+      "phase": "conditioning-tex_1024",
+      "featureMapShape": [
+        1,
+        1024,
+        1024,
+        1024
+      ],
+      "maxCPUFloat64Error": 2.5449844258673693e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "028b3bfb8e28e105487e79c127fbd2f4a36c5a22e25b4916352cf9f088ebe06a"
+    }
+  ],
+  "nafChecks": [
+    {
+      "phase": "conditioning-tex_1024",
+      "qShape": [
+        1,
+        1024,
+        1024,
+        4,
+        64
+      ],
+      "kShape": [
+        1,
+        1024,
+        1024,
+        4,
+        64
+      ],
+      "vShape": [
+        1,
+        1024,
+        1024,
+        4,
+        256
+      ],
+      "kernel": [
+        9,
+        9
+      ],
+      "dilation": [
+        16,
+        16
+      ],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1023
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          1023,
+          0
+        ],
+        [
+          1023,
+          1023
+        ],
+        [
+          512,
+          0
+        ]
+      ],
+      "allHeads": 4,
+      "maxCPUFloat64Error": 1.2039505399741302e-05,
+      "threshold": 0.0005,
+      "archiveSHA256": "de05cca244ca6217900d49ae68f53524ab9977d3c3d04eb1bc49e8238ab55853",
+      "actualInstalledDispatch": "generate_mps.load_runtime_deps pure-PyTorch2048query shifted neighborhoods"
+    }
+  ],
+  "inputMatches": [
+    "tex_1024-actual-normalized-pixels",
+    "tex_1024-actual-NAF-guide",
+    "tex_1024-actual-NAF-lowres-features"
+  ],
+  "memory": [
+    {
+      "phase": "load actual Pixal pipeline",
+      "activeBytes": 0,
+      "driverBeforeBytes": 458752,
+      "driverAfterBytes": 458752
+    },
+    {
+      "phase": "only3remaining-stage models retained",
+      "activeBytes": 0,
+      "driverBeforeBytes": 458752,
+      "driverAfterBytes": 458752
+    },
+    {
+      "phase": "conditioning-tex_1024",
+      "activeBytes": 2234880,
+      "driverBeforeBytes": 19677184,
+      "driverAfterBytes": 11288576
+    },
+    {
+      "phase": "sampler04-tex_slat_flow_model_1024",
+      "activeBytes": 3566861056,
+      "driverBeforeBytes": 22628220928,
+      "driverAfterBytes": 7579058176
+    },
+    {
+      "phase": "decode-1024",
+      "activeBytes": 24150784,
+      "driverBeforeBytes": 8386461696,
+      "driverAfterBytes": 2166308864
+    }
+  ],
+  "camera": {
+    "camera_angle_x": 0.6360271680200948,
+    "distance": 1.5188968181610107,
+    "mesh_scale": 1.0
+  },
+  "backend": {
+    "dense": "sdpa",
+    "sparse": "naive",
+    "conv": "flex_gemm",
+    "NAF": "installed PyTorch2048query"
+  },
+  "limits": [
+    "No full-model/CUDA/backward, topology-quality, fit, rig or art acceptance.",
+    "Camera estimate from real MoGe control, no calibrated reference geometry.",
+    "Raw output before cleanup/export/recolor; selected learned witnesses only."
+  ],
+  "elapsedSeconds": 114.82396258274093,
+  "checkpointLoads": [
+    {
+      "module": "SparseStructureDecoder",
+      "stateTensors": 74,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "SparseStructureFlowModel",
+      "stateTensors": 701,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "FlexiDualGridVaeDecoder",
+      "stateTensors": 292,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "ElasticSLatFlowModel",
+      "stateTensors": 700,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "ElasticSLatFlowModel",
+      "stateTensors": 700,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "SparseUnetVaeDecoder",
+      "stateTensors": 284,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "ElasticSLatFlowModel",
+      "stateTensors": 700,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    },
+    {
+      "module": "NAF",
+      "stateTensors": 37,
+      "missingKeys": [],
+      "unexpectedKeys": [],
+      "missingParameters": []
+    }
+  ],
+  "samplerDefaults": {
+    "sparse_structure": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.7,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 5.0
+    },
+    "shape_slat": {
+      "steps": 12,
+      "guidance_strength": 7.5,
+      "guidance_rescale": 0.5,
+      "guidance_interval": [
+        0.6,
+        1.0
+      ],
+      "rescale_t": 3.0
+    },
+    "tex_slat": {
+      "steps": 12,
+      "guidance_strength": 1.0,
+      "guidance_rescale": 0.0,
+      "guidance_interval": [
+        0.6,
+        0.9
+      ],
+      "rescale_t": 3.0
+    }
+  },
+  "releasedUnusedModels": [
+    "shape_slat_flow_model_1024",
+    "shape_slat_flow_model_512",
+    "sparse_structure_decoder",
+    "sparse_structure_flow_model"
+  ],
+  "noisePrefixReplay": [
+    {
+      "label": "sampler01-sparse_structure_flow_model-initial-noise",
+      "CBytesSHA256": "afb3c2accd3f1d32c0fae51446b5dc3101d68c57ec31c3c16c8cdffece4b6934",
+      "byteIdentical": true
+    },
+    {
+      "label": "sampler02-shape_slat_flow_model_512-initial-noise",
+      "CBytesSHA256": "8a08e1f4af0d5b13e94184a19bdef52fec410c61743ede887541f85bb5d5b1f1",
+      "byteIdentical": true
+    },
+    {
+      "label": "sampler03-shape_slat_flow_model_1024-initial-noise",
+      "CBytesSHA256": "3cf54406efc833d0ff2ae9f38a8ca21668d8c12c14ecd20e6cee1b030909b71c",
+      "byteIdentical": true
+    }
+  ],
+  "continuation": {
+    "receiptSHA256": "a66a3c64f84b4f53ce424ec31c54b4576cfd118e442be394ca86491a93bf2491",
+    "actualHRshapeCBytesSHA256": "1ff79a37c14801616962174488391d0c49bdc0b852792cf4369dfa7a81c4e80b",
+    "previousActualSteps": 36,
+    "shapeSamplersRerun": 0,
+    "normalization": "Original pipeline native MPS normalized*std+mean"
+  },
+  "actualProjectionGrids": [
+    {
+      "stage": "tex_1024",
+      "gridResolution": 64
+    }
+  ],
+  "effectiveResolution": 1024
+}

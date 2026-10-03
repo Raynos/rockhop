@@ -1624,3 +1624,18 @@ Ask:284–286.
 
 Limits: Unaccepted continuation pending; no saved RNGstate originally,
 reconstruction scoped to verified noiseprefix, no fulltrajectoryCUDA proof.
+
+Finding: Actual Pixal saved-shape continuation completes texture12steps
+anddecode, but owned input-count assertion incorrectly expects4not3.
+
+Validation: Guard1/145.281s, notmemorykill; three initialCPU noises byte
+identical, savedHRshapeexact, no shape sampler rerun. Texture12steps/final
+denormalized shape+texture archived; all48actual steps now persisted.
+Twoactualtextureattention errors0; oneactualNAF passes; threecorrect
+normalizedpixels/NAFguide/lowresfeatures match standalone. Allcapturehashes
+rechecked. Baseline has no separately named DINO output match archive.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/
+Ask:284–286.
+
+Limits: Own assertion error prevents mesh persistence after decode.
+Nextoriginaldecode-only preserves48steps; no new sampling or style sweep.

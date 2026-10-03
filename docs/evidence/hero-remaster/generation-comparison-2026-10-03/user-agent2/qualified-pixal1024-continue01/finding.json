@@ -1,0 +1,213 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "d4894a4b80bc700fd928ac43c84ad7a606c2a663",
+  "status": "All48actual sampling steps persisted; incorrect expected4 input-match assertion stops after decode before mesh save",
+  "guardExitCode": 1,
+  "elapsedSeconds": 145.281,
+  "failure": "Owned input-count assertion expected4 but baseline provides3 texture input captures",
+  "memoryStop": false,
+  "peakAnonymousGiB": 54.3,
+  "peakCombinedGiB": 69.9,
+  "noisePrefixReplay": [
+    {
+      "label": "sampler01-sparse_structure_flow_model-initial-noise",
+      "CBytesSHA256": "afb3c2accd3f1d32c0fae51446b5dc3101d68c57ec31c3c16c8cdffece4b6934",
+      "byteIdentical": true
+    },
+    {
+      "label": "sampler02-shape_slat_flow_model_512-initial-noise",
+      "CBytesSHA256": "8a08e1f4af0d5b13e94184a19bdef52fec410c61743ede887541f85bb5d5b1f1",
+      "byteIdentical": true
+    },
+    {
+      "label": "sampler03-shape_slat_flow_model_1024-initial-noise",
+      "CBytesSHA256": "3cf54406efc833d0ff2ae9f38a8ca21668d8c12c14ecd20e6cee1b030909b71c",
+      "byteIdentical": true
+    }
+  ],
+  "actualShapeSamplerReruns": 0,
+  "previousShapeSteps": 36,
+  "actualTextureStepsPersisted": 12,
+  "captureHashesAndFiniteFlagsRechecked": true,
+  "captures": 54,
+  "actualTextureInputMatches": [
+    "tex_1024-actual-normalized-pixels",
+    "tex_1024-actual-NAF-guide",
+    "tex_1024-actual-NAF-lowres-features"
+  ],
+  "NAFChecks": [
+    {
+      "phase": "conditioning-tex_1024",
+      "qShape": [
+        1,
+        1024,
+        1024,
+        4,
+        64
+      ],
+      "kShape": [
+        1,
+        1024,
+        1024,
+        4,
+        64
+      ],
+      "vShape": [
+        1,
+        1024,
+        1024,
+        4,
+        256
+      ],
+      "kernel": [
+        9,
+        9
+      ],
+      "dilation": [
+        16,
+        16
+      ],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1023
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          1023,
+          0
+        ],
+        [
+          1023,
+          1023
+        ],
+        [
+          512,
+          0
+        ]
+      ],
+      "allHeads": 4,
+      "maxCPUFloat64Error": 1.2039505399741302e-05,
+      "threshold": 0.0005,
+      "archiveSHA256": "de05cca244ca6217900d49ae68f53524ab9977d3c3d04eb1bc49e8238ab55853",
+      "actualInstalledDispatch": "generate_mps.load_runtime_deps pure-PyTorch2048query shifted neighborhoods"
+    }
+  ],
+  "attentionChecks": [
+    {
+      "phase": "sampler04-tex_slat_flow_model_1024",
+      "backend": "installed-sparse-naive-fp32",
+      "type": "self",
+      "qShape": [
+        7977,
+        12,
+        128
+      ],
+      "kShape": [
+        7977,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "head": 0,
+      "selectedQueries": [
+        0,
+        3988,
+        7976
+      ],
+      "allKeys": true,
+      "maxCPUError": 0.0,
+      "threshold": 0.03125
+    },
+    {
+      "phase": "sampler04-tex_slat_flow_model_1024",
+      "backend": "installed-sparse-naive-fp32",
+      "type": "cross",
+      "qShape": [
+        7977,
+        12,
+        128
+      ],
+      "kShape": [
+        5,
+        12,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "head": 0,
+      "selectedQueries": [
+        0,
+        3988,
+        7976
+      ],
+      "allKeys": true,
+      "maxCPUError": 0.0,
+      "threshold": 0.03125
+    }
+  ],
+  "finalDecodeInputs": {
+    "actual-final-shape-latent-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-shape-latent-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "actual-final-shape-latent": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-shape-latent.npz",
+      "archiveSHA256": "e3fb907a94ecf8972ef43c56f0498ba079f554326bf3d103cf8d0ce6056e926e",
+      "CBytesSHA256": "0ebb23a8c41a06a3c4966db49212106ffa8586a85094bda03bc72c47591f8ac8",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    },
+    "actual-final-texture-latent-coords": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-texture-latent-coords.npz",
+      "archiveSHA256": "016c25ec35380f3ca6679e71e0eee43421e0eaa86fba4dc637adebb29b7306c1",
+      "CBytesSHA256": "b10c5330bbc486c21550987ae8aa17fdff8fa0c73626f33836434986e65a6a51",
+      "shape": [
+        7977,
+        4
+      ],
+      "dtype": "torch.int32",
+      "storageDtype": "int32",
+      "finite": true
+    },
+    "actual-final-texture-latent": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal1024-continue01/model/actual-final-texture-latent.npz",
+      "archiveSHA256": "ce6affeafd9ac5c327eb9104520e7417c47bf273dfdc133df9dbce5bfca85eff",
+      "CBytesSHA256": "578e5024384e67595ac7c9680a2f6a947b106fd5553bcb3a9f6b3833914c40cf",
+      "shape": [
+        7977,
+        32
+      ],
+      "dtype": "torch.float32",
+      "storageDtype": "float32",
+      "finite": true
+    }
+  },
+  "effectiveResolution": 1024,
+  "nativeMeshPersisted": false,
+  "next": "Decode-only original2decoders from actual saved finalshape/texture; no sampler rerun",
+  "limits": [
+    "Harness failure after actual decode, rawmesh not archived.",
+    "Three input matches are baseline normalizedpixels/NAFguide/NAFlowresfeatures; DINO feature output separately archived but has no standalone byte-match baseline.",
+    "Noise-prefix reconstruction proven, not saved original RNGstate or CUDA trajectory parity."
+  ]
+}
