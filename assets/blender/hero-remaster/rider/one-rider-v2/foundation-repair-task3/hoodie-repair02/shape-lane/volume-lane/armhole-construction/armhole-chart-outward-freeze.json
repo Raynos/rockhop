@@ -1,0 +1,64 @@
+{
+  "candidate": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/armhole-construction/armhole-chart-outward.npz",
+  "candidateSHA256": "10a1c2094726e7ab929b453e07e5f9c072dd06b0673a8557f4f41c6c5e33c2d7",
+  "geometryFrozen": true,
+  "status": "Rest-valid bounded construction candidate; standing appearance and all motion remain UNACCEPTED",
+  "restGate": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/armhole-construction/armhole-chart-outward.rest-gate.json",
+  "restROI": "Only cloth0+2 faces with ALL corners .99<worldY<1.51; strict nonadjacent and one-corner crossings0. Not whole-cloth zero. QA wider source neck/folds outside remain inherited.",
+  "construction": "Cut cuff-connected source sleeve on declared source face graph; close old low torso side with source-boundary chart; leave anatomical ellipse opening centre(.627,1.385), radii(.070,.072); sew new insert using same nonoverlapping chart and harmonic attachment. Existing sleeve shifts <=2mm, new torso closure <=1mm outward clearance. New inner opening y1.313..1.457, previous lower join y1.190.",
+  "vertexInventory": {
+    "0": {
+      "usedVertexRows": 25229,
+      "unreferencedVertexRows": 175,
+      "originalPrefixRetained": 22240,
+      "appendedVertices": 3164,
+      "maxWithinPrimitivePhysicalWeldPositionGapM": 2.220446049250313e-16
+    },
+    "1": {
+      "usedVertexRows": 4021,
+      "unreferencedVertexRows": 0,
+      "originalPrefixRetained": 4021,
+      "appendedVertices": 0,
+      "maxWithinPrimitivePhysicalWeldPositionGapM": 0.0
+    },
+    "2": {
+      "usedVertexRows": 3123,
+      "unreferencedVertexRows": 1,
+      "originalPrefixRetained": 3112,
+      "appendedVertices": 12,
+      "maxWithinPrimitivePhysicalWeldPositionGapM": 0.0
+    },
+    "3": {
+      "usedVertexRows": 61099,
+      "unreferencedVertexRows": 0,
+      "originalPrefixRetained": 61099,
+      "appendedVertices": 0,
+      "maxWithinPrimitivePhysicalWeldPositionGapM": 0.0
+    },
+    "4": {
+      "usedVertexRows": 294,
+      "unreferencedVertexRows": 0,
+      "originalPrefixRetained": 294,
+      "appendedVertices": 0,
+      "maxWithinPrimitivePhysicalWeldPositionGapM": 0.0
+    }
+  },
+  "newTriangles": 5508,
+  "newTopologyProtected": "All existing vertex prefixes retained. Only detached source sleeve seam triangle indices change, plus p2faces28/29 UV-safe diagonal repair; new triangles appended primitive0. Existing cuff/head/hands/sole source index anchors preserved.",
+  "attributesProtected": "Every original UV row exact. Outside sourceConstructionMargin0/2, original positions/weights/normals/UV exact. Primitives1/3/4 positions/weights/normals/UV exact. New atlas/islands use original image0 gold-cloth donor; original images bytes preserved. Clothing normals only modified in declared source margin plus new vertices.",
+  "seamContract": "physicalWeld is authoritative sewn identity: original source aliases preserved on torso; detached sleeve cut aliases assigned new distinct groups per side+oldAlias; appended closure outer uses original torso group; higher body/insert opening shares vertex/group. Distinct groups may be coincident: do not infer physical adjacency from coordinates or ancestry. physicalGarment0 means fused retained sourcecloth0+2, not a new pants separation;1glove,2head/cheek.",
+  "mappingSupplement": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/shape-lane/volume-lane/armhole-construction/armhole-chart-outward-mapping.npz",
+  "mappingSHA256": "cdbd117a9817b807f1a1b769787ca8177fc316b5475159831a019e9442d78f61",
+  "mappingSchema": "oldToNewOffsets/Indices is CSR for every original source vertex. sourceFaceParents has two ancestry slots (p2new28/29 both referenceold28/29). attributeDonor supplies source attribute row including new-fabric coherent donor; it is not geometric ancestry. New geometry sourceUniqueVertex=-1/oldVertex=-1 when added fabric, except copied boundary sourceUniqueVertex. sourceFaceAncestry=-1 for added faces; restDoubleArea supplies new fabric own rest denominator; sourceDoubleArea holds old-source baseline, NaNnew.",
+  "UVSampleAudit": {
+    "samplesPerNewFace": 7,
+    "opaqueFraction": 1.0,
+    "goldClothHeuristicFraction": 1.0,
+    "medianRGB": [
+      202.0,
+      142.0,
+      65.0
+    ]
+  },
+  "requiredNext": "Root rest PBR front/side/back then exact physicalV5 D304 matched motion. Rig worker derives added fabric weights on frozen geometry. Independent literal gates use physicalWeld+sourceFaceParents, own new-fabric areas, full triangles including one-corner. No broad pose/continuous/runtime acceptance yet."
+}
