@@ -894,3 +894,21 @@ Limits: Synthetic activation/random projection controls, not learned
 full-UNet or CUDA parity. Prior entry's projection fixture names installed
 processor structure, not loaded trained coefficients. Actual bounded paint
 must capture real layer/QKV/stride and validate both native/split routes.
+
+Finding: Controlled paint recipe can preserve native equal-width SDPA
+and split only independent reference V columns with live operator evidence.
+
+Validation: AST/CLI help pass; mutually exclusive query/value modes.
+4529fa1d matched-input fullprocessor/long-token controls pass. Source scopes
+F.SDPA only to exact imported customUNet module, preserves all9prior
+condition/noise pins and frozen768/8view/15step/seed42quality. Native and
+split first actualQKV captured/checked≤0.002 independently; each layer/
+processor/QKV shape/stride/dtype/memory is saved before allocation, and
+finite sampled latent/hash is saved after every diffusion step. Installed
+Torchgit08187d9e pinned and disabled-prefill environment rejected.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint before actual paint04. Source-informed
+kernel routing, not GPU dispatch trace or learned/CUDA parity. Original
+quality/resource bounds retained; trained processor/projections unchanged,
+no newshape, key/view truncation or stock attention slicing.

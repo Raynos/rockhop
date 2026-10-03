@@ -26,7 +26,9 @@ def main():
     parser = argparse.ArgumentParser()
     for name in ('mesh', 'wrapped', 'image', 'weights-receipt', 'weights-receipt-sha256', 'out'):
         parser.add_argument('--' + name, required=True)
-    parser.add_argument('--query-tiling', action='store_true')
+    attention_mode = parser.add_mutually_exclusive_group()
+    attention_mode.add_argument('--query-tiling', action='store_true')
+    attention_mode.add_argument('--value-columns', action='store_true')
     parser.add_argument('--replay-progress')
     parser.add_argument('--replay-progress-sha256')
     args = parser.parse_args()
@@ -41,7 +43,7 @@ def main():
         prior = json.loads(Path(args.replay_progress).read_text())
         assert prior['inputMeshSHA256'] == sha(args.mesh) and prior['referenceSHA256'] == sha(args.image)
         assert prior['seed'] == 42 and prior['viewResolution'] == 768 and prior['paintSteps'] == 15
-    assert not args.query_tiling or prior is not None
+    assert not (args.query_tiling or args.value_columns) or prior is not None
     assert subprocess.check_output(['git', '-C', str(SOURCE), 'rev-parse', 'HEAD'], text=True).strip() == '82920d643c0dc2f7bfd7255f45f62d386edfe60c'
     out = Path(args.out)
     assert not out.exists()
@@ -55,7 +57,8 @@ def main():
               'maxSelectedViews': 8, 'viewResolution': 768, 'renderSize': 2048, 'textureSize': 4096,
               'remesh': False, 'simplification': False, 'device': 'mps', 'rendererDevice': 'cpu',
               'UVReuse': 'Frozen actual installed xatlas result with identical triangle coordinates; no repeated unwrap',
-              'queryTiling': args.query_tiling, 'replayProgressSHA256': args.replay_progress_sha256,
+              'queryTiling': args.query_tiling, 'valueColumns': args.value_columns,
+              'replayProgressSHA256': args.replay_progress_sha256,
               'limits': ['One reference/seed, no paint or garment fit acceptance before root played review.',
                          'Original six zero-area triangles and detached component retained.',
                          'Owned process/instance adapters, no shared installation edits or CUDA parity.']}
@@ -201,8 +204,98 @@ def main():
                 rows.append({'family': family, 'index': index, 'size': list(image.size), 'mode': image.mode, 'SHA256': sha(path)})
         report['actualPaintInputPNGs'] = rows
         save()
-        return original_forward(images, controls, **keywords)
+        result = original_forward(images, controls, **keywords)
+        report.update(stage='multiview images returned; upscale and bake',
+                      multiviewElapsedSeconds=time.monotonic() - started)
+        save()
+        return result
     multiview.forward_one = forward
+    if args.value_columns:
+        from value_column_attention import value_column_attention
+        report['valueColumnAdapterSHA256'] = sha(inspect.getfile(value_column_attention))
+        report['torchGitVersion'] = torch.version.git_version
+        report['prefillDisableEnv'] = os.environ.get('PYTORCH_MPS_DISABLE_PREFILL_ATTENTION')
+        assert torch.version.git_version == '08187d9e0fba026dc8217405802ab5381dc88d90'
+        assert report['prefillDisableEnv'] in (None, '0'), 'Native equal-width prefill was disabled'
+        report['attentionSourceURL'] = 'https://raw.githubusercontent.com/pytorch/pytorch/08187d9e0fba026dc8217405802ab5381dc88d90/aten/src/ATen/native/mps/operations/Attention.mm'
+        report['attentionDerivative'] = 'Complete Q/K, split independent V columns into head-width blocks and concatenate in original order; native SDPA retained for equal widths'
+        report['actualAttentionShapes'] = {}
+        report['ownedAttentionModules'] = []
+        active_layer, processors = [], {}
+        for name, module in pipeline.unet.named_modules():
+            if not hasattr(module, 'processor'):
+                continue
+            owner = inspect.getmodule(type(module.processor))
+            if owner is None or not hasattr(owner, 'AttnCore'):
+                continue
+            processors[owner.__name__] = owner
+            def enter(module, inputs, _name=name):
+                active_layer.append({'name': _name, 'processor': type(module.processor).__name__})
+            def leave(module, inputs, result):
+                active_layer.pop()
+            module.register_forward_pre_hook(enter)
+            module.register_forward_hook(leave)
+        assert processors
+        validated_routes = set()
+        for name, owner in processors.items():
+            source_sha = sha(inspect.getfile(owner))
+            assert source_sha == '6df282d094627733623ddeaa28a493a11252ea58e7b99e4d52240e17f4f71d0f'
+            original_sdpa = owner.F.scaled_dot_product_attention
+            def owned_value_sdpa(query, key, value, _original=original_sdpa, **keywords):
+                assert active_layer and query.dtype == key.dtype == value.dtype
+                assert keywords.get('attn_mask') is None and keywords.get('dropout_p', 0) == 0
+                assert not keywords.get('is_causal', False) and not keywords.get('enable_gqa', False)
+                split = query.device.type == 'mps' and query.shape[-1] != value.shape[-1]
+                route = 'nativeSDPA-V-column-blocks' if split else 'original-nativeSDPA'
+                def info(tensor):
+                    return {'shape': list(tensor.shape), 'stride': list(tensor.stride()),
+                            'dtype': str(tensor.dtype), 'device': str(tensor.device)}
+                descriptor = str((active_layer[-1]['name'], tuple(query.shape), tuple(key.shape), tuple(value.shape)))
+                entry = report['actualAttentionShapes'].setdefault(descriptor, {
+                    **active_layer[-1], 'calls': 0, 'query': info(query), 'key': info(key), 'value': info(value),
+                    'route': route, 'allKeysViewsRetained': True, 'mask': None, 'dropout': 0,
+                    'isCausal': False, 'scale': keywords.get('scale'),
+                    'estimatedUnsplitFloat32ScoreGiB': int(np.prod(query.shape[:-2])) * query.shape[-2] * key.shape[-2] * 4 / 1024 ** 3})
+                entry['calls'] += 1
+                report['lastAttentionCall'] = {'descriptor': descriptor, 'call': entry['calls'],
+                                               'status': 'before operator', 'elapsedSeconds': time.monotonic() - started}
+                report['mpsBeforeAttention'] = {'allocatedBytes': torch.mps.current_allocated_memory(),
+                                              'driverBytes': torch.mps.driver_allocated_memory()}
+                save()  # Persist the stopping layer before its allocation, not only on success.
+                first = route not in validated_routes
+                if first:
+                    capture('actual-first-' + ('value-column' if split else 'native') + '-attention-inputs',
+                            {'query': query, 'key': key, 'value': value})
+                output = value_column_attention(query, key, value, **keywords) if split else _original(query, key, value, **keywords)
+                assert torch.isfinite(output).all(), 'Nonfinite actual native/value-column attention'
+                if first:
+                    selected = torch.tensor([0, query.shape[-2] // 2, query.shape[-2] - 1])
+                    qc = query.detach().cpu()[:, :, selected].float()
+                    kc, vc = key.detach().cpu().float(), value.detach().cpu().float()
+                    expected = (torch.softmax(qc @ kc.transpose(-1, -2) / query.shape[-1] ** .5, dim=-1) @ vc).to(query.dtype)
+                    error = float((output.detach().cpu()[:, :, selected].float() - expected.float()).abs().max())
+                    entry['firstActualSelectedCPUError'] = error
+                    assert error <= .002, 'Actual attention exceeds unchanged independent CPU threshold'
+                    validated_routes.add(route)
+                report['lastAttentionCall']['status'] = 'operator finite and returned'
+                save()
+                return output
+            owner.F = types.SimpleNamespace(scaled_dot_product_attention=owned_value_sdpa)
+            report['ownedAttentionModules'].append({'name': name, 'sourceSHA256': source_sha})
+        original_scheduler_step = pipeline.scheduler.step
+        report['actualDiffusionSteps'] = []
+        def scheduler_step(*positional, **keywords):
+            result = original_scheduler_step(*positional, **keywords)
+            latent = (result[0] if isinstance(result, tuple) else result.prev_sample).detach().cpu().numpy()
+            assert np.isfinite(latent).all(), 'Nonfinite real sampled paint latent'
+            report['actualDiffusionSteps'].append({'step': len(report['actualDiffusionSteps']) + 1,
+                'elapsedSeconds': time.monotonic() - started, 'shape': list(latent.shape),
+                'dtype': str(latent.dtype), 'allFinite': True,
+                'CBytesSHA256': hashlib.sha256(latent.tobytes()).hexdigest()})
+            save()
+            return result
+        pipeline.scheduler.step = scheduler_step
+        save()
     if args.query_tiling:
         from query_tiled_attention import query_tiled_attention
         report['queryTilingAdapterSHA256'] = sha(inspect.getfile(query_tiled_attention))
