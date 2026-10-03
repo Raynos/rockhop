@@ -1691,3 +1691,16 @@ Ask:284–286.
 
 Limits: Pervertexdisplay derivative, not UVbake/maplevel/appearance pass.
 Matchedplayedfilm/rootjudgment stillpending; no garmentpromotion.
+
+Finding: Pixal matchedmoving gray/PBR recipe uses actualnativeYup,
+which differs from the TRELLIS nativeZupright convention.
+
+Validation: Render/encode syntax passes; installedPixal proj renderer
+explicitlyfront+Z/upY andYturntable, sourcehash/linesrecorded. Displayonly
+X,-Z,Y positiveorientation/uniformscale; allrawarrays/materialreadback
+mustbeexact.48angles8fps6s matched512²panels withnoaudio required.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-orbit-recipe01/
+Ask:284–286.
+
+Limits: Unacceptedrecipe, movingrootjudgment pending. Native1024output,
+not1536success, geometryfix, UVbake, wearableopening or modelwinner.
