@@ -127,3 +127,15 @@ Ask:276.
 
 Limits: Existing approved concept source is not new art, anatomy, garment fit
 or moving acceptance. Side pose/motorcycle are not the canonical fitting bank.
+
+Finding: Root rejects both exact low-budget body donors as replacements.
+Hunyuan missing regions/slivers and TRELLIS bands/angular anatomy offer no
+advantage over clean canonical body; wardrobe appearance remains next priority.
+
+Validation: Decision records exact raw/movie SHA pins and confirmed distinct
+Library IDs. Root review relayed by bridge; no additional generation or fit run.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/body-donor-decision.json
+Ask:276.
+
+Limits: Specific settings/reference rejection, not whole model families. No
+body escalation or integration permitted; actual raw arrays/limits preserved.
