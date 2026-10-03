@@ -1,0 +1,287 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "skimage": "0.26.0",
+  "recipeSHA256": "029a8c8a51ed285d6d64104eba38dfbb32021204e20ed3bc7ca87e2d2f1fbae9",
+  "adapterSHA256": "b6476c66d3fcb7ceaaf955bcb3cac553c70ceeaf73e1011be364918699f23b1d",
+  "installedMCFiles": {
+    "_marching_cubes_lewiner.py": "f482cdb5c9996c1a465a1fc84ffea9f88eec012200b61ca67e8ac7eab964f7fa",
+    "_marching_cubes_lewiner_cy.cpython-311-darwin.so": "2a8e1001695a01d9afe293f41535170543278feb845d69ae268c812f7e9174dc",
+    "_marching_cubes_lewiner_luts.py": "a6e6144e1725f60013aaa99eaf04ea01da6aa2839e328474a15e89fe0bcfe701"
+  },
+  "cases": [
+    {
+      "name": "asymmetricSingleCellUpperCornerMask",
+      "pass": true,
+      "finiteSamples": 8,
+      "missingSamples": 202,
+      "finiteCells": 1,
+      "finiteCrossingCells": 1
+    },
+    {
+      "name": "denseSphere",
+      "pass": true,
+      "finiteSamples": 274625,
+      "missingSamples": 0,
+      "finiteCells": 262144,
+      "finiteCrossingCells": 8216,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 8214,
+        "faces": 16424,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            11.039999961853027,
+            11.039999961853027,
+            11.039999961853027
+          ],
+          [
+            52.959999084472656,
+            52.959999084472656,
+            52.959999084472656
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 0.0007650473248936592,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 24636,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          16424
+        ]
+      },
+      "derivedAudit": {
+        "accepted": false,
+        "vertices": 8214,
+        "faces": 16424,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            11.039999961853027,
+            11.039999961853027,
+            11.039999961853027
+          ],
+          [
+            52.959999084472656,
+            52.959999084472656,
+            52.959999084472656
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 0.0007650473248936592,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 24636,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          16424
+        ]
+      },
+      "denseSphereArraysIdentical": true,
+      "fieldBytesUnchanged": true,
+      "fixtureSHA256": "2ea8bb08e744a7569da596481cf1ef042e27bea3d4f34cabe27cfdcf7bfeba12"
+    },
+    {
+      "name": "finiteBandSphere",
+      "pass": true,
+      "finiteSamples": 45862,
+      "missingSamples": 228763,
+      "finiteCells": 37328,
+      "finiteCrossingCells": 8216,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 13524,
+        "faces": 27040,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": false,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 15930,
+        "invalidIndexElements": 0,
+        "error": "Nonfinite vertices or out-of-range indices; raw retained"
+      },
+      "derivedAudit": {
+        "accepted": false,
+        "vertices": 8214,
+        "faces": 16424,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            11.039999961853027,
+            11.039999961853027,
+            11.039999961853027
+          ],
+          [
+            52.959999084472656,
+            52.959999084472656,
+            52.959999084472656
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 0.0007650473248936592,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 24636,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          16424
+        ]
+      },
+      "denseSphereArraysIdentical": true,
+      "fieldBytesUnchanged": true,
+      "fixtureSHA256": "09d90e6b9d7ff265e4cedaf59081bc96dced1d02e079ea9533874102875f7a00"
+    },
+    {
+      "name": "cutCoverageSphere",
+      "pass": true,
+      "finiteSamples": 22385,
+      "missingSamples": 252240,
+      "finiteCells": 17748,
+      "finiteCrossingCells": 3944,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 7098,
+        "faces": 14192,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": false,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 9219,
+        "invalidIndexElements": 0,
+        "error": "Nonfinite vertices or out-of-range indices; raw retained"
+      },
+      "derivedAudit": {
+        "accepted": false,
+        "vertices": 4025,
+        "faces": 7884,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            33.0,
+            11.063872337341309,
+            11.063872337341309
+          ],
+          [
+            52.959999084472656,
+            52.936126708984375,
+            52.936126708984375
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 0.0007650473248936592,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 11908,
+        "boundaryEdges": 164,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 1,
+        "componentTriangleCountsDescending": [
+          7884
+        ]
+      },
+      "denseSphereArraysIdentical": false,
+      "fieldBytesUnchanged": true,
+      "fixtureSHA256": "4d75fb5811185f4ac791546b58ae35a9e135bb94dcb1c01a9448df8d1a23a55b"
+    },
+    {
+      "name": "constantPositiveNoSurface",
+      "pass": true,
+      "finiteSamples": 54720,
+      "missingSamples": 219905,
+      "finiteCells": 50505,
+      "finiteCrossingCells": 0,
+      "nativeAudit": {
+        "accepted": false,
+        "vertices": 8656,
+        "faces": 17308,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": false,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 25968,
+        "invalidIndexElements": 0,
+        "error": "Nonfinite vertices or out-of-range indices; raw retained"
+      },
+      "derivedAudit": {
+        "accepted": false,
+        "vertices": 0,
+        "faces": 0,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": false,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "error": "Empty geometry or non-integer native indices"
+      },
+      "denseSphereArraysIdentical": false,
+      "fieldBytesUnchanged": true,
+      "fixtureSHA256": "433f4df3c089d5b8f923c15b42257a958f6977eed6e66ea43ce4e44d7ed3a7f1"
+    }
+  ],
+  "limits": [
+    "Analytic controls do not establish actual decoder field coverage.",
+    "No field filling, NaN removal, remeshing or shared-source changes.",
+    "Mask addressing qualified only at step_size=1 in this installed runtime."
+  ],
+  "allControlsPass": true
+}

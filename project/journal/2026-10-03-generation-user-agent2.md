@@ -558,3 +558,21 @@ Ask:284–286.
 Limits: Raw invalid arrays immutable. No geometry/style/PBR/fit judgment,
 implicit NaN cleanup or production promotion. Sparse-field/extractor
 NaN hypothesis needs known control and actual field evidence before fix.
+
+Finding: Installed skimage0.26 MC invents NaN geometry at sparse-field
+missing boundaries; finite-cell extraction preserves a known real surface.
+
+Validation: Five controls pass under shared guard exit0 in0.432s. Dense
+and finite-band spheres have byte-identical8214v/16424f closed arrays;
+upstream finite-band extraction adds5310NaN vertices. Cut coverage remains
+open164edges, constant-positive missing field returns empty rather than
+upstream8656NaN vertices. Asymmetric single-cell fixture verifies upper
+corner mask indexing; original field Cbytes unchanged. Installed source
+and compiled MC hashes pinned. Second fixture briefly waited for shared
+lock after observed holder; no overlap or foreign process action.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/finite-cell-control02/
+Ask:284–286.
+
+Limits: Owned extraction derivative only; no installed/shared edits, field
+filling or mesh cleanup. Actual hoodie field coverage/replay pending; no
+CUDA/quality/PBR/fit acceptance. Future launches require no-holder check.
