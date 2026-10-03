@@ -1375,3 +1375,16 @@ Ask:284–286,289–290.
 
 Limits: Local note commits only. TRELLIS played judgment and proper Pixal
 qualification/seed pending; kept source is not a game-ready rig/fit pass.
+
+Finding: Unaccepted Pixal sparse control pins its own Python3.10 compiled
+Metal library and actual SparseConv3d wrapper before a qualified seed.
+
+Validation: Source syntax/whitespace checked;15 exact source/control/library
+pins frozen. Same independent CPU coordinate oracles and fixed dtype
+thresholds required; actual Pixal wrapper uses persisted oracle weights.
+Known unsafe native half trilinear remains disabled; owned protection only.
+Evidence: assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_sparse_contract.json
+Ask:284–286.
+
+Limits: Checkpoint only, execution pending. No learned DINO/NAF/MoGe, seed,
+backward or CUDA parity inferred from TRELLIS or synthetic controls.
