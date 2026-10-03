@@ -244,3 +244,23 @@ Limits: UNACCEPTED metric admission only. Quaternion extraction never
 reconstructs playback matrices. Actual physics-driven private installation,
 contact/art/device review and production coupling remain separate work.
 No normal game or asset paths changed.
+
+### Round 20 — frozen05 repairs default weights without geometry drift
+
+Finding: Frozen appearance05 changes only the three hoodie default weights
+to zero and the source candidate label. The entire04 BIN is byte-identical.
+Actual source decoder and normal prepareHero/GltfRider clone preserve both
+cloth primitives with zero defaults. Native master corrective defaults are
+also independently zero; Basis value one is not a corrective coefficient.
+
+Validation: All eight decoded skinned primitives have default rest closure
+under 0.000854 mm without corrective injection. Controller configuration and
+mesh names are exact04; all 529 source-pose coefficient samples repeat the
+previous checked values. Read-only Blender5.2.1 native inspection and scoped
+lint pass.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/defaults05-admission.json
+
+Limits: UNACCEPTED. Static native-default and source/loader admission does
+not establish moving appearance, supported contacts, LOD or device approval.
+Exact05 candidate is ready for independent played private engine review;
+normal assets and deployment remain unchanged.

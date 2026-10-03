@@ -1,0 +1,22 @@
+{
+  "status": "UNACCEPTED_ENGINE_CONTROLLER_FRAME_CHECK",
+  "candidateSHA256": "ecc3bb87b2b9ff934c20345e47b422665f676a23f26a84622b6ec42cc0d42181",
+  "driverSHA256": "8c40c42af362a8d3d8ae44d27a0b07570f600b26adc66d325239413f66c7625b",
+  "expandedSHA256": "ddced495c7ae0218c7ae83f5b47c1d007da137e8d7f05e37e08ae65a9c15d457",
+  "controllerSHA256": "3cbfe062b2ae409d6a22bb082f54a886473751c42914cbd470c66385a9d831af",
+  "controllerCodeSHA256": "3461c6149eae9a06c5854a2e91a97023fa1e53933ac8220eca72e38c6d6e11a6",
+  "checkCodeSHA256": "086d606976ae1cc882eb605f0f6fa713d15bbb2476230d88f458753b47d65970",
+  "frames": 529,
+  "maximumQuaternionAngleRad": 1.7831653716149434e-06,
+  "maximumCoefficientError": 1.0960472359711204e-06,
+  "restExactlyZero": true,
+  "derivation": "pose basis quaternion = inverse(normalized file local-rest quaternion) \u00d7 normalized current local quaternion. Native bone-local axes are retained; no global Blender/glTF axis swizzle is applied to the bone-local basis.",
+  "limits": [
+    "Metric extraction only; no TRS reconstruction of playback matrices. Actual live riding still needs independent source/loader/controller/camera/input receipts.",
+    "Native recorded coefficient agreement is finite sampled validation, not extrapolated pose quality or fit/contact acceptance.",
+    "Private diagnostic controller only; no normal player coupling or assets changed."
+  ],
+  "exactPrior529SampleDetails": true,
+  "priorReceiptSHA256": "1db6284a95395b36d34ab9a2d84be263b3306b30225d395dc2678569f30d6d3c",
+  "sampleDetailsSHA256": "961577233dab336222f7dd3434b88243f3118b2e488f76fde65987cb822a94ba"
+}
