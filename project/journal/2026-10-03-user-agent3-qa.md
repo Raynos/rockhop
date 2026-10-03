@@ -358,3 +358,26 @@ Limits: This is an unaccepted runtime checkpoint and floor smoke, not sleeve
 clearance, new wardrobe, mobile cost or a physical-device pass. Compat's
 base64 WASM load cost remains unmeasured. Private sleeve integration,
 consumed body/self/inter-garment response and phone build are still open.
+
+### Round 25 — geometry socket proposals reach the physical pose path
+
+Finding: A private05 derivative appends four grip/sole child nodes to the
+existing hand/foot joints. Canonical body triangles facing the owner palmar
+normal or file-down direction supply area-centroid proposals and exact
+sourceIDs. No legacy glove/boot offsets are copied. Entire BIN and all
+original51skin/body/head/wardrobe JSON remain exact. Actual recorded riding
+now reaches the authoritative riderBody COM/angle branch and stance.
+
+Validation: Actual GLTFLoader/prepareHero/GltfRider recognizes all four
+markers; rest proposal residual<1e-10m. Two19frame Rookie forward/back
+films play silently; all1166inputticks match an independent production
+Game's hashes, clocks, phases and finish fields. Every tick has physicalPose
+true. Captured COM residual≤7e-9m and grip target error≤.000204mm. Scoped
+lint passes. The current sole markers expose≈93mm target error.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/socket25/
+
+Limits: Rejected05 wardrobe remains a control. Socket centroids are
+diagnostic geometry proposals, not approved contact points, fit or support.
+Current sole IK targets ankle origins without subtracting sole offset; this
+gap remains open. No collision-response/seat-support/mobile acceptance or
+normal-player asset promotion. Root judges played evidence.

@@ -11,8 +11,8 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');const packet=pa
 const results=[];let ticks=0;
 for(const c of receipt.cases){const f=fixtures.cases.find(f=>f.id===c.id);assert(f);
   const recordingBytes=fs.readFileSync(path.join(path.dirname(fixturesFile),f.recording));assert.equal(sha(recordingBytes),c.recordingSHA256);
-  const rec=decodeJSON(recordingBytes.toString()),inputs=expandFrames(rec),traceBytes=fs.readFileSync(path.join(packet,c.id+'.ndjson'));assert.equal(sha(traceBytes),c.everyTickTraceSHA256);
-  const trace=traceBytes.toString().trim().split('\n').map(l=>JSON.parse(l));assert.equal(trace.length,c.everyTickCount);
+  const rec=decodeJSON(recordingBytes.toString()),inputs=expandFrames(rec),traceBytes=fs.readFileSync(path.join(packet,c.id+'.ndjson'));assert.equal(sha(traceBytes),c.everyTickTraceSHA256??c.everyInputTraceSHA256);
+  const trace=traceBytes.toString().trim().split('\n').map(l=>JSON.parse(l));assert.equal(trace.length,c.everyTickCount??c.everyInputTickCount);
   const game=new Game({physics:createBikePhysicsV2(rec.header.physicsHz),physicsHz:rec.header.physicsHz,
     renderer:{setTrack(){},onEvent(){},setQuality(){},setBikeClass(){}},autoSkipCountdown:true,ghostEnabled:false});
   game.loadTrack(rec.header.trackId,rec.header.seed,rec.header.bike);

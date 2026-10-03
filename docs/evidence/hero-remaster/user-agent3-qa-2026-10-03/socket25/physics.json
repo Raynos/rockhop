@@ -1,0 +1,33 @@
+{
+  "status": "REJECTED_WARDROBE_CONTROL_EVERY_TICK_PHYSICS_VERIFIED",
+  "candidateSHA256": "4234ae0abb06edaaaeae369d4431e1bb4cffa5c69e316004af6925cd362c18ab",
+  "receiptSHA256": "adcd7a10d5d4db6b5c37ba85c6fdc1c3e221c165e0dbab438fb34d5f9d57ce69",
+  "ticks": 1166,
+  "results": [
+    {
+      "id": "rookie-maximum-forward-lean",
+      "ticks": 463,
+      "traceSHA256": "e8c72bd26ef3fd99981338c331b2f3849bb7511d747483ad16934f60dd592fd1",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "21bd9c5397ec4251"
+    },
+    {
+      "id": "rookie-maximum-backward-lean",
+      "ticks": 703,
+      "traceSHA256": "3fb199c9b82cf90ac7e9d07562b10e0f18a23fb023a524b6edb9a5138b81c43b",
+      "exactPhysicsPhaseClockFinishEveryTick": true,
+      "finalHash": "29068d65ced63fa3"
+    }
+  ],
+  "codePins": {
+    "src/game/game.ts": "8d1c9dd089731507fbb6811c3b2d5600075237124741c2e1631d67fe6188576d",
+    "src/physics/v2/bike.ts": "519dd15990b427bdbc66810d14c29866b443a31b9a87a68d84114144dd8c21a9",
+    "src/core/replay.ts": "1d36586edf1f8e5929ec02d9a545ca1bea89ea107e0af116e95f89e28c41639c",
+    "src/core/hash.ts": "f758f4dfb8bcb640f4b6ce2db7700643fc17f13a4fe7fe27d4de8e12ae7ae2a0"
+  },
+  "checkCodeSHA256": "c77ad80a7b0a399bce32345131d728738fca039da1ed6a0e2d19fabc7bba202c",
+  "limits": [
+    "Partial input windows end while riding; no new recorded clear, attempts-to-clear, restart or finish-time claim.",
+    "Exact physics is a control. Human rejected hoodie, jeans and footwear fit; contact samples and numerical parity do not admit those assets."
+  ]
+}

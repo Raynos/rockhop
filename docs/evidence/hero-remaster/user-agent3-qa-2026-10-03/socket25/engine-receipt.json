@@ -1,0 +1,4856 @@
+{
+  "status": "UNACCEPTED_ACTUAL_PHYSICAL_BODY_BRANCH_CAPTURED",
+  "candidate": {
+    "logical": "models/rider-street-mustard.glb",
+    "url": "models/b1e5182f70fcdee7/rider-street-mustard-4234ae0abb06edaa.glb",
+    "bytes": 6739356,
+    "sha256": "4234ae0abb06edaaaeae369d4431e1bb4cffa5c69e316004af6925cd362c18ab"
+  },
+  "sourceReceiptSHA256": "0bf8638d1ebf5f0287412701b20650b1d02bce1e8fe115f96ed1757c8a010f92",
+  "captureSHA256": "9a9ef1291163bc22dd546d1e44735c29b3cfe97f3944d65f85a57eb8aaaee736",
+  "physicsSourceSHA256": "087797ef768af3f5f292df8d4583bf2d553d98d68311f8b3522c135bbd32beaa",
+  "engineSourceSHA256": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+  "errors": [],
+  "loaded": [
+    {
+      "sha256": "4ec26ad0a0c08f7ec7e466523b77b4dd5f6378e9b389fade140eb7d08418d36b",
+      "status": 200
+    },
+    {
+      "sha256": "369e586fe3268929a2955522b68f07408d2085f5f9746d7e56b7b8bc5f93c5aa",
+      "status": 200
+    },
+    {
+      "sha256": "e55919d60267849358ef5e97f4731f42fac6eb2835b9998e1d146d056c0f10f7",
+      "status": 200
+    },
+    {
+      "sha256": "37455064bf7b6012d67e99454cefced5a1aceac3747796f11cdcfe839436a2b7",
+      "status": 200
+    },
+    {
+      "sha256": "0acc9ac86eeca76cc1812f8870eab36e2e25ca76d6a5cbe86d4a46a36cc12a86",
+      "status": 200
+    },
+    {
+      "sha256": "def6821d99fe7d73442735f1010bdd7e68bd2057d6de25643d91e31429aad72a",
+      "status": 200
+    },
+    {
+      "sha256": "a875ae974381dff1e03d711c0587c6590e350729bdb04ba245933828a69d8998",
+      "status": 200
+    },
+    {
+      "sha256": "fec85cbceaa7ad681f2f0d1cbc42d29d3a2a27f2583ac20329cb58892f966d56",
+      "status": 200
+    },
+    {
+      "sha256": "2bbe14c984d760e593e1a6042185ef0cba1f100d59f0074c8b1ce5ccc2032b42",
+      "status": 200
+    },
+    {
+      "sha256": "28a1e706cf13337ab0309dc76fb9f18191edf23eb71f216f3b43109057585321",
+      "status": 200
+    },
+    {
+      "sha256": "0c14eb52f0aaed2622d7a67c5533a520bbbc96b67071fa32d711b82c00806663",
+      "status": 200
+    },
+    {
+      "sha256": "31229d98fde8964c0d0e42ba109f3bc1f392be9e9cd766b73dde71bbfc1e19bc",
+      "status": 200
+    },
+    {
+      "sha256": "4a9801c2a4148f450874b87f65e604a29967924ace1d52341ab5176b7804c6b4",
+      "status": 200
+    },
+    {
+      "sha256": "4234ae0abb06edaaaeae369d4431e1bb4cffa5c69e316004af6925cd362c18ab",
+      "status": 200
+    }
+  ],
+  "cases": [
+    {
+      "id": "rookie-maximum-forward-lean",
+      "recordingSHA256": "8cabf8c22d7c5cb8dcf2c2fa6b8a3d2df2ec9f47a8df0f5f5bd4c5d0c0e7a678",
+      "everyInputTickCount": 463,
+      "everyInputTraceSHA256": "e8c72bd26ef3fd99981338c331b2f3849bb7511d747483ad16934f60dd592fd1",
+      "samples": [
+        {
+          "inputTick": 283,
+          "stateHash": "5d98bb23ddc1e29c",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.829,
+              0.829
+            ],
+            "legStretch": [
+              0.931,
+              0.931
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.591066714243445e-8,
+              1.6545821256835974e-7
+            ],
+            "gripAngleErr": [
+              0.0007095043741328615,
+              0.0005567743753667199
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 3.290985840080428e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300080589626508,
+              0.09300054880405233
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.5590455860404282,
+              "lean": 0.5590455860404282,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8941345901777329,
+                1.0709929499074404,
+                0.33000001004584933
+              ],
+              "quaternion": [
+                0.2792677878168993,
+                -0.03823729736740137,
+                -0.8098428912172961,
+                0.5144918344560587
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8941344459993879,
+                1.0709929770153928,
+                -0.33000000797508366
+              ],
+              "quaternion": [
+                -0.29229109757128313,
+                -0.35334336712915904,
+                0.8052341903511145,
+                -0.37591518328609097
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.547931881564227,
+                0.346741747762166,
+                0.20392649905611057
+              ],
+              "quaternion": [
+                0.7628533551212495,
+                0.45594402034163184,
+                0.398986774349713,
+                -0.2257860740882433
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5479316631562035,
+                0.3467415356220353,
+                -0.2039260048312091
+              ],
+              "quaternion": [
+                0.7847211046152501,
+                0.4590343738167963,
+                0.35404670986274367,
+                -0.21943347111171427
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 293,
+          "stateHash": "a95930de3abb5c17",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.825,
+              0.825
+            ],
+            "legStretch": [
+              0.919,
+              0.919
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.594944005912655e-8,
+              1.6665991004638318e-7
+            ],
+            "gripAngleErr": [
+              0.0007076715380148212,
+              0.0005655716486981432
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 1.1174406328351615e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300085500135954,
+              0.09300058229191922
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.5100894668655833,
+              "lean": 0.5100894668655833,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8934417237669297,
+                1.0578438829345542,
+                0.3300000102910666
+              ],
+              "quaternion": [
+                0.2796516949659545,
+                -0.035320171599813356,
+                -0.8044284235068194,
+                0.5229170789750343
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8934415768823402,
+                1.0578439049398574,
+                -0.33000000823070935
+              ],
+              "quaternion": [
+                -0.2885869189519143,
+                -0.35637509461110517,
+                0.8012664579424094,
+                -0.38429987016368333
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5624333783476976,
+                0.326523511269075,
+                0.20392654210830938
+              ],
+              "quaternion": [
+                0.7580525865967447,
+                0.46388193707623676,
+                0.3966082534431415,
+                -0.22993842493050717
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5624331520558141,
+                0.3265232789838248,
+                -0.2039260093427848
+              ],
+              "quaternion": [
+                0.7798868776686051,
+                0.46720040919766115,
+                0.3517369493810766,
+                -0.22311710443662003
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 303,
+          "stateHash": "18d89f0d93d6f751",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.824,
+              0.824
+            ],
+            "legStretch": [
+              0.911,
+              0.911
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.648112582785002e-8,
+              1.6679043634324744e-7
+            ],
+            "gripAngleErr": [
+              0.0007051541618483649,
+              0.0005715933720597325
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.4338435886765e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300087990116296,
+              0.09300059921151414
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.4700256146246112,
+              "lean": 0.4700256146246112,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8922128159030815,
+                1.0503617079334011,
+                0.33000001023433956
+              ],
+              "quaternion": [
+                0.2799051997217929,
+                -0.033251501242225125,
+                -0.800540060029085,
+                0.5288506169612021
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8922126680515112,
+                1.0503617261855474,
+                -0.3300000088091091
+              ],
+              "quaternion": [
+                -0.2859440433222926,
+                -0.35849912161500735,
+                0.7984030958692466,
+                -0.39021381749609846
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5720549479751332,
+                0.314226603054222,
+                0.20392656467285597
+              ],
+              "quaternion": [
+                0.7546019917491998,
+                0.46947417386920576,
+                0.3948972847651184,
+                -0.23286458462021606
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.572054719070448,
+                0.31422635861766746,
+                -0.20392601150071743
+              ],
+              "quaternion": [
+                0.7764111446430763,
+                0.47295401110374996,
+                0.3500776433557229,
+                -0.22571169398184238
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 313,
+          "stateHash": "c86d3d25a869a6bf",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.826,
+              0.826
+            ],
+            "legStretch": [
+              0.911,
+              0.911
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.690773446820832e-8,
+              1.6635273316348802e-7
+            ],
+            "gripAngleErr": [
+              0.0007039961694248251,
+              0.000572742305217767
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.316270719238186e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300088124777454,
+              0.09300060021447508
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.47260147081498316,
+              "lean": 0.47260147081498316,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8919488320602408,
+                1.050784093974599,
+                0.33000001007624624
+              ],
+              "quaternion": [
+                0.2799599101799676,
+                -0.0327876748565215,
+                -0.7996626971639048,
+                0.5301763236695846
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8919486845530746,
+                1.0507841113870464,
+                -0.33000000918787703
+              ],
+              "quaternion": [
+                -0.2853496455783696,
+                -0.3589724163922882,
+                0.7977554459140223,
+                -0.39153617354251885
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5742321572909861,
+                0.3135920793815653,
+                0.20392656563035177
+              ],
+              "quaternion": [
+                0.753823073641349,
+                0.47072384515418175,
+                0.39451090473997213,
+                -0.23351857853231645
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5742319289284861,
+                0.31359183386883777,
+                -0.20392601159933715
+              ],
+              "quaternion": [
+                0.7756264307328392,
+                0.47423981500856865,
+                0.34970317559063074,
+                -0.22629143538834967
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 323,
+          "stateHash": "07c95e8654c1a63e",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.828,
+              0.828
+            ],
+            "legStretch": [
+              0.914,
+              0.914
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.70762128358595e-8,
+              1.6583715260561225e-7
+            ],
+            "gripAngleErr": [
+              0.0007042212601437926,
+              0.0005709901467081298
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 7.867317052669296e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300087154207679,
+              0.09300059369249714
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.4895809741281598,
+              "lean": 0.4895809741281598,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.892929198659355,
+                1.0560778447096528,
+                0.3300000099488266
+              ],
+              "quaternion": [
+                0.27989473868700593,
+                -0.03333944644659684,
+                -0.8007061857681441,
+                0.5285990606358216
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.892929051870161,
+                1.05607786293557,
+                -0.3300000093244959
+              ],
+              "quaternion": [
+                -0.2860566694555939,
+                -0.35840926112893223,
+                0.7985256617221441,
+                -0.38996293940477933
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5723087998030447,
+                0.32014405963612674,
+                0.2039265565679454
+              ],
+              "quaternion": [
+                0.7547494613494662,
+                0.46923706032795726,
+                0.39497043013769845,
+                -0.23274050447240346
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5723085728811338,
+                0.3201438186652815,
+                -0.2039260107569859
+              ],
+              "quaternion": [
+                0.7765597086134143,
+                0.47271004024292024,
+                0.3501485415391534,
+                -0.22560169032211336
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 333,
+          "stateHash": "c258b13daa8acfc9",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.81,
+              0.81
+            ],
+            "legStretch": [
+              0.919,
+              0.919
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.616527158661097e-8,
+              1.700943814812749e-7
+            ],
+            "gripAngleErr": [
+              0.000672789637696844,
+              0.0005747710081569548
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.2204642000892996e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300085574626804,
+              0.0930005873166345
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.7414568957985176,
+              "lean": 0.7414568957985176,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8700129147512949,
+                1.0681295963438235,
+                0.33000000976699495
+              ],
+              "quaternion": [
+                0.28021749609065894,
+                -0.03050828223498639,
+                -0.7953216559560763,
+                0.5366663956816533
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8700127753743312,
+                1.0681296335769366,
+                -0.3300000039251394
+              ],
+              "quaternion": [
+                -0.2824188845160347,
+                -0.36128270815562563,
+                0.7945427186687599,
+                -0.398015312173966
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5643364099509708,
+                0.3258641804502359,
+                0.20392653047695114
+              ],
+              "quaternion": [
+                0.7499673556175324,
+                0.47684289443891403,
+                0.3925974686064894,
+                -0.23672143139550247
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5643361945683482,
+                0.3258639479006169,
+                -0.20392600857525617
+              ],
+              "quaternion": [
+                0.7717413960788252,
+                0.4805361484284415,
+                0.3478500122843723,
+                -0.22912983233462156
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 343,
+          "stateHash": "fbd6ee8d84dcbb78",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.826,
+              0.826
+            ],
+            "legStretch": [
+              0.923,
+              0.923
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.302407610189927e-8,
+              1.6774517970790774e-7
+            ],
+            "gripAngleErr": [
+              0.0006324992263696026,
+              0.0005624602863236576
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.321538872466882e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300084313688599,
+              0.09300058356631126
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8583725653057424,
+                1.0638174113943484,
+                0.33000000639416494
+              ],
+              "quaternion": [
+                0.279749183653983,
+                -0.03454002371796285,
+                -0.8029667517237813,
+                0.5251587825288776
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8583724435191888,
+                1.063817463586294,
+                -0.330000005637609
+              ],
+              "quaternion": [
+                -0.28759177223710725,
+                -0.35717867227252786,
+                0.8001914335770769,
+                -0.3865332893853768
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5314490231222095,
+                0.3306617818192877,
+                0.20392650803217674
+              ],
+              "quaternion": [
+                0.7567557240419255,
+                0.4659946197568848,
+                0.3959653501133564,
+                -0.23104388100371107
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5314488079785264,
+                0.3306615659615691,
+                -0.2039260066520025
+              ],
+              "quaternion": [
+                0.7785807043079939,
+                0.46937391040770965,
+                0.35111321085174674,
+                -0.22409734614877394
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 353,
+          "stateHash": "20fead3e88aa7957",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.824,
+              0.824
+            ],
+            "legStretch": [
+              0.931,
+              0.931
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.175645188454483e-8,
+              1.671994817067145e-7
+            ],
+            "gripAngleErr": [
+              0.0006338699769816436,
+              0.0005486496258160256
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 8.236829541630991e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300080674303654,
+              0.09300055823860455
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8677207183614234,
+                1.0544275258666767,
+                0.33000000651417866
+              ],
+              "quaternion": [
+                0.279062391445579,
+                -0.03970903093475238,
+                -0.812543960125948,
+                0.5102153047550945
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.867720600616737,
+                1.0544275846185303,
+                -0.33000000417519065
+              ],
+              "quaternion": [
+                -0.2941498031000063,
+                -0.35179756717477856,
+                0.8072047675930527,
+                -0.371664872749004
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5139010836773567,
+                0.3338666961760268,
+                0.20392647930812682
+              ],
+              "quaternion": [
+                0.7652463933636213,
+                0.45191612498436406,
+                0.400171536428167,
+                -0.22367963549098965
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5139008700883081,
+                0.33386649657147427,
+                -0.20392600331357913
+              ],
+              "quaternion": [
+                0.7871301566937048,
+                0.45489108376949366,
+                0.35519857970944313,
+                -0.21756396716885412
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 363,
+          "stateHash": "c2648b2f7b0748de",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.816,
+              0.816
+            ],
+            "legStretch": [
+              0.934,
+              0.934
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.939670505390989e-8,
+              1.6791127045364694e-7
+            ],
+            "gripAngleErr": [
+              0.0006366577220062871,
+              0.0005449521497223987
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 1.0841430272023548e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300078961328667,
+              0.09300054587568796
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8731652972201985,
+                1.0460899362780762,
+                0.3300000071797165
+              ],
+              "quaternion": [
+                0.27888698129847617,
+                -0.040922850407984,
+                -0.8147562072339977,
+                0.5066751066171491
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8731651797093498,
+                1.046089998130016,
+                -0.3300000021041344
+              ],
+              "quaternion": [
+                -0.2956776852737611,
+                -0.35051439604021806,
+                0.8088142362407994,
+                -0.36814921738225725
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5130888000640637,
+                0.32863528265825326,
+                0.2039264668055034
+              ],
+              "quaternion": [
+                0.7672054300482141,
+                0.44858227525335387,
+                0.401140974636645,
+                -0.22193638166144672
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5130885888415522,
+                0.3286350881024358,
+                -0.20392600177330333
+              ],
+              "quaternion": [
+                0.7891019318065025,
+                0.45146198402640836,
+                0.35614183616314155,
+                -0.21601644420263386
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 373,
+          "stateHash": "57f2e1bf42b55e22",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.813,
+              0.813
+            ],
+            "legStretch": [
+              0.931,
+              0.931
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.892460917740163e-8,
+              1.6875257930637064e-7
+            ],
+            "gripAngleErr": [
+              0.0006399901592490719,
+              0.0005473401119637264
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 8.143883527544079e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300080539179738,
+              0.09300055675147283
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8752132189372135,
+                1.0406882464638874,
+                0.3300000074368219
+              ],
+              "quaternion": [
+                0.2790134365935494,
+                -0.04005157322405098,
+                -0.8131696820523512,
+                0.5092174483704829
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8752130999325147,
+                1.0406883078428995,
+                -0.33000000179098876
+              ],
+              "quaternion": [
+                -0.2945814452102838,
+                -0.3514362054685454,
+                0.8076604124341283,
+                -0.3706736753042766
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5196255409337306,
+                0.3209982872331388,
+                0.2039264793765426
+              ],
+              "quaternion": [
+                0.765800587338121,
+                0.45097636937523516,
+                0.4004458216509177,
+                -0.22318821463346275
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5196253267408324,
+                0.3209980879057472,
+                -0.20392600330998029
+              ],
+              "quaternion": [
+                0.7876879849104589,
+                0.453924464210375,
+                0.3554653938408924,
+                -0.2171277629299
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 383,
+          "stateHash": "f52e60db2bd0a81a",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.814,
+              0.814
+            ],
+            "legStretch": [
+              0.928,
+              0.928
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.944843783054594e-8,
+              1.689827276820704e-7
+            ],
+            "gripAngleErr": [
+              0.0006407976063156528,
+              0.0005507457647848067
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.29458138040378e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300082012511546,
+              0.09300056704818417
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.875540891608057,
+                1.039894220075844,
+                0.3300000073828683
+              ],
+              "quaternion": [
+                0.2791853676764172,
+                -0.038834965865277654,
+                -0.8109422650608465,
+                0.5127572390835634
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.875540771350747,
+                1.039894279696576,
+                -0.3300000023557257
+              ],
+              "quaternion": [
+                -0.293046727040106,
+                -0.35271695334940245,
+                0.8060369628698612,
+                -0.3741907667176711
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5262409755054522,
+                0.3171316188042772,
+                0.20392649090477766
+              ],
+              "quaternion": [
+                0.7638274962745032,
+                0.4543102210860336,
+                0.3994691352020842,
+                -0.22493164014493597
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5262407593085773,
+                0.3171314143808956,
+                -0.20392600466927482
+              ],
+              "quaternion": [
+                0.7857018327113606,
+                0.4573537036516399,
+                0.35451555158304127,
+                -0.21867518114587245
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 393,
+          "stateHash": "038d74ef621761c6",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.816,
+              0.816
+            ],
+            "legStretch": [
+              0.927,
+              0.927
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.000850988968628e-8,
+              1.6870122990293596e-7
+            ],
+            "gripAngleErr": [
+              0.0006394089920713297,
+              0.00055288902966755
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.091910417349372e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300082211205454,
+              0.09300056846510556
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8753817951753853,
+                1.0428135791059245,
+                0.33000000724210754
+              ],
+              "quaternion": [
+                0.2792954167716865,
+                -0.038035420338646604,
+                -0.8094707722954756,
+                0.5150770950127509
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8753816744702274,
+                1.0428136372647225,
+                -0.3300000029244725
+              ],
+              "quaternion": [
+                -0.2920355971315758,
+                -0.35355458278924207,
+                0.8049622444255815,
+                -0.3764971451059691
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5302265399960892,
+                0.3180625482786393,
+                0.20392649240452387
+              ],
+              "quaternion": [
+                0.7625235463390189,
+                0.45649541150023104,
+                0.39882345579391115,
+                -0.22607451049190525
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5302263244947947,
+                0.31806234220367147,
+                -0.2039260048403308
+              ],
+              "quaternion": [
+                0.7843890784815855,
+                0.45960151648266134,
+                0.3538879684416239,
+                -0.21968936291220154
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 403,
+          "stateHash": "59f15c12917431b3",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.818,
+              0.818
+            ],
+            "legStretch": [
+              0.928,
+              0.928
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.034427169063219e-8,
+              1.6828708971688303e-7
+            ],
+            "gripAngleErr": [
+              0.0006377120699977849,
+              0.00055345169965328
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.665473229878285e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300081704322818,
+              0.09300056494860978
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8752401685137584,
+                1.0465420994467804,
+                0.33000000712247235
+              ],
+              "quaternion": [
+                0.2793269842067132,
+                -0.037802894276409066,
+                -0.8090416906224179,
+                0.5157508007675204
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8752400479189163,
+                1.0465421569152706,
+                -0.33000000325923484
+              ],
+              "quaternion": [
+                -0.29174116170201936,
+                -0.3537975800027734,
+                0.8046485315908288,
+                -0.3771671454844921
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5312920971755909,
+                0.3212173853971196,
+                0.203926488377483
+              ],
+              "quaternion": [
+                0.7621432487350257,
+                0.45713005620075803,
+                0.3986351111268693,
+                -0.22640645542510265
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5312918833194593,
+                0.32121718012822775,
+                -0.20392600436640004
+              ],
+              "quaternion": [
+                0.7840061883257011,
+                0.4602543618421024,
+                0.3537049532984542,
+                -0.21998389901769264
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 413,
+          "stateHash": "50bb8bdd60b21138",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.819,
+              0.819
+            ],
+            "legStretch": [
+              0.93,
+              0.93
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.042928364859122e-8,
+              1.6802871647380856e-7
+            ],
+            "gripAngleErr": [
+              0.0006366031789350783,
+              0.0005531206149540958
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 7.333201773632079e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300081163444561,
+              0.09300056118643586
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8752049698671777,
+                1.0487543809438968,
+                0.3300000070675987
+              ],
+              "quaternion": [
+                0.27931324498304155,
+                -0.037904280160780665,
+                -0.8092288409448657,
+                0.5154571064967916
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8752048495645378,
+                1.0487544383870266,
+                -0.3300000033317584
+              ],
+              "quaternion": [
+                -0.2918695613096682,
+                -0.35369166294574456,
+                0.8047853799749554,
+                -0.3768750550049641
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5307304380347742,
+                0.32367954115216263,
+                0.20392648411046485
+              ],
+              "quaternion": [
+                0.7623091233405364,
+                0.4568533915769742,
+                0.3987172643079148,
+                -0.22626174978989297
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5307302254132645,
+                0.3236793372562191,
+                -0.20392600386022727
+              ],
+              "quaternion": [
+                0.7841731964318466,
+                0.45996975914843163,
+                0.3537847774663991,
+                -0.21985549989651887
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 423,
+          "stateHash": "ebd06e63980a8cbb",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.791,
+              0.791
+            ],
+            "legStretch": [
+              0.897,
+              0.897
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.410796799485454e-8,
+              1.7460890292705087e-7
+            ],
+            "gripAngleErr": [
+              0.0007198644750212367,
+              0.0005471576385963557
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.21929607135155e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300092651132069,
+              0.09300063504140664
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.7212463143917567,
+              "lean": 0.7212463143917567,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9055109523986077,
+                1.0493169039036176,
+                0.3300000109100678
+              ],
+              "quaternion": [
+                0.2786412727732835,
+                -0.04256335033442986,
+                -0.8177238272751765,
+                0.5018715824981443
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9055108112986544,
+                1.0493169532508564,
+                -0.330000002294707
+              ],
+              "quaternion": [
+                -0.2977353147844408,
+                -0.3487682701178203,
+                0.810966754216114,
+                -0.36338306158721406
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5370153595993011,
+                0.3361500937445273,
+                0.20392659448747266
+              ],
+              "quaternion": [
+                0.7698320482653518,
+                0.444059466885429,
+                0.4024401029217486,
+                -0.21957172165038147
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5370151057017509,
+                0.3361498572526862,
+                -0.20392601447228298
+              ],
+              "quaternion": [
+                0.7917450791186675,
+                0.4468103533133112,
+                0.35740695458846733,
+                -0.21391680944162408
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 433,
+          "stateHash": "778d67158aea807e",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.726,
+              0.726
+            ],
+            "legStretch": [
+              0.768,
+              0.768
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              5.0111555985326554e-8,
+              1.76953617730582e-7
+            ],
+            "gripAngleErr": [
+              0.0005525334658290996,
+              0.0006011208930209273
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.588404626995163e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0930008897888165,
+              0.09300056525435986
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 0.02946400064354862,
+              "lean": 0.02946400064354862,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9716295312620693,
+                1.0817441437273736,
+                0.33000001250276334
+              ],
+              "quaternion": [
+                -0.2783788071351165,
+                0.0442473420051012,
+                0.8207432358769806,
+                -0.4969184512077924
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9716293704422987,
+                1.0817440790273616,
+                -0.3299999965427605
+              ],
+              "quaternion": [
+                -0.2998385423982057,
+                -0.3469617312321994,
+                0.8131489303736973,
+                -0.3584733698573062
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5945373776985485,
+                0.3730858533058982,
+                0.20392680462053644
+              ],
+              "quaternion": [
+                0.7725028164839735,
+                0.4393967767802038,
+                0.4037604103587616,
+                -0.2171341229996836
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5945371040886502,
+                0.37308545691717604,
+                -0.2039260180689228
+              ],
+              "quaternion": [
+                0.7944319891485531,
+                0.44201532494952334,
+                0.35869398500661104,
+                -0.21175190647105407
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 443,
+          "stateHash": "c96d450c9b6b3769",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.778,
+              0.778
+            ],
+            "legStretch": [
+              0.73,
+              0.73
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.108405141205136e-8,
+              1.6349278138389086e-7
+            ],
+            "gripAngleErr": [
+              0.0006554234054687105,
+              0.0006272742718039502
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.76648232256355e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300085738830091,
+              0.09300053683630452
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.04048161421091588,
+              "lean": 0.04048161421091588,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9444710074124048,
+                1.0764124653408085,
+                0.33000001093596676
+              ],
+              "quaternion": [
+                0.2802089290959206,
+                -0.030586610912743714,
+                -0.7954716474920503,
+                0.5364440662151898
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.944470861739715,
+                1.0764123795419087,
+                -0.3300000068275723
+              ],
+              "quaternion": [
+                -0.28251990345391836,
+                -0.36120367152690985,
+                0.7946539419912019,
+                -0.39779322591757516
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6383794350346836,
+                0.33431881623683374,
+                0.20392681722056696
+              ],
+              "quaternion": [
+                0.7501007169384173,
+                0.4766329789468392,
+                0.3926638056091813,
+                -0.23661111992081243
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6383792089405627,
+                0.3343183756203476,
+                -0.20392601516106937
+              ],
+              "quaternion": [
+                0.771875664081607,
+                0.4803203993260783,
+                0.347914347277306,
+                -0.2290324600338573
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 453,
+          "stateHash": "35ab6b3a0d59ccfe",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.819,
+              0.819
+            ],
+            "legStretch": [
+              0.73,
+              0.73
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.869328580465995e-8,
+              1.5327886611727271e-7
+            ],
+            "gripAngleErr": [
+              0.0006417292081056272,
+              0.0006348579719918393
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.532895467944714e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300085978247845,
+              0.09300053875666468
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.07905051291887102,
+              "lean": 0.07905051291887102,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9292494349474841,
+                1.0619488153479504,
+                0.33000000896544457
+              ],
+              "quaternion": [
+                0.2809327374832076,
+                -0.02300809094663862,
+                -0.7806942065356152,
+                0.5577310713392111
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9292493019619363,
+                1.0619487206923637,
+                -0.33000001358678294
+              ],
+              "quaternion": [
+                -0.27266212140529184,
+                -0.36870171438565413,
+                0.7836212222318816,
+                -0.4191087177749335
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6636719918403441,
+                0.30441091445881413,
+                0.20392681684022446
+              ],
+              "quaternion": [
+                0.7369550839139388,
+                0.4967164755397785,
+                0.3861306255935948,
+                -0.24712916171107754
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6636717892824856,
+                0.30441046262937754,
+                -0.20392601546218214
+              ],
+              "quaternion": [
+                0.7586225057198162,
+                0.5009906356238248,
+                0.3416021553872805,
+                -0.238344767484803
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 463,
+          "stateHash": "21bd9c5397ec4251",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.814,
+              0.814
+            ],
+            "legStretch": [
+              0.73,
+              0.73
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.771215770915145e-8,
+              1.5464722066860921e-7
+            ],
+            "gripAngleErr": [
+              0.000642560226442569,
+              0.0006354233709290138
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.166815566939445e-13,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300085990007519,
+              0.09300053885265298
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.07384588237369594,
+              "lean": 0.07384588237369594,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9278310911917066,
+                1.0610462089201635,
+                0.3300000092866897
+              ],
+              "quaternion": [
+                0.2808898990732711,
+                -0.023525330730185604,
+                -0.7817198303183156,
+                0.556292636412892
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.927830956648695,
+                1.0610461149315777,
+                -0.3300000126056566
+              ],
+              "quaternion": [
+                -0.27334054817785464,
+                -0.36819903746757787,
+                0.7843915973433654,
+                -0.4176651281285532
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.6594657494573709,
+                0.30449145782196807,
+                0.2039268168493715
+              ],
+              "quaternion": [
+                0.7378684371733352,
+                0.49535868248409165,
+                0.38658500870981605,
+                -0.24641776294923132
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.6594655452069988,
+                0.30449100679445806,
+                -0.20392601541399397
+              ],
+              "quaternion": [
+                0.7595436922565871,
+                0.4995929372712741,
+                0.3420404395713666,
+                -0.23771537258205416
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        }
+      ],
+      "clip": {
+        "sha256": "3321100c2863bbaf2cc21e3593869a46931a84a17030e84840127769393b9812",
+        "frames": 19,
+        "fps": 12
+      }
+    },
+    {
+      "id": "rookie-maximum-backward-lean",
+      "recordingSHA256": "8cabf8c22d7c5cb8dcf2c2fa6b8a3d2df2ec9f47a8df0f5f5bd4c5d0c0e7a678",
+      "everyInputTickCount": 703,
+      "everyInputTraceSHA256": "3fb199c9b82cf90ac7e9d07562b10e0f18a23fb023a524b6edb9a5138b81c43b",
+      "samples": [
+        {
+          "inputTick": 523,
+          "stateHash": "bf20e6ac57637596",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.854,
+              0.854
+            ],
+            "legStretch": [
+              0.878,
+              0.878
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.810353245012308e-8,
+              2.0369076727829902e-7
+            ],
+            "gripAngleErr": [
+              0.0004476539823777524,
+              0.0006148864088834061
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.4949396735242824e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300069642865869,
+              0.093000410984241
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5723617948060908,
+              "lean": 0.5723617948060908,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9911907732418996,
+                1.064891787962169,
+                0.329999999992274
+              ],
+              "quaternion": [
+                0.28091330410406634,
+                -0.023244619716996623,
+                -0.7811634642480265,
+                0.5570736625486942
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9911906775966496,
+                1.0648916471861405,
+                -0.33000001757555936
+              ],
+              "quaternion": [
+                -0.27297244290533823,
+                -0.36847204614740325,
+                0.7839737367783032,
+                -0.41844892972884473
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7243381817375893,
+                0.3078020261098755,
+                0.20392671719527702
+              ],
+              "quaternion": [
+                0.7373729761745282,
+                0.4960958929723017,
+                0.38633854167704446,
+                -0.2468039977423358
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7243380005530011,
+                0.3078016241685631,
+                -0.20392601622567022
+              ],
+              "quaternion": [
+                0.7590439826671057,
+                0.500351833726664,
+                0.34180270747863994,
+                -0.2380571027721582
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 533,
+          "stateHash": "0227e94838af0154",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.856,
+              0.856
+            ],
+            "legStretch": [
+              0.878,
+              0.878
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.768762505785087e-8,
+              2.0290293610422622e-7
+            ],
+            "gripAngleErr": [
+              0.0004502525032463418,
+              0.0006139639930394221
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 5.196143203000177e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300069701873402,
+              0.09300041142555365
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5719614457142688,
+              "lean": 0.5719614457142688,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9915639935186251,
+                1.0699642087776513,
+                0.33000000006976415
+              ],
+              "quaternion": [
+                0.28088674685559345,
+                -0.023563350834304126,
+                -0.7817950606705797,
+                0.5561869349561925
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9915638975762333,
+                1.0699640682861473,
+                -0.33000001758927644
+              ],
+              "quaternion": [
+                -0.27339036364895636,
+                -0.36816207334882456,
+                0.7844480372142296,
+                -0.41755910256228473
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7229939839253277,
+                0.31348198095083807,
+                0.20392671823906303
+              ],
+              "quaternion": [
+                0.7379354104909961,
+                0.49525889420972685,
+                0.38661833605313994,
+                -0.24636546942429882
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7229938018488543,
+                0.31348157876882976,
+                -0.20392601626466803
+              ],
+              "quaternion": [
+                0.7596112320971726,
+                0.4994902415295758,
+                0.3420726056793833,
+                -0.23766911359057585
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 543,
+          "stateHash": "87d6f0c419992b48",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.857,
+              0.857
+            ],
+            "legStretch": [
+              0.876,
+              0.876
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.690003221404311e-8,
+              2.0187968439394266e-7
+            ],
+            "gripAngleErr": [
+              0.00045443707252035086,
+              0.0006120844861924005
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.705593494856314e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300069847481764,
+              0.09300041252660839
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.562068037257118,
+              "lean": 0.562068037257118,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9930219925525982,
+                1.0806299903414782,
+                0.33000000026602605
+              ],
+              "quaternion": [
+                0.2808198071590413,
+                -0.024348121677832374,
+                -0.7833461249142898,
+                0.5540002455593227
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9930218955115551,
+                1.0806298504749994,
+                -0.3300000175276385
+              ],
+              "quaternion": [
+                -0.2744180262943476,
+                -0.3673967199537532,
+                0.7856117331115045,
+                -0.415365541175553
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7202286167897765,
+                0.32566046773688756,
+                0.20392672058993963
+              ],
+              "quaternion": [
+                0.739316398667864,
+                0.49319500023059754,
+                0.3873052294339778,
+                -0.24528420675835974
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7202284324793772,
+                0.3256600651345225,
+                -0.2039260163558121
+              ],
+              "quaternion": [
+                0.761003958928862,
+                0.49736576100888336,
+                0.3427353734240436,
+                -0.236712355083502
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 553,
+          "stateHash": "aaf6946a4c84fec7",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.858,
+              0.858
+            ],
+            "legStretch": [
+              0.875,
+              0.875
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.632648335423708e-8,
+              2.0136963314863864e-7
+            ],
+            "gripAngleErr": [
+              0.00045708367680130397,
+              0.0006102010023676125
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.395999415898026e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.0930006997033045,
+              0.09300041346100012
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5503009905930468,
+              "lean": 0.5503009905930468,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9950836196212535,
+                1.0869354385785872,
+                0.33000000043550504
+              ],
+              "quaternion": [
+                0.2807475583623592,
+                -0.025167501115602203,
+                -0.7849594634646039,
+                0.5517119394172346
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9950835213517748,
+                1.0869352993262151,
+                -0.3300000174360943
+              ],
+              "quaternion": [
+                -0.27548898812736805,
+                -0.36659435404159396,
+                0.7868205010548494,
+                -0.41307121382069645
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7178886303173533,
+                0.33357089237265575,
+                0.2039267224701411
+              ],
+              "quaternion": [
+                0.7407524838888601,
+                0.49103544324896636,
+                0.3880193643591205,
+                -0.24415293623041906
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7178884436496886,
+                0.3335704897098341,
+                -0.20392601642934974
+              ],
+              "quaternion": [
+                0.762452122784735,
+                0.4951428951487621,
+                0.34342468400884785,
+                -0.23571118279827385
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 563,
+          "stateHash": "600ad5fd6dd77ffa",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.857,
+              0.857
+            ],
+            "legStretch": [
+              0.875,
+              0.875
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.621215162206997e-8,
+              2.014657933071533e-7
+            ],
+            "gripAngleErr": [
+              0.0004572903735596324,
+              0.0006097704725581944
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.360361617437954e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300070002408986,
+              0.0930004137032155
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.5418927449889411,
+              "lean": 0.5418927449889411,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9964018429373538,
+                1.0864479308102688,
+                0.33000000049000744
+              ],
+              "quaternion": [
+                0.28072615230596076,
+                -0.0254051592529896,
+                -0.7854262348473143,
+                0.5510472328921886
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9964017442123242,
+                1.0864477917041975,
+                -0.33000001737807005
+              ],
+              "quaternion": [
+                -0.27579923051201566,
+                -0.3663610070694056,
+                0.7871699053438447,
+                -0.4124049814956953
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7179317271486285,
+                0.3335537850330833,
+                0.2039267230044725
+              ],
+              "quaternion": [
+                0.7411679053980534,
+                0.4904081829200943,
+                0.3882259134024131,
+                -0.24382437062533047
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7179315398016196,
+                0.33355338235868504,
+                -0.20392601645003114
+              ],
+              "quaternion": [
+                0.7628710136703205,
+                0.4944972626606233,
+                0.3436241026848057,
+                -0.23542037157423343
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 573,
+          "stateHash": "ea0596c40adbb0e4",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.896,
+              0.896
+            ],
+            "legStretch": [
+              0.891,
+              0.891
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              8.105793138200057e-8,
+              1.9200700678814743e-7
+            ],
+            "gripAngleErr": [
+              0.0004536747473868688,
+              0.0005922844337728292
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 4.8560720060539235e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300068405881509,
+              0.09300040174777886
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.714983065928056,
+              "lean": 0.714983065928056,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0091516487899306,
+                1.078446519695605,
+                0.3299999974364896
+              ],
+              "quaternion": [
+                0.280638167763199,
+                -0.026359198307965546,
+                -0.7872946920507429,
+                0.5483744141742694
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.009151562215631,
+                1.0784463844579921,
+                -0.33000002086460606
+              ],
+              "quaternion": [
+                -0.2770428842480476,
+                -0.3654214643092972,
+                0.7885671057557248,
+                -0.4097270437472193
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7255698787005849,
+                0.32746272628692263,
+                0.20392669497969568
+              ],
+              "quaternion": [
+                0.7428305030907402,
+                0.4878861510916409,
+                0.3890524128476482,
+                -0.24250341001969947
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7255696885188943,
+                0.32746234210927727,
+                -0.20392601522013482
+              ],
+              "quaternion": [
+                0.7645473857068934,
+                0.4919014349858111,
+                0.3444222962225918,
+                -0.2342510473737894
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 583,
+          "stateHash": "3f3e3a837188e757",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.949,
+              0.949
+            ],
+            "legStretch": [
+              0.919,
+              0.919
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.147332406946423e-8,
+              1.7406329860670681e-7
+            ],
+            "gripAngleErr": [
+              0.000451582888739804,
+              0.000571275050497219
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.998801995169606e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064556027723,
+              0.09300037331086566
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0160433548647845,
+                1.08638885768992,
+                0.3299999906845302
+              ],
+              "quaternion": [
+                0.28090499957046494,
+                -0.023344420712948604,
+                -0.7813613033558886,
+                0.5567961495219484
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0160432965704211,
+                1.0863887357435138,
+                -0.3300000274135954
+              ],
+              "quaternion": [
+                -0.27310330805994487,
+                -0.3683750764093991,
+                0.7841223164793245,
+                -0.4181704461888943
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7486529843362584,
+                0.3294887012422567,
+                0.2039266278863236
+              ],
+              "quaternion": [
+                0.7375491465121204,
+                0.4958339400958005,
+                0.38642615946488756,
+                -0.24666678838086412
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7486528020021428,
+                0.3294883533879379,
+                -0.20392601140854316
+              ],
+              "quaternion": [
+                0.759221667408813,
+                0.5000821781066095,
+                0.3418872238247789,
+                -0.23793568033703366
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 593,
+          "stateHash": "3701804f932d5ac0",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.96,
+              0.96
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.141170787793802e-8,
+              1.6724692188944653e-7
+            ],
+            "gripAngleErr": [
+              0.00046411279714679067,
+              0.0005721462142939449
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.8492212338091075e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064252547303,
+              0.09300037108638581
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0106947172245055,
+                1.0848510123086796,
+                0.32999998947903875
+              ],
+              "quaternion": [
+                0.2810963936816008,
+                -0.020913977628425978,
+                -0.7765162990274941,
+                0.5635333856496796
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.01069466578664,
+                1.0848508951756206,
+                -0.33000002936113
+              ],
+              "quaternion": [
+                -0.269906982623548,
+                -0.37072339430781437,
+                0.7804761930844883,
+                -0.42493674880257065
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7564368548836072,
+                0.32343889615284527,
+                0.20392662276105206
+              ],
+              "quaternion": [
+                0.7332330473678178,
+                0.5021945121468298,
+                0.3842782627717484,
+                -0.24999979237663267
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7564366785648561,
+                0.3234385482164719,
+                -0.20392601105020136
+              ],
+              "quaternion": [
+                0.7548680144221421,
+                0.5066300471068887,
+                0.3398165085278163,
+                -0.2408837931768818
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 603,
+          "stateHash": "42d1647076fa776c",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.959,
+              0.959
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.151923243287572e-8,
+              1.682787242642688e-7
+            ],
+            "gripAngleErr": [
+              0.00046303633518908087,
+              0.0005745979253671417
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.73508371765363e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064266640477,
+              0.09300037118208307
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0076934738640404,
+                1.0826468963060047,
+                0.32999998963289884
+              ],
+              "quaternion": [
+                0.2811433486040227,
+                -0.0202730169630655,
+                -0.7752294118374392,
+                0.5653023951734248
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0076934223771796,
+                1.082646778028031,
+                -0.3300000290500058
+              ],
+              "quaternion": [
+                -0.26906102385119757,
+                -0.371337823718194,
+                0.7795052993993794,
+                -0.42671514671546773
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.756910318670821,
+                0.3200832732106418,
+                0.20392662309511073
+              ],
+              "quaternion": [
+                0.7320861270458869,
+                0.5038649915430151,
+                0.38370725948734546,
+                -0.25087530365751326
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7569101439530663,
+                0.3200829242674996,
+                -0.20392601107590458
+              ],
+              "quaternion": [
+                0.7537109247227873,
+                0.508349845507498,
+                0.3392664052635342,
+                -0.2416579559580486
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 613,
+          "stateHash": "b375acf34bd7ba3b",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.160697991738616e-8,
+              1.6915688358820655e-7
+            ],
+            "gripAngleErr": [
+              0.00046130810839787196,
+              0.0005744542866186807
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.69499042460287e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064278808978,
+              0.09300037127013422
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0075987096941688,
+                1.0834199048146742,
+                0.3299999897634951
+              ],
+              "quaternion": [
+                0.28112220711565494,
+                -0.02056411593260046,
+                -0.775814338963261,
+                0.5644993802551089
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0075986574503033,
+                1.083419785896349,
+                -0.3300000287943735
+              ],
+              "quaternion": [
+                -0.26944538191790085,
+                -0.3710590249428082,
+                0.7799467241461695,
+                -0.42590777853224143
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.75523689884614,
+                0.3213772643036662,
+                0.20392662331591124
+              ],
+              "quaternion": [
+                0.7326074620496623,
+                0.503106683387105,
+                0.3839668227176135,
+                -0.25047785977519144
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7552367234092061,
+                0.3213769155915132,
+                -0.2039260110943517
+              ],
+              "quaternion": [
+                0.7542368919723649,
+                0.5075691425018801,
+                0.3395164482944043,
+                -0.24130653277158504
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 623,
+          "stateHash": "eeaae4bd870b77ad",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.921,
+              0.921
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.157745651833784e-8,
+              1.6912235523762717e-7
+            ],
+            "gripAngleErr": [
+              0.0004607564851650891,
+              0.0005725901745628712
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.678310194477739e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064286453008,
+              0.09300037132931321
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0094450022581987,
+                1.0855058284020143,
+                0.3299999897677016
+              ],
+              "quaternion": [
+                0.2810697894544009,
+                -0.021268558374500396,
+                -0.7772265679917966,
+                0.5625533761898961
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0094449494091355,
+                1.0855057097617185,
+                -0.33000002880170337
+              ],
+              "quaternion": [
+                -0.27037442920476995,
+                -0.37038261587611626,
+                0.7810116222515071,
+                -0.4239518539652642
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7532669355382365,
+                0.3247376196433126,
+                0.20392662340420653
+              ],
+              "quaternion": [
+                0.7338659732992229,
+                0.5012691537148534,
+                0.3845933272093898,
+                -0.24951483394477503
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7532667583518506,
+                0.32473727176697825,
+                -0.20392601110005826
+              ],
+              "quaternion": [
+                0.7555065184560499,
+                0.5056773918110308,
+                0.3401201087727176,
+                -0.2404549291685653
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 633,
+          "stateHash": "507daa0f931e28bc",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.957,
+              0.957
+            ],
+            "legStretch": [
+              0.92,
+              0.92
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.13852001660904e-8,
+              1.694176976508295e-7
+            ],
+            "gripAngleErr": [
+              0.00046028610119651825,
+              0.0005716220735402207
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.500477046803544e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064364487187,
+              0.0930003719047114
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0112991751195572,
+                1.087107699162161,
+                0.3299999898885301
+              ],
+              "quaternion": [
+                0.2810273407072834,
+                -0.021822280644647585,
+                -0.7783334022143213,
+                0.5610209925862648
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.011299121381386,
+                1.0871075803611825,
+                -0.33000002869634626
+              ],
+              "quaternion": [
+                -0.27110363225500145,
+                -0.3698492053864176,
+                0.7818453765366455,
+                -0.42241228202069975
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7521253719751522,
+                0.3273548407804965,
+                0.20392662467002284
+              ],
+              "quaternion": [
+                0.7348521494697997,
+                0.4998223203646507,
+                0.3850841748781253,
+                -0.24875662474356428
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7521251934159149,
+                0.3273544928647048,
+                -0.2039260111817826
+              ],
+              "quaternion": [
+                0.7565013376741915,
+                0.5041879118103754,
+                0.3405931930905438,
+                -0.23978435792652306
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 643,
+          "stateHash": "301f88282290c172",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.956,
+              0.956
+            ],
+            "legStretch": [
+              0.92,
+              0.92
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.128406370600255e-8,
+              1.6955177276845278e-7
+            ],
+            "gripAngleErr": [
+              0.0004601889267264162,
+              0.0005714878114304686
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.402603119871512e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064405819465,
+              0.09300037220275671
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.0123767318643824,
+                1.0873891275430478,
+                0.3299999899476533
+              ],
+              "quaternion": [
+                0.281016016413214,
+                -0.021967628391249532,
+                -0.7786234649463655,
+                0.5606183541072568
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0123766777992922,
+                1.0873890086211582,
+                -0.3300000286474539
+              ],
+              "quaternion": [
+                -0.271294886457178,
+                -0.36970893780634767,
+                0.7820637487821211,
+                -0.4220078455763558
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7524171607260173,
+                0.3279047725778758,
+                0.2039266254270154
+              ],
+              "quaternion": [
+                0.7351105653294752,
+                0.49944217969146626,
+                0.38521278343648413,
+                -0.2485574212821604
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7524169818138937,
+                0.3279044243948997,
+                -0.20392601122960746
+              ],
+              "quaternion": [
+                0.7567620085265303,
+                0.5037965728825038,
+                0.3407171670809075,
+                -0.23960816693586687
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 653,
+          "stateHash": "25b3cdb088af13ab",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.956,
+              0.956
+            ],
+            "legStretch": [
+              0.92,
+              0.92
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              9.128187528405634e-8,
+              1.6961776459962889e-7
+            ],
+            "gripAngleErr": [
+              0.00046029446699893825,
+              0.0005720355736934795
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 6.399185709110264e-9,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300064409070949,
+              0.09300037222946951
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                1.012447705733059,
+                1.0865791035834291,
+                0.3299999899606969
+              ],
+              "quaternion": [
+                0.2810304642126739,
+                -0.02178202031707263,
+                -0.7782530222544912,
+                0.5611324909570647
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                1.0124476517747636,
+                1.086578984531647,
+                -0.33000002862753414
+              ],
+              "quaternion": [
+                -0.27105064482700225,
+                -0.36988803975725026,
+                0.7817848537821342,
+                -0.4225242847724979
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7534915977403959,
+                0.3267520192029261,
+                0.20392662544538429
+              ],
+              "quaternion": [
+                0.7347805373387368,
+                0.49992759006168025,
+                0.3850485342803694,
+                -0.24881178894592218
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7534914192846319,
+                0.32675167077680994,
+                -0.20392601123139475
+              ],
+              "quaternion": [
+                0.7564290998621122,
+                0.5042962831293566,
+                0.3405588382932677,
+                -0.23983314883363238
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 663,
+          "stateHash": "f332cb27af27829a",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.873,
+              0.873
+            ],
+            "legStretch": [
+              0.91,
+              0.91
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.700374432319759e-8,
+              1.9934750752198083e-7
+            ],
+            "gripAngleErr": [
+              0.00048005986014912377,
+              0.000622632974820473
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.0555622645860292e-14,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300070211055521,
+              0.09300042078596626
+            ],
+            "stance": {
+              "on": true,
+              "pose": "back",
+              "blend": 0.6298832068340074,
+              "lean": 0.6298832068340074,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9819112661222439,
+                1.0826755241615713,
+                0.33000000068950874
+              ],
+              "quaternion": [
+                0.2812975734436449,
+                -0.018007384169903495,
+                -0.7706500419301946,
+                0.571529469753803
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9819111733138732,
+                1.0826753828183795,
+                -0.3300000169801065
+              ],
+              "quaternion": [
+                -0.26606070794672215,
+                -0.37349337100621255,
+                0.7760423039358535,
+                -0.43298114477852584
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.7434470599149535,
+                0.3161703018933239,
+                0.20392664565431434
+              ],
+              "quaternion": [
+                0.7280031207482391,
+                0.5097464826446685,
+                0.38167368965110343,
+                -0.25395841851619816
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.7434468828996809,
+                0.3161699447246591,
+                -0.2039260132876084
+              ],
+              "quaternion": [
+                0.7495910953670856,
+                0.5144053963261573,
+                0.3373085204843109,
+                -0.24438332130115675
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 673,
+          "stateHash": "718b2568afbd26de",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.795,
+              0.795
+            ],
+            "legStretch": [
+              0.914,
+              0.914
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              6.934043700954853e-8,
+              1.7102247613015573e-7
+            ],
+            "gripAngleErr": [
+              0.0005480138399230685,
+              0.0006089559168084928
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.7456228845164114e-12,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300087786221545,
+              0.09300061053491132
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8058317255366971,
+                1.0236014898498995,
+                0.3300000058646211
+              ],
+              "quaternion": [
+                0.28141289994037394,
+                -0.016106366774494445,
+                -0.7667709432527188,
+                0.5767232269021269
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8058316083915029,
+                1.0236015429276302,
+                -0.32999999861189283
+              ],
+              "quaternion": [
+                -0.26353108335380027,
+                -0.3752825531320406,
+                0.7730992244191678,
+                -0.43821443901951074
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.5777469837576779,
+                0.2539434465366597,
+                0.20392652932715025
+              ],
+              "quaternion": [
+                0.7245423125049035,
+                0.5146538828611199,
+                0.37994896057114264,
+                -0.25653196650062093
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.5777467929182535,
+                0.2539431989173182,
+                -0.20392600927140386
+              ],
+              "quaternion": [
+                0.7460984714294542,
+                0.5194582412272042,
+                0.3356493359183643,
+                -0.24665686362188619
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 683,
+          "stateHash": "bcf252b961dd2230",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.884,
+              0.884
+            ],
+            "legStretch": [
+              0.935,
+              0.935
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              8.796681071176873e-8,
+              1.57490975507893e-7
+            ],
+            "gripAngleErr": [
+              0.00066083037530959,
+              0.000531482713170679
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 1.0730126200268775e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300078069464375,
+              0.09300054268531219
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.8733038068494252,
+                1.0659838193900546,
+                0.33000000042441474
+              ],
+              "quaternion": [
+                -0.2777299194141178,
+                0.048152277743567215,
+                0.8276406857062036,
+                -0.4853434932584037
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.8733037011644706,
+                1.0659838686116143,
+                -0.330000018511011
+              ],
+              "quaternion": [
+                -0.30468142942771764,
+                -0.3427168949218437,
+                0.8181028894713666,
+                -0.3470186922423619
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.47645849985685285,
+                0.36819434942613516,
+                0.20392645433645154
+              ],
+              "quaternion": [
+                0.7785970982793536,
+                0.4285053212466793,
+                0.40676973188360654,
+                -0.2114432099321539
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.47645828402726637,
+                0.36819416999107873,
+                -0.20392600003933592
+              ],
+              "quaternion": [
+                0.8005610136772835,
+                0.4308153275392051,
+                0.3616320319927175,
+                -0.20669395337425894
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 693,
+          "stateHash": "c9d717e1127ebc37",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.837,
+              0.837
+            ],
+            "legStretch": [
+              0.943,
+              0.943
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.32817426264225e-8,
+              1.6364188392943692e-7
+            ],
+            "gripAngleErr": [
+              0.0006484330962723482,
+              0.00048666254609103314
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 2.6079503409755432e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300073861592953,
+              0.09300051052229567
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9081992610224437,
+                1.1164702235596171,
+                0.3300000058511078
+              ],
+              "quaternion": [
+                -0.2741865106629166,
+                0.06537821860356559,
+                0.85629654375412,
+                -0.43278590571951836
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9081991566664499,
+                1.1164702990615403,
+                -0.33000000604719554
+              ],
+              "quaternion": [
+                -0.32546075128365726,
+                -0.3230494486055298,
+                0.8381511696563834,
+                -0.29532513501481833
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.42757952209094513,
+                0.4735075336075656,
+                0.20392642741197653
+              ],
+              "quaternion": [
+                0.803803902983907,
+                0.37911680747495313,
+                0.4191638958678084,
+                -0.1856648807207137
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.4275792950612107,
+                0.47350738675847015,
+                -0.20392599635445832
+              ],
+              "quaternion": [
+                0.8258691215893669,
+                0.38005258624694616,
+                0.37381793439907646,
+                -0.18373972751984444
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        },
+        {
+          "inputTick": 703,
+          "stateHash": "29068d65ced63fa3",
+          "phase": "riding",
+          "debug": {
+            "armStretch": [
+              0.832,
+              0.832
+            ],
+            "legStretch": [
+              0.947,
+              0.947
+            ],
+            "handOnGrip": [
+              true,
+              true
+            ],
+            "footOnPeg": [
+              false,
+              false
+            ],
+            "wristErr": [
+              0,
+              0
+            ],
+            "gripErr": [
+              7.190579087694573e-8,
+              1.6392058038930607e-7
+            ],
+            "gripAngleErr": [
+              0.0006376542679311225,
+              0.00045089882298030725
+            ],
+            "ankleErr": [
+              0.000001,
+              0.000001
+            ],
+            "armLen": [
+              0.538,
+              0.538
+            ],
+            "additiveWeight": 0,
+            "physicalPose": true,
+            "comResidual": 3.797288418562426e-11,
+            "ragdollResidual": -1,
+            "ragdollBlend": 0,
+            "ragdollDetail": [],
+            "bones": 51,
+            "clips": [],
+            "stageClip": null,
+            "stageBlend": 0,
+            "soleErr": [
+              0.09300071699833384,
+              0.09300049544893063
+            ],
+            "stance": {
+              "on": true,
+              "pose": "forward",
+              "blend": 1,
+              "lean": 1,
+              "land": 0,
+              "extend": 0,
+              "dy": 0,
+              "lag": 0,
+              "limit": 1
+            }
+          },
+          "points": {
+            "gripSocketL": {
+              "world": [
+                0.9289383525921968,
+                1.132659937955235,
+                0.33000000614159597
+              ],
+              "quaternion": [
+                -0.270176420655164,
+                0.08035706536652529,
+                0.8788001458724278,
+                -0.3850424859413156
+              ]
+            },
+            "gripSocketR": {
+              "world": [
+                0.9289382586607963,
+                1.132660026162538,
+                -0.3300000045376175
+              ],
+              "quaternion": [
+                -0.34273307672820574,
+                -0.30466324272173784,
+                0.8531231310573625,
+                -0.24878754737041828
+              ]
+            },
+            "soleSocketL": {
+              "world": [
+                0.38061813772312847,
+                0.5463653640399482,
+                0.20392641107616713
+              ],
+              "quaternion": [
+                0.8234356181640565,
+                0.3343412437378236,
+                0.4287395026343125,
+                -0.16233373743749616
+              ]
+            },
+            "soleSocketR": {
+              "world": [
+                0.38061790250427335,
+                0.5463652451058111,
+                -0.20392599399181627
+              ],
+              "quaternion": [
+                0.8455189096387221,
+                0.3340621844440593,
+                0.3833563314945531,
+                -0.1629051059147916
+              ]
+            }
+          },
+          "poseInjection": false,
+          "audioContexts": 0,
+          "webdriver": true
+        }
+      ],
+      "clip": {
+        "sha256": "872fa4b860c6ee17c88fbb57b87c471b8ba8b972973fb60fe85ed269e8ab4133",
+        "frames": 19,
+        "fps": 12
+      }
+    }
+  ],
+  "limits": [
+    "Current05 wardrobe remains human rejected. Socket centroid positions are diagnostic proposals, not fit/contact acceptance.",
+    "Normal actual recorded inputs, rider.update and live bike; no pose/physics injection or garment registration.",
+    "The named grip sockets enable authoritative COM/angle branch. Sole sockets still measure only; sole IK offset and load-bearing support remain open.",
+    "Full candidate only, no candidateLOD, closed-volume collision proof or physical iPhone result."
+  ]
+}
