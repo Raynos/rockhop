@@ -38,3 +38,10 @@ No native cloth or actual runtime collision correction was added. This is
 properly fitted-skin construction evidence, not consumed-collision acceptance.
 Agent3 owns actual engine/mobile response; root alone judges moving form.
 Masters/GLBs/streams remain ignored, recipes and exact hashes are tracked.
+
+Inventory correction (round41): the original replacement loop retained old
+Blender memberships on435of1174vertices (rawsum up to1.987204). The actual
+normalized field and current sole geometry are now frozen in
+../sole-support09/. The769native fit measurements remain true for that
+frozen source; earlier wording must not imply an exact pure-barycentric
+normalized field. No source/control overwrite or new fit/art pass.

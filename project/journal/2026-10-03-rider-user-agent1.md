@@ -355,3 +355,11 @@ Finding: Human/root boundedSAME-rest control tests frozen actualbodytri barycent
 Validation: Baselineall703Float32playedOFFframes BYTEEXACT, fullaffineNativeREST→engineWORLD usedonce.252nativeweightschange/maxL1.909/recomputeddiagnosisfield1.11e−15; 17nativecontrolmeshes/51bind/restgeometryUVnormalsmaterialpins exact. Actualloader300rows/288native/528triangles allnonskinfields+indices byteexact/bindmaterialexact/weighterror0/rest.000600mm. Installedexport1e−4cutoff fixedinNEW8-byte skin-onlyderivative; rawsource/nativeleftintact. Failed01mutablegroup-removal bug caught, source02immutablegroupnames+field/sumchecks verified.
 
 Limits: BVHsamepredicate/relevant1066arm triangles are notsignedclearance/sweptcollision/fullgarment/arbitrarypose/mobileproof. Nearestattachments table isancestry, notactivecollision. Original fullcloth/primary31/body/head/bind/controls unchanged; rootjudgesmovinggamewindows/selffolds, Agent3 ownsindependentmotion. No assetpromotion or newLibrarydelivery.
+
+### Round41 — constructed sole support inventory, 2026-10-03
+
+Finding: Current09constructedrubberoutsole actualmesh0/primitive1 (466rows/328triangles) freezes40bottom/7proposedarchtriangles perfoot with native/currentGLTFancestry, actualweights and footparentframes; not05bodyhemisphere/legacybootIDs/rejected10. Raw09memberships435nonunit/maxsum1.987204 reveal originalmutablegroupremoval retainedoldweights; correctpure-baryweight claim while preserving actualqualified769fitcontrol.
+
+Validation: Allsole rows/triangles uniquely map to nativeboot vertex/triangle/polygon IDs, maxrestmapping53.644nm. Proposedarch areaweightfootL99.163%/R99.503%; parentlocalposition/quaternion/matrix worldclosure<1e−12m, axes/metres/file+.65-runtime−.65 explicit. Actualnormalizedloaderweight tables/sourceSHA fixed; no model/marker/body/bind/runtime mutation. Python/MJS syntax and diff pass.
+
+Limits: Archselection/loadbearingsemantics and rigidfoot-parent marker are PROPOSALS; smallballweights meanactualskinnedsurface mustbechecked in motion. Source9fit remains empiricalforfrozenmixedfield, notpureclosest-body intervention. Actualpeg/contact/collision/mobile/art acceptance remainsAgent3+root; no unuseddescriptor/playerpromotion.
