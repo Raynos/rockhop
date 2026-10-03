@@ -478,3 +478,16 @@ Ask:285.
 Limits: Selected files only; Hunyuan paint/BiRefNet dependencies separate.
 Published-byte identity is not loaded runtime/conditioning/inference or
 CUDA/art/fit acceptance. Earlier failed provenance route remains intact.
+
+Finding: Authorized cross-repo docs published as one scoped commit each
+without publishing14localai/4weights earlier foreign unpublished commits.
+
+Validation: Clean ordinary clones use main, same AGENTS as read, normal
+hooks and exact3text paths each. Remote verified localai bcef4f72 and
+weights c679da28. Active checkouts/index/history untouched.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/scoped-publication01/receipt.json
+Ask:284–285; root scoped publication decision.
+
+Limits: Documentation-only publication, no asset acceptance. Active local
+history now differs from remote by preserved foreign commits and reviewed
+pointer context; future publication must retain that boundary.
