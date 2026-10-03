@@ -225,3 +225,13 @@ and initial03quantized export retained with separate controller/finalGLB pins.
 Limits: Source fidelity is not runtime highlight/art acceptance; root hoodflap,
 mottledtexture/knee/hem still open. Hood/UV construction follows immediately.
 Evidence: [protected shading](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance03/README.md). Ask274.
+
+Finding: The first small cloth comparison cannot start on intersecting rest
+geometry; a collision request does not authorize calling an invalid setup fixed.
+Validation: 334vertex/588triangle local knee, one subdivision,6mm margin/12mmcap
+(max5.1293mm),78hard/62half pins,1+1mm thickness. Rest14body/0self contacts,
+unsigned minimum.3568mm/localdot−.4702mm fail2mm prerequisite; stopped before
+cloth simulation, so no physics or baked-deformation improvement is claimed.
+Limits: Ask279 remains open. No gap/density/quality loop or foreignjob changed;
+hood/texture construction proceeds before further valid-rest physics setup.
+Evidence: [failed cloth preflight](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/cloth-knee01/README.md). Ask274; existing279.
