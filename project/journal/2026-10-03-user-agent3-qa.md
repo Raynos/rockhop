@@ -620,3 +620,24 @@ coupleddeformation/consumedcollision still required. DesktopCPUrender
 submission baseline4/5,new3/6ms p50/p95/readback0/1ms is quantized and
 not GPU/mobile/fps/memorygate. JSONreceipts losslessgzip exactrawhashes.
 AllM0–M5/phone/checkeddeployment remainopen; parentjudges movingwindow.
+
+## Round37: current constructed outsole ancestry and socket frame
+
+Finding: Source41 constructed09 rubber support descriptor independently
+matches actual GLTFLoader466rows/328triangles and unique native ancestry.
+Private metadata derivative adds four hand/foot child proposals only; BIN
+and original JSON exact. Source05 seven nonboot parts/weights/51bind remain
+exact; new sole markers refer to real09 rubber arch geometry, not old body.
+
+Validation: All466 actual row positions/weights match inventory exactly,
+native residual≤53.644nm/normalizedsum error≤2.981e-8.40bottom/7arch per
+side, marker centroid closure≤1.021e-16m/preferred rotation≤2.235µrad.
+Actual derivative loader closure<1e-12m, constructor recognizes4sockets;
+scopedlint passes. Source and derivative hashes frozen in source.json.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/constructed37/source.json
+
+Limits: Rest descriptor checkpoint only; no posed film or motion judgment.
+Current09 wedge and435nonunit raw native weights preserved/unaccepted.
+Rigid footmarker versus actual normalizedweights skinned arch must still
+be measured in real riding. No consumed IK/collision/mobile/player change.
+Root owns asks278/279/288 and plan status; all M0–M5/phone remainopen.
