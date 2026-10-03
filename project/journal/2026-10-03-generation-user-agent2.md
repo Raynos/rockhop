@@ -1276,3 +1276,16 @@ Ask:290.
 
 Limits: Reactive1spoll can overshoot96; no hardcap/highmemorystress proof.
 Original has no separate pressure/swap predicate; none removed or invented.
+
+Finding: Unaccepted TRELLIS material-display recipe samples actual native
+voxel attributes at untouched raw vertices, avoiding topology-changing bake.
+
+Validation: Syntax/whitespace pass; pinned rawarchive/compiledextension/
+metallib and fixed nativef32 coordinate controls required.131072vertex
+chunks save actual grids/returned6channel values before later allocations;
+257selected vertices independently use sorted-coordinate eight-corner
+basis/renormalization with fixed1e-5 threshold. No KDTree/dense/nearest substitute.
+Ask:284–286.
+
+Limits: Checkpoint only, execution pending. Pervertex PBR display derivative
+is not a UV bake/map-level pass or fullCUDA proof; raw geometry unchanged.
