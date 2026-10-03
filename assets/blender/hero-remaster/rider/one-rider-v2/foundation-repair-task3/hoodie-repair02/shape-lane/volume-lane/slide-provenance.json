@@ -1,0 +1,207 @@
+{
+  "sourceV7BindSHA256": "619396fa895215b4c8a7210341e0acb037bb5a4ddba9a16cdf088684ec8b5def",
+  "sourceControlMatrices": "Read-only original skin NPZ, same frozen V7 weights",
+  "rows": [
+    {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.08573474004230278,
+      "freeVertices": 6739,
+      "changedVertices": 6739,
+      "maxTorsoAxialSlideM": 0.05414640368164125,
+      "headHandsExact": true,
+      "volumeMeta": {},
+      "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+      "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive.",
+      "file": "slide-forward-1.npz",
+      "matricesSHA256": "260ff7ca7cc88842a93e509351a1627d9a5bb8447f43744b404ff9e565b57f3f"
+    },
+    {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.08573474004230278,
+      "freeVertices": 6739,
+      "changedVertices": 6739,
+      "maxTorsoAxialSlideM": 0.05414640368164125,
+      "headHandsExact": true,
+      "volumeMeta": {
+        "neutralIdentityExact": false,
+        "maxCorrectionM": 2.237726045655905e-15,
+        "headExact": true,
+        "handsExact": true,
+        "sides": [
+          {
+            "side": 1,
+            "referenceCurveLengthM": 0.6041126690555668,
+            "posedCurveLengthM": 0.6041126690555668,
+            "curveArcRatio": 1.0,
+            "boneLengthRatios": [
+              0.9999999999999993,
+              1.0
+            ],
+            "minTubeJacBeforeLimit": 0.2160021063163946,
+            "minTubeJacAfterLimit": 0.2160021063163946,
+            "jacLimitedPoints": 0,
+            "maxCorrectionM": 9.937337250730558e-16,
+            "forearmRollDegrees": -8.587497639951495e-14,
+            "handRollDegrees": -8.587497639951495e-14
+          },
+          {
+            "side": -1,
+            "referenceCurveLengthM": 0.6035063572110052,
+            "posedCurveLengthM": 0.6035063572110039,
+            "curveArcRatio": 0.9999999999999978,
+            "boneLengthRatios": [
+              0.9999999999999994,
+              1.0000000000000002
+            ],
+            "minTubeJacBeforeLimit": 0.29059185267052823,
+            "minTubeJacAfterLimit": 0.29059185267052823,
+            "jacLimitedPoints": 0,
+            "maxCorrectionM": 2.2290166147663957e-15,
+            "forearmRollDegrees": -6.361109362927032e-15,
+            "handRollDegrees": -6.361109362927032e-15
+          }
+        ],
+        "method": "Roundedbonefilletgarmentcentreline withrotation-minimizingradial frame +ONLYreplacementofarmnormalizedskincontribution; originaltorsoownershipunchanged. OptionalpositiveJacobianradiallimiter.",
+        "limits": "Analytic tubeJacobiansareNOT triangleselfcollision certificate. Arc ratio measuredratherthanexactisometryclaim. No actualbody/timing/GPU/CCD guarantees."
+      },
+      "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+      "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive.",
+      "file": "slide-volume-forward-1.npz",
+      "matricesSHA256": "260ff7ca7cc88842a93e509351a1627d9a5bb8447f43744b404ff9e565b57f3f"
+    },
+    {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.062135063525916474,
+      "freeVertices": 6739,
+      "changedVertices": 6739,
+      "maxTorsoAxialSlideM": 0.03369171398647275,
+      "headHandsExact": true,
+      "volumeMeta": {},
+      "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+      "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive.",
+      "file": "slide-elbow-1.npz",
+      "matricesSHA256": "dbbb600cff5b6c074c552c8e693ed2d4054c4eaeefb6d52efed703c08f1abaa1"
+    },
+    {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.08113316264099471,
+      "freeVertices": 6739,
+      "changedVertices": 7318,
+      "maxTorsoAxialSlideM": 0.036274519668378025,
+      "headHandsExact": true,
+      "volumeMeta": {
+        "neutralIdentityExact": false,
+        "maxCorrectionM": 0.08021746909544215,
+        "headExact": true,
+        "handsExact": true,
+        "sides": [
+          {
+            "side": 1,
+            "referenceCurveLengthM": 0.6041126690555668,
+            "posedCurveLengthM": 0.5317169783025804,
+            "curveArcRatio": 0.8801619392187793,
+            "boneLengthRatios": [
+              0.9999999999999997,
+              1.0
+            ],
+            "minTubeJacBeforeLimit": 0.11136590112795841,
+            "minTubeJacAfterLimit": 0.11136590112795841,
+            "jacLimitedPoints": 0,
+            "maxCorrectionM": 0.08021746909544221,
+            "forearmRollDegrees": 2.9357626333220663,
+            "handRollDegrees": 2.9357626333220663
+          },
+          {
+            "side": -1,
+            "referenceCurveLengthM": 0.6035063572110052,
+            "posedCurveLengthM": 0.5289694634153499,
+            "curveArcRatio": 0.8764936062312351,
+            "boneLengthRatios": [
+              0.9999999999999988,
+              1.0000000000000002
+            ],
+            "minTubeJacBeforeLimit": 0.04061571504617845,
+            "minTubeJacAfterLimit": 0.04061571504617845,
+            "jacLimitedPoints": 0,
+            "maxCorrectionM": 0.07885463759139444,
+            "forearmRollDegrees": -3.826322152851254,
+            "handRollDegrees": -3.826322152851254
+          }
+        ],
+        "method": "Roundedbonefilletgarmentcentreline withrotation-minimizingradial frame +ONLYreplacementofarmnormalizedskincontribution; originaltorsoownershipunchanged. OptionalpositiveJacobianradiallimiter.",
+        "limits": "Analytic tubeJacobiansareNOT triangleselfcollision certificate. Arc ratio measuredratherthanexactisometryclaim. No actualbody/timing/GPU/CCD guarantees."
+      },
+      "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+      "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive.",
+      "file": "slide-volume-elbow-1.npz",
+      "matricesSHA256": "dbbb600cff5b6c074c552c8e693ed2d4054c4eaeefb6d52efed703c08f1abaa1"
+    },
+    {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.005440413288901549,
+      "freeVertices": 6739,
+      "changedVertices": 3260,
+      "maxTorsoAxialSlideM": 0.001299823717300086,
+      "headHandsExact": true,
+      "volumeMeta": {},
+      "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+      "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive.",
+      "file": "slide-single-elbow-90.npz",
+      "matricesSHA256": "070bc13638fa484c26e8117fe339de164e169eb7b3561f44eb7dc76bb29b51be"
+    },
+    {
+      "neutralIdentityExact": false,
+      "maxCorrectionM": 0.08180619652132481,
+      "freeVertices": 6739,
+      "changedVertices": 3720,
+      "maxTorsoAxialSlideM": 0.015253461588346395,
+      "headHandsExact": true,
+      "volumeMeta": {
+        "neutralIdentityExact": false,
+        "maxCorrectionM": 0.08112101367417832,
+        "headExact": true,
+        "handsExact": true,
+        "sides": [
+          {
+            "side": 1,
+            "referenceCurveLengthM": 0.6041126690555668,
+            "posedCurveLengthM": 0.5310251874292329,
+            "curveArcRatio": 0.8790168037022059,
+            "boneLengthRatios": [
+              1.0,
+              1.0000000000000004
+            ],
+            "minTubeJacBeforeLimit": -0.4903171860623927,
+            "minTubeJacAfterLimit": -0.4903171860623927,
+            "jacLimitedPoints": 0,
+            "maxCorrectionM": 0.08112101367417833,
+            "forearmRollDegrees": -1.4551348793954024,
+            "handRollDegrees": -1.4551348793954024
+          },
+          {
+            "side": -1,
+            "referenceCurveLengthM": 0.6035063572110052,
+            "posedCurveLengthM": 0.6035063572110052,
+            "curveArcRatio": 1.0,
+            "boneLengthRatios": [
+              1.0,
+              1.0
+            ],
+            "minTubeJacBeforeLimit": 0.29059185267091725,
+            "minTubeJacAfterLimit": 0.29059185267091725,
+            "jacLimitedPoints": 0,
+            "maxCorrectionM": 2.542400140540234e-16,
+            "forearmRollDegrees": -3.975693351829396e-16,
+            "handRollDegrees": -3.975693351829396e-16
+          }
+        ],
+        "method": "Roundedbonefilletgarmentcentreline withrotation-minimizingradial frame +ONLYreplacementofarmnormalizedskincontribution; originaltorsoownershipunchanged. OptionalpositiveJacobianradiallimiter.",
+        "limits": "Analytic tubeJacobiansareNOT triangleselfcollision certificate. Arc ratio measuredratherthanexactisometryclaim. No actualbody/timing/GPU/CCD guarantees."
+      },
+      "method": "Frozen ownership + rest-metric differential reconstruction + lateral torso axial/circumferential slide on source radial envelope. Static pose construction, no world-height target.",
+      "limits": "No cloth dynamics/body scan/contact/CCD guarantee. Projection does not guarantee monotonic2D surface chart. Actual triangle crossings and compression are decisive.",
+      "file": "slide-volume-single-elbow-90.npz",
+      "matricesSHA256": "070bc13638fa484c26e8117fe339de164e169eb7b3561f44eb7dc76bb29b51be"
+    }
+  ]
+}
