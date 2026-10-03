@@ -731,3 +731,20 @@ Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate42/source.js
 Limits: No normalplayer sourcechange or private37–41 promotion/artpass.
 Headlessviewport not physicalphone/stranger/deploy; rootwedge rejection
 andexisting supportqualification/newwearablehandoff remaincurrent.
+
+## Round43: actual rendered peg components are closed support inputs
+
+Finding: Existing support qualification now freezes realRookie pegs mesh,
+not point markers:800rows/320exactposition aliases/544triangles/24closed
+components. Sourceplatform/tooth/mount bounds are distinct and recorded.
+
+Validation: Everyedge2opposite uses; eachcomponentEuler2/positivevolume/
+0nonadjacentselfcontacts. No nearvertexweld/source mutation. Scopedlint
+and retained2BVH/SATqualification tests pass. Actual source/frameorigin/
+COM/markers/row/triangle identities and recipe hashes frozen.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/peg43/inventory.json
+
+Limits: Inputinventory only, not moving solids/convexity/assembly/boot
+clearance/loadbearing/response or rejectedwedgeart acceptance. Mustmatch
+actualrecordedchassis before evaluating frozenboot41surfaces; no film
+or sourceplayerchange. Normal42gate passed; all rider/device asksopen.
