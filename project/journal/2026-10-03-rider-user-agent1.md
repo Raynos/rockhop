@@ -246,3 +246,14 @@ nooutput plus same-seed batching nonfinite raw rejection are accurately labeled.
 Limits: Reviewer attribution is native; original bridge writer model unresolved.
 No new plan/worker or closed gate; hood/UV construction continues in owned lane.
 Evidence: [coordination review](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/coordination01/review.json). Ask274/287.
+
+Finding: A native sewn, torso-owned dropped hood and coherent cloth UV/PBR
+replace the rigid donor flap and angular albedo stains identified in played01.
+Validation: 17 shared neckline vertices/16 sewn edges, 90 chest-neck cap vertices
+(no arm ownership), 45 fitted pocket vertices; original 1250 shirt basis/UV/
+polygons/weights/all three key fields exactly retained. Original 51-bind/body/
+jeans retained; protected 43712 head/294 cheek raw normals/UV/images/specular
+reverified. Master/final GLB/controller and 512px subtle woven albedo pinned.
+Limits: Unaccepted source checkpoint before identical front/rear motion; hood
+fold/pocket seam/full fit and earlier knee/hem faults still need root review.
+Evidence: [sewn hood wardrobe](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance04/README.md). Ask274; existing278.
