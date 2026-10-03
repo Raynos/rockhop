@@ -1047,3 +1047,19 @@ Ask:284–286.
 Limits: Explicit measured numeric derivative, not byte/CUDA/full16final
 sample equivalence or texture acceptance. Adopt only at finaldecode so
 conditioning and15sampled-step hashes can remain identical to paint05.
+
+Finding: Qualified batch slicing can apply only at final VAE decode while
+preserving prior conditioning and all15sampled latent hashes.
+
+Validation: AST passes; e53af159 same learned full768 VAE and exact
+installed MPSpostprocess maxpixel1≤fixed2, inputbytes unchanged. Control
+receipt/source pins required before public enable_slicing at finaldecode;
+no spatialtiling/UNet processor replacement.9condition/noise+2firstQKV
+capture archives and15sampled hashes replay when supplied. Every sampled
+array, finaldecode input/output and actual16PILviews saved before later
+allocation; measured inactivecache releases keep activecounts unchanged.
+Ask:284–286.
+
+Limits: Unaccepted source checkpoint; actual full16finaldecode/paint06
+pending. Slicing is measured roundoff derivative, notbyte/CUDA equality.
+No quality/bounds reduction, newshape, foreigneviction or ordinary asset.

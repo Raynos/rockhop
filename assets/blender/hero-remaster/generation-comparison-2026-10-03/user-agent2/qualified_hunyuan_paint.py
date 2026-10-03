@@ -29,6 +29,7 @@ def main():
     attention_mode = parser.add_mutually_exclusive_group()
     attention_mode.add_argument('--query-tiling', action='store_true')
     attention_mode.add_argument('--value-columns', action='store_true')
+    parser.add_argument('--vae-slicing', action='store_true')
     parser.add_argument('--replay-progress')
     parser.add_argument('--replay-progress-sha256')
     args = parser.parse_args()
@@ -44,6 +45,14 @@ def main():
         assert prior['inputMeshSHA256'] == sha(args.mesh) and prior['referenceSHA256'] == sha(args.image)
         assert prior['seed'] == 42 and prior['viewResolution'] == 768 and prior['paintSteps'] == 15
     assert not (args.query_tiling or args.value_columns) or prior is not None
+    slicing_control = None
+    if args.vae_slicing:
+        assert args.value_columns and prior is not None
+        control_path = Path('docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/vae-slicing-control02/receipt.json')
+        assert sha(control_path) == '57962b1978b1a8186b024d323d9d45b37c8156070f6cc0cf306b47ff5ddb68a6'
+        slicing_control = json.loads(control_path.read_text())
+        assert slicing_control['phase'] == 'decode controls passed' and slicing_control['maxPixelDifference'] <= 2
+        assert slicing_control['pixelContract'] == 'Installed postprocess on MPSfloat16, actual PILRGB byte arrays'
     assert subprocess.check_output(['git', '-C', str(SOURCE), 'rev-parse', 'HEAD'], text=True).strip() == '82920d643c0dc2f7bfd7255f45f62d386edfe60c'
     out = Path(args.out)
     assert not out.exists()
@@ -58,6 +67,7 @@ def main():
               'remesh': False, 'simplification': False, 'device': 'mps', 'rendererDevice': 'cpu',
               'UVReuse': 'Frozen actual installed xatlas result with identical triangle coordinates; no repeated unwrap',
               'queryTiling': args.query_tiling, 'valueColumns': args.value_columns,
+              'vaeBatchSlicingOnlyFinalDecode': args.vae_slicing,
               'replayProgressSHA256': args.replay_progress_sha256,
               'limits': ['One reference/seed, no paint or garment fit acceptance before root played review.',
                          'Original six zero-area triangles and detached component retained.',
@@ -239,6 +249,7 @@ def main():
         report.update(stage='multiview images returned; upscale and bake',
                       multiviewElapsedSeconds=time.monotonic() - started)
         save()
+        release_inactive_cache('decoded PBR view PNGs saved')
         return result
     multiview.forward_one = forward
     if args.value_columns:
@@ -341,8 +352,19 @@ def main():
         def vae_decode(*positional, **keywords):
             capture('actual-final-VAE-decode-input', positional[0] if positional else keywords['z'])
             report['stage'] = 'VAE decode requested; sampled/input archives saved'
+            if args.vae_slicing:
+                assert sha(inspect.getfile(type(pipeline.vae))) == slicing_control['vaeSourceSHA256']
+                assert sha(inspect.getfile(type(pipeline.image_processor))) == slicing_control['imageProcessorSHA256']
+                pipeline.vae.enable_slicing()
+                assert pipeline.vae.use_slicing and not pipeline.vae.use_tiling
+                report['vaeSlicingControlSHA256'] = '57962b1978b1a8186b024d323d9d45b37c8156070f6cc0cf306b47ff5ddb68a6'
             save()
-            return original_vae_decode(*positional, **keywords)
+            result = original_vae_decode(*positional, **keywords)
+            capture('actual-final-VAE-decoded-images', result[0] if isinstance(result, tuple) else result.sample)
+            report['stage'] = 'decoded images finite and archived; postprocess pending'
+            save()
+            release_inactive_cache('VAE decoded image output archived')
+            return result
         pipeline.vae.decode = vae_decode
         save()
     if args.query_tiling:
