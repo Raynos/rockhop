@@ -255,3 +255,17 @@ Ask:276.
 Limits: Twelve steps may reduce flow error but is not validated to fix dense
 contours/normal response or unseen hood/PBR. Conditional quality run remains
 unqualified; no new inference, source install/edit, repair or family verdict.
+
+Finding: Actual installed learned-split FDG branch yields correct closed unit
+cube positions/connectivity but6inward/6outward triangles and6same-direction
+shared edges. Denoising steps are absent from this analytic assembly witness.
+
+Validation: CPUguard86221/owned86224 exits0 in1.018s; 8vertices/
+12triangles,0boundary/overused/zeroarea. Independent orientation control ONLY
+on cube reaches0winding witnesses/volume1. Rawcube6c7c3dc8 retained; AST pass.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/extractor-cube01/receipt.json
+Ask:276.
+
+Limits: No CUDA parity or Mac-only regression claim; no garment arrays read,
+new inference, extra film or actual garment repair. Not a normals-only cause
+proof for every contour; conditional quality run remains unqualified.
