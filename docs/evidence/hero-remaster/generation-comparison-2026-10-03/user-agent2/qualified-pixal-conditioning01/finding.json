@@ -1,0 +1,31 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "4ddd8749240257928bc846d84e6fe97ae1feb4cb",
+  "status": "Four actual conditioners and selected learned numerical checks pass; flow seed pending",
+  "guardExitCode": 0,
+  "elapsedSeconds": 40.521,
+  "captures": 20,
+  "captureHashesRechecked": true,
+  "camera": {
+    "camera_angle_x": 0.6360271680200948,
+    "distance": 1.5188968181610107,
+    "mesh_scale": 1.0
+  },
+  "projectionChecks": 7,
+  "maxProjectionPixelError": 7.221272790047806e-05,
+  "bilinearChecks": 7,
+  "maxBilinearFeatureError": 3.814697265625e-06,
+  "NAFChecks": 3,
+  "maxNAFNeighborhoodError": 1.258966208084189e-05,
+  "peakAnonymousGiB": 44.9,
+  "peakCombinedGiB": 68.5,
+  "installedNativeMathObserved": true,
+  "sharedFilesUnchanged": true,
+  "limits": [
+    "No flow seed, mesh quality, backward or CUDA parity.",
+    "Full learned pixel/DINO/NAF input arrays archived; projected and NAF output witnesses selected only.",
+    "MoGe camera is an estimate for a generated2D reference, not calibrated geometry.",
+    "MPS MoGe warns float32 autocast unsupported and disables it; original native float32 inference retained.",
+    "Standard stage projection16/32/64 measured;1536cascade uses96grid, to be captured in seed."
+  ]
+}

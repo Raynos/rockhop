@@ -1485,3 +1485,19 @@ Ask:284–286.
 
 Limits: Checkpoint only; execution pending. No flow seed, calibratedcamera,
 mesh/style/fullmodel/backward/CUDA parity or final-art acceptance.
+
+Finding: Four actual Pixal DINO/NAF hoodie conditioners pass selected
+independent learned checks using the actual MoGe camera estimate.
+
+Validation: Future65/96guard0/40.521s;3canonical weights rechecked,20finite
+real pixel/DINO/NAF/global/selected-projection captures hashed. CameraFOV
+0.636027168rad/distance1.518896818/scale1, not calibration. Seven projection
+checks max7.2213e-5px≤.001; seven bilinear max3.8147e-6≤.0005;3actualNAF
+Q/K64,V256/all4heads/six positions/81neighbors max1.259e-5≤.0005.
+All4full projected outputs finite; peak44.9anon/68.5combined GiB.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/
+Ask:284–286.
+
+Limits: No flow seed/mesh/style/fulloutput/backward/CUDA pass. Standard
+projection16/32/64 measured;1536cascade96grid remains actual-seed capture.
+MoGe nativefloat32 retained despite unsupportedautocast warning.

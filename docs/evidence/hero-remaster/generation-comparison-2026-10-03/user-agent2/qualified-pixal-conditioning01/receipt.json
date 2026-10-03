@@ -1,0 +1,782 @@
+{
+  "accepted": false,
+  "model": "Pixal3D",
+  "flowSamplingRuns": 0,
+  "workerSHA256": "fd980dab4db3ebc86e80d8d1636061c2d269b46f6493f5bc3d45c71335948143",
+  "contractSHA256": "9c57d252ae9d5b2ea8ab754c6cd158b2b890e07e2e0bbe204ddd5efd3ad82429",
+  "torch": "2.12.0",
+  "device": "mps",
+  "phase": "tex_1024 released",
+  "weights": [
+    {
+      "path": "/Users/raynos/projects/weights/manual/valeoai/NAF/naf_release.pth",
+      "bytes": 2664431,
+      "expectedSHA256": "c096c1ab2217a5c3ac136365f721685e2201379cb69d509cfb0261183847c98f"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m/model.safetensors",
+      "bytes": 1212559808,
+      "expectedSHA256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179"
+    },
+    {
+      "path": "/Users/raynos/projects/weights/manual/Ruicheng/moge-2-vitl/model.pt",
+      "bytes": 1305030700,
+      "expectedSHA256": "3eefd4abb2102f38f12b2d1992e5ff15e4923e5431c67dd494afe157e0111cd5"
+    }
+  ],
+  "captures": {
+    "moge-actual-input": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/moge-actual-input.npz",
+      "archiveSHA256": "f7638736674a250ac1526e86acae0966798d5b216af1ea846e255e396cd13494",
+      "shape": [
+        3,
+        1082,
+        1082
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "1062143d981b7380e0118c5ca22cc2cc8675a81738c3bbcfffd332e8d07365e9",
+      "finite": true
+    },
+    "moge-actual-intrinsics": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/moge-actual-intrinsics.npz",
+      "archiveSHA256": "e377f764d9480049df05e311b5d9c4545fb213afd02f358d905c887e483cb8bb",
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "8f9ebc6abf92311a1f5a7d507030f610ba2b304a1988a91f73bf0278a20ee292",
+      "finite": true
+    },
+    "ss-actual-normalized-pixels": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/ss-actual-normalized-pixels.npz",
+      "archiveSHA256": "3b5206e222ca60d58c38ef886ab047b55197e99acdd58424658962521368a9b1",
+      "shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "0fb9378cc11a627ae00df6b916d09929b2c259ead29df55f2e10e0be0903da57",
+      "finite": true
+    },
+    "ss-actual-global-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/ss-actual-global-features.npz",
+      "archiveSHA256": "8694117f5132b649d29ab88a1c45b7379f54d01da61f90de2f5182467eee5b93",
+      "shape": [
+        1,
+        5,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "bcbe853c54b6b2dfca50a1b436e10ae91a57cae2c980b7144c8f3d729b0e3198",
+      "finite": true
+    },
+    "ss-selected-projected-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/ss-selected-projected-features.npz",
+      "archiveSHA256": "9995a9057b93af2dc80053894b67f6825703338207996c35ab7777d431ae427e",
+      "shape": [
+        1,
+        257,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "53b31f99d8cb2c3f3e45d2b865345120ed8baade1df8c87e7597ee08c7188021",
+      "finite": true
+    },
+    "shape_512-actual-normalized-pixels": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_512-actual-normalized-pixels.npz",
+      "archiveSHA256": "3b5206e222ca60d58c38ef886ab047b55197e99acdd58424658962521368a9b1",
+      "shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "0fb9378cc11a627ae00df6b916d09929b2c259ead29df55f2e10e0be0903da57",
+      "finite": true
+    },
+    "shape_512-actual-NAF-guide": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_512-actual-NAF-guide.npz",
+      "archiveSHA256": "4fd14e23c6424041bb477f81fe8d7577a19839441c48571a5da60be5b70b357b",
+      "shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "c64202dc8c54a5c9f73c3a04440ef3a0fe44d9735141f964e9b3b3c09160a8d0",
+      "finite": true
+    },
+    "shape_512-actual-NAF-lowres-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_512-actual-NAF-lowres-features.npz",
+      "archiveSHA256": "597346ed138092d3cf955f7c6e4308d7113f59d7f8b87db1a31ee48b0510e9fa",
+      "shape": [
+        1,
+        1024,
+        32,
+        32
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "290942b5838e7b58e77a40c50e98568045fac955ad2ffb069e7824852bf1f09d",
+      "finite": true
+    },
+    "shape_512-actual-global-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_512-actual-global-features.npz",
+      "archiveSHA256": "8694117f5132b649d29ab88a1c45b7379f54d01da61f90de2f5182467eee5b93",
+      "shape": [
+        1,
+        5,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "bcbe853c54b6b2dfca50a1b436e10ae91a57cae2c980b7144c8f3d729b0e3198",
+      "finite": true
+    },
+    "shape_512-selected-projected-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_512-selected-projected-features.npz",
+      "archiveSHA256": "be1a908e364c60362bbecbd348e6b122bc6de4c976ea72ef87d5683796de3a23",
+      "shape": [
+        1,
+        257,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "9e29b5b2c7786066e25b1eb18c8e9443204d2e118d11141c0d9d44e7e0d9cb61",
+      "finite": true
+    },
+    "shape_1024-actual-normalized-pixels": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_1024-actual-normalized-pixels.npz",
+      "archiveSHA256": "b3c08c9d11b90a42fd394ac7fdba5998612b99440baf5b5f23c0ca9e139dc713",
+      "shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "ae1cb36793e7fec4c5c778a30584b4bee21b695bb89c9fb1c9aaa95531a3d7a3",
+      "finite": true
+    },
+    "shape_1024-actual-NAF-guide": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_1024-actual-NAF-guide.npz",
+      "archiveSHA256": "77caa11e8f1c107724c83133b147fc2e110cd7bc7d742563a907ec63d04a215e",
+      "shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "29bf3b7e99933a6fd9fe5a5dade26772fd3caeffccd898c6976b7ac57003a076",
+      "finite": true
+    },
+    "shape_1024-actual-NAF-lowres-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_1024-actual-NAF-lowres-features.npz",
+      "archiveSHA256": "a2684f2e8211f54dbea698bf28fdd427d88f1a9d7b7b1c7608e7b5920fdf1993",
+      "shape": [
+        1,
+        1024,
+        64,
+        64
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "aab35dfd0368e26e910da568c546f7c1b9468c939cfa7520e7587b3a459a3338",
+      "finite": true
+    },
+    "shape_1024-actual-global-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_1024-actual-global-features.npz",
+      "archiveSHA256": "88de36353897cad4a01eb1019b5ed437b84a679c714cf01c7ded6a7743c1a45f",
+      "shape": [
+        1,
+        5,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "e030fb8693a09b0e36c8ff5865443bacfcb0c7aaf90318d8e35434382090f81a",
+      "finite": true
+    },
+    "shape_1024-selected-projected-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/shape_1024-selected-projected-features.npz",
+      "archiveSHA256": "e3c0087f0becd2c7d24777dfe3f3a679d64b3a1d7afaa0184fef4a8fd9241d0b",
+      "shape": [
+        1,
+        257,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "398bd39be4282b364faae1f643864629603e083d15ea1b1e43cee45be6c32779",
+      "finite": true
+    },
+    "tex_1024-actual-normalized-pixels": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/tex_1024-actual-normalized-pixels.npz",
+      "archiveSHA256": "b3c08c9d11b90a42fd394ac7fdba5998612b99440baf5b5f23c0ca9e139dc713",
+      "shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "ae1cb36793e7fec4c5c778a30584b4bee21b695bb89c9fb1c9aaa95531a3d7a3",
+      "finite": true
+    },
+    "tex_1024-actual-NAF-guide": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/tex_1024-actual-NAF-guide.npz",
+      "archiveSHA256": "77caa11e8f1c107724c83133b147fc2e110cd7bc7d742563a907ec63d04a215e",
+      "shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "29bf3b7e99933a6fd9fe5a5dade26772fd3caeffccd898c6976b7ac57003a076",
+      "finite": true
+    },
+    "tex_1024-actual-NAF-lowres-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/tex_1024-actual-NAF-lowres-features.npz",
+      "archiveSHA256": "a2684f2e8211f54dbea698bf28fdd427d88f1a9d7b7b1c7608e7b5920fdf1993",
+      "shape": [
+        1,
+        1024,
+        64,
+        64
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "aab35dfd0368e26e910da568c546f7c1b9468c939cfa7520e7587b3a459a3338",
+      "finite": true
+    },
+    "tex_1024-actual-global-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/tex_1024-actual-global-features.npz",
+      "archiveSHA256": "88de36353897cad4a01eb1019b5ed437b84a679c714cf01c7ded6a7743c1a45f",
+      "shape": [
+        1,
+        5,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "e030fb8693a09b0e36c8ff5865443bacfcb0c7aaf90318d8e35434382090f81a",
+      "finite": true
+    },
+    "tex_1024-selected-projected-features": {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-conditioning01/control/tex_1024-selected-projected-features.npz",
+      "archiveSHA256": "e7febce665367561de6a1a73e4a36c0cbaac37426b77cc03bf3e9190bde73607",
+      "shape": [
+        1,
+        257,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "CBytesSHA256": "5da0fe6349d8c3e898c839af0439c7254a78dc28ce7d6c7fc83ec8fd64025cf7",
+      "finite": true
+    }
+  },
+  "projectionChecks": [
+    {
+      "phase": "ss",
+      "resolution": 512,
+      "selectedRows": 257,
+      "maxPixelError": 3.548290499111317e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "2324a746ceee5c1cee900226b24905d3921a420dd414541f0c2d55a72029cc3a"
+    },
+    {
+      "phase": "shape_512",
+      "resolution": 512,
+      "selectedRows": 257,
+      "maxPixelError": 4.125019358980353e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "f94a4b848cd0a70e4fdf743ad516d14b5f7eb46eff839275cde47586c4eeb8a4"
+    },
+    {
+      "phase": "shape_512",
+      "resolution": 512,
+      "selectedRows": 257,
+      "maxPixelError": 4.125019358980353e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "f94a4b848cd0a70e4fdf743ad516d14b5f7eb46eff839275cde47586c4eeb8a4"
+    },
+    {
+      "phase": "shape_1024",
+      "resolution": 1024,
+      "selectedRows": 257,
+      "maxPixelError": 7.221272790047806e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "7c19e31b1282eab41f129555116da03b3f71ab76784af3365b069542e5a3cd0c"
+    },
+    {
+      "phase": "shape_1024",
+      "resolution": 1024,
+      "selectedRows": 257,
+      "maxPixelError": 7.221272790047806e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "7c19e31b1282eab41f129555116da03b3f71ab76784af3365b069542e5a3cd0c"
+    },
+    {
+      "phase": "tex_1024",
+      "resolution": 1024,
+      "selectedRows": 257,
+      "maxPixelError": 7.221272790047806e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "7c19e31b1282eab41f129555116da03b3f71ab76784af3365b069542e5a3cd0c"
+    },
+    {
+      "phase": "tex_1024",
+      "resolution": 1024,
+      "selectedRows": 257,
+      "maxPixelError": 7.221272790047806e-05,
+      "thresholdPixels": 0.001,
+      "archiveSHA256": "7c19e31b1282eab41f129555116da03b3f71ab76784af3365b069542e5a3cd0c"
+    }
+  ],
+  "bilinearChecks": [
+    {
+      "phase": "ss",
+      "featureMapShape": [
+        1,
+        1024,
+        32,
+        32
+      ],
+      "maxCPUFloat64Error": 2.7423957362771034e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "fe9cdd95d16e9c0450603587c2f9c41ba5167afa5ad7b15987293bc88a24d71a"
+    },
+    {
+      "phase": "shape_512",
+      "featureMapShape": [
+        1,
+        1024,
+        32,
+        32
+      ],
+      "maxCPUFloat64Error": 2.9540249606441193e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "0e7f62ac0721a03a3b41efee7b04cb24796ccde3fff1c944d9a3fdbe7cb2bc14"
+    },
+    {
+      "phase": "shape_512",
+      "featureMapShape": [
+        1,
+        1024,
+        512,
+        512
+      ],
+      "maxCPUFloat64Error": 2.6774451242772557e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "adc301462411a4647cdc2ee99f0b0b1112344c6200977bd24b89aeb224267c2e"
+    },
+    {
+      "phase": "shape_1024",
+      "featureMapShape": [
+        1,
+        1024,
+        64,
+        64
+      ],
+      "maxCPUFloat64Error": 3.031789674423635e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "4299257a828b5dcaa4dd9d4328309dee6c2e30b0ef135451396a9d230fde7f06"
+    },
+    {
+      "phase": "shape_1024",
+      "featureMapShape": [
+        1,
+        1024,
+        512,
+        512
+      ],
+      "maxCPUFloat64Error": 3.814697265625e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "ce7da8dc780d3b45c8481d7cb04399e9e00305254e8f4351516ba0e08e05f6c5"
+    },
+    {
+      "phase": "tex_1024",
+      "featureMapShape": [
+        1,
+        1024,
+        64,
+        64
+      ],
+      "maxCPUFloat64Error": 3.031789674423635e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "4299257a828b5dcaa4dd9d4328309dee6c2e30b0ef135451396a9d230fde7f06"
+    },
+    {
+      "phase": "tex_1024",
+      "featureMapShape": [
+        1,
+        1024,
+        1024,
+        1024
+      ],
+      "maxCPUFloat64Error": 2.5449844258673693e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "028b3bfb8e28e105487e79c127fbd2f4a36c5a22e25b4916352cf9f088ebe06a"
+    }
+  ],
+  "nafChecks": [
+    {
+      "phase": "shape_512",
+      "qShape": [
+        1,
+        512,
+        512,
+        4,
+        64
+      ],
+      "kShape": [
+        1,
+        512,
+        512,
+        4,
+        64
+      ],
+      "vShape": [
+        1,
+        512,
+        512,
+        4,
+        256
+      ],
+      "kernel": [
+        9,
+        9
+      ],
+      "dilation": [
+        16,
+        16
+      ],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          511
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          511,
+          0
+        ],
+        [
+          511,
+          511
+        ],
+        [
+          256,
+          0
+        ]
+      ],
+      "allHeads": 4,
+      "maxCPUFloat64Error": 6.377596793782914e-06,
+      "threshold": 0.0005,
+      "archiveSHA256": "eeacf330a29d8a72e91e157c71e8953390e4eda5f94606becb759414510900a9",
+      "actualInstalledDispatch": "generate_mps.load_runtime_deps pure-PyTorch2048query shifted neighborhoods"
+    },
+    {
+      "phase": "shape_1024",
+      "qShape": [
+        1,
+        512,
+        512,
+        4,
+        64
+      ],
+      "kShape": [
+        1,
+        512,
+        512,
+        4,
+        64
+      ],
+      "vShape": [
+        1,
+        512,
+        512,
+        4,
+        256
+      ],
+      "kernel": [
+        9,
+        9
+      ],
+      "dilation": [
+        8,
+        8
+      ],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          511
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          511,
+          0
+        ],
+        [
+          511,
+          511
+        ],
+        [
+          256,
+          0
+        ]
+      ],
+      "allHeads": 4,
+      "maxCPUFloat64Error": 1.258966208084189e-05,
+      "threshold": 0.0005,
+      "archiveSHA256": "46de6e7fb5d8bb0f5e4632e1a46f73af75cc7ae2e940d49444c1eaa0e66846ea",
+      "actualInstalledDispatch": "generate_mps.load_runtime_deps pure-PyTorch2048query shifted neighborhoods"
+    },
+    {
+      "phase": "tex_1024",
+      "qShape": [
+        1,
+        1024,
+        1024,
+        4,
+        64
+      ],
+      "kShape": [
+        1,
+        1024,
+        1024,
+        4,
+        64
+      ],
+      "vShape": [
+        1,
+        1024,
+        1024,
+        4,
+        256
+      ],
+      "kernel": [
+        9,
+        9
+      ],
+      "dilation": [
+        16,
+        16
+      ],
+      "positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1023
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          1023,
+          0
+        ],
+        [
+          1023,
+          1023
+        ],
+        [
+          512,
+          0
+        ]
+      ],
+      "allHeads": 4,
+      "maxCPUFloat64Error": 1.2039505399741302e-05,
+      "threshold": 0.0005,
+      "archiveSHA256": "de05cca244ca6217900d49ae68f53524ab9977d3c3d04eb1bc49e8238ab55853",
+      "actualInstalledDispatch": "generate_mps.load_runtime_deps pure-PyTorch2048query shifted neighborhoods"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "ss",
+      "config": {
+        "model_name": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m",
+        "image_size": 512,
+        "grid_resolution": 16
+      },
+      "globalShape": [
+        1,
+        5,
+        1024
+      ],
+      "projectedShape": [
+        1,
+        4096,
+        1024
+      ],
+      "allProjectedFinite": true,
+      "projectionOutputsArchived": "257 selected actual rows; full real DINO/NAF inputs archived"
+    },
+    {
+      "stage": "shape_512",
+      "config": {
+        "model_name": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m",
+        "image_size": 512,
+        "grid_resolution": 32,
+        "use_naf_upsample": true,
+        "naf_target_size": 512
+      },
+      "globalShape": [
+        1,
+        5,
+        1024
+      ],
+      "projectedShape": [
+        1,
+        32768,
+        2048
+      ],
+      "allProjectedFinite": true,
+      "projectionOutputsArchived": "257 selected actual rows; full real DINO/NAF inputs archived"
+    },
+    {
+      "stage": "shape_1024",
+      "config": {
+        "model_name": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m",
+        "image_size": 1024,
+        "grid_resolution": 64,
+        "use_naf_upsample": true,
+        "naf_target_size": 512
+      },
+      "globalShape": [
+        1,
+        5,
+        1024
+      ],
+      "projectedShape": [
+        1,
+        262144,
+        2048
+      ],
+      "allProjectedFinite": true,
+      "projectionOutputsArchived": "257 selected actual rows; full real DINO/NAF inputs archived"
+    },
+    {
+      "stage": "tex_1024",
+      "config": {
+        "model_name": "/Users/raynos/projects/weights/manual/facebook/dinov3-vitl16-pretrain-lvd1689m",
+        "image_size": 1024,
+        "grid_resolution": 64,
+        "use_naf_upsample": true,
+        "naf_target_size": 1024
+      },
+      "globalShape": [
+        1,
+        5,
+        1024
+      ],
+      "projectedShape": [
+        1,
+        262144,
+        2048
+      ],
+      "allProjectedFinite": true,
+      "projectionOutputsArchived": "257 selected actual rows; full real DINO/NAF inputs archived"
+    }
+  ],
+  "memory": [
+    {
+      "phase": "actual-MoGe-camera",
+      "activeBytes": 0,
+      "driverBeforeBytes": 458752,
+      "driverAfterBytes": 458752
+    },
+    {
+      "phase": "MoGe released before actual DINO/NAF",
+      "activeBytes": 0,
+      "driverBeforeBytes": 3871293440,
+      "driverAfterBytes": 1665089536
+    },
+    {
+      "phase": "ss",
+      "activeBytes": 0,
+      "driverBeforeBytes": 1665089536,
+      "driverAfterBytes": 1665089536
+    },
+    {
+      "phase": "ss released",
+      "activeBytes": 16384,
+      "driverBeforeBytes": 4022337536,
+      "driverAfterBytes": 1832910848
+    },
+    {
+      "phase": "shape_512",
+      "activeBytes": 16384,
+      "driverBeforeBytes": 1832910848,
+      "driverAfterBytes": 1832910848
+    },
+    {
+      "phase": "shape_512 released",
+      "activeBytes": 22016,
+      "driverBeforeBytes": 8686567424,
+      "driverAfterBytes": 440565760
+    },
+    {
+      "phase": "shape_1024",
+      "activeBytes": 22016,
+      "driverBeforeBytes": 440565760,
+      "driverAfterBytes": 440565760
+    },
+    {
+      "phase": "shape_1024 released",
+      "activeBytes": 87552,
+      "driverBeforeBytes": 17943543808,
+      "driverAfterBytes": 4320444416
+    },
+    {
+      "phase": "tex_1024",
+      "activeBytes": 87552,
+      "driverBeforeBytes": 4320444416,
+      "driverAfterBytes": 4320444416
+    },
+    {
+      "phase": "tex_1024 released",
+      "activeBytes": 87552,
+      "driverBeforeBytes": 24769822720,
+      "driverAfterBytes": 2162524160
+    }
+  ],
+  "limits": [
+    "No flow seed, mesh quality, backward or CUDA parity.",
+    "Full learned pixel/DINO/NAF input arrays archived; projected and NAF output witnesses selected only.",
+    "MoGe camera is an estimate for a generated2D reference, not calibrated geometry."
+  ],
+  "elapsedSeconds": 37.799406374804676,
+  "preprocessing": {
+    "SHA256": "6e3f33a467d63819288ac9eafbc98ffe2a8ea89f3d36d371ac161eae57a6c5f7",
+    "size": [
+      1082,
+      1082
+    ]
+  },
+  "camera": {
+    "camera_angle_x": 0.6360271680200948,
+    "distance": 1.5188968181610107,
+    "mesh_scale": 1.0
+  },
+  "status": "Four actual installed conditioners and selected independent learned witnesses pass; no flow seed"
+}
