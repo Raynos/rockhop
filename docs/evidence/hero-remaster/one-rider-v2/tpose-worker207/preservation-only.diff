@@ -1,0 +1,70 @@
+--- /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-readiness203/shape_only_worker.py
++++ /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/tpose-worker207/shape_only_worker.py
+@@ -19,7 +19,7 @@
+ WEIGHTS = Path('/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1')
+ PRIVATE = Path('/Users/raynos/projects/localai/runtime/rockhop-rider-search-v1/one-rider-v2')
+ SOURCE_HEAD = '82920d643c0dc2f7bfd7255f45f62d386edfe60c'
+-FREEZE = Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-readiness203/freeze.json')
++FREEZE = Path('/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/one-rider-v2/tpose-worker207/freeze.json')
+ 
+ 
+ def sha(path):
+@@ -28,6 +28,34 @@
+         for chunk in iter(lambda: handle.read(4 * 1024 * 1024), b''):
+             h.update(chunk)
+     return h.hexdigest()
++
++
++def native_diagnostics(vertices, faces, np):
++    """Record all invalid element locations; untouched NPZ is authoritative."""
++    vertex_shape_ok = vertices.ndim == 2 and vertices.shape[1] == 3
++    face_shape_ok = faces.ndim == 2 and faces.shape[1] == 3
++    bad_vertices = ~np.isfinite(vertices)
++    bad_faces = (~np.isfinite(faces)) | (faces < 0) | (faces >= len(vertices))
++    if faces.dtype.kind == 'f':
++        bad_faces |= np.isfinite(faces) & (faces != np.floor(faces))
++    vertex_locations = np.argwhere(bad_vertices)
++    face_locations = np.argwhere(bad_faces)
++    return {'vertexShape': list(vertices.shape), 'faceShape': list(faces.shape),
++            'vertexDtype': str(vertices.dtype), 'faceDtype': str(faces.dtype),
++            'vertexShapeOK': vertex_shape_ok, 'faceShapeOK': face_shape_ok,
++            'nonfiniteVertexElementCount': int(bad_vertices.sum()),
++            'nonfiniteVertexRowIDs': np.unique(vertex_locations[:, 0]).tolist(),
++            'nonfiniteVertexElementLocations': vertex_locations.tolist(),
++            'invalidFaceElementCount': int(bad_faces.sum()),
++            'invalidFaceRowIDs': np.unique(face_locations[:, 0]).tolist(),
++            'invalidFaceElementLocations': face_locations.tolist(),
++            'invalidFaceValuesExactText': [str(faces[tuple(location)]) for location in face_locations],
++            'invalidVertexValuesExactText': [str(vertices[tuple(location)]) for location in vertex_locations],
++            'faceMinimumExactText': str(faces.min()) if faces.size else None,
++            'faceMaximumExactText': str(faces.max()) if faces.size else None,
++            'validForDisplay': bool(vertex_shape_ok and face_shape_ok and len(vertices) > 0
++                                    and len(faces) > 0 and not bad_vertices.any() and not bad_faces.any()),
++            'nativeArraysModified': False, 'repaired': False}
+ 
+ 
+ def main():
+@@ -89,8 +117,22 @@
+                        output_type='mesh')[0]
+     assert decoded is not None
+     vertices, faces = np.asarray(decoded.mesh_v).copy(), np.asarray(decoded.mesh_f).copy()
+-    assert np.isfinite(vertices).all() and faces.min() >= 0 and faces.max() < len(vertices)
++    if vertices.dtype.kind not in 'biuf' or faces.dtype.kind not in 'biuf':
++        raise TypeError('Decoder did not return API-safe real numeric arrays; stop without inference changes')
++    # Preserve untouched decoder arrays BEFORE finite/index/shape validation.
+     np.savez_compressed(output / 'native-decoded.npz', vertices=vertices, faces=faces)
++    diagnostics = native_diagnostics(vertices, faces, np)
++    diagnostics['nativeNPZSHA256'] = sha(output / 'native-decoded.npz')
++    (output / 'native-diagnostics.json').write_text(json.dumps(diagnostics, indent=2, allow_nan=False) + '\n')
++    record['nativeDiagnostics'] = diagnostics
++    if not diagnostics['validForDisplay']:
++        record.update(status='REJECTED_NATIVE_ARRAYS_RETAINED_NO_DISPLAY',
++                      wallSeconds=time.monotonic() - started, vertices=len(vertices), faces=len(faces),
++                      peakRSSBytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
++        record['outputs'] = {'native-decoded.npz': {'bytes': (output / 'native-decoded.npz').stat().st_size,
++                                                   'sha256': diagnostics['nativeNPZSHA256']}}
++        (output / 'generation.json').write_text(json.dumps(record, indent=2, allow_nan=False) + '\n')
++        raise AssertionError('Invalid decoded geometry; untouched native arrays and exact diagnostics retained')
+     # This is a separate display copy, with no Trimesh merging or cleanup.
+     display_faces = faces[:, ::-1].copy()
+     display = trimesh.Trimesh(vertices=vertices.copy(), faces=display_faces, process=False)
