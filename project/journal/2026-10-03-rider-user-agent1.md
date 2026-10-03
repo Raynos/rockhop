@@ -395,3 +395,11 @@ Finding: First actual native-rest registration plus consumed3mm-body Boolean cav
 Validation: Capped8tri holes, explicit torso+arm anchors/metres/file+.65frame. Recoveredregistered volume+.008235m³, bodycutter+.079493m³/1742selfpairs; alltopologicalboundary/nonmanifold/contiguity checks0 despite mechanical failure. Source02pin unchanged. Silent ship45 cold6562ms/clear40.083333333s/4810identicalticks/crash103/restart1tick/frame2.095ms/errors0; syntax/diff/hooks pass.
 
 Limits: Static consumed cavity cut is not live collision response. BVH/normalcoverage are witnesses, not signedthickness guarantees; zero topological counts alone do not certifyfabric. Surface02/PBR/canonicalbody/head/51bind and allcontrols retained. New fullgarment construction continues, no plainshirt/fullcloth/default/playerpromotion/M0–M5closure.
+
+### Round46 — corrected frame rejects generated-volume cutting, 2026-10-03
+
+Finding: Correct anatomical arm rotation and torsohem exclusion reduce registeredself2297→670, but original cappedsource02already595 and actualcutter1742. SameBoolean stillleaves614v/1196tri/483bodypairs/1901coveragemisses. Reject04 and stop volume-cutting path; selectedshape/PBR remains visualauthority for cleansewn exterior reconstruction, not alreadywearable geometry.
+
+Validation: Exactsource02b644e217…/PBR/canonicalbody/51bind remaincontrols; prior03wrongframe recipe+diagnosis frozen exact. Recovery uses immutable registration stream, unchangedsource topology+eightcaps; alltopologicalcounts0 stillfailmechanically. Source/candidate/recipe pins and syntax/diff/hooks pass.
+
+Limits: Neither Boolean operand is qualified by manifold-edge counts. Structuralquad cage may support explicit donor-shape/PBR reconstruction with real openings/bodyclearance, never another plainshirt substitute. No garmentweight/game/mobile/movingart acceptance or playerpromotion; no further generated-volume Boolean sweep. M0–M5/root sole judgment retained.

@@ -43,7 +43,6 @@ donorcoords=np.array([list(v.co) for v in garment.data.vertices],dtype=np.float6
 height=.4722222222222222;depth=.50;lateral=.52;up=1.2266666666666666
 torso_matrix=np.array([[0,-depth,0,0],[lateral,0,0,.007],[0,0,height,up],[0,0,0,1]],dtype=np.float64)
 source_anchors={};target_anchors={}
-display_to_native=np.array([[0,-1,0],[1,0,0],[0,0,1]],dtype=np.float64)
 for side,sign in [('R',1),('L',-1)]:
  source_anchors[side]=np.array([[sign*.43,-.015,.55],[sign*.68,-.085,.11],[sign*.94,-.10,-.265]])
  target_anchors[side]=np.array([list(rig.data.bones['upperArm.'+side].head_local),list(rig.data.bones['upperArm.'+side].tail_local),list(rig.data.bones['forearm.'+side].tail_local)])
@@ -53,12 +52,12 @@ def register(p):
  for seg in [0,1]:
   axis=s[seg+1]-s[seg];u=np.clip(np.dot(p-s[seg],axis)/np.dot(axis,axis),0,1);center=s[seg]+u*axis
   choices.append((np.linalg.norm(p-center),seg,u,center))
- _,seg,u,center=min(choices,key=lambda r:r[0]);a=Vector(display_to_native@(s[seg+1]-s[seg]));b=Vector(t[seg+1]-t[seg])
- rotation=np.array(a.rotation_difference(b).to_matrix(),dtype=np.float64)@display_to_native
+ _,seg,u,center=min(choices,key=lambda r:r[0]);a=Vector(s[seg+1]-s[seg]);b=Vector(t[seg+1]-t[seg])
+ rotation=np.array(a.rotation_difference(b).to_matrix(),dtype=np.float64)
  arm=t[seg]+u*(t[seg+1]-t[seg])+rotation@(p-center)*.50
  # Smooth seam blend only inside the proximal shoulder; the long sleeve follows
  # the two explicit body segments rather than global stretching toward a hand.
- distance=(abs(p[0])-.36)-max(.46-p[2],0)*.22
+ distance=(abs(p[0])-.36)+max(.46-p[2],0)*.22
  alpha=float(np.clip(distance/.15,0,1));alpha=alpha*alpha*(3-2*alpha)
  return (1-alpha)*torso+alpha*arm,side,seg,float(u),alpha
 lineage=[]
@@ -124,7 +123,6 @@ np.savez_compressed(out/'registration.npz',donorXYZ=donorcoords,nativeRestXYZ=np
 report={'status':'UNACCEPTED physical native-rest garment construction; mechanical preflight only',
  'sourceSHA256':source_sha,'candidateSHA256':sha(out/'construction.blend'),'recipeSHA256':sha(__file__),
  'registrationSHA256':sha(out/'registration.npz'),'sourceDonorSHA256':'800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba',
- 'armDisplayToNativeFrameRows':display_to_native.tolist(),
  'repairedTriangularRemeshHoles':holes,'torsoDonorDisplayToNativeRestRows':torso_matrix.tolist(),
  'armSourceDisplayAnchors':{k:v.tolist() for k,v in source_anchors.items()},'armNativeRestAnchors':{k:v.tolist() for k,v in target_anchors.items()},
  'axes':'Stored native rest metres +Xforward/+Zup/-Yleft; parent/body frame keeps file+.65X once; no additional runtime offset baked',
