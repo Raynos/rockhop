@@ -115,3 +115,15 @@ Ask:276.
 
 Limits: Preparation checkpoint only; not a UV bake, garment/fit/topology or
 actual appearance pass. No real donor consumed; no body benchmark escalation.
+
+Finding: Exact approved storyboardframe03 resolves wardrobe appearance input;
+local older03.png is excluded. Mustard hood/indigo denim target stays separate
+from canonical geometry and immutable b7/body11 generated head/hair identity.
+
+Validation: ZIP2b9b6c0b/image d48e3913 pins match; every ZIP CRC passes; image
+member bytes equal extracted PNG. Source inspected; no generator launched.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/wardrobe-reference.json
+Ask:276.
+
+Limits: Existing approved concept source is not new art, anatomy, garment fit
+or moving acceptance. Side pose/motorcycle are not the canonical fitting bank.
