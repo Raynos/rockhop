@@ -1,0 +1,135 @@
+{
+  "sourceManifestSHA256": "6ea48d1dffc91517503dbc46d3c92c5dce518ebcc93aa37a75037ea591839775",
+  "sourceGLBSHA256": "adbac6f2949cec0f32a8e0cfa4cfabd02cce61e58dab4022209e23a605f31df7",
+  "sample": 304,
+  "tick": 3050,
+  "primitive": 0,
+  "jointOrder": [
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "shoulder.L",
+    "upperArm.L",
+    "forearm.L",
+    "hand.L",
+    "shoulder.R",
+    "upperArm.R",
+    "forearm.R",
+    "hand.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ],
+  "space": "source34 bike-frame world deformation",
+  "sourceDebug": {
+    "armStretch": [
+      0.778,
+      0.779
+    ],
+    "legStretch": [
+      0.914,
+      0.904
+    ],
+    "handOnGrip": [
+      true,
+      true
+    ],
+    "footOnPeg": [
+      true,
+      true
+    ],
+    "wristErr": [
+      0,
+      0
+    ],
+    "gripErr": [
+      3.9499763101303233e-14,
+      2.888719452961835e-14
+    ],
+    "gripAngleErr": [
+      0,
+      0
+    ],
+    "ankleErr": [
+      0,
+      0
+    ],
+    "armLen": [
+      0.604,
+      0.604
+    ],
+    "additiveWeight": 0,
+    "physicalPose": true,
+    "comResidual": 4.2016209568115595e-09,
+    "ragdollResidual": -1,
+    "ragdollBlend": 0,
+    "ragdollDetail": [],
+    "bones": 19,
+    "clips": [
+      "rigid_length_stand_to_sit",
+      "bind_restore",
+      "hip_flexion_sweep",
+      "hip_abduction_sweep",
+      "knee_bend_sweep"
+    ],
+    "stageClip": null,
+    "stageBlend": 0,
+    "soleErr": [
+      1.488056111354677e-14,
+      1.488056111354677e-14
+    ],
+    "stance": {
+      "on": true,
+      "pose": "back",
+      "blend": 0.5986156848571763,
+      "lean": 0.5986156848571763,
+      "land": 0,
+      "extend": 0,
+      "dy": 0,
+      "lag": 0,
+      "limit": 1
+    }
+  },
+  "sourceContacts": [
+    {
+      "kind": "hand",
+      "side": "R",
+      "maximumCPUvsActualPlayedSurfaceM": 1.2786205199558125e-07
+    },
+    {
+      "kind": "hand",
+      "side": "L",
+      "maximumCPUvsActualPlayedSurfaceM": 2.4051389014239974e-07
+    },
+    {
+      "kind": "sole",
+      "side": "L",
+      "maximumCPUvsActualPlayedSurfaceM": 2.080288838983641e-06
+    },
+    {
+      "kind": "sole",
+      "side": "R",
+      "maximumCPUvsActualPlayedSurfaceM": 2.0910164529039886e-06
+    }
+  ],
+  "maxAcrossPrimitiveMatrixDifference": 0.0,
+  "probe": "source34_actual",
+  "variant": "source",
+  "id": "source34-304",
+  "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/rig-lane/mechanical-suite/isolation-poses/source34-304.npz",
+  "worldMatricesSHA256": "5024732d992861a964e3c0b4857455b4a70f43ad21fb2cb8d81088e4ac0edc03",
+  "upperClothMaxEdge2mm": 6.685057177244612,
+  "upperClothP99Edge2mm": 3.5768500445569646,
+  "upperClothCompressedBelowQuarter": 55,
+  "rawJointPayload": {
+    "file": "sample304-mesh0-joint-transforms.f64",
+    "values": 304,
+    "sha256": "5cbe5546a1f2c4bf411e0d3e15679772df3a6830d242e8b97fb65082e82a02cf"
+  },
+  "portableControlsSHA256": "ec0b40ad1602c825a9ced1e1d9cc01e98df872a5dd785caba53f3dad1661c93d"
+}

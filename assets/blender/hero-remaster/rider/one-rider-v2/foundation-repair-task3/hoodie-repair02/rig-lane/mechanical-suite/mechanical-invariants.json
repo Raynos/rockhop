@@ -1,0 +1,89 @@
+{
+  "apiSHA256": "24c18d49703cca26146e1238bb56afa15ac7e5c4d2f1e1e500e9cab5ffeb8960",
+  "poseCount": 225,
+  "maxHandTargetErrorM": 1.1102230246251565e-16,
+  "maxSourceSeamAliasGapM": 2.7194799110210365e-16,
+  "allHeadTorsoJointMatricesIdentity": true,
+  "girdleContributionLimitedRows": [
+    {
+      "kind": "functional_overhead",
+      "fraction": 0.5,
+      "side": "L",
+      "factor": 0.7478058250190962
+    },
+    {
+      "kind": "functional_overhead",
+      "fraction": 0.5,
+      "side": "R",
+      "factor": 0.8662136122114035
+    },
+    {
+      "kind": "functional_overhead",
+      "fraction": 0.625,
+      "side": "L",
+      "factor": 0.7496481184722086
+    },
+    {
+      "kind": "functional_overhead",
+      "fraction": 0.625,
+      "side": "R",
+      "factor": 0.8588863913516818
+    }
+  ],
+  "denseMotion": [
+    {
+      "kind": "horizontal",
+      "samples": 201,
+      "maxHandTargetErrorM": 1.1102230246251565e-16,
+      "maxLinkLengthErrorM": 2.7755575615628914e-16,
+      "maxAdjacentNodeAngleDegrees": 0.38944404282414463,
+      "reverseTimeEvaluationMaxMatrixError": 1.0366707492437399e-14
+    },
+    {
+      "kind": "overhead",
+      "samples": 201,
+      "maxHandTargetErrorM": 1.1102230246251565e-16,
+      "maxLinkLengthErrorM": 2.7755575615628914e-16,
+      "maxAdjacentNodeAngleDegrees": 0.8310275580010613,
+      "reverseTimeEvaluationMaxMatrixError": 1.6764367671839864e-14
+    },
+    {
+      "kind": "functional_overhead",
+      "samples": 201,
+      "maxHandTargetErrorM": 1.5700924586837752e-16,
+      "maxLinkLengthErrorM": 2.7755575615628914e-16,
+      "maxAdjacentNodeAngleDegrees": 1.311916607702816,
+      "reverseTimeEvaluationMaxMatrixError": 7.331135698507296e-12
+    },
+    {
+      "kind": "forward",
+      "samples": 201,
+      "maxHandTargetErrorM": 1.1102230246251565e-16,
+      "maxLinkLengthErrorM": 2.7755575615628914e-16,
+      "maxAdjacentNodeAngleDegrees": 0.5173563975329091,
+      "reverseTimeEvaluationMaxMatrixError": 1.2545520178264269e-14
+    },
+    {
+      "kind": "elbow",
+      "samples": 201,
+      "maxHandTargetErrorM": 0.0,
+      "maxLinkLengthErrorM": 2.7755575615628914e-16,
+      "maxAdjacentNodeAngleDegrees": 0.7703988352296782,
+      "reverseTimeEvaluationMaxMatrixError": 5.329070518200751e-15
+    },
+    {
+      "kind": "legacy_elbow",
+      "samples": 201,
+      "maxHandTargetErrorM": 0.0,
+      "maxLinkLengthErrorM": 2.220446049250313e-16,
+      "maxAdjacentNodeAngleDegrees": 0.6630517746340471,
+      "reverseTimeEvaluationMaxMatrixError": 5.329070518200751e-15
+    }
+  ],
+  "source34BonePointReplayMaxM": 6.217383412418875e-08,
+  "limits": [
+    "Dense finite kinematic samples do not certify continuous collision or joint-velocity smoothness.",
+    "Reach feasibility cap is continuous but may introduce derivative changes at saturation.",
+    "Source34 bone point residual ~0.062 micrometres follows source float32 bind-centre serialization."
+  ]
+}
