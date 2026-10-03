@@ -1,20 +1,20 @@
-**Branch audit (ask263):** [Verified refs](../evidence/branch-audit-2026-10-03/README.md): every local/fetched branch is contained in main. Three pre-purge pointers aligned to verified rewritten ancestors; original tips preserved locally. No outstanding merge or game asset change. Native adaptation remains queued.
-
-**MCP permissions (asks268–271):** Personal config and credential-free dotfiles now set configured MCP/app defaults and explicit plugin tool policies to approve. Parsing, fresh CLI loading and installer idempotence pass; existing never/danger-full-access retained. Live daemon reload did not acknowledge; loaded desktop chats may require relaunch after active work settles. Rider/release gates remain open.
-
-**Local checker succession (ask267):** [Frozen handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md) preserves generic63-test attribution, green published arm-foundation checkpoint, exact local owners/model context and remaining frozen anatomy source work. Generation is ask262/local01a10155; small-commit policy is ask266. This lane freezes after checkpoint; root/relay creates the next LOCAL checker. No player promotion/deploy/cleanup or invented cloud model.
-
-**Separate anatomical foundation (ask261):** Builder01a1013b has frozen source/evidence/journal and stopped writes/jobs/leases for local succession. [Checker handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md) pins unchanged control/master; later builder evidence reports seven-endpoint raised parity7.645mm body/4.716mm cloth,49surface witnesses and true action-off fixtures. Source checkpoints remain uncommitted after ignored-master staging stopped; review each finished unit before new geometry. Hood/generated head/fabric, proportions, continuous contact and engine/device acceptance remain open; builder model unresolved.
-
 # What we are building — the plans and where each stands
 
 **Frozen transition registry (ask272):** [Reviewed snapshot](../evidence/hero-remaster/native-cycle-relay-2026-10-03/REGISTRY-R2.md) preserves old-relay and paused-manager handoffs with exact pins; original writer models remain unresolved. Accurate native reviewer attribution claims no original authorship. Future manager updates successor IDs separately; root chooses placement and alone accepts. All rider gates remain open.
 
 **Rider succession and audit freeze (asks262/272):** R1 construction01a1016e and generation01a10170 are final-wrap-only; preparation remains unaccepted. [Audit handoff](../evidence/hero-remaster/independent-audit-2026-10-03/FINAL-HANDOFF.md) transfers execution of the single canonical plan to the future integrator. Manager01a10191 assigns two successors after stop receipts/duplicate checks; root chooses local/cloud placement and alone judges. All six gates stay open; this human-created Audit task creates no planning successor.
 
+**MCP permissions (asks268–271):** Personal config and credential-free dotfiles now set configured MCP/app defaults and explicit plugin tool policies to approve. Parsing, fresh CLI loading and installer idempotence pass; existing never/danger-full-access retained. Live daemon reload did not acknowledge; loaded desktop chats may require relaunch after active work settles. Rider/release gates remain open.
+
 **Desktop task visibility (ask265):** Four other Rockhop tasks identified through the supported inventory; first two histories readable, two host histories unavailable. Later durable handoffs freeze construction, stop replacement generation and freeze checker613b8138. No foreign task messages, interruption or job launch by this audit owner.
 
+**Local checker succession (ask267):** [Frozen handoff](../evidence/cloud-local-checker-handoff-2026-10-03/README.md) preserves generic63-test attribution, green published arm-foundation checkpoint, exact local owners/model context and remaining frozen anatomy source work. Generation is ask262/local01a10155; small-commit policy is ask266. This lane freezes after checkpoint; root/relay creates the next LOCAL checker. No player promotion/deploy/cleanup or invented cloud model.
+
 **Rider review website (ask264):** [Private picture packet](https://rockhop-rider-baseline-review.raynos.chatgpt.site): eight retained pictures/two silent diagnostic clips, enlarged sources and local feedback download. [Delivery](../evidence/hero-remaster/rider-baseline-review-site-2026-10-03/README.md) records WebKit1200/390 media/layout checks and third-round identical clear/crash/restart. Historical packet; all current-candidate and phone gates remain open.
+
+**Separate anatomical foundation (ask261):** Frozen construction, export/motion witnesses and calibrated references are preserved in separate unaccepted checkpoints (`fd40878d`, `e9ddcc7c`, `77c80b2f`); [handoff and review](../evidence/hero-remaster/anatomical-foundation-parent-review-2026-10-03/README.md) landed at `aaef9eaa`. Source/master and boxer-reference pins remain distinct and unchanged. Original builder model unresolved; proportions, weight parity, clearance, fitted appearance, bike/engine/device and stranger acceptance stay open.
+
+**Branch audit (ask263):** [Verified refs](../evidence/branch-audit-2026-10-03/README.md): every local/fetched branch is contained in main. Three pre-purge pointers aligned to verified rewritten ancestors; original tips preserved locally. No outstanding merge or game asset change. Native adaptation remains queued.
 
 **Small commit scope (ask266; originally262):** AGENTS.md now requires separate commits for plan writing, archive/link maintenance, target inventory and review-gallery work; verify and commit each finished unit before the next, staging only owned paths/hunks. Current rider gate states remain unchanged.
 
@@ -869,4 +869,4 @@ Art wrap-up: [exact selections, commits, contracts and remaining gates](../../pr
 
 **Current iOS Release compile retained:** The [clean-source unsigned simulator Release build](../evidence/store-release/native/20260930-200644/README.md#release-configuration-compile) from59492376 passes; strict actual release web/shell IP audit has zero hits in198 files. Debug/native played proofs remain separate. No signed-device, phone, TestFlight or store approval is claimed; existing human/device gates remain.
 
-**Commit and push inventory (ask273):** Three inherited foundation units and their review/handoff are checkpointed; generation/audit handoffs and publication verification are pending. Experimental rider checkpoints remain unaccepted; M0–M5 stay open. Temporary downloads/guards and ignored local masters remain local.
+**Commit and push inventory (ask273):** Stable foundation and audit/registry checkpoints pushed through b73815f6. Generation preparation is awaiting its owner; publication gates are running. Experimental rider checkpoints remain unaccepted; M0–M5 stay open. Temporary downloads/guards and ignored local masters remain local.
