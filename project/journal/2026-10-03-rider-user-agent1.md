@@ -190,3 +190,15 @@ frame timestamps and counts are exact. Original source/assembly unchanged.
 Limits: Native bike-free FK film, not supported riding/export/device acceptance;
 neckline/hood/accessory fit unaccepted, bounded boot registration repair next.
 Evidence: [played appearance](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance01/review/movies.json). Ask274.
+
+Finding: Whole foot-bone-frame transfer rotated otherwise usable boot geometry
+below the native floor; anatomical ground-axis accessory registration fixes
+that concrete rest-placement fault without changing the rider foundation.
+Validation: Appearance02 boot rest boundsz0..145mm, canonical left/right foot
+bounds plus4mm planar allowance, one capped local envelope and own top4 rebind.
+Original51joints/body/shirt/jeans/likedkeys preserved; exact source/master/GLB
+pins recorded. Original leather metallicFactor0 is respected. Prior film README
+rear border typo corrected to authoritative0.10653; media unchanged.
+Limits: Native moving ankle/sole and full triangle clearance pending; protected
+identity, cloth construction/correctives and appearance01 remain unchanged.
+Evidence: [accessory registration](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/appearance02/README.md). Ask274.
