@@ -7,6 +7,7 @@ import crypto from 'node:crypto';
 import http from 'node:http';
 import { webkit } from 'playwright';
 const folder=path.resolve(process.argv[2]);
+const playedTimeS=Number(process.argv[3]??1.9);assert(Number.isFinite(playedTimeS)&&playedTimeS>=0);
 const source=JSON.parse(fs.readFileSync(path.join(folder,'surface-witnesses.json')));
 const server=http.createServer((req,res)=>{
   const name=path.basename(req.url.slice(1));
@@ -27,12 +28,13 @@ try {
     await page.evaluate(async url=>{
       const v=document.querySelector('#film'); v.muted=true;v.src=url; await v.play();
     },`http://127.0.0.1:${server.address().port}/${name}`);
-    await page.waitForFunction(()=>document.querySelector('#film').currentTime>=1.9);
+    await page.waitForFunction(time=>document.querySelector('#film').currentTime>=time,playedTimeS);
     await page.screenshot({path:path.join(folder,name.replace('.mp4','.played.png'))});
     await page.waitForFunction(()=>document.querySelector('#film').ended,null,{timeout:15000});
     const result=await page.evaluate(()=>{const v=document.querySelector('#film');return{ended:v.ended,duration:v.duration,currentTime:v.currentTime,muted:v.muted,webdriver:navigator.webdriver,width:v.videoWidth,height:v.videoHeight,decodedFrames:v.getVideoPlaybackQuality().totalVideoFrames,error:v.error?.message??null};});
     assert(result.ended&&result.muted&&result.webdriver&&!result.error&&result.decodedFrames>0);
     results.push({name,sha256:delivery.sha256,...result});
+    console.log(JSON.stringify({played:name,...result}));
   }
   assert.deepEqual(errors,[]);
 } finally {

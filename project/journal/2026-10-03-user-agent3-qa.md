@@ -115,3 +115,16 @@ Limits: Native ringmask construction/contact evidence builder-reported;
 sourcefull-four loss4.820/.948mm remains; explicit diagnostic coupling only.
 No continuous/Garage, local/globalfit, art/contact/device acceptance yet.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/corrective01-admission.json
+
+Finding: Same frozen local corrective/controller plays through actual Garage
+with matched morph-off/on cameras and tagged normal loader behavior.
+Validation: 1596frames/12continuoussequences,51joints/residual2.665e-15,
+exactcoefficients/cameras, body/hands/feet framed, fixedphysics/zeroaudio/errors.
+Six133-frame PBRpairedfilms decode and play muted toend in WebKit126–133frames.
+Originalraw/full/four controls rehashed intact; old112/144/240 rays change
+skinfirst→garmentfirst. Scoped type-aware lint passes, no source edits.
+Limits: Onebase shirt normalvector exception explicit; samebothhalves.
+SyntheticFK/explicitstagedgeometry, not actualsupportedriding; remaininglocal/
+heldout/globalfit defects unaccepted. Nextnew anatomy captures bike-free,
+separateactualbike contactviews perhuman; no redo solely presentation.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/corrective01-garage/
