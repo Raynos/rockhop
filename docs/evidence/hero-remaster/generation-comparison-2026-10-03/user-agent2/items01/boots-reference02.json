@@ -1,0 +1,63 @@
+{
+  "accepted": false,
+  "item": "boots",
+  "round": 110,
+  "producer": "Built-in imagegen",
+  "sourceToolPath": "/Users/raynos/.codex/generated_images/01a101fe-a358-7731-987d-4168614e9ece/exec-2bbbef4e-35c7-47d8-9df7-47dd954c0817.png",
+  "savedPath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/boots-reference02.png",
+  "sha256": "6d1270cfc14f86eba5974cf6ecbaac8184d6c2b8c9835e01dfd4f56590e920cc",
+  "bytes": 1286971,
+  "pixelContract": {
+    "mode": "RGBA",
+    "size": [
+      1374,
+      1145
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaZeroPixels": 971105,
+    "alphaOpaquePixels": 808,
+    "alphaPartialPixels": 601317,
+    "nonzeroBounds": [
+      81,
+      20,
+      1344,
+      1089
+    ],
+    "edgeMaxAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaHalfBBox": [
+      85,
+      254,
+      1338,
+      1050
+    ]
+  },
+  "prompt": "Use case: precise-object-edit. Image1 is the edit target: the isolated black ankle-boot reference. Image2 is the approved Rockhop rider storyboard03, which governs the compact ankle-footwear silhouette. Make ONE targeted proportion adjustment to image1 so the boot looks like restrained compact ankle footwear rather than a bulky work/combat boot: reduce the shaft height about30%, ending just above the ankle, and reduce outsole thickness and tread-lug depth about40%. Keep a distinct flat rubber sole with a modest low heel, complete rounded enclosed toe/heel/upper, black matte supple materials, coherent stitching, small restrained black laces and an actual visible ankle mouth. Fewer lace rows may follow the shortened shaft; no tall shin cuff, sneaker styling, wedge, platform or armor. Preserve the existing foot length and natural adult-foot silhouette, black palette, fine leather grain, simple construction, outer/front three-quarter camera and soft lighting. Entire boot must remain completely framed inside generous margins. Preserve genuine transparent background. No person, foot, skin, second boot, logos, text, bike, additional items or multi-panel views. This is a reference proportion correction only; it must still be a recognizable ankle boot with practical wearable anatomy.",
+  "referenceInputs": [
+    {
+      "role": "edit-target-boots-reference01",
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/boots-reference01.png",
+      "sha256": "f6c87735c12eeb5161b2c48d2192ae45d8e6e5062d9217866bc19aced1791903"
+    },
+    {
+      "role": "approved-storyboard03",
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/storyboard03.png",
+      "sha256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a"
+    }
+  ],
+  "seed": "Built-in tool exposes no seed; local Hunyuan uses42",
+  "inspection": "Four-eyelet shortened black ankle boot, rounded enclosed toe/heel, more restrained low outsole, visible ankle cavity and leather grain. Selected only as new experimental local inference input; exact proportions/handedness/opening/material output and root art acceptance remain unproven.",
+  "limits": [
+    "Experimental generated2D only; no geometry, camera calibration, source opening/fit/topology/UV/rig acceptance.",
+    "Original generated alpha preserved byte-for-byte, no background removal/cleanup/repaint.",
+    "No local model run yet, parent art authority retained."
+  ],
+  "selectedForLocalGeneration": true
+}

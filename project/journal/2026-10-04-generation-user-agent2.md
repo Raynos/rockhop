@@ -107,3 +107,13 @@ Validation: RGBA[1374, 1145], alpha[0, 255]/902972zero pixels; SHAf6c87735c12eeb
 Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
 
 Finding: Generated boot has six-eyelet shaft and pronounced lugs; preserve it as unselected reference snapshot and make one targeted compact ankle/sole refinement before local inference. Storyboard partly occludes footwear details, so exact lace/lining approval is not inferred.
+
+## Round 110 — Isolated boots reference checkpoint
+
+Finding: Save one built-in imagegenbootsreference against exact approved storyboard03and selected hoodie; all prompt/input bytes and generated alpha preserved before local shape generation.
+
+Validation: RGBA[1374, 1145], alpha[0, 255]/971105zero pixels; SHA6d1270cfc14f86eba5974cf6ecbaac8184d6c2b8c9835e01dfd4f56590e920cc and bytes1286971pinned. No local inference or pixel modification.
+
+Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
+
+Finding: Targeted built-in edit yields four-eyelet shortened ankle shaft and more restrained outsole. Preserve both reference variants; only boots-reference02is selected for one later raw3Dcandidate. Correction prompt and exact edit inputs pinned.
