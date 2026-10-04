@@ -1,0 +1,156 @@
+{
+  "status": "INDEPENDENT_SOURCE_ENDPOINT_AND_NATIVE_DECODER_AUDIT",
+  "recipeSHA256": "4d6a2095281fa5f569ba4b27f500ada9ed5bc5a58d340792b1584154c4f2ffed",
+  "blender": "5.2.1 LTS",
+  "endpointAncestryExact": true,
+  "sourceBodyAndHeadWorldMatricesEqual": true,
+  "referenceVsFinalTemplateChangedTriangleRows": {
+    "body": 6,
+    "head": 2
+  },
+  "properCrossingSummary": {
+    "bodySelf": {
+      "start": 1,
+      "final": 0,
+      "introduced": 0,
+      "resolved": 1,
+      "persistent": [],
+      "finalTemplateStart": 1,
+      "finalNativeEndpoint": 0
+    },
+    "headSelf": {
+      "start": 0,
+      "final": 1112,
+      "introduced": 1112,
+      "resolved": 0,
+      "persistent": [],
+      "finalTemplateStart": 0,
+      "finalNativeEndpoint": 1112
+    },
+    "bodyHead": {
+      "start": 245,
+      "final": 308,
+      "introduced": 307,
+      "resolved": 244,
+      "persistent": [
+        [
+          211,
+          35151
+        ]
+      ],
+      "finalTemplateStart": 246,
+      "finalNativeEndpoint": 307
+    }
+  },
+  "sourcePinnedAndTangentZeroPairCounts": {
+    "bodySelf": {
+      "pairs": 1,
+      "allScopePinnedPairs": 0,
+      "allArchivedTangentZeroDOFPairs": 0
+    },
+    "headSelf": {
+      "pairs": 0,
+      "allScopePinnedPairs": 0,
+      "allArchivedTangentZeroDOFPairs": 0
+    },
+    "bodyHead": {
+      "pairs": 245,
+      "allScopePinnedPairs": 0,
+      "allArchivedTangentZeroDOFPairs": 0
+    }
+  },
+  "partialPinnedAdmittedHeadVertices": 60,
+  "normalProbes": [
+    {
+      "part": "body",
+      "alpha": 0.0,
+      "protectedCorners": 35502,
+      "changed": 0,
+      "maxVectorDelta": 0.0,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "body",
+      "alpha": 1e-06,
+      "protectedCorners": 35502,
+      "changed": 0,
+      "maxVectorDelta": 0.0,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "body",
+      "alpha": 0.01,
+      "protectedCorners": 35502,
+      "changed": 148,
+      "maxVectorDelta": 3.746295435451799e-05,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "body",
+      "alpha": 1.0,
+      "protectedCorners": 35502,
+      "changed": 152,
+      "maxVectorDelta": 0.003575798049472278,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "head",
+      "alpha": 0.0,
+      "protectedCorners": 210126,
+      "changed": 0,
+      "maxVectorDelta": 0.0,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "head",
+      "alpha": 1e-06,
+      "protectedCorners": 210126,
+      "changed": 726,
+      "maxVectorDelta": 4.472233454288665e-05,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "head",
+      "alpha": 0.01,
+      "protectedCorners": 210126,
+      "changed": 1365,
+      "maxVectorDelta": 0.031639203007367306,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    },
+    {
+      "part": "head",
+      "alpha": 1.0,
+      "protectedCorners": 210126,
+      "changed": 1365,
+      "maxVectorDelta": 1.9994710399990476,
+      "allDecodedArrayBytesMatchArchived": true,
+      "allRawNonPositionAttributesUnedited": true
+    }
+  ],
+  "actualFinalNativeDecoderControls": [
+    {
+      "part": "body",
+      "native29ActualDecodedBytesMatchAlpha1": true,
+      "rawNonPositionAttributeFieldsExactToSource28": true
+    },
+    {
+      "part": "head",
+      "native29ActualDecodedBytesMatchAlpha1": true,
+      "rawNonPositionAttributeFieldsExactToSource28": true
+    }
+  ],
+  "sourceObjectsUnchangedInMemory": true,
+  "inputPinsUnchangedAfter": true,
+  "limits": [
+    "Only archived chord alphas decoded on unlinked diagnostic copies, not new candidates or a fitting path. No source save, solve, normal/actor edit, pose/render/capture.",
+    "Finite proper-crossing thresholds reproduce existing103/102 semantics; not complete continuous collision, all contacts or played visual acceptance.",
+    "No decoded-normal Jacobian/rank, feasible seed or proposedSQP feasibility proof. AllM0-M5open; root alone decides."
+  ]
+}

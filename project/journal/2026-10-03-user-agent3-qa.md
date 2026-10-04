@@ -1519,3 +1519,25 @@ Limits: No seed/operator/candidate/fit/skin/normal/geometry/pose authoring,
 render/capture/native save/expansion/delivery/upload/push/promotion.
 Root owns decisions; parent reconciles ask275/sharedindex; allM0-M5open.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck76/
+
+
+## 2026-10-04 Round77 — corroborate diagnostic103 without operator admission
+
+Finding: Source/endpoint/reference-versus-final pair origins and actual
+Blenderdecoded normal conflicts independentlycorroborate103. One proposed
+hard-normalSQP remainsunqualified; no whole-scopeinfeasibility conclusion.
+
+Validation: ExactP0/P1/map/6body2headtessrow ancestry. AllreferencepairIDs
+reproduce;1/0/245start→0/1112/308final,1112/307introduced. All13718swept
+IDs and9numericentries reproduce; selected exactbinary polynomial bracket
+has signs−1/+1 including exactoriginalcoordinate subtraction. ActualBlender
+all0/1e-6/.01/1decoded arrays exact;726protectedheadcornerchanges at1e-6,
+rawnonpositionattrs unchanged. Native29actualdecoded matchesalpha1. All27
+preparation/175priorpins exact. Initialposition-attributeassertion corrected
+with rejectedreader/log retained; sourceobjects unchanged, no save.
+
+Limits: Chordnot solverchronology; selectedrootnot globalordering proof.
+No hard-normal seed/Jacobian/rank/constrainedsolve/sweptinvariance proof,
+operatoradmission/expansion/pose/render/capture/sourceedit or delivery.
+Parent owns ask275/index/art/admission; Agent1solebuilder. AllM0–M5open.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck77/
