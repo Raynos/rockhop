@@ -771,3 +771,11 @@ Finding: One11.083333s1920×640silent clip shows unchanged failed26native-four f
 Validation: Allgarmentbounds within399cameras; renderedmanualLBSparity<0.412µm/sourcepins unchanged. Fulldecode266frames/0errors/0audio; silentfullplay265callbacks/0drops/0page-mediaerrors. Third-round normalship93cold1664ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame4.955ms/errors0. Syntax/diff/hooks pass.
 
 Limits: Native26stillFAILS92; full-control loss4.113843mm andactualprotectedheadrest gap retained. Movieevery4th529sample,nointerp/poseholds; syntheticFK notgame/controller/physicaliOS. Parentplayeddecision pendingbeforefieldretry/engineadmission; Agent3bodyQAunchanged. All24coverage/cuffs/art/M0–M5/exportnormalsopen. No source save/weightrepair/shrink/rebuild/newbody/inference/worker/Libraryupload/promotion/publication.
+
+### Round94 — baseline protected-head contacts preexist rig and normals
+
+Finding: Readonly24flat/25normals/26four allshare490exactcontactpairIDs,all490finite segment crossings on93garmenttriangles/88vertices; logicalbody0. Rear neckline/lowerhead crossing boundsX−.07594..−.04119/Y±.09146/Z1.52620..1.59179m. Preexisting target-scope gap, notrig/truncation/normalchoice.
+
+Validation: Same protected43707v/71826tri raw geometry/attrs/normals/weights/mods/transforms, actualevaluatedworldpoints/triangles andoriginal51pose/rig exact acrossallthree. Same BVH/evaluatedtriangles/metres/nativeaxes/fileoffset,Float64finite-segment confirmation perpair. No driver/source edits/save; inputpins/syntax/diff/hooks pass.
+
+Limits: Surfacewitnesses notdepth/drawablealpha/culling/body-seamQA; no waiver/deletion. Rootplayed93shows recognizablehood/coherentmaterial/no grosspanelholes, butvisible stiffbulges/hardasymelbowpinch/squatfronthem bow. Body/underwearhipsAgent3scope unchanged. Native26stillfailed/noengine; anynextfieldrepair localizedcause only,no globalsweep/newcapture/sourcebodyheadrewrite/promotion/all24coverage/cuffs/M0–M5/mobileopen.
