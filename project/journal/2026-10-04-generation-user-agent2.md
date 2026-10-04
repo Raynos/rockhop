@@ -269,3 +269,11 @@ Finding: Glove original PBR is saved, but the next source-review render is denie
 Validation: lsof exit0 names lockf45499; anonymous45.0/wired27.2/free0.0GiB on128GiB host. Orbit scratch and worker guard receipt absent, proving no owned render launch. Original glove GLB/ref/UV/raw/maps match receipts; normal source gate pins remain exact.
 
 Limits: Jeans review ready; glove source visual pending; boots not generated. No queue, retry, foreign signal/eviction, guard bypass, upload or publication. Root alone judges all open art/fit/rig/mobile gates.
+
+## Round 130 — gloves orbit02 checkpoint
+
+Finding: Original lease/memory admission now passes; render the single requested glove source orbit from immutable saved PBR and mesh, preserving the prior denied attempt.
+
+Validation: Fresh lsof exit1/empty output; admission31.8anonymous/7.7wired GiB. Worker exit0; all48frame hashes and triangle/UV/original-map readback checks pass. No repeated sampling, decoding or paint.
+
+Limits: Unaccepted source display only; encoder/playback and root played review remain pending. Handedness, anatomy, fit/rig/physics/M0-M5/mobile unaccepted. No publication.
