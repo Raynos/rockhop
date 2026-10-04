@@ -39,3 +39,11 @@ Finding: Freeze exhaustive segment-to-original-triangle distance method using co
 Validation: Updated Python compiles and witness JSON has6sections/37paths; analytical32-sided tube clearance expectation added before run. Correction: Round100 has4non-degree-two components in3planes, not4planes; exact finding.json already names3planes.
 
 Limits: Numerical source checkpoint only; controls and original measurements pending. No curved-route exclusion, topology repair, source fitting or publication; parent retains art authority.
+
+## Round 102 — Both cuff air entries and hem→above measured
+
+Finding: All9hem→above paths clear1.8native units; central minimum triangle distance0.0935801. Negative-X cuff3/9grid paths clear(best0.0223937), positive-X1/9clear(0.00580603); clear negative extension reaches shoulder. Both actual cuff air entries exist even when other probes strike rims.
+
+Validation: Guard exit0/5.853s,37segments/6sections; tube clearance0.6966293086705376 matches analytic expectation within3e-16. No coplanar ambiguity; original triangle/UV/PBR/normals retained. Third-round runtime24 reuse pins/playerdiff unchanged.
+
+Limits: Float64 distance estimates are not formal interval certificates; positive cuff shoulder connection and complete nested wall classification pending. Blocked directions cannot prove caps. No physical scale, fit, deformation, art or publication pass.

@@ -1,0 +1,32 @@
+{
+  "accepted": false,
+  "actualClearPaths": 14,
+  "blockedPaths": 23,
+  "coplanarAmbiguous": 0,
+  "hemToAbove": {
+    "clearCount": 9,
+    "testedCount": 9,
+    "lengthNativeUnits": 1.8,
+    "centralMinimumTriangleDistance": 0.09358006820027849,
+    "minimumOfNine": 0.012344137672298056
+  },
+  "negativeXCuff": {
+    "clearGridPaths": 3,
+    "testedGridPaths": 9,
+    "bestSampleDistance": 0.022393650940095173,
+    "extensionClear": true
+  },
+  "positiveXCuff": {
+    "clearGridPaths": 1,
+    "testedGridPaths": 9,
+    "bestSampleDistance": 0.00580603173871718,
+    "extensionClear": false
+  },
+  "limits": [
+    "Float64 distance estimates with analytic tube control; output certifiedOpenTubeRadiusConservative is an engineering tolerance label, not interval-arithmetic certification.",
+    "Blocked alternate probe is a rim/wall hit, not proof of a globally capped sleeve.",
+    "Both cuff probes reach points inside paired sleeve walls, but cross-region shoulder connection still pending.",
+    "Hem-to-above path is genuinely empty source geometry at sampled axes, not shading/boundary proxy; native coordinates lack physical garment calibration.",
+    "Nested hood/wall source region analysis remains pending; no fit/deformation/art acceptance."
+  ]
+}
