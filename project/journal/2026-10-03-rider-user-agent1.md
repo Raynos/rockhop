@@ -539,3 +539,11 @@ Finding: SAME frozen16 cut connectivity in original donor coordinates has2torso 
 Validation: Frozen native862e93a9/PBR/recipe pins unchanged, full class/bone/orientation witnesses recorded. Post-cut interpolated lineage recomputation p95 75.71nm/max1.114mm explicitly distinguishes nonlinear mapping, not immutable vertex replacement. New mixed statistic JSON int64 converted explicitly and readonly rerun succeeds. Silent ship63 cold1441ms/4810 identical ticks/clear40.083333s/crash103/restart1tick/frame2.295ms/errors0; Blender/diff/hooks pass.
 
 Limits: Same cut mesh comparison does not audit uncut high-donor topology; orientation labels do not prove unwanted inner sheets. Ten boundary loops and2559body/320self stillfail prerequisites. No source rewrite/newcapture/broadmotion/inference/worker/player/Library promotion. Rootsolejudge/allM0–M5/mobile open.
+
+### Round64 — continuous source elbow map removes all319 sleeve crossings
+
+Finding: Source17 blends existing two source-arm maps continuously across fixed0.12original-unit elbow station interval instead of discrete nearestsegment. ALL319sleeve crossings removed/self320→1/0new; torso witness retained.722of12443vertices change/max42.383mm; outsideinterval andeveryopening boundary delta0. Actualselected donor surface/polygoncycles/UV/PBR remain source, notstockpattern/skin weights.
+
+Validation: Independent23original mesh data/18graphs/17images/51bindpose exact; checker explicitly identifiesnewderivative.12443v/24400tri/finalbody2552vs2559/0othernonmanifold; ownfield/contactarrays/source pins saved. Blender/diff/hooks pass.
+
+Limits: Ten opening loops and2552body/1self stillfail wearerfit. No art/rig/collision/game-candidate/mobile/M0–M5 acceptance, newcapture or broadmotion. Source13/14/15/16 andbody/head/bind frozen/rootsolejudge; next localfit/topology constraint derivation, no globalinner-sheet deletion/inference/worker/player/Library promotion.
