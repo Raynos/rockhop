@@ -451,3 +451,11 @@ Finding: Explicit20-panel collar8mm rise/2mm ease separates shirt/hood seam tang
 Validation: Independent18source meshes/16materialgraphs/14images/51bind+pose exact. Source02SHA unchanged; source08one-witness recipe frozenexactSHA. Local closestnormal min1.313mm and10of1937coverage misses explicitproxies; Blender/diff/hooks pass.
 
 Limits: Staticintersection prerequisites only; no globalclearance/completecoverage/skin/livecollision/actualgame/iOS/playedart acceptance. SelectedHunyuan shape/PBR stillrequired; no plainshirtfallback, Library/rig/playerhandoff. AllM0–M5open/rootsolejudge.
+
+### Round53 — actual selected radial shape/PBR exposes underarm self clearance, 2026-10-03
+
+Finding: Qualified09seed receives actualselected716971highpoly-derived connected radialrelief and2048newUV/PBR. Source257scalarregistration samples5.55e−17m exact;2787positivetargets/max17.638mm field, opening/collar constraints retained. Body0but149self allshirtshirt atopposingunderarm Z1.3342..1.3577/Y±.20m: outward bodyclearance consumesfabricspace. Staticselfclearance mustconstrain real source reconstruction; no globalfield/projection parameter sweep.
+
+Validation: Independent19originalmesh/17materialgraphs/14images/51bindpose exact;6046v/11840tri. Frozen09seed0self vs10candidate149self, exact sourceparents/seed/final/direction/relief/ease contacts and66.315nm nativequantization recorded. Actualbase/rough/metalbakes/sourcecorrespondence versioned; localnormalmin4.526mm/12of1937coveragemisses proxies. Recipe/Blender/diff/hooks pass.
+
+Limits: Rejectedunderarm embedding, no rig/game/Library/playerhandoff. Actualselectedshape constrained byanatomicalopenings/25mmreliefbound, not exactclosedsourcevolume orappearance acceptance. Fullcloth stayscontrol, canonicalbody/head/51bind immutable; M0–M5/movingart/iOS/rootsolejudge retained.
