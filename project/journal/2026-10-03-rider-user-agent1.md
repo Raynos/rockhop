@@ -419,3 +419,11 @@ Finding: Source05actualdonor guide/PBR with40step/weight8 connected deformation 
 Validation: Independent19originalmeshfields/17nodegraphs/17sourceimages/51bind+pose exact; candidatepaircounts reproduce/localvertex+centroidgap min−44.900mm. Exact versionedseed/target/field/final/edge arrays pinned; source05texture/atlas unchanged. Seed-code namespace collision fixed before native save; no failed native overwritten. Silent ship48 cold1756ms/4810identicalticks/clear40.083333333s/crash103/restart1tick/frame3.925ms/errors0; syntax/diff/hooks pass.
 
 Limits: Static connected sculpt is notcloth/skin/livecollision and numerical reduction is notwearable acceptance. Source06unrigged withholdsrig/game/Library/playerhand off. Rootsoleplayedjudge/M0–M5open; fullcloth remainscontrolonly, exactdonor/body/head/bind and allfailures retained. Phone/movingart stillunaccepted.
+
+### Round49 — localize sewn hood/shirt and opening faults, 2026-10-03
+
+Finding: All258seedself pairs arehood↔shirt atcollar/neck; nohoodhood/shirtshirt overlaps. Original1250shirt54body/0self; refinedshirt86body+hood89body. Actualdeformjoint contacts130neck/33chest/6handperside locate genuinehoodattachment/neck/cuff construction faults, not sourceframe mismatch or collision limit.
+
+Validation: Everyfrozenfieldseedcoordinate/candidatepolygoncycle exact;1444native faceparent markers each4subdivisionchildren. Angularneckorder matches20actualboundaryedges; body/patternworld bothidentity+.65X. Exactnative body/cloth triangles/vertices/sourceparent/centroids recorded; maskgroups Left/Right/body/Mid excluded from jointdominance. Source/native/field SHAunchanged; syntax/diff/hooks pass.
+
+Limits: Staticintersection ancestry is notsignedclearance/skin/actualgame/mobile/playedart acceptance. No geometry intervention or body/bind mutation; qualify correctedhoodprofile+actualopenings before donor deformation, nofield/projection/fullcloth sweep. M0–M5/rootsolejudge/no playerpromotion retained.
