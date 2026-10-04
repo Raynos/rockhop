@@ -1,0 +1,535 @@
+{
+  "status": "UNACCEPTED_FROZEN_CROSSING_SCOPE_AND_OPERATOR_CLASSIFICATION",
+  "recipeSHA256": "7c3604715cb5102324130052848dbac54027918924c2c435f965d2713a9ca471",
+  "nativeCrossingReportSHA256": "83c468d8f7e1a8f0e8a8e2c5ba9a6e661e83b8ad3793b53a90b077d5feef91bd",
+  "scopeFreePhysicalNodes": 1236,
+  "nonzeroTangentDOFPhysicalNodes": 1112,
+  "scopeFreeButRank3ZeroDOFNodes": 124,
+  "counts": {
+    "bodySelf": {
+      "properFinitePairs": 0,
+      "scopeFreeFreePairs": 0,
+      "allVerticesHaveNonzeroTangentDOFPairs": 0,
+      "allVerticesHaveNonzeroTangentDOFNonCapPairs": 0,
+      "innerCapParticipatingPairs": 0
+    },
+    "headSelf": {
+      "properFinitePairs": 1112,
+      "scopeFreeFreePairs": 685,
+      "allVerticesHaveNonzeroTangentDOFPairs": 523,
+      "allVerticesHaveNonzeroTangentDOFNonCapPairs": 360,
+      "innerCapParticipatingPairs": 226
+    },
+    "bodyHead": {
+      "properFinitePairs": 307,
+      "scopeFreeFreePairs": 263,
+      "allVerticesHaveNonzeroTangentDOFPairs": 243,
+      "allVerticesHaveNonzeroTangentDOFNonCapPairs": 181,
+      "innerCapParticipatingPairs": 65
+    }
+  },
+  "nonCapNonzeroDOFFiniteExamples": {
+    "bodySelf": [],
+    "headSelf": [
+      {
+        "triangleIDs": [
+          4,
+          94
+        ],
+        "sourcePolygonIDs": [
+          3,
+          91
+        ],
+        "checkpointPolygonIDs": [
+          3,
+          91
+        ],
+        "freeFree": true,
+        "innerCapParticipates": false,
+        "properFiniteWitnesses": [
+          {
+            "direction": "aToB",
+            "edgeIDs": [
+              1,
+              2
+            ],
+            "segmentFraction": 0.604922296422036,
+            "targetBarycentric": [
+              0.12105779040966447,
+              0.14941518407513493,
+              0.7295270255152005
+            ],
+            "nativePositionM": [
+              -0.04167782390716576,
+              -0.12120699043755824,
+              1.529621399556308
+            ]
+          },
+          {
+            "direction": "bToA",
+            "edgeIDs": [
+              2,
+              0
+            ],
+            "segmentFraction": 0.2176597736340945,
+            "targetBarycentric": [
+              0.41069649227805693,
+              0.5251021287088431,
+              0.06420137901309994
+            ],
+            "nativePositionM": [
+              -0.04265110441046828,
+              -0.11939629651378587,
+              1.52992578343141
+            ]
+          }
+        ],
+        "physicalNodesByFace": [
+          [
+            151,
+            13885,
+            150
+          ],
+          [
+            12847,
+            146,
+            147
+          ]
+        ],
+        "tangentDegreesOfFreedomByFace": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "triangleIDs": [
+          4,
+          95
+        ],
+        "sourcePolygonIDs": [
+          3,
+          91
+        ],
+        "checkpointPolygonIDs": [
+          3,
+          91
+        ],
+        "freeFree": true,
+        "innerCapParticipates": false,
+        "properFiniteWitnesses": [
+          {
+            "direction": "aToB",
+            "edgeIDs": [
+              0,
+              1
+            ],
+            "segmentFraction": 0.5345414682520812,
+            "targetBarycentric": [
+              0.2219366859180332,
+              0.7255197376098039,
+              0.05254357647216287
+            ],
+            "nativePositionM": [
+              -0.042643023633187,
+              -0.11934700264184227,
+              1.52994959662315
+            ]
+          },
+          {
+            "direction": "bToA",
+            "edgeIDs": [
+              0,
+              1
+            ],
+            "segmentFraction": 0.7823402263659064,
+            "targetBarycentric": [
+              0.41069649227805605,
+              0.525102128708844,
+              0.06420137901309994
+            ],
+            "nativePositionM": [
+              -0.042651104410468266,
+              -0.11939629651378589,
+              1.52992578343141
+            ]
+          }
+        ],
+        "physicalNodesByFace": [
+          [
+            151,
+            13885,
+            150
+          ],
+          [
+            12847,
+            147,
+            148
+          ]
+        ],
+        "tangentDegreesOfFreedomByFace": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "triangleIDs": [
+          5,
+          26
+        ],
+        "sourcePolygonIDs": [
+          4,
+          24
+        ],
+        "checkpointPolygonIDs": [
+          4,
+          24
+        ],
+        "freeFree": true,
+        "innerCapParticipates": false,
+        "properFiniteWitnesses": [
+          {
+            "direction": "aToB",
+            "edgeIDs": [
+              2,
+              0
+            ],
+            "segmentFraction": 0.3598166323568128,
+            "targetBarycentric": [
+              0.1485926152951733,
+              0.7120629377032116,
+              0.13934444700161508
+            ],
+            "nativePositionM": [
+              -0.04482039300740589,
+              -0.11642904795523504,
+              1.5301666833032885
+            ]
+          },
+          {
+            "direction": "bToA",
+            "edgeIDs": [
+              0,
+              1
+            ],
+            "segmentFraction": 0.7366574801543205,
+            "targetBarycentric": [
+              0.34953582000437233,
+              0.010525563609818125,
+              0.6399386163858095
+            ],
+            "nativePositionM": [
+              -0.04489049875892731,
+              -0.11632307751830992,
+              1.5301643346268163
+            ]
+          }
+        ],
+        "physicalNodesByFace": [
+          [
+            151,
+            14358,
+            13885
+          ],
+          [
+            150,
+            13697,
+            149
+          ]
+        ],
+        "tangentDegreesOfFreedomByFace": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      }
+    ],
+    "bodyHead": [
+      {
+        "triangleIDs": [
+          208,
+          22652
+        ],
+        "sourcePolygonIDs": [
+          96,
+          22635
+        ],
+        "checkpointPolygonIDs": [
+          96,
+          22635
+        ],
+        "freeFree": true,
+        "innerCapParticipates": false,
+        "properFiniteWitnesses": [
+          {
+            "direction": "aToB",
+            "edgeIDs": [
+              0,
+              1
+            ],
+            "segmentFraction": 0.4808101063844104,
+            "targetBarycentric": [
+              0.3221401649825032,
+              0.11340652274871252,
+              0.5644533122687843
+            ],
+            "nativePositionM": [
+              -0.040002803288825446,
+              -0.01815562067498383,
+              1.5299905060540675
+            ]
+          },
+          {
+            "direction": "aToB",
+            "edgeIDs": [
+              2,
+              0
+            ],
+            "segmentFraction": 0.5190308383352631,
+            "targetBarycentric": [
+              0.42918112665735497,
+              0.10997659811975535,
+              0.4608422752228897
+            ],
+            "nativePositionM": [
+              -0.03992610376764597,
+              -0.01792384857677624,
+              1.5299955010765918
+            ]
+          }
+        ],
+        "physicalNodesByFace": [
+          [
+            350,
+            121,
+            120
+          ],
+          [
+            10259,
+            10371,
+            10268
+          ]
+        ],
+        "tangentDegreesOfFreedomByFace": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "triangleIDs": [
+          209,
+          22652
+        ],
+        "sourcePolygonIDs": [
+          96,
+          22635
+        ],
+        "checkpointPolygonIDs": [
+          96,
+          22635
+        ],
+        "freeFree": true,
+        "innerCapParticipates": false,
+        "properFiniteWitnesses": [
+          {
+            "direction": "aToB",
+            "edgeIDs": [
+              0,
+              1
+            ],
+            "segmentFraction": 0.4809691616647369,
+            "targetBarycentric": [
+              0.42918112665735497,
+              0.10997659811975535,
+              0.4608422752228897
+            ],
+            "nativePositionM": [
+              -0.03992610376764597,
+              -0.01792384857677624,
+              1.5299955010765918
+            ]
+          },
+          {
+            "direction": "bToA",
+            "edgeIDs": [
+              0,
+              1
+            ],
+            "segmentFraction": 0.1059631595763653,
+            "targetBarycentric": [
+              0.5091085728320033,
+              0.4077594752460948,
+              0.08313195192190187
+            ],
+            "nativePositionM": [
+              -0.03982730254920802,
+              -0.01694235953086291,
+              1.5300775367769828
+            ]
+          }
+        ],
+        "physicalNodesByFace": [
+          [
+            350,
+            120,
+            119
+          ],
+          [
+            10259,
+            10371,
+            10268
+          ]
+        ],
+        "tangentDegreesOfFreedomByFace": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "triangleIDs": [
+          209,
+          24071
+        ],
+        "sourcePolygonIDs": [
+          96,
+          24052
+        ],
+        "checkpointPolygonIDs": [
+          96,
+          24052
+        ],
+        "freeFree": true,
+        "innerCapParticipates": false,
+        "properFiniteWitnesses": [
+          {
+            "direction": "bToA",
+            "edgeIDs": [
+              1,
+              2
+            ],
+            "segmentFraction": 0.8940368404236347,
+            "targetBarycentric": [
+              0.5091085728320032,
+              0.40775947524609496,
+              0.08313195192190188
+            ],
+            "nativePositionM": [
+              -0.03982730254920802,
+              -0.01694235953086291,
+              1.5300775367769828
+            ]
+          },
+          {
+            "direction": "bToA",
+            "edgeIDs": [
+              2,
+              0
+            ],
+            "segmentFraction": 0.17828399146986001,
+            "targetBarycentric": [
+              0.5123614083777408,
+              0.376096038016705,
+              0.11154255360555415
+            ],
+            "nativePositionM": [
+              -0.03979811655928815,
+              -0.016639120081371722,
+              1.5300190305925832
+            ]
+          }
+        ],
+        "physicalNodesByFace": [
+          [
+            350,
+            120,
+            119
+          ],
+          [
+            10265,
+            10371,
+            10259
+          ]
+        ],
+        "tangentDegreesOfFreedomByFace": [
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ]
+        ]
+      }
+    ]
+  },
+  "normalProtectionRefinement": [
+    {
+      "part": "body",
+      "field": "four",
+      "decodedProtectedCornersChanged": 152,
+      "maximumDecodedProtectedCornerDelta": 0.003575798049472278,
+      "decodedAllCornersChanged": 1312,
+      "decodedPartialPinnedAdmittedCornersChanged": 0,
+      "maximumDecodedPartialPinnedCornerDelta": 0.0,
+      "decodedAllScopePinnedCornersChanged": 152,
+      "maximumDecodedAllScopePinnedCornerDelta": 0.003575798049472278
+    },
+    {
+      "part": "head",
+      "field": "four",
+      "decodedProtectedCornersChanged": 1192,
+      "maximumDecodedProtectedCornerDelta": 1.9514016646432346,
+      "decodedAllCornersChanged": 7446,
+      "decodedPartialPinnedAdmittedCornersChanged": 173,
+      "maximumDecodedPartialPinnedCornerDelta": 1.9994710399990476,
+      "decodedAllScopePinnedCornersChanged": 1365,
+      "maximumDecodedAllScopePinnedCornerDelta": 1.9994710399990476
+    }
+  ],
+  "limits": [
+    "Free/free685/263 is scope freedom.124scope-free nodes have rank3 tangent clamps and zero operator DOFs. More conservative523/243crossings still have nonzero tangent DOFs at every corner;360/181also exclude cap faces.",
+    "These finite witnesses reject an explanation based only on exterior pins or only the cap. They do not identify a unique repair, prove scope insufficiency, or establish necessity/sufficiency of the464ID collar.",
+    "Decoded normal counts include the60 admitted aliases explicitly pinned by scope, in addition to outside-authoring vertices. No source normals were edited and no appearance judgment is implied."
+  ]
+}

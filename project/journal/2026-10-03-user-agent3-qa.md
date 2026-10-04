@@ -1378,3 +1378,40 @@ necessary/minimal/sufficient. Original99moving/contact/identity rejection,
 490garment contacts and allM0–M5 open. Parent owns ask275/index and source
 decision; Agent1 sole construction owner. No solve/source edit/render/
 capture/pose/worker/install/GPU/model, Library delivery/upload or push.
+
+
+## 2026-10-04 Round71 — verify failed geometry-only operator and source
+
+Finding: Independent frozen29QA reproduces1112head-self/307body-head proper
+finite crossings and preserves44controls/allrawfields. Failure cannot be
+assigned solely to fixed exterior or cap. Source/operator reproduce, but
+rest candidate remains failed. Exact464-ID collar stays unedited and is not
+proved necessary/minimum/sufficient. Additional173decoded head normal
+changes on60pinned admitted aliases raise protected count1192→1365 and
+maxvectorchange1.951402→1.999471; raw custom-normal fields remain exact.
+
+Validation: Physical45178nodes/free1236/2880variables and source mass/cot
+coefficients reproduce, projectedstationarity3.51504e-12,1183originalhead
+source-ray references/body342/seam238/innercap objectives<=4.99677e-11m.
+All373head/56body anchors and partialclasses pinned,44oldcontrols/51rig/
+17images/18graphs/allfull-four/21782auxiliary memberships exact native100.
+Topology90269tris/151mouth boundaries/0nonmanifold/0opposition;238outer/
+383inner edgesincidence2,502body/2433head areaspositive. FullBVHpairsets
+match owner; every pair has independent finite witness. Scopefree-free
+685/263 becomes523/243when124rank3zero-DOF nodes excluded;360/181also noncap.
+Corrected190cap triangles retain-1source/checkpointancestry only, initial
+geometry/weights unchanged. Collar464/1707IDs/2966triangles anddonorIDs exact,
+noabove1.60touches. Thirtyinputs/historicalevidence exact, recipes parse and
+receipts match. Evidence neck71/FINDING.md/finding.json plusfullreports.
+
+Limits: FirstQA free-ID inspection-list assertion rejection retained;
+corrected to full admitted incident scope while freedoms remain separate.
+No new solve/source edit/native save/pose/render/capture. Rawfields exact
+is not decodednormals/art/engine/device/player acceptance. Snapshot RNA
+limits remain; crossings notsignedvolume or uniquecause/repair. Parent
+owns ask275/index/nextscope-operator, Agent1 sole source owner. Original99/
+490failures/allM0–M5 open; noLibrarydelivery/upload/push/promotion. Gate72next.
+
+Validation: Private-index staging first refused ignored .log extension;
+renamed owned native read output to .txt and updated receipt only. No hook
+or commit bypass, source edit or foreign-index change.

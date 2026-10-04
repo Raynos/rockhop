@@ -1,0 +1,135 @@
+{
+  "status": "FAILED_REST_CONTACT_INDEPENDENTLY_VERIFIED_OPERATOR_RAW_PRESERVATION_ONLY",
+  "creationDate": "2026-10-04",
+  "candidateCheckpoint": "595852b7a79b5abfdd63fc1f3ed23b13440b0cd8",
+  "preparationCheckpoint": "560c82834eec5e6ee6edd775d8dc7b392815bf67",
+  "all30InputPinsUnchanged": true,
+  "original44Controls51Rig17Images18MaterialsRawFieldsExact": true,
+  "allFullFourAndAuxiliaryMembershipsExact": true,
+  "exactFixedOneCornerAndPartialAliasPositions": true,
+  "operatorProjectedStationarityResidual": 3.5150386071616263e-12,
+  "sourceObjectiveMaximumResidualM": 4.996770940891381e-11,
+  "properCrossingAndConstraintCounts": {
+    "bodySelf": {
+      "properFinitePairs": 0,
+      "scopeFreeFreePairs": 0,
+      "allVerticesHaveNonzeroTangentDOFPairs": 0,
+      "allVerticesHaveNonzeroTangentDOFNonCapPairs": 0,
+      "innerCapParticipatingPairs": 0
+    },
+    "headSelf": {
+      "properFinitePairs": 1112,
+      "scopeFreeFreePairs": 685,
+      "allVerticesHaveNonzeroTangentDOFPairs": 523,
+      "allVerticesHaveNonzeroTangentDOFNonCapPairs": 360,
+      "innerCapParticipatingPairs": 226
+    },
+    "bodyHead": {
+      "properFinitePairs": 307,
+      "scopeFreeFreePairs": 263,
+      "allVerticesHaveNonzeroTangentDOFPairs": 243,
+      "allVerticesHaveNonzeroTangentDOFNonCapPairs": 181,
+      "innerCapParticipatingPairs": 65
+    }
+  },
+  "scopeFreeButZeroTangentDOFNodes": 124,
+  "decodedScopePinnedNormalDifferences": [
+    {
+      "part": "body",
+      "field": "four",
+      "decodedProtectedCornersChanged": 152,
+      "maximumDecodedProtectedCornerDelta": 0.003575798049472278,
+      "decodedAllCornersChanged": 1312,
+      "decodedPartialPinnedAdmittedCornersChanged": 0,
+      "maximumDecodedPartialPinnedCornerDelta": 0.0,
+      "decodedAllScopePinnedCornersChanged": 152,
+      "maximumDecodedAllScopePinnedCornerDelta": 0.003575798049472278
+    },
+    {
+      "part": "head",
+      "field": "four",
+      "decodedProtectedCornersChanged": 1192,
+      "maximumDecodedProtectedCornerDelta": 1.9514016646432346,
+      "decodedAllCornersChanged": 7446,
+      "decodedPartialPinnedAdmittedCornersChanged": 173,
+      "maximumDecodedPartialPinnedCornerDelta": 1.9994710399990476,
+      "decodedAllScopePinnedCornersChanged": 1365,
+      "maximumDecodedAllScopePinnedCornerDelta": 1.9994710399990476
+    }
+  ],
+  "exactUneditedCollar": {
+    "addedIDs": 464,
+    "totalHeadIDs": 1707,
+    "addedIncidentTriangles": 1441,
+    "newlyIncidentTriangles": 778,
+    "totalIncidentTriangles": 2966,
+    "exactSourceAliasCompleteOneRing": true,
+    "donorIDsExact": true,
+    "unedited": true,
+    "above1_60Touches": 0,
+    "necessaryMinimumCardinalityOrSufficient": false
+  },
+  "correctedCapSourceIdentityTriangles": 190,
+  "historicalStableEvidenceExact": true,
+  "evidence": {
+    "FINDING.md": {
+      "bytes": 8019,
+      "sha256": "538d81d0f3bad1440d026adf418853fd66c3620661905c3dbf9a94008f096b4d"
+    },
+    "check-fields-operator-rejected.py": {
+      "bytes": 11158,
+      "sha256": "171bf057a864cfa520b4e453f321e796c61513f1d27f6344b991816f734968ad"
+    },
+    "check-fields-operator.py": {
+      "bytes": 11318,
+      "sha256": "9ec21acee04b9ee52af41e1d2538aafebf7ecbf71c79da13993ce7c077c3c9d8"
+    },
+    "check-objective.py": {
+      "bytes": 6703,
+      "sha256": "7f8568b6fec28d9a86a5f47054613c06679b2693ae1efc56f8c3c255f5d0c9cd"
+    },
+    "classify-crossing-constraints.py": {
+      "bytes": 3337,
+      "sha256": "7c3604715cb5102324130052848dbac54027918924c2c435f965d2713a9ca471"
+    },
+    "crossing-constraint-classification.json": {
+      "bytes": 12968,
+      "sha256": "26b22ee1be9d0e7cc5c70a549f16eb7298154ab75462efd3c601ed98164dc457"
+    },
+    "fields-operator.json": {
+      "bytes": 26317,
+      "sha256": "2e464f02953665db364319fedba713866e1d2719ac4fd775579bd0d259c0fe46"
+    },
+    "native-preservation-crossings.json": {
+      "bytes": 2033756,
+      "sha256": "83c468d8f7e1a8f0e8a8e2c5ba9a6e661e83b8ad3793b53a90b077d5feef91bd"
+    },
+    "native-rest-read.npz": {
+      "bytes": 1345749,
+      "sha256": "5b5380d25daf491c9e071e1a3eb6b185ebc5e99c486c2387bcfad9176082688a"
+    },
+    "objective-ancestry.json": {
+      "bytes": 689594,
+      "sha256": "3ccc5a3a255be659be373fcb01c3dfde5f44185210d5703a50ca5ddacf2d1737"
+    },
+    "qa-reader-rejection.txt": {
+      "bytes": 363,
+      "sha256": "f1212aaaab2a08fcf9a817cb04b15031e5003012924ee835f786ef1d977101d8"
+    },
+    "read-preservation-crossings.py": {
+      "bytes": 13375,
+      "sha256": "d3579cf20d44aa7c667a7cf429d2b13acbcccf1e37b3be2e3b6ff140ae8608b1"
+    },
+    "native-read.txt": {
+      "bytes": 859,
+      "sha256": "963884b4cb0379058c10448beb2411eb85f96152bd8dda41b1099fa95adea632"
+    }
+  },
+  "limits": [
+    "Failure reproduced; not candidate or played-art acceptance. Neither fixed exterior nor cap-only explanation accounts for every finite crossing. No globally necessary/minimum/sufficient expansion established.",
+    "Free/free685/263 is scope freedom;124 nodes have no operator DOF. Conservative523/243 still have DOF at every corner,360/181also non-cap.",
+    "Raw normal fields exact, decoded pinned head normals change1365corners including173pinned admitted alias corners, maxvector1.99947104; no decoded-normal preservation pass.",
+    "QA incident-list rejection retained and corrected without source/candidate write. Snapshot and finite contact limitations in FINDING.",
+    "No solve, source edit, new pose/capture/render/proposal/worker/install/model/GPU/Library delivery/upload/push/promotion. Parent owns ask275/index and next source/operator; Agent1 owns construction. Original99/490failures and allM0-M5 open. Separate gate72 next."
+  ]
+}
