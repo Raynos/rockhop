@@ -803,3 +803,24 @@ reports gzip round-trip exact. Evidence: garment46/finding.json.
 Limits: No source/weight/shader edit, new wearing/art/contact/phone pass,
 Library delivery or publication. Agent1 retains rig/native authorship;
 root alone accepts. Actual posed engine discrepancy is next unit.
+
+
+## Round47 — installed four-slot field differs in actual riding
+
+Finding: Unchanged source14 loses secondary influence consumption in the
+installed engine; maximum2.948629465mm discrepancy at actual input524.
+Root rejected source14 appearance/deformation. Finish only bounded
+numerical diagnosis, no new cosmetic movie, source/weight/shader rewrite
+or equivalence between408native contacts and a visible open tear.
+
+Validation: Two703tick headless silent plays repeat all188secondary row
+positions/references/51matrices andphysics byte-exact. Independent scalar
+four-slot positions error0, full-field reference≤3.144e−16m; all1406ticks
+match production Game. Exact original51bind difference0. Existing37
+JSON-only marker control admits actual body posing after correctly
+rejected unmarked preflight; source38correction absent. Targeted lint,
+gzip roundtrip anddiffcheck pass. Evidence: garment47/finding.json.
+
+Limits: Reference is numerical, not an eight-slot renderer or GPU readback.
+No constructed wearing/collision/mobile/art/phone acceptance or publication.
+Agent1 retains authorship; next required normal-source gate48.

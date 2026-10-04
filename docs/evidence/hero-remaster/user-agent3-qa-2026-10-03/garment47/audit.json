@@ -1,0 +1,38 @@
+{
+  "status": "UNACCEPTED_INSTALLED_FOUR_SLOT_POSED_ERROR_INDEPENDENTLY_REPRODUCED",
+  "reportSHA256": "1bc71f067b47bdad6a37bd3bdb2b22d560b4697886580631cec8b0220ea2a7d6",
+  "sourceSHA256": "6042207a828883322df0ff5305eefb33fd3ecb26b0ed8fa5a13642e84b3317ad",
+  "auditSHA256": "595a1658b1f0e39818b351a8372ca7e243ea65a353eb8634e8224e242fde6f69",
+  "runs": [
+    {
+      "name": "first",
+      "inputTicks": 703,
+      "checkedSecondaryRowPositions": 132164,
+      "maximumActual4ResidualM": 0,
+      "maximumReference8ResidualM": 3.1432500083045447e-16,
+      "maximumOmittedWeightDisplacementM": 0.00294862946540667,
+      "all703ProductionGamePhysicsExact": true,
+      "finalStateHash": "29068d65ced63fa3",
+      "rawWeightSHA256": "ccb5cd1332a583d61d835237d97f761364af0411b1710e0e48bc866ec2d33ad9",
+      "traceSHA256": "3fb199c9b82cf90ac7e9d07562b10e0f18a23fb023a524b6edb9a5138b81c43b"
+    },
+    {
+      "name": "repeat",
+      "inputTicks": 703,
+      "checkedSecondaryRowPositions": 132164,
+      "maximumActual4ResidualM": 0,
+      "maximumReference8ResidualM": 3.1432500083045447e-16,
+      "maximumOmittedWeightDisplacementM": 0.00294862946540667,
+      "all703ProductionGamePhysicsExact": true,
+      "finalStateHash": "29068d65ced63fa3",
+      "rawWeightSHA256": "ccb5cd1332a583d61d835237d97f761364af0411b1710e0e48bc866ec2d33ad9",
+      "traceSHA256": "3fb199c9b82cf90ac7e9d07562b10e0f18a23fb023a524b6edb9a5138b81c43b"
+    }
+  ],
+  "limits": [
+    "All188secondary render rows measured for703actual riding ticks twice; independent scalar four/eight math matches captured CPU surfaces.",
+    "Standard shader has the same four consumed slots, but GPU arithmetic/output is not directly read back. Eight-slot reference is numerical, never displayed.",
+    "No new cosmetic movie, construction, weight/shader rewrite, collision response, phone or visual acceptance.",
+    "Native body/self contacts and root rejection are independent; measured posed error does not identify a visible tear."
+  ]
+}
