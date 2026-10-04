@@ -1057,3 +1057,26 @@ art/body/head/contact/LOD/performance or deployment acceptance. Parent owns
 asks/index reconciliation and clip judgement; all M0–M5 open. No source
 promotion, Library upload/delivery, outbound acknowledgement or publication.
 Temporary builds/renders remain excluded; no recursive cleanup retried.
+
+
+## 2026-10-04 Round58 — freeze severe neck-interface diagnosis inputs
+
+Finding: Root judges exposed neck flange severe already in neutral and
+raised/jagged in riding. Retain current body as controlled baseline. Frozen
+historical assembly uses independent head all-corners Z≥1.525m and body
+vertex-removal Z>1.54m cuts, separate objects without a shared join registry.
+Pin existing donor/current fields and played witnesses before diagnosis.
+
+Validation: Twenty-four existing input hashes verified, including original
+body-bind11 donor, native19/body52, native529/actual47streams, appearance01
+construction recipe and rest-head94 controls. No Blender/controller/export/
+render capture or source write; preparation.json records exact scope/pins.
+Historical semantic rebinding and rest-frame preservation are distinguished;
+local interface ancestry/relative attachment diagnosis is next, unaccepted.
+
+Limits: No repaired weights/geometry/head/body/bind or whole-body remake.
+Proximal hip stays covered, boxer breakthrough and490garment/head contacts
+remain separate. No causal link assumed to flange; full/four silhouette
+similarity does not certify repair sufficiency. Parent owns asks/index,
+acceptance/next repair and delivery; all M0–M5 open. No routine outbound
+acknowledgement, user/Library delivery or publication.
