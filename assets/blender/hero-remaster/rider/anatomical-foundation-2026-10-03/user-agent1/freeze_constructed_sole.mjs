@@ -21,7 +21,7 @@ for(let i=0;i<sole.geometry.attributes.position.count;i++){
   restFileWorldM:raw.toArray(),actualLoadedRestWorldM:world.toArray(),restRuntimeCenteredM:[world.x-.65,world.y,world.z],nativeResidualM:matches[0].error,
   actualLoaderNormalizedWeights:weights,rawNativeWeightSum:native.vertices[matches[0].id].rawWeightSum});
 }
-const normalMatrix=new THREE.Matrix3().getNormalMatrix(sole.matrixWorld),triangles=[];
+const triangles=[];
 for(let i=0;i<sole.geometry.index.count/3;i++){
  const ids=[0,1,2].map(k=>sole.geometry.index.getX(i*3+k)),points=ids.map(id=>new THREE.Vector3(...rows[id].actualLoadedRestWorldM));
  const cross=new THREE.Vector3().subVectors(points[1],points[0]).cross(new THREE.Vector3().subVectors(points[2],points[0])),area=cross.length()/2;

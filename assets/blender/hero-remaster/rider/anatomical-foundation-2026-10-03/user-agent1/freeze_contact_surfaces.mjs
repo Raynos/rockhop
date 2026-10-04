@@ -30,7 +30,6 @@ for (const side of ['L', 'R']) {
   frames[side] = { wrist, longitudinal, palmar, length: middle.distanceTo(wrist), thumbCue };
 }
 const proposals = [];
-const vec = i => new THREE.Vector3(i[0], i[1], i[2]);
 const worldPositions = mesh => {
   mesh.skeleton.update();
   return Array.from({ length: mesh.geometry.attributes.position.count }, (_, i) => {
