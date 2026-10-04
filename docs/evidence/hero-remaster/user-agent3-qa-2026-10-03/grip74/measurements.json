@@ -1,0 +1,1665 @@
+{
+  "status": "UNACCEPTED_SOURCE_PINNED_GRIP_DIAGNOSIS",
+  "recipeSHA256": "8ca00e84bbdc2fc6f307fe8d44c54312deb7095251e3cc9679ecc4581e310d58",
+  "preparationCommit": "a3f3f4c1ca56e6b2a8f7eeb65909c2278bf9d968",
+  "exportSourceSHA256": "3ffd591d6872513646cab2384f8fe6b21f828ab57bdb5842cc1659fcd32face2",
+  "sourceAnimationCount": 0,
+  "nativeAncestry": {
+    "rigMaxAbsResidual": 1.5195181057858775e-07,
+    "gloveMaximumPositionResidualM": 5.960464477539063e-08,
+    "gloveMaximumMembershipResidual": 9.382051913260715e-05,
+    "membershipByteExact": false,
+    "nativeGloveMaximumInfluences": 4,
+    "exportRows": 4021,
+    "nativeVertices": 4021,
+    "ambiguousAliases": 1020,
+    "allTiedMembershipFieldsTested": true
+  },
+  "streams": [
+    {
+      "stream": "off",
+      "samples": 176,
+      "fingerLocalRestMaxAbs": {
+        "index_01.L": {
+          "max": 1.376331644209472e-07,
+          "inputTick": 68
+        },
+        "index_02.L": {
+          "max": 2.0932317007504864e-07,
+          "inputTick": 552
+        },
+        "index_03.L": {
+          "max": 1.3016272670807183e-07,
+          "inputTick": 16
+        },
+        "middle_01.L": {
+          "max": 1.0428114738392225e-07,
+          "inputTick": 404
+        },
+        "middle_02.L": {
+          "max": 1.8654949807128673e-07,
+          "inputTick": 376
+        },
+        "middle_03.L": {
+          "max": 1.9223018718483864e-07,
+          "inputTick": 56
+        },
+        "pinky_01.L": {
+          "max": 8.392757922665028e-08,
+          "inputTick": 628
+        },
+        "pinky_02.L": {
+          "max": 1.7567753507474748e-07,
+          "inputTick": 180
+        },
+        "pinky_03.L": {
+          "max": 1.5435255029672135e-07,
+          "inputTick": 32
+        },
+        "ring_01.L": {
+          "max": 1.3718290459152627e-07,
+          "inputTick": 128
+        },
+        "ring_02.L": {
+          "max": 1.5822514631835816e-07,
+          "inputTick": 4
+        },
+        "ring_03.L": {
+          "max": 2.4495977146710146e-07,
+          "inputTick": 260
+        },
+        "thumb_01.L": {
+          "max": 1.3832838346994336e-07,
+          "inputTick": 48
+        },
+        "thumb_02.L": {
+          "max": 1.7372923771796778e-07,
+          "inputTick": 336
+        },
+        "thumb_03.L": {
+          "max": 8.606070174554947e-08,
+          "inputTick": 24
+        },
+        "index_01.R": {
+          "max": 1.4148839044825223e-07,
+          "inputTick": 516
+        },
+        "index_02.R": {
+          "max": 1.531740425608774e-07,
+          "inputTick": 588
+        },
+        "index_03.R": {
+          "max": 1.5235242278865968e-07,
+          "inputTick": 140
+        },
+        "middle_01.R": {
+          "max": 1.474902371345621e-07,
+          "inputTick": 516
+        },
+        "middle_02.R": {
+          "max": 1.2218627887250477e-07,
+          "inputTick": 580
+        },
+        "middle_03.R": {
+          "max": 8.562918470469971e-08,
+          "inputTick": 388
+        },
+        "pinky_01.R": {
+          "max": 1.1732657090313126e-07,
+          "inputTick": 72
+        },
+        "pinky_02.R": {
+          "max": 1.4678208171137186e-07,
+          "inputTick": 256
+        },
+        "pinky_03.R": {
+          "max": 2.4668153969509277e-07,
+          "inputTick": 540
+        },
+        "ring_01.R": {
+          "max": 2.4656391561794777e-07,
+          "inputTick": 208
+        },
+        "ring_02.R": {
+          "max": 1.1012111206243347e-07,
+          "inputTick": 80
+        },
+        "ring_03.R": {
+          "max": 1.1138265232357725e-07,
+          "inputTick": 4
+        },
+        "thumb_01.R": {
+          "max": 1.7496418824869409e-07,
+          "inputTick": 252
+        },
+        "thumb_02.R": {
+          "max": 1.4964189720689802e-07,
+          "inputTick": 236
+        },
+        "thumb_03.R": {
+          "max": 1.6689928783453212e-07,
+          "inputTick": 4
+        }
+      },
+      "wristToForearmAngleDeg": {
+        "L": {
+          "min": 7.4227233227777285,
+          "max": 42.223863404096555,
+          "minimumInputTick": 248,
+          "maximumInputTick": 524,
+          "definition": "Acute-or-obtuse angle between each bone local +Y longitudinal axis; not an anatomical medical angle."
+        },
+        "R": {
+          "min": 7.422741153649167,
+          "max": 42.22382853145827,
+          "minimumInputTick": 248,
+          "maximumInputTick": 524,
+          "definition": "Acute-or-obtuse angle between each bone local +Y longitudinal axis; not an anatomical medical angle."
+        }
+      },
+      "impliedChassis": {
+        "leftRightMaxAbsResidual": 1.153467324988e-06,
+        "description": "Both chassis transforms inferred from rest-oriented hand and commanded socket targets. Agreement is internal consistency only; film stores no independent bike.frame matrix."
+      },
+      "gripGeometryInImpliedFrame": [
+        {
+          "bike": "bike-rookie.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 11.34986127906646,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 10,
+          "markerClosestPointBikeFrameM": [
+            0.25906553599911447,
+            0.7828427017925874,
+            0.32891561326741303
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {
+            "index": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 113.71982452062612,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 113.71982452062731,
+              "maxTailWitnessInputTick": 52,
+              "maxTailWitnessBikeFrameM": [
+                0.390542472604247,
+                0.7253326303350943,
+                0.3602437891573122
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "middle": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 117.8435685300047,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 117.8435685300056,
+              "maxTailWitnessInputTick": 120,
+              "maxTailWitnessBikeFrameM": [
+                0.3687591836115778,
+                0.6906520559373718,
+                0.39108815218393866
+              ],
+              "distalGlovePositiveWeightRows": 151,
+              "maximumDistalGloveWeight": 0.6305999943792818,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 81.22866066670902,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 81.22866066670984,
+              "minInputTick": 324,
+              "maxInputTick": 52,
+              "maxCentroidWitnessBikeFrameM": [
+                0.33978987048751247,
+                0.7132958704715937,
+                0.3885279717280126
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 5.715222817774258e-13
+            },
+            "pinky": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 77.23454098466505,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 77.23454098466587,
+              "maxTailWitnessInputTick": 28,
+              "maxTailWitnessBikeFrameM": [
+                0.2894881327719211,
+                0.6895304524080134,
+                0.4019751282352805
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "ring": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 102.47588641627866,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 102.47588641627956,
+              "maxTailWitnessInputTick": 44,
+              "maxTailWitnessBikeFrameM": [
+                0.3326413661510106,
+                0.6809542810854466,
+                0.40699663788274637
+              ],
+              "distalGlovePositiveWeightRows": 6,
+              "maximumDistalGloveWeight": 0.7385562282370397,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 79.70945081218528,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 79.7094508121862,
+              "minInputTick": 636,
+              "maxInputTick": 4,
+              "maxCentroidWitnessBikeFrameM": [
+                0.3242750924197217,
+                0.7000423926336113,
+                0.37299222941331517
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 9.255558542105615e-13
+            },
+            "thumb": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 55.4166560421799,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 55.41665604218097,
+              "maxTailWitnessInputTick": 632,
+              "maxTailWitnessBikeFrameM": [
+                0.35196254350159384,
+                0.7751651110852444,
+                0.28597403170509095
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            }
+          },
+          "outerGlovePalmWitness": {
+            "definition": "Nearest actual glove triangle point to immutable body-derived palm centroid; point witness only",
+            "sourceGloveTriangleOrdinal": 6494,
+            "centroidToGloveSurfaceMm": 3.381055180542239,
+            "conditionalGlovePointBikeFrameM": [
+              0.27197043568877843,
+              0.7808902804764675,
+              0.3274007081726976
+            ],
+            "conditionalPointInsideGrip": true,
+            "conditionalPointToFiniteGripSurfaceMm": 12.776858334693227
+          }
+        },
+        {
+          "bike": "bike-rookie-lod.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 10.51768044367891,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 4,
+          "markerClosestPointBikeFrameM": [
+            0.2599987785564892,
+            0.7830285358308388,
+            0.32880620677061284
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 11.34986127906646,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 10,
+          "markerClosestPointBikeFrameM": [
+            0.25906553599911447,
+            0.7828427017925874,
+            0.32891561326741303
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro-lod.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 10.51768044367891,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 4,
+          "markerClosestPointBikeFrameM": [
+            0.2599987785564892,
+            0.7830285358308388,
+            0.32880620677061284
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-rookie.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 11.297795248144158,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 196,
+          "markerClosestPointBikeFrameM": [
+            0.259131768507143,
+            0.7828931012173134,
+            -0.32892683317557836
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {
+            "index": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 113.72000781856852,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 113.72000781856944,
+              "maxTailWitnessInputTick": 528,
+              "maxTailWitnessBikeFrameM": [
+                0.3905426659595689,
+                0.7253325658166428,
+                -0.36024360690844714
+              ],
+              "distalGlovePositiveWeightRows": 245,
+              "maximumDistalGloveWeight": 0.8843055631013382,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 86.26095269016649,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 86.26095269016736,
+              "minInputTick": 428,
+              "maxInputTick": 652,
+              "maxCentroidWitnessBikeFrameM": [
+                0.36705481981631555,
+                0.7407191245096373,
+                -0.36009828032767116
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 6.75322301446426e-13
+            },
+            "middle": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 117.84374618200101,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 117.84374618200206,
+              "maxTailWitnessInputTick": 384,
+              "maxTailWitnessBikeFrameM": [
+                0.36875942225123337,
+                0.6906520490423731,
+                -0.39108815883085807
+              ],
+              "distalGlovePositiveWeightRows": 61,
+              "maximumDistalGloveWeight": 0.2305935271696703,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 78.86903842756165,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 78.86903842756259,
+              "minInputTick": 152,
+              "maxInputTick": 256,
+              "maxCentroidWitnessBikeFrameM": [
+                0.34011663235039685,
+                0.7162040634975001,
+                -0.3820238029563001
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 7.550332863779065e-13
+            },
+            "pinky": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 77.23799920188719,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 77.2379992018882,
+              "maxTailWitnessInputTick": 600,
+              "maxTailWitnessBikeFrameM": [
+                0.2894881667441226,
+                0.6895304311963446,
+                -0.40197526900693353
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "ring": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 102.47585902922964,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 102.47585902923053,
+              "maxTailWitnessInputTick": 432,
+              "maxTailWitnessBikeFrameM": [
+                0.33264123279756097,
+                0.6809542178236907,
+                -0.40699655542667973
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "thumb": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 55.41678731835597,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 55.41678731835699,
+              "maxTailWitnessInputTick": 664,
+              "maxTailWitnessBikeFrameM": [
+                0.3519626524884234,
+                0.7751648757522156,
+                -0.28597408985961226
+              ],
+              "distalGlovePositiveWeightRows": 119,
+              "maximumDistalGloveWeight": 0.5960287274113677,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 39.04785259866757,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 39.047852598668584,
+              "minInputTick": 548,
+              "maxInputTick": 148,
+              "maxCentroidWitnessBikeFrameM": [
+                0.33018948691881034,
+                0.8040572519535834,
+                -0.28005908302961924
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 8.473409486550036e-13
+            }
+          },
+          "outerGlovePalmWitness": {
+            "definition": "Nearest actual glove triangle point to immutable body-derived palm centroid; point witness only",
+            "sourceGloveTriangleOrdinal": 3136,
+            "centroidToGloveSurfaceMm": 11.830314032085099,
+            "conditionalGlovePointBikeFrameM": [
+              0.2699560040119191,
+              0.7868716649843137,
+              -0.3396298813489128
+            ],
+            "conditionalPointInsideGrip": true,
+            "conditionalPointToFiniteGripSurfaceMm": 7.771925053379131
+          }
+        },
+        {
+          "bike": "bike-rookie-lod.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 10.611940101776543,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 56,
+          "markerClosestPointBikeFrameM": [
+            0.2596471904383559,
+            0.7779215742820406,
+            -0.3289451287097719
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 11.297795248144158,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 196,
+          "markerClosestPointBikeFrameM": [
+            0.259131768507143,
+            0.7828931012173134,
+            -0.32892683317557836
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro-lod.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 10.611940101776543,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 56,
+          "markerClosestPointBikeFrameM": [
+            0.2596471904383559,
+            0.7779215742820406,
+            -0.3289451287097719
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        }
+      ]
+    },
+    {
+      "stream": "on",
+      "samples": 176,
+      "fingerLocalRestMaxAbs": {
+        "index_01.L": {
+          "max": 1.376331644209472e-07,
+          "inputTick": 68
+        },
+        "index_02.L": {
+          "max": 2.0932317007504864e-07,
+          "inputTick": 552
+        },
+        "index_03.L": {
+          "max": 1.3016272670807183e-07,
+          "inputTick": 16
+        },
+        "middle_01.L": {
+          "max": 1.0428114738392225e-07,
+          "inputTick": 404
+        },
+        "middle_02.L": {
+          "max": 1.8654949807128673e-07,
+          "inputTick": 376
+        },
+        "middle_03.L": {
+          "max": 1.9223018718483864e-07,
+          "inputTick": 56
+        },
+        "pinky_01.L": {
+          "max": 8.392757922665028e-08,
+          "inputTick": 628
+        },
+        "pinky_02.L": {
+          "max": 1.7567753507474748e-07,
+          "inputTick": 180
+        },
+        "pinky_03.L": {
+          "max": 1.5435255029672135e-07,
+          "inputTick": 32
+        },
+        "ring_01.L": {
+          "max": 1.3718290459152627e-07,
+          "inputTick": 128
+        },
+        "ring_02.L": {
+          "max": 1.5822514631835816e-07,
+          "inputTick": 4
+        },
+        "ring_03.L": {
+          "max": 2.4495977146710146e-07,
+          "inputTick": 260
+        },
+        "thumb_01.L": {
+          "max": 1.3832838346994336e-07,
+          "inputTick": 48
+        },
+        "thumb_02.L": {
+          "max": 1.7372923771796778e-07,
+          "inputTick": 336
+        },
+        "thumb_03.L": {
+          "max": 8.606070174554947e-08,
+          "inputTick": 24
+        },
+        "index_01.R": {
+          "max": 1.4148839044825223e-07,
+          "inputTick": 516
+        },
+        "index_02.R": {
+          "max": 1.531740425608774e-07,
+          "inputTick": 588
+        },
+        "index_03.R": {
+          "max": 1.5235242278865968e-07,
+          "inputTick": 140
+        },
+        "middle_01.R": {
+          "max": 1.474902371345621e-07,
+          "inputTick": 516
+        },
+        "middle_02.R": {
+          "max": 1.2218627887250477e-07,
+          "inputTick": 580
+        },
+        "middle_03.R": {
+          "max": 8.562918470469971e-08,
+          "inputTick": 388
+        },
+        "pinky_01.R": {
+          "max": 1.1732657090313126e-07,
+          "inputTick": 72
+        },
+        "pinky_02.R": {
+          "max": 1.4678208171137186e-07,
+          "inputTick": 256
+        },
+        "pinky_03.R": {
+          "max": 2.4668153969509277e-07,
+          "inputTick": 540
+        },
+        "ring_01.R": {
+          "max": 2.4656391561794777e-07,
+          "inputTick": 208
+        },
+        "ring_02.R": {
+          "max": 1.1012111206243347e-07,
+          "inputTick": 80
+        },
+        "ring_03.R": {
+          "max": 1.1138265232357725e-07,
+          "inputTick": 4
+        },
+        "thumb_01.R": {
+          "max": 1.7496418824869409e-07,
+          "inputTick": 252
+        },
+        "thumb_02.R": {
+          "max": 1.4964189720689802e-07,
+          "inputTick": 236
+        },
+        "thumb_03.R": {
+          "max": 1.6689928783453212e-07,
+          "inputTick": 4
+        }
+      },
+      "wristToForearmAngleDeg": {
+        "L": {
+          "min": 7.4227233227777285,
+          "max": 42.223863404096555,
+          "minimumInputTick": 248,
+          "maximumInputTick": 524,
+          "definition": "Acute-or-obtuse angle between each bone local +Y longitudinal axis; not an anatomical medical angle."
+        },
+        "R": {
+          "min": 7.422741153649167,
+          "max": 42.22382853145827,
+          "minimumInputTick": 248,
+          "maximumInputTick": 524,
+          "definition": "Acute-or-obtuse angle between each bone local +Y longitudinal axis; not an anatomical medical angle."
+        }
+      },
+      "impliedChassis": {
+        "leftRightMaxAbsResidual": 1.153467324988e-06,
+        "description": "Both chassis transforms inferred from rest-oriented hand and commanded socket targets. Agreement is internal consistency only; film stores no independent bike.frame matrix."
+      },
+      "gripGeometryInImpliedFrame": [
+        {
+          "bike": "bike-rookie.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 11.34986127906646,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 10,
+          "markerClosestPointBikeFrameM": [
+            0.25906553599911447,
+            0.7828427017925874,
+            0.32891561326741303
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {
+            "index": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 113.71982452062612,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 113.71982452062731,
+              "maxTailWitnessInputTick": 52,
+              "maxTailWitnessBikeFrameM": [
+                0.390542472604247,
+                0.7253326303350943,
+                0.3602437891573122
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "middle": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 117.8435685300047,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 117.8435685300056,
+              "maxTailWitnessInputTick": 120,
+              "maxTailWitnessBikeFrameM": [
+                0.3687591836115778,
+                0.6906520559373718,
+                0.39108815218393866
+              ],
+              "distalGlovePositiveWeightRows": 151,
+              "maximumDistalGloveWeight": 0.6305999943792818,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 81.22866066670902,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 81.22866066670984,
+              "minInputTick": 324,
+              "maxInputTick": 52,
+              "maxCentroidWitnessBikeFrameM": [
+                0.33978987048751247,
+                0.7132958704715937,
+                0.3885279717280126
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 5.715222817774258e-13
+            },
+            "pinky": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 77.23454098466505,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 77.23454098466587,
+              "maxTailWitnessInputTick": 28,
+              "maxTailWitnessBikeFrameM": [
+                0.2894881327719211,
+                0.6895304524080134,
+                0.4019751282352805
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "ring": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 102.47588641627866,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 102.47588641627956,
+              "maxTailWitnessInputTick": 44,
+              "maxTailWitnessBikeFrameM": [
+                0.3326413661510106,
+                0.6809542810854466,
+                0.40699663788274637
+              ],
+              "distalGlovePositiveWeightRows": 6,
+              "maximumDistalGloveWeight": 0.7385562282370397,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 79.70945081218528,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 79.7094508121862,
+              "minInputTick": 636,
+              "maxInputTick": 4,
+              "maxCentroidWitnessBikeFrameM": [
+                0.3242750924197217,
+                0.7000423926336113,
+                0.37299222941331517
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 9.255558542105615e-13
+            },
+            "thumb": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 55.4166560421799,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 55.41665604218097,
+              "maxTailWitnessInputTick": 632,
+              "maxTailWitnessBikeFrameM": [
+                0.35196254350159384,
+                0.7751651110852444,
+                0.28597403170509095
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            }
+          },
+          "outerGlovePalmWitness": {
+            "definition": "Nearest actual glove triangle point to immutable body-derived palm centroid; point witness only",
+            "sourceGloveTriangleOrdinal": 6494,
+            "centroidToGloveSurfaceMm": 3.381055180542239,
+            "conditionalGlovePointBikeFrameM": [
+              0.27197043568877843,
+              0.7808902804764675,
+              0.3274007081726976
+            ],
+            "conditionalPointInsideGrip": true,
+            "conditionalPointToFiniteGripSurfaceMm": 12.776858334693227
+          }
+        },
+        {
+          "bike": "bike-rookie-lod.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 10.51768044367891,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 4,
+          "markerClosestPointBikeFrameM": [
+            0.2599987785564892,
+            0.7830285358308388,
+            0.32880620677061284
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 11.34986127906646,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 10,
+          "markerClosestPointBikeFrameM": [
+            0.25906553599911447,
+            0.7828427017925874,
+            0.32891561326741303
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro-lod.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 10.51768044367891,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 4,
+          "markerClosestPointBikeFrameM": [
+            0.2599987785564892,
+            0.7830285358308388,
+            0.32880620677061284
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-rookie.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 11.297795248144158,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 196,
+          "markerClosestPointBikeFrameM": [
+            0.259131768507143,
+            0.7828931012173134,
+            -0.32892683317557836
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {
+            "index": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 113.72000781856852,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 113.72000781856944,
+              "maxTailWitnessInputTick": 528,
+              "maxTailWitnessBikeFrameM": [
+                0.3905426659595689,
+                0.7253325658166428,
+                -0.36024360690844714
+              ],
+              "distalGlovePositiveWeightRows": 245,
+              "maximumDistalGloveWeight": 0.8843055631013382,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 86.26095269016649,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 86.26095269016736,
+              "minInputTick": 428,
+              "maxInputTick": 652,
+              "maxCentroidWitnessBikeFrameM": [
+                0.36705481981631555,
+                0.7407191245096373,
+                -0.36009828032767116
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 6.75322301446426e-13
+            },
+            "middle": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 117.84374618200101,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 117.84374618200206,
+              "maxTailWitnessInputTick": 384,
+              "maxTailWitnessBikeFrameM": [
+                0.36875942225123337,
+                0.6906520490423731,
+                -0.39108815883085807
+              ],
+              "distalGlovePositiveWeightRows": 61,
+              "maximumDistalGloveWeight": 0.2305935271696703,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 78.86903842756165,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 78.86903842756259,
+              "minInputTick": 152,
+              "maxInputTick": 256,
+              "maxCentroidWitnessBikeFrameM": [
+                0.34011663235039685,
+                0.7162040634975001,
+                -0.3820238029563001
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 7.550332863779065e-13
+            },
+            "pinky": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 77.23799920188719,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 77.2379992018882,
+              "maxTailWitnessInputTick": 600,
+              "maxTailWitnessBikeFrameM": [
+                0.2894881667441226,
+                0.6895304311963446,
+                -0.40197526900693353
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "ring": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 102.47585902922964,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 102.47585902923053,
+              "maxTailWitnessInputTick": 432,
+              "maxTailWitnessBikeFrameM": [
+                0.33264123279756097,
+                0.6809542178236907,
+                -0.40699655542667973
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "thumb": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 55.41678731835597,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 55.41678731835699,
+              "maxTailWitnessInputTick": 664,
+              "maxTailWitnessBikeFrameM": [
+                0.3519626524884234,
+                0.7751648757522156,
+                -0.28597408985961226
+              ],
+              "distalGlovePositiveWeightRows": 119,
+              "maximumDistalGloveWeight": 0.5960287274113677,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 39.04785259866757,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 39.047852598668584,
+              "minInputTick": 548,
+              "maxInputTick": 148,
+              "maxCentroidWitnessBikeFrameM": [
+                0.33018948691881034,
+                0.8040572519535834,
+                -0.28005908302961924
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 8.473409486550036e-13
+            }
+          },
+          "outerGlovePalmWitness": {
+            "definition": "Nearest actual glove triangle point to immutable body-derived palm centroid; point witness only",
+            "sourceGloveTriangleOrdinal": 3136,
+            "centroidToGloveSurfaceMm": 11.830314032085099,
+            "conditionalGlovePointBikeFrameM": [
+              0.2699560040119191,
+              0.7868716649843137,
+              -0.3396298813489128
+            ],
+            "conditionalPointInsideGrip": true,
+            "conditionalPointToFiniteGripSurfaceMm": 7.771925053379131
+          }
+        },
+        {
+          "bike": "bike-rookie-lod.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 10.611940101776543,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 56,
+          "markerClosestPointBikeFrameM": [
+            0.2596471904383559,
+            0.7779215742820406,
+            -0.3289451287097719
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 11.297795248144158,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 196,
+          "markerClosestPointBikeFrameM": [
+            0.259131768507143,
+            0.7828931012173134,
+            -0.32892683317557836
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro-lod.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 10.611940101776543,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 56,
+          "markerClosestPointBikeFrameM": [
+            0.2596471904383559,
+            0.7779215742820406,
+            -0.3289451287097719
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        }
+      ]
+    },
+    {
+      "stream": "numeric47_separate",
+      "samples": 703,
+      "fingerLocalRestMaxAbs": {
+        "index_01.L": {
+          "max": 1.376331648650364e-07,
+          "inputTick": 461
+        },
+        "index_02.L": {
+          "max": 2.0932317018607094e-07,
+          "inputTick": 37
+        },
+        "index_03.L": {
+          "max": 1.3016272693011643e-07,
+          "inputTick": 26
+        },
+        "middle_01.L": {
+          "max": 1.0428114738392225e-07,
+          "inputTick": 227
+        },
+        "middle_02.L": {
+          "max": 1.8654949862639825e-07,
+          "inputTick": 314
+        },
+        "middle_03.L": {
+          "max": 1.9223018762892785e-07,
+          "inputTick": 141
+        },
+        "pinky_01.L": {
+          "max": 8.392757944869489e-08,
+          "inputTick": 583
+        },
+        "pinky_02.L": {
+          "max": 1.7567753529679209e-07,
+          "inputTick": 431
+        },
+        "pinky_03.L": {
+          "max": 1.5435255051876595e-07,
+          "inputTick": 22
+        },
+        "ring_01.L": {
+          "max": 1.3718290464703742e-07,
+          "inputTick": 95
+        },
+        "ring_02.L": {
+          "max": 1.5822514665142506e-07,
+          "inputTick": 404
+        },
+        "ring_03.L": {
+          "max": 2.4495977157812376e-07,
+          "inputTick": 96
+        },
+        "thumb_01.L": {
+          "max": 1.3832838358096566e-07,
+          "inputTick": 3
+        },
+        "thumb_02.L": {
+          "max": 1.7372923821756814e-07,
+          "inputTick": 553
+        },
+        "thumb_03.L": {
+          "max": 8.606070196759408e-08,
+          "inputTick": 8
+        },
+        "index_01.R": {
+          "max": 1.4148839044825223e-07,
+          "inputTick": 132
+        },
+        "index_02.R": {
+          "max": 1.531740426718997e-07,
+          "inputTick": 637
+        },
+        "index_03.R": {
+          "max": 1.5235242301070429e-07,
+          "inputTick": 31
+        },
+        "middle_01.R": {
+          "max": 1.474902371345621e-07,
+          "inputTick": 113
+        },
+        "middle_02.R": {
+          "max": 1.2218627931659398e-07,
+          "inputTick": 665
+        },
+        "middle_03.R": {
+          "max": 8.562918487470261e-08,
+          "inputTick": 148
+        },
+        "pinky_01.R": {
+          "max": 1.1732657090313126e-07,
+          "inputTick": 42
+        },
+        "pinky_02.R": {
+          "max": 1.4678208182239416e-07,
+          "inputTick": 56
+        },
+        "pinky_03.R": {
+          "max": 2.4668153969509277e-07,
+          "inputTick": 216
+        },
+        "ring_01.R": {
+          "max": 2.4656391572897007e-07,
+          "inputTick": 314
+        },
+        "ring_02.R": {
+          "max": 1.1012111217345577e-07,
+          "inputTick": 117
+        },
+        "ring_03.R": {
+          "max": 1.1138265243459955e-07,
+          "inputTick": 656
+        },
+        "thumb_01.R": {
+          "max": 1.749641883597164e-07,
+          "inputTick": 27
+        },
+        "thumb_02.R": {
+          "max": 1.4964189742894263e-07,
+          "inputTick": 27
+        },
+        "thumb_03.R": {
+          "max": 1.6689928794555442e-07,
+          "inputTick": 70
+        }
+      },
+      "wristToForearmAngleDeg": {
+        "L": {
+          "min": 4.77840322411164,
+          "max": 42.235808567003815,
+          "minimumInputTick": 247,
+          "maximumInputTick": 524,
+          "definition": "Acute-or-obtuse angle between each bone local +Y longitudinal axis; not an anatomical medical angle."
+        },
+        "R": {
+          "min": 4.77836019595954,
+          "max": 42.23577372333618,
+          "minimumInputTick": 247,
+          "maximumInputTick": 524,
+          "definition": "Acute-or-obtuse angle between each bone local +Y longitudinal axis; not an anatomical medical angle."
+        }
+      },
+      "impliedChassis": {
+        "leftRightMaxAbsResidual": 1.153601907999402e-06,
+        "description": "Both chassis transforms inferred from rest-oriented hand and commanded socket targets. Agreement is internal consistency only; film stores no independent bike.frame matrix."
+      },
+      "gripGeometryInImpliedFrame": [
+        {
+          "bike": "bike-rookie.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 11.34986127906646,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 10,
+          "markerClosestPointBikeFrameM": [
+            0.25906553599911447,
+            0.7828427017925874,
+            0.32891561326741303
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {
+            "index": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 113.71982452062609,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 113.71982452062768,
+              "maxTailWitnessInputTick": 528,
+              "maxTailWitnessBikeFrameM": [
+                0.39054247260424757,
+                0.7253326303350945,
+                0.36024378915731214
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "middle": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 117.84356853000456,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 117.84356853000621,
+              "maxTailWitnessInputTick": 296,
+              "maxTailWitnessBikeFrameM": [
+                0.36875918361157856,
+                0.6906520559373717,
+                0.39108815218393866
+              ],
+              "distalGlovePositiveWeightRows": 151,
+              "maximumDistalGloveWeight": 0.6305999943792818,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 81.22866066670873,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 81.22866066671016,
+              "minInputTick": 607,
+              "maxInputTick": 324,
+              "maxCentroidWitnessBikeFrameM": [
+                0.3397898704875131,
+                0.7132958704715939,
+                0.38852797172801273
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 1.1240151438116956e-12
+            },
+            "pinky": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 77.23454098466425,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 77.234540984666,
+              "maxTailWitnessInputTick": 426,
+              "maxTailWitnessBikeFrameM": [
+                0.2894881327719212,
+                0.6895304524080133,
+                0.4019751282352808
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "ring": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 102.47588641627826,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 102.47588641627996,
+              "maxTailWitnessInputTick": 324,
+              "maxTailWitnessBikeFrameM": [
+                0.3326413661510109,
+                0.6809542810854464,
+                0.40699663788274626
+              ],
+              "distalGlovePositiveWeightRows": 6,
+              "maximumDistalGloveWeight": 0.7385562282370397,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 79.70945081218488,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 79.70945081218683,
+              "minInputTick": 637,
+              "maxInputTick": 324,
+              "maxCentroidWitnessBikeFrameM": [
+                0.3242750924197223,
+                0.700042392633611,
+                0.3729922294133151
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 1.1443916996305594e-12
+            },
+            "thumb": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 55.416656042179646,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 55.41665604218164,
+              "maxTailWitnessInputTick": 591,
+              "maxTailWitnessBikeFrameM": [
+                0.3519625435015945,
+                0.7751651110852444,
+                0.28597403170509106
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            }
+          },
+          "outerGlovePalmWitness": {
+            "definition": "Nearest actual glove triangle point to immutable body-derived palm centroid; point witness only",
+            "sourceGloveTriangleOrdinal": 6494,
+            "centroidToGloveSurfaceMm": 3.381055180542239,
+            "conditionalGlovePointBikeFrameM": [
+              0.27197043568877843,
+              0.7808902804764675,
+              0.3274007081726976
+            ],
+            "conditionalPointInsideGrip": true,
+            "conditionalPointToFiniteGripSurfaceMm": 12.776858334693227
+          }
+        },
+        {
+          "bike": "bike-rookie-lod.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 10.51768044367891,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 4,
+          "markerClosestPointBikeFrameM": [
+            0.2599987785564892,
+            0.7830285358308388,
+            0.32880620677061284
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 11.34986127906646,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 10,
+          "markerClosestPointBikeFrameM": [
+            0.25906553599911447,
+            0.7828427017925874,
+            0.32891561326741303
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro-lod.glb",
+          "side": "L",
+          "markerToActualFiniteSurfaceMm": 10.51768044367891,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 4,
+          "markerClosestPointBikeFrameM": [
+            0.2599987785564892,
+            0.7830285358308388,
+            0.32880620677061284
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-rookie.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 11.297795248144158,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 196,
+          "markerClosestPointBikeFrameM": [
+            0.259131768507143,
+            0.7828931012173134,
+            -0.32892683317557836
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {
+            "index": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 113.72000781856808,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 113.72000781856973,
+              "maxTailWitnessInputTick": 465,
+              "maxTailWitnessBikeFrameM": [
+                0.3905426659595689,
+                0.7253325658166422,
+                -0.360243606908447
+              ],
+              "distalGlovePositiveWeightRows": 245,
+              "maximumDistalGloveWeight": 0.8843055631013382,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 86.26095269016594,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 86.26095269016756,
+              "minInputTick": 645,
+              "maxInputTick": 465,
+              "maxCentroidWitnessBikeFrameM": [
+                0.3670548198163156,
+                0.7407191245096367,
+                -0.3600982803276709
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 1.187990514796716e-12
+            },
+            "middle": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 117.84374618200083,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 117.84374618200233,
+              "maxTailWitnessInputTick": 292,
+              "maxTailWitnessBikeFrameM": [
+                0.3687594222512335,
+                0.6906520490423729,
+                -0.39108815883085835
+              ],
+              "distalGlovePositiveWeightRows": 61,
+              "maximumDistalGloveWeight": 0.2305935271696703,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 78.86903842756118,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 78.8690384275627,
+              "minInputTick": 698,
+              "maxInputTick": 305,
+              "maxCentroidWitnessBikeFrameM": [
+                0.34011663235039646,
+                0.7162040634974995,
+                -0.3820238029563001
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 1.0053497077208614e-12
+            },
+            "pinky": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 77.23799920188719,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 77.23799920188856,
+              "maxTailWitnessInputTick": 455,
+              "maxTailWitnessBikeFrameM": [
+                0.2894881667441226,
+                0.6895304311963442,
+                -0.40197526900693353
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "ring": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 102.47585902922951,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 102.47585902923093,
+              "maxTailWitnessInputTick": 586,
+              "maxTailWitnessBikeFrameM": [
+                0.3326412327975612,
+                0.6809542178236904,
+                -0.4069965554266797
+              ],
+              "distalGlovePositiveWeightRows": 0,
+              "maximumDistalGloveWeight": 0.0,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation."
+            },
+            "thumb": {
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMin": 55.41678731835595,
+              "skeletalTerminalBoneTailToFiniteSurfaceMmMax": 55.41678731835729,
+              "maxTailWitnessInputTick": 554,
+              "maxTailWitnessBikeFrameM": [
+                0.35196265248842373,
+                0.7751648757522159,
+                -0.2859740898596125
+              ],
+              "distalGlovePositiveWeightRows": 119,
+              "maximumDistalGloveWeight": 0.5960287274113677,
+              "definition": "Skeletal terminal tail is not outer skin. Semantic-weight centroid below uses all positive distal memberships, not inferred finger segmentation.",
+              "semanticGloveCentroidFiniteSurfaceMmMin": 39.04785259866731,
+              "semanticGloveCentroidFiniteSurfaceMmMax": 39.04785259866897,
+              "minInputTick": 645,
+              "maxInputTick": 598,
+              "maxCentroidWitnessBikeFrameM": [
+                0.33018948691881056,
+                0.8040572519535838,
+                -0.28005908302961935
+              ],
+              "insideSamples": 0,
+              "centroidMotionInImpliedChassisMm": 1.1004656964352383e-12
+            }
+          },
+          "outerGlovePalmWitness": {
+            "definition": "Nearest actual glove triangle point to immutable body-derived palm centroid; point witness only",
+            "sourceGloveTriangleOrdinal": 3136,
+            "centroidToGloveSurfaceMm": 11.830314032085099,
+            "conditionalGlovePointBikeFrameM": [
+              0.2699560040119191,
+              0.7868716649843137,
+              -0.3396298813489128
+            ],
+            "conditionalPointInsideGrip": true,
+            "conditionalPointToFiniteGripSurfaceMm": 7.771925053379131
+          }
+        },
+        {
+          "bike": "bike-rookie-lod.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 10.611940101776543,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 56,
+          "markerClosestPointBikeFrameM": [
+            0.2596471904383559,
+            0.7779215742820406,
+            -0.3289451287097719
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 11.297795248144158,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 196,
+          "markerClosestPointBikeFrameM": [
+            0.259131768507143,
+            0.7828931012173134,
+            -0.32892683317557836
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        },
+        {
+          "bike": "bike-pro-lod.glb",
+          "side": "R",
+          "markerToActualFiniteSurfaceMm": 10.611940101776543,
+          "markerInsideClosedGrip": true,
+          "markerClosestSourceTriangleOrdinal": 56,
+          "markerClosestPointBikeFrameM": [
+            0.2596471904383559,
+            0.7779215742820406,
+            -0.3289451287097719
+          ],
+          "conditionalOnRiderImpliedChassis": true,
+          "fingers": {}
+        }
+      ]
+    }
+  ],
+  "native99FingerLocalRestResiduals": {
+    "index_01.R": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 853,
+      "domain": "actual47",
+      "sourceIndex": 325
+    },
+    "index_02.R": {
+      "maxAbsLocalRestResidual": 6.556510925292969e-07,
+      "witnessIndex": 769,
+      "domain": "actual47",
+      "sourceIndex": 241
+    },
+    "index_03.R": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 713,
+      "domain": "actual47",
+      "sourceIndex": 185
+    },
+    "middle_01.R": {
+      "maxAbsLocalRestResidual": 4.76837158203125e-07,
+      "witnessIndex": 609,
+      "domain": "actual47",
+      "sourceIndex": 81
+    },
+    "middle_02.R": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 558,
+      "domain": "actual47",
+      "sourceIndex": 30
+    },
+    "middle_03.R": {
+      "maxAbsLocalRestResidual": 4.76837158203125e-07,
+      "witnessIndex": 662,
+      "domain": "actual47",
+      "sourceIndex": 134
+    },
+    "pinky_01.R": {
+      "maxAbsLocalRestResidual": 4.172325134277344e-07,
+      "witnessIndex": 141,
+      "domain": "native",
+      "sourceIndex": 141
+    },
+    "pinky_02.R": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 1003,
+      "domain": "actual47",
+      "sourceIndex": 475
+    },
+    "pinky_03.R": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 690,
+      "domain": "actual47",
+      "sourceIndex": 162
+    },
+    "ring_01.R": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 561,
+      "domain": "actual47",
+      "sourceIndex": 33
+    },
+    "ring_02.R": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 565,
+      "domain": "actual47",
+      "sourceIndex": 37
+    },
+    "ring_03.R": {
+      "maxAbsLocalRestResidual": 4.76837158203125e-07,
+      "witnessIndex": 421,
+      "domain": "native",
+      "sourceIndex": 421
+    },
+    "thumb_01.R": {
+      "maxAbsLocalRestResidual": 7.152557373046875e-07,
+      "witnessIndex": 757,
+      "domain": "actual47",
+      "sourceIndex": 229
+    },
+    "thumb_02.R": {
+      "maxAbsLocalRestResidual": 8.344650268554688e-07,
+      "witnessIndex": 1009,
+      "domain": "actual47",
+      "sourceIndex": 481
+    },
+    "thumb_03.R": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 640,
+      "domain": "actual47",
+      "sourceIndex": 112
+    },
+    "index_01.L": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 740,
+      "domain": "actual47",
+      "sourceIndex": 212
+    },
+    "index_02.L": {
+      "maxAbsLocalRestResidual": 7.748603820800781e-07,
+      "witnessIndex": 1170,
+      "domain": "actual47",
+      "sourceIndex": 642
+    },
+    "index_03.L": {
+      "maxAbsLocalRestResidual": 4.76837158203125e-07,
+      "witnessIndex": 123,
+      "domain": "native",
+      "sourceIndex": 123
+    },
+    "middle_01.L": {
+      "maxAbsLocalRestResidual": 4.76837158203125e-07,
+      "witnessIndex": 838,
+      "domain": "actual47",
+      "sourceIndex": 310
+    },
+    "middle_02.L": {
+      "maxAbsLocalRestResidual": 7.748603820800781e-07,
+      "witnessIndex": 1165,
+      "domain": "actual47",
+      "sourceIndex": 637
+    },
+    "middle_03.L": {
+      "maxAbsLocalRestResidual": 5.066394805908203e-07,
+      "witnessIndex": 1089,
+      "domain": "actual47",
+      "sourceIndex": 561
+    },
+    "pinky_01.L": {
+      "maxAbsLocalRestResidual": 4.76837158203125e-07,
+      "witnessIndex": 803,
+      "domain": "actual47",
+      "sourceIndex": 275
+    },
+    "pinky_02.L": {
+      "maxAbsLocalRestResidual": 7.152557373046875e-07,
+      "witnessIndex": 788,
+      "domain": "actual47",
+      "sourceIndex": 260
+    },
+    "pinky_03.L": {
+      "maxAbsLocalRestResidual": 7.748603820800781e-07,
+      "witnessIndex": 604,
+      "domain": "actual47",
+      "sourceIndex": 76
+    },
+    "ring_01.L": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 868,
+      "domain": "actual47",
+      "sourceIndex": 340
+    },
+    "ring_02.L": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 1189,
+      "domain": "actual47",
+      "sourceIndex": 661
+    },
+    "ring_03.L": {
+      "maxAbsLocalRestResidual": 8.344650268554688e-07,
+      "witnessIndex": 1187,
+      "domain": "actual47",
+      "sourceIndex": 659
+    },
+    "thumb_01.L": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 1068,
+      "domain": "actual47",
+      "sourceIndex": 540
+    },
+    "thumb_02.L": {
+      "maxAbsLocalRestResidual": 5.364418029785156e-07,
+      "witnessIndex": 1172,
+      "domain": "actual47",
+      "sourceIndex": 644
+    },
+    "thumb_03.L": {
+      "maxAbsLocalRestResidual": 5.960464477539062e-07,
+      "witnessIndex": 730,
+      "domain": "actual47",
+      "sourceIndex": 202
+    }
+  },
+  "distalGloveMembershipNativeVsExport": {
+    "index_03.L": {
+      "nativePositiveRows": 0,
+      "exportPositiveRows": 0
+    },
+    "middle_03.L": {
+      "nativePositiveRows": 151,
+      "exportPositiveRows": 151
+    },
+    "pinky_03.L": {
+      "nativePositiveRows": 0,
+      "exportPositiveRows": 0
+    },
+    "ring_03.L": {
+      "nativePositiveRows": 6,
+      "exportPositiveRows": 6
+    },
+    "thumb_03.L": {
+      "nativePositiveRows": 0,
+      "exportPositiveRows": 0
+    },
+    "index_03.R": {
+      "nativePositiveRows": 245,
+      "exportPositiveRows": 245
+    },
+    "middle_03.R": {
+      "nativePositiveRows": 61,
+      "exportPositiveRows": 61
+    },
+    "pinky_03.R": {
+      "nativePositiveRows": 0,
+      "exportPositiveRows": 0
+    },
+    "ring_03.R": {
+      "nativePositiveRows": 0,
+      "exportPositiveRows": 0
+    },
+    "thumb_03.R": {
+      "nativePositiveRows": 120,
+      "exportPositiveRows": 119
+    }
+  },
+  "pinsUnchangedAfter": true,
+  "limits": [
+    "Rider-implied frame is an internal controller reconstruction. No independent per-frame bike transform exists in film50 receipt; no full actual-contact certificate.",
+    "Actual47 numeric poses differ from film50. Metrics are separate, not a pixel synchronization claim.",
+    "Native26/29 glove/rest fields match oldsource37 within export roundoff; native99 lacks matching actual bike/engine played contact.",
+    "Semantic glove centroids and skeletal terminal tails are explicit articulation/gap witnesses, not complete finger surface wrap, collision or palm pressure certification. Missing distal memberships prevent interpreting bone tips as visible finger motion.",
+    "No candidate, solve, geometry/rig/weight/pose/controller edits, native save, render/capture, delivery or admission. Root alone judges; M0-M5 open."
+  ]
+}

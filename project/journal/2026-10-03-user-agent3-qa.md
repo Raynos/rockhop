@@ -1462,3 +1462,27 @@ No source edit/finger/rig/weight authoring/solve/newcapture/model/GPU/install,
 worker/Librarydelivery/upload/push/promotion or competing neck103diagnosis.
 Parent owns ask275/index/admission, Agent1 sole construction owner. All
 M0–M5/art/device/player gates open.
+
+
+## 2026-10-04 Round74 — isolate open-hand and centroid grip defects
+
+Finding: Existing played50source37 holds all30fingerlocals at rest while
+centroid-target lies11.3mm inside detailedactualgrips. No positive distal
+glove memberships for five finger/side pairs exist in native26/29 either.
+One source-pinned native surface-frame/pose/binding prerequisite is proposed
+for Agent1; no construction authority or art admission.
+
+Validation: CPUproductiondecoder yields44/16finitegriptriangles per side
+for four exact productionbikes. Both176movingfilmstreams and separate703
+numeric poses keep fingerlocals within2.467e-7rest;1232native99poses within
+8.345e-7. Native26/29 rawglove/rest51fields exact; oldexportpositions
+within5.96e-8m, memberships differ9.3821e-5. Film wristproxy7.423–42.224deg;
+conditional distal semanticcentroids39.048–86.261mm outsideactualgrips.
+All66prepinputs remainexact. Readerrejections/corrections explicitlylogged.
+
+Limits: Filmhas no independentbike.frame; conditionalrider-impliedframe
+is not fullcontactcertificate. Feedback names no clip; native93 is FKonly.
+No universal fingersegmentation/anatomicalwristrange/continuouscoverage
+claim, sourceedit/candidate/solve/pose/render/capture/save/upload/promotion.
+Parent owns ask275/sharedindex/art/admission; allM0–M5 remainopen.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/grip74/
