@@ -31,3 +31,11 @@ Finding: Original centre segment(x=z=0,y=-0.75→0.8) traverses1.55native units 
 Validation: Guard exit0/1.491s;25sections/4paths and repeated analytical controls pass, no excluded plane-vertex faces. Full original row/barycentric/UV/nearest PBR hit records retained; diagnostic section PNG inspected.
 
 Limits: One central clear path is a witness, not global absence of caps or proof of wearable aperture. Tailored cuff/neck/hem wall depth tests remain; no construction, moving art judgment or publication.
+
+## Round 101 — Finite air clearance and tailored probes checkpoint
+
+Finding: Freeze exhaustive segment-to-original-triangle distance method using conservative AABB lower bounds and actual vertex upper bound. Tailored tilted cuff and hem→above probes plus transverse wall/hood depth rays retain geometry normals and source UV/PBR.
+
+Validation: Updated Python compiles and witness JSON has6sections/37paths; analytical32-sided tube clearance expectation added before run. Correction: Round100 has4non-degree-two components in3planes, not4planes; exact finding.json already names3planes.
+
+Limits: Numerical source checkpoint only; controls and original measurements pending. No curved-route exclusion, topology repair, source fitting or publication; parent retains art authority.

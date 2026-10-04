@@ -109,6 +109,56 @@ def segment_hits(v, f, start, end, eps=1e-10):
         'clearSegmentWitness':not clusters and not planar.any()}
 
 
+
+def segment_clearance(v, f, start, end):
+    """Exhaustive minimum distance via conservative AABB lower-bound pruning.
+
+    With no intersection, closest points are an endpoint to a triangle face
+    or segment to an edge. Degenerate triangles retain their segment edges.
+    Upper bound comes from distance to an actual original vertex. All triangles
+    with box lower bound below that distance are tested, not a sampled subset.
+    """
+    a=np.asarray(start);b=np.asarray(end);d=b-a;dd=np.dot(d,d)
+    t=np.clip(((v-a)*d).sum(axis=1)/dd,0,1)
+    upper=float(np.linalg.norm(v-(a+t[:,None]*d),axis=1).min())
+    tri=v[f];low=tri.min(axis=1);high=tri.max(axis=1)
+    gap=np.maximum(np.maximum(np.minimum(a,b)-high,low-np.maximum(a,b)),0)
+    ids=np.flatnonzero((gap*gap).sum(axis=1)<=upper*upper+1e-14);tri=tri[ids]
+    best=np.full(len(ids),np.inf)
+    def point_edge(point, p, q):
+        e=q-p;ee=(e*e).sum(axis=1)
+        r=np.clip(((point-p)*e).sum(axis=1)/np.where(ee>0,ee,1),0,1)
+        return ((point-(p+r[:,None]*e))**2).sum(axis=1)
+    for i,k in ((0,1),(1,2),(2,0)):
+        q0=tri[:,i];q1=tri[:,k];e=q1-q0;ee=(e*e).sum(axis=1)
+        ed=(e*d).sum(axis=1);w=a-q0;dw=(w*d).sum(axis=1);ew=(w*e).sum(axis=1)
+        det=dd*ee-ed*ed;safe=np.where(det>1e-24,det,1)
+        s=(ed*ew-ee*dw)/safe;r=(dd*ew-ed*dw)/safe
+        valid=(det>1e-24)&(s>=0)&(s<=1)&(r>=0)&(r<=1)
+        free=((a+s[:,None]*d)-(q0+r[:,None]*e))**2
+        distance=np.where(valid,free.sum(axis=1),np.inf)
+        for point in (a,b):distance=np.minimum(distance,point_edge(point,q0,q1))
+        for point in (q0,q1):
+            s=np.clip(((point-a)*d).sum(axis=1)/dd,0,1)
+            distance=np.minimum(distance,((point-(a+s[:,None]*d))**2).sum(axis=1))
+        best=np.minimum(best,distance)
+    e1=tri[:,1]-tri[:,0];e2=tri[:,2]-tri[:,0];n=np.cross(e1,e2);nn=(n*n).sum(axis=1)
+    dot11=(e1*e1).sum(axis=1);dot22=(e2*e2).sum(axis=1);dot12=(e1*e2).sum(axis=1)
+    determinant=dot11*dot22-dot12*dot12;safe=np.where(determinant>1e-24,determinant,1)
+    for point in (a,b):
+        delta=point-tri[:,0];d1=(delta*e1).sum(axis=1);d2=(delta*e2).sum(axis=1)
+        u=(dot22*d1-dot12*d2)/safe;w=(dot11*d2-dot12*d1)/safe
+        valid=(determinant>1e-24)&(u>=0)&(w>=0)&(u+w<=1)
+        distance=((delta*n).sum(axis=1)**2)/np.where(nn>0,nn,1)
+        best=np.minimum(best,np.where(valid,distance,np.inf))
+    k=int(np.argmin(best));result=float(np.sqrt(max(0,best[k])))
+    assert result<=upper+1e-7
+    return {'minimumDistanceNativeUnits':result,'closestOriginalTriangleRow':int(ids[k]),
+        'vertexUpperBound':upper,'trianglesExhaustivelyTested':len(ids),
+        'allOriginalTrianglesBounded':len(f),'numericalToleranceClaim':1e-7,
+        'certifiedOpenTubeRadiusConservative':max(0,result-1e-7),
+        'method':'Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling.'}
+
 def section(v, f, axis, value, tolerance=1e-7):
     tri=v[f]; delta=tri[:,:,axis]-value
     # Face exactly containing a plane vertex is reported as ambiguous and excluded.
@@ -196,6 +246,9 @@ def controls():
     join(0,n);join(3*n,2*n);join(2*n,0);join(n,3*n)
     f=np.asarray(f); open_path=segment_hits(v,f,[0,-2,0],[0,2,0])
     assert open_path['clearSegmentWitness']
+    clearance=segment_clearance(v,f,[0,-2,0],[0,2,0])
+    expected=.7*np.cos(np.pi/n)
+    assert abs(clearance['minimumDistanceNativeUnits']-expected)<1e-10
     s=section(v,f,1,.123456); closed=[x for x in s['loops'] if x['closed']]
     assert len(closed)==2 and all(point_inside([0,.123456,0],x,1) for x in closed)
     # Cap disk crosses the same central air path, although annulus already has zero boundary.
@@ -216,7 +269,7 @@ def controls():
     return {'passed':True,'annularTubeZeroBoundaryEdges':True,'solidCylinderZeroBoundaryEdges':True,
         'hollowTubeAxialClear':True,'solidCylinderAxialHits':2,
         'annularSectionClosedNestedLoops':2,'transverseWallCrossings':4,
-        'addedCapAxialHits':2,'methodLimits':'Sampled noncoplanar segment proof only; loop nesting by itself does not classify material occupancy.'}
+        'addedCapAxialHits':2,'hollowClearance':clearance, 'hollowExpectedClearance':float(expected),'methodLimits':'Sampled noncoplanar segment proof only; loop nesting by itself does not classify material occupancy.'}
 
 
 def main():
@@ -233,15 +286,19 @@ def main():
             result=section(v,f,s['axis'],s['value']);result['name']=s['name'];sections.append(result)
         for s in spec['paths']:
             result=segment_hits(v,f,s['start'],s['end']);result['name']=s['name']
+            if result['clearSegmentWitness']:result['clearance']=segment_clearance(v,f,s['start'],s['end'])
             for hit in result['intersections']:
-                ids=f[hit['triangle']];uvpoint=np.asarray(hit['barycentric'])@uv[ids];hit['uv']=uvpoint.tolist()
+                ids=f[hit['triangle']];normal=np.cross(v[ids[1]]-v[ids[0]],v[ids[2]]-v[ids[0]])
+                normal=normal/np.linalg.norm(normal);direction=np.asarray(s['end'])-s['start'];direction=direction/np.linalg.norm(direction)
+                hit['geometricNormal']=normal.tolist();hit['normalDotPathDirection']=float(normal@direction)
+                uvpoint=np.asarray(hit['barycentric'])@uv[ids];hit['uv']=uvpoint.tolist()
                 hit['texturesNearestDiagnostic']={}
                 for name,im in images.items():
                     # glTF image UV origin top-left; repeat default, nearest diagnostic only.
                     h,w=im.shape[:2];x=int(np.floor((uvpoint[0]%1)*w));y=int(np.floor((uvpoint[1]%1)*h))
                     hit['texturesNearestDiagnostic'][name]=im[y,x].tolist()
             paths.append(result)
-        save(out/'sections.json',sections);save(out/'paths.json',paths)
+        (out/'sections.json').write_text(json.dumps(sections,separators=(',',':'),allow_nan=False)+'\n');save(out/'paths.json',paths)
         report={**meta,'specSHA256':digest(Path(args.spec).read_bytes()),'sections':len(sections),'paths':len(paths),
             'clearSegments':[x['name'] for x in paths if x['clearSegmentWitness']],
             'blockedSegments':[x['name'] for x in paths if x['intersections']],
