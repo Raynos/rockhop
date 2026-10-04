@@ -1893,3 +1893,11 @@ Finding: Finalize owned Rockhop workflow map and exact localai69b68e0/weights400
 Validation: Exact external commit path sets, main branches, hook configuration, resolved trailers and clean owned diffs pass. Five text-note paths hashed; documented source/evidence links exist. Runtime24 gate/file pins and playerdiff0 unchanged.
 
 Limits: No weight/runtime/symlink/inference/render/publication change; no topology repair, universal default, family winner or wearable/player pass. No task-execution blocker; direct root/bridge outbound remains unavailable.
+
+## Round 94 — Preserved movie count clarification
+
+Finding: Round92 verifies four historical films plus the reviewed causal film, five movies total; its phrase four historical/causal combined was imprecise. The three-model manifest and all individual SHA/byte pins already record the five files correctly.
+
+Validation: Manifest has Hunyuan film, TRELLIS upright/historical films, Pixal film and causal film; original fresh hash checks passed.
+
+Limits: Count wording only, no source/output/model/display/workflow change.
