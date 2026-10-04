@@ -783,3 +783,23 @@ Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate45/source.js
 Limits: No player source/promotion/deploy, whole-solid/loadbearing/art/
 phone/strangerpass. Await qualified newwearable; no sourceparameter
 or cosmeticworkaround. Existingasks278/279/288 andrider gatesopen.
+
+
+## Round46 — faithful source14 export exceeds installed skin consumption
+
+Finding: Independent frozen native/GLB comparison qualifies exact actual
+memberships,51bind and oriented topology, but installed Three consumes
+only primary four weights.188render rows/151native vertices retain unused
+second weights, max1.839313%. Explicit conditioned flag preserves source
+but supplies no second-set shader/CPU behavior. Native moving failure is
+separate; preserve this unaccepted boundary before measuring posed impact.
+
+Validation: Read-only Blender6046vertices/11840triangles/51joints and
+7123unique GLB ancestries pass, all native memberships0error. Source09rig
+exact,2517skinbytes-only delta; source13UV/indices/PBR exact, normal float
+variation explicitly measured. Targeted lint/Python syntax pass; full raw
+reports gzip round-trip exact. Evidence: garment46/finding.json.
+
+Limits: No source/weight/shader edit, new wearing/art/contact/phone pass,
+Library delivery or publication. Agent1 retains rig/native authorship;
+root alone accepts. Actual posed engine discrepancy is next unit.

@@ -1,0 +1,66 @@
+{
+  "status": "UNACCEPTED_FAITHFUL_SOURCE14_EXPORT_INSTALLED_ENGINE_ONLY_CONSUMES_PRIMARY_FOUR_WEIGHTS",
+  "pins": {
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie14/garment-rig.glb": "6042207a828883322df0ff5305eefb33fd3ecb26b0ed8fa5a13642e84b3317ad",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie14/garment-rig-raw.glb": "33c93dac87830b8d993b7260deb3667c2cbd9dd437e7090993345c46fb6fe074",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/appearance09/rider-source-normals.glb": "780983f4887f66b18dbf7a4643cb3a80f5241071124129bab3cf9e5d4b0abb8e",
+    "harness/out/user-agent3-2026-10-03/garment46/native.json": "c90317c4090f02323834eb84e29d74371dce80b2ac4abacabc09e94a1e7248cb"
+  },
+  "codeSHA256": "2fcfe09da384adaea043e6f47804b1f9d8ab48995e44ba4e4f8bedc480a429f2",
+  "rows": 7123,
+  "nativeVertices": 6046,
+  "triangles": 11840,
+  "original51RigAndInverseBindsExact": true,
+  "orientedNativeTriangleCyclesExact": true,
+  "onlyChangedRawExportBytes": 2517,
+  "maximumRestResidualM": 0,
+  "maximumNativeWeightDifference": 0,
+  "maximumWeightSumError": 4.842877388000488e-08,
+  "source13RestSHA256": "deb7c56fdb4a8f0c16d083ad84dbe7e8f2fc5bfea2717acb8544195d8cb50f58",
+  "source13UVOrientedIndicesEmbeddedPBRExact": true,
+  "maximumSource13RestWorldResidualM": 2.9802322387695312e-08,
+  "source13ChangedNormalRows": 1415,
+  "maximumSource13NormalComponentDifference": 1.1920928955078125e-07,
+  "maximumSource13NormalDirectionCross": 3.367693533149923e-08,
+  "actualLoaderAttributeNames": [
+    "position",
+    "normal",
+    "uv",
+    "skinIndex",
+    "joints_1",
+    "skinWeight",
+    "weights_1"
+  ],
+  "explicitOwnerFlagPreservesSkinField": true,
+  "secondarySetRows": 188,
+  "secondarySetNativeVertices": 151,
+  "maximumSecondWeightSum": 0.018393130507320166,
+  "maximumLoaderRestResidualM": 6.535343949428656e-07,
+  "installedShaderSHA256": "4422467001348636551ce64f1e6631d8a5032b7ac2788596c2dc5269618c7602",
+  "installedLoaderSHA256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+  "limits": [
+    "Actual disk export preserves all native memberships; installed loader normalizes primary WEIGHTS_0 while shader/readback consume four slots.",
+    "Secondary accessor retention is not secondary influence consumption. Actual posed discrepancy is measured in the following engine unit.",
+    "Source13 rest-export NORMAL rows have explicitly measured Float32 variation; no byte-exact normal preservation claim across rest and rigged exports.",
+    "Node loader omits image decoding only; raw embedded image/material signatures remain separately pinned, no art judgment.",
+    "No candidate/source/weight/shader modification or normal-player promotion. Native moving wearing failure remains separate."
+  ],
+  "archives": {
+    "native-fields.json.gz": {
+      "bytes": 490663,
+      "SHA256": "c00777902834fd78f6620c22e3db13959b80732ced8e3a16c6396521323e9877",
+      "rawBytes": 1699053,
+      "rawSHA256": "c90317c4090f02323834eb84e29d74371dce80b2ac4abacabc09e94a1e7248cb"
+    },
+    "export-audit.json.gz": {
+      "bytes": 240233,
+      "SHA256": "046634c2bc195b81fd9c9be670b89d0910766ac86501ec76a92c3b8c413a88f5",
+      "rawBytes": 1782696,
+      "rawSHA256": "c4486ec9078e22c4916ee17bcda31e1b9c8a219d35b809fb9faa8d175b9ad9a4"
+    }
+  },
+  "preflightCorrection": [
+    "Initial QA byte-range guard incorrectly covered only WEIGHTS; corrected to cover exactly both JOINTS and both WEIGHTS accessor ranges. Actual owner claim is skin bytes, not weights-only bytes.",
+    "Initial exact-normal assertion rejected Float32 differences across separate rest/rigged exports; report now explicitly measures changed rows, component differences and direction residual. No source, contact tolerance or memberships changed."
+  ]
+}
