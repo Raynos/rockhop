@@ -1,0 +1,355 @@
+{
+  "status": "UNACCEPTED actual donor ambient measured-lumen flow",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie21/affine-envelopes.blend": "a42f7d18c365f1939cd3d55857064357fc54176bef4b52c4470a40cf764d0982",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie21/construction.json": "ddb610c793915efd2fc4f8bd1ce21635ec019b64530e35514b6bc2766caaf5fc",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie21/affine-envelope-field.npz": "c9d89909d9c41bc3910fec8b822d661c4346c7972387546d98d266bcce186012",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie18/envelopes69/sections.json.gz": "784f899e4299736286ccc8d39ab6b81d79b6e29100dacd437d8200aeb4c1f7ab"
+  },
+  "recipeSHA256": "3b25ce7bff43279ad3e2a097dde9f00e78d2419925250e465e36ffece8ffdd6d",
+  "candidateSHA256": "c50417a78f90b1e7376ff6166275b92379bd23e7146832ebf34ebb5bfa50f3cc",
+  "fieldSHA256": "ae3d357122bdaaf18284050233abd19b0e409afebed5545ab2fd9c7ae161a584",
+  "method": "One stationary ambient field: normalized smooth spatial Gaussian kernels from measured air contours blend affine-log infinitesimal generators. 32-step RK4 forward and inverse; source alpha/forearm attributes are not used as displacement blend weights. One construction, fixed controls/integration, no radius/density/cap search.",
+  "reference": {
+    "url": "https://arxiv.org/abs/2410.10997",
+    "use": "SVF/invertible flow mathematical motivation only; no neural model, training, package or published clinical pipeline reproduction."
+  },
+  "generators": {
+    "forearm.L": {
+      "scaleFromConservativeControl": 1.6020944871792315,
+      "velocityMatrix": [
+        [
+          0.19014715232884125,
+          0.19931686783427943,
+          0.18943375088304124
+        ],
+        [
+          0.14962281747371775,
+          0.36524462342980607,
+          -0.10080787132553079
+        ],
+        [
+          0.12479460943760545,
+          -0.08846656134173783,
+          0.3872318738691446
+        ]
+      ],
+      "velocityOffsetM": [
+        -0.1603691429890566,
+        0.2636358857821565,
+        -0.515416153819416
+      ],
+      "isolatedAffineMatrix": [
+        [
+          1.2429104160965083,
+          0.2546246036698277,
+          0.2419990553954895
+        ],
+        [
+          0.19114112625372162,
+          1.466595067913039,
+          -0.12878069258244554
+        ],
+        [
+          0.15942342619291494,
+          -0.11301483594655609,
+          1.4946834830569125
+        ]
+      ],
+      "isolatedAffineOffsetM": [
+        -0.20486941179714674,
+        0.33679127943270115,
+        -0.6584371674975964
+      ],
+      "kernelCenterM": [
+        0.11275937492216248,
+        -0.4345534833471166,
+        1.198290339829959
+      ],
+      "kernelAxis": [
+        0.7149298191070557,
+        -0.506811797618866,
+        -0.48168158531188965
+      ],
+      "kernelAxialSigmaM": 0.11480904042720792,
+      "kernelRadialSigmaM": 0.05378189586097139,
+      "radialSigmaMethod": "Median equivalent-area radius of actual selected air contours",
+      "axialSigmaMethod": "Half measured station-span length"
+    },
+    "forearm.R": {
+      "scaleFromConservativeControl": 1.2363808523091546,
+      "velocityMatrix": [
+        [
+          0.06627278462765607,
+          -0.10343920677939547,
+          0.09831017987043995
+        ],
+        [
+          -0.06264918253860235,
+          0.1677766148547471,
+          0.04220967298260245
+        ],
+        [
+          0.03244687178980145,
+          0.023001498260622952,
+          0.19032747411474418
+        ]
+      ],
+      "velocityOffsetM": [
+        -0.07886758505991212,
+        -0.11759113362577547,
+        -0.24078431407378975
+      ],
+      "isolatedAffineMatrix": [
+        [
+          1.0738287956795805,
+          -0.11523270231483483,
+          0.10951889563198837
+        ],
+        [
+          -0.0697920529991588,
+          1.1869054618349884,
+          0.047022157584638624
+        ],
+        [
+          0.03614626247063005,
+          0.02562398614980027,
+          1.2120274299258014
+        ]
+      ],
+      "isolatedAffineOffsetM": [
+        -0.08785957698690583,
+        -0.13099814391328168,
+        -0.26823704521362984
+      ],
+      "kernelCenterM": [
+        0.11294721380502817,
+        0.4345811315677698,
+        1.1985981244106396
+      ],
+      "kernelAxis": [
+        0.7149298787117004,
+        0.506811797618866,
+        -0.48168158531188965
+      ],
+      "kernelAxialSigmaM": 0.11480904042720792,
+      "kernelRadialSigmaM": 0.052759798180745686,
+      "radialSigmaMethod": "Median equivalent-area radius of actual selected air contours",
+      "axialSigmaMethod": "Half measured station-span length"
+    },
+    "torso": {
+      "scaleFromConservativeControl": 1.2026252048862693,
+      "velocityMatrix": [
+        [
+          0.18450683806515952,
+          0.0,
+          0.00902973819912304
+        ],
+        [
+          0.0,
+          0.18450683806515952,
+          0.006011715691262409
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "velocityOffsetM": [
+        -0.017673971032603583,
+        -0.007364279508783837,
+        0.0
+      ],
+      "isolatedAffineMatrix": [
+        [
+          1.2026252048862693,
+          0.0,
+          0.00991644847341933
+        ],
+        [
+          0.0,
+          1.2026252048862693,
+          0.006602059503235641
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "isolatedAffineOffsetM": [
+        -0.01940953538193839,
+        -0.008087443587213314,
+        0.0
+      ],
+      "kernelCenterM": [
+        0.03505705859822192,
+        -0.00017969887682716713,
+        1.2577419354838713
+      ],
+      "kernelAxis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "kernelAxialSigmaM": 0.217741935483871,
+      "kernelRadialSigmaM": 0.15484133927612256,
+      "radialSigmaMethod": "Median equivalent-area radius of actual selected air contours",
+      "axialSigmaMethod": "Half measured station-span length"
+    },
+    "upperArm.L": {
+      "scaleFromConservativeControl": 1.246504366360671,
+      "velocityMatrix": [
+        [
+          0.21975818979691353,
+          -0.044709226177558375,
+          -0.05128695668729857
+        ],
+        [
+          -0.001320124651864814,
+          0.11944039182921687,
+          -0.11574779273569927
+        ],
+        [
+          -0.0013555679098069384,
+          -0.10361182062239362,
+          0.10148768638839385
+        ]
+      ],
+      "velocityOffsetM": [
+        0.05071615823520871,
+        0.18902629507473068,
+        -0.1653614450100835
+      ],
+      "isolatedAffineMatrix": [
+        [
+          1.2458499799720464,
+          -0.05001753231802781,
+          -0.057376233787017866
+        ],
+        [
+          -0.0014768624528692185,
+          1.1336214953636223,
+          -0.12949047565498237
+        ],
+        [
+          -0.0015165138727469853,
+          -0.11591360507848741,
+          1.113537273350558
+        ]
+      ],
+      "isolatedAffineOffsetM": [
+        0.05673766469367007,
+        0.21146930133188296,
+        -0.18499473435528196
+      ],
+      "kernelCenterM": [
+        0.02049016080191121,
+        -0.2999892924676849,
+        1.3319634809478411
+      ],
+      "kernelAxis": [
+        -0.008596803061664104,
+        -0.6570901870727539,
+        -0.7537629008293152
+      ],
+      "kernelAxialSigmaM": 0.08742919474840163,
+      "kernelRadialSigmaM": 0.06120866774225256,
+      "radialSigmaMethod": "Median equivalent-area radius of actual selected air contours",
+      "axialSigmaMethod": "Half measured station-span length"
+    },
+    "upperArm.R": {
+      "scaleFromConservativeControl": 1.4631371305781642,
+      "velocityMatrix": [
+        [
+          0.380103016768402,
+          0.03667612082418294,
+          -0.042072000755222536
+        ],
+        [
+          0.0021662390855202913,
+          0.2150061018772839,
+          0.18993680196232976
+        ],
+        [
+          -0.002446683472421149,
+          0.18701255555998955,
+          0.16605653857196753
+        ]
+      ],
+      "velocityOffsetM": [
+        0.038211482013551026,
+        -0.31533945502092353,
+        -0.27533186970583473
+      ],
+      "isolatedAffineMatrix": [
+        [
+          1.4625532140108242,
+          0.04463173617748937,
+          -0.05119806555245358
+        ],
+        [
+          0.0026361296993698997,
+          1.2616442360831686,
+          0.23113701899436362
+        ],
+        [
+          -0.0029774067921305865,
+          0.22757845851920117,
+          1.2020767587613665
+        ]
+      ],
+      "isolatedAffineOffsetM": [
+        0.04650014085064252,
+        -0.3837414384775159,
+        -0.3350555918624596
+      ],
+      "kernelCenterM": [
+        0.02008996473789186,
+        0.2936290681200945,
+        1.3369681149209416
+      ],
+      "kernelAxis": [
+        -0.00859670527279377,
+        0.6570902466773987,
+        -0.75376296043396
+      ],
+      "kernelAxialSigmaM": 0.09537729263305664,
+      "kernelRadialSigmaM": 0.0619154972830879,
+      "radialSigmaMethod": "Median equivalent-area radius of actual selected air contours",
+      "axialSigmaMethod": "Half measured station-span length"
+    }
+  },
+  "isolatedAffineGeneratorClosureMaxM": 1.0546067943383893e-08,
+  "isolatedAffineGeneratorClosureByBranchM": [
+    1.220804775438592e-09,
+    1.769960803712439e-09,
+    1.156536895334057e-12,
+    1.9313952489084185e-09,
+    1.0546067943383893e-08
+  ],
+  "maximumForwardInverseRoundtripM": 5.799481849880841e-13,
+  "finiteDifferenceEpsilonM": 1e-05,
+  "sampledJacobianDeterminantPercentiles": [
+    0.9375255800025243,
+    1.4422486571606727,
+    2.0616032649165197,
+    2.558335394967779
+  ],
+  "nonPositiveSampledJacobians": 0,
+  "vertices": 12443,
+  "triangles": 24400,
+  "maximumDeltaM": 0.04285820093759189,
+  "bodyPairs": 46,
+  "selfPairs": 0,
+  "fixedPreviousTessellationBodyPairs": 46,
+  "fixedPreviousTessellationSelfPairs": 0,
+  "changedLoopTriangles": 86,
+  "polygonCyclesUVOriginalMaterialExact": true,
+  "limits": [
+    "Exact smooth velocity flows motivate global invertibility; numerical RK4, finite Jacobian samples and inverse consistency do not prove an entire rendered triangulated surface is free of contacts. Native contact results remain gates.",
+    "Spatial kernel widths are measured area/coverage proxies, not verified physical cages; blended flow need not retain individual isolated4mm section guarantees. Unsupported wearer regions and actual ports remain open.",
+    "Dimensions/wall thickness/hood silhouette change; chosen source folds/UV/PBR retained, played appearance unaccepted. No rig/skin/motion/runtime collision response/capture/inference/worker/body-head-51bind replacement, Library/player promotion or M0-M5/mobile acceptance. Parent alone judges."
+  ]
+}

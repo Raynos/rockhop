@@ -627,3 +627,11 @@ Finding: Source21 unchanged affine maps +specified P1construction params on80fix
 Validation: Exact input/native/PBR pins, source21 vertex closure within0.1µm, archive SHA/ZIP integrity pass. First inherited tuple-style vector indexing tripped closure assertion before output; corrected helper return andfull readonly rerun pass. Silent ship75 cold1479ms/4810identicalticks/40.083333s/crash103/restart1tick/frame2.200ms/errors0; Blender/diff/hooks pass. No newnative/model save.
 
 Limits: Finite32sampling not exact curved-distance or whole-volume folding proof. Native21 still459body/79actualself(fixed80), no wearer/rig/mobile/art/M0–M5 acceptance. Originalcontrols/body/head/51bind retained, no capture/inference/worker/Library/player promotion; parentsolejudge.
+
+### Round76 — one ambient flow avoids donor self crossings
+
+Finding: Source22 integrates one stationary ambient field with measured spatial kernels and affine-log generators, replacing source-attribute displacement blending. Native and fixed source18 tessellation both46body/0self; 86loop triangles retessellate. Wearing stillFAILS:22left-upper-arm/15right-hand/9right-forearm pairs. Actual donor cycles/UV/original PBR retained, no stock-pattern fallback or parameter sweep.
+
+Validation: Saved positions/triangles/all46contact witnesses reproduce archive exactly. Ideal inverse maximum0.58pm; actual saved float32 native inverse64.92nm; isolated affine-generator closure10.55nm. All12443sampled Jacobians positive/min0.937526. Independent27scoped original meshes/18graphs/17images/51rest+pose exact. Maxdelta42.858201mm; Blender audits complete. Source/native and field digests pinned; diff/hooks pass.
+
+Limits: Finite Jacobians/inverse accuracy are not whole-volume or rendered-surface proof; measured Gaussian widths do not preserve isolated4mm bounds. Hash scope excludes normals/genericattrs/shapekeys/modifiers/rigworld. Native wearer ports and46body contacts need diagnosis; no new capture/rig/motion/body change/inference/worker/Library/player promotion. Played art/M0–M5/mobile allopen; parentsolejudge.
