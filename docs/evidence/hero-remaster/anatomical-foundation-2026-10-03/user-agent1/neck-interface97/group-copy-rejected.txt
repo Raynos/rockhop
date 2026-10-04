@@ -1,0 +1,11 @@
+00:00.676  blend            | Read blend: "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/native-four-with-full-control.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_local_neck_join.py", line 255, in <module>
+    for j in np.flatnonzero(weight > 0): candidate.vertex_groups[names[j]].add([i], float(weight[j]), 'REPLACE')
+                                         ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'bpy_prop_collection[key]: key "chest" not found'
+
+Error: script failed, file: 'assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_local_neck_join.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

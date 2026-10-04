@@ -794,3 +794,9 @@ Finding: Frozen exact neck59 scope has outer183/inward190 directed loops; every3
 Validation: Proposal/source/assessment/witness hashes pass; all lower-loop aliases and boundary faces admitted; weights of each source alias identical;663one-corner incident faces retained. Normal-source ship outcome recorded below.
 Limits: Diagnostic position quotient is not physical sewing. No candidate geometry/weight/bind/capture; outside fields, face/cheek/original51bind and failed controls protected. All M0–M5 open. Ask274.
 Validation: Ship96 normal-source PASS:1548.437ms cold,4810identical ticks,40.083333333s/0faults clear,crash103/restart1tick/frame2.265ms/errors0; syntax and whitespace pass.
+
+## 2026-10-04 Round97 — checkpoint the bounded join before triangulation correction
+
+Finding: One ordered outer238-knot join and separate190triangle inward cap preserve head positions;56body boundary positions conform locally. Automatic split-ngon tessellation creates6four-incidence internal chords: REST FAIL, frozen unaccepted.
+Validation: Reopen34originals/17packed images/original51bind-pose exact; outside positions/weights/corner attributes and unsplit polygons exact. Perimeter238edges and inner383edges have2opposed incidences; none of684body/2433head local triangles has area≤1e-14m². Three prewrite implementation guard failures and first failing topology recipe retained.
+Limits: Rest collisions, all529native/703actual47, full/four loss and one matched played proof pending. Source26 garment unchanged/failed;490contacts not waived. Deterministic same-field local polygon triangulation correction remains within admitted scope; no new shape/weight sweep. All M0–M5 open; Ask274.
