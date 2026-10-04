@@ -1837,3 +1837,11 @@ Finding: Fresh analytic-gated adapter applied to frozen Pixal bytes; 983864 safe
 Validation: Guard0/5.791s; raw archive/vertex positions/per-row triangle sets/derived archive hash exact. Boundary and nonmanifold edges retained.
 
 Limits: Derived display only, no topology repair, extraction/inference or band-cause verdict yet.
+
+## Round 87 — Unaccepted matched causal display recipe
+
+Finding: Checkpoint same-camera/light gray averaged/flat/bounded-derived normal comparison of frozen TRELLIS and Pixal, protecting ambiguous patches. Original frame0 reproduction is an explicit causal baseline gate.
+
+Validation: Both source ASTs parse; analytic control and actual derived receipts already committed. Runtime24 gate/file pins and playerdiff0 unchanged.
+
+Limits: Execution pending; no geometry/material/source repair or global winding proof. Hunyuan remains selected; Pixal1024 alternative/prior1536 stops retained.
