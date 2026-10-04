@@ -1829,3 +1829,11 @@ Ask:284–286 oneauthorizedcausaldisplaycomparison.
 Limits: Contradictorypatch covers mostgarment; derivedcondition cannot
 isolatewinding there. Flatcondition stilltestssmooth interpolation; render
 pending. No globalmeshrepair, cleanup, normals acceptance or donor switch.
+
+## Round 86 — Pixal bounded derived orientation
+
+Finding: Fresh analytic-gated adapter applied to frozen Pixal bytes; 983864 safe row flips. Contradictory patches retain 3379190 original rows. Native anchors on open patches have no outward claim.
+
+Validation: Guard0/5.791s; raw archive/vertex positions/per-row triangle sets/derived archive hash exact. Boundary and nonmanifold edges retained.
+
+Limits: Derived display only, no topology repair, extraction/inference or band-cause verdict yet.

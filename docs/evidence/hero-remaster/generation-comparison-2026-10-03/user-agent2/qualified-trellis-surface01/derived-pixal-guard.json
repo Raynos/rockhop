@@ -1,0 +1,74 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/check_orientation_controls.py",
+    "--derived-family",
+    "pixal",
+    "--causal-controls-receipt",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-controls.json",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/derived-pixal01/control"
+  ],
+  "controllerPID": 70841,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 600.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 33.4,
+      "wiredGiB": 6.6,
+      "freeGiB": 34.0
+    },
+    {
+      "seconds": 0.027,
+      "anonymousGiB": 33.5,
+      "wiredGiB": 6.6,
+      "freeGiB": 34.0
+    },
+    {
+      "seconds": 1.06,
+      "anonymousGiB": 35.3,
+      "wiredGiB": 6.1,
+      "freeGiB": 32.6
+    },
+    {
+      "seconds": 2.098,
+      "anonymousGiB": 35.9,
+      "wiredGiB": 5.9,
+      "freeGiB": 32.4
+    },
+    {
+      "seconds": 3.132,
+      "anonymousGiB": 35.6,
+      "wiredGiB": 6.1,
+      "freeGiB": 32.4
+    },
+    {
+      "seconds": 4.168,
+      "anonymousGiB": 35.6,
+      "wiredGiB": 6.1,
+      "freeGiB": 32.4
+    },
+    {
+      "seconds": 5.199,
+      "anonymousGiB": 35.4,
+      "wiredGiB": 6.2,
+      "freeGiB": 32.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 70845,
+  "exitCode": 0,
+  "elapsedSeconds": 5.791
+}
