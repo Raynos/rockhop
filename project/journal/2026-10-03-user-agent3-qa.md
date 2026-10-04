@@ -1611,3 +1611,20 @@ hash368f1ca5bd9e830a/Float64LEabaaaaaaaa0a4440. Crash103restarttick0, actualms
 Limits: No new candidate/solve/sourceedit/pose/capture/render/upload/push/
 normaltest or expansion. Parent owns ask275/index/admission; allgatesopen.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate81/
+
+
+## 2026-10-04 Round82 — pin frozen hand107 cause audit
+
+Finding: Root assigns existingAgent3 one independentread-only frozenhand107
+transfer/anatomy/contact/wrist diagnosis; native scaleexact derivative is
+authoritative, initialroundedscale save remains failedcontrol.
+
+Validation: All48handoff/source/driver/recipe/evidencepins exact, including
+628f497dhand107handoff/fff18488native/c5df9e6bcandidatefields.105stream
+contains1065actualchassis/bone observations, separate from old streams.
+Mandatorynormalgate81passes beforeQA.
+
+Limits: No sourceedit/fit/weight/normal/pose solve/candidate/sweep/render/
+capture/expansion/delivery/promotion. Agent1 frozen; no competingrepair or
+routineprompt. Parent owns ask275/index/rootjudgment; allM0–M5gatesopen.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/hand82/
