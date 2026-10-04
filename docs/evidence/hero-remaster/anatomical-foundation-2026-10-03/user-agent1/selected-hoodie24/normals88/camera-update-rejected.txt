@@ -1,0 +1,15 @@
+00:01.725  blend            | Read blend: "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.blend"
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/render_actual_donor_rest_review.py:16: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('Actual donor matched neutral studio');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.075,.075,.075,1);world.node_tree.nodes['Background'].inputs[1].default_value=.65;scene.world=world;target=Vector((.65,0,1.38))
+/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/render_actual_donor_rest_review.py:19: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  cd=bpy.data.cameras.new('Actual donor matched rest camera');cd.type='ORTHO';cd.ortho_scale=1.72;camera=bpy.data.objects.new(cd.name,cd);bpy.context.collection.objects.link(camera);scene.camera=camera;white=bpy.data.materials.new('Actual donor comparison legend');white.use_nodes=True;nt=white.node_tree;nt.nodes.clear();em=nt.nodes.new('ShaderNodeEmission');em.inputs[0].default_value=(1,1,1,1);output=nt.nodes.new('ShaderNodeOutputMaterial');nt.links.new(em.outputs[0],output.inputs['Surface']);font=bpy.data.curves.new('Actual donor comparison legend','FONT');font.size=.028;font.materials.append(white);legend=bpy.data.objects.new(font.name,font);bpy.context.collection.objects.link(legend);legend.parent=camera;legend.location=(-.81,.78,-2)
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/render_frozen_normal_comparison.py", line 28, in <module>
+    oldFrame=reuseData['frames'][index];yaw=oldFrame['yawRadians'];camera.location=target+Vector((4*math.cos(yaw),4*math.sin(yaw),.30));camera.rotation_euler=(target-camera.location).to_track_quat('-Z','Y').to_euler();assert np.array_equal(np.array([list(r) for r in camera.matrix_world]),np.array(oldFrame['cameraWorldRows']));existing=reuse.parent/'fitted24'/f'{index:04d}.png';oldHash=next(v['PNG_SHA256'] for v in oldFrame['views'] if v['variant']=='fitted24');assert sha(existing)==oldHash;shutil.copyfile(existing,out/'flat'/f'{index:04d}.png');views=[{'variant':'flat','PNG_SHA256':oldHash,'reusedFrom':str(existing)}]
+                                                                                                                                                                                                                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/render_frozen_normal_comparison.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

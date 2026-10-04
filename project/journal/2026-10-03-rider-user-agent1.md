@@ -723,3 +723,11 @@ Finding: Source24all19878polygons flat/0smooth/nocustomnormals/0sharpedges;63968
 Validation: OriginalGLB/source24/fieldpins exact; original16/18normalflags auditedreadonly. Silentnormalship87cold1484ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame3.190ms/errors0. Blender/diff/hooks pass.
 
 Limits: No source/normal/geometry mutation. Controllednormals-only comparison warranted onfixedgeometry, notblind mesh smoothing or crease erasure. Sameprotectedbody/opaqueunderwear+24coverage next beforebroadrig; parentsolejudge/no newbody/recolor/shrink/globalredo/inference/promotion/publication/duplicateLibrarydelivery/allM0–M5open.
+
+### Round88 — frozen-geometry normal display comparison, no adoption
+
+Finding: CURRENTFLAT reuses48actual24pixels from85; ALLSMOOTH and30°crease-preserving controls changeonly shading/2671sharpedges. Samevertices/triangles/polygoncycles/UV/exactoriginalPBR, no geometrysmoothing/subdivision/shrink. One26.666667s1920×640silentmovie SHA723d26c3c764d63cc89c9f176b736b267b1de100e29fbb73671145de4d13d3b3/1481441bytes readyforrootplayedjudge.
+
+Validation: Allgeometry/UV/material identity andcamera matrices exact, archivednormalbuffers. Lazycamera update assertion stoppedbeforefirstrender; viewlayerupdate added/fullsame rerun pass/preliminaryNPZexactreused. Fullffmpegdecode640frames/0errors; silentheadless fullplay639callbacks/0drops/page+mediaerrors0. Source24/inputpins unchanged/Blender/diff/hooks pass.
+
+Limits: Displaycontrols only/normaladoption andart verdict pending. All-smooth can concealcrease shading;30° preservesactual2671edges butcoarsegeometry/inflation untouched. Nextsameprotectedbody/opaqueunderwear/all24coverage inspection; no source save/recolor/body-head-51bind change/rig/inference/worker/Libraryupload/publication/promotion/allM0–M5open.
