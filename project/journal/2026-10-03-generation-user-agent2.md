@@ -1861,3 +1861,11 @@ Finding: Original averaged frame0 reproduces historical pixels exactly; flat/raw
 Validation: Guard0/54.215s;49 PNG hashes verified, arrays/material readback and raw/derived archives unchanged. Baseline maximum RGB difference0.
 
 Limits: Technical rendering only; film/actual band comparison pending. Pixal1024 alternative and1536 stops retained; Hunyuan selected.
+
+## Round 90 — Actual contour bands respond to averaged-normal display
+
+Finding: Matched moving gray comparison of frozen bytes shows flat normals strongly suppress fine chest/back/hood contour lines in both models while major folds remain. Bounded-derived averaged displays retain prominent rear/hood bands; protected contradictory patches prevent a whole-mesh winding-only verdict. Hunyuan remains selected.
+
+Validation: Encode guard0/2.312s; silent24frames/4fps/6s/1536x1152, all frames decoded. Both historical frame0 replicas pixel exact;49 render hashes each family and three historical film hashes pass. Runtime24 gate/player pins and playerdiff0 unchanged.
+
+Limits: Technical multiangle observation only, parent aesthetic judgment pending; no topology/intersection/CUDA/fit/rig/game-ready proof. Pixal1024 alternative/prior1536 memory stop retained. No inference/cleanup/recolor/installed edit/donor switch/publication.
