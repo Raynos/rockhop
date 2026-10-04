@@ -1,0 +1,37 @@
+ling::  30%|███       | 9/30 [00:09<00:18,  1.12it/s]
+Diffusion Sampling::  33%|███▎      | 10/30 [00:09<00:17,  1.11it/s]
+Diffusion Sampling::  37%|███▋      | 11/30 [00:10<00:17,  1.11it/s]
+Diffusion Sampling::  40%|████      | 12/30 [00:11<00:16,  1.10it/s]
+Diffusion Sampling::  43%|████▎     | 13/30 [00:12<00:15,  1.09it/s]
+Diffusion Sampling::  47%|████▋     | 14/30 [00:13<00:14,  1.08it/s]
+Diffusion Sampling::  50%|█████     | 15/30 [00:14<00:14,  1.07it/s]
+Diffusion Sampling::  53%|█████▎    | 16/30 [00:15<00:13,  1.06it/s]
+Diffusion Sampling::  57%|█████▋    | 17/30 [00:16<00:12,  1.06it/s]
+Diffusion Sampling::  60%|██████    | 18/30 [00:17<00:11,  1.05it/s]
+Diffusion Sampling::  63%|██████▎   | 19/30 [00:18<00:10,  1.04it/s]
+Diffusion Sampling::  67%|██████▋   | 20/30 [00:19<00:09,  1.03it/s]
+Diffusion Sampling::  70%|███████   | 21/30 [00:20<00:08,  1.03it/s]
+Diffusion Sampling::  73%|███████▎  | 22/30 [00:21<00:07,  1.02it/s]
+Diffusion Sampling::  77%|███████▋  | 23/30 [00:22<00:06,  1.01it/s]
+Diffusion Sampling::  80%|████████  | 24/30 [00:23<00:05,  1.00it/s]
+Diffusion Sampling::  83%|████████▎ | 25/30 [00:24<00:05,  1.00s/it]
+Diffusion Sampling::  87%|████████▋ | 26/30 [00:25<00:04,  1.01s/it]
+Diffusion Sampling::  90%|█████████ | 27/30 [00:26<00:03,  1.02s/it]
+Diffusion Sampling::  93%|█████████▎| 28/30 [00:27<00:02,  1.04s/it]
+Diffusion Sampling::  97%|█████████▋| 29/30 [00:28<00:01,  1.05s/it]
+Diffusion Sampling:: 100%|██████████| 30/30 [00:29<00:00,  1.06s/it]
+Diffusion Sampling:: 100%|██████████| 30/30 [00:29<00:00,  1.01it/s]
+2026-10-04 12:22:46,006 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+
+FlashVDM Volume Decoding:   0%|          | 0/32 [00:00<?, ?it/s]
+FlashVDM Volume Decoding:   3%|▎         | 1/32 [00:00<00:15,  1.98it/s]
+FlashVDM Volume Decoding: 100%|██████████| 32/32 [00:00<00:00, 61.95it/s]
+/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:362.)
+  sliced = padded[slice_dims]
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/shape_item.py", line 188, in <module>
+    main()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/shape_item.py", line 176, in main
+    assert metrics['validGeometryArrays'], 'Invalid raw retained; no display export'
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Invalid raw retained; no display export

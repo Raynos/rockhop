@@ -1,0 +1,63 @@
+{
+  "accepted": false,
+  "round": 125,
+  "item": "gloves",
+  "phase": "shape01",
+  "finding": "The single glove seed completed all30shape steps and saved actual original native arrays/latents before sparse native MC validation stopped export. Preserve this original result before same-latent finite-cell extraction.",
+  "validation": "Guard worker exit1/native validity assertion after54.985s, with no resource denial. Actual processor/features/noise and finite sampled latent arrays remain saved; original raw native output retained without cleanup.",
+  "limits": "Unaccepted source; no repeat sampling, seed/reference change, geometry repair, PBR, fit, rig, art acceptance or publication.",
+  "guardStatus": "worker returned; review pending",
+  "guardExitCode": 1,
+  "guardSeconds": 54.985,
+  "peakHostAnonymousGiB": 54.3,
+  "peakHostCombinedGiB": 75.5,
+  "scratchRoot": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01",
+  "rawFiles": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/actual-conditioned-features.npz",
+      "bytes": 2597256,
+      "sha256": "3639ae6160d89f3c6b1e8dd9bca1ed4a203a8766f7515e7397c0ae5982cb25c6"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/actual-initial-noise.npz",
+      "bytes": 483975,
+      "sha256": "ea419f18581d4dec83c7b6c05453ce6a67ae2bff6542bc211806ae50b48334fa"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/actual-processor-tensors.npz",
+      "bytes": 320528,
+      "sha256": "85b49a4b93dda6f24f3ee10afdb15be77c3749db4550edd0244a9815decd8638"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/actual-sampled-latents.npz",
+      "bytes": 483300,
+      "sha256": "6a4056d821185a30ceb83746618c6757f628f163c6c1c7c49b6dbb7e3605c4e4"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/conditioned-input.png",
+      "bytes": 166773,
+      "sha256": "5809ddc0ff3772e861fc62a22bbf65fd169f6a7c5a70e9048cb451bac549efce"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/native-audit.json",
+      "bytes": 450,
+      "sha256": "7e11bb6c26b3b31f52833ba0982f66d600903a055abe72a12221c73a952893de"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/native.npz",
+      "bytes": 5775672,
+      "sha256": "8980ecc410a4d4f9bf2f68a9244ca9a1ee013da524d20bfb8a7eb5181bfa3fdf"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/progress.json",
+      "bytes": 5739,
+      "sha256": "2b5ea83fd7d2d357eb86f7027e1ed57eefe1417ccb505fcfaff5ed9b7e9bc73c"
+    }
+  ],
+  "originalWorkerLog": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01-guard/worker.log",
+    "sha256": "4ab1b0697aafe11ada4696922e16fee5429779cf549e38d7d8f3cef9803d6f73"
+  },
+  "noCleanupRemeshReductionOrPlayerReplacement": true,
+  "oneReferenceSeedCandidatePerItem": true
+}

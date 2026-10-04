@@ -229,3 +229,11 @@ Finding: Installed Hunyuan preprocessing consumes the single selected black five
 Validation: Fresh idle canonical lease and31.8GiB anonymous admission; guard exit0. Original reference and installed processor hashes match; finite actual512RGB/image-mask tensors are saved.
 
 Limits: Single glove source only; handedness/palm anatomy, opening, grip fit, rig, physics and art acceptance remain unproven. No added candidate, alpha edits, player promotion or publication.
+
+## Round 125 — gloves shape01 checkpoint
+
+Finding: The single glove seed completed all30shape steps and saved actual original native arrays/latents before sparse native MC validation stopped export. Preserve this original result before same-latent finite-cell extraction.
+
+Validation: Guard worker exit1/native validity assertion after54.985s, with no resource denial. Actual processor/features/noise and finite sampled latent arrays remain saved; original raw native output retained without cleanup.
+
+Limits: Unaccepted source; no repeat sampling, seed/reference change, geometry repair, PBR, fit, rig, art acceptance or publication.
