@@ -691,3 +691,11 @@ Finding: Source24 fitted-native finitepolylines have exhaustive minimumclearance
 Validation: Reuse unchanged committedf29ef741distancecode SHA199bf90f; annularandrotated/translatedanalytic controls within1e-10, caphit/coplananarity rejectclear. Initialearlierreceipt recipepin mismatch refusedbeforenativeload; correctcommittedblob verifiedthenpinned. Source/native24/field immutable0body/0self; Blender/diff/hooks pass.
 
 Limits: Connectedfiniteair corridors only, no fullanatomicalcapsule/coverage/physicalfabric thickness/ease/formalintervalcertificate. No source save/capture/rig/motion/body-head-51bind change/inference/worker/Library/player promotion or art/M0–M5/mobile acceptance; parentsolejudge.
+
+### Round84 — unchanged historical coverage mask retains24misses
+
+Finding: Actualdonor24 underexacthistoricalmask/raycode1937rays/24misses:3chest/3upperL/3upperR/9foreL/6foreR. Fullmiss coordinates/normals/weights andallrays retained. ChestnearZ1.479..1.481, sixupperarmsY±.187..194/Z1.382..1.385,15wristregion; no exclusions or intentional-exposure claim. Native0body/0self/finiteportspositive do not erase coveragefailure.
+
+Validation: Frozen source/field pins/exacthistoricalfragment reused. Initialdominance includednondeformside tags; correctedt51boneclasses andrerunwithoutmaskchange. Silentnormalship84cold1505ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame3.250ms/errors0; Blender/diff/hooks pass.
+
+Limits: Directional20cmcoverageproxy notcompletebodycontainment/wallnesting/actualhole diagnosis. RootviaauthorizedBridge nowrequests one matchedactual24restorbit AFTERthischeckpoint BEFOREbroadrig; noexistingequivalentbytes. Preserveallmisses/originalUVPBR/no newbody/inference/publication/promotion; parentsolejudge/allart/rig/M0–M5/mobile open.
