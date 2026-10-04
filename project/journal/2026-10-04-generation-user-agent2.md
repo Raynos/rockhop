@@ -47,3 +47,11 @@ Finding: All9hem→above paths clear1.8native units; central minimum triangle di
 Validation: Guard exit0/5.853s,37segments/6sections; tube clearance0.6966293086705376 matches analytic expectation within3e-16. No coplanar ambiguity; original triangle/UV/PBR/normals retained. Third-round runtime24 reuse pins/playerdiff unchanged.
 
 Limits: Float64 distance estimates are not formal interval certificates; positive cuff shoulder connection and complete nested wall classification pending. Blocked directions cannot prove caps. No physical scale, fit, deformation, art or publication pass.
+
+## Round 103 — Nested wall and exact UV support checkpoint
+
+Finding: Freeze finer1e-10section endpoint quantization to distinguish earlier quantization/degree ambiguities; original-row midpoint/barycentric/UV/texture table and conservative loop nesting/crossing checks. Freeze connected cuff→shoulder→torso polylines and hood mouth/body probes. Rename distance output as an estimate, not formal certification.
+
+Validation: Two Python recipes compile;9sections/20paths serialize. Added rotated/translated tube distance control before run; glTF official top-left UV, default repeat, sRGB base and linear green-roughness/blue-metallic checked.
+
+Limits: Numerical checkpoint only; no source mutation, material filling, body/head/51-bind edit, inference, fitting construction, new worker, GPU or publication. Global self-intersection, physical scale and moving art remain unproven.

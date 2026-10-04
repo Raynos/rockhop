@@ -87,8 +87,8 @@ def segment_hits(v, f, start, end, eps=1e-10):
     h = np.cross(np.broadcast_to(d, e2.shape), e2); determinant = (e1*h).sum(axis=1)
     parallel = np.abs(determinant) <= eps * np.linalg.norm(e1,axis=1) * np.linalg.norm(e2,axis=1) * np.linalg.norm(d)
     norm = np.cross(e1,e2); nlen = np.linalg.norm(norm,axis=1)
-    planar = parallel & (nlen > 1e-15) & (np.abs(((a-t[:,0])*norm).sum(axis=1)) <= eps*nlen)
-    good = ~parallel & (nlen > 1e-15)
+    planar = parallel & (nlen > 0) & (np.abs(((a-t[:,0])*norm).sum(axis=1)) <= eps*nlen)
+    good = ~parallel & (nlen > 0)
     t = t[good]; e1=e1[good]; e2=e2[good]; h=h[good]; det=determinant[good]; rows=candidate[good]
     s = a-t[:,0]; u=(s*h).sum(axis=1)/det; q=np.cross(s,e1)
     w=(q*d).sum(axis=1)/det; fraction=(q*e2).sum(axis=1)/det
@@ -156,7 +156,8 @@ def segment_clearance(v, f, start, end):
     return {'minimumDistanceNativeUnits':result,'closestOriginalTriangleRow':int(ids[k]),
         'vertexUpperBound':upper,'trianglesExhaustivelyTested':len(ids),
         'allOriginalTrianglesBounded':len(f),'numericalToleranceClaim':1e-7,
-        'certifiedOpenTubeRadiusConservative':max(0,result-1e-7),
+        'estimatedOpenTubeRadiusAfterTolerance':max(0,result-1e-7),
+        'notFormalIntervalCertificate':True,
         'method':'Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling.'}
 
 def section(v, f, axis, value, tolerance=1e-7):
@@ -248,6 +249,12 @@ def controls():
     assert open_path['clearSegmentWitness']
     clearance=segment_clearance(v,f,[0,-2,0],[0,2,0])
     expected=.7*np.cos(np.pi/n)
+    angle=.371;rotation=np.array([[1,0,0],[0,np.cos(angle),-np.sin(angle)],[0,np.sin(angle),np.cos(angle)]])
+    offset=np.array([.193,.271,-.118]);rotated_v=v@rotation.T+offset
+    rotated_a=np.array([0,-2,0])@rotation.T+offset;rotated_b=np.array([0,2,0])@rotation.T+offset
+    assert segment_hits(rotated_v,f,rotated_a,rotated_b)['clearSegmentWitness']
+    rotated_clearance=segment_clearance(rotated_v,f,rotated_a,rotated_b)
+    assert abs(rotated_clearance['minimumDistanceNativeUnits']-expected)<1e-10
     assert abs(clearance['minimumDistanceNativeUnits']-expected)<1e-10
     s=section(v,f,1,.123456); closed=[x for x in s['loops'] if x['closed']]
     assert len(closed)==2 and all(point_inside([0,.123456,0],x,1) for x in closed)
@@ -269,7 +276,7 @@ def controls():
     return {'passed':True,'annularTubeZeroBoundaryEdges':True,'solidCylinderZeroBoundaryEdges':True,
         'hollowTubeAxialClear':True,'solidCylinderAxialHits':2,
         'annularSectionClosedNestedLoops':2,'transverseWallCrossings':4,
-        'addedCapAxialHits':2,'hollowClearance':clearance, 'hollowExpectedClearance':float(expected),'methodLimits':'Sampled noncoplanar segment proof only; loop nesting by itself does not classify material occupancy.'}
+        'addedCapAxialHits':2,'hollowClearance':clearance, 'hollowExpectedClearance':float(expected),'rotatedTranslatedTubeClearance':rotated_clearance,'methodLimits':'Sampled noncoplanar segment proof only; loop nesting by itself does not classify material occupancy.'}
 
 
 def main():
@@ -283,7 +290,7 @@ def main():
     else:
         spec=json.loads(Path(args.spec).read_text());sections=[];paths=[]
         for s in spec['sections']:
-            result=section(v,f,s['axis'],s['value']);result['name']=s['name'];sections.append(result)
+            result=section(v,f,s['axis'],s['value'],s.get('tolerance',1e-7));result['name']=s['name'];sections.append(result)
         for s in spec['paths']:
             result=segment_hits(v,f,s['start'],s['end']);result['name']=s['name']
             if result['clearSegmentWitness']:result['clearance']=segment_clearance(v,f,s['start'],s['end'])
