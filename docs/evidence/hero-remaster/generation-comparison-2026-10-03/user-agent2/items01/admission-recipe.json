@@ -1,0 +1,101 @@
+{
+  "accepted": false,
+  "round": 106,
+  "ask": 293,
+  "humanRequest": "Let\u2019s start making the models for jeans gloves and boots etc",
+  "authorization": {
+    "verifiedBy": "existing desktop manager nr3 supported read_thread",
+    "parent": "01a0f09b-0a5a-7358-81b2-7821a3d40009",
+    "humanMessage": "01a1079f-9487-73d7-abb0-b719dda36ffe",
+    "turn": "01a1079f-91bd-7370-95f9-7e5024a28d31",
+    "delivery": "Sentinel_6c636a6ca07481918a1aee2a46b12a94",
+    "humanTimeUTC": "2026-10-04 15:54"
+  },
+  "references": [
+    {
+      "role": "approved-storyboard03",
+      "path": ".tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png",
+      "sha256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a",
+      "bytes": 291838
+    },
+    {
+      "role": "selected-hoodie-generated2D",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+      "sha256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+      "bytes": 1394368
+    },
+    {
+      "role": "selected-original-hoodie-GLB",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "bytes": 42329320
+    }
+  ],
+  "styleObservation": "Dark indigo denim, plain black full-finger gloves and compact black ankle boots with restrained fastening, rounded toe and distinct low outsole. Small storyboard boot detail is partly occluded by motorcycle; no invention of tall boot/armor/accessory category. Original Hunyuan front/rear PBR frames inspected; source untouched.",
+  "referenceTool": "Built-in imagegen, transparent outputs, separate reference per category, prompts preserved",
+  "prompts": {
+    "jeans": "Use case: stylized-concept. Asset type: isolated single-image 3D reconstruction reference for Rockhop jeans. Input image1 is the approved rider storyboard03: use ONLY its dark indigo jeans color, restrained denim style and adult masculine proportions. Input image2 is the actual selected mustard Hunyuan hoodie: match its coherent moderately stylized realistic game-asset material/detail scale, not its garment shape. Create ONE pair of empty, wearable dark indigo five-pocket jeans, floating alone with a coherent waistband and fly, two separate complete legs with a visible gap all the way below the crotch, open waistband and open ankle hems with convincing denim edge thickness and inner cavity. Relaxed straight/slim-straight fit with room at hips, thighs and knees, natural broad denim folds, subtle diagonal denim grain and restrained tonal sewn seams. Upright neutral legs, mildly separated; both hems, waistband and crotch fully visible. Near-front three-quarter product view, slight elevation revealing waist opening, subtle perspective; entire garment inside generous transparent margins. No body, skin, feet, boots, mannequin, hanger, bike, hoodie, hands, belt, distressed holes, patches, logos, lettering, extra garments or multiple view panels. Moderate dark indigo rather than black; avoid glossy plastic, vacuum-tight tights, invented ornament or overmodeled folds. Genuine transparent background. Soft balanced studio illumination for readable form and texture; no cast background shadow. One coherent garment, not two separate disconnected trousers.",
+    "gloves": "Use case: stylized-concept. Asset type: isolated single-image 3D reconstruction reference for Rockhop glove. Input image1 is the approved rider storyboard03: match its plain black full-finger riding gloves. Input image2 is the selected mustard Hunyuan hoodie: match its coherent moderately stylized realistic game-asset scale. Create ONE empty right-hand black riding glove only, not a pair or a human hand. Anatomically coherent palm, back, four correctly ordered fingers plus one opposed thumb: exactly FIVE total digits, correct thumb web and finger lengths, all digits fully separated with clear visible gaps. Neutral gently splayed hand, fingers mostly straight with a slight relaxed curve suitable for later grip rigging; do not close into a fist. Short practical open wrist cuff with visible hollow interior, attached to a complete enclosed palm/back and five closed fingertips. Supple matte black leather/textile, subtle fine grain, restrained stitch seams and modest flexible knuckle reinforcement, slim practical finger widths; no rigid gauntlet/oversized armor or bone-like joint balls. Near-dorsal three-quarter product view, wrist cuff angled slightly toward camera so its opening is visible; whole item and all fingertip/thumb tips fully framed with generous margins. Genuine transparent background. Soft balanced lighting including fill so the black form and all finger separations are legible. No person, skin, skeleton, mannequin, arm, second glove, detached fingers, weapons, bike, accessories, logos, text, labels or multiple panels. Appearance source only, no claim of actual topology or fit.",
+    "boots": "Use case: stylized-concept. Asset type: isolated single-image 3D reconstruction reference for Rockhop footwear. Input image1 is the approved rider storyboard03. Preserve the rider's compact BLACK ANKLE BOOT silhouette: rounded enclosed toe, low practical ankle height, close-fitting ankle shaft, restrained black lace fastening, distinct flat dark rubber outsole with modest tread and a small low heel. Do not replace it with a tall combat boot, sneaker, wedge shoe, oversized motocross armor or platform. Input image2 is the selected mustard Hunyuan hoodie: match its coherent moderately stylized realistic game-asset material and detail scale. Create ONE empty left black ankle boot only, floating alone. Complete enclosed upper around toe, heel and sides; clearly distinct sole and heel structure; a practical open ankle mouth with visible lining and cavity, tongue and restrained black laces at instep. Matte supple black leather/textile, subtle grain, stitched construction, restrained natural ankle creases; no glossy plastic. View from outer/front three-quarter with slight elevation so rounded toe, complete sole, heel, ankle opening and overall boot silhouette are all legible. Entire boot fully inside generous transparent margins, nothing cropped. Genuine transparent background. Soft balanced studio light with adequate fill to read black surfaces and separation of upper/sole. No foot, skin, human, mannequin, jeans, second boot, disconnected toe/sole pieces, oversized metal hardware, logos, text, labels, scenery, bike or multiple view panels. Real footwear anatomy reference, not a wedge/blob substitute; geometry/opening/fit must still be tested after generation."
+  },
+  "plannedLocalSettings": {
+    "model": "Installed Hunyuan3D-2.1 MPS/Torch, non-turbo",
+    "shape": {
+      "seed": 42,
+      "steps": 30,
+      "guidance": 5,
+      "requestedOctreeResolution": 384,
+      "effectiveFlashVDMResolutions": [
+        95,
+        190,
+        380
+      ],
+      "numChunks": 32768,
+      "preservation": "Native sampled latents/raw output and actual evaluated field retained; existing finite-cell extraction derivative only when native MC is invalid, never fill/repair/reduce."
+    },
+    "paint": {
+      "seed": 42,
+      "steps": 15,
+      "scheduler": "UniPC trailing",
+      "views": 8,
+      "viewResolution": 768,
+      "renderSize": 2048,
+      "textureSize": 4096,
+      "route": "Existing qualified value-column SDPA, inactive-cache release and final-only VAE batch slicing; all sampling/conditioning archived. No CUDA equivalence claim."
+    },
+    "sourceHEAD": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+    "shapePipelineSHA256": "80d3d66be03e2ebe2f988cefcf488f2e5fa52656e8547c72dd44aaae4ad45714",
+    "serialOrder": [
+      "jeans",
+      "gloves",
+      "boots"
+    ],
+    "oneCandidatePerCategory": true
+  },
+  "admissionPreflight": {
+    "lsofExit": 1,
+    "stdout": "",
+    "stderr": "",
+    "anonymousGiB": 32.1,
+    "wiredGiB": 6.9,
+    "physicalBytes": 137438953472,
+    "repeatImmediatelyBeforeEachOwnedLocalJob": true
+  },
+  "guard": {
+    "canonicalLease": "/Users/raynos/projects/localai/.model.lock",
+    "launcher": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "anonymousAdmissionBelow": 55,
+    "combinedAdmissionBelow": 68,
+    "stopAnonymous": 65,
+    "stopCombined": 96,
+    "pollSeconds": 1,
+    "maximumJobSeconds": 1790,
+    "noForeignEvictionOrQueue": true
+  },
+  "limits": [
+    "Three new original appearance sources only; no unrelated etc accessory expansion.",
+    "One glove and one boot source preserve single-object shape conditioning; counterparts/fitting/rig remain Agent1 construction, no generated mirrored fitting derivative here.",
+    "2D prompts do not prove3D lumen/topology/UV quality/fit/rig/mobile; all M0\u2013M5 open, root alone judges played art.",
+    "No body/head/51-bind mutation, player asset promotion, new owner/worker, backend sweep, package install or publication."
+  ]
+}

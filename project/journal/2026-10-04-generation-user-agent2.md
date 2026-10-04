@@ -71,3 +71,11 @@ Finding: Support audit lands as immutable original geometry/UV/PBR evidence: exa
 Validation: Source SHA/42,329,320bytes and7evidence pins freshly pass; NPZ9members CRC valid/24,838rows. All8owned commits touch only Agent2source/evidence/journal; lease idle after all5CPU guards0. Third-round runtime24 gate reused after fresh pins and full playerdiff0.
 
 Limits: Native units uncalibrated; finite distances are float64 estimates. One torso planar branch and global manifold/self-intersection/solid occupancy unproven. No inference/GPU/installation/new worker/source fitting/body/head/51-bind edit, donor switch, played-art acceptance or publication. Parent owns plan/index status.
+
+## Round 106 — Human-authorized coherent item generation checkpoint
+
+Finding: Admit new human ask293for jeans/gloves/approved ankle boots, same existing Agent2owner. Storyboard03fullSHA and immutable selected Hunyuan hoodie verified/visually inspected before freezing3isolated-reference prompts and serial local30step shape/15step4096PBR route.
+
+Validation: SourceHEAD82920d64/pipeline80d3d66 and originalGLB800d7a97 match; canonicallease lsof1/empty and anonymous32.1/wired6.9GiB pass55/68admission, verified128GiBhost. Ask registered; no new item reference/local model run yet.
+
+Limits: Unaccepted recipe only; use new inputs with existing installed workflow, no new backend/installation/owner. No source/body/head/51-bind/peer/player mutation or publication; Agent1later fitting/rig and parent art gates remain separate.
