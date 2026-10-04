@@ -133,3 +133,11 @@ Finding: Supplied preprocessor4523b9was incorrect; unchanged actual source284dc2
 Validation: Guard exit1/0.073s at source assertion before model/tensor imports; lease/admission passed30.8anonymous/7.0wiredGiB. Actual source and qualified receipt hash pinned; no backend/model/guard edit.
 
 Limits: This owned command failure is not model defect, resource denial or permission to bypass a denied job. No item neural inference yet; art/fit gates remain open.
+
+## Round 113 — Jeans actual installed conditioning verified
+
+Finding: Correct original preprocessor yields actual512RGBwhite-composite input cf15c143and finite image/mask tensors from preserved jeans alpha0–254; no matting/model load. Software inventory and all3chosen input pins recorded before first neural job.
+
+Validation: CPUguard0/1.703s; image[1,3,512,512]mask[1,1,512,512]float32 finite, actual maskmaximum0.9921569retained. Installed284dc24fsource matches prior qualified receipt, no source modification or alpha normalization.
+
+Limits: Preprocessing proves input contract only, not shape/texture/model quality or calibrated camera. Neural shape job must repeat actual conditioned-pixel pin and retain conditioning/noise/latents/raw arrays under fresh admission.

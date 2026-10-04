@@ -1,0 +1,54 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/preprocess_item.py",
+    "--model",
+    "hunyuan",
+    "--image",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+    "--image-sha256",
+    "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf",
+    "--source-sha256",
+    "284dc24fabbf974bd6793ebd58e95b7700550d90371cacb96ad0889ec558de1e",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/preprocess02"
+  ],
+  "controllerPID": 23029,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 34.5,
+      "wiredGiB": 6.9,
+      "freeGiB": 32.7
+    },
+    {
+      "seconds": 0.054,
+      "anonymousGiB": 34.5,
+      "wiredGiB": 6.9,
+      "freeGiB": 32.6
+    },
+    {
+      "seconds": 1.097,
+      "anonymousGiB": 36.1,
+      "wiredGiB": 6.7,
+      "freeGiB": 31.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 23038,
+  "exitCode": 0,
+  "elapsedSeconds": 1.703
+}
