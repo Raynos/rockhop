@@ -1080,3 +1080,33 @@ remain separate. No causal link assumed to flange; full/four silhouette
 similarity does not certify repair sufficiency. Parent owns asks/index,
 acceptance/next repair and delivery; all M0–M5 open. No routine outbound
 acknowledgement, user/Library delivery or publication.
+
+
+## 2026-10-04 Round59 — diagnose independent neck cuts and attachment
+
+Finding: Severe flange has two implicated surfaces and no authored common
+join. Native head exactly preserves the original donor slice and semantic
+weights; body is an exact canonical vertex-cut/oriented-triangle subset.
+Rest cut-edge nearest-head distances are 2.413–71.118mm. Actual47 input668
+lower head rim moves up to61.027mm relative to neck; body extra influences
+cannot repair rest mismatch or the donor two-slot lower head attachment.
+A proposed new local derivative starts with160body/1243head vertices; root
+chooses admission and Agent1 authors. No repair or acceptance is claimed.
+
+Validation: Eighteen existing fields close body parity and attachment
+algebra below0.198µm. Seventy-two rays at existing played pixels retain
+misses, five stable dark low-head and ten body-margin witnesses. All490
+rest-head94 pairs remain distinct;330contact head triangles match current
+native within0.120µm, none equals11sampled head-hit triangles. All24input
+pins,42body56outputs and original PDF53 unchanged. Three scripts parse,
+four JSON reports parse, eight final evidence hashes agree. Exact margins
+and ancestry: body59/proposal.json, assessment.json and neck-witnesses.npz.
+
+Limits: QA only; all source/body/head/rig/bind/weights unchanged. No new
+capture, inference, broad suite, installation or authoring. Two-ring margin
+is unaccepted; upper1.60m envelope inspection-only, expansion root-owned.
+Current GLB head ancestry, boxer/covered hips and all M0–M5 remain open.
+Source26 still fails; garment contacts are not waived or assigned same
+cause. Parent owns ask275/index reconciliation and art judgment; no outbound
+acknowledgment, Library/user delivery, upload, promotion, push or publication.
+Required ordinary third-round gate60 follows in its own commit.
