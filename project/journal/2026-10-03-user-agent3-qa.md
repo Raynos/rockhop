@@ -1555,3 +1555,20 @@ restarttick0/phase riding, actualms{'low': 2, 'high': 4}.20productionmodels/191p
 Limits: No source/candidate/normal-buffer test performed yet; no admission,
 solve/render/capture/upload/push. Parent owns ask275/index/gates. AllM0-M5open.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate78/
+
+
+## 2026-10-04 Round79 — freeze one scratch normal-buffer test
+
+Finding: Root rejects hard-byteSQP and allows one private scratch encoding
+diagnostic only. Pin original28protectednormals/masks and failed102geometry;
+inspect matching5.2.1primarysource normalframe/shortquantization/API behavior.
+
+Validation: All31source/evidencepins exact. Normalgate78 committed2d6df88a.
+Primary Blender5.2.1source identifies geometrydependent fan frames, signed
+short32767quantization and potential settersharpedge propagation.
+
+Limits: No encodingtest yet. One settercall per body/head scratchpart,
+no secondencode/sweep/geometry/normalrepresentation/fit/weight solve,
+source save/render/capture/adoption/expansion. Parent owns ask275/status
+and rootvisualacceptance; allM0–M5/contact/identity/device/playergatesopen.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/normal79/
