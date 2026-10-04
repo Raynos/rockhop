@@ -1845,3 +1845,11 @@ Finding: Checkpoint same-camera/light gray averaged/flat/bounded-derived normal 
 Validation: Both source ASTs parse; analytic control and actual derived receipts already committed. Runtime24 gate/file pins and playerdiff0 unchanged.
 
 Limits: Execution pending; no geometry/material/source repair or global winding proof. Hunyuan remains selected; Pixal1024 alternative/prior1536 stops retained.
+
+## Round 88 — TRELLIS causal display render frozen
+
+Finding: Original averaged frame0 reproduces historical pixels exactly; flat/raw faces and bounded-derived smooth displays rendered at24 matching angles. Derivative changes46,234 vertex normals while protecting contradictory patches.
+
+Validation: Guard0/51.708s;49 PNG hashes verified, arrays/material readback and raw/derived archives unchanged. Baseline maximum RGB difference0.
+
+Limits: Technical rendering only; film/actual band comparison pending. No global repair or art acceptance.
