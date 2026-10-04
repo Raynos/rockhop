@@ -1,0 +1,13 @@
+00:01.415  blend            | Read blend: "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.blend"
+00:03.209  blend            | Read blend: "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie25/crease-normal-candidate.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/adopt_tested_crease_normals.py", line 124, in <module>
+    assert [m.name for m in mesh.materials] == [m.name for m in materials]
+                                                ^^^^^^
+ReferenceError: StructRNA of type Material has been removed
+Info: Saved as "crease-normal-candidate.blend"
+
+Error: script failed, file: 'assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/adopt_tested_crease_normals.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

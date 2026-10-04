@@ -739,3 +739,11 @@ Finding: Source24 current flat garment is shown on unchanged body/head/cheek and
 Validation: Seven protected mesh/configuration snapshots and51pose matrices exact; evaluated wearer rest differences≤0.277µm/current garment exact. Input hashes unchanged. Fulldecode640frames/0errors/0audio; silentheadless fullplay634callbacks/5drops/0page-mediaerrors. Python syntax/diff/hooks pass.
 
 Limits: All1937historical rays/24misses remain open; naturally occluded markers are reference locators, not coverage/ease acceptance. Root selected tested30°shading after render; existing flat context retained without recapture. No source save/shrink/recolor/newbody/rig/weights/inference/worker/Libraryupload/playerpromotion/publication/M0–M5/mobile acceptance; parent sole judge.
+
+### Round90 — checkpoint the parent's tested crease-normal choice
+
+Finding: Separate native25 applies only tested30°shading to source24:19878smoothfaces/2671sharpedges;64115reopened corner normals exactly match played88buffer. All12430positions/24359triangles/cycles/UVs/materials/actualtransforms preserved; seven protected mesh/configuration snapshots and51pose/rig states exact. CandidateSHAc732d98076f6b9b1a209a45e8a0cddf793484807ea8b3ae9011fa4f82c151df0; flat24 retained.
+
+Validation: Actual save/reopen assertions pass. Original builder then hit stale materialRNA during metadata names; executedrecipe/log retained, scalar-name report-only recovery repeats checks without native overwrite. Python syntax/diff/hooks pass. Silentnormalship90cold1660ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame3.160ms/errors0.
+
+Limits: Parentplayed89permits boundednative-four qualification next, not9/10/moving/art/M0–M5. Fullcontrol/loss mandatory. Cuffs/all24coverage andactualexport-engine normals/mobile remainopen. No geometry shrink/rebuild/newbody/rigchange/restrecapture/inference/worker/Libraryupload/playerpromotion/publication inthisunit.
