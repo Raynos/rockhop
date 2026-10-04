@@ -325,3 +325,11 @@ Finding: Installed xatlas wraps the frozen ankle boot source while preserving ev
 Validation: Guard exit0 in138.7s;611198triangles preserved exactly,466412wrapped UV vertices finite. Both inpaint state controls pass; maximum export triangle error1.1920929e-7 is below3e-7.
 
 Limits: Unaccepted dense source; no component removal, remesh/reduction, physical foot/toe/ankle fit, rig, physics or art/device acceptance. No publication.
+
+## Round 137 — boots paint01 checkpoint
+
+Finding: One existing Hunyuan PBR job completes15steps/eight768views and original4096maps on the preserved ankle boot UV mesh/reference. Save actual paint inputs/latents and original OBJ/GLB before review.
+
+Validation: Guard exit0 in355.281s; all15paint-step arrays finite/saved.611198triangles and finite UVs retained, with6.0675049e-7 maximum triangle coordinate error below8e-7 writer limit. Base-color/roughness/metallic maps4096.
+
+Limits: Unaccepted raw source; no cleanup, remesh, reduction, fit, rig, collision, played art/M0-M5/mobile acceptance or publication. Root alone judges the later clip.

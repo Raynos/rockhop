@@ -1,0 +1,378 @@
+{
+  "accepted": false,
+  "round": 137,
+  "item": "boots",
+  "phase": "paint01",
+  "finding": "One existing Hunyuan PBR job completes15steps/eight768views and original4096maps on the preserved ankle boot UV mesh/reference. Save actual paint inputs/latents and original OBJ/GLB before review.",
+  "validation": "Guard exit0 in355.281s; all15paint-step arrays finite/saved.611198triangles and finite UVs retained, with6.0675049e-7 maximum triangle coordinate error below8e-7 writer limit. Base-color/roughness/metallic maps4096.",
+  "limits": "Unaccepted raw source; no cleanup, remesh, reduction, fit, rig, collision, played art/M0-M5/mobile acceptance or publication. Root alone judges the later clip.",
+  "guardStatus": "worker returned; review pending",
+  "guardExitCode": 0,
+  "guardSeconds": 355.281,
+  "peakHostAnonymousGiB": 54.7,
+  "peakHostCombinedGiB": 66.7,
+  "scratchRoot": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01",
+  "rawFiles": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-VAE-image-input-00.npz",
+      "bytes": 577950,
+      "sha256": "dfb9884f380128da68d743f923e804b5b342314b9f03b26738608ca7ed6d1e12"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-VAE-image-input-01.npz",
+      "bytes": 1966484,
+      "sha256": "e755bbd0fdd1910b97531502d9946f180ae1f98c34f57dbf9dec33276ceef6fb"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-VAE-image-input-02.npz",
+      "bytes": 387805,
+      "sha256": "4c3388ccc3966bd022d4bde1e54ef260de17e620314cf74231862f35853168f2"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-dino-features-00.npz",
+      "bytes": 731292,
+      "sha256": "288deafe4b9703f4bd82e12c1126d8108d3bd39458815d05f2e0f447fa7bb83b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-dino-model-input-00.npz",
+      "bytes": 76291,
+      "sha256": "d1c3336fe143693c1ad3c8124f9c41a41ccd0b547cd8bb696551a33c9d5f1c69"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-encode_images-00.npz",
+      "bytes": 43732,
+      "sha256": "47fa5216cfa63c71d32e0785932bad2a2a40bab3eacddce16cce824de0e5a3fa"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-encode_images-01.npz",
+      "bytes": 201695,
+      "sha256": "bae4dc4228a37c7ba4eed482ebdd14a49a6209b72b3eb75b78e6530351a67e4c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-encode_images-02.npz",
+      "bytes": 205902,
+      "sha256": "5b237aec0d3007e052d6f0110e440af98ba23ad03093d0fb254c62c5e4a9de11"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-final-VAE-decode-input-00.npz",
+      "bytes": 812015,
+      "sha256": "0dd3ec9cb32974995bc0e8d5d80605d733349678f0bf0ddf91334b438e69bb76"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-final-VAE-decoded-images-00.npz",
+      "bytes": 38996587,
+      "sha256": "36178655d03986cc5f13fb1b7da328283b9264a7470e5467f3f492cc724368fa"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-first-native-attention-inputs-00.npz",
+      "bytes": 391399821,
+      "sha256": "c33c495ec6a71921dd3b5aeb421020c116570175fe76b417fa98bda85e94dac8"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-first-value-column-attention-inputs-00.npz",
+      "bytes": 174169430,
+      "sha256": "ca08df7f878fe0ea2b756450594ff2c45138fd579bd93e0d93a583ef7f6efa36"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-00.png",
+      "bytes": 561577,
+      "sha256": "f97a300e31efa2e54ccbc4f516dbc1bfdd386e344cc7ea017352f0d20e4cf284"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-01.png",
+      "bytes": 313739,
+      "sha256": "bcea78408632f7b366260a58751762e018ff9248f48a84002461f07a78d25ac7"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-02.png",
+      "bytes": 535483,
+      "sha256": "9bed0376592bcc3d8c3dddcae40ebbfa41c2737467a9bcf02f255dc593c31f90"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-03.png",
+      "bytes": 417167,
+      "sha256": "fe743a8493112ef7bfcc89117bbd47238450301e20171caa875825e24a67f24d"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-04.png",
+      "bytes": 634599,
+      "sha256": "5c47a2cca5653fbaf87edb7e476c08fe93e9887196a2df2cc1426e7ed1636e88"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-05.png",
+      "bytes": 506757,
+      "sha256": "af43a27465878934a08039b43b13efbd650ab0bcd2f074201cc6a348bb143248"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-06.png",
+      "bytes": 703428,
+      "sha256": "17ae30b06e0beb91c2fad16e92f6c881c06c7171ac810c34a3907848d3780a6d"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-07.png",
+      "bytes": 734196,
+      "sha256": "87b92d5cec2852d546307981e3592a42ea700185fe82d53b2b3e3a9fa8363d68"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-08.png",
+      "bytes": 88018,
+      "sha256": "00d195f1b02878d8c6ee34c0dfa33de94e9c968fdbd9da74b42e50b4ea02339a"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-09.png",
+      "bytes": 66075,
+      "sha256": "4e60a493aa8f1a8da0498a1b5cf29587df170f15c3bce2e7b8d27bb0321a3b09"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-10.png",
+      "bytes": 92915,
+      "sha256": "25b99649c76c66abdeaa62599c1934e697bc98ff79c312f9db2e8bf3c3b6f550"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-11.png",
+      "bytes": 84346,
+      "sha256": "d76417f8e5ef3570e52c19d548f0f154af2fef4f51bb9d46d42a7d9b41239b3f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-12.png",
+      "bytes": 118017,
+      "sha256": "7ffdc5cd380161989bd8673ae7db1bc4bd2c27e397c01229327fa71c68fd490f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-13.png",
+      "bytes": 69753,
+      "sha256": "a4cd784d6f7ad52755946caf322f9c267137cc2ae25dd08231ec6fc378c7a94b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-14.png",
+      "bytes": 198766,
+      "sha256": "71a832cbeac44fadf2b30b0f5be67af8013a4bae739c2b603d40d6029195dd62"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/control-15.png",
+      "bytes": 178424,
+      "sha256": "bd1a8a57f2fed2c36e82ba9c3ef2a5d6491a4c408e0be379d5da9ce586d99692"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-paint-conditioning/style-00.png",
+      "bytes": 171365,
+      "sha256": "b0b0d1884897a3c0e33c458620b09d9af768af632fae6daf902f24351baa3898"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-prepare_latents-00.npz",
+      "bytes": 1088753,
+      "sha256": "001efeb543a14130a25316629c1d6e71f405c711eed01cc059a255e742ddffc6"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-00.png",
+      "bytes": 146081,
+      "sha256": "38bd4497174fe47191202436de0e34bc1dd8a6e998fc9fe5968d62c6ca90dcfd"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-01.png",
+      "bytes": 96935,
+      "sha256": "6873ef08250b87edf1c3aeec7ffe34e3e3ab6c47b0638d4aecc0444fc60b5662"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-02.png",
+      "bytes": 147141,
+      "sha256": "e3c8976915c9a1b40656534af3675b9cce6d0b91ff833fda30f500ffce53bfca"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-03.png",
+      "bytes": 84914,
+      "sha256": "05f9d62bff7103f5182ef7d455f0232b64cf2415fde081156e42f3bbb1868f32"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-04.png",
+      "bytes": 125838,
+      "sha256": "8472a5db3742e3df4804518caf71643361e8d29d80686805dfba5d5cb19da2fa"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-05.png",
+      "bytes": 125385,
+      "sha256": "57fb3ecb7be0bb5fe265e0e8df9cd2be0ce60583dbd85433c7a3a5cdae39aec8"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-06.png",
+      "bytes": 140023,
+      "sha256": "3375aa23fa1d55ec5210f80a65515d3c73f0cd8451481378239dce5870f3fce3"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/albedo-07.png",
+      "bytes": 157001,
+      "sha256": "4b48962c16aa51933814ca9aed55d0cc5337776a3ad2e0b15f233c96381c76fa"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-00.png",
+      "bytes": 252927,
+      "sha256": "fab047d19b2d1aed9d5232e64458ed91b39df81fdd334c0898057cce73f6ab77"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-01.png",
+      "bytes": 156358,
+      "sha256": "6b5c434830547eca225d399cc6a2480963236706917edd3aef077d47e7f1b868"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-02.png",
+      "bytes": 273899,
+      "sha256": "5e93f929de32b7738012c7d56045636415d81a1f98e359be0142c2347591a3f1"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-03.png",
+      "bytes": 187737,
+      "sha256": "03bd7139f1cbec50d121771a85b477323dc385fb5747e87d0fc9de4cdf76d9ff"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-04.png",
+      "bytes": 242231,
+      "sha256": "bf7f83200fed3825b442a50c4774c0470c6265cbf3e4aa6d04e120ce975ff828"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-05.png",
+      "bytes": 199456,
+      "sha256": "82b4db3800375b652a152405a90a09e22a602943432d61d05d83ceef0cebef2c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-06.png",
+      "bytes": 270867,
+      "sha256": "86049097dc4e7606844455e39f689eeb0ee70ad8e87c30debcb95a54e305f6fb"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-returned-pbr-views/mr-07.png",
+      "bytes": 266530,
+      "sha256": "96248d05a4bc4928acd912dee1d59c58ffae2b2b770964179ade717ff234574b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step01.npz",
+      "bytes": 1088548,
+      "sha256": "e672b8aecddff62b96adc4156edffadad42bff6bdce324f6cdbae168f2dfbf5c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step02.npz",
+      "bytes": 1088623,
+      "sha256": "2e57ec228ab1c1f54b418f9b73264a2dc7d89f8cf169c27854ab775019790443"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step03.npz",
+      "bytes": 1088221,
+      "sha256": "ca00f9f92f0ff87a75ae541a31422749b7d64a09798e9df82a27aadf88560898"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step04.npz",
+      "bytes": 1087949,
+      "sha256": "01ae3e9f4dd766306efc935415757377806cc6dc0316263e95be671f034810e2"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step05.npz",
+      "bytes": 1087570,
+      "sha256": "1dc7574c7429f51ff67a7c774da4079aec333d28594dc68075dc8467275637bd"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step06.npz",
+      "bytes": 1086640,
+      "sha256": "ae0b348f6a1a3491bb350a51cfd0ac1a13030154969d7e90114c00e2807a6b93"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step07.npz",
+      "bytes": 1085411,
+      "sha256": "9eda74042fd93dff1a228c800c422c35bc0d39b7da757f817ee6f6b34f36d7d5"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step08.npz",
+      "bytes": 1084121,
+      "sha256": "eade16710e4952065ff34dd8a9af0876ef818e6ee413a2ea61fa4124fdb0118f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step09.npz",
+      "bytes": 1082223,
+      "sha256": "11942cb496dcb6adb62155f7d8f096142f52b5ff14f945c76803b37aaa9e3c03"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step10.npz",
+      "bytes": 1079773,
+      "sha256": "fe7a31c7e4b164015863e00a588ef9d40e9598c339dc3704ca8e287dfbdd9a72"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step11.npz",
+      "bytes": 1075950,
+      "sha256": "a5f24f61d0a4cde77787ef7a2a3bc26f4170d9c5a99be25b59792c338cbb1684"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step12.npz",
+      "bytes": 1070387,
+      "sha256": "dfd6fac5f9c0ca8eaf4f7568757669e959fe390233042ab9d54fb46bb1da6c57"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step13.npz",
+      "bytes": 1059504,
+      "sha256": "c3f67ea86c48d07f4ade7216bfa9bb9c4a413d5c1c22a286e07274707cb2bbb8"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step14.npz",
+      "bytes": 1040274,
+      "sha256": "db1d1cf54c61df144786f516dd967099e18411ec8bc07f553e0a99a03155db34"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/actual-sampled-paint-latent-step15.npz",
+      "bytes": 829397,
+      "sha256": "ee42f37e60a133943a620f1fd138c15210e707a057a503d87b0435f763384d9a"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/metallic-roughness-packed.png",
+      "bytes": 11836737,
+      "sha256": "26c4f2286a87dabd2fb9a613afcff30439692bb03ff77d147de9f0c5168341a1"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+      "bytes": 32387936,
+      "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.jpg",
+      "bytes": 1148487,
+      "sha256": "996cc7c45e57829489e4b81bc2c698ec3935b4ceb83fd462e6577f80a7a66e6b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.mtl",
+      "bytes": 143,
+      "sha256": "c33677f7e797a8fc1268b65b653122cfb6b6929133a37ebdeb2a67c896fc1b34"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.obj",
+      "bytes": 50229486,
+      "sha256": "3870257dcce1329ca14217761c3195aa6e913eb54d80da9f675475edf35060fa"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted_metallic.jpg",
+      "bytes": 1988241,
+      "sha256": "9a7549a236dcc2b0a90cd4b0ae4c8d2eac984486f47fbebb8e0f6e4eafcd2793"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted_roughness.jpg",
+      "bytes": 2894924,
+      "sha256": "bb7947ce8599e5231c806f74146878bf99b1d03693338890cdd78802746e2a5c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/progress.json",
+      "bytes": 573916,
+      "sha256": "dba3085db30973084e0efe047c4e09385d221c71d993b2705e60d4b05e033be4"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/receipt.json",
+      "bytes": 574559,
+      "sha256": "89e5c5b035fd5dc7a8e4a35dc48163e21910f48df007dbec854e93fcad9d6171"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/shape.obj",
+      "bytes": 25503975,
+      "sha256": "7e4974f24c0138c4fd3190e490ed21cc20795ac1ee77a4f89b4525e7ac09e798"
+    }
+  ],
+  "originalWorkerLog": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01-guard/worker.log",
+    "sha256": "18ad546c412bddff6c22e594a2bd2ffa6335894a6ed06b074746cac683d41eb7"
+  },
+  "noCleanupRemeshReductionOrPlayerReplacement": true,
+  "oneReferenceSeedCandidatePerItem": true
+}
