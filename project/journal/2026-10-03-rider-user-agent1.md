@@ -507,3 +507,11 @@ Finding: All529existing48HznativeFK samples reveal max408body/280self;334bodycon
 Validation: 21.05s evaluatedmechanicalrun/allfinite; exactnative trianglewitnesses/times recorded. Continuous133frames/12fps synchronizedfront+rear1280×640/11.083s movieSHA307ea6bbcfeb57d6c35b1edad072b702cac709d8c69298c95b9d2a1820492838, noaudio/fullFFmpegdecode0errors. OriginalselectedPBR/native d3f05ff…/rigGLB6042207a…/source13rest6ef79e38… unchanged; allframehashes/camerabounds/sourceobjects pinned. Blender/diff/hooks pass.
 
 Limits: FAILEDnativewearing, no actualgame/livecollision/mobile/playedlikeness/M0–M5 acceptance; rootalone judgesclip. No offset/DQ excuse or blindbody-weight/parameter sweep; diagnosefield/fit nextwhilekeeping14failedcontrol frozen. No Libraryduplicate/playerpromotion.
+
+### Round60 — diagnose frozen skin ancestry; prioritize rejected appearance
+
+Finding: Read-only 24-frame diagnosis reproduces native LBS and keeps fixed rest body-triangle ancestry. Frame72 contains 408 garment/body pairs plus 28 body arm/torso pairs; contacts do not establish root's visible open tear. Root rejects played source14 material, hood, sleeves and hem. Freeze it and prioritize unchanged-geometry donor transfer/matched rest silhouette before broad motion work. Agent1 retains weights/native qualification; next export authors explicit native-four contract. Historical eight-slot conditioner language is corrected: the renderer consumes only primary four, marker bypasses smoothing only.
+
+Validation: Body manual parity maximum0.437µm and garment0.371µm; source14/native field/driver pins unchanged. Exact correspondences/matrices archived. Silent ship60 cold1587ms,4810 identical ticks,clear40.083333s,crash103,restart1tick,frame2.885ms,errors0. Blender/diff/hooks pass.
+
+Limits: Transported offsets and nearest-weight counterfactual are diagnostics only, no new skin or clearance proof. No art/wearing/collision/game-candidate/iOS acceptance; allM0–M5 open/root sole judge. No normal-player or Library promotion.
