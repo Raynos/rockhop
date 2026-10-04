@@ -523,3 +523,11 @@ Finding: Donor and ray-baked PBR share original channels/colorspaces/Principled 
 Validation: Independent22 original meshes/18 material graphs/17 images/51bindpose exact; new positions/polygon cycles/UV exact source13. 257 scalar registration samples error5.55e−17m. 48frames/6fps/8seconds/2560×640 actual PBR orbit, noaudio/fullFFmpeg decode0errors; source/native/material/correspondence/movie pins recorded. Blender/diff/hooks pass.
 
 Limits: Material-only diagnostic retains root-rejected hood/sleeve/cuff/hem silhouette and may sample an interior donor surface. No rig/broad motion/collision/iOS/M0–M5/player/Library acceptance or promotion; exact sources13/14 frozen. Next concrete donor shape/correspondence repair precedes broad motion; native-four export contract remains required.
+
+### Round62 — recover actual donor surface; wearer-cut prerequisites fail
+
+Finding: Root played61: actual donor/registration retain chosen hood/folds/coherent mustard, stock-pattern relief loses silhouette and15 UV material remains rejected. Source16 directly simplifies immutable high donor, originalUV/4096PBR and hood/cuff/hem geometry drive construction. Explicit hem/cuff planes and bounded neck surface partition yield12443v/24400tri, ten degree2 loops/0othernonmanifold/2559body/320self; unqualified donor construction control. No new capture following verdict.
+
+Validation: Source cleanup460752v/921568tri/0boundary reproduces preflight; simplified8262v beforecuts. Native saved before NumPy float32 report serialization failed. Frozen executed builder retained; read-only audit reproduces saved positions/triangles/body+self arrays exact, no native rerun. Independent22originalmeshes/18graphs/17images/51bindpose exact. Blender/diff/hooks pass.
+
+Limits: Ten loops and thousands of contacts prevent wearing/rig qualification; inner/folded-wall hypothesis requires localization. Source13/14/15 and high donor/head/body/bind frozen. Root sole art judge/allM0–M5/mobile open; no worker/inference/Library/player/publish promotion.
