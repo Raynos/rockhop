@@ -459,3 +459,11 @@ Finding: Qualified09seed receives actualselected716971highpoly-derived connected
 Validation: Independent19originalmesh/17materialgraphs/14images/51bindpose exact;6046v/11840tri. Frozen09seed0self vs10candidate149self, exact sourceparents/seed/final/direction/relief/ease contacts and66.315nm nativequantization recorded. Actualbase/rough/metalbakes/sourcecorrespondence versioned; localnormalmin4.526mm/12of1937coveragemisses proxies. Recipe/Blender/diff/hooks pass.
 
 Limits: Rejectedunderarm embedding, no rig/game/Library/playerhandoff. Actualselectedshape constrained byanatomicalopenings/25mmreliefbound, not exactclosedsourcevolume orappearance acceptance. Fullcloth stayscontrol, canonicalbody/head/51bind immutable; M0–M5/movingart/iOS/rootsolejudge retained.
+
+### Round54 — vertex fabric-space bounds fail triangle interiors, 2026-10-03
+
+Finding: Actualnonlocal seed-cloth rays constrain402vertices with4mmsharedroom/45%per-sheet cap; source10target/40step8connection/PBR fixed. Reliefreduction max7.464mm leaves0body butself149→129. Vertexrays do not constrain entiretriangles or sharpdirectionfields. STOPvertex-ray-bound path/parameter sweeps; connect actualvectors onqualified09seed next, notonly scalar lengths.
+
+Validation: Independent20originalmesh/18graphs/17images/51bindpose exact; actual6046v/11840tri. Source10UV/PBR unchanged, field/bounds/raywitnesses versioned;12of1937coverage misses/minlocalnormal4.526mm explicitproxies. Silent ship54cold1444ms/4810identicalticks/40.083333s/crash103/restart1tick/frame3.060ms/errors0; Blender/diff/hooks pass.
+
+Limits: Rejectedstaticconstruction, no livecollision/skin/actualcandidategame/movingart/mobile/Library/player acceptance. Originalbody/head/bind/failedcontrols retained; allM0–M5open/rootsolejudge. Normalship gate is notcandidate wearing evidence.
