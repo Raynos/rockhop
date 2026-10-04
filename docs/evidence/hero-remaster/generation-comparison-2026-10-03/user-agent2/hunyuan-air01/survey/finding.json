@@ -1,0 +1,40 @@
+{
+  "accepted": false,
+  "sectionCount": 25,
+  "sectionsWithNonDegreeTwoComponents": [
+    {
+      "name": "y=0.05",
+      "nonDegreeTwoComponents": 2
+    },
+    {
+      "name": "y=0.55",
+      "nonDegreeTwoComponents": 1
+    },
+    {
+      "name": "z=0.1",
+      "nonDegreeTwoComponents": 1
+    }
+  ],
+  "planeVertexExcludedFaces": 0,
+  "clearTorsoSurvey": {
+    "start": [
+      0.0,
+      -0.75,
+      0.0
+    ],
+    "end": [
+      0.0,
+      0.8,
+      0.0
+    ],
+    "length": 1.55,
+    "candidateTriangles": 0,
+    "coplanarCandidateTriangles": 0,
+    "ambiguousCoplanar": false,
+    "intersections": [],
+    "clearSegmentWitness": true,
+    "name": "torso-axial-survey"
+  },
+  "interpretation": "Exact sampled central path y=-0.75 to0.8 at x=z=0 is clear, establishing an air witness, not just shading. Nested sleeve/torso contours suggest separate inner/outer walls; tailored mouth-to-lumen and transverse wall probes required. Survey sleeve rays at y=z=0 cross sidewalls, not cuff mouths.",
+  "limits": "Section branch failures and50exact zero-area source rows explicit; no complete solid occupancy/topology or source repair."
+}

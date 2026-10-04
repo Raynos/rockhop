@@ -23,3 +23,11 @@ Finding: Freeze25axis-aligned original-coordinate sections and4survey segments w
 Validation: Survey JSON serializes and plot recipe compiles. Third-round gate reuses runtime24 only after fresh four-file pins and empty full playerdiff sincec74783ad; ordinary cold boot,4810-frame clear, crash and1–2ms restart pass in that prior unchanged source.
 
 Limits: Measurements pending; no shaded render, body fitting or source mutation. No moving garment/phone/art gate or publication claim.
+
+## Round 100 — Central original air witness established
+
+Finding: Original centre segment(x=z=0,y=-0.75→0.8) traverses1.55native units without any triangle intersection or coplanar ambiguity.25sections show nested torso/sleeve walls and open crescent mouths; four planes have non-degree-two components, preserved rather than silently repaired. Sleeve survey rays at y=z=0 cross sidewalls, not mouths.
+
+Validation: Guard exit0/1.491s;25sections/4paths and repeated analytical controls pass, no excluded plane-vertex faces. Full original row/barycentric/UV/nearest PBR hit records retained; diagnostic section PNG inspected.
+
+Limits: One central clear path is a witness, not global absence of caps or proof of wearable aperture. Tailored cuff/neck/hem wall depth tests remain; no construction, moving art judgment or publication.
