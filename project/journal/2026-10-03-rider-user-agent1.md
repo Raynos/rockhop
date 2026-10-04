@@ -659,3 +659,11 @@ Finding: Six actual contact min/median/max station planes allprovide local body-
 Validation: Sixsection archive reproducible/gzip integrity/exactnativepins/31interior contacts unchanged. Allopen/secondaryair components retained. Initial fragment sentinel selectedearlierliteral/undefinedradial beforeoutput; start-relative extraction corrected andfullreadonly rerun passed. Blender/diff/hooks pass.
 
 Limits: No native save or actualfit/global4mm/port/capsule/art proof. Next onecompactambient local dilation derives support fromcontacttriangles/measuredcontours; no radius/time/density search or wall deletion. No capture/rig/motion/body-head-51bind change/inference/worker/promotion;31body/0self remainsfailed/allM0–M5/mobile open.
+
+### Round80 — compact actual-donor interior flow clears native rest contacts
+
+Finding: Source24 one measured compact ambient dilation per contact region derives scalesUL1.076181/FR1.125601; actualtriangle axialextent/medianedge fades andmeasuredcontour radialcore. Supportboundingballs disjoint348.321mm. Native ANDfixed tessellation0body/0self,0retessellation;549vertices>1um/max11.473070mm, all579wearerboundary vertices exact/cyclesUVoriginalPBR preserved.
+
+Validation: Independent saved-native contact/archive andserialized-control fieldreproduction exact; actualfloat32 inverse105.64nm, ideal29.39pm. All12430finiteJacobian determinants positive/min0.467383.29scoped originals18graphs17images51rest+pose exact. Builder savednative+NPZ before NumPyfloat32JSONfailure; executedrecipe/log retained, report-only inmemory recovery independentlymatches positions/triangles/Jacobian/error arrays andleaves native/archive hashes unchanged. Blender/diff/hooks pass.
+
+Limits: Restcontact pass only; no whole4mmclearance/containment/actual wearer-airport/rig/motion/playedart/mobile/M0–M5 acceptance. FiniteJacobian/inverse notglobal numericalproof; originaldatascope excludesnormals/genericattrs/shapekeys/modifiers/rigworld. Next nativewearer/protected-data audit, no newcapture/bodychange/inference/worker/Library/player promotion; parentsolejudge.
