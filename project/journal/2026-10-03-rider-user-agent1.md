@@ -731,3 +731,11 @@ Finding: CURRENTFLAT reuses48actual24pixels from85; ALLSMOOTH and30°crease-pres
 Validation: Allgeometry/UV/material identity andcamera matrices exact, archivednormalbuffers. Lazycamera update assertion stoppedbeforefirstrender; viewlayerupdate added/fullsame rerun pass/preliminaryNPZexactreused. Fullffmpegdecode640frames/0errors; silentheadless fullplay639callbacks/0drops/page+mediaerrors0. Source24/inputpins unchanged/Blender/diff/hooks pass.
 
 Limits: Displaycontrols only/normaladoption andart verdict pending. All-smooth can concealcrease shading;30° preservesactual2671edges butcoarsegeometry/inflation untouched. Nextsameprotectedbody/opaqueunderwear/all24coverage inspection; no source save/recolor/body-head-51bind change/rig/inference/worker/Libraryupload/publication/promotion/allM0–M5open.
+
+### Round89 — actual donor fit on the protected wearer, coverage retained
+
+Finding: Source24 current flat garment is shown on unchanged body/head/cheek and opaque boxers; adjacent wearer reference has24 separate white witness anchors. All24 map exactly to display vertices and remain within all48camera frames. One26.666667s1280×640silent clip SHA1f46bcd7887758f2285813bdf5c8f57c75461f72e3ee6442c80927358b7dc3d7 ready for root silhouette/coverage judgment.
+
+Validation: Seven protected mesh/configuration snapshots and51pose matrices exact; evaluated wearer rest differences≤0.277µm/current garment exact. Input hashes unchanged. Fulldecode640frames/0errors/0audio; silentheadless fullplay634callbacks/5drops/0page-mediaerrors. Python syntax/diff/hooks pass.
+
+Limits: All1937historical rays/24misses remain open; naturally occluded markers are reference locators, not coverage/ease acceptance. Root selected tested30°shading after render; existing flat context retained without recapture. No source save/shrink/recolor/newbody/rig/weights/inference/worker/Libraryupload/playerpromotion/publication/M0–M5/mobile acceptance; parent sole judge.
