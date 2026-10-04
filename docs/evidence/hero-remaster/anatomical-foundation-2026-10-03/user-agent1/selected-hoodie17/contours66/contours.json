@@ -1,0 +1,125 @@
+{
+  "status": "UNACCEPTED actual uncut donor lumen/body contour inventory",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie17/continuous-arm.blend": "989855995983079d3207960f5e36feb734fe0e02987961d8f652c8cd26c3ae3f",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie16/serialization-rejected-builder.py": "0d1528a8dc62b21adbfd347effcbcf2cb2130728d15b098bd069f1baef857fe5",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/construct_selected_hoodie.py": "95c555e656e889f00d59a7295e89021cc822c34c34e87bd2cfa24e131cf2d1f9",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/connect_selected_arm_registration.py": "f9de8ba7ba1558e43199a3e92d28368fd04e99bd0dcca1e1cd1527545f595039"
+  },
+  "recipeSHA256": "ce72004823b6319719362defba4da3274c349e4615a181113805df4024b0bfdd",
+  "sleeveSectionPairs": 64,
+  "summary": {
+    "forearm.L": {
+      "sections": 16,
+      "sectionsWithSourceAirAndBodyOuterContour": 16,
+      "sourceReferenceInsideNearestAirContour": 13,
+      "nonlocalNearestSourceContours": 0,
+      "sourceAirContourCentroidOffsetOriginalUnitsPercentiles": [
+        0.028834048573547974,
+        0.05527439219012863,
+        0.09686693318179465,
+        0.10230502633575204
+      ],
+      "mappedSourceLumenVsBodyCentroidMPercentiles": [
+        0.011194672905023373,
+        0.030349660138746765,
+        0.0495168967859847,
+        0.051551549425669675
+      ]
+    },
+    "forearm.R": {
+      "sections": 16,
+      "sectionsWithSourceAirAndBodyOuterContour": 16,
+      "sourceReferenceInsideNearestAirContour": 13,
+      "nonlocalNearestSourceContours": 0,
+      "sourceAirContourCentroidOffsetOriginalUnitsPercentiles": [
+        0.047644643001254754,
+        0.07731423965363218,
+        0.11165767739792423,
+        0.12206125179944288
+      ],
+      "mappedSourceLumenVsBodyCentroidMPercentiles": [
+        0.022749995150622045,
+        0.04116344186997276,
+        0.05977822047132513,
+        0.06145995833457969
+      ]
+    },
+    "upperArm.L": {
+      "sections": 16,
+      "sectionsWithSourceAirAndBodyOuterContour": 16,
+      "sourceReferenceInsideNearestAirContour": 15,
+      "nonlocalNearestSourceContours": 6,
+      "sourceAirContourCentroidOffsetOriginalUnitsPercentiles": [
+        0.08675685075010714,
+        0.09224313448891042,
+        0.48188527870098113,
+        0.49803240839777685
+      ],
+      "mappedSourceLumenVsBodyCentroidMPercentiles": [
+        0.03339047632946807,
+        0.048768077531369865,
+        0.222547727496584,
+        0.2325133364293168
+      ]
+    },
+    "upperArm.R": {
+      "sections": 16,
+      "sectionsWithSourceAirAndBodyOuterContour": 16,
+      "sourceReferenceInsideNearestAirContour": 13,
+      "nonlocalNearestSourceContours": 5,
+      "sourceAirContourCentroidOffsetOriginalUnitsPercentiles": [
+        0.09725234664976881,
+        0.10758462936756313,
+        0.49691676506434534,
+        0.5111296261598764
+      ],
+      "mappedSourceLumenVsBodyCentroidMPercentiles": [
+        0.030762684905413805,
+        0.050590799805328934,
+        0.2150367941863264,
+        0.2239387205150406
+      ]
+    }
+  },
+  "torsoSummary": {
+    "sections": 32,
+    "containingSourceAirAndBodyOuterPairs": 32,
+    "bodyMinusMappedSourceCentroidMPercentiles": [
+      [
+        0.016663022425453693,
+        -0.005692309164235234,
+        0.0
+      ],
+      [
+        0.025597689811907756,
+        1.2188706068150764e-05,
+        0.0
+      ],
+      [
+        0.02987158637943593,
+        0.0007350568153517304,
+        0.0
+      ],
+      [
+        0.030563387856064612,
+        0.0016379353083775382,
+        0.0
+      ]
+    ]
+  },
+  "sectionArchiveSHA256": "ba74cad2b49cca57dffcbf6f49b98c4101db9b4f8e6fa94a37bd7e6b38090fd4",
+  "sectionArchive": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie17/contours66/sections.json.gz",
+  "analyzedDonor": {
+    "vertices": 8262,
+    "triangles": 16588,
+    "sourceFrame": "Original donor units before any wearer cuts, in-memory direct simplification only",
+    "material": "Original selected donor UV/PBR retained, no new texture or native save"
+  },
+  "limits": [
+    "Oriented negative closed contours identify air-cavity sections, not a complete end-to-end wearer-port or capsule-clearance proof.",
+    "Nearest contour may belong to a connected torso/shoulder region; all components and ambiguous intersections are retained. No automatic fit or deletion.",
+    "Mapped contour centroid is a parameter witness under nonlinear construction mapping, not an exact mapped-polygon area centroid. Source units are uncalibrated; body/native distances are metres.",
+    "Temporary analysis clone only, no saved source17 or original data change, newcapture/rig/motion/inference/worker/player promotion. AllM0-M5/mobile/root played art remain open."
+  ]
+}

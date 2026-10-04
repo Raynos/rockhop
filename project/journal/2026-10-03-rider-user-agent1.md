@@ -555,3 +555,11 @@ Finding: 5120readonly body/garment rays allstart with outward bodyhit; garment88
 Validation: Native17/PBR pin unchanged/no mesh save. All5120ray records losslesslygzip archived with deterministicmtime0, digest andcount roundtrip verified; no ray reaches12hit cap, queriesbounded1m.2552body intersections and128witnesses retained. Blender/diff/hooks pass.
 
 Limits: Local rays neitherprove globalclearance nor establish nominalbone center inintendedlumen. Entry/exit couldbe foldedwalls; no globalinward-face deletion, point snaps orradius sweep. Tenopeningloops/2552body/1self androotart/fit/rig/M0–M5/mobile remainopen. No capture/broadmotion/inference/worker/player/Library promotion.
+
+### Round66 — actual lumen contours expose source-axis/body placement error
+
+Finding: Jake prefers actualdonor and rejects two-tone fittedcolumns. Actual uncut donor simplification8262v/16588tri yields64oriented sleeve/body sectionpairs. Mapped forearm lumen/body centroid gapsmedian30.350mmL/41.163mmR,max51.552/61.460mm; sixleft/fiveright upperarm sections selectnonlocal torsoaircontours andremainambiguous.32torsosections put bodycenters16.663..30.563mmforward ofsource,median25.598mm. Use actualsource anatomicalconstraints, notUV-only/stockpattern replacement orblindradius fit.
+
+Validation: Originalsource/native17/recipes hashes exact/no native save. Fulloriented contours/components archivedlosslessly/deterministicgzip hash/count roundtrip64sleeve+32torso verified. Torso-plane normalization dtype corrected explicitlyfloat andcomplete readonlyrun succeeds. Silent ship66 cold1554ms/4810 identical ticks/clear40.083333s/crash103/restart1tick/frame2.210ms/errors0; Blender/diff/hooks pass.
+
+Limits: Sectionair contours notend-to-endwearer-port/capsule-clearance proof; finitewallairports neednotmeshboundaryedges. Nonlinearly mappedcentroid remainsparameterwitness. No body/head/51bind rebuild, capture, inference, worker, rig/broadmotion/player/Library promotion. Source17fit2552body/1self/10cutloops stillunqualified; rootsolejudge/allM0–M5/mobile open.
