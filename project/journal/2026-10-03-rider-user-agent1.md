@@ -475,3 +475,11 @@ Finding: Same actualsource10targets/qualified09seed/40step8solver now connectsal
 Validation: Independent20source meshes/18graphs/17images/51bindpose exact;6046v/11840tri. Exact triangle/source-parent/seed/final/vector contacts and frozenfield versioned;12of1937coverage misses/localnormalminimum4.478mm explicitproxies. Blender/diff/hooks pass.
 
 Limits: Still32self, no rig/game/Library/playerhandoff orskin/livecollision/playedart/mobile acceptance. Selectedshape changedby connectedanatomicalfit, notexactclosedsource volume; rootsolejudge/allM0–M5open. Failedscalar/ray/vector controls andcanonicalbody/head/bind retained.
+
+### Round56 — local underarm seam fitting clears selected-source body/self, 2026-10-03
+
+Finding: Actual40contactvertices from32source12triangle witnesses define explicitstructural underarm seamfit, qualifiedseed anchors/60mm geodesicblend.278of6046vertices (4.60%) affected; ALLoutside donorvector displacements exact/selectedsource10UVPBR unchanged. Full11840tri selectedcandidate now0body/0self; notplainshirtappearance orimmutablewholepattern constraint.
+
+Validation: Independent21existing source/controlmeshes/18nodegraphs/17images/51bindpose exact; source12/field/contactpins unchanged. Maximum16.834mm source-displacement retainsrealopening/collar pins/faces; actualfitfield versioned.12of1937coverage misses/localnormalmin4.478mm explicitproxies; no maskrelaxation. Blender/diff/hooks pass.
+
+Limits: Staticintersection prerequisites only; sourceunrigged forindependentAgent3skin/game. Rootplayedlikeness/wearing/consumedcollisions/iOS/allM0–M5 remainopen; no Library/playerpromotion. Texturefiles externalinversionedsource10; explicitinventory handoff next, historicalfailedcontrols retained.
