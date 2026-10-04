@@ -635,3 +635,11 @@ Finding: Source22 integrates one stationary ambient field with measured spatial 
 Validation: Saved positions/triangles/all46contact witnesses reproduce archive exactly. Ideal inverse maximum0.58pm; actual saved float32 native inverse64.92nm; isolated affine-generator closure10.55nm. All12443sampled Jacobians positive/min0.937526. Independent27scoped original meshes/18graphs/17images/51rest+pose exact. Maxdelta42.858201mm; Blender audits complete. Source/native and field digests pinned; diff/hooks pass.
 
 Limits: Finite Jacobians/inverse accuracy are not whole-volume or rendered-surface proof; measured Gaussian widths do not preserve isolated4mm bounds. Hash scope excludes normals/genericattrs/shapekeys/modifiers/rigworld. Native wearer ports and46body contacts need diagnosis; no new capture/rig/motion/body change/inference/worker/Library/player promotion. Played art/M0–M5/mobile allopen; parentsolejudge.
+
+### Round77 — right-hand cuff contacts differ from interior sleeve fit
+
+Finding: All46frozen source22 body pairs yield explicit edge/plane crossing witnesses.15righthand/6clothtri lie3.482..13.008mm beyondwrist, touchfree-loop9/graphsteps0, boundarydistance0..5.576mm. Nine rightfore/5tri lieatforearmstation0.105..0.117, ~242mm beforewrist;22leftupper/11tri atstation0.279..0.327, ~178..191mm beforeelbow.31interior contacts are not cuff defects.
+
+Validation: Exact saved positions/triangles/archive pins and inputs unchanged.10degree2free loops/566edges retained. All46intersection coordinates/nearest segment/graph distances/axis stations/original parent polygons/local normals archived. Report field corrected to generic bone-tail distance so upper-arm tail is clearly elbow; readonly rerun pass. Diff/hooks pass.
+
+Limits: No source save or contact repair. Nearest free-edge/radial-normal signs do not prove actual air ports or unwanted lining; no blanket wall deletion. Next bounded actual-wrist cuff recut addresses15hand only; interior31need separate fit. No radius/time/density sweep/capture/rig/motion/body-head-51bind change/inference/worker/promotion; allart/M0–M5/mobile open.
