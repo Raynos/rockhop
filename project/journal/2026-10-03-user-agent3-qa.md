@@ -1356,3 +1356,25 @@ open, allM0–M5 open. Agent1 owns sole construction proposal; parent owns
 ask275/index and art/admission. No source edit/candidate capture/worker,
 Library delivery/upload/push/promotion/publication. Temporary normal build
 excluded; no recursive cleanup.
+
+
+## 2026-10-04 Round70 — freeze failed geometry-only independent QA
+
+Finding: Root-assigned independent read-only QA receives Agent1's single
+geometry29 failed rest trial595852b7. No source repair, expansion, weight
+solve or candidate capture is admitted. Frozen corrected ancestry is a
+metadata correction only; original receipts and rejected type failure stay.
+
+Validation: Native215bf623 and corrected fields3727d0fd match supplied
+hashes; source operator pins and handoff receipt hashes exact. Current
+JSON/Markdown reports and three owner recipes match frozen commit bytes.
+Complete input inventory and scope in neck70/preparation.json. No new
+calculation, Blender read or intersection run yet.
+
+Limits: Owner reports1112head-self/307body-head crossings, including685/263
+free-free pairs, and decoded protected normal changes152/1192. These need
+independent verification;464-ID unedited collar is not admitted or proved
+necessary/minimal/sufficient. Original99moving/contact/identity rejection,
+490garment contacts and allM0–M5 open. Parent owns ask275/index and source
+decision; Agent1 sole construction owner. No solve/source edit/render/
+capture/pose/worker/install/GPU/model, Library delivery/upload or push.
