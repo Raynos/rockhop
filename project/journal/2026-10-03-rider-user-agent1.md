@@ -747,3 +747,11 @@ Finding: Separate native25 applies only tested30°shading to source24:19878smoot
 Validation: Actual save/reopen assertions pass. Original builder then hit stale materialRNA during metadata names; executedrecipe/log retained, scalar-name report-only recovery repeats checks without native overwrite. Python syntax/diff/hooks pass. Silentnormalship90cold1660ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame3.160ms/errors0.
 
 Limits: Parentplayed89permits boundednative-four qualification next, not9/10/moving/art/M0–M5. Fullcontrol/loss mandatory. Cuffs/all24coverage andactualexport-engine normals/mobile remainopen. No geometry shrink/rebuild/newbody/rigchange/restrecapture/inference/worker/Libraryupload/playerpromotion/publication inthisunit.
+
+### Round91 — authored full-cage control and explicit native four
+
+Finding: Actual donor had0groups/no skin modifier. One fixed structural1250vgarment-cage barycentric attachment authors full1..6influences and separate native1..4field. Preserve full control;468vertices truncate,maxremovedmass1.439466%/actualL1max0.028789339. Native26SHA4a0904b94a507f35590d1ec4ebfe763237fa5fb21fa189573842309cb776a0ad.
+
+Validation: Saved/reopened native memberships exact to Float32 fields. All12430positions/24359tri/cycles/UV/originalPBR/tested30°normals remain source25exact. Original25unrigged retained;8protectedmesh/configuration/weights snapshots+51pose/rig exact. Python syntax/diff/hooks pass.
+
+Limits: Provisional closest structural cage ancestry, not accepted legacy template skin; no failed13/14geometry reused. Weight mass not deformation/clearance proof. Next529continuousnative full-versus-four actual loss/body-self/coverage/playedwearing, then independentAgent3export-engine. Cuffs/all24coverage/art/M0–M5/mobile open; no geometry shrink/rebuild/recolor/newbody/inference/worker/Libraryupload/promotion/publication.
