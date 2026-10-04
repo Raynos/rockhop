@@ -1,0 +1,87 @@
+{
+  "status": "ONE_BOUNDED_ANATOMICAL_TRANSITION_PROPOSAL_NOT_CONSTRUCTED_ROOT_DECISION_PENDING",
+  "creationDate": "2026-10-04",
+  "owner": "Agent1 source geometry/weights; Agent3 independent cause/preservation QA; root sole admission and played judge",
+  "scopeAuthority": {
+    "path": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body59/proposal.json",
+    "commit": "6df2da642fceec4d7b6efed1a529fa96104186d0",
+    "sha256": "5f563c032791a9426c0447a2b8c818b140fd62e56a621fd4b81efd461cfdefa6"
+  },
+  "failedArtControl": {
+    "commit": "0d1af76b5f15154fd21b0d90c3f95bc1600cd1af",
+    "movieSHA256": "5ade867a1cab55d46810fab32a4e9cdfeb6c17f1e31d6b1f0115d34aaebc13c9",
+    "rootVerdict": "REJECT actual668/240 clavicle shelf, folded throat ledge; native rear overhang. Zero seam drift is insufficient."
+  },
+  "preservationDerivative": {
+    "commit": "54f0ec748a560486cba3e634893bc46639a9a29d",
+    "nativeSHA256": "60036a17b60db73b66abc140c943c2589d2eb2c91340e5c50bc59bd6a7e6a5e4",
+    "independentQA": "PENDING, not art acceptance"
+  },
+  "recommendation": "One joint anatomical fit of the admitted body/lower-head band with a free physical seam, original canonical body contour as the shape reference, and frozen exterior anchors. Do not conform the body onto the unchanged donor outline again.",
+  "geometryOperator": [
+    "Work only in a new derivative retaining original source, failed97/98/99 and auxiliary-restored100 controls. Use the existing valid238-knot physical seam/split ancestry and triangulated connectivity as topology, not as a fixed shape. No new global transform.",
+    "For original body vertices use the exact canonical source position as reference Q. For outer lower-head editable vertices use the canonical horizontal section at original nativeZ and explicit anatomical-axis azimuth as reference Q; intersect triangle-plane segments and positive rays with frozen source IDs/barycentric ancestry. This is a source-shape reference, not nearest-point welding/projection or permission to copy/expose the original face.",
+    "For the238 shared seam reference Q use the ordered original canonical-body cut curve at the frozen union parameters, never donor positions. New split Q samples carry source-edge fractions; shared physical aliases use one reference. For the inner reference map reversed inward-loop arclength to the outer phase and retain the original inner-minus-outer shell offset; the cap reference derives from that inward loop and has no exact source identity. These are targets of the one constrained solve, not a promised accepted shape.",
+    "Jointly solve restXYZ on the body/head physical registry. Minimize one fixed screened-biharmonic energy: sum A_v*|P_v-Q_v|^2 + h^4*sum A_v*|L(P)_v|^2, with A and cotangent L frozen from the reference local mesh and h its median rest edge length. Use no coefficient sweep. This couples anatomical fit and curvature over the full admitted band rather than smoothing an unchanged donor boundary.",
+    "Clamp all outside geometry and every partial head UV-position alias class exactly. Use exterior adjacent triangles to constrain first interior differences to their stored tangents where consistent. Shared seam aliases are one XYZ unknown written identically in Float32; its position is free, never fixed to donor lower outline. Source body positions are anatomical goals; any changed existing position remains derived, not exact-source ancestry.",
+    "Keep the inward190-loop surface separate from the single outer physical join. Its existing split/cap topology is an unaccepted control, not a containment certificate. Fair only fully admitted inner classes with retained shell orientation/thickness as a reference; never weld both loops to the body. Reject an intersecting/collapsed inner closure before a moving proof.",
+    "Keep existing UV/image/material fields exact; derived split corners retain explicit source-edge interpolation. Recompute only normals genuinely affected by changed local geometry while keeping outside corner data exact. No normal-only camouflage, hidden face deletion, contact-selected mask or garment cover."
+  ],
+  "attachmentOperator": [
+    "Geometry inventory/constraint feasibility and rest topology first, before local attachment. Own original51rest/bind/saved poses remain exact.",
+    "Use one continuous piecewise-linear local attachment field with exterior semantic rows pinned. Full control uses normalized canonical51-bone source samples at the anatomical reference plus one screened graph-harmonic interpolation to frozen body/head exterior rows. No constant chest35/neck65 ring and no factor sweep.",
+    "Derive only interior nativeFOUR rows by deterministic top4(weight descending, bone-name tie break) and normalization; preserve exterior FOUR rows exactly. Duplicate physical seam aliases share identical full and four Float32 vectors. Per-triangle barycentric fields agree across shared edges; measure spatial gradients, retained mass and actual full/four deformation loss. This does not promise low strain or successful motion.",
+    "All153auxiliary definitions and exact original memberships remain preserved as100; auxiliary groups are excluded from bone influence counts. New derived vertices retain honest auxiliary-identity limits."
+  ],
+  "protection": {
+    "bodyExistingEditable": 160,
+    "bodyIncidentTriangles": 320,
+    "headExistingEditable": 1243,
+    "headIncidentTriangles": 2188,
+    "headFullyAdmittedPositionClasses": 1076,
+    "headPartialClassesPinned": 53,
+    "insideMembersPinned": 60,
+    "outsideAliasMembersProtected": 59,
+    "headOutsideIncidentVerticesProtected": 373,
+    "bodyOutsideIncidentVerticesProtected": 56,
+    "headTrianglesAbove1_60TouchEditable": 0,
+    "exactIDs": "Authoritative neck59 arrays plus diagnosis.json protection arrays; no inspection-envelope or canonical-reference expansion."
+  },
+  "feasibilityConcern": {
+    "fixedWitness": {
+      "nativeVertex": 29738,
+      "sourcePositionM": [
+        -0.08385958522558212,
+        0.0278974287211895,
+        1.5368716716766357
+      ],
+      "canonicalSectionRayPositionM": [
+        -0.03591542319265569,
+        0.012893083597773898,
+        1.5368716716766357
+      ],
+      "axisXYM": [
+        0.005282516025142701,
+        -1.935920308450443e-10
+      ],
+      "sourceMinusCanonicalRadiusM": 0.0502371679697619,
+      "sourceMinusCanonicalXYZM": [
+        -0.04794416203292643,
+        0.015004345123415601,
+        0.0
+      ]
+    },
+    "interpretation": "The source-fixed rear constraint remains about50mm outside the canonical contour at its own height. A complete canonical fit is impossible at that pinned vertex. This does not prove that this vertex causes the visible ledge or that a smooth local transition is impossible; independent source/pixel ownership QA and a feasibility result are required. Do not promise this initial margin can remove the entire visible overhang."
+  },
+  "preconstructionHandoff": "Agent3 independently checks source anatomy/cut attribution, pinned alias completeness and exact fixed witnesses against the existing rejected proof. Root decides this one bounded proposal before another candidate. If required correction touches any fixed witness/alias/outside source face, stop and supply exact requested native vertex/triangle/alias expansion with root decision first; never widen automatically.",
+  "eventualValidation": [
+    "Rest physical seam, all incident one-corner triangles, orientation/nonmanifold/Tjunction/area and separate inward closure. Explicit source/new face and vertex ancestry; exact outside geometry/attrs/UV/PBR/auxiliary fields/cheek/upper face/original51bind-pose.",
+    "All529native and703recorded actual47 identities/full-four controls, dynamic seam precision<=2\u00b5m, collision/collapse/strain/attachment-loss and actual body/head/garment targets. Source identity error bar remains a separate failed check; no reconstructed trace certificate.",
+    "Root played exposed front/side/rear native72/actual668 plus continuous streams only after source freeze and admission to capture. Current verdict grants no new capture now. All490preexisting garment/head contacts and source26garment failure remain explicit."
+  ],
+  "limits": [
+    "Proposal/source diagnostics only: no restXYZ solve, new candidate, weight solve, native save, capture/controller run/export/install/inference/model/GPU job/newworker/upload/promotion.",
+    "Canonical source is anatomical guidance, not ground-truth likeness or proof of a moving causal mechanism. Independent Agent3 QA is pending.",
+    "AllM0-M5/contact/identity/played-art/engine/device/player gates remain OPEN. Source26garment field/hem work stays separate."
+  ]
+}
