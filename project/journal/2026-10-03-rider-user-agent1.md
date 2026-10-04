@@ -763,3 +763,11 @@ Finding: Both source26fields peak959logical/displaybody/4095native self(4116fixe
 Validation: Actual native skin consumed at every529sample; full/four manual51LBSparity below0.465µm. Both native/current and frozen export-rest triangulations audited, exactfirstwitnesses/matrices/endpoints/worst loss positions archived. Source/field/driver hashes unchanged; Python syntax/diff/hooks pass.
 
 Limits: CandidateFAILS movingqualification; equal peakfull/four means extra-weight truncation doesnotexplainpeaks. Protectedhead observation is garment contact, not Agent3body/seam diagnosis. Parentplayedproof next beforefieldretry/engineadmission. SyntheticFK/trianglewitnesses notcontroller/penetrationdepth/between-samplecollision. All24coverage/cuffs/art/M0–M5/mobile/exportnormals open; no source save/geometryshrink/newbody/inference/worker/Libraryupload/promotion/publication.
+
+### Round93 — played failed native-four proof, no retry
+
+Finding: One11.083333s1920×640silent clip shows unchanged failed26native-four from fixed front/side/rear:133actualFK samples/399views at12fps acrossforward/reversed standing/A/T/reach/bend/raised/asymmetric/squat/FK. Sameprotectedbody/head/cheek/opaqueboxers/originaldonorPBR/tested30°normals; captions show rawcurrentfailures. SHA6a9fc66abb7f709eef4d668d83432212f8b091a8ce7b36690bb50a23d060b9a4.
+
+Validation: Allgarmentbounds within399cameras; renderedmanualLBSparity<0.412µm/sourcepins unchanged. Fulldecode266frames/0errors/0audio; silentfullplay265callbacks/0drops/0page-mediaerrors. Third-round normalship93cold1664ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame4.955ms/errors0. Syntax/diff/hooks pass.
+
+Limits: Native26stillFAILS92; full-control loss4.113843mm andactualprotectedheadrest gap retained. Movieevery4th529sample,nointerp/poseholds; syntheticFK notgame/controller/physicaliOS. Parentplayeddecision pendingbeforefieldretry/engineadmission; Agent3bodyQAunchanged. All24coverage/cuffs/art/M0–M5/exportnormalsopen. No source save/weightrepair/shrink/rebuild/newbody/inference/worker/Libraryupload/promotion/publication.
