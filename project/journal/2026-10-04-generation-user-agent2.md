@@ -261,3 +261,11 @@ Finding: One existing Hunyuan PBR run completes15steps/eight768views and origina
 Validation: Guard exit0 in335.366s; all15paint-step arrays finite/saved.570242triangles retained, UVs finite and5.5955887e-7 coordinate error passes8e-7 writer limit. Original base-color/roughness/metallic maps4096.
 
 Limits: Unaccepted source; no topology cleanup, grip fit, handedness, rig, collision or M0-M5/art/mobile acceptance. No player edits or publication.
+
+## Round 129 — glove render denied before launch
+
+Finding: Glove original PBR is saved, but the next source-review render is denied by a foreign canonical lease and72.2GiB combined memory against original68GiB admission. No render/boot job launches; stop the serial lane and preserve this actual blocker.
+
+Validation: lsof exit0 names lockf45499; anonymous45.0/wired27.2/free0.0GiB on128GiB host. Orbit scratch and worker guard receipt absent, proving no owned render launch. Original glove GLB/ref/UV/raw/maps match receipts; normal source gate pins remain exact.
+
+Limits: Jeans review ready; glove source visual pending; boots not generated. No queue, retry, foreign signal/eviction, guard bypass, upload or publication. Root alone judges all open art/fit/rig/mobile gates.

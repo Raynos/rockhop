@@ -1,0 +1,30 @@
+{
+  "item": "gloves",
+  "phase": "orbit01",
+  "lsofExitCode": 0,
+  "stdout": "COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME\nlockf   45499 raynos    3r   REG   1,17        0 26587906 /Users/raynos/projects/localai/.model.lock\n",
+  "stderr": "",
+  "anonymousGiB": 45.0,
+  "wiredGiB": 27.2,
+  "freeGiB": 0.0,
+  "physicalBytes": 137438953472,
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/orbit_item.py",
+    "--",
+    "--mesh",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/decode01/finite-cell-derived.npz",
+    "--mesh-sha256",
+    "6a22dbf4413dc99716f76fff4299602b9db654949b9c663715fe8c95b34d30b5",
+    "--painted-glb",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+    "--paint-receipt",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/receipt.json",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/orbit01"
+  ],
+  "admitted": false,
+  "timeUTC": "2026-10-04T17:33:26Z"
+}

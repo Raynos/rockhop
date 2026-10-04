@@ -1,0 +1,120 @@
+{
+  "accepted": false,
+  "status": "PBR_SOURCE_SAVED_REVIEW_RENDER_ADMISSION_BLOCKED",
+  "item": "gloves",
+  "ask": 293,
+  "round": 129,
+  "sourceMesh": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+    "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea",
+    "bytes": 22940908
+  },
+  "rawNative": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/native.npz",
+    "sha256": "8980ecc410a4d4f9bf2f68a9244ca9a1ee013da524d20bfb8a7eb5181bfa3fdf",
+    "bytes": 5775672
+  },
+  "sampledShapeLatents": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/actual-sampled-latents.npz",
+    "sha256": "6a4056d821185a30ceb83746618c6757f628f163c6c1c7c49b6dbb7e3605c4e4",
+    "bytes": 483300
+  },
+  "finiteCellSource": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/decode01/finite-cell-derived.npz",
+    "sha256": "6a22dbf4413dc99716f76fff4299602b9db654949b9c663715fe8c95b34d30b5",
+    "bytes": 3849345
+  },
+  "UVArchive": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/uv01/wrapped.npz",
+    "sha256": "2d5597c34877a0d0820127535ae9c23301724e8bcfed3acf8ad9dcdfe6472547",
+    "bytes": 8598923
+  },
+  "reference": {
+    "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+    "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2",
+    "bytes": 1535204
+  },
+  "originalTextures": [
+    {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.jpg",
+      "sha256": "da80f6092a4988e9ce6adb8a6b223e1559d1caacfc536a32b56abb635ba1ca98",
+      "bytes": 513793
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted_roughness.jpg",
+      "sha256": "58b34d1977d2eea96a3cca1812ad23a885774689c0c9906640a4b093493ba97d",
+      "bytes": 1466012
+    },
+    {
+      "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted_metallic.jpg",
+      "sha256": "e88bfc44188f425620bff3c9ddab3c271af7eea8b24782eb6eede8288aabeb61",
+      "bytes": 964464
+    }
+  ],
+  "paintReceipt": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/receipt.json",
+    "sha256": "62a82e34eccbbf9e385605780636d826687a24de04b62107ba3d4de8907ad40a",
+    "bytes": 573958
+  },
+  "shapeSettings": {
+    "seed": 42,
+    "steps": 30,
+    "guidance": 5,
+    "requestedMC": 384,
+    "actualFlashVDM": [
+      95,
+      190,
+      380
+    ]
+  },
+  "paintSettings": {
+    "seed": 42,
+    "paintSteps": 15,
+    "maxSelectedViews": 8,
+    "viewResolution": 768,
+    "textureSize": 4096,
+    "remesh": false,
+    "simplification": false
+  },
+  "deniedAdmission": {
+    "item": "gloves",
+    "phase": "orbit01",
+    "lsofExitCode": 0,
+    "stdout": "COMMAND   PID   USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME\nlockf   45499 raynos    3r   REG   1,17        0 26587906 /Users/raynos/projects/localai/.model.lock\n",
+    "stderr": "",
+    "anonymousGiB": 45.0,
+    "wiredGiB": 27.2,
+    "freeGiB": 0.0,
+    "physicalBytes": 137438953472,
+    "command": [
+      "/Applications/Blender.app/Contents/MacOS/Blender",
+      "--background",
+      "--python",
+      "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/orbit_item.py",
+      "--",
+      "--mesh",
+      ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/decode01/finite-cell-derived.npz",
+      "--mesh-sha256",
+      "6a22dbf4413dc99716f76fff4299602b9db654949b9c663715fe8c95b34d30b5",
+      "--painted-glb",
+      ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+      "--paint-receipt",
+      ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/receipt.json",
+      "--out",
+      ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/orbit01"
+    ],
+    "admitted": false,
+    "timeUTC": "2026-10-04T17:33:26Z"
+  },
+  "renderLaunched": false,
+  "reviewVisualReady": false,
+  "newBootJobsLaunched": false,
+  "foreignProcessesUntouched": true,
+  "noQueueRetryGuardChangeOrPublication": true,
+  "limits": [
+    "Glove source/PBR exists, but ready played-source artifact is pending actual headroom and idle canonical lease.",
+    "Jeans source review remains ready in its separate preserved checkpoint.",
+    "Boots selected reference exists; no boot inference has started.",
+    "Root alone judges art. No fit/topology/anatomy/handedness/rig/weights/physics/M0-M5 or phone acceptance."
+  ]
+}
