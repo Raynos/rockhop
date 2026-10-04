@@ -824,3 +824,22 @@ gzip roundtrip anddiffcheck pass. Evidence: garment47/finding.json.
 Limits: Reference is numerical, not an eight-slot renderer or GPU readback.
 No constructed wearing/collision/mobile/art/phone acceptance or publication.
 Agent1 retains authorship; next required normal-source gate48.
+
+
+## Round48 — normal game survives export and consumption diagnosis
+
+Finding: Required ordinary-source third-round gate passes after46/47.
+All candidate mappings/marker controls/review adapters excluded; rejected
+source14native wearing and four-slot engine issue remain independently
+open. Fresh normal build contains20unchanged player models.
+
+Validation: Silent headless WebKit low/high cold boot and4810tick clear
+match40.083333333333336s/abaaaaaaaa0a4440/368f1ca5bd9e830a with0faults.
+Both crash103ticks and restart at tick0 in1/2ms,0page errors. Fresh normal
+manifest/model/source/dependency/gate byte pins anddiffcheck recorded.
+Evidence: gate48/source.json andnormal-gate.json.
+
+Limits: Ordinary bot gate only, no candidate wearing/shape/material/art,
+consumed collision/iOS/stranger/deployment or publication approval. Agent1
+retains construction/native/weights; root alone judges allM0–M5. Source13
+at06d575af remains control. Next required own gate51.
