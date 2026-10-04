@@ -787,3 +787,10 @@ Finding: Hem149v importsmean33.713%thigh/max46.388%; squat nonplanarity19.844mm.
 Validation: Frozen91field/92matrices-actualendpoints reused/no posesource edit. Exactedge decomposition≤.331µm atdefectframes; hem baselineprediction≤.109µm. Geometry/UV/PBR/weights/bodyhead51bind untouched; pins/syntax/diff/hooks pass.
 
 Limits: Diagnostic subsets notcontact/coveragemasks; mathcounterfactual notfieldrepair,appearance or clearance certificate. Root severebodyneckflange/seatedboxerbreak verdict leavesAgent3read-only precise localproposal pendingFORAgent1sourceauthor. No clothingfit aroundbadinterface/bodyheadedit/newcapture/globalsweep/engineadmission/promotion; all24coverage/cuffs/headcontacts/M0–M5/mobileopen.
+
+## 2026-10-04 Round96 — distinguish admitted neck boundary shells
+
+Finding: Frozen exact neck59 scope has outer183/inward190 directed loops; every378/384adjacent face agrees radially. Body56loop has opposite outer-seam orientation. Keep inner closure separate before source construction.
+Validation: Proposal/source/assessment/witness hashes pass; all lower-loop aliases and boundary faces admitted; weights of each source alias identical;663one-corner incident faces retained. Normal-source ship outcome recorded below.
+Limits: Diagnostic position quotient is not physical sewing. No candidate geometry/weight/bind/capture; outside fields, face/cheek/original51bind and failed controls protected. All M0–M5 open. Ask274.
+Validation: Ship96 normal-source PASS:1548.437ms cold,4810identical ticks,40.083333333s/0faults clear,crash103/restart1tick/frame2.265ms/errors0; syntax and whitespace pass.
