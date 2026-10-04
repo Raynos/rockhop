@@ -483,3 +483,11 @@ Finding: Actual40contactvertices from32source12triangle witnesses define explici
 Validation: Independent21existing source/controlmeshes/18nodegraphs/17images/51bindpose exact; source12/field/contactpins unchanged. Maximum16.834mm source-displacement retainsrealopening/collar pins/faces; actualfitfield versioned.12of1937coverage misses/localnormalmin4.478mm explicitproxies; no maskrelaxation. Blender/diff/hooks pass.
 
 Limits: Staticintersection prerequisites only; sourceunrigged forindependentAgent3skin/game. Rootplayedlikeness/wearing/consumedcollisions/iOS/allM0–M5 remainopen; no Library/playerpromotion. Texturefiles externalinversionedsource10; explicitinventory handoff next, historicalfailedcontrols retained.
+
+### Round57 — freeze source/PBR/frame inventory and unrigged rest admission, 2026-10-03
+
+Finding: Inventorypins immutable06d575af/source13native6ef79e38…/selectedPBR/51boneorder+rest+pose/fourrealopenings and exportsunrigged garment-onlyGLBdeb7c56f….7123rows/11840tris/nativepositions0error/1mesh/0skins/0animation; explicitnative→glTF axes andfile+.65/runtime−.65once. RootclarifiesAgent1retainsgarment rig/weight authorship+native movingqualification; Agent3independently verifiesexport/engine, no broadrewrite. Existingrestinventory remainsadmissiononly.
+
+Validation: Immutable source13/PBR hashes exact; linked3actual2048images/GLBbase+ORM/doubleSided recorded. Cuffs40each/hem72/neckhood104/0othernonmanifold. All12coverage misses6upperArmper side, exactnativepositions/normals/weights/closestsurface14.3..37.1mm, no maskrelaxation. Silent ship57cold1502ms/4810identicalticks/clear40.083333s/crash103/restart1tick/frame3.140ms/errors0; Blender/diff/hooks pass.
+
+Limits: UnriggedGLB admission, exporterwarnings existingnonselectedarmatureparenting/combinedtexture samplerrecorded, notrigready/playerasset. Coverage/playedlikeness/wearing/mobile/allM0–M5 open; nextAgent1pinnedrigged derivative/nativecontinuousposes thenAgent3independentexport/engineverify. No frozenrewrite/Libraryduplicate/playerpromotion.
