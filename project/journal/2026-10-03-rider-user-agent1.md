@@ -675,3 +675,11 @@ Finding: Finite anatomical polylines fromoutside hem/bothcuffs/neck to nativeche
 Validation: Double-precision Moller-Trumbore tests andpins archived. Silentnormalship81cold1468ms/4810identical replayticks/40.083333s/faults0/crash103/restart1tick/frame1.935ms/errors0; Blender/diff/hooks pass.
 
 Limits: Zero-radius paths only, no finitecapsule/fullcoverage/containment/continuousvolume port theorem; nearparallel/coplanar excludedbydet tolerance. Next protectedhead/body extendedscope audit andfinitewearer evidence. No source save/capture/rig/motion/body-head-51bind change/inference/worker/promotion; allart/M0–M5/mobile open.
+
+### Round82 — protected head normals and rig transform scope match exactly
+
+Finding: Independent23→24extended snapshots exactfor6protected body/head/cheek/hood meshes/all51posebones. Everyexposed genericattribute field includesrawhead custom_normal/sharpflags; derivedcorner/vertex/polygon normals, shapekey blocks/configurablemodifiers/constraints/supportedIDprops andobjectparent/local/basis/world/parentinverse plusrigdata/pose state exact. Existing29geometry/UV/PBR/restscope retained.
+
+Validation: Two frozen sources loadedreadonly/digests unchanged/fullsnapshot equality pass. Modifier.items unsupportedRNA TypeError caughtbeforeoutput; explicitIDproperty support record andfullrerun pass. Blender/diff/hooks pass.
+
+Limits: Readonlyruntime properties, unlistedcollection-valuedRNA, animationFcurves/NLA/linkedfilecontents excluded; no exhaustiveBlenderstate claim. No source save/body-head-51bind change/capture/rig/motion/inference/worker/promotion. Native24still0restbody/0self; finitewearervolume/coverage/playedart/M0–M5/mobile open.
