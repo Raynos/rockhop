@@ -1036,3 +1036,24 @@ export ancestry and all M0–M5 remain open. Parent owns asks/index and guarded
 same-identity Library update; Agent3 performs no upload/delivery/outbound
 acknowledgement. Origin capture failure corrected; excluded tmp/provisional
 media retained without recursive cleanup. Required ordinary gate57 next.
+
+
+## 2026-10-04 Round57 — normal gate after modest visual addition
+
+Finding: Required third-round gate passes after preparation55 and visual56.
+Fresh normal build retains20models with no candidate mapping/private review
+adapter or corrective driver. Original PDF53 and stable body56 evidence
+remain hash-identical; no experimental body/head/garment enters player paths.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick recorded
+clears match40.083333333333336s/hash368f1ca5bd9e830a/finish bytesabaaaaaaaa0a4440
+with0faults/errors. Both crash103ticks and restart at tick0, measured1/3ms.
+All8source/lock pins and20model hashes equal gate54 before/after; actual
+results and provenance in gate57/source.json and normal-gate.json. Normal
+build succeeds with existing chunk-size warning. Only owned paths staged.
+
+Limits: Ordinary bot/source gate only; no stranger/physical iOS/candidate
+art/body/head/contact/LOD/performance or deployment acceptance. Parent owns
+asks/index reconciliation and clip judgement; all M0–M5 open. No source
+promotion, Library upload/delivery, outbound acknowledgement or publication.
+Temporary builds/renders remain excluded; no recursive cleanup retried.
