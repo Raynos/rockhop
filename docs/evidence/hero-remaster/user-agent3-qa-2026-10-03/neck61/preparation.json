@@ -1,0 +1,92 @@
+{
+  "status": "UNACCEPTED_READ_ONLY_NECK98_HANDOFF_PREPARATION",
+  "creationDate": "2026-10-04",
+  "candidateCheckpoint": "c65755e6ffc53d1d529ebfe5e89782b28133970c",
+  "scopeCheckpoint": "6df2da642fceec4d7b6efed1a529fa96104186d0",
+  "pins": {
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/bounded-neck-join-triangulated.blend": {
+      "sha256": "eed9a2ceb77eaa5b9a4deb9e686a8519c90bec130cf4a420f141615314900778",
+      "bytes": 82671761
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/triangulated-neck-fields.npz": {
+      "sha256": "ec1f4a6b72e26978740c27f9787d0d2ed8d73f0a43227c4fd9b02863b470e0d5",
+      "bytes": 2854199
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/bounded-neck-join.blend": {
+      "sha256": "4b1f1200fe5d857b9aaabf86fc2cefc7ac3a718bc2b3abd1eea5a945b0c77277",
+      "bytes": 76449366
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/authored-neck-fields.npz": {
+      "sha256": "55925772d5f753f943764003fca3cb96d188193a204a93909d4ae37948902fe1",
+      "bytes": 2389425
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/native-four-with-full-control.blend": {
+      "sha256": "4a0904b94a507f35590d1ec4ebfe763237fa5fb21fa189573842309cb776a0ad",
+      "bytes": 70048572
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface98/triangulation.json": {
+      "sha256": "3297977858e0015999c117d628ccda3810b95701088b580199f05e4dbfe08413",
+      "bytes": 21671
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface98/reopen-rest.json": {
+      "sha256": "53effa94f74ce274cabbe5139b40a31d9d37f44f8b53769f709451b0ed9f484b",
+      "bytes": 4489
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface98/FINDING.md": {
+      "sha256": "fafae07816b885ef0553f28424e0b193152ea939dfa0207ae5398e44a605d28a",
+      "bytes": 2333
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface97/authoring.json": {
+      "sha256": "1c498e4e60d2b2d2739da9bd1a20b229ab0738292fb6f7378bc335dfb14b251b",
+      "bytes": 19759
+    },
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface96/ordered-boundaries.npz": {
+      "sha256": "1397df860721c3353cc759c37109bb27ea2164b623f605ee6d26cb84825448b0",
+      "bytes": 209852
+    },
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body59/proposal.json": {
+      "sha256": "5f563c032791a9426c0447a2b8c818b140fd62e56a621fd4b81efd461cfdefa6",
+      "bytes": 76479
+    },
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body52/native-fields.npz": {
+      "sha256": "deb04faa6a5ca85ca9617cb963d84d5e62074aee281507c5a755fcbe8387d91c",
+      "bytes": 2105841
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_local_neck_join.py": {
+      "sha256": "cb419f90a39141419335564c14154afe11659f0ff16c068f3f6a4d665974d1c2",
+      "bytes": 19105
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/triangulate_local_neck_join.py": {
+      "sha256": "c170f15913986105bc599489183db35c1cb4bfdc8a30e41b9b3fad61df2b5e8e",
+      "bytes": 9586
+    },
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/verify_triangulated_neck_checkpoint.py": {
+      "sha256": "4657a4e3b3b6f8c1a6ced3a8e0af5a6a13e50354df38d9f82cdffe1d95bb5ed1",
+      "bytes": 11976
+    }
+  },
+  "fourCandidateFieldsAndOwnerReportsMatchCommittedBytes": [
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/triangulated-neck-fields.npz",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface98/triangulation.json",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface98/reopen-rest.json",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface98/FINDING.md"
+  ],
+  "rootAdmission": "Only exact neck59 index lists, local lower-neck weights in same bounded region; original51rest/bind/pose, chosen face, above1.60m touching triangles, cheek and all outside fields protected. Local rest QA only.",
+  "verificationPlan": [
+    "Independent headless Blender read of source26, failed neck97 and frozen neck98; no native save, render/export/capture or pose evaluation.",
+    "Exact immutable original and failed object, rig, image/material controls; actual candidate native fields and admitted outside vertex/corner/polygon protection.",
+    "Recompute ordered boundary and ancestry/corner maps; verify actual full/four four-slot fields, physical seam aliases and oriented rest topology, local one-corner areas.",
+    "No dynamic matrices/measurements, capture, competing repair, installation/model/GPU jobs or publication. Agent1 owns motion/contact/played proof; root owns acceptance."
+  ],
+  "ownerClaimToAudit": {
+    "originalControlObjects": 34,
+    "failedCheckpointObjects": 4,
+    "outerSeamEdges": 238,
+    "innerClosureEdges": 383,
+    "originalMouthBoundaryEdges": 151,
+    "internalNonmanifoldChords": 0,
+    "bodyLocalOneCornerTriangles": 502,
+    "headLocalOneCornerTriangles": 2433
+  },
+  "parentOwnedStatus": "Ask275 and shared plan index reconciliation remain parent-owned; original490 garment/head contacts not waived, source26 remains failed, all M0-M5 open."
+}

@@ -1134,3 +1134,23 @@ repair proposal remains unaccepted, source26 failed, all M0–M5 open. Parent
 owns ask275/index reconciliation, repair scope and art judgment. No outbound
 acknowledgment, user/Library delivery, upload, promotion, push or publication.
 Temporary build stays excluded; no recursive cleanup attempted.
+
+
+## 2026-10-04 Round61 — freeze admitted neck98 rest QA inputs
+
+Finding: Root admits independent read-only scope/ancestry/rest verification
+of Agent1's frozen same-field neck98 derivative. This supersedes failed
+neck97 only for this check. Exact neck59 bounds and local weight permission
+remain authoritative; no editable inspection-envelope expansion.
+
+Validation: Fifteen inputs pinned before native read, including original
+source26, failed neck97, frozen neck98, registry96, scope59 and owner recipes.
+Candidate native/fields and proposal SHA match handoff. Fields and three
+owner reports match frozen c65755e6 commit bytes. No source write/capture
+or pose measurement started. Exact checks and limits: neck61/preparation.json.
+
+Limits: Unaccepted preparation only. Rest controls/topology are next; Agent1
+owns motion/contact/loss and one played proof. Original490garment/head
+contacts remain separate, source26 still failed, all M0–M5 open. Parent
+owns ask275/index, repair and art acceptance. No outbound acknowledgment,
+Library/user delivery, upload, publication, new worker or model job.
