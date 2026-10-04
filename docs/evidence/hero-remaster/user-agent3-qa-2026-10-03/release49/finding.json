@@ -1,0 +1,404 @@
+{
+  "status": "EXACT_FROZEN_LOCAL_QUALIFICATION_WITH_FULL_TREE_LINT_FAILURE_AND_NATIVE_PREREQUISITE_LIMIT",
+  "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+  "reports": {
+    "ci-unit": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "ci-unit",
+      "command": [
+        "pnpm",
+        "exec",
+        "vitest",
+        "run",
+        "--testTimeout=30000",
+        "-t",
+        "^(?!.*(s/tick|of CPU|ffmpeg resolution)).*$"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 15.818027541000001,
+      "logSHA256": "ff62c7e0485948e14bcc3edf1551d33b9af381d8e0b8b8696cbcb0b085ea8fc9",
+      "logBytes": 193957,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "export": {
+      "status": "EXACT_FROZEN_CLEAN_EXPORT_CREATED",
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "treeSHA": "5e81930af820cbb342d19c3e21f97408d36e5b34",
+      "exportPath": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "verifiedGitBlobFiles": 16272,
+      "verifiedBytes": 10293354301,
+      "missing": [],
+      "before": {
+        "mainHEAD": "0214b6ce9207afb2e2c76bce4504d595d9867266",
+        "sharedIndexSHA256": "ff96299d310f16e661179cef13d38cf4d286c4dd5be383843f5c7d553bcdbc00"
+      },
+      "createdBranchOrWorktree": false,
+      "publicationAuthorized": false,
+      "sharedStateMutated": false
+    },
+    "install": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "install",
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 1.3364307080000002,
+      "logSHA256": "84ea816ba955a49f0f7b70dbe89e2240c074d4b6572fe3b8c97dab50d362b099",
+      "logBytes": 1850,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "lint-diagnosis": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "baselineSHA": "296da2fea6e4c825b710c78f41d921fb2e2734a4",
+      "fullTreeLintExit": 1,
+      "fullTreeErrorCount": 65,
+      "files": [
+        {
+          "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/freeze_constructed_sole.mjs",
+          "errorCount": 1,
+          "baselinePresent": false,
+          "baselineByteIdentical": false,
+          "frozenSHA256": "b1b0bed4b1e49e54d342c582101e08f96bf8712791f08998fe95d32cd9e46d67",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/freeze_contact_surfaces.mjs",
+          "errorCount": 1,
+          "baselinePresent": false,
+          "baselineByteIdentical": false,
+          "frozenSHA256": "70f034cd3272bb653bacaa4f91dc69f7bcc2b6e8c021277f2189a18b054162e2",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/basic-pose-seams163/evaluate.mts",
+          "errorCount": 14,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "61c5f3a819280eccfc6823e66f8008191979154a4e54ff2b7a627588b478ece9",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/scripts/armhole_stock_grips.mjs",
+          "errorCount": 5,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "f122b3b35c4e864cb8c8117ce05e0ab5976a64faae8f74c233d0402afdc27d8a",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/qa-lane/scripts/tube10_stock_export.mjs",
+          "errorCount": 3,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "cc224be6a03dee4f0409f053a853a2ad0c9cbeb81279f26bb90e7b73de6d94c4",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/rig-lane/chart-weights/capture480.mts",
+          "errorCount": 7,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "79d6e163d2c3270da2a24efb53b1fdc6c272c467646573ddd6fbbad0352fb023",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/hoodie-repair02/scripts/conditioning-v6.mts",
+          "errorCount": 6,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "cfcc44218dd2258af745afaa096c0107aa00b3d3ba32791c7dcf8c262cf4ca67",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/foundation-repair-task3/runtime/conditioning.mts",
+          "errorCount": 6,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "d817140d681db87067d6318a90d079056e29a36d2b7d3c20d2bdf20a547105e0",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/rig-foundation167/evaluate.mts",
+          "errorCount": 6,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "3c8313b323d35045c4032ce20bc33ce0704bbaa714a4addbd290f3488b3e807a",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/source-rig188/actual-three/evaluate.mts",
+          "errorCount": 9,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "4c371089aa13e48bd8014344707cae024eec3176a63633d49363e4e56597a419",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        },
+        {
+          "path": "assets/blender/hero-remaster/rider/one-rider-v2/tpose-rig-adapter212/reach.mts",
+          "errorCount": 7,
+          "baselinePresent": true,
+          "baselineByteIdentical": true,
+          "frozenSHA256": "b2334d7f35fb9f2c81a8c802c9a32b5b33272368b03300db72eaacc5be1d6f4b",
+          "existingCIIncludesPath": false,
+          "existingGitCheckoutDiscoveryIncludesPath": true
+        }
+      ],
+      "existingCIPatterns": [
+        "/*",
+        "!/harness/out/",
+        "!/assets/blender/",
+        "/assets/blender/hero-remaster/delivery/rider-street-mustard.glb.seams.json",
+        "/assets/blender/hero-remaster/delivery/rider-street-mustard-lod.glb.seams.json",
+        "/assets/blender/course-kits/coast-ground/delivery/manifest.json",
+        "/assets/blender/course-kits/coast-ground/delivery/quay-top-albedo.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/quay-top-arm.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/quay-top-normal.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/quay-wall-albedo.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/quay-wall-arm.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/quay-wall-normal.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/tidal-ground-albedo.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/tidal-ground-arm.phone.webp",
+        "/assets/blender/course-kits/coast-ground/delivery/tidal-ground-normal.phone.webp",
+        "!/assets/design/",
+        "!/docs/evidence/",
+        "/docs/evidence/hero-remaster/one-rider-v2/contact-targets/pegs/bike-rookie.glb.json",
+        "/docs/evidence/hero-remaster/one-rider-v2/contact-targets/pegs/bike-rookie-lod.glb.json",
+        "/docs/evidence/hero-remaster/one-rider-v2/contact-targets/pegs/bike-pro.glb.json",
+        "/docs/evidence/hero-remaster/one-rider-v2/contact-targets/pegs/bike-pro-lod.glb.json",
+        "!/project/releases/"
+      ],
+      "existingCISourceFiles": 2286,
+      "scopePath": "/private/tmp/rockhop-agent3-release49-ci-b9e6d3f4",
+      "ciScopeLintExit": 0,
+      "ciScopeElapsedS": 0.9750325410000001,
+      "ciScopeLogSHA256": "e6d50254e7aac433aa7c7d6e17937db4fad072a58393125a4411d303a065ecf0",
+      "gitCheckoutDiscoveryExit": 0,
+      "gitCheckoutDiscoverySHA256": "64b6743832b793a0f6893cb4d8429c55d9b7261e66c5d21686f5c41fbc65c8bc",
+      "recipeSHA256": "978ccf64e11a996280f8b03f7b5a5cd6834cb04e7143161b73bb503629e1fe08",
+      "sourceModified": false,
+      "ignoresChanged": false,
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "lint": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "lint",
+      "command": [
+        "pnpm",
+        "run",
+        "lint"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 1,
+      "elapsedS": 3.128150208,
+      "logSHA256": "5fb72d2869d22deb12d9d6e7946cb84cae9dbb44bf7ebf38985fcf39e5c1b053",
+      "logBytes": 17808,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "store-listing": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "store-listing",
+      "command": [
+        "node",
+        "scripts/store-metadata.mjs"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 0.036407417,
+      "logSHA256": "c234f31a0f147658bf888087e0a846f40c23b6848d06118c9428af0c8c9bdeb9",
+      "logBytes": 516,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "store-release-prerequisite": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "store-release-prerequisite",
+      "command": [
+        "node",
+        "scripts/store-build.mjs",
+        "release"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 1,
+      "elapsedS": 0.038064416999999996,
+      "logSHA256": "55316531d77034e8a51be1bc3413e51f9b586df8cee4bfeb31da534ef10e2d98",
+      "logBytes": 1031,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "store-web-build": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "store-web-build",
+      "command": [
+        "pnpm",
+        "run",
+        "build:store"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 2.4169557079999997,
+      "logSHA256": "7e934a03042244ced0de3ac477e09c03c04f706d482ec85b2c42e6e0a1a6a97a",
+      "logBytes": 8859,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "strict-ip": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "strict-ip",
+      "command": [
+        "node",
+        "scripts/ip-audit.mjs",
+        "--strict"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 0.230166334,
+      "logSHA256": "9dc078f7455e9a1f8e4db40d35801cb090a9dec762702986501b032d47b7a68f",
+      "logBytes": 205,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "typecheck": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "typecheck",
+      "command": [
+        "pnpm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 10.248460958,
+      "logSHA256": "e6b609b5212fbc4bcb3a9547aa749b693e136f7e34f8280c66ddafa54aac47d7",
+      "logBytes": 148,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    },
+    "web-build": {
+      "sourceSHA": "b9e6d3f4df716d487df081b8608999677689b8e9",
+      "step": "web-build",
+      "command": [
+        "pnpm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/rockhop-agent3-release49-b9e6d3f4",
+      "exitCode": 0,
+      "elapsedS": 2.276585333,
+      "logSHA256": "152082b994d754a269bd687e11260bebf6e6fac40e654d1fe659ee4844ed8e75",
+      "logBytes": 8828,
+      "recipeSHA256": "c2b88d897631ceaff28f5ce84af3e4959f5a78a64906f71dd74c6d1b723eb24e",
+      "gitCheckoutCreated": false,
+      "publicationAttempted": false
+    }
+  },
+  "logArchives": [
+    {
+      "file": "ci-scope-lint.log.gz",
+      "rawBytes": 82,
+      "rawSHA256": "e6d50254e7aac433aa7c7d6e17937db4fad072a58393125a4411d303a065ecf0",
+      "archiveSHA256": "448fbafd349ee9b9c0d31b65e71267d8112659c3781ebeed870ec10ffefdf0f1"
+    },
+    {
+      "file": "ci-unit.log.gz",
+      "rawBytes": 193957,
+      "rawSHA256": "ff62c7e0485948e14bcc3edf1551d33b9af381d8e0b8b8696cbcb0b085ea8fc9",
+      "archiveSHA256": "c1b6e08e9a24289ce371c5d989c74e6d53fee1bad0849af2221f1cbbb610ba58"
+    },
+    {
+      "file": "git-checkout-lint-discovery.log.gz",
+      "rawBytes": 60489,
+      "rawSHA256": "64b6743832b793a0f6893cb4d8429c55d9b7261e66c5d21686f5c41fbc65c8bc",
+      "archiveSHA256": "6b26a0d61f01b8657b0c3f835d1cd263db699f026ea943167bc6b6222ba6ca52"
+    },
+    {
+      "file": "install.log.gz",
+      "rawBytes": 1850,
+      "rawSHA256": "84ea816ba955a49f0f7b70dbe89e2240c074d4b6572fe3b8c97dab50d362b099",
+      "archiveSHA256": "0ae1048054c333f02901cfc7154f981f7d7a890685ef4f04fd6a100ea0d7dc4c"
+    },
+    {
+      "file": "lint.log.gz",
+      "rawBytes": 17808,
+      "rawSHA256": "5fb72d2869d22deb12d9d6e7946cb84cae9dbb44bf7ebf38985fcf39e5c1b053",
+      "archiveSHA256": "8351b740eb780da91e3efa5911390a5b755eaced775d8134450d29a5d206af53"
+    },
+    {
+      "file": "store-listing.log.gz",
+      "rawBytes": 516,
+      "rawSHA256": "c234f31a0f147658bf888087e0a846f40c23b6848d06118c9428af0c8c9bdeb9",
+      "archiveSHA256": "48f8b9dee5a0c49560042aa139bf12a43e45c45b0ff800ca4774b99488e2cdb2"
+    },
+    {
+      "file": "store-release-prerequisite.log.gz",
+      "rawBytes": 1031,
+      "rawSHA256": "55316531d77034e8a51be1bc3413e51f9b586df8cee4bfeb31da534ef10e2d98",
+      "archiveSHA256": "c2add653006a4ea54fa313a3d563555c1c4a1a7743afbefb9375d8f4e82ae21a"
+    },
+    {
+      "file": "store-web-build.log.gz",
+      "rawBytes": 8859,
+      "rawSHA256": "7e934a03042244ced0de3ac477e09c03c04f706d482ec85b2c42e6e0a1a6a97a",
+      "archiveSHA256": "174d9551e468e6784af4a7851466652387bb7f684a02ecac320e1d420b2a5da2"
+    },
+    {
+      "file": "strict-ip.log.gz",
+      "rawBytes": 205,
+      "rawSHA256": "9dc078f7455e9a1f8e4db40d35801cb090a9dec762702986501b032d47b7a68f",
+      "archiveSHA256": "3e58305e818d08bcdebd59396f6d0357189207711440d54bbc0d3fbf8ab1b002"
+    },
+    {
+      "file": "typecheck.log.gz",
+      "rawBytes": 148,
+      "rawSHA256": "e6b609b5212fbc4bcb3a9547aa749b693e136f7e34f8280c66ddafa54aac47d7",
+      "archiveSHA256": "f7e84629ef6558640f82ec64e534b0b2650b5379d94a8f0582bed7c6ef7c998d"
+    },
+    {
+      "file": "web-build.log.gz",
+      "rawBytes": 8828,
+      "rawSHA256": "152082b994d754a269bd687e11260bebf6e6fac40e654d1fe659ee4844ed8e75",
+      "archiveSHA256": "1e0d5d65e18c1038ade1ee0384ec43c17136719d0b52ffeeae5a92e38bd8dc0f"
+    }
+  ],
+  "interpretation": {
+    "fullTreeLint": "FAILED: 65 errors across 11 research scripts; 63 in 9 byte-identical baseline files, 2 in outgoing freeze scripts. All 11 remain discoverable in existing Git checkout.",
+    "existingCISparseLint": "PASS using unchanged physical file selection from frozen deploy.yml; no lint command/rule/ignore edits. This does not erase full-tree failure.",
+    "baselineExecution": "Baseline blobs compared byte-for-byte; full baseline lint was not executed.",
+    "storeRelease": "Exact unmodified command failed git rev-parse HEAD in intentionally gitless export; not proof native build passes or source is broken.",
+    "unverified": [
+      "Capacitor sync",
+      "strict audit of freshly synced native shells",
+      "Android assembleDebug",
+      "Vercel production build",
+      "deployment",
+      "production version SHA"
+    ],
+    "publication": "No push, dispatch, Vercel deployment, retry or alternative publication route attempted."
+  }
+}

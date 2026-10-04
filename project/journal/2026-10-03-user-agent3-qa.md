@@ -843,3 +843,24 @@ Limits: Ordinary bot gate only, no candidate wearing/shape/material/art,
 consumed collision/iOS/stranger/deployment or publication approval. Agent1
 retains construction/native/weights; root alone judges allM0–M5. Source13
 at06d575af remains control. Next required own gate51.
+
+
+## Round49 — frozen local gates distinguish full-tree and CI lint
+
+Finding: Exact b9e6d3f4 tree independently matches16,272Git blobs and
+10,293,354,301bytes in a gitless export. Full-tree lint fails65errors:63
+in9byte-identical baseline research files,2new unused variables in outgoing
+freeze scripts. All11 also discovered in Git checkout; this is not merely
+export ignore discovery. Existing frozen CI sparse selection excludesall11
+and normal lint passes without source/rule/ignore changes.
+
+Validation: Frozen install/typecheck,135unit files/1584tests, web/storeweb
+builds, listing and strictIP0hits/102files pass. Logs hash/gzip roundtrip
+exact. Existing CI profile normal lint passes. Exact store-release command
+fails git rev-parse prerequisite in intentional gitless export. Evidence:
+release49/finding.json. Shared staging/dirty source preserved.
+
+Limits: Full-tree lint remains failed; baseline execution not claimed.
+No Git checkout, native sync/Android/Vercel qualification, push/dispatch/
+publication, broader SHA or source fixes. Root/bridge native routing now
+unavailable; ready findings relayed to Agent1 for parent retrieval.
