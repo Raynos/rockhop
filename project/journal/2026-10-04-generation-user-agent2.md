@@ -237,3 +237,11 @@ Finding: The single glove seed completed all30shape steps and saved actual origi
 Validation: Guard worker exit1/native validity assertion after54.985s, with no resource denial. Actual processor/features/noise and finite sampled latent arrays remain saved; original raw native output retained without cleanup.
 
 Limits: Unaccepted source; no repeat sampling, seed/reference change, geometry repair, PBR, fit, rig, art acceptance or publication.
+
+## Round 126 — gloves decode01 checkpoint
+
+Finding: The original standalone VAE reproduces the complete raw glove arrays byte-exact, captures the real evaluated-site mask and sparse field, then exports the existing qualified finite-cell derivative. No shape sampler repeats.
+
+Validation: Guard exit0 in14.446s; all410VAE tensors and four native replay equality controls pass. Finite derivative has285159vertices/570242triangles, zero invalid indices/nonfinite coordinates and preserved field bytes. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
+
+Limits: Twenty components and16zero-area triangles remain uncleaned; anatomy, handedness, cuff lumen, fit, rig, PBR and art acceptance remain open. No publication.

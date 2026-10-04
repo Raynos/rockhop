@@ -1,0 +1,128 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/decode_item.py",
+    "--latents",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/actual-sampled-latents.npz",
+    "--latents-sha256",
+    "6a4056d821185a30ceb83746618c6757f628f163c6c1c7c49b6dbb7e3605c4e4",
+    "--latents-cbytes-sha256",
+    "90a7f0e1e20c8254ef9554c192fdd53ca09c6166b77872d70c15b558712c5aca",
+    "--raw",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/shape01/native.npz",
+    "--raw-sha256",
+    "8980ecc410a4d4f9bf2f68a9244ca9a1ee013da524d20bfb8a7eb5181bfa3fdf",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/decode01"
+  ],
+  "controllerPID": 98993,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 31.2,
+      "wiredGiB": 7.0,
+      "freeGiB": 36.5
+    },
+    {
+      "seconds": 0.035,
+      "anonymousGiB": 31.2,
+      "wiredGiB": 7.0,
+      "freeGiB": 36.4
+    },
+    {
+      "seconds": 1.072,
+      "anonymousGiB": 32.0,
+      "wiredGiB": 7.4,
+      "freeGiB": 35.2
+    },
+    {
+      "seconds": 2.108,
+      "anonymousGiB": 32.2,
+      "wiredGiB": 6.9,
+      "freeGiB": 36.2
+    },
+    {
+      "seconds": 3.145,
+      "anonymousGiB": 31.3,
+      "wiredGiB": 6.9,
+      "freeGiB": 36.6
+    },
+    {
+      "seconds": 4.189,
+      "anonymousGiB": 31.5,
+      "wiredGiB": 7.2,
+      "freeGiB": 36.1
+    },
+    {
+      "seconds": 5.231,
+      "anonymousGiB": 31.9,
+      "wiredGiB": 7.5,
+      "freeGiB": 35.3
+    },
+    {
+      "seconds": 6.269,
+      "anonymousGiB": 33.9,
+      "wiredGiB": 7.9,
+      "freeGiB": 33.0
+    },
+    {
+      "seconds": 7.311,
+      "anonymousGiB": 32.9,
+      "wiredGiB": 9.9,
+      "freeGiB": 31.9
+    },
+    {
+      "seconds": 8.35,
+      "anonymousGiB": 33.1,
+      "wiredGiB": 11.9,
+      "freeGiB": 29.7
+    },
+    {
+      "seconds": 9.39,
+      "anonymousGiB": 33.5,
+      "wiredGiB": 12.4,
+      "freeGiB": 28.9
+    },
+    {
+      "seconds": 10.424,
+      "anonymousGiB": 36.1,
+      "wiredGiB": 11.6,
+      "freeGiB": 26.3
+    },
+    {
+      "seconds": 11.463,
+      "anonymousGiB": 40.5,
+      "wiredGiB": 7.5,
+      "freeGiB": 26.1
+    },
+    {
+      "seconds": 12.493,
+      "anonymousGiB": 40.6,
+      "wiredGiB": 7.7,
+      "freeGiB": 25.6
+    },
+    {
+      "seconds": 13.53,
+      "anonymousGiB": 41.6,
+      "wiredGiB": 7.3,
+      "freeGiB": 25.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 98997,
+  "exitCode": 0,
+  "elapsedSeconds": 14.446
+}
