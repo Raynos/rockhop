@@ -1901,3 +1901,11 @@ Finding: Round92 verifies four historical films plus the reviewed causal film, f
 Validation: Manifest has Hunyuan film, TRELLIS upright/historical films, Pixal film and causal film; original fresh hash checks passed.
 
 Limits: Count wording only, no source/output/model/display/workflow change.
+
+## Round 95 — Human-authorized ten-commit publication recipe
+
+Finding: Human authorizes Rockhop main pushes in batches of at most10commits. Fresh origin ancestor has188committed descendants at f3c6e00d; freeze ancestry after this owned checkpoint and preserve foreign working/index files.
+
+Validation: Fetch succeeds, origin ancestor/188first-parent and total counts match, no merge commits; last origin push/scheduled gates success. Ask291 registered.
+
+Limits: Publication and new release/deploy verification pending; no force, other-repository push, foreign staging or direct Vercel production deploy.
