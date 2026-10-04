@@ -643,3 +643,11 @@ Finding: All46frozen source22 body pairs yield explicit edge/plane crossing witn
 Validation: Exact saved positions/triangles/archive pins and inputs unchanged.10degree2free loops/566edges retained. All46intersection coordinates/nearest segment/graph distances/axis stations/original parent polygons/local normals archived. Report field corrected to generic bone-tail distance so upper-arm tail is clearly elbow; readonly rerun pass. Diff/hooks pass.
 
 Limits: No source save or contact repair. Nearest free-edge/radial-normal signs do not prove actual air ports or unwanted lining; no blanket wall deletion. Next bounded actual-wrist cuff recut addresses15hand only; interior31need separate fit. No radius/time/density sweep/capture/rig/motion/body-head-51bind change/inference/worker/promotion; allart/M0–M5/mobile open.
+
+### Round78 — restore actual right wrist cuff after flow
+
+Finding: Source23 bisects one original wrist-minus5mm halfspace after ambient flow moved earlier cuts. All15righthand contacts removed:46→31body/0self. Remaining22leftupper/9rightfore contact coordinate triangles/bodyIDs exact; no interiorfit repair or lining deletion. Unaffected19819retained polygon position/UVcorners exact/exact original PBR linked.
+
+Validation: Saved-native archive positions/triangles/ancestry/contact sets exact.28scoped original meshes/18graphs/17images/51rest+pose exact. Freeedges579/11degree2loops/0othernonmanifold (source22had10loops); actualairports unqualified. Silent normalship78cold1459ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame2.065ms/errors0. Blender/diff/hooks pass.
+
+Limits: 31interior contacts and finitewall wearerports stillfailed/unproved; fixedcut can split rolledwall components. Newcut UV/ancestry use Blenderinterpolation; exactunchangedcorners tested. Preservation scope excludes customnormals/genericattrs/shapekeys/modifiers/rigworld. No rig/motion/capture/body-head-51bind change/inference/worker/Library/player promotion or playedart/M0–M5/mobile pass; parentsolejudge.
