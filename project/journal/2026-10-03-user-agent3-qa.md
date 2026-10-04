@@ -864,3 +864,26 @@ Limits: Full-tree lint remains failed; baseline execution not claimed.
 No Git checkout, native sync/Android/Vercel qualification, push/dispatch/
 publication, broader SHA or source fixes. Root/bridge native routing now
 unavailable; ready findings relayed to Agent1 for parent retrieval.
+
+
+## Round50 — wider and slower presentation preserves actual control
+
+Finding: Human found spinning bike film too close/fast. One replacement
+uses unchanged source37/source38 OFF/ON engine control, full rider+bike
+at8m camera distance, 1x703tick riding, explicit paused actual pose with
+3s front/side/rear holds and5s eased90degree camera trips. Separate3s
+left/right foot crops magnify same rendered pixels. No garment variant.
+
+Validation: All1406physics ticks exact to frozen prior control; paused
+51world matrices, state hash and clock exact. Conservative fullviewNDC
+x[-.408881,.395449], y[-.682996,.394941] leaves complete subject in frame.
+Single1920x720/30fps/926frame/30.867s silent WebKit playback decodes926
+frames,0errors, muted/ended; ffmpeg full decode and targeted lint pass.
+Movie9159958962bf6e4a78f415afa50d00c335749fb4652c549975af5a37b8df86f2.
+Evidence: presentation50/finding.json; original capture/report archived.
+
+Limits: Paused camera inspection is labelled, not moving-fit acceptance.
+Final riding frame pads8.333ms; executed metadata25ms typo corrected in
+recipe, raw executed bytes preserved. Current wedge boots/closed-solid
+seating remain rejected; root alone judges clips. No construction, source
+rewrite/promotion, Library duplicate or publication. Next required gate51.
