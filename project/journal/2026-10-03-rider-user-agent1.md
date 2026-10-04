@@ -595,3 +595,11 @@ Finding: Five source19 right-upper triangles produce6self pairs with every seam�
 Validation: Exact pinned field/profile/recipe inputs unchanged; reconstructed actualsource19 vertex closure48.9nm. Both fixed-resolution patches/full barycentric ancestry archived; digest/ZIP integrity verified. Read-only computation/no native save, material/head/body/51bind changes or newcapture. Blender/diff/hooks pass.
 
 Limits: Finite32sampling is not exact curved-distance proof or native/model repair; only6of35 pairs and constant pure-upper branch are scoped. Other29/fullblendedfield/unsupportedwearerregions and mobile mesh budget remain unresolved. Source19 remains493body/35self failed; next all-pair diagnostic/representation constraints, no radius/iteration sweep, rig/motion/inference/worker/Library/player promotion. Parent sole judge/all art/M0–M5/mobile open.
+
+### Round72 — all crossing patches confirm coarse field representation sensitivity
+
+Finding: Full unchanged five-branch field with explicit barycentric frozen construction parameters on all36 fixed-tessellation self pairs/37parents:1edge segment111points/37tri reproduces36pairs; fixed32segments20757points/37888tri retains1pure-torso pair13143/13561 atZ1.47868..1.48678m/upper support fade. Maximum field versus coarse-chord deviation11.740mm. Native19 actual35sleeve/fixed36includingtorso scopes distinct; no native repair or density/radius loop.
+
+Validation: Source19 vertex closure64.4nm/all frozeninputs exact; bothresolutionpatches/completebarycentricancestry/pins archived, digest/ZIP integrity verified. Survivingpair prior/current/source coordinates/stations/support/scales recorded; seam+fore weights allzero/priorfieldpair absent. Read-only/no native save or capture. Silent normalship72 cold1545ms/4810identicalticks/40.083333s/crash103/restart1tick/frame2.530ms/errors0; Blender/diff/hooks pass.
+
+Limits: Fixed32sampling does not prove exact curved contacts, unseen-pair absence, complete field injectivity, proper wearer ports or mobile mesh budget. Native19 still493body/35self failed; next conforming field representation and unsupported anatomical regions, no count-polishing sweeps, rig/motion/inference/worker/head/body/bind change/Library/player promotion. Parentsolejudge/all art/M0–M5/mobile open.
