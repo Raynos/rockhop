@@ -1209,3 +1209,25 @@ correction/admission, Agent1 owns motion and played proof. Original490contacts
 remain separate, source26 failed, all M0–M5 open. No outbound acknowledgment,
 Library/user delivery, upload, push, promotion or publication. Temporary
 build remains excluded; no recursive cleanup attempted.
+
+
+## 2026-10-04 Round64 — freeze auxiliary-only correction QA inputs
+
+Finding: Root supplies frozen neck28 auxiliary restoration for existing
+Agent3 read-only definition/membership/parity verification. This is not a
+shape or moving-art correction: root rejected neck27 shelf/throat/rear
+overhang. Preserve failed99 proof and all existing source controls.
+
+Validation: Fourteen native/field/baseline/owner/pose/movie inputs pinned.
+New native, unchanged semantic NPZ, independent baseline and failed movie
+SHA match supplied handoff. Owner restoration/FINDING/recipe bytes match
+54f0ec74. Baseline21782auxiliary memberships contain zero zero-valued rows;
+reader will retain exact membership semantics, not infer sparse absence.
+No retest/capture/source write yet; scope in neck64/preparation.json.
+
+Limits: Only definitions/auxiliary memberships, immutable42old objects,
+non-group/skin data and three existing evaluated pose comparisons admitted.
+No1232-stream sweep or new controller/capture. Agent1 owns anatomical
+proposal; parent owns ask275/index and acceptance. Contact/identity/art
+failures and all M0–M5 remain open; no outbound acknowledgment, Library/user
+delivery, upload, promotion, publication or source edit.
