@@ -79,3 +79,11 @@ Finding: Admit new human ask293for jeans/gloves/approved ankle boots, same exist
 Validation: SourceHEAD82920d64/pipeline80d3d66 and originalGLB800d7a97 match; canonicallease lsof1/empty and anonymous32.1/wired6.9GiB pass55/68admission, verified128GiBhost. Ask registered; no new item reference/local model run yet.
 
 Limits: Unaccepted recipe only; use new inputs with existing installed workflow, no new backend/installation/owner. No source/body/head/51-bind/peer/player mutation or publication; Agent1later fitting/rig and parent art gates remain separate.
+
+## Round 107 — Isolated jeans reference checkpoint
+
+Finding: Save one built-in imagegenjeansreference against exact approved storyboard03and selected hoodie; all prompt/input bytes and generated alpha preserved before local shape generation.
+
+Validation: RGBA[1024, 1536], alpha[0, 254]/960792zero pixels; SHAfcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf and bytes2203602pinned. No local inference or pixel modification.
+
+Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.

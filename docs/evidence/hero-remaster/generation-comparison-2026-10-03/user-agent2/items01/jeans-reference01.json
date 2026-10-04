@@ -1,0 +1,70 @@
+{
+  "accepted": false,
+  "item": "jeans",
+  "round": 107,
+  "producer": "Built-in imagegen",
+  "sourceToolPath": "/Users/raynos/.codex/generated_images/01a101fe-a358-7731-987d-4168614e9ece/exec-ab15c622-5099-4f71-83fe-95bffc327831.png",
+  "savedPath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+  "sha256": "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf",
+  "bytes": 2203602,
+  "pixelContract": {
+    "mode": "RGBA",
+    "size": [
+      1024,
+      1536
+    ],
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaZeroPixels": 960792,
+    "alphaOpaquePixels": 0,
+    "alphaPartialPixels": 612072,
+    "nonzeroBounds": [
+      43,
+      71,
+      1010,
+      1514
+    ],
+    "edgeMaxAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaHalfBBox": [
+      226,
+      106,
+      862,
+      1448
+    ]
+  },
+  "prompt": "Use case: stylized-concept. Asset type: isolated single-image 3D reconstruction reference for Rockhop jeans. Input image1 is the approved rider storyboard03: use ONLY its dark indigo jeans color, restrained denim style and adult masculine proportions. Input image2 is the actual selected mustard Hunyuan hoodie: match its coherent moderately stylized realistic game-asset material/detail scale, not its garment shape. Create ONE pair of empty, wearable dark indigo five-pocket jeans, floating alone with a coherent waistband and fly, two separate complete legs with a visible gap all the way below the crotch, open waistband and open ankle hems with convincing denim edge thickness and inner cavity. Relaxed straight/slim-straight fit with room at hips, thighs and knees, natural broad denim folds, subtle diagonal denim grain and restrained tonal sewn seams. Upright neutral legs, mildly separated; both hems, waistband and crotch fully visible. Near-front three-quarter product view, slight elevation revealing waist opening, subtle perspective; entire garment inside generous transparent margins. No body, skin, feet, boots, mannequin, hanger, bike, hoodie, hands, belt, distressed holes, patches, logos, lettering, extra garments or multiple view panels. Moderate dark indigo rather than black; avoid glossy plastic, vacuum-tight tights, invented ornament or overmodeled folds. Genuine transparent background. Soft balanced studio illumination for readable form and texture; no cast background shadow. One coherent garment, not two separate disconnected trousers.",
+  "referenceInputs": [
+    {
+      "role": "approved-storyboard03",
+      "path": ".tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png",
+      "sha256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a",
+      "bytes": 291838
+    },
+    {
+      "role": "selected-hoodie-generated2D",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+      "sha256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+      "bytes": 1394368
+    },
+    {
+      "role": "selected-original-hoodie-GLB",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "bytes": 42329320
+    }
+  ],
+  "seed": "Built-in tool exposes no seed; local Hunyuan uses42",
+  "inspection": "One coherent indigo waist/two legs; isolated empty garment, visible waistband and hem cavities, restrained denim texture and broad folds. Fine stitches/buttons are experimental extrapolations from low-resolution storyboard, not approved exact detail.",
+  "limits": [
+    "Experimental generated2D only; no geometry, camera calibration, source opening/fit/topology/UV/rig acceptance.",
+    "Original generated alpha preserved byte-for-byte, no background removal/cleanup/repaint.",
+    "No local model run yet, parent art authority retained."
+  ]
+}
