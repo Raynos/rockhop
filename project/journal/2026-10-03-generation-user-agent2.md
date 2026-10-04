@@ -1786,3 +1786,17 @@ Ask:284–286 existingbyte-banddiagnosis/rootPixalreview follow-up.
 
 Limits: Exactvisiblebandcauseunresolved; no cleanup/recolor/extrasampling
 or modelattribution. Pixalexplicit1024not1536success; Hunyuan sourcekept.
+
+Finding: Root authorizes one causaldisplaycomparison; existingowned adapter
+adds boundedparity/contradiction gate while preserving legacydefault.
+
+Validation: Bothsource syntaxpass. Fiveanalyticcontrols mustpass BEFORE
+actualderivedorientation: legacyexact cube/sphere, nativeanchoredopenpatch,
+retainednonmanifold and contradictoryMobius. Explicitnonmanifoldtopology/
+openanchor/closedvolume/contradiction policies recorded. No newworkeragent
+or inference; source/evidencecheckpoint only.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-recipe.json
+Ask:284–286 authorizedsamebanddiagnostic causalcomparison.
+
+Limits: Unacceptedrecipe, controls/actualderivatives/movingcomparisonpending.
+No globalmeshrepair, cleanup/recolor/installededit or Hunyuan donorswitch.
