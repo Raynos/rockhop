@@ -499,3 +499,11 @@ Finding: Agent1authorsnormalized51deform-only garmentweights through exactsewn s
 Validation: Exactreplayedseedcoords/polygoncycles;22originalsource meshes/18graphs/17images/51bindpose exact,0restbody/0restself/12coverage misses retained. Rawexportnormalizationerror1.1921e−7→restored0,2517skinbytes only/allnonskinbytes exact.7123rows/11840tri/51jointnamesorder+IBMbyteexact toconstructed09; centeredbindspaceposition59.605nm. Wrongexportoption caught aftersave; installedAPI correction reexports sameimmutable native/failedbuilder preserved. Source/pins/Blender/diff/hooks pass.
 
 Limits: Newfield isnotacceptedoldpatternweights; no nativecontinuous/actualgame/collision/playedart/iOS pass. Scoped8slotconditioner marker onnewmesh only, skinnedbindspacefile+.65 centeredonce distinctfromunriggedexport57. Agent1retainsrig/weights/nativeproof, Agent3independentverify; rootsolejudge/allM0–M5open/no Library/playerpromotion.
+
+### Round59 — authored selected skin fails continuous native wearing, 2026-10-03
+
+Finding: All529existing48HznativeFK samples reveal max408body/280self;334bodycontact/384selfcontactframes. Staticrest/trueT0/0 doesnotqualify movingwear: ordinaryneutral/reachtransition worstbodyframe72@1.5s, selfpeak234@4.875s. Bothbody/garment same51rig/LBS/file+.65frame; originalpatternfield remainsfailedcandidate, notacceptanceconstraint. Agent1retainsrig/weights/nativeauthoring; Agent3independentexport/actualengineverify nextusingfrozencontrol.
+
+Validation: 21.05s evaluatedmechanicalrun/allfinite; exactnative trianglewitnesses/times recorded. Continuous133frames/12fps synchronizedfront+rear1280×640/11.083s movieSHA307ea6bbcfeb57d6c35b1edad072b702cac709d8c69298c95b9d2a1820492838, noaudio/fullFFmpegdecode0errors. OriginalselectedPBR/native d3f05ff…/rigGLB6042207a…/source13rest6ef79e38… unchanged; allframehashes/camerabounds/sourceobjects pinned. Blender/diff/hooks pass.
+
+Limits: FAILEDnativewearing, no actualgame/livecollision/mobile/playedlikeness/M0–M5 acceptance; rootalone judgesclip. No offset/DQ excuse or blindbody-weight/parameter sweep; diagnosefield/fit nextwhilekeeping14failedcontrol frozen. No Libraryduplicate/playerpromotion.
