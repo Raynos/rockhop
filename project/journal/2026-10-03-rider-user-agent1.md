@@ -779,3 +779,11 @@ Finding: Readonly24flat/25normals/26four allshare490exactcontactpairIDs,all490fi
 Validation: Same protected43707v/71826tri raw geometry/attrs/normals/weights/mods/transforms, actualevaluatedworldpoints/triangles andoriginal51pose/rig exact acrossallthree. Same BVH/evaluatedtriangles/metres/nativeaxes/fileoffset,Float64finite-segment confirmation perpair. No driver/source edits/save; inputpins/syntax/diff/hooks pass.
 
 Limits: Surfacewitnesses notdepth/drawablealpha/culling/body-seamQA; no waiver/deletion. Rootplayed93shows recognizablehood/coherentmaterial/no grosspanelholes, butvisible stiffbulges/hardasymelbowpinch/squatfronthem bow. Body/underwearhipsAgent3scope unchanged. Native26stillfailed/noengine; anynextfieldrepair localizedcause only,no globalsweep/newcapture/sourcebodyheadrewrite/promotion/all24coverage/cuffs/M0–M5/mobileopen.
+
+### Round95 — local cage attachment causes, no adopted repair
+
+Finding: Hem149v importsmean33.713%thigh/max46.388%; squat nonplanarity19.844mm. One analytic boundary-only thigh→pelvis redistribution reducesmax to.255mm/p95.0408mm/maxpointdelta57.204mm while≤4influences; notanasset/adjacenttransition-contactuntested. Asymrightelbow averageaffine contraction≥.819vsactualedge.315 anddifferingattachmenttermmax2.716×restedge/full-vfourloss0; raisedshoulder blend~.470pluslargefieldgradients localize separate contributors.
+
+Validation: Frozen91field/92matrices-actualendpoints reused/no posesource edit. Exactedge decomposition≤.331µm atdefectframes; hem baselineprediction≤.109µm. Geometry/UV/PBR/weights/bodyhead51bind untouched; pins/syntax/diff/hooks pass.
+
+Limits: Diagnostic subsets notcontact/coveragemasks; mathcounterfactual notfieldrepair,appearance or clearance certificate. Root severebodyneckflange/seatedboxerbreak verdict leavesAgent3read-only precise localproposal pendingFORAgent1sourceauthor. No clothingfit aroundbadinterface/bodyheadedit/newcapture/globalsweep/engineadmission/promotion; all24coverage/cuffs/headcontacts/M0–M5/mobileopen.
