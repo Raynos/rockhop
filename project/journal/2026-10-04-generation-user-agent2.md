@@ -293,3 +293,11 @@ Finding: Jeans and glove source/PBR/played reviews are ready before fitting. Pre
 Validation: Both six-second clips decoded all48frames and played silently to end without errors. Original runtime24 boot/clear/crash/instant-restart gate reused only after source SHA pins and full player diff remain exact/empty.
 
 Limits: Boots generation follows fresh unchanged admission; root alone judges art. Handedness, fit/topology/rig/physics/M0–M5/device remain open; no publication.
+
+## Round 133 — boots preprocess01 checkpoint
+
+Finding: The installed Hunyuan processor consumes the selected compact ankle boot reference02 with original alpha/bytes; preserve actual conditioned pixels/mask/tensors before its one serial quality seed.
+
+Validation: Fresh idle lease and31.5anonymous/7.6wired GiB admission; guard exit0. Selected6d1270cf reference and qualified installed284dc24f processor pins match; actual512image/mask tensors finite and saved.
+
+Limits: Source candidate only; no unseen storyboard-detail, handedness, foot/toe enclosure, ankle lumen, fit, rig or art/device acceptance. No alternate candidate, alpha edits or publication.

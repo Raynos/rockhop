@@ -1,0 +1,62 @@
+{
+  "accepted": false,
+  "modelRuns": 0,
+  "model": "hunyuan",
+  "inputPath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/boots-reference02.png",
+  "inputSHA256": "6d1270cfc14f86eba5974cf6ecbaac8184d6c2b8c9835e01dfd4f56590e920cc",
+  "inputSize": [
+    1374,
+    1145
+  ],
+  "inputMode": "RGBA",
+  "sourcePath": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/preprocessors.py",
+  "sourceSHA256": "284dc24fabbf974bd6793ebd58e95b7700550d90371cacb96ad0889ec558de1e",
+  "importedSourcePath": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/preprocessors.py",
+  "callSignature": "(image, border_ratio=0.15, to_tensor=True, **kwargs)",
+  "recipeSHA256": "37c1c2184d79a3a176fd8b9bf9f38cb9b810b0a97b4da29378c37f988602bb29",
+  "preprocessContract": "RGBA PIL preserves RGB; nonzero-alpha crop; .15border; white composite; cv2 cubic512 RGB and nearest mask; tensor RGB[-1,1]. DINO518 normalization happens later.",
+  "conditionedImagePath": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/preprocess01/conditioned-input.png",
+  "conditionedImageSHA256": "9ae3e61de6307f02d4f948c70d1e2ac5854601cde7be4c4ddfc2745b61f33814",
+  "conditionedSize": [
+    512,
+    512
+  ],
+  "conditionedMode": "RGB",
+  "RGBChannelMeans": [
+    201.62836837768555,
+    201.27666854858398,
+    201.5200538635254
+  ],
+  "processorTensors": {
+    "image": {
+      "shape": [
+        1,
+        3,
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "min": -1.0,
+      "max": 1.0,
+      "allFinite": true
+    },
+    "mask": {
+      "shape": [
+        1,
+        1,
+        512,
+        512
+      ],
+      "dtype": "torch.float32",
+      "min": -1.0,
+      "max": 0.9921568632125854,
+      "allFinite": true
+    }
+  },
+  "backgroundRemovalCalled": false,
+  "limits": [
+    "No neural models constructed or weights loaded.",
+    "Actual downstream DINO/NAF tensors, FOV estimation and neural noise must be recorded during inference.",
+    "Generated appearance reference has approximate camera/pose; no calibrated multiview or topology input."
+  ]
+}
