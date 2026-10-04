@@ -157,3 +157,11 @@ Finding: Human renewed the ten-commit main push request; 88 existing local commi
 Validation: Fresh origin/main fetch is ancestral to main; runtime attribution resolves Codex:gpt-6.1-sol. Existing foreign index/worktree edits remain outside publication staging.
 
 Limits: Publication is pending; unaccepted source recipes/evidence do not become player assets or satisfy art/device gates. Parent owns shared plan status.
+
+## Bounded publication boundaries
+
+Finding: Eight ten-commit pushes and one nine-commit push publish the 89 frozen commits through b233d46c. Preserve each exact previous/target/verified remote SHA and GitHub receipt without promoting experimental models to player assets.
+
+Validation: All nine pushes fast-forwarded, introduced at most ten commits, and matched a fresh remote SHA. No player source/assets/workflow/package delta. Final publication receipt push and CI/deploy verification follow.
+
+Limits: GitHub supersedes queued intermediate checks; pending final checks are not passes. All art/device gates remain open; foreign edits are preserved.
