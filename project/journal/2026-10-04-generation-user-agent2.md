@@ -221,3 +221,11 @@ Finding: Original source GLB/PBR/UV/raw geometry and exact inputs/settings/admis
 Validation: All48video frames decode; six-second silent headless WebKit playback reaches end without media/page errors. Original mesh/map pins match; source, UV and paint checkpoints remain preserved. Normal gameplay gate reuse requires fresh unchanged source pins.
 
 Limits: Unaccepted source only; root judges played art. Body fit, topology/openings, rig, collision, M0–M5/mobile remain open; no publication.
+
+## Round 124 — gloves preprocess01 checkpoint
+
+Finding: Installed Hunyuan preprocessing consumes the single selected black five-finger glove reference and preserves its original alpha input. Pin actual conditioned pixels/mask/tensors before one serial quality seed.
+
+Validation: Fresh idle canonical lease and31.8GiB anonymous admission; guard exit0. Original reference and installed processor hashes match; finite actual512RGB/image-mask tensors are saved.
+
+Limits: Single glove source only; handedness/palm anatomy, opening, grip fit, rig, physics and art acceptance remain unproven. No added candidate, alpha edits, player promotion or publication.
