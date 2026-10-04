@@ -1,0 +1,266 @@
+{
+  "status": "UNACCEPTED actual donor constrained affine envelopes",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie19/profile-fit.blend": "b545229e52c4fc5bcb97b4fbc81ccc3a0e5a2f9c87fe3c7338691317d965e449",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie19/profile-field.npz": "4885dc1f16cc7873d0b44ed69e79658c042adb43f33d4e97ce9c92ad6b8badf0",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie18/envelopes69/sections.json.gz": "784f899e4299736286ccc8d39ab6b81d79b6e29100dacd437d8200aeb4c1f7ab"
+  },
+  "recipeSHA256": "7c092b33dfba6a812d64f56f0da0ad6f3434093cabafbf542834f9b6801fba7a",
+  "candidateSHA256": "a42f7d18c365f1939cd3d55857064357fc54176bef4b52c4470a40cf764d0982",
+  "fieldSHA256": "c9d89909d9c41bc3910fec8b822d661c4346c7972387546d98d266bcce186012",
+  "method": "Linear least-squares air/body centres and one conservative radial bound per anatomical branch from all measured64-direction constraints. Constant positive branch scales avoid high-frequency profile curvature. Same source18 seam/elbow vertex weights blend the affine branch deltas. One direct bound construction, no radius/density/cap sweep.",
+  "branches": {
+    "forearm.L": {
+      "sections": 15,
+      "measuredStationRange": [
+        0.05,
+        0.8899999999999999
+      ],
+      "linearAirCentreCoefficientsM": [
+        [
+          0.018281904993945376,
+          -0.37002715634346034,
+          1.2568960986080602
+        ],
+        [
+          0.20101589346429177,
+          -0.13729005745458778,
+          -0.12469310378319436
+        ]
+      ],
+      "linearBodyCentreCoefficientsM": [
+        [
+          0.027803002303162593,
+          -0.3642582519158779,
+          1.2649577884715637
+        ],
+        [
+          0.1847117074281997,
+          -0.14686845320815511,
+          -0.1388142680766074
+        ]
+      ],
+      "airCentreResidualMPercentiles": [
+        0.00039240177848836634,
+        0.0014697228784866236,
+        0.004262312692048728,
+        0.006414438136865199
+      ],
+      "bodyCentreResidualMPercentiles": [
+        0.0002634022596965053,
+        0.0013180917960180184,
+        0.002962057651810592,
+        0.0046596813745888935
+      ],
+      "conservativeUniformRadialScale": 1.6020944871792315,
+      "minimumConservativeSectionClearanceM": 0.003999999999999997,
+      "maximumAxialCentreDifferenceM": 3.174543961037557e-16,
+      "boundsMeaning": "lambda*(airRadius-|airCentreResidual|)>=bodyRadius+4mm+|bodyCentreResidual|; positive denominators, all64directions/all local sections. This conservative centred-section bound is not a native whole-mesh clearance proof."
+    },
+    "forearm.R": {
+      "sections": 15,
+      "measuredStationRange": [
+        0.05,
+        0.8899999999999999
+      ],
+      "linearAirCentreCoefficientsM": [
+        [
+          0.019103958362202002,
+          0.36860616717384537,
+          1.256621013123303
+        ],
+        [
+          0.1996665009421834,
+          0.14037226466792427,
+          -0.12345295470779448
+        ]
+      ],
+      "linearBodyCentreCoefficientsM": [
+        [
+          0.027803056841739934,
+          0.36425825314191485,
+          1.2649577887379697
+        ],
+        [
+          0.1847117364979287,
+          0.14686845017535843,
+          -0.13881427368122717
+        ]
+      ],
+      "airCentreResidualMPercentiles": [
+        0.0010485845856950274,
+        0.001524284595260102,
+        0.0038513712103106787,
+        0.0055920182415459445
+      ],
+      "bodyCentreResidualMPercentiles": [
+        0.0002634028578201452,
+        0.0013180922914134054,
+        0.0029620642380832414,
+        0.00465968283463514
+      ],
+      "conservativeUniformRadialScale": 1.2363808523091546,
+      "minimumConservativeSectionClearanceM": 0.004000000000000001,
+      "maximumAxialCentreDifferenceM": 1.249000902703301e-16,
+      "boundsMeaning": "lambda*(airRadius-|airCentreResidual|)>=bodyRadius+4mm+|bodyCentreResidual|; positive denominators, all64directions/all local sections. This conservative centred-section bound is not a native whole-mesh clearance proof."
+    },
+    "torso": {
+      "sections": 31,
+      "measuredStationRange": [
+        1.04,
+        1.475483870967742
+      ],
+      "linearAirCentreCoefficientsM": [
+        [
+          0.10057005262281862,
+          0.006728372036303781,
+          -1.902475565417175e-16
+        ],
+        [
+          -0.05208778699057446,
+          -0.005492439043525504,
+          1.0000000000000004
+        ]
+      ],
+      "linearBodyCentreCoefficientsM": [
+        [
+          0.10153854475900174,
+          4.26621149756583e-06,
+          -1.902475565417175e-16
+        ],
+        [
+          -0.052725637028192635,
+          -3.286126809564029e-06,
+          1.0000000000000004
+        ]
+      ],
+      "airCentreResidualMPercentiles": [
+        0.0005054855342712216,
+        0.003632309173223522,
+        0.006320301771679332,
+        0.006644621856440016
+      ],
+      "bodyCentreResidualMPercentiles": [
+        0.0002054745258579509,
+        0.004239742580777081,
+        0.010525178813972956,
+        0.015883602502997314
+      ],
+      "conservativeUniformRadialScale": 1.2026252048862693,
+      "minimumConservativeSectionClearanceM": 0.0040000000000000105,
+      "maximumAxialCentreDifferenceM": 0.0,
+      "boundsMeaning": "lambda*(airRadius-|airCentreResidual|)>=bodyRadius+4mm+|bodyCentreResidual|; positive denominators, all64directions/all local sections. This conservative centred-section bound is not a native whole-mesh clearance proof."
+    },
+    "upperArm.L": {
+      "sections": 12,
+      "measuredStationRange": [
+        0.29,
+        0.95
+      ],
+      "linearAirCentreCoefficientsM": [
+        [
+          0.018453617914155743,
+          -0.18835994984576124,
+          1.4525953873700437
+        ],
+        [
+          0.003284746593153981,
+          -0.18004732680955438,
+          -0.19456759100355273
+        ]
+      ],
+      "linearBodyCentreCoefficientsM": [
+        [
+          0.005804952260126815,
+          -0.19018411836213425,
+          1.4543298602631216
+        ],
+        [
+          0.024261382204409227,
+          -0.17891571848259327,
+          -0.1957933089733356
+        ]
+      ],
+      "airCentreResidualMPercentiles": [
+        0.00022241689999728088,
+        0.001336463958885327,
+        0.00242910940054281,
+        0.0029013372326378846
+      ],
+      "bodyCentreResidualMPercentiles": [
+        0.00019499668029079423,
+        0.0008630205582489971,
+        0.002564701060424672,
+        0.0026964803818179933
+      ],
+      "conservativeUniformRadialScale": 1.246504366360671,
+      "minimumConservativeSectionClearanceM": 0.004000000000000001,
+      "maximumAxialCentreDifferenceM": 1.710871028182126e-16,
+      "boundsMeaning": "lambda*(airRadius-|airCentreResidual|)>=bodyRadius+4mm+|bodyCentreResidual|; positive denominators, all64directions/all local sections. This conservative centred-section bound is not a native whole-mesh clearance proof."
+    },
+    "upperArm.R": {
+      "sections": 13,
+      "measuredStationRange": [
+        0.22999999999999998,
+        0.95
+      ],
+      "linearAirCentreCoefficientsM": [
+        [
+          0.01876882991899826,
+          0.18885311994700177,
+          1.4530217114494002
+        ],
+        [
+          0.0022392115574467815,
+          0.17758635283575042,
+          -0.19670101106518412
+        ]
+      ],
+      "linearBodyCentreCoefficientsM": [
+        [
+          0.007987495937004324,
+          0.19042056095559934,
+          1.4545110843804294
+        ],
+        [
+          0.021271662995844886,
+          0.1785918238072852,
+          -0.19604156131881909
+        ]
+      ],
+      "airCentreResidualMPercentiles": [
+        0.0006619614184178436,
+        0.0022060329189910396,
+        0.0036502854781922446,
+        0.0037632736963242354
+      ],
+      "bodyCentreResidualMPercentiles": [
+        0.0003600962985940984,
+        0.0011374516438787971,
+        0.0036029530851102564,
+        0.003983056339654212
+      ],
+      "conservativeUniformRadialScale": 1.4631371305781642,
+      "minimumConservativeSectionClearanceM": 0.003999999999999995,
+      "maximumAxialCentreDifferenceM": 2.66496893996937e-16,
+      "boundsMeaning": "lambda*(airRadius-|airCentreResidual|)>=bodyRadius+4mm+|bodyCentreResidual|; positive denominators, all64directions/all local sections. This conservative centred-section bound is not a native whole-mesh clearance proof."
+    }
+  },
+  "vertices": 12443,
+  "triangles": 24400,
+  "maximumDeltaM": 0.048578948955127106,
+  "maximumBoundaryDeltaM": 0.04055283038647296,
+  "bodyPairs": 459,
+  "selfPairs": 79,
+  "fixedPreviousTessellationBodyPairs": 459,
+  "fixedPreviousTessellationSelfPairs": 80,
+  "changedLoopTriangles": 35,
+  "boundaryEdgeCount": 566,
+  "otherNonManifoldEdges": 0,
+  "polygonCyclesUVOriginalMaterialExact": true,
+  "limits": [
+    "Affine branches are applied beyond measured local section ranges as an explicit construction hypothesis, including torso/hood and garment ends. Missing/merged sections remain unqualified, not filled with invented constraints.",
+    "Conservative64-direction section inequalities do not guarantee blended native/body clearance, wearer-port validity or played silhouette. Dimensions and finite-wall thickness change; original donor folds/UV/PBR remain but art is unaccepted.",
+    "No rig/skin/motion/collision response/capture/inference/worker/body-head-51bind replacement, Library/player promotion or art/wearing/mobile/M0-M5 acceptance. All prior controls frozen; parent alone judges."
+  ]
+}
