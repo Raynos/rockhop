@@ -755,3 +755,11 @@ Finding: Actual donor had0groups/no skin modifier. One fixed structural1250vgarm
 Validation: Saved/reopened native memberships exact to Float32 fields. All12430positions/24359tri/cycles/UV/originalPBR/tested30°normals remain source25exact. Original25unrigged retained;8protectedmesh/configuration/weights snapshots+51pose/rig exact. Python syntax/diff/hooks pass.
 
 Limits: Provisional closest structural cage ancestry, not accepted legacy template skin; no failed13/14geometry reused. Weight mass not deformation/clearance proof. Next529continuousnative full-versus-four actual loss/body-self/coverage/playedwearing, then independentAgent3export-engine. Cuffs/all24coverage/art/M0–M5/mobile open; no geometry shrink/rebuild/recolor/newbody/inference/worker/Libraryupload/promotion/publication.
+
+### Round92 — full and native-four fail continuous garment qualification
+
+Finding: Both source26fields peak959logical/displaybody/4095native self(4116fixedexportself) across52948Hz poses;306bodyframes/460nativeselfframes. Full-v-fouractualdeformationloss4.113843mm@frame144/v12011. Expanded protected textured head has490restpairs/all529contactframes/max504, while logical/displaybody rest0 andcheek0. Prior24rest0logicalbody scope is notprotectedhead proof.
+
+Validation: Actual native skin consumed at every529sample; full/four manual51LBSparity below0.465µm. Both native/current and frozen export-rest triangulations audited, exactfirstwitnesses/matrices/endpoints/worst loss positions archived. Source/field/driver hashes unchanged; Python syntax/diff/hooks pass.
+
+Limits: CandidateFAILS movingqualification; equal peakfull/four means extra-weight truncation doesnotexplainpeaks. Protectedhead observation is garment contact, not Agent3body/seam diagnosis. Parentplayedproof next beforefieldretry/engineadmission. SyntheticFK/trianglewitnesses notcontroller/penetrationdepth/between-samplecollision. All24coverage/cuffs/art/M0–M5/mobile/exportnormals open; no source save/geometryshrink/newbody/inference/worker/Libraryupload/promotion/publication.
