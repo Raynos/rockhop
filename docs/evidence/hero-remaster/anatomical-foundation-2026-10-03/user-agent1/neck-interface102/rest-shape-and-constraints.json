@@ -1,0 +1,46 @@
+{
+  "seamBoundsNativeM": [
+    [
+      -0.07533173263072968,
+      -0.15417957305908203,
+      1.5075048208236694
+    ],
+    [
+      0.08384332805871964,
+      0.16233064234256744,
+      1.538015604019165
+    ]
+  ],
+  "seamWidthYM": 0.3165102005004883,
+  "seamDepthXM": 0.1591750681400299,
+  "intersectionConstraintClassification": {
+    "headSelf": {
+      "physicalFreeFixedTriangleClassification": {
+        "free/free": 685,
+        "mixed/free": 125,
+        "mixed/mixed": 15,
+        "free/mixed": 150,
+        "free/fixed": 42,
+        "fixed/free": 80,
+        "mixed/fixed": 9,
+        "fixed/mixed": 6
+      },
+      "newInnerCapParticipatingPairs": 226
+    },
+    "bodyHead": {
+      "physicalFreeFixedTriangleClassification": {
+        "free/free": 263,
+        "free/mixed": 18,
+        "free/fixed": 26
+      },
+      "newInnerCapParticipatingPairs": 65
+    },
+    "bodySelf": {
+      "physicalFreeFixedTriangleClassification": {},
+      "newInnerCapParticipatingPairs": 0
+    }
+  },
+  "limits": [
+    "Rest geometric silhouette bounds are not root visual approval. Pairs involving all-free triangles demonstrate failures cannot be attributed solely to fixed exterior anchors. No expansion sufficiency or global minimality proved."
+  ]
+}
