@@ -141,3 +141,11 @@ Finding: Correct original preprocessor yields actual512RGBwhite-composite input 
 Validation: CPUguard0/1.703s; image[1,3,512,512]mask[1,1,512,512]float32 finite, actual maskmaximum0.9921569retained. Installed284dc24fsource matches prior qualified receipt, no source modification or alpha normalization.
 
 Limits: Preprocessing proves input contract only, not shape/texture/model quality or calibrated camera. Neural shape job must repeat actual conditioned-pixel pin and retain conditioning/noise/latents/raw arrays under fresh admission.
+
+## Round 114 — jeans shape01 checkpoint
+
+Finding: Jeans30-step seed42 sampling completes; retain raw421003vertices/842014faces and frozen latents. Native MC has36nonfinite coordinate elements, so no invalid display export; use existing same-latent finite-cell route next.
+
+Validation: Guard1/60.930s is native-validation failure, not resource stop; peaks51.6anonymous/61.8combinedGiB. Conditionedcf15c143matches; all processor/features/noise/latent archives retained. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
+
+Limits: Unaccepted raw diagnostic; no new seed, cleanup, fitting, source mutation or publication. Decode replay and PBR/played review remain pending.

@@ -1,0 +1,178 @@
+{
+  "accepted": false,
+  "stage": "native saved; review pending",
+  "model": "Hunyuan3D-2.1",
+  "sourceHEAD": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+  "pipelineSHA256": "80d3d66be03e2ebe2f988cefcf488f2e5fa52656e8547c72dd44aaae4ad45714",
+  "recipeSHA256": "b191efa1a341b33fa8cc5627c0400d2a8d1f5659d03c5f6e33edf7271fd091a9",
+  "imagePath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+  "imageSHA256": "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf",
+  "seed": 42,
+  "numInferenceSteps": 30,
+  "guidanceScale": 5.0,
+  "octreeResolution": 384,
+  "numChunks": 32768,
+  "device": "mps",
+  "effectiveFlashVDMResolutions": [
+    95,
+    190,
+    380
+  ],
+  "replayProgressPath": null,
+  "replayProgressSHA256": null,
+  "dtype": "torch.float16",
+  "extractor": "mc",
+  "paint": false,
+  "cleanup": false,
+  "reduction": false,
+  "checkpointPath": "/Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-dit-v2-1/model.fp16.ckpt",
+  "checkpointSHA256": "6b519fc7242f78e9b5f47ea4d55668fe3d944a2d27332f4ca68d29a6ff603f5e",
+  "ownedProcessAdaptations": [
+    "Existing torchvision functional_tensor compatibility alias",
+    "Existing float64-to-float32 conversion only when moving a tensor to MPS"
+  ],
+  "rawDefinition": "Latent2MeshOutput mesh_v/mesh_f BEFORE export_to_trimesh winding reversal/processing",
+  "limits": [
+    "One experimental shape seed; painting and root moving review separate.",
+    "No CUDA parity or calibrated camera/garment-fit/rig acceptance."
+  ],
+  "loadedComponents": {
+    "model": {
+      "class": "hy3dshape.models.denoisers.hunyuandit.HunYuanDiTPlain",
+      "importedSource": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/denoisers/hunyuandit.py",
+      "parameters": 3050758720,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ],
+      "training": true
+    },
+    "vae": {
+      "class": "hy3dshape.models.autoencoders.model.ShapeVAE",
+      "importedSource": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/model.py",
+      "parameters": 327746177,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ],
+      "training": true
+    },
+    "conditioner": {
+      "class": "hy3dshape.models.conditioner.SingleImageEncoder",
+      "importedSource": "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/conditioner.py",
+      "parameters": 304368640,
+      "devices": [
+        "mps:0"
+      ],
+      "dtypes": [
+        "torch.float16"
+      ],
+      "training": true
+    }
+  },
+  "loadSeconds": 14.095358250197023,
+  "effectiveVAE": "Embedded2.1 VAE from verified DiT checkpoint; no turbo replacement",
+  "surfaceExtractor": "MCSurfaceExtractor",
+  "conditionedImageSHA256": "cf15c143a7c884340824de7d9ce26d12fec3db6052f6654ebbfdbf4f81bf9cf3",
+  "actual-processor-tensors": {
+    "archiveSHA256": "a65a3472877284222144e184d4f92296c88fcd6ad217c665185b5848fe0dc820",
+    "arrays": {
+      "actual-processor-tensors.image": {
+        "shape": [
+          1,
+          3,
+          512,
+          512
+        ],
+        "dtype": "float32",
+        "sha256CBytes": "ae93ffebbd89998741d1b453753f4ca8f4104d0354e097e966ba3242c8b2e306",
+        "finite": true,
+        "std": 0.6376847374489465
+      },
+      "actual-processor-tensors.mask": {
+        "shape": [
+          1,
+          1,
+          512,
+          512
+        ],
+        "dtype": "float32",
+        "sha256CBytes": "35102019dede0b07ab2cf7a6c9ba1606bf4807af5b61757524ec64d252cab128",
+        "finite": true,
+        "std": 0.7991445089733394
+      }
+    }
+  },
+  "actual-conditioned-features": {
+    "archiveSHA256": "23498ae28a981e828be8126c6cadb5d0660ad538eaa2754a1d30ffc1e0ce782c",
+    "arrays": {
+      "actual-conditioned-features.main": {
+        "shape": [
+          2,
+          1370,
+          1024
+        ],
+        "dtype": "float16",
+        "sha256CBytes": "f09e30eb0a3c6598903dcee2e6bfba558bd08a9d37385db3d8f7207560f14915",
+        "finite": true,
+        "std": 1.0519547525314066
+      }
+    }
+  },
+  "actual-initial-noise": {
+    "archiveSHA256": "ea419f18581d4dec83c7b6c05453ce6a67ae2bff6542bc211806ae50b48334fa",
+    "arrays": {
+      "actual-initial-noise": {
+        "shape": [
+          1,
+          4096,
+          64
+        ],
+        "dtype": "float16",
+        "sha256CBytes": "d121af39d2503cb92b91d2add0c82d67de0bb2eabede4e7aaac645aa42050100",
+        "finite": true,
+        "std": 1.0022364446154315
+      }
+    }
+  },
+  "actual-sampled-latents": {
+    "archiveSHA256": "31bff213e6ce350e3c17bfca26a175e43901ab513c29bd2d336d0912dfd28422",
+    "arrays": {
+      "actual-sampled-latents": {
+        "shape": [
+          1,
+          4096,
+          64
+        ],
+        "dtype": "float16",
+        "sha256CBytes": "6e0dfcdbc4dfb61f2e58576572774e7364369f4735ef3052c139667c63ab9cb3",
+        "finite": true,
+        "std": 0.970521011874902
+      }
+    }
+  },
+  "inferenceSeconds": 38.08870533388108,
+  "elapsedSeconds": 52.24856008309871,
+  "nativeSHA256": "a0641e345a79342aed761b6d13c149c5d08da5544c2030765aa335d789e90816",
+  "vertices": 421003,
+  "faces": 842014,
+  "nativeAudit": {
+    "accepted": false,
+    "vertices": 421003,
+    "faces": 842014,
+    "vertexDtype": "float32",
+    "faceDtype": "int32",
+    "validGeometryArrays": false,
+    "limits": [
+      "No self-intersection, anatomy, garment opening, fit or motion test.",
+      "Boundary counts do not classify intentional clothing openings."
+    ],
+    "nonfiniteVertexElements": 36,
+    "invalidIndexElements": 0,
+    "error": "Nonfinite vertices or out-of-range indices; raw retained"
+  }
+}
