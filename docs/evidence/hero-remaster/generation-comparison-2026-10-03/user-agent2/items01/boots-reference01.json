@@ -1,0 +1,71 @@
+{
+  "accepted": false,
+  "item": "boots",
+  "round": 109,
+  "producer": "Built-in imagegen",
+  "sourceToolPath": "/Users/raynos/.codex/generated_images/01a101fe-a358-7731-987d-4168614e9ece/exec-6078be88-e312-4e77-96a7-bfecd44c8c12.png",
+  "savedPath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/boots-reference01.png",
+  "sha256": "f6c87735c12eeb5161b2c48d2192ae45d8e6e5062d9217866bc19aced1791903",
+  "bytes": 1513385,
+  "pixelContract": {
+    "mode": "RGBA",
+    "size": [
+      1374,
+      1145
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaZeroPixels": 902972,
+    "alphaOpaquePixels": 801,
+    "alphaPartialPixels": 669457,
+    "nonzeroBounds": [
+      78,
+      53,
+      1310,
+      1089
+    ],
+    "edgeMaxAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "alphaHalfBBox": [
+      82,
+      123,
+      1305,
+      1050
+    ]
+  },
+  "prompt": "Use case: stylized-concept. Asset type: isolated single-image 3D reconstruction reference for Rockhop footwear. Input image1 is the approved rider storyboard03. Preserve the rider's compact BLACK ANKLE BOOT silhouette: rounded enclosed toe, low practical ankle height, close-fitting ankle shaft, restrained black lace fastening, distinct flat dark rubber outsole with modest tread and a small low heel. Do not replace it with a tall combat boot, sneaker, wedge shoe, oversized motocross armor or platform. Input image2 is the selected mustard Hunyuan hoodie: match its coherent moderately stylized realistic game-asset material and detail scale. Create ONE empty left black ankle boot only, floating alone. Complete enclosed upper around toe, heel and sides; clearly distinct sole and heel structure; a practical open ankle mouth with visible lining and cavity, tongue and restrained black laces at instep. Matte supple black leather/textile, subtle grain, stitched construction, restrained natural ankle creases; no glossy plastic. View from outer/front three-quarter with slight elevation so rounded toe, complete sole, heel, ankle opening and overall boot silhouette are all legible. Entire boot fully inside generous transparent margins, nothing cropped. Genuine transparent background. Soft balanced studio light with adequate fill to read black surfaces and separation of upper/sole. No foot, skin, human, mannequin, jeans, second boot, disconnected toe/sole pieces, oversized metal hardware, logos, text, labels, scenery, bike or multiple view panels. Real footwear anatomy reference, not a wedge/blob substitute; geometry/opening/fit must still be tested after generation.",
+  "referenceInputs": [
+    {
+      "role": "approved-storyboard03",
+      "path": ".tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png",
+      "sha256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a",
+      "bytes": 291838
+    },
+    {
+      "role": "selected-hoodie-generated2D",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+      "sha256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+      "bytes": 1394368
+    },
+    {
+      "role": "selected-original-hoodie-GLB",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "bytes": 42329320
+    }
+  ],
+  "seed": "Built-in tool exposes no seed; local Hunyuan uses42",
+  "inspection": "One black ankle boot, enclosed rounded toe/heel/upper, visible ankle cavity, separate sole and low heel. Generated six-eyelet shaft and pronounced lug sole are more bulky/detailed than the compact low-profile storyboard cue; retain this snapshot, then one targeted ankle/sole proportion refinement before local3D inference. No exact unseen lace/lining approval inferred.",
+  "limits": [
+    "Experimental generated2D only; no geometry, camera calibration, source opening/fit/topology/UV/rig acceptance.",
+    "Original generated alpha preserved byte-for-byte, no background removal/cleanup/repaint.",
+    "No local model run yet, parent art authority retained."
+  ],
+  "selectedForLocalGeneration": false
+}

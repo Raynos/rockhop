@@ -97,3 +97,13 @@ Validation: RGBA[1211, 1299], alpha[0, 255]/965822zero pixels; SHA070c5fc70f1cc1
 Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
 
 Validation: Third-round runtime24 gate reused only after fresh four-file pins and empty full playerdiff; prior boot/4810-frame clear/crash/instant1–2ms restart remain unchanged. Actual handedness/open cavity unproven from2D; faint alpha1edge fringe preserved.
+
+## Round 109 — Isolated boots reference checkpoint
+
+Finding: Save one built-in imagegenbootsreference against exact approved storyboard03and selected hoodie; all prompt/input bytes and generated alpha preserved before local shape generation.
+
+Validation: RGBA[1374, 1145], alpha[0, 255]/902972zero pixels; SHAf6c87735c12eeb5161b2c48d2192ae45d8e6e5062d9217866bc19aced1791903 and bytes1513385pinned. No local inference or pixel modification.
+
+Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
+
+Finding: Generated boot has six-eyelet shaft and pronounced lugs; preserve it as unselected reference snapshot and make one targeted compact ankle/sole refinement before local inference. Storyboard partly occludes footwear details, so exact lace/lining approval is not inferred.
