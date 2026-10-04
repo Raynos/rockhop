@@ -1,0 +1,190 @@
+{
+  "accepted": false,
+  "round": 111,
+  "recipes": [
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_preprocess_control.py",
+      "baseSHA256": "59e5a45dc6b814b5e652ca78c4366f99a3922edc3f65203e26f6e10cecdc045a",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/preprocess_item.py",
+      "itemRecipeSHA256": "37c1c2184d79a3a176fd8b9bf9f38cb9b810b0a97b4da29378c37f988602bb29",
+      "changes": [
+        {
+          "original": "alpha.min() == 0 and alpha.max() == 255 and np.any(alpha > 204)",
+          "replacement": "alpha.min() == 0 and alpha.max() >= 230 and np.any(alpha > 204)"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    },
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_hunyuan_shape.py",
+      "baseSHA256": "2359f9ba0605e6efb9068c57a7ecee2c4745444b47678f18c58e281165646071",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/shape_item.py",
+      "itemRecipeSHA256": "b191efa1a341b33fa8cc5627c0400d2a8d1f5659d03c5f6e33edf7271fd091a9",
+      "changes": [
+        {
+          "original": "('image', 'image-sha256', 'pipeline-sha256', 'out')",
+          "replacement": "('image', 'image-sha256', 'conditioned-image-sha256', 'pipeline-sha256', 'out')"
+        },
+        {
+          "original": "assert sha(output / 'conditioned-input.png') == '211bb51818b3078cf745459695190c70f16fb9d608bc71ee595f72f8e2fb61ed'",
+          "replacement": "assert sha(output / 'conditioned-input.png') == args.conditioned_image_sha256"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    },
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_hunyuan_decode_replay.py",
+      "baseSHA256": "015a21b3d8332a55f0248f0f1055e32e70a3e1c6e77ead948bbce18a4270fc95",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/decode_item.py",
+      "itemRecipeSHA256": "5da2d2821973b423ac7eb1ba29e58b2b01e9a3a0824022f10640e91aeae2453d",
+      "changes": [
+        {
+          "original": "('latents', 'raw', 'out')",
+          "replacement": "('latents', 'latents-sha256', 'latents-cbytes-sha256', 'raw', 'raw-sha256', 'out')"
+        },
+        {
+          "original": "assert sha(args.latents) == LATENTS_SHA and sha(args.raw) == RAW_SHA",
+          "replacement": "assert sha(args.latents) == args.latents_sha256 and sha(args.raw) == args.raw_sha256"
+        },
+        {
+          "original": "'latentsSHA256': LATENTS_SHA, 'originalRawSHA256': RAW_SHA",
+          "replacement": "'latentsSHA256': args.latents_sha256, 'originalRawSHA256': args.raw_sha256"
+        },
+        {
+          "original": "assert hashlib.sha256(latent_array.tobytes()).hexdigest() == '6595898a97dc5a7f4f23647828b4ddd7b83f4433a6dfe198003ac2ea586da60c'",
+          "replacement": "assert hashlib.sha256(latent_array.tobytes()).hexdigest() == args.latents_cbytes_sha256"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    },
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_garment_uv_control.py",
+      "baseSHA256": "2b1bbb535a0f5d7220eea120348f8fb33afc2c528512932b99d800910513870f",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/uv_item.py",
+      "itemRecipeSHA256": "788df92538b8382d04975a590409ee01903ed25ba170333b3162e4099c1d7399",
+      "changes": [
+        {
+          "original": "parser.add_argument('--mesh', required=True)",
+          "replacement": "parser.add_argument('--mesh', required=True)\n    parser.add_argument('--mesh-sha256', required=True)"
+        },
+        {
+          "original": "assert sha(args.mesh) == '318c7536e5234c6a6e285f4d2111dad9fcdf3941e0329951a1f9a7ebf460612a'",
+          "replacement": "assert sha(args.mesh) == args.mesh_sha256"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    },
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_hunyuan_paint.py",
+      "baseSHA256": "957302b535aa0a9c434abca15f9ef70c9d19b01d885782f8c0a000bba75f9ec0",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/paint_item.py",
+      "itemRecipeSHA256": "6536b1b454fb3b0dbe9b2433f5d6fd71be06b7635ef12cb82f0fae46ae3c5dab",
+      "changes": [
+        {
+          "original": "('mesh', 'wrapped', 'image', 'weights-receipt', 'weights-receipt-sha256', 'out')",
+          "replacement": "('mesh', 'mesh-sha256', 'wrapped', 'wrapped-sha256', 'image', 'image-sha256', 'weights-receipt', 'weights-receipt-sha256', 'out')"
+        },
+        {
+          "original": "assert sha(args.mesh) == '318c7536e5234c6a6e285f4d2111dad9fcdf3941e0329951a1f9a7ebf460612a'",
+          "replacement": "assert sha(args.mesh) == args.mesh_sha256"
+        },
+        {
+          "original": "assert sha(args.wrapped) == 'f1d1fa95c9095c156dfc6840f93cf4db8f082f0dd835ffd53492d73e3774085f'",
+          "replacement": "assert sha(args.wrapped) == args.wrapped_sha256"
+        },
+        {
+          "original": "assert sha(args.image) == '4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c'",
+          "replacement": "assert sha(args.image) == args.image_sha256"
+        },
+        {
+          "original": "assert not (args.query_tiling or args.value_columns) or prior is not None",
+          "replacement": "assert args.value_columns and not args.query_tiling, 'Use only existing qualified value-column item route'"
+        },
+        {
+          "original": "assert args.value_columns and prior is not None",
+          "replacement": "assert args.value_columns"
+        },
+        {
+          "original": "'Original six zero-area triangles and detached component retained.'",
+          "replacement": "'Original item geometry, including zero-area or disconnected parts, retained without cleanup.'"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    },
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_shape_orbit.py",
+      "baseSHA256": "b1073d0fcd3a07677e2d62616c9423d0cda2f7ceca46d0822a6ad4ce131d440f",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/orbit_item.py",
+      "itemRecipeSHA256": "dba99522d972a986f1513a803253a8c4bef5d77d84559f451ce8cba5ae6e5a78",
+      "changes": [
+        {
+          "original": "parser.add_argument('--mesh', required=True)",
+          "replacement": "parser.add_argument('--mesh', required=True)\n    parser.add_argument('--mesh-sha256', required=True)"
+        },
+        {
+          "original": "assert sha(args.mesh) == '318c7536e5234c6a6e285f4d2111dad9fcdf3941e0329951a1f9a7ebf460612a'",
+          "replacement": "assert sha(args.mesh) == args.mesh_sha256"
+        },
+        {
+          "original": "'Six zero-area triangles and small detached component retained.'",
+          "replacement": "'All original item geometry retained, including any degenerate or disconnected parts.'"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    },
+    {
+      "base": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/encode_shape_orbit.py",
+      "baseSHA256": "87ceff7248a3a651f1eda4a12c56a8759e2e5af4fc3a46cb021ce0a90196a7ee",
+      "itemRecipe": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/encode_item_orbit.py",
+      "itemRecipeSHA256": "186061bcdbd062b649de547b22abec29991ad66864e33a39c7ba0a8f95648864",
+      "changes": [
+        {
+          "original": "'Hunyuan30step: finite-cell DERIVATIVE, unaccepted'",
+          "replacement": "'Hunyuan30step: original item source, unaccepted'"
+        }
+      ],
+      "helperImportPath": "Existing user-agent2 parent only; no copied adapter or installation"
+    }
+  ],
+  "helpers": {
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/audit_native.py": "10da89eb6197d7299a8cd740161a02dcf991798c5ae34d62ee1be8d280351b66",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/finite_cell_mc.py": "fd56f9211c61a99f0f517ee9598102ff1507a0006f016f354762ba6045ddb014",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/paint_geometry_getter.py": "d69df59e3e879f63ad4e6080ed86b1f6e68a0e6c52056b320940e22bfd698b2a",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/value_column_attention.py": "11396c1295a0f29179860d65f4f8f3db9c502b9eb6c080921ea55ef1dea36904"
+  },
+  "inputs": [
+    {
+      "item": "jeans",
+      "reference": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+      "referenceSHA256": "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf",
+      "referenceReceipt": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/jeans-reference01.json"
+    },
+    {
+      "item": "gloves",
+      "reference": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+      "referenceSHA256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2",
+      "referenceReceipt": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/gloves-reference01.json"
+    },
+    {
+      "item": "boots",
+      "reference": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/boots-reference02.png",
+      "referenceSHA256": "6d1270cfc14f86eba5974cf6ecbaac8184d6c2b8c9835e01dfd4f56590e920cc",
+      "referenceReceipt": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/boots-reference02.json"
+    }
+  ],
+  "newModelRunsAtCheckpoint": 0,
+  "runtime": "Existing Hunyuan3D-2.1 .venv; no install",
+  "onlyInputAdaptations": [
+    "Reference/conditioned-pixel/mesh/latents SHA assertions become explicit new-item command parameters.",
+    "Jeans alpha maximum254 is genuine preserved service output; installed preprocessor accepts this input, no alpha normalization or pixel edit.",
+    "Existing qualified value-column SDPA and final-only VAE slicing may be used on new sampling inputs without pretending hoodie replay parity. Actual independent attention checks and archive captures retained."
+  ],
+  "preserved": [
+    "All old recipes and installed backend/weights bytes unchanged.",
+    "Native raw arrays and sampled latents saved before validation failure; known invalid native MC may use existing standalone-original-VAE finite-cell decode derivative, never filling/cleaning/remeshing.",
+    "Fresh lease/admission before every serial local stage; resource stops are not bypassed.",
+    "Exact xatlas triangle-coordinate and CPU inpaint getter preservation gates retained.",
+    "Actual original PBR output bytes/UV retained in silent CPU orbit, no wearable or player acceptance."
+  ]
+}

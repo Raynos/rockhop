@@ -117,3 +117,11 @@ Validation: RGBA[1374, 1145], alpha[0, 255]/971105zero pixels; SHA6d1270cfc14f86
 Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
 
 Finding: Targeted built-in edit yields four-eyelet shortened ankle shaft and more restrained outsole. Preserve both reference variants; only boots-reference02is selected for one later raw3Dcandidate. Correction prompt and exact edit inputs pinned.
+
+## Round 111 — Existing Hunyuan item recipes pinned
+
+Finding: Derive input-parameterized copies of the existing qualified preprocess/shape/latent-decode/UV/PBR/orbit recipes for three fixed new references. No backend method/quality/weight/installed edit; all raw/control captures retained. Jeans alpha254is preserved, not normalized; new-reference painting uses existing qualified adapters without false hoodie replay comparison.
+
+Validation: All7recipes compile, every base/item/helper/reference SHA pinned;3source inputs exact. Third-round runtime24 reused with fresh player/source pins and empty playerdiff. No new item model inference yet.
+
+Limits: Source checkpoints unaccepted; shape native-validation failure is retained separately from resource denial. Resource/time/lease stops must report and halt, not trigger a bypass. Fit/rig/mobile/played-art gates remain open, no publication.
