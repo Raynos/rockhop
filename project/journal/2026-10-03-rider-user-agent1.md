@@ -699,3 +699,11 @@ Finding: Actualdonor24 underexacthistoricalmask/raycode1937rays/24misses:3chest/
 Validation: Frozen source/field pins/exacthistoricalfragment reused. Initialdominance includednondeformside tags; correctedt51boneclasses andrerunwithoutmaskchange. Silentnormalship84cold1505ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame3.250ms/errors0; Blender/diff/hooks pass.
 
 Limits: Directional20cmcoverageproxy notcompletebodycontainment/wallnesting/actualhole diagnosis. RootviaauthorizedBridge nowrequests one matchedactual24restorbit AFTERthischeckpoint BEFOREbroadrig; noexistingequivalentbytes. Preserveallmisses/originalUVPBR/no newbody/inference/publication/promotion; parentsolejudge/allart/rig/M0–M5/mobile open.
+
+### Round85 — requested matched source24 rest orbit ready for parent
+
+Finding: Oneauthorized root/Bridge appearanceprerequisite: originaluniform donor /preferred61registered donor /actualfitted24, exactoriginalUVPBR/sharedlighting/camera/no recolor.48uniqueangles/144PNGs,3secfront+rear/2secsides+finalfront,26.666667s1920×64024fpssilent H264/1409306bytes; SHAcb405e1fc8cbf2569eb07a41de7cf3614c2a09d9b6f942e000d0a0d06c8190f3. Noexistingequivalentcapture/upload.
+
+Validation: Renderinput/native/recipes exactpins/allPNGhashes/camera matrices/sequence retained. Fullffmpegdecode0errors/640frames; mutedheadlessChromium151ended26.666667s/637callbacks/638presented/2droppedplaybackframes/page+mediaerrors0. OwnMJS nodecheck/targetedoxlint pass afterDOMreferences qualified. Initialadhoctmpmanifest fstring syntaxerror producednooutput; durablearray-subprocess encoder passes. Source24/selecteddonor/native originals unchanged. Diff/hooks pass.
+
+Limits: Parentsoleplayedjudge, notgarmentmotion/appearanceapproval. Centreexact61registrationnotlatest18/unitsnestedwalllimits explicit. Native24rest0body/0self/finiteair/protecteddata do not close24historical coverage misses orrig/M0–M5/mobile. LocalMP4/PNG masters notstaged, onlyrecipes/pins/metadata; noLibraryupload/newbody/inference/publication/promotion.
