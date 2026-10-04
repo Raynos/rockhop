@@ -197,3 +197,11 @@ Finding: The original installed xatlas wrap preserves every jeans triangle coord
 Validation: Guard exit0 in153.593s; identical triangle coordinates and finite UVs pass. Two inpaint calls preserve renderer vertices/UVs; exported triangle error is within3e-7. Existing-source normal runtime gate pins rechecked. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
 
 Limits: Unaccepted source; no remesh, reduction, cleanup, fitting, rig, art acceptance or publication. Original PBR remains pending.
+
+## Round 121 — jeans paint01 checkpoint
+
+Finding: One existing Hunyuan PBR job completes15steps/eight768views/4096textures on the frozen jeans triangles and verified original reference. Preserve all actual paint inputs, step latents, original texture maps and GLB before source review.
+
+Validation: Guard exit0 in377.322s. Fifteen actual diffusion archives retained; 841998 triangles preserved, finite UVs and5.5960083e-7 maximum OBJ coordinate error pass the8e-7 writer limit. Original PBR maps remain4096.
+
+Limits: Unaccepted raw source; opening/fit/topology/rig/garment physics and played art remain unproven. No cleanup, reduction, player promotion or publication; root alone judges.

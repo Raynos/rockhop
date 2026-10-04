@@ -1,0 +1,378 @@
+{
+  "accepted": false,
+  "round": 121,
+  "item": "jeans",
+  "phase": "paint01",
+  "finding": "One existing Hunyuan PBR job completes15steps/eight768views/4096textures on the frozen jeans triangles and verified original reference. Preserve all actual paint inputs, step latents, original texture maps and GLB before source review.",
+  "validation": "Guard exit0 in377.322s. Fifteen actual diffusion archives retained; 841998 triangles preserved, finite UVs and5.5960083e-7 maximum OBJ coordinate error pass the8e-7 writer limit. Original PBR maps remain4096.",
+  "limits": "Unaccepted raw source; opening/fit/topology/rig/garment physics and played art remain unproven. No cleanup, reduction, player promotion or publication; root alone judges.",
+  "guardStatus": "worker returned; review pending",
+  "guardExitCode": 0,
+  "guardSeconds": 377.322,
+  "peakHostAnonymousGiB": 53.4,
+  "peakHostCombinedGiB": 65.6,
+  "scratchRoot": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01",
+  "rawFiles": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-VAE-image-input-00.npz",
+      "bytes": 590513,
+      "sha256": "d448bbd1bc7fa759ab533aa3859d2a6920ecb1655e151cdf088b43721c07fea6"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-VAE-image-input-01.npz",
+      "bytes": 2267109,
+      "sha256": "3fa58d5f03b038dce867e620e3b59954482523160ce9b0c467403af130f4097b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-VAE-image-input-02.npz",
+      "bytes": 510578,
+      "sha256": "455d8c07b9f89f8f134d992e8c68c9835ee33c5ed96528f6333401b1864fd420"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-dino-features-00.npz",
+      "bytes": 732043,
+      "sha256": "42e97e5cc90bfb12d2466b840932dbda31294863da1ae9d82c5b92cc26a6bfae"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-dino-model-input-00.npz",
+      "bytes": 77762,
+      "sha256": "6a2ef318129d0f9ebcbb1e514b60f69ecbe60d8ba9d84186393ffd48549855ba"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-encode_images-00.npz",
+      "bytes": 47826,
+      "sha256": "405a3c8a0a8508e53d3fb50da4498e1d53e9ebe37dd44b31f4f06081e6f6855c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-encode_images-01.npz",
+      "bytes": 217127,
+      "sha256": "531394b5ca9bbdc0e35ac35843898aad01d0071089ec28622b228fce02baa0d4"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-encode_images-02.npz",
+      "bytes": 225261,
+      "sha256": "d2745875369c87539ef38b1e3a73e619c80e896ebaf864f098c4f1fb4e29c614"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-final-VAE-decode-input-00.npz",
+      "bytes": 846008,
+      "sha256": "2926c6b9564be0f048be6bf66cd3bb88c71eab5922ed52a8140df90f8f285ee2"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-final-VAE-decoded-images-00.npz",
+      "bytes": 43560268,
+      "sha256": "965769139a15ca0e77c98c442d8d22ade390d5613a4bac36d7ef73af2da57387"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-first-native-attention-inputs-00.npz",
+      "bytes": 391460359,
+      "sha256": "781e3ea02d0ffad92531e1a7c380d321e81ef62c9553d4e6c55abc1d076f2889"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-first-value-column-attention-inputs-00.npz",
+      "bytes": 177534104,
+      "sha256": "e4328db78cb671e1c03cf5feafa2ba5fd427f6999bc45239eaa906eca605c970"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-00.png",
+      "bytes": 706231,
+      "sha256": "9fd8022f62d4b5aefe3123d70db0c3dab09f49aedf26852c1041cbff5185b965"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-01.png",
+      "bytes": 406911,
+      "sha256": "7e044f91b71ff3bac8ba952caf9d84afacdce9f1c7fe2949d9d952d917325cdb"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-02.png",
+      "bytes": 633240,
+      "sha256": "770c83f54bd484f32825cbd002aa1f2ec559a470b35918d3319553906b33b2d0"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-03.png",
+      "bytes": 405457,
+      "sha256": "eda43222ab65feb299c42fc915bd19ce9410314ed132f14e23e71b59f1677e29"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-04.png",
+      "bytes": 387434,
+      "sha256": "024c52459ae62768972c007deb6014e20d7df88803adcb202a0fd78bb31eb542"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-05.png",
+      "bytes": 388492,
+      "sha256": "707243832866dd915c317d49c60c30b109ba694618a9ae30403c78f9b498a4db"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-06.png",
+      "bytes": 889432,
+      "sha256": "a3cec90ac734ef0583faf5a15d169fdc8d4f4170551d927d44c2ed8b0873b996"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-07.png",
+      "bytes": 850267,
+      "sha256": "6bcb17e2237d4848f821ec30618fe6a0610c100f18d682e25738c505ea9b3c36"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-08.png",
+      "bytes": 108115,
+      "sha256": "094fe6d6366b5177bc917144401b41e6ba9866430dc3715467188a2b7cdcc16f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-09.png",
+      "bytes": 72368,
+      "sha256": "358b8d01083b162385204de580278cd2c90a81ae56fdf29fb5a7cb1a4e458cb7"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-10.png",
+      "bytes": 101804,
+      "sha256": "364f7684bff21dfca70baf25c361df59bf1ba8167b26b937baa4fd9f861817b4"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-11.png",
+      "bytes": 72208,
+      "sha256": "6618a2ba2b02549d087503cf930b3718e3c4071d3ddfdbadc53a4c9f4d760b85"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-12.png",
+      "bytes": 99247,
+      "sha256": "404912e85c19bd04182a0d160dd4e9d046c0562fe59fafa55f842d710cabb412"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-13.png",
+      "bytes": 93380,
+      "sha256": "e114b88c63160aece4bd3c70a972e14b27b93a5f75589f004faab666f976652f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-14.png",
+      "bytes": 232927,
+      "sha256": "f07c61350884a85cd0a76fb2b05c410c1c2eaa3be37112a3cdecdc813f1766f5"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/control-15.png",
+      "bytes": 215987,
+      "sha256": "40f30cc3311c5a52b1db85b01917df1f95c098aef4f6a3e8986116bda2718200"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-paint-conditioning/style-00.png",
+      "bytes": 177398,
+      "sha256": "24873da76449fdef60553697ad837096d64af6ae78ac2c62df2437fe82966dd0"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-prepare_latents-00.npz",
+      "bytes": 1088753,
+      "sha256": "001efeb543a14130a25316629c1d6e71f405c711eed01cc059a255e742ddffc6"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-00.png",
+      "bytes": 287415,
+      "sha256": "fcd2e93ad04ffce3ba4d234b675f237c9a0e6aa0b2cfcc4e7eac79e4240edda1"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-01.png",
+      "bytes": 201727,
+      "sha256": "b5ba5b6fbdfe58e44485e24f1e82975b684dcc04718bc84cacbd0f3d16f0066d"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-02.png",
+      "bytes": 270188,
+      "sha256": "7fa2735d3d38c4ea38be9142002458a74b6665631489cedd9e6bee5f243d8044"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-03.png",
+      "bytes": 191767,
+      "sha256": "ae8f0740ac3f0557bfc45bb8f974522828e63ab2f89fadccfbf8dd582983118a"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-04.png",
+      "bytes": 140562,
+      "sha256": "a3440b4cf26269cf7a8683c9d4e9cfe6bbde5855492a21c4aff16f7df124fe1d"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-05.png",
+      "bytes": 101627,
+      "sha256": "ddf3ea1ad134f5bbbc9f1ad9bdb4d43fa3f64910251c96e9109defdb28076e00"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-06.png",
+      "bytes": 266415,
+      "sha256": "fa95f77eee8b8b2e1d3fa146bb2ed5c0053b67dfe273ab9b9ba80970e74f7567"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/albedo-07.png",
+      "bytes": 258906,
+      "sha256": "0fcd19e7d521bba1faeb8c5b35581225d1562f44ad085e97d9c3feb98947e964"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-00.png",
+      "bytes": 312925,
+      "sha256": "b8d9bc30f44bf2e7425308f1d16b06ea0959e4dfc6b0ae66825eda00a16219f7"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-01.png",
+      "bytes": 237640,
+      "sha256": "6cfdc4aff0d73c4489482b7426f66461bb788a0d0b70b0bac9a25bbbb0ccdad4"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-02.png",
+      "bytes": 288335,
+      "sha256": "12d8ae9034b6dcc46c6691f2c183b6509ca6ceafc75a98fb5c378124de66c1ca"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-03.png",
+      "bytes": 228332,
+      "sha256": "310b90e8843275d9285b28ca3b3ebbf473d8a7087a0f17822f7852425b66cf49"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-04.png",
+      "bytes": 151642,
+      "sha256": "f158ff56a5bee34ce1d327dd79593c63181d10a95800b7129003a24c16ce443f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-05.png",
+      "bytes": 111273,
+      "sha256": "089c69b93d8e46822974d15a3e8687573542e2ec87bb7f1b8f60d903e492dafb"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-06.png",
+      "bytes": 302277,
+      "sha256": "99d15b84f2e87f2621842ee363b1324195c89ae5b863c0d025f8740435bb04f3"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-returned-pbr-views/mr-07.png",
+      "bytes": 285812,
+      "sha256": "29dd54124afd8c983236e2e731b02f8a44d76657b5e86e31c9dbe11079076ab3"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step01.npz",
+      "bytes": 1088619,
+      "sha256": "e57ebd7a62c50413a094893c1eab5257f165626652dd25a346539f53a61d1cd2"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step02.npz",
+      "bytes": 1088478,
+      "sha256": "81b2aa21d7a9566ef0af981d97bf0f6c0c83da0d4c96dddff18a2531b871726a"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step03.npz",
+      "bytes": 1088211,
+      "sha256": "7e449906bb13b7ddad8bdeba8eacc3a6c4b2628bd5d195c153b388e69a1fcb44"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step04.npz",
+      "bytes": 1088071,
+      "sha256": "379dea6ff5c75f27adcd048bc0512b93204d1181ce382e2c18efc982f000a07c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step05.npz",
+      "bytes": 1087527,
+      "sha256": "6af0539293d25e437012b69829ee68214510df78809cc6fb40ae279d8f1748ef"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step06.npz",
+      "bytes": 1086610,
+      "sha256": "af31f438e876ef791adda391724bb6c16a9a980e35f99711de8d42ca0584cb68"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step07.npz",
+      "bytes": 1085536,
+      "sha256": "74adf8c6dc6f55e844b9844ce1fc0a93745b74ee73d3f815058d1643d6b2444f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step08.npz",
+      "bytes": 1084320,
+      "sha256": "de2bfe01fd3de800df8d4158ddb515ee3170fdb3a5ee3d38319888e68135a0d2"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step09.npz",
+      "bytes": 1082524,
+      "sha256": "a024c776d7855658b5ee72965d7c5bf597208a4c9a914cb285adf11cb918a32b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step10.npz",
+      "bytes": 1079757,
+      "sha256": "3a06f4641cad1304a8833ca50890fd24e1e63f3ba44708cd9779e717d5665908"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step11.npz",
+      "bytes": 1076082,
+      "sha256": "9dac7bb0f601dccf4df22f311714d1afd70b02d2d3e64c1d393f94463caf5ce1"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step12.npz",
+      "bytes": 1069493,
+      "sha256": "d37191b463e47acc0974d53ae2f10e669f45962314a88ece70cfbc9825efda67"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step13.npz",
+      "bytes": 1059430,
+      "sha256": "c561bfefecffd3650b628fc05bb2301e4894eb56a4a3977411fdbfd7af35746f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step14.npz",
+      "bytes": 1039135,
+      "sha256": "6c093b3104aebdd39f8da127fabfcef4a02faeddaf812080a6cf4545fdda6fc8"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/actual-sampled-paint-latent-step15.npz",
+      "bytes": 860280,
+      "sha256": "9b3e462ae08f50a6c5c1bb25a74386fb5277e37b28da56b2685e0aac0f90046f"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/metallic-roughness-packed.png",
+      "bytes": 8912386,
+      "sha256": "06f9428faafe1a6b35adc8bc6d1f255069193acccf132647ced412c740c9f6a4"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted.glb",
+      "bytes": 43271320,
+      "sha256": "7dbec82f2cc62c954685a00ef2dc484b3f7aede5fd8ee1d0b6887da288e1a788"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted.jpg",
+      "bytes": 2625302,
+      "sha256": "544894764fc9558e212d995c1a9cd724be5ea1337e6f3f25611313604675845c"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted.mtl",
+      "bytes": 143,
+      "sha256": "c33677f7e797a8fc1268b65b653122cfb6b6929133a37ebdeb2a67c896fc1b34"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted.obj",
+      "bytes": 69657811,
+      "sha256": "6b297660047252d0e36100db55f6cbfaf71946b4367144921cc79526bee83d77"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted_metallic.jpg",
+      "bytes": 1699542,
+      "sha256": "df9e97431d666ae628173cb8dbafece705b2a31e3889ac3d63bb54da5815bd8b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted_roughness.jpg",
+      "bytes": 1871601,
+      "sha256": "cf8f657d8553a01ed8eae60ed093149f6157df3dc0f34e3dfe285a34d0987bdd"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/progress.json",
+      "bytes": 573115,
+      "sha256": "a2e256536aa6013cfcb4fd7e28d58ebf31a4d4c811e984e0b4348f8621bc8043"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/receipt.json",
+      "bytes": 573757,
+      "sha256": "422886002bd52040462993d20bed4ce6f80bfe40b10686c492bac44aede7a9bb"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/shape.obj",
+      "bytes": 35309774,
+      "sha256": "8800c0b9b929f7fbafe5432f268f49ac84e43262fa8aadbac8d406bebdf431e2"
+    }
+  ],
+  "originalWorkerLog": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01-guard/worker.log",
+    "sha256": "17f82366683354e7eae0b5ae847791de26c6696db400eb43d970ee1619d96c16"
+  },
+  "noCleanupRemeshReductionOrPlayerReplacement": true,
+  "oneReferenceSeedCandidatePerItem": true
+}
