@@ -491,3 +491,11 @@ Finding: Inventorypins immutable06d575af/source13native6ef79e38…/selectedPBR/5
 Validation: Immutable source13/PBR hashes exact; linked3actual2048images/GLBbase+ORM/doubleSided recorded. Cuffs40each/hem72/neckhood104/0othernonmanifold. All12coverage misses6upperArmper side, exactnativepositions/normals/weights/closestsurface14.3..37.1mm, no maskrelaxation. Silent ship57cold1502ms/4810identicalticks/clear40.083333s/crash103/restart1tick/frame3.140ms/errors0; Blender/diff/hooks pass.
 
 Limits: UnriggedGLB admission, exporterwarnings existingnonselectedarmatureparenting/combinedtexture samplerrecorded, notrigready/playerasset. Coverage/playedlikeness/wearing/mobile/allM0–M5 open; nextAgent1pinnedrigged derivative/nativecontinuousposes thenAgent3independentexport/engineverify. No frozenrewrite/Libraryduplicate/playerpromotion.
+
+### Round58 — author sewn skin and preserve exact exported51bind, 2026-10-03
+
+Finding: Agent1authorsnormalized51deform-only garmentweights through exactsewn subdivision ancestry: original1250pattern/collarfield, droppedhood attachment→chest4rows. Actualmax6influences/8allowed; source13rest/PBR immutable, newmodifierconsumesownfield. Native d3f05ff…/faithful rigGLB6042207a… pinned; nextcontinuous nativewearing evidence, Agent3independentexport/engineverification.
+
+Validation: Exactreplayedseedcoords/polygoncycles;22originalsource meshes/18graphs/17images/51bindpose exact,0restbody/0restself/12coverage misses retained. Rawexportnormalizationerror1.1921e−7→restored0,2517skinbytes only/allnonskinbytes exact.7123rows/11840tri/51jointnamesorder+IBMbyteexact toconstructed09; centeredbindspaceposition59.605nm. Wrongexportoption caught aftersave; installedAPI correction reexports sameimmutable native/failedbuilder preserved. Source/pins/Blender/diff/hooks pass.
+
+Limits: Newfield isnotacceptedoldpatternweights; no nativecontinuous/actualgame/collision/playedart/iOS pass. Scoped8slotconditioner marker onnewmesh only, skinnedbindspacefile+.65 centeredonce distinctfromunriggedexport57. Agent1retainsrig/weights/nativeproof, Agent3independentverify; rootsolejudge/allM0–M5open/no Library/playerpromotion.
