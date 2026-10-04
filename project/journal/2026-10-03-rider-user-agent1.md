@@ -849,3 +849,14 @@ is numerical. No feasible seed/normal Jacobian/constrained solve exists.
 No new native candidate, fit/skin solve, normal edits, capture or expansion.
 Root decision pending, natural selected-face transition unaccepted; all
 M0–M5 and contact/identity/art/engine/device/player gates remain open.
+
+## Round104 — freeze exact hand input and scope before construction
+
+Finding: Native26/glove4021v6883tri and actual rookie44tri/grip are pinned;
+exact geometry IDs,32 existing hand/finger weight columns and32 pose bones
+declared. Body edit list empty; all other19 bone columns/aux fields pinned.
+Validation: Blender read-only34 object control/51rest bind extraction and
+source/JSON/recipe/field hashes pass. No native mutation/save/pose/capture.
+See [scope104](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip104/scope.json), ask274.
+Limits: Actual contact/coverage/full-four motion loss and played appearance
+unqualified; neck103 frozen, no collar expansion. AllM0–M5 open, root judge.
