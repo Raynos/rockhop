@@ -245,3 +245,11 @@ Finding: The original standalone VAE reproduces the complete raw glove arrays by
 Validation: Guard exit0 in14.446s; all410VAE tensors and four native replay equality controls pass. Finite derivative has285159vertices/570242triangles, zero invalid indices/nonfinite coordinates and preserved field bytes. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
 
 Limits: Twenty components and16zero-area triangles remain uncleaned; anatomy, handedness, cuff lumen, fit, rig, PBR and art acceptance remain open. No publication.
+
+## Round 127 — gloves uv01 checkpoint
+
+Finding: Installed xatlas wraps the frozen glove mesh without changing any triangle coordinate/count. Verify finite UVs and actual renderer inpaint/getter preservation before original PBR.
+
+Validation: Guard exit0 in118.14s;570242triangle coordinates/count byte-identical. Finite UVs and both actual inpaint state controls pass; maximum exported triangle error1.1920929e-7 is below3e-7.
+
+Limits: Unaccepted dense raw source with all16degenerate triangles/20components retained. No anatomy, handedness, fit, rig, art/device acceptance or publication.

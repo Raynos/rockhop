@@ -1,0 +1,33 @@
+{
+  "accepted": false,
+  "round": 127,
+  "item": "gloves",
+  "phase": "uv01",
+  "finding": "Installed xatlas wraps the frozen glove mesh without changing any triangle coordinate/count. Verify finite UVs and actual renderer inpaint/getter preservation before original PBR.",
+  "validation": "Guard exit0 in118.14s;570242triangle coordinates/count byte-identical. Finite UVs and both actual inpaint state controls pass; maximum exported triangle error1.1920929e-7 is below3e-7.",
+  "limits": "Unaccepted dense raw source with all16degenerate triangles/20components retained. No anatomy, handedness, fit, rig, art/device acceptance or publication.",
+  "guardStatus": "worker returned; review pending",
+  "guardExitCode": 0,
+  "guardSeconds": 118.14,
+  "peakHostAnonymousGiB": 37.9,
+  "peakHostCombinedGiB": 46.3,
+  "scratchRoot": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/uv01",
+  "rawFiles": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/uv01/receipt.json",
+      "bytes": 1213,
+      "sha256": "f183d733a7b1c85776babd20db75f3dbb152366ca37afd43bf6d124055936484"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/uv01/wrapped.npz",
+      "bytes": 8598923,
+      "sha256": "2d5597c34877a0d0820127535ae9c23301724e8bcfed3acf8ad9dcdfe6472547"
+    }
+  ],
+  "originalWorkerLog": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/gloves/uv01-guard/worker.log",
+    "sha256": "7b41536e8598dd587bb64a1ebbc843fa73371bc964160449e8ac03e0baa14fb5"
+  },
+  "noCleanupRemeshReductionOrPlayerReplacement": true,
+  "oneReferenceSeedCandidatePerItem": true
+}
