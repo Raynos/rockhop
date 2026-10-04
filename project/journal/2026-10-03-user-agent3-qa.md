@@ -1258,3 +1258,26 @@ source edit, new capture/export/controller, proposal authoring, install/GPU/
 model/worker/publication. Agent1 owns anatomical proposal; parent owns ask275/
 index and art/admission. All M0–M5 open, no Library/user delivery or outbound
 acknowledgment. Required ordinary gate66 next as separate commit.
+
+
+## 2026-10-04 Round66 — normal replay after auxiliary-only QA
+
+Finding: Required third-round normal-source gate passes after freeze64 and
+independent auxiliary65verification. Auxiliary preservation passes only for
+new neck28bodies; root moving-neck art REJECT and all original99failures
+remain. No experimental body enters the unchanged twenty normal models.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick clears
+match40.083333333333336s/hash368f1ca5bd9e830a/bytesabaaaaaaaa0a4440, zero faults
+or errors. Crash103ticks; tick-zero restarts1/2ms. Eight normal-source pins
+and twenty model hashes equal gate63before/after. All14handoff inputs and
+PDF53/body56/body59/neck62/neck65stable evidence exact. Build passes with
+existing chunk-size warning; receipts gate66/. Own paths only; foreign
+shared staging preserved.
+
+Limits: Ordinary bot regression only, not moving anatomy or1232pose parity,
+contact/actual47identity, stranger/phone/engine/player/deploy pass. Agent1
+owns anatomical proposal; parent owns ask275/index and art/admission.
+Original490contacts stay open, source26 separate, all M0–M5 open. No
+source edit, new capture, upload, Library/user delivery, outbound ack, push,
+promotion or publication. Temporary build excluded; no recursive cleanup.
