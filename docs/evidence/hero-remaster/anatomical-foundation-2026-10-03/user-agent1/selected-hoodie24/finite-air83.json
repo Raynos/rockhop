@@ -1,0 +1,974 @@
+{
+  "status": "UNACCEPTED finite native wearer air-corridor evidence",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.blend": "86b85d476b13f709ba832e11dfcd14a17f071f5af69f3ebbbaf7dd1dbe6f58f9",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/compact-interior.npz": "1c5f02df905cc7d5d3a64a60cf97558f802d5bf563d6b9b44fe381ac4cd71e09",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie24/air-paths81.json": "9359e93c646ada66387a8afa47e6491e9f97e08654fc2a149fb46fd8847b8302",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/audit_hunyuan_air.py": "199bf90f5d0eb5bfaaf6ac546b25e4c4af9f19b54c184e5a0a47316701fa50e7",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/handoff.json": "c766db594cdbd73b5858a9adcfac8f66d29d66f5dde090590c79c48e6070f8df"
+  },
+  "recipeSHA256": "1af7f75f1b78cb47fbb545deb4fc50e6db16a7cc3e8ead6d99c09d453d94d517",
+  "nativeUnits": "Registered canonical Blender metres, distinct from original donor normalized generation units",
+  "controls": {
+    "annularAndRotatedClearanceExact": true,
+    "expected": 0.6966293086705379,
+    "clearance": {
+      "minimumDistanceNativeUnits": 0.6966293086705376,
+      "closestOriginalTriangleRow": 85,
+      "vertexUpperBound": 0.6999999999999998,
+      "trianglesExhaustivelyTested": 192,
+      "allOriginalTrianglesBounded": 256,
+      "numericalToleranceClaim": 1e-07,
+      "estimatedOpenTubeRadiusAfterTolerance": 0.6966292086705377,
+      "notFormalIntervalCertificate": true,
+      "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+    },
+    "rotated": {
+      "minimumDistanceNativeUnits": 0.6966293086705376,
+      "closestOriginalTriangleRow": 69,
+      "vertexUpperBound": 0.6999999999999998,
+      "trianglesExhaustivelyTested": 224,
+      "allOriginalTrianglesBounded": 256,
+      "numericalToleranceClaim": 1e-07,
+      "estimatedOpenTubeRadiusAfterTolerance": 0.6966292086705377,
+      "notFormalIntervalCertificate": true,
+      "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+    },
+    "intersectingCapRejected": true,
+    "coplanarRefusesClear": true
+  },
+  "paths": {
+    "hem": {
+      "segments": [
+        {
+          "startLabel": "pelvis.head",
+          "endLabel": "spine.head",
+          "startXYZ": [
+            0.007119530346244574,
+            -5.375096479021124e-10,
+            0.9786927700042725
+          ],
+          "endXYZ": [
+            -0.026255641132593155,
+            1.9822459229601463e-09,
+            1.0698740482330322
+          ],
+          "minimumDistanceM": 0.06825009254626169,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.06824999254626168,
+          "closestNativeTriangle": 8594,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.09408392757177353,
+              -0.004648579750210047,
+              1.0758864879608154
+            ],
+            [
+              -0.0914461761713028,
+              0.004822353832423687,
+              1.109473705291748
+            ],
+            [
+              -0.0923045352101326,
+              -0.009295758791267872,
+              1.108903408050537
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.0682527302375447,
+            "trianglesExhaustivelyTested": 8,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.007119530346244574,
+              -5.375096479021124e-10,
+              0.9786927700042725
+            ],
+            "end": [
+              -0.026255641132593155,
+              1.9822459229601463e-09,
+              1.0698740482330322
+            ],
+            "length": 0.09709751578012864,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "spine.head",
+          "endLabel": "spine.tail",
+          "startXYZ": [
+            -0.026255641132593155,
+            1.9822459229601463e-09,
+            1.0698740482330322
+          ],
+          "endXYZ": [
+            -0.01623968593776226,
+            1.2260622517246134e-09,
+            1.1434684991836548
+          ],
+          "minimumDistanceM": 0.06825009254626169,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.06824999254626168,
+          "closestNativeTriangle": 8594,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.09408392757177353,
+              -0.004648579750210047,
+              1.0758864879608154
+            ],
+            [
+              -0.0914461761713028,
+              0.004822353832423687,
+              1.109473705291748
+            ],
+            [
+              -0.0923045352101326,
+              -0.009295758791267872,
+              1.108903408050537
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.0682527302375447,
+            "trianglesExhaustivelyTested": 18,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              -0.026255641132593155,
+              1.9822459229601463e-09,
+              1.0698740482330322
+            ],
+            "end": [
+              -0.01623968593776226,
+              1.2260622517246134e-09,
+              1.1434684991836548
+            ],
+            "length": 0.07427289255972498,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "spine.tail",
+          "endLabel": "chest.head",
+          "startXYZ": [
+            -0.01623968593776226,
+            1.2260622517246134e-09,
+            1.1434684991836548
+          ],
+          "endXYZ": [
+            -0.024709410965442657,
+            1.8655086364560702e-09,
+            1.2077593803405762
+          ],
+          "minimumDistanceM": 0.07095705112625209,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.07095695112625208,
+          "closestNativeTriangle": 8596,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.09340177476406097,
+              -0.0026017299387604,
+              1.1421771049499512
+            ],
+            [
+              -0.09667392075061798,
+              0.002016535960137844,
+              1.2349532842636108
+            ],
+            [
+              -0.09483829885721207,
+              -0.010553617961704731,
+              1.1845356225967407
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.07332489989323297,
+            "trianglesExhaustivelyTested": 19,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              -0.01623968593776226,
+              1.2260622517246134e-09,
+              1.1434684991836548
+            ],
+            "end": [
+              -0.024709410965442657,
+              1.8655086364560702e-09,
+              1.2077593803405762
+            ],
+            "length": 0.06484638495689567,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "chest.head",
+          "endLabel": "chest.tail",
+          "startXYZ": [
+            -0.024709410965442657,
+            1.8655086364560702e-09,
+            1.2077593803405762
+          ],
+          "endXYZ": [
+            -0.047894395887851715,
+            3.6159264471535835e-09,
+            1.351333737373352
+          ],
+          "minimumDistanceM": 0.052200800818701695,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.05220070081870169,
+          "closestNativeTriangle": 8561,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.0976095050573349,
+              -0.01058138720691204,
+              1.2614306211471558
+            ],
+            [
+              -0.09667392075061798,
+              0.002016535960137844,
+              1.2349532842636108
+            ],
+            [
+              -0.1010451540350914,
+              0.00038745347410440445,
+              1.3828929662704468
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.053068450762436374,
+            "trianglesExhaustivelyTested": 21,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              -0.024709410965442657,
+              1.8655086364560702e-09,
+              1.2077593803405762
+            ],
+            "end": [
+              -0.047894395887851715,
+              3.6159264471535835e-09,
+              1.351333737373352
+            ],
+            "length": 0.14543431343127844,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        }
+      ],
+      "minimumDistanceM": 0.052200800818701695,
+      "minimumOpenTubeRadiusM": 0.05220070081870169
+    },
+    "neck": {
+      "segments": [
+        {
+          "startLabel": "chest.tail",
+          "endLabel": "neck.head",
+          "startXYZ": [
+            -0.047894395887851715,
+            3.6159264471535835e-09,
+            1.351333737373352
+          ],
+          "endXYZ": [
+            0.015593438409268856,
+            -1.1772719465952264e-09,
+            1.5682252645492554
+          ],
+          "minimumDistanceM": 0.052200800818701695,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.05220070081870169,
+          "closestNativeTriangle": 8561,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.0976095050573349,
+              -0.01058138720691204,
+              1.2614306211471558
+            ],
+            [
+              -0.09667392075061798,
+              0.002016535960137844,
+              1.2349532842636108
+            ],
+            [
+              -0.1010451540350914,
+              0.00038745347410440445,
+              1.3828929662704468
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.053068450762436374,
+            "trianglesExhaustivelyTested": 505,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              -0.047894395887851715,
+              3.6159264471535835e-09,
+              1.351333737373352
+            ],
+            "end": [
+              0.015593438409268856,
+              -1.1772719465952264e-09,
+              1.5682252645492554
+            ],
+            "length": 0.22599256550699687,
+            "candidateTriangles": 1,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "neck.head",
+          "endLabel": "neck.tail",
+          "startXYZ": [
+            0.015593438409268856,
+            -1.1772719465952264e-09,
+            1.5682252645492554
+          ],
+          "endXYZ": [
+            0.048708803951740265,
+            -3.677412596658769e-09,
+            1.6689226627349854
+          ],
+          "minimumDistanceM": 0.0642145709073275,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.0642144709073275,
+          "closestNativeTriangle": 20291,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.049095649272203445,
+              0.00048360510845668614,
+              1.5710923671722412
+            ],
+            [
+              -0.048500534147024155,
+              0.0002608060894999653,
+              1.5744938850402832
+            ],
+            [
+              -0.04737747460603714,
+              -0.015427911654114723,
+              1.5743650197982788
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.06440031786674486,
+            "trianglesExhaustivelyTested": 28,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.015593438409268856,
+              -1.1772719465952264e-09,
+              1.5682252645492554
+            ],
+            "end": [
+              0.048708803951740265,
+              -3.677412596658769e-09,
+              1.6689226627349854
+            ],
+            "length": 0.10600279919128063,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "neck.tail",
+          "endLabel": "head.tail",
+          "startXYZ": [
+            0.048708803951740265,
+            -3.677412596658769e-09,
+            1.6689226627349854
+          ],
+          "endXYZ": [
+            0.04810715466737747,
+            -3.631989375918465e-09,
+            1.8293051719665527
+          ],
+          "minimumDistanceM": 0.1317659444343633,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.1317658444343633,
+          "closestNativeTriangle": 8624,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.05157899484038353,
+              -0.013235663063824177,
+              1.583603858947754
+            ],
+            [
+              -0.05353548377752304,
+              0.010070419870316982,
+              1.585656762123108
+            ],
+            [
+              -0.05400536209344864,
+              -0.007979354821145535,
+              1.5860850811004639
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.13219657666554624,
+            "trianglesExhaustivelyTested": 90,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.048708803951740265,
+              -3.677412596658769e-09,
+              1.6689226627349854
+            ],
+            "end": [
+              0.04810715466737747,
+              -3.631989375918465e-09,
+              1.8293051719665527
+            ],
+            "length": 0.16038363772303948,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        }
+      ],
+      "minimumDistanceM": 0.052200800818701695,
+      "minimumOpenTubeRadiusM": 0.05220070081870169
+    },
+    "cuff.R": {
+      "segments": [
+        {
+          "startLabel": "hand.R.tail",
+          "endLabel": "hand.R.head",
+          "startXYZ": [
+            0.2468111515045166,
+            0.5219178199768066,
+            1.1114146709442139
+          ],
+          "endXYZ": [
+            0.215422585606575,
+            0.5087002515792847,
+            1.127906322479248
+          ],
+          "minimumDistanceM": 0.024163321569537124,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.024163221569537124,
+          "closestNativeTriangle": 24313,
+          "closestNativeTriangleXYZ": [
+            [
+              0.21014393866062164,
+              0.5230088233947754,
+              1.1481555700302124
+            ],
+            [
+              0.21137429773807526,
+              0.5230377316474915,
+              1.147363543510437
+            ],
+            [
+              0.2156745344400406,
+              0.5192415118217468,
+              1.1497517824172974
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.024257076609082877,
+            "trianglesExhaustivelyTested": 25,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.2468111515045166,
+              0.5219178199768066,
+              1.1114146709442139
+            ],
+            "end": [
+              0.215422585606575,
+              0.5087002515792847,
+              1.127906322479248
+            ],
+            "length": 0.0378407287697474,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "hand.R.head",
+          "endLabel": "forearm.R.head",
+          "startXYZ": [
+            0.215422585606575,
+            0.5087002515792847,
+            1.127906322479248
+          ],
+          "endXYZ": [
+            0.019993020221590996,
+            0.3701607882976532,
+            1.2595763206481934
+          ],
+          "minimumDistanceM": 0.02364034827506257,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.02364024827506257,
+          "closestNativeTriangle": 24313,
+          "closestNativeTriangleXYZ": [
+            [
+              0.21014393866062164,
+              0.5230088233947754,
+              1.1481555700302124
+            ],
+            [
+              0.21137429773807526,
+              0.5230377316474915,
+              1.147363543510437
+            ],
+            [
+              0.2156745344400406,
+              0.5192415118217468,
+              1.1497517824172974
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.023736171126717102,
+            "trianglesExhaustivelyTested": 1550,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.215422585606575,
+              0.5087002515792847,
+              1.127906322479248
+            ],
+            "end": [
+              0.019993020221590996,
+              0.3701607882976532,
+              1.2595763206481934
+            ],
+            "length": 0.2733548725205686,
+            "candidateTriangles": 766,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "forearm.R.head",
+          "endLabel": "upperArm.R.head",
+          "startXYZ": [
+            0.019993020221590996,
+            0.3701607882976532,
+            1.2595763206481934
+          ],
+          "endXYZ": [
+            0.022270604968070984,
+            0.19607332348823547,
+            1.4592759609222412
+          ],
+          "minimumDistanceM": 0.05545250310990897,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.05545240310990897,
+          "closestNativeTriangle": 15626,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.02146264538168907,
+              0.39492857456207275,
+              1.2280714511871338
+            ],
+            [
+              -0.02556743286550045,
+              0.4035484790802002,
+              1.2485122680664062
+            ],
+            [
+              -0.039236556738615036,
+              0.38177016377449036,
+              1.2609896659851074
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.05717303530721835,
+            "trianglesExhaustivelyTested": 1163,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.019993020221590996,
+              0.3701607882976532,
+              1.2595763206481934
+            ],
+            "end": [
+              0.022270604968070984,
+              0.19607332348823547,
+              1.4592759609222412
+            ],
+            "length": 0.2649369342346057,
+            "candidateTriangles": 58,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "upperArm.R.head",
+          "endLabel": "chest.tail",
+          "startXYZ": [
+            0.022270604968070984,
+            0.19607332348823547,
+            1.4592759609222412
+          ],
+          "endXYZ": [
+            -0.047894395887851715,
+            3.6159264471535835e-09,
+            1.351333737373352
+          ],
+          "minimumDistanceM": 0.052200800818701695,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.05220070081870169,
+          "closestNativeTriangle": 8561,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.0976095050573349,
+              -0.01058138720691204,
+              1.2614306211471558
+            ],
+            [
+              -0.09667392075061798,
+              0.002016535960137844,
+              1.2349532842636108
+            ],
+            [
+              -0.1010451540350914,
+              0.00038745347410440445,
+              1.3828929662704468
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.053068450762436374,
+            "trianglesExhaustivelyTested": 877,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.022270604968070984,
+              0.19607332348823547,
+              1.4592759609222412
+            ],
+            "end": [
+              -0.047894395887851715,
+              3.6159264471535835e-09,
+              1.351333737373352
+            ],
+            "length": 0.23456214045650847,
+            "candidateTriangles": 40,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        }
+      ],
+      "minimumDistanceM": 0.02364034827506257,
+      "minimumOpenTubeRadiusM": 0.02364024827506257
+    },
+    "cuff.L": {
+      "segments": [
+        {
+          "startLabel": "hand.L.tail",
+          "endLabel": "hand.L.head",
+          "startXYZ": [
+            0.24681106209754944,
+            -0.5219178199768066,
+            1.1114146709442139
+          ],
+          "endXYZ": [
+            0.21542249619960785,
+            -0.5087002515792847,
+            1.127906322479248
+          ],
+          "minimumDistanceM": 0.03500699074219523,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.03500689074219523,
+          "closestNativeTriangle": 350,
+          "closestNativeTriangleXYZ": [
+            [
+              0.2357509434223175,
+              -0.5214398503303528,
+              1.1550992727279663
+            ],
+            [
+              0.2368106096982956,
+              -0.5178542137145996,
+              1.1583094596862793
+            ],
+            [
+              0.24781498312950134,
+              -0.5102604627609253,
+              1.1537071466445923
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.03500699074219523,
+            "trianglesExhaustivelyTested": 48,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.24681106209754944,
+              -0.5219178199768066,
+              1.1114146709442139
+            ],
+            "end": [
+              0.21542249619960785,
+              -0.5087002515792847,
+              1.127906322479248
+            ],
+            "length": 0.0378407287697474,
+            "candidateTriangles": 0,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "hand.L.head",
+          "endLabel": "forearm.L.head",
+          "startXYZ": [
+            0.21542249619960785,
+            -0.5087002515792847,
+            1.127906322479248
+          ],
+          "endXYZ": [
+            0.01999296434223652,
+            -0.3701607882976532,
+            1.2595763206481934
+          ],
+          "minimumDistanceM": 0.03608052674648626,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.03608042674648626,
+          "closestNativeTriangle": 17605,
+          "closestNativeTriangleXYZ": [
+            [
+              0.2184276133775711,
+              -0.527838945388794,
+              1.1692172288894653
+            ],
+            [
+              0.2357509434223175,
+              -0.5214398503303528,
+              1.1550992727279663
+            ],
+            [
+              0.22832666337490082,
+              -0.5284042954444885,
+              1.156021237373352
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.0362629244001911,
+            "trianglesExhaustivelyTested": 1550,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.21542249619960785,
+              -0.5087002515792847,
+              1.127906322479248
+            ],
+            "end": [
+              0.01999296434223652,
+              -0.3701607882976532,
+              1.2595763206481934
+            ],
+            "length": 0.2733548485506776,
+            "candidateTriangles": 447,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "forearm.L.head",
+          "endLabel": "upperArm.L.head",
+          "startXYZ": [
+            0.01999296434223652,
+            -0.3701607882976532,
+            1.2595763206481934
+          ],
+          "endXYZ": [
+            0.022270575165748596,
+            -0.19607332348823547,
+            1.4592759609222412
+          ],
+          "minimumDistanceM": 0.053384622210009995,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.05338452221000999,
+          "closestNativeTriangle": 2310,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.03174133598804474,
+              -0.3702067732810974,
+              1.2343955039978027
+            ],
+            [
+              -0.03480155020952225,
+              -0.36724814772605896,
+              1.2781180143356323
+            ],
+            [
+              -0.03335291147232056,
+              -0.38748791813850403,
+              1.2487776279449463
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.055556039859435816,
+            "trianglesExhaustivelyTested": 1133,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.01999296434223652,
+              -0.3701607882976532,
+              1.2595763206481934
+            ],
+            "end": [
+              0.022270575165748596,
+              -0.19607332348823547,
+              1.4592759609222412
+            ],
+            "length": 0.2649369344587835,
+            "candidateTriangles": 77,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        },
+        {
+          "startLabel": "upperArm.L.head",
+          "endLabel": "chest.tail",
+          "startXYZ": [
+            0.022270575165748596,
+            -0.19607332348823547,
+            1.4592759609222412
+          ],
+          "endXYZ": [
+            -0.047894395887851715,
+            3.6159264471535835e-09,
+            1.351333737373352
+          ],
+          "minimumDistanceM": 0.052200800818701695,
+          "openTubeRadiusAfter1eMinus7MarginM": 0.05220070081870169,
+          "closestNativeTriangle": 8561,
+          "closestNativeTriangleXYZ": [
+            [
+              -0.0976095050573349,
+              -0.01058138720691204,
+              1.2614306211471558
+            ],
+            [
+              -0.09667392075061798,
+              0.002016535960137844,
+              1.2349532842636108
+            ],
+            [
+              -0.1010451540350914,
+              0.00038745347410440445,
+              1.3828929662704468
+            ]
+          ],
+          "allNativeTrianglesBounded": 24359,
+          "distanceDetails": {
+            "vertexUpperBound": 0.053068450762436374,
+            "trianglesExhaustivelyTested": 903,
+            "numericalToleranceClaim": 1e-07,
+            "notFormalIntervalCertificate": true,
+            "method": "Exhaustive segment-edge/endpoint-triangle distance on saved fitted native triangles, conservatively pruned by AABB bounds; primary implementation reused unchanged."
+          },
+          "intersectionAudit": {
+            "start": [
+              0.022270575165748596,
+              -0.19607332348823547,
+              1.4592759609222412
+            ],
+            "end": [
+              -0.047894395887851715,
+              3.6159264471535835e-09,
+              1.351333737373352
+            ],
+            "length": 0.2345621375868804,
+            "candidateTriangles": 29,
+            "coplanarCandidateTriangles": 0,
+            "ambiguousCoplanar": false,
+            "intersections": [],
+            "clearSegmentWitness": true
+          }
+        }
+      ],
+      "minimumDistanceM": 0.03500699074219523,
+      "minimumOpenTubeRadiusM": 0.03500689074219523
+    }
+  },
+  "allFourFiniteCorridorsPositive": true,
+  "bodyPairs": 0,
+  "selfPairs": 0,
+  "limits": [
+    "Finite positive-radius connected corridors around these specified native polylines miss all garment triangles with numerical1e-7m margin. They are not full anatomical wearer capsules, body coverage,physical fabric thickness/ease or formal interval certificates.",
+    "Original donor air support handoff remains separately pinned; its uncalibrated units/topology/extra nested hood walls and unresolved outer-torso section are not promoted into wearer-metre proof.",
+    "No source save/rig/motion/capture/body-head-51bind change/inference/worker/Library/player promotion or playedart/M0-M5/mobile acceptance."
+  ]
+}

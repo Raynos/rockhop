@@ -683,3 +683,11 @@ Finding: Independent23→24extended snapshots exactfor6protected body/head/cheek
 Validation: Two frozen sources loadedreadonly/digests unchanged/fullsnapshot equality pass. Modifier.items unsupportedRNA TypeError caughtbeforeoutput; explicitIDproperty support record andfullrerun pass. Blender/diff/hooks pass.
 
 Limits: Readonlyruntime properties, unlistedcollection-valuedRNA, animationFcurves/NLA/linkedfilecontents excluded; no exhaustiveBlenderstate claim. No source save/body-head-51bind change/capture/rig/motion/inference/worker/promotion. Native24still0restbody/0self; finitewearervolume/coverage/playedart/M0–M5/mobile open.
+
+### Round83 — finite native air corridors connect four wearer openings
+
+Finding: Source24 fitted-native finitepolylines have exhaustive minimumclearances23.640348mm cuffR/35.006991mm cuffL/52.200801mm hem+neck/sharedchest, positiveconnected tube radii after1e-7m numericalmargin. All24359triangles conservativelybounded; no sparseprobe substitution. OriginalAgent2handoff c766db59 preservedwithuncalibratedunits/extra nestedhoodwalls/unresolvedouterbranchlimits, notwearermetres.
+
+Validation: Reuse unchanged committedf29ef741distancecode SHA199bf90f; annularandrotated/translatedanalytic controls within1e-10, caphit/coplananarity rejectclear. Initialearlierreceipt recipepin mismatch refusedbeforenativeload; correctcommittedblob verifiedthenpinned. Source/native24/field immutable0body/0self; Blender/diff/hooks pass.
+
+Limits: Connectedfiniteair corridors only, no fullanatomicalcapsule/coverage/physicalfabric thickness/ease/formalintervalcertificate. No source save/capture/rig/motion/body-head-51bind change/inference/worker/Library/player promotion or art/M0–M5/mobile acceptance; parentsolejudge.
