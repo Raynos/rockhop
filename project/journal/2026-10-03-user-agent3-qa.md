@@ -931,3 +931,32 @@ Limits: Source freeze only; whole-body contacts/shoulder/hip findings next.
 No new posing/export/render capture, asset/source/rig/weight edit, model/
 GPU/inference/worker/install/publication. Parent maintains asks/status and
 judges clips; all M0–M5 remain open.
+
+
+## 2026-10-04 Round53 — retain body and isolate local pose defects
+
+Finding: Full fitting body is one closed Euler2 surface; all13,380vertex
+links are manifold cycles, with no rest self-contact. Retain the base and
+investigate local shoulder/hip/knee deformation before body replacement.
+Both full/four show motion folds: native peak220strict pairs, actual47
+peak414. Finite-contact totals match all529+703samples; strict count at
+actual478 differs Full221/Four223, regional strict counts match throughout.
+Shoulder four-slot loss≤0.357mm; hip essentially zero. Native/body-export
+parity≤0.669µm; extra influence recovery alone cannot resolve these folds.
+
+Validation: Complete529native Full/Four,703existing actual47 Full/Four and
+176separate actual50 body samples; full current-native body/head/cheek
+assembly assessed.32analytic checks and36,632independent JS witness checks
+pass; selected local plane excursions15.105mm shoulder/12.750mm hip are
+crossing witnesses, not volume penetration. Existing133/926frame movies
+play muted/headless with0AudioContexts/errors. Four-page PDF rendered and
+all pages visually inspected; table/footer defects repaired. Exact pins,
+source-bind/body identity and differing capture poses retained in body53/.
+
+Limits: Existing dressed movies hide exposed shoulder/hip folds. Head
+seams/interface and native actual skin folds are separate; oriented head
+export ancestry unproven. No Pro/landing/full86bank/face/device/stranger
+clearance. Actual47 and50 share binds but differ poses; do not synchronize
+film50 with numeric47. No source/body/head/rig/weights edit, new posing/
+export/render capture, model/GPU/inference/install/worker/publication.
+Parent owns asks/index and judges clips; all M0–M5 remain open. Gate54 next.

@@ -1,0 +1,194 @@
+{
+  "status": "UNACCEPTED_COMPLETE_FROZEN_BODY_ASSESSMENT",
+  "creationDate": "2026-10-04",
+  "recommendation": "Retain frozen anatomical body; investigate bounded local shoulder/hip/knee deformation repairs before replacement. No repair, weight/rig modification or asset promotion authorized here.",
+  "why": [
+    "Canonical full-fitting rest surface is one closed Euler2 consistently-wound component with no detected non-adjacent self-contact.",
+    "Finite strict crossings arise in full and four domains. Finite contact totals match at every pose; strict counts differ at one actual tick (Full221/Four223) and regional strict counts match throughout. Four-slot loss at shoulders max0.357mm and essentially zero at hips; fifth-weight recovery alone cannot resolve the defects.",
+    "Current experimental appearance10 body-field ancestry and native-four parity hold; native rest rig Float32 differences are bounded, not causal diagnosis.",
+    "Protected head/rest interface is a distinct analysis domain; interface overlaps and UV/position seams are not full-body topology holes. Native head skin develops actual-pose self-crossings; its oriented export ancestry remains unproven."
+  ],
+  "sourceFreezeSHA256": "04a42d93ac74587613d22305566fce51a55b3333a21e0d6239e37bbaf9729b08",
+  "summaries": {
+    "canonical_rest": {
+      "samples": 1,
+      "samplesWithStrictCrossing": 0,
+      "peakStrictPairs": 0,
+      "firstPeakFrameOrInputTick": 0,
+      "peakRegionStrictPairs": {
+        "shoulder.L": 0,
+        "shoulder.R": 0,
+        "hip.L": 0,
+        "hip.R": 0
+      },
+      "degenerateCandidatesUnclassified": 0
+    },
+    "syntheticFull": {
+      "samples": 529,
+      "samplesWithStrictCrossing": 274,
+      "peakStrictPairs": 220,
+      "firstPeakFrameOrInputTick": 240,
+      "peakRegionStrictPairs": {
+        "shoulder.L": 22,
+        "shoulder.R": 22,
+        "hip.L": 35,
+        "hip.R": 40
+      },
+      "degenerateCandidatesUnclassified": 0
+    },
+    "syntheticFour": {
+      "samples": 529,
+      "samplesWithStrictCrossing": 274,
+      "peakStrictPairs": 220,
+      "firstPeakFrameOrInputTick": 240,
+      "peakRegionStrictPairs": {
+        "shoulder.L": 22,
+        "shoulder.R": 22,
+        "hip.L": 35,
+        "hip.R": 40
+      },
+      "degenerateCandidatesUnclassified": 0
+    },
+    "actual47Full": {
+      "samples": 703,
+      "samplesWithStrictCrossing": 703,
+      "peakStrictPairs": 414,
+      "firstPeakFrameOrInputTick": 669,
+      "peakRegionStrictPairs": {
+        "shoulder.L": 69,
+        "shoulder.R": 69,
+        "hip.L": 49,
+        "hip.R": 53
+      },
+      "degenerateCandidatesUnclassified": 0
+    },
+    "actual47Four": {
+      "samples": 703,
+      "samplesWithStrictCrossing": 703,
+      "peakStrictPairs": 414,
+      "firstPeakFrameOrInputTick": 669,
+      "peakRegionStrictPairs": {
+        "shoulder.L": 69,
+        "shoulder.R": 69,
+        "hip.L": 49,
+        "hip.R": 53
+      },
+      "degenerateCandidatesUnclassified": 0
+    },
+    "actual50Four": {
+      "samples": 176,
+      "samplesWithStrictCrossing": 176,
+      "peakStrictPairs": 414,
+      "firstPeakFrameOrInputTick": 668,
+      "peakRegionStrictPairs": {
+        "shoulder.L": 68,
+        "shoulder.R": 68,
+        "hip.L": 49,
+        "hip.R": 53
+      },
+      "degenerateCandidatesUnclassified": 0
+    }
+  },
+  "nativeFourVsCurrentDiagnosticExportFieldMaxResidualM": 6.685634176157878e-07,
+  "actual47VsActual50SharedBindingButDistinctPoseStreams": {
+    "maximumAbsMatrixDifference": 0.29334089242289446,
+    "samePerTickBodyPose": false,
+    "conclusion": "Separate existing captures; do not pair garment47 numeric frames with presentation50 film."
+  },
+  "evidence": {
+    "bind-and-stream-proof.json": {
+      "bytes": 4675,
+      "sha256": "dbe762af0aead1b4ade7212b6d4c67ded35d49b8287fb654cba0691e6478388e"
+    },
+    "assessment.json": {
+      "bytes": 4163497,
+      "sha256": "f8ad4cf4fe6d7fdc4020ac0d897d0863ce9944d1a316110630048bfdd1a15bbc"
+    },
+    "inspect-local-witnesses.py": {
+      "bytes": 4798,
+      "sha256": "c49da8f3fd873cbe0c03223184d0545b94f517af7abeed493fc66aaaf6e38d85"
+    },
+    "playback.json": {
+      "bytes": 1258,
+      "sha256": "16fee456a6854e20350da5b6fa02dcd04361fc530876d770e66f069a8817a1a5"
+    },
+    "assess-existing-streams.py": {
+      "bytes": 20252,
+      "sha256": "96d26de9c0bd0270a4893e875821d381eeeed9e9c1d897f82c41fc6783b359b9"
+    },
+    "check-witnesses.mjs": {
+      "bytes": 2273,
+      "sha256": "5037e3bdfd0c705abaf1082917efefe3d08693656bfd9b67ef658b6966f2496d"
+    },
+    "topology-link-check.py": {
+      "bytes": 2617,
+      "sha256": "7a23e89aa0e2960cb6ce7ad648f90a08b9f23f9dbfdc393eb815fb4528f34687"
+    },
+    "play-existing-clips.mjs": {
+      "bytes": 3154,
+      "sha256": "a9e29d563e379c9151245b85275f5fee9ba5444e92ff04cbb86a44363fc72ca4"
+    },
+    "witnesses.json.gz": {
+      "bytes": 1099682,
+      "sha256": "89ace9bbeabc9b01f0e2218c7cce2c8f06a3f8cff2085524acdae0295fc06260"
+    },
+    "local-witnesses.json": {
+      "bytes": 11397,
+      "sha256": "3b570768aa49e7bb71a74db43ee8301c6f7cfced4d7844e707295ecce41f2ae0"
+    },
+    "write-assessment-pdf.py": {
+      "bytes": 11746,
+      "sha256": "897813d7d2fc932cbe4e36f421e025166dc47cc697e45550db50e85537b765aa"
+    },
+    "topology-links.json": {
+      "bytes": 36919,
+      "sha256": "878dbe5adffa8867801b3cfc6fd87dca0af005edb630efe6603c5dfd2f515c00"
+    },
+    "bind-and-stream-proof.py": {
+      "bytes": 4232,
+      "sha256": "944ecf12303f229320ab70d3bbaebf49608afdfe74fa1fe9deed94dc65995361"
+    },
+    "witness-check.json": {
+      "bytes": 657,
+      "sha256": "57d914de2bd4c9d9c83c1655091c8c26505f260b229b5506ac888f2880076b17"
+    },
+    "whole-body-assessment.pdf": {
+      "bytes": 1066521,
+      "sha256": "b45138d8fe146abaef3cf0916dbf36544d41dc174519f144496982c905335c79"
+    }
+  },
+  "PDFValidation": {
+    "pages": 4,
+    "allPagesRenderedAndVisuallyInspected": true,
+    "firstLayoutProblemsRepaired": "Table height now measured from wrapped paragraphs; page3 captions have footer clearance.",
+    "textExtractionChecksPass": true,
+    "finalBinaryEncodingAllFourPagesPixelIdenticalToVisuallyReviewedPages": true
+  },
+  "limits": [
+    "Existing films played silently but hide exposed body shoulder/hip folds. Retain/local-repair recommendation is numeric; parent still needs modest continuous exposed-body review.",
+    "Existing garment19 construction has no qualified rig/export handoff. Appearance10 is an existing rejected garment diagnostic, with unchanged body fields; it is not normal player promotion.",
+    "One synthetic forward/reverse stream and one Rookie recording in two distinct render histories. Pro/landing/full86bank/facial/physicaliOS/stranger/unsampled-time clearance absent.",
+    "Head contact counts use current native fields and primary-four effective skinning; full oriented generated-head export ancestry not proven.",
+    "Only Agent3 QA files/journal changed. Shared asks/plan index are parent-owned and require reconciliation; no task-related outbound acknowledgment/report message sent.",
+    "Parent alone judges clips. All M0-M5 open. No new render/rig/export capture, head/body/weights/rig rewrite, install/inference/model/GPU/worker job or publication."
+  ],
+  "fullAndFourPerSampleFiniteContactTotalsIdentical": {
+    "syntheticFullVssyntheticFour": true,
+    "actual47FullVsactual47Four": true
+  },
+  "fullAndFourStrictContactDifferenceWitnesses": {
+    "syntheticFullVssyntheticFour": [],
+    "actual47FullVsactual47Four": [
+      {
+        "frameOrInputTick": 478,
+        "full": 221,
+        "four": 223
+      }
+    ]
+  },
+  "regionalStrictCountsIdentical": {
+    "syntheticFullVssyntheticFour": true,
+    "actual47FullVsactual47Four": true
+  },
+  "canonicalBodyRestVertexLinksAllClosedCycles": 13380
+}
