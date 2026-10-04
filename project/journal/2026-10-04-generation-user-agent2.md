@@ -15,3 +15,11 @@ Finding: Exact original GLB has921722rows,716971UVvertices and460806unique store
 Validation: Guard exit0/1.593seconds; hollow annular tube and solid cylinder both zero boundary, only hollow has axial clear path; capped control2hits/transverse annular4hits/2nested loops pass. Source SHA and both4096embedded texture hashes pinned.
 
 Limits: No removal or repair of degeneracies/speck, no body fit, solid filling, moving art or publication. Original GLB counts supersede derivative counts only for these immutable stored coordinates.
+
+## Round 99 — Bounded section survey checkpoint
+
+Finding: Freeze25axis-aligned original-coordinate sections and4survey segments with original row/UV links. Diagnostic planar plot helps locate region probes; it is not played art evidence.
+
+Validation: Survey JSON serializes and plot recipe compiles. Third-round gate reuses runtime24 only after fresh four-file pins and empty full playerdiff sincec74783ad; ordinary cold boot,4810-frame clear, crash and1–2ms restart pass in that prior unchanged source.
+
+Limits: Measurements pending; no shaded render, body fitting or source mutation. No moving garment/phone/art gate or publication claim.
