@@ -1814,3 +1814,18 @@ Ask:284–286 oneauthorizedcausaldisplaycomparison.
 
 Limits: Analyticproofonly, no currentgarments read or modified, no global
 meshrepair/outside/fit/rig/artpass. Actualderivatives/render follow.
+
+Finding: Controlled TRELLISderived faceorder preserves one contradictory
+6,188,192facepatch unchanged; no defensibleglobal orientation exists under
+allmanifold-adjacency constraints in that patch.
+
+Validation: Guard0/5.038s;39,914safe faceflips, allper-row vertexSETS and
+positions unchanged, rawarchive hashidentical.23,072open/nonmanifold
+patches;81,976boundary/83,107nonmanifoldedges retained. Derivedbadshared
+edges1,467,707 remain in protectedcontradictorypatch; NPZhash rechecked.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/derived-trellis.json
+Ask:284–286 oneauthorizedcausaldisplaycomparison.
+
+Limits: Contradictorypatch covers mostgarment; derivedcondition cannot
+isolatewinding there. Flatcondition stilltestssmooth interpolation; render
+pending. No globalmeshrepair, cleanup, normals acceptance or donor switch.

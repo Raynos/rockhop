@@ -1,0 +1,69 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/check_orientation_controls.py",
+    "--derived-family",
+    "trellis",
+    "--causal-controls-receipt",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-controls.json",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/derived-trellis01/control"
+  ],
+  "controllerPID": 66872,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 600.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 33.7,
+      "wiredGiB": 6.5,
+      "freeGiB": 34.1
+    },
+    {
+      "seconds": 0.031,
+      "anonymousGiB": 33.6,
+      "wiredGiB": 6.5,
+      "freeGiB": 34.1
+    },
+    {
+      "seconds": 1.061,
+      "anonymousGiB": 35.4,
+      "wiredGiB": 5.9,
+      "freeGiB": 32.9
+    },
+    {
+      "seconds": 2.098,
+      "anonymousGiB": 35.4,
+      "wiredGiB": 6.7,
+      "freeGiB": 32.2
+    },
+    {
+      "seconds": 3.132,
+      "anonymousGiB": 35.4,
+      "wiredGiB": 6.7,
+      "freeGiB": 32.2
+    },
+    {
+      "seconds": 4.169,
+      "anonymousGiB": 35.8,
+      "wiredGiB": 6.1,
+      "freeGiB": 32.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 66876,
+  "exitCode": 0,
+  "elapsedSeconds": 5.038
+}

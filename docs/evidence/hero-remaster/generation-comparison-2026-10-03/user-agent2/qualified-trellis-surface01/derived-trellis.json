@@ -1,0 +1,46 @@
+{
+  "accepted": false,
+  "model": "trellis",
+  "nativeSHA256": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+  "nativeVertexCBytesSHA256": "e17b0dcfc6b1e490763d5c3a6e0f4dd48bf70d075af738e55d7ed7b6b6389cfb",
+  "rawFaceCBytesSHA256": "41918ce8d0b2e010057ae10e6095d0d15db2e4fc571426ad5b8b2b76d5098981",
+  "derivedFaceCBytesSHA256": "c46c38e90b98e0cc23ebaa26957319125ee9b0d2ce7c82d1a4b52dbe9d075b51",
+  "outputArchiveSHA256": "d56c517710f073e61d5f7ba65de08e332d800e3b98d9b4da304381fc354e491f",
+  "controlReceiptSHA256": "932f4286e96dca8b93a2992b6c9b5e439b0eecd18117dce0f59b91d1245ad11c",
+  "adapterSHA256": "0855125564109e73e3c1441e840dbd47695871beb50a9fede3a8b7fd9ef74939",
+  "adapter": {
+    "accepted": false,
+    "adapter": "OWNED derived orientation; bounded parity implementation of adjacency/closed-volume basis",
+    "verticesUnchanged": true,
+    "samePerRowTriangleVertexSets": true,
+    "flippedRows": 39914,
+    "faceSetSHA256": "7f2fdf0e2f8cfd379c83d5371e0a30cd525d352d2d5fc27d65a7e3f577466c34",
+    "rawEqualDirectionTwoFaceEdges": 1491124,
+    "derivedEqualDirectionTwoFaceEdges": 1467707,
+    "boundaryEdgesUnchanged": 81976,
+    "nonmanifoldEdgesUnchanged": 83107,
+    "manifoldAdjacencyPatches": 23072,
+    "closedOrientablePatches": 0,
+    "openOrNonmanifoldPatches": 23072,
+    "nonmanifoldIncidentFacesPreserved": 232934,
+    "contradictoryPatchesUnchanged": 1,
+    "contradictoryFacesUnchanged": 6188192,
+    "signAmbiguousClosedPatches": 0,
+    "outwardVolumeChoices": 0,
+    "openSignBasis": "Smallest native face index in each manifold-adjacency patch retains original ordering; no global inside/outside claim",
+    "closedSignBasis": "Positive signed volume only on orientable patches with no boundary/nonmanifold incident edge, absvolume above scale^3*1e-12; self-intersection not certified",
+    "nonmanifoldPolicy": "No constraints cross >2-face edges; all faces/edges preserved; incident patches use native sign anchor and are explicitly non-global",
+    "contradictionPolicy": "Every face in a contradictory manifold-adjacency patch retains original ordering",
+    "limits": [
+      "No topology repair, cleanup, reduction, component deletion, recolor or vertex movement.",
+      "Open/nonmanifold/sign-ambiguous patches have no proven outward orientation.",
+      "Not whole-mesh intersection, fit, rig, CUDA or game-ready acceptance."
+    ]
+  },
+  "modelInferenceExtractionRenderCalls": 0,
+  "rawArchiveStillIdentical": true,
+  "limits": [
+    "DERIVED display face order only; raw vertex positions and each original per-row face vertex SET retained.",
+    "Native sampled materials unchanged; no normals bake, topology repair or model selection."
+  ]
+}
