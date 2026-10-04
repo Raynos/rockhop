@@ -1,0 +1,128 @@
+{
+  "status": "READ_ONLY_CURRENT_EXPORT_BODY_FIELDS_VERIFIED",
+  "GLBSHA256": "8e4c5cff0e35b00a7ebc1686e8494fde9ef6388e012c8eebda31a508b3bc343c",
+  "nativeSourceSHA256": "b545229e52c4fc5bcb97b4fbc81ccc3a0e5a2f9c87fe3c7338691317d965e449",
+  "recipeSHA256": "5f2a5f6552a0a4c97b8155a71477173f4378505d57d6799d481f20d44bfc4791",
+  "jointOrder": [
+    "pelvis",
+    "spine",
+    "chest",
+    "neck",
+    "head",
+    "shoulder.L",
+    "upperArm.L",
+    "forearm.L",
+    "hand.L",
+    "index_01.L",
+    "index_02.L",
+    "index_03.L",
+    "middle_01.L",
+    "middle_02.L",
+    "middle_03.L",
+    "pinky_01.L",
+    "pinky_02.L",
+    "pinky_03.L",
+    "ring_01.L",
+    "ring_02.L",
+    "ring_03.L",
+    "thumb_01.L",
+    "thumb_02.L",
+    "thumb_03.L",
+    "shoulder.R",
+    "upperArm.R",
+    "forearm.R",
+    "hand.R",
+    "index_01.R",
+    "index_02.R",
+    "index_03.R",
+    "middle_01.R",
+    "middle_02.R",
+    "middle_03.R",
+    "pinky_01.R",
+    "pinky_02.R",
+    "pinky_03.R",
+    "ring_01.R",
+    "ring_02.R",
+    "ring_03.R",
+    "thumb_01.R",
+    "thumb_02.R",
+    "thumb_03.R",
+    "thigh.L",
+    "shin.L",
+    "foot.L",
+    "ball.L",
+    "thigh.R",
+    "shin.R",
+    "foot.R",
+    "ball.R"
+  ],
+  "nativeBindWorldMaxAbsResidual": 1.8275868124417727e-06,
+  "nativeBindWorldMaxTranslationResidualM": 8.053844874885059e-07,
+  "bodyHasSecondaryInfluenceSet": false,
+  "parts": {
+    "renderedBody": {
+      "nodeName": "Canonical body with hidden head interface",
+      "exportRows": 9981,
+      "uniqueNativeIDs": 9037,
+      "nativeVertices": 9037,
+      "triangles": 18016,
+      "nativeRestWorldMaxResidualM": 5.960464477539063e-08,
+      "nativeMembershipMaxAbsResidual": 1.3816112476305875e-08,
+      "rawWeightSumMaxResidual": 1.1525116860866547e-07,
+      "loaderNormalizationMaxAbsChange": 9.99673352986008e-08,
+      "morphTargets": 0,
+      "nativeOrientedTriangleAncestryExact": true
+    },
+    "protectedHead": {
+      "nodeName": "Protected textured head above hidden neck interface",
+      "exportRows": 43712,
+      "uniqueNativeIDs": 36141,
+      "nativeVertices": 43707,
+      "triangles": 71826,
+      "nativeRestWorldMaxResidualM": 2.9802322387695312e-08,
+      "nativeMembershipMaxAbsResidual": 0.0,
+      "rawWeightSumMaxResidual": 2.9802322387695312e-08,
+      "loaderNormalizationMaxAbsChange": 2.9651938682206946e-08,
+      "morphTargets": 0,
+      "nativeOrientedTriangleAncestryExact": null,
+      "nearestNativePointAmbiguousRows": 14102
+    },
+    "cheek": {
+      "nodeName": "Protected coherent cheek patch",
+      "exportRows": 294,
+      "uniqueNativeIDs": 294,
+      "nativeVertices": 294,
+      "triangles": 429,
+      "nativeRestWorldMaxResidualM": 2.2351741790771484e-08,
+      "nativeMembershipMaxAbsResidual": 0.0,
+      "rawWeightSumMaxResidual": 0.0,
+      "loaderNormalizationMaxAbsChange": 0.0,
+      "morphTargets": 0,
+      "nativeOrientedTriangleAncestryExact": null,
+      "nearestNativePointAmbiguousRows": 0
+    }
+  },
+  "rootConditioningExtras": [
+    {
+      "name": "Foundation file frame, game x0.65",
+      "extras": {
+        "rockhopRiderSkinConditioned": 1,
+        "rockhopAppearanceCandidate": "unaccepted appearance10 anatomical dorsal boot profile"
+      }
+    }
+  ],
+  "limits": [
+    "Current existing appearance10 export is decoded only; no GLB/skin/geometry/rig/material rewrite or new capture.",
+    "Protected-head co-located native points can make nearest-point ancestry ambiguous; quantification is separate from fidelity acceptance.",
+    "Raw/loader four-slot normalization and current rendering policy are separated from full-native five-influence loss."
+  ],
+  "GLTFLoaderSHA256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+  "skinFrameDefinition": "Existing GLB positions are baked file-world XYZ. GLTFLoader binds at identity; attached-mode meshWorld cancels mesh bindMatrixInverse. Skin world=jointWorld*inverseBind*rawPosition, not mesh node world multiplied a second time.",
+  "conditioningMetadata": [
+    {
+      "path": "/nodes/59/extras/rockhopRiderSkinConditioned",
+      "value": 1
+    }
+  ],
+  "exportFieldsSHA256": "90a0dfe8901da94f2e02d6acaf10d2dffc05f13aba094b83b37c0c2cc07825b1"
+}

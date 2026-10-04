@@ -908,3 +908,26 @@ Limits: Bot gate only, no stranger/physical iOS/candidate art, seating,
 body/face, LOD/performance or deployment acceptance. Source14 failed
 control and current four-slot handoff remain Agent1-owned; root judges.
 No publication attempt by Agent3. Next required own gate54.
+
+
+## 2026-10-04 Round52 — complete body fields match existing pose streams
+
+Finding: Frozen native19 preserves full13,380vertex fitting body and
+9,037vertex rendered body with hidden head interface. Rendered rest and
+weights are exact native-four subset; old529native full/four streams
+retain identical current positions/polygon cycles and compatible fields.
+Existing703actual riding matrix stream is separately pinned, not replayed.
+
+Validation: Read-only native extraction, all51 joint identities/rest
+translation residual0.806µm, current appearance10 body9,981exportrows
+map all9,037native vertices and18,016oriented triangles exactly. Baked
+rest residual≤59.7nm; normalized-weight residual≤1.382e−8. Root flag
+skips runtime smoothing, primary four retained. Full native has264five
+influence vertices. Protected head nearest ancestry14,102tied rows remains
+ambiguous; no oriented full-head ancestry claim. Python syntax and blob
+pins pass. Evidence: body52/source.json and inventories.
+
+Limits: Source freeze only; whole-body contacts/shoulder/hip findings next.
+No new posing/export/render capture, asset/source/rig/weight edit, model/
+GPU/inference/worker/install/publication. Parent maintains asks/status and
+judges clips; all M0–M5 remain open.
