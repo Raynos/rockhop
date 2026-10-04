@@ -707,3 +707,11 @@ Finding: Oneauthorized root/Bridge appearanceprerequisite: originaluniform donor
 Validation: Renderinput/native/recipes exactpins/allPNGhashes/camera matrices/sequence retained. Fullffmpegdecode0errors/640frames; mutedheadlessChromium151ended26.666667s/637callbacks/638presented/2droppedplaybackframes/page+mediaerrors0. OwnMJS nodecheck/targetedoxlint pass afterDOMreferences qualified. Initialadhoctmpmanifest fstring syntaxerror producednooutput; durablearray-subprocess encoder passes. Source24/selecteddonor/native originals unchanged. Diff/hooks pass.
 
 Limits: Parentsoleplayedjudge, notgarmentmotion/appearanceapproval. Centreexact61registrationnotlatest18/unitsnestedwalllimits explicit. Native24rest0body/0self/finiteair/protecteddata do not close24historical coverage misses orrig/M0–M5/mobile. LocalMP4/PNG masters notstaged, onlyrecipes/pins/metadata; noLibraryupload/newbody/inference/publication/promotion.
+
+### Round86 — locate coverage misses without excusing any
+
+Finding: All24historicalnormalray misses also missclothwithin2m. Sixunderarm rays reenterbody (stations.192..214/freeedge182..193mm);15forearm misses stations.943..992/freeedge12..36mm, twoalso reenterbody. Threechest misses abovechesttail1.709..1.725/freeedge35.5..35.8mm. Anatomicalcontext only, no intentional-exposure acceptance.
+
+Validation: All24exactbodycoordinates/normals match84/same20cmtestsstillmiss/native24+coveragepins unchanged. Every2mray/bodyreentry/nearestfree segment/station archived; Blender/diff/hooks pass. No native/model/media save.
+
+Limits: Maskunchanged/24missesopen; reentry/portproximity cannot excusecoverageorprovewholebodycontainment. Parentplayed85pendingbeforebroadrig; no newcapture/fit/body-head-51bind change/inference/worker/Library/player promotion or art/M0–M5/mobile acceptance.
