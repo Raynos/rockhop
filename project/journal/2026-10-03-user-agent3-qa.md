@@ -1186,3 +1186,26 @@ contacts not waived; source26 failed, all M0–M5 open. Parent owns ask275/index
 and judgment. No source edit, inference/GPU/installation, outbound ack,
 Library/user delivery, upload, promotion or publication. Ordinary gate63
 next in separate commit.
+
+
+## 2026-10-04 Round63 — preserve normal replay after rest handoff QA
+
+Finding: Required third-round normal-source gate passes after neck61freeze
+and neck62read-only audit. Candidate outside auxiliary-group preservation
+gap remains open; no candidate admission or promotion follows this gate.
+All twenty normal models and disabled review-adapter configuration persist.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick clears
+match40.083333333333336s/hash368f1ca5bd9e830a/bytesabaaaaaaaa0a4440, zero faults
+and errors. Both crash103ticks and restart tick zero in2/3ms. Eight normal
+source pins and twenty model hashes equal gate60 before/after. All15handoff
+inputs, previous PDF53/body56/body59 and stable neck62evidence remain exact.
+Normal build passes with existing chunk-size warning; actual receipts in
+gate63/. Only owned paths committed; foreign shared staging preserved.
+
+Limits: Ordinary bot regression only, no candidate dynamic/collision/visual,
+stranger/physical iOS or deployment pass. Parent owns ask275/index and
+correction/admission, Agent1 owns motion and played proof. Original490contacts
+remain separate, source26 failed, all M0–M5 open. No outbound acknowledgment,
+Library/user delivery, upload, push, promotion or publication. Temporary
+build remains excluded; no recursive cleanup attempted.
