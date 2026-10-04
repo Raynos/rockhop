@@ -960,3 +960,23 @@ clearance. Actual47 and50 share binds but differ poses; do not synchronize
 film50 with numeric47. No source/body/head/rig/weights edit, new posing/
 export/render capture, model/GPU/inference/install/worker/publication.
 Parent owns asks/index and judges clips; all M0–M5 remain open. Gate54 next.
+
+
+## 2026-10-04 Round54 — normal game gate after whole-body QA
+
+Finding: Required third-round gate passes after source-freeze52 and body
+assessment53. Fresh normal20model build disables all candidate mappings
+and private review adapters; no body/head/garment promotion occurs.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick clears
+match40.083333333333336s/hash368f1ca5bd9e830a/finish bytesabaaaaaaaa0a4440,
+with0faults/errors. Both crash103ticks and restart at tick0 in2ms. Source,
+lock and all20model hashes equal gate51 before/after; exact receipt in
+gate54/source.json and normal-gate.json. Committed PDF53 preserved; normal
+player assets unchanged. Only owned evidence/journal paths staged.
+
+Limits: Bot/source gate only, no stranger/physical iOS/candidate body/head/
+art/contact/LOD/performance or deployment acceptance. Parent maintains
+asks/index and judges clips; all M0–M5 open. No push or publication. Temp
+build/PDF directories stay untracked after cleanup hook rejected recursive
+deletion; no deletion retried. Next own ordinary gate57 if further admitted.
