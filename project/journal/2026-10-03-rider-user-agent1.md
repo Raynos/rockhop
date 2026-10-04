@@ -800,3 +800,9 @@ Validation: Ship96 normal-source PASS:1548.437ms cold,4810identical ticks,40.083
 Finding: One ordered outer238-knot join and separate190triangle inward cap preserve head positions;56body boundary positions conform locally. Automatic split-ngon tessellation creates6four-incidence internal chords: REST FAIL, frozen unaccepted.
 Validation: Reopen34originals/17packed images/original51bind-pose exact; outside positions/weights/corner attributes and unsplit polygons exact. Perimeter238edges and inner383edges have2opposed incidences; none of684body/2433head local triangles has area≤1e-14m². Three prewrite implementation guard failures and first failing topology recipe retained.
 Limits: Rest collisions, all529native/703actual47, full/four loss and one matched played proof pending. Source26 garment unchanged/failed;490contacts not waived. Deterministic same-field local polygon triangulation correction remains within admitted scope; no new shape/weight sweep. All M0–M5 open; Ask274.
+
+## 2026-10-04 Round98 — fix same-field internal seam triangulation
+
+Finding: 42body/51head split polygons use existing non-seam fans, three original seam-only head polygons retained. No positions/weights/knots/vertices/bind changes; failed97checkpoint immutable.
+Validation: Reopen38original+failed controls/17packed images/51frames exact, outside corners/fields/cycles exact;238outer/383inner opposed2-incidence edges,0nonmanifold chords;502body/2433head local triangles have positive area>1e-14m². Correction:97journal's684body count was transcription;97numeric JSON correctly records502. Syntax/whitespace pass.
+Limits: Local rest topology only; contacts/quality/all529native703actual47/full-four loss/played proof pending. Source26 garment untouched/failed and490contacts not waived; all M0–M5 open. Ask274.
