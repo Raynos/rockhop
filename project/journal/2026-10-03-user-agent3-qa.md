@@ -1415,3 +1415,28 @@ owns ask275/index/nextscope-operator, Agent1 sole source owner. Original99/
 Validation: Private-index staging first refused ignored .log extension;
 renamed owned native read output to .txt and updated receipt only. No hook
 or commit bypass, source edit or foreign-index change.
+
+
+## 2026-10-04 Round72 — normal replay after failed geometry independent QA
+
+Finding: Required third-round normal-source gate passes after freeze70 and
+independent failed29QA71. Candidate stays rest-contact failed; rawfield
+preservation/operator reproduction does not admit source expansion or
+decoded-normal/art acceptance. Twenty normal player models stay exact.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick clears
+match40.083333333333336s/hash368f1ca5bd9e830a/bytesabaaaaaaaa0a4440,zero faults
+or errors. Crash103ticks; tick-zero restarts2/2ms. Eight normal-source pins
+and twenty model hashes exact gate69before/after; mappings/adapters off.
+All30failedQA inputs,previous14auxiliary/21source inputs,originalPDF53 and
+42body56/8body59/10neck62/4neck65/5neck68/13neck71 evidence hashes exact.
+Build passes with existing chunk-size warning. Receipts gate72/.
+
+Limits: Ordinary regression only, not failed geometry29contacts, decoded
+normal preservation, moving art/engine/phone/stranger/player acceptance.
+1112self/307body-head and1365pinnedheadnormal differences stay recorded.
+Rootneck27REJECT/original99identity/contact/compression/490contacts and all
+M0–M5 remain open. Parent owns ask275/index/nextsource-operator decision;
+Agent1 sole construction owner. No source edit/pose/candidate render/
+capture/worker/Librarydelivery/upload/push/promotion. Temporary normal
+build excluded; no recursive cleanup.
