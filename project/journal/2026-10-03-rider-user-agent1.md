@@ -885,3 +885,20 @@ JSON/AST checks pass; no native rewrite/refit. See
 [source106](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/FINDING.md), ask274.
 Limits: No physical/moving loss/played qualification, export or capture.
 Missing influence coverage is not waived. Neck103/allacceptance gates open.
+
+## Round107 — freeze failed finite grip and moving hand evidence
+
+Finding: ONE candidate firstnative seed has63/19 glove vertices inside
+grips,14.359/9.992mm depth and87/85 proper crossings. Five distal fields
+still empty; riding wrist-axis proxy max108.312deg at landing4563.
+Validation: 1065 native full/FOUR losses max.245992mm(v2436/landing4553);
+observed actualbike.frame and actual finite triangle/barycentric surface
+witnesses pinned. Read-only normalized decoder recheck reproduces all
+positions/matrices/loss/wrist/firstseed arrays exactly; source/recipe/JSON
+hashes pass. Terminal summary key error after complete writes retained;
+read-only receipt verification passes. See
+[107 failure](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip107/FINDING.md), ask274.
+Limits: Native-normalized-LBS discrepancy.212347mm unresolved. No actual
+candidate engine consumption/byte replay/complete enclosure/movingcontact
+or CCD pass. Capture prerequisiteFAIL; no retune/newcandidate/scopeexpand.
+Source106/neck103 frozen/allM0–M5 open; root sole judge/decision pending.

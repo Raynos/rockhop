@@ -1,0 +1,80 @@
+{
+  "status": "ARCHIVES_COMPLETE_REPRODUCED_NATIVE_CONTACT_AND_COVERAGE_FAIL_PARITY_UNQUALIFIED",
+  "recipeSHA256": "d07f0c7c0734858f46ec4ad25777ff408ecbbc7571f8fc372e1a71bdb80c0dfa",
+  "measurementsSHA256": "3eeaeb84a4414cf8dcec5ad2417fa6c23bd70e1bc52c94c21f0fb3f02edbb947",
+  "allArchivesAndExecutedRecipeAndInputPinsValidated": true,
+  "recheckArrayExactToFirstRead": {
+    "nativeCandidateBoneFileWorld": true,
+    "observedControlBikeFrameWorld": true,
+    "caseIDs": true,
+    "inputTicks": true,
+    "phases": true,
+    "firstFullGloveBikeFrameXYZ": true,
+    "firstFourGloveBikeFrameXYZ": true,
+    "firstControlGloveBikeFrameXYZ": true,
+    "firstBodyHandBikeFrameXYZ": true,
+    "bodyHandNativeIDs": true
+  },
+  "1065NativeLossAndWristObservationsReproducedExactly": true,
+  "firstContactAndSourceCorrespondencesReproduced": true,
+  "wristAxisByPhase": {
+    "riding": {
+      "samples": 1005,
+      "bySide": {
+        "L": {
+          "minDeg": 9.533967923726246,
+          "maxDeg": 108.31159097695016,
+          "maxWitness": {
+            "case": "rookie-front-landing-recovery",
+            "inputTick": 4563,
+            "phase": "riding"
+          }
+        },
+        "R": {
+          "minDeg": 9.534027156058483,
+          "maxDeg": 108.3115611422619,
+          "maxWitness": {
+            "case": "rookie-front-landing-recovery",
+            "inputTick": 4563,
+            "phase": "riding"
+          }
+        }
+      }
+    },
+    "crashed": {
+      "samples": 60,
+      "bySide": {
+        "L": {
+          "minDeg": 23.058151376829752,
+          "maxDeg": 26.332836962711724,
+          "maxWitness": {
+            "case": "rookie-crash-instant-restart",
+            "inputTick": 364,
+            "phase": "crashed"
+          }
+        },
+        "R": {
+          "minDeg": 23.05829345911336,
+          "maxDeg": 26.332969990971904,
+          "maxWitness": {
+            "case": "rookie-crash-instant-restart",
+            "inputTick": 364,
+            "phase": "crashed"
+          }
+        }
+      }
+    }
+  },
+  "normalizedLinearNativeParityMaximumM": 0.00021234679046531834,
+  "normalizedLinearNativeParityQualified": false,
+  "parityLimit": "0.212346790mm moving native-v-normalized LBS discrepancy remains despite unhidden read-only evaluated rig recheck; no byte-identical replay/engine palette certificate. First-seed normalized LBS discrepancy independently measured<=0.300189um. Do not promote this source mapping.",
+  "terminalSummaryRecovery": "Recheck completed both JSON/NPZ writes and all immutable-pin assertions. Its final stdout summary referenced the renamed parity key and failed afterward. This verifier confirms complete records without reauthoring or rerunning motion. Terminal log preserved.",
+  "acceptance": {
+    "distalCoverage": false,
+    "firstPhysicalSeedContact": false,
+    "movingContactEnclosureCCD": false,
+    "candidateEngineConsumption": false,
+    "playedProofAuthorizedByGate": false,
+    "allM0M5Open": true
+  }
+}
