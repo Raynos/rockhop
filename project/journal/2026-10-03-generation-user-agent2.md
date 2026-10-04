@@ -1756,3 +1756,18 @@ Ask:284–286.
 
 Limits: Fixture/source verification, not a freshseed/parity/artpass.
 Root alone judges frozenplayedcandidate; no garmentorplayerpromotion.
+
+Finding: Root Pixal playedreview reports same bands in neutral/PBR hood,
+back andupper sleeve; usefulshape/golden-brownmaterial retained as candidate.
+Existingbyte-only diagnostic extended to compare both frozen rawmeshes.
+
+Validation: Source syntax passes; packed directed-edge count covers both
+rawoutputs, fixedFDG neighbor/diagonaltables compared. Prior analytic
+orientation defect precedes learnedinference in both paths. Both renders
+use averagednormals andsameCyclesCPU8sample light setup; no normalmaps.
+Runtime24 playerpins/playerdiff0 retain round81shipgateidentity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/pixal-root-observation.json
+Ask:284–286 existingbanddiagnosis follow-up.
+
+Limits: Unacceptedbyte-control extension pending; exactbands causeunresolved.
+No newinference/renderlane/cleanup/recolor; Hunyuanselectedsource unchanged.

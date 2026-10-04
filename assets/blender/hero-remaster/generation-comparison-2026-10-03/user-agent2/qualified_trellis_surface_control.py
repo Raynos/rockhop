@@ -1,5 +1,6 @@
 """One raw-byte surface/normal/overlap control; no render or model inference."""
 import argparse
+import ast
 import hashlib
 import json
 import os
@@ -17,11 +18,78 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def compare_existing(trellis_path,pixal_path,out):
+    """Extend existing diagnostic: two frozen archives, no extraction/render."""
+    started=time.monotonic();out=Path(out);out.mkdir(exist_ok=False,parents=True)
+    expected={'trellis':'c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469',
+              'pixal':'fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982'}
+    result={'accepted':False,'recipeSHA256':sha(__file__),'inferenceExtractionRenderCalls':0,'models':{},
+            'purpose':'Extend existing contour-band diagnosis to shared raw topology and source behavior'}
+    for family,path in [('trellis',trellis_path),('pixal',pixal_path)]:
+        assert sha(path)==expected[family]
+        with np.load(path,allow_pickle=False) as raw:
+            v,f=raw['vertices'].copy(),raw['faces'].copy()
+        assert np.isfinite(v).all() and f.min()>=0 and f.max()<len(v)
+        # Packed key retains both undirected edge and directed traversal bit.
+        # Avoid huge structured-array/Python edge tables; no mesh modifications.
+        keys=np.empty(len(f)*3,np.uint64);degenerate=0
+        for start in range(0,len(f),262144):
+            end=min(start+262144,len(f));part=f[start:end]
+            points=v[part].astype(np.float64)
+            cross=np.cross(points[:,1]-points[:,0],points[:,2]-points[:,0])
+            degenerate+=int((np.sum(cross*cross,axis=-1)==0).sum())
+            for edge,(left,right) in enumerate(((0,1),(1,2),(2,0))):
+                aa,bb=part[:,left],part[:,right]
+                key=np.minimum(aa,bb).astype(np.uint64)*len(v)+np.maximum(aa,bb).astype(np.uint64)
+                keys[edge*len(f)+start:edge*len(f)+end]=key*2+(aa<bb)
+        keys.sort();undirected=keys>>1
+        starts=np.r_[0,np.flatnonzero(undirected[1:]!=undirected[:-1])+1]
+        counts=np.diff(np.r_[starts,len(keys)]);two=starts[counts==2]
+        # Equal packed directed keys on a two-face edge prove same traversal.
+        same=int((keys[two]==keys[two+1]).sum())
+        row={'nativeSHA256':sha(path),'vertices':len(v),'faces':len(f),
+             'zeroAreaTriangles':degenerate,'uniqueEdges':len(starts),
+             'boundaryEdges':int((counts==1).sum()),'overusedEdges':int((counts>2).sum()),
+             'twoFaceEdges':len(two),'equalDirectionTwoFaceEdges':same,
+             'equalDirectionFractionOfTwoFaceEdges':same/len(two),
+             'arraysChanged':False}
+        assert row['nativeSHA256']==expected[family];result['models'][family]=row
+        del v,f,keys,undirected,starts,counts,two,points,cross
+    sources={'trellisExtractor':'/Users/raynos/ml/img2mesh/trellis-mac/stubs/o_voxel_override_convert.py',
+             'pixalExtractor':'/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/utils/mesh_extract.py',
+             'trellisDispatch':'/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/models/sc_vaes/fdg_vae.py',
+             'pixalDispatch':'/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/sc_vaes/fdg_vae.py'}
+    result['sourcePins']={name:{'path':path,'SHA256':sha(path)} for name,path in sources.items()}
+    tables={}
+    for family in ('trellis','pixal'):
+        tree=ast.parse(Path(sources[family+'Extractor']).read_text());found={}
+        for node in ast.walk(tree):
+            if not isinstance(node,ast.Assign) or not isinstance(node.targets[0],ast.Name):continue
+            name=node.targets[0].id.lower();value=node.value
+            if not any(name.endswith(x) for x in ('edge_neighbor_voxel_offset','quad_split_1','quad_split_2')):continue
+            if isinstance(value,ast.Call) and isinstance(value.func,ast.Attribute) and value.func.attr=='unsqueeze':value=value.func.value
+            if isinstance(value,ast.Call) and isinstance(value.func,ast.Attribute) and value.func.attr=='tensor':
+                found[name.lstrip('_')]=ast.literal_eval(value.args[0])
+        assert len(found)==3;tables[family]=found
+    assert tables['trellis']==tables['pixal']
+    result['sharedTables']=tables['trellis'];result['neighborAndDiagonalTablesIdentical']=True
+    result['limits']=['No inference, extraction replay, render/capture loop, cleanup or recolor.',
+        'Whole-mesh edge winding counts do not locate the exact bands on hood/back/sleeve.',
+        'Boundary edges may be intended garment openings; counts alone do not classify them.',
+        'Topology orientation defects can affect averaged normals, but exact film-band causality is unresolved.',
+        'No self-intersection certification, CUDA parity, model selection or game-ready acceptance.']
+    result['elapsedSeconds']=time.monotonic()-started
+    (out/'comparison.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--native',required=True);parser.add_argument('--out',required=True)
+    parser.add_argument('--pixal-native')
     args=parser.parse_args(sys.argv[sys.argv.index('--')+1:])
     assert os.environ.get('ROCKHOP_GENERATION_CONTROLLER_PID')
+    if args.pixal_native:
+        compare_existing(args.native,args.pixal_native,args.out);return
     expected='c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469'
     assert sha(args.native)==expected
     start=time.monotonic();out=Path(args.out);out.mkdir(exist_ok=False,parents=True)
