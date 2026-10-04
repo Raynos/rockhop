@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "annularTubeZeroBoundaryEdges": true,
+  "solidCylinderZeroBoundaryEdges": true,
+  "hollowTubeAxialClear": true,
+  "solidCylinderAxialHits": 2,
+  "annularSectionClosedNestedLoops": 2,
+  "transverseWallCrossings": 4,
+  "addedCapAxialHits": 2,
+  "hollowClearance": {
+    "minimumDistanceNativeUnits": 0.6966293086705376,
+    "closestOriginalTriangleRow": 85,
+    "vertexUpperBound": 0.6999999999999998,
+    "trianglesExhaustivelyTested": 192,
+    "allOriginalTrianglesBounded": 256,
+    "numericalToleranceClaim": 1e-07,
+    "estimatedOpenTubeRadiusAfterTolerance": 0.6966292086705377,
+    "notFormalIntervalCertificate": true,
+    "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+  },
+  "hollowExpectedClearance": 0.6966293086705379,
+  "rotatedTranslatedTubeClearance": {
+    "minimumDistanceNativeUnits": 0.6966293086705376,
+    "closestOriginalTriangleRow": 69,
+    "vertexUpperBound": 0.6999999999999998,
+    "trianglesExhaustivelyTested": 224,
+    "allOriginalTrianglesBounded": 256,
+    "numericalToleranceClaim": 1e-07,
+    "estimatedOpenTubeRadiusAfterTolerance": 0.6966292086705377,
+    "notFormalIntervalCertificate": true,
+    "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+  },
+  "methodLimits": "Sampled noncoplanar segment proof only; loop nesting by itself does not classify material occupancy."
+}

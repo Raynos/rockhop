@@ -55,3 +55,11 @@ Finding: Freeze finer1e-10section endpoint quantization to distinguish earlier q
 Validation: Two Python recipes compile;9sections/20paths serialize. Added rotated/translated tube distance control before run; glTF official top-left UV, default repeat, sRGB base and linear green-roughness/blue-metallic checked.
 
 Limits: Numerical checkpoint only; no source mutation, material filling, body/head/51-bind edit, inference, fitting construction, new worker, GPU or publication. Global self-intersection, physical scale and moving art remain unproven.
+
+## Round 104 — Continuous lumen and nested source-region evidence
+
+Finding: Both original cuff entries connect via clear finite-distance sleeve→shoulder→torso polylines; hem→above and high hood-front→torso also clear. Hood/neck contains additional nested wall regions; y0.68backward ray spans0.119488inner paired faces then0.015456surface-free gap and0.012285outer pair, not a single cloth-thickness proxy.
+
+Validation: Nested guard0/3.829s, correspondence guard0/7.247s; rotated/translated tube control passes.24,838original-row midpoint/barycentric/UV/PBR records have maxpositionresidual4.47e-16 and0barycentric violation. Nested contour checks0crossings/tangencies for reported closed loops; source hashes unchanged.
+
+Limits: One y0.05non-degree-two component unresolved; excluded rather than repaired. Numerical path distances/native uncalibrated units do not prove physical cloth, global topology, wearable fit, rig, collision or art. No source/body/head/51-bind/player/peer edit or publication.

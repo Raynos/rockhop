@@ -1,0 +1,119 @@
+{
+  "source": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+  "sourceSHA256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+  "sourceBytes": 42329320,
+  "nodes": [
+    {
+      "name": "painted.obj",
+      "mesh": 0
+    }
+  ],
+  "material": {
+    "pbrMetallicRoughness": {
+      "baseColorTexture": {
+        "index": 0
+      },
+      "roughnessFactor": 1.0,
+      "metallicFactor": 1.0,
+      "metallicRoughnessTexture": {
+        "index": 1
+      }
+    },
+    "alphaMode": "OPAQUE",
+    "doubleSided": false
+  },
+  "maps": {
+    "baseColorTexture": {
+      "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+      "bytes": 10002352,
+      "mimeType": "image/png",
+      "size": [
+        4096,
+        4096
+      ],
+      "texture": {
+        "source": 0
+      },
+      "sampler": "glTF defaults"
+    },
+    "metallicRoughnessTexture": {
+      "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae",
+      "bytes": 6925436,
+      "mimeType": "image/png",
+      "size": [
+        4096,
+        4096
+      ],
+      "texture": {
+        "source": 1
+      },
+      "sampler": "glTF defaults"
+    }
+  },
+  "sectionsSHA256": "bcfb3d7a0f3fbb32a26da6340fabff61f3b706844ee17fbbaebd6183641f8edd",
+  "recipeSHA256": "8695a36dae8fedce24e56214844ac12797cb2c50dee56aa5420bf09dd67b3ade",
+  "table": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/correspondence/source-region-correspondence.npz",
+  "tableSHA256": "766a655eab843c4dfd67764ebd79638ba25534b861f8b48386b9cd7e08e884d1",
+  "rows": 24838,
+  "columns": {
+    "section": [
+      24838
+    ],
+    "loop": [
+      24838
+    ],
+    "originalTriangleRow": [
+      24838
+    ],
+    "positionNative": [
+      24838,
+      3
+    ],
+    "barycentric": [
+      24838,
+      3
+    ],
+    "uv": [
+      24838,
+      2
+    ],
+    "positionResidual": [
+      24838
+    ],
+    "baseColorRGB8": [
+      24838,
+      3
+    ],
+    "metallicRoughnessRGB8": [
+      24838,
+      3
+    ]
+  },
+  "maximumPositionResidual": 4.46899245057492e-16,
+  "maximumBarycentricViolation": 0.0,
+  "sectionIDs": {
+    "0": "hem-inside",
+    "1": "torso-middle",
+    "2": "neck-base",
+    "3": "hood-middle",
+    "4": "negative-cuff-inner",
+    "5": "positive-cuff-inner",
+    "6": "survey-branch-y05",
+    "7": "survey-branch-y55",
+    "8": "survey-branch-z10"
+  },
+  "textureConvention": {
+    "origin": "top-left, repeat wrapping; nearest RGB8 diagnostics",
+    "roughness": "green /255, factor1",
+    "metallic": "blue /255, factor1",
+    "baseColor": "sRGB-encoded RGB8, not shaded color",
+    "officialSource": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#materials"
+  },
+  "accepted": false,
+  "limits": [
+    "Closed loops with strict nesting and separation are geometric evidence, not a universal solid/material occupancy rule.",
+    "Native model units are uncalibrated despite glTF metric convention; no fit/body transform.",
+    "No source mesh/UV/material mutation; table is original-row evidence only, not reconstructed/fitted geometry.",
+    "Tangency check is conservative float64 with explicit tolerance; no global 3D self-intersection proof."
+  ]
+}

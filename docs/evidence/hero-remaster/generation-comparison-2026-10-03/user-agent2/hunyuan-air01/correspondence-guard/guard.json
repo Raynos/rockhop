@@ -1,0 +1,80 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/audit_hunyuan_nested.py",
+    "--source",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "--sections",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/nested/sections.json",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/correspondence"
+  ],
+  "controllerPID": 51473,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 600.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 23.5,
+      "wiredGiB": 6.2,
+      "freeGiB": 29.3
+    },
+    {
+      "seconds": 0.026,
+      "anonymousGiB": 23.5,
+      "wiredGiB": 6.2,
+      "freeGiB": 29.3
+    },
+    {
+      "seconds": 1.055,
+      "anonymousGiB": 24.0,
+      "wiredGiB": 6.2,
+      "freeGiB": 28.7
+    },
+    {
+      "seconds": 2.088,
+      "anonymousGiB": 24.1,
+      "wiredGiB": 6.2,
+      "freeGiB": 28.6
+    },
+    {
+      "seconds": 3.12,
+      "anonymousGiB": 24.1,
+      "wiredGiB": 6.3,
+      "freeGiB": 28.6
+    },
+    {
+      "seconds": 4.152,
+      "anonymousGiB": 24.8,
+      "wiredGiB": 6.2,
+      "freeGiB": 28.0
+    },
+    {
+      "seconds": 5.184,
+      "anonymousGiB": 25.0,
+      "wiredGiB": 6.0,
+      "freeGiB": 28.0
+    },
+    {
+      "seconds": 6.215,
+      "anonymousGiB": 24.8,
+      "wiredGiB": 6.2,
+      "freeGiB": 28.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 51477,
+  "exitCode": 0,
+  "elapsedSeconds": 7.247
+}

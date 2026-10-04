@@ -1,0 +1,1723 @@
+{
+  "accepted": false,
+  "status": "Bounded immutable-source geometry/UV/PBR support evidence delivered; parent-only art and wearable gates remain open",
+  "ask": 292,
+  "source": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+    "bytes": 42329320,
+    "rows": 921722,
+    "axes": "Native X,Y up,Z forward; negative/positive-X names avoid anatomical handedness assumptions",
+    "units": "Uncalibrated normalized-generation native units; not measured real clothing meters or body registration",
+    "nodeTransform": "Identity; no coordinate or body transform applied"
+  },
+  "conclusions": [
+    "Real sampled continuous air connects both cuff mouths to their sleeve, shoulder and common torso via the listed polylines. Positive distance estimates give finite open neighborhoods, not merely clear zero-width ray/shading proxies.",
+    "Hem through torso/neck and above is clear at9tested vertical positions; centre[-0.75\u21921.05] has1.8native-unit length and minimum triangle distance0.0935800682.",
+    "Hood front mouth at y0.68 and0.76 connects to torso through clear paths; y0.57 frontal probe strikes collar/front wall. A blocked low probe is not a global hood cap.",
+    "Hem, torso and both cuff sections have strictly nested inner/outer geometric contours with zero detected transverse crossings/tangencies. The hood/neck has additional separately nested wall regions; it must not be treated as one clean cloth wall from loop count alone.",
+    "Original921722rows, UVs and4096PBR texture bytes preserved. No topology repair, source reduction/remeshing, texture edit, fitting construction or player promotion."
+  ],
+  "connectedAirWitnesses": {
+    "hemToAbove": {
+      "name": "hem-neck-above-centre",
+      "start": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "end": [
+        0.0,
+        1.05,
+        0.0
+      ],
+      "length": 1.8,
+      "clearSegmentWitness": true,
+      "coplanarCandidateTriangles": 0,
+      "clearance": {
+        "minimumDistanceNativeUnits": 0.09358006820027849,
+        "closestOriginalTriangleRow": 455876,
+        "vertexUpperBound": 0.09358006820027849,
+        "trianglesExhaustivelyTested": 7,
+        "allOriginalTrianglesBounded": 921722,
+        "numericalToleranceClaim": 1e-07,
+        "estimatedOpenTubeRadiusAfterTolerance": 0.09357996820027849,
+        "notFormalIntervalCertificate": true,
+        "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+      }
+    },
+    "negativeXCuffToTorso": [
+      {
+        "name": "cuff-entry--1",
+        "start": [
+          -1.06,
+          -0.48,
+          0.33999999999999997
+        ],
+        "end": [
+          -0.65,
+          0.075,
+          0.04
+        ],
+        "length": 0.7524127856436252,
+        "clearSegmentWitness": true,
+        "coplanarCandidateTriangles": 0,
+        "clearance": {
+          "minimumDistanceNativeUnits": 0.022393650940095173,
+          "closestOriginalTriangleRow": 2479,
+          "vertexUpperBound": 0.022476288151999216,
+          "trianglesExhaustivelyTested": 65679,
+          "allOriginalTrianglesBounded": 921722,
+          "numericalToleranceClaim": 1e-07,
+          "estimatedOpenTubeRadiusAfterTolerance": 0.022393550940095173,
+          "notFormalIntervalCertificate": true,
+          "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+        }
+      },
+      {
+        "name": "cuff-inner-to-shoulder--1",
+        "start": [
+          -0.65,
+          0.075,
+          0.04
+        ],
+        "end": [
+          -0.4,
+          0.43,
+          -0.06
+        ],
+        "length": 0.4455614435742842,
+        "clearSegmentWitness": true,
+        "coplanarCandidateTriangles": 0,
+        "clearance": {
+          "minimumDistanceNativeUnits": 0.047307712318955496,
+          "closestOriginalTriangleRow": 96742,
+          "vertexUpperBound": 0.0473304623420908,
+          "trianglesExhaustivelyTested": 39663,
+          "allOriginalTrianglesBounded": 921722,
+          "numericalToleranceClaim": 1e-07,
+          "estimatedOpenTubeRadiusAfterTolerance": 0.04730761231895549,
+          "notFormalIntervalCertificate": true,
+          "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+        }
+      },
+      {
+        "name": "shoulder-to-torso--1",
+        "start": [
+          -0.4,
+          0.43,
+          -0.06
+        ],
+        "end": [
+          0.0,
+          0.4,
+          0.0
+        ],
+        "length": 0.405585995813465,
+        "clearSegmentWitness": true,
+        "coplanarCandidateTriangles": 0,
+        "clearance": {
+          "minimumDistanceNativeUnits": 0.08775047548609213,
+          "closestOriginalTriangleRow": 157778,
+          "vertexUpperBound": 0.08778640812836115,
+          "trianglesExhaustivelyTested": 154,
+          "allOriginalTrianglesBounded": 921722,
+          "numericalToleranceClaim": 1e-07,
+          "estimatedOpenTubeRadiusAfterTolerance": 0.08775037548609213,
+          "notFormalIntervalCertificate": true,
+          "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+        }
+      }
+    ],
+    "positiveXCuffToTorso": [
+      {
+        "name": "cuff-entry-1",
+        "start": [
+          1.06,
+          -0.48,
+          0.33999999999999997
+        ],
+        "end": [
+          0.65,
+          0.075,
+          0.04
+        ],
+        "length": 0.7524127856436252,
+        "clearSegmentWitness": true,
+        "coplanarCandidateTriangles": 0,
+        "clearance": {
+          "minimumDistanceNativeUnits": 0.00580603173871718,
+          "closestOriginalTriangleRow": 918960,
+          "vertexUpperBound": 0.005816911357600996,
+          "trianglesExhaustivelyTested": 58117,
+          "allOriginalTrianglesBounded": 921722,
+          "numericalToleranceClaim": 1e-07,
+          "estimatedOpenTubeRadiusAfterTolerance": 0.00580593173871718,
+          "notFormalIntervalCertificate": true,
+          "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+        }
+      },
+      {
+        "name": "cuff-inner-to-shoulder-1",
+        "start": [
+          0.65,
+          0.075,
+          0.04
+        ],
+        "end": [
+          0.4,
+          0.43,
+          -0.06
+        ],
+        "length": 0.4455614435742842,
+        "clearSegmentWitness": true,
+        "coplanarCandidateTriangles": 0,
+        "clearance": {
+          "minimumDistanceNativeUnits": 0.04592148566469264,
+          "closestOriginalTriangleRow": 834453,
+          "vertexUpperBound": 0.04592153564086884,
+          "trianglesExhaustivelyTested": 38289,
+          "allOriginalTrianglesBounded": 921722,
+          "numericalToleranceClaim": 1e-07,
+          "estimatedOpenTubeRadiusAfterTolerance": 0.045921385664692636,
+          "notFormalIntervalCertificate": true,
+          "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+        }
+      },
+      {
+        "name": "shoulder-to-torso-1",
+        "start": [
+          0.4,
+          0.43,
+          -0.06
+        ],
+        "end": [
+          0.0,
+          0.4,
+          0.0
+        ],
+        "length": 0.405585995813465,
+        "clearSegmentWitness": true,
+        "coplanarCandidateTriangles": 0,
+        "clearance": {
+          "minimumDistanceNativeUnits": 0.07644119926759729,
+          "closestOriginalTriangleRow": 768913,
+          "vertexUpperBound": 0.07647696135231484,
+          "trianglesExhaustivelyTested": 136,
+          "allOriginalTrianglesBounded": 921722,
+          "numericalToleranceClaim": 1e-07,
+          "estimatedOpenTubeRadiusAfterTolerance": 0.07644109926759729,
+          "notFormalIntervalCertificate": true,
+          "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+        }
+      }
+    ],
+    "hoodFrontToTorso": [
+      [
+        {
+          "name": "hood-mouth-to-centre-0.68",
+          "start": [
+            0.0,
+            0.68,
+            0.6
+          ],
+          "end": [
+            0.0,
+            0.68,
+            0.0
+          ],
+          "length": 0.6,
+          "clearSegmentWitness": true,
+          "coplanarCandidateTriangles": 0,
+          "clearance": {
+            "minimumDistanceNativeUnits": 0.05675803004957087,
+            "closestOriginalTriangleRow": 478775,
+            "vertexUpperBound": 0.056760785537107776,
+            "trianglesExhaustivelyTested": 34,
+            "allOriginalTrianglesBounded": 921722,
+            "numericalToleranceClaim": 1e-07,
+            "estimatedOpenTubeRadiusAfterTolerance": 0.056757930049570866,
+            "notFormalIntervalCertificate": true,
+            "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+          }
+        },
+        {
+          "name": "hood-centre-to-body-0.68",
+          "start": [
+            0.0,
+            0.68,
+            0.0
+          ],
+          "end": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "length": 0.28,
+          "clearSegmentWitness": true,
+          "coplanarCandidateTriangles": 0,
+          "clearance": {
+            "minimumDistanceNativeUnits": 0.13205690105983728,
+            "closestOriginalTriangleRow": 469894,
+            "vertexUpperBound": 0.13206181914328652,
+            "trianglesExhaustivelyTested": 85,
+            "allOriginalTrianglesBounded": 921722,
+            "numericalToleranceClaim": 1e-07,
+            "estimatedOpenTubeRadiusAfterTolerance": 0.13205680105983728,
+            "notFormalIntervalCertificate": true,
+            "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+          }
+        }
+      ],
+      [
+        {
+          "name": "hood-mouth-to-centre-0.76",
+          "start": [
+            0.0,
+            0.76,
+            0.6
+          ],
+          "end": [
+            0.0,
+            0.76,
+            0.0
+          ],
+          "length": 0.6,
+          "clearSegmentWitness": true,
+          "coplanarCandidateTriangles": 0,
+          "clearance": {
+            "minimumDistanceNativeUnits": 0.12400675857560696,
+            "closestOriginalTriangleRow": 510634,
+            "vertexUpperBound": 0.12401886180140528,
+            "trianglesExhaustivelyTested": 112,
+            "allOriginalTrianglesBounded": 921722,
+            "numericalToleranceClaim": 1e-07,
+            "estimatedOpenTubeRadiusAfterTolerance": 0.12400665857560696,
+            "notFormalIntervalCertificate": true,
+            "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+          }
+        },
+        {
+          "name": "hood-centre-to-body-0.76",
+          "start": [
+            0.0,
+            0.76,
+            0.0
+          ],
+          "end": [
+            0.0,
+            0.4,
+            0.0
+          ],
+          "length": 0.36,
+          "clearSegmentWitness": true,
+          "coplanarCandidateTriangles": 0,
+          "clearance": {
+            "minimumDistanceNativeUnits": 0.1257280265056052,
+            "closestOriginalTriangleRow": 472939,
+            "vertexUpperBound": 0.12574551558663535,
+            "trianglesExhaustivelyTested": 29,
+            "allOriginalTrianglesBounded": 921722,
+            "numericalToleranceClaim": 1e-07,
+            "estimatedOpenTubeRadiusAfterTolerance": 0.1257279265056052,
+            "notFormalIntervalCertificate": true,
+            "method": "Exact segment-edge and endpoint-triangle distance for nonintersecting path, all original rows conservatively bounded; not sparse ray sampling."
+          }
+        }
+      ]
+    ]
+  },
+  "nestedSectionEvidence": [
+    {
+      "section": "hem-inside",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 966,
+          "bVerticesInsideA": 907,
+          "bVertices": 907,
+          "planarMinimumSeparation": 0.017697111561695473,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "torso-middle",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 457,
+          "bVerticesInsideA": 426,
+          "bVertices": 426,
+          "planarMinimumSeparation": 0.011926623933757196,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 2,
+          "b": 3,
+          "aVerticesInsideB": 0,
+          "aVertices": 1007,
+          "bVerticesInsideA": 980,
+          "bVertices": 980,
+          "planarMinimumSeparation": 0.011228891915974242,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "aVerticesInsideB": 0,
+          "aVertices": 474,
+          "bVerticesInsideA": 438,
+          "bVertices": 438,
+          "planarMinimumSeparation": 0.011883432821286472,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "neck-base",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 1136,
+          "bVerticesInsideA": 975,
+          "bVertices": 975,
+          "planarMinimumSeparation": 0.012751783173921798,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "aVerticesInsideB": 0,
+          "aVertices": 1136,
+          "bVerticesInsideA": 480,
+          "bVertices": 480,
+          "planarMinimumSeparation": 0.011923937863984112,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "hood-middle",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 1213,
+          "bVerticesInsideA": 868,
+          "bVertices": 868,
+          "planarMinimumSeparation": 0.011664055074366733,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "aVerticesInsideB": 0,
+          "aVertices": 1213,
+          "bVerticesInsideA": 153,
+          "bVertices": 153,
+          "planarMinimumSeparation": 0.012576001489889892,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "aVerticesInsideB": 0,
+          "aVertices": 1213,
+          "bVerticesInsideA": 98,
+          "bVertices": 98,
+          "planarMinimumSeparation": 0.012529031880671304,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "negative-cuff-inner",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 552,
+          "bVerticesInsideA": 516,
+          "bVertices": 516,
+          "planarMinimumSeparation": 0.011295031359619291,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "positive-cuff-inner",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 516,
+          "bVerticesInsideA": 468,
+          "bVertices": 468,
+          "planarMinimumSeparation": 0.011533936089109489,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "survey-branch-y05",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 477,
+          "bVerticesInsideA": 438,
+          "bVertices": 438,
+          "planarMinimumSeparation": 0.011931918141136586,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "aVerticesInsideB": 0,
+          "aVertices": 490,
+          "bVerticesInsideA": 423,
+          "bVertices": 423,
+          "planarMinimumSeparation": 0.012273315843084808,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 4,
+          "b": 6,
+          "aVerticesInsideB": 0,
+          "aVertices": 490,
+          "bVerticesInsideA": 19,
+          "bVertices": 19,
+          "planarMinimumSeparation": 0.013760405304734843,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 1
+    },
+    {
+      "section": "survey-branch-y55",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 1178,
+          "bVerticesInsideA": 1029,
+          "bVertices": 1029,
+          "planarMinimumSeparation": 0.011433003488311454,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 0,
+          "b": 2,
+          "aVerticesInsideB": 0,
+          "aVertices": 1178,
+          "bVerticesInsideA": 455,
+          "bVertices": 455,
+          "planarMinimumSeparation": 0.012156187961464978,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    },
+    {
+      "section": "survey-branch-z10",
+      "relationships": [
+        {
+          "a": 0,
+          "b": 1,
+          "aVerticesInsideB": 0,
+          "aVertices": 595,
+          "bVerticesInsideA": 590,
+          "bVertices": 590,
+          "planarMinimumSeparation": 0.011603668593914342,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 0,
+          "b": 3,
+          "aVerticesInsideB": 0,
+          "aVertices": 595,
+          "bVerticesInsideA": 12,
+          "bVertices": 12,
+          "planarMinimumSeparation": 0.01648960609314576,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        },
+        {
+          "a": 4,
+          "b": 5,
+          "aVerticesInsideB": 0,
+          "aVertices": 2810,
+          "bVerticesInsideA": 538,
+          "bVertices": 538,
+          "planarMinimumSeparation": 0.011621022424960726,
+          "strictTransverseCrossings": 0,
+          "possibleNonAdjacentTangencies": 0
+        }
+      ],
+      "unresolvedComponents": 0
+    }
+  ],
+  "wallProfiles": [
+    {
+      "path": "hem-wall",
+      "crossings": 4,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            180850,
+            197485
+          ],
+          "start": [
+            -0.3692795909389883,
+            -0.430137,
+            0.0
+          ],
+          "end": [
+            -0.3474681390948977,
+            -0.430137,
+            0.0
+          ],
+          "distanceAlongProbe": 0.021811451844090612,
+          "normalDotDirection": [
+            -0.9660862596360575,
+            0.9557573943224449
+          ],
+          "UV": [
+            [
+              0.9084604074834015,
+              0.4052840391497396
+            ],
+            [
+              0.9068858550672948,
+              0.16784480615639122
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                195,
+                133,
+                48
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                230,
+                44
+              ]
+            },
+            {
+              "baseColorTexture": [
+                133,
+                79,
+                5
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                240,
+                23
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            721655,
+            739233
+          ],
+          "start": [
+            0.3239894890845121,
+            -0.430137,
+            0.0
+          ],
+          "end": [
+            0.345164350080873,
+            -0.430137,
+            0.0
+          ],
+          "distanceAlongProbe": 0.02117486099636086,
+          "normalDotDirection": [
+            -0.9628328209802574,
+            0.9732910118737111
+          ],
+          "UV": [
+            [
+              0.9442005389843001,
+              0.8853169905222714
+            ],
+            [
+              0.9115736632082145,
+              0.8581467636127917
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                140,
+                83,
+                2
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                240,
+                37
+              ]
+            },
+            {
+              "baseColorTexture": [
+                201,
+                139,
+                56
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                229,
+                43
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.6714576281794099
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    },
+    {
+      "path": "cuff-wall--1",
+      "crossings": 4,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            43753,
+            43859
+          ],
+          "start": [
+            -0.8,
+            -0.2662398818775482,
+            0.12
+          ],
+          "end": [
+            -0.8,
+            -0.25127515259441097,
+            0.12
+          ],
+          "distanceAlongProbe": 0.014964729283137225,
+          "normalDotDirection": [
+            -0.7486541249927562,
+            0.7621343938476554
+          ],
+          "UV": [
+            [
+              0.4034046311684256,
+              0.4720545418980733
+            ],
+            [
+              0.27580958299908914,
+              0.9706400619140367
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                195,
+                138,
+                59
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                246,
+                42
+              ]
+            },
+            {
+              "baseColorTexture": [
+                121,
+                72,
+                5
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                245,
+                38
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            44836,
+            44998
+          ],
+          "start": [
+            -0.8,
+            0.06369848791194332,
+            0.12
+          ],
+          "end": [
+            -0.8,
+            0.08315004305233364,
+            0.12
+          ],
+          "distanceAlongProbe": 0.01945155514039027,
+          "normalDotDirection": [
+            -0.5752817864825497,
+            0.713598508960059
+          ],
+          "UV": [
+            [
+              0.44822960890486674,
+              0.28642739200417827
+            ],
+            [
+              0.826278460309593,
+              0.9785141743454778
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                111,
+                62,
+                4
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                240,
+                44
+              ]
+            },
+            {
+              "baseColorTexture": [
+                202,
+                146,
+                71
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                236,
+                30
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.3149736405063543
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    },
+    {
+      "path": "cuff-wall-1",
+      "crossings": 4,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            884085,
+            884147
+          ],
+          "start": [
+            0.8,
+            -0.27002931209049474,
+            0.12
+          ],
+          "end": [
+            0.8,
+            -0.2525929052848582,
+            0.12
+          ],
+          "distanceAlongProbe": 0.017436406805636514,
+          "normalDotDirection": [
+            -0.6590308888027663,
+            0.7290142734120795
+          ],
+          "UV": [
+            [
+              0.5913070724785796,
+              0.157161683615408
+            ],
+            [
+              0.7465175641234367,
+              0.6067439361135185
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                193,
+                134,
+                56
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                243,
+                34
+              ]
+            },
+            {
+              "baseColorTexture": [
+                203,
+                146,
+                67
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                250,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            885086,
+            885240
+          ],
+          "start": [
+            0.8,
+            0.033698866656874604,
+            0.12
+          ],
+          "end": [
+            0.8,
+            0.05344188329387711,
+            0.12
+          ],
+          "distanceAlongProbe": 0.01974301663700247,
+          "normalDotDirection": [
+            -0.6492734150633268,
+            0.6851096333564234
+          ],
+          "UV": [
+            [
+              0.7396794288471673,
+              0.347689738467807
+            ],
+            [
+              0.8514086068070942,
+              0.44383528540163175
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                90,
+                48,
+                0
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                241,
+                45
+              ]
+            },
+            {
+              "baseColorTexture": [
+                204,
+                147,
+                70
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                242,
+                42
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.2862917719417329
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    },
+    {
+      "path": "torso-front-back",
+      "crossings": 4,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            465686,
+            465684
+          ],
+          "start": [
+            0.0,
+            0.250137,
+            0.27750956813177385
+          ],
+          "end": [
+            0.0,
+            0.250137,
+            0.26443918222421897
+          ],
+          "distanceAlongProbe": 0.013070385907554867,
+          "normalDotDirection": [
+            -0.991836608216938,
+            0.9903557047327034
+          ],
+          "UV": [
+            [
+              0.30256414754999306,
+              0.8613308403574239
+            ],
+            [
+              0.12530926951864604,
+              0.7999825880441565
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                204,
+                142,
+                59
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                249,
+                32
+              ]
+            },
+            {
+              "baseColorTexture": [
+                124,
+                73,
+                7
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                251,
+                38
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            465682,
+            465680
+          ],
+          "start": [
+            0.0,
+            0.250137,
+            -0.2082946757959846
+          ],
+          "end": [
+            0.0,
+            0.250137,
+            -0.22092452850578093
+          ],
+          "distanceAlongProbe": 0.012629852709796408,
+          "normalDotDirection": [
+            -0.9889454032244155,
+            0.9891211363865761
+          ],
+          "UV": [
+            [
+              0.5042680843508606,
+              0.829060825224616
+            ],
+            [
+              0.15263948657726004,
+              0.8850911015211181
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                128,
+                76,
+                3
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                248,
+                41
+              ]
+            },
+            {
+              "baseColorTexture": [
+                198,
+                137,
+                56
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                251,
+                35
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.47273385802020357
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    },
+    {
+      "path": "hood-depth-0.57",
+      "crossings": 6,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            466614,
+            466610
+          ],
+          "start": [
+            0.0,
+            0.57,
+            0.1776844983579665
+          ],
+          "end": [
+            0.0,
+            0.57,
+            0.1599991631248162
+          ],
+          "distanceAlongProbe": 0.01768533523315035,
+          "normalDotDirection": [
+            -0.9613007493192739,
+            0.8333503715544773
+          ],
+          "UV": [
+            [
+              0.5203110419909791,
+              0.4745145158193524
+            ],
+            [
+              0.04296162355363431,
+              0.7987721854120998
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                200,
+                143,
+                56
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                249,
+                33
+              ]
+            },
+            {
+              "baseColorTexture": [
+                180,
+                122,
+                38
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                244,
+                44
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            466606,
+            466603
+          ],
+          "start": [
+            0.0,
+            0.57,
+            -0.1866370422625543
+          ],
+          "end": [
+            0.0,
+            0.57,
+            -0.2859937441967326
+          ],
+          "distanceAlongProbe": 0.0993567019341783,
+          "normalDotDirection": [
+            -0.970014380484805,
+            0.9632241048157254
+          ],
+          "UV": [
+            [
+              0.37814934323185706,
+              0.08932681029876505
+            ],
+            [
+              0.935973083183681,
+              0.9616793053478349
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                183,
+                122,
+                41
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                242,
+                40
+              ]
+            },
+            {
+              "baseColorTexture": [
+                204,
+                145,
+                65
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                248,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 2,
+          "originalTriangleRows": [
+            466600,
+            466594
+          ],
+          "start": [
+            0.0,
+            0.57,
+            -0.3260473200714781
+          ],
+          "end": [
+            0.0,
+            0.57,
+            -0.34144203287900565
+          ],
+          "distanceAlongProbe": 0.015394712807527534,
+          "normalDotDirection": [
+            -0.7963134729713337,
+            0.8154361553024466
+          ],
+          "UV": [
+            [
+              0.31577182201372006,
+              0.28598531003956035
+            ],
+            [
+              0.7264367047581205,
+              0.8179257070798437
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                200,
+                141,
+                65
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                246,
+                39
+              ]
+            },
+            {
+              "baseColorTexture": [
+                205,
+                148,
+                67
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                250,
+                35
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.3466362053873705,
+        0.040053575874745465
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    },
+    {
+      "path": "hood-depth-0.68",
+      "crossings": 4,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            466906,
+            466904
+          ],
+          "start": [
+            0.0,
+            0.68,
+            -0.1385948592684445
+          ],
+          "end": [
+            0.0,
+            0.68,
+            -0.25808260999531074
+          ],
+          "distanceAlongProbe": 0.11948775072686618,
+          "normalDotDirection": [
+            -0.9318801375759165,
+            0.8901333296729675
+          ],
+          "UV": [
+            [
+              0.784715130189842,
+              0.2387161022326569
+            ],
+            [
+              0.40707992613116484,
+              0.7520144441939789
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                171,
+                108,
+                28
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                250,
+                32
+              ]
+            },
+            {
+              "baseColorTexture": [
+                179,
+                116,
+                36
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                237,
+                42
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            466902,
+            466900
+          ],
+          "start": [
+            0.0,
+            0.68,
+            -0.2735386965429869
+          ],
+          "end": [
+            0.0,
+            0.68,
+            -0.2858243802763363
+          ],
+          "distanceAlongProbe": 0.012285683733349418,
+          "normalDotDirection": [
+            -0.9907018277693063,
+            0.9910828546728729
+          ],
+          "UV": [
+            [
+              0.8387127537250813,
+              0.6371684296987353
+            ],
+            [
+              0.912621480800987,
+              0.7976872557324861
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                160,
+                101,
+                23
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                250,
+                33
+              ]
+            },
+            {
+              "baseColorTexture": [
+                203,
+                144,
+                64
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                251,
+                34
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.015456086547676162
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    },
+    {
+      "path": "hood-depth-0.76",
+      "crossings": 4,
+      "pairedFaceSpans": [
+        {
+          "pair": 0,
+          "originalTriangleRows": [
+            467088,
+            467084
+          ],
+          "start": [
+            0.0,
+            0.76,
+            -0.1344713187628267
+          ],
+          "end": [
+            0.0,
+            0.76,
+            -0.17861396886929903
+          ],
+          "distanceAlongProbe": 0.0441426501064723,
+          "normalDotDirection": [
+            -0.7448853164986563,
+            0.6362270210588392
+          ],
+          "UV": [
+            [
+              0.8033389944358486,
+              0.2375151458546722
+            ],
+            [
+              0.8564672457485623,
+              0.42245380797634596
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                188,
+                126,
+                41
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                249,
+                33
+              ]
+            },
+            {
+              "baseColorTexture": [
+                188,
+                130,
+                46
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                243,
+                42
+              ]
+            }
+          ]
+        },
+        {
+          "pair": 1,
+          "originalTriangleRows": [
+            467082,
+            467080
+          ],
+          "start": [
+            0.0,
+            0.76,
+            -0.251865728024514
+          ],
+          "end": [
+            0.0,
+            0.76,
+            -0.2649277783139561
+          ],
+          "distanceAlongProbe": 0.013062050289442101,
+          "normalDotDirection": [
+            -0.9426234130364843,
+            0.9469399401258216
+          ],
+          "UV": [
+            [
+              0.8587583150080654,
+              0.634107854859417
+            ],
+            [
+              0.8925999438009582,
+              0.7954409193086642
+            ]
+          ],
+          "textureRGB8": [
+            {
+              "baseColorTexture": [
+                163,
+                102,
+                21
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                250,
+                33
+              ]
+            },
+            {
+              "baseColorTexture": [
+                206,
+                147,
+                67
+              ],
+              "metallicRoughnessTexture": [
+                255,
+                251,
+                35
+              ]
+            }
+          ]
+        }
+      ],
+      "interPairSurfaceFreeSpans": [
+        0.073251759155215
+      ],
+      "interpretation": "Adjacent opposite-normal surface pairs; distances are probe-direction spans, not normal cloth thickness or globally proven solid occupancy."
+    }
+  ],
+  "originalUVPBRCorrespondence": {
+    "table": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/correspondence/source-region-correspondence.npz",
+    "sha256": "766a655eab843c4dfd67764ebd79638ba25534b861f8b48386b9cd7e08e884d1",
+    "rows": 24838,
+    "positionResidualMax": 4.46899245057492e-16,
+    "barycentricViolationMax": 0.0,
+    "fields": {
+      "section": [
+        24838
+      ],
+      "loop": [
+        24838
+      ],
+      "originalTriangleRow": [
+        24838
+      ],
+      "positionNative": [
+        24838,
+        3
+      ],
+      "barycentric": [
+        24838,
+        3
+      ],
+      "uv": [
+        24838,
+        2
+      ],
+      "positionResidual": [
+        24838
+      ],
+      "baseColorRGB8": [
+        24838,
+        3
+      ],
+      "metallicRoughnessRGB8": [
+        24838,
+        3
+      ]
+    },
+    "sectionIDs": {
+      "0": "hem-inside",
+      "1": "torso-middle",
+      "2": "neck-base",
+      "3": "hood-middle",
+      "4": "negative-cuff-inner",
+      "5": "positive-cuff-inner",
+      "6": "survey-branch-y05",
+      "7": "survey-branch-y55",
+      "8": "survey-branch-z10"
+    },
+    "maps": {
+      "baseColorTexture": {
+        "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+        "bytes": 10002352,
+        "mimeType": "image/png",
+        "size": [
+          4096,
+          4096
+        ],
+        "texture": {
+          "source": 0
+        },
+        "sampler": "glTF defaults"
+      },
+      "metallicRoughnessTexture": {
+        "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae",
+        "bytes": 6925436,
+        "mimeType": "image/png",
+        "size": [
+          4096,
+          4096
+        ],
+        "texture": {
+          "source": 1
+        },
+        "sampler": "glTF defaults"
+      }
+    },
+    "textureConvention": {
+      "origin": "top-left, repeat wrapping; nearest RGB8 diagnostics",
+      "roughness": "green /255, factor1",
+      "metallic": "blue /255, factor1",
+      "baseColor": "sRGB-encoded RGB8, not shaded color",
+      "officialSource": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#materials"
+    },
+    "usage": "Read table section/loop IDs plus originalTriangleRow and barycentric coordinates to identify source regions, then use original UVs and texture bytes. These are analytical correspondence rows, not a new surface or fitted donor."
+  },
+  "methods": {
+    "segmentIntersection": "Double-sided original triangle Moller-Trumbore with conservative all-source AABB pruning; coincident hits retain original rows; coplanarity explicitly refuses clear proof.",
+    "clearance": "All921722rows bounded by conservative AABB distance; vertex distance supplies actual upper bound; surviving segment-edge/endpoint-triangle distances in float64. Analytic hollow/capped/solid and rotated translated tube controls pass.",
+    "sections": "1e-10native-unit endpoint quantization, strict containment all vertices, transverse crossing and conservative tangency checks; no surface filling.",
+    "materialPairing": "Ordered opposite-normal crossing pairs only; ray parity is not used as a global solid/cloth occupancy oracle."
+  },
+  "ambiguity": [
+    "Original stored GLB has50exact-zero-area triangles,50overused welded edges and11two-face orientation conflicts, plus preserved104face speck. Earlier finite-cell count does not describe final serialized GLB.",
+    "Initial1e-7section quantization caused several degree ambiguities that disappear at1e-10; one outer-torso component at y0.05 still has non-degree-two incidence. That component is excluded from closed-loop correspondence; no global manifold or self-intersection pass.",
+    "Finite clearances are numerical geometric estimates with1e-7margin, not formal interval arithmetic or physical/garment ease certification.",
+    "Blocked probes cannot exclude curved alternative routes; observed finite paths do establish their own connectivity.",
+    "Wall spans are measured along probes and may be inflated/nested hood geometry. Physical material occupancy, appropriate fabric thickness, fit, rig/weights, collision response and mobile performance remain unproven."
+  ],
+  "resources": [
+    {
+      "phase": "inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 1.593,
+      "maxAnonymousGiB": 24.3,
+      "maxAnonymousPlusWiredGiB": 31.8,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    },
+    {
+      "phase": "survey",
+      "exitCode": 0,
+      "elapsedSeconds": 1.491,
+      "maxAnonymousGiB": 24.1,
+      "maxAnonymousPlusWiredGiB": 30.1,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    },
+    {
+      "phase": "witness",
+      "exitCode": 0,
+      "elapsedSeconds": 5.853,
+      "maxAnonymousGiB": 24.9,
+      "maxAnonymousPlusWiredGiB": 31.7,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    },
+    {
+      "phase": "nested",
+      "exitCode": 0,
+      "elapsedSeconds": 3.829,
+      "maxAnonymousGiB": 24.3,
+      "maxAnonymousPlusWiredGiB": 30.4,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    },
+    {
+      "phase": "correspondence",
+      "exitCode": 0,
+      "elapsedSeconds": 7.247,
+      "maxAnonymousGiB": 25.0,
+      "maxAnonymousPlusWiredGiB": 31.0,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916"
+    }
+  ],
+  "evidencePins": [
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/inventory/report.json",
+      "sha256": "18d08dec6d70c69c5571a77ac4d9684ba6595b5a60a591ab3fb0c767029aa876",
+      "bytes": 3453
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/nested/paths.json",
+      "sha256": "38711cd0581c5ba5e3806d857a80c7a2da1ac756868263564e6435c2b3fc51cf",
+      "bytes": 40716
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/nested/sections.json",
+      "sha256": "bcfb3d7a0f3fbb32a26da6340fabff61f3b706844ee17fbbaebd6183641f8edd",
+      "bytes": 1398022
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/nested/controls.json",
+      "sha256": "a268532f6b8758ed3876078341c80b6b6ecee9fc4726265ce7c21f9bf0ae6da1",
+      "bytes": 1546
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/correspondence/nested.json",
+      "sha256": "e8939a326ce86205315f07524711c9570dbbebdf5ac501374ad94e9b5dd37bad",
+      "bytes": 40184
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/correspondence/correspondence.json",
+      "sha256": "640445972f69f8b9cfd7102cfff15892d70aef3d35f265cc9f06620e9071e769",
+      "bytes": 3326
+    },
+    {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/hunyuan-air01/correspondence/source-region-correspondence.npz",
+      "sha256": "766a655eab843c4dfd67764ebd79638ba25534b861f8b48386b9cd7e08e884d1",
+      "bytes": 1117811
+    }
+  ],
+  "scopePreserved": [
+    "Existing selected original donor unchanged; no competing reconstruction or donor switch.",
+    "Body/head/51-bind, native19failed493body/35self baseline, staging, unrelated peer work and ordinary player assets not edited.",
+    "AllM0-M5 remain open; only parent judges played art. No peer interruption, new agent, inference, GPU job, package install or publication."
+  ]
+}
