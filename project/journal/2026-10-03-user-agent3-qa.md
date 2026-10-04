@@ -1440,3 +1440,25 @@ M0–M5 remain open. Parent owns ask275/index/nextsource-operator decision;
 Agent1 sole construction owner. No source edit/pose/candidate render/
 capture/worker/Librarydelivery/upload/push/promotion. Temporary normal
 build excluded; no recursive cleanup.
+
+
+## 2026-10-04 Round73 — freeze existing handlebar-grip diagnosis inputs
+
+Finding: Root relays direct human bad-handlebar-grip feedback and assigns
+one independent read-only diagnosis to existing Agent3 ownership. Pin actual
+bikes, source37hand metadata, older played50/actual47distinctstreams and
+new native controls before making claims. No authoring or neck103work.
+
+Validation: Grip source reports match allfour actualbike GLBs; source37
+derivative and playedwide50movie match receipts. Exact source/media/stream/
+code input inventory in grip73/preparation.json. Old50has176moving skeletal
+samples;47numerical703poses differ and must not be paired with50pixels.
+Current native trials have no admitted matching actual-bike hand movie.
+
+Limits: Source centroids/rigidsockets remain hypotheses, not cylinder
+surface/contact/wrapping acceptance. No specificclipidentifiedbyfeedback.
+Use existing evidence only; preserve51bind/allfailedcontrols/sharedstaging.
+No source edit/finger/rig/weight authoring/solve/newcapture/model/GPU/install,
+worker/Librarydelivery/upload/push/promotion or competing neck103diagnosis.
+Parent owns ask275/index/admission, Agent1 sole construction owner. All
+M0–M5/art/device/player gates open.
