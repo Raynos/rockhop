@@ -427,3 +427,11 @@ Finding: All258seedself pairs arehood↔shirt atcollar/neck; nohoodhood/shirtshi
 Validation: Everyfrozenfieldseedcoordinate/candidatepolygoncycle exact;1444native faceparent markers each4subdivisionchildren. Angularneckorder matches20actualboundaryedges; body/patternworld bothidentity+.65X. Exactnative body/cloth triangles/vertices/sourceparent/centroids recorded; maskgroups Left/Right/body/Mid excluded from jointdominance. Source/native/field SHAunchanged; syntax/diff/hooks pass.
 
 Limits: Staticintersection ancestry is notsignedclearance/skin/actualgame/mobile/playedart acceptance. No geometry intervention or body/bind mutation; qualify correctedhoodprofile+actualopenings before donor deformation, nofield/projection/fullcloth sweep. M0–M5/rootsolejudge/no playerpromotion retained.
+
+### Round50 — sewn openings clear while side hood descends too early, 2026-10-03
+
+Finding: Actual neck18mm/cuff18mm-proximal+5mm-ease geodesic surgery clears every shirt/body pair, retaining original source. Open-front17column/16row hood instead remains152body/302self (291hoodshirt/11hoodhood), localizedneck/chest/shoulder Z1.5341..1.5561m. Real opening topology does not clear the prematurely descending side loft; correct its structural shape next, not field/physics sweeps.
+
+Validation: New5966v/11680tri/fourboundarycomponents/0othernonmanifold. Independent18originalmeshes/16nodegraphs/14images/51bind+pose exact; coverage1937rays/10misses, local-normal gap min-6.606mm explicit proxy. Source02SHA unchanged; Blender recipe/syntax/diff/hooks pass.
+
+Limits: Static diagnosticseed, selecteddonor shape/PBR stillrequired; grey isnot replacementappearance. Unqualifiedhood withholdsrig/game/movingart/iOS/Library/playerhandoff; allM0–M5/rootsolejudge retained. No originalbody/head/bind/control changes.
