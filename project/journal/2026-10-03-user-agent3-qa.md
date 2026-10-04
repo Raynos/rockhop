@@ -1541,3 +1541,17 @@ No hard-normal seed/Jacobian/rank/constrainedsolve/sweptinvariance proof,
 operatoradmission/expansion/pose/render/capture/sourceedit or delivery.
 Parent owns ask275/index/art/admission; Agent1solebuilder. AllM0–M5open.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck77/
+
+
+## 2026-10-04 Round78 — required normal gate before encoding test
+
+Finding: Root rejects hard-byteSQP and assigns one scratchnormalbuffer
+diagnostic. Required thirdround ordinaryplayer gate passes before prep.
+
+Validation: Low/high silentWebKit clears4810ticks exact40.083333333333336s,
+hash368f1ca5bd9e830a/Float64LEabaaaaaaaa0a4440; zero faults/errors. Crash103
+restarttick0/phase riding, actualms{'low': 2, 'high': 4}.20productionmodels/191pins exact.
+
+Limits: No source/candidate/normal-buffer test performed yet; no admission,
+solve/render/capture/upload/push. Parent owns ask275/index/gates. AllM0-M5open.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/gate78/
