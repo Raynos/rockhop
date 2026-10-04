@@ -1,0 +1,58 @@
+{
+  "accepted": false,
+  "round": 135,
+  "item": "boots",
+  "phase": "decode01",
+  "finding": "Original standalone VAE and qualified finite-cell extraction reproduce the native ankle boot arrays byte-exact, preserve the explicit evaluated-site field/mask and export the finite source derivative without shape resampling.",
+  "validation": "Guard exit0 in14.825s;410VAE tensor comparisons and all four native replay checks pass. Derived305593vertices/611198triangles have no nonfinite coordinates, invalid indices, duplicate or zero-area triangles; five components preserved.",
+  "limits": "No global topology/opening/toe enclosure, handedness, fit, rig, physics, PBR or played art/device acceptance. No cleanup, reduction, body edits or publication.",
+  "guardStatus": "worker returned; review pending",
+  "guardExitCode": 0,
+  "guardSeconds": 14.825,
+  "peakHostAnonymousGiB": 36.6,
+  "peakHostCombinedGiB": 42.9,
+  "scratchRoot": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01",
+  "rawFiles": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/actual-field.npz",
+      "bytes": 2828364,
+      "sha256": "267486d87ce3b841d7ae046ba5f6cbbbf79d7c116b8c2a4fc9b8974d1441f7bf"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/actual-pre-sentinel-field.npz",
+      "bytes": 3069985,
+      "sha256": "5198006ba2a4b4116bad75cf79c5f822f8792bfa25c431e243c06c7390197ab7"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/finite-cell-derived.npz",
+      "bytes": 4159909,
+      "sha256": "1d826628dd5d529a5a971318dca23a458bc5b764cae19052d290d60f9f39153a"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/finite-cell-display.glb",
+      "bytes": 11002264,
+      "sha256": "7749555ed0561064ebdcb91d7c5244bf217b5ba3c381e3c2c37b0606a363bf22"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/native-replayed.npz",
+      "bytes": 6458869,
+      "sha256": "888a2c9ff35258d412070c13457a10da9cb79282375869dd8c5bb4cdd7e2a57a"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/progress.json",
+      "bytes": 27034,
+      "sha256": "c5210ebddbd2792fd112be2ac448aead8933e10e3b422b410627b03db2bb973b"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01/receipt.json",
+      "bytes": 27248,
+      "sha256": "ba466853468e7182dfd0e8aa86cd02cfb76e83a3c41a22b38b53bfdeab85fec5"
+    }
+  ],
+  "originalWorkerLog": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/boots/decode01-guard/worker.log",
+    "sha256": "7f5c19d5304265d8d89059ddc7946f3b03e95be527ed90689391c6c1854b0861"
+  },
+  "noCleanupRemeshReductionOrPlayerReplacement": true,
+  "oneReferenceSeedCandidatePerItem": true
+}

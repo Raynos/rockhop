@@ -309,3 +309,11 @@ Finding: The single ankle boot seed completes30quality shape steps and saves ori
 Validation: Guard worker exit1/native validity assertion in49.132s, not a resource denial. Actual conditioned features/noise and finite sampled latents retained; original565119vertices/1131046faces include778578nonfinite coordinate elements.
 
 Limits: No repeat sampling, reference/seed change, field filling, cleanup, fitting, PBR, art/device acceptance or publication. Root alone judges the later source visual.
+
+## Round 135 — boots decode01 checkpoint
+
+Finding: Original standalone VAE and qualified finite-cell extraction reproduce the native ankle boot arrays byte-exact, preserve the explicit evaluated-site field/mask and export the finite source derivative without shape resampling.
+
+Validation: Guard exit0 in14.825s;410VAE tensor comparisons and all four native replay checks pass. Derived305593vertices/611198triangles have no nonfinite coordinates, invalid indices, duplicate or zero-area triangles; five components preserved. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
+
+Limits: No global topology/opening/toe enclosure, handedness, fit, rig, physics, PBR or played art/device acceptance. No cleanup, reduction, body edits or publication.
