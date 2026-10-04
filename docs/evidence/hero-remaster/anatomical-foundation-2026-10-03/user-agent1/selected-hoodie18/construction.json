@@ -1,0 +1,5077 @@
+{
+  "status": "UNACCEPTED actual donor measured-lumen registration",
+  "pins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie17/continuous-arm.blend": "989855995983079d3207960f5e36feb734fe0e02987961d8f652c8cd26c3ae3f",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/construct_selected_hoodie.py": "95c555e656e889f00d59a7295e89021cc822c34c34e87bd2cfa24e131cf2d1f9",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/connect_selected_arm_registration.py": "f9de8ba7ba1558e43199a3e92d28368fd04e99bd0dcca1e1cd1527545f595039",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie17/contours66/sections.json.gz": "ba74cad2b49cca57dffcbf6f49b98c4101db9b4f8e6fa94a37bd7e6b38090fd4"
+  },
+  "recipeSHA256": "45b8ae20615c7d290800710c68a9132d406000b115d48c1436dee7ac2ddbd82a",
+  "candidateSHA256": "d97e5cb3e31110d1e6aa104032ab818094a170bc46cf9e0a612f4dd9ec8c680a",
+  "fieldSHA256": "30eb90954010bc12a10e9a773e9580207a403c5710ead18302028a4bd7a4b3c6",
+  "method": "Joint least-squares source S/E/W fit, shared elbow, from largest local oriented air contour per measured section; exclude nonlocal connected torso contours. Existing continuous arm maps/seam/radial scale retained; torso centroid median translation only. New minus old map applied to frozen native cut geometry, preserves nonlinear cut-interpolation residual.",
+  "fits": {
+    "R": {
+      "sourceShoulderElbowWristXYZ": [
+        [
+          0.3406898061663256,
+          0.031621773563053505,
+          0.48891249066799486
+        ],
+        [
+          0.6340070301597452,
+          -0.0018207842717878197,
+          0.07305633841127136
+        ],
+        [
+          0.9071129211938873,
+          -0.23267035381534967,
+          -0.28157662773537623
+        ]
+      ],
+      "oldSourceShoulderElbowWristXYZ": [
+        [
+          0.43,
+          -0.015,
+          0.55
+        ],
+        [
+          0.68,
+          -0.085,
+          0.11
+        ],
+        [
+          0.94,
+          -0.1,
+          -0.265
+        ]
+      ],
+      "selectedSections": 27,
+      "rank": 3,
+      "singularValues": [
+        3.444716031039914,
+        2.058457692846104,
+        1.0638060877149171
+      ],
+      "centroidFitResidualOriginalUnitsPercentiles": [
+        0.0006115089481497806,
+        0.0030843079631191527,
+        0.008057067840309724,
+        0.00980273348293917
+      ]
+    },
+    "L": {
+      "sourceShoulderElbowWristXYZ": [
+        [
+          -0.3580791995547494,
+          0.0257835649135358,
+          0.49589544750098463
+        ],
+        [
+          -0.6545484421067866,
+          0.004668902244062797,
+          0.08602038011929733
+        ],
+        [
+          -0.9189631836403381,
+          -0.22008119878080484,
+          -0.27332283202374635
+        ]
+      ],
+      "oldSourceShoulderElbowWristXYZ": [
+        [
+          -0.43,
+          -0.015,
+          0.55
+        ],
+        [
+          -0.68,
+          -0.085,
+          0.11
+        ],
+        [
+          -0.94,
+          -0.1,
+          -0.265
+        ]
+      ],
+      "selectedSections": 26,
+      "rank": 3,
+      "singularValues": [
+        3.4175383018652825,
+        2.0391902199106138,
+        0.9231116954652163
+      ],
+      "centroidFitResidualOriginalUnitsPercentiles": [
+        0.0007885767328162702,
+        0.003033651849323726,
+        0.0065850018142256175,
+        0.009757471181700145
+      ]
+    }
+  },
+  "sectionSelection": [
+    {
+      "part": "upperArm.R",
+      "station": 0.05,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.10999999999999999,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.16999999999999998,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.22999999999999998,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.29,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.3499999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04521563114406317,
+      "centroidXYZ": [
+        0.44403210273693056,
+        0.017852913818236532,
+        0.3451325493567184
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.4099999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.04391753555602938,
+      "centroidXYZ": [
+        0.45968058704779846,
+        0.017802083742817082,
+        0.31844091113625556
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.4699999999999999,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.04218601162294701,
+      "centroidXYZ": [
+        0.4767641110616233,
+        0.017343030609029197,
+        0.2926295809608496
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.5299999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.040981641959782406,
+      "centroidXYZ": [
+        0.49488518745623955,
+        0.016738077082149992,
+        0.2674309806097941
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.59,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.04087110741840731,
+      "centroidXYZ": [
+        0.5130829323070283,
+        0.014461723309375701,
+        0.24254184646613816
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.6499999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.04184752174722772,
+      "centroidXYZ": [
+        0.5315373328350872,
+        0.009436522850408094,
+        0.2182358559300983
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.71,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.042397874860710165,
+      "centroidXYZ": [
+        0.5507410669479952,
+        0.004764529974832857,
+        0.19429943099718294
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.7699999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.04130685115948251,
+      "centroidXYZ": [
+        0.5703019191179209,
+        0.0021979417038097415,
+        0.17023096331866716
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.83,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.03766798733006542,
+      "centroidXYZ": [
+        0.5874519923491128,
+        0.004432896385164059,
+        0.14402885304617435
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.8899999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.03648805549571299,
+      "centroidXYZ": [
+        0.603447212896823,
+        0.002403590137920006,
+        0.11784898162398033
+      ]
+    },
+    {
+      "part": "upperArm.R",
+      "station": 0.95,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.03827343224199024,
+      "centroidXYZ": [
+        0.6176520861998255,
+        -0.00013125685125214837,
+        0.09073229438532737
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.05,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.03993556884864038,
+      "centroidXYZ": [
+        0.6458241769745348,
+        -0.01207315018506111,
+        0.05559435537641322
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.10999999999999999,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.04373868036738221,
+      "centroidXYZ": [
+        0.6593209369705062,
+        -0.02596834603051023,
+        0.032155916807438026
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.16999999999999998,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04369438538968122,
+      "centroidXYZ": [
+        0.6780631720902688,
+        -0.03914405624492248,
+        0.012325561565716563
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.22999999999999998,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04231557734497164,
+      "centroidXYZ": [
+        0.6970701053843268,
+        -0.05365362413437526,
+        -0.007267915301491789
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.29,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04228310748422728,
+      "centroidXYZ": [
+        0.7129053571736766,
+        -0.06850159594045525,
+        -0.029046888521966047
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.3499999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.041598031816337123,
+      "centroidXYZ": [
+        0.7299347845270825,
+        -0.08210144573008933,
+        -0.0500478248986859
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.4099999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04029147535772624,
+      "centroidXYZ": [
+        0.7475207132760313,
+        -0.09536907881427985,
+        -0.07067620897604701
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.4699999999999999,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.03909855403630511,
+      "centroidXYZ": [
+        0.7641317512505345,
+        -0.10967010607301855,
+        -0.09193918155670866
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.5299999999999999,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.038095218840955965,
+      "centroidXYZ": [
+        0.78111902032193,
+        -0.12444623333735977,
+        -0.11292229657663407
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.59,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.035724474353924174,
+      "centroidXYZ": [
+        0.798915459231001,
+        -0.13627400904385858,
+        -0.13346232123808488
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.6499999999999999,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.03880283451748544,
+      "centroidXYZ": [
+        0.8100247097178002,
+        -0.15977095160763893,
+        -0.15817202986468626
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.71,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.037383450799204514,
+      "centroidXYZ": [
+        0.8244742067510458,
+        -0.1746419869723894,
+        -0.18091087050704605
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.7699999999999999,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.03399231320126651,
+      "centroidXYZ": [
+        0.8437468526894356,
+        -0.18658985424918495,
+        -0.20042258796535722
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.83,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.028880265299920424,
+      "centroidXYZ": [
+        0.8612602494961143,
+        -0.19238337941828462,
+        -0.22140022517262922
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.8899999999999999,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.02442232162050417,
+      "centroidXYZ": [
+        0.8776309962484803,
+        -0.1992919709051869,
+        -0.2431254970981795
+      ]
+    },
+    {
+      "part": "forearm.R",
+      "station": 0.95,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.019255906174705094,
+      "centroidXYZ": [
+        0.8922466071524353,
+        -0.21462614809850164,
+        -0.26573063978370465
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.05,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.10999999999999999,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.16999999999999998,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.22999999999999998,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.29,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.3499999999999999,
+      "included": false,
+      "reason": "No local air cavity; connected shoulder/torso section"
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.4099999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.044356990414452964,
+      "centroidXYZ": [
+        -0.47953479547124483,
+        0.018146975439621106,
+        0.32966684224326764
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.4699999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.04392283621575594,
+      "centroidXYZ": [
+        -0.4963482188092694,
+        0.015596526165385288,
+        0.3040347678880464
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.5299999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.043099933271501606,
+      "centroidXYZ": [
+        -0.5144758057810159,
+        0.014462277249455806,
+        0.2789240728131639
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.59,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.04263097922791127,
+      "centroidXYZ": [
+        -0.5322668518835659,
+        0.014197905022410584,
+        0.2534837718620972
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.6499999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.042229613562798904,
+      "centroidXYZ": [
+        -0.5506181046546792,
+        0.013411601361413186,
+        0.22844480470084294
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.71,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.041375547689065144,
+      "centroidXYZ": [
+        -0.5688880412621269,
+        0.012030771253083133,
+        0.20345421892685425
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.7699999999999999,
+      "included": true,
+      "sourceContourIndex": 3,
+      "signedPlaneArea": -0.0405562210116449,
+      "centroidXYZ": [
+        -0.5872897102935924,
+        0.008943600895870596,
+        0.17880994434247086
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.83,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04029173352673927,
+      "centroidXYZ": [
+        -0.6080057828706465,
+        0.003200817155872268,
+        0.15590315571988764
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.8899999999999999,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.03791677302298908,
+      "centroidXYZ": [
+        -0.6252029119649168,
+        0.0033573575703357006,
+        0.13005843854842206
+      ]
+    },
+    {
+      "part": "upperArm.L",
+      "station": 0.95,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.03800471448008175,
+      "centroidXYZ": [
+        -0.6398443335471441,
+        0.00176420457474874,
+        0.10303997515125822
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.05,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.037127183753696856,
+      "centroidXYZ": [
+        -0.6685674333380237,
+        -0.003295212128930039,
+        0.07101189559952024
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.10999999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.039410821641908386,
+      "centroidXYZ": [
+        -0.6814088720623376,
+        -0.01477002573212885,
+        0.047022285659172554
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.16999999999999998,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04384245016481316,
+      "centroidXYZ": [
+        -0.6957624736075487,
+        -0.02946566672271269,
+        0.024209941703475634
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.22999999999999998,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.044687159613576104,
+      "centroidXYZ": [
+        -0.7141534840546147,
+        -0.044156697726649645,
+        0.0041966835202654415
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.29,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.043492307838805075,
+      "centroidXYZ": [
+        -0.7308521253693013,
+        -0.058173849006817664,
+        -0.017016905783678413
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.3499999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04287907513645789,
+      "centroidXYZ": [
+        -0.7467958260765547,
+        -0.07251105751525669,
+        -0.03874111828631173
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.4099999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.04211679840533769,
+      "centroidXYZ": [
+        -0.7632582025873649,
+        -0.08679323428269776,
+        -0.060107916834785675
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.4699999999999999,
+      "included": true,
+      "sourceContourIndex": 2,
+      "signedPlaneArea": -0.040873430454112444,
+      "centroidXYZ": [
+        -0.7797511693035012,
+        -0.10217256414511929,
+        -0.08140962005043437
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.5299999999999999,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.040032259477518234,
+      "centroidXYZ": [
+        -0.7959174054716911,
+        -0.11906002480662842,
+        -0.10287753121402896
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.59,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.03917212269468761,
+      "centroidXYZ": [
+        -0.8107170105032926,
+        -0.13254686754734873,
+        -0.12542899801582313
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.6499999999999999,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.037434687840177415,
+      "centroidXYZ": [
+        -0.8248644283259173,
+        -0.14278197502213458,
+        -0.14856271735981189
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.71,
+      "included": true,
+      "sourceContourIndex": 1,
+      "signedPlaneArea": -0.036398570093647324,
+      "centroidXYZ": [
+        -0.8395990903691549,
+        -0.1588202772203918,
+        -0.1710571529219036
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.7699999999999999,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.03440707821713098,
+      "centroidXYZ": [
+        -0.8568651581522274,
+        -0.17482531999161255,
+        -0.19179781088145778
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.83,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.030857228624220242,
+      "centroidXYZ": [
+        -0.8743166501128709,
+        -0.18467363342234427,
+        -0.21265617725151567
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.8899999999999999,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.026693276124308968,
+      "centroidXYZ": [
+        -0.8911923788105298,
+        -0.19065650698988645,
+        -0.2340683570784372
+      ]
+    },
+    {
+      "part": "forearm.L",
+      "station": 0.95,
+      "included": true,
+      "sourceContourIndex": 0,
+      "signedPlaneArea": -0.021930914004394446,
+      "centroidXYZ": [
+        -0.9083795861952159,
+        -0.1994515537385318,
+        -0.25515209142177564
+      ]
+    }
+  ],
+  "torsoMedianTranslationM": [
+    0.025597689811907756,
+    1.2188706068150764e-05,
+    0.0
+  ],
+  "torsoSections": 32,
+  "oldTorsoMatrix": [
+    [
+      0.0,
+      -0.5,
+      0.0,
+      0.0
+    ],
+    [
+      0.52,
+      0.0,
+      0.0,
+      0.007
+    ],
+    [
+      0.0,
+      0.0,
+      0.4722222222222222,
+      1.2266666666666666
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "newTorsoMatrix": [
+    [
+      0.0,
+      -0.5,
+      0.0,
+      0.025597689811907756
+    ],
+    [
+      0.52,
+      0.0,
+      0.0,
+      0.007012188706068151
+    ],
+    [
+      0.0,
+      0.0,
+      0.4722222222222222,
+      1.2266666666666666
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "vertices": 12443,
+  "triangles": 24400,
+  "changedVerticesAbove1Micrometre": 12443,
+  "maximumRegistrationDeltaM": 0.07679949448626254,
+  "maximumBoundaryRegistrationDeltaM": 0.07679949448626254,
+  "previousSelfPairs": 1,
+  "finalSelfPairs": 0,
+  "samePreviousTessellationSelfPairs": 1,
+  "samePreviousTessellationBodyPairs": 1531,
+  "samePreviousTessellationRemovedSelfPairs": 0,
+  "samePreviousTessellationIntroducedSelfPairs": 0,
+  "changedLoopTriangles": 31,
+  "previousBodyPairs": 2552,
+  "finalBodyPairs": 1531,
+  "previousBodyConstructionClasses": {
+    "torso/hood": 1246,
+    "arm-seam": 405,
+    "upperArm.L": 120,
+    "forearm.L": 305,
+    "upperArm.R": 112,
+    "forearm.R": 364
+  },
+  "finalBodyConstructionClasses": {
+    "torso/hood": 977,
+    "arm-seam": 188,
+    "upperArm.L": 61,
+    "forearm.L": 102,
+    "upperArm.R": 69,
+    "forearm.R": 134
+  },
+  "polygonCyclesUVSourceAttributeOriginalMaterialExact": true,
+  "boundaryEdgeCount": 566,
+  "otherNonManifoldEdges": 0,
+  "finalBodyWitnesses": [
+    {
+      "garmentTriangle": 808,
+      "otherTriangle": 15692,
+      "garmentVertexIDs": [
+        4572,
+        8470,
+        8395
+      ],
+      "otherVertexIDs": [
+        8225,
+        8224,
+        8166
+      ],
+      "nativeXYZ": [
+        [
+          -0.00779552198946476,
+          0.1567012518644333,
+          1.5291078090667725
+        ],
+        [
+          0.0005469677271321416,
+          0.16238540410995483,
+          1.5288465023040771
+        ],
+        [
+          0.006334472447633743,
+          0.15607850253582,
+          1.5327436923980713
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.012153577990829945,
+          0.163133442401886,
+          1.5298250913619995
+        ],
+        [
+          -0.003657619934529066,
+          0.1556023508310318,
+          1.5314650535583496
+        ],
+        [
+          0.0023372371215373278,
+          0.13086625933647156,
+          1.5415807962417603
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          0.2878635823726654,
+          0.06678642332553864,
+          0.6404635906219482
+        ],
+        [
+          0.2987946569919586,
+          0.050101447850465775,
+          0.6399102210998535
+        ],
+        [
+          0.28666597604751587,
+          0.03852643445134163,
+          0.6481630802154541
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 808,
+      "otherTriangle": 15720,
+      "garmentVertexIDs": [
+        4572,
+        8470,
+        8395
+      ],
+      "otherVertexIDs": [
+        8235,
+        8234,
+        8224
+      ],
+      "nativeXYZ": [
+        [
+          -0.00779552198946476,
+          0.1567012518644333,
+          1.5291078090667725
+        ],
+        [
+          0.0005469677271321416,
+          0.16238540410995483,
+          1.5288465023040771
+        ],
+        [
+          0.006334472447633743,
+          0.15607850253582,
+          1.5327436923980713
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.01290074735879898,
+          0.18696148693561554,
+          1.5176105499267578
+        ],
+        [
+          -0.005321676377207041,
+          0.17603415250778198,
+          1.5168505907058716
+        ],
+        [
+          -0.003657619934529066,
+          0.1556023508310318,
+          1.5314650535583496
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          0.2878635823726654,
+          0.06678642332553864,
+          0.6404635906219482
+        ],
+        [
+          0.2987946569919586,
+          0.050101447850465775,
+          0.6399102210998535
+        ],
+        [
+          0.28666597604751587,
+          0.03852643445134163,
+          0.6481630802154541
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 808,
+      "otherTriangle": 15721,
+      "garmentVertexIDs": [
+        4572,
+        8470,
+        8395
+      ],
+      "otherVertexIDs": [
+        8235,
+        8224,
+        8225
+      ],
+      "nativeXYZ": [
+        [
+          -0.00779552198946476,
+          0.1567012518644333,
+          1.5291078090667725
+        ],
+        [
+          0.0005469677271321416,
+          0.16238540410995483,
+          1.5288465023040771
+        ],
+        [
+          0.006334472447633743,
+          0.15607850253582,
+          1.5327436923980713
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.01290074735879898,
+          0.18696148693561554,
+          1.5176105499267578
+        ],
+        [
+          -0.003657619934529066,
+          0.1556023508310318,
+          1.5314650535583496
+        ],
+        [
+          0.012153577990829945,
+          0.163133442401886,
+          1.5298250913619995
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          0.2878635823726654,
+          0.06678642332553864,
+          0.6404635906219482
+        ],
+        [
+          0.2987946569919586,
+          0.050101447850465775,
+          0.6399102210998535
+        ],
+        [
+          0.28666597604751587,
+          0.03852643445134163,
+          0.6481630802154541
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 808,
+      "otherTriangle": 15725,
+      "garmentVertexIDs": [
+        4572,
+        8470,
+        8395
+      ],
+      "otherVertexIDs": [
+        8234,
+        8223,
+        8224
+      ],
+      "nativeXYZ": [
+        [
+          -0.00779552198946476,
+          0.1567012518644333,
+          1.5291078090667725
+        ],
+        [
+          0.0005469677271321416,
+          0.16238540410995483,
+          1.5288465023040771
+        ],
+        [
+          0.006334472447633743,
+          0.15607850253582,
+          1.5327436923980713
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          -0.005321676377207041,
+          0.17603415250778198,
+          1.5168505907058716
+        ],
+        [
+          -0.019903745502233505,
+          0.1447298675775528,
+          1.530468225479126
+        ],
+        [
+          -0.003657619934529066,
+          0.1556023508310318,
+          1.5314650535583496
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          0.2878635823726654,
+          0.06678642332553864,
+          0.6404635906219482
+        ],
+        [
+          0.2987946569919586,
+          0.050101447850465775,
+          0.6399102210998535
+        ],
+        [
+          0.28666597604751587,
+          0.03852643445134163,
+          0.6481630802154541
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 809,
+      "otherTriangle": 15692,
+      "garmentVertexIDs": [
+        4572,
+        8395,
+        4577
+      ],
+      "otherVertexIDs": [
+        8225,
+        8224,
+        8166
+      ],
+      "nativeXYZ": [
+        [
+          -0.00779552198946476,
+          0.1567012518644333,
+          1.5291078090667725
+        ],
+        [
+          0.006334472447633743,
+          0.15607850253582,
+          1.5327436923980713
+        ],
+        [
+          0.0035527406726032495,
+          0.15153591334819794,
+          1.5338841676712036
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.012153577990829945,
+          0.163133442401886,
+          1.5298250913619995
+        ],
+        [
+          -0.003657619934529066,
+          0.1556023508310318,
+          1.5314650535583496
+        ],
+        [
+          0.0023372371215373278,
+          0.13086625933647156,
+          1.5415807962417603
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          0.2878635823726654,
+          0.06678642332553864,
+          0.6404635906219482
+        ],
+        [
+          0.28666597604751587,
+          0.03852643445134163,
+          0.6481630802154541
+        ],
+        [
+          0.27793022990226746,
+          0.044089898467063904,
+          0.6505781412124634
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 809,
+      "otherTriangle": 15725,
+      "garmentVertexIDs": [
+        4572,
+        8395,
+        4577
+      ],
+      "otherVertexIDs": [
+        8234,
+        8223,
+        8224
+      ],
+      "nativeXYZ": [
+        [
+          -0.00779552198946476,
+          0.1567012518644333,
+          1.5291078090667725
+        ],
+        [
+          0.006334472447633743,
+          0.15607850253582,
+          1.5327436923980713
+        ],
+        [
+          0.0035527406726032495,
+          0.15153591334819794,
+          1.5338841676712036
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          -0.005321676377207041,
+          0.17603415250778198,
+          1.5168505907058716
+        ],
+        [
+          -0.019903745502233505,
+          0.1447298675775528,
+          1.530468225479126
+        ],
+        [
+          -0.003657619934529066,
+          0.1556023508310318,
+          1.5314650535583496
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          0.2878635823726654,
+          0.06678642332553864,
+          0.6404635906219482
+        ],
+        [
+          0.28666597604751587,
+          0.03852643445134163,
+          0.6481630802154541
+        ],
+        [
+          0.27793022990226746,
+          0.044089898467063904,
+          0.6505781412124634
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1825,
+      "otherTriangle": 5971,
+      "garmentVertexIDs": [
+        4432,
+        4420,
+        4430
+      ],
+      "otherVertexIDs": [
+        3414,
+        3432,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.09528478980064392,
+          -0.3954318165779114,
+          1.2747607231140137
+        ],
+        [
+          0.09597094357013702,
+          -0.3874971568584442,
+          1.2642182111740112
+        ],
+        [
+          0.10375329107046127,
+          -0.39868268370628357,
+          1.2682287693023682
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.11153816431760788,
+          -0.39753538370132446,
+          1.2485820055007935
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7229117155075073,
+          -0.13299164175987244,
+          0.07171192765235901
+        ],
+        [
+          -0.7045698165893555,
+          -0.13072451949119568,
+          0.05286635830998421
+        ],
+        [
+          -0.728834867477417,
+          -0.14325101673603058,
+          0.05492627993226051
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1833,
+      "otherTriangle": 5851,
+      "garmentVertexIDs": [
+        8091,
+        8093,
+        6852
+      ],
+      "otherVertexIDs": [
+        3385,
+        3362,
+        3379
+      ],
+      "nativeXYZ": [
+        [
+          0.06480341404676437,
+          -0.39909660816192627,
+          1.2994905710220337
+        ],
+        [
+          0.05348632484674454,
+          -0.3968379497528076,
+          1.2995728254318237
+        ],
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.06012243032455444,
+          -0.3965532183647156,
+          1.291290283203125
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7286691069602966,
+          -0.09205229580402374,
+          0.13896068930625916
+        ],
+        [
+          -0.7199578285217285,
+          -0.0699479803442955,
+          0.14964160323143005
+        ],
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1833,
+      "otherTriangle": 5868,
+      "garmentVertexIDs": [
+        8091,
+        8093,
+        6852
+      ],
+      "otherVertexIDs": [
+        3379,
+        3362,
+        3372
+      ],
+      "nativeXYZ": [
+        [
+          0.06480341404676437,
+          -0.39909660816192627,
+          1.2994905710220337
+        ],
+        [
+          0.05348632484674454,
+          -0.3968379497528076,
+          1.2995728254318237
+        ],
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06012243032455444,
+          -0.3965532183647156,
+          1.291290283203125
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.040346018970012665,
+          -0.3933798670768738,
+          1.2945427894592285
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7286691069602966,
+          -0.09205229580402374,
+          0.13896068930625916
+        ],
+        [
+          -0.7199578285217285,
+          -0.0699479803442955,
+          0.14964160323143005
+        ],
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1862,
+      "otherTriangle": 5942,
+      "garmentVertexIDs": [
+        4432,
+        4434,
+        4433
+      ],
+      "otherVertexIDs": [
+        3397,
+        3414,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.09528478980064392,
+          -0.3954318165779114,
+          1.2747607231140137
+        ],
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ],
+        [
+          0.08695416152477264,
+          -0.386310338973999,
+          1.2703208923339844
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7229117155075073,
+          -0.13299164175987244,
+          0.07171192765235901
+        ],
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ],
+        [
+          -0.7023619413375854,
+          -0.11842620372772217,
+          0.06892354786396027
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1869,
+      "otherTriangle": 5850,
+      "garmentVertexIDs": [
+        6852,
+        4467,
+        8091
+      ],
+      "otherVertexIDs": [
+        3385,
+        3368,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ],
+        [
+          0.07317504286766052,
+          -0.38817474246025085,
+          1.2930083274841309
+        ],
+        [
+          0.06480341404676437,
+          -0.39909660816192627,
+          1.2994905710220337
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ],
+        [
+          -0.7077341675758362,
+          -0.10780330747365952,
+          0.12319138646125793
+        ],
+        [
+          -0.7286691069602966,
+          -0.09205229580402374,
+          0.13896068930625916
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1869,
+      "otherTriangle": 5851,
+      "garmentVertexIDs": [
+        6852,
+        4467,
+        8091
+      ],
+      "otherVertexIDs": [
+        3385,
+        3362,
+        3379
+      ],
+      "nativeXYZ": [
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ],
+        [
+          0.07317504286766052,
+          -0.38817474246025085,
+          1.2930083274841309
+        ],
+        [
+          0.06480341404676437,
+          -0.39909660816192627,
+          1.2994905710220337
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.06012243032455444,
+          -0.3965532183647156,
+          1.291290283203125
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ],
+        [
+          -0.7077341675758362,
+          -0.10780330747365952,
+          0.12319138646125793
+        ],
+        [
+          -0.7286691069602966,
+          -0.09205229580402374,
+          0.13896068930625916
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1873,
+      "otherTriangle": 5830,
+      "garmentVertexIDs": [
+        8093,
+        8094,
+        6851
+      ],
+      "otherVertexIDs": [
+        3362,
+        3345,
+        3355
+      ],
+      "nativeXYZ": [
+        [
+          0.05348632484674454,
+          -0.3968379497528076,
+          1.2995728254318237
+        ],
+        [
+          0.046970538794994354,
+          -0.39723262190818787,
+          1.3045921325683594
+        ],
+        [
+          0.05289355292916298,
+          -0.3856736123561859,
+          1.2977960109710693
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.0359211303293705,
+          -0.38569456338882446,
+          1.3019646406173706
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7199578285217285,
+          -0.0699479803442955,
+          0.14964160323143005
+        ],
+        [
+          -0.7192373871803284,
+          -0.05568111315369606,
+          0.16529881954193115
+        ],
+        [
+          -0.6951034069061279,
+          -0.06704448163509369,
+          0.15335942804813385
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1873,
+      "otherTriangle": 5831,
+      "garmentVertexIDs": [
+        8093,
+        8094,
+        6851
+      ],
+      "otherVertexIDs": [
+        3362,
+        3355,
+        3372
+      ],
+      "nativeXYZ": [
+        [
+          0.05348632484674454,
+          -0.3968379497528076,
+          1.2995728254318237
+        ],
+        [
+          0.046970538794994354,
+          -0.39723262190818787,
+          1.3045921325683594
+        ],
+        [
+          0.05289355292916298,
+          -0.3856736123561859,
+          1.2977960109710693
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.0359211303293705,
+          -0.38569456338882446,
+          1.3019646406173706
+        ],
+        [
+          0.040346018970012665,
+          -0.3933798670768738,
+          1.2945427894592285
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7199578285217285,
+          -0.0699479803442955,
+          0.14964160323143005
+        ],
+        [
+          -0.7192373871803284,
+          -0.05568111315369606,
+          0.16529881954193115
+        ],
+        [
+          -0.6951034069061279,
+          -0.06704448163509369,
+          0.15335942804813385
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1892,
+      "otherTriangle": 5971,
+      "garmentVertexIDs": [
+        4424,
+        4430,
+        4431
+      ],
+      "otherVertexIDs": [
+        3414,
+        3432,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.1148875430226326,
+          -0.3903069794178009,
+          1.2549757957458496
+        ],
+        [
+          0.10375329107046127,
+          -0.39868268370628357,
+          1.2682287693023682
+        ],
+        [
+          0.09886479377746582,
+          -0.38338297605514526,
+          1.2548190355300903
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.11153816431760788,
+          -0.39753538370132446,
+          1.2485820055007935
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7109171152114868,
+          -0.1585974544286728,
+          0.02568303607404232
+        ],
+        [
+          -0.728834867477417,
+          -0.14325101673603058,
+          0.05492627993226051
+        ],
+        [
+          -0.694354772567749,
+          -0.13177242875099182,
+          0.03454437479376793
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1892,
+      "otherTriangle": 7202,
+      "garmentVertexIDs": [
+        4424,
+        4430,
+        4431
+      ],
+      "otherVertexIDs": [
+        3415,
+        3432,
+        3876
+      ],
+      "nativeXYZ": [
+        [
+          0.1148875430226326,
+          -0.3903069794178009,
+          1.2549757957458496
+        ],
+        [
+          0.10375329107046127,
+          -0.39868268370628357,
+          1.2682287693023682
+        ],
+        [
+          0.09886479377746582,
+          -0.38338297605514526,
+          1.2548190355300903
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ],
+        [
+          0.11153816431760788,
+          -0.39753538370132446,
+          1.2485820055007935
+        ],
+        [
+          0.11021728068590164,
+          -0.38550570607185364,
+          1.2358529567718506
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7109171152114868,
+          -0.1585974544286728,
+          0.02568303607404232
+        ],
+        [
+          -0.728834867477417,
+          -0.14325101673603058,
+          0.05492627993226051
+        ],
+        [
+          -0.694354772567749,
+          -0.13177242875099182,
+          0.03454437479376793
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1893,
+      "otherTriangle": 5971,
+      "garmentVertexIDs": [
+        4430,
+        4420,
+        4431
+      ],
+      "otherVertexIDs": [
+        3414,
+        3432,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.10375329107046127,
+          -0.39868268370628357,
+          1.2682287693023682
+        ],
+        [
+          0.09597094357013702,
+          -0.3874971568584442,
+          1.2642182111740112
+        ],
+        [
+          0.09886479377746582,
+          -0.38338297605514526,
+          1.2548190355300903
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.11153816431760788,
+          -0.39753538370132446,
+          1.2485820055007935
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.728834867477417,
+          -0.14325101673603058,
+          0.05492627993226051
+        ],
+        [
+          -0.7045698165893555,
+          -0.13072451949119568,
+          0.05286635830998421
+        ],
+        [
+          -0.694354772567749,
+          -0.13177242875099182,
+          0.03454437479376793
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1895,
+      "otherTriangle": 5942,
+      "garmentVertexIDs": [
+        4432,
+        4433,
+        4420
+      ],
+      "otherVertexIDs": [
+        3397,
+        3414,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.09528478980064392,
+          -0.3954318165779114,
+          1.2747607231140137
+        ],
+        [
+          0.08695416152477264,
+          -0.386310338973999,
+          1.2703208923339844
+        ],
+        [
+          0.09597094357013702,
+          -0.3874971568584442,
+          1.2642182111740112
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7229117155075073,
+          -0.13299164175987244,
+          0.07171192765235901
+        ],
+        [
+          -0.7023619413375854,
+          -0.11842620372772217,
+          0.06892354786396027
+        ],
+        [
+          -0.7045698165893555,
+          -0.13072451949119568,
+          0.05286635830998421
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1895,
+      "otherTriangle": 5971,
+      "garmentVertexIDs": [
+        4432,
+        4433,
+        4420
+      ],
+      "otherVertexIDs": [
+        3414,
+        3432,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.09528478980064392,
+          -0.3954318165779114,
+          1.2747607231140137
+        ],
+        [
+          0.08695416152477264,
+          -0.386310338973999,
+          1.2703208923339844
+        ],
+        [
+          0.09597094357013702,
+          -0.3874971568584442,
+          1.2642182111740112
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.11153816431760788,
+          -0.39753538370132446,
+          1.2485820055007935
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7229117155075073,
+          -0.13299164175987244,
+          0.07171192765235901
+        ],
+        [
+          -0.7023619413375854,
+          -0.11842620372772217,
+          0.06892354786396027
+        ],
+        [
+          -0.7045698165893555,
+          -0.13072451949119568,
+          0.05286635830998421
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1899,
+      "otherTriangle": 5910,
+      "garmentVertexIDs": [
+        4436,
+        8090,
+        546
+      ],
+      "otherVertexIDs": [
+        3385,
+        3402,
+        3397
+      ],
+      "nativeXYZ": [
+        [
+          0.07779814302921295,
+          -0.38392919301986694,
+          1.2811261415481567
+        ],
+        [
+          0.07936534285545349,
+          -0.3915715217590332,
+          1.2893668413162231
+        ],
+        [
+          0.07204285264015198,
+          -0.3881283402442932,
+          1.2866508960723877
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07711789757013321,
+          -0.39771467447280884,
+          1.2820988893508911
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6988483667373657,
+          -0.10975964367389679,
+          0.09488838165998459
+        ],
+        [
+          -0.716393232345581,
+          -0.11475139856338501,
+          0.10829874873161316
+        ],
+        [
+          -0.706731915473938,
+          -0.10158439725637436,
+          0.10925684869289398
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1899,
+      "otherTriangle": 5911,
+      "garmentVertexIDs": [
+        4436,
+        8090,
+        546
+      ],
+      "otherVertexIDs": [
+        3385,
+        3397,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07779814302921295,
+          -0.38392919301986694,
+          1.2811261415481567
+        ],
+        [
+          0.07936534285545349,
+          -0.3915715217590332,
+          1.2893668413162231
+        ],
+        [
+          0.07204285264015198,
+          -0.3881283402442932,
+          1.2866508960723877
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6988483667373657,
+          -0.10975964367389679,
+          0.09488838165998459
+        ],
+        [
+          -0.716393232345581,
+          -0.11475139856338501,
+          0.10829874873161316
+        ],
+        [
+          -0.706731915473938,
+          -0.10158439725637436,
+          0.10925684869289398
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1900,
+      "otherTriangle": 5911,
+      "garmentVertexIDs": [
+        4434,
+        8090,
+        4436
+      ],
+      "otherVertexIDs": [
+        3385,
+        3397,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ],
+        [
+          0.07936534285545349,
+          -0.3915715217590332,
+          1.2893668413162231
+        ],
+        [
+          0.07779814302921295,
+          -0.38392919301986694,
+          1.2811261415481567
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ],
+        [
+          -0.716393232345581,
+          -0.11475139856338501,
+          0.10829874873161316
+        ],
+        [
+          -0.6988483667373657,
+          -0.10975964367389679,
+          0.09488838165998459
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1901,
+      "otherTriangle": 5910,
+      "garmentVertexIDs": [
+        4468,
+        546,
+        8090
+      ],
+      "otherVertexIDs": [
+        3385,
+        3402,
+        3397
+      ],
+      "nativeXYZ": [
+        [
+          0.07388871163129807,
+          -0.38549166917800903,
+          1.290019154548645
+        ],
+        [
+          0.07204285264015198,
+          -0.3881283402442932,
+          1.2866508960723877
+        ],
+        [
+          0.07936534285545349,
+          -0.3915715217590332,
+          1.2893668413162231
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07711789757013321,
+          -0.39771467447280884,
+          1.2820988893508911
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7020755410194397,
+          -0.10831664502620697,
+          0.1170399859547615
+        ],
+        [
+          -0.706731915473938,
+          -0.10158439725637436,
+          0.10925684869289398
+        ],
+        [
+          -0.716393232345581,
+          -0.11475139856338501,
+          0.10829874873161316
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1901,
+      "otherTriangle": 5911,
+      "garmentVertexIDs": [
+        4468,
+        546,
+        8090
+      ],
+      "otherVertexIDs": [
+        3385,
+        3397,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07388871163129807,
+          -0.38549166917800903,
+          1.290019154548645
+        ],
+        [
+          0.07204285264015198,
+          -0.3881283402442932,
+          1.2866508960723877
+        ],
+        [
+          0.07936534285545349,
+          -0.3915715217590332,
+          1.2893668413162231
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7020755410194397,
+          -0.10831664502620697,
+          0.1170399859547615
+        ],
+        [
+          -0.706731915473938,
+          -0.10158439725637436,
+          0.10925684869289398
+        ],
+        [
+          -0.716393232345581,
+          -0.11475139856338501,
+          0.10829874873161316
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1905,
+      "otherTriangle": 5830,
+      "garmentVertexIDs": [
+        6853,
+        6851,
+        8094
+      ],
+      "otherVertexIDs": [
+        3362,
+        3345,
+        3355
+      ],
+      "nativeXYZ": [
+        [
+          0.052952494472265244,
+          -0.3812669515609741,
+          1.3032407760620117
+        ],
+        [
+          0.05289355292916298,
+          -0.3856736123561859,
+          1.2977960109710693
+        ],
+        [
+          0.046970538794994354,
+          -0.39723262190818787,
+          1.3045921325683594
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.0359211303293705,
+          -0.38569456338882446,
+          1.3019646406173706
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6853700876235962,
+          -0.06316566467285156,
+          0.1690828800201416
+        ],
+        [
+          -0.6951034069061279,
+          -0.06704448163509369,
+          0.15335942804813385
+        ],
+        [
+          -0.7192373871803284,
+          -0.05568111315369606,
+          0.16529881954193115
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1935,
+      "otherTriangle": 5937,
+      "garmentVertexIDs": [
+        4435,
+        4433,
+        4434
+      ],
+      "otherVertexIDs": [
+        3402,
+        3414,
+        3397
+      ],
+      "nativeXYZ": [
+        [
+          0.07780101150274277,
+          -0.38470470905303955,
+          1.2732833623886108
+        ],
+        [
+          0.08695416152477264,
+          -0.386310338973999,
+          1.2703208923339844
+        ],
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07711789757013321,
+          -0.39771467447280884,
+          1.2820988893508911
+        ],
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6983368992805481,
+          -0.10412964224815369,
+          0.07936950773000717
+        ],
+        [
+          -0.7023619413375854,
+          -0.11842620372772217,
+          0.06892354786396027
+        ],
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1935,
+      "otherTriangle": 5942,
+      "garmentVertexIDs": [
+        4435,
+        4433,
+        4434
+      ],
+      "otherVertexIDs": [
+        3397,
+        3414,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.07780101150274277,
+          -0.38470470905303955,
+          1.2732833623886108
+        ],
+        [
+          0.08695416152477264,
+          -0.386310338973999,
+          1.2703208923339844
+        ],
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6983368992805481,
+          -0.10412964224815369,
+          0.07936950773000717
+        ],
+        [
+          -0.7023619413375854,
+          -0.11842620372772217,
+          0.06892354786396027
+        ],
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1937,
+      "otherTriangle": 5910,
+      "garmentVertexIDs": [
+        4436,
+        4435,
+        4434
+      ],
+      "otherVertexIDs": [
+        3385,
+        3402,
+        3397
+      ],
+      "nativeXYZ": [
+        [
+          0.07779814302921295,
+          -0.38392919301986694,
+          1.2811261415481567
+        ],
+        [
+          0.07780101150274277,
+          -0.38470470905303955,
+          1.2732833623886108
+        ],
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07711789757013321,
+          -0.39771467447280884,
+          1.2820988893508911
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6988483667373657,
+          -0.10975964367389679,
+          0.09488838165998459
+        ],
+        [
+          -0.6983368992805481,
+          -0.10412964224815369,
+          0.07936950773000717
+        ],
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1937,
+      "otherTriangle": 5911,
+      "garmentVertexIDs": [
+        4436,
+        4435,
+        4434
+      ],
+      "otherVertexIDs": [
+        3385,
+        3397,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07779814302921295,
+          -0.38392919301986694,
+          1.2811261415481567
+        ],
+        [
+          0.07780101150274277,
+          -0.38470470905303955,
+          1.2732833623886108
+        ],
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6988483667373657,
+          -0.10975964367389679,
+          0.09488838165998459
+        ],
+        [
+          -0.6983368992805481,
+          -0.10412964224815369,
+          0.07936950773000717
+        ],
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1937,
+      "otherTriangle": 5937,
+      "garmentVertexIDs": [
+        4436,
+        4435,
+        4434
+      ],
+      "otherVertexIDs": [
+        3402,
+        3414,
+        3397
+      ],
+      "nativeXYZ": [
+        [
+          0.07779814302921295,
+          -0.38392919301986694,
+          1.2811261415481567
+        ],
+        [
+          0.07780101150274277,
+          -0.38470470905303955,
+          1.2732833623886108
+        ],
+        [
+          0.08499951660633087,
+          -0.3885646164417267,
+          1.2817606925964355
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07711789757013321,
+          -0.39771467447280884,
+          1.2820988893508911
+        ],
+        [
+          0.0918368399143219,
+          -0.3951486051082611,
+          1.2721890211105347
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6988483667373657,
+          -0.10975964367389679,
+          0.09488838165998459
+        ],
+        [
+          -0.6983368992805481,
+          -0.10412964224815369,
+          0.07936950773000717
+        ],
+        [
+          -0.7098299860954285,
+          -0.12104924768209457,
+          0.09070820361375809
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1943,
+      "otherTriangle": 5831,
+      "garmentVertexIDs": [
+        6851,
+        6852,
+        8093
+      ],
+      "otherVertexIDs": [
+        3362,
+        3355,
+        3372
+      ],
+      "nativeXYZ": [
+        [
+          0.05289355292916298,
+          -0.3856736123561859,
+          1.2977960109710693
+        ],
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ],
+        [
+          0.05348632484674454,
+          -0.3968379497528076,
+          1.2995728254318237
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.0359211303293705,
+          -0.38569456338882446,
+          1.3019646406173706
+        ],
+        [
+          0.040346018970012665,
+          -0.3933798670768738,
+          1.2945427894592285
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6951034069061279,
+          -0.06704448163509369,
+          0.15335942804813385
+        ],
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ],
+        [
+          -0.7199578285217285,
+          -0.0699479803442955,
+          0.14964160323143005
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1943,
+      "otherTriangle": 5868,
+      "garmentVertexIDs": [
+        6851,
+        6852,
+        8093
+      ],
+      "otherVertexIDs": [
+        3379,
+        3362,
+        3372
+      ],
+      "nativeXYZ": [
+        [
+          0.05289355292916298,
+          -0.3856736123561859,
+          1.2977960109710693
+        ],
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ],
+        [
+          0.05348632484674454,
+          -0.3968379497528076,
+          1.2995728254318237
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06012243032455444,
+          -0.3965532183647156,
+          1.291290283203125
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.040346018970012665,
+          -0.3933798670768738,
+          1.2945427894592285
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6951034069061279,
+          -0.06704448163509369,
+          0.15335942804813385
+        ],
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ],
+        [
+          -0.7199578285217285,
+          -0.0699479803442955,
+          0.14964160323143005
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1944,
+      "otherTriangle": 5830,
+      "garmentVertexIDs": [
+        8094,
+        6863,
+        6853
+      ],
+      "otherVertexIDs": [
+        3362,
+        3345,
+        3355
+      ],
+      "nativeXYZ": [
+        [
+          0.046970538794994354,
+          -0.39723262190818787,
+          1.3045921325683594
+        ],
+        [
+          0.05172768607735634,
+          -0.3871808350086212,
+          1.3101749420166016
+        ],
+        [
+          0.052952494472265244,
+          -0.3812669515609741,
+          1.3032407760620117
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.0359211303293705,
+          -0.38569456338882446,
+          1.3019646406173706
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7192373871803284,
+          -0.05568111315369606,
+          0.16529881954193115
+        ],
+        [
+          -0.698162853717804,
+          -0.05988794565200806,
+          0.18238304555416107
+        ],
+        [
+          -0.6853700876235962,
+          -0.06316566467285156,
+          0.1690828800201416
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1944,
+      "otherTriangle": 5844,
+      "garmentVertexIDs": [
+        8094,
+        6863,
+        6853
+      ],
+      "otherVertexIDs": [
+        3368,
+        3351,
+        3345
+      ],
+      "nativeXYZ": [
+        [
+          0.046970538794994354,
+          -0.39723262190818787,
+          1.3045921325683594
+        ],
+        [
+          0.05172768607735634,
+          -0.3871808350086212,
+          1.3101749420166016
+        ],
+        [
+          0.052952494472265244,
+          -0.3812669515609741,
+          1.3032407760620117
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.0637584924697876,
+          -0.3753209114074707,
+          1.302544116973877
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7192373871803284,
+          -0.05568111315369606,
+          0.16529881954193115
+        ],
+        [
+          -0.698162853717804,
+          -0.05988794565200806,
+          0.18238304555416107
+        ],
+        [
+          -0.6853700876235962,
+          -0.06316566467285156,
+          0.1690828800201416
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1944,
+      "otherTriangle": 5845,
+      "garmentVertexIDs": [
+        8094,
+        6863,
+        6853
+      ],
+      "otherVertexIDs": [
+        3368,
+        3345,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.046970538794994354,
+          -0.39723262190818787,
+          1.3045921325683594
+        ],
+        [
+          0.05172768607735634,
+          -0.3871808350086212,
+          1.3101749420166016
+        ],
+        [
+          0.052952494472265244,
+          -0.3812669515609741,
+          1.3032407760620117
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7192373871803284,
+          -0.05568111315369606,
+          0.16529881954193115
+        ],
+        [
+          -0.698162853717804,
+          -0.05988794565200806,
+          0.18238304555416107
+        ],
+        [
+          -0.6853700876235962,
+          -0.06316566467285156,
+          0.1690828800201416
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1961,
+      "otherTriangle": 7202,
+      "garmentVertexIDs": [
+        4424,
+        4431,
+        4454
+      ],
+      "otherVertexIDs": [
+        3415,
+        3432,
+        3876
+      ],
+      "nativeXYZ": [
+        [
+          0.1148875430226326,
+          -0.3903069794178009,
+          1.2549757957458496
+        ],
+        [
+          0.09886479377746582,
+          -0.38338297605514526,
+          1.2548190355300903
+        ],
+        [
+          0.11145328730344772,
+          -0.3811626732349396,
+          1.2464765310287476
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ],
+        [
+          0.11153816431760788,
+          -0.39753538370132446,
+          1.2485820055007935
+        ],
+        [
+          0.11021728068590164,
+          -0.38550570607185364,
+          1.2358529567718506
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7109171152114868,
+          -0.1585974544286728,
+          0.02568303607404232
+        ],
+        [
+          -0.694354772567749,
+          -0.13177242875099182,
+          0.03454437479376793
+        ],
+        [
+          -0.6900558471679688,
+          -0.15050101280212402,
+          0.012879732996225357
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1961,
+      "otherTriangle": 7203,
+      "garmentVertexIDs": [
+        4424,
+        4431,
+        4454
+      ],
+      "otherVertexIDs": [
+        3415,
+        3876,
+        3877
+      ],
+      "nativeXYZ": [
+        [
+          0.1148875430226326,
+          -0.3903069794178009,
+          1.2549757957458496
+        ],
+        [
+          0.09886479377746582,
+          -0.38338297605514526,
+          1.2548190355300903
+        ],
+        [
+          0.11145328730344772,
+          -0.3811626732349396,
+          1.2464765310287476
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ],
+        [
+          0.11021728068590164,
+          -0.38550570607185364,
+          1.2358529567718506
+        ],
+        [
+          0.09094440937042236,
+          -0.3684622645378113,
+          1.2524120807647705
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7109171152114868,
+          -0.1585974544286728,
+          0.02568303607404232
+        ],
+        [
+          -0.694354772567749,
+          -0.13177242875099182,
+          0.03454437479376793
+        ],
+        [
+          -0.6900558471679688,
+          -0.15050101280212402,
+          0.012879732996225357
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1972,
+      "otherTriangle": 5852,
+      "garmentVertexIDs": [
+        546,
+        4468,
+        552
+      ],
+      "otherVertexIDs": [
+        3368,
+        3385,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07204285264015198,
+          -0.3881283402442932,
+          1.2866508960723877
+        ],
+        [
+          0.07388871163129807,
+          -0.38549166917800903,
+          1.290019154548645
+        ],
+        [
+          0.06982650607824326,
+          -0.38172447681427,
+          1.2866002321243286
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.706731915473938,
+          -0.10158439725637436,
+          0.10925684869289398
+        ],
+        [
+          -0.7020755410194397,
+          -0.10831664502620697,
+          0.1170399859547615
+        ],
+        [
+          -0.6922876834869385,
+          -0.10035107284784317,
+          0.1148267537355423
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1972,
+      "otherTriangle": 5911,
+      "garmentVertexIDs": [
+        546,
+        4468,
+        552
+      ],
+      "otherVertexIDs": [
+        3385,
+        3397,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07204285264015198,
+          -0.3881283402442932,
+          1.2866508960723877
+        ],
+        [
+          0.07388871163129807,
+          -0.38549166917800903,
+          1.290019154548645
+        ],
+        [
+          0.06982650607824326,
+          -0.38172447681427,
+          1.2866002321243286
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.706731915473938,
+          -0.10158439725637436,
+          0.10925684869289398
+        ],
+        [
+          -0.7020755410194397,
+          -0.10831664502620697,
+          0.1170399859547615
+        ],
+        [
+          -0.6922876834869385,
+          -0.10035107284784317,
+          0.1148267537355423
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1973,
+      "otherTriangle": 5852,
+      "garmentVertexIDs": [
+        4468,
+        4467,
+        552
+      ],
+      "otherVertexIDs": [
+        3368,
+        3385,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07388871163129807,
+          -0.38549166917800903,
+          1.290019154548645
+        ],
+        [
+          0.07317504286766052,
+          -0.38817474246025085,
+          1.2930083274841309
+        ],
+        [
+          0.06982650607824326,
+          -0.38172447681427,
+          1.2866002321243286
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7020755410194397,
+          -0.10831664502620697,
+          0.1170399859547615
+        ],
+        [
+          -0.7077341675758362,
+          -0.10780330747365952,
+          0.12319138646125793
+        ],
+        [
+          -0.6922876834869385,
+          -0.10035107284784317,
+          0.1148267537355423
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1996,
+      "otherTriangle": 5852,
+      "garmentVertexIDs": [
+        552,
+        4467,
+        4469
+      ],
+      "otherVertexIDs": [
+        3368,
+        3385,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.06982650607824326,
+          -0.38172447681427,
+          1.2866002321243286
+        ],
+        [
+          0.07317504286766052,
+          -0.38817474246025085,
+          1.2930083274841309
+        ],
+        [
+          0.06703275442123413,
+          -0.37946775555610657,
+          1.2855623960494995
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6922876834869385,
+          -0.10035107284784317,
+          0.1148267537355423
+        ],
+        [
+          -0.7077341675758362,
+          -0.10780330747365952,
+          0.12319138646125793
+        ],
+        [
+          -0.6862718462944031,
+          -0.09533527493476868,
+          0.11637444794178009
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1997,
+      "otherTriangle": 5850,
+      "garmentVertexIDs": [
+        4467,
+        6852,
+        4469
+      ],
+      "otherVertexIDs": [
+        3385,
+        3368,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.07317504286766052,
+          -0.38817474246025085,
+          1.2930083274841309
+        ],
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ],
+        [
+          0.06703275442123413,
+          -0.37946775555610657,
+          1.2855623960494995
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7077341675758362,
+          -0.10780330747365952,
+          0.12319138646125793
+        ],
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ],
+        [
+          -0.6862718462944031,
+          -0.09533527493476868,
+          0.11637444794178009
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 1997,
+      "otherTriangle": 5852,
+      "garmentVertexIDs": [
+        4467,
+        6852,
+        4469
+      ],
+      "otherVertexIDs": [
+        3368,
+        3385,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.07317504286766052,
+          -0.38817474246025085,
+          1.2930083274841309
+        ],
+        [
+          0.0590558797121048,
+          -0.3867175579071045,
+          1.2932453155517578
+        ],
+        [
+          0.06703275442123413,
+          -0.37946775555610657,
+          1.2855623960494995
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7077341675758362,
+          -0.10780330747365952,
+          0.12319138646125793
+        ],
+        [
+          -0.6993414759635925,
+          -0.08078263700008392,
+          0.13713492453098297
+        ],
+        [
+          -0.6862718462944031,
+          -0.09533527493476868,
+          0.11637444794178009
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2000,
+      "otherTriangle": 5845,
+      "garmentVertexIDs": [
+        39,
+        5764,
+        3022
+      ],
+      "otherVertexIDs": [
+        3368,
+        3345,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ],
+        [
+          0.05827559903264046,
+          -0.3842373192310333,
+          1.300080418586731
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ],
+        [
+          -0.6926945447921753,
+          -0.07787147909402847,
+          0.15795478224754333
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2000,
+      "otherTriangle": 5850,
+      "garmentVertexIDs": [
+        39,
+        5764,
+        3022
+      ],
+      "otherVertexIDs": [
+        3385,
+        3368,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ],
+        [
+          0.05827559903264046,
+          -0.3842373192310333,
+          1.300080418586731
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ],
+        [
+          -0.6926945447921753,
+          -0.07787147909402847,
+          0.15795478224754333
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2024,
+      "otherTriangle": 7203,
+      "garmentVertexIDs": [
+        4454,
+        4431,
+        4440
+      ],
+      "otherVertexIDs": [
+        3415,
+        3876,
+        3877
+      ],
+      "nativeXYZ": [
+        [
+          0.11145328730344772,
+          -0.3811626732349396,
+          1.2464765310287476
+        ],
+        [
+          0.09886479377746582,
+          -0.38338297605514526,
+          1.2548190355300903
+        ],
+        [
+          0.10172664374113083,
+          -0.3698643445968628,
+          1.240372896194458
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ],
+        [
+          0.11021728068590164,
+          -0.38550570607185364,
+          1.2358529567718506
+        ],
+        [
+          0.09094440937042236,
+          -0.3684622645378113,
+          1.2524120807647705
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6900558471679688,
+          -0.15050101280212402,
+          0.012879732996225357
+        ],
+        [
+          -0.694354772567749,
+          -0.13177242875099182,
+          0.03454437479376793
+        ],
+        [
+          -0.6645343899726868,
+          -0.13317103683948517,
+          0.008006539195775986
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2029,
+      "otherTriangle": 5943,
+      "garmentVertexIDs": [
+        5771,
+        499,
+        501
+      ],
+      "otherVertexIDs": [
+        3397,
+        3415,
+        3398
+      ],
+      "nativeXYZ": [
+        [
+          0.0960419550538063,
+          -0.38330700993537903,
+          1.270662784576416
+        ],
+        [
+          0.08535292744636536,
+          -0.37446731328964233,
+          1.2675310373306274
+        ],
+        [
+          0.08758004009723663,
+          -0.37858912348747253,
+          1.2733043432235718
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ],
+        [
+          0.08342653512954712,
+          -0.37320923805236816,
+          1.271126627922058
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6985417604446411,
+          -0.13638731837272644,
+          0.06512537598609924
+        ],
+        [
+          -0.6784612536430359,
+          -0.11820647120475769,
+          0.06594259291887283
+        ],
+        [
+          -0.6886025667190552,
+          -0.12429393827915192,
+          0.07492489367723465
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2029,
+      "otherTriangle": 7189,
+      "garmentVertexIDs": [
+        5771,
+        499,
+        501
+      ],
+      "otherVertexIDs": [
+        3877,
+        3398,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.0960419550538063,
+          -0.38330700993537903,
+          1.270662784576416
+        ],
+        [
+          0.08535292744636536,
+          -0.37446731328964233,
+          1.2675310373306274
+        ],
+        [
+          0.08758004009723663,
+          -0.37858912348747253,
+          1.2733043432235718
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09094440937042236,
+          -0.3684622645378113,
+          1.2524120807647705
+        ],
+        [
+          0.08342653512954712,
+          -0.37320923805236816,
+          1.271126627922058
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6985417604446411,
+          -0.13638731837272644,
+          0.06512537598609924
+        ],
+        [
+          -0.6784612536430359,
+          -0.11820647120475769,
+          0.06594259291887283
+        ],
+        [
+          -0.6886025667190552,
+          -0.12429393827915192,
+          0.07492489367723465
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2035,
+      "otherTriangle": 5853,
+      "garmentVertexIDs": [
+        39,
+        5760,
+        5763
+      ],
+      "otherVertexIDs": [
+        3368,
+        3380,
+        3363
+      ],
+      "nativeXYZ": [
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.07348695397377014,
+          -0.38606953620910645,
+          1.2969257831573486
+        ],
+        [
+          0.0772196352481842,
+          -0.3704168498516083,
+          1.2849725484848022
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ],
+        [
+          0.07361623644828796,
+          -0.37161391973495483,
+          1.2894912958145142
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.7028001546859741,
+          -0.11115676909685135,
+          0.13517244160175323
+        ],
+        [
+          -0.6696758270263672,
+          -0.11713407933712006,
+          0.11341936141252518
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2035,
+      "otherTriangle": 5858,
+      "garmentVertexIDs": [
+        39,
+        5760,
+        5763
+      ],
+      "otherVertexIDs": [
+        3363,
+        3380,
+        3381
+      ],
+      "nativeXYZ": [
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.07348695397377014,
+          -0.38606953620910645,
+          1.2969257831573486
+        ],
+        [
+          0.0772196352481842,
+          -0.3704168498516083,
+          1.2849725484848022
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07361623644828796,
+          -0.37161391973495483,
+          1.2894912958145142
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ],
+        [
+          0.07740270346403122,
+          -0.36707568168640137,
+          1.2747573852539062
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.7028001546859741,
+          -0.11115676909685135,
+          0.13517244160175323
+        ],
+        [
+          -0.6696758270263672,
+          -0.11713407933712006,
+          0.11341936141252518
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2037,
+      "otherTriangle": 5844,
+      "garmentVertexIDs": [
+        3019,
+        3000,
+        3022
+      ],
+      "otherVertexIDs": [
+        3368,
+        3351,
+        3345
+      ],
+      "nativeXYZ": [
+        [
+          0.06153592839837074,
+          -0.37296560406684875,
+          1.2935007810592651
+        ],
+        [
+          0.06038444861769676,
+          -0.3790609836578369,
+          1.3033405542373657
+        ],
+        [
+          0.05827559903264046,
+          -0.3842373192310333,
+          1.300080418586731
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.0637584924697876,
+          -0.3753209114074707,
+          1.302544116973877
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6685038208961487,
+          -0.08310938626527786,
+          0.14790117740631104
+        ],
+        [
+          -0.6811373233795166,
+          -0.07854580134153366,
+          0.16913795471191406
+        ],
+        [
+          -0.6926945447921753,
+          -0.07787147909402847,
+          0.15795478224754333
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2037,
+      "otherTriangle": 5845,
+      "garmentVertexIDs": [
+        3019,
+        3000,
+        3022
+      ],
+      "otherVertexIDs": [
+        3368,
+        3345,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.06153592839837074,
+          -0.37296560406684875,
+          1.2935007810592651
+        ],
+        [
+          0.06038444861769676,
+          -0.3790609836578369,
+          1.3033405542373657
+        ],
+        [
+          0.05827559903264046,
+          -0.3842373192310333,
+          1.300080418586731
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6685038208961487,
+          -0.08310938626527786,
+          0.14790117740631104
+        ],
+        [
+          -0.6811373233795166,
+          -0.07854580134153366,
+          0.16913795471191406
+        ],
+        [
+          -0.6926945447921753,
+          -0.07787147909402847,
+          0.15795478224754333
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2039,
+      "otherTriangle": 5787,
+      "garmentVertexIDs": [
+        55,
+        6863,
+        6864
+      ],
+      "otherVertexIDs": [
+        3351,
+        3328,
+        3345
+      ],
+      "nativeXYZ": [
+        [
+          0.05731460452079773,
+          -0.37260550260543823,
+          1.3013920783996582
+        ],
+        [
+          0.05172768607735634,
+          -0.3871808350086212,
+          1.3101749420166016
+        ],
+        [
+          0.06102073937654495,
+          -0.3805915117263794,
+          1.3158833980560303
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.0637584924697876,
+          -0.3753209114074707,
+          1.302544116973877
+        ],
+        [
+          0.04859559237957001,
+          -0.3743435740470886,
+          1.3130760192871094
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6671842336654663,
+          -0.06981831043958664,
+          0.1680341213941574
+        ],
+        [
+          -0.698162853717804,
+          -0.05988794565200806,
+          0.18238304555416107
+        ],
+        [
+          -0.6851876974105835,
+          -0.07490923255681992,
+          0.19644813239574432
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2056,
+      "otherTriangle": 7189,
+      "garmentVertexIDs": [
+        5779,
+        499,
+        5771
+      ],
+      "otherVertexIDs": [
+        3877,
+        3398,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.09355698525905609,
+          -0.3713763654232025,
+          1.2621967792510986
+        ],
+        [
+          0.08535292744636536,
+          -0.37446731328964233,
+          1.2675310373306274
+        ],
+        [
+          0.0960419550538063,
+          -0.38330700993537903,
+          1.270662784576416
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09094440937042236,
+          -0.3684622645378113,
+          1.2524120807647705
+        ],
+        [
+          0.08342653512954712,
+          -0.37320923805236816,
+          1.271126627922058
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6725382208824158,
+          -0.13108976185321808,
+          0.05219286307692528
+        ],
+        [
+          -0.6784612536430359,
+          -0.11820647120475769,
+          0.06594259291887283
+        ],
+        [
+          -0.6985417604446411,
+          -0.13638731837272644,
+          0.06512537598609924
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2058,
+      "otherTriangle": 5943,
+      "garmentVertexIDs": [
+        499,
+        500,
+        501
+      ],
+      "otherVertexIDs": [
+        3397,
+        3415,
+        3398
+      ],
+      "nativeXYZ": [
+        [
+          0.08535292744636536,
+          -0.37446731328964233,
+          1.2675310373306274
+        ],
+        [
+          0.08561452478170395,
+          -0.3725496828556061,
+          1.276686668395996
+        ],
+        [
+          0.08758004009723663,
+          -0.37858912348747253,
+          1.2733043432235718
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.08281093835830688,
+          -0.386067271232605,
+          1.2784332036972046
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ],
+        [
+          0.08342653512954712,
+          -0.37320923805236816,
+          1.271126627922058
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6784612536430359,
+          -0.11820647120475769,
+          0.06594259291887283
+        ],
+        [
+          -0.6771722435951233,
+          -0.12562066316604614,
+          0.08402014523744583
+        ],
+        [
+          -0.6886025667190552,
+          -0.12429393827915192,
+          0.07492489367723465
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2058,
+      "otherTriangle": 7189,
+      "garmentVertexIDs": [
+        499,
+        500,
+        501
+      ],
+      "otherVertexIDs": [
+        3877,
+        3398,
+        3415
+      ],
+      "nativeXYZ": [
+        [
+          0.08535292744636536,
+          -0.37446731328964233,
+          1.2675310373306274
+        ],
+        [
+          0.08561452478170395,
+          -0.3725496828556061,
+          1.276686668395996
+        ],
+        [
+          0.08758004009723663,
+          -0.37858912348747253,
+          1.2733043432235718
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.09094440937042236,
+          -0.3684622645378113,
+          1.2524120807647705
+        ],
+        [
+          0.08342653512954712,
+          -0.37320923805236816,
+          1.271126627922058
+        ],
+        [
+          0.09406807273626328,
+          -0.3823188543319702,
+          1.265245795249939
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6784612536430359,
+          -0.11820647120475769,
+          0.06594259291887283
+        ],
+        [
+          -0.6771722435951233,
+          -0.12562066316604614,
+          0.08402014523744583
+        ],
+        [
+          -0.6886025667190552,
+          -0.12429393827915192,
+          0.07492489367723465
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2070,
+      "otherTriangle": 5850,
+      "garmentVertexIDs": [
+        5764,
+        39,
+        5763
+      ],
+      "otherVertexIDs": [
+        3385,
+        3368,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ],
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.0772196352481842,
+          -0.3704168498516083,
+          1.2849725484848022
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ],
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.6696758270263672,
+          -0.11713407933712006,
+          0.11341936141252518
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2070,
+      "otherTriangle": 5852,
+      "garmentVertexIDs": [
+        5764,
+        39,
+        5763
+      ],
+      "otherVertexIDs": [
+        3368,
+        3385,
+        3380
+      ],
+      "nativeXYZ": [
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ],
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.0772196352481842,
+          -0.3704168498516083,
+          1.2849725484848022
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07097814232110977,
+          -0.3889104723930359,
+          1.2893954515457153
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ],
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.6696758270263672,
+          -0.11713407933712006,
+          0.11341936141252518
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2070,
+      "otherTriangle": 5853,
+      "garmentVertexIDs": [
+        5764,
+        39,
+        5763
+      ],
+      "otherVertexIDs": [
+        3368,
+        3380,
+        3363
+      ],
+      "nativeXYZ": [
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ],
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.0772196352481842,
+          -0.3704168498516083,
+          1.2849725484848022
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ],
+        [
+          0.07361623644828796,
+          -0.37161391973495483,
+          1.2894912958145142
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ],
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.6696758270263672,
+          -0.11713407933712006,
+          0.11341936141252518
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2070,
+      "otherTriangle": 5858,
+      "garmentVertexIDs": [
+        5764,
+        39,
+        5763
+      ],
+      "otherVertexIDs": [
+        3363,
+        3380,
+        3381
+      ],
+      "nativeXYZ": [
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ],
+        [
+          0.0632949098944664,
+          -0.38957834243774414,
+          1.2997138500213623
+        ],
+        [
+          0.0772196352481842,
+          -0.3704168498516083,
+          1.2849725484848022
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.07361623644828796,
+          -0.37161391973495483,
+          1.2894912958145142
+        ],
+        [
+          0.07735055685043335,
+          -0.37830278277397156,
+          1.2839860916137695
+        ],
+        [
+          0.07740270346403122,
+          -0.36707568168640137,
+          1.2747573852539062
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ],
+        [
+          -0.7064698934555054,
+          -0.09049835056066513,
+          0.14903567731380463
+        ],
+        [
+          -0.6696758270263672,
+          -0.11713407933712006,
+          0.11341936141252518
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2074,
+      "otherTriangle": 5845,
+      "garmentVertexIDs": [
+        5762,
+        3022,
+        5764
+      ],
+      "otherVertexIDs": [
+        3368,
+        3345,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.0642378106713295,
+          -0.3697885274887085,
+          1.286056399345398
+        ],
+        [
+          0.05827559903264046,
+          -0.3842373192310333,
+          1.300080418586731
+        ],
+        [
+          0.06753257662057877,
+          -0.36919966340065,
+          1.283344030380249
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6629360914230347,
+          -0.09024915844202042,
+          0.1288890838623047
+        ],
+        [
+          -0.6926945447921753,
+          -0.07787147909402847,
+          0.15795478224754333
+        ],
+        [
+          -0.6631331443786621,
+          -0.0972810611128807,
+          0.11927396804094315
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2075,
+      "otherTriangle": 5845,
+      "garmentVertexIDs": [
+        5762,
+        3019,
+        3022
+      ],
+      "otherVertexIDs": [
+        3368,
+        3345,
+        3362
+      ],
+      "nativeXYZ": [
+        [
+          0.0642378106713295,
+          -0.3697885274887085,
+          1.286056399345398
+        ],
+        [
+          0.06153592839837074,
+          -0.37296560406684875,
+          1.2935007810592651
+        ],
+        [
+          0.05827559903264046,
+          -0.3842373192310333,
+          1.300080418586731
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ],
+        [
+          0.05573361739516258,
+          -0.3894418478012085,
+          1.2977626323699951
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6629360914230347,
+          -0.09024915844202042,
+          0.1288890838623047
+        ],
+        [
+          -0.6685038208961487,
+          -0.08310938626527786,
+          0.14790117740631104
+        ],
+        [
+          -0.6926945447921753,
+          -0.07787147909402847,
+          0.15795478224754333
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2078,
+      "otherTriangle": 5787,
+      "garmentVertexIDs": [
+        55,
+        6853,
+        6863
+      ],
+      "otherVertexIDs": [
+        3351,
+        3328,
+        3345
+      ],
+      "nativeXYZ": [
+        [
+          0.05731460452079773,
+          -0.37260550260543823,
+          1.3013920783996582
+        ],
+        [
+          0.052952494472265244,
+          -0.3812669515609741,
+          1.3032407760620117
+        ],
+        [
+          0.05172768607735634,
+          -0.3871808350086212,
+          1.3101749420166016
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.0637584924697876,
+          -0.3753209114074707,
+          1.302544116973877
+        ],
+        [
+          0.04859559237957001,
+          -0.3743435740470886,
+          1.3130760192871094
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6671842336654663,
+          -0.06981831043958664,
+          0.1680341213941574
+        ],
+        [
+          -0.6853700876235962,
+          -0.06316566467285156,
+          0.1690828800201416
+        ],
+        [
+          -0.698162853717804,
+          -0.05988794565200806,
+          0.18238304555416107
+        ]
+      ]
+    },
+    {
+      "garmentTriangle": 2078,
+      "otherTriangle": 5844,
+      "garmentVertexIDs": [
+        55,
+        6853,
+        6863
+      ],
+      "otherVertexIDs": [
+        3368,
+        3351,
+        3345
+      ],
+      "nativeXYZ": [
+        [
+          0.05731460452079773,
+          -0.37260550260543823,
+          1.3013920783996582
+        ],
+        [
+          0.052952494472265244,
+          -0.3812669515609741,
+          1.3032407760620117
+        ],
+        [
+          0.05172768607735634,
+          -0.3871808350086212,
+          1.3101749420166016
+        ]
+      ],
+      "otherNativeXYZ": [
+        [
+          0.06679781526327133,
+          -0.38193202018737793,
+          1.2959121465682983
+        ],
+        [
+          0.0637584924697876,
+          -0.3753209114074707,
+          1.302544116973877
+        ],
+        [
+          0.05169275030493736,
+          -0.382256418466568,
+          1.3048204183578491
+        ]
+      ],
+      "sourceDisplayXYZ": [
+        [
+          -0.6671842336654663,
+          -0.06981831043958664,
+          0.1680341213941574
+        ],
+        [
+          -0.6853700876235962,
+          -0.06316566467285156,
+          0.1690828800201416
+        ],
+        [
+          -0.698162853717804,
+          -0.05988794565200806,
+          0.18238304555416107
+        ]
+      ]
+    }
+  ],
+  "finalSelfWitnesses": [],
+  "limits": [
+    "Measured construction registration is not garment skinning, cloth simulation or runtime collision. No radius/iteration sweep, independent vertex snaps, new texture or stock-pattern fallback.",
+    "Polygon cycles and UVs remain exact; Blender may retessellate deformed n-gons. Actual new triangles and a fixed previous-triangle causal diagnostic are both retained.",
+    "Existing cuts were made under previous registration; retained boundary cycles are not a new wearer-port proof. Actual finite-thickness donor ports and complete canonical-body containment need qualification.",
+    "No art/wearing/rig/broad native motion/mobile/M0-M5 acceptance, new capture, inference, worker, Library or normal-player promotion. Body/head/51bind and all prior controls remain immutable; parent alone judges."
+  ]
+}

@@ -563,3 +563,11 @@ Finding: Jake prefers actualdonor and rejects two-tone fittedcolumns. Actual unc
 Validation: Originalsource/native17/recipes hashes exact/no native save. Fulloriented contours/components archivedlosslessly/deterministicgzip hash/count roundtrip64sleeve+32torso verified. Torso-plane normalization dtype corrected explicitlyfloat andcomplete readonlyrun succeeds. Silent ship66 cold1554ms/4810 identical ticks/clear40.083333s/crash103/restart1tick/frame2.210ms/errors0; Blender/diff/hooks pass.
 
 Limits: Sectionair contours notend-to-endwearer-port/capsule-clearance proof; finitewallairports neednotmeshboundaryedges. Nonlinearly mappedcentroid remainsparameterwitness. No body/head/51bind rebuild, capture, inference, worker, rig/broadmotion/player/Library promotion. Source17fit2552body/1self/10cutloops stillunqualified; rootsolejudge/allM0–M5/mobile open.
+
+### Round68 — measured source lumens improve placement, wearer fit still fails
+
+Finding: Joint source S/E/W least-squares anchors from 27 right/26 left local air contours exclude connected torso sections and the tiny left elbow pocket. Existing continuous arm map/seam/radial scale retained; median torso placement +25.598 mm forward/+0.012 mm lateral. Actual selected surface/original UV/PBR remain authoritative. Body pairs 2552→1531; actual self1→0 but fixed previous tessellation self1 remains, so no independent torso-self repair claim.
+
+Validation: 12443 vertices/24400 triangles, polygon cycles/UV/source attributes/original material exact; max and boundary delta76.799 mm.31 automatic native loop-triangle changes explicitly archived beside fixed-tessellation contacts. First identical-triangle assertion failed before save; corrected builder distinguishes native tessellation rather than overwriting a failed native. Independent24 original scoped mesh hashes/18 graphs/17 images/51 rest+pose records exact; Blender/diff/hooks pass.
+
+Limits: 1531 body contacts and existing566 boundary edges/cuts remain unqualified. Scoped mesh hash does not yet cover custom normals/shape keys/modifiers; original objects unchanged. No capture, new rig/native motion, worker/inference, body/head/bind change, Library/player promotion or root art/M0–M5/mobile acceptance. Explicitly unaccepted checkpoint before next construction experiment.
