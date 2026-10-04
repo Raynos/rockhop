@@ -887,3 +887,24 @@ Final riding frame pads8.333ms; executed metadata25ms typo corrected in
 recipe, raw executed bytes preserved. Current wedge boots/closed-solid
 seating remain rejected; root alone judges clips. No construction, source
 rewrite/promotion, Library duplicate or publication. Next required gate51.
+
+
+## Round51 — normal game preserves clear and instant restart
+
+Finding: Required third-round ordinary gate passes after frozen-release
+qualification49 and camera-only replacement50. Fresh build has20normal
+models, no candidate mappings or review adapters; all model/source/lock
+bytes equal preceding48. Unaccepted body/garment/boot controls stay out
+of normal player assets.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick clears
+match40.083333333333336s, hash368f1ca5bd9e830a, finish bytesabaaaaaaaa0a4440,
+0faults/errors. Both crash103ticks, restart tick0 in2ms. Fresh normal
+manifest SHA3e49c691e91389700bccd09c5cb3dc48ea679d60f086cc68fe2d5f13b435ab2a.
+Exact source/asset/dependency pins recorded; diffcheck passes. Evidence:
+gate51/normal-gate.json and source.json.
+
+Limits: Bot gate only, no stranger/physical iOS/candidate art, seating,
+body/face, LOD/performance or deployment acceptance. Source14 failed
+control and current four-slot handoff remain Agent1-owned; root judges.
+No publication attempt by Agent3. Next required own gate54.
