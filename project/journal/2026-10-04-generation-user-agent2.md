@@ -317,3 +317,11 @@ Finding: Original standalone VAE and qualified finite-cell extraction reproduce 
 Validation: Guard exit0 in14.825s;410VAE tensor comparisons and all four native replay checks pass. Derived305593vertices/611198triangles have no nonfinite coordinates, invalid indices, duplicate or zero-area triangles; five components preserved. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
 
 Limits: No global topology/opening/toe enclosure, handedness, fit, rig, physics, PBR or played art/device acceptance. No cleanup, reduction, body edits or publication.
+
+## Round 136 — boots uv01 checkpoint
+
+Finding: Installed xatlas wraps the frozen ankle boot source while preserving every triangle coordinate/count. Actual renderer inpaint/getter controls qualify the saved UV archive before the original PBR run.
+
+Validation: Guard exit0 in138.7s;611198triangles preserved exactly,466412wrapped UV vertices finite. Both inpaint state controls pass; maximum export triangle error1.1920929e-7 is below3e-7.
+
+Limits: Unaccepted dense source; no component removal, remesh/reduction, physical foot/toe/ankle fit, rig, physics or art/device acceptance. No publication.
