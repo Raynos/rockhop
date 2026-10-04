@@ -1,0 +1,28 @@
+2026-10-04 11:34:07,773 - hy3dgen.shapgen - INFO - Try to load model from local path: /Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1
+2026-10-04 11:34:07,773 - hy3dgen.shapgen - INFO - Loading model from /Users/raynos/projects/weights/manual/tencent/Hunyuan3D-2.1/hunyuan3d-vae-v2-1/model.fp16.ckpt
+2026-10-04 11:34:08,566 - hy3dgen.shapgen - INFO - FlashVDMVolumeDecoding Resolution: [95, 190, 380]
+PointCrossAttentionEncoder INFO: pc_sharpedge_size is zero
+
+FlashVDM Volume Decoding:   0%|          | 0/32 [00:00<?, ?it/s]
+FlashVDM Volume Decoding:  12%|█▎        | 4/32 [00:00<00:00, 39.13it/s]
+FlashVDM Volume Decoding:  28%|██▊       | 9/32 [00:00<00:00, 45.43it/s]
+FlashVDM Volume Decoding:  47%|████▋     | 15/32 [00:00<00:00, 47.78it/s]
+FlashVDM Volume Decoding:  62%|██████▎   | 20/32 [00:00<00:00, 48.24it/s]
+FlashVDM Volume Decoding:  81%|████████▏ | 26/32 [00:00<00:00, 49.09it/s]
+FlashVDM Volume Decoding: 100%|██████████| 32/32 [00:00<00:00, 49.48it/s]
+FlashVDM Volume Decoding: 100%|██████████| 32/32 [00:00<00:00, 48.27it/s]
+/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/hy3dshape/hy3dshape/models/autoencoders/volume_decoders.py:81: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/python_variable_indexing.cpp:362.)
+  sliced = padded[slice_dims]
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/decode_item.py", line 201, in <module>
+    main()
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/decode_item.py", line 187, in main
+    adapterSHA256=sha(Path(__file__).with_name('finite_cell_mc.py')),
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/decode_item.py", line 28, in sha
+    with Path(path).open('rb') as stream:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/raynos/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/finite_cell_mc.py'

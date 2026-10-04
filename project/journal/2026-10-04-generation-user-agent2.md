@@ -165,3 +165,11 @@ Finding: Eight ten-commit pushes and one nine-commit push publish the 89 frozen 
 Validation: All nine pushes fast-forwarded, introduced at most ten commits, and matched a fresh remote SHA. No player source/assets/workflow/package delta. Final publication receipt push and CI/deploy verification follow.
 
 Limits: GitHub supersedes queued intermediate checks; pending final checks are not passes. All art/device gates remain open; foreign edits are preserved.
+
+## Round 117 — jeans decode01 checkpoint
+
+Finding: The same-latent jeans decode reproduced native arrays byte-exact and saved finite-cell geometry, then stopped at a missing local adapter hash path before receipt/export. Preserve this recoverable harness failure before resuming existing arrays.
+
+Validation: All native replay equality checks pass; 410 original VAE tensors match. Guard worker exit1 after16.799s; no resource denial or repeated sampling. Existing adapter pin is fd56f9211c61a99f0f517ee9598102ff1507a0006f016f354762ba6045ddb014. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
+
+Limits: Unaccepted source checkpoint only; no PBR, fitting, rig, art, device or M0-M5 acceptance. Root owns plan status and review. No publication.
