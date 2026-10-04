@@ -1869,3 +1869,11 @@ Finding: Matched moving gray comparison of frozen bytes shows flat normals stron
 Validation: Encode guard0/2.312s; silent24frames/4fps/6s/1536x1152, all frames decoded. Both historical frame0 replicas pixel exact;49 render hashes each family and three historical film hashes pass. Runtime24 gate/player pins and playerdiff0 unchanged.
 
 Limits: Technical multiangle observation only, parent aesthetic judgment pending; no topology/intersection/CUDA/fit/rig/game-ready proof. Pixal1024 alternative/prior1536 memory stop retained. No inference/cleanup/recolor/installed edit/donor switch/publication.
+
+## Round 91 — Root validates specific flat-normal review treatment
+
+Finding: Root reviewed actual causal movie pixels and validates flat-normal display for the frozen high-poly TRELLIS/Pixal donors: contour bands strongly suppressed, major hood/sleeve/hem folds and silhouette preserved. Bounded-derived averaged display retains rear bands and changes Pixal neckline shading.
+
+Validation: Exact movie SHA/1,648,668bytes match; root reports silent headless24frames/6s/error0. Saved once as Library libfile_d6b35da875e0819192d98d40a51d1acf version0. Current handoff pointers updated; original archives/films retained.
+
+Limits: Review treatment only, no topology/orientation repair or universal default. Hunyuan construction remains selected and independent; no new inference/render/publication.
