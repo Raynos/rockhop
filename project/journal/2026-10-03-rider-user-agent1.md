@@ -443,3 +443,11 @@ Finding: Sidehoodloft stays above shoulders, descent restricted to broadrear pan
 Validation: Independent18originalmeshes/16graphs/14images/51bind+pose exact; fourboundarycomponents/0othernonmanifold. Local closestnormal gap1.313mm minimum;1937coverage rays still10misses, proxies explicit. Silent ship51 cold1421ms/4810identicalticks/clear40.083333333s/crash103/restart1tick/frame4.795ms/errors0. Frozenrecipe SHA matches07report; Blender/diff/hooks pass.
 
 Limits: One real self witness prevents seed qualification; no donor deformation or rig/game handoff yet. Structuralgrey is notappearancefallback; selectedsource shape/PBR and allM0–M5/movingart/mobile remainopen, rootsolejudge. Normalshipgate is notcandidate/iOS acceptance.
+
+### Round52 — sewn collar separates rear tangents, 2026-10-03
+
+Finding: Explicit20-panel collar8mm rise/2mm ease separates shirt/hood seam tangents, removes remainingrear crossing. Same correctedopenings/body/head/51bind; clean6046v/11840tri source09withfourrealopenings has0body/0self/0othernonmanifold. Next selecteddonor exterior/PBR reconstruction can use this measured seed; grey remainsdiagnostic.
+
+Validation: Independent18source meshes/16materialgraphs/14images/51bind+pose exact. Source02SHA unchanged; source08one-witness recipe frozenexactSHA. Local closestnormal min1.313mm and10of1937coverage misses explicitproxies; Blender/diff/hooks pass.
+
+Limits: Staticintersection prerequisites only; no globalclearance/completecoverage/skin/livecollision/actualgame/iOS/playedart acceptance. SelectedHunyuan shape/PBR stillrequired; no plainshirtfallback, Library/rig/playerhandoff. AllM0–M5open/rootsolejudge.

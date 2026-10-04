@@ -72,19 +72,6 @@ for ids in cuffs:
     vertices += field[:, None] * (-.018 * axis + .005 * r)
     cuff_records.append({'side': side, 'boundaryVertices': ids, 'proximalShorteningM': .018,
                          'radialEaseM': .005, 'geodesicBlendWidthM': .055, 'boneAxisNative': axis.tolist()})
-# A genuine8mm collar band separates shirt shoulder tangents from the hood.
-# The previous shared-edge subdivision crossed one rear shirt triangle.
-neck.sort(key=lambda i: math.atan2(vertices[i,1]-neck_center[1], vertices[i,0]-neck_center[0]))
-original_neck = neck[:]; collar=[]; upper=[]
-for i in original_neck:
-    q=vertices[i].copy(); direction=q[:2]-neck_center[:2]; direction/=np.linalg.norm(direction)
-    q[:2]+=.002*direction; q[2]+=.008
-    collar.append(len(vertices)+len(upper)); upper.append(q)
-vertices=np.vstack([vertices,upper])
-for col in range(20):
-    faces.append([original_neck[col],collar[col],collar[(col+1)%20],original_neck[(col+1)%20]])
-neck=collar
-edge_count=collections.Counter(tuple(sorted((i,j))) for f in faces for i,j in zip(f,f[1:]+f[:1]))
 # Attach only consecutive rear/side edges. The original front-neck arc remains
 # an opening and connects to the free hood mouth through two side boundaries.
 center = vertices[neck].mean(0)
@@ -128,7 +115,7 @@ def tree(o):
 gt,gp,gf=tree(garment); bt,bp,bf=tree(body)
 contacts=gt.overlap(bt); selfpairs=[(i,j) for i,j in gt.overlap(gt) if i<j and not set(gf[i])&set(gf[j])]
 parents=[v.value for v in garment.data.attributes['source_parent_polygon'].data]
-panel=lambda i: ('shirt' if parents[garment.data.loop_triangles[i].polygon_index]<1204 else 'collar' if parents[garment.data.loop_triangles[i].polygon_index]<1224 else 'hood')
+panel=lambda i:'shirt' if parents[garment.data.loop_triangles[i].polygon_index]<1204 else 'hood'
 bm=bmesh.new(); bm.from_mesh(garment.data); bm.verts.ensure_lookup_table(); bm.verts.index_update()
 boundary={e for e in bm.edges if e.is_boundary}; openings=[]
 while boundary:
@@ -150,7 +137,7 @@ bpy.ops.wm.save_as_mainfile(filepath=str(out/'open-hood-seed.blend'),compress=Tr
 assert sha(source)==source_sha
 report={'status':'UNACCEPTED open-front sewn seed; static construction only', 'recipeSHA256':sha(__file__),
         'sourceSHA256':source_sha,'candidateSHA256':sha(out/'open-hood-seed.blend'),
-        'neckExpansionM':.018,'neckGeodesicBlendWidthM':.07,'collarHeightM':.008,'collarRadialEaseM':.002,'originalNeckVertices':original_neck,'collarVertices':collar,'cuffs':cuff_records,
+        'neckExpansionM':.018,'neckGeodesicBlendWidthM':.07,'cuffs':cuff_records,
         'hoodAttachmentVertices':attachment,'hoodNewRows':rows,'hoodColumns':len(attachment),
         'vertices':len(gp),'triangles':len(gf),'nonBoundaryNonManifoldEdges':nonmanifold,'openings':openings,
         'bodyTrianglePairs':len(contacts),'bodyPairsByPanel':dict(collections.Counter(panel(i) for i,j in contacts)),
