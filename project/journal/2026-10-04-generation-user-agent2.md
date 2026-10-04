@@ -205,3 +205,11 @@ Finding: One existing Hunyuan PBR job completes15steps/eight768views/4096texture
 Validation: Guard exit0 in377.322s. Fifteen actual diffusion archives retained; 841998 triangles preserved, finite UVs and5.5960083e-7 maximum OBJ coordinate error pass the8e-7 writer limit. Original PBR maps remain4096.
 
 Limits: Unaccepted raw source; opening/fit/topology/rig/garment physics and played art remain unproven. No cleanup, reduction, player promotion or publication; root alone judges.
+
+## Round 122 — jeans orbit01 checkpoint
+
+Finding: Render one48-frame original-PBR jeans source orbit with frozen geometry, UVs and4096maps, using the existing Blender CPU review recipe. This is source review before fitting.
+
+Validation: Guard exit0; all48frame hashes and readback triangle/UV/material preservation checks pass. No new inference, mesh edits or body/rig changes.
+
+Limits: Orbit encoding/full silent playback and parent art judgment remain pending. Source display is unaccepted and proves no garment opening, fit, motion or mobile gate. No publication.
