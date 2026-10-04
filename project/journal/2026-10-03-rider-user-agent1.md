@@ -860,3 +860,15 @@ source/JSON/recipe/field hashes pass. No native mutation/save/pose/capture.
 See [scope104](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip104/scope.json), ask274.
 Limits: Actual contact/coverage/full-four motion loss and played appearance
 unqualified; neck103 frozen, no collar expansion. AllM0–M5 open, root judge.
+
+## Round105 — record the actual bike independently of palm markers
+
+Finding: New headless source37 control records1065 real bike.frame and51
+bone world/local observations across lean/front-landing/crash/restart.
+Native26 construction input remains a separately pinned identity.
+Validation: Fixture matched hashes/loaded detailed rookie SHA/zero audio
+and receipt hashes pass. Ship105 cold1564ms/4810byte-identicalticks/clear
+40.083333333s0faults/crash103/restart1tick/frame2.415ms/errors0 PASS. See
+[driver105](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip105/actual-driver.json), ask274.
+Limits: Parent control observations are not candidate contact proof. No
+construction, pose edit, new native or pixels. Neck103/allgates frozen/open.
