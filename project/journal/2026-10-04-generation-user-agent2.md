@@ -285,3 +285,11 @@ Finding: Original source GLB/PBR/UV/raw geometry and exact inputs/settings/admis
 Validation: All48video frames decode; six-second silent headless WebKit playback reaches end without media/page errors. Original mesh/map pins match; source, UV and paint checkpoints remain preserved. Normal gameplay gate reuse requires fresh unchanged source pins.
 
 Limits: Unaccepted source only; root judges played art. Body fit, topology/openings, rig, collision, M0–M5/mobile remain open; no publication.
+
+## Round 132 — ready source ledger after cleared admission
+
+Finding: Jeans and glove source/PBR/played reviews are ready before fitting. Preserve the earlier denied glove admission while recording its independently qualified later review. Keep editorial status in a separate docs commit because the source-review art commit excludes shared prose.
+
+Validation: Both six-second clips decoded all48frames and played silently to end without errors. Original runtime24 boot/clear/crash/instant-restart gate reused only after source SHA pins and full player diff remain exact/empty.
+
+Limits: Boots generation follows fresh unchanged admission; root alone judges art. Handedness, fit/topology/rig/physics/M0–M5/device remain open; no publication.
