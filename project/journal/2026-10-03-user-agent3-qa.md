@@ -1302,3 +1302,33 @@ ledge cause or local-transition infeasibility. No solve, source edit,
 competing proposal, new pose/capture/controller or art judgment. Parent
 owns ask275/index and admission; original99/490contact failures and all
 M0–M5 open. No outbound acknowledgment, delivery/upload or publication.
+
+
+## 2026-10-04 Round68 — reproduce source constraints and sampled pixels
+
+Finding: Independent source101 calculations confirm donor-cut conformation
+rather than canonical anatomical reconstruction. Fixed29738 is50.237mm
+outside its canonical reference; nearby native rear bright pixels hit its
+fully fixed triangle. Protected and editable triangles both participate in
+existing neck pixels, so this is a bounded cause constraint, not a verdict
+that every ledge pixel is fixed or the whole proposal is infeasible.
+
+Validation: All556 plane/ray refs reproduce original triangle/barycentric
+provenance within4.99946e-11m. Exact373head/56body fixed IDs and53partial
+alias classes60inside/59outside reproduce;1183raw/1076physical free head
+classes remain. Exactly56body cut positions move up to73.996mm;43707head
+positions and protected head/body-four weights exact original. Existing
+played native72/actual668 yields204sample rows/160hits/44misses;39stable
+fully fixed low-head hits,16dark by maxRGB<100. Native rear29738bright
+triangle46659 witnesses coexist with mixed47697/editable47693 neighbours.
+All21input hashes exact, recipes parse, result/recipe receipts match.
+Evidence: neck68/FINDING.md, finding.json and complete source/pixel reports.
+
+Limits: Geometry-only attribution, not shader/alpha/shadow visibility,
+complete ledge segmentation, anatomy acceptance or proposal construction.
+Projected points can be occluded; no automatic scope expansion. Root moving
+neck REJECT,99contact/compression/actual47identity and490garment contacts
+remain open. Auxiliary100 already independently verified65; frozen101
+pending text predates it. Parent owns ask275/index/art/admission, Agent1
+owns sole construction proposal. No solve/source edit/capture/worker,
+Library delivery/upload/promotion/publication. AllM0–M5 open; gate69 next.
