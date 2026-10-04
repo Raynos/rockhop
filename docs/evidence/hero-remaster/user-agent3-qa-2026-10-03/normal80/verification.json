@@ -1,0 +1,130 @@
+{
+  "status": "RETAINED_SINGLE_ENCODING_TEST_VERIFIED_NO_REENCODE",
+  "recipeSHA256": "5243e09265176325ab376e6f43abb5a96ba6166361ccb048c067a29856ff76f9",
+  "testReportSHA256": "578b60c495c51dd3a952736dc32fc214b9e5f83cd7e23a3c58e3acb0a76059b0",
+  "arraySHA256": "2229fd23bffdd7e1e7f5440a488dfd89eefca9bd59101e5a18ac26cea37853f5",
+  "parts": [
+    {
+      "part": "body",
+      "geometryTopologyMaterialWeightsGroupsTransformsModifiersConstraintsAndShapeKeysExact": {
+        "positions": true,
+        "polygons": true,
+        "loops": true,
+        "edges": true,
+        "materials": true,
+        "smooth": true,
+        "materialIndices": true,
+        "weights": true,
+        "groups": true,
+        "shapeKeys": true,
+        "type": true,
+        "world": true,
+        "basis": true,
+        "local": true,
+        "parentInverse": true,
+        "parent": true,
+        "parentType": true,
+        "parentBone": true,
+        "properties": true,
+        "modifiers": true,
+        "constraints": true
+      },
+      "allExistingNonNormalAttributeFieldsExact": {
+        ".select_vert": true,
+        "position": true,
+        ".corner_vert": true,
+        ".corner_edge": true,
+        ".select_poly": true,
+        "sharp_face": true,
+        ".edge_verts": true,
+        ".select_edge": true,
+        "material_index": true,
+        "_SOURCE_ID": true,
+        "hm08_source_vertex": true,
+        "UVMap": true,
+        ".uv_select_vert": true,
+        ".uv_select_edge": true,
+        ".uv_select_face": true
+      },
+      "addedAttributes": [
+        "custom_normal",
+        "sharp_edge"
+      ],
+      "bodySharpEdgeCreation": {
+        "attributeAdded": true,
+        "edges": 18450,
+        "allValuesFalseVerifiedByCompleteBufferSHA256": "42105744ea83ee51a574ebce141526e5e7302fc33fc8528ac7e7bfa77c6fb9fa",
+        "trueEdgeFlags": 0,
+        "schemaChangeStillOutsideStrictNormalBufferOnlyAllowance": true
+      },
+      "protectedSubsets": {}
+    },
+    {
+      "part": "head",
+      "geometryTopologyMaterialWeightsGroupsTransformsModifiersConstraintsAndShapeKeysExact": {
+        "positions": true,
+        "polygons": true,
+        "loops": true,
+        "edges": true,
+        "materials": true,
+        "smooth": true,
+        "materialIndices": true,
+        "weights": true,
+        "groups": true,
+        "shapeKeys": true,
+        "type": true,
+        "world": true,
+        "basis": true,
+        "local": true,
+        "parentInverse": true,
+        "parent": true,
+        "parentType": true,
+        "parentBone": true,
+        "properties": true,
+        "modifiers": true,
+        "constraints": true
+      },
+      "allExistingNonNormalAttributeFieldsExact": {
+        ".select_vert": true,
+        "position": true,
+        ".corner_vert": true,
+        ".corner_edge": true,
+        ".select_poly": true,
+        "sharp_face": true,
+        ".edge_verts": true,
+        ".select_edge": true,
+        "material_index": true,
+        "UVMap": true,
+        "sharp_edge": true
+      },
+      "addedAttributes": [],
+      "bodySharpEdgeCreation": null,
+      "protectedSubsets": {
+        "partialAliasPinnedInside": {
+          "corners": 200,
+          "bitwiseEqualCorners": 24,
+          "maxVectorError": 0.0001510386458237197,
+          "maxAngularErrorDeg": 0.008653875502108119,
+          "maxErrorCornerID": 43581
+        },
+        "otherProtected": {
+          "corners": 209926,
+          "bitwiseEqualCorners": 207644,
+          "maxVectorError": 0.0006141255036507013,
+          "maxAngularErrorDeg": 0.03518679786564213,
+          "maxErrorCornerID": 132956
+        },
+        "originalProtectedNoOpEncodedCorners": 207664,
+        "afterProtectedNoOpEncodedCorners": 206708
+      }
+    }
+  ],
+  "originalSourceAndAll31PreparationPinsExact": true,
+  "all191PriorStablePinsExact": true,
+  "oneActualEncodingPerPart": true,
+  "preflightFailureBeforeAnyEncoding": "Initial reader assumed body had custom_normal; body has none. Rejected preflight recipe/log retained. Corrected before any setter; no precision/parameter/encoding retry.",
+  "limits": [
+    "This is verification of retained arrays and immutable-field hashes only, not another API conversion.",
+    "Measured direction/vector error is not exact original decoded Float32 equality or root visual acceptance. No universal best-possible error or normal-encoding impossibility proof."
+  ]
+}

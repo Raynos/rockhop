@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/normal80/verify-retained-test.py", line 15, in <module>
+    he=set(scope['headInitialBoundaryLedNativeVertexIDs']);alias=boundary['headPositionAlias'];partial={int(v) for v in np.unique(alias[list(he)]) if not set(np.flatnonzero(alias==v))<=he};pin=[v for v in he if int(alias[v]) in partial];loop=d[p+'LoopVertexIDs'];inside=ids[np.isin(loop[ids],pin)];outside=ids[~np.isin(loop[ids],pin)];assert len(inside)==173
+                                                                                                                                                                                                                                                                                                                                                      ^^^^^^^^^^^^^^^^
+AssertionError

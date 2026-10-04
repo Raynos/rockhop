@@ -1572,3 +1572,28 @@ no secondencode/sweep/geometry/normalrepresentation/fit/weight solve,
 source save/render/capture/adoption/expansion. Parent owns ask275/status
 and rootvisualacceptance; allM0–M5/contact/identity/device/playergatesopen.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/normal79/
+
+
+## 2026-10-04 Round80 — one scratch re-encoding recovers approximate normals
+
+Finding: Headgeometry-dependent INT16_2Dnormaldata can recover original
+protectedobject-space directions within.0351868deg/.000614126vectorerror
+on frozenfailed102scratch. Exactdecoderbytes do notallreturn. Body hadno
+custombuffer; settercreatesbuffer plusallfalsesharp_edge schema, strict
+normalbuffer-only contractfails. No adoption or geometrygate waiver.
+
+Validation: Exactly1setterperbody/head, no retry/sweep/secondencode.
+Head207668/210126protectedcorners byteexact, body17243/35502; native
+partialaliasmask200corners includes173oldchanges. Headraw7110rowschanged
+(5918protected/1192untargeted);461untargeteddecodedchanges. Allscratch
+geometry/topology/UV/PBR/weights/bind/transforms exact; all48originalobjects
+and51rigcontrols/materials/images unchanged.31prep/191priorpins exact.
+PreflightfailedbeforeAPI(bodybufferabsent)and verifier173-vs200correction
+retained; neither repeatedencoding. Primary5.2.1source audited.
+
+Limits: Residual includesFloat32/APIapproximation/shortquantization/fan
+behavior, not exactvisualpreservation or universalbesterror/infeasibility.
+No source/scratchsave/solve/render/film/model/GPU/install/delivery/adoption,
+SQP or464IDexpansion. Stopafterone test/verification; parentowns ask275/
+index/rootvisualjudgment. Failedgeometry and allM0–M5gatesremainopen.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/normal80/

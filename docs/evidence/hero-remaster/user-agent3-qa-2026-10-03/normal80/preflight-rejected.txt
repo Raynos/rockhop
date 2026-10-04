@@ -1,0 +1,9 @@
+00:01.420  blend            | Read blend: "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface28/auxiliary-restored.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/normal80/test-scratch-encoding.py", line 9, in <module>
+    obj=bpy.data.objects[('Bounded neck28 auxiliary-preserved body ' if part=='body' else 'Bounded neck27 triangulated head ')+'four, unaccepted'];m=obj.data;decoded=flat(m.corner_normals,'vector',3,np.float32);assert np.array_equal(decoded,probes[part+'BaseDecodedNormals']);reference[part]=decoded.copy();referenceRaw[part]=attrs(m)['custom_normal']['fields']['value'].copy();referenceIDs[part]={'vertices':flat(m.loops,'vertex_index',1,np.int32).ravel(),'polygonIDs':np.repeat(np.arange(len(m.polygons)),[p.loop_total for p in m.polygons])}
+                                                                                                                                                                                                                                                                                                                                      ~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'custom_normal'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

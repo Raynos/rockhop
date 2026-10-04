@@ -1,0 +1,2097 @@
+{
+  "status": "ONE_PRIVATE_SCRATCH_NORMAL_ENCODING_DIAGNOSTIC_UNACCEPTED",
+  "blender": "5.2.1 LTS",
+  "blenderBuildHash": "9e2066aef7ef",
+  "recipeSHA256": "76c6236eef2cf21270a843d166c25233239766897599e25860fef95da35d0074",
+  "preparationCommit": "51fdad228e02f69e241bb8006cc86691937c37b0",
+  "testCalls": 2,
+  "parts": [
+    {
+      "part": "body",
+      "originalObject": "Bounded neck29 geometry-only body four, unaccepted",
+      "scratchObject": "Agent3 diagnostic normal80 scratch body",
+      "scratchMesh": "Agent3 normal80 scratch mesh body",
+      "nativeVertices": 9219,
+      "nativeLoops": 36662,
+      "nativePolygons": 9232,
+      "nativeTriangles": 18198,
+      "setterCalls": 1,
+      "setterError": null,
+      "normalRepresentation": {
+        "bufferExistedBefore": false,
+        "originalBodyUsesGeneratedNormals": true,
+        "attribute": "custom_normal",
+        "domain": "CORNER",
+        "kind": "INT16_2D",
+        "RNAReadValuesDtype": "int32 widened exact signed-short values",
+        "decoderDtype": "Float32 object-space XYZ",
+        "inputDtype": "Original Float32 values expanded to Python then RNA Float32; internal API normalizes once",
+        "shortScale": 32767,
+        "normalDomain": "CORNER",
+        "hasCustomNormals": true
+      },
+      "rawEncodingChangedProtectedCorners": 35502,
+      "rawEncodingChangedUntargetedCorners": 1160,
+      "decodedChangedProtectedCorners": 18211,
+      "decodedChangedUntargetedCorners": 461,
+      "beforeErrorAgainstOriginalProtected": {
+        "corners": 35502,
+        "bitwiseEqualCorners": 35350,
+        "bitwiseEqualComponents": 106050,
+        "maxAbsComponentError": 0.0031272172927856445,
+        "maxVectorError": 0.003575798049472278,
+        "meanVectorError": 1.9116386103600895e-06,
+        "maxAngularErrorDeg": 0.2048782396234465,
+        "maxVectorCornerID": 18942,
+        "maxAngularCornerID": 18942,
+        "zeroOrInvalidDirectionRows": 0,
+        "targetLengthMaxAbsResidualFrom1": 1.258102146906026e-07,
+        "decodedLengthMaxAbsResidualFrom1": 1.258102146906026e-07
+      },
+      "afterErrorAgainstOriginalProtected": {
+        "corners": 35502,
+        "bitwiseEqualCorners": 17243,
+        "bitwiseEqualComponents": 78126,
+        "maxAbsComponentError": 0.0002192854881286621,
+        "maxVectorError": 0.0003051742158237043,
+        "meanVectorError": 3.6860759515431455e-07,
+        "maxAngularErrorDeg": 0.017485194412723396,
+        "maxVectorCornerID": 18501,
+        "maxAngularCornerID": 18501,
+        "zeroOrInvalidDirectionRows": 0,
+        "targetLengthMaxAbsResidualFrom1": 1.258102146906026e-07,
+        "decodedLengthMaxAbsResidualFrom1": 1.2528408821488313e-07
+      },
+      "untargetedErrorAgainstFailedBefore": {
+        "corners": 1160,
+        "bitwiseEqualCorners": 699,
+        "bitwiseEqualComponents": 2680,
+        "maxAbsComponentError": 1.4901161193847656e-07,
+        "maxVectorError": 1.4901161193847656e-07,
+        "meanVectorError": 2.2657267240500415e-08,
+        "maxAngularErrorDeg": 7.857007348007053e-06,
+        "maxVectorCornerID": 18844,
+        "maxAngularCornerID": 18844,
+        "zeroOrInvalidDirectionRows": 0,
+        "targetLengthMaxAbsResidualFrom1": 9.363141817431142e-08,
+        "decodedLengthMaxAbsResidualFrom1": 9.020574598395115e-08
+      },
+      "allFieldsExceptNormalBufferAndDecodedOutputExact": false,
+      "rawAttributeChanges": [
+        {
+          "attribute": "custom_normal",
+          "added": true,
+          "removed": false,
+          "domain": "CORNER",
+          "kind": "INT16_2D",
+          "rows": 36662
+        },
+        {
+          "attribute": "sharp_edge",
+          "added": true,
+          "removed": false,
+          "domain": "EDGE",
+          "kind": "BOOLEAN",
+          "rows": 18450
+        }
+      ],
+      "beforeState": {
+        "type": "MESH",
+        "world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.6499999761581421
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parentInverse": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parent": [
+          "Object",
+          "Independent anatomical foundation rig",
+          null
+        ],
+        "parentType": "OBJECT",
+        "parentBone": "",
+        "properties": {},
+        "modifiers": [
+          {
+            "kind": "ARMATURE",
+            "properties": {
+              "name": "Armature",
+              "show_viewport": true,
+              "show_render": true,
+              "show_in_editmode": false,
+              "show_on_cage": false,
+              "show_expanded": true,
+              "is_active": true,
+              "use_pin_to_last": false,
+              "use_apply_on_spline": false,
+              "object": [
+                "Object",
+                "Independent anatomical foundation rig",
+                null
+              ],
+              "use_bone_envelopes": false,
+              "use_vertex_groups": true,
+              "use_deform_preserve_volume": false,
+              "use_multi_modifier": false,
+              "vertex_group": "",
+              "invert_vertex_group": false
+            },
+            "custom": {}
+          }
+        ],
+        "constraints": [],
+        "mesh": {
+          "positions": "fd4d6fbc7a12b2f7c60f78f8da983bd9253157e44f0ab346d7b9c425bcacfa22",
+          "polygons": "7eaa2de6433ce02d401884d37b39cde8ed37028c2e3f47ab9f8b39fd3f31a755",
+          "loops": "8acc40cdc49b8c10cdbc21d4c2982cb18967aef6109b025c559a2776371cc10c",
+          "edges": "00a68604b7e02327e201e8dc6c6f3bf9a8a639b6198dd4389921862d1106366d",
+          "materials": [
+            [
+              "Material",
+              "Canonical skin paired with protected head",
+              null
+            ]
+          ],
+          "smooth": "c7ef282a7d2a3b1db3ad49f71a99aaf9f3748eaf70927ff99473bb9067bb5b01",
+          "materialIndices": "9d34d2891fe0b09cd4b8e9e52b2745b4ae64c5f1561c0b29171f1c0df198f117",
+          "weights": "32fc477b907617f46d0235a9454842eab99b669d12021aa204ce0f68af58d2a5",
+          "groups": [
+            "HelperGeometry",
+            "JointCubes",
+            "Left",
+            "Mid",
+            "Right",
+            "body",
+            "helper-genital",
+            "helper-hair",
+            "helper-l-eye",
+            "helper-l-eyelashes-1",
+            "helper-l-eyelashes-2",
+            "helper-lower-teeth",
+            "helper-r-eye",
+            "helper-r-eyelashes-1",
+            "helper-r-eyelashes-2",
+            "helper-skirt",
+            "helper-tights",
+            "helper-tongue",
+            "helper-upper-teeth",
+            "joint-ground",
+            "joint-head",
+            "joint-head-2",
+            "joint-jaw",
+            "joint-l-ankle",
+            "joint-l-clavicle",
+            "joint-l-elbow",
+            "joint-l-eye",
+            "joint-l-eye-target",
+            "joint-l-finger-1-1",
+            "joint-l-finger-1-2",
+            "joint-l-finger-1-3",
+            "joint-l-finger-1-4",
+            "joint-l-finger-2-1",
+            "joint-l-finger-2-2",
+            "joint-l-finger-2-3",
+            "joint-l-finger-2-4",
+            "joint-l-finger-3-1",
+            "joint-l-finger-3-2",
+            "joint-l-finger-3-3",
+            "joint-l-finger-3-4",
+            "joint-l-finger-4-1",
+            "joint-l-finger-4-2",
+            "joint-l-finger-4-3",
+            "joint-l-finger-4-4",
+            "joint-l-finger-5-1",
+            "joint-l-finger-5-2",
+            "joint-l-finger-5-3",
+            "joint-l-finger-5-4",
+            "joint-l-foot-1",
+            "joint-l-foot-2",
+            "joint-l-hand",
+            "joint-l-hand-2",
+            "joint-l-hand-3",
+            "joint-l-knee",
+            "joint-l-lowerlid",
+            "joint-l-scapula",
+            "joint-l-shoulder",
+            "joint-l-toe-1-1",
+            "joint-l-toe-1-2",
+            "joint-l-toe-1-3",
+            "joint-l-toe-2-1",
+            "joint-l-toe-2-2",
+            "joint-l-toe-2-3",
+            "joint-l-toe-2-4",
+            "joint-l-toe-3-1",
+            "joint-l-toe-3-2",
+            "joint-l-toe-3-3",
+            "joint-l-toe-3-4",
+            "joint-l-toe-4-1",
+            "joint-l-toe-4-2",
+            "joint-l-toe-4-3",
+            "joint-l-toe-4-4",
+            "joint-l-toe-5-1",
+            "joint-l-toe-5-2",
+            "joint-l-toe-5-3",
+            "joint-l-toe-5-4",
+            "joint-l-upper-leg",
+            "joint-l-upperlid",
+            "joint-mouth",
+            "joint-neck",
+            "joint-pelvis",
+            "joint-r-ankle",
+            "joint-r-clavicle",
+            "joint-r-elbow",
+            "joint-r-eye",
+            "joint-r-eye-target",
+            "joint-r-finger-1-1",
+            "joint-r-finger-1-2",
+            "joint-r-finger-1-3",
+            "joint-r-finger-1-4",
+            "joint-r-finger-2-1",
+            "joint-r-finger-2-2",
+            "joint-r-finger-2-3",
+            "joint-r-finger-2-4",
+            "joint-r-finger-3-1",
+            "joint-r-finger-3-2",
+            "joint-r-finger-3-3",
+            "joint-r-finger-3-4",
+            "joint-r-finger-4-1",
+            "joint-r-finger-4-2",
+            "joint-r-finger-4-3",
+            "joint-r-finger-4-4",
+            "joint-r-finger-5-1",
+            "joint-r-finger-5-2",
+            "joint-r-finger-5-3",
+            "joint-r-finger-5-4",
+            "joint-r-foot-1",
+            "joint-r-foot-2",
+            "joint-r-hand",
+            "joint-r-hand-2",
+            "joint-r-hand-3",
+            "joint-r-knee",
+            "joint-r-lowerlid",
+            "joint-r-scapula",
+            "joint-r-shoulder",
+            "joint-r-toe-1-1",
+            "joint-r-toe-1-2",
+            "joint-r-toe-1-3",
+            "joint-r-toe-2-1",
+            "joint-r-toe-2-2",
+            "joint-r-toe-2-3",
+            "joint-r-toe-2-4",
+            "joint-r-toe-3-1",
+            "joint-r-toe-3-2",
+            "joint-r-toe-3-3",
+            "joint-r-toe-3-4",
+            "joint-r-toe-4-1",
+            "joint-r-toe-4-2",
+            "joint-r-toe-4-3",
+            "joint-r-toe-4-4",
+            "joint-r-toe-5-1",
+            "joint-r-toe-5-2",
+            "joint-r-toe-5-3",
+            "joint-r-toe-5-4",
+            "joint-r-upper-leg",
+            "joint-r-upperlid",
+            "joint-spine-1",
+            "joint-spine-2",
+            "joint-spine-3",
+            "joint-spine-4",
+            "joint-tongue-1",
+            "joint-tongue-2",
+            "joint-tongue-3",
+            "joint-tongue-4",
+            "nippleTip",
+            "nipple",
+            "lips",
+            "fingernails",
+            "toenails",
+            "ears",
+            "scalp",
+            "genitals",
+            "pelvis",
+            "spine",
+            "chest",
+            "shoulder.R",
+            "upperArm.R",
+            "forearm.R",
+            "hand.R",
+            "index_01.R",
+            "index_02.R",
+            "index_03.R",
+            "middle_01.R",
+            "middle_02.R",
+            "middle_03.R",
+            "pinky_01.R",
+            "pinky_02.R",
+            "pinky_03.R",
+            "ring_01.R",
+            "ring_02.R",
+            "ring_03.R",
+            "thumb_01.R",
+            "thumb_02.R",
+            "thumb_03.R",
+            "shoulder.L",
+            "upperArm.L",
+            "forearm.L",
+            "hand.L",
+            "index_01.L",
+            "index_02.L",
+            "index_03.L",
+            "middle_01.L",
+            "middle_02.L",
+            "middle_03.L",
+            "pinky_01.L",
+            "pinky_02.L",
+            "pinky_03.L",
+            "ring_01.L",
+            "ring_02.L",
+            "ring_03.L",
+            "thumb_01.L",
+            "thumb_02.L",
+            "thumb_03.L",
+            "neck",
+            "head",
+            "thigh.R",
+            "shin.R",
+            "foot.R",
+            "ball.R",
+            "thigh.L",
+            "shin.L",
+            "foot.L",
+            "ball.L",
+            "Delete.male_casualsuit02"
+          ],
+          "attributes": {
+            ".select_vert": {
+              "kind": "BOOLEAN",
+              "domain": "POINT",
+              "fields": {
+                "value": "66b0f272939ab5afe8bae81c30f83223e4f4515ac3dfe448d594a042f90e5291"
+              }
+            },
+            "position": {
+              "kind": "FLOAT_VECTOR",
+              "domain": "POINT",
+              "fields": {
+                "vector": "fd4d6fbc7a12b2f7c60f78f8da983bd9253157e44f0ab346d7b9c425bcacfa22"
+              }
+            },
+            ".corner_vert": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "8acc40cdc49b8c10cdbc21d4c2982cb18967aef6109b025c559a2776371cc10c"
+              }
+            },
+            ".corner_edge": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "c3143a2ec5cb3084ad0dc598b3bcc07baab22057081330ea6cec3033d07b3d7f"
+              }
+            },
+            ".select_poly": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "c7ef282a7d2a3b1db3ad49f71a99aaf9f3748eaf70927ff99473bb9067bb5b01"
+              }
+            },
+            "sharp_face": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "54354ccfb54114bb6c551b37bf4c385ff156a44a40e7101c900859de5cfe4f5c"
+              }
+            },
+            ".edge_verts": {
+              "kind": "INT32_2D",
+              "domain": "EDGE",
+              "fields": {
+                "value": "00a68604b7e02327e201e8dc6c6f3bf9a8a639b6198dd4389921862d1106366d"
+              }
+            },
+            ".select_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "b2ea22008d02ef7926be3bbc37823f471e3fc6c6fe9e18d18238db8b281e5ccc"
+              }
+            },
+            "material_index": {
+              "kind": "INT",
+              "domain": "FACE",
+              "fields": {
+                "value": "9d34d2891fe0b09cd4b8e9e52b2745b4ae64c5f1561c0b29171f1c0df198f117"
+              }
+            },
+            "_SOURCE_ID": {
+              "kind": "FLOAT",
+              "domain": "POINT",
+              "fields": {
+                "value": "aa0b2d839a3ddee8e38fb0cf28825aef7ac3e8db74ebf0be855491ec1740bb80"
+              }
+            },
+            "hm08_source_vertex": {
+              "kind": "INT",
+              "domain": "POINT",
+              "fields": {
+                "value": "f06dd8e4be897ac825f456978adeb4ed5181f998d7c22e0d64547b4707aac7b4"
+              }
+            },
+            "UVMap": {
+              "kind": "FLOAT2",
+              "domain": "CORNER",
+              "fields": {
+                "vector": "e02c01ca6656d68f4a47f9ce5b52c04d120ce89373bdf7852ed806ff9e0f8632"
+              }
+            },
+            ".uv_select_vert": {
+              "kind": "BOOLEAN",
+              "domain": "CORNER",
+              "fields": {
+                "value": "289338f656d5fce765ba16b7dba3acee837bbba7770283376b2a9da20b5ccdd7"
+              }
+            },
+            ".uv_select_edge": {
+              "kind": "BOOLEAN",
+              "domain": "CORNER",
+              "fields": {
+                "value": "289338f656d5fce765ba16b7dba3acee837bbba7770283376b2a9da20b5ccdd7"
+              }
+            },
+            ".uv_select_face": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "54354ccfb54114bb6c551b37bf4c385ff156a44a40e7101c900859de5cfe4f5c"
+              }
+            }
+          },
+          "hasCustomNormals": false,
+          "cornerNormals": "d0b9709f885d1b598270cb6a106dad999fafaa54b0cc6ebb4b77232571296b29",
+          "shapeKeys": null
+        }
+      },
+      "afterState": {
+        "type": "MESH",
+        "world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.6499999761581421
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parentInverse": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parent": [
+          "Object",
+          "Independent anatomical foundation rig",
+          null
+        ],
+        "parentType": "OBJECT",
+        "parentBone": "",
+        "properties": {},
+        "modifiers": [
+          {
+            "kind": "ARMATURE",
+            "properties": {
+              "name": "Armature",
+              "show_viewport": true,
+              "show_render": true,
+              "show_in_editmode": false,
+              "show_on_cage": false,
+              "show_expanded": true,
+              "is_active": true,
+              "use_pin_to_last": false,
+              "use_apply_on_spline": false,
+              "object": [
+                "Object",
+                "Independent anatomical foundation rig",
+                null
+              ],
+              "use_bone_envelopes": false,
+              "use_vertex_groups": true,
+              "use_deform_preserve_volume": false,
+              "use_multi_modifier": false,
+              "vertex_group": "",
+              "invert_vertex_group": false
+            },
+            "custom": {}
+          }
+        ],
+        "constraints": [],
+        "mesh": {
+          "positions": "fd4d6fbc7a12b2f7c60f78f8da983bd9253157e44f0ab346d7b9c425bcacfa22",
+          "polygons": "7eaa2de6433ce02d401884d37b39cde8ed37028c2e3f47ab9f8b39fd3f31a755",
+          "loops": "8acc40cdc49b8c10cdbc21d4c2982cb18967aef6109b025c559a2776371cc10c",
+          "edges": "00a68604b7e02327e201e8dc6c6f3bf9a8a639b6198dd4389921862d1106366d",
+          "materials": [
+            [
+              "Material",
+              "Canonical skin paired with protected head",
+              null
+            ]
+          ],
+          "smooth": "c7ef282a7d2a3b1db3ad49f71a99aaf9f3748eaf70927ff99473bb9067bb5b01",
+          "materialIndices": "9d34d2891fe0b09cd4b8e9e52b2745b4ae64c5f1561c0b29171f1c0df198f117",
+          "weights": "32fc477b907617f46d0235a9454842eab99b669d12021aa204ce0f68af58d2a5",
+          "groups": [
+            "HelperGeometry",
+            "JointCubes",
+            "Left",
+            "Mid",
+            "Right",
+            "body",
+            "helper-genital",
+            "helper-hair",
+            "helper-l-eye",
+            "helper-l-eyelashes-1",
+            "helper-l-eyelashes-2",
+            "helper-lower-teeth",
+            "helper-r-eye",
+            "helper-r-eyelashes-1",
+            "helper-r-eyelashes-2",
+            "helper-skirt",
+            "helper-tights",
+            "helper-tongue",
+            "helper-upper-teeth",
+            "joint-ground",
+            "joint-head",
+            "joint-head-2",
+            "joint-jaw",
+            "joint-l-ankle",
+            "joint-l-clavicle",
+            "joint-l-elbow",
+            "joint-l-eye",
+            "joint-l-eye-target",
+            "joint-l-finger-1-1",
+            "joint-l-finger-1-2",
+            "joint-l-finger-1-3",
+            "joint-l-finger-1-4",
+            "joint-l-finger-2-1",
+            "joint-l-finger-2-2",
+            "joint-l-finger-2-3",
+            "joint-l-finger-2-4",
+            "joint-l-finger-3-1",
+            "joint-l-finger-3-2",
+            "joint-l-finger-3-3",
+            "joint-l-finger-3-4",
+            "joint-l-finger-4-1",
+            "joint-l-finger-4-2",
+            "joint-l-finger-4-3",
+            "joint-l-finger-4-4",
+            "joint-l-finger-5-1",
+            "joint-l-finger-5-2",
+            "joint-l-finger-5-3",
+            "joint-l-finger-5-4",
+            "joint-l-foot-1",
+            "joint-l-foot-2",
+            "joint-l-hand",
+            "joint-l-hand-2",
+            "joint-l-hand-3",
+            "joint-l-knee",
+            "joint-l-lowerlid",
+            "joint-l-scapula",
+            "joint-l-shoulder",
+            "joint-l-toe-1-1",
+            "joint-l-toe-1-2",
+            "joint-l-toe-1-3",
+            "joint-l-toe-2-1",
+            "joint-l-toe-2-2",
+            "joint-l-toe-2-3",
+            "joint-l-toe-2-4",
+            "joint-l-toe-3-1",
+            "joint-l-toe-3-2",
+            "joint-l-toe-3-3",
+            "joint-l-toe-3-4",
+            "joint-l-toe-4-1",
+            "joint-l-toe-4-2",
+            "joint-l-toe-4-3",
+            "joint-l-toe-4-4",
+            "joint-l-toe-5-1",
+            "joint-l-toe-5-2",
+            "joint-l-toe-5-3",
+            "joint-l-toe-5-4",
+            "joint-l-upper-leg",
+            "joint-l-upperlid",
+            "joint-mouth",
+            "joint-neck",
+            "joint-pelvis",
+            "joint-r-ankle",
+            "joint-r-clavicle",
+            "joint-r-elbow",
+            "joint-r-eye",
+            "joint-r-eye-target",
+            "joint-r-finger-1-1",
+            "joint-r-finger-1-2",
+            "joint-r-finger-1-3",
+            "joint-r-finger-1-4",
+            "joint-r-finger-2-1",
+            "joint-r-finger-2-2",
+            "joint-r-finger-2-3",
+            "joint-r-finger-2-4",
+            "joint-r-finger-3-1",
+            "joint-r-finger-3-2",
+            "joint-r-finger-3-3",
+            "joint-r-finger-3-4",
+            "joint-r-finger-4-1",
+            "joint-r-finger-4-2",
+            "joint-r-finger-4-3",
+            "joint-r-finger-4-4",
+            "joint-r-finger-5-1",
+            "joint-r-finger-5-2",
+            "joint-r-finger-5-3",
+            "joint-r-finger-5-4",
+            "joint-r-foot-1",
+            "joint-r-foot-2",
+            "joint-r-hand",
+            "joint-r-hand-2",
+            "joint-r-hand-3",
+            "joint-r-knee",
+            "joint-r-lowerlid",
+            "joint-r-scapula",
+            "joint-r-shoulder",
+            "joint-r-toe-1-1",
+            "joint-r-toe-1-2",
+            "joint-r-toe-1-3",
+            "joint-r-toe-2-1",
+            "joint-r-toe-2-2",
+            "joint-r-toe-2-3",
+            "joint-r-toe-2-4",
+            "joint-r-toe-3-1",
+            "joint-r-toe-3-2",
+            "joint-r-toe-3-3",
+            "joint-r-toe-3-4",
+            "joint-r-toe-4-1",
+            "joint-r-toe-4-2",
+            "joint-r-toe-4-3",
+            "joint-r-toe-4-4",
+            "joint-r-toe-5-1",
+            "joint-r-toe-5-2",
+            "joint-r-toe-5-3",
+            "joint-r-toe-5-4",
+            "joint-r-upper-leg",
+            "joint-r-upperlid",
+            "joint-spine-1",
+            "joint-spine-2",
+            "joint-spine-3",
+            "joint-spine-4",
+            "joint-tongue-1",
+            "joint-tongue-2",
+            "joint-tongue-3",
+            "joint-tongue-4",
+            "nippleTip",
+            "nipple",
+            "lips",
+            "fingernails",
+            "toenails",
+            "ears",
+            "scalp",
+            "genitals",
+            "pelvis",
+            "spine",
+            "chest",
+            "shoulder.R",
+            "upperArm.R",
+            "forearm.R",
+            "hand.R",
+            "index_01.R",
+            "index_02.R",
+            "index_03.R",
+            "middle_01.R",
+            "middle_02.R",
+            "middle_03.R",
+            "pinky_01.R",
+            "pinky_02.R",
+            "pinky_03.R",
+            "ring_01.R",
+            "ring_02.R",
+            "ring_03.R",
+            "thumb_01.R",
+            "thumb_02.R",
+            "thumb_03.R",
+            "shoulder.L",
+            "upperArm.L",
+            "forearm.L",
+            "hand.L",
+            "index_01.L",
+            "index_02.L",
+            "index_03.L",
+            "middle_01.L",
+            "middle_02.L",
+            "middle_03.L",
+            "pinky_01.L",
+            "pinky_02.L",
+            "pinky_03.L",
+            "ring_01.L",
+            "ring_02.L",
+            "ring_03.L",
+            "thumb_01.L",
+            "thumb_02.L",
+            "thumb_03.L",
+            "neck",
+            "head",
+            "thigh.R",
+            "shin.R",
+            "foot.R",
+            "ball.R",
+            "thigh.L",
+            "shin.L",
+            "foot.L",
+            "ball.L",
+            "Delete.male_casualsuit02"
+          ],
+          "attributes": {
+            ".select_vert": {
+              "kind": "BOOLEAN",
+              "domain": "POINT",
+              "fields": {
+                "value": "66b0f272939ab5afe8bae81c30f83223e4f4515ac3dfe448d594a042f90e5291"
+              }
+            },
+            "position": {
+              "kind": "FLOAT_VECTOR",
+              "domain": "POINT",
+              "fields": {
+                "vector": "fd4d6fbc7a12b2f7c60f78f8da983bd9253157e44f0ab346d7b9c425bcacfa22"
+              }
+            },
+            ".corner_vert": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "8acc40cdc49b8c10cdbc21d4c2982cb18967aef6109b025c559a2776371cc10c"
+              }
+            },
+            ".corner_edge": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "c3143a2ec5cb3084ad0dc598b3bcc07baab22057081330ea6cec3033d07b3d7f"
+              }
+            },
+            ".select_poly": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "c7ef282a7d2a3b1db3ad49f71a99aaf9f3748eaf70927ff99473bb9067bb5b01"
+              }
+            },
+            "sharp_face": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "54354ccfb54114bb6c551b37bf4c385ff156a44a40e7101c900859de5cfe4f5c"
+              }
+            },
+            ".edge_verts": {
+              "kind": "INT32_2D",
+              "domain": "EDGE",
+              "fields": {
+                "value": "00a68604b7e02327e201e8dc6c6f3bf9a8a639b6198dd4389921862d1106366d"
+              }
+            },
+            ".select_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "b2ea22008d02ef7926be3bbc37823f471e3fc6c6fe9e18d18238db8b281e5ccc"
+              }
+            },
+            "material_index": {
+              "kind": "INT",
+              "domain": "FACE",
+              "fields": {
+                "value": "9d34d2891fe0b09cd4b8e9e52b2745b4ae64c5f1561c0b29171f1c0df198f117"
+              }
+            },
+            "_SOURCE_ID": {
+              "kind": "FLOAT",
+              "domain": "POINT",
+              "fields": {
+                "value": "aa0b2d839a3ddee8e38fb0cf28825aef7ac3e8db74ebf0be855491ec1740bb80"
+              }
+            },
+            "hm08_source_vertex": {
+              "kind": "INT",
+              "domain": "POINT",
+              "fields": {
+                "value": "f06dd8e4be897ac825f456978adeb4ed5181f998d7c22e0d64547b4707aac7b4"
+              }
+            },
+            "UVMap": {
+              "kind": "FLOAT2",
+              "domain": "CORNER",
+              "fields": {
+                "vector": "e02c01ca6656d68f4a47f9ce5b52c04d120ce89373bdf7852ed806ff9e0f8632"
+              }
+            },
+            ".uv_select_vert": {
+              "kind": "BOOLEAN",
+              "domain": "CORNER",
+              "fields": {
+                "value": "289338f656d5fce765ba16b7dba3acee837bbba7770283376b2a9da20b5ccdd7"
+              }
+            },
+            ".uv_select_edge": {
+              "kind": "BOOLEAN",
+              "domain": "CORNER",
+              "fields": {
+                "value": "289338f656d5fce765ba16b7dba3acee837bbba7770283376b2a9da20b5ccdd7"
+              }
+            },
+            ".uv_select_face": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "54354ccfb54114bb6c551b37bf4c385ff156a44a40e7101c900859de5cfe4f5c"
+              }
+            },
+            "custom_normal": {
+              "kind": "INT16_2D",
+              "domain": "CORNER",
+              "fields": {
+                "value": "0272ebefbb6be0ad989685a4edf8a781d4234fe401556395b59858b61f66e341"
+              }
+            },
+            "sharp_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "42105744ea83ee51a574ebce141526e5e7302fc33fc8528ac7e7bfa77c6fb9fa"
+              }
+            }
+          },
+          "hasCustomNormals": true,
+          "cornerNormals": "9e95a51aad2168be3efc297c4ef07e644cb42c70982b004c448e427eed81dfab",
+          "shapeKeys": null
+        }
+      },
+      "witnesses": [
+        {
+          "nativeCornerLoopID": 18501,
+          "nativeVertexID": 4612,
+          "candidatePolygonID": 4666,
+          "checkpointPolygonID": 4530,
+          "polygonNativeVertexIDs": [
+            4612,
+            4693,
+            4679,
+            4602
+          ],
+          "sourceCornerAncestry": [
+            18120.0,
+            18120.0,
+            0.0
+          ],
+          "protected": true,
+          "originalTargetObjectSpaceNormalF32": [
+            0.7807689905166626,
+            0.11636792868375778,
+            0.6138878464698792
+          ],
+          "setterInputF32": [
+            0.7807689905166626,
+            0.11636792868375778,
+            0.6138878464698792
+          ],
+          "failedBeforeDecodedF32": [
+            0.7808692455291748,
+            0.116314597427845,
+            0.6137703061103821
+          ],
+          "scratchAfterDecodedF32": [
+            0.780581533908844,
+            0.11646745353937149,
+            0.6141071319580078
+          ],
+          "originalRawEncoding": null,
+          "failedBeforeRawEncoding": null,
+          "scratchAfterRawEncoding": [
+            9,
+            21680
+          ]
+        },
+        {
+          "nativeCornerLoopID": 18844,
+          "nativeVertexID": 4734,
+          "candidatePolygonID": 4768,
+          "checkpointPolygonID": 4574,
+          "polygonNativeVertexIDs": [
+            4735,
+            4734,
+            4724,
+            4725
+          ],
+          "sourceCornerAncestry": [
+            18297.0,
+            18297.0,
+            0.0
+          ],
+          "protected": false,
+          "originalTargetObjectSpaceNormalF32": [
+            -0.19137689471244812,
+            0.31383219361305237,
+            0.9299915432929993
+          ],
+          "setterInputF32": [
+            -0.13663190603256226,
+            0.39128828048706055,
+            0.9100688099861145
+          ],
+          "failedBeforeDecodedF32": [
+            -0.13663190603256226,
+            0.39128828048706055,
+            0.9100688099861145
+          ],
+          "scratchAfterDecodedF32": [
+            -0.13663190603256226,
+            0.3912881314754486,
+            0.9100688099861145
+          ],
+          "originalRawEncoding": null,
+          "failedBeforeRawEncoding": null,
+          "scratchAfterRawEncoding": [
+            0,
+            0
+          ]
+        },
+        {
+          "nativeCornerLoopID": 18942,
+          "nativeVertexID": 4748,
+          "candidatePolygonID": 4798,
+          "checkpointPolygonID": 4586,
+          "polygonNativeVertexIDs": [
+            4748,
+            4742,
+            4743,
+            4749
+          ],
+          "sourceCornerAncestry": [
+            18344.0,
+            18344.0,
+            0.0
+          ],
+          "protected": true,
+          "originalTargetObjectSpaceNormalF32": [
+            -0.927622377872467,
+            -0.017057189717888832,
+            0.37312981486320496
+          ],
+          "setterInputF32": [
+            -0.927622377872467,
+            -0.017057189717888832,
+            0.37312981486320496
+          ],
+          "failedBeforeDecodedF32": [
+            -0.9263797998428345,
+            -0.01584770902991295,
+            0.3762570321559906
+          ],
+          "scratchAfterDecodedF32": [
+            -0.9276095628738403,
+            -0.017044492065906525,
+            0.3731622099876404
+          ],
+          "originalRawEncoding": null,
+          "failedBeforeRawEncoding": null,
+          "scratchAfterRawEncoding": [
+            69,
+            10492
+          ]
+        }
+      ]
+    },
+    {
+      "part": "head",
+      "originalObject": "Bounded neck29 geometry-only head four, unaccepted",
+      "scratchObject": "Agent3 diagnostic normal80 scratch head",
+      "scratchMesh": "Agent3 normal80 scratch mesh head",
+      "nativeVertices": 43763,
+      "nativeLoops": 216207,
+      "nativePolygons": 72068,
+      "nativeTriangles": 72071,
+      "setterCalls": 1,
+      "setterError": null,
+      "normalRepresentation": {
+        "bufferExistedBefore": true,
+        "originalBodyUsesGeneratedNormals": false,
+        "attribute": "custom_normal",
+        "domain": "CORNER",
+        "kind": "INT16_2D",
+        "RNAReadValuesDtype": "int32 widened exact signed-short values",
+        "decoderDtype": "Float32 object-space XYZ",
+        "inputDtype": "Original Float32 values expanded to Python then RNA Float32; internal API normalizes once",
+        "shortScale": 32767,
+        "normalDomain": "CORNER",
+        "hasCustomNormals": true
+      },
+      "rawEncodingChangedProtectedCorners": 5918,
+      "rawEncodingChangedUntargetedCorners": 1192,
+      "decodedChangedProtectedCorners": 2311,
+      "decodedChangedUntargetedCorners": 461,
+      "beforeErrorAgainstOriginalProtected": {
+        "corners": 210126,
+        "bitwiseEqualCorners": 208761,
+        "bitwiseEqualComponents": 626283,
+        "maxAbsComponentError": 1.7062122225761414,
+        "maxVectorError": 1.9994710399990476,
+        "meanVectorError": 0.0018074560482912155,
+        "maxAngularErrorDeg": 177.36439890971633,
+        "maxVectorCornerID": 82737,
+        "maxAngularCornerID": 82737,
+        "zeroOrInvalidDirectionRows": 0,
+        "targetLengthMaxAbsResidualFrom1": 1.6363518984263692e-07,
+        "decodedLengthMaxAbsResidualFrom1": 1.6363518984263692e-07
+      },
+      "afterErrorAgainstOriginalProtected": {
+        "corners": 210126,
+        "bitwiseEqualCorners": 207668,
+        "bitwiseEqualComponents": 623110,
+        "maxAbsComponentError": 0.000458449125289917,
+        "maxVectorError": 0.0006141255036507013,
+        "meanVectorError": 1.0899198642180638e-06,
+        "maxAngularErrorDeg": 0.03518679786564213,
+        "maxVectorCornerID": 132956,
+        "maxAngularCornerID": 132956,
+        "zeroOrInvalidDirectionRows": 0,
+        "targetLengthMaxAbsResidualFrom1": 1.6363518984263692e-07,
+        "decodedLengthMaxAbsResidualFrom1": 1.9522629290946725e-07
+      },
+      "untargetedErrorAgainstFailedBefore": {
+        "corners": 6081,
+        "bitwiseEqualCorners": 5620,
+        "bitwiseEqualComponents": 16872,
+        "maxAbsComponentError": 0.0001595020294189453,
+        "maxVectorError": 0.00020424453239525334,
+        "meanVectorError": 6.055841051420691e-06,
+        "maxAngularErrorDeg": 0.011702349158797917,
+        "maxVectorCornerID": 215467,
+        "maxAngularCornerID": 215467,
+        "zeroOrInvalidDirectionRows": 0,
+        "targetLengthMaxAbsResidualFrom1": 2.0104327957959356e-07,
+        "decodedLengthMaxAbsResidualFrom1": 2.0104327957959356e-07
+      },
+      "allFieldsExceptNormalBufferAndDecodedOutputExact": true,
+      "rawAttributeChanges": [
+        {
+          "attribute": "custom_normal",
+          "field": "value",
+          "domain": "CORNER",
+          "kind": "INT16_2D",
+          "changedRows": 7110,
+          "changedIDsArray": "head_custom_normal_value_ChangedIDs"
+        }
+      ],
+      "beforeState": {
+        "type": "MESH",
+        "world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.6499999761581421
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parentInverse": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parent": [
+          "Object",
+          "Foundation file frame, game x0.65",
+          null
+        ],
+        "parentType": "OBJECT",
+        "parentBone": "",
+        "properties": {},
+        "modifiers": [
+          {
+            "kind": "ARMATURE",
+            "properties": {
+              "name": "Own 51-joint bind",
+              "show_viewport": true,
+              "show_render": true,
+              "show_in_editmode": false,
+              "show_on_cage": false,
+              "show_expanded": true,
+              "is_active": true,
+              "use_pin_to_last": false,
+              "use_apply_on_spline": false,
+              "object": [
+                "Object",
+                "Independent anatomical foundation rig",
+                null
+              ],
+              "use_bone_envelopes": false,
+              "use_vertex_groups": true,
+              "use_deform_preserve_volume": false,
+              "use_multi_modifier": false,
+              "vertex_group": "",
+              "invert_vertex_group": false
+            },
+            "custom": {}
+          }
+        ],
+        "constraints": [],
+        "mesh": {
+          "positions": "3fcee2bd6495503fdb687e4a18a77a5c28943b3584f5cea5b9c0cec590dbff4e",
+          "polygons": "3e7e062b823f514e952ca4bb4eb1937f402a010b1ad973ba80b82f17dc215614",
+          "loops": "1e095d05c2215e03f3bcd22cdf2bd5e06b04d0cfd9ab8af0ecc8a7c2795d2703",
+          "edges": "e43bdde056cd22332e7fa9a84b9bdb9ff02a973bd1a2712dc5d884f84b3d5f84",
+          "materials": [
+            [
+              "Material",
+              "Appearance exact donor material 3",
+              null
+            ]
+          ],
+          "smooth": "e2cf770bf5fbc25c2cdfbe69609a6cc1b4a5d3ef78e4da0004850b7236b20c34",
+          "materialIndices": "fe1f46e238ad9e440de8b20d3b782281392f49f4ade3a1073def7b5ea4763027",
+          "weights": "40336cb54b86eb73db5482d00470fc8e214b48301b081b39ffa0fa71f0171ee7",
+          "groups": [
+            "pelvis",
+            "spine",
+            "chest",
+            "shoulder.R",
+            "upperArm.R",
+            "forearm.R",
+            "hand.R",
+            "index_01.R",
+            "index_02.R",
+            "index_03.R",
+            "middle_01.R",
+            "middle_02.R",
+            "middle_03.R",
+            "pinky_01.R",
+            "pinky_02.R",
+            "pinky_03.R",
+            "ring_01.R",
+            "ring_02.R",
+            "ring_03.R",
+            "thumb_01.R",
+            "thumb_02.R",
+            "thumb_03.R",
+            "shoulder.L",
+            "upperArm.L",
+            "forearm.L",
+            "hand.L",
+            "index_01.L",
+            "index_02.L",
+            "index_03.L",
+            "middle_01.L",
+            "middle_02.L",
+            "middle_03.L",
+            "pinky_01.L",
+            "pinky_02.L",
+            "pinky_03.L",
+            "ring_01.L",
+            "ring_02.L",
+            "ring_03.L",
+            "thumb_01.L",
+            "thumb_02.L",
+            "thumb_03.L",
+            "neck",
+            "head",
+            "thigh.R",
+            "shin.R",
+            "foot.R",
+            "ball.R",
+            "thigh.L",
+            "shin.L",
+            "foot.L",
+            "ball.L"
+          ],
+          "attributes": {
+            ".select_vert": {
+              "kind": "BOOLEAN",
+              "domain": "POINT",
+              "fields": {
+                "value": "4691333b6c7be01cd4ceac2ae4c21bf4f481a72dec4f971e508097aa8484beed"
+              }
+            },
+            "position": {
+              "kind": "FLOAT_VECTOR",
+              "domain": "POINT",
+              "fields": {
+                "vector": "3fcee2bd6495503fdb687e4a18a77a5c28943b3584f5cea5b9c0cec590dbff4e"
+              }
+            },
+            ".corner_vert": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "1e095d05c2215e03f3bcd22cdf2bd5e06b04d0cfd9ab8af0ecc8a7c2795d2703"
+              }
+            },
+            ".corner_edge": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "c4891500f4e82e334059ee385da84a262f1ad8084eaf6aea375d64ddc5504edf"
+              }
+            },
+            ".select_poly": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "9d01a61acb6447cde6e47cae3c7887ddd3f7390429cc1dd8ea66918803dd35f2"
+              }
+            },
+            "sharp_face": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "d2a1880ca4e1f004b9fd4bd9b39d8ef84e7fa2cd2110b2407db941f54dc54e5b"
+              }
+            },
+            ".edge_verts": {
+              "kind": "INT32_2D",
+              "domain": "EDGE",
+              "fields": {
+                "value": "e43bdde056cd22332e7fa9a84b9bdb9ff02a973bd1a2712dc5d884f84b3d5f84"
+              }
+            },
+            ".select_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "7f844f81d92a3a94179981df65606a1e3c1da49f47985e3e9fbda04e8164bf23"
+              }
+            },
+            "material_index": {
+              "kind": "INT",
+              "domain": "FACE",
+              "fields": {
+                "value": "fe1f46e238ad9e440de8b20d3b782281392f49f4ade3a1073def7b5ea4763027"
+              }
+            },
+            "UVMap": {
+              "kind": "FLOAT2",
+              "domain": "CORNER",
+              "fields": {
+                "vector": "cf83a29dad525fbb69be7a2228209a1a9c174d6ef1cd917ab94d9d4edc7d6e05"
+              }
+            },
+            "custom_normal": {
+              "kind": "INT16_2D",
+              "domain": "CORNER",
+              "fields": {
+                "value": "c5851d5c4c88c67ecbb56d9f14aad3b48b892a687e6bd2dad5b072197f9ded7a"
+              }
+            },
+            "sharp_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "becac21008c14ec1a9bc8c616a3c49069c2ef8c8bd2afdf4af05fc49661a5525"
+              }
+            }
+          },
+          "hasCustomNormals": true,
+          "cornerNormals": "9ae2bfe90872a284b2e3a2c928d26f714ae14a4634a8d33f8393913f7a68a932",
+          "shapeKeys": null
+        }
+      },
+      "afterState": {
+        "type": "MESH",
+        "world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.6499999761581421
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parentInverse": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "parent": [
+          "Object",
+          "Foundation file frame, game x0.65",
+          null
+        ],
+        "parentType": "OBJECT",
+        "parentBone": "",
+        "properties": {},
+        "modifiers": [
+          {
+            "kind": "ARMATURE",
+            "properties": {
+              "name": "Own 51-joint bind",
+              "show_viewport": true,
+              "show_render": true,
+              "show_in_editmode": false,
+              "show_on_cage": false,
+              "show_expanded": true,
+              "is_active": true,
+              "use_pin_to_last": false,
+              "use_apply_on_spline": false,
+              "object": [
+                "Object",
+                "Independent anatomical foundation rig",
+                null
+              ],
+              "use_bone_envelopes": false,
+              "use_vertex_groups": true,
+              "use_deform_preserve_volume": false,
+              "use_multi_modifier": false,
+              "vertex_group": "",
+              "invert_vertex_group": false
+            },
+            "custom": {}
+          }
+        ],
+        "constraints": [],
+        "mesh": {
+          "positions": "3fcee2bd6495503fdb687e4a18a77a5c28943b3584f5cea5b9c0cec590dbff4e",
+          "polygons": "3e7e062b823f514e952ca4bb4eb1937f402a010b1ad973ba80b82f17dc215614",
+          "loops": "1e095d05c2215e03f3bcd22cdf2bd5e06b04d0cfd9ab8af0ecc8a7c2795d2703",
+          "edges": "e43bdde056cd22332e7fa9a84b9bdb9ff02a973bd1a2712dc5d884f84b3d5f84",
+          "materials": [
+            [
+              "Material",
+              "Appearance exact donor material 3",
+              null
+            ]
+          ],
+          "smooth": "e2cf770bf5fbc25c2cdfbe69609a6cc1b4a5d3ef78e4da0004850b7236b20c34",
+          "materialIndices": "fe1f46e238ad9e440de8b20d3b782281392f49f4ade3a1073def7b5ea4763027",
+          "weights": "40336cb54b86eb73db5482d00470fc8e214b48301b081b39ffa0fa71f0171ee7",
+          "groups": [
+            "pelvis",
+            "spine",
+            "chest",
+            "shoulder.R",
+            "upperArm.R",
+            "forearm.R",
+            "hand.R",
+            "index_01.R",
+            "index_02.R",
+            "index_03.R",
+            "middle_01.R",
+            "middle_02.R",
+            "middle_03.R",
+            "pinky_01.R",
+            "pinky_02.R",
+            "pinky_03.R",
+            "ring_01.R",
+            "ring_02.R",
+            "ring_03.R",
+            "thumb_01.R",
+            "thumb_02.R",
+            "thumb_03.R",
+            "shoulder.L",
+            "upperArm.L",
+            "forearm.L",
+            "hand.L",
+            "index_01.L",
+            "index_02.L",
+            "index_03.L",
+            "middle_01.L",
+            "middle_02.L",
+            "middle_03.L",
+            "pinky_01.L",
+            "pinky_02.L",
+            "pinky_03.L",
+            "ring_01.L",
+            "ring_02.L",
+            "ring_03.L",
+            "thumb_01.L",
+            "thumb_02.L",
+            "thumb_03.L",
+            "neck",
+            "head",
+            "thigh.R",
+            "shin.R",
+            "foot.R",
+            "ball.R",
+            "thigh.L",
+            "shin.L",
+            "foot.L",
+            "ball.L"
+          ],
+          "attributes": {
+            ".select_vert": {
+              "kind": "BOOLEAN",
+              "domain": "POINT",
+              "fields": {
+                "value": "4691333b6c7be01cd4ceac2ae4c21bf4f481a72dec4f971e508097aa8484beed"
+              }
+            },
+            "position": {
+              "kind": "FLOAT_VECTOR",
+              "domain": "POINT",
+              "fields": {
+                "vector": "3fcee2bd6495503fdb687e4a18a77a5c28943b3584f5cea5b9c0cec590dbff4e"
+              }
+            },
+            ".corner_vert": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "1e095d05c2215e03f3bcd22cdf2bd5e06b04d0cfd9ab8af0ecc8a7c2795d2703"
+              }
+            },
+            ".corner_edge": {
+              "kind": "INT",
+              "domain": "CORNER",
+              "fields": {
+                "value": "c4891500f4e82e334059ee385da84a262f1ad8084eaf6aea375d64ddc5504edf"
+              }
+            },
+            ".select_poly": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "9d01a61acb6447cde6e47cae3c7887ddd3f7390429cc1dd8ea66918803dd35f2"
+              }
+            },
+            "sharp_face": {
+              "kind": "BOOLEAN",
+              "domain": "FACE",
+              "fields": {
+                "value": "d2a1880ca4e1f004b9fd4bd9b39d8ef84e7fa2cd2110b2407db941f54dc54e5b"
+              }
+            },
+            ".edge_verts": {
+              "kind": "INT32_2D",
+              "domain": "EDGE",
+              "fields": {
+                "value": "e43bdde056cd22332e7fa9a84b9bdb9ff02a973bd1a2712dc5d884f84b3d5f84"
+              }
+            },
+            ".select_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "7f844f81d92a3a94179981df65606a1e3c1da49f47985e3e9fbda04e8164bf23"
+              }
+            },
+            "material_index": {
+              "kind": "INT",
+              "domain": "FACE",
+              "fields": {
+                "value": "fe1f46e238ad9e440de8b20d3b782281392f49f4ade3a1073def7b5ea4763027"
+              }
+            },
+            "UVMap": {
+              "kind": "FLOAT2",
+              "domain": "CORNER",
+              "fields": {
+                "vector": "cf83a29dad525fbb69be7a2228209a1a9c174d6ef1cd917ab94d9d4edc7d6e05"
+              }
+            },
+            "custom_normal": {
+              "kind": "INT16_2D",
+              "domain": "CORNER",
+              "fields": {
+                "value": "0ebd4f5b21f9659d8bc443496a33052a156131085146fbc25f1ff8bf651233d3"
+              }
+            },
+            "sharp_edge": {
+              "kind": "BOOLEAN",
+              "domain": "EDGE",
+              "fields": {
+                "value": "becac21008c14ec1a9bc8c616a3c49069c2ef8c8bd2afdf4af05fc49661a5525"
+              }
+            }
+          },
+          "hasCustomNormals": true,
+          "cornerNormals": "1bebaafafc256fe4fcb276385a3fbee06630f069f3e27dc60b21a46f634af285",
+          "shapeKeys": null
+        }
+      },
+      "witnesses": [
+        {
+          "nativeCornerLoopID": 735,
+          "nativeVertexID": 21411,
+          "candidatePolygonID": 245,
+          "checkpointPolygonID": 241,
+          "polygonNativeVertexIDs": [
+            21411,
+            21420,
+            21410
+          ],
+          "sourceCornerAncestry": [
+            723.0,
+            723.0,
+            0.0
+          ],
+          "protected": true,
+          "originalTargetObjectSpaceNormalF32": [
+            0.29217270016670227,
+            0.495890349149704,
+            -0.8177578449249268
+          ],
+          "setterInputF32": [
+            0.29217270016670227,
+            0.495890349149704,
+            -0.8177578449249268
+          ],
+          "failedBeforeDecodedF32": [
+            0.4472710192203522,
+            0.815192461013794,
+            0.36798086762428284
+          ],
+          "scratchAfterDecodedF32": [
+            0.2922191619873047,
+            0.49589231610298157,
+            -0.8177400231361389
+          ],
+          "originalRawEncoding": [
+            0,
+            0
+          ],
+          "failedBeforeRawEncoding": [
+            0,
+            0
+          ],
+          "scratchAfterRawEncoding": [
+            -30398,
+            25648
+          ]
+        },
+        {
+          "nativeCornerLoopID": 132956,
+          "nativeVertexID": 11112,
+          "candidatePolygonID": 44318,
+          "checkpointPolygonID": 44287,
+          "polygonNativeVertexIDs": [
+            11112,
+            11111,
+            11113
+          ],
+          "sourceCornerAncestry": [
+            132861.0,
+            132861.0,
+            0.0
+          ],
+          "protected": true,
+          "originalTargetObjectSpaceNormalF32": [
+            0.760288655757904,
+            0.3395625650882721,
+            -0.5537676215171814
+          ],
+          "setterInputF32": [
+            0.760288655757904,
+            0.3395625650882721,
+            -0.5537676215171814
+          ],
+          "failedBeforeDecodedF32": [
+            0.760288655757904,
+            0.3395625650882721,
+            -0.5537676215171814
+          ],
+          "scratchAfterDecodedF32": [
+            0.7599347829818726,
+            0.340021014213562,
+            -0.5539719462394714
+          ],
+          "originalRawEncoding": [
+            14,
+            30782
+          ],
+          "failedBeforeRawEncoding": [
+            14,
+            30782
+          ],
+          "scratchAfterRawEncoding": [
+            0,
+            30782
+          ]
+        },
+        {
+          "nativeCornerLoopID": 215467,
+          "nativeVertexID": 7075,
+          "candidatePolygonID": 71821,
+          "checkpointPolygonID": 71772,
+          "polygonNativeVertexIDs": [
+            7060,
+            7075,
+            7076
+          ],
+          "sourceCornerAncestry": [
+            215317.0,
+            215317.0,
+            0.0
+          ],
+          "protected": false,
+          "originalTargetObjectSpaceNormalF32": [
+            -0.057210132479667664,
+            -0.9832863807678223,
+            0.1728437840938568
+          ],
+          "setterInputF32": [
+            0.9386935234069824,
+            -0.17799782752990723,
+            0.2952479422092438
+          ],
+          "failedBeforeDecodedF32": [
+            0.9386935234069824,
+            -0.17799782752990723,
+            0.2952479422092438
+          ],
+          "scratchAfterDecodedF32": [
+            0.9386231303215027,
+            -0.1781042218208313,
+            0.2954074442386627
+          ],
+          "originalRawEncoding": [
+            23,
+            21746
+          ],
+          "failedBeforeRawEncoding": [
+            23,
+            21746
+          ],
+          "scratchAfterRawEncoding": [
+            8,
+            13047
+          ]
+        }
+      ]
+    }
+  ],
+  "exceptions": [],
+  "originalObjectStatesExact": {
+    "Actual donor explicit native-four skin, unaccepted": true,
+    "Actual donor full-influence cage control, unaccepted": true,
+    "Actual selected donor surface with wearer cuts, unaccepted": true,
+    "Actual selected donor, actual wrist cuff recut, unaccepted": true,
+    "Actual selected donor, affine measured envelopes, unaccepted": true,
+    "Actual selected donor, ambient measured-lumen flow, unaccepted": true,
+    "Actual selected donor, compact interior flow, unaccepted": true,
+    "Actual selected donor, continuous elbow registration, unaccepted": true,
+    "Actual selected donor, measured clearance profiles, unaccepted": true,
+    "Actual selected donor, measured lumen registration, unaccepted": true,
+    "Bounded neck27 body four, unaccepted": true,
+    "Bounded neck27 body full, unaccepted": true,
+    "Bounded neck27 head four, unaccepted": true,
+    "Bounded neck27 head full, unaccepted": true,
+    "Bounded neck27 triangulated body four, unaccepted": true,
+    "Bounded neck27 triangulated body full, unaccepted": true,
+    "Bounded neck27 triangulated head four, unaccepted": true,
+    "Bounded neck27 triangulated head full, unaccepted": true,
+    "Bounded neck28 auxiliary-preserved body four, unaccepted": true,
+    "Bounded neck28 auxiliary-preserved body full, unaccepted": true,
+    "Bounded neck29 geometry-only body four, unaccepted": true,
+    "Bounded neck29 geometry-only body full, unaccepted": true,
+    "Bounded neck29 geometry-only head four, unaccepted": true,
+    "Bounded neck29 geometry-only head full, unaccepted": true,
+    "Canonical anatomical body, baked adult hm08": true,
+    "Canonical body with hidden head interface": true,
+    "Complete worn boot volume on own canonical feet": true,
+    "Exact selected Hunyuan high-poly PBR donor, display frame only": true,
+    "Foundation file frame, game x0.65": true,
+    "Full native diagnostic body": true,
+    "Full native diagnostic boxers": true,
+    "Full native diagnostic cloth": true,
+    "Full native diagnostic jeans": true,
+    "Independent anatomical foundation rig": true,
+    "Opaque boxer fitting garment": true,
+    "Open-front hood structural seed, unrigged": true,
+    "Protected coherent cheek patch": true,
+    "Protected mustard hood on own rig": true,
+    "Protected textured head above hidden neck interface": true,
+    "Registered black leather gloves on own finger bind": true,
+    "Registered boots from bounded foot accessory regions": true,
+    "Selected hoodie reconstructed surface, openings and fit pending": true,
+    "Selected Hunyuan connected vector wearable, unrigged": true,
+    "Selected Hunyuan radial exterior wearable, unrigged": true,
+    "Selected Hunyuan underarm fitted wearable, unrigged": true,
+    "Separate fitted native trousers control": true,
+    "Separate fitted sweatshirt control, hood not constructed": true,
+    "Sewn clean hoodie with dropped hood": true
+  },
+  "original51RigBindPoseAndAllFullFourControlsExact": true,
+  "originalMaterialsAndImagesExact": true,
+  "all31InputPinsUnchanged": true,
+  "arrayArchiveSHA256": "2229fd23bffdd7e1e7f5440a488dfd89eefca9bd59101e5a18ac26cea37853f5",
+  "noSourceOrScratchNativeSaved": true,
+  "limits": [
+    "One setter call per body/head part only; no retry, parameter/precision/representation sweep, fit/geometry/weight solve or adoption.",
+    "Normal-buffer and unintended propagated fields are measured on in-memory scratch copies only; no original source actor/material/rig/pose edit or save.",
+    "Angular error uses atan2(cross,dot) in Float64 of actual Float32 decoded and target values, separating direction from vector length. No visual acceptance or universal quantization bound.",
+    "Failed102geometry remains failed. No new render/film/model/GPU/install/delivery/publication/scope expansion; allM0-M5open."
+  ]
+}
