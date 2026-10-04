@@ -87,3 +87,13 @@ Finding: Save one built-in imagegenjeansreference against exact approved storybo
 Validation: RGBA[1024, 1536], alpha[0, 254]/960792zero pixels; SHAfcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf and bytes2203602pinned. No local inference or pixel modification.
 
 Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
+
+## Round 108 — Isolated gloves reference checkpoint
+
+Finding: Save one built-in imagegenglovesreference against exact approved storyboard03and selected hoodie; all prompt/input bytes and generated alpha preserved before local shape generation.
+
+Validation: RGBA[1211, 1299], alpha[0, 255]/965822zero pixels; SHA070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2 and bytes1535204pinned. No local inference or pixel modification.
+
+Limits: Experimental2Dinput, not geometry/calibrated camera/opening/fit/rig/art acceptance; matching source generation and root review remain.
+
+Validation: Third-round runtime24 gate reused only after fresh four-file pins and empty full playerdiff; prior boot/4810-frame clear/crash/instant1–2ms restart remain unchanged. Actual handedness/open cavity unproven from2D; faint alpha1edge fringe preserved.

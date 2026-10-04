@@ -1,0 +1,70 @@
+{
+  "accepted": false,
+  "item": "gloves",
+  "round": 108,
+  "producer": "Built-in imagegen",
+  "sourceToolPath": "/Users/raynos/.codex/generated_images/01a101fe-a358-7731-987d-4168614e9ece/exec-04bab0fc-245d-463b-90cf-e4a07f8bdb25.png",
+  "savedPath": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+  "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2",
+  "bytes": 1535204,
+  "pixelContract": {
+    "mode": "RGBA",
+    "size": [
+      1211,
+      1299
+    ],
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaZeroPixels": 965822,
+    "alphaOpaquePixels": 1258,
+    "alphaPartialPixels": 606009,
+    "nonzeroBounds": [
+      0,
+      21,
+      1187,
+      1267
+    ],
+    "edgeMaxAlpha": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "alphaHalfBBox": [
+      234,
+      63,
+      1100,
+      1217
+    ]
+  },
+  "prompt": "Use case: stylized-concept. Asset type: isolated single-image 3D reconstruction reference for Rockhop glove. Input image1 is the approved rider storyboard03: match its plain black full-finger riding gloves. Input image2 is the selected mustard Hunyuan hoodie: match its coherent moderately stylized realistic game-asset scale. Create ONE empty right-hand black riding glove only, not a pair or a human hand. Anatomically coherent palm, back, four correctly ordered fingers plus one opposed thumb: exactly FIVE total digits, correct thumb web and finger lengths, all digits fully separated with clear visible gaps. Neutral gently splayed hand, fingers mostly straight with a slight relaxed curve suitable for later grip rigging; do not close into a fist. Short practical open wrist cuff with visible hollow interior, attached to a complete enclosed palm/back and five closed fingertips. Supple matte black leather/textile, subtle fine grain, restrained stitch seams and modest flexible knuckle reinforcement, slim practical finger widths; no rigid gauntlet/oversized armor or bone-like joint balls. Near-dorsal three-quarter product view, wrist cuff angled slightly toward camera so its opening is visible; whole item and all fingertip/thumb tips fully framed with generous margins. Genuine transparent background. Soft balanced lighting including fill so the black form and all finger separations are legible. No person, skin, skeleton, mannequin, arm, second glove, detached fingers, weapons, bike, accessories, logos, text, labels or multiple panels. Appearance source only, no claim of actual topology or fit.",
+  "referenceInputs": [
+    {
+      "role": "approved-storyboard03",
+      "path": ".tmp/rockhop-approved-storyboard-2026-10-03/Rockhop-rider-frame-03.png",
+      "sha256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a",
+      "bytes": 291838
+    },
+    {
+      "role": "selected-hoodie-generated2D",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+      "sha256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+      "bytes": 1394368
+    },
+    {
+      "role": "selected-original-hoodie-GLB",
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+      "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+      "bytes": 42329320
+    }
+  ],
+  "seed": "Built-in tool exposes no seed; local Hunyuan uses42",
+  "inspection": "Exactly five visible separated digits: four ordered fingers and opposed thumb; coherent black back/palm silhouette and open-looking wrist mouth. Dorsal thumb appears image-right; actual handedness, camera and3D cavity are not certified. All material alpha>=128 lies inside234,63,1100,1217bbox, faintalpha1left-edge fringe preserved rather than cleaned.",
+  "limits": [
+    "Experimental generated2D only; no geometry, camera calibration, source opening/fit/topology/UV/rig acceptance.",
+    "Original generated alpha preserved byte-for-byte, no background removal/cleanup/repaint.",
+    "No local model run yet, parent art authority retained."
+  ]
+}
