@@ -181,3 +181,11 @@ Finding: Imported helpers already resolve to the original owned directory; sibli
 Validation: Original finite-cell adapter matches qualified fd56f921 receipt; three recipes compile. Recovery requires every saved checkpoint hash, exact native replay, and CPU extraction equality before exporting. No model job launched in this recipe unit.
 
 Limits: Recovery execution and original PBR remain pending; no new sampling, decoder, global installed edit, fitting, art acceptance or publication.
+
+## Round 119 — jeans export01 checkpoint
+
+Finding: CPU-only recovery pins every retained decode archive and reproduces the existing finite-cell mesh byte-exact before exporting it. The failed original decode remains immutable; no new sampling or decoder run.
+
+Validation: Guard exit0 in4.187s. Native replay, evaluated-site mask, field bytes and finite-cell vertex/face bytes match; 9e1fb140b27759ab0cbb4cd9ea819d1ea149194868b1a6906a833d05f814f8ac retained. Export uses only official winding reversal.
+
+Limits: Unaccepted raw source, with no PBR or fit/topology/rig/art acceptance yet. No cleanup, reduction, body edits or publication.

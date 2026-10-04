@@ -1,0 +1,68 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/finish_decode_item.py",
+    "--prior",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/decode01",
+    "--checkpoint",
+    "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/jeans/decode01/checkpoint.json",
+    "--out",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/export01"
+  ],
+  "controllerPID": 98873,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 27.8,
+      "wiredGiB": 6.3,
+      "freeGiB": 33.4
+    },
+    {
+      "seconds": 0.029,
+      "anonymousGiB": 27.8,
+      "wiredGiB": 6.3,
+      "freeGiB": 33.3
+    },
+    {
+      "seconds": 1.058,
+      "anonymousGiB": 28.5,
+      "wiredGiB": 6.3,
+      "freeGiB": 32.7
+    },
+    {
+      "seconds": 2.094,
+      "anonymousGiB": 28.9,
+      "wiredGiB": 6.3,
+      "freeGiB": 32.2
+    },
+    {
+      "seconds": 3.124,
+      "anonymousGiB": 29.2,
+      "wiredGiB": 6.1,
+      "freeGiB": 32.2
+    },
+    {
+      "seconds": 4.159,
+      "anonymousGiB": 27.8,
+      "wiredGiB": 6.3,
+      "freeGiB": 33.4
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 98912,
+  "exitCode": 0,
+  "elapsedSeconds": 4.187
+}
