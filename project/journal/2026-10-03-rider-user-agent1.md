@@ -832,3 +832,20 @@ Finding: One admitted geometry-only screened-biharmonic fit converges(1236freeph
 Validation: Save/reopen44oldobjects/17images/18materials/51rest-bind-pose and ALLfull-four/auxiliary group assignments exact100. Outside storedpositions/rawattrs exact;238outer383inner opposed2incidence,0nonmanifold/151oldmouthboundaries,502body2433head localareas positive. Decodedprotectedcornernormal changes152body1192head/max0.0035761.951402 explicitly unaccepted. Cap ancestry labels corrected in separate retained receipt/no nativegeometry change; JSONnumpy-type guard failure retained/recovered. Syntax/sourcepins pass.
 Limits: Exact464ID completeone-ring headcollar request(1707total/2966incidenttriangles/0above1.60touches) unedited, not proved necessary/minimum-cardinality/sufficient; no bodyexpansion. Root decision/Agent3 independentQA next. Original99contact/identity/art/source26garment490failures stayred/allM0–M5open. No parameter/weight sweep/secondcandidate/capture/promotion. Ask274.
 Validation: Required silentnormalship102 PASS cold2116.835ms/4810identicalticks/40.083333333s0faults/crash103/restart1tick/frame3.005ms/errors0; low/highcross-tier finishbytesabaaaaaaaa0a4440 exact/restart4/3ms. Playerregression only/no physicaliOS/candidateacceptance.
+
+## Round103 — archived chord exposes the decoded-normal failure first
+
+Finding: The failed102 endpoint chord changes726 protected head decoded
+normals at1e−6 before any introduced crossing. Its numeric first new cap
+event isalpha.00161517609; selected non-cap failures occur later. ONE
+same-scope hard-normal/collision-constrained operator is formulated only.
+Validation: Exact selected polynomial root bracket, endpoint pair-set
+classification and native decoder/source pins pass. Original246 contacts
+reproduce with no all-pinned or all-zero-tangent pair. Syntax/JSON/hash/diff
+checks pass; no game behavior changed; ship102 already passed. See
+[103 evidence](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface103/FINDING.md), ask274.
+Limits: Reconstructed path is not solver chronology; global event ordering
+is numerical. No feasible seed/normal Jacobian/constrained solve exists.
+No new native candidate, fit/skin solve, normal edits, capture or expansion.
+Root decision pending, natural selected-face transition unaccepted; all
+M0–M5 and contact/identity/art/engine/device/player gates remain open.

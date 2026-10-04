@@ -1,0 +1,233 @@
+{
+  "status": "EXACT_SELECTED_CHORD_CONTACT_ROOT_BRACKET_AND_DECODED_NORMAL_CONFLICT",
+  "recipeSHA256": "1d4c4259c36de7eb982ed9eaeebac73ebd8f03a14a18916fd3281334229a6ee3",
+  "chordEventsSHA256": "d04afa00ca36bdf8bb426084cef4319d6e34cfaa70892ebed420ba436a41d902",
+  "selectedEarliestNumericEntry": {
+    "kind": "bodyHead",
+    "triangleIDs": [
+      9188,
+      71886
+    ],
+    "onsetRootAlpha": 0.0016151760910615134,
+    "nextEventAlpha": 0.01,
+    "properInteriorWitnessAlpha": 0.005807588045530757,
+    "physicalNodesByFace": [
+      [
+        4872,
+        115,
+        114
+      ],
+      [
+        10098,
+        10065,
+        45177
+      ]
+    ],
+    "nativeVerticesByFace": [
+      [
+        4675,
+        9197,
+        9196
+      ],
+      [
+        22062,
+        22057,
+        43762
+      ]
+    ],
+    "persistentCoplanarFeatureCount": 0,
+    "alwaysCollinearFeaturePresent": false
+  },
+  "selectedRootExactBinaryBracket": [
+    {
+      "feature": "bodyEdge-headEdge",
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "floatCoefficients": [
+        -1.7243463464386055e-08,
+        1.0690191787138262e-05,
+        -8.850937298776625e-06,
+        2.741400371499792e-06
+      ],
+      "exactBinaryRationalCoefficients": [
+        "-333537091226847093/19342813113834066795298816",
+        "413556763779318276683/38685626227668133590597632",
+        "-171202026052499625043/19342813113834066795298816",
+        "106052790112231538053/38685626227668133590597632"
+      ],
+      "bracketAlpha": [
+        0.0016151760890615134,
+        0.0016151760930615134
+      ],
+      "exactPolynomialSigns": [
+        -1,
+        1
+      ],
+      "oppositeSigns": true
+    }
+  ],
+  "properAtAlphaRootMinus1e_6": false,
+  "properAtAlphaRootPlus1e_6": true,
+  "selectedNonCapDOFExamples": [
+    {
+      "kind": "headSelf",
+      "finalNativeTriangleIDs": [
+        4,
+        94
+      ],
+      "fixedFinalTemplateEqualsReferenceAtTheseRows": [
+        true,
+        true
+      ],
+      "nativeVerticesByFace": [
+        [
+          7871,
+          7865,
+          7870
+        ],
+        [
+          38005,
+          37762,
+          43757
+        ]
+      ],
+      "sourcePolygonIDs": [
+        3,
+        91
+      ],
+      "tangentDOFByCorner": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "startingProperCrossing": false,
+      "onsetRootAlpha": 0.829590974791729,
+      "nextEventAlpha": 1.0,
+      "properWitnessAlpha": 0.9147954873958646,
+      "persistentFeatureCount": 0,
+      "alwaysCollinearFeature": false
+    },
+    {
+      "kind": "bodyHead",
+      "finalNativeTriangleIDs": [
+        208,
+        22652
+      ],
+      "fixedFinalTemplateEqualsReferenceAtTheseRows": [
+        true,
+        true
+      ],
+      "nativeVerticesByFace": [
+        [
+          125,
+          140,
+          9105
+        ],
+        [
+          22078,
+          22080,
+          22079
+        ]
+      ],
+      "sourcePolygonIDs": [
+        96,
+        22635
+      ],
+      "tangentDOFByCorner": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "startingProperCrossing": false,
+      "onsetRootAlpha": 0.8990748037683983,
+      "nextEventAlpha": 0.9178940813662497,
+      "properWitnessAlpha": 0.908484442567324,
+      "persistentFeatureCount": 0,
+      "alwaysCollinearFeature": false
+    }
+  ],
+  "protectedNormalDirectionConflict": {
+    "nativeCornerID": 735,
+    "nativeVertexID": 21411,
+    "candidatePolygonID": 245,
+    "checkpointPolygonID": 241,
+    "nativePolygonVertexIDs": [
+      21411,
+      21420,
+      21410
+    ],
+    "protectedPositionExactlyPinned": true,
+    "originalDecodedNormal": [
+      0.29217270016670227,
+      0.495890349149704,
+      -0.8177578449249268
+    ],
+    "reconstructedDecodedNormal": [
+      0.2922154664993286,
+      0.49588340520858765,
+      -0.8177467584609985
+    ],
+    "rawCustomNormalFieldUnedited": true,
+    "sourceCornerAncestry": [
+      723.0,
+      723.0,
+      0.0
+    ],
+    "exactPositionAliasNativeIDs": [
+      21411
+    ],
+    "aliasMembersOutsideAuthoringScope": [
+      21411
+    ],
+    "aliasMembersInsideAuthoringScope": [],
+    "polygonVertexDisplacementsM": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.000508919358253479,
+        0.006141498684883118,
+        0.0036998987197875977
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "polygonVertexTangentDOF": [
+      0,
+      1,
+      0
+    ]
+  },
+  "limits": [
+    "Exact rational sign change brackets the selected contact polynomial root only; allother event roots/globalordering were computed numerically. No certified global first or actual solver chronology is claimed.",
+    "Normal conflict is for the archived displacement chord, not a proof the entire admitted region lacks any normal-preserving path.",
+    "No candidate/fitting/skin solve, source save, extra path choice, scope expansion, rendering/capture/normal edit. AllM0-M5open."
+  ]
+}

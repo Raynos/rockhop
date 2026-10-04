@@ -1,0 +1,43 @@
+{
+  "status": "DIAGNOSTIC_ONLY_ONE_OPERATOR_PROPOSED_NOT_EXECUTED_OR_ADMITTED",
+  "acceptanceTarget": "Continuous natural head-to-neck-to-shoulder transition preserving the selected face identity; counts and zero seam drift do not establish visual acceptance.",
+  "scopeAuthority": {
+    "path": "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body59/proposal.json",
+    "sha256": "5f563c032791a9426c0447a2b8c818b140fd62e56a621fd4b81efd461cfdefa6",
+    "existingBodyIDs": 160,
+    "existingHeadIDs": 1243,
+    "partialPositionAliasesPinnedAsWholeClasses": true,
+    "rejected464IDCollarAdmitted": false
+  },
+  "sourcePins": {
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface102/candidate-fields-ancestry-corrected.npz": "3727d0fd77a106443cf46536f8981daad5a01fb0a984bab4fd45e3b5c6ca5e4b",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface102/solve-witnesses.npz": "7f77e61ada168e3732af441ea6eeb7b4f79f10f0247a08e2509884482e1dc8e1",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface28/auxiliary-restored.blend": "60036a17b60db73b66abc140c943c2589d2eb2c91340e5c50bc59bd6a7e6a5e4",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface29/geometry-only-feasibility.blend": "215bf6233987a501bf44696b0e0e702cac1912089865d67f0b1b95f3f4d0c4b7",
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body59/proposal.json": "5f563c032791a9426c0447a2b8c818b140fd62e56a621fd4b81efd461cfdefa6",
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck71/FINDING.md": "538d81d0f3bad1440d026adf418853fd66c3620661905c3dbf9a94008f096b4d",
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck71/crossing-constraint-classification.json": "26b22ee1be9d0e7cc5c70a549f16eb7298154ab75462efd3c601ed98164dc457"
+  },
+  "oneOperator": {
+    "name": "Screened-biharmonic anatomical projection with hard decoded-normal and collision constraints",
+    "objective": "E(X)=0.5*sum_i M_i*||X_i-Q_i||^2 + 0.5*h^4*sum_i ||(K X)_i||^2/M_i. Reuse archived102 P0,Q,M,K and h=0.004695366307950288m; coefficients and reference topology stay frozen.",
+    "variables": "The existing1236 free physical nodes of the declared neck59 scope and already-created derived interface. Shared238 seam nodes have one Float32 coordinate. No expansion, new topology, skin or normal variables.",
+    "normalEquality": "D_Blender5.2.1(Float32(X), unchanged raw custom-normal fields)[protectedCornerIDs] must be byte-identical to the frozen100 decoded normals. Mask includes every outside original corner and every inside corner in a partially editable alias class; immutable upper face, cheek and every head triangle touching above1.60m remain protected.",
+    "otherHardEqualities": "Original outside Float32 positions and whole partial-alias positions, UV/PBR/raw attributes, all full/four bone rows, original auxiliary definitions/memberships, original51 rest/bind/pose controls stay exact.",
+    "collisionConstraints": "No eligible local-versus-whole body-self, head-self or body-head proper edge/triangle crossings, using unchanged102 signed-plane1e-10m and barycentric1e-9 tolerances and shared-physical-node exclusions; no triangle area<=1e-14m2. Topological edge incidence and opposed winding gates remain mandatory. New touches or unresolved CCD features cannot authorize a step.",
+    "numericalRule": "Use constrained trust-region SQP on E with decoded-normal equalities and active contact constraints; do not reuse the archived approximate exterior first-difference tangent subspace as a substitute for decoded-normal preservation. Every tentative coordinate vector is rounded to nativeFloat32 and re-decoded by Blender before it can be accepted. Finite-difference frame derivatives may propose a step but never certify this byte equality; if the decoder has no reliable local linearization, stop with witness IDs.",
+    "initialFeasibility": "P0 has1 body-self and245 body-head proper crossings, so no collision-free continuation can include P0 as its start. First require a Phase-I feasible seed inside the same pinned-position and exact decoded-normal constraints, minimizing collision violation only. All246 original crossings must reach zero before any collision-free continuation claim; source contacts receive no waiver. No such seed is archived or claimed.",
+    "continuationRule": "Only from a verified zero-contact seed, minimize E with accepted normal-preserving Float32 endpoints and conservative whole swept local-versus-whole CCD for each accepted segment. Native tessellation changes require explicit endpoint retessellation checks and a certified swept treatment; fixed-reference CCD alone cannot admit such a segment. Protected decoded-normal bytes must also be certified throughout a claimed continuous segment; matching endpoints alone does not establish an invariant path. If intermediate frame invariance cannot be certified, report a discrete feasible point only, not a normal-preserving path.",
+    "stoppingConditions": [
+      "No normal-preserving feasible seed or no feasible trust-region step: retain failure and exact protected-corner/contact witnesses; do not relax pins or expand scope.",
+      "Any protected decoded-normal byte change, immutable-field change or degenerate triangle rejects the tentative step.",
+      "Any unsupported decoder derivative, contact root ordering, persistent coplanarity/collinearity or tessellation switch prevents a certified step and stops the attempt.",
+      "A qualified rest seed still requires independentQA and root played visual judgment before skin, motion capture or admission."
+    ]
+  },
+  "feasibilityConclusion": "Archive demonstrates that the102 displacement chord violates the exact normal constraint and introduces cap plus non-cap crossings. It neither proves this constrained operator has a feasible solution nor proves the whole existing scope infeasible; no normal Jacobian/rank or constrained fit/Phase-I solve was executed.",
+  "limits": [
+    "One diagnostic and one operator formulation only; no new candidate, native save, fitting/skin solve, capture/render, normal edits, installs, inference or scope expansion.",
+    "AllM0-M5, contact, identity, art, engine, device and player gates remain open. Root is sole played visual judge."
+  ]
+}
