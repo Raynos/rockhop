@@ -253,3 +253,11 @@ Finding: Installed xatlas wraps the frozen glove mesh without changing any trian
 Validation: Guard exit0 in118.14s;570242triangle coordinates/count byte-identical. Finite UVs and both actual inpaint state controls pass; maximum exported triangle error1.1920929e-7 is below3e-7.
 
 Limits: Unaccepted dense raw source with all16degenerate triangles/20components retained. No anatomy, handedness, fit, rig, art/device acceptance or publication.
+
+## Round 128 — gloves paint01 checkpoint
+
+Finding: One existing Hunyuan PBR run completes15steps/eight768views and original4096maps on the frozen glove UV mesh/reference. Preserve every actual paint input and latent plus the original OBJ/GLB before source review.
+
+Validation: Guard exit0 in335.366s; all15paint-step arrays finite/saved.570242triangles retained, UVs finite and5.5955887e-7 coordinate error passes8e-7 writer limit. Original base-color/roughness/metallic maps4096.
+
+Limits: Unaccepted source; no topology cleanup, grip fit, handedness, rig, collision or M0-M5/art/mobile acceptance. No player edits or publication.
