@@ -1,0 +1,33 @@
+{
+  "accepted": false,
+  "round": 120,
+  "item": "jeans",
+  "phase": "uv01",
+  "finding": "The original installed xatlas wrap preserves every jeans triangle coordinate/count and produces finite UVs; actual CPU renderer inpaint/getter controls preserve mesh state before painting.",
+  "validation": "Guard exit0 in153.593s; identical triangle coordinates and finite UVs pass. Two inpaint calls preserve renderer vertices/UVs; exported triangle error is within3e-7. Existing-source normal runtime gate pins rechecked.",
+  "limits": "Unaccepted source; no remesh, reduction, cleanup, fitting, rig, art acceptance or publication. Original PBR remains pending.",
+  "guardStatus": "worker returned; review pending",
+  "guardExitCode": 0,
+  "guardSeconds": 153.593,
+  "peakHostAnonymousGiB": 38.5,
+  "peakHostCombinedGiB": 46.3,
+  "scratchRoot": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/uv01",
+  "rawFiles": [
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/uv01/receipt.json",
+      "bytes": 1213,
+      "sha256": "d844b41d53b31a2fb839e5109f4ef32564071334a0264f49bed295cfbdc4c0c7"
+    },
+    {
+      "path": ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/uv01/wrapped.npz",
+      "bytes": 12554662,
+      "sha256": "fea8e91d14c5380708e0821dc556be2c6c11074a7c215ebaed71ef9f69628d39"
+    }
+  ],
+  "originalWorkerLog": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/jeans/uv01-guard/worker.log",
+    "sha256": "c7539c1708a791cab921ddd3c6f697a4c5a4369304665cf880800eed468293b0"
+  },
+  "noCleanupRemeshReductionOrPlayerReplacement": true,
+  "oneReferenceSeedCandidatePerItem": true
+}
