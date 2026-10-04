@@ -1110,3 +1110,27 @@ Source26 still fails; garment contacts are not waived or assigned same
 cause. Parent owns ask275/index reconciliation and art judgment; no outbound
 acknowledgment, Library/user delivery, upload, promotion, push or publication.
 Required ordinary third-round gate60 follows in its own commit.
+
+
+## 2026-10-04 Round60 — normal gate after neck-interface proposal
+
+Finding: Required third-round gate passes after input freeze58 and independent
+neck diagnosis59. Normal build keeps all twenty shipped models, empty
+candidate mapping and disabled review adapters; unaccepted proposed repair
+does not enter player assets. Shared source and all prior QA remain exact.
+
+Validation: Silent headless WebKit low/high cold boots and 4,810-tick clears
+match 40.083333333333336s, hash368f1ca5bd9e830a and finish bytes
+abaaaaaaaa0a4440, with zero faults/errors. Both crash at103ticks and restart
+at tick zero, measured2/4ms. Eight normal-source pins and twenty model hashes
+match gate57 before/after. All24diagnosis inputs,42stable body56outputs,
+original PDF53 and eight stable body59outputs plus its receipt remain
+hash-identical. Actual gate/source receipts live in gate60/. Normal build
+passes with the existing chunk-size warning; only owned paths committed.
+
+Limits: Ordinary bot gate only; no new candidate neck/garment capture or
+repair, stranger/physical iOS, appearance or deployment acceptance. Local
+repair proposal remains unaccepted, source26 failed, all M0–M5 open. Parent
+owns ask275/index reconciliation, repair scope and art judgment. No outbound
+acknowledgment, user/Library delivery, upload, promotion, push or publication.
+Temporary build stays excluded; no recursive cleanup attempted.
