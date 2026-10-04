@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/hand83/check-contact-motion.py", line 29, in <module>
+    change=weights['full']-weights['four'];changed=np.flatnonzero((change!=0).any(1));diff=np.einsum('vj,njab,vb->nva',change[changed],K,H[changed])[:,:,:3];delta=np.linalg.norm(diff,axis=2);manualmax=delta.max(1);ids=changed[delta.argmax(1)];receipted=np.array([r['maximumMm']/1000 for r in owner['fullFourLossByObservation']]);imax=int(manualmax.argmax());lossResidual=float(np.abs(manualmax-receipted).max());assert lossResidual<1e-6 and int(ids[imax])==owner['maximumFullFourWitness']['nativeVertexID'];assert int(w['inputTicks'][imax])==owner['maximumFullFourWitness']['inputTick']
+                                                                                                                                                                                                                                                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,1245 @@
+{
+  "status": "EXACT_TRANSFER_REPRODUCED_DONOR_SUPPORT_UNSAMPLED_FOR_FIVE_FIELDS",
+  "recipeSHA256": "0d50ec53d2ff4b7d48ada0e00bb9f9cf97dd7848ccb987f48052ad63814a0f96",
+  "nativeSourceAndCandidatePositionsTopologyByteExact": true,
+  "fullAndFourWeightsAndRemovedMassReproducedByteExact": true,
+  "transferFallbackVertices": [],
+  "independentNearestDonorTriangleIDsExact": true,
+  "independentNearestDonorTrianglesMatched": 4021,
+  "gloveVertices": 4021,
+  "maximumNearestPointGapM": 1.4352957929465325e-07,
+  "maximumDistanceReceiptGapM": 0.0,
+  "nearestTriangleTies": [],
+  "distalFields": [
+    {
+      "bone": "index_03.L",
+      "donorPositiveVertices": 157,
+      "donorPositiveTriangles": 327,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 0,
+      "candidateFullPositiveVertices": 0,
+      "candidateFourPositiveVertices": 0,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 0,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 0,
+      "maximumSampledDistalMass": 0.0,
+      "terminalTailNativeM": [
+        0.39113742113113403,
+        -0.5398622751235962,
+        1.0288275480270386
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 3869,
+        "polygonID": 3869,
+        "nativeVertexIDs": [
+          749,
+          790,
+          779
+        ],
+        "barycentric": [
+          0.9431626051617428,
+          2.6589734142889095e-05,
+          0.05681080510411439
+        ],
+        "pointNativeM": [
+          0.3479045033454895,
+          -0.5796173810958862,
+          1.0258903503417969
+        ],
+        "tailDistanceMm": 58.806296437978745,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 748,
+        "XYZNativeM": [
+          0.3480314314365387,
+          -0.5797483325004578,
+          1.0257941484451294
+        ],
+        "tailDistanceMm": 58.806678478250916,
+        "sampledBodyTriangleID": 3531,
+        "sampledBodyPolygonID": 1765,
+        "sampledBodyNativeVertexIDs": [
+          2205,
+          2092,
+          2208
+        ],
+        "archivedBarycentric": [
+          0.3035322258703157,
+          0.18722982457186993,
+          0.5092379495578144
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampledAllHandFingerWeights": {
+          "middle_02.L": 0.8019940614728026,
+          "middle_03.L": 0.19800592292855085
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 1927,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.39181312918663025,
+          -0.5409428477287292,
+          1.0290448665618896
+        ],
+        "tailDistanceMm": 1.2928441038332252
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 109,
+        "nearestGapMm": 35.30435636639595,
+        "nearestDonorVertex": 2081,
+        "nearestGloveTriangle": 4061,
+        "farthestGapMm": 61.47420406341553,
+        "farthestDonorVertex": 2965
+      },
+      "coverageCause": "No positive donor-region sample; nearest geometric projection cannot create absent sampled distal mass."
+    },
+    {
+      "bone": "middle_03.L",
+      "donorPositiveVertices": 158,
+      "donorPositiveTriangles": 328,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 151,
+      "candidateFullPositiveVertices": 152,
+      "candidateFourPositiveVertices": 152,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 155,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 152,
+      "maximumSampledDistalMass": 0.6305999755859376,
+      "terminalTailNativeM": [
+        0.36935409903526306,
+        -0.5707067847251892,
+        0.994147002696991
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 5549,
+        "polygonID": 5549,
+        "nativeVertexIDs": [
+          669,
+          721,
+          718
+        ],
+        "barycentric": [
+          -2.220446049250313e-16,
+          0.9999999999999999,
+          2.417299765614857e-16
+        ],
+        "pointNativeM": [
+          0.34870314598083496,
+          -0.5822358727455139,
+          1.023821234703064
+        ],
+        "tailDistanceMm": 37.94656693935394,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 721,
+        "XYZNativeM": [
+          0.34870314598083496,
+          -0.5822358727455139,
+          1.023821234703064
+        ],
+        "tailDistanceMm": 37.94656476924934,
+        "sampledBodyTriangleID": 3737,
+        "sampledBodyPolygonID": 1868,
+        "sampledBodyNativeVertexIDs": [
+          2213,
+          2208,
+          2216
+        ],
+        "archivedBarycentric": [
+          0.1040928991968989,
+          0.4862042563753423,
+          0.4097028444277588
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.4034000039100647,
+          0.22930000722408295,
+          0.4002000093460083
+        ],
+        "sampledAllHandFingerWeights": {
+          "middle_02.L": 0.6825591951436318,
+          "middle_03.L": 0.3174407976113601
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 2145,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.36766815185546875,
+          -0.5679219365119934,
+          0.995003879070282
+        ],
+        "tailDistanceMm": 3.3663087473820044
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 119,
+        "nearestGapMm": 9.485957212746143,
+        "nearestDonorVertex": 2173,
+        "nearestGloveTriangle": 3872,
+        "farthestGapMm": 37.26993501186371,
+        "farthestDonorVertex": 2232
+      },
+      "coverageCause": "Positive donor-region samples exist."
+    },
+    {
+      "bone": "ring_03.L",
+      "donorPositiveVertices": 153,
+      "donorPositiveTriangles": 324,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 6,
+      "candidateFullPositiveVertices": 6,
+      "candidateFourPositiveVertices": 6,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 8,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 6,
+      "maximumSampledDistalMass": 0.7385562392175452,
+      "terminalTailNativeM": [
+        0.3332362473011017,
+        -0.5866153836250305,
+        0.9844493269920349
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 3528,
+        "polygonID": 3528,
+        "nativeVertexIDs": [
+          1198,
+          1192,
+          1313
+        ],
+        "barycentric": [
+          -1.4287818470570812e-06,
+          0.18486337745267567,
+          0.8151380513291715
+        ],
+        "pointNativeM": [
+          0.3284192681312561,
+          -0.5556824207305908,
+          1.0027645826339722
+        ],
+        "tailDistanceMm": 36.26982495188713,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 1313,
+        "XYZNativeM": [
+          0.32795897126197815,
+          -0.5552557110786438,
+          1.001922845840454
+        ],
+        "tailDistanceMm": 36.28501847258409,
+        "sampledBodyTriangleID": 5390,
+        "sampledBodyPolygonID": 2695,
+        "sampledBodyNativeVertexIDs": [
+          2425,
+          2472,
+          3059
+        ],
+        "archivedBarycentric": [
+          0.3489749271541285,
+          0.3804104120432116,
+          0.2706146608026599
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.9271000027656555,
+          0.6086000204086304,
+          0.6780999898910522
+        ],
+        "sampledAllHandFingerWeights": {
+          "ring_02.L": 0.2614437721195685,
+          "ring_03.L": 0.7385562392175452
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 2311,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.33418941497802734,
+          -0.5873385071754456,
+          0.9843892455101013
+        ],
+        "tailDistanceMm": 1.197934085821105
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 112,
+        "nearestGapMm": 16.184713691473007,
+        "nearestDonorVertex": 3037,
+        "nearestGloveTriangle": 3692,
+        "farthestGapMm": 40.77376797795296,
+        "farthestDonorVertex": 3050
+      },
+      "coverageCause": "Positive donor-region samples exist."
+    },
+    {
+      "bone": "pinky_03.L",
+      "donorPositiveVertices": 206,
+      "donorPositiveTriangles": 432,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 0,
+      "candidateFullPositiveVertices": 0,
+      "candidateFourPositiveVertices": 0,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 0,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 0,
+      "maximumSampledDistalMass": 0.0,
+      "terminalTailNativeM": [
+        0.29008305072784424,
+        -0.5815938711166382,
+        0.9930254817008972
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 3541,
+        "polygonID": 3541,
+        "nativeVertexIDs": [
+          1214,
+          1345,
+          1324
+        ],
+        "barycentric": [
+          2.220446049250313e-16,
+          5.106645963444656e-17,
+          0.9999999999999998
+        ],
+        "pointNativeM": [
+          0.32334330677986145,
+          -0.5543049573898315,
+          1.0050151348114014
+        ],
+        "tailDistanceMm": 44.66185346245766,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 1324,
+        "XYZNativeM": [
+          0.32334330677986145,
+          -0.5543049573898315,
+          1.0050151348114014
+        ],
+        "tailDistanceMm": 44.66185426899633,
+        "sampledBodyTriangleID": 5349,
+        "sampledBodyPolygonID": 2674,
+        "sampledBodyNativeVertexIDs": [
+          2432,
+          3041,
+          2433
+        ],
+        "archivedBarycentric": [
+          0.8987266093350177,
+          0.04881895573063743,
+          0.052454434934344873
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampledAllHandFingerWeights": {
+          "ring_02.L": 0.6932778428384033,
+          "ring_03.L": 0.3067221571615967
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 2503,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.2907009422779083,
+          -0.5823284387588501,
+          0.9925870299339294
+        ],
+        "tailDistanceMm": 1.0552817351695867
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 113,
+        "nearestGapMm": 36.959417164325714,
+        "nearestDonorVertex": 3072,
+        "nearestGloveTriangle": 3808,
+        "farthestGapMm": 51.80252343416214,
+        "farthestDonorVertex": 2657
+      },
+      "coverageCause": "No positive donor-region sample; nearest geometric projection cannot create absent sampled distal mass."
+    },
+    {
+      "bone": "thumb_03.L",
+      "donorPositiveVertices": 136,
+      "donorPositiveTriangles": 282,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 0,
+      "candidateFullPositiveVertices": 0,
+      "candidateFourPositiveVertices": 0,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 0,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 0,
+      "maximumSampledDistalMass": 0.0,
+      "terminalTailNativeM": [
+        0.3525574803352356,
+        -0.46559274196624756,
+        1.0786598920822144
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 6302,
+        "polygonID": 6302,
+        "nativeVertexIDs": [
+          1511,
+          1413,
+          1496
+        ],
+        "barycentric": [
+          0.11964991504820088,
+          4.2665383799702366e-06,
+          0.8803458184134192
+        ],
+        "pointNativeM": [
+          0.29698801040649414,
+          -0.5176992416381836,
+          1.0630578994750977
+        ],
+        "tailDistanceMm": 77.75908708572388,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 1496,
+        "XYZNativeM": [
+          0.2973543107509613,
+          -0.5179648399353027,
+          1.0626401901245117
+        ],
+        "tailDistanceMm": 77.76154209275997,
+        "sampledBodyTriangleID": 5536,
+        "sampledBodyPolygonID": 2768,
+        "sampledBodyNativeVertexIDs": [
+          3164,
+          3138,
+          3143
+        ],
+        "archivedBarycentric": [
+          0.19393713635942234,
+          2.152711387619277e-06,
+          0.8060607109291901
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampledAllHandFingerWeights": {
+          "hand.L": 0.9389811637306669,
+          "index_01.L": 0.007012759925268212,
+          "middle_01.L": 0.05400608985672668
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 2680,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.35514765977859497,
+          -0.46546420454978943,
+          1.078783631324768
+        ],
+        "tailDistanceMm": 2.596317164057384
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 103,
+        "nearestGapMm": 50.86309090256691,
+        "nearestDonorVertex": 2757,
+        "nearestGloveTriangle": 5898,
+        "farthestGapMm": 81.21929317712784,
+        "farthestDonorVertex": 2748
+      },
+      "coverageCause": "No positive donor-region sample; nearest geometric projection cannot create absent sampled distal mass."
+    },
+    {
+      "bone": "index_03.R",
+      "donorPositiveVertices": 157,
+      "donorPositiveTriangles": 327,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 245,
+      "candidateFullPositiveVertices": 245,
+      "candidateFourPositiveVertices": 245,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 245,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 245,
+      "maximumSampledDistalMass": 0.8843055669382041,
+      "terminalTailNativeM": [
+        0.3911374807357788,
+        0.5398622751235962,
+        1.0288275480270386
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 2111,
+        "polygonID": 2111,
+        "nativeVertexIDs": [
+          3284,
+          3197,
+          3255
+        ],
+        "barycentric": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "pointNativeM": [
+          0.37266045808792114,
+          0.5434631109237671,
+          1.0360599756240845
+        ],
+        "tailDistanceMm": 20.166169852018356,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 3284,
+        "XYZNativeM": [
+          0.37266045808792114,
+          0.5434631109237671,
+          1.0360599756240845
+        ],
+        "tailDistanceMm": 20.16616952561266,
+        "sampledBodyTriangleID": 16631,
+        "sampledBodyPolygonID": 8315,
+        "sampledBodyNativeVertexIDs": [
+          8625,
+          8698,
+          8697
+        ],
+        "archivedBarycentric": [
+          0.5100931992908646,
+          0.20246603574390182,
+          0.28744076496523363
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.8093000054359436,
+          0.9132000207901001,
+          0.9488000273704529
+        ],
+        "sampledAllHandFingerWeights": {
+          "index_02.R": 0.1295657893451182,
+          "index_03.R": 0.8704342226759524
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 8595,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.391813188791275,
+          0.5409428477287292,
+          1.0290448665618896
+        ],
+        "tailDistanceMm": 1.2928441038332252
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 109,
+        "nearestGapMm": 0.21118292352184653,
+        "nearestDonorVertex": 8757,
+        "nearestGloveTriangle": 2107,
+        "farthestGapMm": 21.511737257242203,
+        "farthestDonorVertex": 8707
+      },
+      "coverageCause": "Positive donor-region samples exist."
+    },
+    {
+      "bone": "middle_03.R",
+      "donorPositiveVertices": 158,
+      "donorPositiveTriangles": 328,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 61,
+      "candidateFullPositiveVertices": 61,
+      "candidateFourPositiveVertices": 61,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 61,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 61,
+      "maximumSampledDistalMass": 0.230593525673269,
+      "terminalTailNativeM": [
+        0.36935415863990784,
+        0.5707067847251892,
+        0.994147002696991
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 1009,
+        "polygonID": 1009,
+        "nativeVertexIDs": [
+          3876,
+          3816,
+          3866
+        ],
+        "barycentric": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "pointNativeM": [
+          0.3438154458999634,
+          0.5617636442184448,
+          1.0178513526916504
+        ],
+        "tailDistanceMm": 35.973627120256424,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 3875,
+        "XYZNativeM": [
+          0.3438154458999634,
+          0.5617636442184448,
+          1.0178513526916504
+        ],
+        "tailDistanceMm": 35.97362671744516,
+        "sampledBodyTriangleID": 16982,
+        "sampledBodyPolygonID": 8491,
+        "sampledBodyNativeVertexIDs": [
+          8926,
+          8912,
+          8874
+        ],
+        "archivedBarycentric": [
+          0.30964499086130715,
+          0.3290123470027121,
+          0.36134266213598076
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.11330000311136246,
+          0.06260000169277191,
+          0.14419999718666077
+        ],
+        "sampledAllHandFingerWeights": {
+          "middle_02.R": 0.892215414636633,
+          "middle_03.R": 0.10778456277074547
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 8813,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.3676682114601135,
+          0.5679219365119934,
+          0.995003879070282
+        ],
+        "tailDistanceMm": 3.3663087473820044
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 119,
+        "nearestGapMm": 5.727741401642561,
+        "nearestDonorVertex": 9674,
+        "nearestGloveTriangle": 1056,
+        "farthestGapMm": 36.00127995014191,
+        "farthestDonorVertex": 8787
+      },
+      "coverageCause": "Positive donor-region samples exist."
+    },
+    {
+      "bone": "ring_03.R",
+      "donorPositiveVertices": 153,
+      "donorPositiveTriangles": 324,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 0,
+      "candidateFullPositiveVertices": 0,
+      "candidateFourPositiveVertices": 0,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 0,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 0,
+      "maximumSampledDistalMass": 0.0,
+      "terminalTailNativeM": [
+        0.33323630690574646,
+        0.5866153836250305,
+        0.9844493269920349
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 2232,
+        "polygonID": 2232,
+        "nativeVertexIDs": [
+          3920,
+          3922,
+          3932
+        ],
+        "barycentric": [
+          0.0,
+          1.4800202526368156e-16,
+          0.9999999999999999
+        ],
+        "pointNativeM": [
+          0.3391416072845459,
+          0.5632642507553101,
+          1.0161807537078857
+        ],
+        "tailDistanceMm": 39.837561547756195,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 3932,
+        "XYZNativeM": [
+          0.3391416072845459,
+          0.5632642507553101,
+          1.0161807537078857
+        ],
+        "tailDistanceMm": 39.83756293106545,
+        "sampledBodyTriangleID": 17052,
+        "sampledBodyPolygonID": 8526,
+        "sampledBodyNativeVertexIDs": [
+          9657,
+          9677,
+          8912
+        ],
+        "archivedBarycentric": [
+          0.5652213107736781,
+          0.19015059677695792,
+          0.24462809244936395
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampledAllHandFingerWeights": {
+          "middle_02.R": 0.8045485938705295,
+          "middle_03.R": 0.1954514109066818
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 8979,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.3341894745826721,
+          0.5873385071754456,
+          0.9843892455101013
+        ],
+        "tailDistanceMm": 1.197934085821105
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 112,
+        "nearestGapMm": 16.527455300092697,
+        "nearestDonorVertex": 9035,
+        "nearestGloveTriangle": 803,
+        "farthestGapMm": 43.54387894272804,
+        "farthestDonorVertex": 9694
+      },
+      "coverageCause": "No positive donor-region sample; nearest geometric projection cannot create absent sampled distal mass."
+    },
+    {
+      "bone": "pinky_03.R",
+      "donorPositiveVertices": 206,
+      "donorPositiveTriangles": 432,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 0,
+      "candidateFullPositiveVertices": 0,
+      "candidateFourPositiveVertices": 0,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 0,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 0,
+      "maximumSampledDistalMass": 0.0,
+      "terminalTailNativeM": [
+        0.290083110332489,
+        0.5815938711166382,
+        0.9930254817008972
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 1429,
+        "polygonID": 1429,
+        "nativeVertexIDs": [
+          4017,
+          4014,
+          4019
+        ],
+        "barycentric": [
+          2.220446049250313e-16,
+          0.0,
+          0.9999999999999998
+        ],
+        "pointNativeM": [
+          0.29996147751808167,
+          0.5606505274772644,
+          1.0182515382766724
+        ],
+        "tailDistanceMm": 34.2426598072052,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 4019,
+        "XYZNativeM": [
+          0.29996147751808167,
+          0.5606505274772644,
+          1.0182515382766724
+        ],
+        "tailDistanceMm": 34.242659233980355,
+        "sampledBodyTriangleID": 17205,
+        "sampledBodyPolygonID": 8602,
+        "sampledBodyNativeVertexIDs": [
+          9115,
+          8994,
+          9038
+        ],
+        "archivedBarycentric": [
+          0.0,
+          0.3107194146219857,
+          0.6892805853780144
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampledAllHandFingerWeights": {
+          "ring_01.R": 0.19651390386408837,
+          "ring_02.R": 0.803486116678074
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 9171,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.2907010018825531,
+          0.5823284387588501,
+          0.9925870299339294
+        ],
+        "tailDistanceMm": 1.0552817351695867
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 113,
+        "nearestGapMm": 16.972897574305534,
+        "nearestDonorVertex": 9227,
+        "nearestGloveTriangle": 1977,
+        "farthestGapMm": 36.80218383669853,
+        "farthestDonorVertex": 9733
+      },
+      "coverageCause": "No positive donor-region sample; nearest geometric projection cannot create absent sampled distal mass."
+    },
+    {
+      "bone": "thumb_03.R",
+      "donorPositiveVertices": 136,
+      "donorPositiveTriangles": 282,
+      "donorMaximumWeight": 1.0,
+      "sourceGlovePositiveVertices": 120,
+      "candidateFullPositiveVertices": 120,
+      "candidateFourPositiveVertices": 120,
+      "gloveSamplesTouchingAnyPositiveDonorTriangleVertices": 120,
+      "gloveSamplesWithPositiveInterpolatedDistalMass": 120,
+      "maximumSampledDistalMass": 0.5960287234587749,
+      "terminalTailNativeM": [
+        0.35255753993988037,
+        0.4655926823616028,
+        1.0786598920822144
+      ],
+      "nearestGeometricGloveSurface": {
+        "triangleID": 1521,
+        "polygonID": 1521,
+        "nativeVertexIDs": [
+          2059,
+          2091,
+          2093
+        ],
+        "barycentric": [
+          3.3306690738754696e-16,
+          0.9999999999999997,
+          0.0
+        ],
+        "pointNativeM": [
+          0.33603233098983765,
+          0.4590761661529541,
+          1.1034139394760132
+        ],
+        "tailDistanceMm": 30.468186363577843,
+        "notAssumedSemanticFinger": true
+      },
+      "nearestGloveVertexToTail": {
+        "nativeID": 2091,
+        "XYZNativeM": [
+          0.33603233098983765,
+          0.4590761661529541,
+          1.1034139394760132
+        ],
+        "tailDistanceMm": 30.46818630497378,
+        "sampledBodyTriangleID": 17983,
+        "sampledBodyPolygonID": 8991,
+        "sampledBodyNativeVertexIDs": [
+          9398,
+          9393,
+          9390
+        ],
+        "archivedBarycentric": [
+          0.660954166535072,
+          0.09384503836151029,
+          0.24520079510341775
+        ],
+        "positiveDonorWeightsByCorner": [
+          0.6373000144958496,
+          0.5073999762535095,
+          0.5187000036239624
+        ],
+        "sampledAllHandFingerWeights": {
+          "thumb_02.R": 0.4039712737444251,
+          "thumb_03.R": 0.5960287234587749
+        }
+      },
+      "nearestDonorVertexToTail": {
+        "nativeID": 9348,
+        "weight": 1.0,
+        "XYZNativeM": [
+          0.35514771938323975,
+          0.46546414494514465,
+          1.078783631324768
+        ],
+        "tailDistanceMm": 2.596317164057384
+      },
+      "strongDonorRegionToActualGloveSurface": {
+        "vertices": 103,
+        "nearestGapMm": 4.186469130218029,
+        "nearestDonorVertex": 9390,
+        "nearestGloveTriangle": 1628,
+        "farthestGapMm": 32.72546827793121,
+        "farthestDonorVertex": 9345
+      },
+      "coverageCause": "Positive donor-region samples exist."
+    }
+  ],
+  "oneAnatomicalSection": {
+    "L": {
+      "definition": "ONE plane: maximum nonthumb MCP longitudinal station + half minimum MCP-to-PIP projected length; no section/angle/threshold sweep. Raw graph and exact-coordinate alias graph connectivity after this single plane, independent of weights; no proximity weld. Thumb can lie proximal to this plane.",
+      "wristNativeXYZ": [
+        0.21542249619960785,
+        -0.5087002515792847,
+        1.127906322479248
+      ],
+      "widthUnitNative": [
+        -0.8079094824199734,
+        -0.38116212500877067,
+        -0.4494415453367533
+      ],
+      "longitudinalUnitNative": [
+        0.5890622026461227,
+        -0.5442996044405395,
+        -0.5972802206833662
+      ],
+      "planeStationM": 0.12549024508147047,
+      "rawNativeGraphComponents": [
+        {
+          "component": 0,
+          "vertices": 155,
+          "farthestStationNativeID": 610,
+          "stationM": 0.1819307723254527,
+          "tipXYZNativeM": [
+            0.35066306591033936,
+            -0.5862215161323547,
+            1.0273323059082031
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.05880667847825092,
+            "middle": 0.038139953814103546,
+            "ring": 0.042506960348362065,
+            "pinky": 0.060200779584435316
+          }
+        },
+        {
+          "component": 1,
+          "vertices": 125,
+          "farthestStationNativeID": 1295,
+          "stationM": 0.16938663055072423,
+          "tipXYZNativeM": [
+            0.3346279263496399,
+            -0.5533872842788696,
+            1.0025981664657593
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.06081625121131972,
+            "middle": 0.03895396151712028,
+            "ring": 0.03781951787075851,
+            "pinky": 0.050951503338584586
+          }
+        },
+        {
+          "component": 2,
+          "vertices": 117,
+          "farthestStationNativeID": 151,
+          "stationM": 0.1721767361228724,
+          "tipXYZNativeM": [
+            0.3458194136619568,
+            -0.6035766005516052,
+            1.0547016859054565
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.07867237609718607,
+            "middle": 0.07049634613825029,
+            "ring": 0.0700393709866696,
+            "pinky": 0.07730538950357739
+          }
+        },
+        {
+          "component": 3,
+          "vertices": 105,
+          "farthestStationNativeID": 602,
+          "stationM": 0.18275142734552,
+          "tipXYZNativeM": [
+            0.34997090697288513,
+            -0.5874455571174622,
+            1.0263911485671997
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.05880667847825092,
+            "middle": 0.03794656476924934,
+            "ring": 0.03967453994679049,
+            "pinky": 0.056303371299398386
+          }
+        },
+        {
+          "component": 4,
+          "vertices": 94,
+          "farthestStationNativeID": 20,
+          "stationM": 0.14050040399356697,
+          "tipXYZNativeM": [
+            0.3185187578201294,
+            -0.6083453297615051,
+            1.0851566791534424
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.11051462797568307,
+            "middle": 0.10759744668088049,
+            "ring": 0.10048044392552909,
+            "pinky": 0.09430023189412445
+          }
+        },
+        {
+          "component": 5,
+          "vertices": 79,
+          "farthestStationNativeID": 1293,
+          "stationM": 0.16968683173827348,
+          "tipXYZNativeM": [
+            0.3334861099720001,
+            -0.5542941689491272,
+            1.0017958879470825
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.06081625121131972,
+            "middle": 0.03895396151712028,
+            "ring": 0.03628501847258409,
+            "pinky": 0.044661854268996326
+          }
+        },
+        {
+          "component": 6,
+          "vertices": 72,
+          "farthestStationNativeID": 150,
+          "stationM": 0.1721767361228724,
+          "tipXYZNativeM": [
+            0.3458194136619568,
+            -0.6035766005516052,
+            1.0547016859054565
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.07972541236571802,
+            "middle": 0.07049634613825029,
+            "ring": 0.06988579428596789,
+            "pinky": 0.07639431236484903
+          }
+        }
+      ],
+      "exactCoordinateAliasGraphComponents": [
+        {
+          "component": 0,
+          "uniqueExactCoordinateNodes": 225,
+          "nativeVertices": 260,
+          "farthestStationNativeID": 602,
+          "stationM": 0.18275142734552,
+          "nativeIDArchiveKey": "LExactAliasSection0NativeIDs"
+        },
+        {
+          "component": 1,
+          "uniqueExactCoordinateNodes": 176,
+          "nativeVertices": 204,
+          "farthestStationNativeID": 1293,
+          "stationM": 0.16968683173827348,
+          "nativeIDArchiveKey": "LExactAliasSection1NativeIDs"
+        },
+        {
+          "component": 2,
+          "uniqueExactCoordinateNodes": 163,
+          "nativeVertices": 189,
+          "farthestStationNativeID": 150,
+          "stationM": 0.1721767361228724,
+          "nativeIDArchiveKey": "LExactAliasSection2NativeIDs"
+        },
+        {
+          "component": 3,
+          "uniqueExactCoordinateNodes": 85,
+          "nativeVertices": 94,
+          "farthestStationNativeID": 20,
+          "stationM": 0.14050040399356697,
+          "nativeIDArchiveKey": "LExactAliasSection3NativeIDs"
+        }
+      ],
+      "limits": "Section components alone do not prove five complete fingers or inability to reshape existing topology; labels are nearest semantic-tail diagnostic, not geometric segmentation certification."
+    },
+    "R": {
+      "definition": "ONE plane: maximum nonthumb MCP longitudinal station + half minimum MCP-to-PIP projected length; no section/angle/threshold sweep. Raw graph and exact-coordinate alias graph connectivity after this single plane, independent of weights; no proximity weld. Thumb can lie proximal to this plane.",
+      "wristNativeXYZ": [
+        0.215422585606575,
+        0.5087002515792847,
+        1.127906322479248
+      ],
+      "widthUnitNative": [
+        -0.8079094824199734,
+        0.38116212500877067,
+        -0.4494415453367533
+      ],
+      "longitudinalUnitNative": [
+        0.5890622025711226,
+        0.5442996077432221,
+        -0.59728021774761
+      ],
+      "planeStationM": 0.12549022750554312,
+      "rawNativeGraphComponents": [
+        {
+          "component": 0,
+          "vertices": 136,
+          "farthestStationNativeID": 4000,
+          "stationM": 0.14539308752720326,
+          "tipXYZNativeM": [
+            0.3043045699596405,
+            0.5603641867637634,
+            1.019221305847168
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.08722339773828405,
+            "middle": 0.06996411994430472,
+            "ring": 0.052299725170114345,
+            "pinky": 0.03424265923398036
+          }
+        },
+        {
+          "component": 1,
+          "vertices": 134,
+          "farthestStationNativeID": 3360,
+          "stationM": 0.16820584164639474,
+          "tipXYZNativeM": [
+            0.37096354365348816,
+            0.5465037226676941,
+            1.0341377258300781
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.02090749842359016,
+            "middle": 0.04503304647557757,
+            "ring": 0.06859151643121772,
+            "pinky": 0.08237502282192315
+          }
+        },
+        {
+          "component": 2,
+          "vertices": 129,
+          "farthestStationNativeID": 3906,
+          "stationM": 0.17071198252940506,
+          "tipXYZNativeM": [
+            0.34221595525741577,
+            0.5633333325386047,
+            1.0169265270233154
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.0494260456938214,
+            "middle": 0.035973626717445154,
+            "ring": 0.04015130265658209,
+            "pinky": 0.052962563405193806
+          }
+        },
+        {
+          "component": 3,
+          "vertices": 80,
+          "farthestStationNativeID": 3372,
+          "stationM": 0.1684135274558763,
+          "tipXYZNativeM": [
+            0.3711075186729431,
+            0.5453650951385498,
+            1.0328943729400635
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.02016616952561266,
+            "middle": 0.04414142806781423,
+            "ring": 0.06857424170895764,
+            "pinky": 0.08237502282192315
+          }
+        },
+        {
+          "component": 4,
+          "vertices": 72,
+          "farthestStationNativeID": 3907,
+          "stationM": 0.17071198252940506,
+          "tipXYZNativeM": [
+            0.34221595525741577,
+            0.5633333325386047,
+            1.0169265270233154
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.0494260456938214,
+            "middle": 0.035973626717445154,
+            "ring": 0.03983756293106545,
+            "pinky": 0.052962563405193806
+          }
+        },
+        {
+          "component": 5,
+          "vertices": 65,
+          "farthestStationNativeID": 2752,
+          "stationM": 0.14197144808560774,
+          "tipXYZNativeM": [
+            0.3794000446796417,
+            0.5221323370933533,
+            1.0641716718673706
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.04124712350902652,
+            "middle": 0.08524598812587243,
+            "ring": 0.10957380527274337,
+            "pinky": 0.11903484227754786
+          }
+        },
+        {
+          "component": 6,
+          "vertices": 30,
+          "farthestStationNativeID": 2771,
+          "stationM": 0.14230295004805898,
+          "tipXYZNativeM": [
+            0.3792305290699005,
+            0.5218867063522339,
+            1.0632256269454956
+          ],
+          "minimumDistanceToSemanticTerminalTailM": {
+            "index": 0.04059709846661379,
+            "middle": 0.08516336696771698,
+            "ring": 0.10987796263245872,
+            "pinky": 0.1195563118554438
+          }
+        }
+      ],
+      "exactCoordinateAliasGraphComponents": [
+        {
+          "component": 0,
+          "uniqueExactCoordinateNodes": 185,
+          "nativeVertices": 214,
+          "farthestStationNativeID": 3372,
+          "stationM": 0.1684135274558763,
+          "nativeIDArchiveKey": "RExactAliasSection0NativeIDs"
+        },
+        {
+          "component": 1,
+          "uniqueExactCoordinateNodes": 174,
+          "nativeVertices": 201,
+          "farthestStationNativeID": 3906,
+          "stationM": 0.17071198252940506,
+          "nativeIDArchiveKey": "RExactAliasSection1NativeIDs"
+        },
+        {
+          "component": 2,
+          "uniqueExactCoordinateNodes": 125,
+          "nativeVertices": 136,
+          "farthestStationNativeID": 4000,
+          "stationM": 0.14539308752720326,
+          "nativeIDArchiveKey": "RExactAliasSection2NativeIDs"
+        },
+        {
+          "component": 3,
+          "uniqueExactCoordinateNodes": 81,
+          "nativeVertices": 95,
+          "farthestStationNativeID": 2771,
+          "stationM": 0.14230295004805898,
+          "nativeIDArchiveKey": "RExactAliasSection3NativeIDs"
+        }
+      ],
+      "limits": "Section components alone do not prove five complete fingers or inability to reshape existing topology; labels are nearest semantic-tail diagnostic, not geometric segmentation certification."
+    }
+  },
+  "archiveSHA256": "6df2bafb05392e975c0ecf29e191c59d514e79e16acc129c95bec86e0bd5b07f",
+  "pinsUnchangedAfter": true,
+  "limits": [
+    "Nearest geometric projection samples a single body triangle per glove vertex with no per-finger constraint or endpoint-coverage guarantee. It can preserve empty influence fields despite a complete donor.",
+    "Physical lobe/terminal proximity and one-section connectivity witnesses are independent of semantic influence labels; they do not certify a full five-finger surface, closed wrap or a constrained repair feasible in the frozen scope.",
+    "Only existing field metrology, no source changes, candidate, geometry/weight/pose solve, parameter sweep, render/capture or admission."
+  ]
+}

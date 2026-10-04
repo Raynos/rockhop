@@ -1628,3 +1628,30 @@ Limits: No sourceedit/fit/weight/normal/pose solve/candidate/sweep/render/
 capture/expansion/delivery/promotion. Agent1 frozen; no competingrepair or
 routineprompt. Parent owns ask275/index/rootjudgment; allM0–M5gatesopen.
 Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/hand82/
+
+
+## 2026-10-04 Round83 — frozen hand transfer misses existing anatomy
+
+Finding: Exact nearest-body transfer samples no positive distal donor support
+for5 empty glove fields although all10 donor distal bones exist. Rest glove
+registration/correspondence is mismatched. One anatomical section supplies
+raw/alias graph witnesses, not five-finger feasibility. Recommend one scoped
+anatomical registration/per-finger correspondence prerequisite to root.
+
+Validation: Read-only native34originalobjects/materials/images,51rest/bind/
+scales/outside19pose,4021positions/6883triangles/UV/PBR/rawattributes/normals/
+outside19weights exact. Full/four transfer/removedmass and all4021nearest
+triangle IDs exact. All firstseed deepest/finite point/properpairs independently
+reproduce63/19inside,14.359/9.992mm,87/85crossings. Restpalm target precision
+.141/.158µm differs actualskin4.402/.0776mm.1065actualB/case/tick/phase exact;
+wristmax108.312deg landing4563. Manualfullfourloss.180069mm landing4605
+DOES NOT reproduce native.245992mm landing4553, maxresidual.066029mm.
+Firstparity.300189µm; ownerallframe.212347mm remains unverified.48pins exact.
+Reader reduction/parity-assumption failures retained; no candidate retry.
+
+Limits: No source/pose/geometry/weight/normal/evaluation/solve/candidate/sweep/
+render/capture/export/adoption or scope expansion. Existingfivefingers/closed
+wrap/wholeactorcontact/parity/crashrelease remainunqualified. Normalgate81
+passes separate; normal80diagnostic/SQP464rejected. Parentownsask275/index/
+rootplayedjudgment; Agent1frozen; allM0–M5open.
+Evidence: docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/hand83/
