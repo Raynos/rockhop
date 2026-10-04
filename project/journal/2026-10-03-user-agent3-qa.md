@@ -1154,3 +1154,35 @@ owns motion/contact/loss and one played proof. Original490garment/head
 contacts remain separate, source26 still failed, all M0–M5 open. Parent
 owns ask275/index, repair and art acceptance. No outbound acknowledgment,
 Library/user delivery, upload, publication, new worker or model job.
+
+
+## 2026-10-04 Round62 — confirm rest join, expose outside group loss
+
+Finding: Frozen neck98 passes independent stored-field, ancestry and declared
+local rest-topology checks, but both candidate body objects drop153non-bone
+vertex-group definitions and21,424positive assignments across all8,877outside
+body vertices. Skin/generic attributes are exact outside; every outside
+field is not. Parent decides correction/admission, Agent1 owns any repair.
+
+Validation: Independent Blender reads confirm34original plus4failed objects,
+51stored rest/bind/pose,17packed images and18material graphs exact. Actual
+full/four candidate fields and all15input pins match. All238outer edges
+and383inner edges have opposed two-incidence topology, identical seam
+Float32 fields; no nonmanifold/winding/collapsed physical triangle. All1695
+local link graphs pass. One-corner sets502body/2433head have positive areas
+2.486314e-6/9.281220e-8m² minimum. Ordered boundary,42body/51head fan and
+source/corner attribute derivations verified; three head seam-only faces
+retained. Protected raw/decoded normals exact. Old PDF53/body56/body59
+evidence unchanged. Exact witnesses and scope: neck62/assessment.json and
+FINDING.md. Reader non-bone-group failure and uncached-process interruption
+retained; corrected recipes pass, no native write or capture.
+
+Limits: Rest topology under declared registry/original UV quotient only,
+151mouth diagnostic boundaries remain; no global head watertightness,
+geometric T-junction/collision or dynamic precision/attachment/appearance
+pass. Full body raw source rounding retained, not globally normalized.
+Agent1 owns529native/703actual47 and one played proof. Original490garment
+contacts not waived; source26 failed, all M0–M5 open. Parent owns ask275/index
+and judgment. No source edit, inference/GPU/installation, outbound ack,
+Library/user delivery, upload, promotion or publication. Ordinary gate63
+next in separate commit.
