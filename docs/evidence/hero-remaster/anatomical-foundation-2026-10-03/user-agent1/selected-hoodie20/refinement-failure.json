@@ -1,0 +1,118 @@
+{
+  "status": "FAILED adaptive field representation cap, no native saved",
+  "recipeSHA256": "88bc7c27640f8b8cfde583eb6df7767f25c829ac9cfea45e08620d5606ae8579",
+  "logSHA256": "6145c4cb83658fedc1c599d9fb430dd3cf14a49fff90e62b946cb10980f3d1fa",
+  "interpolationToleranceM": 0.00025,
+  "refinementCap": 8,
+  "history": [
+    {
+      "refinement": 0,
+      "vertices": 12443,
+      "triangles": 24400,
+      "uniqueEdges": 36883,
+      "markedEdges": 15459,
+      "maximumEdgeMidpointErrorM": 0.010465564706014348,
+      "maximumFaceCentroidErrorM": 0.009705036459621992
+    },
+    {
+      "refinement": 1,
+      "vertices": 27902,
+      "triangles": 55212,
+      "uniqueEdges": 83154,
+      "markedEdges": 28327,
+      "maximumEdgeMidpointErrorM": 0.0074830138837857696,
+      "maximumFaceCentroidErrorM": 0.005384381675998698
+    },
+    {
+      "refinement": 2,
+      "vertices": 56229,
+      "triangles": 111819,
+      "uniqueEdges": 168088,
+      "markedEdges": 31199,
+      "maximumEdgeMidpointErrorM": 0.004603426383588312,
+      "maximumFaceCentroidErrorM": 0.0030766922312097655
+    },
+    {
+      "refinement": 3,
+      "vertices": 87428,
+      "triangles": 174217,
+      "uniqueEdges": 261685,
+      "markedEdges": 20001,
+      "maximumEdgeMidpointErrorM": 0.0021199598137828057,
+      "maximumFaceCentroidErrorM": 0.0017479870619390302
+    },
+    {
+      "refinement": 4,
+      "vertices": 107429,
+      "triangles": 214219,
+      "uniqueEdges": 321688,
+      "markedEdges": 7418,
+      "maximumEdgeMidpointErrorM": 0.0012397046549746686,
+      "maximumFaceCentroidErrorM": 0.0010894009112851516
+    },
+    {
+      "refinement": 5,
+      "vertices": 114847,
+      "triangles": 229055,
+      "uniqueEdges": 343942,
+      "markedEdges": 1789,
+      "maximumEdgeMidpointErrorM": 0.0009503299368568135,
+      "maximumFaceCentroidErrorM": 0.000897200864649962
+    },
+    {
+      "refinement": 6,
+      "vertices": 116636,
+      "triangles": 232633,
+      "uniqueEdges": 349309,
+      "markedEdges": 625,
+      "maximumEdgeMidpointErrorM": 0.0009382591316519757,
+      "maximumFaceCentroidErrorM": 0.0006796657253462584
+    },
+    {
+      "refinement": 7,
+      "vertices": 117261,
+      "triangles": 233883,
+      "uniqueEdges": 351184,
+      "markedEdges": 531,
+      "maximumEdgeMidpointErrorM": 0.0008605376741265642,
+      "maximumFaceCentroidErrorM": 0.0006218986117301049
+    },
+    {
+      "refinement": 8,
+      "vertices": 117792,
+      "triangles": 234945,
+      "uniqueEdges": 352777,
+      "markedEdges": 550,
+      "maximumEdgeMidpointErrorM": 0.000852557333779621,
+      "maximumFaceCentroidErrorM": 0.0006713153411674413
+    }
+  ],
+  "nativeSaved": false,
+  "nativeAbsentAt": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie20/adaptive-profile.blend",
+  "sideSeamAudit": {
+    "status": "UNACCEPTED side-switch hypothesis tested, no seam leak observed",
+    "pins": {
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie19/profile-fit.blend": "b545229e52c4fc5bcb97b4fbc81ccc3a0e5a2f9c87fe3c7338691317d965e449",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie19/profile-field.npz": "4885dc1f16cc7873d0b44ed69e79658c042adb43f33d4e97ce9c92ad6b8badf0",
+      "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie18/envelopes69/sections.json.gz": "784f899e4299736286ccc8d39ab6b81d79b6e29100dacd437d8200aeb4c1f7ab",
+      "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/fit_measured_donor_profiles.py": "66d0c28477091c8510ca56fca632613b308f489a6d22cd716cd69194d8822113",
+      "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie18/construction.json": "ffd43e68377ed7ff0575047c2c149247b0d3c889c81176a83dc419a8ed8b50e5"
+    },
+    "recipeSHA256": "209193f29237d67d88c22e618fe9ce11bdf4ba53a0b6184d24066c6b313adaee",
+    "existingVertexAnalyticAlphaMaximumError": 0.0,
+    "existingVertexAnalyticForeWeightMaximumError": 0.0,
+    "midlineEdgesWithPositiveBarycentricAlpha": 0,
+    "maximumSideSwitchJumpM": 0,
+    "allCrossingWitnesses": [],
+    "finding": "No initial source18 edge crosses sourceX=0 with positive interpolated arm mass. Original analytic construction parameters match all frozen vertices exactly. The side-switch discontinuity hypothesis is NOT supported for this failed refinement; no analytic-weight repair is justified by this result.",
+    "limits": [
+      "No new fit/radius/centre/support parameters, weights, native save, refinement retry, body/head/51bind change or capture. This is construction parameter continuity, not garment skinning.",
+      "Does not prove all full-field discontinuities absent or wearing/rig/mobile/art/M0-M5 acceptance. Native19 remains493body/35self failed; no inference/worker/Library/player promotion."
+    ]
+  },
+  "limits": [
+    "Failed representation algorithm is retained, not retried with a higher cap or used as a player asset. Midpoint/centroid residual is not complete curved distance proof.",
+    "No native contacts or mobile runtime measured for this attempted source20 because it never reached saved geometry. Existing source19 remains493body/35self failed.",
+    "All prior donor/UV/PBR/body/head/51bind controls unchanged; no capture/rig/motion/inference/worker/Library/player promotion or M0-M5 acceptance."
+  ]
+}
