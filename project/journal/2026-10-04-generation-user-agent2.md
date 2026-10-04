@@ -149,3 +149,11 @@ Finding: Jeans30-step seed42 sampling completes; retain raw421003vertices/842014
 Validation: Guard1/60.930s is native-validation failure, not resource stop; peaks51.6anonymous/61.8combinedGiB. Conditionedcf15c143matches; all processor/features/noise/latent archives retained. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
 
 Limits: Unaccepted raw diagnostic; no new seed, cleanup, fitting, source mutation or publication. Decode replay and PBR/played review remain pending.
+
+## Bounded publication admission
+
+Finding: Human renewed the ten-commit main push request; 88 existing local commits have no changes in player source, public assets, scripts, workflows or package locks. Freeze the publication boundaries before pushing.
+
+Validation: Fresh origin/main fetch is ancestral to main; runtime attribution resolves Codex:gpt-6.1-sol. Existing foreign index/worktree edits remain outside publication staging.
+
+Limits: Publication is pending; unaccepted source recipes/evidence do not become player assets or satisfy art/device gates. Parent owns shared plan status.
