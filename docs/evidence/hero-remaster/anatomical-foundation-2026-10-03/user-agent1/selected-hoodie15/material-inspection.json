@@ -1,0 +1,859 @@
+{
+  "status": "UNACCEPTED read-only donor/baked material diagnosis",
+  "sourceSHA256": "6ef79e38e3dc86b635977ba17a2f2f6100721715b002c4e831b8bcce90ed4e93",
+  "recipeSHA256": "b123373905fa6410c8f6fe73e55ba87eaa45ddc4b5416aeb016714d9bad7b738",
+  "objects": {
+    "Exact selected Hunyuan high-poly PBR donor, display frame only": {
+      "vertices": 716971,
+      "polygons": 921722,
+      "UVLayers": [
+        [
+          "UVMap",
+          true
+        ]
+      ],
+      "materials": [
+        {
+          "name": "Material_0",
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": {
+                  "value": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                  ],
+                  "links": [
+                    [
+                      "Image Texture",
+                      "Color"
+                    ]
+                  ]
+                },
+                "Metallic": {
+                  "value": 0.0,
+                  "links": [
+                    [
+                      "Separate Color",
+                      "Blue"
+                    ]
+                  ]
+                },
+                "Roughness": {
+                  "value": 0.5,
+                  "links": [
+                    [
+                      "Separate Color",
+                      "Green"
+                    ]
+                  ]
+                },
+                "IOR": {
+                  "value": 1.5,
+                  "links": []
+                },
+                "Alpha": {
+                  "value": 1.0,
+                  "links": []
+                },
+                "Thin Wall": {
+                  "value": false,
+                  "links": []
+                },
+                "Normal": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Diffuse Roughness": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Subsurface Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Subsurface Radius": {
+                  "value": [
+                    1.0,
+                    0.20000000298023224,
+                    0.10000000149011612
+                  ],
+                  "links": []
+                },
+                "Subsurface Scale": {
+                  "value": 0.004999999888241291,
+                  "links": []
+                },
+                "Subsurface IOR": {
+                  "value": 1.399999976158142,
+                  "links": []
+                },
+                "Subsurface Anisotropy": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Specular IOR Level": {
+                  "value": 0.5,
+                  "links": []
+                },
+                "Specular Tint": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Anisotropic": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Anisotropic Rotation": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Tangent": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Transmission Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Coat Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Coat Roughness": {
+                  "value": 0.029999999329447746,
+                  "links": []
+                },
+                "Coat IOR": {
+                  "value": 1.5,
+                  "links": []
+                },
+                "Coat Tint": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Coat Normal": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Sheen Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Sheen Roughness": {
+                  "value": 0.5,
+                  "links": []
+                },
+                "Sheen Tint": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Emission Color": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Emission Strength": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Thin Film Thickness": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Thin Film IOR": {
+                  "value": 1.3300000429153442,
+                  "links": []
+                }
+              }
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Thickness": {
+                  "value": 0.0,
+                  "links": []
+                }
+              }
+            },
+            {
+              "name": "Image Texture",
+              "type": "TEX_IMAGE",
+              "inputs": {
+                "Vector": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                }
+              },
+              "image": {
+                "name": "Image_0",
+                "size": [
+                  4096,
+                  4096
+                ],
+                "colorSpace": "sRGB",
+                "filepath": "",
+                "packed": true,
+                "channels": 4,
+                "interpolation": "Linear",
+                "extension": "REPEAT",
+                "imageBufferPixelPercentilesRGB": [
+                  [
+                    0.26274511218070984,
+                    0.11764706671237946,
+                    0.0
+                  ],
+                  [
+                    0.4745098352432251,
+                    0.2823529541492462,
+                    0.011764707043766975
+                  ],
+                  [
+                    0.7568628191947937,
+                    0.5215686559677124,
+                    0.20784315466880798
+                  ],
+                  [
+                    0.803921639919281,
+                    0.5764706134796143,
+                    0.2705882489681244
+                  ],
+                  [
+                    0.8980392813682556,
+                    0.658823549747467,
+                    0.5960784554481506
+                  ]
+                ]
+              }
+            },
+            {
+              "name": "Separate Color",
+              "type": "SEPARATE_COLOR",
+              "inputs": {
+                "Color": {
+                  "value": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                  ],
+                  "links": [
+                    [
+                      "Image Texture.001",
+                      "Color"
+                    ]
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Image Texture.001",
+              "type": "TEX_IMAGE",
+              "inputs": {
+                "Vector": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                }
+              },
+              "image": {
+                "name": "Image_1",
+                "size": [
+                  4096,
+                  4096
+                ],
+                "colorSpace": "Non-Color",
+                "filepath": "",
+                "packed": true,
+                "channels": 4,
+                "interpolation": "Linear",
+                "extension": "REPEAT",
+                "imageBufferPixelPercentilesRGB": [
+                  [
+                    1.0,
+                    0.760784387588501,
+                    0.0
+                  ],
+                  [
+                    1.0,
+                    0.9372549653053284,
+                    0.12156863510608673
+                  ],
+                  [
+                    1.0,
+                    0.9647059440612793,
+                    0.15294118225574493
+                  ],
+                  [
+                    1.0,
+                    0.9843137860298157,
+                    0.1764705926179886
+                  ],
+                  [
+                    1.0,
+                    1.0,
+                    0.2862745225429535
+                  ]
+                ]
+              }
+            }
+          ],
+          "links": [
+            [
+              "Image Texture",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Separate Color",
+              "Blue",
+              "Principled BSDF",
+              "Metallic"
+            ],
+            [
+              "Separate Color",
+              "Green",
+              "Principled BSDF",
+              "Roughness"
+            ],
+            [
+              "Image Texture.001",
+              "Color",
+              "Separate Color",
+              "Color"
+            ],
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ]
+          ]
+        }
+      ]
+    },
+    "Selected Hunyuan underarm fitted wearable, unrigged": {
+      "vertices": 6046,
+      "polygons": 5920,
+      "UVLayers": [
+        [
+          "UVMap",
+          true
+        ]
+      ],
+      "materials": [
+        {
+          "name": "Selected high-poly Hunyuan PBR on sewn atlas",
+          "nodes": [
+            {
+              "name": "Principled BSDF",
+              "type": "BSDF_PRINCIPLED",
+              "inputs": {
+                "Base Color": {
+                  "value": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                  ],
+                  "links": [
+                    [
+                      "Image Texture.001",
+                      "Color"
+                    ]
+                  ]
+                },
+                "Metallic": {
+                  "value": 0.0,
+                  "links": [
+                    [
+                      "Image Texture.003",
+                      "Color"
+                    ]
+                  ]
+                },
+                "Roughness": {
+                  "value": 0.5,
+                  "links": [
+                    [
+                      "Image Texture.002",
+                      "Color"
+                    ]
+                  ]
+                },
+                "IOR": {
+                  "value": 1.5,
+                  "links": []
+                },
+                "Alpha": {
+                  "value": 1.0,
+                  "links": []
+                },
+                "Thin Wall": {
+                  "value": false,
+                  "links": []
+                },
+                "Normal": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Diffuse Roughness": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Subsurface Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Subsurface Radius": {
+                  "value": [
+                    1.0,
+                    0.20000000298023224,
+                    0.10000000149011612
+                  ],
+                  "links": []
+                },
+                "Subsurface Scale": {
+                  "value": 0.004999999888241291,
+                  "links": []
+                },
+                "Subsurface IOR": {
+                  "value": 1.399999976158142,
+                  "links": []
+                },
+                "Subsurface Anisotropy": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Specular IOR Level": {
+                  "value": 0.5,
+                  "links": []
+                },
+                "Specular Tint": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Anisotropic": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Anisotropic Rotation": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Tangent": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Transmission Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Coat Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Coat Roughness": {
+                  "value": 0.029999999329447746,
+                  "links": []
+                },
+                "Coat IOR": {
+                  "value": 1.5,
+                  "links": []
+                },
+                "Coat Tint": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Coat Normal": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Sheen Weight": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Sheen Roughness": {
+                  "value": 0.5,
+                  "links": []
+                },
+                "Sheen Tint": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Emission Color": {
+                  "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                  ],
+                  "links": []
+                },
+                "Emission Strength": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Thin Film Thickness": {
+                  "value": 0.0,
+                  "links": []
+                },
+                "Thin Film IOR": {
+                  "value": 1.3300000429153442,
+                  "links": []
+                }
+              }
+            },
+            {
+              "name": "Material Output",
+              "type": "OUTPUT_MATERIAL",
+              "inputs": {
+                "Displacement": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                },
+                "Thickness": {
+                  "value": 0.0,
+                  "links": []
+                }
+              }
+            },
+            {
+              "name": "Image Texture",
+              "type": "TEX_IMAGE",
+              "inputs": {
+                "Vector": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                }
+              },
+              "image": {
+                "name": "Sewn selected donor metallic",
+                "size": [
+                  2048,
+                  2048
+                ],
+                "colorSpace": "Non-Color",
+                "filepath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie10/metallic.png",
+                "packed": false,
+                "channels": 4,
+                "interpolation": "Linear",
+                "extension": "REPEAT",
+                "imageBufferPixelPercentilesRGB": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.1725490242242813,
+                    0.1725490242242813,
+                    0.1725490242242813
+                  ],
+                  [
+                    0.2823529541492462,
+                    0.2823529541492462,
+                    0.2823529541492462
+                  ]
+                ]
+              }
+            },
+            {
+              "name": "Image Texture.001",
+              "type": "TEX_IMAGE",
+              "inputs": {
+                "Vector": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                }
+              },
+              "image": {
+                "name": "Sewn selected donor base-color",
+                "size": [
+                  2048,
+                  2048
+                ],
+                "colorSpace": "sRGB",
+                "filepath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie10/base-color.png",
+                "packed": false,
+                "channels": 4,
+                "interpolation": "Linear",
+                "extension": "REPEAT",
+                "imageBufferPixelPercentilesRGB": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.7882353663444519,
+                    0.5607843399047852,
+                    0.24705883860588074
+                  ],
+                  [
+                    0.8627451658248901,
+                    0.6039215922355652,
+                    0.545098066329956
+                  ]
+                ]
+              }
+            },
+            {
+              "name": "Image Texture.002",
+              "type": "TEX_IMAGE",
+              "inputs": {
+                "Vector": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                }
+              },
+              "image": {
+                "name": "Sewn selected donor roughness",
+                "size": [
+                  2048,
+                  2048
+                ],
+                "colorSpace": "Non-Color",
+                "filepath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie10/roughness.png",
+                "packed": false,
+                "channels": 4,
+                "interpolation": "Linear",
+                "extension": "REPEAT",
+                "imageBufferPixelPercentilesRGB": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.9843137860298157,
+                    0.9843137860298157,
+                    0.9843137860298157
+                  ],
+                  [
+                    1.0,
+                    1.0,
+                    1.0
+                  ]
+                ]
+              }
+            },
+            {
+              "name": "Image Texture.003",
+              "type": "TEX_IMAGE",
+              "inputs": {
+                "Vector": {
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "links": []
+                }
+              },
+              "image": {
+                "name": "Sewn selected donor metallic",
+                "size": [
+                  2048,
+                  2048
+                ],
+                "colorSpace": "Non-Color",
+                "filepath": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie10/metallic.png",
+                "packed": false,
+                "channels": 4,
+                "interpolation": "Linear",
+                "extension": "REPEAT",
+                "imageBufferPixelPercentilesRGB": [
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.1725490242242813,
+                    0.1725490242242813,
+                    0.1725490242242813
+                  ],
+                  [
+                    0.2823529541492462,
+                    0.2823529541492462,
+                    0.2823529541492462
+                  ]
+                ]
+              }
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ],
+            [
+              "Image Texture.001",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ],
+            [
+              "Image Texture.002",
+              "Color",
+              "Principled BSDF",
+              "Roughness"
+            ],
+            [
+              "Image Texture.003",
+              "Color",
+              "Principled BSDF",
+              "Metallic"
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}

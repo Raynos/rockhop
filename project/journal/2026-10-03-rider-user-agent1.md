@@ -515,3 +515,11 @@ Finding: Read-only 24-frame diagnosis reproduces native LBS and keeps fixed rest
 Validation: Body manual parity maximum0.437µm and garment0.371µm; source14/native field/driver pins unchanged. Exact correspondences/matrices archived. Silent ship60 cold1587ms,4810 identical ticks,clear40.083333s,crash103,restart1tick,frame2.885ms,errors0. Blender/diff/hooks pass.
 
 Limits: Transported offsets and nearest-weight counterfactual are diagnostics only, no new skin or clearance proof. No art/wearing/collision/game-candidate/iOS acceptance; allM0–M5 open/root sole judge. No normal-player or Library promotion.
+
+### Round61 — isolate actual donor transfer from lost rest silhouette
+
+Finding: Donor and ray-baked PBR share original channels/colorspaces/Principled defaults. Only5of1,457,341 occupied old atlas texels are black with zero roughness, so bake holes do not explain mottling. New unrigged source15 queries actual registered donor triangle/UV per atlas texel on exact source13 geometry; no source-island interpolation/recolor. Linear color discrepancy p95 0.463; nearest-source distance p95 39.605mm/max77.466mm retains interior/cuff correspondence risk. Matched played four-column orbit separates original donor, existing registration, frozen fit and direct transfer test; root judges, no texture or shape acceptance claim.
+
+Validation: Independent22 original meshes/18 material graphs/17 images/51bindpose exact; new positions/polygon cycles/UV exact source13. 257 scalar registration samples error5.55e−17m. 48frames/6fps/8seconds/2560×640 actual PBR orbit, noaudio/fullFFmpeg decode0errors; source/native/material/correspondence/movie pins recorded. Blender/diff/hooks pass.
+
+Limits: Material-only diagnostic retains root-rejected hood/sleeve/cuff/hem silhouette and may sample an interior donor surface. No rig/broad motion/collision/iOS/M0–M5/player/Library acceptance or promotion; exact sources13/14 frozen. Next concrete donor shape/correspondence repair precedes broad motion; native-four export contract remains required.
