@@ -531,3 +531,11 @@ Finding: Root played61: actual donor/registration retain chosen hood/folds/coher
 Validation: Source cleanup460752v/921568tri/0boundary reproduces preflight; simplified8262v beforecuts. Native saved before NumPy float32 report serialization failed. Frozen executed builder retained; read-only audit reproduces saved positions/triangles/body+self arrays exact, no native rerun. Independent22originalmeshes/18graphs/17images/51bindpose exact. Blender/diff/hooks pass.
 
 Limits: Ten loops and thousands of contacts prevent wearing/rig qualification; inner/folded-wall hypothesis requires localization. Source13/14/15 and high donor/head/body/bind frozen. Root sole art judge/allM0–M5/mobile open; no worker/inference/Library/player/publish promotion.
+
+### Round63 — isolate319 sleeve crossings to source arm registration
+
+Finding: SAME frozen16 cut connectivity in original donor coordinates has2torso self pairs, registerednative320;319new sleeve pairs(268R/51L),200touch triangles mixing nearest-source-segment choices. Independent segment frames create a concrete construction discontinuity.2559body contacts involve inward andoutward source radial orientations; global inward-face deletion would not resolve fit. Next continuous source arm registration, no rig/collision/shape fallback.
+
+Validation: Frozen native862e93a9/PBR/recipe pins unchanged, full class/bone/orientation witnesses recorded. Post-cut interpolated lineage recomputation p95 75.71nm/max1.114mm explicitly distinguishes nonlinear mapping, not immutable vertex replacement. New mixed statistic JSON int64 converted explicitly and readonly rerun succeeds. Silent ship63 cold1441ms/4810 identical ticks/clear40.083333s/crash103/restart1tick/frame2.295ms/errors0; Blender/diff/hooks pass.
+
+Limits: Same cut mesh comparison does not audit uncut high-donor topology; orientation labels do not prove unwanted inner sheets. Ten boundary loops and2559body/320self stillfail prerequisites. No source rewrite/newcapture/broadmotion/inference/worker/player/Library promotion. Rootsolejudge/allM0–M5/mobile open.
