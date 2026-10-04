@@ -1,0 +1,42 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/trellis-mac/.venv/bin/python",
+    "-u",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/check_orientation_controls.py",
+    "--causal-controls",
+    "--out",
+    "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-controls01/control"
+  ],
+  "controllerPID": 65121,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 120.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 33.8,
+      "wiredGiB": 6.1,
+      "freeGiB": 34.3
+    },
+    {
+      "seconds": 0.026,
+      "anonymousGiB": 33.8,
+      "wiredGiB": 6.1,
+      "freeGiB": 34.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 65125,
+  "exitCode": 0,
+  "elapsedSeconds": 0.318
+}

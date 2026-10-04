@@ -1,0 +1,183 @@
+{
+  "accepted": false,
+  "controlPass": true,
+  "cases": [
+    {
+      "name": "cube",
+      "savedArchiveSHA256": "6c7c3dc8930c792c89eb29bc5312ded6457dbaba90dfa9c100b35d8677e014bf",
+      "legacyFacesByteIdentical": true,
+      "outwardNormals": true,
+      "adapter": {
+        "accepted": false,
+        "adapter": "OWNED derived orientation; bounded parity implementation of adjacency/closed-volume basis",
+        "verticesUnchanged": true,
+        "samePerRowTriangleVertexSets": true,
+        "flippedRows": 6,
+        "faceSetSHA256": "8f575f21c71eedddf062e156f4ca92c23b08972c43f4deea5de20fc46767d813",
+        "rawEqualDirectionTwoFaceEdges": 6,
+        "derivedEqualDirectionTwoFaceEdges": 0,
+        "boundaryEdgesUnchanged": 0,
+        "nonmanifoldEdgesUnchanged": 0,
+        "manifoldAdjacencyPatches": 1,
+        "closedOrientablePatches": 1,
+        "openOrNonmanifoldPatches": 0,
+        "nonmanifoldIncidentFacesPreserved": 0,
+        "contradictoryPatchesUnchanged": 0,
+        "contradictoryFacesUnchanged": 0,
+        "signAmbiguousClosedPatches": 0,
+        "outwardVolumeChoices": 0,
+        "openSignBasis": "Smallest native face index in each manifold-adjacency patch retains original ordering; no global inside/outside claim",
+        "closedSignBasis": "Positive signed volume only on orientable patches with no boundary/nonmanifold incident edge, absvolume above scale^3*1e-12; self-intersection not certified",
+        "nonmanifoldPolicy": "No constraints cross >2-face edges; all faces/edges preserved; incident patches use native sign anchor and are explicitly non-global",
+        "contradictionPolicy": "Every face in a contradictory manifold-adjacency patch retains original ordering",
+        "limits": [
+          "No topology repair, cleanup, reduction, component deletion, recolor or vertex movement.",
+          "Open/nonmanifold/sign-ambiguous patches have no proven outward orientation.",
+          "Not whole-mesh intersection, fit, rig, CUDA or game-ready acceptance."
+        ]
+      }
+    },
+    {
+      "name": "sphere",
+      "savedArchiveSHA256": "4f5b263373329de663e5ba9f406ac7d67d6e302e60b8558f290385d61f830e16",
+      "legacyFacesByteIdentical": true,
+      "outwardNormals": true,
+      "adapter": {
+        "accepted": false,
+        "adapter": "OWNED derived orientation; bounded parity implementation of adjacency/closed-volume basis",
+        "verticesUnchanged": true,
+        "samePerRowTriangleVertexSets": true,
+        "flippedRows": 534,
+        "faceSetSHA256": "a4076ed6535652f495e679dfd429b961f5c27f086352151f4bfa362532ba5b48",
+        "rawEqualDirectionTwoFaceEdges": 366,
+        "derivedEqualDirectionTwoFaceEdges": 0,
+        "boundaryEdgesUnchanged": 0,
+        "nonmanifoldEdgesUnchanged": 0,
+        "manifoldAdjacencyPatches": 1,
+        "closedOrientablePatches": 1,
+        "openOrNonmanifoldPatches": 0,
+        "nonmanifoldIncidentFacesPreserved": 0,
+        "contradictoryPatchesUnchanged": 0,
+        "contradictoryFacesUnchanged": 0,
+        "signAmbiguousClosedPatches": 0,
+        "outwardVolumeChoices": 0,
+        "openSignBasis": "Smallest native face index in each manifold-adjacency patch retains original ordering; no global inside/outside claim",
+        "closedSignBasis": "Positive signed volume only on orientable patches with no boundary/nonmanifold incident edge, absvolume above scale^3*1e-12; self-intersection not certified",
+        "nonmanifoldPolicy": "No constraints cross >2-face edges; all faces/edges preserved; incident patches use native sign anchor and are explicitly non-global",
+        "contradictionPolicy": "Every face in a contradictory manifold-adjacency patch retains original ordering",
+        "limits": [
+          "No topology repair, cleanup, reduction, component deletion, recolor or vertex movement.",
+          "Open/nonmanifold/sign-ambiguous patches have no proven outward orientation.",
+          "Not whole-mesh intersection, fit, rig, CUDA or game-ready acceptance."
+        ]
+      }
+    },
+    {
+      "name": "open_patch",
+      "nativeFirstFaceSignAnchorPreserved": true,
+      "adapter": {
+        "accepted": false,
+        "adapter": "OWNED derived orientation; bounded parity implementation of adjacency/closed-volume basis",
+        "verticesUnchanged": true,
+        "samePerRowTriangleVertexSets": true,
+        "flippedRows": 1,
+        "faceSetSHA256": "b898be6df7078a94e3f68024829f38f7965e9423a4c2f3671136d1a7366ee2c3",
+        "rawEqualDirectionTwoFaceEdges": 1,
+        "derivedEqualDirectionTwoFaceEdges": 0,
+        "boundaryEdgesUnchanged": 4,
+        "nonmanifoldEdgesUnchanged": 0,
+        "manifoldAdjacencyPatches": 1,
+        "closedOrientablePatches": 0,
+        "openOrNonmanifoldPatches": 1,
+        "nonmanifoldIncidentFacesPreserved": 0,
+        "contradictoryPatchesUnchanged": 0,
+        "contradictoryFacesUnchanged": 0,
+        "signAmbiguousClosedPatches": 0,
+        "outwardVolumeChoices": 0,
+        "openSignBasis": "Smallest native face index in each manifold-adjacency patch retains original ordering; no global inside/outside claim",
+        "closedSignBasis": "Positive signed volume only on orientable patches with no boundary/nonmanifold incident edge, absvolume above scale^3*1e-12; self-intersection not certified",
+        "nonmanifoldPolicy": "No constraints cross >2-face edges; all faces/edges preserved; incident patches use native sign anchor and are explicitly non-global",
+        "contradictionPolicy": "Every face in a contradictory manifold-adjacency patch retains original ordering",
+        "limits": [
+          "No topology repair, cleanup, reduction, component deletion, recolor or vertex movement.",
+          "Open/nonmanifold/sign-ambiguous patches have no proven outward orientation.",
+          "Not whole-mesh intersection, fit, rig, CUDA or game-ready acceptance."
+        ]
+      }
+    },
+    {
+      "name": "nonmanifold_edge",
+      "nativeRowsPreserved": true,
+      "adapter": {
+        "accepted": false,
+        "adapter": "OWNED derived orientation; bounded parity implementation of adjacency/closed-volume basis",
+        "verticesUnchanged": true,
+        "samePerRowTriangleVertexSets": true,
+        "flippedRows": 0,
+        "faceSetSHA256": "402f8e738dcf4eb754fb8abb04e2692e7190e90917ef18cab412f249737be58e",
+        "rawEqualDirectionTwoFaceEdges": 0,
+        "derivedEqualDirectionTwoFaceEdges": 0,
+        "boundaryEdgesUnchanged": 6,
+        "nonmanifoldEdgesUnchanged": 1,
+        "manifoldAdjacencyPatches": 3,
+        "closedOrientablePatches": 0,
+        "openOrNonmanifoldPatches": 3,
+        "nonmanifoldIncidentFacesPreserved": 3,
+        "contradictoryPatchesUnchanged": 0,
+        "contradictoryFacesUnchanged": 0,
+        "signAmbiguousClosedPatches": 0,
+        "outwardVolumeChoices": 0,
+        "openSignBasis": "Smallest native face index in each manifold-adjacency patch retains original ordering; no global inside/outside claim",
+        "closedSignBasis": "Positive signed volume only on orientable patches with no boundary/nonmanifold incident edge, absvolume above scale^3*1e-12; self-intersection not certified",
+        "nonmanifoldPolicy": "No constraints cross >2-face edges; all faces/edges preserved; incident patches use native sign anchor and are explicitly non-global",
+        "contradictionPolicy": "Every face in a contradictory manifold-adjacency patch retains original ordering",
+        "limits": [
+          "No topology repair, cleanup, reduction, component deletion, recolor or vertex movement.",
+          "Open/nonmanifold/sign-ambiguous patches have no proven outward orientation.",
+          "Not whole-mesh intersection, fit, rig, CUDA or game-ready acceptance."
+        ]
+      }
+    },
+    {
+      "name": "mobius_contradiction",
+      "allNativeRowsPreserved": true,
+      "adapter": {
+        "accepted": false,
+        "adapter": "OWNED derived orientation; bounded parity implementation of adjacency/closed-volume basis",
+        "verticesUnchanged": true,
+        "samePerRowTriangleVertexSets": true,
+        "flippedRows": 0,
+        "faceSetSHA256": "386010f83f608a301362f8cda0142fa075e759aa2254961fa3d9b5398f5ea1dd",
+        "rawEqualDirectionTwoFaceEdges": 1,
+        "derivedEqualDirectionTwoFaceEdges": 1,
+        "boundaryEdgesUnchanged": 10,
+        "nonmanifoldEdgesUnchanged": 0,
+        "manifoldAdjacencyPatches": 1,
+        "closedOrientablePatches": 0,
+        "openOrNonmanifoldPatches": 1,
+        "nonmanifoldIncidentFacesPreserved": 0,
+        "contradictoryPatchesUnchanged": 1,
+        "contradictoryFacesUnchanged": 10,
+        "signAmbiguousClosedPatches": 0,
+        "outwardVolumeChoices": 0,
+        "openSignBasis": "Smallest native face index in each manifold-adjacency patch retains original ordering; no global inside/outside claim",
+        "closedSignBasis": "Positive signed volume only on orientable patches with no boundary/nonmanifold incident edge, absvolume above scale^3*1e-12; self-intersection not certified",
+        "nonmanifoldPolicy": "No constraints cross >2-face edges; all faces/edges preserved; incident patches use native sign anchor and are explicitly non-global",
+        "contradictionPolicy": "Every face in a contradictory manifold-adjacency patch retains original ordering",
+        "limits": [
+          "No topology repair, cleanup, reduction, component deletion, recolor or vertex movement.",
+          "Open/nonmanifold/sign-ambiguous patches have no proven outward orientation.",
+          "Not whole-mesh intersection, fit, rig, CUDA or game-ready acceptance."
+        ]
+      }
+    }
+  ],
+  "adapterSHA256": "0855125564109e73e3c1441e840dbd47695871beb50a9fede3a8b7fd9ef74939",
+  "recipeSHA256": "09e93e6c92fa7beb4f854aef8c03d8dd775395d0b95f980402275f78d4a4589b",
+  "modelInferenceExtractionRenderCalls": 0,
+  "rawGarmentsReadOrChanged": false,
+  "limits": [
+    "Closed analytic agreement does not establish actual garment orientation/outside or self-intersection.",
+    "Open/native anchored patches have no global outward claim; nonmanifold and contradictions remain explicit."
+  ]
+}

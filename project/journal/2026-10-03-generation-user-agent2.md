@@ -1800,3 +1800,17 @@ Ask:284–286 authorizedsamebanddiagnostic causalcomparison.
 
 Limits: Unacceptedrecipe, controls/actualderivatives/movingcomparisonpending.
 No globalmeshrepair, cleanup/recolor/installededit or Hunyuan donorswitch.
+
+Finding: Fiveanalytic controls pass before either current garment receives
+owned derivedorientation; closedcube/sphere match validatedlegacyexactly.
+
+Validation: Guard0/0.318s; cube6/sphere534faceflips andallnormalsoutward,
+sharededges consistent, faceSETS/vertices unchanged. Openpatch anchor
+preserved; nonmanifoldfixture allrows retained; contradictoryMobius all
+10faces raw, one unresolvededge retained. Sourcepins/fivearchivehashes
+rechecked. Runtime24playerpins/playerdiff0 retain round84shipgateidentity.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-controls.json
+Ask:284–286 oneauthorizedcausaldisplaycomparison.
+
+Limits: Analyticproofonly, no currentgarments read or modified, no global
+meshrepair/outside/fit/rig/artpass. Actualderivatives/render follow.
