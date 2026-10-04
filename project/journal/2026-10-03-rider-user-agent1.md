@@ -547,3 +547,11 @@ Finding: Source17 blends existing two source-arm maps continuously across fixed0
 Validation: Independent23original mesh data/18graphs/17images/51bindpose exact; checker explicitly identifiesnewderivative.12443v/24400tri/finalbody2552vs2559/0othernonmanifold; ownfield/contactarrays/source pins saved. Blender/diff/hooks pass.
 
 Limits: Ten opening loops and2552body/1self stillfail wearerfit. No art/rig/collision/game-candidate/mobile/M0–M5 acceptance, newcapture or broadmotion. Source13/14/15/16 andbody/head/bind frozen/rootsolejudge; next localfit/topology constraint derivation, no globalinner-sheet deletion/inference/worker/player/Library promotion.
+
+### Round65 — paired rays expose finite garment walls and unsafe fit ratios
+
+Finding: 5120readonly body/garment rays allstart with outward bodyhit; garment88miss/296outwardfirst/4736inwardthenoutward. Median firstentry/exit spacing~7mm across torso/sleeves indicates finite materialwalls, not blanket unwantedlining. Requiring outwardfirst cloth would wrongly discard most measurements; nominal-center prospective radius ratios up to209.126 also cannot driveblind anatomicalfit. Next actualsource sleevecontours/centers/wall nesting before cagefit.
+
+Validation: Native17/PBR pin unchanged/no mesh save. All5120ray records losslesslygzip archived with deterministicmtime0, digest andcount roundtrip verified; no ray reaches12hit cap, queriesbounded1m.2552body intersections and128witnesses retained. Blender/diff/hooks pass.
+
+Limits: Local rays neitherprove globalclearance nor establish nominalbone center inintendedlumen. Entry/exit couldbe foldedwalls; no globalinward-face deletion, point snaps orradius sweep. Tenopeningloops/2552body/1self androotart/fit/rig/M0–M5/mobile remainopen. No capture/broadmotion/inference/worker/player/Library promotion.
