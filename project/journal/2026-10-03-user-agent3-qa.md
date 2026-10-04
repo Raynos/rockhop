@@ -1006,3 +1006,33 @@ inference/install/worker/publication. Underwear can hide proximal hip
 surface; full13,380body quantification maps to9,037rendered subset plus
 unchanged protected head/cheek. Root alone judges; all M0–M5 stay open.
 Next PDF addition will embed locally available fonts; old PDF53 retained.
+
+
+## 2026-10-04 Round56 — play modest exact frozen body fields
+
+Finding: Added separate native Full/Four and actual47 Full/Four films from
+existing sampled positions/matrices, with front/left/rear full body and
+Four-only shoulder/hip crops. Retain base for bounded local repair trials;
+repair sufficiency remains unproven. Opaque fitting boxers cover hip/crotch
+witnesses and clip visibly in seated motion. Jagged/lifted neck interface
+remains a separate assembly issue. Parent alone judges final art and fit.
+
+Validation: All11source pins unchanged; saved2944body53 witnesses and eight
+regional anchors match Float64XYZ exactly. Original body/head/51rest-pose/
+weights/UV/materials preserved; max display rounding0.273µm. CPU captures
+135native/180actual47rows. Movies2050/2144frames at60fps decode fully with
+no audio; continuous muted WebKit playback has0errors/AudioContexts, native
+0 and actual1dropped display frames. Seven exact holds and18moving played
+frames preserved byte-identically. Six-page PDF uses three embedded local
+fonts, all pages rendered/reviewed; original PDF53 unchanged. Round55 side
+label corrected metadata-only to source-native−Y/anatomical left. Native92
+protected-head target gap preserved separately in report and pinned receipt.
+
+Limits: Unaccepted addition only; no source body/head/rig/bind/weights edit,
+rig/export reconstruction, new simulation/generation, model/GPU/inference/
+install/worker/publication. Geometric-normal CPU view is not engine/device
+fidelity. Actual50 not synchronized; covered hip clearance, repair, head
+export ancestry and all M0–M5 remain open. Parent owns asks/index and guarded
+same-identity Library update; Agent3 performs no upload/delivery/outbound
+acknowledgement. Origin capture failure corrected; excluded tmp/provisional
+media retained without recursive cleanup. Required ordinary gate57 next.
