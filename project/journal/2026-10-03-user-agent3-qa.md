@@ -1281,3 +1281,24 @@ owns anatomical proposal; parent owns ask275/index and art/admission.
 Original490contacts stay open, source26 separate, all M0–M5 open. No
 source edit, new capture, upload, Library/user delivery, outbound ack, push,
 promotion or publication. Temporary build excluded; no recursive cleanup.
+
+
+## 2026-10-04 Round67 — freeze source constraints and existing pixel QA
+
+Finding: Root-assigned source cause/preservation QA now receives frozen101
+anatomical distinction and fixed/alias constraints. Auxiliary100is already
+independently verified65; no duplicate preservation retest. Agent1 owns
+the one unbuilt construction proposal; no candidate or capture is admitted.
+
+Validation: Twenty-one original/source/fields/proposal/movie/pixel inputs
+pinned. Recipe plus four101reports equal5de8827f. Existing failed movie and
+raw native72/actual668frame hashes equal render/movie receipts. Scope and
+limits in neck67/preparation.json; no calculation or capture started.
+
+Limits: Independently recompute source plane/ray and fixed/alias lists, then
+trace existing played geometric pixels only. Canonical body is a source
+reference, not anatomy truth. Pixel ownership cannot prove every moving
+ledge cause or local-transition infeasibility. No solve, source edit,
+competing proposal, new pose/capture/controller or art judgment. Parent
+owns ask275/index and admission; original99/490contact failures and all
+M0–M5 open. No outbound acknowledgment, delivery/upload or publication.
