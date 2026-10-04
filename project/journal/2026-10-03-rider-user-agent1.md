@@ -715,3 +715,11 @@ Finding: All24historicalnormalray misses also missclothwithin2m. Sixunderarm ray
 Validation: All24exactbodycoordinates/normals match84/same20cmtestsstillmiss/native24+coveragepins unchanged. Every2mray/bodyreentry/nearestfree segment/station archived; Blender/diff/hooks pass. No native/model/media save.
 
 Limits: Maskunchanged/24missesopen; reentry/portproximity cannot excusecoverageorprovewholebodycontainment. Parentplayed85pendingbeforebroadrig; no newcapture/fit/body-head-51bind change/inference/worker/Library/player promotion or art/M0–M5/mobile acceptance.
+
+### Round87 — inherited flat shading exposes simplified native facets
+
+Finding: Source24all19878polygons flat/0smooth/nocustomnormals/0sharpedges;63968of64115corners within0.1°of face. OriginalselectedGLB has POSITION+UV only/noNORMAL; stored921722face highdonor alsoflat. Not lostsuppliednormals. Actualadjacentgeoangles median7.373°/p9539.002°/2671edges>30°, realcreasesremain. Root85preservation improvedbutfaceting/inflation unaccepted.
+
+Validation: OriginalGLB/source24/fieldpins exact; original16/18normalflags auditedreadonly. Silentnormalship87cold1484ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame3.190ms/errors0. Blender/diff/hooks pass.
+
+Limits: No source/normal/geometry mutation. Controllednormals-only comparison warranted onfixedgeometry, notblind mesh smoothing or crease erasure. Sameprotectedbody/opaqueunderwear+24coverage next beforebroadrig; parentsolejudge/no newbody/recolor/shrink/globalredo/inference/promotion/publication/duplicateLibrarydelivery/allM0–M5open.
