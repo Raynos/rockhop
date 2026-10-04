@@ -435,3 +435,11 @@ Finding: Actual neck18mm/cuff18mm-proximal+5mm-ease geodesic surgery clears ever
 Validation: New5966v/11680tri/fourboundarycomponents/0othernonmanifold. Independent18originalmeshes/16nodegraphs/14images/51bind+pose exact; coverage1937rays/10misses, local-normal gap min-6.606mm explicit proxy. Source02SHA unchanged; Blender recipe/syntax/diff/hooks pass.
 
 Limits: Static diagnosticseed, selecteddonor shape/PBR stillrequired; grey isnot replacementappearance. Unqualifiedhood withholdsrig/game/movingart/iOS/Library/playerhandoff; allM0–M5/rootsolejudge retained. No originalbody/head/bind/control changes.
+
+### Round51 — raised hood sides clear body, preserve one rear seam fault, 2026-10-03
+
+Finding: Sidehoodloft stays above shoulders, descent restricted to broadrear panel; source07rejectedrecipe frozen exactly. Same5966v/11680tri/openings lowers152→0body/302→1self. Exactremaininghoodshirt witness parent1155/1212 atrear neckline needs a genuine seam construction, not another donorfield or collision sweep.
+
+Validation: Independent18originalmeshes/16graphs/14images/51bind+pose exact; fourboundarycomponents/0othernonmanifold. Local closestnormal gap1.313mm minimum;1937coverage rays still10misses, proxies explicit. Silent ship51 cold1421ms/4810identicalticks/clear40.083333333s/crash103/restart1tick/frame4.795ms/errors0. Frozenrecipe SHA matches07report; Blender/diff/hooks pass.
+
+Limits: One real self witness prevents seed qualification; no donor deformation or rig/game handoff yet. Structuralgrey is notappearancefallback; selectedsource shape/PBR and allM0–M5/movingart/mobile remainopen, rootsolejudge. Normalshipgate is notcandidate/iOS acceptance.

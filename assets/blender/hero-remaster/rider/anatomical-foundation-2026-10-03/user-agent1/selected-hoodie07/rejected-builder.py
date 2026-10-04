@@ -88,9 +88,7 @@ for row in range(1, rows+1):
         mouth = np.array([.03-.21*back, .145*math.cos(math.pi*c), 1.58+.025*back])
         q = (1-t)*vertices[old]+t*mouth
         q[0] -= .035*math.sin(math.pi*t)*back
-        # Keep the side loft above shoulders. Only the broad rear panel descends;
-        # the previous uniform side drop crossed shirt/neck in152body witnesses.
-        q[2] += .055*math.sin(math.pi*t) - .135*math.sin(math.pi*t)**2*back**8
+        q[2] += (.055*math.sin(math.pi*t)-.135*math.sin(math.pi*t)**2)*back
         ring.append(len(v)); v.append(q.tolist())
     rings.append(ring)
 for row in range(rows):
