@@ -619,3 +619,11 @@ Finding: Five constant-positive affine branch maps replace high-frequency profil
 Validation: Independent readonly native positions/triangles/fullcontact sets exact/all79coordinates/weights recorded. Fixed previous tessellation459/80,35 loop triangles change.12443v/24400tri/566freeedges/0othernonmanifold/cycles/UV/exact original material preserved; max48.579mm/boundary40.553mm. Independent26original scoped meshes/18graphs/17images/51rest+pose exact. Conservative centred-section≥4mm bound proven atall samples, not whole native; Blender/diff/hooks pass.
 
 Limits: Source21 frozen failed; new body/head/51bind, rig/motion/capture, inference/worker/Library/player promotion and all art/wearing/M0–M5/mobile acceptance absent. Next changing-parameter blend representation diagnosis; source18/base19/profile20failedattempt allretained. Scope doesnotcover customnormals/shape keys/modifiers; parentsolejudge.
+
+### Round75 — affine blend intersections survive finer unchanged-field sampling
+
+Finding: Source21 unchanged affine maps +specified P1construction params on80fixed selfpairs/67parents:coarse1segment201points/67tri reproduces80pairs; fixed32segments37587points/68608tri produces2254cross-parent subtriangle intersections. Max chord deviation0.894417mm. Unlike19profilecase, affineblend intersects after fine sampling; density isnot a sufficient repair. Coupling/globalmap construction needed, no further radius/resolution/cap loop.
+
+Validation: Exact input/native/PBR pins, source21 vertex closure within0.1µm, archive SHA/ZIP integrity pass. First inherited tuple-style vector indexing tripped closure assertion before output; corrected helper return andfull readonly rerun pass. Silent ship75 cold1479ms/4810identicalticks/40.083333s/crash103/restart1tick/frame2.200ms/errors0; Blender/diff/hooks pass. No newnative/model save.
+
+Limits: Finite32sampling not exact curved-distance or whole-volume folding proof. Native21 still459body/79actualself(fixed80), no wearer/rig/mobile/art/M0–M5 acceptance. Originalcontrols/body/head/51bind retained, no capture/inference/worker/Library/player promotion; parentsolejudge.
