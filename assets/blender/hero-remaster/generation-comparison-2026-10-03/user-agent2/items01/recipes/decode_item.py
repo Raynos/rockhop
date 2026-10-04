@@ -184,7 +184,7 @@ def main():
     derived_audit = audit(derived_vertices, derived_faces)
     report.update(stage='owned derivative saved; root review pending', derivedAudit=derived_audit,
                   finiteCellCounts=counts, fieldBytesUnchanged=True,
-                  adapterSHA256=sha(Path(__file__).with_name('finite_cell_mc.py')),
+                  adapterSHA256=sha(inspect.getfile(extract)),
                   derivedSHA256=sha(out / 'finite-cell-derived.npz'), elapsedSeconds=time.monotonic() - started)
     save()
     assert derived_audit['validGeometryArrays']

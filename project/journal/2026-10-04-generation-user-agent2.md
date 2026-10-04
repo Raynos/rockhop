@@ -173,3 +173,11 @@ Finding: The same-latent jeans decode reproduced native arrays byte-exact and sa
 Validation: All native replay equality checks pass; 410 original VAE tensors match. Guard worker exit1 after16.799s; no resource denial or repeated sampling. Existing adapter pin is fd56f9211c61a99f0f517ee9598102ff1507a0006f016f354762ba6045ddb014. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
 
 Limits: Unaccepted source checkpoint only; no PBR, fitting, rig, art, device or M0-M5 acceptance. Root owns plan status and review. No publication.
+
+## Round 118 — existing dependency provenance and retained export
+
+Finding: Imported helpers already resolve to the original owned directory; sibling-file provenance hashing alone was wrong in relocated decode/UV recipes. Hash their actual imported files and add CPU-only saved-array export recovery.
+
+Validation: Original finite-cell adapter matches qualified fd56f921 receipt; three recipes compile. Recovery requires every saved checkpoint hash, exact native replay, and CPU extraction equality before exporting. No model job launched in this recipe unit.
+
+Limits: Recovery execution and original PBR remain pending; no new sampling, decoder, global installed edit, fitting, art acceptance or publication.

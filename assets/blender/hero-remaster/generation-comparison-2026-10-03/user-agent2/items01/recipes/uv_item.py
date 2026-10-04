@@ -73,7 +73,7 @@ def main():
     returned_v, returned_f, returned_uv, returned_uvf = renderer.get_mesh(normalize=False)
     error = float(np.max(np.abs(returned_v[returned_f] - vertices[faces])))
     report.update(rendererSourceSHA256=sha(inspect.getfile(MeshRender)),
-                  copiedGetterSHA256=sha(Path(__file__).with_name('paint_geometry_getter.py')),
+                  copiedGetterSHA256=sha(inspect.getfile(preserve_getter_state)),
                   actualTwoInpaintCallsPreserveState=True, exportIndicesIdentical=bool(np.array_equal(returned_f, wrapped.faces)),
                   maxExportTriangleCoordinateError=error, elapsedSeconds=time.monotonic() - started)
     save()
