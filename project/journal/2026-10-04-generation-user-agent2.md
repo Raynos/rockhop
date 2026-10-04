@@ -333,3 +333,11 @@ Finding: One existing Hunyuan PBR job completes15steps/eight768views and origina
 Validation: Guard exit0 in355.281s; all15paint-step arrays finite/saved.611198triangles and finite UVs retained, with6.0675049e-7 maximum triangle coordinate error below8e-7 writer limit. Base-color/roughness/metallic maps4096.
 
 Limits: Unaccepted raw source; no cleanup, remesh, reduction, fit, rig, collision, played art/M0-M5/mobile acceptance or publication. Root alone judges the later clip.
+
+## Round 138 — boots orbit01 checkpoint
+
+Finding: Render one48-frame original-PBR ankle boot source orbit using frozen geometry, UVs and original4096maps with the existing Blender CPU recipe. Preserve source review before fitting.
+
+Validation: Guard exit0; all48frame hashes and triangle/UV/material readback checks pass. Fresh unchanged normal-player source pins qualify runtime24 boot/clear/crash/instant-restart reuse; no new inference or mesh edits. Unchanged-source runtime24 boot/clear/crash/instant restart reuse pins pass.
+
+Limits: Encoding/playback and parent played art judgment remain pending. Source display proves no toe enclosure/ankle lumen, physical fit, rig, physics/M0-M5/mobile acceptance. No publication.
