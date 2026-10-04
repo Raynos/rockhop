@@ -1,0 +1,48 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/recipes/encode_item_orbit.py",
+    "--orbit",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/orbit01",
+    "--movie",
+    ".tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/encode01/source-pbr-orbit.mp4"
+  ],
+  "controllerPID": 63444,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 1790.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 30.4,
+      "wiredGiB": 6.1,
+      "freeGiB": 28.0
+    },
+    {
+      "seconds": 0.035,
+      "anonymousGiB": 30.5,
+      "wiredGiB": 6.1,
+      "freeGiB": 28.0
+    },
+    {
+      "seconds": 1.069,
+      "anonymousGiB": 31.0,
+      "wiredGiB": 6.4,
+      "freeGiB": 27.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 63454,
+  "exitCode": 0,
+  "elapsedSeconds": 1.182
+}

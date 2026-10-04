@@ -213,3 +213,11 @@ Finding: Render one48-frame original-PBR jeans source orbit with frozen geometry
 Validation: Guard exit0; all48frame hashes and readback triangle/UV/material preservation checks pass. No new inference, mesh edits or body/rig changes.
 
 Limits: Orbit encoding/full silent playback and parent art judgment remain pending. Source display is unaccepted and proves no garment opening, fit, motion or mobile gate. No publication.
+
+## Round 123 — jeans ready source visual checkpoint
+
+Finding: Original source GLB/PBR/UV/raw geometry and exact inputs/settings/admission are pinned with one ready source orbit, before fitting. No new capture or upload.
+
+Validation: All48video frames decode; six-second silent headless WebKit playback reaches end without media/page errors. Original mesh/map pins match; source, UV and paint checkpoints remain preserved. Normal gameplay gate reuse requires fresh unchanged source pins.
+
+Limits: Unaccepted source only; root judges played art. Body fit, topology/openings, rig, collision, M0–M5/mobile remain open; no publication.
