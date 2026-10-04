@@ -651,3 +651,11 @@ Finding: Source23 bisects one original wrist-minus5mm halfspace after ambient fl
 Validation: Saved-native archive positions/triangles/ancestry/contact sets exact.28scoped original meshes/18graphs/17images/51rest+pose exact. Freeedges579/11degree2loops/0othernonmanifold (source22had10loops); actualairports unqualified. Silent normalship78cold1459ms/4810identicalticks/40.083333s/faults0/crash103/restart1tick/frame2.065ms/errors0. Blender/diff/hooks pass.
 
 Limits: 31interior contacts and finitewall wearerports stillfailed/unproved; fixedcut can split rolledwall components. Newcut UV/ancestry use Blenderinterpolation; exactunchangedcorners tested. Preservation scope excludes customnormals/genericattrs/shapekeys/modifiers/rigworld. No rig/motion/capture/body-head-51bind change/inference/worker/Library/player promotion or playedart/M0–M5/mobile pass; parentsolejudge.
+
+### Round79 — measure body-centred clearance at actual interior contacts
+
+Finding: Six actual contact min/median/max station planes allprovide local body-centred oriented air cavities.64directions show leftupper minimumgaps +0.401/-0.545/+0.115mm, proposed4mm scales1.057/1.076/1.067; rightfore +4.803/-1.148/+0.117mm/scales0.981/1.126/1.094. Shared measuredbodycentres avoid implied recentering; finiteprobes miss narrowfolds, firstfore boundaryplane stillpositive despite3Dcontactrange.
+
+Validation: Sixsection archive reproducible/gzip integrity/exactnativepins/31interior contacts unchanged. Allopen/secondaryair components retained. Initial fragment sentinel selectedearlierliteral/undefinedradial beforeoutput; start-relative extraction corrected andfullreadonly rerun passed. Blender/diff/hooks pass.
+
+Limits: No native save or actualfit/global4mm/port/capsule/art proof. Next onecompactambient local dilation derives support fromcontacttriangles/measuredcontours; no radius/time/density search or wall deletion. No capture/rig/motion/body-head-51bind change/inference/worker/promotion;31body/0self remainsfailed/allM0–M5/mobile open.
