@@ -1,0 +1,30 @@
+{
+  "status": "SOURCE_CHECKPOINT_ONLY_NOT_READY_FOR_INDEPENDENT_CONTACT_QA",
+  "authoritativeNative": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/hand-grip01/bounded-full-four-scale-exact.blend",
+  "nativeSHA256": "fff184884306cb3d539055f6fd72401ba61430ab7b7fcba5d637c843f3b2ac46",
+  "failedFirstSave": {
+    "path": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/hand-grip01/bounded-full-four.blend",
+    "sha256": "fc75d3ac1e25c6d95f56bfa9b2c346966872ffd1f84c95aca156cdb21a204cb6",
+    "failure": "matrix_basis decomposition introduced21scale ULP changes outside declared rotation/location pose fields"
+  },
+  "sourceScopeSHA256": "f9fd2e1e86dd22c8476fa513d1bebda74a478fdeba5a68016b6d6c2132749996",
+  "recipes": {
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_bounded_hand_grip.py": "942ef0ff87108718a7a30d99ab2b5afd32df302690b9a0c601d6f1b69ba12290",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/recover_hand_grip_receipt.py": "f13e85275c757f2b11d68cb9e8da41e863cb98366ddb7846977bea671bc54e71",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/restore_hand_pose_scale.py": "96f46ed013ca0bafdca06421b2f6efa1cb5f2f926ed3a7cff5cb90a52765221d"
+  },
+  "evidence": {
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/authoring-reopen-receipt-failure.txt": "630ce9fe73dbe9b55f1d1bbae254c84be8dab2a7a4ef22ed1e4d44d3fe6344c9",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/scale-serialization.json": "e1b74e2c931af8fae97d91af5182b632e6455f5f3c21a93996f3f97d077b736f",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/receipt-image-check-rejected.txt": "4a09a460216e79c6b266209c680d55a778ee1d5118f64262e601c019f45a1082",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/authoring.json": "faafaf29b8e72fe01d4b396f7ee789836d1f223940d94e4599e6c800999a6b97",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/authoring-name-map-rejected.txt": "384ce8cf3d85d3b870a548f9c64b3ea6b0d7cb58a77a79a377f3bac040ca694b",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/authoring-name-map-rejected.py": "dafaa823f3795a2e8d254bb0253ba7f0e1d2de64ea0ea2baa125f2690c25120a",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/FINDING.md": "df44ac48c71b8ff4c4ca8ae3a5294e35e26dac29b9283959d4271477652aef95",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/receipt-image-check-rejected.py": "1fc4fc9c9713530a8f79598ac54dc302084f63ea8ed6c4c0b70ae7723cef87a7",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/candidate-fields.npz": "c5df9e6b97ce875373f8664f1446d9e75b3da80c0c432b6defa16f17ff2e58f7"
+  },
+  "coverageFails": true,
+  "movingTestsPending": true,
+  "allGatesOpen": true
+}

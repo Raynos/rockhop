@@ -872,3 +872,16 @@ and receipt hashes pass. Ship105 cold1564ms/4810byte-identicalticks/clear
 [driver105](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip105/actual-driver.json), ask274.
 Limits: Parent control observations are not candidate contact proof. No
 construction, pose edit, new native or pixels. Neck103/allgates frozen/open.
+
+## Round106 — freeze the one hand source field before moving tests
+
+Finding: Anatomical transfer/full5/nativeFOUR4 preserves all glove geometry
+and outside19columns, but5distal glove fields remain empty: coverageFAIL.
+One fixed curl/actualfinitepalm-target proposal is unaccepted.
+Validation: Reopen34originals/51restbind and all glove rawfields exact.
+Preserved firstsave21scaleULPs; samefield serialization correction restores
+source scales with quaternion/location/weights unchanged. Source/field/hash
+JSON/AST checks pass; no native rewrite/refit. See
+[source106](../../docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/hand-grip106/FINDING.md), ask274.
+Limits: No physical/moving loss/played qualification, export or capture.
+Missing influence coverage is not waived. Neck103/allacceptance gates open.

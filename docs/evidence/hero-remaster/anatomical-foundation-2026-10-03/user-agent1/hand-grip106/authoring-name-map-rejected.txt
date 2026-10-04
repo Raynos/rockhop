@@ -1,0 +1,14 @@
+00:01.904  blend            | Read blend: "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/native-four-with-full-control.blend"
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_bounded_hand_grip.py", line 81, in <module>
+    B,first,first_targets=pose(rows[0][1]);basis={}
+                          ~~~~^^^^^^^^^^^^
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_bounded_hand_grip.py", line 71, in pose
+    obs=row['observation'];B=np.array(obs['bikeFrameWorld']).reshape(4,4).T;obsnames=[r['name'] for r in obs['bones']];W=np.array([obs['bones'][obsnames.index(s)]['world'] for s in names]).reshape(51,4,4).transpose(0,2,1);candidate=W@ib@rest;source_retarget=candidate.copy();correspondences={}
+                                                                                                                                                ~~~~~~~~~~~~~~^^^
+ValueError: 'shoulder.R' is not in list
+
+Error: script failed, file: 'assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/author_bounded_hand_grip.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
