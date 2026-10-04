@@ -467,3 +467,11 @@ Finding: Actualnonlocal seed-cloth rays constrain402vertices with4mmsharedroom/4
 Validation: Independent20originalmesh/18graphs/17images/51bindpose exact; actual6046v/11840tri. Source10UV/PBR unchanged, field/bounds/raywitnesses versioned;12of1937coverage misses/minlocalnormal4.526mm explicitproxies. Silent ship54cold1444ms/4810identicalticks/40.083333s/crash103/restart1tick/frame3.060ms/errors0; Blender/diff/hooks pass.
 
 Limits: Rejectedstaticconstruction, no livecollision/skin/actualcandidategame/movingart/mobile/Library/player acceptance. Originalbody/head/bind/failedcontrols retained; allM0–M5open/rootsolejudge. Normalship gate is notcandidate wearing evidence.
+
+### Round55 — connect donor vectors, localize tight underarm corridor, 2026-10-03
+
+Finding: Same actualsource10targets/qualified09seed/40step8solver now connectsall3vectorcoords instead ofonlyscalar lengths.0body/self149→32; remaining{'shirt/shirt': 32}contacts identify40nativevertices in tightunderarm fitcorridor. Needs genuine localstructural seamfit constraint, no globalfield/iteration/radius sweep. Source10selectedUV/PBR retained, maxactualsource vector16.834mm/actualopeningpins0.
+
+Validation: Independent20source meshes/18graphs/17images/51bindpose exact;6046v/11840tri. Exact triangle/source-parent/seed/final/vector contacts and frozenfield versioned;12of1937coverage misses/localnormalminimum4.478mm explicitproxies. Blender/diff/hooks pass.
+
+Limits: Still32self, no rig/game/Library/playerhandoff orskin/livecollision/playedart/mobile acceptance. Selectedshape changedby connectedanatomicalfit, notexactclosedsource volume; rootsolejudge/allM0–M5open. Failedscalar/ray/vector controls andcanonicalbody/head/bind retained.
