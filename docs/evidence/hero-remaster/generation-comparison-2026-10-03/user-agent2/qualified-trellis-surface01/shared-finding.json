@@ -1,0 +1,82 @@
+{
+  "accepted": false,
+  "sourceCheckpoint": "1741afe563f4d5d9a5bd1ed9f66a733e4051ec2c",
+  "status": "Shared raw-winding defect corroborated in both frozen outputs; exact played-film band causality unresolved",
+  "rootObservation": "pixal-root-observation.json",
+  "guardExitCode": 0,
+  "elapsedSeconds": 5.613,
+  "inferenceExtractionRenderCalls": 0,
+  "models": {
+    "trellis": {
+      "nativeSHA256": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+      "vertices": 3152811,
+      "faces": 6322984,
+      "zeroAreaTriangles": 0,
+      "uniqueEdges": 9481131,
+      "boundaryEdges": 81976,
+      "overusedEdges": 83107,
+      "twoFaceEdges": 9316048,
+      "equalDirectionTwoFaceEdges": 1491124,
+      "equalDirectionFractionOfTwoFaceEdges": 0.16005971630888977,
+      "arraysChanged": false
+    },
+    "pixal": {
+      "nativeSHA256": "fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982",
+      "vertices": 2823607,
+      "faces": 6597482,
+      "zeroAreaTriangles": 0,
+      "uniqueEdges": 9234820,
+      "boundaryEdges": 71064,
+      "overusedEdges": 839412,
+      "twoFaceEdges": 8324344,
+      "equalDirectionTwoFaceEdges": 1478396,
+      "equalDirectionFractionOfTwoFaceEdges": 0.17759909970082927,
+      "arraysChanged": false
+    }
+  },
+  "renderSources": {
+    "trellis": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_trellis_upright_orbit.py",
+      "SHA256": "de25ebd88281f46b504b87eac243d8c195e5c18b1ae49bfd55ddac0b9bc7d8d0",
+      "averagedNormalsLine": 43,
+      "CyclesCPU8SamplesLine": 83,
+      "StandardColorAndWorldLine": 86,
+      "AreaLightsLine": 87,
+      "normalMapInput": false
+    },
+    "pixal": {
+      "path": "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified_pixal_orbit.py",
+      "SHA256": "2a9e6bcf11bee94d76e081c8064adcd2cb3e9ce013432e4e71158251f204cdff",
+      "averagedNormalsLine": 43,
+      "CyclesCPU8SamplesLine": 83,
+      "StandardColorAndWorldLine": 86,
+      "AreaLightsLine": 87,
+      "normalMapInput": false
+    }
+  },
+  "sharedBehavior": [
+    "Both actual Mac extraction paths use identical three edge-neighbor tables and two diagonal tables; original learned-split branch has no neighboring-face orientation propagation step.",
+    "Original analytic cube controls in both paths already report6equal-direction two-face edges and closedconnectivity before learnedmodel inference; Pixal sphere reports366. This establishes a shared extraction-path concern, not a model-specific style defect.",
+    "Both frozen learnedraw meshes now independently show >1.47million same-direction two-face edges, with zero exactzero-area triangles. Overused edges are topology defects, not proof of spatial self-intersection.",
+    "Both display scripts use Blender derived averaged normals and unchanged nativeface indices, identical CyclesCPU4threads8samples/Standard/area-light setup, and no normal-map shader input.",
+    "Nativeaxis conventions differ, but both display transforms have positive orientation and uniformpositive scale. Such transforms preserve shared-edge direction consistency.",
+    "Gray and PBR views sharegeometry/normal/render settings. Bands observed in both materials cannot be explained by baseColor alone; common rawtopology/shading remains a causal candidate."
+  ],
+  "independentPackedEdgeControls": "edge-key-controls.json matches existing separate audit_native on three persisted analyticfixtures",
+  "priorNormalControl": "Existing TRELLIS raycontrol measures raw face/averaged-normal opposition1,795front/777back; no new Pixal ray/render loop added.",
+  "preserved": {
+    "trellisRaw": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+    "pixalRaw": "fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982",
+    "trellisHistoricalFilm": "7354ac90919c85c9a3f4be039ae4f7a1dd4eee750b0c8719dcb919d7dcad9664",
+    "trellisUprightFilm": "42ca2a6d03df1a914b4bf65922c878fbb05d081c1174ed06075029d8569dec30",
+    "pixalFilm": "90fa44c819f9355b6e008b8b2d022c69d9d7c78295f1779415339d6d0c7b7629"
+  },
+  "pixalResolutionLimit": "Explicit authorized1024cascade/12each/42 after1536memory stop; not1536success or automaticfallback acceptance",
+  "selectedVisualSource": "Hunyuan retained for Agent1 construction; no donor switch or message to Agent1",
+  "limits": [
+    "Shared topology/normal problems are measured; correspondence to exact root-visible hood/back/sleeve bands is not isolated.",
+    "Shared renderer sampling/shading can contribute; no flat-normal/render-variable capture was performed.",
+    "Boundary edges may be intentional garment openings; no opening/fit/rig/mobile qualification.",
+    "No cleanup, recolor, normal repair, extra inference, modelwinner, new experiment lane or duplicate Library upload."
+  ]
+}

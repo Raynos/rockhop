@@ -1,0 +1,147 @@
+{
+  "accepted": false,
+  "recipeSHA256": "b7e23d65d28af75167c3bf0021998c6bf09d5b5684a0f2c013d7e83b8a527c6b",
+  "inferenceExtractionRenderCalls": 0,
+  "models": {
+    "trellis": {
+      "nativeSHA256": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+      "vertices": 3152811,
+      "faces": 6322984,
+      "zeroAreaTriangles": 0,
+      "uniqueEdges": 9481131,
+      "boundaryEdges": 81976,
+      "overusedEdges": 83107,
+      "twoFaceEdges": 9316048,
+      "equalDirectionTwoFaceEdges": 1491124,
+      "equalDirectionFractionOfTwoFaceEdges": 0.16005971630888977,
+      "arraysChanged": false
+    },
+    "pixal": {
+      "nativeSHA256": "fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982",
+      "vertices": 2823607,
+      "faces": 6597482,
+      "zeroAreaTriangles": 0,
+      "uniqueEdges": 9234820,
+      "boundaryEdges": 71064,
+      "overusedEdges": 839412,
+      "twoFaceEdges": 8324344,
+      "equalDirectionTwoFaceEdges": 1478396,
+      "equalDirectionFractionOfTwoFaceEdges": 0.17759909970082927,
+      "arraysChanged": false
+    }
+  },
+  "purpose": "Extend existing contour-band diagnosis to shared raw topology and source behavior",
+  "sourcePins": {
+    "trellisExtractor": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/stubs/o_voxel_override_convert.py",
+      "SHA256": "6de4b7149e7300ac056f2d83eec8d149560cac521cdded4fd812dadffd7bfa5c"
+    },
+    "pixalExtractor": {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/utils/mesh_extract.py",
+      "SHA256": "40fdc42ecf476a79b939ef85dca6ac251803235065e203126a4967a839d11541"
+    },
+    "trellisDispatch": {
+      "path": "/Users/raynos/ml/img2mesh/trellis-mac/TRELLIS.2/trellis2/models/sc_vaes/fdg_vae.py",
+      "SHA256": "b775638bf661132dc4cf23311a25fa3d4153c3217bc066b302404b316a70b52d"
+    },
+    "pixalDispatch": {
+      "path": "/Users/raynos/ml/img2mesh/Pixal3D-mac/pixal3d/models/sc_vaes/fdg_vae.py",
+      "SHA256": "c55fa7c263147ddfee2a8f32ce4791db5ab85789caf2e94125dfaa27e2ef1db0"
+    }
+  },
+  "sharedTables": {
+    "edge_neighbor_voxel_offset": [
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    ],
+    "quad_split_1": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3
+    ],
+    "quad_split_2": [
+      0,
+      1,
+      3,
+      3,
+      1,
+      2
+    ]
+  },
+  "neighborAndDiagonalTablesIdentical": true,
+  "limits": [
+    "No inference, extraction replay, render/capture loop, cleanup or recolor.",
+    "Whole-mesh edge winding counts do not locate the exact bands on hood/back/sleeve.",
+    "Boundary edges may be intended garment openings; counts alone do not classify them.",
+    "Topology orientation defects can affect averaged normals, but exact film-band causality is unresolved.",
+    "No self-intersection certification, CUDA parity, model selection or game-ready acceptance."
+  ],
+  "elapsedSeconds": 5.1033990839496255
+}

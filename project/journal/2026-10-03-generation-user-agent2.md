@@ -1771,3 +1771,18 @@ Ask:284–286 existingbanddiagnosis follow-up.
 
 Limits: Unacceptedbyte-control extension pending; exactbands causeunresolved.
 No newinference/renderlane/cleanup/recolor; Hunyuanselectedsource unchanged.
+
+Finding: Existing banddiagnostic corroborates sharedraw windingdefect
+in frozenTRELLIS/Pixal after rootkeeps Pixal as usefulshape candidate.
+
+Validation: Guard0/5.613s, no inference/extraction/render. TRELLIS1,491,124
+equal-directiontwo-faceedges/9,316,048(16.006%); Pixal1,478,396/8,324,344
+(17.760%). Overusededges83,107/839,412; exactzeroarea0both. Threeexisting
+analyticfixtures packedcounts match independentaudit. SharedFDGtables
+identical, pinnedextractorbytes sameaspriorcontrols; averagednormals/render
+settings same, no normalmaps. Bothrawoutputs/threefilms hashunchanged.
+Evidence: docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/shared-finding.json
+Ask:284–286 existingbyte-banddiagnosis/rootPixalreview follow-up.
+
+Limits: Exactvisiblebandcauseunresolved; no cleanup/recolor/extrasampling
+or modelattribution. Pixalexplicit1024not1536success; Hunyuan sourcekept.
