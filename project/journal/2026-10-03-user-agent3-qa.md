@@ -1231,3 +1231,30 @@ No1232-stream sweep or new controller/capture. Agent1 owns anatomical
 proposal; parent owns ask275/index and acceptance. Contact/identity/art
 failures and all M0–M5 remain open; no outbound acknowledgment, Library/user
 delivery, upload, promotion, publication or source edit.
+
+
+## 2026-10-04 Round65 — verify auxiliary restoration and three-pose parity
+
+Finding: Independent read-only QA closes auxiliary omission only on the
+new frozen neck28 bodies. All204definition order/name/lock fields and21782
+original auxiliary memberships exact;21424positive outside assignments
+restored on8877vertices. New182derived vertices gain no fabricated auxiliary
+identity. Neck27 moving shelf/throat/rear overhang remains root-REJECTED.
+
+Validation: Fresh source/frozen98/corrected100 reads confirm42old object
+snapshots and definitions/locks,51stored rig,17images and18materials exact.
+All9219semantic fields and non-group data match frozen98. Exactly native0,
+native72 and reconstructed actual47_668 produce six full/four old/new pairs
+with byte-identical9219object-local positions, max0m. Four has<=4bone slots;
+auxiliary groups excluded by semantic bone name. Baseline auxiliary rows
+contain no zero-valued memberships; exact presence checked. All14inputpins
+and historical PDF53/body56/body59/neck62 unchanged. Recipe parses, receipt
+hashes match; exact evidence neck65/assessment.json and membership NPZ.
+
+Limits: Preservation only, not anatomical/moving acceptance or1232stream
+rerun/exact game trace. Original99contact/compression/actual47identity
+failures and490garment contacts stay red; source26 separate. No native save,
+source edit, new capture/export/controller, proposal authoring, install/GPU/
+model/worker/publication. Agent1 owns anatomical proposal; parent owns ask275/
+index and art/admission. All M0–M5 open, no Library/user delivery or outbound
+acknowledgment. Required ordinary gate66 next as separate commit.
