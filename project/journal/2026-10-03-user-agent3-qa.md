@@ -1332,3 +1332,27 @@ remain open. Auxiliary100 already independently verified65; frozen101
 pending text predates it. Parent owns ask275/index/art/admission, Agent1
 owns sole construction proposal. No solve/source edit/capture/worker,
 Library delivery/upload/promotion/publication. AllM0–M5 open; gate69 next.
+
+
+## 2026-10-04 Round69 — normal replay after independent cause constraints
+
+Finding: Required third-round normal-source gate passes after prep67 and
+source/pixel QA68. Independent anatomy/scope and sampled geometric ownership
+remain an unaccepted checkpoint for parent decision. No experimental neck
+enters the unchanged twenty normal player models.
+
+Validation: Silent headless WebKit low/high cold boots and4810tick clears
+match40.083333333333336s/hash368f1ca5bd9e830a/bytesabaaaaaaaa0a4440, zero faults
+or errors. Crash103ticks; tick-zero restarts2/4ms. Eight normal-source pins
+and twenty model hashes exact gate66before/after; mappings/adapters disabled.
+All21source-QA input pins, originalPDF53,42body56/8body59/10neck62/4neck65/
+5neck68 stable evidence hashes exact. Build passes with existing chunk-size
+warning. Receipts gate69/source-before.json, normal-gate.json, source.json.
+
+Limits: Ordinary regression only, not candidate anatomy, whole ledge cause,
+proposal feasibility, moving art/engine/device/stranger/player acceptance.
+Rootneck27REJECT and99contact/compression/actual47identity/490contacts stay
+open, allM0–M5 open. Agent1 owns sole construction proposal; parent owns
+ask275/index and art/admission. No source edit/candidate capture/worker,
+Library delivery/upload/push/promotion/publication. Temporary normal build
+excluded; no recursive cleanup.
