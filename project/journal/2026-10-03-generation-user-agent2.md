@@ -1853,3 +1853,11 @@ Finding: Original averaged frame0 reproduces historical pixels exactly; flat/raw
 Validation: Guard0/51.708s;49 PNG hashes verified, arrays/material readback and raw/derived archives unchanged. Baseline maximum RGB difference0.
 
 Limits: Technical rendering only; film/actual band comparison pending. No global repair or art acceptance.
+
+## Round 89 — Pixal causal display render frozen
+
+Finding: Original averaged frame0 reproduces historical pixels exactly; flat/raw faces and bounded-derived smooth displays rendered at24 matching angles. Derivative changes804677 vertex normals while protecting contradictory patches.
+
+Validation: Guard0/54.215s;49 PNG hashes verified, arrays/material readback and raw/derived archives unchanged. Baseline maximum RGB difference0.
+
+Limits: Technical rendering only; film/actual band comparison pending. Pixal1024 alternative and1536 stops retained; Hunyuan selected.
