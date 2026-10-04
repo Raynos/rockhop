@@ -301,3 +301,11 @@ Finding: The installed Hunyuan processor consumes the selected compact ankle boo
 Validation: Fresh idle lease and31.5anonymous/7.6wired GiB admission; guard exit0. Selected6d1270cf reference and qualified installed284dc24f processor pins match; actual512image/mask tensors finite and saved.
 
 Limits: Source candidate only; no unseen storyboard-detail, handedness, foot/toe enclosure, ankle lumen, fit, rig or art/device acceptance. No alternate candidate, alpha edits or publication.
+
+## Round 134 — boots shape01 checkpoint
+
+Finding: The single ankle boot seed completes30quality shape steps and saves original latents/native MC arrays before invalid sparse MC validation stops display export. Preserve this original result before same-latent extraction.
+
+Validation: Guard worker exit1/native validity assertion in49.132s, not a resource denial. Actual conditioned features/noise and finite sampled latents retained; original565119vertices/1131046faces include778578nonfinite coordinate elements.
+
+Limits: No repeat sampling, reference/seed change, field filling, cleanup, fitting, PBR, art/device acceptance or publication. Root alone judges the later source visual.
