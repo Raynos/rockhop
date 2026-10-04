@@ -277,3 +277,11 @@ Finding: Original lease/memory admission now passes; render the single requested
 Validation: Fresh lsof exit1/empty output; admission31.8anonymous/7.7wired GiB. Worker exit0; all48frame hashes and triangle/UV/original-map readback checks pass. No repeated sampling, decoding or paint.
 
 Limits: Unaccepted source display only; encoder/playback and root played review remain pending. Handedness, anatomy, fit/rig/physics/M0-M5/mobile unaccepted. No publication.
+
+## Round 131 — gloves ready source visual checkpoint
+
+Finding: Original source GLB/PBR/UV/raw geometry and exact inputs/settings/admission are pinned with one ready source orbit, before fitting. No new capture or upload.
+
+Validation: All48video frames decode; six-second silent headless WebKit playback reaches end without media/page errors. Original mesh/map pins match; source, UV and paint checkpoints remain preserved. Normal gameplay gate reuse requires fresh unchanged source pins.
+
+Limits: Unaccepted source only; root judges played art. Body fit, topology/openings, rig, collision, M0–M5/mobile remain open; no publication.
