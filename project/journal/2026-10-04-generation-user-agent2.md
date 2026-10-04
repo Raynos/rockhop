@@ -125,3 +125,11 @@ Finding: Derive input-parameterized copies of the existing qualified preprocess/
 Validation: All7recipes compile, every base/item/helper/reference SHA pinned;3source inputs exact. Third-round runtime24 reused with fresh player/source pins and empty playerdiff. No new item model inference yet.
 
 Limits: Source checkpoints unaccepted; shape native-validation failure is retained separately from resource denial. Resource/time/lease stops must report and halt, not trigger a bypass. Fit/rig/mobile/played-art gates remain open, no publication.
+
+## Round 112 — Wrong command pin stopped before model imports
+
+Finding: Supplied preprocessor4523b9was incorrect; unchanged actual source284dc24fexactly matches prior qualified preprocessing receipt. Preserve failed command and traceback, correct only invocation pin for fresh CPU check.
+
+Validation: Guard exit1/0.073s at source assertion before model/tensor imports; lease/admission passed30.8anonymous/7.0wiredGiB. Actual source and qualified receipt hash pinned; no backend/model/guard edit.
+
+Limits: This owned command failure is not model defect, resource denial or permission to bypass a denied job. No item neural inference yet; art/fit gates remain open.
