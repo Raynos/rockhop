@@ -1,0 +1,110 @@
+{
+  "status": "UNACCEPTED_AUXILIARY_PRESERVATION_RESTORED_NEW_DERIVATIVE",
+  "native": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface28/auxiliary-restored.blend",
+  "nativeSHA256": "60036a17b60db73b66abc140c943c2589d2eb2c91340e5c50bc59bd6a7e6a5e4",
+  "fieldsUnchangedPath": "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/triangulated-neck-fields.npz",
+  "fieldsUnchangedSHA256": "ec1f4a6b72e26978740c27f9787d0d2ed8d73f0a43227c4fd9b02863b470e0d5",
+  "recipeSHA256": "ebf73a074ea5020f3ccd903754d39ec20ffc9f25b0db1d5ccc97062eb1436e0a",
+  "pins": {
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/bounded-neck-join-triangulated.blend": "eed9a2ceb77eaa5b9a4deb9e686a8519c90bec130cf4a420f141615314900778",
+    "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/neck-interface27/triangulated-neck-fields.npz": "ec1f4a6b72e26978740c27f9787d0d2ed8d73f0a43227c4fd9b02863b470e0d5",
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck62/native-read.json": "afd2f155e8363c44e32f26dc20f45c4ef1612f454e3bdc2d9893b43318755ed3",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/neck-interface99/pose-witnesses.npz": "7f344474f268dfc637da8f65d9ac7af533de8aa8d927fdfb01ea2a7642bd4475",
+    "docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/neck62/read-native.py": "31215b16825aef843d54fe67198d093544213d3d825c180a079d4340d212f21e"
+  },
+  "reopenedOriginalAndFailedObjectsExact": 42,
+  "originalPackedImagesExact": 17,
+  "originalMaterialGraphsExact": 18,
+  "original51RestBindSavedPoseExact": true,
+  "bodyChecks": [
+    {
+      "field": "full",
+      "object": "Bounded neck28 auxiliary-preserved body full, unaccepted",
+      "originalVertices": 9037,
+      "newDerivedVertices": 182,
+      "sourceAuxiliaryDefinitions": 153,
+      "sourceAllDefinitions": 204,
+      "restoredAuxiliaryAssignmentsIncludingZero": 21782,
+      "outsideVertices": 8877,
+      "outsidePositiveAuxiliaryAssignments": 21424,
+      "definitionsOrderNameAndLockExact": true,
+      "allOriginalAuxiliaryMembershipValuesExact": true,
+      "semanticBoneMembershipAndWeightsExact": true,
+      "nonGroupStoredFieldsExact": true,
+      "newVertexAuxiliaryPolicy": "No original source identity: new182vertices have no auxiliary membership. Existing9037memberships restored exactly; semantic authored new-vertex bone fields unchanged."
+    },
+    {
+      "field": "four",
+      "object": "Bounded neck28 auxiliary-preserved body four, unaccepted",
+      "originalVertices": 9037,
+      "newDerivedVertices": 182,
+      "sourceAuxiliaryDefinitions": 153,
+      "sourceAllDefinitions": 204,
+      "restoredAuxiliaryAssignmentsIncludingZero": 21782,
+      "outsideVertices": 8877,
+      "outsidePositiveAuxiliaryAssignments": 21424,
+      "definitionsOrderNameAndLockExact": true,
+      "allOriginalAuxiliaryMembershipValuesExact": true,
+      "semanticBoneMembershipAndWeightsExact": true,
+      "nonGroupStoredFieldsExact": true,
+      "newVertexAuxiliaryPolicy": "No original source identity: new182vertices have no auxiliary membership. Existing9037memberships restored exactly; semantic authored new-vertex bone fields unchanged."
+    }
+  ],
+  "evaluatedEquivalenceWitnesses": [
+    {
+      "domain": "native",
+      "sourceIndex": 0,
+      "field": "full",
+      "vertices": 9219,
+      "evaluatedObjectLocalPositionsByteExact": true,
+      "maximumPositionDeltaM": 0.0
+    },
+    {
+      "domain": "native",
+      "sourceIndex": 0,
+      "field": "four",
+      "vertices": 9219,
+      "evaluatedObjectLocalPositionsByteExact": true,
+      "maximumPositionDeltaM": 0.0
+    },
+    {
+      "domain": "native",
+      "sourceIndex": 72,
+      "field": "full",
+      "vertices": 9219,
+      "evaluatedObjectLocalPositionsByteExact": true,
+      "maximumPositionDeltaM": 0.0
+    },
+    {
+      "domain": "native",
+      "sourceIndex": 72,
+      "field": "four",
+      "vertices": 9219,
+      "evaluatedObjectLocalPositionsByteExact": true,
+      "maximumPositionDeltaM": 0.0
+    },
+    {
+      "domain": "actual47",
+      "sourceIndex": 668,
+      "field": "full",
+      "vertices": 9219,
+      "evaluatedObjectLocalPositionsByteExact": true,
+      "maximumPositionDeltaM": 0.0
+    },
+    {
+      "domain": "actual47",
+      "sourceIndex": 668,
+      "field": "four",
+      "vertices": 9219,
+      "evaluatedObjectLocalPositionsByteExact": true,
+      "maximumPositionDeltaM": 0.0
+    }
+  ],
+  "limits": [
+    "Only auxiliary definitions and memberships restored; geometry/topology/UV/PBR/normals/bind and intended semantic deform fields unchanged.",
+    "All source97/98/99 files and controls retained. No appearance or motion consequence of old auxiliary omission is inferred.",
+    "Three frozen witness equivalences are not an all1232-pose rerun or byte-identical game trace. Original99contact/area-compression/actual47identity failures remain red.",
+    "New182body vertices have no original auxiliary identity; no fabricated auxiliary interpolation is claimed. Their authored bone weights are unchanged.",
+    "No source field retune, new capture/export/install/GPU/model/worker/upload or promotion. All M0-M5/art/engine/device/player gates open; parent alone judges."
+  ]
+}
