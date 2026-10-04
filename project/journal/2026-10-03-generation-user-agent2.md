@@ -1909,3 +1909,11 @@ Finding: Human authorizes Rockhop main pushes in batches of at most10commits. Fr
 Validation: Fetch succeeds, origin ancestor/188first-parent and total counts match, no merge commits; last origin push/scheduled gates success. Ask291 registered.
 
 Limits: Publication and new release/deploy verification pending; no force, other-repository push, foreign staging or direct Vercel production deploy.
+
+## Round 96 — Ten-commit batches published without force
+
+Finding: Publish189frozen commits to origin/main as18batches of10 plus9; each remote-before/after and bounded count verified. Own publication receipt follows as a small final batch. Ask291 mechanical publication lands; final release/deployment verification continues separately.
+
+Validation: All19pushes return0; remote06b552f5 exact,19Actions runs observed with no failed/timed-out outcome at checkpoint. First web gate passes; store and latest run pending; cancelled intermediates explicitly not green. Runtime24/playerfile pins and playerdiff0 unchanged.
+
+Limits: Final checked deployment not yet claimed. No force, other-repo push, uncommitted foreign inclusion or manual Vercel production deploy.
