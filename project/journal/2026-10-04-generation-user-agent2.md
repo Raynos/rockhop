@@ -349,3 +349,11 @@ Finding: Original source GLB/PBR/UV/raw geometry and exact inputs/settings/admis
 Validation: All48video frames decode; six-second silent headless WebKit playback reaches end without media/page errors. Original mesh/map pins match; source, UV and paint checkpoints remain preserved. Normal gameplay gate reuse requires fresh unchanged source pins.
 
 Limits: Unaccepted source only; root judges played art. Body fit, topology/openings, rig, collision, M0–M5/mobile remain open; no publication.
+
+## Round 140 — complete original three-item source handoff
+
+Finding: Jeans, glove and compact ankle boot source creation is complete before fitting, with one original quality shape seed and PBR run plus one played source review per item. Cross-pin the coherent storyboard/original hoodie inputs and all three unaccepted handoffs; preserve every earlier failure/denial.
+
+Validation: All original source/ref/raw/UV/texture pins and all45actual paint-step archives freshly match. Three clips each decode48frames and silently play six seconds to end without errors. Every actual job satisfies original idle lease/55anonymous/68combined admission; original65/96running guards remain unchanged. Full player diff against runtime24 is empty.
+
+Limits: Raw source creation closes only Agent2 ask293 scope. All anatomy/handedness/openings/fit/topology/rig/collision/played wearable art/M0–M5/mobile gates remain open; root alone judges. No upload/publication/promotion or Agent1 source edits.

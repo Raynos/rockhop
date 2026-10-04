@@ -1,0 +1,606 @@
+{
+  "schemaVersion": 1,
+  "accepted": false,
+  "status": "THREE_ORIGINAL_UNACCEPTED_SOURCES_AND_PLAYED_REVIEWS_READY",
+  "ask": 293,
+  "round": 140,
+  "timeUTC": "2026-10-04T18:25:32.581627+00:00",
+  "owner": "existing Agent2 / user-agent2",
+  "pipeline": "existing installed Hunyuan3D-2.1 MPS quality route",
+  "pipelineSourceHEAD": "82920d643c0dc2f7bfd7255f45f62d386edfe60c",
+  "styleStoryboardSHA256": "d48e3913d368275488a135da1779b22a6ebb42ae5e719b3ebbcfbce58932ae9a",
+  "selectedOriginalHoodieSHA256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+  "softwareReceipt": {
+    "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/software.json",
+    "sha256": "fea4027d5381bb6c3b8823ce42c5afeb201f7d9e9988e80de3dae39b2f157b1e",
+    "bytes": 900
+  },
+  "admissionRecipe": {
+    "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/admission-recipe.json",
+    "sha256": "cb753bdaaec41f31271b546530a9d118e0f64e7ddb10b36ab5be433129c2edd6",
+    "bytes": 9067
+  },
+  "paintWeightsReceipt": {
+    "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-paint-weights01/receipt.json",
+    "sha256": "98458b318ad8b9ce236c29e98308df0f88a69bdf2fa8757a5868fd7ce609cbfc",
+    "bytes": 19253
+  },
+  "nativeUnits": "Learned normalized source coordinates; no physical scale/body fit certification",
+  "displayAxes": "Existing review recipe maps native (X,Y,Z) to Blender (X,-Z,Y); uniform display normalization only",
+  "sourcePose": "Isolated unrigged source objects; no wearable stance or physical contact claim",
+  "items": [
+    {
+      "item": "jeans",
+      "accepted": false,
+      "sourceReadyReceipt": {
+        "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/jeans/source-ready.json",
+        "sha256": "7d39d910332439b998a4ac81d6f0162fefafd84d8963ce71d89b9299b3b2a495",
+        "bytes": 19879
+      },
+      "sourceMesh": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/jeans/paint01/painted.glb",
+        "sha256": "7dbec82f2cc62c954685a00ef2dc484b3f7aede5fd8ee1d0b6887da288e1a788",
+        "bytes": 43271320
+      },
+      "reference": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/jeans-reference01.png",
+        "sha256": "fcbe0655f3b56b50e7c1fbd6a168a89f222486f16e8d23f1b96266110a83b7bf",
+        "bytes": 2203602
+      },
+      "sourceReviewMovie": {
+        "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/jeans/source-pbr-orbit.mp4",
+        "sha256": "cce84d66367e5446c3ae28fd880dbee2e4c4e24c9c0235dd4ebd034022a5551a",
+        "bytes": 170385
+      },
+      "shapeSettings": {
+        "seed": 42,
+        "steps": 30,
+        "guidance": 5,
+        "requestedMC": 384,
+        "effectiveFlashVDM": [
+          95,
+          190,
+          380
+        ],
+        "chunks": 32768
+      },
+      "paintSettings": {
+        "seed": 42,
+        "scheduler": "UniPCMultistepScheduler trailing",
+        "paintSteps": 15,
+        "maxSelectedViews": 8,
+        "viewResolution": 768,
+        "renderSize": 2048,
+        "textureSize": 4096,
+        "remesh": false,
+        "simplification": false,
+        "valueColumns": true,
+        "vaeBatchSlicingOnlyFinalDecode": true
+      },
+      "rawGeometryAudit": {
+        "accepted": false,
+        "vertices": 420991,
+        "faces": 841998,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            -0.4803122878074646,
+            -0.9994538426399231,
+            -0.2975783944129944
+          ],
+          [
+            0.45201432704925537,
+            0.973797619342804,
+            0.27543139457702637
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 6,
+        "minimumAreaNativeSquaredUnits": 0.0,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 1262997,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 8,
+        "componentTriangleCountsDescending": [
+          841698,
+          56,
+          52,
+          44,
+          44,
+          40,
+          40,
+          24
+        ]
+      },
+      "admissionsAndOutcomes": [
+        {
+          "phase": "preprocess02",
+          "timeUTC": "2026-10-04T16:27:01Z",
+          "anonymousGiB": 34.3,
+          "wiredGiB": 6.9,
+          "exitCode": 0,
+          "seconds": 1.703,
+          "peakHostAnonymousGiB": 36.1,
+          "peakHostCombinedGiB": 42.800000000000004
+        },
+        {
+          "phase": "shape01",
+          "timeUTC": "2026-10-04T16:29:07Z",
+          "anonymousGiB": 33.1,
+          "wiredGiB": 6.6,
+          "exitCode": 1,
+          "seconds": 60.93,
+          "peakHostAnonymousGiB": 51.6,
+          "peakHostCombinedGiB": 61.8
+        },
+        {
+          "phase": "decode01",
+          "timeUTC": "2026-10-04T16:34:00Z",
+          "anonymousGiB": 30.0,
+          "wiredGiB": 6.7,
+          "exitCode": 1,
+          "seconds": 16.799,
+          "peakHostAnonymousGiB": 36.7,
+          "peakHostCombinedGiB": 42.800000000000004
+        },
+        {
+          "phase": "export01",
+          "timeUTC": "2026-10-04T17:04:38Z",
+          "anonymousGiB": 27.8,
+          "wiredGiB": 6.3,
+          "exitCode": 0,
+          "seconds": 4.187,
+          "peakHostAnonymousGiB": 29.2,
+          "peakHostCombinedGiB": 35.3
+        },
+        {
+          "phase": "uv01",
+          "timeUTC": "2026-10-04T17:06:13Z",
+          "anonymousGiB": 28.0,
+          "wiredGiB": 6.3,
+          "exitCode": 0,
+          "seconds": 153.593,
+          "peakHostAnonymousGiB": 38.5,
+          "peakHostCombinedGiB": 46.3
+        },
+        {
+          "phase": "paint01",
+          "timeUTC": "2026-10-04T17:09:43Z",
+          "anonymousGiB": 27.8,
+          "wiredGiB": 6.3,
+          "exitCode": 0,
+          "seconds": 377.322,
+          "peakHostAnonymousGiB": 53.4,
+          "peakHostCombinedGiB": 65.6
+        },
+        {
+          "phase": "orbit01",
+          "timeUTC": "2026-10-04T17:17:04Z",
+          "anonymousGiB": 32.6,
+          "wiredGiB": 7.0,
+          "exitCode": 0,
+          "seconds": 36.782,
+          "peakHostAnonymousGiB": 36.9,
+          "peakHostCombinedGiB": 44.199999999999996
+        },
+        {
+          "phase": "encode01",
+          "timeUTC": "2026-10-04T17:18:53Z",
+          "anonymousGiB": 30.4,
+          "wiredGiB": 6.1,
+          "exitCode": 0,
+          "seconds": 1.182,
+          "peakHostAnonymousGiB": 31.0,
+          "peakHostCombinedGiB": 37.4
+        },
+        {
+          "phase": "play01",
+          "timeUTC": "2026-10-04T17:19:11Z",
+          "anonymousGiB": 31.3,
+          "wiredGiB": 6.8,
+          "exitCode": 0,
+          "seconds": 7.354,
+          "peakHostAnonymousGiB": 33.9,
+          "peakHostCombinedGiB": 41.0
+        }
+      ]
+    },
+    {
+      "item": "gloves",
+      "accepted": false,
+      "sourceReadyReceipt": {
+        "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/gloves/source-ready.json",
+        "sha256": "bf10f0994a4ce7f521f1a61526cbf748e8e639f1d47cb2b9aff7a29852e6e7c5",
+        "bytes": 19565
+      },
+      "sourceMesh": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+        "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea",
+        "bytes": 22940908
+      },
+      "reference": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/gloves-reference01.png",
+        "sha256": "070c5fc70f1cc17e1697cc88ffb91b71bbdba35003ee3113a94e4a1b9b36adb2",
+        "bytes": 1535204
+      },
+      "sourceReviewMovie": {
+        "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/gloves/source-pbr-orbit.mp4",
+        "sha256": "dc17a97794697ea603e4f01460a0abb5dc8083f30519bb7cd1b2321b92ae49c1",
+        "bytes": 158885
+      },
+      "shapeSettings": {
+        "seed": 42,
+        "steps": 30,
+        "guidance": 5,
+        "requestedMC": 384,
+        "effectiveFlashVDM": [
+          95,
+          190,
+          380
+        ],
+        "chunks": 32768
+      },
+      "paintSettings": {
+        "seed": 42,
+        "scheduler": "UniPCMultistepScheduler trailing",
+        "paintSteps": 15,
+        "maxSelectedViews": 8,
+        "viewResolution": 768,
+        "renderSize": 2048,
+        "textureSize": 4096,
+        "remesh": false,
+        "simplification": false,
+        "valueColumns": true,
+        "vaeBatchSlicingOnlyFinalDecode": true
+      },
+      "rawGeometryAudit": {
+        "accepted": false,
+        "vertices": 285159,
+        "faces": 570242,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            -0.7957121729850769,
+            -1.0003374814987183,
+            -0.5040463209152222
+          ],
+          [
+            0.6848777532577515,
+            0.9734101295471191,
+            0.45474547147750854
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 16,
+        "minimumAreaNativeSquaredUnits": 0.0,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 855363,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 20,
+        "componentTriangleCountsDescending": [
+          569206,
+          108,
+          88,
+          84,
+          84,
+          72,
+          64,
+          64,
+          60,
+          60,
+          56,
+          56,
+          44,
+          44,
+          44,
+          40,
+          36,
+          16,
+          8,
+          8
+        ]
+      },
+      "admissionsAndOutcomes": [
+        {
+          "phase": "preprocess01",
+          "timeUTC": "2026-10-04T17:21:25Z",
+          "anonymousGiB": 31.8,
+          "wiredGiB": 7.3,
+          "exitCode": 0,
+          "seconds": 0.886,
+          "peakHostAnonymousGiB": 31.8,
+          "peakHostCombinedGiB": 39.1
+        },
+        {
+          "phase": "shape01",
+          "timeUTC": "2026-10-04T17:21:58Z",
+          "anonymousGiB": 31.6,
+          "wiredGiB": 6.4,
+          "exitCode": 1,
+          "seconds": 54.985,
+          "peakHostAnonymousGiB": 54.3,
+          "peakHostCombinedGiB": 75.5
+        },
+        {
+          "phase": "decode01",
+          "timeUTC": "2026-10-04T17:23:30Z",
+          "anonymousGiB": 31.1,
+          "wiredGiB": 7.0,
+          "exitCode": 0,
+          "seconds": 14.446,
+          "peakHostAnonymousGiB": 41.6,
+          "peakHostCombinedGiB": 48.9
+        },
+        {
+          "phase": "uv01",
+          "timeUTC": "2026-10-04T17:24:36Z",
+          "anonymousGiB": 33.9,
+          "wiredGiB": 7.3,
+          "exitCode": 0,
+          "seconds": 118.14,
+          "peakHostAnonymousGiB": 37.9,
+          "peakHostCombinedGiB": 46.3
+        },
+        {
+          "phase": "paint01",
+          "timeUTC": "2026-10-04T17:27:12Z",
+          "anonymousGiB": 32.2,
+          "wiredGiB": 7.9,
+          "exitCode": 0,
+          "seconds": 335.366,
+          "peakHostAnonymousGiB": 53.6,
+          "peakHostCombinedGiB": 72.19999999999999
+        },
+        {
+          "phase": "orbit02",
+          "timeUTC": "2026-10-04T17:58:28Z",
+          "anonymousGiB": 31.8,
+          "wiredGiB": 7.7,
+          "exitCode": 0,
+          "seconds": 40.699,
+          "peakHostAnonymousGiB": 35.3,
+          "peakHostCombinedGiB": 43.900000000000006
+        },
+        {
+          "phase": "encode01",
+          "timeUTC": "2026-10-04T18:00:10Z",
+          "anonymousGiB": 32.7,
+          "wiredGiB": 7.7,
+          "exitCode": 0,
+          "seconds": 1.253,
+          "peakHostAnonymousGiB": 32.7,
+          "peakHostCombinedGiB": 40.400000000000006
+        },
+        {
+          "phase": "play01",
+          "timeUTC": "2026-10-04T18:00:36Z",
+          "anonymousGiB": 31.9,
+          "wiredGiB": 7.8,
+          "exitCode": 0,
+          "seconds": 7.285,
+          "peakHostAnonymousGiB": 32.5,
+          "peakHostCombinedGiB": 40.4
+        }
+      ]
+    },
+    {
+      "item": "boots",
+      "accepted": false,
+      "sourceReadyReceipt": {
+        "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/boots/source-ready.json",
+        "sha256": "dd264559baa0208f9fb3582366e5db53df79e0cf81ce7f2a0725d1e99cae0b2b",
+        "bytes": 18736
+      },
+      "sourceMesh": {
+        "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/boots/paint01/painted.glb",
+        "sha256": "b8dbd980f4d5a6a46b86db6f315ac630be07c538382a24fa5a2d2002a7d97d8c",
+        "bytes": 32387936
+      },
+      "reference": {
+        "path": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/references/boots-reference02.png",
+        "sha256": "6d1270cfc14f86eba5974cf6ecbaac8184d6c2b8c9835e01dfd4f56590e920cc",
+        "bytes": 1286971
+      },
+      "sourceReviewMovie": {
+        "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/boots/source-pbr-orbit.mp4",
+        "sha256": "ca2077777d82ddd8f89052c2cb5c2c28ab3776aac0cc00a35b8601852d301a65",
+        "bytes": 149945
+      },
+      "shapeSettings": {
+        "seed": 42,
+        "steps": 30,
+        "guidance": 5,
+        "requestedMC": 384,
+        "effectiveFlashVDM": [
+          95,
+          190,
+          380
+        ],
+        "chunks": 32768
+      },
+      "paintSettings": {
+        "seed": 42,
+        "scheduler": "UniPCMultistepScheduler trailing",
+        "paintSteps": 15,
+        "maxSelectedViews": 8,
+        "viewResolution": 768,
+        "renderSize": 2048,
+        "textureSize": 4096,
+        "remesh": false,
+        "simplification": false,
+        "valueColumns": true,
+        "vaeBatchSlicingOnlyFinalDecode": true
+      },
+      "rawGeometryAudit": {
+        "accepted": false,
+        "vertices": 305593,
+        "faces": 611198,
+        "vertexDtype": "float32",
+        "faceDtype": "int32",
+        "validGeometryArrays": true,
+        "limits": [
+          "No self-intersection, anatomy, garment opening, fit or motion test.",
+          "Boundary counts do not classify intentional clothing openings."
+        ],
+        "nonfiniteVertexElements": 0,
+        "invalidIndexElements": 0,
+        "boundsNative": [
+          [
+            -0.9985340237617493,
+            -0.5611280798912048,
+            -0.38022559881210327
+          ],
+          [
+            0.9737292528152466,
+            0.5370333790779114,
+            0.3625846207141876
+          ]
+        ],
+        "repeatedIndexTriangles": 0,
+        "zeroAreaTriangles": 0,
+        "minimumAreaNativeSquaredUnits": 6.661338147750939e-15,
+        "duplicateTrianglesIgnoringWinding": 0,
+        "uniqueEdges": 916797,
+        "boundaryEdges": 0,
+        "overusedEdges": 0,
+        "equalDirectionTwoFaceEdges": 0,
+        "unusedVertices": 0,
+        "vertexConnectedFaceComponents": 5,
+        "componentTriangleCountsDescending": [
+          610970,
+          84,
+          68,
+          52,
+          24
+        ]
+      },
+      "admissionsAndOutcomes": [
+        {
+          "phase": "preprocess01",
+          "timeUTC": "2026-10-04T18:03:15Z",
+          "anonymousGiB": 31.5,
+          "wiredGiB": 7.6,
+          "exitCode": 0,
+          "seconds": 1.702,
+          "peakHostAnonymousGiB": 31.8,
+          "peakHostCombinedGiB": 39.4
+        },
+        {
+          "phase": "shape01",
+          "timeUTC": "2026-10-04T18:04:21Z",
+          "anonymousGiB": 37.4,
+          "wiredGiB": 9.0,
+          "exitCode": 1,
+          "seconds": 49.132,
+          "peakHostAnonymousGiB": 49.4,
+          "peakHostCombinedGiB": 66.1
+        },
+        {
+          "phase": "decode01",
+          "timeUTC": "2026-10-04T18:06:20Z",
+          "anonymousGiB": 28.0,
+          "wiredGiB": 6.3,
+          "exitCode": 0,
+          "seconds": 14.825,
+          "peakHostAnonymousGiB": 36.6,
+          "peakHostCombinedGiB": 42.9
+        },
+        {
+          "phase": "uv01",
+          "timeUTC": "2026-10-04T18:07:57Z",
+          "anonymousGiB": 29.7,
+          "wiredGiB": 6.4,
+          "exitCode": 0,
+          "seconds": 138.7,
+          "peakHostAnonymousGiB": 39.4,
+          "peakHostCombinedGiB": 46.3
+        },
+        {
+          "phase": "paint01",
+          "timeUTC": "2026-10-04T18:11:53Z",
+          "anonymousGiB": 32.4,
+          "wiredGiB": 7.2,
+          "exitCode": 0,
+          "seconds": 355.281,
+          "peakHostAnonymousGiB": 54.7,
+          "peakHostCombinedGiB": 66.7
+        },
+        {
+          "phase": "orbit01",
+          "timeUTC": "2026-10-04T18:19:55Z",
+          "anonymousGiB": 33.8,
+          "wiredGiB": 8.4,
+          "exitCode": 0,
+          "seconds": 34.759,
+          "peakHostAnonymousGiB": 35.0,
+          "peakHostCombinedGiB": 43.2
+        },
+        {
+          "phase": "encode01",
+          "timeUTC": "2026-10-04T18:21:44Z",
+          "anonymousGiB": 33.7,
+          "wiredGiB": 8.2,
+          "exitCode": 0,
+          "seconds": 1.259,
+          "peakHostAnonymousGiB": 33.7,
+          "peakHostCombinedGiB": 42.0
+        },
+        {
+          "phase": "play01",
+          "timeUTC": "2026-10-04T18:22:25Z",
+          "anonymousGiB": 32.8,
+          "wiredGiB": 9.0,
+          "exitCode": 0,
+          "seconds": 7.056,
+          "peakHostAnonymousGiB": 34.0,
+          "peakHostCombinedGiB": 42.5
+        }
+      ]
+    }
+  ],
+  "priorDeniedGloveAdmission": {
+    "path": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/items01/gloves/orbit01-guard/admission.json",
+    "sha256": "21954d9c410ee1c60c3b2688c3a3d4c47784c3c62332795eb095d816aefe1ea9",
+    "bytes": 1183
+  },
+  "allFifteenPaintStepArchivesPerItemFreshlyMatched": true,
+  "oneShapeSeedCandidatePerCategory": true,
+  "earlierFailuresRetained": true,
+  "original65Anonymous96CombinedRunningGuardsUnchanged": true,
+  "strict55Anonymous68CombinedAdmissionUnchanged": true,
+  "playerSourceAssetsWorkflowsPackagesUnchangedSinceNormalRuntime24": true,
+  "noForeignEvictionOrPrivateDataInspection": true,
+  "noUploadsPublicationDeploymentPlayerPromotion": true,
+  "fitTopologyRigWeightsOwner": "Agent1; untouched/frozen by this lane",
+  "artJudgmentOwner": "Root only",
+  "M0ThroughM5": "all open; raw source creation does not close acceptance",
+  "limits": [
+    "Dense raw sources remain unaccepted; degenerate/disconnected parts are preserved and explicitly audited.",
+    "Glove/boot handedness, garment/boot interior openings, physical foot/toe/body fit, clean topology, rig, skinning/weights/collision and arbitrary moving poses remain unproven.",
+    "Jeans prior Library delivery libfile_4393a3983fdc819192f4e6dcbbafc28c is preserved; no duplicate upload.",
+    "Original raw arrays, UVs, actual conditioned pixels/features/noise/latents and4096PBR remain local masters; source-ready receipts pin exact retained paths.",
+    "Silent48-frame decoder/headless playback is a delivery check, not subjective art acceptance or a physical device pass."
+  ]
+}
