@@ -980,3 +980,29 @@ art/contact/LOD/performance or deployment acceptance. Parent maintains
 asks/index and judges clips; all M0–M5 open. No push or publication. Temp
 build/PDF directories stay untracked after cleanup hook rejected recursive
 deletion; no deletion retried. Next own ordinary gate57 if further admitted.
+
+
+## 2026-10-04 Round55 — pin modest direct-field moving review
+
+Finding: New bounded root admission targets exposed-body visual gap only.
+No exact moving equivalent: diagnostic02 matched but dressed; source89
+underwear orbit rest-only; fitting01 stills; older v2/donors have different
+body/bind/pose provenance. Preparation freezes native Full/Four streams,
+actual47 existing matrices and opaque underwear; actual50 is not reused.
+
+Validation: All2944saved body53 witnesses at rendered samples match
+Float64XYZ exactly, including all8regional anchors. Frozen boxer-four
+stream/current field parity0.195µm. Rest/pose51 and live original weights,
+source positions/UV/material/smooth/modifier/world properties unchanged.
+Fixed camera bounds derive from all selected sources, both fields and
+protected head, without pose injection/controller execution. Presentation
+triangles preserve source UV/material/flags; geometric normals are an
+explicit display method. Python syntax/hash checks pass. Evidence: body55/
+preparation.json; no new media yet. Parent owns asks/index reconciliation.
+
+Limits: Stable unaccepted source/recipe checkpoint before CPU rendering56.
+No rig/export reconstruction/source save/body-head-weight edit/model job/
+inference/install/worker/publication. Underwear can hide proximal hip
+surface; full13,380body quantification maps to9,037rendered subset plus
+unchanged protected head/cheek. Root alone judges; all M0–M5 stay open.
+Next PDF addition will embed locally available fonts; old PDF53 retained.
