@@ -1877,3 +1877,11 @@ Finding: Root reviewed actual causal movie pixels and validates flat-normal disp
 Validation: Exact movie SHA/1,648,668bytes match; root reports silent headless24frames/6s/error0. Saved once as Library libfile_d6b35da875e0819192d98d40a51d1acf version0. Current handoff pointers updated; original archives/films retained.
 
 Limits: Review treatment only, no topology/orientation repair or universal default. Hunyuan construction remains selected and independent; no new inference/render/publication.
+
+## Round 92 — Existing three-model comparison finalized
+
+Finding: Consolidate exact Hunyuan PBR06, TRELLIS1024 and Pixal1024 routes, preserved outputs/materials/old films, current root review and Library identity. Flat-normal review treatment is specific to frozen TRELLIS/Pixal; Hunyuan construction remains selected.
+
+Validation: Same reference, three output archives, two sampled materials and all four historical/causal movies freshly SHA/size verified against original handoffs. Recipe/settings and evidence receipts pinned.
+
+Limits: No universal model winner, topology repair or new inference/render; Pixal1536 stop/1024 alternative and Hunyuan finite-cell/numeric derivatives explicit. Wearable/player gates open.

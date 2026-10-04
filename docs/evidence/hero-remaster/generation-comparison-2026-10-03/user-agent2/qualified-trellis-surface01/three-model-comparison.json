@@ -1,0 +1,214 @@
+{
+  "status": "Existing three-model local comparison evidence finalized; garment/player gates remain open",
+  "lastVerified": "2026-10-03",
+  "asks": [
+    276,
+    284,
+    285,
+    286
+  ],
+  "reference": {
+    "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hoodie-reference01/hoodie-appearance-reference-v1.png",
+    "SHA256": "4cd768251ad3a0402db6ba94c7b99d7cd3c7642e83d5ab712debf2685c076d9c",
+    "bytes": 1394368
+  },
+  "inputLimit": "Same generated2D RGBA image, approximate camera/pose, not calibrated multi-view geometry",
+  "models": [
+    {
+      "family": "Hunyuan3D-2.1",
+      "shapeRecipe": {
+        "seed": 42,
+        "steps": 30,
+        "guidance": 5,
+        "requestedOctree": 384,
+        "actualFlashVDM": [
+          95,
+          190,
+          380
+        ],
+        "queryChunks": 32768,
+        "image": "Generated RGBA appearance reference, approximate pose/camera, not calibrated Blender geometry",
+        "extraction": "Unchanged field, eight evaluated finite corners per cell; no filling/cleanup/component deletion",
+        "coordinateDivisor": 385
+      },
+      "paintRecipe": {
+        "views": 8,
+        "viewPixels": 768,
+        "steps": 15,
+        "seed": 42,
+        "texturePixels": 4096,
+        "renderControlPixels": 2048,
+        "noRemesh": true
+      },
+      "output": {
+        "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+        "SHA256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba",
+        "bytes": 42329320
+      },
+      "triangles": 921722,
+      "UVVertices": 716971,
+      "shapeLimit": "Original sparse extraction contains invalid native elements; explicitly finite-cell display derivative retained without fill or component deletion.",
+      "paintRecovery": "PBR06 reran all15sampling steps and matched prior latent hashes; no PBR05 checkpoint resume. Final-only VAE batch slicing is measured derivative.",
+      "movie": {
+        "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-pbr-orbit01/finite-cell-pbr.mp4",
+        "SHA256": "56492812dd6881a7ab02c88838425bedbf8b5c2e47b5c61284cfad39339d3c4c",
+        "bytes": 182591
+      },
+      "review": "Human/root kept visual source for construction; recognizable mustard hoodie, no game-ready pass.",
+      "libraryID": "libfile_6fa1206de1a48191a09cbf0b784ef08f",
+      "displayTreatment": "Existing native PBR movie; no change from this verdict."
+    },
+    {
+      "family": "TRELLIS.2",
+      "recipe": {
+        "pipeline": "1024_cascade",
+        "seed": 42,
+        "stepsPerStage": 12,
+        "effectiveResolutionRequired": 1024
+      },
+      "actualResolution": 1024,
+      "output": {
+        "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis01/model/native.npz",
+        "SHA256": "c9e0f72e6df3b2e2c8d2f8d81e989a644c8369b49e1bc845d9f1ebe41f5f8469",
+        "bytes": 120685928
+      },
+      "material": {
+        "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-trellis-material01/material/vertex-material.npz",
+        "SHA256": "6ef98f41b43d1701d78245b3296065f9e6c3fe520868d995f361f89f14064779",
+        "bytes": 63030442
+      },
+      "vertices": 3152811,
+      "triangles": 6322984,
+      "materialWitnessMaximumError": 2.411764195020538e-07,
+      "movie": {
+        "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-upright01/upright-neutral-pbr.mp4",
+        "SHA256": "42ca2a6d03df1a914b4bf65922c878fbb05d081c1174ed06075029d8569dec30",
+        "bytes": 536765
+      },
+      "historicalMovie": {
+        "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-orbit01/matched-neutral-pbr.mp4",
+        "SHA256": "7354ac90919c85c9a3f4be039ae4f7a1dd4eee750b0c8719dcb919d7dcad9664",
+        "bytes": 430294
+      },
+      "axes": "NativeXYZ to BlenderXYZ identity; native+Z upright; display only",
+      "review": "Useful sharper seams/folds; material tan/brown, contour bands in averaged display. Flat face normals now specific validated review treatment.",
+      "libraryIDForOriginalMovie": null
+    },
+    {
+      "family": "Pixal3D",
+      "recipe": {
+        "pipeline": "1024_cascade",
+        "stepsPerStage": 12,
+        "seed": 42,
+        "guidance": "OriginalcheckpointJSON",
+        "reason": "Authorized documentedlowVRAM alternative after1536anonymous-memory stop",
+        "actualStepsPersisted": 48,
+        "shapeSamplerRerunsInContinuation": 0,
+        "decodeOnlyRecovery": true
+      },
+      "output": {
+        "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-decode01/model/native.npz",
+        "SHA256": "fa99516e7d19fb3de5f021d9c92bf5d80ad432891b7552c86d39bf6bd2b4d982",
+        "bytes": 158487386
+      },
+      "material": {
+        "path": ".tmp/generation-comparison-2026-10-03/user-agent2/qualified-pixal-material01/material/vertex-material.npz",
+        "SHA256": "a0238f333ff628ddb2333853b93e33e96b703049548fa2413ceca5c041b6e089",
+        "bytes": 54979536
+      },
+      "vertices": 2823607,
+      "triangles": 6597482,
+      "movie": {
+        "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-orbit01/pixal-neutral-pbr.mp4",
+        "SHA256": "90fa44c819f9355b6e008b8b2d022c69d9d7c78295f1779415339d6d0c7b7629",
+        "bytes": 601330
+      },
+      "axes": "NativeXYZ to BlenderX,-Z,Y; native+Y upright",
+      "review": "Useful defined hood/sleeves/cuffs and coherent golden-brown material; contour bands in averaged display. Flat face normals now specific validated review treatment.",
+      "resourceLimits": "Requested1536/12perstage/seed42 stopped after24steps at96grid conditioning under65GiB anonymous bound; documented1024 lower-memory alternative authorized. Shape36steps saved then texture conditioning stopped; texture12steps continue with exact initial-noise replay and no shape rerun; final original2-decoder-only recovery restores four arrays byte-identically.",
+      "libraryIDForOriginalMovie": null
+    }
+  ],
+  "rootCausalReview": {
+    "reviewedBy": "Root",
+    "sourceRelayThread": "01a10191-f0f0-73fe-ba72-69a30631701f",
+    "date": "2026-10-03",
+    "visualVerdict": "Flat normals strongly suppress contour bands on both frozen donors while preserving major hood, sleeve and hem folds and silhouette. Bounded-derived averaged view leaves rear bands and changes Pixal neckline shading.",
+    "validatedReviewTreatment": {
+      "models": [
+        "Frozen high-poly TRELLIS.2 output",
+        "Frozen high-poly Pixal3D1024 output"
+      ],
+      "treatment": "Flat face normals with unchanged original faces, geometry and materials",
+      "scope": "Currently validated review display treatment for these two specific outputs",
+      "topologyOrOrientationRepair": false,
+      "universalRenderingDefault": false,
+      "gameReadyAccepted": false
+    },
+    "playback": {
+      "mode": "Silent headless",
+      "framesCompleted": 24,
+      "seconds": 6,
+      "errors": 0,
+      "reportedBy": "Root"
+    },
+    "libraryDelivery": {
+      "id": "libfile_d6b35da875e0819192d98d40a51d1acf",
+      "version": 0,
+      "SHA256": "f62fea0a4b6df22cdeafb6d9cd9914ea5eaaf4bcb3e04571ad87c81af684efb8",
+      "bytes": 1648668,
+      "savedOnceByRoot": true,
+      "duplicateUploadAllowed": false
+    },
+    "sourceEvidenceCommit": "62b8090dd61718619cede34a93cfed099e7f5828",
+    "selection": "Hunyuan construction remains selected and independent; no model-family winner claim",
+    "rawArchivesAndPreviousDisplaysPreserved": true,
+    "newInferenceOrRenderNeeded": false
+  },
+  "causalMovie": {
+    "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-normal-comparison.mp4",
+    "SHA256": "f62fea0a4b6df22cdeafb6d9cd9914ea5eaaf4bcb3e04571ad87c81af684efb8",
+    "bytes": 1648668
+  },
+  "reviewTreatment": "Original faces, flat face normals; currently validated only for these two frozen high-poly outputs. No topology/orientation repair or universal rendering default.",
+  "selection": "Hunyuan remains selected visual source; construction independent. No model-family winner claim.",
+  "evidencePins": {
+    "qualified-hunyuan-paint06/receipt.json": {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/receipt.json",
+      "SHA256": "1c72ab2578b2fdf1f247bd58460dbafb73e56632de30f823792394db6f1b2e2f",
+      "bytes": 574697
+    },
+    "qualified-hunyuan-pbr-root-review01/review.json": {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-pbr-root-review01/review.json",
+      "SHA256": "6f1fbadc6c64fd8553483795bebbb1541787ded26fdbbdcc6153707d8d674c38",
+      "bytes": 1530
+    },
+    "qualified-trellis-upright01/handoff.json": {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-upright01/handoff.json",
+      "SHA256": "e5618c8686a36e15446ef29a3ec7404c3aaa417650cf76478249f5873e991a96",
+      "bytes": 5452
+    },
+    "qualified-pixal-orbit01/handoff.json": {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-pixal-orbit01/handoff.json",
+      "SHA256": "b5134d7cc81f9fe830d5089ebc425f6035c88db60f9cbacc9150728fe64a03ab",
+      "bytes": 3130
+    },
+    "qualified-trellis-surface01/causal-finding.json": {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-finding.json",
+      "SHA256": "b9d436b2a14bf0414183490f9775c514ddd1817673a8169e8cdc2c3860bdbd23",
+      "bytes": 5115
+    },
+    "qualified-trellis-surface01/causal-root-review.json": {
+      "path": "docs/evidence/hero-remaster/generation-comparison-2026-10-03/user-agent2/qualified-trellis-surface01/causal-root-review.json",
+      "SHA256": "67a1d4e7dc79aca630aee287003e4a41522c072804ef6b080b205c1cf2c6df77",
+      "bytes": 1467
+    }
+  },
+  "limits": [
+    "No fair universal family-quality ranking across different routes, resolutions or derivatives.",
+    "Pervertex TRELLIS/Pixal PBR displays are not UV/map-level qualification.",
+    "Contradictory and nonmanifold geometry remains; no global outward/intersection proof.",
+    "Body fit, through-openings, rig, fabric response, engine/mobile and final-art gates remain open.",
+    "No additional inference, render, donor transfer, cleanup, recolor, installed mutation or publication."
+  ]
+}
