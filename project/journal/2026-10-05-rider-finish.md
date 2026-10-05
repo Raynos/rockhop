@@ -652,3 +652,17 @@ Limits: Finite root-family search, not globally shortest geodesics. Label0
 contains unresolved palm/web/cuff. Surface homology does not prove free
 volume or usable passage. No fit/skin/art/GPU/device acceptance; game gate
 uses legacy assets only. Execution39 frozen; next ordinary gate42.
+
+
+## Retain the frozen certificate readback implementation
+
+Finding: Preserve the builder readback recipe whose hash is named by the
+already committed handle validation receipt, and its dated finding.
+These late-arriving support files belong to the same frozen experiment.
+
+Validation: Parent AST parse and exact validatorSHA256 match pass. Root
+independent source/manifold/cocycle readback and ordinary gate39 are
+already committed; no new diagnosis or game run in this maintenance.
+
+Limits: No new surface/cavity/fit/art claim. Builder finding records its
+pre-parent status; committed parent receipt carries the actual judgment.
