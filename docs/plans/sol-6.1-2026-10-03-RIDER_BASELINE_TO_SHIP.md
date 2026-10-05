@@ -1,11 +1,16 @@
 # One rider, from visual targets to shipping
 
 Created: 2026-10-03 · writer: Codex / gpt-6.1-sol · ask 259.
-Status: **active planning authority; target suite incomplete; baseline unaccepted**.
+Status: **baseline specification; target suite incomplete; baseline unaccepted**.
 This replaces HERO_REMASTER, RIDER_THREE_CHECKPOINTS and LOCAL_CLOUD_RIDER_RECONCILE
 as execution plans. Their source, failed attempts and evidence remain archived.
 [FINISH_TO_PUBLISH](sol-6.1-2026-09-29-FINISH_TO_PUBLISH.md) retains release authority;
 [mission §3–4](../mission.md) retains person/contact and phone performance bars.
+
+Current execution order and stop rules: [finish rider, clothes and animations](sol-6.1-2026-10-05-FINISH_RIDER_CLOTHES_AND_ANIMATIONS.md),
+created after the October5 audit (ask304). This specification retains identity,
+reference, provenance and M0–M5 requirements; older next-action logs are history.
+No milestone has been accepted or reset by the new execution schedule.
 
 ## Outcome and scope
 

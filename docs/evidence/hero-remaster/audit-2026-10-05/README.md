@@ -188,3 +188,7 @@ interface and exposed-body motion, then a production wardrobe fitted to it,
 then physically supported continuous riding. Integrate that one candidate into
 the actual engine, deliver real LOD/mobile behavior, and close device/player and
 checked-release gates. M0–M5 remain open; none is waived by this audit.
+
+Follow-up during finish-plan writing: a [fresh normal build/replay gate](normal-shipgate.json)
+passes low/high4810-tick exact clear,103-tick crash and instant restart, zero
+errors. This protects the ordinary game and closes no remastered-rider gate.
