@@ -1,0 +1,55 @@
+{
+  "accepted": false,
+  "status": "FAILED_BODY_CLEARANCE_REST_CHECKPOINT_NO_SKIN",
+  "items": {
+    "R": {
+      "candidatePinsMatch": true,
+      "lineageExact": {
+        "uv": true,
+        "branchLabels": true,
+        "originalTriangleRows": true,
+        "barycentric": true,
+        "sourceXYZ": true,
+        "sourceFaces": true
+      },
+      "restNamesAndMatricesExact": true,
+      "finite": true,
+      "finiteRestSelfContacts": 0,
+      "finiteRestBodyContacts": 1784,
+      "gloveDegenerateTrianglesExcluded": 0
+    },
+    "L": {
+      "candidatePinsMatch": true,
+      "lineageExact": {
+        "uv": true,
+        "branchLabels": true,
+        "originalTriangleRows": true,
+        "barycentric": true,
+        "sourceXYZ": true,
+        "sourceFaces": true
+      },
+      "restNamesAndMatricesExact": true,
+      "finite": true,
+      "finiteRestSelfContacts": 0,
+      "finiteRestBodyContacts": 1784,
+      "gloveDegenerateTrianglesExcluded": 0
+    }
+  },
+  "exactRToLMirrorAndReversedWinding": true,
+  "ambientGlobalStepLipschitzProductMax": 0.18000000000000002,
+  "maxControlResidualM": 0.00012551195301784628,
+  "movie": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-fit02/rest-source-fitted.mp4",
+    "sha256": "f75cac1fb059cbd74621809bc633e3ecac9fc3deba6a415a9b643ff0e06e8006",
+    "bytes": 268183,
+    "frames": 36,
+    "seconds": 3.0,
+    "audioStreams": 0
+  },
+  "renderFramePinsMatch": true,
+  "bodyClearancePass": false,
+  "skinAttempted": false,
+  "sourcePBR": "Original donor maps remain unchanged; candidate retains exact source prototype UV/triangle/barycentric lineage. No final corner-UV bake performed.",
+  "numericWarnings": "NumPy BLAS @ emitted warnings despite explicit finite assertions. Preserved fit-guard worker log; no nonfinite candidate fields. Replace small-vector BLAS in a distinct future recipe, do not overwrite this execution.",
+  "limits": "Finite BVH/SAT contacts only, no signed occupancy/swept proof. Smooth-map injectivity bound does not prove linearly retessellated surface injectivity; zero measured self pairs is separate. No glove/body, skin, native, engine, art, grip or device acceptance."
+}

@@ -235,3 +235,17 @@ default exit0 despite AssertionError is failure, not a build qualification.
 Limits: Preflight only; no candidate/contact/normal/art evidence. A separate
 version will retain actual normalized cut fields and require Python-exit-code1.
 Protected upper identity and original sources remain unchanged.
+
+## Connected rest glove misses the actual wearer surface
+
+Finding: Whole-surface ambient fitting removes finite rest self crossings
+but bone centerlines leave1,784 glove/body contacts per side. Parent plays
+all36 silent orbit frames: branches stay coherent, wearable cavity fails.
+
+Validation: Parent checks source/output/movie/recipe pins and Python ASTs;
+lineage and rest controls remain exact. Round15 ordinary game clears with
+byte-identical low/high finish, crashes and restarts at tick0, errors0.
+
+Limits: Rest coherence only, no skinning, moving hand or wardrobe acceptance.
+Preserved NumPy warnings do not override finite assertions or failed cavity.
+Actual semantic hand enclosure and palm/cuff fit are next.

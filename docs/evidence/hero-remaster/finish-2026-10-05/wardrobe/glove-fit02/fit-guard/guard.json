@@ -1,0 +1,50 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-fit02/fit-rest.py",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-anatomy02b/branches.npz",
+    "--classification",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-anatomy02/classification.json",
+    "--semantics",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/semantic-registration.json",
+    "--foundation",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-source.npz",
+    "--out",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-fit02-run01",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-fit02"
+  ],
+  "controllerPID": 8029,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 120.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.0,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.7
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 26.0,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.6
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 8033,
+  "exitCode": 0,
+  "elapsedSeconds": 0.422
+}
