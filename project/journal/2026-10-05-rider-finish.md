@@ -532,3 +532,19 @@ Limits: Execution32 is read-only scope admission before one bounded
 native trial. Ideal affine, localFloat32 rounding and measured-outside
 hybrid results stay distinct. No source saved, actual evaluated normal,
 complete contact, played art, engine/GPU or device acceptance.
+
+## Secondary glove boundary is an isolated source triangle
+
+Finding: The candidate mask leaves14,543main faces plus isolated5167.
+Its three source neighbors are all candidate-masked. Paired with played
+cuff context, admit one diagnostic opening of1456candidate faces plus
+5167, preserving the entire remaining exterior and distal source.
+
+Validation: Parent independent edge adjacency gives14,543+1components,
+71+3degree-two boundaries and exact source/mask/UVlineage pins. Round33
+ordinary low/high boot/clear/crash/restart passes exact finish bytes
+and1–2ms restart; bounded guard10.804s exits0. No cut executed yet.
+
+Limits: Source-graph/played-scope decision only. Removal will need fresh
+exact retained-source/readback and mouth/cavity evidence before fitting.
+No palm/finger enclosure, fitted geometry, skin, art/GPU/device acceptance.
