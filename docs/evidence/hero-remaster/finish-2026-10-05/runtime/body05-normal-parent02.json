@@ -1,0 +1,40 @@
+{
+  "status": "PARENT_RAW_GEOMETRY_AND_CUSTOM_MIX_READBACK_PASS_NO_NORMAL_ACCEPTANCE",
+  "causeSHA256": "a2b3a2ed7a68ef0b74e40456da5bb64074224346e6975b72e6e58f2eac76de39",
+  "rawSHA256": "dff83383f4c8f2db9ca7630799e6fa8e75e8ecd0c45bc3d04a342f10bdc868b9",
+  "checks": [
+    {
+      "region": "head",
+      "field": "full",
+      "targetPolygon": 68991,
+      "restMovingTrueFaceDot": -1.0,
+      "mixedRNAToDecodedMeanMaxError": 5.375914870088681e-08
+    },
+    {
+      "region": "head",
+      "field": "four",
+      "targetPolygon": 68991,
+      "restMovingTrueFaceDot": -1.0,
+      "mixedRNAToDecodedMeanMaxError": 5.375914870088681e-08
+    },
+    {
+      "region": "body",
+      "field": "full",
+      "targetPolygon": 8936,
+      "restMovingTrueFaceDot": -0.16060603637027152,
+      "mixedRNAToDecodedMeanMaxError": 9.486223324639822e-08
+    },
+    {
+      "region": "body",
+      "field": "four",
+      "targetPolygon": 8936,
+      "restMovingTrueFaceDot": -0.16060603637027152,
+      "mixedRNAToDecodedMeanMaxError": 1.0681726892195076e-07
+    }
+  ],
+  "method": "Independent Float64 triangle cross products and normalized decoded-corner means for every actual incident face; exact source/primary implementation/recipe hashes.",
+  "limits": [
+    "Two finite witnesses only; orientation change under nonrigid pose needs geometry/field diagnosis, not an inherited sliver exemption.",
+    "No parity, art, contact or engine acceptance."
+  ]
+}

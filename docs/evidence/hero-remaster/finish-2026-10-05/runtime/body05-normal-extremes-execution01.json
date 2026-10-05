@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/opt/homebrew/bin/blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python",
+    "harness/rider-finish/normal-extremes.py",
+    "--",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend",
+    "--intake",
+    "harness/out/rider-finish/body05-intake01",
+    "--fields",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/authored-neck-fields.npz",
+    "--out",
+    "harness/out/rider-finish/body05-normal-extremes01.json",
+    "--summary",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body05-normal-extremes01.json"
+  ],
+  "status": "worker returned; review pending",
+  "exitCode": 0,
+  "elapsedSeconds": 3.539,
+  "limitSeconds": 60.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "outerLease": "/usr/bin/lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock",
+  "guardPath": "harness/out/rider-finish/body05-normal-extremes01-guard/guard.json",
+  "guardReceiptSHA256": "dc3faf327a99acbdb6bf10cb1af840eb89172204b261ac852a25533af0881a90",
+  "workerLogSHA256": "c1b729f5cd34261be28bc5ebd770497282abb7752fe3bb6ee86264c560ba304f",
+  "readerCompletedWithoutTraceback": true,
+  "scope": "Actual in-memory local pose/fan/custom packed/membership capture; one job, no save/export/film/source mutation"
+}

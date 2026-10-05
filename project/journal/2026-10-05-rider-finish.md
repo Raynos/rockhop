@@ -452,3 +452,20 @@ Limits: Stable unaccepted movie checkpoint before parent played judgment.
 First-frame inspection only verifies framing. Grounded04sole metrics do
 not transfer by replay; body/boxer contacts and normals remain failed.
 No artist, wearable, engine/GPU or device acceptance.
+
+## Current neck cap folds rather than merely losing normal precision
+
+Finding: The new inner-cap triangle flips true geometric orientation under
+head turn, while the original body reach fan also deforms strongly. These
+nonrigid packed-normal failures differ from the earlier rigid sliver.
+Blender5.2 RNA polygon normals mix decoded custom corners and must not
+stand in for true geometry when diagnosing a fold.
+
+Validation: Exact saved own51 native extraction3.539s; source/membership/
+packed/fan topology retained. Parent independently recomputes all recorded
+true crosses and customcorner means; head face dot−1, body−0.160606.
+Primary5.2.1 mesh/RNA implementation pins validate the custom mixing branch.
+
+Limits: Two finite witnesses, no complete fan-space transport or global
+certificate. Near2normal failures are not excused by the prior precision
+witness. No source edit, GPU parity, contact or played-art acceptance.
