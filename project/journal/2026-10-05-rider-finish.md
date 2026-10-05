@@ -57,3 +57,18 @@ Limits: Body01 normal failure prevents admission; owner pre-save measurements
 are not independent reopen or played-art acceptance. Recipe historical opening
 docstring describes the earlier donor-led direction; current code/method
 receipt explicitly follows the canonical body. No candidate player promotion.
+
+## Calibrated wardrobe source preparation
+
+Finding: All four selected sources now provide original4096PBR maps, cleaned
+corner-aware donors, compact prototypes and anatomical glove/jeans/boot
+landmarks. Proper placement bases corrected to positive determinant; only
+explicit mirrored left derivatives have negative determinant/reverse winding.
+
+Validation: Parent independent GLB readback verifies original hashes, retained
+triangle/UV equality, original embedded map byte equality and prototype
+barycentric reconstruction ≤1.11e-16 source units. Both source recipes parse.
+
+Limits: These are production fitting/bake inputs, not fitted joint-looped
+wearables. Per-vertex prototype UV seam aliases are disclosed; dense original
+corner UVs remain authoritative. No skin, clearance, contact or art pass.

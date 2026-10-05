@@ -1,0 +1,159 @@
+{
+  "item": "gloves",
+  "accepted": false,
+  "status": "SOURCE_CLEANUP_AND_BAKE_INPUT_READY_UNACCEPTED",
+  "source": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/items01/gloves/paint01/painted.glb",
+    "bytes": 22940908,
+    "sha256": "890f8693256347156c20f82a62dd79e2145cf511e7a85eb5239089644a20bfea"
+  },
+  "sourceBounds": [
+    [
+      -0.7110099792480469,
+      -1.0003379583358765,
+      -0.5040460228919983
+    ],
+    [
+      0.6848779916763306,
+      0.9734100103378296,
+      0.2504250109195709
+    ]
+  ],
+  "sourceDimensions": [
+    1.3958879709243774,
+    1.973747968673706,
+    0.7544710636138916
+  ],
+  "axes": "Source+Yup; source+Zfront from fixed original orbit; boot toe points -X, not source+Z.",
+  "units": "Uncalibrated generation units; body fitting scale requires canonical landmarks",
+  "sourceFrontToBlenderBasisOnly": [
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "cleanup": {
+    "sourceVertices": 440851,
+    "sourceFaces": 570242,
+    "exactWeldedVertices": 285127,
+    "exactZeroAreaRowsRemoved": 64,
+    "detachedNondegenerateRowsRemoved": 1036,
+    "duplicateUnorientedRowsRemoved": 0,
+    "componentFacesDescending": [
+      569142,
+      108,
+      88,
+      84,
+      84,
+      72,
+      64,
+      64,
+      60,
+      60,
+      56,
+      56,
+      44,
+      44,
+      44,
+      40,
+      36,
+      16,
+      8,
+      8
+    ],
+    "remainingVertices": 284571,
+    "remainingFaces": 569142,
+    "sourcePositionDisplacement": 0,
+    "sourceRetainedTriangleRowsExact": true,
+    "weldSemantics": "Exact float32 POSITION equality; UVs remain original per-corner, no texture weld",
+    "limits": [
+      "Largest component only is an explicit donor derivative, not wearable topology acceptance.",
+      "No self-intersection repair, winding repair, garment openings, body fit or rig changes."
+    ]
+  },
+  "cleanedDonor": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+    "bytes": 17536306,
+    "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+  },
+  "maps": {
+    "baseColorTexture": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/baseColorTexture.png",
+      "bytes": 892496,
+      "sha256": "9633beec8bf2bb3bd73918589b931d2fc4f33f8e3e702415094ed173a129f95c",
+      "size": [
+        4096,
+        4096
+      ],
+      "byteExactEmbeddedExtraction": true
+    },
+    "metallicRoughnessTexture": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/metallicRoughnessTexture.png",
+      "bytes": 6387044,
+      "sha256": "a7a712769a73844a9560d4bef1d163ce3fb8721e388d1a7ecfa07a3515280e67",
+      "size": [
+        4096,
+        4096
+      ],
+      "byteExactEmbeddedExtraction": true
+    }
+  },
+  "originalPBR": {
+    "baseColorTexture": {
+      "index": 0
+    },
+    "roughnessFactor": 1.0,
+    "metallicFactor": 1.0,
+    "metallicRoughnessTexture": {
+      "index": 1
+    }
+  },
+  "normalPolicy": "Source declares no NORMAL; explicit derived area-weighted exact-position welded normals, not original normal data",
+  "prototype": {
+    "npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+      "bytes": 407961,
+      "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e"
+    },
+    "obj": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.obj",
+      "bytes": 2100712,
+      "sha256": "376931fa57507a64a7569235adc9854b69b7ad01f9c2bbdea6938233ff309930"
+    },
+    "vertices": 8000,
+    "faces": 16000,
+    "targetFaces": 16000,
+    "method": "Position-preserving quadric edge collapse; protected topology/normals/boundary",
+    "sourceFaceRows": true,
+    "sourceBarycentric": true,
+    "sourceProjectionMax": 0.0,
+    "sourceProjectionP95": 0.0,
+    "limits": [
+      "Prototype lacks authored joint loops, inner clearance, skin, contact and visual acceptance.",
+      "Per-vertex UV projection can cross original UV seams; original-corner donor is authoritative for final bake.",
+      "Nearest32 source centroid candidate search is not a global closest-surface certificate."
+    ]
+  },
+  "sourceStillImmutable": true,
+  "basisCorrection": "Parent review: initial metadata reflected X. Corrected to proper det+1 basis; source/prototype/data bytes unchanged, no transform applied."
+}

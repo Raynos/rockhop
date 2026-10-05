@@ -1,0 +1,141 @@
+{
+  "item": "hoodie",
+  "accepted": false,
+  "status": "SOURCE_CLEANUP_AND_BAKE_INPUT_READY_UNACCEPTED",
+  "source": {
+    "path": "/Users/raynos/projects/games/rockhop/.tmp/generation-comparison-2026-10-03/user-agent2/qualified-hunyuan-paint06/paint/painted.glb",
+    "bytes": 42329320,
+    "sha256": "800d7a9717757b90b296a78c605cddb698c68d399a96e403aa381103e77d2eba"
+  },
+  "sourceBounds": [
+    [
+      -0.9990940093994141,
+      -0.47315099835395813,
+      -0.3680169880390167
+    ],
+    [
+      0.9711880087852478,
+      0.8439239859580994,
+      0.3457750082015991
+    ]
+  ],
+  "sourceDimensions": [
+    1.9702820777893066,
+    1.3170750141143799,
+    0.7137919664382935
+  ],
+  "axes": "Source+Yup; source+Zfront from fixed original orbit; boot toe points -X, not source+Z.",
+  "units": "Uncalibrated generation units; body fitting scale requires canonical landmarks",
+  "sourceFrontToBlenderBasisOnly": [
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "cleanup": {
+    "sourceVertices": 716971,
+    "sourceFaces": 921722,
+    "exactWeldedVertices": 460806,
+    "exactZeroAreaRowsRemoved": 50,
+    "detachedNondegenerateRowsRemoved": 104,
+    "duplicateUnorientedRowsRemoved": 0,
+    "componentFacesDescending": [
+      921568,
+      104
+    ],
+    "remainingVertices": 460752,
+    "remainingFaces": 921568,
+    "sourcePositionDisplacement": 0,
+    "sourceRetainedTriangleRowsExact": true,
+    "weldSemantics": "Exact float32 POSITION equality; UVs remain original per-corner, no texture weld",
+    "limits": [
+      "Largest component only is an explicit donor derivative, not wearable topology acceptance.",
+      "No self-intersection repair, winding repair, garment openings, body fit or rig changes."
+    ]
+  },
+  "cleanedDonor": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/cleaned-donor.npz",
+    "bytes": 28625733,
+    "sha256": "68fc86576812923e5e403119a7967a89aae97cd6e039638c25231ea62b75048f"
+  },
+  "maps": {
+    "baseColorTexture": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/baseColorTexture.png",
+      "bytes": 10002352,
+      "sha256": "1eb934f396df30e3cd881211ff4e195c4460f8fa8db5bfa22ddb3b5ef28e5d09",
+      "size": [
+        4096,
+        4096
+      ],
+      "byteExactEmbeddedExtraction": true
+    },
+    "metallicRoughnessTexture": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/metallicRoughnessTexture.png",
+      "bytes": 6925436,
+      "sha256": "2e598ae796f89acf741389a67635d4fa7b8d99f2ba39b0e46d0516c95db6dfae",
+      "size": [
+        4096,
+        4096
+      ],
+      "byteExactEmbeddedExtraction": true
+    }
+  },
+  "originalPBR": {
+    "baseColorTexture": {
+      "index": 0
+    },
+    "roughnessFactor": 1.0,
+    "metallicFactor": 1.0,
+    "metallicRoughnessTexture": {
+      "index": 1
+    }
+  },
+  "normalPolicy": "Source declares no NORMAL; explicit derived area-weighted exact-position welded normals, not original normal data",
+  "prototype": {
+    "npz": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/retopology-prototype.npz",
+      "bytes": 507922,
+      "sha256": "1f837907cf9b4bfae435d831642451e0af94621a7486b726d78bdd45acda64c4"
+    },
+    "obj": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/hoodie/retopology-prototype.obj",
+      "bytes": 2626065,
+      "sha256": "e9e6352503246efa3587b3e52efc441f54e5793f47cabea6746c8149df2c7ea5"
+    },
+    "vertices": 9968,
+    "faces": 20000,
+    "targetFaces": 20000,
+    "method": "Position-preserving quadric edge collapse; protected topology/normals/boundary",
+    "sourceFaceRows": true,
+    "sourceBarycentric": true,
+    "sourceProjectionMax": 0.0,
+    "sourceProjectionP95": 0.0,
+    "limits": [
+      "Prototype lacks authored joint loops, inner clearance, skin, contact and visual acceptance.",
+      "Per-vertex UV projection can cross original UV seams; original-corner donor is authoritative for final bake.",
+      "Nearest32 source centroid candidate search is not a global closest-surface certificate."
+    ]
+  },
+  "sourceStillImmutable": true,
+  "basisCorrection": "Parent review: initial metadata reflected X. Corrected to proper det+1 basis; source/prototype/data bytes unchanged, no transform applied."
+}
