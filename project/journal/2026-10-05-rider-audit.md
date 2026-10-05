@@ -21,3 +21,16 @@ All26 ordered temporal sheets inspected; audit relative links resolve.
 
 Limits: No fresh solver/full-game/device run or new appearance score.
 Normal-game success does not qualify the candidate. AllM0–M5 remain open.
+
+## Finish execution plan
+
+Finding: A new evidence-based schedule closes body/interface, complete wardrobe,
+supported motion, engine and device/release gates in order; original M0–M5
+requirements remain open and the October3 baseline remains the specification.
+
+Validation: Independent read-only review yields three concrete fixes, applied;
+all plan links resolve. Fresh normal build and low/high WebKit clear4810ticks,
+finish bytes abaaaaaaaa0a4440, crash103 and next-tick restart with zero errors.
+
+Limits: This is a reviewed plan, not a qualified candidate. Physical-phone and
+stranger evidence remain open. No player promotion or deployment performed.
