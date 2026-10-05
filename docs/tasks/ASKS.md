@@ -467,3 +467,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 306 | "Can you find this plan commit and push it ?" | **in flight — plan publication, 2026-10-05** | Find and commit the saved [consolidated rider plan](../plans/sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md) on main, preserve unrelated work, push and verify release/deployment results. |
 
 | 307 | Read, review and audit the new rider consolidated plan, then incorporate useful requirements into the active rider work. | **in flight — plan reconciliation, 2026-10-05** | Compare supplemental handoff against current source/evidence, resolve execution authority and ownership conflicts, preserve original acceptance bars and update active work. |
+
+| 308 | "Can you read and summarize the tweet" (André Staltz, 2106708022676389916) | **done — post retrieved and summarized, 2026-10-05** | X official oEmbed and a public mirror returned matching post text: Matt Pocock’s /retro exposed hidden agent problems despite successful feature delivery, enabling a reliable foundation. |
