@@ -155,3 +155,19 @@ Limits: Finite contacts distinguish proper crossings from source coincident
 aliases; no continuous-time, signed-depth, coverage, support or art certificate.
 Protected upper-head fields remain outside the repair witnesses. New source
 repair follows separately; no body or wardrobe accepted.
+
+## Correct glove distal branch correspondence
+
+Finding: Connectivity separates four long digits and the short side thumb.
+Three old controls incorrectly target another branch; corrected distal names
+are admitted for fitting after a colored source orbit. Palm/web/cuff stays
+neutral and station centers are hypotheses, not anatomical joint acceptance.
+
+Validation: Parent silently plays36frames to3seconds, reviews ordered orbit,
+and confirms coherent separate colored fingers. Original XYZ/faces/UV/triangle
+rows/barycentric lineage stays exact; ASTs pass. Warning-producing projection
+control is preserved beside finite warning-free elementwise readback.
+
+Limits: Distal source correspondence only. Source handedness, continuous fit,
+cavity, normalized moving skin, real grip, PBR and physical devices remain open.
+The failed glove-fit01 stays frozen; new fitting follows separately.
