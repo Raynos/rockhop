@@ -89,3 +89,21 @@ world-cache mismatch is preserved with corrected matching-scene explanation.
 Limits: Protected field/rest preservation only; body self/contact, shoulders,
 hips, boxer coverage, native/engine motion and played appearance remain open.
 Body01 stays failed; neither candidate is promoted to normal player assets.
+
+## Native battery exposes derived neck weight loss
+
+Finding: Body02 native FULL/FOUR sampled36 declared stress and idle poses.
+Normalized independent LBS agrees within0.468µm, while reducing derived neck
+weights loses20.044mm at raised arms; body loss peaks3.411mm. This remains
+unaccepted. The prior33-object prose count was incorrect:34 original objects
+are preserved. Model input is a separate same51,61-sample2-second idle export.
+
+Validation: Parent checks every input/snapshot hash and independently
+accumulates all51 matrices for raised body/head/boxer/cheek, reproducing the
+loss and native residual. Fresh sixth-round ordinary low/high finish bytes
+match, crash/restart at tick0 takes1ms each, zero errors. FULL raw weight sums
+remain controls; failed overstrict normalization guard is preserved.
+
+Limits: 36 samples are finite intake, not every-frame coverage or support.
+Exported animation/engine/GPU parity, natural motion, contacts, wardrobe,
+played-art and physical devices remain open. No normal player promotion.
