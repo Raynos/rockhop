@@ -1,0 +1,55 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/ml/img2mesh/Hunyuan3D-2.1/.venv/bin/python",
+    "-u",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-fit01/fit.py",
+    "--wardrobe-data",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02",
+    "--semantics",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/semantic-registration.json",
+    "--foundation",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-source.npz",
+    "--contract",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-contract.json",
+    "--driver",
+    "docs/evidence/hero-remaster/anatomical-foundation-2026-10-03/user-agent1/diagnostic02/driver.json",
+    "--out",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-fit01/data/run01",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-fit01"
+  ],
+  "controllerPID": 82015,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 78,
+  "limitSeconds": 300.0,
+  "guardSHA256": "a06adaf3ee6f011cf6d30cd3d8d041f1d681c1041cc026ae7aa5e1b38af56f1d",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 27.0,
+      "wiredGiB": 6.8,
+      "freeGiB": 35.4
+    },
+    {
+      "seconds": 0.031,
+      "anonymousGiB": 27.1,
+      "wiredGiB": 6.8,
+      "freeGiB": 35.4
+    },
+    {
+      "seconds": 1.066,
+      "anonymousGiB": 27.2,
+      "wiredGiB": 6.5,
+      "freeGiB": 35.5
+    }
+  ],
+  "ownedChildPID": 82034,
+  "exitCode": 0,
+  "elapsedSeconds": 1.092
+}

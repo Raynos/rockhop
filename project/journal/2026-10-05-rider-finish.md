@@ -107,3 +107,18 @@ remain controls; failed overstrict normalization guard is preserved.
 Limits: 36 samples are finite intake, not every-frame coverage or support.
 Exported animation/engine/GPU parity, natural motion, contacts, wardrobe,
 played-art and physical devices remain open. No normal player promotion.
+
+## Glove fitting destroys donor continuity
+
+Finding: The first five-digit rest deformation creates folds and intersections
+where the source prototype has none. Both fitted sides visibly fragment into
+spikes through finger curl and at rest; parent rejects geometry/skin/art2/10.
+Canonical hand bone roll is also an invalid handed-pair radial reference.
+
+Validation: Parent silently plays all49 frames to4.084seconds; movie contains
+no audio. Source/input/output pins and Python ASTs pass. Four-slot normalized
+weights cannot redeem2,262 right self contacts at rest or22.44mm mirror error.
+
+Limits: Finite contact/radial diagnostics only, no signed-volume certificate.
+Manual curl has no native/engine/grip/device claim. Both candidates are failed
+controls; rest mapping must become continuous before the next skin experiment.

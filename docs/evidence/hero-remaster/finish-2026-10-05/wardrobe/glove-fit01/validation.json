@@ -1,0 +1,51 @@
+{
+  "accepted": false,
+  "status": "FAILED_FITTING_CHECKPOINT_PRESERVE_NOT_INCORPORATE",
+  "items": [
+    {
+      "side": "R",
+      "sourceXYZAndBaryMapUVExact": true,
+      "fourWeightsNormalizedMaxError": 1.1920928955078125e-07,
+      "nonnegativeWeights": true,
+      "palmWebLowConfidenceVertices": 880,
+      "stationBasesAndTargetsAvailable": true
+    },
+    {
+      "side": "L",
+      "sourceXYZAndBaryMapUVExact": true,
+      "fourWeightsNormalizedMaxError": 1.1920928955078125e-07,
+      "nonnegativeWeights": true,
+      "palmWebLowConfidenceVertices": 880,
+      "stationBasesAndTargetsAvailable": true
+    }
+  ],
+  "candidateMirrorErrorMaxM": 0.022439858970101915,
+  "reflectedRHandBoneXDotLHandBoneX": 0.2087075263261795,
+  "sourcePrototypeSATSelfContacts": 0,
+  "maxFiniteBodyContacts": {
+    "R": 3427,
+    "L": 3660
+  },
+  "maxFiniteSelfContacts": {
+    "R": 3819,
+    "L": 3499
+  },
+  "movie": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-fit01/failed-manual-finger-flex.mp4",
+    "sha256": "fc8a204b3eff4762464dc38bbd023c21b32939effffb9cf27a965e60801698be",
+    "bytes": 131102,
+    "frames": 49,
+    "seconds": 4.083333333333333,
+    "audioStreams": 0
+  },
+  "limits": "No wearablepair, innerclearance, native, engine, realgrip or artpass. SAT contacts arefinitecontactwitnesses, not signedvolume/sweptproof; sharedindices excluded forself.",
+  "parentPlayedVerdict": {
+    "status": "REJECT_BOTH_GEOMETRY_SKIN_ART",
+    "score": 2,
+    "outOf": 10,
+    "reportedBy": "Root",
+    "played49FramesSeconds": 4.084,
+    "observation": "Both fittedgloves visibly fragment/open into spikes through curl, including openpose. Coherentdonorbranches not preserved by namedlabels alone.",
+    "nextDependency": "Source-to-target restmapping continuity and non-overlap before fourreduction/curl."
+  }
+}
