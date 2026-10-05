@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "label": "preprocess",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/blender-preprocess-idle.py",
+        "--",
+        "--char_path",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial02/input/RiderFinishIdle.glb",
+        "--output_dir",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial02/preprocessed",
+        "--face_r",
+        "thigh.R",
+        "--face_l",
+        "thigh.L",
+        "--formats",
+        "glb",
+        "--keep_intermediate"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 3.323737499769777,
+      "logSHA256": "2e42b2908ae77599491ac0c6b5ed7ae0dc1754a0d2a7dcfe059a84313e1e2c79"
+    },
+    {
+      "label": "inference",
+      "command": [
+        "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+        "/Users/raynos/projects/localai/bin/unimate/inference_entry.py",
+        "--exp-dir",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial02/experiment",
+        "--output-dir",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial02/sample",
+        "--test-cases-json",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial02/cases.json",
+        "--seed",
+        "42",
+        "--batch-size",
+        "1",
+        "--num-repetitions",
+        "1",
+        "--cfg-scale",
+        "3.0",
+        "--only-save-motion",
+        "--motion-edit",
+        "--keep-joints",
+        "pelvis,spine,thigh.L,thigh.R,chest,shin.L,shin.R,shoulder.R,shoulder.L,foot.L,foot.R,upperArm.R,upperArm.L,ball.L,ball.R,forearm.R,forearm.L,hand.R,hand.L,thumb_01.R,pinky_01.R,ring_01.R,middle_01.R,index_01.R,thumb_01.L,pinky_01.L,ring_01.L,middle_01.L,index_01.L,thumb_02.R,pinky_02.R,ring_02.R,middle_02.R,index_02.R,thumb_02.L,pinky_02.L,ring_02.L,middle_02.L,index_02.L,thumb_03.R,pinky_03.R,ring_03.R,middle_03.R,index_03.R,thumb_03.L,pinky_03.L,ring_03.L,middle_03.L,index_03.L",
+        "--gt-start-frame",
+        "0"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 16.081807082984596,
+      "logSHA256": "cd879492042c66112c66fc0d77a1cbda8a7103e3757fb15c9540327a773487b9"
+    }
+  ],
+  "wallSeconds": 19.41996004106477
+}

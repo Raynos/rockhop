@@ -1,0 +1,29 @@
+{
+  "accepted": false,
+  "status": "RAW_SAME51_NEURAL_OUTPUT_UNACCEPTED",
+  "keptOriginal61Timestamps": true,
+  "paddingOrTruncation": false,
+  "rawFeatureShape": [
+    60,
+    51,
+    12
+  ],
+  "inputSHA256": "2b07ce4bd70b20a075de21e9769d79a9d9b77952d06594d7b206fc9abeaab50b",
+  "elapsedS": 19.587,
+  "dependencyPins": {
+    "/Users/raynos/projects/localai/bin/unimate/blender_preprocess.py": "e7aa9636c7223998f8988a6e21f480d3e7442844ceee6388cffa95a22e3b3102",
+    "/Users/raynos/projects/localai/runtime/unimate/code/data_process/motion_export/export_general.py": "d18d3eff2a734a943d9a1267a5071050b99cc454b5022fd8412f0f3b7cd6709c",
+    "/Users/raynos/projects/localai/runtime/unimate/code/data_process/utils/blender_export.py": "ba02b974b510b14558e88fa74edf4da32124015b1ff6df886b89ff3cfea9d3e7",
+    "/Users/raynos/projects/localai/bin/unimate/inference_entry.py": "beab22fe3fc87cebcdfe5614dcdec16967a7d2ad860e7e6009d9403998eb392a",
+    "/Users/raynos/projects/localai/bin/unimate/decode_motion.py": "0496c5da88b8e7b932763b220a8bf7935b8f8178a3d40e9858dd6433cf20d1f6",
+    "/Users/raynos/projects/localai/bin/unimate/prepare_candidate.py": "c2304b03fb4bc4e6c17c1e2554044c17e4cda39e1625e33f8d6b793d6b8d5f9f",
+    "/Users/raynos/projects/localai/runtime/unimate/code/unimate/utils/motion_utils.py": "19bf1e956f075a5c393f462e8ceb5a29e2e55e3b19dccb75369099d65129b74f",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/blender-preprocess-idle.py": "0f6f9586827abe15b24621ce70f55043470b1232467a036980670decad5b992a",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/trial02.py": "f8819490a12087a1ea9b54108ca728708be3e76b28bfc2badde9d5f307dfe34e"
+  },
+  "guardPeakAnonymousGiB": 27.6,
+  "method": "Existing export_asset supported remove_tpose=False,min_frames=1; backend/model math and source61-key input unchanged. One seed42 MPS50step CFG3 head/neck edit.",
+  "next": "Decode official generated and GT features, measure raw contacts, constrain only neck/head against GT and prove native51 retarget/readback before played review.",
+  "limits": "Finite output is not planted support, geometry, animation/art, engine or device acceptance; canonical model rebind is model-only.",
+  "logPolicy": "Original process.json log hashes refer to unchanged local raw *.txt; tracked *-trimmed.txt removes trailing whitespace only."
+}

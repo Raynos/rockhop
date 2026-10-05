@@ -249,3 +249,16 @@ byte-identical low/high finish, crashes and restarts at tick0, errors0.
 Limits: Rest coherence only, no skinning, moving hand or wardrobe acceptance.
 Preserved NumPy warnings do not override finite assertions or failed cavity.
 Actual semantic hand enclosure and palm/cuff fit are next.
+
+## Same51 neural idle produces finite raw motion
+
+Finding: Disabling the supported near-rest removal filter retains61 original
+samples and admits one60x51x12 generated idle edit. No timeline padding or
+source/rest alteration is used; model canonical rebind remains experimental.
+
+Validation: Parent verifies raw input/output/log/dependency pins, own51/depth9,
+Python ASTs and guarded success19.587s. Raw and GT features are finite.
+
+Limits: Feature masks do not certify decoded contact preservation. Official
+decode, bounded neck/head detail, original-native retarget and played quality
+remain required before any animation acceptance.
