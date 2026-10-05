@@ -700,3 +700,20 @@ plan-writing unit. Markdown diff/links/unchanged release authority checked.
 Limits: Shoulderfields are a prepared proposal, not authored/accepted.
 PBRcuff context41is in flight, not judged. Fulloutfit/generic/bike/engine/
 phone/release outcome remains required. Next ordinary game gate42.
+
+
+## Paired original-material cuff context freezes before played judgment
+
+Finding: Preserve every retained glove face in a moving paired PBR film.
+Thin source-cycle guides identify the topological feature beside a plain
+matched view, without inferring that genus1is a defect or another cut.
+
+Validation: One CPU2native render exits0 in190.206s; one encode0.917s and
+full decode exit0. Parent120framehashes/60actualmatchedcamera poses and
+source/map/recipe/movie pins pass. Movie60frames/12fps/5s/1536x768/audio0.
+Native before-after geometry/Float32UV guards pass; two unsuppressed
+Material.use_nodes deprecation warnings disclosed.
+
+Limits: Execution41is an unaccepted source-film checkpoint. Actual silent
+headless playback and root temporal judgment follow this commit. No
+feature/cavity/fit/skin/art/engine/device acceptance; next game gate42.
