@@ -291,3 +291,9 @@ Round18 ordinary clear/crash/restart passes byte-identical finish, errors0.
 Limits: Unaccepted topology checkpoint, no moving appearance qualification.
 Frozen integer-index API failure and rejected FULL control retained. Actual
 loft/body seam witnesses must guide a nonintersecting reconstruction.
+
+Finding: Same clipped-neck checkpoint now carries the compact native/contact
+receipt and reproducible actual FULL field provenance reader.
+Validation: Reader AST passes; repeated native-field proof agrees outside56
+seam rows. Numeric contact failure remains unchanged.
+Limits: Supplementary evidence for the same rejected topology, no new pass.

@@ -1,5 +1,7 @@
 # What we are building — the plans and where each stands
 
+**Consolidated rider handoff (ask306):** [RIDER_CONSOLIDATED_PLAN](sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md) preserves the saved October5 supplemental recovery/delivery plan and historical blockers. Current execution authority remains FINISH_RIDER_CLOTHES_AND_ANIMATIONS; the baseline specification remains active. All M0–M5 remain open.
+
 **Frozen transition registry (ask272):** [Reviewed snapshot](../evidence/hero-remaster/native-cycle-relay-2026-10-03/REGISTRY-R2.md) preserves old-relay and paused-manager handoffs with exact pins; original writer models remain unresolved. Accurate native reviewer attribution claims no original authorship. Future manager updates successor IDs separately; root chooses placement and alone accepts. All rider gates remain open.
 
 **Rider succession and audit freeze (asks262/272):** R1 construction01a1016e and generation01a10170 are final-wrap-only; preparation remains unaccepted. [Audit handoff](../evidence/hero-remaster/independent-audit-2026-10-03/FINAL-HANDOFF.md) transfers execution of the single canonical plan to the future integrator. Manager01a10191 assigns two successors after stop receipts/duplicate checks; root chooses local/cloud placement and alone judges. All six gates stay open; this human-created Audit task creates no planning successor.
