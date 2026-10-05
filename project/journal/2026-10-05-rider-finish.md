@@ -597,3 +597,20 @@ initial local-rest reference check rejected, corrected to world-rest with
 explicit finite einsum; no new native job. Metadata-only NumPy warnings
 and stale body02corner183498 label are disclosed. No body/boxer repair,
 complete signed support, played newart, GPU/device acceptance.
+
+
+## Exact glove cuff opening preserves the retained source
+
+Finding: Remove only the admitted1456roof/rim faces plus isolated5167.
+The derivative retains14,543original faces and every original vertex
+attribute. This diagnostic opening remains unaccepted for wearability.
+
+Validation: One array-only CPU2guard exits0 in0.270s without warnings.
+Parent independently checks exact removal/ordering/all8,000attributes,
+dense XYZ/UV ancestry and original map hashes. Retained graph is one
+component, one71edge degree-two boundary, no nonmanifold edges, Euler-1.
+
+Limits: Referenced orientable shell remains genus1. Locate its remaining
+handle and verify mouth/palm/finger enclosure before fitting. No body,
+registration, fit, skin, render, played newart or engine acceptance.
+Execution37 requires no ordinary third-round game gate; next due39.
