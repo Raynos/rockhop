@@ -1,0 +1,34 @@
+{
+  "accepted": false,
+  "status": "FINITE_SOLE_PILOT_RECALCULATED_MOVING_REVIEW_PENDING",
+  "rawSHA256": "772db7b5dab17e75bb46ab076ae69b30b455ac0ea2f5c5716098fecaf40ab581",
+  "independentChecks": {
+    "idle": {
+      "samples": 49,
+      "supported": 49,
+      "airborne": 0,
+      "actualHz": 24.0
+    },
+    "crouch": {
+      "samples": 61,
+      "supported": 61,
+      "airborne": 0,
+      "actualHz": 24.0
+    },
+    "jump-land": {
+      "samples": 56,
+      "supported": 39,
+      "airborne": 17,
+      "actualHz": 23.91304347826087
+    }
+  },
+  "probesPerSide": 73,
+  "supportedPointsWithin5mm": 73,
+  "belowFloorBeyond1mm": 0,
+  "sourcePinsAndAST": true,
+  "limits": [
+    "Recalculated finite recorded sole points only; native sampling itself remains builder evidence.",
+    "No full sole/boots swept contact, COM, moving parent art, engine or bike acceptance.",
+    "Jump actual23.913043Hz; next fixture requires integral30Hz, exact endpoints/reversal and explicit walk/jog support phases."
+  ]
+}

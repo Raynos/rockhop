@@ -262,3 +262,17 @@ Python ASTs and guarded success19.587s. Raw and GT features are finite.
 Limits: Feature masks do not certify decoded contact preservation. Official
 decode, bounded neck/head detail, original-native retarget and played quality
 remain required before any animation acceptance.
+
+## Analytic support pilot measures actual soles
+
+Finding: Own51 analytic legs keep73 measured barefoot sole points per side
+within5mm of ground in supported idle/crouch/jump-land frames. Ankle
+residuals and actual deformed sole support remain separate measurements.
+
+Validation: Parent rechecks source/driver/raw pins and Python ASTs,166rows,
+support phases, true sample rates and all supported XYZ floor counters.
+No sole point penetrates beyond1mm; recorded drift maximum0.355313mm.
+
+Limits: No parent moving review yet, complete sole/boots, COM, engine or
+bike proof. Jump rate23.913043Hz is retained explicitly; new30Hz fixture
+needs exact endpoints/reversal plus walk/jog stance and flight phases.
