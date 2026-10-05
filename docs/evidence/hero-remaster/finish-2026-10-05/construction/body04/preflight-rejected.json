@@ -1,0 +1,133 @@
+{
+  "status": "FAILED_PREFLIGHT_NO_NATIVE_CREATED",
+  "recipe": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_clipped_neck.py",
+  "recipeSHA256": "736a6ed42745143a99aa521358f3f11639742b81e09f5ee35a2cd60266e83f16",
+  "nativeCreated": false,
+  "failedAssertion": "All interpolated cut-edge rows must be head-only",
+  "contradictoryRows": 13,
+  "examples": [
+    {
+      "edge": [
+        16851,
+        16863
+      ],
+      "fraction": 0.19688300788402557,
+      "weights": {
+        "neck": 0.00013589889567811042,
+        "head": 0.9998641014099121
+      },
+      "endpointZ": [
+        1.5767680406570435,
+        1.5677881240844727
+      ]
+    },
+    {
+      "edge": [
+        41762,
+        41764
+      ],
+      "fraction": 0.243011936545372,
+      "weights": {
+        "neck": 0.014973788522183895,
+        "head": 0.9850261807441711
+      },
+      "endpointZ": [
+        1.57842218875885,
+        1.5643399953842163
+      ]
+    },
+    {
+      "edge": [
+        41763,
+        41765
+      ],
+      "fraction": 0.11830635368824005,
+      "weights": {
+        "neck": 0.0013766727643087506,
+        "head": 0.9986233711242676
+      },
+      "endpointZ": [
+        1.5761325359344482,
+        1.5665600299835205
+      ]
+    },
+    {
+      "edge": [
+        9539,
+        9549
+      ],
+      "fraction": 0.9728497266769409,
+      "weights": {
+        "neck": 0.0002267329691676423,
+        "head": 0.9997732639312744
+      },
+      "endpointZ": [
+        1.5668115615844727,
+        1.5752285718917847
+      ]
+    },
+    {
+      "edge": [
+        39618,
+        39683
+      ],
+      "fraction": 0.7783094644546509,
+      "weights": {
+        "neck": 0.018732460215687752,
+        "head": 0.9812675714492798
+      },
+      "endpointZ": [
+        1.5636372566223145,
+        1.5782365798950195
+      ]
+    },
+    {
+      "edge": [
+        39444,
+        40725
+      ],
+      "fraction": 0.7569880485534668,
+      "weights": {
+        "neck": 0.01497378945350647,
+        "head": 0.9850262403488159
+      },
+      "endpointZ": [
+        1.5643399953842163,
+        1.57842218875885
+      ]
+    },
+    {
+      "edge": [
+        9526,
+        9527
+      ],
+      "fraction": 0.0998036190867424,
+      "weights": {
+        "neck": 0.0009104469208978117,
+        "head": 0.9990895390510559
+      },
+      "endpointZ": [
+        1.5759148597717285,
+        1.5667487382888794
+      ]
+    },
+    {
+      "edge": [
+        18801,
+        18802
+      ],
+      "fraction": 0.004541175905615091,
+      "weights": {
+        "neck": 2.732702569119283e-06,
+        "head": 0.9999972581863403
+      },
+      "endpointZ": [
+        1.5750328302383423,
+        1.5678138732910156
+      ]
+    }
+  ],
+  "actualOutcome": "Python AssertionError; Blender default exitCode0 does not indicate success. Future runs must use --python-exit-code1.",
+  "nextCorrection": "All 13 counterexamples contain only neck/head, with neck <=1.873246%. Retain and normalize that explicit two-joint edge field in both controls; blend the loft from the actual top field. No field truncation or original upper-row edit.",
+  "guardWorkerLogSHA256": "e24b6b609dd97260666b448201cbbddcd0666a7e3660513f7134024cfe96f8de"
+}

@@ -220,3 +220,18 @@ actual removal log and AST. Original61-key input remains unchanged.
 Limits: No inference or generated motion. The next owned version disables
 the supported near-rest removal filter, preserving original61samples and
 timestamps instead of padding a truncated clip. Canonical rebind model-only.
+
+## Clipped neck rejects a head-only cut assumption
+
+Finding: A scoped lower-neck topology recipe stops before saving because
+13 cut-edge fields contain neck+head rather than head alone. The largest
+neck contribution is1.873246%; retaining those actual two fields avoids
+introducing a weight seam when constructing the new loft.
+
+Validation: Parent verifies executed recipe hash/AST, immutable body03 source
+and absent body04 native file. Exact traceback is preserved. Blender's
+default exit0 despite AssertionError is failure, not a build qualification.
+
+Limits: Preflight only; no candidate/contact/normal/art evidence. A separate
+version will retain actual normalized cut fields and require Python-exit-code1.
+Protected upper identity and original sources remain unchanged.
