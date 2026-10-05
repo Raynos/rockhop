@@ -1,0 +1,64 @@
+{
+  "status": "PARENT_PIN_AND_PROPER_CROSSING_WITNESS_CONFIRMED_UNACCEPTED",
+  "inputPins": {
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-contacts-with-witnesses.json": "be2c6ea9197019c067a1a6a469966a245dc7587ee8f2e73f4a4bacb208591131",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body02/authored-neck-fields.npz": "337c97875e39c4bc0f738a4886dbfd1c5a5b5b757cbc5965f120d43a4247271e",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-source.npz": "b6eaa2ccee77a9e6f6395daa1fc473da3f6099f26f79895f288e1300b3fba3ae",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-source-rest-contacts-pinned.json": "43e1fe44f746ba8ea133d42e8c7d900b5baf8fb944cfe8fba2cd30ce873ad120",
+    "harness/out/rider-finish/body02-intake02/rest.json.gz": "fa04b567043489c4f8f634f682fa26e49d8b0fefc8776830abd9652e98edb9a7"
+  },
+  "testedHeadRestTriangles": [
+    15,
+    18
+  ],
+  "independentStrictCrossingEdges": [
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "signedDistancesM": [
+        1.5230230177908609e-05,
+        -0.0014195041384365268,
+        -0.0017531702847523737
+      ],
+      "barycentric": [
+        0.4314197733793829,
+        0.08646822649012739
+      ],
+      "pointWorld": [
+        0.6525364283451969,
+        -0.1382102130172659,
+        1.537146456250226
+      ]
+    },
+    {
+      "edge": [
+        2,
+        0
+      ],
+      "signedDistancesM": [
+        1.5230230177908609e-05,
+        -0.0014195041384365268,
+        -0.0017531702847523737
+      ],
+      "barycentric": [
+        0.4303492841603589,
+        0.08459737582922247
+      ],
+      "pointWorld": [
+        0.6525464197870576,
+        -0.13818027971118538,
+        1.5371587085794856
+      ]
+    }
+  ],
+  "witnessUpperProtected": false,
+  "boxerHandFieldVertices": 2106,
+  "boxerTotalVertices": 2796,
+  "geometryRecipeSHA256": "ce5e7afc9cbb8edc58a56ef9cdd1ec4c075550d53e4427dc5ebbd9b8b581103b",
+  "limits": [
+    "One proper rest head witness independently recomputed; counts use pinned finite BVH/SAT battery, not a continuous signed-depth certificate.",
+    "No clean-body, coverage, support, animation or art acceptance."
+  ]
+}

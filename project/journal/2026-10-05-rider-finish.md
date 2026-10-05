@@ -138,3 +138,20 @@ Limits: Formative640px6Hz fullbody clips, not natural support/animation or
 final9/10 appearance. Cachedidentity cameraWorldRows was recorded before
 depsgraph update; pinned camera location/rotation code defines actual views.
 New cap/boxer/scoped anatomy repair follows in a separate source leaf.
+
+## Finite contacts locate anatomy faults
+
+Finding: Independent original-rest controls have zero head/boxer proper self
+crossings, while body02 introduces266/660. Lower editable inherited neck
+triangles cross after the repair. Z-only boxer crop includes2,106 hand/finger
+weighted vertices of2,796, explaining accidental hand shells. Both need repair.
+
+Validation: Parent checks pinned provenance and independently recomputes a
+strict plane/interior crossing on actual lower-neck witness coordinates.
+Two meaningful predicate tests and scoped lint pass. Ninth-round ordinary
+low/high finish bytes match with zero errors and2ms crash/restart each.
+
+Limits: Finite contacts distinguish proper crossings from source coincident
+aliases; no continuous-time, signed-depth, coverage, support or art certificate.
+Protected upper-head fields remain outside the repair witnesses. New source
+repair follows separately; no body or wardrobe accepted.
