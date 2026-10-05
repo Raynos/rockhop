@@ -122,3 +122,19 @@ weights cannot redeem2,262 right self contacts at rest or22.44mm mirror error.
 Limits: Finite contact/radial diagnostics only, no signed-volume certificate.
 Manual curl has no native/engine/grip/device claim. Both candidates are failed
 controls; rest mapping must become continuous before the next skin experiment.
+
+## Matched played body checkpoint
+
+Finding: Front/rear PBR and profile gray expose the same body02 through
+14 finite FK cases. Face identity retains without global mesh blowup, but
+unsupported floating feet are diagnostic, and dark finger shells reveal
+Z-only underwear selection also captured hands. Current body stays unaccepted.
+
+Validation: Parent silently plays235frames per view to39.167s, checks pinned
+source/recipe/movie bytes and inspects ordered movie timelines. Every movie
+has zero audio; Python ASTs pass. Introduced contacts remain explicit faults.
+
+Limits: Formative640px6Hz fullbody clips, not natural support/animation or
+final9/10 appearance. Cachedidentity cameraWorldRows was recorded before
+depsgraph update; pinned camera location/rotation code defines actual views.
+New cap/boxer/scoped anatomy repair follows in a separate source leaf.
