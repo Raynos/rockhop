@@ -1,0 +1,34 @@
+{
+  "status": "PARENT_INDEPENDENT_FULLFOOT_MASK_READBACK_PASS_SOLE_ANATOMY_NOT_ACCEPTED",
+  "accepted": false,
+  "receiptSHA256": "e907f399ec6547a44ea8a46f09579f357c268888fc441efe61f08cbf1586a6d6",
+  "manifestSHA256": "55f6ded5e4cc9ea7a7efa554a8de2f2967b39c603a9ff931a7a3f1b6cfdd3e64",
+  "feet": {
+    "L": {
+      "allEnvelopeTriangleIDsExact": true,
+      "allCanonicalFootTrianglesOnce": true,
+      "pointAncestryAndRestXYZExact": true,
+      "triangles": 2062,
+      "vertices": 1045,
+      "provisionalUnderside": 893,
+      "nonsolePenetrationEligible": 1169,
+      "minimumWorldZ": 1.2628827761318462e-08
+    },
+    "R": {
+      "allEnvelopeTriangleIDsExact": true,
+      "allCanonicalFootTrianglesOnce": true,
+      "pointAncestryAndRestXYZExact": true,
+      "triangles": 2045,
+      "vertices": 1036,
+      "provisionalUnderside": 893,
+      "nonsolePenetrationEligible": 1152,
+      "minimumWorldZ": 1.2628827761318462e-08
+    }
+  },
+  "COM": "UNDEFINED_MASS_MODEL; pelvis is not COM",
+  "limits": [
+    "Rest masks only. No posed support, slip, load, contact or balance acceptance.",
+    "Threshold>.95, any-incident envelope and40mm downward-facing sole classification remain anatomical proxies.",
+    "No existing grounded pilot metrics transfer."
+  ]
+}

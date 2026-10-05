@@ -1,0 +1,191 @@
+{
+  "status": "UNACCEPTED_BODY05_FULLFOOT_AND_PROVISIONAL_SOLE_MASK_PREFLIGHT_ONLY",
+  "inputPins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/authored-neck-fields.npz": "36277520249bcd2a8058a76c2f4a7595d7c460d3196e9bc59b3aa3a31690cb2d",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body52/native-fields.npz": "deb04faa6a5ca85ca9617cb963d84d5e62074aee281507c5a755fcbe8387d91c",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-source.npz": "b6eaa2ccee77a9e6f6395daa1fc473da3f6099f26f79895f288e1300b3fba3ae",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/report.json": "4937d207ee8da9f58cf2778b0e4635e094a66e3065440a94bc9229ba95c4494f",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/rest.json.gz": "1f1b32305d66aa0cd3da149c296b348a52de99c9ce4ef5a2828add2be18b5499"
+  },
+  "nativeSourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/body05-motion-input.json": "a5af3531b76920f901865e14d1e14f80836622fac2dae8dbd0b73362cb879e1e",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/semantic-motion-v1.json": "516db59950652def747e7c6f2894c5dc28293470c966569acd2d007e5334df3c"
+  },
+  "recipeSHA256": "ab6c33cda5fdc35db90dc4ee46e1cf0c013366526710e849ebe984ff01849b45",
+  "numpy": "2.3.5",
+  "manifest": "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/body05-foot-mask01.npz",
+  "manifestSHA256": "55f6ded5e4cc9ea7a7efa554a8de2f2967b39c603a9ff931a7a3f1b6cfdd3e64",
+  "manifestBytes": 391546,
+  "frameCalibration": {
+    "units": "metres",
+    "nativeAxes": "+Xforward/+Zup/-Yleft",
+    "floorWorldZ": 0,
+    "bodyObjectWorldRows": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.6499999761581421
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "rigWorldRows": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.6499999761581421
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "worldOffsetPolicy": "Original+.65X source placement retained; no wrapper offset or ankle recentering is applied to foot/floor metrics."
+  },
+  "maskContract": {
+    "semanticMassThresholdExclusive": 0.95,
+    "semanticBones": [
+      "foot.L",
+      "ball.L",
+      "foot.R",
+      "ball.R"
+    ],
+    "wholeFootEligibility": "Union FULL/FOUR semantic vertices; ALL triangles incident to ANY eligible vertex, including ankle fringe and dorsal/nonsole faces.",
+    "provisionalUnderside": "Envelope triangle with rest true geometric normalWorld.Z<0 and every vertex no more than40mm above that foot semantic minimumZ.",
+    "penetrationEligibility": "Every complete foot-envelope triangle remains eligible regardless underside membership.",
+    "soleHeightExtentM": 0.04
+  },
+  "feet": {
+    "L": {
+      "semanticVertices": 1019,
+      "footCoreTriangles": 2009,
+      "footFringeTriangles": 53,
+      "completeFootEnvelopeTriangles": 2062,
+      "completeFootEnvelopeVertices": 1045,
+      "provisionalUndersideTriangles": 893,
+      "nonsolePenetrationEligibleTriangles": 1169,
+      "everyCanonicalFootEnvelopeTriangleOccursExactlyOnce": true,
+      "footPointCanonicalIdentityAncestryExact": true,
+      "canonicalRestXYZExact": true,
+      "footEnvelopeComponents": [
+        2062
+      ],
+      "soleComponents": [
+        893
+      ],
+      "footEnvelopeBoundaryEdges": 26,
+      "footEnvelopeNonmanifoldEdges": 0,
+      "soleBoundaryEdges": 209,
+      "soleNonmanifoldEdges": 0,
+      "eligibleNativeMinimumZWorldM": 1.2628827761318462e-08,
+      "worldBoundsM": [
+        [
+          0.6042985953390598,
+          -0.2615307867527008,
+          1.2628827761318462e-08
+        ],
+        [
+          0.8772938400506973,
+          -0.15979623794555664,
+          0.0859159305691719
+        ]
+      ],
+      "fullEnvelopeRestAreaM2": 0.05824755082494486,
+      "provisionalUndersideRestAreaM2": 0.028690169272209975,
+      "provisionalUndersideProjectedRestAreaM2": 0.019575392936554678,
+      "restNearFloor5mmEnvelopeTriangles": 245,
+      "minimumTriangleArea2M2": 7.135149247185689e-07,
+      "FOURFULLSemanticEligibleDifferentVertexIDs": []
+    },
+    "R": {
+      "semanticVertices": 1011,
+      "footCoreTriangles": 1993,
+      "footFringeTriangles": 52,
+      "completeFootEnvelopeTriangles": 2045,
+      "completeFootEnvelopeVertices": 1036,
+      "provisionalUndersideTriangles": 893,
+      "nonsolePenetrationEligibleTriangles": 1152,
+      "everyCanonicalFootEnvelopeTriangleOccursExactlyOnce": true,
+      "footPointCanonicalIdentityAncestryExact": true,
+      "canonicalRestXYZExact": true,
+      "footEnvelopeComponents": [
+        2045
+      ],
+      "soleComponents": [
+        893
+      ],
+      "footEnvelopeBoundaryEdges": 25,
+      "footEnvelopeNonmanifoldEdges": 0,
+      "soleBoundaryEdges": 209,
+      "soleNonmanifoldEdges": 0,
+      "eligibleNativeMinimumZWorldM": 1.2628827761318462e-08,
+      "worldBoundsM": [
+        [
+          0.6042986251413822,
+          0.15979620814323425,
+          1.2628827761318462e-08
+        ],
+        [
+          0.8772938698530197,
+          0.2615307867527008,
+          0.07358789443969727
+        ]
+      ],
+      "fullEnvelopeRestAreaM2": 0.05684284273300003,
+      "provisionalUndersideRestAreaM2": 0.028690171716034246,
+      "provisionalUndersideProjectedRestAreaM2": 0.019575395150762398,
+      "restNearFloor5mmEnvelopeTriangles": 245,
+      "minimumTriangleArea2M2": 7.135149247185689e-07,
+      "FOURFULLSemanticEligibleDifferentVertexIDs": []
+    }
+  },
+  "plannedPatchMethod": {
+    "surface": "Evaluate these exact triangles on the SAME candidate and exact saved own51 poses; retain per-triangle source IDs.",
+    "floorPatch": "Clip actual triangle polygons to the signed floor slab[-1mm,+5mm], then project to worldXY and measure polygon area plus finite patch union/hull. Hull area is a bound and cannot fill gaps for a contact claim.",
+    "penetration": "On ALL envelope triangles, clip the portion belowZ=-1mm; report signed minimum, affected triangle IDs, true affected surface area and projected area. No provisional underside exclusion.",
+    "support": "Report declared support/flight phases and full patch slip through forward/reverse clocks; a floor gap or hull alone does not certify load balance."
+  },
+  "COM": {
+    "status": "UNMEASURED_UNDEFINED_MASS_MODEL",
+    "reason": "No declared segment masses/densities or watertight whole-body model has been qualified. Pelvis is not COM; bare-body geometry centroid is not physiological balance."
+  },
+  "limits": [
+    "Source-array preflight only; no Blender/native job, new pose generation,688batch, save/export, movie or GPU work.",
+    "All canonical semantic-envelope surfaces are included exactly, but semantic threshold/fringe and40mm underside coverage remain provisional anatomical masks requiring parent/source-author review.",
+    "Mask connectivity/ancestry and rest geometry do not qualify footwear, grounded support, motion contact, art or device performance.",
+    "No existing grounded04 sole metrics transfer to this mask or to a future candidate."
+  ]
+}

@@ -483,3 +483,19 @@ guarded two-thread render72.876s exits0, with no source deformation.
 Limits: Execution29 is an unaccepted checkpoint. Assigned camera path
 pins are not independently extracted camera matrices. No cut, cavity,
 fit, skin, art, engine or device acceptance; played interpretation pending.
+
+## Complete foot envelopes precede grounded contact claims
+
+Finding: Freeze exact left/right2062/2045canonical foot triangles; every
+nonsole surface remains penetration eligible. The893downward/low triangles
+perfoot are a provisional sole mask, not a load or balance certificate.
+
+Validation: Parent independently recomputes semantic union, envelope,
+canonical ancestry/XYZ and world-zero calibration; all identities exact.
+Explicit finite einsum readback avoids host BLAS warnings. Round30
+legacy cold boot/clear/crash/restart passes low/high with exact finish
+abaaaaaaaa0a4440 and1ms restart; bounded guard10.791s exits0.
+
+Limits: No posed contact or688batch; sole anatomy remains provisional.
+No qualified mass model/COM; pelvis cannot substitute. Existing finite
+probe support metrics do not transfer. New rider remains unaccepted.
