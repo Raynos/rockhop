@@ -1,0 +1,57 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "/opt/homebrew/bin/blender",
+    "-b",
+    "-t",
+    "2",
+    "--python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-cavity05/mask-preflight.py",
+    "--",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "--source-sha256",
+    "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e",
+    "--branches",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-anatomy02b/branches.npz",
+    "--out",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity05",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity05"
+  ],
+  "controllerPID": 66115,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 60.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.1
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.1
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 66119,
+  "exitCode": 0,
+  "elapsedSeconds": 0.901
+}

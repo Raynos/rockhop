@@ -1,0 +1,15 @@
+{
+  "accepted": false,
+  "status": "STOP_BEFORE_CUT_UNRESOLVED_EXTERIOR_AND_COMPLETE_CAVITY_SCOPE",
+  "candidateRemoveFaces": 1456,
+  "candidateSource": "Pinned source-derived 16000-triangle prototype; exact face IDs retained in ignored mask.npz",
+  "connectedRoofSeed": 6364,
+  "protectedDistalFaceOverlaps": 0,
+  "exteriorVisibilityConflicts": 209,
+  "boundaryLoops": [71, 3],
+  "cutExecuted": false,
+  "completePalmFingerCavityProven": false,
+  "why": "Cavity first-hit visibility identifies a connected inner patch but does not prove all inner lining or true exterior labels. The 209 faces also visible from lateral/up views can include mouth-visible lining or true exterior. A 3-edge secondary boundary remains unexplained. Regular boundaries and exact UV ancestry do not resolve these semantic uncertainties.",
+  "nextDecision": "Parent may inspect source mask/lining and author a justified complete rim/interior contract. Do not cut this provisional mask, repeat a velocity controller, or claim usable hand cavity until exact true exterior protection and complete interior scope are established.",
+  "preserve": "Original dense donor, prototype, UV/PBR maps, failed checkpoints, canonical body/head and own51 rig remain unchanged."
+}

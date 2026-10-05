@@ -1,0 +1,32 @@
+{
+  "accepted": false,
+  "status": "PROPOSED_MASK_BOUNDARY_AND_UV_LINEAGE_READBACK_ONLY",
+  "preflightSHA256": "604cc70ff0aa88e7d6e89f070506f252fc252098cfbfcbe5f13e2d5fac53a6eb",
+  "dense": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+    "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c"
+  },
+  "sourceReconstructionMaxError": 5.551115123125783e-17,
+  "sourceCornerUVProjectionMaxError": 0.0,
+  "boundaryVertices": 74,
+  "boundaryComponents": 2,
+  "boundaryDegreeNotTwoVertices": 0,
+  "boundaryComponentVertexCounts": [
+    71,
+    3
+  ],
+  "retainedFaceRows": 14544,
+  "candidateRemoveFaces": 1456,
+  "candidateDistalFaceOverlaps": 0,
+  "candidateExteriorVisibilityConflicts": 209,
+  "lineageContract": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity05/boundary-and-lineage-contract.npz",
+    "sha256": "c49c1a529a2cad228b670fa0ca590b91dbffd907f90636481883f8a2caa8b2be"
+  },
+  "surfaceEdited": false,
+  "limits": [
+    "This is combinatorial prediction only; no mesh has been cut. Visibility conflicts and incomplete interior coverage can reject the mask independently of regular boundaries.",
+    "Per-vertex original triangle/barycentric corner-UV projection is exact but may alias original UV seams; final production corner-UV baking/authoring remains required.",
+    "All retained source rows/coordinates can remain exact under face-only removal, but that does not prove semantic exterior preservation or whole palm/finger enclosure."
+  ]
+}

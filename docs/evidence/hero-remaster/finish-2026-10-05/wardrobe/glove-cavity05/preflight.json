@@ -1,0 +1,100 @@
+{
+  "accepted": false,
+  "status": "READ_ONLY_CLASSIFIER_EXECUTED_REMOVAL_NOT_EXECUTED",
+  "recipeSHA256": "82673bb2c6469ea048a01fdb27cbbfda180470cee4f9a713667939bbbe965990",
+  "source": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+    "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e"
+  },
+  "output": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity05/mask.npz",
+    "sha256": "63272e3ab9b63b86a28b17c7aa728000e8f121b682727165ab606cc8f0318389"
+  },
+  "anchors": [
+    [
+      -0.19893085956573486,
+      -0.655137,
+      -0.06397416442632675
+    ],
+    [
+      -0.25893085956573486,
+      -0.655137,
+      -0.06397416442632675
+    ],
+    [
+      -0.13893085956573487,
+      -0.655137,
+      -0.06397416442632675
+    ],
+    [
+      -0.19893085956573486,
+      -0.655137,
+      -0.12397416442632675
+    ],
+    [
+      -0.19893085956573486,
+      -0.655137,
+      -0.003974164426326754
+    ]
+  ],
+  "externalViews": [
+    [
+      -3.0,
+      0.0,
+      0.0
+    ],
+    [
+      3.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -3.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.0
+    ],
+    [
+      0.0,
+      3.0,
+      0.0
+    ]
+  ],
+  "cavityVisibleFacesPerAnchor": [
+    1432,
+    1438,
+    1416,
+    1411,
+    1454
+  ],
+  "cavityVisibleUnionFaces": 1457,
+  "visibleComponentCount": 2,
+  "roofSeedTriangle": 6364,
+  "connectedCandidateFaces": 1456,
+  "candidateExternalVisibilityConflicts": 209,
+  "candidateDistalProtectedOverlaps": 0,
+  "boundaryEdges": 74,
+  "negativeAxialRoofFaces": 239,
+  "candidatesByNormal": {
+    "negativeYBelowMinus09": 239
+  },
+  "removedFaces": 0,
+  "sourceEdited": false,
+  "limits": [
+    "Mask is only the connected cavity-visible patch from five anchors; occluded interior lining may remain and external-view conflicts must be resolved.",
+    "External lateral/up visibility is an observation, not proof of true exterior classification; cuff-mouth views may see interior.",
+    "No cut, fit, velocity, skin, body/bind/map edit or wearable/cavity acceptance. Root must inspect preflight; uncertainty is a stop condition."
+  ],
+  "statusClarification": {
+    "requestedBy": "Parent before checkpoint",
+    "previousStatus": "READ_ONLY_CUFF_REMOVAL_MASK_PREFLIGHT_NOT_EXECUTED",
+    "classificationExecuted": true,
+    "removalExecuted": false,
+    "numericalResultsChanged": false,
+    "executedRecipePreserved": true
+  }
+}

@@ -422,3 +422,17 @@ FULL/Four bodyloss8.290mm and moving normal errors near2 remain failures.
 No grounded/PBR/engine/art/device acceptance; F1 remains open. Array
 FOUR interpolation uses source Float32 weak-scalar arithmetic, not a
 misleading new display-vs-canonical field difference (actual0rows).
+
+## Glove interior mask stops before an unjustified cut
+
+Finding: Cavity visibility identifies a connected inner-cuff candidate,
+but it overlaps exterior views and leaves a second boundary. Retain the
+original donor and classify these faces visually before altering a shell.
+
+Validation: Parent source arrays and mask pins exact; independently
+rebuilds1,456candidate face IDs,209visibility conflicts and74boundary
+edges in71+3degree-two loops. Protected distal overlaps0; UV lineage exact.
+
+Limits: Visibility is not true exterior classification or full cavity
+proof. No face removal, fit, skin or wearable acceptance. Classifier did
+execute; metadata now explicitly distinguishes that from unexecuted removal.
