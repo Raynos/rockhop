@@ -754,3 +754,19 @@ Limits: Preparation only; no native/export/private-engine/normal/GPU/art
 acceptance. Inventory reports deltas/coverage and bind values, not winding
 or inverse-bind parity. Normal-route options are separate unimplemented
 choices. No execution-round increment; next ordinary game gate45.
+
+
+## Freeze shoulder preflight43 missing-key failure
+
+Finding: The array recipe assumed body06contains rigRest, but its compact
+field archive has no such key. Attempt43stops before mask construction,
+solve or predictions. Correct the source reference to pinned body52and
+check actual cache/archive schema before retrying the same mechanism.
+
+Validation: Nonblocking CPU2guard exits1 in0.784s. Unsuppressed KeyError
+trace preserved, warnings0. Parent reviews actual trace; body06master and
+field hashes unchanged. No candidate arrays existed or native source opened.
+
+Limits: All numerical/crossing/alias predictions remain unmeasured. This
+is a recipe-reference error, not a measured harmonic-field failure. Next
+separate corrected attempt44requires review; ordinary game gate45.

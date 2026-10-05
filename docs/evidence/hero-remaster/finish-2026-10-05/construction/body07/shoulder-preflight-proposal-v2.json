@@ -1,0 +1,60 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_ROOT_REVIEW_REQUIRED",
+  "intendedRound": 43,
+  "parentPriorCheckpoint": "4a5c8cdb",
+  "nativeNextRoundIfAdmitted": 44,
+  "recipe": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/preflight_shoulder_fields_v2.py",
+  "recipeSHA256": "1e301d61c59577a7b585cd80777e121edba3ffd670e6c86fa73cb01cb08471ca",
+  "syntax": "AST parsed only; v2 recipe not executed",
+  "command": "/usr/bin/lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock /usr/bin/env OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 VECLIB_MAXIMUM_THREADS=2 /Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py --locked --out docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/array-guard02 --limit-seconds 180 -- /Users/raynos/projects/localai/runtime/unimate/.venv/bin/python assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/preflight_shoulder_fields_v2.py --out docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/array-preflight02",
+  "bounds": {
+    "seconds": 180,
+    "threads": 2,
+    "lease": "nonblocking canonical shared model lock",
+    "freshOutput": "array-guard02 and array-preflight02",
+    "runtime": "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "threadCaps": [
+      "OPENBLAS_NUM_THREADS=2",
+      "OMP_NUM_THREADS=2",
+      "VECLIB_MAXIMUM_THREADS=2"
+    ]
+  },
+  "reason": "Exposed proximal-arm/chest shoulder witness triangles overlap under reach/raised/asymmetric own51 motion although original rest surface is clear. Primary chest/shoulder/upperArm assignment has abrupt competing mass; FOUR and raw FULL controls show the same fault. Test one anatomical field construction before deciding whether joint-aware deltoid/axilla geometry is required.",
+  "scope": {
+    "originalNativeVertices": 438,
+    "perSide": 219,
+    "immutableBoundaryPerSide": 54,
+    "shoulderAnchorsPerSide": 20,
+    "upperArmAnchorsPerSide": 23,
+    "unknownPerSide": 122,
+    "mask": "Original native rows below9037; identity canonical ancestry; shoulder distance<=.13m; upper-arm rest-axis q[-.45,.40]; lateral>=medial clavicle .2; current shoulder+upperArm FOUR>=.02; Z<float32(1.54). Hashes pinned in recipe.",
+    "shoulderAnchor": "Interior lateral clavicle fraction>.5 through upper-arm pivot, above both clavicle/arm pivot Z, q<0; shoulder-only three-primary partition.",
+    "upperArmAnchor": "Interior upper-arm axis fraction q>=.25; upperArm-only three-primary partition.",
+    "medialTorsoGuard": "All54 graph boundary raw rows per side preserved exactly, including original chest distribution. No artificial chest-only interior anchor."
+  },
+  "mechanism": "One inverse-rest-edge-length positive harmonic graph Dirichlet solve for CHEST/SHOULDER.side/UPPERARM.side ratios. Both derivative FULL and FOUR use the same fixed partition. No alpha, sweep, smoothing iteration, remesh or automatic alias expansion.",
+  "rawWeightContract": {
+    "otherInfluences": "Every OTHER bone raw Float32 value exact for entire body.",
+    "productionFULL": "Preserve original three-primary raw mass, including original raw row-sum residual; honestly named productionFullWeights.",
+    "productionFOUR": "Interior only: three-primary mass=1 minus sum(original OTHER raw values), disclose source-primary mass delta and Float32 storage residual. Boundary/outside438 raw rows exact, report their existing residual. No global normalization.",
+    "predictionOnly": "Normalize copies separately for actual measured LBS semantics; no reference/raw mutation.",
+    "distinctReferences": [
+      "body52 originalFullWeights raw FULL (13380 source rows)",
+      "body06 native bodyFullWeights raw FULL (9183 derivative rows)",
+      "body06 native bodyFourWeights raw FOUR (9183 derivative rows)",
+      "foundation canonicalWeights conditioned FOUR"
+    ]
+  },
+  "aliasGuard": "Group exact rest positions across all9183 rows where any438 member participates. Report original/candidate raw rows, canonical ancestry and anchor/boundary/outside membership. Pairwise original field differences must remain exact. Any conflict records SCOPE_CONFLICT_STOP_BEFORE_NATIVE; no scope expansion, UV/topology/normal merge or master.",
+  "targets": "Assert all recorded reach128/raised157/asymmetric186 shoulder witness vertices inside438, plus worst normal native4572/canonical8051. Predict all10 saved own51 matrices with baseline manual/native max<2e-6m. Exact outside438 predicted change0. Record area ratios and known strict crossing pairs using pinned existing classifier.",
+  "freezePolicy": "First candidate field/mask/reference NPZ written before predictions even if seam/contact predictions fail; no second solution or overwrite. Native source never opened/saved; no render/export.",
+  "preserved": "XYZ/topology/UV/raw+decoded rest normals/materials/images/head/neckloft/boxer/elbows/hips/original34/rest51/bind/world/savedposes are not edited. Body52 source FULL remains immutable.",
+  "limits": [
+    "Known crossing witness lists truncate at16; disappearance cannot prove absence of novel/other crossings. Whole new contact search is unmeasured here.",
+    "Positive areas do not establish winding/fold absence or animation acceptance.",
+    "Ten fitted samples are not held-out. Later actual native preservation/geometry QA and parent played mirrored asymmetry/reverse/grounded shoulder clips required.",
+    "If the fixed field does not improve source moving shoulders, freeze result and reconsider deltoid/axilla geometry or corrective design; no parameter campaign."
+  ],
+  "priorUnexecutedRecipeSHA256": "eaa1e81459e1211e31386643408123c362141fbc1359a3587e46b8c600e3a6da",
+  "arrayMath": "Finite inputs/outputs around harmonic solve and all dense products, including multi-input own51 LBS. ALL einsum contractions optimize=False to prevent optimizer-dispatched BLAS matrix multiply."
+}

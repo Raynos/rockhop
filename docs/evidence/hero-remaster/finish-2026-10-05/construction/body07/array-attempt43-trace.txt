@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/preflight_shoulder_fields_v2.py", line 314, in <module>
+    main(parser.parse_args().out)
+  File "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/preflight_shoulder_fields_v2.py", line 89, in main
+    rig_rest = fields['rigRest']
+               ~~~~~~^^^^^^^^^^^
+  File "/Users/raynos/projects/localai/runtime/unimate/.venv/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 261, in __getitem__
+    raise KeyError(f"{key} is not a file in the archive")
+KeyError: 'rigRest is not a file in the archive'
