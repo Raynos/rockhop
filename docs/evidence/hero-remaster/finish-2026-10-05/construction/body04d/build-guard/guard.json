@@ -1,0 +1,56 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/restore_body_full_control.py"
+  ],
+  "controllerPID": 23448,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 120.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 0.033,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 1.067,
+      "anonymousGiB": 27.0,
+      "wiredGiB": 6.4,
+      "freeGiB": 37.0
+    },
+    {
+      "seconds": 2.104,
+      "anonymousGiB": 26.9,
+      "wiredGiB": 6.7,
+      "freeGiB": 36.9
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 23452,
+  "exitCode": 0,
+  "elapsedSeconds": 2.811
+}

@@ -1,0 +1,58 @@
+{
+  "status": "UNACCEPTED_BODY04D_NATIVE_AUTHOR_HANDOFF_QA_PENDING",
+  "native": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04d/natural-foundation.blend",
+  "nativeSHA256": "7c364bea92384c5562b28088454afcc208fe4f3dc46a5ffd98c4a51588543d66",
+  "fieldsSHA256": "c71f518027f7580c87ea4e05cbd31c587de0d97a56db03b4f542339b530199cc",
+  "stablePins": {
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_clipped_neck_v2.py": "7b90f3a3fc6ac2d3fca2798cff38933a30bcc6f59007923613fea94ed7138000",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_clipped_neck_v3.py": "7e4d41062c2ecee4bbfd59649a7952c629d4a4a3c07fba9a7c97f5b6b97b8a9a",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/restore_body_full_control.py": "e7ffd4da1907e4890f0f94e7244934ee2621b2213e0cd3ff28c2d705ac705e75",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04c/authored-neck-fields.npz": "42a77a018bb62cf0a78262713b8a9f0294346c414b6a2614f467bec0d7ffe812",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04d/authored-neck-fields.npz": "c71f518027f7580c87ea4e05cbd31c587de0d97a56db03b4f542339b530199cc",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04b/build-guard/guard.json": "73cc043f902849f44ae20663f7e702e1c2b90956a9c59673beb359801e54e47f",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04b/preflight-rejected.json": "5c77d532351a53aa944059908269ce50ec46c6642a3662aba2e37bf5b9327b13",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04b/preflight-traceback.txt": "3de782cf50d1c098e231befdbf3be05fbd73f302facf7702ab9f7dd83b2b7ddd",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04c/build-guard/guard.json": "54380ac3c919dc474c4ddf0ee24211adbb258bf3cec7d8ff90843aba21212fec",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04c/authoring.json": "9ec0e80a44fd17571da2319b9600559cb1cfcdfb87cfe0cfa0e252a0fe944053",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04c/pre-save-normal-check.json": "f6ae50394959dc07a6ff29113dbde1ae69884d9b49b7884ba8147faeb177fbb1",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04c/field-admission-rejected.json": "de963230bbb1c4cc6d9005c03ebc4cd355110384cadf1c42ab8c7f80a8235c16",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04d/build-guard/guard.json": "4aabbdafa97f16c93c9128a6cb1d7121b62497d120008fa210af5cf9b0d50111",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body04d/authoring.json": "2669fecbc650e934e821ad0d001e7c25c2ebfdc851ec7e2cc4a0a3da0524b96b"
+  },
+  "sourceGeometry": "Original body03 controls preserved. Lower head clipped at Z=1.5750000476837158 m: 313 outer / 303 inner cut vertices, 8,021 lower faces removed and 616 clipped. Eight derived outer rings follow the canonical neck surface to 368 exact shared body seam knots. The inner layer is capped at the upper cut plane. No protected incident face is edited.",
+  "presaveProtectedNormals": {
+    "decodedCorners": 176435,
+    "changes": 0,
+    "maximumDelta": 0
+  },
+  "controlCorrection": "Body04c used a conditioned canonical FULL by mistake. Body04d restores the frozen full reference outside 56 original seam vertices. Actual native group readback is exact and retains 1,131 FULL/FOUR differences. The newly authored neck uses at most four intended fields with FULL=FOUR.",
+  "identity": "Original 34 objects and own 51 controls require independent reopen verification. Original upper head positions and UV ancestry are retained. New cut/loft point identity and source-edge/corner ancestry are explicit. The 4,976 unused original lower source rows are diagnostic ancestry.",
+  "failedControls": [
+    "Body04 head-only preflight assumption committed as 723554be; recipe and traceback remain immutable.",
+    "Body04b integer-index tessellation adapter bug preserved; no native was created.",
+    "Body04c incorrect body FULL field preserved; artificial zero loss is rejected."
+  ],
+  "lease": "Released; no pending native construction process",
+  "requiresBeforeNextGeometryExperiment": [
+    "Parent checkpoint commit of this stable, unaccepted unit.",
+    "Finite head/head and body/head rest/raised contacts, native/manual parity and FULL/FOUR loss.",
+    "Parent played gray/PBR moving review with grounded and anatomical stress drivers declared separately."
+  ],
+  "knownUnchangedFailures": [
+    "Body03 boxer crotch proper crossings: rest self 26; crouch self 101 / body 108; landing self 113 / body 132. A new crotch bridge and clearance unit is required.",
+    "Shoulder and hip fields remain open. Wardrobe and mobile production acceptance are still pending."
+  ],
+  "independentPreservation": {
+    "receipt": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body04d-preservation.json",
+    "sha256": "63455ce4e0b1a756cfc418910f87bb1219a26b1a362082db883ca48b3fb60c8d",
+    "original34ObjectsExact": true,
+    "originalAndCopied51RestWorldScaleExact": true,
+    "originalSavedPoseMaterialsImagesExact": true,
+    "protectedCornersPerControl": 176435,
+    "everyProtectedSourceCornerExactlyOnce": true,
+    "changedRawPackedCorners": 0,
+    "changedDecodedCorners": 0,
+    "protectedXYZUVExact": true,
+    "finiteContactsAndPlayedArtPending": true
+  }
+}

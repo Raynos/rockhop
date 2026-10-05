@@ -1,0 +1,86 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_clipped_neck_v3.py"
+  ],
+  "controllerPID": 20009,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.2,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.7
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 26.2,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.7
+    },
+    {
+      "seconds": 1.065,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.4
+    },
+    {
+      "seconds": 2.099,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 3.134,
+      "anonymousGiB": 26.6,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 4.162,
+      "anonymousGiB": 26.7,
+      "wiredGiB": 6.4,
+      "freeGiB": 37.4
+    },
+    {
+      "seconds": 5.195,
+      "anonymousGiB": 26.6,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 6.232,
+      "anonymousGiB": 26.7,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.2
+    },
+    {
+      "seconds": 7.265,
+      "anonymousGiB": 26.8,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.0
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 20013,
+  "exitCode": 0,
+  "elapsedSeconds": 8.157
+}

@@ -1,0 +1,31 @@
+{
+  "status": "UNACCEPTED_BODY04C_SCOPED_TOPOLOGY_REPLACEMENT_REQUIRES_INDEPENDENT_QA",
+  "source": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body03/natural-foundation.blend",
+  "sourceSHA256": "9709c203595940b0ed2498c762639237605dd33228d867c0de0d8100f8b61190",
+  "native": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04c/natural-foundation.blend",
+  "nativeSHA256": "1cdeb0fac48a16431dfb9f2f21e55d60c4ecc1ab7f5f82d948a49764e83db16a",
+  "recipeSHA256": "7e4d41062c2ecee4bbfd59649a7952c629d4a4a3c07fba9a7c97f5b6b97b8a9a",
+  "fieldsSHA256": "42a77a018bb62cf0a78262713b8a9f0294346c414b6a2614f467bec0d7ffe812",
+  "cutNativeZ": 1.5750000476837158,
+  "cutRingVertices": [
+    313,
+    303
+  ],
+  "removedOriginalHeadPolygons": 8021,
+  "clippedOriginalHeadPolygons": 616,
+  "sharedSeamKnots": 368,
+  "outerGeometry": "Coherent canonical neck cross-sections plus compact quintic endpoint displacements; original cut and body seam exact. Inner cap remains at the upper cut plane.",
+  "protectedNormals": {
+    "protectedCorners": 176435,
+    "changedProtectedCorners": 0,
+    "maximumProtectedDelta": 0.0
+  },
+  "semanticFields": "At most four intended fields: chest/neck/ipsilateral shoulder/upperArm near base; arms vanish before head blend starts. New neck full and four are identical authored fields.",
+  "ancestry": "Original upper source vertices retain indexes and exact positions; removed lower points remain unused diagnostic rows. Clipped cut points have source-edge ancestry; loft points SOURCE_ID=-1. Original upper corner/UV/PBR preserved; new lower surface has derived UV ancestry.",
+  "limits": [
+    "No finite topology/self/body contacts or motion acceptance yet.",
+    "Body03 boxer clearance failures retained unchanged, shoulder/hip field repair remains a separate next unit.",
+    "New lower loft UV extends the original cut-edge skin UV vertically; original protected appearance exact. Derived lower texture stretch/seam still needs played PBR review.",
+    "Retained unused original rows are diagnostic ancestry, not final phone production topology."
+  ]
+}

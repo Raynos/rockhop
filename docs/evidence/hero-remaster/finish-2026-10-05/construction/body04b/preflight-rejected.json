@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_TRIANGULATION_ADAPTER_NO_NATIVE_CREATED",
+  "recipe": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_clipped_neck_v2.py",
+  "recipeSHA256": "7b90f3a3fc6ac2d3fca2798cff38933a30bcc6f59007923613fea94ed7138000",
+  "nativeCreated": false,
+  "actualOutcome": "Blender5.2 tessellate_polygon returns integer vertex indices. Recipe incorrectly treats them as Vector objects. Explicit python-exit-code1 and guard exitCode1 preserve actual failure.",
+  "cutFieldCorrectionPassed": true,
+  "correctedAdapter": "Use inner[int(index)] for each returned polygon vertex index; original source cut, canonical loft and weight design stay identical.",
+  "workerLogSHA256": "3de782cf50d1c098e231befdbf3be05fbd73f302facf7702ab9f7dd83b2b7ddd",
+  "geometryAndNormalsMeasured": false
+}

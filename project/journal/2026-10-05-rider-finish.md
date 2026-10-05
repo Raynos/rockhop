@@ -276,3 +276,18 @@ No sole point penetrates beyond1mm; recorded drift maximum0.355313mm.
 Limits: No parent moving review yet, complete sole/boots, COM, engine or
 bike proof. Jump rate23.913043Hz is retained explicitly; new30Hz fixture
 needs exact endpoints/reversal plus walk/jog stance and flight phases.
+
+## Clipped neck preserves identity but fails actual geometry
+
+Finding: Clipped lower topology retains all protected identity fields but
+introduces proper neck crossings. Body04d restores the actual FULL control
+outside56 seam rows after rejecting04c's conditioned substitute.
+
+Validation: Independent reopen34objects/own51 passes;176,435 raw and decoded
+protected normals exact. Parent recomputes strict interior crossing of two
+new head triangles. Rest body/head112 and head self251; raised156/248.
+Round18 ordinary clear/crash/restart passes byte-identical finish, errors0.
+
+Limits: Unaccepted topology checkpoint, no moving appearance qualification.
+Frozen integer-index API failure and rejected FULL control retained. Actual
+loft/body seam witnesses must guide a nonintersecting reconstruction.

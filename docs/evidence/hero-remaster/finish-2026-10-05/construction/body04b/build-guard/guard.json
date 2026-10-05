@@ -1,0 +1,68 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_clipped_neck_v2.py"
+  ],
+  "controllerPID": 18023,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.1,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.8
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 26.1,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.8
+    },
+    {
+      "seconds": 1.064,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.4
+    },
+    {
+      "seconds": 2.1,
+      "anonymousGiB": 26.6,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 3.134,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.3
+    },
+    {
+      "seconds": 4.165,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.9,
+      "freeGiB": 37.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 18027,
+  "exitCode": 1,
+  "elapsedSeconds": 5.177
+}
