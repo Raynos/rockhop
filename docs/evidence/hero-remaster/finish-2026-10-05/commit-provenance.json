@@ -1,0 +1,20 @@
+{
+  "status": "ORIGINAL_PUBLICATION_CONTENT_PRESERVED_MESSAGE_REPLACED_BY_CONCURRENT_AMEND",
+  "originalCommitMetadata": "4de5b6c7e37fee12b34311c1c253a7cef272691c\nJake Verbaten\nMon Oct 5 08:57:25 2026 -0500\ndocs(rider): preserve the consolidated recovery plan\n\nThe saved rider handoff needs durable history for another agent to resume.\nPreserve its exact 752 lines and register it as supplemental context.\nExisting rider acceptance gates remain open.\n\nValidation: both canonical tables match; all seven local links resolve;\nstaged whitespace passes. No asset or gameplay changes in this commit.\nAsk: 306\n\nAssisted-by: Codex:gpt-6.1-sol\n\n",
+  "originalForeignPaths": [
+    "docs/plans/sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md",
+    "project/journal/2026-10-05-rider-consolidated-plan-publication.md",
+    "docs/tasks/ASKS.md",
+    "docs/plans/README.md"
+  ],
+  "foreignPathDiffToReplacementEmpty": true,
+  "replacementCommit": "e13f4844",
+  "addedOwnedEvidence": [
+    "harness/rider-finish/field-provenance.py",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body04d-native-contacts.json",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body04d-field-provenance-reproduced.json",
+    "project/journal/2026-10-05-rider-finish.md"
+  ],
+  "cause": "Root attempted to amend its previous body checkpoint while another task committed plan publication. Content remains intact, but amendment applied to the newer commit and replaced its message.",
+  "policy": "Additive commits only from now; preserve all foreign content and record original metadata rather than rewriting shared history again."
+}
