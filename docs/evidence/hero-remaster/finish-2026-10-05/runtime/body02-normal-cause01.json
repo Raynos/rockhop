@@ -1,0 +1,149 @@
+{
+  "status": "UNACCEPTED_SINGLE_WITNESS_NUMERICAL_CAUSE_REPRODUCED",
+  "input": "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body02-normal-witness01.json",
+  "inputSHA256": "cbbd622d37fcbd9095c720597c66803af757744c07d887312057683d23a77b71",
+  "recipeSHA256": "762348e1d12488f28d5ceeb33e53a1853488972ff564134706ce02e7c15f9692",
+  "mechanism": "Float32 Newell accumulation subtracts milliscale local-coordinate products to nanometre-squared area. Cancellation perturbs the recomputed automatic face normal; packed custom_normal[0,0] uses the automatic fan normal, and these three evaluated corner normals follow this face.",
+  "records": {
+    "full": {
+      "newellFloat32": {
+        "terms": [
+          [
+            0.0010249061742797494,
+            1.1360641110513825e-05,
+            5.3136018323129974e-06
+          ],
+          [
+            -0.003936311695724726,
+            -4.411303598317318e-05,
+            -2.0799972844542935e-05
+          ],
+          [
+            0.0029114075005054474,
+            3.2751591788837686e-05,
+            1.5486375559703447e-05
+          ]
+        ],
+        "sum": [
+          1.862645149230957e-09,
+          -8.039933163672686e-10,
+          5.4569682106375694e-12
+        ],
+        "normal": [
+          0.9181183530977232,
+          -0.3962971797550719,
+          0.0026897998625909857
+        ]
+      },
+      "newellFloat64": {
+        "terms": [
+          [
+            0.0010249061239164803,
+            1.1360641245516945e-05,
+            5.3136020272681606e-06
+          ],
+          [
+            -0.003936311533103698,
+            -4.4113034928017214e-05,
+            -2.079997254100796e-05
+          ],
+          [
+            0.0029114076158860414,
+            3.2751592549118413e-05,
+            1.5486375500639582e-05
+          ]
+        ],
+        "sum": [
+          2.2066988236701945e-09,
+          -8.011333818558342e-10,
+          4.986899782011278e-12
+        ],
+        "normal": [
+          0.9399693716093971,
+          -0.3412522059833601,
+          0.002124228736651904
+        ]
+      },
+      "float32NewellToActualFaceVectorError": 7.390059714510311e-08,
+      "float64NewellToDirectCrossVectorError": 0.0,
+      "actualFaceToDirectFloat32CrossVectorError": 0.05922698163850892,
+      "automaticCornersToActualFaceMaximumVectorError": 6.664164567997345e-08,
+      "linearSkinNormalToNativeCornerMaximumVectorError": 0.05846944868522995,
+      "nativeToManualPositionMaximumErrorM": 4.030092699514238e-08,
+      "restTriangleMinimumAltitudeM": 1.7121725080276727e-06
+    },
+    "four": {
+      "newellFloat32": {
+        "terms": [
+          [
+            0.0010249061742797494,
+            1.1360641110513825e-05,
+            5.3136018323129974e-06
+          ],
+          [
+            -0.003936311695724726,
+            -4.411303598317318e-05,
+            -2.0799972844542935e-05
+          ],
+          [
+            0.0029114075005054474,
+            3.2751591788837686e-05,
+            1.5486375559703447e-05
+          ]
+        ],
+        "sum": [
+          1.862645149230957e-09,
+          -8.039933163672686e-10,
+          5.4569682106375694e-12
+        ],
+        "normal": [
+          0.9181183530977232,
+          -0.3962971797550719,
+          0.0026897998625909857
+        ]
+      },
+      "newellFloat64": {
+        "terms": [
+          [
+            0.0010249061239164803,
+            1.1360641245516945e-05,
+            5.3136020272681606e-06
+          ],
+          [
+            -0.003936311533103698,
+            -4.4113034928017214e-05,
+            -2.079997254100796e-05
+          ],
+          [
+            0.0029114076158860414,
+            3.2751592549118413e-05,
+            1.5486375500639582e-05
+          ]
+        ],
+        "sum": [
+          2.2066988236701945e-09,
+          -8.011333818558342e-10,
+          4.986899782011278e-12
+        ],
+        "normal": [
+          0.9399693716093971,
+          -0.3412522059833601,
+          0.002124228736651904
+        ]
+      },
+      "float32NewellToActualFaceVectorError": 7.390059714510311e-08,
+      "float64NewellToDirectCrossVectorError": 0.0,
+      "actualFaceToDirectFloat32CrossVectorError": 0.05922698163850892,
+      "automaticCornersToActualFaceMaximumVectorError": 6.664164567997345e-08,
+      "linearSkinNormalToNativeCornerMaximumVectorError": 0.05846944868522995,
+      "nativeToManualPositionMaximumErrorM": 4.030092699514238e-08,
+      "restTriangleMinimumAltitudeM": 1.7121725080276727e-06
+    }
+  },
+  "limits": [
+    "This reproduction explains only rigid head native triangle61196/polygon61151 at saved turn244.",
+    "Position parity does not grant normal parity. Maximum whole-head/body errors near2 remain unresolved and their parity gates remain failed.",
+    "No tolerance was relaxed and no geometry, normals, weights, bind, animation or player asset was changed.",
+    "CPU/native normal diagnosis grants no GPU, moving-art, contact or device acceptance."
+  ]
+}

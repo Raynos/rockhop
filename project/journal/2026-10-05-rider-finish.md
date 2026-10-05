@@ -389,3 +389,19 @@ positions and normals; center first-hit delta0.00000502source units.
 Limits: Source units are uncalibrated. Zero boundary edges do not prove
 absence of a mouth. These finite rays do not prove global cavity/occupancy
 or explain every finger crossing. No cut, fitting, skin or art admission.
+
+## One moving source-normal mismatch has a measured numerical cause
+
+Finding: Automatic normals on one rigid head triangle suffer Float32
+Newell cancellation. Its1.712µm altitude lets milliscale coordinate products
+cancel to area1.86e-9; rotating the rest normal does not reproduce that
+native automatic recomputation. Inverse-transpose is not the remedy.
+
+Validation: Read-only guarded native reopen2.089s/CPU2, exact saved own51
+skin matrices/source bytes. Parent independently recomputes Float32 terms
+from evaluated localXYZ; native face residual7.391e-8 for FULL/FOUR.
+Round24 ordinary clear/crash/restart passes exact finish bytes, errors0.
+
+Limits: Only source triangle61196 at savedturn244. Wholehead/body errors
+near2 remain unresolved; no gate relaxation, normals/asset edit, moving
+art, GPU, garment or device acceptance.

@@ -1,0 +1,30 @@
+{
+  "status": "PARENT_INDEPENDENT_SINGLE_WITNESS_ALGEBRA_PASS_NO_PARITY_ACCEPTANCE",
+  "witnessSHA256": "cbbd622d37fcbd9095c720597c66803af757744c07d887312057683d23a77b71",
+  "causeSHA256": "bff17821feaadf85e5dbf4fcd1792a98afb58ad48c9fdcfea0f0292df8b25fb0",
+  "checks": {
+    "full": {
+      "actualNewellNormalResidual": 7.39005971451031e-08,
+      "float32Accumulation": [
+        1.862645149230957e-09,
+        -8.039933163672686e-10,
+        5.4569682106375694e-12
+      ],
+      "sourceRestAltitudeM": 1.7121725080276727e-06
+    },
+    "four": {
+      "actualNewellNormalResidual": 7.39005971451031e-08,
+      "float32Accumulation": [
+        1.862645149230957e-09,
+        -8.039933163672686e-10,
+        5.4569682106375694e-12
+      ],
+      "sourceRestAltitudeM": 1.7121725080276727e-06
+    }
+  },
+  "method": "Recompute each cyclic-coordinate product and Float32 accumulation independently from pinned evaluated LOCALXYZ. Verify actual auto packed normals and rigid deform memberships. No independent Blender rerun.",
+  "limits": [
+    "Only one very thin rigid source triangle; whole head/body maxima near2 remain unresolved.",
+    "No normal gate relaxation, asset or art acceptance."
+  ]
+}
