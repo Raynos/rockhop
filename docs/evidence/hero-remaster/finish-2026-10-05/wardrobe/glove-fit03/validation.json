@@ -1,0 +1,59 @@
+{
+  "accepted": false,
+  "status": "FAILED_BODY_CLEARANCE_SMALL_SURFACE_ENVELOPE_CHECKPOINT",
+  "items": {
+    "R": {
+      "candidatePinsMatch": true,
+      "exactSourceLineageFields": {
+        "uv": true,
+        "branchLabels": true,
+        "originalTriangleRows": true,
+        "barycentric": true,
+        "sourceXYZ": true,
+        "sourceFaces": true
+      },
+      "own51RestAndNamesExact": true,
+      "finite": true,
+      "fullBodyContactInputExact": true,
+      "contactInput": {
+        "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-fit03-run01/contacts-R-input.json",
+        "sha256": "a543653093bfab37b2581535e489194ab1e37ee27e36667b5b6668a5327a8eb4"
+      },
+      "restBodyContacts": 1743,
+      "restSelfContacts": 0,
+      "degenerateGloveRowsExcluded": 0
+    },
+    "L": {
+      "candidatePinsMatch": true,
+      "exactSourceLineageFields": {
+        "uv": true,
+        "branchLabels": true,
+        "originalTriangleRows": true,
+        "barycentric": true,
+        "sourceXYZ": true,
+        "sourceFaces": true
+      },
+      "own51RestAndNamesExact": true,
+      "finite": true,
+      "fullBodyContactInputExact": true,
+      "contactInput": {
+        "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-fit03-run01/contacts-L-input.json",
+        "sha256": "01bb867f8887eb5226717cfebd9efca8e75e02a7665c5c43777966b0efec40ea"
+      },
+      "restBodyContacts": 1743,
+      "restSelfContacts": 0,
+      "degenerateGloveRowsExcluded": 0
+    }
+  },
+  "inputPinsMatch": true,
+  "foundationPinsMatch": true,
+  "witnessPinsMatch": true,
+  "exactRToLMirrorAndReversedWinding": true,
+  "finiteSignedWitnesses": true,
+  "maxGlobalStepLipschitzProduct": 0.15000000000000002,
+  "steps": 160,
+  "warningFreeWorker": true,
+  "skinAttempted": false,
+  "renderAttempted": false,
+  "limits": "Numerical rejection only; no new played geometry review or art verdict. Local closest normal projections among semantic triangle candidates are not global SDF/solid occupancy. Full original-body finite SAT fails; no wearable, skin, native, engine, grip, PBR bake, device or art acceptance."
+}

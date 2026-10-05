@@ -327,3 +327,18 @@ old/newglove distinction, currentneckscope, rawFULL and topology/normal gaps.
 Limits: No new asset or gate acceptance, no publication/toolcampaign. Facial
 rigging capability is unimplemented and its remaster scope answer remains pending.
 Core body/wardrobe and source-matched engine qualification continue autonomously.
+
+## Semantic glove clearance fails its bounded controller
+
+Finding: A semantic surface field keeps the connected glove self-contact
+count0 but still crosses the full wearer1,743times per side. Gaussian solve
+conditioning yields tiny globally bounded steps; extending the same solve
+is not a fitting solution. Cavity and real cuff topology remain open.
+
+Validation: Parent reads full contact bodyXYZ/faces against immutable source,
+checks exact source/output/witness pins, lineage, mirror/winding and AST.
+Local witness minimum−21.688mm/2,356belowtarget; finite/warning-free run.
+
+Limits: Numeric failure only; no new played art verdict, skin or grip. Local
+normal witnesses are not global solid occupancy. A new actual enclosure
+mechanism must keep original source appearance/lineage and sound topology.

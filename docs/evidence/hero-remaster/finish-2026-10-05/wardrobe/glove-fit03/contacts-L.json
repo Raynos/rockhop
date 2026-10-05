@@ -1,0 +1,77 @@
+{
+  "accepted": false,
+  "status": "FINITE_REST_SURFACE_CONTACT_CHECK_ONLY",
+  "limits": "Finite SAT contacts, no signed inside/outside, swept proof, collider response, native/GPU or art acceptance.",
+  "frames": [
+    {
+      "side": "L",
+      "frame": 0,
+      "time": 0,
+      "gloveDegenerateRowsExcluded": 0,
+      "bodyDegenerateRowsExcluded": 0,
+      "bodyContact": {
+        "pairs": 1743,
+        "witnesses": [
+          {
+            "triangleA": 286,
+            "triangleB": 5438
+          },
+          {
+            "triangleA": 286,
+            "triangleB": 5443
+          },
+          {
+            "triangleA": 287,
+            "triangleB": 5439
+          },
+          {
+            "triangleA": 287,
+            "triangleB": 5452
+          },
+          {
+            "triangleA": 287,
+            "triangleB": 5438
+          },
+          {
+            "triangleA": 288,
+            "triangleB": 4629
+          },
+          {
+            "triangleA": 288,
+            "triangleB": 4553
+          },
+          {
+            "triangleA": 288,
+            "triangleB": 4574
+          },
+          {
+            "triangleA": 288,
+            "triangleB": 4575
+          },
+          {
+            "triangleA": 288,
+            "triangleB": 4628
+          },
+          {
+            "triangleA": 288,
+            "triangleB": 4614
+          },
+          {
+            "triangleA": 289,
+            "triangleB": 4553
+          }
+        ],
+        "candidates": 26937,
+        "epsilonM": 1e-9,
+        "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+      },
+      "selfContact": {
+        "pairs": 0,
+        "witnesses": [],
+        "candidates": 22085,
+        "epsilonM": 1e-9,
+        "limits": "Finite contact only; no swept/volume penetration. Shared native IDs are excluded only when explicitly requested."
+      }
+    }
+  ]
+}
