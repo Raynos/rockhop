@@ -1,0 +1,46 @@
+2026-10-05 08:28:05.095 | INFO     | data_process.motion_export.export_general:export_asset:106 - Processing asset: /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/input/RiderFinishIdle.glb
+08:28:05 | INFO: Data are loaded, start creating Blender stuff
+08:28:05 | INFO: Blender create Mesh node Finish natural body.002
+08:28:05 | INFO: Blender create Mesh node base.004
+08:28:05 | INFO: Blender create Mesh node Protected coherent cheek patch.001
+08:28:05 | INFO: Blender create Mesh node Finish natural head.002
+08:28:05 | INFO: glTF import finished in 0.42s
+2026-10-05 08:28:05.551 | INFO     | data_process.utils.blender_export:load_scene:1002 - Using armature: Finish rig, bones=51
+2026-10-05 08:28:05.551 | INFO     | data_process.utils.blender_export:load_scene:1007 - Using mesh: Finish head FOUR, vertices=216103
+2026-10-05 08:28:05.551 | INFO     | data_process.utils.blender_export:discover_pose_actions:149 - Found action: Animation, frames=[0,60]
+2026-10-05 08:28:05.551 | INFO     | data_process.motion_export.export_general:export_asset:126 - Total actions to export: 1
+2026-10-05 08:28:05.644 | INFO     | data_process.utils.blender_export:prune_secondary_roots:418 - Only one or no root bone found. Skipping prune_secondary_roots.
+2026-10-05 08:28:06.008 | INFO     | data_process.utils.blender_export:save_rest_pose_vis:1091 - Saved rest pose visualization: /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/preprocessed/export/tpose/RiderFinishIdle.png
+2026-10-05 08:28:06.008 | INFO     | data_process.motion_export.export_general:export_asset:164 - Removed 49 T-pose frames from 'Animation', 12 frames remaining
+2026-10-05 08:28:06.023 | INFO     | data_process.utils.blender_export:save_motion:1129 - Saved motion data: /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/preprocessed/export/motions/RiderFinishIdle-Animation.npz
+2026-10-05 08:28:06.024 | INFO     | data_process.motion_export.export_general:export_asset:185 - Saved 1 clip(s) for 'RiderFinishIdle'
+2026-10-05 08:28:06.024 | INFO     | data_process.mesh_animation.preprocess_char:preprocess_asset:304 - Export stage: 1 clip NPZ(s)
+2026-10-05 08:28:06.096 | INFO     | data_process.utils.motion_features:process_object:865 - [RiderFinishIdle] n_joints=51 fps=30 scale=0.7714 files=1
+2026-10-05 08:28:06.098 | INFO     | data_process.utils.motion_features:process_object:909 - [RiderFinishIdle] saved 1 clips (12 frames), filtered 0
+2026-10-05 08:28:06.098 | INFO     | data_process.mesh_animation.preprocess_char:preprocess_asset:318 - Feature stage: 1 clip(s), 12 frames, 51 joints
+2026-10-05 08:28:06.099 | INFO     | data_process.mesh_animation.preprocess_char:preprocess_asset:327 - Saved cond -> /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/preprocessed/cond.npy
+08:28:06 | INFO: Data are loaded, start creating Blender stuff
+08:28:06 | INFO: Blender create Mesh node Finish natural body.002
+08:28:06 | INFO: Blender create Mesh node base.004
+08:28:06 | INFO: Blender create Mesh node Protected coherent cheek patch.001
+08:28:06 | INFO: Blender create Mesh node Finish natural head.002
+08:28:06 | INFO: glTF import finished in 0.40s
+2026-10-05 08:28:06.536 | INFO     | data_process.utils.blender_rig:load_file:76 - Imported: ['Finish body FOUR', 'Finish boxer FOUR', 'Finish coherent cheek', 'Finish head FOUR', 'Finish rig', 'Icosphere']
+2026-10-05 08:28:06.536 | INFO     | data_process.mesh_animation.preprocess_char:bake_canonical_asset:184 - Dropped 1 non-skinned scene object(s): ['Icosphere']
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+08:28:06 | INFO: Starting glTF 2.0 export
+08:28:06 | INFO: Extracting primitive: Finish natural body.002
+08:28:07 | INFO: Primitives created: 1
+08:28:07 | INFO: Extracting primitive: base.004
+08:28:07 | INFO: Primitives created: 1
+08:28:07 | INFO: Extracting primitive: Protected coherent cheek patch.001
+08:28:07 | INFO: Primitives created: 1
+08:28:07 | INFO: Extracting primitive: Finish natural head.002
+08:28:07 | INFO: Primitives created: 1
+08:28:07 | INFO: Finished glTF 2.0 export in 0.4084131717681885 s
+2026-10-05 08:28:07.394 | INFO     | data_process.utils.blender_rig:export_selected_to_file:677 - Saved animated character: /Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/preprocessed/RiderFinishIdle_canonical.glb
+
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

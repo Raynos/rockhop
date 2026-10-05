@@ -205,3 +205,18 @@ Limits: Native evaluated/CPU formula normals stay separate failed fields;
 boxer/cheek exact normal-corner comparison is unmeasured. Baked idleinput only,
 no real GPU/materials/browser/device/animation pass. Official model preprocessing
 still must admit61rawframes for60features; no generated motion accepted.
+
+## UniMate preserves skeleton but removes the idle timeline
+
+Finding: The installed training export removes49near-rest frames from the
+same51 idle input. Preprocessed motion has12rawframes, failing61-frame
+admission before inference. Joint set/hierarchy/depth9 remain valid for the
+released71-joint/19-depth/60-motion-frame configuration.
+
+Validation: Guard exited1 after3.25s, preprocess itself exited0; parent
+checks input/contract/config/backend and dependency pins, output shape,
+actual removal log and AST. Original61-key input remains unchanged.
+
+Limits: No inference or generated motion. The next owned version disables
+the supported near-rest removal filter, preserving original61samples and
+timestamps instead of padding a truncated clip. Canonical rebind model-only.

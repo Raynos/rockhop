@@ -1,0 +1,24 @@
+{
+  "status": "INPUT_ADMISSION_FAIL_NO_INFERENCE",
+  "inputSHA256": "2b07ce4bd70b20a075de21e9769d79a9d9b77952d06594d7b206fc9abeaab50b",
+  "recipeSHA256": "34b7c1b9702b8d8a715a3e74284fe38b7aff5a9abf955ebb55b10812acdc0d6e",
+  "dependencyPins": {
+    "/Users/raynos/projects/localai/bin/unimate/blender_preprocess.py": "e7aa9636c7223998f8988a6e21f480d3e7442844ceee6388cffa95a22e3b3102",
+    "/Users/raynos/projects/localai/runtime/unimate/code/data_process/motion_export/export_general.py": "d18d3eff2a734a943d9a1267a5071050b99cc454b5022fd8412f0f3b7cd6709c",
+    "/Users/raynos/projects/localai/runtime/unimate/code/data_process/utils/blender_export.py": "ba02b974b510b14558e88fa74edf4da32124015b1ff6df886b89ff3cfea9d3e7"
+  },
+  "rawBakedFrames": 61,
+  "rawPreprocessedFrames": 12,
+  "removedNearRestFrames": 49,
+  "jointCount": 51,
+  "observedDepth": 9,
+  "preprocessExitCode": 0,
+  "guardExitCode": 1,
+  "elapsedS": 3.25,
+  "sourceUnchanged": true,
+  "nextMethod": "Owned versioned preprocessor using existing export_asset remove_tpose=False,min_frames=1 to retain original61 baked samples/timestamps; no endpoint padding necessary.",
+  "limits": [
+    "No inference, neural motion, decode, native retarget, contacts, art or quality claim.",
+    "Existing canonical model-only rebind cannot replace source own51 bones, rest or geometry."
+  ]
+}

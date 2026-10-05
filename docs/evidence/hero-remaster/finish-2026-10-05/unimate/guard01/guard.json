@@ -1,0 +1,66 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/trial.py",
+    "--input",
+    "harness/out/rider-finish/body02-intake02/unimate-same51-idle-30fps.glb",
+    "--input-sha256",
+    "2b07ce4bd70b20a075de21e9769d79a9d9b77952d06594d7b206fc9abeaab50b",
+    "--contract",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-contract.json",
+    "--out",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/unimate/trial01"
+  ],
+  "controllerPID": 12872,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 700.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.4,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.5
+    },
+    {
+      "seconds": 0.033,
+      "anonymousGiB": 26.4,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.5
+    },
+    {
+      "seconds": 1.063,
+      "anonymousGiB": 26.8,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.2
+    },
+    {
+      "seconds": 2.101,
+      "anonymousGiB": 27.0,
+      "wiredGiB": 6.4,
+      "freeGiB": 37.1
+    },
+    {
+      "seconds": 3.134,
+      "anonymousGiB": 26.7,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 12876,
+  "exitCode": 1,
+  "elapsedSeconds": 3.25
+}

@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "label": "preprocess",
+      "command": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "-b",
+        "--factory-startup",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "-P",
+        "/Users/raynos/projects/localai/bin/unimate/blender_preprocess.py",
+        "--",
+        "--char_path",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/input/RiderFinishIdle.glb",
+        "--output_dir",
+        "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/unimate/data/trial01/preprocessed",
+        "--face_r",
+        "thigh.R",
+        "--face_l",
+        "thigh.L",
+        "--formats",
+        "glb",
+        "--keep_intermediate"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 3.1167658329941332,
+      "logSHA256": "a94424a6ce867139aa211fde043052c37217a7b158867efae39885fd77250024"
+    }
+  ],
+  "wallSeconds": 3.116888541728258
+}
