@@ -27,3 +27,17 @@ coverage, upper-triangle protection, cheek exclusion and Python syntax.
 
 Limits: Source/repair contract only; candidate construction and moving review
 remain open. F0 minimum reference/driver/tolerance requirements not yet closed.
+
+## Reversible generic-motion diagnostics
+
+Finding: 14 anatomical FK cases supply469 explicit samples with exact reversed
+command paths. Action-off rest differs from directed neutral/A/T. General reach,
+raised/asymmetric arms, crouch, turn, jump/landing and bounded gait/idle cycles
+can test the same candidate without changing its bind.
+
+Validation: Parent reread generator/tests;2tests and scoped lint pass. Persisted
+fixture matches regeneration exactly and every time/rotation/translation is
+finite. Tiny positive durations now fail clearly before zero-interval division.
+
+Limits: Generated diagnostic commands only; synthetic cycles do not establish
+physical gait, support, natural animation, native/export parity or appearance.
