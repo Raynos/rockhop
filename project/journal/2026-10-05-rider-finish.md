@@ -171,3 +171,19 @@ control is preserved beside finite warning-free elementwise readback.
 Limits: Distal source correspondence only. Source handedness, continuous fit,
 cavity, normalized moving skin, real grip, PBR and physical devices remain open.
 The failed glove-fit01 stays frozen; new fitting follows separately.
+
+## Semantic boxer selection removes finger islands
+
+Finding: Body03 selects690 canonical pelvis/thigh points with explicit original
+ancestry; no hand/arm fields remain. Rest body/boxer crossings drop to zero.
+The9mm shell still self-crosses26 times and penetrates under crouch/landing,
+so semantic selection is a checkpoint rather than clearance acceptance.
+
+Validation: Independent reopen preserves34 originals, own51 rest/world/scale,
+poses/materials/images and exact protected XYZ/UV/176,435 normals. Five native
+samples agree with normalized manual LBS within0.463µm. Parent checks source/
+recipe/input pins/ASTs and plays235 silent grayframes to39.167s; hands coherent.
+
+Limits: Existing neck/shoulder/four-weight failures remain; grounded motion
+and wardrobe absent. Rejected INT-only SOURCE_ID checker is preserved, then
+finite integral FLOAT−1 accepted explicitly. No body/clearance/art promotion.
