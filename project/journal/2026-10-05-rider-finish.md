@@ -770,3 +770,20 @@ field hashes unchanged. No candidate arrays existed or native source opened.
 Limits: All numerical/crossing/alias predictions remain unmeasured. This
 is a recipe-reference error, not a measured harmonic-field failure. Next
 separate corrected attempt44requires review; ordinary game gate45.
+
+
+## Freeze shoulder44 opposite-side assertion error
+
+Finding: The right-side OTHER guard compares the whole body after permitted
+left-side edits, rejecting its left shoulder/upperArm fields. Restrict that
+guard to the declared side, retain the final global outside438guard and
+freeze first candidate before outcome checks. No partition retune.
+
+Validation: Corrected source rest equality passes. CPU2guard stops with
+AssertionError, exit1 in0.792s, warnings0. Parent reads trace/guard; native
+master/fields unchanged. Both solves occurred in memory but no candidate
+file was written before the assertion. No native author or retry.
+
+Limits: Crossings/aliases/four-slot results remain unmeasured. This is an
+implementation assertion failure, not a measured deformation failure.
+Next corrected array45must include ordinary coldboot/clear/crash/restart.

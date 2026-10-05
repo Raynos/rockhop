@@ -1,0 +1,40 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/preflight_shoulder_fields_v3.py",
+    "--out",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/array-preflight03"
+  ],
+  "controllerPID": 56060,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 180.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.0,
+      "wiredGiB": 6.6,
+      "freeGiB": 39.4
+    },
+    {
+      "seconds": 0.027,
+      "anonymousGiB": 26.0,
+      "wiredGiB": 6.6,
+      "freeGiB": 39.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 56064,
+  "exitCode": 1,
+  "elapsedSeconds": 0.792
+}

@@ -1,0 +1,29 @@
+{
+  "status": "FAILED_ARRAY44_IMPLEMENTATION_GUARD_FROZEN_NO_RETRY",
+  "checkpointBeforeAttempt": "41b398b3",
+  "exitCode": 1,
+  "elapsedSeconds": 0.792,
+  "failure": "Wrong global per-side OTHER assertion at line175: right OTHER includes allowed left shoulder/upperArm primary changes from preceding side. Guard must compare side rows and global outside438, not global right OTHER against all rows. Mechanism not assessed.",
+  "traceback": "array-guard03/worker.log",
+  "fieldsFrozen": false,
+  "reasonNoFields": "Assertion occurred inside side loop before frozen-array write. In-memory partial field solution unavailable after process exited. No candidate file exists.",
+  "numericalPredictions": "UNMEASURED",
+  "crossingPredictions": "UNMEASURED",
+  "aliasGuard": "UNMEASURED",
+  "warnings": "No warnings; unsuppressed AssertionError retained",
+  "sourceNativeUnchanged": true,
+  "sourceFieldsUnchanged": true,
+  "sourcePins": {
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend": "66c45ab5a76fe592b0b284a5a96dc3e6ba1f74b2854e5dae849aaff03f43bb77",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/authored-neck-fields.npz": "ec307c63651b1b76cda75758572cce236987a0dc5c6d2543fd3e23492f9f626a"
+  },
+  "frozenArtifactPins": {
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body07/preflight_shoulder_fields_v3.py": "9ed885c4415c7d15aec8f7e2b2380477d6e34014fc1e3c2f2f8cb53a95336b7a",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/shoulder-preflight-proposal-v3.json": "cf90dac0a93aabc45c3bdc936fd5cda88eb2696943de0420532cc83a833e9093",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/COMMAND-v3.txt": "a6dbbf06b231d5400ed1b65a4708eec1639bd94df7592ac06d55b5b32e396308",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/prepared-archive-schema-v3.json": "68937cd2c1848a36df9db4920ba7de994aaef5776e370fe11fe4259bc8851e0b",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/array-guard03/guard.json": "05432c9a4c73c033690858b8b9b4c6e2385ef3cc96656bbe70630c4312ef434f",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/array-guard03/worker.log": "4c7ad756469f3bd81107f14cfe84b92046bda5f78e8c14d22ca26147e146c1a5"
+  },
+  "nextAttempt": "Requires parent checkpoint/readback/admission; no retry/native author performed"
+}
