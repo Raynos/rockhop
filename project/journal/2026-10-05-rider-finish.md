@@ -41,3 +41,19 @@ finite. Tiny positive durations now fail clearly before zero-interval division.
 
 Limits: Generated diagnostic commands only; synthetic cycles do not establish
 physical gait, support, natural animation, native/export parity or appearance.
+
+## Body01 preservation failure checkpoint
+
+Finding: A first derived anatomical neck/body/boxer with FULL/FOUR fields is
+saved separately. Upper-head positions remain exact, but54 protected decoded
+normal corners change, maximum0.006954. Body01 remains unaccepted before a
+second narrow geometric collar correction. Original sources remain controls.
+
+Validation: Parent verifies native/recipe/field hashes, source report agreement
+and Python syntax. Third execution round fresh ordinary low/high clear4810ticks
+and finish bytes abaaaaaaaa0a4440 match; crash103/restarttick0 in1/2ms, no errors.
+
+Limits: Body01 normal failure prevents admission; owner pre-save measurements
+are not independent reopen or played-art acceptance. Recipe historical opening
+docstring describes the earlier donor-led direction; current code/method
+receipt explicitly follows the canonical body. No candidate player promotion.
