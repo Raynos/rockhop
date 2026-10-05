@@ -562,3 +562,18 @@ identifies the assertion before the authoring loop.
 Limits: Execution34 yields no field/geometry result. Corrected attempt
 must verify pinned original34globally and retain per-scene membership
 equality, with every other source/rig/normal/material guard unchanged.
+
+## Rigid derived neck cap source freezes before moving QA
+
+Finding: The corrected one-trial author creates a field-only derivative
+with seven effective head weight changes and full coincident alias scope.
+Keep old body05 raw references separate and freeze before native moving QA.
+
+Validation: Author actual save/reopen non-field snapshots exact; CPU2
+guardexit0/14.717s/warnings0. Parent newfield/sourcepins and everyother
+NPZarray exact; both controls change only declared7IDs, refs retained.
+
+Limits: Execution35 is an unaccepted source checkpoint. Local native
+master/fields remain ignored asset masters; Git carries recipe/evidence.
+Independent native motion, winding, aliases, normals and contacts pending.
+Inherited body/boxer/clothes/art/engine/device failures remain open.
