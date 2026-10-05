@@ -457,3 +457,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 301 | "Twelve course remaster is finished right can we archive it ?" | **done — closure gates remain open, 2026-10-05** | Focused biome delivery is landed; the plan still requires HR-21/24, phone/audio evidence and S1 anticipation qualification. Kept active without awarding unsupported completion. |
 
 | 302 | "Can we pull the repo are there new commits ?" | **done — remote already up to date, 2026-10-05** | Fetch and pull --ff-only origin main succeeded with Already up to date. At check time local main was 29 commits ahead and 0 behind; existing working/staged changes preserved. |
+
+| 304 | "Then write a new plan file to finish that work" | **in flight — rider audit and finish plan, 2026-10-05** | Write a new finish plan from the audit, reconcile the existing rider authority and maintain the plan index; preserve unfinished source and human gates. |
