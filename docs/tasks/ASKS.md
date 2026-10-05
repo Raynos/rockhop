@@ -459,3 +459,5 @@ Status: **open** (nobody on it) · **in flight** (owner named) · **needs pick**
 | 302 | "Can we pull the repo are there new commits ?" | **done — remote already up to date, 2026-10-05** | Fetch and pull --ff-only origin main succeeded with Already up to date. At check time local main was 29 commits ahead and 0 behind; existing working/staged changes preserved. |
 
 | 304 | "Then write a new plan file to finish that work" | **in flight — rider audit and finish plan, 2026-10-05** | Write a new finish plan from the audit, reconcile the existing rider authority and maintain the plan index; preserve unfinished source and human gates. |
+
+| 303 | "Audit and review all the work of the last 72 hours it’s to try to remaster the rider with its clothes and animations" | **done — evidence and played rider audit, 2026-10-05** | [Audit](../evidence/hero-remaster/audit-2026-10-05/README.md) covers466 commits/3439 paths, four source hash/GLB checks,11 silent complete movie plays and26 temporal sheets. Useful donors and diagnostics retained; body/neck/wardrobe/support/engine/phone gates open. |
