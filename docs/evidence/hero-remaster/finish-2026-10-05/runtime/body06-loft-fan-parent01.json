@@ -1,0 +1,57 @@
+{
+  "status": "PARENT_CURRENT_LOFT_AUTOMATIC_NORMAL_FAN_READBACK_PASS",
+  "accepted": false,
+  "receiptSHA256": "4e145d2e6c16f9d8886aee1eb381b500312a4cd1d2b857e231acf36e0554b961",
+  "primaryDecoderSource": {
+    "path": ".tmp/user-agent3-normal80-mesh_normals.cc",
+    "sha256": "50c001bb7e48b425fa9f5c6ed97dbddbd4f7915d9ee8fb445f0d53a7961272ec",
+    "meaning": "First packed component zero selects the actual fan geometric normal; no angular custom offset decode is needed for this witness."
+  },
+  "records": [
+    {
+      "phase": "source",
+      "field": "full",
+      "packedZero": true,
+      "actualSmoothFanSixConnectedCycle": true,
+      "recomputedFloat32NewellAndFloat64AngleProxyErrorToNative": 1.1398290876152483e-07
+    },
+    {
+      "phase": "source",
+      "field": "four",
+      "packedZero": true,
+      "actualSmoothFanSixConnectedCycle": true,
+      "recomputedFloat32NewellAndFloat64AngleProxyErrorToNative": 1.1398290876152483e-07
+    },
+    {
+      "phase": "0",
+      "field": "full",
+      "packedZero": true,
+      "actualSmoothFanSixConnectedCycle": true,
+      "recomputedFloat32NewellAndFloat64AngleProxyErrorToNative": 1.5875083293014463e-07
+    },
+    {
+      "phase": "0",
+      "field": "four",
+      "packedZero": true,
+      "actualSmoothFanSixConnectedCycle": true,
+      "recomputedFloat32NewellAndFloat64AngleProxyErrorToNative": 1.5875083293014463e-07
+    },
+    {
+      "phase": "244",
+      "field": "full",
+      "packedZero": true,
+      "actualSmoothFanSixConnectedCycle": true,
+      "recomputedFloat32NewellAndFloat64AngleProxyErrorToNative": 2.6214645830417254e-06
+    },
+    {
+      "phase": "244",
+      "field": "four",
+      "packedZero": true,
+      "actualSmoothFanSixConnectedCycle": true,
+      "recomputedFloat32NewellAndFloat64AngleProxyErrorToNative": 2.6214645830417254e-06
+    }
+  ],
+  "sourceDataBindWorldExactReported": true,
+  "maximumProxyNativeVectorResidual": 2.6214645830417254e-06,
+  "limits": "One current derived loft vertex over source and two saved poses, bothfields. Proxy retains Float64acos instead of exact native fast-angle/Float32 accumulation. No shader/GPU normal-parity pass, geometry-fold certificate, field change, played art or device acceptance."
+}

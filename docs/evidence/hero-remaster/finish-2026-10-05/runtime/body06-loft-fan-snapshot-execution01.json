@@ -1,0 +1,202 @@
+{
+  "status": "UNACCEPTED_READ_ONLY_NATIVE_PACKED_AND_ACTUAL_FAN_SNAPSHOT_EXECUTED",
+  "proposalSHA256": "600f6f1fd0285c6577f3ecd443eec67ddd3516a08dd01e30ecd24b66e326258f",
+  "recipeSHA256": "b29885bb4f677f34072524d3c3e16a977ddc1fad2df85ee5b3410fae0c5a8bba",
+  "receiptSHA256": "4e145d2e6c16f9d8886aee1eb381b500312a4cd1d2b857e231acf36e0554b961",
+  "receiptBytes": 181752,
+  "exactExecutedCommand": [
+    "/usr/bin/lockf",
+    "-k",
+    "-n",
+    "-t",
+    "0",
+    "/Users/raynos/projects/localai/.model.lock",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--locked",
+    "--out",
+    "harness/out/rider-finish/body06-loft-fan-snapshot01-guard",
+    "--limit-seconds",
+    "120",
+    "--",
+    "/opt/homebrew/bin/blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "harness/rider-finish/body06-loft-fan-snapshot.py",
+    "--",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend",
+    "--fields",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/authored-neck-fields.npz",
+    "--intake",
+    "harness/out/rider-finish/body06-intake01",
+    "--out",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-loft-fan-snapshot01.json"
+  ],
+  "actualWorkerExitCode": 0,
+  "actualOuterProcessExitCode": 0,
+  "elapsedSeconds": 6.083,
+  "limitSeconds": 120.0,
+  "CPUThreads": 2,
+  "blenderPythonExitCode": 1,
+  "guardReceiptPath": "harness/out/rider-finish/body06-loft-fan-snapshot01-guard/guard.json",
+  "guardReceiptSHA256": "156a30f8bcaef180d4360f699e9adba3964b3508c4dafcfad6717eba5f64eb29",
+  "guardRecipeSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "workerLogSHA256": "5ac7664f7274c3ccab40bb5b124480df4a3f25bed3779cf12c48059c82c8eca9",
+  "warnings": [],
+  "pythonTraceback": false,
+  "peakAnonymousGiB": 27.7,
+  "peakAnonymousPlusWiredGiB": 34.1,
+  "inputPinsStillExact": true,
+  "sourceMeshDataRestBindsWorldExactAfterDiagnostics": true,
+  "capturedFacts": [
+    {
+      "state": "source-basis-rest",
+      "field": "full",
+      "targetPacked": [
+        0,
+        0
+      ],
+      "averageFanPackedTruncated": [
+        0,
+        0
+      ],
+      "reconstructedTargetSmoothFanPolygons": [
+        65484,
+        65485,
+        65486,
+        66317,
+        66318,
+        66319
+      ],
+      "incidentSharpEdgeCount": 0
+    },
+    {
+      "state": "source-basis-rest",
+      "field": "four",
+      "targetPacked": [
+        0,
+        0
+      ],
+      "averageFanPackedTruncated": [
+        0,
+        0
+      ],
+      "reconstructedTargetSmoothFanPolygons": [
+        65484,
+        65485,
+        65486,
+        66317,
+        66318,
+        66319
+      ],
+      "incidentSharpEdgeCount": 0
+    },
+    {
+      "state": "saved-pose-0",
+      "field": "full",
+      "exactSavedPoseAndSkinRows": true,
+      "targetPacked": [
+        0,
+        0
+      ],
+      "averageFanPackedTruncated": [
+        0,
+        0
+      ],
+      "reconstructedTargetSmoothFanPolygons": [
+        65484,
+        65485,
+        65486,
+        66317,
+        66318,
+        66319
+      ],
+      "incidentSharpEdgeCount": 0,
+      "targetDecodedWorldNormalExactlyExistingCapture": true
+    },
+    {
+      "state": "saved-pose-0",
+      "field": "four",
+      "exactSavedPoseAndSkinRows": true,
+      "targetPacked": [
+        0,
+        0
+      ],
+      "averageFanPackedTruncated": [
+        0,
+        0
+      ],
+      "reconstructedTargetSmoothFanPolygons": [
+        65484,
+        65485,
+        65486,
+        66317,
+        66318,
+        66319
+      ],
+      "incidentSharpEdgeCount": 0,
+      "targetDecodedWorldNormalExactlyExistingCapture": true
+    },
+    {
+      "state": "saved-pose-244",
+      "field": "full",
+      "exactSavedPoseAndSkinRows": true,
+      "targetPacked": [
+        0,
+        0
+      ],
+      "averageFanPackedTruncated": [
+        0,
+        0
+      ],
+      "reconstructedTargetSmoothFanPolygons": [
+        65484,
+        65485,
+        65486,
+        66317,
+        66318,
+        66319
+      ],
+      "incidentSharpEdgeCount": 0,
+      "targetDecodedWorldNormalExactlyExistingCapture": true
+    },
+    {
+      "state": "saved-pose-244",
+      "field": "four",
+      "exactSavedPoseAndSkinRows": true,
+      "targetPacked": [
+        0,
+        0
+      ],
+      "averageFanPackedTruncated": [
+        0,
+        0
+      ],
+      "reconstructedTargetSmoothFanPolygons": [
+        65484,
+        65485,
+        65486,
+        66317,
+        66318,
+        66319
+      ],
+      "incidentSharpEdgeCount": 0,
+      "targetDecodedWorldNormalExactlyExistingCapture": true
+    }
+  ],
+  "leaseReleased": true,
+  "limits": [
+    "No save/render/export/field/normal/source mutation or new animation stream.",
+    "Source basis rest and two exact previously captured pose payloads only; no unmeasured intervening motion acceptance.",
+    "Packed rows and actual edge/smooth topology are captured; exact corner fan-space decode is subsequent independent analysis.",
+    "No general loft fold, shader parity tolerance, art or release certificate.",
+    "No custom decoder or additional cause experiment executed. Source/rest0/turn244 fan facts and native vectors are captured observations; geometric proxies remain proxies.",
+    "Historical metadata matmul warnings and stale body02 corner label remain preserved separately.",
+    "No field/source edits, native save/render/export, new motion, shader tolerance or rider acceptance."
+  ]
+}

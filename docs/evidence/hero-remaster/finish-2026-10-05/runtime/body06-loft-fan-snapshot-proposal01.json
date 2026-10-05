@@ -1,0 +1,68 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_WAIT_PARENT_UNIT39_CHECKPOINT_AND_GATE",
+  "recipe": "harness/rider-finish/body06-loft-fan-snapshot.py",
+  "recipeSHA256": "b29885bb4f677f34072524d3c3e16a977ddc1fad2df85ee5b3410fae0c5a8bba",
+  "plannedExactCommand": [
+    "/usr/bin/lockf",
+    "-k",
+    "-n",
+    "-t",
+    "0",
+    "/Users/raynos/projects/localai/.model.lock",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/generation-comparison-2026-10-03/user-agent2/run_bounded96.py",
+    "--locked",
+    "--out",
+    "harness/out/rider-finish/body06-loft-fan-snapshot01-guard",
+    "--limit-seconds",
+    "120",
+    "--",
+    "/opt/homebrew/bin/blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "harness/rider-finish/body06-loft-fan-snapshot.py",
+    "--",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend",
+    "--fields",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/authored-neck-fields.npz",
+    "--intake",
+    "harness/out/rider-finish/body06-intake01",
+    "--out",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-loft-fan-snapshot01.json"
+  ],
+  "nativeSourceSHA256": "66c45ab5a76fe592b0b284a5a96dc3e6ba1f74b2854e5dae849aaff03f43bb77",
+  "fieldsSHA256": "ec307c63651b1b76cda75758572cce236987a0dc5c6d2543fd3e23492f9f626a",
+  "intakeReportSHA256": "1d19d3d4abbaf27258b296ca0f4307d705f3c4ed4a0c1d4cc479020c5d6a39d4",
+  "target": {
+    "nativeVertex": 45084,
+    "corner": 196454,
+    "savedPoseIDs": [
+      0,
+      244
+    ],
+    "fields": [
+      "full",
+      "four"
+    ],
+    "sourceBasisRest": true
+  },
+  "scope": [
+    "Read immutable source head geometry, actual corner-packed INT16_2D and decoded normals before assigning any pose.",
+    "Replay only the two existing exact own51 pose payloads; skin matrices and current decoded target normal/evaluated incident vertices must match frozen capture.",
+    "Capture actual incident edges, smooth flags, raw packed rows and polygon corner identities; reconstruct target smooth connectivity from those facts.",
+    "Record true Float64 triangle crosses and explicit Float32 Newell; never RNA custom polygon_normals as geometric normals.",
+    "Compare complete source-head XYZ/packed/decoded normals/UV/memberships/world digests before/after; source file, fields, binds/world unchanged."
+  ],
+  "limits": [
+    "No execution yet. Root decides after preceding checkpoint and mandatory ordinary game gate.",
+    "One bounded read-only job, maximum120s CPU2, canonical nonblocking lease, explicit Python exit1.",
+    "No field/normal/geometry rewrite, native save/export/render, new motion or shader tolerance.",
+    "Actual fan connectivity/packing is captured; exact custom fan-space decoder reconstruction remains subsequent independent analysis.",
+    "Angle-weighted proxies use Float64 acos; no exact native decoding pass or loft-fold certificate is inferred."
+  ]
+}

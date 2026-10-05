@@ -666,3 +666,21 @@ already committed; no new diagnosis or game run in this maintenance.
 
 Limits: No new surface/cavity/fit/art claim. Builder finding records its
 pre-parent status; committed parent receipt carries the actual judgment.
+
+
+## Current neck loft witness uses automatic geometric normals
+
+Finding: Actual source and evaluated corner packed data are zero; all
+six adjacent smooth faces form one connected fan with no sharp edges.
+The current derived loft witness needs no custom angular-offset decode.
+
+Validation: One CPU2read-only native guard exits0 in6.083s, warnings0.
+Exact saved0/244 pose, own51skin, incidentXYZ and decodednormal match
+frozen intake. Source data/restbind/world exact pre/post. Parent independently
+checks zero packed/fan rows, edge winding/connectivity, Float32Newell and
+angle-weighted proxy; maximum decodednormal residual2.622e-6.
+
+Limits: One derived vertex, source rest and two saved poses only. Proxy
+uses Float64acos; not exact native accumulation/shader parity. Wholehead
+normal failure remains; no field edits, fold certificate, render/art/GPU
+or device pass. Execution40; next ordinary game gate42.
