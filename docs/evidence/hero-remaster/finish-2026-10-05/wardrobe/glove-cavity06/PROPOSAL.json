@@ -1,0 +1,27 @@
+{
+  "accepted": false,
+  "status": "ADMITTED_PROPOSAL_EXECUTED_ONCE_CLASSIFICATION_ONLY",
+  "purpose": "Let parent inspect whether candidate cavity-visible faces and209 exterior-view conflicts are lining or true exterior, especially the wrist mouth and secondary3-edge boundary.",
+  "source": "Pinned glove-cavity05 prototype source XYZ/triangles and mask.npz; no cut, hide, transparency, geometry deformation, fit or skin.",
+  "display": "One fixed proper source+Y-up/+Z-front to Blender+Z-up/-Y-front transform; all source faces remain opaque and present throughout. Camera moves only.",
+  "palette": {
+    "candidatePatchWithoutConflict": "orange",
+    "209CandidateExteriorVisibilityConflicts": "magenta",
+    "protectedFiveDistalRegions": "teal",
+    "retainedObservedExteriorAndOtherSourceFaces": "neutral gray, not a new semantic exterior approval",
+    "secondaryBoundaryIncidentRetainedTriangle": "white; annotation only, original source triangle retained"
+  },
+  "cameraSequence": [
+    "24frame full-source rotation for outer silhouette and retained five-digit context",
+    "18frame closer wrist-mouth path from oblique lateral to directly below source+Y wrist axis, looking into existing cavity",
+    "6frame continuous small camera arc at secondary3-edge retained triangle, no held view"
+  ],
+  "budget": "48frames at12fps, 4seconds, 768square, CyclesCPU6samples,2threads, <=120second canonical nonblocking guarded render. Movie has no audio stream and parent uses silent headless playback.",
+  "tests": [
+    "Before render assert exact source XYZ/faces/mask hashes and all1456/209/71+3 scope counts.",
+    "After render read back complete source vertex/face arrays before frame pins; no hidden/removal counts, all original16000triangles present.",
+    "Pin recipe, source/mask, all48 rendered frame hashes, video hash/frame count/duration/audio-stream count."
+  ],
+  "limits": "Classification context only, not wearable construction, cavity occupancy, native animation, engine, PBR appearance, art or device acceptance. No render before root checkpoint26 and explicit resource permit.",
+  "execution": "One48frame source camera-only film rendered after checkpoint26 and parent resource permit; root scope verdict pending"
+}

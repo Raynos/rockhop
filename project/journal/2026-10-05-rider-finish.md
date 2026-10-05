@@ -469,3 +469,17 @@ Primary5.2.1 mesh/RNA implementation pins validate the custom mixing branch.
 Limits: Two finite witnesses, no complete fan-space transport or global
 certificate. Near2normal failures are not excused by the prior precision
 witness. No source edit, GPU parity, contact or played-art acceptance.
+
+## Uncut glove classification film preserves the disputed boundary
+
+Finding: A camera-only color film keeps all16,000 donor triangles opaque
+and visible while highlighting the1456candidate faces,209visibility
+conflicts and the secondary retained triangle. Freeze before scope judgment.
+
+Validation: Parent source XYZ/face/mask/classes and48PNG hashes exact;
+48camera locations move. Movie48frames/12fps/4s/audio0 decodes cleanly;
+guarded two-thread render72.876s exits0, with no source deformation.
+
+Limits: Execution29 is an unaccepted checkpoint. Assigned camera path
+pins are not independently extracted camera matrices. No cut, cavity,
+fit, skin, art, engine or device acceptance; played interpretation pending.
