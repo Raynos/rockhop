@@ -1,0 +1,106 @@
+{
+  "status": "UNACCEPTED_SINGLE_FRONT_PBR_GROUNDED_DIAGNOSTIC_READY_FOR_PARENT_PLAYED_REVIEW",
+  "movie": "docs/evidence/hero-remaster/finish-2026-10-05/construction/body05/grounded-front-pbr01/body05-grounded-front-pbr01.mp4",
+  "movieSHA256": "96486f4138ed36c5844679e6142bd0de8c2f581ad62378e1bf7235b1f3fec230",
+  "movieBytes": 417156,
+  "videoStreams": 1,
+  "audioStreams": 0,
+  "decodedFrames": 344,
+  "frameRate": "30/1",
+  "resolution": [
+    640,
+    640
+  ],
+  "durationS": 11.466667,
+  "clips": [
+    {
+      "clip": "idle",
+      "frameFirst": 0,
+      "frameLast": 60,
+      "samples": 61,
+      "sourceFirstTimeS": 0.0,
+      "sourceLastTimeS": 2.0,
+      "cutBefore": false,
+      "encodedStartS": 0.0,
+      "encodedEndS": 2.033333333333333
+    },
+    {
+      "clip": "crouch",
+      "frameFirst": 61,
+      "frameLast": 136,
+      "samples": 76,
+      "sourceFirstTimeS": 0.0,
+      "sourceLastTimeS": 2.5,
+      "cutBefore": true,
+      "encodedStartS": 2.033333333333333,
+      "encodedEndS": 4.566666666666666
+    },
+    {
+      "clip": "jump-land",
+      "frameFirst": 137,
+      "frameLast": 206,
+      "samples": 70,
+      "sourceFirstTimeS": 0.0,
+      "sourceLastTimeS": 2.3,
+      "cutBefore": true,
+      "encodedStartS": 4.566666666666666,
+      "encodedEndS": 6.9
+    },
+    {
+      "clip": "walk",
+      "frameFirst": 207,
+      "frameLast": 282,
+      "samples": 76,
+      "sourceFirstTimeS": 0.0,
+      "sourceLastTimeS": 2.5,
+      "cutBefore": true,
+      "encodedStartS": 6.9,
+      "encodedEndS": 9.433333333333334
+    },
+    {
+      "clip": "jog",
+      "frameFirst": 283,
+      "frameLast": 343,
+      "samples": 61,
+      "sourceFirstTimeS": 0.0,
+      "sourceLastTimeS": 2.0,
+      "cutBefore": true,
+      "encodedStartS": 9.433333333333334,
+      "encodedEndS": 11.466666666666667
+    }
+  ],
+  "renderElapsedSeconds": 84.465,
+  "encodeElapsedSeconds": 0.97,
+  "renderExitCode": 0,
+  "encodeExitCode": 0,
+  "peakAnonymousGiB": 27.9,
+  "peakAnonymousPlusWiredGiB": 36.2,
+  "actualPoseBasisAssignmentsExact344": true,
+  "original51RestWorldExact": true,
+  "sourceAndPosePinsStillExact": true,
+  "cameraOnlyFollowsRootX": true,
+  "sourceSaved": false,
+  "warnings": [
+    {
+      "stage": "guard",
+      "line": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/render_grounded_motion.py:79: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0"
+    },
+    {
+      "stage": "guard",
+      "line": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/render_grounded_motion.py:89: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0"
+    }
+  ],
+  "leaseReleased": true,
+  "sourceSHA256": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+  "poseStreamSHA256": "c7bb39c913d60271b54a9c5176fd2d1b2616426b5477ecb6ab41585f207fd834",
+  "recipeSHA256": "64d62b16833cd4f82af3e0bf76412487cf502e1e5bcf59a76d8ad5e767125ce5",
+  "limits": [
+    "Inherited body/boxer contacts and moving-normal failures remain visible and unresolved.",
+    "Grounded02 was measured on body04d; exact unchanged51 pose replay does not transfer its sole/contact metrics to body05.",
+    "Five separate clips have declared cuts; uninterrupted original30Hz samples within each clip, including endpoints.",
+    "344 discrete frames play for344/30 seconds; authored clip durations sum11.3s and include five endpoint frames.",
+    "Walk travels2.5m and jog4m; camera follows worldX only. No source normalization or floor/foot correction.",
+    "Actual pose properties are checked byte-for-byte after assignment; no synthetic FK or neural poses.",
+    "No art, geometry, support, export/engine/GPU, bike, phone or promotion pass. Parent alone judges played evidence."
+  ]
+}

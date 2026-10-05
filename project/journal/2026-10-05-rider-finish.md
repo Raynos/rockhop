@@ -436,3 +436,19 @@ edges in71+3degree-two loops. Protected distal overlaps0; UV lineage exact.
 Limits: Visibility is not true exterior classification or full cavity
 proof. No face removal, fit, skin or wearable acceptance. Classifier did
 execute; metadata now explicitly distinguishes that from unexecuted removal.
+
+## Actual grounded pose stream has a continuous native PBR film
+
+Finding: Replay the exact saved own51 support pilot on the frozen planar
+neck candidate. A world-zero floor and fixed grid keep support visible;
+only cameraX follows locomotion, with named cuts between five clips.
+
+Validation: All344forward30Hz pose assignment bytes/source/rest/world
+exact. Parent independently checks every record/hash/camera and rendered
+PNG pin; movie decodes cleanly,640²/30fps/11.467s/audio0. Render84.465s,
+encode0.970s, exits0; round27 ordinary game gate passes exact replay.
+
+Limits: Stable unaccepted movie checkpoint before parent played judgment.
+First-frame inspection only verifies framing. Grounded04sole metrics do
+not transfer by replay; body/boxer contacts and normals remain failed.
+No artist, wearable, engine/GPU or device acceptance.
