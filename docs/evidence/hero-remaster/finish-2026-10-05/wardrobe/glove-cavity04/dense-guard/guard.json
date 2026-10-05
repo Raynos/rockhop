@@ -1,0 +1,48 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-cavity04/dense-check.py",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+    "--semantics",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/semantic-registration.json",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity04/dense-check.json"
+  ],
+  "controllerPID": 51386,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 30.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.7,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.2
+    },
+    {
+      "seconds": 0.029,
+      "anonymousGiB": 26.7,
+      "wiredGiB": 6.7,
+      "freeGiB": 37.2
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 51390,
+  "exitCode": 0,
+  "elapsedSeconds": 0.434
+}

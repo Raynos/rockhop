@@ -374,3 +374,18 @@ The actual bounded nonblocking-lease native read took10.381s, exit0.
 Limits: Finite73barefoot probes per side, no full sole/COM, played art or
 engine proof. Body04d geometry remains rejected. Actual execution used a
 bounded direct Blender command, not the existing memory-monitor guard.
+
+## The dense glove donor retains its blind inner cuff roof
+
+Finding: The selected glove's short cuff cavity ends at an inner roof in
+the original donor. A bijective ambient fit preserves that obstruction;
+decimation did not introduce it. Exact interior scope comes before cuts.
+
+Validation: Parent independently rebuilds24,000oriented prototype edges,
+two incidences each, one connected8,000vertex component/Euler0. All66
+recorded prototype/dense ray hits match source triangle/barycentric
+positions and normals; center first-hit delta0.00000502source units.
+
+Limits: Source units are uncalibrated. Zero boundary edges do not prove
+absence of a mouth. These finite rays do not prove global cavity/occupancy
+or explain every finger crossing. No cut, fitting, skin or art admission.

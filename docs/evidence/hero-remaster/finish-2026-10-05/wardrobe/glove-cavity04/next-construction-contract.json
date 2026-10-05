@@ -1,0 +1,30 @@
+{
+  "accepted": false,
+  "status": "PROPOSED_NEXT_SOURCE_DERIVED_OPEN_SHELL_CONSTRUCTION_NOT_EXECUTED",
+  "inputPins": {
+    "prototype": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/retopology-prototype.npz",
+      "sha256": "746c99bb9fc109492b27e6e9bd3d7281bf3d4799488cb0d6beebf2804d8a6c5e"
+    },
+    "dense": {
+      "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/prep02/gloves/cleaned-donor.npz",
+      "sha256": "f07a705f334d3d2b802fa7d23baec3e9cd54b211d160b7bbd6ab2c9f4a96541c",
+      "vertices": 284571,
+      "triangles": 569142
+    }
+  },
+  "problem": "Blind inner cuff surface is retained in the dense source; a smooth ambient bijection preserves it. Existing radius/velocity fields cannot create the required passage.",
+  "nextSingleBoundedTrial": "Author a source-derived cuff interior removal/open outer shell before any new clearance velocity. Derive exact connected interior face mask from pinned roof-ray seeds and inner section loops, stopping at actual cuff rim; do not clip the entire glove by height. Check exterior retained geometry, five distal branches, source corner-UV/triangle ancestry and boundary loops. Parent reviews scope before testing.",
+  "protected": [
+    "Original raw GLB, dense donor, prototype, maps, latents and every frozen failure remain immutable.",
+    "All five external digit shapes, palm/knuckle/cuff appearance and original UV/PBR lineage retained in explicit derivatives.",
+    "Canonical full body, protected head, own51 hierarchy/rest/bind and other garments untouched."
+  ],
+  "requiredTests": [
+    "Original full-body finite SAT, zero introduced nonadjacent glove self contacts, finite nondegenerate retained triangles.",
+    "Explicit source-derived cuff boundary and inner-space/hand-enclosure witnesses, not only bone centers or local normal sign.",
+    "Source corner UV ancestry for retained/new boundary vertices; altered geometry/UV lineage disclosed.",
+    "Parent played gray/PBR geometry after rest numerical admission and before skin."
+  ],
+  "limits": "No exact cut mask or geometry edit is admitted by this proposal; root determines next trial after checkpoint. Source local normal/ray witnesses do not establish whole cavity or intended handedness."
+}
