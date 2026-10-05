@@ -499,3 +499,20 @@ abaaaaaaaa0a4440 and1ms restart; bounded guard10.791s exits0.
 Limits: No posed contact or688batch; sole anatomy remains provisional.
 No qualified mass model/COM; pelvis cannot substitute. Existing finite
 probe support metrics do not transfer. New rider remains unaccepted.
+
+## Played source evidence rejects current body appearance
+
+Finding: Silent continuous headless playback supplies actual presented
+frames for parent temporal review. The current body has shoulder/boxer
+defects and mechanical pilot locomotion; appearance3/10 is unaccepted.
+Glove disputed colors appear inside the cuff rather than its outer silhouette.
+
+Validation: Both pinned movies naturally end at1x/muted/volume0 with no
+seeks/stalls. Actual captured277/344body and48/48glove frames plus hashes
+are recorded; all67body callback omissions remain explicit. Guard16.647s
+exit0; parent inspected temporal strips spanning both complete clips.
+
+Limits: No direct video ingestion by the model; review uses actual played
+frame sequences and is sampled for body. Front-only body cannot certify
+other angles or small details. Glove film supports only conditional
+diagnostic opening after separate graph checkpoint, not cavity/fit/art.
