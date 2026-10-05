@@ -1,0 +1,77 @@
+{
+  "acceptedWearable": false,
+  "status": "FROZEN_HOMOLOGY_RECEIPT_ARRAY_READBACK_PASS",
+  "validatorSHA256": "d27a98f789a628cf4caafffb80b67c66bfa4f09e99a517d4d1bfb050c47bc1e2",
+  "localizationSHA256": "c197e995337cf1ccaacd3c3835a2018b5982c8385ace908f91673b2615ef777c",
+  "commandSHA256": "4e0da47a327b5d9417a7eeac53b61e9d58e127f5cd4e22631de7ba49e46da8f3",
+  "guardSHA256": "b3119d6d7ce778cd5b4d4e911ddc994b21f79d457f4d5e1884aac6cdce7eab12",
+  "sourceSHA256After": "8379004e394bbae110f495c13bfc12a205977061d13cefdcc8ee24c6e5343782",
+  "rawCertificateSHA256": "4bd437a0411815befe267537ff5f5494bff36fef3ae7df4ca6b1f6093aa96158",
+  "workerExitCode": 0,
+  "guardElapsedSeconds": 0.443,
+  "workerOutputJSON": {
+    "status": "FINITE_SOURCE_SURFACE_HOMOLOGY_LOCALIZATION_ONLY",
+    "roots": 17,
+    "cycleLengthsSourceUnits": {
+      "2": 0.06545003435311912,
+      "1": 0.14467792714585406,
+      "3": 0.2980596333580773
+    }
+  },
+  "workerWarnings": 0,
+  "disjointTreeCotreeLeftoverCounts": [
+    7305,
+    14543,
+    2
+  ],
+  "actualSourceFaceCocycleParityNonzero": 0,
+  "virtualCuffVertices": 71,
+  "cuffBoundarySourceBounds": [
+    [
+      -0.5377920269966125,
+      -0.9942600131034851,
+      -0.20754200220108032
+    ],
+    [
+      0.03410400077700615,
+      -0.7190690040588379,
+      0.22823399305343628
+    ]
+  ],
+  "cuffBoundarySourceMean": [
+    -0.23572094263312157,
+    -0.8565003947472908,
+    0.016048239544034004
+  ],
+  "cycles": [
+    {
+      "class": 1,
+      "vertices": 10,
+      "actualSourceEdges": 10,
+      "lengthSourceUnits": 0.14467792714585406,
+      "incidentSourceFaces": 20,
+      "sourceIDXYZLineageExact": true
+    },
+    {
+      "class": 2,
+      "vertices": 5,
+      "actualSourceEdges": 5,
+      "lengthSourceUnits": 0.06545003435311912,
+      "incidentSourceFaces": 10,
+      "sourceIDXYZLineageExact": true
+    },
+    {
+      "class": 3,
+      "vertices": 21,
+      "actualSourceEdges": 21,
+      "lengthSourceUnits": 0.2980596333580773,
+      "incidentSourceFaces": 41,
+      "sourceIDXYZLineageExact": true
+    }
+  ],
+  "limits": [
+    "Readback of frozen arrays and certificate only, no second cycle search/native/model/fit/cut/render.",
+    "The cuff is virtual algebra only. The cycles certify nontrivial surface homology, not geometric cavity traversal, free volume, enclosed fingers or wearable acceptance.",
+    "All coordinates/lengths in uncalibrated source units. Label0 still has unresolved palm/web/cuff semantics."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/glove-cavity09/localize-handle.py",
+    "--opening",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity08/opening.json",
+    "--opening-sha256",
+    "eef2fde73da89499f18b7e0b161198477bfb749a29bad38b004165337719c938",
+    "--anatomy",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-anatomy02/classification.json",
+    "--anatomy-sha256",
+    "4a0428f4b3054562e33db8f70accfb4cd0073fe561b2dd5823af6fd04fa4e154",
+    "--out",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/wardrobe/data/glove-cavity09",
+    "--evidence",
+    "docs/evidence/hero-remaster/finish-2026-10-05/wardrobe/glove-cavity09/localization.json"
+  ],
+  "controllerPID": 31694,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 60.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.3,
+      "wiredGiB": 6.4,
+      "freeGiB": 39.4
+    },
+    {
+      "seconds": 0.03,
+      "anonymousGiB": 26.3,
+      "wiredGiB": 6.4,
+      "freeGiB": 39.4
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 31698,
+  "exitCode": 0,
+  "elapsedSeconds": 0.443
+}

@@ -632,3 +632,23 @@ Limits: Proxy is not the verified native smooth fan. Actual packed rows
 and sharp/fan partition remain unmeasured, as does continuous fold
 qualification. No new source, native evaluation, shader, art or engine
 acceptance. Whole-head shading stays failed. Execution38; game gate39due.
+
+
+## Retained glove handle localizes to the cuff-side surface
+
+Finding: Two independent non-boundary cycles locate the retained handle
+in a small label0cuff-side region, outside all five distal labels. Verify
+vertex links before interpreting the edge-manifold genus as an ordinary
+surface. No geometric cavity or further cut follows from the certificate.
+
+Validation: One CPU2arrayguard exits0 in0.443s, source unchanged. Parent
+independent7,306vertex links/orientation/cocycle parity0/identity pairing
+and exact cycle XYZ/source/dense lineage pass. Seventeen finite roots;
+independent cycles have10/5vertices and.144678/.065450donor-unit lengths.
+Round39 ordinary low/high boot/clear/crash/restart passes exact finish
+bytes/state hash, faults0/restart2ms, bounded guard10.801s exits0.
+
+Limits: Finite root-family search, not globally shortest geodesics. Label0
+contains unresolved palm/web/cuff. Surface homology does not prove free
+volume or usable passage. No fit/skin/art/GPU/device acceptance; game gate
+uses legacy assets only. Execution39 frozen; next ordinary gate42.
