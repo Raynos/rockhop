@@ -1,0 +1,71 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_GROUNDED02",
+  "sourcePolicy": "Concrete command below uses immutable body04d as an explicitly unaccepted pose/sole control. Root may instead admit the upcoming body05 with a fresh native SHA and separate output; no future hash is assumed.",
+  "sourceSHA256": "7c364bea92384c5562b28088454afcc208fe4f3dc46a5ffd98c4a51588543d66",
+  "driverSHA256": "ca43ca11eaca6025d528c3ab5c70c6887429308db3bcdc112d75e40cf0c48297",
+  "readerSHA256": "ccf31e401d6f7310633bc6089f7231877762c3e24c72c5afc55a27e86f04005a",
+  "proposedCommand": [
+    "/usr/bin/lockf",
+    "-k",
+    "-n",
+    "-t0",
+    "/Users/raynos/projects/localai/.model.lock",
+    "blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "harness/rider-finish/grounded-sample-v2.py",
+    "--",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04d/natural-foundation.blend",
+    "--source-sha256",
+    "7c364bea92384c5562b28088454afcc208fe4f3dc46a5ffd98c4a51588543d66",
+    "--out",
+    "harness/out/rider-finish/grounded02.json"
+  ],
+  "hz": 30,
+  "clips": {
+    "idle": {
+      "durationS": 2.0,
+      "forwardSamples": 61
+    },
+    "crouch": {
+      "durationS": 2.5,
+      "forwardSamples": 76
+    },
+    "jump-land": {
+      "durationS": 2.3,
+      "forwardSamples": 70
+    },
+    "walk": {
+      "durationS": 2.5,
+      "forwardSamples": 76
+    },
+    "jog": {
+      "durationS": 2.0,
+      "forwardSamples": 61
+    }
+  },
+  "totalForwardReverseSamples": 688,
+  "checksToMeasure": [
+    "Every selected original rest matrix remains unchanged; source file SHA before/after identical.",
+    "Named exact30Hz timelines with integer intervals; closed idle/crouch/jump-land endpoints and repeated forward/reverse pose byte equality.",
+    "Analytic limb targets: clamp classification and actual evaluated endpoint residuals.",
+    "Actual evaluated bare-sole probes: support phase, floor gap/contact count, penetration, and inter-frame horizontal support sliding.",
+    "Explicit locomotion root policy and stance/swing phases; intended airborne samples measured independently."
+  ],
+  "compactReceiptProposal": [
+    "Pin raw ignored every-frame pose/probe output, driver/reader/source SHA, actual clock and source preservation.",
+    "Per-clip numeric maxima/minima, support/airborne counts, unclamped/clamped targets and measured endpoint/reverse byte outcomes.",
+    "Retain failures and held-out/complete-support limits explicitly; never infer art or engine qualification."
+  ],
+  "limits": [
+    "Only source preparation and Python AST checks have run; no Grounded02 numeric result is claimed.",
+    "Existing body04d anatomy/topology/contact failures remain. Sole native author alone changes/saves masters; this fixture assigns poses in memory only.",
+    "Finite barefoot probes do not measure full triangles, centre of mass, complete support patch, garment contacts, GPU/engine, art or physical devices.",
+    "Root ordinary round21 gate and constructor build serialization precede execution."
+  ]
+}

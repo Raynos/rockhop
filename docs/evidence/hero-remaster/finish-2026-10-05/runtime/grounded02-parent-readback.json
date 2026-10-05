@@ -1,0 +1,82 @@
+{
+  "status": "PARENT_INDEPENDENT_RECORD_READBACK_PASS_UNACCEPTED_MOTION",
+  "rawPin": {
+    "path": "harness/out/rider-finish/grounded02.json",
+    "sha256": "c7bb39c913d60271b54a9c5176fd2d1b2616426b5477ecb6ab41585f207fd834",
+    "bytes": 10800053
+  },
+  "summarySHA256": "89245c4dde63fb611672f17bb58ea74fa08ee407db190166727e9203d8d7b32e",
+  "executionSHA256": "65127e5d5eadd62d5a6aeaf16d7bc5d1124d9f6132d14a55765b7b8bec4cfc5e",
+  "checks": {
+    "idle": {
+      "actualHz": 30,
+      "forwardSamples": 61,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": true,
+      "supportedObservations": 244,
+      "supportedMaxStepM": 1.52575084402206e-06,
+      "maxLimbResidualM": 9.295700392404906e-07,
+      "forwardPhases": {
+        "double-support": 61
+      }
+    },
+    "crouch": {
+      "actualHz": 30,
+      "forwardSamples": 76,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": true,
+      "supportedObservations": 304,
+      "supportedMaxStepM": 1.576835779981389e-05,
+      "maxLimbResidualM": 1.0264036758773903e-06,
+      "forwardPhases": {
+        "double-support": 76
+      }
+    },
+    "jump-land": {
+      "actualHz": 30,
+      "forwardSamples": 70,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": true,
+      "supportedObservations": 196,
+      "supportedMaxStepM": 5.879021771424887e-05,
+      "maxLimbResidualM": 8.996421813135993e-07,
+      "forwardPhases": {
+        "double-support": 49,
+        "airborne": 21
+      }
+    },
+    "walk": {
+      "actualHz": 30,
+      "forwardSamples": 76,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": null,
+      "supportedObservations": 184,
+      "supportedMaxStepM": 3.8793466808904444e-05,
+      "maxLimbResidualM": 1.279700930871482e-06,
+      "forwardPhases": {
+        "single-support": 60,
+        "double-support": 16
+      }
+    },
+    "jog": {
+      "actualHz": 30,
+      "forwardSamples": 61,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": null,
+      "supportedObservations": 102,
+      "supportedMaxStepM": 7.453164755188368e-05,
+      "maxLimbResidualM": 1.3042560018380842e-06,
+      "forwardPhases": {
+        "single-support": 51,
+        "airborne": 10
+      }
+    }
+  },
+  "maximumSupportStepM": 7.453164755188368e-05,
+  "method": "Independently reserialize all51 pose fields as little-endian Float64 with signed-zero canonicalization, recompute support floor counts and per-step distances from every recorded XYZ, verify all clocks/phases/residual counters and recipe/source hashes. No Blender rerun.",
+  "limits": [
+    "Record readback does not independently prove evaluated Blender coordinates or endpoint residual calculation.",
+    "73 finite barefoot points per side are not complete sole triangles/centre of mass/support polygons or boots.",
+    "Body04d remains geometrically rejected; art/native-to-engine/bike/device gates remain open."
+  ]
+}

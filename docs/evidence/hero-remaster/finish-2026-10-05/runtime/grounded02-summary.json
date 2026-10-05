@@ -1,0 +1,214 @@
+{
+  "status": "UNACCEPTED_ANALYTIC_GROUNDED_PILOT",
+  "source": "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04d/natural-foundation.blend",
+  "sourceSHA256": "7c364bea92384c5562b28088454afcc208fe4f3dc46a5ffd98c4a51588543d66",
+  "driverSHA256": "ca43ca11eaca6025d528c3ab5c70c6887429308db3bcdc112d75e40cf0c48297",
+  "readerSHA256": "ccf31e401d6f7310633bc6089f7231877762c3e24c72c5afc55a27e86f04005a",
+  "blender": "5.2.1 LTS",
+  "hz": 30,
+  "locomotionParameters": {
+    "walk": {
+      "speedMPS": 1.0,
+      "cyclesPerS": 1.6,
+      "duty": 0.6,
+      "swingHeightM": 0.07,
+      "footHalfWidthM": 0.07
+    },
+    "jog": {
+      "speedMPS": 2.0,
+      "cyclesPerS": 2.5,
+      "duty": 0.4,
+      "swingHeightM": 0.14,
+      "footHalfWidthM": 0.07
+    }
+  },
+  "originalRestBindsUnchanged": true,
+  "limits": [
+    "Barefoot >.95 foot/ball semantic vertices within5mm of rest sole minimum; this is finite sampled surface support, not complete sole triangles/boots or a continuous-time certificate.",
+    "Ankle residuals and actual deformed sole results are separate. Pelvis is not a centre-of-mass estimate.",
+    "Native analytic pilot only: endpoint and reverse byte results are actual measured outputs, not implied. No art, natural gait, engine/GPU, bike-contact or device acceptance. No source file saved."
+  ],
+  "inputPin": {
+    "path": "harness/out/rider-finish/grounded02.json",
+    "sha256": "c7bb39c913d60271b54a9c5176fd2d1b2616426b5477ecb6ab41585f207fd834",
+    "bytes": 10800053
+  },
+  "summaryRecipeSHA256": "7b3b1f9f687a12dc9e4cb63a91f5e4fbc882f0c2e92f9284dda62ece45a9773a",
+  "sourceSHAStillExact": true,
+  "soleProbeCount": {
+    "L": 73,
+    "R": 73
+  },
+  "totalSamples": 688,
+  "clips": {
+    "idle": {
+      "durationS": 2.0,
+      "intervals": 60,
+      "actualHz": 30,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": true,
+      "rootMotionPolicy": "Closed stationary loop.",
+      "forwardSamples": 61,
+      "forwardReverseSamples": 122,
+      "forwardSupportPhases": {
+        "double-support": 61
+      },
+      "maximumLimbEndResidualM": 9.295700392404906e-07,
+      "clampedLimbTargets": 0,
+      "maximumTargetClampM": 0.0,
+      "supportedSoleObservations": 244,
+      "minimumSupportedSoleZWorldM": -5.051414859735814e-07,
+      "maximumSupportedSoleZWorldM": 0.004994980990886688,
+      "minimumSupportedProbeCountWithin5mm": 73,
+      "supportedObservationsWithPenetrationBeyond1mm": 0,
+      "allObservationsWithPenetrationBeyond1mm": 0,
+      "maximumHorizontalStepDuringSupportM": 1.52575084402206e-06,
+      "rootOffsetAtFirstForwardM": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rootOffsetAtLastForwardM": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "crouch": {
+      "durationS": 2.5,
+      "intervals": 75,
+      "actualHz": 30,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": true,
+      "rootMotionPolicy": "Closed stationary loop.",
+      "forwardSamples": 76,
+      "forwardReverseSamples": 152,
+      "forwardSupportPhases": {
+        "double-support": 76
+      },
+      "maximumLimbEndResidualM": 1.0264036758773903e-06,
+      "clampedLimbTargets": 0,
+      "maximumTargetClampM": 0.0,
+      "supportedSoleObservations": 304,
+      "minimumSupportedSoleZWorldM": -9.485049190516293e-07,
+      "maximumSupportedSoleZWorldM": 0.0049949586391448975,
+      "minimumSupportedProbeCountWithin5mm": 73,
+      "supportedObservationsWithPenetrationBeyond1mm": 0,
+      "allObservationsWithPenetrationBeyond1mm": 0,
+      "maximumHorizontalStepDuringSupportM": 1.576835779981389e-05,
+      "rootOffsetAtFirstForwardM": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "rootOffsetAtLastForwardM": [
+        -0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    "jump-land": {
+      "durationS": 2.3,
+      "intervals": 69,
+      "actualHz": 30,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": true,
+      "rootMotionPolicy": "Closed stationary loop.",
+      "forwardSamples": 70,
+      "forwardReverseSamples": 140,
+      "forwardSupportPhases": {
+        "double-support": 49,
+        "airborne": 21
+      },
+      "maximumLimbEndResidualM": 8.996421813135993e-07,
+      "clampedLimbTargets": 0,
+      "maximumTargetClampM": 0.0,
+      "supportedSoleObservations": 196,
+      "minimumSupportedSoleZWorldM": -4.7582418005731597e-07,
+      "maximumSupportedSoleZWorldM": 0.004994968418031931,
+      "minimumSupportedProbeCountWithin5mm": 73,
+      "supportedObservationsWithPenetrationBeyond1mm": 0,
+      "allObservationsWithPenetrationBeyond1mm": 0,
+      "maximumHorizontalStepDuringSupportM": 5.879021771424887e-05,
+      "rootOffsetAtFirstForwardM": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "rootOffsetAtLastForwardM": [
+        -0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    "walk": {
+      "durationS": 2.5,
+      "intervals": 75,
+      "actualHz": 30,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": null,
+      "rootMotionPolicy": "Forward translation in metres; reversing the exact pose sequence reverses root motion.",
+      "forwardSamples": 76,
+      "forwardReverseSamples": 152,
+      "forwardSupportPhases": {
+        "double-support": 16,
+        "single-support": 60
+      },
+      "maximumLimbEndResidualM": 1.279700930871482e-06,
+      "clampedLimbTargets": 0,
+      "maximumTargetClampM": 0.0,
+      "supportedSoleObservations": 184,
+      "minimumSupportedSoleZWorldM": -7.661813583581534e-07,
+      "maximumSupportedSoleZWorldM": 0.004995258059352636,
+      "minimumSupportedProbeCountWithin5mm": 73,
+      "supportedObservationsWithPenetrationBeyond1mm": 0,
+      "allObservationsWithPenetrationBeyond1mm": 0,
+      "maximumHorizontalStepDuringSupportM": 3.8793466808904444e-05,
+      "rootOffsetAtFirstForwardM": [
+        0.0,
+        -0.0,
+        -0.03500000014901161
+      ],
+      "rootOffsetAtLastForwardM": [
+        2.5,
+        -0.0,
+        -0.03500000014901161
+      ]
+    },
+    "jog": {
+      "durationS": 2.0,
+      "intervals": 60,
+      "actualHz": 30,
+      "reversePoseBytesExact": true,
+      "closedPoseBytesExact": null,
+      "rootMotionPolicy": "Forward translation in metres; reversing the exact pose sequence reverses root motion.",
+      "forwardSamples": 61,
+      "forwardReverseSamples": 122,
+      "forwardSupportPhases": {
+        "single-support": 51,
+        "airborne": 10
+      },
+      "maximumLimbEndResidualM": 1.3042560018380842e-06,
+      "clampedLimbTargets": 0,
+      "maximumTargetClampM": 0.0,
+      "supportedSoleObservations": 102,
+      "minimumSupportedSoleZWorldM": -8.275913501165633e-07,
+      "maximumSupportedSoleZWorldM": 0.004995265509933233,
+      "minimumSupportedProbeCountWithin5mm": 73,
+      "supportedObservationsWithPenetrationBeyond1mm": 0,
+      "allObservationsWithPenetrationBeyond1mm": 0,
+      "maximumHorizontalStepDuringSupportM": 7.453164755188368e-05,
+      "rootOffsetAtFirstForwardM": [
+        0.0,
+        -0.0,
+        -0.03500000014901161
+      ],
+      "rootOffsetAtLastForwardM": [
+        4.0,
+        -0.0,
+        -0.03500000014901161
+      ]
+    }
+  },
+  "geometryQualification": "Body04d control has known failed head/body/self contacts and unstable evaluated body tessellation. Motion metrics confer no geometry acceptance."
+}

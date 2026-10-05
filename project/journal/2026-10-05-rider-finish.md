@@ -358,3 +358,19 @@ Round21 ordinary clear/crash/restart passes exact finish bytes, errors0.
 Limits: Proposal only, no body05 geometry/art pass. Cached polygon4570
 label is uncertain; actual evaluated vertex-edge ancestry governs. Moving
 topology/normals, contact, held-out and grounded review remain required.
+
+## Exact-clock grounded locomotion remains an unaccepted pilot
+
+Finding: Five own51 analytic clips now sample at exact30Hz. Fixed world
+stance feet provide measured support while walk/jog root translation and
+swing phases replace the previous floating FK-only fixture.
+
+Validation: Parent independently reads all688records, reserializes51bone
+pose fields, verifies every forward/reverse sample and three closed clips,
+and recomputes every sole floor count and support step from actual XYZ.
+Largest supported step74.532µm; limb residual1.305µm; targets unclamped.
+The actual bounded nonblocking-lease native read took10.381s, exit0.
+
+Limits: Finite73barefoot probes per side, no full sole/COM, played art or
+engine proof. Body04d geometry remains rejected. Actual execution used a
+bounded direct Blender command, not the existing memory-monitor guard.

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/usr/bin/lockf",
+    "-k",
+    "-n",
+    "-t0",
+    "/Users/raynos/projects/localai/.model.lock",
+    "/opt/homebrew/bin/blender",
+    "-b",
+    "-t",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "harness/rider-finish/grounded-sample-v2.py",
+    "--",
+    "--source",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04d/natural-foundation.blend",
+    "--source-sha256",
+    "7c364bea92384c5562b28088454afcc208fe4f3dc46a5ffd98c4a51588543d66",
+    "--out",
+    "harness/out/rider-finish/grounded02.json"
+  ],
+  "elapsedS": 10.380796958,
+  "maximumS": 300,
+  "timedOut": false,
+  "exitCode": 0,
+  "logSHA256": "e66dffeb474e16007f3b81b12d67c2d7d3c9d2bcce696215ea0f6a7562ad8810",
+  "sourceSaved": false
+}
