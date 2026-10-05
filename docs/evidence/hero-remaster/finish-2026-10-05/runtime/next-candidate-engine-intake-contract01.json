@@ -1,0 +1,210 @@
+{
+  "schema": "rockhop-next-candidate-private-engine-intake-v1",
+  "status": "PREPARED_ONLY_UNACCEPTED_NO_CANDIDATE_EXECUTION",
+  "candidateBindingStatus": "WAIT_FOR_ROOT_FROZEN_NEXT_CANDIDATE_PINS_AND_SERIAL_ADMISSION",
+  "parentNative": {
+    "path": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend",
+    "sha256": "66c45ab5a76fe592b0b284a5a96dc3e6ba1f74b2854e5dae849aaff03f43bb77",
+    "fieldsSHA256": "ec307c63651b1b76cda75758572cce236987a0dc5c6d2543fd3e23492f9f626a"
+  },
+  "inspectionPins": {
+    "harness/rider-finish/consumed-skin-inventory.mjs": "b15591bde288c83f8962521d64a73ef9fed534a42049bc5fe48508b96538d5eb",
+    "harness/rider-finish/native-sample.py": "852be70ec38424466d5ad12478517172290d6866737660a49d43c64a23bd8050",
+    "harness/rider-finish/export-check.mjs": "5f23b6c56a9406d08aafb3d2b64b17bf3eb1e660c2aef98c879ee9c84b2cc77e",
+    "harness/rider-finish/prepare-export-mapping.py": "3fad3be4827f7f2e4be9afcbe4af12351a2b88d47f1df0463a67943ab076546d",
+    "src/render/hero/gltfRider.ts": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+    "src/render/hero/sleeveSkin.ts": "35ee7f2165fae54a25fb5559c148738d016d73692515fc72513316389dc88916",
+    "harness/hero-remaster/build.mts": "b315585c4c4c5c33483554aad100b6d7d930308b56ffc15cf87b0900032bb593",
+    "harness/hero-remaster/new-rider-private-adapter.mts": "96c95b7fc02814dfd7055a493e4b3dc8a53aeb5ac1430c71fe3c30235132c9d7",
+    "node_modules/three/src/renderers/shaders/ShaderChunk/skinnormal_vertex.glsl.js": "5e6f1857d196e7ca79cc4e2ee35fbd128ca74003ad8b96484723d918ca631e49",
+    "src/render/hero/lod.ts": "cbe2c24627baa5c3af8e9d9f4b626641c1b9772627d23c54ad7113a3f1ee4a66",
+    "src/render/hero/gltf.ts": "6de5285f505d5e09d5bd8eaf4506f62db44f42c931ed507e3c17367256e79fdf",
+    "src/render/index.ts": "f876e45b0afaa45856b837a8fdb2e534d93e126a7e64a6be2824e9a2ffa1fd21"
+  },
+  "nativeExportCapability": {
+    "exportFourPy": "ABSENT; no harness/rider-finish/export-four.py found",
+    "actualExporter": "native-sample.py optional --export-idle",
+    "limitation": "Existing native-sample resets controllers and synthesizes semantic poses in memory. Next intake must use the exact prior saved51 payloads instead; no claim that index alone makes its poses equivalent."
+  },
+  "jointAuthority": {
+    "restPin": "harness/out/rider-finish/body05-intake01/rest.json.gz",
+    "sha256": "1f1b32305d66aa0cd3da149c296b348a52de99c9ce4ef5a2828add2be18b5499",
+    "semanticOrder": [
+      "pelvis",
+      "spine",
+      "chest",
+      "shoulder.R",
+      "upperArm.R",
+      "forearm.R",
+      "hand.R",
+      "index_01.R",
+      "index_02.R",
+      "index_03.R",
+      "middle_01.R",
+      "middle_02.R",
+      "middle_03.R",
+      "pinky_01.R",
+      "pinky_02.R",
+      "pinky_03.R",
+      "ring_01.R",
+      "ring_02.R",
+      "ring_03.R",
+      "thumb_01.R",
+      "thumb_02.R",
+      "thumb_03.R",
+      "shoulder.L",
+      "upperArm.L",
+      "forearm.L",
+      "hand.L",
+      "index_01.L",
+      "index_02.L",
+      "index_03.L",
+      "middle_01.L",
+      "middle_02.L",
+      "middle_03.L",
+      "pinky_01.L",
+      "pinky_02.L",
+      "pinky_03.L",
+      "ring_01.L",
+      "ring_02.L",
+      "ring_03.L",
+      "thumb_01.L",
+      "thumb_02.L",
+      "thumb_03.L",
+      "neck",
+      "head",
+      "thigh.R",
+      "shin.R",
+      "foot.R",
+      "ball.R",
+      "thigh.L",
+      "shin.L",
+      "foot.L",
+      "ball.L"
+    ],
+    "requiredMappings": [
+      "source semantic name -> exported glTF skin joint node index",
+      "exported node index -> GLTFLoader Bone object via parser associations",
+      "loaded raw Bone.name -> GltfRider boneName key",
+      "clip track raw node -> same boneName key",
+      "explicit collisions and missing mapped targets"
+    ],
+    "namesPolicy": "Preserve legacy names. No broad namespace normalizer inferred; actual own51 table and loaded binding must prove each key."
+  },
+  "nativeCaptureRequired": {
+    "indices": [
+      0,
+      70,
+      99,
+      128,
+      151,
+      157,
+      186,
+      244,
+      302,
+      422
+    ],
+    "poseAuthority": "Exactly pinned old saved51 location/quaternionWXYZ/scale per index; no semantic motion regeneration or new pose.",
+    "rest": [
+      "jointOrder51",
+      "rigWorldRows",
+      "restBoneRows51",
+      "per-region xyz/faces/objectWorld/cornerNormals/cornerVertices",
+      "per-region fullRawWeights/fourRawWeights/fullWeights/fourWeights in explicit jointOrder",
+      "source raw packed INT16_2D and decoded normal provenance",
+      "triangle->loop corner triples, polygons/sharp/smooth fan provenance for derived dynamic normals"
+    ],
+    "sample": [
+      "index/case/phase/timeS identity",
+      "poseBasisBlender51",
+      "skinNativeRows51",
+      "boneWorldNativeRows51",
+      "every region FULL/FOUR xyzWorld/normalWorldCorners/faces",
+      "explicit topology stability or changed ngons, never a false stable-topology pass"
+    ],
+    "knownSchemaGap": "body06-cap-native compact capture lacks independent rest pin and boneWorldNativeRows; not sufficient direct input for export-check.mjs.",
+    "scope": [
+      "All global original34 source objects including unlinked, all scenes and original/copied own51 rest/world/savedpose unchanged except admitted exact body07 field mask",
+      "Head body06 fields/reference arrays exact; source protected face geometry/UV/raw+decoded rest normals unchanged",
+      "Body outside admitted438 FULL/FOUR rows, all OTHER raw groups and graph boundaries exact. For coincident affected points, preserve original pairwise raw-field differences; any conflict stops before native, without alias expansion.",
+      "Body/boxer/foot/source partners must remain included; previous failures persist unless measured"
+    ]
+  },
+  "exportIdentityRequired": {
+    "attributes": [
+      "_NATIVE_ID native per-region point index",
+      "_CORNER_ID native per-region corner index",
+      "_REGION_ID immutable part ID surviving material merge",
+      "explicit protected-source corner/native flags and sourcePoint/sourceCorner/sourcePolygon references"
+    ],
+    "inspectorAttributes": "GLTFLoader BufferGeometry names are _native_id/_corner_id/_region_id; assert actual names after export/load.",
+    "mapping": "Every exported row resolves an exact declared native point AND corner. No nearest-point, no -1 ancestry substituted for native ID, no coordinate aliases as corner identity.",
+    "coverage": "All used native triangle points and required corners covered. Explicitly report original unused head4976 separately. Verify oriented triangle triples independently; inspector coverage alone does not prove them.",
+    "bind": [
+      "same actual own51 skin, joint hierarchy/order/node identities",
+      "per-mesh bindMatrix and inverse",
+      "every joint inverse-bind accessor plus loaded boneInverse",
+      "native object/rig world transforms and glTF root ancestors"
+    ],
+    "frame": "Native Z-up -> file Y-up C(x,y,z)=(x,z,-y), det+1. Explicit engine rider wrapper translation -0.65 versus native file-frame world +0.65; do not strip ancestor transforms or fit geometry."
+  },
+  "actualEngineConsumption": {
+    "path": "Private catalog bytes -> actual GLTFLoader -> prepareHero -> GltfRider SkeletonUtils clone -> actual renderer draw.",
+    "privateBuild": "harness/hero-remaster/build.mts --models mapping; hash-confirm served GLB bytes; no public player asset replacement.",
+    "adapter": "Existing new-rider-private-adapter expects19 bones and legacy hand morph/sole offsets; do not apply it unchanged to own51.",
+    "skinConditioner": "GltfRider calls conditionSleeveSkin. Candidate owner metadata rockhopRiderSkinConditioned=1 must be explicit if authored skin is to opt out; verify actual post-constructor named skin fields, not metadata alone.",
+    "merge": "prepareHero material merge can drop source mesh names and retain first userData. Part-local IDs need _REGION_ID and independently pinned map after actual merge/clone.",
+    "inspector": "harness/rider-finish/consumed-skin-inventory.mjs prepared browser-compatible read-only module; no invocation performed.",
+    "materials": "Decode real textures and record actual material maps/normalMap route after preparation and clone; CPU export-check suppresses texture decode and cannot prove appearance.",
+    "instances": "Inventory resident rider, high/low candidate, Garage mirrored skin/material clones and relevant context restoration separately; sharing skeleton does not prove identical normal hooks."
+  },
+  "animationConsumerFacts": {
+    "source": "src/render/hero/gltfRider.ts inspected; no production edits.",
+    "binding": "boneName called both on loaded bones and sampler track nodes. index_01R canonicalization omission alone does not establish unconsumed finger tracks.",
+    "order19": "ORDER covers 19 legacy physics roles; constructor rest/reset/additiveBasis, stage poses/transitions and ragdoll use these roles.",
+    "allMappedQuaternionFallback": "additive loops all sampler quaternion entries and skips only shoulder/upperArm/forearm/hand ARM_CHAIN. Mapped fingers/ball bones may consume rotations in fallback; non-ORDER reset behavior requires actual measurement.",
+    "physicalRiding": "When riderBody.present, both grip sockets and bike are available, physicalPose calls poseFromChain, sets additiveWeight=0 and returns before additive clips.",
+    "measurementRequired": [
+      "Actual played path physicalPose/stageClip/additiveWeight trace",
+      "Per51 bone loaded key and clip target binding, missing targets/collisions",
+      "Per51 basis before/after draw and repeated identical pose reset; distinguish inherited parent motion from explicit animated local transform",
+      "Generic authored clip playback separate from physics riding contact driver coverage"
+    ]
+  },
+  "normalRouteOptions": [
+    {
+      "option": "Stock consumed baseline first",
+      "action": "Measure actual played candidate through current SkinnedMesh/PBR pipeline early, with exact exported skin and maps. Preserve/report native normal mismatch.",
+      "scope": "No native-parity acceptance from CPU export formula; actual compiled shader/readback required."
+    },
+    {
+      "option": "Derived dynamic geometric fan normals",
+      "action": "Prepared design only: reconstruct normals from current skinned geometry and exact native sharp/smooth fan provenance, then provide post-skin object-space normal via separate attribute/texture and consume after skinnormal shader chunk. Positions and bind/skin/source normal buffers remain unchanged.",
+      "scope": "Different explicit route for derived automatic fans versus protected original custom normals. No global override, source rewrite or parity claim from one six-face witness. All relevant fan data and actual GPU comparison needed."
+    },
+    {
+      "option": "Bounded native normal reference diagnostic",
+      "action": "Prepared design only: stream exact native evaluated normals for bounded known saved poses into separate post-skin normal buffer, allowing actual rendered comparison.",
+      "scope": "Finite diagnostic is not runtime solution for arbitrary physics poses or mobile acceptance. No per-frame all-motion shipping buffer; no source normal edits."
+    }
+  ],
+  "normalEvidence": "Snapshot40 proves automatic six-face fan with packed [0,0] at derived neck45084/corner196454. Float32 Newell+Float64 angle fan matches native <=2.622e-6 in this witness. Standard linear rest-normal skin omits variable-field geometry gradient. Protected original custom normal route remains separate and immutable.",
+  "executionSequenceAfterRootAdmission": [
+    "One frozen-candidate preservation/rest+exact ten-pose native snapshot with full export-check schema under canonical nonblocking CPU2 guard; source never saved",
+    "Checkpoint actual exit/warnings/pins/compact witness results before retry",
+    "Private export with exact IDs/bind, separately admitted and pinned; CPU installed-Three check has explicit GPU/map limits",
+    "Early silent actual headless game played capture from hash-confirmed private catalog; actual consumption inventory and contacts; no posed movie called played evidence",
+    "Any normal hook requires separate root-reviewed scope and actual shader/readback proof"
+  ],
+  "limits": [
+    "No native/export/GLB/shader/source-author/render/gate execution performed by this preparation.",
+    "No next candidate SHA invented; candidate contract frozen only when author supplies exact pins.",
+    "No tolerance relaxation, corner exclusion, gameplay substitution, art acceptance, promotion or device pass.",
+    "Inspector records exact coverage/skin deltas and bind values; it does not independently certify inverse binds, triangle winding or rendered GPU normals."
+  ],
+  "nextShoulderProposal": {
+    "path": "docs/evidence/hero-remaster/finish-2026-10-05/construction/body07/shoulder-preflight-proposal.json",
+    "sha256": "f3fd518cc20b96f49a6bf7db197b1e5510f9a9e1dc97c35d71e6a18de9e8f3a6",
+    "status": "Prepared source/mask policy inspected only; proposal/native candidate not evaluated by this intake preparation."
+  }
+}

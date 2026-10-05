@@ -735,3 +735,22 @@ crash/restart returns to tick0 in1/2ms, errors0. Outer guard exits0 in16.748s.
 Limits: The guides are too faint/occluded for feature interpretation;
 source flat-triangle shading is disclosed. No cavity/fit/skin/art/newrider
 engine/device acceptance. Execution42; next ordinary game gate45.
+
+
+## Freeze the early actual-engine intake preparation
+
+Finding: Current private19adapter and compact body06capture cannot prove
+consumption of the new own51rig. Freeze exact region/native/corner identity,
+all51joint associations, bind/material/conditioner checks and a read-only
+post-draw inventory before the next private export. Physical riding returns
+before additive clips; finger fallback/reset requires actual measurement.
+
+Validation: Parent reads both frozen leaves and actual constructor/additive
+paths. JavaScript syntax passes; installed BufferAttribute.getComponent and
+conditioner metadata route exist. Native-sample optional export capability
+and export-check schema gaps are explicitly recorded. No job invoked.
+
+Limits: Preparation only; no native/export/private-engine/normal/GPU/art
+acceptance. Inventory reports deltas/coverage and bind values, not winding
+or inverse-bind parity. Normal-route options are separate unimplemented
+choices. No execution-round increment; next ordinary game gate45.
