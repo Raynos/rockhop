@@ -64,6 +64,78 @@ or animations. They are appearance sources for deliberate production constructio
 and UV/PBR transfer, not direct phone assets. New glove/boot sources must not be
 confused with the historical hand107 or wedge-boot controls.
 
+## Consolidated handoff reconciliation — ask307, October5
+
+The [consolidated recovery handoff](sol-6.1-2026-10-05-RIDER_CONSOLIDATED_PLAN.md)
+is incorporated as historical requirements/evidence context. Its copied ten-stage
+and M0–M5 tables exactly match the baseline; all seven local links resolve.
+[Review receipt](../evidence/hero-remaster/finish-2026-10-05/consolidated-plan-review.json)
+records checked claims, current replacements and remaining unknowns.
+This finish plan remains the current execution sequence, the October3 baseline
+retains acceptance/specification, and FINISH_TO_PUBLISH remains release authority.
+The consolidated document is preserved unchanged; its owner/status/publication
+snapshot and Appendix C blockers are dated history, not fresh execution status.
+
+| Baseline/consolidated stage | Current work package |
+| --- | --- |
+| 1 — Art direction | F0 reference/identity contract; complete coverage before acceptance |
+| 2 — Assembled body/identity | F1 natural body/head and modest underwear |
+| 3 — Separate fitted garments | F2 hoodie/jeans/glove/boot openings, inner space and layers |
+| 4 — UV/PBR | F2 original-source appearance and traceable bake/normal transfer |
+| 5 — Rig/weights | F0 immutable51 plus F1/F2 semantic normalized FOUR, retained FULL |
+| 6 — Collision-aware deformation | F2 sound fit plus F3 consumed, matched OFF/ON response |
+| 7 — Actual animation/contact | F3 generic support, named clips and both actual bikes |
+| 8 — Exact engine | Early private F1/F2 stress checks, then F4 whole-candidate gameplay |
+| 9 — Mobile optimization | F4 real LOD/material/lifecycle and F5 physical-device qualification |
+| 10 — Visual QA/release | Parent played judgments throughout; F5 bot/stranger/device/live SHA |
+
+Carry these concrete requirements into each next handoff:
+
+- Pin storyboard03 `d48e3913…`; retain separate face/body9/10 bars. The original
+  selected donors stay intact; no new source-generation campaign. Compact
+  prototypes and successful source orbits are construction inputs only.
+- Prove actual cuff/neck/hem/waist/ankle openings, inner clearance and sane
+  thickness. Preserve hoodie character/crease treatment and full-body coverage;
+  resolve underwear/jeans/hoodie and jeans/boot overlap through motion.
+- Register all five glove digits anatomically before transfer; observe all15
+  segment fields per hand. Prove palm/cuff enclosure before skin, then complete
+  deformed grip and crash release. Do not resize handlebars to hide failure.
+- Keep all51 deform joints;19 denotes runtime/physics roles, and153 auxiliary
+  groups are not bones. Verify actual raw FULL provenance separately from FOUR
+  normalization; conditioned source arrays cannot stand in for the FULL control.
+- Check stable evaluated triangle/source-corner mapping and moving normals
+  separately from XYZ. Body04d triangulation changes under evaluation, and the
+  body02 positional export pass coexists with failed moving-normal parity.
+  Fix/classify both before production export; CPU evidence grants no GPU pass.
+- Enter the private actual-engine rest/A/T/reach/asymmetric stress review as
+  soon as sound candidate construction permits, before long animation polishing.
+  Pin the same source/driver/sample/camera/bike for pixels and metrics. Actual47,
+  presentation50, synthetic FK, grounded and neural streams remain distinct.
+- Certify complete signed palm/finger/sole/peg/posterior/saddle surfaces, intended
+  load-bearing patches and relative slip. Finite anchors/sole probes are proxies;
+  declare standing, seated, locomotion flight, crash release and restart phases.
+- Test consumed correction OFF/ON with the same candidate/poses/material/camera,
+  every body/head/self/inter-garment target, sampling limits and actual phone cost.
+  Fix embedding/attachment causes rather than repeat density/radius/cap sweeps.
+
+Historical scope104/hand107 applies to its old4,021-vertex glove only. Today's
+selected glove `890f8693…` has its own source lineage and authorized derivative
+construction. Glove-anatomy02 admits distal correspondence only; fit03 still
+fails1,743 body contacts per side. Likewise the old1,243-ID neck scope does not
+silently replace the committed F0 lower-head7,828-ID derived contract. Protected
+upper geometry/cheek/UV/PBR/raw+decoded normals and original51 remain exact.
+
+The consolidated shipping goal also lists facial rigging. Current own51 has no
+jaw/eye bones or facial morphs; head/neck motion cannot satisfy that claim.
+Ask307 records this capability gap; HR-25 asks whether facial animation belongs
+in this remaster. Pending that scope answer, core body/wardrobe work proceeds;
+no protected-face authoring or new-bone change is implied by this handoff.
+
+Historical external-owner bridge/CLI/support investigations and stopped reporting
+schedules stay historical. Current ask305 authorizes internal finish teammates
+in new leaves; they preserve original source ownership. No external task message,
+schedule restart, new CLI campaign or publication follows from this review.
+
 ## Ownership and one candidate contract
 
 Preserve the three human-created source owners and their frozen handoffs.
@@ -230,12 +302,16 @@ and verified live SHA. AllM0–M5 evidence linked; no unmeasured gate is green.
 
 ## First round, stop rules and closure
 
-**Next concrete round:** freeze F0's body/head/skin/normal contract and execute
-the bounded F1 neck feasibility prerequisite. Agent3 independently checks its
-actual decoded normals and finite crossings. Agent2 prepares the existing three
-new wardrobe sources' calibrated fit/bake handoff concurrently. Parent decides
-the next body interface from that result, then Agent1 builds one complete wearer.
-No new geometry generation or hand-curl retune precedes those prerequisites.
+**Next concrete round after ask307 reconciliation:** preserve body04d's failed
+loft and prepare one planar neck/body separation proposal from its actual
+witnesses. Prove source-triangle ancestry, stable tessellation, protected normals
+and finite rest clearance before expensive films; then test raised/held-out and
+grounded motion. The body04d rest head251/body-head112 crossings remain failures.
+Wardrobe prepares a better conditioned actual surface enclosure mechanism after
+the fit03 checkpoint; no repetition of its failed interpolation controller.
+Generic grounded30Hz/reversal/locomotion preparation proceeds separately, with
+played support and private same-candidate engine checks before acceptance.
+No new geometry generation or hand-curl retune precedes these prerequisites.
 Generic motion fixtures and calibrated wardrobe preparation proceed in parallel;
 UniMate input-contract evaluation does not delay the native author.
 

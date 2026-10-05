@@ -312,3 +312,18 @@ Limits: Canonical units are not native metres without scale verification.
 T-1 omits source end row60; GT first/last position differs1.36495e-5.
 Native roundtrip/retarget and moving review remain open; authored support
 stays authoritative, no further neural experiment before body qualification.
+
+## Consolidated handoff becomes current execution requirements
+
+Finding: The752-line handoff preserves exact baseline stage/milestone tables,
+but historical scope/ownership/status must not replace newer finish contracts.
+Carried source appearance, wearable ports/layers, real grip/support and consumed
+collision requirements into the execution plan with an explicit crosswalk.
+
+Validation: Full document read; seven local links resolve; baseline tables exact;
+readiness/storyboard/three donorGLBs match hashes. Three lane reviews confirm
+old/newglove distinction, currentneckscope, rawFULL and topology/normal gaps.
+
+Limits: No new asset or gate acceptance, no publication/toolcampaign. Facial
+rigging capability is unimplemented and its remaster scope answer remains pending.
+Core body/wardrobe and source-matched engine qualification continue autonomously.
