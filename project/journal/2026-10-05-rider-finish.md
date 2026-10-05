@@ -548,3 +548,17 @@ and1–2ms restart; bounded guard10.804s exits0. No cut executed yet.
 Limits: Source-graph/played-scope decision only. Removal will need fresh
 exact retained-source/readback and mouth/cavity evidence before fitting.
 No palm/finger enclosure, fitted geometry, skin, art/GPU/device acceptance.
+
+## Neck authoring stops before an invalid scene inventory assumption
+
+Finding: First field-authoring preflight incorrectly requires34objects
+linked toScene. Original34preservation concerns exact global identities,
+not membership count. Stop before changing fields or saving a candidate.
+
+Validation: Guardexit1/1.661s; parent failed recipe/log/receipt pins and
+immutable body05/fields exact; body06candidate absent. The saved trace
+identifies the assertion before the authoring loop.
+
+Limits: Execution34 yields no field/geometry result. Corrected attempt
+must verify pinned original34globally and retain per-scene membership
+equality, with every other source/rig/normal/material guard unchanged.

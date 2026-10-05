@@ -1,0 +1,22 @@
+{
+  "status": "BODY06_AUTHOR_PREFLIGHT_REJECTED_SCENE_MEMBERSHIP_ASSUMPTION_NO_CANDIDATE",
+  "recipe": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_rigid_inner_cap.py",
+  "recipeSHA256": "aee630690774936a4b928257a2087e5edb3d04b5ff9961773b3e57b30ad51acf",
+  "guardSHA256": "ca2459be11230124523b910d3cf5b34a539562199eb87121f8fbc5e41d4b3362",
+  "workerLogSHA256": "d1085df00c593fde81761c1746ab1771008efbd6ed062d7c36c47d7072119862",
+  "workerExitCode": 1,
+  "elapsedSeconds": 1.661,
+  "failedAssertion": "snapshot(): len(result[scenes][Scene]) ==34; original34 are global source objects, not guaranteed all linked to Scene.",
+  "fieldMutationReached": false,
+  "nativeWritten": false,
+  "fieldsWritten": false,
+  "sourceSHA256": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+  "sourceFieldsSHA256": "36277520249bcd2a8058a76c2f4a7595d7c460d3196e9bc59b3aa3a31690cb2d",
+  "sourcePinsStillExact": true,
+  "leaseReleased": true,
+  "correctionProposal": "Pin original34 global names from existing source preservation inventory and verify global presence; snapshot all global object states plus per-scene evaluated states. Preserve geometry/normal/material/rig/weight guards unchanged.",
+  "limits": [
+    "No candidate geometry/field/normal/contact result exists; stopped before first field authoring.",
+    "Frozen failed recipe/log must be checkpointed before any corrected attempt. No rerun or overwrite performed."
+  ]
+}
