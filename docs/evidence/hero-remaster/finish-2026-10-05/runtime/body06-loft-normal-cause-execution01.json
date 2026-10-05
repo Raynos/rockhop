@@ -1,0 +1,61 @@
+{
+  "status": "UNACCEPTED_ARRAY_ONLY_CAUSE_EXECUTED_NO_NATIVE_JOB",
+  "recipeSHA256": "558674bba47335c93956751c38d68604161acdec49efac7874a9ef993bcbd77a",
+  "receiptSHA256": "d58d11029d98af90d3279e614f1a9922e773ad365ad73e1ce41d3e2d0e7e27b2",
+  "outerLease": "/usr/bin/lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock",
+  "command": [
+    "env",
+    "OMP_NUM_THREADS=2",
+    "OPENBLAS_NUM_THREADS=2",
+    "VECLIB_MAXIMUM_THREADS=2",
+    "/Users/raynos/projects/localai/runtime/unimate/.venv/bin/python",
+    "harness/rider-finish/body06-loft-normal-cause.py",
+    "--out",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-loft-normal-cause01.json"
+  ],
+  "processExitCode": 0,
+  "elapsedSeconds": 1.422,
+  "limitSeconds": 60.0,
+  "threadEnvironment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2"
+  },
+  "guardSHA256": "bcaa4fbb13915c14952fd496e3503bce7f55681c776f81c37a72043ca31044fd",
+  "guardRecipeSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "workerLogSHA256": "a1880b6990336fdda0d29dfdbbc7dd6160fa8c3c9220836f20c6a7ac4fd94eb7",
+  "workerStdout": "BODY06_LOFT_CAUSE_READY\n",
+  "warnings": [],
+  "peakAnonymousGiB": 28.2,
+  "peakAnonymousPlusWiredGiB": 34.9,
+  "sourceInputPinsStillExact": true,
+  "leaseReleased": true,
+  "assessment": {
+    "exactWeightGradientContributionEstablished": true,
+    "edgeDecompositionMaximumResidualM": 2.9111850447299453e-16,
+    "crossDecompositionMaximumResidualM2": 4.05559375145359e-18,
+    "maximumActualNativeToManualTrueNormalVectorError": 1.8618971917478915e-05,
+    "meanAffineDeterminantRange": [
+      0.9698841386172519,
+      0.9885045083850603
+    ],
+    "gradientCrossRelativeToConstantCrossRange": [
+      1.0606982727721284,
+      2.37987330725005
+    ],
+    "actualGeometricSixFaceProxyToNativeCornerError": 0.0002079616862825892,
+    "interpretation": "Per-vertex field variation changes true geometric cross direction substantially beyond the frozen mean-affine normal control. Native decoded corner direction closely follows the actual geometric six-face proxy; that is evidence that the large linear-rest-normal disagreement is dominated by moving surface geometry, while exact native custom-fan reconstruction remains unmeasured.",
+    "nativeFanPartitionVerified": false,
+    "actualPackedRowsCaptured": false,
+    "loftFoldCertificate": "UNMEASURED"
+  },
+  "limits": [
+    "No native job, new pose, save, shader, renderer, source rewrite, normal exclusion or tolerance relaxation.",
+    "Exact triangle edge decomposition uses normalized raw semantic fields and captured own51 skin matrices; actual native float32 geometry remains the numerical authority.",
+    "Six-face angle-weighted proxy is explicitly not a reconstructed native fan; even a small residual does not establish missing packed data.",
+    "Custom normal packing and post-set sharp-edge/fan partition are not available in this capture. Their exact interpretation remains open.",
+    "The previously captured whole-head moving-normal vector error remains a failure; this study cannot accept geometry, shading, art or release.",
+    "Previous metadata matmul warnings and body02 corner-label limitation are retained historically; this fresh finite-einsum study emits no warnings.",
+    "No source field/geometry/normal edit, new native pose, pixel/engine test or acceptance."
+  ]
+}

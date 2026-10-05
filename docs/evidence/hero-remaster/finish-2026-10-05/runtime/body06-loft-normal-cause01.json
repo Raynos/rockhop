@@ -1,0 +1,1064 @@
+{
+  "status": "UNACCEPTED_ARRAY_ONLY_VARIABLE_FIELD_GEOMETRY_AND_CORNER_NORMAL_CAUSE_STUDY",
+  "recipeSHA256": "558674bba47335c93956751c38d68604161acdec49efac7874a9ef993bcbd77a",
+  "inputPins": {
+    "harness/out/rider-finish/body06-intake01/report.json": "1d19d3d4abbaf27258b296ca0f4307d705f3c4ed4a0c1d4cc479020c5d6a39d4",
+    "harness/out/rider-finish/body05-intake01/rest.json.gz": "1f1b32305d66aa0cd3da149c296b348a52de99c9ce4ef5a2828add2be18b5499",
+    "harness/out/rider-finish/body06-intake01/sample-0244.json.gz": "44a355f5550120a48971d702a51d13ad9ee2e0be062409aee7bb4e14623c0e2c",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/authored-neck-fields.npz": "ec307c63651b1b76cda75758572cce236987a0dc5c6d2543fd3e23492f9f626a",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_planar_neck.py": "1499ce8e149d500e52f33904ae0d0b07d3a7c732f782f1132d988fe49fa4f895",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-normal-witness-metadata01.json": "5bfd3069f5f81eb445416db93a6e941856e71ee63130b7201b3898e43067eb74"
+  },
+  "index": 244,
+  "nativeVertex": 45084,
+  "corner": 196454,
+  "allSixGeometricIncidentTriangles": [
+    {
+      "triangle": 65484,
+      "nativeVertexIDs": [
+        44667,
+        45083,
+        45084
+      ],
+      "restWorldXYZ": [
+        [
+          0.6738125551491976,
+          -0.06853155046701431,
+          1.5708333253860474
+        ],
+        [
+          0.6717659030109644,
+          -0.07579589635133743,
+          1.5666667222976685
+        ],
+        [
+          0.6727592628449202,
+          -0.07498377561569214,
+          1.5666667222976685
+        ]
+      ],
+      "actualWorldXYZ": [
+        [
+          0.7308825254440308,
+          -0.011570736765861511,
+          1.5708333253860474
+        ],
+        [
+          0.7255123257637024,
+          -0.02581208199262619,
+          1.566666603088379
+        ],
+        [
+          0.7253937125205994,
+          -0.024551138281822205,
+          1.566666603088379
+        ]
+      ],
+      "normalizedSkinRows": [
+        {
+          "chest": 0.023011576812929972,
+          "neck": 0.14410057932325787,
+          "head": 0.8328878438638122
+        },
+        {
+          "chest": 0.09303031324662968,
+          "neck": 0.5999485388386668,
+          "head": 0.30702114791470353
+        },
+        {
+          "chest": 0.09542415504360545,
+          "neck": 0.5975546970416911,
+          "head": 0.30702114791470353
+        }
+      ],
+      "perJointVertexWeightRange": {
+        "chest": 0.07241257823067548,
+        "neck": 0.45584795951540896,
+        "head": 0.5258666959491087
+      },
+      "meanAffineLinearDeterminant": 0.9698841386172519,
+      "restTrueCross": [
+        3.383784765276232e-06,
+        -4.138936152031647e-06,
+        5.553980781336509e-06
+      ],
+      "actualTrueCross": [
+        5.254002275911773e-06,
+        4.942284448361534e-07,
+        -8.460731656168008e-06
+      ],
+      "restArea2M2": 7.708923032938217e-06,
+      "actualArea2M2": 9.971598759910805e-06,
+      "constantMeanFieldEdges": [
+        [
+          0.005154549545657741,
+          -0.005354881682107424,
+          -0.004166601219801799
+        ],
+        [
+          0.004958831459638528,
+          -0.0041065152289339445,
+          -0.004166601441480334
+        ]
+      ],
+      "weightGradientEdges": [
+        [
+          -0.010524710877192535,
+          -0.008886461456762182,
+          -8.673860741565725e-08
+        ],
+        [
+          -0.010447619875972635,
+          -0.008873881881921807,
+          -8.687638615416847e-08
+        ]
+      ],
+      "actualManualEdges": [
+        [
+          -0.005370161331534895,
+          -0.01424134313886959,
+          -0.004166687958409021
+        ],
+        [
+          -0.005488788416334156,
+          -0.012980397110855732,
+          -0.004166688317866596
+        ]
+      ],
+      "edgeDecompositionMaximumResidualM": 1.93421667571414e-16,
+      "nativeManualVertexMaximumResidualM": 8.880115793049005e-08,
+      "constantMeanFieldCross": [
+        5.201446373614591e-06,
+        8.154803585979148e-07,
+        5.386719540338318e-06
+      ],
+      "mixedGradientCross": [
+        5.252506116879089e-08,
+        -3.2119210631950543e-07,
+        -1.4400281984172392e-05
+      ],
+      "pureGradientCross": [
+        2.315500252876414e-12,
+        -8.136847477947781e-12,
+        5.526698228509029e-07
+      ],
+      "crossDecompositionMaximumResidualM2": 4.05559375145359e-18,
+      "actualNativeToManualTrueNormalError": 1.186178265195594e-05,
+      "actualNativeToFrozenMeanFieldTrueNormalDot": -0.2375737769996366,
+      "gradientCrossRelativeToConstantCross": 1.8389181299310309
+    },
+    {
+      "triangle": 65485,
+      "nativeVertexIDs": [
+        44667,
+        45084,
+        44668
+      ],
+      "restWorldXYZ": [
+        [
+          0.6738125551491976,
+          -0.06853155046701431,
+          1.5708333253860474
+        ],
+        [
+          0.6727592628449202,
+          -0.07498377561569214,
+          1.5666667222976685
+        ],
+        [
+          0.6744667217135429,
+          -0.0679110735654831,
+          1.5708333253860474
+        ]
+      ],
+      "actualWorldXYZ": [
+        [
+          0.7308825254440308,
+          -0.011570736765861511,
+          1.5708333253860474
+        ],
+        [
+          0.7253937125205994,
+          -0.024551138281822205,
+          1.566666603088379
+        ],
+        [
+          0.7305740714073181,
+          -0.010731600224971771,
+          1.5708333253860474
+        ]
+      ],
+      "normalizedSkinRows": [
+        {
+          "chest": 0.023011576812929972,
+          "neck": 0.14410057932325787,
+          "head": 0.8328878438638122
+        },
+        {
+          "chest": 0.09542415504360545,
+          "neck": 0.5975546970416911,
+          "head": 0.30702114791470353
+        },
+        {
+          "chest": 0.024603466076102344,
+          "neck": 0.14250868850871096,
+          "head": 0.8328878454151867
+        }
+      ],
+      "perJointVertexWeightRange": {
+        "chest": 0.07241257823067548,
+        "neck": 0.4550460085329801,
+        "head": 0.5258666975004831
+      },
+      "meanAffineLinearDeterminant": 0.9728421615714895,
+      "restTrueCross": [
+        2.5852809741877536e-06,
+        -2.7256524273155947e-06,
+        3.5672864125285697e-06
+      ],
+      "actualTrueCross": [
+        3.4964489357136586e-06,
+        1.285242312576429e-06,
+        -8.609720735908155e-06
+      ],
+      "restArea2M2": 5.180578270718388e-06,
+      "actualArea2M2": 9.381060393815661e-06,
+      "constantMeanFieldEdges": [
+        [
+          0.005210758859837381,
+          -0.0037984070134909134,
+          -0.004166601415245481
+        ],
+        [
+          -0.0002550594344518266,
+          0.0008519348774029793,
+          -1.7798334904003738e-10
+        ]
+      ],
+      "weightGradientEdges": [
+        [
+          -0.010699547276171523,
+          -0.009181990097364845,
+          -8.690262109578988e-08
+        ],
+        [
+          -5.33747905591621e-05,
+          -1.2800277322791345e-05,
+          -1.2167784246322995e-10
+        ]
+      ],
+      "actualManualEdges": [
+        [
+          -0.005488788416334156,
+          -0.012980397110855732,
+          -0.004166688317866596
+        ],
+        [
+          -0.0003084342250109229,
+          0.0008391346000801887,
+          -2.996611847549957e-10
+        ]
+      ],
+      "edgeDecompositionMaximumResidualM": 6.581107186987012e-17,
+      "nativeManualVertexMaximumResidualM": 8.281391173571431e-08,
+      "constantMeanFieldCross": [
+        3.54967374193744e-06,
+        1.0627319279870057e-06,
+        3.4704076657532037e-06
+      ],
+      "mixedGradientCross": [
+        -5.3257521811509235e-08,
+        2.2241237290826326e-07,
+        -1.1726709035640357e-05
+      ],
+      "pureGradientCross": [
+        4.867094462529156e-15,
+        3.336511372132127e-12,
+        -3.531296259998368e-07
+      ],
+      "crossDecompositionMaximumResidualM2": 8.436448154652831e-19,
+      "actualNativeToManualTrueNormalError": 1.0255607224922665e-05,
+      "actualNativeToFrozenMeanFieldTrueNormalDot": -0.3381006494845385,
+      "gradientCrossRelativeToConstantCross": 2.37987330725005
+    },
+    {
+      "triangle": 65486,
+      "nativeVertexIDs": [
+        44668,
+        45084,
+        45085
+      ],
+      "restWorldXYZ": [
+        [
+          0.6744667217135429,
+          -0.0679110735654831,
+          1.5708333253860474
+        ],
+        [
+          0.6727592628449202,
+          -0.07498377561569214,
+          1.5666667222976685
+        ],
+        [
+          0.6734970211982727,
+          -0.0741630345582962,
+          1.5666667222976685
+        ]
+      ],
+      "actualWorldXYZ": [
+        [
+          0.7305740714073181,
+          -0.010731600224971771,
+          1.5708333253860474
+        ],
+        [
+          0.7253937125205994,
+          -0.024551138281822205,
+          1.566666603088379
+        ],
+        [
+          0.7251273393630981,
+          -0.023494873195886612,
+          1.566666603088379
+        ]
+      ],
+      "normalizedSkinRows": [
+        {
+          "chest": 0.024603466076102344,
+          "neck": 0.14250868850871096,
+          "head": 0.8328878454151867
+        },
+        {
+          "chest": 0.09542415504360545,
+          "neck": 0.5975546970416911,
+          "head": 0.30702114791470353
+        },
+        {
+          "chest": 0.10202538298089342,
+          "neck": 0.5909534736793747,
+          "head": 0.30702114333973185
+        }
+      ],
+      "perJointVertexWeightRange": {
+        "chest": 0.07742191690479108,
+        "neck": 0.4550460085329801,
+        "head": 0.5258667020754548
+      },
+      "meanAffineLinearDeterminant": 0.9698841396705135,
+      "restTrueCross": [
+        3.419702224505272e-06,
+        -3.0739462335560575e-06,
+        3.816563421021879e-06
+      ],
+      "actualTrueCross": [
+        4.401163285816523e-06,
+        1.1099029748606881e-06,
+        -9.152986212068726e-06
+      ],
+      "restArea2M2": 5.975756445652885e-06,
+      "actualArea2M2": 1.0216617810231725e-05,
+      "constantMeanFieldEdges": [
+        [
+          0.005160516016834416,
+          -0.004971250473819026,
+          -0.004166601280775433
+        ],
+        [
+          0.004830253313304126,
+          -0.003935802824978799,
+          -0.004166601487118474
+        ]
+      ],
+      "weightGradientEdges": [
+        [
+          -0.010340870208157566,
+          -0.008848281237116914,
+          -8.673742989076325e-08
+        ],
+        [
+          -0.010276992377292415,
+          -0.008827466958457528,
+          -8.716230439217573e-08
+        ]
+      ],
+      "actualManualEdges": [
+        [
+          -0.005180354191323233,
+          -0.01381953171093592,
+          -0.004166688018205411
+        ],
+        [
+          -0.005446739063988293,
+          -0.01276326978343631,
+          -0.004166688649422712
+        ]
+      ],
+      "edgeDecompositionMaximumResidualM": 1.5439038936193583e-16,
+      "nativeManualVertexMaximumResidualM": 8.281391173571431e-08,
+      "constantMeanFieldCross": [
+        4.314298525616539e-06,
+        1.3760740683582295e-06,
+        3.701625555023821e-06
+      ],
+      "mixedGradientCross": [
+        8.681855012728228e-08,
+        -2.661247469527313e-07,
+        -1.3204721911609733e-05
+      ],
+      "pureGradientCross": [
+        5.564786114922776e-12,
+        -9.934170950102186e-12,
+        3.499712582187011e-07
+      ],
+      "crossDecompositionMaximumResidualM2": 3.254300583351022e-18,
+      "actualNativeToManualTrueNormalError": 9.775319953881437e-06,
+      "actualNativeToFrozenMeanFieldTrueNormalDot": -0.223673902353341,
+      "gradientCrossRelativeToConstantCross": 2.198354864374914
+    },
+    {
+      "triangle": 66317,
+      "nativeVertexIDs": [
+        45083,
+        45500,
+        45084
+      ],
+      "restWorldXYZ": [
+        [
+          0.6717659030109644,
+          -0.07579589635133743,
+          1.5666667222976685
+        ],
+        [
+          0.6706204526126385,
+          -0.08235626667737961,
+          1.5625
+        ],
+        [
+          0.6727592628449202,
+          -0.07498377561569214,
+          1.5666667222976685
+        ]
+      ],
+      "actualWorldXYZ": [
+        [
+          0.7255123257637024,
+          -0.02581208199262619,
+          1.566666603088379
+        ],
+        [
+          0.7234211564064026,
+          -0.036339376121759415,
+          1.5624998807907104
+        ],
+        [
+          0.7253937125205994,
+          -0.024551138281822205,
+          1.566666603088379
+        ]
+      ],
+      "normalizedSkinRows": [
+        {
+          "chest": 0.09303031324662968,
+          "neck": 0.5999485388386668,
+          "head": 0.30702114791470353
+        },
+        {
+          "chest": 0.13337088804602842,
+          "neck": 0.8601032291235101,
+          "head": 0.006525882830461476
+        },
+        {
+          "chest": 0.09542415504360545,
+          "neck": 0.5975546970416911,
+          "head": 0.30702114791470353
+        }
+      ],
+      "perJointVertexWeightRange": {
+        "chest": 0.040340574799398746,
+        "neck": 0.26254853208181905,
+        "head": 0.30049526508424207
+      },
+      "meanAffineLinearDeterminant": 0.9802112108285799,
+      "restTrueCross": [
+        3.383881577612158e-06,
+        -4.139054569751721e-06,
+        5.58656435763194e-06
+      ],
+      "actualTrueCross": [
+        5.254002275911773e-06,
+        4.942284448361534e-07,
+        -3.885523347069153e-06
+      ],
+      "restArea2M2": 7.732537008294828e-06,
+      "actualArea2M2": 6.553326891861166e-06,
+      "constantMeanFieldEdges": [
+        [
+          0.004596169742137398,
+          -0.004727378900036781,
+          -0.004166720669256853
+        ],
+        [
+          -7.457521602399016e-05,
+          0.0012681342149124556,
+          -1.857116886600298e-10
+        ]
+      ],
+      "weightGradientEdges": [
+        [
+          -0.006687373500663146,
+          -0.005799912209883873,
+          -4.967635922018657e-08
+        ],
+        [
+          -4.40518687753284e-05,
+          -7.188186898599231e-06,
+          -1.7374559503816742e-10
+        ]
+      ],
+      "actualManualEdges": [
+        [
+          -0.0020912037585256726,
+          -0.01052729110992066,
+          -0.0041667703456163
+        ],
+        [
+          -0.00011862708479926098,
+          0.0012609460280138575,
+          -3.594575748167017e-10
+        ]
+      ],
+      "edgeDecompositionMaximumResidualM": 2.9111850447299453e-16,
+      "nativeManualVertexMaximumResidualM": 8.880115793049005e-08,
+      "constantMeanFieldCross": [
+        5.283961922597059e-06,
+        3.107349475838988e-07,
+        5.476014804852297e-06
+      ],
+      "mixedGradientCross": [
+        -2.988627216132479e-08,
+        1.8355509341159276e-07,
+        -9.154304852141934e-06
+      ],
+      "pureGradientCross": [
+        6.506262435587519e-13,
+        1.0264347694885427e-12,
+        -2.074268809947228e-07
+      ],
+      "crossDecompositionMaximumResidualM2": 3.3550975040742836e-18,
+      "actualNativeToManualTrueNormalError": 1.8618971917478915e-05,
+      "actualNativeToFrozenMeanFieldTrueNormalDot": 0.1330057118711616,
+      "gradientCrossRelativeToConstantCross": 1.2294605212813343
+    },
+    {
+      "triangle": 66318,
+      "nativeVertexIDs": [
+        45084,
+        45500,
+        45501
+      ],
+      "restWorldXYZ": [
+        [
+          0.6727592628449202,
+          -0.07498377561569214,
+          1.5666667222976685
+        ],
+        [
+          0.6706204526126385,
+          -0.08235626667737961,
+          1.5625
+        ],
+        [
+          0.6717059705406427,
+          -0.08143600076436996,
+          1.5625
+        ]
+      ],
+      "actualWorldXYZ": [
+        [
+          0.7253937125205994,
+          -0.024551138281822205,
+          1.566666603088379
+        ],
+        [
+          0.7234211564064026,
+          -0.036339376121759415,
+          1.5624998807907104
+        ],
+        [
+          0.7234107851982117,
+          -0.03491686284542084,
+          1.5624998807907104
+        ]
+      ],
+      "normalizedSkinRows": [
+        {
+          "chest": 0.09542415504360545,
+          "neck": 0.5975546970416911,
+          "head": 0.30702114791470353
+        },
+        {
+          "chest": 0.13337088804602842,
+          "neck": 0.8601032291235101,
+          "head": 0.006525882830461476
+        },
+        {
+          "chest": 0.13680276561347976,
+          "neck": 0.856671351264329,
+          "head": 0.006525883122191178
+        }
+      ],
+      "perJointVertexWeightRange": {
+        "chest": 0.04137861056987431,
+        "neck": 0.26254853208181905,
+        "head": 0.30049526508424207
+      },
+      "meanAffineLinearDeterminant": 0.9885045083850603,
+      "restTrueCross": [
+        3.834492499521502e-06,
+        -4.523051755134233e-06,
+        6.034697070347872e-06
+      ],
+      "actualTrueCross": [
+        5.9272177872493614e-06,
+        4.321394442285964e-08,
+        -2.9282455296097964e-06
+      ],
+      "restArea2M2": 8.460431350668517e-06,
+      "actualArea2M2": 6.611232867185783e-06,
+      "constantMeanFieldEdges": [
+        [
+          0.004478077074625243,
+          -0.006180418309432617,
+          -0.004166720513672257
+        ],
+        [
+          0.004418987023207593,
+          -0.004766747130349537,
+          -0.004166720708203308
+        ]
+      ],
+      "weightGradientEdges": [
+        [
+          -0.006450653748351697,
+          -0.005607818828501896,
+          -4.9472486552521786e-08
+        ],
+        [
+          -0.006401944253880544,
+          -0.0055989753444349675,
+          -4.969007978296839e-08
+        ]
+      ],
+      "actualManualEdges": [
+        [
+          -0.0019725766737264117,
+          -0.011788237137934518,
+          -0.004166769986158725
+        ],
+        [
+          -0.001982957230672877,
+          -0.010365722474784504,
+          -0.0041667703982830595
+        ]
+      ],
+      "edgeDecompositionMaximumResidualM": 8.500145032286355e-17,
+      "nativeManualVertexMaximumResidualM": 8.281391173571431e-08,
+      "constantMeanFieldCross": [
+        5.890373903755986e-06,
+        2.462126005209086e-07,
+        5.96532726242342e-06
+      ],
+      "mixedGradientCross": [
+        3.692070001447636e-08,
+        -2.0295620694498316e-07,
+        -9.10982273847343e-06
+      ],
+      "pureGradientCross": [
+        1.657732561231583e-12,
+        -3.813398397800638e-12,
+        2.161077665773181e-07
+      ],
+      "crossDecompositionMaximumResidualM2": 5.260074602449205e-19,
+      "actualNativeToManualTrueNormalError": 1.5142031221670323e-05,
+      "actualNativeToFrozenMeanFieldTrueNormalDot": 0.3148181457020859,
+      "gradientCrossRelativeToConstantCross": 1.0606982727721284
+    },
+    {
+      "triangle": 66319,
+      "nativeVertexIDs": [
+        45084,
+        45501,
+        45085
+      ],
+      "restWorldXYZ": [
+        [
+          0.6727592628449202,
+          -0.07498377561569214,
+          1.5666667222976685
+        ],
+        [
+          0.6717059705406427,
+          -0.08143600076436996,
+          1.5625
+        ],
+        [
+          0.6734970211982727,
+          -0.0741630345582962,
+          1.5666667222976685
+        ]
+      ],
+      "actualWorldXYZ": [
+        [
+          0.7253937125205994,
+          -0.024551138281822205,
+          1.566666603088379
+        ],
+        [
+          0.7234107851982117,
+          -0.03491686284542084,
+          1.5624998807907104
+        ],
+        [
+          0.7251273393630981,
+          -0.023494873195886612,
+          1.566666603088379
+        ]
+      ],
+      "normalizedSkinRows": [
+        {
+          "chest": 0.09542415504360545,
+          "neck": 0.5975546970416911,
+          "head": 0.30702114791470353
+        },
+        {
+          "chest": 0.13680276561347976,
+          "neck": 0.856671351264329,
+          "head": 0.006525883122191178
+        },
+        {
+          "chest": 0.10202538298089342,
+          "neck": 0.5909534736793747,
+          "head": 0.30702114333973185
+        }
+      ],
+      "perJointVertexWeightRange": {
+        "chest": 0.04137861056987431,
+        "neck": 0.26571787758495435,
+        "head": 0.3004952647925124
+      },
+      "meanAffineLinearDeterminant": 0.9802112121509353,
+      "restTrueCross": [
+        3.4198000644636295e-06,
+        -3.0740341812052208e-06,
+        3.895702761588793e-06
+      ],
+      "actualTrueCross": [
+        4.401163285816523e-06,
+        1.1099029748606881e-06,
+        -4.8556476803796045e-06
+      ],
+      "restArea2M2": 6.0267087730181585e-06,
+      "actualArea2M2": 6.646761412748297e-06,
+      "constantMeanFieldEdges": [
+        [
+          0.004562945540557503,
+          -0.004590685291453611,
+          -0.004166720694481481
+        ],
+        [
+          -0.00022988347337794026,
+          0.0010681555379180795,
+          -1.7755289848858832e-10
+        ]
+      ],
+      "weightGradientEdges": [
+        [
+          -0.006545902771230469,
+          -0.005775037183330891,
+          -4.9703801581886845e-08
+        ],
+        [
+          -3.650139928718056e-05,
+          -1.1893610418467308e-05,
+          -4.5366460397596695e-10
+        ]
+      ],
+      "actualManualEdges": [
+        [
+          -0.001982957230672877,
+          -0.010365722474784504,
+          -0.0041667703982830595
+        ],
+        [
+          -0.0002663848726650597,
+          0.0010562619274996111,
+          -6.312173006506328e-10
+        ]
+      ],
+      "edgeDecompositionMaximumResidualM": 2.018139225678654e-16,
+      "nativeManualVertexMaximumResidualM": 8.281391173571431e-08,
+      "constantMeanFieldCross": [
+        4.45070659985774e-06,
+        9.578610360073525e-07,
+        3.818612868380723e-06
+      ],
+      "mixedGradientCross": [
+        -4.95011532657975e-08,
+        1.521034696728459e-07,
+        -8.541464235799201e-06
+      ],
+      "pureGradientCross": [
+        2.0287723043905307e-12,
+        -1.1553860807442073e-12,
+        -1.3294252072889468e-07
+      ],
+      "crossDecompositionMaximumResidualM2": 2.0997946762434105e-18,
+      "actualNativeToManualTrueNormalError": 1.1272962227642356e-05,
+      "actualNativeToFrozenMeanFieldTrueNormalDot": 0.053413238293672005,
+      "gradientCrossRelativeToConstantCross": 1.460079441055549
+    }
+  ],
+  "neighborPointLineageAndFields": [
+    {
+      "vertex": 44667,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.023011576384305954,
+        "neck": 0.14410057663917542,
+        "head": 0.8328878283500671
+      }
+    },
+    {
+      "vertex": 44668,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.02460346557199955,
+        "neck": 0.14250868558883667,
+        "head": 0.8328878283500671
+      }
+    },
+    {
+      "vertex": 45083,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.09303031116724014,
+        "neck": 0.599948525428772,
+        "head": 0.3070211410522461
+      }
+    },
+    {
+      "vertex": 45084,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.09542415291070938,
+        "neck": 0.5975546836853027,
+        "head": 0.3070211410522461
+      }
+    },
+    {
+      "vertex": 45085,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.10202538222074509,
+        "neck": 0.5909534692764282,
+        "head": 0.3070211410522461
+      }
+    },
+    {
+      "vertex": 45500,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.13337089121341705,
+        "neck": 0.8601032495498657,
+        "head": 0.006525882985442877
+      }
+    },
+    {
+      "vertex": 45501,
+      "pointReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "inRigid320": false,
+      "rawSemanticWeights": {
+        "chest": 0.1368027627468109,
+        "neck": 0.8566713333129883,
+        "head": 0.006525882985442877
+      }
+    }
+  ],
+  "cornerProvenance": [
+    {
+      "corner": 196454,
+      "sourceReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "restDecodedLocalVector": [
+        0.5044076442718506,
+        -0.5254483222961426,
+        0.6851840019226074
+      ],
+      "actualDecodedWorldVector": [
+        0.5984416341124748,
+        0.10665313003097363,
+        -0.7940357173423542
+      ]
+    },
+    {
+      "corner": 196456,
+      "sourceReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "restDecodedLocalVector": [
+        0.5044076442718506,
+        -0.5254483222961426,
+        0.6851840019226074
+      ],
+      "actualDecodedWorldVector": [
+        0.5984416341124748,
+        0.10665313003097363,
+        -0.7940357173423542
+      ]
+    },
+    {
+      "corner": 196459,
+      "sourceReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "restDecodedLocalVector": [
+        0.5044076442718506,
+        -0.5254483222961426,
+        0.6851840019226074
+      ],
+      "actualDecodedWorldVector": [
+        0.5984416341124748,
+        0.10665313003097363,
+        -0.7940357173423542
+      ]
+    },
+    {
+      "corner": 198953,
+      "sourceReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "restDecodedLocalVector": [
+        0.5044076442718506,
+        -0.5254483222961426,
+        0.6851840019226074
+      ],
+      "actualDecodedWorldVector": [
+        0.5984416341124748,
+        0.10665313003097363,
+        -0.7940357173423542
+      ]
+    },
+    {
+      "corner": 198954,
+      "sourceReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "restDecodedLocalVector": [
+        0.5044076442718506,
+        -0.5254483222961426,
+        0.6851840019226074
+      ],
+      "actualDecodedWorldVector": [
+        0.5984416341124748,
+        0.10665313003097363,
+        -0.7940357173423542
+      ]
+    },
+    {
+      "corner": 198957,
+      "sourceReference": [
+        -1.0,
+        -1.0,
+        0.0
+      ],
+      "restDecodedLocalVector": [
+        0.5044076442718506,
+        -0.5254483222961426,
+        0.6851840019226074
+      ],
+      "actualDecodedWorldVector": [
+        0.5984416341124748,
+        0.10665313003097363,
+        -0.7940357173423542
+      ]
+    }
+  ],
+  "allSixFaceGeometricAngleWeightedProxy": {
+    "restWorld": [
+      0.5044362522542424,
+      -0.5254379881412732,
+      0.6851707728951562
+    ],
+    "actualWorld": [
+      0.5982750324077716,
+      0.10666625697822786,
+      -0.7941594897876209
+    ],
+    "actualProxyToNativeWitnessVectorError": 0.0002079616862825892,
+    "nativeFanPartitionVerified": false
+  },
+  "sourceEncodingProvenance": {
+    "builder": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/build_planar_neck.py",
+    "builderMeaning": "Generated loft source references\u22121. Desired decoded normals initially read from new geometric mesh before normals_split_custom_set. Protected source corners alone restore original INT16_2D data.",
+    "actualPackedWitnessRowsCaptured": false,
+    "actualSharpEdgeAndSmoothFanPartitionCaptured": false,
+    "exactCustomFanDecodeReconstruction": "UNMEASURED; missing packed rows and actual partition"
+  },
+  "appropriateReference": "Native oriented true triangle crosses are the actual current surface. Frozen mean per-triangle affine field is only an algebraic control used to isolate the exact weight-gradient contribution; head-rigid transport is not the reference for diagnosing a mixed chest/neck/head material fold.",
+  "loftFoldCertificate": {
+    "status": "UNMEASURED",
+    "reason": "Area and orientation at one pose plus constant-field controls do not prove a continuous-time orientation reversal. A negative dot against an arbitrary transported rigid normal is insufficient."
+  },
+  "limits": [
+    "No native job, new pose, save, shader, renderer, source rewrite, normal exclusion or tolerance relaxation.",
+    "Exact triangle edge decomposition uses normalized raw semantic fields and captured own51 skin matrices; actual native float32 geometry remains the numerical authority.",
+    "Six-face angle-weighted proxy is explicitly not a reconstructed native fan; even a small residual does not establish missing packed data.",
+    "Custom normal packing and post-set sharp-edge/fan partition are not available in this capture. Their exact interpretation remains open.",
+    "The previously captured whole-head moving-normal vector error remains a failure; this study cannot accept geometry, shading, art or release."
+  ]
+}

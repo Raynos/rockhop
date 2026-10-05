@@ -614,3 +614,21 @@ Limits: Referenced orientable shell remains genus1. Locate its remaining
 handle and verify mouth/palm/finger enclosure before fitting. No body,
 registration, fit, skin, render, played newart or engine acceptance.
 Execution37 requires no ordinary third-round game gate; next due39.
+
+
+## Variable neck weights explain the moving geometric normal control
+
+Finding: Captured neck triangles have substantial per-vertex weight
+variation. Its exact edge-gradient contribution changes true surface
+normals beyond constant-field transport. This is not a fold certificate.
+
+Validation: One array-only CPU2guard exits0 in1.422s, warnings0. Six
+triangles reproduce native positions within88.8nm and true normal vectors
+within1.862e-5. Parent independently rebuilds pinned fields/matrices and
+triangle crosses; gradient contribution1.061–2.380times mean-field cross.
+Six-face geometric proxy differs from native decoded corner by0.000208.
+
+Limits: Proxy is not the verified native smooth fan. Actual packed rows
+and sharp/fan partition remain unmeasured, as does continuous fold
+qualification. No new source, native evaluation, shader, art or engine
+acceptance. Whole-head shading stays failed. Execution38; game gate39due.
