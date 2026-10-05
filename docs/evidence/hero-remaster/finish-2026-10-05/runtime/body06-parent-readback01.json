@@ -1,0 +1,88 @@
+{
+  "status": "PARENT_CURRENT_NATIVE_CAP_GEOMETRY_READBACK_PASS_WHOLE_NORMAL_PARITY_FAIL",
+  "accepted": false,
+  "nativeReportSHA256": "1d19d3d4abbaf27258b296ca0f4307d705f3c4ed4a0c1d4cc479020c5d6a39d4",
+  "contactsSHA256": "68b08d892fadc665621d6221b4539ec1cb9295a84374ce860078e7320d424dbd",
+  "rows": [
+    {
+      "index": 0,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 70,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 99,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 128,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 151,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 157,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 186,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 244,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 302,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    },
+    {
+      "index": 422,
+      "poseAndSkinExact": true,
+      "capAndLiningTrueCrossesReproduced": true,
+      "all17AliasesExact": true,
+      "bodyXYZNormalsExactOld": true
+    }
+  ],
+  "wholeHeadNormalMaximum": 1.4884632124671828,
+  "transportReferenceArithmetic": "Root explicit Float64 einsum/world-rest cross; native reader uses NumPy mathutils matrix array arithmetic. Reference minimum differences are measured, not asserted bit-identical.",
+  "maximumDotReferenceResidual": 1.8985535366056183e-10,
+  "maximumAreaRatioResidual": 0.0,
+  "limits": [
+    "No source mutation or new native job; root recomputes recorded actual positions/crosses and worst normal vector residuals.",
+    "Full-head normal maximum is independently captured by native reader; root reproduces chosen residual, not a new wholemesh scan.",
+    "Contacts complete over these finite sampled surfaces only; thousands of nonproper contacts remain classified separately.",
+    "No art, continuous-time, signed volume/support, engine/GPU or device acceptance."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "status": "NORMAL_LEGACY_SHIP_GATE_PASS",
+  "sourceHEAD": "c751e0d56661c89cd7d8bde5f3a325f3766449db",
+  "sourcePins": {
+    "src/render/hero/gltfRider.ts": "b1c3a11b75d901f3c11c946667611025fb70ed4c8609e500931a966231919935",
+    "src/render/hero/sleeveSkin.ts": "35ee7f2165fae54a25fb5559c148738d016d73692515fc72513316389dc88916",
+    "harness/hero-remaster/build.mts": "b315585c4c4c5c33483554aad100b6d7d930308b56ffc15cf87b0900032bb593",
+    "harness/hero-remaster/replay.mts": "0caefae153c31d5fdbb0ccffca9a26fed0b1c0ed6bb59b978c73592aa4aa8a56"
+  },
+  "commands": [
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/build.mts",
+        "--out=/Users/raynos/projects/games/rockhop/harness/out/rider-finish-2026-10-05/round36/build"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.2884691669999997
+    },
+    {
+      "command": [
+        "pnpm",
+        "exec",
+        "tsx",
+        "harness/hero-remaster/replay.mts",
+        "--build=/Users/raynos/projects/games/rockhop/harness/out/rider-finish-2026-10-05/round36/build",
+        "--out=/Users/raynos/projects/games/rockhop/harness/out/rider-finish-2026-10-05/round36/ship-gate.json",
+        "--recording=harness/inputs/b1-first-ride/bot-3.json"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 8.488396542
+    }
+  ],
+  "wallSeconds": 10.786184166,
+  "lease": "lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock",
+  "modelReplacements": 0,
+  "finishFloat64LE": "abaaaaaaaa0a4440",
+  "runs": [
+    {
+      "sleeveCorrective": null,
+      "tier": "low",
+      "result": {
+        "hash": "368f1ca5bd9e830a",
+        "runTime": 40.083333333333336,
+        "faults": 0,
+        "finishTime": 40.083333333333336,
+        "tick": 4810
+      },
+      "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+      "crashRestart": {
+        "crashed": true,
+        "crashTicks": 103,
+        "restartPhase": "riding",
+        "restartTick": 0,
+        "restartMs": 1
+      },
+      "hipCorrective": null
+    },
+    {
+      "sleeveCorrective": null,
+      "tier": "high",
+      "result": {
+        "hash": "368f1ca5bd9e830a",
+        "runTime": 40.083333333333336,
+        "faults": 0,
+        "finishTime": 40.083333333333336,
+        "tick": 4810
+      },
+      "finishTimeFloat64LE": "abaaaaaaaa0a4440",
+      "crashRestart": {
+        "crashed": true,
+        "crashTicks": 103,
+        "restartPhase": "riding",
+        "restartTick": 0,
+        "restartMs": 2
+      },
+      "hipCorrective": null
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Normal legacy player gate only; new rider is not promoted or qualified.",
+    "Headless automated restart latency is not physical phone or stranger evidence."
+  ],
+  "executionGuard": {
+    "exitCode": 0,
+    "wallSeconds": 10.858,
+    "threads": 2
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "status": "UNACCEPTED_BODY06_FRESH_REOPEN_AND_FINITE_NATIVE_QA_EXECUTED",
+  "outerLease": "/usr/bin/lockf -k -n -t 0 /Users/raynos/projects/localai/.model.lock",
+  "blenderThreads": 2,
+  "blenderPythonExitCode": 1,
+  "allThreeAdmittedRunsGuardLocked": true,
+  "guardReceipts": [
+    {
+      "name": "preservation",
+      "path": "harness/out/rider-finish/body06-preservation01-guard/guard.json",
+      "sha256": "7f01d04f75640ebc57bcc336a934fbbab261a46c3ec50d3fb90d2b7b8381e721",
+      "command": [
+        "/opt/homebrew/bin/blender",
+        "--background",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "harness/rider-finish/preservation-check-v2.py",
+        "--",
+        "--source",
+        "assets/blender/hero-remaster/rider/anatomical-foundation-2026-10-03/user-agent1/selected-hoodie26/native-four-with-full-control.blend",
+        "--candidate",
+        "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend",
+        "--contract",
+        "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-contract.json",
+        "--fields",
+        "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/authored-neck-fields.npz",
+        "--out",
+        "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-preservation01.json"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 8.817,
+      "limitSeconds": 120,
+      "peakAnonymousGiB": 28.6,
+      "peakAnonymousPlusWiredGiB": 35.5,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+      "workerLogSHA256": "3dadf66c6e0ba98ca89e9e063d21042a3c1480f9193899ec22f7d8c5f73e0e6e",
+      "pythonTraceback": false
+    },
+    {
+      "name": "native",
+      "path": "harness/out/rider-finish/body06-native01-guard/guard.json",
+      "sha256": "dc685e56e076547cd17ec62abcba8b2d038a83d2bbe77560bfa80a640d31602c",
+      "command": [
+        "/opt/homebrew/bin/blender",
+        "--background",
+        "--threads",
+        "2",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "harness/rider-finish/body06-cap-native.py",
+        "--",
+        "--base",
+        "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend",
+        "--candidate",
+        "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body06/natural-foundation.blend",
+        "--candidate-sha",
+        "66c45ab5a76fe592b0b284a5a96dc3e6ba1f74b2854e5dae849aaff03f43bb77",
+        "--mask",
+        "docs/evidence/hero-remaster/finish-2026-10-05/construction/body05/inner-cap-field-preflight02/proposal/exact-mask-and-reference.npz",
+        "--intake",
+        "harness/out/rider-finish/body05-intake01",
+        "--out",
+        "harness/out/rider-finish/body06-intake01"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 130.407,
+      "limitSeconds": 240,
+      "peakAnonymousGiB": 29.3,
+      "peakAnonymousPlusWiredGiB": 36.4,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+      "workerLogSHA256": "a896f23cc75c9f3b9d17ffedb1e2518231459f4dcfe5c565f88822614649026b",
+      "pythonTraceback": false
+    },
+    {
+      "name": "contacts",
+      "path": "harness/out/rider-finish/body06-contacts01-guard/guard.json",
+      "sha256": "3cbf3dfc4f43b0a932b02aa63bab9474ed207c7802784986573d6a09e7372ff1",
+      "command": [
+        "node",
+        "harness/rider-finish/body06-cap-contacts.mjs",
+        "harness/out/rider-finish/body06-intake01",
+        "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-contacts01.json"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 15.601,
+      "limitSeconds": 120,
+      "peakAnonymousGiB": 27.2,
+      "peakAnonymousPlusWiredGiB": 34.6,
+      "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+      "workerLogSHA256": "a121981ed075ea98a2ce83348c5d3ab70c8da2a42fdedc8cdfab8dd1d8714a65",
+      "pythonTraceback": false
+    }
+  ],
+  "recipePins": {
+    "harness/rider-finish/preservation-check-v2.py": "346c8a05ff6e83a1d095de3c1f934f681edea6ddc0a71795e4e88be271e7a97b",
+    "harness/rider-finish/body06-cap-native.py": "60ebceba35b870fe1c0f1c44bdba3d97e205ce4e30bf02ceae80fb903c4ca338",
+    "harness/rider-finish/body06-cap-contacts.mjs": "904dee53ec0037a7243482c5b9cb91c5040f429bc2afdf95a99adb5922d26a1d",
+    "harness/rider-finish/body06-normal-witness-metadata.py": "db0594610a997417c80b628a1ac384f3be32fa0c94577dd8060e98659cbe9502",
+    "harness/rider-finish/geometry-check.mjs": "ce5e7afc9cbb8edc58a56ef9cdd1ec4c075550d53e4427dc5ebbd9b8b581103b"
+  },
+  "receiptPins": {
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-preservation01.json": "9caf32ec3415ab8baaf329098020d2a3ff67a3eb248e24e279d6645836ebf59a",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-native01.json": "1d19d3d4abbaf27258b296ca0f4307d705f3c4ed4a0c1d4cc479020c5d6a39d4",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-contacts01.json": "68b08d892fadc665621d6221b4539ec1cb9295a84374ce860078e7320d424dbd",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body06-normal-witness-metadata01.json": "5bfd3069f5f81eb445416db93a6e941856e71ee63130b7201b3898e43067eb74"
+  },
+  "metadataInterpretation": {
+    "newNativeJob": false,
+    "existingCapturedArraysOnly": true,
+    "processExitCode": 0,
+    "warnings": [
+      "NumPy RuntimeWarning: divide by zero encountered in matmul at whole rest-world transform line47",
+      "NumPy RuntimeWarning: overflow encountered in matmul at whole rest-world transform line47",
+      "NumPy RuntimeWarning: invalid value encountered in matmul at whole rest-world transform line47"
+    ],
+    "warningScope": "Metadata reader only; resulting six saved geometric fan witnesses were finite. No warning suppression, correction or repeated native job."
+  },
+  "staleCornerLabelLimit": "Native reader key priorWitnessCorners183498 holds a real current corner vector for native vertex28945, but is not the prior body02 protected vertex26 witness. Same-candidate cap206973 remains native vertex43732.",
+  "leaseReleased": true,
+  "limits": [
+    "No native save/export/render/GPU/game/device/played-art acceptance in this unit.",
+    "Original body/boxer source and fields unchanged; inherited defects are not repaired by cap scope.",
+    "Whole-head moving-normal parity remains failed.",
+    "Raw compressed mesh snapshots remain ignored; native receipt pins exact captured outputs."
+  ]
+}

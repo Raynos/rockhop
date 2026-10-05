@@ -577,3 +577,23 @@ Limits: Execution35 is an unaccepted source checkpoint. Local native
 master/fields remain ignored asset masters; Git carries recipe/evidence.
 Independent native motion, winding, aliases, normals and contacts pending.
 Inherited body/boxer/clothes/art/engine/device failures remain open.
+
+## Native moving check confirms cap repair and retains shading failure
+
+Finding: The scoped rigid cap fixes its actual folded fan and keeps all17
+aliases joined. The remaining1.48846normal mismatch lies in a procedural
+neck-loft point outside the cap/protected face; shading stays unaccepted.
+
+Validation: Independent fresh F0/body05 reopens preserve34objects/own51
+and176435protected raw+decoded+UV corners. Ten exact poses/skins yield
+alias0,301cap/459lining opposing/zeroarea0, properheadself/bodyhead0.
+Parent actual cross/area/alias/body readbacks pass; Float64 reference-dot
+residual≤1.90e-10 recorded, area residual0. Nativecapcorner206973 error
+4.543e-6. Guarded preservation8.817/native130.407/contacts15.601s exit0.
+Round36 legacy game gate passes exact finish bytes and immediate restart.
+
+Limits: Finite diagnostics only; many nonproper contacts remain. Parent
+initial local-rest reference check rejected, corrected to world-rest with
+explicit finite einsum; no new native job. Metadata-only NumPy warnings
+and stale body02corner183498 label are disclosed. No body/boxer repair,
+complete signed support, played newart, GPU/device acceptance.
