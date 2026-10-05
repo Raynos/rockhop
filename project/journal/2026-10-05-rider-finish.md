@@ -717,3 +717,21 @@ Material.use_nodes deprecation warnings disclosed.
 Limits: Execution41is an unaccepted source-film checkpoint. Actual silent
 headless playback and root temporal judgment follow this commit. No
 feature/cavity/fit/skin/art/engine/device acceptance; next game gate42.
+
+
+## Played cuff context leaves the feature unresolved
+
+Finding: The original-material full glove is a useful moving reference,
+but thin marked cycle guides do not visibly identify the localized handle.
+Do not infer a strap or delete another patch from genus1 alone. Measure
+the cuff-mouth/cavity relation before any new cut or wearer fitting.
+
+Validation: Actual silent headless WebKit playback ends at5s, captures
+all60/60presented frames at1x, with no seeks/stalls/audio. Parent inspects
+five consecutive strips covering all60frames. Ordinary low/high game
+gate42 clears in4810ticks with identical Float64 finish and replayhash;
+crash/restart returns to tick0 in1/2ms, errors0. Outer guard exits0 in16.748s.
+
+Limits: The guides are too faint/occluded for feature interpretation;
+source flat-triangle shading is disclosed. No cavity/fit/skin/art/newrider
+engine/device acceptance. Execution42; next ordinary game gate45.
