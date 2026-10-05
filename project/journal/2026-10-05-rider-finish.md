@@ -297,3 +297,18 @@ receipt and reproducible actual FULL field provenance reader.
 Validation: Reader AST passes; repeated native-field proof agrees outside56
 seam rows. Numeric contact failure remains unchanged.
 Limits: Supplementary evidence for the same rejected topology, no new pass.
+
+## Neural contact masking fails after decode
+
+Finding: Raw same51 idle shifts decoded contacts by0.002864659 canonical
+units despite feature masks. Restoring all protected local quaternions and
+positions to GT removes that drift; remaining neck detail is0.101179deg.
+
+Validation: Official raw/GT decode and bounded adapter exit0 under guard
+in1.025s; parent checks source/output/recipe pins and AST. Candidate contact
+positions and protected rotations exactly match decoded GT.
+
+Limits: Canonical units are not native metres without scale verification.
+T-1 omits source end row60; GT first/last position differs1.36495e-5.
+Native roundtrip/retarget and moving review remain open; authored support
+stays authoritative, no further neural experiment before body qualification.
