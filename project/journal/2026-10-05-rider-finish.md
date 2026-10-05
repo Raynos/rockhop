@@ -72,3 +72,20 @@ barycentric reconstruction ≤1.11e-16 source units. Both source recipes parse.
 Limits: These are production fitting/bake inputs, not fitted joint-looped
 wearables. Per-vertex prototype UV seam aliases are disclosed; dense original
 corner UVs remain authoritative. No skin, clearance, contact or art pass.
+
+## Body02 protected normal frames
+
+Finding: Pinning430 neighboring geometric contributors repairs the first
+normal-preservation failure. Body02 authors lower normals while retaining all
+176,435 protected decoded corners bit-exact in FULL and FOUR. Independent
+source-scene reopening also confirms all33 original objects and own51 binds.
+
+Validation: Independent Blender5.2.1 readback measures zero protected-normal
+difference, exact protectedXYZ/UV, original/copiedrig rest/world/scale, original
+poses/materials/packedimages and authored geometry. Parent checks every input
+and recipe hash, report consistency and Python ASTs. First inactive-source
+world-cache mismatch is preserved with corrected matching-scene explanation.
+
+Limits: Protected field/rest preservation only; body self/contact, shoulders,
+hips, boxer coverage, native/engine motion and played appearance remain open.
+Body01 stays failed; neither candidate is promoted to normal player assets.
