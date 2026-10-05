@@ -405,3 +405,20 @@ Round24 ordinary clear/crash/restart passes exact finish bytes, errors0.
 Limits: Only source triangle61196 at savedturn244. Wholehead/body errors
 near2 remain unresolved; no gate relaxation, normals/asset edit, moving
 art, GPU, garment or device acceptance.
+
+## Planar canonical neck join removes sampled head crossings
+
+Finding: Explicit canonical body triangles and planar polar sections
+replace the folded shoulder-neck loft. The bounded new source is frozen
+as an unaccepted checkpoint before played/native-to-engine review.
+
+Validation: Independent reopened original34/own51/savedposes/176435head
+raw+decoded+UV exact. Parent original9037XYZ/FULL/Four and all104seam
+XYZ/fields match; body/head topology stable over10stress samples. All
+measured headself/bodyhead proper crossings0; normalized manual≤0.463µm.
+
+Limits: Source bodyself/boxer crossings persist; boxer retessellates landing.
+FULL/Four bodyloss8.290mm and moving normal errors near2 remain failures.
+No grounded/PBR/engine/art/device acceptance; F1 remains open. Array
+FOUR interpolation uses source Float32 weak-scalar arithmetic, not a
+misleading new display-vs-canonical field difference (actual0rows).

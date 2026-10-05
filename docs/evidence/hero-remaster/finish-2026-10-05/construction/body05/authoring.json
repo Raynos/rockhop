@@ -1,0 +1,76 @@
+{
+  "status": "UNACCEPTED_BODY05_PLANAR_NECK_REQUIRES_QA",
+  "sourceSHA256": "7c364bea92384c5562b28088454afcc208fe4f3dc46a5ffd98c4a51588543d66",
+  "contractSHA256": "c2d1faface9db788098bdac4f3d8a4f52cd3ceceec830150be47fdf0e1b07394",
+  "recipeSHA256": "1499ce8e149d500e52f33904ae0d0b07d3a7c732f782f1132d988fe49fa4f895",
+  "native": "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend",
+  "nativeSHA256": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+  "fieldsSHA256": "36277520249bcd2a8058a76c2f4a7595d7c460d3196e9bc59b3aa3a31690cb2d",
+  "fullSourceSHA256": "deb04faa6a5ca85ca9617cb963d84d5e62074aee281507c5a755fcbe8387d91c",
+  "canonicalRestoreWholeTriangles": 88,
+  "canonicalClippedTriangles": 104,
+  "canonicalAddedOriginalVertices": 42,
+  "bodyOriginal9037XYZFullFourExact": true,
+  "headOriginal43707XYZExact": true,
+  "planarBodyCut": 1.5499999523162842,
+  "planarHeadCut": 1.5750000476837158,
+  "bodyCutVertices": 104,
+  "headOuterCutVertices": 313,
+  "headInnerCutVertices": 303,
+  "sections": [
+    {
+      "vertices": 417,
+      "z": 1.5708333253860474,
+      "minimumAngularIncrement": 4.53352458613665e-05
+    },
+    {
+      "vertices": 417,
+      "z": 1.5666667222976685,
+      "minimumAngularIncrement": 4.5370723046112005e-05
+    },
+    {
+      "vertices": 417,
+      "z": 1.5625,
+      "minimumAngularIncrement": 4.5307815138784235e-05
+    },
+    {
+      "vertices": 417,
+      "z": 1.5583332777023315,
+      "minimumAngularIncrement": 4.5296716296938655e-05
+    },
+    {
+      "vertices": 417,
+      "z": 1.5541666746139526,
+      "minimumAngularIncrement": 4.536333401983228e-05
+    },
+    {
+      "vertices": 104,
+      "z": 1.5499999523162842,
+      "minimumAngularIncrement": 0.0014299875655954253
+    }
+  ],
+  "protectedNormals": {
+    "protectedCorners": 176435,
+    "everyOriginalProtectedCornerExactlyOnce": true,
+    "changedProtectedCorners": 0,
+    "maximumProtectedDelta": 0.0,
+    "protectedRawPackedExact": true
+  },
+  "explicitTriangleCounts": {
+    "body": 18260,
+    "head": 69005
+  },
+  "minimumTriangleArea2M2": {
+    "body": 7.048739962234906e-07,
+    "head": 1.4957410137062684e-11
+  },
+  "fieldLineage": "All original body FULL rows come from the pinned raw diagnostic FULL field, FOUR from original conditioned source. New body plane104 and head loft use declared <=4 semantic fields, with original canonical raw and FOUR references retained separately.",
+  "normalLineage": "Body explicit source triangle corners carry canonical source decoded vectors/UVs. Original protected head corners retain exact decoded/raw data; moving native/export normals remain pending.",
+  "limits": [
+    "Independent save/reopen/actual evaluated triangle and original34/51 verification pending.",
+    "Finite rest/raised/grounded contacts and native/manual full/four loss pending; no topology or art pass.",
+    "Lower neck UV extends source cut UV; actual moving PBR review required.",
+    "Body03 boxer clearance and source shoulder/hip failures retained unchanged.",
+    "No facial, wardrobe, mobile, gameplay or promotion qualification."
+  ]
+}

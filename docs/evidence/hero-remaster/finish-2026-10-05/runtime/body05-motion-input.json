@@ -1,0 +1,40 @@
+{
+  "status": "UNACCEPTED_SAME_CANDIDATE_NATIVE_INTAKE",
+  "sourceSHA256": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+  "rigName": "Finish rig",
+  "normalizedWeightTolerance": 1e-06,
+  "pairs": [
+    {
+      "region": "body",
+      "full": "Finish body FULL",
+      "four": "Finish body FOUR"
+    },
+    {
+      "region": "head",
+      "full": "Finish head FULL",
+      "four": "Finish head FOUR"
+    },
+    {
+      "region": "boxer",
+      "full": "Finish boxer FULL",
+      "four": "Finish boxer FOUR"
+    },
+    {
+      "region": "cheek",
+      "full": "Finish coherent cheek",
+      "four": "Finish coherent cheek"
+    }
+  ],
+  "limits": [
+    "Original source has34 preserved objects; derivative newscene and same51 rig only.",
+    "Auxiliary nonbone memberships preserved in original source, ignored by deformer and recorded independently.",
+    "Current wearer has no hoodie/jeans/gloves/boots; no garment coverage pass.",
+    "New head is deliberately semantic FULL=FOUR; body FULL must retain original body52 pinned canonical raw FULL reference through original and edge ancestry."
+  ],
+  "normalizedRequiredObjects": [
+    "Finish body FOUR",
+    "Finish head FOUR",
+    "Finish boxer FOUR"
+  ],
+  "fullFieldContract": "Original raw membership sums preserved as control; actual native evaluated output compared to BOTH raw and explicitly normalized manual LBS. No source or in-memory weights rewritten."
+}

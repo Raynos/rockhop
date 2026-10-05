@@ -1,0 +1,441 @@
+{
+  "status": "UNACCEPTED_BODY05_INDEPENDENT_QA_SUMMARY",
+  "sourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/body05-motion-input.json": "a5af3531b76920f901865e14d1e14f80836622fac2dae8dbd0b73362cb879e1e",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/semantic-motion-v1.json": "516db59950652def747e7c6f2894c5dc28293470c966569acd2d007e5334df3c"
+  },
+  "receiptPins": {
+    "body05-preservation.json": "8e089744d4c5701dae701bed752a76e6d44c8544ef0ff61710d7f2c7fe424f31",
+    "body05-native-intake.json": "281a7f923bf44f5ad0119eeb830c5cea7f8fa2fd9cb1f66a03177ac838e3b0f8",
+    "body05-field-normal02.json": "a8bb4360ebaa48e025add899738177d0922192cb8cc9ea2afb0c0795456c6fb3",
+    "body05-native-contacts01.json": "eb6cb26a431370a1236599df8ad8158283a913e228ac492b52578832bc5ed66c",
+    "body05-qa-execution.json": "bb913dbd37d6edd97b3158e43adc55b63514f7a6e00561ecc74259f8b80d117b"
+  },
+  "original34ObjectsExact": true,
+  "originalAndCopiedOwn51RestBindScaleWorldExact": true,
+  "originalSavedPoseExact": true,
+  "protectedHead": {
+    "FULL": {
+      "protectedXYZExact": true,
+      "protectedCorners": 176435,
+      "sourceProtectedCornerCount": 176435,
+      "everySourceProtectedCornerOccursExactlyOnce": true,
+      "rawCustomNormalAttributeType": "INT16_2D",
+      "rawProtectedPackedNormalCornersExact": true,
+      "changedProtectedPackedNormalCorners": 0,
+      "changedPackedDerivativeCornerIDs": [],
+      "changedProtectedNormalCorners": 0,
+      "maximumProtectedNormalVectorDelta": 0.0,
+      "changedDerivativeCornerIDs": [],
+      "changedOriginalSourceCornerIDs": [],
+      "protectedUVLayers": [
+        {
+          "protectedExact": true,
+          "maximumDelta": 0.0
+        }
+      ],
+      "nativeXYZMatchesAuthoredFields": true
+    },
+    "FOUR": {
+      "protectedXYZExact": true,
+      "protectedCorners": 176435,
+      "sourceProtectedCornerCount": 176435,
+      "everySourceProtectedCornerOccursExactlyOnce": true,
+      "rawCustomNormalAttributeType": "INT16_2D",
+      "rawProtectedPackedNormalCornersExact": true,
+      "changedProtectedPackedNormalCorners": 0,
+      "changedPackedDerivativeCornerIDs": [],
+      "changedProtectedNormalCorners": 0,
+      "maximumProtectedNormalVectorDelta": 0.0,
+      "changedDerivativeCornerIDs": [],
+      "changedOriginalSourceCornerIDs": [],
+      "protectedUVLayers": [
+        {
+          "protectedExact": true,
+          "maximumDelta": 0.0
+        }
+      ],
+      "nativeXYZMatchesAuthoredFields": true
+    }
+  },
+  "fieldProvenance": {
+    "originalBody52RigWorldExact": true,
+    "originalBody52RigRestExact": true,
+    "original9037ActualNativeRawFULLExact": true,
+    "original9037ActualNativeFOURExact": true,
+    "original9037FOURAuthority": "F0 displayBodyWeights; independently compared to F0 canonical conditioned FOUR by source ID",
+    "original9037CanonicalToDisplayFOURDifferentRows": 0,
+    "identityCanonicalRows": 9079,
+    "edgeCanonicalRows": 104,
+    "derivedUnassignedAncestryRows": 0,
+    "identityActualRawFULLExact": true,
+    "identityActualFOURExact": true,
+    "canonicalReferenceRawFULLEdgeAndIdentityExact": true,
+    "canonicalReferenceFOUREdgeAndIdentityExact": true,
+    "edgeFOURStrongScalarFloat64DifferentRows": 69,
+    "edgeFOURStrongScalarFloat64MaximumDelta": 5.960464477539063e-08,
+    "authoredSemanticEdgeFULLFOURExact": true,
+    "authoredSemanticEdgeMaximumInfluenceCount": 4,
+    "actualRawFULLMatchesDeliveredFieldExact": true,
+    "actualRawFOURMatchesDeliveredFieldExact": true,
+    "actualRestXYZMatchesDeliveredFieldExact": true,
+    "canonicalIdentityPositionExact": true,
+    "bodyTrianglesMatchDeliveredExact": true,
+    "headTrianglesMatchDeliveredExact": true,
+    "headActualRawFULLFOURExact": true
+  },
+  "nativeSamples": 10,
+  "positionMaximumNormalizedManualResidualM": {
+    "body": 4.625616761230544e-07,
+    "head": 2.4712957537992176e-07,
+    "boxer": 1.5683485701465804e-07,
+    "cheek": 2.2899870236156255e-07
+  },
+  "fullFourMaximumNativeLossM": {
+    "body": 0.00829003835713497,
+    "head": 0.0,
+    "boxer": 0.0,
+    "cheek": 0.0
+  },
+  "evaluatedTopologyFailures": [
+    {
+      "index": 302,
+      "case": "landing",
+      "region": "boxer",
+      "field": "full"
+    },
+    {
+      "index": 302,
+      "case": "landing",
+      "region": "boxer",
+      "field": "four"
+    }
+  ],
+  "maximumCPUFormulaNativeNormalVectorError": {
+    "body": {
+      "full": 1.9837673121614514,
+      "four": 1.9837671410118476
+    },
+    "head": {
+      "full": 1.9863025622367636,
+      "four": 1.9863025622367636
+    },
+    "boxer": {
+      "full": 1.878959684113366,
+      "four": 1.878959684113366
+    },
+    "cheek": {
+      "full": 0.01725780016052004,
+      "four": 0.01725780016052004
+    }
+  },
+  "properCrossings": [
+    {
+      "index": 0,
+      "case": "true-rest-action-off",
+      "fields": {
+        "full": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 70,
+      "case": "A",
+      "fields": {
+        "full": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 99,
+      "case": "T",
+      "fields": {
+        "full": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 128,
+      "case": "reach",
+      "fields": {
+        "full": {
+          "body/body": 32,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 32,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 151,
+      "case": "raised",
+      "fields": {
+        "full": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 157,
+      "case": "raised",
+      "fields": {
+        "full": {
+          "body/body": 62,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 66,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 186,
+      "case": "asymmetric",
+      "fields": {
+        "full": {
+          "body/body": 47,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 49,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 26,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 244,
+      "case": "turn",
+      "fields": {
+        "full": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 56,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 56,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 302,
+      "case": "landing",
+      "fields": {
+        "full": {
+          "body/body": 101,
+          "body/head": 0,
+          "body/boxer": 132,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 113,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 101,
+          "body/head": 0,
+          "body/boxer": 132,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 113,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    },
+    {
+      "index": 422,
+      "case": "idle",
+      "fields": {
+        "full": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 29,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        },
+        "four": {
+          "body/body": 0,
+          "body/head": 0,
+          "body/boxer": 0,
+          "body/cheek": 0,
+          "head/head": 0,
+          "head/boxer": 0,
+          "head/cheek": 0,
+          "boxer/boxer": 29,
+          "boxer/cheek": 0,
+          "cheek/cheek": 0
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Original preserved rest/XYZ/fields and sample topology evidence do not accept moving appearance or normals.",
+    "All ten listed body/head proper-crossing counts zero; body/self and boxer failures remain explicit in complete pair table.",
+    "Contact witnesses capped16perpair; source-lineage classification for every crossing remains unmeasured.",
+    "No grounded/sole/COM, played/PBR, export/engine/GPU, garment, device or promotion acceptance."
+  ]
+}

@@ -1,0 +1,1562 @@
+{
+  "status": "UNACCEPTED_BODY05_ACTUAL_FIELD_ANCESTRY_AND_NATIVE_NORMAL_DIAGNOSTIC",
+  "sourcePins": {
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/natural-foundation.blend": "58c59f6e8b3e1a3c792e628040a137714fcf62f9ff8989578e2429a038e59661",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/body05-motion-input.json": "a5af3531b76920f901865e14d1e14f80836622fac2dae8dbd0b73362cb879e1e",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/runtime/semantic-motion-v1.json": "516db59950652def747e7c6f2894c5dc28293470c966569acd2d007e5334df3c"
+  },
+  "inputPins": {
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/report.json": "4937d207ee8da9f58cf2778b0e4635e094a66e3065440a94bc9229ba95c4494f",
+    "/Users/raynos/projects/games/rockhop/harness/out/rider-finish/body05-intake01/rest.json.gz": "1f1b32305d66aa0cd3da149c296b348a52de99c9ce4ef5a2828add2be18b5499",
+    "/Users/raynos/projects/games/rockhop/assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body05/authored-neck-fields.npz": "36277520249bcd2a8058a76c2f4a7595d7c460d3196e9bc59b3aa3a31690cb2d",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/user-agent3-qa-2026-10-03/body52/native-fields.npz": "deb04faa6a5ca85ca9617cb963d84d5e62074aee281507c5a755fcbe8387d91c",
+    "/Users/raynos/projects/games/rockhop/docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-source.npz": "b6eaa2ccee77a9e6f6395daa1fc473da3f6099f26f79895f288e1300b3fba3ae"
+  },
+  "recipeSHA256": "991b48d3cb82986193551cb86077b378e03775188098063129fad22798d7ec02",
+  "jointOrderExactlyOwn51": true,
+  "provenance": {
+    "originalBody52RigWorldExact": true,
+    "originalBody52RigRestExact": true,
+    "original9037ActualNativeRawFULLExact": true,
+    "original9037ActualNativeFOURExact": true,
+    "original9037FOURAuthority": "F0 displayBodyWeights; independently compared to F0 canonical conditioned FOUR by source ID",
+    "original9037CanonicalToDisplayFOURDifferentRows": 0,
+    "identityCanonicalRows": 9079,
+    "edgeCanonicalRows": 104,
+    "derivedUnassignedAncestryRows": 0,
+    "identityActualRawFULLExact": true,
+    "identityActualFOURExact": true,
+    "canonicalReferenceRawFULLEdgeAndIdentityExact": true,
+    "canonicalReferenceFOUREdgeAndIdentityExact": true,
+    "edgeFOURStrongScalarFloat64DifferentRows": 69,
+    "edgeFOURStrongScalarFloat64MaximumDelta": 5.960464477539063e-08,
+    "authoredSemanticEdgeFULLFOURExact": true,
+    "authoredSemanticEdgeMaximumInfluenceCount": 4,
+    "actualRawFULLMatchesDeliveredFieldExact": true,
+    "actualRawFOURMatchesDeliveredFieldExact": true,
+    "actualRestXYZMatchesDeliveredFieldExact": true,
+    "canonicalIdentityPositionExact": true,
+    "bodyTrianglesMatchDeliveredExact": true,
+    "headTrianglesMatchDeliveredExact": true,
+    "headActualRawFULLFOURExact": true
+  },
+  "records": [
+    {
+      "index": 0,
+      "case": "true-rest-action-off",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.0006162832710091436,
+            "worstCorner": 54524,
+            "worstNativeVertex": 9128,
+            "predictedWorldNormal": [
+              0.6498274743881307,
+              -0.6027306631424384,
+              0.4630766688554067
+            ],
+            "actualWorldNormal": [
+              0.6493590416036916,
+              -0.6030396765166619,
+              0.46333139720314087
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.0006162832710091436,
+            "worstCorner": 54524,
+            "worstNativeVertex": 9128,
+            "predictedWorldNormal": [
+              0.6498274743881307,
+              -0.6027306631424384,
+              0.4630766688554067
+            ],
+            "actualWorldNormal": [
+              0.6493590416036916,
+              -0.6030396765166619,
+              0.46333139720314087
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.019710375917466393,
+            "worstCorner": 194198,
+            "worstNativeVertex": 44697,
+            "predictedWorldNormal": [
+              0.43761495706911346,
+              -0.6333629661265701,
+              0.6382354600684227
+            ],
+            "actualWorldNormal": [
+              0.45523820009965826,
+              -0.6266187709215423,
+              0.6325401940578949
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.019710375917466393,
+            "worstCorner": 194198,
+            "worstNativeVertex": 44697,
+            "predictedWorldNormal": [
+              0.43761495706911346,
+              -0.6333629661265701,
+              0.6382354600684227
+            ],
+            "actualWorldNormal": [
+              0.45523820009965826,
+              -0.6266187709215423,
+              0.6325401940578949
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 70,
+      "case": "A",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.48270262825830584,
+            "worstCorner": 13331,
+            "worstNativeVertex": 2368,
+            "predictedWorldNormal": [
+              -0.934404284234631,
+              0.30493115057004455,
+              -0.18413480663903803
+            ],
+            "actualWorldNormal": [
+              -0.8361839845743209,
+              0.0038669119553384566,
+              -0.5484354026987514
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.48270262825830584,
+            "worstCorner": 13331,
+            "worstNativeVertex": 2368,
+            "predictedWorldNormal": [
+              -0.934404284234631,
+              0.30493115057004455,
+              -0.18413480663903803
+            ],
+            "actualWorldNormal": [
+              -0.8361839845743209,
+              0.0038669119553384566,
+              -0.5484354026987514
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.0985923943384509,
+            "worstCorner": 203888,
+            "worstNativeVertex": 46323,
+            "predictedWorldNormal": [
+              0.34416665948452624,
+              -0.5479250702073223,
+              0.7624483116497557
+            ],
+            "actualWorldNormal": [
+              0.3808981555064395,
+              -0.6097872976309989,
+              0.695036723331707
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.0985923943384509,
+            "worstCorner": 203888,
+            "worstNativeVertex": 46323,
+            "predictedWorldNormal": [
+              0.34416665948452624,
+              -0.5479250702073223,
+              0.7624483116497557
+            ],
+            "actualWorldNormal": [
+              0.3808981555064395,
+              -0.6097872976309989,
+              0.695036723331707
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 99,
+      "case": "T",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.6295922553668957,
+            "worstCorner": 27776,
+            "worstNativeVertex": 4839,
+            "predictedWorldNormal": [
+              -0.2591230216303389,
+              0.9650943935772948,
+              0.03805353001807311
+            ],
+            "actualWorldNormal": [
+              -0.2406602670117949,
+              0.788507229432191,
+              -0.5659849688949183
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.6295922553668957,
+            "worstCorner": 27776,
+            "worstNativeVertex": 4839,
+            "predictedWorldNormal": [
+              -0.2591230216303389,
+              0.9650943935772948,
+              0.03805353001807311
+            ],
+            "actualWorldNormal": [
+              -0.2406602670117949,
+              0.788507229432191,
+              -0.5659849688949183
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.6864899209863111,
+            "worstCorner": 202688,
+            "worstNativeVertex": 46123,
+            "predictedWorldNormal": [
+              -0.09310876713407563,
+              0.3510762799110605,
+              0.9317060712298612
+            ],
+            "actualWorldNormal": [
+              0.02821964679363388,
+              0.8677225428555965,
+              0.4962471563193688
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.6864899209863111,
+            "worstCorner": 202688,
+            "worstNativeVertex": 46123,
+            "predictedWorldNormal": [
+              -0.09310876713407563,
+              0.3510762799110605,
+              0.9317060712298612
+            ],
+            "actualWorldNormal": [
+              0.02821964679363388,
+              0.8677225428555965,
+              0.4962471563193688
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 128,
+      "case": "reach",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.9837673121614514,
+            "worstCorner": 26810,
+            "worstNativeVertex": 4572,
+            "predictedWorldNormal": [
+              0.5677122563622735,
+              -0.11710840768886993,
+              0.8148548427938769
+            ],
+            "actualWorldNormal": [
+              -0.7107689783447421,
+              -0.05957199843685409,
+              -0.7008984494382986
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.9837671410118476,
+            "worstCorner": 26810,
+            "worstNativeVertex": 4572,
+            "predictedWorldNormal": [
+              0.5677122563622735,
+              -0.11710840768886993,
+              0.8148548427938769
+            ],
+            "actualWorldNormal": [
+              -0.7107685512638429,
+              -0.059574412870025704,
+              -0.700898677317549
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.509430495256287,
+            "worstCorner": 203966,
+            "worstNativeVertex": 46336,
+            "predictedWorldNormal": [
+              0.6317523748880954,
+              -0.4574397047872913,
+              0.625809758079376
+            ],
+            "actualWorldNormal": [
+              0.731999542565063,
+              -0.659951233533148,
+              0.16923663623050073
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.509430495256287,
+            "worstCorner": 203966,
+            "worstNativeVertex": 46336,
+            "predictedWorldNormal": [
+              0.6317523748880954,
+              -0.4574397047872913,
+              0.625809758079376
+            ],
+            "actualWorldNormal": [
+              0.731999542565063,
+              -0.659951233533148,
+              0.16923663623050073
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 151,
+      "case": "raised",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.8146645338411076,
+            "worstCorner": 812,
+            "worstNativeVertex": 181,
+            "predictedWorldNormal": [
+              -0.21743339427523986,
+              0.044366640492039214,
+              0.9750663158295431
+            ],
+            "actualWorldNormal": [
+              0.1846945190376235,
+              -0.6291075619877333,
+              0.755057355495138
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.8144398527678173,
+            "worstCorner": 812,
+            "worstNativeVertex": 181,
+            "predictedWorldNormal": [
+              -0.21743949445640648,
+              0.04492595717452818,
+              0.9750393451663861
+            ],
+            "actualWorldNormal": [
+              0.1856001711737094,
+              -0.6279749691656432,
+              0.7557777547412328
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.7564582767334392,
+            "worstCorner": 202688,
+            "worstNativeVertex": 46123,
+            "predictedWorldNormal": [
+              -0.09456213655716168,
+              0.3273414449911578,
+              0.9401625288857482
+            ],
+            "actualWorldNormal": [
+              0.044448406442574646,
+              0.8899212517651736,
+              0.4539432837055991
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.7564582767334392,
+            "worstCorner": 202688,
+            "worstNativeVertex": 46123,
+            "predictedWorldNormal": [
+              -0.09456213655716168,
+              0.3273414449911578,
+              0.9401625288857482
+            ],
+            "actualWorldNormal": [
+              0.044448406442574646,
+              0.8899212517651736,
+              0.4539432837055991
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 157,
+      "case": "raised",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.7969144895909301,
+            "worstCorner": 803,
+            "worstNativeVertex": 193,
+            "predictedWorldNormal": [
+              -0.28646569446438264,
+              0.9410709038175052,
+              0.17978587231243362
+            ],
+            "actualWorldNormal": [
+              -0.12244389211975325,
+              -0.5298778417238073,
+              -0.8391882781192109
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.7972031651863194,
+            "worstCorner": 803,
+            "worstNativeVertex": 193,
+            "predictedWorldNormal": [
+              -0.28646569446438264,
+              0.9410709038175052,
+              0.17978587231243362
+            ],
+            "actualWorldNormal": [
+              -0.12242592824262756,
+              -0.5304979934831179,
+              -0.8387990051283541
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.5867061150034023,
+            "worstCorner": 205022,
+            "worstNativeVertex": 46470,
+            "predictedWorldNormal": [
+              -0.30861289288891025,
+              0.35347458695832573,
+              0.8830706646228142
+            ],
+            "actualWorldNormal": [
+              0.08442665713213851,
+              0.7349710531225958,
+              0.6728221835205456
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.5867061150034023,
+            "worstCorner": 205022,
+            "worstNativeVertex": 46470,
+            "predictedWorldNormal": [
+              -0.30861289288891025,
+              0.35347458695832573,
+              0.8830706646228142
+            ],
+            "actualWorldNormal": [
+              0.08442665713213851,
+              0.7349710531225958,
+              0.6728221835205456
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 186,
+      "case": "asymmetric",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.9837673121614514,
+            "worstCorner": 26810,
+            "worstNativeVertex": 4572,
+            "predictedWorldNormal": [
+              0.5677122563622735,
+              -0.11710840768886993,
+              0.8148548427938769
+            ],
+            "actualWorldNormal": [
+              -0.7107689783447421,
+              -0.05957199843685409,
+              -0.7008984494382986
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.9837671410118476,
+            "worstCorner": 26810,
+            "worstNativeVertex": 4572,
+            "predictedWorldNormal": [
+              0.5677122563622735,
+              -0.11710840768886993,
+              0.8148548427938769
+            ],
+            "actualWorldNormal": [
+              -0.7107685512638429,
+              -0.059574412870025704,
+              -0.700898677317549
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.5462251185843098,
+            "worstCorner": 205628,
+            "worstNativeVertex": 46498,
+            "predictedWorldNormal": [
+              -0.35487987079501404,
+              -0.4027963811396037,
+              0.8436915032435452
+            ],
+            "actualWorldNormal": [
+              -0.00898607346784138,
+              -0.7712662152822641,
+              0.6364492718573908
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.5462251185843098,
+            "worstCorner": 205628,
+            "worstNativeVertex": 46498,
+            "predictedWorldNormal": [
+              -0.35487987079501404,
+              -0.4027963811396037,
+              0.8436915032435452
+            ],
+            "actualWorldNormal": [
+              -0.00898607346784138,
+              -0.7712662152822641,
+              0.6364492718573908
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.8615999538021287e-05,
+            "worstCorner": 2178,
+            "worstNativeVertex": 659,
+            "predictedWorldNormal": [
+              -0.022341135035380735,
+              -0.6367623824430896,
+              0.7707363634802314
+            ],
+            "actualWorldNormal": [
+              -0.022313733073566145,
+              -0.6367564321125598,
+              0.7707420732512302
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 2.9484671658437256e-10,
+            "worstCorner": 666,
+            "worstNativeVertex": 152,
+            "predictedWorldNormal": [
+              0.9955738388328241,
+              0.06993824359184747,
+              -0.06278035930895319
+            ],
+            "actualWorldNormal": [
+              0.9955738388236027,
+              0.06993824385027225,
+              -0.06278035916729803
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 244,
+      "case": "turn",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.39800013436704096,
+            "worstCorner": 54554,
+            "worstNativeVertex": 9136,
+            "predictedWorldNormal": [
+              0.19321334323065043,
+              0.9676971889587248,
+              -0.16195911360283838
+            ],
+            "actualWorldNormal": [
+              0.15995327188979674,
+              0.8302284765009048,
+              -0.5339809243959331
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.39800013436704096,
+            "worstCorner": 54554,
+            "worstNativeVertex": 9136,
+            "predictedWorldNormal": [
+              0.19321334323065043,
+              0.9676971889587248,
+              -0.16195911360283838
+            ],
+            "actualWorldNormal": [
+              0.15995327188979674,
+              0.8302284765009048,
+              -0.5339809243959331
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.9863025622367636,
+            "worstCorner": 206973,
+            "worstNativeVertex": 43732,
+            "predictedWorldNormal": [
+              -0.705291994762364,
+              0.1325239711904554,
+              0.6964198440481408
+            ],
+            "actualWorldNormal": [
+              0.7125145410933228,
+              0.10102616553968075,
+              -0.6943462699596799
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.9863025622367636,
+            "worstCorner": 206973,
+            "worstNativeVertex": 43732,
+            "predictedWorldNormal": [
+              -0.705291994762364,
+              0.1325239711904554,
+              0.6964198440481408
+            ],
+            "actualWorldNormal": [
+              0.7125145410933228,
+              0.10102616553968075,
+              -0.6943462699596799
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.012094272694872664,
+            "worstCorner": 1783,
+            "worstNativeVertex": 506,
+            "predictedWorldNormal": [
+              0.7930863664906369,
+              0.5924264471241977,
+              -0.14158008346684664
+            ],
+            "actualWorldNormal": [
+              0.7962680510048675,
+              0.5908051171015576,
+              -0.13002501511449435
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.012094272694872664,
+            "worstCorner": 1783,
+            "worstNativeVertex": 506,
+            "predictedWorldNormal": [
+              0.7930863664906369,
+              0.5924264471241977,
+              -0.14158008346684664
+            ],
+            "actualWorldNormal": [
+              0.7962680510048675,
+              0.5908051171015576,
+              -0.13002501511449435
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.011028428379014838,
+            "worstCorner": 578,
+            "worstNativeVertex": 139,
+            "predictedWorldNormal": [
+              -0.6187600045310008,
+              -0.7450516173237394,
+              -0.24906654595926028
+            ],
+            "actualWorldNormal": [
+              -0.6102922013909186,
+              -0.7521098915219724,
+              -0.2487451305980349
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.011028428379014838,
+            "worstCorner": 578,
+            "worstNativeVertex": 139,
+            "predictedWorldNormal": [
+              -0.6187600045310008,
+              -0.7450516173237394,
+              -0.24906654595926028
+            ],
+            "actualWorldNormal": [
+              -0.6102922013909186,
+              -0.7521098915219724,
+              -0.2487451305980349
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 302,
+      "case": "landing",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.947259486633564,
+            "worstCorner": 18068,
+            "worstNativeVertex": 3197,
+            "predictedWorldNormal": [
+              -0.7665758575007692,
+              0.6381457588343394,
+              0.07163410625327446
+            ],
+            "actualWorldNormal": [
+              0.9699289239962814,
+              -0.24185569677310614,
+              0.02727094303120437
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 1.947259486633564,
+            "worstCorner": 18068,
+            "worstNativeVertex": 3197,
+            "predictedWorldNormal": [
+              -0.7665758575007692,
+              0.6381457588343394,
+              0.07163410625327446
+            ],
+            "actualWorldNormal": [
+              0.9699289239962814,
+              -0.24185569677310614,
+              0.02727094303120437
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.24702519394832992,
+            "worstCorner": 201458,
+            "worstNativeVertex": 45918,
+            "predictedWorldNormal": [
+              0.748098853851541,
+              -0.5120366232778814,
+              0.42209785747880285
+            ],
+            "actualWorldNormal": [
+              0.7694438088199946,
+              -0.6080585112893113,
+              0.19550210207874003
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.24702519394832992,
+            "worstCorner": 201458,
+            "worstNativeVertex": 45918,
+            "predictedWorldNormal": [
+              0.748098853851541,
+              -0.5120366232778814,
+              0.42209785747880285
+            ],
+            "actualWorldNormal": [
+              0.7694438088199946,
+              -0.6080585112893113,
+              0.19550210207874003
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": false,
+            "maximumCPUFormulaNativeNormalVectorError": 1.878959684113366,
+            "worstCorner": 1774,
+            "worstNativeVertex": 513,
+            "predictedWorldNormal": [
+              0.6145609624131496,
+              -0.44668306696073506,
+              -0.6502223167258833
+            ],
+            "actualWorldNormal": [
+              -0.39049066200540766,
+              0.9010303271404237,
+              0.1888422422547438
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": false,
+            "maximumCPUFormulaNativeNormalVectorError": 1.878959684113366,
+            "worstCorner": 1774,
+            "worstNativeVertex": 513,
+            "predictedWorldNormal": [
+              0.6145609624131496,
+              -0.44668306696073506,
+              -0.6502223167258833
+            ],
+            "actualWorldNormal": [
+              -0.39049066200540766,
+              0.9010303271404237,
+              0.1888422422547438
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.01725780016052004,
+            "worstCorner": 578,
+            "worstNativeVertex": 139,
+            "predictedWorldNormal": [
+              -0.9419484776699206,
+              0.3266217794964588,
+              0.07778996448055434
+            ],
+            "actualWorldNormal": [
+              -0.9473027533888295,
+              0.31030875270640307,
+              0.07953597560688529
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.01725780016052004,
+            "worstCorner": 578,
+            "worstNativeVertex": 139,
+            "predictedWorldNormal": [
+              -0.9419484776699206,
+              0.3266217794964588,
+              0.07778996448055434
+            ],
+            "actualWorldNormal": [
+              -0.9473027533888295,
+              0.31030875270640307,
+              0.07953597560688529
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    },
+    {
+      "index": 422,
+      "case": "idle",
+      "phase": "forward",
+      "regions": {
+        "body": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.0031542820748664572,
+            "worstCorner": 29228,
+            "worstNativeVertex": 5036,
+            "predictedWorldNormal": [
+              0.983970097559419,
+              -0.009099097352301229,
+              -0.17810124518453221
+            ],
+            "actualWorldNormal": [
+              0.9834284066806573,
+              -0.01019179497866563,
+              -0.18101021034366147
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.0031542820748664572,
+            "worstCorner": 29228,
+            "worstNativeVertex": 5036,
+            "predictedWorldNormal": [
+              0.983970097559419,
+              -0.009099097352301229,
+              -0.17810124518453221
+            ],
+            "actualWorldNormal": [
+              0.9834284066806573,
+              -0.01019179497866563,
+              -0.18101021034366147
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "head": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.09349292643463619,
+            "worstCorner": 82339,
+            "worstNativeVertex": 43997,
+            "predictedWorldNormal": [
+              -0.23830691374163737,
+              0.288586313436658,
+              0.9273228966007335
+            ],
+            "actualWorldNormal": [
+              -0.32794801276079744,
+              0.2789609253173462,
+              0.9025690572318186
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.09349292643463619,
+            "worstCorner": 82339,
+            "worstNativeVertex": 43997,
+            "predictedWorldNormal": [
+              -0.23830691374163737,
+              0.288586313436658,
+              0.9273228966007335
+            ],
+            "actualWorldNormal": [
+              -0.32794801276079744,
+              0.2789609253173462,
+              0.9025690572318186
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "boxer": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.00077134702893527,
+            "worstCorner": 426,
+            "worstNativeVertex": 167,
+            "predictedWorldNormal": [
+              0.9953611591680861,
+              -1.656064656505917e-07,
+              -0.0962089539467945
+            ],
+            "actualWorldNormal": [
+              0.9954350735439706,
+              -2.2096977014149363e-08,
+              -0.09544115652332273
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.00077134702893527,
+            "worstCorner": 426,
+            "worstNativeVertex": 167,
+            "predictedWorldNormal": [
+              0.9953611591680861,
+              -1.656064656505917e-07,
+              -0.0962089539467945
+            ],
+            "actualWorldNormal": [
+              0.9954350735439706,
+              -2.2096977014149363e-08,
+              -0.09544115652332273
+            ],
+            "zeroPredictedNormals": 0
+          }
+        },
+        "cheek": {
+          "full": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.009782163420433932,
+            "worstCorner": 974,
+            "worstNativeVertex": 223,
+            "predictedWorldNormal": [
+              0.870914883544123,
+              0.40032747519671713,
+              0.28503539819458995
+            ],
+            "actualWorldNormal": [
+              0.8661907645895679,
+              0.40835242212304945,
+              0.2880310029944322
+            ],
+            "zeroPredictedNormals": 0
+          },
+          "four": {
+            "evaluatedTrianglesExactlyRest": true,
+            "maximumCPUFormulaNativeNormalVectorError": 0.009782163420433932,
+            "worstCorner": 974,
+            "worstNativeVertex": 223,
+            "predictedWorldNormal": [
+              0.870914883544123,
+              0.40032747519671713,
+              0.28503539819458995
+            ],
+            "actualWorldNormal": [
+              0.8661907645895679,
+              0.40835242212304945,
+              0.2880310029944322
+            ],
+            "zeroPredictedNormals": 0
+          }
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Canonical13380/body52 actual raw FULL independently read; conditioned F0 canonical fields are FOUR only.",
+    "Original9037 FOUR authority is F0 displayBodyWeights; restored canonical and edge reference FOUR authority is F0 canonicalWeights, both explicitly conditioned.",
+    "Authored plane edge104 fields are deliberate normalized semantic<=4; raw and FOUR ancestry controls retained separately.",
+    "CPU linear blended normal formula compared to evaluated native corners; no GLB, GPU or parity acceptance.",
+    "Finite listed FK samples only; no played, grounded-support, continuous-contact, art or device acceptance."
+  ]
+}
