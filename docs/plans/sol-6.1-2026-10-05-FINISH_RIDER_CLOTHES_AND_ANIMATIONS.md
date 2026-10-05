@@ -1,6 +1,6 @@
 # Finish the rider, clothes and animations
 
-Created: 2026-10-05 · writer: Codex / gpt-6.1-sol · asks303–304.
+Created: 2026-10-05 · writer: Codex / gpt-6.1-sol · asks303–305.
 **Status: active execution plan; assembled rider unaccepted; M0–M5 all open.**
 Basis: [72-hour audit](../evidence/hero-remaster/audit-2026-10-05/README.md).
 
@@ -25,8 +25,26 @@ Face and full-body appearance each retain the separate9/10 target. Judge moving
 front/rear/both profiles/three-quarter gray and PBR evidence with complete limbs
 visible, then normal gameplay. Source orbits alone cannot qualify animation.
 Keep the current playable models until the assembled candidate passes promotion
-gates. New bike art, hairstyles/outfits, another backend/model comparison campaign,
+gates. New bike art, hairstyles/outfits, another geometry-generation comparison campaign,
 full-body cloth, extra generic galleries and physics-engine migration are deferred.
+
+Ask305 extends this deliverable to a generally usable humanoid, not only two
+bike endpoints. The same native master and exported rig must support neutral,
+true A/T, overhead and forward reach, asymmetric bends, crouch, idle, walk, jog,
+turn, jump and landing with explicit anatomical limits and continuous motion.
+“All poses” means a declared anatomical envelope and held-out combinations;
+it cannot mean arbitrary joint rotations or an untested infinite pose space.
+Bike support adds constraints to this generic foundation rather than redefining
+the limbs or rebuilding the bind per clip. Preserve/edit animation clips in
+Blender and export them with the same rig to the engine.
+
+Evaluate the installed UniMate as one bounded optional motion source once a
+qualified input/bind adapter exists. Check the actual input, canonicalization,
+metre scale, hierarchy and decoded root/limb motion first. Compare an authored
+control and the neural candidate on the same master; feature masking is not
+surface-contact preservation. The historical foot-only seated edit is rejected
+and remains a control. Generated animation never grants geometry, contact or
+art acceptance. Retain authored motion if the bounded candidate is worse.
 
 ## What to keep and what to repair
 
@@ -48,8 +66,11 @@ confused with the historical hand107 or wedge-boot controls.
 
 ## Ownership and one candidate contract
 
-Retain the existing three human-created lanes; confirm their current handoffs
-before resuming writes. This plan launches no new worker or message bridge.
+Preserve the three human-created source owners and their frozen handoffs.
+Ask305 authorizes internal teammates for execution. Resumed audit teammates
+write only new `finish-2026-10-05` leaves; they do not take over old owner paths
+or restart old schedules. Root coordinates one native author and alone accepts.
+No external message bridge is needed.
 
 | Lane | Owned deliverable | Parallel work allowed |
 | --- | --- | --- |
@@ -148,6 +169,11 @@ classified rather than hidden. Parent accepts visible fit/material identity.
   actual finite grips, whole soles/pegs and posterior/saddle surfaces on both
   bikes. Verify load-bearing overlap and signed separation, including peg mounts,
   bodywork and footwear; a nearest gap or socket point alone fails the gate.
+- [ ] Author and play the generic humanoid battery above with measured joint
+  ranges, full/four fields, foot support in locomotion and declared airborne
+  phases. Export named clips with frame rate/duration/root-motion policy. Check
+  combinations outside authored keys, reverse transitions and mirrored cases.
+  A small good-pose collection does not qualify a reusable humanoid.
 - [ ] Interpolate both ways with stable wrists, elbows, hips and knees; test
   unilateral poses, halfsteps and held-out transitions. Crash releases hands/feet
   and restart reacquires the same supported state without a visual pop.
@@ -209,7 +235,9 @@ the bounded F1 neck feasibility prerequisite. Agent3 independently checks its
 actual decoded normals and finite crossings. Agent2 prepares the existing three
 new wardrobe sources' calibrated fit/bake handoff concurrently. Parent decides
 the next body interface from that result, then Agent1 builds one complete wearer.
-No new source generation or hand-curl retune precedes those prerequisites.
+No new geometry generation or hand-curl retune precedes those prerequisites.
+Generic motion fixtures and calibrated wardrobe preparation proceed in parallel;
+UniMate input-contract evaluation does not delay the native author.
 
 Each round closes one coherent finding in a small main commit with actual
 validation and truthful attribution. Preserve an explicitly unaccepted source
