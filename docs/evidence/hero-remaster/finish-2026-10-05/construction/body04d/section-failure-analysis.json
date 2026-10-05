@@ -1,0 +1,182 @@
+{
+  "status": "READ_ONLY_FAILED_SECTION_DIAGNOSIS_AND_PROPOSED_ALTERNATIVE",
+  "inputs": {
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/body04d/authored-neck-fields.npz": "c71f518027f7580c87ea4e05cbd31c587de0d97a56db03b4f542339b530199cc",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/foundation-source.npz": "b6eaa2ccee77a9e6f6395daa1fc473da3f6099f26f79895f288e1300b3fba3ae",
+    "docs/evidence/hero-remaster/finish-2026-10-05/runtime/body04d-contact-witnesses.json": "aef4611b674ef739176a73ce9093cf326d1e73b48a10a4aee85573ceb89fa3ba"
+  },
+  "recipeSHA256": "48a6fd4d4ef9b4a44156cb3751124912baad3552430cb60fb6764b41b8b5e4c7",
+  "actualBodySliverWitnesses": [
+    {
+      "nativeIDs": [
+        9105,
+        9104,
+        9103
+      ],
+      "actualTriangleID": 9386,
+      "sourcePolygonID": 4570,
+      "twiceTriangleAreaM2": 4.826380659805616e-10,
+      "sourceEdges": [
+        [
+          4685,
+          4724
+        ],
+        [
+          4685,
+          4724
+        ],
+        [
+          4685,
+          4724
+        ]
+      ],
+      "maximumFloat32EdgeInterpolationErrorM": 1.065255614736967e-07,
+      "actualTrianglesMatchAuthoredCachedTriangleRow": false
+    },
+    {
+      "nativeIDs": [
+        9112,
+        9108,
+        9101
+      ],
+      "actualTriangleID": 9400,
+      "sourcePolygonID": 4570,
+      "twiceTriangleAreaM2": 1.9476032934257316e-10,
+      "sourceEdges": [
+        [
+          4685,
+          4724
+        ],
+        [
+          4685,
+          4724
+        ],
+        [
+          4685,
+          4724
+        ]
+      ],
+      "maximumFloat32EdgeInterpolationErrorM": 3.1009358366671376e-08,
+      "actualTrianglesMatchAuthoredCachedTriangleRow": false
+    },
+    {
+      "nativeIDs": [
+        9112,
+        9101,
+        9096
+      ],
+      "actualTriangleID": 9403,
+      "sourcePolygonID": 4570,
+      "twiceTriangleAreaM2": 0.00013521332669952523,
+      "sourceEdges": [
+        [
+          4685,
+          4724
+        ],
+        [
+          4685,
+          4724
+        ],
+        [
+          4686,
+          4685
+        ]
+      ],
+      "maximumFloat32EdgeInterpolationErrorM": 2.137167781925088e-08,
+      "actualTrianglesMatchAuthoredCachedTriangleRow": false
+    }
+  ],
+  "actualLoftRings": [
+    {
+      "ring": 0,
+      "angularBacktrackingEdges": 0,
+      "minimumAngularIncrementRadians": 2.9087066650390625e-05,
+      "minimumZ": 1.568564534187317,
+      "maximumZ": 1.5705190896987915
+    },
+    {
+      "ring": 1,
+      "angularBacktrackingEdges": 0,
+      "minimumAngularIncrementRadians": 1.811981201171875e-05,
+      "minimumZ": 1.562129020690918,
+      "maximumZ": 1.5660382509231567
+    },
+    {
+      "ring": 2,
+      "angularBacktrackingEdges": 0,
+      "minimumAngularIncrementRadians": 1.0967254638671875e-05,
+      "minimumZ": 1.555693507194519,
+      "maximumZ": 1.5615572929382324
+    },
+    {
+      "ring": 3,
+      "angularBacktrackingEdges": 0,
+      "minimumAngularIncrementRadians": 7.152557373046875e-06,
+      "minimumZ": 1.5492579936981201,
+      "maximumZ": 1.5570764541625977
+    },
+    {
+      "ring": 4,
+      "angularBacktrackingEdges": 0,
+      "minimumAngularIncrementRadians": 4.76837158203125e-06,
+      "minimumZ": 1.5428223609924316,
+      "maximumZ": 1.5525954961776733
+    },
+    {
+      "ring": 5,
+      "angularBacktrackingEdges": 0,
+      "minimumAngularIncrementRadians": 3.337860107421875e-06,
+      "minimumZ": 1.5363868474960327,
+      "maximumZ": 1.548114538192749
+    },
+    {
+      "ring": 6,
+      "angularBacktrackingEdges": 15,
+      "minimumAngularIncrementRadians": -0.0023636817932128906,
+      "minimumZ": 1.5299513339996338,
+      "maximumZ": 1.5436336994171143
+    },
+    {
+      "ring": 7,
+      "angularBacktrackingEdges": 84,
+      "minimumAngularIncrementRadians": -0.007564544677734375,
+      "minimumZ": 1.5235158205032349,
+      "maximumZ": 1.53915274143219
+    }
+  ],
+  "diagnosis": "Sampled head-self witnesses are new outer loft rings 4-6, not the inner cap. The body shoulder boundary is correctly cyclic but intrinsically non-star-shaped. Varying-height ray sections blended toward its concavity fold near the base. Source-edge n-gon retessellation also produces nearly collinear Float32 slivers; original body vertices remain unchanged.",
+  "flatCanonicalCut": {
+    "z": 1.5499999523162842,
+    "singleClosedLoopVertices": 104,
+    "degreeCounts": {
+      "2": 104
+    },
+    "angularBacktrackingEdges": 0,
+    "minimumAngularIncrementRadians": 0.0014299035774623103,
+    "bounds": [
+      [
+        -0.03162101778238646,
+        -0.1075581106197454,
+        1.5499999520357335
+      ],
+      [
+        0.09410695655836565,
+        0.10755811079840849,
+        1.5499999527542911
+      ]
+    ]
+  },
+  "nextMechanism": "Restore missing original canonical neck triangles to a single Z=1.55 body cut. Preserve actual source triangle diagonals and explicit edge-split fans. Connect the source head Z=1.575 cut to that planar neck cut using monotone polar-angle sections, not arclength mapping to a concave nonplanar shoulder seam. Keep the inner head closure at the upper cut. Body stays at or below 1.55 and head at or above 1.55 in rest, giving a declared half-space check before skin motion.",
+  "requiredPreflight": [
+    "One simple monotone-angle loop per section, consistent winding and explicit finite triangle areas.",
+    "Body/head rest half-space separation, proper head-self/body-self zero, actual save/reopen triangle parity.",
+    "Protected original upper incident polygons/corner frames retained exactly; original 34 objects and 51 controls preserved.",
+    "FULL source field retained outside the admitted neck; authored at-most-four new seam field, actual native/manual stress and grounded motion validation."
+  ],
+  "limits": [
+    "Witness diagnosis covers capped classified pairs, not a whole-contact histogram.",
+    "A planar source loop is not a constructed candidate or a rest/motion/art pass.",
+    "Polar-angle containment and future triangulation need actual full-surface checks; no numerical threshold is relaxed.",
+    "No body05 source edit or experiment has run."
+  ]
+}

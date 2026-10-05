@@ -342,3 +342,19 @@ Local witness minimum−21.688mm/2,356belowtarget; finite/warning-free run.
 Limits: Numeric failure only; no new played art verdict, skin or grip. Local
 normal witnesses are not global solid occupancy. A new actual enclosure
 mechanism must keep original source appearance/lineage and sound topology.
+
+## Concave neck section diagnosis freezes a planar alternative
+
+Finding: The old nonplanar shoulder loop has84angular backtracking edges;
+its loft folds near the base. Source-edge slivers also expose evaluated
+body triangulation instability. Freeze one canonical planar-patch proposal
+with explicit source triangles instead of another section/radius sweep.
+
+Validation: Parent independently checks raw FULL canonicalXYZ/51names,
+all9037body ancestry/18016oriented triangle memberships,88whole/104clipped
+missing triangles and the104vertex degree-two monotone planar cut.
+Round21 ordinary clear/crash/restart passes exact finish bytes, errors0.
+
+Limits: Proposal only, no body05 geometry/art pass. Cached polygon4570
+label is uncertain; actual evaluated vertex-edge ancestry governs. Moving
+topology/normals, contact, held-out and grounded review remain required.
