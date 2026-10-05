@@ -187,3 +187,21 @@ recipe/input pins/ASTs and plays235 silent grayframes to39.167s; hands coherent.
 Limits: Existing neck/shoulder/four-weight failures remain; grounded motion
 and wardrobe absent. Rejected INT-only SOURCE_ID checker is preserved, then
 finite integral FLOAT−1 accepted explicitly. No body/clearance/art promotion.
+
+## Same51 positional model input with failed moving normals
+
+Finding: Installed Three FOUR/export XYZ agrees with native FOUR over all
+points in36 poses within5.905µm. Moving normal parity fails, including
+protected upper-head corners0.05847worst vector error and near-opposite lower
+neck/body corners. This admits a positional model input, never a player asset.
+
+Validation: Parent checks exact GLB/mapping/receipt pins, complete measured
+point coverage, sample counts, Python ASTs and scoped lint. Twelfth-round
+ordinary low/high finish bytes match and crash/restart returns tick0; no errors.
+Static exported normals match raw rest buffers at localized witnesses, so
+normal divergence is not asserted to be proven exporter buffer corruption.
+
+Limits: Native evaluated/CPU formula normals stay separate failed fields;
+boxer/cheek exact normal-corner comparison is unmeasured. Baked idleinput only,
+no real GPU/materials/browser/device/animation pass. Official model preprocessing
+still must admit61rawframes for60features; no generated motion accepted.

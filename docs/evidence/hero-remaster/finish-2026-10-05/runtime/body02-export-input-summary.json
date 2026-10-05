@@ -1,0 +1,76 @@
+{
+  "status": "UNACCEPTED_POSITIONAL_MODEL_INPUT_EXPERIMENT_ONLY",
+  "glbPath": "harness/out/rider-finish/body02-intake02/unimate-same51-idle-30fps.glb",
+  "glbSHA256": "2b07ce4bd70b20a075de21e9769d79a9d9b77952d06594d7b206fc9abeaab50b",
+  "nativeReportSHA256": "867fa8c55fb9d8b549f1d1a07d6a7e08c19f504aca8a4c3efb76a2bc6f46d7fd",
+  "receiptSHA256": "d6e37954ce0255132a9b49b3b412a2b3c64130efd75ef24b2a1301e813244381",
+  "mappingSHA256": "064f0b285239e7ece491db1a3381cef32ad0324022f46858ee0403e87004f95b",
+  "nativeSourceSHA256": "01574c250a3a4b693d17ff373501574ec0e7db5615bcdc0e6b68adcf169e1bc3",
+  "sampleCount": 36,
+  "regions": {
+    "body": {
+      "maximumXYZM": {
+        "fullToConditioned": 0.00341078577144295,
+        "fullToExport": 0.003410893228571281,
+        "conditionedToExport": 5.069222227766712e-07
+      },
+      "everyNativePointCovered": true,
+      "normalMaximumVectorError": 1.9649428254658108
+    },
+    "head": {
+      "maximumXYZM": {
+        "fullToConditioned": 0.020044278475262585,
+        "fullToExport": 0.020044394043391246,
+        "conditionedToExport": 5.9045321251120704e-06
+      },
+      "everyNativePointCovered": true,
+      "normalMaximumVectorError": 1.999905068819056
+    },
+    "boxer": {
+      "maximumXYZM": {
+        "fullToConditioned": 0,
+        "fullToExport": 5.20586452334065e-07,
+        "conditionedToExport": 5.20586452334065e-07
+      },
+      "everyNativePointCovered": true,
+      "normalMaximumVectorError": -1
+    },
+    "cheek": {
+      "maximumXYZM": {
+        "fullToConditioned": 0,
+        "fullToExport": 2.8389856136922687e-07,
+        "conditionedToExport": 2.8389856136922687e-07
+      },
+      "everyNativePointCovered": true,
+      "normalMaximumVectorError": -1
+    }
+  },
+  "protectedHeadNormalWorst": {
+    "index": 244,
+    "status": "SAMPLED",
+    "protectedRows": 176435,
+    "maximumVectorError": 0.05846944848336745,
+    "worst": {
+      "exportRow": 30,
+      "nativeVertex": 26,
+      "nativeCorner": 183498,
+      "vectorError": 0.05846944848336745,
+      "actual": [
+        0.9396926098773012,
+        2.0941746230758578e-07,
+        0.34202017329675516
+      ],
+      "expected": [
+        0.9181183513189979,
+        0.0026897997409645554,
+        0.3962971838767453
+      ]
+    }
+  },
+  "limits": [
+    "Moving native/CPU normals differ; no normal parity acceptance.",
+    "Body/neck and semantic boxer defects remain open; no art or coverage acceptance.",
+    "Boxer/cheek exact corner normal mapping unmeasured; GPU, textures, normal browser consumption and device performance unmeasured.",
+    "Generated idle-only input is upsampled61 baked30Hzframes over2s, separate from primary12Hz battery; official preprocess must independently verify >=61 source frames/60 features."
+  ]
+}
