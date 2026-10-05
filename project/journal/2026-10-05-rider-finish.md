@@ -684,3 +684,19 @@ Limits: One derived vertex, source rest and two saved poses only. Proxy
 uses Float64acos; not exact native accumulation/shader parity. Wholehead
 normal failure remains; no field edits, fold certificate, render/art/GPU
 or device pass. Execution40; next ordinary game gate42.
+
+
+## Refresh the execution plan from measured source checkpoints
+
+Finding: The prior next-action paragraph still points to failed body04d.
+Use committed body06cap/normal facts and current glovehandle localization
+to order focused shoulder repair, cuff interpretation and private engine
+consumption. Keep actual acceptance and source-control distinctions.
+
+Validation: Parent reconciles native39/40receipts, scope contract and
+played3/10body review. AllF/Mgates stayopen; no new execution in this
+plan-writing unit. Markdown diff/links/unchanged release authority checked.
+
+Limits: Shoulderfields are a prepared proposal, not authored/accepted.
+PBRcuff context41is in flight, not judged. Fulloutfit/generic/bike/engine/
+phone/release outcome remains required. Next ordinary game gate42.

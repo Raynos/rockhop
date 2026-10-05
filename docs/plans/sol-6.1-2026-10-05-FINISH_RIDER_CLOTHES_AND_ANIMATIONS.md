@@ -302,18 +302,41 @@ and verified live SHA. AllM0–M5 evidence linked; no unmeasured gate is green.
 
 ## First round, stop rules and closure
 
-**Next concrete round after ask307 reconciliation:** preserve body04d's failed
-loft and prepare one planar neck/body separation proposal from its actual
-witnesses. Prove source-triangle ancestry, stable tessellation, protected normals
-and finite rest clearance before expensive films; then test raised/held-out and
-grounded motion. The body04d rest head251/body-head112 crossings remain failures.
-Wardrobe prepares a better conditioned actual surface enclosure mechanism after
-the fit03 checkpoint; no repetition of its failed interpolation controller.
-Generic grounded30Hz/reversal/locomotion preparation proceeds separately, with
-played support and private same-candidate engine checks before acceptance.
-No new geometry generation or hand-curl retune precedes these prerequisites.
-Generic motion fixtures and calibrated wardrobe preparation proceed in parallel;
-UniMate input-contract evaluation does not delay the native author.
+**Current checkpoint after executions39–40:** body06 retains the scoped cap
+repair, exact protected source/rig data, stable triangles and finite proper
+head-self/body-head crossings0 across ten saved poses. Its current loft witness
+uses automatic geometric normals (packed0, six smooth faces), so a rigid
+head-normal reference or angular custom-offset decoder cannot resolve the
+remaining1.48846linear-skin disagreement. Body shoulder/hip/underwear failures
+remain inherited; the played body is still rejected at3/10. These checkpoints
+are construction progress, not F1/M1 or actual-engine acceptance.
+
+**Next production repair:** freeze one anatomically anchored chest/shoulder/
+upper-arm field trial around the two humeral pivots, preserving geometry first.
+Current reach/raised/asymmetric proper shoulder crossings exist in both FULL
+and FOUR; truncation alone is not the primary cause. Pin exact patch/anchor/
+boundary IDs and raw controls, verify outside-field equality and disclose any
+normalization mass difference. Use one fixed harmonic partition, then actual
+native save/reopen, whole-body contact and held-out moving checks. Root judges
+same-view exposed gray/PBR motion. If that trial fails, stop field retuning and
+propose joint-aware deltoid/axilla geometry or corrective deformation. Original
+source controls stay immutable; permitted production geometry/semantic fields
+need not preserve diagnosed bad derivative deformation indefinitely.
+
+The exact glove opening preserves all retained source geometry/UV/PBR lineage.
+Its remaining genus1handle is localized to a cuff-side label0region, outside
+prior distal labels. Check paired unobscured/marked moving PBR context before
+interpreting that feature: a handle may be legitimate cuff/strap detail. Surface
+homology does not authorize another cut or certify usable inner space. Prove
+mouth/palm/finger enclosure before fitting or skin transfer; no more failed RBF
+sweeps. Hoodie, jeans and boots continue toward one complete assembled wearer.
+
+Generic grounded30Hz fixtures, complete foot masks and the bounded UniMate
+pilot remain separate inputs. Their finite probes do not close full signed
+support or the reusable humanoid gate. Prepare same-candidate private actual
+engine consumption alongside construction, then compare native/exported/consumed
+positions and normals and play actual generic plus both-bike motion. No new
+geometry generation or hand-curl retune precedes these prerequisites.
 
 Each round closes one coherent finding in a small main commit with actual
 validation and truthful attribution. Preserve an explicitly unaccepted source
