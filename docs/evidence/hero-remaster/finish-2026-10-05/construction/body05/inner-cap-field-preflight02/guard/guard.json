@@ -1,0 +1,58 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Users/raynos/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "assets/blender/hero-remaster/rider/finish-2026-10-05/construction/preflight_rigid_inner_cap_v2.py",
+    "--out",
+    "docs/evidence/hero-remaster/finish-2026-10-05/construction/body05/inner-cap-field-preflight02/proposal"
+  ],
+  "controllerPID": 95212,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 120.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.4,
+      "freeGiB": 39.5
+    },
+    {
+      "seconds": 0.028,
+      "anonymousGiB": 26.5,
+      "wiredGiB": 6.4,
+      "freeGiB": 39.5
+    },
+    {
+      "seconds": 1.053,
+      "anonymousGiB": 27.2,
+      "wiredGiB": 6.6,
+      "freeGiB": 38.5
+    },
+    {
+      "seconds": 2.09,
+      "anonymousGiB": 27.6,
+      "wiredGiB": 6.4,
+      "freeGiB": 38.4
+    },
+    {
+      "seconds": 3.127,
+      "anonymousGiB": 27.3,
+      "wiredGiB": 6.7,
+      "freeGiB": 38.3
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 95216,
+  "exitCode": 0,
+  "elapsedSeconds": 3.901
+}

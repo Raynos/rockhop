@@ -516,3 +516,19 @@ Limits: No direct video ingestion by the model; review uses actual played
 frame sequences and is sampled for body. Front-only body cannot certify
 other angles or small details. Glove film supports only conditional
 diagnostic opening after separate graph checkpoint, not cavity/fit/art.
+
+## Derived cap field scope includes its exact position aliases
+
+Finding: Literal303cap rows would open0.301457mm lining alias gaps under
+turn. Include all17coincident derived aliases in the320row field contract;
+only7effective rows change, preserving original fields and protected face.
+
+Validation: Independent QA and parent mask graph agree exact320derived
+IDs/editable-only ancestry,301cap/459lining triangles, original43707 and
+alloutside rows. Ten ideal/rounding/hybrid predictions close aliases0
+and show no cap reversals. Constructor guards3.904/3.901s exit0.
+
+Limits: Execution32 is read-only scope admission before one bounded
+native trial. Ideal affine, localFloat32 rounding and measured-outside
+hybrid results stay distinct. No source saved, actual evaluated normal,
+complete contact, played art, engine/GPU or device acceptance.
