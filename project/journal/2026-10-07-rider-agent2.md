@@ -161,3 +161,9 @@ Finding: The complete corrected rider is visible in the actual Garage and record
 Validation: Parent plays both films to natural end and inspects eight temporal sheets. Exact source04 SHA loads without errors; 192 finite hierarchies. Low/high clear at tick 4810 with identical state hash and finish bytes; crash 103 ticks, restart tick 0 in 4 ms.
 
 Limits: Engine integration only; fine glove surfaces, all-pose cloth, physical phone and stranger acceptance remain open. Camera crops the bike front intermittently; no full art approval.
+
+Finding: Actual contact feedback replaces the input-only spine table with three bounded anatomical candidates, retaining the same physical COM and pelvis carrier. A 10-degree bound leaves 17.231 mm hand gaps; the explicit 20-degree candidate reaches 1.419 mm in the recorded states.
+
+Validation: Parent reruns all 11 exact-source CPU tests successfully. All 192 states remain finite, with COM below 0.990 micrometers and soles below 3.104 micrometers. Engine04 preserves JS/inline budgets; desktop CPU P95 is 2.788 ms.
+
+Limits: Unaccepted render-only articulation; actual moving judgment, glove surface contact and physical-phone cost remain open. No source geometry, weight or physical-input changes.

@@ -12,6 +12,12 @@ const receipt = JSON.parse(fs.readFileSync(path.join(build, 'rider-rebuild-input
 const catalog = JSON.parse(fs.readFileSync(path.join(build, 'model-catalog.json'), 'utf8'));
 const played = JSON.parse(fs.readFileSync(input, 'utf8'));
 const metadata = catalog.privateRiderMetadata, gltf = await loadRigAt(pathToFileURL(receipt.source), true);
+const calibrationPath = process.env.RIDER_REBUILD_POSE_CALIBRATION ?? receipt.poseCalibration.path;
+const calibrationBytes = fs.readFileSync(calibrationPath), calibration = JSON.parse(calibrationBytes.toString());
+if (calibration.sourceSHA256 !== receipt.sourceSHA256) throw new Error('Pose calibration source changed');
+if (process.env.RIDER_REBUILD_POSE_CALIBRATION) {
+  delete metadata.driver.spineFlexTable; Object.assign(metadata.driver, calibration.driver);
+}
 const Rider = createPrivateRiderClass(metadata), rider = new Rider(gltf, { complete() {} });
 const bikeModel = catalog.models.find(row => row.logical === 'models/bike-rookie.glb');
 const bike = await loadRigAt(pathToFileURL(path.join(build, bikeModel.url)), true);
@@ -29,11 +35,15 @@ for (const sample of played.samples) {
     inverse: structuredClone(rider.debug.anthropometry) });
 }
 const physical = rows.filter(row => row.physical);
-const report = { accepted: false, sourceSHA256: receipt.sourceSHA256, calibrationSHA256: receipt.poseCalibration.sha256,
+const costs = physical.map(row => row.inverse.elapsedMs).sort((a, b) => a - b);
+const report = { accepted: false, sourceSHA256: receipt.sourceSHA256,
+  calibrationSHA256: crypto.createHash('sha256').update(calibrationBytes).digest('hex'),
   playedInput: { path: input, sha256: crypto.createHash('sha256').update(fs.readFileSync(input)).digest('hex') },
   sourceBikeChassisOffset: offset.toArray(), sampleCount: rows.length, physicalCount: physical.length,
   maxGripM: Math.max(...physical.flatMap(row => row.gripM)), maxSoleM: Math.max(...physical.flatMap(row => row.soleM)),
   maxCOMResidualM: Math.max(...physical.map(row => row.inverse.residualM)), allFinite: rows.every(row => row.finite), rows,
+  solveCostMs: { median: costs[Math.floor(costs.length * 0.5)], p95: costs[Math.floor(costs.length * 0.95)], max: costs.at(-1) },
+  maxFlexRadians: Math.max(...physical.map(row => Math.abs(row.inverse.spineFlexRadians))),
   limits: ['Actual played physics states evaluated on CPU; not a new browser replay or finish-time qualification',
     'Socket center errors do not qualify glove surfaces, phalange clearance, or moving art'] };
 if (process.argv[5]) {

@@ -103,6 +103,8 @@ test('actual forward/back/neutral targets retain finite full-hierarchy control a
     assert.ok(rider.debug.gripAngleErr.every(angle => angle < 1e-5));
     if (process.env.RIDER_REBUILD_POSE_CALIBRATION) assert.ok(Math.max(...rider.debug.gripErr, ...rider.debug.soleErr) < 0.005);
     assert.ok(rider.debug.comResidual < 1e-5);
+    assert.ok(rider.debug.anthropometry.candidates.length <= 3);
+    assert.ok(Math.abs(rider.debug.anthropometry.spineFlexRadians) <= (metadata.driver.maxSpineFlexRadians ?? 0));
     const measured = rider.toBike(measureAnthropometricCOM(rider, rider.anthropometry));
     assert.ok(measured.distanceTo(new THREE.Vector3().fromArray(rider.debug.anthropometry.requestedCOM)) < 1e-5);
     for (const limb of rider.limbs.values()) {
@@ -138,14 +140,12 @@ test('anatomical upper-spine flex leaves the explicit physical pelvis carrier fi
   }
 });
 
-test('actual repeated frame is byte-identical after fingers/metacarpals were perturbed', { skip }, async () => {
+test('actual repeated frame is byte-identical after every joint transform was perturbed', { skip }, async () => {
   const { rider } = await instance(), frame = poseFrame(0.35);
   rider.update(frame); const expected = snapshot(rider);
   for (let n = 0; n < 40; n++) {
-    for (const hand of Object.values(rider.binding.contract.hands)) {
-      for (const id of Object.values(hand.digits).flat()) {
-        rider.bone(id).position.x += 0.3; rider.bone(id).scale.setScalar(1.1); rider.bone(id).quaternion.multiply(new THREE.Quaternion(0, 0, 0.1, Math.sqrt(0.99)));
-      }
+    for (const bone of rider.binding.byId.values()) {
+      bone.position.x += 0.3; bone.scale.setScalar(1.1); bone.quaternion.multiply(new THREE.Quaternion(0, 0, 0.1, Math.sqrt(0.99)));
     }
     rider.update(frame); assert.equal(snapshot(rider), expected);
   }

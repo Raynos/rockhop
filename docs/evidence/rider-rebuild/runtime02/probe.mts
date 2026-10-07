@@ -12,6 +12,8 @@ const source = path.resolve(process.argv[2]), contract = path.resolve(process.ar
 const metadata = JSON.parse(fs.readFileSync(contract, 'utf8'));
 metadata.sourceSHA256 = crypto.createHash('sha256').update(fs.readFileSync(source)).digest('hex');
 metadata.driver.nearSimilarityTolerance = 1e-4;
+if (process.env.RIDER_REBUILD_POSE_CALIBRATION) Object.assign(metadata.driver,
+  JSON.parse(fs.readFileSync(process.env.RIDER_REBUILD_POSE_CALIBRATION, 'utf8')).driver);
 const gltf = await loadRigAt(pathToFileURL(source), true);
 const Rider = createPrivateRiderClass(metadata), rider = new Rider(gltf, { complete() {} });
 const frame = new THREE.Group();

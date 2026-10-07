@@ -233,26 +233,37 @@ export function createPrivateRiderClass(metadata) {
 
     poseRiding(frame) {
       const p = this.physicsTarget(frame), started = performance.now();
-      const table = this.driver.spineFlexTable ?? [[-1, 0], [1, 0]];
-      const lean = this.stage ? 0 : frame.rider.lean;
-      let spineFlex = table[0][1];
-      for (let i = 1; i < table.length; i++) {
-        if (lean > table[i][0]) { spineFlex = table[i][1]; continue; }
-        const t = Math.max(0, (lean - table[i - 1][0]) / (table[i][0] - table[i - 1][0]));
-        spineFlex = table[i - 1][1] + (table[i][1] - table[i - 1][1]) * t; break;
-      }
-      fail(Number.isFinite(spineFlex) && Math.abs(spineFlex) <= (this.driver.maxSpineFlexRadians ?? 0), 'Spine flex exceeds declared anatomical bound');
-      const evaluate = hips => {
+      const bound = this.driver.maxSpineFlexRadians ?? 0, candidates = [];
+      fail(Number.isFinite(bound) && bound >= 0 && bound <= Math.PI / 9, 'Spine flex exceeds declared anatomical bound');
+      const evaluate = (hips, flex) => {
         resetHumanoidPose(this.binding); this.debug.fullResetCount++;
-        this.poseFromHips(frame, p, hips, spineFlex);
+        this.poseFromHips(frame, p, hips, flex);
         return this.toBike(measureAnthropometricCOM(this, this.anthropometry));
       };
-      const inverse = invertAnthropometricCOM(evaluate, p.requestedCOM, [p.hips.x, p.hips.y], 8);
-      evaluate(inverse.hips);
+      const solve = flex => {
+        const inverse = invertAnthropometricCOM(hips => evaluate(hips, flex), p.requestedCOM, [p.hips.x, p.hips.y], 8);
+        evaluate(inverse.hips, flex);
+        const arm = Math.max(...this.debug.armStretch), leg = Math.max(...this.debug.legStretch);
+        const candidate = { flex, inverse, arm, leg, reach: Math.max(arm, leg), gapM: Math.max(...this.debug.gripErr, ...this.debug.soleErr) };
+        candidates.push(candidate); return candidate;
+      };
+      const initial = solve(0);
+      if (bound && initial.gapM > 1e-5) {
+        const role = initial.arm > initial.leg ? 'arm' : 'leg';
+        const edge = solve((role === 'arm' ? -1 : 1) * bound);
+        const slope = initial[role] - edge[role];
+        solve(edge.flex * (slope > 0 ? Math.min(1, Math.max(0, (initial[role] - 1) / slope)) : 1));
+      }
+      const feasible = candidates.filter(row => row.gapM <= 0.001 && row.inverse.converged);
+      const best = feasible.length ? feasible.sort((a, b) => Math.abs(a.flex) - Math.abs(b.flex))[0]
+        : candidates.sort((a, b) => a.gapM - b.gapM)[0];
+      const inverse = best.inverse;
+      evaluate(inverse.hips, best.flex);
       this.debug.comResidual = inverse.residualM;
       this.debug.anthropometry = { ...inverse, requestedCOM: p.requestedCOM.toArray(),
-        carrierAngle: p.torsoAngle, spineFlexRadians: spineFlex, elapsedMs: performance.now() - started,
-        articulationRule: this.driver.spineFlexTable ? 'Source-specific input-lean table; physical COM and carrier preserved' : 'Fixed upper spine',
+        carrierAngle: p.torsoAngle, spineFlexRadians: best.flex, elapsedMs: performance.now() - started,
+        articulationRule: 'Three actual-contact candidates; minimum flex at <=1 mm socket-center error',
+        candidates: candidates.map(({ flex, gapM, reach, inverse }) => ({ flex, gapM, reach, comResidualM: inverse.residualM })),
         palmForwardBike: this.driver.palmForwardBike ?? [1, -0.25, 0],
         contactLimit: 'Socket center residual only; no glove surface/bar radius or phalange penetration qualification' };
       this.debug.physicalPose = !this.stage && !!frame.riderBody.present;
