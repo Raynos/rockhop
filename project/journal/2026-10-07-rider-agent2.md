@@ -47,3 +47,9 @@ Finding: Official Blender male base offers a coherent continuous head/neck/body/
 Validation: Official50,643,039byte download pinned; guarded Blender native inventory succeeds. Connected/oriented/closed graph checks pass with Euler2; source license and separate embedded Rain text both retained. Ordinary low/high4810tick clear/hash/finish bytes match, crash103/restart0ticks1–2ms, zero model replacements.
 
 Limits: Static foundation only, not rig, joint deformation, identity, clothes or played new-rider acceptance.
+
+Finding: Private humanoid intake resolves the true complete joint hierarchy and resets all local T/Q/S. Shared body/glove bone identity and orientation-aware local palm offsets remove concrete legacy19-role assumptions without changing normal player code.
+
+Validation: Parent source review and7targeted Node tests pass, including actual SkeletonUtils clone, extra spine/twist/metacarpal parents,60byte-identical repeated skin evaluations, rotated palm offset and invalid metadata/bind/parent rejection.
+
+Limits: Tested contract helper only; no new exported asset, anatomical correspondence, finger/arm solver, FOUR skin field, actual-game or device acceptance.

@@ -1033,3 +1033,5 @@ Ask314/316 delivery: [private before/after photo Site](https://rockhop-rider-pro
 October7 rebuild R0 source intake: official Blender male whole-body CC0 collection,10582verts/10590mostlyquad faces, connected closed oriented surface and UVMap; no rig/materials. Guarded read-only source inventory succeeds. [Receipt](../evidence/rider-rebuild/source-intake01/README.md). Ordinary low/high identical clear/crash/restart protects existing game; no new rider acceptance. R0–R5 open.
 
 Rider review gallery, October 7 (ask323): five ranked historical videos now lead the photo Site source; 98.269 seconds total. Source/hash checks pass; publication pending. This does not change the successor first-principles plan or rider acceptance.
+
+October7 rebuild early engine foundation: private arbitrary-hierarchy [contract helper](../../harness/rider-rebuild/README.md) passes7targeted parent-reviewed tests, including60identical repeated skin/reset frames and rotated palm offset. Actual new-rig asset/IK/game intake remains open; normal player code unchanged, R0–R5 open.
