@@ -1125,3 +1125,5 @@ October 7 independent Astra source review establishes7200sampled source contour 
 October 7 the original two-hour complete-review target is missed, not fulfilled by the rejected substitute. Actual face/clothing/boot source checks pass; source-preserving glove chart construction remains. Active replacement plan records measured correction, full-source export gate and deliberate texture budget; all moving/human gates remain open.
 
 October 7 actual-glove chart preparation preserves all selected exterior faces and material ancestry, 427 mixed digit/palm triangles and cuff detail. Independent parent readback passes exact native hand fields and complete chart reconstruction; fitting and played acceptance remain open.
+
+October 7 complete selected-rider assembly source requires all seven actual objects and a verified real-glove source before export. Cut head vertices have honest derived identities, and the measured final FOUR protocol makes native/export coefficients identical; no complete garment or moving-art pass is claimed.

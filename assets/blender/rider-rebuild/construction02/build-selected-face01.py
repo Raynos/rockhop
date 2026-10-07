@@ -68,6 +68,7 @@ def buildFace(body, rig, out):
         face[source_face] = -1
         for loop in face.loops:
             loop[normals] = loop.vert.normal
+    original_body_vertices = set(bm.verts)
     bmesh.ops.bisect_plane(bm, geom=list(bm.verts) + list(bm.edges) + list(bm.faces),
                           plane_co=(0, 0, BODY_CUT_Z), plane_no=(0, 0, 1),
                           clear_outer=True, clear_inner=False, dist=1e-7)
@@ -96,6 +97,9 @@ def buildFace(body, rig, out):
     body_rings = loops_at(BODY_CUT_Z)
     assert len(body_rings) == 1
     lower = body_rings[0]
+    derived_lower = {vertex for vertex in lower if vertex not in original_body_vertices}
+    assert {vertex for vertex in bm.verts if vertex not in original_body_vertices} == derived_lower
+    for vertex in derived_lower: vertex[source_vertex] = -1
     retained = []
     raw_lookup = {}
     source_faces_added = []
@@ -127,9 +131,11 @@ def buildFace(body, rig, out):
             if all(points[int(i)][1] > SOURCE_CUT_Y + 1e-5 for i in triangle):
                 retained.append((face[source_face], [list(v.co) for v in vertices],
                                  [list(loop[uv].uv) for loop in face.loops],
-                                 [list(loop[normals]) for loop in face.loops]))
+                                 [list(loop[normals]) for loop in face.loops],
+                                 [v[source_vertex] for v in vertices]))
     head_vertices = set(raw_lookup.values())
     head_edges = {e for f in source_faces_added for e in f.edges}
+    original_head_vertices = set(bm.verts)
     bmesh.ops.bisect_plane(bm, geom=list(head_vertices) + list(head_edges) + source_faces_added,
                           plane_co=(0, 0, top), plane_no=(0, 0, 1),
                           clear_inner=True, clear_outer=False, dist=1e-7)
@@ -141,6 +147,10 @@ def buildFace(body, rig, out):
         return sum(a.co.x * b.co.y - b.co.x * a.co.y for a, b in zip(ring, ring[1:] + ring[:1])) / 2
 
     outer, inner = sorted(head_rings, key=lambda ring: abs(area(ring)), reverse=True)
+    derived_outer = {vertex for vertex in outer if vertex not in original_head_vertices}
+    derived_inner = {vertex for vertex in inner if vertex not in original_head_vertices}
+    assert {vertex for vertex in bm.verts if vertex not in original_head_vertices} == derived_outer | derived_inner
+    for vertex in derived_outer | derived_inner: vertex[source_vertex] = -1
     # These rings are genuine anatomical section vertices. CCW ordering gives
     # outward bridge faces and the opposite directed edge to the donor surface.
     def ccw(ring):
@@ -243,14 +253,17 @@ def buildFace(body, rig, out):
             for loop in face.loops: loop[normals] = loop.vert.normal
     snapshots = {f[source_face]: f for f in bm.faces if f[source_face] >= 0}
     position_error = uv_error = normal_error = 0.
-    for identity, positions, uvs, original_normals in retained:
+    protected_source_id_changes = 0
+    for identity, positions, uvs, original_normals, original_ids in retained:
         face = snapshots[identity]
         assert len(face.verts) == 3
-        for loop, position, original_uv, original_normal in zip(face.loops, positions, uvs, original_normals):
+        for loop, position, original_uv, original_normal, original_id in zip(face.loops, positions, uvs, original_normals, original_ids):
             position_error = max(position_error, (loop.vert.co - Vector(position)).length)
             uv_error = max(uv_error, (loop[uv].uv - Vector(original_uv)).length)
             normal_error = max(normal_error, (Vector(loop[normals]) - Vector(original_normal)).length)
+            protected_source_id_changes += loop.vert[source_vertex] != original_id
     assert position_error == uv_error == normal_error == 0
+    assert protected_source_id_changes == 0
     # Compute an exposed skin value directly from the genuine source albedo.
     principal = source_materials[0].node_tree.nodes.get('Principled BSDF')
     image_node = principal.inputs['Base Color'].links[0].from_node
@@ -293,6 +306,11 @@ def buildFace(body, rig, out):
               'protectedSourceTriangles': len(retained), 'protectedPositionMaximumErrorM': position_error,
               'protectedUVMaximumError': uv_error, 'closedSurfaceComponents': components,
               'protectedCornerNormalMaximumError': normal_error,
+              'protectedSourcePointIDChanges': protected_source_id_changes,
+              'derivedCutSourceID': -1,
+              'derivedCutVertexCount': len(derived_lower | derived_outer | derived_inner),
+              'derivedCutVerticesBySection': {'bodyLower': len(derived_lower), 'donorOuter': len(derived_outer),
+                                              'donorInner': len(derived_inner)},
               'boundaryEdges': boundaries, 'nonmanifoldEdges': nonmanifold,
               'oppositeEdgeWindingErrors': winding_errors,
               'bridgeMaximumEndpointTangentM': max_tangent, 'neckAlbedoImage': image.name,

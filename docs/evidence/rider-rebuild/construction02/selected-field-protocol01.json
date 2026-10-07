@@ -1,0 +1,46 @@
+{
+  "accepted": false,
+  "kind": "read-only proposed canonical final FOUR protocol proof",
+  "validatorSHA256": "d6a138a2401a4b93039a460dfc71bcc72bebbca3ac5fa8f9909b5cd4d9000e51",
+  "frozenFields": {
+    "path": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/rig04/weights-four.json",
+    "sha256": "9ce2e702f65c6ea1492750b0e1066e923a96fcb4bcbd301525a38e2d3503c3af"
+  },
+  "installedExporter": [
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/primitive_extract.py",
+      "sha256": "55e14cbe849b0c4ec5545c85a1aae3d8c2c7d65eade67de43eb1a43b05738684"
+    },
+    {
+      "path": "/Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/blender/exp/primitive_attributes.py",
+      "sha256": "815331d39cdf06e73ae110e9921ebfc8cb37825290843cbcbf4d1a7559899e5d"
+    }
+  ],
+  "cutoff": 0.0001,
+  "cutoffComparison": "drop weight <= cutoff",
+  "gridDenominator": 16777216,
+  "rows": 10582,
+  "dropAffectedRows": 12,
+  "maximumRemovedMass": 9.411774954060093e-05,
+  "maximumNamedWeightDelta": 9.411774954060093e-05,
+  "gridQuantizationMaximumAbsoluteDelta": 4.2725943921739784e-08,
+  "normalizationChangedRows": 7961,
+  "minimumRetainedGridCount": 1678,
+  "minimumFloorCorrectionRows": 0,
+  "everyFOUROrderingFloat32SumExactlyOne": true,
+  "exporterNormalizationByteNoOp": true,
+  "canonicalNamedFieldSHA256": "8649c72bbf90cf4d24d84746407b934af5f9870bc65c6392f884fe117ac543ab",
+  "rejectedDominantOnlyULPCandidate": {
+    "sourceID": 1922,
+    "mechanism": "dominant-only nextafter adjustment",
+    "oscillatingFloat32Sums": [
+      1.0000001192092896,
+      0.9999999403953552
+    ],
+    "noNativeMutation": true
+  },
+  "limits": [
+    "Frozen fields only; final joined face/garments/gloves still require measured operator/readback.",
+    "This read-only protocol proof does not change the frozen source or certify deformation/art."
+  ]
+}
