@@ -1069,3 +1069,5 @@ October7 [native04](../evidence/rider-rebuild/construction01/rig04/README.md) re
 October7 [boundary03 structural proposal](../evidence/rider-rebuild/wardrobe01/boundary03-proposal.json): twofailed necklinegeometryrepairs retained; replace boundarydeformation with continuouscommonloop FOUR field/four-rowfalloff, actualjoint-derivedcuffs/regularhem. This documented structuralchange remains movingunaccepted; no silentattemptbudget reset.
 
 October7 [completecalibrated04](../evidence/rider-rebuild/construction01/combined04/README.md) pins native04/wardrobe03/actualsolebottoms together. Parentbinaryreadback confirms10582bodypositions unchanged andeyes nowathead. Tinyexportweightpruning/FULLloss explicitlyopen; nextactualGarage/game judgments allfourgarments together.
+
+October7 [independentfrozen04 audit](../evidence/rider-rebuild/construction02/README.md): rootrerun confirms connected10582pointbody/75joint parentcontract and subµm restresiduals, but12tinyFOUR bodyrows are prunedbyexporter≤.0001. NativeGPU exactfield/FULLloss motion gates explicitlyopen.

@@ -137,3 +137,9 @@ Finding: Combined04 assembles calibrated nativewearer, correctlyplacedeyes, cons
 Validation: Parent independently compares10582exportedbody positions bysourceIDs byteidentical02, checks botheye nodes atheadheight, verifiesallinputSHA andguard07success.75joints/28primitives/39490tris normalizedGPU FOUR.
 
 Limits: NativeGPU12tinyweightrowprunes≤.0001 andFULLloss.2531 unmeasured; actualmoving/contact/art/device qualification open.
+
+Finding: Independentfrozen04 native/export audit verifiescoherenttopology/bindcorrespondence while detecting12bodyFOUR rows prunedbyBlender exportthreshold. Exactfieldparity remainsopen despite tinyrest residuals.
+
+Validation: Parent rerunsread-only audit;10582connectedsourcepoints/75exacthierarchy, restheadsmax.772µm/LBSpositions.987µm.12rowprunes,maxweighterror.0000941177 confirmed; installedexporterhardcodes≤.0001 cutoff.
+
+Limits: Statictransport only; FULLloss.2531 nearwrists/neck/pelvis stillneedsmovingerror measurements. No art/contact/device approval.
