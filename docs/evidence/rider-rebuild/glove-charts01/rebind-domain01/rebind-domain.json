@@ -1,0 +1,104 @@
+{
+  "accepted": false,
+  "status": "PREPARED_HAND_FIELD_DOMAIN_NOT_EXECUTED",
+  "inputs": [
+    {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-body.npz",
+      "sha256": "b34897b3c1fe810d7bd77806a1635f8132b3a43e66986986c218ab23cfad2f45"
+    },
+    {
+      "path": "assets/blender/rider-rebuild/glove-charts01/prepare-hand-rebind-domain.py",
+      "sha256": "d999c87c5f9afea3d4517923188d7668829cc44e0ff7c4ff5e099fb23adb49f9"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-hand-L.npz",
+      "sha256": "871bd1b2db32e3463aa87030977b5004b3c1f76023f6a4c7043264f4b4c42a49"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/target01/native-hand-R.npz",
+      "sha256": "38ff5b613aded2d608c20ab1beff282124f1f17ce0c3fc63581b0f012e5e8072"
+    },
+    {
+      "path": "harness/out/rider-rebuild/construction01/rig04/weights-full.json",
+      "sha256": "a3a3ff7756f82089493cb679c6f8d1fc42d80b22754e7e19de33fd10990e6086"
+    },
+    {
+      "path": "harness/out/rider-rebuild/construction01/rig04/weights-four.json",
+      "sha256": "9ce2e702f65c6ea1492750b0e1066e923a96fcb4bcbd301525a38e2d3503c3af"
+    },
+    {
+      "path": "harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend",
+      "sha256": "26cd01d4ba02be3fbf0f3a5b290c99445ef34d7d18d90012d2ef44913ef06d1d"
+    },
+    {
+      "path": "harness/out/rider-rebuild/construction01/combined04/rider-contract.json",
+      "sha256": "32d67e9031bd6865a561ba29dc6d2765ace49ad13bfb08bd61df07df85440ee4"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/medial-correction01/proposed-joints.npz",
+      "sha256": "dd4e9fd55743d879d4cef30719c0213aed07a3d1b07b31ec822065f48c89d1c3"
+    },
+    {
+      "path": "docs/evidence/rider-rebuild/glove-charts01/medial-correction01/verification.json",
+      "sha256": "d51518213badce925adfa179fd0612445c189009f201142dcabd21444258c6d9"
+    }
+  ],
+  "arrays": {
+    "path": "docs/evidence/rider-rebuild/glove-charts01/rebind-domain01/rebind-domain.npz",
+    "sha256": "0d71a064a8f71e6ab98998d849c85f62c77f5e9e554620204ca9e11826c4932d"
+  },
+  "bodyVertices": 10582,
+  "unchangedRows": 9136,
+  "changedDomainRows": 1446,
+  "sides": {
+    "L": {
+      "sourceVertices": 723,
+      "fullNewFieldVertices": 683,
+      "transitionVertices": 40,
+      "cuffOrigin": [
+        0.3839420433667382,
+        -0.058528019129009165,
+        0.9576892049333223
+      ],
+      "proximalAxis": [
+        -0.3565792674568416,
+        0.2795905535146197,
+        0.8914484552711565
+      ]
+    },
+    "R": {
+      "sourceVertices": 723,
+      "fullNewFieldVertices": 683,
+      "transitionVertices": 40,
+      "cuffOrigin": [
+        -0.3839420364028681,
+        -0.05852799463664704,
+        0.9576893206856874
+      ],
+      "proximalAxis": [
+        0.3565795161664881,
+        0.27959062996534584,
+        0.8914483318095641
+      ]
+    }
+  },
+  "sourceFieldStatistics": {
+    "weights-full": {
+      "rows": 10582,
+      "maximumInfluences": 7,
+      "maximumSumDeviation": 0.15634262561798096
+    },
+    "weights-four": {
+      "rows": 10582,
+      "maximumInfluences": 4,
+      "maximumSumDeviation": 2.220446049250313e-16
+    }
+  },
+  "blend": "Within exact connected clipped-hand source-ID support only: smoothstep(clamp(distance distal from cuff / 0.028, 0, 1)). Alpha=1 at wrist and distally; alpha=0 outside support.",
+  "exactPreservation": "Alpha-zero old FULL and FOUR rows must be copied verbatim, with native FOUR float32 coefficients unchanged. Never renormalize those old rows.",
+  "limits": [
+    "No automatic bind has run and no skinning result is accepted.",
+    "Domain is geometric connected hand support, independent of old heat labels.",
+    "Old FULL coefficients are stored as emitted by Blender, including their measured normalization deviation; they remain exact outside the changing domain."
+  ]
+}

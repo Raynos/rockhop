@@ -1,0 +1,38 @@
+{
+  "accepted": false,
+  "status": "SOURCE_SUPPORTED_NATIVE_IMPLEMENTATION_SPEC_NOT_EXECUTED",
+  "inputReceipt": "docs/evidence/rider-rebuild/glove-charts01/rebind-domain01/rebind-domain.json",
+  "nativeInput": "harness/out/rider-rebuild/construction01/combined04/rider-assembled.blend",
+  "nativeOutputPolicy": "Fresh ignored rig05 derivative only; original rig04/combined04 masters remain immutable. Parent source-checkpoints native builder before a serialized guarded run.",
+  "objects": {
+    "retain": ["RiderBody", "RiderSkeleton"],
+    "removeFromDerivative": "All other objects, including generic clothing/cosmetics and author controls",
+    "skeleton": "Exactly the existing ordered 75 joints, unchanged hierarchy and names; no pose constraints, drivers or Rigify controls",
+    "body": "Exactly 10582 original vertices and original topology/source IDs. Assert native coordinate and topology equality before and after every operation. No shape, hide or scale correction."
+  },
+  "restCorrection": {
+    "endpoints": "Apply only the four proposed heads and four connected parent tails from proposed-joints.npz, after pin verification; all other endpoint coordinates remain exact.",
+    "frames": "Recompute affected pinky proximal/palm04 and middle proximal/intermediate rest frames with local Y along each new bone. Project the actual measured palm normal orthogonal to local Y for roll. Preserve untouched rest matrices outside these affected chains. Verify proper determinant, connected endpoints and no constraints.",
+    "flexAxis": "Compute each finger's anatomical flexion axis from corrected segment direction cross measured source palm normal, normalize, then express in its actual new local rest frame. Store sign and thumb metacarpal/MCP distinction explicitly; validate a small actual-skin curl before accepting the sign.",
+    "certification": "Repeat actual-surface continuous segment containment from the saved/reopened native rest, allowing only known float32 storage error. The static certificate does not accept joint station or motion."
+  },
+  "fields": {
+    "newFullCandidate": "Use a temporary exact body copy and corrected constraint-free skeleton for conventional native automatic binding; clear inherited groups before binding. Exclude PalmSocket/SoleSocket helper bones from bind influence. Record native operator outcomes, all positive named coefficients and any unweighted vertex; abort on bind failure.",
+    "scope": "Only source vertices with newFieldBlendAlpha greater than zero in rebind-domain.npz may receive new distributions. The temporary global solve never becomes a global field replacement.",
+    "blend": "For alpha-positive vertices, independently normalize old FULL and newly bound FULL named distributions, then W=(1-alpha)*oldNormalized + alpha*newNormalized. Full alpha is reached at the wrist; source-ID support and a 28mm smoothstep transition are frozen in the domain file.",
+    "four": "Inside the changing domain, select top four by descending weight then stable joint name and normalize; retain complete FULL separately and report removed mass, support and continuity. Outside the domain, copy old FULL and FOUR JSON rows verbatim and preserve the original native float32 FOUR groups exactly.",
+    "checks": "Verify every body vertex has fields, all names map through the exact 75-joint order, outside-domain rows are exact, no helper field appears, zero bind-pose displacement, native/export coefficient receipts agree under documented float32/export thresholds. Test each digit curl/spread and thumb opposition; compare FULL versus FOUR deformation and hand/wrist boundary continuity."
+  },
+  "delivery": {
+    "native": "Save and independently reopen a body-plus-75-rig master only, with source receipts, native rest/inverse bind matrices and FULL/FOUR source-ID records.",
+    "contract": "Refresh corrected nativeRest and local digit flex axes from actual native matrices; retain explicit socket-calibration-required state. Parent's pure final assembler will combine actual selected sources, not invoke old generic cosmetic generation.",
+    "targetRefresh": "Extract actual corrected body/hand fields and rest from the new authority and rerun exact source-ID/position checks. Keep geometric surface-root charts tied to actual web splits, independently of MCP articulation placement.",
+    "gloveResume": "Only after the corrected target checkpoint, resume actual-source exterior chart deformation with original shared IDs/faces and full dense lineage. Never substitute an offset-body outer surface. Final coherent compact unwrap and transformed original dense albedo/MR/geometric normal bake remain separate gates."
+  },
+  "remainingQualifications": [
+    "The four proposed centers retain prior axial stations; actual anatomical joint station and moving skin/art review remain unaccepted.",
+    "No new native heat field, FULL/FOUR motion test, inverse-bind export or runtime driver has been built by this proposal.",
+    "Current source fit is unexecuted after hand correction; prior fit01 remains rejected and its evidence preserved.",
+    "Only the parent judges actual played full-outfit Garage/game evidence."
+  ]
+}
