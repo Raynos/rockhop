@@ -787,3 +787,24 @@ file was written before the assertion. No native author or retry.
 Limits: Crossings/aliases/four-slot results remain unmeasured. This is an
 implementation assertion failure, not a measured deformation failure.
 Next corrected array45must include ordinary coldboot/clear/crash/restart.
+
+
+## First fixed shoulder partition clears its recorded witness pairs
+
+Finding: The same harmonic construction now runs to completion and freezes
+its first candidate. All96known reach/raised/asymmetric crossing pairs
+clear in both FULL/FOUR predictions. Preserve this candidate for one native
+author; require whole contacts and moving judgment before accepting it.
+
+Validation: Array45exits0 in5.985s with stderr empty; combined ordinary
+gate guard exits0 in17.502s. Parent independently checks exact geometry,
+raw mass/OTHER/54boundary rows per side, outside438raw/predicted changes0,
+maximumFOURslots4, aliasgroups/conflicts0,330changed vertices, ten finite
+saved predictions. Baseline/manual native maximum0.463micrometres;
+known pairs remaining0, area minima0.07193ofrest. Game low/high clear
+4810ticks, same finish/replay bytes, restart1/1ms, errors0.
+
+Limits: Maximum13.834cmfield-driven displacement needs played review.
+Truncated96pairs do not exclude novel contacts/folds; actual native not
+yet authored. Inherited underwear/hip and head-normal faults remain.
+No F/M gate acceptance. Execution45; next ordinary game gate48.
