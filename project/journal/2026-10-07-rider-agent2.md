@@ -197,3 +197,9 @@ Finding: The real selected boot appearance is fitted to each anatomical foot usi
 Validation: Parent verifies exact recipe/native hashes and source preservation receipts. Two 10k-triangle boots have normalized FOUR residual below 2.981e-8; source-corner projection below 2.844e-6 units. Unchanged wearer/rest checks pass; guarded build completed in 1.774 seconds after caching correction.
 
 Limits: Source/fitting checkpoint only; actual foot-volume coverage and moving sole/art remain open. Glove enclosure is a separate production reconstruction, not a proxy substitute.
+
+Finding: Actual selected hoodie and denim retain source geometry/material detail while fitting to the complete75 anatomy. Parent source review catches omitted twist-chain roles, split-bone endpoint assumptions and repeated compressed UV reads before execution.
+
+Validation: Corrected helper compiles; all20 dense/maps/prototype source pins rehash exact. Hoodie polygon cycles and loopUV are preserved by construction; jeans records dense source-corner ancestry. Actual native execution has not yet occurred in this checkpoint.
+
+Limits: Intended final source fitting only; first native, texture seam, body-volume clearance and played engine art review remain open. No substitute garments or body masking.
