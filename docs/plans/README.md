@@ -1002,3 +1002,5 @@ Pause preservation retains eight source/trial NPZ archives and dormant shoulder 
 Pause preservation retains historical body02/body05 diagnosis and UniMate pilot traces separately from current native49/capture50.
 
 October7 successor agent #2 (ask312) begins five-day audit from native49/capture50 and the handoff. No new experiment or acceptance; independent history and rig intake reviewers use new audit leaves. Predecessor pause artifacts and foreign index/worktree changes remain owned separately.
+
+Pause preservation retains344existing body05 grounded-front PBR source frames,122851985bytes; film and PNG headers/pins match. Current candidate remains unaccepted.

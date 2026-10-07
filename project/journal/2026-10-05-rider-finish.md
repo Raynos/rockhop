@@ -917,3 +917,11 @@ Finding: Pause preservation retains historical body02/body05 diagnosis and UniMa
 Validation: Existing diagnostic JSON parses and eight source receipts/traces are rehashed; no new model, export, native or gameplay execution.
 
 Limits: Historical controls are unaccepted; no current engine, normal, animation or garment pass.
+
+## October7: pause preservation frames
+
+Finding: Pause preservation retains344existing body05 grounded-front PBR source frames,122851985bytes; film and PNG headers/pins match. Current candidate remains unaccepted.
+
+Validation: All344 sequential PNGs have the recorded dimensions; movie hash and344decoded-frame receipt match. No render or new art judgment.
+
+Limits: Source-frame preservation accepts no appearance, support or new rider candidate.
