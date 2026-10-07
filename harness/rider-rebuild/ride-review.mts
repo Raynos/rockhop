@@ -38,13 +38,16 @@ try {
     const sample = await page.evaluate(({ input, yaw }) => {
       const t = (window as any).__rockhop, r = (window as any).__render, d = r.debug;
       for (const frame of input) { t.setInput(frame); t.step(1); }
-      t.render(true);
+      // Alpha zero first renders the previous sampled state; settle the same
+      // unchanged state before measuring a camera target from actual bones.
+      t.render(true); t.render(true);
       const candidate = d.rider.debug.candidate, pelvisName = candidate.jointNames[candidate.roles.pelvis];
       const pelvis = d.rider.scene.getObjectByName(pelvisName); if (!pelvis) throw new Error('Missing declared pelvis');
       const p = pelvis.getWorldPosition(new d.THREE.Vector3());
       r.setCameraOverride({ mode: 'orbit', x: p.x, y: p.y + .22, yaw, pitch: .08, dist: 6.0, screenX: .5, screenY: .5 });
       t.render(true);
-      return { tick: t.getState().tick, input: input.at(-1), state: structuredClone(t.getState()), debug: structuredClone(d.rider.debug), hash: t.hashState() };
+      const screen = pelvis.getWorldPosition(new d.THREE.Vector3()).project(d.rig.camera);
+      return { cameraAim: p.toArray(), pelvisScreen: screen.toArray(), camera: d.rig.debug(), tick: t.getState().tick, input: input.at(-1), state: structuredClone(t.getState()), debug: structuredClone(d.rider.debug), hash: t.hashState() };
     }, { input: inputs.slice(i * stride, (i + 1) * stride), yaw });
     report.samples.push(sample);
     await page.screenshot({ path: path.join(out, 'frames', `${String(i).padStart(4, '0')}.png`) });
