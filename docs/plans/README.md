@@ -1161,3 +1161,5 @@ October 7 actual-boot corrective source uses anatomical toe-out, explicit source
 October 7 corrected boot launch failed inline wrapper syntax before fitting. A compiled standalone evidence wrapper replaces the quoting-sensitive launch; original fit source is unchanged and no candidate was produced.
 
 **Touch system-edge mitigation (ask331):** The gameplay layer and drawn keys now clear the bottom safe area plus 20 CSS pixels. [Evidence](../evidence/touch-system-edge-2026-10-07/README.md) retains 24 headless Chromium/WebKit layout/input cases and 64 passing actual-game touch checks. Physical rapid-tap/hold Siri avoidance remains HR-26; this change makes no release/device acceptance claim.
+
+October 7 actual boot fit04 rejected before native save: source cavity faces and a tiny decorative top cut were misclassified, leaving severe strain and triangle penetration. Raw-source winding witnesses indicate an existing wearable shaft cavity; preserve and classify its real outer/rim/inner geometry before the next fit. No limits relaxed or assets promoted.
