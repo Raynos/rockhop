@@ -1127,3 +1127,5 @@ October 7 the original two-hour complete-review target is missed, not fulfilled 
 October 7 actual-glove chart preparation preserves all selected exterior faces and material ancestry, 427 mixed digit/palm triangles and cuff detail. Independent parent readback passes exact native hand fields and complete chart reconstruction; fitting and played acceptance remain open.
 
 October 7 complete selected-rider assembly source requires all seven actual objects and a verified real-glove source before export. Cut head vertices have honest derived identities, and the measured final FOUR protocol makes native/export coefficients identical; no complete garment or moving-art pass is claimed.
+
+October 7 corrected selected-head native readback passes protected face identities and honest derived cut IDs, with unchanged source geometry/UV/normals and a single closed neck join. Whole-outfit moving profile judgment remains open.
