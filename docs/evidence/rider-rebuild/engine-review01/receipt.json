@@ -1,0 +1,471 @@
+{
+  "accepted": false,
+  "sourceSHA256": "58677cc37aff6b22bb98144762eb5a93dfe689ac207ea0b74a214ba60538f6fc",
+  "inputs": {
+    "releaseBuild": false,
+    "source": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/combined04/rider.glb",
+    "contract": "/Users/raynos/projects/games/rockhop/harness/out/rider-rebuild/construction01/combined04/rider-contract.json",
+    "sourceSHA256": "58677cc37aff6b22bb98144762eb5a93dfe689ac207ea0b74a214ba60538f6fc",
+    "metadataSHA256": "32d67e9031bd6865a561ba29dc6d2765ace49ad13bfb08bd61df07df85440ee4",
+    "actualBuildRecipe": {
+      "path": "/Users/raynos/projects/games/rockhop/harness/hero-remaster/build.mts",
+      "sha256": "b315585c4c4c5c33483554aad100b6d7d930308b56ffc15cf87b0900032bb593"
+    },
+    "runtimeMetadataSHA256": "4305d42072fd29e2c8811c927186c82bdfab86f25a83dff6f0e682d564be6729",
+    "poseCalibration": {
+      "path": "/Users/raynos/projects/games/rockhop/docs/evidence/rider-rebuild/runtime02/combined04-pose-calibration.json",
+      "sha256": "9844047cb844fcf36c2056fb61b6cd500c397a682fdebac4f8c50ec8a76474fe",
+      "driver": {
+        "palmForwardBike": [
+          0.7071067811865476,
+          -0.7071067811865476,
+          0
+        ],
+        "palmNormalBike": [
+          -0.7071067811865476,
+          -0.7071067811865476,
+          0
+        ],
+        "maxSpineFlexRadians": 0.17453292519943295,
+        "spineFlexTable": [
+          [
+            -1,
+            -0.17453292519943295
+          ],
+          [
+            -0.95,
+            -0.17453292519943295
+          ],
+          [
+            -0.9,
+            -0.13962634015954636
+          ],
+          [
+            -0.85,
+            -0.12217304763960307
+          ],
+          [
+            -0.8,
+            -0.06981317007977318
+          ],
+          [
+            -0.75,
+            -0.03490658503988659
+          ],
+          [
+            -0.7,
+            0
+          ],
+          [
+            -0.65,
+            0
+          ],
+          [
+            -0.6,
+            0
+          ],
+          [
+            -0.55,
+            0
+          ],
+          [
+            -0.5,
+            0
+          ],
+          [
+            -0.44999999999999996,
+            0
+          ],
+          [
+            -0.4,
+            0
+          ],
+          [
+            -0.35,
+            0
+          ],
+          [
+            -0.30000000000000004,
+            0
+          ],
+          [
+            -0.25,
+            0
+          ],
+          [
+            -0.19999999999999996,
+            0
+          ],
+          [
+            -0.15000000000000002,
+            0
+          ],
+          [
+            -0.09999999999999998,
+            0
+          ],
+          [
+            -0.050000000000000044,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0.050000000000000044,
+            0
+          ],
+          [
+            0.10000000000000009,
+            0
+          ],
+          [
+            0.1499999999999999,
+            0
+          ],
+          [
+            0.19999999999999996,
+            0
+          ],
+          [
+            0.25,
+            0
+          ],
+          [
+            0.30000000000000004,
+            0
+          ],
+          [
+            0.3500000000000001,
+            0
+          ],
+          [
+            0.3999999999999999,
+            0
+          ],
+          [
+            0.44999999999999996,
+            -0.03490658503988659
+          ],
+          [
+            0.5,
+            -0.10471975511965977
+          ],
+          [
+            0.55,
+            -0.10471975511965977
+          ],
+          [
+            0.6000000000000001,
+            -0.08726646259971647
+          ],
+          [
+            0.6499999999999999,
+            -0.08726646259971647
+          ],
+          [
+            0.7,
+            -0.06981317007977318
+          ],
+          [
+            0.75,
+            -0.05235987755982988
+          ],
+          [
+            0.8,
+            -0.05235987755982988
+          ],
+          [
+            0.8500000000000001,
+            -0.03490658503988659
+          ],
+          [
+            0.8999999999999999,
+            -0.017453292519943295
+          ],
+          [
+            0.95,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    "adapter": [
+      {
+        "path": "/Users/raynos/projects/games/rockhop/harness/rider-rebuild/private-rider.mjs",
+        "sha256": "07502f63838847fd8f916d5dd7aa84af1f627ed237e2d34f555257c0b038fc5d"
+      },
+      {
+        "path": "/Users/raynos/projects/games/rockhop/harness/rider-rebuild/private-engine-plugin.mjs",
+        "sha256": "47d417195753db65d16b40fe8641fcd8c67be603407912a608c85041ed833947"
+      },
+      {
+        "path": "/Users/raynos/projects/games/rockhop/harness/rider-rebuild/new-humanoid-contract.mjs",
+        "sha256": "db73c6489f4cac9041f5d8e8ba6f110a8dbec437762f936e5cbadbfdd8ef43a8"
+      },
+      {
+        "path": "/Users/raynos/projects/games/rockhop/harness/rider-rebuild/anthropometric-inverse.mjs",
+        "sha256": "363ca2a174d8e906a90fcfb52d2c85f19d5ef0bb70793379934faa178dd172df"
+      }
+    ],
+    "modelSlots": [
+      "models/rider-race-bluewhite-lod.glb",
+      "models/rider-race-bluewhite.glb",
+      "models/rider-race-charcoalyellow-lod.glb",
+      "models/rider-race-charcoalyellow.glb",
+      "models/rider-street-charcoal-lod.glb",
+      "models/rider-street-charcoal.glb",
+      "models/rider-street-mustard-lod.glb",
+      "models/rider-street-mustard.glb",
+      "models/rider-street-openface-lod.glb",
+      "models/rider-street-openface.glb"
+    ]
+  },
+  "garage": {
+    "errors": [],
+    "snapshots": [
+      {
+        "name": "garage-front",
+        "stageTime": 1.8669999999999982,
+        "stageClip": "measured riding IK + breathing"
+      },
+      {
+        "name": "garage-orbit-1",
+        "stageTime": 3.8519999999999968,
+        "stageClip": "measured riding IK + breathing"
+      },
+      {
+        "name": "garage-orbit-2",
+        "stageTime": 5.817000000000003,
+        "stageClip": "measured riding IK + breathing"
+      },
+      {
+        "name": "garage-orbit-3",
+        "stageTime": 7.7820000000000045,
+        "stageClip": "measured riding IK + breathing"
+      },
+      {
+        "name": "garage-orbit-4",
+        "stageTime": 9.749999999999996,
+        "stageClip": "measured riding IK + breathing"
+      }
+    ]
+  },
+  "ride": {
+    "errors": [],
+    "samples": 192,
+    "actualHandGapMaxM": 0.04468670533729686,
+    "actualSoleGapMaxM": 0.001065332796077422,
+    "actualCOMResidualMaxM": 8.882532251027318e-07,
+    "stateHashes": [
+      "ce362fdeb64f3945",
+      "1a43106bca65f5a4",
+      "bfe356d086aeafd0",
+      "f32c9ed779cf22a7",
+      "9d81988592164d09",
+      "7131f6c0dd4d005e",
+      "15fef5f36b7ab72d",
+      "43125afed0339c20",
+      "99f07fdfad12376e",
+      "25ad4d5647420ae6",
+      "1503f486cd941887",
+      "94fe3cd603bebbcb",
+      "67c0750203ddf343",
+      "fd1bb5101c398bc2",
+      "ca9dba660e9077c0",
+      "10748a5ab9d0e4d1",
+      "49a8edf71e653971",
+      "aba8405405192dcb",
+      "857cb992f1050633",
+      "892c9a1ba2967c05",
+      "ad9ba5611c2cfdcd",
+      "38262ec735a9f7aa",
+      "8e5580589580d092",
+      "d2288eaad5a1953e",
+      "a5aadb679b9766b2",
+      "b9d402a2903cb10e",
+      "91e96350b55ae493",
+      "fcae21e3261218c3",
+      "53055c3af289ffc2",
+      "55f7d2e8bdb109c9",
+      "f8da93eb8b89447c",
+      "8ef8274f8de684a7",
+      "f85c68e967bd3d67",
+      "5511a74592a85ded",
+      "1e9bc5d6c8dcf7c6",
+      "795aabeef1c45e56",
+      "40d3500a9a710e0f",
+      "8e054410f926e3bb",
+      "213e808dcc7c30d3",
+      "79e571319f01b886",
+      "b0f3bc3b7ae0f519",
+      "708ef8f8e3682057",
+      "661c55dc454b4839",
+      "224bc7359f071e42",
+      "91379debad3a6b8e",
+      "e83fb4ba06a5be3e",
+      "ed367ff31c9750e4",
+      "b68d033db86cc45d",
+      "d9238440a9a08cdc",
+      "b1de2338ab2609e2",
+      "49f29f43773cacc1",
+      "e2eae15a6070ebac",
+      "668b3ba340903e37",
+      "aacc7bd0faff4452",
+      "dd75a6bee14f70df",
+      "7f998f95c4a3a786",
+      "e35f887523e2b830",
+      "e6a992838cd6c33c",
+      "f649acfeaf59b121",
+      "9ef81945cbcfcc04",
+      "ba4e5980ae32bcb2",
+      "14d037033a1169b2",
+      "af21a0a60d4a605b",
+      "ad0e67fc2a19a133",
+      "d229358106a5f2e9",
+      "28f49f0242c8c5ab",
+      "d83a86574429bcca",
+      "436bfbf7a2920980",
+      "14f4a5efc27ecfc4",
+      "a09e4cd395a6ad8b",
+      "f9ad5ae876f27c68",
+      "45d3b2a2f4ee917f",
+      "13069406874c58bd",
+      "15a485f5547c6f0d",
+      "72428cfc968fbda6",
+      "0c6803d0c7d3b247",
+      "4d8a1c2c29a5e0ae",
+      "2e218c9cbdd79804",
+      "b4729eb90780fd81",
+      "05a64cd1f145253b",
+      "9fca824ae941d1ce",
+      "0fee261cf863fcc9",
+      "e1222949f318ac97",
+      "f672388fbe0a92e5",
+      "0f4fb51d49fe44d5",
+      "add25657695b5476",
+      "dd882f082a3a7d86",
+      "08b9f332a34af514",
+      "603badff340febc5",
+      "3adf2a82aa431d61",
+      "fb8cc25ca6c1f055",
+      "935e61f06c0fd910",
+      "5176d47d5f24b724",
+      "09f0abb1c8893e6a",
+      "3b8a01ec61f7dec2",
+      "7459ce830a7a2a12",
+      "e4fa7cb48ecd257c",
+      "3f4727806ad66b57",
+      "90b86dbc7b727dcb",
+      "00997cee02f7c49d",
+      "2b4749b0d99e7e4b",
+      "b93682577349752b",
+      "91c13d0cfe37b24d",
+      "16877ca4e168746f",
+      "e16221b4f3ca78ad",
+      "91442ec3d523d35f",
+      "0e7b27e4272f5948",
+      "6c9db7b06ea78b5b",
+      "2390eadc4113aee2",
+      "cad74ff7f1b3d89d",
+      "6c8e31d03d9b1b76",
+      "3ebab34924607696",
+      "5be8a67359d8efe2",
+      "5537824807b50a80",
+      "acc7adc56ff53b2e",
+      "3f7972783a08e13b",
+      "c9db3e94d36169c4",
+      "4729111dcc5fc2c8",
+      "fc19f43962113749",
+      "a4f484e696aab256",
+      "72ce31bc05d74d70",
+      "9c93855bb00fa514",
+      "059269d5544d5c45",
+      "36aa3418ea10e6cf",
+      "46ecaade43507b9c",
+      "2cf686170854c8e6",
+      "5d4d2b70d0a70fc2",
+      "0258fb4ce696228c",
+      "2c07329d28043785",
+      "48a0f29f4e50c973",
+      "81b7b66b11557b50",
+      "4425da4d70a7d161",
+      "673d71670de3261a",
+      "e35a9a0023ecf940",
+      "715855d836bb5942",
+      "8907b23897a34ad3",
+      "9d28e1651a60e81b",
+      "aabebcec04490590",
+      "cbc68996b6f34b78",
+      "4e97b33e1bbcae89",
+      "86ca629c607f67dd",
+      "6461193e2999b5a4",
+      "f31ed9f53cfb545d",
+      "022a2a567375fb3f",
+      "5a0c30f416c8bccc",
+      "011e88ef3487f3a6",
+      "708875866db69560",
+      "577b761b143a7910",
+      "f6ac9933fc5b3f16",
+      "d7d98ba1ce915f7d",
+      "59941da84f0a3f5b",
+      "e81029810f56780c",
+      "3ebaeb0ff9c073c0",
+      "78a117d24f3f62fa",
+      "f9dd50f1269f90ff",
+      "c4ea9c4c5c37e2b9",
+      "7725d6f091e2db3f",
+      "6f2f505d235d8f58",
+      "b2c8c27a5162e471",
+      "7d821f1aca35450f",
+      "34a69da92284ab45",
+      "a1c74766035a289e",
+      "4db5d7793970d7b6",
+      "e880a80301406ca2",
+      "2d29cce396964f2e",
+      "31048e1af01a3d70",
+      "a4ab20e068654c6a",
+      "417b407775c03446",
+      "76e2d1f37774710b",
+      "866a855c38425efd",
+      "186e326983b4b518",
+      "85111112ecd6b573",
+      "a44b80602d049ab5",
+      "cc0bde233ff8efdf",
+      "3cc134f56a34bd54",
+      "0aa87013ceb623d3",
+      "1eca2aeca512f95a",
+      "823de3f112843669",
+      "8169b9194bc81bdc",
+      "797f95522d139935",
+      "32fbd0d74a9362bf",
+      "e0c808a4ed65475e",
+      "de2fb29885226981",
+      "7f1174e875b9915e",
+      "20e6cc603f3690f6",
+      "fdb87435e7e15ef1",
+      "863e17c9f3ca8c61",
+      "c2c19e17b261b903",
+      "623c7d3791790f7a",
+      "43a3cd6bd7da42fd",
+      "3b5ac72d42720b42",
+      "d78887b0eb2ebe71"
+    ]
+  },
+  "mediaSHA256": {
+    "garage-front.png": "f6a3aa3e096f6b85e059ebb9f9310e7497349db6387ce80b8759d477bba9802e",
+    "garage-orbit-3.png": "2696bdc6eaddec02d904c0a2531a4a4c54331aaa27db65f0a804c541c93f2b21",
+    "ride-played.mp4": "816ec39215919587ec515e4ba9292917bdeb95c682a0cfe1454f0b66af5e8523",
+    "garage-orbit-4.png": "cf06c67a940c162e27f4964cd7833ecd82c247ecb6cfaf0e10c615d907abca12",
+    "garage-played.mp4": "a9bbb22fc6ff7759041f3dc5f5e089b8022311deba133a4031d79fd0018cc25c"
+  },
+  "harnessSHA256": {
+    "harness/rider-rebuild/garage-review.mjs": "dd7aa8c140ced1f02317d192f3c809d5913f47972d5fe05cd7cd66b3f525e9f9",
+    "harness/rider-rebuild/ride-review.mts": "85b00e4f5cb1c0c9fee4a3c94b0ae21a88c1a7319d35919c5f6b260c17e1f2d2"
+  }
+}

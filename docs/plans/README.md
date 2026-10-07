@@ -1075,3 +1075,5 @@ October7 [independentfrozen04 audit](../evidence/rider-rebuild/construction02/RE
 October7 [actual-engine03 candidate](../evidence/rider-rebuild/runtime02/ENGINE03.md) usesexact04 anatomy,45degreepalm and≤10degree upperspine withactualCOM/carrier preserved.11CPUtests andunchangedJS/inlinebudgets pass; steadysocketcenters≤4.4032mm. Dynamicrealgame/glovebar surfaces/wholeclothedart stillunaccepted.
 
 October 7 [actual ride contact failure](../evidence/rider-rebuild/runtime02/PLAYED_STATE_FINDING.md): the nominal lean table leaves a 44.6867 mm hand-center gap under force-displaced COM. All 192 CPU states match engine03; preserve physics/anatomy and replace the input-only table with measured contact feedback. Unaccepted checkpoint.
+
+October 7 [first corrected dressed engine review](../evidence/rider-rebuild/engine-review01/README.md): parent played actual Garage and 16-second game films to natural end. Continuous head, corrected eyes and all garments remain assembled. Low/high clear/crash/restart preserve finish bytes; loose hoodie, cuff shape and dynamic hand contact remain unaccepted. Local private preview is live.

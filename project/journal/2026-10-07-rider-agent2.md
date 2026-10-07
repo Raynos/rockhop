@@ -155,3 +155,9 @@ Finding: Actual played physics displaces the rider beyond the nominal lean table
 Validation: All 192 recorded states are finite. Independent CPU reconstruction matches actual engine03 socket errors within 2.178e-13 m and preserves every state hash; COM residual stays below 0.889 micrometers, sole gaps below 1.066 mm.
 
 Limits: This is an unaccepted failure checkpoint before a contact-driven spine repair. Glove surfaces, moving art and device acceptance remain open.
+
+Finding: The complete corrected rider is visible in the actual Garage and recorded game. Head/eyes and all garments remain together; played motion exposes muscular cloth shape, cuff flare and dynamic hand gaps before acceptance.
+
+Validation: Parent plays both films to natural end and inspects eight temporal sheets. Exact source04 SHA loads without errors; 192 finite hierarchies. Low/high clear at tick 4810 with identical state hash and finish bytes; crash 103 ticks, restart tick 0 in 4 ms.
+
+Limits: Engine integration only; fine glove surfaces, all-pose cloth, physical phone and stranger acceptance remain open. Camera crops the bike front intermittently; no full art approval.
