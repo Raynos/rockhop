@@ -1,0 +1,53 @@
+{
+  "accepted": false,
+  "lock": "/Users/raynos/projects/localai/.model.lock",
+  "method": "lockf -k",
+  "command": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "assets/blender/rider-rebuild/construction01/build-rig.py",
+    "--",
+    "harness/out/rider-rebuild/sources/human-base-meshes-v1.4.1/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend",
+    "harness/out/rider-rebuild/construction01/rig03"
+  ],
+  "controllerPID": 60619,
+  "pollSeconds": 1,
+  "startAnonymousBelowGiB": 55,
+  "stopAnonymousGiB": 65,
+  "stopAnonymousPlusWiredGiB": 96,
+  "limitSeconds": 600.0,
+  "guardSHA256": "cf8acd15d8b7484480bee74d23892be815d955ffd87115d3da8ed228ffb3d916",
+  "status": "worker returned; review pending",
+  "samples": [
+    {
+      "seconds": 0,
+      "anonymousGiB": 39.0,
+      "wiredGiB": 9.1,
+      "freeGiB": 17.8
+    },
+    {
+      "seconds": 0.036,
+      "anonymousGiB": 38.9,
+      "wiredGiB": 9.2,
+      "freeGiB": 17.8
+    },
+    {
+      "seconds": 1.081,
+      "anonymousGiB": 39.0,
+      "wiredGiB": 9.4,
+      "freeGiB": 17.5
+    }
+  ],
+  "physicalMemoryBytes": 137438953472,
+  "requiredPhysicalMemoryBytes": 137438953472,
+  "scope": "Future explicitly invoked owned Rockhop job only",
+  "pressureOrSwapLimits": "No separate pressure/swap gate exists in the pinned original guard; none altered",
+  "ownedChildPID": 60627,
+  "exitCode": 0,
+  "elapsedSeconds": 1.876
+}

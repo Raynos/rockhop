@@ -65,3 +65,9 @@ Finding: User prioritizes a sound whole dressed rider in the actual engine Garag
 Validation: Deadline and ownership sent to all three live teammates, with exact selected source paths and explicit baseline/export/private-review limits. Existing headless silent harness retained; no new candidate has yet been rendered or accepted.
 
 Limits: Two-hour delivery target, not an art/deformation acceptance claim; final detail/device/release gates remain open.
+
+Finding: One coherent new wearer now has a conventional full-finger rig and explicit normalized FOUR body field. This stable native checkpoint is preserved before whole-outfit assembly; original player assets stay intact.
+
+Validation: Parent verifies10582 normalized max4 rows, all30digit fields nonzero, native/source/report pins and source syntax; guarded rig03 succeeds after retained import/preliminary-fit controls.65metabones/71DEF/404authoringbones, allDEF B-Bone1. Raw FULL removal max.258798, relative max.264080 reported without waiver.
+
+Limits: Provisional joints/first skin field; no moving FULL/FOUR loss, clothed art, exact engine, grip, phone or product acceptance.
