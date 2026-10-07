@@ -1,0 +1,1705 @@
+{
+  "accepted": false,
+  "findingComplete": true,
+  "check": "direct static GLB, embedded PNG and source construction readback",
+  "source": "harness/out/rider-rebuild/construction01/combined01/rider.glb",
+  "glbSHA256": "cf2000c7568da94acbed2ae9883f8ecc5645d480b5e1740fd7be112eadb3c719",
+  "glbBytes": 7329940,
+  "skinCount": 1,
+  "sharedJointCount": 75,
+  "jointNames": [
+    "DEF-spine",
+    "DEF-pelvis.L",
+    "DEF-pelvis.R",
+    "DEF-spine.001",
+    "DEF-spine.002",
+    "DEF-spine.003",
+    "DEF-shoulder.L",
+    "DEF-upper_arm.L",
+    "DEF-upper_arm.L.001",
+    "DEF-forearm.L",
+    "DEF-forearm.L.001",
+    "DEF-hand.L",
+    "DEF-palm.01.L",
+    "DEF-f_index.01.L",
+    "DEF-f_index.02.L",
+    "DEF-f_index.03.L",
+    "DEF-palm.02.L",
+    "DEF-f_middle.01.L",
+    "DEF-f_middle.02.L",
+    "DEF-f_middle.03.L",
+    "DEF-palm.03.L",
+    "DEF-f_ring.01.L",
+    "DEF-f_ring.02.L",
+    "DEF-f_ring.03.L",
+    "DEF-palm.04.L",
+    "DEF-f_pinky.01.L",
+    "DEF-f_pinky.02.L",
+    "DEF-f_pinky.03.L",
+    "DEF-thumb.01.L",
+    "DEF-thumb.02.L",
+    "DEF-thumb.03.L",
+    "PalmSocket.L",
+    "DEF-shoulder.R",
+    "DEF-upper_arm.R",
+    "DEF-upper_arm.R.001",
+    "DEF-forearm.R",
+    "DEF-forearm.R.001",
+    "DEF-hand.R",
+    "DEF-palm.01.R",
+    "DEF-f_index.01.R",
+    "DEF-f_index.02.R",
+    "DEF-f_index.03.R",
+    "DEF-palm.02.R",
+    "DEF-f_middle.01.R",
+    "DEF-f_middle.02.R",
+    "DEF-f_middle.03.R",
+    "DEF-palm.03.R",
+    "DEF-f_ring.01.R",
+    "DEF-f_ring.02.R",
+    "DEF-f_ring.03.R",
+    "DEF-palm.04.R",
+    "DEF-f_pinky.01.R",
+    "DEF-f_pinky.02.R",
+    "DEF-f_pinky.03.R",
+    "DEF-thumb.01.R",
+    "DEF-thumb.02.R",
+    "DEF-thumb.03.R",
+    "PalmSocket.R",
+    "DEF-spine.004",
+    "DEF-spine.005",
+    "DEF-spine.006",
+    "DEF-thigh.L",
+    "DEF-thigh.L.001",
+    "DEF-shin.L",
+    "DEF-shin.L.001",
+    "DEF-foot.L",
+    "DEF-toe.L",
+    "SoleSocket.L",
+    "DEF-thigh.R",
+    "DEF-thigh.R.001",
+    "DEF-shin.R",
+    "DEF-shin.R.001",
+    "DEF-foot.R",
+    "DEF-toe.R",
+    "SoleSocket.R"
+  ],
+  "allMeshNodesSkin0": true,
+  "allOnlyFourSlots": true,
+  "maxWeightSumError": 1.341104507446289e-07,
+  "meshNodeCount": 20,
+  "primitiveCount": 26,
+  "materialCount": 10,
+  "triangleCount": 39032,
+  "splitVertexCount": 24092,
+  "images": [
+    {
+      "name": "RiderBlackLeather-basecolor",
+      "mimeType": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "52e662f0b2f408e1a02bf584b1ae5525d49011baea470af7a94919342c3dc5cb",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        6.2777,
+        7.0606,
+        8.3803,
+        255.0
+      ],
+      "minRGBA255": [
+        5,
+        6,
+        7,
+        255
+      ],
+      "maxRGBA255": [
+        7,
+        8,
+        10,
+        255
+      ],
+      "embeddedBytes": 648461
+    },
+    {
+      "name": "RiderBlackLeather-metallicroughness",
+      "mimeType": "image/png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "sha256": "8fdf17debc0e9cad6e61336ab605a998144c2e92e05b9f7272b627828963fa83",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        255.0,
+        135.1409,
+        0.0,
+        255.0
+      ],
+      "minRGBA255": [
+        255,
+        123,
+        0,
+        255
+      ],
+      "maxRGBA255": [
+        255,
+        147,
+        0,
+        255
+      ],
+      "embeddedBytes": 61297
+    },
+    {
+      "name": "RiderMustardFleece-basecolor",
+      "mimeType": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "d052f65518dfa048ec3570b73a2e29faaad0a5a564752345403e640aa9b34e09",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        178.5099,
+        109.6566,
+        14.0249,
+        255.0
+      ],
+      "minRGBA255": [
+        152,
+        93,
+        12,
+        255
+      ],
+      "maxRGBA255": [
+        207,
+        127,
+        16,
+        255
+      ],
+      "embeddedBytes": 1421890
+    },
+    {
+      "name": "RiderMustardFleece-metallicroughness",
+      "mimeType": "image/png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "sha256": "aade746213a41add5a12bf2bf67cc37b707fc569f8c8afa5d80d3886a46f95dd",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        255.0,
+        221.8427,
+        0.0,
+        255.0
+      ],
+      "minRGBA255": [
+        255,
+        210,
+        0,
+        255
+      ],
+      "maxRGBA255": [
+        255,
+        234,
+        0,
+        255
+      ],
+      "embeddedBytes": 61021
+    },
+    {
+      "name": "RiderMustardRib-basecolor",
+      "mimeType": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "af106d2408ab045e305112d3b2ca4a9d0f66719e4b9d3d9378282aa3fe30da7a",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        150.4539,
+        86.7025,
+        9.6666,
+        255.0
+      ],
+      "minRGBA255": [
+        123,
+        71,
+        8,
+        255
+      ],
+      "maxRGBA255": [
+        181,
+        104,
+        12,
+        255
+      ],
+      "embeddedBytes": 1380951
+    },
+    {
+      "name": "RiderMustardRib-metallicroughness",
+      "mimeType": "image/png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "sha256": "17b5293a7be085b67dfdc5c002895f6acbbf767a9b7b53a38fadb19e42bae619",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        255.0,
+        229.5031,
+        0.0,
+        255.0
+      ],
+      "minRGBA255": [
+        255,
+        218,
+        0,
+        255
+      ],
+      "maxRGBA255": [
+        255,
+        242,
+        0,
+        255
+      ],
+      "embeddedBytes": 60960
+    },
+    {
+      "name": "RiderIndigoDenim-basecolor",
+      "mimeType": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "30f37623adc68c9efdc2319741f09d8c5ce49662e0f5852dd77db1a6715dceb4",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        11.4765,
+        30.602,
+        62.479,
+        255.0
+      ],
+      "minRGBA255": [
+        9,
+        24,
+        50,
+        255
+      ],
+      "maxRGBA255": [
+        14,
+        37,
+        75,
+        255
+      ],
+      "embeddedBytes": 1322810
+    },
+    {
+      "name": "RiderIndigoDenim-metallicroughness",
+      "mimeType": "image/png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "sha256": "e7eb6aea5318409c9234f3267150e6915d47fd61dbe37c90719df7d3c1c3763f",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        255.0,
+        219.3029,
+        0.0,
+        255.0
+      ],
+      "minRGBA255": [
+        255,
+        207,
+        0,
+        255
+      ],
+      "maxRGBA255": [
+        255,
+        231,
+        0,
+        255
+      ],
+      "embeddedBytes": 60878
+    },
+    {
+      "name": "RiderBlackRubber-basecolor",
+      "mimeType": "image/png",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "133d59be4f040ca2d00b189d2ef8ca64163844a19bb08046a0ae78d270aa2406",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        8.965,
+        9.7566,
+        10.975,
+        255.0
+      ],
+      "minRGBA255": [
+        8,
+        8,
+        9,
+        255
+      ],
+      "maxRGBA255": [
+        10,
+        11,
+        12,
+        255
+      ],
+      "embeddedBytes": 673390
+    },
+    {
+      "name": "RiderBlackRubber-metallicroughness",
+      "mimeType": "image/png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGB",
+      "sha256": "395823188c6bd7b869f412a40bd8373fa609869fd8e8f8ed971589610b22f4ba",
+      "matchesSourcePNG": true,
+      "meanRGBA255": [
+        255.0,
+        234.6249,
+        0.0,
+        255.0
+      ],
+      "minRGBA255": [
+        255,
+        222,
+        0,
+        255
+      ],
+      "maxRGBA255": [
+        255,
+        246,
+        0,
+        255
+      ],
+      "embeddedBytes": 60893
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "EyeIvory",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        0.7200000286102295,
+        0.699999988079071,
+        0.6499999761581421,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.2800000011920929
+    },
+    {
+      "index": 1,
+      "name": "EyeBrown",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        0.054999999701976776,
+        0.03099999949336052,
+        0.01600000075995922,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.3400000035762787
+    },
+    {
+      "index": 2,
+      "name": "EyePupil",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        0.006000000052154064,
+        0.00800000037997961,
+        0.007000000216066837,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.20000000298023224
+    },
+    {
+      "index": 3,
+      "name": "RiderWarmSkin",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        0.47999998927116394,
+        0.2849999964237213,
+        0.1850000023841858,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.6200000047683716
+    },
+    {
+      "index": 4,
+      "name": "ShortDarkBrownHair",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        0.023000000044703484,
+        0.017000000923871994,
+        0.012000000104308128,
+        1
+      ],
+      "metallicFactor": 0,
+      "roughnessFactor": 0.949999988079071
+    },
+    {
+      "index": 5,
+      "name": "RiderBlackLeather",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 1,
+      "roughnessFactor": 1,
+      "baseColorTexture": "RiderBlackLeather-basecolor",
+      "metallicRoughnessTexture": "RiderBlackLeather-metallicroughness"
+    },
+    {
+      "index": 6,
+      "name": "RiderMustardFleece",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 1,
+      "roughnessFactor": 1,
+      "baseColorTexture": "RiderMustardFleece-basecolor",
+      "metallicRoughnessTexture": "RiderMustardFleece-metallicroughness"
+    },
+    {
+      "index": 7,
+      "name": "RiderMustardRib",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 1,
+      "roughnessFactor": 1,
+      "baseColorTexture": "RiderMustardRib-basecolor",
+      "metallicRoughnessTexture": "RiderMustardRib-metallicroughness"
+    },
+    {
+      "index": 8,
+      "name": "RiderIndigoDenim",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 1,
+      "roughnessFactor": 1,
+      "baseColorTexture": "RiderIndigoDenim-basecolor",
+      "metallicRoughnessTexture": "RiderIndigoDenim-metallicroughness"
+    },
+    {
+      "index": 9,
+      "name": "RiderBlackRubber",
+      "alphaMode": "OPAQUE",
+      "doubleSided": true,
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallicFactor": 1,
+      "roughnessFactor": 1,
+      "baseColorTexture": "RiderBlackRubber-basecolor",
+      "metallicRoughnessTexture": "RiderBlackRubber-metallicroughness"
+    }
+  ],
+  "materialPrimitiveCounts": {
+    "EyeIvory": 2,
+    "EyeBrown": 2,
+    "EyePupil": 2,
+    "RiderWarmSkin": 1,
+    "ShortDarkBrownHair": 1,
+    "RiderBlackLeather": 6,
+    "RiderMustardFleece": 3,
+    "RiderMustardRib": 4,
+    "RiderIndigoDenim": 2,
+    "RiderBlackRubber": 3
+  },
+  "primitives": [
+    {
+      "object": "GEO-body_male_realistic.eye.L",
+      "primitive": 0,
+      "material": "EyeIvory",
+      "vertices": 568,
+      "triangles": 1060,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.L",
+      "primitive": 1,
+      "material": "EyeBrown",
+      "vertices": 26,
+      "triangles": 20,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.L",
+      "primitive": 2,
+      "material": "EyePupil",
+      "vertices": 12,
+      "triangles": 8,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.R",
+      "primitive": 0,
+      "material": "EyeIvory",
+      "vertices": 568,
+      "triangles": 1060,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.R",
+      "primitive": 1,
+      "material": "EyeBrown",
+      "vertices": 26,
+      "triangles": 20,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.R",
+      "primitive": 2,
+      "material": "EyePupil",
+      "vertices": 12,
+      "triangles": 8,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderBody",
+      "primitive": 0,
+      "material": "RiderWarmSkin",
+      "vertices": 12010,
+      "triangles": 21160,
+      "skin": 0,
+      "maxWeightSumError": 1.341104507446289e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderBuzzcut",
+      "primitive": 0,
+      "material": "ShortDarkBrownHair",
+      "vertices": 484,
+      "triangles": 852,
+      "skin": 0,
+      "maxWeightSumError": 0.0,
+      "maxPositiveInfluences": 1,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderGloveCuff.L",
+      "primitive": 0,
+      "material": "RiderBlackLeather",
+      "vertices": 128,
+      "triangles": 256,
+      "skin": 0,
+      "maxWeightSumError": 6.332993507385254e-08,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderGloveCuff.R",
+      "primitive": 0,
+      "material": "RiderBlackLeather",
+      "vertices": 128,
+      "triangles": 256,
+      "skin": 0,
+      "maxWeightSumError": 7.450580596923828e-08,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderGloves",
+      "primitive": 0,
+      "material": "RiderBlackLeather",
+      "vertices": 1988,
+      "triangles": 3044,
+      "skin": 0,
+      "maxWeightSumError": 1.1920928955078125e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderHood",
+      "primitive": 0,
+      "material": "RiderMustardFleece",
+      "vertices": 1669,
+      "triangles": 1800,
+      "skin": 0,
+      "maxWeightSumError": 1.043081283569336e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderHoodie",
+      "primitive": 0,
+      "material": "RiderMustardFleece",
+      "vertices": 2165,
+      "triangles": 3640,
+      "skin": 0,
+      "maxWeightSumError": 1.341104507446289e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderHoodie",
+      "primitive": 1,
+      "material": "RiderMustardRib",
+      "vertices": 600,
+      "triangles": 300,
+      "skin": 0,
+      "maxWeightSumError": 1.1920928955078125e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderHoodieCuff.L",
+      "primitive": 0,
+      "material": "RiderMustardRib",
+      "vertices": 128,
+      "triangles": 256,
+      "skin": 0,
+      "maxWeightSumError": 5.029141902923584e-08,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderHoodieCuff.R",
+      "primitive": 0,
+      "material": "RiderMustardRib",
+      "vertices": 128,
+      "triangles": 256,
+      "skin": 0,
+      "maxWeightSumError": 8.940696716308594e-08,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderHoodieHem",
+      "primitive": 0,
+      "material": "RiderMustardRib",
+      "vertices": 256,
+      "triangles": 512,
+      "skin": 0,
+      "maxWeightSumError": 1.0058283805847168e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderJeans",
+      "primitive": 0,
+      "material": "RiderIndigoDenim",
+      "vertices": 1770,
+      "triangles": 2488,
+      "skin": 0,
+      "maxWeightSumError": 1.234002411365509e-07,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderJeansWaist",
+      "primitive": 0,
+      "material": "RiderIndigoDenim",
+      "vertices": 256,
+      "triangles": 512,
+      "skin": 0,
+      "maxWeightSumError": 9.12696123123169e-08,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderKangarooPocket",
+      "primitive": 0,
+      "material": "RiderMustardFleece",
+      "vertices": 7,
+      "triangles": 6,
+      "skin": 0,
+      "maxWeightSumError": 6.705522537231445e-08,
+      "maxPositiveInfluences": 4,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderShoeAnkles",
+      "primitive": 0,
+      "material": "RiderBlackLeather",
+      "vertices": 163,
+      "triangles": 214,
+      "skin": 0,
+      "maxWeightSumError": 2.9802322387695312e-08,
+      "maxPositiveInfluences": 2,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderShoeAnkles",
+      "primitive": 1,
+      "material": "RiderBlackRubber",
+      "vertices": 320,
+      "triangles": 160,
+      "skin": 0,
+      "maxWeightSumError": 2.9802322387695312e-08,
+      "maxPositiveInfluences": 2,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderShoeUpper.L",
+      "primitive": 0,
+      "material": "RiderBlackLeather",
+      "vertices": 196,
+      "triangles": 288,
+      "skin": 0,
+      "maxWeightSumError": 2.9802322387695312e-08,
+      "maxPositiveInfluences": 2,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderShoeUpper.R",
+      "primitive": 0,
+      "material": "RiderBlackLeather",
+      "vertices": 196,
+      "triangles": 288,
+      "skin": 0,
+      "maxWeightSumError": 2.9802322387695312e-08,
+      "maxPositiveInfluences": 2,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderSole.L",
+      "primitive": 0,
+      "material": "RiderBlackRubber",
+      "vertices": 144,
+      "triangles": 284,
+      "skin": 0,
+      "maxWeightSumError": 2.9802322387695312e-08,
+      "maxPositiveInfluences": 2,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    },
+    {
+      "object": "RiderSole.R",
+      "primitive": 0,
+      "material": "RiderBlackRubber",
+      "vertices": 144,
+      "triangles": 284,
+      "skin": 0,
+      "maxWeightSumError": 2.9802322387695312e-08,
+      "maxPositiveInfluences": 2,
+      "attributes": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0",
+        "JOINTS_0",
+        "WEIGHTS_0"
+      ]
+    }
+  ],
+  "restTopologyDiagnostics": [
+    {
+      "object": "GEO-body_male_realistic.eye.L",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -2.2789971828460693,
+          -0.008769121952354908,
+          -0.014668744057416916
+        ],
+        [
+          -2.249662160873413,
+          0.020441463217139244,
+          0.014695487916469574
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-spine.006"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.R",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -2.278937816619873,
+          -0.008772268891334534,
+          -0.014668744057416916
+        ],
+        [
+          -2.2495946884155273,
+          0.020464636385440826,
+          0.014695487916469574
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-spine.006"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderBody",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.4638965427875519,
+          0.0,
+          -0.11690763384103775
+        ],
+        [
+          0.46372708678245544,
+          1.7799999713897705,
+          0.18901626765727997
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-f_index.01.L",
+        "DEF-f_index.01.R",
+        "DEF-f_index.02.L",
+        "DEF-f_index.02.R",
+        "DEF-f_index.03.L",
+        "DEF-f_index.03.R",
+        "DEF-f_middle.01.L",
+        "DEF-f_middle.01.R",
+        "DEF-f_middle.02.L",
+        "DEF-f_middle.02.R",
+        "DEF-f_middle.03.L",
+        "DEF-f_middle.03.R",
+        "DEF-f_pinky.01.L",
+        "DEF-f_pinky.01.R",
+        "DEF-f_pinky.02.L",
+        "DEF-f_pinky.02.R",
+        "DEF-f_pinky.03.L",
+        "DEF-f_pinky.03.R",
+        "DEF-f_ring.01.L",
+        "DEF-f_ring.01.R",
+        "DEF-f_ring.02.L",
+        "DEF-f_ring.02.R",
+        "DEF-f_ring.03.L",
+        "DEF-f_ring.03.R",
+        "DEF-foot.L",
+        "DEF-foot.R",
+        "DEF-forearm.L",
+        "DEF-forearm.L.001",
+        "DEF-forearm.R",
+        "DEF-forearm.R.001",
+        "DEF-hand.L",
+        "DEF-hand.R",
+        "DEF-palm.01.L",
+        "DEF-palm.01.R",
+        "DEF-palm.02.L",
+        "DEF-palm.02.R",
+        "DEF-palm.03.L",
+        "DEF-palm.03.R",
+        "DEF-palm.04.L",
+        "DEF-palm.04.R",
+        "DEF-pelvis.L",
+        "DEF-pelvis.R",
+        "DEF-shin.L",
+        "DEF-shin.L.001",
+        "DEF-shin.R",
+        "DEF-shin.R.001",
+        "DEF-shoulder.L",
+        "DEF-shoulder.R",
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-spine.003",
+        "DEF-spine.004",
+        "DEF-spine.005",
+        "DEF-spine.006",
+        "DEF-thigh.L",
+        "DEF-thigh.L.001",
+        "DEF-thigh.R",
+        "DEF-thigh.R.001",
+        "DEF-thumb.01.L",
+        "DEF-thumb.01.R",
+        "DEF-thumb.02.L",
+        "DEF-thumb.02.R",
+        "DEF-thumb.03.L",
+        "DEF-thumb.03.R",
+        "DEF-toe.L",
+        "DEF-toe.R",
+        "DEF-upper_arm.L",
+        "DEF-upper_arm.L.001",
+        "DEF-upper_arm.R",
+        "DEF-upper_arm.R.001"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderBuzzcut",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 114,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.09777041524648666,
+          1.6151610612869263,
+          -0.06092172861099243
+        ],
+        [
+          0.09754270315170288,
+          1.781998634338379,
+          0.13831110298633575
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-spine.006"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderGloveCuff.L",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          0.3546484410762787,
+          0.9257175922393799,
+          0.033362213522195816
+        ],
+        [
+          0.42688438296318054,
+          0.9755512475967407,
+          0.09303124248981476
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-forearm.L.001",
+        "DEF-hand.L",
+        "DEF-palm.01.L",
+        "DEF-palm.02.L",
+        "DEF-palm.04.L",
+        "DEF-thumb.01.L"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderGloveCuff.R",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.42688438296318054,
+          0.9257175922393799,
+          0.033362213522195816
+        ],
+        [
+          -0.3546484410762787,
+          0.9755512475967407,
+          0.09303124248981476
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-forearm.R.001",
+        "DEF-hand.R",
+        "DEF-palm.01.R",
+        "DEF-palm.02.R",
+        "DEF-palm.04.R",
+        "DEF-thumb.01.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderGloves",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 2,
+      "boundaryEdges": 48,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.467511922121048,
+          0.7517797946929932,
+          0.01581265777349472
+        ],
+        [
+          0.46734362840652466,
+          0.9769092202186584,
+          0.1928076148033142
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-f_index.01.L",
+        "DEF-f_index.01.R",
+        "DEF-f_index.02.L",
+        "DEF-f_index.02.R",
+        "DEF-f_index.03.L",
+        "DEF-f_index.03.R",
+        "DEF-f_middle.01.L",
+        "DEF-f_middle.01.R",
+        "DEF-f_middle.02.L",
+        "DEF-f_middle.02.R",
+        "DEF-f_middle.03.L",
+        "DEF-f_middle.03.R",
+        "DEF-f_pinky.01.L",
+        "DEF-f_pinky.01.R",
+        "DEF-f_pinky.02.L",
+        "DEF-f_pinky.02.R",
+        "DEF-f_pinky.03.L",
+        "DEF-f_pinky.03.R",
+        "DEF-f_ring.01.L",
+        "DEF-f_ring.01.R",
+        "DEF-f_ring.02.L",
+        "DEF-f_ring.02.R",
+        "DEF-f_ring.03.L",
+        "DEF-f_ring.03.R",
+        "DEF-forearm.L",
+        "DEF-forearm.L.001",
+        "DEF-forearm.R",
+        "DEF-forearm.R.001",
+        "DEF-hand.L",
+        "DEF-hand.R",
+        "DEF-palm.01.L",
+        "DEF-palm.01.R",
+        "DEF-palm.02.L",
+        "DEF-palm.02.R",
+        "DEF-palm.03.L",
+        "DEF-palm.03.R",
+        "DEF-palm.04.L",
+        "DEF-palm.04.R",
+        "DEF-thumb.01.L",
+        "DEF-thumb.01.R",
+        "DEF-thumb.02.L",
+        "DEF-thumb.02.R",
+        "DEF-thumb.03.L",
+        "DEF-thumb.03.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderHood",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.15054453909397125,
+          1.3376299142837524,
+          -0.14429917931556702
+        ],
+        [
+          0.15054453909397125,
+          1.5467902421951294,
+          0.05973122641444206
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-shoulder.L",
+        "DEF-shoulder.R",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-spine.003",
+        "DEF-spine.004",
+        "DEF-spine.005",
+        "DEF-upper_arm.L",
+        "DEF-upper_arm.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderHoodie",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 150,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.43326473236083984,
+          0.9483950734138489,
+          -0.15669512748718262
+        ],
+        [
+          0.43370434641838074,
+          1.5145506858825684,
+          0.19187436997890472
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-forearm.L",
+        "DEF-forearm.L.001",
+        "DEF-forearm.R",
+        "DEF-forearm.R.001",
+        "DEF-hand.L",
+        "DEF-hand.R",
+        "DEF-pelvis.L",
+        "DEF-pelvis.R",
+        "DEF-shoulder.L",
+        "DEF-shoulder.R",
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-spine.003",
+        "DEF-spine.004",
+        "DEF-spine.005",
+        "DEF-spine.006",
+        "DEF-thigh.L",
+        "DEF-thigh.R",
+        "DEF-upper_arm.L",
+        "DEF-upper_arm.L.001",
+        "DEF-upper_arm.R",
+        "DEF-upper_arm.R.001"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderHoodieCuff.L",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          0.3378539979457855,
+          0.9337043166160583,
+          0.009558560326695442
+        ],
+        [
+          0.44214102625846863,
+          1.0118021965026855,
+          0.10638635605573654
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-forearm.L",
+        "DEF-forearm.L.001",
+        "DEF-hand.L",
+        "DEF-palm.01.L",
+        "DEF-palm.04.L",
+        "DEF-thumb.01.L"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderHoodieCuff.R",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.44214102625846863,
+          0.9337043166160583,
+          0.009558560326695442
+        ],
+        [
+          -0.3378539979457855,
+          1.0118021965026855,
+          0.10638635605573654
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-forearm.R",
+        "DEF-forearm.R.001",
+        "DEF-hand.R",
+        "DEF-palm.01.R",
+        "DEF-palm.04.R",
+        "DEF-thumb.01.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderHoodieHem",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.15904508531093597,
+          1.0437287092208862,
+          -0.09374180436134338
+        ],
+        [
+          0.15904508531093597,
+          1.0787287950515747,
+          0.1358729600906372
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-pelvis.L",
+        "DEF-pelvis.R",
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-thigh.L",
+        "DEF-thigh.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderJeans",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 76,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.2365446388721466,
+          0.14646922051906586,
+          -0.12988899648189545
+        ],
+        [
+          0.23653137683868408,
+          1.1053309440612793,
+          0.15726743638515472
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-foot.L",
+        "DEF-foot.R",
+        "DEF-pelvis.L",
+        "DEF-pelvis.R",
+        "DEF-shin.L",
+        "DEF-shin.L.001",
+        "DEF-shin.R",
+        "DEF-shin.R.001",
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-thigh.L",
+        "DEF-thigh.L.001",
+        "DEF-thigh.R",
+        "DEF-thigh.R.001"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderJeansWaist",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.14640574157238007,
+          1.0572614669799805,
+          -0.07688934355974197
+        ],
+        [
+          0.14640574157238007,
+          1.086261510848999,
+          0.1316598355770111
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-pelvis.L",
+        "DEF-pelvis.R",
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002",
+        "DEF-thigh.L",
+        "DEF-thigh.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderKangarooPocket",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 6,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.11796721816062927,
+          1.0991467237472534,
+          0.16314218938350677
+        ],
+        [
+          0.11796721816062927,
+          1.2034213542938232,
+          0.18860207498073578
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-pelvis.L",
+        "DEF-pelvis.R",
+        "DEF-spine",
+        "DEF-spine.001",
+        "DEF-spine.002"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderShoeAnkles",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 2,
+      "boundaryEdges": 80,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.22233065962791443,
+          0.12964919209480286,
+          -0.11260062456130981
+        ],
+        [
+          0.22203543782234192,
+          0.1739179641008377,
+          -0.010051606222987175
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-foot.L",
+        "DEF-foot.R",
+        "DEF-shin.L.001",
+        "DEF-shin.R.001"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderShoeUpper.L",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 96,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          0.13814811408519745,
+          0.045868001878261566,
+          -0.11906564235687256
+        ],
+        [
+          0.30547893047332764,
+          0.1743680089712143,
+          0.16088338196277618
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-foot.L",
+        "DEF-shin.L.001",
+        "DEF-toe.L"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderShoeUpper.R",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 96,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.30547893047332764,
+          0.045868001878261566,
+          -0.11906564235687256
+        ],
+        [
+          -0.13814811408519745,
+          0.1743680089712143,
+          0.16088338196277618
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-foot.R",
+        "DEF-shin.R.001",
+        "DEF-toe.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderSole.L",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          0.1349886655807495,
+          0.01216308306902647,
+          -0.11362889409065247
+        ],
+        [
+          0.3094949424266815,
+          0.05429423227906227,
+          0.16629283130168915
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-foot.L",
+        "DEF-shin.L.001",
+        "DEF-toe.L"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    },
+    {
+      "object": "RiderSole.R",
+      "positionWeldToleranceDecimalPlaces": 7,
+      "connectedComponents": 1,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0,
+      "positionBounds": [
+        [
+          -0.3094949424266815,
+          0.01216308306902647,
+          -0.11362889409065247
+        ],
+        [
+          -0.1349886655807495,
+          0.05429423227906227,
+          0.16629283130168915
+        ]
+      ],
+      "usedJointNames": [
+        "DEF-foot.R",
+        "DEF-shin.R.001",
+        "DEF-toe.R"
+      ],
+      "nodeParent": "RiderSkeleton",
+      "nodeLocalTransformFields": {}
+    }
+  ],
+  "sourceAttributeExported": false,
+  "mergeAssessment": {
+    "currentPossibleMaterialBatches": 10,
+    "sameSkin": true,
+    "allMeshLocalTransformsIdentity": true,
+    "minimumWithUnchangedPalettes": 10,
+    "coherentNextChange": "Merge primitives by material in common skeleton space; preserve UV seams, normals, joint/weight rows, and exact object lineage ranges. Hair needs a harmless unused UV attribute for a uniform merged schema. Three constant eye materials could become one small atlas to reach8 palettes."
+  },
+  "limits": [
+    "Static transport is not moving art, anatomy, collision, wearable fit, or contact acceptance.",
+    "Boundary counts are measured after position-only weld, not a source-topology equality proof.",
+    "Underscore source lineage attributes were not exported. construction.json retains native point ancestry by object; exact GLB split-point mapping is not serialized.",
+    "Actor has10 current palettes, exceeding the provisional8 palette target.",
+    "Supplemental garment components are deliberately separate; their overlap/gaps must be judged in root actual Garage and game film."
+  ]
+}

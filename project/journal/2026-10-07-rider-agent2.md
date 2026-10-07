@@ -71,3 +71,9 @@ Finding: One coherent new wearer now has a conventional full-finger rig and expl
 Validation: Parent verifies10582 normalized max4 rows, all30digit fields nonzero, native/source/report pins and source syntax; guarded rig03 succeeds after retained import/preliminary-fit controls.65metabones/71DEF/404authoringbones, allDEF B-Bone1. Raw FULL removal max.258798, relative max.264080 reported without waiver.
 
 Limits: Provisional joints/first skin field; no moving FULL/FOUR loss, clothed art, exact engine, grip, phone or product acceptance.
+
+Finding: First coarse four-piece wardrobe transports complete five-finger black gloves, mustard hoodie, indigo jeans and black footwear on one shared75joint skin. Preserve the original unaccepted construction before concrete Garage coverage fixes.
+
+Validation: ActualGLB39,032triangles,20objects/26primitives, normalized FOUR maxerror1.3411e-7; ten embeddedPNG exactsourcebytes. Root reviewed recipe and actual firstGarage frames.
+
+Limits: Garage exposes baretoe/shoe coverage and jaggedneckline failures;10palettes exceed8target and sourceattributes omitted. Moving fit unaccepted.
