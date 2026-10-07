@@ -119,3 +119,9 @@ Finding: Explicit pelvisID exclusion from uppertrunk aiming preserves physicalpe
 Validation: Ten actualCPUtests pass including ±.3rad upper-spine flex with exactpelvis quaternion; oldsource sweep records6palm×7lean×13spine comparisons withoutcontactacceptance. COM .415micrometre, grip61.34mm/sole21.82mm remainfailed.
 
 Limits: Numerical workspace diagnosis only; source04 and movingtruebar surfaces notyet reviewed.
+
+Finding: Native04 calibrates sourcejointcenters/frames as one coherentwearer: actual arm .5346398m and eyes evaluated/baked inbodyframe beforemutation. Originalsourcegeometry retained, no genericlengthstretch.
+
+Validation: Parent reads builder, rehashesnative master, checks10582normalizedFOUR/max4/all30digit fields and sourcehead-region eyebounds. Guard06 finishes3.636s.
+
+Limits: RawFULL removal .2531, provisional skin/joints; exactmoving native/engine/grip/art/phone gates remainopen.
