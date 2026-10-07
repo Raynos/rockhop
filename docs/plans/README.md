@@ -1129,3 +1129,5 @@ October 7 actual-glove chart preparation preserves all selected exterior faces a
 October 7 complete selected-rider assembly source requires all seven actual objects and a verified real-glove source before export. Cut head vertices have honest derived identities, and the measured final FOUR protocol makes native/export coefficients identical; no complete garment or moving-art pass is claimed.
 
 October 7 corrected selected-head native readback passes protected face identities and honest derived cut IDs, with unchanged source geometry/UV/normals and a single closed neck join. Whole-outfit moving profile judgment remains open.
+
+October 7 stale early-milestone allowance for temporary textured garments is removed. First visible and current execution milestones explicitly require selected face/hair and actual garment source lineage; substitutes are prohibited throughout.

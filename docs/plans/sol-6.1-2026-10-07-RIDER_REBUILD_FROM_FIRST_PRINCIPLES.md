@@ -49,9 +49,11 @@ continuous neutral → forward reach → crouch → supported forward-standing r
 supported back-seated ride → return. Show the complete rider and close hands,
 hips, elbows, shoulders and both side profiles. Underwear/gray body diagnostics
 remain supplemental. This milestone precedes long detail/bake/animation campaigns.
-It is a construction checkpoint, not a finished-art acceptance claim. Coarse
-production-intent garment topology and temporary textured source/palette materials
-are sufficient here; final UV/bake detail follows the moving structural judgment.
+It is a construction checkpoint, not a finished-art acceptance claim. Every
+garment uses the selected high-resolution appearance source with explicit mesh,
+UV and PBR ancestry. Compact final-intent topology may carry original detail
+through verified transfer. Temporary palette materials, stock faces, generic
+replacement garments and throwaway appearance work are prohibited.
 
 Face and dressed full-body appearance retain separate9/10 targets against the
 selected references. The parent writes observed tells and individual verdicts;
@@ -237,18 +239,19 @@ checkpoint; none of these gates is passed by this plan's existence.
 
 ## Immediate sequence, ownership and closure
 
-**Current priority — ask326,20:33UTC October7:** deliver a sound, good-looking
-assembled private actual-engine Garage candidate and short game ride within
-the user's next-two-hours target (22:33UTC). All body/head/buzzcut and four
-garments together; detail work follows this review. Native author builds the
-coherent wearer/rig and integrates the master; wardrobe teammate authors all
-four coarse textured garments; engine teammate supplies actual Garage/game
-adapter and early intake; root verifies and judges complete silent played
-evidence. Construction, wardrobe and engine source work proceed in parallel;
-heavy jobs stay serial. Baseline fix/fit/reset/export checks still apply.
-This review checkpoint stays private/unaccepted until judged; final R0–R5
-release/device/detail gates are preserved. Avoid further standalone planning
-or old-part gallery work before this assembled engine result.
+**Current priority — asks326/328/329:** deliver a sound, good-looking fully
+assembled private actual-engine Garage candidate and short game ride using the
+selected face, hairstyle, hoodie, denim, gloves and boots. The20:33–22:33UTC
+October7 target was missed; do not reinterpret rejected substitutes as delivery.
+Native author integrates one coherent wearer and rig. Wardrobe source work
+preserves the actual chosen garments; engine work uses their verified complete
+assembly. Root verifies and judges complete silent played evidence. Construction,
+wardrobe and engine source work proceed in parallel; heavy jobs stay serial.
+Baseline fit, reset, export and source-identity checks still apply. This review
+stays private/unaccepted until judged; all R0–R5 release/device/detail gates stay
+open. Avoid further standalone planning or old-part gallery work before this
+assembled engine result. No temporary or generic replacement appearance is
+allowed, even to meet a deadline.
 
 
 1. Complete this independently reviewed replacement plan; retire superseded
